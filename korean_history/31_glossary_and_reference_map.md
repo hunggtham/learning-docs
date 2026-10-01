@@ -1,6 +1,6 @@
 # Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map
 
-> **Mạch đọc:** Đặt **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thuật ngữ lịch sử** sang **Nguồn nền khuyến nghị**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thuật ngữ lịch sử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nguồn nền khuyến nghị** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Thuật ngữ lịch sử
 
@@ -44,8 +44,7 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | 전세 | jeonse | hình thức thuê nhà đặt cọc lớn, không hoàn toàn tương đương tiền thuê tháng |
 | 월세 | wolse | hình thức thuê nhà trả tiền theo tháng |
 
-
-> **Chuyển mạch:** Từ **Thuật ngữ lịch sử**, ta sang **Nguồn nền khuyến nghị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**, **Thuật ngữ lịch sử** nêu điều cần giải thích; **Nguồn nền khuyến nghị** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguyên tắc đối chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn nền khuyến nghị
 
@@ -96,15 +95,13 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 Dùng để kiểm tra heritage inscription và documentary heritage, không dùng như sole nguồn (source / 소스) cho toàn bộ interpretation lịch sử.
 
-
-> **Chuyển mạch:** Từ **Nguồn nền khuyến nghị**, ta sang **Nguyên tắc đối chiếu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**, **Nguồn nền khuyến nghị** đã nêu tiêu chí phân biệt, còn **Nguyên tắc đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bản đồ tra cứu theo câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên tắc đối chiếu
 
 Khi một vấn đề liên quan colonial responsibility, wartime violence, authoritarian repression, territorial dispute hoặc hiện tại (current / 현재) political interpretation, không dùng một nguồn duy nhất. Tối thiểu cần tách: primary bằng chứng (evidence / 증거), institutional archive, peer-reviewed scholarship và later công khai (public / 공개) bộ nhớ (memory / 메모리).
 
-
-> **Chuyển mạch:** Từ **Nguyên tắc đối chiếu**, ta sang **Bảng tên riêng lịch sử và địa danh chuẩn hoá** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**, **Nguyên tắc đối chiếu** đã nêu tiêu chí phân biệt, còn **Bản đồ tra cứu theo câu hỏi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bảng tên riêng lịch sử và địa danh chuẩn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bản đồ tra cứu theo câu hỏi
 
@@ -120,6 +117,8 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | “Thuật ngữ Hàn này nghĩa gì và viết thế nào?” | `32_naming_translation_conventions.md` | glossary này, rồi quay lại chapter sở hữu khái niệm |
 
 Bảng này là đường quay lại kiến thức giải thích, không phải danh sách link độc lập. Mỗi thuật ngữ chỉ nên được tra ở đây sau khi người học đã biết nó xuất hiện trong câu hỏi lịch sử nào.
+
+> **Chuyển mạch:** Question map chỉ ra lúc nào cần tra; normalized names giữ identity xuyên file, còn glossary giải thích variant và boundary của từng thuật ngữ.
 
 ## Bảng tên riêng lịch sử và địa danh chuẩn hoá
 
@@ -154,4 +153,4 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | Huấn Dân Chính Âm | Hunminjeongeum | 훈민정음 | Tên văn bản/hệ chữ được công bố năm 1446 |
 | Chiến tranh Nhâm Thìn | Imjin War | 임진왜란 | Cuộc xâm lược Nhật Bản 1592–1598 |
 
-> **Bàn giao:** Sau **Bảng tên riêng lịch sử và địa danh chuẩn hoá**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bảng tên riêng lịch sử và địa danh chuẩn hoá**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

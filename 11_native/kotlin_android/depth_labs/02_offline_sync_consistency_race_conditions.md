@@ -1,7 +1,6 @@
 # Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)
 
-> **Mạch đọc:** Đặt **độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trước tiên phải phân biệt ba khái niệm: nguồn chuẩn (source of truth / 정본), authority và replica** sang **2. Consistency mô hình (model / 모델) phải được chọn có chủ ý**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Trước tiên phải phân biệt ba khái niệm: nguồn chuẩn (source of truth / 정본), authority và replica** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Consistency mô hình (model / 모델) phải được chọn có chủ ý** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Offline-first không có nghĩa đơn giản là “lưu dữ liệu vào Room để app vẫn mở được khi mất mạng”. Một hệ thống offline-first thật sự phải trả lời những câu khó hơn: cục bộ (local / 로컬) và remote có thể lệch nhau bao lâu, mutation nào được phép reorder, thử lại (retry / 재시도) có tạo duplicate tác động (effect / 효과) không, nhiều thiết bị (device / 장치) cùng sửa thì merge thế nào, logout giữa lúc sync ra sao, và nếu app bị kill sau cục bộ (local / 로컬) lần ghi nhận (commit / 커밋) nhưng trước remote lần ghi nhận (commit / 커밋) thì người dùng (user / 사용자) intent có còn tồn tại hay không.
 
@@ -36,6 +35,8 @@ Ví dụ permission server-side không bao giờ nên lấy Room làm authority 
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **1. Trước tiên phải phân biệt ba khái niệm: nguồn chuẩn (source of truth / 정본), authority và replica** nêu điều cần giải thích; **2. Consistency mô hình (model / 모델) phải được chọn có chủ ý** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Outbox mẫu (pattern / 패턴) bảo vệ người dùng (user / 사용자) intent khỏi tiến trình (process / 프로세스) death** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Consistency mô hình (model / 모델) phải được chọn có chủ ý
 
 Không phải mọi tính năng (feature / 기능) cần strong consistency.
@@ -63,6 +64,8 @@ Hãy phân loại thao tác (operation / 연산):
 Offline-first là chiến lược, không phải dogma áp cho mọi mutation.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **2. Consistency mô hình (model / 모델) phải được chọn có chủ ý** xác định đầu vào; **3. Outbox mẫu (pattern / 패턴) bảo vệ người dùng (user / 사용자) intent khỏi tiến trình (process / 프로세스) death** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Outbox row phải mô tả intent, không chỉ yêu cầu (request / 요청) body** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Outbox mẫu (pattern / 패턴) bảo vệ người dùng (user / 사용자) intent khỏi tiến trình (process / 프로세스) death
 
@@ -94,6 +97,8 @@ Worker chỉ là executor đọc outbox. Worker có chết thì intent vẫn cò
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **3. Outbox mẫu (pattern / 패턴) bảo vệ người dùng (user / 사용자) intent khỏi tiến trình (process / 프로세스) death** xác định đầu vào; **4. Outbox row phải mô tả intent, không chỉ yêu cầu (request / 요청) body** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. thử lại (retry / 재시도) chính sách (policy / 정책) phải bắt đầu từ idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Outbox row phải mô tả intent, không chỉ yêu cầu (request / 요청) body
 
 Một outbox tốt thường cần siêu dữ liệu (metadata / 메타데이터) như:
@@ -118,6 +123,8 @@ data class PendingMutation(
 Mutation quyền sở hữu (ownership / 소유권) phải được không gian tên (namespace / 네임스페이스) theo session/account.
 
 ---
+
+> **Chuyển mạch:** Outbox row lưu intent để replay; retry policy vì vậy phải bắt đầu từ idempotency, rồi idempotency key bảo vệ side effect cụ thể.
 
 ## 5. thử lại (retry / 재시도) chính sách (policy / 정책) phải bắt đầu từ idempotency
 
@@ -146,6 +153,8 @@ Thiết kế (design / 설계) API nên ưu tiên **set desired trạng thái (s
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **6. Idempotency key bảo vệ thao tác (operation / 연산) có side tác động (effect / 효과)** tiếp nhận điểm tựa từ **5. thử lại (retry / 재시도) chính sách (policy / 정책) phải bắt đầu từ idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. hết thời gian chờ (timeout / 타임아웃) không đồng nghĩa thao tác (operation / 연산) thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Idempotency key bảo vệ thao tác (operation / 연산) có side tác động (effect / 효과)
 
 Với thao tác (operation / 연산) không tự nhiên idempotent, dùng mutation id:
@@ -166,6 +175,8 @@ Nếu máy khách (client / 클라이언트) thử lại (retry / 재시도) cù
 Điểm quan trọng là mutation id phải được tạo **trước lần gửi đầu tiên** và persist cùng durable intent. Tạo UUID mới cho mỗi thử lại (retry / 재시도) phá toàn bộ ý nghĩa idempotency.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **7. hết thời gian chờ (timeout / 타임아웃) không đồng nghĩa thao tác (operation / 연산) thất bại** tiếp nhận điểm tựa từ **6. Idempotency key bảo vệ thao tác (operation / 연산) có side tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Exponential backoff không đủ nếu không có jitter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. hết thời gian chờ (timeout / 타임아웃) không đồng nghĩa thao tác (operation / 연산) thất bại
 
@@ -200,6 +211,8 @@ Với thao tác (operation / 연산) quan trọng, máy khách (client / 클라�
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **8. Exponential backoff không đủ nếu không có jitter** tiếp nhận điểm tựa từ **7. hết thời gian chờ (timeout / 타임아웃) không đồng nghĩa thao tác (operation / 연산) thất bại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. thứ tự (ordering / 순서) chỉ cần được bảo vệ khi nghiệp vụ (business / 비즈니스) yêu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Exponential backoff không đủ nếu không có jitter
 
 Nếu hàng trăm nghìn thiết bị (device / 장치) cùng thử lại (retry / 재시도) sau outage với lịch:
@@ -232,6 +245,8 @@ HTTP 403 -> không retry như network error
 ```
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **9. thứ tự (ordering / 순서) chỉ cần được bảo vệ khi nghiệp vụ (business / 비즈니스) yêu cầu** tiếp nhận điểm tựa từ **8. Exponential backoff không đủ nếu không có jitter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. hàng đợi (queue / 큐) compaction giúp giảm sync debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. thứ tự (ordering / 순서) chỉ cần được bảo vệ khi nghiệp vụ (business / 비즈니스) yêu cầu
 
@@ -267,6 +282,8 @@ Một chuỗi (sequence / 시퀀스) “create comment -> edit comment -> delete
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **10. hàng đợi (queue / 큐) compaction giúp giảm sync debt** tiếp nhận điểm tựa từ **9. thứ tự (ordering / 순서) chỉ cần được bảo vệ khi nghiệp vụ (business / 비즈니스) yêu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. phiên bản (version / 버전) number giúp chống stale phản hồi (response / 응답) overwrite** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. hàng đợi (queue / 큐) compaction giúp giảm sync debt
 
 Với preference-like mutation, outbox có thể compact:
@@ -288,6 +305,8 @@ SET_BOOKMARK true
 Tuy nhiên mutation compaction phải bảo vệ kiểm tra (audit / 감사)/nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론). Payment sự kiện (event / 이벤트), analytics cần thứ tự (ordering / 순서) hoặc append-only lịch sử (history / 이력) có thể không được compact.
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **11. phiên bản (version / 버전) number giúp chống stale phản hồi (response / 응답) overwrite** tiếp nhận điểm tựa từ **10. hàng đợi (queue / 큐) compaction giúp giảm sync debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Optimistic tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) và If-Match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. phiên bản (version / 버전) number giúp chống stale phản hồi (response / 응답) overwrite
 
@@ -313,6 +332,8 @@ Nhưng phiên bản (version / 버전) chính sách (policy / 정책) phải do 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **12. Optimistic tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) và If-Match** tiếp nhận điểm tựa từ **11. phiên bản (version / 버전) number giúp chống stale phản hồi (response / 응답) overwrite** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Last-write-wins đơn giản nhưng cần hiểu điều gì đang bị mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Optimistic tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) và If-Match
 
 Máy chủ (server / 서버) có thể yêu cầu máy khách (client / 클라이언트) gửi phiên bản (version / 버전) đã đọc:
@@ -333,6 +354,8 @@ Máy khách (client / 클라이언트) lúc đó biết rõ đã có xung đột
 Điều này đặc biệt hữu ích với document edit, profile hoặc tài nguyên (resource / 자원) có concurrent writer.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **13. Last-write-wins đơn giản nhưng cần hiểu điều gì đang bị mất** tiếp nhận điểm tựa từ **12. Optimistic tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) và If-Match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. giải quyết xung đột (conflict resolution / 충돌 해결) nên dựa theo lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Last-write-wins đơn giản nhưng cần hiểu điều gì đang bị mất
 
@@ -355,6 +378,8 @@ Tách field-level patch hoặc merge ngữ nghĩa (semantics / 의미론) có th
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **14. giải quyết xung đột (conflict resolution / 충돌 해결) nên dựa theo lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **13. Last-write-wins đơn giản nhưng cần hiểu điều gì đang bị mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Tombstone cần thiết khi delete cũng phải sync** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. giải quyết xung đột (conflict resolution / 충돌 해결) nên dựa theo lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)
 
 Không có một thuật toán xung đột (conflict / 충돌) chung cho mọi tính năng (feature / 기능).
@@ -372,6 +397,8 @@ bank balance -> không client-merge
 Cấp cao (senior / 시니어) thiết kế (design / 설계) là chọn xung đột (conflict / 충돌) mô hình (model / 모델) theo lĩnh vực (domain / 도메인), không theo thư viện đang dùng.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **15. Tombstone cần thiết khi delete cũng phải sync** tiếp nhận điểm tựa từ **14. giải quyết xung đột (conflict resolution / 충돌 해결) nên dựa theo lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Sync cursor khác page cursor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Tombstone cần thiết khi delete cũng phải sync
 
@@ -403,6 +430,8 @@ entity đã bị xóa
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **16. Sync cursor khác page cursor** tiếp nhận điểm tựa từ **15. Tombstone cần thiết khi delete cũng phải sync** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Checkpoint phải lần ghi nhận (commit / 커밋) cùng dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Sync cursor khác page cursor
 
 Page cursor trả lời:
@@ -432,6 +461,8 @@ Nếu advance trước rồi crash trước cục bộ (local / 로컬) lần gh
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **16. Sync cursor khác page cursor** nêu điều cần giải thích; **17. Checkpoint phải lần ghi nhận (commit / 커밋) cùng dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Pull-before-push hay push-before-pull?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Checkpoint phải lần ghi nhận (commit / 커밋) cùng dữ liệu (data / 데이터)
 
 Bất biến (invariant / 불변식):
@@ -452,6 +483,8 @@ db.withTransaction {
 Nếu app chết trước giao dịch (transaction / 트랜잭션) lần ghi nhận (commit / 커밋), cả dữ liệu (data / 데이터) và cursor quay lui (rollback / 롤백). Lần sau fetch lại batch cũ — an toàn nếu apply idempotent.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **17. Checkpoint phải lần ghi nhận (commit / 커밋) cùng dữ liệu (data / 데이터)** nêu điều cần giải thích; **18. Pull-before-push hay push-before-pull?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. WorkManager là scheduler, không phải sync kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Pull-before-push hay push-before-pull?
 
@@ -481,6 +514,8 @@ Nhiều sync engine dùng cycle:
 Nhưng lĩnh vực (domain / 도메인) và Đặc tả API (API contract / API 계약) quyết định thứ tự (ordering / 순서) thật.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **19. WorkManager là scheduler, không phải sync kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **18. Pull-before-push hay push-before-pull?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Unique công việc (work / 작업) giúp tránh duplicate scheduler, không thay idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. WorkManager là scheduler, không phải sync kiến trúc (architecture / 아키텍처)
 
@@ -513,6 +548,8 @@ Lô-gic (logic / 논리) tính đúng đắn (correctness / 정확성) nằm tro
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **20. Unique công việc (work / 작업) giúp tránh duplicate scheduler, không thay idempotency** tiếp nhận điểm tựa từ **19. WorkManager là scheduler, không phải sync kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Logout là một consistency sự kiện (event / 이벤트) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Unique công việc (work / 작업) giúp tránh duplicate scheduler, không thay idempotency
 
 Có thể enqueue:
@@ -531,6 +568,8 @@ Nhưng vẫn phải assume worker có thể chạy lại sau tiến trình (proc
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **21. Logout là một consistency sự kiện (event / 이벤트) lớn** tiếp nhận điểm tựa từ **20. Unique công việc (work / 작업) giúp tránh duplicate scheduler, không thay idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Account switch cần generation/session epoch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Logout là một consistency sự kiện (event / 이벤트) lớn
 
 Khi logout, phải quyết định:
@@ -548,6 +587,8 @@ Một lỗi nguy hiểm là worker account A thử lại (retry / 재시도) sau
 Mọi durable dữ liệu (data / 데이터) liên quan session nên không gian tên (namespace / 네임스페이스) theo account định danh (identity / 식별자) hoặc bị clear rõ ràng.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **22. Account switch cần generation/session epoch** tiếp nhận điểm tựa từ **21. Logout là một consistency sự kiện (event / 이벤트) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Stale mạng (network / 네트워크) phản hồi (response / 응답) cần guard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Account switch cần generation/session epoch
 
@@ -570,6 +611,8 @@ if (capturedEpoch != sessionManager.currentEpoch) {
 Điều này giúp chặn phản hồi (response / 응답) từ session cũ ghi vào trạng thái (state / 상태) session mới.
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **23. Stale mạng (network / 네트워크) phản hồi (response / 응답) cần guard** tiếp nhận điểm tựa từ **22. Account switch cần generation/session epoch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. cục bộ (local / 로컬) optimistic trạng thái (state / 상태) cần phân biệt confirmed và desired** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Stale mạng (network / 네트워크) phản hồi (response / 응답) cần guard
 
@@ -601,6 +644,8 @@ result của request cũ không được thay thế state của request mới h�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **24. cục bộ (local / 로컬) optimistic trạng thái (state / 상태) cần phân biệt confirmed và desired** tiếp nhận điểm tựa từ **23. Stale mạng (network / 네트워크) phản hồi (response / 응답) cần guard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Partial thất bại (failure / 실패) khi batch sync** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. cục bộ (local / 로컬) optimistic trạng thái (state / 상태) cần phân biệt confirmed và desired
 
 Một mô hình (model / 모델) hữu ích:
@@ -623,6 +668,8 @@ Chỉ lưu một boolean không chứa đủ ngữ nghĩa (semantics / 의미론
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **25. Partial thất bại (failure / 실패) khi batch sync** tiếp nhận điểm tựa từ **24. cục bộ (local / 로컬) optimistic trạng thái (state / 상태) cần phân biệt confirmed và desired** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Backpressure trong sync hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Partial thất bại (failure / 실패) khi batch sync
 
 Batch 100 mutation có thể có:
@@ -642,6 +689,8 @@ Nếu batch là atomic, hoặc tất cả lần ghi nhận (commit / 커밋) ho�
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **26. Backpressure trong sync hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **25. Partial thất bại (failure / 실패) khi batch sync** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Poison mutation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Backpressure trong sync hàng đợi (queue / 큐)
 
 Nếu app tạo mutation nhanh hơn khả năng upload, outbox tăng vô hạn.
@@ -660,6 +709,8 @@ Sync tính đúng đắn (correctness / 정확성) không chỉ là đường đ
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **27. Poison mutation** tiếp nhận điểm tựa từ **26. Backpressure trong sync hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Sync máy trạng thái (state machine / 상태 머신) nên tường minh (explicit / 명시적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Poison mutation
 
 Một mutation malformed có thể thất bại (fail / 실패) mãi và chặn hàng đợi (queue / 큐) nếu worker xử lý strictly ordered.
@@ -677,6 +728,8 @@ retry N lần
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **28. Sync máy trạng thái (state machine / 상태 머신) nên tường minh (explicit / 명시적)** tiếp nhận điểm tựa từ **27. Poison mutation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. kiểm thử (test / 테스트) sync bằng timeline và thất bại (failure / 실패) injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Sync máy trạng thái (state machine / 상태 머신) nên tường minh (explicit / 명시적)
 
 Ví dụ:
@@ -693,6 +746,8 @@ sealed interface MutationState {
 Nếu app crash khi `InFlight`, startup khôi phục (recovery / 복구) có thể đưa row về Pending vì mạng (network / 네트워크) kết quả (outcome / 결과) chưa chắc biết. Idempotency key bảo vệ thử lại (retry / 재시도).
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **29. kiểm thử (test / 테스트) sync bằng timeline và thất bại (failure / 실패) injection** tiếp nhận điểm tựa từ **28. Sync máy trạng thái (state machine / 상태 머신) nên tường minh (explicit / 명시적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Property-based kiểm thử (test / 테스트) có giá trị với sync engine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. kiểm thử (test / 테스트) sync bằng timeline và thất bại (failure / 실패) injection
 
@@ -719,6 +774,8 @@ Mỗi kiểm thử (test / 테스트) phải assert bất biến (invariant / �
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **30. Property-based kiểm thử (test / 테스트) có giá trị với sync engine** tiếp nhận điểm tựa từ **29. kiểm thử (test / 테스트) sync bằng timeline và thất bại (failure / 실패) injection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. khả năng quan sát (observability / 관측 가능성) lược đồ (schema / 스키마) cho sync** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Property-based kiểm thử (test / 테스트) có giá trị với sync engine
 
 Có thể sinh ngẫu nhiên chuỗi sự kiện (event / 이벤트):
@@ -744,6 +801,8 @@ cursor không vượt quá data đã apply
 Property-based testing hữu ích vì race/thứ tự (order / 순서) combination quá lớn để viết tay hết.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **31. khả năng quan sát (observability / 관측 가능성) lược đồ (schema / 스키마) cho sync** tiếp nhận điểm tựa từ **30. Property-based kiểm thử (test / 테스트) có giá trị với sync engine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. khả năng quan sát (observability / 관측 가능성) lược đồ (schema / 스키마) cho sync
 
@@ -775,6 +834,8 @@ client version nào?
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **32. quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** tiếp nhận điểm tựa từ **31. khả năng quan sát (observability / 관측 가능성) lược đồ (schema / 스키마) cho sync** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
 Trước khi bản dựng (build / 빌드) sync, trả lời:
@@ -793,6 +854,8 @@ Trước khi bản dựng (build / 빌드) sync, trả lời:
 | Cursor lần ghi nhận (commit / 커밋) cùng dữ liệu (data / 데이터) chưa? | lost-update protection |
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)**, **33. Kết luận** gom các mảnh từ **32. quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 33. Kết luận
 
@@ -813,4 +876,4 @@ local intent
 
 Room và WorkManager chỉ giải quyết một phần cơ chế. tính đúng đắn (correctness / 정확성) đến từ consistency mô hình (model / 모델), bất biến (invariant / 불변식), idempotency, versioning, thất bại (failure / 실패) classification và account isolation.
 
-> **Bàn giao:** Sau **33. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **33. Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

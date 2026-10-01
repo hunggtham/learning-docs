@@ -1,7 +1,6 @@
 # Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI
 
-> **Mạch đọc:** Đọc **bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ real-world bài toán (problem / 문제) tới computational bài toán (problem / 문제)** sang **trạng thái (state / 상태) không gian (space / 공간)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ real-world bài toán (problem / 문제) tới computational bài toán (problem / 문제)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태) không gian (space / 공간)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Trước khi một AI hệ thống (system / 시스템) có thể tìm kiếm (search / 검색), learn, reason hoặc optimize, bài toán (problem / 문제) phải được chuyển thành một **biểu diễn (representation / 표현)** mà máy có thể thao tác. Đây là bước thường bị xem nhẹ vì nó nằm trước thuật toán (algorithm / 알고리즘), nhưng biểu diễn (representation / 표현) quyết định rất lớn việc bài toán có dễ giải hay không.
 
@@ -29,6 +28,8 @@ Nếu chỉ dùng distance làm edge weight, hệ thống (system / 시스템) c
 
 Biểu diễn (representation / 표현) vì vậy luôn gắn với **mục tiêu và giả định (assumption / 가정)**.
 
+> **Chuyển mạch:** Trong **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Trạng thái (state / 상태) không gian (space / 공간)** tiếp nhận điểm tựa từ **Từ real-world bài toán (problem / 문제) tới computational bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Features trong Machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trạng thái (state / 상태) không gian (space / 공간)
 
 Trong classical AI, một bài toán (problem / 문제) thường được mô hình hóa bằng:
@@ -51,6 +52,8 @@ Trạng thái (state / 상태) không gian (space / 공간) có thể cực lớ
 possible states. Đây là nguồn gốc của **combinatorial explosion (조합 폭발)**.
 
 Biểu diễn (representation / 표현) tốt đôi khi giảm tìm kiếm (search / 검색) không gian (space / 공간) mạnh hơn việc thay thuật toán (algorithm / 알고리즘).
+
+> **Chuyển mạch:** Ở chặng này của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Features trong Machine học tập (learning / 학습)** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Features trong Machine học tập (learning / 학습)
 
@@ -75,6 +78,8 @@ Mô hình (model / 모델) không thấy “khách hàng” như con người. N
 
 Tính năng (feature / 기능) kỹ thuật (engineering / 엔지니어링) là quá trình thiết kế biểu diễn (representation / 표현) hữu ích từ raw dữ liệu (data / 데이터). Nếu tính năng (feature / 기능) không chứa tín hiệu (signal / 신호) cần thiết, mô hình (model / 모델) tốt đến đâu cũng khó học được ánh xạ (mapping / 매핑) mong muốn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Biểu diễn (representation / 표현) học tập (learning / 학습)** tiếp nhận điểm tựa từ **Features trong Machine học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symbolic biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu diễn (representation / 표현) học tập (learning / 학습)
 
 Deep học tập (learning / 학습) thay đổi cách xây biểu diễn (representation / 표현). Thay vì engineer tự chọn mọi tính năng (feature / 기능), mô hình (model / 모델) học intermediate representations từ dữ liệu (data / 데이터).
@@ -97,6 +102,8 @@ class prediction
 
 Trong NLP, đơn vị từ (token / 토큰) IDs được map thành **embedding vectors (임베딩 벡터)**. Transformer tiếp tục biến embeddings thành contextual representations, nghĩa là biểu diễn (representation / 표현) của cùng một word có thể khác tùy surrounding ngữ cảnh (context / 맥락).
 
+> **Chuyển mạch:** Trong **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Symbolic biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất (probability / 확률) phân phối (distribution / 분포) như biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Symbolic biểu diễn (representation / 표현)
 
 Không phải biểu diễn (representation / 표현) nào cũng là véc-tơ (vector / 벡터). kiến thức (knowledge / 지식) có thể được biểu diễn bằng symbol, predicate, quy tắc (rule / 규칙) hoặc đồ thị (graph / 그래프).
@@ -115,6 +122,8 @@ Alice ──works_for──> CompanyA ──located_in──> Seoul
 ```
 
 Symbolic biểu diễn (representation / 표현) có lợi khi cấu trúc (structure / 구조) và relationship cần tường minh (explicit / 명시적) ngữ nghĩa (semantics / 의미론). véc-tơ (vector / 벡터) biểu diễn (representation / 표현) có lợi khi cần similarity, mẫu (pattern / 패턴) học tập (learning / 학습) và differentiable tối ưu hóa (optimization / 최적화). Hybrid các hệ thống (systems / 시스템들) có thể dùng cả hai.
+
+> **Chuyển mạch:** Ở chặng này của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Xác suất (probability / 확률) phân phối (distribution / 분포) như biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Symbolic biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (sequence / 시퀀스) biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xác suất (probability / 확률) phân phối (distribution / 분포) như biểu diễn (representation / 표현)
 
@@ -135,6 +144,8 @@ P(Location = C)=0.1
 Biểu diễn (representation / 표현) này giữ bất định (uncertainty / 불확실성) thay vì ép chọn một answer quá sớm.
 
 Đây là nền cho Bayesian lập luận (reasoning / 추론), hidden-state các mô hình (models / 모델들) và probabilistic robotics.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Xác suất (probability / 확률) phân phối (distribution / 분포) như biểu diễn (representation / 표현)** xác định đầu vào; **Chuỗi (sequence / 시퀀스) biểu diễn (representation / 표현)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Đồ thị (graph / 그래프) biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi (sequence / 시퀀스) biểu diễn (representation / 표현)
 
@@ -158,6 +169,8 @@ Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들) vì vậy c�
 
 Transformer không có recurrence tự nhiên như RNN nên cần **positional encoding / positional biểu diễn (representation / 표현)** để biết đơn vị từ (token / 토큰) thứ tự (order / 순서).
 
+> **Chuyển mạch:** Trong **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Chuỗi (sequence / 시퀀스) biểu diễn (representation / 표현)** xác định đầu vào; **Đồ thị (graph / 그래프) biểu diễn (representation / 표현)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Continuous biểu diễn (representation / 표현) và Embedding không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đồ thị (graph / 그래프) biểu diễn (representation / 표현)
 
 Khi relationship quan trọng hơn vị trí trong chuỗi (sequence / 시퀀스), đồ thị (graph / 그래프) là lớp trừu tượng (abstraction / 추상화) tự nhiên.
@@ -171,6 +184,8 @@ G=(V,E)
 trong đó `V` là vertices/nodes và `E` là edges.
 
 Đồ thị (graph / 그래프) biểu diễn (representation / 표현) cho phép lập luận (reasoning / 추론) về connectivity, neighborhood, shortest đường dẫn (path / 경로), centrality và message passing.
+
+> **Chuyển mạch:** Ở chặng này của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Continuous biểu diễn (representation / 표현) và Embedding không gian (space / 공간)** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lossy và Lossless biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Continuous biểu diễn (representation / 표현) và Embedding không gian (space / 공간)
 
@@ -186,6 +201,8 @@ Nếu huấn luyện (training / 학습) mục tiêu (objective / 목표) đư�
 
 Tuy nhiên cần tránh misconception rằng embedding không gian (space / 공간) là “bản đồ hoàn hảo của meaning”. hình học (geometry / 기하학) phụ thuộc mô hình (model / 모델), dữ liệu (data / 데이터) và mục tiêu (objective / 목표). Similarity chỉ số (metric / 지표) chỉ có ý nghĩa trong ngữ cảnh (context / 맥락) của biểu diễn (representation / 표현) đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Lossy và Lossless biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Continuous biểu diễn (representation / 표현) và Embedding không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Invariance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lossy và Lossless biểu diễn (representation / 표현)
 
 Một biểu diễn (representation / 표현) có thể làm mất thông tin.
@@ -193,6 +210,8 @@ Một biểu diễn (representation / 표현) có thể làm mất thông tin.
 Ví dụ resize ảnh (image / 이미지) từ `4000×3000` xuống `224×224` làm mất chi tiết. Tokenization có thể chia văn bản (text / 텍스트) theo cách làm rare word trở thành nhiều subword. Aggregating sự kiện (event / 이벤트) logs theo ngày có thể làm mất temporal thứ tự (ordering / 순서) trong từng phút.
 
 Mất mát (loss / 손실) không nhất thiết xấu. Compression có thể loại bỏ detail không cần thiết và làm bài toán (problem / 문제) tractable. Câu hỏi đúng là: **thông tin bị mất có quan trọng cho tác vụ (task / 작업) hay không?**
+
+> **Chuyển mạch:** Trong **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Invariance** tiếp nhận điểm tựa từ **Lossy và Lossless biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dimensionality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Invariance
 
@@ -204,6 +223,8 @@ Trong văn bản (text / 텍스트), ý nghĩa (semantic meaning / 의미적 뜻
 
 Thiết kế biểu diễn (representation / 표현) liên quan sâu tới các giả định (assumptions / 가정들) về invariance.
 
+> **Chuyển mạch:** Ở chặng này của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Dimensionality** tiếp nhận điểm tựa từ **Invariance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) và cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dimensionality
 
 Véc-tơ (vector / 벡터) có quá nhiều dimensions có thể gây computational chi phí (cost / 비용) và statistical difficulty. Đây là bối cảnh của **curse of dimensionality**.
@@ -211,6 +232,8 @@ Véc-tơ (vector / 벡터) có quá nhiều dimensions có thể gây computatio
 Khi dimensionality tăng, dữ liệu (data / 데이터) trở nên sparse hơn trong không gian (space / 공간). Distance chỉ số (metric / 지표) cũng có thể kém discriminative hơn. Dimensionality reduction như PCA cố giữ important variance trong không gian (space / 공간) nhỏ hơn.
 
 Deep biểu diễn (representation / 표현) học tập (learning / 학습) cũng thường tạo latent không gian (space / 공간) có cấu trúc (structure / 구조) hữu ích hơn raw đầu vào (input / 입력).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Dimensionality** nêu điều cần giải thích; **Biểu diễn (representation / 표현) và cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Biểu diễn (representation / 표현) và mục tiêu (objective / 목표) cùng quyết định học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biểu diễn (representation / 표현) và cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마)
 
@@ -236,6 +259,8 @@ Bug có thể xuất hiện ở ranh giới (boundary / 경계) giữa các bi�
 
 Ví dụ nếu cơ sở dữ liệu (database / 데이터베이스) lưu date sai timezone, mô hình (model / 모델) downstream có thể lập luận (reasoning / 추론) sai dù mô hình (model / 모델) “thông minh”.
 
+> **Chuyển mạch:** Trong **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Biểu diễn (representation / 표현) và cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마)** nêu điều cần giải thích; **Biểu diễn (representation / 표현) và mục tiêu (objective / 목표) cùng quyết định học tập (learning / 학습)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu diễn (representation / 표현) và mục tiêu (objective / 목표) cùng quyết định học tập (learning / 학습)
 
 Mô hình (model / 모델) không tự nhiên học “meaning”. Nó học biểu diễn (representation / 표현) hữu ích để minimize mục tiêu (objective / 목표).
@@ -252,6 +277,8 @@ Data + Architecture + Objective → Learned Representation
 
 Không nên tách biểu diễn (representation / 표현) khỏi huấn luyện (training / 학습) mục tiêu (objective / 목표).
 
+> **Chuyển mạch:** Ở chặng này của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Biểu diễn (representation / 표현) và mục tiêu (objective / 목표) cùng quyết định học tập (learning / 학습)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Hãy nghĩ biểu diễn (representation / 표현) như **API giữa thế giới và thuật toán (algorithm / 알고리즘)**.
@@ -259,6 +286,8 @@ Hãy nghĩ biểu diễn (representation / 표현) như **API giữa thế giớ
 API tốt expose đúng thông tin (information / 정보) ở lớp trừu tượng (abstraction / 추상화) phù hợp. API tệ che mất tín hiệu (signal / 신호) cần thiết hoặc expose quá nhiều irrelevant detail.
 
 Khi mô hình (model / 모델) thất bại, đừng chỉ hỏi “cần mô hình (model / 모델) lớn hơn không?”. Hãy hỏi biểu diễn (representation / 표현) có khiến bài toán (problem / 문제) khó một cách không cần thiết hay không.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -274,10 +303,12 @@ Embedding là learned numerical biểu diễn (representation / 표현) phục v
 
 Tính năng (feature / 기능) irrelevant có thể tăng noise, chi phí (cost / 비용), overfitting rủi ro (risk / 위험) và leakage. chất lượng (quality / 품질) của biểu diễn (representation / 표현) quan trọng hơn count đơn thuần.
 
+> **Chuyển mạch:** Trong **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Bài toán (problem / 문제) biểu diễn (representation / 표현) nối trực tiếp tới dữ liệu (data / 데이터) Structures, tuyến tính (linear / 선형) Algebra, xác suất (probability / 확률), thông tin (information / 정보) lý thuyết (theory / 이론), cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계), tín hiệu (signal / 신호) Processing và Software kiến trúc (architecture / 아키텍처). Đây là lý do AI không thể tách khỏi Khoa học máy tính (computer science / 컴퓨터 과학) nền tảng.
 
 Xem tiếp: [AI System Architecture](./04_ai_system_architecture.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is artificial intelligence](./00_what_is_artificial_intelligence.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

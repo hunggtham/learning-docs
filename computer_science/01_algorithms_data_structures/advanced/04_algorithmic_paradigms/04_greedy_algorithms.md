@@ -1,6 +1,6 @@
 # Greedy các thuật toán
 
-> **Mạch đọc:** Đọc **Greedy các thuật toán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình tư duy** sang **Greedy-choice tính chất và optimal substructure**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Greedy các thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Greedy-choice tính chất và optimal substructure** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Thuật toán tham lam (Greedy Algorithms / 그리디 알고리즘)**
 
@@ -16,6 +16,8 @@ Nếu không trả lời được câu đó, greedy chỉ là heuristic.
 
 chứng minh thường quan trọng hơn mã (code / 코드). mã (code / 코드) greedy nhiều khi chỉ vài dòng; phần khó là tìm đúng thứ tự (ordering / 순서) và chứng minh không có regret về sau.
 
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Greedy-choice tính chất và optimal substructure** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **lập lịch khoảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Greedy-choice tính chất và optimal substructure
 
 Hai ý thường xuất hiện:
@@ -25,6 +27,8 @@ Hai ý thường xuất hiện:
 **Optimal substructure**: sau khi cố định choice đó, phần còn lại là một subproblem mà lời giải tối ưu của nó có thể ghép với hiện tại choice để tạo toàn cục phương án tối ưu.
 
 quy hoạch động (dynamic programming) cũng dùng optimal substructure, nhưng DP thường giữ nhiều alternatives. Greedy loại alternatives ngay vì chứng minh nói chúng không cần thiết.
+
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **lập lịch khoảng** tiếp nhận điểm tựa từ **Greedy-choice tính chất và optimal substructure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exchange Argument là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## lập lịch khoảng
 
@@ -60,6 +64,8 @@ Vậy tồn tại lời giải tối ưu bắt đầu bằng `g`.
 
 Đây là **exchange argument (교환 논증)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Exchange Argument là gì?** tiếp nhận điểm tựa từ **lập lịch khoảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cut tính chất trong MST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Exchange Argument là gì?
 
 Một chứng minh greedy thường có shape:
@@ -71,6 +77,8 @@ Một chứng minh greedy thường có shape:
 5. suy ra có lời giải tối ưu tương thích với bước tham lam.
 
 Điểm mạnh của exchange argument là ta không cần chứng minh lời giải tham lam “tốt” trực tiếp; ta chứng minh bất kỳ phương án tối ưu nào cũng có thể được chỉnh thành phương án tối ưu chứa greedy choices.
+
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Cut tính chất trong MST** tiếp nhận điểm tựa từ **Exchange Argument là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dijkstra cũng có greedy flavor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cut tính chất trong MST
 
@@ -84,6 +92,8 @@ Prim lặp lại chọn lightest cạnh crossing từ hiện tại cây ra ngoà
 
 Cả hai đều khóa (lock / 잠금) cục bộ cạnh vì cut tính chất chứng minh vẫn tồn tại MST chứa cạnh đó.
 
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Dijkstra cũng có greedy flavor** tiếp nhận điểm tựa từ **Cut tính chất trong MST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coin thay đổi (change / 변경): ví dụ greedy thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dijkstra cũng có greedy flavor
 
 Dijkstra chọn unsettled nút có tentative khoảng cách nhỏ nhất và finalize nó.
@@ -91,6 +101,8 @@ Dijkstra chọn unsettled nút có tentative khoảng cách nhỏ nhất và fin
 bước tham lam an toàn chỉ vì cạnh các trọng số không âm. Negative cạnh phá chứng minh.
 
 Điều này cho thấy greedy tính đúng đắn thường phụ thuộc giả định rất cụ thể. Nếu giả định thay đổi, cùng cục bộ quy tắc có thể sai hoàn toàn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Dijkstra cũng có greedy flavor** cho ta quy tắc; **Coin thay đổi (change / 변경): ví dụ greedy thất bại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Fractional Knapsack vs 0/1 Knapsack** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Coin thay đổi (change / 변경): ví dụ greedy thất bại
 
@@ -118,6 +130,8 @@ cục bộ choice `4` nhìn tốt nhưng làm tương lai trạng thái (state /
 
 Với một số currency các hệ thống chuẩn, greedy coin thay đổi (change / 변경) có thể đúng, nhưng tính đúng đắn đến từ cấu trúc (structure / 구조) của hệ tiền xu, không từ intuition “coin lớn hơn luôn tốt”.
 
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Coin thay đổi (change / 변경): ví dụ greedy thất bại** cho ta quy tắc; **Fractional Knapsack vs 0/1 Knapsack** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Huffman Coding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Fractional Knapsack vs 0/1 Knapsack
 
 Đây là cặp bài toán (problem / 문제) rất hữu ích để thấy ràng buộc nhỏ có thể đổi paradigm.
@@ -139,6 +153,8 @@ Trong chứng minh trao đổi (exchange argument), nếu lời giải dành m�
 Không được chia item. Exchange “một lượng nhỏ” không còn hợp lệ. Greedy theo ratio có thể sai; DP thường cần giữ multiple combinations.
 
 Một chữ “fractional” thay đổi mathematical cấu trúc (structure / 구조) của bài toán (problem / 문제).
+
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Huffman Coding** tiếp nhận điểm tựa từ **Fractional Knapsack vs 0/1 Knapsack** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scheduling theo deadline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Huffman Coding
 
@@ -164,6 +180,8 @@ Sau khi merge chúng thành pseudo-symbol có tần suất sum, bài toán (prob
 
 Đây là greedy + cây + hàng đợi ưu tiên cùng lúc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Scheduling theo deadline** tiếp nhận điểm tựa từ **Huffman Coding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Earliest Deadline First** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Scheduling theo deadline
 
 Nhiều bài toán lập lịch có lời giải tham lam nhưng **quy tắc lựa chọn khác nhau** tùy mục tiêu tối ưu.
@@ -183,11 +201,15 @@ nhưng mỗi thứ tự (ordering / 순서) chỉ đúng cho mục tiêu (object
 
 Đây là lý do nhận diện “đây là scheduling nên greedy” là chưa đủ.
 
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Earliest Deadline First** tiếp nhận điểm tựa từ **Scheduling theo deadline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Activity Selection bằng Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Earliest Deadline First
 
 Trong một số scheduling các mô hình, Earliest Deadline First (EDF) có optimality tính chất. Nhưng thêm non-preemptive các ràng buộc, bản phát hành (release / 릴리스) thời gian (time / 시간), multiple machines hoặc các trọng số có thể thay đổi hoàn toàn kết quả.
 
 Greedy chứng minh luôn gắn với chính xác mô hình.
+
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Activity Selection bằng Java** tiếp nhận điểm tựa từ **Earliest Deadline First** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sorting thường là bước tạo greedy bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Activity Selection bằng Java
 
@@ -214,6 +236,8 @@ static List<Interval> selectMaxNonOverlapping(List<Interval> xs) {
 
 Trong mã (code / 코드) thật, ranh giới ngữ nghĩa (semantics / 의미론) phải rõ: intervals là `[start,end)` hay closed `[start,end]`? Nếu end đúng bằng next start thì có overlap không? lĩnh vực (domain / 도메인) quyết định comparator/điều kiện.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Sorting thường là bước tạo greedy bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **Activity Selection bằng Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy với hàng đợi ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sorting thường là bước tạo greedy bất biến (invariant / 불변식)
 
 Nhiều greedy các thuật toán bắt đầu bằng sort. Sort không chỉ để mã (code / 코드) đẹp; nó tạo một thứ tự (order / 순서) cho phép cục bộ choice có meaning.
@@ -234,6 +258,8 @@ O(n\log n)
 
 sau đó greedy quét chỉ `O(n)`.
 
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Greedy với hàng đợi ưu tiên** tiếp nhận điểm tựa từ **Sorting thường là bước tạo greedy bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy với monotonicity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Greedy với hàng đợi ưu tiên
 
 Một số problems không có toàn bộ các ứng viên available từ đầu. Ta sort các sự kiện theo một dimension, rồi dùng vùng nhớ động (heap / 힙) để chọn best trong active set.
@@ -250,6 +276,8 @@ nếu violation -> remove worst local contributor bằng heap
 
 Chứng minh tính đúng đắn vẫn cần lập luận trao đổi (exchange argument); vùng nhớ động (heap / 힙) chỉ giúp thao tác lựa chọn tham lam chạy nhanh hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Greedy với monotonicity** tiếp nhận điểm tựa từ **Greedy với hàng đợi ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Matroid intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Greedy với monotonicity
 
 Nếu quyết định (decision / 결정) làm feasible region co lại theo một chiều monotonic, greedy có thể xuất hiện tự nhiên.
@@ -257,6 +285,8 @@ Nếu quyết định (decision / 결정) làm feasible region co lại theo m�
 Ví dụ khi chọn earliest finish, mọi interval bắt đầu trước finish mới bị loại; phần còn lại vẫn là cùng bài toán (problem / 문제) trên suffix timeline.
 
 Monotonicity giúp chứng minh subproblem không cần nhớ chi tiết lịch sử ngoài một ranh giới trạng thái.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Matroid intuition** tiếp nhận điểm tựa từ **Greedy với monotonicity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy Stays Ahead chứng minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Matroid intuition
 
@@ -268,6 +298,8 @@ Graphic matroid của đồ thị là ví dụ nền cho Kruskal: cạnh sets kh
 
 Điểm quan trọng không phải thuật ngữ, mà là nhận ra greedy tính đúng đắn thường đến từ một **exchange cấu trúc (structure / 구조) sâu hơn**.
 
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Greedy Stays Ahead chứng minh** tiếp nhận điểm tựa từ **Matroid intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contradiction chứng minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Greedy Stays Ahead chứng minh
 
 Một chứng minh style khác là chứng minh sau mỗi bước, lời giải tham lam không thua bất kỳ optimal ứng viên prefix nào theo một chỉ số (metric / 지표).
@@ -276,11 +308,15 @@ Ví dụ, có thể chứng minh thời điểm kết thúc do thuật toán tha
 
 Nếu lời giải tham lam luôn “đi trước” ở mọi tiền tố, tính tối ưu của mục tiêu toàn cục có thể được suy ra từ đó.
 
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Contradiction chứng minh** tiếp nhận điểm tựa từ **Greedy Stays Ahead chứng minh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi Greedy và DP gần nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Contradiction chứng minh
 
 Một số greedy tính đúng đắn các chứng minh giả sử greedy đầu tiên khác optimal tại vị trí đầu tiên, rồi chỉ ra việc thay optimal choice bằng lựa chọn tham lam không làm tệ hơn, contradiction với việc cần khác nhau.
 
 Dù presentation khác exchange argument, cốt lõi (core / 핵심) idea vẫn là cục bộ choice có thể được đưa vào phương án tối ưu an toàn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Khi Greedy và DP gần nhau** tiếp nhận điểm tựa từ **Contradiction chứng minh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy và approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi Greedy và DP gần nhau
 
@@ -301,6 +337,8 @@ Greedy -> commit một state frontier
 DP     -> giữ nhiều state alternatives
 ```
 
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Greedy và approximation** tiếp nhận điểm tựa từ **Khi Greedy và DP gần nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy và heuristic khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Greedy và approximation
 
 Đôi khi greedy không chính xác nhưng vẫn có approximation bảo đảm.
@@ -310,6 +348,8 @@ Set Cover greedy chọn set cover nhiều uncovered các phần tử nhất mỗ
 Trong Maximum Coverage với ngân sách (budget / 예산) `k`, greedy có bảo đảm kinh điển liên quan `1 - 1/e` dưới mô hình chuẩn.
 
 Điều này nhắc rằng “greedy sai chính xác” không có nghĩa vô dụng. Có thể nó có provable bound gần optimal.
+
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Greedy và heuristic khác nhau** tiếp nhận điểm tựa từ **Greedy và approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **trực tuyến greedy decisions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Greedy và heuristic khác nhau
 
@@ -321,6 +361,8 @@ Trong Maximum Coverage với ngân sách (budget / 예산) `k`, greedy có bảo
 
 Ba loại này nên được nói rõ, đặc biệt trong hệ thống thực tế tối ưu hóa (optimization / 최적화).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **trực tuyến greedy decisions** tiếp nhận điểm tựa từ **Greedy và heuristic khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ biến thất bại (failure / 실패) các mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## trực tuyến greedy decisions
 
 Trong trực tuyến các thuật toán, tương lai đầu vào chưa biết. Greedy có thể là lựa chọn bắt buộc vì quyết định (decision / 결정) phải đưa ra ngay.
@@ -330,6 +372,8 @@ Lúc này chỉ số (metric / 지표) không nhất thiết là chính xác ph�
 Caching eviction, trực tuyến matching và scheduling có các variants theo mô hình này.
 
 Greedy ngoại tuyến và trực tuyến nhìn giống nhau ở cục bộ quyết định (decision / 결정), nhưng bảo đảm khung làm việc khác nhau.
+
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Phổ biến thất bại (failure / 실패) các mẫu** tiếp nhận điểm tựa từ **trực tuyến greedy decisions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách tìm phản ví dụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phổ biến thất bại (failure / 실패) các mẫu
 
@@ -353,6 +397,8 @@ Không. Sorting chỉ tạo thứ tự (ordering / 순서); cục bộ choice v�
 
 Greedy phản ví dụ thường nhỏ nhưng không obvious. Cần chứng minh hoặc systematic brute-force phép so sánh trên small `n`.
 
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Phổ biến thất bại (failure / 실패) các mẫu** cho ta quy tắc; **Cách tìm phản ví dụ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Differential kiểm thử greedy vs brute force** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách tìm phản ví dụ
 
 Khi nghi ngờ một quy tắc tham lam, hãy thử tạo phản ví dụ nơi thước đo cục bộ xung đột với mức linh hoạt cần thiết cho tương lai.
@@ -364,6 +410,8 @@ Với heuristic “khoảng ngắn nhất”, có thể tạo một khoảng r�
 Với quy tắc “lợi nhuận cao nhất trước”, có thể tạo một công việc lợi nhuận cao chiếm tài nguyên và làm mất nhiều công việc lợi nhuận trung bình nhưng tương thích với nhau.
 
 phản ví dụ construction là skill quan trọng để tránh tin intuition.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Cách tìm phản ví dụ** cho ta quy tắc; **Differential kiểm thử greedy vs brute force** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Khi nào nên nghĩ greedy?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Differential kiểm thử greedy vs brute force
 
@@ -382,6 +430,8 @@ random/exhaustive compare
 tìm counterexample hoặc xây proof
 ```
 
+> **Chuyển mạch:** Trong **Greedy các thuật toán**, **Khi nào nên nghĩ greedy?** tiếp nhận điểm tựa từ **Differential kiểm thử greedy vs brute force** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Connections với các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khi nào nên nghĩ greedy?
 
 Một số dấu hiệu hữu ích nhưng không phải chứng minh:
@@ -395,6 +445,8 @@ Một số dấu hiệu hữu ích nhưng không phải chứng minh:
 
 Nếu cục bộ choice có thể bị tương lai thông tin đảo ngược, DP/quay lui (backtracking)/luồng (flow / 흐름) có thể phù hợp hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Greedy các thuật toán**, **Connections với các chapter khác** tiếp nhận điểm tựa từ **Khi nào nên nghĩ greedy?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Connections với các chapter khác
 
 Kruskal/Prim: [Minimum Spanning Tree](../03_graphs/03_minimum_spanning_trees.md).
@@ -405,8 +457,12 @@ Huffman cần: [Heap](../02_trees/03_heaps.md).
 
 Khi greedy không chính xác và bài toán (problem / 문제) computationally hard, xem [Hard Problems, Reductions & Approximation](./09_hard_problems_reductions_and_approximation.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greedy các thuật toán**, **Mô hình tư duy mở rộng** gom các mảnh từ **Connections với các chapter khác** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy mở rộng
 
 > Greedy không có nghĩa “tham lam chọn cái có vẻ tốt nhất”. Nó nghĩa là **có theorem cho phép khóa một quyết định mà không cần giữ alternatives**.
 
 Khi thiết kế greedy, hãy viết cục bộ choice bằng một câu chính xác, sau đó hỏi: tôi có thể lấy một phương án tối ưu bất kỳ và exchange choice đầu tiên của nó thành lựa chọn tham lam mà không làm tệ hơn không? Nếu không làm được, hãy tìm phản ví dụ trước khi viết code dài.
+
+> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

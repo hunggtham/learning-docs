@@ -1,7 +1,6 @@
 # 06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản
 
-> **Mạch đọc:** Đặt **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ba khái niệm nền tảng** sang **월세**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ba khái niệm nền tảng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trước khi ký: kiểm tra chủ thể và bất động sản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Ba khái niệm nền tảng
 
@@ -17,8 +16,7 @@
 
 `보증금` là khoản tiền có thể rất lớn và vì vậy rủi ro nhà ở ở Hàn Quốc thường là rủi ro **thu hồi tiền đặt cọc**, không chỉ là chất lượng căn nhà.
 
-
-> **Chuyển mạch:** Từ **1. Ba khái niệm nền tảng**, ta sang **2. Trước khi ký: kiểm tra chủ thể và bất động sản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Lease type, deposit and registration define different risks; verify parties/property before signing, then distinguish 대항력, 확정일자 and 우선변제권 as separate protections.
 
 ## 2. Trước khi ký: kiểm tra chủ thể và bất động sản
 
@@ -39,8 +37,7 @@ Một workflow cơ bản:
 
 Nguồn chính thức để tra cứu đăng ký bất động sản là **인터넷등기소 (iros.go.kr)**.
 
-
-> **Chuyển mạch:** Từ **2. Trước khi ký: kiểm tra chủ thể và bất động sản**, ta sang **3. 대항력, 확정일자, 우선변제권: ba từ phải phân biệt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **3. 대항력, 확정일자, 우선변제권: ba từ phải phân biệt** tiếp nhận điểm tựa từ **2. Trước khi ký: kiểm tra chủ thể và bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Xác nhận ngày (확정일자) ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. `대항력`, `확정일자`, `우선변제권`: ba từ phải phân biệt
 
@@ -58,8 +55,7 @@ Theo `찾기쉬운 생활법령정보`, quyền ưu tiên này gắn với việ
 
 Đừng biến ba khái niệm trên thành một từ duy nhất “bảo vệ deposit”. Chúng giải quyết các tầng khác nhau.
 
-
-> **Chuyển mạch:** Từ **3. 대항력, 확정일자, 우선변제권: ba từ phải phân biệt**, ta sang **4. Xác nhận ngày (확정일자) ở đâu?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **4. Xác nhận ngày (확정일자) ở đâu?** tiếp nhận điểm tựa từ **3. 대항력, 확정일자, 우선변제권: ba từ phải phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Đừng chỉ hỏi “nhà này có nợ không?”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Xác nhận ngày (확정일자) ở đâu?
 
@@ -67,8 +63,7 @@ Luật hiện hành quy định các cơ quan có thể cấp `확정일자`, g�
 
 Quy trình online/offline có thể thay đổi, nên trước khi đi hãy kiểm tra trang chính thức và yêu cầu hồ sơ hiện tại.
 
-
-> **Chuyển mạch:** Từ **4. Xác nhận ngày (확정일자) ở đâu?**, ta sang **5. Đừng chỉ hỏi “nhà này có nợ không?”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **5. Đừng chỉ hỏi “nhà này có nợ không?”** tiếp nhận điểm tựa từ **4. Xác nhận ngày (확정일자) ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Môi giới bất động sản (공인중개사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Đừng chỉ hỏi “nhà này có nợ không?”
 
@@ -90,8 +85,7 @@ Khi xem `등기부`, nên đặt câu hỏi có cấu trúc:
 
 Một căn nhà không có khoản vay lớn vẫn có thể có rủi ro khác. Ngược lại, có `근저당권` không tự động có nghĩa hợp đồng không thể ký. Mục tiêu là hiểu **thứ tự quyền và khả năng thu hồi tiền**.
 
-
-> **Chuyển mạch:** Từ **5. Đừng chỉ hỏi “nhà này có nợ không?”**, ta sang **6. Môi giới bất động sản (공인중개사)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **6. Môi giới bất động sản (공인중개사)** tiếp nhận điểm tựa từ **5. Đừng chỉ hỏi “nhà này có nợ không?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Hợp đồng nên chứa gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Môi giới bất động sản (공인중개사)
 
@@ -105,8 +99,7 @@ Nếu giao dịch qua môi giới, lưu:
 
 Không ký vào bản trống hoặc bản có phần chưa điền. Điều khoản đặc biệt (`특약`) nên viết rõ, không dùng câu mơ hồ.
 
-
-> **Chuyển mạch:** Từ **6. Môi giới bất động sản (공인중개사)**, ta sang **7. Hợp đồng nên chứa gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **7. Hợp đồng nên chứa gì?** tiếp nhận điểm tựa từ **6. Môi giới bất động sản (공인중개사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Khi chuyển vào và khi chuyển đi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Hợp đồng nên chứa gì?
 
@@ -128,8 +121,7 @@ Tối thiểu cần đọc rõ:
 
 `관리비` cần được tách khỏi `월세`; hỏi rõ bao gồm điện, nước, gas, internet, vệ sinh, phí tòa nhà hay không.
 
-
-> **Chuyển mạch:** Từ **7. Hợp đồng nên chứa gì?**, ta sang **8. Khi chuyển vào và khi chuyển đi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **8. Khi chuyển vào và khi chuyển đi** tiếp nhận điểm tựa từ **7. Hợp đồng nên chứa gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Nếu chủ nhà không trả 보증금** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Khi chuyển vào và khi chuyển đi
 
@@ -147,8 +139,7 @@ Với người nước ngoài, nên kiểm tra đồng thời:
 
 Tư cách lưu trú và quy trình địa phương có thể làm cách nộp khác nhau.
 
-
-> **Chuyển mạch:** Từ **8. Khi chuyển vào và khi chuyển đi**, ta sang **9. Nếu chủ nhà không trả 보증금** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **9. Nếu chủ nhà không trả 보증금** tiếp nhận điểm tựa từ **8. Khi chuyển vào và khi chuyển đi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Rủi ro 전세 và bảo hiểm tiền đặt cọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Nếu chủ nhà không trả 보증금
 
@@ -165,8 +156,7 @@ Không nên chỉ tiếp tục nhắn tin vô thời hạn. Một workflow học
 
 `임차권등기명령` là một cơ chế quan trọng trong một số tình huống khi người thuê phải chuyển đi mà chưa nhận lại tiền đặt cọc. Điều kiện và hiệu lực cần đọc từ luật và hướng dẫn tòa án hiện hành trước khi dùng.
 
-
-> **Chuyển mạch:** Từ **9. Nếu chủ nhà không trả 보증금**, ta sang **10. Rủi ro 전세 và bảo hiểm tiền đặt cọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **10. Rủi ro 전세 và bảo hiểm tiền đặt cọc** tiếp nhận điểm tựa từ **9. Nếu chủ nhà không trả 보증금** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Rủi ro 전세 và bảo hiểm tiền đặt cọc
 
@@ -174,8 +164,7 @@ Các sản phẩm như `전세보증금 반환보증` có thể giúp quản lý
 
 Nguồn nên kiểm tra: HUG, HF, SGI tùy sản phẩm.
 
-
-> **Chuyển mạch:** Từ **10. Rủi ro 전세 và bảo hiểm tiền đặt cọc**, ta sang **11. Nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **10. Rủi ro 전세 và bảo hiểm tiền đặt cọc** nêu điều cần giải thích; **11. Nguồn chính thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Không phải tư vấn giao dịch cá nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Nguồn chính thức
 
@@ -188,9 +177,10 @@ Nhà ở kết hợp hợp đồng, đăng ký, quyền ưu tiên và rủi ro t
 - 국토교통부: https://www.molit.go.kr/
 - HUG: https://www.khug.or.kr/
 
-
-> **Chuyển mạch:** Từ **11. Nguồn chính thức**, ta sang **12. Không phải tư vấn giao dịch cá nhân** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**, **11. Nguồn chính thức** nêu điều cần giải thích; **12. Không phải tư vấn giao dịch cá nhân** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 12. Không phải tư vấn giao dịch cá nhân
 
 Một hợp đồng 전세 cụ thể cần dữ liệu như giá nhà, thứ tự thế chấp, thuế nợ của chủ sở hữu, quyền ưu tiên, loại bất động sản và thời điểm đăng ký. File này chỉ cung cấp **mô hình kiểm tra**; không kết luận một căn nhà cụ thể là “an toàn” hay “không an toàn”.
+
+> **Bàn giao:** Sau **12. Không phải tư vấn giao dịch cá nhân**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

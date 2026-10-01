@@ -1,6 +1,6 @@
 # Advanced HCI & Computer Graphics
 
-> **Mạch đọc:** Đọc **Advanced HCI & Computer Graphics** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced HCI & Computer Graphics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Advanced HCI & Computer Graphics** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Roadmap:
 
@@ -19,4 +19,4 @@ Roadmap:
 
 Ba chapter đầu xây thực thi (execution / 실행) chuỗi xử lý (pipeline / 파이프라인) rồi nối sang vật lý (physical / 물리적) material/light mô hình (model / 모델). Các phần sau sẽ tiếp tục rendering chất lượng (quality / 품질), GPU bộ nhớ (memory / 메모리) và human-perception/HCI các ràng buộc (constraints / 제약조건들).
 
-> **Bàn giao:** Sau **Advanced HCI & Computer Graphics**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 frame pipeline gpu synchronization and frame budget](./00_frame_pipeline_gpu_synchronization_and_frame_budget.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Advanced HCI & Computer Graphics**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

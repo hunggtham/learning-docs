@@ -1,6 +1,6 @@
 # Java Spring — Part 3: cấp cao (senior / 시니어)
 
-> **Mạch đọc:** Đọc **Java Spring — Part 3: cấp cao (senior / 시니어)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)** sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 3: cấp cao (senior / 시니어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)
 
@@ -8,10 +8,9 @@
 
 ---
 
-
 <!-- VERSION_UPDATE_2026-09-12_START -->
 
-> **Chuyển mạch:** Từ **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)**, ta sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bản đồ phiên bản đặt Spring 7/Boot 4 trong các câu hỏi kiến trúc, runtime và failure. Phần dependency resolution ở production tiếp tục bằng type contract, lifecycle và exposed object để kiểm tra một ứng dụng thật.
 
 ## Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
@@ -102,7 +101,7 @@ AOT/native constraints
 
 <!-- SPRING_BATCH1_IOC_SENIOR -->
 
-> **Chuyển mạch:** Từ **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**, ta sang **phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 3: cấp cao (senior / 시니어)**, **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** xác định đầu vào; **Phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau
 
@@ -235,7 +234,7 @@ Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu
 
 <!-- SPRING_BATCH2_REQUEST_SENIOR -->
 
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau**, ta sang **vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Spring — Part 3: cấp cao (senior / 시니어)**, **Phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau** xác định đầu vào; **Vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)
 
@@ -273,7 +272,7 @@ Hiểu điều này giải thích vì sao giao dịch (transaction / 트랜잭�
 
 <!-- SPRING_BATCH3_TX_SENIOR -->
 
-> **Chuyển mạch:** Từ **vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)**, ta sang **Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java Spring — Part 3: cấp cao (senior / 시니어)**, cơ chế trong **Vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)** cần được kiểm chứng bằng dấu vết cụ thể; **Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia
 
@@ -391,7 +390,7 @@ DB phát hiện cycle và abort một giao dịch (transaction / 트랜잭션).
 
 <!-- SPRING_BATCH3_JPA_SENIOR -->
 
-> **Chuyển mạch:** Từ **Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia**, ta sang **Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 3: cấp cao (senior / 시니어)**, **Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia** nêu điều cần giải thích; **Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?
 
@@ -1007,7 +1006,7 @@ Hiểu luồng (flow / 흐름) này quan trọng khi có multiple chains cho `/a
 
 <!-- SPRING_BATCH4_SECURITY_SENIOR -->
 
-> **Chuyển mạch:** Từ **Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?**, ta sang **bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Spring — Part 3: cấp cao (senior / 시니어)**, **Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?** nêu điều cần giải thích; **Bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization
 
@@ -1115,7 +1114,7 @@ Reactive bảo mật (security / 보안) lại dùng Reactor ngữ cảnh (conte
 
 <!-- SPRING_BATCH5_OBS_SENIOR -->
 
-> **Chuyển mạch:** Từ **bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization**, ta sang **khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java Spring — Part 3: cấp cao (senior / 시니어)**, cơ chế trong **Bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization** cần được kiểm chứng bằng dấu vết cụ thể; **Khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)
 
@@ -1511,7 +1510,7 @@ Tách biểu diễn (representation / 표현) ở boundaries có vòng đời (l
 
 <!-- SPRING_BATCH5_TROUBLESHOOTING_SENIOR -->
 
-> **Chuyển mạch:** Từ **khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)**, ta sang **môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 3: cấp cao (senior / 시니어)**, **Khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)** nêu điều cần giải thích; **Môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)
 
@@ -1732,7 +1731,7 @@ Không cần ratio cố định. Mỗi kiểm thử (test / 테스트) phải tr
 
 <!-- SPRING_BATCH4_TEST_SENIOR -->
 
-> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)**, ta sang **Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Troubleshooting theo symptom → layer → evidence cho biết cần quan sát ở đâu; architecture testing tiếp tục bằng cách mô phỏng đúng failure tại boundary. Hai phần cùng kiểm tra khả năng vận hành, không chỉ happy path.
 
 ## Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)
 
@@ -1899,4 +1898,4 @@ Spring bản địa (native / 네이티브) Images: https://docs.spring.io/sprin
 
 Boot 4 di chuyển (migration / 마이그레이션): https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide
 
-> **Bàn giao:** Sau **Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [spring part1 beginner rewritten detailed](./spring_part1_beginner_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

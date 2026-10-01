@@ -1,7 +1,6 @@
 # React Master ghi chú (note / 노트) — Beginner
 
-> **Mạch đọc:** Đọc **React Master ghi chú (note / 노트) — Beginner** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. React là gì?** sang **2. JavaScript nền tảng cần biết**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Beginner**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. React là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. JavaScript nền tảng cần biết** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > React 19.3 là mốc stable hiện hành để đối chiếu API mới, nhưng tệp (file / 파일) này dạy mô hình tư duy (mental model / 사고 모델) xuyên phiên bản (version / 버전). Mục tiêu là hiểu rendering và trạng thái (state / 상태) trước khi học Hooks như một danh sách API.
 
@@ -43,6 +42,8 @@ React là thư viện UI chứ không phải một full-stack khung phần mềm
 > ### phiên bản (version / 버전) ghi chú (note / 노트) — nên học phiên bản (version / 버전) nào trước?
 >
 > Nếu bắt đầu mới, hãy học theo cú pháp và mô hình tư duy (mental model / 사고 모델) React 19.3 trong tài liệu này. Phần lớn kiến thức nền như thành phần (component / 컴포넌트), props, trạng thái (state / 상태), sự kiện (event / 이벤트), danh sách (list / 목록) và form vẫn áp dụng cho React 18 và cả nhiều mã (code / 코드) React 16.8/17. Sự khác nhau lớn nhất khi đọc mã (code / 코드) cũ thường nằm ở entry API, lớp (class / 클래스) thành phần (component / 컴포넌트), JSX transform và một số API mới của React 19; vì vậy không cần học từng phiên bản (version / 버전) theo thứ tự lịch sử trước khi học React.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **2. JavaScript nền tảng cần biết** tiếp nhận điểm tựa từ **1. React là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. React app hoạt động như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. JavaScript nền tảng cần biết
 
@@ -120,6 +121,8 @@ async function loadUsers() {
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **3. React app hoạt động như thế nào?** tiếp nhận điểm tựa từ **2. JavaScript nền tảng cần biết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3A. mô hình tư duy (mental model / 사고 모델) cốt lõi trước Hooks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. React app hoạt động như thế nào?
 
 Ứng dụng web React thường dùng `react` cho mô hình (model / 모델) thành phần (component / 컴포넌트)/Hooks và `react-dom` để kết nối với DOM.
@@ -142,6 +145,8 @@ Có thể hiểu một cập nhật (update / 업데이트) qua ba bước lớn
 >
 > `createRoot` là API máy khách (client / 클라이언트) gốc (root / 루트) hiện đại từ **React 18**. Tutorial React 17 trở xuống thường dùng `ReactDOM.render(<App />, container)`. React 18 đã deprecate cách cũ và nếu vẫn dùng nó, app không nhận đầy đủ hành vi (behavior / 동작) mới của gốc (root / 루트) React 18; tới React 19, API kết xuất (render / 렌더링)/hydrate legacy đã bị loại bỏ. Vì vậy mã (code / 코드) mới nên luôn nghĩ theo `createRoot` hoặc `hydrateRoot` nếu đang hydrate HTML từ máy chủ (server / 서버).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **3A. mô hình tư duy (mental model / 사고 모델) cốt lõi trước Hooks** gom các mảnh từ **3. React app hoạt động như thế nào?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3B. kết xuất (render / 렌더링) cây (tree / 트리), thành phần (component / 컴포넌트) lời gọi (call / 호출) và DOM cập nhật (update / 업데이트) là ba chuyện khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3A. mô hình tư duy (mental model / 사고 모델) cốt lõi trước Hooks
 
 Có thể tạm nghĩ `UI = render(props, state, context)`. kết xuất (render / 렌더링) đọc snapshot hiện tại và mô tả UI; sự kiện (event / 이벤트) handler hoặc tác động (effect / 효과) mới là nơi yêu cầu trạng thái (state / 상태) mới hay đồng bộ hệ thống ngoài React.
@@ -150,6 +155,8 @@ Một cập nhật (update / 업데이트) đi qua `trigger → render → recon
 
 Trạng thái (state / 상태) cũng không nằm trong biến cục bộ (local / 로컬). `count` từ `useState` là snapshot của kết xuất (render / 렌더링) hiện tại; React giữ trạng thái (state / 상태) gắn với định danh (identity / 식별자) trong cây (tree / 트리). Setter hàng đợi (queue / 큐) cập nhật (update / 업데이트) chứ không mutate biến JavaScript. lớp (class / 클래스) `this.state`/`this.setState` và Hooks khác API nhưng cùng bất biến (invariant / 불변식) này. mô hình tư duy (mental model / 사고 모델) này giải thích immutable cập nhật (update / 업데이트), stale closure, preserve/reset trạng thái (state / 상태), batching và `key`.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **3B. kết xuất (render / 렌더링) cây (tree / 트리), thành phần (component / 컴포넌트) lời gọi (call / 호출) và DOM cập nhật (update / 업데이트) là ba chuyện khác nhau** gom các mảnh từ **3A. mô hình tư duy (mental model / 사고 모델) cốt lõi trước Hooks** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **4. Tạo dự án (project / 프로젝트) React hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3B. kết xuất (render / 렌더링) cây (tree / 트리), thành phần (component / 컴포넌트) lời gọi (call / 호출) và DOM cập nhật (update / 업데이트) là ba chuyện khác nhau
 
 Khi React kết xuất (render / 렌더링) một thành phần (component / 컴포넌트), React đang gọi thành phần (component / 컴포넌트) để lấy mô tả UI cho snapshot props/trạng thái (state / 상태) hiện tại. Kết quả này tạo **kết xuất (render / 렌더링) cây (tree / 트리)** gồm React elements và thành phần (component / 컴포넌트) boundaries; nó chưa đồng nghĩa trình duyệt (browser / 브라우저) DOM đã đổi. Parent kết xuất (render / 렌더링) thường khiến React đi xuống kết xuất (render / 렌더링) children để tính cây (tree / 트리) mới, nhưng sau reconciliation React chỉ lần ghi nhận (commit / 커밋) host changes thực sự cần thiết. Vì vậy `console.log` trong thành phần (component / 컴포넌트) có thể chạy dù DOM cuối cùng không đổi.
@@ -157,6 +164,8 @@ Khi React kết xuất (render / 렌더링) một thành phần (component / 컴
 Điều này dẫn đến ba câu hỏi khác nhau khi gỡ lỗi (debug / 디버그): **vì sao thành phần (component / 컴포넌트) được kết xuất (render / 렌더링)?**, **kết quả kết xuất (render / 렌더링) mới khác cây (tree / 트리) cũ ở đâu?**, và **lần ghi nhận (commit / 커밋) có thay DOM hay chạy tác động (effect / 효과)/ref nào không?**. Gộp ba câu hỏi thành “React kết xuất (render / 렌더링) lại quá nhiều” thường dẫn tới tối ưu sai chỗ.
 
 Kết xuất (render / 렌더링) cũng không phải vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) để làm side tác động (effect / 효과). React hiện đại có thể gọi kết xuất (render / 렌더링) nhiều lần để kiểm tra purity, hoặc chuẩn bị công việc (work / 작업) rồi bỏ kết quả trước lần ghi nhận (commit / 커밋). mã (code / 코드) trong kết xuất (render / 렌더링) vì vậy phải có tính chất tính toán: cùng đầu vào (input / 입력) phải cho đầu ra (output / 출력) tương thích và không để lại mutation bên ngoài.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **4. Tạo dự án (project / 프로젝트) React hiện đại** tiếp nhận điểm tựa từ **3B. kết xuất (render / 렌더링) cây (tree / 트리), thành phần (component / 컴포넌트) lời gọi (call / 호출) và DOM cập nhật (update / 업데이트) là ba chuyện khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. JSX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Tạo dự án (project / 프로젝트) React hiện đại
 
@@ -256,6 +265,8 @@ root.unmount();
 
 Ba API legacy trên rất thường gặp trong dự án (project / 프로젝트) React 16/17 và tài liệu cũ, nên cần đọc được dù không dùng cho mã (code / 코드) mới.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **5. JSX** tiếp nhận điểm tựa từ **4. Tạo dự án (project / 프로젝트) React hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5A. JSX thực chất tạo React element: createElement, cloneElement và API cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. JSX
 
 JSX là cú pháp mở rộng của JavaScript cho phép viết cấu trúc gần giống HTML. trình duyệt (browser / 브라우저) không hiểu JSX trực tiếp; bản dựng (build / 빌드) công cụ (tool / 도구) chuyển JSX thành mã JavaScript/thời gian chạy (runtime / 런타임) React.
@@ -323,6 +334,8 @@ React escape giá trị văn bản (text / 텍스트) mặc định, giúp giả
 >
 > Tutorial rất cũ thường bắt đầu tệp (file / 파일) bằng `import React from "react";` dù biến `React` không được dùng trực tiếp. Lý do là JSX transform cũ biên dịch JSX thành lời gọi như `React.createElement(...)`. hiện đại (modern / 현대적) JSX transform, được phổ biến từ giai đoạn React 17 và đã được backport cho một số phiên bản (version / 버전) cũ hơn, cho phép JSX hoạt động mà không cần import React chỉ vì JSX. **React 19 yêu cầu hiện đại (modern / 현대적) JSX transform**, nên mã (code / 코드) mới không nên học thói quen import React chỉ để “JSX chạy”.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **5A. JSX thực chất tạo React element: createElement, cloneElement và API cũ** tiếp nhận điểm tựa từ **5. JSX** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. thành phần (component / 컴포넌트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5A. JSX thực chất tạo React element: `createElement`, `cloneElement` và API cũ
 
 JSX không phải yêu cầu (requirement / 요구사항) bắt buộc. JSX:
@@ -360,7 +373,6 @@ const enhanced = React.cloneElement(original, {
 ### `React.createFactory` — legacy trước khi JSX phổ biến
 Phần này nối mạch bài học với “`React.createFactory` — legacy trước khi JSX phổ biến”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 const Button = React.createFactory("button");
 
@@ -384,6 +396,8 @@ React.DOM.div(
 ```
 
 Hãy hiểu nó như tiền thân của JSX `<div className="card">Hello</div>`, không phải API nên dùng trong mã (code / 코드) mới.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **6. thành phần (component / 컴포넌트)** tiếp nhận điểm tựa từ **5A. JSX thực chất tạo React element: createElement, cloneElement và API cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6A. hàm (function / 함수) thành phần (component / 컴포넌트) và lớp (class / 클래스) thành phần (component / 컴포넌트) qua các thế hệ React** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. thành phần (component / 컴포넌트)
 
@@ -411,6 +425,8 @@ function UserCard({ user }) {
 ```
 
 Kết xuất (render / 렌더링) lô-gic (logic / 논리) phải pure. Không gửi yêu cầu (request / 요청), mutate toàn cục (global / 전역) trạng thái (state / 상태) hoặc điều khiển DOM bên ngoài trong lúc kết xuất (render / 렌더링).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **6A. hàm (function / 함수) thành phần (component / 컴포넌트) và lớp (class / 클래스) thành phần (component / 컴포넌트) qua các thế hệ React** tiếp nhận điểm tựa từ **6. thành phần (component / 컴포넌트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6B. React.createClass: thành phần (component / 컴포넌트) trước ES6 lớp (class / 클래스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6A. hàm (function / 함수) thành phần (component / 컴포넌트) và lớp (class / 클래스) thành phần (component / 컴포넌트) qua các thế hệ React
 
@@ -530,7 +546,6 @@ setUser(user => ({
 ### `React.PureComponent`
 Phần này nối mạch bài học với “`React.PureComponent`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 class UserCard extends React.PureComponent {
   render() {
@@ -542,6 +557,8 @@ class UserCard extends React.PureComponent {
 `PureComponent` shallow-compare props và trạng thái (state / 상태) để có thể bỏ qua kết xuất (render / 렌더링). Với hàm (function / 함수) thành phần (component / 컴포넌트), khái niệm gần là `memo`; tuy nhiên React trình biên dịch (compiler / 컴파일러) hiện đại có thể tự động hóa nhiều memoization.
 
 > **phiên bản (version / 버전) status:** lớp (class / 클래스) thành phần (component / 컴포넌트) vẫn được hỗ trợ để bảo trì mã (code / 코드) cũ. React hiện tại không khuyến nghị dùng lớp (class / 클래스) cho mã (code / 코드) mới, nhưng lớp (class / 클래스) không phải cú pháp (syntax / 문법) “đã bị remove”.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **6B. React.createClass: thành phần (component / 컴포넌트) trước ES6 lớp (class / 클래스)** tiếp nhận điểm tựa từ **6A. hàm (function / 함수) thành phần (component / 컴포넌트) và lớp (class / 클래스) thành phần (component / 컴포넌트) qua các thế hệ React** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Props** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6B. `React.createClass`: thành phần (component / 컴포넌트) trước ES6 lớp (class / 클래스)
 
@@ -620,6 +637,8 @@ ES6 class + composition/HOC/render props
 Function Component + Custom Hooks
 ```
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **7. Props** tiếp nhận điểm tựa từ **6B. React.createClass: thành phần (component / 컴포넌트) trước ES6 lớp (class / 클래스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Props
 
 Props là dữ liệu cha truyền xuống con. thành phần (component / 컴포넌트) nhận props phải coi chúng read-only.
@@ -686,6 +705,8 @@ MyComponent.propTypes = {
 React 15.5 deprecate `React.PropTypes` và chuyển validator sang gói (package / 패키지) `prop-types`. React 19 bỏ việc xử lý `propTypes` cho hàm (function / 함수) thành phần (component / 컴포넌트) và bỏ `defaultProps` cho hàm (function / 함수) thành phần (component / 컴포넌트). mã (code / 코드) hiện đại thường dùng TypeScript và default parameter.
 
 Lớp (class / 클래스) thành phần (component / 컴포넌트) vẫn có thể có `defaultProps`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **8. sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **7. Props** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. trạng thái (state / 상태) với useState** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. sự kiện (event / 이벤트)
 
@@ -765,6 +786,8 @@ function handleChange(event) {
 }
 ```
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **9. trạng thái (state / 상태) với useState** tiếp nhận điểm tựa từ **8. sự kiện (event / 이벤트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9A. cập nhật (update / 업데이트) hàng đợi (queue / 큐) và updater hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. trạng thái (state / 상태) với `useState`
 
 Trạng thái (state / 상태) là dữ liệu riêng của thành phần (component / 컴포넌트) có thể thay đổi theo thời gian và ảnh hưởng đến kết xuất (render / 렌더링).
@@ -777,7 +800,6 @@ const [count, setCount] = useState(0);
 
 ### State là snapshot
 Phần này nối mạch bài học với “State là snapshot”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 function handleClick() {
@@ -853,9 +875,13 @@ const [items, setItems] = useState(() => createInitialItems());
 >
 > `useState` và các Hooks nền tảng xuất hiện từ **React 16.8**. Nếu bạn gặp tutorial React 15/16 đời đầu, trạng thái (state / 상태) thường nằm trong lớp (class / 클래스) thành phần (component / 컴포넌트) và được cập nhật bằng `this.setState`. Không cần học lớp (class / 클래스) thành phần (component / 컴포넌트) trước để hiểu React hiện đại; hãy học hàm (function / 함수) thành phần (component / 컴포넌트) + Hooks trước, rồi đọc lớp (class / 클래스) ở mức (level / 수준) Master để bảo trì mã (code / 코드) legacy.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **9A. cập nhật (update / 업데이트) hàng đợi (queue / 큐) và updater hàm (function / 함수)** tiếp nhận điểm tựa từ **9. trạng thái (state / 상태) với useState** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9B. quyền sở hữu trạng thái (state ownership / 상태 소유권), minimal trạng thái (state / 상태) và nguồn chuẩn (source of truth / 정본)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9A. cập nhật (update / 업데이트) hàng đợi (queue / 큐) và updater hàm (function / 함수)
 
 Setter thêm cập nhật (update / 업데이트) vào hàng đợi. Nhiều `setCount(count + 1)` trong cùng handler đều đọc cùng snapshot; `setCount(c => c + 1)` nhận kết quả queued trước nên đúng khi trạng thái (state / 상태) mới phụ thuộc trạng thái (state / 상태) cũ. lớp (class / 클래스) `setState(state => ...)` có cùng mục đích, nhưng đối tượng (object / 객체) `setState` của lớp (class / 클래스) shallow-merge còn Hook setter replace giá trị (value / 값). React 18 với hiện đại (modern / 현대적) gốc (root / 루트) mở rộng automatic batching sang nhiều async sources; tính đúng đắn (correctness / 정확성) không nên dựa vào giả định mỗi setter kết xuất (render / 렌더링) ngay một lần.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **9A. cập nhật (update / 업데이트) hàng đợi (queue / 큐) và updater hàm (function / 함수)** nêu điều cần giải thích; **9B. quyền sở hữu trạng thái (state ownership / 상태 소유권), minimal trạng thái (state / 상태) và nguồn chuẩn (source of truth / 정본)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. kết xuất (render / 렌더링), re-render và batching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9B. quyền sở hữu trạng thái (state ownership / 상태 소유권), minimal trạng thái (state / 상태) và nguồn chuẩn (source of truth / 정본)
 
@@ -864,6 +890,8 @@ Một trạng thái (state / 상태) tốt phải có **đơn vị sở hữu (o
 Ví dụ không nên lưu cả `items` lẫn `visibleItems` nếu `visibleItems` chỉ là `items.filter(...)`. Duplicate trạng thái (state / 상태) tạo bài toán đồng bộ, còn derived giá trị (value / 값) tự cập nhật theo kết xuất (render / 렌더링). Tương tự, trạng thái (state / 상태) nên mô tả dữ liệu nghiệp vụ tối thiểu chứ không mô tả mọi biến trung gian của UI.
 
 Trạng thái (state / 상태) cập nhật (update / 업데이트) phải được hiểu theo snapshot. sự kiện (event / 이벤트) handler của một kết xuất (render / 렌더링) nhìn thấy snapshot của kết xuất (render / 렌더링) đó; setter hàng đợi (queue / 큐) trạng thái (state / 상태) cho kết xuất (render / 렌더링) tiếp theo. Khi trạng thái (state / 상태) mới phụ thuộc trạng thái (state / 상태) cũ, updater hàm (function / 함수) như `setCount(c => c + 1)` mô tả chuyển tiếp (transition / 전이) chính xác hơn việc đọc snapshot cũ nhiều lần. Đây là bất biến (invariant / 불변식) chung dù cú pháp (syntax / 문법) là lớp (class / 클래스) `setState` hay Hook setter.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **9B. quyền sở hữu trạng thái (state ownership / 상태 소유권), minimal trạng thái (state / 상태) và nguồn chuẩn (source of truth / 정본)** nêu điều cần giải thích; **10. kết xuất (render / 렌더링), re-render và batching** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10A. Reconciliation, định danh (identity / 식별자) và preserve/reset trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. kết xuất (render / 렌더링), re-render và batching
 
@@ -887,11 +915,15 @@ Không nên giả định mỗi setter tạo một kết xuất (render / 렌더
 >
 > Trước React 18, batching mặc định hẹp hơn và thường gắn với React sự kiện (event / 이벤트) handler. Từ **React 18 khi dùng `createRoot`**, updates trong Promise, `setTimeout`, bản địa (native / 네이티브) sự kiện (event / 이벤트) handler và nhiều nguồn khác cũng được automatic batch. Vì vậy đừng dùng số lần kết xuất (render / 렌더링) quan sát được trong tutorial React 17 làm “quy luật” cho React hiện đại. Nếu thật sự cần ép DOM lần ghi nhận (commit / 커밋) đồng bộ, React DOM có `flushSync`, nhưng đây là escape hatch và không phải API nên dùng thường xuyên.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **10A. Reconciliation, định danh (identity / 식별자) và preserve/reset trạng thái (state / 상태)** tiếp nhận điểm tựa từ **10. kết xuất (render / 렌더링), re-render và batching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10B. Reconciliation bằng ví dụ: kiểu (type / 타입), position và key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10A. Reconciliation, định danh (identity / 식별자) và preserve/reset trạng thái (state / 상태)
 
 Reconciliation so cây (tree / 트리) mới với cây (tree / 트리) trước. mô hình tư duy (mental model / 사고 모델) dành cho ứng dụng (application / 애플리케이션) mã (code / 코드) là **kiểu (type / 타입) + position + key**. Cùng kiểu (type / 타입) ở cùng vị trí thường giữ cục bộ (local / 로컬) trạng thái (state / 상태) khi props đổi; đổi kiểu (type / 타입) thường thay subtree và reset trạng thái (state / 상태). `key` thêm định danh (identity / 식별자) nghiệp vụ ngoài vị trí, nên `<Editor key={document.id} />` có thể chủ động reset draft khi đổi document mà không cần tác động (effect / 효과) chỉ để `setDraft('')`.
 
 React 16 đưa Fiber để kết xuất (render / 렌더링) công việc (work / 작업) có thể được chia và schedule linh hoạt hơn; ứng dụng (application / 애플리케이션) mã (code / 코드) không truy cập Fiber internals. bất biến (invariant / 불변식) xuyên React cũ và mới vẫn là kết xuất (render / 렌더링) purity và định danh (identity / 식별자) qua kiểu (type / 타입)/position/key.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **10A. Reconciliation, định danh (identity / 식별자) và preserve/reset trạng thái (state / 상태)** cho ta quy tắc; **10B. Reconciliation bằng ví dụ: kiểu (type / 타입), position và key** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Conditional rendering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10B. Reconciliation bằng ví dụ: kiểu (type / 타입), position và key
 
@@ -913,6 +945,8 @@ function Page() {
 Mỗi kết xuất (render / 렌더링) của `Page` tạo một hàm (function / 함수) thành phần (component / 컴포넌트) kiểu (type / 타입) mới, nên React có thể coi `Editor` là kiểu (type / 타입) khác và reset trạng thái (state / 상태). Hãy khai báo thành phần (component / 컴포넌트) ở mô-đun (module / 모듈) phạm vi (scope / 범위) trừ khi bạn thật sự cần một hàm (function / 함수) helper không phải thành phần (component / 컴포넌트).
 
 `key` cũng không chỉ dành cho danh sách (list / 목록). Nếu `documentId` đổi và draft phải bắt đầu như một editor instance mới, `<Editor key={documentId} />` biểu đạt reset định danh (identity / 식별자) trực tiếp. Ngược lại, dùng key ngẫu nhiên khiến subtree remount mỗi kết xuất (render / 렌더링), làm mất trạng thái (state / 상태), focus và có thể tăng chi phí DOM.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **10B. Reconciliation bằng ví dụ: kiểu (type / 타입), position và key** cho ta quy tắc; **11. Conditional rendering** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. List và key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Conditional rendering
 
@@ -951,9 +985,10 @@ Khi length bằng `0`, React có thể kết xuất (render / 렌더링) `0`. Vi
 
 Thành phần (component / 컴포넌트) có thể return `null` nếu không muốn kết xuất (render / 렌더링) DOM đầu ra (output / 출력).
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **12. List và key** tiếp nhận điểm tựa từ **11. Conditional rendering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12A. key là định danh (identity / 식별자), không chỉ để xóa warning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. List và `key`
 Phần này nối mạch bài học với “12. List và `key`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 <ul>
@@ -973,9 +1008,13 @@ Không dùng `Math.random()` làm key vì định danh (identity / 식별자) đ
 <Item key={item.id} id={item.id} />
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **12A. key là định danh (identity / 식별자), không chỉ để xóa warning** tiếp nhận điểm tựa từ **12. List và key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Form cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12A. `key` là định danh (identity / 식별자), không chỉ để xóa warning
 
 Chỉ mục (index / 인덱스) key có thể làm cục bộ (local / 로컬) trạng thái (state / 상태), uncontrolled đầu vào (input / 입력), focus hoặc animation đi theo vị trí sai khi danh sách (list / 목록) reorder/insert/delete. ID ổn định từ dữ liệu là mặc định tốt hơn. chỉ mục (index / 인덱스) chỉ hợp lý khi danh sách (list / 목록) thật sự tĩnh. `key` cũng dùng ngoài danh sách (list / 목록) để reset subtree có chủ đích, ví dụ `<Chat key={contact.id} />`.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **13. Form cơ bản** tiếp nhận điểm tựa từ **12A. key là định danh (identity / 식별자), không chỉ để xóa warning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Lifting trạng thái (state / 상태) up và single nguồn chuẩn (source of truth / 정본)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Form cơ bản
 
@@ -1024,6 +1063,8 @@ Button trong form thường mặc định là submit. Nếu chỉ là hành đ�
 
 Controlled đầu vào (input / 입력) dùng React trạng thái (state / 상태) làm nguồn chuẩn (source of truth / 정본). Uncontrolled đầu vào (input / 입력) để DOM giữ giá trị (value / 값) và đọc qua ref/FormData. Cả hai đều hợp lệ; beginner nên nắm controlled trước.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **13. Form cơ bản** nêu điều cần giải thích; **14. Lifting trạng thái (state / 상태) up và single nguồn chuẩn (source of truth / 정본)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Composition và children** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Lifting trạng thái (state / 상태) up và single nguồn chuẩn (source of truth / 정본)
 
 Khi hai thành phần (component / 컴포넌트) cần đồng bộ cùng dữ liệu, đưa trạng thái (state / 상태) lên ancestor chung gần nhất.
@@ -1047,9 +1088,10 @@ function Calculator() {
 
 Mỗi mẩu trạng thái (state / 상태) quan trọng nên có một đơn vị sở hữu (owner / 오너) rõ ràng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **14. Lifting trạng thái (state / 상태) up và single nguồn chuẩn (source of truth / 정본)** nêu điều cần giải thích; **15. Composition và children** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Styling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Composition và `children`
 Phần này nối mạch bài học với “15. Composition và `children`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 function Card({ children }) {
@@ -1069,6 +1111,8 @@ function App() {
 `children` là prop chứa nội dung giữa opening/closing tag. Có thể truyền JSX qua prop tên riêng khi ngữ nghĩa (semantic / 의미적) rõ hơn.
 
 React ưu tiên composition hơn inheritance cho UI.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **16. Styling** tiếp nhận điểm tựa từ **15. Composition và children** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Strict chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Styling
 
@@ -1095,6 +1139,8 @@ Inline style thích hợp cho giá trị động nhỏ:
 
 Ứng dụng lớn có thể dùng utility CSS hoặc thành phần (component / 컴포넌트) thư viện (library / 라이브러리); đó là ecosystem, không phải React cốt lõi (core / 핵심).
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **17. Strict chế độ (mode / 모드)** tiếp nhận điểm tựa từ **16. Styling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. gỡ lỗi (debug / 디버그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Strict chế độ (mode / 모드)
 
 `<StrictMode>` bật các kiểm tra development. React có thể chạy lại một số lô-gic (logic / 논리) để phát hiện kết xuất (render / 렌더링) không pure hoặc cleanup sai. Vì vậy beginner có thể thấy log/tác động (effect / 효과) nhiều hơn mong đợi trong development.
@@ -1105,15 +1151,18 @@ Không tắt Strict chế độ (mode / 모드) chỉ để “hết chạy hai 
 >
 > React 18 thêm development-only check mô phỏng việc setup/cleanup rồi setup lại một số tác động (effect / 효과) khi thành phần (component / 컴포넌트) mount lần đầu trong Strict chế độ (mode / 모드). Mục tiêu là phát hiện tác động (effect / 효과) không cleanup đúng và chuẩn bị mã (code / 코드) cho kiến trúc có thể preserve/reuse trạng thái (state / 상태). Vì vậy khi development thấy tác động (effect / 효과) hoặc log xuất hiện nhiều lần, đừng vội kết luận React bị lỗi hoặc tắt Strict chế độ (mode / 모드); trước tiên kiểm tra purity và cleanup. môi trường vận hành (production / 운영 환경) không chạy cùng kiểu kiểm tra development này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **18. gỡ lỗi (debug / 디버그)** tiếp nhận điểm tựa từ **17. Strict chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Mini project Todo hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. gỡ lỗi (debug / 디버그)
 
 Phân biệt bốn lớp lỗi: JavaScript thời gian chạy (runtime / 런타임), React trạng thái (state / 상태)/kết xuất (render / 렌더링), DOM/CSS và mạng (network / 네트워크)/API. trình duyệt (browser / 브라우저) DevTools dùng Console, mạng (network / 네트워크), Elements, hiệu năng (performance / 성능); React DevTools cho thành phần (component / 컴포넌트) cây (tree / 트리), props/trạng thái (state / 상태) và profiler.
 
 Khi gỡ lỗi (debug / 디버그) trạng thái (state / 상태), log đầu vào (input / 입력) và chuyển tiếp (transition / 전이) thay vì chỉ log trạng thái (state / 상태) ngay sau setter.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **19. Mini project Todo hoàn chỉnh** tiếp nhận điểm tựa từ **18. gỡ lỗi (debug / 디버그)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Các lỗi beginner thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Mini project Todo hoàn chỉnh
 Phần này nối mạch bài học với “19. Mini project Todo hoàn chỉnh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 import { useState } from "react";
@@ -1188,6 +1237,8 @@ export default function TodoApp() {
 
 `nextId` ngoài thành phần (component / 컴포넌트) chỉ phù hợp demo cục bộ (local / 로컬). môi trường vận hành (production / 운영 환경) thường dùng ID máy chủ (server / 서버)/cơ sở dữ liệu (database / 데이터베이스) hoặc chiến lược định danh phù hợp.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Beginner**, **20. Các lỗi beginner thường gặp** tiếp nhận điểm tựa từ **19. Mini project Todo hoàn chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Kết thúc mức (level / 수준) Beginner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Các lỗi beginner thường gặp
 
 ### Gọi handler trong kết xuất (render / 렌더링)
@@ -1230,7 +1281,6 @@ const fullName = `${firstName} ${lastName}`.trim();
 ### Định nghĩa component bên trong component
 Phần này nối mạch bài học với “Định nghĩa component bên trong component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 function App() {
   function Child() {
@@ -1246,11 +1296,15 @@ Mỗi kết xuất (render / 렌더링) có thể tạo thành phần (component
 
 `setCount(count + 1)` không làm biến `count` trong closure hiện tại thay đổi ngay.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Beginner**, **21. Kết thúc mức (level / 수준) Beginner** tiếp nhận điểm tựa từ **20. Các lỗi beginner thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên bản (version / 버전) Map cho mức (level / 수준) Beginner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Kết thúc mức (level / 수준) Beginner
 
 Bạn nên tự giải thích được: React khác DOM imperative ở đâu; JSX là gì; thành phần (component / 컴포넌트), props và trạng thái (state / 상태) khác nhau thế nào; vì sao trạng thái (state / 상태) cập nhật (update / 업데이트) phải immutable; vì sao trạng thái (state / 상태) là snapshot; `key` ảnh hưởng định danh (identity / 식별자) thế nào; controlled form hoạt động ra sao; khi nào nên derive giá trị thay vì lưu trạng thái (state / 상태).
 
 Bạn cũng nên tự xây được CRUD nhỏ client-side mà không bản sao (copy / 복사) kiến trúc (architecture / 아키텍처), và chỉ ra rõ đơn vị sở hữu (owner / 오너) của từng trạng thái (state / 상태).
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **Phiên bản (version / 버전) Map cho mức (level / 수준) Beginner** tiếp nhận điểm tựa từ **21. Kết thúc mức (level / 수준) Beginner** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Phiên bản (version / 버전) Map cho mức (level / 수준) Beginner
 
@@ -1269,4 +1323,4 @@ Nếu một đoạn mã (code / 코드) khác tài liệu này, hãy kiểm tra 
 
 React và React DOM nên được xem như một cặp phiên bản (version / 버전) tương thích. Với khung phần mềm (framework / 프레임워크) như Next.js, còn phải kiểm tra khung phần mềm (framework / 프레임워크) đang hỗ trợ/pin React phiên bản (version / 버전) nào; không tự nâng React độc lập chỉ vì thấy API mới trên react.dev.
 
-> **Bàn giao:** Sau **phiên bản (version / 버전) Map cho mức (level / 수준) Beginner**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index](./00_index.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Phiên bản (version / 버전) Map cho mức (level / 수준) Beginner**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # Java Collections nhìn dưới góc DSA
 
-> **Mạch đọc:** Đọc **Java Collections nhìn dưới góc DSA** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **giao diện (interface / 인터페이스) trước cách triển khai** sang **ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Collections nhìn dưới góc DSA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Giao diện (interface / 인터페이스) trước cách triển khai** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Java Collections & cấu trúc dữ liệu (data structure / 자료구조) Selection / Java Collections와 자료구조 선택**
 
@@ -20,6 +20,8 @@ Deque<Task> q = new ArrayDeque<>();
 
 Mã ở cấp API nên phụ thuộc giao diện (interface / 인터페이스) khi hợp lý, nhưng mã nhạy về hiệu năng vẫn phải biết concrete kiểu (type / 타입) bên dưới.
 
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)** tiếp nhận điểm tựa từ **Giao diện (interface / 인터페이스) trước cách triển khai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LinkedList không tự động nhanh hơn khi chèn/xóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)
 
 `ArrayList` dựa trên mảng có thể thay đổi kích thước.
@@ -33,11 +35,15 @@ contains                 O(n)
 
 Nó thường có tính cục bộ bộ nhớ tốt hơn danh sách mỗi nút một đối tượng (object / 객체) và có ít chi phí phụ trên mỗi phần tử. Ngay cả khi bài toán có chèn/xóa, `ArrayList` vẫn thường phù hợp nếu thao tác chủ yếu ở cuối hoặc dữ liệu không quá lớn.
 
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **LinkedList không tự động nhanh hơn khi chèn/xóa** tiếp nhận điểm tựa từ **ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ArrayDeque cho ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## LinkedList không tự động nhanh hơn khi chèn/xóa
 
 Chèn hoặc xóa tại một nút đã biết có thể `O(1)`, nhưng `list.add(i, x)` phải tìm tới vị trí `i` trước và thường mất `O(n)`. Ngoài ra, mỗi nút là một đối tượng (object / 객체) riêng, làm tăng cấp phát, lần theo tham chiếu (reference / 참조) và áp lực GC.
 
 Vì vậy câu “LinkedList chèn O(1)” chỉ đúng khi đã có vị trí nút và bỏ qua các chi phí khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **ArrayDeque cho ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque** tiếp nhận điểm tựa từ **LinkedList không tự động nhanh hơn khi chèn/xóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HashMap và hợp đồng equals/hashCode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## ArrayDeque cho ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque
 
@@ -52,6 +58,8 @@ int y = dq.pollFirst();
 ```
 
 `ArrayDeque` thường là lựa chọn mặc định tốt hơn `LinkedList` cho ngăn xếp (stack / 스택)/hàng đợi (queue / 큐) và tốt hơn lớp `Stack` cũ. `java.util.Stack` kế thừa `Vector` và mang theo thiết kế đồng bộ hóa kiểu cũ; mã hiện đại thường dùng `Deque`.
+
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **HashMap và hợp đồng equals/hashCode** tiếp nhận điểm tựa từ **ArrayDeque cho ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HashSet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## HashMap và hợp đồng equals/hashCode
 
@@ -80,6 +88,8 @@ HashMap không phải direct addressing. Chất lượng băm (hash / 해시), h
 
 Nếu biết trước số lượng phần tử lớn, đặt dung lượng ban đầu hợp lý có thể giảm số lần resize. Không nên phụ thuộc vào các ngưỡng nội bộ không được bảo đảm giữa các phiên bản JDK.
 
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **HashSet** tiếp nhận điểm tựa từ **HashMap và hợp đồng equals/hashCode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TreeMap và TreeSet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## HashSet
 
 `HashSet` phù hợp cho:
@@ -91,6 +101,8 @@ deduplication
 ```
 
 Nếu cần thứ tự, `floor`, `ceiling` hoặc truy vấn khoảng, cần cấu trúc có thứ tự như `TreeSet`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **TreeMap và TreeSet** tiếp nhận điểm tựa từ **HashSet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PriorityQueue** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## TreeMap và TreeSet
 
@@ -118,6 +130,8 @@ Integer.compare(a, b)
 
 Nếu comparator trả `0`, `TreeMap`/`TreeSet` xem hai khóa nằm cùng vị trí thứ tự, dù `equals` có thể cho kết quả khác. Đây là khác biệt quan trọng với HashMap.
 
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **PriorityQueue** tiếp nhận điểm tựa từ **TreeMap và TreeSet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mảng thành phần nguyên thủy (primitive / 기본 요소) thường tốt hơn collection đóng hộp trong DSA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## PriorityQueue
 
 `PriorityQueue` là vùng nhớ động (heap / 힙):
@@ -138,6 +152,8 @@ PriorityQueue<State> pq =
 
 Không sửa trường dùng để so sánh của đối tượng (object / 객체) đang nằm trong hàng đợi (queue / 큐) rồi kỳ vọng vùng nhớ động (heap / 힙) tự sắp xếp lại. Hãy chèn một trạng thái mới hoặc dùng indexed vùng nhớ động (heap / 힙) chuyên dụng.
 
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **Mảng thành phần nguyên thủy (primitive / 기본 요소) thường tốt hơn collection đóng hộp trong DSA** tiếp nhận điểm tựa từ **PriorityQueue** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn đồ thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mảng thành phần nguyên thủy (primitive / 기본 요소) thường tốt hơn collection đóng hộp trong DSA
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -151,6 +167,8 @@ boolean[] seen;
 thường gọn và nhanh hơn `List<Integer>`, `List<Long>` hoặc `List<Boolean>` khi kích thước đã biết.
 
 Autoboxing làm cú pháp tiện hơn nhưng tạo thêm đối tượng (object / 객체)/tham chiếu (reference / 참조) và có thể tăng áp lực GC. Unboxing `null` còn gây `NullPointerException`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **Biểu diễn đồ thị** tiếp nhận điểm tựa từ **Mảng thành phần nguyên thủy (primitive / 기본 요소) thường tốt hơn collection đóng hộp trong DSA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản ghi (record / 레코드) và tính bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biểu diễn đồ thị
 
@@ -171,6 +189,8 @@ long[] weight
 
 Nên bắt đầu từ biểu diễn rõ ràng rồi tối ưu khi profiling cho thấy bộ nhớ hoặc GC thực sự là nút thắt.
 
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **Bản ghi (record / 레코드) và tính bất biến** tiếp nhận điểm tựa từ **Biểu diễn đồ thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **computeIfAbsent, merge và miền khóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bản ghi (record / 레코드) và tính bất biến
 
 Bản ghi (record / 레코드) rất hợp cho trạng thái hàng đợi ưu tiên, khóa map tổng hợp, cạnh và tọa độ:
@@ -180,6 +200,8 @@ record Cell(int r, int c, int mask) {}
 ```
 
 Tuy nhiên, bản ghi (record / 레코드) chỉ làm các tham chiếu (reference / 참조) thành phần không thể được gán lại. Nếu thành phần là một `List` có thể thay đổi thì nội dung bên trong vẫn mutable. Khóa băm cần mức bất biến đủ sâu để `equals/hashCode` không thay đổi trong thời gian khóa nằm trong map.
+
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **computeIfAbsent, merge và miền khóa** tiếp nhận điểm tựa từ **Bản ghi (record / 레코드) và tính bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **EnumMap, EnumSet và BitSet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## computeIfAbsent, merge và miền khóa
 
@@ -200,11 +222,15 @@ int[] count = new int[n];
 
 Miền khóa quyết định cấu trúc phù hợp. HashMap không phải lựa chọn mặc định cho mọi bài toán ánh xạ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **EnumMap, EnumSet và BitSet** tiếp nhận điểm tựa từ **computeIfAbsent, merge và miền khóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắp xếp và tìm kiếm nhị phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## EnumMap, EnumSet và BitSet
 
 Nếu khóa là enum, `EnumMap` và `EnumSet` khai thác miền khóa hữu hạn hiệu quả hơn cấu trúc băm (hash / 해시) tổng quát.
 
 `BitSet` nén nhiều cờ Boolean và hỗ trợ AND/OR/XOR trên nhiều bit mỗi từ máy. Nó hữu ích cho tập membership lớn, bitset DP, giao/hợp tập và một số tối ưu reachability.
+
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **Sắp xếp và tìm kiếm nhị phân** tiếp nhận điểm tựa từ **EnumMap, EnumSet và BitSet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **View, sao chép và bí danh dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sắp xếp và tìm kiếm nhị phân
 
@@ -213,6 +239,8 @@ Nếu khóa là enum, `EnumMap` và `EnumSet` khai thác miền khóa hữu hạ
 `Arrays.binarySearch` trả một vị trí khớp nếu tìm thấy; nếu không, giá trị âm mã hóa insertion điểm (point / 지점). Nó không phải API lower-bound/upper-bound cho phần tử trùng. Nếu cần lần xuất hiện đầu tiên/cuối cùng, nên tự cài tìm kiếm nhị phân (binary search / 이진 탐색) theo bất biến tương ứng.
 
 Tìm kiếm nhị phân còn cần truy cập ngẫu nhiên hiệu quả. Áp dụng nó lên `LinkedList` không tự biến truy cập theo chỉ số thành `O(1)`.
+
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **Sắp xếp và tìm kiếm nhị phân** nêu điều cần giải thích; **View, sao chép và bí danh dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Iterator fail-fast không phải cơ chế đồng bộ hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## View, sao chép và bí danh dữ liệu
 
@@ -226,15 +254,21 @@ new ArrayList<>(list.subList(l, r))
 
 Tương tự, `Collections.unmodifiable*` tạo view không cho sửa qua wrapper nhưng không làm các đối tượng (object / 객체) bên trong bất biến sâu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **View, sao chép và bí danh dữ liệu** nêu điều cần giải thích; **Iterator fail-fast không phải cơ chế đồng bộ hóa** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **ConcurrentHashMap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Iterator fail-fast không phải cơ chế đồng bộ hóa
 
 Nhiều collection cố phát hiện thay đổi cấu trúc trong lúc duyệt và có thể ném `ConcurrentModificationException`. Đây là cơ chế phát hiện lỗi kiểu best-effort, không phải bảo đảm an toàn luồng.
 
 Không dùng exception này như một thành phần nguyên thủy (primitive / 기본 요소) đồng bộ hóa.
 
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **Iterator fail-fast không phải cơ chế đồng bộ hóa** xác định đầu vào; **ConcurrentHashMap** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **BlockingQueue và backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ConcurrentHashMap
 
 `ConcurrentHashMap` được chọn vì cần ngữ nghĩa truy cập đồng thời, không phải vì nó là “HashMap nhanh hơn”. Các thao tác nhiều bước như “kiểm tra rồi chèn” phải dùng API nguyên tử phù hợp như `putIfAbsent`, `compute` hoặc `merge` nếu muốn tránh race.
+
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **BlockingQueue và backpressure** tiếp nhận điểm tựa từ **ConcurrentHashMap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CopyOnWrite collections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## BlockingQueue và backpressure
 
@@ -242,17 +276,23 @@ Trong mô hình producer–bên tiêu thụ (consumer / 소비자), `BlockingQue
 
 Đây là ví dụ một cấu trúc dữ liệu chuyển trực tiếp thành cơ chế điều tiết của hệ thống.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **CopyOnWrite collections** tiếp nhận điểm tựa từ **BlockingQueue và backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IdentityHashMap và WeakHashMap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## CopyOnWrite collections
 
 Sao chép khi ghi (copy-on-write / 쓰기 시 복사) phù hợp với tải đọc rất nhiều và ghi rất hiếm. Mỗi lần ghi phải sao chép vùng lưu trữ, vì vậy tải ghi cao sẽ rất đắt.
 
 “Thread-safe” không đủ để chọn collection; tỷ lệ đọc/ghi và ngữ nghĩa snapshot mới là yếu tố quyết định.
 
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **IdentityHashMap và WeakHashMap** tiếp nhận điểm tựa từ **CopyOnWrite collections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GC không loại bỏ rò rỉ lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## IdentityHashMap và WeakHashMap
 
 `IdentityHashMap` dùng định danh tham chiếu (reference / 참조) (`==`) thay vì `equals`. Nó phù hợp với một số thuật toán theo dõi đối tượng (object / 객체) định danh (identity / 식별자), serialization hoặc đồ thị đối tượng (object / 객체), nhưng không thay thế HashMap thông thường.
 
 `WeakHashMap` có ngữ nghĩa vòng đời đặc biệt: entry có thể biến mất khi khóa không còn được tham chiếu mạnh. Nó không phải bộ nhớ đệm (cache / 캐시) eviction chính sách (policy / 정책) tổng quát; muốn dùng đúng phải hiểu GC reachability.
+
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **GC không loại bỏ rò rỉ lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **IdentityHashMap và WeakHashMap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## GC không loại bỏ rò rỉ lô-gic (logic / 논리)
 
@@ -262,11 +302,15 @@ Trong Java, quản lý vòng đời chủ yếu là quản lý reachability.
 
 Một gốc (root / 루트) tham chiếu (reference / 참조) có thể giữ toàn bộ cây hoặc đồ thị sống. Chu trình đối tượng (object / 객체) tự thân không gây leak với tracing GC nếu toàn bộ chu trình không còn reachable từ roots.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **Độ sâu đệ quy** tiếp nhận điểm tựa từ **GC không loại bỏ rò rỉ lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **long, overflow và BigInteger** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ sâu đệ quy
 
 Java không bảo đảm tối ưu lời gọi đuôi. DFS trên cây lệch hoặc đồ thị dạng đường có thể gây `StackOverflowError`.
 
 Khi độ sâu có thể lớn, dùng `ArrayDeque` làm ngăn xếp (stack / 스택) tường minh. Không nên dùng `StackOverflowError` như luồng điều khiển bình thường của thuật toán.
+
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **Độ sâu đệ quy** xác định đầu vào; **long, overflow và BigInteger** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Generic và kiểu (type / 타입) erasure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## long, overflow và BigInteger
 
@@ -280,11 +324,15 @@ Dùng sentinel có khoảng an toàn và chỉ cộng từ trạng thái reachab
 
 Nếu bài toán thực sự cần số nguyên vượt 64 bit, `BigInteger` cung cấp độ chính xác tùy ý nhưng phải trả chi phí đối tượng (object / 객체) và số học lớn hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **long, overflow và BigInteger** xác định đầu vào; **Generic và kiểu (type / 타입) erasure** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cấu trúc DSA tùy biến vẫn thường dùng mảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Generic và kiểu (type / 타입) erasure
 
 Java generics cung cấp an toàn kiểu ở mức mã nguồn nhưng không nhận thành phần nguyên thủy (primitive / 기본 요소) làm kiểu (type / 타입) argument, vì vậy không có `List<int>`. Đây là một nguyên nhân autoboxing xuất hiện trong collection chuẩn.
 
 Khi profiling chứng minh boxing là nút thắt, có thể dùng mảng thành phần nguyên thủy (primitive / 기본 요소) hoặc thư viện collection thành phần nguyên thủy (primitive / 기본 요소) chuyên dụng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **Cấu trúc DSA tùy biến vẫn thường dùng mảng** tiếp nhận điểm tựa từ **Generic và kiểu (type / 타입) erasure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Streams và độ phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc DSA tùy biến vẫn thường dùng mảng
 
@@ -298,6 +346,8 @@ int[] position = new int[n];
 
 Không cần biến mọi nút thành lớp (class / 클래스). Cách biểu diễn phải phục vụ tải công việc chứ không phục vụ thẩm mỹ OOP.
 
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **Streams và độ phức tạp** tiếp nhận điểm tựa từ **Cấu trúc DSA tùy biến vẫn thường dùng mảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **String và Unicode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Streams và độ phức tạp
 
 `stream.sorted()`, `stream.distinct()` hoặc `groupingBy()` vẫn thực hiện công việc thuật toán và xây dựng cấu trúc dữ liệu. Lớp API khai báo không làm chi phí biến mất.
@@ -305,6 +355,8 @@ Không cần biến mọi nút thành lớp (class / 클래스). Cách biểu di
 Trong đường chạy nóng, vòng lặp truyền thống thường cho quyền kiểm soát rõ hơn về boxing, cấp phát và dừng sớm. Streams có thể rất dễ đọc ở các phép biến đổi không nhạy về hiệu năng; quyết định nên dựa trên profiling thay vì định kiến.
 
 Parallel streams cũng không tự làm thuật toán mở rộng tuyến tính theo số lõi. Chi phí chia/gộp, tranh chấp và phụ thuộc dữ liệu có thể làm song song hóa không hiệu quả.
+
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **String và Unicode** tiếp nhận điểm tựa từ **Streams và độ phức tạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ thực tế và đối tượng (object / 객체) header** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## String và Unicode
 
@@ -320,6 +372,8 @@ Nhưng việc chuyển và lưu mã (code / 코드) điểm (point / 지점) có
 
 `String` là bất biến. Khi xây chuỗi qua nhiều bước, `StringBuilder` thường là bộ đệm thay đổi được phù hợp hơn việc tạo chuỗi trung gian lặp lại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **Bộ nhớ thực tế và đối tượng (object / 객체) header** tiếp nhận điểm tựa từ **String và Unicode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JMH và profiling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ nhớ thực tế và đối tượng (object / 객체) header
 
 Một đối tượng (object / 객체) Java còn có header, alignment và tham chiếu (reference / 참조); số byte chính xác phụ thuộc cấu hình JVM. Vì vậy hàng triệu `Node` có thể lớn hơn nhiều so với tổng kích thước các trường lô-gic (logic / 논리).
@@ -327,6 +381,8 @@ Một đối tượng (object / 객체) Java còn có header, alignment và tham
 Các cách biểu diễn phẳng bằng mảng thường giảm đáng kể chi phí này.
 
 JIT có thể loại bỏ một số cấp phát thông qua escape phân tích (analysis / 분석) hoặc scalar replacement, nhưng không nên thiết kế dựa trên giả định rằng một tối ưu cụ thể chắc chắn xảy ra.
+
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **JMH và profiling** tiếp nhận điểm tựa từ **Bộ nhớ thực tế và đối tượng (object / 객체) header** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp lực GC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## JMH và profiling
 
@@ -336,17 +392,23 @@ Các công cụ như JFR, async-profiler, JMC hoặc profiler tương đương g
 
 Tối ưu collection nên dựa trên dữ liệu đo.
 
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **Áp lực GC** tiếp nhận điểm tựa từ **JMH và profiling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Immutability và persistent structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Áp lực GC
 
 Thuật toán đồ thị hoặc PriorityQueue có thể tạo rất nhiều đối tượng (object / 객체) sống ngắn. GC thường xử lý đối tượng (object / 객체) ngắn hạn tốt, nhưng tốc độ cấp phát quá cao vẫn có thể ảnh hưởng thông lượng (throughput / 처리량) và tail độ trễ (latency / 지연 시간).
 
 Các lựa chọn thay thế gồm mảng thành phần nguyên thủy (primitive / 기본 요소) hoặc cách biểu diễn gọn hơn. đối tượng (object / 객체) pooling không phải lúc nào cũng tốt trong JVM hiện đại; phải đo trước khi áp dụng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **Immutability và persistent structures** tiếp nhận điểm tựa từ **Áp lực GC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng chọn nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Immutability và persistent structures
 
 Collection chuẩn của JDK chủ yếu là mutable. Cấu trúc immutable/persistent có thể hữu ích cho snapshot, versioning và chia sẻ trạng thái an toàn hơn.
 
 Persistent cây (tree / 트리) có thể sao chép chỉ đường cập nhật rồi chia sẻ các nhánh không đổi. Đổi lại, nó tạo thêm đối tượng (object / 객체) và có mô hình chi phí khác collection mutable.
+
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **Bảng chọn nhanh** tiếp nhận điểm tựa từ **Immutability và persistent structures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử cấu trúc DSA tự cài đặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảng chọn nhanh
 
@@ -365,6 +427,8 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 Bảng chỉ là điểm bắt đầu; tải công việc thực tế và profiling mới quyết định cuối cùng.
 
+> **Chuyển mạch:** Ở chặng này của **Java Collections nhìn dưới góc DSA**, **Kiểm thử cấu trúc DSA tự cài đặt** tiếp nhận điểm tựa từ **Bảng chọn nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểm thử cấu trúc DSA tự cài đặt
 
 Có thể dùng collection JDK làm mô hình tham chiếu:
@@ -378,6 +442,8 @@ Hash Map tự cài đặt  -> so thao tác ngẫu nhiên với HashMap
 Ngoài đầu ra, vẫn nên kiểm tra bất biến sau các chuỗi thao tác ngẫu nhiên.
 
 `assert` có thể bị tắt ở thời gian chạy (runtime / 런타임), vì vậy kiểm thử tự động nên dùng JUnit hoặc khung phần mềm (framework / 프레임워크) property-based testing phù hợp thay vì phụ thuộc ngầm vào Java assertions.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Collections nhìn dưới góc DSA**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Kiểm thử cấu trúc DSA tự cài đặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -395,6 +461,8 @@ Ngoài đầu ra, vẫn nên kiểm tra bất biến sau các chuỗi thao tác 
 
 “TreeMap xác định khóa trùng giống HashMap” — sai; comparator/natural thứ tự (ordering / 순서) có ngữ nghĩa khác `equals/hashCode`.
 
+> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Java Collections là các **hợp đồng DSA được đóng gói trong khung phần mềm (framework / 프레임워크)**. Chúng giảm lượng mã phải tự viết nhưng không loại bỏ trách nhiệm chọn đúng cách biểu diễn.
@@ -402,3 +470,5 @@ Ngoài đầu ra, vẫn nên kiểm tra bất biến sau các chuỗi thao tác 
 Khi chọn collection, hãy hỏi: **thao tác nào chiếm ưu thế, cần thứ tự hay chỉ membership, khóa có bất biến không, mảng thành phần nguyên thủy (primitive / 기본 요소) có đủ không, đối tượng (object / 객체) overhead có đáng kể không, có thật sự cần tính đồng thời (concurrency / 동시성) không, và view/iterator/tham chiếu (reference / 참조) có thể mất hiệu lực khi nào?**
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

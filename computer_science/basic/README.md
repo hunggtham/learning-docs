@@ -1,7 +1,6 @@
 # Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện
 
-> **Mạch đọc:** Đọc **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc thư viện** sang **Quan hệ phụ thuộc và lộ trình đọc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc thư viện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quan hệ phụ thuộc và lộ trình đọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Đây là phần **kiến thức nền tảng (foundation / 기초)** của Thư viện Khoa học máy tính (Computer Science Knowledge Library). Mục tiêu là xây dựng mô hình tư duy (mental model / 사고 모델) xuyên suốt từ thông tin và tính toán đến phần cứng, hệ điều hành, ngôn ngữ lập trình, cơ sở dữ liệu, mạng, hệ thống phân tán, bảo mật, kỹ nghệ phần mềm, trí tuệ nhân tạo, tương tác người–máy, đồ họa và tác động xã hội của công nghệ tính toán.
 
@@ -33,6 +32,8 @@ computer_science/
     ├── 99_glossary.md
     └── COVERAGE_AUDIT.md
 ```
+
+> **Chuyển mạch:** Trong **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **Quan hệ phụ thuộc và lộ trình đọc** tiếp nhận điểm tựa từ **Cấu trúc thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **00 — Tính toán và thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ phụ thuộc và lộ trình đọc
 
@@ -69,6 +70,8 @@ Nếu mục tiêu là kỹ thuật backend hoặc hệ thống, có thể ưu ti
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **00 — Tính toán và thông tin** tiếp nhận điểm tựa từ **Quan hệ phụ thuộc và lộ trình đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **01 — Thuật toán và cấu trúc dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 00 — Tính toán và thông tin
 
 Nhóm này giải thích computation, representation, state và information trước khi nói tới máy cụ thể. Đây là nền để hiểu dữ liệu được biến đổi và đo lường thế nào.
@@ -78,6 +81,8 @@ Nhóm này giải thích computation, representation, state và information trư
 - [Hệ số, số nguyên, số dấu phẩy động và dữ liệu trong bộ nhớ](./00_computation_information/02_numbers_and_machine_representation.md)
 - [Logic, trạng thái, trừu tượng hóa và bất biến](./00_computation_information/03_logic_state_abstraction_and_invariants.md)
 - [Khả năng tính toán và giới hạn của tính toán](./00_computation_information/04_computability_and_limits.md)
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **00 — Tính toán và thông tin** nêu điều cần giải thích; **01 — Thuật toán và cấu trúc dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **02 — Kiến trúc máy tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 01 — Thuật toán và cấu trúc dữ liệu
 
@@ -96,6 +101,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 - [Thuật toán ngẫu nhiên, xấp xỉ và trực tuyến](./01_algorithms_data_structures/10_randomized_approximation_and_online_algorithms.md)
 - [Độ phức tạp, phép quy giảm, P/NP và cận dưới](./01_algorithms_data_structures/11_complexity_reductions_and_np.md)
 
+> **Chuyển mạch:** Trong **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **01 — Thuật toán và cấu trúc dữ liệu** nêu điều cần giải thích; **02 — Kiến trúc máy tính** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **03 — Hệ điều hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 02 — Kiến trúc máy tính
 
 Kiến trúc nối logic, CPU, memory hierarchy, storage và I/O với performance. Hãy theo data path để hiểu vì sao cùng một thuật toán có thể có chi phí khác nhau trên phần cứng.
@@ -109,6 +116,8 @@ Kiến trúc nối logic, CPU, memory hierarchy, storage và I/O với performan
 - [Phần cứng lưu trữ: SSD, đĩa và tính bền vững dữ liệu](./02_computer_architecture/06_storage_hardware_ssd_disks_and_persistence.md)
 - [Hiệu năng, năng lượng và đo lường phần cứng](./02_computer_architecture/07_performance_power_and_hardware_measurement.md)
 
+> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **03 — Hệ điều hành** tiếp nhận điểm tựa từ **02 — Kiến trúc máy tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **04 — Ngôn ngữ lập trình và môi trường thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 03 — Hệ điều hành
 
 OS quản lý process, memory, filesystem, device và syscall như một lớp trung gian có policy. Các chapter giúp nối API lập trình với tài nguyên thực mà kernel kiểm soát.
@@ -121,6 +130,8 @@ OS quản lý process, memory, filesystem, device và syscall như một lớp t
 - [Đặc quyền, cô lập, container và ảo hóa](./03_operating_systems/05_privilege_isolation_and_virtualization.md)
 - [IPC: signal, pipe, socket và bộ nhớ chia sẻ](./03_operating_systems/06_ipc_signals_pipes_and_shared_memory.md)
 - [Khởi động, trình điều khiển thiết bị và I/O bất đồng bộ](./03_operating_systems/07_boot_device_drivers_and_async_io.md)
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **04 — Ngôn ngữ lập trình và môi trường thực thi** tiếp nhận điểm tựa từ **03 — Hệ điều hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **05 — Dữ liệu và cơ sở dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 04 — Ngôn ngữ lập trình và môi trường thực thi
 
@@ -136,6 +147,8 @@ Nhóm này đi từ syntax và semantics tới runtime, type, memory, concurrenc
 - [Phân tích cú pháp, AST và phần đầu của ngôn ngữ](./04_programming_languages/07_parsing_ast_and_language_frontends.md)
 - [Mô hình đồng thời và an toàn bộ nhớ](./04_programming_languages/08_concurrency_models_and_memory_safety.md)
 
+> **Chuyển mạch:** Trong **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **04 — Ngôn ngữ lập trình và môi trường thực thi** nêu điều cần giải thích; **05 — Dữ liệu và cơ sở dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **06 — Mạng và hệ thống phân tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 05 — Dữ liệu và cơ sở dữ liệu
 
 Dữ liệu cần model, storage, query, transaction và integrity trước khi tối ưu. Hãy đọc theo đường từ schema tới workload và consistency.
@@ -148,6 +161,8 @@ Dữ liệu cần model, storage, query, transaction và integrity trước khi 
 - [Đại số quan hệ và ngữ nghĩa SQL](./05_data_databases/05_relational_algebra_and_sql_semantics.md)
 - [Tối ưu hóa truy vấn và kế hoạch thực thi](./05_data_databases/06_query_optimization_and_execution_plans.md)
 - [NoSQL, cơ sở dữ liệu phân tán và phân tích](./05_data_databases/07_nosql_distributed_and_analytical_databases.md)
+
+> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **05 — Dữ liệu và cơ sở dữ liệu** nêu điều cần giải thích; **06 — Mạng và hệ thống phân tán** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **07 — Bảo mật và độ tin cậy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 06 — Mạng và hệ thống phân tán
 
@@ -163,6 +178,8 @@ Nhóm này mở rộng một máy thành nhiều node qua packet, protocol, late
 - [Giao thức định tuyến, BGP và Internet](./06_networks_distributed_systems/07_routing_protocols_and_the_internet.md)
 - [HTTP/2, HTTP/3, QUIC và vận chuyển mạng hiện đại](./06_networks_distributed_systems/08_http2_http3_quic_and_modern_transport.md)
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **07 — Bảo mật và độ tin cậy** tiếp nhận điểm tựa từ **06 — Mạng và hệ thống phân tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **08 — Hệ thống phần mềm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 07 — Bảo mật và độ tin cậy
 
 Security và reliability cùng bắt đầu từ boundary, failure mode và blast radius. Hãy đọc control cùng chi phí, observability và recovery thay vì xem chúng là checklist công nghệ.
@@ -177,6 +194,8 @@ Security và reliability cùng bắt đầu từ boundary, failure mode và blas
 - [Khóa, bí mật, chứng chỉ và vận hành an toàn](./07_security_reliability/07_keys_secrets_certificates_and_secure_operations.md)
 - [Chuỗi cung ứng phần mềm và vòng đời phát triển an toàn](./07_security_reliability/08_supply_chain_and_secure_software_lifecycle.md)
 
+> **Chuyển mạch:** Trong **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **08 — Hệ thống phần mềm** tiếp nhận điểm tựa từ **07 — Bảo mật và độ tin cậy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **09 — Kỹ nghệ phần mềm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 08 — Hệ thống phần mềm
 
 Software systems nối abstraction, modularity, state, time, serialization, performance và scalability. Đây là lớp giải thích vì sao component riêng lẻ tương tác thành hành vi toàn hệ thống.
@@ -190,6 +209,8 @@ Software systems nối abstraction, modularity, state, time, serialization, perf
 - [Hệ thống hướng sự kiện và xử lý luồng](./08_software_systems/06_event_driven_and_stream_processing.md)
 - [Phân rã hệ thống, dịch vụ và ranh giới](./08_software_systems/07_system_decomposition_services_and_boundaries.md)
 
+> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **09 — Kỹ nghệ phần mềm** tiếp nhận điểm tựa từ **08 — Hệ thống phần mềm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10 — Nền tảng trí tuệ nhân tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 09 — Kỹ nghệ phần mềm
 
 Software engineering biến yêu cầu và thay đổi thành quy trình thiết kế, kiểm thử, phát hành và bảo trì. Các chapter nối quyết định kỹ thuật với rủi ro và feedback từ production.
@@ -199,6 +220,8 @@ Software engineering biến yêu cầu và thay đổi thành quy trình thiết
 - [Kiểm thử, chất lượng và chiến lược kiểm chứng](./09_software_engineering/02_testing_quality_and_verification_strategy.md)
 - [Phân phối, cấu hình và vận hành](./09_software_engineering/03_delivery_configuration_and_operations.md)
 - [Bảo trì, tiến hóa và nợ kỹ thuật](./09_software_engineering/04_maintenance_evolution_and_technical_debt.md)
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **10 — Nền tảng trí tuệ nhân tạo** tiếp nhận điểm tựa từ **09 — Kỹ nghệ phần mềm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11 — Tương tác người–máy và đồ họa máy tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10 — Nền tảng trí tuệ nhân tạo
 
@@ -210,6 +233,8 @@ AI foundations đặt bài toán, representation, search, learning và evaluatio
 - [Mạng nơ-ron và học biểu diễn](./10_ai_foundations/03_neural_networks_and_representation_learning.md)
 - [Đánh giá AI, dữ liệu và trách nhiệm](./10_ai_foundations/04_ai_evaluation_data_and_responsibility.md)
 
+> **Chuyển mạch:** Trong **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **11 — Tương tác người–máy và đồ họa máy tính** tiếp nhận điểm tựa từ **10 — Nền tảng trí tuệ nhân tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12 — Công nghệ tính toán, xã hội, đạo đức và nghề nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11 — Tương tác người–máy và đồ họa máy tính
 
 HCI và graphics nối perception, input, rendering, timing và accessibility với trải nghiệm người dùng. Đúng về mặt kỹ thuật chưa đủ nếu sai về thời điểm hoặc khả năng tiếp cận.
@@ -220,6 +245,8 @@ HCI và graphics nối perception, input, rendering, timing và accessibility v�
 - [Ảnh, màu sắc, raster hóa và kết xuất](./11_hci_graphics/03_images_color_rasterization_and_rendering.md)
 - [Đa phương tiện, hoạt ảnh và hệ thống tương tác](./11_hci_graphics/04_multimedia_animation_and_interactive_systems.md)
 
+> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **12 — Công nghệ tính toán, xã hội, đạo đức và nghề nghiệp** tiếp nhận điểm tựa từ **11 — Tương tác người–máy và đồ họa máy tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **90 — Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12 — Công nghệ tính toán, xã hội, đạo đức và nghề nghiệp
 
 Nhóm này đặt systems trong bối cảnh con người, tổ chức, quyền riêng tư, fairness và trách nhiệm nghề nghiệp. Nó giúp kiểm tra externality mà mô hình kỹ thuật thuần túy dễ bỏ qua.
@@ -228,6 +255,8 @@ Nhóm này đặt systems trong bối cảnh con người, tổ chức, quyền 
 - [Quản trị dữ liệu, thiên lệch và tác động thuật toán](./12_society_ethics_profession/01_data_governance_bias_and_algorithmic_impact.md)
 - [Luật phần mềm, giấy phép và sở hữu trí tuệ](./12_society_ethics_profession/02_software_law_licenses_and_intellectual_property.md)
 - [Tính bền vững, khả năng tiếp cận và hạ tầng xã hội số](./12_society_ethics_profession/03_sustainability_accessibility_and_social_infrastructure.md)
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **90 — Kết nối kiến thức** tiếp nhận điểm tựa từ **12 — Công nghệ tính toán, xã hội, đạo đức và nghề nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài liệu tham chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 90 — Kết nối kiến thức
 
@@ -239,6 +268,8 @@ Các connection chapter nối nhiều tầng bằng symptom và failure thực t
 - [Các đánh đổi xuyên Khoa học máy tính: thời gian, không gian, nhất quán, sẵn sàng và độ phức tạp](./90_connections/03_cross_cutting_tradeoffs.md)
 - [Các tầng trừu tượng và sự rò rỉ trừu tượng](./90_connections/04_abstraction_layers_and_leaky_abstractions.md)
 
+> **Chuyển mạch:** Trong **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, sau nội dung của **90 — Kết nối kiến thức**, **Tài liệu tham chiếu** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết sang các Thư viện kiến thức khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tài liệu tham chiếu
 
 Reference hỗ trợ tra thuật ngữ, quy ước và nguồn sau khi đã có mô hình nền. Nó không thay thế route học nhưng giúp giữ tên gọi và liên kết nhất quán.
@@ -246,12 +277,18 @@ Reference hỗ trợ tra thuật ngữ, quy ước và nguồn sau khi đã có 
 - [Bảng thuật ngữ Việt / Anh / Hàn](./99_glossary.md)
 - [Kiểm tra phạm vi kiến thức](./COVERAGE_AUDIT.md)
 
+> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **Liên kết sang các Thư viện kiến thức khác** tiếp nhận điểm tựa từ **Tài liệu tham chiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới phạm vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết sang các Thư viện kiến thức khác
 
 Khoa học máy tính dựa mạnh vào toán rời rạc, lô-gic (logic / 논리), xác suất, thống kê, đại số tuyến tính, giải tích, tối ưu hóa và lý thuyết thông tin. Các phần toán chi tiết nằm trong [Thư viện kiến thức Toán học](../../mathematics/README.md), đặc biệt [Logic và chứng minh](../../mathematics/00_foundations/01_logic_and_proof.md), [Lý thuyết đồ thị](../../mathematics/07_discrete_cs/00_graph_theory.md), [Thuật toán và độ phức tạp](../../mathematics/07_discrete_cs/01_algorithms_complexity_and_logarithms.md), [Automata và ngôn ngữ hình thức](../../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md), [Lý thuyết thông tin](../../mathematics/07_discrete_cs/06_information_theory_and_coding.md), [Đại số tuyến tính](../../mathematics/04_vectors_linear_algebra/01_matrices_and_linear_systems.md), [Xác suất](../../mathematics/06_probability_statistics/01_probability_foundations.md) và [Tối ưu hóa](../../mathematics/08_optimization_numerical/00_optimization.md).
 
 Các thư viện Java, Spring, React, JavaScript, Swift, Kotlin... trong repository nên được đọc như kiến thức phụ thuộc vào công nghệ triển khai cụ thể. `computer_science/basic/` giải thích các nguyên lý nền, vì sao API hoặc khung phần mềm (framework / 프레임워크) có hành vi như vậy và những đánh đổi nằm phía dưới lớp trừu tượng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**, **Ranh giới phạm vi** tiếp nhận điểm tựa từ **Liên kết sang các Thư viện kiến thức khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Ranh giới phạm vi
 
 “Nền tảng toàn diện” nghĩa là bao phủ các mô hình tư duy nền tảng lớn của Khoa học máy tính, không phải nhồi mọi chuyên ngành vào `basic/`. Cấu trúc dữ liệu và thuật toán chuyên sâu, robotics, thị giác máy tính/NLP chuyên sâu, tối ưu backend của compiler, phát triển kernel, kiểm chứng hình thức chuyên sâu, chứng minh giao thức mật mã, kiến trúc phụ thuộc nhà cung cấp cloud, triển khai game engine, điện toán lượng tử và tính toán khoa học nên trở thành các thư viện nâng cao hoặc chuyên biệt dựa trên nền tảng này.
+
+> **Bàn giao:** Sau **Ranh giới phạm vi**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

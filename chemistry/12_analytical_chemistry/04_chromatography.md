@@ -1,7 +1,6 @@
 # Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha
 
-> **Mạch đọc:** Đọc **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ một lần phân bố tới một đỉnh sắc ký** sang **Cân bằng phân bố**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ một lần phân bố tới một đỉnh sắc ký** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cân bằng phân bố** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Sắc ký (chromatography / 크로마토그래피)** tách các thành phần của hỗn hợp vì mỗi chất phân tích dành một phần thời gian khác nhau trong **pha động (mobile phase)** và **pha tĩnh (stationary phase)**. Một khác biệt rất nhỏ về mức ưu tiên giữa hai pha, khi được lặp lại hàng nghìn lần dọc cột, có thể tạo chênh lệch thời gian lưu đủ lớn để đo và định lượng.
 
@@ -35,6 +34,8 @@ Vì vậy một phép tách tốt phải thỏa hai điều:
 - các chất khác nhau có thời gian lưu trung bình đủ khác nhau;
 - các phân tử của cùng một chất có phân bố thời gian lưu đủ hẹp.
 
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Cân bằng phân bố** tiếp nhận điểm tựa từ **Từ một lần phân bố tới một đỉnh sắc ký** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian lưu và thời gian chết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cân bằng phân bố
 
 Một hệ số phân bố đơn giản:
@@ -48,6 +49,8 @@ trong đó `Cs` là nồng độ chất phân tích trong pha tĩnh, còn `Cm` l
 `K` lớn thường nghĩa chất được giữ lại mạnh hơn.
 
 Sắc ký thực có thể dựa trên hấp phụ, phân bố, trao đổi ion, loại trừ kích thước hoặc ái lực đặc hiệu. Điểm thống nhất là chất phân tích phải có mức ưu tiên khác nhau giữa các trạng thái có thể tiếp cận.
+
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Thời gian lưu và thời gian chết** tiếp nhận điểm tựa từ **Cân bằng phân bố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thời gian lưu và thời gian chết
 
@@ -65,6 +68,8 @@ cho biết phần thời gian bổ sung do tương tác với pha tĩnh.
 
 Nếu `k'` quá nhỏ, các chất dễ đồng rửa giải gần thời gian chết. Nếu `k'` quá lớn, thời gian phân tích dài và đỉnh có thể bị mở rộng không cần thiết.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Độ chọn lọc** tiếp nhận điểm tựa từ **Thời gian lưu và thời gian chết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ phân giải — khoảng cách giữa đỉnh so với độ rộng đỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ chọn lọc
 
 Với hai chất:
@@ -76,6 +81,8 @@ Với hai chất:
 **Độ chọn lọc (selectivity, α)** mô tả khả năng hệ pha động–pha tĩnh phân biệt hai chất.
 
 Nếu `α ≈ 1`, kéo dài cột hoặc tăng số đĩa chỉ giúp giới hạn. Thay đổi hóa học pha tĩnh, pH, dung môi hoặc nhiệt độ thường hiệu quả hơn vì nó thay đổi chính chênh lệch tương tác giữa hai chất.
+
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Độ phân giải — khoảng cách giữa đỉnh so với độ rộng đỉnh** tiếp nhận điểm tựa từ **Độ chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lý thuyết đĩa — mô hình thống kê, không có các đĩa thật trong cột** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ phân giải — khoảng cách giữa đỉnh so với độ rộng đỉnh
 
@@ -97,6 +104,8 @@ hiệu suất cột N
 
 Do đó “giữ lâu hơn” không phải chiến lược chung cho mọi phép tách.
 
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Lý thuyết đĩa — mô hình thống kê, không có các đĩa thật trong cột** tiếp nhận điểm tựa từ **Độ phân giải — khoảng cách giữa đỉnh so với độ rộng đỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao đỉnh rộng ra — phương trình Van Deemter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lý thuyết đĩa — mô hình thống kê, không có các đĩa thật trong cột
 
 Hiệu suất cột thường được biểu diễn bằng **số đĩa lý thuyết (theoretical plates)**:
@@ -116,6 +125,8 @@ H=\frac{L}{N}
 `H` càng nhỏ thì hiệu suất trên một đơn vị chiều dài cột càng cao.
 
 Các “đĩa” chỉ là mô hình thống kê cho quá trình phân bố lặp lại; chúng không phải các ngăn vật lý thật.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Vì sao đỉnh rộng ra — phương trình Van Deemter** tiếp nhận điểm tựa từ **Lý thuyết đĩa — mô hình thống kê, không có các đĩa thật trong cột** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắc ký khí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao đỉnh rộng ra — phương trình Van Deemter
 
@@ -151,6 +162,8 @@ nhưng
 → có thể giảm hiệu suất
 ```
 
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Sắc ký khí** tiếp nhận điểm tựa từ **Vì sao đỉnh rộng ra — phương trình Van Deemter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắc ký lỏng và HPLC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sắc ký khí
 
 **Sắc ký khí (gas chromatography, GC)** dùng khí làm pha động. Chất phân tích phải đủ bay hơi và đủ bền nhiệt trong điều kiện đo.
@@ -170,6 +183,8 @@ Với hỗn hợp có khoảng độ bay hơi rộng, nhiệt độ cố định
 **Bộ dò dẫn nhiệt (thermal conductivity detector, TCD)** tổng quát hơn nhưng thường kém nhạy hơn.
 
 **GC–MS** ghép sự tách theo thời gian với thông tin `m/z` và phân mảnh từ phổ khối.
+
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Sắc ký lỏng và HPLC** tiếp nhận điểm tựa từ **Sắc ký khí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **pH và ion hóa — sắc ký cũng là hóa học acid–cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sắc ký lỏng và HPLC
 
@@ -195,6 +210,8 @@ Pha tĩnh phân cực và pha động ít phân cực hơn. Chất phân cực t
 
 Độ dốc (gradient / 기울기) đặc biệt hữu ích khi hỗn hợp có chất lưu rất yếu và rất mạnh. Nó tương tự vai trò lập trình nhiệt độ trong GC: giữ điều kiện nhẹ ở đầu để tách chất ra sớm, rồi tăng sức rửa giải để đưa chất giữ mạnh ra khỏi cột.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **pH và ion hóa — sắc ký cũng là hóa học acid–cơ sở (base / 기반)** tiếp nhận điểm tựa từ **Sắc ký lỏng và HPLC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắc ký trao đổi ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## pH và ion hóa — sắc ký cũng là hóa học acid–cơ sở (base / 기반)
 
 Nếu chất phân tích có thể proton hóa hoặc khử proton, điện tích và độ kỵ nước sẽ phụ thuộc pH.
@@ -211,6 +228,8 @@ Do đó pH tương đối với `pKa` có thể làm thay đổi mạnh thời g
 
 Nhóm silanol trên silica cũng có thể ion hóa và tương tác với chất phân tích cơ sở (base / 기반). Chọn **dung dịch đệm (buffer)** vì vậy là một phần của hóa học phương pháp, không chỉ là cài đặt vận hành.
 
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Sắc ký trao đổi ion** tiếp nhận điểm tựa từ **pH và ion hóa — sắc ký cũng là hóa học acid–cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắc ký loại trừ kích thước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sắc ký trao đổi ion
 
 Pha tĩnh mang nhóm điện tích cố định. Chất mang điện trái dấu bị giữ bởi tương tác tĩnh điện.
@@ -218,6 +237,8 @@ Pha tĩnh mang nhóm điện tích cố định. Chất mang điện trái dấu
 Thay đổi nồng độ muối hoặc pH làm thay đổi cạnh tranh và có thể rửa giải chất phân tích.
 
 Phương pháp được dùng nhiều cho protein, amino acid và ion vô cơ.
+
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Sắc ký loại trừ kích thước** tiếp nhận điểm tựa từ **Sắc ký trao đổi ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắc ký ái lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sắc ký loại trừ kích thước
 
@@ -227,11 +248,15 @@ Phân tử lớn không vào được nhiều lỗ xốp nên đi đường ng�
 
 Trong chế độ này, tương tác hấp phụ mạnh với bề mặt thường là điều không mong muốn vì nó phá vỡ lô-gic (logic / 논리) tách theo kích thước.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Sắc ký ái lực** tiếp nhận điểm tựa từ **Sắc ký loại trừ kích thước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắc ký đối quang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sắc ký ái lực
 
 **Sắc ký ái lực (affinity chromatography)** dùng pha tĩnh có phối tử liên kết chọn lọc với mục tiêu, ví dụ kháng thể–kháng nguyên, chất tương tự cơ chất hoặc chelate kim loại.
 
 Phương pháp đánh đổi tính tổng quát để lấy độ chọn lọc rất cao và đặc biệt hữu ích trong tinh sạch phân tử sinh học.
+
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Sắc ký đối quang** tiếp nhận điểm tựa từ **Sắc ký ái lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đưa mẫu vào cột và hiện tượng quá tải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sắc ký đối quang
 
@@ -240,6 +265,8 @@ Hai **đồng phân đối quang (enantiomer)** có tính chất giống nhau tr
 Chênh lệch rất nhỏ về năng lượng tự do tương tác có thể tích lũy thành chênh lệch thời gian lưu đủ để tách.
 
 Đây là ví dụ trực tiếp của việc hóa lập thể trở thành công nghệ phân tách.
+
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Đưa mẫu vào cột và hiện tượng quá tải** tiếp nhận điểm tựa từ **Sắc ký đối quang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kéo đuôi và nhô đầu đỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đưa mẫu vào cột và hiện tượng quá tải
 
@@ -251,6 +278,8 @@ Ngoài ra, thể tích tiêm hoặc dung môi mẫu quá mạnh so với pha đ�
 
 Vì vậy chuẩn bị mẫu là một phần của hiệu năng sắc ký, không phải bước tách rời.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Kéo đuôi và nhô đầu đỉnh** tiếp nhận điểm tựa từ **Đưa mẫu vào cột và hiện tượng quá tải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lượng — diện tích đỉnh không tự động bằng nồng độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kéo đuôi và nhô đầu đỉnh
 
 Đỉnh lý tưởng thường gần dạng Gaussian đối xứng, nhưng hệ thực có thể lệch.
@@ -260,6 +289,8 @@ Vì vậy chuẩn bị mẫu là một phần của hiệu năng sắc ký, khô
 **Nhô đầu (fronting)** thường liên quan quá tải hoặc hấp phụ phi tuyến.
 
 Hình dạng đỉnh là tín hiệu chẩn đoán về hóa học cột, tình trạng bề mặt và điều kiện đưa mẫu.
+
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Định lượng — diện tích đỉnh không tự động bằng nồng độ** tiếp nhận điểm tựa từ **Kéo đuôi và nhô đầu đỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phát triển phương pháp là bài toán tối ưu đa mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Định lượng — diện tích đỉnh không tự động bằng nồng độ
 
@@ -274,6 +305,8 @@ Các chiến lược hiệu chuẩn gồm:
 Chuẩn nội giúp bù một phần biến thiên thể tích tiêm hoặc đáp ứng hệ. Thêm chuẩn có thể giảm sai lệch do hiệu ứng nền.
 
 Sự tách sắc ký làm giảm nhiễu nhưng không tự động loại bỏ mọi hiệu ứng nền. Phần này nối trực tiếp với [thẩm định phương pháp và hóa lượng học](./07_method_validation_and_chemometrics.md).
+
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Phát triển phương pháp là bài toán tối ưu đa mục tiêu** tiếp nhận điểm tựa từ **Định lượng — diện tích đỉnh không tự động bằng nồng độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghép LC–MS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phát triển phương pháp là bài toán tối ưu đa mục tiêu
 
@@ -301,6 +334,8 @@ Một phương pháp tốt phải cân bằng:
 
 Không tồn tại một cấu hình “tốt nhất” độc lập với mục đích phân tích.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Ghép LC–MS** tiếp nhận điểm tựa từ **Phát triển phương pháp là bài toán tối ưu đa mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắc ký đồ và xử lý dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ghép LC–MS
 
 LC tách hỗn hợp theo thời gian; MS tách ion theo `m/z` và cung cấp thông tin khối lượng/phân mảnh.
@@ -316,6 +351,8 @@ không nhất thiết
 ```
 
 Thiết kế phương pháp phải tối ưu toàn chuỗi đo.
+
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Ghép LC–MS** nêu điều cần giải thích; **Sắc ký đồ và xử lý dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ví dụ suy luận: vì sao tăng chiều dài cột không phải lúc nào cũng là cách tốt nhất?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sắc ký đồ và xử lý dữ liệu
 
@@ -334,11 +371,15 @@ Trong metabolomics hoặc proteomics, hàng nghìn đặc trưng trên nhiều m
 
 Tuy nhiên thuật toán tốt không thể khôi phục thông tin hóa học đã mất do chuẩn bị mẫu kém, cột không ổn định hoặc đồng rửa giải nghiêm trọng.
 
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Sắc ký đồ và xử lý dữ liệu** cho ta quy tắc; **Ví dụ suy luận: vì sao tăng chiều dài cột không phải lúc nào cũng là cách tốt nhất?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao một đỉnh đẹp vẫn có thể cho kết quả sai?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao tăng chiều dài cột không phải lúc nào cũng là cách tốt nhất?
 
 Tăng chiều dài thường làm tăng số đĩa và có thể cải thiện độ phân giải. Nhưng nó cũng tăng thời gian chạy và áp suất, trong khi nếu `α` gần 1 thì lợi ích rất hạn chế.
 
 Nếu hai chất tương tác gần như giống nhau với pha tĩnh, thay đổi pH hoặc hóa học pha tĩnh để tăng độ chọn lọc thường hiệu quả hơn nhiều so với chỉ kéo dài cột.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Ví dụ suy luận: vì sao tăng chiều dài cột không phải lúc nào cũng là cách tốt nhất?** cho ta quy tắc; **Ví dụ suy luận: vì sao một đỉnh đẹp vẫn có thể cho kết quả sai?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ suy luận: vì sao một đỉnh đẹp vẫn có thể cho kết quả sai?
 
@@ -347,6 +388,8 @@ Một đỉnh đối xứng và tách rõ không chứng minh nó chỉ chứa m
 Định danh đáng tin cần thêm thông tin trực giao như phổ khối, phổ UV, chuẩn tham chiếu hoặc thay đổi điều kiện tách.
 
 Đây là lý do sắc ký vừa là bài toán phân tách vừa là bài toán **bằng chứng định danh**.
+
+> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Ví dụ suy luận: vì sao một đỉnh đẹp vẫn có thể cho kết quả sai?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -370,6 +413,8 @@ Không. Sự lưu giữ bị chi phối bởi tương tác hóa học, ion hóa,
 
 Không. Nếu độ chọn lọc kém hoặc mẫu bị quá tải, số đĩa cao không giải quyết được vấn đề cốt lõi.
 
+> **Chuyển mạch:** Ở chặng này của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy xem sắc ký như **một cuộc đua gồm hàng nghìn lần tạm dừng thuận nghịch**:
@@ -389,4 +434,4 @@ Một phép tách tốt xuất hiện khi ba yếu tố này được tối ưu 
 
 Xem tiếp: [Phổ khối](./05_mass_spectrometry.md) và [Thẩm định phương pháp và hóa lượng học](./07_method_validation_and_chemometrics.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

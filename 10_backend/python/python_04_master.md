@@ -1,7 +1,6 @@
 # Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution
 
-> **Mạch đọc:** Đặt **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. ngôn ngữ (language / 언어) Python khác hiện thực (implementation / 구현) CPython** sang **2. Compile đơn vị (unit / 단위), mã (code / 코드) đối tượng (object / 객체) và bytecode**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. ngôn ngữ (language / 언어) Python khác hiện thực (implementation / 구현) CPython** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Compile đơn vị (unit / 단위), mã (code / 코드) đối tượng (object / 객체) và bytecode** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 
@@ -24,6 +23,8 @@ Khi đọc một hành vi (behavior / 동작), hãy tách bốn tầng:
 
 Cách phân lớp này ngăn việc biến observation trên laptop thành “quy tắc Python”. Nó cũng giúp đọc hiệu năng (performance / 성능) claim chính xác hơn. Ví dụ “dictionary lookup O(1) average” là lớp trừu tượng (abstraction / 추상화) thuật toán; chính xác (exact / 정확한) bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃), băm (hash / 해시) hiện thực (implementation / 구현) và bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작) lại thuộc hiện thực (implementation / 구현)/phiên bản (version / 버전).
 
+> **Chuyển mạch:** CPython implementation đặt ra câu hỏi về language behavior; compile và bytecode cho thấy source được chuyển thành execution units nào. Frame, call stack và traceback tiếp theo làm visible trạng thái đang chạy.
+
 ## 2. Compile đơn vị (unit / 단위), mã (code / 코드) đối tượng (object / 객체) và bytecode
 
 Nguồn (source / 소스) mô-đun (module / 모듈)/hàm (function / 함수) được compile thành mã (code / 코드) đối tượng (object / 객체) chứa bytecode/instruction siêu dữ liệu (metadata / 메타데이터), constants, names và thông tin (information / 정보) phục vụ thời gian chạy (runtime / 런타임). Có thể inspect bằng `dis`:
@@ -31,10 +32,8 @@ Nguồn (source / 소스) mô-đun (module / 모듈)/hàm (function / 함수) đ
 ```python
 import dis
 
-
 def add(a, b):
     return a + b
-
 
 dis.dis(add)
 ```
@@ -45,6 +44,8 @@ Hiện đại (modern / 현대적) CPython có specializing adaptive trình thô
 
 Python 3.14 còn có optional tail-call trình thông dịch (interpreter / 인터프리터) bản dựng (build / 빌드) cấu hình (configuration / 구성) trong CPython. Tên này không đồng nghĩa Python hàm (function / 함수) tail-call tối ưu hóa (optimization / 최적화); nó là trình thông dịch (interpreter / 인터프리터) hiện thực (implementation / 구현) detail.
 
+> **Chuyển mạch:** Bytecode tạo execution context; frame và traceback cho biết context đó giữ locals, globals và call state ra sao. Namespace, descriptor và attribute lookup tiếp theo giải thích cách tên được resolve trong context ấy.
+
 ## 3. Frame, ngăn xếp lời gọi (call stack / 호출 스택) và traceback
 
 Mỗi active Python lời gọi (call / 호출) liên quan thực thi (execution / 실행) frame chứa cục bộ (local / 로컬)/toàn cục (global / 전역) references, instruction trạng thái (state / 상태) và thời gian chạy (runtime / 런타임) ngăn xếp (stack / 스택) trạng thái (state / 상태). Traceback nối frames tại thất bại (failure / 실패) đường dẫn (path / 경로).
@@ -52,6 +53,8 @@ Mỗi active Python lời gọi (call / 호출) liên quan thực thi (execution
 Frame introspection (`inspect`, `sys._getframe`) rất mạnh cho debugger/khung phần mềm (framework / 프레임워크) nhưng tạo coupling với thời gian chạy (runtime / 런타임) và có thể giữ đối tượng (object / 객체) đồ thị (graph / 그래프) sống lâu hơn nếu references tới frame/traceback được giữ. Một exception đối tượng (object / 객체) giữ traceback có thể gián tiếp giữ locals, yêu cầu (request / 요청) đối tượng (object / 객체), large buffer hoặc secret lâu hơn dự kiến. Vì vậy diagnostic tooling phải có quyền sở hữu (ownership / 소유권) rõ và bản phát hành (release / 릴리스) references khi chúng hết giá trị.
 
 Exception chaining giữ causality qua `__cause__`/`__context__`. Khi wrap exception, `raise NewError(...) from exc` giúp operator nhìn thấy cả lĩnh vực (domain / 도메인) ngữ cảnh (context / 맥락) lẫn nguyên nhân gốc (root cause / 근본 원인). Nếu cố tình che hiện thực (implementation / 구현) detail bằng `raise ... from None`, hãy chắc rằng khả năng quan sát (observability / 관측 가능성) tầng (layer / 계층) khác vẫn giữ bằng chứng (evidence / 증거) cần thiết; hiding chuỗi (chain / 사슬) để message “đẹp” có thể làm sự cố (incident / 인시던트) khó điều tra.
+
+> **Chuyển mạch:** Frame cho biết nơi lookup diễn ra; namespace và descriptor xác định rule lookup nào thắng. Function object, closure cell và decorator tiếp theo cho thấy các rule đó được giữ trong object graph thế nào.
 
 ## 4. không gian tên (namespace / 네임스페이스), descriptor và attribute lookup
 
@@ -81,7 +84,6 @@ Với instance lookup thông thường, mô hình tư duy (mental model / 사고
 class Account:
     def deposit(self, amount):
         ...
-
 
 account = Account()
 method = account.deposit
@@ -152,6 +154,8 @@ Descriptor mạnh vì nó đưa chính sách (policy / 정책) vào lookup giao 
 
 `__slots__` cũng không tự làm đối tượng (object / 객체) immutable hoặc thread-safe. Nó thay lưu trữ (storage / 저장소) mô hình (model / 모델), không thay quyền sở hữu (ownership / 소유권) ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Descriptor và lookup giải thích function object được tìm thấy và gọi ra sao; closure/decorator thêm state và binding vào call path. Import system tiếp theo mở rộng call path thành module initialization và dependency graph.
+
 ## 5. hàm (function / 함수) đối tượng (object / 객체), closure cell và decorator ngăn xếp (stack / 스택)
 
 Hàm (function / 함수) đối tượng (object / 객체) chứa mã (code / 코드) đối tượng (object / 객체), globals tham chiếu (reference / 참조), defaults, closure cells và siêu dữ liệu (metadata / 메타데이터) khác. Điều này giải thích nhiều hiện tượng đã thấy:
@@ -174,6 +178,8 @@ def work():
 
 Mô hình tư duy (mental model / 사고 모델) là `work = outer(inner(work))`. Nếu `inner` tạo giao dịch (transaction / 트랜잭션) còn `outer` thử lại (retry / 재시도), ngữ nghĩa (semantics / 의미론) khác hẳn khi thứ tự đảo lại. Cross-cutting concern có side tác động (effect / 효과) phải được rà soát (review / 검토) theo thứ tự (ordering / 순서), không chỉ theo từng decorator riêng lẻ.
 
+> **Chuyển mạch:** Function/decorator state có thể giữ module references; import system quyết định khi nào graph đó được tạo và cache. Object lifecycle và GC tiếp theo kiểm tra khi nào graph được giải phóng hoặc giữ lại.
+
 ## 6. Import hệ thống (system / 시스템) sâu hơn
 
 Import được xây quanh finders, loaders, mô-đun (module / 모듈) specs và `sys.modules`. Một normal import đầu tiên tạo/đăng ký mô-đun (module / 모듈) đối tượng (object / 객체) rồi execute mã (code / 코드). Việc đưa mô-đun (module / 모듈) vào `sys.modules` sớm giúp xử lý recursive import nhưng cũng khiến circular import có thể thấy partially initialized mô-đun (module / 모듈).
@@ -193,6 +199,8 @@ Cold start của CLI/serverless có thể bị chi phối bởi import đồ th�
 ### Reload không phải trạng thái (state / 상태) reset
 
 `importlib.reload()` re-execute mô-đun (module / 모듈) mã (code / 코드) trong mô-đun (module / 모듈) đối tượng (object / 객체) hiện có, nhưng references đã được bản sao (copy / 복사)/bind ở nơi khác không tự được “rewire” thành definitions mới. Instance cũ cũng vẫn thuộc lớp (class / 클래스) đối tượng (object / 객체) cũ. Vì vậy reload phù hợp cho tooling/development scenario có đặc tả hợp đồng (contract / 계약) rõ; nó không phải generic môi trường vận hành (production / 운영 환경) chiến lược (strategy / 전략) để “refresh cấu hình (config / 설정)/mã (code / 코드)” trong tiến trình (process / 프로세스) sống lâu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **6. Import hệ thống (system / 시스템) sâu hơn** xác định đầu vào; **7. đối tượng (object / 객체) vòng đời (lifecycle / 생명주기), construction, tham chiếu (reference / 참조) counting và cyclic GC** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Immutability, aliasing và API thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. đối tượng (object / 객체) vòng đời (lifecycle / 생명주기), construction, tham chiếu (reference / 참조) counting và cyclic GC
 
@@ -257,6 +265,8 @@ Khi viết `__init_subclass__` trong hierarchy hợp tác, consume từ khóa (k
 
 Cấp cao (senior / 시니어) quy tắc (rule / 규칙) không phải “tránh metaclass”, mà là chọn hook nhỏ nhất đáp ứng bất biến (invariant / 불변식). Metaclass xung đột (conflict / 충돌) trong multiple inheritance là dạng thất bại (failure mode / 실패 모드) thật: các cơ sở (base / 기반) classes có incompatible metaclasses có thể khiến lớp (class / 클래스) mới không xác định được metaclass hợp lệ và thất bại (fail / 실패) ngay lúc definition.
 
+> **Chuyển mạch:** Trong **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **7. đối tượng (object / 객체) vòng đời (lifecycle / 생명주기), construction, tham chiếu (reference / 참조) counting và cyclic GC** xác định đầu vào; **8. Immutability, aliasing và API thiết kế (design / 설계)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Equality, thứ tự (ordering / 순서) và lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Immutability, aliasing và API thiết kế (design / 설계)
 
 Tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) làm aliasing trở thành thiết kế (design / 설계) concern. API nhận mutable đối tượng (object / 객체) có ba chiến lược chính: mutate theo đặc tả hợp đồng (contract / 계약), bản sao (copy / 복사) defensively, hoặc treat as read-only convention/kiểu (type / 타입). Mỗi chiến lược có chi phí (cost / 비용).
@@ -273,6 +283,8 @@ class Report:
 
 Một immutable outer đối tượng (object / 객체) vẫn có thể tham chiếu mutable child. Vì vậy khi lĩnh vực (domain / 도메인) cần snapshot thật, hãy reason trên đối tượng (object / 객체) đồ thị (graph / 그래프) chứ không chỉ `frozen=True` hoặc tuple ở gốc (root / 루트).
 
+> **Chuyển mạch:** Immutability và aliasing quyết định object nào có thể thay đổi qua API. Equality/ordering/domain semantics biến constraint đó thành behavior quan sát được; type-system nâng cao tiếp theo mô tả contract của behavior ấy.
+
 ## 9. Equality, thứ tự (ordering / 순서) và lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)
 
 `@dataclass(order=True)` có thể sinh thứ tự (ordering / 순서) lexicographic theo trường dữ liệu (field / 필드) thứ tự (order / 순서), nhưng lĩnh vực (domain / 도메인) có thật sự có total thứ tự (ordering / 순서) không? người dùng (user / 사용자), liên kết (connection / 연결) hoặc giao dịch (transaction / 트랜잭션) không tự nhiên có “nhỏ hơn” chỉ vì fields có thể so sánh.
@@ -280,6 +292,8 @@ Một immutable outer đối tượng (object / 객체) vẫn có thể tham chi
 Implement giao thức (protocol / 프로토콜) chỉ khi ngữ nghĩa (semantics / 의미론) tồn tại. Convenience-generated dunder methods có thể tạo API sai mà kiểm thử (test / 테스트) đơn giản không phát hiện.
 
 Băm (hash / 해시)/equality đặc tả hợp đồng (contract / 계약) cũng phải ổn định qua thời gian tồn tại (lifetime / 수명) đối tượng (object / 객체) nếu đối tượng (object / 객체) dùng làm dict key/set member. Mutate trường dữ liệu (field / 필드) tham gia equality/băm (hash / 해시) sau khi insert là cách phá cấu trúc dữ liệu (data structure / 자료구조) bất biến (invariant / 불변식) dù mã (code / 코드) không raise ngay.
+
+> **Chuyển mạch:** Domain equality và ordering xác định invariant mà type contract phải giữ. Variance, ParamSpec và protocols làm contract đó tĩnh hơn; memory layout/allocation tiếp theo kiểm tra chi phí runtime của object graph.
 
 ## 10. hệ kiểu (type system / 타입 시스템) nâng cao: variance, ParamSpec, TypeVarTuple và protocols
 
@@ -295,6 +309,8 @@ Python 3.14 chuyển annotation ngữ nghĩa (semantics / 의미론) sang deferr
 
 Legacy mã (code / 코드) dùng `from __future__ import annotations` theo PEP 563 era có hành vi (behavior / 동작)/intent khác historical default; khi migrate thư viện (library / 라이브러리), kiểm thử (test / 테스트) introspection consumers chứ đừng chỉ chạy kiểu (type / 타입) checker.
 
+> **Chuyển mạch:** Trong **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **10. hệ kiểu (type system / 타입 시스템) nâng cao: variance, ParamSpec, TypeVarTuple và protocols** nêu điều cần giải thích; **11. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) và allocation: tối ưu bằng bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. hiệu năng (performance / 성능): specialization, bộ nhớ đệm (cache / 캐시) và deoptimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) và allocation: tối ưu bằng bằng chứng (evidence / 증거)
 
 Một Python integer/string/đối tượng (object / 객체) có overhead lớn hơn raw C thành phần nguyên thủy (primitive / 기본 요소) vì mang siêu dữ liệu (metadata / 메타데이터)/headers/references. bộ chứa (container / 컨테이너) thường giữ references tới objects chứ không inline toàn bộ đối tượng (object / 객체) giá trị (value / 값) như typed packed array.
@@ -304,6 +320,8 @@ Do đó tải công việc (workload / 워크로드) numeric/nhị phân (binary
 `sys.getsizeof()` chỉ đo shallow kích thước (size / 크기) của đối tượng (object / 객체), không toàn đối tượng (object / 객체) đồ thị (graph / 그래프). Dùng nó như chỉ số (metric / 지표) cục bộ, không cộng naïve rồi kết luận tiến trình (process / 프로세스) RSS.
 
 RSS còn chịu ảnh hưởng allocator, bản địa (native / 네이티브) libraries, mmap, fragmentation và đối tượng (object / 객체) đã free ở Python mức (level / 수준) nhưng allocator chưa trả page về OS. Khi gỡ lỗi (debug / 디버그) bộ nhớ (memory / 메모리), tách “Python đối tượng (object / 객체) retention” khỏi “tiến trình (process / 프로세스) RSS hành vi (behavior / 동작)”.
+
+> **Chuyển mạch:** Ở chặng này của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **11. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) và allocation: tối ưu bằng bằng chứng (evidence / 증거)** nêu điều cần giải thích; **12. hiệu năng (performance / 성능): specialization, bộ nhớ đệm (cache / 캐시) và deoptimization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. GIL, free-threading và di chuyển (migration / 마이그레이션) mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. hiệu năng (performance / 성능): specialization, bộ nhớ đệm (cache / 캐시) và deoptimization
 
@@ -321,6 +339,8 @@ Microbenchmark cần:
 `timeit` tốt cho microbenchmark; môi trường vận hành (production / 운영 환경) profiler tốt hơn cho end-to-end hotspot.
 
 Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) phải giữ tính đúng đắn (correctness / 정확성) bất biến (invariant / 불변식). bộ nhớ đệm (cache / 캐시), batching, vectorization và tính đồng thời (concurrency / 동시성) đều có thể đổi thất bại (failure / 실패) timing, stale-data cửa sổ (window / 윈도우) hoặc quyền sở hữu (ownership / 소유권); benchmark nhanh hơn nhưng ngữ nghĩa (semantics / 의미론) sai không phải tối ưu hóa (optimization / 최적화).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **13. GIL, free-threading và di chuyển (migration / 마이그레이션) mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **12. hiệu năng (performance / 성능): specialization, bộ nhớ đệm (cache / 캐시) và deoptimization** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **14. luồng thực thi (thread / 스레드) an toàn (safety / 안전) và process-wide trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. GIL, free-threading và di chuyển (migration / 마이그레이션) mô hình tư duy (mental model / 사고 모델)
 
@@ -348,6 +368,8 @@ Không phải đổi flag rồi chạy benchmark. kiểm tra (audit / 감사) d�
 
 Cấp cao (senior / 시니어)/Master ghi chú (note / 노트): viết synchronization dựa trên bất biến (invariant / 불변식), không dựa trên “hiện tại thao tác (operation / 연산) này có vẻ atomic”.
 
+> **Chuyển mạch:** Trong **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **14. luồng thực thi (thread / 스레드) an toàn (safety / 안전) và process-wide trạng thái (state / 상태)** gom các mảnh từ **13. GIL, free-threading và di chuyển (migration / 마이그레이션) mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **15. asyncio internals: readiness, scheduling và backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. luồng thực thi (thread / 스레드) an toàn (safety / 안전) và process-wide trạng thái (state / 상태)
 
 Ngay cả free-threaded bản dựng (build / 빌드), không phải mọi process-wide thao tác (operation / 연산) có thể chạy concurrent an toàn. môi trường (environment / 환경) variables, tín hiệu (signal / 신호) handlers, hiện tại (current / 현재) working directory và một số toàn cục (global / 전역) bản địa (native / 네이티브) trạng thái (state / 상태) cần xem đặc tả hợp đồng (contract / 계약) cụ thể.
@@ -368,6 +390,8 @@ Ngay cả khi từng dict thao tác (operation / 연산) an toàn ở thời gia
 ### Tín hiệu (signal / 신호) là tiến trình (process / 프로세스)/main-thread ranh giới (boundary / 경계)
 
 Python tín hiệu (signal / 신호) handler chạy theo mô hình (model / 모델) riêng và việc cài handler bị giới hạn vào main luồng thực thi (thread / 스레드) của main trình thông dịch (interpreter / 인터프리터). Vì vậy tín hiệu (signal / 신호) không phải generic “interrupt bất kỳ worker luồng thực thi (thread / 스레드) nào”. Shutdown thiết kế (design / 설계) nên coi tín hiệu (signal / 신호) là sự kiện (event / 이벤트) ở tiến trình (process / 프로세스) orchestration tầng (layer / 계층), sau đó chuyển nó thành trạng thái (state / 상태)/cancellation mà worker mô hình (model / 모델) hiểu.
+
+> **Chuyển mạch:** Ở chặng này của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **14. luồng thực thi (thread / 스레드) an toàn (safety / 안전) và process-wide trạng thái (state / 상태)** xác định đầu vào; **15. asyncio internals: readiness, scheduling và backpressure** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Structured tính đồng thời (concurrency / 동시성) và tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. `asyncio` internals: readiness, scheduling và backpressure
 
@@ -422,6 +446,8 @@ Một trọng yếu (critical / 중요) section async có ba loại ranh giới 
 
 Cancellation cũng có phạm vi (scope / 범위). Cancel coroutine đang await `to_thread()` không cưỡng chế stop hàm (function / 함수) sync đã chạy trong worker luồng thực thi (thread / 스레드). Cancel yêu cầu (request / 요청) không mặc nhiên quay lui (rollback / 롤백) side tác động (effect / 효과) đã gửi tới remote dịch vụ (service / 서비스). Vì vậy cancellation chính sách (policy / 정책) phải nối với idempotency, giao dịch (transaction / 트랜잭션) và quyền sở hữu (ownership / 소유권) của thực thi (execution / 실행) tài nguyên (resource / 자원).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, sau nội dung của **15. asyncio internals: readiness, scheduling và backpressure**, **16. Structured tính đồng thời (concurrency / 동시성) và tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **17. Multiprocessing, multiple interpreters và bên ngoài (external / 외부) resources** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Structured tính đồng thời (concurrency / 동시성) và tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)
 
 `TaskGroup` giúp lexical phạm vi (scope / 범위) sở hữu tasks. Khi child thất bại (fail / 실패), sibling cancellation và aggregated lỗi (error / 오류) handling có ngữ nghĩa (semantics / 의미론) rõ hơn loose tasks.
@@ -435,6 +461,8 @@ Môi trường vận hành (production / 운영 환경) quy tắc (rule / 규칙
 Structured tính đồng thời (concurrency / 동시성) tổ chức thời gian tồn tại (lifetime / 수명) của tasks; nó không tự biết quay lui (rollback / 롤백) cơ sở dữ liệu (database / 데이터베이스), hoàn tiền payment hay xóa tệp (file / 파일) partial. Khi sibling thất bại (fail / 실패), cancellation chỉ là tín hiệu (signal / 신호) điều khiển (control / 제어) luồng (flow / 흐름). lĩnh vực (domain / 도메인) quay lui (rollback / 롤백) cần giao dịch (transaction / 트랜잭션)/compensation riêng.
 
 Đây là lý do thất bại (failure / 실패) cây (tree / 트리) và side-effect cây (tree / 트리) không luôn giống nhau. Một tác vụ (task / 작업) có thể đã lần ghi nhận (commit / 커밋) bên ngoài (external / 외부) side tác động (effect / 효과) trước khi sibling thất bại (fail / 실패).
+
+> **Chuyển mạch:** Trong **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **16. Structured tính đồng thời (concurrency / 동시성) và tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)** nêu điều cần giải thích; **17. Multiprocessing, multiple interpreters và bên ngoài (external / 외부) resources** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. bản địa (native / 네이티브) extensions và Python hiệu năng (performance / 성능) ceiling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Multiprocessing, multiple interpreters và bên ngoài (external / 외부) resources
 
@@ -477,6 +505,8 @@ Python mô-đun (module / 모듈) globals có thể isolate theo trình thông d
 
 Use trường hợp (case / 사례) hợp lý cho trình thông dịch (interpreter / 인터프리터) pool là CPU-heavy Python tasks có dữ liệu message/giá trị (value / 값) tương đối độc lập và muốn multi-core trong cùng tiến trình (process / 프로세스), nhưng sự đánh đổi (trade-off / 트레이드오프) phải được đo so với tiến trình (process / 프로세스) pool và free-threaded threads.
 
+> **Chuyển mạch:** Ở chặng này của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **17. Multiprocessing, multiple interpreters và bên ngoài (external / 외부) resources** nêu điều cần giải thích; **18. bản địa (native / 네이티브) extensions và Python hiệu năng (performance / 성능) ceiling** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. bảo mật (security / 보안) sâu hơn: deserialization, introspection và động (dynamic / 동적) thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. bản địa (native / 네이티브) extensions và Python hiệu năng (performance / 성능) ceiling
 
 C/C++/Rust extension hoặc bản địa (native / 네이티브) libraries có thể thực hiện heavy công việc (work / 작업) ngoài Python trình thông dịch (interpreter / 인터프리터). Một số bản phát hành (release / 릴리스) GIL; một số không. Vì vậy statement “luồng thực thi (thread / 스레드) không giúp CPU-bound Python” phải thêm điều kiện “pure Python on GIL-enabled CPython”. bản địa (native / 네이티브) workloads có hiệu năng (performance / 성능) profile khác.
@@ -493,6 +523,8 @@ Long-running bản địa (native / 네이티브) computation không cần Pytho
 
 ABI tính tương thích (compatibility / 호환성) giúp nhị phân (binary / 이진) tải (load / 로드) across supported versions theo đặc tả hợp đồng (contract / 계약), nhưng hành vi (behavior / 동작) còn phụ thuộc nền tảng (platform / 플랫폼) thư viện (library / 라이브러리), thời gian chạy (runtime / 런타임) bản dựng (build / 빌드) chế độ (mode / 모드), extension các giả định (assumptions / 가정들) và tính năng (feature / 기능) hỗ trợ (support / 지원). triển khai (deployment / 배포) kiểm thử (test / 테스트) vẫn phải chạy sản phẩm tạo ra (artifact / 산출물) thật trên mục tiêu (target / 대상) môi trường (environment / 환경).
 
+> **Chuyển mạch:** Native extensions đặt ceiling và trust boundary cho Python performance; security tiếp theo kiểm tra deserialization, introspection và dynamic execution trong boundary đó. Observability sau đó cần chứng minh cả behavior lẫn failure.
+
 ## 19. bảo mật (security / 보안) sâu hơn: deserialization, introspection và động (dynamic / 동적) thực thi (execution / 실행)
 
 Động (dynamic / 동적) features làm Python mạnh nhưng tăng attack surface.
@@ -508,6 +540,8 @@ Không có “sanitize string” chung cho mọi ngữ cảnh (context / 맥락)
 ### Supply chuỗi (chain / 사슬)
 
 Hệ thống dựng (build system / 빌드 시스템) trong `pyproject.toml` có mã (code / 코드)/phụ thuộc (dependency / 의존성) thực thi trong bản dựng (build / 빌드) môi trường (environment / 환경). Install gói (package / 패키지) không nên được xem là đọc dữ liệu (data / 데이터) thụ động. CI cần isolate bản dựng (build / 빌드), pin trusted sources và rà soát (review / 검토) phụ thuộc (dependency / 의존성) updates phù hợp rủi ro (risk / 위험).
+
+> **Chuyển mạch:** Security boundary quyết định dữ liệu nào được phép đi qua runtime; observability phân biệt log, metric và trace để theo dõi boundary đó. Deployment tiếp theo đưa artifact qua process lifecycle và graceful shutdown.
 
 ## 20. khả năng quan sát (observability / 관측 가능성): log, chỉ số (metric / 지표) và dấu vết (trace / 추적) trả lời câu hỏi khác nhau
 
@@ -528,6 +562,8 @@ Dấu vết (trace / 추적) có thể sampled. Log có thể rate-limit. chỉ 
 ### Khả năng quan sát (observability / 관측 가능성) không được đổi nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작)
 
 Logging formatter, exporter hoặc tracing hook không nên raise làm thất bại (fail / 실패) yêu cầu (request / 요청) thông thường nếu đặc tả hợp đồng (contract / 계약) không yêu cầu. Instrumentation nằm trên đường găng (critical path / 임계 경로) phải có thất bại (failure / 실패) chính sách (policy / 정책) rõ: drop/buffer/thử lại (retry / 재시도)/bounded hàng đợi (queue / 큐), tránh biến outage telemetry thành outage ứng dụng (application / 애플리케이션).
+
+> **Chuyển mạch:** Ở chặng này của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **20. khả năng quan sát (observability / 관측 가능성): log, chỉ số (metric / 지표) và dấu vết (trace / 추적) trả lời câu hỏi khác nhau** xác định đầu vào; **21. triển khai (deployment / 배포): sản phẩm tạo ra (artifact / 산출물), tiến trình (process / 프로세스), signals và graceful shutdown** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. phiên bản (version / 버전) evolution: đọc mã (code / 코드) cũ bằng ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. triển khai (deployment / 배포): sản phẩm tạo ra (artifact / 산출물), tiến trình (process / 프로세스), signals và graceful shutdown
 
@@ -580,6 +616,8 @@ Default executor/luồng thực thi (thread / 스레드) pool có vòng đời (
 
 CPython có thể bộ nhớ đệm (cache / 캐시) compiled bytecode trong `__pycache__`; đây là hiệu năng (performance / 성능) sản phẩm tạo ra (artifact / 산출물), không phải nguồn chuẩn (source of truth / 정본). Không lần ghi nhận (commit / 커밋)/treat `.pyc` như deploy lô-gic (logic / 논리) trừ workflow đặc biệt. Invalid bộ nhớ đệm (cache / 캐시) không nên thay nguồn (source / 소스) ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution**, **21. triển khai (deployment / 배포): sản phẩm tạo ra (artifact / 산출물), tiến trình (process / 프로세스), signals và graceful shutdown** xác định đầu vào; **22. phiên bản (version / 버전) evolution: đọc mã (code / 코드) cũ bằng ngữ cảnh (context / 맥락)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. kiến trúc (architecture / 아키텍처): functional cốt lõi (core / 핵심), imperative shell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. phiên bản (version / 버전) evolution: đọc mã (code / 코드) cũ bằng ngữ cảnh (context / 맥락)
 
 ### Python 2 → Python 3
@@ -612,15 +650,19 @@ Free-threaded bản dựng (build / 빌드) officially supported nhưng vẫn op
 
 Không biến chapter thành changelog: timeline tồn tại để giải thích vì sao codebase cũ và mã (code / 코드) mới có mẫu (pattern / 패턴) khác nhau.
 
+> **Chuyển mạch:** Legacy context giúp phân biệt domain logic và side effect. Functional core/imperative shell đặt boundary đó rõ ràng; sync hay async API tiếp theo chọn execution model phù hợp boundary.
+
 ## 23. kiến trúc (architecture / 아키텍처): functional cốt lõi (core / 핵심), imperative shell
 
 Một mẫu (pattern / 패턴) hữu ích cho automation/dịch vụ (service / 서비스) là giữ lĩnh vực (domain / 도메인) transformation càng pure/deterministic càng tốt và đẩy filesystem/mạng (network / 네트워크)/subprocess/thời gian (time / 시간)/random ra adapter/orchestration ranh giới (boundary / 경계).
 
-Ví dụ, hàm (function / 함수) `split_parts(text) -> dict` trong [automation/pipeline.py](../../automation/pipeline.py) dễ kiểm thử (test / 테스트) vì đầu vào (input / 입력)/đầu ra (output / 출력) rõ. Git/HTTP operations có side tác động (effect / 효과) nên isolate sau phương thức (method / 메서드) ranh giới (boundary / 경계). Đây là lập luận (reasoning / 추론) mẫu (pattern / 패턴) chứ không yêu cầu codebase phải “functional programming”.
+Ví dụ, một hàm `split_sections(text) -> dict` tự viết có thể dễ kiểm thử vì đầu vào (input / 입력) và đầu ra (output / 출력) rõ. Git/HTTP operations có side tác động (effect / 효과) nên isolate sau phương thức (method / 메서드) ranh giới (boundary / 경계). Đây là lập luận (reasoning / 추론) mẫu (pattern / 패턴) chứ không yêu cầu codebase phải “functional programming”.
 
 Lợi ích: kiểm thử (test / 테스트) nhanh, thử lại (retry / 재시도)/giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) rõ, thất bại (failure / 실패) injection dễ, và tính đồng thời (concurrency / 동시성) ít dùng chung (shared / 공유) mutable trạng thái (state / 상태).
 
 Pure cốt lõi (core / 핵심) không có nghĩa không được bộ nhớ đệm (cache / 캐시). Nó có nghĩa bộ nhớ đệm (cache / 캐시)/clock/random/I/O được đặt ở ranh giới (boundary / 경계) có quyền sở hữu (ownership / 소유권) tường minh (explicit / 명시적), để cốt lõi (core / 핵심) ngữ nghĩa (semantics / 의미론) không phụ thuộc hidden tiến trình (process / 프로세스) trạng thái (state / 상태).
+
+> **Chuyển mạch:** Functional core giữ computation thuần, imperative shell giữ I/O; sync/async API là lựa chọn theo blocking và cancellation boundary. Exception taxonomy tiếp theo làm rõ failure contract của API đó.
 
 ## 24. kiến trúc (architecture / 아키텍처): sync hay async API?
 
@@ -632,6 +674,8 @@ Ranh giới (boundary / 경계) tốt là một mô hình (model / 모델) nhấ
 
 Nếu cung cấp cả sync và async API, tránh copy-paste hai hiện thực (implementation / 구현) lô-gic nghiệp vụ (business logic / 비즈니스 로직) độc lập. Tách dùng chung (shared / 공유) pure lô-gic (logic / 논리) và hai orchestration adapters để bug fix không divergence.
 
+> **Chuyển mạch:** Sync/async boundary quyết định lỗi được propagate và retry ở đâu. Exception taxonomy biến các lỗi đó thành contract; configuration/feature evolution tiếp theo kiểm soát thay đổi contract theo thời gian.
+
 ## 25. kiến trúc (architecture / 아키텍처): exception taxonomy
 
 Define exception theo khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론). Ví dụ invalid người dùng (user / 사용자) đầu vào (input / 입력) thì caller sửa yêu cầu (request / 요청); transient bên ngoài (external / 외부) thất bại (failure / 실패) có thể thử lại (retry / 재시도); cấu hình (configuration / 구성) lỗi (error / 오류) nên thất bại (fail / 실패) startup; bất biến (invariant / 불변식) violation/programming lỗi (error / 오류) không nên silently recover.
@@ -640,13 +684,14 @@ Define exception theo khôi phục (recovery / 복구) ngữ nghĩa (semantics /
 
 Exception kiểu (type / 타입) cũng là API tính tương thích (compatibility / 호환성). thư viện (library / 라이브러리) đổi từ `ValueError` sang custom lỗi (error / 오류) có thể phá bên tiêu thụ (consumer / 소비자) đang catch chính xác (exact / 정확한) kiểu (type / 타입). Khi refactor taxonomy, xem nó như công khai (public / 공개) đặc tả hợp đồng (contract / 계약) nếu exception vượt ranh giới mô-đun (module boundary / 모듈 경계).
 
+> **Chuyển mạch:** Exception taxonomy mô tả failure contract; configuration và feature evolution quyết định contract nào được bật theo môi trường/version. Failure matrix tiếp theo kiểm tra các tổ hợp đó dưới production conditions.
+
 ## 26. kiến trúc (architecture / 아키텍처): cấu hình (configuration / 구성) và tính năng (feature / 기능) evolution
 
 Cấu hình (config / 설정) nên parse một lần thành typed/validated đối tượng (object / 객체) ở startup. Passing `os.getenv()` rải khắp mã (code / 코드) làm phụ thuộc (dependency / 의존성) ẩn và kiểm thử (test / 테스트) khó.
 
 ```python
 from dataclasses import dataclass
-
 
 @dataclass(frozen=True)
 class Settings:
@@ -658,9 +703,9 @@ Adapter env → Settings nằm ở composition gốc (root / 루트). nghiệp v
 
 Cờ tính năng (feature flag / 기능 플래그) cũng là cấu hình (configuration / 구성) có vòng đời (lifecycle / 생명주기). Nếu flag thay đổi thời gian chạy (runtime / 런타임), mã (code / 코드) phải biết consistency phạm vi (scope / 범위): mỗi yêu cầu (request / 요청) snapshot một giá trị (value / 값) hay mỗi branch đọc live store? Hai hành vi (behavior / 동작) khác nhau và có thể tạo yêu cầu (request / 요청) chạy nửa theo old flag, nửa theo new flag nếu không định nghĩa snapshot ranh giới (boundary / 경계).
 
-## 27. môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) ma trận (matrix / 행렬)
-Phần “27. môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) ma trận (matrix / 행렬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Feature/config evolution tạo ra các versioned states; failure matrix biến chúng thành test cases có owner và evidence. Master checklist tiếp theo gom các case thành điều kiện review cho một service.
 
+## 27. môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) ma trận (matrix / 행렬)
 
 | Hiện tượng | cơ chế (mechanism / 메커니즘) cần kiểm tra | Sai lầm thường gặp |
 |---|---|---|
@@ -686,6 +731,8 @@ Phần “27. môi trường vận hành (production / 운영 환경) thất b�
 | Secret leak | repr/log/cấu hình (config / 설정) dump/dấu vết (trace / 추적) | chỉ xóa secret khỏi mã nguồn (source code / 소스 코드) |
 | Metrics backend quá tải | high-cardinality labels | thêm nhiều label để “dễ gỡ lỗi (debug / 디버그)” |
 
+> **Chuyển mạch:** Failure matrix biến các versioned states thành evidence có thể review. Master checklist kiểm tra service-level invariants; cầu nối cuối cùng mở ra các owner ngoài Python core khi cần.
+
 ## 28. cấp cao (senior / 시니어)/Master rà soát (review / 검토) checklist cho một Python dịch vụ (service / 서비스)
 
 Khi rà soát (review / 검토), đi theo chuỗi nhân quả (causal chain / 인과 사슬) thay vì style checklist thuần túy.
@@ -694,40 +741,40 @@ Mã (code / 코드) đang giữ trạng thái (state / 상태) ở đâu và ai 
 
 Nếu trả lời được các câu đó, cú pháp (syntax / 문법)/API lookup còn lại thường là vấn đề nhỏ.
 
+> **Chuyển mạch:** Master checklist xác định phần nào còn thuộc Python runtime và phần nào cần owner khác như OS, network, database hoặc framework. Cầu nối này đưa người học tới nguồn chính tương ứng mà không tạo duplicate chapter.
+
 ## 29. cầu nối (bridge / 브리지) ra ngoài Python cốt lõi (core / 핵심)
-Phần “29. cầu nối (bridge / 브리지) ra ngoài Python cốt lõi (core / 핵심)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
-- FastAPI example hiện có: [automation/app.py](../../automation/app.py). cốt lõi (core / 핵심) Python giải thích coroutine, vòng lặp sự kiện (event loop / 이벤트 루프), khóa (lock / 잠금) và `to_thread`; routing/phụ thuộc (dependency / 의존성) injection/ASGI thuộc FastAPI/backend lĩnh vực (domain / 도메인) khi chuẩn gốc (canonical / 정본) thư viện (library / 라이브러리) tương ứng được xây.
-- Automation worker: [automation/pipeline.py](../../automation/pipeline.py) và [automation/README.md](../../automation/README.md).
+- FastAPI/ASGI là ví dụ để nối coroutine, vòng lặp sự kiện (event loop / 이벤트 루프), khóa (lock / 잠금) và `to_thread`; routing/phụ thuộc (dependency / 의존성) injection thuộc FastAPI/backend domain, không phải Python core.
+- Các ví dụ triển khai phải được viết từ case study còn được owner duy trì; không dùng worker sinh tài liệu làm nguồn chuẩn.
 - tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), scheduling, networking và algorithms sâu hơn: [Computer Science Knowledge Library](../../computer_science/README.md).
 - AI/kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) framework-specific hành vi (behavior / 동작) không được duplicate vào Python cốt lõi (core / 핵심). Khi các chuẩn gốc (canonical / 정본) lĩnh vực (domain / 도메인) đó tồn tại, Python README nên link trực tiếp tới chapter tương ứng.
 
+> **Chuyển mạch:** Cầu nối chốt ranh giới của Part 4: Python runtime đã được giải thích, còn claim bên ngoài phải quay về canonical owner và nguồn chính. Đây là điểm kết thúc của file.
+
 ## Nguồn chính
-Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
-- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조): https://docs.python.org/3.14/tham chiếu (reference / 참조)/
-- mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조): https://docs.python.org/3.14/reference/
+- mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/reference/datamodel.html
 - Descriptor Guide: https://docs.python.org/3.14/howto/descriptor.html
-- mô hình thực thi (execution model / 실행 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/executionmodel.html
-- Import hệ thống (system / 시스템): https://docs.python.org/3.14/tham chiếu (reference / 참조)/import.html
-- `dis`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/dis.html
-- `inspect`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/inspect.html
-- `gc`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/gc.html
-- `weakref`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/weakref.html
-- `contextvars`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/contextvars.html
-- `asyncio` synchronization primitives: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio-sync.html
-- `asyncio` queues: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio-queue.html
-- `asyncio` runners: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio-runner.html
-- `concurrent.interpreters`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/concurrent.interpreters.html
-- `concurrent.futures`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/concurrent.futures.html
-- C API mô-đun (module / 모듈) slots: https://docs.python.org/3.14/c-api/mô-đun (module / 모듈).html
+- mô hình thực thi (execution model / 실행 모델): https://docs.python.org/3.14/reference/executionmodel.html
+- Import hệ thống (system / 시스템): https://docs.python.org/3.14/reference/import.html
+- `dis`: https://docs.python.org/3.14/library/dis.html
+- `inspect`: https://docs.python.org/3.14/library/inspect.html
+- `gc`: https://docs.python.org/3.14/library/gc.html
+- `weakref`: https://docs.python.org/3.14/library/weakref.html
+- `contextvars`: https://docs.python.org/3.14/library/contextvars.html
+- `asyncio` synchronization primitives: https://docs.python.org/3.14/library/asyncio-sync.html
+- `asyncio` queues: https://docs.python.org/3.14/library/asyncio-queue.html
+- `asyncio` runners: https://docs.python.org/3.14/library/asyncio-runner.html
+- `concurrent.interpreters`: https://docs.python.org/3.14/library/concurrent.interpreters.html
+- `concurrent.futures`: https://docs.python.org/3.14/library/concurrent.futures.html
+- C API mô-đun (module / 모듈) slots: https://docs.python.org/3.14/c-api/module.html
 - Free-threaded C extensions: https://docs.python.org/3.14/howto/free-threading-extensions.html
 - luồng thực thi (thread / 스레드) trạng thái (state / 상태)/GIL: https://docs.python.org/3.14/c-api/threads.html
-- `signal`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/tín hiệu (signal / 신호).html
-- `asyncio`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio.html
+- `signal`: https://docs.python.org/3.14/library/signal.html
+- `asyncio`: https://docs.python.org/3.14/library/asyncio.html
 - Python 3.14 What's New: https://docs.python.org/3.14/whatsnew/3.14.html
 - Packaging người dùng (user / 사용자) Guide: https://packaging.python.org/
 
-> **Bàn giao:** Sau **Nguồn chính**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn chính**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

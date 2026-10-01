@@ -1,7 +1,6 @@
 # Nền tảng Học máy
 
-> **Mạch đọc:** Đọc **Nền tảng Học máy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Học có giám sát** sang **Học không giám sát và tự giám sát**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nền tảng Học máy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Học có giám sát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Học không giám sát và tự giám sát** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Học máy (Machine Learning — ML / 기계 학습)** xây dựng mô hình từ dữ liệu thay vì viết tay toàn bộ ánh xạ đầu vào → đầu ra. Nhưng “học từ dữ liệu” không có nghĩa mô hình tự tìm ra chân lý. Quá trình học luôn diễn ra trong không gian giả thuyết, hàm mục tiêu, phân bố dữ liệu và quy trình đánh giá do con người hoặc hệ thống thiết kế.
 
@@ -11,8 +10,7 @@ Trong **học có giám sát (supervised learning)**, ta có các ví dụ `(x, 
 
 Quá trình huấn luyện chọn tham số để giảm hàm mất mát trên dữ liệu huấn luyện. Mục tiêu thật sự không phải nhớ dữ liệu đó mà là **khái quát hóa (generalization)** tốt trên dữ liệu chưa thấy nhưng thuộc phân bố mục tiêu.
 
-
-> **Chuyển mạch:** Từ **Học có giám sát**, ta sang **Học không giám sát và tự giám sát** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nền tảng Học máy**, **Học không giám sát và tự giám sát** tiếp nhận điểm tựa từ **Học có giám sát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đặc trưng và biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Học không giám sát và tự giám sát
 
@@ -20,8 +18,7 @@ Quá trình huấn luyện chọn tham số để giảm hàm mất mát trên d
 
 **Học tự giám sát (self-supervised learning)** tạo tín hiệu giám sát từ chính cấu trúc dữ liệu, ví dụ dự đoán đơn vị từ (token / 토큰) bị che hoặc đơn vị từ (token / 토큰) tiếp theo. Không cần gán nhãn thủ công, nhưng mục tiêu học vẫn do người thiết kế lựa chọn.
 
-
-> **Chuyển mạch:** Từ **Học không giám sát và tự giám sát**, ta sang **Đặc trưng và biểu diễn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nền tảng Học máy**, **Đặc trưng và biểu diễn** tiếp nhận điểm tựa từ **Học không giám sát và tự giám sát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm mất mát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đặc trưng và biểu diễn
 
@@ -29,8 +26,7 @@ Học máy truyền thống phụ thuộc nhiều vào **kỹ thuật đặc tr�
 
 Tuy nhiên cách biểu diễn vẫn quyết định thông tin nào có sẵn cho mô hình. Bỏ timestamp quan trọng hoặc vô tình thêm một đặc trưng làm rò rỉ đáp án có thể thay đổi hành vi mô hình rất mạnh.
 
-
-> **Chuyển mạch:** Từ **Đặc trưng và biểu diễn**, ta sang **Hàm mất mát** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng Học máy**, **Hàm mất mát** tiếp nhận điểm tựa từ **Đặc trưng và biểu diễn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tập huấn luyện, xác thực và kiểm thử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàm mất mát
 
@@ -38,8 +34,7 @@ Tuy nhiên cách biểu diễn vẫn quyết định thông tin nào có sẵn c
 
 Mất mát (loss / 손실) không đồng nghĩa với chỉ số nghiệp vụ. Một mô hình giảm log-loss vẫn có thể không tối ưu chi phí gian lận hoặc lợi ích y tế nếu ngưỡng quyết định và mức thiệt hại giữa các loại sai khác nhau.
 
-
-> **Chuyển mạch:** Từ **Hàm mất mát**, ta sang **Tập huấn luyện, xác thực và kiểm thử** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nền tảng Học máy**, **Tập huấn luyện, xác thực và kiểm thử** tiếp nhận điểm tựa từ **Hàm mất mát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quá khớp và thiếu khớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tập huấn luyện, xác thực và kiểm thử
 
@@ -47,8 +42,7 @@ Dữ liệu huấn luyện dùng để khớp tham số. Dữ liệu xác thực
 
 Nếu liên tục xem kết quả kiểm thử (test / 테스트) rồi sửa mô hình theo kết quả đó, tập kiểm thử (test / 테스트) trên thực tế đã biến thành một tập kiểm tra hợp lệ (validation / 검증) khác.
 
-
-> **Chuyển mạch:** Từ **Tập huấn luyện, xác thực và kiểm thử**, ta sang **Quá khớp và thiếu khớp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nền tảng Học máy**, **Quá khớp và thiếu khớp** tiếp nhận điểm tựa từ **Tập huấn luyện, xác thực và kiểm thử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quá khớp và thiếu khớp
 
@@ -56,8 +50,7 @@ Nếu liên tục xem kết quả kiểm thử (test / 테스트) rồi sửa m�
 
 Trực giác thiên lệch–phương sai (bias–variance) giúp suy luận cách năng lực mô hình, regularization và lượng dữ liệu tạo ra sự đánh đổi.
 
-
-> **Chuyển mạch:** Từ **Quá khớp và thiếu khớp**, ta sang **Điều chuẩn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng Học máy**, **Điều chuẩn** tiếp nhận điểm tựa từ **Quá khớp và thiếu khớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch chuyển phân bố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điều chuẩn
 
@@ -65,8 +58,7 @@ Các kỹ thuật như phạt L1/L2, dropout, dừng sớm, tăng cường dữ 
 
 **Điều chuẩn (regularization)** không chỉ là “chống overfit”; nó hướng quá trình học về những nghiệm được xem là hợp lý hoặc đơn giản hơn theo cơ chế đã chọn.
 
-
-> **Chuyển mạch:** Từ **Điều chuẩn**, ta sang **Dịch chuyển phân bố** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nền tảng Học máy**, **Dịch chuyển phân bố** tiếp nhận điểm tựa từ **Điều chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rò rỉ dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dịch chuyển phân bố
 
@@ -74,8 +66,7 @@ Mô hình được huấn luyện trên phân bố A có thể thất bại khi 
 
 Giám sát mô hình cần xem phân bố đầu vào, độ tự tin đầu ra, nhãn kết quả khi có và chỉ số nghiệp vụ, thay vì chỉ theo dõi CPU hoặc lỗi hệ thống.
 
-
-> **Chuyển mạch:** Từ **Dịch chuyển phân bố**, ta sang **Rò rỉ dữ liệu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nền tảng Học máy**, **Dịch chuyển phân bố** nêu điều cần giải thích; **Rò rỉ dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những hiểu nhầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rò rỉ dữ liệu
 
@@ -83,8 +74,7 @@ Giám sát mô hình cần xem phân bố đầu vào, độ tự tin đầu ra,
 
 Khi đó chỉ số đánh giá có thể rất cao nhưng mô hình thất bại khi triển khai. Chiến lược chia dữ liệu phải phản ánh dòng thời gian và cấu trúc thực thể của môi trường sử dụng thật.
 
-
-> **Chuyển mạch:** Từ **Rò rỉ dữ liệu**, ta sang **Những hiểu nhầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng Học máy**, **Rò rỉ dữ liệu** đã nêu tiêu chí phân biệt, còn **Những hiểu nhầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu nhầm thường gặp
 
@@ -94,18 +84,16 @@ Khi đó chỉ số đánh giá có thể rất cao nhưng mô hình thất bạ
 
 **“Mô hình học đúng mục tiêu mà chúng ta muốn.”** Không chính xác. Nó tối ưu một hàm mất mát đại diện trên dữ liệu; khoảng cách giữa đại diện và mục tiêu thật là nguồn lỗi quan trọng.
 
-
-> **Chuyển mạch:** Từ **Những hiểu nhầm thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nền tảng Học máy**, **Những hiểu nhầm thường gặp** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
 > Học máy là **tối ưu trên dữ liệu dưới một tập giả định**. Mục tiêu là khả năng khái quát chứ không phải khớp dữ liệu huấn luyện; quy trình đánh giá phải mô phỏng càng gần thực tế triển khai càng tốt.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nền tảng Học máy**, **Kết nối** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Xem [thống kê và suy luận](../../../mathematics/06_probability_statistics/05_descriptive_and_inferential_statistics.md), [tối ưu hóa](../../../mathematics/08_optimization_numerical/00_optimization.md), [mạng nơ-ron](./03_neural_networks_and_representation_learning.md) và [đánh giá AI](./04_ai_evaluation_data_and_responsibility.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai problem formulation search and agents](./00_ai_problem_formulation_search_and_agents.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

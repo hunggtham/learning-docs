@@ -1,7 +1,6 @@
 # Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học
 
-> **Mạch đọc:** Đọc **Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Nhiệt là chất được chứa trong vật”** sang **“Temperature cao nghĩa total năng lượng (energy / 에너지) cao hơn mọi vật lạnh hơn”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > **Nhiệt động lực học (thermodynamics / 열역학)** nghiên cứu trạng thái năng lượng của hệ, cách năng lượng truyền qua ranh giới và những ràng buộc quyết định chiều biến đổi. Trong Hóa học, nhiệt động lực học trả lời “trạng thái nào thuận lợi?” và “năng lượng được phân bố ra sao?”, nhưng không tự cho biết quá trình xảy ra nhanh đến mức nào.
 
@@ -493,4 +492,4 @@ Sau đó enthalpy, entropy và Gibbs không thay ledger này; chúng xây thêm 
 
 Xem tiếp: [Enthalpy và nhiệt hóa học](./01_enthalpy_and_thermochemistry.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 enthalpy and thermochemistry](./01_enthalpy_and_thermochemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

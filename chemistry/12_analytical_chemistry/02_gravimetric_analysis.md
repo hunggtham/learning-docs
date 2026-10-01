@@ -1,6 +1,6 @@
 # Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng
 
-> **Mạch đọc:** Đọc **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hấp phụ bề mặt** sang **Bao giữ (occlusion)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hấp phụ bề mặt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bao giữ (occlusion)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Phân tích khối lượng (gravimetric analysis / 중량 분석)** xác định lượng chất phân tích bằng cách chuyển nó thành một dạng có thành phần hóa học xác định rồi cân chính xác. Sức mạnh của phương pháp nằm ở chỗ khối lượng có thể được đo rất tốt và phép tính thường dựa trực tiếp vào hóa lượng, không cần một đường hiệu chuẩn tín hiệu phức tạp.
 
@@ -144,22 +144,19 @@ Các cơ chế gồm nhiều loại.
 
 Ion tạp bám lên bề mặt hạt. Hiện tượng mạnh hơn với kết tủa keo có diện tích bề mặt lớn.
 
-
-> **Chuyển mạch:** Từ **Hấp phụ bề mặt**, ta sang **Bao giữ (occlusion)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Bao giữ (occlusion)** tiếp nhận điểm tựa từ **Hấp phụ bề mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kẹt cơ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bao giữ (occlusion)
 
 Một vùng dung dịch chứa tạp bị giữ lại khi tinh thể phát triển quá nhanh quanh nó.
 
-
-> **Chuyển mạch:** Từ **Bao giữ (occlusion)**, ta sang **Kẹt cơ học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Kẹt cơ học** tiếp nhận điểm tựa từ **Bao giữ (occlusion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế vào mạng tinh thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kẹt cơ học
 
 Tinh thể hoặc khối kết tủa giữ lại dung dịch mẹ trong các khe/hốc.
 
-
-> **Chuyển mạch:** Từ **Kẹt cơ học**, ta sang **Thế vào mạng tinh thể** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Thế vào mạng tinh thể** tiếp nhận điểm tựa từ **Kẹt cơ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điểm mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thế vào mạng tinh thể
 
@@ -347,8 +344,7 @@ Nếu blank lớn hoặc biến thiên, độ tin cậy giảm dù cân rất ch
 
 # Điểm mạnh và giới hạn
 
-
-> **Chuyển mạch:** Từ **Thế vào mạng tinh thể**, ta sang **Điểm mạnh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Điểm mạnh** tiếp nhận điểm tựa từ **Thế vào mạng tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điểm mạnh
 
@@ -359,8 +355,7 @@ Trước khi chọn gravimetry, hãy cân bằng lợi ích về traceability v�
 - có thể đạt độ đúng cao;
 - quy trình hóa học minh bạch, dễ kiểm tra mass balance.
 
-
-> **Chuyển mạch:** Từ **Điểm mạnh**, ta sang **Giới hạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Điểm mạnh** đã nêu tiêu chí phân biệt, còn **Giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Giới hạn
 
@@ -401,3 +396,5 @@ Không. Nó chỉ cho thấy khối lượng đã ổn định dưới chu kỳ 
 Phân tích khối lượng là **hóa lượng được neo vào một vật thể có thể cân**. Muốn phép neo đó đáng tin, phải biến analyte thành một pha có thành phần xác định, kiểm soát cách pha đó tạo mầm và lớn lên, loại tạp mà không mất sản phẩm, rồi đưa nó về trạng thái khối lượng ổn định. Con số cuối cùng tốt đến đâu phụ thuộc hóa học của toàn quá trình, không chỉ phụ thuộc chiếc cân.
 
 Xem tiếp: [Phổ học](./03_spectroscopy.md).
+
+> **Bàn giao:** Sau **Giới hạn**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

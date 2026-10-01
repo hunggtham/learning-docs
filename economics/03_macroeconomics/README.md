@@ -1,5 +1,7 @@
 # 03 — Macroeconomics
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03 — Macroeconomics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Macroeconomics nghiên cứu nền kinh tế ở cấp aggregate nhưng không được biến aggregate thành một “actor duy nhất”. Mô-đun (module / 모듈) này bắt đầu từ đo lường (measurement / 측정), đi qua long-run productive sức chứa (capacity / 용량), labor/inflation, money/banking, fiscal–monetary stabilization và kết thúc ở open-economy các ràng buộc (constraints / 제약조건들). Mỗi chapter phải tách accounting định danh (identity / 식별자) khỏi nhân quả (causal / 인과적) mô hình (model / 모델), short run khỏi long run, và domestic cơ chế (mechanism / 메커니즘) khỏi ứng dụng (application / 애플리케이션) vào financial markets.
 
 ## Thứ tự học chuẩn gốc (canonical / 정본)
@@ -11,9 +13,9 @@ Macroeconomics nghiên cứu nền kinh tế ở cấp aggregate nhưng không �
 5. [Fiscal Policy & Business Cycles](./04_fiscal_policy_and_business_cycles.md) — multipliers, automatic stabilizers, trạng thái (state / 상태) dependence, debt dynamics, fiscal không gian (space / 공간), inventory/financial accelerators, RBC/New Keynesian perspectives và fiscal–monetary tương tác (interaction / 상호작용).
 6. [Open Economy, Exchange Rates & Crises](./05_open_economy_exchange_rates_and_crises.md) — balance of payments, `CA = S − I`, nominal/real FX, PPP, interest parity, trilemma, capital flows, currency/maturity mismatch, sudden stops và crisis mechanisms.
 
-## Trục học (learning spine / 학습 축)
-Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Macro spine đi từ measurement sang growth, labor/inflation, money, fiscal policy và open economy; outcomes phải giữ chuỗi stock–flow và mechanism này.
 
+## Trục học (learning spine / 학습 축)
 
 ```text
 Measurement / accounting identities
@@ -27,11 +29,15 @@ Measurement / accounting identities
 
 Mô-đun (module / 모듈) cố ý bắt đầu bằng đo lường (measurement / 측정) vì macro rất dễ nhầm định danh (identity / 식별자) với lý thuyết (theory / 이론). `S = I + NX`, government ngân sách (budget / 예산) ràng buộc (constraint / 제약조건) hay balance-of-payments equality là accounting structures; chúng không tự nói direction of causality. Nhân quả (causal / 인과적) interpretation phải đi qua behavioral các giả định (assumptions / 가정들), institutional regime và bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Ở chặng này của **03 — Macroeconomics**, **Kết quả cần đạt** tiếp nhận điểm tựa từ **Trục học (learning spine / 학습 축)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với Investing Economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kết quả cần đạt
 
 Sau mô-đun (module / 모듈) này, người học phải có thể phân biệt stock/luồng (flow / 흐름), nominal/real, gross/net và aggregate/per-capita; đọc GDP/inflation/unemployment mà không bỏ revisions hoặc denominator effects; giải thích vì sao capital accumulation khác productivity growth; tách frictional/structural/cyclical unemployment; đọc inflation qua demand, supply, expectations và markups; dựng balance-sheet lô-gic (logic / 논리) của banks và central bank; đánh giá fiscal multiplier theo trạng thái (state / 상태)/regime; phân tích debt dynamics qua primary balance và `r − g`; đồng thời đọc hiện tại (current / 현재) account, exchange tỷ lệ (rate / 비율) và capital flows qua bên ngoài (external / 외부) balance-sheet exposures thay vì một headline ratio.
 
 Người học cũng phải biết bất định (uncertainty / 불확실성) nằm ở đâu. Potential đầu ra (output / 출력), neutral tỷ lệ (rate / 비율), NAIRU và expected inflation đều không quan sát trực tiếp; chúng là model-dependent estimates. Không dùng một điểm (point / 지점) estimate như fact tuyệt đối.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Macroeconomics**, **Kết quả cần đạt** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Investing Economics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Econometrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với Investing Economics
 
@@ -39,16 +45,24 @@ Người học cũng phải biết bất định (uncertainty / 불확실성) n�
 
 Quy tắc là **cross-link, không duplicate**. Khi Investing cần giải thích nguyên lý chung, link về chapter chuẩn gốc (canonical / 정본) tại đây; khi Economics cần market-specific monitoring hoặc investment interpretation, link sang Investing.
 
+> **Chuyển mạch:** Trong **03 — Macroeconomics**, **Ranh giới (boundary / 경계) với Investing Economics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Econometrics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ranh giới (boundary / 경계) với Econometrics
 
 Macro mô hình (model / 모델) tạo predictions nhưng nhiều biến endogenous cùng lúc. Ví dụ tỷ lệ (rate / 비율) hike thường xảy ra khi inflation/outlook đã thay đổi, nên correlation giữa tỷ lệ (rate / 비율) và inflation không đo nhân quả (causal / 인과적) tác động (effect / 효과) của chính sách (policy / 정책). Fiscal spending cũng phản ứng với recession, exchange tỷ lệ (rate / 비율) phản ứng với both domestic and toàn cục (global / 전역) shocks.
 
 Vì vậy bước tiếp theo là [Econometrics](../README.md#learning-route-và-coverage-target): đo lường (measurement / 측정) → identification → regression → experiments/quasi-experiments → IV/DiD/panel/thời gian (time / 시간) series. Macro bằng chứng (evidence / 증거) cần đặc biệt chú ý simultaneity, expectations, regime changes và real-time dữ liệu (data / 데이터) revisions.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Macroeconomics**, **Ranh giới (boundary / 경계) với Econometrics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Checklist khi đọc một macro claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)
 
 Labor, công khai (public / 공개) finance, trade, development và industrial organization sẽ dùng macro các ràng buộc (constraints / 제약조건들) nhưng cần micro foundations và nhân quả (causal / 인과적) bằng chứng (evidence / 증거) riêng. Economic Lịch sử (history / 이력) & Institutions sẽ dùng macro chuỗi (sequence / 시퀀스) để so sánh growth, crises, monetary regimes và trạng thái (state / 상태) sức chứa (capacity / 용량) qua thời gian; không duplicate chronology từ World Lịch sử (history / 이력).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Macroeconomics**, **Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)** đã nêu tiêu chí phân biệt, còn **Checklist khi đọc một macro claim** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Checklist khi đọc một macro claim
 
 Trước khi chấp nhận một kết luận, kiểm tra: đại lượng đang đo là gì; accounting định danh (identity / 식별자) nào đang dùng; behavioral cơ chế (mechanism / 메커니즘) nào biến định danh (identity / 식별자) thành prediction; horizon short/long run; regime monetary/fiscal/exchange-rate; balance-sheet exposure; expectations; distributional heterogeneity; dữ liệu (data / 데이터) vintage; và identification chiến lược (strategy / 전략) nào có thể phân biệt nhân quả (causal / 인과적) tác động (effect / 효과) với chính sách (policy / 정책) phản hồi (response / 응답)/endogeneity.
+
+> **Bàn giao:** Sau **Checklist khi đọc một macro claim**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

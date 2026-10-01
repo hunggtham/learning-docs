@@ -1,7 +1,6 @@
 # Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)
 
-> **Mạch đọc:** Đọc **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust** sang **phụ thuộc (dependency / 의존성) risks**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) risks** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Hiện đại (modern / 현대적) ứng dụng (application / 애플리케이션) hiếm khi chỉ chứa mã (code / 코드) nhóm (team / 팀) tự viết. Nó phụ thuộc gói (package / 패키지) registries, bản dựng (build / 빌드) tools, bộ chứa (container / 컨테이너) images, CI runners, triển khai (deployment / 배포) credentials và transitive dependencies. Vì vậy attack surface kéo dài từ nguồn (source / 소스) lần ghi nhận (commit / 커밋) đến sản phẩm tạo ra (artifact / 산출물) chạy môi trường vận hành (production / 운영 환경).
 
@@ -11,8 +10,7 @@ Một phụ thuộc (dependency / 의존성) gói (package / 패키지) phụ th
 
 “mã (code / 코드) của chúng ta an toàn” không đủ nếu attacker compromise phụ thuộc (dependency / 의존성) publisher hoặc bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인).
 
-
-> **Chuyển mạch:** Từ **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust**, ta sang **phụ thuộc (dependency / 의존성) risks** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust** xác định đầu vào; **Phụ thuộc (dependency / 의존성) risks** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **SBOM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) risks
 
@@ -22,8 +20,7 @@ Defense gồm lockfiles, private registry chính sách (policy / 정책), proven
 
 Phiên bản (version / 버전) pinning tăng reproducibility nhưng pin mãi một vulnerable phiên bản (version / 버전) cũng nguy hiểm. cập nhật (update / 업데이트) chiến lược (strategy / 전략) phải cân bằng reproducibility với patching.
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) risks**, ta sang **SBOM** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **SBOM** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) risks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## SBOM
 
@@ -31,8 +28,7 @@ Software Bill of Materials (SBOM) liệt kê components/versions trong sản ph�
 
 SBOM không tự làm software secure; inventory chỉ là prerequisite cho vulnerability management.
 
-
-> **Chuyển mạch:** Từ **SBOM**, ta sang **bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity** tiếp nhận điểm tựa từ **SBOM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CI/CD permissions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity
 
@@ -40,8 +36,7 @@ Secure chuỗi xử lý (pipeline / 파이프라인) cần biết sản phẩm t
 
 Signing/provenance frameworks giúp verify sản phẩm tạo ra (artifact / 산출물) origin. Reproducible builds đi xa hơn: cùng nguồn (source / 소스)+môi trường (environment / 환경) spec tạo identical đầu ra (output / 출력), tăng khả năng detect bản dựng (build / 빌드) tampering.
 
-
-> **Chuyển mạch:** Từ **bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity**, ta sang **CI/CD permissions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **CI/CD permissions** tiếp nhận điểm tựa từ **Bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Secure Development vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CI/CD permissions
 
@@ -49,8 +44,7 @@ CI đơn vị từ (token / 토큰) thường có quyền đọc nguồn (source
 
 Principle là least privilege per job, isolate untrusted mã (code / 코드), short-lived credentials và protected triển khai (deployment / 배포) environments.
 
-
-> **Chuyển mạch:** Từ **CI/CD permissions**, ta sang **Secure Development vòng đời (lifecycle / 생명주기)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **CI/CD permissions** xác định đầu vào; **Secure Development vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **SAST, DAST, SCA và fuzzing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Secure Development vòng đời (lifecycle / 생명주기)
 
@@ -58,8 +52,7 @@ Bảo mật (security / 보안) cần xuất hiện từ requirements/threat mod
 
 Shift-left không có nghĩa đẩy toàn trách nhiệm cho nhà phát triển (developer / 개발자). Một số controls tốt nhất là nền tảng (platform / 플랫폼) guardrails, secure defaults và centralized tooling.
 
-
-> **Chuyển mạch:** Từ **Secure Development vòng đời (lifecycle / 생명주기)**, ta sang **SAST, DAST, SCA và fuzzing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Secure Development vòng đời (lifecycle / 생명주기)** xác định đầu vào; **SAST, DAST, SCA và fuzzing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vulnerability management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## SAST, DAST, SCA và fuzzing
 
@@ -67,8 +60,7 @@ Static ứng dụng (application / 애플리케이션) bảo mật (security / �
 
 Mỗi technique có blind spots. Scanner findings cần triage theo reachability/ngữ cảnh (context / 맥락) thay vì chỉ count CVEs.
 
-
-> **Chuyển mạch:** Từ **SAST, DAST, SCA và fuzzing**, ta sang **Vulnerability management** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Vulnerability management** tiếp nhận điểm tựa từ **SAST, DAST, SCA và fuzzing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vulnerability management
 
@@ -76,15 +68,13 @@ Severity score như CVSS mô tả generic technical severity, nhưng organizatio
 
 Prioritization cần ngữ cảnh (context / 맥락): một thư viện (library / 라이브러리) vulnerable đường dẫn (path / 경로) không reachable khác internet-facing auth bypass.
 
-
-> **Chuyển mạch:** Từ **Vulnerability management**, ta sang **sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)** tiếp nhận điểm tựa từ **Vulnerability management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)
 
 Sau sự cố (incident / 인시던트), mục tiêu không chỉ patch symptom mà cập nhật threat mô hình (model / 모델), detections, runbooks và preventive controls. Blameless phân tích (analysis / 분석) không có nghĩa không có accountability; nó nhằm hiểu hệ thống (system / 시스템) conditions thay vì dừng ở “human lỗi (error / 오류)”.
 
-
-> **Chuyển mạch:** Từ **sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -94,18 +84,16 @@ Sau sự cố (incident / 인시던트), mục tiêu không chỉ patch symptom 
 
 **“CI là nội bộ (internal / 내부) nên trusted.”** CI xử lý untrusted commits/dependencies và có credentials mạnh; nó là high-value mục tiêu (target / 대상).
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Software sản phẩm tạo ra (artifact / 산출물) là kết quả của một chuỗi (chain / 사슬) of custody. bảo mật (security / 보안) phải chứng minh/kiểm soát từng bước từ nguồn (source / 소스) định danh (identity / 식별자) tới bản dựng (build / 빌드), phụ thuộc (dependency / 의존성), signing và triển khai (deployment / 배포).
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc [version control/build/packages](../08_software_systems/01_version_control_build_link_and_packages.md), [keys/secrets](./07_keys_secrets_certificates_and_secure_operations.md), [testing/debugging](./04_testing_verification_and_debugging.md) và [software engineering lifecycle](../09_software_engineering/00_requirements_specification_and_engineering_process.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 threat models and security principles](./00_threat_models_and_security_principles.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

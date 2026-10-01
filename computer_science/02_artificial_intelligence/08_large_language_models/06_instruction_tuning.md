@@ -1,7 +1,6 @@
 # Instruction Tuning
 
-> **Mạch đọc:** Đặt **Instruction Tuning** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ continuation tới instruction following** sang **Instruction dữ liệu (data / 데이터)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Instruction Tuning**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ continuation tới instruction following** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Instruction dữ liệu (data / 데이터)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Cơ sở (base / 기반) LLM được pretrain để **tiếp tục văn bản (text / 텍스트)**, nhưng người dùng (user / 사용자) muốn một assistant có thể hiểu yêu cầu (request / 요청) và tạo phản hồi (response / 응답) phù hợp. **Instruction tuning (지시 튜닝 / tinh chỉnh theo chỉ dẫn)** là quá trình điều chỉnh mô hình (model / 모델) để map từ instruction + ngữ cảnh (context / 맥락) sang desired phản hồi (response / 응답) format và hành vi (behavior / 동작).
 
@@ -34,6 +33,8 @@ assistant → desired answer
 
 Mô hình (model / 모델) học rằng một số đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스) đóng vai trò instruction và đầu ra (output / 출력) nên theo các ràng buộc (constraints / 제약조건들) đó.
 
+> **Chuyển mạch:** Trong **Instruction Tuning**, **Từ continuation tới instruction following** nêu điều cần giải thích; **Instruction dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tác vụ (task / 작업) diversity và generalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Instruction dữ liệu (data / 데이터)
 
 Instruction dữ liệu (data / 데이터) có thể đến từ human-written examples, synthetic generation, transformed datasets hoặc mixtures của nhiều tasks. chất lượng (quality / 품질) quan trọng hơn việc chỉ tăng số lượng.
@@ -41,6 +42,8 @@ Instruction dữ liệu (data / 데이터) có thể đến từ human-written e
 Một example tốt không chỉ có “đáp án đúng”; nó thể hiện format, độ sâu (depth / 깊이), tone, refusal ranh giới (boundary / 경계), tool-use lược đồ (schema / 스키마) hoặc lập luận (reasoning / 추론) style cần thiết.
 
 Nếu dataset inconsistent, mô hình (model / 모델) học phân phối (distribution / 분포) inconsistent.
+
+> **Chuyển mạch:** Ở chặng này của **Instruction Tuning**, **Instruction dữ liệu (data / 데이터)** nêu điều cần giải thích; **Tác vụ (task / 작업) diversity và generalization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hệ thống (system / 시스템)/người dùng (user / 사용자)/Assistant roles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tác vụ (task / 작업) diversity và generalization
 
@@ -52,11 +55,15 @@ Diversity giúp mô hình (model / 모델) học meta-pattern:
 
 Đây là một dạng learned giao diện (interface / 인터페이스) giữa human ngôn ngữ (language / 언어) và mô hình (model / 모델) năng lực (capability / 역량).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Instruction Tuning**, **Hệ thống (system / 시스템)/người dùng (user / 사용자)/Assistant roles** tiếp nhận điểm tựa từ **Tác vụ (task / 작업) diversity và generalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Instruction tuning và kiến thức (knowledge / 지식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hệ thống (system / 시스템)/người dùng (user / 사용자)/Assistant roles
 
 Hiện đại (modern / 현대적) chat các hệ thống (systems / 시스템들) thường encode role tokens hoặc special formatting. Role hierarchy không phải thuộc tính (property / 속성) tự nhiên của ngôn ngữ (language / 언어) mô hình (model / 모델); nó là hành vi (behavior / 동작) được tạo bởi huấn luyện (training / 학습), serving giao thức (protocol / 프로토콜) và thời gian chạy (runtime / 런타임) chính sách (policy / 정책).
 
 Vì vậy prompt injection là system-level bài toán (problem / 문제): mô hình (model / 모델) đang đọc nhiều văn bản (text / 텍스트) streams nhưng ứng dụng (application / 애플리케이션) muốn một số streams có authority cao hơn streams khác.
+
+> **Chuyển mạch:** Trong **Instruction Tuning**, **Instruction tuning và kiến thức (knowledge / 지식)** tiếp nhận điểm tựa từ **Hệ thống (system / 시스템)/người dùng (user / 사용자)/Assistant roles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Catastrophic forgetting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Instruction tuning và kiến thức (knowledge / 지식)
 
@@ -72,9 +79,13 @@ question → answer theo policy/domain style
 
 Use RAG khi muốn cung cấp facts/document ngữ cảnh (context / 맥락) fresh và traceable.
 
+> **Chuyển mạch:** Ở chặng này của **Instruction Tuning**, **Catastrophic forgetting** tiếp nhận điểm tựa từ **Instruction tuning và kiến thức (knowledge / 지식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-task instruction tuning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Catastrophic forgetting
 
 Nếu fine-tune quá mạnh trên narrow dữ liệu (data / 데이터), mô hình (model / 모델) có thể mất năng lực (capability / 역량) hoặc style rộng trước đó. Mitigation gồm lower học tập (learning / 학습) tỷ lệ (rate / 비율), dữ liệu (data / 데이터) mixture, regularization và parameter-efficient tuning.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Instruction Tuning**, **Multi-task instruction tuning** tiếp nhận điểm tựa từ **Catastrophic forgetting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Synthetic instruction dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Multi-task instruction tuning
 
@@ -82,11 +93,15 @@ Một mô hình (model / 모델) có thể train trên translation, summarizatio
 
 Nhưng tác vụ (task / 작업) mixture cần weighting. Dataset lớn nhưng easy có thể dominate độ dốc (gradient / 기울기) và làm hard/rare tác vụ (task / 작업) bị underrepresented.
 
+> **Chuyển mạch:** Trong **Instruction Tuning**, **Multi-task instruction tuning** nêu điều cần giải thích; **Synthetic instruction dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Instruction tuning vs SFT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Synthetic instruction dữ liệu (data / 데이터)
 
 Stronger mô hình (model / 모델) có thể generate instruction-response pairs cho weaker/open mô hình (model / 모델). Điều này quy mô (scale / 규모) nhanh nhưng có nguy cơ propagate errors, stylistic artifacts và blind spots của teacher.
 
 Synthetic dữ liệu (data / 데이터) cần filtering/evaluation thay vì assume teacher đầu ra (output / 출력) là ground truth.
+
+> **Chuyển mạch:** Ở chặng này của **Instruction Tuning**, **Synthetic instruction dữ liệu (data / 데이터)** nêu điều cần giải thích; **Instruction tuning vs SFT** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Instruction following không bằng alignment hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Instruction tuning vs SFT
 
@@ -95,6 +110,8 @@ Hai thuật ngữ overlap nhiều. **Supervised Fine-Tuning (SFT)** mô tả h�
 Instruction tuning thường được thực hiện bằng SFT, nhưng SFT cũng có thể dùng cho tác vụ (task / 작업) không phải natural-language instruction.
 
 Xem tiếp: [Supervised Fine-Tuning](./07_supervised_fine_tuning.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Instruction Tuning**, **Instruction following không bằng alignment hoàn chỉnh** tiếp nhận điểm tựa từ **Instruction tuning vs SFT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Over-refusal và under-refusal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Instruction following không bằng alignment hoàn chỉnh
 
@@ -108,11 +125,15 @@ Mô hình (model / 모델) có thể follow instruction rất tốt nhưng vẫn
 
 Preference huấn luyện (training / 학습) và thời gian chạy (runtime / 런타임) an toàn (safety / 안전) layers thường được thêm sau.
 
+> **Chuyển mạch:** Trong **Instruction Tuning**, **Over-refusal và under-refusal** tiếp nhận điểm tựa từ **Instruction following không bằng alignment hoàn chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formatting as hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Over-refusal và under-refusal
 
 Post-training an toàn (safety / 안전) có sự đánh đổi (trade-off / 트레이드오프). Nếu refusal examples quá rộng, mô hình (model / 모델) có thể từ chối benign requests. Nếu quá hẹp, harmful transformations có thể bypass.
 
 Evaluation phải đo cả helpfulness lẫn appropriate refusal, không chỉ một phía.
+
+> **Chuyển mạch:** Ở chặng này của **Instruction Tuning**, **Formatting as hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Over-refusal và under-refusal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Formatting as hành vi (behavior / 동작)
 
@@ -120,9 +141,13 @@ Instruction tuning có thể dạy structured đầu ra (output / 출력) như J
 
 Mô hình (model / 모델) hành vi (behavior / 동작) và deterministic kiểm tra hợp lệ (validation / 검증) là hai layers khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Instruction Tuning**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Formatting as hành vi (behavior / 동작)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Pretraining tạo **general năng lực (capability / 역량)**; instruction tuning tạo **tương tác (interaction / 상호작용) giao thức (protocol / 프로토콜)** để năng lực (capability / 역량) đó phục vụ yêu cầu (request / 요청) theo cách hữu ích hơn.
+
+> **Chuyển mạch:** Trong **Instruction Tuning**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -138,10 +163,12 @@ Nó cải thiện generalization nhưng vẫn phụ thuộc phân phối (distri
 
 Role ngữ nghĩa (semantics / 의미론) đến từ huấn luyện (training / 학습) format và thời gian chạy (runtime / 런타임) hệ thống (system / 시스템), không phải attention tự nhiên biết hệ thống (system / 시스템) message có authority cao hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Instruction Tuning**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Instruction tuning nối pretraining với assistant hành vi (behavior / 동작). Sau SFT, preference tối ưu hóa (optimization / 최적화) như RLHF/DPO tiếp tục điều chỉnh đầu ra (output / 출력) theo human preferences và chính sách (policy / 정책).
 
 Xem tiếp: [Supervised Fine-Tuning](./07_supervised_fine_tuning.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

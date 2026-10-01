@@ -1,7 +1,6 @@
 # String algorithms và văn bản (text / 텍스트) indexing
 
-> **Mạch đọc:** Đọc **String algorithms và văn bản (text / 텍스트) indexing** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **biểu diễn (representation / 표현) đến trước thuật toán (algorithm / 알고리즘)** sang **Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **String algorithms và văn bản (text / 텍스트) indexing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Biểu diễn (representation / 표현) đến trước thuật toán (algorithm / 알고리즘)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 String (chuỗi / 문자열) trông giống một array ký tự, nhưng nhiều bài toán trên văn bản (text / 텍스트) không thể giải thích tốt chỉ bằng array operations. Ta thường cần tìm một mẫu (pattern / 패턴) trong văn bản lớn, so sánh prefixes, phát hiện lặp, autocomplete, xử lý DNA chuỗi (sequence / 시퀀스), tokenize mã nguồn (source code / 소스 코드) hoặc tìm hàng triệu documents. Điểm cốt lõi là **cấu trúc thứ tự trong chuỗi tạo ra thông tin có thể tái sử dụng**, nếu ta không bắt đầu so sánh lại từ đầu mỗi lần.
 
@@ -13,8 +12,7 @@ Xem nền tảng biểu diễn (representation / 표현) tại [Information, bit
 
 Nếu thuật toán (algorithm / 알고리즘) nói “O(n) theo số ký tự”, ta phải hỏi `n` là bytes, mã (code / 코드) points hay grapheme clusters. Đây không phải chi tiết ngôn ngữ: nó thay đổi chi phí (cost / 비용) mô hình (model / 모델) và tính đúng đắn (correctness / 정확성).
 
-
-> **Chuyển mạch:** Từ **biểu diễn (representation / 표현) đến trước thuật toán (algorithm / 알고리즘)**, ta sang **Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **String algorithms và văn bản (text / 텍스트) indexing**, **Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) đến trước thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rabin–Karp: so sánh fingerprint trước, nội dung sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí
 
@@ -34,8 +32,7 @@ Mô hình tư duy (mental model / 사고 모델) không phải “học bảng K
 
 Ý tưởng này giống automaton, parser trạng thái (state / 상태) và incremental computation.
 
-
-> **Chuyển mạch:** Từ **Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí**, ta sang **Rabin–Karp: so sánh fingerprint trước, nội dung sau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **String algorithms và văn bản (text / 텍스트) indexing**, **Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí** đã nêu tiêu chí phân biệt, còn **Rabin–Karp: so sánh fingerprint trước, nội dung sau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Trie: chỉ mục (index / 인덱스) theo prefix thay vì toàn key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rabin–Karp: so sánh fingerprint trước, nội dung sau
 
@@ -45,8 +42,7 @@ Nếu băm (hash / 해시) khác, chắc chắn strings khác. Nếu băm (hash 
 
 Mẫu (pattern / 패턴) này xuất hiện rộng hơn trong checksum, content-addressable lưu trữ (storage / 저장소), deduplication và cơ sở dữ liệu (database / 데이터베이스) băm (hash / 해시) phép nối (join / 조인).
 
-
-> **Chuyển mạch:** Từ **Rabin–Karp: so sánh fingerprint trước, nội dung sau**, ta sang **Trie: chỉ mục (index / 인덱스) theo prefix thay vì toàn key** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **String algorithms và văn bản (text / 텍스트) indexing**, **Rabin–Karp: so sánh fingerprint trước, nội dung sau** đã nêu tiêu chí phân biệt, còn **Trie: chỉ mục (index / 인덱스) theo prefix thay vì toàn key** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Suffix structures: chỉ mục (index / 인덱스) mọi suffix để hỏi về substring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trie: chỉ mục (index / 인덱스) theo prefix thay vì toàn key
 
@@ -56,8 +52,7 @@ Nếu alphabet và key length phù hợp, lookup phụ thuộc chủ yếu vào 
 
 Routing bảng (table / 테이블) IP thường dùng longest-prefix matching, một bài toán có mô hình tư duy (mental model / 사고 모델) gần trie/radix cây (tree / 트리).
 
-
-> **Chuyển mạch:** Từ **Trie: chỉ mục (index / 인덱스) theo prefix thay vì toàn key**, ta sang **Suffix structures: chỉ mục (index / 인덱스) mọi suffix để hỏi về substring** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **String algorithms và văn bản (text / 텍스트) indexing**, **Suffix structures: chỉ mục (index / 인덱스) mọi suffix để hỏi về substring** tiếp nhận điểm tựa từ **Trie: chỉ mục (index / 인덱스) theo prefix thay vì toàn key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefix hàm (function / 함수), Z-function và mẫu (pattern / 패턴) preprocessing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Suffix structures: chỉ mục (index / 인덱스) mọi suffix để hỏi về substring
 
@@ -67,8 +62,7 @@ Suffix cây (tree / 트리) cung cấp truy vấn (query / 쿼리) rất nhanh n
 
 Điểm quan trọng không phải ghi nhớ ba cấu trúc này, mà hiểu sự đánh đổi (trade-off / 트레이드오프) **preprocessing thời gian (time / 시간) + chỉ mục (index / 인덱스) bộ nhớ (memory / 메모리) ↔ truy vấn (query / 쿼리) speed**. Đây cũng là sự đánh đổi (trade-off / 트레이드오프) cốt lõi của cơ sở dữ liệu (database / 데이터베이스) indexes.
 
-
-> **Chuyển mạch:** Từ **Suffix structures: chỉ mục (index / 인덱스) mọi suffix để hỏi về substring**, ta sang **Prefix hàm (function / 함수), Z-function và mẫu (pattern / 패턴) preprocessing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **String algorithms và văn bản (text / 텍스트) indexing**, **Suffix structures: chỉ mục (index / 인덱스) mọi suffix để hỏi về substring** xác định đầu vào; **Prefix hàm (function / 함수), Z-function và mẫu (pattern / 패턴) preprocessing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Edit distance: khi “giống nhau” không còn là equality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Prefix hàm (function / 함수), Z-function và mẫu (pattern / 패턴) preprocessing
 
@@ -76,8 +70,7 @@ Nhiều string algorithms xây một mảng phụ biểu diễn self-similarity 
 
 Hai cách nhìn khác nhau nhưng cùng khai thác repeated cấu trúc (structure / 구조). Đây là ví dụ tốt cho việc một dữ liệu (data / 데이터) biểu diễn (representation / 표현) phù hợp có thể làm thuật toán (algorithm / 알고리즘) trở nên rõ hơn.
 
-
-> **Chuyển mạch:** Từ **Prefix hàm (function / 함수), Z-function và mẫu (pattern / 패턴) preprocessing**, ta sang **Edit distance: khi “giống nhau” không còn là equality** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **String algorithms và văn bản (text / 텍스트) indexing**, **Prefix hàm (function / 함수), Z-function và mẫu (pattern / 패턴) preprocessing** xác định đầu vào; **Edit distance: khi “giống nhau” không còn là equality** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Văn bản (text / 텍스트) tìm kiếm (search / 검색) trong hệ thống thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Edit distance: khi “giống nhau” không còn là equality
 
@@ -85,8 +78,7 @@ Levenshtein edit distance đo số insert/delete/replace tối thiểu để bi�
 
 Nó được dùng trong spell checking, fuzzy matching, chuỗi (sequence / 시퀀스) alignment và bản ghi (record / 레코드) linkage. Nhưng chỉ số (metric / 지표) này không hiểu ngữ nghĩa (semantics / 의미론); hai từ nghĩa gần nhau vẫn có thể có edit distance lớn. Vì vậy thuật toán (algorithm / 알고리즘) đo một loại similarity cụ thể, không phải “độ giống” tuyệt đối.
 
-
-> **Chuyển mạch:** Từ **Edit distance: khi “giống nhau” không còn là equality**, ta sang **văn bản (text / 텍스트) tìm kiếm (search / 검색) trong hệ thống thật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **String algorithms và văn bản (text / 텍스트) indexing**, **Văn bản (text / 텍스트) tìm kiếm (search / 검색) trong hệ thống thật** tiếp nhận điểm tựa từ **Edit distance: khi “giống nhau” không còn là equality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Văn bản (text / 텍스트) tìm kiếm (search / 검색) trong hệ thống thật
 
@@ -94,8 +86,7 @@ Tìm kiếm (search / 검색) engine không scan mọi document bằng KMP. Nó 
 
 Khi truy vấn (query / 쿼리) đến, hệ thống (system / 시스템) intersect/union posting lists, tính ranking và có thể dùng positional thông tin (information / 정보) cho phrase queries. Tư duy này nối string processing với cơ sở dữ liệu (database / 데이터베이스) indexing và thông tin (information / 정보) retrieval.
 
-
-> **Chuyển mạch:** Từ **văn bản (text / 텍스트) tìm kiếm (search / 검색) trong hệ thống thật**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **String algorithms và văn bản (text / 텍스트) indexing**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Văn bản (text / 텍스트) tìm kiếm (search / 검색) trong hệ thống thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -105,11 +96,10 @@ Khi truy vấn (query / 쿼리) đến, hệ thống (system / 시스템) inters
 
 **“Suffix cây (tree / 트리) luôn tốt hơn suffix array vì truy vấn (query / 쿼리) nhanh.”** bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃), hiện thực (implementation / 구현) độ phức tạp (complexity / 복잡도) và bộ nhớ đệm (cache / 캐시) locality có thể khiến suffix array thực tế phù hợp hơn.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **String algorithms và văn bản (text / 텍스트) indexing**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 String algorithms nối trực tiếp với [hashing](./04_hashing_and_hash_tables.md), [dynamic programming](./08_algorithmic_strategies.md), [compiler front-end](../04_programming_languages/07_parsing_ast_and_language_frontends.md), [database indexing](../05_data_databases/03_indexes_and_query_execution.md) và [information representation](../00_computation_information/01_information_bits_and_encoding.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

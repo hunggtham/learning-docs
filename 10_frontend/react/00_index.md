@@ -1,7 +1,6 @@
 # React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)
 
-> **Mạch đọc:** Đọc **React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự học chuẩn gốc (canonical / 정본)** sang **Phạm vi phiên bản (version / 버전): học cả React cũ lẫn React hiện đại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Phạm vi phiên bản (version / 버전): học cả React cũ lẫn React hiện đại** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Baseline của bộ tài liệu: React 19.3 (stable ngày 09/09/2026). Cách viết mặc định là hàm (function / 함수) thành phần (component / 컴포넌트) + Hooks; lớp (class / 클래스) thành phần (component / 컴포넌트) được giữ lại để đọc và migrate mã (code / 코드) cũ thay vì bị xóa khỏi lộ trình.
 
@@ -17,8 +16,7 @@ React không đứng một mình. Nếu chưa chắc về closure, đối tượ
 
 Luồng lập luận (reasoning / 추론) nên đi theo **kết xuất (render / 렌더링) cây (tree / 트리) → props/trạng thái (state / 상태)/ngữ cảnh (context / 맥락) → trạng thái (state / 상태) snapshot/cập nhật (update / 업데이트) hàng đợi (queue / 큐) → reconciliation/định danh (identity / 식별자)/key → lần ghi nhận (commit / 커밋) → sự kiện (event / 이벤트)/tác động (effect / 효과) → tính đồng thời (concurrency / 동시성)/Suspense → máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) → bằng chứng vận hành (production evidence / 운영 증거)**. Hooks không được học như một danh sách API trước khi hiểu rendering và quyền sở hữu trạng thái (state ownership / 상태 소유권).
 
-
-> **Chuyển mạch:** Từ **Thứ tự học chuẩn gốc (canonical / 정본)**, ta sang **Phạm vi phiên bản (version / 버전): học cả React cũ lẫn React hiện đại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Thứ tự canonical trước hết xác định prerequisite; phạm vi phiên bản sau đó giải thích vì sao phải đọc cả legacy và modern React. Cách đọc notes tiếp theo dùng distinction này để chọn đúng file và mốc API.
 
 ## Phạm vi phiên bản (version / 버전): học cả React cũ lẫn React hiện đại
 
@@ -28,7 +26,6 @@ Khi một API đã lỗi thời, tài liệu vẫn giải thích cú pháp và c
 
 ### Bản đồ lịch sử React nên nhớ
 Phần này nối mạch bài học với “Bản đồ lịch sử React nên nhớ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 | Thời kỳ | Những thứ thường gặp trong mã (code / 코드) |
 |---|---|
@@ -41,8 +38,7 @@ Phần này nối mạch bài học với “Bản đồ lịch sử React nên 
 | React 18 | `createRoot`, automatic batching, concurrent foundations, transitions, `useDeferredValue`, `useId`, `useSyncExternalStore`, `useInsertionEffect`, streaming SSR. |
 | React 19.x | Actions, `use`, `useActionState`, `useOptimistic`, ref-as-prop, ngữ cảnh (context / 맥락) provider shorthand, RSC/máy chủ (server / 서버) improvements và tiếp tục loại bỏ API legacy; các minor 19.2/19.3 tiếp tục thêm công khai (public / 공개) năng lực (capability / 역량) nên phải kiểm tra minimum minor phiên bản (version / 버전). |
 
-
-> **Chuyển mạch:** Từ **Phạm vi phiên bản (version / 버전): học cả React cũ lẫn React hiện đại**, ta sang **Cách đọc các phiên bản (version / 버전) ghi chú (note / 노트) trong bộ tài liệu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi đã phân biệt mốc legacy/modern, cách đọc notes chỉ rõ phần nào là concept, phần nào là API hoặc migration detail. Conceptual boundary tiếp theo ngăn React core lấn sang web platform, TypeScript hay framework owner khác.
 
 ## Cách đọc các phiên bản (version / 버전) ghi chú (note / 노트) trong bộ tài liệu
 
@@ -64,8 +60,7 @@ Các mốc dưới đây đủ để đọc phần lớn mã (code / 코드) Rea
 
 Một nguyên tắc quan trọng là **major/minor của React không hoàn toàn thay thế patch phiên bản (version / 버전)**. Đặc biệt với React máy chủ (server / 서버) Components, bảo mật (security / 보안) fix từng được backport vào nhiều nhánh 19.0.x, 19.1.x và 19.2.x. Trong môi trường vận hành (production / 운영 환경) phải theo patch/bảo mật (security / 보안) advisory của khung phần mềm (framework / 프레임워크) và React, không chỉ nhìn “19.x”.
 
-
-> **Chuyển mạch:** Từ **Cách đọc các phiên bản (version / 버전) ghi chú (note / 노트) trong bộ tài liệu**, ta sang **Conceptual ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)**, **Cách đọc các phiên bản (version / 버전) ghi chú (note / 노트) trong bộ tài liệu** đã nêu tiêu chí phân biệt, còn **Conceptual ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Coverage kiểm tra (audit / 감사) — 22/09/2026** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Conceptual ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác
 
@@ -73,8 +68,7 @@ React chịu trách nhiệm chính cho thành phần (component / 컴포넌트)/
 
 Khi một chapter React cần những kiến thức đó, tài liệu giải thích đủ để người đọc tiếp tục lập luận (reasoning / 추론) tại chỗ, nhưng không bản sao (copy / 복사) toàn bộ lĩnh vực (domain / 도메인) khác. Cách này giữ React là chuẩn gốc (canonical / 정본) nguồn (source / 소스) cho **React ngữ nghĩa (semantics / 의미론)**, còn cross-domain kiến thức (knowledge / 지식) được link về nơi sở hữu khái niệm.
 
-
-> **Chuyển mạch:** Từ **Conceptual ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác**, ta sang **Coverage kiểm tra (audit / 감사) — 22/09/2026** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)**, **Conceptual ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác** đã nêu tiêu chí phân biệt, còn **Coverage kiểm tra (audit / 감사) — 22/09/2026** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nguyên tắc học sau kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Coverage kiểm tra (audit / 감사) — 22/09/2026
 
@@ -86,8 +80,7 @@ Những phần cố ý **không duplicate** gồm hiện thực (implementation 
 
 Coverage được coi là đạt mục tiêu khi người đọc có thể tự trả lời bằng lập luận (reasoning / 추론), không chỉ nhớ API: trạng thái (state / 상태) thuộc định danh (identity / 식별자) nào; cập nhật (update / 업데이트) được schedule/lần ghi nhận (commit / 커밋) ra sao; tác động (effect / 효과) đang synchronize tài nguyên (resource / 자원) gì; khi nào closure phải reactive và khi nào lô-gic (logic / 논리) là tác động (effect / 효과) sự kiện (event / 이벤트); tại sao bên ngoài (external / 외부) store cần snapshot đặc tả hợp đồng (contract / 계약); Suspense/lỗi (error / 오류)/Activity/ViewTransition giải quyết ranh giới (boundary / 경계) nào; SSR, hydration và RSC khác nhau ở đâu; browser-only subtree nên mô hình (model / 모델) thế nào; máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계) ảnh hưởng bundle và secret ra sao; hiệu năng (performance / 성능) bottleneck nằm ở kết xuất (render / 렌더링), lần ghi nhận (commit / 커밋), trình duyệt (browser / 브라우저) hay I/O; và bằng chứng (evidence / 증거) nào chứng minh giả thuyết môi trường vận hành (production / 운영 환경).
 
-
-> **Chuyển mạch:** Từ **Coverage kiểm tra (audit / 감사) — 22/09/2026**, ta sang **Nguyên tắc học sau kiểm tra (audit / 감사)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Coverage audit xác định phần nào đã có owner và phần nào còn thiếu. Nguyên tắc học sau audit biến kết quả đó thành thứ tự đọc; Cách dùng notes tiếp theo giữ người học trong đúng owner thay vì mở rộng tùy ý.
 
 ## Nguyên tắc học sau kiểm tra (audit / 감사)
 
@@ -95,8 +88,7 @@ Với kiến thức qua nhiều phiên bản (version / 버전), luôn đọc th
 
 Không tối ưu theo nghi thức. `memo`, `useMemo`, `useCallback`, transitions, trình biên dịch (compiler / 컴파일러) hay virtualization chỉ có giá trị khi đúng bottleneck/đặc tả hợp đồng (contract / 계약). Không dùng tác động (effect / 효과) để chữa trạng thái (state / 상태) mô hình (model / 모델) sai. Không dùng máy khách (client / 클라이언트) UI để thay authorization máy chủ (server / 서버). Không coi framework-specific router/bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작) là React cốt lõi (core / 핵심).
 
-
-> **Chuyển mạch:** Từ **Nguyên tắc học sau kiểm tra (audit / 감사)**, ta sang **Cách dùng bộ ghi chú (note / 노트)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Cách dùng notes kết thúc bằng quy tắc chọn file, ghi mốc version và kiểm tra owner. Nguồn chuẩn tiếp theo là nơi xác minh claim API/version, không phải một phần prose được suy đoán từ index.
 
 ## Cách dùng bộ ghi chú (note / 노트)
 
@@ -104,11 +96,10 @@ Không tối ưu theo nghi thức. `memo`, `useMemo`, `useCallback`, transitions
 
 Ở Advanced/cấp cao (senior / 시니어) trở lên, dự án (project / 프로젝트) luyện tập nên có ít nhất một bên ngoài (external / 외부) subscription, một async mutation có thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), một SSR/hydration ranh giới (boundary / 경계) hoặc khung phần mềm (framework / 프레임워크) dữ liệu (data / 데이터) ranh giới (boundary / 경계), profiling bằng production-like bản dựng (build / 빌드) và một quyết định kiến trúc được ghi lại theo “bài toán (problem / 문제) → bất biến (invariant / 불변식) → cơ chế (mechanism / 메커니즘) → sự đánh đổi (trade-off / 트레이드오프) → bằng chứng (evidence / 증거)”.
 
-
-> **Chuyển mạch:** Từ **Cách dùng bộ ghi chú (note / 노트)**, ta sang **Nguồn chuẩn để kiểm chứng phiên bản (version / 버전)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Index khép lại bằng source-of-truth rule: mọi claim phiên bản/API phải quay về canonical documentation và file owner tương ứng. Các lesson cụ thể bắt đầu từ route đã định ở trên.
 
 ## Nguồn chuẩn để kiểm chứng phiên bản (version / 버전)
 
 Ưu tiên React Learn/API tham chiếu (reference / 참조) và React Blog bản phát hành (release / 릴리스) notes. Với React trình biên dịch (compiler / 컴파일러), đọc documentation/bản phát hành (release / 릴리스) tương ứng của trình biên dịch (compiler / 컴파일러) vì vòng đời (lifecycle / 생명주기) phiên bản (version / 버전) độc lập React cốt lõi (core / 핵심). Với RSC/khung phần mềm (framework / 프레임워크) tích hợp (integration / 통합), đọc hỗ trợ (support / 지원) ma trận (matrix / 행렬) và bảo mật (security / 보안) advisory của khung phần mềm (framework / 프레임워크) đang dùng; không suy ra tính tương thích (compatibility / 호환성) chỉ từ phiên bản (version / 버전) `react`.
 
-> **Bàn giao:** Sau **Nguồn chuẩn để kiểm chứng phiên bản (version / 버전)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 react beginner](./01_react_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn chuẩn để kiểm chứng phiên bản (version / 버전)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

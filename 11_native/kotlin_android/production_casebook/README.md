@@ -1,6 +1,6 @@
 # Kotlin + Android môi trường vận hành (production / 운영 환경) Casebook
 
-> **Mạch đọc:** Đọc **Kotlin + Android môi trường vận hành (production / 운영 환경) Casebook** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Cách sử dụng casebook**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android môi trường vận hành (production / 운영 환경) Casebook**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cách sử dụng casebook** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Thư mục này là lớp thực hành kiến trúc nằm sau `04_kotlin_master.md` và các tệp (file / 파일) `deep_dive/`. Bốn tệp (file / 파일) chính của bộ Kotlin + Android giải thích từng khái niệm theo mức (level / 수준); `deep_dive/` đào sâu ranh giới (boundary / 경계) và dạng thất bại (failure mode / 실패 모드); còn **môi trường vận hành (production / 운영 환경) Casebook** trả lời câu hỏi khó hơn: khi một ứng dụng thật có nhiều concern cùng lúc thì ta nối chúng như thế nào để hệ thống vẫn đúng, kiểm thử (test / 테스트) được, chạy ổn khi tiến trình (process / 프로세스) bị kill, mạng chập chờn, lược đồ (schema / 스키마) thay đổi, hardware/permission đổi trạng thái, bản dựng (build / 빌드) toolchain evolve và bản phát hành (release / 릴리스) gặp sự cố?
 
@@ -29,8 +29,7 @@ Casebook không dùng một “mẫu (sample / 표본) app thần thánh” rồ
 19. [`19_app_startup_initialization_cold_start.md`](19_app_startup_initialization_cold_start.md) đi sâu cold/warm/hot start, ứng dụng (application / 애플리케이션)/provider initialization, lazy vs eager công việc (work / 작업), App Startup, splash, Compose first frame, Baseline Profile, Macrobenchmark, Perfetto và startup ngân sách (budget / 예산).
 20. [`20_android_library_sdk_authoring.md`](20_android_library_sdk_authoring.md) chuyển góc nhìn từ app bên tiêu thụ (consumer / 소비자) sang thư viện (library / 라이브러리)/SDK author: AAR, API công khai (public API / 공개 API)/ABI, Java/Kotlin interop, resources/manifest, bên tiêu thụ (consumer / 소비자) R8 rules, lint, publishing, SemVer, tính tương thích (compatibility / 호환성) và di chuyển (migration / 마이그레이션) đặc tả hợp đồng (contract / 계약).
 
-
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Cách sử dụng casebook** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kotlin + Android môi trường vận hành (production / 운영 환경) Casebook**, **Thứ tự đọc** cho ta quy tắc; **Cách sử dụng casebook** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nguyên tắc xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách sử dụng casebook
 
@@ -44,8 +43,7 @@ Trường hợp (case / 사례) 10–14 là tầng “Android nền tảng (plat
 
 Trường hợp (case / 사례) 15–20 là tầng **bản dựng (build / 빌드), phân phối (distribution / 분포) và ecosystem kỹ thuật (engineering / 엔지니어링)**. Chúng nối mã nguồn (source code / 소스 코드) với sản phẩm tạo ra (artifact / 산출물) thực tế: Gradle/AGP quyết định mã (code / 코드)/tài nguyên (resource / 자원) nào được compile; AAB/Play quyết định bytes nào tới thiết bị (device / 장치); bản địa (native / 네이티브) libraries thêm ABI/page-size/memory-safety đặc tả hợp đồng (contract / 계약); Android nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) thay hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약); startup quyết định đường găng (critical path / 임계 경로) đầu tiên; còn thư viện (library / 라이브러리)/SDK authoring biến API công khai (public API / 공개 API) và bản dựng (build / 빌드) siêu dữ liệu (metadata / 메타데이터) thành tính tương thích (compatibility / 호환성) obligation với bên tiêu thụ (consumer / 소비자) khác.
 
-
-> **Chuyển mạch:** Từ **Cách sử dụng casebook**, ta sang **Nguyên tắc xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Cách dùng casebook xác định cách đọc một scenario; nguyên tắc xuyên suốt tiếp theo buộc mỗi case nối invariant, ownership, failure và release evidence.
 
 ## Nguyên tắc xuyên suốt
 
@@ -53,4 +51,4 @@ Casebook sử dụng một số quy ước nhất quán. UI kết xuất (render
 
 Những nguyên tắc này không có nghĩa mọi app phải nhiều mô-đun (module / 모듈), Clean kiến trúc (architecture / 아키텍처) đầy đủ, động (dynamic / 동적) tính năng (feature / 기능), NDK hoặc có use trường hợp (case / 사례) cho từng phương thức (method / 메서드). độ phức tạp (complexity / 복잡도) chỉ được thêm khi nó mua được một lợi ích rõ ràng: ranh giới (boundary / 경계) dễ kiểm thử (test / 테스트) hơn, quyền sở hữu (ownership / 소유권) rõ hơn, bản dựng (build / 빌드) nhanh hơn, download nhỏ hơn, tính năng (feature / 기능) độc lập hơn, nền tảng (platform / 플랫폼) thất bại (failure / 실패) dễ recover hơn, hoặc di chuyển (migration / 마이그레이션)/rủi ro (risk / 위험) dễ kiểm soát hơn.
 
-> **Bàn giao:** Sau **Nguyên tắc xuyên suốt**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguyên tắc xuyên suốt**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

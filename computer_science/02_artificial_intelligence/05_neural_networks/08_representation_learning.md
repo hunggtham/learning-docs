@@ -1,7 +1,6 @@
 # Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu
 
-> **Mạch đọc:** Đặt **biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **biểu diễn (representation / 표현) là gì?** sang **tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Biểu diễn (representation / 표현) là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Biểu diễn (representation / 표현) học tập (learning / 학습) là một trong những ý tưởng trung tâm nhất của Deep học tập (learning / 학습). Thay vì chỉ học ánh xạ (mapping / 매핑) trực tiếp `input → output`, mạng (network / 네트워크) học intermediate spaces trong đó những factors relevant cho tác vụ (task / 작업) được sắp xếp theo hình học (geometry / 기하학) dễ xử lý hơn.
 
@@ -33,11 +32,15 @@ Downstream head:
 
 Nếu `z` organize task-relevant thông tin (information / 정보) tốt, `g` có thể rất simple.
 
+> **Chuyển mạch:** Trong **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tán (distributed / 분산) biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)
 
 Nếu frozen biểu diễn (representation / 표현) `z` cho phép tuyến tính (linear / 선형) classifier đạt hiệu năng (performance / 성능) cao, ta nói mục tiêu (target / 대상) thông tin (information / 정보) **linearly accessible**.
 
 Tuyến tính (linear / 선형) probe không đo toàn bộ ngữ nghĩa (semantic / 의미적) richness, nhưng là useful diagnostic: tính năng (feature / 기능) extractor đã “untangle” tác vụ (task / 작업) đến mức nào?
+
+> **Chuyển mạch:** Ở chặng này của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Phân tán (distributed / 분산) biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embedding hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân tán (distributed / 분산) biểu diễn (representation / 표현)
 
@@ -53,6 +56,8 @@ có thể encode multiple factors phân tán (distributed / 분산) across dimen
 
 Similarity quan hệ (relation / 관계) xuất hiện từ huấn luyện (training / 학습) mục tiêu (objective / 목표), không từ véc-tơ (vector / 벡터) format tự thân.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Embedding hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Phân tán (distributed / 분산) biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Supervised biểu diễn (representation / 표현) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Embedding hình học (geometry / 기하학)
 
 Nếu contrastive huấn luyện (training / 학습) kéo related pairs gần nhau và đẩy unrelated pairs xa:
@@ -66,6 +71,8 @@ thì cosine/dot-product retrieval becomes meaningful.
 
 Nhưng hình học (geometry / 기하학) objective-specific. Embedding tốt cho ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색) chưa chắc tốt cho sentiment clustering hoặc recommendation.
 
+> **Chuyển mạch:** Trong **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Supervised biểu diễn (representation / 표현) học tập (learning / 학습)** tiếp nhận điểm tựa từ **Embedding hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-Supervised biểu diễn (representation / 표현) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Supervised biểu diễn (representation / 표현) học tập (learning / 학습)
 
 Classifier mạng (network / 네트워크) learn hidden biểu diễn (representation / 표현) vì final tác vụ (task / 작업) mất mát (loss / 손실) backprop through encoder.
@@ -73,6 +80,8 @@ Classifier mạng (network / 네트워크) learn hidden biểu diễn (represent
 Hidden layers retain thông tin (information / 정보) useful cho mục tiêu (target / 대상) và có thể discard nuisance factors.
 
 Nếu mục tiêu (target / 대상) narrow, biểu diễn (representation / 표현) cũng có thể narrow và transfer kém.
+
+> **Chuyển mạch:** Ở chặng này của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Self-Supervised biểu diễn (representation / 표현) học tập (learning / 학습)** tiếp nhận điểm tựa từ **Supervised biểu diễn (representation / 표현) học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contrastive học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self-Supervised biểu diễn (representation / 표현) học tập (learning / 학습)
 
@@ -90,6 +99,8 @@ Mục tiêu là exploit abundant unlabeled dữ liệu (data / 데이터) để 
 
 Foundation các mô hình (models / 모델들) largely rely on self-supervised pretraining rồi adapt downstream.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Self-Supervised biểu diễn (representation / 표현) học tập (learning / 학습)** đã nêu tiêu chí phân biệt, còn **Contrastive học tập (learning / 학습)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chỉ số (metric / 지표) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Contrastive học tập (learning / 학습)
 
 Given positive pair `(x,x⁺)` and negatives `x⁻`, mục tiêu (objective / 목표) encourage similarity positive > negatives.
@@ -106,6 +117,8 @@ L=-\log
 
 Choice positive pairs defines invariance. ảnh (image / 이미지) augmentations say two crops/color variants should represent same ngữ nghĩa (semantic / 의미적) đối tượng (object / 객체). Wrong augmentation can erase task-relevant thông tin (information / 정보).
 
+> **Chuyển mạch:** Trong **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Contrastive học tập (learning / 학습)** đã nêu tiêu chí phân biệt, còn **Chỉ số (metric / 지표) học tập (learning / 학습)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Autoencoder biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chỉ số (metric / 지표) học tập (learning / 학습)
 
 Triplet mất mát (loss / 손실):
@@ -117,6 +130,8 @@ L=\max(0,d(a,p)-d(a,n)+m)
 push anchor-positive closer than anchor-negative by margin `m`.
 
 Hard-negative mining is trọng yếu (critical / 중요): easy negatives produce little độ dốc (gradient / 기울기); false negatives can damage ngữ nghĩa (semantic / 의미적) hình học (geometry / 기하학).
+
+> **Chuyển mạch:** Ở chặng này của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Autoencoder biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Chỉ số (metric / 지표) học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bottleneck và Compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Autoencoder biểu diễn (representation / 표현)
 
@@ -132,6 +147,8 @@ But pixel-perfect reconstruction may prioritize low-level detail not ngữ nghĩ
 
 Thus mục tiêu (objective / 목표) determines what “important thông tin (information / 정보)” means.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Bottleneck và Compression** tiếp nhận điểm tựa từ **Autoencoder biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Invariance và Equivariance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bottleneck và Compression
 
 A lower-dimensional `z` forces compression. Under an thông tin (information / 정보) Bottleneck intuition, biểu diễn (representation / 표현) should keep thông tin (information / 정보) useful for mục tiêu (target / 대상) while discarding irrelevant variation.
@@ -139,6 +156,8 @@ A lower-dimensional `z` forces compression. Under an thông tin (information / �
 Formal thông tin (information / 정보) Bottleneck studies sự đánh đổi (trade-off / 트레이드오프) between `I(X;Z)` and `I(Z;Y)`, but practical deep networks do not always directly optimize this formula.
 
 Mental idea remains useful: good biểu diễn (representation / 표현) filters nuisance while preserving predictive cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Trong **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Invariance và Equivariance** tiếp nhận điểm tựa từ **Bottleneck và Compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transfer học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Invariance và Equivariance
 
@@ -151,6 +170,8 @@ Example ảnh (image / 이미지) classification may want translation invariance
 For segmentation/pose, spatial shift should shift đầu ra (output / 출력) correspondingly, not erase location.
 
 Kiến trúc (architecture / 아키텍처) and augmentation encode these các giả định (assumptions / 가정들).
+
+> **Chuyển mạch:** Ở chặng này của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Transfer học tập (learning / 학습)** tiếp nhận điểm tựa từ **Invariance và Equivariance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) Collapse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Transfer học tập (learning / 학습)
 
@@ -165,6 +186,8 @@ Transfer works when pretraining biểu diễn (representation / 표현) covers f
 
 Negative transfer occurs when nguồn (source / 소스) biases/mục tiêu (objective / 목표) mismatch mục tiêu (target / 대상).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Biểu diễn (representation / 표현) Collapse** tiếp nhận điểm tựa từ **Transfer học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disentanglement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu diễn (representation / 표현) Collapse
 
 Some self-supervised objectives rủi ro (risk / 위험) all inputs map to same constant véc-tơ (vector / 벡터). Then similarity trivial nhưng no thông tin (information / 정보).
@@ -173,11 +196,15 @@ Contrastive negatives, stop-gradient asymmetry, predictor kiến trúc (architec
 
 Understanding collapse clarifies why self-supervised mất mát (loss / 손실) thiết kế (design / 설계) matters.
 
+> **Chuyển mạch:** Trong **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Disentanglement** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) Collapse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sparse vs Dense Representations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Disentanglement
 
 Idealized disentangled biểu diễn (representation / 표현) assigns distinct latent factors to independent generative causes. Example rotation, lighting, định danh (identity / 식별자) separated.
 
 In practice disentanglement is difficult and often not identifiable without inductive độ lệch (bias / 편향)/supervision. Do not assume latent dimensions map cleanly to human concepts.
+
+> **Chuyển mạch:** Ở chặng này của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Sparse vs Dense Representations** tiếp nhận điểm tựa từ **Disentanglement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) Drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sparse vs Dense Representations
 
@@ -186,6 +213,8 @@ Sparse biểu diễn (representation / 표현) activates few components; dense u
 Sparse can improve interpretability/lưu trữ (storage / 저장소)/retrieval properties. Dense embeddings are compact and differentiable.
 
 Hiện đại (modern / 현대적) retrieval increasingly combines sparse lexical and dense ngữ nghĩa (semantic / 의미적) representations because they capture complementary cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Biểu diễn (representation / 표현) Drift** tiếp nhận điểm tựa từ **Sparse vs Dense Representations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Probing và Interpretability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biểu diễn (representation / 표현) Drift
 
@@ -201,6 +230,8 @@ embedding model version change
 
 Biểu diễn (representation / 표현) versioning is an LLMOps/data-engineering concern, not just mô hình (model / 모델) lý thuyết (theory / 이론).
 
+> **Chuyển mạch:** Trong **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Probing và Interpretability** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) Drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM Hidden States Preview** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Probing và Interpretability
 
 Probe classifiers can detect whether thông tin (information / 정보) exists in biểu diễn (representation / 표현), but high probe accuracy does not prove cơ sở (base / 기반) mô hình (model / 모델) actually uses that thông tin (information / 정보) causally.
@@ -208,6 +239,8 @@ Probe classifiers can detect whether thông tin (information / 정보) exists in
 Interventions/ablation are needed for stronger claims.
 
 Biểu diễn (representation / 표현) interpretability must distinguish **decodability** from **nhân quả (causal / 인과적) use**.
+
+> **Chuyển mạch:** Ở chặng này của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **LLM Hidden States Preview** tiếp nhận điểm tựa từ **Probing và Interpretability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## LLM Hidden States Preview
 
@@ -217,11 +250,15 @@ Final hidden trạng thái (state / 상태) feeds đầu ra (output / 출력) pr
 
 This chapter therefore directly prepares embeddings/Transformer/LLM sections.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **LLM Hidden States Preview** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > biểu diễn (representation / 표현) học tập (learning / 학습) = học một coordinate hệ thống (system / 시스템) nơi relationships relevant cho mục tiêu (objective / 목표) trở nên dễ tính hơn.
 
 Raw không gian (space / 공간) không nhất thiết có useful hình học (geometry / 기하학); huấn luyện (training / 학습) bends/reorganizes không gian (space / 공간).
+
+> **Chuyển mạch:** Trong **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -241,8 +278,10 @@ Pretext tác vụ (task / 작업), augmentation và sampling chính là inductiv
 
 Decodability không chứng minh nhân quả (causal / 인과적) reliance.
 
+> **Chuyển mạch:** Ở chặng này của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Biểu diễn (representation / 표현) học tập (learning / 학습) nối [Dimensionality Reduction](../04_machine_learning/12_dimensionality_reduction.md), [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Regularization](./07_regularization.md) và sau này [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md), [RAG](../09_retrieval_and_rag/05_rag_fundamentals.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from linear models to neural networks](./00_from_linear_models_to_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

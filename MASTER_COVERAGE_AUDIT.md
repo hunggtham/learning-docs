@@ -1,5 +1,7 @@
 # Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trạng thái kiểm tra (audit / 감사)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kết luận điều hành** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 > Bản đồ cấp repository để nối các thư viện chuẩn gốc (canonical / 정본), xác định đơn vị sở hữu (owner / 오너) của từng khái niệm và chọn đợt mở rộng tiếp theo. tệp (file / 파일) này không thay thế `COVERAGE_AUDIT.md` của từng lĩnh vực (domain / 도메인); nó trả lời câu hỏi **toàn bộ học tập (learning / 학습) hệ thống (system / 시스템) đang thiếu gì, nội dung nào đã đủ, và nên nối các lĩnh vực (domain / 도메인) theo thứ tự nào**.
 
 ## Trạng thái kiểm tra (audit / 감사)
@@ -11,6 +13,8 @@
 - **Giới hạn:** đây là kiểm tra (audit / 감사) cấu trúc và phụ thuộc (dependency / 의존성) ở cấp repository; chiều sâu chuyên môn của từng topic tiếp tục do coverage kiểm tra (audit / 감사) của lĩnh vực (domain / 도메인) sở hữu. Không dùng tệp (file / 파일) này để nhân bản prose đã có.
 
 Worktree đang có nhiều thay đổi chưa lần ghi nhận (commit / 커밋) từ các đợt biên soạn trước. kiểm tra (audit / 감사) này chỉ bổ sung bản đồ và không reset, xoá hoặc ghi đè các thay đổi đó.
+
+> **Chuyển mạch:** Trong **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Kết luận điều hành** gom các mảnh từ **Trạng thái kiểm tra (audit / 감사)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Ma trận coverage cấp repository** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kết luận điều hành
 
@@ -30,6 +34,8 @@ Repository đã vượt qua giai đoạn “thiếu lĩnh vực (domain / 도메
 12. **Practical life kiến thức (knowledge / 지식):** Korea law/civic life, investing, Korean nghiệp vụ (business / 비즈니스)/economy, psychology applied và PMP đã tạo nền; phần còn mỏng là một tuyến (route / 경로) tích hợp personal finance/healthcare/communication/career.
 
 Vì vậy đợt tiếp theo không nên tạo thêm các lĩnh vực (domain / 도메인) trùng lặp. Giá trị cao nhất hiện nằm ở **liên kết (connection / 연결) tầng (layer / 계층), chuẩn gốc (canonical / 정본) quyền sở hữu (ownership / 소유권) và decision-oriented practice**.
+
+> **Chuyển mạch:** Ở chặng này của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Ma trận coverage cấp repository** gom các mảnh từ **Kết luận điều hành** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cross-domain spine được chốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ma trận coverage cấp repository
 
@@ -56,6 +62,8 @@ Vì vậy đợt tiếp theo không nên tạo thêm các lĩnh vực (domain / 
 - Các warning `link.missing` còn lại nằm trong generated thư viện (library / 라이브러리)/raw capture cũ, chủ yếu là đường dẫn mã (code / 코드)/provenance tương đối; không phát sinh từ ba tệp (file / 파일) cập nhật ở đợt này.
 
 Đây là backlog **P0 siêu dữ liệu (metadata / 메타데이터)**, nhưng chỉ nên tạo kiểm tra (audit / 감사)/README khi có đơn vị sở hữu (owner / 오너) và nội dung thực tế; không tạo tệp (file / 파일) rỗng để làm mất cảnh báo.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Cross-domain spine được chốt** tiếp nhận điểm tựa từ **Ma trận coverage cấp repository** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối chiếu trực tiếp với 12 khuyến nghị trong cuộc rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cross-domain spine được chốt
 
@@ -91,6 +99,8 @@ Psychology + Sociology
     → Portfolio behavior, organizations and practical life choices
 ```
 
+> **Chuyển mạch:** Trong **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Cross-domain spine được chốt** đã nêu tiêu chí phân biệt, còn **Đối chiếu trực tiếp với 12 khuyến nghị trong cuộc rà soát (review / 검토)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Gaps được ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đối chiếu trực tiếp với 12 khuyến nghị trong cuộc rà soát (review / 검토)
 
 | Khuyến nghị | đơn vị sở hữu (owner / 오너)/bằng chứng (evidence / 증거) hiện có | Quyết định cập nhật |
@@ -107,6 +117,8 @@ Psychology + Sociology
 | Psychology ngoài Jung | Psychology 00–06, 90 connections; Sociology; Biology | Coverage đã vượt yêu cầu rà soát (review / 검토). Giữ Jung/Freud/Adler ở historical ranh giới (boundary / 경계); nối cognitive/xã hội (social / 사회적)/financial quyết định (decision / 결정) khi có use trường hợp (case / 사례). |
 | Philosophy + lô-gic (logic / 논리) + Epistemology | Philosophy 00–07, 90 connections; Research Methods | Đã có đơn vị sở hữu (owner / 오너) mạnh. Dùng để kiểm tra claim/bằng chứng (evidence / 증거)/mô hình (model / 모델)/ethics thay vì mở thêm nhánh trùng. |
 | Practical life kiến thức (knowledge / 지식) | Korea law/civic, investing, Korea nghiệp vụ (business / 비즈니스), Psychology applied, PMP | Nền đã có nhưng chưa có tuyến (route / 경로) tích hợp. Gap P2: personal finance–healthcare literacy–communication/career, có nguồn (source / 소스) chính sách (policy / 정책) và ngày kiểm tra rõ. |
+
+> **Chuyển mạch:** Ở chặng này của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Đối chiếu trực tiếp với 12 khuyến nghị trong cuộc rà soát (review / 검토)** đã nêu tiêu chí phân biệt, còn **Gaps được ưu tiên** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Quy tắc tránh mở rộng sai hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gaps được ưu tiên
 
@@ -134,6 +146,8 @@ Psychology + Sociology
 
 Measure lý thuyết (theory / 이론), advanced stochastic calculus, advanced trình biên dịch (compiler / 컴파일러) hiện thực (implementation / 구현), vendor-specific cloud catalogs, frontier ML papers hoặc nhánh lịch sử/philosophy mới chỉ nên mở khi một tuyến (route / 경로) hiện tại bị chặn bởi phụ thuộc (dependency / 의존성) cụ thể. Độ dài corpus tự nó không phải completion criterion.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Quy tắc tránh mở rộng sai hướng** tiếp nhận điểm tựa từ **Gaps được ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Definition of done cho master kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy tắc tránh mở rộng sai hướng
 
 - Không tạo `statistics/`, `system_design/`, `security/`, `database/` hoặc `decision_science/` mới nếu nội dung chỉ lặp lại đơn vị sở hữu (owner / 오너) hiện có.
@@ -141,6 +155,8 @@ Measure lý thuyết (theory / 이론), advanced stochastic calculus, advanced t
 - Không xem README có nhiều link là coverage sâu; cần kiểm tra cơ chế (mechanism / 메커니즘), bất biến (invariant / 불변식), ranh giới (boundary / 경계), bằng chứng (evidence / 증거) và practice.
 - Không dùng nguồn exam/PDF/trường hợp (case / 사례) như prose chuẩn gốc (canonical / 정본) nếu chưa chuyển thành explanation có provenance.
 - Với law, thị trường (market / 시장), cloud sản phẩm (product / 제품) và kỹ thuật thay đổi nhanh, ghi ngày kiểm tra và nguồn chính thức.
+
+> **Chuyển mạch:** Trong **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Definition of done cho master kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **Quy tắc tránh mở rộng sai hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Definition of done cho master kiểm tra (audit / 감사)
 
@@ -153,4 +169,4 @@ Một vòng rà soát (review / 검토) cấp repository chỉ được coi là 
 5. `git diff --check` sạch cho thay đổi kiểm tra (audit / 감사); các script kiểm tra (audit / 감사)/bản dựng (build / 빌드) liên quan được chạy và báo rõ giới hạn.
 6. Mỗi lần rà soát (review / 검토) sau cập nhật ngày kiểm tra và chỉ thay đổi gap/priority có bằng chứng mới.
 
-> **Bàn giao:** Sau master kiểm tra (audit / 감사), bước tiếp theo hợp lý là thực hiện từng tuyến (route / 경로) P1 như một liên kết (connection / 연결)/trường hợp (case / 사례) có đơn vị sở hữu (owner / 오너) rõ ràng. Không mở rộng đồng thời cả 12 hướng; hoàn tất một tuyến (route / 경로), kiểm tra liên kết và bằng chứng (evidence / 증거), rồi mới chuyển sang tuyến (route / 경로) kế tiếp.
+> **Bàn giao:** Sau **Definition of done cho master kiểm tra (audit / 감사)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

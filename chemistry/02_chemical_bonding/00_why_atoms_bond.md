@@ -1,7 +1,6 @@
 # Vì sao nguyên tử tạo liên kết?
 
-> **Mạch đọc:** Đọc **Vì sao nguyên tử tạo liên kết?** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Khi hai nguyên tử tiến lại gần nhau** sang **Thế năng và độ bền**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vì sao nguyên tử tạo liên kết?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khi hai nguyên tử tiến lại gần nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thế năng và độ bền** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Liên kết hóa học (chemical bond / 화학 결합)** tồn tại khi một cách sắp xếp các hạt nhân và electron có tổng năng lượng thấp hơn đáng kể so với các mảnh tách rời, tạo nên một cấu trúc đủ ổn định và có thời gian tồn tại đủ dài để được xem là một tiểu phần hóa học.
 
@@ -34,6 +33,8 @@ Năng lượng
 
 Liên kết không phải một “thanh nối” vật lý. Nó là trạng thái năng lượng của toàn hệ electron–hạt nhân.
 
+> **Chuyển mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, **Thế năng và độ bền** tiếp nhận điểm tựa từ **Khi hai nguyên tử tiến lại gần nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thế năng và độ bền
 
 Trong hóa học, “bền” thường nghĩa một trạng thái có năng lượng thấp tương đối so với các trạng thái khả dĩ khác trong điều kiện xét. Tuy nhiên cần phân biệt **độ bền nhiệt động (thermodynamic stability)** và **độ bền động học (kinetic stability)**.
@@ -41,6 +42,8 @@ Trong hóa học, “bền” thường nghĩa một trạng thái có năng lư
 Một phân tử có thể có xu hướng nhiệt động chuyển thành sản phẩm năng lượng thấp hơn nhưng phản ứng vẫn cực chậm vì hàng rào hoạt hóa cao. Kim cương là ví dụ quen thuộc: graphite bền nhiệt động hơn ở điều kiện thường, nhưng kim cương vẫn tồn tại rất lâu vì sự chuyển đổi trực tiếp diễn ra quá chậm.
 
 Do đó “liên kết mạnh” không tự động nghĩa “chất không phản ứng”. Khả năng phản ứng phụ thuộc cả động lực năng lượng và con đường phản ứng.
+
+> **Chuyển mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết** tiếp nhận điểm tựa từ **Thế năng và độ bền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba mô hình lớn không phải ba thế giới tách biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết
 
@@ -57,6 +60,8 @@ Một mô hình liên kết tốt thường kết hợp hai tầng suy luận:
 - **tĩnh điện (electrostatics)** cho trực giác về lực hút và lực đẩy giữa điện tích;
 - **cơ học lượng tử (quantum mechanics)** giải thích trạng thái electron, tổ hợp obitan và các trạng thái được phép chiếm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, **Ba mô hình lớn không phải ba thế giới tách biệt** tiếp nhận điểm tựa từ **Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình thành liên kết và bảo toàn năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ba mô hình lớn không phải ba thế giới tách biệt
 
 Trong giáo trình, ta thường học liên kết ion, cộng hóa trị và kim loại như ba loại riêng. Thực tế, phân bố electron tạo thành một phổ liên tục.
@@ -69,11 +74,15 @@ Trong giáo trình, ta thường học liên kết ion, cộng hóa trị và ki
 
 Một liên kết thật có thể mang đồng thời tính ion và tính cộng hóa trị. HCl là liên kết cộng hóa trị nhưng phân cực mạnh; nhiều chất rắn được gọi là “ion” vẫn có đóng góp cộng hóa trị đáng kể.
 
+> **Chuyển mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, sau nội dung của **Ba mô hình lớn không phải ba thế giới tách biệt**, **Hình thành liên kết và bảo toàn năng lượng** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Năng lượng phân ly liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hình thành liên kết và bảo toàn năng lượng
 
 Nếu hai nguyên tử hình thành liên kết và năng lượng của hệ giảm, phần chênh lệch năng lượng phải được truyền đi đâu đó. Nó có thể được phát ra dưới dạng photon, chuyển thành động năng hoặc truyền cho một hạt thứ ba, dung môi hay mạng tinh thể.
 
 Điều này giải thích vì sao hai nguyên tử cô lập trong chân không không phải lúc nào cũng chỉ “va nhau rồi dính lại” vĩnh viễn. Hệ cần một cơ chế để tản phần năng lượng dư nếu muốn ở lại trạng thái liên kết.
+
+> **Chuyển mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Năng lượng phân ly liên kết** tiếp nhận điểm tựa từ **Hình thành liên kết và bảo toàn năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dài liên kết và độ bền liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Năng lượng phân ly liên kết
 
@@ -89,11 +98,15 @@ cần năng lượng dương. Phản ứng ngược tạo liên kết H–H sẽ
 
 BDE không phải tính chất tuyệt đối của “một loại liên kết” bất kể phân tử. Năng lượng C–H thay đổi theo môi trường phân tử, kiểu lai hóa và độ ổn định cộng hưởng của các mảnh tạo thành.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, **Độ dài liên kết và độ bền liên kết** tiếp nhận điểm tựa từ **Năng lượng phân ly liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron hóa trị là thành phần chính của liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ dài liên kết và độ bền liên kết
 
 Trong cùng một họ, liên kết ngắn hơn thường mạnh hơn vì mật độ electron giữa hai hạt nhân tương tác hiệu quả hơn, nhưng đây không phải quy tắc tuyệt đối cho mọi loại liên kết.
 
 **Bậc liên kết (bond order)** thường tương quan với độ dài và độ bền: liên kết ba thường ngắn và mạnh hơn liên kết đôi, liên kết đôi thường ngắn và mạnh hơn liên kết đơn giữa cùng một cặp nguyên tử. Lý thuyết obitan phân tử sẽ cho cách hiểu sâu hơn về bậc liên kết.
+
+> **Chuyển mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, **Electron hóa trị là thành phần chính của liên kết** tiếp nhận điểm tựa từ **Độ dài liên kết và độ bền liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Electron hóa trị là thành phần chính của liên kết
 
@@ -102,6 +115,8 @@ Electron lõi thường không thay đổi nhiều khi liên kết hóa học h�
 Vì vậy bảng tuần hoàn dự đoán hành vi liên kết thông qua cấu hình electron hóa trị. Carbon với bốn electron hóa trị có khả năng tạo mạng cộng hóa trị phong phú; halogen với bảy electron hóa trị thường tạo một liên kết mạnh trong nhiều phân tử trung hòa; khí hiếm ít phản ứng hơn vì cấu hình hóa trị của chúng khó được hạ thêm năng lượng bằng các liên kết thông thường.
 
 Xem lại: [Bảng tuần hoàn và các xu hướng tuần hoàn](../01_atomic_structure/04_periodic_table_and_periodic_trends.md).
+
+> **Chuyển mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản** tiếp nhận điểm tựa từ **Electron hóa trị là thành phần chính của liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ phân cực của liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản
 
@@ -117,6 +132,8 @@ Quy tắc hoạt động tốt với nhiều hợp chất của C, N, O và F, n
 
 Do đó octet nên được dùng như **quy tắc hạch toán (bookkeeping heuristic)**, không phải lời giải thích cuối cùng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, sau nội dung của **Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản**, **Độ phân cực của liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hệ phân cấp các mô hình liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ phân cực của liên kết
 
 Nếu hai nguyên tử có độ âm điện khác nhau, mật độ electron dùng chung bị lệch về phía nguyên tử có độ âm điện lớn hơn. Khi đó xuất hiện **điện tích riêng phần (partial charges)**:
@@ -128,6 +145,8 @@ Nếu hai nguyên tử có độ âm điện khác nhau, mật độ electron d�
 Đây là **liên kết cộng hóa trị phân cực (polar covalent bond / 극성 공유 결합)**.
 
 Độ phân cực ảnh hưởng mômen lưỡng cực, lực giữa các phân tử, độ tan và cơ chế phản ứng. Vì thế một xu hướng ở cấp nguyên tử có thể lan lên tính chất của cả phân tử và cuối cùng tới hành vi vĩ mô của vật chất.
+
+> **Chuyển mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, **Hệ phân cấp các mô hình liên kết** tiếp nhận điểm tựa từ **Độ phân cực của liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ phân cấp các mô hình liên kết
 
@@ -145,6 +164,8 @@ Không có một mô hình liên kết duy nhất tối ưu cho mọi câu hỏi
 
 Các mô hình này không phải những “sự thật mâu thuẫn”. Chúng là các mức trừu tượng khác nhau cho các câu hỏi khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Hệ phân cấp các mô hình liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các hiểu lầm thường gặp
 
 ### “Liên kết chứa năng lượng nên phá liên kết sẽ giải phóng năng lượng”
@@ -159,10 +180,12 @@ Hình ảnh chuyển electron hữu ích ở mức cơ bản, nhưng chất rắ
 
 Nguyên tử không có mục tiêu. Liên kết xuất hiện khi cách sắp xếp mới tạo trạng thái năng lượng thuận lợi hơn trong điều kiện thích hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy coi liên kết là một bài toán về **bề mặt năng lượng của hệ hạt nhân + electron**. Khi hai hay nhiều nguyên tử tiến gần, lực hút, lực đẩy, cấu trúc obitan và các ràng buộc lượng tử cạnh tranh nhau. Nếu tồn tại một cực tiểu đủ sâu trên bề mặt năng lượng, một trạng thái liên kết có thể hình thành.
 
 Các chương tiếp theo sẽ lần lượt xem xét cách electron được tổ chức trong liên kết ion và liên kết cộng hóa trị.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 ionic bonding](./01_ionic_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

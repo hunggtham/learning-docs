@@ -1,6 +1,6 @@
 # Java Spring — Part 4: Master Supplement — Rewritten Detailed
 
-> **Mạch đọc:** Đọc **Java Spring — Part 4: Master Supplement — Rewritten Detailed** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution** sang **nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution
 
@@ -51,7 +51,7 @@ Spring có machinery cho singleton creation trạng thái (state / 상태) và m
 
 <!-- SPRING_BATCH1_IOC_MASTER -->
 
-> **Chuyển mạch:** Từ **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution**, ta sang **nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) dấu vết (trace / 추적): từ `getBean()` tới `doCreateBean()` và final exposed tham chiếu (reference / 참조)
 
@@ -133,7 +133,7 @@ Giao dịch (transaction / 트랜잭션) interceptor không trực tiếp biết
 
 <!-- SPRING_BATCH3_TX_MASTER -->
 
-> **Chuyển mạch:** Từ **nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)**, ta sang **nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) dấu vết (trace / 추적): `TransactionInterceptor` → `TransactionAspectSupport` → giao dịch (transaction / 트랜잭션) manager
 
@@ -154,7 +154,7 @@ Bên ngoài (external / 외부) lời gọi (call / 호출) đi `caller → prox
 
 <!-- SPRING_BATCH3_PERSISTENCE_MASTER -->
 
-> **Chuyển mạch:** Từ **nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager**, ta sang **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Nguồn (source / 소스) dấu vết (trace / 추적): TransactionInterceptor → TransactionAspectSupport → giao dịch (transaction / 트랜잭션) manager** nêu điều cần giải thích; **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)
 
@@ -186,7 +186,7 @@ request
 
 <!-- SPRING_BATCH2_REQUEST_MASTER -->
 
-> **Chuyển mạch:** Từ **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)**, ta sang **nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Spring dữ liệu (data / 데이터) JPA proxy, truy vấn (query / 쿼리) thực thi (execution / 실행) và thực thể (entity / 엔터티) trạng thái (state / 상태)** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) dấu vết (trace / 추적): `DispatcherServlet#doDispatch` thực sự phối hợp những chiến lược (strategy / 전략) nào?
 
@@ -217,7 +217,7 @@ Boot 4 ưu tiên Jackson 3. mã (code / 코드) chỉ dùng DTO + Boot auto-conf
 
 <!-- SPRING_BATCH4_SECURITY_TEST_MASTER -->
 
-> **Chuyển mạch:** Từ **nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?**, ta sang **nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**, **Nguồn (source / 소스) dấu vết (trace / 추적): DispatcherServlet#doDispatch thực sự phối hợp những chiến lược (strategy / 전략) nào?** nêu điều cần giải thích; **Nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Di chuyển (migration / 마이그레이션) đồ thị (graph / 그래프): 2.7/5.3 → 3.5/6.2 → 4.1/7.0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext
 
@@ -345,7 +345,7 @@ Default: để Boot quản lý versions. Override khi có bảo mật (security 
 
 <!-- SPRING_BATCH5_VERSION_MASTER -->
 
-> **Chuyển mạch:** Từ **nguồn (source / 소스) dấu vết (trace / 추적) Spring bảo mật (security / 보안) và TestContext**, ta sang **di chuyển (migration / 마이그레이션) đồ thị (graph / 그래프): 2.7/5.3 → 3.5/6.2 → 4.1/7.0** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Source trace của Spring Security và TestContext chỉ ra behavior cần giữ; migration graph 2.7/5.3 → 3.5/6.2 → 4.1/7.0 dùng các mốc đó để đối chiếu compatibility và failure khi nâng phiên bản.
 
 ## Di chuyển (migration / 마이그레이션) đồ thị (graph / 그래프): 2.7/5.3 → 3.5/6.2 → 4.1/7.0
 
@@ -459,4 +459,4 @@ https://docs.spring.io/spring-framework/tham chiếu (reference / 참조)/web/we
 Spring bảo mật (security / 보안) tham chiếu (reference / 참조)
 https://docs.spring.io/spring-security/tham chiếu (reference / 참조)/
 
-> **Bàn giao:** Sau **di chuyển (migration / 마이그레이션) đồ thị (graph / 그래프): 2.7/5.3 → 3.5/6.2 → 4.1/7.0**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [spring part1 beginner rewritten detailed](./spring_part1_beginner_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Di chuyển (migration / 마이그레이션) đồ thị (graph / 그래프): 2.7/5.3 → 3.5/6.2 → 4.1/7.0**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

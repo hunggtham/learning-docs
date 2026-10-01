@@ -1,6 +1,6 @@
 # 04_algorithmic_paradigms
 
-> **Mạch đọc:** Đọc **04algorithmicparadigms** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **04algorithmicparadigms**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **04algorithmicparadigms** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Nhóm này tập trung vào các cách tổ chức quá trình giải bài toán: tìm kiếm, sắp xếp, phân rã, greedy, DP, tối ưu hóa (optimization / 최적화) và tìm kiếm (search / 검색) trên không gian trạng thái.
 
@@ -19,4 +19,4 @@ Nhóm này tập trung vào các cách tổ chức quá trình giải bài toán
 
 Hai chapter cuối mở rộng các paradigm cốt lõi: `10_...` giải thích **vì sao** greedy đúng hoặc vẫn hữu ích khi chỉ có approximation guarantee; `11_...` giải thích cách một cây backtracking thô được biến thành solver có propagation, bound và certificate.
 
-> **Bàn giao:** Sau **04algorithmicparadigms**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 searching](./00_searching.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **04algorithmicparadigms**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

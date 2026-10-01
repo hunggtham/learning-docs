@@ -1,7 +1,6 @@
 # 20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)
 
-> **Mạch đọc:** Đặt **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bốn khái niệm phải tách riêng** sang **2. bảo mật (security / 보안) máy trạng thái (state machine / 상태 머신) thay vì boolean isLogin**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bốn khái niệm phải tách riêng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. bảo mật (security / 보안) máy trạng thái (state machine / 상태 머신) thay vì boolean isLogin** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Một màn hình WebSquare có thể chạy đúng về UI, DataList và Submission nhưng vẫn sai ở cấp hệ thống nếu nhà phát triển (developer / 개발자) không phân biệt **định danh (identity / 식별자)**, **authentication**, **session**, **authorization** và **screen trạng thái (state / 상태)**. Đây là một trong những nguồn bug khó nhất ở ứng dụng enterprise vì trình duyệt (browser / 브라우저) thường giữ page instance rất lâu, trong khi session phía máy chủ (server / 서버) có thời gian tồn tại (lifetime / 수명) khác.
 
@@ -20,6 +19,8 @@ Chapter này không biến WebSquare thành bảo mật (security / 보안) khun
 **Authorization** trả lời “định danh (identity / 식별자) hiện tại được phép thực hiện thao tác (operation / 연산) nào trên tài nguyên (resource / 자원) nào?”.
 
 Một menu bị ẩn chỉ là presentation. Một button disabled chỉ là UX. Một DataMap chứa `role=ADMIN` chỉ là máy khách (client / 클라이언트) trạng thái (state / 상태). Không thứ nào trong số đó thay thế máy chủ (server / 서버) authorization.
+
+> **Chuyển mạch:** Authentication, session, SSO và authorization là bốn khái niệm riêng; state machine tiếp theo biểu diễn chuyển trạng thái, còn session lifetime không trùng page lifetime.
 
 ## 2. bảo mật (security / 보안) máy trạng thái (state machine / 상태 머신) thay vì boolean `isLogin`
 
@@ -40,6 +41,8 @@ Có thể thêm `LOCKED`, `MFA_REQUIRED`, `PASSWORD_CHANGE_REQUIRED` hoặc `TER
 
 Điểm quan trọng là mỗi trạng thái (state / 상태) cho phép một tập hành động (action / 동작) khác nhau. `AUTHENTICATED` chưa chắc đã đồng nghĩa ứng dụng (application / 애플리케이션) shell và permission dữ liệu (data / 데이터) đã ready. `EXPIRED` không có nghĩa page instance tự biến mất. `REAUTHENTICATING` không nên để Save tiếp tục như chưa có gì xảy ra.
 
+> **Chuyển mạch:** State machine phân biệt auth states; session lifetime và page lifetime chạy trên hai clock, nên expiration phải phát thành application-level event.
+
 ## 3. Session thời gian tồn tại (lifetime / 수명) và page thời gian tồn tại (lifetime / 수명) là hai đồng hồ khác nhau
 
 SPA WebSquare có thể giữ shell nhiều giờ. Session máy chủ (server / 서버) có thể hết thời gian chờ (timeout / 타임아웃) sau 30 phút inactivity. Tab trình duyệt (browser / 브라우저) có thể sleep rồi resume. Laptop có thể suspend. Hybrid WebView có thể background rồi quay lại sau vài giờ.
@@ -55,6 +58,8 @@ pending UI state   ────────────────────�
 Sau điểm `X`, DataList và Grid vẫn còn trong trình duyệt (browser / 브라우저) nhưng máy chủ (server / 서버) không còn coi yêu cầu (request / 요청) là authenticated.
 
 Đây là lý do không được suy luận “màn hình vẫn mở nên session còn sống”.
+
+> **Chuyển mạch:** Expiration là app event để mọi page phản ứng nhất quán; khi xử lý, phân biệt 401/403 với business error để chọn recovery đúng.
 
 ## 4. Session expiration phải là application-level sự kiện (event / 이벤트)
 
@@ -73,6 +78,8 @@ Submission response
 ```
 
 Không nên để 20 page cùng lúc mở 20 login popup khi session hết hạn.
+
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **5. 401, 403 và nghiệp vụ (business / 비즈니스) lỗi (error / 오류) không giống nhau** tiếp nhận điểm tựa từ **4. Session expiration phải là application-level sự kiện (event / 이벤트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Submission interceptor/dùng chung (common / 공통) handler** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. 401, 403 và nghiệp vụ (business / 비즈니스) lỗi (error / 오류) không giống nhau
 
@@ -93,6 +100,8 @@ Một convention phổ biến:
 ```
 
 Chính xác (exact / 정확한) HTTP đặc tả hợp đồng (contract / 계약) phụ thuộc backend, nhưng frontend phải phân loại được ý nghĩa. Nếu mọi lỗi đều hiện “hệ thống (system / 시스템) lỗi (error / 오류)”, người dùng không biết cần login lại, sửa dữ liệu hay liên hệ hỗ trợ (support / 지원).
+
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **6. Submission interceptor/dùng chung (common / 공통) handler** tiếp nhận điểm tựa từ **5. 401, 403 và nghiệp vụ (business / 비즈니스) lỗi (error / 오류) không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Không thử lại (retry / 재시도) mù yêu cầu (request / 요청) sau login** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Submission interceptor/dùng chung (common / 공통) handler
 
@@ -118,6 +127,8 @@ scwin.handleCommunicationError = function(error) {
 
 Tên API ở trên là dự án (project / 프로젝트) lớp trừu tượng (abstraction / 추상화), không phải WebSquare built-in API. Điều quan trọng là **classification và orchestration không bị bản sao (copy / 복사) vào từng screen**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **7. Không thử lại (retry / 재시도) mù yêu cầu (request / 요청) sau login** tiếp nhận điểm tựa từ **6. Submission interceptor/dùng chung (common / 공통) handler** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Working trạng thái (state / 상태) khi session hết hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Không thử lại (retry / 재시도) mù yêu cầu (request / 요청) sau login
 
 Giả sử Save yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) vì session expired. người dùng (user / 사용자) login lại. Có nên tự động gửi lại Save?
@@ -138,6 +149,8 @@ entity version có thay đổi không?
 
 Read truy vấn (query / 쿼리) thường dễ thử lại (retry / 재시도) hơn Save/Approve/Transfer.
 
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **8. Working trạng thái (state / 상태) khi session hết hạn** tiếp nhận điểm tựa từ **7. Không thử lại (retry / 재시도) mù yêu cầu (request / 요청) sau login** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. SSO không loại bỏ session vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Working trạng thái (state / 상태) khi session hết hạn
 
 Một screen edit có thể chứa 20 phút thay đổi chưa save. Khi session expire, có ba chính sách (policy / 정책) thường gặp:
@@ -149,6 +162,8 @@ Một screen edit có thể chứa 20 phút thay đổi chưa save. Khi session 
 **Persist draft** — chỉ dùng nếu bảo mật (security / 보안)/privacy cho phép và có thiết kế rõ; không tự ý lưu PII vào localStorage.
 
 Chính sách (policy / 정책) phải được quyết định theo lĩnh vực (domain / 도메인), không phải nhà phát triển (developer / 개발자) tự chọn trong từng page.
+
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **8. Working trạng thái (state / 상태) khi session hết hạn** xác định đầu vào; **9. SSO không loại bỏ session vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. OIDC/OAuth2 và SAML: hiểu ranh giới (boundary / 경계), không nhét giao thức (protocol / 프로토콜) vào page** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. SSO không loại bỏ session vòng đời (lifecycle / 생명주기)
 
@@ -162,6 +177,8 @@ Application session = expired
 ```
 
 Khi app redirect/re-authenticate, IdP có thể xác nhận người dùng (user / 사용자) mà không hỏi password lại. Với người dùng (user / 사용자) cảm giác như “tự login lại”, nhưng ứng dụng (application / 애플리케이션) vẫn phải xử lý pending yêu cầu (request / 요청) và working trạng thái (state / 상태) đúng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **9. SSO không loại bỏ session vòng đời (lifecycle / 생명주기)** đã nêu tiêu chí phân biệt, còn **10. OIDC/OAuth2 và SAML: hiểu ranh giới (boundary / 경계), không nhét giao thức (protocol / 프로토콜) vào page** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Cookie-based session và CSRF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. OIDC/OAuth2 và SAML: hiểu ranh giới (boundary / 경계), không nhét giao thức (protocol / 프로토콜) vào page
 
@@ -179,6 +196,8 @@ logout command
 
 Đơn vị từ (token / 토큰) signature kiểm tra hợp lệ (validation / 검증), authorization mã (code / 코드) exchange, refresh đơn vị từ (token / 토큰) chính sách (policy / 정책), SAML assertion kiểm tra hợp lệ (validation / 검증) và key rotation thuộc auth/backend/hạ tầng (infrastructure / 인프라) tầng (layer / 계층).
 
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **10. OIDC/OAuth2 và SAML: hiểu ranh giới (boundary / 경계), không nhét giao thức (protocol / 프로토콜) vào page** đã nêu tiêu chí phân biệt, còn **11. Cookie-based session và CSRF** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. HttpOnly, Secure, SameSite và vì sao page không nên đọc session secret** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Cookie-based session và CSRF
 
 Nếu trình duyệt (browser / 브라우저) tự gửi session cookie, một yêu cầu (request / 요청) thay đổi dữ liệu có thể cần CSRF protection tùy kiến trúc. UI không thể “chống CSRF” chỉ bằng hidden button.
@@ -193,11 +212,15 @@ browser credential automatically attached
 
 Frontend có thể tham gia bằng CSRF đơn vị từ (token / 토큰)/header đặc tả hợp đồng (contract / 계약), nhưng máy chủ (server / 서버) phải verify. chính xác (exact / 정확한) cơ chế (mechanism / 메커니즘) phụ thuộc bảo mật (security / 보안) ngăn xếp (stack / 스택).
 
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **12. HttpOnly, Secure, SameSite và vì sao page không nên đọc session secret** tiếp nhận điểm tựa từ **11. Cookie-based session và CSRF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Authorization phải theo năng lực (capability / 역량)/tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. `HttpOnly`, `Secure`, `SameSite` và vì sao page không nên đọc session secret
 
 Session cookie nhạy cảm thường nên được bảo vệ bằng trình duyệt (browser / 브라우저) cookie attributes phù hợp. Nếu credential được thiết kế `HttpOnly`, JavaScript không đọc được nó — đó là tính năng (feature / 기능) bảo mật, không phải limitation cần workaround.
 
 Không bản sao (copy / 복사) session/đơn vị từ (token / 토큰) secret vào DataMap chỉ để “dễ dùng”. DataCollection có thể bị inspect, log hoặc serialize nhầm qua Submission.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **12. HttpOnly, Secure, SameSite và vì sao page không nên đọc session secret** nêu điều cần giải thích; **13. Authorization phải theo năng lực (capability / 역량)/tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Permission snapshot có thể stale** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Authorization phải theo năng lực (capability / 역량)/tài nguyên (resource / 자원)
 
@@ -222,6 +245,8 @@ canExportPersonalData
 
 Năng lực (capability / 역량) dễ map vào UI hơn role name, và giảm coupling với mô hình role phía máy chủ (server / 서버).
 
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **13. Authorization phải theo năng lực (capability / 역량)/tài nguyên (resource / 자원)** nêu điều cần giải thích; **14. Permission snapshot có thể stale** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Multi-tab trình duyệt (browser / 브라우저) và logout propagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Permission snapshot có thể stale
 
 Permission có thể thay đổi trong khi người dùng (user / 사용자) đang mở app. Vì vậy máy khách (client / 클라이언트) permission chỉ là snapshot phục vụ UX.
@@ -229,6 +254,8 @@ Permission có thể thay đổi trong khi người dùng (user / 사용자) đa
 Nếu admin thu hồi quyền, yêu cầu (request / 요청) tiếp theo vẫn phải bị máy chủ (server / 서버) reject dù button hiện tại còn visible.
 
 Khi nhận forbidden phản hồi (response / 응답), frontend nên reconcile UI hoặc refresh permission snapshot thay vì kết luận “backend bug vì button đang hiện”.
+
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **15. Multi-tab trình duyệt (browser / 브라우저) và logout propagation** tiếp nhận điểm tựa từ **14. Permission snapshot có thể stale** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. App shell phải sở hữu auth coordination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Multi-tab trình duyệt (browser / 브라우저) và logout propagation
 
@@ -244,6 +271,8 @@ Bất biến (invariant / 불변식):
 server authorization/session = canonical
 cross-tab notification = UX optimization
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **16. App shell phải sở hữu auth coordination** tiếp nhận điểm tựa từ **15. Multi-tab trình duyệt (browser / 브라우저) và logout propagation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Popup và nested WFrame khi auth trạng thái (state / 상태) đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. App shell phải sở hữu auth coordination
 
@@ -263,6 +292,8 @@ Child screen không nên tự redirect trình duyệt (browser / 브라우저) h
 
 Điều này nối trực tiếp với [14 — Application Shell](14_application_shell_navigation_state.md).
 
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **17. Popup và nested WFrame khi auth trạng thái (state / 상태) đổi** tiếp nhận điểm tựa từ **16. App shell phải sở hữu auth coordination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Hybrid/WebView authentication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Popup và nested WFrame khi auth trạng thái (state / 상태) đổi
 
 Nếu session expire khi popup đang mở:
@@ -279,6 +310,8 @@ Không nên để popup tự login rồi parent vẫn ở auth trạng thái (st
 
 Bảo mật (security / 보안) trạng thái (state / 상태) là cross-screen concern, nhưng UI working trạng thái (state / 상태) vẫn có đơn vị sở hữu (owner / 오너) riêng.
 
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **18. Hybrid/WebView authentication** tiếp nhận điểm tựa từ **17. Popup và nested WFrame khi auth trạng thái (state / 상태) đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Deep link vào protected screen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Hybrid/WebView authentication
 
 Hybrid app tạo thêm ít nhất ba bảo mật (security / 보안) trạng thái (state / 상태):
@@ -294,6 +327,8 @@ Chúng có thể lệch nhau sau background/resume, app upgrade hoặc deep link
 Không truyền long-lived secret qua cầu nối (bridge / 브리지) message nếu không cần. bản địa (native / 네이티브) secure lưu trữ (storage / 저장소), WebView cookie store và backend đơn vị từ (token / 토큰)/session chính sách (policy / 정책) phải có quyền sở hữu (ownership / 소유권) rõ.
 
 Chapter [18 — Hybrid App, WebView & Native Bridge](18_hybrid_webview_native_bridge.md) giải thích cầu nối (bridge / 브리지) vòng đời (lifecycle / 생명주기); chapter này bổ sung auth reconciliation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **19. Deep link vào protected screen** tiếp nhận điểm tựa từ **18. Hybrid/WebView authentication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Step-up authentication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Deep link vào protected screen
 
@@ -312,6 +347,8 @@ Nếu chưa authenticated, giữ **điều hướng (navigation / 내비게이�
 
 Sau re-auth, shell có thể resume intent nếu chính sách (policy / 정책) cho phép.
 
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **20. Step-up authentication** tiếp nhận điểm tựa từ **19. Deep link vào protected screen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Logout là destructive vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Step-up authentication
 
 Một số thao tác (operation / 연산) nhạy cảm như transfer, approve, export PII có thể yêu cầu authentication mạnh hơn session thông thường.
@@ -327,6 +364,8 @@ ACTIVE
 ```
 
 Không hard-code “nếu amount > X thì mở OTP popup” rải rác trong screen. quy tắc (rule / 규칙) trigger nên đến từ lĩnh vực (domain / 도메인)/bảo mật (security / 보안) đặc tả hợp đồng (contract / 계약).
+
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **20. Step-up authentication** xác định đầu vào; **21. Logout là destructive vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. định danh (identity / 식별자) switch là trường hợp (case / 사례) nguy hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Logout là destructive vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트)
 
@@ -346,6 +385,8 @@ telemetry context nào phải rotate?
 
 Sau logout, đối tượng (object / 객체) cũ không được vô tình dùng lại dưới định danh (identity / 식별자) mới.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, sau khi thấy quy trình trong **21. Logout là destructive vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트)**, **22. định danh (identity / 식별자) switch là trường hợp (case / 사례) nguy hiểm** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **23. lỗi (error / 오류) taxonomy cho auth vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. định danh (identity / 식별자) switch là trường hợp (case / 사례) nguy hiểm
 
 Máy dùng chung có thể logout người dùng (user / 사용자) A rồi login người dùng (user / 사용자) B trong cùng trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임).
@@ -360,6 +401,8 @@ principal change
 ```
 
 Đây là bảo mật (security / 보안) reason để tránh toàn cục (global / 전역) mutable bộ nhớ đệm (cache / 캐시) không có đơn vị sở hữu (owner / 오너).
+
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **22. định danh (identity / 식별자) switch là trường hợp (case / 사례) nguy hiểm** cho ta quy tắc; **23. lỗi (error / 오류) taxonomy cho auth vòng đời (lifecycle / 생명주기)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. khả năng quan sát (observability / 관측 가능성) không được log credential** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. lỗi (error / 오류) taxonomy cho auth vòng đời (lifecycle / 생명주기)
 
@@ -378,6 +421,8 @@ CSRF_REJECTED
 
 Người dùng (user / 사용자) message có thể đơn giản hơn, nhưng telemetry và orchestration cần category đủ chính xác.
 
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **23. lỗi (error / 오류) taxonomy cho auth vòng đời (lifecycle / 생명주기)** xác định đầu vào; **24. khả năng quan sát (observability / 관측 가능성) không được log credential** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. Testing ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. khả năng quan sát (observability / 관측 가능성) không được log credential
 
 Correlation ID, principal surrogate ID và permission quyết định (decision / 결정) có thể hữu ích, nhưng password, raw đơn vị từ (token / 토큰), session cookie, OTP và secret không được log.
@@ -385,6 +430,8 @@ Correlation ID, principal surrogate ID và permission quyết định (decision 
 PII cũng phải được mask theo chính sách (policy / 정책).
 
 Chapter [19 — Observability](19_observability_incident_response.md) phải được áp dụng cùng bảo mật (security / 보안) classification.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **25. Testing ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **24. khả năng quan sát (observability / 관측 가능성) không được log credential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. dạng thất bại (failure mode / 실패 모드): redirect vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Testing ma trận (matrix / 행렬)
 
@@ -406,6 +453,8 @@ hybrid background → session expire → resume
 
 Với Save, phải kiểm thử (test / 테스트) cả trường hợp (case / 사례) máy chủ (server / 서버) đã lần ghi nhận (commit / 커밋) nhưng máy khách (client / 클라이언트) nhận auth/mạng (network / 네트워크) thất bại (failure / 실패) để kiểm chứng idempotency/reconciliation.
 
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **26. dạng thất bại (failure mode / 실패 모드): redirect vòng lặp (loop / 루프)** tiếp nhận điểm tựa từ **25. Testing ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. dạng thất bại (failure mode / 실패 모드): 20 popup login cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. dạng thất bại (failure mode / 실패 모드): redirect vòng lặp (loop / 루프)
 
 Luồng (flow / 흐름):
@@ -419,6 +468,8 @@ app chưa nhận diện auth-ready
 Nguyên nhân gốc (root cause / 근본 원인) thường là readiness hoặc callback trạng thái (state / 상태) bị nhầm, không phải “SSO chậm”.
 
 Log cần có điều hướng (navigation / 내비게이션) intent, auth chuyển tiếp (transition / 전이) và correlation ID.
+
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **27. dạng thất bại (failure mode / 실패 모드): 20 popup login cùng lúc** tiếp nhận điểm tựa từ **26. dạng thất bại (failure mode / 실패 모드): redirect vòng lặp (loop / 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. dạng thất bại (failure mode / 실패 모드): người dùng (user / 사용자) B thấy dữ liệu người dùng (user / 사용자) A** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. dạng thất bại (failure mode / 실패 모드): 20 popup login cùng lúc
 
@@ -434,17 +485,23 @@ reauth success/fail → broadcast one result
 
 Đây là tính đồng thời (concurrency / 동시성) bài toán (problem / 문제) ở máy khách (client / 클라이언트) kiến trúc (architecture / 아키텍처).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **27. dạng thất bại (failure mode / 실패 모드): 20 popup login cùng lúc** nêu điều cần giải thích; **28. dạng thất bại (failure mode / 실패 모드): người dùng (user / 사용자) B thấy dữ liệu người dùng (user / 사용자) A** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. dạng thất bại (failure mode / 실패 모드): Save tự chạy lại sau login và tạo duplicate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. dạng thất bại (failure mode / 실패 모드): người dùng (user / 사용자) B thấy dữ liệu người dùng (user / 사용자) A
 
 Nguyên nhân có thể là shell bộ nhớ đệm (cache / 캐시)/DataList toàn cục (global / 전역) không clear khi principal thay đổi (change / 변경).
 
 Fix không phải chỉ refresh Grid; phải xác định toàn bộ trạng thái (state / 상태) có phạm vi (scope / 범위) theo principal và invalidate đúng ranh giới (boundary / 경계).
 
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **28. dạng thất bại (failure mode / 실패 모드): người dùng (user / 사용자) B thấy dữ liệu người dùng (user / 사용자) A** nêu điều cần giải thích; **29. dạng thất bại (failure mode / 실패 모드): Save tự chạy lại sau login và tạo duplicate** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. Master checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. dạng thất bại (failure mode / 실패 모드): Save tự chạy lại sau login và tạo duplicate
 
 Nguyên nhân gốc (root cause / 근본 원인) là frontend coi auth khôi phục (recovery / 복구) như thử lại (retry / 재시도) vận chuyển (transport / 전송) thông thường.
 
 Fix bằng thao tác (operation / 연산) classification + idempotency đặc tả hợp đồng (contract / 계약) + tường minh (explicit / 명시적) người dùng (user / 사용자) reconciliation cho mutating yêu cầu (request / 요청) không chắc kết quả.
+
+> **Chuyển mạch:** Ở chặng này của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **30. Master checklist** tiếp nhận điểm tựa từ **29. dạng thất bại (failure mode / 실패 모드): Save tự chạy lại sau login và tạo duplicate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. liên kết (connection / 연결) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Master checklist
 
@@ -465,6 +522,8 @@ Hybrid native/WebView auth reconcile thế nào?
 Log có vô tình chứa credential/PII không?
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, sau nội dung của **30. Master checklist**, **31. liên kết (connection / 연결) map** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **32. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. liên kết (connection / 연결) map
 
 Submission vòng đời (lifecycle / 생명주기) và lỗi (error / 오류) classification: [03 — DataCollection & Submission](03_data_collection_submission.md).
@@ -480,6 +539,8 @@ Idempotency/tính đồng thời (concurrency / 동시성): [15 — Backend Cont
 Hybrid auth: [18 — Hybrid App, WebView & Native Bridge](18_hybrid_webview_native_bridge.md).
 
 Sự cố (incident / 인시던트) bằng chứng (evidence / 증거): [19 — Observability, Logging & Incident Response](19_observability_incident_response.md).
+
+> **Chuyển mạch:** Trong **20 — Authentication, Session, SSO & bảo mật (security / 보안) vòng đời (lifecycle / 생명주기)**, **32. Kết luận** gom các mảnh từ **31. liên kết (connection / 연결) map** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 32. Kết luận
 
@@ -499,4 +560,4 @@ Principal
 
 Master-level nhà phát triển (developer / 개발자) không tin máy khách (client / 클라이언트) trạng thái (state / 상태) chỉ vì UI đang hiển thị hợp lệ. Họ luôn hỏi **bảo mật (security / 보안) truth nằm ở đâu, trạng thái (state / 상태) có thể stale khi nào, thao tác (operation / 연산) có thể được thử lại (retry / 재시도) an toàn không, principal thay đổi (change / 변경) invalidates những gì và bằng chứng (evidence / 증거) nào chứng minh bảo mật (security / 보안) chuyển tiếp (transition / 전이) đã xảy ra đúng**.
 
-> **Bàn giao:** Sau **32. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **32. Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

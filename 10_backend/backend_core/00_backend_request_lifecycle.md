@@ -1,7 +1,6 @@
 # 00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)
 
-> **Mạch đọc:** Đặt **00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục tiêu** sang **bất biến (invariant / 불변식) cần giữ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Bất biến (invariant / 불변식) cần giữ** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Mục tiêu
 
@@ -20,12 +19,9 @@ client
   → response + logs/metrics/traces
 ```
 
-
-> **Chuyển mạch:** Từ **Mục tiêu**, ta sang **bất biến (invariant / 불변식) cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)**, **Mục tiêu** đặt câu hỏi cần giải quyết; **Bất biến (invariant / 불변식) cần giữ** biến câu hỏi đó thành những điều kiện không được phá vỡ khi đi vào thực hành. Từ đây, **Sync và async** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bất biến (invariant / 불변식) cần giữ
-Phần “Bất biến (invariant / 불변식) cần giữ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - Mỗi yêu cầu (request / 요청) có một correlation/yêu cầu (request / 요청) ID; log ở các tầng (layer / 계층) có thể nối lại.
 - Authentication được hoàn tất trước khi dùng định danh (identity / 식별자) để authorize.
@@ -34,8 +30,7 @@ Phần “Bất biến (invariant / 불변식) cần giữ” nối kiến thứ
   đặc tả hợp đồng (contract / 계약) nói rõ nó được xử lý bất đồng bộ.
 - Mọi phụ thuộc (dependency / 의존성) bên ngoài có hết thời gian chờ (timeout / 타임아웃) hữu hạn; không để yêu cầu (request / 요청) chờ vô hạn.
 
-
-> **Chuyển mạch:** Từ **bất biến (invariant / 불변식) cần giữ**, ta sang **Sync và async** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Các bất biến như correlation ID, authorization trước side effect và timeout hữu hạn quyết định khi nào xử lý đồng bộ còn phù hợp; **Sync và async** đưa những điều kiện đó vào hai mô hình vận hành khác nhau.
 
 ## Sync và async
 
@@ -44,8 +39,7 @@ Async luồng (flow / 흐름) phù hợp cho email, export, webhook, indexing ho
 Đừng trả `200 OK` cho một side tác động (effect / 효과) chưa có đơn vị sở hữu (owner / 오너); dùng `202 Accepted` với job
 ID và trạng thái có thể truy vấn khi processing còn tiếp diễn.
 
-
-> **Chuyển mạch:** Từ **Sync và async**, ta sang **Cách gỡ lỗi (debug / 디버그)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sync/async chỉ mô tả cách giữ công việc trong request hoặc đẩy sang job; **Cách gỡ lỗi** kiểm tra xem deadline, queue và side effect thực tế đã giữ đúng bất biến hay chưa.
 
 ## Cách gỡ lỗi (debug / 디버그)
 
@@ -54,8 +48,7 @@ hàng đợi (queue / 큐), ứng dụng (application / 애플리케이션), cơ
 từng span thay vì đoán từ tổng thời gian. Một phản hồi (response / 응답) lỗi (error / 오류) không chứng minh
 giao dịch (transaction / 트랜잭션) đã quay lui (rollback / 롤백) nếu side tác động (effect / 효과) ngoài cơ sở dữ liệu (database / 데이터베이스) đã xảy ra.
 
-
-> **Chuyển mạch:** Từ **Cách gỡ lỗi (debug / 디버그)**, ta sang **Liên kết chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Cách gỡ lỗi giữ phạm vi application-level và trỏ các internals về owner chuẩn gốc; phần máy trạng thái tiếp theo dùng cùng request path để mô tả các chuyển tiếp có thể quan sát.
 
 ## Liên kết chuẩn gốc (canonical / 정본)
 
@@ -63,8 +56,7 @@ Chi tiết tiến trình (process / 프로세스), mạng (network / 네트워�
 Chapter này giữ application-level vòng đời (lifecycle / 생명주기) và cách đặt ranh giới (boundary / 경계), không mô tả
 lại TCP, scheduler hay WAL internals.
 
-
-> **Chuyển mạch:** Từ **Liên kết chuẩn gốc (canonical / 정본)**, ta sang **Đào sâu: yêu cầu (request / 요청) như một máy trạng thái (state machine / 상태 머신)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Máy trạng thái biến request lifecycle thành các trạng thái và transition cụ thể; từ đó người học có thể kiểm tra timeout, retry, publish và rollback thay vì chỉ đọc một sơ đồ tuyến tính.
 
 ## Đào sâu: yêu cầu (request / 요청) như một máy trạng thái (state machine / 상태 머신)
 
@@ -115,4 +107,4 @@ Vẽ timeline cho một `POST /orders` khi máy khách (client / 클라이언트
 ở giây 1.2 và sự kiện (event / 이벤트) publish thất bại ở giây 1.3. Đánh dấu phản hồi (response / 응답) caller thấy,
 trạng thái (state / 상태) authoritative, thử lại (retry / 재시도) an toàn và chỉ số (metric / 지표) chứng minh từng kết luận.
 
-> **Bàn giao:** Sau **Bài tập suy luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 http api semantics](./01_http_api_semantics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Đào sâu: yêu cầu như một máy trạng thái**, giữ lại invariant và evidence cần quan sát; quay về [Backend cốt lõi README](./README.md) để chọn chapter HTTP hoặc persistence kế tiếp.

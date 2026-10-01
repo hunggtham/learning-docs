@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. kiểm thử (test / 테스트) theo rủi ro (risk / 위험), không theo tỷ lệ thần thánh** sang **2. đơn vị (unit / 단위) kiểm thử (test / 테스트) lĩnh vực (domain / 도메인) lô-gic (logic / 논리)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. kiểm thử (test / 테스트) theo rủi ro (risk / 위험), không theo tỷ lệ thần thánh** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. đơn vị (unit / 단위) kiểm thử (test / 테스트) lĩnh vực (domain / 도메인) lô-gic (logic / 논리)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Một Android app “chạy được trên máy dev” còn rất xa môi trường vận hành (production / 운영 환경). môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질) đòi hỏi ba vòng phản hồi liên tục: **tính đúng đắn (correctness / 정확성)** được bảo vệ bằng kiểm thử (test / 테스트) và static phân tích (analysis / 분석); **hiệu năng (performance / 성능)** được đo bằng profiler/benchmark thay vì cảm giác; **bản phát hành (release / 릴리스)** được kiểm soát bằng reproducible bản dựng (build / 빌드), signing, staged rollout, telemetry và quay lui (rollback / 롤백) plan.
 
@@ -13,6 +13,8 @@ Chương này không liệt kê công cụ (tool / 도구) đơn lẻ mà xây m
 Pure nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) nên có đơn vị (unit / 단위) kiểm thử (test / 테스트) nhanh. ánh xạ (mapping / 매핑)/mạng (network / 네트워크) serialization cần đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트). Room di chuyển (migration / 마이그레이션) cần di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) thật. điều hướng (navigation / 내비게이션)/deep link cần tích hợp (integration / 통합)/UI kiểm thử (test / 테스트). Payment/auth cần nhiều tầng hơn một màn hình brochure.
 
 Mục tiêu là mỗi trọng yếu (critical / 중요) hành vi (behavior / 동작) có kiểm thử (test / 테스트) ở tầng rẻ nhất đủ chứng minh hành vi (behavior / 동작) đó.
+
+> **Chuyển mạch:** Risk-based testing chọn unit boundary theo failure impact; domain logic test trước, rồi fake stateful repository giúp integration behavior lặp lại ổn định hơn mock.
 
 ## 2. đơn vị (unit / 단위) kiểm thử (test / 테스트) lĩnh vực (domain / 도메인) lô-gic (logic / 논리)
 
@@ -39,6 +41,8 @@ fun zero_quantity_does_not_change_total() {
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **3. Fake thường hữu ích hơn mock cho stateful repository** tiếp nhận điểm tựa từ **2. đơn vị (unit / 단위) kiểm thử (test / 테스트) lĩnh vực (domain / 도메인) lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Coroutine kiểm thử (test / 테스트) và virtual thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Fake thường hữu ích hơn mock cho stateful repository
 
 Mock rất tốt để verify tương tác (interaction / 상호작용) nhỏ, nhưng với luồng (flow / 흐름)/repository stateful, fake có thể mô phỏng hành vi (behavior / 동작) tự nhiên hơn.
@@ -61,6 +65,8 @@ class FakeArticlesRepository : ArticlesRepository {
 
 ViewModel kiểm thử (test / 테스트) có thể assert chuyển tiếp trạng thái (state transition / 상태 전이) thay vì verify “phương thức (method / 메서드) X được gọi đúng một lần” trong mọi trường hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **4. Coroutine kiểm thử (test / 테스트) và virtual thời gian (time / 시간)** tiếp nhận điểm tựa từ **3. Fake thường hữu ích hơn mock cho stateful repository** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Main dispatcher trong kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Coroutine kiểm thử (test / 테스트) và virtual thời gian (time / 시간)
 
 Mã (code / 코드) dùng `delay`, thử lại (retry / 재시도)/backoff hoặc debounce không nên làm kiểm thử (test / 테스트) ngủ thật.
@@ -80,17 +86,23 @@ fun search_is_debounced() = runTest {
 
 Inject dispatcher/scheduler-friendly phụ thuộc (dependency / 의존성) thay vì hard-code luồng thực thi (thread / 스레드) hành vi (behavior / 동작) khắp nơi.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **5. Main dispatcher trong kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **4. Coroutine kiểm thử (test / 테스트) và virtual thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. luồng (flow / 흐름) kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Main dispatcher trong kiểm thử (test / 테스트)
 
 ViewModel dùng `viewModelScope` cần kiểm thử (test / 테스트) Main dispatcher. Có thể dùng kiểm thử (test / 테스트) quy tắc (rule / 규칙) thiết lập `Dispatchers.Main` thành `StandardTestDispatcher` và reset sau kiểm thử (test / 테스트).
 
 Điểm quan trọng là tất cả coroutine trong kiểm thử (test / 테스트) chia sẻ cùng `TestCoroutineScheduler` nếu muốn deterministic virtual thời gian (time / 시간).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **5. Main dispatcher trong kiểm thử (test / 테스트)** xác định đầu vào; **6. luồng (flow / 흐름) kiểm thử (test / 테스트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. Room kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. luồng (flow / 흐름) kiểm thử (test / 테스트)
 
 Với StateFlow, nhiều trường hợp (case / 사례) có thể assert `value`. Với luồng (flow / 흐름) chuỗi (sequence / 시퀀스), có thể collect bằng kiểm thử (test / 테스트) helper/thư viện (library / 라이브러리) phù hợp hoặc tự collect có kiểm soát.
 
 Kiểm thử (test / 테스트) nên chú ý conflation: StateFlow đại diện trạng thái (state / 상태) mới nhất, không đảm bảo kiểm thử (test / 테스트) observer thấy mọi intermediate giá trị (value / 값) nếu producer chạy nhanh. Nếu cần assert chuỗi (sequence / 시퀀스) sự kiện (event / 이벤트), chọn thành phần nguyên thủy (primitive / 기본 요소) phù hợp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **6. luồng (flow / 흐름) kiểm thử (test / 테스트)** xác định đầu vào; **7. Room kiểm thử (test / 테스트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. mạng (network / 네트워크) đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Room kiểm thử (test / 테스트)
 
@@ -106,6 +118,8 @@ Kiểm thử (test / 테스트) giao dịch (transaction / 트랜잭션)/bất b
 
 Di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải dùng lược đồ (schema / 스키마) cũ và dữ liệu trường hợp biên (edge case / 경계 사례) như đã trình bày ở trường hợp (case / 사례) 03.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **8. mạng (network / 네트워크) đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **7. Room kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Compose UI kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. mạng (network / 네트워크) đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트)
 
 Không cần gọi môi trường vận hành (production / 운영 환경) backend trong đơn vị (unit / 단위) kiểm thử (test / 테스트). Dùng fake HTTP máy chủ (server / 서버) để kiểm thử (test / 테스트):
@@ -118,6 +132,8 @@ Không cần gọi môi trường vận hành (production / 운영 환경) backe
 - unknown trường dữ liệu (field / 필드)/enum tính tương thích (compatibility / 호환성).
 
 Đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) hữu ích hơn mock Retrofit giao diện (interface / 인터페이스) vì nó kiểm thử (test / 테스트) ranh giới (boundary / 경계) wire thực tế.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **9. Compose UI kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **8. mạng (network / 네트워크) đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Screenshot kiểm thử (test / 테스트) và visual regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Compose UI kiểm thử (test / 테스트)
 
@@ -139,11 +155,15 @@ composeTestRule
 
 Dùng ngữ nghĩa (semantics / 의미론)/testTag khi văn bản (text / 텍스트)/content description không đủ ổn định, nhưng đừng làm UI chỉ để phục vụ kiểm thử (test / 테스트) nếu ngữ nghĩa (semantics / 의미론) user-facing có thể dùng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **10. Screenshot kiểm thử (test / 테스트) và visual regression** tiếp nhận điểm tựa từ **9. Compose UI kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Screenshot kiểm thử (test / 테스트) và visual regression
 
 Lô-gic (logic / 논리) kiểm thử (test / 테스트) không phát hiện padding sai, dark theme broken hoặc văn bản (text / 텍스트) overflow. Screenshot kiểm thử (test / 테스트) hữu ích cho thiết kế (design / 설계) hệ thống (system / 시스템)/thành phần (component / 컴포넌트) ổn định.
 
 Cần kiểm soát font, density, locale, thiết bị (device / 장치) cấu hình (config / 설정) để giảm flaky điểm ảnh (pixel / 픽셀) diff. Với động (dynamic / 동적) content, kiểm thử (test / 테스트) thành phần (component / 컴포넌트)/trạng thái (state / 상태) cụ thể hơn full app screenshot.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **11. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **10. Screenshot kiểm thử (test / 테스트) và visual regression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Instrumented kiểm thử (test / 테스트) chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트)
 
@@ -151,11 +171,15 @@ Cổng chất lượng (quality gate / 품질 게이트) nên kiểm tra content
 
 Kiểm thử (test / 테스트) manual với TalkBack vẫn quan trọng vì automated quy tắc (rule / 규칙) không đánh giá được toàn bộ reading thứ tự (order / 순서) và tương tác (interaction / 상호작용) ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **12. Instrumented kiểm thử (test / 테스트) chọn lọc** tiếp nhận điểm tựa từ **11. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. End-to-end kiểm thử (test / 테스트) ít nhưng giá trị cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Instrumented kiểm thử (test / 테스트) chọn lọc
 
 Instrumented kiểm thử (test / 테스트) chậm hơn cục bộ (local / 로컬) JVM, nên dành cho hành vi (behavior / 동작) phụ thuộc Android khung phần mềm (framework / 프레임워크)/thiết bị (device / 장치): permission, Activity vòng đời (lifecycle / 생명주기), cơ sở dữ liệu (database / 데이터베이스) tích hợp (integration / 통합) đặc thù, deep link/tác vụ (task / 작업) hành vi (behavior / 동작), biometric/credential luồng (flow / 흐름) có kiểm thử (test / 테스트) harness phù hợp.
 
 Không biến mọi đơn vị (unit / 단위) kiểm thử (test / 테스트) thành emulator kiểm thử (test / 테스트).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **13. End-to-end kiểm thử (test / 테스트) ít nhưng giá trị cao** tiếp nhận điểm tựa từ **12. Instrumented kiểm thử (test / 테스트) chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Static phân tích (analysis / 분석) là kiểm thử (test / 테스트) chạy trước thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. End-to-end kiểm thử (test / 테스트) ít nhưng giá trị cao
 
@@ -173,11 +197,15 @@ cold start
 
 E2E dễ flaky nếu phụ thuộc backend/mạng (network / 네트워크) thật. Có thể dùng controlled kiểm thử (test / 테스트) môi trường (environment / 환경), fake backend hoặc hermetic phụ thuộc (dependency / 의존성) tùy mục tiêu.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **14. Static phân tích (analysis / 분석) là kiểm thử (test / 테스트) chạy trước thời gian chạy (runtime / 런타임)** tiếp nhận điểm tựa từ **13. End-to-end kiểm thử (test / 테스트) ít nhưng giá trị cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. hiệu năng (performance / 성능): đo trước khi tối ưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Static phân tích (analysis / 분석) là kiểm thử (test / 테스트) chạy trước thời gian chạy (runtime / 런타임)
 
 Android Lint, Kotlin trình biên dịch (compiler / 컴파일러) warning, detekt/ktlint hoặc công cụ (tool / 도구) tương đương giúp bắt issue sớm. Nhưng quy tắc (rule / 규칙) phải có đơn vị sở hữu (owner / 오너) và chính sách (policy / 정책), không bật hàng trăm quy tắc (rule / 규칙) rồi suppress toàn bộ.
 
 CI nên thất bại (fail / 실패) trên warning quan trọng như exported thành phần (component / 컴포넌트) không an toàn, tài nguyên (resource / 자원) issue, API misuse, Compose stability issue có quy tắc (rule / 규칙) tương ứng, hoặc kiến trúc (architecture / 아키텍처) phụ thuộc (dependency / 의존성) violation nếu dự án (project / 프로젝트) có custom quy tắc (rule / 규칙).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **15. hiệu năng (performance / 성능): đo trước khi tối ưu** tiếp nhận điểm tựa từ **14. Static phân tích (analysis / 분석) là kiểm thử (test / 테스트) chạy trước thời gian chạy (runtime / 런타임)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Startup ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. hiệu năng (performance / 성능): đo trước khi tối ưu
 
@@ -189,6 +217,8 @@ Bốn nhóm chỉ số (metric / 지표) thường quan trọng:
 - tài nguyên (resource / 자원): CPU, battery, mạng (network / 네트워크), disk.
 
 Không optimize một `map` nhỏ trong khi main luồng thực thi (thread / 스레드) đang parse 5 MB JSON.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **16. Startup ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **15. hiệu năng (performance / 성능): đo trước khi tối ưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Macrobenchmark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Startup ngân sách (budget / 예산)
 
@@ -205,17 +235,23 @@ can defer until feature first used
 
 Không phải SDK nào cũng cần init trong `Application.onCreate()`.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **17. Macrobenchmark** tiếp nhận điểm tựa từ **16. Startup ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Baseline Profiles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Macrobenchmark
 
 Macrobenchmark đo hành vi (behavior / 동작) như startup/scroll ở app bản dựng (build / 빌드) gần môi trường vận hành (production / 운영 환경) hơn đơn vị (unit / 단위) benchmark.
 
 Một benchmark tốt có scenario ổn định, warmup/iteration hợp lý và chỉ số (metric / 지표) cụ thể. So sánh regression theo baseline thay vì nhìn một con số một lần.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **18. Baseline Profiles** tiếp nhận điểm tựa từ **17. Macrobenchmark** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Perfetto/hệ thống (system / 시스템) dấu vết (trace / 추적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Baseline Profiles
 
 Baseline Profile giúp thời gian chạy (runtime / 런타임) precompile hot đường đi mã (code path / 코드 경로), cải thiện startup và tương tác (interaction / 상호작용). Profile cần đại diện journey thực tế: launch, navigate screen chính, scroll/danh sách (list / 목록) tương tác (interaction / 상호작용).
 
 Profile cũ không nên được coi là “set and forget”; khi app luồng (flow / 흐름) thay đổi, regenerate/rà soát (review / 검토).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **19. Perfetto/hệ thống (system / 시스템) dấu vết (trace / 추적)** tiếp nhận điểm tựa từ **18. Baseline Profiles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Compose hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Perfetto/hệ thống (system / 시스템) dấu vết (trace / 추적)
 
@@ -226,6 +262,8 @@ Một dấu vết (trace / 추적) investigation nên ghi:
 ```text
 symptom → reproduction → trace marker → root cause → fix → benchmark before/after
 ```
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **20. Compose hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **19. Perfetto/hệ thống (system / 시스템) dấu vết (trace / 추적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Leak investigation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Compose hiệu năng (performance / 성능)
 
@@ -241,17 +279,23 @@ val filtered by remember(items, query) {
 
 Nhưng không bọc mọi expression bằng `remember`. Memoization cũng có độ phức tạp (complexity / 복잡도)/bộ nhớ (memory / 메모리) chi phí (cost / 비용).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **21. Leak investigation** tiếp nhận điểm tựa từ **20. Compose hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. ANR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Leak investigation
 
 Leak thường đến từ đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명) sai: singleton giữ Activity, listener không unregister, coroutine phạm vi (scope / 범위) dài hơn đơn vị sở hữu (owner / 오너), callback giữ Fragment/View, static bộ nhớ đệm (cache / 캐시) giữ large đối tượng (object / 객체).
 
 Vùng nhớ vùng nhớ động (heap / 힙) dump/leak detector chỉ ra tham chiếu (reference / 참조) chuỗi (chain / 사슬). Fix gốc (root / 루트) quyền sở hữu (ownership / 소유권), không chỉ set random variable `null`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **22. ANR** tiếp nhận điểm tựa từ **21. Leak investigation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. bản phát hành (release / 릴리스) bản dựng (build / 빌드) phải khác gỡ lỗi (debug / 디버그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. ANR
 
 ANR không chỉ do infinite vòng lặp (loop / 루프). Sync disk I/O, binder lời gọi (call / 호출) lâu, tranh chấp khóa (lock contention / 잠금 경합), heavy serialization hoặc main luồng thực thi (thread / 스레드) chờ worker đều có thể gây freeze.
 
 Một mutex dùng sai trên main luồng thực thi (thread / 스레드) hoặc `runBlocking` trong callback khung phần mềm (framework / 프레임워크) cũng có thể tạo ANR/deadlock.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **23. bản phát hành (release / 릴리스) bản dựng (build / 빌드) phải khác gỡ lỗi (debug / 디버그)** tiếp nhận điểm tựa từ **22. ANR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. R8 và keep quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. bản phát hành (release / 릴리스) bản dựng (build / 빌드) phải khác gỡ lỗi (debug / 디버그)
 
@@ -268,6 +312,8 @@ Gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) thường bật log
 
 Không kiểm thử (test / 테스트) hiệu năng (performance / 성능) trên gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) rồi kết luận bản phát hành (release / 릴리스) hiệu năng (performance / 성능).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **24. R8 và keep quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **23. bản phát hành (release / 릴리스) bản dựng (build / 빌드) phải khác gỡ lỗi (debug / 디버그)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Signing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. R8 và keep quy tắc (rule / 규칙)
 
 Reflection/serialization/JNI có thể cần keep siêu dữ liệu (metadata / 메타데이터)/lớp (class / 클래스). Không thêm `-keep class ** { *; }` để “fix crash” vì nó vô hiệu hóa shrink lớn.
@@ -276,17 +322,23 @@ Tìm ranh giới (boundary / 경계) nào cần reflection và giữ tối thi�
 
 Bản phát hành (release / 릴리스) kiểm thử (test / 테스트) phải chạy minified bản dựng (build / 빌드) vì bug R8 chỉ xuất hiện ở đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **25. Signing** tiếp nhận điểm tựa từ **24. R8 và keep quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Reproducible phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Signing
 
 Signing key là định danh (identity / 식별자) cập nhật (update / 업데이트) của app. Mất key hoặc leak key là sự cố (incident / 인시던트) nghiêm trọng. Với Play App Signing, quản lý upload key và Play signing luồng (flow / 흐름) đúng.
 
 Không lần ghi nhận (commit / 커밋) keystore/password vào repository. CI lấy secret từ secure secret store và giới hạn quyền.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **26. Reproducible phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **25. Signing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. CI stages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Reproducible phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
 Phiên bản (version / 버전) danh mục (catalog / 카탈로그)/BOM giúp centralize phiên bản (version / 버전). phụ thuộc (dependency / 의존성) locking hoặc xác minh (verification / 확인) giúp giảm bản dựng (build / 빌드) “hôm nay khác hôm qua”.
 
 CI nên có command rõ ràng bản dựng (build / 빌드) từ clean checkout. Nếu chỉ máy một nhà phát triển (developer / 개발자) bản dựng (build / 빌드) được vì cục bộ (local / 로컬) Maven bộ nhớ đệm (cache / 캐시)/manual SDK tệp (file / 파일), chuỗi xử lý (pipeline / 파이프라인) chưa reproducible.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **27. CI stages** tiếp nhận điểm tựa từ **26. Reproducible phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시) và CI bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. CI stages
 
@@ -306,11 +358,15 @@ checkout
 
 Không nhất thiết mọi PR chạy full thiết bị (device / 장치) ma trận (matrix / 행렬); có thể tách fast PR gate và nightly/bản phát hành (release / 릴리스) suite.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **28. bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시) và CI bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **27. CI stages** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Staged rollout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시) và CI bộ nhớ đệm (cache / 캐시)
 
 Bộ nhớ đệm (cache / 캐시) giúp nhanh nhưng bộ nhớ đệm (cache / 캐시) key sai có thể gây sản phẩm tạo ra (artifact / 산출물) stale. bộ nhớ đệm (cache / 캐시) Gradle theo tệp (file / 파일)/phiên bản (version / 버전) phù hợp, không bộ nhớ đệm (cache / 캐시) đầu ra (output / 출력) tùy tiện mà không hiểu vô hiệu hóa (invalidation / 무효화).
 
 Đừng dùng bộ nhớ đệm (cache / 캐시) để che bản dựng (build / 빌드) phụ thuộc (dependency / 의존성) không khai báo. Clean bản dựng (build / 빌드) định kỳ hữu ích phát hiện hidden phụ thuộc (dependency / 의존성).
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **29. Staged rollout** tiếp nhận điểm tựa từ **28. bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시) và CI bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Kill switch và cờ tính năng (feature flag / 기능 플래그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Staged rollout
 
@@ -328,11 +384,15 @@ internal/QA
 
 Rollout percentage không cứu được nếu backend/lược đồ (schema / 스키마) thay đổi (change / 변경) không backward-compatible.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **30. Kill switch và cờ tính năng (feature flag / 기능 플래그)** tiếp nhận điểm tựa từ **29. Staged rollout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. quay lui (rollback / 롤백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Kill switch và cờ tính năng (feature flag / 기능 플래그)
 
 Cờ tính năng (feature flag / 기능 플래그) cho phép disable một tính năng (feature / 기능) server-side khi issue. Nhưng flag phải có vòng đời (lifecycle / 생명주기): đơn vị sở hữu (owner / 오너), default, expiry/removal date.
 
 Một app đầy flag vĩnh viễn tạo state-space khó kiểm thử (test / 테스트). Sau rollout ổn định, remove obsolete flag/đường đi mã (code path / 코드 경로).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **31. quay lui (rollback / 롤백)** tiếp nhận điểm tựa từ **30. Kill switch và cờ tính năng (feature flag / 기능 플래그)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Crash, ANR và symbolication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. quay lui (rollback / 롤백)
 
@@ -340,9 +400,13 @@ Trước bản phát hành (release / 릴리스) hỏi: nếu app phiên bản (
 
 Nếu cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) irreversible hoặc backend API đã drop tính tương thích (compatibility / 호환성), quay lui (rollback / 롤백) nhị phân (binary / 이진) có thể không đủ. Vì vậy bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링) cần backward tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우).
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **32. Crash, ANR và symbolication** tiếp nhận điểm tựa từ **31. quay lui (rollback / 롤백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. khả năng quan sát (observability / 관측 가능성) cổng chất lượng (quality gate / 품질 게이트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Crash, ANR và symbolication
 
 Minified bản phát hành (release / 릴리스) dấu vết ngăn xếp (stack trace / 스택 트레이스) cần ánh xạ (mapping / 매핑) tệp (file / 파일) để deobfuscate. bản địa (native / 네이티브) crash cần symbol tương ứng. sản phẩm tạo ra (artifact / 산출물)/ánh xạ (mapping / 매핑) phải gắn với versionCode/bản dựng (build / 빌드) ID và lưu đủ lâu để điều tra crash cũ.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **33. khả năng quan sát (observability / 관측 가능성) cổng chất lượng (quality gate / 품질 게이트)** tiếp nhận điểm tựa từ **32. Crash, ANR và symbolication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Privacy trong telemetry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. khả năng quan sát (observability / 관측 가능성) cổng chất lượng (quality gate / 품질 게이트)
 
@@ -357,11 +421,15 @@ Trước rollout, dashboard cần biết ít nhất:
 
 Một bản phát hành (release / 릴리스) “không có ticket” không có nghĩa healthy nếu telemetry không nhìn thấy thất bại (failure / 실패).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **34. Privacy trong telemetry** tiếp nhận điểm tựa từ **33. khả năng quan sát (observability / 관측 가능성) cổng chất lượng (quality gate / 품질 게이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. bản phát hành (release / 릴리스) checklist theo bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Privacy trong telemetry
 
 Không log/đơn vị từ (token / 토큰)/người dùng (user / 사용자) content thừa. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải biết trường dữ liệu (field / 필드) nào PII. Sampling/redaction/retention cần chính sách (policy / 정책).
 
 Gỡ lỗi (debug / 디버그) log có thể verbose hơn môi trường vận hành (production / 운영 환경) nhưng vẫn không nên in password/đơn vị từ (token / 토큰).
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **35. bản phát hành (release / 릴리스) checklist theo bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **34. Privacy trong telemetry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. cấp cao (senior / 시니어) notes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. bản phát hành (release / 릴리스) checklist theo bất biến (invariant / 불변식)
 
@@ -377,10 +445,12 @@ Thay vì checklist “bấm 50 ô” không hiểu lý do, nhóm theo bất bi�
 
 **tính tương thích (compatibility / 호환성)**: backend/lược đồ (schema / 스키마)/mục tiêu (target / 대상) SDK hành vi (behavior / 동작) được kiểm tra.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — Testing, hiệu năng (performance / 성능), CI/CD và bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)**, **36. cấp cao (senior / 시니어) notes** tiếp nhận điểm tựa từ **35. bản phát hành (release / 릴리스) checklist theo bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 36. cấp cao (senior / 시니어) notes
 
 Testing không phải mục tiêu coverage percentage; nó là confidence hệ thống (system / 시스템). hiệu năng (performance / 성능) không phải tối ưu microbenchmark; nó là ngân sách (budget / 예산) + dấu vết (trace / 추적) + regression detection. CI/CD không phải YAML dài; nó là khả năng tạo sản phẩm tạo ra (artifact / 산출물) lặp lại, kiểm chứng và phát hành có kiểm soát.
 
 Một nhóm (team / 팀) trưởng thành có thể trả lời: “PR này thay bất biến (invariant / 불변식) nào?”, “kiểm thử (test / 테스트) nào bảo vệ nó?”, “chỉ số (metric / 지표) nào phát hiện regression?”, “bản phát hành (release / 릴리스) bao nhiêu phần trăm trước?”, “nếu thất bại (fail / 실패) thì quay lui (rollback / 롤백)/disable thế nào?”. Khi câu trả lời rõ, Android kỹ thuật (engineering / 엔지니어링) đã vượt xa mức chỉ biết API.
 
-> **Bàn giao:** Sau **36. cấp cao (senior / 시니어) notes**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **36. cấp cao (senior / 시니어) notes**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

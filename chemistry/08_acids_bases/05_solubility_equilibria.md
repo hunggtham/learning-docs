@@ -1,7 +1,6 @@
 # Cân bằng độ tan — kết tủa, \(K_{sp}\) và phân tách chọn lọc
 
-> **Mạch đọc:** Đọc **Cân bằng độ tan — kết tủa, \(K{sp}\) và phân tách chọn lọc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“\(K{sp}\) nhỏ hơn luôn nghĩa độ tan mol thấp hơn”** sang **“\(Q{sp}>K{sp}\) là kết tủa xuất hiện ngay”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng độ tan — kết tủa, \(K{sp}\) và phân tách chọn lọc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Cân bằng độ tan — kết tủa, \(K{sp}\) và phân tách chọn lọc** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > **Tích số tan \(K_{sp}\) (solubility product / 용해도곱 상수)** mô tả cân bằng giữa chất rắn ít tan và các ion của nó trong dung dịch. Nhưng độ tan quan sát không chỉ do một con số \(K_{sp}\) quyết định. pH, tạo phức, ion chung, lực ion, hoạt độ và động học tạo mầm có thể làm lượng hòa tan thực tế thay đổi nhiều bậc độ lớn.
 
@@ -351,4 +350,4 @@ Không. Hai quá trình vẫn xảy ra động với tốc độ trung bình b�
 
 Xem tiếp: [Oxy hóa và khử](../09_redox_and_electrochemistry/00_oxidation_and_reduction.md) và [Hóa học nước](../16_environmental_chemistry/01_water_chemistry.md).
 
-> **Bàn giao:** Sau **“Trong dung dịch bão hòa không còn hòa tan/kết tủa”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 acid base models](./00_acid_base_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cân bằng độ tan — kết tủa, \(K{sp}\) và phân tách chọn lọc**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

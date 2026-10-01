@@ -1,7 +1,6 @@
 # Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại
 
-> **Mạch đọc:** Đọc **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Định nghĩa tổng quát** sang **Vì sao so sánh Q với K cho biết chiều tự diễn ra?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Định nghĩa tổng quát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Thương số phản ứng (reaction quotient, \(Q\) / 반응 지수)** có cùng cấu trúc toán học với hằng số cân bằng nhưng được tính từ **trạng thái hiện tại** của hệ. Nếu \(K\) mô tả vị trí cân bằng ở một nhiệt độ xác định, thì \(Q\) là tọa độ tức thời cho biết hỗn hợp đang nằm ở phía nào so với vị trí đó.
 
@@ -31,8 +30,7 @@ Q=K
 
 Ngoài cân bằng, \(Q\) có thể nhỏ hơn hoặc lớn hơn \(K\).
 
-
-> **Chuyển mạch:** Từ **Định nghĩa tổng quát**, ta sang **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Định nghĩa tổng quát** đã nêu tiêu chí phân biệt, còn **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Q không phải “lượng sản phẩm”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao so sánh Q với K cho biết chiều tự diễn ra?
 
@@ -64,8 +62,7 @@ Q = K → ΔrG = 0 → cân bằng
 
 Đây không phải mẹo ghi nhớ. Nó là hệ quả trực tiếp của chemical potential và Gibbs free năng lượng (energy / 에너지).
 
-
-> **Chuyển mạch:** Từ **Vì sao so sánh Q với K cho biết chiều tự diễn ra?**, ta sang **Q không phải “lượng sản phẩm”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** đã nêu tiêu chí phân biệt, còn **Q không phải “lượng sản phẩm”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Q là “ảnh chụp”, K là “đích”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Q không phải “lượng sản phẩm”
 
@@ -83,8 +80,7 @@ Q=\frac{a_{NH_3}^2}{a_{N_2}a_{H_2}^3}
 
 Một thay đổi nhỏ ở \(H_2\) có thể ảnh hưởng Q mạnh vì lũy thừa ba.
 
-
-> **Chuyển mạch:** Từ **Q không phải “lượng sản phẩm”**, ta sang **Q là “ảnh chụp”, K là “đích”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Q là “ảnh chụp”, K là “đích”** tiếp nhận điểm tựa từ **Q không phải “lượng sản phẩm”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí lý tưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Q là “ảnh chụp”, K là “đích”
 
@@ -98,8 +94,7 @@ so Q/K → chiều thermodynamic driving force
 
 K không phụ thuộc composition ban đầu; Q thì thay đổi mỗi khi composition, pressure hoặc activity thay đổi.
 
-
-> **Chuyển mạch:** Từ **Q là “ảnh chụp”, K là “đích”**, ta sang **Khí lý tưởng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Khí lý tưởng** tiếp nhận điểm tựa từ **Q là “ảnh chụp”, K là “đích”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung dịch và hoạt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khí lý tưởng
 
@@ -125,8 +120,7 @@ Q_p\approx
 
 Nếu nén hệ, các partial pressures thay đổi và Q có thể thay đổi ngay trước khi composition kịp phản ứng. Chính thay đổi Q đó tạo driving force mới.
 
-
-> **Chuyển mạch:** Từ **Khí lý tưởng**, ta sang **Dung dịch và hoạt độ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Dung dịch và hoạt độ** tiếp nhận điểm tựa từ **Khí lý tưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn và chất lỏng tinh khiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dung dịch và hoạt độ
 
@@ -148,8 +142,7 @@ Nếu chỉ dùng concentration trong nước biển hoặc electrolyte đậm �
 
 Đây là lý do pH, solubility, electrochemistry và speciation ở hệ đậm đặc cần activity các mô hình (models / 모델들).
 
-
-> **Chuyển mạch:** Từ **Dung dịch và hoạt độ**, ta sang **Chất rắn và chất lỏng tinh khiết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Chất rắn và chất lỏng tinh khiết** tiếp nhận điểm tựa từ **Dung dịch và hoạt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất rắn và chất lỏng tinh khiết
 
@@ -449,8 +442,7 @@ Không. Supersaturation có thể tồn tại nếu nucleation chậm.
 
 Không khi chúng chia sẻ species. Phải giải coupled hệ thống (system / 시스템).
 
-
-> **Chuyển mạch:** Từ **Chất rắn và chất lỏng tinh khiết**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Mô hình tư duy** gom các mảnh từ **Chất rắn và chất lỏng tinh khiết** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -466,4 +458,4 @@ Trong hệ phức tạp, không còn một Q đơn lẻ mà là một mạng cá
 
 Xem tiếp: [Nguyên lý Le Châtelier](./03_le_chatelier_principle.md) và [Nhiệt động lực học của cân bằng](./04_thermodynamics_of_equilibrium.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,13 +1,12 @@
 # Mental Causation, Embodiment và Extended Mind
 
-> **Mạch đọc:** Đọc **Mental Causation, Embodiment và Extended Mind** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mental causation** sang **Embodied và enactive mind**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mental Causation, Embodiment và Extended Mind**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mental causation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Embodied và enactive mind** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Mental causation
 
 Nếu mọi hành vi đã có vật lý (physical / 물리적) explanation, mental trạng thái (state / 상태) còn gây ra gì? Các hướng trả lời gồm định danh (identity / 식별자) giữa mental và vật lý (physical / 물리적) trạng thái (state / 상태), realization nhiều nền tảng, nhân quả (causal / 인과적) role của biểu diễn (representation / 표현), hoặc loại bỏ vocabulary folk psychology. Vấn đề không phải chọn “mind hoặc brain”, mà là chỉ rõ mức (level / 수준), cơ chế (mechanism / 메커니즘) và tiêu chuẩn nhân quả (causal / 인과적) explanation.
 
-
-> **Chuyển mạch:** Từ **Mental causation**, ta sang **Embodied và enactive mind** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mental Causation, Embodiment và Extended Mind**, **Embodied và enactive mind** tiếp nhận điểm tựa từ **Mental causation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Embodied và enactive mind
 
@@ -17,4 +16,4 @@ Cognition có thể phụ thuộc sâu vào body: interoception, sensorimotor v�
 
 Liên hệ với [Cognitive offloading và extended cognition](../../psychology/02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition.md).
 
-> **Bàn giao:** Sau **Embodied và enactive mind**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mind consciousness and identity](./00_mind_consciousness_and_identity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Embodied và enactive mind**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

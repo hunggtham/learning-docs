@@ -1,7 +1,6 @@
 # Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu
 
-> **Mạch đọc:** Đọc **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao chiều dài chuỗi làm vật liệu đổi bản chất?** sang **Kiến trúc chuỗi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao chiều dài chuỗi làm vật liệu đổi bản chất?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến trúc chuỗi** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Polymer (고분자)** là đại phân tử được tạo từ nhiều đơn vị lặp hoặc nhiều đơn vị có quan hệ cấu trúc. Chỉ biết loại monomer chưa đủ để dự đoán vật liệu cuối cùng. Tính chất xuất hiện từ **chiều dài chuỗi, kiến trúc chuỗi, lập thể, lực liên phân tử, độ kết tinh, sự vướng chuỗi, liên kết ngang và tốc độ chuyển động phân tử theo thời gian**.
 
@@ -17,6 +16,8 @@ Một đoạn chuỗi muốn di chuyển phải phối hợp với nhiều đo�
 
 Khi khối lượng phân tử vượt ngưỡng vướng chuỗi, nhiều tính chất cơ học tăng mạnh rồi dần bão hòa. Dưới ngưỡng đó, vật liệu có thể mềm, yếu hoặc giống sáp hơn.
 
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Vì sao chiều dài chuỗi làm vật liệu đổi bản chất?** xác định đầu vào; **Kiến trúc chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trùng hợp tăng trưởng chuỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiến trúc chuỗi
 
 Chuỗi có thể có nhiều kiến trúc:
@@ -31,6 +32,8 @@ Chuỗi có thể có nhiều kiến trúc:
 Kiến trúc quyết định khả năng đóng gói và chuyển động.
 
 HDPE có chuỗi tương đối thẳng nên đóng gói tốt và kết tinh mạnh hơn. LDPE có nhiều nhánh nên đóng gói kém hơn, mật độ thấp hơn và mềm hơn. Epoxy sau đóng rắn tạo mạng liên kết ngang nên không thể nóng chảy lại giống **nhựa nhiệt dẻo (thermoplastic)** thông thường.
+
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Kiến trúc chuỗi** xác định đầu vào; **Trùng hợp tăng trưởng chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trùng hợp tăng trưởng bậc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trùng hợp tăng trưởng chuỗi
 
@@ -70,6 +73,8 @@ Trùng hợp cation và anion sử dụng tâm hoạt động mang điện tích
 
 Xúc tác Ziegler–Natta hoặc metallocene còn có thể điều khiển cách monomer chèn vào chuỗi và nhờ đó điều khiển **độ trật tự lập thể dọc mạch (tacticity)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Trùng hợp tăng trưởng chuỗi** xác định đầu vào; **Trùng hợp tăng trưởng bậc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Copolymer — dùng trình tự monomer để lập trình vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trùng hợp tăng trưởng bậc
 
 Trong **trùng hợp tăng trưởng bậc (step-growth polymerization / 단계 성장 중합)**, bất kỳ hai phân tử có nhóm chức tương thích đều có thể phản ứng: monomer–monomer, monomer–oligomer hoặc oligomer–oligomer.
@@ -94,6 +99,8 @@ Nếu `p = 0.90`, `Xn = 10`. Nếu `p = 0.99`, `Xn = 100`. Muốn `Xn ≈ 1000`,
 
 Điều này cho thấy chỉ một sai lệch nhỏ về độ chuyển hóa hoặc tỉ lệ nhóm chức cũng có thể giới hạn mạnh chiều dài chuỗi.
 
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Copolymer — dùng trình tự monomer để lập trình vật liệu** tiếp nhận điểm tựa từ **Trùng hợp tăng trưởng bậc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polymer không có một “khối lượng phân tử” duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Copolymer — dùng trình tự monomer để lập trình vật liệu
 
 Khi dùng nhiều loại monomer, có thể tạo:
@@ -115,6 +122,8 @@ hóa học monomer
 → tự lắp ghép trung mô
 → tính chất vật liệu
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Polymer không có một “khối lượng phân tử” duy nhất** tiếp nhận điểm tựa từ **Copolymer — dùng trình tự monomer để lập trình vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu dạng chuỗi — polymer là đối tượng thống kê** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Polymer không có một “khối lượng phân tử” duy nhất
 
@@ -146,6 +155,8 @@ M_w\ge M_n
 
 Khi nói “khối lượng phân tử polymer”, phải nói rõ đang dùng `Mn`, `Mw` hay đại lượng nào khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Polymer không có một “khối lượng phân tử” duy nhất** xác định đầu vào; **Cấu dạng chuỗi — polymer là đối tượng thống kê** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Sự vướng chuỗi và chuyển động reptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấu dạng chuỗi — polymer là đối tượng thống kê
 
 Các liên kết đơn cho phép rất nhiều góc quay, nên một chuỗi có số cấu dạng khổng lồ.
@@ -162,6 +173,8 @@ với `N` là số đoạn thống kê.
 
 Chuỗi thật còn chịu ảnh hưởng của thể tích loại trừ, độ cứng mạch và chất lượng dung môi, nên quan hệ tỉ lệ có thể khác mô hình lý tưởng.
 
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Cấu dạng chuỗi — polymer là đối tượng thống kê** xác định đầu vào; **Sự vướng chuỗi và chuyển động reptation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuyển thủy tinh Tg** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sự vướng chuỗi và chuyển động reptation
 
 Chuỗi dài không thể đi xuyên qua nhau. Chúng bị ràng buộc tô-pô bởi các chuỗi lân cận và tạo mạng vướng.
@@ -171,6 +184,8 @@ Chuỗi dài không thể đi xuyên qua nhau. Chúng bị ràng buộc tô-pô 
 Ở thời gian dài hơn và nhiệt độ đủ cao, chuỗi có thể trượt dọc một “ống” hiệu dụng do các chuỗi xung quanh tạo ra. Chuyển động này gọi là **reptation**.
 
 Đây là lý do độ nhớt của polymer nóng chảy tăng rất mạnh khi khối lượng phân tử vượt ngưỡng vướng chuỗi.
+
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Sự vướng chuỗi và chuyển động reptation** xác định đầu vào; **Chuyển thủy tinh Tg** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Nóng chảy Tm và độ kết tinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuyển thủy tinh Tg
 
@@ -185,6 +200,8 @@ Trên `Tg`, các đoạn mạch có nhiều tự do hơn; vật liệu có thể
 Vì đây là hiện tượng động học, `Tg` quan sát được phụ thuộc tốc độ gia nhiệt và tần số phép đo.
 
 Cùng một polymer có thể trông cứng dưới tác động rất nhanh nhưng mềm hơn dưới tải kéo dài.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Nóng chảy Tm và độ kết tinh** tiếp nhận điểm tựa từ **Chuyển thủy tinh Tg** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết ngang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nóng chảy Tm và độ kết tinh
 
@@ -206,6 +223,8 @@ Với polymer vinyl có nhóm thế, thường phân biệt:
 
 Trật tự lập thể tốt giúp chuỗi đóng gói đều hơn và thuận lợi cho kết tinh.
 
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, sau nội dung của **Nóng chảy Tm và độ kết tinh**, **Liên kết ngang** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Đàn hồi cao su là một “lò xo entropy”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết ngang
 
 Liên kết ngang cộng hóa trị nối các chuỗi và hạn chế dòng chảy vĩnh viễn.
@@ -216,6 +235,8 @@ Mật độ liên kết ngang cao tạo **nhựa nhiệt rắn (thermoset)**: m�
 
 Lưu hóa cao su là ví dụ kinh điển; cầu sulfur hạn chế trượt vĩnh viễn giữa chuỗi.
 
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Đàn hồi cao su là một “lò xo entropy”** tiếp nhận điểm tựa từ **Liên kết ngang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đàn nhớt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đàn hồi cao su là một “lò xo entropy”
 
 Khi cao su bị kéo, chuỗi duỗi hơn và số cấu dạng có thể có giảm.
@@ -223,6 +244,8 @@ Khi cao su bị kéo, chuỗi duỗi hơn và số cấu dạng có thể có gi
 Hệ có xu hướng trở về trạng thái cuộn hơn vì trạng thái đó có entropy cấu dạng cao hơn.
 
 Do đó lực hồi của cao su có thành phần entropy lớn. Đây là ví dụ cho tính chất cơ học vĩ mô xuất phát từ thống kê cấu dạng phân tử, không chỉ từ liên kết bị kéo như lò xo cơ học.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Tính đàn nhớt** tiếp nhận điểm tựa từ **Đàn hồi cao su là một “lò xo entropy”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương đương thời gian–nhiệt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tính đàn nhớt
 
@@ -242,6 +265,8 @@ Dưới biến dạng cố định, ứng suất giảm theo thời gian vì c�
 
 **Phân tích cơ động (dynamic mechanical analysis, DMA)** dùng môđun lưu trữ `E'` và môđun mất mát `E''` để tách phần năng lượng được lưu và phần bị tiêu tán.
 
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Tương đương thời gian–nhiệt độ** tiếp nhận điểm tựa từ **Tính đàn nhớt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất hóa dẻo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tương đương thời gian–nhiệt độ
 
 Tăng nhiệt độ làm chuyển động phân tử nhanh lên.
@@ -252,6 +277,8 @@ Bằng cách dịch các đường cong đàn nhớt theo trục thời gian/t�
 
 Phương pháp chỉ hợp lý khi cơ chế thư giãn không thay đổi trong vùng ghép. Nếu xuất hiện chuyển pha hoặc cơ chế mới, phép dịch có thể thất bại.
 
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Chất hóa dẻo** tiếp nhận điểm tựa từ **Tương đương thời gian–nhiệt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung dịch polymer và chất lượng dung môi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất hóa dẻo
 
 Phân tử nhỏ chen giữa các chuỗi có thể tăng thể tích tự do và khả năng chuyển động, từ đó giảm `Tg`.
@@ -259,6 +286,8 @@ Phân tử nhỏ chen giữa các chuỗi có thể tăng thể tích tự do v�
 Chất hóa dẻo làm PVC mềm là ví dụ quen thuộc.
 
 Đánh đổi là chất hóa dẻo có thể di chuyển ra ngoài theo thời gian, làm tính chất thay đổi và tạo vấn đề môi trường hoặc sức khỏe tùy hóa chất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Dung dịch polymer và chất lượng dung môi** tiếp nhận điểm tựa từ **Chất hóa dẻo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gia công định hình là một phần của cấu trúc vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dung dịch polymer và chất lượng dung môi
 
@@ -269,6 +298,8 @@ Lý thuyết Flory–Huggins mô tả năng lượng tự do trộn bằng entro
 Vì một chuỗi lớn đóng góp ít đơn vị chuyển động độc lập hơn cùng số monomer rời, entropy trộn trên mỗi monomer nhỏ hơn nhiều so với phân tử nhỏ.
 
 Do đó chỉ một bất lợi enthalpy vừa phải cũng có thể đủ gây tách pha.
+
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Gia công định hình là một phần của cấu trúc vật liệu** tiếp nhận điểm tựa từ **Dung dịch polymer và chất lượng dung môi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân hủy và lão hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gia công định hình là một phần của cấu trúc vật liệu
 
@@ -292,6 +323,8 @@ Sợi polymer sau kéo có thể bền hơn theo phương kéo vì chuỗi đư�
 
 Vì vậy cùng một **cấp nhựa thương mại (resin grade)** vẫn có thể cho tính chất khác nhau nếu lịch sử gia công khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Phân hủy và lão hóa** tiếp nhận điểm tựa từ **Gia công định hình là một phần của cấu trúc vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tái chế và thiết kế vòng đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân hủy và lão hóa
 
 Chuỗi polymer có thể bị phá hủy bởi:
@@ -308,6 +341,8 @@ Chuỗi polymer có thể bị phá hủy bởi:
 Ngược lại, oxy hóa hoặc bức xạ đôi khi tạo thêm liên kết ngang, làm vật liệu cứng và giòn hơn.
 
 Chất chống oxy hóa và chất hấp thụ UV làm chậm lão hóa nhưng không loại bỏ hoàn toàn suy giảm theo thời gian.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Tái chế và thiết kế vòng đời** tiếp nhận điểm tựa từ **Phân hủy và lão hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polymer sinh học và polymer có trình tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tái chế và thiết kế vòng đời
 
@@ -331,6 +366,8 @@ Tái chế dễ hơn khi sản phẩm dùng ít loại polymer không tương h�
 
 Tính tuần hoàn vì vậy bắt đầu từ thiết kế vật liệu chứ không phải khi chất thải đã hình thành.
 
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Polymer sinh học và polymer có trình tự** tiếp nhận điểm tựa từ **Tái chế và thiết kế vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao hai mẫu polyethylene cùng công thức lặp nhưng tính chất khác nhau?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Polymer sinh học và polymer có trình tự
 
 Protein, DNA, cellulose và cao su tự nhiên đều là polymer sinh học.
@@ -338,6 +375,8 @@ Protein, DNA, cellulose và cao su tự nhiên đều là polymer sinh học.
 Protein và acid nucleic có trình tự monomer được kiểm soát rất cao, trong khi polyethylene hàng hóa chủ yếu được mô tả bằng phân bố chiều dài, nhánh và độ kết tinh hơn là một trình tự duy nhất.
 
 Polymer tổng hợp có trình tự kiểm soát là vùng giao giữa hóa polymer, hóa sinh và vật liệu thông tin.
+
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Polymer sinh học và polymer có trình tự** cho ta quy tắc; **Ví dụ suy luận: vì sao hai mẫu polyethylene cùng công thức lặp nhưng tính chất khác nhau?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao tăng khối lượng phân tử có thể làm gia công khó hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ suy luận: vì sao hai mẫu polyethylene cùng công thức lặp nhưng tính chất khác nhau?
 
@@ -354,6 +393,8 @@ kiến trúc chuỗi
 → mật độ + cơ tính + tính thấm
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Ví dụ suy luận: vì sao hai mẫu polyethylene cùng công thức lặp nhưng tính chất khác nhau?** cho ta quy tắc; **Ví dụ suy luận: vì sao tăng khối lượng phân tử có thể làm gia công khó hơn?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao tăng khối lượng phân tử có thể làm gia công khó hơn?
 
 Chuỗi dài hơn thường tạo nhiều vướng hơn, làm độ bền cơ tăng nhưng độ nhớt nóng chảy cũng tăng mạnh.
@@ -361,6 +402,8 @@ Chuỗi dài hơn thường tạo nhiều vướng hơn, làm độ bền cơ t�
 Vì vậy vật liệu có tính cơ học tốt hơn có thể cần nhiệt độ hoặc áp suất gia công cao hơn.
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) giữa **hiệu năng cơ học và khả năng gia công**.
+
+> **Chuyển mạch:** Trong **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Ví dụ suy luận: vì sao tăng khối lượng phân tử có thể làm gia công khó hơn?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -384,6 +427,8 @@ Không. Tốc độ phân hủy phụ thuộc nhiệt độ, nước, vi sinh v�
 
 Không. Cần thêm khối lượng phân tử, phân bố, nhánh, tacticity, độ kết tinh, phụ gia và lịch sử gia công.
 
+> **Chuyển mạch:** Ở chặng này của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy hình dung polymer như **mạng các sợi phân tử luôn chuyển động**:
@@ -402,4 +447,4 @@ Khi đánh giá một polymer, luôn cần hỏi: **nhiệt độ bao nhiêu, th
 
 Xem tiếp: [Chất bán dẫn](./03_semiconductors.md), [Vật liệu nano](./04_nanomaterials.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

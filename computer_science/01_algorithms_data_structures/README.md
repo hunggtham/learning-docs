@@ -1,6 +1,6 @@
 # Algorithms & dữ liệu (data / 데이터) Structures — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** Đọc **Algorithms & dữ liệu (data / 데이터) Structures — lĩnh vực (domain / 도메인) Hub** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Algorithms & dữ liệu (data / 데이터) Structures — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Khi nào chuyển từ Basic sang Advanced?** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Phần nền tảng của lĩnh vực (domain / 도메인) này nằm tại [`../basic/01_algorithms_data_structures/`](../basic/01_algorithms_data_structures/). Đây là nơi xây mô hình tư duy (mental model / 사고 모델) về algorithmic thinking, tính đúng đắn (correctness / 정확성), độ phức tạp (complexity / 복잡도), bộ nhớ (memory / 메모리)/dữ liệu (data / 데이터) bố cục (layout / 레이아웃), array/danh sách (list / 목록)/ngăn xếp (stack / 스택)/hàng đợi (queue / 큐), hashing, trees, graphs, sorting/searching, động (dynamic / 동적) programming, randomized/online algorithms và độ phức tạp (complexity / 복잡도) reductions.
 
@@ -22,4 +22,4 @@ Foundation nên đủ để trả lời được vì sao biểu diễn (represen
 
 Advanced DSA hiện bao gồm các cấu trúc và thuật toán sâu hơn như balanced/augmented trees, B/B+cây (tree / 트리), skip danh sách (list / 목록), Fenwick/Segment cây (tree / 트리), sparse bảng (table / 테이블), luồng (flow / 흐름)/matching, suffix structures, probabilistic structures, reduction/NP lập luận (reasoning / 추론) và hiện thực (implementation / 구현) tương ứng trong C, Java và JavaScript.
 
-> **Bàn giao:** Sau **Khi nào chuyển từ Basic sang Advanced?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Khi nào chuyển từ Basic sang Advanced?**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

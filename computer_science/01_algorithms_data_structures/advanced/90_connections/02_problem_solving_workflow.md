@@ -1,6 +1,6 @@
 # Quy trình giải bài DSA và thiết kế thuật toán
 
-> **Mạch đọc:** Đọc **Quy trình giải bài DSA và thiết kế thuật toán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Đọc đề như một specification** sang **2. Viết lại bài toán bằng một câu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quy trình giải bài DSA và thiết kế thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đọc đề như một specification** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Viết lại bài toán bằng một câu** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Problem-Solving Workflow / 문제 해결 흐름**
 
@@ -43,6 +43,8 @@ walk          -> có thể lặp
 
 Nếu terminology chưa rõ, thuật toán chưa thể bắt đầu chắc chắn.
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **2. Viết lại bài toán bằng một câu** tiếp nhận điểm tựa từ **1. Đọc đề như một specification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tách story khỏi computational mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Viết lại bài toán bằng một câu
 
 Một kỹ thuật đơn giản nhưng mạnh:
@@ -57,6 +59,8 @@ Câu này ngay lập tức làm lộ lĩnh vực (domain / 도메인) thích h�
 
 Nếu chưa viết được bài toán bằng câu ngắn, story tầng (layer / 계층) vẫn đang che mô hình thật.
 
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **3. Tách story khỏi computational mô hình (model / 모델)** tiếp nhận điểm tựa từ **2. Viết lại bài toán bằng một câu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Ràng buộc là ngân sách độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Tách story khỏi computational mô hình (model / 모델)
 
 “Thành phố” có thể là đỉnh. “Chuyến bay” là cạnh. “Khóa và cửa” có thể biến trạng thái thành `(position,keyMask)`. “Booking” là interval. “Undo” là ngăn xếp (stack / 스택). “Mạng lưới phụ thuộc” là DAG.
@@ -64,6 +68,8 @@ Nếu chưa viết được bài toán bằng câu ngắn, story tầng (layer /
 Story chỉ là tên gọi. Thuật toán làm việc trên cấu trúc toán học bên dưới.
 
 Một thuật toán đúng trên mô hình sai vẫn giải sai vấn đề.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **4. Ràng buộc là ngân sách độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **3. Tách story khỏi computational mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Đừng chỉ nhìn n; tìm mọi tham số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Ràng buộc là ngân sách độ phức tạp (complexity / 복잡도)
 
@@ -81,6 +87,8 @@ Q ~ 10^5        -> preprocessing/index có thể rất đáng
 
 Nhưng các ràng buộc (constraints / 제약조건들) giúp loại nhanh những ý tưởng bất khả thi.
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **5. Đừng chỉ nhìn n; tìm mọi tham số** tiếp nhận điểm tựa từ **4. Ràng buộc là ngân sách độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tìm baseline đúng trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Đừng chỉ nhìn n; tìm mọi tham số
 
 Đồ thị (graph / 그래프) có `V` và `E`. String matching có `n` và `m`. Top-K có `n` và `k`. Knapsack có `n` và `W`.
@@ -94,6 +102,8 @@ O(n\log k)
 có thể tốt hơn nhiều `O(n log n)` khi `k` nhỏ.
 
 Giữ tham số riêng giúp thấy cấu trúc (structure / 구조) mà việc ép tất cả thành một `n` sẽ che mất.
+
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **6. Tìm baseline đúng trước** tiếp nhận điểm tựa từ **5. Đừng chỉ nhìn n; tìm mọi tham số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Hỏi: “Tôi đang tính lại cái gì?”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Tìm baseline đúng trước
 
@@ -113,6 +123,8 @@ Phạm vi (range / 범위) Sum brute force làm lộ rằng cùng prefix bị c�
 
 Memoization làm lộ rằng nhiều nhánh recursion đang tính lại cùng trạng thái (state / 상태).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **7. Hỏi: “Tôi đang tính lại cái gì?”** tiếp nhận điểm tựa từ **6. Tìm baseline đúng trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Thiết kế trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Hỏi: “Tôi đang tính lại cái gì?”
 
 Đây là câu hỏi tối ưu hóa quan trọng nhất.
@@ -130,6 +142,8 @@ recompute aggregate sau mỗi update
 
 Cấu trúc (structure / 구조) thường xuất hiện để **materialize một summary** giúp tránh recomputation.
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **8. Thiết kế trạng thái (state / 상태)** tiếp nhận điểm tựa từ **7. Hỏi: “Tôi đang tính lại cái gì?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Nhận diện trạng thái (state / 상태) explosion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Thiết kế trạng thái (state / 상태)
 
 Một trạng thái (state / 상태) tốt phải đủ thông tin để tương lai được xác định, nhưng không giữ lịch sử thừa.
@@ -144,6 +158,8 @@ Ví dụ grid có key/door:
 Nếu hai lịch sử khác nhau dẫn tới cùng trạng thái (state / 상태) và từ đó mọi hành động (action / 동작)/chi phí (cost / 비용) tương lai tương đương, ta có thể gộp chúng.
 
 Đây là nền tảng của memoization, DP và state-space đồ thị (graph / 그래프).
+
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **9. Nhận diện trạng thái (state / 상태) explosion** tiếp nhận điểm tựa từ **8. Thiết kế trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Dense hay Sparse trạng thái (state / 상태)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Nhận diện trạng thái (state / 상태) explosion
 
@@ -165,6 +181,8 @@ V * stops
 
 Một DP chuyển tiếp (transition / 전이) `O(1)` vẫn vô dụng nếu số trạng thái (state / 상태) là `10^12`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **10. Dense hay Sparse trạng thái (state / 상태)?** tiếp nhận điểm tựa từ **9. Nhận diện trạng thái (state / 상태) explosion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Chọn biểu diễn (representation / 표현) trước thuật toán chi tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Dense hay Sparse trạng thái (state / 상태)?
 
 Nếu phần lớn trạng thái (state / 상태) có thể xuất hiện, array/bảng (table / 테이블) dense thường nhanh và bộ nhớ (memory / 메모리) predictable.
@@ -172,6 +190,8 @@ Nếu phần lớn trạng thái (state / 상태) có thể xuất hiện, array
 Nếu chỉ một phần rất nhỏ reachable, băm (hash / 해시) Map/Set có thể tiết kiệm bộ nhớ (memory / 메모리) dù lookup đắt hơn.
 
 Đừng chỉ hỏi “DP array hay map”; hãy hỏi density của reachable trạng thái (state / 상태).
+
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **11. Chọn biểu diễn (representation / 표현) trước thuật toán chi tiết** tiếp nhận điểm tựa từ **10. Dense hay Sparse trạng thái (state / 상태)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Viết bất biến (invariant / 불변식) trước vòng lặp (loop / 루프) phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Chọn biểu diễn (representation / 표현) trước thuật toán chi tiết
 
@@ -201,6 +221,8 @@ Hash Map
 
 Biểu diễn (representation / 표현) quyết định chi phí (cost / 비용) của thao tác (operation / 연산) tiếp theo.
 
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **12. Viết bất biến (invariant / 불변식) trước vòng lặp (loop / 루프) phức tạp** tiếp nhận điểm tựa từ **11. Chọn biểu diễn (representation / 표현) trước thuật toán chi tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. bất biến (invariant / 불변식) cần đủ mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Viết bất biến (invariant / 불변식) trước vòng lặp (loop / 루프) phức tạp
 
 Nếu không thể nói vòng lặp (loop / 루프) đang bảo vệ điều gì, mã (code / 코드) rất dễ biến thành trial-and-error.
@@ -217,6 +239,8 @@ Monotonic deque:
 
 > deque chứa đúng candidate chưa hết hạn, theo thứ tự giá trị đơn điệu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **13. bất biến (invariant / 불변식) cần đủ mạnh** tiếp nhận điểm tựa từ **12. Viết bất biến (invariant / 불변식) trước vòng lặp (loop / 루프) phức tạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Tách tính đúng đắn (correctness / 정확성) và độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. bất biến (invariant / 불변식) cần đủ mạnh
 
 “Inorder prefix đã sorted” chưa đủ chứng minh sorting nếu không đảm bảo các phần tử không bị mất hoặc nhân đôi.
@@ -230,6 +254,8 @@ candidate completeness
 ```
 
 Nó phải đủ mạnh để kết hợp với điều kiện dừng suy ra postcondition.
+
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **14. Tách tính đúng đắn (correctness / 정확성) và độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **13. bất biến (invariant / 불변식) cần đủ mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. mẫu (pattern / 패턴) chứng minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Tách tính đúng đắn (correctness / 정확성) và độ phức tạp (complexity / 복잡도)
 
@@ -249,6 +275,8 @@ Một thuật toán có thể đúng nhưng quá chậm; hoặc nhanh nhưng sai
 
 Đừng dùng “Big-O tốt” như bằng chứng đúng đắn.
 
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **15. mẫu (pattern / 패턴) chứng minh** tiếp nhận điểm tựa từ **14. Tách tính đúng đắn (correctness / 정확성) và độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Khi baseline O(n²), thử những câu hỏi nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. mẫu (pattern / 패턴) chứng minh
 
 Các mẫu (pattern / 패턴) phổ biến:
@@ -267,6 +295,8 @@ residual/certificate proof
 
 Nhận diện mẫu (pattern / 패턴) chứng minh thường quan trọng hơn nhận diện tên thuật toán.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **16. Khi baseline O(n²), thử những câu hỏi nào?** tiếp nhận điểm tựa từ **15. mẫu (pattern / 패턴) chứng minh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Khi recursion exponential, thử gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Khi baseline O(n²), thử những câu hỏi nào?
 
 Nếu đang xét mọi cặp:
@@ -280,6 +310,8 @@ sweep line có biến pair interaction thành event stream không?
 ```
 
 Không có một mẹo duy nhất; mục tiêu là tìm **thông tin nào giúp loại nhiều ứng viên cùng lúc**.
+
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **17. Khi recursion exponential, thử gì?** tiếp nhận điểm tựa từ **16. Khi baseline O(n²), thử những câu hỏi nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Khi có nhiều truy vấn (query / 쿼리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Khi recursion exponential, thử gì?
 
@@ -295,6 +327,8 @@ parameter nhỏ không?                -> FPT / bitmask DP
 ```
 
 Cây tìm kiếm lớn thường được giảm bằng cách hợp nhất trạng thái (state / 상태) hoặc loại nhánh.
+
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **18. Khi có nhiều truy vấn (query / 쿼리)** tiếp nhận điểm tựa từ **17. Khi recursion exponential, thử gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Khi vừa cập nhật (update / 업데이트) vừa truy vấn (query / 쿼리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Khi có nhiều truy vấn (query / 쿼리)
 
@@ -317,6 +351,8 @@ C_{bản dựng (build / 빌드)}+Q\cdot C_{truy vấn (query / 쿼리)}
 
 với cách không tiền xử lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **19. Khi vừa cập nhật (update / 업데이트) vừa truy vấn (query / 쿼리)** tiếp nhận điểm tựa từ **18. Khi có nhiều truy vấn (query / 쿼리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Chú ý mục tiêu (objective / 목표) thay đổi thuật toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Khi vừa cập nhật (update / 업데이트) vừa truy vấn (query / 쿼리)
 
 Nếu prefix sum bị phá bởi cập nhật (update / 업데이트), chuyển sang cấu trúc (structure / 구조) động như Fenwick/Segment cây (tree / 트리).
@@ -324,6 +360,8 @@ Nếu prefix sum bị phá bởi cập nhật (update / 업데이트), chuyển 
 Nếu sorted array bị phá bởi insert/delete thường xuyên, chuyển sang balanced cây (tree / 트리) hoặc cấu trúc (structure / 구조) khác.
 
 Cập nhật (update / 업데이트)/truy vấn (query / 쿼리) sự đánh đổi (trade-off / 트레이드오프) chính là lý do nhiều dữ liệu (data / 데이터) structures tồn tại.
+
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **20. Chú ý mục tiêu (objective / 목표) thay đổi thuật toán** tiếp nhận điểm tựa từ **19. Khi vừa cập nhật (update / 업데이트) vừa truy vấn (query / 쿼리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. trường hợp biên (edge case / 경계 사례) phải sinh từ giả định (assumption / 가정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Chú ý mục tiêu (objective / 목표) thay đổi thuật toán
 
@@ -338,6 +376,8 @@ union length                    -> merge/sweep
 
 Đừng nhận diện thuật toán chỉ từ “dữ liệu là interval”. mục tiêu (objective / 목표) quyết định cấu trúc (structure / 구조) lập luận (reasoning / 추론).
 
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **20. Chú ý mục tiêu (objective / 목표) thay đổi thuật toán** cho ta quy tắc; **21. trường hợp biên (edge case / 경계 사례) phải sinh từ giả định (assumption / 가정)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **22. Integer Overflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. trường hợp biên (edge case / 경계 사례) phải sinh từ giả định (assumption / 가정)
 
 Nếu Dijkstra yêu cầu non-negative weight, kiểm thử (test / 테스트) cạnh âm.
@@ -349,6 +389,8 @@ Nếu comparator yêu cầu transitive, kiểm thử (test / 테스트) equal/ti
 Nếu recursion độ sâu (depth / 깊이) có thể `n`, kiểm thử (test / 테스트) skewed cây (tree / 트리)/đường dẫn (path / 경로) đồ thị (graph / 그래프).
 
 Edge cases tốt nhất xuất phát từ **điều kiện mà proof sử dụng**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **21. trường hợp biên (edge case / 경계 사례) phải sinh từ giả định (assumption / 가정)** cho ta quy tắc; **22. Integer Overflow** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. Floating điểm (point / 지점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Integer Overflow
 
@@ -366,6 +408,8 @@ mid = lo + (hi - lo) / 2
 
 Distance, prefix sum, count và multiplication phải được bound trước khi chọn kiểu số.
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **22. Integer Overflow** xác định đầu vào; **23. Floating điểm (point / 지점)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. Language-Specific rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Floating điểm (point / 지점)
 
 Nếu comparator dùng epsilon thiếu nhất quán, có thể phá transitivity và làm sort/cây (tree / 트리) sai.
@@ -373,6 +417,8 @@ Nếu comparator dùng epsilon thiếu nhất quán, có thể phá transitivity
 Hình học (geometry / 기하학) predicate gần 0 có thể đổi dấu do rounding.
 
 Numeric ngữ nghĩa (semantics / 의미론) là một phần của specification.
+
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **24. Language-Specific rà soát (review / 검토)** tiếp nhận điểm tựa từ **23. Floating điểm (point / 지점)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Dry-Run như một trạng thái (state / 상태) dấu vết (trace / 추적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Language-Specific rà soát (review / 검토)
 
@@ -417,6 +463,8 @@ UTF-16 semantics
 
 Một thuật toán trừu tượng đúng vẫn cần hiện thực (implementation / 구현) phù hợp ngôn ngữ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **25. Dry-Run như một trạng thái (state / 상태) dấu vết (trace / 추적)** tiếp nhận điểm tựa từ **24. Language-Specific rà soát (review / 검토)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. kiểm thử (test / 테스트) Oracle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Dry-Run như một trạng thái (state / 상태) dấu vết (trace / 추적)
 
 Đừng chỉ đọc mã (code / 코드) bằng mắt. Tạo đầu vào (input / 입력) nhỏ nhưng khó chịu và ghi:
@@ -435,6 +483,8 @@ Mỗi chuyển tiếp (transition / 전이) phải giải thích được bằng
 
 Nếu một biến cập nhật mà không biết nó bảo vệ tính chất nào, đó là dấu hiệu thiết kế chưa rõ.
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **26. kiểm thử (test / 테스트) Oracle** tiếp nhận điểm tựa từ **25. Dry-Run như một trạng thái (state / 상태) dấu vết (trace / 추적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Property-Based Testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. kiểm thử (test / 테스트) Oracle
 
 Với đầu vào (input / 입력) nhỏ, dùng giải pháp chậm nhưng rõ ràng làm oracle.
@@ -449,6 +499,8 @@ custom map     vs standard map
 
 Differential testing bắt hiện thực (implementation / 구현) bug rất hiệu quả.
 
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **27. Property-Based Testing** tiếp nhận điểm tựa từ **26. kiểm thử (test / 테스트) Oracle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Adversarial kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Property-Based Testing
 
 Thay vì chỉ kiểm thử (test / 테스트) đầu ra (output / 출력) cụ thể, kiểm thử (test / 테스트) tính chất:
@@ -461,6 +513,8 @@ BFS dist[v] <= dist[u]+1 trên edge tree phù hợp
 ```
 
 Tính chất thường gần proof hơn example kiểm thử (test / 테스트).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **28. Adversarial kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **27. Property-Based Testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. độ phức tạp (complexity / 복잡도) rà soát (review / 검토) toàn chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Adversarial kiểm thử (test / 테스트)
 
@@ -479,6 +533,8 @@ maximum recursion depth
 
 Adversarial kiểm thử (test / 테스트) kiểm tra đúng nơi asymptotic hoặc bất biến (invariant / 불변식) dễ vỡ nhất.
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **28. Adversarial kiểm thử (test / 테스트)** xác định đầu vào; **29. độ phức tạp (complexity / 복잡도) rà soát (review / 검토) toàn chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **30. không gian (space / 공간) rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. độ phức tạp (complexity / 복잡도) rà soát (review / 검토) toàn chuỗi xử lý (pipeline / 파이프라인)
 
 Nếu preprocessing `O(n log n)` và mỗi truy vấn (query / 쿼리) `O(log n)`, với `Q` truy vấn (query / 쿼리):
@@ -492,6 +548,8 @@ Nếu helper bên trong vòng lặp (loop / 루프) là `O(n)`, phải tính nó
 Nếu `sort()` được gọi trong mỗi iteration, độ phức tạp (complexity / 복잡도) có thể lớn hơn trực giác rất nhiều.
 
 Không chỉ phân tích “cốt lõi (core / 핵심) vòng lặp (loop / 루프)”.
+
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **29. độ phức tạp (complexity / 복잡도) rà soát (review / 검토) toàn chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **30. không gian (space / 공간) rà soát (review / 검토)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **31. đầu ra (output / 출력) kích thước (size / 크기) Lower Bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. không gian (space / 공간) rà soát (review / 검토)
 
@@ -509,6 +567,8 @@ adjacency edges
 
 `O(n)` bộ nhớ (memory / 메모리) có thể vẫn vượt limit vì hệ số lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **31. đầu ra (output / 출력) kích thước (size / 크기) Lower Bound** tiếp nhận điểm tựa từ **30. không gian (space / 공간) rà soát (review / 검토)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Stop tối ưu hóa (optimization / 최적화) khi đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. đầu ra (output / 출력) kích thước (size / 크기) Lower Bound
 
 Nếu phải xuất `k` kết quả, độ phức tạp (complexity / 복잡도) ít nhất `Ω(k)`.
@@ -522,6 +582,8 @@ cost tìm vùng kết quả
 cost materialize output
 ```
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **32. Stop tối ưu hóa (optimization / 최적화) khi đủ** tiếp nhận điểm tựa từ **31. đầu ra (output / 출력) kích thước (size / 크기) Lower Bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Profile trước Micro-Optimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Stop tối ưu hóa (optimization / 최적화) khi đủ
 
 Nếu ràng buộc (constraint / 제약조건) cho phép `O(n²)` an toàn và solution đơn giản, đôi khi đó là lựa chọn tốt hơn một cấu trúc (structure / 구조) rất phức tạp.
@@ -529,6 +591,8 @@ Nếu ràng buộc (constraint / 제약조건) cho phép `O(n²)` an toàn và s
 Độ phức tạp mã (code / 코드) tạo bug và maintenance chi phí (cost / 비용).
 
 Mục tiêu là **đủ tốt với proof rõ**, không phải luôn dùng thuật toán mạnh nhất biết được.
+
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **33. Profile trước Micro-Optimization** tiếp nhận điểm tựa từ **32. Stop tối ưu hóa (optimization / 최적화) khi đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Từ Interview Solution tới môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Profile trước Micro-Optimization
 
@@ -546,6 +610,8 @@ network
 
 Đừng thay HashMap bằng custom cấu trúc (structure / 구조) chỉ từ trực giác nếu đường dẫn (path / 경로) đó chỉ chiếm 1% thời gian chạy (runtime / 런타임).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **34. Từ Interview Solution tới môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **33. Profile trước Micro-Optimization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Viết Solution ghi chú (note / 노트) sau khi giải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Từ Interview Solution tới môi trường vận hành (production / 운영 환경)
 
 Một solution algorithmic đúng còn cần:
@@ -562,6 +628,8 @@ failure recovery
 ```
 
 Môi trường vận hành (production / 운영 환경) hardening không thay đổi proof lõi nhưng mở rộng đặc tả hợp đồng (contract / 계약) của hệ thống.
+
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **35. Viết Solution ghi chú (note / 노트) sau khi giải** tiếp nhận điểm tựa từ **34. Từ Interview Solution tới môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Postmortem khi sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. Viết Solution ghi chú (note / 노트) sau khi giải
 
@@ -581,6 +649,8 @@ alternative approaches
 
 Cách này biến một bài giải đơn lẻ thành kiến thức tái sử dụng.
 
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **36. Postmortem khi sai** tiếp nhận điểm tựa từ **35. Viết Solution ghi chú (note / 노트) sau khi giải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Một quy trình 12 bước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. Postmortem khi sai
 
 Không chỉ sửa dòng mã (code / 코드). Hãy phân loại lỗi:
@@ -597,6 +667,8 @@ implementation bug
 ```
 
 Phân loại đúng giúp tránh lặp lại cùng kiểu lỗi ở bài khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình giải bài DSA và thiết kế thuật toán**, **36. Postmortem khi sai** xác định đầu vào; **37. Một quy trình 12 bước** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **38. Checklist trước khi nộp hoặc merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 37. Một quy trình 12 bước
 
@@ -617,6 +689,8 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 12. Ghi lại insight, không chỉ code.
 ```
 
+> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **37. Một quy trình 12 bước** xác định đầu vào; **38. Checklist trước khi nộp hoặc merge** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 38. Checklist trước khi nộp hoặc merge
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
@@ -634,6 +708,8 @@ Test adversarial đã có chưa?
 Có cách oracle nhỏ để đối chiếu không?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Quy trình giải bài DSA và thiết kế thuật toán**, **Mô hình tư duy** gom các mảnh từ **38. Checklist trước khi nộp hoặc merge** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Giải DSA là quá trình **giảm không gian bất định**: specification xác định câu hỏi, mô hình (model / 모델) xác định trạng thái (state / 상태), bất biến (invariant / 불변식) loại bỏ trạng thái sai, cấu trúc dữ liệu (data structure / 자료구조) lưu thông tin hữu ích, còn thuật toán quyết định thứ tự khai thác thông tin đó.
@@ -641,3 +717,5 @@ Có cách oracle nhỏ để đối chiếu không?
 Khi bí, đừng hỏi “mẫu này dùng thuật toán gì?”. Hãy quay lại hỏi: **baseline đang làm thừa công việc nào, trạng thái (state / 상태) nào thực sự ảnh hưởng tương lai, bất biến (invariant / 불변식) nào cho phép bỏ candidate, và cấu trúc (structure / 구조) nào materialize thông tin đó rẻ nhất?**
 
 Xem thêm: [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md), [Correctness & Invariants](../00_foundations/01_algorithm_correctness_and_invariants.md), [Complexity](../00_foundations/02_complexity_analysis.md), [Choose the Right Data Structure](./00_choose_the_right_data_structure.md), [Cross-Language Testing](../80_language_implementations/03_cross_language_testing_and_benchmarking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

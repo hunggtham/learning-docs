@@ -1,6 +1,6 @@
 # Backend cốt lõi (core / 핵심)
 
-> **Mạch đọc:** Đọc **Backend cốt lõi (core / 핵심)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **mạch học (learning flow / 학습 흐름)** sang **Chapters**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README backend domain](../README.md) là owner của **Backend cốt lõi**; file này điều phối các chapter contract, mechanism, failure mode và evidence dùng chung trước Java, Spring và Python. **Mạch học** cho thấy request đi qua những lớp nào; danh sách **Chapters** trỏ tới owner của từng cơ chế.
 
 Backend cốt lõi (core / 핵심) là lớp kiến thức chung đứng trước Java, Spring và Python. Nó mô tả
 backend như một hệ thống nhận yêu cầu (request / 요청), đọc/ghi trạng thái (state / 상태), phát side tác động (effect / 효과) và trả
@@ -8,8 +8,6 @@ backend như một hệ thống nhận yêu cầu (request / 요청), đọc/ghi
 quyết định backend không thuộc riêng một ngôn ngữ hay khung phần mềm (framework / 프레임워크).
 
 ## Mạch học (learning flow / 학습 흐름)
-Phần “Mạch học (learning flow / 학습 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 request lifecycle
@@ -25,8 +23,7 @@ request lifecycle
   → production case studies
 ```
 
-
-> **Chuyển mạch:** Từ **mạch học (learning flow / 학습 흐름)**, ta sang **Chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Mạch học cung cấp thứ tự prerequisite; danh sách Chapters chuyển thứ tự đó thành các owner có thể đọc và kiểm chứng. Đường đọc nâng cao sau đó gom lại các trục correctness, latency, durability và scale.
 
 ## Chapters
 
@@ -52,8 +49,7 @@ thuộc lòng.
 từ Khoa học máy tính (computer science / 컴퓨터 과학). Khi thêm chapter mới, cập nhật kiểm tra (audit / 감사) trước để tránh biến
 Backend cốt lõi (core / 핵심) thành một bản sao của cơ sở dữ liệu (database / 데이터베이스), mạng (network / 네트워크) hoặc khung phần mềm (framework / 프레임워크) thư viện (library / 라이브러리).
 
-
-> **Chuyển mạch:** Từ **Chapters**, ta sang **Đường đọc nâng cao** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Các chapter cung cấp cơ chế riêng; Đường đọc nâng cao đặt chúng trên cùng các câu hỏi xuyên lớp để người học kiểm tra trade-off và bằng chứng vận hành.
 
 ## Đường đọc nâng cao
 
@@ -73,4 +69,4 @@ khả năng quan sát (observability / 관측 가능성) tín hiệu (signal / �
 tên khung phần mềm (framework / 프레임워크) hoặc sản phẩm (product / 제품), hãy quay lại chapter tương ứng và viết lại ở mức
 đặc tả hợp đồng (contract / 계약).
 
-> **Bàn giao:** Sau **Đường đọc nâng cao**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Đường đọc nâng cao**, quay về [README backend domain](../README.md) để chọn nhánh Java, Spring hoặc Python mà không làm mất owner của backend core.

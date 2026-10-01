@@ -1,7 +1,6 @@
 # Advanced Computation & thông tin (information / 정보)
 
-> **Mạch đọc:** Đọc **Advanced Computation & thông tin (information / 정보)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **chuẩn gốc (canonical / 정본) chapters** sang **lập luận (reasoning / 추론) đường dẫn (path / 경로)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced Computation & thông tin (information / 정보)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) chapters** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Lập luận (reasoning / 추론) đường dẫn (path / 경로)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Thư viện (library / 라이브러리) này mở rộng từ [foundation Computation & Information](../../basic/00_computation_information/00_what_computer_science_studies.md). Các chapter tập trung vào formal lập luận (reasoning / 추론): computer có thể biểu diễn gì, tính được gì, kiểm chứng được gì, tài nguyên (resource / 자원) nào giới hạn computation, bất định (uncertainty / 불확실성) được đo thế nào và tương tác (interaction / 상호작용)/randomness thay đổi xác minh (verification / 확인) power ra sao.
 
@@ -16,8 +15,7 @@ Thư viện (library / 라이브러리) này mở rộng từ [foundation Comput
 7. [Complexity classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes](./06_complexity_classes_conp_pspace_exp_and_randomized_classes.md)
 8. [Interactive proofs, zero-knowledge và verifiable computation](./07_interactive_proofs_zero_knowledge_and_verifiable_computation.md)
 
-
-> **Chuyển mạch:** Từ **chuẩn gốc (canonical / 정본) chapters**, ta sang **lập luận (reasoning / 추론) đường dẫn (path / 경로)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Advanced Computation & thông tin (information / 정보)**, **Chuẩn gốc (canonical / 정본) chapters** xác định đầu vào; **Lập luận (reasoning / 추론) đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Các distinction bắt buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lập luận (reasoning / 추론) đường dẫn (path / 경로)
 
@@ -36,8 +34,7 @@ formal model
 
 Ba chapter đầu trả lời **computer có thể nhận biết và quyết định điều gì trong nguyên tắc**. Kolmogorov độ phức tạp (complexity / 복잡도) và thông tin (information / 정보) lý thuyết (theory / 이론) chuyển sang câu hỏi **một đối tượng (object / 객체)/phân phối (distribution / 분포) thực sự chứa bao nhiêu bất định (uncertainty / 불확실성) hoặc regularity**. Randomness phân biệt entropy thật với deterministic expansion và computational unpredictability. độ phức tạp (complexity / 복잡도) classes thêm giới hạn thời gian (time / 시간)/không gian (space / 공간)/randomness. Interactive proofs cho thấy xác minh (verification / 확인) power còn phụ thuộc tương tác (interaction / 상호작용), challenge và proof cấu trúc (structure / 구조).
 
-
-> **Chuyển mạch:** Từ **lập luận (reasoning / 추론) đường dẫn (path / 경로)**, ta sang **Các distinction bắt buộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Advanced Computation & thông tin (information / 정보)**, **Lập luận (reasoning / 추론) đường dẫn (path / 경로)** xác định đầu vào; **Các distinction bắt buộc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các distinction bắt buộc
 
@@ -63,8 +60,7 @@ proof of a relation
 
 Các distinction này là prerequisite cho static phân tích (analysis / 분석), cryptography, compression, randomized algorithms, cơ sở dữ liệu (database / 데이터베이스) encoding, machine học tập (learning / 학습) và verifiable các hệ thống (systems / 시스템들).
 
-
-> **Chuyển mạch:** Từ **Các distinction bắt buộc**, ta sang **liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced Computation & thông tin (information / 정보)**, sau nội dung của **Các distinction bắt buộc**, **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cách đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác
 
@@ -78,8 +74,7 @@ Các liên kết (connection / 연결) quan trọng:
 - hàng đợi (queue / 큐)/sức chứa (capacity / 용량)/chi phí (cost / 비용) của prover hoặc heavy computation → [`08_software_systems/advanced`](../../08_software_systems/advanced/README.md);
 - AI cross-entropy/suy luận (inference / 추론) các hệ thống (systems / 시스템들) → [`10_ai_foundations/advanced`](../../10_ai_foundations/advanced/README.md).
 
-
-> **Chuyển mạch:** Từ **liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác**, ta sang **Cách đọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Advanced Computation & thông tin (information / 정보)**, **Cách đọc** tiếp nhận điểm tựa từ **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cách đọc
 
@@ -111,4 +106,4 @@ Engineering system thực tế dùng concept này ở boundary nào?
 
 Mục tiêu cuối cùng là dùng lý thuyết (theory / 이론) để đặt đúng câu hỏi về giới hạn, không dùng lý thuyết (theory / 이론) như vocabulary trang trí.
 
-> **Bàn giao:** Sau **Cách đọc**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 formal models reductions and computability](./00_formal_models_reductions_and_computability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cách đọc**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

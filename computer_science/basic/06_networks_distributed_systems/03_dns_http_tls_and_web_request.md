@@ -1,7 +1,6 @@
 # DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web
 
-> **Mạch đọc:** Đọc **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc của URL** sang **DNS**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc của URL** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DNS** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Gõ một URL trông như một thao tác đơn giản, nhưng trình duyệt (browser / 브라우저) phải phân giải tên miền, tìm đường mạng, thiết lập kết nối truyền tải và ngữ cảnh bảo mật, trao đổi HTTP, nhận dữ liệu rồi phân tích và hiển thị nội dung. Chương này dùng một yêu cầu web để nối nhiều tầng của hệ thống mạng.
 
@@ -9,8 +8,7 @@ Gõ một URL trông như một thao tác đơn giản, nhưng trình duyệt (b
 
 `https://example.com:443/path?q=1` chứa lược đồ (scheme) `https`, máy chủ `example.com`, cổng tùy chọn, đường dẫn và chuỗi truy vấn. Scheme cho biết giao thức được kỳ vọng; tên miền không phải chính địa chỉ IP.
 
-
-> **Chuyển mạch:** Từ **Cấu trúc của URL**, ta sang **DNS** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **DNS** tiếp nhận điểm tựa từ **Cấu trúc của URL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết lập kết nối truyền tải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## DNS
 
@@ -22,8 +20,7 @@ DNS có thể chạy trên UDP hoặc TCP; các biến thể mã hóa như DoH v
 
 Phân phối nhiều địa chỉ bằng DNS không tự động tương đương với cân bằng tải có kiểm tra sức khỏe mạnh, vì hành vi bộ nhớ đệm (cache / 캐시) và resolver vẫn ảnh hưởng kết quả.
 
-
-> **Chuyển mạch:** Từ **DNS**, ta sang **Thiết lập kết nối truyền tải** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Thiết lập kết nối truyền tải** tiếp nhận điểm tựa từ **DNS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu của TLS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thiết lập kết nối truyền tải
 
@@ -31,8 +28,7 @@ Sau khi có địa chỉ đích và đường định tuyến, máy khách mở 
 
 Tái sử dụng kết nối giúp giảm chi phí phải bắt tay lại nhiều lần.
 
-
-> **Chuyển mạch:** Từ **Thiết lập kết nối truyền tải**, ta sang **Mục tiêu của TLS** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Mục tiêu của TLS** tiếp nhận điểm tựa từ **Thiết lập kết nối truyền tải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa HTTP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mục tiêu của TLS
 
@@ -46,8 +42,7 @@ Cơ chế khóa công khai được dùng để xác thực và thiết lập b�
 
 Xem [nền tảng mật mã học](../07_security_reliability/01_cryptography_foundations.md).
 
-
-> **Chuyển mạch:** Từ **Mục tiêu của TLS**, ta sang **Ngữ nghĩa HTTP** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Ngữ nghĩa HTTP** tiếp nhận điểm tựa từ **Mục tiêu của TLS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ đệm HTTP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngữ nghĩa HTTP
 
@@ -55,8 +50,7 @@ Một yêu cầu HTTP có phương thức, đích, header và phần thân tùy 
 
 HTTP/1.1 dùng định dạng văn bản và kết nối duy trì; HTTP/2 ghép nhiều luồng nhị phân trên một kết nối; HTTP/3 ánh xạ ngữ nghĩa HTTP lên các luồng QUIC. Ngữ nghĩa ứng dụng vẫn tương đối ổn định dù cơ chế đóng khung và truyền tải thay đổi.
 
-
-> **Chuyển mạch:** Từ **Ngữ nghĩa HTTP**, ta sang **Bộ nhớ đệm HTTP** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Bộ nhớ đệm HTTP** tiếp nhận điểm tựa từ **Ngữ nghĩa HTTP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cookie và phiên làm việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ nhớ đệm HTTP
 
@@ -64,8 +58,7 @@ Trình duyệt, CDN, proxy và máy chủ gốc đều có thể lưu phản h�
 
 `Cache-Control: max-age` xác định khoảng thời gian phản hồi còn được xem là mới. Khi cần kiểm tra lại, máy khách có thể gửi yêu cầu có điều kiện và nhận `304 Not Modified`. Nội dung nhạy cảm hoặc riêng theo người dùng cần sử dụng cẩn thận các chỉ thị như `private`, `no-store` và `Vary`.
 
-
-> **Chuyển mạch:** Từ **Bộ nhớ đệm HTTP**, ta sang **Cookie và phiên làm việc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Cookie và phiên làm việc** tiếp nhận điểm tựa từ **Bộ nhớ đệm HTTP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proxy, CDN và bộ cân bằng tải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cookie và phiên làm việc
 
@@ -73,8 +66,7 @@ HTTP hoạt động theo mô hình yêu cầu/phản hồi; trạng thái phiên
 
 Cookie tự nó không phải cơ chế xác thực. Nó là phương tiện lưu và truyền dữ liệu, thường chứa mã định danh phiên.
 
-
-> **Chuyển mạch:** Từ **Cookie và phiên làm việc**, ta sang **Proxy, CDN và bộ cân bằng tải** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Proxy, CDN và bộ cân bằng tải** tiếp nhận điểm tựa từ **Cookie và phiên làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một yêu cầu từ đầu đến cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Proxy, CDN và bộ cân bằng tải
 
@@ -82,8 +74,7 @@ TLS có thể kết thúc tại CDN hoặc bộ cân bằng tải, sau đó yêu
 
 Các header như `Forwarded` hoặc `X-Forwarded-*` truyền ngữ cảnh ban đầu theo quy ước và chỉ nên được tin cậy khi chúng đến từ proxy nằm trong vùng kiểm soát.
 
-
-> **Chuyển mạch:** Từ **Proxy, CDN và bộ cân bằng tải**, ta sang **Một yêu cầu từ đầu đến cuối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Một yêu cầu từ đầu đến cuối** tiếp nhận điểm tựa từ **Proxy, CDN và bộ cân bằng tải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một yêu cầu từ đầu đến cuối
 
@@ -113,15 +104,13 @@ trình duyệt phân tích / hiển thị / thực thi
 
 Mỗi mũi tên là một ranh giới có kiểu lỗi, độ trễ và đặc tính bảo mật riêng.
 
-
-> **Chuyển mạch:** Từ **Một yêu cầu từ đầu đến cuối**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Mô hình tư duy** gom các mảnh từ **Một yêu cầu từ đầu đến cuối** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu nhầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
 > Một yêu cầu web không đơn giản là “HTTP đi tới máy chủ”. Nó là một **chuỗi máy trạng thái (state machine / 상태 머신) và ranh giới tin cậy**, kèm theo bộ nhớ đệm (cache / 캐시) và proxy có thể kết thúc một kết nối rồi tạo kết nối mới.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những hiểu nhầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những hiểu nhầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu nhầm thường gặp
 
@@ -131,11 +120,10 @@ Mỗi mũi tên là một ranh giới có kiểu lỗi, độ trễ và đặc t
 
 **“HTTP không lưu trạng thái nên ứng dụng không thể có phiên.”** Không đúng. Trạng thái phiên được xây thêm bằng cookie, đơn vị từ (token / 토큰) và vùng lưu trữ phía máy chủ.
 
-
-> **Chuyển mạch:** Từ **Những hiểu nhầm thường gặp**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**, **Những hiểu nhầm thường gặp** đã nêu tiêu chí phân biệt, còn **Kết nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Luồng đầy đủ được mở rộng thêm trong [Trình duyệt → Cơ sở dữ liệu](../90_connections/01_browser_to_database_request.md). Chi tiết bảo mật nằm ở [danh tính và xác thực](../07_security_reliability/02_identity_authentication_and_authorization.md), còn truy cập dữ liệu được nối với [thực thi truy vấn](../05_data_databases/03_indexes_and_query_execution.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 network layers packets and encapsulation](./00_network_layers_packets_and_encapsulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

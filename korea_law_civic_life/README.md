@@ -1,7 +1,6 @@
 # Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc
 
-> **Mạch đọc:** Đọc **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phạm vi** sang **Bản đồ nội dung**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phạm vi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ nội dung** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Korea Law, Civic & Everyday Life thư viện kiến thức (knowledge library / 지식 라이브러리)**
 >
@@ -15,8 +14,7 @@ Thư viện đi từ cấu trúc nền tảng của nhà nước và pháp luậ
 
 Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví dụ **hợp đồng lao động (근로계약서)**, **tiền đặt cọc thuê nhà (보증금)**, **thông báo hành chính (통지서)**, **xử lý hành chính (처분)**, **khiếu nại hành chính (행정심판)**.
 
-
-> **Chuyển mạch:** Từ **Phạm vi**, ta sang **Bản đồ nội dung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Bản đồ nội dung** tiếp nhận điểm tựa từ **Phạm vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách dùng thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bản đồ nội dung
 
@@ -36,8 +34,7 @@ Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví d
 14. [Glossary Việt–Hàn–Anh](GLOSSARY.md)
 15. [Nguồn chính thức](SOURCES.md)
 
-
-> **Chuyển mạch:** Từ **Bản đồ nội dung**, ta sang **Cách dùng thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Cách dùng thư viện** tiếp nhận điểm tựa từ **Bản đồ nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc trung lập civic/political** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách dùng thư viện
 
@@ -45,18 +42,16 @@ Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví d
 
 Khi một vấn đề có thể làm thay đổi quyền, nghĩa vụ, tiền bạc hoặc tình trạng cư trú của cá nhân, tài liệu này chỉ đóng vai trò **bản đồ**. Hãy kiểm tra văn bản đang có hiệu lực trên `국가법령정보센터`, hướng dẫn của cơ quan có thẩm quyền và, nếu cần, sử dụng tư vấn chuyên môn phù hợp.
 
-
-> **Chuyển mạch:** Từ **Cách dùng thư viện**, ta sang **Nguyên tắc trung lập civic/political** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Nguyên tắc trung lập civic/political** tiếp nhận điểm tựa từ **Cách dùng thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết với các thư viện (library / 라이브러리) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên tắc trung lập civic/political
 
 Các phần về Quốc hội, Tổng thống, Chính phủ, tòa án, chính quyền địa phương và quyền công dân chỉ mô tả **cấu trúc, thẩm quyền, quy trình và nguồn pháp lý**. Thư viện không xếp hạng đảng phái, ứng viên, chính sách hay đưa ra lựa chọn chính trị.
 
-
-> **Chuyển mạch:** Từ **Nguyên tắc trung lập civic/political**, ta sang **Liên kết với các thư viện (library / 라이브러리) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Liên kết với các thư viện (library / 라이브러리) khác** tiếp nhận điểm tựa từ **Nguyên tắc trung lập civic/political** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết với các thư viện (library / 라이브러리) khác
 
 Phần ôn KIIP nằm tại [`../korean_culture/kiip/`](../korean_culture/kiip/README.md), đặc biệt [`04_정치.md`](../korean_culture/kiip/04_정치.md) và [`06_법.md`](../korean_culture/kiip/06_법.md). KIIP phục vụ ôn thi; thư viện hiện tại đi sâu hơn vào **cách hệ thống hoạt động và cách tự tra cứu trong đời sống thực**.
 
-> **Bàn giao:** Sau **Liên kết với các thư viện (library / 라이브러리) khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết với các thư viện (library / 라이브러리) khác**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

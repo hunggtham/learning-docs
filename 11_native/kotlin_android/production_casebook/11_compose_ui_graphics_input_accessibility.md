@@ -1,7 +1,6 @@
 # Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Composition** sang **bố cục (layout / 레이아웃)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Composition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bố cục (layout / 레이아웃)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Jetpack Compose thường được học qua `Column`, `Row`, `LazyColumn`, `Button` và `remember`. Cách đó đủ để làm UI cơ bản nhưng chưa đủ để gỡ lỗi (debug / 디버그) bố cục (layout / 레이아웃) khó, jank do recomposition, gesture xung đột (conflict / 충돌), keyboard/focus bug hoặc khả năng tiếp cận (accessibility / 접근성) issue. Để đi từ “biết viết Composable” lên cấp cao (senior / 시니어), cần hiểu Compose như một **UI thời gian chạy (runtime / 런타임)** có trạng thái (state / 상태) mô hình (model / 모델), composition cây (tree / 트리), bố cục (layout / 레이아웃)/draw chuỗi xử lý (pipeline / 파이프라인), đầu vào (input / 입력)/ngữ nghĩa (semantics / 의미론) cây (tree / 트리) và tích hợp (integration / 통합) với Android cửa sổ (window / 윈도우)/hệ thống (system / 시스템) UI.
 
@@ -42,6 +41,8 @@ fun Greeting(name: String) {
 
 Nếu `name` đổi, `Greeting` có thể recompose.
 
+> **Chuyển mạch:** Composition tạo tree và state observation; layout tiếp theo đo/đặt node, còn draw biến placement đó thành pixels với cost và semantics riêng.
+
 ## Bố cục (layout / 레이아웃)
 
 Bố cục (layout / 레이아웃) gồm đo lường (measurement / 측정) và placement. Parent đưa ràng buộc (constraint / 제약조건) xuống child; child trả kích thước (size / 크기) lên; parent đặt child ở vị trí.
@@ -57,6 +58,8 @@ Parent placement
 ```
 
 Điều này khác web CSS mô hình tư duy (mental model / 사고 모델) ở nhiều chỗ. Trong Compose, child không tự chọn arbitrary kích thước (size / 크기) vượt đặc tả hợp đồng (contract / 계약) ràng buộc (constraint / 제약조건) mà không có modifier/bố cục (layout / 레이아웃) custom xử lý rõ.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **Draw** tiếp nhận điểm tựa từ **Bố cục (layout / 레이아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Clickable trước, pointerInput sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Draw
 
@@ -203,15 +206,18 @@ Chọn API dựa trên vòng đời (lifecycle / 생명주기) của side tác �
 
 # Đầu vào (input / 입력) hệ thống (system / 시스템)
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **12. Clickable trước, pointerInput sau** tiếp nhận điểm tựa từ **Draw** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Gesture detector có lifecycle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Clickable trước, pointerInput sau
 
 Nếu use trường hợp (case / 사례) chỉ là click/toggle/scroll chuẩn, dùng high-level modifier như `clickable`, `combinedClickable`, scroll API. Chúng tích hợp ngữ nghĩa (semantics / 의미론), focus, ripple/tương tác (interaction / 상호작용) và khả năng tiếp cận (accessibility / 접근성) tốt hơn.
 
 `pointerInput` nên dùng khi cần gesture custom thực sự.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **12. Clickable trước, pointerInput sau** xác định đầu vào; **13. Gesture detector có lifecycle** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Gesture competition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Gesture detector có lifecycle
 Phần này nối mạch Android vừa học với “13. Gesture detector có lifecycle”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 Modifier.pointerInput(itemId) {
@@ -222,6 +228,8 @@ Modifier.pointerInput(itemId) {
 ```
 
 Khối (block / 블록) `pointerInput` restart khi key đổi. Nếu capture trạng thái (state / 상태) sai key, callback có thể stale hoặc gesture detector restart không cần thiết.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **13. Gesture detector có lifecycle** xác định đầu vào; **14. Gesture competition** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Focus là máy trạng thái (state machine / 상태 머신) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Gesture competition
 
@@ -240,15 +248,18 @@ và dùng API coordination như nested scroll khi cần.
 
 # Focus, keyboard và IME
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **15. Focus là máy trạng thái (state machine / 상태 머신) riêng** tiếp nhận điểm tựa từ **14. Gesture competition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. IME action** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Focus là máy trạng thái (state machine / 상태 머신) riêng
 
 Văn bản (text / 텍스트) trường dữ liệu (field / 필드) đầu vào (input / 입력) không chỉ là string trạng thái (state / 상태). Focus quyết định keyboard, kiểm tra hợp lệ (validation / 검증) UX, điều hướng (navigation / 내비게이션) bằng hardware keyboard và khả năng tiếp cận (accessibility / 접근성).
 
 Có thể dùng `FocusRequester` cho luồng (flow / 흐름) có người dùng (user / 사용자) intent rõ, nhưng auto-focus quá mạnh có thể gây keyboard bật bất ngờ khi screen mở.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **16. IME action** tiếp nhận điểm tựa từ **15. Focus là máy trạng thái (state machine / 상태 머신) riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Insets và keyboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. IME action
 Phần này nối mạch Android vừa học với “16. IME action”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 TextField(
@@ -265,6 +276,8 @@ TextField(
 
 IME hành động (action / 동작) nên phản ánh hành động (action / 동작) nghiệp vụ (business / 비즈니스) thật. “Next” chuyển focus, “tìm kiếm (search / 검색)” submit tìm kiếm (search / 검색), “Done” kết thúc đầu vào (input / 입력).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **17. Insets và keyboard** tiếp nhận điểm tựa từ **16. IME action** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Draw modifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Insets và keyboard
 
 Edge-to-edge khiến content có thể nằm dưới hệ thống (system / 시스템) bars/IME. Không hardcode status bar height.
@@ -274,6 +287,8 @@ Compose cung cấp `WindowInsets`, padding modifier và scaffold patterns để 
 Mục tiêu (target / 대상) Android 15+ edge-to-edge đã được enforce mặc định ở nền tảng (platform / 플랫폼) ngữ cảnh (context / 맥락) tương ứng, nên app hiện đại phải xem insets là cốt lõi (core / 핵심) bố cục (layout / 레이아웃) bài toán (problem / 문제) chứ không phải polish cuối dự án.
 
 # Drawing
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **18. Draw modifier** tiếp nhận điểm tựa từ **17. Insets và keyboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Canvas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Draw modifier
 
@@ -289,6 +304,8 @@ Modifier.drawBehind {
 
 `drawWithCache` phù hợp khi đối tượng (object / 객체)/đường dẫn (path / 경로)/brush đắt tiền có thể bộ nhớ đệm (cache / 캐시) theo kích thước (size / 크기)/trạng thái (state / 상태) phụ thuộc (dependency / 의존성).
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **19. Canvas** tiếp nhận điểm tựa từ **18. Draw modifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Chọn animation theo loại chuyển tiếp trạng thái (state transition / 상태 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Canvas
 
 `Canvas` cho custom drawing 2D. Coordinate không gian (space / 공간) dùng điểm ảnh (pixel / 픽셀) trong draw phạm vi (scope / 범위), nên chuyển `Dp` bằng density khi cần.
@@ -296,6 +313,8 @@ Modifier.drawBehind {
 Custom draw cần nghĩ tới scaling, RTL, khả năng tiếp cận (accessibility / 접근성) và hit testing—visual đẹp không tự động có ngữ nghĩa (semantics / 의미론).
 
 # Animation
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **20. Chọn animation theo loại chuyển tiếp trạng thái (state transition / 상태 전이)** tiếp nhận điểm tựa từ **19. Canvas** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Animation và nghiệp vụ (business / 비즈니스) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Chọn animation theo loại chuyển tiếp trạng thái (state transition / 상태 전이)
 
@@ -311,11 +330,15 @@ InfiniteTransition → animation lặp
 
 Đừng dùng `Animatable` cho mọi button color thay đổi (change / 변경); lớp trừu tượng (abstraction / 추상화) càng thấp càng nhiều trạng thái (state / 상태)/vòng đời (lifecycle / 생명주기) phải tự quản.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **21. Animation và nghiệp vụ (business / 비즈니스) trạng thái (state / 상태)** tiếp nhận điểm tựa từ **20. Chọn animation theo loại chuyển tiếp trạng thái (state transition / 상태 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Motion khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Animation và nghiệp vụ (business / 비즈니스) trạng thái (state / 상태)
 
 Animation trạng thái (state / 상태) không nên trở thành nguồn chuẩn (source of truth / 정본) cho nghiệp vụ (business / 비즈니스). Ví dụ “thứ tự (order / 순서) success” là lĩnh vực (domain / 도메인) trạng thái (state / 상태); confetti animation chỉ là rendering side tác động (effect / 효과) của trạng thái (state / 상태) đó.
 
 Nếu tiến trình (process / 프로세스) death xảy ra, không cần khôi phục confetti frame 63; cần khôi phục trạng thái thứ tự (order / 순서) thành công.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **22. Motion khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **21. Animation và nghiệp vụ (business / 비즈니스) trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) không phải UI cây (tree / 트리) 1:1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Motion khả năng tiếp cận (accessibility / 접근성)
 
@@ -323,15 +346,18 @@ Người dùng (user / 사용자) có thể nhạy cảm với motion. Animation
 
 # Ngữ nghĩa (semantics / 의미론) và khả năng tiếp cận (accessibility / 접근성)
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **23. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) không phải UI cây (tree / 트리) 1:1** tiếp nhận điểm tựa từ **22. Motion khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Icon cần mô tả khi mang ý nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) không phải UI cây (tree / 트리) 1:1
 
 Compose tạo ngữ nghĩa (semantics / 의미론) cây (tree / 트리) song song để khả năng tiếp cận (accessibility / 접근성) dịch vụ (service / 서비스) và UI kiểm thử (test / 테스트) hiểu ý nghĩa UI. Một bố cục (layout / 레이아웃) có nhiều nút (node / 노드) visual có thể merge thành một ngữ nghĩa (semantics / 의미론) nút (node / 노드) meaningful.
 
 Khả năng tiếp cận (accessibility / 접근성) vì vậy không được “thêm sau” chỉ bằng content description. ngữ nghĩa (semantic / 의미적) role, trạng thái (state / 상태), hành động (action / 동작), traversal và grouping đều quan trọng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **24. Icon cần mô tả khi mang ý nghĩa** tiếp nhận điểm tựa từ **23. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) không phải UI cây (tree / 트리) 1:1** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Button nên là Button khi nó là button** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Icon cần mô tả khi mang ý nghĩa
 Phần này nối mạch Android vừa học với “24. Icon cần mô tả khi mang ý nghĩa”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 Icon(
@@ -342,29 +368,41 @@ Icon(
 
 Nếu icon chỉ decorative cạnh văn bản (text / 텍스트) đã mô tả đầy đủ hành động (action / 동작), `contentDescription = null` có thể đúng để tránh screen reader đọc lặp.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **25. Button nên là Button khi nó là button** tiếp nhận điểm tựa từ **24. Icon cần mô tả khi mang ý nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Minimum touch mục tiêu (target / 대상)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Button nên là Button khi nó là button
 
 Một `Box.clickable` có thể click được nhưng thiếu ngữ nghĩa (semantics / 의미론)/style/focus hành vi (behavior / 동작) chuẩn nếu không cấu hình kỹ. Dùng thành phần (component / 컴포넌트) ngữ nghĩa (semantic / 의미적) cao khi phù hợp.
 
 Khả năng tiếp cận (accessibility / 접근성) thường tốt hơn khi chọn đúng thành phần nguyên thủy (primitive / 기본 요소).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **26. Minimum touch mục tiêu (target / 대상)** tiếp nhận điểm tựa từ **25. Button nên là Button khi nó là button** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. động (dynamic / 동적) content announcement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Minimum touch mục tiêu (target / 대상)
 
 UI nhìn đẹp nhưng mục tiêu (target / 대상) quá nhỏ là usability/khả năng tiếp cận (accessibility / 접근성) bug. Material thành phần (component / 컴포넌트) thường xử lý touch mục tiêu (target / 대상) chuẩn; custom điều khiển (control / 제어) phải tự đảm bảo.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **27. động (dynamic / 동적) content announcement** tiếp nhận điểm tựa từ **26. Minimum touch mục tiêu (target / 대상)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Heading và traversal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. động (dynamic / 동적) content announcement
 
 Không phải mọi trạng thái (state / 상태) cập nhật (update / 업데이트) đều nên interrupt screen reader. lỗi (error / 오류) quan trọng hoặc status cần phản hồi (feedback / 피드백) có thể dùng ngữ nghĩa (semantics / 의미론)/live region mẫu (pattern / 패턴) phù hợp. Nhưng lạm dụng announcement khiến app rất khó dùng.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **28. Heading và traversal** tiếp nhận điểm tựa từ **27. động (dynamic / 동적) content announcement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. khả năng tiếp cận (accessibility / 접근성) testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Heading và traversal
 
 Large screen có section, pane và complex hierarchy. ngữ nghĩa (semantic / 의미적) heading/traversal giúp screen reader người dùng (user / 사용자) hiểu cấu trúc, tương tự heading trong document/web.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **29. khả năng tiếp cận (accessibility / 접근성) testing** tiếp nhận điểm tựa từ **28. Heading và traversal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Responsive khác adaptive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. khả năng tiếp cận (accessibility / 접근성) testing
 
 UI kiểm thử (test / 테스트) dựa trên ngữ nghĩa (semantics / 의미론), vì vậy ngữ nghĩa (semantics / 의미론) tốt đồng thời tăng testability. Nhưng kiểm thử (test / 테스트) truy vấn (query / 쿼리) pass không đảm bảo khả năng tiếp cận (accessibility / 접근성) hoàn chỉnh. Cần manual testing với TalkBack/switch/hardware keyboard trong luồng (flow / 흐름) trọng yếu (critical / 중요).
 
 # Adaptive UI
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **30. Responsive khác adaptive** tiếp nhận điểm tựa từ **29. khả năng tiếp cận (accessibility / 접근성) testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. cửa sổ (window / 윈도우) kích thước (size / 크기) thay vì thiết bị (device / 장치) label** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Responsive khác adaptive
 
@@ -379,6 +417,8 @@ expanded → list + detail two-pane
 
 Không chỉ tăng `padding` trên tablet.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **30. Responsive khác adaptive** cho ta quy tắc; **31. cửa sổ (window / 윈도우) kích thước (size / 크기) thay vì thiết bị (device / 장치) label** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **32. Material 3 Adaptive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. cửa sổ (window / 윈도우) kích thước (size / 크기) thay vì thiết bị (device / 장치) label
 
 Đừng viết:
@@ -391,9 +431,13 @@ như cốt lõi (core / 핵심) kiến trúc (architecture / 아키텍처). Cùn
 
 UI nên phản ứng actual cửa sổ (window / 윈도우) characteristics/kích thước (size / 크기) lớp (class / 클래스).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **31. cửa sổ (window / 윈도우) kích thước (size / 크기) thay vì thiết bị (device / 장치) label** cho ta quy tắc; **32. Material 3 Adaptive** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **33. điều hướng (navigation / 내비게이션) rail/drawer/bar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Material 3 Adaptive
 
 Material 3 Adaptive cung cấp building khối (block / 블록) cho adaptive scaffold, pane và điều hướng (navigation / 내비게이션) theo cửa sổ (window / 윈도우)/posture. phiên bản (version / 버전) thư viện (library / 라이브러리) thay đổi nhanh, nên ghi chú (note / 노트) kiến trúc (architecture / 아키텍처) dựa trên concept: cửa sổ (window / 윈도우) info → bố cục (layout / 레이아웃) chiến lược (strategy / 전략) → điều hướng (navigation / 내비게이션) chiến lược (strategy / 전략), không hardcode một alpha API vào cốt lõi (core / 핵심) lĩnh vực (domain / 도메인).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **33. điều hướng (navigation / 내비게이션) rail/drawer/bar** tiếp nhận điểm tựa từ **32. Material 3 Adaptive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Foldable posture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. điều hướng (navigation / 내비게이션) rail/drawer/bar
 
@@ -407,6 +451,8 @@ expanded → rail/drawer + multi-pane
 
 Destination/nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) không nên phụ thuộc trực tiếp vào loại điều hướng (navigation / 내비게이션) widget.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **34. Foldable posture** tiếp nhận điểm tựa từ **33. điều hướng (navigation / 내비게이션) rail/drawer/bar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Android không còn chỉ là phone touch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Foldable posture
 
 Hinge/posture có thể chia usable region. UI hai pane nên tránh đặt primary tương tác (interaction / 상호작용) dưới hinge và cân nhắc continuity khi fold/unfold.
@@ -415,21 +461,29 @@ Tiến trình (process / 프로세스) thường không chết khi posture đổ
 
 # Keyboard, mouse và non-touch đầu vào (input / 입력)
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **35. Android không còn chỉ là phone touch** tiếp nhận điểm tựa từ **34. Foldable posture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Focus traversal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 35. Android không còn chỉ là phone touch
 
 Tablet, Chromebook, desktop chế độ (mode / 모드) và bên ngoài (external / 외부) keyboard khiến hover, focus, keyboard shortcut, scroll wheel quan trọng hơn.
 
 Một UI chỉ kiểm thử (test / 테스트) bằng tap có thể unusable khi keyboard điều hướng (navigation / 내비게이션).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **36. Focus traversal** tiếp nhận điểm tựa từ **35. Android không còn chỉ là phone touch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Shortcut** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. Focus traversal
 
 Interactive element cần focusable thứ tự (order / 순서) hợp lý. Custom bố cục (layout / 레이아웃) có thể cần focus properties nếu visual thứ tự (order / 순서) khác ngữ nghĩa (semantic / 의미적) thứ tự (order / 순서).
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **37. Shortcut** tiếp nhận điểm tựa từ **36. Focus traversal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Không thiết kế width theo English string** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 37. Shortcut
 
 Power-user app có thể hỗ trợ Ctrl/Cmd-like shortcut theo nền tảng (platform / 플랫폼) mẫu (pattern / 패턴). Nhưng shortcut phải bổ sung, không thay hành động (action / 동작) discoverable trên UI.
 
 # Văn bản (text / 텍스트) và localization
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **38. Không thiết kế width theo English string** tiếp nhận điểm tựa từ **37. Shortcut** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. RTL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 38. Không thiết kế width theo English string
 
@@ -446,9 +500,13 @@ IME
 small window
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **39. RTL** tiếp nhận điểm tựa từ **38. Không thiết kế width theo English string** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. văn bản (text / 텍스트) đo lường (measurement / 측정) và truncation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 39. RTL
 
 Dùng `start/end` ngữ nghĩa (semantics / 의미론) thay `left/right` khi bố cục (layout / 레이아웃) directional. Icon directional có thể cần auto-mirroring hoặc asset riêng.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **39. RTL** nêu điều cần giải thích; **40. văn bản (text / 텍스트) đo lường (measurement / 측정) và truncation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **41. Recomposition count không tự động là bug** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 40. văn bản (text / 텍스트) đo lường (measurement / 측정) và truncation
 
@@ -456,17 +514,25 @@ Ellipsis không phải universal fix. Nếu thông tin (information / 정보) tr
 
 # Hiệu năng (performance / 성능)
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **40. văn bản (text / 텍스트) đo lường (measurement / 측정) và truncation** nêu điều cần giải thích; **41. Recomposition count không tự động là bug** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **42. Stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 41. Recomposition count không tự động là bug
 
 Recomposition rẻ có thể hoàn toàn bình thường. Tối ưu dựa trên observed jank/allocation/dấu vết (trace / 추적), không chase zero recomposition.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **42. Stability** tiếp nhận điểm tựa từ **41. Recomposition count không tự động là bug** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Avoid allocation trong hot draw đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 42. Stability
 
 Compose trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) dùng stability thông tin (information / 정보) để quyết định skip/recompose. mô hình dữ liệu (data model / 데이터 모델) immutable và parameter stable giúp thời gian chạy (runtime / 런타임) lập luận (reasoning / 추론) tốt hơn, nhưng không nên gắn annotation chỉ để “làm trình biên dịch (compiler / 컴파일러) vui” mà phá ngữ nghĩa (semantic / 의미적) truth.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **42. Stability** xác định đầu vào; **43. Avoid allocation trong hot draw đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **44. Lazy danh sách (list / 목록) ảnh (image / 이미지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 43. Avoid allocation trong hot draw đường dẫn (path / 경로)
 
 Custom drawing mỗi frame không nên tạo đối tượng (object / 객체)/đường dẫn (path / 경로)/brush nặng nếu có thể bộ nhớ đệm (cache / 캐시). `drawWithCache` tồn tại cho use trường hợp (case / 사례) này.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **43. Avoid allocation trong hot draw đường dẫn (path / 경로)** xác định đầu vào; **44. Lazy danh sách (list / 목록) ảnh (image / 이미지)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **45. AndroidView** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 44. Lazy danh sách (list / 목록) ảnh (image / 이미지)
 
@@ -474,11 +540,15 @@ Custom drawing mỗi frame không nên tạo đối tượng (object / 객체)/�
 
 # Interop với View hệ thống (system / 시스템)
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **45. AndroidView** tiếp nhận điểm tựa từ **44. Lazy danh sách (list / 목록) ảnh (image / 이미지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Compose trong Fragment/View app** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 45. `AndroidView`
 
 Khi thư viện (library / 라이브러리)/View chưa có Compose equivalent, dùng `AndroidView`. Nhưng phải quản vòng đời (lifecycle / 생명주기)/trạng thái (state / 상태) của View rõ, đặc biệt WebView/Map/Player.
 
 Không wrap whole legacy screen vào Compose chỉ để nói rằng “đã migrate”. di chuyển (migration / 마이그레이션) ranh giới (boundary / 경계) nên có mục tiêu.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **46. Compose trong Fragment/View app** tiếp nhận điểm tựa từ **45. AndroidView** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. UI tính đúng đắn (correctness / 정확성) trước visual polish** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 46. Compose trong Fragment/View app
 
@@ -488,17 +558,25 @@ Không wrap whole legacy screen vào Compose chỉ để nói rằng “đã mig
 
 # Cấp cao (senior / 시니어) Notes
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **47. UI tính đúng đắn (correctness / 정확성) trước visual polish** tiếp nhận điểm tựa từ **46. Compose trong Fragment/View app** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. ngữ nghĩa (semantics / 의미론) là API công khai (public API / 공개 API) của UI với khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 47. UI tính đúng đắn (correctness / 정확성) trước visual polish
 
 Quyền sở hữu trạng thái (state ownership / 상태 소유권), khả năng tiếp cận (accessibility / 접근성), focus, đầu vào (input / 입력), restore và adaptive hành vi (behavior / 동작) là tính đúng đắn (correctness / 정확성). Shadow/animation chỉ là polish sau đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **48. ngữ nghĩa (semantics / 의미론) là API công khai (public API / 공개 API) của UI với khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **47. UI tính đúng đắn (correctness / 정확성) trước visual polish** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Adaptive bố cục (layout / 레이아웃) là kiến trúc (architecture / 아키텍처) concern** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 48. ngữ nghĩa (semantics / 의미론) là API công khai (public API / 공개 API) của UI với khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)
 
 Nếu visual nút (node / 노드) thay đổi nhưng ngữ nghĩa (semantics / 의미론) đặc tả hợp đồng (contract / 계약) giữ ổn định, automated kiểm thử (test / 테스트) bền hơn. kiểm thử (test / 테스트) bằng điểm ảnh (pixel / 픽셀)/nút (node / 노드) cấu trúc (structure / 구조) quá chi tiết dễ brittle.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **49. Adaptive bố cục (layout / 레이아웃) là kiến trúc (architecture / 아키텍처) concern** tiếp nhận điểm tựa từ **48. ngữ nghĩa (semantics / 의미론) là API công khai (public API / 공개 API) của UI với khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Edge-to-edge phải thiết kế (design / 설계) từ đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 49. Adaptive bố cục (layout / 레이아웃) là kiến trúc (architecture / 아키텍처) concern
 
 Nếu screen mô hình (model / 모델) giả định “chỉ có một pane”, thêm two-pane về sau có thể khó. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) nên đủ neutral để danh sách (list / 목록)/detail cùng tồn tại khi cửa sổ (window / 윈도우) rộng.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI**, **50. Edge-to-edge phải thiết kế (design / 설계) từ đầu** tiếp nhận điểm tựa từ **49. Adaptive bố cục (layout / 레이아웃) là kiến trúc (architecture / 아키텍처) concern** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 50. Edge-to-edge phải thiết kế (design / 설계) từ đầu
 
@@ -508,4 +586,4 @@ Insets, IME và hệ thống (system / 시스템) bars ảnh hưởng scaffold/�
 
 Bạn nên giải thích được Composition/bố cục (layout / 레이아웃)/Draw khác nhau thế nào; ràng buộc (constraint / 제약조건) đi qua cây (tree / 트리) ra sao; modifier thứ tự (order / 순서) vì sao quan trọng; khi nào custom bố cục (layout / 레이아웃)/draw hợp lý; lazy key liên quan định danh (identity / 식별자) thế nào; tác động (effect / 효과) API khác nhau theo thời gian tồn tại (lifetime / 수명) nào; gesture/focus/IME cần quyền sở hữu (ownership / 소유권) gì; ngữ nghĩa (semantics / 의미론) cây (tree / 트리) dùng cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트) ra sao; edge-to-edge/insets ảnh hưởng UI thế nào; responsive khác adaptive thế nào; và tại sao tablet/foldable/keyboard hỗ trợ (support / 지원) phải dựa trên cửa sổ (window / 윈도우)/năng lực (capability / 역량) thay vì hardcode thiết bị (device / 장치) kiểu (type / 타입).
 
-> **Bàn giao:** Sau **50. Edge-to-edge phải thiết kế (design / 설계) từ đầu**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **50. Edge-to-edge phải thiết kế (design / 설계) từ đầu**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

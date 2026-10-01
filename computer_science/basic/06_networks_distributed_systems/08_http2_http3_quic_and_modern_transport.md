@@ -1,7 +1,6 @@
 # HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)
 
-> **Mạch đọc:** Đọc **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. HTTP/1.1 và giới hạn của connection-level parallelism** sang **2. HTTP/2: nhị phân (binary / 이진) framing và nhiều stream trên một TCP liên kết (connection / 연결)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. HTTP/1.1 và giới hạn của connection-level parallelism** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **2. HTTP/2: nhị phân (binary / 이진) framing và nhiều stream trên một TCP liên kết (connection / 연결)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 HTTP/1.1 over TCP/TLS vẫn là nền lịch sử quan trọng, nhưng web hiện đại phát triển để giảm liên kết (connection / 연결) overhead, multiplex requests tốt hơn và cải thiện hành vi (behavior / 동작) khi packet mất mát (loss / 손실) xảy ra. Muốn hiểu HTTP/2 và HTTP/3, cần tách ba lớp thường bị trộn lẫn: **HTTP ngữ nghĩa (semantics / 의미론)**, **stream multiplexing**, và **vận chuyển (transport / 전송) delivery/congestion hành vi (behavior / 동작)**.
 
@@ -13,6 +12,8 @@ HTTP/1.1 hỗ trợ persistent liên kết (connection / 연결), nhưng một l
 
 Nhiều connections giúp tránh một số blocking giữa requests nhưng phải trả thêm handshake, congestion trạng thái (state / 상태), socket bộ nhớ (memory / 메모리) và máy chủ (server / 서버) tài nguyên (resource / 자원). Đây là ví dụ điển hình: khi một lớp trừu tượng (abstraction / 추상화) không multiplex tốt, hệ thống (system / 시스템) thường tạo parallelism bằng cách nhân số tài nguyên (resource / 자원) bên dưới.
 
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **1. HTTP/1.1 và giới hạn của connection-level parallelism** đã nêu tiêu chí phân biệt, còn **2. HTTP/2: nhị phân (binary / 이진) framing và nhiều stream trên một TCP liên kết (connection / 연결)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Vì sao HTTP/2 vẫn có vận chuyển (transport / 전송) head-of-line blocking?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. HTTP/2: nhị phân (binary / 이진) framing và nhiều stream trên một TCP liên kết (connection / 연결)
 
 HTTP/2 giữ HTTP methods/status/caching ngữ nghĩa (semantics / 의미론) nhưng đổi wire biểu diễn (representation / 표현) thành nhị phân (binary / 이진) frames. Mỗi yêu cầu (request / 요청)/phản hồi (response / 응답) thuộc một **luồng (stream / 스트림)** có stream ID riêng; frames của nhiều streams có thể interleave trên cùng liên kết (connection / 연결).
@@ -20,6 +21,8 @@ HTTP/2 giữ HTTP methods/status/caching ngữ nghĩa (semantics / 의미론) nh
 Headers được compress bằng HPACK để giảm repeated siêu dữ liệu (metadata / 메타데이터). ứng dụng (application / 애플리케이션) không còn phải chờ phản hồi (response / 응답) của yêu cầu (request / 요청) A hoàn tất mới gửi/nhận frames của yêu cầu (request / 요청) B theo kiểu tuần tự đơn giản.
 
 Điều này giảm **application-level head-of-line blocking**, nhưng tất cả frames cuối cùng vẫn được đặt vào một TCP byte stream duy nhất.
+
+> **Chuyển mạch:** Ở chặng này của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **3. Vì sao HTTP/2 vẫn có vận chuyển (transport / 전송) head-of-line blocking?** tiếp nhận điểm tựa từ **2. HTTP/2: nhị phân (binary / 이진) framing và nhiều stream trên một TCP liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. QUIC dùng UDP làm substrate nhưng tự cung cấp vận chuyển (transport / 전송) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Vì sao HTTP/2 vẫn có vận chuyển (transport / 전송) head-of-line blocking?
 
@@ -42,6 +45,8 @@ HTTP/2 multiplexing
 independent transport delivery
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **4. QUIC dùng UDP làm substrate nhưng tự cung cấp vận chuyển (transport / 전송) ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **3. Vì sao HTTP/2 vẫn có vận chuyển (transport / 전송) head-of-line blocking?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Packet number và stream offset là hai loại thứ tự (ordering / 순서) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. QUIC dùng UDP làm substrate nhưng tự cung cấp vận chuyển (transport / 전송) ngữ nghĩa (semantics / 의미론)
 
 **QUIC** chạy trên UDP datagrams để có không gian triển khai vận chuyển (transport / 전송) lô-gic (logic / 논리) ở người dùng (user / 사용자) không gian (space / 공간), nhưng QUIC không phải “UDP gửi gì mất nấy”. Nó tự cung cấp reliable streams, mất mát (loss / 손실) detection/khôi phục (recovery / 복구), luồng (flow / 흐름) điều khiển (control / 제어), congestion điều khiển (control / 제어), cryptographic handshake và liên kết (connection / 연결) management.
@@ -49,6 +54,8 @@ independent transport delivery
 HTTP/3 ánh xạ HTTP ngữ nghĩa (semantics / 의미론) lên QUIC. Mỗi QUIC stream có không gian byte/offset riêng nên mất mát (loss / 손실) của dữ liệu stream A không buộc vận chuyển (transport / 전송) giữ lại dữ liệu đã hoàn chỉnh của stream B chỉ để bảo toàn một toàn cục (global / 전역) byte stream như TCP.
 
 Điều này giảm connection-wide head-of-line blocking do vận chuyển (transport / 전송) thứ tự (ordering / 순서), nhưng packet mất mát (loss / 손실) không miễn phí: lost bytes vẫn phải retransmit, congestion controller vẫn có thể giảm sending tỷ lệ (rate / 비율) và nhiều streams vẫn chia sẻ cùng mạng (network / 네트워크) đường dẫn (path / 경로)/sức chứa (capacity / 용량).
+
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **5. Packet number và stream offset là hai loại thứ tự (ordering / 순서) khác nhau** tiếp nhận điểm tựa từ **4. QUIC dùng UDP làm substrate nhưng tự cung cấp vận chuyển (transport / 전송) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. ACK và mất mát (loss / 손실) khôi phục (recovery / 복구) không đồng nghĩa retransmit packet y hệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Packet number và stream offset là hai loại thứ tự (ordering / 순서) khác nhau
 
@@ -60,11 +67,15 @@ QUIC packets có packet numbers phục vụ acknowledgement/mất mát (loss / �
 
 Câu hỏi đúng là: **thứ tự (ordering / 순서) bất biến (invariant / 불변식) nằm ở connection-wide byte stream hay từng logical stream?**
 
+> **Chuyển mạch:** Ở chặng này của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **6. ACK và mất mát (loss / 손실) khôi phục (recovery / 복구) không đồng nghĩa retransmit packet y hệt** tiếp nhận điểm tựa từ **5. Packet number và stream offset là hai loại thứ tự (ordering / 순서) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Congestion điều khiển (control / 제어) vẫn là shared-resource bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. ACK và mất mát (loss / 손실) khôi phục (recovery / 복구) không đồng nghĩa retransmit packet y hệt
 
 Vận chuyển (transport / 전송) reliable cần biết dữ liệu nào peer đã nhận và dữ liệu nào cần gửi lại. QUIC có acknowledgements cho packet ranges và loss-detection lô-gic (logic / 논리) dựa trên packet thứ tự (ordering / 순서)/timing. Khi mất mát (loss / 손실) được suy ra, hiện thực (implementation / 구현) có thể retransmit **thông tin (information / 정보)/frames cần thiết** trong packet mới thay vì tái phát nguyên datagram cũ với cùng packet định danh (identity / 식별자).
 
 Điều này quan trọng cho debugging: packet numbers phản ánh transmission attempts, còn stream offsets phản ánh logical dữ liệu (data / 데이터). Một yêu cầu (request / 요청) chậm có thể do cùng stream dữ liệu (data / 데이터) phải được gửi lại dù packet định danh (identity / 식별자) đã thay đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **6. ACK và mất mát (loss / 손실) khôi phục (recovery / 복구) không đồng nghĩa retransmit packet y hệt** nêu điều cần giải thích; **7. Congestion điều khiển (control / 제어) vẫn là shared-resource bất biến (invariant / 불변식)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. luồng (flow / 흐름) điều khiển (control / 제어) khác congestion điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Congestion điều khiển (control / 제어) vẫn là shared-resource bất biến (invariant / 불변식)
 
@@ -74,6 +85,8 @@ Các streams trên một liên kết (connection / 연결) thường vẫn chị
 
 Vì vậy câu “HTTP/3 packet mất mát (loss / 손실) chỉ ảnh hưởng một stream” là quá mạnh. Chính xác hơn: mất mát (loss / 손실) không bắt vận chuyển (transport / 전송) khối (block / 블록) delivery của stream khác chỉ vì một toàn cục (global / 전역) byte gap, nhưng **sức chứa (capacity / 용량) reaction ở liên kết (connection / 연결)/đường dẫn (path / 경로) mức (level / 수준) vẫn có thể ảnh hưởng tất cả**.
 
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, biết phải giữ gì trong **7. Congestion điều khiển (control / 제어) vẫn là shared-resource bất biến (invariant / 불변식)**, ta theo dõi trong **8. luồng (flow / 흐름) điều khiển (control / 제어) khác congestion điều khiển (control / 제어)** cách hệ thống thực hiện và phản hồi qua từng bước. Từ đây, **9. TLS tích hợp (integration / 통합) làm bảo mật (security / 보안) trở thành một phần của vận chuyển (transport / 전송) máy trạng thái (state machine / 상태 머신)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. luồng (flow / 흐름) điều khiển (control / 제어) khác congestion điều khiển (control / 제어)
 
 **Điều khiển luồng (flow control / 흐름 제어)** bảo vệ receiver khỏi sender gửi nhanh hơn khả năng nhận/buffer. **Congestion điều khiển (control / 제어)** bảo vệ mạng (network / 네트워크) đường dẫn (path / 경로) khỏi lượng in-flight traffic quá lớn.
@@ -81,6 +94,8 @@ Vì vậy câu “HTTP/3 packet mất mát (loss / 손실) chỉ ảnh hưởng 
 QUIC có thể có connection-level và stream-level flow-control limits. Một stream hết receive credit có thể dừng dù mạng (network / 네트워크) không congested. Ngược lại, receive buffers còn nhiều nhưng congestion cửa sổ (window / 윈도우) nhỏ vẫn giới hạn transmission.
 
 Khi gỡ lỗi (debug / 디버그) thông lượng (throughput / 처리량) thấp, cần phân biệt receiver flow-control limited, congestion-window/đường dẫn (path / 경로) limited, ứng dụng (application / 애플리케이션) không tạo dữ liệu đủ nhanh, packet mất mát (loss / 손실)/retransmission hay CPU/crypto/thời gian chạy (runtime / 런타임) bottleneck.
+
+> **Chuyển mạch:** Ở chặng này của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **8. luồng (flow / 흐름) điều khiển (control / 제어) khác congestion điều khiển (control / 제어)** xác định đầu vào; **9. TLS tích hợp (integration / 통합) làm bảo mật (security / 보안) trở thành một phần của vận chuyển (transport / 전송) máy trạng thái (state machine / 상태 머신)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. 0-RTT đổi độ trễ (latency / 지연 시간) lấy replay giả định (assumption / 가정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. TLS tích hợp (integration / 통합) làm bảo mật (security / 보안) trở thành một phần của vận chuyển (transport / 전송) máy trạng thái (state machine / 상태 머신)
 
@@ -90,6 +105,8 @@ Tuy nhiên “ít round trip hơn” không đồng nghĩa zero chi phí (cost /
 
 Handshake thất bại (failure / 실패) cũng không nhất thiết là “QUIC bug”. Nguyên nhân có thể nằm ở certificate, clock, trust store, chính sách mạng (network policy / 네트워크 정책), UDP filtering hoặc phiên bản (version / 버전) negotiation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **10. 0-RTT đổi độ trễ (latency / 지연 시간) lấy replay giả định (assumption / 가정)** tiếp nhận điểm tựa từ **9. TLS tích hợp (integration / 통합) làm bảo mật (security / 보안) trở thành một phần của vận chuyển (transport / 전송) máy trạng thái (state machine / 상태 머신)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. liên kết (connection / 연결) ID tách logical liên kết (connection / 연결) khỏi 4-tuple** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. 0-RTT đổi độ trễ (latency / 지연 시간) lấy replay giả định (assumption / 가정)
 
 Repeat máy khách (client / 클라이언트) có thể gửi **0-RTT early dữ liệu (data / 데이터)** khi có session trạng thái (state / 상태) phù hợp. Lợi ích là ứng dụng (application / 애플리케이션) dữ liệu (data / 데이터) có thể đi trước khi full handshake mới hoàn tất.
@@ -97,6 +114,8 @@ Repeat máy khách (client / 클라이언트) có thể gửi **0-RTT early dữ
 Đổi lại, early dữ liệu (data / 데이터) có replay rủi ro (risk / 위험) theo threat mô hình (model / 모델) của giao thức (protocol / 프로토콜). ứng dụng (application / 애플리케이션) chỉ nên cho 0-RTT thực hiện thao tác (operation / 연산) có ngữ nghĩa (semantics / 의미론) chịu được replay hoặc có idempotency/deduplication bảo vệ phù hợp.
 
 Một payment `POST` không tự trở nên an toàn chỉ vì vận chuyển (transport / 전송) cho phép gửi sớm. bảo mật (security / 보안)/hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) không được làm yếu nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식).
+
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, sau nội dung của **10. 0-RTT đổi độ trễ (latency / 지연 시간) lấy replay giả định (assumption / 가정)**, **11. liên kết (connection / 연결) ID tách logical liên kết (connection / 연결) khỏi 4-tuple** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **12. Address kiểm tra hợp lệ (validation / 검증) và amplification protection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. liên kết (connection / 연결) ID tách logical liên kết (connection / 연결) khỏi 4-tuple
 
@@ -106,6 +125,8 @@ Di chuyển (migration / 마이그레이션) không có nghĩa “chấp nhận 
 
 Vận chuyển (transport / 전송) liên kết (connection / 연결) continuity cũng không thay ứng dụng (application / 애플리케이션) authorization/session ngữ nghĩa (semantics / 의미론). Một valid liên kết (connection / 연결) không tự chứng minh yêu cầu (request / 요청) được phép truy cập tài nguyên (resource / 자원).
 
+> **Chuyển mạch:** Ở chặng này của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **12. Address kiểm tra hợp lệ (validation / 검증) và amplification protection** tiếp nhận điểm tựa từ **11. liên kết (connection / 연결) ID tách logical liên kết (connection / 연결) khỏi 4-tuple** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. đường dẫn (path / 경로) MTU: vận chuyển (transport / 전송) không thể gửi datagram lớn tùy ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Address kiểm tra hợp lệ (validation / 검증) và amplification protection
 
 UDP cho phép sender giả mạo nguồn (source / 소스) address dễ hơn connection-oriented handshake intuition. máy chủ (server / 서버) không nên gửi lượng dữ liệu lớn tới địa chỉ chưa được chứng minh reachable, nếu không attacker có thể biến máy chủ (server / 서버) thành reflection/amplification nguồn (source / 소스).
@@ -113,6 +134,8 @@ UDP cho phép sender giả mạo nguồn (source / 소스) address dễ hơn con
 QUIC vì vậy có cơ chế address kiểm tra hợp lệ (validation / 검증) và giới hạn amount of dữ liệu (data / 데이터) máy chủ (server / 서버) được gửi trước khi máy khách (client / 클라이언트) address được validate.
 
 Đây là ví dụ bảo mật (security / 보안) bất biến (invariant / 불변식) ảnh hưởng trực tiếp hiệu năng (performance / 성능) đường dẫn (path / 경로): trước khi trust reachability, máy chủ (server / 서버) phải hạn chế amplification dù nó có phản hồi (response / 응답) lớn sẵn sàng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **12. Address kiểm tra hợp lệ (validation / 검증) và amplification protection** xác định đầu vào; **13. đường dẫn (path / 경로) MTU: vận chuyển (transport / 전송) không thể gửi datagram lớn tùy ý** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. UDP blocking và fallback là môi trường vận hành (production / 운영 환경) reality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. đường dẫn (path / 경로) MTU: vận chuyển (transport / 전송) không thể gửi datagram lớn tùy ý
 
@@ -124,6 +147,8 @@ Symptom thường khó chịu: liên kết (connection / 연결) thiết lập �
 
 Đây là lý do packet-level diagnosis phải nhìn kích thước (size / 크기) phân phối (distribution / 분포), ICMP/chính sách mạng (network policy / 네트워크 정책) và mất mát (loss / 손실) mẫu (pattern / 패턴) thay vì chỉ “ping được nên mạng (network / 네트워크) ổn”.
 
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **13. đường dẫn (path / 경로) MTU: vận chuyển (transport / 전송) không thể gửi datagram lớn tùy ý** xác định đầu vào; **14. UDP blocking và fallback là môi trường vận hành (production / 운영 환경) reality** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. liên kết (connection / 연결) coalescing và origin ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. UDP blocking và fallback là môi trường vận hành (production / 운영 환경) reality
 
 Một số enterprise mạng (network / 네트워크), firewall hoặc middlebox vẫn chặn/giới hạn UDP. trình duyệt (browser / 브라우저)/máy khách (client / 클라이언트) có thể thử HTTP/3 rồi fallback sang HTTP/2/TCP.
@@ -132,17 +157,23 @@ Nếu chỉ nhìn server-side HTTP/3 metrics, ta có thể bỏ qua population �
 
 Giao thức (protocol / 프로토콜) mới phải coexist với triển khai (deployment / 배포) reality; tính tương thích (compatibility / 호환성) đường dẫn (path / 경로) là một phần của hệ thống (system / 시스템) thiết kế (design / 설계).
 
+> **Chuyển mạch:** Ở chặng này của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **14. UDP blocking và fallback là môi trường vận hành (production / 운영 환경) reality** đã nêu tiêu chí phân biệt, còn **15. liên kết (connection / 연결) coalescing và origin ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Header compression có trạng thái (state / 상태) và thất bại (failure / 실패) ranh giới (boundary / 경계) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. liên kết (connection / 연결) coalescing và origin ranh giới (boundary / 경계)
 
 HTTP/2/3 có thể reuse liên kết (connection / 연결) cho nhiều origins trong điều kiện certificate/DNS/address và máy khách (client / 클라이언트) chính sách (policy / 정책) cho phép. Điều này tiết kiệm handshake/socket trạng thái (state / 상태), nhưng **vận chuyển (transport / 전송) reuse không hợp nhất bảo mật (security / 보안) origins**.
 
 Trình duyệt (browser / 브라우저) vẫn phải duy trì origin isolation, credential/cookie rules và certificate định danh (identity / 식별자). “Cùng liên kết (connection / 연결)” không có nghĩa hai applications được phép đọc trạng thái (state / 상태) của nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **15. liên kết (connection / 연결) coalescing và origin ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **16. Header compression có trạng thái (state / 상태) và thất bại (failure / 실패) ranh giới (boundary / 경계) riêng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Worked example: packet mất mát (loss / 손실) trên một page nhiều requests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Header compression có trạng thái (state / 상태) và thất bại (failure / 실패) ranh giới (boundary / 경계) riêng
 
 HTTP/2 dùng HPACK; HTTP/3 dùng QPACK để thích nghi với vận chuyển (transport / 전송) có streams độc lập. Header compression giảm repeated bytes nhưng tạo dynamic-table trạng thái (state / 상태) giữa peers.
 
 Stateful compression phải tránh biến packet/stream reordering thành toàn cục (global / 전역) blocking quá mức. Đây là lý do HTTP/3 không chỉ “đổi TCP thành QUIC”; một số cơ chế (mechanism / 메커니즘) phía HTTP cũng phải thiết kế lại để phù hợp delivery mô hình (model / 모델) mới.
+
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **16. Header compression có trạng thái (state / 상태) và thất bại (failure / 실패) ranh giới (boundary / 경계) riêng** cho ta quy tắc; **17. Worked example: packet mất mát (loss / 손실) trên một page nhiều requests** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. khả năng quan sát (observability / 관측 가능성) khó hơn vì vận chuyển (transport / 전송) siêu dữ liệu (metadata / 메타데이터) được mã hóa nhiều hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Worked example: packet mất mát (loss / 손실) trên một page nhiều requests
 
@@ -160,6 +191,8 @@ shared path capacity
 
 chứ không phải “mất mát (loss / 손실) chỉ ảnh hưởng đúng một yêu cầu (request / 요청)”.
 
+> **Chuyển mạch:** Ở chặng này của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **17. Worked example: packet mất mát (loss / 손실) trên một page nhiều requests** cho ta quy tắc; **18. khả năng quan sát (observability / 관측 가능성) khó hơn vì vận chuyển (transport / 전송) siêu dữ liệu (metadata / 메타데이터) được mã hóa nhiều hơn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. Packet-level diagnosis: đọc symptom theo cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. khả năng quan sát (observability / 관측 가능성) khó hơn vì vận chuyển (transport / 전송) siêu dữ liệu (metadata / 메타데이터) được mã hóa nhiều hơn
 
 QUIC mã hóa nhiều vận chuyển (transport / 전송) siêu dữ liệu (metadata / 메타데이터) hơn TCP, giúp privacy và giảm giao thức (protocol / 프로토콜) ossification do middlebox phụ thuộc vào fields nội bộ. Đổi lại packet capture ngoài endpoint không còn nhìn được mọi trạng thái (state / 상태) như TCP truyền thống.
@@ -167,6 +200,8 @@ QUIC mã hóa nhiều vận chuyển (transport / 전송) siêu dữ liệu (met
 Diagnosis cần tăng endpoint telemetry: handshake phase, negotiated phiên bản (version / 버전), RTT estimate, mất mát (loss / 손실)/khôi phục (recovery / 복구) counters, congestion trạng thái (state / 상태), flow-control blocked thời gian (time / 시간), stream độ trễ (latency / 지연 시간) và fallback reason.
 
 Privacy/evolvability và operator visibility là sự đánh đổi (trade-off / 트레이드오프) thật, không phải hiện thực (implementation / 구현) accident.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **18. khả năng quan sát (observability / 관측 가능성) khó hơn vì vận chuyển (transport / 전송) siêu dữ liệu (metadata / 메타데이터) được mã hóa nhiều hơn** nêu điều cần giải thích; **19. Packet-level diagnosis: đọc symptom theo cơ chế (mechanism / 메커니즘)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. phiên bản (version / 버전) evolution và triển khai (deployment / 배포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Packet-level diagnosis: đọc symptom theo cơ chế (mechanism / 메커니즘)
 
@@ -189,11 +224,15 @@ packet/datagram sizes và PMTU symptoms
 
 Packet capture chỉ là một bằng chứng (evidence / 증거) nguồn (source / 소스). ứng dụng (application / 애플리케이션) dấu vết (trace / 추적) giải thích yêu cầu (request / 요청) ngữ nghĩa (semantics / 의미론); endpoint vận chuyển (transport / 전송) metrics giải thích trạng thái (state / 상태) mà encrypted wire capture có thể không thấy.
 
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **19. Packet-level diagnosis: đọc symptom theo cơ chế (mechanism / 메커니즘)** xác định đầu vào; **20. phiên bản (version / 버전) evolution và triển khai (deployment / 배포)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. phiên bản (version / 버전) evolution và triển khai (deployment / 배포)
 
 HTTP/2 và HTTP/3 là giao thức (protocol / 프로토콜) standards, nhưng môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작) phụ thuộc máy khách (client / 클라이언트)/máy chủ (server / 서버) hiện thực (implementation / 구현), congestion thuật toán (algorithm / 알고리즘), TLS thư viện (library / 라이브러리), kernel/mạng (network / 네트워크) đường dẫn (path / 경로) và intermediaries. Không nên gắn một tối ưu hóa (optimization / 최적화) với một trình duyệt (browser / 브라우저)/máy chủ (server / 서버) phiên bản (version / 버전) rồi coi nó là universal law.
 
 Khi rollout HTTP/3, nên so theo cohorts và mạng (network / 네트워크) conditions: RTT thấp/cao, mất mát (loss / 손실) thấp/cao, mobile/Wi-Fi, geographic region, cold/reused connections. Average toàn fleet có thể che nhóm thật sự được lợi hoặc bị regression.
+
+> **Chuyển mạch:** Ở chặng này của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **20. phiên bản (version / 버전) evolution và triển khai (deployment / 배포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -209,12 +248,16 @@ Khi rollout HTTP/3, nên so theo cohorts và mạng (network / 네트워크) con
 
 **“HTTP/3 luôn nhanh hơn.”** Lợi ích phụ thuộc RTT, mất mát (loss / 손실), liên kết (connection / 연결) reuse, tải công việc (workload / 워크로드), hiện thực (implementation / 구현) và chính sách mạng (network policy / 네트워크 정책).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > HTTP evolution giữ ứng dụng (application / 애플리케이션) ngữ nghĩa (semantics / 의미론) nhưng thay cách **nhiều streams chia sẻ một vận chuyển (transport / 전송) liên kết (connection / 연결)**. HTTP/2 multiplex ở ứng dụng (application / 애플리케이션) tầng (layer / 계층) nhưng vẫn chịu một TCP byte stream; HTTP/3 dùng QUIC để cho từng stream có thứ tự (ordering / 순서) riêng, trong khi congestion/đường dẫn (path / 경로) sức chứa (capacity / 용량) vẫn được chia sẻ. Khi gỡ lỗi (debug / 디버그), hãy tách handshake, stream thứ tự (ordering / 순서), luồng (flow / 흐름) điều khiển (control / 제어), congestion điều khiển (control / 제어) và đường dẫn (path / 경로) MTU thay vì gọi chung là “mạng (network / 네트워크) chậm”.
+
+> **Chuyển mạch:** Trong **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc [TCP/UDP và congestion](./02_transport_tcp_udp_and_congestion.md), [DNS/HTTP/TLS](./03_dns_http_tls_and_web_request.md), [socket/NAT/firewall/VPN](./06_sockets_ipv6_nat_firewalls_and_vpn.md), [web request end-to-end](../90_connections/01_browser_to_database_request.md) và [request path advanced](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 network layers packets and encapsulation](./00_network_layers_packets_and_encapsulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

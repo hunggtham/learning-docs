@@ -1,13 +1,14 @@
 # Bảo mật mô hình và chuỗi cung ứng AI
 
-> **Mạch đọc:** Đặt **Bảo mật mô hình và chuỗi cung ứng AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kiến thức cần có trước** sang **Chuỗi cung ứng AI gồm những gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bảo mật mô hình và chuỗi cung ứng AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuỗi cung ứng AI gồm những gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Hệ thống AI kế thừa rủi ro của chuỗi cung ứng phần mềm và bổ sung thêm các sản phẩm tạo ra (artifact / 산출물) đặc thù như dataset, checkpoint, tokenizer, adapter, prompt bundle và evaluation assets. **Bảo mật chuỗi cung ứng (supply-chain security)** bảo vệ tính toàn vẹn và khả năng truy vết từ nguồn (source / 소스) → bản dựng (build / 빌드)/train → sản phẩm tạo ra (artifact / 산출물) → registry → triển khai (deployment / 배포).
 
 ## Kiến thức cần có trước
 
 Nên đọc [Data Poisoning](./05_data_poisoning_backdoors_and_model_attacks.md), [Model Registry](../16_mlops_and_llmops/03_model_registry.md), [CI/CD/CT](../16_mlops_and_llmops/04_ci_cd_ct_for_ai.md), [LLMOps](../16_mlops_and_llmops/08_llmops.md) và [Secure AI System Design](./08_secure_ai_system_design.md).
+
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **Kiến thức cần có trước** xác định đầu vào; **Chuỗi cung ứng AI gồm những gì?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tin cậy theo sản phẩm tạo ra (artifact / 산출물)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi cung ứng AI gồm những gì?
 
@@ -32,6 +33,8 @@ model provider API
 
 Một thành phần (component / 컴포넌트) bị compromise có thể thay đổi hành vi (behavior / 동작) mà ứng dụng (application / 애플리케이션) mã (code / 코드) chính không hề đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Chuỗi cung ứng AI gồm những gì?** xác định đầu vào; **Mô hình tin cậy theo sản phẩm tạo ra (artifact / 산출물)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Digest bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tin cậy theo sản phẩm tạo ra (artifact / 산출물)
 
 Mỗi sản phẩm tạo ra (artifact / 산출물) môi trường vận hành (production / 운영 환경) cần trả lời được:
@@ -47,6 +50,8 @@ dữ liệu và code nào tạo ra nó?
 
 Đây là nền của **provenance** và sự cố (incident / 인시던트) phản hồi (response / 응답).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **Digest bất biến** tiếp nhận điểm tựa từ **Mô hình tin cậy theo sản phẩm tạo ra (artifact / 산출물)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chữ ký và attestation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Digest bất biến
 
 Tag kiểu `latest` tiện cho con người nhưng không đủ để truy vết. môi trường vận hành (production / 운영 환경) triển khai (deployment / 배포) nên pin sản phẩm tạo ra (artifact / 산출물) bằng định danh (identity / 식별자) bất biến:
@@ -58,11 +63,15 @@ sha256:...          → identity nội dung bất biến
 
 Alias vẫn hữu ích nếu lịch sử (history / 이력) luôn trỏ ngược được tới digest cụ thể.
 
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **Chữ ký và attestation** tiếp nhận điểm tựa từ **Digest bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chữ ký và attestation
 
 Digital signature hoặc bản dựng (build / 빌드) attestation giúp xác minh sản phẩm tạo ra (artifact / 산출물) đến từ chuỗi xử lý (pipeline / 파이프라인) được tin cậy và không bị thay đổi sau khi tạo.
 
 Chữ ký **không chứng minh sản phẩm tạo ra (artifact / 산출물) an toàn**; nó chứng minh provenance/integrity tương ứng với trust gốc (root / 루트). Nếu chuỗi xử lý (pipeline / 파이프라인) ký đã bị compromise, sản phẩm tạo ra (artifact / 산출물) xấu vẫn có thể được ký hợp lệ.
+
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Rủi ro phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Chữ ký và attestation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Serialization và custom mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro phụ thuộc (dependency / 의존성)
 
@@ -77,11 +86,15 @@ Phụ thuộc (dependency / 의존성) ecosystem có thể gặp:
 
 Môi trường vận hành (production / 운영 환경) practice nên gồm lockfile, pinned phiên bản (version / 버전)/digest, vulnerability scanning, registry đáng tin và phụ thuộc (dependency / 의존성) tối thiểu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **Serialization và custom mã (code / 코드)** tiếp nhận điểm tựa từ **Rủi ro phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checkpoint và adapter của bên thứ ba** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Serialization và custom mã (code / 코드)
 
 Một số mô hình (model / 모델) format hoặc loading đường dẫn (path / 경로) có thể thực thi mã (code / 코드) khi deserialize. Vì vậy “tệp (file / 파일) checkpoint” không mặc định là passive dữ liệu (data / 데이터).
 
 Nên ưu tiên safe tensor format khi có thể, tránh `trust_remote_code` hoặc custom loader không cần thiết và dùng sandbox cho sản phẩm tạo ra (artifact / 산출물) chưa được tin cậy.
+
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **Checkpoint và adapter của bên thứ ba** tiếp nhận điểm tựa từ **Serialization và custom mã (code / 코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dataset cũng là supply-chain sản phẩm tạo ra (artifact / 산출물)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Checkpoint và adapter của bên thứ ba
 
@@ -99,17 +112,23 @@ chỉ promote qua registry sau approval
 
 Adapter nhỏ vẫn có khả năng thay đổi hành vi (behavior / 동작) lớn; kích thước tệp (file / 파일) không tương ứng với mức rủi ro.
 
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Dataset cũng là supply-chain sản phẩm tạo ra (artifact / 산출물)** tiếp nhận điểm tựa từ **Checkpoint và adapter của bên thứ ba** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt và chính sách (policy / 정책) cũng cần versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dataset cũng là supply-chain sản phẩm tạo ra (artifact / 산출물)
 
 Dataset bên thứ ba cần provenance, license, collection phương thức (method / 메서드), chất lượng (quality / 품질) và poisoning rà soát (review / 검토). huấn luyện (training / 학습) manifest phải trỏ được tới snapshot chính xác.
 
 Nếu dataset URL bị cập nhật âm thầm, cùng mã (code / 코드) huấn luyện (training / 학습) có thể tạo mô hình (model / 모델) khác. Vì vậy URL không phải định danh (identity / 식별자) đủ mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **Prompt và chính sách (policy / 정책) cũng cần versioning** tiếp nhận điểm tựa từ **Dataset cũng là supply-chain sản phẩm tạo ra (artifact / 산출물)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công cụ (tool / 도구) và plugin supply chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prompt và chính sách (policy / 정책) cũng cần versioning
 
 Trong LLM ứng dụng (application / 애플리케이션), hệ thống (system / 시스템) prompt, công cụ (tool / 도구) lược đồ (schema / 스키마), chính sách (policy / 정책) template và ngữ cảnh (context / 맥락) assembly đều tác động hành vi (behavior / 동작). Chúng cần rà soát mã (code review / 코드 리뷰), versioning và regression kiểm thử (test / 테스트) giống sản phẩm tạo ra (artifact / 산출물) khác.
 
 Một sửa đổi prompt trực tiếp trong dashboard mà không có lịch sử (history / 이력) tạo ra hidden trạng thái (state / 상태) trong môi trường vận hành (production / 운영 환경).
+
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **Prompt và chính sách (policy / 정책) cũng cần versioning** xác định đầu vào; **Công cụ (tool / 도구) và plugin supply chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **CI/CD là ranh giới bảo mật (security boundary / 보안 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công cụ (tool / 도구) và plugin supply chuỗi (chain / 사슬)
 
@@ -124,6 +143,8 @@ Nên dùng:
 - mạng (network / 네트워크) allowlist;
 - lược đồ (schema / 스키마)/chính sách (policy / 정책) kiểm tra hợp lệ (validation / 검증);
 - phiên bản (version / 버전) pinning.
+
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Công cụ (tool / 도구) và plugin supply chuỗi (chain / 사슬)** đã nêu tiêu chí phân biệt, còn **CI/CD là ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Promote cùng một sản phẩm tạo ra (artifact / 산출물) qua môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CI/CD là ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -143,11 +164,15 @@ separation of duties
 
 Môi trường vận hành (production / 운영 환경) nên lấy sản phẩm tạo ra (artifact / 산출물) từ registry được approve thay vì bản dựng (build / 빌드) trực tiếp từ nguồn (source / 소스) mỗi lần deploy.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **CI/CD là ranh giới bảo mật (security boundary / 보안 경계)** đã nêu tiêu chí phân biệt, còn **Promote cùng một sản phẩm tạo ra (artifact / 산출물) qua môi trường** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **SBOM và AI Bill of Materials** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Promote cùng một sản phẩm tạo ra (artifact / 산출물) qua môi trường
 
 Một mẫu (pattern / 패턴) an toàn là bản dựng (build / 빌드)/train sản phẩm tạo ra (artifact / 산출물) một lần rồi promote cùng digest từ staging sang môi trường vận hành (production / 운영 환경). Nếu rebuild riêng cho từng môi trường (environment / 환경), nội dung có thể khác dù phiên bản (version / 버전) label giống nhau.
 
 Cấu hình (configuration / 구성) theo môi trường (environment / 환경) vẫn có thể thay đổi, nhưng phải được phiên bản (version / 버전) và dấu vết (trace / 추적) riêng.
+
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **SBOM và AI Bill of Materials** tiếp nhận điểm tựa từ **Promote cùng một sản phẩm tạo ra (artifact / 산출물) qua môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình triển khai môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## SBOM và AI Bill of Materials
 
@@ -168,6 +193,8 @@ evaluation suite
 
 Mục tiêu là impact phân tích (analysis / 분석): khi một thành phần (component / 컴포넌트) có vấn đề, biết triển khai (deployment / 배포) nào bị ảnh hưởng.
 
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Mô hình triển khai môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **SBOM và AI Bill of Materials** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro từ provider bên ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình triển khai môi trường vận hành (production / 운영 환경)
 
 Một đường phát hành đáng tin cậy:
@@ -187,6 +214,8 @@ source + data + config
 
 Mỗi bước cần siêu dữ liệu (metadata / 메타데이터) để nối thành lineage.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **Rủi ro từ provider bên ngoài** tiếp nhận điểm tựa từ **Mô hình triển khai môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Secret trong bản dựng (build / 빌드) và huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rủi ro từ provider bên ngoài
 
 Hosted LLM/embedding API là phụ thuộc (dependency / 의존성) bên ngoài. Cần theo dõi:
@@ -201,15 +230,21 @@ Hosted LLM/embedding API là phụ thuộc (dependency / 의존성) bên ngoài.
 
 Provider cập nhật (update / 업데이트) có thể thay hành vi (behavior / 동작) mà cục bộ (local / 로컬) mã (code / 코드) không đổi, vì vậy LLMOps phải coi provider định danh (identity / 식별자) là một phần của hành vi (behavior / 동작) bundle.
 
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **Secret trong bản dựng (build / 빌드) và huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **Rủi ro từ provider bên ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình (model / 모델) theft và sản phẩm tạo ra (artifact / 산출물) truy cập (access / 접근)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Secret trong bản dựng (build / 빌드) và huấn luyện (training / 학습)
 
 Notebook, CI log hoặc cấu hình (config / 설정) có thể vô tình chứa API key. Secret scanner, bên ngoài (external / 외부) secret manager và credential ngắn hạn giúp giảm rủi ro.
 
 Sản phẩm tạo ra (artifact / 산출물) không nên chứa credential có thể tái sử dụng ở môi trường vận hành (production / 운영 환경).
 
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Mô hình (model / 모델) theft và sản phẩm tạo ra (artifact / 산출물) truy cập (access / 접근)** tiếp nhận điểm tựa từ **Secret trong bản dựng (build / 빌드) và huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproducibility và bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình (model / 모델) theft và sản phẩm tạo ra (artifact / 산출물) truy cập (access / 접근)
 
 Weights hoặc adapter có thể là tài sản nhạy cảm. Registry cần kiểm soát truy cập (access control / 접근 제어), kiểm tra (audit / 감사), encryption và hạn chế export phù hợp. Tuy nhiên việc “giấu mô hình (model / 모델)” không thay thế các defense ở suy luận (inference / 추론) đường dẫn (path / 경로).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **Reproducibility và bảo mật (security / 보안)** tiếp nhận điểm tựa từ **Mô hình (model / 모델) theft và sản phẩm tạo ra (artifact / 산출물) truy cập (access / 접근)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dạng thất bại (failure mode / 실패 모드) thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reproducibility và bảo mật (security / 보안)
 
@@ -228,6 +263,8 @@ artifact digest
 
 Reproducibility hỗ trợ forensic investigation khi cần chứng minh mô hình (model / 모델) đến từ chuỗi xử lý (pipeline / 파이프라인) nào.
 
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **Dạng thất bại (failure mode / 실패 모드) thường gặp** tiếp nhận điểm tựa từ **Reproducibility và bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng phó lỗ hổng chuỗi cung ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dạng thất bại (failure mode / 실패 모드) thường gặp
 
 **Mutable tag.** môi trường vận hành (production / 운영 환경) chạy `latest`, không biết chính xác sản phẩm tạo ra (artifact / 산출물) nào đang serve.
@@ -243,6 +280,8 @@ Reproducibility hỗ trợ forensic investigation khi cần chứng minh mô hì
 **Provider alias đổi hành vi.** Không có regression monitor hoặc quay lui (rollback / 롤백) bundle.
 
 **Rebuild khi deploy.** sản phẩm tạo ra (artifact / 산출물) staging và môi trường vận hành (production / 운영 환경) không còn cùng định danh (identity / 식별자).
+
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Dạng thất bại (failure mode / 실패 모드) thường gặp** xác định đầu vào; **Ứng phó lỗ hổng chuỗi cung ứng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ứng phó lỗ hổng chuỗi cung ứng
 
@@ -261,15 +300,21 @@ Khi một gói (package / 패키지), mô hình (model / 모델) hoặc dataset 
 
 Không có provenance thì bước 2 trở thành điều tra thủ công chậm và dễ sót.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **Ứng phó lỗ hổng chuỗi cung ứng** xác định đầu vào; **Sự đánh đổi (trade-off / 트레이드오프)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sự đánh đổi (trade-off / 트레이드오프)
 
 Ký sản phẩm tạo ra (artifact / 산출물), giữ immutable snapshot và bảo mật (security / 보안) gate làm tăng lưu trữ (storage / 저장소), compute và thời gian bản phát hành (release / 릴리스). Tuy nhiên chúng giảm đáng kể chi phí (cost / 비용) của quay lui (rollback / 롤백), kiểm tra (audit / 감사) và sự cố (incident / 인시던트) investigation.
 
 Không phải mọi thử nghiệm notebook đều cần chuỗi xử lý (pipeline / 파이프라인) enterprise, nhưng sản phẩm tạo ra (artifact / 산출물) được promote lên môi trường vận hành (production / 운영 환경) phải có định danh (identity / 식별자) và provenance đủ mạnh tương ứng với impact.
 
+> **Chuyển mạch:** Trong **Bảo mật mô hình và chuỗi cung ứng AI**, **Mô hình tư duy** gom các mảnh từ **Sự đánh đổi (trade-off / 트레이드오프)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > **Bảo mật chuỗi cung ứng AI là biết chính xác mình đang chạy cái gì, nó đến từ đâu, ai được phép thay đổi nó và bằng chứng nào cho phép nó được promote.**
+
+> **Chuyển mạch:** Ở chặng này của **Bảo mật mô hình và chuỗi cung ứng AI**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -289,8 +334,10 @@ Không. bản dựng (build / 빌드) runner, registry hoặc phụ thuộc (dep
 
 Không. Provider mô hình (model / 모델)/phiên bản (version / 버전) và chính sách (policy / 정책) vẫn là bên ngoài (external / 외부) phụ thuộc (dependency / 의존성) ảnh hưởng hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảo mật mô hình và chuỗi cung ứng AI**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Nên đọc cùng [Data Poisoning](./05_data_poisoning_backdoors_and_model_attacks.md), [Model Registry](../16_mlops_and_llmops/03_model_registry.md), [CI/CD/CT](../16_mlops_and_llmops/04_ci_cd_ct_for_ai.md), [LLMOps](../16_mlops_and_llmops/08_llmops.md), [Incident Response](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md) và [Secure AI System Design](./08_secure_ai_system_design.md).
 
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai safety foundations](./00_ai_safety_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

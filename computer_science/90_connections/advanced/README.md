@@ -1,5 +1,7 @@
 # Kết nối xuyên tầng nâng cao
 
+> **Mạch đọc:** [README Khoa học máy tính](../../README.md) là owner cấp domain; README này chỉ điều phối bốn tuyến kết nối nâng cao bên dưới. Mỗi tuyến phải quay về owner cơ chế cụ thể khi cần đào sâu, không trở thành một domain song song.
+
 Các chapter ở đây không lặp lại lĩnh vực (domain / 도메인) content. Chúng bắt đầu từ một thuộc tính end-to-end hoặc symptom môi trường vận hành (production / 운영 환경) rồi đi xuyên các lớp trừu tượng (abstraction / 추상화) để trả lời: bất biến (invariant / 불변식) nào bị vi phạm, lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작), và bằng chứng (evidence / 증거) nào đủ để chứng minh nhân quả (causal / 인과적) đường dẫn (path / 경로).
 
 ## Chuẩn gốc (canonical / 정본) liên kết (connection / 연결) paths

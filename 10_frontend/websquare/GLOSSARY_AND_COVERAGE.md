@@ -1,13 +1,10 @@
 # WebSquare Glossary & Coverage kiểm tra (audit / 감사)
 
-> **Mạch đọc:** Đặt **WebSquare Glossary & Coverage kiểm tra (audit / 감사)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Glossary cốt lõi** sang **2. Identifier/API cần nhận diện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Glossary cốt lõi** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **2. Identifier/API cần nhận diện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tệp (file / 파일) này có hai vai trò. Phần đầu là glossary để nhận diện thuật ngữ Việt–Anh–Hàn và tên API thường xuất hiện trong codebase. Phần sau là coverage kiểm tra (audit / 감사) để kiểm tra bạn đã hiểu thư viện (library / 라이브러리) theo mô hình tư duy (mental model / 사고 모델) hay chỉ mới nhớ cú pháp (syntax / 문법).
 
 ## 1. Glossary cốt lõi
-Phần “1. Glossary cốt lõi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Tiếng Việt | English term | 한국어 용어 | Ý nghĩa trong WebSquare |
 |---|---|---|---|
@@ -47,6 +44,8 @@ Phần “1. Glossary cốt lõi” nối kiến thức trước với nội dun
 | tính lũy đẳng | idempotency | 멱등성 | thử lại (retry / 재시도) cùng yêu cầu (request / 요청) không tạo thêm side tác động (effect / 효과) ngoài ý muốn. |
 | bằng chứng vận hành | bằng chứng vận hành (production evidence / 운영 증거) | 운영 증거 | mạng (network / 네트워크) dấu vết (trace / 추적), log, chỉ số (metric / 지표), ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙), timing dùng để kiểm chứng giả thuyết. |
 | nợ tương thích | tính tương thích (compatibility / 호환성) debt | 호환성 부채 | Workaround/API cũ còn tồn tại vì generation/trình duyệt (browser / 브라우저)/dự án (project / 프로젝트) legacy. |
+
+> **Chuyển mạch:** Glossary cốt lõi đặt tên cho page, component, data và submission; identifier/API section nối tên gọi đó với runtime behavior. Cặp khái niệm dễ nhầm tiếp theo kiểm tra mental model bằng contrast cụ thể.
 
 ## 2. Identifier/API cần nhận diện
 
@@ -93,6 +92,8 @@ Phần “1. Glossary cốt lõi” nối kiến thức trước với nội dun
 `client.config.xml` — tài nguyên (resource / 자원) cấu hình phía máy khách (client / 클라이언트) trong SP5 Studio; chính xác (exact / 정확한) generated/thời gian chạy (runtime / 런타임) biểu diễn (representation / 표현) cần kiểm tra theo dự án (project / 프로젝트)/bản dựng (build / 빌드).
 
 `server.config.xml` — tài nguyên (resource / 자원) cấu hình phía máy chủ (server / 서버)/engine trong SP5 Studio; quản lý nhóm setting engine/máy chủ (server / 서버) thay vì page lô-gic nghiệp vụ (business logic / 비즈니스 로직).
+
+> **Chuyển mạch:** Ở chặng này của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **2. Identifier/API cần nhận diện** đã nêu tiêu chí phân biệt, còn **3. Những cặp khái niệm dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Coverage kiểm tra (audit / 감사) — Foundation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Những cặp khái niệm dễ nhầm
 
@@ -176,6 +177,8 @@ Lần ghi nhận (commit / 커밋) đã merge chỉ chứng minh nguồn (source
 
 Mock giúp cô lập ranh giới (boundary / 경계) nhưng không chứng minh WebSquare tích hợp (integration / 통합) nếu mock đã bỏ qua phạm vi (scope / 범위), async hoặc vòng đời (lifecycle / 생명주기) ngữ nghĩa (semantics / 의미론) quan trọng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **3. Những cặp khái niệm dễ nhầm** đã nêu tiêu chí phân biệt, còn **4. Coverage kiểm tra (audit / 감사) — Foundation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Coverage kiểm tra (audit / 감사) — Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Coverage kiểm tra (audit / 감사) — Foundation
 
 Bạn đã đạt mức Foundation khi có thể giải thích bằng lời của mình, không nhìn ghi chú (note / 노트):
@@ -200,6 +203,8 @@ Submission tham chiếu (reference / 참조)/mục tiêu (target / 대상) biể
 
 Nếu chưa trả lời rõ được các câu này, quay lại chapter 01–03.
 
+> **Chuyển mạch:** Trong **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **5. Coverage kiểm tra (audit / 감사) — Intermediate** tiếp nhận điểm tựa từ **4. Coverage kiểm tra (audit / 감사) — Foundation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Coverage kiểm tra (audit / 감사) — phạm vi (scope / 범위) & kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Coverage kiểm tra (audit / 감사) — Intermediate
 
 Bạn đạt mức Intermediate khi có thể lập luận (reasoning / 추론) một màn hình truy vấn (query / 쿼리)/edit mà không dò API liên tục:
@@ -220,6 +225,8 @@ Tại sao máy chủ (server / 서버) paging làm `getRowCount()` không đại
 
 Tại sao giữ selected row chỉ mục (index / 인덱스) lâu dài có thể sai?
 
+> **Chuyển mạch:** Ở chặng này của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **6. Coverage kiểm tra (audit / 감사) — phạm vi (scope / 범위) & kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **5. Coverage kiểm tra (audit / 감사) — Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Coverage kiểm tra (audit / 감사) — Reusable kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Coverage kiểm tra (audit / 감사) — phạm vi (scope / 범위) & kiến trúc (architecture / 아키텍처)
 
 Bạn đạt mức này khi có thể mở một app shell nhiều tab và vẽ được topology:
@@ -239,6 +246,8 @@ Khi nào nên dùng `getWindow()` thay vì chuỗi (chain / 사슬) nhiều `par
 Popup nên trả kết quả (result / 결과) đặc tả hợp đồng (contract / 계약) thế nào để giảm coupling?
 
 Vì sao `setSrc()` tạo vòng đời (lifecycle / 생명주기) race nếu gọi child ngay sau đó?
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **7. Coverage kiểm tra (audit / 감사) — Reusable kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **6. Coverage kiểm tra (audit / 감사) — phạm vi (scope / 범위) & kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Coverage kiểm tra (audit / 감사) — Forms, i18n & khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Coverage kiểm tra (audit / 감사) — Reusable kiến trúc (architecture / 아키텍처)
 
@@ -261,6 +270,8 @@ Template/snippet khác thời gian chạy (runtime / 런타임) reuse thế nào
 Động (dynamic / 동적) thành phần (component / 컴포넌트)/listener được cleanup ở ranh giới (boundary / 경계) nào?
 
 Thay đổi công khai (public / 공개) UDC phương thức (method / 메서드)/sự kiện (event / 이벤트) có blast radius gì?
+
+> **Chuyển mạch:** Trong **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **8. Coverage kiểm tra (audit / 감사) — Forms, i18n & khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **7. Coverage kiểm tra (audit / 감사) — Reusable kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Coverage kiểm tra (audit / 감사) — Rendering & thời gian tồn tại (lifetime / 수명)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Coverage kiểm tra (audit / 감사) — Forms, i18n & khả năng tiếp cận (accessibility / 접근성)
 
@@ -288,6 +299,8 @@ Grid khả năng tiếp cận (accessibility / 접근성) option ảnh hưởng 
 
 Tệp (file / 파일) upload/Excel import cần server-side trust controls nào?
 
+> **Chuyển mạch:** Ở chặng này của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **9. Coverage kiểm tra (audit / 감사) — Rendering & thời gian tồn tại (lifetime / 수명)** tiếp nhận điểm tựa từ **8. Coverage kiểm tra (audit / 감사) — Forms, i18n & khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Coverage kiểm tra (audit / 감사) — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Coverage kiểm tra (audit / 감사) — Rendering & thời gian tồn tại (lifetime / 수명)
 
 Bạn đạt mức này khi không còn dùng từ “loaded” một cách mơ hồ:
@@ -311,6 +324,8 @@ Debounce khác latest-intent guard như thế nào?
 Cold-cache và warm-cache kiểm thử (test / 테스트) cho kết quả khác nhau tại sao?
 
 Bạn chứng minh bộ nhớ (memory / 메모리) leak bằng repeated vòng đời (lifecycle / 생명주기) + vùng nhớ động (heap / 힙) bằng chứng (evidence / 증거) thế nào?
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **10. Coverage kiểm tra (audit / 감사) — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **9. Coverage kiểm tra (audit / 감사) — Rendering & thời gian tồn tại (lifetime / 수명)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Coverage kiểm tra (audit / 감사) — Legacy & di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Coverage kiểm tra (audit / 감사) — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경)
 
@@ -336,6 +351,8 @@ W-Pack/bộ nhớ đệm (cache / 캐시) có thể làm môi trường vận h�
 
 API công khai (public API / 공개 API) discipline giúp engine upgrade an toàn hơn private DOM/engine hack như thế nào?
 
+> **Chuyển mạch:** Trong **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **11. Coverage kiểm tra (audit / 감사) — Legacy & di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **10. Coverage kiểm tra (audit / 감사) — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Coverage kiểm tra (audit / 감사) — Testing & Testability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Coverage kiểm tra (audit / 감사) — Legacy & di chuyển (migration / 마이그레이션)
 
 Bạn đạt mức migration-ready khi có thể phân loại mã (code / 코드) cũ:
@@ -359,6 +376,8 @@ Cấu hình (config / 설정)/workaround nào là historical debt và bằng ch�
 Engine upgrade cần regression areas nào?
 
 UDC/dùng chung (common / 공통) tầng (layer / 계층) cũ có công khai (public / 공개) đặc tả hợp đồng (contract / 계약) nào phải giữ khi refactor?
+
+> **Chuyển mạch:** Ở chặng này của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **12. Coverage kiểm tra (audit / 감사) — Testing & Testability** tiếp nhận điểm tựa từ **11. Coverage kiểm tra (audit / 감사) — Legacy & di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Coverage kiểm tra (audit / 감사) — bản dựng (build / 빌드), cấu hình (config / 설정) & triển khai (deployment / 배포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Coverage kiểm tra (audit / 감사) — Testing & Testability
 
@@ -386,6 +405,8 @@ Bảo mật (security / 보안) negative kiểm thử (test / 테스트) nào ch
 
 Một flaky kiểm thử (test / 테스트) cần được root-cause ở synchronization, fixture, selector hay cleanup như thế nào thay vì thử lại (retry / 재시도) đến xanh?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **13. Coverage kiểm tra (audit / 감사) — bản dựng (build / 빌드), cấu hình (config / 설정) & triển khai (deployment / 배포)** tiếp nhận điểm tựa từ **12. Coverage kiểm tra (audit / 감사) — Testing & Testability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Failure-mode ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Coverage kiểm tra (audit / 감사) — bản dựng (build / 빌드), cấu hình (config / 설정) & triển khai (deployment / 배포)
 
 Bạn đạt mức này khi có thể dấu vết (trace / 추적) một bản phát hành (release / 릴리스) từ Git đến trình duyệt (browser / 브라우저):
@@ -412,9 +433,9 @@ Cấu hình (config / 설정) diff nào cần lấy khi nguồn (source / 소스
 
 Quay lui (rollback / 롤백) cần xử lý sản phẩm tạo ra (artifact / 산출물), cấu hình (config / 설정), bộ nhớ đệm (cache / 캐시) và backend tính tương thích (compatibility / 호환성) ra sao?
 
-## 14. Failure-mode ma trận (matrix / 행렬)
-Phần “14. Failure-mode ma trận (matrix / 행렬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **14. Failure-mode ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **13. Coverage kiểm tra (audit / 감사) — bản dựng (build / 빌드), cấu hình (config / 설정) & triển khai (deployment / 배포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. nội bộ (internal / 내부) kiến thức (knowledge / 지식) connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 14. Failure-mode ma trận (matrix / 행렬)
 
 | Triệu chứng | Hypothesis ưu tiên | bằng chứng (evidence / 증거) đầu tiên |
 |---|---|---|
@@ -438,6 +459,8 @@ Phần “14. Failure-mode ma trận (matrix / 행렬)” nối kiến thức tr
 | WFrame 404 chỉ ở PROD | ngữ cảnh (context / 맥락) gốc (root / 루트)/proxy/sản phẩm tạo ra (artifact / 산출물) đường dẫn (path / 경로) | resolved URL + cấu hình (config / 설정) diff |
 | Chỉ môi trường vận hành (production / 운영 환경) lỗi | cấu hình (config / 설정)/bản dựng (build / 빌드)/bộ nhớ đệm (cache / 캐시) drift | engine/cấu hình (config / 설정)/sản phẩm tạo ra (artifact / 산출물) diff |
 
+> **Chuyển mạch:** Ở chặng này của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **15. nội bộ (internal / 내부) kiến thức (knowledge / 지식) connections** tiếp nhận điểm tựa từ **14. Failure-mode ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Practical capstone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. nội bộ (internal / 내부) kiến thức (knowledge / 지식) connections
 
 JavaScript thực thi (execution / 실행), closure, vòng lặp sự kiện (event loop / 이벤트 루프) và Promise: [JavaScript Intermediate](../javascript/javascript_intermediate.md).
@@ -457,6 +480,8 @@ Testing/testability/regression: [11 — Testing, Testability & Regression Engine
 Bản dựng (build / 빌드)/cấu hình (config / 설정)/triển khai (deployment / 배포): [12 — Build, Configuration, Deployment & Environment Reasoning](12_build_config_deployment.md).
 
 Nếu backend là Java/Spring, giao dịch (transaction / 트랜잭션), authorization và API tính đúng đắn (correctness / 정확성) không thuộc WebSquare. Hãy cross-reference chuẩn gốc (canonical / 정본) backend docs trong `10_backend/` thay vì đưa máy chủ (server / 서버) ngữ nghĩa (semantics / 의미론) vào UI thư viện (library / 라이브러리).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **16. Practical capstone** tiếp nhận điểm tựa từ **15. nội bộ (internal / 내부) kiến thức (knowledge / 지식) connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Coverage status của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Practical capstone
 
@@ -541,6 +566,8 @@ Môi trường vận hành (production / 운영 환경) cố tình giữ W-Pack 
 
 Nếu bạn có thể chỉ ra dạng thất bại (failure mode / 실패 모드), bằng chứng (evidence / 증거), kiểm thử (test / 테스트) ranh giới (boundary / 경계) và fix ranh giới (boundary / 경계) cho các trường hợp (case / 사례) này, kiến thức đã chuyển từ “biết API” sang “lập luận (reasoning / 추론) được hệ thống và delivery chuỗi xử lý (pipeline / 파이프라인)”.
 
+> **Chuyển mạch:** Trong **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**, **17. Coverage status của thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **16. Practical capstone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 17. Coverage status của thư viện (library / 라이브러리)
 
 Thư viện (library / 라이브러리) hiện bao phủ các trục chuẩn gốc (canonical / 정본) cần thiết cho WebSquare JavaScript enterprise development: nền tảng (platform / 플랫폼)/thời gian chạy (runtime / 런타임), page mô hình (model / 모델), thành phần (component / 컴포넌트) API, events, binding, DataCollection, DataMap/DataList/LinkedDataList, row status, Submission, async communication, WFrame, phạm vi (scope / 범위), `scwin`, `$p`, popup, SPA, GridView/CRUD, reusable UDC/dùng chung (common / 공통) kiến trúc (architecture / 아키텍처), đầu vào (input / 입력)/kiểm tra hợp lệ (validation / 검증), internationalization, khả năng tiếp cận (accessibility / 접근성), tệp (file / 파일)/Excel trust ranh giới (boundary / 경계), eager/lazy/preload rendering, tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명), testing/testability, deterministic async regression, CI ranh giới (boundary / 경계), W-Pack/bản dựng (build / 빌드) provenance, máy khách (client / 클라이언트)/máy chủ (server / 서버) cấu hình (configuration / 구성), triển khai (deployment / 배포)/bộ nhớ đệm (cache / 캐시)/quay lui (rollback / 롤백), hiệu năng (performance / 성능), bộ nhớ (memory / 메모리), bảo mật (security / 보안), khả năng quan sát (observability / 관측 가능성), legacy patterns và di chuyển (migration / 마이그레이션) lập luận (reasoning / 추론).
@@ -549,4 +576,4 @@ Những thứ cố ý **không** biến thành chapter riêng gồm danh sách t
 
 Coverage cũng không coi “đã nhắc tên tính năng (feature / 기능)” là đủ. Một topic chỉ được xem là đã học khi người đọc giải thích được đơn vị sở hữu (owner / 오너) của trạng thái (state / 상태), vòng đời (lifecycle / 생명주기) prerequisite, trust ranh giới (boundary / 경계), observable đặc tả hợp đồng (contract / 계약), sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정) provenance, dạng thất bại (failure mode / 실패 모드) và bằng chứng (evidence / 증거) cần lấy khi hành vi (behavior / 동작) sai.
 
-> **Bàn giao:** Sau **17. Coverage status của thư viện (library / 라이브러리)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **17. Coverage status của thư viện (library / 라이브러리)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

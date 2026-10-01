@@ -1,7 +1,6 @@
 # 24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling
 
-> **Mạch đọc:** Đặt **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. sự kiện (event / 이벤트) không phải nghiệp vụ (business / 비즈니스) intent** sang **2. User-driven thay đổi (change / 변경) và programmatic thay đổi (change / 변경) có thể khác ngữ nghĩa (semantics / 의미론)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. sự kiện (event / 이벤트) không phải nghiệp vụ (business / 비즈니스) intent** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. User-driven thay đổi (change / 변경) và programmatic thay đổi (change / 변경) có thể khác ngữ nghĩa (semantics / 의미론)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 WebSquare screen thường trông “event-driven”: người dùng (user / 사용자) click, thành phần (component / 컴포넌트) phát sự kiện (event / 이벤트), handler sửa DataCollection, binding cập nhật UI, Submission chạy, callback lại sửa mô hình (model / 모델). Khi dự án (project / 프로젝트) nhỏ, chuỗi này có vẻ tuyến tính. Khi dự án (project / 프로젝트) lớn, một mutation có thể kích hoạt nhiều sự kiện (event / 이벤트)/binding/kết xuất (render / 렌더링) đường dẫn (path / 경로) và timing trở thành nguyên nhân của bug hoặc hiệu năng (performance / 성능) regression.
 
@@ -45,6 +44,8 @@ Handler chuyển tín hiệu (signal / 신호) thành command; command mới s�
 
 ---
 
+> **Chuyển mạch:** Event không tự mang business intent; user-driven và programmatic change cần phân biệt, rồi event ordering tiếp theo phải được xem là version-sensitive contract.
+
 ## 2. User-driven thay đổi (change / 변경) và programmatic thay đổi (change / 변경) có thể khác ngữ nghĩa (semantics / 의미론)
 
 Một số WebSquare thành phần (component / 컴포넌트) phân biệt sự kiện (event / 이벤트) do người dùng (user / 사용자) tương tác (interaction / 상호작용) với giá trị (value / 값) thay đổi bằng script. Official guide của một số thành phần (component / 컴포넌트) mô tả `onviewchange` chỉ phát khi người dùng (user / 사용자) thay đổi view, không nhất thiết khi script set giá trị (value / 값).
@@ -69,6 +70,8 @@ Sự kiện (event / 이벤트) nên quan sát tương tác (interaction / 상�
 
 ---
 
+> **Chuyển mạch:** User-driven và programmatic changes có semantics khác nhau; event ordering là version-sensitive contract, còn reentrancy phải được kiểm soát trong handler.
+
 ## 3. sự kiện (event / 이벤트) thứ tự (ordering / 순서) là đặc tả hợp đồng (contract / 계약) version-sensitive
 
 Grid editing là ví dụ rõ. SP5 bản phát hành (release / 릴리스) notes có thuộc tính (property / 속성) `viewChangeAfterEdit` liên quan thứ tự `onviewchange` và `onafteredit` ở các bản dựng (build / 빌드) tương ứng.
@@ -90,6 +93,8 @@ Nếu tính đúng đắn (correctness / 정확성) phụ thuộc A luôn trư�
 Upgrade engine có thể thay hành vi (behavior / 동작) dù nguồn (source / 소스) page không đổi.
 
 ---
+
+> **Chuyển mạch:** Reentrancy cho phép handler kích hoạt lại event system; event storm/amplification tiếp theo đo chi phí lan truyền và điểm cần debounce hoặc guard.
 
 ## 4. Reentrancy: handler có thể kích hoạt chính hệ thống sự kiện (event / 이벤트) nó đang xử lý
 
@@ -128,6 +133,8 @@ Guard là an toàn (safety / 안전) net; thiết kế (design / 설계) tốt h
 
 ---
 
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **5. sự kiện (event / 이벤트) storm và amplification** tiếp nhận điểm tựa từ **4. Reentrancy: handler có thể kích hoạt chính hệ thống sự kiện (event / 이벤트) nó đang xử lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Binding là convenience nhưng vẫn có chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. sự kiện (event / 이벤트) storm và amplification
 
 Một người dùng (user / 사용자) hành động (action / 동작) có thể sửa 1 DataMap trường dữ liệu (field / 필드). Binding cập nhật (update / 업데이트) 5 thành phần (component / 컴포넌트). Mỗi thành phần (component / 컴포넌트) có formatter/validator/sự kiện (event / 이벤트). Một handler lại sửa 10 DataList row.
@@ -154,6 +161,8 @@ bao nhiêu render/update?
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **6. Binding là convenience nhưng vẫn có chi phí (cost / 비용)** tiếp nhận điểm tựa từ **5. sự kiện (event / 이벤트) storm và amplification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Đừng dùng DOM trực tiếp để “tối ưu” WebSquare thành phần (component / 컴포넌트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Binding là convenience nhưng vẫn có chi phí (cost / 비용)
 
 Binding giúp mô hình (model / 모델) là nguồn chuẩn (source of truth / 정본), nhưng mỗi bound thành phần (component / 컴포넌트) cần synchronization công việc (work / 작업).
@@ -179,6 +188,8 @@ Cần tối ưu dominant multiplication, không chỉ micro-optimize callback c�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **7. Đừng dùng DOM trực tiếp để “tối ưu” WebSquare thành phần (component / 컴포넌트)** tiếp nhận điểm tựa từ **6. Binding là convenience nhưng vẫn có chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. sự kiện (event / 이벤트) handler ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Đừng dùng DOM trực tiếp để “tối ưu” WebSquare thành phần (component / 컴포넌트)
 
 SP5 best-practice guide cảnh báo việc trực tiếp điều khiển DOM/trình duyệt (browser / 브라우저) sự kiện (event / 이벤트) của thành phần (component / 컴포넌트) WebSquare và khuyến nghị dùng khung phần mềm (framework / 프레임워크) lớp trừu tượng (abstraction / 추상화). Lý do không chỉ style.
@@ -196,6 +207,8 @@ UI có thể trông nhanh/đúng tạm thời nhưng lần kết xuất (render 
 Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) không được phá quyền sở hữu (ownership / 소유권) mô hình (model / 모델).
 
 ---
+
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **8. sự kiện (event / 이벤트) handler ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **7. Đừng dùng DOM trực tiếp để “tối ưu” WebSquare thành phần (component / 컴포넌트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Formatter và expression là đường xử lý nóng (hot path / 핫 패스) tiềm ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. sự kiện (event / 이벤트) handler ngân sách (budget / 예산)
 
@@ -216,6 +229,8 @@ Không cần một con số “chuẩn” cho mọi screen. Cần đo tương t�
 Heavy transformation có thể được chuyển khỏi hot sự kiện (event / 이벤트), precompute, bộ nhớ đệm (cache / 캐시) hoặc server-side tùy quyền sở hữu (ownership / 소유권).
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **8. sự kiện (event / 이벤트) handler ngân sách (budget / 예산)** xác định đầu vào; **9. Formatter và expression là đường xử lý nóng (hot path / 핫 패스) tiềm ẩn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Sort/filter/group làm thay đổi cả chi phí (cost / 비용) lẫn định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Formatter và expression là đường xử lý nóng (hot path / 핫 패스) tiềm ẩn
 
@@ -239,6 +254,8 @@ Cấp cao (senior / 시니어) ghi chú (note / 노트): formatter nên gần pu
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **9. Formatter và expression là đường xử lý nóng (hot path / 핫 패스) tiềm ẩn** xác định đầu vào; **10. Sort/filter/group làm thay đổi cả chi phí (cost / 비용) lẫn định danh (identity / 식별자)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo stage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Sort/filter/group làm thay đổi cả chi phí (cost / 비용) lẫn định danh (identity / 식별자)
 
 Sort/filter không chỉ đổi vị trí row. Nó có thể:
@@ -256,6 +273,8 @@ Vì vậy hiệu năng (performance / 성능) kiểm thử (test / 테스트) Gr
 Chapter 13 giải thích định danh (identity / 식별자); chapter này thêm chi phí (cost / 비용) mô hình (model / 모델).
 
 ---
+
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **11. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo stage** tiếp nhận điểm tựa từ **10. Sort/filter/group làm thay đổi cả chi phí (cost / 비용) lẫn định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. WebSquare hiệu năng (performance / 성능) instrumentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo stage
 
@@ -287,6 +306,8 @@ Khi stage rõ, tối ưu hóa (optimization / 최적화) mới có mục tiêu (
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **12. WebSquare hiệu năng (performance / 성능) instrumentation** tiếp nhận điểm tựa từ **11. hiệu năng (performance / 성능) ngân sách (budget / 예산) theo stage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Custom mark phải đo nghiệp vụ (business / 비즈니스) stage, không chỉ hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. WebSquare hiệu năng (performance / 성능) instrumentation
 
 Một số SP5 bản dựng (build / 빌드) cung cấp hiệu năng (performance / 성능) instrumentation và `WebSquare.util.setPerformanceUse(...)`; bản phát hành (release / 릴리스) notes cũng mô tả engine hiệu năng (performance / 성능) mark/measure có screen URL detail ở các bản dựng (build / 빌드) tương ứng.
@@ -308,6 +329,8 @@ WebSquare performance marks
 Chính xác (exact / 정확한) API/đầu ra (output / 출력) phải kiểm tra engine bản dựng (build / 빌드).
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **13. Custom mark phải đo nghiệp vụ (business / 비즈니스) stage, không chỉ hàm (function / 함수)** tiếp nhận điểm tựa từ **12. WebSquare hiệu năng (performance / 성능) instrumentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. mạng (network / 네트워크) timing phải tách máy chủ (server / 서버) khỏi máy khách (client / 클라이언트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Custom mark phải đo nghiệp vụ (business / 비즈니스) stage, không chỉ hàm (function / 함수)
 
@@ -332,6 +355,8 @@ Môi trường vận hành (production / 운영 환경) question là “người
 
 ---
 
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **14. mạng (network / 네트워크) timing phải tách máy chủ (server / 서버) khỏi máy khách (client / 클라이언트)** tiếp nhận điểm tựa từ **13. Custom mark phải đo nghiệp vụ (business / 비즈니스) stage, không chỉ hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Payload kích thước (size / 크기) là hiệu năng (performance / 성능) kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. mạng (network / 네트워크) timing phải tách máy chủ (server / 서버) khỏi máy khách (client / 클라이언트)
 
 DevTools thấy yêu cầu (request / 요청) 1.5 s nhưng không tự nói máy chủ (server / 서버) xử lý 1.5 s.
@@ -353,6 +378,8 @@ Nếu phản hồi (response / 응답) về 200 ms nhưng Grid usable sau 2 s, b
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **15. Payload kích thước (size / 크기) là hiệu năng (performance / 성능) kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **14. mạng (network / 네트워크) timing phải tách máy chủ (server / 서버) khỏi máy khách (client / 클라이언트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Chunk loading không miễn phí consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Payload kích thước (size / 크기) là hiệu năng (performance / 성능) kiến trúc (architecture / 아키텍처)
 
 Một Grid chỉ hiển thị 30 row nhưng endpoint trả 50.000 row. Tối ưu formatter 20% không giải quyết mạng (network / 네트워크)/bộ nhớ (memory / 메모리)/kết xuất (render / 렌더링) kiến trúc (architecture / 아키텍처).
@@ -370,6 +397,8 @@ chunk loading
 SP5 có DataList/large-data năng lực (capability / 역량) thay đổi theo bản dựng (build / 빌드), nhưng first principle vẫn là **không vận chuyển trạng thái (state / 상태) máy khách (client / 클라이언트) không cần sở hữu**.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **16. Chunk loading không miễn phí consistency** tiếp nhận điểm tựa từ **15. Payload kích thước (size / 크기) là hiệu năng (performance / 성능) kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. DataList siêu dữ liệu (metadata / 메타데이터) và large-data bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Chunk loading không miễn phí consistency
 
@@ -391,6 +420,8 @@ Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) t�
 
 ---
 
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **16. Chunk loading không miễn phí consistency** nêu điều cần giải thích; **17. DataList siêu dữ liệu (metadata / 메타데이터) và large-data bộ nhớ (memory / 메모리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. động (dynamic / 동적) Submission có vòng đời (lifecycle / 생명주기) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. DataList siêu dữ liệu (metadata / 메타데이터) và large-data bộ nhớ (memory / 메모리)
 
 SP5 bản phát hành (release / 릴리스) notes mới có tối ưu hóa (optimization / 최적화) giảm rowStatus/cellStatus array element không cần thiết khi set large dữ liệu (data / 데이터). Điều này nhắc rằng DataList không chỉ chứa nghiệp vụ (business / 비즈니스) values.
@@ -410,6 +441,8 @@ Do đó “JSON chỉ 10 MB” không có nghĩa vùng nhớ động (heap / 힙
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **17. DataList siêu dữ liệu (metadata / 메타데이터) và large-data bộ nhớ (memory / 메모리)** nêu điều cần giải thích; **18. động (dynamic / 동적) Submission có vòng đời (lifecycle / 생명주기) chi phí (cost / 비용)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Debounce, throttle và coalescing giải quyết ba vấn đề khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. động (dynamic / 동적) Submission có vòng đời (lifecycle / 생명주기) chi phí (cost / 비용)
 
 Official hiệu năng (performance / 성능) guide khuyến nghị khai báo Submission cần thiết ở nghiệp vụ (business / 비즈니스) screen và cảnh báo động (dynamic / 동적) creation phải kiểm tra duplicate ID.
@@ -427,6 +460,8 @@ Hiệu năng (performance / 성능) và maintainability gặp nhau ở đây: st
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **18. động (dynamic / 동적) Submission có vòng đời (lifecycle / 생명주기) chi phí (cost / 비용)** xác định đầu vào; **19. Debounce, throttle và coalescing giải quyết ba vấn đề khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. Repeated listener registration là tính đúng đắn (correctness / 정확성) + hiệu năng (performance / 성능) bug** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Debounce, throttle và coalescing giải quyết ba vấn đề khác nhau
 
 Search-as-you-type có thể cần debounce: chỉ chạy sau khi người dùng (user / 사용자) ngừng gõ một khoảng.
@@ -440,6 +475,8 @@ Không dùng ba thuật ngữ như nhau.
 Quan trọng hơn, debounce không thay stale-result guard. yêu cầu (request / 요청) cũ vẫn có thể về sau yêu cầu (request / 요청) mới.
 
 ---
+
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **20. Repeated listener registration là tính đúng đắn (correctness / 정확성) + hiệu năng (performance / 성능) bug** tiếp nhận điểm tựa từ **19. Debounce, throttle và coalescing giải quyết ba vấn đề khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Timer vòng lặp (loop / 루프) phải có đơn vị sở hữu (owner / 오너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Repeated listener registration là tính đúng đắn (correctness / 정확성) + hiệu năng (performance / 성능) bug
 
@@ -464,6 +501,8 @@ open → interact → close × 30
 đo handler invocation count, vùng nhớ động (heap / 힙) và pending timers/listeners.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, sau nội dung của **20. Repeated listener registration là tính đúng đắn (correctness / 정확성) + hiệu năng (performance / 성능) bug**, **21. Timer vòng lặp (loop / 루프) phải có đơn vị sở hữu (owner / 오너)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **22. Spinner và tiến trình (process / 프로세스) message có thể che độ trễ (latency / 지연 시간) nhưng không sửa độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Timer vòng lặp (loop / 루프) phải có đơn vị sở hữu (owner / 오너)
 
@@ -490,6 +529,8 @@ Chapter 21 mở rộng điều này cho polling/real-time liên kết (connectio
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **21. Timer vòng lặp (loop / 루프) phải có đơn vị sở hữu (owner / 오너)** xác định đầu vào; **22. Spinner và tiến trình (process / 프로세스) message có thể che độ trễ (latency / 지연 시간) nhưng không sửa độ trễ (latency / 지연 시간)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải giữ production-like shape** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Spinner và tiến trình (process / 프로세스) message có thể che độ trễ (latency / 지연 시간) nhưng không sửa độ trễ (latency / 지연 시간)
 
 Tiến trình (process / 프로세스) message tốt cho UX khi thao tác (operation / 연산) thật sự cần chờ. Nhưng “thêm loading” không phải hiệu năng (performance / 성능) fix.
@@ -499,6 +540,8 @@ Nếu tương tác (interaction / 상호작용) 150 ms, spinner có thể gây v
 UX phản hồi (feedback / 피드백) và hệ thống (system / 시스템) hiệu năng (performance / 성능) là hai trục liên quan nhưng khác nhau.
 
 ---
+
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **22. Spinner và tiến trình (process / 프로세스) message có thể che độ trễ (latency / 지연 시간) nhưng không sửa độ trễ (latency / 지연 시간)** xác định đầu vào; **23. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải giữ production-like shape** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. Measure warm và cold đường dẫn (path / 경로) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải giữ production-like shape
 
@@ -520,6 +563,8 @@ Khả năng tiếp cận (accessibility / 접근성) có thể thay rendering c�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **23. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải giữ production-like shape** xác định đầu vào; **24. Measure warm và cold đường dẫn (path / 경로) riêng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. hiệu năng (performance / 성능) regression guard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Measure warm và cold đường dẫn (path / 경로) riêng
 
 Cold đường dẫn (path / 경로) có thể gồm:
@@ -537,6 +582,8 @@ Warm đường dẫn (path / 경로) có thể reuse bộ nhớ đệm (cache / 
 Nếu chỉ benchmark lần thứ 10, startup regression bị bỏ qua. Nếu chỉ benchmark cold tải (load / 로드), tương tác (interaction / 상호작용) thường ngày bị che.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **24. Measure warm và cold đường dẫn (path / 경로) riêng** xác định đầu vào; **25. hiệu năng (performance / 성능) regression guard** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. trường hợp (case / 사례) study — onchange làm tìm kiếm (search / 검색) chạy hai lần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. hiệu năng (performance / 성능) regression guard
 
@@ -558,6 +605,8 @@ Hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) �
 
 ---
 
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **25. hiệu năng (performance / 성능) regression guard** cho ta quy tắc; **26. trường hợp (case / 사례) study — onchange làm tìm kiếm (search / 검색) chạy hai lần** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **27. trường hợp (case / 사례) study — Grid 2.000 row chậm sau thêm formatter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. trường hợp (case / 사례) study — `onchange` làm tìm kiếm (search / 검색) chạy hai lần
 
 Một dùng chung (common / 공통) handler normalize mã (code / 코드) rồi programmatically cập nhật (update / 업데이트) thành phần (component / 컴포넌트). Một sự kiện (event / 이벤트) đường dẫn (path / 경로) khác cũng gọi tìm kiếm (search / 검색).
@@ -576,6 +625,8 @@ stack/call path
 Fix không phải disable yêu cầu (request / 요청) thứ hai ngẫu nhiên; cần một command đơn vị sở hữu (owner / 오너) duy nhất cho tìm kiếm (search / 검색).
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **26. trường hợp (case / 사례) study — onchange làm tìm kiếm (search / 검색) chạy hai lần** cho ta quy tắc; **27. trường hợp (case / 사례) study — Grid 2.000 row chậm sau thêm formatter** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **28. trường hợp (case / 사례) study — Engine upgrade làm edit hành vi (behavior / 동작) đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. trường hợp (case / 사례) study — Grid 2.000 row chậm sau thêm formatter
 
@@ -602,6 +653,8 @@ Bằng chứng (evidence / 증거) phải cho thấy formatter đường xử l�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **27. trường hợp (case / 사례) study — Grid 2.000 row chậm sau thêm formatter** cho ta quy tắc; **28. trường hợp (case / 사례) study — Engine upgrade làm edit hành vi (behavior / 동작) đổi** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **29. trường hợp (case / 사례) study — tìm kiếm (search / 검색) nhanh nhưng screen vẫn treo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. trường hợp (case / 사례) study — Engine upgrade làm edit hành vi (behavior / 동작) đổi
 
 Sau upgrade, kiểm tra hợp lệ (validation / 검증) chạy trước/after sự kiện (event / 이벤트) khác với giả định (assumption / 가정) cũ do thuộc tính (property / 속성)/default/sự kiện (event / 이벤트) thứ tự (ordering / 순서) thay đổi.
@@ -621,6 +674,8 @@ Regression suite cần capture sự kiện (event / 이벤트) thứ tự (order
 
 ---
 
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **28. trường hợp (case / 사례) study — Engine upgrade làm edit hành vi (behavior / 동작) đổi** cho ta quy tắc; **29. trường hợp (case / 사례) study — tìm kiếm (search / 검색) nhanh nhưng screen vẫn treo** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **30. Profiling playbook** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. trường hợp (case / 사례) study — tìm kiếm (search / 검색) nhanh nhưng screen vẫn treo
 
 Mạng (network / 네트워크) 300 ms. DataList ánh xạ (mapping / 매핑) 100 ms. Grid kết xuất (render / 렌더링) 2.4 s.
@@ -632,6 +687,8 @@ Dominant term là kết xuất (render / 렌더링).
 Hiệu năng (performance / 성능) ngân sách (budget / 예산) buộc nhóm (team / 팀) sửa đúng tầng (layer / 계층): row count, column độ phức tạp (complexity / 복잡도), formatter, kết xuất (render / 렌더링) chiến lược (strategy / 전략) hoặc paging.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **29. trường hợp (case / 사례) study — tìm kiếm (search / 검색) nhanh nhưng screen vẫn treo** cho ta quy tắc; **30. Profiling playbook** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Profiling playbook
 
@@ -656,9 +713,9 @@ Không bắt đầu bằng việc rewrite hàm (function / 함수) dài nhất n
 
 ---
 
-## 31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist
-Phần “31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist** tiếp nhận điểm tựa từ **30. Profiling playbook** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist
 
 ```text
 Event này là user signal hay business command?
@@ -675,9 +732,9 @@ Async callback có stale-intent guard không?
 
 ---
 
-## 32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist
-Phần “32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist** tiếp nhận điểm tựa từ **31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Master synthesis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist
 
 ```text
 User-visible budget được chia stage chưa?
@@ -694,6 +751,8 @@ Optimization đã được đo lại bằng cùng scenario chưa?
 ```
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **33. Master synthesis** gom các mảnh từ **32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **34. Nguồn kiểm chứng theo bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Master synthesis
 
@@ -742,10 +801,12 @@ và evidence nào chứng minh critical path.
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **24 — sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Reentrancy & hiệu năng (performance / 성능) Profiling**, **33. Master synthesis** nêu điều cần giải thích; **34. Nguồn kiểm chứng theo bản dựng (build / 빌드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 34. Nguồn kiểm chứng theo bản dựng (build / 빌드)
 
 Chính xác (exact / 정확한) sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), Grid sự kiện (event / 이벤트) thứ tự (ordering / 순서), hiệu năng (performance / 성능) instrumentation và thành phần (component / 컴포넌트) rendering hành vi (behavior / 동작) phải đối chiếu WebSquare5 SP5 Development Guide/API tham chiếu (reference / 참조)/bản phát hành (release / 릴리스) Notes đúng engine bản dựng (build / 빌드). Các bản phát hành (release / 릴리스) ghi chú (note / 노트) liên quan `viewChangeAfterEdit`, engine hiệu năng (performance / 성능) mark/measure, `WebSquare.util.setPerformanceUse`, DataList large-data bộ nhớ (memory / 메모리) tối ưu hóa (optimization / 최적화) và hiệu năng (performance / 성능) best-practice là nguồn đặc biệt hữu ích.
 
 Không bản sao (copy / 복사) private API từ một bản dựng (build / 빌드) sang chuẩn gốc (canonical / 정본) mã (code / 코드). Dùng API công khai (public API / 공개 API) và regression bằng chứng (evidence / 증거) để bảo vệ hành vi (behavior / 동작) cần thiết.
 
-> **Bàn giao:** Sau **34. Nguồn kiểm chứng theo bản dựng (build / 빌드)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **34. Nguồn kiểm chứng theo bản dựng (build / 빌드)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

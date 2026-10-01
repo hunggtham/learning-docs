@@ -1,7 +1,6 @@
 # Mô hình lượng tử của nguyên tử
 
-> **Mạch đọc:** Đọc **Mô hình lượng tử của nguyên tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao mô hình cổ điển không đủ** sang **Hàm sóng và phương trình Schrödinger**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình lượng tử của nguyên tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao mô hình cổ điển không đủ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hàm sóng và phương trình Schrödinger** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Mô hình cơ học lượng tử (quantum mechanical model / 양자역학적 원자 모형)** không mô tả electron như một hạt nhỏ bay trên quỹ đạo xác định quanh hạt nhân. Thay vào đó, trạng thái của electron được mô tả bằng **hàm sóng (wavefunction)** \(\psi\), và từ hàm sóng ta tính được xác suất tìm thấy electron trong các vùng không gian khác nhau.
 
@@ -14,6 +13,8 @@ Trong cơ học cổ điển, nếu biết vị trí và vận tốc của một
 Một trạng thái lượng tử có cấu trúc riêng; tùy phép đo mà kết quả quan sát có thể mang đặc trưng giống hạt hoặc giống sóng.
 
 Xem lại: [Bức xạ điện từ và lượng tử hóa](./01_electromagnetic_radiation_and_quantization.md).
+
+> **Chuyển mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Hàm sóng và phương trình Schrödinger** tiếp nhận điểm tựa từ **Vì sao mô hình cổ điển không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm sóng không phải mật độ vật chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàm sóng và phương trình Schrödinger
 
@@ -39,6 +40,8 @@ Trong cơ học lượng tử, ma trận được thay bằng toán tử, véc-t
 
 Đối với nguyên tử hydrogen, Hamiltonian gồm động năng của electron và thế năng Coulomb giữa electron với proton. Giải phương trình Schrödinger không tạo ra một quỹ đạo; nó tạo ra một họ trạng thái có năng lượng và hình dạng không gian khác nhau. Những nghiệm này dẫn trực tiếp tới khái niệm obitan.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Hàm sóng không phải mật độ vật chất** tiếp nhận điểm tựa từ **Hàm sóng và phương trình Schrödinger** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn hóa xác suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàm sóng không phải mật độ vật chất
 
 Hàm sóng \(\psi\) có thể nhận giá trị dương, âm hoặc phức. Vì vậy bản thân \(\psi\) không phải xác suất. Theo **quy tắc Born (Born rule)**, đại lượng có ý nghĩa xác suất là:
@@ -57,6 +60,8 @@ Hàm sóng \(\psi\) có thể nhận giá trị dương, âm hoặc phức. Vì 
 
 > **Mô hình tư duy:** obitan không phải đường đi của electron. Obitan là một trạng thái lượng tử có phân bố xác suất trong không gian.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Chuẩn hóa xác suất** tiếp nhận điểm tựa từ **Hàm sóng không phải mật độ vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Obitan và các số lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuẩn hóa xác suất
 
 Vì electron phải được tìm thấy ở đâu đó nếu ta khảo sát toàn bộ không gian, hàm sóng hợp lệ phải thỏa:
@@ -66,6 +71,8 @@ Vì electron phải được tìm thấy ở đâu đó nếu ta khảo sát to�
 \]
 
 Điều kiện này gọi là **chuẩn hóa (normalization)**. Nó cho thấy xác suất trong cơ học lượng tử không phải phép ẩn dụ; nó được ràng buộc bằng toán học rõ ràng.
+
+> **Chuyển mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Obitan và các số lượng tử** tiếp nhận điểm tựa từ **Chuẩn hóa xác suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình dạng obitan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Obitan và các số lượng tử
 
@@ -132,6 +139,8 @@ m_s=+\frac12\quad\văn bản (text / 텍스트){hoặc}\quad-\frac12
 
 Spin là nền tảng để hiểu nguyên lý loại trừ Pauli, ghép đôi electron, từ tính và cấu hình electron.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Hình dạng obitan** tiếp nhận điểm tựa từ **Obitan và các số lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nút và cấu trúc hàm sóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hình dạng obitan
 
 ### Obitan s
@@ -151,6 +160,8 @@ Pha trở nên đặc biệt quan trọng khi các obitan kết hợp thành obi
 ### Obitan d và f
 
 Obitan d và f có cấu trúc không gian phức tạp hơn. Trong hóa học vô cơ và hóa học phối trí, hướng của obitan d quyết định cách chúng tương tác với phối tử, từ đó ảnh hưởng màu sắc, từ tính và độ bền của phức chất kim loại chuyển tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Nút và cấu trúc hàm sóng** tiếp nhận điểm tựa từ **Hình dạng obitan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ xác suất và xác suất theo bán kính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nút và cấu trúc hàm sóng
 
@@ -176,6 +187,8 @@ Ví dụ, obitan `2p` có một nút góc và không có nút xuyên tâm. Obita
 
 Nút không phải chi tiết trang trí của hình vẽ; chúng phản ánh bản chất sóng của trạng thái lượng tử và ảnh hưởng tới năng lượng, độ chồng phủ obitan và liên kết.
 
+> **Chuyển mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Mật độ xác suất và xác suất theo bán kính** tiếp nhận điểm tựa từ **Nút và cấu trúc hàm sóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái suy biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mật độ xác suất và xác suất theo bán kính
 
 Mật độ xác suất tại một điểm và xác suất tìm electron ở một khoảng cách nhất định không phải cùng một đại lượng.
@@ -184,11 +197,15 @@ Với obitan s, \(|\psi|^2\) có thể lớn nhất tại hạt nhân. Nhưng th
 
 Đây là ví dụ đẹp cho việc hình học và xác suất kết hợp trong hóa học lượng tử.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Trạng thái suy biến** tiếp nhận điểm tựa từ **Mật độ xác suất và xác suất theo bán kính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao nguyên tử nhiều electron khó hơn hydrogen?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trạng thái suy biến
 
 Hai trạng thái khác nhau nhưng có cùng năng lượng gọi là **trạng thái suy biến (degenerate states / 축퇴 상태)**.
 
 Trong nguyên tử hydrogen lý tưởng, các obitan có cùng \(n\) có cùng năng lượng. Nhưng trong nguyên tử nhiều electron, lực đẩy electron–electron và hiệu ứng che chắn làm năng lượng phụ thuộc cả \(n\) và \(l\), nên thứ tự năng lượng phức tạp hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Vì sao nguyên tử nhiều electron khó hơn hydrogen?** tiếp nhận điểm tựa từ **Trạng thái suy biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Che chắn và khả năng xuyên thấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao nguyên tử nhiều electron khó hơn hydrogen?
 
@@ -197,6 +214,8 @@ Hydrogen chỉ có một electron nên bài toán chủ yếu là tương tác C
 Vì vậy hóa học dùng các **phương pháp xấp xỉ (approximations)** như mô hình obitan, Hartree–Fock, lý thuyết phiếm hàm mật độ (**density functional theory, DFT**) và nhiều phương pháp hóa học tính toán khác.
 
 Điều quan trọng là các obitan nguyên tử quen thuộc trong hóa học tuần hoàn là những mô hình hiệu dụng rất mạnh, nhưng không nên đồng nhất chúng với “đường bay” thật của từng electron.
+
+> **Chuyển mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Che chắn và khả năng xuyên thấu** tiếp nhận điểm tựa từ **Vì sao nguyên tử nhiều electron khó hơn hydrogen?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên lý loại trừ Pauli** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Che chắn và khả năng xuyên thấu
 
@@ -208,6 +227,8 @@ Các obitan cũng khác nhau về **khả năng xuyên thấu (penetration)** v�
 
 Đây là cơ sở để hiểu thứ tự năng lượng trong cấu hình electron và xu hướng tuần hoàn.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Nguyên lý loại trừ Pauli** tiếp nhận điểm tựa từ **Che chắn và khả năng xuyên thấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ mô hình lượng tử sang cấu hình electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguyên lý loại trừ Pauli
 
 **Nguyên lý loại trừ Pauli (Pauli exclusion principle / 파울리 배타 원리)** nói rằng hai electron trong cùng một nguyên tử không thể có cùng toàn bộ bốn số lượng tử.
@@ -215,6 +236,8 @@ Các obitan cũng khác nhau về **khả năng xuyên thấu (penetration)** v�
 Hệ quả quen thuộc là mỗi obitan chỉ chứa tối đa hai electron và nếu có hai electron thì spin của chúng phải đối nhau.
 
 Pauli không phải quy tắc “electron ghét nhau”; nó xuất phát từ tính chất lượng tử của fermion và cấu trúc phản đối xứng của hàm sóng nhiều electron.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Từ mô hình lượng tử sang cấu hình electron** tiếp nhận điểm tựa từ **Nguyên lý loại trừ Pauli** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ mô hình lượng tử sang cấu hình electron
 
@@ -230,6 +253,8 @@ mức năng lượng
 ```
 
 Cấu hình electron cho phép ta nối mô hình lượng tử với hóa học thực tế: bảng tuần hoàn, hóa trị, liên kết và khả năng phản ứng.
+
+> **Chuyển mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Từ mô hình lượng tử sang cấu hình electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -253,10 +278,12 @@ Không. Hàm sóng là đối tượng toán học; \(|\psi|^2\) cho mật độ
 
 Không. Chúng xuất hiện từ cấu trúc nghiệm của phương trình lượng tử và các điều kiện biên.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Nguyên tử lượng tử không phải một hệ mặt trời thu nhỏ. Hãy hình dung nó như một **hệ các trạng thái sóng lượng tử bị ràng buộc bởi trường Coulomb của hạt nhân và bởi tương tác electron–electron**. Các trạng thái có hình dạng, năng lượng và tính đối xứng khác nhau; electron phân bố vào các trạng thái đó theo các nguyên lý lượng tử.
 
 Xem tiếp: [Cấu hình electron](./03_electron_configuration.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atoms elements and isotopes](./00_atoms_elements_and_isotopes.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

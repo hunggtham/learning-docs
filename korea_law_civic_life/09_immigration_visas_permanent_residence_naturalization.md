@@ -1,6 +1,6 @@
 # 09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch
 
-> **Mạch đọc:** Đặt **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bốn khái niệm phải tách riêng** sang **2. Luật nền tảng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bốn khái niệm phải tách riêng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Luật nền tảng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Bốn khái niệm phải tách riêng
 
@@ -15,6 +15,8 @@ Người nước ngoài ở Hàn Quốc thường dùng chung từ “visa”, n
 
 Một người có thể sống lâu dài ở Hàn Quốc mà không có quốc tịch Hàn. `영주권` và `국적` không phải một khái niệm.
 
+> **Chuyển mạch:** Trong **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **2. Luật nền tảng** tiếp nhận điểm tựa từ **1. Bốn khái niệm phải tách riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Visa và 체류자격** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Luật nền tảng
 
 Các luật quan trọng gồm:
@@ -28,6 +30,8 @@ Các luật quan trọng gồm:
 - các `고시`, `지침`, `별표` liên quan.
 
 Tại thời điểm kiểm tra 2026-09-21, `출입국관리법 시행규칙` đã được sửa đổi và có bản hiệu lực từ 2026-09-15. Điều này minh họa vì sao tài liệu visa cũ vài tháng có thể đã không còn chính xác.
+
+> **Chuyển mạch:** Ở chặng này của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **3. Visa và 체류자격** tiếp nhận điểm tựa từ **2. Luật nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Hi Korea và Immigration dịch vụ (service / 서비스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Visa và 체류자격
 
@@ -47,6 +51,8 @@ Khi nghiên cứu một loại visa, không chỉ ghi tên và mã. Nên ghi the
 
 Một số thay đổi trong công việc, nơi làm việc, địa chỉ, hôn nhân hoặc tình trạng học tập có thể phải khai báo.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **4. Hi Korea và Immigration dịch vụ (service / 서비스)** tiếp nhận điểm tựa từ **3. Visa và 체류자격** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Gia hạn và thay đổi tư cách lưu trú** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Hi Korea và Immigration dịch vụ (service / 서비스)
 
 Hai nguồn thực tế quan trọng:
@@ -55,6 +61,8 @@ Hai nguồn thực tế quan trọng:
 - `Korea Immigration Service (immigration.go.kr)` — thông báo chính sách, hướng dẫn, statistics, tài liệu visa.
 
 Đường dây 1345 là Immigration Contact Center và đặc biệt hữu ích khi cần xác nhận **thủ tục hiện hành**.
+
+> **Chuyển mạch:** Trong **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **5. Gia hạn và thay đổi tư cách lưu trú** tiếp nhận điểm tựa từ **4. Hi Korea và Immigration dịch vụ (service / 서비스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Thường trú F-5 (영주)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Gia hạn và thay đổi tư cách lưu trú
 
@@ -67,6 +75,8 @@ Phân biệt:
 - `체류지 변경신고`: khai báo thay đổi địa chỉ cư trú.
 
 Không được dùng một thủ tục như thể thay thế tất cả thủ tục còn lại.
+
+> **Chuyển mạch:** Ở chặng này của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **6. Thường trú F-5 (영주)** tiếp nhận điểm tựa từ **5. Gia hạn và thay đổi tư cách lưu trú** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Thường trú không bằng nhập quốc tịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Thường trú F-5 (영주)
 
@@ -87,11 +97,15 @@ Visa Navigator / 공식 안내
 
 Không nên hard-code một mức thu nhập hoặc số năm duy nhất trong thư viện (library / 라이브러리) vì các ngưỡng và tuyến (route / 경로) thay đổi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **7. Thường trú không bằng nhập quốc tịch** tiếp nhận điểm tựa từ **6. Thường trú F-5 (영주)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Nhập quốc tịch (귀화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Thường trú không bằng nhập quốc tịch
 
 `영주(F-5)` vẫn là tư cách của người nước ngoài. Người có F-5 có quyền cư trú dài hạn và nhiều quyền rộng hơn một số visa khác, nhưng không tự động trở thành `대한민국 국민`.
 
 `귀화` là một con đường **取得 quốc tịch** theo `국적법`. Luật phân biệt nhiều loại như 일반귀화, 간이귀화, 특별귀화 với điều kiện khác nhau.
+
+> **Chuyển mạch:** Trong **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **8. Nhập quốc tịch (귀화)** tiếp nhận điểm tựa từ **7. Thường trú không bằng nhập quốc tịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. KIIP và naturalization/permanent residence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Nhập quốc tịch (귀화)
 
@@ -99,11 +113,15 @@ Theo `국적법`, người chưa từng có quốc tịch Hàn có thể xin `�
 
 Đây là khu vực rất nhạy theo thời gian. Ví dụ, Luật Quốc tịch đã có sửa đổi được công bố năm 2026 với thời điểm hiệu lực riêng. Vì vậy phải kiểm tra **phiên bản đang hiệu lực vào ngày nộp**, không chỉ bản “mới nhất được công bố”.
 
+> **Chuyển mạch:** Ở chặng này của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **9. KIIP và naturalization/permanent residence** tiếp nhận điểm tựa từ **8. Nhập quốc tịch (귀화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Nghĩa vụ khai báo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. KIIP và naturalization/permanent residence
 
 `사회통합프로그램 (KIIP)` có thể liên quan một số yêu cầu/đánh giá trong hệ thống cư trú hoặc quốc tịch, nhưng vai trò cụ thể phụ thuộc tuyến (route / 경로). Không nên suy rằng hoàn thành KIIP tự động tạo quyền F-5 hoặc quốc tịch.
 
 Tài liệu KIIP trong repo: [`../korean_culture/kiip/`](../korean_culture/kiip/README.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **10. Nghĩa vụ khai báo** tiếp nhận điểm tựa từ **9. KIIP và naturalization/permanent residence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Cách đọc hồ sơ visa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Nghĩa vụ khai báo
 
@@ -118,6 +136,8 @@ có thay đổi đời sống lớn?
 → nộp online hay 방문
 → giữ 접수증 / 처리결과
 ```
+
+> **Chuyển mạch:** Trong **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **11. Cách đọc hồ sơ visa** tiếp nhận điểm tựa từ **10. Nghĩa vụ khai báo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Nếu nhận quyết định bất lợi về cư trú** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Cách đọc hồ sơ visa
 
@@ -136,6 +156,8 @@ Mỗi hồ sơ nên chia thành:
 
 Không nộp theo một checklist cũ mà không kiểm tra ngày cập nhật.
 
+> **Chuyển mạch:** Ở chặng này của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **12. Nếu nhận quyết định bất lợi về cư trú** tiếp nhận điểm tựa từ **11. Cách đọc hồ sơ visa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Nếu nhận quyết định bất lợi về cư trú
 
 Đọc kỹ:
@@ -149,6 +171,8 @@ Không nộp theo một checklist cũ mà không kiểm tra ngày cập nhật.
 
 Tình trạng cư trú có deadline nghiêm ngặt. Một 민원 chung không chắc làm dừng thời hạn pháp lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **12. Nếu nhận quyết định bất lợi về cư trú** nêu điều cần giải thích; **13. Nguồn chính thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Nguyên tắc an toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Nguồn chính thức
 
 Xuất nhập cảnh là lĩnh vực có deadline và điều kiện thay đổi theo loại tư cách lưu trú. Hãy dùng các nguồn chính thức sau để kiểm tra route, hồ sơ và ngày hiệu lực thay vì suy luận từ trường hợp của người khác.
@@ -159,6 +183,10 @@ Xuất nhập cảnh là lĩnh vực có deadline và điều kiện thay đổi
 - 사회통합정보망: https://www.socinet.go.kr/
 - 1345 Immigration Contact Center
 
+> **Chuyển mạch:** Trong **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **13. Nguồn chính thức** nêu điều cần giải thích; **14. Nguyên tắc an toàn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 14. Nguyên tắc an toàn
 
 Với visa, F-5 và quốc tịch, luôn ghi **mã tư cách cụ thể + loại route + ngày kiểm tra**. Không dùng một ví dụ của người khác làm quy tắc cho hồ sơ của mình.
+
+> **Bàn giao:** Sau **14. Nguyên tắc an toàn**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

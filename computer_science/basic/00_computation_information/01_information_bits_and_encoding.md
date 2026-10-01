@@ -1,7 +1,6 @@
 # Thông tin, bit, mã hóa và biểu diễn
 
-> **Mạch đọc:** Đọc **Thông tin, bit, mã hóa và biểu diễn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao bit trở thành đơn vị nền tảng?** sang **Mã hóa là quy ước nối mẫu bit với ý nghĩa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thông tin, bit, mã hóa và biểu diễn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao bit trở thành đơn vị nền tảng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mã hóa là quy ước nối mẫu bit với ý nghĩa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Máy tính không nhận trực tiếp “chữ A”, “màu đỏ”, “số tiền 10000 won” hay “ảnh một con mèo”. Nó nhận các **trạng thái vật lý (physical state)** mà phần cứng có thể phân biệt, sau đó phần mềm áp dụng quy ước để các trạng thái đó đại diện cho thông tin (information / 정보). Vì vậy, trước khi học cấu trúc dữ liệu hay gói tin mạng, cần hiểu một nguyên tắc nền tảng: **mọi dữ liệu số đều là một cách biểu diễn (representation / 표현) theo một quy tắc mã hóa (encoding)**.
 
@@ -13,8 +12,7 @@ Một bit chỉ phân biệt hai khả năng. Với `n` bit, ta có tối đa `2
 
 Tám bit thường được nhóm thành một **byte** (바이트). Byte là đơn vị địa chỉ hóa phổ biến trong bộ nhớ và lưu trữ, nhưng bản thân byte không có ý nghĩa cố định. Mẫu `01000001` có thể được hiểu là số nguyên 65 hoặc ký tự ASCII `A`, tùy cách diễn giải.
 
-
-> **Chuyển mạch:** Từ **Tại sao bit trở thành đơn vị nền tảng?**, ta sang **Mã hóa là quy ước nối mẫu bit với ý nghĩa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thông tin, bit, mã hóa và biểu diễn**, **Mã hóa là quy ước nối mẫu bit với ý nghĩa** tiếp nhận điểm tựa từ **Tại sao bit trở thành đơn vị nền tảng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn bản: từ ASCII tới Unicode và UTF-8** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mã hóa là quy ước nối mẫu bit với ý nghĩa
 
@@ -34,8 +32,7 @@ bit / byte
 
 Khi đọc theo chiều ngược lại, phần cứng và phần mềm giải mã cách biểu diễn để tái tạo ký hiệu hoặc giá trị, sau đó ứng dụng gán ý nghĩa ngữ nghĩa cho chúng.
 
-
-> **Chuyển mạch:** Từ **Mã hóa là quy ước nối mẫu bit với ý nghĩa**, ta sang **Văn bản: từ ASCII tới Unicode và UTF-8** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thông tin, bit, mã hóa và biểu diễn**, **Văn bản: từ ASCII tới Unicode và UTF-8** tiếp nhận điểm tựa từ **Mã hóa là quy ước nối mẫu bit với ý nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh và âm thanh: lấy mẫu và lượng tử hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Văn bản: từ ASCII tới Unicode và UTF-8
 
@@ -47,8 +44,7 @@ UTF-8 giữ nguyên các ký tự ASCII trong một byte, còn nhiều điểm m
 
 Đây là ví dụ điển hình của **rò rỉ trừu tượng (abstraction leak)**: giao diện muốn cắt “10 ký tự”, nhưng nếu phần triển khai cắt tùy tiện theo byte thì có thể phá hỏng chuỗi mã hóa.
 
-
-> **Chuyển mạch:** Từ **Văn bản: từ ASCII tới Unicode và UTF-8**, ta sang **Ảnh và âm thanh: lấy mẫu và lượng tử hóa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin, bit, mã hóa và biểu diễn**, **Ảnh và âm thanh: lấy mẫu và lượng tử hóa** tiếp nhận điểm tựa từ **Văn bản: từ ASCII tới Unicode và UTF-8** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ảnh và âm thanh: lấy mẫu và lượng tử hóa
 
@@ -58,8 +54,7 @@ UTF-8 giữ nguyên các ký tự ASCII trong một byte, còn nhiều điểm m
 
 Điểm chung là biểu diễn số không sao chép thế giới thực một cách hoàn hảo. Hệ thống chọn độ phân giải và miền giá trị phù hợp với mục đích, qua đó đánh đổi dung lượng lưu trữ và băng thông lấy độ trung thực (fidelity).
 
-
-> **Chuyển mạch:** Từ **Ảnh và âm thanh: lấy mẫu và lượng tử hóa**, ta sang **Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thông tin, bit, mã hóa và biểu diễn**, **Ảnh và âm thanh: lấy mẫu và lượng tử hóa** nêu điều cần giải thích; **Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nén: loại bỏ dư thừa chứ không tạo phép màu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự
 
@@ -67,8 +62,7 @@ Giả sử ta có các byte `31 30 30`. Nếu diễn giải theo ASCII hoặc UT
 
 JSON biểu diễn số, văn bản và đối tượng bằng cú pháp văn bản dễ đọc nhưng có chi phí phụ. Định dạng nhị phân có thể gọn hơn và giữ kiểu dữ liệu chặt hơn nhưng khó kiểm tra thủ công. Giao thức mạng và định dạng lưu trữ đều phải cân bằng những đặc tính này.
 
-
-> **Chuyển mạch:** Từ **Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự**, ta sang **Nén: loại bỏ dư thừa chứ không tạo phép màu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thông tin, bit, mã hóa và biểu diễn**, **Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự** nêu điều cần giải thích; **Nén: loại bỏ dư thừa chứ không tạo phép màu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phát hiện và sửa lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nén: loại bỏ dư thừa chứ không tạo phép màu
 
@@ -78,8 +72,7 @@ Không phải dữ liệu nào cũng nén được nhiều. Một chuỗi gần 
 
 Xem thêm: [Lý thuyết thông tin](../../../mathematics/07_discrete_cs/06_information_theory_and_coding.md).
 
-
-> **Chuyển mạch:** Từ **Nén: loại bỏ dư thừa chứ không tạo phép màu**, ta sang **Phát hiện và sửa lỗi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin, bit, mã hóa và biểu diễn**, **Phát hiện và sửa lỗi** tiếp nhận điểm tựa từ **Nén: loại bỏ dư thừa chứ không tạo phép màu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị KB, KiB và sự nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phát hiện và sửa lỗi
 
@@ -87,8 +80,7 @@ Lưu trữ và mạng không tuyệt đối hoàn hảo: bit có thể bị lậ
 
 Điều đáng chú ý là phần dư thừa đôi khi bị loại bỏ để nén, nhưng trong trường hợp khác lại được thêm vào để tăng độ tin cậy. Mục tiêu khác nhau dẫn đến thiết kế khác nhau.
 
-
-> **Chuyển mạch:** Từ **Phát hiện và sửa lỗi**, ta sang **Đơn vị KB, KiB và sự nhầm lẫn thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thông tin, bit, mã hóa và biểu diễn**, **Phát hiện và sửa lỗi** đã nêu tiêu chí phân biệt, còn **Đơn vị KB, KiB và sự nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đơn vị KB, KiB và sự nhầm lẫn thường gặp
 
@@ -96,15 +88,13 @@ Theo SI, `1 kB = 1000 bytes` và `1 MB = 10^6 bytes`. Tiền tố nhị phân d�
 
 Băng thông thường được quảng cáo bằng bit/giây, còn kích thước tệp thường tính bằng byte. Đường truyền 100 Mbps không có nghĩa tải được 100 MB mỗi giây; giới hạn lý thuyết trước chi phí giao thức chỉ khoảng 12,5 MB/s.
 
-
-> **Chuyển mạch:** Từ **Đơn vị KB, KiB và sự nhầm lẫn thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thông tin, bit, mã hóa và biểu diễn**, **Đơn vị KB, KiB và sự nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
 > **Bit không có ý nghĩa cố định. Ý nghĩa xuất hiện khi một tầng áp dụng quy tắc mã hóa, lược đồ hoặc giao thức lên các mẫu bit.** Khi dữ liệu “bị sai”, hãy kiểm tra xem sự không khớp nằm ở cách biểu diễn, ranh giới dữ liệu, kiểu dữ liệu, thứ tự byte, mã hóa ký tự hay cách diễn giải ngữ nghĩa.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin, bit, mã hóa và biểu diễn**, **Những hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -114,11 +104,10 @@ Băng thông thường được quảng cáo bằng bit/giây, còn kích thư�
 
 **“Nhị phân chính xác hơn thập phân.”** Nhị phân chỉ là một cơ số biểu diễn. Độ chính xác phụ thuộc kiểu dữ liệu và số bit. Số dấu phẩy động nhị phân còn không thể biểu diễn chính xác nhiều phân số thập phân như 0,1.
 
-
-> **Chuyển mạch:** Từ **Những hiểu lầm thường gặp**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thông tin, bit, mã hóa và biểu diễn**, **Kết nối** tiếp nhận điểm tựa từ **Những hiểu lầm thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Biểu diễn bằng bit dẫn trực tiếp đến [biểu diễn số nguyên và số dấu phẩy động](./02_numbers_and_machine_representation.md), [mạch số](../02_computer_architecture/00_digital_logic_and_circuits.md), [tuần tự hóa](../08_software_systems/04_time_serialization_and_idempotency.md), [gói tin mạng](../06_networks_distributed_systems/00_network_layers_packets_and_encapsulation.md) và [bộ máy lưu trữ](../05_data_databases/04_storage_logs_recovery_and_durability.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what computer science studies](./00_what_computer_science_studies.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

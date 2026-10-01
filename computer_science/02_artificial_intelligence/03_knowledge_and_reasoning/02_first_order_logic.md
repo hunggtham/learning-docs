@@ -1,7 +1,6 @@
 # First-Order lô-gic (logic / 논리) cho Artificial Intelligence
 
-> **Mạch đọc:** Đặt **First-Order lô-gic (logic / 논리) cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tại sao Propositional lô-gic (logic / 논리) không đủ?** sang **Vocabulary của FOL**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao Propositional lô-gic (logic / 논리) không đủ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vocabulary của FOL** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Propositional lô-gic (logic / 논리) có thể biểu diễn `Rain`, `WetRoad`, nhưng không naturally nói “mọi người”, “một người nào đó”, “Alice là parent của Bob”, hay “mọi doctor là professional”. **First-Order lô-gic (logic / 논리)** mở rộng lô-gic (logic / 논리) bằng objects, predicates, functions, variables và quantifiers.
 
@@ -31,6 +30,8 @@ FOL viết một statement:
 
 Cấu trúc (structure / 구조) `Human(x)` và variable `x` allow generalization over objects.
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Vocabulary của FOL** tiếp nhận điểm tựa từ **Tại sao Propositional lô-gic (logic / 논리) không đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Terms và formulas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vocabulary của FOL
 
 Một first-order ngôn ngữ (language / 언어) có:
@@ -41,6 +42,8 @@ Một first-order ngôn ngữ (language / 언어) có:
 - **functions**: `MotherOf(x)`;
 - **logical connectives**: `¬, ∧, ∨, →, ↔`;
 - **quantifiers**: `∀, ∃`.
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Terms và formulas** tiếp nhận điểm tựa từ **Vocabulary của FOL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Universal quantifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Terms và formulas
 
@@ -60,6 +63,8 @@ LivesIn(Alice,Seoul)
 
 Complex formula combines atoms/quantifiers.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Universal quantifier** tiếp nhận điểm tựa từ **Terms và formulas** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Existential quantifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Universal quantifier
 
 \[
@@ -78,6 +83,8 @@ Wrong intended universal:
 
 This asserts every đối tượng (object / 객체) in lĩnh vực (domain / 도메인) is both human and mortal.
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Existential quantifier** tiếp nhận điểm tựa từ **Universal quantifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quantifier phạm vi (scope / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Existential quantifier
 
 \[
@@ -87,6 +94,8 @@ This asserts every đối tượng (object / 객체) in lĩnh vực (domain / �
 means at least one đối tượng (object / 객체) both human and lives in Seoul.
 
 For existential, conjunction is dùng chung (common / 공통) to describe witness properties.
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Quantifier phạm vi (scope / 범위)** tiếp nhận điểm tựa từ **Existential quantifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Free và bound variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quantifier phạm vi (scope / 범위)
 
@@ -110,6 +119,8 @@ Thứ tự (order / 순서) matters radically.
 
 This resembles variable phạm vi (scope / 범위) in programming but ngữ nghĩa (semantics / 의미론) are logical quantification.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Free và bound variables** tiếp nhận điểm tựa từ **Quantifier phạm vi (scope / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Predicate arity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Free và bound variables
 
 In:
@@ -123,6 +134,8 @@ In:
 A sentence/closed formula has no free variables and can receive truth giá trị (value / 값) under interpretation.
 
 Open formula with free variable behaves more like truy vấn (query / 쿼리)/thuộc tính (property / 속성).
+
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Predicate arity** tiếp nhận điểm tựa từ **Free và bound variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Functions vs relations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Predicate arity
 
@@ -146,6 +159,8 @@ Transferred(x,amount,account)
 
 Predicate ngữ nghĩa (semantics / 의미론) depend argument positions. Typed schemas help avoid nonsensical combinations.
 
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Functions vs relations** tiếp nhận điểm tựa từ **Predicate arity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Equality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Functions vs relations
 
 Hàm (function / 함수) maps inputs to one đối tượng (object / 객체):
@@ -162,6 +177,8 @@ Mother(m,x)
 
 Hàm (function / 함수) implies uniqueness/existence các giả định (assumptions / 가정들). If lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식) doesn't guarantee one defined giá trị (value / 값), quan hệ (relation / 관계) may be safer.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Equality** tiếp nhận điểm tựa từ **Functions vs relations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interpretation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Equality
 
 FOL with equality includes:
@@ -176,6 +193,8 @@ Unique-name giả định (assumption / 가정) (different names mean different 
 
 Thực thể (entity / 엔터티) định danh (identity / 식별자) is major practical issue in kiến thức (knowledge / 지식) graphs.
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Interpretation** tiếp nhận điểm tựa từ **Equality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Translation examples** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Interpretation
 
 FOL mô hình (model / 모델) includes:
@@ -188,6 +207,8 @@ FOL mô hình (model / 모델) includes:
 Formula truth depends interpretation.
 
 Cú pháp (syntax / 문법) `CapitalOf(Seoul,Korea)` alone doesn't force intended meaning; ngữ nghĩa (semantics / 의미론) assigns quan hệ (relation / 관계) extension.
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Interpretation** cho ta quy tắc; **Translation examples** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Negating quantifiers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Translation examples
 
@@ -204,6 +225,8 @@ Cú pháp (syntax / 문법) `CapitalOf(Seoul,Korea)` alone doesn't force intende
 \]
 
 Again quantifier thứ tự (order / 순서) encodes very different claim.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Translation examples** cho ta quy tắc; **Negating quantifiers** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Universal instantiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Negating quantifiers
 
@@ -223,6 +246,8 @@ De Morgan-like quantifier laws:
 
 Natural-language phạm vi (scope / 범위) ambiguity makes formalization nontrivial.
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Universal instantiation** tiếp nhận điểm tựa từ **Negating quantifiers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Existential instantiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Universal instantiation
 
 From:
@@ -238,6 +263,8 @@ Human(Socrates)\rightarrow Mortal(Socrates)
 \]
 
 Then with `Human(Socrates)`, Modus Ponens derives `Mortal(Socrates)`.
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Existential instantiation** tiếp nhận điểm tựa từ **Universal instantiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Substitution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Existential instantiation
 
@@ -255,6 +282,8 @@ Human(k)
 
 But cannot assume `k=Alice` without bằng chứng (evidence / 증거). Freshness matters for soundness.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Substitution** tiếp nhận điểm tựa từ **Existential instantiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Unification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Substitution
 
 Substitution:
@@ -270,6 +299,8 @@ Parent(x,y)\theta=Parent(Alice,Bob)
 \]
 
 Substitution is mechanical cốt lõi (core / 핵심) of unification and quy tắc (rule / 규칙) ứng dụng (application / 애플리케이션).
+
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Unification** tiếp nhận điểm tựa từ **Substitution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Occurs check** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Unification
 
@@ -290,6 +321,8 @@ Most general unifier:
 
 Unification enables lô-gic (logic / 논리) programming to match generic rules with specific facts.
 
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Occurs check** tiếp nhận điểm tựa từ **Unification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Generalized Modus Ponens** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Occurs check
 
 Trying unify:
@@ -301,6 +334,8 @@ x = f(x)
 should thất bại (fail / 실패) in tiêu chuẩn (standard / 표준) finite-term unification because would require infinite term.
 
 Occurs check prevents cyclic substitution, though some Prolog implementations historically optimize/modify hành vi (behavior / 동작).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Generalized Modus Ponens** tiếp nhận điểm tựa từ **Occurs check** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward chaining in FOL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Generalized Modus Ponens
 
@@ -326,6 +361,8 @@ Infer:
 Grandparent(Alice,Carol)
 ```
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Forward chaining in FOL** tiếp nhận điểm tựa từ **Generalized Modus Ponens** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backward chaining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Forward chaining in FOL
 
 Repeatedly match quy tắc (rule / 규칙) premises against facts using unification and add conclusions.
@@ -333,6 +370,8 @@ Repeatedly match quy tắc (rule / 규칙) premises against facts using unificat
 Rủi ro (risk / 위험): if functions/new terms generate infinitely many facts, tiến trình (process / 프로세스) may not terminate.
 
 Datalog restricts ngôn ngữ (language / 언어) to achieve finite/tractable hành vi (behavior / 동작) in many settings.
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Backward chaining** tiếp nhận điểm tựa từ **Forward chaining in FOL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lô-gic (logic / 논리) programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Backward chaining
 
@@ -359,6 +398,8 @@ Tìm kiếm (search / 검색) facts/rules for witness `y`.
 
 This is basis of Prolog-style truy vấn (query / 쿼리) resolution.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Lô-gic (logic / 논리) programming** tiếp nhận điểm tựa từ **Backward chaining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FOL resolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lô-gic (logic / 논리) programming
 
 Prolog program consists of facts/rules:
@@ -382,6 +423,8 @@ Procedural hành vi (behavior / 동작) depends quy tắc (rule / 규칙)/thứ 
 
 Declarative ngữ nghĩa (semantics / 의미론) and operational ngữ nghĩa (semantics / 의미론) must both be understood.
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **FOL resolution** tiếp nhận điểm tựa từ **Lô-gic (logic / 논리) programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Skolemization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## FOL resolution
 
 To use resolution, formulas convert toward clause form via steps such as:
@@ -395,6 +438,8 @@ To use resolution, formulas convert toward clause form via steps such as:
 7. use unification-based resolution.
 
 Skolemization preserves satisfiability, not strict logical equivalence in simple sense.
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Skolemization** tiếp nhận điểm tựa từ **FOL resolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Decidability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Skolemization
 
@@ -414,6 +459,8 @@ Hàm (function / 함수) `f(x)` represents some loved đối tượng (object / 
 
 If existential not under universal phạm vi (scope / 범위), fresh Skolem constant may suffice.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Decidability** tiếp nhận điểm tựa từ **Skolemization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Description Logics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Decidability
 
 Propositional SAT decidable: finite truth assignments.
@@ -421,6 +468,8 @@ Propositional SAT decidable: finite truth assignments.
 General First-Order lô-gic (logic / 논리) validity is semi-decidable/undecidable in broad sense: no thuật toán (algorithm / 알고리즘) terminates with correct yes/no for every arbitrary FOL formula validity trường hợp (case / 사례).
 
 This is why practical KR often restricts expressiveness.
+
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Description Logics** tiếp nhận điểm tựa từ **Decidability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Datalog** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Description Logics
 
@@ -439,6 +488,8 @@ They underpin OWL ontology languages.
 
 KR kỹ thuật (engineering / 엔지니어링) often prefers restricted formalism that supports needed suy luận (inference / 추론) reliably over maximal expressiveness.
 
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Datalog** tiếp nhận điểm tựa từ **Description Logics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rules and databases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Datalog
 
 Datalog is logic-programming ngôn ngữ (language / 언어) without unrestricted hàm (function / 함수) symbols, often finite relational facts/rules.
@@ -452,6 +503,8 @@ parent(x,y) ∧ parent(y,z) → grandparent(x,z)
 Datalog connects lô-gic (logic / 논리) suy luận (inference / 추론) with recursive databases and quy tắc (rule / 규칙) engines.
 
 SQL recursive CTE and đồ thị (graph / 그래프) truy vấn (query / 쿼리) languages share some conceptual territory.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Rules and databases** tiếp nhận điểm tựa từ **Datalog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Temporal limitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rules and databases
 
@@ -472,6 +525,8 @@ Suy luận (inference / 추론) tầng (layer / 계층) derives authorization-li
 
 But bảo mật (security / 보안) policies require careful formal ngữ nghĩa (semantics / 의미론); naive rules may create privilege escalation.
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Rules and databases** đã nêu tiêu chí phân biệt, còn **Temporal limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Sự kiện (event / 이벤트) calculus / situation calculus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Temporal limitation
 
 Basic FOL has no built-in thời gian (time / 시간). To mô hình (model / 모델) changing facts:
@@ -490,6 +545,8 @@ Temporal lô-gic (logic / 논리) provides operators like “always”, “event
 
 Planning/chuyển tiếp trạng thái (state transition / 상태 전이) lô-gic (logic / 논리) also explicitly các mô hình (models / 모델들) thời gian (time / 시간)/steps.
 
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Temporal limitation** đã nêu tiêu chí phân biệt, còn **Sự kiện (event / 이벤트) calculus / situation calculus** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Frame bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sự kiện (event / 이벤트) calculus / situation calculus
 
 Classical AI developed formalisms for actions/thay đổi (change / 변경).
@@ -499,6 +556,8 @@ Classical AI developed formalisms for actions/thay đổi (change / 변경).
 **sự kiện (event / 이벤트) Calculus** represents events and intervals over which properties hold.
 
 They address **frame bài toán (problem / 문제)**: specifying what stays unchanged when hành động (action / 동작) affects only few facts.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Frame bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Sự kiện (event / 이벤트) calculus / situation calculus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commonsense exception bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Frame bài toán (problem / 문제)
 
@@ -512,6 +571,8 @@ If robot moves cup from A to B, we want infer:
 Explicitly writing every non-change is impractical.
 
 Planning STRIPS uses add/delete lists to handle frame các giả định (assumptions / 가정들) operationally.
+
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Commonsense exception bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Frame bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) incompleteness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Commonsense exception bài toán (problem / 문제)
 
@@ -528,6 +589,8 @@ Strict FOL quy tắc (rule / 규칙) means no exception unless modeled explicitl
 Default lô-gic (logic / 논리)/non-monotonic lập luận (reasoning / 추론) allows “birds normally fly unless exception known”.
 
 This demonstrates ranh giới (boundary / 경계) between mathematical lô-gic (logic / 논리) and commonsense lập luận (reasoning / 추론).
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Kiến thức (knowledge / 지식) incompleteness** tiếp nhận điểm tựa từ **Commonsense exception bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FOL và kiến thức (knowledge / 지식) Graphs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiến thức (knowledge / 지식) incompleteness
 
@@ -547,6 +610,8 @@ unless closed-world giả định (assumption / 가정)/quy tắc (rule / 규칙
 
 This is trọng yếu (critical / 중요) when integrating databases with lô-gic (logic / 논리) reasoners.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **FOL và kiến thức (knowledge / 지식) Graphs** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) incompleteness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FOL và Natural ngôn ngữ (language / 언어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## FOL và kiến thức (knowledge / 지식) Graphs
 
 Triple:
@@ -565,6 +630,8 @@ Ontology axioms add logical ngữ nghĩa (semantics / 의미론).
 
 Đồ thị (graph / 그래프) traversal alone is not full FOL lập luận (reasoning / 추론); đồ thị (graph / 그래프) truy vấn (query / 쿼리) ngữ nghĩa (semantics / 의미론) depend ngôn ngữ (language / 언어)/hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **FOL và Natural ngôn ngữ (language / 언어)** tiếp nhận điểm tựa từ **FOL và kiến thức (knowledge / 지식) Graphs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM to lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## FOL và Natural ngôn ngữ (language / 언어)
 
 Natural ngôn ngữ (language / 언어) contains quantifiers, negation, relations and phạm vi (scope / 범위), so FOL is useful ngữ nghĩa (semantic / 의미적) biểu diễn (representation / 표현).
@@ -580,6 +647,8 @@ Can mean each student possibly different book:
 \]
 
 Natural ngôn ngữ (language / 언어) ngữ nghĩa (semantic / 의미적) parsing tries map văn bản (text / 텍스트) into logical/structured forms, but ambiguity/ngữ cảnh (context / 맥락) make tác vụ (task / 작업) hard.
+
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **LLM to lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **FOL và Natural ngôn ngữ (language / 언어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## LLM to lô-gic (logic / 논리)
 
@@ -597,6 +666,8 @@ verified answer / counterexample
 
 Rủi ro (risk / 위험) lies in translation tính đúng đắn (correctness / 정확성). Formal solver only proves the formula it receives, not that formula faithfully represents người dùng (user / 사용자) intent.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **LLM to lô-gic (logic / 논리)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -611,6 +682,8 @@ Function   = object-producing mapping
 Unification = find substitution matching structures
 Inference  = derive statements under formal rules
 ```
+
+> **Chuyển mạch:** Trong **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -630,8 +703,12 @@ It is expressive but awkward for bất định (uncertainty / 불확실성), def
 
 Proof guarantees conclusion follows from formal premises. If premises/modeling are wrong or incomplete, real-world claim may still thất bại (fail / 실패).
 
+> **Chuyển mạch:** Ở chặng này của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 First-Order lô-gic (logic / 논리) upgrades propositional lập luận (reasoning / 추론) from flat Boolean symbols to relational structures, creating cầu nối (bridge / 브리지) to ontologies, quy tắc (rule / 규칙) engines and kiến thức (knowledge / 지식) Graphs. Its limitations motivate [Probabilistic Reasoning](./04_probabilistic_reasoning.md) and non-monotonic/hybrid approaches.
 
 Xem tiếp: [Inference and Reasoning](./03_inference_and_reasoning.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

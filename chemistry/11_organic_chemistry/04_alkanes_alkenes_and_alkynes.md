@@ -1,7 +1,6 @@
 # Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi
 
-> **Mạch đọc:** Đọc **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ankan — không “trơ”, mà thiếu vị trí phản ứng dễ tiếp cận** sang **Liên kết C–H không hoàn toàn tương đương**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ankan — không “trơ”, mà thiếu vị trí phản ứng dễ tiếp cận** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Liên kết C–H không hoàn toàn tương đương** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Hydrocarbon là hệ đơn giản nhất để thấy một nguyên lý lớn của hóa học hữu cơ: chỉ cần thay đổi kiểu liên kết từ hệ chỉ có sigma sang hệ chứa pi, hình học, phân bố electron, độ acid và con đường phản ứng thay đổi mạnh. Vì vậy chương này không nên được học như danh sách phản ứng của ankan, anken và ankin; nó là bài học về cách **kiểu liên kết quyết định khả năng phản ứng**.
 
@@ -28,6 +27,8 @@ nhiệt động lực học → phản ứng có lợi về năng lượng tới
 động học           → phản ứng xảy ra nhanh tới mức nào
 ```
 
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, sau nội dung của **Ankan — không “trơ”, mà thiếu vị trí phản ứng dễ tiếp cận**, **Liên kết C–H không hoàn toàn tương đương** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Halogen hóa theo cơ chế chuỗi gốc tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết C–H không hoàn toàn tương đương
 
 Năng lượng phân ly liên kết C–H phụ thuộc cấu trúc của gốc tự do tạo thành sau khi liên kết bị cắt đồng ly.
@@ -45,6 +46,8 @@ Nguyên nhân chính là:
 - hiệu ứng cảm ứng.
 
 Vì vậy “C–H nào cũng giống nhau” là một mô hình quá thô.
+
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Liên kết C–H không hoàn toàn tương đương** xác định đầu vào; **Halogen hóa theo cơ chế chuỗi gốc tự do** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chlor hóa và brom hóa — đánh đổi giữa tốc độ và chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Halogen hóa theo cơ chế chuỗi gốc tự do
 
@@ -88,6 +91,8 @@ làm giảm số chất mang chuỗi.
 
 Tốc độ toàn hệ phụ thuộc không chỉ bước đầu tiên mà vào cân bằng giữa khơi mào, phát triển và kết thúc chuỗi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Halogen hóa theo cơ chế chuỗi gốc tự do** xác định đầu vào; **Chlor hóa và brom hóa — đánh đổi giữa tốc độ và chọn lọc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cấu dạng của ankan mạch hở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chlor hóa và brom hóa — đánh đổi giữa tốc độ và chọn lọc
 
 Brom hóa thường chọn lọc hơn chlor hóa đối với C–H bậc cao.
@@ -102,6 +107,8 @@ brom hóa  → chậm hơn, chọn lọc hơn
 ```
 
 Đây là cách lập luận (reasoning / 추론) tốt hơn việc học thuộc bảng tỉ lệ sản phẩm.
+
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Cấu dạng của ankan mạch hở** tiếp nhận điểm tựa từ **Chlor hóa và brom hóa — đánh đổi giữa tốc độ và chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cycloalkane và ứng suất vòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu dạng của ankan mạch hở
 
@@ -128,6 +135,8 @@ Chênh lệch năng lượng xuất phát từ kết hợp của:
 
 Không nên giải thích mọi khác biệt chỉ bằng “hai nguyên tử va vào nhau”.
 
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Cycloalkane và ứng suất vòng** tiếp nhận điểm tựa từ **Cấu dạng của ankan mạch hở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cyclohexane dạng ghế và khả năng phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cycloalkane và ứng suất vòng
 
 Trong vòng carbon, các liên kết không thể luôn giữ góc và góc xoắn tối ưu.
@@ -145,6 +154,8 @@ Cyclobutane uốn khỏi mặt phẳng để giảm che khuất nhưng vẫn cò
 
 Cyclohexane dạng ghế gần hình học tứ diện và phần lớn liên kết ở trạng thái so le, nên đặc biệt bền.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Cyclohexane dạng ghế và khả năng phản ứng** tiếp nhận điểm tựa từ **Cycloalkane và ứng suất vòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anken — electron pi dễ phân cực và dễ tiếp cận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cyclohexane dạng ghế và khả năng phản ứng
 
 Mỗi carbon có vị trí:
@@ -160,6 +171,8 @@ Trong phản ứng E2 trên cyclohexane, nhóm rời và hydrogen beta thường
 
 Do đó cấu dạng không chỉ quyết định độ bền; nó có thể quyết định phản ứng có xảy ra thuận lợi hay không.
 
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Anken — electron pi dễ phân cực và dễ tiếp cận** tiếp nhận điểm tựa từ **Cyclohexane dạng ghế và khả năng phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ bền anken và nhiệt hydrogen hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Anken — electron pi dễ phân cực và dễ tiếp cận
 
 **Anken (alkene)** có liên kết đôi C=C gồm:
@@ -172,6 +185,8 @@ Do đó cấu dạng không chỉ quyết định độ bền; nó có thể quy
 Electron pi nằm phía trên và dưới trục nối hai carbon, xa hạt nhân hơn mật độ sigma và dễ bị phân cực hơn.
 
 Vì vậy anken thường đóng vai trò nguồn electron đối với **tác nhân ái điện (electrophile)**.
+
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Độ bền anken và nhiệt hydrogen hóa** tiếp nhận điểm tựa từ **Anken — electron pi dễ phân cực và dễ tiếp cận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng HX và lô-gic (logic / 논리) Markovnikov** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ bền anken và nhiệt hydrogen hóa
 
@@ -194,6 +209,8 @@ Các yếu tố ảnh hưởng độ bền anken gồm:
 
 Anken thế nhiều thường được ổn định bởi siêu liên hợp. Đồng phân `E` thường bền hơn `Z` khi giảm đẩy lập thể, nhưng không nên coi đây là quy tắc không ngoại lệ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Cộng HX và lô-gic (logic / 논리) Markovnikov** tiếp nhận điểm tựa từ **Độ bền anken và nhiệt hydrogen hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển vị carbocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cộng HX và lô-gic (logic / 논리) Markovnikov
 
 Một mô hình ion đơn giản:
@@ -208,6 +225,8 @@ Hướng proton hóa ưu tiên con đường tạo trạng thái chuyển tiếp
 
 **Quy tắc Markovnikov** là cách tóm tắt kết quả thường gặp của cơ chế này, không phải định luật độc lập với cơ chế.
 
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Chuyển vị carbocation** tiếp nhận điểm tựa từ **Cộng HX và lô-gic (logic / 논리) Markovnikov** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng HBr theo cơ chế gốc tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển vị carbocation
 
 Nếu carbocation hình thành, nó có thể chuyển vị bằng:
@@ -219,6 +238,8 @@ Mục tiêu năng lượng là tạo cation ổn định hơn.
 
 Sản phẩm có khung carbon khác dự đoán cộng trực tiếp là bằng chứng quan trọng cho sự tham gia của trung gian carbocation hoặc trạng thái rất giống carbocation.
 
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Chuyển vị carbocation** xác định đầu vào; **Cộng HBr theo cơ chế gốc tự do** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ba chiến lược hydrat hóa anken** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cộng HBr theo cơ chế gốc tự do
 
 Khi có peroxide hoặc chất khơi mào phù hợp, HBr có thể cộng vào anken bằng chuỗi gốc tự do, thường cho định hướng **anti-Markovnikov**.
@@ -228,6 +249,8 @@ Khi có peroxide hoặc chất khơi mào phù hợp, HBr có thể cộng vào 
 > định hướng sản phẩm thuộc về cơ chế, không thuộc riêng tên thuốc thử.
 
 HCl và HI không cho cùng hiệu ứng peroxide trong điều kiện thông thường vì năng lượng các bước phát triển chuỗi không phù hợp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Cộng HBr theo cơ chế gốc tự do** xác định đầu vào; **Ba chiến lược hydrat hóa anken** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Halogen hóa và halohydrin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ba chiến lược hydrat hóa anken
 
@@ -255,6 +278,8 @@ cùng mục tiêu “thêm H và OH”
 → nguy cơ chuyển vị khác
 ```
 
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Halogen hóa và halohydrin** tiếp nhận điểm tựa từ **Ba chiến lược hydrat hóa anken** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Epoxid hóa và dihydroxyl hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Halogen hóa và halohydrin
 
 Cộng \(Br_2\) hoặc \(Cl_2\) thường đi qua **ion halonium cầu nối**, không phải carbocation tự do hoàn toàn.
@@ -269,6 +294,8 @@ Cơ chế cầu nối giải thích đồng thời:
 - cộng anti;
 - hạn chế chuyển vị.
 
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Epoxid hóa và dihydroxyl hóa** tiếp nhận điểm tựa từ **Halogen hóa và halohydrin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cắt oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Epoxid hóa và dihydroxyl hóa
 
 Peracid có thể chuyển anken thành epoxide qua quá trình chuyển oxygen đồng thời, thường bảo toàn quan hệ lập thể của anken.
@@ -280,11 +307,15 @@ Epoxide sau đó có thể mở vòng:
 
 Dihydroxyl hóa syn có thể dùng \(OsO_4\) hoặc hệ tương tự. Diol anti có thể thu qua epoxid hóa rồi mở vòng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Cắt oxy hóa** tiếp nhận điểm tựa từ **Epoxid hóa và dihydroxyl hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diene liên hợp và phi định xứ electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cắt oxy hóa
 
 Ozon hoặc chất oxy hóa mạnh có thể phân cắt liên kết đôi thành các mảnh carbonyl.
 
 Do sản phẩm phản ánh hai phía của C=C ban đầu, **ozonolysis** vừa là công cụ tổng hợp vừa là công cụ suy luận cấu trúc.
+
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Diene liên hợp và phi định xứ electron** tiếp nhận điểm tựa từ **Cắt oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng Diels–Alder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Diene liên hợp và phi định xứ electron
 
@@ -309,6 +340,8 @@ nhiệt độ cao / thuận nghịch → sản phẩm bền hơn có thể tăng
 
 Xem lại: [Động học hóa học](../06_chemical_kinetics/00_reaction_rates.md) và [Năng lượng tự do Gibbs](../05_thermodynamics/03_gibbs_free_energy.md).
 
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Phản ứng Diels–Alder** tiếp nhận điểm tựa từ **Diene liên hợp và phi định xứ electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ankin — hai hệ pi và carbon sp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phản ứng Diels–Alder
 
 Diene liên hợp có thể phản ứng với **dienophile** trong phản ứng vòng hóa `[4+2]` tạo vòng sáu cạnh.
@@ -318,6 +351,8 @@ Diene liên hợp có thể phản ứng với **dienophile** trong phản ứng
 Diene cần cấu dạng `s-cis` để hai đầu hệ pi tiếp cận dienophile đúng hình học orbital.
 
 Diels–Alder cho thấy không phải mọi cơ chế hữu cơ đều được mô tả tốt bằng chuỗi “tạo ion → ion bị tấn công”. Đối xứng orbital có thể trực tiếp quyết định con đường phản ứng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Ankin — hai hệ pi và carbon sp** tiếp nhận điểm tựa từ **Phản ứng Diels–Alder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ acid của ankin đầu mạch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ankin — hai hệ pi và carbon sp
 
@@ -337,6 +372,8 @@ Carbon `sp` có hình học tuyến tính và thành phần s lớn hơn `sp²/s
 - hướng orbital;
 - khả năng phản ứng cộng.
 
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Độ acid của ankin đầu mạch** tiếp nhận điểm tựa từ **Ankin — hai hệ pi và carbon sp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo liên kết C–C bằng acetylide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ acid của ankin đầu mạch
 
 Ankin đầu mạch có \(pK_a\) xấp xỉ 25, acid hơn anken và ankan nhưng vẫn cần cơ sở (base / 기반) mạnh để khử proton đáng kể.
@@ -348,6 +385,8 @@ RC\equiv CH+NH_2^-\rightarrow RC\equiv C^-+NH_3
 \]
 
 Ion acetylide được ổn định tương đối vì điện tích âm nằm trên carbon `sp` có thành phần s cao.
+
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, sau nội dung của **Độ acid của ankin đầu mạch**, **Tạo liên kết C–C bằng acetylide** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Khử một phần ankin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tạo liên kết C–C bằng acetylide
 
@@ -367,6 +406,8 @@ Do đó có một giới hạn thực tế:
 
 > acetylide là tác nhân ái nhân tốt nhưng không phải mọi electrophile đều là chất nền \(S_N2\) tốt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Khử một phần ankin** tiếp nhận điểm tựa từ **Tạo liên kết C–C bằng acetylide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oxy hóa hydrocarbon và hóa học cháy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khử một phần ankin
 
 Hydrogen hóa mạnh có thể đưa ankin tới ankan.
@@ -376,6 +417,8 @@ Nếu dùng xúc tác bề mặt đã được điều chỉnh để giảm ho�
 Điều kiện kim loại hòa tan có thể tạo anken `trans` qua chuỗi chuyển electron/proton từng bước.
 
 Hai con đường khác nhau tạo stereochemistry khác nhau vì cơ chế khác nhau.
+
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Oxy hóa hydrocarbon và hóa học cháy** tiếp nhận điểm tựa từ **Khử một phần ankin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trùng hợp anken — từ liên kết pi tới vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Oxy hóa hydrocarbon và hóa học cháy
 
@@ -391,6 +434,8 @@ Cháy không hoàn toàn có thể tạo:
 Cơ chế cháy thật là mạng phản ứng gốc tự do có phân nhánh chuỗi, truyền nhiệt và vận chuyển khối. Phương trình tổng chỉ mô tả bảo toàn vật chất, không mô tả cơ chế.
 
 Đây là liên hệ trực tiếp giữa hữu cơ, kinetics và khoa học năng lượng.
+
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, sau nội dung của **Oxy hóa hydrocarbon và hóa học cháy**, **Trùng hợp anken — từ liên kết pi tới vật liệu** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên hệ hóa dầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trùng hợp anken — từ liên kết pi tới vật liệu
 
@@ -417,6 +462,8 @@ Do đó một cơ chế phản ứng phân tử có thể quyết định trực
 
 Xem thêm: [Polymer](../14_materials_and_polymer_chemistry/02_polymers.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Liên hệ hóa dầu** tiếp nhận điểm tựa từ **Trùng hợp anken — từ liên kết pi tới vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao cyclohexene phản ứng với Br₂ nhưng cyclohexane không phản ứng tương tự?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ hóa dầu
 
 Công nghiệp dầu khí dùng:
@@ -439,6 +486,8 @@ mạng phản ứng
 + vận chuyển khối/nhiệt
 ```
 
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Liên hệ hóa dầu** cho ta quy tắc; **Ví dụ suy luận: vì sao cyclohexene phản ứng với Br₂ nhưng cyclohexane không phản ứng tương tự?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: chọn điều kiện để tạo 1-butanol từ 1-butene** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao cyclohexene phản ứng với Br₂ nhưng cyclohexane không phản ứng tương tự?
 
 Cyclohexene có liên kết pi với mật độ electron dễ phân cực. Khi Br₂ tiến gần, liên kết Br–Br bị phân cực và hệ pi có thể cho electron tạo trung gian halonium.
@@ -446,6 +495,8 @@ Cyclohexene có liên kết pi với mật độ electron dễ phân cực. Khi 
 Cyclohexane chỉ có sigma C–C/C–H, không có orbital pi giàu electron tương tự để khởi động con đường đó.
 
 Do đó khác biệt không phải vì “anken là chất mạnh hơn”, mà vì orbital khả dụng cho tương tác ban đầu khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Ví dụ suy luận: vì sao cyclohexene phản ứng với Br₂ nhưng cyclohexane không phản ứng tương tự?** cho ta quy tắc; **Ví dụ suy luận: chọn điều kiện để tạo 1-butanol từ 1-butene** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ suy luận: chọn điều kiện để tạo 1-butanol từ 1-butene
 
@@ -460,6 +511,8 @@ B gắn ưu tiên carbon ít thế hơn
 ```
 
 Ví dụ này cho thấy lựa chọn thuốc thử phải bắt đầu từ regioselectivity và cơ chế (mechanism / 메커니즘), không từ việc nhớ “reagent nào thêm nước”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Ví dụ suy luận: chọn điều kiện để tạo 1-butanol từ 1-butene** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -483,6 +536,8 @@ Không. Hình học `sp`, trung gian vinyl và độ acid tạo hành vi riêng.
 
 Không. Nếu phản ứng không thuận nghịch hoặc hàng rào hoạt hóa khác mạnh, sản phẩm động học có thể chiếm ưu thế.
 
+> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy đọc hydrocarbon theo sự tiến hóa của orbital:
@@ -505,4 +560,4 @@ Từ mô hình này, nhiều phản ứng có thể được suy luận thay vì
 
 Xem tiếp: [Hóa học thơm](./05_aromatic_chemistry.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

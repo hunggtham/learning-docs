@@ -1,7 +1,6 @@
 # Hiệu năng (performance / 성능), power và đo lường hardware
 
-> **Mạch đọc:** Đọc **hiệu năng (performance / 성능), power và đo lường hardware** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **CPU thời gian (time / 시간) và ba thành phần cơ bản** sang **độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hiệu năng (performance / 성능), power và đo lường hardware**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CPU thời gian (time / 시간) và ba thành phần cơ bản** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Một CPU “3.5 GHz” không thể tự nói nó nhanh hơn CPU “3.0 GHz”. hiệu năng (performance / 성능) xuất hiện từ tương tác (interaction / 상호작용) giữa instruction count, cycles per instruction, bộ nhớ (memory / 메모리) stalls, parallelism, branch hành vi (behavior / 동작), trình biên dịch (compiler / 컴파일러) và tải công việc (workload / 워크로드). Vì vậy kiến trúc (architecture / 아키텍처) cần một chi phí (cost / 비용) mô hình (model / 모델) định lượng thay vì suy luận từ một specification riêng lẻ.
 
@@ -23,8 +22,7 @@ Instruction Count phụ thuộc thuật toán (algorithm / 알고리즘), trình
 
 Một tối ưu hóa (optimization / 최적화) có thể giảm instruction count nhưng tăng bộ nhớ đệm (cache / 캐시) misses; kết quả cuối chỉ biết qua total thực thi (execution / 실행) thời gian (time / 시간) trên tải công việc (workload / 워크로드) đại diện.
 
-
-> **Chuyển mạch:** Từ **CPU thời gian (time / 시간) và ba thành phần cơ bản**, ta sang **độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hiệu năng (performance / 성능), power và đo lường hardware**, **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** tiếp nhận điểm tựa từ **CPU thời gian (time / 시간) và ba thành phần cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)
 
@@ -32,8 +30,7 @@ Một tối ưu hóa (optimization / 최적화) có thể giảm instruction cou
 
 Máy chủ (server / 서버) kiến trúc (architecture / 아키텍처) thường tối ưu thông lượng (throughput / 처리량)/tính đồng thời (concurrency / 동시성), trong khi interactive UI nhạy với tail độ trễ (latency / 지연 시간). Không có một chỉ số (metric / 지표) hiệu năng (performance / 성능) duy nhất phù hợp mọi hệ thống (system / 시스템).
 
-
-> **Chuyển mạch:** Từ **độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)**, ta sang **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** xác định đầu vào; **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Amdahl và giới hạn speedup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls
 
@@ -41,8 +38,7 @@ Instructions per cycle (IPC) là inverse-style chỉ số (metric / 지표) củ
 
 Trượt bộ nhớ đệm (cache miss / 캐시 미스), branch misprediction và dữ liệu (data / 데이터) phụ thuộc (dependency / 의존성) tạo stalls. Out-of-order thực thi (execution / 실행) cố lấp bubbles bằng independent instructions, nhưng không thể vượt true dependencies hoặc độ trễ (latency / 지연 시간) chuỗi (chain / 사슬) vô hạn.
 
-
-> **Chuyển mạch:** Từ **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls**, ta sang **Amdahl và giới hạn speedup** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu năng (performance / 성능), power và đo lường hardware**, **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** đã nêu tiêu chí phân biệt, còn **Amdahl và giới hạn speedup** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Amdahl và giới hạn speedup
 
@@ -56,8 +52,7 @@ Nếu chỉ 20% thời gian chạy (runtime / 런타임) được tối ưu vô 
 
 Ý nghĩa kỹ thuật (engineering / 엔지니어링): profile trước khi tối ưu. Tối ưu phần hiếm không cứu total độ trễ (latency / 지연 시간).
 
-
-> **Chuyển mạch:** Từ **Amdahl và giới hạn speedup**, ta sang **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hiệu năng (performance / 성능), power và đo lường hardware**, **Amdahl và giới hạn speedup** đã nêu tiêu chí phân biệt, còn **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Benchmarking đúng nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)
 
@@ -73,8 +68,7 @@ Thermal thiết kế (design / 설계) Power không phải chính xác (exact / 
 
 Hiệu năng (performance / 성능) per watt trở thành chỉ số (metric / 지표) quan trọng trong datacenter và battery-powered các hệ thống (systems / 시스템들).
 
-
-> **Chuyển mạch:** Từ **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)**, ta sang **Benchmarking đúng nghĩa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Benchmarking đúng nghĩa** tiếp nhận điểm tựa từ **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Roofline intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Benchmarking đúng nghĩa
 
@@ -84,8 +78,7 @@ Các nguyên tắc quan trọng gồm warm-up khi thời gian chạy (runtime / 
 
 Tail percentiles như p95/p99 quan trọng cho máy chủ (server / 서버) độ trễ (latency / 지연 시간) vì average có thể che long tail.
 
-
-> **Chuyển mạch:** Từ **Benchmarking đúng nghĩa**, ta sang **Roofline intuition** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Roofline intuition** tiếp nhận điểm tựa từ **Benchmarking đúng nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Roofline intuition
 
@@ -93,8 +86,7 @@ Một computation có thể compute-bound hoặc memory-bandwidth-bound. Arithme
 
 Mô hình tư duy (mental model / 사고 모델) này giải thích tại sao ma trận (matrix / 행렬) kernels, vectorization và dữ liệu (data / 데이터) bố cục (layout / 레이아웃) quan trọng trong numerical workloads.
 
-
-> **Chuyển mạch:** Từ **Roofline intuition**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hiệu năng (performance / 성능), power và đo lường hardware**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Roofline intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -104,18 +96,16 @@ Mô hình tư duy (mental model / 사고 모델) này giải thích tại sao ma
 
 **“Parallelize càng nhiều càng tốt.”** Synchronization, communication và serial fraction giới hạn speedup.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hiệu năng (performance / 성능) là thuộc tính (property / 속성) của một đường dẫn (path / 경로) qua nhiều bottlenecks. Đừng hỏi “thành phần (component / 컴포넌트) nào nhanh”, hãy hỏi “tải công việc (workload / 워크로드) nào, chỉ số (metric / 지표) nào, bottleneck ở đâu, và tối ưu hóa (optimization / 최적화) chuyển bottleneck sang đâu”.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Xem [parallel architecture](./05_parallel_computer_architecture.md), [cache hierarchy](./02_memory_hierarchy_and_cache.md), [software performance/capacity](../08_software_systems/02_performance_capacity_and_scalability.md) và [cross-cutting trade-offs](../90_connections/03_cross_cutting_tradeoffs.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 digital logic and circuits](./00_digital_logic_and_circuits.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

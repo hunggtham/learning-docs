@@ -1,6 +1,6 @@
 # 02. Auth, session và định danh (identity / 식별자)
 
-> **Mạch đọc:** Đặt **02. Auth, session và định danh (identity / 식별자)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tách ba câu hỏi** sang **Session và đơn vị từ (token / 토큰)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02. Auth, session và định danh (identity / 식별자)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tách ba câu hỏi** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Session và đơn vị từ (token / 토큰)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Tách ba câu hỏi
 
@@ -13,8 +13,7 @@ nhưng không có quyền. Không suy ra quyền từ một trường dữ liệ
 phải lấy subject từ session/đơn vị từ (token / 토큰) đã verify rồi kiểm tra quyền sở hữu (ownership / 소유권)/tenant ở
 lĩnh vực (domain / 도메인) ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **Tách ba câu hỏi**, ta sang **Session và đơn vị từ (token / 토큰)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ba câu hỏi authentication, identity và authorization tách credential khỏi quyền; **Session và token** cho thấy credential được lưu, xoay vòng và thu hồi như thế nào trước khi kiểm tra policy.
 
 ## Session và đơn vị từ (token / 토큰)
 
@@ -27,8 +26,7 @@ CSRF là vấn đề của credential tự động gửi (đặc biệt cookie),
 bỏ authorization. CORS cũng không phải authentication. Password phải được băm (hash / 해시)
 bằng password KDF phù hợp và reset luồng (flow / 흐름) cần đơn vị từ (token / 토큰) một lần, expiry ngắn.
 
-
-> **Chuyển mạch:** Từ **Session và đơn vị từ (token / 토큰)**, ta sang **Authorization mô hình (model / 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Session/token chỉ chứng minh credential và context; **Authorization model** quyết định subject được làm gì trên resource nào, kể cả qua job hoặc admin path.
 
 ## Authorization mô hình (model / 모델)
 
@@ -36,12 +34,9 @@ RBAC hữu ích cho role coarse-grained; quyền sở hữu (ownership / 소유�
 attribute cần kiểm tra ở use trường hợp (case / 사례). Kiểm tra ở UI chỉ là trải nghiệm. Mọi đường
 đi (HTTP, job, admin script, event consumer) phải gọi cùng chính sách (policy / 정책)/bất biến (invariant / 불변식).
 
-
-> **Chuyển mạch:** Từ **Authorization mô hình (model / 모델)**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi policy đã được xác định, các failure mode cho thấy ranh giới bị phá ở session fixation, cache key, tenant query hoặc stale token; phần identity propagation theo dõi context qua các boundary đó.
 
 ## Thất bại (failure / 실패) modes
-Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - session fixation sau login nếu không rotate session ID;
 - đơn vị từ (token / 토큰) hết hạn giữa yêu cầu (request / 요청) và thử lại (retry / 재시도);
@@ -51,8 +46,7 @@ Phần “Thất bại (failure / 실패) modes” nối kiến thức trước 
 
 Bảo mật (security / 보안) internals và threat mô hình (model / 모델) thuộc [Computer Science Security](../../computer_science/07_security_reliability/README.md); chapter này tập trung vào ranh giới (boundary / 경계) ứng dụng.
 
-
-> **Chuyển mạch:** Từ **thất bại (failure / 실패) modes**, ta sang **Đào sâu: định danh (identity / 식별자) propagation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Identity propagation biến các failure mode thành câu hỏi vận hành: actor, tenant, assurance và scope nào còn đúng khi request trở thành job; bài tập tiếp theo dùng một signed URL để kiểm tra lựa chọn đó.
 
 ## Đào sâu: định danh (identity / 식별자) propagation
 
@@ -71,8 +65,7 @@ nguồn chuẩn (source of truth / 정본) dùng được cho nhiều instance; 
 skew và thử lại (retry / 재시도) có thể làm refresh đơn vị từ (token / 토큰) bị dùng hai lần, nên cần detect reuse và
 chính sách (policy / 정책) revoke đơn vị từ (token / 토큰) family.
 
-
-> **Chuyển mạch:** Từ **Đào sâu: định danh (identity / 식별자) propagation**, ta sang **Bài tập suy luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bài tập signed URL buộc phân biệt authorization lúc cấp quyền với lúc sử dụng; **Privacy và vòng đời dữ liệu identity** mở rộng cùng ranh giới sang retention, deletion và audit trail.
 
 ## Bài tập suy luận
 
@@ -80,8 +73,7 @@ Phân tích endpoint tải tệp (file / 파일): người dùng (user / 사용�
 lúc download. Quyết định URL expiry, authorization tại issuance và lưu trữ (storage / 저장소), kiểm tra (audit / 감사)
 sự kiện (event / 이벤트), bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) và cách ngăn URL bị chia sẻ ngoài tenant.
 
-
-> **Chuyển mạch:** Từ **Bài tập suy luận**, ta sang **Privacy và vòng đời dữ liệu định danh (identity / 식별자)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Quyết định authorization phải đi cùng lifecycle của credential và dữ liệu; phần privacy kiểm tra bản sao, backup, cache và log có còn giữ quyền truy cập sau deletion hay không.
 
 ## Privacy và vòng đời dữ liệu định danh (identity / 식별자)
 
@@ -97,4 +89,4 @@ rõ SLA và eventual deletion trạng thái (state / 상태), tránh hứa “x�
 tồn tại hợp pháp. Authorization của admin/hỗ trợ (support / 지원) cũng cần actor, reason, phạm vi (scope / 범위)
 và kiểm tra (audit / 감사) trail; không dùng quyền vận hành như bypass không ghi dấu.
 
-> **Bàn giao:** Sau **Privacy và vòng đời dữ liệu định danh (identity / 식별자)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Privacy và vòng đời dữ liệu identity**, giữ lại nguyên tắc least privilege, propagation có chủ ý và deletion có bằng chứng; quay về [Backend cốt lõi README](./README.md) để nối sang persistence hoặc observability.

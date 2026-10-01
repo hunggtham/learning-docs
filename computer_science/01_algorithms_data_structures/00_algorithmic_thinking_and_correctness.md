@@ -1,7 +1,6 @@
 # Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)
 
-> **Mạch đọc:** Đặt **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ bài toán (problem / 문제) statement tới specification** sang **Partial tính đúng đắn (correctness / 정확성) và termination**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ bài toán (problem / 문제) statement tới specification** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Partial tính đúng đắn (correctness / 정확성) và termination** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Thuật toán (algorithm / 알고리즘) không phải một đoạn mã (code / 코드) có vẻ chạy được. Nó là một procedure hữu hạn, rõ nghĩa, biến đầu vào (input / 입력) thành đầu ra (output / 출력) theo một specification. Tư duy thuật toán bắt đầu trước mã (code / 코드): xác định trạng thái (state / 상태) nào quan trọng, thao tác (operation / 연산) nào được phép, bất biến (invariant / 불변식) nào phải giữ, và bằng chứng nào cho thấy procedure thực sự giải đúng bài toán.
 
@@ -23,8 +22,7 @@ return m
 
 Điểm đáng học không phải cú pháp (syntax / 문법) mà là lập luận (reasoning / 추론). Sau khi đã xử lý prefix `A[0..i]`, bất biến (invariant / 불변식) là `m` bằng maximum của prefix đó. Ban đầu bất biến (invariant / 불변식) đúng với prefix một phần tử. Mỗi iteration hoặc giữ `m`, hoặc thay bằng phần tử lớn hơn, nên bất biến (invariant / 불변식) được bảo toàn. Khi vòng lặp (loop / 루프) kết thúc, prefix chính là toàn array; specification được thỏa.
 
-
-> **Chuyển mạch:** Từ **Từ bài toán (problem / 문제) statement tới specification**, ta sang **Partial tính đúng đắn (correctness / 정확성) và termination** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Problem statement phải trở thành specification có pre/postcondition; partial correctness kết hợp termination mới thành total correctness, rồi decomposition chia proof obligation.
 
 ## Partial tính đúng đắn (correctness / 정확성) và termination
 
@@ -34,8 +32,7 @@ Với vòng lặp (loop / 루프), termination thường chứng minh bằng m�
 
 Trong môi trường vận hành (production / 운영 환경), termination còn có nghĩa thực dụng hơn: mạng (network / 네트워크) lời gọi (call / 호출) cần hết thời gian chờ (timeout / 타임아웃); thử lại (retry / 재시도) cần bound/backoff; hàng đợi (queue / 큐) bên tiêu thụ (consumer / 소비자) phải tránh poison message vòng lặp (loop / 루프). Lý thuyết termination gặp trực tiếp độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
 
-
-> **Chuyển mạch:** Từ **Partial tính đúng đắn (correctness / 정확성) và termination**, ta sang **Decomposition và subproblem** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Decomposition và subproblem** tiếp nhận điểm tựa từ **Partial tính đúng đắn (correctness / 정확성) và termination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Decomposition và subproblem
 
@@ -43,8 +40,7 @@ Algorithmic thinking thường tìm cách biến bài toán (problem / 문제) t
 
 Điểm quan trọng là decomposition phải preserve cấu trúc (structure / 구조). Chia bừa một bài toán (problem / 문제) không tự động tạo thuật toán (algorithm / 알고리즘) tốt. Với divide-and-conquer, ta cần xác định cách combine; với greedy, phải chứng minh cục bộ (local / 로컬) choice không phá toàn cục (global / 전역) optimum; với DP, cần trạng thái (state / 상태) đủ để mô tả phần quá khứ ảnh hưởng tương lai.
 
-
-> **Chuyển mạch:** Từ **Decomposition và subproblem**, ta sang **tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)** tiếp nhận điểm tựa từ **Decomposition và subproblem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deterministic, randomized và nondeterministic hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)
 
@@ -58,8 +54,7 @@ Formal proof có thể nặng, nhưng tư duy proof mang lại câu hỏi thiế
 
 Property-based testing cũng xuất phát từ tinh thần tương tự: thay vì chỉ kiểm tra vài expected outputs, encode properties như “sort đầu ra (output / 출력) là ordered và là permutation của đầu vào (input / 입력)”. Testing không thay proof, nhưng thuộc tính (property / 속성) thinking nâng chất lượng kiểm thử (test / 테스트).
 
-
-> **Chuyển mạch:** Từ **tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)**, ta sang **Deterministic, randomized và nondeterministic hành vi (behavior / 동작)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Deterministic, randomized và nondeterministic hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Online và offline algorithms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Deterministic, randomized và nondeterministic hành vi (behavior / 동작)
 
@@ -67,8 +62,7 @@ Deterministic thuật toán (algorithm / 알고리즘) với cùng trạng thái
 
 Tính đồng thời (concurrency / 동시성) tạo hành vi (behavior / 동작) có vẻ nondeterministic vì scheduling khác nhau, dù mỗi luồng thực thi (thread / 스레드) có mã (code / 코드) deterministic. Đây là lý do tính đúng đắn (correctness / 정확성) concurrent các hệ thống (systems / 시스템들) cần lập luận (reasoning / 추론) về interleavings hoặc higher-level bộ nhớ (memory / 메모리) các mô hình (models / 모델들).
 
-
-> **Chuyển mạch:** Từ **Deterministic, randomized và nondeterministic hành vi (behavior / 동작)**, ta sang **Online và offline algorithms** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Online và offline algorithms** tiếp nhận điểm tựa từ **Deterministic, randomized và nondeterministic hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính xác (exact / 정확한), approximation và heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Online và offline algorithms
 
@@ -76,8 +70,7 @@ Offline thuật toán (algorithm / 알고리즘) thấy toàn đầu vào (input
 
 Sự khác biệt này thay đổi specification và benchmark. Một thuật toán (algorithm / 알고리즘) optimal khi biết toàn future có thể không implementable trong real-time hệ thống (system / 시스템).
 
-
-> **Chuyển mạch:** Từ **Online và offline algorithms**, ta sang **chính xác (exact / 정확한), approximation và heuristic** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Chính xác (exact / 정확한), approximation và heuristic** tiếp nhận điểm tựa từ **Online và offline algorithms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính xác (exact / 정확한), approximation và heuristic
 
@@ -85,15 +78,13 @@ Không phải bài toán (problem / 문제) nào cũng cần chính xác (exact 
 
 Điều quan trọng là đừng gọi heuristic là “thuật toán (algorithm / 알고리즘) sai”. Nếu specification chấp nhận approximate solution, nó vẫn có thể đúng theo đặc tả hợp đồng (contract / 계약). Sai là khi guarantees bị hiểu quá mức.
 
-
-> **Chuyển mạch:** Từ **chính xác (exact / 정확한), approximation và heuristic**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chính xác (exact / 정확한), approximation và heuristic** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Một thuật toán (algorithm / 알고리즘) tốt không bắt đầu từ mã (code / 코드). Hãy xác định **đầu vào (input / 입력) lĩnh vực (domain / 도메인) → trạng thái (state / 상태) → Allowed transitions → bất biến (invariant / 불변식) → Termination → đầu ra (output / 출력) thuộc tính (property / 속성) → tài nguyên (resource / 자원) chi phí (cost / 비용)**. mã (code / 코드) chỉ là một biểu diễn (representation / 표현) của chuỗi lập luận (reasoning / 추론) đó.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -103,11 +94,10 @@ Không phải bài toán (problem / 문제) nào cũng cần chính xác (exact 
 
 **“Recursion luôn chậm.”** Recursion là cách mô tả decomposition. hiệu năng (performance / 성능) phụ thuộc lời gọi (call / 호출) overhead, tối ưu hóa (optimization / 최적화), dữ liệu (data / 데이터) truy cập (access / 접근) và algorithmic cấu trúc (structure / 구조); iterative form không tự động đổi độ phức tạp (complexity / 복잡도) lớp (class / 클래스).
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Tính đúng đắn (correctness / 정확성) dựa trên [logic, state và invariants](../00_computation_information/03_logic_state_abstraction_and_invariants.md). Sau khi biết procedure đúng, bước tiếp theo là hỏi [nó tốn bao nhiêu time/space](./01_complexity_and_asymptotic_analysis.md), rồi cách [data layout](./02_memory_models_and_data_layout.md) làm chi phí lý thuyết gặp hardware thật.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 complexity and asymptotic analysis](./01_complexity_and_asymptotic_analysis.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

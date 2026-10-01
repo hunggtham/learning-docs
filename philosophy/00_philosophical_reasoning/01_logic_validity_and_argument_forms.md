@@ -1,6 +1,6 @@
 # Lô-gic (logic / 논리), Validity và các dạng lập luận
 
-> **Mạch đọc:** Đọc **lô-gic (logic / 논리), Validity và các dạng lập luận** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Validity không phải truth** sang **Deduction, induction và abduction**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lô-gic (logic / 논리), Validity và các dạng lập luận**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Validity không phải truth** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Deduction, induction và abduction** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Validity không phải truth
 
@@ -18,12 +18,9 @@ Vậy P.                 affirming the consequent — invalid
 
 Dạng thứ hai có thể cho conclusion đúng trong một trường hợp cụ thể, nhưng không được premise bảo đảm: Q có thể có nguyên nhân khác. Đây là lỗi thường gặp khi đọc correlation như causation.
 
-
-> **Chuyển mạch:** Từ **Validity không phải truth**, ta sang **Deduction, induction và abduction** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Validity nói về inference form, không bảo đảm premises true; deduction/induction/abduction vì vậy có standards khác nhau, cần steelman trước khi đặt burden of proof.
 
 ## Deduction, induction và abduction
-Phần “Deduction, induction và abduction” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **Deduction** bảo toàn tính đúng theo cấu trúc: từ quy tắc (rule / 규칙) và trường hợp (case / 사례) suy ra consequence.
 - **Induction** mở rộng từ observations hữu hạn sang mẫu (pattern / 패턴) tổng quát; conclusion có độ tin cậy chứ không certainty.
@@ -31,8 +28,7 @@ Phần “Deduction, induction và abduction” nối kiến thức trước v�
 
 Không dạng nào tự giải quyết mọi vấn đề. Deduction có thể vận hành trên premise sai; induction nhạy với mẫu (sample / 표본) và cơ sở (base / 기반) tỷ lệ (rate / 비율); abduction có thể chọn explanation đẹp nhưng chưa đủ discriminating bằng chứng (evidence / 증거).
 
-
-> **Chuyển mạch:** Từ **Deduction, induction và abduction**, ta sang **Steelman và burden of proof** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리), Validity và các dạng lập luận**, **Steelman và burden of proof** tiếp nhận điểm tựa từ **Deduction, induction và abduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Steelman và burden of proof
 
@@ -40,4 +36,4 @@ Trước khi phản biện, hãy viết phiên bản mạnh nhất của lập l
 
 Xem thêm [Câu hỏi, khái niệm và lập luận](00_questions_concepts_and_arguments.md) và [Knowledge, justification và evidence](../01_epistemology/00_knowledge_justification_and_evidence.md).
 
-> **Bàn giao:** Sau **Steelman và burden of proof**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 questions concepts and arguments](./00_questions_concepts_and_arguments.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Steelman và burden of proof**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng
 
-> **Mạch đọc:** Đọc **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hòa tan thực chất là tái tổ chức các tương tác** sang **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hòa tan thực chất là tái tổ chức các tương tác** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Dung dịch (solution / 용액)** là hỗn hợp đồng nhất ở thang phân tử hoặc ion. **Độ tan (solubility / 용해도)** là lượng chất tan có thể tồn tại ở trạng thái hòa tan khi hệ đạt cân bằng dưới những điều kiện xác định. Muốn hiểu sâu hóa học dung dịch, không nên dừng ở câu “chất giống nhau thì hòa tan nhau”; cần nhìn đồng thời enthalpy, entropy, tương tác phân tử, hoạt độ và thế hóa học.
 
@@ -27,6 +26,8 @@ Tuy nhiên enthalpy không quyết định một mình. Ở nhiệt độ và á
 
 **Entropy trộn (entropy of mixing)** thường có xu hướng thuận lợi vì các hạt có nhiều cách phân bố hơn, nhưng việc dung môi bị sắp xếp mạnh quanh một chất tan kỵ nước hoặc ion có mật độ điện tích cao có thể làm đóng góp entropy phức tạp hơn trực giác đơn giản.
 
+> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** tiếp nhận điểm tựa từ **Hòa tan thực chất là tái tổ chức các tương tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Solvat hóa, hydrat hóa và lớp solvat hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?
 
 Dung môi phân cực thường ổn định chất tan phân cực hoặc ion tốt nhờ tương tác lưỡng cực và ion–lưỡng cực. Dung môi không phân cực thường tương thích hơn với chất tan không phân cực vì không cần phá một mạng liên kết hydro mạnh chỉ để thay bằng tương tác phân tán yếu.
@@ -36,6 +37,8 @@ Tuy nhiên độ tan vẫn là bài toán cân bằng năng lượng tự do.
 Một phân tử có nhóm phân cực nhưng khung hydrocarbon rất lớn vẫn có thể ít tan trong nước. Một ion lớn và dễ phân cực cũng có thể hành xử khác rõ rệt so với một ion nhỏ, cứng và có mật độ điện tích cao.
 
 > Cách hỏi tốt hơn là: **những tương tác nào bị mất, những tương tác nào được tạo ra, và entropy thay đổi ra sao?**
+
+> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Solvat hóa, hydrat hóa và lớp solvat hóa** tiếp nhận điểm tựa từ **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Solvat hóa, hydrat hóa và lớp solvat hóa
 
@@ -47,6 +50,8 @@ Ion nhỏ có điện tích cao như `Mg²+` có mật độ điện tích lớn
 
 Hydrat hóa mạnh cũng giải thích vì sao xu hướng ion hóa ở pha khí không thể trực tiếp dùng để dự đoán hành vi trong dung dịch nước.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** tiếp nhận điểm tựa từ **Solvat hóa, hydrat hóa và lớp solvat hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dung dịch chưa bão hòa, bão hòa và quá bão hòa
 
 **Dung dịch chưa bão hòa (unsaturated solution)** có lượng chất tan dưới giới hạn cân bằng.
@@ -56,6 +61,8 @@ Hydrat hóa mạnh cũng giải thích vì sao xu hướng ion hóa ở pha khí
 **Dung dịch quá bão hòa (supersaturated solution)** có nồng độ cao hơn giá trị cân bằng nhưng chưa kết tinh vì còn hàng rào tạo mầm.
 
 Trạng thái quá bão hòa minh họa rõ sự khác nhau giữa nhiệt động lực học và động học: hình thành tinh thể có thể thuận lợi về nhiệt động nhưng không xảy ra ngay vì chưa có mầm tinh thể đủ ổn định để khởi động chuyển pha.
+
+> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** tiếp nhận điểm tựa từ **Dung dịch chưa bão hòa, bão hòa và quá bão hòa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung dịch lý tưởng và định luật Raoult** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ảnh hưởng của nhiệt độ và áp suất tới độ tan
 
@@ -72,6 +79,8 @@ C=k_HP
 Một số tài liệu dùng quy ước hằng số nghịch đảo, nên luôn phải kiểm tra định nghĩa và đơn vị của `k_H`.
 
 Nước có ga là ví dụ trực quan: chai đóng kín duy trì áp suất riêng phần `CO2` cao nên nhiều `CO2` hòa tan. Khi mở nắp, áp suất giảm và `CO2` thoát ra để hệ tiến tới cân bằng mới.
+
+> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Dung dịch lý tưởng và định luật Raoult** tiếp nhận điểm tựa từ **Ảnh hưởng của nhiệt độ và áp suất tới độ tan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sai lệch dương và sai lệch âm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dung dịch lý tưởng và định luật Raoult
 
@@ -93,6 +102,8 @@ P_{tot}=\sum_i x_iP_i^*
 
 **Định luật Raoult (Raoult's law)** không phải quy luật phổ quát cho mọi hỗn hợp; nó là một mô hình giới hạn cho hành vi gần lý tưởng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Sai lệch dương và sai lệch âm** tiếp nhận điểm tựa từ **Dung dịch lý tưởng và định luật Raoult** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sai lệch dương và sai lệch âm
 
 Nếu tương tác A–B yếu hơn trung bình của A–A và B–B, các phân tử thoát khỏi pha lỏng dễ hơn và áp suất hơi cao hơn dự đoán lý tưởng. Đây là **sai lệch dương (positive deviation)**.
@@ -102,6 +113,8 @@ Nếu tương tác A–B mạnh hơn, áp suất hơi thấp hơn dự đoán l�
 Đây là cầu nối trực tiếp từ lực liên phân tử sang hành vi pha vĩ mô.
 
 Tính không lý tưởng mạnh có thể tạo **hỗn hợp đẳng phí (azeotrope / 공비 혼합물)**, nơi hơi và lỏng có cùng thành phần tại một thành phần xác định. Khi đó chưng cất đơn giản không thể tiếp tục làm giàu một cấu tử vô hạn.
+
+> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** tiếp nhận điểm tựa từ **Sai lệch dương và sai lệch âm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực ion và tính không lý tưởng của chất điện ly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thế hóa học — ngôn ngữ sâu hơn của dung dịch
 
@@ -123,6 +136,8 @@ trong đó `γ_i` là **hệ số hoạt độ (activity coefficient / 활동도
 
 Điểm cốt lõi là cân bằng và động lực nhiệt động phụ thuộc hoạt độ, không phải chỉ nồng độ. Nồng độ là đại lượng dễ đo; hoạt độ mô tả “mức hiện diện hiệu dụng” về mặt nhiệt động của một tiểu phần trong môi trường tương tác.
 
+> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Lực ion và tính không lý tưởng của chất điện ly** tiếp nhận điểm tựa từ **Thế hóa học — ngôn ngữ sâu hơn của dung dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính chất tập hợp từ thế hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lực ion và tính không lý tưởng của chất điện ly
 
 Trong dung dịch chất điện ly, các ion tương tác tĩnh điện với nhau. Khi **lực ion (ionic strength)** tăng, hành vi lệch khỏi lý tưởng rõ hơn.
@@ -136,6 +151,8 @@ I=\frac12\sum_i c_i z_i^2
 Ở lực ion thấp, **lý thuyết Debye–Hückel (Debye–Hückel theory)** mô tả cách “khí quyển ion” quanh mỗi ion làm hệ số hoạt độ lệch khỏi 1.
 
 Ở nồng độ cao hơn cần các mô hình phức tạp hơn như Debye–Hückel mở rộng, Davies, Pitzer hoặc các mô hình tương tác ion riêng biệt.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Tính chất tập hợp từ thế hóa học** tiếp nhận điểm tựa từ **Lực ion và tính không lý tưởng của chất điện ly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tính chất tập hợp từ thế hóa học
 
@@ -158,6 +175,8 @@ Trong đó `i` là **hệ số van 't Hoff (van 't Hoff factor)**.
 
 Với chất điện ly thực, sự ghép cặp ion và tương tác tĩnh điện làm số hạt hiệu dụng khác giá trị nguyên đơn giản dự đoán từ công thức phân ly.
 
+> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** tiếp nhận điểm tựa từ **Tính chất tập hợp từ thế hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự phân bố giữa hai pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ
 
 **Thẩm thấu (osmosis / 삼투)** là sự vận chuyển dung môi qua màng bán thấm do chênh lệch thế hóa học của dung môi.
@@ -165,6 +184,8 @@ Với chất điện ly thực, sự ghép cặp ion và tương tác tĩnh đi�
 Độ dốc (gradient / 기울기) nồng độ là một biểu hiện trực quan, nhưng mô tả sâu hơn nằm ở thế hóa học.
 
 Tế bào sinh học rất nhạy với thẩm thấu. Môi trường ưu trương kéo nước ra khỏi tế bào; môi trường nhược trương làm nước đi vào. Tuy nhiên hành vi thực còn phụ thuộc độ thấm màng và vận chuyển chủ động.
+
+> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Sự phân bố giữa hai pha** tiếp nhận điểm tựa từ **Thẩm thấu không phải “nước chạy về chỗ mặn hơn” một cách kỳ lạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích số tan và kết tủa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sự phân bố giữa hai pha
 
@@ -182,6 +203,8 @@ Nếu chất tan có thể ion hóa, sự phân bố phụ thuộc pH vì dạng
 
 Đây là nền tảng của chiết lỏng–lỏng, sự hấp thu thuốc và vận chuyển chất ô nhiễm trong môi trường.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Tích số tan và kết tủa** tiếp nhận điểm tựa từ **Sự phân bố giữa hai pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tan trong hóa học hữu cơ và dược hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tích số tan và kết tủa
 
 Với muối ít tan:
@@ -198,6 +221,8 @@ Kết tủa phụ thuộc **tích hoạt độ ion (ion activity product)** so v
 
 Sự tạo phức, pH và lực ion có thể thay đổi độ tan biểu kiến rất mạnh. Ví dụ, khi phối tử liên kết ion kim loại và làm giảm hoạt độ kim loại tự do, thêm chất rắn có thể hòa tan để thiết lập lại cân bằng.
 
+> **Chuyển mạch:** Trong **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Độ tan trong hóa học hữu cơ và dược hóa học** tiếp nhận điểm tựa từ **Tích số tan và kết tủa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ tan trong hóa học hữu cơ và dược hóa học
 
 Một phân tử có thể liên kết rất mạnh với đích sinh học nhưng vẫn khó sử dụng nếu độ tan quá thấp.
@@ -211,6 +236,8 @@ Dược hóa học phải cân bằng:
 - năng lượng solvat hóa.
 
 Một hợp chất có độ phân cực nội tại khá cao vẫn có thể ít tan nếu mạng tinh thể quá bền. Vì vậy độ tan không chỉ là câu hỏi “phân tử có phân cực không?” mà còn là sự cạnh tranh giữa **độ bền pha rắn** và **năng lượng tự do solvat hóa (solvation free energy)**.
+
+> **Chuyển mạch:** Ở chặng này của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Độ tan trong hóa học hữu cơ và dược hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -230,10 +257,12 @@ Không. Hoạt độ là đại lượng nhiệt động xuất hiện trực ti
 
 Sai. Khi tương tác ion mạnh, hiệu chỉnh hoạt độ trở nên cần thiết.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy nhìn dung dịch như **một mạng năng lượng–entropy của các hạt tương tác trong dung môi**. Mô hình lý tưởng cho trực giác ban đầu; hoạt độ và thế hóa học cung cấp mô tả nhiệt động sâu hơn; động học và quá trình tạo mầm quyết định hệ đạt cân bằng nhanh đến mức nào.
 
 Xem tiếp: [Mol và hằng số Avogadro](../04_chemical_quantities/00_mole_and_avogadro_constant.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 gases](./00_gases.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

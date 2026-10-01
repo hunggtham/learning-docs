@@ -1,12 +1,10 @@
 # Justice, Power và Political Legitimacy
 
-> **Mạch đọc:** Đọc **Justice, Power và Political Legitimacy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Những trục cần tách** sang **Từ cá nhân đến thể chế**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Justice, Power và Political Legitimacy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Những trục cần tách** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Từ cá nhân đến thể chế** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Xã hội (social / 사회적)–political philosophy hỏi xã hội nên phân phối lợi ích, gánh nặng, quyền và tiếng nói thế nào; ai có quyền ra quyết định; và khi nào quyền lực trở nên chính đáng.
 
 ## Những trục cần tách
-Phần “Những trục cần tách” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **liberty**: không bị can thiệp và có năng lực thực tế để hành động;
 - **equality**: bình đẳng về quy tắc (rule / 규칙), opportunity, tài nguyên (resource / 자원) hay status;
@@ -15,29 +13,25 @@ Phần “Những trục cần tách” nối kiến thức trước với nội
 
 Power không chỉ là mệnh lệnh công khai; nó còn định hình agenda, category, truy cập (access / 접근) to kiến thức (knowledge / 지식) và khả năng được lắng nghe. Một thủ tục hợp lệ trên giấy có thể vẫn tái tạo bất bình đẳng nếu điểm xuất phát, thông tin hoặc chi phí tham gia phân bố không đều.
 
-
-> **Chuyển mạch:** Từ **Những trục cần tách**, ta sang **Từ cá nhân đến thể chế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Tách trục justice, power và legitimacy trước khi đi từ individual claim sang institutional design; policy reasoning tiếp theo phân biệt equality với equity theo mục tiêu và ràng buộc.
 
 ## Từ cá nhân đến thể chế
 
 Thought experiment như xã hội (social / 사회적) đặc tả hợp đồng (contract / 계약) hữu ích để làm lộ nguyên tắc, nhưng institution thực tế còn phụ thuộc lịch sử (history / 이력), economy, law, culture và collective hành động (action / 동작). Cần nối normative ideal với bằng chứng (evidence / 증거) về hành vi (behavior / 동작) và quản trị (governance / 거버넌스) thay vì suy ra chính sách trực tiếp từ một mô hình trừu tượng.
 
-
-> **Chuyển mạch:** Từ **Từ cá nhân đến thể chế**, ta sang **chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Justice, Power và Political Legitimacy**, **Chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?** tiếp nhận điểm tựa từ **Từ cá nhân đến thể chế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Power kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?
 
 Giả sử một dịch vụ công có cùng quy tắc (rule / 규칙) cho mọi người nhưng nhóm A phải đi xa hơn, thiếu internet và chịu discrimination khi tiếp cận. Formal equality giữ một procedure; substantive equality hỏi năng lực sử dụng và kết quả (outcome / 결과) có bị cấu trúc ban đầu làm lệch không. Equity không có nghĩa tùy tiện ưu ái; nó cần principle về disadvantage, eligibility, transparency và sunset/rà soát (review / 검토).
 
-
-> **Chuyển mạch:** Từ **chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?**, ta sang **Power kiểm tra (audit / 감사)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Justice, Power và Political Legitimacy**, **Power kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Power kiểm tra (audit / 감사)
 
 Với một institution, hãy hỏi: ai đặt agenda, ai sở hữu dữ liệu (data / 데이터), ai định nghĩa category, ai có quyền veto, ai chịu chi phí (cost / 비용) của lỗi (error / 오류), và ai có appeal? Quyền lực ẩn trong default và omission cũng quan trọng như mệnh lệnh công khai. Một tiến trình (process / 프로세스) legitimate phải cho người bị ảnh hưởng khả năng biết, chất vấn và thay đổi quyết định, không chỉ có chữ ký hợp lệ.
 
-
-> **Chuyển mạch:** Từ **Power kiểm tra (audit / 감사)**, ta sang **độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Justice, Power và Political Legitimacy**, **Độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực** tiếp nhận điểm tựa từ **Power kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực
 
@@ -57,4 +51,4 @@ Objection: hypothetical consent không thay thế consent của nhóm lịch s�
 
 Quản trị (governance / 거버넌스) bằng chứng (evidence / 증거) cần theo dõi who participates, who benefits, lỗi (error / 오류) burden, appeal success và chính sách (policy / 정책) phản hồi (feedback / 피드백); survey trust không đủ đo legitimacy. Implication: thiết kế institution với transparency, accessible appeal, sunset/rà soát (review / 검토) và redistribution khi “neutral” default gây harm. Justice claim không được suy ra trực tiếp từ một chỉ số (metric / 지표) efficiency.
 
-> **Bàn giao:** Sau **Empirical ranh giới (boundary / 경계) và implication**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 democracy rights and public reason](./01_democracy_rights_and_public_reason.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

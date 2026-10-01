@@ -1,5 +1,7 @@
 # China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Starting điều kiện (condition / 조건): collective agriculture** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. HRS thay đổi cái gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 [13 — China after 1978](13_case_china_reform_opening_and_dual_track_transition.md) đã mô tả reform đường dẫn (path / 경로) tổng quát. Chapter này zoom vào một institutional thay đổi (change / 변경) nhỏ hơn nhưng cực kỳ hữu ích về lập luận nhân quả (causal reasoning / 인과적 추론): **Household Responsibility Hệ thống (system / 시스템) (HRS)** trong nông nghiệp.
 
 Câu hỏi trung tâm không phải “China bỏ socialism hay chưa”. Câu hỏi là: **khi quyết định (decision / 결정) rights và residual claim thay đổi trong một môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템), incentive và đầu ra (output / 출력) phản ứng thế nào?**
@@ -21,6 +23,8 @@ inheritance right
 
 HRS thay đổi mạnh một số rights mà không đơn giản biến rural land thành full private freehold.
 
+> **Chuyển mạch:** Trong **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **2. HRS thay đổi cái gì?** tiếp nhận điểm tựa từ **1. Starting điều kiện (condition / 조건): collective agriculture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Residual claimant — vì sao quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. HRS thay đổi cái gì?
 
 Trong HRS, collective land được contracted tới individual households. Household chịu obligations/quota theo arrangement cụ thể, nhưng có quyền quyết định môi trường vận hành (production / 운영 환경) ở mức lớn hơn và giữ residual đầu ra (output / 출력)/income sau obligations.
@@ -36,6 +40,8 @@ collective production
 ```
 
 World Bank historical reviews mô tả HRS như một shift trao cho households điều khiển (control / 제어) lớn hơn đối với môi trường vận hành (production / 운영 환경) decisions trên land vẫn thuộc collective khung phần mềm (framework / 프레임워크).
+
+> **Chuyển mạch:** Ở chặng này của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **3. Residual claimant — vì sao quan trọng?** tiếp nhận điểm tựa từ **2. HRS thay đổi cái gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Bằng chứng (evidence / 증거): đầu ra (output / 출력) tăng, nhưng attribution cần decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Residual claimant — vì sao quan trọng?
 
@@ -57,6 +63,8 @@ Không nên reduce toàn bộ agricultural reform về “người ta tham lam n
 
 Household có thông tin (information / 정보) rất cục bộ (local / 로컬) về trường dữ liệu (field / 필드), weather, family labor và crop conditions. Quyết định (decision / 결정) right gần thông tin (information / 정보) nguồn (source / 소스) có thể improve adaptation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **3. Residual claimant — vì sao quan trọng?** nêu điều cần giải thích; **4. Bằng chứng (evidence / 증거): đầu ra (output / 출력) tăng, nhưng attribution cần decomposition** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Reform bundle bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Bằng chứng (evidence / 증거): đầu ra (output / 출력) tăng, nhưng attribution cần decomposition
 
 World Bank historical rà soát (review / 검토) ghi nhận agricultural môi trường vận hành (production / 운영 환경) tăng mạnh trong early reform years. Một rà soát (review / 검토) nêu total agricultural môi trường vận hành (production / 운영 환경) tăng hơn 40% từ 1978 đến 1984 và ước tính tenure/HRS reform giải thích một phần lớn — nhưng không phải toàn bộ — increase; fertilizer use, higher agricultural prices và các reforms khác cũng đóng góp.
@@ -72,6 +80,8 @@ observed agricultural growth
 
 Cùng period còn có price reform, đầu vào (input / 입력) thay đổi (change / 변경), political shift và other institutional changes.
 
+> **Chuyển mạch:** Trong **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **4. Bằng chứng (evidence / 증거): đầu ra (output / 출력) tăng, nhưng attribution cần decomposition** nêu điều cần giải thích; **5. Reform bundle bài toán (problem / 문제)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Cục bộ (local / 로컬) experimentation và diffusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Reform bundle bài toán (problem / 문제)
 
 Nếu nhiều policies thay đổi gần nhau, simple before/after comparison dễ over-attribute.
@@ -85,6 +95,8 @@ Ta cần hỏi:
 - đầu ra (output / 출력) phản hồi (response / 응답) khác nhau giữa crops không?
 
 Đây là cầu nối (bridge / 브리지) sang [Research Methods](../../../research_methods/README.md): institutional lịch sử (history / 이력) cần identification chiến lược (strategy / 전략), không chỉ narrative chronology.
+
+> **Chuyển mạch:** Ở chặng này của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **6. Cục bộ (local / 로컬) experimentation và diffusion** tiếp nhận điểm tựa từ **5. Reform bundle bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Why gradual reform can reduce chuyển tiếp (transition / 전이) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Cục bộ (local / 로컬) experimentation và diffusion
 
@@ -101,6 +113,8 @@ local experiment
 ```
 
 Kiến trúc (architecture / 아키텍처) này có advantage là phản hồi (feedback / 피드백) có thể đến từ heterogeneous cục bộ (local / 로컬) contexts. Nhưng selection bài toán (problem / 문제) vẫn tồn tại: successful pilots dễ được nhớ hơn failed experiments, và political reporting có thể độ lệch (bias / 편향) thông tin (information / 정보).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **7. Why gradual reform can reduce chuyển tiếp (transition / 전이) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **6. Cục bộ (local / 로컬) experimentation và diffusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Quyền sở hữu (ownership / 소유권) versus điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Why gradual reform can reduce chuyển tiếp (transition / 전이) chi phí (cost / 비용)
 
@@ -120,6 +134,8 @@ open a new incentive-compatible margin
 → expand/revise
 ```
 
+> **Chuyển mạch:** Trong **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **8. Quyền sở hữu (ownership / 소유권) versus điều khiển (control / 제어)** tiếp nhận điểm tựa từ **7. Why gradual reform can reduce chuyển tiếp (transition / 전이) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Productivity, effort hay reallocation?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Quyền sở hữu (ownership / 소유권) versus điều khiển (control / 제어)
 
 Một lesson quan trọng từ China trường hợp (case / 사례) là:
@@ -137,6 +153,8 @@ Institutional thiết kế (design / 설계) thực tế có nhiều combination
 
 Vì vậy comparative political economy nên mã (code / 코드) variables separately.
 
+> **Chuyển mạch:** Ở chặng này của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **9. Productivity, effort hay reallocation?** tiếp nhận điểm tựa từ **8. Quyền sở hữu (ownership / 소유권) versus điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Household reform giải phóng labor cho non-farm activity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Productivity, effort hay reallocation?
 
 Khi agricultural đầu ra (output / 출력) tăng sau HRS, cơ chế (mechanism / 메커니즘) có thể gồm nhiều thành phần (component / 컴포넌트):
@@ -153,6 +171,8 @@ reduced monitoring problem
 
 Không phải mọi increase đều là technological TFP improvement theo strict sense. Một institution có thể nâng đầu ra (output / 출력) bằng cách đưa existing cục bộ (local / 로컬) kiến thức (knowledge / 지식) và effort vào use tốt hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **9. Productivity, effort hay reallocation?** cho ta quy tắc; **10. Household reform giải phóng labor cho non-farm activity** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Rural inequality và new trade-offs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Household reform giải phóng labor cho non-farm activity
 
 Nếu agricultural productivity và household quyết định (decision / 결정) flexibility tăng, một family có thể allocate fewer workers to farm và move labor sang rural industry/services.
@@ -160,6 +180,8 @@ Nếu agricultural productivity và household quyết định (decision / 결정
 World Bank historical phân tích (analysis / 분석) nối early agricultural reform với expansion của township and village enterprises (TVEs) và off-farm employment.
 
 Do đó HRS không chỉ là agriculture story. Nó thay đổi opportunity set của rural households và góp phần vào structural transformation.
+
+> **Chuyển mạch:** Trong **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **10. Household reform giải phóng labor cho non-farm activity** cho ta quy tắc; **11. Rural inequality và new trade-offs** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Land rights vẫn constrained** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Rural inequality và new trade-offs
 
@@ -184,6 +206,8 @@ distributional neutrality
 
 Evaluation phải giữ cả hai dimensions.
 
+> **Chuyển mạch:** Ở chặng này của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **12. Land rights vẫn constrained** tiếp nhận điểm tựa từ **11. Rural inequality và new trade-offs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Chính sách (policy / 정책) interpretation: reform không chứng minh một ideology hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Land rights vẫn constrained
 
 HRS không equivalent với full private saleable quyền sở hữu (ownership / 소유권). Historical arrangements generally retained collective quyền sở hữu (ownership / 소유권) while giving households đặc tả hợp đồng (contract / 계약)/use rights, với duration và transfer rules thay đổi theo later reforms.
@@ -199,6 +223,8 @@ HRS không equivalent với full private saleable quyền sở hữu (ownership 
 
 Reform vì vậy không kết thúc năm 1978–84; HRS là một tầng (layer / 계층) trong evolving land-rights hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **13. Chính sách (policy / 정책) interpretation: reform không chứng minh một ideology hoàn chỉnh** tiếp nhận điểm tựa từ **12. Land rights vẫn constrained** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Compare with Soviet collectivization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Chính sách (policy / 정책) interpretation: reform không chứng minh một ideology hoàn chỉnh
 
 Nếu HRS improves incentives và đầu ra (output / 출력), suy luận (inference / 추론) hợp lý là:
@@ -212,6 +238,8 @@ Suy luận (inference / 추론) quá xa sẽ là:
 Một institutional intervention tests a cơ chế (mechanism / 메커니즘), không kiểm thử (test / 테스트) every proposition trong an ideology.
 
 Ngược lại, fact rằng land remained collectively owned cũng không chứng minh quyền sở hữu (ownership / 소유권) form irrelevant. Rights bundle phải được unpack.
+
+> **Chuyển mạch:** Trong **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **14. Compare with Soviet collectivization** tiếp nhận điểm tựa từ **13. Chính sách (policy / 정책) interpretation: reform không chứng minh một ideology hoàn chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Cầu nối (bridge / 브리지) sang Vietnam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Compare with Soviet collectivization
 
@@ -233,6 +261,8 @@ Nhưng comparison không controlled experiment. Starting conditions, technology,
 
 Giá trị của contrast là cơ chế (mechanism / 메커니즘) discovery: quyết định (decision / 결정) rights và residual incentives đáng được mã (code / 코드) như nhân quả (causal / 인과적) variables.
 
+> **Chuyển mạch:** Ở chặng này của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **15. Cầu nối (bridge / 브리지) sang Vietnam** tiếp nhận điểm tựa từ **14. Compare with Soviet collectivization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Cầu nối (bridge / 브리지) sang Vietnam
 
 Vietnamese agricultural reform cũng thay đổi household quyết định (decision / 결정) rights, procurement relations và land-use rights trong Đổi Mới period. Vì vậy China cung cấp một comparative prior nhưng không phải template identical.
@@ -247,12 +277,14 @@ institution change
 → counterfactual boundary
 ```
 
-## Sources và reading anchors
-Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**, **15. Cầu nối (bridge / 브리지) sang Vietnam** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Sources và reading anchors
 
 - World Bank historical document on China and the Household Responsibility Hệ thống (system / 시스템): https://documents1.worldbank.org/curated/en/142781468127495966/pdf/multi0page.pdf
 - World Bank, *Rà soát (review / 검토) of China’s Rural Development Tiến trình (process / 프로세스)*: https://documents1.worldbank.org/curated/en/759681468160181821/pdf/493190PUB0Spat101Official0Use0Only1.pdf
 - World Bank historical phân tích (analysis / 분석) linking HRS to agricultural đầu ra (output / 출력) growth and rural industry: https://documents1.worldbank.org/curated/en/349441468771837768/pdf/multi0page.pdf
 - World Bank phân tích (analysis / 분석) of rural reform, incentives and off-farm growth: https://documents1.worldbank.org/curated/en/305651468142168891/pdf/multi0page.pdf
 - [13 — China reform and opening](13_case_china_reform_opening_and_dual_track_transition.md) giữ broader institutional ngữ cảnh (context / 맥락).
+
+> **Bàn giao:** Sau **Sources và reading anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

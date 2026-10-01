@@ -1,6 +1,6 @@
 # Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy
 
-> **Mạch đọc:** Đọc **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đại lượng cần đo** sang **Quần thể và mẫu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đại lượng cần đo** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Quần thể và mẫu** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Hóa phân tích (analytical chemistry / 분석화학)** không chỉ trả lời “trong mẫu có gì?” và “có bao nhiêu?”. Nhiệm vụ sâu hơn là xây dựng một chuỗi suy luận có thể kiểm tra được từ vật thể thật ngoài thế giới → mẫu đại diện → mẫu phòng thí nghiệm → tín hiệu thiết bị → mô hình hiệu chuẩn → kết quả cùng độ không đảm bảo.
 
@@ -61,8 +61,7 @@ Thiết bị có thể đo lặp với RSD 0,5%, nhưng nếu vật liệu khôn
 
 Đất, quặng, thực phẩm, bột dược phẩm, dòng nước thải và nguyên liệu công nghiệp đều có thể biến thiên mạnh theo không gian hoặc thời gian.
 
-
-> **Chuyển mạch:** Từ **Đại lượng cần đo**, ta sang **Quần thể và mẫu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Quần thể và mẫu** tiếp nhận điểm tựa từ **Đại lượng cần đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lấy mẫu ngẫu nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quần thể và mẫu
 
@@ -89,15 +88,13 @@ Không có “một mẫu đại diện” độc lập với câu hỏi và c�
 
 # Mẫu ngẫu nhiên, phân tầng và mẫu tổ hợp
 
-
-> **Chuyển mạch:** Từ **Quần thể và mẫu**, ta sang **Lấy mẫu ngẫu nhiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu ngẫu nhiên** tiếp nhận điểm tựa từ **Quần thể và mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lấy mẫu phân tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lấy mẫu ngẫu nhiên
 
 Chọn đơn vị sao cho mỗi phần của quần thể có cơ hội được lấy hợp lý. Cách này giảm thiên lệch do người lấy mẫu chọn điểm thuận tiện.
 
-
-> **Chuyển mạch:** Từ **Lấy mẫu ngẫu nhiên**, ta sang **Lấy mẫu phân tầng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu phân tầng** tiếp nhận điểm tựa từ **Lấy mẫu ngẫu nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu tổ hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lấy mẫu phân tầng
 
@@ -105,8 +102,7 @@ Nếu biết hệ có các vùng khác nhau — ví dụ độ sâu, khu sản x
 
 Điều này thường hiệu quả hơn ngẫu nhiên hoàn toàn khi biến thiên giữa các tầng lớn.
 
-
-> **Chuyển mạch:** Từ **Lấy mẫu phân tầng**, ta sang **Mẫu tổ hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Mẫu tổ hợp** tiếp nhận điểm tựa từ **Lấy mẫu phân tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mẫu tổ hợp
 
@@ -423,4 +419,4 @@ Hãy xem một kết quả phân tích như **một chuỗi suy luận từ th�
 
 Xem tiếp: [Phân tích thể tích](./01_volumetric_analysis.md) và [Sai số, độ không đảm bảo và phân tích dữ liệu](../17_laboratory/05_error_uncertainty_and_data_analysis.md).
 
-> **Bàn giao:** Sau **“QC là thủ tục quản lý, không phải khoa học”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 volumetric analysis](./01_volumetric_analysis.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mẫu tổ hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # Cross-domain Connections — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** Đọc **Cross-domain Connections — lĩnh vực (domain / 도메인) Hub** như lớp nối các canonical owner của Khoa học máy tính (computer science / 컴퓨터 과학), không như một thư viện thứ hai. Mỗi route bắt đầu từ một câu hỏi xuyên tầng rồi trỏ ngược về chapter sở hữu cơ chế chi tiết.
+> **Mạch đọc:** [README thư viện Khoa học máy tính](../README.md) là owner cấp domain; file này là hub điều phối các tuyến kết nối và trỏ về chapter sở hữu cơ chế chi tiết. Mỗi route bắt đầu từ một câu hỏi xuyên tầng, không thay thế tài liệu canonical của từng lĩnh vực.
 
 Các tuyến nền hiện nằm trực tiếp trong thư mục này:
 
@@ -9,36 +9,18 @@ Các tuyến nền hiện nằm trực tiếp trong thư mục này:
 3. [Vòng đời dữ liệu qua memory, disk và network](./02_data_lifecycle_memory_disk_network.md) — theo data qua representation, storage và transport boundary.
 4. [Các trade-off xuyên tầng](./03_cross_cutting_tradeoffs.md) — latency, throughput, consistency, availability, complexity và cost.
 5. [Abstraction layers và leaky abstractions](./04_abstraction_layers_and_leaky_abstractions.md) — hiểu khi abstraction che chi tiết hữu ích và khi failure buộc phải đi xuống layer dưới.
-6. [Từ threat model tới control và evidence](./05_threat_model_to_control_and_evidence.md) — nối asset/threat/trust boundary với identity, authorization, secrets, data handling, telemetry, audit evidence và response.
-7. [Từ query → transaction → pipeline → analytical serving](./06_query_transaction_pipeline_and_analytical_serving.md) — theo một business fact từ OLTP commit/WAL/CDC qua transformation, warehouse, semantic layer, dashboard và reconciliation.
-8. [Từ AI data → evaluation → provenance → production evidence](./07_ai_data_evaluation_provenance_and_production_evidence.md) — nối data/label lineage, experiment/evaluation, artifact/config versioning, deployment, drift, delayed outcome và retraining decision.
 
-Phần [`advanced/`](./advanced/README.md) dùng các lĩnh vực (domain / 도메인) đã học để lập luận (reasoning / 추론) về sự cố môi trường vận hành (production incident / 운영 환경 인시던트) end-to-end: độ trễ (latency / 지연 시간), tính đúng đắn (correctness / 정확성), bảo mật (security / 보안), consistency, tài nguyên (resource / 자원) saturation và debugging qua nhiều lớp trừu tượng (abstraction layer / 추상화 계층).
+Phần [`advanced/`](./advanced/README.md) dùng các lĩnh vực đã học để lập luận về sự cố môi trường vận hành end-to-end: độ trễ, tính đúng đắn, bảo mật, consistency, bão hòa tài nguyên và debugging qua nhiều lớp trừu tượng.
 
 ## Cách dùng connection route
 
 Connection route không thay thế chapter gốc. Khi một route nhắc tới scheduler, transaction, authorization, secret rotation, model evaluation hay data lineage, hãy dùng link trong route để quay về canonical owner nếu cần mechanism sâu hơn. Mục tiêu của thư mục này là luyện **composition reasoning**: cùng một failure hoặc quyết định có thể đi qua nhiều layer nhưng mỗi concept vẫn có một owner rõ ràng.
-
-Hai route `06` và `07` cố ý giữ boundary khác nhau:
-
-```text
-06: business fact → durable data → derived analytical meaning
-07: measured data → model/system evidence → production decision
-```
-
-Route `06` không biến Data Engineering thành database internals. Route `07` không biến AI Evaluation thành generic statistics/research methods. Mỗi route chỉ nối những owner đã tồn tại.
 
 Có thể chọn route theo câu hỏi:
 
 ```text
 "Request này đi qua những layer nào?"
 → browser → database
-
-"Business fact này thành dashboard metric như thế nào?"
-→ query → transaction → pipeline → analytical serving
-
-"Model tốt trong notebook có thực sự đáng deploy không?"
-→ AI data → evaluation → provenance → production evidence
 
 "Control bảo mật này chứng minh hiệu lực bằng gì?"
 → threat model → control → evidence
@@ -47,8 +29,8 @@ Có thể chọn route theo câu hỏi:
 ## Handoff sang domain owner
 
 - Cần database internals sâu hơn → [Data & Databases](../05_data_databases/README.md).
-- Cần pipeline/warehouse/semantic layer sâu hơn → [Data Engineering](../../data_engineering/README.md).
+- Cần pipeline/warehouse/semantic layer sâu hơn → quay về owner dữ liệu được README domain chỉ định.
 - Cần AI module/evaluation/MLOps sâu hơn → [Artificial Intelligence](../02_artificial_intelligence/README.md).
-- Cần production incident/recovery reasoning → [DevOps Production Practice](../../devops_platform_engineering/10_production_practice/README.md).
+- Cần production incident/recovery reasoning → [DevOps / Platform Engineering](../../devops_platform_engineering/README.md).
 
-> **Bàn giao:** Nếu muốn luyện đường đi của một request bình thường, bắt đầu với [browser → database](./01_browser_to_database_request.md). Nếu muốn luyện correctness của dữ liệu sau nhiều lần sao chép/biến đổi, đọc [query → transaction → pipeline → analytical serving](./06_query_transaction_pipeline_and_analytical_serving.md). Nếu muốn luyện lifecycle của một AI release, đọc [AI data → evaluation → provenance → production evidence](./07_ai_data_evaluation_provenance_and_production_evidence.md).
+> **Bàn giao:** Chọn tuyến theo câu hỏi thực tế: request đi qua những lớp nào thì bắt đầu với [browser → database](./01_browser_to_database_request.md); dữ liệu thay đổi thế nào qua storage và network thì đọc [data lifecycle](./02_data_lifecycle_memory_disk_network.md); cần tìm trade-off hệ thống thì đọc [cross-cutting trade-offs](./03_cross_cutting_tradeoffs.md). Khi cần cơ chế sâu hơn, quay về README domain và owner được liên kết trong từng tuyến.

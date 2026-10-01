@@ -1,6 +1,6 @@
 # 09. Modular monolith và services
 
-> **Mạch đọc:** Đặt **09. Modular monolith và services** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **ranh giới (boundary / 경계) trước topology** sang **Khi nào tách dịch vụ (service / 서비스)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. Modular monolith và services**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ranh giới (boundary / 경계) trước topology** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Khi nào tách dịch vụ (service / 서비스)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Ranh giới (boundary / 경계) trước topology
 
@@ -14,8 +14,7 @@ trực tiếp bảng của mô-đun (module / 모듈) khác, và phụ thuộc (
 utility chỉ chứa thành phần nguyên thủy (primitive / 기본 요소) ổn định; đừng biến nó thành dùng chung (shared / 공유) lĩnh vực (domain / 도메인) mô hình (model / 모델) làm
 mọi mô-đun (module / 모듈) coupling.
 
-
-> **Chuyển mạch:** Từ **ranh giới (boundary / 경계) trước topology**, ta sang **Khi nào tách dịch vụ (service / 서비스)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ranh giới module phải được chứng minh bằng ownership, invariant và dependency direction trước khi bàn topology. **Khi nào tách dịch vụ (service / 서비스)** dùng các tiêu chí đó để quyết định việc tách có giải quyết một nhu cầu vận hành thật hay chỉ thêm network hop.
 
 ## Khi nào tách dịch vụ (service / 서비스)
 
@@ -24,8 +23,7 @@ khác, cadence/triển khai (deployment / 배포) độc lập, hoặc bảo m�
 chỉ vì gói (package / 패키지) dài hay vì muốn “microservice-ready”. Trước khi tách, đo coupling,
 giao dịch (transaction / 트랜잭션) crossing, dữ liệu (data / 데이터) truy cập (access / 접근) và operational readiness.
 
-
-> **Chuyển mạch:** Từ **Khi nào tách dịch vụ (service / 서비스)**, ta sang **di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Một quyết định tách chỉ có giá trị khi có đường di chuyển kiểm soát được dữ liệu, contract và rollback. **Di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)** biến quyết định đó thành các bước đo được; **Đào sâu: phụ thuộc (dependency / 의존성) fitness** sẽ kiểm tra boundary sau mỗi bước.
 
 ## Di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)
 
@@ -41,8 +39,7 @@ thay bằng cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션)
 
 Kiến trúc (architecture / 아키텍처) fundamentals và phân tán (distributed / 분산) sự đánh đổi (trade-off / 트레이드오프) thuộc [Computer Science](../../computer_science/README.md); chapter này giữ quyết định topology ở ứng dụng (application / 애플리케이션) mức (level / 수준).
 
-
-> **Chuyển mạch:** Từ **di chuyển (migration / 마이그레이션) đường dẫn (path / 경로)**, ta sang **Đào sâu: phụ thuộc (dependency / 의존성) fitness** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Migration làm lộ coupling thật qua cross-transaction, direct table read và đồng bộ release. **Đào sâu: phụ thuộc (dependency / 의존성) fitness** đo các dấu hiệu đó; **Bài tập suy luận** áp dụng chúng vào việc tách Billing và yêu cầu điều kiện dừng.
 
 ## Đào sâu: phụ thuộc (dependency / 의존성) fitness
 
@@ -57,8 +54,7 @@ replicated read mô hình (model / 모델) (eventual consistency), hoặc API co
 contract). Không cho B đọc thẳng cơ sở dữ liệu (database / 데이터베이스) A “tạm thời” mà không có expiry plan;
 đường tắt này thường trở thành giao dịch (transaction / 트랜잭션) xuyên dịch vụ (service / 서비스) không thể tách.
 
-
-> **Chuyển mạch:** Từ **Đào sâu: phụ thuộc (dependency / 의존성) fitness**, ta sang **Bài tập suy luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bài tập Billing buộc nêu invariant cục bộ, outbox, dual-read/dual-write và rollback signal; đây là phép kiểm tra cuối cho việc boundary có đủ thật để tách hay chưa.
 
 ## Bài tập suy luận
 
@@ -66,4 +62,4 @@ Lập di chuyển (migration / 마이그레이션) plan tách `Billing` khỏi m
 crossing, sự kiện (event / 이벤트)/outbox, dual-read/dual-write rủi ro (risk / 위험), quay lui (rollback / 롤백) tín hiệu (signal / 신호) và điều kiện
 dừng. Nếu không thể mô tả quay lui (rollback / 롤백), ranh giới (boundary / 경계) chưa sẵn sàng.
 
-> **Bàn giao:** Sau **Bài tập suy luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Giữ lại tiêu chí boundary, migration steps, dependency fitness và rollback signal; quay về [README](./README.md) khi cần nối sang HTTP contract, persistence hoặc reliability.

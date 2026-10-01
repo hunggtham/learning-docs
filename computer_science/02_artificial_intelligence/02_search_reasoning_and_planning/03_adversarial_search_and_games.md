@@ -1,7 +1,6 @@
 # Adversarial tìm kiếm (search / 검색) và Game Playing
 
-> **Mạch đọc:** Đặt **Adversarial tìm kiếm (search / 검색) và Game Playing** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ đường dẫn (path / 경로) tìm kiếm (search / 검색) tới game cây (tree / 트리)** sang **Zero-sum games**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Adversarial tìm kiếm (search / 검색) và Game Playing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ đường dẫn (path / 경로) tìm kiếm (search / 검색) tới game cây (tree / 트리)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Zero-sum games** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Nhiều tìm kiếm (search / 검색) bài toán (problem / 문제) giả định môi trường (environment / 환경) thụ động: ta chọn hành động (action / 동작), chuyển tiếp (transition / 전이) xảy ra theo rules, goal không chống lại ta. Trong games và adversarial settings, một actor khác chủ động chọn hành động (action / 동작) làm kết quả (outcome / 결과) của ta xấu đi. Khi đó “tìm đường dẫn (path / 경로) tốt” trở thành “chọn chiến lược (strategy / 전략) tốt khi đối thủ cũng tối ưu”.
 
@@ -33,6 +32,8 @@ Mỗi nút (node / 노드) không chỉ có trạng thái (state / 상태) mà c
 
 Game cây (tree / 트리) branches theo legal actions của both sides.
 
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Từ đường dẫn (path / 경로) tìm kiếm (search / 검색) tới game cây (tree / 트리)** xác định đầu vào; **Zero-sum games** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Perfect thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Zero-sum games
 
 Trong two-player zero-sum game, utility của hai players đối nhau:
@@ -45,6 +46,8 @@ Nếu MAX thắng +1, MIN nhận -1; draw 0.
 
 Zero-sum giả định (assumption / 가정) làm phân tích (analysis / 분석) clean nhưng không cover cooperation, bargaining hoặc general-sum multi-agent environments.
 
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Perfect thông tin (information / 정보)** tiếp nhận điểm tựa từ **Zero-sum games** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Minimax principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Perfect thông tin (information / 정보)
 
 Chess là perfect-information game: board trạng thái (state / 상태) visible đầy đủ, không hidden cards.
@@ -52,6 +55,8 @@ Chess là perfect-information game: board trạng thái (state / 상태) visible
 Poker có imperfect thông tin (information / 정보).
 
 Deterministic perfect-information zero-sum games là setting kinh điển cho minimax. Chance hoặc hidden thông tin (information / 정보) cần extensions khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Minimax principle** tiếp nhận điểm tựa từ **Perfect thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Example nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Minimax principle
 
@@ -69,6 +74,8 @@ U(s), & s\văn bản (text / 텍스트){ terminal}\\
 \]
 
 MAX không chọn move có kết quả (outcome / 결과) tốt nhất nếu opponent cooperate. Nó chọn move có **best worst-case guarantee**.
+
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Minimax principle** cho ta quy tắc; **Example nhỏ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Minimax as backward induction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Example nhỏ
 
@@ -94,6 +101,8 @@ MAX chooses A because:
 
 Move B has attractive possible 9, nhưng rational adversary sẽ not allow it.
 
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Example nhỏ** cho ta quy tắc; **Minimax as backward induction** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Minimax as backward induction
 
 Minimax solves leaves first then propagate values backward.
@@ -112,6 +121,8 @@ flowchart TD
 
 This is dynamic-programming-like recursive cấu trúc (structure / 구조) on game cây (tree / 트리).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Minimax as backward induction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ phức tạp (complexity / 복잡도)
 
 Nếu branching factor là `b` và tìm kiếm (search / 검색) độ sâu (depth / 깊이) `m`:
@@ -125,6 +136,8 @@ Thời gian (time / 시간), with depth-first hiện thực (implementation / �
 Chess branching ~tens moves/position and game độ sâu (depth / 깊이) large, making exhaustive minimax impossible.
 
 Hence pruning, evaluation functions, move thứ tự (ordering / 순서) and learned guidance.
+
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Evaluation hàm (function / 함수)** tiếp nhận điểm tựa từ **Độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Horizon tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Evaluation hàm (function / 함수)
 
@@ -140,6 +153,8 @@ Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) ma
 
 Evaluation lỗi (error / 오류) can propagate up minimax. tìm kiếm (search / 검색) độ sâu (depth / 깊이) may compensate some errors but also encounter **horizon tác động (effect / 효과)**.
 
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Horizon tác động (effect / 효과)** tiếp nhận điểm tựa từ **Evaluation hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alpha–Beta pruning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Horizon tác động (effect / 효과)
 
 If bad sự kiện (event / 이벤트) lies just beyond tìm kiếm (search / 검색) cutoff, mô hình (model / 모델) may choose move that merely delays sự kiện (event / 이벤트) past horizon.
@@ -147,6 +162,8 @@ If bad sự kiện (event / 이벤트) lies just beyond tìm kiếm (search / �
 Example: losing queen unavoidable in 6 moves, tìm kiếm (search / 검색) độ sâu (depth / 깊이) 5 prefers line postponing mất mát (loss / 손실) because evaluator chưa thấy consequence.
 
 Quiescence tìm kiếm (search / 검색) extends tactical/noisy positions until trạng thái (state / 상태) becomes more stable for evaluation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Alpha–Beta pruning** tiếp nhận điểm tựa từ **Horizon tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Why pruning is safe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Alpha–Beta pruning
 
@@ -165,6 +182,8 @@ If at some điểm (point / 지점):
 
 remaining branch can be pruned under tiêu chuẩn (standard / 표준) lô-gic (logic / 논리).
 
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Why pruning is safe** tiếp nhận điểm tựa từ **Alpha–Beta pruning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Move thứ tự (ordering / 순서) matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Why pruning is safe
 
 Suppose MAX already has option worth 5. While evaluating another move, MIN finds phản hồi (response / 응답) limiting branch to ≤3.
@@ -172,6 +191,8 @@ Suppose MAX already has option worth 5. While evaluating another move, MIN finds
 MAX will never choose that branch over guaranteed 5, so no need inspect other MIN responses.
 
 Pruning removes computation, not possible optimal quyết định (decision / 결정).
+
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Move thứ tự (ordering / 순서) matters** tiếp nhận điểm tựa từ **Why pruning is safe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transposition tables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Move thứ tự (ordering / 순서) matters
 
@@ -186,6 +207,8 @@ rather than `O(b^m)`.
 Thus good move thứ tự (ordering / 순서) is huge.
 
 Learned chính sách (policy / 정책) networks can thứ tự (order / 순서) promising moves, making tìm kiếm (search / 검색) more efficient.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Transposition tables** tiếp nhận điểm tựa từ **Move thứ tự (ordering / 순서) matters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iterative deepening in games** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Transposition tables
 
@@ -206,6 +229,8 @@ Zobrist hashing is dùng chung (common / 공통) efficient board hashing techniq
 
 Because bảng (table / 테이블) finite, replacement chính sách (policy / 정책) matters.
 
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Iterative deepening in games** tiếp nhận điểm tựa từ **Transposition tables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Principal variation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Iterative deepening in games
 
 Game engines often tìm kiếm (search / 검색) độ sâu (depth / 깊이) 1,2,3,... repeatedly.
@@ -219,6 +244,8 @@ Although repeated công việc (work / 작업) occurs, advantages include:
 
 This combines well with Alpha–Beta.
 
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Principal variation** tiếp nhận điểm tựa từ **Iterative deepening in games** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Expectiminimax: chance nodes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Principal variation
 
 Principal variation is hiện tại (current / 현재) best chuỗi (sequence / 시퀀스) of moves under tìm kiếm (search / 검색).
@@ -231,6 +258,8 @@ It is useful for:
 - iterative deepening reuse.
 
 But it is contingent on evaluation/tìm kiếm (search / 검색) độ sâu (depth / 깊이); not guaranteed actual future play.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Expectiminimax: chance nodes** tiếp nhận điểm tựa từ **Principal variation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Imperfect thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Expectiminimax: chance nodes
 
@@ -248,6 +277,8 @@ At chance nút (node / 노드), take expectation rather than min/max.
 
 Cây (tree / 트리) độ phức tạp (complexity / 복잡도) grows further because chance outcomes add branching.
 
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Imperfect thông tin (information / 정보)** tiếp nhận điểm tựa từ **Expectiminimax: chance nodes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mixed strategies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Imperfect thông tin (information / 정보)
 
 Poker players do not know opponent cards. trạng thái (state / 상태) is not fully observed.
@@ -257,6 +288,8 @@ Naively minimax over visible trạng thái (state / 상태) fails because player
 Game lý thuyết (theory / 이론) concepts like Nash equilibrium, counterfactual regret minimization (CFR) become relevant.
 
 This is conceptual cầu nối (bridge / 브리지) from adversarial tìm kiếm (search / 검색) to broader multi-agent quyết định (decision / 결정) lý thuyết (theory / 이론).
+
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Mixed strategies** tiếp nhận điểm tựa từ **Imperfect thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nash equilibrium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mixed strategies
 
@@ -278,6 +311,8 @@ No pure hành động (action / 동작) guarantees giá trị (value / 값) agai
 
 This shows “best hành động (action / 동작)” may be stochastic.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Nash equilibrium** tiếp nhận điểm tựa từ **Mixed strategies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nash equilibrium
 
 A chiến lược (strategy / 전략) profile is Nash equilibrium if no player can improve utility by unilateral deviation.
@@ -285,6 +320,8 @@ A chiến lược (strategy / 전략) profile is Nash equilibrium if no player c
 In two-player zero-sum games, minimax theorem connects equilibrium giá trị (value / 값) with maximin/minimax under suitable finite-game các giả định (assumptions / 가정들).
 
 General-sum games can have multiple equilibria and more complex incentives.
+
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Nash equilibrium** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exploration vs exploitation in MCTS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색)
 
@@ -305,6 +342,8 @@ Backpropagation of value
 
 MCTS is especially useful when branching large and good heuristic evaluation difficult.
 
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Exploration vs exploitation in MCTS** tiếp nhận điểm tựa từ **Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neural-guided MCTS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Exploration vs exploitation in MCTS
 
 UCT-like selection quy tắc (rule / 규칙):
@@ -321,6 +360,8 @@ Second term prefers less-visited moves (exploration).
 
 This is liên kết (connection / 연결) to multi-armed bandits and uncertainty-aware tìm kiếm (search / 검색).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Neural-guided MCTS** tiếp nhận điểm tựa từ **Exploration vs exploitation in MCTS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AlphaZero-style vòng phản hồi (feedback loop / 피드백 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Neural-guided MCTS
 
 AlphaGo/AlphaZero-style các hệ thống (systems / 시스템들) combine:
@@ -334,6 +375,8 @@ This is key lesson:
 > học tập (learning / 학습) did not simply replace tìm kiếm (search / 검색). học tập (learning / 학습) made tìm kiếm (search / 검색) much more informed.
 
 Chính sách (policy / 정책) narrows branching; giá trị (value / 값) reduces need reach terminal states; tìm kiếm (search / 검색) improves over raw mạng (network / 네트워크) đầu ra (output / 출력).
+
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **AlphaZero-style vòng phản hồi (feedback loop / 피드백 루프)** tiếp nhận điểm tựa từ **Neural-guided MCTS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Minimax vs MCTS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AlphaZero-style vòng phản hồi (feedback loop / 피드백 루프)
 
@@ -350,6 +393,8 @@ flowchart LR
 Self-play creates dữ liệu (data / 데이터) from hiện tại (current / 현재) chính sách (policy / 정책)/tìm kiếm (search / 검색). mạng (network / 네트워크) learns improved chính sách (policy / 정책)/giá trị (value / 값) targets derived from tìm kiếm (search / 검색)/outcomes.
 
 This is học tập (learning / 학습) + tìm kiếm (search / 검색) + Reinforcement học tập (learning / 학습) integrated.
+
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Minimax vs MCTS** tiếp nhận điểm tựa từ **AlphaZero-style vòng phản hồi (feedback loop / 피드백 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adversarial tìm kiếm (search / 검색) outside board games** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Minimax vs MCTS
 
@@ -368,6 +413,8 @@ MCTS works well when:
 - incremental anytime hành vi (behavior / 동작) desired.
 
 This is not strict nhị phân (binary / 이진). Hybrid engines combine multiple techniques.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Adversarial tìm kiếm (search / 검색) outside board games** tiếp nhận điểm tựa từ **Minimax vs MCTS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) độ sâu (depth / 깊이) vs evaluation chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Adversarial tìm kiếm (search / 검색) outside board games
 
@@ -395,6 +442,8 @@ This is continuous adversarial tối ưu hóa (optimization / 최적화) rather 
 
 Agents may compete for resources, negotiate or cooperate. General-sum environments need beyond minimax.
 
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Tìm kiếm (search / 검색) độ sâu (depth / 깊이) vs evaluation chất lượng (quality / 품질)** tiếp nhận điểm tựa từ **Adversarial tìm kiếm (search / 검색) outside board games** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Test-time compute liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tìm kiếm (search / 검색) độ sâu (depth / 깊이) vs evaluation chất lượng (quality / 품질)
 
 A deeper tìm kiếm (search / 검색) with poor evaluator and a shallower tìm kiếm (search / 검색) with strong evaluator can trade off.
@@ -408,6 +457,8 @@ spend FLOPs on stronger model evaluation?
 ```
 
 Hiện đại (modern / 현대적) AI các hệ thống (systems / 시스템들) repeatedly face this inference-time compute sự đánh đổi (trade-off / 트레이드오프).
+
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, sau nội dung của **Tìm kiếm (search / 검색) độ sâu (depth / 깊이) vs evaluation chất lượng (quality / 품질)**, **Test-time compute liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Opponent modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Test-time compute liên kết (connection / 연결)
 
@@ -425,6 +476,8 @@ expand promising paths
 
 But unless môi trường (environment / 환경) is literal zero-sum alternating game, minimax terminology should not be applied casually.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Opponent modeling** tiếp nhận điểm tựa từ **Test-time compute liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Opponent modeling
 
 Minimax assumes opponent optimal in worst-case sense. Real opponents may be bounded or patterned.
@@ -441,6 +494,8 @@ Rủi ro (risk / 위험): mô hình (model / 모델) wrong, adversary changes ch
 
 Bảo mật (security / 보안) often prefers robust worst-case các giả định (assumptions / 가정들); games against humans may benefit opponent adaptation.
 
+> **Chuyển mạch:** Trong **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Opponent modeling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -453,6 +508,8 @@ Evaluation          → estimate value when terminal too far
 MCTS                → sample promising parts of huge tree
 Neural-guided search→ learned policy/value directs computation
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Adversarial tìm kiếm (search / 검색) và Game Playing**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -472,8 +529,12 @@ Hiện đại (modern / 현대적) MCTS uses structured selection statistics and
 
 Sometimes direct chính sách (policy / 정책) is enough, but many domains gain strength from tìm kiếm (search / 검색). Choice depends độ trễ (latency / 지연 시간), branching and chất lượng (quality / 품질) requirements.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Adversarial tìm kiếm (search / 검색) và Game Playing**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Adversarial tìm kiếm (search / 검색) links [Heuristic Search](./02_heuristic_search.md), Game lý thuyết (theory / 이론), Reinforcement học tập (learning / 학습) and hiện đại (modern / 현대적) neural-guided planning. It demonstrates a recurring AI kiến trúc (architecture / 아키텍처): **learned prior/giá trị (value / 값) + tường minh (explicit / 명시적) tìm kiếm (search / 검색) + phản hồi (feedback / 피드백)**.
 
 Xem tiếp: [Constraint Satisfaction](./04_constraint_satisfaction.md) và [Planning](./05_planning.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

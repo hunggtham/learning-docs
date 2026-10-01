@@ -1,16 +1,18 @@
 # Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đừng bắt đầu bằng Capital từ trang đầu rồi cố đi thẳng đến cuối** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Entry 1 — Economic and Philosophic Manuscripts of 1844** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Mô-đun (module / 모듈) đến đây đã xây mô hình tư duy (mental model / 사고 모델), genealogy, critique và comparative khung phần mềm (framework / 프레임워크). Bước cuối của baseline là quay về **primary texts**. Mục tiêu không phải đọc toàn bộ Marx theo chronological thứ tự (order / 순서); đó là một dự án (project / 프로젝트) rất lớn và dễ khiến người mới mất luồng (flow / 흐름). Mục tiêu là đọc một selection đủ để tự kiểm tra: concept nào chính tác giả dùng, concept nào do người diễn giải hệ thống hóa, và claim thay đổi thế nào giữa các giai đoạn.
 
 Prerequisite nên là [Marx: alienation, history, class and ideology](01_marx_alienation_history_class_and_ideology.md), [Marxian political economy](02_marxian_political_economy.md) và [Lenin](04_lenin_party_state_revolution_and_imperialism.md). Khi primary văn bản (text / 텍스트) khó, quay lại chapter giải thích cơ chế (mechanism / 메커니즘) thay vì tra một quotation rời khỏi ngữ cảnh (context / 맥락).
 
 ## 1. Đừng bắt đầu bằng *Capital* từ trang đầu rồi cố đi thẳng đến cuối
-Phần “1. Đừng bắt đầu bằng *Capital* từ trang đầu rồi cố đi thẳng đến cuối” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 *Capital, Volume I* là văn bản (text / 텍스트) trung tâm nhưng không phải entry điểm (point / 지점) tối ưu nếu chưa biết Marx đang hỏi gì. Chapter đầu về commodity rất dense vì Marx đi từ commodity form sang giá trị (value / 값) form, money và fetishism bằng vocabulary vừa economic vừa philosophical. Người đọc dễ memorise `use-value / exchange-value` mà không hiểu tại sao ông bắt đầu từ commodity.
 
 Luồng (flow / 흐름) hiệu quả hơn là: đọc early Marx để thấy alienation/bài toán (problem / 문제) of human activity; đọc một văn bản (text / 텍스트) về lịch sử (history / 이력)/lớp (class / 클래스) để thấy xã hội (social / 사회적) cơ chế (mechanism / 메커니즘); sau đó mới vào selected chapters của *Capital* để thấy Marx rebuild critique ở mức commodity, labor power và accumulation.
+
+> **Chuyển mạch:** Trong **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **2. Entry 1 — Economic and Philosophic Manuscripts of 1844** tiếp nhận điểm tựa từ **1. Đừng bắt đầu bằng Capital từ trang đầu rồi cố đi thẳng đến cuối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Entry 2 — The German Ideology và materialist conception of lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Entry 1 — *Economic and Philosophic Manuscripts of 1844*
 
@@ -22,6 +24,8 @@ Sau khi đọc, quay lại [Alienation](01_marx_alienation_history_class_and_ide
 
 Primary văn bản (text / 텍스트): https://www.marxists.org/archive/marx/works/1844/manuscripts/labour.htm
 
+> **Chuyển mạch:** Ở chặng này của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **3. Entry 2 — The German Ideology và materialist conception of lịch sử (history / 이력)** tiếp nhận điểm tựa từ **2. Entry 1 — Economic and Philosophic Manuscripts of 1844** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Entry 3 — The Communist Manifesto** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Entry 2 — *The German Ideology* và materialist conception of lịch sử (history / 이력)
 
 Đọc selections liên quan môi trường vận hành (production / 운영 환경) of material life, division of labor, xã hội (social / 사회적) relations và consciousness. Văn bản (text / 텍스트) này giúp chuyển từ early humanist vocabulary sang một cách giải thích lịch sử (history / 이력) đặt material xã hội (social / 사회적) activity ở vị trí trung tâm.
@@ -32,15 +36,17 @@ Ranh giới (boundary / 경계): *The German Ideology* có publication lịch s�
 
 Primary văn bản (text / 텍스트) entry: https://www.marxists.org/archive/marx/works/1845/german-ideology/
 
-## 4. Entry 3 — *The Communist Manifesto*
-Phần “4. Entry 3 — *The Communist Manifesto*” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **4. Entry 3 — The Communist Manifesto** tiếp nhận điểm tựa từ **3. Entry 2 — The German Ideology và materialist conception of lịch sử (history / 이력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Entry 4 — Capital, Volume I: commodity → labor power → môi trường vận hành (production / 운영 환경) of surplus giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 4. Entry 3 — *The Communist Manifesto*
 
 *Manifesto* rất dễ đọc nhưng cũng rất dễ bị dùng sai. Đây là một **political manifesto**, không phải full exposition của Marxian economics. Nó hữu ích để thấy historical narrative về bourgeois transformation, lớp (class / 클래스) xung đột (conflict / 충돌), world thị trường (market / 시장) và revolutionary politics, nhưng không thể thay *Capital* cho lý thuyết (theory / 이론) of giá trị (value / 값).
 
 Khi đọc, tách ba lớp: rhetorical/political ngôn ngữ (language / 언어), historical claims và theoretical claims. Ví dụ một sentence mạnh về lớp (class / 클래스) struggle có thể đóng vai trò framing của manifesto; muốn kiểm tra claim empirically phải đi sang historical sociology chứ không dùng sức mạnh rhetoric làm bằng chứng (evidence / 증거).
 
 Primary văn bản (text / 텍스트): https://www.marxists.org/archive/marx/works/1848/communist-manifesto/
+
+> **Chuyển mạch:** Trong **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **4. Entry 3 — The Communist Manifesto** cho ta quy tắc; **5. Entry 4 — Capital, Volume I: commodity → labor power → môi trường vận hành (production / 운영 환경) of surplus giá trị (value / 값)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **6. Entry 5 — Critique of the Gotha Programme** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Entry 4 — *Capital, Volume I*: commodity → labor power → môi trường vận hành (production / 운영 환경) of surplus giá trị (value / 값)
 
@@ -63,6 +69,8 @@ Chapter về **working day** đặc biệt hữu ích vì abstract mô hình (mo
 
 Primary văn bản (text / 텍스트): https://www.marxists.org/archive/marx/works/1867-c1/
 
+> **Chuyển mạch:** Ở chặng này của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **5. Entry 4 — Capital, Volume I: commodity → labor power → môi trường vận hành (production / 운영 환경) of surplus giá trị (value / 값)** cho ta quy tắc; **6. Entry 5 — Critique of the Gotha Programme** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. Engels — collaborator, trình thông dịch (interpreter / 인터프리터) và một nguồn hệ thống hóa riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Entry 5 — *Critique of the Gotha Programme*
 
 Văn bản (text / 텍스트) ngắn này rất quan trọng để sửa hai hiểu nhầm: Marx không mô tả future society chỉ bằng một sentence, và distinction giữa phases of communist society phức tạp hơn slogan phổ biến.
@@ -73,6 +81,8 @@ Văn bản (text / 텍스트) này cũng là nơi cụm **dictatorship of the pr
 
 Primary văn bản (text / 텍스트): https://www.marxists.org/archive/marx/works/1875/gotha/
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **6. Entry 5 — Critique of the Gotha Programme** cho ta quy tắc; **7. Engels — collaborator, trình thông dịch (interpreter / 인터프리터) và một nguồn hệ thống hóa riêng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. Lenin Entry 1 — What Is To Be Done?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Engels — collaborator, trình thông dịch (interpreter / 인터프리터) và một nguồn hệ thống hóa riêng
 
 Không nên coi Marx và Engels là một author duy nhất. Engels là collaborator rất gần, nhưng ông cũng viết các formulations riêng và đóng vai trò lớn trong việc phổ biến/systematize Marxist ideas sau Marx.
@@ -80,6 +90,8 @@ Không nên coi Marx và Engels là một author duy nhất. Engels là collabor
 *Anti-Dühring* và *Socialism: Utopian and Scientific* ảnh hưởng mạnh đến cách later Marxism trình bày dialectics, socialism và lịch sử (history / 이력). Vì vậy khi một textbook dùng một formulation rất hệ thống, hãy kiểm tra nó đến từ Marx, Engels hay later synthesis.
 
 Primary entry: https://www.marxists.org/archive/marx/works/1880/soc-utop/
+
+> **Chuyển mạch:** Trong **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **7. Engels — collaborator, trình thông dịch (interpreter / 인터프리터) và một nguồn hệ thống hóa riêng** cho ta quy tắc; **8. Lenin Entry 1 — What Is To Be Done?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. Lenin Entry 2 — Imperialism, the Highest Stage of Capitalism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Lenin Entry 1 — *What Is To Be Done?*
 
@@ -89,6 +101,8 @@ Không nên đọc `vanguard party` như một abstract organizational law áp c
 
 Primary văn bản (text / 텍스트): https://www.marxists.org/archive/lenin/works/1901/witbd/
 
+> **Chuyển mạch:** Ở chặng này của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **9. Lenin Entry 2 — Imperialism, the Highest Stage of Capitalism** tiếp nhận điểm tựa từ **8. Lenin Entry 1 — What Is To Be Done?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Lenin Entry 3 — The Trạng thái (state / 상태) and Revolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Lenin Entry 2 — *Imperialism, the Highest Stage of Capitalism*
 
 Văn bản (text / 텍스트) này nối concentration of capital, finance capital, export of capital, monopoly và international division. Cách đọc tốt nhất là coi nó như một historical-economic thesis cần kiểm tra, không phải definition cuối cùng của imperialism.
@@ -97,6 +111,8 @@ Hãy tách: Lenin đang mô tả trends nào đầu thế kỷ XX; dữ liệu (
 
 Primary văn bản (text / 텍스트): https://www.marxists.org/archive/lenin/works/1916/imp-hsc/
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **10. Lenin Entry 3 — The Trạng thái (state / 상태) and Revolution** tiếp nhận điểm tựa từ **9. Lenin Entry 2 — Imperialism, the Highest Stage of Capitalism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Cách ghi ghi chú (note / 노트) primary văn bản (text / 텍스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Lenin Entry 3 — *The Trạng thái (state / 상태) and Revolution*
 
 Đây là văn bản (text / 텍스트) quan trọng nhất để hiểu Lenin’s interpretation of Marx/Engels về trạng thái (state / 상태), revolution, dictatorship of the proletariat và eventual withering away of the trạng thái (state / 상태).
@@ -104,6 +120,8 @@ Primary văn bản (text / 텍스트): https://www.marxists.org/archive/lenin/wo
 Khi đọc, dùng hai columns trong đầu: **interpretation of Marx/Engels** và **Lenin’s own political argument in 1917**. Chúng liên hệ chặt nhưng không đồng nhất. Sau đó đặt văn bản (text / 텍스트) cạnh post-1917 institutional lịch sử (history / 이력) để thấy khoảng cách giữa revolutionary lý thuyết (theory / 이론), civil-war conditions, actual state-building và later doctrine. Khoảng cách này chính là đối tượng (object / 객체) of phân tích (analysis / 분석), không phải thứ phải che đi bằng label.
 
 Primary văn bản (text / 텍스트): https://www.marxists.org/archive/lenin/works/1917/staterev/
+
+> **Chuyển mạch:** Trong **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **11. Cách ghi ghi chú (note / 노트) primary văn bản (text / 텍스트)** tiếp nhận điểm tựa từ **10. Lenin Entry 3 — The Trạng thái (state / 상태) and Revolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Reading tuyến (route / 경로) tối thiểu và tuyến (route / 경로) sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Cách ghi ghi chú (note / 노트) primary văn bản (text / 텍스트)
 
@@ -118,6 +136,8 @@ boundary: điều gì text chưa chứng minh?
 ```
 
 Sau đó thêm một dòng **genealogy**: Marx / Engels / Lenin / later trình thông dịch (interpreter / 인터프리터). Chỉ thao tác này đã ngăn rất nhiều lỗi “Marx nói…” trong khi nguồn (source / 소스) thật là Engels, Lenin hoặc textbook thế kỷ XX.
+
+> **Chuyển mạch:** Ở chặng này của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **12. Reading tuyến (route / 경로) tối thiểu và tuyến (route / 경로) sâu** tiếp nhận điểm tựa từ **11. Cách ghi ghi chú (note / 노트) primary văn bản (text / 텍스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết thúc baseline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Reading tuyến (route / 경로) tối thiểu và tuyến (route / 경로) sâu
 
@@ -135,6 +155,8 @@ Nếu chỉ muốn đủ nền để hiểu mô-đun (module / 모듈), tuyến 
 
 Nếu muốn độ sâu (depth / 깊이) cao hơn, thêm *The German Ideology*, *The Eighteenth Brumaire of Louis Bonaparte*, *The Civil War in France*, Engels’ *Anti-Dühring*, rồi quay lại *Capital* với nhiều chapter hơn. *The Eighteenth Brumaire* đặc biệt hữu ích vì nó cho thấy Marx phân tích politics cụ thể phức tạp hơn một economic-determinist caricature.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **Kết thúc baseline** tiếp nhận điểm tựa từ **12. Reading tuyến (route / 경로) tối thiểu và tuyến (route / 경로) sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scholarly companion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kết thúc baseline
 
 Sau chapter này, người đọc nên có khả năng phân biệt ba tầng:
@@ -149,12 +171,14 @@ Nếu ba tầng bị nhập lại, việc học Marxism–Leninism rất nhanh t
 
 Từ đây có hai hướng đi hợp lý. Muốn mở rộng conceptual comparison, quay lại [Comparative political economy](10_comparative_political_economy.md). Muốn đi sang Việt Nam, đọc lại [Vietnam context](07_vietnam_context.md) rồi nối với chuẩn gốc (canonical / 정본) Vietnam lịch sử (history / 이력) khi lĩnh vực (domain / 도메인) đó có chapter twentieth-century political-intellectual lịch sử (history / 이력).
 
-## Scholarly companion
-Phần “Scholarly companion” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Primary-text reading guide — đọc Marx, Engels và Lenin mà không bị textbook thay thế nguồn (source / 소스)**, **Scholarly companion** tiếp nhận điểm tựa từ **Kết thúc baseline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Scholarly companion
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Analytical Marxism”: https://plato.stanford.edu/entries/marxism-analytical/
 - Stanford Encyclopedia of Philosophy, “Trọng yếu (critical / 중요) Lý thuyết (theory / 이론)”: https://plato.stanford.edu/entries/critical-theory/
 
 Các primary-text links ở trên dùng Marxists Internet Archive như một điểm truy cập tiện lợi. Khi citation học thuật cần edition/page ổn định, nên đối chiếu trọng yếu (critical / 중요) or academic edition phù hợp thay vì dùng web pagination làm page tham chiếu (reference / 참조).
+
+> **Bàn giao:** Sau **Scholarly companion**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

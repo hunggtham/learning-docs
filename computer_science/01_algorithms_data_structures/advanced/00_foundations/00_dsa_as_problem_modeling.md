@@ -1,6 +1,6 @@
 # DSA như một bài toán mô hình hóa
 
-> **Mạch đọc:** Đọc **DSA như một bài toán mô hình hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ câu hỏi cần trả lời** sang **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DSA như một bài toán mô hình hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ câu hỏi cần trả lời** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Cấu trúc dữ liệu và thuật toán (Data Structures & Algorithms / 자료구조와 알고리즘)**
 
@@ -27,6 +27,8 @@ Có nhiều truy vấn hơn cập nhật, hay ngược lại?
 
 Đây là **mô hình tải công việc (workload model)**. Cấu trúc dữ liệu chỉ có ý nghĩa khi đặt trong một tải công việc (workload / 워크로드) cụ thể.
 
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy** tiếp nhận điểm tựa từ **Bắt đầu từ câu hỏi cần trả lời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểu dữ liệu trừu tượng trước cách triển khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy
 
 Một yêu cầu nghiệp vụ nên được phân rã thành các thao tác cụ thể. Ví dụ hệ thống chat có thể cần:
@@ -49,6 +51,8 @@ E[C] = \sum_i p_i C_i
 
 trong đó `p_i` là tần suất tương đối của thao tác `i`, còn `C_i` là chi phí của nó. Không phải lúc nào cũng cần tính chính xác công thức này; giá trị của nó nằm ở việc buộc ta suy nghĩ theo tỷ lệ sử dụng thay vì theo tên cấu trúc dữ liệu.
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy** nêu điều cần giải thích; **Kiểu dữ liệu trừu tượng trước cách triển khai** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểu dữ liệu trừu tượng trước cách triển khai
 
 **Kiểu dữ liệu trừu tượng (Abstract Data Type – ADT / 추상 자료형)** mô tả ngữ nghĩa và hợp đồng thao tác, chưa quyết định biểu diễn vật lý.
@@ -64,6 +68,8 @@ Cấu trúc sẽ làm điều đó bằng cách nào?
 
 Hai hiện thực (implementation / 구현) có thể cùng ngữ nghĩa nhưng rất khác về locality, cấp phát, bộ nhớ, mất hiệu lực của iterator và chi phí theo từng thao tác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Kiểu dữ liệu trừu tượng trước cách triển khai** nêu điều cần giải thích; **Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”
 
 Mỗi cấu trúc dữ liệu trả một chi phí nào đó để giữ sẵn một loại thông tin, nhờ đó một số truy vấn trở nên rẻ hơn.
@@ -71,6 +77,8 @@ Mỗi cấu trúc dữ liệu trả một chi phí nào đó để giữ sẵn m
 Mảng đã sắp xếp giữ toàn bộ thứ tự nên tìm kiếm nhị phân nhanh, nhưng chèn giữa đắt. bảng băm (hash table / 해시 테이블) không giữ thứ tự nhưng giữ ánh xạ từ băm (hash / 해시) tới vị trí tìm kiếm. vùng nhớ động (heap / 힙) chỉ giữ đủ quan hệ thứ tự để phần tử cực trị ở gốc. Segment cây (tree / 트리) lưu sẵn kết quả tổng hợp của nhiều khoảng chuẩn. Trie lưu cấu trúc tiền tố để tránh so sánh lại phần tiền tố chung.
 
 Có thể xem cấu trúc dữ liệu như một dạng **thông tin được vật chất hóa trước (materialized information)**. Ta bỏ công cập nhật và bộ nhớ để tránh tính lại từ đầu trong tương lai.
+
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”** xác định đầu vào; **Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)
 
@@ -92,6 +100,8 @@ Ví dụ nhị phân (binary / 이진) vùng nhớ động (heap / 힙) dùng m�
 
 Nếu yêu cầu vùng nhớ động (heap / 힙) phải trả lời mọi truy vấn mà Balanced BST hỗ trợ, vấn đề không nằm ở mã (code / 코드) vùng nhớ động (heap / 힙) “chưa đủ tốt”; vấn đề là ta đang dùng sai lớp trừu tượng (abstraction / 추상화).
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)** xác định đầu vào; **Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quan hệ tương đương giữa các lịch sử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?
 
 Một trạng thái đúng phải chứa đủ thông tin để mọi quyết định tương lai được xác định.
@@ -108,6 +118,8 @@ Ngược lại, nếu hai lịch sử khác nhau dẫn tới cùng tập hành �
 
 > Trạng thái không phải là “lịch sử đầy đủ”; trạng thái là lượng thông tin tối thiểu từ lịch sử còn ảnh hưởng tới tương lai.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Quan hệ tương đương giữa các lịch sử** tiếp nhận điểm tựa từ **Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị thực thể và đồ thị trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quan hệ tương đương giữa các lịch sử
 
 Có thể formalize trực giác trên bằng cách coi hai lịch sử `h1` và `h2` là tương đương nếu:
@@ -123,6 +135,8 @@ Khi đó ta không cần lưu toàn bộ lịch sử; chỉ cần lưu lớp tư
 Ví dụ trong bài đường đi có tối đa `K` lần phá tường, trạng thái cần số lần phá đã dùng. Trong bài mà chỉ tổng parity của số bước quan trọng, toàn bộ số bước có thể được nén về một bit chẵn/lẻ.
 
 **Nén trạng thái (state compression)** không phải mẹo bitmask đơn thuần; nó là kết quả của việc nhận ra phần nào của lịch sử không còn ảnh hưởng tới tương lai.
+
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Đồ thị thực thể và đồ thị trạng thái** tiếp nhận điểm tựa từ **Quan hệ tương đương giữa các lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồ thị thực thể và đồ thị trạng thái
 
@@ -150,6 +164,8 @@ Nếu còn phụ thuộc loại vé:
 
 Đây là **đồ thị không gian trạng thái (state-space graph)**. Một thuật toán shortest đường dẫn (path / 경로) hoàn hảo trên mô hình trạng thái sai vẫn trả kết quả sai cho bài toán thật.
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái** tiếp nhận điểm tựa từ **Đồ thị thực thể và đồ thị trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái
 
 Nhiều bài có thể được xem là tích của hai hoặc nhiều không gian trạng thái.
@@ -165,6 +181,8 @@ Một ô `(r,c)` không phải một trạng thái duy nhất; `(r,c,north)` và
 Tư duy **đồ thị tích (product graph)** giúp giải thích vì sao việc “thêm một dimension vào trạng thái (state / 상태)” thường làm số trạng thái tăng theo tích kích thước của các chiều.
 
 Nếu grid có `R*C` ô và `M` trạng thái phụ, tổng trạng thái có thể là `O(R*C*M)`. Điều này phải được tính trước khi chọn BFS/DP.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái** nêu điều cần giải thích; **Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Trước tiên phải xác định mục tiêu (objective / 목표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán
 
@@ -184,6 +202,8 @@ negative cycle đạt tới    -> có thể không tồn tại minimum hữu h�
 Subset bài toán (problem / 문제) với `n = 20` có thể duyệt `2^n`; với `n ≈ 40–50` có thể nghĩ tới meet-in-the-middle; với `n = 200000` thì exponential tìm kiếm (search / 검색) thường không còn khả thi và phải khai thác thêm cấu trúc.
 
 Các ràng buộc (constraints / 제약조건들) không phải phần phụ cuối đề bài; chúng là một phần của định nghĩa bài toán.
+
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán** nêu điều cần giải thích; **Trước tiên phải xác định mục tiêu (objective / 목표)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tách feasibility khỏi tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trước tiên phải xác định mục tiêu (objective / 목표)
 
@@ -206,6 +226,8 @@ Hai bài có cùng trạng thái và chuyển tiếp (transition / 전이) nhưn
 
 Ví dụ “có đường đi hay không” có thể dùng BFS/DFS đơn giản; “đường đi ngắn nhất” cần thêm chỉ số (metric / 지표); “đường đi ngắn nhất rồi nhỏ nhất từ điển” còn cần tie-breaking và thứ tự duyệt phù hợp.
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Tách feasibility khỏi tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **Trước tiên phải xác định mục tiêu (objective / 목표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài toán tĩnh, động, trực tuyến và ngoại tuyến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tách feasibility khỏi tối ưu hóa (optimization / 최적화)
 
 Một kỹ thuật mô hình hóa quan trọng là tách:
@@ -225,6 +247,8 @@ Khi `feasible(x)` chuyển từ false sang true theo một chiều, bài tối �
 
 Điều này cho thấy thuật toán tìm kiếm không nhất thiết tìm trực tiếp đáp án; đôi khi ta mô hình hóa bài tối ưu thành một quyết định Boolean dễ hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Bài toán tĩnh, động, trực tuyến và ngoại tuyến** tiếp nhận điểm tựa từ **Tách feasibility khỏi tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính xác (exact / 정확한), approximate và probabilistic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bài toán tĩnh, động, trực tuyến và ngoại tuyến
 
 Bốn thuộc tính này thay đổi hoàn toàn không gian lựa chọn.
@@ -238,6 +262,8 @@ Bốn thuộc tính này thay đổi hoàn toàn không gian lựa chọn.
 **Ngoại tuyến (offline)**: có toàn bộ truy vấn trước và có thể đổi thứ tự xử lý. Khi đó có thể dùng Mo’s thuật toán (algorithm / 알고리즘), sort queries, DSU offline hoặc nhiều kỹ thuật sweep.
 
 Cùng một bộ truy vấn, quyền biết trước tương lai có thể làm bài toán dễ hơn đáng kể.
+
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Chính xác (exact / 정확한), approximate và probabilistic** tiếp nhận điểm tựa từ **Bài toán tĩnh, động, trực tuyến và ngoại tuyến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deterministic guarantee và expected guarantee** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính xác (exact / 정확한), approximate và probabilistic
 
@@ -256,11 +282,15 @@ Sai có ảnh hưởng tính an toàn hay tiền bạc không?
 
 Một Bloom Filter có thể hợp cho “có lẽ đã thấy URL này”, nhưng không phù hợp nếu false positive có thể từ chối quyền truy cập hợp lệ hoặc làm sai số dư tài chính.
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Deterministic guarantee và expected guarantee** tiếp nhận điểm tựa từ **Chính xác (exact / 정확한), approximate và probabilistic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Deterministic guarantee và expected guarantee
 
 Balanced BST có chiều cao worst-case `O(log n)`. Skip danh sách (list / 목록) có hiệu năng kỳ vọng `O(log n)` dưới mô hình ngẫu nhiên phù hợp. bảng băm (hash table / 해시 테이블) thường có tra cứu kỳ vọng gần `O(1)` nhưng có thể suy giảm trong trường hợp xấu.
 
 Không có loại guarantee “luôn tốt hơn” độc lập bối cảnh. Với hệ thống độ trễ (latency / 지연 시간) cực nhạy hoặc đối mặt đầu vào (input / 입력) đối kháng, worst-case bound có thể quan trọng. Với tải công việc (workload / 워크로드) bình thường, expected hiệu năng (performance / 성능) có thể cho hiện thực (implementation / 구현) đơn giản và nhanh hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng** tiếp nhận điểm tựa từ **Deterministic guarantee và expected guarantee** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiền xử lý là đổi chi phí theo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng
 
@@ -279,6 +309,8 @@ adversarial-case khi input cố tình phá assumption
 
 Hai thuật toán có cùng Big-O trung bình nhưng hành vi khác hẳn dưới dữ liệu có cấu trúc hoặc đầu vào (input / 입력) độc hại.
 
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Tiền xử lý là đổi chi phí theo thời gian** tiếp nhận điểm tựa từ **Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Output-sensitive algorithms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tiền xử lý là đổi chi phí theo thời gian
 
 Giả sử có `Q` truy vấn. Tổng chi phí có thể được mô hình hóa:
@@ -290,6 +322,8 @@ C_{total} = C_{bản dựng (build / 빌드)} + Q\cdot C_{truy vấn (query / �
 Nếu `Q` rất lớn, tiền xử lý đắt có thể đáng giá. Nếu chỉ một truy vấn, quét tuyến tính có thể tốt hơn xây một chỉ mục phức tạp.
 
 Đây là nguyên lý đứng sau cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스), Prefix Sum, Sparse bảng (table / 테이블), Suffix Array và nhiều cấu trúc tìm kiếm.
+
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Output-sensitive algorithms** tiếp nhận điểm tựa từ **Tiền xử lý là đổi chi phí theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lower bound: có việc không thể tránh khỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Output-sensitive algorithms
 
@@ -307,6 +341,8 @@ Nếu kết quả chứa một triệu phần tử thì không thuật toán nà
 
 Tư duy **output-sensitive** giúp tránh yêu cầu phi thực tế kiểu “trả tất cả kết quả trong O(log n)”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Lower bound: có việc không thể tránh khỏi** tiếp nhận điểm tựa từ **Output-sensitive algorithms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reduction: biến bài toán lạ thành bài toán đã hiểu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lower bound: có việc không thể tránh khỏi
 
 Trước khi cố tối ưu, nên hỏi liệu tồn tại cận dưới tự nhiên nào không.
@@ -320,6 +356,8 @@ implementation chưa tốt
 vs
 mô hình bài toán tự nó đòi lượng công việc đó
 ```
+
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Reduction: biến bài toán lạ thành bài toán đã hiểu** tiếp nhận điểm tựa từ **Lower bound: có việc không thể tránh khỏi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ miền bài toán sang miền khóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reduction: biến bài toán lạ thành bài toán đã hiểu
 
@@ -339,6 +377,8 @@ Reduction giúp tái sử dụng cấu trúc dữ liệu và chứng minh đã b
 
 Điểm quan trọng là phải chứng minh ánh xạ (mapping / 매핑) bảo toàn ngữ nghĩa. Nếu quá trình biến đổi làm mất một ràng buộc, thuật toán mới có thể giải một bài khác với bài gốc.
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Từ miền bài toán sang miền khóa** tiếp nhận điểm tựa từ **Reduction: biến bài toán lạ thành bài toán đã hiểu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình dữ liệu thưa và dày đặc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ miền bài toán sang miền khóa
 
 Nhiều lựa chọn cấu trúc phụ thuộc trực tiếp miền khóa.
@@ -347,6 +387,8 @@ Nếu khóa là số nguyên dày đặc `0..n-1`, một mảng có thể thay H
 
 Câu hỏi “khóa trông như thế nào?” thường quan trọng ngang “có bao nhiêu phần tử?”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Từ miền bài toán sang miền khóa** nêu điều cần giải thích; **Mô hình dữ liệu thưa và dày đặc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dominance: loại trạng thái chắc chắn không còn hữu ích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình dữ liệu thưa và dày đặc
 
 Một ma trận `n x n` có thể lưu trực tiếp nếu phần lớn ô có dữ liệu. Nhưng nếu chỉ có `m << n²` cạnh, adjacency danh sách (list / 목록) hoặc CSR tiết kiệm hơn adjacency ma trận (matrix / 행렬).
@@ -354,6 +396,8 @@ Một ma trận `n x n` có thể lưu trực tiếp nếu phần lớn ô có d
 Tương tự, DP có thể dùng array nếu trạng thái (state / 상태) không gian (space / 공간) dày đặc và có chỉ số tự nhiên; dùng HashMap nếu phần lớn trạng thái lý thuyết không bao giờ xuất hiện.
 
 **Mật độ trạng thái (state density)** là một tín hiệu để chọn biểu diễn (representation / 표현).
+
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Mô hình dữ liệu thưa và dày đặc** nêu điều cần giải thích; **Dominance: loại trạng thái chắc chắn không còn hữu ích** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cấu trúc dữ liệu ghép và bất biến liên cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dominance: loại trạng thái chắc chắn không còn hữu ích
 
@@ -369,6 +413,8 @@ B: cost = 12, fuel = 3
 Nếu càng ít chi phí (cost / 비용) và càng nhiều fuel luôn tốt hơn, `B` không thể dẫn tới lời giải tốt hơn `A`. Ta có thể bỏ `B`.
 
 Dominance pruning là một dạng nén trạng thái dựa trên quan hệ thứ tự từng phần. Nó xuất hiện trong DP, shortest đường dẫn (path / 경로) nhiều tiêu chí, branch-and-bound và tìm kiếm (search / 검색) trên Pareto frontier.
+
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Dominance: loại trạng thái chắc chắn không còn hữu ích** nêu điều cần giải thích; **Cấu trúc dữ liệu ghép và bất biến liên cấu trúc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Big-O chỉ là một mô hình chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc dữ liệu ghép và bất biến liên cấu trúc
 
@@ -389,6 +435,8 @@ size(map) == size(list)
 
 Nhiều bug môi trường vận hành (production / 운영 환경) không phá bất biến của một cấu trúc đơn lẻ mà phá quan hệ giữa hai cấu trúc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Cấu trúc dữ liệu ghép và bất biến liên cấu trúc** nêu điều cần giải thích; **Big-O chỉ là một mô hình chi phí** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bộ nhớ cũng cần mô hình thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Big-O chỉ là một mô hình chi phí
 
 Hai thuật toán cùng `O(n)` có thể khác đáng kể do bộ nhớ đệm (cache / 캐시), cấp phát, branch prediction, GC hoặc I/O.
@@ -402,6 +450,8 @@ mô hình máy thật: dữ liệu được di chuyển và cấp phát ra sao
 
 Trong cơ sở dữ liệu (database / 데이터베이스), page I/O có thể quan trọng hơn số phép so sánh. Trong hệ thống phân tán, một mạng (network / 네트워크) round-trip có thể đắt hơn hàng nghìn phép toán CPU. Trong Java, object-heavy biểu diễn (representation / 표현) có thể làm GC và bộ nhớ đệm (cache / 캐시) trở thành chi phí chính.
 
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Bộ nhớ cũng cần mô hình thật** tiếp nhận điểm tựa từ **Big-O chỉ là một mô hình chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ nhớ cũng cần mô hình thật
 
 Hai cấu trúc cùng `O(n)` không gian (space / 공간) không nhất thiết tiêu tốn bộ nhớ gần nhau.
@@ -410,6 +460,8 @@ Mảng thành phần nguyên thủy (primitive / 기본 요소) khá gọn. Link
 
 Dung lượng bộ nhớ còn ảnh hưởng tốc độ qua bộ nhớ đệm (cache / 캐시) và paging, vì vậy không gian (space / 공간) độ phức tạp (complexity / 복잡도) không tách rời thời gian (time / 시간) hiệu năng (performance / 성능) trên máy thật.
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, sau nội dung của **Bộ nhớ cũng cần mô hình thật**, **Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Một quy trình mô hình hóa có thể tái sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)
 
 Trong C, biểu diễn (representation / 표현) còn phải mô hình hóa ai sở hữu bộ nhớ, ai giải phóng và con trỏ nào chỉ được mượn. Trong Java, `equals/hashCode`, định danh (identity / 식별자) và GC reachability ảnh hưởng ngữ nghĩa (semantics / 의미론). Trong JavaScript, đối tượng (object / 객체) định danh (identity / 식별자), `Map`, `Number` và engine biểu diễn (representation / 표현) tạo thêm ràng buộc.
@@ -417,6 +469,8 @@ Trong C, biểu diễn (representation / 표현) còn phải mô hình hóa ai s
 Tính đồng thời (concurrency / 동시성) bổ sung một chiều khác: cấu trúc đúng trong single-thread chưa chắc đúng khi nhiều luồng cập nhật. Khi đó cần thêm mô hình atomicity, synchronization và visibility. Lock-free cấu trúc (structure / 구조) còn cần lập luận (reasoning / 추론) về ABA, bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và reclamation.
 
 Nói cách khác, “cùng một ADT” không có nghĩa cùng một hiện thực (implementation / 구현) phù hợp cho mọi thời gian chạy (runtime / 런타임) và mô hình đồng thời.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DSA như một bài toán mô hình hóa**, **Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)** xác định đầu vào; **Một quy trình mô hình hóa có thể tái sử dụng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Những sai lầm tư duy phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một quy trình mô hình hóa có thể tái sử dụng
 
@@ -439,6 +493,8 @@ Khi gặp bài toán mới, có thể đi theo thứ tự sau:
 
 Đây là quy trình tổng quát hơn việc học thuộc “mẫu A dùng HashMap, mẫu B dùng vùng nhớ động (heap / 힙)”.
 
+> **Chuyển mạch:** Trong **DSA như một bài toán mô hình hóa**, **Một quy trình mô hình hóa có thể tái sử dụng** xác định đầu vào; **Những sai lầm tư duy phổ biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những sai lầm tư duy phổ biến
 
 “Cấu trúc có Big-O tốt hơn thì luôn tốt hơn” — sai vì tải công việc (workload / 워크로드), locality, bộ nhớ và hệ số hằng khác nhau.
@@ -453,6 +509,8 @@ Khi gặp bài toán mới, có thể đi theo thứ tự sau:
 
 “Preprocessing luôn tốt” — sai; nó chỉ đáng khi số truy vấn hoặc yêu cầu độ trễ (latency / 지연 시간) biện minh cho chi phí bản dựng (build / 빌드) và bộ nhớ (memory / 메모리).
 
+> **Chuyển mạch:** Ở chặng này của **DSA như một bài toán mô hình hóa**, **Mô hình tư duy** gom các mảnh từ **Những sai lầm tư duy phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Cấu trúc dữ liệu là một hợp đồng về **thông tin nào được giữ sẵn và bất biến nào phải luôn đúng**. Thuật toán là một hợp đồng về **trạng thái biến đổi như thế nào**. Mô hình hóa quyết định thông tin nào thực sự cần tồn tại để tương lai được xác định.
@@ -461,4 +519,4 @@ Khi gặp một bài DSA mới, hãy hỏi: **trạng thái thật sự là gì,
 
 Xem tiếp: [Correctness & Invariants](./01_algorithm_correctness_and_invariants.md), [Complexity Analysis](./02_complexity_analysis.md), [Memory Models](./03_memory_models_c_java_javascript.md), [Mathematical Toolkit](./04_mathematical_toolkit_for_dsa.md), [Dynamic Programming](../04_algorithmic_paradigms/05_dynamic_programming.md) và [Problem Solving Workflow](../90_connections/02_problem_solving_workflow.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 algorithm correctness and invariants](./01_algorithm_correctness_and_invariants.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

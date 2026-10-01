@@ -1,7 +1,6 @@
 # Markov quyết định (decision / 결정) Processes
 
-> **Mạch đọc:** Đặt **Markov quyết định (decision / 결정) Processes** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Markov thuộc tính (property / 속성)** sang **chuyển tiếp (transition / 전이) mô hình (model / 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Markov quyết định (decision / 결정) Processes**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Markov thuộc tính (property / 속성)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuyển tiếp (transition / 전이) mô hình (model / 모델)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)** là mathematical khung phần mềm (framework / 프레임워크) cho sequential quyết định (decision / 결정) making khi trạng thái (state / 상태) hiện tại chứa đủ thông tin (information / 정보) relevant để predict future dynamics dưới hành động (action / 동작).
 
@@ -33,6 +32,8 @@ Nghĩa là nếu trạng thái (state / 상태) biểu diễn (representation / 
 
 Ví dụ game board hiện tại có thể đủ để quyết định legal moves. Nhưng người dùng (user / 사용자) conversation chỉ giữ latest message thường không đủ trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **Markov quyết định (decision / 결정) Processes**, **Chuyển tiếp (transition / 전이) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Markov thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reward hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển tiếp (transition / 전이) mô hình (model / 모델)
 
 `P(s'|s,a)` nói môi trường (environment / 환경) có thể chuyển sang đâu sau hành động (action / 동작).
@@ -47,11 +48,15 @@ Stochastic trường hợp (case / 사례) cần phân phối (distribution / �
 
 Ví dụ autonomous vehicle braking có kết quả (outcome / 결과) phụ thuộc road điều kiện (condition / 조건), sensor bất định (uncertainty / 불확실성) và other actors.
 
+> **Chuyển mạch:** Ở chặng này của **Markov quyết định (decision / 결정) Processes**, **Reward hàm (function / 함수)** tiếp nhận điểm tựa từ **Chuyển tiếp (transition / 전이) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reward hàm (function / 함수)
 
 Reward có thể depend on trạng thái (state / 상태)/hành động (action / 동작)/next trạng thái (state / 상태). mục tiêu (objective / 목표) không phải maximize immediate reward mà expected return.
 
 Một choice reward khác có thể tạo chính sách (policy / 정책) hoàn toàn khác dù dynamics giống nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Markov quyết định (decision / 결정) Processes**, **Chính sách (policy / 정책)** tiếp nhận điểm tựa từ **Reward hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trajectory xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách (policy / 정책)
 
@@ -62,6 +67,8 @@ Chính sách (policy / 정책):
 \]
 
 induces a Markov chuỗi (chain / 사슬) over states. Khi chính sách (policy / 정책) fixed, quyết định (decision / 결정) bài toán (problem / 문제) biến thành chính sách (policy / 정책) evaluation bài toán (problem / 문제).
+
+> **Chuyển mạch:** Trong **Markov quyết định (decision / 결정) Processes**, **Trajectory xác suất (probability / 확률)** tiếp nhận điểm tựa từ **Chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Finite Horizon và Infinite Horizon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trajectory xác suất (probability / 확률)
 
@@ -79,15 +86,21 @@ P(\tau)=P(s_0)\prod_t \pi(a_t|s_t)P(s_{t+1}|s_t,a_t)
 
 Expression này giải thích tại sao chính sách (policy / 정책) ảnh hưởng phân phối (distribution / 분포) dữ liệu (data / 데이터) tác nhân (agent / 에이전트) thu được.
 
+> **Chuyển mạch:** Ở chặng này của **Markov quyết định (decision / 결정) Processes**, **Finite Horizon và Infinite Horizon** tiếp nhận điểm tựa từ **Trajectory xác suất (probability / 확률)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Terminal trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Finite Horizon và Infinite Horizon
 
 Finite-horizon bài toán (problem / 문제) có số bước giới hạn `T`. Optimal chính sách (policy / 정책) có thể depend on thời gian (time / 시간) remaining.
 
 Infinite-horizon discounted bài toán (problem / 문제) thường tìm stationary chính sách (policy / 정책) dưới các giả định (assumptions / 가정들) thích hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Markov quyết định (decision / 결정) Processes**, **Terminal trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Finite Horizon và Infinite Horizon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MDP và Planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Terminal trạng thái (state / 상태)
 
 Terminal/absorbing trạng thái (state / 상태) có thể kết thúc episode. Sau terminal không có meaningful future actions/rewards.
+
+> **Chuyển mạch:** Trong **Markov quyết định (decision / 결정) Processes**, **MDP và Planning** tiếp nhận điểm tựa từ **Terminal trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **POMDP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## MDP và Planning
 
@@ -104,6 +117,8 @@ Unknown model + experience → reinforcement learning
 
 Ranh giới (boundary / 경계) này mềm vì model-based RL có thể học mô hình (model / 모델) rồi plan.
 
+> **Chuyển mạch:** Ở chặng này của **Markov quyết định (decision / 결정) Processes**, **POMDP** tiếp nhận điểm tựa từ **MDP và Planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái (state / 상태) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## POMDP
 
 Khi tác nhân (agent / 에이전트) không observe full trạng thái (state / 상태), ta có **Partially Observable MDP (POMDP)**. tác nhân (agent / 에이전트) nhận observation `o_t`, không trực tiếp trạng thái (state / 상태) `s_t`.
@@ -116,6 +131,8 @@ b_t(s)=P(S_t=s\mid history)
 
 Belief trạng thái (state / 상태) biến bất định (uncertainty / 불확실성) về hidden trạng thái (state / 상태) thành trạng thái (state / 상태) biểu diễn (representation / 표현) mới.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Markov quyết định (decision / 결정) Processes**, **Trạng thái (state / 상태) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **POMDP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hành động (action / 동작) Granularity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trạng thái (state / 상태) thiết kế (design / 설계)
 
 Trạng thái (state / 상태) quá nhỏ → non-Markov, tác nhân (agent / 에이전트) khó learn.
@@ -124,11 +141,15 @@ Trạng thái (state / 상태) quá lớn → mẫu (sample / 표본) độ ph�
 
 Biểu diễn (representation / 표현) học tập (learning / 학습) trong RL tìm trạng thái (state / 상태) features giữ decision-relevant thông tin (information / 정보).
 
+> **Chuyển mạch:** Trong **Markov quyết định (decision / 결정) Processes**, **Hành động (action / 동작) Granularity** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Discount Factor Interpretation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hành động (action / 동작) Granularity
 
 Hành động (action / 동작) không gian (space / 공간) cũng là thiết kế (design / 설계) choice. Low-level continuous actions cho điều khiển (control / 제어) chính xác nhưng horizon dài. High-level actions reduce horizon nhưng cần lớp trừu tượng (abstraction / 추상화)/mô hình (model / 모델).
 
 Tác nhân (agent / 에이전트) tools trong LLM các hệ thống (systems / 시스템들) cũng có analogy: `click(x,y)` low-level vs `create_ticket(...)` high-level.
+
+> **Chuyển mạch:** Ở chặng này của **Markov quyết định (decision / 결정) Processes**, **Discount Factor Interpretation** tiếp nhận điểm tựa từ **Hành động (action / 동작) Granularity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reward quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Discount Factor Interpretation
 
@@ -141,13 +162,19 @@ Tác nhân (agent / 에이전트) tools trong LLM các hệ thống (systems / �
 
 Effective horizon roughly grows as `1/(1-γ)` khi γ gần 1, nhưng đây chỉ intuition.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Markov quyết định (decision / 결정) Processes**, **Reward quy mô (scale / 규모)** tiếp nhận điểm tựa từ **Discount Factor Interpretation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reward quy mô (scale / 규모)
 
 Quy mô (scale / 규모) reward ảnh hưởng numerical tối ưu hóa (optimization / 최적화) và hyperparameters dù optimal chính sách (policy / 정책) lý tưởng có thể bất biến (invariant / 불변식) với positive scaling trong một số settings.
 
+> **Chuyển mạch:** Trong **Markov quyết định (decision / 결정) Processes**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reward quy mô (scale / 규모)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **MDP là state-machine có bất định (uncertainty / 불확실성) + rewards + choices. RL học cách điều khiển state-machine đó khi dynamics hoặc optimal chính sách (policy / 정책) chưa biết.**
+
+> **Chuyển mạch:** Ở chặng này của **Markov quyết định (decision / 결정) Processes**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -163,10 +190,12 @@ Chỉ đúng trong fully observable setting.
 
 Nó là foundation cho robotics, operations, recommendation, tài nguyên (resource / 자원) allocation và sequential điều khiển (control / 제어).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Markov quyết định (decision / 결정) Processes**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 MDP nối xác suất (probability / 확률), động (dynamic / 동적) Programming, điều khiển (control / 제어) lý thuyết (theory / 이론) và tác nhân (agent / 에이전트) trạng thái (state / 상태) biểu diễn (representation / 표현).
 
 Xem tiếp: [Value Functions and Bellman Equations](./02_value_functions_and_bellman_equations.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reinforcement learning foundations](./00_reinforcement_learning_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

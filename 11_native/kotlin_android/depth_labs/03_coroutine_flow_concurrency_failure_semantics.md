@@ -1,6 +1,6 @@
 # Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)
 
-> **Mạch đọc:** Đặt **độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Coroutine không phải luồng thực thi (thread / 스레드)** sang **2. Structured tính đồng thời (concurrency / 동시성) là quyền sở hữu (ownership / 소유권) mô hình (model / 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Coroutine không phải luồng thực thi (thread / 스레드)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Structured tính đồng thời (concurrency / 동시성) là quyền sở hữu (ownership / 소유권) mô hình (model / 모델)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Coroutine giúp mã (code / 코드) bất đồng bộ dễ đọc hơn, nhưng việc mã (code / 코드) trông giống synchronous mã (code / 코드) không có nghĩa tính đồng thời (concurrency / 동시성) trở nên đơn giản. cấp cao (senior / 시니어) Android nhà phát triển (developer / 개발자) cần hiểu **thời gian tồn tại (lifetime / 수명), cancellation, structured tính đồng thời (concurrency / 동시성), ngữ cảnh (context / 맥락), race điều kiện (condition / 조건), backpressure và thất bại (failure / 실패) propagation** đủ sâu để giải thích được hành vi (behavior / 동작) thay vì chỉ thuộc `launch`, `async`, `flowOn` hay `stateIn`.
 
@@ -47,6 +47,8 @@ suspend fun parseJson(input: String): Model =
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, sau nội dung của **1. Coroutine không phải luồng thực thi (thread / 스레드)**, **2. Structured tính đồng thời (concurrency / 동시성) là quyền sở hữu (ownership / 소유권) mô hình (model / 모델)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **3. Job cây (tree / 트리) là thất bại (failure / 실패) cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Structured tính đồng thời (concurrency / 동시성) là quyền sở hữu (ownership / 소유권) mô hình (model / 모델)
 
 Một coroutine không nên “trôi tự do”. Nó cần đơn vị sở hữu (owner / 오너).
@@ -77,6 +79,8 @@ GlobalScope thường phá quyền sở hữu (ownership / 소유권) chuỗi (c
 
 ---
 
+> **Chuyển mạch:** Structured concurrency gắn child job với owner; Job tree vì vậy lan failure theo cấu trúc, còn `coroutineScope`/`supervisorScope` chọn hai semantics khác nhau.
+
 ## 3. Job cây (tree / 트리) là thất bại (failure / 실패) cây (tree / 트리)
 
 Ví dụ:
@@ -101,6 +105,8 @@ Parent Job
 Thất bại (failure / 실패) propagation không phải detail nhỏ; nó chính là chính sách (policy / 정책) “các tác vụ (task / 작업) này sống/chết cùng nhau hay độc lập?”.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **4. coroutineScope và supervisorScope encode hai nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론) khác nhau** tiếp nhận điểm tựa từ **3. Job cây (tree / 트리) là thất bại (failure / 실패) cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Cancellation là điều khiển (control / 제어) luồng (flow / 흐름), không phải lỗi (error / 오류) bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. `coroutineScope` và `supervisorScope` encode hai nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론) khác nhau
 
@@ -137,6 +143,8 @@ supervisorScope {
 Chọn phạm vi (scope / 범위) phải xuất phát từ nghiệp vụ (business / 비즈니스) relationship, không phải “cái nào ít crash hơn”.
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **4. coroutineScope và supervisorScope encode hai nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론) khác nhau** xác định đầu vào; **5. Cancellation là điều khiển (control / 제어) luồng (flow / 흐름), không phải lỗi (error / 오류) bình thường** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Cleanup khi cancellation cần phân biệt suspend và non-suspend** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Cancellation là điều khiển (control / 제어) luồng (flow / 흐름), không phải lỗi (error / 오류) bình thường
 
@@ -175,6 +183,8 @@ Mental quy tắc (rule / 규칙):
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **5. Cancellation là điều khiển (control / 제어) luồng (flow / 흐름), không phải lỗi (error / 오류) bình thường** xác định đầu vào; **6. Cleanup khi cancellation cần phân biệt suspend và non-suspend** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. async không phải cách chung để “chạy background”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Cleanup khi cancellation cần phân biệt suspend và non-suspend
 
 `finally` vẫn chạy khi coroutine bị cancel:
@@ -200,6 +210,8 @@ finally {
 Nhưng `NonCancellable` phải dùng hẹp. Nếu bọc một mạng (network / 네트워크) thao tác (operation / 연산) dài, cancellation mất ý nghĩa và app có thể giữ công việc (work / 작업) sống quá lâu.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **7. async không phải cách chung để “chạy background”** tiếp nhận điểm tựa từ **6. Cleanup khi cancellation cần phân biệt suspend và non-suspend** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. tính đồng thời (concurrency / 동시성) không tự động tăng hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. `async` không phải cách chung để “chạy background”
 
@@ -235,6 +247,8 @@ coroutineScope {
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **8. tính đồng thời (concurrency / 동시성) không tự động tăng hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **7. async không phải cách chung để “chạy background”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Dispatcher injection là testability + chính sách (policy / 정책) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. tính đồng thời (concurrency / 동시성) không tự động tăng hiệu năng (performance / 성능)
 
 Hai tác vụ (task / 작업) CPU-bound chạy concurrent trên limited cores có thể cạnh tranh bộ nhớ đệm (cache / 캐시)/CPU.
@@ -246,6 +260,8 @@ Hai HTTP requests concurrent có thể tốt, nhưng nếu máy chủ (server / 
 Tính đồng thời (concurrency / 동시성) là công cụ (tool / 도구) để overlap công việc (work / 작업) có thể overlap, không phải tối ưu hóa (optimization / 최적화) mặc định.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **8. tính đồng thời (concurrency / 동시성) không tự động tăng hiệu năng (performance / 성능)** đã nêu tiêu chí phân biệt, còn **9. Dispatcher injection là testability + chính sách (policy / 정책) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Dispatchers.IO không phải “luồng thực thi (thread / 스레드) pool vô hạn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Dispatcher injection là testability + chính sách (policy / 정책) ranh giới (boundary / 경계)
 
@@ -270,6 +286,8 @@ Kiểm thử (test / 테스트) dùng `StandardTestDispatcher` hoặc dispatcher
 Dispatcher injection cũng làm thực thi (execution / 실행) chính sách (policy / 정책) tường minh (explicit / 명시적).
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **9. Dispatcher injection là testability + chính sách (policy / 정책) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **10. Dispatchers.IO không phải “luồng thực thi (thread / 스레드) pool vô hạn”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Mutex bảo vệ trọng yếu (critical / 중요) section trong coroutine world** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. `Dispatchers.IO` không phải “luồng thực thi (thread / 스레드) pool vô hạn”
 
@@ -301,6 +319,8 @@ Tính đồng thời (concurrency / 동시성) limit là sức chứa (capacity 
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **11. Mutex bảo vệ trọng yếu (critical / 중요) section trong coroutine world** tiếp nhận điểm tựa từ **10. Dispatchers.IO không phải “luồng thực thi (thread / 스레드) pool vô hạn”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Atomic thao tác (operation / 연산) khác Mutex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Mutex bảo vệ trọng yếu (critical / 중요) section trong coroutine world
 
 Giả sử đơn vị từ (token / 토큰) refresh:
@@ -330,6 +350,8 @@ Nhưng trọng yếu (critical / 중요) section phải ngắn và ngữ nghĩa 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **12. Atomic thao tác (operation / 연산) khác Mutex** tiếp nhận điểm tựa từ **11. Mutex bảo vệ trọng yếu (critical / 중요) section trong coroutine world** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Actor/Channel giúp serialize command khi thứ tự (ordering / 순서) quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Atomic thao tác (operation / 연산) khác Mutex
 
 Nếu chỉ cần compare-and-set một thành phần nguyên thủy (primitive / 기본 요소) trạng thái (state / 상태), atomic có thể phù hợp.
@@ -345,6 +367,8 @@ currentToken và tokenExpiry phải thay đổi cùng nhau
 Hai atomic riêng không nhất thiết bảo vệ pair bất biến (invariant / 불변식).
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **13. Actor/Channel giúp serialize command khi thứ tự (ordering / 순서) quan trọng** tiếp nhận điểm tựa từ **12. Atomic thao tác (operation / 연산) khác Mutex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Cold Flow là recipe, không phải running stream** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Actor/Channel giúp serialize command khi thứ tự (ordering / 순서) quan trọng
 
@@ -371,9 +395,10 @@ Sự đánh đổi (trade-off / 트레이드오프) là cần xử lý hàng đ�
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **13. Actor/Channel giúp serialize command khi thứ tự (ordering / 순서) quan trọng** xác định đầu vào; **14. Cold Flow là recipe, không phải running stream** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Hot luồng (flow / 흐름) cần thời gian tồn tại (lifetime / 수명) đơn vị sở hữu (owner / 오너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Cold Flow là recipe, không phải running stream
 Phần này nối mạch Android vừa học với “14. Cold Flow là recipe, không phải running stream”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 val flow = flow {
@@ -394,6 +419,8 @@ upstream nên chạy per collector hay shared?
 ```
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **14. Cold Flow là recipe, không phải running stream** xác định đầu vào; **15. Hot luồng (flow / 흐름) cần thời gian tồn tại (lifetime / 수명) đơn vị sở hữu (owner / 오너)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. SharingStarted.WhileSubscribed là tài nguyên (resource / 자원) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Hot luồng (flow / 흐름) cần thời gian tồn tại (lifetime / 수명) đơn vị sở hữu (owner / 오너)
 
@@ -422,6 +449,8 @@ initial/replay semantics gì?
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, cơ chế trong **15. Hot luồng (flow / 흐름) cần thời gian tồn tại (lifetime / 수명) đơn vị sở hữu (owner / 오너)** cần được kiểm chứng bằng dấu vết cụ thể; **16. SharingStarted.WhileSubscribed là tài nguyên (resource / 자원) chính sách (policy / 정책)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **17. flowOn đổi ngữ cảnh (context / 맥락) phía upstream** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. `SharingStarted.WhileSubscribed` là tài nguyên (resource / 자원) chính sách (policy / 정책)
 
 Nếu upstream là Room luồng (flow / 흐름), giữ một khoảng stop hết thời gian chờ (timeout / 타임아웃) có thể tránh stop/start liên tục khi cấu hình (configuration / 구성) thay đổi (change / 변경) ngắn.
@@ -433,6 +462,8 @@ Cùng một operator nhưng tài nguyên (resource / 자원) chi phí (cost / �
 Started chính sách (policy / 정책) phải dựa vào upstream ngữ nghĩa (semantics / 의미론).
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **16. SharingStarted.WhileSubscribed là tài nguyên (resource / 자원) chính sách (policy / 정책)** nêu điều cần giải thích; **17. flowOn đổi ngữ cảnh (context / 맥락) phía upstream** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. collectLatest encode cancellation chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. `flowOn` đổi ngữ cảnh (context / 맥락) phía upstream
 
@@ -455,6 +486,8 @@ Việc hiểu ngữ cảnh (context / 맥락) preservation giúp tránh đặt h
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **17. flowOn đổi ngữ cảnh (context / 맥락) phía upstream** xác định đầu vào; **18. collectLatest encode cancellation chính sách (policy / 정책)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **19. flatMapLatest bảo vệ stale-request race** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. `collectLatest` encode cancellation chính sách (policy / 정책)
 
 Search-as-you-type:
@@ -473,9 +506,10 @@ Không dùng `collectLatest` cho thao tác (operation / 연산) không được 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **19. flatMapLatest bảo vệ stale-request race** tiếp nhận điểm tựa từ **18. collectLatest encode cancellation chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. buffer thay đổi producer-consumer coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. `flatMapLatest` bảo vệ stale-request race
 Phần này nối mạch Android vừa học với “19. `flatMapLatest` bảo vệ stale-request race”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 query
@@ -494,6 +528,8 @@ result của query cũ không được trở thành state hiện tại sau query
 Operator là hiện thực (implementation / 구현) của bất biến (invariant / 불변식).
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **20. buffer thay đổi producer-consumer coupling** tiếp nhận điểm tựa từ **19. flatMapLatest bảo vệ stale-request race** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. conflate bỏ intermediate giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. `buffer` thay đổi producer-consumer coupling
 
@@ -515,6 +551,8 @@ producer có thể chạy trước consumer một khoảng
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **21. conflate bỏ intermediate giá trị (value / 값)** tiếp nhận điểm tựa từ **20. buffer thay đổi producer-consumer coupling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. SharedFlow không tự động là sự kiện (event / 이벤트) bus tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. `conflate` bỏ intermediate giá trị (value / 값)
 
 Dùng khi chỉ trạng thái (state / 상태) mới nhất quan trọng.
@@ -526,6 +564,8 @@ Nhưng không dùng cho sự kiện (event / 이벤트) stream mà mỗi item đ
 Trạng thái (state / 상태) stream và sự kiện (event / 이벤트) stream có mất mát (loss / 손실) tolerance khác nhau.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **21. conflate bỏ intermediate giá trị (value / 값)** xác định đầu vào; **22. SharedFlow không tự động là sự kiện (event / 이벤트) bus tốt** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. Channel có hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론) rõ hơn cho point-to-point sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. `SharedFlow` không tự động là sự kiện (event / 이벤트) bus tốt
 
@@ -545,6 +585,8 @@ Nếu sự kiện (event / 이벤트) không được phép mất, có thể nó
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **22. SharedFlow không tự động là sự kiện (event / 이벤트) bus tốt** xác định đầu vào; **23. Channel có hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론) rõ hơn cho point-to-point sự kiện (event / 이벤트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. Callback -> callbackFlow cần cleanup chính xác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. `Channel` có hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론) rõ hơn cho point-to-point sự kiện (event / 이벤트)
 
 Channel phù hợp khi sự kiện (event / 이벤트) cần được consume bởi một bên tiêu thụ (consumer / 소비자) theo hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론).
@@ -554,6 +596,8 @@ Nhưng channel nằm in-memory; tiến trình (process / 프로세스) death v�
 Vì vậy notification “payment succeeded” quan trọng có thể nên reconstruct từ persisted giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) thay vì chờ một Channel sự kiện (event / 이벤트).
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **23. Channel có hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론) rõ hơn cho point-to-point sự kiện (event / 이벤트)** xác định đầu vào; **24. Callback -> callbackFlow cần cleanup chính xác** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. Backpressure ở callbackFlow cần chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Callback -> `callbackFlow` cần cleanup chính xác
 
@@ -579,6 +623,8 @@ Callback thời gian tồn tại (lifetime / 수명) phải map đúng vào lu�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **24. Callback -> callbackFlow cần cleanup chính xác** xác định đầu vào; **25. Backpressure ở callbackFlow cần chính sách (policy / 정책)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. repeatOnLifecycle bảo vệ collection thời gian tồn tại (lifetime / 수명)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Backpressure ở callbackFlow cần chính sách (policy / 정책)
 
 Sensor có thể emit 100Hz nhưng bên tiêu thụ (consumer / 소비자) xử lý 10Hz.
@@ -595,6 +641,8 @@ conflate?
 Nếu telemetry cho UI, latest có thể đủ. Nếu dữ liệu scientific capture, drop có thể không chấp nhận.
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **25. Backpressure ở callbackFlow cần chính sách (policy / 정책)** xác định đầu vào; **26. repeatOnLifecycle bảo vệ collection thời gian tồn tại (lifetime / 수명)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. Race giữa refresh và cục bộ (local / 로컬) mutation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. `repeatOnLifecycle` bảo vệ collection thời gian tồn tại (lifetime / 수명)
 
@@ -617,6 +665,8 @@ UI không visible nhưng vẫn xử lý/render stream
 và tránh manual start/stop dễ leak.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **26. repeatOnLifecycle bảo vệ collection thời gian tồn tại (lifetime / 수명)** xác định đầu vào; **27. Race giữa refresh và cục bộ (local / 로컬) mutation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **28. Race giữa logout và in-flight request** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. Race giữa refresh và cục bộ (local / 로컬) mutation
 
@@ -642,9 +692,10 @@ Tính đồng thời (concurrency / 동시성) operator không thay thế dữ l
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **28. Race giữa logout và in-flight request** tiếp nhận điểm tựa từ **27. Race giữa refresh và cục bộ (local / 로컬) mutation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Race giữa tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) và callback** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Race giữa logout và in-flight request
 Phần này nối mạch Android vừa học với “28. Race giữa logout và in-flight request”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```text
 T0 account A request start
@@ -660,6 +711,8 @@ Cancellation yêu cầu (request / 요청) cũ giúp nhưng không đủ vì rem
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **28. Race giữa logout và in-flight request** xác định đầu vào; **29. Race giữa tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) và callback** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **30. Timeout cần ở boundary đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Race giữa tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) và callback
 
 Một callback có thể về sau Activity destroyed.
@@ -670,9 +723,10 @@ Trạng thái (state / 상태) nên đi qua lifecycle-aware đơn vị sở hữ
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **29. Race giữa tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) và callback** đã nêu tiêu chí phân biệt, còn **30. Timeout cần ở boundary đúng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **31. Retry trong Flow cần phân loại error** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Timeout cần ở boundary đúng
 Phần này nối mạch Android vừa học với “30. Timeout cần ở boundary đúng”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 withTimeout(5_000) {
@@ -695,9 +749,10 @@ Một hết thời gian chờ (timeout / 타임아웃) toàn cục (global / 전
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **30. Timeout cần ở boundary đúng** đã nêu tiêu chí phân biệt, còn **31. Retry trong Flow cần phân loại error** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **32. luồng (flow / 흐름) exception transparency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Retry trong Flow cần phân loại error
 Phần này nối mạch Android vừa học với “31. Retry trong Flow cần phân loại error”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 flow.retry(3)
@@ -717,6 +772,8 @@ HTTP kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) không n
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **31. Retry trong Flow cần phân loại error** xác định đầu vào; **32. luồng (flow / 흐름) exception transparency** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **33. CPU cancellation cooperative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. luồng (flow / 흐름) exception transparency
 
 Luồng (flow / 흐름) convention yêu cầu upstream exception không bị nuốt hoặc emit tùy tiện từ nơi không phù hợp.
@@ -735,6 +792,8 @@ source
 Hiểu ranh giới (boundary / 경계) của operator giúp gỡ lỗi (debug / 디버그) exception propagation.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **32. luồng (flow / 흐름) exception transparency** xác định đầu vào; **33. CPU cancellation cooperative** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **34. Blocking thư viện (library / 라이브러리) trong coroutine vẫn khối (block / 블록) luồng thực thi (thread / 스레드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. CPU cancellation cooperative
 
@@ -761,6 +820,8 @@ Cancellation responsiveness là phần của UX/tài nguyên (resource / 자원)
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **34. Blocking thư viện (library / 라이브러리) trong coroutine vẫn khối (block / 블록) luồng thực thi (thread / 스레드)** tiếp nhận điểm tựa từ **33. CPU cancellation cooperative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. kiểm thử (test / 테스트) coroutine phải kiểm soát scheduler** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Blocking thư viện (library / 라이브러리) trong coroutine vẫn khối (block / 블록) luồng thực thi (thread / 스레드)
 
 Nếu SDK Java cũ có:
@@ -776,6 +837,8 @@ Phải chuyển dispatcher hoặc dùng async API nếu có.
 Suspending lớp trừu tượng (abstraction / 추상화) không thay đổi bản chất underlying I/O.
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **35. kiểm thử (test / 테스트) coroutine phải kiểm soát scheduler** tiếp nhận điểm tựa từ **34. Blocking thư viện (library / 라이브러리) trong coroutine vẫn khối (block / 블록) luồng thực thi (thread / 스레드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. kiểm thử (test / 테스트) cancellation, không chỉ success** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. kiểm thử (test / 테스트) coroutine phải kiểm soát scheduler
 
@@ -805,6 +868,8 @@ Không dùng `Thread.sleep()` trong deterministic coroutine kiểm thử (test /
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **36. kiểm thử (test / 테스트) cancellation, không chỉ success** tiếp nhận điểm tựa từ **35. kiểm thử (test / 테스트) coroutine phải kiểm soát scheduler** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. gỡ lỗi (debug / 디버그) coroutine bằng quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. kiểm thử (test / 테스트) cancellation, không chỉ success
 
 Một repository có thể pass happy đường dẫn (path / 경로) nhưng leak tài nguyên (resource / 자원) khi cancel.
@@ -831,6 +896,8 @@ Cancellation đường dẫn (path / 경로) là first-class hành vi (behavior 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **37. gỡ lỗi (debug / 디버그) coroutine bằng quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **36. kiểm thử (test / 테스트) cancellation, không chỉ success** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Concurrency design checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 37. gỡ lỗi (debug / 디버그) coroutine bằng quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프)
 
 Khi gặp “coroutine vẫn chạy”, đừng chỉ log luồng thực thi (thread / 스레드) name.
@@ -850,9 +917,10 @@ Quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프) thư�
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **38. Concurrency design checklist** tiếp nhận điểm tựa từ **37. gỡ lỗi (debug / 디버그) coroutine bằng quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 38. Concurrency design checklist
 Phần này nối mạch Android vừa học với “38. Concurrency design checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 | Câu hỏi | Ý nghĩa |
 |---|---|
@@ -868,6 +936,8 @@ Phần này nối mạch Android vừa học với “38. Concurrency design che
 | kiểm thử (test / 테스트) scheduler kiểm soát được không? | determinism |
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **39. Kết luận** gom các mảnh từ **38. Concurrency design checklist** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 39. Kết luận
 
@@ -889,3 +959,5 @@ owner
 ```
 
 Khi những điểm này rõ, việc chọn `launch`, `async`, `stateIn`, `flatMapLatest`, `Mutex` hay `callbackFlow` trở thành quyết định có lý do thay vì pattern copy từ sample.
+
+> **Bàn giao:** Sau **39. Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

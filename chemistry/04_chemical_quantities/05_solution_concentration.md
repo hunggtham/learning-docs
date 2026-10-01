@@ -1,6 +1,6 @@
 # Nồng độ dung dịch — các cách định lượng thành phần
 
-> **Mạch đọc:** Đọc **Nồng độ dung dịch — các cách định lượng thành phần** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao có nhiều cách biểu diễn nồng độ?** sang **Nồng độ mol**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nồng độ dung dịch — các cách định lượng thành phần**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao có nhiều cách biểu diễn nồng độ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nồng độ mol** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Nồng độ (concentration / 농도)** mô tả lượng chất tan tương đối với một lượng dung dịch hoặc dung môi được chọn. Không có một định nghĩa duy nhất; mỗi thang nồng độ được thiết kế cho một kiểu suy luận hoặc thí nghiệm khác nhau.
 
@@ -10,8 +10,7 @@ Trong phòng thí nghiệm, thể tích thường dễ đo nên nồng độ mol
 
 Chọn đơn vị nồng độ là chọn cách biểu diễn phù hợp với bài toán.
 
-
-> **Chuyển mạch:** Từ **Vì sao có nhiều cách biểu diễn nồng độ?**, ta sang **Nồng độ mol** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Nồng độ mol** tiếp nhận điểm tựa từ **Vì sao có nhiều cách biểu diễn nồng độ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nồng độ molan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nồng độ mol
 
@@ -33,8 +32,7 @@ M=0.250\,M
 
 Nồng độ mol phụ thuộc nhiệt độ vì thể tích chất lỏng thay đổi do giãn nở nhiệt.
 
-
-> **Chuyển mạch:** Từ **Nồng độ mol**, ta sang **Nồng độ molan** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nồng độ dung dịch — các cách định lượng thành phần**, **Nồng độ molan** tiếp nhận điểm tựa từ **Nồng độ mol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phần mol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nồng độ molan
 
@@ -48,8 +46,7 @@ Mẫu số là khối lượng dung môi nên molality gần như không phụ t
 
 Các phương trình tính chất tập hợp thường dùng molality vì khối lượng dung môi ổn định hơn thể tích dung dịch theo nhiệt độ.
 
-
-> **Chuyển mạch:** Từ **Nồng độ molan**, ta sang **Phần mol** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nồng độ dung dịch — các cách định lượng thành phần**, **Phần mol** tiếp nhận điểm tựa từ **Nồng độ molan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phần khối lượng, phần trăm khối lượng, ppm và ppb** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phần mol
 
@@ -69,8 +66,7 @@ P_i=x_iP_{total}
 
 Trong dung dịch lỏng, phần mol xuất hiện trong định luật Raoult và các biểu thức thế hóa học.
 
-
-> **Chuyển mạch:** Từ **Phần mol**, ta sang **Phần khối lượng, phần trăm khối lượng, ppm và ppb** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Phần khối lượng, phần trăm khối lượng, ppm và ppb** tiếp nhận điểm tựa từ **Phần mol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha loãng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phần khối lượng, phần trăm khối lượng, ppm và ppb
 
@@ -90,8 +86,7 @@ Với hỗn hợp rất loãng, `ppm` thường biểu diễn phần `10^-6` và
 
 Trong dung dịch nước loãng có khối lượng riêng gần `1.00 kg/L`, `mg/L` đôi khi có giá trị số gần `ppm` theo khối lượng. Đây chỉ là xấp xỉ trong điều kiện phù hợp, không phải đồng nhất thức phổ quát.
 
-
-> **Chuyển mạch:** Từ **Phần khối lượng, phần trăm khối lượng, ppm và ppb**, ta sang **Pha loãng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nồng độ dung dịch — các cách định lượng thành phần**, **Pha loãng** tiếp nhận điểm tựa từ **Phần khối lượng, phần trăm khối lượng, ppm và ppb** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha dung dịch từ chất rắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pha loãng
 
@@ -119,8 +114,7 @@ Lấy `25.0 mL` dung dịch gốc rồi thêm dung môi tới thể tích cuối
 
 Nếu cần độ chính xác cao, không nên đơn giản đo và thêm `225.0 mL` dung môi vì thể tích của các chất lỏng khi trộn không phải lúc nào cũng cộng tuyến tính tuyệt đối.
 
-
-> **Chuyển mạch:** Từ **Pha loãng**, ta sang **Pha dung dịch từ chất rắn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nồng độ dung dịch — các cách định lượng thành phần**, **Pha dung dịch từ chất rắn** tiếp nhận điểm tựa từ **Pha loãng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nồng độ và hoạt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pha dung dịch từ chất rắn
 
@@ -140,8 +134,7 @@ Trong phòng thí nghiệm, thường hòa tan chất rắn trong một phần d
 
 Cách này kiểm soát thể tích cuối tốt hơn việc đo riêng một thể tích dung môi rồi giả định thể tích sau hòa tan không đổi.
 
-
-> **Chuyển mạch:** Từ **Pha dung dịch từ chất rắn**, ta sang **Nồng độ và hoạt độ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Nồng độ và hoạt độ** tiếp nhận điểm tựa từ **Pha dung dịch từ chất rắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo nồng độ trong hóa học phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nồng độ và hoạt độ
 
@@ -155,8 +148,7 @@ trong đó `γ_i` là **hệ số hoạt độ (activity coefficient)**.
 
 Điều này giải thích vì sao pH về mặt nhiệt động được định nghĩa qua hoạt độ ion hydrogen, không đơn giản bằng nồng độ mol thô.
 
-
-> **Chuyển mạch:** Từ **Nồng độ và hoạt độ**, ta sang **Đo nồng độ trong hóa học phân tích** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nồng độ dung dịch — các cách định lượng thành phần**, **Đo nồng độ trong hóa học phân tích** tiếp nhận điểm tựa từ **Nồng độ và hoạt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đo nồng độ trong hóa học phân tích
 
@@ -170,8 +162,7 @@ Nồng độ thường không được “nhìn thấy” trực tiếp mà đư
 
 Do đó phép đo nồng độ luôn gắn với mô hình hiệu chuẩn và độ không đảm bảo.
 
-
-> **Chuyển mạch:** Từ **Đo nồng độ trong hóa học phân tích**, ta sang **Các hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nồng độ dung dịch — các cách định lượng thành phần**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Đo nồng độ trong hóa học phân tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -187,8 +178,7 @@ Không. Nó chỉ áp dụng khi lượng chất tan được bảo toàn và c�
 
 Chỉ gần đúng trong một số dung dịch nước loãng có khối lượng riêng gần `1 kg/L`.
 
-
-> **Chuyển mạch:** Từ **Các hiểu lầm thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -196,4 +186,4 @@ Nồng độ là **một tỉ số có mẫu số được chọn theo mục đ�
 
 Xem tiếp: [Năng lượng, nhiệt và công](../05_thermodynamics/00_energy_heat_and_work.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

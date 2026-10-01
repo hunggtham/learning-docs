@@ -1,5 +1,7 @@
 # Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Productive activity: điểm xuất phát không phải chỉ là “kinh tế”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Alienation: khi activity của con người quay lại đối lập với chính họ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Chapter trước đã đặt Marx vào bối cảnh Hegel, Feuerbach, political economy và industrialization. Bây giờ cần dựng mô hình tư duy (mental model / 사고 모델) của riêng Marx: con người không tồn tại như những consciousness tách rời mà sống bằng productive activity trong những xã hội (social / 사회적) relations cụ thể. Từ điểm này mới có thể hiểu vì sao **alienation**, **lớp (class / 클래스)**, **historical thay đổi (change / 변경)**, **ideology** và về sau **commodity fetishism** nối thành một hệ thống phân tích thay vì năm khái niệm rời.
 
 Prerequisite quan trọng nhất là phân biệt ba tầng: con người có nhu cầu và năng lực; những năng lực đó được thực hiện thông qua xã hội (social / 사회적) môi trường vận hành (production / 운영 환경); xã hội (social / 사회적) môi trường vận hành (production / 운영 환경) luôn được tổ chức bằng institutions và relations có lịch sử. Marx chuyển trọng tâm từ câu hỏi “con người nghĩ gì?” sang thêm một câu khác: **những điều kiện vật chất và quan hệ xã hội nào khiến một cách sống trở nên có thể, ổn định hoặc mâu thuẫn?**
@@ -28,6 +30,8 @@ feedback into institutions and production
 
 Mũi tên quay lại cuối cùng rất quan trọng. Marx không cần được đọc như một chuỗi nhân quả (causal chain / 인과 사슬) một chiều từ “economy” sang “ideas”. Politics, law và collective hành động (action / 동작) có thể thay đổi thuộc tính (property / 속성) relations, technology adoption và organization of môi trường vận hành (production / 운영 환경).
 
+> **Chuyển mạch:** Trong **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Alienation: khi activity của con người quay lại đối lập với chính họ** tiếp nhận điểm tựa từ **Productive activity: điểm xuất phát không phải chỉ là “kinh tế”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alienation và commodity fetishism: giống nhau ở đâu, khác nhau ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Alienation: khi activity của con người quay lại đối lập với chính họ
 
 **Alienation (tha hóa, 소외)** trong Marx không đơn giản là cảm giác “chán việc”. Trong các bản thảo năm 1844, Marx phân tích một dạng estrangement gắn với labor trong capitalist xã hội (social / 사회적) relations. Stanford Encyclopedia of Philosophy tóm tắt bốn dimensions thường được rút ra từ văn bản (text / 텍스트) này: người lao động bị tách khỏi sản phẩm (product / 제품) họ tạo ra, khỏi chính productive activity, khỏi khả năng phát triển những capacities được xem là đặc trưng của human flourishing, và khỏi những người khác.
@@ -46,6 +50,8 @@ Early Marx dùng **species-being** để nói rằng human life có capacities m
 
 Điểm này tạo một normative tầng (layer / 계층) mà later Marx đôi khi diễn đạt ít trực tiếp hơn. Scholarship vẫn tranh luận mức độ continuity giữa early humanist Marx và later *Capital*. Vì vậy tài liệu giữ một ranh giới (boundary / 경계): alienation có continuity về theme, nhưng role lý thuyết của nó thay đổi khi Marx chuyển từ philosophical anthropology sang critique of political economy.
 
+> **Chuyển mạch:** Ở chặng này của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Alienation và commodity fetishism: giống nhau ở đâu, khác nhau ở đâu?** tiếp nhận điểm tựa từ **Alienation: khi activity của con người quay lại đối lập với chính họ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Materialist conception of lịch sử (history / 이력): bắt đầu từ xã hội (social / 사회적) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Alienation và commodity fetishism: giống nhau ở đâu, khác nhau ở đâu?
 
 Hai concept đều mô tả một mẫu (pattern / 패턴): human xã hội (social / 사회적) activity tạo ra structures rồi structures đó xuất hiện trước actors như forces độc lập. Tuy nhiên chúng không phải synonyms.
@@ -60,6 +66,8 @@ fetishism  → social relation appears as property/relation of things
 ```
 
 Fetishism vì vậy không phải “consumerism” hay “mê hàng hiệu”. Marx đang nói về xã hội (social / 사회적) form, không phải một psychological obsession với objects. Primary văn bản (text / 텍스트) của *Capital* nói commodities có vẻ mang relations độc lập, trong khi nguồn gốc của relations đó nằm trong xã hội (social / 사회적) organization of labor.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Materialist conception of lịch sử (history / 이력): bắt đầu từ xã hội (social / 사회적) môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **Alienation và commodity fetishism: giống nhau ở đâu, khác nhau ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contradiction: không phải mọi xung đột (conflict / 충돌) đều là “biện chứng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Materialist conception of lịch sử (history / 이력): bắt đầu từ xã hội (social / 사회적) môi trường vận hành (production / 운영 환경)
 
@@ -83,6 +91,8 @@ politics, law, culture, ideology
 
 Các mũi tên hai chiều nhắc rằng xã hội (social / 사회적) các hệ thống (systems / 시스템들) có phản hồi (feedback / 피드백). Technology có thể làm một institution khó duy trì; nhưng law, war, trạng thái (state / 상태) chính sách (policy / 정책) hoặc collective organization cũng có thể thay đổi technology đường dẫn (path / 경로) và quyền sở hữu (ownership / 소유권) cấu trúc (structure / 구조).
 
+> **Chuyển mạch:** Trong **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Contradiction: không phải mọi xung đột (conflict / 충돌) đều là “biện chứng”** tiếp nhận điểm tựa từ **Materialist conception of lịch sử (history / 이력): bắt đầu từ xã hội (social / 사회적) môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스): vị trí trong xã hội (social / 사회적) relations, không chỉ mức thu nhập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Contradiction: không phải mọi xung đột (conflict / 충돌) đều là “biện chứng”
 
 Trong Marxian writing, **contradiction** thường chỉ tension được tạo ra bởi relations trong chính hệ thống (system / 시스템). Ví dụ, capitalism thúc đẩy productivity và xã hội (social / 사회적) cooperation ở quy mô (scale / 규모) lớn nhưng quyền sở hữu (ownership / 소유권)/điều khiển (control / 제어) vẫn có thể tập trung; firms cần workers như producers đồng thời cố giảm labor chi phí (cost / 비용); competition thúc đẩy innovation nhưng cũng có thể destabilize firms và labor markets.
@@ -96,6 +106,8 @@ X và Y không thể cùng mở rộng vô hạn mà không tạo adaptation, co
 ```
 
 Nếu không xác định cơ chế (mechanism / 메커니즘), “mâu thuẫn” chỉ còn là label.
+
+> **Chuyển mạch:** Ở chặng này của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Lớp (class / 클래스): vị trí trong xã hội (social / 사회적) relations, không chỉ mức thu nhập** tiếp nhận điểm tựa từ **Contradiction: không phải mọi xung đột (conflict / 충돌) đều là “biện chứng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) struggle: xung đột (conflict / 충돌) có cấu trúc nhưng kết quả (outcome / 결과) không được định sẵn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lớp (class / 클래스): vị trí trong xã hội (social / 사회적) relations, không chỉ mức thu nhập
 
@@ -119,11 +131,15 @@ class position
 
 Mỗi arrow cần cơ chế (mechanism / 메커니즘). Đây là điểm mà political sociology, collective-action lý thuyết (theory / 이론) và xã hội (social / 사회적) psychology có thể bổ sung cho Marxian cấu trúc (structure / 구조) phân tích (analysis / 분석).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Lớp (class / 클래스) struggle: xung đột (conflict / 충돌) có cấu trúc nhưng kết quả (outcome / 결과) không được định sẵn** tiếp nhận điểm tựa từ **Lớp (class / 클래스): vị trí trong xã hội (social / 사회적) relations, không chỉ mức thu nhập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xã hội (social / 사회적) reproduction: môi trường vận hành (production / 운영 환경) phải tái tạo chính những điều kiện của nó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lớp (class / 클래스) struggle: xung đột (conflict / 충돌) có cấu trúc nhưng kết quả (outcome / 결과) không được định sẵn
 
 **Lớp (class / 클래스) struggle (đấu tranh giai cấp, 계급투쟁)** trong Marxist phân tích (analysis / 분석) xuất hiện khi lớp (class / 클래스) positions tạo conflicts quanh wages, working thời gian (time / 시간), điều khiển (control / 제어), thuộc tính (property / 속성), taxation và phân phối (distribution / 분포). Xung đột (conflict / 충돌) có thể biểu hiện qua strike, union bargaining, elections, regulation, litigation hoặc revolution; không bắt buộc luôn là violent confrontation.
 
 Điều quan trọng là lớp (class / 클래스) struggle không tự bảo đảm một direction duy nhất của lịch sử (history / 이력). Institutions có thể absorb xung đột (conflict / 충돌) qua collective bargaining, welfare trạng thái (state / 상태), codetermination hoặc political reform; cũng có thể suppress xung đột (conflict / 충돌) bằng coercion. Do đó historical phân tích (analysis / 분석) phải dấu vết (trace / 추적) organizational sức chứa (capacity / 용량) và institutional channels, không chỉ identify lớp (class / 클래스) positions.
+
+> **Chuyển mạch:** Trong **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Xã hội (social / 사회적) reproduction: môi trường vận hành (production / 운영 환경) phải tái tạo chính những điều kiện của nó** tiếp nhận điểm tựa từ **Lớp (class / 클래스) struggle: xung đột (conflict / 충돌) có cấu trúc nhưng kết quả (outcome / 결과) không được định sẵn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở (base / 기반), superstructure và lỗi đọc cơ giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xã hội (social / 사회적) reproduction: môi trường vận hành (production / 운영 환경) phải tái tạo chính những điều kiện của nó
 
@@ -133,11 +149,15 @@ Một society không chỉ sản xuất commodities; nó phải tái tạo worke
 
 Trong mô-đun (module / 모듈) này, đây là cầu nối (bridge / 브리지) sang [Later Marxist traditions](09_later_marxist_traditions.md), không phải lý do để retroactively gán mọi later lý thuyết (theory / 이론) cho Marx.
 
+> **Chuyển mạch:** Ở chặng này của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Cơ sở (base / 기반), superstructure và lỗi đọc cơ giới** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) reproduction: môi trường vận hành (production / 운영 환경) phải tái tạo chính những điều kiện của nó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ideology: không đơn giản là “ý kiến sai”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cơ sở (base / 기반), superstructure và lỗi đọc cơ giới
 
 Các thuật ngữ **cơ sở (base / 기반) / economic cấu trúc (structure / 구조)** và **superstructure** thường được dùng để mô tả quan hệ (relation / 관계) giữa chế độ (mode / 모드) of môi trường vận hành (production / 운영 환경) với legal, political và ideological forms. Chúng hữu ích nếu hiểu như một research question về phụ thuộc (dependency / 의존성) và ràng buộc (constraint / 제약조건). Chúng trở nên nguy hiểm khi biến thành sơ đồ máy móc trong đó mọi law, religion hoặc idea chỉ là “reflection” trực tiếp của economy.
 
 Một legal institution có thể củng cố thuộc tính (property / 속성) relations; đồng thời law cũng có thể thay đổi incentives và reshape economic hành vi (behavior / 동작). Một political crisis có thể làm thay đổi thuộc tính (property / 속성) hệ thống (system / 시스템). Một religious movement có thể mobilize collective hành động (action / 동작). Vì vậy cơ sở (base / 기반)–superstructure nên được giữ như **family of hypotheses**: economic relations có thể constrain, select hoặc stabilize political-cultural forms theo nhiều cơ chế (mechanism / 메커니즘) khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Ideology: không đơn giản là “ý kiến sai”** tiếp nhận điểm tựa từ **Cơ sở (base / 기반), superstructure và lỗi đọc cơ giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agency và cấu trúc (structure / 구조): Marx không loại bỏ human hành động (action / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ideology: không đơn giản là “ý kiến sai”
 
@@ -151,6 +171,8 @@ Một legal institution có thể củng cố thuộc tính (property / 속성) 
 4. **structural appearance** — hệ thống (system / 시스템) tạo ra appearance có tính khách quan khiến underlying quan hệ (relation / 관계) khó thấy dù không ai cố tình lừa dối.
 
 Cơ chế (mechanism / 메커니즘) thứ tư là cầu nối (bridge / 브리지) mạnh nhất sang commodity fetishism. Ví dụ, wage đặc tả hợp đồng (contract / 계약) có thể xuất hiện như exchange giữa hai legal equals trong thị trường (market / 시장); Marx hỏi thêm background thuộc tính (property / 속성) quan hệ (relation / 관계) nào khiến một bên phụ thuộc vào việc bán labor power. Legal equality không bị phủ nhận; nó được đặt trong một tầng (layer / 계층) xã hội (social / 사회적) quan hệ (relation / 관계) sâu hơn.
+
+> **Chuyển mạch:** Trong **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Agency và cấu trúc (structure / 구조): Marx không loại bỏ human hành động (action / 동작)** tiếp nhận điểm tựa từ **Ideology: không đơn giản là “ý kiến sai”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ xã hội (social / 사회적) cấu trúc (structure / 구조) sang economic cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Agency và cấu trúc (structure / 구조): Marx không loại bỏ human hành động (action / 동작)
 
@@ -166,15 +188,17 @@ collective action can alter the structure itself
 
 Không phải mọi interpretation của Marx đều dùng ngôn ngữ (language / 언어) này, nhưng nó giúp tránh cả mechanical determinism lẫn voluntarism.
 
+> **Chuyển mạch:** Ở chặng này của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, **Agency và cấu trúc (structure / 구조): Marx không loại bỏ human hành động (action / 동작)** xác định đầu vào; **Từ xã hội (social / 사회적) cấu trúc (structure / 구조) sang economic cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ xã hội (social / 사회적) cấu trúc (structure / 구조) sang economic cơ chế (mechanism / 메커니즘)
 
 Sau chapter này, skeleton đã đầy đủ hơn: people reproduce life through xã hội (social / 사회적) môi trường vận hành (production / 운영 환경); môi trường vận hành (production / 운영 환경) được organized bằng historically specific relations; relations tạo lớp (class / 클래스) positions và dependencies; xung đột (conflict / 충돌) đi qua organization; ideology và fetishism ảnh hưởng cách actors perceive hệ thống (system / 시스템); politics có thể reproduce hoặc transform cấu trúc (structure / 구조).
 
 Nhưng vẫn thiếu cơ chế (mechanism / 메커니즘) trung tâm của *Capital*: **vì sao capital có thể tự mở rộng trong một hệ thống (system / 시스템) nơi exchange được mô tả như exchange giữa legal commodity owners?** Nếu bỏ qua câu này, Marx chỉ còn là moral critic. Chapter tiếp theo chuyển sang commodity, value-form, money, labor power, surplus giá trị (value / 값), accumulation và reproduction của capital.
 
-## Sources và reading anchors
-Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**, cơ chế trong **Từ xã hội (social / 사회적) cấu trúc (structure / 구조) sang economic cơ chế (mechanism / 메커니즘)** cần được kiểm chứng bằng dấu vết cụ thể; **Sources và reading anchors** đưa dữ liệu và nguồn vào đúng điểm đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Sources và reading anchors
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Karl Marx, *Economic and Philosophic Manuscripts of 1844* — primary anchor cho alienation.
@@ -183,3 +207,5 @@ Phần “Sources và reading anchors” nối kiến thức trước với nộ
 - Karl Marx, *Capital*, Volume I, Chapter 1 — commodity form và fetishism.
 
 Primary texts cần được đọc cùng ngữ cảnh (context / 맥락) biên soạn và scholarly interpretation. Một sentence trong Preface 1859 hoặc *German Ideology* không nên được dùng như thuật toán (algorithm / 알고리즘) universal cho toàn bộ lịch sử (history / 이력).
+
+> **Bàn giao:** Sau **Sources và reading anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque
 
-> **Mạch đọc:** Đọc **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Array: indexing đổi flexibility lấy locality** sang **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Array: indexing đổi flexibility lấy locality** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tuyến tính (linear / 선형) dữ liệu (data / 데이터) structures tổ chức elements theo một chiều logical thứ tự (order / 순서). Chúng đơn giản nhưng là building blocks cho parsers, schedulers, buffers, đồ thị (graph / 그래프) traversal, caches và runtimes.
 
@@ -13,8 +12,7 @@ Static array có fixed kích thước (size / 크기); động (dynamic / 동적
 
 Array mạnh khi cần scanning, indexing, sorting và bộ nhớ đệm (cache / 캐시) locality. Weakness là insertion/deletion giữa thường cần move tail.
 
-
-> **Chuyển mạch:** Từ **Array: indexing đổi flexibility lấy locality**, ta sang **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, sau nội dung của **Array: indexing đổi flexibility lấy locality**, **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references
 
@@ -24,8 +22,7 @@ Nhưng `list[i]` cần traverse từ head, `O(n)`. nút (node / 노드) overhead
 
 Linked danh sách (list / 목록) có giá trị khi nodes cần stable định danh (identity / 식별자)/address, frequent cục bộ (local / 로컬) splice hoặc làm building khối (block / 블록) cho intrusive lists/free lists.
 
-
-> **Chuyển mạch:** Từ **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references**, ta sang **ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)** tiếp nhận điểm tựa từ **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)
 
@@ -49,8 +46,7 @@ accept iff stack empty
 
 Ngăn xếp (stack / 스택) lưu unresolved openings — chính là minimal past trạng thái (state / 상태) cần cho quyết định hiện tại.
 
-
-> **Chuyển mạch:** Từ **ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)**, ta sang **hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến** tiếp nhận điểm tựa từ **Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deque: hai đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến
 
@@ -58,15 +54,13 @@ Hàng đợi (queue / 큐) dùng First-In First-Out. `enqueue` thêm tail, `dequ
 
 Array hàng đợi (queue / 큐) không nên shift toàn bộ elements sau mỗi dequeue. Circular buffer dùng head/tail indices modulo sức chứa (capacity / 용량) để giữ operations `O(1)`.
 
-
-> **Chuyển mạch:** Từ **hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến**, ta sang **Deque: hai đầu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Deque: hai đầu** tiếp nhận điểm tựa từ **Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ring buffer và bounded sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Deque: hai đầu
 
 Deque (double-ended queue / 덱) cho push/pop ở cả front và back. Nó có thể implement ngăn xếp (stack / 스택) và hàng đợi (queue / 큐). Sliding-window algorithms dùng deque để giữ candidates monotonic, đạt `O(n)` thay vì scan mỗi cửa sổ (window / 윈도우) `O(k)`.
 
-
-> **Chuyển mạch:** Từ **Deque: hai đầu**, ta sang **Ring buffer và bounded sức chứa (capacity / 용량)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Ring buffer và bounded sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Deque: hai đầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sentinel, null và ranh giới (boundary / 경계) conditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ring buffer và bounded sức chứa (capacity / 용량)
 
@@ -74,8 +68,7 @@ Ring/circular buffer đặc biệt hữu ích cho streaming và I/O. sức chứ
 
 Đây là cầu nối (bridge / 브리지) tới backpressure: hàng đợi (queue / 큐) không thể tăng vô hạn trong finite hệ thống (system / 시스템).
 
-
-> **Chuyển mạch:** Từ **Ring buffer và bounded sức chứa (capacity / 용량)**, ta sang **Sentinel, null và ranh giới (boundary / 경계) conditions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Ring buffer và bounded sức chứa (capacity / 용량)** đã nêu tiêu chí phân biệt, còn **Sentinel, null và ranh giới (boundary / 경계) conditions** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sentinel, null và ranh giới (boundary / 경계) conditions
 
@@ -83,15 +76,13 @@ Tuyến tính (linear / 선형) structures dễ có off-by-one bugs: empty vs on
 
 Ví dụ động (dynamic / 동적) array thường lập luận (reasoning / 추론) vùng valid `[0, size)` và allocated `[0, capacity)`, với bất biến (invariant / 불변식) `0 ≤ size ≤ capacity`.
 
-
-> **Chuyển mạch:** Từ **Sentinel, null và ranh giới (boundary / 경계) conditions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Sentinel, null và ranh giới (boundary / 경계) conditions** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Chọn tuyến tính (linear / 선형) cấu trúc (structure / 구조) bằng truy cập (access / 접근) mẫu (pattern / 패턴): **random chỉ mục (index / 인덱스) → array; cục bộ (local / 로컬) splice với nút (node / 노드) tham chiếu (reference / 참조) → linked; newest-first → ngăn xếp (stack / 스택); oldest-first → hàng đợi (queue / 큐); cả hai đầu → deque**. Sau đó kiểm tra locality, bộ nhớ (memory / 메모리) overhead và tính đồng thời (concurrency / 동시성) requirements.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -101,11 +92,10 @@ Ví dụ động (dynamic / 동적) array thường lập luận (reasoning / �
 
 **“Linked danh sách (list / 목록) delete O(1).”** Chỉ nếu đã có nút (node / 노드) và đủ references; tìm nút (node / 노드) vẫn có thể O(n).
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 [Graph BFS/DFS](./06_graphs_and_graph_algorithms.md) dùng hàng đợi (queue / 큐)/ngăn xếp (stack / 스택); [OS scheduling](../03_operating_systems/01_processes_threads_and_scheduling.md) dùng run queues; [networking](../06_networks_distributed_systems/02_transport_tcp_udp_and_congestion.md) có packet buffers; [system boundaries](../08_software_systems/03_state_queues_backpressure_and_boundaries.md) mở rộng hàng đợi (queue / 큐) thành cơ chế điều tiết tải (load / 로드).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

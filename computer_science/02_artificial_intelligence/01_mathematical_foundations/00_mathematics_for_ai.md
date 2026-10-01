@@ -1,7 +1,6 @@
 # Mathematics for Artificial Intelligence
 
-> **Mạch đọc:** Đặt **Mathematics for Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một mô hình (model / 모델) như một mathematical hàm (function / 함수)** sang **tuyến tính (linear / 선형) Algebra: ngôn ngữ (language / 언어) của biểu diễn (representation / 표현) và transformation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mathematics for Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một mô hình (model / 모델) như một mathematical hàm (function / 함수)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tuyến tính (linear / 선형) Algebra: ngôn ngữ (language / 언어) của biểu diễn (representation / 표현) và transformation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 AI không “dùng toán” như một phụ kiện. Mathematics là ngôn ngữ (language / 언어) giúp ta biểu diễn dữ liệu (data / 데이터), bất định (uncertainty / 불확실성), transformation, mục tiêu (objective / 목표) và học tập (learning / 학습) tiến trình (process / 프로세스). Nếu bỏ toán hoàn toàn, nhiều concept AI sẽ biến thành quy tắc (rule / 규칙) cần học thuộc: “softmax dùng ở đây”, “độ dốc (gradient / 기울기) descent dùng ở kia”, “embedding là véc-tơ (vector / 벡터)”. Nếu hiểu vai trò của từng mathematical công cụ (tool / 도구), các concept đó nối lại thành một hệ thống lập luận (reasoning / 추론) thống nhất.
 
@@ -28,6 +27,8 @@ Ví dụ mô hình tuyến tính (linear model / 선형 모델):
 Huấn luyện (training / 학습) là tiến trình (process / 프로세스) chọn `θ` sao cho mô hình (model / 모델) hành vi (behavior / 동작) phù hợp dữ liệu (data / 데이터) và mục tiêu (objective / 목표).
 
 Một large neural mạng (network / 네트워크) vẫn có thể nhìn theo cùng lớp trừu tượng (abstraction / 추상화), chỉ khác là `f_θ` là composition của rất nhiều transformations.
+
+> **Chuyển mạch:** Trong **Mathematics for Artificial Intelligence**, **Tuyến tính (linear / 선형) Algebra: ngôn ngữ (language / 언어) của biểu diễn (representation / 표현) và transformation** tiếp nhận điểm tựa từ **Một mô hình (model / 모델) như một mathematical hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Calculus: ngôn ngữ (language / 언어) của thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến tính (linear / 선형) Algebra: ngôn ngữ (language / 언어) của biểu diễn (representation / 표현) và transformation
 
@@ -86,6 +87,8 @@ so sánh direction thay vì magnitude tuyệt đối.
 Trong ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색), nếu learned embedding không gian (space / 공간) đặt semantically related documents theo directions gần nhau, cosine similarity trở thành useful retrieval tín hiệu (signal / 신호).
 
 Nhưng cần nhớ: similarity có ý nghĩa vì biểu diễn (representation / 표현) đã được trained để hình học (geometry / 기하학) phản ánh mục tiêu (objective / 목표) nào đó. Dot sản phẩm (product / 제품) tự nó không “hiểu meaning”.
+
+> **Chuyển mạch:** Ở chặng này của **Mathematics for Artificial Intelligence**, **Calculus: ngôn ngữ (language / 언어) của thay đổi (change / 변경)** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) Algebra: ngôn ngữ (language / 언어) của biểu diễn (representation / 표현) và transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất (probability / 확률): ngôn ngữ (language / 언어) của bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Calculus: ngôn ngữ (language / 언어) của thay đổi (change / 변경)
 
@@ -149,6 +152,8 @@ thì:
 
 Backpropagation là efficient ứng dụng (application / 애플리케이션) của chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên computation đồ thị (graph / 그래프). Nó không phải một “AI thuật toán (algorithm / 알고리즘) bí ẩn”; nó là cách reuse intermediate derivatives để tính độ dốc (gradient / 기울기) cho nhiều parameters hiệu quả.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mathematics for Artificial Intelligence**, **Xác suất (probability / 확률): ngôn ngữ (language / 언어) của bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Calculus: ngôn ngữ (language / 언어) của thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Statistics: từ mẫu (sample / 표본) tới population** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xác suất (probability / 확률): ngôn ngữ (language / 언어) của bất định (uncertainty / 불확실성)
 
 AI hệ thống (system / 시스템) thường không biết chắc kết quả (outcome / 결과). Classification mô hình (model / 모델) có thể trả phân phối (distribution / 분포):
@@ -177,6 +182,8 @@ Xác suất (probability / 확률) giúp phân biệt ba thứ thường bị tr
 
 Một mô hình (model / 모델) đầu ra (output / 출력) xác suất (probability / 확률) `0.9` không tự động có nghĩa trong 100 prediction như vậy sẽ đúng 90 lần. Muốn interpretation đó đáng tin, mô hình (model / 모델) cần **calibration** tốt.
 
+> **Chuyển mạch:** Trong **Mathematics for Artificial Intelligence**, **Statistics: từ mẫu (sample / 표본) tới population** tiếp nhận điểm tựa từ **Xác suất (probability / 확률): ngôn ngữ (language / 언어) của bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tối ưu hóa (optimization / 최적화): biến mục tiêu (objective / 목표) thành parameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Statistics: từ mẫu (sample / 표본) tới population
 
 Machine học tập (learning / 학습) train trên finite dataset nhưng muốn hoạt động trên unseen cases. Đây là statistical bài toán (problem / 문제).
@@ -203,6 +210,8 @@ Khoảng cách giữa huấn luyện (training / 학습) hiệu năng (performan
 
 Statistics vì vậy không chỉ dùng để “vẽ chart dữ liệu (data / 데이터)”. Nó là nền để biết một kết luận học từ mẫu (sample / 표본) có đáng tin trên population hay không.
 
+> **Chuyển mạch:** Ở chặng này của **Mathematics for Artificial Intelligence**, **Tối ưu hóa (optimization / 최적화): biến mục tiêu (objective / 목표) thành parameters** tiếp nhận điểm tựa từ **Statistics: từ mẫu (sample / 표본) tới population** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thông tin (information / 정보) lý thuyết (theory / 이론): bất định (uncertainty / 불확실성) và thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tối ưu hóa (optimization / 최적화): biến mục tiêu (objective / 목표) thành parameters
 
 Một mô hình (model / 모델) kiến trúc (architecture / 아키텍처) xác định hypothesis không gian (space / 공간). hàm mất mát (loss function / 손실 함수) xác định mô hình (model / 모델) hành vi (behavior / 동작) nào được thưởng/phạt. tối ưu hóa (optimization / 최적화) tìm parameters đạt mục tiêu (objective / 목표) tốt hơn.
@@ -224,6 +233,8 @@ Term đầu fit dữ liệu (data / 데이터). `Ω(θ)` có thể regularize m�
 Tối ưu hóa (optimization / 최적화) không đảm bảo mục tiêu (objective / 목표) đại diện đúng real-world goal. Nếu hàm mất mát (loss function / 손실 함수) không encode đúng điều ta quan tâm, optimizer có thể làm rất tốt một mục tiêu (objective / 목표) sai.
 
 Đây là liên kết (connection / 연결) giữa Mathematics và AI an toàn (safety / 안전): specification của mục tiêu (objective / 목표) quan trọng không kém khả năng optimize.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mathematics for Artificial Intelligence**, **Thông tin (information / 정보) lý thuyết (theory / 이론): bất định (uncertainty / 불확실성) và thông tin (information / 정보)** tiếp nhận điểm tựa từ **Tối ưu hóa (optimization / 최적화): biến mục tiêu (objective / 목표) thành parameters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình học (geometry / 기하학) của high-dimensional spaces** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thông tin (information / 정보) lý thuyết (theory / 이론): bất định (uncertainty / 불확실성) và thông tin (information / 정보)
 
@@ -255,6 +266,8 @@ D_{KL}(p\|q)=\sum_x p(x)\log\frac{p(x)}{q(x)}
 
 Thông tin (information / 정보) lý thuyết (theory / 이론) giúp giải thích vì sao log xác suất (probability / 확률) và entropy xuất hiện liên tục trong Generative AI.
 
+> **Chuyển mạch:** Trong **Mathematics for Artificial Intelligence**, **Hình học (geometry / 기하학) của high-dimensional spaces** tiếp nhận điểm tựa từ **Thông tin (information / 정보) lý thuyết (theory / 이론): bất định (uncertainty / 불확실성) và thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Numerical Computation: công thức đúng vẫn có thể tính sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hình học (geometry / 기하학) của high-dimensional spaces
 
 AI hiện đại sống trong high-dimensional véc-tơ (vector / 벡터) spaces. Trực giác 2D/3D đôi khi không còn đúng.
@@ -268,6 +281,8 @@ Khi dimension tăng:
 - tối ưu hóa (optimization / 최적화) landscape trở nên phức tạp.
 
 Đây là background của curse of dimensionality và lý do biểu diễn (representation / 표현) học tập (learning / 학습) quan trọng: ta muốn tìm một không gian (space / 공간) nơi cấu trúc (structure / 구조) relevant trở nên dễ xử lý hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Mathematics for Artificial Intelligence**, **Numerical Computation: công thức đúng vẫn có thể tính sai** tiếp nhận điểm tựa từ **Hình học (geometry / 기하학) của high-dimensional spaces** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Discrete Mathematics và Graphs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Numerical Computation: công thức đúng vẫn có thể tính sai
 
@@ -295,6 +310,8 @@ c=\max_j z_j
 
 Những issue như overflow, underflow, precision, conditioning và accumulation lỗi (error / 오류) trở nên rất quan trọng khi train mô hình (model / 모델) lớn bằng FP16/BF16 hoặc quantized suy luận (inference / 추론).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mathematics for Artificial Intelligence**, **Discrete Mathematics và Graphs** tiếp nhận điểm tựa từ **Numerical Computation: công thức đúng vẫn có thể tính sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một example nối các nhánh toán: nhị phân (binary / 이진) classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Discrete Mathematics và Graphs
 
 Không phải AI chỉ dùng continuous mathematics. tìm kiếm (search / 검색), lô-gic (logic / 논리), đồ thị (graph / 그래프) algorithms, combinatorics và ràng buộc (constraint / 제약조건) solving dựa mạnh vào discrete mathematics.
@@ -310,6 +327,8 @@ Tìm kiếm (search / 검색) cây (tree / 트리), planning đồ thị (graph 
 Transformer cuối cùng vẫn chạy trên đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스) rời rạc ở đầu vào (input / 입력)/đầu ra (output / 출력), dù nội bộ (internal / 내부) computation dùng continuous vectors.
 
 AI vì vậy nằm ở intersection của discrete và continuous computation.
+
+> **Chuyển mạch:** Trong **Mathematics for Artificial Intelligence**, **Discrete Mathematics và Graphs** cho ta quy tắc; **Một example nối các nhánh toán: nhị phân (binary / 이진) classification** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Một example hiện đại: Transformer Attention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một example nối các nhánh toán: nhị phân (binary / 이진) classification
 
@@ -345,6 +364,8 @@ Statistics đánh giá mô hình (model / 모델) có generalize ngoài huấn l
 
 Chỉ một mô hình (model / 모델) đơn giản đã cho thấy tuyến tính (linear / 선형) Algebra, xác suất (probability / 확률), thông tin (information / 정보) lý thuyết (theory / 이론), Calculus, tối ưu hóa (optimization / 최적화) và Statistics cùng làm việc.
 
+> **Chuyển mạch:** Ở chặng này của **Mathematics for Artificial Intelligence**, **Một example nối các nhánh toán: nhị phân (binary / 이진) classification** cho ta quy tắc; **Một example hiện đại: Transformer Attention** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Thứ tự học toán cho AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Một example hiện đại: Transformer Attention
 
 Scaled dot-product attention:
@@ -366,6 +387,8 @@ Nhân weights với `V` tạo weighted combination của giá trị (value / 값
 Huấn luyện (training / 학습) toàn mô-đun (module / 모듈) dựa vào Calculus/backpropagation và tối ưu hóa (optimization / 최적화).
 
 Như vậy công thức attention không phải một magic khối (block / 블록). Nó là composition của những mathematical operations đã quen.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mathematics for Artificial Intelligence**, **Một example hiện đại: Transformer Attention** cho ta quy tắc; **Thứ tự học toán cho AI** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự học toán cho AI
 
@@ -390,6 +413,8 @@ flowchart TD
 
 Không cần “học xong toàn bộ toán” rồi mới học AI. Cách hiệu quả hơn là học concept toán đúng lúc AI cần nó, nhưng vẫn có chapter riêng để xây understanding sâu và tránh kiến thức rời rạc.
 
+> **Chuyển mạch:** Trong **Mathematics for Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thứ tự học toán cho AI** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Có thể nén vai trò của mathematics trong AI thành:
@@ -404,6 +429,8 @@ Information Theory → uncertainty, likelihood & representation
 Numerical Methods → make mathematics executable on real hardware
 Discrete Math    → structure, logic, graph & search
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Mathematics for Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -423,10 +450,12 @@ Mô hình (model / 모델) score chỉ trở thành interpretable confidence dư
 
 Floating-point limitations, overflow, precision và hardware kernels có thể làm numerical hành vi (behavior / 동작) khác kỳ vọng lý thuyết.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mathematics for Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Toán trong AI không nên học như một prerequisite tách rời. Mỗi chapter sau sẽ quay lại các công cụ này trong ngữ cảnh (context / 맥락): tuyến tính (linear / 선형) Algebra khi học embeddings/attention, xác suất (probability / 확률) khi học classification và generative các mô hình (models / 모델들), Calculus khi học backpropagation, Statistics khi học evaluation/generalization, thông tin (information / 정보) lý thuyết (theory / 이론) khi học ngôn ngữ (language / 언어) modeling, và tối ưu hóa (optimization / 최적화) khi học huấn luyện (training / 학습)/alignment.
 
 Xem lại: [Problem Representation](../00_foundations/03_problem_representation.md) và [AI vs ML vs DL vs Generative AI](../00_foundations/05_ai_vs_ml_vs_dl_vs_generative_ai.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 linear algebra for ai](./01_linear_algebra_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình
 
-> **Mạch đọc:** Đặt **mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục tiêu của Compression** sang **Low-Rank Factorization**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu của Compression** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Low-Rank Factorization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Nén mô hình (model compression / 모델 압축)** là khái niệm bao trùm các kỹ thuật giảm bộ nhớ (memory / 메모리), compute, bandwidth hoặc độ trễ (latency / 지연 시간) trong khi vẫn giữ chất lượng đủ tốt cho triển khai (deployment / 배포) mục tiêu (target / 대상). Quantization, pruning và distillation là ba nhóm lớn, nhưng compression còn bao gồm low-rank factorization, parameter sharing, đơn giản hóa kiến trúc và tối ưu theo thời gian chạy (runtime / 런타임) cụ thể.
 
@@ -25,6 +24,8 @@ startup time
 
 Các mục tiêu này không hoàn toàn đồng nhất. Giảm parameter count chưa chắc giảm độ trễ (latency / 지연 시간) nếu tải công việc (workload / 워크로드) vẫn bị giới hạn bởi bandwidth hoặc kernel chưa tối ưu.
 
+> **Chuyển mạch:** Trong **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Low-Rank Factorization** tiếp nhận điểm tựa từ **Mục tiêu của Compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weight Sharing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Low-Rank Factorization
 
 Nếu weight ma trận (matrix / 행렬) `W` có thể được xấp xỉ bằng rank thấp:
@@ -39,11 +40,15 @@ SVD cho trực giác rằng nhiều phép biến đổi có **effective rank** t
 
 Low-rank adaptation như LoRA dùng ý tưởng liên quan, nhưng mục tiêu chính của LoRA là parameter-efficient fine-tuning, không mặc định là triển khai (deployment / 배포) compression.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Weight Sharing** tiếp nhận điểm tựa từ **Low-Rank Factorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết kế lại kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Weight Sharing
 
 Nhiều weight có thể dùng chung một giá trị (value / 값) hoặc parameter khối (block / 블록). Cách này giúp giảm lưu trữ (storage / 저장소) nhưng có thể làm tối ưu hóa (optimization / 최적화) khó hơn.
 
 Compression truyền thống có véc-tơ (vector / 벡터) quantization hoặc codebook; một số hiện đại (modern / 현대적) kiến trúc (architecture / 아키텍처) cũng dùng mô-đun (module / 모듈) lặp lại hoặc dùng chung (shared / 공유) parameter.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Thiết kế lại kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Weight Sharing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quantization, Pruning và Distillation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thiết kế lại kiến trúc (architecture / 아키텍처)
 
@@ -59,6 +64,8 @@ mixture routing
 
 Một mô hình nhỏ được thiết kế đúng mục đích có thể tốt hơn một mô hình lớn bị compress quá mạnh.
 
+> **Chuyển mạch:** Trong **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Quantization, Pruning và Distillation** tiếp nhận điểm tựa từ **Thiết kế lại kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weight Compression và thời gian chạy (runtime / 런타임) bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quantization, Pruning và Distillation
 
 Ba kỹ thuật này tác động vào các chiều khác nhau:
@@ -70,6 +77,8 @@ Distillation  → một hàm xấp xỉ được học với mô hình nhỏ hơ
 ```
 
 Có thể kết hợp chúng, nhưng lỗi do từng bước cũng có thể cộng dồn.
+
+> **Chuyển mạch:** Ở chặng này của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Weight Compression và thời gian chạy (runtime / 런타임) bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Quantization, Pruning và Distillation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compression Ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Weight Compression và thời gian chạy (runtime / 런타임) bộ nhớ (memory / 메모리)
 
@@ -83,6 +92,8 @@ Weight tệp (file / 파일) nhỏ không bảo đảm thời gian chạy (runti
 
 Với long-context LLM serving, KV bộ nhớ đệm (cache / 캐시) có thể chiếm bộ nhớ (memory / 메모리) nhiều hơn weights.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Compression Ratio** tiếp nhận điểm tựa từ **Weight Compression và thời gian chạy (runtime / 런타임) bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pareto Frontier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Compression Ratio
 
 \[
@@ -90,6 +101,8 @@ Compression\ Ratio=\frac{Original\ kích thước (size / 크기)}{Compressed\ k
 \]
 
 Tỷ lệ này chỉ phản ánh lưu trữ (storage / 저장소); cần xem thêm chất lượng (quality / 품질), độ trễ (latency / 지연 시간) và chi phí (cost / 비용).
+
+> **Chuyển mạch:** Trong **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Pareto Frontier** tiếp nhận điểm tựa từ **Compression Ratio** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Benchmark trên đúng Hardware** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pareto Frontier
 
@@ -103,11 +116,15 @@ quality ↔ latency ↔ memory ↔ cost
 
 Một mô hình không Pareto-efficient nếu tồn tại mô hình khác vừa rẻ hơn vừa tốt hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Benchmark trên đúng Hardware** tiếp nhận điểm tựa từ **Pareto Frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá sau Compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Benchmark trên đúng Hardware
 
 Kết quả compression phải được benchmark trên hardware và thời gian chạy (runtime / 런타임) mục tiêu. Một INT4 kernel có thể rất nhanh trên GPU này nhưng kém hiệu quả trên CPU hoặc accelerator khác.
 
 Benchmark trong paper không thể thay thế môi trường vận hành (production / 운영 환경) benchmark.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Đánh giá sau Compression** tiếp nhận điểm tựa từ **Benchmark trên đúng Hardware** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Specialized Small mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đánh giá sau Compression
 
@@ -122,19 +139,27 @@ Evaluation cần kiểm tra:
 - an toàn (safety / 안전) ràng buộc (constraint / 제약조건);
 - độ trễ (latency / 지연 시간) và chi phí (cost / 비용).
 
+> **Chuyển mạch:** Trong **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Specialized Small mô hình (model / 모델)** tiếp nhận điểm tựa từ **Đánh giá sau Compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Edge triển khai (deployment / 배포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Specialized Small mô hình (model / 모델)
 
 Một mô hình nhỏ chuyên biệt theo lĩnh vực (domain / 도메인) kết hợp retrieval hoặc công cụ (tool / 도구) có thể vượt generic large mô hình (model / 모델) trên narrow tải công việc (workload / 워크로드) với chi phí (cost / 비용) thấp hơn nhiều.
 
 Vì vậy compression không chỉ là bước hậu xử lý sau huấn luyện (training / 학습); nó còn liên quan tới mô hình (model / 모델) selection và hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처).
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Edge triển khai (deployment / 배포)** tiếp nhận điểm tựa từ **Specialized Small mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào không nên Compression?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Edge triển khai (deployment / 배포)
 
 Thiết bị mobile hoặc embedded có ràng buộc (constraint / 제약조건) mạnh về RAM, power và thermal. Compression khi đó phải xét cùng operator hỗ trợ (support / 지원), hardware acceleration và gói (package / 패키지) kích thước (size / 크기).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Khi nào không nên Compression?** tiếp nhận điểm tựa từ **Edge triển khai (deployment / 배포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khi nào không nên Compression?
 
 Nếu suy luận (inference / 추론) volume thấp và kỹ thuật (engineering / 엔지니어링) độ phức tạp (complexity / 복잡도) cao, compression có thể không đáng. Không nên tối ưu trước khi profiling chỉ ra bottleneck thật sự.
+
+> **Chuyển mạch:** Trong **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Mô hình tư duy** gom các mảnh từ **Khi nào không nên Compression?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -143,6 +168,8 @@ Phần này chốt mental model thành một chuỗi có thể dùng lại: bố
 ```text
 Compression = giữ lại hàm hữu ích trong khi giảm chi phí vật lý để lưu trữ và thực thi nó
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -158,6 +185,10 @@ Không. Quantization chỉ là một family trong nhiều kỹ thuật compressi
 
 Không. mô hình (model / 모델), dữ liệu (data / 데이터) và thời gian chạy (runtime / 런타임) thay đổi có thể làm sự đánh đổi (trade-off / 트레이드오프) thay đổi, vì vậy cần đánh giá lại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Xem [Quantization](./06_quantization.md), [Pruning and Distillation](./07_pruning_and_distillation.md), [Latency, Throughput and Cost](./09_latency_throughput_and_cost.md) và [AI Compute](../17_ai_compute_and_infrastructure/README.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

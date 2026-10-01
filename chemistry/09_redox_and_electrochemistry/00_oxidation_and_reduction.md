@@ -1,7 +1,6 @@
 # Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa
 
-> **Mạch đọc:** Đọc **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Oxy hóa và khử luôn đi cùng nhau** sang **Chất oxy hóa và chất khử**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Oxy hóa và khử luôn đi cùng nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chất oxy hóa và chất khử** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Phản ứng oxy hóa–khử (oxidation–reduction, redox / 산화·환원)** là những biến đổi trong đó sự phân bố electron giữa các nguyên tử, ion hoặc phân tử thay đổi. Ở mức hạch toán, **oxy hóa** tương ứng với tăng số oxy hóa hoặc mất electron; **khử** tương ứng với giảm số oxy hóa hoặc nhận electron. Ở mức sâu hơn, redox là sự dịch chuyển electron giữa các trạng thái có thế hóa học khác nhau, và chính chênh lệch đó có thể được chuyển thành công điện trong pin.
 
@@ -31,6 +30,8 @@ Electron do Zn nhường ra chính là electron mà \(Cu^{2+}\) nhận. Trong m�
 
 Đây là lý do một phản ứng redox luôn gồm ít nhất hai quá trình ghép: một quá trình tạo electron theo cách ghi sổ và một quá trình tiêu thụ số electron tương ứng.
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Chất oxy hóa và chất khử** tiếp nhận điểm tựa từ **Oxy hóa và khử luôn đi cùng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số oxy hóa là công cụ hạch toán, không phải điện tích thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất oxy hóa và chất khử
 
 **Chất oxy hóa (oxidizing agent / 산화제)** làm chất khác bị oxy hóa và bản thân nó bị khử.
@@ -51,6 +52,8 @@ chất oxy hóa = nơi electron đi tới
 chất khử     = nơi electron đi ra
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Số oxy hóa là công cụ hạch toán, không phải điện tích thật** tiếp nhận điểm tựa từ **Chất oxy hóa và chất khử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc xác định số oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Số oxy hóa là công cụ hạch toán, không phải điện tích thật
 
 **Số oxy hóa (oxidation state / 산화수)** được gán bằng một quy ước tưởng tượng: electron trong mỗi liên kết được giao hoàn toàn cho nguyên tử có độ âm điện lớn hơn.
@@ -58,6 +61,8 @@ chất khử     = nơi electron đi ra
 Vì vậy số oxy hóa thường là số nguyên và rất hữu ích cho redox bookkeeping, nhưng nó không đồng nhất với điện tích cục bộ thực đo từ mật độ electron.
 
 Ví dụ trong phân tử cộng hóa trị, một nguyên tử có thể được gán số oxy hóa +3 nhưng điện tích riêng phần thực tế nhỏ hơn nhiều.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Quy tắc xác định số oxy hóa** tiếp nhận điểm tựa từ **Số oxy hóa là công cụ hạch toán, không phải điện tích thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngoại lệ của oxygen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy tắc xác định số oxy hóa
 
@@ -72,6 +77,8 @@ Các quy tắc thường dùng đều phục vụ cùng mục tiêu là giữ t�
 
 Các quy tắc này có ngoại lệ và phải hiểu từ cấu trúc liên kết thay vì học máy móc.
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Ngoại lệ của oxygen** tiếp nhận điểm tựa từ **Quy tắc xác định số oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngoại lệ của hydrogen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngoại lệ của oxygen
 
 Trong peroxide như \(H_2O_2\), mỗi O có số oxy hóa −1.
@@ -82,6 +89,8 @@ Trong \(OF_2\), fluorine âm điện hơn oxygen nên F được gán −1 và O
 
 Điều này cho thấy câu “oxygen luôn −2” chỉ là quy tắc mặc định, không phải định nghĩa.
 
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Ngoại lệ của hydrogen** tiếp nhận điểm tựa từ **Ngoại lệ của oxygen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: permanganate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngoại lệ của hydrogen
 
 Trong \(NaH\), sodium được gán +1 nên hydrogen là −1.
@@ -89,6 +98,8 @@ Trong \(NaH\), sodium được gán +1 nên hydrogen là −1.
 Hydrogen trong metal hydride vì thế có tính khử rất khác proton \(H^+\) trong acid.
 
 Số oxy hóa không chỉ là bài toán số học; nó phản ánh cách electron được quy ước phân chia trong các môi trường hóa học khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Ngoại lệ của hydrogen** cho ta quy tắc; **Ví dụ: permanganate** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Số oxy hóa trung bình và mixed valence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: permanganate
 
@@ -114,6 +125,8 @@ manganese nhận 5 electron theo cách ghi sổ và bị khử.
 
 Đây là lý do một mol permanganate trong môi trường acid có thể nhận 5 mol electron trong bán phản ứng phù hợp.
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Ví dụ: permanganate** cho ta quy tắc; **Số oxy hóa trung bình và mixed valence** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Redox không cần có oxygen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Số oxy hóa trung bình và mixed valence
 
 Một công thức có thể cho số oxy hóa trung bình không nguyên mà không có nghĩa từng nguyên tử mang “+2.5”.
@@ -123,6 +136,8 @@ Trong một số oxide kim loại chuyển tiếp, các tâm kim loại có th�
 Khi đó formal oxidation trạng thái (state / 상태) vẫn hữu ích cho hạch toán thành phần, nhưng electronic cấu trúc (structure / 구조) thật có thể phức tạp hơn.
 
 Điều này quan trọng trong vật liệu pin như các oxide kim loại chuyển tiếp, nơi trạng thái (state / 상태) of charge gắn với thay đổi trạng thái oxy hóa trung bình và đôi khi cả redox trên oxygen.
+
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Redox không cần có oxygen** tiếp nhận điểm tựa từ **Số oxy hóa trung bình và mixed valence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng cháy là redox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Redox không cần có oxygen
 
@@ -137,6 +152,8 @@ Ví dụ:
 Fe²⁺ bị oxy hóa dù phản ứng không chứa nguyên tử oxygen.
 
 Vì vậy cần dựa trên electron/số oxy hóa, không dựa vào việc có O trong công thức.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Phản ứng cháy là redox** tiếp nhận điểm tựa từ **Redox không cần có oxygen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển hydrogen cũng có thể là redox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phản ứng cháy là redox
 
@@ -164,6 +181,8 @@ nên bị khử.
 
 Electron không xuất hiện tự do trong phương trình tổng, nhưng oxidation-state bookkeeping vẫn cho thấy sự phân bố electron đã thay đổi mạnh.
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Chuyển hydrogen cũng có thể là redox** tiếp nhận điểm tựa từ **Phản ứng cháy là redox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydride transfer trong sinh hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển hydrogen cũng có thể là redox
 
 Trong hóa hữu cơ và sinh hóa, redox thường được nhận ra qua số liên kết C–H, C–O hoặc C–N thay vì electron tự do.
@@ -179,6 +198,8 @@ Ngược lại carbonyl → alcohol là quá trình khử.
 
 Đây là cầu nối giữa oxidation trạng thái (state / 상태) và ngôn ngữ cơ chế hữu cơ.
 
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Hydride transfer trong sinh hóa** tiếp nhận điểm tựa từ **Chuyển hydrogen cũng có thể là redox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oxy hóa–khử và acid–cơ sở (base / 기반) có thể ghép với nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hydride transfer trong sinh hóa
 
 Các cofactor như NAD⁺/NADH thường chuyển một đơn vị tương đương hydride \(H^-\) giữa các phân tử.
@@ -193,6 +214,8 @@ nhưng cơ chế phân tử thường không có hai electron tự do bơi trong
 
 Điều này nhắc rằng bán phản ứng là công cụ hạch toán rất mạnh, không nhất thiết là mô tả cơ chế literal.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Oxy hóa–khử và acid–cơ sở (base / 기반) có thể ghép với nhau** tiếp nhận điểm tựa từ **Hydride transfer trong sinh hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disproportionation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Oxy hóa–khử và acid–cơ sở (base / 기반) có thể ghép với nhau
 
 Nhiều bán phản ứng redox chứa \(H^+\), \(OH^-\) hoặc \(H_2O\), nên thế redox phụ thuộc pH.
@@ -206,6 +229,8 @@ O_2+4H^++4e^-\rightarrow2H_2O
 Thay đổi pH làm reaction quotient đổi và thế cân bằng dịch theo phương trình Nernst.
 
 Vì vậy redox chemistry trong nước thường không thể tách hoàn toàn khỏi acid–cơ sở (base / 기반) chemistry.
+
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Disproportionation** tiếp nhận điểm tựa từ **Oxy hóa–khử và acid–cơ sở (base / 기반) có thể ghép với nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Comproportionation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Disproportionation
 
@@ -223,6 +248,8 @@ Một phần đi xuống −2 trong nước; phần khác đi lên 0 trong oxyge
 
 Đây là **phản ứng tự oxy hóa–khử (disproportionation / 불균등화)**.
 
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Comproportionation** tiếp nhận điểm tựa từ **Disproportionation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giản đồ Latimer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Comproportionation
 
 Quá trình ngược lại xảy ra khi hai oxidation states khác nhau tạo trạng thái (state / 상태) trung gian.
@@ -237,6 +264,8 @@ M^{high}+M^{low}\rightarrow2M^{intermediate}
 
 Xu hướng disproportionation/comproportionation có thể được phân tích bằng thế điện cực hoặc giản đồ Latimer/Frost trong hóa vô cơ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Giản đồ Latimer** tiếp nhận điểm tựa từ **Comproportionation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giản đồ Frost** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giản đồ Latimer
 
 **Giản đồ Latimer (Latimer diagram)** sắp các oxidation states của một nguyên tố và ghi tiêu chuẩn (standard / 표준) reduction potentials giữa các trạng thái (state / 상태) liên tiếp.
@@ -249,6 +278,8 @@ Nó giúp suy:
 
 Không được cộng trực tiếp điện thế như enthalpy. Nếu ghép bước, phải chuyển qua \(\Delta G=-nFE\), cộng \(\Delta G\), rồi đổi lại E nếu cần.
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Giản đồ Frost** tiếp nhận điểm tựa từ **Giản đồ Latimer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế redox là thước đo khuynh hướng nhận electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giản đồ Frost
 
 **Giản đồ Frost (Frost diagram)** biểu diễn một đại lượng liên quan \(-nE^\circ\) hoặc free-energy mức (level / 수준) theo oxidation trạng thái (state / 상태).
@@ -258,6 +289,8 @@ Không được cộng trực tiếp điện thế như enthalpy. Nếu ghép b�
 Độ cong của các điểm giúp trực quan hóa disproportionation/comproportionation tendencies.
 
 Đây là ví dụ cách redox bookkeeping được chuyển thành năng lượng (energy / 에너지) landscape.
+
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Thế redox là thước đo khuynh hướng nhận electron** tiếp nhận điểm tựa từ **Giản đồ Frost** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất oxy hóa mạnh và chất khử mạnh là khái niệm tương đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thế redox là thước đo khuynh hướng nhận electron
 
@@ -273,6 +306,8 @@ Thế càng dương trong cùng điều kiện chuẩn, dạng Ox thường có 
 
 Nhưng potential không phải “lực hút electron tuyệt đối”; nó phụ thuộc solvent, pH, concentration/activity và tham chiếu (reference / 참조) convention.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Chất oxy hóa mạnh và chất khử mạnh là khái niệm tương đối** tiếp nhận điểm tựa từ **Thế redox là thước đo khuynh hướng nhận electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron transfer và bond-making có thể đồng thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất oxy hóa mạnh và chất khử mạnh là khái niệm tương đối
 
 Một oxidant mạnh trong nước có thể không hoạt động giống vậy trong solvent khác hoặc ở pH khác.
@@ -287,6 +322,8 @@ pH bao nhiêu?
 hoạt độ/concentration nào?
 điện cực tham chiếu nào?
 ```
+
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Electron transfer và bond-making có thể đồng thời** tiếp nhận điểm tựa từ **Chất oxy hóa mạnh và chất khử mạnh là khái niệm tương đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Outer-sphere và inner-sphere electron transfer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Electron transfer và bond-making có thể đồng thời
 
@@ -304,6 +341,8 @@ PCET quan trọng trong:
 
 Nó cho thấy acid–cơ sở (base / 기반) và redox là hai mặt liên kết của cùng electron/proton energetics.
 
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Outer-sphere và inner-sphere electron transfer** tiếp nhận điểm tựa từ **Electron transfer và bond-making có thể đồng thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Marcus lý thuyết (theory / 이론) — vì sao electron transfer vẫn có barrier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Outer-sphere và inner-sphere electron transfer
 
 Trong **chuyển electron ngoài cầu (outer-sphere electron transfer)**, coordination shells của hai redox centers phần lớn giữ nguyên; electron transfer xảy ra mà không cần ligand cầu nối trực tiếp.
@@ -313,6 +352,8 @@ Trong **chuyển electron nội cầu (inner-sphere electron transfer)**, một 
 Cơ chế electron transfer ảnh hưởng tốc độ dù thermodynamic potential giống nhau.
 
 Đây là cầu nối từ redox thermodynamics sang chemical kinetics.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Marcus lý thuyết (theory / 이론) — vì sao electron transfer vẫn có barrier** tiếp nhận điểm tựa từ **Outer-sphere và inner-sphere electron transfer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hô hấp tế bào là chuỗi redox được chia nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Marcus lý thuyết (theory / 이론) — vì sao electron transfer vẫn có barrier
 
@@ -329,6 +370,8 @@ Trong vùng thông thường, driving force mạnh hơn làm barrier giảm. lý
 
 Đây là ví dụ sâu cho việc “electron transfer” cũng là kinetics bài toán (problem / 문제), không phải chỉ potential comparison.
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Marcus lý thuyết (theory / 이론) — vì sao electron transfer vẫn có barrier** xác định đầu vào; **Hô hấp tế bào là chuỗi redox được chia nhỏ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quang hợp dùng photon để “nâng” electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hô hấp tế bào là chuỗi redox được chia nhỏ
 
 Nếu glucose bị oxy hóa trực tiếp bằng oxygen như cháy, phần lớn free năng lượng (energy / 에너지) giải phóng nhanh thành nhiệt.
@@ -339,6 +382,8 @@ Chuỗi truyền electron dùng free-energy drop để bơm proton và tạo **�
 
 Đây là kỹ thuật (engineering / 엔지니어링) ở cấp phân tử: redox năng lượng (energy / 에너지) được thu từng bước thay vì giải phóng ồ ạt.
 
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Hô hấp tế bào là chuỗi redox được chia nhỏ** xác định đầu vào; **Quang hợp dùng photon để “nâng” electron** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ăn mòn là redox được tách không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quang hợp dùng photon để “nâng” electron
 
 Trong photosynthesis, photon tạo excited states có reducing/oxidizing power khác ground trạng thái (state / 상태).
@@ -346,6 +391,8 @@ Trong photosynthesis, photon tạo excited states có reducing/oxidizing power k
 Electron được lấy từ water và cuối cùng dùng để tạo reducing equivalents cho carbon fixation.
 
 Vì vậy quang hóa có thể thúc đẩy redox tiến trình (process / 프로세스) không thuận lợi ở ground-state conditions.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Ăn mòn là redox được tách không gian** tiếp nhận điểm tựa từ **Quang hợp dùng photon để “nâng” electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pin — tách hai bán phản ứng để thu công** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ăn mòn là redox được tách không gian
 
@@ -361,6 +408,8 @@ Electron đi qua kim loại; ions đi qua electrolyte film.
 
 Ăn mòn vì thế là một **pin Galvani tự phát nhỏ** xuất hiện trên cùng vật liệu.
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Pin — tách hai bán phản ứng để thu công** tiếp nhận điểm tựa từ **Ăn mòn là redox được tách không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Redox trong vật liệu pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pin — tách hai bán phản ứng để thu công
 
 Nếu oxidant và reductant phản ứng trực tiếp, electron transfer diễn ra cục bộ và năng lượng (energy / 에너지) chủ yếu thành heat.
@@ -368,6 +417,8 @@ Nếu oxidant và reductant phản ứng trực tiếp, electron transfer diễn
 Nếu tách chúng vào hai điện cực và buộc electron qua bên ngoài (external / 외부) circuit, có thể thu electrical công việc (work / 작업).
 
 Đây là bước chuyển từ redox chemistry sang electrochemistry.
+
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Redox trong vật liệu pin** tiếp nhận điểm tựa từ **Pin — tách hai bán phản ứng để thu công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Redox buffering trong môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Redox trong vật liệu pin
 
@@ -378,6 +429,8 @@ Ví dụ cathode oxide có thể thay average oxidation trạng thái (state / �
 Nhưng ở một số vật liệu, oxygen redox hoặc delocalized band states cũng tham gia; simple integer oxidation-state picture có giới hạn.
 
 Đây là lý do hiện đại (modern / 현대적) battery chemistry cần cả redox bookkeeping lẫn electronic-structure lý thuyết (theory / 이론).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Redox buffering trong môi trường** tiếp nhận điểm tựa từ **Redox trong vật liệu pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eh và pH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Redox buffering trong môi trường
 
@@ -398,6 +451,8 @@ Trình tự thực phụ thuộc kinetics, microbes và vận chuyển (transpor
 
 Speciation của Fe, Mn, S và contaminants có thể thay mạnh theo redox trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Eh và pH** tiếp nhận điểm tựa từ **Redox buffering trong môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Eh và pH
 
 Trong aqueous geochemistry, người ta thường dùng **thế oxy hóa–khử (Eh)** cùng pH để mô tả môi trường.
@@ -405,6 +460,8 @@ Trong aqueous geochemistry, người ta thường dùng **thế oxy hóa–khử
 Giản đồ Pourbaix biểu diễn miền ổn định nhiệt động của species theo Eh–pH.
 
 Nhưng Pourbaix diagram không cho tốc độ corrosion hay passivation kinetics; nó chỉ cho thermodynamic stability domains.
+
+> **Chuyển mạch:** Ở chặng này của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Eh và pH** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -428,6 +485,8 @@ Không. Potential là thermodynamic; tốc độ còn phụ thuộc activation/r
 
 Không. Nhiều redox couples phụ thuộc pH và có proton-coupled electron transfer.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Redox có thể được nhìn qua bốn tầng:
@@ -443,4 +502,4 @@ Từ nền này, pin Galvani, điện phân, ăn mòn và sinh năng lượng tr
 
 Xem tiếp: [Cân bằng phản ứng oxy hóa–khử](./01_balancing_redox_reactions.md) và [Pin Galvani](./02_galvanic_cells.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 balancing redox reactions](./01_balancing_redox_reactions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Thư viện kiến thức Khoa học máy tính
 
-> **Mạch đọc:** Đọc **Thư viện kiến thức Khoa học máy tính** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bản đồ Nền tảng → Nâng cao** sang **Thư viện AI chuyên sâu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner cấp domain của **Thư viện kiến thức Khoa học máy tính**. **Bản đồ Nền tảng → Nâng cao** xác định prerequisite và câu hỏi cần theo dõi; sau đó **Thư viện AI chuyên sâu** mở rộng sang nhánh có owner riêng. Các file trong `90_connections/` chỉ điều phối đường nối và phải quay về owner cơ chế được liên kết.
 
 `computer_science/` được tổ chức thành hai lớp kiến thức rõ ràng:
 
@@ -33,8 +32,7 @@ Bảng này giải thích cách hai lớp của thư viện nối với nhau: n�
 | Xã hội, Đạo đức & Nghề nghiệp | [`basic/12_society_ethics_profession`](./basic/12_society_ethics_profession/) | [`12_society_ethics_profession/advanced`](./12_society_ethics_profession/advanced/README.md) |
 | Kết nối xuyên lĩnh vực | [`basic/90_connections`](./basic/90_connections/) | [`90_connections/advanced`](./90_connections/advanced/README.md) |
 
-
-> **Chuyển mạch:** Từ **Bản đồ Nền tảng → Nâng cao**, ta sang **Thư viện AI chuyên sâu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bản đồ Nền tảng → Nâng cao cho biết prerequisite dùng chung; Thư viện AI chuyên sâu chỉ mở rộng nhánh AI có owner riêng. Vì vậy phần tiếp theo chuyển từ bản đồ cấu trúc sang cách chọn tuyến học.
 
 ## Thư viện AI chuyên sâu
 
@@ -46,8 +44,7 @@ Thư viện này đi theo quan hệ phụ thuộc khái niệm và mở rộng t
 
 > **Naming ghi chú (note / 노트):** `02_artificial_intelligence/` là thư viện AI chuyên sâu, `02_computer_architecture/` là Computer kiến trúc (architecture / 아키텍처), còn `10_ai_foundations/` là tuyến AI foundations nằm trong bản đồ CS. README giữ ranh giới (boundary / 경계) rõ ràng; numbering hiện tại vẫn có thể gây nhầm khi nhìn cây (tree / 트리) trực tiếp và chỉ nên đổi trong một di chuyển (migration / 마이그레이션) có kế hoạch.
 
-
-> **Chuyển mạch:** Từ **Thư viện AI chuyên sâu**, ta sang **Cách học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Các tuyến học biến bản đồ thư viện thành lựa chọn theo vấn đề: đi từ tầng thấp lên ứng dụng, theo durability/consistency, theo concurrency/ordering hoặc theo reliability/security. Từ đó mới cần đến quy tắc prerequisite của chapter nâng cao.
 
 ## Cách học
 
@@ -131,8 +128,7 @@ incident containment / recovery
 
 Tuyến (route / 경로) này nối bảo mật (security / 보안) với độ tin cậy (reliability / 신뢰성) thay vì coi chúng là hai môn rời rạc. Một điều khiển (control / 제어) bảo mật có thể tạo phụ thuộc (dependency / 의존성) availability; một thử lại (retry / 재시도) chính sách (policy / 정책) độ tin cậy (reliability / 신뢰성) có thể trở thành abuse amplifier nếu thiếu tỷ lệ (rate / 비율) limit hoặc idempotency.
 
-
-> **Chuyển mạch:** Từ **Cách học**, ta sang **Quy tắc phụ thuộc (dependency / 의존성) trong chapter nâng cao** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi chọn tuyến, quy tắc phụ thuộc buộc mỗi chapter giải thích prerequisite hoặc trỏ về owner cơ chế. Phần kiểm tra coverage dùng quy tắc đó để tìm gap, assumption ẩn và failure mode còn thiếu.
 
 ## Quy tắc phụ thuộc (dependency / 의존성) trong chapter nâng cao
 
@@ -153,8 +149,7 @@ Một concept advanced nên cố gắng trả lời tự nhiên chuỗi câu h�
 
 Không cần ép mọi chapter thành template cứng, nhưng nếu một phần advanced không tạo thêm khả năng lập luận (reasoning / 추론) theo các câu hỏi trên thì chưa đủ lý do để tồn tại như một chapter riêng.
 
-
-> **Chuyển mạch:** Từ **Quy tắc phụ thuộc (dependency / 의존성) trong chapter nâng cao**, ta sang **Nguyên tắc kiểm tra (audit / 감사) coverage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Coverage chỉ có ý nghĩa khi đường lập luận đi từ foundation tới internals, failure, hiệu năng và bằng chứng vận hành. Nguyên tắc biên soạn tiếp theo dùng chuỗi đó để quyết định một chapter mới có tạo thêm mô hình tư duy hay chỉ trùng lặp.
 
 ## Nguyên tắc kiểm tra (audit / 감사) coverage
 
@@ -175,8 +170,7 @@ Bằng chứng vận hành (production evidence / 운영 증거) có thể là c
 
 Cấu trúc dữ liệu và thuật toán (DSA) đã có phần nâng cao riêng theo cùng mô hình và đi sâu vào hiện thực (implementation / 구현) bằng C, Java và JavaScript. Các lĩnh vực (domain / 도메인) khác tiếp tục được cải thiện trong chính `computer_science/`, không tách mạng (network / 네트워크), phân tán (distributed / 분산) các hệ thống (systems / 시스템들), bảo mật (security / 보안), độ tin cậy (reliability / 신뢰성), hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링), tính đồng thời (concurrency / 동시성) hoặc hệ thống (system / 시스템) thiết kế (design / 설계) thành gốc (root / 루트) thư viện (library / 라이브러리) mới nếu conceptual ranh giới (boundary / 경계) hiện tại đã đủ.
 
-
-> **Chuyển mạch:** Từ **Nguyên tắc kiểm tra (audit / 감사) coverage**, ta sang **Nguyên tắc biên soạn phần nâng cao** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Coverage cho biết thư viện còn thiếu bằng chứng hoặc failure mode nào; nguyên tắc biên soạn dùng kết quả đó để giữ chapter nâng cao có cơ chế và mô hình tư duy riêng, không chỉ thêm tên công nghệ.
 
 ## Nguyên tắc biên soạn phần nâng cao
 

@@ -1,6 +1,6 @@
 # Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** Đọc **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **phụ thuộc (dependency / 의존성) map** sang **Các chapter**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các chapter** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder này xây Machine học tập (learning / 학습) từ học tập (learning / 학습) bài toán (problem / 문제) tới mô hình (model / 모델) evaluation. Mục tiêu không phải liệt kê algorithms, mà hiểu mỗi thuật toán (algorithm / 알고리즘) đang đưa **inductive độ lệch (bias / 편향)** nào vào bài toán, nó tối ưu mục tiêu (objective / 목표) gì, biểu diễn (representation / 표현) nào làm nó hoạt động tốt và dạng thất bại (failure mode / 실패 모드) nào xuất hiện khi các giả định (assumptions / 가정들) bị phá vỡ.
 
@@ -36,8 +36,7 @@ flowchart TD
 
 Đây là phụ thuộc (dependency / 의존성) khuyến nghị, không phải syllabus cứng. Ví dụ có thể đọc Clustering trước SVM nếu đang làm unsupervised bài toán (problem / 문제). Tuy nhiên `00–04` nên đọc trước phần lớn algorithms vì chúng thiết lập vocabulary về mục tiêu (target / 대상), phân phối (distribution / 분포), split, mất mát (loss / 손실) và rủi ro (risk / 위험).
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **Các chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Các chapter** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các chapter
 
@@ -81,8 +80,7 @@ flowchart TD
 
 **[15 — Model Evaluation](./15_model_evaluation.md)** tổng hợp confusion ma trận (matrix / 행렬), ROC/PR, calibration, regression/ranking metrics, confidence intervals, subgroup evaluation, online/offline evaluation và cost-sensitive quyết định (decision / 결정) making.
 
-
-> **Chuyển mạch:** Từ **Các chapter**, ta sang **mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** gom các mảnh từ **Các chapter** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển tiếp sang Neural Networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)
 
@@ -112,8 +110,7 @@ Production feedback / shift
 
 Một thuật toán (algorithm / 알고리즘) chỉ là một khối (block / 블록) trong luồng (flow / 흐름) này. Nếu dữ liệu (data / 데이터) mục tiêu (target / 대상) sai, leakage tồn tại hoặc chỉ số (metric / 지표) không phản ánh triển khai (deployment / 배포), đổi Random Forest thành neural mạng (network / 네트워크) không giải quyết nguyên nhân gốc (root cause / 근본 원인).
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)**, ta sang **Chuyển tiếp sang Neural Networks** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chuyển tiếp sang Neural Networks** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Chuyển tiếp sang Neural Networks
 
@@ -124,3 +121,5 @@ f_\theta(x),\quad L(f_\theta(x),y),\quad \theta\leftarrow\theta-\eta\nabla_\thet
 \]
 
 Điểm mới là representation và function composition được học qua nhiều layers. Linear/Logistic Regression trở thành building block; Optimization/Calculus trở thành backpropagation/training dynamics; generalization/evaluation vẫn giữ nguyên vai trò.
+
+> **Bàn giao:** Sau **Chuyển tiếp sang Neural Networks**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất
 
-> **Mạch đọc:** Đọc **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao Hóa học cần mol?** sang **Lượng chất là một đại lượng vật lý riêng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao Hóa học cần mol?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lượng chất là một đại lượng vật lý riêng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Mol (mole / 몰)** là đơn vị SI của **lượng chất (amount of substance / 물질량)**. Một mol chứa chính xác \(N_A=6.02214076\times10^{23}\) thực thể được chỉ định. **Hằng số Avogadro (Avogadro constant / 아보가드로 상수)** là hệ số chuyển đổi giữa số thực thể vi mô và lượng chất ở thang vĩ mô.
 
@@ -28,6 +28,8 @@ số mol
 
 Vì vậy mol không phải một chủ đề riêng đứng giữa chương trình Hóa học. Nó là ngôn ngữ số lượng dùng xuyên suốt hóa lượng, dung dịch, khí, nhiệt động lực học, điện hóa, hóa phân tích và hóa sinh.
 
+> **Chuyển mạch:** Trong **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Lượng chất là một đại lượng vật lý riêng** tiếp nhận điểm tựa từ **Vì sao Hóa học cần mol?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một mol không có một khối lượng cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lượng chất là một đại lượng vật lý riêng
 
 Trong SI, **lượng chất** được ký hiệu là \(n\) và có đơn vị mol. Nó không đồng nhất với khối lượng, thể tích hay số hạt, dù có thể chuyển đổi giữa các đại lượng đó khi biết đủ thông tin.
@@ -54,6 +56,8 @@ N=nN_A
 
 Nếu chỉ viết “1 mol oxygen” thì câu đó có thể mơ hồ: một mol nguyên tử O và một mol phân tử \(O_2\) là hai lượng vật chất khác nhau về thành phần nguyên tử.
 
+> **Chuyển mạch:** Ở chặng này của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Một mol không có một khối lượng cố định** tiếp nhận điểm tựa từ **Lượng chất là một đại lượng vật lý riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng mol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Một mol không có một khối lượng cố định
 
 Một mol của mọi loại thực thể đều chứa cùng số lượng thực thể, nhưng khối lượng mỗi thực thể khác nhau nên khối lượng của một mol cũng khác nhau.
@@ -61,6 +65,8 @@ Một mol của mọi loại thực thể đều chứa cùng số lượng th�
 Một mol nguyên tử Fe có khối lượng khoảng 55.85 g, trong khi một mol phân tử \(H_2\) chỉ khoảng 2.016 g. Điều này giống một tá quả bóng tennis và một tá quả bowling có cùng số lượng nhưng khối lượng khác nhau.
 
 Do đó mol là **đơn vị đếm**, không phải đơn vị khối lượng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Khối lượng mol** tiếp nhận điểm tựa từ **Một mol không có một khối lượng cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao giá trị số của khối lượng nguyên tử và khối lượng mol thường giống nhau?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khối lượng mol
 
@@ -116,6 +122,8 @@ n_O=n_{H_2O}
 
 Điều này minh họa rằng chỉ số dưới trong công thức hóa học cũng là một tỉ lệ hạt và do đó cũng là một tỉ lệ mol.
 
+> **Chuyển mạch:** Trong **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Vì sao giá trị số của khối lượng nguyên tử và khối lượng mol thường giống nhau?** tiếp nhận điểm tựa từ **Khối lượng mol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hằng số Avogadro là giá trị chính xác trong SI hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao giá trị số của khối lượng nguyên tử và khối lượng mol thường giống nhau?
 
 Khối lượng nguyên tử tương đối và khối lượng mol được xây dựng sao cho cùng một cấu trúc hạt có giá trị số rất gần nhau khi đổi từ đơn vị khối lượng nguyên tử sang g/mol.
@@ -128,6 +136,8 @@ Ví dụ carbon có khối lượng nguyên tử tương đối khoảng 12.01, 
 
 Điều này không có nghĩa một nguyên tử carbon nặng 12.01 g. Một nguyên tử riêng lẻ nhẹ hơn rất nhiều; 12.01 g là khối lượng của khoảng \(6.022\times10^{23}\) nguyên tử carbon theo thành phần đồng vị tự nhiên tương ứng.
 
+> **Chuyển mạch:** Ở chặng này của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Hằng số Avogadro là giá trị chính xác trong SI hiện đại** tiếp nhận điểm tựa từ **Vì sao giá trị số của khối lượng nguyên tử và khối lượng mol thường giống nhau?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mol và phương trình hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hằng số Avogadro là giá trị chính xác trong SI hiện đại
 
 Từ năm 2019, SI định nghĩa mol bằng cách ấn định chính xác:
@@ -139,6 +149,8 @@ N_A=6.02214076\times10^{23}\;mol^{-1}
 Do đó hằng số Avogadro không còn là một đại lượng có độ không đảm bảo thực nghiệm theo nghĩa định nghĩa đơn vị. Tuy nhiên những đại lượng dùng cùng nó — chẳng hạn khối lượng mol của một mẫu thực, độ tinh khiết hay thành phần đồng vị — vẫn có thể có độ không đảm bảo.
 
 Điểm này quan trọng trong đo lường: **một hằng số chuyển đổi chính xác không làm toàn bộ phép đo trở nên chính xác tuyệt đối**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Mol và phương trình hóa học** tiếp nhận điểm tựa từ **Hằng số Avogadro là giá trị chính xác trong SI hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỉ lệ mol là cầu nối trong hóa lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mol và phương trình hóa học
 
@@ -162,6 +174,8 @@ hoặc:
 
 Không được đọc thành “2 g H₂ + 1 g O₂”, vì hệ số phản ứng là tỉ lệ số hạt hay số mol, không phải tỉ lệ khối lượng.
 
+> **Chuyển mạch:** Trong **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Tỉ lệ mol là cầu nối trong hóa lượng** tiếp nhận điểm tựa từ **Mol và phương trình hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mol và dung dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tỉ lệ mol là cầu nối trong hóa lượng
 
 Giả sử có 3.0 mol \(O_2\) và hydrogen dư. Từ phương trình trên:
@@ -177,6 +191,8 @@ nên lượng nước lý thuyết là:
 \]
 
 Đây chính là lô-gic (logic / 논리) của **hóa lượng (stoichiometry / 화학량론)**: chuyển mọi đại lượng về mol, dùng tỉ lệ phản ứng, rồi chuyển mol sản phẩm sang đại lượng cần tìm.
+
+> **Chuyển mạch:** Ở chặng này của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Mol và dung dịch** tiếp nhận điểm tựa từ **Tỉ lệ mol là cầu nối trong hóa lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mol và khí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mol và dung dịch
 
@@ -200,6 +216,8 @@ n=0.1000\times0.02500=2.500\times10^{-3}\;mol
 
 Lô-gic (logic / 논리) này là nền tảng của chuẩn độ, cân bằng acid–cơ sở (base / 기반) và hầu hết phép pha dung dịch định lượng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Mol và khí** tiếp nhận điểm tựa từ **Mol và dung dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mol electron và điện hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mol và khí
 
 Với khí lý tưởng:
@@ -216,6 +234,8 @@ n=\frac{PV}{RT}
 
 Điều này không có nghĩa “một mol luôn chiếm 22.4 L”. Giá trị thể tích mol phụ thuộc nhiệt độ, áp suất và mức độ khí gần lý tưởng đến đâu. Con số khoảng 22.4 L/mol chỉ gắn với một bộ điều kiện chuẩn lịch sử cụ thể.
 
+> **Chuyển mạch:** Trong **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Mol electron và điện hóa** tiếp nhận điểm tựa từ **Mol và khí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mol photon và quang hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mol electron và điện hóa
 
 Điện hóa cũng dùng mol. Một mol electron mang điện lượng:
@@ -227,6 +247,8 @@ F=N_Ae\approx96485\;C/mol
 với \(F\) là **hằng số Faraday (Faraday constant / 패러데이 상수)**.
 
 Nếu một phản ứng cần hai electron cho mỗi ion kim loại, điện lượng truyền qua có thể được đổi thành mol electron rồi thành mol sản phẩm. Vì thế mol nối trực tiếp hóa lượng với dòng điện và pin.
+
+> **Chuyển mạch:** Ở chặng này của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Mol photon và quang hóa** tiếp nhận điểm tựa từ **Mol electron và điện hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tích thứ nguyên — cách tránh học thuộc công thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mol photon và quang hóa
 
@@ -243,6 +265,8 @@ E_{mol}=N_Ah\nu
 \]
 
 Điều này hữu ích trong quang hóa và quang phổ vì ta chuyển từ mô tả lượng tử từng photon sang năng lượng mol ở thang phòng thí nghiệm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Phân tích thứ nguyên — cách tránh học thuộc công thức** tiếp nhận điểm tựa từ **Mol photon và quang hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thang kích thước: vì sao số Avogadro lớn đến vậy?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân tích thứ nguyên — cách tránh học thuộc công thức
 
@@ -262,11 +286,15 @@ Sau đó nếu cần số đơn vị công thức:
 
 Cách viết này biến bài toán thành một chuỗi ánh xạ giữa các đại lượng thay vì đoán công thức nào cần dùng.
 
+> **Chuyển mạch:** Trong **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Thang kích thước: vì sao số Avogadro lớn đến vậy?** tiếp nhận điểm tựa từ **Phân tích thứ nguyên — cách tránh học thuộc công thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lượng chất khác với số lượng hạt theo cách nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thang kích thước: vì sao số Avogadro lớn đến vậy?
 
 Một nguyên tử có kích thước điển hình khoảng \(10^{-10}\) m và khối lượng khoảng \(10^{-27}\) đến \(10^{-25}\) kg. Nếu chỉ lấy vài triệu phân tử, tổng khối lượng vẫn quá nhỏ để cân bằng dụng cụ thông thường.
 
 Số Avogadro lớn vì một lượng vật chất quen thuộc trong đời sống chứa số lượng hạt khổng lồ. Mol không làm thế giới vi mô “lớn lên”; nó chỉ chọn một đơn vị đếm phù hợp để các đại lượng vi mô chuyển thành gram và liter có thể thao tác.
+
+> **Chuyển mạch:** Ở chặng này của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Lượng chất khác với số lượng hạt theo cách nào?** tiếp nhận điểm tựa từ **Thang kích thước: vì sao số Avogadro lớn đến vậy?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ tích hợp: từ viên muối tới ion trong dung dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lượng chất khác với số lượng hạt theo cách nào?
 
@@ -277,6 +305,8 @@ N=nN_A
 \]
 
 \(N\) là một số đếm không thứ nguyên; \(n\) là đại lượng vật lý có đơn vị mol. Trong tính toán hóa học, dùng \(n\) thuận tiện vì nó nối trực tiếp với khối lượng mol, nồng độ, phương trình trạng thái và điện lượng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Lượng chất khác với số lượng hạt theo cách nào?** cho ta quy tắc; **Ví dụ tích hợp: từ viên muối tới ion trong dung dịch** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những lỗi tư duy thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ tích hợp: từ viên muối tới ion trong dung dịch
 
@@ -318,6 +348,8 @@ N\approx0.1000N_A\approx6.022\times10^{22}
 
 Ví dụ này nối công thức hóa học, mol, sự điện ly và số hạt trong cùng một chuỗi suy luận.
 
+> **Chuyển mạch:** Trong **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Ví dụ tích hợp: từ viên muối tới ion trong dung dịch** cho ta quy tắc; **Những lỗi tư duy thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những lỗi tư duy thường gặp
 
 ### “1 mol luôn nặng 1 gram”
@@ -340,6 +372,8 @@ Không. Nó là tỉ lệ số hạt và do đó là tỉ lệ mol.
 
 Không. Một mol \(O_2\) chứa hai mol nguyên tử O.
 
+> **Chuyển mạch:** Ở chặng này của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**, **Mô hình tư duy** gom các mảnh từ **Những lỗi tư duy thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy hình dung mol như **API chuyển đổi giữa thế giới hạt và thế giới phòng thí nghiệm**:
@@ -356,4 +390,4 @@ Khi gặp một bài toán định lượng, câu hỏi tốt đầu tiên thư�
 
 Xem tiếp: [Công thức hóa học](./01_chemical_formulas.md), sau đó [Hóa lượng](./03_stoichiometry.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 chemical formulas](./01_chemical_formulas.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

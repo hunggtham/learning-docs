@@ -1,6 +1,6 @@
 # Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng
 
-> **Mạch đọc:** Đọc **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao xuất hiện chất phản ứng giới hạn?** sang **Xác định bằng mức tiến triển phản ứng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao xuất hiện chất phản ứng giới hạn?** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Xác định bằng mức tiến triển phản ứng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Chất phản ứng giới hạn (limiting reagent / 한계 반응물)** là chất phản ứng bị tiêu thụ trước theo yêu cầu stoichiometric và vì thế giới hạn mức tiến triển lý thuyết lớn nhất của phản ứng. Những chất còn lại sau khi phản ứng lý thuyết hoàn tất là **chất phản ứng dư (excess reagents)**.
 
@@ -16,8 +16,7 @@ Ví dụ:
 
 Nếu có `3 mol H2` và `3 mol O2`, lượng hydrogen không đủ để dùng hết oxygen. Theo tỉ lệ phản ứng, `3 mol H2` chỉ cần `1.5 mol O2`, nên `H2` là chất giới hạn và còn `1.5 mol O2` dư.
 
-
-> **Chuyển mạch:** Từ **Vì sao xuất hiện chất phản ứng giới hạn?**, ta sang **Xác định bằng mức tiến triển phản ứng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Vì sao xuất hiện chất phản ứng giới hạn?** đã nêu tiêu chí phân biệt, còn **Xác định bằng mức tiến triển phản ứng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ví dụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xác định bằng mức tiến triển phản ứng
 
@@ -33,8 +32,7 @@ Chất cho giá trị `ξ_max` nhỏ nhất sẽ giới hạn hệ.
 
 Cách nhìn này mở rộng tốt sang những phản ứng phức tạp hơn.
 
-
-> **Chuyển mạch:** Từ **Xác định bằng mức tiến triển phản ứng**, ta sang **Ví dụ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Xác định bằng mức tiến triển phản ứng** cho ta quy tắc; **Ví dụ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ
 
@@ -68,8 +66,7 @@ Lượng `NH3` lý thuyết:
 
 `N2` tiêu thụ `4.0 mol`, nên còn lại `1.0 mol`.
 
-
-> **Chuyển mạch:** Từ **Ví dụ**, ta sang **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Ví dụ** cho ta quy tắc; **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ chuyển hóa và độ chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất
 
@@ -83,8 +80,7 @@ Lượng `NH3` lý thuyết:
 
 Hiệu suất thấp có thể do cân bằng, động học, phản ứng cạnh tranh, phân hủy, tách không hoàn toàn hoặc thất thoát khi thao tác.
 
-
-> **Chuyển mạch:** Từ **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất**, ta sang **Độ chuyển hóa và độ chọn lọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Độ chuyển hóa và độ chọn lọc** tiếp nhận điểm tựa từ **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao cố ý dùng chất dư?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ chuyển hóa và độ chọn lọc
 
@@ -96,8 +92,7 @@ Trong hóa học công nghiệp và hóa học hữu cơ, phần trăm hiệu su
 
 Một quá trình có độ chuyển hóa cao nhưng độ chọn lọc thấp vẫn gây lãng phí. Thiết kế chất xúc tác thường tập trung mạnh vào tăng độ chọn lọc, không chỉ tăng tốc độ phản ứng.
 
-
-> **Chuyển mạch:** Từ **Độ chuyển hóa và độ chọn lọc**, ta sang **Vì sao cố ý dùng chất dư?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Vì sao cố ý dùng chất dư?** tiếp nhận điểm tựa từ **Độ chuyển hóa và độ chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu quả nguyên tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao cố ý dùng chất dư?
 
@@ -112,8 +107,7 @@ Tuy nhiên dùng dư cũng có đánh đổi về chi phí, tinh chế, an toàn
 
 Trong thiết kế quá trình, tỉ lệ tối ưu không nhất thiết chính là tỉ lệ stoichiometric.
 
-
-> **Chuyển mạch:** Từ **Vì sao cố ý dùng chất dư?**, ta sang **Hiệu quả nguyên tử** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** tiếp nhận điểm tựa từ **Vì sao cố ý dùng chất dư?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khái niệm chất giới hạn ngoài phòng thí nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu quả nguyên tử
 
@@ -127,8 +121,7 @@ Khác với phần trăm hiệu suất, hiệu quả nguyên tử là tính ch�
 
 Hóa học xanh quan tâm cả hiệu suất lẫn hiệu quả nguyên tử vì một phản ứng đạt `99%` hiệu suất vẫn có thể tạo lượng lớn chất thải stoichiometric.
 
-
-> **Chuyển mạch:** Từ **Hiệu quả nguyên tử**, ta sang **Khái niệm chất giới hạn ngoài phòng thí nghiệm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** đã nêu tiêu chí phân biệt, còn **Khái niệm chất giới hạn ngoài phòng thí nghiệm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khái niệm chất giới hạn ngoài phòng thí nghiệm
 
@@ -138,8 +131,7 @@ Nếu dây chuyền có 100 CPU nhưng chỉ 80 bo mạch chủ và mỗi máy t
 
 Trong chuyển hóa sinh học, chất dinh dưỡng có thể giới hạn sinh khối theo yêu cầu nguyên tố. Trong đốt cháy, hỗn hợp giàu nhiên liệu hoặc nghèo nhiên liệu cũng là bài toán mất cân bằng stoichiometric.
 
-
-> **Chuyển mạch:** Từ **Khái niệm chất giới hạn ngoài phòng thí nghiệm**, ta sang **Các hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Khái niệm chất giới hạn ngoài phòng thí nghiệm** đã nêu tiêu chí phân biệt, còn **Các hiểu lầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -155,8 +147,7 @@ Mô hình stoichiometric giả định phản ứng tiến hoàn toàn theo phư
 
 Không. Hiệu suất phản ánh quá trình thực tế; cân bằng phương trình là ràng buộc bảo toàn.
 
-
-> **Chuyển mạch:** Từ **Các hiểu lầm thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -164,4 +155,4 @@ Chất phản ứng giới hạn là **ràng buộc nguồn lực theo tỉ lệ
 
 Xem tiếp: [Nồng độ dung dịch](./05_solution_concentration.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

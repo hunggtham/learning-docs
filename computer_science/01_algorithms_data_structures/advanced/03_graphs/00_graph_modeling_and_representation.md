@@ -1,6 +1,6 @@
 # đồ thị: mô hình hóa và biểu diễn
 
-> **Mạch đọc:** Đọc **đồ thị: mô hình hóa và biểu diễn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Directed, undirected và weighted** sang **đơn giản đồ thị, multigraph và self-loop**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **đồ thị: mô hình hóa và biểu diễn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Directed, undirected và weighted** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **đơn giản đồ thị, multigraph và self-loop** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Đồ thị (Graph / 그래프)**
 
@@ -34,6 +34,8 @@ Một thuật toán hoàn toàn đúng trên **mô hình sai** vẫn cho answer 
 
 Không phải mọi trọng số đều dùng đường đi ngắn nhất (shortest path). sức chứa (capacity / 용량) dẫn tới luồng (flow / 흐름); xác suất có thể cần log transform; exchange tỷ lệ (rate / 비율) có thể dẫn tới negative-cycle/arbitrage lập luận (reasoning / 추론).
 
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **đơn giản đồ thị, multigraph và self-loop** tiếp nhận điểm tựa từ **Directed, undirected và weighted** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đường đi, walk, trail và chu trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## đơn giản đồ thị, multigraph và self-loop
 
 Một **đơn giản đồ thị** không có các cạnh song song và thường không có self-loop. Nhưng nhiều domains thực tế cho phép cả hai.
@@ -44,6 +46,8 @@ Self-loop xuất hiện khi một trạng thái (state / 상태) có chuyển ti
 
 Nếu thuật toán vô thức giả định đơn giản đồ thị, kết quả có thể sai. cầu nối (bridge / 브리지) detection là ví dụ: hai các cạnh song song giữa cùng cặp các nút nghĩa là xóa một cạnh chưa chắc disconnect đồ thị. Vì vậy cạnh định danh (identity / 식별자) phải được giữ rõ.
 
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **đường đi, walk, trail và chu trình** tiếp nhận điểm tựa từ **đơn giản đồ thị, multigraph và self-loop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Connectivity và reachability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## đường đi, walk, trail và chu trình
 
 Một **walk** cho phép lặp các đỉnh/các cạnh. **Trail** thường không lặp cạnh. **đường đi** thường không lặp đỉnh trong định nghĩa graph-theory chuẩn. **chu trình** quay lại điểm bắt đầu.
@@ -52,6 +56,8 @@ Trong programming problems, từ “đường đi” đôi khi được dùng l�
 
 đường đi ngắn nhất với non-negative các trọng số luôn có thể chọn một đơn giản đường đi optimal vì chu trình không giúp giảm chi phí. Nhưng với negative chu trình, mục tiêu (objective / 목표) có thể không còn finite minimum.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **đồ thị: mô hình hóa và biểu diễn**, **Connectivity và reachability** tiếp nhận điểm tựa từ **đường đi, walk, trail và chu trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Degree** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Connectivity và reachability
 
 Trong đồ thị vô hướng, **thành phần liên thông / 연결 요소** là maximal set các đỉnh nối được với nhau.
@@ -59,6 +65,8 @@ Trong đồ thị vô hướng, **thành phần liên thông / 연결 요소** l
 Trong đồ thị có hướng, reachability có hướng. thành phần liên thông mạnh yêu cầu reachability hai chiều giữa mọi cặp các nút trong thành phần.
 
 Đây là lý do “thành phần” trong đồ thị có hướng không đơn giản là chạy BFS và gom tất cả các nút có thể tới từ nguồn.
+
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **Degree** tiếp nhận điểm tựa từ **Connectivity và reachability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ma trận kề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Degree
 
@@ -72,6 +80,8 @@ outdegree = số edges đi ra
 ```
 
 Degree không chỉ là siêu dữ liệu. Eulerian các điều kiện dùng parity/balance của degree; Kahn sắp xếp tô-pô dùng indegree; đồ thị sparsity thường liên quan average degree.
+
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **ma trận kề** tiếp nhận điểm tựa từ **Degree** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **danh sách kề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## ma trận kề
 
@@ -98,6 +108,8 @@ không phù hợp sparse graph lớn
 ```
 
 Nếu đồ thị có 1 triệu các đỉnh nhưng mỗi đỉnh chỉ vài các đỉnh kề, ma trận (matrix / 행렬) là bất khả thi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **đồ thị: mô hình hóa và biểu diễn**, **danh sách kề** tiếp nhận điểm tựa từ **ma trận kề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **danh sách cạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## danh sách kề
 
@@ -126,6 +138,8 @@ const g = Array.from({ length: n }, () => []);
 
 Undirected cạnh thường được lưu hai adjacency các mục. Nếu thuật toán cần biết hai các mục đó đại diện cùng vật lý cạnh, hãy gắn unique cạnh id.
 
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **danh sách cạnh** tiếp nhận điểm tựa từ **danh sách kề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CSR — Compressed Sparse Row** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## danh sách cạnh
 
 danh sách cạnh chỉ lưu:
@@ -145,6 +159,8 @@ DSU quyết định edge có nối hai component khác nhau không
 ```
 
 Không có cách biểu diễn (representation / 표현) “tốt nhất”; thao tác chính quyết định cách biểu diễn.
+
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **CSR — Compressed Sparse Row** tiếp nhận điểm tựa từ **danh sách cạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adjacency map và sparse bên ngoài IDs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CSR — Compressed Sparse Row
 
@@ -169,6 +185,8 @@ các đỉnh kề của nút 1 là `edges[2..4]`.
 
 CSR giảm chi phí đối tượng trên mỗi nút, tăng tính cục bộ (locality) và rất phù hợp với đồ thị thưa tĩnh. Đánh đổi là thao tác chèn/xóa động khó hơn so với danh sách kề động.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **đồ thị: mô hình hóa và biểu diễn**, **Adjacency map và sparse bên ngoài IDs** tiếp nhận điểm tựa từ **CSR — Compressed Sparse Row** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **mô hình hóa đồ thị không gian trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Adjacency map và sparse bên ngoài IDs
 
 Nếu đỉnh IDs là strings hoặc sparse 64-bit IDs, có thể dùng ánh xạ:
@@ -182,6 +200,8 @@ sau đó lưu đồ thị bằng các mảng trên gọn IDs.
 Điều này thường tốt hơn `Map<String,List<String>>` ở đồ thị rất lớn vì các phép so sánh, băm (hash / 해시), đối tượng cấp phát và bộ nhớ tính cục bộ đều cải thiện.
 
 Đây là một mẫu hệ thống thực tế quan trọng: **normalize định danh (identity / 식별자) trước, optimize cách biểu diễn sau**.
+
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **mô hình hóa đồ thị không gian trạng thái** tiếp nhận điểm tựa từ **Adjacency map và sparse bên ngoài IDs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản phẩm (product / 제품) đồ thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## mô hình hóa đồ thị không gian trạng thái
 
@@ -200,6 +220,8 @@ Nếu ta đã thăm theo `(row,col)` בלבד, thuật toán có thể loại sa
 Ngược lại, trạng thái chứa quá nhiều lịch sử không ảnh hưởng tương lai sẽ làm đồ thị phình khổng lồ.
 
 Một trạng thái tốt giữ đúng **future-relevant thông tin** — mental mô hình này giống quy hoạch động (dynamic programming).
+
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **Sản phẩm (product / 제품) đồ thị** tiếp nhận điểm tựa từ **mô hình hóa đồ thị không gian trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đồ thị mở rộng theo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sản phẩm (product / 제품) đồ thị
 
@@ -222,6 +244,8 @@ dùng coupon:     (u,k) -> (v,k+1)
 
 Đây là cách biến “ràng buộc phức tạp” thành topology rõ ràng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **đồ thị: mô hình hóa và biểu diễn**, **đồ thị mở rộng theo thời gian** tiếp nhận điểm tựa từ **Sản phẩm (product / 제품) đồ thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đồ thị ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## đồ thị mở rộng theo thời gian
 
 Scheduling, vận chuyển (transport / 전송) và temporal mạng có thể cần thời gian (time / 시간) trong trạng thái:
@@ -233,6 +257,8 @@ Scheduling, vận chuyển (transport / 전송) và temporal mạng có thể c�
 Ví dụ train chỉ chạy ở departure times cụ thể. cạnh không chỉ nói “A nối B”; nó nói “từ A lúc t có thể tới B lúc t'”.
 
 đồ thị mở rộng theo thời gian có thể lớn, nên đôi khi ta không materialize toàn bộ; generate transitions on demand.
+
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **đồ thị ẩn** tiếp nhận điểm tựa từ **đồ thị mở rộng theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hypergraph và quan hệ (relation / 관계) nhiều hơn hai endpoints** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## đồ thị ẩn
 
@@ -253,6 +279,8 @@ Mô hình tư duy:
 
 > đồ thị là **quan hệ (relation / 관계)**, không phải bắt buộc là `List<List<Integer>>`.
 
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **Hypergraph và quan hệ (relation / 관계) nhiều hơn hai endpoints** tiếp nhận điểm tựa từ **đồ thị ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bipartite mô hình hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hypergraph và quan hệ (relation / 관계) nhiều hơn hai endpoints
 
 Chuẩn đồ thị cạnh nối hai các đỉnh. Nhưng một quan hệ (relation / 관계) có thể liên quan nhiều entities cùng lúc, ví dụ một cơ sở dữ liệu giao dịch (transaction / 트랜잭션) chạm nhiều accounts hoặc một ràng buộc chứa nhiều variables.
@@ -260,6 +288,8 @@ Chuẩn đồ thị cạnh nối hai các đỉnh. Nhưng một quan hệ (relat
 **Hypergraph** cho phép hyperedge nối nhiều các đỉnh. Trong cách triển khai, hyperedge thường được biến đổi thành bipartite incidence đồ thị hoặc phụ trợ nút để dùng các thuật toán chuẩn.
 
 Biết mô hình này giúp tránh ép mọi bài toán (problem / 문제) về pairwise cạnh một cách sai nghĩa.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **đồ thị: mô hình hóa và biểu diễn**, **Bipartite mô hình hóa** tiếp nhận điểm tựa từ **Hypergraph và quan hệ (relation / 관계) nhiều hơn hai endpoints** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đồ thị và sparse ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bipartite mô hình hóa
 
@@ -275,6 +305,8 @@ Worker -> Job nếu worker có thể làm job
 
 Maximum matching trả assignment tối đa không xung đột (conflict / 충돌).
 
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **đồ thị và sparse ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **Bipartite mô hình hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bộ nhớ chi phí không chỉ là O(V+E)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## đồ thị và sparse ma trận (matrix / 행렬)
 
 ma trận kề chính là ma trận (matrix / 행렬) cách biểu diễn của quan hệ (relation / 관계). Nhiều các thuật toán đồ thị có tuyến tính (linear / 선형) algebra interpretation.
@@ -282,6 +314,8 @@ ma trận kề chính là ma trận (matrix / 행렬) cách biểu diễn của 
 lặp lại phép nhân ma trận (matrix multiplication / 행렬 곱셈) liên quan đường đi counts/reachability. PageRank dùng chuyển tiếp (transition / 전이) ma trận (matrix / 행렬). đồ thị Neural mạng các tầng thường aggregate đỉnh kề features, tương đương sparse-matrix-like các thao tác.
 
 CSR thực chất cũng là cách biểu diễn kinh điển của sparse ma trận (matrix / 행렬). đồ thị lý thuyết (theory / 이론) và tuyến tính (linear / 선형) algebra vì thế là hai góc nhìn của cùng cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **bộ nhớ chi phí không chỉ là O(V+E)** tiếp nhận điểm tựa từ **đồ thị và sparse ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cạnh direction lưu trữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## bộ nhớ chi phí không chỉ là O(V+E)
 
@@ -301,6 +335,8 @@ JavaScript các mảng/các đối tượng có động môi trường chạy (r
 
 Khi đồ thị có hàng chục triệu cạnh, số byte cần cho mỗi cạnh trở thành một chỉ số thiết kế quan trọng hàng đầu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **đồ thị: mô hình hóa và biểu diễn**, **cạnh direction lưu trữ** tiếp nhận điểm tựa từ **bộ nhớ chi phí không chỉ là O(V+E)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **đồ thị sự thay đổi dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## cạnh direction lưu trữ
 
 đồ thị có hướng lưu đúng direction.
@@ -315,6 +351,8 @@ v -> u
 Nhưng các thuật toán như Euler/cầu nối (bridge / 브리지) cần tránh coi hai các mục là hai vật lý các cạnh khác nhau. Unique cạnh id hoặc paired reverse-index là mẫu tốt.
 
 Luồng (flow / 흐름) các thuật toán cũng thường tạo tường minh (explicit / 명시적) reverse residual cạnh, nhưng reverse cạnh ở đó có ngữ nghĩa khác: nó đại diện khả năng undo luồng (flow / 흐름) chứ không phải original undirected quan hệ (relation / 관계).
+
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **cạnh direction lưu trữ** nêu điều cần giải thích; **đồ thị sự thay đổi dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dense vs sparse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## đồ thị sự thay đổi dữ liệu
 
@@ -331,6 +369,8 @@ dynamic -> flexible update, nhiều metadata/overhead hơn
 
 Đây là cùng mẫu thấy ở bảng thưa (Sparse Table) vs cây đoạn (Segment Tree).
 
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **đồ thị sự thay đổi dữ liệu** nêu điều cần giải thích; **Dense vs sparse** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **mô hình hóa failures phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dense vs sparse
 
 Một đồ thị có thể gọi là sparse khi `E` gần tuyến tính theo `V`, và dense khi `E` gần `V^2`.
@@ -340,6 +380,8 @@ cách biểu diễn và thuật toán thường thay đổi theo density.
 Dijkstra ma trận kề có thể `O(V^2)` và đủ tốt cho đồ thị dày nhỏ. vùng nhớ động (heap / 힙) + danh sách kề tốt hơn với đồ thị thưa lớn.
 
 Floyd-Warshall `O(V^3)` đôi khi hợp đồ thị nhỏ cần all-pairs, dù asymptotic nhìn rất lớn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **đồ thị: mô hình hóa và biểu diễn**, **mô hình hóa failures phổ biến** tiếp nhận điểm tựa từ **Dense vs sparse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **mô hình hóa checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## mô hình hóa failures phổ biến
 
@@ -363,6 +405,8 @@ Phụ thuộc (dependency / 의존성) `A depends on B` có thể encode `A->B` 
 
 Parallel cạnh, self-loop, disconnected các thành phần, negative các trọng số, directed/undirected đều có thể làm các giả định của thuật toán sai.
 
+> **Chuyển mạch:** Trong **đồ thị: mô hình hóa và biểu diễn**, **mô hình hóa checklist** tiếp nhận điểm tựa từ **mô hình hóa failures phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## mô hình hóa checklist
 
 Trước khi chọn thuật toán, viết rõ:
@@ -380,6 +424,8 @@ Có cần actual path hay chỉ value/reachability?
 ```
 
 Chỉ sau đó mới hỏi BFS, DFS, Dijkstra, DSU hay luồng (flow / 흐름).
+
+> **Chuyển mạch:** Ở chặng này của **đồ thị: mô hình hóa và biểu diễn**, **Mô hình tư duy** gom các mảnh từ **mô hình hóa checklist** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -399,4 +445,4 @@ Story/domain
 
 Xem tiếp: [BFS & DFS](./01_graph_traversal_bfs_dfs.md), [Shortest Paths](./02_shortest_paths.md), [DAG/SCC](./04_dag_topological_sort_and_scc.md), [Network Flow](./08_network_flow_and_matching.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 graph traversal bfs dfs](./01_graph_traversal_bfs_dfs.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

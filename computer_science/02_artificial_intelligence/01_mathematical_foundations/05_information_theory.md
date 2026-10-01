@@ -1,7 +1,6 @@
 # Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence
 
-> **Mạch đọc:** Đặt **thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Self-information: sự kiện (event / 이벤트) càng hiếm càng informative** sang **Entropy: expected surprise**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Self-information: sự kiện (event / 이벤트) càng hiếm càng informative** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Entropy: expected surprise** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Thông tin (information / 정보) lý thuyết (theory / 이론) cung cấp một ngôn ngữ (language / 언어) để định lượng **bất định (uncertainty / 불확실성), surprise và thông tin (information / 정보)**. Trong AI, nó giải thích vì sao log-probability xuất hiện trong mất mát (loss / 손실) functions, vì sao cross-entropy là mục tiêu (objective / 목표) tự nhiên cho classification và ngôn ngữ (language / 언어) modeling, vì sao KL divergence đo discrepancy giữa distributions, và vì sao compression có relationship sâu với học tập (learning / 학습).
 
@@ -38,6 +37,8 @@ Cơ sở (base / 기반) của log quyết định đơn vị (unit / 단위):
 
 Trong ML tối ưu hóa (optimization / 최적화), natural log thường convenient.
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Entropy: expected surprise** tiếp nhận điểm tựa từ **Self-information: sự kiện (event / 이벤트) càng hiếm càng informative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: coin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Entropy: expected surprise
 
 Entropy (엔트로피):
@@ -61,6 +62,8 @@ H(X)=\log K
 và đây là maximum entropy trên `K` discrete outcomes.
 
 Entropy không phải “độ hỗn loạn” theo nghĩa vague. Nó định lượng bất định (uncertainty / 불확실성) của random variable under a phân phối (distribution / 분포).
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Entropy: expected surprise** cho ta quy tắc; **Ví dụ: coin** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Entropy và compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: coin
 
@@ -86,6 +89,8 @@ entropy nhỏ hơn nhiều vì kết quả (outcome / 결과) dễ predict.
 
 Một nguồn (source / 소스) predictable hơn có thể compress tốt hơn trung bình. Đây là liên kết (connection / 연결) fundamental giữa entropy và coding.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Ví dụ: coin** cho ta quy tắc; **Entropy và compression** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cross-entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Entropy và compression
 
 Thông tin (information / 정보) lý thuyết (theory / 이론) cho biết entropy là lower-bound-like quantity cho average mã (code / 코드) length dưới ideal coding các giả định (assumptions / 가정들).
@@ -93,6 +98,8 @@ Thông tin (information / 정보) lý thuyết (theory / 이론) cho biết entr
 Nếu đơn vị từ (token / 토큰) rất dùng chung (common / 공통), ta muốn mã (code / 코드) ngắn. đơn vị từ (token / 토큰) rare có thể dùng mã (code / 코드) dài. Huffman coding và arithmetic coding hiện thực idea này theo các cách khác nhau.
 
 Hiện đại (modern / 현대적) ngôn ngữ (language / 언어) mô hình (model / 모델) không chỉ là compressor, nhưng ability assign high xác suất (probability / 확률) cho observed chuỗi (sequence / 시퀀스) liên quan chặt với compression: mô hình (model / 모델) predict tốt thì negative log-likelihood thấp và chuỗi (sequence / 시퀀스) có thể được encoded hiệu quả hơn theo mô hình (model / 모델) phân phối (distribution / 분포).
+
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Cross-entropy** tiếp nhận điểm tựa từ **Entropy và compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cross-entropy trong classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cross-entropy
 
@@ -113,6 +120,8 @@ L=-\log q(y)
 \]
 
 Mô hình (model / 모델) bị penalty mạnh nếu assign xác suất (probability / 확률) thấp cho correct lớp (class / 클래스).
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Cross-entropy trong classification** tiếp nhận điểm tựa từ **Cross-entropy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Negative log-likelihood** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cross-entropy trong classification
 
@@ -137,6 +146,8 @@ L=-\log q_{true}
 Nếu mô hình (model / 모델) assign 0.9, mất mát (loss / 손실) khoảng `0.105`; nếu assign 0.01, mất mát (loss / 손실) khoảng `4.605` theo natural log.
 
 Cross-entropy vì vậy không chỉ check đúng/sai. Nó quan tâm xác suất (probability / 확률) confidence của correct kết quả (outcome / 결과).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Negative log-likelihood** tiếp nhận điểm tựa từ **Cross-entropy trong classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KL divergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Negative log-likelihood
 
@@ -166,6 +177,8 @@ Tương đương minimize negative log-likelihood:
 
 Cross-entropy mất mát (loss / 손실) trong classification là một form của negative log-likelihood.
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **KL divergence** tiếp nhận điểm tựa từ **Negative log-likelihood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Direction của KL matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KL divergence
 
 Kullback–Leibler divergence:
@@ -192,6 +205,8 @@ D_{KL}(p\|q)\neq D_{KL}(q\|p)
 
 nói chung, và không thỏa triangle inequality.
 
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Direction của KL matters** tiếp nhận điểm tựa từ **KL divergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Jensen–Shannon divergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Direction của KL matters
 
 `D_KL(p||q)` penalty rất mạnh khi `p` có mass nơi `q` gần zero. Nó thúc `q` cover hỗ trợ (support / 지원) của `p`.
@@ -201,6 +216,8 @@ nói chung, và không thỏa triangle inequality.
 Đây là intuition “chế độ (mode / 모드) covering” vs “chế độ (mode / 모드) seeking”, nhưng thực tế phụ thuộc family distributions và tối ưu hóa (optimization / 최적화) ngữ cảnh (context / 맥락), nên không nên biến thành quy tắc (rule / 규칙) tuyệt đối.
 
 Direction KL xuất hiện quan trọng trong variational suy luận (inference / 추론), distillation và chính sách (policy / 정책) tối ưu hóa (optimization / 최적화).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Jensen–Shannon divergence** tiếp nhận điểm tựa từ **Direction của KL matters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditional entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Jensen–Shannon divergence
 
@@ -217,6 +234,8 @@ JS(p,q)=\frac{1}{2}D_{KL}(p\|m)+\frac{1}{2}D_{KL}(q\|m)
 Nó symmetric và bounded với log cơ sở (base / 기반) phù hợp.
 
 GAN lý thuyết (theory / 이론) cổ điển có liên kết (connection / 연결) với JS divergence dưới ideal discriminator các giả định (assumptions / 가정들), dù practical GAN huấn luyện (training / 학습) dynamics phức tạp hơn expression lý thuyết này.
+
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Conditional entropy** tiếp nhận điểm tựa từ **Jensen–Shannon divergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mutual thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Conditional entropy
 
@@ -241,6 +260,8 @@ predict target with lower uncertainty
 ```
 
 Nhưng biểu diễn (representation / 표현) có thể discard nuisance thông tin (information / 정보) không cần cho tác vụ (task / 작업).
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Mutual thông tin (information / 정보)** tiếp nhận điểm tựa từ **Conditional entropy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mutual thông tin (information / 정보) và biểu diễn (representation / 표현) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mutual thông tin (information / 정보)
 
@@ -270,6 +291,8 @@ I(X;Y)=0
 
 Mutual thông tin (information / 정보) capture nonlinear phụ thuộc (dependency / 의존성), unlike correlation which is primarily tuyến tính (linear / 선형) measure.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Mutual thông tin (information / 정보) và biểu diễn (representation / 표현) học tập (learning / 학습)** tiếp nhận điểm tựa từ **Mutual thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) Processing Inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mutual thông tin (information / 정보) và biểu diễn (representation / 표현) học tập (learning / 학습)
 
 Ta có thể muốn biểu diễn (representation / 표현) `Z` giữ thông tin (information / 정보) relevant về mục tiêu (target / 대상) `Y` nhưng bỏ nuisance details từ `X`.
@@ -294,6 +317,8 @@ I(Z;Y)
 
 Tuy nhiên estimating mutual thông tin (information / 정보) trong high-dimensional continuous neural representations là difficult. thông tin (information / 정보) Bottleneck hữu ích như conceptual lens, không nên assume mọi practical deep mạng (network / 네트워크) tường minh (explicit / 명시적) optimize chính xác (exact / 정확한) quantity này.
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Mutual thông tin (information / 정보) và biểu diễn (representation / 표현) học tập (learning / 학습)** nêu điều cần giải thích; **Dữ liệu (data / 데이터) Processing Inequality** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ngôn ngữ (language / 언어) modeling và cross-entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dữ liệu (data / 데이터) Processing Inequality
 
 Nếu Markov chuỗi (chain / 사슬):
@@ -314,6 +339,8 @@ Liên kết (connection / 연결) với biểu diễn (representation / 표현):
 
 Bên ngoài (external / 외부) tools/retrieval có thể add new thông tin (information / 정보) vì chúng introduce additional đầu vào (input / 입력) nguồn (source / 소스).
 
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Dữ liệu (data / 데이터) Processing Inequality** nêu điều cần giải thích; **Ngôn ngữ (language / 언어) modeling và cross-entropy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Perplexity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngôn ngữ (language / 언어) modeling và cross-entropy
 
 Autoregressive ngôn ngữ (language / 언어) mô hình (model / 모델) factorizes:
@@ -332,6 +359,8 @@ Average đơn vị từ (token / 토큰) cross-entropy đo expected surprise mô
 
 Huấn luyện (training / 학습) next-token prediction chính là giảm average surprisal trên huấn luyện (training / 학습) phân phối (distribution / 분포).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Perplexity** tiếp nhận điểm tựa từ **Ngôn ngữ (language / 언어) modeling và cross-entropy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Entropy của mô hình (model / 모델) đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Perplexity
 
 Perplexity thường defined:
@@ -348,6 +377,8 @@ Nhưng perplexity chỉ comparable khi tokenization, dataset và evaluation giao
 
 Perplexity thấp cũng không guarantee better factuality, helpfulness hay an toàn (safety / 안전).
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Entropy của mô hình (model / 모델) đầu ra (output / 출력)** tiếp nhận điểm tựa từ **Perplexity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KL trong kiến thức (knowledge / 지식) distillation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Entropy của mô hình (model / 모델) đầu ra (output / 출력)
 
 Với next-token phân phối (distribution / 분포), entropy cao nghĩa xác suất (probability / 확률) mass spread trên nhiều alternatives. Entropy thấp nghĩa mô hình (model / 모델) phân phối (distribution / 분포) concentrated.
@@ -361,6 +392,8 @@ p_i(T)=softmax(z_i/T)
 \]
 
 Higher temperature thường tăng entropy, tạo diversity hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **KL trong kiến thức (knowledge / 지식) distillation** tiếp nhận điểm tựa từ **Entropy của mô hình (model / 모델) đầu ra (output / 출력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KL trong Variational Autoencoder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## KL trong kiến thức (knowledge / 지식) distillation
 
@@ -387,6 +420,8 @@ car 0.001
 
 Student học cấu trúc (structure / 구조) này thay vì chỉ mục tiêu (target / 대상) `dog=1`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **KL trong Variational Autoencoder** tiếp nhận điểm tựa từ **KL trong kiến thức (knowledge / 지식) distillation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KL trong RLHF/PPO-style alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KL trong Variational Autoencoder
 
 VAE mục tiêu (objective / 목표) gồm reconstruction term và KL regularization:
@@ -401,6 +436,8 @@ KL kéo approximate posterior về prior, tạo organized latent không gian (sp
 
 Đây là concrete example của sự đánh đổi (trade-off / 트레이드오프) biểu diễn (representation / 표현) vs regularization.
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **KL trong RLHF/PPO-style alignment** tiếp nhận điểm tựa từ **KL trong Variational Autoencoder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cross-entropy và label smoothing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KL trong RLHF/PPO-style alignment
 
 Chính sách (policy / 정책) tối ưu hóa (optimization / 최적화) cho LLM thường cần tránh mô hình (model / 모델) drift quá xa tham chiếu (reference / 참조) chính sách (policy / 정책). Một KL penalty có thể xuất hiện:
@@ -412,6 +449,8 @@ Reward'=Reward-\beta D_{KL}(\pi_\theta\|\pi_{ref})
 Idea: improve preference reward nhưng giữ chính sách (policy / 정책) gần pretrained/tham chiếu (reference / 참조) hành vi (behavior / 동작).
 
 Chính xác (exact / 정확한) hiện thực (implementation / 구현) khác nhau giữa algorithms; mô hình tư duy (mental model / 사고 모델) là KL đóng vai trust-region-like ràng buộc (constraint / 제약조건).
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **KL trong RLHF/PPO-style alignment** cho ta quy tắc; **Cross-entropy và label smoothing** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Maximum entropy principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cross-entropy và label smoothing
 
@@ -425,6 +464,8 @@ Nó có thể reduce overconfidence và act as regularization trong một số s
 
 Nhưng smoothing cũng thay interpretation calibration và không universally improve every tác vụ (task / 작업).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Cross-entropy và label smoothing** cho ta quy tắc; **Maximum entropy principle** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Entropy và quyết định (decision / 결정) making** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Maximum entropy principle
 
 Nếu chỉ biết một số các ràng buộc (constraints / 제약조건들), Maximum Entropy Principle chọn phân phối (distribution / 분포) có entropy lớn nhất thỏa các ràng buộc (constraints / 제약조건들), tránh inject các giả định (assumptions / 가정들) không được hỗ trợ (support / 지원).
@@ -432,6 +473,8 @@ Nếu chỉ biết một số các ràng buộc (constraints / 제약조건들),
 Ví dụ nếu chỉ biết mean và variance trên real line dưới conditions thích hợp, Gaussian arises as maximum-entropy phân phối (distribution / 분포).
 
 Idea này nối thông tin (information / 정보) lý thuyết (theory / 이론) với probabilistic modeling: không nên encode certainty nhiều hơn bằng chứng (evidence / 증거) cho phép.
+
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Entropy và quyết định (decision / 결정) making** tiếp nhận điểm tựa từ **Maximum entropy principle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thông tin (information / 정보) gain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Entropy và quyết định (decision / 결정) making
 
@@ -451,6 +494,8 @@ decision rule
 
 Đây là liên kết (connection / 연결) với quyết định (decision / 결정) lý thuyết (theory / 이론) và AI an toàn (safety / 안전).
 
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Thông tin (information / 정보) gain** tiếp nhận điểm tựa từ **Entropy và quyết định (decision / 결정) making** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compression và generalization: liên kết (connection / 연결) thận trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thông tin (information / 정보) gain
 
 Thông tin (information / 정보) gain có thể được nhìn như reduction in entropy:
@@ -463,6 +508,8 @@ Quyết định (decision / 결정) trees dùng entropy/thông tin (information 
 
 Active học tập (learning / 학습) cũng có thể chọn truy vấn (query / 쿼리) dự kiến giảm bất định (uncertainty / 불확실성)/thông tin (information / 정보) nhiều nhất, dù practical acquisition functions đa dạng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, sau nội dung của **Thông tin (information / 정보) gain**, **Compression và generalization: liên kết (connection / 연결) thận trọng** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Compression và generalization: liên kết (connection / 연결) thận trọng
 
 Có một deep liên kết (connection / 연결) giữa compression và học tập (learning / 학습): mẫu (pattern / 패턴) cho phép description ngắn hơn, còn mô hình (model / 모델) generalize thường capture reusable cấu trúc (structure / 구조) thay vì memorize raw dữ liệu (data / 데이터).
@@ -470,6 +517,8 @@ Có một deep liên kết (connection / 연결) giữa compression và học t�
 Minimum Description Length (MDL) formalizes một cách nhìn: preferred explanation balances mô hình (model / 모델) độ phức tạp (complexity / 복잡도) và dữ liệu (data / 데이터) encoding chi phí (cost / 비용).
 
 Nhưng “compress tốt = intelligent” không phải equivalence universal. Compression mục tiêu (objective / 목표) nào, dữ liệu (data / 데이터) nào và downstream năng lực (capability / 역량) nào đều matter.
+
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Compression và generalization: liên kết (connection / 연결) thận trọng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -484,6 +533,8 @@ Mutual information = information shared giữa variables
 Perplexity         = exponential form của average token uncertainty
 Compression        = exploit predictable structure để encode ngắn hơn
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -503,8 +554,12 @@ Perplexity đo next-token predictive fit trên evaluation corpus, không trực 
 
 Nó có derivation từ likelihood và thông tin (information / 정보) lý thuyết (theory / 이론); understanding này giúp biết khi nào mất mát (loss / 손실) phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Thông tin (information / 정보) lý thuyết (theory / 이론) nối [Probability](./02_probability_for_ai.md), [Statistics](./03_statistics_for_ai.md) và [Optimization](./06_optimization.md) với Machine học tập (learning / 학습) objectives. Sau này entropy, cross-entropy, KL và mutual-information ideas sẽ quay lại trong quyết định (decision / 결정) Trees, Neural Networks, ngôn ngữ (language / 언어) các mô hình (models / 모델들), VAEs, Distillation và Alignment.
 
 Khi gặp một information-theoretic quantity, hãy hỏi: distribution nào đang được so sánh, expectation dưới distribution nào, log unit gì, và quantity đó có trực tiếp map tới product objective hay chỉ là proxy.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

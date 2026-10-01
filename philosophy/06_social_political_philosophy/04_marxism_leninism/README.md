@@ -1,5 +1,7 @@
 # Marx, Marxism, Lenin và Marxism–Leninism
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Marx, Marxism, Lenin và Marxism–Leninism**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bốn khái niệm không được đồng nhất** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Reading đường dẫn (path / 경로)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Mô-đun (module / 모듈) này đặt **Marxism (chủ nghĩa Marx, 마르크스주의)** và **Marxism–Leninism (chủ nghĩa Mác–Lênin, 마르크스-레닌주의)** vào đúng vị trí trong political philosophy, lịch sử (history / 이력) of political economy và hiện đại (modern / 현대적) political lịch sử (history / 이력). Mục tiêu không phải học thuộc một hệ thống thuật ngữ, cũng không mặc định một truyền thống là đúng hoặc sai. Mục tiêu là hiểu một chuỗi câu hỏi: Marx đang cố giải thích điều gì trong xã hội công nghiệp thế kỷ XIX; mô hình của ông vận hành bằng các khái niệm nào; Lenin đã thay đổi hoặc mở rộng những gì khi đưa Marxism vào bối cảnh Nga đầu thế kỷ XX; vì sao về sau xuất hiện một doctrine được gọi là Marxism–Leninism; các claim của tradition này bị sửa, phản biện hoặc phát triển tiếp như thế nào; và khi ideas đi vào trạng thái (state / 상태) institutions thì kết quả (outcome / 결과) thực tế phải được kiểm tra ra sao.
 
 Điểm xuất phát nên là [Capitalism, Labor và Institutions](../02_capitalism_labor_and_institutions.md). Chapter đó đã đặt vấn đề về thuộc tính (property / 속성), thị trường (market / 시장), wage labor, bargaining power và institutions. Mô-đun (module / 모듈) này đi sâu vào một trong những truyền thống có ảnh hưởng lớn nhất khi phân tích các quan hệ đó. Khi cần kiểm tra claim kinh tế bằng mô hình và bằng chứng (evidence / 증거) hiện đại, quay sang [Economics](../../../economics/README.md), đặc biệt [Economic History & Institutions](../../../economics/06_economic_history_institutions/README.md).
@@ -9,6 +11,8 @@ Mô-đun (module / 모듈) này đặt **Marxism (chủ nghĩa Marx, 마르크�
 **Marx** là Karl Marx và các tác phẩm cụ thể của ông. **Marxism** là truyền thống tư tưởng hình thành từ Marx và Engels rồi tiếp tục phân nhánh qua nhiều tác giả. **Leninism** chỉ những phát triển gắn với Vladimir Lenin, đặc biệt về party organization, revolution, trạng thái (state / 상태) và imperialism. **Marxism–Leninism** là một hệ thống hóa về sau của Marx và Lenin; vì vậy không nên đọc một mệnh đề của Marxism–Leninism rồi tự động gán ngược nó cho chính Marx.
 
 Phân biệt này là bất biến (invariant / 불변식) của toàn bộ mô-đun (module / 모듈). Mỗi chapter sẽ luôn hỏi: claim đang đến từ Marx, Engels, Lenin, một interpretation Marxist về sau, một trạng thái (state / 상태) doctrine, hay một scholar đang phân tích lịch sử của các tư tưởng đó?
+
+> **Chuyển mạch:** Trong **Marx, Marxism, Lenin và Marxism–Leninism**, **Bốn khái niệm không được đồng nhất** xác định đầu vào; **Reading đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Worked-case tuyến (route / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reading đường dẫn (path / 경로)
 
@@ -34,6 +38,8 @@ Phân biệt này là bất biến (invariant / 불변식) của toàn bộ mô-
 20. [19 — Vietnam Đổi Mới evidence: growth, poverty và institutional change](19_vietnam_doi_moi_data_growth_poverty_and_institutional_change.md)
 
 Luồng (flow / 흐름) này có chủ đích. Nếu nhảy thẳng vào `dialectical materialism`, `dictatorship of the proletariat` hoặc `vanguard party`, người đọc dễ học thành khẩu hiệu. Ta bắt đầu từ bài toán (problem / 문제) và ngữ cảnh (context / 맥락), dựng mô hình (model / 모델), theo dõi genealogy, kiểm tra historical hiện thực (implementation / 구현), mở sang critique và rival frameworks, quay về primary sources, rồi cuối cùng đưa khung phần mềm (framework / 프레임워크) vào worked cases và evidence-specific độ sâu (depth / 깊이) pass.
+
+> **Chuyển mạch:** Ở chặng này của **Marx, Marxism, Lenin và Marxism–Leninism**, **Reading đường dẫn (path / 경로)** cho ta quy tắc; **Worked-case tuyến (route / 경로)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Evidence-depth tuyến (route / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Worked-case tuyến (route / 경로)
 
@@ -62,6 +68,8 @@ starting condition
 
 Đơn vị (unit / 단위) of phân tích (analysis / 분석) là **country × period × institution × chính sách (policy / 정책) × kết quả (outcome / 결과)**, không phải `country = ideology`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marx, Marxism, Lenin và Marxism–Leninism**, **Worked-case tuyến (route / 경로)** cho ta quy tắc; **Evidence-depth tuyến (route / 경로)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ba lớp phải giữ tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Evidence-depth tuyến (route / 경로)
 
 Sau worked-case tuyến (route / 경로), các chapter `16–19` dùng để kiểm tra những chỗ dễ bị biến thành slogan hoặc single-number conclusion:
@@ -81,6 +89,8 @@ Sau worked-case tuyến (route / 경로), các chapter `16–19` dùng để ki�
 ```
 
 Tuyến (route / 경로) này là độ sâu (depth / 깊이) pass, không phải prerequisite bắt buộc. Nó tồn tại để người đọc có thể chuyển từ “biết câu chuyện” sang “kiểm tra claim”.
+
+> **Chuyển mạch:** Trong **Marx, Marxism, Lenin và Marxism–Leninism**, **Evidence-depth tuyến (route / 경로)** nêu điều cần giải thích; **Ba lớp phải giữ tách** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cách đọc các claim trong mô-đun (module / 모듈)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ba lớp phải giữ tách
 
@@ -105,11 +115,15 @@ declared doctrine
 
 Giữa các arrow luôn có ngữ cảnh (context / 맥락), competing causes và bất định (uncertainty / 불확실성). Chính vì vậy historical kết quả (outcome / 결과) không được dùng như shortcut để “chứng minh” một philosophy.
 
+> **Chuyển mạch:** Ở chặng này của **Marx, Marxism, Lenin và Marxism–Leninism**, **Cách đọc các claim trong mô-đun (module / 모듈)** tiếp nhận điểm tựa từ **Ba lớp phải giữ tách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuật ngữ trục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách đọc các claim trong mô-đun (module / 모듈)
 
 Một claim lịch sử như “industrialization thay đổi cấu trúc giai cấp” cần historical bằng chứng (evidence / 증거). Một claim kinh tế như “profit bắt nguồn từ surplus giá trị (value / 값)” là claim lý thuyết trong Marxian economics và cần phân biệt với cách economics hiện đại mô hình hóa profit, rents, rủi ro (risk / 위험), capital và productivity. Một claim chuẩn tắc như “một loại thuộc tính (property / 속성) quan hệ (relation / 관계) là bất công” cần normative argument chứ không thể suy ra chỉ từ số liệu. Một claim về Marx hoặc Lenin cần quay về primary văn bản (text / 텍스트) và scholarly interpretation thay vì dựa vào textbook rút gọn.
 
 Vì vậy mô-đun (module / 모듈) ưu tiên ba lớp nguồn: **primary texts** để biết tác giả thực sự viết gì; **scholarly tham chiếu (reference / 참조)** để nhận ra tranh luận diễn giải; và **lịch sử (history / 이력)/economics bằng chứng (evidence / 증거)** để kiểm tra những claim mô tả thế giới. Không dùng historical kết quả (outcome / 결과) đơn lẻ để chứng minh toàn bộ một philosophy, và cũng không dùng philosophy để thay thế empirical lịch sử (history / 이력).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marx, Marxism, Lenin và Marxism–Leninism**, **Thuật ngữ trục** tiếp nhận điểm tựa từ **Cách đọc các claim trong mô-đun (module / 모듈)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn định hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thuật ngữ trục
 
@@ -117,9 +131,9 @@ Các thuật ngữ được giữ bằng tiếng Anh vì chúng có đời sốn
 
 Không nên ghi nhớ các từ này như glossary rời. Mỗi thuật ngữ chỉ có nghĩa đầy đủ khi thấy nó đang giải quyết mắt xích nào trong mô hình (model / 모델).
 
-## Nguồn định hướng
-Phần “Nguồn định hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Marx, Marxism, Lenin và Marxism–Leninism**, **Thuật ngữ trục** nêu điều cần giải thích; **Nguồn định hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Nguồn định hướng
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/
@@ -138,3 +152,5 @@ Phần “Nguồn định hướng” nối kiến thức trước với nội d
 - World Bank WDI: https://dữ liệu (data / 데이터).worldbank.org/
 
 Các nguồn trên là điểm vào, không phải authority duy nhất. Khi một interpretation có tranh luận, chapter phải nói rõ ranh giới (boundary / 경계) thay vì trình bày nó như consensus; khi một quantitative claim dựa trên mô hình (model / 모델) hoặc series, các giả định (assumptions / 가정들), units và methodology phải được giữ visible.
+
+> **Bàn giao:** Sau **Nguồn định hướng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

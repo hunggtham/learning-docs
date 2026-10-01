@@ -1,7 +1,6 @@
 # Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions
 
-> **Mạch đọc:** Đặt **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kernel là phần có quyền đặc biệt** sang **lời gọi hệ thống (system call / 시스템 호출)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kernel là phần có quyền đặc biệt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lời gọi hệ thống (system call / 시스템 호출)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Operating hệ thống (system / 시스템) — OS (운영체제 / hệ điều hành) giải quyết một mâu thuẫn cơ bản: nhiều programs muốn dùng cùng CPU, bộ nhớ (memory / 메모리), lưu trữ (storage / 저장소) và devices, nhưng nếu mỗi program điều khiển hardware trực tiếp thì isolation, portability và sharing gần như không thể quản lý. OS đặt một privileged kernel giữa applications và hardware, rồi cung cấp abstractions ổn định như tiến trình (process / 프로세스), virtual bộ nhớ (memory / 메모리), tệp (file / 파일) và socket.
 
@@ -13,8 +12,7 @@ Ranh giới (boundary / 경계) này được hardware enforce. Nếu một ti�
 
 Kernel thiết kế (design / 설계) có nhiều dạng. Monolithic kernels như Linux đặt nhiều subsystems/drivers trong kernel không gian (space / 공간). Microkernel philosophy đẩy nhiều services ra người dùng (user / 사용자) không gian (space / 공간) và giữ kernel nhỏ hơn. Hybrid các hệ thống (systems / 시스템들) pha trộn. sự đánh đổi (trade-off / 트레이드오프) liên quan hiệu năng (performance / 성능), fault isolation và độ phức tạp (complexity / 복잡도).
 
-
-> **Chuyển mạch:** Từ **Kernel là phần có quyền đặc biệt**, ta sang **lời gọi hệ thống (system call / 시스템 호출)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Kernel privilege tạo boundary; system call là controlled entry, còn file descriptor/handle tiếp theo là capability để process dùng resource mà không chạm kernel state trực tiếp.
 
 ## Lời gọi hệ thống (system call / 시스템 호출)
 
@@ -24,8 +22,7 @@ Ví dụ `printf` có thể format hoàn toàn trong người dùng (user / 사�
 
 Lời gọi hệ thống (system call / 시스템 호출) có overhead vì privilege chuyển tiếp (transition / 전이), kiểm tra hợp lệ (validation / 검증) và kernel công việc (work / 작업), nhưng hiện đại (modern / 현대적) kernels/runtimes tối ưu batching, dùng chung (shared / 공유) bộ nhớ (memory / 메모리) và async interfaces để giảm crossings.
 
-
-> **Chuyển mạch:** Từ **lời gọi hệ thống (system call / 시스템 호출)**, ta sang **tệp (file / 파일) descriptor và handle** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Tệp (file / 파일) descriptor và handle** tiếp nhận điểm tựa từ **Lời gọi hệ thống (system call / 시스템 호출)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiến trình (process / 프로세스) lớp trừu tượng (abstraction / 추상화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tệp (file / 파일) descriptor và handle
 
@@ -33,8 +30,7 @@ Unix-like OS dùng tệp (file / 파일) descriptor — integer chỉ mục (ind
 
 Windows dùng handles rộng hơn. Principle chung là người dùng (user / 사용자) mã (code / 코드) giữ opaque tham chiếu (reference / 참조) thay vì trực tiếp nắm kernel đối tượng (object / 객체).
 
-
-> **Chuyển mạch:** Từ **tệp (file / 파일) descriptor và handle**, ta sang **tiến trình (process / 프로세스) lớp trừu tượng (abstraction / 추상화)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Tệp (file / 파일) descriptor và handle** xác định đầu vào; **Tiến trình (process / 프로세스) lớp trừu tượng (abstraction / 추상화)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Virtualization của thời gian (time / 시간) và không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiến trình (process / 프로세스) lớp trừu tượng (abstraction / 추상화)
 
@@ -42,8 +38,7 @@ Tiến trình (process / 프로세스) cho program cảm giác có CPU thực th
 
 OS vì vậy là **tài nguyên (resource / 자원) multiplexer + isolation tầng (layer / 계층)**.
 
-
-> **Chuyển mạch:** Từ **tiến trình (process / 프로세스) lớp trừu tượng (abstraction / 추상화)**, ta sang **Virtualization của thời gian (time / 시간) và không gian (space / 공간)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Tiến trình (process / 프로세스) lớp trừu tượng (abstraction / 추상화)** xác định đầu vào; **Virtualization của thời gian (time / 시간) và không gian (space / 공간)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Virtualization của thời gian (time / 시간) và không gian (space / 공간)
 
@@ -57,8 +52,7 @@ Mạng (network / 네트워크) virtualization: sockets cung cấp endpoint lớ
 
 Lớp trừu tượng (abstraction / 추상화) biến hardware details thành contracts hữu dụng nhưng không xóa các ràng buộc (constraints / 제약조건들). CPU vẫn finite, RAM vẫn finite, disk/mạng (network / 네트워크) vẫn có độ trễ (latency / 지연 시간).
 
-
-> **Chuyển mạch:** Từ **Virtualization của thời gian (time / 시간) và không gian (space / 공간)**, ta sang **người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간)** tiếp nhận điểm tựa từ **Virtualization của thời gian (time / 시간) và không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interrupt, exception và syscall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간)
 
@@ -66,8 +60,7 @@ Lớp trừu tượng (abstraction / 추상화) biến hardware details thành c
 
 Zero-copy techniques cố tránh redundant copies bằng mmap, sendfile, DMA buffers hoặc scatter/gather, nhưng ngữ nghĩa (semantics / 의미론) và bảo mật (security / 보안) vẫn cần kiểm soát quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명).
 
-
-> **Chuyển mạch:** Từ **người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간)**, ta sang **Interrupt, exception và syscall** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Interrupt, exception và syscall** tiếp nhận điểm tựa từ **Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Boot và initialization ở mức mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Interrupt, exception và syscall
 
@@ -75,22 +68,19 @@ Cả ba đều có thể chuyển điều khiển (control / 제어) vào kernel
 
 Phân biệt này giúp debugging: page fault có thể normal demand paging, segmentation fault là chính sách (policy / 정책) reaction khi address invalid, còn syscall thất bại (failure / 실패) thường trả lỗi (error / 오류) mã (code / 코드).
 
-
-> **Chuyển mạch:** Từ **Interrupt, exception và syscall**, ta sang **Boot và initialization ở mức mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Boot và initialization ở mức mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Interrupt, exception và syscall** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Boot và initialization ở mức mô hình tư duy (mental model / 사고 모델)
 
 Firmware khởi tạo hardware cơ bản, bootloader tải (load / 로드) kernel, kernel setup bộ nhớ (memory / 메모리)/interrupts/drivers rồi start user-space init/dịch vụ (service / 서비스) manager. Không cần thuộc chi tiết để hiểu rằng OS itself cũng là software phải được loaded và granted điều khiển (control / 제어) trước khi applications chạy.
 
-
-> **Chuyển mạch:** Từ **Boot và initialization ở mức mô hình tư duy (mental model / 사고 모델)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Boot và initialization ở mức mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > OS là **mediator có đặc quyền**. Nó multiplex finite resources, enforce isolation và expose stable abstractions. lời gọi hệ thống (system call / 시스템 호출) là cửa có kiểm soát qua ranh giới (boundary / 경계) người dùng (user / 사용자) ↔ kernel.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -100,11 +90,10 @@ Firmware khởi tạo hardware cơ bản, bootloader tải (load / 로드) kerne
 
 **“Kernel là toàn bộ hệ điều hành.”** OS phân phối (distribution / 분포) còn có user-space libraries, daemons, shells, GUI và tools; kernel là privileged cốt lõi (core / 핵심).
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 CPU privilege trong [CPU/ISA](../02_computer_architecture/01_cpu_isa_and_instruction_cycle.md) cho kernel quyền enforce. [Process/thread scheduling](./01_processes_threads_and_scheduling.md), [virtual memory](./03_virtual_memory_and_address_spaces.md) và [filesystem](./04_filesystems_storage_and_io.md) là ba abstractions lớn tiếp theo.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 processes threads and scheduling](./01_processes_threads_and_scheduling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

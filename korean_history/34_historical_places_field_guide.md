@@ -58,7 +58,7 @@ Gaya gồm nhiều political centers liên kết qua iron môi trường vận h
 
 Maritime trade không xảy ra trong vacuum. Merchant ships cần thông tin (information / 정보), cổng (port / 포트), lưu trữ (storage / 저장소), credit/trust, protection khỏi piracy và diplomatic truy cập (access / 접근). Khi một actor kiểm soát maritime bảo mật (security / 보안), actor đó có thể chuyển bảo mật (security / 보안) dịch vụ (service / 서비스) thành political influence.
 
-Nếu Gyeongju cho thấy capital consumption, Wando cho thấy mạng (network / 네트워크) giúp capital kết nối với wider East Asia.
+Nếu Gyeongju cho thấy cách thủ đô tiêu dùng nguồn lực, Wando cho thấy mạng lưới giúp thủ đô kết nối với Đông Á rộng lớn hơn.
 
 ## 6. Ganghwa — geography như một defense technology
 
@@ -108,7 +108,7 @@ Nhưng fortress cũng dạy một bài khác: tactical defensibility không gi�
 
 ## 11. Hahoe, Yangdong và seowon — lịch sử không chỉ nằm trong palace
 
-Các historic village và **seowon (서원 / Neo-Confucian academy)** giúp thấy lineage, cục bộ (local / 로컬) elite, education và land-based society.
+Các làng lịch sử và **seowon (서원 / Neo-Confucian academy)** giúp quan sát dòng họ, tầng lớp tinh hoa địa phương, giáo dục và xã hội dựa trên đất đai.
 
 Nếu chỉ đi palace ở Seoul, ta dễ tưởng Joseon = king + officials. Nhưng phần lớn population sống ngoài capital. Household cấu trúc (structure / 구조), inheritance, farming, cục bộ (local / 로컬) status và village institution quyết định everyday life.
 
@@ -158,7 +158,7 @@ Không cần một palace để có “di tích lịch sử”. **Ulsan** và **
 
 Industrial city cho thấy development chính sách (policy / 정책) biến capital allocation thành vật lý (physical / 물리적) geography. Một steel mill cần ore import, năng lượng (energy / 에너지), cổng (port / 포트), rail/road, financing và downstream industry. Vì thế factory là nút (node / 노드) của entire môi trường vận hành (production / 운영 환경) mạng (network / 네트워크).
 
-Nếu học chaebol chỉ qua company name, ta bỏ mất spatial chi phí (cost / 비용) và labor hệ thống (system / 시스템) của industrialization.
+Nếu chỉ học chaebol qua tên công ty, ta sẽ bỏ qua chi phí không gian và hệ thống lao động của công nghiệp hóa.
 
 ## 18. Gwangju — công khai (public / 공개) bộ nhớ (memory / 메모리) và democratization
 
@@ -178,7 +178,7 @@ Một exercise hữu ích là chọn một neighborhood Seoul và reconstruct 50
 
 Nếu sống ở Hàn Quốc và không muốn học bằng sách liên tục, có thể dùng các tuyến (route / 경로) như một syllabus ngoài đời:
 
-**Gyeongju** cho ancient trạng thái (state / 상태) + Buddhism + elite burial + capital urbanism. **Gongju/Buyeo** cho Baekje và river-based capital. **Ganghwa** cho prehistory + Goryeo Mongol war + nineteenth-century opening. **Seoul** cho Joseon → Korean Empire → colonial period → democratization → contemporary urbanization. **Suwon** cho late-Joseon trạng thái (state / 상태) dự án (project / 프로젝트). **Gwangju** cho democratization and bộ nhớ (memory / 메모리). **Ulsan/Pohang** cho industrialization. **DMZ region** cho war, division và Cold War landscape.
+**Gyeongju** cho thấy nhà nước cổ đại, Phật giáo, khu mộ tinh hoa và đô thị thủ đô. **Gongju/Buyeo** cho thấy Baekje và thủ đô dựa trên sông. **Ganghwa** nối tiền sử, chiến tranh Goryeo–Mông Cổ và đợt mở cửa thế kỷ XIX. **Seoul** đi từ Joseon → Đế quốc Hàn → thời thuộc địa → dân chủ hóa → đô thị hóa đương đại. **Suwon** cho thấy dự án nhà nước cuối Joseon. **Gwangju** gợi mở dân chủ hóa và ký ức. **Ulsan/Pohang** cho thấy công nghiệp hóa. **Vùng DMZ** cho thấy chiến tranh, chia cắt và cảnh quan Chiến tranh Lạnh.
 
 Không cần đi theo chronological thứ tự (order / 순서). Điều quan trọng là mỗi chuyến đi phải có một câu hỏi trước khi đến và một nhân quả (causal / 인과적) liên kết (connection / 연결) sau khi về.
 

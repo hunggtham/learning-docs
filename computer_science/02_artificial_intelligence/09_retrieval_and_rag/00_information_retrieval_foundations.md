@@ -1,7 +1,6 @@
 # Thông tin (information / 정보) Retrieval Foundations
 
-> **Mạch đọc:** Đặt **thông tin (information / 정보) Retrieval Foundations** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Retrieval không phải cơ sở dữ liệu (database / 데이터베이스) Lookup** sang **Corpus, truy vấn (query / 쿼리), Relevance**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보) Retrieval Foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Retrieval không phải cơ sở dữ liệu (database / 데이터베이스) Lookup** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Corpus, truy vấn (query / 쿼리), Relevance** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **thông tin (information / 정보) Retrieval (IR / 정보 검색 / truy xuất thông tin)** nghiên cứu cách tìm những document hoặc item liên quan từ một collection lớn dựa trên một truy vấn (query / 쿼리). RAG hiện đại dựa trực tiếp trên IR, vì trước khi LLM có thể trả lời dựa trên bên ngoài (external / 외부) kiến thức (knowledge / 지식), hệ thống (system / 시스템) phải tìm đúng bằng chứng (evidence / 증거).
 
@@ -21,6 +20,8 @@ Thông tin (information / 정보) retrieval xử lý truy vấn (query / 쿼리)
 
 Không có chính xác (exact / 정확한) key rõ ràng. hệ thống (system / 시스템) phải estimate relevance giữa truy vấn (query / 쿼리) và documents.
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) Retrieval Foundations**, **Retrieval không phải cơ sở dữ liệu (database / 데이터베이스) Lookup** nêu điều cần giải thích; **Corpus, truy vấn (query / 쿼리), Relevance** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Boolean Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Corpus, truy vấn (query / 쿼리), Relevance
 
 Một retrieval bài toán (problem / 문제) có:
@@ -36,6 +37,8 @@ Hệ thống (system / 시스템) rank documents theo score.
 Điểm khó là **relevance không phải thuộc tính (property / 속성) tuyệt đối của document**. Nó phụ thuộc truy vấn (query / 쿼리), người dùng (user / 사용자) intent, thời gian (time / 시간) và tác vụ (task / 작업).
 
 Một document nói đúng chủ đề nhưng không chứa answer cụ thể có thể topical relevant nhưng answer-irrelevant.
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Retrieval Foundations**, **Boolean Retrieval** tiếp nhận điểm tựa từ **Corpus, truy vấn (query / 쿼리), Relevance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inverted chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Boolean Retrieval
 
@@ -57,6 +60,8 @@ AND language = ko
 
 Hiện đại (modern / 현대적) retrieval thường kết hợp ngữ nghĩa (semantic / 의미적) ranking với siêu dữ liệu (metadata / 메타데이터) filters.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Retrieval Foundations**, **Inverted chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **Boolean Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Term Frequency và Document Frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Inverted chỉ mục (index / 인덱스)
 
 Tìm kiếm (search / 검색) engine không scan mọi document cho mỗi truy vấn (query / 쿼리). Nó xây **inverted chỉ mục (index / 인덱스)**:
@@ -75,6 +80,8 @@ cancel → [doc2, doc3, doc20]
 Truy vấn (query / 쿼리) chỉ cần inspect postings lists liên quan.
 
 Đây là foundation của lexical tìm kiếm (search / 검색) như BM25.
+
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) Retrieval Foundations**, **Term Frequency và Document Frequency** tiếp nhận điểm tựa từ **Inverted chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BM25** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Term Frequency và Document Frequency
 
@@ -96,6 +103,8 @@ IDF(t)=\log\frac{N}{df(t)}
 
 Rare informative terms được weight cao hơn dùng chung (common / 공통) words.
 
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Retrieval Foundations**, **BM25** tiếp nhận điểm tựa từ **Term Frequency và Document Frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Precision và Recall trong Retrieval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## BM25
 
 BM25 là lexical ranking hàm (function / 함수) rất mạnh. Simplified form:
@@ -111,6 +120,8 @@ Mô hình tư duy (mental model / 사고 모델):
 > Một term quan trọng nếu nó match truy vấn (query / 쿼리), hiếm trong corpus và xuất hiện đủ mạnh trong document, nhưng repetition không được reward vô hạn.
 
 BM25 vẫn competitive trong enterprise RAG, đặc biệt cho sản phẩm (product / 제품) codes, IDs, legal terms và chính xác (exact / 정확한) names.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Retrieval Foundations**, **Precision và Recall trong Retrieval** tiếp nhận điểm tựa từ **BM25** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranking Metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Precision và Recall trong Retrieval
 
@@ -129,6 +140,8 @@ Recall=\frac{Relevant\ Retrieved}{All\ Relevant}
 RAG thường ưu tiên recall ở first-stage retrieval rồi dùng reranker để tăng precision.
 
 Nếu correct bằng chứng (evidence / 증거) không vào candidate set, LLM phía sau không thể sử dụng nó.
+
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) Retrieval Foundations**, **Ranking Metrics** tiếp nhận điểm tựa từ **Precision và Recall trong Retrieval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy vấn (query / 쿼리) Intent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranking Metrics
 
@@ -150,6 +163,8 @@ Normalized Discounted Cumulative Gain cho phép graded relevance và discount ra
 
 RAG retrieval eval không nên chỉ đo final answer, vì final mô hình (model / 모델) có thể đoán đúng dù retrieval sai.
 
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Retrieval Foundations**, **Truy vấn (query / 쿼리) Intent** tiếp nhận điểm tựa từ **Ranking Metrics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vocabulary Mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Truy vấn (query / 쿼리) Intent
 
 Một truy vấn (query / 쿼리) có thể là:
@@ -160,6 +175,8 @@ Một truy vấn (query / 쿼리) có thể là:
 - transactional: tìm thông tin (information / 정보) để hành động.
 
 Retrieval chiến lược (strategy / 전략) nên khác nhau. truy vấn (query / 쿼리) “API phản hồi (response / 응답) mã (code / 코드) EKYC001” cần chính xác (exact / 정확한) lexical match hơn truy vấn (query / 쿼리) “lỗi xác thực khuôn mặt thường do đâu?”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Retrieval Foundations**, **Vocabulary Mismatch** tiếp nhận điểm tựa từ **Truy vấn (query / 쿼리) Intent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Document Granularity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vocabulary Mismatch
 
@@ -174,6 +191,8 @@ Dense retrieval giải một phần bằng learned ngữ nghĩa (semantic / 의�
 
 Nhưng ngữ nghĩa (semantic / 의미적) retrieval có thể thất bại (fail / 실패) chính xác (exact / 정확한) identifiers. Vì vậy hybrid retrieval rất quan trọng.
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) Retrieval Foundations**, **Document Granularity** tiếp nhận điểm tựa từ **Vocabulary Mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy vấn (query / 쿼리) Expansion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Document Granularity
 
 Tìm kiếm (search / 검색) whole document có thể quá coarse; tìm kiếm (search / 검색) sentence quá fine. RAG thường chỉ mục (index / 인덱스) chunks.
@@ -186,6 +205,8 @@ large chunk → đủ context nhưng noisy và tốn tokens
 ```
 
 Chunking là retrieval thiết kế (design / 설계), không chỉ preprocessing convenience.
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Retrieval Foundations**, **Truy vấn (query / 쿼리) Expansion** tiếp nhận điểm tựa từ **Document Granularity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Filters và siêu dữ liệu (metadata / 메타데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Truy vấn (query / 쿼리) Expansion
 
@@ -202,6 +223,8 @@ Ví dụ:
 
 Expansion tăng recall nhưng có thể introduce drift.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Retrieval Foundations**, **Truy vấn (query / 쿼리) Expansion** nêu điều cần giải thích; **Filters và siêu dữ liệu (metadata / 메타데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Retrieval as Candidate Generation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Filters và siêu dữ liệu (metadata / 메타데이터)
 
 Siêu dữ liệu (metadata / 메타데이터) filters rất powerful:
@@ -215,6 +238,8 @@ access_level<=user_clearance
 
 Embedding similarity không nên replace tường minh (explicit / 명시적) các ràng buộc (constraints / 제약조건들).
 
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) Retrieval Foundations**, **Filters và siêu dữ liệu (metadata / 메타데이터)** nêu điều cần giải thích; **Retrieval as Candidate Generation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **IR và RAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Retrieval as Candidate Generation
 
 Hiện đại (modern / 현대적) tìm kiếm (search / 검색) thường two-stage:
@@ -225,6 +250,8 @@ expensive reranker → top 5–10
 ```
 
 First stage optimize recall/độ trễ (latency / 지연 시간). Reranker optimize fine relevance.
+
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Retrieval Foundations**, **IR và RAG** tiếp nhận điểm tựa từ **Retrieval as Candidate Generation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## IR và RAG
 
@@ -237,9 +264,13 @@ Can generator use that evidence faithfully?
 
 Hai questions cần eval riêng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin (information / 정보) Retrieval Foundations**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **IR và RAG** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > thông tin (information / 정보) Retrieval là **tìm kiếm (search / 검색) over imperfect relevance**, không phải chính xác (exact / 정확한) lookup. RAG chất lượng (quality / 품질) bị giới hạn bởi bằng chứng (evidence / 증거) candidate set trước khi LLM bắt đầu generate.
+
+> **Chuyển mạch:** Trong **Thông tin (information / 정보) Retrieval Foundations**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -255,10 +286,12 @@ Similarity chỉ là retrieval tín hiệu (signal / 신호), không ngữ nghĩ
 
 Nó có thể guess, nhưng đó làm grounded hệ thống (system / 시스템) kém đáng tin hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) Retrieval Foundations**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 IR nối [NLP Information Retrieval](../07_natural_language_processing/08_search_and_information_retrieval.md), [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md) và RAG kiến trúc (architecture / 아키텍처).
 
 Xem tiếp: [Sparse and Dense Retrieval](./01_sparse_and_dense_retrieval.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 sparse and dense retrieval](./01_sparse_and_dense_retrieval.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

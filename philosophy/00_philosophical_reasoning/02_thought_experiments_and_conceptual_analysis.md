@@ -1,6 +1,6 @@
 # Thought Experiments và Conceptual phân tích (analysis / 분석)
 
-> **Mạch đọc:** Đọc **Thought Experiments và Conceptual phân tích (analysis / 분석)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cách dùng có kỷ luật** sang **Equilibrium phản tư**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thought Experiments và Conceptual phân tích (analysis / 분석)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cách dùng có kỷ luật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Equilibrium phản tư** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Thought experiment không phải dữ liệu thực nghiệm. Nó là một cách thay đổi có kiểm soát một premise để xem trực giác, khái niệm hoặc nguyên tắc có nhất quán không.
 
@@ -14,8 +14,7 @@ Thought experiment không phải dữ liệu thực nghiệm. Nó là một các
 
 Brain-in-a-vat, trolley trường hợp (case / 사례) hoặc teletransportation hữu ích vì chúng ép ta phân biệt các tiêu chí thường bị trộn. Chúng không tự chứng minh một lý thuyết (theory / 이론) đúng; nếu trực giác khác nhau, kết quả có thể là khái niệm chưa đủ rõ hoặc moral intuition bị ngữ cảnh (context / 맥락) điều khiển.
 
-
-> **Chuyển mạch:** Từ **Cách dùng có kỷ luật**, ta sang **Equilibrium phản tư** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Thought experiment cần rule và scope để tránh intuition shopping; reflective equilibrium tiếp theo cân bằng case, principle và background judgment.
 
 ## Equilibrium phản tư
 
@@ -23,4 +22,4 @@ Reflective equilibrium là quá trình điều chỉnh qua lại giữa principl
 
 Phương pháp này nối conceptual phân tích (analysis / 분석) với Psychology: cần biết intuition hình thành thế nào, nhưng không đồng nhất nguồn gốc của intuition với tính đúng của principle.
 
-> **Bàn giao:** Sau **Equilibrium phản tư**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 questions concepts and arguments](./00_questions_concepts_and_arguments.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Equilibrium phản tư**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

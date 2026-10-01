@@ -1,7 +1,6 @@
 # Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ
 
-> **Mạch đọc:** Đọc **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Không có loại bộ nhớ hoàn hảo** sang **Dòng bộ nhớ đệm (cache / 캐시)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Không có loại bộ nhớ hoàn hảo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dòng bộ nhớ đệm (cache / 캐시)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 CPU có thể thực hiện phép tính trong vài chu kỳ, trong khi truy cập DRAM có thể tốn hàng chục tới hàng trăm chu kỳ. Thiết bị lưu trữ và mạng còn chậm hơn nhiều. Nếu mọi thao tác đều phải chờ tầng chậm nhất, CPU sẽ dành phần lớn thời gian để chờ. **Phân cấp bộ nhớ (memory hierarchy)** giải quyết vấn đề này bằng nhiều tầng có dung lượng, độ trễ và chi phí khác nhau.
 
@@ -11,8 +10,7 @@ Ta muốn bộ nhớ vừa rất nhanh, rất lớn, rẻ, tiết kiệm điện
 
 Tầng càng gần CPU thường càng nhỏ nhưng càng nhanh. Cơ chế này hiệu quả vì phần lớn chương trình có **tính cục bộ theo thời gian (temporal locality)** và **tính cục bộ theo không gian (spatial locality)**.
 
-
-> **Chuyển mạch:** Từ **Không có loại bộ nhớ hoàn hảo**, ta sang **Dòng bộ nhớ đệm (cache / 캐시)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Dòng bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Không có loại bộ nhớ hoàn hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thẻ, tập và độ kết hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dòng bộ nhớ đệm (cache / 캐시)
 
@@ -20,8 +18,7 @@ Bộ nhớ đệm (cache / 캐시) CPU thường di chuyển dữ liệu theo **
 
 Đây là một lý do hai thuật toán có cùng độ phức tạp Big-O nhưng tốc độ thực tế khác nhau đáng kể.
 
-
-> **Chuyển mạch:** Từ **Dòng bộ nhớ đệm (cache / 캐시)**, ta sang **Thẻ, tập và độ kết hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Thẻ, tập và độ kết hợp** tiếp nhận điểm tựa từ **Dòng bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trúng bộ nhớ đệm (cache / 캐시) và trượt bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thẻ, tập và độ kết hợp
 
@@ -29,8 +26,7 @@ Bộ nhớ đệm (cache / 캐시) cần biết khối bộ nhớ nào đang n�
 
 **Trượt do xung đột (conflict miss)** xảy ra khi nhiều khối dữ liệu nóng ánh xạ vào cùng một tập dù tổng bộ nhớ đệm (cache / 캐시) vẫn còn dung lượng. Chính sách thay thế (replacement policy), thường là các biến thể xấp xỉ LRU, quyết định dòng nào bị loại.
 
-
-> **Chuyển mạch:** Từ **Thẻ, tập và độ kết hợp**, ta sang **Trúng bộ nhớ đệm (cache / 캐시) và trượt bộ nhớ đệm (cache / 캐시)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Trúng bộ nhớ đệm (cache / 캐시) và trượt bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Thẻ, tập và độ kết hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách ghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trúng bộ nhớ đệm (cache / 캐시) và trượt bộ nhớ đệm (cache / 캐시)
 
@@ -42,15 +38,13 @@ AMAT = hit\ thời gian (time / 시간) + miss\ tỷ lệ (rate / 비율) \times
 
 Nghĩa là thời gian trung bình bằng chi phí khi trúng bộ nhớ đệm (cache / 캐시) cộng với tỷ lệ trượt nhân chi phí bổ sung của mỗi lần trượt. Khi có nhiều tầng bộ nhớ đệm (cache / 캐시), công thức chi tiết hơn, nhưng ý chính không đổi: tỷ lệ trượt nhỏ vẫn có thể gây ảnh hưởng lớn nếu chi phí của một lần trượt rất cao.
 
-
-> **Chuyển mạch:** Từ **Trúng bộ nhớ đệm (cache / 캐시) và trượt bộ nhớ đệm (cache / 캐시)**, ta sang **Chính sách ghi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Chính sách ghi** tiếp nhận điểm tựa từ **Trúng bộ nhớ đệm (cache / 캐시) và trượt bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhất quán bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách ghi
 
 **Ghi xuyên (write-through)** gửi thay đổi xuống tầng thấp hơn ngay lập tức, giúp trạng thái dễ theo dõi nhưng tăng lưu lượng. **Ghi trả sau (write-back)** chỉ cập nhật dòng bộ nhớ đệm (cache / 캐시) và đánh dấu bẩn, sau đó ghi xuống khi dòng bị loại; cách này giảm băng thông nhưng quản lý phức tạp hơn. Chính sách cấp phát khi ghi (write-allocate/no-write-allocate) quyết định một lần ghi bị trượt có kéo dòng dữ liệu vào bộ nhớ đệm (cache / 캐시) hay không.
 
-
-> **Chuyển mạch:** Từ **Chính sách ghi**, ta sang **Nhất quán bộ nhớ đệm (cache / 캐시)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Nhất quán bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Chính sách ghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chia sẻ giả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhất quán bộ nhớ đệm (cache / 캐시)
 
@@ -58,8 +52,7 @@ CPU nhiều lõi có thể có bộ nhớ đệm (cache / 캐시) riêng cho t�
 
 Nhất quán bộ nhớ đệm (cache / 캐시) không tự giải quyết toàn bộ ngữ nghĩa đồng thời. Mô hình bộ nhớ của ngôn ngữ và ISA còn quy định thứ tự và khả năng quan sát; các cơ chế đồng bộ tạo quan hệ xảy-ra-trước (happens-before).
 
-
-> **Chuyển mạch:** Từ **Nhất quán bộ nhớ đệm (cache / 캐시)**, ta sang **Chia sẻ giả** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Chia sẻ giả** tiếp nhận điểm tựa từ **Nhất quán bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLB và bộ nhớ đệm (cache / 캐시) dịch địa chỉ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chia sẻ giả
 
@@ -67,8 +60,7 @@ Hai luồng cập nhật hai biến khác nhau nhưng nằm chung một dòng b�
 
 Đây là ví dụ rõ về việc lớp trừu tượng ở mức biến bị “rò” xuống đặc tính phần cứng ở mức dòng bộ nhớ đệm (cache / 캐시).
 
-
-> **Chuyển mạch:** Từ **Chia sẻ giả**, ta sang **TLB và bộ nhớ đệm (cache / 캐시) dịch địa chỉ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **TLB và bộ nhớ đệm (cache / 캐시) dịch địa chỉ** tiếp nhận điểm tựa từ **Chia sẻ giả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nạp trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## TLB và bộ nhớ đệm (cache / 캐시) dịch địa chỉ
 
@@ -76,22 +68,19 @@ Hai luồng cập nhật hai biến khác nhau nhưng nằm chung một dòng b�
 
 Trang lớn (huge pages) giảm số mục TLB cần thiết nhưng đổi lại làm cấp phát và phân mảnh nội bộ khó kiểm soát hơn.
 
-
-> **Chuyển mạch:** Từ **TLB và bộ nhớ đệm (cache / 캐시) dịch địa chỉ**, ta sang **Nạp trước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Nạp trước** tiếp nhận điểm tựa từ **TLB và bộ nhớ đệm (cache / 캐시) dịch địa chỉ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nạp trước
 
 Phần cứng hoặc phần mềm có thể **nạp trước (prefetching)** dữ liệu được dự đoán sẽ sớm dùng. Kiểu truy cập tuần tự dễ dự đoán; cấu trúc liên kết khó hơn vì địa chỉ tiếp theo phụ thuộc vào dữ liệu vừa đọc. Dự đoán sai làm lãng phí băng thông và dung lượng bộ nhớ đệm (cache / 캐시).
 
-
-> **Chuyển mạch:** Từ **Nạp trước**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Mô hình tư duy** gom các mảnh từ **Nạp trước** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu nhầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
 > Hiệu năng bộ nhớ phụ thuộc vào **tập dữ liệu làm việc (working set) và kiểu truy cập (access pattern)**, không chỉ kích thước dữ liệu. Hãy hỏi dữ liệu vừa với tầng nào, mỗi lần truy cập sử dụng bao nhiêu phần của dòng bộ nhớ đệm (cache / 캐시), dữ liệu có được tái sử dụng không và các lõi có tranh chấp cùng dòng hay không.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những hiểu nhầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những hiểu nhầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu nhầm thường gặp
 
@@ -101,11 +90,10 @@ Phần cứng hoặc phần mềm có thể **nạp trước (prefetching)** d�
 
 **“Coherence làm mã đồng thời tự động an toàn.”** Không đúng. Coherence giữ các bản sao nhất quán theo giao thức; chương trình không có race vẫn cần quy tắc đồng bộ và thứ tự bộ nhớ phù hợp.
 
-
-> **Chuyển mạch:** Từ **Những hiểu nhầm thường gặp**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**, **Những hiểu nhầm thường gặp** đã nêu tiêu chí phân biệt, còn **Kết nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 [Bố trí dữ liệu và tính cục bộ](../01_algorithms_data_structures/02_memory_models_and_data_layout.md) là phía phần mềm; [bộ nhớ ảo](../03_operating_systems/03_virtual_memory_and_address_spaces.md) bổ sung tầng dịch địa chỉ; [đồng thời](../03_operating_systems/02_concurrency_synchronization_and_deadlock.md) giải thích thứ tự bộ nhớ; [hiệu năng hệ thống](../08_software_systems/02_performance_capacity_and_scalability.md) mở rộng suy luận tới các nút thắt cổ chai của toàn hệ thống.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 digital logic and circuits](./00_digital_logic_and_circuits.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?
 
-> **Mạch đọc:** Đọc **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ví dụ định tính** sang **“Ea là năng lượng phản ứng hấp thụ rồi biến mất”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ví dụ định tính** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Năng lượng hoạt hóa (activation energy, \(E_a\) / 활성화 에너지)** là tham số mô tả mức độ nhạy của hằng số tốc độ với nhiệt độ trong khuôn khổ Arrhenius. Nó liên quan tới hàng rào mà hệ phải vượt qua trên con đường từ chất phản ứng tới sản phẩm, nhưng không nên đồng nhất máy móc với “năng lượng phản ứng” hay một độ cao hình học duy nhất trong mọi cơ chế.
 
@@ -359,8 +359,7 @@ Không. Ratio phụ thuộc \(E_a\), temperature và cơ chế (mechanism / 메�
 
 Không. Catalyst đổi pathway/barrier, không đổi equilibrium thermodynamics.
 
-
-> **Chuyển mạch:** Từ **Ví dụ định tính**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?**, **Ví dụ định tính** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -378,4 +377,4 @@ Arrhenius nén toàn bộ bức tranh đó thành một quan hệ (relation / �
 
 Xem tiếp: [Xúc tác](./04_catalysis.md) và [Năng lượng tự do Gibbs](../05_thermodynamics/03_gibbs_free_energy.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reaction rates](./00_reaction_rates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

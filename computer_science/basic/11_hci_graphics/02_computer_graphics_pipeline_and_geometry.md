@@ -1,7 +1,6 @@
 # Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)
 
-> **Mạch đọc:** Đọc **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Scene không phải ảnh (image / 이미지)** sang **Coordinate spaces**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Scene không phải ảnh (image / 이미지)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Coordinate spaces** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Computer graphics biến mathematical scene biểu diễn (representation / 표현) thành pixels. chuỗi xử lý (pipeline / 파이프라인) này nối tuyến tính (linear / 선형) algebra, hình học (geometry / 기하학), hardware parallelism và perception. Hiểu nó giúp giải thích game rendering, CAD, dữ liệu (data / 데이터) visualization, UI compositing và GPU programming.
 
@@ -11,8 +10,7 @@ Một 3D scene chứa hình học (geometry / 기하학), materials, lights, cam
 
 Do đó rendering là ánh xạ (mapping / 매핑) từ world mô hình (model / 모델) sang 2D samples.
 
-
-> **Chuyển mạch:** Từ **Scene không phải ảnh (image / 이미지)**, ta sang **Coordinate spaces** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Coordinate spaces** tiếp nhận điểm tựa từ **Scene không phải ảnh (image / 이미지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình (model / 모델) transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Coordinate spaces
 
@@ -26,8 +24,7 @@ Transformation matrices giúp compose translation, rotation, quy mô (scale / �
 
 Homogeneous coordinates dùng thêm dimension để translation trở thành phép nhân ma trận (matrix multiplication / 행렬 곱셈) và perspective projection có biểu diễn (representation / 표현) thống nhất.
 
-
-> **Chuyển mạch:** Từ **Coordinate spaces**, ta sang **mô hình (model / 모델) transformation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Mô hình (model / 모델) transformation** tiếp nhận điểm tựa từ **Coordinate spaces** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **View transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình (model / 모델) transformation
 
@@ -35,8 +32,7 @@ Cục bộ (local / 로컬) mô hình (model / 모델) coordinates thuận tiệ
 
 Nếu parent-child hierarchy, transformation compose: hand transform phụ thuộc arm, arm phụ thuộc body. Scene đồ thị (graph / 그래프) dùng cây (tree / 트리) để quản lý hierarchical transforms.
 
-
-> **Chuyển mạch:** Từ **mô hình (model / 모델) transformation**, ta sang **View transformation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **View transformation** tiếp nhận điểm tựa từ **Mô hình (model / 모델) transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## View transformation
 
@@ -44,8 +40,7 @@ Camera transform đổi world coordinates sang coordinate frame nơi camera ở 
 
 Thay vì “di chuyển camera”, toán học thường tương đương transform world theo inverse camera transform.
 
-
-> **Chuyển mạch:** Từ **View transformation**, ta sang **Projection** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Projection** tiếp nhận điểm tựa từ **View transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Clipping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Projection
 
@@ -55,8 +50,7 @@ Perspective divide sau clip-space transform tạo nonlinear độ sâu (depth / 
 
 Near/far planes ảnh hưởng độ sâu (depth / 깊이) precision; ratio quá lớn có thể gây z-fighting.
 
-
-> **Chuyển mạch:** Từ **Projection**, ta sang **Clipping** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Clipping** tiếp nhận điểm tựa từ **Projection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rasterization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Clipping
 
@@ -64,8 +58,7 @@ Hình học (geometry / 기하학) ngoài view frustum không cần rasterize. C
 
 Culling loại hình học (geometry / 기하학) chắc chắn không visible, như back-face culling hoặc frustum culling, giảm công việc (work / 작업).
 
-
-> **Chuyển mạch:** Từ **Clipping**, ta sang **Rasterization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Rasterization** tiếp nhận điểm tựa từ **Clipping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vertex và fragment shaders** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rasterization
 
@@ -73,8 +66,7 @@ Rasterizer xác định pixels/samples covered bởi triangles và interpolate a
 
 Triangle là thành phần nguyên thủy (primitive / 기본 요소) phổ biến vì ba điểm luôn định nghĩa plane và hardware tối ưu mạnh.
 
-
-> **Chuyển mạch:** Từ **Rasterization**, ta sang **Vertex và fragment shaders** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Vertex và fragment shaders** tiếp nhận điểm tựa từ **Rasterization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) buffer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vertex và fragment shaders
 
@@ -82,8 +74,7 @@ Vertex shader xử lý per-vertex transformations/attributes. Fragment/điểm �
 
 Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인) programmable ở nhiều stages. Shader programs chạy massively parallel trên dữ liệu (data / 데이터) tương tự.
 
-
-> **Chuyển mạch:** Từ **Vertex và fragment shaders**, ta sang **độ sâu (depth / 깊이) buffer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Độ sâu (depth / 깊이) buffer** tiếp nhận điểm tựa từ **Vertex và fragment shaders** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) buffer
 
@@ -91,8 +82,7 @@ Z-buffer lưu độ sâu (depth / 깊이) gần nhất per điểm ảnh (pixel 
 
 Transparency phức tạp hơn vì blending phụ thuộc thứ tự (order / 순서); simple z-buffer không giải hoàn toàn overlapping translucent surfaces.
 
-
-> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) buffer**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Độ sâu (depth / 깊이) buffer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -102,18 +92,16 @@ Transparency phức tạp hơn vì blending phụ thuộc thứ tự (order / �
 
 **“ma trận (matrix / 행렬) là cú pháp (syntax / 문법) graphics.”** ma trận (matrix / 행렬) biểu diễn transformations composable; ý nghĩa hình học (geometry / 기하학) quan trọng hơn API.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Rendering chuỗi xử lý (pipeline / 파이프라인) liên tục đổi biểu diễn (representation / 표현) để biến hình học (geometry / 기하학) trong world thành samples trên screen, giữ những properties cần và bỏ công việc (work / 작업) không visible.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc [vectors/linear algebra](../../../mathematics/04_vectors_linear_algebra/00_vectors.md), [linear transformations](../../../mathematics/04_vectors_linear_algebra/02_linear_transformations.md), [GPU architecture](../02_computer_architecture/05_parallel_computer_architecture.md) và [raster/color/rendering](./03_images_color_rasterization_and_rendering.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 hci human factors and interaction models](./00_hci_human_factors_and_interaction_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

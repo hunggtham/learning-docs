@@ -1,7 +1,6 @@
 # Computing ethics, privacy và professional responsibility
 
-> **Mạch đọc:** Đặt **Computing ethics, privacy và professional responsibility** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Technical quyết định (decision / 결정) có giá trị (value / 값) các giả định (assumptions / 가정들)** sang **Privacy không chỉ là secrecy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Computing ethics, privacy và professional responsibility**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Technical quyết định (decision / 결정) có giá trị (value / 값) các giả định (assumptions / 가정들)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Privacy không chỉ là secrecy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Software changes what people can know, do and điều khiển (control / 제어). Vì vậy engineer không chỉ chịu trách nhiệm “mã (code / 코드) đúng spec”; cần xem ai bị ảnh hưởng, harm nào có thể xảy ra và quyền/consent nào đang được dùng. Ethics không thay law, nhưng law cũng không bao phủ mọi responsible quyết định (decision / 결정).
 
@@ -11,8 +10,7 @@ Chọn default công khai (public / 공개)/private, dữ liệu (data / 데이�
 
 Một thiết kế (design / 설계) có thể technically neutral-looking nhưng embed incentives/các giả định (assumptions / 가정들).
 
-
-> **Chuyển mạch:** Từ **Technical quyết định (decision / 결정) có giá trị (value / 값) các giả định (assumptions / 가정들)**, ta sang **Privacy không chỉ là secrecy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Privacy không chỉ là secrecy** tiếp nhận điểm tựa từ **Technical quyết định (decision / 결정) có giá trị (value / 값) các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) minimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Privacy không chỉ là secrecy
 
@@ -20,8 +18,7 @@ Privacy liên quan điều khiển (control / 제어)/ngữ cảnh (context / �
 
 Thông tin (information / 정보) có thể không secret nhưng aggregation/re-identification tạo harm mới.
 
-
-> **Chuyển mạch:** Từ **Privacy không chỉ là secrecy**, ta sang **dữ liệu (data / 데이터) minimization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computing ethics, privacy và professional responsibility**, **Privacy không chỉ là secrecy** nêu điều cần giải thích; **Dữ liệu (data / 데이터) minimization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Consent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dữ liệu (data / 데이터) minimization
 
@@ -29,8 +26,7 @@ Thu thập ít dữ liệu (data / 데이터) cần thiết giảm breach impact
 
 Minimization cũng là bảo mật (security / 보안) principle: dữ liệu (data / 데이터) không tồn tại thì không thể leak từ hệ thống (system / 시스템) đó.
 
-
-> **Chuyển mạch:** Từ **dữ liệu (data / 데이터) minimization**, ta sang **Consent** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computing ethics, privacy và professional responsibility**, **Dữ liệu (data / 데이터) minimization** nêu điều cần giải thích; **Consent** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Purpose limitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Consent
 
@@ -38,8 +34,7 @@ Consent có ý nghĩa khi informed, specific và reasonably voluntary. Dark patt
 
 Kỹ thuật (engineering / 엔지니어링) cần làm preference enforceable trong actual dữ liệu (data / 데이터) flows, không chỉ checkbox UI.
 
-
-> **Chuyển mạch:** Từ **Consent**, ta sang **Purpose limitation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Consent** đã nêu tiêu chí phân biệt, còn **Purpose limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Professional responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Purpose limitation
 
@@ -47,8 +42,7 @@ Dữ liệu (data / 데이터) collected cho fraud prevention không tự độn
 
 Dữ liệu (data / 데이터) lineage giúp biết downstream các hệ thống (systems / 시스템들) đang dùng dataset nào cho purpose nào.
 
-
-> **Chuyển mạch:** Từ **Purpose limitation**, ta sang **Professional responsibility** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computing ethics, privacy và professional responsibility**, **Purpose limitation** đã nêu tiêu chí phân biệt, còn **Professional responsibility** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dual use** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Professional responsibility
 
@@ -58,8 +52,7 @@ Trong high-stakes các hệ thống (systems / 시스템들), pressure deadline 
 
 Codes of ethics từ professional organizations cung cấp frameworks nhưng không tự giải mọi xung đột (conflict / 충돌).
 
-
-> **Chuyển mạch:** Từ **Professional responsibility**, ta sang **Dual use** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computing ethics, privacy và professional responsibility**, **Dual use** tiếp nhận điểm tựa từ **Professional responsibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Whistleblowing và escalation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dual use
 
@@ -67,8 +60,7 @@ Technology như encryption, facial recognition, vulnerability research và gener
 
 Không phải mọi misuse có thể prevent, nhưng “công cụ (tool / 도구) neutral nên không cần nghĩ” là insufficient.
 
-
-> **Chuyển mạch:** Từ **Dual use**, ta sang **Whistleblowing và escalation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Whistleblowing và escalation** tiếp nhận điểm tựa từ **Dual use** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Whistleblowing và escalation
 
@@ -76,8 +68,7 @@ Khi harm/quy tắc (rule / 규칙) violation nghiêm trọng bị ignore, nội 
 
 Điểm CS nền tảng: organization tiến trình (process / 프로세스) là một an toàn (safety / 안전) điều khiển (control / 제어), giống rà soát mã (code review / 코드 리뷰) nhưng cho societal rủi ro (risk / 위험).
 
-
-> **Chuyển mạch:** Từ **Whistleblowing và escalation**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computing ethics, privacy và professional responsibility**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Whistleblowing và escalation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -87,18 +78,16 @@ Khi harm/quy tắc (rule / 규칙) violation nghiêm trọng bị ignore, nội 
 
 **“Engineer không quyết sản phẩm (product / 제품) nên không có responsibility.”** Engineers biết hiện thực (implementation / 구현)/rủi ro (risk / 위험) details và có role communicate consequences.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computing ethics, privacy và professional responsibility**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Responsible computing hỏi không chỉ “hệ thống (system / 시스템) có hoạt động không?” mà “hoạt động cho ai, với dữ liệu/quyền lực nào, và ai chịu chi phí (cost / 비용) khi các giả định (assumptions / 가정들) sai?”
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc [security principles](../07_security_reliability/00_threat_models_and_security_principles.md), [HCI/dark patterns](../11_hci_graphics/01_interface_design_accessibility_and_usability.md), [AI evaluation](../10_ai_foundations/04_ai_evaluation_data_and_responsibility.md) và [data governance](./01_data_governance_bias_and_algorithmic_impact.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 data governance bias and algorithmic impact](./01_data_governance_bias_and_algorithmic_impact.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

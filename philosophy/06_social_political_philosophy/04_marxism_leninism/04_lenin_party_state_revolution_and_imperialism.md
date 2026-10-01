@@ -1,5 +1,7 @@
 # Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Organization bài toán (problem / 문제): từ grievance tới political sức chứa (capacity / 용량)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Spontaneity và consciousness: một debate dễ bị caricature** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Chapter trước đã giải thích vì sao Lenin xuất hiện như một transformation bên trong Marxist tradition chứ không chỉ là người lặp lại Marx. Bây giờ cần đọc Lenin như một theorist của **organization under repression**, **revolutionary chuyển tiếp (transition / 전이)**, **trạng thái (state / 상태) power** và **capitalism in an imperial world hệ thống (system / 시스템)**.
 
 Điều quan trọng là giữ ba tầng (layer / 계층) riêng:
@@ -29,9 +31,9 @@ local grievance
 
 Nếu một movement chỉ tồn tại khi spontaneous anger cao, nó khó survive repression hoặc coordinate complex hành động (action / 동작). Lenin therefore emphasizes press, trained organizers, continuity và nationwide political công việc (work / 작업).
 
-## Spontaneity và consciousness: một debate dễ bị caricature
-Phần “Spontaneity và consciousness: một debate dễ bị caricature” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Spontaneity và consciousness: một debate dễ bị caricature** tiếp nhận điểm tựa từ **Organization bài toán (problem / 문제): từ grievance tới political sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vanguard party: hàm (function / 함수) trước label** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Spontaneity và consciousness: một debate dễ bị caricature
 
 *What Is To Be Done?* thường được summarized như claim rằng workers tự mình chỉ đạt “trade-union consciousness” và political consciousness phải được brought from outside. Đây là một passage historically influential, nhưng không nên biến nó thành proposition rằng workers không thể think politically.
 
@@ -45,6 +47,8 @@ center-wide synthesis → local strategy
 ```
 
 If only the second arrow survives, organization can become command without học tập (learning / 학습).
+
+> **Chuyển mạch:** Ở chặng này của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Spontaneity và consciousness: một debate dễ bị caricature** cho ta quy tắc; **Vanguard party: hàm (function / 함수) trước label** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Democratic centralism: concept phải được periodize** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vanguard party: hàm (function / 함수) trước label
 
@@ -71,6 +75,8 @@ principal-agent / accountability problem ↑
 
 This sự đánh đổi (trade-off / 트레이드오프) is not unique to communist parties; all large organizations face it. But it becomes especially important when party claims authority to represent a lớp (class / 클래스) and later exercises trạng thái (state / 상태) power.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Vanguard party: hàm (function / 함수) trước label** cho ta quy tắc; **Democratic centralism: concept phải được periodize** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Party, lớp (class / 클래스) và substitution bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Democratic centralism: concept phải được periodize
 
 **Democratic centralism** is strongly associated with Leninist and later Marxist-Leninist party organization, but its institutional meaning varied historically. At a minimum, it combines nội bộ (internal / 내부) discussion/quyết định (decision / 결정) processes with expectation of unified hành động (action / 동작) after a quyết định (decision / 결정).
@@ -89,6 +95,8 @@ what happens after disagreement?
 
 A hệ thống (system / 시스템) can lời gọi (call / 호출) itself democratic centralist while answering these questions very differently across periods. Therefore later Soviet practice should not be projected backward as a timeless definition of Lenin's entire organizational thought.
 
+> **Chuyển mạch:** Trong **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Party, lớp (class / 클래스) và substitution bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Democratic centralism: concept phải được periodize** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái (state / 상태): neutral referee hay lớp (class / 클래스) cấu trúc (structure / 구조)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Party, lớp (class / 클래스) và substitution bài toán (problem / 문제)
 
 A party can claim to articulate long-run lớp (class / 클래스) interests even when many workers disagree with it. This creates the **substitution bài toán (problem / 문제)**: when does organization represent a constituency, and when does organization substitute its own judgment for that constituency?
@@ -106,6 +114,8 @@ class position
 
 Every arrow contains a biểu diễn (representation / 표현) bài toán (problem / 문제). There is no automatic logical định danh (identity / 식별자) between “working lớp (class / 클래스)” and “party speaking in its name.” Institutional mechanisms—selection, recall, competition, deliberation, transparency, nội bộ (internal / 내부) pluralism—determine how strong that biểu diễn (representation / 표현) claim is.
 
+> **Chuyển mạch:** Ở chặng này của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Trạng thái (state / 상태): neutral referee hay lớp (class / 클래스) cấu trúc (structure / 구조)?** tiếp nhận điểm tựa từ **Party, lớp (class / 클래스) và substitution bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Paris Commune và institutional reconstruction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trạng thái (state / 상태): neutral referee hay lớp (class / 클래스) cấu trúc (structure / 구조)?
 
 In *The Trạng thái (state / 상태) and Revolution*, Lenin reads Marx and Engels as rejecting the idea that trạng thái (state / 상태) in lớp (class / 클래스) society is simply a neutral body above xung đột (conflict / 충돌). Trạng thái (state / 상태) apparatus—administration, police, military, law—helps stabilize a xã hội (social / 사회적) thứ tự (order / 순서) structured by lớp (class / 클래스) relations.
@@ -119,6 +129,8 @@ But “trạng thái (state / 상태) serves lớp (class / 클래스) quy tắc
 
 These mechanisms should not be collapsed. A serious empirical phân tích (analysis / 분석) asks which one is operating in a concrete trường hợp (case / 사례).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Paris Commune và institutional reconstruction** tiếp nhận điểm tựa từ **Trạng thái (state / 상태): neutral referee hay lớp (class / 클래스) cấu trúc (structure / 구조)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dictatorship of the proletariat: ý nghĩa (semantic meaning / 의미적 뜻) và institutional content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Paris Commune và institutional reconstruction
 
 Lenin uses Paris Commune as a tham chiếu (reference / 참조) điểm (point / 지점) for a transformed political form: delegates with stronger accountability, recallability, reduced separation between officials and ordinary citizens, and attempts to break with a standing bureaucratic-military apparatus.
@@ -126,6 +138,8 @@ Lenin uses Paris Commune as a tham chiếu (reference / 참조) điểm (point /
 The important move is from **who rules** to **how quy tắc (rule / 규칙) is institutionally organized**. Replacing one group of officeholders while leaving all incentive, accountability and coercive structures unchanged may not produce the transformation Lenin thinks necessary.
 
 This connects directly with hiện đại (modern / 현대적) institutional phân tích (analysis / 분석): personnel thay đổi (change / 변경) and quy tắc (rule / 규칙) thay đổi (change / 변경) are different interventions.
+
+> **Chuyển mạch:** Trong **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Dictatorship of the proletariat: ý nghĩa (semantic meaning / 의미적 뜻) và institutional content** tiếp nhận điểm tựa từ **Paris Commune và institutional reconstruction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coercion và withering away: chuyển tiếp (transition / 전이) contains an nội bộ (internal / 내부) institutional tension** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dictatorship of the proletariat: ý nghĩa (semantic meaning / 의미적 뜻) và institutional content
 
@@ -144,6 +158,8 @@ who decides that classification?
 
 Without answers, “lớp (class / 클래스) quy tắc (rule / 규칙)” remains an abstract category.
 
+> **Chuyển mạch:** Ở chặng này của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Coercion và withering away: chuyển tiếp (transition / 전이) contains an nội bộ (internal / 내부) institutional tension** tiếp nhận điểm tựa từ **Dictatorship of the proletariat: ý nghĩa (semantic meaning / 의미적 뜻) và institutional content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Revolution: cấu trúc (structure / 구조) does not replace agency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Coercion và withering away: chuyển tiếp (transition / 전이) contains an nội bộ (internal / 내부) institutional tension
 
 Lenin argues both that a revolutionary trạng thái (state / 상태) must be able to suppress resistance from exploiting classes and that trạng thái (state / 상태) as coercive lớp (class / 클래스) apparatus should eventually **wither away** when lớp (class / 클래스) antagonisms disappear.
@@ -161,6 +177,8 @@ conditions for withering away
 Organizations normally develop interests in survival, budgets, authority and điều khiển (control / 제어). Therefore the move from stronger transitional trạng thái (state / 상태) to weaker/no lớp (class / 클래스) trạng thái (state / 상태) cannot be assumed. It needs institutional mechanisms and historical bằng chứng (evidence / 증거).
 
 This tension does not itself prove chuyển tiếp (transition / 전이) impossible; it identifies the burden a chuyển tiếp (transition / 전이) lý thuyết (theory / 이론) must carry.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Revolution: cấu trúc (structure / 구조) does not replace agency** tiếp nhận điểm tựa từ **Coercion và withering away: chuyển tiếp (transition / 전이) contains an nội bộ (internal / 내부) institutional tension** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alliance bài toán (problem / 문제): industrial workers trong largely agrarian society** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Revolution: cấu trúc (structure / 구조) does not replace agency
 
@@ -183,11 +201,15 @@ trigger / crisis
 
 Possibility is not inevitability. Similar economic grievances can produce reform, repression, electoral thay đổi (change / 변경), coup, revolution or no major thay đổi (change / 변경) depending on institutions and organization.
 
+> **Chuyển mạch:** Trong **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Alliance bài toán (problem / 문제): industrial workers trong largely agrarian society** tiếp nhận điểm tựa từ **Revolution: cấu trúc (structure / 구조) does not replace agency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Imperialism: five features as a historical mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Alliance bài toán (problem / 문제): industrial workers trong largely agrarian society
 
 A major Russian difference from the imagined trajectory of advanced Western capitalism was the kích thước (size / 크기) of peasantry. Revolutionary chiến lược (strategy / 전략) therefore had to address worker–peasant relations rather than assume a predominantly industrial proletarian society.
 
 This is one reason Marxism changes as it travels. A lý thuyết (theory / 이론) centered on capitalist lớp (class / 클래스) relations in industrial Europe encounters agrarian thuộc tính (property / 속성), peasant households, nationalities and imperial peripheries. Leninist politics therefore contains more tường minh (explicit / 명시적) alliance chiến lược (strategy / 전략) than a simple reading of Marx's mature economic texts would suggest.
+
+> **Chuyển mạch:** Ở chặng này của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Imperialism: five features as a historical mô hình (model / 모델)** tiếp nhận điểm tựa từ **Alliance bài toán (problem / 문제): industrial workers trong largely agrarian society** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monopoly does not mean competition disappears** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Imperialism: five features as a historical mô hình (model / 모델)
 
@@ -202,6 +224,8 @@ territorial division among major powers intensifies
 ```
 
 The mô hình (model / 모델) tries to connect domestic accumulation with international hierarchy and geopolitical rivalry. It was written in the ngữ cảnh (context / 맥락) of World War I and the colonial world of the early twentieth century.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Monopoly does not mean competition disappears** tiếp nhận điểm tựa từ **Imperialism: five features as a historical mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Capital export và uneven development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Monopoly does not mean competition disappears
 
@@ -218,6 +242,8 @@ many-firm competition
 
 Whether this describes a particular hiện đại (modern / 현대적) industry is an empirical question, not something the word “imperialism” can decide in advance.
 
+> **Chuyển mạch:** Trong **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Capital export và uneven development** tiếp nhận điểm tựa từ **Monopoly does not mean competition disappears** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Imperialism lý thuyết (theory / 이론): what would count as bằng chứng (evidence / 증거)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Capital export và uneven development
 
 Lenin gives special importance to **capital export**, distinguishing it from simple export of goods. Capital seeks opportunities across borders where returns, resources, labor conditions or strategic điều khiển (control / 제어) may differ.
@@ -225,6 +251,8 @@ Lenin gives special importance to **capital export**, distinguishing it from sim
 This connects to **uneven development**: capitalism does not develop all regions at equal rates or in identical forms. Different positions in world economy can generate different political coalitions and revolutionary possibilities.
 
 Hiện đại (modern / 현대적) FDI, toàn cục (global / 전역) giá trị (value / 값) chains and cross-border finance create obvious conceptual echoes, but one must not infer that every investment abroad is bằng chứng (evidence / 증거) of Lenin's entire imperialism lý thuyết (theory / 이론). Đo lường (measurement / 측정) requires quyền sở hữu (ownership / 소유권) dữ liệu (data / 데이터), profit flows, political influence, coercion, trade cấu trúc (structure / 구조) and alternative explanations.
+
+> **Chuyển mạch:** Ở chặng này của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Capital export và uneven development** nêu điều cần giải thích; **Imperialism lý thuyết (theory / 이론): what would count as bằng chứng (evidence / 증거)?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **From Lenin to Marxism–Leninism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Imperialism lý thuyết (theory / 이론): what would count as bằng chứng (evidence / 증거)?
 
@@ -240,6 +268,8 @@ causal link between these and war/colonial expansion
 ```
 
 The first five are partly measurable historical claims. The last is a much stronger nhân quả (causal / 인과적) claim. It requires comparative bằng chứng (evidence / 증거) and cannot be established by showing only that monopolies and wars coexisted.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **Imperialism lý thuyết (theory / 이론): what would count as bằng chứng (evidence / 증거)?** nêu điều cần giải thích; **From Lenin to Marxism–Leninism** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## From Lenin to Marxism–Leninism
 
@@ -257,12 +287,14 @@ later systematization: Marxism–Leninism
 
 The next chapter examines what changes when a contested intellectual tradition becomes a doctrine used by party-state institutions, education and chính sách (policy / 정책) ngôn ngữ (language / 언어).
 
-## Sources và reading anchors
-Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**, **From Lenin to Marxism–Leninism** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Sources và reading anchors
 
 - Lenin, *What Is To Be Done?*: https://www.marxists.org/archive/lenin/works/1901/witbd/
 - Lenin, *The Trạng thái (state / 상태) and Revolution*: https://www.marxists.org/archive/lenin/works/1917/staterev/
 - Lenin, *Imperialism, the Highest Stage of Capitalism*: https://www.marxists.org/archive/lenin/works/1916/imp-hsc/
 
 Primary sources establish Lenin's arguments. They are not sufficient bằng chứng (evidence / 증거) for claims about later Soviet institutions, nor should later Soviet institutions be treated as transparent copies of these texts.
+
+> **Bàn giao:** Sau **Sources và reading anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

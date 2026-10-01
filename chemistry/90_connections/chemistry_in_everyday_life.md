@@ -1,7 +1,6 @@
 # Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế
 
-> **Mạch đọc:** Đọc **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nấu ăn** sang **Làm sạch**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nấu ăn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Làm sạch** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Hóa học đời sống trở nên hữu ích khi ta truy ngược những quan sát quen thuộc về phân tử, cân bằng, tốc độ phản ứng và vật liệu thay vì ghi nhớ chúng như các mẹo rời rạc.
 
@@ -13,8 +12,7 @@ Nhiệt độ sôi phụ thuộc áp suất, vì vậy nồi áp suất làm nư
 
 Nấu ăn vì vậy là một phòng thí nghiệm động học, nhiệt động lực học và hóa học hữu cơ ngay trong đời sống.
 
-
-> **Chuyển mạch:** Từ **Nấu ăn**, ta sang **Làm sạch** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Làm sạch** tiếp nhận điểm tựa từ **Nấu ăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo quản thực phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Làm sạch
 
@@ -24,8 +22,7 @@ Nước cứng chứa nhiều \(Ca^{2+}\) và \(Mg^{2+}\), các ion này có th�
 
 Thuốc tẩy hoạt động chủ yếu qua oxy hóa; acid giúp hòa tan cặn carbonate. Vì các chất tẩy khác nhau dựa trên hóa học khác nhau, trộn tùy tiện có thể tạo phản ứng nguy hiểm và sinh khí độc.
 
-
-> **Chuyển mạch:** Từ **Làm sạch**, ta sang **Bảo quản thực phẩm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Bảo quản thực phẩm** tiếp nhận điểm tựa từ **Làm sạch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mùi và độ bay hơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo quản thực phẩm
 
@@ -35,8 +32,7 @@ Muối hoặc đường làm giảm **hoạt độ nước (water activity)**, k
 
 Không có một cơ chế duy nhất mang tên “bảo quản”; mỗi phương pháp tác động vào một giới hạn hóa học hoặc sinh học khác nhau.
 
-
-> **Chuyển mạch:** Từ **Bảo quản thực phẩm**, ta sang **Mùi và độ bay hơi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Mùi và độ bay hơi** tiếp nhận điểm tựa từ **Bảo quản thực phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pin trong điện thoại và laptop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mùi và độ bay hơi
 
@@ -46,8 +42,7 @@ Không có một cơ chế duy nhất mang tên “bảo quản”; mỗi phươ
 
 Vì vậy “có mùi mạnh” không đồng nghĩa đơn giản với “có nhiều chất hơn”.
 
-
-> **Chuyển mạch:** Từ **Mùi và độ bay hơi**, ta sang **Pin trong điện thoại và laptop** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Pin trong điện thoại và laptop** tiếp nhận điểm tựa từ **Mùi và độ bay hơi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gỉ sắt và vết bẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pin trong điện thoại và laptop
 
@@ -57,8 +52,7 @@ Sạc làm đảo chiều các quá trình oxy hóa-khử và xen cài ion so v�
 
 Khái niệm như dung lượng, trạng thái sạc và tuổi thọ chu kỳ đều có nền tảng hóa học, dù người dùng thường chỉ nhìn thấy phần trăm pin trên giao diện.
 
-
-> **Chuyển mạch:** Từ **Pin trong điện thoại và laptop**, ta sang **Gỉ sắt và vết bẩn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Gỉ sắt và vết bẩn** tiếp nhận điểm tựa từ **Pin trong điện thoại và laptop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gỉ sắt và vết bẩn
 
@@ -68,8 +62,7 @@ Vết bẩn lại rất đa dạng. Nhiều vết màu chứa hệ liên hợp h
 
 Do đó chọn chất tẩy tốt nên bắt đầu bằng câu hỏi “vết bẩn là loại chất gì?” thay vì chỉ chọn chất tẩy mạnh nhất.
 
-
-> **Chuyển mạch:** Từ **Gỉ sắt và vết bẩn**, ta sang **Thuốc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Thuốc** tiếp nhận điểm tựa từ **Gỉ sắt và vết bẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhựa và polymer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thuốc
 
@@ -77,8 +70,7 @@ Do đó chọn chất tẩy tốt nên bắt đầu bằng câu hỏi “vết b
 
 Chuyển hóa thuốc thường biến đổi nhóm chức để làm phân tử dễ thải trừ hơn. Lập thể cũng rất quan trọng vì receptor và enzyme đều có cấu trúc ba chiều bất đối xứng.
 
-
-> **Chuyển mạch:** Từ **Thuốc**, ta sang **Nhựa và polymer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Nhựa và polymer** tiếp nhận điểm tựa từ **Thuốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu và không khí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhựa và polymer
 
@@ -86,8 +78,7 @@ Túi nhựa mềm, chai cứng và cao su đều là vật liệu polymer nhưng
 
 Vì vậy từ “nhựa” che giấu một không gian vật liệu rất rộng. Tính chất vĩ mô xuất hiện từ cấu trúc chuỗi và cách các chuỗi tương tác, không chỉ từ việc vật liệu “được làm từ polymer”.
 
-
-> **Chuyển mạch:** Từ **Nhựa và polymer**, ta sang **Khí hậu và không khí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Khí hậu và không khí** tiếp nhận điểm tựa từ **Nhựa và polymer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khí hậu và không khí
 
@@ -97,8 +88,7 @@ Ozone tầng đối lưu trong khói quang hóa không nhất thiết được t
 
 Đây là ví dụ cho thấy nồng độ của một chất trong môi trường có thể do mạng phản ứng quyết định, không chỉ do lượng phát thải trực tiếp của chính chất đó.
 
-
-> **Chuyển mạch:** Từ **Khí hậu và không khí**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Mô hình tư duy** gom các mảnh từ **Khí hậu và không khí** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -111,4 +101,4 @@ Khi gặp một hiện tượng đời sống, hãy hỏi bốn câu hỏi:
 
 Bốn câu hỏi này biến Hóa học từ tập hợp mẹo thành một hệ thống giải thích có thể tái sử dụng.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [chemistry and ai](./chemistry_and_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

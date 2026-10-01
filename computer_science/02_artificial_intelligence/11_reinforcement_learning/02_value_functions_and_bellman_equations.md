@@ -1,7 +1,6 @@
 # Giá trị (value / 값) Functions và Bellman Equations
 
-> **Mạch đọc:** Đặt **giá trị (value / 값) Functions và Bellman Equations** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bellman decomposition** sang **Q-function Bellman equation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Giá trị (value / 값) Functions và Bellman Equations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bellman decomposition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Q-function Bellman equation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Trong Reinforcement học tập (learning / 학습), immediate reward không đủ để đánh giá một trạng thái (state / 상태)/hành động (action / 동작) vì hành động (action / 동작) hiện tại ảnh hưởng cả future. **giá trị (value / 값) hàm (function / 함수)** nén expected long-term return thành một quantity có thể học và optimize.
 
@@ -41,6 +40,8 @@ V^\pi(s)=\sum_a\pi(a|s)\sum_{s'}P(s'|s,a)[R(s,a,s')+\gamma V^\pi(s')]
 
 Bellman equation không phải một heuristic; nó đến trực tiếp từ recursive definition của discounted return.
 
+> **Chuyển mạch:** Trong **Giá trị (value / 값) Functions và Bellman Equations**, **Q-function Bellman equation** tiếp nhận điểm tựa từ **Bellman decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Optimal giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Q-function Bellman equation
 
 \[
@@ -48,6 +49,8 @@ Q^\pi(s,a)=\mathbb E[R_{t+1}+\gamma\mathbb E_{a'\sim\pi}[Q^\pi(S_{t+1},a')]]
 \]
 
 Nếu biết Q tốt, chính sách (policy / 정책) có thể chọn hành động (action / 동작) giá trị (value / 값) cao.
+
+> **Chuyển mạch:** Ở chặng này của **Giá trị (value / 값) Functions và Bellman Equations**, **Optimal giá trị (value / 값)** tiếp nhận điểm tựa từ **Q-function Bellman equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bootstrapping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Optimal giá trị (value / 값)
 
@@ -69,6 +72,8 @@ Q^*(s,a)=\mathbb E[R_{t+1}+\gamma\max_{a'}Q^*(S_{t+1},a')]
 
 `max` biến chính sách (policy / 정책) evaluation thành điều khiển (control / 제어) bài toán (problem / 문제).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giá trị (value / 값) Functions và Bellman Equations**, **Bootstrapping** tiếp nhận điểm tựa từ **Optimal giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bellman Backup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bootstrapping
 
 Nếu estimate giá trị (value / 값) dựa trên estimate khác:
@@ -81,6 +86,8 @@ current estimate ← reward + γ × next value estimate
 
 Động (dynamic / 동적) Programming và Temporal Difference dùng bootstrapping. Monte Carlo dùng actual sampled return tới cuối episode thay vì bootstrap.
 
+> **Chuyển mạch:** Trong **Giá trị (value / 값) Functions và Bellman Equations**, **Bellman Backup** tiếp nhận điểm tựa từ **Bootstrapping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bellman lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bellman Backup
 
 Một cập nhật (update / 업데이트) dạng:
@@ -90,6 +97,8 @@ V(s)\leftarrow R+\gamma V(s')
 \]
 
 được gọi là backup. Trong stochastic problems thường cập nhật (update / 업데이트) gradual bằng học tập (learning / 학습) tỷ lệ (rate / 비율).
+
+> **Chuyển mạch:** Ở chặng này của **Giá trị (value / 값) Functions và Bellman Equations**, **Bellman lỗi (error / 오류)** tiếp nhận điểm tựa từ **Bellman Backup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá trị (value / 값) như compressed future** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bellman lỗi (error / 오류)
 
@@ -103,11 +112,15 @@ là TD lỗi (error / 오류) trong one-step setting.
 
 Positive δ nghĩa kết quả (outcome / 결과) tốt hơn hiện tại (current / 현재) estimate; negative δ nghĩa tệ hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giá trị (value / 값) Functions và Bellman Equations**, **Giá trị (value / 값) như compressed future** tiếp nhận điểm tựa từ **Bellman lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách (policy / 정책) Evaluation và Improvement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giá trị (value / 값) như compressed future
 
 Giá trị (value / 값) hàm (function / 함수) là một prediction mô hình (model / 모델) về future return. Thay vì simulate toàn future mỗi quyết định (decision / 결정), tác nhân (agent / 에이전트) consult giá trị (value / 값) estimate.
 
 Đây tương tự heuristic trong tìm kiếm (search / 검색): cả hai compress future consequence thành scalar estimate. Nhưng giá trị (value / 값) được defined bởi reward/chính sách (policy / 정책)/môi trường (environment / 환경) dynamics.
+
+> **Chuyển mạch:** Trong **Giá trị (value / 값) Functions và Bellman Equations**, **Chính sách (policy / 정책) Evaluation và Improvement** tiếp nhận điểm tựa từ **Giá trị (value / 값) như compressed future** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Advantage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách (policy / 정책) Evaluation và Improvement
 
@@ -118,6 +131,8 @@ Chính sách (policy / 정책) iteration dựa hai ideas:
 
 Repeated evaluation + improvement có thể converge tới optimal chính sách (policy / 정책) trong finite MDP under tiêu chuẩn (standard / 표준) các giả định (assumptions / 가정들).
 
+> **Chuyển mạch:** Ở chặng này của **Giá trị (value / 값) Functions và Bellman Equations**, **Advantage** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) Evaluation và Improvement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Why giá trị (value / 값) estimation is hard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Advantage
 
 Advantage đo hành động (action / 동작) tốt hơn baseline trạng thái (state / 상태) giá trị (value / 값) bao nhiêu:
@@ -127,6 +142,8 @@ A^\pi(s,a)=Q^\pi(s,a)-V^\pi(s)
 \]
 
 Nó rất quan trọng trong policy-gradient/actor-critic vì giảm variance và tập trung vào relative chất lượng (quality / 품질) của hành động (action / 동작).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giá trị (value / 값) Functions và Bellman Equations**, **Why giá trị (value / 값) estimation is hard** tiếp nhận điểm tựa từ **Advantage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm (function / 함수) Approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Why giá trị (value / 값) estimation is hard
 
@@ -140,6 +157,8 @@ Giá trị (value / 값) depends on:
 
 Chính sách (policy / 정책) thay đổi thì mục tiêu (target / 대상) giá trị (value / 값) cũng thay đổi.
 
+> **Chuyển mạch:** Trong **Giá trị (value / 값) Functions và Bellman Equations**, **Hàm (function / 함수) Approximation** tiếp nhận điểm tựa từ **Why giá trị (value / 값) estimation is hard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Overestimation độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàm (function / 함수) Approximation
 
 Tabular giá trị (value / 값) có one entry per trạng thái (state / 상태). Large/continuous trạng thái (state / 상태) cần approximator:
@@ -149,6 +168,8 @@ V_\theta(s)
 \]
 
 Neural mạng (network / 네트워크) generalizes across states, nhưng bootstrapping + off-policy + nonlinear approximation có thể gây instability.
+
+> **Chuyển mạch:** Ở chặng này của **Giá trị (value / 값) Functions và Bellman Equations**, **Overestimation độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Hàm (function / 함수) Approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reward-to-Go và Credit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Overestimation độ lệch (bias / 편향)
 
@@ -160,15 +181,21 @@ Trong Q-learning, max trên noisy estimates có thể overestimate:
 
 Double Q-learning/DQN variants tách selection/evaluation để giảm độ lệch (bias / 편향).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giá trị (value / 값) Functions và Bellman Equations**, **Reward-to-Go và Credit** tiếp nhận điểm tựa từ **Overestimation độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reward-to-Go và Credit
 
 Giá trị (value / 값) functions propagate delayed reward backward qua states. Đây là cơ chế giải temporal credit assignment mà không cần mỗi hành động (action / 동작) có direct label.
+
+> **Chuyển mạch:** Trong **Giá trị (value / 값) Functions và Bellman Equations**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reward-to-Go và Credit** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **Bellman equation nói: giá trị của hiện tại = reward ngay bây giờ + discounted giá trị (value / 값) của tương lai.**
 
 Recursive quan hệ (relation / 관계) này là xương sống của large part of RL.
+
+> **Chuyển mạch:** Ở chặng này của **Giá trị (value / 값) Functions và Bellman Equations**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -184,10 +211,12 @@ Nó là consistency quan hệ (relation / 관계). Ta vẫn cần solve/estimate
 
 Q chứa long-term expected return, không chỉ immediate reward.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giá trị (value / 값) Functions và Bellman Equations**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Bellman equations nối recursive algorithms, động (dynamic / 동적) Programming và bootstrapping. Chapter tiếp theo dùng known mô hình (model / 모델) để compute values systematically.
 
 Xem tiếp: [Dynamic Programming](./03_dynamic_programming.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reinforcement learning foundations](./00_reinforcement_learning_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

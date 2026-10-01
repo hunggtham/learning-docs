@@ -1,7 +1,6 @@
 # Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp
 
-> **Mạch đọc:** Đọc **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Ma trận hóa lượng là một cách cân bằng phản ứng phức tạp hơn”** sang **“Nếu \(S\mathbf v=0\) thì hệ ở cân bằng”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > Hóa lượng (stoichiometry / 화학량론) thường được học qua từng phương trình riêng lẻ. Nhưng trong hệ thực tế — chuyển hóa sinh học, cháy, khí quyển, pin, reactor công nghiệp — hàng chục tới hàng nghìn phản ứng xảy ra đồng thời. Khi đó cách nhìn từng phương trình một trở nên khó kiểm soát. **Ma trận hóa lượng (stoichiometric matrix)** cung cấp một ngôn ngữ toán học thống nhất để biểu diễn bảo toàn vật chất và cấu trúc của cả mạng phản ứng.
 
@@ -590,4 +589,4 @@ Hãy hình dung ma trận hóa lượng như **bộ khung bảo toàn của mộ
 
 Xem tiếp: [Động học phản ứng](../06_chemical_kinetics/00_reaction_rates.md), [Cơ chế phản ứng](../06_chemical_kinetics/02_reaction_mechanisms.md), [Chuyển hóa và năng lượng sinh học](../13_biochemistry/06_metabolism_and_bioenergetics.md), [Hóa học và khoa học máy tính](../90_connections/chemistry_and_computer_science.md).
 
-> **Bàn giao:** Sau **“FBA dự đoán tốc độ enzyme trực tiếp”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện
 
-> **Mạch đọc:** Đặt **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Forward Diffusion tiến trình (process / 프로세스)** sang **Reverse tiến trình (process / 프로세스)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Forward Diffusion tiến trình (process / 프로세스)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Reverse tiến trình (process / 프로세스)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Diffusion các mô hình (models / 모델들) học generative phân phối (distribution / 분포) bằng một idea khác GAN: thay vì generator một bước phải tạo mẫu (sample / 표본) hoàn chỉnh ngay, ta định nghĩa một **forward tiến trình (process / 프로세스)** dần phá dữ liệu (data / 데이터) thành noise, rồi train mô hình (model / 모델) học **reverse denoising tiến trình (process / 프로세스)** từng bước để quay từ noise về dữ liệu (data / 데이터).
 
@@ -39,6 +38,8 @@ x_t=\sqrt{\bar\alpha_t}x_0+\sqrt{1-\bar\alpha_t}\epsilon,
 
 As `t` large, tín hiệu (signal / 신호) destroyed và `x_t` gần Gaussian noise.
 
+> **Chuyển mạch:** Trong **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Forward Diffusion tiến trình (process / 프로세스)** xác định đầu vào; **Reverse tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tại sao predict noise giúp generation?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reverse tiến trình (process / 프로세스)
 
 Goal learn:
@@ -66,6 +67,8 @@ L=\mathbb E_{x_0,\epsilon,t}
 
 Mạng (network / 네트워크) receives noisy mẫu (sample / 표본) + timestep and learns noise thành phần (component / 컴포넌트).
 
+> **Chuyển mạch:** Ở chặng này của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Reverse tiến trình (process / 프로세스)** xác định đầu vào; **Tại sao predict noise giúp generation?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Timestep Encoding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tại sao predict noise giúp generation?
 
 From:
@@ -78,11 +81,15 @@ if mô hình (model / 모델) estimates `ε`, one can estimate clean `x_0` or re
 
 Mô hình (model / 모델) is học tập (learning / 학습) denoising véc-tơ (vector / 벡터) trường dữ liệu (field / 필드) across noise levels, not memorizing one deterministic ánh xạ (mapping / 매핑) noise→ảnh (image / 이미지) in single jump.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Timestep Encoding** tiếp nhận điểm tựa từ **Tại sao predict noise giúp generation?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **U-Net kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Timestep Encoding
 
 Same noisy ảnh (image / 이미지) at low vs high noise requires different denoising hành vi (behavior / 동작). mô hình (model / 모델) therefore receives timestep/noise mức (level / 수준) embedding.
 
 Sinusoidal/Fourier-like embeddings map scalar `t` into véc-tơ (vector / 벡터) processed alongside features.
+
+> **Chuyển mạch:** Trong **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **U-Net kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Timestep Encoding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditional Diffusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## U-Net kiến trúc (architecture / 아키텍처)
 
@@ -101,6 +108,8 @@ Hiện đại (modern / 현대적) diffusion U-Nets include residual blocks, att
 
 Transformer-based diffusion architectures (DiT-like) increasingly replace/augment U-Net at quy mô (scale / 규모).
 
+> **Chuyển mạch:** Ở chặng này của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Conditional Diffusion** tiếp nhận điểm tựa từ **U-Net kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Classifier Guidance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Conditional Diffusion
 
 Want generate `x` conditioned on văn bản (text / 텍스트)/lớp (class / 클래스) `c`:
@@ -113,6 +122,8 @@ Văn bản (text / 텍스트) encoder creates embeddings; cross-attention inject
 
 Thus text-to-image is multimodal encoder + conditional generative denoising hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Classifier Guidance** tiếp nhận điểm tựa từ **Conditional Diffusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Classifier-Free Guidance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Classifier Guidance
 
 An bên ngoài (external / 외부) classifier estimates:
@@ -124,6 +135,8 @@ An bên ngoài (external / 외부) classifier estimates:
 and modifies reverse score toward desired lớp (class / 클래스).
 
 This improved conditional chất lượng (quality / 품질) but requires classifier trained on noisy dữ liệu (data / 데이터).
+
+> **Chuyển mạch:** Trong **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Classifier-Free Guidance** tiếp nhận điểm tựa từ **Classifier Guidance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Score-Based View** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Classifier-Free Guidance
 
@@ -139,6 +152,8 @@ Train same mô hình (model / 모델) sometimes with điều kiện (condition /
 
 Higher guidance often increases prompt adherence but can reduce diversity/oversaturate artifacts. sự đánh đổi (trade-off / 트레이드오프), not “higher better”.
 
+> **Chuyển mạch:** Ở chặng này của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Score-Based View** tiếp nhận điểm tựa từ **Classifier-Free Guidance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sampling Speed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Score-Based View
 
 Score hàm (function / 함수):
@@ -152,6 +167,8 @@ points toward directions increasing dữ liệu (data / 데이터) density at no
 Denoising-score matching and diffusion are closely connected. Continuous-time formulation uses stochastic differential equations (SDEs).
 
 This provides deeper probabilistic interpretation beyond “predict noise”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Sampling Speed** tiếp nhận điểm tựa từ **Score-Based View** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DDIM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sampling Speed
 
@@ -167,11 +184,15 @@ Accelerations:
 
 Sampler changes numerical tích hợp (integration / 통합)/đường dẫn (path / 경로), often trading speed vs chất lượng (quality / 품질)/diversity.
 
+> **Chuyển mạch:** Trong **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **DDIM** tiếp nhận điểm tựa từ **Sampling Speed** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Latent Diffusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## DDIM
 
 DDIM constructs non-Markovian/deterministic-like sampling paths sharing huấn luyện (training / 학습) mục tiêu (objective / 목표), enabling fewer steps and latent interpolation hành vi (behavior / 동작).
 
 `η`-style settings can điều khiển (control / 제어) stochasticity depending formulation.
+
+> **Chuyển mạch:** Ở chặng này của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Latent Diffusion** tiếp nhận điểm tựa từ **DDIM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Image-to-Image và Inpainting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Latent Diffusion
 
@@ -191,6 +212,8 @@ Latent spatial resolution smaller → attention/U-Net computation drastically ch
 
 This is why understanding VAE matters for text-to-image các hệ thống (systems / 시스템들).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Image-to-Image và Inpainting** tiếp nhận điểm tựa từ **Latent Diffusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ControlNet-like Conditioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Image-to-Image và Inpainting
 
 Image-to-image starts from encoded đầu vào (input / 입력) plus controlled noise then denoises under văn bản (text / 텍스트) điều kiện (condition / 조건). Noise strength controls how far đầu ra (output / 출력) may deviate.
@@ -201,11 +224,15 @@ Outpainting extends canvas similarly.
 
 These are conditioning/điều khiển (control / 제어) variations, not completely different mô hình (model / 모델) classes.
 
+> **Chuyển mạch:** Trong **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **ControlNet-like Conditioning** tiếp nhận điểm tựa từ **Image-to-Image và Inpainting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diffusion vs VAE vs GAN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ControlNet-like Conditioning
 
 Additional structural điều kiện (condition / 조건) such as edge map, pose, độ sâu (depth / 깊이) can feed parallel/điều khiển (control / 제어) branch while preserving pretrained diffusion mô hình (model / 모델).
 
 This separates ngữ nghĩa (semantic / 의미적) văn bản (text / 텍스트) điều khiển (control / 제어) from geometric/spatial điều khiển (control / 제어).
+
+> **Chuyển mạch:** Ở chặng này của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Diffusion vs VAE vs GAN** tiếp nhận điểm tựa từ **ControlNet-like Conditioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diffusion for non-image dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Diffusion vs VAE vs GAN
 
@@ -219,17 +246,23 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) hybridize, so taxonomy describes mechanisms, not sản phẩm (product / 제품) boundaries.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Diffusion vs VAE vs GAN** nêu điều cần giải thích; **Diffusion for non-image dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dữ liệu (data / 데이터) and Copyright/an toàn (safety / 안전) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Diffusion for non-image dữ liệu (data / 데이터)
 
 Diffusion/score methods apply audio, video, 3D, molecule, continuous actions. Discrete diffusion variants adapt tiến trình (process / 프로세스) to categorical/đơn vị từ (token / 토큰) spaces.
 
 However discrete ngôn ngữ (language / 언어) generation remains dominated autoregressive Transformers because corruption/reverse tiến trình (process / 프로세스) and decoding trade-offs differ.
 
+> **Chuyển mạch:** Trong **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Diffusion for non-image dữ liệu (data / 데이터)** nêu điều cần giải thích; **Dữ liệu (data / 데이터) and Copyright/an toàn (safety / 안전) liên kết (connection / 연결)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dữ liệu (data / 데이터) and Copyright/an toàn (safety / 안전) liên kết (connection / 연결)
 
 Generative mô hình (model / 모델) hành vi (behavior / 동작) reflects huấn luyện (training / 학습) phân phối (distribution / 분포). Memorization can occur; mô hình (model / 모델) may reproduce styles/concepts/biases. Dataset provenance and deduplication matter.
 
 An toàn (safety / 안전) filters can operate dữ liệu huấn luyện (training data / 학습 데이터), prompt, latent/generation and đầu ra (output / 출력) — hệ thống (system / 시스템) bài toán (problem / 문제) beyond diffusion math.
+
+> **Chuyển mạch:** Ở chặng này của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, các dấu vết trong **Dữ liệu (data / 데이터) and Copyright/an toàn (safety / 안전) liên kết (connection / 연결)** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -244,6 +277,8 @@ random noise → denoise a little → denoise a little → ... → structured sa
 ```
 
 At every noise mức (level / 수준), mô hình (model / 모델) learns cục bộ (local / 로컬) direction toward plausible dữ liệu (data / 데이터).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -267,8 +302,12 @@ It trades conditioning strength against diversity/artifacts.
 
 Latent diffusion operates in VAE-compressed latent không gian (space / 공간), then decodes to pixels.
 
+> **Chuyển mạch:** Trong **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Diffusion synthesizes [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [Numerical Methods](../01_mathematical_foundations/07_numerical_computation.md), [Autoencoder/VAE](./06_autoencoders.md), [Attention](./04_attention.md) and multimodal văn bản (text / 텍스트) conditioning.
 
 Later `13_speech_audio_and_multimodal/` will connect diffusion with text/image/audio/video foundation systems.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

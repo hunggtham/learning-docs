@@ -1,7 +1,6 @@
 # OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính
 
-> **Mạch đọc:** Đặt **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Các vai trò trong OAuth** sang **Authorization mã (code / 코드) và PKCE**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các vai trò trong OAuth** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Authorization mã (code / 코드) và PKCE** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 OAuth 2.x và OpenID Connect thường bị gom thành “đăng nhập bằng đơn vị từ (token / 토큰)”, nhưng chúng giải quyết các bài toán khác nhau. OAuth chủ yếu cung cấp **ủy quyền được ủy nhiệm (delegated authorization)**; OIDC bổ sung lớp danh tính để ứng dụng khách biết người dùng đã được xác thực là ai.
 
@@ -11,8 +10,7 @@ OAuth tách ứng dụng muốn gọi API khỏi máy chủ cấp quyền. Ứng
 
 Đơn vị từ (token / 토큰) không nên được hiểu là “mật khẩu mới dùng ở mọi nơi”. Nó có bên phát hành, đối tượng nhận, thời hạn và tập quyền cụ thể.
 
-
-> **Chuyển mạch:** Từ **Các vai trò trong OAuth**, ta sang **Authorization mã (code / 코드) và PKCE** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **Authorization mã (code / 코드) và PKCE** tiếp nhận điểm tựa từ **Các vai trò trong OAuth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OIDC và ID đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Authorization mã (code / 코드) và PKCE
 
@@ -20,15 +18,13 @@ OAuth tách ứng dụng muốn gọi API khỏi máy chủ cấp quyền. Ứng
 
 Tính an toàn đến từ việc ràng buộc bước đổi mã với chính phiên máy khách (client / 클라이언트) đã bắt đầu luồng, không phải từ việc nhúng một secret tĩnh vào tệp (file / 파일) ứng dụng.
 
-
-> **Chuyển mạch:** Từ **Authorization mã (code / 코드) và PKCE**, ta sang **OIDC và ID đơn vị từ (token / 토큰)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **OIDC và ID đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **Authorization mã (code / 코드) và PKCE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác minh đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## OIDC và ID đơn vị từ (token / 토큰)
 
 OIDC bổ sung **ID đơn vị từ (token / 토큰)** chứa các claim về sự kiện xác thực và danh tính người dùng. ID đơn vị từ (token / 토큰) dành cho máy khách (client / 클라이언트) kiểm tra danh tính; truy cập (access / 접근) đơn vị từ (token / 토큰) dành cho API kiểm tra quyền truy cập. Dùng ID đơn vị từ (token / 토큰) như một bearer đơn vị từ (token / 토큰) chung cho API làm lẫn ranh giới tin cậy và đối tượng nhận.
 
-
-> **Chuyển mạch:** Từ **OIDC và ID đơn vị từ (token / 토큰)**, ta sang **Xác minh đơn vị từ (token / 토큰)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **Xác minh đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **OIDC và ID đơn vị từ (token / 토큰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Refresh đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xác minh đơn vị từ (token / 토큰)
 
@@ -36,8 +32,7 @@ Tài nguyên (resource / 자원) máy chủ (server / 서버) cần kiểm tra c
 
 Xoay khóa (key rotation) yêu cầu chiến lược dùng JWKS và bộ nhớ đệm (cache / 캐시) phù hợp. bộ nhớ đệm (cache / 캐시) quá lâu có thể giữ khóa đã bị thu hồi; tải khóa lại ở mọi yêu cầu lại tạo thêm phụ thuộc (dependency / 의존성) và độ trễ.
 
-
-> **Chuyển mạch:** Từ **Xác minh đơn vị từ (token / 토큰)**, ta sang **Refresh đơn vị từ (token / 토큰)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **Refresh đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **Xác minh đơn vị từ (token / 토큰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bearer đơn vị từ (token / 토큰) và bằng chứng sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Refresh đơn vị từ (token / 토큰)
 
@@ -45,8 +40,7 @@ Truy cập (access / 접근) đơn vị từ (token / 토큰) sống ngắn làm
 
 Cơ chế phát hiện tái sử dụng refresh đơn vị từ (token / 토큰) có thể giúp nhận ra một “họ đơn vị từ (token / 토큰)” đã bị đánh cắp trong mô hình rotation.
 
-
-> **Chuyển mạch:** Từ **Refresh đơn vị từ (token / 토큰)**, ta sang **Bearer đơn vị từ (token / 토큰) và bằng chứng sở hữu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **Refresh đơn vị từ (token / 토큰)** nêu điều cần giải thích; **Bearer đơn vị từ (token / 토큰) và bằng chứng sở hữu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Rủi ro trong liên kết danh tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bearer đơn vị từ (token / 토큰) và bằng chứng sở hữu
 
@@ -54,8 +48,7 @@ Cơ chế phát hiện tái sử dụng refresh đơn vị từ (token / 토큰)
 
 Đơn vị từ (token / 토큰) ràng buộc mTLS hoặc cơ chế kiểu DPoP cố gắn đơn vị từ (token / 토큰) với một khóa và bằng chứng từ máy khách (client / 클라이언트), giảm khả năng phát lại nhưng làm giao thức và vận hành phức tạp hơn.
 
-
-> **Chuyển mạch:** Từ **Bearer đơn vị từ (token / 토큰) và bằng chứng sở hữu**, ta sang **Rủi ro trong liên kết danh tính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **Bearer đơn vị từ (token / 토큰) và bằng chứng sở hữu** nêu điều cần giải thích; **Rủi ro trong liên kết danh tính** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phạm vi (scope / 범위) không thay thế mô hình phân quyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro trong liên kết danh tính
 
@@ -63,8 +56,7 @@ Open redirect, mix-up attack, CSRF trong luồng redirect, dùng sai `nonce`/`st
 
 `state` giúp ràng buộc phản hồi ủy quyền với giao dịch mà máy khách (client / 클라이언트) đã bắt đầu; `nonce` của OIDC giúp ràng buộc ID đơn vị từ (token / 토큰) với yêu cầu xác thực. Hai trường này bảo vệ các mối đe dọa khác nhau.
 
-
-> **Chuyển mạch:** Từ **Rủi ro trong liên kết danh tính**, ta sang **phạm vi (scope / 범위) không thay thế mô hình phân quyền** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **Phạm vi (scope / 범위) không thay thế mô hình phân quyền** tiếp nhận điểm tựa từ **Rủi ro trong liên kết danh tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phạm vi (scope / 범위) không thay thế mô hình phân quyền
 
@@ -72,11 +64,10 @@ Phạm vi (scope / 범위) thường chỉ mô tả quyền ở mức khá thô.
 
 Xác thực trả lời “đây là ai”; phân quyền trả lời “thực thể này được làm gì với tài nguyên nào trong ngữ cảnh nào”.
 
-
-> **Chuyển mạch:** Từ **phạm vi (scope / 범위) không thay thế mô hình phân quyền**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**, **Mô hình tư duy** gom các mảnh từ **Phạm vi (scope / 범위) không thay thế mô hình phân quyền** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
 > OAuth/OIDC là giao thức liên kết nhiều ranh giới tin cậy. đơn vị từ (token / 토큰) chỉ an toàn khi bên phát hành, đối tượng nhận, thời hạn, cơ chế ràng buộc và luồng chuyển hướng đều đúng. Đừng suy luận từ hình dạng JWT; hãy suy luận từ quyền lực được trao và những nơi đơn vị từ (token / 토큰) có thể bị phát lại.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 security boundaries attack chains and exploitability](./00_security_boundaries_attack_chains_and_exploitability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

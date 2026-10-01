@@ -1,6 +1,6 @@
 # Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) và vòng đời (lifecycle / 생명주기)
 
-> **Mạch đọc:** Đặt **trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) và vòng đời (lifecycle / 생명주기)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Host môi trường (environment / 환경)** sang **vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) và vòng đời (lifecycle / 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Host môi trường (environment / 환경)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 JavaScript ngôn ngữ (language / 언어) là một phần của trình duyệt (browser / 브라우저) ứng dụng (application / 애플리케이션), không phải toàn bộ
 trình duyệt (browser / 브라우저). ECMAScript cung cấp thực thi (execution / 실행) ngữ nghĩa (semantics / 의미론); trình duyệt (browser / 브라우저) cung cấp realm,
@@ -19,8 +19,7 @@ Khi một screen bị dispose, mọi listener, timer, subscription, yêu cầu (
 liên quan phải có đường cleanup. Giữ một closure sống lâu hơn document có thể
 giữ DOM subtree và dữ liệu (data / 데이터) trong bộ nhớ (memory / 메모리) dù người dùng không còn nhìn thấy nó.
 
-
-> **Chuyển mạch:** Từ **Host môi trường (environment / 환경)**, ta sang **vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Host environment cung cấp task queue, timing và rendering opportunity; event loop quyết định khi nào callback được chạy và frame được tạo. Lifecycle contract tiếp theo kiểm tra các boundary khi document/page đổi trạng thái.
 
 ## Vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity
 
@@ -35,8 +34,7 @@ không phải cam kết frame luôn được tạo.
 với tác vụ (task / 작업), microtask, kết xuất (render / 렌더링) opportunity, mạng (network / 네트워크) phản hồi (response / 응답) và người dùng (user / 사용자) intent. Đây
 là cách phát hiện reentrancy, stale cập nhật (update / 업데이트) và long tác vụ (task / 작업).
 
-
-> **Chuyển mạch:** Từ **vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity**, ta sang **vòng đời (lifecycle / 생명주기) đặc tả hợp đồng (contract / 계약)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Event loop và rendering opportunity tạo ra các mốc execution có thể quan sát; lifecycle contract dùng chúng để định nghĩa cleanup, visibility và cancellation. Đây là ranh giới để các API phía sau không giữ state quá thời gian sống.
 
 ## Vòng đời (lifecycle / 생명주기) đặc tả hợp đồng (contract / 계약)
 
@@ -49,4 +47,4 @@ lần ghi nhận (commit / 커밋) trạng thái (state / 상태).
 Chi tiết ngôn ngữ (language / 언어) nằm ở [JavaScript track](../javascript/javascript_beginner_rebuilt.md);
 chi tiết page/phạm vi (scope / 범위) nằm ở [WebSquare runtime](../websquare/01_platform_runtime_page_model.md).
 
-> **Bàn giao:** Sau **vòng đời (lifecycle / 생명주기) đặc tả hợp đồng (contract / 계약)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 web platform model](./00_web_platform_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Vòng đời (lifecycle / 생명주기) đặc tả hợp đồng (contract / 계약)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

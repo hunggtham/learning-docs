@@ -1,6 +1,6 @@
 # Nền tảng (platform / 플랫폼) Completion Notes
 
-> **Mạch đọc:** Đặt **nền tảng (platform / 플랫폼) Completion Notes** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng (platform / 플랫폼) Completion Notes**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Nền tảng (platform / 플랫폼) Completion Notes** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Vòng bổ sung này tập trung vào các ranh giới (boundary / 경계) Android nền tảng (platform / 플랫폼) còn thiếu sau khi kiến trúc (architecture / 아키텍처), coroutine/luồng (flow / 흐름), Compose trạng thái (state / 상태), persistence, networking, bảo mật (security / 보안), testing, bản dựng (build / 빌드)/bản phát hành (release / 릴리스) và Kotlin/JVM internals đã được cover.
 
@@ -10,4 +10,4 @@ Khi đọc, ưu tiên lập luận (reasoning / 추론) theo thứ tự: năng l
 
 Đây cũng là tiêu chí cho các vòng cập nhật (update / 업데이트) sau: không thêm API chỉ để tăng coverage danh mục; chỉ thêm khi nó tạo ra mô hình tư duy (mental model / 사고 모델) mới, nền tảng (platform / 플랫폼) hành vi (behavior / 동작) mới hoặc môi trường vận hành (production / 운영 환경) dạng thất bại (failure mode / 실패 모드) chưa được giải thích.
 
-> **Bàn giao:** Sau **nền tảng (platform / 플랫폼) Completion Notes**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nền tảng (platform / 플랫폼) Completion Notes**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

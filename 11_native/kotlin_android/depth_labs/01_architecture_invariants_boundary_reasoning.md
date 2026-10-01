@@ -1,7 +1,6 @@
 # Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)
 
-> **Mạch đọc:** Đặt **độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kiến trúc nên bắt đầu từ bất biến (invariant / 불변식), không từ lớp (class / 클래스) diagram** sang **2. quyền sở hữu trạng thái (state ownership / 상태 소유권) là câu hỏi “ai có quyền quyết định giá trị cuối cùng?”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Kiến trúc nên bắt đầu từ bất biến (invariant / 불변식), không từ lớp (class / 클래스) diagram** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. quyền sở hữu trạng thái (state ownership / 상태 소유권) là câu hỏi “ai có quyền quyết định giá trị cuối cùng?”** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Độ sâu (depth / 깊이) Lab này không giới thiệu thêm một mẫu (pattern / 패턴) kiến trúc mới. Mục tiêu là đi sâu vào câu hỏi khó hơn: **làm sao biết kiến trúc hiện tại có thực sự đúng khi hệ thống gặp tính đồng thời (concurrency / 동시성), tiến trình (process / 프로세스) death, partial thất bại (failure / 실패), thử lại (retry / 재시도) và thay đổi yêu cầu (requirement / 요구사항)?**
 
@@ -30,6 +29,8 @@ I5. Một network response cũ không được ghi đè dữ liệu mới hơn.
 Khi bất biến (invariant / 불변식) rõ, kiến trúc bắt đầu có thể kiểm chứng. Repository tồn tại không phải vì tài liệu bảo “nên có repository”, mà vì nó là ranh giới (boundary / 경계) nơi ta có thể enforce source-of-truth, xung đột (conflict / 충돌) chính sách (policy / 정책) và mutation ngữ nghĩa (semantics / 의미론).
 
 ---
+
+> **Chuyển mạch:** Invariant nêu điều phải luôn đúng; state ownership trả lời ai quyết định giá trị cuối, rồi boundary tiếp theo xác định nơi semantics và trách nhiệm đổi.
 
 ## 2. quyền sở hữu trạng thái (state ownership / 상태 소유권) là câu hỏi “ai có quyền quyết định giá trị cuối cùng?”
 
@@ -78,6 +79,8 @@ Càng ít nguồn chuẩn (source of truth / 정본), càng ít trạng thái b�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **2. quyền sở hữu trạng thái (state ownership / 상태 소유권) là câu hỏi “ai có quyền quyết định giá trị cuối cùng?”** đã nêu tiêu chí phân biệt, còn **3. ranh giới (boundary / 경계) là nơi ngữ nghĩa (semantic / 의미적) thay đổi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Command và trạng thái (state / 상태) phải được tách mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. ranh giới (boundary / 경계) là nơi ngữ nghĩa (semantic / 의미적) thay đổi
 
 Ranh giới (boundary / 경계) không chỉ là gói (package / 패키지) hoặc giao diện (interface / 인터페이스). Một ranh giới (boundary / 경계) quan trọng xuất hiện khi **ý nghĩa của dữ liệu thay đổi**.
@@ -112,6 +115,8 @@ DTO tầng (layer / 계층) có nhiệm vụ đọc wire format. ranh giới (bo
 Nếu bỏ ranh giới (boundary / 경계) và deserialize thẳng vào lĩnh vực (domain / 도메인) mô hình (model / 모델), giao thức (protocol / 프로토콜) ngữ nghĩa (semantics / 의미론) âm thầm trở thành ứng dụng (application / 애플리케이션) ngữ nghĩa (semantics / 의미론).
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **3. ranh giới (boundary / 경계) là nơi ngữ nghĩa (semantic / 의미적) thay đổi** đã nêu tiêu chí phân biệt, còn **4. Command và trạng thái (state / 상태) phải được tách mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Read mô hình (model / 모델) và ghi (write / 쓰기) mô hình (model / 모델) không nhất thiết giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Command và trạng thái (state / 상태) phải được tách mô hình tư duy (mental model / 사고 모델)
 
@@ -148,6 +153,8 @@ UI có thể hiển thị bookmark đã bật nhưng kèm pending indicator. Đi
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **5. Read mô hình (model / 모델) và ghi (write / 쓰기) mô hình (model / 모델) không nhất thiết giống nhau** gom các mảnh từ **4. Command và trạng thái (state / 상태) phải được tách mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **6. Stale snapshot là một trong những nguồn bug khó nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Read mô hình (model / 모델) và ghi (write / 쓰기) mô hình (model / 모델) không nhất thiết giống nhau
 
 Một screen có thể cần read mô hình (model / 모델) rất giàu dữ liệu:
@@ -176,6 +183,8 @@ data class SetBookmarkCommand(
 Một ghi (write / 쓰기) command tốt nên mang đúng **intent tối thiểu** cần cho thao tác (operation / 연산).
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **5. Read mô hình (model / 모델) và ghi (write / 쓰기) mô hình (model / 모델) không nhất thiết giống nhau** nêu điều cần giải thích; **6. Stale snapshot là một trong những nguồn bug khó nhất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) phải đi cùng nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Stale snapshot là một trong những nguồn bug khó nhất
 
@@ -210,6 +219,8 @@ repository.setBookmark(id, desired = true)
 Dữ liệu (data / 데이터) tầng (layer / 계층) thực hiện mutation trên nguồn chuẩn (source of truth / 정본) hiện tại trong giao dịch (transaction / 트랜잭션) phù hợp.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **6. Stale snapshot là một trong những nguồn bug khó nhất** đã nêu tiêu chí phân biệt, còn **7. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) phải đi cùng nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Repository giao diện (interface / 인터페이스) nên mô tả ngữ nghĩa (semantic / 의미적), không mô tả vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) phải đi cùng nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식)
 
@@ -250,6 +261,8 @@ Nếu cập nhật (update / 업데이트) article thành công nhưng insert ou
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **7. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) phải đi cùng nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식)** đã nêu tiêu chí phân biệt, còn **8. Repository giao diện (interface / 인터페이스) nên mô tả ngữ nghĩa (semantic / 의미적), không mô tả vận chuyển (transport / 전송)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. lỗi (error / 오류) ranh giới (boundary / 경계) phải phân biệt “thao tác (operation / 연산) failed” và “hệ thống (system / 시스템) trạng thái (state / 상태) unknown”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Repository giao diện (interface / 인터페이스) nên mô tả ngữ nghĩa (semantic / 의미적), không mô tả vận chuyển (transport / 전송)
 
 Giao diện (interface / 인터페이스) yếu:
@@ -277,6 +290,8 @@ Hiện thực (implementation / 구현) được tự do thay đổi từ REST s
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **8. Repository giao diện (interface / 인터페이스) nên mô tả ngữ nghĩa (semantic / 의미적), không mô tả vận chuyển (transport / 전송)** đã nêu tiêu chí phân biệt, còn **9. lỗi (error / 오류) ranh giới (boundary / 경계) phải phân biệt “thao tác (operation / 연산) failed” và “hệ thống (system / 시스템) trạng thái (state / 상태) unknown”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. ViewModel máy trạng thái (state machine / 상태 머신) giúp loại bỏ trạng thái bất khả thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. lỗi (error / 오류) ranh giới (boundary / 경계) phải phân biệt “thao tác (operation / 연산) failed” và “hệ thống (system / 시스템) trạng thái (state / 상태) unknown”
 
 Có hai loại thất bại (failure / 실패) rất khác nhau:
@@ -301,6 +316,8 @@ Nếu hết thời gian chờ (timeout / 타임아웃) sau lần ghi nhận (com
 Kiến trúc (architecture / 아키텍처) tốt phải mô hình (model / 모델) được ambiguous kết quả (outcome / 결과); `catch IOException -> retry` là chưa đủ.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **9. lỗi (error / 오류) ranh giới (boundary / 경계) phải phân biệt “thao tác (operation / 연산) failed” và “hệ thống (system / 시스템) trạng thái (state / 상태) unknown”** đã nêu tiêu chí phân biệt, còn **10. ViewModel máy trạng thái (state machine / 상태 머신) giúp loại bỏ trạng thái bất khả thi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) là kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. ViewModel máy trạng thái (state machine / 상태 머신) giúp loại bỏ trạng thái bất khả thi
 
@@ -342,6 +359,8 @@ Trạng thái (state / 상태) mô hình (model / 모델) tốt encode bất bi�
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **10. ViewModel máy trạng thái (state machine / 상태 머신) giúp loại bỏ trạng thái bất khả thi** xác định đầu vào; **11. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) là kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) mạnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. điều hướng (navigation / 내비게이션) argument nên là định danh (identity / 식별자), không phải đối tượng (object / 객체) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) là kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) mạnh
 
 Cấu hình (configuration / 구성) thay đổi (change / 변경) thường giữ được ViewModel, nên nhiều kiến trúc tưởng đúng vì xoay màn hình vẫn hoạt động. tiến trình (process / 프로세스) death mới lộ source-of-truth sai.
@@ -370,6 +389,8 @@ Nếu screen không thể reconstruct từ stable identifier, kiến trúc (arch
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **11. tiến trình (process / 프로세스) death kiểm thử (test / 테스트) là kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) mạnh** xác định đầu vào; **12. điều hướng (navigation / 내비게이션) argument nên là định danh (identity / 식별자), không phải đối tượng (object / 객체) đồ thị (graph / 그래프)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Side tác động (effect / 효과) phải có đơn vị sở hữu (owner / 오너) và thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. điều hướng (navigation / 내비게이션) argument nên là định danh (identity / 식별자), không phải đối tượng (object / 객체) đồ thị (graph / 그래프)
 
 Không nên truyền một đối tượng (object / 객체) lớn như:
@@ -392,6 +413,8 @@ Detail screen reconstruct trạng thái (state / 상태) bằng `articleId`.
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, sau nội dung của **12. điều hướng (navigation / 내비게이션) argument nên là định danh (identity / 식별자), không phải đối tượng (object / 객체) đồ thị (graph / 그래프)**, **13. Side tác động (effect / 효과) phải có đơn vị sở hữu (owner / 오너) và thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **14. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) không phải kiến trúc (architecture / 아키텍처) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Side tác động (effect / 효과) phải có đơn vị sở hữu (owner / 오너) và thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론)
 
 Một hành động (action / 동작) như analytics, push registration hay upload attachment không nên được “tiện tay” gọi ở nhiều tầng (layer / 계층).
@@ -412,6 +435,8 @@ Ví dụ analytics thường chấp nhận best-effort. Payment capture không c
 Cùng là `suspend fun`, nhưng độ tin cậy (reliability / 신뢰성) đặc tả hợp đồng (contract / 계약) hoàn toàn khác.
 
 ---
+
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **14. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) không phải kiến trúc (architecture / 아키텍처) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **13. Side tác động (effect / 효과) phải có đơn vị sở hữu (owner / 오너) và thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Kiến trúc nên được rà soát (review / 검토) bằng timeline, không chỉ bằng sơ đồ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) không phải kiến trúc (architecture / 아키텍처) đồ thị (graph / 그래프)
 
@@ -434,6 +459,8 @@ Một mô-đun (module / 모듈) có thể compile nhưng vẫn sai kiến trúc
 Compile đồ thị (graph / 그래프) chỉ chứng minh “mã (code / 코드) nối được”. kiến trúc (architecture / 아키텍처) đồ thị (graph / 그래프) cần chứng minh “ranh giới (boundary / 경계) hợp lý”.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **15. Kiến trúc nên được rà soát (review / 검토) bằng timeline, không chỉ bằng sơ đồ** tiếp nhận điểm tựa từ **14. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) không phải kiến trúc (architecture / 아키텍처) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) nên ghi sự đánh đổi (trade-off / 트레이드오프), không chỉ kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Kiến trúc nên được rà soát (review / 검토) bằng timeline, không chỉ bằng sơ đồ
 
@@ -464,6 +491,8 @@ account logout giữa T4 và T5
 Nếu thiết kế (design / 설계) không xác định được trạng thái (state / 상태) sau mỗi thất bại (failure / 실패), hiện thực (implementation / 구현) chưa đủ chặt.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **16. kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) nên ghi sự đánh đổi (trade-off / 트레이드오프), không chỉ kết luận** gom các mảnh từ **15. Kiến trúc nên được rà soát (review / 검토) bằng timeline, không chỉ bằng sơ đồ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **17. Khi nào không cần Repository, UseCase hoặc multi-module?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) nên ghi sự đánh đổi (trade-off / 트레이드오프), không chỉ kết luận
 
@@ -499,6 +528,8 @@ ADR tốt giúp người mới hiểu lập luận (reasoning / 추론) thay vì
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **16. kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) nên ghi sự đánh đổi (trade-off / 트레이드오프), không chỉ kết luận** cho ta quy tắc; **17. Khi nào không cần Repository, UseCase hoặc multi-module?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Khi nào không cần Repository, UseCase hoặc multi-module?
 
 Kiến trúc (architecture / 아키텍처) trưởng thành không đồng nghĩa nhiều tầng (layer / 계층) nhất.
@@ -521,6 +552,8 @@ Nếu không chỉ ra được điều đó, lớp trừu tượng (abstraction 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **17. Khi nào không cần Repository, UseCase hoặc multi-module?** cho ta quy tắc; **18. rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. Bài tập lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)
 
 Khi rà soát (review / 검토) một tính năng (feature / 기능) môi trường vận hành (production / 운영 환경), đừng bắt đầu bằng tên gói (package / 패키지). Hãy lần lượt trả lời:
@@ -539,6 +572,8 @@ Khi rà soát (review / 검토) một tính năng (feature / 기능) môi trư�
 | bản phát hành (release / 릴리스) quay lui (rollback / 롤백) có đọc dữ liệu (data / 데이터) mới không? | lược đồ (schema / 스키마)/dữ liệu (data / 데이터) backward tính tương thích (compatibility / 호환성) |
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **19. Bài tập lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **18. rà soát (review / 검토) checklist theo bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Bài tập lập luận (reasoning / 추론)
 
@@ -568,6 +603,8 @@ Nếu chưa trả lời được tám điểm này, viết thêm lớp (class / 
 
 ---
 
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 01 — kiến trúc (architecture / 아키텍처) Invariants, ranh giới (boundary / 경계) lập luận (reasoning / 추론) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **20. Kết luận** gom các mảnh từ **19. Bài tập lập luận (reasoning / 추론)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 20. Kết luận
 
 Kiến trúc (architecture / 아키텍처) ở mức (level / 수준) cấp cao (senior / 시니어) không còn là “dùng mẫu (pattern / 패턴) nào”. Nó là khả năng biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식), biến bất biến (invariant / 불변식) thành quyền sở hữu (ownership / 소유권) và ranh giới (boundary / 경계), rồi chứng minh hệ thống vẫn đúng khi thực thi (execution / 실행) thứ tự (order / 순서) không còn lý tưởng.
@@ -589,4 +626,4 @@ requirement
 
 Khi chuỗi này rõ, khung phần mềm (framework / 프레임워크) chỉ còn là công cụ hiện thực hóa quyết định kiến trúc.
 
-> **Bàn giao:** Sau **20. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 offline sync consistency race conditions](./02_offline_sync_consistency_race_conditions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **20. Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

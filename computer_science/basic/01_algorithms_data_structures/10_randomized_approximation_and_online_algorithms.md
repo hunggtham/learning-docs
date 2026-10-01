@@ -1,7 +1,6 @@
 # Randomized, approximation và online algorithms
 
-> **Mạch đọc:** Đọc **Randomized, approximation và online algorithms** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Randomness không phải sự cẩu thả** sang **Las Vegas và Monte Carlo**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Randomized, approximation và online algorithms**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Randomness không phải sự cẩu thả** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Không phải mọi bài toán (problem / 문제) đều cho ta toàn bộ đầu vào (input / 입력) trước, đủ thời gian (time / 시간) để tìm optimum, hoặc có deterministic chiến lược (strategy / 전략) vừa đơn giản vừa nhanh. Ba families quan trọng xuất hiện từ chính các các ràng buộc (constraints / 제약조건들) đó: randomized algorithms dùng randomness như một computational tài nguyên (resource / 자원); approximation algorithms chấp nhận nghiệm gần tối ưu khi chính xác (exact / 정확한) tối ưu hóa (optimization / 최적화) quá đắt; online algorithms phải quyết định khi tương lai chưa được biết.
 
@@ -21,8 +20,7 @@ Monte Carlo algorithms giới hạn thời gian chạy (runtime / 런타임) rõ
 
 Trong các hệ thống (systems / 시스템들), probabilistic dữ liệu (data / 데이터) structures như Bloom filter, HyperLogLog và Count-Min Sketch được dùng vì bộ nhớ (memory / 메모리) chính xác tuyệt đối có thể quá đắt.
 
-
-> **Chuyển mạch:** Từ **Randomness không phải sự cẩu thả**, ta sang **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Randomized, approximation và online algorithms**, **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** tiếp nhận điểm tựa từ **Randomness không phải sự cẩu thả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Online algorithms: quyết định trước khi thấy tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Approximation: khi chính xác (exact / 정확한) optimum quá đắt
 
@@ -38,8 +36,7 @@ Heuristic là chiến lược (strategy / 전략) thực dụng nhưng có thể
 
 Trong kỹ thuật (engineering / 엔지니어링), heuristic hoàn toàn hợp lệ nếu đo được hành vi (behavior / 동작) trên tải công việc (workload / 워크로드). Điều cần tránh là gọi empirical success thành mathematical guarantee.
 
-
-> **Chuyển mạch:** Từ **Approximation: khi chính xác (exact / 정확한) optimum quá đắt**, ta sang **Online algorithms: quyết định trước khi thấy tương lai** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Randomized, approximation và online algorithms**, **Online algorithms: quyết định trước khi thấy tương lai** tiếp nhận điểm tựa từ **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Online algorithms: quyết định trước khi thấy tương lai
 
@@ -49,8 +46,7 @@ Nếu biết tương lai hoàn toàn, Belady's optimal thuật toán (algorithm 
 
 Competitive phân tích (analysis / 분석) so online thuật toán (algorithm / 알고리즘) với optimal offline thuật toán (algorithm / 알고리즘) biết toàn bộ tương lai. Một competitive ratio mô tả mức tệ nhất tương đối đó.
 
-
-> **Chuyển mạch:** Từ **Online algorithms: quyết định trước khi thấy tương lai**, ta sang **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomized, approximation và online algorithms**, **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** tiếp nhận điểm tựa từ **Online algorithms: quyết định trước khi thấy tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ
 
@@ -60,8 +56,7 @@ Ví dụ HyperLogLog ước lượng số distinct elements bằng statistical p
 
 Đây là điểm nối trực tiếp giữa algorithms, xác suất (probability / 확률), các hệ thống (systems / 시스템들) telemetry và large-scale dữ liệu (data / 데이터) processing.
 
-
-> **Chuyển mạch:** Từ **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ**, ta sang **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Randomized, approximation và online algorithms**, **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
@@ -69,8 +64,7 @@ Randomized backoff giảm xác suất (probability / 확률) nhiều clients th�
 
 Randomness ở đây không nhằm làm hệ thống khó đoán mà để giảm synchronization pathologies và adversarial alignment.
 
-
-> **Chuyển mạch:** Từ **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, ta sang **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Randomized, approximation và online algorithms**, **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** đã nêu tiêu chí phân biệt, còn **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -78,8 +72,7 @@ Bảng băm (hash table / 해시 테이블) trung bình `O(1)` có thể bị de
 
 Nhưng pseudo-randomness cho hiệu năng (performance / 성능) khác cryptographic randomness. bảo mật (security / 보안) cần entropy và unpredictability mạnh hơn; không nên dùng PRNG thường cho keys/tokens.
 
-
-> **Chuyển mạch:** Từ **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomized, approximation và online algorithms**, **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** đã nêu tiêu chí phân biệt, còn **Dùng chung (common / 공통) Misconceptions** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -89,18 +82,16 @@ Nhưng pseudo-randomness cho hiệu năng (performance / 성능) khác cryptogra
 
 **“Online thuật toán (algorithm / 알고리즘) kém vì thiếu dữ liệu.”** Thiếu tương lai là ràng buộc (constraint / 제약조건) bản chất của nhiều các hệ thống (systems / 시스템들). Online phân tích (analysis / 분석) giúp biết giới hạn có thể đạt.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Randomized, approximation và online algorithms**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi chính xác (exact / 정확한) deterministic computation không phù hợp các ràng buộc (constraints / 제약조건들), hỏi ba câu: randomness có phá cấu trúc (structure / 구조) xấu không, approximate answer có đủ không, và quyết định có buộc phải xảy ra trước khi biết tương lai không?
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Randomized, approximation và online algorithms**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Nền xác suất (probability / 확률) xem tại [Probability Foundations](../../../mathematics/06_probability_statistics/01_probability_foundations.md). độ phức tạp (complexity / 복잡도) và NP-hardness được mở rộng tại [Complexity, reductions và NP](./11_complexity_reductions_and_np.md). Các applications hệ thống xuất hiện trong [cache/scalability](../08_software_systems/02_performance_capacity_and_scalability.md) và [reliability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

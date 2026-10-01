@@ -1,7 +1,6 @@
 # Vật liệu nano — khi kích thước trở thành một biến hóa học
 
-> **Mạch đọc:** Đọc **Vật liệu nano — khi kích thước trở thành một biến hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tỉ lệ diện tích bề mặt trên thể tích** sang **Năng lượng bề mặt và xu hướng kết tụ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật liệu nano — khi kích thước trở thành một biến hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tỉ lệ diện tích bề mặt trên thể tích** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Năng lượng bề mặt và xu hướng kết tụ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Vật liệu nano (nanomaterial / 나노소재)** là hệ có ít nhất một kích thước nằm trong vùng mà hiệu ứng bề mặt, độ cong, giam giữ lượng tử hoặc chiều dài vận chuyển trở nên cùng bậc với kích thước vật thể. Ở thang này, thay đổi kích thước có thể làm đổi màu, hoạt tính xúc tác, tính từ, độ hòa tan hoặc hành vi điện tử dù thành phần nguyên tố không đổi.
 
@@ -27,6 +26,8 @@ Khi `L` giảm, phần nguyên tử nằm gần bề mặt tăng rất nhanh.
 
 Nguyên tử bề mặt có ít hàng xóm hơn nguyên tử trong khối, nên trạng thái liên kết, năng lượng tự do và cấu trúc electron có thể khác. Vì vậy hóa học bề mặt trở thành một phần đáng kể của toàn vật liệu.
 
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Năng lượng bề mặt và xu hướng kết tụ** tiếp nhận điểm tựa từ **Tỉ lệ diện tích bề mặt trên thể tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo mầm và phát triển hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năng lượng bề mặt và xu hướng kết tụ
 
 Một hệ gồm nhiều hạt nano rời rạc có tổng diện tích bề mặt rất lớn. Nếu năng lượng bề mặt dương, hệ có xu hướng giảm diện tích bằng cách:
@@ -45,6 +46,8 @@ Các chiến lược thường dùng gồm:
 - cố định hạt trên chất mang.
 
 Một hạt nano ổn định vì vậy không chỉ gồm “lõi vật liệu”; lớp bề mặt và môi trường xung quanh là một phần của hệ chức năng.
+
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Tạo mầm và phát triển hạt** tiếp nhận điểm tựa từ **Năng lượng bề mặt và xu hướng kết tụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chín Ostwald — hạt nhỏ nuôi hạt lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tạo mầm và phát triển hạt
 
@@ -76,6 +79,8 @@ Hạng bề mặt dương vì tạo mặt phân cách mới tốn năng lượng
 
 Đây là cùng lô-gic (logic / 논리) đã xuất hiện trong kết tinh và chuyển pha.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Chín Ostwald — hạt nhỏ nuôi hạt lớn** tiếp nhận điểm tựa từ **Tạo mầm và phát triển hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giam giữ lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chín Ostwald — hạt nhỏ nuôi hạt lớn
 
 Hạt nhỏ có độ cong lớn nên thế hóa học của vật liệu bề mặt thường cao hơn.
@@ -85,6 +90,8 @@ Theo thời gian, vật chất có thể hòa tan khỏi hạt nhỏ rồi kết
 Kết quả là kích thước trung bình tăng dù các hạt không cần va chạm trực tiếp.
 
 Vì vậy “đã tổng hợp được hạt nhỏ” không đồng nghĩa kích thước đó ổn định vĩnh viễn.
+
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Giam giữ lượng tử** tiếp nhận điểm tựa từ **Chín Ostwald — hạt nhỏ nuôi hạt lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạt nano plasmon kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giam giữ lượng tử
 
@@ -104,6 +111,8 @@ Mô hình thực tế còn cần khối lượng hiệu dụng, tương tác ele
 
 > hình học đã trở thành một phần của Hamiltonian điện tử.
 
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Hạt nano plasmon kim loại** tiếp nhận điểm tựa từ **Giam giữ lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạt nano từ tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hạt nano plasmon kim loại
 
 Hạt Au hoặc Ag có thể hỗ trợ dao động tập thể của electron dẫn gọi là **cộng hưởng plasmon bề mặt cục bộ (localized surface plasmon resonance, LSPR)**.
@@ -120,6 +129,8 @@ Tần số cộng hưởng phụ thuộc:
 
 Màu ở đây xuất phát từ tương tác điện từ tập thể, không chỉ từ chuyển mức phân tử kiểu thuốc nhuộm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Hạt nano từ tính** tiếp nhận điểm tựa từ **Hạt nano plasmon kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật liệu carbon nano** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hạt nano từ tính
 
 Hạt sắt từ đủ nhỏ có thể trở thành **đơn miền (single domain)**.
@@ -127,6 +138,8 @@ Hạt sắt từ đủ nhỏ có thể trở thành **đơn miền (single domai
 Nếu kích thước tiếp tục giảm, năng lượng nhiệt có thể làm moment từ đảo hướng liên tục, tạo trạng thái **siêu thuận từ (superparamagnetism)**.
 
 Hạt oxide sắt siêu thuận từ có thể từ hóa mạnh khi có từ trường nhưng gần như không giữ từ dư khi bỏ trường, hữu ích cho phân tách từ và một số ứng dụng y sinh.
+
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Vật liệu carbon nano** tiếp nhận điểm tựa từ **Hạt nano từ tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật liệu hai chiều ngoài graphene** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vật liệu carbon nano
 
@@ -144,6 +157,8 @@ Fullerene là các lồng carbon kín có độ cong lớn. Độ cong làm thay
 
 Ba hệ cùng nguyên tố carbon nhưng tô-pô khác nhau cho thấy thành phần hóa học không đủ để xác định tính chất vật liệu.
 
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Vật liệu hai chiều ngoài graphene** tiếp nhận điểm tựa từ **Vật liệu carbon nano** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phối tử bề mặt là một phần của vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vật liệu hai chiều ngoài graphene
 
 Các dichalcogenide kim loại chuyển tiếp như `MoS2` có thể thay đổi cấu trúc vùng khi số lớp giảm.
@@ -151,6 +166,8 @@ Các dichalcogenide kim loại chuyển tiếp như `MoS2` có thể thay đổi
 Một số hệ từ vùng cấm gián tiếp ở khối trở thành vùng cấm trực tiếp gần đơn lớp.
 
 Số lớp vì vậy trở thành một biến thiết kế tương tự thành phần hóa học.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Phối tử bề mặt là một phần của vật liệu** tiếp nhận điểm tựa từ **Vật liệu hai chiều ngoài graphene** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc lõi–vỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phối tử bề mặt là một phần của vật liệu
 
@@ -165,6 +182,8 @@ Số lớp vì vậy trở thành một biến thiết kế tương tự thành 
 - ảnh hưởng chuyển electron.
 
 Phối tử không nên mặc định được xem là “tạp chất phải loại bỏ”. Trong nhiều hệ, mất phối tử đồng nghĩa mất luôn độ ổn định hoặc chức năng.
+
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Cấu trúc lõi–vỏ** tiếp nhận điểm tựa từ **Phối tử bề mặt là một phần của vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật ở thang nano** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc lõi–vỏ
 
@@ -184,6 +203,8 @@ Lớp vỏ có thể:
 
 Trong chấm lượng tử, vỏ có cấu trúc vùng phù hợp có thể giữ hạt tải khỏi các tâm bề mặt và tăng hiệu suất lượng tử.
 
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Khuyết tật ở thang nano** tiếp nhận điểm tựa từ **Cấu trúc lõi–vỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ổn định keo và lớp điện kép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khuyết tật ở thang nano
 
 Trong vật liệu khối, khuyết tật bề mặt chỉ ảnh hưởng lớp rất mỏng. Với hạt nano, một phần lớn thể tích nằm gần bề mặt nên khuyết nút, liên kết treo và **trạng thái bẫy (trap state)** có thể chi phối toàn vật liệu.
@@ -191,6 +212,8 @@ Trong vật liệu khối, khuyết tật bề mặt chỉ ảnh hưởng lớp 
 Trong tinh thể nano bán dẫn, trạng thái bẫy bề mặt có thể làm tắt phát quang hoặc rút ngắn thời gian sống hạt tải.
 
 Do đó thụ động hóa bề mặt thường quan trọng ngang với kiểm soát kích thước lõi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Ổn định keo và lớp điện kép** tiếp nhận điểm tựa từ **Khuyết tật ở thang nano** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện tích bề mặt phụ thuộc pH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ổn định keo và lớp điện kép
 
@@ -215,6 +238,8 @@ Khi nồng độ muối tăng, lớp điện kép bị nén và rào cản đẩ
 
 Kết quả phụ thuộc pH, lực ion, cấu trúc lớp hấp phụ và mô hình điện động học.
 
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Điện tích bề mặt phụ thuộc pH** tiếp nhận điểm tựa từ **Ổn định keo và lớp điện kép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xúc tác nano** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện tích bề mặt phụ thuộc pH
 
 Nhiều oxide có nhóm hydroxyl bề mặt:
@@ -226,6 +251,8 @@ M{-}OH_2^+\rightleftharpoons M{-}OH\rightleftharpoons M{-}O^-
 Khi pH thay đổi, trạng thái proton hóa thay đổi và điện tích bề mặt có thể đổi dấu quanh điểm điện tích bằng không.
 
 Điều này ảnh hưởng hấp phụ ion, kết tụ, tương tác sinh học và khả năng giữ chất ô nhiễm.
+
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Xúc tác nano** tiếp nhận điểm tựa từ **Điện tích bề mặt phụ thuộc pH** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chế tạo từ trên xuống và từ dưới lên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xúc tác nano
 
@@ -250,6 +277,8 @@ Hạt kim loại trên oxide không phải hai thành phần hoàn toàn độc 
 
 Do đó một chất xúc tác nano nên được xem như **hệ kim loại–chất mang**, không chỉ là “hạt kim loại nhỏ”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Chế tạo từ trên xuống và từ dưới lên** tiếp nhận điểm tựa từ **Xúc tác nano** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự lắp ghép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chế tạo từ trên xuống và từ dưới lên
 
 **Từ trên xuống (top-down)** dùng quang khắc, khắc vật liệu, nghiền cơ học hoặc chùm tập trung để tạo cấu trúc nhỏ từ vật liệu lớn.
@@ -262,6 +291,8 @@ Do đó một chất xúc tác nano nên được xem như **hệ kim loại–c
 
 Nhiều công nghệ thực tế kết hợp cả hai.
 
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Tự lắp ghép** tiếp nhận điểm tựa từ **Chế tạo từ trên xuống và từ dưới lên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo kích thước — mỗi kỹ thuật nhìn một đại lượng khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tự lắp ghép
 
 Hạt nano có thể tự tổ chức thành mạng lớn hơn nhờ tương tác phối tử, điện tích và quá trình bay hơi dung môi.
@@ -269,6 +300,8 @@ Hạt nano có thể tự tổ chức thành mạng lớn hơn nhờ tương tá
 Khi khoảng cách giữa các hạt đủ nhỏ, tương tác điện tử, từ hoặc plasmon có thể tạo tính chất tập thể khác hạt cô lập.
 
 Đây là thang **trung mô (mesoscale)** nối hóa học phân tử với vật liệu khối.
+
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Đo kích thước — mỗi kỹ thuật nhìn một đại lượng khác nhau** tiếp nhận điểm tựa từ **Tự lắp ghép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diện tích bề mặt riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đo kích thước — mỗi kỹ thuật nhìn một đại lượng khác nhau
 
@@ -298,6 +331,8 @@ Hấp phụ khí theo mô hình BET ước lượng diện tích bề mặt có 
 
 TEM, DLS, XRD và BET có thể cho “kích thước” khác nhau mà không mâu thuẫn, vì chúng đo các đại lượng vật lý khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Diện tích bề mặt riêng** tiếp nhận điểm tựa từ **Đo kích thước — mỗi kỹ thuật nhìn một đại lượng khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nano trong môi trường sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Diện tích bề mặt riêng
 
 Với hạt cầu lý tưởng có khối lượng riêng `ρ`:
@@ -309,6 +344,8 @@ SSA\propto\frac1{\rho d}
 Giảm đường kính làm diện tích bề mặt trên đơn vị khối lượng tăng rất nhanh.
 
 Điều này có thể tăng hấp phụ và xúc tác, nhưng đồng thời cũng tăng hòa tan, phản ứng phụ và tốc độ lão hóa.
+
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Nano trong môi trường sinh học** tiếp nhận điểm tựa từ **Diện tích bề mặt riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi trong môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nano trong môi trường sinh học
 
@@ -333,11 +370,15 @@ Tế bào sau đó tương tác với lớp này nhiều hơn với bề mặt n
 
 Danh tính sinh học của hạt vì vậy có thể khác đáng kể danh tính hóa học ban đầu.
 
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Biến đổi trong môi trường** tiếp nhận điểm tựa từ **Nano trong môi trường sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng dụng y sinh, cảm biến và năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biến đổi trong môi trường
 
 Hạt nano có thể oxy hóa, hòa tan, sulfid hóa, hấp phụ vật chất hữu cơ tự nhiên hoặc kết tụ.
 
 Đánh giá vòng đời phải theo dõi **dạng hóa học thực theo thời gian**, không giả định hạt giữ nguyên cấu trúc từ nhà máy tới môi trường.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Ứng dụng y sinh, cảm biến và năng lượng** tiếp nhận điểm tựa từ **Biến đổi trong môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao DLS có thể báo kích thước lớn hơn TEM nhiều lần?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ứng dụng y sinh, cảm biến và năng lượng
 
@@ -359,11 +400,15 @@ nhưng
 → năng lượng bề mặt + phản ứng phụ + bất ổn cũng tăng
 ```
 
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Ứng dụng y sinh, cảm biến và năng lượng** cho ta quy tắc; **Ví dụ suy luận: vì sao DLS có thể báo kích thước lớn hơn TEM nhiều lần?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao chất xúc tác nano nhỏ hơn có thể kém bền hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao DLS có thể báo kích thước lớn hơn TEM nhiều lần?
 
 TEM thường quan sát lõi vật lý trên mẫu đã làm khô. DLS suy bán kính thủy động của hạt đang chuyển động trong dung dịch, bao gồm lớp solvat hóa, phối tử và có thể cả cụm kết tụ.
 
 Do đó kết quả khác nhau không nhất thiết là một kỹ thuật “sai”; chúng có thể đang đo hai đại lượng khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Ví dụ suy luận: vì sao DLS có thể báo kích thước lớn hơn TEM nhiều lần?** cho ta quy tắc; **Ví dụ suy luận: vì sao chất xúc tác nano nhỏ hơn có thể kém bền hơn?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ suy luận: vì sao chất xúc tác nano nhỏ hơn có thể kém bền hơn?
 
@@ -372,6 +417,8 @@ Hạt nhỏ có năng lượng bề mặt cao và nhiều nguyên tử thiếu p
 Một vật liệu có hoạt tính ban đầu rất cao nhưng nhanh mất diện tích hoạt động chưa chắc tốt hơn vật liệu ít hoạt tính hơn nhưng ổn định lâu dài.
 
 Đánh giá phải xem **hoạt tính + độ chọn lọc + độ bền** cùng lúc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Ví dụ suy luận: vì sao chất xúc tác nano nhỏ hơn có thể kém bền hơn?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -395,6 +442,8 @@ Không. Hiệu ứng chỉ mạnh khi kích thước tiến gần chiều dài l
 
 Không. Trong nhiều hệ nó là thành phần quyết định độ ổn định, khả năng phân tán và chức năng điện tử/sinh học.
 
+> **Chuyển mạch:** Trong **Vật liệu nano — khi kích thước trở thành một biến hóa học**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy xem vật liệu nano như **vật liệu khối dưới điều kiện biên mới**:
@@ -415,4 +464,4 @@ Vì vậy thiết kế nano không chỉ hỏi “làm từ chất gì?” mà p
 
 Xem tiếp: [Hóa học bề mặt và mặt phân cách](./05_surface_and_interface_chemistry.md), [Chất bán dẫn](./03_semiconductors.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

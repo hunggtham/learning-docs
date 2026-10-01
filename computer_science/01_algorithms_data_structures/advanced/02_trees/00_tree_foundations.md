@@ -1,6 +1,6 @@
 # Nền tảng về cây
 
-> **Mạch đọc:** Đọc **Nền tảng về cây** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cây có gốc và bất biến n − 1 cạnh** sang **Cây là một đối tượng đệ quy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nền tảng về cây**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cây có gốc và bất biến n − 1 cạnh** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Cây là một đối tượng đệ quy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **cây (tree / 트리) / 트리**
 
@@ -15,6 +15,8 @@ Trong một **cây có gốc (rooted tree)**, có một nút được chọn là
 Nếu cây có `n` nút thì có đúng `n-1` cạnh. Lý do rất trực tiếp: mỗi nút ngoài gốc cần đúng một cạnh nối nó với cha. Không thể có thêm cạnh mà vẫn giữ đồng thời tính liên thông và không chu trình.
 
 Bất biến này giúp phân biệt cây với đồ thị tổng quát, nơi một đỉnh có thể có nhiều đường quay lại hoặc nhiều quan hệ giống “cha”.
+
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Cây là một đối tượng đệ quy** tiếp nhận điểm tựa từ **Cây có gốc và bất biến n − 1 cạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu, chiều cao và kích thước cây con** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cây là một đối tượng đệ quy
 
@@ -37,6 +39,8 @@ Tính đúng đắn có thể chứng minh bằng **quy nạp cấu trúc (struc
 
 Đây là mô hình chứng minh lặp lại trong chiều cao, kích thước cây con, tổng cây con, kiểm tra BST và cây (tree / 트리) DP.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng về cây**, **Độ sâu, chiều cao và kích thước cây con** tiếp nhận điểm tựa từ **Cây là một đối tượng đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Full, complete, perfect và balanced** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ sâu, chiều cao và kích thước cây con
 
 **độ sâu (depth / 깊이)** của nút thường là số cạnh từ gốc tới nút. **Chiều cao (height)** là độ dài đường đi dài nhất từ nút xuống một lá. **Kích thước cây con (subtree size)** là số nút thuộc cây con có gốc tại nút đó.
@@ -51,6 +55,8 @@ Nếu cây nhị phân có chiều cao `h` với gốc ở độ sâu 0, số n�
 
 Do đó cây có hình dạng cân bằng có chiều cao cỡ `O(log n)`, còn cây lệch có thể cao `O(n)`. Chính hình dạng cây quyết định nhiều bảo đảm hiệu năng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng về cây**, **Full, complete, perfect và balanced** tiếp nhận điểm tựa từ **Độ sâu, chiều cao và kích thước cây con** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Duyệt cây là chọn thứ tự xử lý phụ thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Full, complete, perfect và balanced
 
 Các thuật ngữ này mô tả các bất biến khác nhau.
@@ -64,6 +70,8 @@ Các thuật ngữ này mô tả các bất biến khác nhau.
 **Balanced cây (tree / 트리)**: chiều cao được kiểm soát đủ tốt, thường ở mức logarithmic. AVL và Red-Black cây (tree / 트리) dùng các bất biến khác nhau để đạt mục tiêu này.
 
 Không nên học các tên này tách rời mục đích. vùng nhớ động (heap / 힙) cần complete shape; BST cần thứ tự khóa; AVL cần cân bằng chiều cao; B+cây (tree / 트리) cần hệ số phân nhánh lớn và mức lấp đầy phù hợp với trang lưu trữ.
+
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Duyệt cây là chọn thứ tự xử lý phụ thuộc** tiếp nhận điểm tựa từ **Full, complete, perfect và balanced** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đệ quy đang lưu trạng thái gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Duyệt cây là chọn thứ tự xử lý phụ thuộc
 
@@ -82,6 +90,8 @@ Postorder phù hợp khi cha cần kết quả của các con trước, ví dụ
 Inorder đặc biệt quan trọng với BST vì trả khóa theo thứ tự đã sắp xếp.
 
 **Duyệt theo tầng (level-order traversal)** dùng BFS và hàng đợi (queue / 큐). Nó phù hợp với bài toán theo độ sâu, khoảng cách tính theo cạnh hoặc xử lý từng tầng.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng về cây**, **Đệ quy đang lưu trạng thái gì?** tiếp nhận điểm tựa từ **Duyệt cây là chọn thứ tự xử lý phụ thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn cây trong bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đệ quy đang lưu trạng thái gì?
 
@@ -105,6 +115,8 @@ while (cur != null || !stack.isEmpty()) {
 
 Đệ quy không phải phép màu; thời gian chạy (runtime / 런타임) chỉ đang quản lý một ngăn xếp (stack / 스택) trạng thái thay cho ta. Hiểu điều này giúp chuyển thuật toán sang dạng lặp khi cây có thể quá sâu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng về cây**, **Biểu diễn cây trong bộ nhớ** tiếp nhận điểm tựa từ **Đệ quy đang lưu trạng thái gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Có cần con trỏ cha không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu diễn cây trong bộ nhớ
 
 C thường dùng con trỏ:
@@ -121,11 +133,15 @@ Java và JavaScript dùng tham chiếu (reference / 참조) được thời gian
 
 Một cây gồm hàng triệu đối tượng (object / 객체) rải rác trên vùng nhớ động (heap / 힙) có thể có locality kém hơn cách biểu diễn bằng các mảng `value[]`, `left[]`, `right[]`. Vì vậy cần phân biệt **cấu trúc lô-gic (logic / 논리)** với **bố trí vật lý**.
 
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Có cần con trỏ cha không?** tiếp nhận điểm tựa từ **Biểu diễn cây trong bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Euler Tour: biến cây con thành đoạn liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Có cần con trỏ cha không?
 
 Nếu chỉ duyệt từ gốc xuống, parent có thể được truyền qua ngăn xếp (stack / 스택)/recursion. Nếu tải công việc (workload / 워크로드) thường xuyên cần predecessor, successor, đi lên hoặc truy vấn tổ tiên, lưu parent có thể hữu ích.
 
 Đổi lại, mỗi nút tốn thêm bộ nhớ và mọi phép xoay/nối lại phải cập nhật parent đúng. Mỗi siêu dữ liệu (metadata / 메타데이터) mới là một bất biến mới phải duy trì.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng về cây**, **Euler Tour: biến cây con thành đoạn liên tục** tiếp nhận điểm tựa từ **Có cần con trỏ cha không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lowest dùng chung (common / 공통) Ancestor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Euler Tour: biến cây con thành đoạn liên tục
 
@@ -141,6 +157,8 @@ Ví dụ, nếu cần cập nhật giá trị một nút và truy vấn tổng t
 
 Một vấn đề phân cấp đã được chuyển thành bài toán khoảng mà vẫn giữ nguyên ngữ nghĩa cây con.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng về cây**, **Lowest dùng chung (common / 공통) Ancestor** tiếp nhận điểm tựa từ **Euler Tour: biến cây con thành đoạn liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cây (tree / 트리) DP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lowest dùng chung (common / 공통) Ancestor
 
 **Tổ tiên chung thấp nhất (Lowest Common Ancestor – LCA / 최소 공통 조상)** của hai nút là tổ tiên chung có độ sâu lớn nhất.
@@ -154,6 +172,8 @@ up[k][v] = tổ tiên của v cách 2^k cạnh
 Khoảng cách bất kỳ có thể phân rã thành tổng các lũy thừa của 2, nên ta có thể nâng nút theo các bit của độ sâu. Tiền xử lý thường `O(n log n)`, mỗi truy vấn `O(log n)`.
 
 Ý tưởng này cùng họ với Sparse bảng (table / 테이블) và exponentiation by squaring: tiền xử lý các khối kích thước tăng gấp đôi để ghép nhanh một bước lớn.
+
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Cây (tree / 트리) DP** tiếp nhận điểm tựa từ **Lowest dùng chung (common / 공통) Ancestor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rerooting DP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cây (tree / 트리) DP
 
@@ -170,6 +190,8 @@ Nếu chọn `u`, các con trực tiếp không được chọn. Nếu không ch
 
 Điểm quan trọng là trạng thái DP xuất phát từ **thông tin tối thiểu mà cây con cần biết về phía cha**, không phải từ việc “bài cây thì phải dùng dp[u]”.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng về cây**, **Rerooting DP** tiếp nhận điểm tựa từ **Cây (tree / 트리) DP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cây là đồ thị có bất biến mạnh hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rerooting DP
 
 Một số bài yêu cầu đáp án khi từng nút lần lượt được xem là gốc. Chạy DFS lại từ mỗi nút tốn `O(n²)`.
@@ -183,6 +205,8 @@ lượt 2: truyền đóng góp của phần còn lại của cây từ cha xu�
 
 Đây là một ví dụ quan trọng của tư duy “đừng tính lại toàn bộ khi trạng thái mới chỉ khác trạng thái cũ bởi một cạnh”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng về cây**, **Cây là đồ thị có bất biến mạnh hơn** tiếp nhận điểm tựa từ **Rerooting DP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng cách trên cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cây là đồ thị có bất biến mạnh hơn
 
 Mọi cây là đồ thị liên thông không chu trình. Giữa hai nút tồn tại đúng một đường đi đơn giản.
@@ -190,6 +214,8 @@ Mọi cây là đồ thị liên thông không chu trình. Giữa hai nút tồn
 Vì vậy, nhiều bài toán đồ thị trở nên đơn giản hơn trên cây. Nếu đầu vào được bảo đảm là cây và DFS nhận parent, không cần một `visited` set tổng quát; chỉ cần tránh đi ngược lại parent.
 
 Ngược lại, nếu dữ liệu chỉ “trông giống cây” nhưng có thể chứa chu trình hoặc nhiều parent, phải quay lại mô hình đồ thị tổng quát.
+
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Khoảng cách trên cây** tiếp nhận điểm tựa từ **Cây là đồ thị có bất biến mạnh hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường kính cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khoảng cách trên cây
 
@@ -202,6 +228,8 @@ dist(u,v)=độ sâu (depth / 깊이)(u)+độ sâu (depth / 깊이)(v)-2\cdot �
 Công thức xuất phát từ việc đường đi duy nhất từ `u` tới `v` đi từ `u` lên LCA rồi xuống `v`.
 
 Nếu cạnh có trọng số, thay `depth` bằng tổng trọng số từ gốc tới nút.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng về cây**, **Đường kính cây** tiếp nhận điểm tựa từ **Khoảng cách trên cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Centroid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đường kính cây
 
@@ -218,6 +246,8 @@ Một cách khác là DP hậu thứ tự, giữ hai nhánh sâu nhất đi xu�
 
 Hai cách thể hiện hai góc nhìn khác nhau: đường kính như hai lần tìm điểm cực xa, hoặc như việc ghép hai nhánh tốt nhất qua một nút.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng về cây**, **Centroid** tiếp nhận điểm tựa từ **Đường kính cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Heavy-Light Decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Centroid
 
 **Centroid của cây** là nút mà khi loại bỏ nó, mọi thành phần còn lại có kích thước không quá `n/2`. Cây có một hoặc hai centroid.
@@ -225,6 +255,8 @@ Hai cách thể hiện hai góc nhìn khác nhau: đường kính như hai lần
 Centroid quan trọng vì nó tạo điểm chia cân bằng theo kích thước, không phải theo chiều cao. **Centroid decomposition** liên tục chọn centroid rồi phân rã các thành phần, tạo một cây phân rã có chiều cao `O(log n)`.
 
 Kỹ thuật này hữu ích cho truy vấn khoảng cách động trên cây và là ví dụ về việc xây một cấu trúc phụ để thay đổi không gian truy vấn.
+
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Heavy-Light Decomposition** tiếp nhận điểm tựa từ **Centroid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cây và biểu thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Heavy-Light Decomposition
 
@@ -234,6 +266,8 @@ Kết hợp HLD với Segment cây (tree / 트리)/Fenwick cây (tree / 트리) 
 
 Trực giác là chọn cho mỗi nút một con “heavy” có subtree lớn nhất. Mỗi lần đi qua cạnh light, kích thước subtree giảm ít nhất khoảng một nửa, nên số lần đổi chuỗi (chain / 사슬) trên một đường bị chặn logarithmic.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng về cây**, **Cây và biểu thức** tiếp nhận điểm tựa từ **Heavy-Light Decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Serialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cây và biểu thức
 
 AST và expression cây (tree / 트리) cho thấy traversal tương ứng trực tiếp với thứ tự đánh giá.
@@ -241,6 +275,8 @@ AST và expression cây (tree / 트리) cho thấy traversal tương ứng trự
 Postorder phù hợp để tính biểu thức vì toán hạng con phải được tính trước toán tử cha. Preorder có thể tạo dạng prefix; inorder liên hệ với dạng infix nhưng cần ngoặc để bảo toàn cấu trúc.
 
 Đây là ví dụ cây không chỉ lưu dữ liệu mà còn mã hóa thứ tự phụ thuộc của phép tính.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng về cây**, **Serialization** tiếp nhận điểm tựa từ **Cây và biểu thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đúng đắn khi biến đổi cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Serialization
 
@@ -256,6 +292,8 @@ Khi đó quá trình đọc lại có thể tái dựng duy nhất cấu trúc.
 
 Nếu cây có thêm siêu dữ liệu (metadata / 메타데이터) như màu, chiều cao hoặc kích thước subtree, cần quyết định siêu dữ liệu (metadata / 메타데이터) nào được lưu và siêu dữ liệu (metadata / 메타데이터) nào có thể tính lại từ cấu trúc cơ sở.
 
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Tính đúng đắn khi biến đổi cây** tiếp nhận điểm tựa từ **Serialization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cây tĩnh và cây động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính đúng đắn khi biến đổi cây
 
 Các thao tác như rotation, split, merge hoặc transplant phải giữ những bất biến cụ thể.
@@ -264,11 +302,15 @@ Ví dụ rotation trong BST phải giữ thứ tự inorder. Trong AVL còn ph�
 
 Một phép biến đổi có thể đúng về topology nhưng sai siêu dữ liệu (metadata / 메타데이터). Vì vậy cách kiểm thử tốt là xác minh cả cấu trúc và mọi dữ liệu tăng cường sau chuỗi thao tác ngẫu nhiên.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng về cây**, **Cây tĩnh và cây động** tiếp nhận điểm tựa từ **Tính đúng đắn khi biến đổi cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các lỗi tư duy phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cây tĩnh và cây động
 
 Nếu cây không đổi sau khi xây dựng, ta có thể tiền xử lý mạnh: Euler tour, nhị phân (binary / 이진) lifting, HLD, prefix theo gốc. Nếu liên kết cạnh thay đổi thường xuyên, nhiều tiền xử lý trở nên không hợp lệ và cần cấu trúc động chuyên biệt như Link-Cut cây (tree / 트리) hoặc Euler Tour cây (tree / 트리).
 
 Đây là một nguyên tắc tổng quát: **tính tĩnh của dữ liệu cho phép chuyển chi phí từ truy vấn sang tiền xử lý**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng về cây**, **Các lỗi tư duy phổ biến** tiếp nhận điểm tựa từ **Cây tĩnh và cây động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các lỗi tư duy phổ biến
 
@@ -282,6 +324,8 @@ Nếu cây không đổi sau khi xây dựng, ta có thể tiền xử lý mạn
 
 “Cây và đồ thị là hai thế giới tách biệt” — cây là trường hợp đặc biệt của đồ thị với bất biến mạnh hơn.
 
+> **Chuyển mạch:** Trong **Nền tảng về cây**, **Mô hình tư duy** gom các mảnh từ **Các lỗi tư duy phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Cây mạnh vì nó biến một hệ thống lớn thành các cây con độc lập được nối bằng quan hệ cha–con. Đệ quy, quy nạp, DP và nhiều phép tiền xử lý đều khai thác chính ranh giới này.
@@ -290,4 +334,4 @@ Khi gặp bài toán cây, hãy hỏi: **cây con cần trả thông tin gì cho
 
 Xem tiếp: [Binary Search Trees](./01_binary_search_trees.md), [Balanced Search Trees](./02_balanced_search_trees.md), [Heaps](./03_heaps.md), [Augmented Trees](./06_augmented_trees_and_order_statistics.md), [Range Queries](../05_specialized/01_range_queries_fenwick_segment_tree.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 binary search trees](./01_binary_search_trees.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

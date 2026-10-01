@@ -1,7 +1,6 @@
 # Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy
 
-> **Mạch đọc:** Đọc **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Kim loại — electron phi định xứ và khả năng biến dạng dẻo** sang **Lệch mạng — vì sao kim loại thật yếu hơn tinh thể lý tưởng nhưng lại hữu ích hơn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kim loại — electron phi định xứ và khả năng biến dạng dẻo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lệch mạng — vì sao kim loại thật yếu hơn tinh thể lý tưởng nhưng lại hữu ích hơn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Kim loại, gốm và thủy tinh không khác nhau đơn giản theo kiểu “kim loại dẻo, gốm giòn, thủy tinh trong suốt”. Hành vi của chúng hình thành qua một chuỗi nhiều tầng: **cấu trúc điện tử → kiểu liên kết → cấu trúc tinh thể hoặc vô định hình → khuyết tật → vi cấu trúc → lịch sử gia công → tính chất**. Cùng một thành phần hóa học có thể cho tính chất rất khác nếu pha, kích thước hạt, mật độ khuyết tật hoặc trạng thái ứng suất thay đổi.
 
@@ -13,11 +12,15 @@ Liên kết kim loại tương đối ít định hướng so với mạng cộn
 
 Tuy nhiên, kim loại thật không biến dạng bằng cách cả một mặt nguyên tử trượt đồng thời. Cơ chế quan trọng hơn là chuyển động của **lệch mạng (dislocation / 전위)**.
 
+> **Chuyển mạch:** Trong **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Lệch mạng — vì sao kim loại thật yếu hơn tinh thể lý tưởng nhưng lại hữu ích hơn** tiếp nhận điểm tựa từ **Kim loại — electron phi định xứ và khả năng biến dạng dẻo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các cơ chế tăng bền kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lệch mạng — vì sao kim loại thật yếu hơn tinh thể lý tưởng nhưng lại hữu ích hơn
 
 Nếu muốn trượt đồng thời cả một mặt phẳng nguyên tử hoàn hảo, ứng suất cắt lý thuyết phải rất lớn. Trong tinh thể thật, lệch mạng cho phép quá trình trượt lan truyền từng bước, tương tự một nếp nhăn chạy dọc tấm thảm.
 
 Nhờ đó biến dạng xảy ra ở ứng suất thấp hơn nhiều so với dự đoán cho tinh thể hoàn hảo. Hệ quả quan trọng là: phần lớn chiến lược tăng bền kim loại đều nhằm **cản chuyển động lệch mạng**, chứ không phải trực tiếp “làm liên kết kim loại mạnh hơn”.
+
+> **Chuyển mạch:** Ở chặng này của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Lệch mạng — vì sao kim loại thật yếu hơn tinh thể lý tưởng nhưng lại hữu ích hơn** xác định đầu vào; **Các cơ chế tăng bền kim loại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hợp kim hóa thay đổi nhiều hơn độ bền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các cơ chế tăng bền kim loại
 
@@ -47,6 +50,8 @@ Các hạt pha thứ hai nhỏ có thể buộc lệch mạng phải cắt qua h
 
 Biến dạng dẻo làm mật độ lệch mạng tăng. Các lệch mạng tương tác và cản nhau, khiến vật liệu tiếp tục biến dạng khó hơn. Độ bền tăng nhưng độ dẻo thường giảm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Các cơ chế tăng bền kim loại** xác định đầu vào; **Hợp kim hóa thay đổi nhiều hơn độ bền** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Thép — ví dụ điển hình của nhiệt động lực học kết hợp động học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hợp kim hóa thay đổi nhiều hơn độ bền
 
 Thêm nguyên tố hợp kim có thể thay đổi:
@@ -73,6 +78,8 @@ f_\alpha=\frac{C_\beta-C_0}{C_\beta-C_\alpha}
 
 Giản đồ pha trả lời câu hỏi **hệ muốn đi tới đâu ở cân bằng**, nhưng không nói hệ có đạt được trạng thái đó trong thời gian thực hay không. Muốn dự đoán vi cấu trúc thật phải xét thêm động học khuếch tán và tốc độ làm nguội.
 
+> **Chuyển mạch:** Trong **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Hợp kim hóa thay đổi nhiều hơn độ bền** cho ta quy tắc; **Thép — ví dụ điển hình của nhiệt động lực học kết hợp động học** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Giản đồ TTT và CCT — thêm trục thời gian vào giản đồ pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thép — ví dụ điển hình của nhiệt động lực học kết hợp động học
 
 Trong hệ Fe–C, ferrite, austenite, cementite, pearlite, bainite và martensite đại diện cho những cấu trúc và cơ chế hình thành khác nhau.
@@ -82,6 +89,8 @@ Khi làm nguội chậm, carbon có thời gian khuếch tán và hệ tiến g�
 Sau đó **ram (tempering)** cho phép một phần tái sắp xếp và kết tủa có kiểm soát, nhờ đó giảm giòn và tăng độ dai.
 
 Đây là minh họa rất rõ rằng cùng thành phần trung bình nhưng lịch sử nhiệt khác nhau có thể tạo vật liệu hoàn toàn khác.
+
+> **Chuyển mạch:** Ở chặng này của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Thép — ví dụ điển hình của nhiệt động lực học kết hợp động học** cho ta quy tắc; **Giản đồ TTT và CCT — thêm trục thời gian vào giản đồ pha** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Phá hủy dẻo và phá hủy giòn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giản đồ TTT và CCT — thêm trục thời gian vào giản đồ pha
 
@@ -108,6 +117,8 @@ Khi \(K\) đạt độ dai phá hủy \(K_{IC}\), khe nứt có thể phát tri�
 
 Điều này giải thích vì sao một vật liệu có liên kết nguyên tử rất mạnh vẫn có thể phá hủy ở ứng suất thấp hơn nhiều nếu chứa khuyết tật hình học lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Phá hủy dẻo và phá hủy giòn** tiếp nhận điểm tựa từ **Giản đồ TTT và CCT — thêm trục thời gian vào giản đồ pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ràng buộc điện tích trong tinh thể ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phá hủy dẻo và phá hủy giòn
 
 Kim loại dẻo có thể biến dạng dẻo quanh đầu khe, làm đầu khe tù hơn và tiêu tán năng lượng. Trong vật liệu giòn, biến dạng dẻo quanh đầu khe bị hạn chế nên ứng suất tập trung không được giải tỏa hiệu quả, khiến khe phát triển nhanh hơn.
@@ -125,11 +136,15 @@ Gốm thường chứa thành phần liên kết ion và/hoặc cộng hóa tr�
 
 Nhưng chính tính định hướng và ràng buộc điện tích làm chuyển động lệch mạng khó. Khi khe nứt xuất hiện, vùng đầu khe khó biến dạng dẻo để tiêu tán năng lượng, nên nhiều gốm có độ dai phá hủy thấp.
 
+> **Chuyển mạch:** Trong **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Ràng buộc điện tích trong tinh thể ion** tiếp nhận điểm tựa từ **Phá hủy dẻo và phá hủy giòn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học khuyết tật trong gốm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ràng buộc điện tích trong tinh thể ion
 
 Nếu một mặt tinh thể ion trượt sao cho các ion cùng dấu bị đưa cạnh nhau, năng lượng tĩnh điện tăng mạnh. Vì thế số hệ trượt khả dụng trong nhiều gốm nhỏ hơn so với kim loại.
 
 Đây là lý do vi mô quan trọng cho hiện tượng “rất cứng nhưng dễ giòn”.
+
+> **Chuyển mạch:** Ở chặng này của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Hóa học khuyết tật trong gốm** tiếp nhận điểm tựa từ **Ràng buộc điện tích trong tinh thể ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dẫn ion trong zirconia ổn định hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hóa học khuyết tật trong gốm
 
@@ -142,6 +157,8 @@ Ví dụ:
 - pha tạp khác hóa trị (aliovalent doping): ion thay thế có điện tích khác, được bù bằng vacancy, electron hoặc lỗ trống.
 
 Hóa học khuyết tật này chính là nền tảng của chất điện ly rắn, pin nhiên liệu và nhiều cảm biến.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Dẫn ion trong zirconia ổn định hóa** tiếp nhận điểm tựa từ **Hóa học khuyết tật trong gốm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất tạo mạng và chất biến đổi mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dẫn ion trong zirconia ổn định hóa
 
@@ -184,6 +201,8 @@ Nếu chất lỏng được làm nguội đủ nhanh hoặc động học kết
 
 Thủy tinh ở nhiệt độ phòng là chất rắn theo thang thời gian thực tế. Những cửa kính cổ dày không đều không phải bằng chứng cho việc thủy tinh chảy đáng kể ở nhiệt độ phòng; phần lớn sự không đều đến từ công nghệ chế tạo lịch sử.
 
+> **Chuyển mạch:** Trong **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Chất tạo mạng và chất biến đổi mạng** tiếp nhận điểm tựa từ **Dẫn ion trong zirconia ổn định hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển thủy tinh \(Tg\)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất tạo mạng và chất biến đổi mạng
 
 Các oxide như \(SiO_2\), \(B_2O_3\), \(P_2O_5\) có thể đóng vai trò **chất tạo mạng (network former)**.
@@ -192,11 +211,15 @@ Các oxide kiềm như \(Na_2O\) có thể phá một phần cầu oxygen và t�
 
 Thêm chất biến đổi mạng thường giảm độ nhớt và nhiệt độ gia công, nhưng đồng thời có thể tăng hệ số giãn nở hoặc giảm độ bền hóa học.
 
+> **Chuyển mạch:** Ở chặng này của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Chuyển thủy tinh \(Tg\)** tiếp nhận điểm tựa từ **Chất tạo mạng và chất biến đổi mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ nhớt và cửa sổ gia công** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển thủy tinh \(T_g\)
 
 **Nhiệt độ chuyển thủy tinh (glass transition, \(T_g\))** không phải một điểm nóng chảy cân bằng bậc nhất. Nó phản ánh vùng mà thời gian thư giãn cấu trúc trở nên tương đương với thang thời gian thí nghiệm.
 
 Làm nguội nhanh làm cấu trúc “rơi khỏi cân bằng” sớm hơn, vì vậy \(T_g\) quan sát được phụ thuộc tốc độ gia nhiệt/làm nguội.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Độ nhớt và cửa sổ gia công** tiếp nhận điểm tựa từ **Chuyển thủy tinh \(Tg\)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thủy tinh cường lực nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ nhớt và cửa sổ gia công
 
@@ -204,13 +227,19 @@ Làm nguội nhanh làm cấu trúc “rơi khỏi cân bằng” sớm hơn, v�
 
 **Ủ (annealing)** cho phép ứng suất dư thư giãn trước khi vật liệu được làm nguội hoàn toàn.
 
+> **Chuyển mạch:** Trong **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Thủy tinh cường lực nhiệt** tiếp nhận điểm tựa từ **Độ nhớt và cửa sổ gia công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cường lực hóa học bằng trao đổi ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thủy tinh cường lực nhiệt
 
 Khi bề mặt được làm nguội nhanh hơn lõi, sau khi toàn bộ vật liệu nguội xuống có thể hình thành ứng suất nén dư ở bề mặt. Lớp nén này cản khe nứt bề mặt mở ra, nhờ đó tăng độ bền thực tế.
 
+> **Chuyển mạch:** Ở chặng này của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Cường lực hóa học bằng trao đổi ion** tiếp nhận điểm tựa từ **Thủy tinh cường lực nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thủy tinh borosilicate và sốc nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cường lực hóa học bằng trao đổi ion
 
 Có thể thay ion nhỏ gần bề mặt bằng ion lớn hơn, tạo vùng nén. Nhiều kính bảo vệ thiết bị điện tử sử dụng nguyên lý này.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**, **Thủy tinh borosilicate và sốc nhiệt** tiếp nhận điểm tựa từ **Cường lực hóa học bằng trao đổi ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Thủy tinh borosilicate và sốc nhiệt
 
@@ -270,4 +299,4 @@ Kim loại, gốm và thủy tinh là ba cách khác nhau để tổ chức liê
 
 Xem tiếp: [Polymer](./02_polymers.md).
 
-> **Bàn giao:** Sau **“Tính chất composite chỉ là trung bình của các thành phần”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Thủy tinh borosilicate và sốc nhiệt**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

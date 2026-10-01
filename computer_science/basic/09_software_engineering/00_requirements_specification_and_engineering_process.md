@@ -1,7 +1,6 @@
 # Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)
 
-> **Mạch đọc:** Đọc **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **bài toán (problem / 문제) trước solution** sang **Functional và non-functional requirements**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài toán (problem / 문제) trước solution** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Functional và non-functional requirements** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) bắt đầu trước khi mã (code / 코드) xuất hiện. Nếu ta xây đúng thứ đã được mô tả nhưng thứ đó không giải quyết bài toán (problem / 문제) thực, hệ thống (system / 시스템) vẫn thất bại. Vì vậy requirements kỹ thuật (engineering / 엔지니어링) nghiên cứu cách biến nhu cầu mơ hồ của stakeholders thành hành vi (behavior / 동작), các ràng buộc (constraints / 제약조건들) và acceptance criteria đủ rõ để thiết kế (design / 설계), implement và verify.
 
@@ -13,6 +12,8 @@ Một yêu cầu (requirement / 요구사항) tốt không bắt đầu bằng k
 
 Điểm cốt lõi là chuyển adjective mơ hồ thành observable thuộc tính (property / 속성) khi có thể.
 
+> **Chuyển mạch:** Trong **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Functional và non-functional requirements** tiếp nhận điểm tựa từ **Bài toán (problem / 문제) trước solution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stakeholder và conflicting goals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Functional và non-functional requirements
 
 Functional yêu cầu (requirement / 요구사항) mô tả hệ thống (system / 시스템) phải làm gì: đăng nhập, chuyển tiền, tìm kiếm, export report.
@@ -21,11 +22,15 @@ Non-functional yêu cầu (requirement / 요구사항) mô tả chất lượng 
 
 Nhưng ranh giới (boundary / 경계) không tuyệt đối. “Không cho người dùng (user / 사용자) khác đọc hồ sơ” vừa là bảo mật (security / 보안) thuộc tính (property / 속성) vừa là functional authorization quy tắc (rule / 규칙). Điều quan trọng là yêu cầu (requirement / 요구사항) có thể dấu vết (trace / 추적) tới thiết kế (design / 설계)/kiểm thử (test / 테스트).
 
+> **Chuyển mạch:** Ở chặng này của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Stakeholder và conflicting goals** tiếp nhận điểm tựa từ **Functional và non-functional requirements** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Specification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stakeholder và conflicting goals
 
 Sản phẩm (product / 제품) muốn tính năng (feature / 기능) nhanh; bảo mật (security / 보안) muốn stricter controls; operations muốn simplicity; finance muốn giảm hạ tầng (infrastructure / 인프라) chi phí (cost / 비용); người dùng (user / 사용자) muốn ít friction.
 
 Kỹ thuật (engineering / 엔지니어링) không loại bỏ xung đột (conflict / 충돌) mà làm sự đánh đổi (trade-off / 트레이드오프) tường minh (explicit / 명시적). Một kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) nên nói yêu cầu (requirement / 요구사항) nào ưu tiên và chi phí (cost / 비용) nào chấp nhận.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Specification** tiếp nhận điểm tựa từ **Stakeholder và conflicting goals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Use trường hợp (case / 사례) và người dùng (user / 사용자) story** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Specification
 
@@ -35,11 +40,15 @@ Specification không nhất thiết dài. Quan trọng là loại bỏ ambiguity
 
 Ví dụ payment API cần định nghĩa idempotency, currency precision, hết thời gian chờ (timeout / 타임아웃) ngữ nghĩa (semantics / 의미론) và duplicate yêu cầu (request / 요청) hành vi (behavior / 동작); không chỉ yêu cầu (request / 요청)/phản hồi (response / 응답) fields.
 
+> **Chuyển mạch:** Trong **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Specification** cho ta quy tắc; **Use trường hợp (case / 사례) và người dùng (user / 사용자) story** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Acceptance criteria** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Use trường hợp (case / 사례) và người dùng (user / 사용자) story
 
 Use trường hợp (case / 사례) mô tả tương tác (interaction / 상호작용) luồng (flow / 흐름) giữa actor và hệ thống (system / 시스템), gồm main đường dẫn (path / 경로) và alternate/lỗi (error / 오류) paths. người dùng (user / 사용자) story kiểu “As a..., I want..., so that...” hữu ích cho conversation nhưng không thay acceptance criteria.
 
 Một người dùng (user / 사용자) story quá ngắn dễ biến thành placeholder thay vì yêu cầu (requirement / 요구사항). kỹ thuật (engineering / 엔지니어링) cần bổ sung edge cases, permissions, dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기) và hành vi khi thất bại (failure behavior / 실패 동작).
+
+> **Chuyển mạch:** Ở chặng này của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Use trường hợp (case / 사례) và người dùng (user / 사용자) story** cho ta quy tắc; **Acceptance criteria** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Requirements volatility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Acceptance criteria
 
@@ -47,11 +56,15 @@ Acceptance criteria biến intent thành testable conditions. Với password res
 
 Acceptance tests không chứng minh toàn hệ thống (system / 시스템) đúng, nhưng tạo đặc tả hợp đồng (contract / 계약) giữa sản phẩm (product / 제품) intent và hiện thực (implementation / 구현).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Requirements volatility** tiếp nhận điểm tựa từ **Acceptance criteria** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Traceability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Requirements volatility
 
 Requirements thay đổi vì thị trường (market / 시장), regulation và học tập (learning / 학습). Quy trình tốt không giả vờ đóng băng mọi thứ; nó quản lý thay đổi (change / 변경) impact.
 
 Kiến trúc (architecture / 아키텍처) nên giữ stable cốt lõi (core / 핵심) invariants trong khi cho phép volatile parts thay đổi. Đây là lý do lớp trừu tượng (abstraction / 추상화)/mô-đun (module / 모듈) boundaries quan trọng.
+
+> **Chuyển mạch:** Trong **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Traceability** tiếp nhận điểm tựa từ **Requirements volatility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Waterfall, iterative và agile** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Traceability
 
@@ -59,17 +72,23 @@ Traceability nối yêu cầu (requirement / 요구사항) → thiết kế (des
 
 Trong sản phẩm (product / 제품) development bình thường, traceability lightweight vẫn hữu ích khi sự cố (incident / 인시던트) xảy ra: “hành vi (behavior / 동작) này là bug hay intended?”
 
+> **Chuyển mạch:** Ở chặng này của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Waterfall, iterative và agile** tiếp nhận điểm tựa từ **Traceability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Risk-driven development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Waterfall, iterative và agile
 
 Waterfall-style phase separation phù hợp khi requirements ổn định và thay đổi (change / 변경) chi phí (cost / 비용) cao, nhưng dễ phản hồi (feedback / 피드백) muộn. Iterative/agile processes giảm batch kích thước (size / 크기) của học tập (learning / 학습) bằng cách deliver/validate thường xuyên.
 
 Agile không có nghĩa không thiết kế (design / 설계), không document hay thay đổi vô hạn. Nó nhấn mạnh short phản hồi (feedback / 피드백) loops và adaptation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Risk-driven development** tiếp nhận điểm tựa từ **Waterfall, iterative và agile** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Risk-driven development
 
 Không phải tác vụ (task / 작업) nào cũng nên làm theo nghiệp vụ (business / 비즈니스) priority đơn thuần. Technical bất định (uncertainty / 불확실성) cao có thể cần spike/prototype sớm. bảo mật (security / 보안)/hiệu năng (performance / 성능) bottleneck có thể cần validate trước khi UI hoàn thiện.
 
 Risk-driven planning xử lý unknowns trước khi chúng trở thành late surprise.
+
+> **Chuyển mạch:** Trong **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Risk-driven development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -79,12 +98,16 @@ Risk-driven planning xử lý unknowns trước khi chúng trở thành late sur
 
 **“người dùng (user / 사용자) nói gì thì yêu cầu (requirement / 요구사항) là vậy.”** người dùng (user / 사용자) mô tả pain/goal; solution và hidden các ràng buộc (constraints / 제약조건들) cần investigation.
 
+> **Chuyển mạch:** Ở chặng này của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Requirements kỹ thuật (engineering / 엔지니어링) là quá trình biến intent thành falsifiable contracts đủ rõ để thiết kế (design / 설계) và verify, đồng thời chấp nhận rằng understanding sẽ thay đổi qua phản hồi (feedback / 피드백).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc [abstraction/API contracts](../08_software_systems/00_abstraction_modularity_interfaces_and_apis.md), [software architecture](./01_software_architecture_and_design_reasoning.md) và [testing strategy](./02_testing_quality_and_verification_strategy.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 software architecture and design reasoning](./01_software_architecture_and_design_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

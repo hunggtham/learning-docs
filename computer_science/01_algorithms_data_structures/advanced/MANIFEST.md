@@ -1,7 +1,6 @@
 # Advanced DSA tệp (file / 파일) Manifest
 
-> **Mạch đọc:** Đặt **Advanced DSA tệp (file / 파일) Manifest** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Độ phủ hiện tại** sang **Trạng thái các pass nội dung**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced DSA tệp (file / 파일) Manifest**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ phủ hiện tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái các pass nội dung** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Manifest này theo dõi thư viện `computer_science/01_algorithms_data_structures/advanced/`. Số từ chỉ là **ước lượng để kiểm tra độ phủ**, không phải tiêu chí chất lượng duy nhất.
 
@@ -93,8 +92,7 @@ Các `_index.md` cố ý ngắn vì chỉ làm điều hướng (navigation / �
 
 **Tổng quy mô ước lượng:** khoảng **204,000+ từ** cho Advanced DSA. Đây là coverage estimate, không phải word count tuyệt đối.
 
-
-> **Chuyển mạch:** Từ **Độ phủ hiện tại**, ta sang **Trạng thái các pass nội dung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Advanced DSA tệp (file / 파일) Manifest**, **Trạng thái các pass nội dung** tiếp nhận điểm tựa từ **Độ phủ hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá độ sâu hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trạng thái các pass nội dung
 
@@ -156,8 +154,7 @@ Mở rộng Backtracking thành CSP/solver lập luận (reasoning / 추론): fo
 
 Mục tiêu là chuyển tư duy từ “viết DFS đệ quy” sang **quản lý thông tin để chứng minh càng nhiều branch là không cần mở càng sớm càng tốt**.
 
-
-> **Chuyển mạch:** Từ **Trạng thái các pass nội dung**, ta sang **Đánh giá độ sâu hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Advanced DSA tệp (file / 파일) Manifest**, **Đánh giá độ sâu hiện tại** tiếp nhận điểm tựa từ **Trạng thái các pass nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đánh giá độ sâu hiện tại
 
@@ -187,8 +184,7 @@ case study cache/allocator/compiler/search engine
 notation và terminology consistency toàn library
 ```
 
-
-> **Chuyển mạch:** Từ **Đánh giá độ sâu hiện tại**, ta sang **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced DSA tệp (file / 파일) Manifest**, **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau** tiếp nhận điểm tựa từ **Đánh giá độ sâu hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau
 
@@ -206,3 +202,5 @@ Một chapter chỉ được xem là hoàn thiện khi người đọc có thể
 10. Có biến thể nào đáng chọn khi tải công việc (workload / 워크로드) thay đổi?
 
 Nếu chapter thiếu một lớp quan trọng trong số này, nó vẫn là ứng viên cho pass tiếp theo.
+
+> **Bàn giao:** Sau **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

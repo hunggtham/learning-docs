@@ -1,7 +1,6 @@
 # Thời gian (time / 시간), clocks, serialization và idempotency
 
-> **Mạch đọc:** Đọc **thời gian (time / 시간), clocks, serialization và idempotency** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Wall clock vs monotonic clock** sang **UTC, timezone và calendar**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thời gian (time / 시간), clocks, serialization và idempotency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Wall clock vs monotonic clock** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **UTC, timezone và calendar** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Three deceptively simple things cause many môi trường vận hành (production / 운영 환경) bugs: thời gian (time / 시간) zones/clocks, biểu diễn (representation / 표현) crossing boundaries, and retries. They meet whenever a yêu cầu (request / 요청)/sự kiện (event / 이벤트) is serialized, transmitted, stored and possibly repeated later.
 
@@ -11,8 +10,7 @@ Wall clock tells civil timestamp and can jump due NTP correction/manual/timezone
 
 Using wall clock subtraction for hết thời gian chờ (timeout / 타임아웃) can thất bại (fail / 실패) if clock adjusts backward/forward. Use thời gian chạy (runtime / 런타임) monotonic thời gian (time / 시간) for duration.
 
-
-> **Chuyển mạch:** Từ **Wall clock vs monotonic clock**, ta sang **UTC, timezone và calendar** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian (time / 시간), clocks, serialization và idempotency**, **UTC, timezone và calendar** tiếp nhận điểm tựa từ **Wall clock vs monotonic clock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tán (distributed / 분산) clocks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## UTC, timezone và calendar
 
@@ -20,15 +18,13 @@ Instant is điểm (point / 지점) on toàn cục (global / 전역) timeline. c
 
 Store events as instant/timestamp with clear timezone ngữ nghĩa (semantics / 의미론); preserve người dùng (user / 사용자) timezone separately when nghiệp vụ (business / 비즈니스) concept is cục bộ (local / 로컬) schedule. “Every day at 9AM Seoul” is not same as fixed UTC offset forever in all zones.
 
-
-> **Chuyển mạch:** Từ **UTC, timezone và calendar**, ta sang **phân tán (distributed / 분산) clocks** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thời gian (time / 시간), clocks, serialization và idempotency**, **Phân tán (distributed / 분산) clocks** tiếp nhận điểm tựa từ **UTC, timezone và calendar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Serialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân tán (distributed / 분산) clocks
 
 Máy chủ (server / 서버) timestamps from different machines can skew. For thứ tự (ordering / 순서) nhân quả (causal / 인과적) operations, cơ sở dữ liệu (database / 데이터베이스) chuỗi (sequence / 시퀀스)/log offset/logical clock may be more meaningful than wall thời gian (time / 시간). Time-based IDs need collision/clock-regression chiến lược (strategy / 전략).
 
-
-> **Chuyển mạch:** Từ **phân tán (distributed / 분산) clocks**, ta sang **Serialization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian (time / 시간), clocks, serialization và idempotency**, **Serialization** tiếp nhận điểm tựa từ **Phân tán (distributed / 분산) clocks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lược đồ (schema / 스키마) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Serialization
 
@@ -36,8 +32,7 @@ Serialization maps in-memory/logical values to wire/lưu trữ (storage / 저장
 
 Giao thức (protocol / 프로토콜) Buffers/Avro schemas define trường dữ liệu (field / 필드) numbers/types and tính tương thích (compatibility / 호환성) rules. nhị phân (binary / 이진) formats compact/typed but require lược đồ (schema / 스키마) discipline.
 
-
-> **Chuyển mạch:** Từ **Serialization**, ta sang **lược đồ (schema / 스키마) evolution** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian (time / 시간), clocks, serialization và idempotency**, **Lược đồ (schema / 스키마) evolution** tiếp nhận điểm tựa từ **Serialization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lược đồ (schema / 스키마) evolution
 
@@ -45,8 +40,7 @@ Messages outlive mã (code / 코드) during rolling deploys, queues or stored ev
 
 Readers should often tolerate unknown fields; writers may need defaults. tính tương thích (compatibility / 호환성) can be backward (new reader old data), forward (old reader new data) or full depending ecosystem.
 
-
-> **Chuyển mạch:** Từ **lược đồ (schema / 스키마) evolution**, ta sang **Idempotency** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thời gian (time / 시간), clocks, serialization và idempotency**, **Idempotency** tiếp nhận điểm tựa từ **Lược đồ (schema / 스키마) evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exactly-once tác động (effect / 효과) through deduplication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Idempotency
 
@@ -60,8 +54,7 @@ HTTP PUT intended ngữ nghĩa (semantics / 의미론) often idempotent; POST no
 
 Payment yêu cầu (request / 요청) with `idempotency_key = order-123-charge-1`: máy chủ (server / 서버) atomically records key→kết quả (result / 결과) and returns same kết quả (result / 결과) on thử lại (retry / 재시도) instead of charge again.
 
-
-> **Chuyển mạch:** Từ **Idempotency**, ta sang **Exactly-once tác động (effect / 효과) through deduplication** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian (time / 시간), clocks, serialization và idempotency**, **Exactly-once tác động (effect / 효과) through deduplication** tiếp nhận điểm tựa từ **Idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Optimistic versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Exactly-once tác động (effect / 효과) through deduplication
 
@@ -69,29 +62,25 @@ Mạng (network / 네트워크) cannot always tell máy khách (client / 클라�
 
 Dedup bản ghi (record / 레코드) creation and side tác động (effect / 효과) must be atomic or coordinated; otherwise crash between tác động (effect / 효과) and key recording still duplicates.
 
-
-> **Chuyển mạch:** Từ **Exactly-once tác động (effect / 효과) through deduplication**, ta sang **Optimistic versioning** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian (time / 시간), clocks, serialization và idempotency**, **Optimistic versioning** tiếp nhận điểm tựa từ **Exactly-once tác động (effect / 효과) through deduplication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IDs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Optimistic versioning
 
 Tài nguyên (resource / 자원) cập nhật (update / 업데이트) can include phiên bản (version / 버전)/ETag. máy khách (client / 클라이언트) reads v5, sends cập nhật (update / 업데이트) “if phiên bản (version / 버전)=5”; máy chủ (server / 서버) atomically updates to v6. Concurrent stale writer fails instead of silently overwrite. HTTP `If-Match`/ETag and DB phiên bản (version / 버전) columns use same compare-and-swap mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **Optimistic versioning**, ta sang **IDs** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thời gian (time / 시간), clocks, serialization và idempotency**, **IDs** tiếp nhận điểm tựa từ **Optimistic versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## IDs
 
 Auto-increment gives ordered cục bộ (local / 로컬) IDs but coordination/hotspot in phân tán (distributed / 분산) setting. UUID random/time-ordered variants trade locality, generation independence and thông tin (information / 정보) leakage differently. ID should encode only ngữ nghĩa (semantics / 의미론) needed; don't assume chronological thứ tự (ordering / 순서) unless format guarantees and clock các ràng buộc (constraints / 제약조건들) understood.
 
-
-> **Chuyển mạch:** Từ **IDs**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian (time / 시간), clocks, serialization và idempotency**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **IDs** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Crossing a ranh giới (boundary / 경계) requires **tường minh (explicit / 명시적) biểu diễn (representation / 표현) + phiên bản (version / 버전) đặc tả hợp đồng (contract / 계약)**. Repeating a ranh giới (boundary / 경계) lời gọi (call / 호출) requires **idempotency/dedup đặc tả hợp đồng (contract / 계약)**. Measuring duration requires **monotonic thời gian (time / 시간)**, while nghiệp vụ (business / 비즈니스) calendars require timezone-aware civil thời gian (time / 시간).
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian (time / 시간), clocks, serialization và idempotency**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -101,11 +90,10 @@ Auto-increment gives ordered cục bộ (local / 로컬) IDs but coordination/ho
 
 **“HTTP thử lại (retry / 재시도) is safe if vận chuyển (transport / 전송) says yêu cầu (request / 요청) failed.”** hết thời gian chờ (timeout / 타임아웃) can happen after máy chủ (server / 서버) lần ghi nhận (commit / 커밋) but before phản hồi (response / 응답) arrives.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thời gian (time / 시간), clocks, serialization và idempotency**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 [Encoding](../00_computation_information/01_information_bits_and_encoding.md), [distributed time/failure](../06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md), [transactions](../05_data_databases/02_transactions_acid_and_concurrency_control.md) and [fault-tolerant retry](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md) converge here.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 abstraction modularity interfaces and apis](./00_abstraction_modularity_interfaces_and_apis.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,5 +1,7 @@
 # Rendering Hiệu năng (performance / 성능) Đo lường (measurement / 측정) Lab — đo style, bố cục (layout / 레이아웃), paint và composite thay vì đoán
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Rendering Hiệu năng (performance / 성능) Đo lường (measurement / 측정) Lab — đo style, bố cục (layout / 레이아웃), paint và composite thay vì đoán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dấu vết (trace / 추적) A — tương tác (interaction / 상호작용)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Frontend hiệu năng (performance / 성능) rất dễ bị biến thành folklore:
 
 ```text
@@ -1080,8 +1082,6 @@ After: fast
 ---
 
 # 48. Ví dụ report ngắn
-Phần “48. Ví dụ report ngắn” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 Question:
@@ -1201,6 +1201,8 @@ paint/composite
 next useful frame
 ```
 
+> **Chuyển mạch:** Trace A đo interaction path; Trace B đo load/update path, nên so sánh chúng theo cùng mốc style/layout/paint/composite trước khi rút ra cross-link.
+
 ## Dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)
 
 Ví dụ điều hướng (navigation / 내비게이션) hoặc API dữ liệu (data / 데이터) cập nhật (update / 업데이트).
@@ -1229,12 +1231,14 @@ What regression guard should remain?
 
 Nếu câu trả lời ban đầu và bằng chứng (evidence / 증거) khác nhau, đó không phải thất bại. Đó chính là lý do hiệu năng (performance / 성능) profiling tồn tại.
 
-## Cross-link
-Phần “Cross-link” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Sau khi đối chiếu Trace B với Trace A, cross-link phải chỉ ra nguyên nhân–hệ quả đo được và boundary của từng workload, không chỉ lặp lại số liệu.
 
+## Cross-link
 
 - [Request → Pixel → Interaction Trace](./00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md)
 - [`../COVERAGE_AUDIT.md`](../COVERAGE_AUDIT.md)
 - CSS Master/Supplement cho cascade, bố cục (layout / 레이아웃), paint/composite lập luận (reasoning / 추론).
 - JavaScript Cấp cao (senior / 시니어)/Master cho vòng lặp sự kiện (event loop / 이벤트 루프), long tác vụ (task / 작업), worker, hiệu năng (performance / 성능) và sản phẩm tạo ra (artifact / 산출물) ranh giới (boundary / 경계).
 - React/WebSquare profiling chapter khi cần map trình duyệt (browser / 브라우저) bằng chứng (evidence / 증거) sang framework-specific quyền sở hữu (ownership / 소유권).
+
+> **Bàn giao:** Sau **Cross-link**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

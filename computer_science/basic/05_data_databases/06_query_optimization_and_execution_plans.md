@@ -1,7 +1,6 @@
 # Tối ưu truy vấn và kế hoạch thực thi
 
-> **Mạch đọc:** Đọc **Tối ưu truy vấn và kế hoạch thực thi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ câu SQL đến kế hoạch vật lý** sang **Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tối ưu truy vấn và kế hoạch thực thi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ câu SQL đến kế hoạch vật lý** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Hai câu SQL có thể trả cùng kết quả nhưng thời gian chạy chênh nhau hàng nghìn lần. **Bộ tối ưu truy vấn (query optimizer / 옵티마이저)** của cơ sở dữ liệu phải tìm một kế hoạch thực thi vật lý có chi phí ước lượng thấp trong một không gian phương án rất lớn. Đây là nơi thuật toán, thống kê, lưu trữ, bộ nhớ đệm (cache / 캐시) CPU và đại số quan hệ gặp nhau.
 
@@ -22,8 +21,7 @@ phân tích SQL
 
 Bộ tối ưu không “hiểu ý nghĩa nghiệp vụ”. Nó dựa vào lược đồ, ràng buộc, số liệu thống kê và mô hình chi phí.
 
-
-> **Chuyển mạch:** Từ **Từ câu SQL đến kế hoạch vật lý**, ta sang **Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tối ưu truy vấn và kế hoạch thực thi**, **Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí** tiếp nhận điểm tựa từ **Từ câu SQL đến kế hoạch vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phương án thứ tự nối tăng rất nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí
 
@@ -33,8 +31,7 @@ Số liệu thống kê thường gồm số dòng, số giá trị khác nhau, 
 
 Giả định các cột độc lập thường sai. `city='Seoul'` và `country='KR'` có tương quan mạnh; nếu nhân độ chọn lọc của hai điều kiện như thể chúng độc lập, hệ thống có thể ước lượng quá thấp hoặc quá cao.
 
-
-> **Chuyển mạch:** Từ **Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí**, ta sang **Số phương án thứ tự nối tăng rất nhanh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tối ưu truy vấn và kế hoạch thực thi**, **Số phương án thứ tự nối tăng rất nhanh** tiếp nhận điểm tựa từ **Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các toán tử thực thi vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Số phương án thứ tự nối tăng rất nhanh
 
@@ -42,8 +39,7 @@ Khi có nhiều bảng, số thứ tự nối có thể tăng bùng nổ. Tìm k
 
 Tính kết hợp của phép nối cho phép `(A join B) join C` và `A join (B join C)` tương đương với phép nối trong (inner join) khi các điều kiện phù hợp, nhờ đó tạo không gian cho tối ưu. Phép nối ngoài, phụ thuộc `LATERAL` và hàm có hành vi thay đổi theo lần gọi làm giảm mức tự do này.
 
-
-> **Chuyển mạch:** Từ **Số phương án thứ tự nối tăng rất nhanh**, ta sang **Các toán tử thực thi vật lý** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu truy vấn và kế hoạch thực thi**, **Các toán tử thực thi vật lý** tiếp nhận điểm tựa từ **Số phương án thứ tự nối tăng rất nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện có thể tận dụng chỉ mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các toán tử thực thi vật lý
 
@@ -53,8 +49,7 @@ Quét tuần tự (sequential scan) có thể nhanh hơn quét chỉ mục khi t
 
 Không có toán tử “tốt nhất” cho mọi trường hợp; lựa chọn phụ thuộc số lượng bản ghi, thứ tự dữ liệu, bộ nhớ và đặc tính thiết bị lưu trữ.
 
-
-> **Chuyển mạch:** Từ **Các toán tử thực thi vật lý**, ta sang **Điều kiện có thể tận dụng chỉ mục** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tối ưu truy vấn và kế hoạch thực thi**, **Điều kiện có thể tận dụng chỉ mục** tiếp nhận điểm tựa từ **Các toán tử thực thi vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ mục bao phủ và quét chỉ mục không cần đọc bảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điều kiện có thể tận dụng chỉ mục
 
@@ -62,8 +57,7 @@ Một điều kiện **có khả năng tìm kiếm bằng chỉ mục (SARGable)
 
 Bản chất là khi biến đổi trực tiếp cột trong điều kiện, thứ tự khóa của chỉ mục có thể không còn được sử dụng trực tiếp.
 
-
-> **Chuyển mạch:** Từ **Điều kiện có thể tận dụng chỉ mục**, ta sang **Chỉ mục bao phủ và quét chỉ mục không cần đọc bảng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tối ưu truy vấn và kế hoạch thực thi**, **Chỉ mục bao phủ và quét chỉ mục không cần đọc bảng** tiếp nhận điểm tựa từ **Điều kiện có thể tận dụng chỉ mục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắp xếp, tràn ra đĩa và hạn mức bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chỉ mục bao phủ và quét chỉ mục không cần đọc bảng
 
@@ -71,8 +65,7 @@ Nếu chỉ mục chứa đủ các cột mà truy vấn cần, hệ thống có
 
 Tuy nhiên chỉ mục rộng tốn thêm dung lượng và làm tăng khuếch đại ghi (write amplification). Mỗi lần `INSERT` hoặc `UPDATE` phải duy trì các chỉ mục liên quan, nên tối ưu đọc luôn có chi phí ở phía ghi.
 
-
-> **Chuyển mạch:** Từ **Chỉ mục bao phủ và quét chỉ mục không cần đọc bảng**, ta sang **Sắp xếp, tràn ra đĩa và hạn mức bộ nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu truy vấn và kế hoạch thực thi**, **Sắp xếp, tràn ra đĩa và hạn mức bộ nhớ** tiếp nhận điểm tựa từ **Chỉ mục bao phủ và quét chỉ mục không cần đọc bảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **EXPLAIN là bằng chứng, không phải phần trang trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sắp xếp, tràn ra đĩa và hạn mức bộ nhớ
 
@@ -80,8 +73,7 @@ Các toán tử sắp xếp hoặc băm cần bộ nhớ. Nếu tập dữ liệ
 
 Một truy vấn đột nhiên chậm khi dữ liệu vượt ngưỡng bộ nhớ là ví dụ về thay đổi pha: kế hoạch lô-gic (logic / 논리) không đổi nhưng hành vi vật lý thay đổi vì giới hạn tài nguyên.
 
-
-> **Chuyển mạch:** Từ **Sắp xếp, tràn ra đĩa và hạn mức bộ nhớ**, ta sang **EXPLAIN là bằng chứng, không phải phần trang trí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tối ưu truy vấn và kế hoạch thực thi**, **Sắp xếp, tràn ra đĩa và hạn mức bộ nhớ** nêu điều cần giải thích; **EXPLAIN là bằng chứng, không phải phần trang trí** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ nhạy với tham số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## EXPLAIN là bằng chứng, không phải phần trang trí
 
@@ -91,8 +83,7 @@ Một quy trình gỡ lỗi tốt là tìm nơi số liệu ước lượng lệ
 
 Không nên tối ưu chỉ bằng cách nhìn câu SQL và đoán.
 
-
-> **Chuyển mạch:** Từ **EXPLAIN là bằng chứng, không phải phần trang trí**, ta sang **Độ nhạy với tham số** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tối ưu truy vấn và kế hoạch thực thi**, **EXPLAIN là bằng chứng, không phải phần trang trí** nêu điều cần giải thích; **Độ nhạy với tham số** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những hiểu nhầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ nhạy với tham số
 
@@ -100,8 +91,7 @@ Một truy vấn chuẩn bị sẵn có thể nhận các giá trị tham số c
 
 Điều đó cho thấy “một truy vấn luôn có một kế hoạch tối ưu duy nhất” không đúng khi tham số và phân bố dữ liệu thay đổi.
 
-
-> **Chuyển mạch:** Từ **Độ nhạy với tham số**, ta sang **Những hiểu nhầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu truy vấn và kế hoạch thực thi**, **Độ nhạy với tham số** đã nêu tiêu chí phân biệt, còn **Những hiểu nhầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu nhầm thường gặp
 
@@ -111,18 +101,16 @@ Một truy vấn chuẩn bị sẵn có thể nhận các giá trị tham số c
 
 **“Viết lại SQL trông đẹp hơn thì chắc chắn nhanh hơn.”** Không đúng. Bộ tối ưu có thể chuẩn hóa nhiều cách viết thành cùng một kế hoạch; cần kiểm tra kế hoạch và số liệu thực tế.
 
-
-> **Chuyển mạch:** Từ **Những hiểu nhầm thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tối ưu truy vấn và kế hoạch thực thi**, **Những hiểu nhầm thường gặp** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
 > Tối ưu truy vấn là bài toán tìm kiếm dưới điều kiện không chắc chắn: bộ tối ưu dùng thống kê để dự đoán số lượng bản ghi, rồi chọn các toán tử có mô hình chi phí phù hợp. Ước lượng sai thường kéo theo kế hoạch sai.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tối ưu truy vấn và kế hoạch thực thi**, **Kết nối** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc cùng [ngữ nghĩa SQL](./05_relational_algebra_and_sql_semantics.md), [chỉ mục và thực thi truy vấn](./03_indexes_and_query_execution.md), [phần cứng lưu trữ](../02_computer_architecture/06_storage_hardware_ssd_disks_and_persistence.md) và [hiệu năng hệ thống phần mềm](../08_software_systems/02_performance_capacity_and_scalability.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 data models and database systems](./00_data_models_and_database_systems.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

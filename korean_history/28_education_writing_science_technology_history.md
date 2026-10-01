@@ -46,7 +46,7 @@ Mass school synchronizes age cohorts, calendar and curriculum. Before mass schoo
 
 ## R&D catch-up
 
-Early industrializers invent frontier technology; late industrializers can import and imitate but must develop absorptive sức chứa (capacity / 용량). Engineers need enough scientific/technical kiến thức (knowledge / 지식) to understand, adapt and improve imported tiến trình (process / 프로세스). Education and industrial chính sách (policy / 정책) are complements.
+Các nước công nghiệp hóa sớm phát minh công nghệ tuyến đầu; các nước công nghiệp hóa muộn có thể nhập khẩu và bắt chước nhưng phải phát triển năng lực hấp thụ. Kỹ sư cần đủ tri thức khoa học/kỹ thuật để hiểu, thích nghi và cải tiến quy trình nhập khẩu. Giáo dục và chính sách công nghiệp bổ trợ cho nhau.
 
 ## Semiconductor học tập (learning / 학습) curve
 
@@ -84,7 +84,7 @@ Một rain gauge chỉ useful nếu dữ liệu (data / 데이터) được coll
 
 Khắc hàng chục nghìn woodblocks là dữ liệu (data / 데이터) dự án (project / 프로젝트) lớn. Lỗi (error / 오류) ở một character có thể replicate qua every print. Workflow phải giải proofreading, tiêu chuẩn (standard / 표준) văn bản (text / 텍스트), wood preparation, carving, lưu trữ (storage / 저장소) và environmental preservation. **Haeinsa Janggyeong Panjeon** vì vậy nên được đọc như archive-engineering hệ thống (system / 시스템), không chỉ religious treasure.
 
-War ngữ cảnh (context / 맥락) làm dự án (project / 프로젝트) càng interesting: kiến thức (knowledge / 지식) preservation và spiritual protection intersect với trạng thái (state / 상태) anxiety.
+Bối cảnh chiến tranh khiến dự án càng đáng chú ý: bảo tồn tri thức và bảo vệ tinh thần giao cắt với nỗi lo của nhà nước.
 
 ## Joseon: đo lường (measurement / 측정) nối science với tax
 

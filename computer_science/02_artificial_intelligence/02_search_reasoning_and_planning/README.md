@@ -1,7 +1,6 @@
 # Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations
 
-> **Mạch đọc:** Đọc **tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **phụ thuộc (dependency / 의존성) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder này xây phần **classical bài toán (problem / 문제) solving** của Artificial Intelligence. Nó trả lời câu hỏi: khi một tác nhân (agent / 에이전트) có trạng thái (state / 상태), actions và goal, làm thế nào khám phá possibilities, dùng kiến thức (knowledge / 지식) để giảm tìm kiếm (search / 검색), xử lý opponent/các ràng buộc (constraints / 제약조건들), lập plan và cuối cùng ra quyết định khi kết quả (outcome / 결과) không chắc chắn?
 
@@ -17,8 +16,7 @@ Các ideas ở đây không bị Machine học tập (learning / 학습) thay th
 6. [Planning](./05_planning.md) — hành động (action / 동작) preconditions/effects, STRIPS/PDDL, partial-order/HTN/temporal planning, kiểm tra hợp lệ (validation / 검증), thực thi (execution / 실행) và replanning.
 7. [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md) — expected utility, MDP/POMDP, Bellman equations, bandits, giá trị (value / 값) of thông tin (information / 정보) và rủi ro (risk / 위험).
 
-
-> **Chuyển mạch:** Từ **Chapters**, ta sang **phụ thuộc (dependency / 의존성) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**, **Phụ thuộc (dependency / 의존성) map** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một mô hình tư duy (mental model / 사고 모델) chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -40,8 +38,7 @@ flowchart TD
     P --> AG
 ```
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **Một mô hình tư duy (mental model / 사고 모델) chung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**, **Một mô hình tư duy (mental model / 사고 모델) chung** gom các mảnh từ **Phụ thuộc (dependency / 의존성) map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một mô hình tư duy (mental model / 사고 모델) chung
 
@@ -85,8 +82,7 @@ Quyết định (decision / 결정) lý thuyết (theory / 이론) thêm probabi
 
 Machine học tập (learning / 학습) có thể học heuristic, chuyển tiếp (transition / 전이) mô hình (model / 모델), giá trị (value / 값) hoặc chính sách (policy / 정책) từ dữ liệu (data / 데이터), nhưng không thay đổi bản chất các bài toán (problem / 문제) structures ở trên.
 
-
-> **Chuyển mạch:** Từ **Một mô hình tư duy (mental model / 사고 모델) chung**, ta sang **liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**, **Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** gom các mảnh từ **Một mô hình tư duy (mental model / 사고 모델) chung** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI
 
@@ -104,3 +100,5 @@ Bandit exploration         ↔ recommendation / online learning
 ```
 
 Đặc biệt, khi tới `10_agents_and_ai_systems/`, library sẽ không định nghĩa Agent từ đầu bằng buzzwords. Nó sẽ reuse state, action, environment, planning, uncertainty và execution concepts đã xây tại đây.
+
+> **Bàn giao:** Sau **Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

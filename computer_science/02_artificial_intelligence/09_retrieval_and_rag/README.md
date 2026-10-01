@@ -1,7 +1,6 @@
 # Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** Đọc **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **phụ thuộc (dependency / 의존성) Map** sang **Chapters**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) Map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder này giải thích Retrieval-Augmented Generation từ nền thông tin (information / 정보) Retrieval tới kiến trúc vận hành (production architecture / 운영 아키텍처). RAG không được coi như recipe `embed → vector DB → LLM`; nó là một **bằng chứng (evidence / 증거) hệ thống (system / 시스템)** gồm ingestion, tìm kiếm (search / 검색), ranking, ngữ cảnh (context / 맥락) construction, provenance, evaluation và bảo mật (security / 보안).
 
@@ -23,8 +22,7 @@ flowchart TD
     ADV --> EVAL[RAG Evaluation]
 ```
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) Map**, ta sang **Chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chapters** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Full mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chapters
 
@@ -43,8 +41,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 09_rag_evaluation.md
 ```
 
-
-> **Chuyển mạch:** Từ **Chapters**, ta sang **Full mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Full mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Important Distinctions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Full mô hình tư duy (mental model / 사고 모델)
 
@@ -74,8 +71,7 @@ Citation / Verification / Abstention
 Evaluation + Monitoring
 ```
 
-
-> **Chuyển mạch:** Từ **Full mô hình tư duy (mental model / 사고 모델)**, ta sang **Important Distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Important Distinctions** gom các mảnh từ **Full mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Môi trường vận hành (production / 운영 환경) Principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Important Distinctions
 
@@ -92,8 +88,7 @@ newest source           ≠ authoritative source
 long context            ≠ retrieval replacement
 ```
 
-
-> **Chuyển mạch:** Từ **Important Distinctions**, ta sang **môi trường vận hành (production / 운영 환경) Principle** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Môi trường vận hành (production / 운영 환경) Principle** tiếp nhận điểm tựa từ **Important Distinctions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Next** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) Principle
 
@@ -109,9 +104,10 @@ LLM có use evidence faithfully không?
 citation có map đúng source không?
 ```
 
-
-> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) Principle**, ta sang **Next** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Next** tiếp nhận điểm tựa từ **Môi trường vận hành (production / 운영 환경) Principle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Next
 
 RAG là một capability mà Agent có thể gọi như tool. Tiếp theo: [Agents and AI Systems](../10_agents_and_ai_systems/README.md).
+
+> **Bàn giao:** Sau **Next**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước
 
-> **Mạch đọc:** Đọc **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nước như một dung môi** sang **Khung acid–cơ sở (base / 기반)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nước như một dung môi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Khung acid–cơ sở (base / 기반)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Nước tự nhiên không phải `H2O` tinh khiết. Nó là một dung dịch động chứa khí hòa tan, ion, phân tử hữu cơ, hạt keo, chất rắn lơ lửng và vi sinh vật. Hành vi của nước xuất hiện từ **cân bằng acid–cơ sở (base / 기반), oxy hóa–khử, hòa tan/kết tủa khoáng, tạo phức, hấp phụ và phản ứng sinh học trong một hệ có dòng vật chất liên tục**.
 
@@ -25,6 +24,8 @@ Cường độ hydrat hóa phụ thuộc mật độ điện tích. Ion nhỏ, �
 
 Ví dụ `Mg2+` được hydrat hóa mạnh hơn `K+`, từ đó ảnh hưởng độ linh động, tạo phức và hành vi sinh học.
 
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Khung acid–cơ sở (base / 기반)** tiếp nhận điểm tựa từ **Nước như một dung môi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ carbonate — bộ đệm trung tâm của nhiều nguồn nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khung acid–cơ sở (base / 기반)
 
 Nước tự ion hóa:
@@ -46,6 +47,8 @@ pH=-\log_{10}a_{H^+}
 \]
 
 Do đó pH được định nghĩa qua **hoạt độ**, không phải nồng độ mol thô trong mọi điều kiện.
+
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Khung acid–cơ sở (base / 기반)** nêu điều cần giải thích; **Hệ carbonate — bộ đệm trung tâm của nhiều nguồn nước** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phân số phân bố và cân bằng khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ carbonate — bộ đệm trung tâm của nhiều nguồn nước
 
@@ -71,6 +74,8 @@ pH cao → phần CO3²− tăng
 
 Đây là bài toán **phân bố dạng tồn tại (speciation)**, được quyết định bởi `pKa`, cân bằng khối lượng và hoạt độ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Hệ carbonate — bộ đệm trung tâm của nhiều nguồn nước** nêu điều cần giải thích; **Phân số phân bố và cân bằng khối lượng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ kiềm — khả năng trung hòa acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân số phân bố và cân bằng khối lượng
 
 Với tổng carbon vô cơ:
@@ -84,6 +89,8 @@ phần của mỗi dạng có thể viết theo `[H+]`, `Ka1` và `Ka2`.
 Mẫu toán học này xuất hiện lại trong acid đa proton, thủy phân kim loại và hệ đệm sinh hóa.
 
 Điểm quan trọng là **tổng lượng nguyên tố có thể gần như không đổi trong khi dạng hóa học thay đổi rất mạnh**.
+
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Độ kiềm — khả năng trung hòa acid** tiếp nhận điểm tựa từ **Phân số phân bố và cân bằng khối lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao báo cáo “quy đổi theo CaCO3”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ kiềm — khả năng trung hòa acid
 
@@ -101,6 +108,8 @@ Phosphate, borate và các cơ sở (base / 기반) yếu khác cũng có thể 
 
 Hai mẫu có cùng pH nhưng khác độ kiềm sẽ phản ứng rất khác khi thêm acid.
 
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Vì sao báo cáo “quy đổi theo CaCO3”?** tiếp nhận điểm tựa từ **Độ kiềm — khả năng trung hòa acid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng khoáng carbonate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao báo cáo “quy đổi theo CaCO3”?
 
 Trong kỹ thuật nước, độ kiềm và độ cứng thường được báo cáo dưới dạng `mg/L` tương đương `CaCO3`.
@@ -108,6 +117,8 @@ Trong kỹ thuật nước, độ kiềm và độ cứng thường được bá
 `CaCO3` có khối lượng mol khoảng `100 g/mol` và hai đương lượng điện tích/proton, nên khối lượng đương lượng gần `50 g/eq`.
 
 Đây là quy ước tiện cho chuyển đổi, không có nghĩa toàn bộ độ kiềm thật sự tồn tại dưới dạng `CaCO3` hòa tan.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Cân bằng khoáng carbonate** tiếp nhận điểm tựa từ **Vì sao báo cáo “quy đổi theo CaCO3”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ số bão hòa và cáu cặn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cân bằng khoáng carbonate
 
@@ -124,6 +135,8 @@ K_{sp}=a_{Ca^{2+}}a_{CO_3^{2-}}
 Nếu pH giảm, `CO3²−` bị proton hóa thành `HCO3−` hoặc `CO2*`, làm hoạt độ carbonate giảm và có thể thúc đẩy calcite hòa tan thêm.
 
 Đây là ví dụ điển hình của **cân bằng độ tan ghép với acid–cơ sở (base / 기반)**.
+
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Chỉ số bão hòa và cáu cặn** tiếp nhận điểm tựa từ **Cân bằng khoáng carbonate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chỉ số bão hòa và cáu cặn
 
@@ -145,6 +158,8 @@ Nhưng `SI > 0` không có nghĩa kết tủa xảy ra ngay. Tạo mầm và tă
 
 Đây là cầu nối (bridge / 브리지) trực tiếp giữa [cân bằng độ tan](../08_acids_bases/05_solubility_equilibria.md) và [động học tạo mầm](../03_matter_and_phases/03_phase_changes_and_phase_diagrams.md).
 
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Độ cứng** tiếp nhận điểm tựa từ **Chỉ số bão hòa và cáu cặn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Làm mềm nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ cứng
 
 **Độ cứng (hardness / 경도)** chủ yếu đến từ `Ca2+` và `Mg2+`.
@@ -152,6 +167,8 @@ Nhưng `SI > 0` không có nghĩa kết tủa xảy ra ngay. Tạo mầm và tă
 Nước cứng có thể tạo cáu cặn và làm giảm hiệu quả của một số chất hoạt động bề mặt/xà phòng do tạo muối ít tan.
 
 Các thuật ngữ lịch sử “độ cứng tạm thời” và “độ cứng vĩnh cửu” có thể hữu ích, nhưng cách hiểu cơ chế tốt hơn là xét trực tiếp dạng ion và quá trình xử lý.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Làm mềm nước** tiếp nhận điểm tựa từ **Độ cứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hòa tan khí — định luật Henry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Làm mềm nước
 
@@ -164,6 +181,8 @@ Thêm vôi và carbonate làm pH và carbonate thay đổi, thúc đẩy kết t
 Nhựa trao đổi cation có thể thay `Ca2+` và `Mg2+` bằng `Na+`.
 
 Cách này giảm độ cứng nhưng không nhất thiết làm tổng chất rắn hòa tan giảm nhiều, vì ion được thay thế chứ không hoàn toàn loại khỏi hệ.
+
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Hòa tan khí — định luật Henry** tiếp nhận điểm tựa từ **Làm mềm nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oxygen hòa tan và trạng thái oxy hóa–khử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hòa tan khí — định luật Henry
 
@@ -180,6 +199,8 @@ Quy ước của `kH` khác nhau giữa tài liệu nên luôn phải kiểm tra
 `CO2` là ví dụ đặc biệt vì sau khi hòa tan nó tham gia hệ carbonate. Tổng carbon vô cơ vì vậy không thể được mô tả chỉ bằng hòa tan vật lý đơn giản.
 
 Độ tan `O2` thường giảm khi nhiệt độ tăng, có ý nghĩa lớn với sinh thái và xử lý nước.
+
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Oxygen hòa tan và trạng thái oxy hóa–khử** tiếp nhận điểm tựa từ **Hòa tan khí — định luật Henry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eh, pe và giới hạn của “một thế redox duy nhất”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Oxygen hòa tan và trạng thái oxy hóa–khử
 
@@ -199,6 +220,8 @@ môi trường khử
 
 Vì vậy trạng thái redox kiểm soát độ tan và độ linh động của nhiều kim loại/chất dinh dưỡng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Oxygen hòa tan và trạng thái oxy hóa–khử** đã nêu tiêu chí phân biệt, còn **Eh, pe và giới hạn của “một thế redox duy nhất”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dạng tồn tại của kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Eh, pe và giới hạn của “một thế redox duy nhất”
 
 Trạng thái redox có thể được mô tả bằng `Eh` hoặc đại lượng `pe`.
@@ -208,6 +231,8 @@ Phương trình Nernst liên hệ thế với hoạt độ của các loài redo
 Tuy nhiên nước tự nhiên thường không ở cân bằng đồng thời đối với mọi cặp oxy hóa–khử. Nhiều cặp bị tách nhau bởi hàng rào động học.
 
 Do đó một số đo `Eh` duy nhất không phải “mức oxy hóa tuyệt đối” của toàn mẫu; nó phải được diễn giải cùng thành phần và hệ điện cực.
+
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Eh, pe và giới hạn của “một thế redox duy nhất”** đã nêu tiêu chí phân biệt, còn **Dạng tồn tại của kim loại** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chất hữu cơ tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dạng tồn tại của kim loại
 
@@ -229,6 +254,8 @@ Trong nhiều trường hợp, **hoạt độ ion tự do** có liên hệ sinh 
 
 Ví dụ Cr(VI) dạng chromate/dichromate thường linh động và oxy hóa mạnh hơn nhiều dạng Cr(III), vốn có thể tạo phức/hydroxide ít tan hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Chất hữu cơ tự nhiên** tiếp nhận điểm tựa từ **Dạng tồn tại của kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạt keo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất hữu cơ tự nhiên
 
 Vật chất hữu cơ humic/fulvic chứa nhiều nhóm carboxylate và phenolic không đồng nhất.
@@ -243,6 +270,8 @@ Chúng có thể:
 
 Do đó chất hữu cơ tự nhiên vừa là thành phần hóa học của nước vừa là yếu tố gây nhiễu/xử lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Hạt keo** tiếp nhận điểm tựa từ **Chất hữu cơ tự nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Keo tụ và tạo bông** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hạt keo
 
 Hạt rất nhỏ có thể lơ lửng lâu và có diện tích bề mặt lớn.
@@ -250,6 +279,8 @@ Hạt rất nhỏ có thể lơ lửng lâu và có diện tích bề mặt lớ
 Khoáng sét, oxide sắt và keo hữu cơ có thể hấp phụ kim loại hoặc chất hữu cơ.
 
 Khái niệm “hòa tan” trong phân tích nước nhiều khi là định nghĩa thao tác, ví dụ “lọt qua màng lọc kích thước X”, chứ không đồng nghĩa mọi vật chất đều tồn tại dưới dạng phân tử/ion tự do.
+
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Keo tụ và tạo bông** tiếp nhận điểm tựa từ **Hạt keo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lắng và lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Keo tụ và tạo bông
 
@@ -261,11 +292,15 @@ Hiệu quả phụ thuộc pH vì cả dạng hydroxo của kim loại lẫn đi
 
 **Thử nghiệm jar (jar test)** vì vậy là tối ưu hóa thực nghiệm dựa trên acid–cơ sở (base / 기반), tạo phức và hóa học keo.
 
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Lắng và lọc** tiếp nhận điểm tựa từ **Keo tụ và tạo bông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khử trùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lắng và lọc
 
 Sau tạo bông, lắng trọng lực loại cụm lớn. Lọc qua cát hoặc vật liệu xốp tiếp tục giữ hạt nhờ nhiều cơ chế: sàng kích thước, va chạm, hấp phụ và bắt giữ trong chiều sâu.
 
 Màng lọc cho rào cản nhỏ hơn nhưng đồng thời tạo đánh đổi giữa độ loại bỏ, áp suất và fouling.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Khử trùng** tiếp nhận điểm tựa từ **Lắng và lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản phẩm phụ khử trùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khử trùng
 
@@ -295,6 +330,8 @@ Ozone là chất oxy hóa mạnh nhưng không để lại dư lượng lâu. UV
 
 Lựa chọn công nghệ phải cân bằng tốc độ bất hoạt, dư lượng bảo vệ, sản phẩm phụ, năng lượng và chi phí.
 
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Sản phẩm phụ khử trùng** tiếp nhận điểm tựa từ **Khử trùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quá trình oxy hóa nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản phẩm phụ khử trùng
 
 Chlorine phản ứng với chất hữu cơ tự nhiên có thể tạo trihalomethane, haloacetic acid và nhiều sản phẩm phụ khác.
@@ -310,6 +347,8 @@ an toàn vi sinh
 
 Không có quy tắc “dùng càng nhiều chất oxy hóa càng tốt”.
 
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Quá trình oxy hóa nâng cao** tiếp nhận điểm tựa từ **Sản phẩm phụ khử trùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công nghệ màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quá trình oxy hóa nâng cao
 
 **Quá trình oxy hóa nâng cao (advanced oxidation process, AOP)** tạo gốc phản ứng mạnh, thường là `OH·`, bằng các hệ như `UV/H2O2`, `O3/H2O2` hoặc quang xúc tác.
@@ -317,6 +356,8 @@ Không có quy tắc “dùng càng nhiều chất oxy hóa càng tốt”.
 `OH·` có thể oxy hóa nhanh nhiều chất hữu cơ bền, nhưng độ chọn lọc thấp và cũng bị tiêu thụ bởi thành phần nền.
 
 Do đó hiệu quả AOP phụ thuộc **nhu cầu bắt gốc của nền**, không chỉ nồng độ chất ô nhiễm mục tiêu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Công nghệ màng** tiếp nhận điểm tựa từ **Quá trình oxy hóa nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hấp phụ bằng than hoạt tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công nghệ màng
 
@@ -340,6 +381,8 @@ Với dung dịch loãng:
 
 RO không chỉ là “rây có lỗ nhỏ hơn ion”. Vận chuyển còn liên quan cơ chế hòa tan–khuếch tán trong vật liệu màng và tương tác phân tử.
 
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Hấp phụ bằng than hoạt tính** tiếp nhận điểm tựa từ **Công nghệ màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BOD và COD — hai phép đo thao tác của tải hữu cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hấp phụ bằng than hoạt tính
 
 Than hoạt tính có diện tích bề mặt nội lớn và hấp phụ nhiều hợp chất hữu cơ.
@@ -353,6 +396,8 @@ Dung lượng phụ thuộc:
 
 **Đường cong xuyên phá (breakthrough curve)** cho biết thời điểm lớp hấp phụ bắt đầu mất hiệu quả xử lý.
 
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **BOD và COD — hai phép đo thao tác của tải hữu cơ** tiếp nhận điểm tựa từ **Hấp phụ bằng than hoạt tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xử lý nước thải sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## BOD và COD — hai phép đo thao tác của tải hữu cơ
 
 **Nhu cầu oxygen sinh hóa (biochemical oxygen demand, BOD)** ước lượng lượng oxygen vi sinh vật tiêu thụ trong điều kiện thử nghiệm xác định.
@@ -360,6 +405,8 @@ Dung lượng phụ thuộc:
 **Nhu cầu oxygen hóa học (chemical oxygen demand, COD)** dùng chất oxy hóa hóa học để ước lượng lượng vật chất có thể bị oxy hóa trong phép thử.
 
 BOD/COD không phải bản kê khai từng phân tử; chúng là chỉ số tổng hợp phụ thuộc định nghĩa phép thử.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Xử lý nước thải sinh học** tiếp nhận điểm tựa từ **BOD và COD — hai phép đo thao tác của tải hữu cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phú dưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xử lý nước thải sinh học
 
@@ -383,6 +430,8 @@ Trong điều kiện thiếu oxygen nhưng có nitrate, vi sinh vật có thể 
 
 Phosphorus có thể được loại bằng kết tủa với Fe/Al/Ca hoặc bằng tích lũy sinh học tăng cường.
 
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Phú dưỡng** tiếp nhận điểm tựa từ **Xử lý nước thải sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lấy mẫu và bảo quản — mẫu có thể tiếp tục phản ứng sau khi lấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phú dưỡng
 
 Dư nitrogen và phosphorus có thể thúc đẩy tảo/cyanobacteria tăng trưởng mạnh.
@@ -402,6 +451,8 @@ nutrient
 
 không đơn giản là “tảo là chất ô nhiễm”.
 
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Lấy mẫu và bảo quản — mẫu có thể tiếp tục phản ứng sau khi lấy** tiếp nhận điểm tựa từ **Phú dưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao hai nguồn nước cùng pH nhưng phản ứng với acid rất khác nhau?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lấy mẫu và bảo quản — mẫu có thể tiếp tục phản ứng sau khi lấy
 
 Sau lấy mẫu, khí có thể trao đổi với không khí, vi sinh vật tiếp tục phản ứng, kim loại hấp phụ lên bình hoặc kết tủa và trạng thái redox thay đổi.
@@ -419,6 +470,8 @@ Một thiết bị rất chính xác không thể sửa được mẫu đã thay
 
 Xem thêm [đo lường và lấy mẫu](../12_analytical_chemistry/00_measurement_and_sampling.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Lấy mẫu và bảo quản — mẫu có thể tiếp tục phản ứng sau khi lấy** cho ta quy tắc; **Ví dụ suy luận: vì sao hai nguồn nước cùng pH nhưng phản ứng với acid rất khác nhau?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao tổng nồng độ kim loại không đủ để đánh giá độc tính?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao hai nguồn nước cùng pH nhưng phản ứng với acid rất khác nhau?
 
 pH chỉ cho trạng thái hoạt độ proton hiện tại.
@@ -434,6 +487,8 @@ pH → trạng thái hiện tại
 alkalinity → sức chống thay đổi khi thêm acid
 ```
 
+> **Chuyển mạch:** Trong **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Ví dụ suy luận: vì sao hai nguồn nước cùng pH nhưng phản ứng với acid rất khác nhau?** cho ta quy tắc; **Ví dụ suy luận: vì sao tổng nồng độ kim loại không đủ để đánh giá độc tính?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao tổng nồng độ kim loại không đủ để đánh giá độc tính?
 
 Giả sử hai mẫu có cùng tổng nồng độ Cu.
@@ -443,6 +498,8 @@ Trong mẫu A, phần lớn Cu tồn tại dạng ion tự do hoặc phức yế
 Khả năng tiếp xúc sinh học có thể rất khác dù phép đo “tổng Cu” giống nhau.
 
 Muốn hiểu rủi ro phải xét **speciation**, không chỉ tổng khối lượng nguyên tố.
+
+> **Chuyển mạch:** Ở chặng này của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Ví dụ suy luận: vì sao tổng nồng độ kim loại không đủ để đánh giá độc tính?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -469,6 +526,8 @@ Không. Có sự đánh đổi (trade-off / 트레이드오프) giữa bất ho�
 ### “Eh là một con số mô tả toàn bộ trạng thái redox của nước”
 
 Không. Nhiều cặp redox trong nước tự nhiên không cùng đạt cân bằng do giới hạn động học.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -498,4 +557,4 @@ Khi gặp một vấn đề nước, đừng chỉ hỏi “nồng độ bao nhi
 
 Xem tiếp: [Hóa học đất](./02_soil_chemistry.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atmospheric chemistry](./00_atmospheric_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

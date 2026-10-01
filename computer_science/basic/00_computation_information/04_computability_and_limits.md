@@ -1,7 +1,6 @@
 # Computability và giới hạn của tính toán
 
-> **Mạch đọc:** Đọc **Computability và giới hạn của tính toán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Một computation mô hình (model / 모델) cần những gì?** sang **Decidable và undecidable**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computability và giới hạn của tính toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một computation mô hình (model / 모델) cần những gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Decidable và undecidable** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Khi học programming, ta dễ hình thành cảm giác rằng mọi bài toán chỉ cần “đủ mã (code / 코드) và đủ CPU”. lý thuyết (theory / 이론) of Computation (이론 전산학 / lý thuyết tính toán) cho thấy có ít nhất ba tầng khác nhau: có bài toán **không thể được giải bằng thuật toán (algorithm / 알고리즘) nói chung**; có bài toán computable nhưng quá đắt về tài nguyên (resource / 자원); và có bài toán tractable nếu chọn đúng thuật toán (algorithm / 알고리즘)/mô hình (model / 모델).
 
@@ -15,8 +14,7 @@ Church–Turing thesis không phải theorem vật lý chứng minh mọi máy c
 
 Programming languages general-purpose hiện đại về lý thuyết thường Turing-complete nếu có đủ bộ nhớ (memory / 메모리) và điều khiển (control / 제어) constructs. Điều đó không có nghĩa chúng giống nhau về hiệu năng (performance / 성능), an toàn (safety / 안전) hay ergonomics; chỉ nói về lớp (class / 클래스) functions có thể biểu đạt.
 
-
-> **Chuyển mạch:** Từ **Một computation mô hình (model / 모델) cần những gì?**, ta sang **Decidable và undecidable** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computability và giới hạn của tính toán**, **Decidable và undecidable** tiếp nhận điểm tựa từ **Một computation mô hình (model / 모델) cần những gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao undecidability liên quan công việc thực?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Decidable và undecidable
 
@@ -39,8 +37,7 @@ Giờ hỏi `D(D)` làm gì. Nếu `H(D,D)` nói halt, `D` cố tình vòng lặ
 
 Điểm quan trọng không phải memorize trick mà là self-reference tạo một đầu vào (input / 입력) phá mọi decider giả định.
 
-
-> **Chuyển mạch:** Từ **Decidable và undecidable**, ta sang **Tại sao undecidability liên quan công việc thực?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computability và giới hạn của tính toán**, **Tại sao undecidability liên quan công việc thực?** tiếp nhận điểm tựa từ **Decidable và undecidable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recognizable khác decidable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tại sao undecidability liên quan công việc thực?
 
@@ -48,15 +45,13 @@ Static analyzer, trình biên dịch (compiler / 컴파일러) và IDE có thể
 
 Điều này giải thích tại sao xác minh (verification / 확인) thực tế phải dùng restrictions, approximations, annotations hoặc domain-specific các mô hình (models / 모델들). kiểu (type / 타입) checker có thể bảo đảm lớp (class / 클래스) lỗi nhất định vì ngôn ngữ (language / 언어)/hệ kiểu (type system / 타입 시스템) giới hạn câu hỏi. mô hình (model / 모델) checker có thể exhaust trạng thái (state / 상태) không gian (space / 공간) hữu hạn. Linter chấp nhận false positives/negatives để hữu ích thực dụng.
 
-
-> **Chuyển mạch:** Từ **Tại sao undecidability liên quan công việc thực?**, ta sang **Recognizable khác decidable** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computability và giới hạn của tính toán**, **Recognizable khác decidable** tiếp nhận điểm tựa từ **Tại sao undecidability liên quan công việc thực?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formal languages và automata như phổ các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Recognizable khác decidable
 
 Có problems mà nếu answer là “yes”, một machine có thể eventually accept, nhưng nếu answer “no” có thể chạy mãi. Đây là recognizable/semi-decidable (반결정 가능). Distinction này quan trọng trong lý thuyết (theory / 이론) vì “có thể xác nhận lời giải khi tìm thấy” không đồng nghĩa “luôn quyết định được có lời giải hay không”.
 
-
-> **Chuyển mạch:** Từ **Recognizable khác decidable**, ta sang **Formal languages và automata như phổ các mô hình (models / 모델들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computability và giới hạn của tính toán**, **Formal languages và automata như phổ các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Recognizable khác decidable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Computable không có nghĩa practical** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Formal languages và automata như phổ các mô hình (models / 모델들)
 
@@ -66,8 +61,7 @@ Hierarchy này cho thấy thêm bộ nhớ (memory / 메모리)/cấu trúc (str
 
 Xem thêm phần trình biên dịch (compiler / 컴파일러) tại [Compiler, Interpreter, VM và JIT](../04_programming_languages/03_compilers_interpreters_vm_and_jit.md).
 
-
-> **Chuyển mạch:** Từ **Formal languages và automata như phổ các mô hình (models / 모델들)**, ta sang **Computable không có nghĩa practical** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computability và giới hạn của tính toán**, **Computable không có nghĩa practical** tiếp nhận điểm tựa từ **Formal languages và automata như phổ các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Computable không có nghĩa practical
 
@@ -77,22 +71,19 @@ P gồm quyết định (decision / 결정) problems solvable in polynomial th�
 
 Chapter [Complexity & asymptotic analysis](../01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md) tập trung lập luận (reasoning / 추론) resources thực dụng hơn.
 
-
-> **Chuyển mạch:** Từ **Computable không có nghĩa practical**, ta sang **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computability và giới hạn của tính toán**, **Computable không có nghĩa practical** đã nêu tiêu chí phân biệt, còn **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Randomness và approximation không phá giới hạn lô-gic (logic / 논리)
 
 Randomized algorithms có thể cải thiện expected hiệu năng (performance / 성능) hoặc cho xác suất đúng rất cao. Approximation algorithms có thể tìm lời giải gần optimal cho tối ưu hóa (optimization / 최적화) problems khó. Heuristics có thể giải tốt workloads thực tế. Nhưng các kỹ thuật này thay specification hoặc guarantees; chúng không biến undecidable general bài toán (problem / 문제) thành decidable một cách thần kỳ.
 
-
-> **Chuyển mạch:** Từ **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Computability và giới hạn của tính toán**, **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Có ba câu hỏi khác nhau: **Có tồn tại thuật toán (algorithm / 알고리즘) không? thuật toán (algorithm / 알고리즘) đó cần bao nhiêu tài nguyên (resource / 자원)? hiện thực (implementation / 구현) cụ thể chạy tốt trên tải công việc (workload / 워크로드)/hardware này không?** Computability, độ phức tạp (complexity / 복잡도) và các hệ thống (systems / 시스템들) hiệu năng (performance / 성능) trả lời ba tầng khác nhau.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Computability và giới hạn của tính toán**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -102,11 +93,10 @@ Randomized algorithms có thể cải thiện expected hiệu năng (performance
 
 **“Undecidable nghĩa là không bao giờ giải được instance nào.”** Ta vẫn giải được nhiều instances hoặc restricted subclasses. Điều không thể là một thuật toán (algorithm / 알고리즘) tổng quát luôn đúng và terminate cho mọi instance theo bài toán (problem / 문제) specification.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computability và giới hạn của tính toán**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Computability đặt “biên ngoài” cho CS. Phía bên trong biên, [algorithmic thinking](../01_algorithms_data_structures/00_algorithmic_thinking_and_correctness.md) và [complexity](../01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md) giúp chọn phương pháp; [testing/verification](../07_security_reliability/04_testing_verification_and_debugging.md) cho thấy cách thực tế xây confidence mà không giả định có một oracle hoàn hảo.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what computer science studies](./00_what_computer_science_studies.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

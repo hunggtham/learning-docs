@@ -1,6 +1,6 @@
 # Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing
 
-> **Mạch đọc:** Đặt **sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Partition là đơn vị thứ tự (ordering / 순서)** sang **bên tiêu thụ (consumer / 소비자) group**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Partition là đơn vị thứ tự (ordering / 순서)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bên tiêu thụ (consumer / 소비자) group** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Sự kiện (event / 이벤트) stream không chỉ là hàng đợi (queue / 큐) dài. Nó là ordered lịch sử (history / 이력) được chia partition, có retention và có thể replay. Điều này cho phép nhiều consumers xây trạng thái (state / 상태) riêng từ cùng sự kiện (event / 이벤트) log, nhưng cũng đưa thứ tự (ordering / 순서), thời gian (time / 시간) và khôi phục (recovery / 복구) thành vấn đề kiến trúc.
 
@@ -10,8 +10,7 @@ Broker thường chỉ đảm bảo total thứ tự (order / 순서) trong mộ
 
 Nếu mọi sự kiện (event / 이벤트) dùng cùng key để có toàn cục (global / 전역) thứ tự (order / 순서), thông lượng (throughput / 처리량) bị giới hạn bởi một partition. Nếu partition quá rộng, nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) cần thứ tự (order / 순서) có thể bị tách.
 
-
-> **Chuyển mạch:** Từ **Partition là đơn vị thứ tự (ordering / 순서)**, ta sang **bên tiêu thụ (consumer / 소비자) group** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Bên tiêu thụ (consumer / 소비자) group** tiếp nhận điểm tựa từ **Partition là đơn vị thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Offset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bên tiêu thụ (consumer / 소비자) group
 
@@ -19,8 +18,7 @@ Trong bên tiêu thụ (consumer / 소비자) group, partitions được phân c
 
 Rebalance khi bên tiêu thụ (consumer / 소비자) phép nối (join / 조인)/leave có thể tạm dừng công việc (work / 작업) hoặc chuyển quyền sở hữu (ownership / 소유권) trạng thái (state / 상태), nên frequent churn ảnh hưởng độ trễ (latency / 지연 시간).
 
-
-> **Chuyển mạch:** Từ **bên tiêu thụ (consumer / 소비자) group**, ta sang **Offset** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Offset** tiếp nhận điểm tựa từ **Bên tiêu thụ (consumer / 소비자) group** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Offset
 
@@ -28,8 +26,7 @@ Offset là vị trí trong log, không phải nghiệp vụ (business / 비즈�
 
 Vì vậy at-least-once processing thường kết hợp idempotency/deduplication.
 
-
-> **Chuyển mạch:** Từ **Offset**, ta sang **sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Offset** xác định đầu vào; **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Watermark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)
 
@@ -37,8 +34,7 @@ Sự kiện (event / 이벤트) có thể xảy ra lúc 10:00 nhưng tới proce
 
 Cửa sổ (window / 윈도우) analytics cần chọn ngữ nghĩa (semantics / 의미론) đúng, nếu không late events làm số liệu sai.
 
-
-> **Chuyển mạch:** Từ **sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)**, ta sang **Watermark** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** xác định đầu vào; **Watermark** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Stateful processing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Watermark
 
@@ -46,8 +42,7 @@ Watermark là estimate rằng phần lớn events trước một event-time thre
 
 Watermark luôn là sự đánh đổi (trade-off / 트레이드오프) completeness và độ trễ (latency / 지연 시간). Chờ lâu bắt được late dữ liệu (data / 데이터) nhưng đầu ra (output / 출력) trễ; đóng sớm cần correction/retraction khi sự kiện (event / 이벤트) muộn tới.
 
-
-> **Chuyển mạch:** Từ **Watermark**, ta sang **Stateful processing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Watermark** xác định đầu vào; **Stateful processing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Replay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stateful processing
 
@@ -55,8 +50,7 @@ Phép nối (join / 조인) streams, aggregate cửa sổ (window / 윈도우) v
 
 Exactly-once trong stream processor thường là coordination giữa trạng thái (state / 상태) snapshot và nguồn (source / 소스)/sink positions, không phải magical mạng (network / 네트워크) guarantee.
 
-
-> **Chuyển mạch:** Từ **Stateful processing**, ta sang **Replay** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Stateful processing** xác định đầu vào; **Replay** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hot partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Replay
 
@@ -64,8 +58,7 @@ Retention cho phép bên tiêu thụ (consumer / 소비자) mới hoặc bug-fix
 
 Sự kiện (event / 이벤트) sourcing đặc biệt cần versioning: mã (code / 코드) mới phải hiểu old sự kiện (event / 이벤트) schemas hoặc có di chuyển (migration / 마이그레이션)/upcasting chiến lược (strategy / 전략).
 
-
-> **Chuyển mạch:** Từ **Replay**, ta sang **Hot partition** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Hot partition** tiếp nhận điểm tựa từ **Replay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hot partition
 
@@ -73,11 +66,10 @@ Key phân phối (distribution / 분포) skew làm một partition overload dù 
 
 Partition thiết kế (design / 설계) vì vậy là data-model quyết định (decision / 결정), không chỉ broker cấu hình (config / 설정).
 
-
-> **Chuyển mạch:** Từ **Hot partition**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Hot partition** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Stream là lịch sử (history / 이력) được partition. Partition xác định thứ tự (ordering / 순서) và parallelism; offset xác định progress; watermark quản lý bất định (uncertainty / 불확실성) về thời gian (time / 시간); checkpoint gắn trạng thái (state / 상태) với progress. Replay mạnh vì lịch sử (history / 이력) còn đó, nhưng side effects phải được thiết kế để chịu replay.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 queueing tail latency and backpressure](./00_queueing_tail_latency_and_backpressure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

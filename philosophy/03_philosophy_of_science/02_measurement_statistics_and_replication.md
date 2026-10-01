@@ -1,12 +1,10 @@
 # Đo lường (measurement / 측정), Statistics và Replication
 
-> **Mạch đọc:** Đọc **đo lường (measurement / 측정), Statistics và Replication** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ dữ liệu (data / 데이터) đến claim** sang **độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đo lường (measurement / 측정), Statistics và Replication**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ dữ liệu (data / 데이터) đến claim** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Đo lường (measurement / 측정) không phải cửa sổ trong suốt vào reality. Construct phải được operationalize; instrument có resolution, calibration, noise và độ lệch (bias / 편향); observed score thường là tín hiệu (signal / 신호) cộng lỗi (error / 오류). Vì vậy, một kết quả có ý nghĩa thống kê không tự cho biết tác động (effect / 효과) lớn, ổn định hay quan trọng về thực tế.
 
 ## Từ dữ liệu (data / 데이터) đến claim
-Phần “Từ dữ liệu (data / 데이터) đến claim” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 construct → operational measure → sampling/design
@@ -17,8 +15,7 @@ Replication kiểm tra độ ổn định của finding dưới mẫu (sample / 
 
 Open dữ liệu (data / 데이터), preregistration, multiverse phân tích (analysis / 분석) và meta-analysis giúp giảm researcher degrees of freedom, nhưng không loại bỏ judgment. Philosophy of science ở đây gặp statistics: calibration của claim phải tương xứng với chuỗi xử lý (pipeline / 파이프라인) tạo ra dữ liệu (data / 데이터).
 
-
-> **Chuyển mạch:** Từ **Từ dữ liệu (data / 데이터) đến claim**, ta sang **độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đo lường (measurement / 측정), Statistics và Replication**, **Từ dữ liệu (data / 데이터) đến claim** nêu điều cần giải thích; **Độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số
 
@@ -38,4 +35,4 @@ Objection: reproducibility crisis chứng minh statistics không đáng tin. Rep
 
 Đo lường (measurement / 측정) cần sensitivity phân tích (analysis / 분석), negative controls, adversarial replication và ghi rõ ranh giới (boundary / 경계) population. Khi chỉ số (metric / 지표) trở thành mục tiêu (target / 대상), Goodhart phản hồi (feedback / 피드백) có thể làm construct biến dạng. Implication: report tác động (effect / 효과) kích thước (size / 크기), bất định (uncertainty / 불확실성), missing dữ liệu (data / 데이터), quyết định (decision / 결정) threshold và dạng thất bại (failure mode / 실패 모드); không dùng một p-value để thay thế lập luận về cơ chế (mechanism / 메커니즘) hay chính sách (policy / 정책) giá trị (value / 값).
 
-> **Bàn giao:** Sau **Empirical ranh giới (boundary / 경계) và implication**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 models explanation and causality](./00_models_explanation_and_causality.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

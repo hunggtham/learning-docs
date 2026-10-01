@@ -1,7 +1,6 @@
 # JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript
 
-> **Mạch đọc:** Đọc **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **ngăn xếp lời gọi (call stack / 호출 스택) và thực thi (execution / 실행) ngữ cảnh (context / 맥락)** sang **await nằm ở đâu?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **ES5 — chuẩn hóa nền JavaScript web trước thời hiện đại (modern / 현대적) cú pháp (syntax / 문법)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **ES2015/ES6 — bước chuyển sang JavaScript cho ứng dụng (application / 애플리케이션) lớn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Vai trò của tệp (file / 파일) này:** đây là phần thứ tư sau `Beginner → Intermediate → Senior`. tệp (file / 파일) không học lại cú pháp cơ bản mà nối toàn bộ kiến thức thành một mô hình tư duy (mental model / 사고 모델) thống nhất: mã nguồn (source code / 소스 코드) được khởi tạo và thực thi ra sao, phạm vi (scope / 범위)/closure/prototype/mô-đun (module / 모듈) liên hệ với nhau thế nào, trình duyệt (browser / 브라우저) vòng lặp sự kiện (event loop / 이벤트 루프) phối hợp tác vụ (task / 작업)/microtask/kết xuất (render / 렌더링) ra sao, vì sao JavaScript tiến hóa từ ES5 sang ES2015 rồi sang yearly ECMAScript, và nhà phát triển (developer / 개발자) môi trường vận hành (production / 운영 환경) phải đọc legacy/hiện đại (modern / 현대적) mã (code / 코드) như thế nào.
 >
@@ -376,7 +375,6 @@ Một chuỗi (chain / 사슬) microtasks không kết thúc có thể **starve*
 ### `await` nằm ở đâu?
 Phần này nối mạch bài học với “`await` nằm ở đâu?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 async function run() {
   console.log("before");
@@ -535,6 +533,8 @@ const names = users
 
 Điểm thay đổi thật nằm ở lexical bindings và arrow ngữ nghĩa (semantics / 의미론), không chỉ số ký tự.
 
+> **Chuyển mạch:** ES5 đặt baseline web semantics; ES2015/ES6 thay đổi module, class, iterator và async foundations để ứng dụng lớn có boundary rõ hơn. Yearly evolution tiếp theo đọc các capability mới trên baseline đó.
+
 ## ES2015/ES6 — bước chuyển sang JavaScript cho ứng dụng (application / 애플리케이션) lớn
 
 ES2015 là bước nhảy lớn nhất của hiện đại (modern / 현대적) JavaScript. Những tính năng (feature / 기능) như `let`/`const`, classes, modules, Promise, destructuring, rest/spread, Map/Set, Symbol, iterator/generator và arrow functions cùng xuất hiện vì ecosystem cần mã (code / 코드) dễ tổ chức hơn cho ứng dụng (application / 애플리케이션)/thư viện (library / 라이브러리) lớn.
@@ -577,6 +577,8 @@ lý do: arbitrary keys + collection semantics rõ
 
 Không phải mọi legacy form đều phải rewrite. `function` vẫn cần khi động (dynamic / 동적) `this` phù hợp; đối tượng (object / 객체) vẫn tốt cho record-shaped dữ liệu (data / 데이터); ordinary loops vẫn rõ hơn functional chains trong nhiều algorithms.
 
+> **Chuyển mạch:** Sau ES2015, mỗi yearly release bổ sung capability nhỏ hơn nhưng vẫn có runtime/support boundary. `Array.fromAsync()` là một case cụ thể để đọc proposal status, behavior và compatibility cùng nhau.
+
 ## Sau ES2015 — yearly evolution nhỏ và đều hơn
 
 Từ ES2016, ECMAScript chuyển sang yearly cadence. Tư duy đúng không phải “mỗi năm là một JavaScript mới”, mà là **ngôn ngữ (language / 언어) được bổ sung incremental**. Những bổ sung đáng nhớ thường giảm boilerplate hoặc encode intent mà nhà phát triển (developer / 개발자) trước đó phải tự viết.
@@ -590,6 +592,8 @@ Không cần thuộc danh sách này. Cần nhớ **bài toán (problem / 문제
 # 10. ECMAScript 2026 — những bổ sung nào đáng biết và tại sao chúng xuất hiện
 
 ECMAScript 2026 là 17th edition. Không nên biến học tập (learning / 학습) notes thành changelog, nhưng một vài additions minh họa rất rõ cách hiện đại (modern / 현대적) ECMAScript tiếp tục chuẩn hóa recurring patterns.
+
+> **Chuyển mạch:** Yearly cadence cung cấp capability mới để giải quyết recurring patterns; `Array.fromAsync()` minh họa async collection semantics. `Math.sumPrecise()` tiếp theo xử lý một vấn đề khác: numeric precision và error bounds.
 
 ## `Array.fromAsync()`
 
@@ -611,11 +615,15 @@ const result = await Array.fromAsync(source);
 
 Điểm mới không phải async iteration — nó đã có từ trước — mà là **collection constructor có hiểu async nguồn (source / 소스)**.
 
+> **Chuyển mạch:** Trong **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Math.sumPrecise()** tiếp nhận điểm tựa từ **Array.fromAsync()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iterator.concat()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `Math.sumPrecise()`
 
 Cộng floating-point values có thể tích lũy precision lỗi (error / 오류), đặc biệt khi magnitude khác nhau. ES2026 thêm một thao tác (operation / 연산) chuẩn để sum iterable Numbers theo cách giảm precision mất mát (loss / 손실) so với naive accumulation trong nhiều trường hợp.
 
 Điều này không biến IEEE-754 thành decimal arithmetic; financial mã (code / 코드) vẫn cần lĩnh vực (domain / 도메인) chiến lược (strategy / 전략) riêng.
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Iterator.concat()** tiếp nhận điểm tựa từ **Math.sumPrecise()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Error.isError()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `Iterator.concat()`
 
@@ -633,6 +641,8 @@ function* concat(...iterables) {
 
 Hiện đại (modern / 현대적) built-in giảm boilerplate khi thời gian chạy (runtime / 런타임) hỗ trợ (support / 지원).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Error.isError()** tiếp nhận điểm tựa từ **Iterator.concat()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Map/WeakMap get-or-insert operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `Error.isError()`
 
 Cross-realm lỗi (error / 오류) detection là một pain điểm (point / 지점) vì:
@@ -642,6 +652,8 @@ errorFromIframe instanceof Error
 ```
 
 có thể thất bại (fail / 실패) khi constructors thuộc khác Realm. `Error.isError()` cung cấp standardized error-object detection tốt hơn cho các trường hợp này.
+
+> **Chuyển mạch:** Trong **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Map/WeakMap get-or-insert operations** tiếp nhận điểm tựa từ **Error.isError()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Uint8Array ↔ Base64/Hex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `Map`/`WeakMap` get-or-insert operations
 
@@ -658,9 +670,13 @@ if (value === undefined) {
 
 có trường hợp biên (edge case / 경계 사례) nếu `undefined` là stored giá trị (value / 값) hợp lệ và tạo boilerplate repeated. ES2026 chuẩn hóa get-or-insert style operations để express “lấy nếu có, nếu không tạo/default rồi lưu” rõ hơn.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Uint8Array ↔ Base64/Hex** tiếp nhận điểm tựa từ **Map/WeakMap get-or-insert operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JSON nguồn (source / 소스)/raw facilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `Uint8Array` ↔ Base64/Hex
 
 Mã (code / 코드) web trước đây thường phải đi qua `btoa`/`atob`, manual byte loops hoặc utility thư viện (library / 라이브러리) để chuyển nhị phân (binary / 이진) bytes sang hex/base64. ES2026 bổ sung built-in conversion methods trực tiếp quanh `Uint8Array`, phù hợp hơn với nhị phân (binary / 이진) mô hình dữ liệu (data model / 데이터 모델) hiện đại và tránh nhiều binary-string pitfalls của APIs lịch sử.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Uint8Array ↔ Base64/Hex** nêu điều cần giải thích; **JSON nguồn (source / 소스)/raw facilities** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **IIFE thay module scope** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## JSON nguồn (source / 소스)/raw facilities
 
@@ -927,7 +943,6 @@ OS / native WebView container
 ### Compatibility matrix nên là project artifact
 Phần này nối mạch bài học với “Compatibility matrix nên là project artifact”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```text
 feature
 standard/platform
@@ -979,9 +994,10 @@ Nguồn (source / 소스) maps là môi trường vận hành (production / 운�
 
 Enterprise các hệ thống (systems / 시스템들) thường chứa nhiều thế hệ JavaScript cùng lúc. cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) không nên nhìn legacy cú pháp (syntax / 문법) rồi kết luận “mã (code / 코드) xấu” trước khi hiểu thời gian chạy (runtime / 런타임)/tooling các ràng buộc (constraints / 제약조건들) lúc nó được viết.
 
+> **Chuyển mạch:** Trong **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **JSON nguồn (source / 소스)/raw facilities** nêu điều cần giải thích; **IIFE thay module scope** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **arguments thay rest parameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## IIFE thay module scope
 Phần này nối mạch bài học với “IIFE thay module scope”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 (function () {
@@ -994,6 +1010,8 @@ Phần này nối mạch bài học với “IIFE thay module scope”, nêu m�
 ```
 
 Hiện đại (modern / 현대적) equivalent thường là ES mô-đun (module / 모듈), nhưng IIFE từng là giải pháp đúng để tạo private phạm vi (scope / 범위) trong trình duyệt (browser / 브라우저) script world.
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **arguments thay rest parameters** tiếp nhận điểm tựa từ **IIFE thay module scope** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prototype constructor thay lớp (class / 클래스) cú pháp (syntax / 문법)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `arguments` thay rest parameters
 
@@ -1019,13 +1037,19 @@ function sum(...values) {
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Prototype constructor thay lớp (class / 클래스) cú pháp (syntax / 문법)** tiếp nhận điểm tựa từ **arguments thay rest parameters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **XMLHttpRequest / callback APIs thay fetch/Promise style** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prototype constructor thay lớp (class / 클래스) cú pháp (syntax / 문법)
 
 Legacy constructor/prototype mã (code / 코드) không phải “fake lớp (class / 클래스)”; nó dùng prototype mô hình (model / 모델) trực tiếp. lớp (class / 클래스) cú pháp (syntax / 문법) chỉ cung cấp lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층) rõ hơn.
 
+> **Chuyển mạch:** Trong **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **XMLHttpRequest / callback APIs thay fetch/Promise style** tiếp nhận điểm tựa từ **Prototype constructor thay lớp (class / 클래스) cú pháp (syntax / 문법)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CommonJS / bundler-specific modules** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## XMLHttpRequest / callback APIs thay fetch/Promise style
 
 Legacy trình duyệt (browser / 브라우저) mã (code / 코드) có thể dùng XHR/sự kiện (event / 이벤트) callbacks. hiện đại (modern / 현대적) fetch/Promise mã (code / 코드) composable hơn, nhưng di chuyển (migration / 마이그레이션) phải bảo toàn hết thời gian chờ (timeout / 타임아웃), cancellation, credentials, progress và lỗi (error / 오류) ngữ nghĩa (semantics / 의미론); không chỉ đổi API names.
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **CommonJS / bundler-specific modules** tiếp nhận điểm tựa từ **XMLHttpRequest / callback APIs thay fetch/Promise style** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## CommonJS / bundler-specific modules
 
@@ -1428,7 +1452,6 @@ Mục tiêu không phải ghi nhớ như trivia. Khi gặp một hành vi (behav
 # 34. Coverage matrix sau audit
 Phần này nối mạch bài học với “34. Coverage matrix sau audit”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 | Nhóm kiến thức | chuẩn gốc (canonical / 정본) mức (level / 수준) chính | Trạng thái sau kiểm tra (audit / 감사) |
 | --- | --- | --- |
 | mô hình thực thi (execution model / 실행 모델) / ngăn xếp lời gọi (call stack / 호출 스택) | Intermediate + Master | Đã cover sâu và nối spec/thời gian chạy (runtime / 런타임) |
@@ -1533,3 +1556,5 @@ Compatibility / deployment
 ES5, ES2015 và hiện đại (modern / 현대적) ECMAScript không phải ba ngôn ngữ khác nhau. Chúng là ba giai đoạn trong quá trình cùng một ngôn ngữ (language / 언어) trưởng thành: ES5 chuẩn hóa nền web đã tồn tại, ES2015 cung cấp những abstractions cần cho applications/modules lớn, và yearly ECMAScript sau đó bổ sung dần các patterns đã chứng minh giá trị trong ecosystem.
 
 Khi bạn hiểu **vì sao** một feature xuất hiện, bạn có thể đọc cả legacy và modern code mà không bị phụ thuộc vào thời điểm syntax được viết. Đó mới là mục tiêu của Master level.
+
+> **Bàn giao:** Sau **CommonJS / bundler-specific modules**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Cấu hình electron
 
-> **Mạch đọc:** Đọc **Cấu hình electron** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ obitan đến nguyên tử nhiều electron** sang **Nguyên lý loại trừ Pauli**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu hình electron**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ obitan đến nguyên tử nhiều electron** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nguyên lý loại trừ Pauli** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Cấu hình electron (electron configuration / 전자 배치)** mô tả cách các electron của một nguyên tử hoặc ion phân bố vào các obitan lượng tử có thể chiếm. Mục tiêu không phải học thuộc chuỗi `1s² 2s² 2p⁶...`, mà là hiểu vì sao cách sắp xếp electron quyết định tính tuần hoàn, liên kết hóa học và khả năng phản ứng của nguyên tố.
 
@@ -12,6 +11,8 @@
 Cấu hình electron là cách Hóa học tổ chức bài toán nhiều electron thành một mô hình có thể sử dụng được.
 
 Xem nền tảng: [Mô hình lượng tử của nguyên tử](./02_quantum_model_of_atom.md).
+
+> **Chuyển mạch:** Trong **Cấu hình electron**, **Nguyên lý loại trừ Pauli** tiếp nhận điểm tựa từ **Từ obitan đến nguyên tử nhiều electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên lý Aufbau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên lý loại trừ Pauli
 
@@ -26,6 +27,8 @@ Do đó một phân lớp s chứa tối đa 2 electron, p chứa 6, d chứa 10
 \]
 
 Hệ số `2l+1` là số obitan trong phân lớp, còn hệ số 2 đến từ hai trạng thái spin.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu hình electron**, **Nguyên lý Aufbau** tiếp nhận điểm tựa từ **Nguyên lý loại trừ Pauli** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc Hund** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên lý Aufbau
 
@@ -47,6 +50,8 @@ Một quy tắc ghi nhớ phổ biến là quy tắc `n+l`: obitan có `n+l` nh�
 
 Tuy nhiên đây là **quy tắc sắp xếp gần đúng (approximate ordering rule)**, không phải định luật cơ bản tuyệt đối. Với nguyên tử nhiều electron, năng lượng obitan phụ thuộc che chắn, khả năng xuyên thấu và tương tác electron–electron. Đây là nguồn gốc của các trường hợp ngoại lệ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu hình electron**, **Quy tắc Hund** tiếp nhận điểm tựa từ **Nguyên lý Aufbau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách viết cấu hình electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy tắc Hund
 
 Trong một nhóm obitan suy biến, chẳng hạn ba obitan p, electron sẽ điền đơn lẻ vào các obitan với spin song song trước khi ghép đôi. Đây là **quy tắc Hund (Hund's rule / 훈트 규칙)**.
@@ -66,6 +71,8 @@ chứ không ưu tiên:
 ```
 
 Lý do sâu hơn không đơn giản là “electron ghét ở chung”. Sự kết hợp giữa lực đẩy electron–electron và **ổn định trao đổi (exchange stabilization)** khiến cách phân bố electron độc thân trên các obitan suy biến thường có năng lượng thấp hơn.
+
+> **Chuyển mạch:** Trong **Cấu hình electron**, **Cách viết cấu hình electron** tiếp nhận điểm tựa từ **Quy tắc Hund** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự điền và thứ tự ion hóa không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách viết cấu hình electron
 
@@ -89,6 +96,8 @@ Iron, `Z=26`:
 
 Việc đặt `4s` trước `3d` trong ký hiệu phản ánh thứ tự điền gần đúng, nhưng không nên suy diễn rằng `4s` luôn thấp năng lượng hơn `3d` trong mọi ion hoặc mọi trạng thái.
 
+> **Chuyển mạch:** Ở chặng này của **Cấu hình electron**, **Thứ tự điền và thứ tự ion hóa không giống nhau** tiếp nhận điểm tựa từ **Cách viết cấu hình electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngoại lệ: chromium và copper** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thứ tự điền và thứ tự ion hóa không giống nhau
 
 Ở nguyên tử kim loại chuyển tiếp trung hòa, `4s` thường được điền trước `3d`. Nhưng khi tạo cation, electron `4s` thường bị loại trước electron `3d`.
@@ -104,6 +113,8 @@ Fe^{2+}: [Ar]3d^6
 \]
 
 Điều này không mâu thuẫn nếu ta nhớ rằng năng lượng obitan thay đổi khi số electron chiếm và điện tích hạt nhân hiệu dụng thay đổi. “Thứ tự obitan” không phải một bảng cố định độc lập với trạng thái của nguyên tử.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu hình electron**, **Ngoại lệ: chromium và copper** tiếp nhận điểm tựa từ **Thứ tự điền và thứ tự ion hóa không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron hóa trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngoại lệ: chromium và copper
 
@@ -129,6 +140,8 @@ thay vì `[Ar]4s²3d⁹`.
 
 Không nên giải thích ngoại lệ chỉ bằng câu “phân lớp bán bão hòa và bão hòa hoàn toàn bền hơn”. Đó chỉ là quy tắc ghi nhớ. Nguồn gốc thực sự liên quan đến chênh lệch năng lượng rất nhỏ giữa `4s` và `3d`, tương quan electron, hiệu ứng trao đổi và tổng năng lượng của toàn nguyên tử.
 
+> **Chuyển mạch:** Trong **Cấu hình electron**, **Electron hóa trị** tiếp nhận điểm tựa từ **Ngoại lệ: chromium và copper** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron lõi và hiệu ứng che chắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Electron hóa trị
 
 **Electron hóa trị (valence electrons / 원자가 전자)** là các electron quan trọng nhất đối với liên kết và phản ứng hóa học. Với các nguyên tố nhóm chính, chúng thường là electron ở lớp có `n` lớn nhất.
@@ -143,6 +156,8 @@ có 6 electron hóa trị trong mô hình thông thường của nguyên tố nh
 
 Khái niệm này giúp giải thích vì sao các nguyên tố trong cùng một nhóm của bảng tuần hoàn có hóa học tương tự: chúng có mẫu cấu hình electron hóa trị giống nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Cấu hình electron**, **Electron lõi và hiệu ứng che chắn** tiếp nhận điểm tựa từ **Electron hóa trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính thuận từ và nghịch từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Electron lõi và hiệu ứng che chắn
 
 Các electron nằm sâu bên trong gọi là **electron lõi (core electrons)**. Trong nhiều phản ứng thông thường chúng ít thay đổi hơn electron hóa trị.
@@ -150,6 +165,8 @@ Các electron nằm sâu bên trong gọi là **electron lõi (core electrons)**
 Electron lõi che chắn một phần điện tích dương của hạt nhân đối với electron ngoài. Vì vậy electron ngoài cùng cảm nhận **điện tích hạt nhân hiệu dụng (effective nuclear charge)** nhỏ hơn `Z`.
 
 Khi đi từ trái sang phải trong một chu kỳ, điện tích hạt nhân tăng nhanh hơn mức che chắn giữa các electron cùng lớp. Đây là bước nối trực tiếp sang các xu hướng tuần hoàn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu hình electron**, **Tính thuận từ và nghịch từ** tiếp nhận điểm tựa từ **Electron lõi và hiệu ứng che chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu hình electron và bảng tuần hoàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tính thuận từ và nghịch từ
 
@@ -161,6 +178,8 @@ Ví dụ nguyên tử oxygen `2p⁴` có hai electron độc thân theo quy tắ
 
 Phân tử `O2` cũng thuận từ, nhưng cấu trúc Lewis đơn giản không giải thích được. Lý thuyết obitan phân tử sẽ giải thích điều đó ở phần liên kết.
 
+> **Chuyển mạch:** Trong **Cấu hình electron**, **Cấu hình electron và bảng tuần hoàn** tiếp nhận điểm tựa từ **Tính thuận từ và nghịch từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ion và cấu hình giống khí hiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấu hình electron và bảng tuần hoàn
 
 Bảng tuần hoàn không chỉ là danh sách nguyên tố. Các khối của bảng phản ánh phân lớp đang được điền:
@@ -171,6 +190,8 @@ Bảng tuần hoàn không chỉ là danh sách nguyên tố. Các khối của 
 - khối f tương ứng với lanthanide và actinide.
 
 Đây là lý do bảng tuần hoàn có hình dạng không phải một hình chữ nhật đồng đều.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu hình electron**, **Ion và cấu hình giống khí hiếm** tiếp nhận điểm tựa từ **Cấu hình electron và bảng tuần hoàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái cơ bản và trạng thái kích thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ion và cấu hình giống khí hiếm
 
@@ -202,6 +223,8 @@ Cl^-:[Ar]
 
 Sự hình thành ion thực tế phải được đánh giá bằng tổng năng lượng của toàn quá trình, bao gồm năng lượng ion hóa, ái lực electron, năng lượng mạng hoặc năng lượng solvat hóa. Không phải cứ “đạt octet” là tự động thuận lợi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu hình electron**, **Trạng thái cơ bản và trạng thái kích thích** tiếp nhận điểm tựa từ **Ion và cấu hình giống khí hiếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trạng thái cơ bản và trạng thái kích thích
 
 Cấu hình electron thường được viết cho **trạng thái cơ bản (ground state / 바닥 상태)**, tức trạng thái năng lượng thấp nhất. Nếu hấp thụ năng lượng, electron có thể được kích thích lên obitan năng lượng cao hơn, tạo **trạng thái kích thích (excited state / 들뜬 상태)**.
@@ -213,6 +236,8 @@ Khi electron trở về mức thấp hơn, chênh lệch năng lượng có th�
 \]
 
 Đây là liên hệ trực tiếp giữa cấu hình electron và quang phổ nguyên tử.
+
+> **Chuyển mạch:** Trong **Cấu hình electron**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Trạng thái cơ bản và trạng thái kích thích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -232,6 +257,8 @@ Không. Quy tắc octet là một **quy tắc kinh nghiệm (heuristic)** rất 
 
 Electron cùng điện tích nên đẩy nhau. Ghép đôi xảy ra khi tổng năng lượng của việc ghép vào obitan thấp vẫn thuận lợi hơn việc đưa electron lên trạng thái khác có năng lượng cao hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Cấu hình electron**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Cấu hình electron là lời giải gần đúng cho một bài toán tối ưu năng lượng có ràng buộc:
@@ -245,4 +272,4 @@ Nếu hiểu cấu hình electron theo cách này, bảng tuần hoàn trở th�
 
 Xem tiếp: [Bảng tuần hoàn và các xu hướng tuần hoàn](./04_periodic_table_and_periodic_trends.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atoms elements and isotopes](./00_atoms_elements_and_isotopes.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

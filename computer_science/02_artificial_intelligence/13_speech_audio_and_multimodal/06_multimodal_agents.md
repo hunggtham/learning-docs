@@ -1,7 +1,6 @@
 # Multimodal Agents
 
-> **Mạch đọc:** Đặt **Multimodal Agents** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Screen/GUI Agents** sang **DOM/cây khả năng tiếp cận (accessibility tree / 접근성 트리) vs Screenshot**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimodal Agents**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Screen/GUI Agents** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DOM/cây khả năng tiếp cận (accessibility tree / 접근성 트리) vs Screenshot** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Multimodal tác nhân (agent / 에이전트)** không chỉ nhận văn bản (text / 텍스트). Nó có thể observe screenshots, camera frames, speech, audio, documents hoặc sensor streams rồi chọn actions trong môi trường (environment / 환경).
 
@@ -36,6 +35,8 @@ Hard problems:
 - coordinate scaling;
 - destructive actions.
 
+> **Chuyển mạch:** Trong **Multimodal Agents**, **DOM/cây khả năng tiếp cận (accessibility tree / 접근성 트리) vs Screenshot** tiếp nhận điểm tựa từ **Screen/GUI Agents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grounded hành động (action / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## DOM/cây khả năng tiếp cận (accessibility tree / 접근성 트리) vs Screenshot
 
 Trình duyệt (browser / 브라우저)/computer tác nhân (agent / 에이전트) có thể use structured DOM/cây khả năng tiếp cận (accessibility tree / 접근성 트리) thay screenshot-only.
@@ -48,11 +49,15 @@ Hybrid is stronger:
 structured UI tree + screenshot
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Multimodal Agents**, **Grounded hành động (action / 동작)** tiếp nhận điểm tựa từ **DOM/cây khả năng tiếp cận (accessibility tree / 접근성 트리) vs Screenshot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Observe After hành động (action / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Grounded hành động (action / 동작)
 
 Before click, mô hình (model / 모델) must map ngôn ngữ (language / 언어) goal to visual mục tiêu (target / 대상) coordinates. Recognition correct nhưng localization wrong can click destructive neighboring điều khiển (control / 제어).
 
 Use bounding boxes, element IDs hoặc OCR anchoring để reduce ambiguity.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimodal Agents**, **Observe After hành động (action / 동작)** tiếp nhận điểm tựa từ **Grounded hành động (action / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Visual Prompt Injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Observe After hành động (action / 동작)
 
@@ -63,6 +68,8 @@ action → wait/state settle → screenshot/DOM diff → verify
 ```
 
 This is closed-loop điều khiển (control / 제어).
+
+> **Chuyển mạch:** Trong **Multimodal Agents**, **Visual Prompt Injection** tiếp nhận điểm tựa từ **Observe After hành động (action / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Voice Agents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Visual Prompt Injection
 
@@ -76,6 +83,8 @@ system/user authorized goal = trusted instruction
 ```
 
 Thời gian chạy (runtime / 런타임) permissions still must enforce chính sách (policy / 정책).
+
+> **Chuyển mạch:** Ở chặng này của **Multimodal Agents**, **Voice Agents** tiếp nhận điểm tựa từ **Visual Prompt Injection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Turn-Taking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Voice Agents
 
@@ -97,13 +106,19 @@ Important dimensions:
 - prosody;
 - background noise.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimodal Agents**, **Turn-Taking** tiếp nhận điểm tựa từ **Voice Agents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Barge-In** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Turn-Taking
 
 Human conversation has overlapping speech, pauses and backchannels. Voice tác nhân (agent / 에이전트) needs decide when người dùng (user / 사용자) finished. Too aggressive endpointing interrupts; too slow feels laggy.
 
+> **Chuyển mạch:** Trong **Multimodal Agents**, **Barge-In** tiếp nhận điểm tựa từ **Turn-Taking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Camera/Robot Agents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Barge-In
 
 If người dùng (user / 사용자) starts speaking while tác nhân (agent / 에이전트) TTS ongoing, hệ thống (system / 시스템) may stop playback, capture new đầu vào (input / 입력) and revise tác vụ (task / 작업). This requires audio chuỗi xử lý (pipeline / 파이프라인) + tác nhân (agent / 에이전트) trạng thái (state / 상태) coordination.
+
+> **Chuyển mạch:** Ở chặng này của **Multimodal Agents**, **Camera/Robot Agents** tiếp nhận điểm tựa từ **Barge-In** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multimodal bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Camera/Robot Agents
 
@@ -119,6 +134,8 @@ high-level semantic planner
 
 Do not let ngôn ngữ (language / 언어) mô hình (model / 모델) directly đầu ra (output / 출력) raw motor torques unless kiến trúc (architecture / 아키텍처) specifically designed/validated for điều khiển (control / 제어).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimodal Agents**, **Multimodal bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Camera/Robot Agents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Video Agents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Multimodal bộ nhớ (memory / 메모리)
 
 Bộ nhớ (memory / 메모리) may include:
@@ -131,6 +148,8 @@ Bộ nhớ (memory / 메모리) may include:
 - structured UI states.
 
 Store derived văn bản (text / 텍스트) only can lose visual bằng chứng (evidence / 증거). trọng yếu (critical / 중요) tasks should preserve original sản phẩm tạo ra (artifact / 산출물) references.
+
+> **Chuyển mạch:** Trong **Multimodal Agents**, **Video Agents** tiếp nhận điểm tựa từ **Multimodal bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spatial bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Video Agents
 
@@ -145,17 +164,23 @@ segment video
 
 This is RAG-like retrieval over perceptual timeline.
 
+> **Chuyển mạch:** Ở chặng này của **Multimodal Agents**, **Spatial bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Video Agents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công cụ (tool / 도구) Use from Visual ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Spatial bộ nhớ (memory / 메모리)
 
 Robotics/điều hướng (navigation / 내비게이션) needs map where objects/places are. ngữ nghĩa (semantic / 의미적) bộ nhớ (memory / 메모리) “cup exists” insufficient; need coordinate/topological quan hệ (relation / 관계).
 
 SLAM-style maps + ngữ nghĩa (semantic / 의미적) labels can combine hình học (geometry / 기하학) and learned perception.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimodal Agents**, **Công cụ (tool / 도구) Use from Visual ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Spatial bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác minh (verification / 확인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công cụ (tool / 도구) Use from Visual ngữ cảnh (context / 맥락)
 
 Tác nhân (agent / 에이전트) may see chart then lời gọi (call / 호출) calculator; see lỗi (error / 오류) dialog then tìm kiếm (search / 검색) logs; hear yêu cầu (request / 요청) then truy vấn (query / 쿼리) calendar.
 
 Multimodality affects observation, while tools extend hành động (action / 동작)/kiến thức (knowledge / 지식) không gian (space / 공간).
+
+> **Chuyển mạch:** Trong **Multimodal Agents**, **Xác minh (verification / 확인)** tiếp nhận điểm tựa từ **Công cụ (tool / 도구) Use from Visual ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Human Approval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xác minh (verification / 확인)
 
@@ -169,9 +194,13 @@ verify: inspect checkbox state after click
 
 Same principle as reliable agents.
 
+> **Chuyển mạch:** Ở chặng này của **Multimodal Agents**, **Human Approval** tiếp nhận điểm tựa từ **Xác minh (verification / 확인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Human Approval
 
 Visual tác nhân (agent / 에이전트) may encounter “Delete all” or payment confirmation. rủi ro (risk / 위험) classifier based hành động (action / 동작) ngữ nghĩa (semantics / 의미론) + UI ngữ cảnh (context / 맥락) should require approval before irreversible thao tác (operation / 연산).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimodal Agents**, **Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Human Approval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Edge Processing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)
 
@@ -183,9 +212,13 @@ L=L_{capture}+L_{encode}+L_{mô hình (model / 모델)}+L_{công cụ (tool / �
 
 Voice tương tác (interaction / 상호작용) becomes unnatural if accumulated độ trễ (latency / 지연 시간) high. Streaming and parallel processing matter.
 
+> **Chuyển mạch:** Trong **Multimodal Agents**, **Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)** xác định đầu vào; **Edge Processing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Edge Processing
 
 Camera/audio raw dữ liệu (data / 데이터) sensitive and bandwidth-heavy. On-device tính năng (feature / 기능) extraction or full suy luận (inference / 추론) can improve privacy/độ trễ (latency / 지연 시간), but compute các ràng buộc (constraints / 제약조건들) require quantization/compression.
+
+> **Chuyển mạch:** Ở chặng này của **Multimodal Agents**, **Edge Processing** xác định đầu vào; **Evaluation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Simulators** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Evaluation
 
@@ -200,13 +233,19 @@ Need environment-based success:
 - cross-modal grounding;
 - robustness to screen resolution/theme/ngôn ngữ (language / 언어).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimodal Agents**, **Simulators** tiếp nhận điểm tựa từ **Evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Simulators
 
 GUI/trình duyệt (browser / 브라우저) simulators and robot simulation allow safe large-scale huấn luyện (training / 학습)/evaluation. But simulation fidelity creates sim-to-real/UI-version gap.
 
+> **Chuyển mạch:** Trong **Multimodal Agents**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Simulators** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **Multimodal tác nhân (agent / 에이전트) closes the vòng lặp (loop / 루프) between perception and hành động (action / 동작). Perception chất lượng (quality / 품질) bounds quyết định (decision / 결정) chất lượng (quality / 품질), while control-plane kỹ thuật (engineering / 엔지니어링) bounds real-world rủi ro (risk / 위험).**
+
+> **Chuyển mạch:** Ở chặng này của **Multimodal Agents**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -222,8 +261,10 @@ Hidden trạng thái (state / 상태), off-screen elements, DOM ngữ nghĩa (se
 
 If stable API exists, API tools are more reliable than visually clicking UI. GUI điều khiển (control / 제어) is useful when API absent or tác vụ (task / 작업) inherently visual.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Multimodal Agents**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Multimodal agents combine [Agents](../10_agents_and_ai_systems/README.md), Computer Vision, Speech AI, RAG and bảo mật (security / 보안). This closes the perception–lập luận (reasoning / 추론)–hành động (action / 동작) vòng lặp (loop / 루프) and leads naturally to dữ liệu (data / 데이터) for AI and môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) concerns.
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 audio and speech representation](./00_audio_and_speech_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

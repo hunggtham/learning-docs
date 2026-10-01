@@ -1,7 +1,6 @@
 # NoSQL, phân tán (distributed / 분산) và analytical databases
 
-> **Mạch đọc:** Đọc **NoSQL, phân tán (distributed / 분산) và analytical databases** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Chọn mô hình dữ liệu (data model / 데이터 모델) từ truy cập (access / 접근) mẫu (pattern / 패턴) và bất biến (invariant / 불변식)** sang **2. Denormalization là intentional replication ở logical tầng (layer / 계층)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **NoSQL, phân tán (distributed / 분산) và analytical databases**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Chọn mô hình dữ liệu (data model / 데이터 모델) từ truy cập (access / 접근) mẫu (pattern / 패턴) và bất biến (invariant / 불변식)** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. Denormalization là intentional replication ở logical tầng (layer / 계층)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Relational cơ sở dữ liệu (database / 데이터베이스) không phải lựa chọn duy nhất vì workloads khác nhau đặt pressure khác nhau lên mô hình dữ liệu (data model / 데이터 모델), quy mô (scale / 규모), độ trễ (latency / 지연 시간), consistency và truy vấn (query / 쿼리) patterns. “NoSQL” không phải một kiến trúc (architecture / 아키텍처) duy nhất mà là umbrella term cho nhiều các hệ thống (systems / 시스템들) đánh đổi relational generality để tối ưu một số truy cập (access / 접근) mẫu (pattern / 패턴) hoặc phân phối (distribution / 분포) mô hình (model / 모델).
 
@@ -31,6 +30,8 @@ state có thể partition theo key nào?
 reader chấp nhận stale tới mức nào?
 ```
 
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **1. Chọn mô hình dữ liệu (data model / 데이터 모델) từ truy cập (access / 접근) mẫu (pattern / 패턴) và bất biến (invariant / 불변식)** nêu điều cần giải thích; **2. Denormalization là intentional replication ở logical tầng (layer / 계층)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Partitioning và shard key quyết định locality lẫn thất bại (failure / 실패) surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Denormalization là intentional replication ở logical tầng (layer / 계층)
 
 Phân tán (distributed / 분산)/document các hệ thống (systems / 시스템들) thường duplicate dữ liệu (data / 데이터) để tránh joins xuyên partitions. Điều này giảm read độ trễ (latency / 지연 시간) nhưng tạo consistency bài toán (problem / 문제): khi nguồn (source / 소스) fact đổi, các copies phải được cập nhật.
@@ -38,6 +39,8 @@ Phân tán (distributed / 분산)/document các hệ thống (systems / 시스�
 Normalization giảm cập nhật (update / 업데이트) anomalies bằng cách giảm duplication; denormalization chấp nhận duplication để tối ưu truy cập (access / 접근) đường dẫn (path / 경로).
 
 Bất biến (invariant / 불변식) phải nói rõ bản sao (copy / 복사) nào là nguồn chuẩn (source of truth / 정본), propagation có synchronous hay asynchronous, stale cửa sổ (window / 윈도우) chấp nhận bao lâu và xung đột (conflict / 충돌)/rebuild xử lý thế nào.
+
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **3. Partitioning và shard key quyết định locality lẫn thất bại (failure / 실패) surface** tiếp nhận điểm tựa từ **2. Denormalization là intentional replication ở logical tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Replication cần một authority mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Partitioning và shard key quyết định locality lẫn thất bại (failure / 실패) surface
 
@@ -58,6 +61,8 @@ future growth
 
 Không có shard key “đúng” nếu chưa biết tải công việc (workload / 워크로드) phân phối (distribution / 분포).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **4. Replication cần một authority mô hình (model / 모델)** tiếp nhận điểm tựa từ **3. Partitioning và shard key quyết định locality lẫn thất bại (failure / 실패) surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. cục bộ (local / 로컬) append, replicated và committed là các trạng thái khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Replication cần một authority mô hình (model / 모델)
 
 Replication tạo nhiều vật lý (physical / 물리적) copies nhưng tính đúng đắn (correctness / 정확성) cần trả lời: **bản sao (copy / 복사) nào có quyền quyết định ghi (write / 쓰기) thứ tự (order / 순서)?**
@@ -65,6 +70,8 @@ Replication tạo nhiều vật lý (physical / 물리적) copies nhưng tính �
 Leader/follower mô hình (model / 모델) thường serialize writes qua leader rồi gửi log/changes tới followers. Multi-leader cho phép writes tại nhiều sites nhưng phải giải xung đột (conflict / 충돌)/thứ tự (order / 순서). Leaderless/quorum mô hình (model / 모델) dùng read/ghi (write / 쓰기) quorum và phiên bản (version / 버전)/xung đột (conflict / 충돌) ngữ nghĩa (semantics / 의미론) khác.
 
 “Số replicas = 3” chưa cho biết consistency. Phải biết lần ghi nhận (commit / 커밋)/ack quy tắc (rule / 규칙) và failover authority.
+
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **5. cục bộ (local / 로컬) append, replicated và committed là các trạng thái khác nhau** tiếp nhận điểm tựa từ **4. Replication cần một authority mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Replication lag là trạng thái (state / 상태) distance, không chỉ “milliseconds”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. cục bộ (local / 로컬) append, replicated và committed là các trạng thái khác nhau
 
@@ -85,6 +92,8 @@ Không phải hệ thống nào cũng expose cùng stages, nhưng mô hình tư 
 
 Nếu máy khách (client / 클라이언트) nhận success trước durable quorum, failover có thể mất acknowledged ghi (write / 쓰기) tùy đặc tả hợp đồng (contract / 계약). Nếu phải chờ remote durable quorum, độ trễ (latency / 지연 시간) đường dẫn (path / 경로) chứa mạng (network / 네트워크) + remote lưu trữ (storage / 저장소).
 
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **6. Replication lag là trạng thái (state / 상태) distance, không chỉ “milliseconds”** tiếp nhận điểm tựa từ **5. cục bộ (local / 로컬) append, replicated và committed là các trạng thái khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Read consistency là observable đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Replication lag là trạng thái (state / 상태) distance, không chỉ “milliseconds”
 
 Follower có thể chậm theo log position/LSN/chỉ mục (index / 인덱스) dù wall-clock lag khó đo chính xác. “Replica lag 2 giây” là shorthand; quantity đáng tin hơn thường là khoảng cách applied/received position so với leader theo giao thức (protocol / 프로토콜).
@@ -100,6 +109,8 @@ apply throughput
 network/storage latency
 replay/apply errors
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **7. Read consistency là observable đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **6. Replication lag là trạng thái (state / 상태) distance, không chỉ “milliseconds”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Replica read không miễn phí về tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Read consistency là observable đặc tả hợp đồng (contract / 계약)
 
@@ -121,6 +132,8 @@ Ví dụ sau khi người dùng (user / 사용자) đổi profile trên leader r
 
 Chọn chiến lược (strategy / 전략) theo bất biến (invariant / 불변식), không theo nhãn marketing.
 
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **8. Replica read không miễn phí về tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **7. Read consistency là observable đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Failover là authority transfer, không chỉ đổi DNS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Replica read không miễn phí về tính đúng đắn (correctness / 정확성)
 
 Read replicas tăng read sức chứa (capacity / 용량) và tách analytical/report tải công việc (workload / 워크로드) khỏi leader, nhưng stale read có thể phá check-then-act lô-gic (logic / 논리).
@@ -135,6 +148,8 @@ application: cho phép dùng lại
 
 Nếu bất biến (invariant / 불변식) yêu cầu unique redemption, kiểm tra hợp lệ (validation / 검증) phải chạy tại authority/giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) có consistency đủ mạnh. bộ nhớ đệm (cache / 캐시)/replica read có thể dùng cho display nhưng không nhất thiết dùng cho authorization/nghiệp vụ (business / 비즈니스) quyết định (decision / 결정).
 
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **9. Failover là authority transfer, không chỉ đổi DNS** tiếp nhận điểm tựa từ **8. Replica read không miễn phí về tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. RPO và RTO làm failover đặc tả hợp đồng (contract / 계약) cụ thể hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Failover là authority transfer, không chỉ đổi DNS
 
 Khi leader thất bại (fail / 실패), hệ thống cần chọn nút (node / 노드) mới và ngăn old leader tiếp tục accept authoritative writes nếu nó quay lại trong trạng thái partitioned.
@@ -145,6 +160,8 @@ Cơ chế (mechanism / 메커니즘) thường cần epoch/term/fencing/quorum. 
 
 Đây là split-brain bài toán (problem / 문제). Health check một mình không đủ vì “không reach được leader” không chứng minh leader đã chết; có thể chỉ là partition.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **10. RPO và RTO làm failover đặc tả hợp đồng (contract / 계약) cụ thể hơn** tiếp nhận điểm tựa từ **9. Failover là authority transfer, không chỉ đổi DNS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Read-after-failover cần hiểu lần ghi nhận (commit / 커밋) horizon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. RPO và RTO làm failover đặc tả hợp đồng (contract / 계약) cụ thể hơn
 
 **khôi phục (recovery / 복구) điểm (point / 지점) mục tiêu (objective / 목표) (RPO)** trả lời có thể mất bao nhiêu committed/accepted dữ liệu (data / 데이터) theo disaster mô hình (model / 모델). **khôi phục (recovery / 복구) thời gian (time / 시간) mục tiêu (objective / 목표) (RTO)** trả lời mất bao lâu để khôi phục dịch vụ (service / 서비스).
@@ -152,6 +169,8 @@ Cơ chế (mechanism / 메커니즘) thường cần epoch/term/fencing/quorum. 
 Async replication thường cho độ trễ (latency / 지연 시간) tốt nhưng RPO có thể > 0 khi leader mất trước khi follower catch up. Sync/quorum replication có thể giảm RPO nhưng tăng foreground độ trễ (latency / 지연 시간) và giảm ghi (write / 쓰기) availability trong một số partition/thất bại (failure / 실패) scenario.
 
 Failover thiết kế (design / 설계) là sự đánh đổi (trade-off / 트레이드오프) consistency/durability/availability/thời gian (time / 시간), không chỉ “có replica”.
+
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **11. Read-after-failover cần hiểu lần ghi nhận (commit / 커밋) horizon** tiếp nhận điểm tựa từ **10. RPO và RTO làm failover đặc tả hợp đồng (contract / 계약) cụ thể hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Quorum không có nghĩa mọi quorum thiết kế (design / 설계) đều linearizable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Read-after-failover cần hiểu lần ghi nhận (commit / 커밋) horizon
 
@@ -169,6 +188,8 @@ old leader có bị fenced không?
 read routing sau failover đi đâu?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **12. Quorum không có nghĩa mọi quorum thiết kế (design / 설계) đều linearizable** tiếp nhận điểm tựa từ **11. Read-after-failover cần hiểu lần ghi nhận (commit / 커밋) horizon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. LSM cây (tree / 트리) phù hợp write-heavy nhưng chuyển chi phí (cost / 비용) sang compaction/read đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Quorum không có nghĩa mọi quorum thiết kế (design / 설계) đều linearizable
 
 Nếu N replicas, ghi (write / 쓰기) quorum `W`, read quorum `R` và `R + W > N` cho intersection intuition, nhưng tính đúng đắn (correctness / 정확성) còn phụ thuộc versioning, thất bại (failure / 실패) handling, sloppy quorum, clock các giả định (assumptions / 가정들) và read-repair giao thức (protocol / 프로토콜).
@@ -176,6 +197,8 @@ Nếu N replicas, ghi (write / 쓰기) quorum `W`, read quorum `R` và `R + W > 
 Intersection là một building khối (block / 블록), không phải proof hoàn chỉnh.
 
 Phân tán (distributed / 분산) cơ sở dữ liệu (database / 데이터베이스) đặc tả hợp đồng (contract / 계약) phải được đọc theo concrete giao thức (protocol / 프로토콜), không học thuộc công thức quorum rồi suy ra quá mức.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **12. Quorum không có nghĩa mọi quorum thiết kế (design / 설계) đều linearizable** xác định đầu vào; **13. LSM cây (tree / 트리) phù hợp write-heavy nhưng chuyển chi phí (cost / 비용) sang compaction/read đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. OLTP và OLAP có vật lý (physical / 물리적) các ràng buộc (constraints / 제약조건들) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. LSM cây (tree / 트리) phù hợp write-heavy nhưng chuyển chi phí (cost / 비용) sang compaction/read đường dẫn (path / 경로)
 
@@ -195,6 +218,8 @@ write burst
 
 LSM là ví dụ điển hình của defer + batch + merge: chi phí (cost / 비용) bị dời, không bị xóa.
 
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **13. LSM cây (tree / 트리) phù hợp write-heavy nhưng chuyển chi phí (cost / 비용) sang compaction/read đường dẫn (path / 경로)** xác định đầu vào; **14. OLTP và OLAP có vật lý (physical / 물리적) các ràng buộc (constraints / 제약조건들) khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Columnar lưu trữ (storage / 저장소) bắt đầu từ projection pushdown** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. OLTP và OLAP có vật lý (physical / 물리적) các ràng buộc (constraints / 제약조건들) khác nhau
 
 OLTP phục vụ nhiều điểm (point / 지점) read/ghi (write / 쓰기), tính đồng thời (concurrency / 동시성) cao, low độ trễ (latency / 지연 시간) và giao dịch (transaction / 트랜잭션) invariants. OLAP scan/aggregate lượng lớn dữ liệu (data / 데이터), thường đọc ít columns trên nhiều rows.
@@ -202,6 +227,8 @@ OLTP phục vụ nhiều điểm (point / 지점) read/ghi (write / 쓰기), tí
 Vì tải công việc (workload / 워크로드) khác, vật lý (physical / 물리적) bố cục (layout / 레이아웃) cũng khác. Row store tối ưu locality của một bản ghi (record / 레코드); column store tối ưu locality của một attribute qua nhiều rows.
 
 “Column cơ sở dữ liệu (database / 데이터베이스) nhanh hơn” chỉ đúng cho truy vấn (query / 쿼리) shape phù hợp.
+
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **15. Columnar lưu trữ (storage / 저장소) bắt đầu từ projection pushdown** tiếp nhận điểm tựa từ **14. OLTP và OLAP có vật lý (physical / 물리적) các ràng buộc (constraints / 제약조건들) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Compression hiệu quả vì values cùng column có phân phối (distribution / 분포) giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Columnar lưu trữ (storage / 저장소) bắt đầu từ projection pushdown
 
@@ -217,6 +244,8 @@ Engine có thể đọc chủ yếu `region` và `amount`, giảm I/O và bộ n
 
 Đây là hiệu năng (performance / 성능) bất biến (invariant / 불변식): **bytes processed nên gần bytes relevant hơn là full logical row width**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **16. Compression hiệu quả vì values cùng column có phân phối (distribution / 분포) giống nhau** tiếp nhận điểm tựa từ **15. Columnar lưu trữ (storage / 저장소) bắt đầu từ projection pushdown** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Zone map / min-max siêu dữ liệu (metadata / 메타데이터) giúp skip dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Compression hiệu quả vì values cùng column có phân phối (distribution / 분포) giống nhau
 
 Values cùng column thường có kiểu (type / 타입)/phân phối (distribution / 분포) lặp lại nên encode tốt: dictionary encoding, run-length encoding, delta encoding, bit packing và compression codecs.
@@ -224,6 +253,8 @@ Values cùng column thường có kiểu (type / 타입)/phân phối (distribut
 Compression không chỉ giảm lưu trữ (storage / 저장소); nó có thể giảm I/O/bộ nhớ (memory / 메모리) bandwidth đủ nhiều để CPU decompression vẫn có lợi.
 
 Nhưng high-cardinality/random dữ liệu (data / 데이터) compress kém hơn. Encoding choice phụ thuộc phân phối (distribution / 분포).
+
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **16. Compression hiệu quả vì values cùng column có phân phối (distribution / 분포) giống nhau** nêu điều cần giải thích; **17. Zone map / min-max siêu dữ liệu (metadata / 메타데이터) giúp skip dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Vectorized thực thi (execution / 실행) amortize trình thông dịch (interpreter / 인터프리터)/function-call overhead** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Zone map / min-max siêu dữ liệu (metadata / 메타데이터) giúp skip dữ liệu (data / 데이터)
 
@@ -238,6 +269,8 @@ predicate amount > 1000
 Đây là data-skipping chỉ mục (index / 인덱스) nhẹ. Nếu clustering/thứ tự (order / 순서) của dữ liệu (data / 데이터) phù hợp predicate, skip ratio cao; nếu values random khắp mọi segment, siêu dữ liệu (metadata / 메타데이터) ít hữu ích.
 
 Vật lý (physical / 물리적) thứ tự (ordering / 순서) vì vậy ảnh hưởng analytical scan chi phí (cost / 비용).
+
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **17. Zone map / min-max siêu dữ liệu (metadata / 메타데이터) giúp skip dữ liệu (data / 데이터)** nêu điều cần giải thích; **18. Vectorized thực thi (execution / 실행) amortize trình thông dịch (interpreter / 인터프리터)/function-call overhead** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Late materialization tránh dựng full row quá sớm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Vectorized thực thi (execution / 실행) amortize trình thông dịch (interpreter / 인터프리터)/function-call overhead
 
@@ -256,6 +289,8 @@ Nhưng batch quá lớn tăng bộ nhớ đệm (cache / 캐시) footprint; vari
 
 Đọc thêm [join algorithms, vectorized execution và late materialization](../../05_data_databases/advanced/06_join_algorithms_vectorized_execution_and_late_materialization.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **19. Late materialization tránh dựng full row quá sớm** tiếp nhận điểm tựa từ **18. Vectorized thực thi (execution / 실행) amortize trình thông dịch (interpreter / 인터프리터)/function-call overhead** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Analytical truy vấn (query / 쿼리) vẫn có tính đồng thời (concurrency / 동시성) và spill thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Late materialization tránh dựng full row quá sớm
 
 Columnar engine thường giữ column vectors/row identifiers qua filter/phép nối (join / 조인) rồi chỉ reconstruct đầu ra (output / 출력) rows khi cần. Đây là **late materialization**.
@@ -263,6 +298,8 @@ Columnar engine thường giữ column vectors/row identifiers qua filter/phép 
 Lợi ích: tránh bản sao (copy / 복사)/decode columns bị filter bỏ. sự đánh đổi (trade-off / 트레이드오프): position ánh xạ (mapping / 매핑) và gather có thể phức tạp, random truy cập (access / 접근) có thể đắt nếu chuỗi xử lý (pipeline / 파이프라인) mất locality.
 
 Tối ưu hóa (optimization / 최적화) phải lập luận (reasoning / 추론) cùng truy vấn (query / 쿼리) selectivity và dữ liệu (data / 데이터) bố cục (layout / 레이아웃).
+
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **20. Analytical truy vấn (query / 쿼리) vẫn có tính đồng thời (concurrency / 동시성) và spill thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **19. Late materialization tránh dựng full row quá sớm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Warehouse, lake và lakehouse là lưu trữ (storage / 저장소)/siêu dữ liệu (metadata / 메타데이터) trade-offs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Analytical truy vấn (query / 쿼리) vẫn có tính đồng thời (concurrency / 동시성) và spill thất bại (failure / 실패) modes
 
@@ -283,6 +320,8 @@ storage throughput
 
 Truy vấn (query / 쿼리) “chậm” không nhất thiết vì SQL lô-gic (logic / 논리); có thể vì dữ liệu (data / 데이터) skipping thất bại hoặc bộ nhớ (memory / 메모리) spill.
 
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **20. Analytical truy vấn (query / 쿼리) vẫn có tính đồng thời (concurrency / 동시성) và spill thất bại (failure / 실패) modes** nêu điều cần giải thích; **21. Warehouse, lake và lakehouse là lưu trữ (storage / 저장소)/siêu dữ liệu (metadata / 메타데이터) trade-offs** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Materialized view là precomputation với freshness đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Warehouse, lake và lakehouse là lưu trữ (storage / 저장소)/siêu dữ liệu (metadata / 메타데이터) trade-offs
 
 Warehouse thường quản lý curated analytical dữ liệu (data / 데이터) với engine/lưu trữ (storage / 저장소) tích hợp (integration / 통합) chặt. dữ liệu (data / 데이터) lake ưu tiên đối tượng (object / 객체) lưu trữ (storage / 저장소) rẻ/open formats. Lakehouse thêm bảng (table / 테이블) siêu dữ liệu (metadata / 메타데이터), giao dịch (transaction / 트랜잭션)/phiên bản (version / 버전) ngữ nghĩa (semantics / 의미론) và truy vấn (query / 쿼리) optimizations trên đối tượng (object / 객체) lưu trữ (storage / 저장소).
@@ -296,6 +335,8 @@ schema evolution ra sao?
 metadata/catalog có authority ở đâu?
 object files orphan/compact thế nào?
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **21. Warehouse, lake và lakehouse là lưu trữ (storage / 저장소)/siêu dữ liệu (metadata / 메타데이터) trade-offs** nêu điều cần giải thích; **22. Materialized view là precomputation với freshness đặc tả hợp đồng (contract / 계약)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. bằng chứng vận hành (production evidence / 운영 증거) cho phân tán (distributed / 분산) cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Materialized view là precomputation với freshness đặc tả hợp đồng (contract / 계약)
 
@@ -311,6 +352,8 @@ reader biết freshness không?
 ```
 
 Materialization là caching ở cơ sở dữ liệu (database / 데이터베이스) quy mô (scale / 규모); consistency ngữ nghĩa (semantics / 의미론) vẫn phải tường minh (explicit / 명시적).
+
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **22. Materialized view là precomputation với freshness đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **23. bằng chứng vận hành (production evidence / 운영 증거) cho phân tán (distributed / 분산) cơ sở dữ liệu (database / 데이터베이스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. bằng chứng vận hành (production evidence / 운영 증거) cho analytical engine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. bằng chứng vận hành (production evidence / 운영 증거) cho phân tán (distributed / 분산) cơ sở dữ liệu (database / 데이터베이스)
 
@@ -329,6 +372,8 @@ network/storage errors
 
 Nếu chỉ có “replica healthy=true”, không đủ để chứng minh read freshness hoặc failover tính đúng đắn (correctness / 정확성).
 
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **23. bằng chứng vận hành (production evidence / 운영 증거) cho phân tán (distributed / 분산) cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **24. bằng chứng vận hành (production evidence / 운영 증거) cho analytical engine** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. thất bại (failure / 실패) ma trận (matrix / 행렬) cho replication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. bằng chứng vận hành (production evidence / 운영 증거) cho analytical engine
 
 Khi truy vấn (query / 쿼리) scan/aggregate chậm, cần:
@@ -345,6 +390,8 @@ memory/storage bandwidth
 ```
 
 Tối ưu chỉ chỉ mục (index / 인덱스)/lược đồ (schema / 스키마) theo intuition mà không nhìn vật lý (physical / 물리적) thực thi (execution / 실행) dễ sửa sai tầng (layer / 계층).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **24. bằng chứng vận hành (production evidence / 운영 증거) cho analytical engine** nêu điều cần giải thích; **25. thất bại (failure / 실패) ma trận (matrix / 행렬) cho replication** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. thất bại (failure / 실패) ma trận (matrix / 행렬) cho replication
 
@@ -363,9 +410,13 @@ control-plane membership change
 
 Với mỗi trường hợp (case / 사례), hỏi: ai còn authority, ghi (write / 쓰기) có được accept không, acknowledged ghi (write / 쓰기) nào survive, read có stale không, khôi phục (recovery / 복구) bằng chứng (evidence / 증거) nằm đâu?
 
+> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **26. Mô hình tư duy** gom các mảnh từ **25. thất bại (failure / 실패) ma trận (matrix / 행렬) cho replication** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu nhầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Mô hình tư duy
 
 > cơ sở dữ liệu (database / 데이터베이스) kiến trúc (architecture / 아키텍처) là tương tác (interaction / 상호작용) giữa **mô hình dữ liệu (data model / 데이터 모델), partition locality, replication authority, consistency đặc tả hợp đồng (contract / 계약) và vật lý (physical / 물리적) lưu trữ (storage / 저장소)/thực thi (execution / 실행) bố cục (layout / 레이아웃)**. Replication không chỉ là nhiều copies; nó là giao thức (protocol / 프로토콜) quyết định ghi (write / 쓰기) nào có authority sau thất bại (failure / 실패). Columnar lưu trữ (storage / 저장소) không chỉ là “lưu theo cột”; nó là cách giảm bytes processed và tận dụng compression/vectorized thực thi (execution / 실행) cho analytical tải công việc (workload / 워크로드). Cả hai phải được đánh giá bằng observable đặc tả hợp đồng (contract / 계약) và bằng chứng vận hành (production evidence / 운영 증거).
+
+> **Chuyển mạch:** Ở chặng này của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **26. Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những hiểu nhầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu nhầm thường gặp
 
@@ -379,8 +430,10 @@ Với mỗi trường hợp (case / 사례), hỏi: ai còn authority, ghi (writ
 
 **“Column store luôn nhanh hơn row store.”** Chỉ khi tải công việc (workload / 워크로드) tận dụng column projection, compression, skipping và scan/vectorization.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NoSQL, phân tán (distributed / 분산) và analytical databases**, **Những hiểu nhầm thường gặp** đã nêu tiêu chí phân biệt, còn **Kết nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối
 
 Xem [transactions](./02_transactions_acid_and_concurrency_control.md), [storage/WAL](./04_storage_logs_recovery_and_durability.md), [distributed consistency](../06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md), [replication/consensus](../06_networks_distributed_systems/05_replication_partitioning_and_consensus.md), [Consensus advanced](../../06_networks_distributed_systems/advanced/03_consensus_log_replication_reconfiguration_and_snapshots.md), [Distributed transactions](../../05_data_databases/advanced/07_distributed_transactions_2pc_consensus_sagas_and_outbox.md) và [Durability path](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 data models and database systems](./00_data_models_and_database_systems.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # 01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước
 
-> **Mạch đọc:** Đặt **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Hiến pháp (헌법) là gì?** sang **2. Tam quyền và cơ chế phân công quyền lực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hiến pháp (헌법) là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tam quyền và cơ chế phân công quyền lực** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Hiến pháp (헌법) là gì?
 
@@ -18,8 +18,7 @@ công dân Hàn Quốc (대한민국 국민)
 
 Một số quyền trong pháp luật được viết riêng cho `국민`, trong khi nhiều quyền dân sự, lao động, tố tụng, con người và bảo vệ cơ bản cũng áp dụng hoặc được mở rộng cho người nước ngoài theo luật, điều ước và án lệ. Vì vậy khi gặp cụm `국민`, cần đọc đúng luật chuyên ngành thay vì tự suy ra rằng mọi quyền đều giống hoặc khác hoàn toàn.
 
-
-> **Chuyển mạch:** Từ **1. Hiến pháp (헌법) là gì?**, ta sang **2. Tam quyền và cơ chế phân công quyền lực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**, **1. Hiến pháp (헌법) là gì?** xác định đầu vào; **2. Tam quyền và cơ chế phân công quyền lực** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Tam quyền và cơ chế phân công quyền lực
 
@@ -35,8 +34,7 @@ Ngoài ba nhánh này còn có các cơ quan hiến định như Tòa Hiến ph�
 
 Mô hình này không có nghĩa mỗi nhánh hoạt động cô lập. Luật được Quốc hội thông qua, hành pháp thi hành, tòa án áp dụng và giải thích trong vụ việc cụ thể, còn Tòa Hiến pháp xử lý các vấn đề thuộc thẩm quyền hiến pháp. Các cơ chế kiểm soát và cân bằng tạo ra điểm giao giữa các nhánh.
 
-
-> **Chuyển mạch:** Từ **2. Tam quyền và cơ chế phân công quyền lực**, ta sang **3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**, **2. Tam quyền và cơ chế phân công quyền lực** xác định đầu vào; **3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản
 
@@ -82,8 +80,7 @@ Các tên như `고시`, `훈령`, `예규`, `지침` xuất hiện rất nhiề
 
 Chính quyền địa phương có `조례` và `규칙`. Một chính sách hỗ trợ của Seoul có thể khác Busan hoặc một `구`, ngay cả khi luật quốc gia giống nhau.
 
-
-> **Chuyển mạch:** Từ **3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản**, ta sang **4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Legal hierarchy xác định authority; luật mẹ đặt delegation, 시행령 cụ thể hóa thi hành, 시행규칙 operationalize detail, rồi rule-of-law test kiểm tra giới hạn quyền lực.
 
 ## 4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?
 
@@ -104,8 +101,7 @@ Một workflow tốt trên `law.go.kr`:
 6. đọc 부칙 nếu đang ở giai đoạn chuyển tiếp
 ```
 
-
-> **Chuyển mạch:** Từ **4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?**, ta sang **5. Nguyên tắc pháp quyền trong đời sống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**, **5. Nguyên tắc pháp quyền trong đời sống** tiếp nhận điểm tựa từ **4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cách tra cứu nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Nguyên tắc pháp quyền trong đời sống
 
@@ -122,8 +118,7 @@ cơ sở pháp lý là gì?
 → cơ chế phản đối là 이의신청, 행정심판 hay 행정소송?
 ```
 
-
-> **Chuyển mạch:** Từ **5. Nguyên tắc pháp quyền trong đời sống**, ta sang **6. Cách tra cứu nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**, **5. Nguyên tắc pháp quyền trong đời sống** nêu điều cần giải thích; **6. Cách tra cứu nguồn chính thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Điều cần nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Cách tra cứu nguồn chính thức
 
@@ -135,11 +130,10 @@ Nguồn nên dùng đầu tiên:
 
 Tại thời điểm kiểm tra 2026-09-21, hệ thống pháp luật hiện hành do Bộ Pháp chế công bố vẫn phân loại Hiến pháp, luật, nghị định Tổng thống, 총리령, 부령 và các loại quy phạm khác; số lượng văn bản thay đổi liên tục nên không nên học thuộc số đếm.
 
-
-> **Chuyển mạch:** Từ **6. Cách tra cứu nguồn chính thức**, ta sang **7. Điều cần nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**, **6. Cách tra cứu nguồn chính thức** nêu điều cần giải thích; **7. Điều cần nhớ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 7. Điều cần nhớ
 
 Hiểu thứ bậc pháp luật giúp tránh ba lỗi lớn: đọc `시행규칙` mà quên luật mẹ, đọc một hướng dẫn hành chính như thể nó là luật, hoặc dùng một bản luật đã hết hiệu lực. Với mọi vấn đề nhạy về quyền và nghĩa vụ, **tên luật + điều khoản + 시행일** là bộ ba phải ghi lại.
 
-> **Bàn giao:** Sau **7. Điều cần nhớ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **7. Điều cần nhớ**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

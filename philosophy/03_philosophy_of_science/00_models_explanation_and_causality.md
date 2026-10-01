@@ -1,27 +1,24 @@
 # Các mô hình (models / 모델들), Explanation và Causality
 
-> **Mạch đọc:** Đọc **các mô hình (models / 모델들), Explanation và Causality** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **mô hình (model / 모델) không phải bản sao của reality** sang **Explanation có nhiều dạng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mô hình (models / 모델들), Explanation và Causality**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình (model / 모델) không phải bản sao của reality** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Explanation có nhiều dạng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Mô hình (model / 모델) không phải bản sao của reality
 
 Mô hình (model / 모델) chọn biến, quan hệ và quy mô (scale / 규모) để trả lời một question. Một mô hình (model / 모델) có thể hữu ích dù không “giống thật” ở mọi chi tiết; tiêu chuẩn quan trọng là lĩnh vực (domain / 도메인) of validity, predictive/explanatory use, robustness và dạng thất bại (failure mode / 실패 모드). giả định (assumption / 가정) bị bỏ qua không biến mất — nó quay lại dưới dạng limitation.
 
-
-> **Chuyển mạch:** Từ **mô hình (model / 모델) không phải bản sao của reality**, ta sang **Explanation có nhiều dạng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Các mô hình (models / 모델들), Explanation và Causality**, **Explanation có nhiều dạng** tiếp nhận điểm tựa từ **Mô hình (model / 모델) không phải bản sao của reality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Correlation, intervention và causality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Explanation có nhiều dạng
 
 Mechanistic explanation chỉ ra các thành phần và tương tác. Statistical explanation mô tả mẫu (pattern / 패턴) ổn định trong dữ liệu. Unification nối nhiều hiện tượng dưới một principle. Historical/evolutionary explanation truy dấu quá trình hình thành. Không nên đòi một loại explanation làm công việc của loại khác.
 
-
-> **Chuyển mạch:** Từ **Explanation có nhiều dạng**, ta sang **Correlation, intervention và causality** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Các mô hình (models / 모델들), Explanation và Causality**, **Correlation, intervention và causality** tiếp nhận điểm tựa từ **Explanation có nhiều dạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scientific realism và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Correlation, intervention và causality
 
 Correlation nói hai biến thay đổi cùng nhau; causality cần một counterfactual: điều gì sẽ xảy ra với cùng hệ đó nếu ta can thiệp vào X? Confounder, selection, sai số đo lường (measurement error / 측정 오차) và phản hồi (feedback / 피드백) có thể tạo correlation giả hoặc che mất tác động (effect / 효과). nhân quả (causal / 인과적) diagram, natural experiment và randomized intervention là các công cụ khác nhau để làm rõ giả định (assumption / 가정), không phải bằng chứng “tự động đúng”.
 
-
-> **Chuyển mạch:** Từ **Correlation, intervention và causality**, ta sang **Scientific realism và giới hạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mô hình (models / 모델들), Explanation và Causality**, **Correlation, intervention và causality** đã nêu tiêu chí phân biệt, còn **Scientific realism và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Worked nhân quả (causal / 인과적) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Scientific realism và giới hạn
 
@@ -29,8 +26,7 @@ Một người có thể tin rằng mô hình (model / 모델) nắm bắt cấu
 
 Liên hệ trực tiếp với [Mathematics](../../mathematics/README.md), [Physics](../../physics/README.md), [Biology](../../biology/README.md) và [Psychology](../../psychology/README.md), nơi các mô hình có quy mô (scale / 규모), đo lường (measurement / 측정) và nhân quả (causal / 인과적) ranh giới (boundary / 경계) khác nhau.
 
-
-> **Chuyển mạch:** Từ **Scientific realism và giới hạn**, ta sang **Worked nhân quả (causal / 인과적) mô hình (model / 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Các mô hình (models / 모델들), Explanation và Causality**, **Scientific realism và giới hạn** cho ta quy tắc; **Worked nhân quả (causal / 인과적) mô hình (model / 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình (model / 모델) selection có giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Worked nhân quả (causal / 인과적) mô hình (model / 모델)
 
@@ -44,15 +40,13 @@ workload → sleep loss và performance
 
 Nếu chỉ quan sát sleep và hiệu năng (performance / 성능), confounding từ stress/tải công việc (workload / 워크로드) chưa được loại. Intervention có thể randomize sleep opportunity nhưng vẫn phải kiểm tra adherence, học tập (learning / 학습) tác động (effect / 효과), đo lường (measurement / 측정) và transportability. nhân quả (causal / 인과적) answer không chỉ là “có correlation”; nó là một counterfactual cụ thể: cùng người đó sẽ perform thế nào nếu sleep opportunity khác đi, trong ngữ cảnh (context / 맥락) nào và trên kết quả (outcome / 결과) nào.
 
-
-> **Chuyển mạch:** Từ **Worked nhân quả (causal / 인과적) mô hình (model / 모델)**, ta sang **mô hình (model / 모델) selection có giá trị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Các mô hình (models / 모델들), Explanation và Causality**, **Worked nhân quả (causal / 인과적) mô hình (model / 모델)** cho ta quy tắc; **Mô hình (model / 모델) selection có giá trị** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ sâu (depth / 깊이) pass: causality như một claim có điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình (model / 모델) selection có giá trị
 
 Mô hình (model / 모델) đơn giản hơn không mặc nhiên đúng. Simplicity hữu ích vì giảm overfitting và làm giả định (assumption / 가정) rõ; mô hình (model / 모델) phức tạp hữu ích nếu cơ chế (mechanism / 메커니즘) thêm explanatory power và generalize tốt hơn. So sánh cần out-of-sample prediction, intervention kiểm thử (test / 테스트), parameter sensitivity và thất bại (failure / 실패) trường hợp (case / 사례) — không chỉ fit trên dữ liệu (data / 데이터) đã dùng để chọn mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **mô hình (model / 모델) selection có giá trị**, ta sang **độ sâu (depth / 깊이) pass: causality như một claim có điều kiện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mô hình (models / 모델들), Explanation và Causality**, **Độ sâu (depth / 깊이) pass: causality như một claim có điều kiện** tiếp nhận điểm tựa từ **Mô hình (model / 모델) selection có giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: causality như một claim có điều kiện
 
@@ -72,4 +66,4 @@ Objection từ Nancy Cartwright và các nhà cơ chế (mechanism / 메커니�
 
 Natural experiment, longitudinal dữ liệu (data / 데이터) và intervention bổ sung nhau; machine-learning prediction có thể hữu ích mà không trả lời “what if”. Khi kết luận, ghi rõ population, intervention, kết quả (outcome / 결과), horizon và dạng thất bại (failure mode / 실패 모드). Implication: chính sách (policy / 정책) nhân quả (causal / 인과적) phải kèm monitoring, pre-specified stopping/revision và phân tích ai chịu spillover, không chỉ báo cáo một tác động (effect / 효과) kích thước (size / 크기).
 
-> **Bàn giao:** Sau **Empirical ranh giới (boundary / 경계) và implication**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 scientific realism laws and underdetermination](./01_scientific_realism_laws_and_underdetermination.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: causality như một claim có điều kiện**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

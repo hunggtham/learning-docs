@@ -1,7 +1,6 @@
 # Giao dịch phân tán: 2PC, consensus, saga và transactional outbox
 
-> **Mạch đọc:** Đặt **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) không tự mở rộng thành phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션)** sang **2. Two-Phase lần ghi nhận (commit / 커밋)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) không tự mở rộng thành phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Two-Phase lần ghi nhận (commit / 커밋)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Một giao dịch trên một cơ sở dữ liệu (database / 데이터베이스) nút (node / 노드) có thể dựa vào WAL, khóa (lock / 잠금)/MVCC và khôi phục (recovery / 복구) để tạo atomicity. Khi một nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) chạm nhiều cơ sở dữ liệu (database / 데이터베이스) hoặc dịch vụ (service / 서비스), vấn đề thay đổi: không còn một tiến trình (process / 프로세스) hay một log duy nhất có quyền quyết định toàn bộ trạng thái.
 
@@ -19,6 +18,8 @@ DB B: COMMIT inventory
 Nếu tiến trình (process / 프로세스) chết giữa hai lần ghi nhận (commit / 커밋), A và B khác trạng thái. Không có quay lui (rollback / 롤백) thần kỳ vì DB A đã durable và không biết DB B thất bại.
 
 Vấn đề không phải cú pháp SQL; đó là bài toán phối hợp (coordination) dưới thất bại (failure / 실패).
+
+> **Chuyển mạch:** Trong **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **2. Two-Phase lần ghi nhận (commit / 커밋)** tiếp nhận điểm tựa từ **1. cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) không tự mở rộng thành phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Two-Phase lần ghi nhận (commit / 커밋)
 
@@ -42,17 +43,23 @@ otherwise -> ABORT
 
 2PC tạo atomic commitment nhưng có giá: participant đã prepared có thể phải giữ khóa (lock / 잠금)/tài nguyên (resource / 자원) trong khi chờ quyết định.
 
+> **Chuyển mạch:** Ở chặng này của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt** tiếp nhận điểm tựa từ **2. Two-Phase lần ghi nhận (commit / 커밋)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 2PC không phải consensus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt
 
 Nếu coordinator chết sau khi participants đã prepare nhưng trước khi họ nhận quyết định, participant không thể tự ý lần ghi nhận (commit / 커밋) hoặc abort mà không có thêm giao thức (protocol / 프로토콜). Nó rơi vào **trạng thái chưa biết quyết định (in-doubt state)**.
 
 Đây là lý do 2PC thường được gọi là blocking giao thức (protocol / 프로토콜) trong một số thất bại (failure / 실패) scenario. Availability giảm để giữ atomicity.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **4. 2PC không phải consensus** tiếp nhận điểm tựa từ **3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. 2PC không phải consensus
 
 2PC và consensus đều có coordinator/leader-looking hành vi (behavior / 동작) nhưng giải quyết vấn đề khác. 2PC hỏi liệu một giao dịch (transaction / 트랜잭션) có lần ghi nhận (commit / 커밋) trên nhiều participant hay không. Consensus giúp một nhóm nút (node / 노드) đồng thuận một chuỗi quyết định dù một số nút (node / 노드) thất bại (fail / 실패).
 
 Một coordinator 2PC đơn lẻ có thể là điểm thất bại (failure / 실패). Hệ thống có thể dùng replicated log/consensus để làm quyết định (decision / 결정) bản ghi (record / 레코드) của coordinator bền vững hơn, nhưng việc kết hợp hai cơ chế không làm chi phí coordination biến mất.
+
+> **Chuyển mạch:** Trong **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí** tiếp nhận điểm tựa từ **4. 2PC không phải consensus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí
 
@@ -66,6 +73,8 @@ client
 ```
 
 Độ trễ (latency / 지연 시간) tăng vì nhiều mạng (network / 네트워크) round trip và durable log. “cơ sở dữ liệu (database / 데이터베이스) phân tán (distributed / 분산) có consensus” không đồng nghĩa cross-shard giao dịch (transaction / 트랜잭션) rẻ như cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션).
+
+> **Chuyển mạch:** Ở chặng này của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation** tiếp nhận điểm tựa từ **5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Orchestration và choreography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation
 
@@ -86,6 +95,8 @@ release inventory
 
 Compensation không phải quay lui (rollback / 롤백) vật lý. Email đã gửi không thể “unsend”; giá thị trường có thể đổi; refund là nghiệp vụ (business / 비즈니스) sự kiện (event / 이벤트) mới. Vì vậy saga cần ngữ nghĩa (semantics / 의미론) nghiệp vụ rõ ràng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **7. Orchestration và choreography** tiếp nhận điểm tựa từ **6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Dual-write bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Orchestration và choreography
 
 Saga **điều phối tập trung (orchestration)** có một orchestrator quyết định bước tiếp theo. Ưu điểm là workflow dễ nhìn; nhược điểm là coordinator trở thành thành phần quan trọng.
@@ -93,6 +104,8 @@ Saga **điều phối tập trung (orchestration)** có một orchestrator quy�
 Saga **phối hợp qua sự kiện (choreography)** để mỗi dịch vụ (service / 서비스) phản ứng với sự kiện (event / 이벤트). Coupling trực tiếp giảm nhưng luồng (flow / 흐름) tổng thể có thể khó quan sát, và sự kiện (event / 이벤트) cycle hoặc phụ thuộc (dependency / 의존성) ẩn dễ xuất hiện.
 
 Không có mô hình luôn tốt hơn; cần cân bằng visibility, quyền sở hữu (ownership / 소유권) và độ phức tạp (complexity / 복잡도).
+
+> **Chuyển mạch:** Trong **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **8. Dual-write bài toán (problem / 문제)** tiếp nhận điểm tựa từ **7. Orchestration và choreography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Transactional Outbox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Dual-write bài toán (problem / 문제)
 
@@ -106,6 +119,8 @@ Một lỗi kinh điển:
 Nếu DB lần ghi nhận (commit / 커밋) nhưng tiến trình (process / 프로세스) chết trước publish, trạng thái (state / 상태) đã đổi nhưng sự kiện (event / 이벤트) biến mất. Nếu publish trước rồi DB quay lui (rollback / 롤백), bên tiêu thụ (consumer / 소비자) thấy sự kiện (event / 이벤트) về trạng thái chưa tồn tại.
 
 Đây là **bài toán ghi kép (dual-write problem)**: hai hệ thống độc lập không thể được làm atomic chỉ bằng thứ tự hai lời gọi.
+
+> **Chuyển mạch:** Ở chặng này của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **9. Transactional Outbox** tiếp nhận điểm tựa từ **8. Dual-write bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Inbox và idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Transactional Outbox
 
@@ -122,6 +137,8 @@ Một relay riêng đọc outbox và publish sang broker. Nếu relay crash sau 
 
 Outbox đổi bài toán “không được mất sự kiện (event / 이벤트)” thành bài toán dễ quản lý hơn: **at-least-once delivery + duplicate handling**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **10. Inbox và idempotency** tiếp nhận điểm tựa từ **9. Transactional Outbox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Inbox và idempotency
 
 Bên tiêu thụ (consumer / 소비자) có thể lưu `event_id` đã xử lý trong một bảng inbox cùng giao dịch (transaction / 트랜잭션) với nghiệp vụ (business / 비즈니스) cập nhật (update / 업데이트):
@@ -136,11 +153,15 @@ else:
 
 Đây là cách biến delivery lặp thành tác động (effect / 효과) gần exactly-once ở ranh giới (boundary / 경계) nghiệp vụ. Exactly-once thường không phải thuộc tính của mạng (network / 네트워크) packet; nó là kết quả của giao thức (protocol / 프로토콜), durable trạng thái (state / 상태) và idempotent ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Trong **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity** tiếp nhận điểm tựa từ **10. Inbox và idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity
 
 Ngay cả khi workflow cuối cùng thành công, các dịch vụ (service / 서비스) khác có thể quan sát trạng thái trung gian. Saga thường chấp nhận **nhất quán cuối cùng (eventual consistency)**.
 
 Ví dụ inventory đã reserve nhưng payment chưa hoàn tất. Reporting dịch vụ (service / 서비스) có thể thấy thứ tự (order / 순서) ở trạng thái `PENDING_PAYMENT`. Thay vì cố giấu mọi trạng thái trung gian, lĩnh vực (domain / 도메인) mô hình (model / 모델) nên biểu diễn chúng rõ ràng.
+
+> **Chuyển mạch:** Ở chặng này của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại** tiếp nhận điểm tựa từ **11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Exactly-once là thuộc tính (property / 속성) end-to-end** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại
 
@@ -156,6 +177,8 @@ Thử lại (retry / 재시도) mù có thể charge hai lần. Vì vậy paymen
 
 Hết thời gian chờ (timeout / 타임아웃) chỉ nói rằng caller không nhận kết quả đúng hạn; nó không chứng minh remote thao tác (operation / 연산) chưa xảy ra.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **13. Exactly-once là thuộc tính (property / 속성) end-to-end** tiếp nhận điểm tựa từ **12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Khi nào dùng 2PC, saga hay outbox?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Exactly-once là thuộc tính (property / 속성) end-to-end
 
 Broker có thể cung cấp giao dịch (transaction / 트랜잭션) hoặc exactly-once trong phạm vi riêng, nhưng ứng dụng (application / 애플리케이션) còn DB, HTTP side tác động (effect / 효과) và bên ngoài (external / 외부) provider. Nếu một tác động (effect / 효과) nằm ngoài giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) của broker, guarantee phải được xây lại ở tầng cao hơn.
@@ -164,11 +187,15 @@ Do đó cần hỏi chính xác:
 
 > Exactly once đối với **cái gì**, trong **ranh giới (boundary / 경계) nào**, và được chứng minh bằng durable trạng thái (state / 상태) nào?
 
+> **Chuyển mạch:** Trong **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **14. Khi nào dùng 2PC, saga hay outbox?** tiếp nhận điểm tựa từ **13. Exactly-once là thuộc tính (property / 속성) end-to-end** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. thất bại (failure / 실패) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Khi nào dùng 2PC, saga hay outbox?
 
 Nếu nhiều tài nguyên (resource / 자원) cùng hỗ trợ giao dịch (transaction / 트랜잭션) giao thức (protocol / 프로토콜) và cần atomicity mạnh, 2PC có thể phù hợp dù availability/độ trễ (latency / 지연 시간) có giá. Nếu workflow dài, có nghiệp vụ (business / 비즈니스) compensation tự nhiên và dịch vụ (service / 서비스) quyền sở hữu (ownership / 소유권) độc lập, saga thường phù hợp hơn. Nếu cần đồng bộ cơ sở dữ liệu (database / 데이터베이스) thay đổi (change / 변경) với message publication, outbox là thành phần nguyên thủy (primitive / 기본 요소) thực dụng.
 
 Các mẫu (pattern / 패턴) này không loại trừ nhau. Một hệ thống lớn có thể dùng cục bộ (local / 로컬) ACID giao dịch (transaction / 트랜잭션) + outbox trong mỗi dịch vụ (service / 서비스), saga giữa dịch vụ (service / 서비스), và consensus bên trong cơ sở dữ liệu (database / 데이터베이스) cluster.
+
+> **Chuyển mạch:** Ở chặng này của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **15. thất bại (failure / 실패) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **14. Khi nào dùng 2PC, saga hay outbox?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. thất bại (failure / 실패) ma trận (matrix / 행렬)
 
@@ -187,6 +214,8 @@ participant unavailable
 
 Mỗi hàng cần một khôi phục (recovery / 복구) quy tắc (rule / 규칙). Nếu không thể giải thích kết quả (outcome / 결과) sau từng thất bại (failure / 실패), giao thức (protocol / 프로토콜) chưa hoàn chỉnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **15. thất bại (failure / 실패) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng chung (common / 공통) Misconceptions
 
 **“thử lại (retry / 재시도) sẽ làm hệ thống reliable.”** thử lại (retry / 재시도) không có idempotency có thể nhân đôi side tác động (effect / 효과).
@@ -197,6 +226,8 @@ Mỗi hàng cần một khôi phục (recovery / 복구) quy tắc (rule / 규�
 
 **“2PC và Raft là cùng một thứ.”** Chúng giải quyết các bài toán coordination khác nhau dù có thể được kết hợp.
 
+> **Chuyển mạch:** Trong **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) là bài toán **duy trì một câu chuyện nghiệp vụ nhất quán khi không có một nơi duy nhất kiểm soát toàn bộ sự thật và thất bại (failure / 실패) có thể xảy ra giữa mọi bước**.
@@ -205,4 +236,4 @@ Thay vì hỏi “làm sao quay lui (rollback / 롤백) mọi thứ?”, hãy h�
 
 Xem thêm: [MVCC/WAL](./00_mvcc_visibility_wal_and_recovery_internals.md), [Distributed Systems](../../06_networks_distributed_systems/advanced/README.md) và [Idempotency](../../08_software_systems/advanced/05_idempotency_and_deduplication_at_scale.md).
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mvcc visibility wal and recovery internals](./00_mvcc_visibility_wal_and_recovery_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

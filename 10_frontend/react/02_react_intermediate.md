@@ -1,7 +1,6 @@
 # React Master ghi chú (note / 노트) — Intermediate
 
-> **Mạch đọc:** Đọc **React Master ghi chú (note / 노트) — Intermediate** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Mô hình hóa trạng thái (state / 상태) trước khi học Hook nâng cao** sang **1A. Rules of React và Rules of Hooks**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mô hình hóa trạng thái (state / 상태) trước khi học Hook nâng cao** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1A. Rules of React và Rules of Hooks** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Mục tiêu của mức (level / 수준) này là chuyển từ “biết viết thành phần (component / 컴포넌트)” sang “hiểu vòng đời dữ liệu, tác động (effect / 효과), ref, reducer, ngữ cảnh (context / 맥락), custom Hook, luồng dữ liệu (data flow / 데이터 흐름) và kiến trúc tính năng (feature / 기능) ở mức ứng dụng thật”.
 
@@ -32,11 +31,15 @@ const completedItems = items.filter(item => item.done);
 
 Nguyên tắc này giảm duplicate nguồn chuẩn (source of truth / 정본) và giảm tác động (effect / 효과) không cần thiết.
 
+> **Chuyển mạch:** State model xác định invariant trước khi Hook được chọn; Rules of React/Hooks biến invariant đó thành điều kiện để component render thuần và Hook gọi đúng vị trí. `useEffect` tiếp theo chỉ xử lý synchronization với hệ thống bên ngoài.
+
 ## 1A. Rules of React và Rules of Hooks
 
 Hook phải gọi ở top mức (level / 수준) của hàm (function / 함수) thành phần (component / 컴포넌트) hoặc Custom Hook, không tùy ý trong điều kiện (condition / 조건), vòng lặp (loop / 루프), nested hàm (function / 함수) hay sự kiện (event / 이벤트) handler. React dựa vào thứ tự lời gọi (call / 호출) ổn định để ghép mỗi Hook với trạng thái (state / 상태) tương ứng giữa các kết xuất (render / 렌더링); vì vậy `eslint-plugin-react-hooks` là tính đúng đắn (correctness / 정확성) tooling, không chỉ style.
 
 Trước React 16.8, tái sử dụng stateful lô-gic (logic / 논리) chủ yếu qua lớp (class / 클래스), HOC và kết xuất (render / 렌더링) props. Hooks giảm wrapper nesting và colocate concern tốt hơn nhưng không làm HOC/kết xuất (render / 렌더링) props sai; chúng vẫn gặp trong Redux/router/thư viện (library / 라이브러리) cũ. di chuyển (migration / 마이그레이션) nên chuyển concern chứ không search-replace cú pháp (syntax / 문법).
+
+> **Chuyển mạch:** Rules of Hooks đặt điều kiện gọi Hook; `useEffect` áp dụng điều kiện đó cho setup/cleanup và external sync. Phần class lifecycle tiếp theo đối chiếu cùng intent trong code React cũ.
 
 ## 2. `useEffect`: synchronization chứ không phải “mã (code / 코드) chạy sau kết xuất (render / 렌더링)”
 
@@ -67,13 +70,14 @@ Không truyền phụ thuộc (dependency / 의존성) array nghĩa tác động
 >
 > `useEffect` có từ React 16.8, nhưng React 18 Strict chế độ (mode / 모드) khiến các tác động (effect / 효과) viết sai cleanup dễ lộ hơn vì development có thể setup/cleanup thêm để kiểm tra. Vì vậy các tutorial cũ mô tả `useEffect(..., [])` đơn giản là “`componentDidMount` cho hàm (function / 함수) thành phần (component / 컴포넌트)” là cách hiểu thiếu chính xác. mô hình tư duy (mental model / 사고 모델) synchronization trong tài liệu này phù hợp hơn với React 18/19 và tính đồng thời (concurrency / 동시성).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **2. useEffect: synchronization chứ không phải “mã (code / 코드) chạy sau kết xuất (render / 렌더링)”** xác định đầu vào; **2A. lớp (class / 클래스) vòng đời (lifecycle / 생명주기) đầy đủ và cách đọc mã (code / 코드) React cũ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **2B. tác động (effect / 효과) có vòng đời (lifecycle / 생명주기) start/stop riêng, không phải bản sao vòng đời (lifecycle / 생명주기) thành phần (component / 컴포넌트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2A. lớp (class / 클래스) vòng đời (lifecycle / 생명주기) đầy đủ và cách đọc mã (code / 코드) React cũ
 
 Trước Hooks, vòng đời (lifecycle / 생명주기) methods là cách chính để chạy lô-gic (logic / 논리) theo các giai đoạn của lớp (class / 클래스) thành phần (component / 컴포넌트). Khi bảo trì mã (code / 코드) cũ, đừng chỉ nhớ tên phương thức (method / 메서드); cần hiểu phương thức (method / 메서드) thuộc kết xuất (render / 렌더링) phase hay lần ghi nhận (commit / 커밋) phase và vì sao một số vòng đời (lifecycle / 생명주기) bị đánh dấu `UNSAFE_`.
 
 ### Mount lifecycle
 Phần này nối mạch bài học với “Mount lifecycle”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 class ChatRoom extends React.Component {
@@ -129,7 +133,6 @@ useEffect(() => {
 ### Update lifecycle: `componentDidUpdate`
 Phần này nối mạch bài học với “Update lifecycle: `componentDidUpdate`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 componentDidUpdate(prevProps) {
   if (
@@ -152,7 +155,6 @@ Lớp (class / 클래스) nhà phát triển (developer / 개발자) phải tự
 
 ### `shouldComponentUpdate`
 Phần này nối mạch bài học với “`shouldComponentUpdate`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 shouldComponentUpdate(
@@ -210,7 +212,6 @@ Không có Hook một-một hoàn toàn tương đương mọi chi tiết vòng 
 ### `static getDerivedStateFromProps`
 Phần này nối mạch bài học với “`static getDerivedStateFromProps`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 static getDerivedStateFromProps(
   props,
@@ -252,6 +253,8 @@ UNSAFE_componentWillUpdate()
 
 Vấn đề của chúng là side tác động (effect / 효과) hoặc các giả định (assumptions / 가정들) trong render-phase công việc (work / 작업) không an toàn với rendering có thể bị restart, suspend hoặc bỏ. Không migrate bằng search-replace. `componentWillMount` thường tách initialization vào constructor/trạng thái (state / 상태) initializer và side tác động (effect / 효과) vào mount tác động (effect / 효과)/vòng đời (lifecycle / 생명주기); `componentWillReceiveProps` thường thay bằng kết xuất (render / 렌더링) derivation, controlled dữ liệu (data / 데이터) hoặc reducer; `componentWillUpdate` thường chuyển sang `componentDidUpdate`, `getSnapshotBeforeUpdate` hoặc bố cục (layout / 레이아웃)/tác động (effect / 효과) lô-gic (logic / 논리) tùy mục tiêu.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **2A. lớp (class / 클래스) vòng đời (lifecycle / 생명주기) đầy đủ và cách đọc mã (code / 코드) React cũ** xác định đầu vào; **2B. tác động (effect / 효과) có vòng đời (lifecycle / 생명주기) start/stop riêng, không phải bản sao vòng đời (lifecycle / 생명주기) thành phần (component / 컴포넌트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. phụ thuộc (dependency / 의존성) và stale closure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2B. tác động (effect / 효과) có vòng đời (lifecycle / 생명주기) start/stop riêng, không phải bản sao vòng đời (lifecycle / 생명주기) thành phần (component / 컴포넌트)
 
 Thành phần (component / 컴포넌트) được mô tả bằng mount/cập nhật (update / 업데이트)/unmount, nhưng một tác động (effect / 효과) nên được đọc như một **synchronization tiến trình (process / 프로세스)** có hai hành động: bắt đầu đồng bộ và dừng đồng bộ. Khi phụ thuộc (dependency / 의존성) thay đổi, React có thể stop tiến trình (process / 프로세스) cũ rồi start tiến trình (process / 프로세스) mới dù thành phần (component / 컴포넌트) vẫn là cùng một instance. Vì vậy một tác động (effect / 효과) kết nối room theo `roomId` nên được hiểu là “giữ liên kết (connection / 연결) bên ngoài khớp với `roomId` hiện tại”, không phải “chạy đoạn mã (code / 코드) này khi cập nhật (update / 업데이트)”.
@@ -259,6 +262,8 @@ Thành phần (component / 컴포넌트) được mô tả bằng mount/cập nh
 Phụ thuộc (dependency / 의존성) array không phải lịch hẹn do nhà phát triển (developer / 개발자) tùy chọn. Nó là mô tả các reactive values mà tiến trình (process / 프로세스) đọc. Nếu phải tắt lint để giữ phụ thuộc (dependency / 의존성) thiếu, thường mô hình tư duy (mental model / 사고 모델) đang sai: hoặc lô-gic (logic / 논리) là sự kiện (event / 이벤트) nên đặt trong sự kiện (event / 이벤트) handler, hoặc giá trị (value / 값) nên được derive trong kết xuất (render / 렌더링), hoặc tác động (effect / 효과) đang gộp nhiều tiến trình (process / 프로세스) độc lập. Một tác động (effect / 효과) tốt thường có setup/cleanup đối xứng và có thể chạy lại mà không làm hệ thống ngoài bị leak hoặc nhân đôi subscription.
 
 Khi migrate lớp (class / 클래스), đừng ghép máy móc `componentDidMount + componentDidUpdate + componentWillUnmount` vào một tác động (effect / 효과) chỉ vì tên vòng đời (lifecycle / 생명주기) tương ứng. Hãy xác định tài nguyên (resource / 자원) nào cần synchronize, phụ thuộc (dependency / 의존성) nào làm cấu hình (configuration / 구성) của tài nguyên (resource / 자원) đó, rồi viết một start/stop cycle cho chính tài nguyên (resource / 자원) ấy.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **2B. tác động (effect / 효과) có vòng đời (lifecycle / 생명주기) start/stop riêng, không phải bản sao vòng đời (lifecycle / 생명주기) thành phần (component / 컴포넌트)** xác định đầu vào; **3. phụ thuộc (dependency / 의존성) và stale closure** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Cleanup, race điều kiện (condition / 조건) và AbortController** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. phụ thuộc (dependency / 의존성) và stale closure
 
@@ -301,6 +306,8 @@ useEffect(() => {
 
 Không dùng `useMemo` theo phản xạ chỉ để “làm phụ thuộc (dependency / 의존성) yên”. Trước tiên sửa cấu trúc.
 
+> **Chuyển mạch:** Dependency và stale closure giải thích vì sao effect đọc dữ liệu cũ; cleanup, race control và `AbortController` tiếp theo bảo vệ request lifecycle.
+
 ## 4. Cleanup, race điều kiện (condition / 조건) và `AbortController`
 
 Fetch trong tác động (effect / 효과) có thể gặp race điều kiện (condition / 조건): yêu cầu (request / 요청) cũ trả sau yêu cầu (request / 요청) mới rồi ghi đè dữ liệu. Có thể guard bằng flag hoặc tốt hơn, hủy yêu cầu (request / 요청) nếu API hỗ trợ.
@@ -335,6 +342,8 @@ useEffect(() => {
 
 Ở môi trường vận hành (production / 운영 환경), server-state thư viện (library / 라이브러리) hoặc khung phần mềm (framework / 프레임워크) dữ liệu (data / 데이터) tầng (layer / 계층) thường xử lý caching, dedupe, thử lại (retry / 재시도) và race điều kiện (condition / 조건) tốt hơn fetch tác động (effect / 효과) tự viết ở mọi thành phần (component / 컴포넌트).
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **5. Khi nào không cần tác động (effect / 효과)?** tiếp nhận điểm tựa từ **4. Cleanup, race điều kiện (condition / 조건) và AbortController** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5A. Hook mô hình tư duy (mental model / 사고 모델): bộ nhớ (memory / 메모리) slot theo thành phần (component / 컴포넌트) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Khi nào không cần tác động (effect / 효과)?
 
 Không dùng tác động (effect / 효과) để tính derived trạng thái (state / 상태):
@@ -356,6 +365,8 @@ thường tốt hơn mẫu (pattern / 패턴) set một flag rồi tác động 
 
 Tác động (effect / 효과) phù hợp khi ngữ nghĩa (semantics / 의미론) là: “Vì thành phần (component / 컴포넌트) hiện đang tồn tại với cấu hình X nên tài nguyên (resource / 자원) bên ngoài phải được đồng bộ với X.”
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **5A. Hook mô hình tư duy (mental model / 사고 모델): bộ nhớ (memory / 메모리) slot theo thành phần (component / 컴포넌트) định danh (identity / 식별자)** gom các mảnh từ **5. Khi nào không cần tác động (effect / 효과)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **6. useRef** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5A. Hook mô hình tư duy (mental model / 사고 모델): bộ nhớ (memory / 메모리) slot theo thành phần (component / 컴포넌트) định danh (identity / 식별자)
 
 Hooks không phải magic hàm (function / 함수) toàn cục. React gắn trạng thái (state / 상태)/ref/tác động (effect / 효과) bookkeeping với thành phần (component / 컴포넌트) định danh (identity / 식별자) và dựa vào **thứ tự Hook lời gọi (call / 호출) ổn định** để nối lần kết xuất (render / 렌더링) hiện tại với dữ liệu của lần kết xuất (render / 렌더링) trước. Đây là lý do Hook phải được gọi ở top mức (level / 수준) thay vì điều kiện (condition / 조건) hoặc vòng lặp (loop / 루프).
@@ -363,6 +374,8 @@ Hooks không phải magic hàm (function / 함수) toàn cục. React gắn tr�
 Mỗi kết xuất (render / 렌더링) tạo closure mới. Hook không “cập nhật biến cũ”; React gọi thành phần (component / 컴포넌트) lại, trả snapshot mới và các callback của kết xuất (render / 렌더링) đó đóng trên snapshot tương ứng. `useRef` là ngoại lệ có đối tượng (object / 객체) định danh (identity / 식별자) ổn định nhưng mutation `current` không yêu cầu kết xuất (render / 렌더링), vì thế ref phù hợp dữ liệu kỹ thuật chứ không phải nguồn chuẩn (source of truth / 정본) cho UI.
 
 Custom Hook chia sẻ **lô-gic (logic / 논리) và giao thức (protocol / 프로토콜)**, không chia sẻ một trạng thái (state / 상태) instance mặc định. Hai thành phần (component / 컴포넌트) gọi `useOnlineStatus()` thường có hai Hook instances; nếu chúng cùng subscribe một bên ngoài (external / 외부) store thì nguồn (source / 소스) dữ liệu được chia sẻ nằm ở store/subscription tầng (layer / 계층), không phải do “Hook là toàn cục (global / 전역)”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **6. useRef** gom các mảnh từ **5A. Hook mô hình tư duy (mental model / 사고 모델): bộ nhớ (memory / 메모리) slot theo thành phần (component / 컴포넌트) định danh (identity / 식별자)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **7. DOM ref và imperative escape hatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. `useRef`
 
@@ -378,9 +391,10 @@ function start() {
 
 Ref phù hợp với timer ID, DOM nút (node / 노드), instance thư viện, observer, mutable technical giá trị (value / 값). Không dùng ref thay trạng thái (state / 상태) nếu UI cần phản ánh giá trị đó.
 
+> **Chuyển mạch:** `useRef` giữ mutable handle mà không tạo render; DOM ref dùng handle đó cho focus, measurement và imperative integration. `forwardRef`/ref-as-prop tiếp theo mở handle qua component boundary.
+
 ## 7. DOM ref và imperative escape hatch
 Phần này nối mạch bài học với “7. DOM ref và imperative escape hatch”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 function SearchBox() {
@@ -400,6 +414,8 @@ function SearchBox() {
 ```
 
 Ref phù hợp cho focus, selection, scroll, đo lường (measurement / 측정) hoặc tích hợp DOM thư viện (library / 라이브러리) imperative. Không mutate DOM mà React đang quản lý theo cách xung đột với kết xuất (render / 렌더링).
+
+> **Chuyển mạch:** DOM ref là imperative boundary; `forwardRef` và ref-as-prop quyết định boundary đó được expose thế nào. Lịch sử refs tiếp theo giải thích vì sao các dạng cũ vẫn còn trong codebase React 18.
 
 ## 8. `forwardRef` và ref-as-prop
 
@@ -425,13 +441,14 @@ Không xóa `forwardRef` tùy tiện trong thư viện (library / 라이브러�
 >
 > `useRef` bản thân không phải API mới của React 19. Thay đổi đáng chú ý là **hàm (function / 함수) thành phần (component / 컴포넌트) có thể nhận `ref` như prop trong React 19**, làm giảm nhu cầu dùng `forwardRef` trong mã (code / 코드) mới. Tuy vậy `forwardRef` vẫn xuất hiện dày đặc trong thư viện (library / 라이브러리) và codebase React 18, nên cần biết cả hai dạng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **7A. Lịch sử refs: string refs → callback refs → createRef → useRef → ref-as-prop** tiếp nhận điểm tựa từ **8. forwardRef và ref-as-prop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7B. findDOMNode: escape hatch legacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7A. Lịch sử refs: string refs → callback refs → `createRef` → `useRef` → ref-as-prop
 
 Refs thay đổi nhiều qua lịch sử React.
 
 ### String refs — legacy và đã bị remove
 Phần này nối mạch bài học với “String refs — legacy và đã bị remove”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 class Search extends React.Component {
@@ -449,7 +466,6 @@ React lưu nút (node / 노드) vào `this.refs.input`. String refs có hạn ch
 
 ### Callback refs
 Phần này nối mạch bài học với “Callback refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 class Search extends React.Component {
@@ -474,7 +490,6 @@ Callback refs vẫn là API hợp lệ và rất linh hoạt.
 ### `React.createRef` — React 16.3+
 Phần này nối mạch bài học với “`React.createRef` — React 16.3+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 class Search extends React.Component {
   inputRef = React.createRef();
@@ -496,7 +511,6 @@ class Search extends React.Component {
 ### `useRef` — React 16.8+
 Phần này nối mạch bài học với “`useRef` — React 16.8+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 function Search() {
   const inputRef = useRef(null);
@@ -515,7 +529,6 @@ function Search() {
 
 ### `forwardRef` — React 16.3+
 Phần này nối mạch bài học với “`forwardRef` — React 16.3+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 const MyInput = forwardRef(
@@ -547,6 +560,8 @@ function MyInput({
 ```
 
 Thư viện (library / 라이브러리) hỗ trợ (support / 지원) React 18 vẫn cần `forwardRef`, vì vậy không nên xóa nó chỉ vì dự án (project / 프로젝트) chính đã lên React 19.
+
+> **Chuyển mạch:** Ref history cho thấy boundary ngày càng explicit; `findDOMNode` là escape hatch phá boundary đó. `useReducer` tiếp theo chuyển từ imperative node access sang explicit state transitions.
 
 ## 7B. `findDOMNode`: escape hatch legacy
 
@@ -588,6 +603,8 @@ function AutoFocus() {
 ```
 
 Nếu Strict chế độ (mode / 모드) báo warning `findDOMNode`, phụ thuộc (dependency / 의존성) cũ có thể là nguồn warning; cần upgrade hoặc thay tích hợp (integration / 통합).
+
+> **Chuyển mạch:** `useReducer` thay imperative escape hatch bằng state machine cục bộ có action và transition rõ. Phần 9A làm rõ reducer không phải Redux thu nhỏ mà là pure transition function.
 
 ## 9. `useReducer`
 
@@ -633,6 +650,8 @@ dispatch({
 
 Reducer phải pure. hành động (action / 동작) nên mô tả intent hoặc điều xảy ra thay vì cách mutate chi tiết.
 
+> **Chuyển mạch:** `useReducer` cung cấp state transition thuần và action intent; context tiếp theo quyết định cách truyền state/dispatch qua subtree mà không prop-drill.
+
 ## 9A. Reducer là chuyển tiếp (transition / 전이) hàm (function / 함수), không phải Redux thu nhỏ
 
 `useReducer` hữu ích khi nhiều sự kiện (event / 이벤트) cùng thay đổi một trạng thái (state / 상태) mô hình (model / 모델) có quy tắc (rule / 규칙) rõ. Reducer nên trả next trạng thái (state / 상태) từ `(state, action)` mà không làm side tác động (effect / 효과). sự kiện (event / 이벤트) handler chịu trách nhiệm tạo hành động (action / 동작); reducer chịu trách nhiệm tính chuyển tiếp (transition / 전이); tác động (effect / 효과) chỉ dùng nếu chuyển tiếp (transition / 전이) cần đồng bộ một hệ thống bên ngoài sau lần ghi nhận (commit / 커밋).
@@ -653,6 +672,8 @@ function reducer(state, action) {
 ```
 
 Khi trạng thái (state / 상태) bắt đầu có các trạng thái loại trừ nhau như `idle/loading/success/error`, một trường dữ liệu (field / 필드) `status` hoặc máy trạng thái (state machine / 상태 머신) rõ ràng thường tốt hơn nhiều boolean có thể rơi vào tổ hợp vô nghĩa. Reducer không bắt buộc cho mọi form; nó đáng giá khi chuyển tiếp (transition / 전이) ngữ nghĩa (semantics / 의미론) quan trọng hơn độ ngắn của setter.
+
+> **Chuyển mạch:** Reducer mô tả state transition; `useContext` đưa state và dispatch tới consumer theo subtree boundary. Legacy context tiếp theo giải thích cùng nhu cầu trong API cũ và rủi ro migration.
 
 ## 10. ngữ cảnh (context / 맥락) và `useContext`
 
@@ -684,6 +705,8 @@ Ngữ cảnh (context / 맥락) phù hợp theme, locale, auth/session view-mode
 > ### phiên bản (version / 버전) ghi chú (note / 노트) — Provider cú pháp (syntax / 문법) của React 19
 >
 > Với React 18 và mã (code / 코드) cũ, provider thường viết `<ThemeContext.Provider value={theme}>`. React 19 cho phép viết ngắn trực tiếp `<ThemeContext value={theme}>`. Hai đoạn mã (code / 코드) thể hiện cùng ý tưởng luồng dữ liệu (data flow / 데이터 흐름); khác biệt chủ yếu là cú pháp (syntax / 문법)/phiên bản (version / 버전). Khi viết thư viện (library / 라이브러리) phải cân nhắc phiên bản (version / 버전) tối thiểu mà gói (package / 패키지) hỗ trợ.
+
+> **Chuyển mạch:** Legacy context có cùng mục tiêu truyền dependency nhưng boundary và typing kém explicit hơn. Reducer + context tiếp theo ghép state transition với provider scope rõ ràng.
 
 ## 10A. ngữ cảnh (context / 맥락) cũ: `contextTypes` và `getChildContext`
 
@@ -764,6 +787,8 @@ const theme =
 
 Legacy `contextTypes`/`getChildContext` bị deprecate từ React 16.6 và remove trong React 19.
 
+> **Chuyển mạch:** Provider scope quyết định state ownership và rerender fan-out; custom hooks tiếp theo đóng gói logic dùng lại mà vẫn tạo state riêng cho từng component instance.
+
 ## 11. Reducer + ngữ cảnh (context / 맥락)
 
 Một mẫu (pattern / 패턴) client-state theo subtree:
@@ -786,6 +811,8 @@ function TodosProvider({ children }) {
 ```
 
 Mẫu (pattern / 패턴) này tốt khi phạm vi (scope / 범위) rõ. Nếu trạng thái (state / 상태) lớn, cập nhật (update / 업데이트) liên tục và nhiều bên tiêu thụ (consumer / 소비자) cần selector, bên ngoài (external / 외부) store có thể phù hợp hơn.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **12. Custom Hooks** tiếp nhận điểm tựa từ **11. Reducer + ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12A. HOC và kết xuất (render / 렌더링) Props: mẫu (pattern / 패턴) tái sử dụng lô-gic (logic / 논리) trước Custom Hooks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Custom Hooks
 
@@ -821,6 +848,8 @@ const { data, error, status, refetch } = useUser(userId);
 ```
 
 Đừng expose quá nhiều setter nội bộ nếu cần giữ bất biến (invariant / 불변식).
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **12A. HOC và kết xuất (render / 렌더링) Props: mẫu (pattern / 패턴) tái sử dụng lô-gic (logic / 논리) trước Custom Hooks** tiếp nhận điểm tựa từ **12. Custom Hooks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12B. Custom Hook đặc tả hợp đồng (contract / 계약): đầu vào (input / 입력), đầu ra (output / 출력), quyền sở hữu (ownership / 소유권) và tác động (effect / 효과) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12A. HOC và kết xuất (render / 렌더링) Props: mẫu (pattern / 패턴) tái sử dụng lô-gic (logic / 논리) trước Custom Hooks
 
@@ -863,7 +892,6 @@ HOC từng rất phổ biến trong Redux, routing và analytics. Nhược đi�
 ### Render Props
 Phần này nối mạch bài học với “Render Props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 <MousePosition>
   {position => (
@@ -879,7 +907,6 @@ Thành phần (component / 컴포넌트) sở hữu lô-gic (logic / 논리) nh�
 
 ### Custom Hook thay đổi điều gì?
 Phần này nối mạch bài học với “Custom Hook thay đổi điều gì?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 function Tooltip() {
@@ -897,6 +924,8 @@ function Tooltip() {
 
 Custom Hook tái sử dụng stateful lô-gic (logic / 논리) mà không tạo thêm wrapper thành phần (component / 컴포넌트). Tuy nhiên HOC/kết xuất (render / 렌더링) props không phải API bị remove; chúng vẫn hợp lệ khi thư viện (library / 라이브러리)/API phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **12A. HOC và kết xuất (render / 렌더링) Props: mẫu (pattern / 패턴) tái sử dụng lô-gic (logic / 논리) trước Custom Hooks** đã nêu tiêu chí phân biệt, còn **12B. Custom Hook đặc tả hợp đồng (contract / 계약): đầu vào (input / 입력), đầu ra (output / 출력), quyền sở hữu (ownership / 소유권) và tác động (effect / 효과) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. useMemo, useCallback, memo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12B. Custom Hook đặc tả hợp đồng (contract / 계약): đầu vào (input / 입력), đầu ra (output / 출력), quyền sở hữu (ownership / 소유권) và tác động (effect / 효과) ranh giới (boundary / 경계)
 
 Một Custom Hook tốt không chỉ gom vài Hook calls vào một hàm (function / 함수). Nó phải có đặc tả hợp đồng (contract / 계약) rõ: đầu vào (input / 입력) reactive nào điều khiển hành vi (behavior / 동작), đầu ra (output / 출력) nào là dữ liệu (data / 데이터) hay command, ai sở hữu trạng thái (state / 상태), và side tác động (effect / 효과) nằm ở đâu. Tên `use...` nói rằng hàm (function / 함수) tham gia React Hook mô hình (model / 모델); nó không đảm bảo lớp trừu tượng (abstraction / 추상화) tốt.
@@ -904,6 +933,8 @@ Một Custom Hook tốt không chỉ gom vài Hook calls vào một hàm (functi
 Nếu Hook trả một đối tượng (object / 객체) mới với nhiều callback mỗi kết xuất (render / 렌더링), bên tiêu thụ (consumer / 소비자) dùng memoization có thể bị vô hiệu hóa (invalidation / 무효화) liên tục. Nếu Hook giấu mạng (network / 네트워크) mutation, caller cần biết pending/lỗi (error / 오류)/cancellation ngữ nghĩa (semantics / 의미론). Nếu Hook chỉ bọc một dòng `useState`, lớp trừu tượng (abstraction / 추상화) có thể không mang thêm lĩnh vực (domain / 도메인) meaning.
 
 Khi đọc mã (code / 코드) cũ, HOC và kết xuất (render / 렌더링) props thường giải quyết cùng bài toán tái sử dụng stateful lô-gic (logic / 논리). di chuyển (migration / 마이그레이션) sang Hook nên giữ nguyên đặc tả hợp đồng (contract / 계약) nghiệp vụ trước, sau đó mới giảm wrapper hoặc prop injection; không cần rewrite HOC ổn định chỉ để “trông hiện đại”.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **12B. Custom Hook đặc tả hợp đồng (contract / 계약): đầu vào (input / 입력), đầu ra (output / 출력), quyền sở hữu (ownership / 소유권) và tác động (effect / 효과) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **13. useMemo, useCallback, memo** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. useId** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. `useMemo`, `useCallback`, `memo`
 
@@ -938,6 +969,8 @@ Không memo hóa theo nghi thức. Memoization làm mã (code / 코드) phức t
 >
 > `memo`, `useMemo` và `useCallback` tồn tại từ trước React 19. Tuy nhiên **React trình biên dịch (compiler / 컴파일러) 1.0** đã stable và có thể tự động memoize nhiều thành phần (component / 컴포넌트)/giá trị (value / 값). Vì vậy với codebase có trình biên dịch (compiler / 컴파일러), “bọc mọi thứ bằng `useMemo`/`useCallback`” càng không phải best practice. Vẫn phải hiểu ba API này để đọc mã (code / 코드) cũ, viết thư viện (library / 라이브러리), xử lý định danh (identity / 식별자) đặc tả hợp đồng (contract / 계약) và tối ưu bottleneck đã profile.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **14. useId** tiếp nhận điểm tựa từ **13. useMemo, useCallback, memo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. useLayoutEffect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. `useId`
 
 `useId` tạo ID ổn định phù hợp khả năng tiếp cận (accessibility / 접근성) và hydration:
@@ -961,6 +994,8 @@ Không dùng `useId` làm danh sách (list / 목록) key. Key phải đến từ
 >
 > `useId` được thêm ở React 18 để tạo ID ổn định giữa máy khách (client / 클라이언트)/máy chủ (server / 서버), đặc biệt hữu ích cho khả năng tiếp cận (accessibility / 접근성) và streaming SSR. Nếu dự án (project / 프로젝트) React 17 trở xuống, Hook này không tồn tại. Dù ở phiên bản (version / 버전) nào, `useId` **không dùng để tạo `key` cho danh sách (list / 목록)**; key phải đến từ định danh (identity / 식별자) của dữ liệu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **15. useLayoutEffect** tiếp nhận điểm tựa từ **14. useId** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Portals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. `useLayoutEffect`
 
 `useLayoutEffect` chạy ở timing cho phép đo bố cục (layout / 레이아웃) và cập nhật trước paint thích hợp:
@@ -974,9 +1009,10 @@ useLayoutEffect(() => {
 
 Chỉ dùng khi thật sự cần đo lường (measurement / 측정) hoặc tránh visual flicker. Nó có thể khối (block / 블록) paint; `useEffect` vẫn là mặc định.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **16. Portals** tiếp nhận điểm tựa từ **15. useLayoutEffect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. lỗi (error / 오류) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Portals
 Phần này nối mạch bài học với “16. Portals”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 import { createPortal } from "react-dom";
@@ -990,6 +1026,8 @@ function Modal({ children }) {
 ```
 
 Portal kết xuất (render / 렌더링) host DOM ở nơi khác nhưng vẫn thuộc React cây (tree / 트리). sự kiện (event / 이벤트) bubble theo React cây (tree / 트리). Phù hợp modal, tooltip, popover, overlay.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **16. Portals** đã nêu tiêu chí phân biệt, còn **17. lỗi (error / 오류) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. lazy và Suspense cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. lỗi (error / 오류) ranh giới (boundary / 경계)
 
@@ -1019,9 +1057,10 @@ class ErrorBoundary extends React.Component {
 
 Lỗi (error / 오류) ranh giới (boundary / 경계) không thay `try/catch` cho sự kiện (event / 이벤트) handler hoặc async thao tác (operation / 연산) tự gọi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **17. lỗi (error / 오류) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **18. lazy và Suspense cơ bản** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. dữ liệu (data / 데이터) fetching phía máy khách (client / 클라이언트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. `lazy` và Suspense cơ bản
 Phần này nối mạch bài học với “18. `lazy` và Suspense cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```jsx
 import { lazy, Suspense } from "react";
@@ -1042,6 +1081,8 @@ function App() {
 > ### phiên bản (version / 버전) ghi chú (note / 노트) — Suspense đã tiến hóa qua nhiều phiên bản (version / 버전)
 >
 > `React.lazy` và Suspense cho mã (code / 코드) splitting xuất hiện từ React 16.6, nhưng Suspense cho máy chủ (server / 서버) rendering/tính đồng thời (concurrency / 동시성) được mở rộng mạnh ở React 18 và tiếp tục phát triển ở React 19. Vì vậy khi đọc blog cũ, đừng suy ra rằng mọi ví dụ Suspense đều hỗ trợ dữ liệu (data / 데이터) fetching giống nhau. dữ liệu (data / 데이터) nguồn (source / 소스) phải tích hợp Suspense hoặc đi qua khung phần mềm (framework / 프레임워크)/thư viện (library / 라이브러리) hỗ trợ.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **18. lazy và Suspense cơ bản** nêu điều cần giải thích; **19. dữ liệu (data / 데이터) fetching phía máy khách (client / 클라이언트)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19A. dữ liệu (data / 데이터) fetching evolution: vòng đời (lifecycle / 생명주기) → tác động (effect / 효과) → dữ liệu (data / 데이터) tầng (layer / 계층) → Suspense/RSC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. dữ liệu (data / 데이터) fetching phía máy khách (client / 클라이언트)
 
@@ -1085,11 +1126,15 @@ function UserPage({ userId }) {
 
 Máy chủ (server / 서버) trạng thái (state / 상태) có đơn vị sở hữu (owner / 오너) nằm ngoài máy khách (client / 클라이언트) và có thể stale; máy khách (client / 클라이언트) UI trạng thái (state / 상태) như modal open lại thuộc app hiện tại. Không trộn tùy tiện hai loại này.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **19. dữ liệu (data / 데이터) fetching phía máy khách (client / 클라이언트)** nêu điều cần giải thích; **19A. dữ liệu (data / 데이터) fetching evolution: vòng đời (lifecycle / 생명주기) → tác động (effect / 효과) → dữ liệu (data / 데이터) tầng (layer / 계층) → Suspense/RSC** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Router và URL trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19A. dữ liệu (data / 데이터) fetching evolution: vòng đời (lifecycle / 생명주기) → tác động (effect / 효과) → dữ liệu (data / 데이터) tầng (layer / 계층) → Suspense/RSC
 
 Lớp (class / 클래스) mã (code / 코드) cũ thường fetch ở `componentDidMount`/`componentDidUpdate`; Hooks chuyển synchronization tương tự sang `useEffect`. Fetch tác động (effect / 효과) thủ công vẫn phải tự xử lý cancellation, race, bộ nhớ đệm (cache / 캐시), thử lại (retry / 재시도), dedupe và vô hiệu hóa (invalidation / 무효화), nên môi trường vận hành (production / 운영 환경) thường chuyển máy chủ (server / 서버) trạng thái (state / 상태) sang truy vấn (query / 쿼리)/khung phần mềm (framework / 프레임워크) dữ liệu (data / 데이터) tầng (layer / 계층). Suspense/RSC lại thay nơi yêu cầu (request / 요청) bắt đầu và cách loading được reveal; Suspense không tự biến mọi `fetch()` thành bộ nhớ đệm (cache / 캐시).
 
 Old vòng đời (lifecycle / 생명주기) fetch vẫn gặp nhiều trong React 15–17 và không cần rewrite chỉ vì dùng lớp (class / 클래스). Migrate khi quyền sở hữu (ownership / 소유권), cancellation, bộ nhớ đệm (cache / 캐시) hoặc routing kiến trúc (architecture / 아키텍처) thực sự tốt hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **19A. dữ liệu (data / 데이터) fetching evolution: vòng đời (lifecycle / 생명주기) → tác động (effect / 효과) → dữ liệu (data / 데이터) tầng (layer / 계층) → Suspense/RSC** nêu điều cần giải thích; **20. Router và URL trạng thái (state / 상태)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Form thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Router và URL trạng thái (state / 상태)
 
@@ -1104,6 +1149,8 @@ Tìm kiếm (search / 검색) truy vấn (query / 쿼리), page, sort, filter v�
 Nếu reload/back/forward phải khôi phục cùng màn hình, URL thường là nguồn chuẩn (source of truth / 정본) tốt hơn cục bộ (local / 로컬) trạng thái (state / 상태).
 
 Học router theo đúng major phiên bản (version / 버전) vì API có thể thay đổi giữa các phiên bản (version / 버전).
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **21. Form thực tế** tiếp nhận điểm tựa từ **20. Router và URL trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21A. Forms qua các thế hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Form thực tế
 
@@ -1125,9 +1172,13 @@ async function handleSubmit(event) {
 
 Trình duyệt (browser / 브라우저) kiểm tra hợp lệ (validation / 검증) dùng `required`, `minLength`, `pattern`, `type="email"`. kiểm tra hợp lệ (validation / 검증) nghiệp vụ phức tạp có thể dùng lược đồ (schema / 스키마) validator/form thư viện (library / 라이브러리). máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검증) cải thiện UX; máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검증) mới bảo vệ integrity/bảo mật (security / 보안).
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **21A. Forms qua các thế hệ** tiếp nhận điểm tựa từ **21. Form thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21A. Forms qua các thế hệ
 
 Controlled form có từ thời lớp (class / 클래스): trường dữ liệu (field / 필드) nằm trong `this.state`; Hooks chuyển API sang `useState`/reducer nhưng source-of-truth mô hình (model / 모델) không đổi. môi trường vận hành (production / 운영 환경) form không nhất thiết controlled mọi trường dữ liệu (field / 필드): `FormData`, bản địa (native / 네이티브) kiểm tra hợp lệ (validation / 검증) hoặc trường dữ liệu (field / 필드) subscription có thể giảm coupling. React 19 Actions/`useActionState`/`useFormStatus`/`useOptimistic` thêm async mutation workflow nhưng không xóa controlled/uncontrolled fundamentals.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **22. khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **21A. Forms qua các thế hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. khả năng tiếp cận (accessibility / 접근성)
 
@@ -1149,6 +1200,8 @@ Label:
 ```
 
 Modal cần accessible name, focus management, escape hành vi (behavior / 동작) và restore focus. ARIA không thay ngữ nghĩa (semantic / 의미적) HTML.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **23. Testing** tiếp nhận điểm tựa từ **22. khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Cấu trúc dự án (project / 프로젝트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Testing
 
@@ -1172,6 +1225,8 @@ expect(
 ```
 
 Đơn vị (unit / 단위) kiểm thử (test / 테스트) phù hợp reducer/formatter. thành phần (component / 컴포넌트)/kiểm thử tích hợp (integration test / 통합 테스트) kiểm tra UI phối hợp. E2E kiểm tra trọng yếu (critical / 중요) luồng (flow / 흐름) bằng trình duyệt (browser / 브라우저) thật. Coverage 100% không phải mục tiêu nếu kiểm thử (test / 테스트) không mang confidence.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **24. Cấu trúc dự án (project / 프로젝트)** tiếp nhận điểm tựa từ **23. Testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Kiến trúc feature điển hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Cấu trúc dự án (project / 프로젝트)
 
@@ -1200,9 +1255,10 @@ src/
 
 Không đưa mã (code / 코드) vào `shared` quá sớm. Generalize sau khi nhu cầu tái sử dụng thật sự xuất hiện.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **25. Kiến trúc feature điển hình** tiếp nhận điểm tựa từ **24. Cấu trúc dự án (project / 프로젝트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25A. trạng thái (state / 상태) management bắt đầu từ quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Kiến trúc feature điển hình
 Phần này nối mạch bài học với “25. Kiến trúc feature điển hình”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```text
 UI component
@@ -1216,9 +1272,13 @@ HTTP API
 
 Trạng thái (state / 상태) nên ở gần nơi dùng. URL trạng thái (state / 상태) ở URL. máy chủ (server / 서버) dữ liệu (data / 데이터) ở server-state bộ nhớ đệm (cache / 캐시). Form trạng thái (state / 상태) ở form. Truly toàn cục (global / 전역) máy khách (client / 클라이언트) trạng thái (state / 상태) chỉ đưa vào store/ngữ cảnh (context / 맥락) khi thực sự toàn cục (global / 전역).
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, sau nội dung của **25. Kiến trúc feature điển hình**, **25A. trạng thái (state / 상태) management bắt đầu từ quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **26. Anti-pattern thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25A. trạng thái (state / 상태) management bắt đầu từ quyền sở hữu (ownership / 소유권)
 
 Trước khi chọn ngữ cảnh (context / 맥락), Redux hay Zustand, hãy phân loại: cục bộ (local / 로컬) UI trạng thái (state / 상태) ở thành phần (component / 컴포넌트); form trạng thái (state / 상태) ở form; filter/page shareable ở URL; máy chủ (server / 서버) dữ liệu (data / 데이터) ở truy vấn (query / 쿼리)/khung phần mềm (framework / 프레임워크) bộ nhớ đệm (cache / 캐시); cross-feature máy khách (client / 클라이언트) trạng thái (state / 상태) mới là ứng viên bên ngoài (external / 외부) store. Redux/Flux đời cũ thường chứa mọi loại trạng thái (state / 상태) vì ecosystem thiếu specialized layers. Old Redux vẫn hợp lý khi lĩnh vực (domain / 도메인) cần selector, middleware, devtools hoặc toàn cục (global / 전역) sự kiện (event / 이벤트) luồng (flow / 흐름); không migrate chỉ vì thư viện (library / 라이브러리) mới ngắn hơn.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **26. Anti-pattern thường gặp** tiếp nhận điểm tựa từ **25A. trạng thái (state / 상태) management bắt đầu từ quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Checklist Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Anti-pattern thường gặp
 
@@ -1238,9 +1298,13 @@ const [name, setName] = useState(props.name);
 
 Nếu muốn luôn phản ánh prop, đây là lỗi. Chỉ bản sao (copy / 복사) khi cố ý tạo cục bộ (local / 로컬) draft có vòng đời (lifecycle / 생명주기) reset rõ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **27. Checklist Intermediate** tiếp nhận điểm tựa từ **26. Anti-pattern thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên bản (version / 버전) checkpoint trước khi sang Advanced** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Checklist Intermediate
 
 Bạn nên giải thích được tác động (effect / 효과) là synchronization chứ không phải vòng đời (lifecycle / 생명주기) callback chung; hiểu stale closure; phân biệt ref và trạng thái (state / 상태); biết reducer phù hợp ở đâu; hiểu ngữ cảnh (context / 맥락) không đồng nghĩa toàn cục (global / 전역) store; viết custom Hook có đặc tả hợp đồng (contract / 계약) rõ; hiểu manual memoization chỉ có lý do khi có hiệu năng (performance / 성능)/định danh (identity / 식별자) yêu cầu (requirement / 요구사항); phân biệt máy chủ (server / 서버) trạng thái (state / 상태) với máy khách (client / 클라이언트) trạng thái (state / 상태); xây form/routing/data-fetching luồng (flow / 흐름) có loading/lỗi (error / 오류)/cancellation; và viết kiểm thử (test / 테스트) theo hành vi người dùng (user / 사용자).
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **Phiên bản (version / 버전) checkpoint trước khi sang Advanced** tiếp nhận điểm tựa từ **27. Checklist Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) ghi chú (note / 노트) chuyển tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phiên bản (version / 버전) checkpoint trước khi sang Advanced
 
@@ -1248,8 +1312,10 @@ Bạn nên giải thích được tác động (effect / 효과) là synchroniza
 
 Khi bản sao (copy / 복사) mã (code / 코드) từ tài liệu hiện hành, luôn kiểm tra API đó thuộc `react`, `react-dom`, React máy chủ (server / 서버) Components hay khung phần mềm (framework / 프레임워크). Đây là kỹ năng versioning quan trọng hơn việc thuộc bảng changelog.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Intermediate**, **Cấp cao (senior / 시니어) ghi chú (note / 노트) chuyển tiếp** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) checkpoint trước khi sang Advanced** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Cấp cao (senior / 시니어) ghi chú (note / 노트) chuyển tiếp
 
 Khi ứng dụng có Suspense, chuyển tiếp (transition / 전이), streaming, Actions hoặc máy chủ (server / 서버) Components, mô hình tư duy (mental model / 사고 모델) “mount/cập nhật (update / 업데이트)/unmount” kiểu lớp (class / 클래스) cũ không còn đủ. mức (level / 수준) Advanced/cấp cao (senior / 시니어) sẽ tập trung vào kết xuất (render / 렌더링)/lần ghi nhận (commit / 커밋), tính đồng thời (concurrency / 동시성), quyền sở hữu (ownership / 소유권), boundaries và kiến trúc vận hành (production architecture / 운영 아키텍처).
 
-> **Bàn giao:** Sau **cấp cao (senior / 시니어) ghi chú (note / 노트) chuyển tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index](./00_index.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cấp cao (senior / 시니어) ghi chú (note / 노트) chuyển tiếp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

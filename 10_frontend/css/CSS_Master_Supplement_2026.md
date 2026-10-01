@@ -1,6 +1,6 @@
 # CSS Master Supplement 2026
 
-> **Mạch đọc:** Đọc **CSS Master Supplement 2026** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Những phần chuyên sâu sau CSSBeginnertoSenior2026.md** sang **Quy ước thuật ngữ Việt–Anh**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **CSS Master Supplement 2026**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Những phần chuyên sâu sau CSSBeginnertoSenior2026.md** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quy ước thuật ngữ Việt–Anh** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Những phần chuyên sâu sau `CSS_Beginner_to_Senior_2026.md`
 
@@ -39,10 +39,11 @@
 
 ---
 
+> **Chuyển mạch:** Beginner-to-Senior đã thiết lập thuật ngữ và mental model; supplement chỉ mở rộng các boundary còn thiếu. Canonical route tiếp theo xác định phần nào đã có owner để supplement không lặp lại.
+
 ## Quy ước thuật ngữ Việt–Anh
 
 Trong tài liệu này, thuật ngữ chuyên môn được ưu tiên diễn đạt bằng tiếng Việt tự nhiên và giữ thuật ngữ gốc bên cạnh để dễ đối chiếu. Ví dụ: **cơ chế phân tầng (cascade)**, **độ đặc hiệu (specificity)**, **kế thừa (inheritance)**, **mô hình hộp (box model / 박스 모델)**, **luồng bố cục thông thường (normal flow / 일반 흐름)**, **ngữ cảnh định dạng (formatting context / 서식 컨텍스트)**, **khối chứa tham chiếu (containing block / 컨테이닝 블록)**, **định cỡ nội tại (intrinsic sizing / 내재 크기 결정)** và **ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)**. Tên thuộc tính (property / 속성), giá trị (value / 값), selector, at-rule và API khi xuất hiện dưới dạng mã vẫn được giữ nguyên để không làm sai cú pháp.
-
 
 # 0. chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어) đã đủ đến đâu?
 
@@ -54,6 +55,7 @@ Hiệu năng (performance / 성능) cũng nên được hiểu theo vô hiệu h
 
 Khi rà soát (review / 검토) CSS môi trường vận hành (production / 운영 환경), hãy trả lời được bốn câu: khai báo (declaration) nào thắng, box/ngữ cảnh định dạng (formatting context / 서식 컨텍스트) nào được tạo, thuật toán bố cục (layout algorithm) nào quyết định hình học (geometry / 기하학), và thay đổi này invalidate phần nào của chuỗi xử lý kết xuất (rendering pipeline). Khi bốn câu đó rõ, phần lớn CSS trường hợp biên (edge case / 경계 사례) trở thành hành vi (behavior / 동작) có thể dự đoán.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, sau nội dung của **Quy ước thuật ngữ Việt–Anh**, **Chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어) đã cover rất tốt** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nhưng “master CSS” còn cần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어) đã cover rất tốt
 
@@ -96,6 +98,8 @@ design patterns
 - gỡ lỗi (debug / 디버그) phần lớn bố cục (layout / 레이아웃) bugs,
 - thiết kế thành phần (component / 컴포넌트) hệ thống (system / 시스템),
 - rà soát (review / 검토) CSS ở mức cấp cao (senior / 시니어).
+
+> **Chuyển mạch:** Canonical handbook đã cover syntax và patterns; supplement đi sâu vào declared value, computed value và used value để giải thích cascade thật.
 
 ## Nhưng “master CSS” còn cần
 
@@ -161,6 +165,8 @@ Declared Value
 → Actual Value
 ```
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **1.1 Declared giá trị (value / 값)** tiếp nhận điểm tựa từ **Nhưng “master CSS” còn cần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.2 Cascaded giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1.1 Declared giá trị (value / 값)
 
 Tất cả các khai báo (declarations) có thể áp dụng:
@@ -177,6 +183,8 @@ Tất cả các khai báo (declarations) có thể áp dụng:
 
 Cả hai là declared các giá trị (values).
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **1.2 Cascaded giá trị (value / 값)** tiếp nhận điểm tựa từ **1.1 Declared giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.3 Specified giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1.2 Cascaded giá trị (value / 값)
 
 cơ chế phân tầng (cascade) chọn khai báo (declaration) thắng.
@@ -189,12 +197,16 @@ cơ chế phân tầng (cascade) chọn khai báo (declaration) thắng.
 
 có thể trở thành cascaded giá trị (value / 값).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **1.3 Specified giá trị (value / 값)** tiếp nhận điểm tựa từ **1.2 Cascaded giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.4 Computed giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1.3 Specified giá trị (value / 값)
 
 Nếu không có khai báo (declaration):
 - inherit nếu thuộc tính (property / 속성) inherited,
 - initial nếu không inherited,
 - hoặc các defaulting quy tắc (rule / 규칙) khác.
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **1.4 Computed giá trị (value / 값)** tiếp nhận điểm tựa từ **1.3 Specified giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.5 Used giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1.4 Computed giá trị (value / 값)
 
@@ -222,6 +234,8 @@ width: 50%;
 
 có thể chưa resolve thành px cho đến khi bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락) rõ.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **1.5 Used giá trị (value / 값)** tiếp nhận điểm tựa từ **1.4 Computed giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.6 Actual giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1.5 Used giá trị (value / 값)
 
 Trình duyệt (browser / 브라우저) thực sự dùng trong bố cục (layout / 레이아웃).
@@ -237,6 +251,8 @@ Bộ chứa (container / 컨테이너) 800px:
 ```text
 used width = 400px
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **1.6 Actual giá trị (value / 값)** tiếp nhận điểm tựa từ **1.5 Used giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1.6 Actual giá trị (value / 값)
 
@@ -272,6 +288,8 @@ width: red
 không hợp lệ.
 
 Trình duyệt (browser / 브라우저) không nhất thiết phương án dự phòng (fallback) về khai báo (declaration) trước theo cách beginner thường nghĩ.
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) lesson** tiếp nhận điểm tựa từ **1.6 Actual giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấp cao (senior / 시니어) lesson
 
@@ -349,6 +367,8 @@ Nhưng với `!important`, thứ tự tầng (layer / 계층) **đảo lại**.
 - bảo vệ foundational important rules,
 - tránh tầng (layer / 계층) mới dễ override important defaults.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Important** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp cao (senior / 시니어) mẫu (pattern / 패턴)
 
 Nếu buộc phải maintain third-party important CSS:
@@ -389,6 +409,8 @@ Concept:
 ```
 
 Nếu `.title` gần `.inner` phạm vi (scope / 범위) gốc (root / 루트) hơn, scoped quy tắc (rule / 규칙) gần hơn có thể thắng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Important** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Master lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Important
 
@@ -468,6 +490,8 @@ Bạn hiếm khi style trực tiếp anonymous box, nhưng nó giải thích:
 - các hộp dòng (line boxes),
 - bảng (table / 테이블) anonymous wrappers.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Master lesson** tiếp nhận điểm tựa từ **Important** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFC giải quyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Master lesson
 
 DOM cây (tree / 트리) ≠ bố cục (layout / 레이아웃) cây (tree / 트리).
@@ -517,6 +541,8 @@ display: grid;
 
 Không phải mọi cách tạo BFC đều có ngữ nghĩa (semantics / 의미론) giống nhau.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **BFC giải quyết** tiếp nhận điểm tựa từ **Master lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Idiom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## BFC giải quyết
 
 ### Float containment
@@ -536,6 +562,8 @@ BFC mới không wrap quanh bên ngoài (external / 외부) float theo cách nor
 ### Margin tương tác (interaction / 상호작용)
 
 BFC ảnh hưởng gộp lề (margin collapsing) hành vi (behavior / 동작).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Idiom** tiếp nhận điểm tựa từ **BFC giải quyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inline icon alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Idiom
 
@@ -611,6 +639,8 @@ super
 <percentage>
 ```
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Inline icon alignment** tiếp nhận điểm tựa từ **Idiom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không nên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Inline icon alignment
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -622,6 +652,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```
 
 có thể dùng để optical align icon với văn bản (text / 텍스트).
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Không nên** tiếp nhận điểm tựa từ **Inline icon alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) ghi chú (note / 노트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Không nên
 
@@ -657,6 +689,8 @@ Nhưng đường cơ sở (baseline) được lấy từ content/font/box rules.
 
 có thể trông không thẳng dù geometric center giống nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) ghi chú (note / 노트)** tiếp nhận điểm tựa từ **Không nên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điểm đặc biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
 Typography alignment ≠ geometric center.
@@ -679,6 +713,8 @@ Dùng chung (common / 공통):
 ```
 
 Một số cases khác tùy element/kiểu (type / 타입).
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Điểm đặc biệt** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) ghi chú (note / 노트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điểm đặc biệt
 
@@ -724,6 +760,8 @@ Nếu HTML có:
 
 Trình duyệt (browser / 브라우저) có thể reserve aspect ratio sớm, giảm CLS.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Điểm đặc biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **object-position** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -762,6 +800,8 @@ content object size
 `object-fit` thay đổi cách **tài nguyên (resource / 자원) bên trong box** fit.
 
 Nó không thay bố cục (layout / 레이아웃) kích thước (size / 크기) của element như `width`/`height`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **object-position** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) gỡ lỗi (debugging) question** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `object-position`
 
@@ -802,6 +842,8 @@ Ví dụ:
 
 `50%` có thể không resolve như người dùng (user / 사용자) mong đợi vì parent block-size không definite.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) gỡ lỗi (debugging) question** tiếp nhận điểm tựa từ **object-position** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intrinsic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp cao (senior / 시니어) gỡ lỗi (debugging) question
 
 > khối chứa tham chiếu (containing block / 컨테이닝 블록) có kích thước xác định (definite size) trên axis này không?
@@ -809,6 +851,8 @@ Ví dụ:
 ---
 
 # 18. Intrinsic vs định cỡ ngoại tại (extrinsic sizing) [MUST]
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Intrinsic** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) gỡ lỗi (debugging) question** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Extrinsic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Intrinsic
 
@@ -819,6 +863,8 @@ min-content
 max-content
 fit-content
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Extrinsic** tiếp nhận điểm tựa từ **Intrinsic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Extrinsic
 
@@ -960,6 +1006,8 @@ Ví dụ:
 - percentage translate relative element itself.
 - percentage background-position có thuật toán (algorithm / 알고리즘) riêng.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **Extrinsic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không collapse giữa flex/các phần tử Grid (grid items)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
 Không học `%` như đơn vị (unit / 단위).
@@ -977,6 +1025,8 @@ Vertical margins có thể collapse:
 
 Negative margins cũng tham gia collapsing thuật toán (algorithm / 알고리즘).
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Không collapse giữa flex/các phần tử Grid (grid items)** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Không collapse giữa flex/các phần tử Grid (grid items)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -988,6 +1038,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 ```
 
 child margins không collapse như normal khối (block / 블록) luồng (flow / 흐름).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Không collapse giữa flex/các phần tử Grid (grid items)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Print / columns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴)
 
@@ -1048,6 +1100,8 @@ break-inside
 orphans
 widows
 ```
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Print / columns** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Privacy ghi chú (note / 노트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Print / columns
 
@@ -1158,6 +1212,8 @@ Dùng chung (common / 공통):
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Privacy ghi chú (note / 노트)** tiếp nhận điểm tựa từ **Print / columns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **:user-invalid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Privacy ghi chú (note / 노트)
 
 `:visited` bị trình duyệt (browser / 브라우저) hạn chế style/truy vấn (query / 쿼리) vì lịch sử (history / 이력) privacy.
@@ -1180,6 +1236,8 @@ Ngoài chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시�
 :read-write
 :autofill
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **:user-invalid** tiếp nhận điểm tựa từ **Privacy ghi chú (note / 노트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **:open** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `:user-invalid`
 
@@ -1212,6 +1270,8 @@ Quan trọng:
 :picture-in-picture
 ```
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **:open** tiếp nhận điểm tựa từ **:user-invalid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **:popover-open** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `:open`
 
 Match element có open/closed trạng thái (state / 상태) và hiện đang open.
@@ -1226,6 +1286,8 @@ details:open > summary {
 
 Hoặc hiện đại (modern / 현대적) bản địa (native / 네이티브) controls/open UI khi applicable.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **:popover-open** tiếp nhận điểm tựa từ **:open** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **:modal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `:popover-open`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1235,6 +1297,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   opacity: 1;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **:modal** tiếp nhận điểm tựa từ **:popover-open** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu thiết kế (design pattern / 디자인 패턴) — Presentation phạm vi (range / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `:modal`
 
@@ -1331,6 +1395,8 @@ Use cases:
 - cú pháp (syntax / 문법) tooling,
 - collaboration annotations.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Mẫu thiết kế (design pattern / 디자인 패턴) — Presentation phạm vi (range / 범위)** tiếp nhận điểm tựa từ **:modal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Important** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu thiết kế (design pattern / 디자인 패턴) — Presentation phạm vi (range / 범위)
 
 Không mutate DOM chỉ để highlight văn bản (text / 텍스트).
@@ -1363,6 +1429,8 @@ z-index war
 overflow clipping ancestor
 stacking context traps
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Important** tiếp nhận điểm tựa từ **Mẫu thiết kế (design pattern / 디자인 패턴) — Presentation phạm vi (range / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dialog sizing mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Important
 
@@ -1397,6 +1465,8 @@ Trạng thái (state / 상태):
 dialog:modal {}
 dialog:open {}
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Dialog sizing mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Important** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dialog sizing mẫu (pattern / 패턴)
 
@@ -1481,6 +1551,8 @@ dialog {
 
 Exit/entry chính xác (exact / 정확한) cú pháp (syntax / 문법) cần kiểm thử (test / 테스트) theo mục tiêu (target / 대상) browsers.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) lesson** tiếp nhận điểm tựa từ **Dialog sizing mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Picker** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp cao (senior / 시니어) lesson
 
 Đừng fake dialog chuyển tiếp (transition / 전이) bằng JS hết thời gian chờ (timeout / 타임아웃) nếu nền tảng (platform / 플랫폼) đã hỗ trợ (support / 지원) vòng đời (lifecycle / 생명주기) declaratively.
@@ -1509,6 +1581,8 @@ appearance: base-select
 :checked
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Picker** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Option** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Picker
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1522,6 +1596,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 Picker hoạt động giống top-layer popover.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Option** tiếp nhận điểm tựa từ **Picker** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) — Native-first customization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Option
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1531,6 +1607,8 @@ option:checked {
   font-weight: 700;
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Mẫu (pattern / 패턴) — Native-first customization** tiếp nhận điểm tựa từ **Option** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **hidden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) — Native-first customization
 
@@ -1618,6 +1696,8 @@ Viewport hay ancestor?
 
 # 46. `overflow: hidden` vs `clip` [DEEP]
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **hidden** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) — Native-first customization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **clip** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `hidden`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1629,6 +1709,8 @@ overflow: hidden;
 - clip content,
 - có vùng chứa cuộn (scroll container) ngữ nghĩa (semantics / 의미론) trong nhiều contexts,
 - programmatic scrolling có thể liên quan.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **clip** tiếp nhận điểm tựa từ **hidden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) — Modal scroll containment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `clip`
 
@@ -1670,6 +1752,8 @@ auto
 contain
 none
 ```
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Mẫu (pattern / 패턴) — Modal scroll containment** tiếp nhận điểm tựa từ **clip** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) — Modal scroll containment
 
@@ -1731,6 +1815,8 @@ Browser-specific legacy các phần tử giả (pseudo-elements) như:
 
 vẫn thấy trong mã (code / 코드) cũ nhưng không phải portable tiêu chuẩn (standard / 표준) API.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) — Modal scroll containment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **scroll-margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
 Scrollbar styling là enhancement, không được làm scrollbar khó nhìn/khó dùng.
@@ -1763,6 +1849,8 @@ Chỉ dùng khi neo vị trí cuộn (scroll anchoring) tự động gây UX sai
 
 # 51. `scroll-margin` vs `scroll-padding` [MUST]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **scroll-margin** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **scroll-padding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `scroll-margin`
 
 Set trên mục tiêu (target / 대상):
@@ -1774,6 +1862,8 @@ section {
 ```
 
 Useful khi sticky header che anchor.
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **scroll-padding** tiếp nhận điểm tựa từ **scroll-margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **font-variant-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `scroll-padding`
 
@@ -1886,6 +1976,8 @@ Không cần ưu tiên học sớm, nhưng master CSS phải biết nền tảng
 
 # 56. Advanced Typography — Font tính năng (feature / 기능) điều khiển (control / 제어) [ADV]
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **font-variant-** tiếp nhận điểm tựa từ **scroll-padding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `font-variant-*`
 
 Ưu tiên high-level các thuộc tính (properties) khi có:
@@ -1926,6 +2018,8 @@ font-feature-settings: "liga" 1, "tnum" 1;
 ```
 
 Chỉ dùng khi high-level `font-variant-*` không đủ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **font-variant-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korean line breaking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
@@ -2008,6 +2102,8 @@ writing-mode
 text-orientation
 ruby-position
 ```
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Korean line breaking** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Korean line breaking
 
@@ -2136,6 +2232,8 @@ Mục tiêu:
 
 ⚠ Đây là tính năng (feature / 기능) hiện đại; tương thích trình duyệt (browser compatibility) phải được check trước môi trường vận hành (production / 운영 환경).
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Korean line breaking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Use trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴)
 
 phương án dự phòng (fallback):
@@ -2175,6 +2273,8 @@ Concept:
 ```
 
 Hoặc đơn vị (unit / 단위)/kiểu (type / 타입) cú pháp (syntax / 문법) theo mức hỗ trợ trình duyệt (browser support / 브라우저 지원).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Mẫu (pattern / 패턴)** cho ta quy tắc; **Use trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **replace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Use trường hợp (case / 사례)
 
@@ -2353,13 +2453,19 @@ add
 accumulate
 ```
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Use trường hợp (case / 사례)** cho ta quy tắc; **replace** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **add** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `replace`
 
 Tác động (effect / 효과) mới thay underlying giá trị (value / 값).
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **add** tiếp nhận điểm tựa từ **replace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **accumulate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `add`
 
 Bản dựng (build / 빌드) trên underlying giá trị (value / 값).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **accumulate** tiếp nhận điểm tựa từ **add** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu thiết kế (design pattern / 디자인 패턴) — Style ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `accumulate`
 
@@ -2595,6 +2701,8 @@ Mẫu (pattern / 패턴):
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Mẫu thiết kế (design pattern / 디자인 패턴) — Style ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **accumulate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pitfall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu thiết kế (design pattern / 디자인 패턴) — Style ngữ cảnh (context / 맥락)
 
 Thành phần (component / 컴포넌트) hành vi (behavior / 동작) có thể phụ thuộc mang tính ngữ nghĩa (semantic / 의미적) style trạng thái (state / 상태) của ancestor, không chỉ width.
@@ -2670,6 +2778,8 @@ console.log(styles.color);
 ```
 
 Nó expose resolved computed style biểu diễn (representation / 표현).
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Pitfall** tiếp nhận điểm tựa từ **Mẫu thiết kế (design pattern / 디자인 패턴) — Style ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Limitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pitfall
 
@@ -2846,6 +2956,8 @@ Style phân tán (distributed / 분산) light-DOM children qua `<slot>`.
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Pitfall** đã nêu tiêu chí phân biệt, còn **Limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mẫu thiết kế (design pattern / 디자인 패턴) — tường minh (explicit / 명시적) Styling Surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Limitation
 
 `::slotted()` mục tiêu (target / 대상) slotted element, không arbitrary deep descendants.
@@ -2875,6 +2987,8 @@ my-button::part(control) {
   border-radius: 999px;
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Limitation** đã nêu tiêu chí phân biệt, còn **Mẫu thiết kế (design pattern / 디자인 패턴) — tường minh (explicit / 명시적) Styling Surface** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Inline SVG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu thiết kế (design pattern / 디자인 패턴) — tường minh (explicit / 명시적) Styling Surface
 
@@ -2960,15 +3074,21 @@ Icon follow văn bản (text / 텍스트) color/theme automatically.
 
 # 100. Inline SVG vs `<img src="icon.svg">`
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Inline SVG** tiếp nhận điểm tựa từ **Mẫu thiết kế (design pattern / 디자인 패턴) — tường minh (explicit / 명시적) Styling Surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SVG qua <img>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Inline SVG
 
 CSS có thể mục tiêu (target / 대상) nội bộ SVG.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **SVG qua <img>** tiếp nhận điểm tựa từ **Inline SVG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) choice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## SVG qua `<img>`
 
 Document CSS không style nội bộ (internal / 내부) SVG DOM như inline cây (tree / 트리).
 
 Đây là replaced-resource ranh giới (boundary / 경계).
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) choice** tiếp nhận điểm tựa từ **SVG qua <img>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **clip-path** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấp cao (senior / 시니어) choice
 
@@ -3058,10 +3178,14 @@ Mask khác clip:
 
 # 104. `clip-path` vs `mask`
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) choice** xác định đầu vào; **clip-path** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **mask** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `clip-path`
 
 Good:
 - hard geometric ranh giới (boundary / 경계).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **clip-path** xác định đầu vào; **mask** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dùng chung (common / 공통) print adjustments** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `mask`
 
@@ -3084,6 +3208,8 @@ CSS không chỉ screen.
   }
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Dùng chung (common / 공통) print adjustments** tiếp nhận điểm tựa từ **mask** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **auto** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) print adjustments
 
@@ -3258,9 +3384,13 @@ table {
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **auto** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) print adjustments** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **fixed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `auto`
 
 Column width influenced bởi content.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **fixed** tiếp nhận điểm tựa từ **auto** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어) lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `fixed`
 
@@ -3337,6 +3467,8 @@ grid-template-columns:
 
 Bộ chứa (container / 컨테이너) width không chia hết → nhánh học (track / 트랙) kết xuất (render / 렌더링) có thể rounding.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Cấp cao (senior / 시니어) lesson** tiếp nhận điểm tựa từ **fixed** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **zoom vs transform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp cao (senior / 시니어) lesson
 
 Đừng assume:
@@ -3384,6 +3516,8 @@ Concept:
   zoom: 0.8;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **zoom vs transform** tiếp nhận điểm tựa từ **Cấp cao (senior / 시니어) lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cải tiến lũy tiến (progressive enhancement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `zoom` vs transform
 
@@ -3490,6 +3624,8 @@ Nếu tính năng (feature / 기능) thất bại (fail / 실패):
 
 # 122. suy giảm có kiểm soát (graceful degradation) vs cải tiến lũy tiến (progressive enhancement)
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **cải tiến lũy tiến (progressive enhancement)** tiếp nhận điểm tựa từ **zoom vs transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **suy giảm có kiểm soát (graceful degradation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## cải tiến lũy tiến (progressive enhancement)
 
 Start simple:
@@ -3497,6 +3633,8 @@ Start simple:
 usable base
 → add advanced behavior
 ```
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **suy giảm có kiểm soát (graceful degradation)** tiếp nhận điểm tựa từ **cải tiến lũy tiến (progressive enhancement)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 1 — Static checks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## suy giảm có kiểm soát (graceful degradation)
 
@@ -3556,6 +3694,8 @@ Chrome của dev chạy được
 
 # 125. CSS Testing Pyramid [MUST]
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Mức (level / 수준) 1 — Static checks** tiếp nhận điểm tựa từ **suy giảm có kiểm soát (graceful degradation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 2 — thành phần (component / 컴포넌트) tests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mức (level / 수준) 1 — Static checks
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3564,6 +3704,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - cú pháp (syntax / 문법),
 - naming,
 - banned patterns.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Mức (level / 수준) 2 — thành phần (component / 컴포넌트) tests** tiếp nhận điểm tựa từ **Mức (level / 수준) 1 — Static checks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 3 — hồi quy giao diện (visual regression)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức (level / 수준) 2 — thành phần (component / 컴포넌트) tests
 
@@ -3576,9 +3718,13 @@ Check các trạng thái (states):
 - long văn bản (text / 텍스트),
 - RTL.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Mức (level / 수준) 3 — hồi quy giao diện (visual regression)** tiếp nhận điểm tựa từ **Mức (level / 수준) 2 — thành phần (component / 컴포넌트) tests** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 4 — đa trình duyệt (cross-browser) / thiết bị (device / 장치)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mức (level / 수준) 3 — hồi quy giao diện (visual regression)
 
 Screenshot compare.
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Mức (level / 수준) 4 — đa trình duyệt (cross-browser) / thiết bị (device / 장치)** tiếp nhận điểm tựa từ **Mức (level / 수준) 3 — hồi quy giao diện (visual regression)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 5 — khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức (level / 수준) 4 — đa trình duyệt (cross-browser) / thiết bị (device / 장치)
 
@@ -3588,6 +3734,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - Firefox,
 - Safari,
 - mobile.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Mức (level / 수준) 5 — khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **Mức (level / 수준) 4 — đa trình duyệt (cross-browser) / thiết bị (device / 장치)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công khai (public / 공개)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức (level / 수준) 5 — khả năng tiếp cận (accessibility / 접근성)
 
@@ -3896,6 +4044,8 @@ Nội bộ (internal / 내부) hiện thực (implementation / 구현) không n�
 
 # 140. công khai (public / 공개) vs Private CSS API
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Công khai (public / 공개)** tiếp nhận điểm tựa từ **Mức (level / 수준) 5 — khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Private** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công khai (public / 공개)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3907,6 +4057,8 @@ ARIA state
 custom property
 ::part
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Private** tiếp nhận điểm tựa từ **Công khai (public / 공개)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lab 1 — cơ chế phân tầng (cascade) origins** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Private
 
@@ -4140,6 +4292,8 @@ Khi bug khó, hỏi:
 
 # 149. Master CSS Practical Lab — 25 bài nâng cao
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Private** cho ta quy tắc; **Lab 1 — cơ chế phân tầng (cascade) origins** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 2 — tầng (layer / 계층) inversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 1 — cơ chế phân tầng (cascade) origins
 
 Tạo cùng thuộc tính (property / 속성) từ:
@@ -4151,13 +4305,19 @@ Tạo cùng thuộc tính (property / 속성) từ:
 
 Quan sát DevTools winner.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, sau khi thấy quy trình trong **Lab 1 — cơ chế phân tầng (cascade) origins**, **Lab 2 — tầng (layer / 계층) inversion** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Lab 3 — độ gần phạm vi (scope proximity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 2 — tầng (layer / 계층) inversion
 
 Kiểm thử (test / 테스트) normal + important across 3 layers.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 2 — tầng (layer / 계층) inversion** cho ta quy tắc; **Lab 3 — độ gần phạm vi (scope proximity)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 4 — Computed giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 3 — độ gần phạm vi (scope proximity)
 
 Tạo nested scopes và equal độ đặc hiệu (specificity).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 3 — độ gần phạm vi (scope proximity)** cho ta quy tắc; **Lab 4 — Computed giá trị (value / 값)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 5 — Replaced ảnh (image / 이미지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 4 — Computed giá trị (value / 값)
 
@@ -4165,6 +4325,8 @@ So sánh:
 - nguồn (source / 소스) khai báo (declaration),
 - computed style,
 - used điểm ảnh (pixel / 픽셀) kích thước (size / 크기).
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 4 — Computed giá trị (value / 값)** cho ta quy tắc; **Lab 5 — Replaced ảnh (image / 이미지)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 6 — Flex mức tối thiểu tự động (automatic minimum)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 5 — Replaced ảnh (image / 이미지)
 
@@ -4175,11 +4337,15 @@ Kiểm thử (test / 테스트):
 - aspect-ratio,
 - object-fit.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 5 — Replaced ảnh (image / 이미지)** cho ta quy tắc; **Lab 6 — Flex mức tối thiểu tự động (automatic minimum)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 7 — Grid intrinsic nhánh học (track / 트랙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 6 — Flex mức tối thiểu tự động (automatic minimum)
 
 Long unbreakable content:
 - trước `min-width:0`,
 - sau `min-width:0`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 6 — Flex mức tối thiểu tự động (automatic minimum)** cho ta quy tắc; **Lab 7 — Grid intrinsic nhánh học (track / 트랙)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 8 — Inline đường cơ sở (baseline)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 7 — Grid intrinsic nhánh học (track / 트랙)
 
@@ -4194,6 +4360,8 @@ với:
 minmax(0,1fr)
 ```
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 7 — Grid intrinsic nhánh học (track / 트랙)** cho ta quy tắc; **Lab 8 — Inline đường cơ sở (baseline)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 9 — BFC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 8 — Inline đường cơ sở (baseline)
 
 Align icon + văn bản (text / 텍스트):
@@ -4201,11 +4369,15 @@ Align icon + văn bản (text / 텍스트):
 - đường cơ sở (baseline),
 - vertical-align.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 8 — Inline đường cơ sở (baseline)** cho ta quy tắc; **Lab 9 — BFC** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 10 — Fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 9 — BFC
 
 Float ảnh (image / 이미지) + văn bản (text / 텍스트):
 - normal khối (block / 블록),
 - `flow-root`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 9 — BFC** cho ta quy tắc; **Lab 10 — Fragmentation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 11 — lớp trên cùng (top layer)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 10 — Fragmentation
 
@@ -4213,15 +4385,21 @@ Float ảnh (image / 이미지) + văn bản (text / 텍스트):
 - `break-inside`,
 - heading breaks.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 10 — Fragmentation** cho ta quy tắc; **Lab 11 — lớp trên cùng (top layer)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 12 — Popover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 11 — lớp trên cùng (top layer)
 
 Compare:
 - div modal z-index,
 - bản địa (native / 네이티브) dialog.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 11 — lớp trên cùng (top layer)** cho ta quy tắc; **Lab 12 — Popover** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 13 — chuyển tiếp khi xuất hiện (entry transition)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 12 — Popover
 
 Bản dựng (build / 빌드) menu dùng Popover API + `:popover-open`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 12 — Popover** cho ta quy tắc; **Lab 13 — chuyển tiếp khi xuất hiện (entry transition)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 14 — Custom select** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 13 — chuyển tiếp khi xuất hiện (entry transition)
 
@@ -4229,37 +4407,55 @@ Use:
 - `@starting-style`,
 - discrete chuyển tiếp (transition / 전이).
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 13 — chuyển tiếp khi xuất hiện (entry transition)** cho ta quy tắc; **Lab 14 — Custom select** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 15 — truyền chuỗi cuộn (scroll chaining)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 14 — Custom select
 
 Progressively enhance bản địa (native / 네이티브) select với `base-select`.
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 14 — Custom select** cho ta quy tắc; **Lab 15 — truyền chuỗi cuộn (scroll chaining)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 16 — vùng an toàn (safe area)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 15 — truyền chuỗi cuộn (scroll chaining)
 
 Nested scroller + `overscroll-behavior`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 15 — truyền chuỗi cuộn (scroll chaining)** cho ta quy tắc; **Lab 16 — vùng an toàn (safe area)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 17 — biến (variable) font** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 16 — vùng an toàn (safe area)
 
 Bản dựng (build / 빌드) fixed mobile bottom nav dùng `env()`.
+
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 16 — vùng an toàn (safe area)** cho ta quy tắc; **Lab 17 — biến (variable) font** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 18 — Display P3 color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 17 — biến (variable) font
 
 Animate/thay đổi (change / 변경) tiêu chuẩn (standard / 표준) font axis.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 17 — biến (variable) font** cho ta quy tắc; **Lab 18 — Display P3 color** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 19 — Custom Highlight** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 18 — Display P3 color
 
 Create phương án dự phòng (fallback) + wide-gamut enhancement.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 18 — Display P3 color** cho ta quy tắc; **Lab 19 — Custom Highlight** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 20 — đường chuyển động (motion path)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 19 — Custom Highlight
 
 Tìm kiếm (search / 검색) match without adding `<mark>` nodes.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 19 — Custom Highlight** cho ta quy tắc; **Lab 20 — đường chuyển động (motion path)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 21 — hoạt ảnh cộng dồn (additive animation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 20 — đường chuyển động (motion path)
 
 Animate element along `offset-path`.
 
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 20 — đường chuyển động (motion path)** cho ta quy tắc; **Lab 21 — hoạt ảnh cộng dồn (additive animation)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 22 — Shadow DOM (cây DOM đóng gói)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 21 — hoạt ảnh cộng dồn (additive animation)
 
 Use `animation-composition:add`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 21 — hoạt ảnh cộng dồn (additive animation)** cho ta quy tắc; **Lab 22 — Shadow DOM (cây DOM đóng gói)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 23 — CSSOM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 22 — Shadow DOM (cây DOM đóng gói)
 
@@ -4268,9 +4464,13 @@ Expose:
 - `::part`,
 - slotted content.
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 22 — Shadow DOM (cây DOM đóng gói)** cho ta quy tắc; **Lab 23 — CSSOM** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 24 — Print** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 23 — CSSOM
 
 Read computed các giá trị (values) + construct biểu định kiểu (stylesheet / 스타일시트).
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Lab 23 — CSSOM** cho ta quy tắc; **Lab 24 — Print** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 25 — hồi quy giao diện (visual regression)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 24 — Print
 
@@ -4278,6 +4478,8 @@ Create printable report:
 - A4,
 - page margins,
 - avoid split cards.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Lab 24 — Print** cho ta quy tắc; **Lab 25 — hồi quy giao diện (visual regression)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mức (level / 수준) 1 — cú pháp (syntax / 문법) người dùng (user / 사용자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 25 — hồi quy giao diện (visual regression)
 
@@ -4361,12 +4563,16 @@ Nếu trả lời chắc khoảng **50+/60 câu** và làm được 20+/25 labs 
 
 # 151. Mastery Rubric
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Lab 25 — hồi quy giao diện (visual regression)** cho ta quy tắc; **Mức (level / 수준) 1 — cú pháp (syntax / 문법) người dùng (user / 사용자)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mức (level / 수준) 2 — UI nhà phát triển (developer / 개발자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mức (level / 수준) 1 — cú pháp (syntax / 문법) người dùng (user / 사용자)
 
 Biết:
 - thuộc tính (property / 속성),
 - bộ chọn (selector),
 - Flex/Grid.
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Mức (level / 수준) 2 — UI nhà phát triển (developer / 개발자)** tiếp nhận điểm tựa từ **Mức (level / 수준) 1 — cú pháp (syntax / 문법) người dùng (user / 사용자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 3 — cấp cao (senior / 시니어) CSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức (level / 수준) 2 — UI nhà phát triển (developer / 개발자)
 
@@ -4375,6 +4581,8 @@ Biết:
 - thành phần (component / 컴포넌트),
 - forms,
 - animation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **Mức (level / 수준) 3 — cấp cao (senior / 시니어) CSS** tiếp nhận điểm tựa từ **Mức (level / 수준) 2 — UI nhà phát triển (developer / 개발자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 4 — CSS Specialist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức (level / 수준) 3 — cấp cao (senior / 시니어) CSS
 
@@ -4386,6 +4594,8 @@ Biết:
 - khả năng tiếp cận (accessibility / 접근성),
 - hiệu năng (performance / 성능).
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **Mức (level / 수준) 4 — CSS Specialist** tiếp nhận điểm tựa từ **Mức (level / 수준) 3 — cấp cao (senior / 시니어) CSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) 5 — CSS Master** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mức (level / 수준) 4 — CSS Specialist
 
 Biết:
@@ -4396,6 +4606,8 @@ Biết:
 - advanced sizing,
 - trình duyệt (browser / 브라우저) APIs,
 - Shadow DOM (cây DOM đóng gói).
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Mức (level / 수준) 5 — CSS Master** tiếp nhận điểm tựa từ **Mức (level / 수준) 4 — CSS Specialist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MDN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức (level / 수준) 5 — CSS Master
 
@@ -4694,6 +4906,8 @@ Canonical Beginner → Senior + Supplement + 20–30 advanced labs + project th�
 
 # 160. Tài liệu chuẩn để tiếp tục tra cứu
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS Master Supplement 2026**, **MDN** tiếp nhận điểm tựa từ **Mức (level / 수준) 5 — CSS Master** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **web.dev** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## MDN
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4716,6 +4930,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - Customizable Select
   https://nhà phát triển (developer / 개발자).mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select
 
+> **Chuyển mạch:** Trong **CSS Master Supplement 2026**, **web.dev** tiếp nhận điểm tựa từ **MDN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Specifications / tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## web.dev
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4725,6 +4941,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 - Interop 2026
   https://web.dev/blog/interop-2026/
+
+> **Chuyển mạch:** Ở chặng này của **CSS Master Supplement 2026**, **Specifications / tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **web.dev** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Specifications / tính tương thích (compatibility / 호환성)
 
@@ -4780,4 +4998,4 @@ large-codebase experience
 spec reading
 ```
 
-> **Bàn giao:** Sau **Specifications / tính tương thích (compatibility / 호환성)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CSS Beginner to Senior 2026](./CSS_Beginner_to_Senior_2026.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Specifications / tính tương thích (compatibility / 호환성)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,5 +1,7 @@
 # Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Starting điểm (point / 지점) — reform giải quyết vấn đề nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Agriculture — household responsibility hệ thống (system / 시스템)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Nếu Soviet trường hợp (case / 사례) cho thấy một trạng thái (state / 상태) có thể dùng hierarchy và planning để huy động resources rất nhanh, China sau 1978 cho thấy một câu hỏi khác: **một hệ thống chính trị tự nhận là socialist có thể thay đổi economic coordination cơ chế (mechanism / 메커니즘) sâu đến mức nào mà vẫn giữ political continuity?**
 
 Đây là comparative trường hợp (case / 사례) quan trọng vì nó phá vỡ một shortcut thường gặp: đồng nhất ideology label với một economic institution cố định. China giữ Communist Party quy tắc (rule / 규칙) và official socialist ngôn ngữ (language / 언어), nhưng từng bước mở rộng household quyết định (decision / 결정) rights, thị trường (market / 시장) pricing, private and collective enterprise, foreign trade, investment và competition. Vì vậy kết quả (outcome / 결과) sau reform không thể được giải thích chỉ bằng câu “China là socialist” hoặc “China là capitalist”; ta phải nhìn đúng institution và đúng period.
@@ -9,6 +11,8 @@ Nếu Soviet trường hợp (case / 사례) cho thấy một trạng thái (sta
 Cuối thập niên 1970, Chinese leadership bắt đầu một quá trình thường gọi là **reform and opening up**. World Bank mô tả reform period từ 1978 như một transformation lớn, trong đó GDP growth về dài hạn tăng rất nhanh và hàng trăm triệu người thoát extreme poverty. Nhưng những kết quả (outcome / 결과) này là kết quả của nhiều yếu tố cùng lúc: domestic institutional reform, demographic thay đổi (change / 변경), education, urbanization, toàn cục (global / 전역) trade tích hợp (integration / 통합), foreign investment, technology transfer và macroeconomic conditions.
 
 Do đó câu hỏi đúng không phải “thị trường (market / 시장) tạo ra toàn bộ growth” hay “trạng thái (state / 상태) tạo ra toàn bộ growth”. Ta hỏi cơ chế (mechanism / 메커니즘) nào được thay đổi, và thay đổi đó giải ràng buộc (constraint / 제약조건) nào của hệ thống (system / 시스템) cũ.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **Agriculture — household responsibility hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Starting điểm (point / 지점) — reform giải quyết vấn đề nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Township and Village Enterprises — quyền sở hữu (ownership / 소유권) không chỉ có hai trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Agriculture — household responsibility hệ thống (system / 시스템)
 
@@ -26,6 +30,8 @@ decision right gần producer hơn
 
 World Bank histories của reform nhấn mạnh agriculture là nơi market-oriented experimentation tiến xa sớm nhất. Khi rural productivity và incomes cải thiện, reform pressure và resources mở rộng sang những sector khác.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, sau nội dung của **Agriculture — household responsibility hệ thống (system / 시스템)**, **Township and Village Enterprises — quyền sở hữu (ownership / 소유권) không chỉ có hai trạng thái** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Dual-track reform — tại sao không liberalize mọi thứ cùng lúc?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Township and Village Enterprises — quyền sở hữu (ownership / 소유권) không chỉ có hai trạng thái
 
 **Township and Village Enterprises (TVEs)** là một lesson quan trọng vì chúng không khớp nhị phân (binary / 이진) đơn giản `state-owned vs private-owned`. Nhiều TVE có local-government hoặc collective quyền sở hữu (ownership / 소유권) nhưng hoạt động trong môi trường cạnh tranh và giữ lại incentives gắn với cục bộ (local / 로컬) revenue, employment và enterprise hiệu năng (performance / 성능).
@@ -41,6 +47,8 @@ Trường hợp (case / 사례) này cho thấy thuộc tính (property / 속성
 
 Nếu chỉ ghi label “collective”, ta không biết firm thực sự vận hành ra sao. Đây cũng là cầu nối (bridge / 브리지) tốt sang [Economics](../../../economics/README.md): hiện đại (modern / 현대적) institutional economics thường phân tích bundles of rights và incentive các ràng buộc (constraints / 제약조건들) thay vì chỉ dùng quyền sở hữu (ownership / 소유권) label.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **Dual-track reform — tại sao không liberalize mọi thứ cùng lúc?** tiếp nhận điểm tựa từ **Township and Village Enterprises — quyền sở hữu (ownership / 소유권) không chỉ có hai trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Special Economic Zones và opening** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dual-track reform — tại sao không liberalize mọi thứ cùng lúc?
 
 Một distinctive tính năng (feature / 기능) của early Chinese reform là **dual-track approach**. Trong một số sector, planned quota/controlled channel vẫn tồn tại trong khi market-oriented transactions dần được mở bên cạnh nó.
@@ -50,6 +58,8 @@ Cơ chế (mechanism / 메커니즘) của chiến lược (strategy / 전략) n
 World Bank retrospective về 40 năm reform mô tả Chinese reform như một quá trình experimentation và scaling: pilot trước, quan sát kết quả (outcome / 결과), rồi mở rộng những arrangement được coi là workable.
 
 Điểm phương thức (method / 메서드) cần giữ là **gradualism không phải absence of thay đổi (change / 변경)**. Một hệ thống (system / 시스템) có thể thay đổi rất sâu bằng cumulative cục bộ (local / 로컬) reforms thay vì một constitutional break duy nhất.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **Special Economic Zones và opening** tiếp nhận điểm tựa từ **Dual-track reform — tại sao không liberalize mọi thứ cùng lúc?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **State-owned enterprises — reform không đồng nghĩa trạng thái (state / 상태) exit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Special Economic Zones và opening
 
@@ -69,6 +79,8 @@ policy opening
 
 Mỗi arrow là một empirical hypothesis cần dữ liệu (data / 데이터) riêng.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **State-owned enterprises — reform không đồng nghĩa trạng thái (state / 상태) exit** tiếp nhận điểm tựa từ **Special Economic Zones và opening** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Measured outcomes — growth và poverty reduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## State-owned enterprises — reform không đồng nghĩa trạng thái (state / 상태) exit
 
 China không đơn giản privatize toàn bộ state-owned sector. SOE reforms trải qua nhiều stages: greater enterprise autonomy, tax/profit reform, hardening ngân sách (budget / 예산) các ràng buộc (constraints / 제약조건들) ở một số period, restructuring, mergers, closure, corporatization và coexistence với a rapidly growing non-state sector.
@@ -76,6 +88,8 @@ China không đơn giản privatize toàn bộ state-owned sector. SOE reforms t
 Điều này tạo một mixed institutional cấu trúc (structure / 구조). Thị trường (market / 시장) competition có thể tăng trong một economy mà quyền sở hữu trạng thái (state ownership / 상태 소유권) vẫn lớn ở strategic sectors. Vì vậy `marketization` và `privatization` không phải synonym.
 
 Đây là distinction quan trọng khi so với Vietnam sau Đổi Mới: cả hai đều mở rộng thị trường (market / 시장) mechanisms nhưng tuyến (route / 경로) về land, SOEs, foreign investment và political institutions không giống nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **Measured outcomes — growth và poverty reduction** tiếp nhận điểm tựa từ **State-owned enterprises — reform không đồng nghĩa trạng thái (state / 상태) exit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **New trade-offs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Measured outcomes — growth và poverty reduction
 
@@ -88,6 +102,8 @@ Những con số này là important empirical outcomes, nhưng nhân quả (caus
 Nó viết:
 
 > institutional reforms changed incentives, allocation and openness in ways widely considered central to growth, while the magnitude of each channel remains a subject of economic research.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **New trade-offs** tiếp nhận điểm tựa từ **Measured outcomes — growth và poverty reduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ideological continuity versus institutional thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## New trade-offs
 
@@ -107,6 +123,8 @@ growth
 ```
 
 Chính sách (policy / 정책) có thể cải thiện một dimension và làm xấu dimension khác.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **Ideological continuity versus institutional thay đổi (change / 변경)** tiếp nhận điểm tựa từ **New trade-offs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Handoff sang Vietnam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ideological continuity versus institutional thay đổi (change / 변경)
 
@@ -128,15 +146,17 @@ welfare institutions
 
 Hai countries đều có thể tự nhận “socialist” nhưng khác mạnh trên từng dimension này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **Handoff sang Vietnam** tiếp nhận điểm tựa từ **Ideological continuity versus institutional thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Handoff sang Vietnam
 
 China sau 1978 và Vietnam sau 1986 có family resemblance: gradual reform, greater household autonomy in agriculture, expansion of thị trường (market / 시장) mechanisms, trade/investment opening và continued one-party political quy tắc (rule / 규칙). Nhưng timing, country kích thước (size / 크기), war legacy, bên ngoài (external / 외부) normalization, SOE cấu trúc (structure / 구조) và tích hợp (integration / 통합) đường dẫn (path / 경로) khác nhau.
 
 Vì vậy chapter tiếp theo, [Vietnam and Đổi Mới](14_case_vietnam_doi_moi_market_reform_and_socialist_orientation.md), không dùng China làm template. Nó dùng cùng analytical khung phần mềm (framework / 프레임워크) để xem Vietnam đã thay đổi institution nào, giữ institution nào và kết quả (outcome / 결과) nào đi cùng quá trình đó.
 
-## Sources và reading anchors
-Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**, **Handoff sang Vietnam** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Sources và reading anchors
 
 - World Bank, “China — Overview”: https://www.worldbank.org/en/country/china
 - World Bank, *Reflections on Forty Years of China’s Reforms* and reform chronology: https://blogs.worldbank.org/en/eastasiapacific/reflections-on-forty-years-of-china-reforms
@@ -145,3 +165,5 @@ Phần “Sources và reading anchors” nối kiến thức trước với nộ
 - [Economic History & Institutions](../../../economics/06_economic_history_institutions/README.md) là đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) khi cần đi sâu vào growth accounting, structural transformation, trade và institutional economics.
 
 World Bank và IMF sources mô tả reform chronology và macro outcomes; chúng không biến một complex historical chuyển tiếp (transition / 전이) thành proof cho một political doctrine. Nhân quả (causal / 인과적) claims mạnh hơn cần econometric hoặc historical identification cụ thể.
+
+> **Bàn giao:** Sau **Sources và reading anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

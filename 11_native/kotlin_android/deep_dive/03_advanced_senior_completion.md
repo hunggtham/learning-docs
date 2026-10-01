@@ -1,7 +1,6 @@
 # Kotlin + Android Advanced / cấp cao (senior / 시니어) — Completion Deep Dive
 
-> **Mạch đọc:** Đọc **Kotlin + Android Advanced / cấp cao (senior / 시니어) — Completion Deep Dive** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kotlin + Android Advanced / cấp cao (senior / 시니어) — Completion Deep Dive**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Kotlin + Android Advanced / cấp cao (senior / 시니어) — Completion Deep Dive** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > tệp (file / 파일) này bổ sung cho [`../03_kotlin_advanced_senior.md`](../03_kotlin_advanced_senior.md). Trọng tâm là những dạng thất bại (failure mode / 실패 모드) và sự đánh đổi (trade-off / 트레이드오프) mà nhà phát triển (developer / 개발자) cấp cao (senior / 시니어) phải lập luận (reasoning / 추론) được: hệ kiểu (type system / 타입 시스템) sâu, cancellation an toàn (safety / 안전), luồng (flow / 흐름) backpressure, Compose Snapshot/định danh (identity / 식별자), background thực thi (execution / 실행), networking/TLS, lưu trữ (storage / 저장소)/backup, nhiều tầng testing và cổng chất lượng (quality gate / 품질 게이트).
 
@@ -163,4 +162,4 @@ Senior-level rà soát mã (code review / 코드 리뷰) là kiểm tra **thời
 
 Bạn nên lập luận (reasoning / 추론) được về cancellation/thất bại (failure / 실패), backpressure, Compose snapshot/phase/định danh (identity / 식별자), background thực thi (execution / 실행) ngữ nghĩa (semantics / 의미론), lưu trữ (storage / 저장소)/backup, mạng (network / 네트워크) thử lại (retry / 재시도)/TLS, long-lived liên kết (connection / 연결), test-layer sự đánh đổi (trade-off / 트레이드오프), benchmark và cổng chất lượng (quality gate / 품질 게이트). Seniority thể hiện ở khả năng dự đoán dạng thất bại (failure mode / 실패 모드) và blast radius trước khi chọn thư viện (library / 라이브러리) hoặc mẫu (pattern / 패턴).
 
-> **Bàn giao:** Sau **Kotlin + Android Advanced / cấp cao (senior / 시니어) — Completion Deep Dive**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 beginner completion](./01_beginner_completion.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kotlin + Android Advanced / cấp cao (senior / 시니어) — Completion Deep Dive**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

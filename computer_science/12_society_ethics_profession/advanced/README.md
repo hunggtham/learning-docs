@@ -1,6 +1,6 @@
 # Advanced Computing, Society, Ethics & Profession
 
-> **Mạch đọc:** Đọc **Advanced Computing, Society, Ethics & Profession** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced Computing, Society, Ethics & Profession**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Advanced Computing, Society, Ethics & Profession** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Roadmap:
 
@@ -19,4 +19,4 @@ Roadmap:
 
 Privacy nhánh học (track / 트랙) hiện đi từ threat/quản trị (governance / 거버넌스) sang dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기) rồi tới re-identification rủi ro (risk / 위험) và differential privacy. Phần sau mở rộng sang đo lường (measurement / 측정), accountability, khả năng tiếp cận (accessibility / 접근성) và professional responsibility.
 
-> **Bàn giao:** Sau **Advanced Computing, Society, Ethics & Profession**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 privacy threat models governance and accountability](./00_privacy_threat_models_governance_and_accountability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Advanced Computing, Society, Ethics & Profession**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,12 +1,10 @@
 # Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)
 
-> **Mạch đọc:** Đọc **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ba họ lập luận quen thuộc** sang **Is–ought và moral bất định (uncertainty / 불확실성)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba họ lập luận quen thuộc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Is–ought và moral bất định (uncertainty / 불확실성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Ethics hỏi điều gì làm một hành động đúng/sai, tốt/xấu hoặc đáng trách/đáng khen. Moral lập luận (reasoning / 추론) cần tách ít nhất ba lớp: mô tả tình huống, các giá trị được ưu tiên và nguyên tắc chuyển từ giá trị sang hành động.
 
 ## Ba họ lập luận quen thuộc
-Phần “Ba họ lập luận quen thuộc” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **consequentialism**: đánh giá theo hậu quả kỳ vọng, kể cả phân phối lợi ích và harm;
 - **deontology**: đánh giá theo duty, right, ràng buộc (constraint / 제약조건) và khả năng tôn trọng người khác như mục đích;
@@ -14,8 +12,7 @@ Phần “Ba họ lập luận quen thuộc” nối kiến thức trước vớ
 
 Care ethics bổ sung quan hệ, phụ thuộc (dependency / 의존성) và trách nhiệm chăm sóc; contractualist approaches hỏi nguyên tắc nào không ai có lý do hợp lý để từ chối. Các khung phần mềm (framework / 프레임워크) có thể cho kết luận khác nhau; disagreement cần lộ ra ở premise chứ không che bằng khẩu hiệu.
 
-
-> **Chuyển mạch:** Từ **Ba họ lập luận quen thuộc**, ta sang **Is–ought và moral bất định (uncertainty / 불확실성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ba họ lập luận nêu cách nối fact với norm; is–ought và moral uncertainty làm rõ khoảng trống, rồi decision procedure buộc trade-off thành lựa chọn có thể giải thích.
 
 ## Is–ought và moral bất định (uncertainty / 불확실성)
 
@@ -23,8 +20,7 @@ Fact về hậu quả không tự sinh ra nghĩa vụ nếu chưa có normative 
 
 Liên hệ với [moral psychology](../../psychology/03_human_development_and_person/08_moral_psychology_and_prosocial_behavior.md) để phân biệt cơ chế con người phán đoán đạo đức với câu hỏi hành động nào là justified.
 
-
-> **Chuyển mạch:** Từ **Is–ought và moral bất định (uncertainty / 불확실성)**, ta sang **Từ dilemma sang quyết định (decision / 결정) procedure** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**, **Từ dilemma sang quyết định (decision / 결정) procedure** tiếp nhận điểm tựa từ **Is–ought và moral bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Moral remainder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ dilemma sang quyết định (decision / 결정) procedure
 
@@ -39,15 +35,13 @@ Khi gặp trường hợp (case / 사례) khó, dùng sáu bước:
 
 Ví dụ trong triage y tế, “cứu nhiều người nhất” có thể xung đột với ưu tiên người yếu thế, lottery công bằng hoặc duty không bỏ rơi bệnh nhân hiện tại. Không có phép tính đạo đức thuần túy nếu values và institutional role chưa được nêu.
 
-
-> **Chuyển mạch:** Từ **Từ dilemma sang quyết định (decision / 결정) procedure**, ta sang **Moral remainder** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**, **Moral remainder** tiếp nhận điểm tựa từ **Từ dilemma sang quyết định (decision / 결정) procedure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Moral remainder
 
 Ngay cả quyết định tốt nhất có thể còn lại mất mát (loss / 손실), grief hoặc obligation chưa được đáp ứng. Ghi nhận moral remainder giúp chính sách (policy / 정책) không biến sự đánh đổi (trade-off / 트레이드오프) thành ngôn ngữ “không ai bị hại”, và tạo không gian cho repair, compensation hoặc solidarity.
 
-
-> **Chuyển mạch:** Từ **Moral remainder**, ta sang **độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**, **Độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh** tiếp nhận điểm tựa từ **Moral remainder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh
 
@@ -67,4 +61,4 @@ Trolley cases phản đối rằng trực giác thay đổi theo framing; Rawls,
 
 Moral psychology cho biết humans reason thế nào, không tự cho biết nên làm gì. chính sách (policy / 정책) cần ánh xạ (mapping / 매핑) affected parties, reversible pilots, distributional kiểm tra (audit / 감사), compensation và rà soát (review / 검토) trigger. Khi bằng chứng (evidence / 증거) yếu nhưng harm irreversible, precaution phải được ghi như một normative choice, không ngụy trang thành certainty.
 
-> **Bàn giao:** Sau **Empirical ranh giới (boundary / 경계) và implication**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 metaethics and normative frameworks](./01_metaethics_and_normative_frameworks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

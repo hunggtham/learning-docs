@@ -1,6 +1,6 @@
 # Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
-> **Mạch đọc:** Đọc **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **chuẩn gốc (canonical / 정본) chapters** sang **mô hình tư duy (mental models / 사고 모델들) cần đạt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) chapters** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Mô hình tư duy (mental models / 사고 모델들) cần đạt** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Nhánh học (track / 트랙) này tập trung vào cách thay đổi môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) dưới bất định (uncertainty / 불확실성) mà không cần big-bang coordination. Không thêm chapter chỉ để bao phủ methodology hoặc chỉ số (metric / 지표) mới; ưu tiên quyết định (decision / 결정) ranh giới (boundary / 경계), tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션), xác minh (verification / 확인), bằng chứng (evidence / 증거) và economics của changeability.
 
@@ -14,8 +14,7 @@ Nhánh học (track / 트랙) này tập trung vào cách thay đổi môi trư�
 6. [Deployment safety: canary, blue-green, feature flags và rollback limits](./05_deployment_safety_canary_blue_green_flags_and_rollback.md)
 7. [Technical debt economics, engineering metrics và Goodhart's Law](./06_technical_debt_economics_metrics_and_goodhart.md)
 
-
-> **Chuyển mạch:** Từ **chuẩn gốc (canonical / 정본) chapters**, ta sang **mô hình tư duy (mental models / 사고 모델들) cần đạt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, **Mô hình tư duy (mental models / 사고 모델들) cần đạt** gom các mảnh từ **Chuẩn gốc (canonical / 정본) chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hệ thống (system / 시스템) thiết kế (design / 설계) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) giao nhau ở changeability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental models / 사고 모델들) cần đạt
 
@@ -34,8 +33,7 @@ Kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) c
 
 Technical debt được nâng thành chuẩn gốc (canonical / 정본) chapter riêng vì nó có lập luận (reasoning / 추론) đường dẫn (path / 경로) về recurring thay đổi (change / 변경) chi phí (cost / 비용), option giá trị (value / 값), di chuyển (migration / 마이그레이션) timing, coordination/dữ liệu (data / 데이터)/kiểm thử (test / 테스트)/operational debt và chỉ số (metric / 지표) quản trị (governance / 거버넌스). Debt không được đánh giá bằng aesthetic hoặc một score tổng hợp; cần bằng chứng (evidence / 증거) về interest/rủi ro (risk / 위험) và trigger trả debt.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental models / 사고 모델들) cần đạt**, ta sang **hệ thống (system / 시스템) thiết kế (design / 설계) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) giao nhau ở changeability** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, **Hệ thống (system / 시스템) thiết kế (design / 설계) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) giao nhau ở changeability** gom các mảnh từ **Mô hình tư duy (mental models / 사고 모델들) cần đạt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ thống (system / 시스템) thiết kế (design / 설계) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) giao nhau ở changeability
 
@@ -43,8 +41,7 @@ Hệ thống (system / 시스템) thiết kế (design / 설계) nằm ở `08_s
 
 Zero-downtime cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션), sự cố (incident / 인시던트) học tập (learning / 학습), technical debt, nhóm (team / 팀) quyền sở hữu (ownership / 소유권) và kiến trúc (architecture / 아키텍처) quản trị (governance / 거버넌스) được nối qua chuẩn gốc (canonical / 정본) chapters theo perspective evolution/quyết định (decision / 결정) thay vì tạo methodology danh mục (catalog / 카탈로그).
 
-
-> **Chuyển mạch:** Từ **hệ thống (system / 시스템) thiết kế (design / 설계) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) giao nhau ở changeability**, ta sang **bằng chứng vận hành (production evidence / 운영 증거)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, **Hệ thống (system / 시스템) thiết kế (design / 설계) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) giao nhau ở changeability** nêu điều cần giải thích; **Bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quy tắc mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -52,11 +49,10 @@ Một thay đổi môi trường vận hành (production / 운영 환경) phải
 
 Chỉ số (metric / 지표) chỉ có giá trị khi gắn với quyết định (decision / 결정). DORA-style tín hiệu (signal / 신호), kiểm thử (test / 테스트) coverage, triển khai (deployment / 배포) frequency, LOC hay ticket thông lượng (throughput / 처리량) không được dùng như proxy tuyệt đối cho kỹ thuật (engineering / 엔지니어링) chất lượng (quality / 품질) nếu không hiểu cơ chế (mechanism / 메커니즘) và Goodhart rủi ro (risk / 위험) phía sau.
 
-
-> **Chuyển mạch:** Từ **bằng chứng vận hành (production evidence / 운영 증거)**, ta sang **Quy tắc mở rộng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, **Bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **Quy tắc mở rộng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Quy tắc mở rộng
 
 Ưu tiên deepen chapter hiện có khi gap thuộc kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계), tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션), xác minh (verification / 확인), triển khai (deployment / 배포) an toàn (safety / 안전) hoặc debt economics. Chỉ thêm conceptual đơn vị (unit / 단위) mới khi có bất biến (invariant / 불변식)/dạng thất bại (failure mode / 실패 모드) độc lập mà các chapter chuẩn gốc (canonical / 정본) không thể chứa tự nhiên.
 
-> **Bàn giao:** Sau **Quy tắc mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 architecture decisions evolution and socio technical constraints](./00_architecture_decisions_evolution_and_socio_technical_constraints.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Quy tắc mở rộng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

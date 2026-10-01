@@ -1,7 +1,6 @@
 # Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts
 
-> **Mạch đọc:** Đặt **kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **kiểu (type / 타입) judgment như một statement có điều kiện** sang **Soundness và progress/preservation intuition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiểu (type / 타입) judgment như một statement có điều kiện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Soundness và progress/preservation intuition** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Hệ kiểu (type system / 타입 시스템) không chỉ phân loại `int`, `string` hay `User`. Ở mức advanced, nó là một static lập luận (reasoning / 추론) khung phần mềm (framework / 프레임워크) dùng để loại bỏ một tập program states trước thời gian chạy (runtime / 런타임). Điều quan trọng là hiểu **thuộc tính (property / 속성) nào được encode**, thuộc tính (property / 속성) nào vẫn nằm ngoài hệ kiểu (type system / 타입 시스템), và chi phí (cost / 비용) ergonomics/expressiveness của mỗi lựa chọn.
 
@@ -11,8 +10,7 @@ Notation dạng `Γ ⊢ e : T` có thể đọc: dưới môi trường (environ
 
 Cách nhìn này giúp tách cú pháp (syntax / 문법) khỏi ngữ nghĩa (semantics / 의미론): kiểu (type / 타입) checker không “đoán kiểu” tùy ý; nó thực hiện proof theo rules của ngôn ngữ (language / 언어).
 
-
-> **Chuyển mạch:** Từ **kiểu (type / 타입) judgment như một statement có điều kiện**, ta sang **Soundness và progress/preservation intuition** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Soundness và progress/preservation intuition** tiếp nhận điểm tựa từ **Kiểu (type / 타입) judgment như một statement có điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subtyping và variance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Soundness và progress/preservation intuition
 
@@ -20,8 +18,7 @@ Một hệ kiểu (type system / 타입 시스템) thường muốn thuộc tín
 
 Điều này không có nghĩa program đúng lô-gic nghiệp vụ (business logic / 비즈니스 로직). kiểu (type / 타입) an toàn (safety / 안전) chỉ bảo vệ các invariants mà hệ kiểu (type system / 타입 시스템) encode.
 
-
-> **Chuyển mạch:** Từ **Soundness và progress/preservation intuition**, ta sang **Subtyping và variance** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Subtyping và variance** tiếp nhận điểm tựa từ **Soundness và progress/preservation intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ADT và invalid states** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Subtyping và variance
 
@@ -29,8 +26,7 @@ Nếu `Dog <: Animal`, điều đó không tự động suy ra `List<Dog> <: Lis
 
 Covariance phù hợp producer/read-only; contravariance thường xuất hiện ở bên tiêu thụ (consumer / 소비자)/hàm (function / 함수) parameter; invariance là lựa chọn an toàn cho mutable containers phổ biến.
 
-
-> **Chuyển mạch:** Từ **Subtyping và variance**, ta sang **ADT và invalid states** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **ADT và invalid states** tiếp nhận điểm tựa từ **Subtyping và variance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## ADT và invalid states
 
@@ -42,8 +38,7 @@ State = Loading | Success(Data) | Failure(Error)
 
 Mẫu (pattern / 패턴) matching exhaustiveness biến missing-case thành compile-time tín hiệu (signal / 신호). Đây là ví dụ “make invalid states unrepresentable”.
 
-
-> **Chuyển mạch:** Từ **ADT và invalid states**, ta sang **tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)** tiếp nhận điểm tựa từ **ADT và invalid states** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gradual typing và trust ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)
 
@@ -51,8 +46,7 @@ Hai functions cùng `User -> User` có thể rất khác nếu một hàm (funct
 
 Có nhiều hình thức: checked exceptions, `async` effects, năng lực (capability / 역량) types, tác động (effect / 효과) rows, monadic encodings hoặc quyền sở hữu (ownership / 소유권)/borrow restrictions. Mục tiêu chung là làm hidden tương tác (interaction / 상호작용) trở nên tường minh (explicit / 명시적) để composition dễ lập luận (reasoning / 추론) hơn.
 
-
-> **Chuyển mạch:** Từ **tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)**, ta sang **Gradual typing và trust ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)** đã nêu tiêu chí phân biệt, còn **Gradual typing và trust ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gradual typing và trust ranh giới (boundary / 경계)
 
@@ -60,8 +54,7 @@ TypeScript, Python typing và nhiều ecosystem cho phép typed và untyped mã 
 
 Một `as User` cast không biến untrusted bytes thành người dùng (user / 사용자) đúng nghĩa; nó chỉ thay belief của trình biên dịch (compiler / 컴파일러). Đây là ranh giới (boundary / 경계) giữa **static claim** và **thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거)**.
 
-
-> **Chuyển mạch:** Từ **Gradual typing và trust ranh giới (boundary / 경계)**, ta sang **thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Gradual typing và trust ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại
 
@@ -69,18 +62,16 @@ Không phải thuộc tính (property / 속성) nào cũng phù hợp static typ
 
 Thiết kế cấp cao (senior / 시니어) không hỏi “hệ kiểu (type system / 타입 시스템) hay thời gian chạy (runtime / 런타임) kiểm tra hợp lệ (validation / 검증) tốt hơn”; nó đặt bất biến (invariant / 불변식) ở tầng (layer / 계층) có đủ thông tin (information / 정보) để enforce.
 
-
-> **Chuyển mạch:** Từ **thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hệ kiểu (type system / 타입 시스템) là một proof/ràng buộc (constraint / 제약조건) tầng (layer / 계층) trước thời gian chạy (runtime / 런타임); tác động (effect / 효과) hệ thống (system / 시스템) mở rộng proof đó sang tương tác (interaction / 상호작용); thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약) bảo vệ những facts chỉ biết khi chương trình đang chạy.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Xem [type foundation](../../basic/04_programming_languages/06_type_systems_generics_and_polymorphism.md), [errors/resources](../../basic/04_programming_languages/05_errors_resources_and_runtime_safety.md) và [API contracts](../../basic/08_software_systems/00_abstraction_modularity_interfaces_and_apis.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 algebraic data types variance and type inference](./01_algebraic_data_types_variance_and_type_inference.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

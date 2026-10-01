@@ -1,7 +1,6 @@
 # Statistics cho Artificial Intelligence
 
-> **Mạch đọc:** Đặt **Statistics cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Population, mẫu (sample / 표본) và data-generating tiến trình (process / 프로세스)** sang **Descriptive statistics: mô tả dữ liệu (data / 데이터) trước khi modeling**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Statistics cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Population, mẫu (sample / 표본) và data-generating tiến trình (process / 프로세스)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Descriptive statistics: mô tả dữ liệu (data / 데이터) trước khi modeling** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Statistics (통계학 / thống kê) giải quyết một tension nằm ở trung tâm của Machine học tập (learning / 학습): ta chỉ quan sát một **finite mẫu (sample / 표본)**, nhưng muốn mô hình (model / 모델) hoạt động tốt trên những dữ liệu (data / 데이터) chưa từng thấy. huấn luyện (training / 학습) set không phải world. Nó chỉ là một mẫu (sample / 표본) được thu thập theo một tiến trình (process / 프로세스) cụ thể, trong một khoảng thời gian cụ thể, với sai số đo lường (measurement error / 측정 오차), selection độ lệch (bias / 편향) và missing thông tin (information / 정보).
 
@@ -29,6 +28,8 @@ Nếu samples thực sự independent và identically phân tán (distributed / 
 
 Do đó trước mọi statistical suy luận (inference / 추론) phải hỏi: **sampling tiến trình (process / 프로세스) là gì?**
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, cơ chế trong **Population, mẫu (sample / 표본) và data-generating tiến trình (process / 프로세스)** cần được kiểm chứng bằng dấu vết cụ thể; **Descriptive statistics: mô tả dữ liệu (data / 데이터) trước khi modeling** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Estimator và estimate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Descriptive statistics: mô tả dữ liệu (data / 데이터) trước khi modeling
 
 Mean:
@@ -52,6 +53,8 @@ s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2
 Quantiles giúp hiểu tails. Trong độ trễ (latency / 지연 시간) monitoring, p50, p95 và p99 thường informative hơn mean vì người dùng (user / 사용자) experience có thể bị dominated bởi tail độ trễ (latency / 지연 시간).
 
 Descriptive statistics không kết luận causality hay future hiệu năng (performance / 성능); nó chỉ mô tả observed mẫu (sample / 표본).
+
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **Descriptive statistics: mô tả dữ liệu (data / 데이터) trước khi modeling** nêu điều cần giải thích; **Estimator và estimate** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Law of Large Numbers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Estimator và estimate
 
@@ -81,6 +84,8 @@ MSE(\hat\theta)=độ lệch (bias / 편향)(\hat\theta)^2+Var(\hat\theta)
 
 Sự đánh đổi (trade-off / 트레이드오프) độ lệch (bias / 편향)–variance ở estimator mức (level / 수준) liên hệ trực tiếp tới độ lệch (bias / 편향)–variance trong Machine học tập (learning / 학습).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Law of Large Numbers** tiếp nhận điểm tựa từ **Estimator và estimate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Central Limit Theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Law of Large Numbers
 
 Law of Large Numbers nói, dưới conditions phù hợp, mẫu (sample / 표본) average hội tụ về expected giá trị (value / 값) khi cỡ mẫu (sample size / 표본 크기) tăng.
@@ -91,6 +96,8 @@ Nhưng “nhiều dữ liệu (data / 데이터)” không tự chữa sampling 
 
 > More dữ liệu (data / 데이터) reduces random lỗi (error / 오류); it does not automatically remove systematic độ lệch (bias / 편향).
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Law of Large Numbers** đã nêu tiêu chí phân biệt, còn **Central Limit Theorem** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tiêu chuẩn (standard / 표준) lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Central Limit Theorem
 
 Central Limit Theorem (CLT / 중심극한정리) giải thích vì sao phân phối (distribution / 분포) của normalized mẫu (sample / 표본) mean thường tiến gần Gaussian khi cỡ mẫu (sample size / 표본 크기) lớn dưới conditions phù hợp, dù individual observations không Gaussian.
@@ -98,6 +105,8 @@ Central Limit Theorem (CLT / 중심극한정리) giải thích vì sao phân ph�
 Điều này tạo foundation cho tiêu chuẩn (standard / 표준) errors và nhiều confidence intervals.
 
 Tuy nhiên CLT không phải license để assume mọi phân phối (distribution / 분포) trong ML là Gaussian. Heavy tails, strong phụ thuộc (dependency / 의존성) hoặc small mẫu (sample / 표본) có thể làm approximation kém.
+
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **Central Limit Theorem** đã nêu tiêu chí phân biệt, còn **Tiêu chuẩn (standard / 표준) lỗi (error / 오류)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Confidence interval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiêu chuẩn (standard / 표준) lỗi (error / 오류)
 
@@ -113,6 +122,8 @@ Nếu cỡ mẫu (sample size / 표본 크기) tăng 4 lần, tiêu chuẩn (sta
 
 Trong mô hình (model / 모델) evaluation, chỉ số (metric / 지표) trên 100 examples và chỉ số (metric / 지표) trên 100,000 examples không nên được tin ngang nhau dù điểm (point / 지점) estimate giống hệt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Confidence interval** tiếp nhận điểm tựa từ **Tiêu chuẩn (standard / 표준) lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hypothesis testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Confidence interval
 
 Confidence interval cung cấp phạm vi (range / 범위) được xây từ một procedure có coverage thuộc tính (property / 속성).
@@ -126,6 +137,8 @@ Approximate 95% interval cho mean trong large-sample setting:
 Một misunderstanding phổ biến là nói “có 95% xác suất (probability / 확률) true mean nằm trong interval đã tính”. Trong classical frequentist interpretation, parameter cố định; procedure tạo intervals có 95% long-run coverage dưới các giả định (assumptions / 가정들).
 
 Trong practical AI, điều quan trọng hơn wording philosophical là: report bất định (uncertainty / 불확실성) thay vì chỉ report điểm (point / 지점) estimate.
+
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Hypothesis testing** tiếp nhận điểm tựa từ **Confidence interval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multiple comparisons** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hypothesis testing
 
@@ -144,6 +157,8 @@ Trong A/B testing AI sản phẩm (product / 제품), cần xem cả:
 - nghiệp vụ (business / 비즈니스) impact;
 - guardrail metrics.
 
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **Multiple comparisons** tiếp nhận điểm tựa từ **Hypothesis testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트) set là statistical separation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Multiple comparisons
 
 Nếu kiểm thử (test / 테스트) 100 hypotheses với threshold 0.05, ngay cả khi tất cả null đều true, ta vẫn kỳ vọng một số false positives.
@@ -151,6 +166,8 @@ Nếu kiểm thử (test / 테스트) 100 hypotheses với threshold 0.05, ngay 
 Các methods như Bonferroni hoặc False Discovery tỷ lệ (rate / 비율) điều khiển (control / 제어) giải quyết vấn đề theo cách khác nhau.
 
 Trong ML experimentation, hyperparameter tìm kiếm (search / 검색) hoặc benchmark trên nhiều tasks có thể tạo **researcher degrees of freedom**: nếu chỉ report best run mà không account tìm kiếm (search / 검색), kết quả (result / 결과) trông stable hơn thực tế.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트) set là statistical separation** tiếp nhận điểm tựa từ **Multiple comparisons** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) leakage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트) set là statistical separation
 
@@ -178,6 +195,8 @@ reported estimate
 
 Trong môi trường vận hành (production / 운영 환경), temporal holdout thường tốt hơn random split khi future dữ liệu (data / 데이터) là mục tiêu (target / 대상) thực.
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트) set là statistical separation** nêu điều cần giải thích; **Dữ liệu (data / 데이터) leakage** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Empirical rủi ro (risk / 위험) và expected rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dữ liệu (data / 데이터) leakage
 
 **dữ liệu (data / 데이터) leakage (데이터 누수)** xảy ra khi huấn luyện (training / 학습) tiến trình (process / 프로세스) có truy cập (access / 접근) tới thông tin (information / 정보) không hợp lệ tại prediction thời gian (time / 시간) hoặc từ kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) side.
@@ -194,6 +213,8 @@ Leakage có thể subtle:
 
 Leakage làm statistical evaluation optimistic giả tạo.
 
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **Dữ liệu (data / 데이터) leakage** nêu điều cần giải thích; **Empirical rủi ro (risk / 위험) và expected rủi ro (risk / 위험)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Generalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Empirical rủi ro (risk / 위험) và expected rủi ro (risk / 위험)
 
 Ta muốn minimize expected rủi ro (risk / 위험):
@@ -209,6 +230,8 @@ Nhưng chỉ có empirical rủi ro (risk / 위험):
 \]
 
 Nếu mô hình (model / 모델) quá flexible, nó có thể giảm `\hat R` bằng cách fit idiosyncrasies của huấn luyện (training / 학습) set mà không giảm true rủi ro (risk / 위험). Đây là heart of overfitting.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Generalization** tiếp nhận điểm tựa từ **Empirical rủi ro (risk / 위험) và expected rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ lệch (bias / 편향)–variance sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Generalization
 
@@ -227,6 +250,8 @@ Một mô hình (model / 모델) có thể generalize tốt within-distribution 
 
 Do đó generalization luôn relative to một phân phối (distribution / 분포) family hoặc operating môi trường (environment / 환경).
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Độ lệch (bias / 편향)–variance sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Generalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regularization như statistical preference** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ lệch (bias / 편향)–variance sự đánh đổi (trade-off / 트레이드오프)
 
 Trong regression với squared lỗi (error / 오류), expected prediction lỗi (error / 오류) có thể conceptually decomposed thành:
@@ -241,6 +266,8 @@ High variance: mô hình (model / 모델) sensitive với mẫu (sample / 표본
 
 Hiện đại (modern / 현대적) Deep học tập (learning / 학습) phức tạp hơn textbook curve đơn giản; highly overparameterized các mô hình (models / 모델들) vẫn có thể generalize tốt nhờ tối ưu hóa (optimization / 최적화), regularization, dữ liệu (data / 데이터) quy mô (scale / 규모) và implicit biases. Vì vậy độ lệch (bias / 편향)–variance vẫn là useful mô hình tư duy (mental model / 사고 모델), không phải complete lý thuyết (theory / 이론) cho mọi neural mạng (network / 네트워크).
 
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, sau nội dung của **Độ lệch (bias / 편향)–variance sự đánh đổi (trade-off / 트레이드오프)**, **Regularization như statistical preference** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cross-validation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Regularization như statistical preference
 
 Regularization thêm preference ngoài pure huấn luyện (training / 학습) fit:
@@ -253,6 +280,8 @@ L2 regularization preference smaller parameters. dữ liệu (data / 데이터) 
 
 Từ statistical viewpoint, regularization giảm effective flexibility hoặc encode prior các giả định (assumptions / 가정들) để improve generalization.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Cross-validation** tiếp nhận điểm tựa từ **Regularization như statistical preference** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bootstrap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cross-validation
 
 K-fold cross-validation chia dữ liệu (data / 데이터) thành `K` folds, train trên `K-1` và evaluate fold còn lại, lặp lại.
@@ -263,6 +292,8 @@ Nhưng tiêu chuẩn (standard / 표준) random K-fold không phù hợp mọi t
 
 Split chiến lược (strategy / 전략) phải mô phỏng triển khai (deployment / 배포) ranh giới (boundary / 경계).
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Bootstrap** tiếp nhận điểm tựa từ **Cross-validation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) imbalance và cơ sở (base / 기반) tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bootstrap
 
 Bootstrap mẫu (sample / 표본) `n` observations **with replacement** từ observed dataset, lặp nhiều lần để approximate sampling phân phối (distribution / 분포) của statistic.
@@ -272,6 +303,8 @@ Nó hữu ích để estimate bất định (uncertainty / 불확실성) của c
 Ví dụ muốn confidence interval cho F1 hoặc difference giữa hai các mô hình (models / 모델들), paired bootstrap trên cùng kiểm thử (test / 테스트) examples thường informative.
 
 Bootstrap cũng có các giả định (assumptions / 가정들); strongly dependent dữ liệu (data / 데이터) cần khối (block / 블록)/bootstrap variants hoặc domain-specific treatment.
+
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **Lớp (class / 클래스) imbalance và cơ sở (base / 기반) tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **Bootstrap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Threshold là quyết định (decision / 결정) parameter, không phải mô hình (model / 모델) truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lớp (class / 클래스) imbalance và cơ sở (base / 기반) tỷ lệ (rate / 비율)
 
@@ -299,6 +332,8 @@ FPR=\frac{FP}{FP+TN}
 
 Cơ sở (base / 기반) tỷ lệ (rate / 비율) ảnh hưởng precision mạnh. Một mô hình (model / 모델) có same sensitivity/specificity có thể có drastically different precision ở population với prevalence khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Threshold là quyết định (decision / 결정) parameter, không phải mô hình (model / 모델) truth** tiếp nhận điểm tựa từ **Lớp (class / 클래스) imbalance và cơ sở (base / 기반) tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ROC và Precision–Recall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Threshold là quyết định (decision / 결정) parameter, không phải mô hình (model / 모델) truth
 
 Nhị phân (binary / 이진) classifier có score/xác suất (probability / 확률) `p`. Threshold `0.5` không phải universal law.
@@ -315,6 +350,8 @@ Threshold nên chọn theo operating mục tiêu (objective / 목표), sức ch�
 
 Mô hình (model / 모델) evaluation phải nối metrics với quyết định (decision / 결정) economics.
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **ROC và Precision–Recall** tiếp nhận điểm tựa từ **Threshold là quyết định (decision / 결정) parameter, không phải mô hình (model / 모델) truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân phối (distribution / 분포) shift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ROC và Precision–Recall
 
 ROC curve plot TPR vs FPR qua thresholds. ROC-AUC đo ranking ability theo một xác suất (probability / 확률) interpretation.
@@ -322,6 +359,8 @@ ROC curve plot TPR vs FPR qua thresholds. ROC-AUC đo ranking ability theo một
 Precision–Recall curve thường informative hơn với rare positive lớp (class / 클래스) vì precision phản ánh false positives relative to predicted positives.
 
 Không có chỉ số (metric / 지표) universal tốt nhất. chỉ số (metric / 지표) choice là statement về điều hệ thống (system / 시스템) coi trọng.
+
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **Phân phối (distribution / 분포) shift** tiếp nhận điểm tựa từ **ROC và Precision–Recall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Selection độ lệch (bias / 편향) và phản hồi (feedback / 피드백) loops** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân phối (distribution / 분포) shift
 
@@ -349,6 +388,8 @@ Các patterns thường được phân biệt:
 
 Real các hệ thống (systems / 시스템들) có thể kết hợp nhiều loại shift, nên taxonomy chỉ là diagnostic mô hình (model / 모델).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Selection độ lệch (bias / 편향) và phản hồi (feedback / 피드백) loops** tiếp nhận điểm tựa từ **Phân phối (distribution / 분포) shift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Correlation và causation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Selection độ lệch (bias / 편향) và phản hồi (feedback / 피드백) loops
 
 Một recommender chỉ quan sát phản hồi (feedback / 피드백) cho items mà nó đã show. dữ liệu (data / 데이터) tương lai bị chính sách (policy / 정책) hiện tại tạo ra.
@@ -366,6 +407,8 @@ Nếu không account vòng phản hồi (feedback loop / 피드백 루프), mô 
 
 Đây là liên kết (connection / 연결) giữa Statistics, nhân quả (causal / 인과적) suy luận (inference / 추론), Bandits và Recommender các hệ thống (systems / 시스템들).
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Correlation và causation** tiếp nhận điểm tựa từ **Selection độ lệch (bias / 편향) và phản hồi (feedback / 피드백) loops** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A/B testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Correlation và causation
 
 Nếu users dùng tính năng (feature / 기능) A thường retention cao, không có nghĩa forcing A sẽ tăng retention. Có thể engaged users tự chọn A.
@@ -380,6 +423,8 @@ Nhân quả (causal / 인과적) suy luận (inference / 추론) hỏi:
 
 Machine học tập (learning / 학습) rất mạnh cho prediction nhưng nhân quả (causal / 인과적) question cần các giả định (assumptions / 가정들), experiments hoặc nhân quả (causal / 인과적) identification chiến lược (strategy / 전략) khác.
 
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **A/B testing** tiếp nhận điểm tựa từ **Correlation và causation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Offline evaluation và online evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## A/B testing
 
 Randomized controlled experiment gán units ngẫu nhiên vào treatment/điều khiển (control / 제어) để break confounding on average.
@@ -387,6 +432,8 @@ Randomized controlled experiment gán units ngẫu nhiên vào treatment/điều
 Trong AI sản phẩm (product / 제품), A/B testing có thể compare recommendation thuật toán (algorithm / 알고리즘), ranking chính sách (policy / 정책) hoặc assistant hành vi (behavior / 동작).
 
 Nhưng cần chú ý interference: một người dùng (user / 사용자)'s treatment có thể ảnh hưởng người khác, ví dụ marketplace hoặc xã hội (social / 사회적) mạng (network / 네트워크). Khi SUTVA-like các giả định (assumptions / 가정들) thất bại (fail / 실패), tiêu chuẩn (standard / 표준) phân tích (analysis / 분석) có thể misleading.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Offline evaluation và online evaluation** tiếp nhận điểm tựa từ **A/B testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Statistical power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Offline evaluation và online evaluation
 
@@ -396,6 +443,8 @@ Hai thứ có thể disagree vì offline chỉ số (metric / 지표) chỉ prox
 
 Ví dụ recommender tăng NDCG nhưng làm feed quá homogeneous, giảm long-term discovery. AI hệ thống (system / 시스템) evaluation cần chỉ số (metric / 지표) hierarchy thay vì một score duy nhất.
 
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Statistical power** tiếp nhận điểm tựa từ **Offline evaluation và online evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproducibility và random seeds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Statistical power
 
 Power là xác suất (probability / 확률) detect tác động (effect / 효과) khi tác động (effect / 효과) thật sự tồn tại ở specified kích thước (size / 크기).
@@ -404,6 +453,8 @@ Experiment thiếu power dễ tạo inconclusive kết quả (result / 결과). 
 
 Không nên “chạy tới khi p<0.05 rồi dừng” nếu stopping quy tắc (rule / 규칙) không accounted, vì optional stopping inflate false positive rủi ro (risk / 위험).
 
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, **Reproducibility và random seeds** tiếp nhận điểm tựa từ **Statistical power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reproducibility và random seeds
 
 Huấn luyện (training / 학습) Deep học tập (learning / 학습) có stochasticity từ initialization, dữ liệu (data / 데이터) thứ tự (order / 순서), dropout, nondeterministic kernels.
@@ -411,6 +462,8 @@ Huấn luyện (training / 학습) Deep học tập (learning / 학습) có stoc
 Một single run có thể không đại diện phương thức (method / 메서드) hiệu năng (performance / 성능).
 
 Khi feasible, report multiple runs, variation và experimental giao thức (protocol / 프로토콜). Seed giúp reproducibility nhưng không biến kết quả (result / 결과) thành universal truth.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Statistics cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reproducibility và random seeds** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -426,6 +479,8 @@ Generalization → performance ngoài sample đã fit
 Uncertainty  → mức ta chưa biết về metric/parameter/prediction
 Shift        → deployment không còn giống sampling assumptions
 ```
+
+> **Chuyển mạch:** Trong **Statistics cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -445,8 +500,12 @@ p-value không nói tác động (effect / 효과) kích thước (size / 크기
 
 Không. Với time-dependent hoặc grouped dữ liệu (data / 데이터), naive CV có thể leak thông tin (information / 정보). Split thiết kế (design / 설계) phải mirror triển khai (deployment / 배포).
 
+> **Chuyển mạch:** Ở chặng này của **Statistics cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Statistics là cầu nối (bridge / 브리지) giữa [Probability](./02_probability_for_ai.md) và Machine học tập (learning / 학습). Sau này các chapter về generalization, mô hình (model / 모델) evaluation, calibration, dataset độ lệch (bias / 편향) và drift sẽ reuse các ideas ở đây.
 
 Khi nhìn một model score, đừng chỉ hỏi “bao nhiêu phần trăm?”. Hãy hỏi: trên population nào, sample được lấy thế nào, uncertainty của estimate bao nhiêu, selection đã xảy ra ở đâu, và deployment distribution có giống evaluation distribution không.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,5 +1,7 @@
 # Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trạng thái hiện tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Học tập (learning / 학습) tuyến (route / 경로)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 `economics/` là thư viện Economics độc lập của repository. Mục tiêu là giải thích cách cá nhân, doanh nghiệp, thị trường, nhà nước và các nền kinh tế lựa chọn và phối hợp dưới điều kiện khan hiếm, thông tin không hoàn hảo và ràng buộc thể chế. Economics ở đây là lĩnh vực (domain / 도메인) nền tảng; phần ứng dụng vào tài sản, doanh nghiệp và danh mục vẫn nằm ở [Investing](../investing/README.md).
 
 ## Trạng thái hiện tại
@@ -18,9 +20,9 @@ Từ đây Economics không còn khoảng trống cốt lõi (core / 핵심) b�
 
 [`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ ứng dụng (application / 애플리케이션) tầng (layer / 계층) cho macro dữ liệu (data / 데이터), liquidity, thị trường (market / 시장) transmission, crisis cases, chính sách (policy / 정책) regimes và nowcasting; Economics cross-link thay vì duplicate.
 
-## Học tập (learning / 학습) tuyến (route / 경로)
-Phần “Học tập (learning / 학습) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Học tập (learning / 학습) tuyến (route / 경로)** tiếp nhận điểm tựa từ **Trạng thái hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Học tập (learning / 학습) tuyến (route / 경로)
 
 ```text
 00 Foundations
@@ -33,6 +35,8 @@ Phần “Học tập (learning / 학습) tuyến (route / 경로)” nối ki�
 ```
 
 Folder numbering phản ánh taxonomy, không ép thứ tự học tuyệt đối. Econometrics được đặt trước Applied Economics trong học tập (learning / 학습) phụ thuộc (dependency / 의존성) để empirical trường hợp (case / 사례) không biến thành correlation narrative.
+
+> **Chuyển mạch:** Ở chặng này của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **Học tập (learning / 학습) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)
 
@@ -52,11 +56,10 @@ Problem / question
 
 Applied chapter thêm incidence và scale-up. Historical chapter thêm enforcement, phân phối (distribution / 분포) of power, persistence cơ chế (mechanism / 메커니즘) và historical-identification limits.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, sau nội dung của **Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)**, **Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Quy ước biên soạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)
-Phần “Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
-- [Thinking Toolkit](../thinking/README.md): lớp thực hành để mang opportunity cost, incentives, game theory, probability, expected value, risk, forecasting và systems thinking sang các quyết định/case ngoài chapter Economics mà không duplicate economic theory.
 - [Mathematics](../mathematics/README.md): calculus, tối ưu hóa (optimization / 최적화), xác suất (probability / 확률)/statistics, tuyến tính (linear / 선형) algebra và dynamical các hệ thống (systems / 시스템들).
 - [World History](../world_history/README.md) + [Korean History](../korean_history/README.md): chronology, actors, wars và institutional chuỗi (sequence / 시퀀스); Economics không duplicate timeline.
 - [Psychology](../psychology/README.md): bounded rationality, hành vi (behavior / 동작), salience, expectations và decision-making.
@@ -64,6 +67,8 @@ Phần “Các liên kết (connection / 연결) làm spine của thư viện (l
 - [Investing](../investing/README.md): asset/company/capital-flow ứng dụng (application / 애플리케이션) tầng (layer / 계층).
 - [Korea Business & Economy](../korea_business_economy_knowledge_library/README.md): trường hợp (case / 사례) tầng (layer / 계층) cho labor, chaebol, trade, industrial chính sách (policy / 정책) và Korean institutions.
 - [Computer Science](../computer_science/README.md): auctions, cơ chế (mechanism / 메커니즘) thiết kế (design / 설계), platforms, matching, tối ưu hóa (optimization / 최적화) và computational methods.
+
+> **Chuyển mạch:** Trong **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Quy ước biên soạn** tiếp nhận điểm tựa từ **Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sau cốt lõi (core / 핵심)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy ước biên soạn
 
@@ -78,8 +83,12 @@ Causal Estimate ≠ Policy Recommendation
 
 Positive economics phải tách khỏi normative judgment. Historical persistence cũng không tự đồng nghĩa đường dẫn (path / 경로) dependence; formal rules cũng không tự đồng nghĩa effective enforcement.
 
+> **Chuyển mạch:** Ở chặng này của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Sau cốt lõi (core / 핵심)** tiếp nhận điểm tựa từ **Quy ước biên soạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Sau cốt lõi (core / 핵심)
 
 Các advanced topics có thể mở sau khi có nhu cầu rõ: intertemporal/bất định (uncertainty / 불확실성) micro, heterogeneous-agent macro, structural IO/econometrics, nhân quả (causal / 인과적) ML, spatial economics, environmental/health economics hoặc deeper financial economics. Ưu tiên repo-wide sau cốt lõi (core / 핵심) Economics nên quay lại các lĩnh vực (domain / 도메인) còn mỏng hơn thay vì tiếp tục nở Economics không giới hạn.
 
 Xem [Coverage Audit](./COVERAGE_AUDIT.md) để theo dõi độ sâu (depth / 깊이) gates và next repo-wide priorities.
+
+> **Bàn giao:** Sau **Sau cốt lõi (core / 핵심)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

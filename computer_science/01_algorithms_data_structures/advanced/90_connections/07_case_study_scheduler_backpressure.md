@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure
 
-> **Mạch đọc:** Đọc **trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. FIFO là baseline** sang **2. Priority hàng đợi (queue / 큐)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. FIFO là baseline** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Priority hàng đợi (queue / 큐)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Scheduling & Backpressure trường hợp (case / 사례) Study / 스케줄링과 백프레셔 사례**
 
@@ -26,6 +26,8 @@ chi phí thấp
 
 Nhưng FIFO không biết job nào quan trọng hơn hoặc job nào có deadline gần hơn.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **2. Priority hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **1. FIFO là baseline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Mutable Priority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Priority hàng đợi (queue / 큐)
 
 Nếu mỗi job có priority, min/max vùng nhớ động (heap / 힙) là lựa chọn tự nhiên:
@@ -37,6 +39,8 @@ Nếu mỗi job có priority, min/max vùng nhớ động (heap / 힙) là lựa
 Tie-break bằng `arrivalOrder` giúp giữ fairness giữa các job cùng priority.
 
 Nếu không có tie-break ổn định, scheduler có thể cho hành vi khó dự đoán dù priority chính vẫn đúng.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **3. Mutable Priority** tiếp nhận điểm tựa từ **2. Priority hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Starvation và Aging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Mutable Priority
 
@@ -52,6 +56,8 @@ rebuild heap theo chu kỳ
 
 Lazy stale-entry thường đơn giản và robust nếu bộ nhớ (memory / 메모리) overhead chấp nhận được.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **4. Starvation và Aging** tiếp nhận điểm tựa từ **3. Mutable Priority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Deadline Scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Starvation và Aging
 
 Nếu luôn chọn priority cao nhất, job priority thấp có thể chờ vô hạn.
@@ -64,6 +70,8 @@ effectivePriority = basePriority + f(waitTime)
 
 Scheduler không còn tối ưu một scalar cố định; priority trở thành hàm của trạng thái (state / 상태) động.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **5. Deadline Scheduling** tiếp nhận điểm tựa từ **4. Starvation và Aging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Shortest Job First** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Deadline Scheduling
 
 Nếu job có deadline, một chiến lược (strategy / 전략) cổ điển là **Earliest Deadline First (EDF)**: luôn chọn job có deadline sớm nhất.
@@ -71,6 +79,8 @@ Nếu job có deadline, một chiến lược (strategy / 전략) cổ điển l
 Priority hàng đợi (queue / 큐) có key là deadline.
 
 Nhưng EDF chỉ có guarantee mạnh dưới những giả định cụ thể về mô hình tác vụ (task / 작업) và utilization. Không nên áp dụng theorem real-time vào tải công việc (workload / 워크로드) tùy ý mà không kiểm tra giả định.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **6. Shortest Job First** tiếp nhận điểm tựa từ **5. Deadline Scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Multi-Level hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Shortest Job First
 
@@ -81,6 +91,8 @@ Nhưng long job có thể starvation nếu short job đến liên tục.
 Một mục tiêu tối ưu average độ trễ (latency / 지연 시간) có thể xung đột fairness.
 
 Đây là bài học quan trọng: scheduler cần **mục tiêu (objective / 목표) rõ ràng**, không chỉ cấu trúc dữ liệu (data structure / 자료구조) nhanh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **7. Multi-Level hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **6. Shortest Job First** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Weighted Fairness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Multi-Level hàng đợi (queue / 큐)
 
@@ -96,6 +108,8 @@ background
 Scheduler chọn giữa các hàng đợi (queue / 큐) theo chính sách (policy / 정책) rồi FIFO/priority bên trong mỗi hàng đợi (queue / 큐).
 
 Composition này thường dễ kiểm soát hơn một toàn cục (global / 전역) priority formula cực phức tạp.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **8. Weighted Fairness** tiếp nhận điểm tựa từ **7. Multi-Level hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. hàng đợi (queue / 큐) có giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Weighted Fairness
 
@@ -120,6 +134,8 @@ fairness -> ai nhận bao nhiêu tài nguyên theo thời gian
 
 Hai khái niệm không giống nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **8. Weighted Fairness** đã nêu tiêu chí phân biệt, còn **9. hàng đợi (queue / 큐) có giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. hàng đợi (queue / 큐) có giới hạn
 
 Hàng đợi (queue / 큐) vô hạn về lô-gic (logic / 논리) là nguy hiểm trong hệ thống thật.
@@ -133,6 +149,8 @@ Hàng đợi (queue / 큐) có giới hạn biến tài nguyên hữu hạn thà
 ```
 
 Khi đầy, hệ thống buộc phải có chính sách (policy / 정책).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **9. hàng đợi (queue / 큐) có giới hạn** đã nêu tiêu chí phân biệt, còn **10. Backpressure** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Little’s Law** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Backpressure
 
@@ -151,6 +169,8 @@ scale consumer
 ```
 
 Không có chính sách (policy / 정책) chung đúng cho mọi hệ thống. Log telemetry có thể drop một phần; payment yêu cầu (request / 요청) thường không thể âm thầm drop.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **11. Little’s Law** tiếp nhận điểm tựa từ **10. Backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Batching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Little’s Law
 
@@ -172,6 +192,8 @@ Nếu arrival tỷ lệ (rate / 비율) tiến sát dịch vụ (service / 서�
 
 Little’s Law không thiết kế scheduler thay ta, nhưng giúp liên hệ hàng đợi (queue / 큐) length, thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **12. Batching** tiếp nhận điểm tựa từ **11. Little’s Law** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. công việc (work / 작업) Stealing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Batching
 
 Thay vì xử lý từng item:
@@ -192,6 +214,8 @@ Nhưng batch quá lớn làm tăng waiting độ trễ (latency / 지연 시간)
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) thông lượng (throughput / 처리량)–độ trễ (latency / 지연 시간).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **13. công việc (work / 작업) Stealing** tiếp nhận điểm tựa từ **12. Batching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. toàn cục (global / 전역) hàng đợi (queue / 큐) vs cục bộ (local / 로컬) Queues** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. công việc (work / 작업) Stealing
 
 Trong luồng thực thi (thread / 스레드) pool, mỗi worker có deque riêng.
@@ -207,6 +231,8 @@ Worker rảnh có thể **steal** từ đầu còn lại của worker khác.
 Deque giúp giảm contention vì đơn vị sở hữu (owner / 오너) và thief thường thao tác ở hai đầu khác nhau.
 
 Công việc (work / 작업) stealing đặc biệt phù hợp tác vụ (task / 작업) recursive/fork-join vì các tác vụ (task / 작업) mới sinh thường có locality với worker hiện tại.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **14. toàn cục (global / 전역) hàng đợi (queue / 큐) vs cục bộ (local / 로컬) Queues** tiếp nhận điểm tựa từ **13. công việc (work / 작업) Stealing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. SPSC, MPSC, MPMC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. toàn cục (global / 전역) hàng đợi (queue / 큐) vs cục bộ (local / 로컬) Queues
 
@@ -224,6 +250,8 @@ steal khi thiếu việc
 
 Đây là ví dụ hệ thống (system / 시스템) thiết kế (design / 설계) sinh ra từ việc ghép nhiều hàng đợi (queue / 큐) thay vì chỉ tối ưu một hàng đợi (queue / 큐) duy nhất.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **15. SPSC, MPSC, MPMC** tiếp nhận điểm tựa từ **14. toàn cục (global / 전역) hàng đợi (queue / 큐) vs cục bộ (local / 로컬) Queues** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Ring Buffer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. SPSC, MPSC, MPMC
 
 Hàng đợi (queue / 큐) đồng thời cần xác định mô hình producer/bên tiêu thụ (consumer / 소비자):
@@ -237,6 +265,8 @@ MPMC -> multiple producer, multiple consumer
 SPSC có thể đơn giản hơn rất nhiều vì quyền sở hữu (ownership / 소유권) của head/tail rõ ràng. MPMC cần giao thức (protocol / 프로토콜) atomic/memory-order phức tạp hơn.
 
 Không nên dùng cấu trúc concurrent tổng quát nếu mô hình thực tế đơn giản hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **16. Ring Buffer** tiếp nhận điểm tựa từ **15. SPSC, MPSC, MPMC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. hàng đợi (queue / 큐) độ sâu (depth / 깊이) không chỉ là chỉ số (metric / 지표) vận hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Ring Buffer
 
@@ -255,6 +285,8 @@ index & (capacity - 1)
 ```
 
 Nhưng tối ưu hóa (optimization / 최적화) này chỉ đúng nếu bất biến (invariant / 불변식) sức chứa (capacity / 용량) được giữ.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **17. hàng đợi (queue / 큐) độ sâu (depth / 깊이) không chỉ là chỉ số (metric / 지표) vận hành** tiếp nhận điểm tựa từ **16. Ring Buffer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. thử lại (retry / 재시도) Storm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. hàng đợi (queue / 큐) độ sâu (depth / 깊이) không chỉ là chỉ số (metric / 지표) vận hành
 
@@ -275,6 +307,8 @@ processing latency
 
 Chỉ nhìn CPU usage có thể bỏ sót backlog.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **18. thử lại (retry / 재시도) Storm** tiếp nhận điểm tựa từ **17. hàng đợi (queue / 큐) độ sâu (depth / 깊이) không chỉ là chỉ số (metric / 지표) vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Delay hàng đợi (queue / 큐) và Timer vùng nhớ động (heap / 힙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. thử lại (retry / 재시도) Storm
 
 Khi downstream lỗi, upstream có thể thử lại (retry / 재시도). Nếu mọi máy khách (client / 클라이언트) thử lại (retry / 재시도) ngay, arrival tỷ lệ (rate / 비율) tăng đúng lúc sức chứa (capacity / 용량) giảm.
@@ -289,6 +323,8 @@ circuit breaker
 ```
 
 DSA hàng đợi (queue / 큐) đúng nhưng chính sách (policy / 정책) thử lại (retry / 재시도) sai vẫn làm hệ thống sụp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **19. Delay hàng đợi (queue / 큐) và Timer vùng nhớ động (heap / 힙)** tiếp nhận điểm tựa từ **18. thử lại (retry / 재시도) Storm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Dedup và Idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Delay hàng đợi (queue / 큐) và Timer vùng nhớ động (heap / 힙)
 
@@ -306,6 +342,8 @@ Nếu có hàng triệu timer với độ phân giải giới hạn, **timer whe
 
 Lựa chọn phụ thuộc độ phân giải và quy mô (scale / 규모).
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **20. Dedup và Idempotency** tiếp nhận điểm tựa từ **19. Delay hàng đợi (queue / 큐) và Timer vùng nhớ động (heap / 힙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Cancellation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Dedup và Idempotency
 
 Job có thể được gửi lại sau thử lại (retry / 재시도). Nếu side tác động (effect / 효과) không idempotent, xử lý hai lần có thể gây lỗi.
@@ -320,6 +358,8 @@ trong băm (hash / 해시) Map/cơ sở dữ liệu (database / 데이터베이�
 
 Nhưng dedup trạng thái (state / 상태) cũng tăng theo số job và cần cleanup.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **21. Cancellation** tiếp nhận điểm tựa từ **20. Dedup và Idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Admission điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Cancellation
 
 Nếu job đang trong vùng nhớ động (heap / 힙)/hàng đợi (queue / 큐) bị cancel, xóa tùy ý có thể đắt.
@@ -333,6 +373,8 @@ cancelled[jobId] = true
 khi pop thì bỏ qua job đã cancel.
 
 Đây là lazy deletion, tương tự stale entries trong Dijkstra/Priority hàng đợi (queue / 큐).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **22. Admission điều khiển (control / 제어)** tiếp nhận điểm tựa từ **21. Cancellation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Cost-aware Scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Admission điều khiển (control / 제어)
 
@@ -349,6 +391,8 @@ memory budget
 ```
 
 Một yêu cầu (request / 요청) bị từ chối sớm đôi khi tốt hơn yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) sau 30 giây.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **23. Cost-aware Scheduling** tiếp nhận điểm tựa từ **22. Admission điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Priority Inversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Cost-aware Scheduling
 
@@ -367,11 +411,15 @@ Bài toán trở thành multidimensional packing/scheduling và có thể khó v
 
 Đây là ranh giới nơi vùng nhớ động (heap / 힙) đơn giản không còn đủ.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **24. Priority Inversion** tiếp nhận điểm tựa từ **23. Cost-aware Scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Fairness theo tenant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Priority Inversion
 
 Một tác vụ (task / 작업) priority cao có thể phải chờ khóa (lock / 잠금) đang được tác vụ (task / 작업) priority thấp giữ, trong khi tác vụ (task / 작업) trung bình tiếp tục chạy. Đây là **priority inversion**.
 
 Các cơ chế như priority inheritance xử lý ở tầng synchronization, cho thấy scheduler và khóa (lock / 잠금)/tài nguyên (resource / 자원) đồ thị (graph / 그래프) có liên hệ với nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **25. Fairness theo tenant** tiếp nhận điểm tựa từ **24. Priority Inversion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. thất bại (failure / 실패) khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Fairness theo tenant
 
@@ -386,6 +434,8 @@ tenant_id -> queue state
 ```
 
 và vùng nhớ động (heap / 힙)/round-robin chọn tenant tiếp theo.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **26. thất bại (failure / 실패) khôi phục (recovery / 복구)** tiếp nhận điểm tựa từ **25. Fairness theo tenant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. thất bại (failure / 실패) khôi phục (recovery / 복구)
 
@@ -402,6 +452,8 @@ visibility timeout
 
 Một cấu trúc FIFO đúng trong RAM chưa đủ cho delivery ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **27. Testing** tiếp nhận điểm tựa từ **26. thất bại (failure / 실패) khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Benchmark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Testing
 
 Kiểm tra không chỉ thứ tự đầu ra (output / 출력) mà còn bất biến (invariant / 불변식):
@@ -416,6 +468,8 @@ retry không double-apply side effect theo contract
 ```
 
 Property-based kiểm thử (test / 테스트) có thể sinh chuỗi enqueue/dequeue/cancel/reprioritize ngẫu nhiên và so với mô hình tham chiếu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **28. Benchmark** tiếp nhận điểm tựa từ **27. Testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. chuỗi xử lý (pipeline / 파이프라인) khái niệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Benchmark
 
@@ -433,6 +487,8 @@ hot tenant
 ```
 
 Average thông lượng (throughput / 처리량) tốt nhưng p99 rất xấu có thể không đáp ứng SLA.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **28. Benchmark** xác định đầu vào; **29. chuỗi xử lý (pipeline / 파이프라인) khái niệm** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. chuỗi xử lý (pipeline / 파이프라인) khái niệm
 
@@ -460,8 +516,12 @@ queue depth + latency
 backpressure / autoscaling / rejection
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **Mô hình tư duy** gom các mảnh từ **29. chuỗi xử lý (pipeline / 파이프라인) khái niệm** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Scheduler là bài toán **chọn item tiếp theo dưới mục tiêu và ràng buộc tài nguyên**. hàng đợi (queue / 큐) lưu backlog, Priority hàng đợi (queue / 큐) mã hóa thứ tự ưu tiên, Deque hỗ trợ công việc (work / 작업) stealing, băm (hash / 해시) Map giữ trạng thái (state / 상태) theo job/tenant, còn backpressure bảo đảm backlog không biến thành sự cố tài nguyên. cấu trúc dữ liệu (data structure / 자료구조) chỉ là một nửa; chính sách (policy / 정책) và mục tiêu (objective / 목표) mới quyết định hệ thống có công bằng, ổn định và chịu tải tốt hay không.
 
 Xem thêm: [Queue, Deque & Priority Queue](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [Problem-Solving Workflow](./02_problem_solving_workflow.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Power, thermal, DVFS và sustained hiệu năng (performance / 성능)
 
-> **Mạch đọc:** Đặt **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. động (dynamic / 동적) power bắt đầu từ switching** sang **2. Frequency không phải tài nguyên độc lập**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. động (dynamic / 동적) power bắt đầu từ switching** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Frequency không phải tài nguyên độc lập** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Hiệu năng của CPU/GPU không chỉ bị quyết định bởi số cốt lõi (core / 핵심), IPC hay xung nhịp tối đa được ghi trên thông số. Một hệ thống có thể benchmark rất nhanh trong vài giây đầu rồi chậm dần dù tải công việc (workload / 워크로드) không đổi. Lý do là phần cứng hiện đại hoạt động dưới nhiều **ràng buộc (constraint / 제약조건) đồng thời**: giới hạn công suất (power limit), nhiệt độ (thermal limit), dòng điện, độ ổn định điện áp, khả năng tản nhiệt và chính sách (policy / 정책) của firmware/OS.
 
@@ -42,6 +41,8 @@ nhiệt độ tăng
 
 Controller phải phá vòng lặp này bằng giảm voltage/frequency, giới hạn activity hoặc thay đổi scheduling.
 
+> **Chuyển mạch:** Trong **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **2. Frequency không phải tài nguyên độc lập** tiếp nhận điểm tựa từ **1. động (dynamic / 동적) power bắt đầu từ switching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Boost là borrowing từ headroom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Frequency không phải tài nguyên độc lập
 
 Một cốt lõi (core / 핵심) không thể tùy ý chạy ở bất kỳ frequency nào. Hardware thường hỗ trợ tập operating points gắn frequency với voltage và các ràng buộc (constraint / 제약조건) vật lý. Cơ chế **động (dynamic / 동적) Voltage and Frequency Scaling (DVFS)** thay đổi operating điểm (point / 지점) theo demand và ngân sách (budget / 예산).
@@ -49,6 +50,8 @@ Một cốt lõi (core / 핵심) không thể tùy ý chạy ở bất kỳ freq
 Ở tải công việc (workload / 워크로드) nhẹ, hệ thống có thể tăng frequency của một vài cốt lõi (core / 핵심) để giảm độ trễ (latency / 지연 시간). Khi nhiều cốt lõi (core / 핵심) cùng active, tổng power tăng; frequency all-core có thể thấp hơn single-core boost. Khi véc-tơ (vector / 벡터) đơn vị (unit / 단위) hoặc accelerator hoạt động mạnh, power density và hiện tại (current / 현재) demand có thể thay đổi thêm.
 
 Do đó hai tải công việc (workload / 워크로드) có cùng CPU utilization 100% chưa chắc có cùng frequency, power hoặc thông lượng (throughput / 처리량). Một tải công việc (workload / 워크로드) integer nhẹ và một tải công việc (workload / 워크로드) SIMD/FMA dày đặc có thể tạo pressure vật lý khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **3. Boost là borrowing từ headroom** tiếp nhận điểm tựa từ **2. Frequency không phải tài nguyên độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Thermal resistance và thermal inertia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Boost là borrowing từ headroom
 
@@ -69,6 +72,8 @@ thermal saturation
 → throttling / lower equilibrium
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **4. Thermal resistance và thermal inertia** tiếp nhận điểm tựa từ **3. Boost là borrowing từ headroom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Throttling là điều khiển (control / 제어) hành động (action / 동작), không phải bug bí ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Thermal resistance và thermal inertia
 
 Nhiệt không rời silicon ngay lập tức. Heat phải đi qua die, gói (package / 패키지), thermal giao diện (interface / 인터페이스), heatsink rồi ra môi trường. Hệ thống vì thế có **thermal inertia**: temperature phản ứng chậm hơn thay đổi instruction activity.
@@ -76,6 +81,8 @@ Nhiệt không rời silicon ngay lập tức. Heat phải đi qua die, gói (pa
 Một spike CPU ngắn có thể kết thúc trước khi gói (package / 패키지) nóng đáng kể. Một tải công việc (workload / 워크로드) liên tục làm nhiệt tích tụ cho tới khi heat generation gần cân bằng với heat dissipation.
 
 Đây là lý do cùng một mã (code / 코드) có thể có độ trễ (latency / 지연 시간) khác nhau tùy tải công việc (workload / 워크로드) trước đó. Máy vừa idle lâu có nhiều thermal headroom hơn máy vừa chạy bản dựng (build / 빌드) hoặc suy luận (inference / 추론) nặng.
+
+> **Chuyển mạch:** Trong **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **5. Throttling là điều khiển (control / 제어) hành động (action / 동작), không phải bug bí ẩn** tiếp nhận điểm tựa từ **4. Thermal resistance và thermal inertia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Race-to-idle không phải lúc nào cũng thắng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Throttling là điều khiển (control / 제어) hành động (action / 동작), không phải bug bí ẩn
 
@@ -88,6 +95,8 @@ temperature/current/power phải nằm trong safe envelope
 Điều khiển (control / 제어) hành động (action / 동작) có thể là giảm frequency, giảm voltage, giới hạn boost residency hoặc thay đổi power allocation giữa CPU/GPU/accelerator. Từ góc nhìn ứng dụng (application / 애플리케이션), symptom thường là thông lượng (throughput / 처리량) giảm hoặc tail độ trễ (latency / 지연 시간) tăng mà không có tranh chấp khóa (lock contention / 잠금 경합) hay I/O bottleneck mới.
 
 Nếu chỉ nhìn ứng dụng (application / 애플리케이션) metrics, ta dễ kết luận “mã (code / 코드) regression”. bằng chứng (evidence / 증거) phải đi xuống hardware tầng (layer / 계층): effective frequency, gói (package / 패키지) power, thermal trạng thái (state / 상태), throttling reason, residency trạng thái (state / 상태) và tải công việc (workload / 워크로드) mix.
+
+> **Chuyển mạch:** Ở chặng này của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **6. Race-to-idle không phải lúc nào cũng thắng** tiếp nhận điểm tựa từ **5. Throttling là điều khiển (control / 제어) hành động (action / 동작), không phải bug bí ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Memory-bound tải công việc (workload / 워크로드) và power headroom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Race-to-idle không phải lúc nào cũng thắng
 
@@ -105,17 +114,23 @@ latency under sustained constraint
 
 chứ không chỉ peak GHz.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **7. Memory-bound tải công việc (workload / 워크로드) và power headroom** tiếp nhận điểm tựa từ **6. Race-to-idle không phải lúc nào cũng thắng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Heterogeneous cores và scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Memory-bound tải công việc (workload / 워크로드) và power headroom
 
 Khi CPU thường xuyên chờ DRAM, thực thi (execution / 실행) units không active tối đa. tải công việc (workload / 워크로드) có thể tiêu thụ ít cốt lõi (core / 핵심) power hơn compute-bound tải công việc (workload / 워크로드) dù wall-clock thời gian (time / 시간) dài. Tăng frequency trong trường hợp này thường cho diminishing return vì lower tầng (layer / 계층) quyết định thông lượng (throughput / 처리량) là bộ nhớ (memory / 메모리) độ trễ (latency / 지연 시간)/bandwidth.
 
 Ngược lại, vectorized compute có arithmetic intensity cao có thể tận dụng thực thi (execution / 실행) units mạnh, nhưng tạo power density lớn. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링) vì thế phải nối roofline-like lập luận (reasoning / 추론) với power/thermal ràng buộc (constraint / 제약조건): bottleneck có thể chuyển từ compute sang bộ nhớ (memory / 메모리), rồi từ bộ nhớ (memory / 메모리) sang thermal ngân sách (budget / 예산) tùy phase.
 
+> **Chuyển mạch:** Trong **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **8. Heterogeneous cores và scheduling** tiếp nhận điểm tựa từ **7. Memory-bound tải công việc (workload / 워크로드) và power headroom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Datacenter: power là sức chứa (capacity / 용량) ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Heterogeneous cores và scheduling
 
 Trong kiến trúc heterogeneous, cốt lõi (core / 핵심) không đồng nhất về hiệu năng (performance / 성능), năng lượng (energy / 에너지) efficiency và supported operating phạm vi (range / 범위). Scheduler phải quyết định tác vụ (task / 작업) nào cần độ trễ (latency / 지연 시간), tác vụ (task / 작업) nào có thể chạy trên efficiency cốt lõi (core / 핵심), đồng thời tránh di chuyển (migration / 마이그레이션) làm mất bộ nhớ đệm (cache / 캐시) locality.
 
 Một scheduler quyết định (decision / 결정) tốt về fairness chưa chắc tốt về năng lượng (energy / 에너지). Ngược lại, packing tác vụ (task / 작업) để cho một cluster ngủ có thể tiết kiệm power nhưng tăng contention ở active cores. Đây là tương tác (interaction / 상호작용) giữa OS scheduling và hardware power management; không tầng (layer / 계층) nào tự mình sở hữu toàn bộ kết quả (outcome / 결과).
+
+> **Chuyển mạch:** Ở chặng này của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **9. Datacenter: power là sức chứa (capacity / 용량) ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **8. Heterogeneous cores và scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. thất bại (failure / 실패) modes và phase changes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Datacenter: power là sức chứa (capacity / 용량) ràng buộc (constraint / 제약조건)
 
@@ -129,6 +144,8 @@ installed compute capacity
 ```
 
 Power capping có thể tăng tổng thông lượng (throughput / 처리량) của datacenter nếu cho phép đặt nhiều machine hơn trong cùng power envelope, dù từng machine chậm hơn một chút. Đây là ví dụ điển hình nơi tối ưu cục bộ (local / 로컬) peak hiệu năng (performance / 성능) làm xấu toàn cục (global / 전역) efficiency.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **10. thất bại (failure / 실패) modes và phase changes** tiếp nhận điểm tựa từ **9. Datacenter: power là sức chứa (capacity / 용량) ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. thất bại (failure / 실패) modes và phase changes
 
@@ -145,6 +162,8 @@ Power/thermal issue thường có các thất bại (failure / 실패) mẫu (pa
 **Cooling degradation:** bụi, fan curve, ambient temperature hoặc thermal giao diện (interface / 인터페이스) làm sustained hiệu năng (performance / 성능) giảm dù software không đổi.
 
 **Memory-bound overclocking:** power tăng nhưng useful công việc (work / 작업) gần như không tăng vì bottleneck nằm ở DRAM.
+
+> **Chuyển mạch:** Trong **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **10. thất bại (failure / 실패) modes và phase changes** nêu điều cần giải thích; **11. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Experiment thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -166,11 +185,15 @@ ambient hoặc cooling state nếu có
 
 Nếu frequency cao nhưng IPC thấp và bộ nhớ (memory / 메모리) bandwidth đã saturated, bottleneck nhiều khả năng là bộ nhớ (memory / 메모리) đường dẫn (path / 경로). Khi đó tăng power ngân sách (budget / 예산) không giải quyết bất biến (invariant / 불변식) đang giới hạn thông lượng (throughput / 처리량).
 
+> **Chuyển mạch:** Ở chặng này của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **11. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **12. Experiment thiết kế (design / 설계)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Kết nối xuống và lên các tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Experiment thiết kế (design / 설계)
 
 Một experiment tốt cần warm-up đủ lâu để đạt steady trạng thái (state / 상태), giữ tải công việc (workload / 워크로드) mix ổn định, ghi lại ambient/hệ thống (system / 시스템) trạng thái (state / 상태) và so sánh cùng hardware cohort. Với laptop hoặc máy chủ (server / 서버) có fan điều khiển (control / 제어), cần tránh so benchmark cold machine với warm machine.
 
 Đối với sức chứa (capacity / 용량) kiểm thử (test / 테스트), nên chạy đủ lâu để quan sát thermal equilibrium. Đối với latency-sensitive dịch vụ (service / 서비스), cần đo cả p50 và tail độ trễ (latency / 지연 시간) vì DVFS chuyển tiếp (transition / 전이), scheduler di chuyển (migration / 마이그레이션) và thermal oscillation có thể tác động tail mạnh hơn median.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Power, thermal, DVFS và sustained hiệu năng (performance / 성능)**, **13. Kết nối xuống và lên các tầng (layer / 계층)** tiếp nhận điểm tựa từ **12. Experiment thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 13. Kết nối xuống và lên các tầng (layer / 계층)
 
@@ -191,4 +214,4 @@ application demand
 
 Nếu bỏ qua power/thermal tầng (layer / 계층), ta có thể giải thích đúng peak hiệu năng (performance / 성능) nhưng sai hoàn toàn sustained môi trường vận hành (production / 운영 환경) hiệu năng (performance / 성능).
 
-> **Bàn giao:** Sau **13. Kết nối xuống và lên các tầng (layer / 계층)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 memory consistency cache coherence and ordering](./00_memory_consistency_cache_coherence_and_ordering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **13. Kết nối xuống và lên các tầng (layer / 계층)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

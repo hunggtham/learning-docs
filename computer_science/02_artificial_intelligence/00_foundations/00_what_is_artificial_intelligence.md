@@ -1,7 +1,6 @@
 # Artificial Intelligence là gì?
 
-> **Mạch đọc:** Đọc **Artificial Intelligence là gì?** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ automation đến intelligence** sang **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Artificial Intelligence là gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ automation đến intelligence** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Artificial Intelligence (AI / Trí tuệ nhân tạo / 인공지능) thường được mô tả bằng những câu rất rộng như “máy móc bắt chước trí thông minh con người”. Cách nói này hữu ích để tạo trực giác ban đầu nhưng chưa đủ chính xác, vì nó để lại hai câu hỏi khó hơn: **trí thông minh là gì**, và **máy cần giống con người đến mức nào mới được coi là thông minh**?
 
@@ -28,8 +27,7 @@ Learned Model + New Data → Prediction
 
 Điều này không có nghĩa AI lúc nào cũng học từ dữ liệu (data / 데이터). Classical AI còn dùng tìm kiếm (search / 검색), lô-gic (logic / 논리), planning, ràng buộc (constraint / 제약조건) solving và kiến thức (knowledge / 지식) biểu diễn (representation / 표현). Vì vậy Machine học tập (learning / 학습) chỉ là một nhánh rất lớn bên trong AI, không phải định nghĩa của toàn bộ AI.
 
-
-> **Chuyển mạch:** Từ **Từ automation đến intelligence**, ta sang **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Artificial Intelligence là gì?**, **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic** tiếp nhận điểm tựa từ **Từ automation đến intelligence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic
 
@@ -45,8 +43,7 @@ Intelligence ≈ khả năng biến information thành useful behavior dưới c
 
 “Useful hành vi (behavior / 동작)” phụ thuộc vào mục tiêu (objective / 목표). Với recommender hệ thống (system / 시스템), đó có thể là ranking item. Với robot, đó có thể là hành động vật lý. Với LLM, đó có thể là chuỗi (sequence / 시퀀스) đơn vị từ (token / 토큰) trả lời phù hợp. Với autonomous tác nhân (agent / 에이전트), đó có thể là một chuỗi hành động (action / 동작) hướng tới goal.
 
-
-> **Chuyển mạch:** Từ **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic**, ta sang **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence là gì?**, **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới** tiếp nhận điểm tựa từ **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một AI hệ thống (system / 시스템) cần biểu diễn thế giới
 
@@ -62,8 +59,7 @@ Vì vậy biểu diễn (representation / 표현) không chỉ là bước “fo
 
 Xem thêm: [Problem Representation](./03_problem_representation.md).
 
-
-> **Chuyển mạch:** Từ **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới**, ta sang **tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Artificial Intelligence là gì?**, **Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?** tiếp nhận điểm tựa từ **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weak AI, General AI và terminology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?
 
@@ -79,8 +75,7 @@ Bốn từ này thường bị trộn lẫn.
 
 Các cơ chế này thường kết hợp. Reinforcement học tập (learning / 학습) có học tập (learning / 학습) + tối ưu hóa (optimization / 최적화) + planning. LLM tác nhân (agent / 에이전트) có ngôn ngữ (language / 언어) mô hình (model / 모델) + công cụ (tool / 도구) use + tìm kiếm (search / 검색)/planning. môi trường vận hành (production / 운영 환경) recommendation hệ thống (system / 시스템) có mô hình (model / 모델) học tập (learning / 학습) + ranking tối ưu hóa (optimization / 최적화) + nghiệp vụ (business / 비즈니스) các ràng buộc (constraints / 제약조건들).
 
-
-> **Chuyển mạch:** Từ **tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?**, ta sang **Weak AI, General AI và terminology** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Artificial Intelligence là gì?**, **Weak AI, General AI và terminology** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI có “hiểu” không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Weak AI, General AI và terminology
 
@@ -92,8 +87,7 @@ Trong nhiều tài liệu, **Narrow AI** hoặc **Weak AI (약인공지능)** ch
 
 Thư viện (library / 라이브러리) này ưu tiên những khái niệm có cơ chế (mechanism / 메커니즘) rõ ràng và có thể kiểm chứng, đồng thời vẫn giải thích terminology để người đọc hiểu discussion hiện đại.
 
-
-> **Chuyển mạch:** Từ **Weak AI, General AI và terminology**, ta sang **AI có “hiểu” không?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence là gì?**, **AI có “hiểu” không?** tiếp nhận điểm tựa từ **Weak AI, General AI và terminology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AI có “hiểu” không?
 
@@ -101,8 +95,7 @@ Câu hỏi này phụ thuộc vào định nghĩa của “understanding”. N�
 
 Trong kỹ thuật (engineering / 엔지니어링), cách an toàn hơn là tránh anthropomorphism và hỏi những câu có thể đo được: mô hình (model / 모델) giữ được ngữ cảnh (context / 맥락) bao lâu, có generalize sang phân phối (distribution / 분포) mới không, có grounded vào bên ngoài (external / 외부) nguồn (source / 소스) không, calibration thế nào, dạng thất bại (failure mode / 실패 모드) nào thường gặp, và hành vi (behavior / 동작) có stable dưới perturbation không.
 
-
-> **Chuyển mạch:** Từ **AI có “hiểu” không?**, ta sang **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Artificial Intelligence là gì?**, **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **AI có “hiểu” không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AI là một hệ thống (system / 시스템) bài toán (problem / 문제)
 
@@ -125,8 +118,7 @@ Dữ liệu (data / 데이터) chất lượng (quality / 품질), độ trễ (
 
 Đây là lý do thư viện (library / 라이브러리) sau này tách rõ `AI model` và `AI system`.
 
-
-> **Chuyển mạch:** Từ **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Artificial Intelligence là gì?**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -146,8 +138,7 @@ Quy mô (scale / 규모) có thể cải thiện nhiều năng lực (capability
 
 Fluency và factual tính đúng đắn (correctness / 정확성) là hai thuộc tính (property / 속성) khác nhau. Đặc biệt với generative mô hình (model / 모델), một chuỗi (sequence / 시퀀스) có xác suất ngôn ngữ cao vẫn có thể sai về factual world. Vì vậy grounding, retrieval, xác minh (verification / 확인) và evaluation là phần cốt lõi của hệ thống (system / 시스템) thiết kế (design / 설계).
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence là gì?**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -164,4 +155,4 @@ AI nối nhiều lĩnh vực nền:
 
 Xem tiếp: [History and AI Paradigms](./01_history_and_ai_paradigms.md) và [Intelligence, Agents and Environments](./02_intelligence_agents_and_environments.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 history and ai paradigms](./01_history_and_ai_paradigms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

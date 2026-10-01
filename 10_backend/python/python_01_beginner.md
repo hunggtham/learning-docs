@@ -1,7 +1,6 @@
 # Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm
 
-> **Mạch đọc:** Đặt **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Từ mã nguồn (source code / 소스 코드) đến thực thi (execution / 실행)** sang **if name == "main"**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ mã nguồn (source code / 소스 코드) đến thực thi (execution / 실행)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Biến không phải hộp: name binding và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 
@@ -41,6 +40,8 @@ if __name__ == "__main__":
 ```
 
 Điểm quan trọng không phải thuộc lòng câu `if`; nó là ranh giới (boundary / 경계) giữa “mô-đun (module / 모듈) có thể tái sử dụng” và “entry điểm (point / 지점) có side tác động (effect / 효과)”.
+
+> **Chuyển mạch:** Trong **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **1. Từ mã nguồn (source code / 소스 코드) đến thực thi (execution / 실행)** nêu điều cần giải thích; **2. Biến không phải hộp: name binding và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. định danh (identity / 식별자), equality và hashability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Biến không phải hộp: name binding và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)
 
@@ -86,12 +87,13 @@ def normalize_in_place(names: list[str]) -> None:
     for i, name in enumerate(names):
         names[i] = name.strip().lower()
 
-
 def normalized(names: list[str]) -> list[str]:
     return [name.strip().lower() for name in names]
 ```
 
 Hàm (function / 함수) đầu mutate đối tượng (object / 객체) của caller và tên hàm (function / 함수) nói rõ điều đó. hàm (function / 함수) thứ hai tạo danh sách (list / 목록) kết quả mới. Không có lựa chọn nào luôn tốt hơn; điều quan trọng là caller có dự đoán được side tác động (effect / 효과) hay không. Ở môi trường vận hành (production / 운영 환경), bug thường không đến từ việc Python “share tham chiếu (reference / 참조)”, mà từ việc quyền sở hữu (ownership / 소유권) không được định nghĩa nên hai thành phần (component / 컴포넌트) cùng nghĩ mình có quyền sửa cùng một đối tượng (object / 객체) đồ thị (graph / 그래프).
+
+> **Chuyển mạch:** Name binding và reference semantics giải thích vì sao identity, equality và hashability không phải cùng một câu hỏi. Phần kế tiếp dùng distinction đó để phân tích mutable và immutable trong các phép gán thật.
 
 ## 3. định danh (identity / 식별자), equality và hashability
 
@@ -121,6 +123,8 @@ if result is None:
 ```
 
 Hashability liên quan nhưng không đồng nhất với immutability. Key của `dict` và member của `set` cần băm (hash / 해시) ổn định trong thời gian đối tượng (object / 객체) nằm trong collection. Các immutable built-in như `str`, `bytes`, `int` thường hashable. `list`, `dict`, `set` mutable nên không hashable. `tuple` chỉ hashable nếu mọi phần tử cần băm (hash / 해시) cũng hashable.
+
+> **Chuyển mạch:** Sau khi tách identity, equality và hashability, phần mutable/immutable cho thấy thao tác nào làm đổi object và thao tác nào chỉ đổi binding. Numeric types tiếp theo áp dụng cùng mental model cho value và phép tính.
 
 ## 4. Mutable và immutable: điều gì thực sự thay đổi?
 
@@ -158,6 +162,8 @@ box[0].append(3)
 
 `tuple` vẫn không cho thay `box[0]` bằng đối tượng (object / 객체) khác, nhưng danh sách (list / 목록) nằm bên trong vẫn mutable. “Tuple immutable” không có nghĩa toàn bộ đối tượng (object / 객체) đồ thị (graph / 그래프) bên dưới bất biến.
 
+> **Chuyển mạch:** Numeric types cho thấy value model và phép toán có thể tạo object mới thay vì mutate object cũ. String/bytes tiếp theo chuyển cùng câu hỏi đó sang encoding boundary giữa text và binary.
+
 ## 5. Numeric types và mô hình (model / 모델) của số
 
 Python có `int`, `float`, `complex` trong built-in numeric tower phổ biến. `bool` là subclass của `int`, nhưng trong lĩnh vực (domain / 도메인) mô hình (model / 모델) nên coi boolean là giá trị lô-gic (logic / 논리) thay vì số 0/1 trừ khi API yêu cầu.
@@ -179,6 +185,8 @@ Floor division `//` không đơn thuần là “bỏ phần thập phân”; nó
 ```
 
 Đây là trường hợp biên (edge case / 경계 사례) dễ sai khi cổng (port / 포트) lô-gic (logic / 논리) từ ngôn ngữ dùng truncation toward zero.
+
+> **Chuyển mạch:** Ở chặng này của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **5. Numeric types và mô hình (model / 모델) của số** đã nêu tiêu chí phân biệt, còn **6. String, bytes và ranh giới (boundary / 경계) encoding** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. bộ chứa (container / 컨테이너) types: danh sách (list / 목록), tuple, dict, set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. String, bytes và ranh giới (boundary / 경계) encoding
 
@@ -202,6 +210,8 @@ Python string immutable. Các thao tác nối nhiều chuỗi trong vòng lặp 
 ### f-string và t-string
 
 F-string tạo `str` sau khi evaluate interpolation. Python 3.14 thêm template string literal `t"..."`, trả về `string.templatelib.Template` thay vì `str`, cho phép mã (code / 코드) xử lý phần literal và interpolation trước khi kết xuất (render / 렌더링). Đây là hiện đại (modern / 현대적) tính năng (feature / 기능) hữu ích cho API templating/security-aware processing, nhưng không cần dùng chỉ vì nó mới.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **6. String, bytes và ranh giới (boundary / 경계) encoding** đã nêu tiêu chí phân biệt, còn **7. bộ chứa (container / 컨테이너) types: danh sách (list / 목록), tuple, dict, set** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. điều khiển (control / 제어) luồng (flow / 흐름) là điều khiển evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. bộ chứa (container / 컨테이너) types: danh sách (list / 목록), tuple, dict, set
 
@@ -258,6 +268,8 @@ print(original)  # [[1, 99], [2]]
 
 `copy.deepcopy()` cố sao chép recursively đối tượng (object / 객체) đồ thị (graph / 그래프), nhưng “deep” không đồng nghĩa “luôn đúng”. đối tượng (object / 객체) có dùng chung (shared / 공유) định danh (identity / 식별자), tệp (file / 파일) handle, socket, khóa (lock / 잠금) hoặc custom `__deepcopy__` có ngữ nghĩa (semantics / 의미론) riêng. Trong lĩnh vực (domain / 도메인) mô hình (model / 모델), thường tốt hơn thiết kế immutable giá trị (value / 값) đối tượng (object / 객체) hoặc tường minh (explicit / 명시적) clone hành vi (behavior / 동작) thay vì dùng `deepcopy()` như phép chữa chung.
 
+> **Chuyển mạch:** Trong **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **7. bộ chứa (container / 컨테이너) types: danh sách (list / 목록), tuple, dict, set** xác định đầu vào; **8. điều khiển (control / 제어) luồng (flow / 흐름) là điều khiển evaluation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Comprehension: transform có cấu trúc, không phải mọi vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. điều khiển (control / 제어) luồng (flow / 흐름) là điều khiển evaluation
 
 `luồng điều khiển (control flow / 제어 흐름)`
@@ -299,7 +311,6 @@ Python nhìn chung evaluate expression từ trái sang phải theo ngữ nghĩa 
 def log_value(value):
     print("inside")
 
-
 def build_value():
     print("build")
     return 10
@@ -308,6 +319,8 @@ log_value(build_value())
 ```
 
 sẽ in `build` trước `inside`. Phân biệt “evaluate argument” và “bind parameter” giúp lập luận (reasoning / 추론) đúng khi argument có I/O, mutation hoặc exception.
+
+> **Chuyển mạch:** Ở chặng này của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **8. điều khiển (control / 제어) luồng (flow / 흐름) là điều khiển evaluation** xác định đầu vào; **9. Comprehension: transform có cấu trúc, không phải mọi vòng lặp (loop / 루프)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. hàm (function / 함수) là đối tượng (object / 객체) và là ranh giới (boundary / 경계) thiết kế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Comprehension: transform có cấu trúc, không phải mọi vòng lặp (loop / 루프)
 
@@ -320,6 +333,8 @@ active_names = [u.name for u in users if u.active]
 Nó Pythonic khi toàn bộ transformation đọc được như một câu. Nếu có nhiều side tác động (effect / 효과), nhiều nested điều kiện (condition / 조건) hoặc cần logging/gỡ lỗi (debug / 디버그) từng bước, vòng lặp (loop / 루프) thường rõ hơn. “Pythonic” không có nghĩa càng ngắn càng tốt; nó nghĩa mã (code / 코드) phù hợp với ngữ nghĩa (semantic / 의미적) conventions của Python và dễ hiểu đối với người bảo trì.
 
 Phạm vi (scope / 범위) của comprehension trong Python 3 là phạm vi (scope / 범위) riêng cho iteration variable, khác Python 2 legacy hành vi (behavior / 동작). mã (code / 코드) cũ hoặc tài liệu cũ có thể mô tả leakage của vòng lặp (loop / 루프) variable từ danh sách (list / 목록) comprehension; không áp dụng mô hình tư duy (mental model / 사고 모델) đó cho hiện đại (modern / 현대적) Python.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **9. Comprehension: transform có cấu trúc, không phải mọi vòng lặp (loop / 루프)** đã nêu tiêu chí phân biệt, còn **10. hàm (function / 함수) là đối tượng (object / 객체) và là ranh giới (boundary / 경계) thiết kế** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. phạm vi (scope / 범위) và LEGB** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. hàm (function / 함수) là đối tượng (object / 객체) và là ranh giới (boundary / 경계) thiết kế
 
@@ -356,7 +371,6 @@ def build_port() -> int:
     print("evaluated")
     return 5432
 
-
 def connect(host, /, *, timeout):
     ...
 
@@ -365,8 +379,6 @@ connect(build_port())
 ```
 
 ### Packing và unpacking
-Phần “Packing và unpacking” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```python
 coords = (10, 20)
@@ -385,6 +397,8 @@ first, *middle, last = records
 ```
 
 `middle` là danh sách (list / 목록) mới chứa các phần tử ở giữa. Với iterable rất lớn, đừng dùng unpacking chỉ vì cú pháp đẹp nếu bạn thật sự cần streaming.
+
+> **Chuyển mạch:** Trong **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **10. hàm (function / 함수) là đối tượng (object / 객체) và là ranh giới (boundary / 경계) thiết kế** đã nêu tiêu chí phân biệt, còn **11. phạm vi (scope / 범위) và LEGB** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Closure và late binding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. phạm vi (scope / 범위) và LEGB
 
@@ -405,6 +419,8 @@ def outer():
 `inner` tìm `price` ở cục bộ (local / 로컬), `discount` ở enclosing hàm (function / 함수) và `rate` ở mô-đun (module / 모듈) toàn cục (global / 전역).
 
 `global` cho phép assignment nhắm module-level binding; `nonlocal` nhắm binding trong enclosing hàm (function / 함수) phạm vi (scope / 범위). Dùng chúng tiết kiệm vì mutable toàn cục (global / 전역) trạng thái (state / 상태) làm testing/tính đồng thời (concurrency / 동시성)/lập luận (reasoning / 추론) khó hơn.
+
+> **Chuyển mạch:** LEGB xác định tên được resolve ở scope nào; closure giữ lại binding đó sau khi outer function kết thúc. Phần default mutable argument tiếp tục bằng một lỗi khác của evaluation timing.
 
 ## 12. Closure và late binding
 
@@ -428,6 +444,8 @@ funcs = [lambda i=i: i for i in range(3)]
 
 Không nên học đây như mẹo “thêm `i=i`”. Cơ chế là default expression được evaluate lúc hàm (function / 함수) được tạo, trong khi free variable lookup của closure xảy ra khi hàm (function / 함수) chạy.
 
+> **Chuyển mạch:** Closure và default argument đều buộc người học theo dõi thời điểm binding/evaluation, nhưng chúng giữ state theo cơ chế khác nhau. Exception cơ bản tiếp theo mở rộng mental model sang control-flow và failure boundary.
+
 ## 13. Default mutable argument: lỗi từ thời điểm evaluation
 
 Default parameter được evaluate một lần khi `def` statement chạy, không phải mỗi lần hàm (function / 함수) được gọi.
@@ -449,6 +467,8 @@ def add_item(item: str, bucket: list[str] | None = None) -> list[str]:
 ```
 
 Có trường hợp dùng chung (shared / 공유) default trạng thái (state / 상태) là cố ý, nhưng nếu vậy nên biểu diễn intent rõ bằng đối tượng (object / 객체)/bộ nhớ đệm (cache / 캐시) riêng thay vì dựa vào side tác động (effect / 효과) khó thấy của default argument.
+
+> **Chuyển mạch:** Trong **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **13. Default mutable argument: lỗi từ thời điểm evaluation** xác định đầu vào; **14. Exception cơ bản: lỗi là một control-flow đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Modules, packages và import mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Exception cơ bản: lỗi là một control-flow đường dẫn (path / 경로)
 
@@ -488,6 +508,8 @@ else:
 
 Ở đây `ValueError` từ `validate_port()` không bị handler dành cho parsing nuốt mất. Đây là một ví dụ cho nguyên tắc rộng hơn: exception ranh giới (boundary / 경계) nên hẹp đủ để khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론) rõ ràng.
 
+> **Chuyển mạch:** Ở chặng này của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **15. Modules, packages và import mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **14. Exception cơ bản: lỗi là một control-flow đường dẫn (path / 경로)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Modules, packages và import mô hình tư duy (mental model / 사고 모델)
 
 `mô-đun (module / 모듈)`
@@ -502,13 +524,12 @@ Vì mô-đun (module / 모듈) bộ nhớ đệm (cache / 캐시) theo tiến tr
 
 Nếu `a.py` import `b.py`, trong khi `b.py` import ngược `a.py` và truy cập name chưa được tạo, bạn đang quan sát mô-đun (module / 모듈) ở trạng thái partially initialized. Fix bền vững thường là sửa phụ thuộc (dependency / 의존성) direction: tách dùng chung (shared / 공유) lớp trừu tượng (abstraction / 추상화) sang mô-đun (module / 모듈) thứ ba, chuyển orchestration lên tầng (layer / 계층) cao hơn, hoặc trì hoãn import có chủ đích. Di chuyển import vào hàm (function / 함수) chỉ để “hết lỗi” mà không sửa kiến trúc (architecture / 아키텍처) dễ che cycle.
 
-## 16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader
-Phần “16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **15. Modules, packages và import mô hình tư duy (mental model / 사고 모델)** cho ta quy tắc; **16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Checklist mô hình tư duy (mental model / 사고 모델) trước khi sang Part 2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader
 
 ```python
 from pathlib import Path
-
 
 def load_lines(path: Path, *, encoding: str = "utf-8") -> list[str]:
     if not path.is_file():
@@ -522,23 +543,25 @@ def load_lines(path: Path, *, encoding: str = "utf-8") -> list[str]:
 
 Nếu hàm (function / 함수) này nằm trong dịch vụ (service / 서비스), câu hỏi cấp cao (senior / 시니어) không phải “có thể viết một dòng không?” mà là: tệp (file / 파일) lớn đến mức nào, có cần streaming không, đầu vào (input / 입력) có tin cậy không, lỗi encoding xử lý ra sao, ai chịu trách nhiệm logging, và lời gọi (call / 호출) đường dẫn (path / 경로) có khối (block / 블록) vòng lặp sự kiện (event loop / 이벤트 루프) hay không. Các câu hỏi đó dẫn sang Part 2/3.
 
+> **Chuyển mạch:** Trong **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**, **16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader** cho ta quy tắc; **17. Checklist mô hình tư duy (mental model / 사고 모델) trước khi sang Part 2** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nguồn chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Checklist mô hình tư duy (mental model / 사고 모델) trước khi sang Part 2
 
 Hãy chắc rằng bạn có thể tự giải thích vì sao `b = a` không bản sao (copy / 복사) danh sách (list / 목록); vì sao `is` không thay `==`; vì sao tuple có thể chứa danh sách (list / 목록) mutable; vì sao slice của danh sách (list / 목록) là shallow outer bản sao (copy / 복사) chứ không phải view; vì sao short-circuit có thể làm expression bên phải không chạy; vì sao argument expression chạy trước parameter binding; vì sao default danh sách (list / 목록) có thể sống qua nhiều hàm (function / 함수) lời gọi (call / 호출); vì sao closure trong vòng lặp (loop / 루프) thấy giá trị (value / 값) cuối; vì sao `try` quá rộng có thể bắt nhầm bug; vì sao import có thể chạy mã (code / 코드); và vì sao `async` chưa thể kết luận gì về parallelism.
 
 Phần cuối cùng mới chỉ là preview: `async` là cú pháp (syntax / 문법) tạo coroutine/asynchronous điều khiển (control / 제어) luồng (flow / 흐름); parallel thực thi (execution / 실행) là vấn đề khác, sẽ được tách rõ ở Part 3.
 
+> **Chuyển mạch:** Checklist Part 1 gom execution, binding, object, function và exception thành các câu hỏi có thể kiểm tra. **Nguồn chính** ở cuối file giúp xác nhận từng behavior trước khi chuyển sang data model của Part 2.
+
 ## Nguồn chính
-Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
-- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
-- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình thực thi (execution model / 실행 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/executionmodel.html
-- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Expressions: https://docs.python.org/3.14/tham chiếu (reference / 참조)/expressions.html
-- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Simple statements: https://docs.python.org/3.14/tham chiếu (reference / 참조)/simple_stmts.html
-- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Import hệ thống (system / 시스템): https://docs.python.org/3.14/tham chiếu (reference / 참조)/import.html
-- Built-in Types: https://docs.python.org/3.14/thư viện (library / 라이브러리)/stdtypes.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/reference/datamodel.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình thực thi (execution model / 실행 모델): https://docs.python.org/3.14/reference/executionmodel.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Expressions: https://docs.python.org/3.14/reference/expressions.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Simple statements: https://docs.python.org/3.14/reference/simple_stmts.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Import hệ thống (system / 시스템): https://docs.python.org/3.14/reference/import.html
+- Built-in Types: https://docs.python.org/3.14/library/stdtypes.html
 - Exceptions: https://docs.python.org/3.14/tutorial/errors.html
 - Python 3.14 What's New: https://docs.python.org/3.14/whatsnew/3.14.html
 
-> **Bàn giao:** Sau **Nguồn chính**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn chính**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

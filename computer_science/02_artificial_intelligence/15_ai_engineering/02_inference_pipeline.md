@@ -1,7 +1,6 @@
 # Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)
 
-> **Mạch đọc:** Đặt **suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tính nhất quán giữa huấn luyện (training / 학습) và Serving** sang **Kiểm tra yêu cầu (request / 요청)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính nhất quán giữa huấn luyện (training / 학습) và Serving** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiểm tra yêu cầu (request / 요청)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **chuỗi xử lý (pipeline / 파이프라인) suy luận (inference pipeline / 추론 파이프라인)** biến một yêu cầu môi trường vận hành (production / 운영 환경) thành đầu vào (input / 입력) phù hợp với mô hình, thực thi mô hình, sau đó biến raw đầu ra (output / 출력) thành quyết định hoặc phản hồi có thể sử dụng. Độ đúng phụ thuộc toàn bộ đường đi, không chỉ forward pass.
 
@@ -28,6 +27,8 @@ Cùng một phép biến đổi về mặt ngữ nghĩa (semantics / 의미론) 
 
 Nên dùng chung thư viện (library / 라이브러리)/sản phẩm tạo ra (artifact / 산출물) hoặc sinh transform từ một specification duy nhất.
 
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Kiểm tra yêu cầu (request / 요청)** tiếp nhận điểm tựa từ **Tính nhất quán giữa huấn luyện (training / 학습) và Serving** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy xuất tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểm tra yêu cầu (request / 요청)
 
 Trước khi đưa dữ liệu vào mô hình cần kiểm tra:
@@ -41,6 +42,8 @@ Trước khi đưa dữ liệu vào mô hình cần kiểm tra:
 
 Nên reject yêu cầu (request / 요청) sai càng sớm càng tốt thay vì để tensor/thời gian chạy (runtime / 런타임) phát sinh lỗi khó hiểu ở phía sau.
 
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Truy xuất tính năng (feature / 기능)** tiếp nhận điểm tựa từ **Kiểm tra yêu cầu (request / 요청)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiền xử lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Truy xuất tính năng (feature / 기능)
 
 Tính năng (feature / 기능) online cần đúng theo thời điểm, đủ mới và có độ trễ thấp. tính năng (feature / 기능) dịch vụ (service / 서비스) có thể lấy dữ liệu từ bộ nhớ đệm (cache / 캐시), KV store hoặc cơ sở dữ liệu (database / 데이터베이스).
@@ -53,6 +56,8 @@ Khi hết thời gian chờ (timeout / 타임아웃), hệ thống phải địn
 - tuyến (route / 경로) sang fallback mô hình (model / 모델).
 
 Giá trị mặc định có thể làm chất lượng giảm âm thầm, vì vậy cần log rõ khi fallback xảy ra.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Tiền xử lý** tiếp nhận điểm tựa từ **Truy xuất tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động (dynamic / 동적) Shape** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiền xử lý
 
@@ -69,11 +74,15 @@ tạo tensor đầu vào cho model
 
 Với mô hình nhẹ, preprocessing độ trễ (latency / 지연 시간) đôi khi còn lớn hơn thời gian chạy mô hình (model / 모델).
 
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Động (dynamic / 동적) Shape** tiếp nhận điểm tựa từ **Tiền xử lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy luận sinh nội dung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Động (dynamic / 동적) Shape
 
 Chuỗi (sequence / 시퀀스) hoặc ảnh (image / 이미지) có kích thước khác nhau làm batching và bộ nhớ (memory / 메모리) khó tối ưu. Padding tất cả về item lớn nhất gây lãng phí compute.
 
 Có thể nhóm yêu cầu (request / 요청) theo length/shape để tăng hiệu quả.
+
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Suy luận sinh nội dung** tiếp nhận điểm tựa từ **Động (dynamic / 동적) Shape** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Decoding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Suy luận sinh nội dung
 
@@ -83,6 +92,8 @@ LLM suy luận (inference / 추론) thường có hai giai đoạn:
 2. **decode**: sinh đơn vị từ (token / 토큰) theo kiểu autoregressive, từng bước một.
 
 Prompt dài làm prefill đắt hơn; đầu ra (output / 출력) dài làm decode đắt hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Decoding** tiếp nhận điểm tựa từ **Suy luận sinh nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Structured đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Decoding
 
@@ -98,9 +109,13 @@ Các tham số thường gặp:
 
 Chúng là một phần của hành vi sản phẩm, vì vậy cần được phiên bản (version / 버전) hóa và theo dõi.
 
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Structured đầu ra (output / 출력)** tiếp nhận điểm tựa từ **Decoding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hậu xử lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Structured đầu ra (output / 출력)
 
 Nếu downstream cần JSON hoặc hàm (function / 함수) lời gọi (call / 호출), đầu ra (output / 출력) phải được kiểm theo lược đồ (schema / 스키마). Constrained decoding có thể giảm lỗi cú pháp nhưng không thay thế ngữ nghĩa (semantic / 의미적) kiểm tra hợp lệ (validation / 검증).
+
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Hậu xử lý** tiếp nhận điểm tựa từ **Structured đầu ra (output / 출력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngân sách hết thời gian chờ (timeout / 타임아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hậu xử lý
 
@@ -116,6 +131,8 @@ Ví dụ:
 
 Hậu xử lý là một phần của hợp đồng giữa mô hình và hệ thống, không phải bước trang trí.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Ngân sách hết thời gian chờ (timeout / 타임아웃)** tiếp nhận điểm tựa từ **Hậu xử lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thử lại (retry / 재시도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngân sách hết thời gian chờ (timeout / 타임아웃)
 
 Có thể chia deadline end-to-end như:
@@ -129,15 +146,21 @@ network margin 20 ms
 
 Nếu mô hình (model / 모델) dùng hết toàn bộ deadline, downstream không còn khoảng trống để phục hồi hoặc fallback.
 
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Thử lại (retry / 재시도)** tiếp nhận điểm tựa từ **Ngân sách hết thời gian chờ (timeout / 타임아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Admission điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thử lại (retry / 재시도)
 
 Thử lại (retry / 재시도) suy luận (inference / 추론) thường an toàn khi chỉ đọc, nhưng yêu cầu (request / 요청) lặp lại vẫn tiêu tốn sức chứa (capacity / 용량) và có thể khuếch đại outage. Chỉ nên thử lại (retry / 재시도) lỗi transient, kèm deadline và backoff.
 
 Với tác nhân (agent / 에이전트) hoặc công cụ (tool / 도구) có side tác động (effect / 효과), thử lại (retry / 재시도) cần idempotency.
 
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Admission điều khiển (control / 제어)** tiếp nhận điểm tựa từ **Thử lại (retry / 재시도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Streaming đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Admission điều khiển (control / 제어)
 
 Khi hệ thống quá tải, nên từ chối hoặc trì hoãn yêu cầu (request / 요청) ưu tiên thấp thay vì cho hàng đợi (queue / 큐) dài vô hạn. Tail độ trễ (latency / 지연 시간) thường quan trọng hơn average độ trễ (latency / 지연 시간).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Streaming đầu ra (output / 출력)** tiếp nhận điểm tựa từ **Admission điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cancellation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Streaming đầu ra (output / 출력)
 
@@ -145,9 +168,13 @@ LLM hoặc TTS có thể stream đầu ra (output / 출력) từng phần. Strea
 
 Guardrail cần được thiết kế phù hợp với đặc điểm này.
 
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Cancellation** tiếp nhận điểm tựa từ **Streaming đầu ra (output / 출력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi xử lý (pipeline / 파이프라인) nhiều mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cancellation
 
 Nếu người dùng ngắt kết nối, nên dừng generation để giải phóng GPU nếu thời gian chạy (runtime / 런타임) hỗ trợ. Nếu không, hệ thống vẫn tiếp tục sinh đơn vị từ (token / 토큰) không ai sử dụng.
+
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Cancellation** xác định đầu vào; **Chuỗi xử lý (pipeline / 파이프라인) nhiều mô hình** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cascade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi xử lý (pipeline / 파이프라인) nhiều mô hình
 
@@ -163,6 +190,8 @@ embed query
 
 Độ trễ (latency / 지연 시간) end-to-end là tổng hoặc kết quả kết hợp của nhiều stage. Cần tối ưu toàn bộ đồ thị (graph / 그래프) thay vì chỉ một mô hình.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Chuỗi xử lý (pipeline / 파이프라인) nhiều mô hình** xác định đầu vào; **Cascade** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Batching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cascade
 
 Có thể dùng mô hình rẻ trước, chỉ gọi mô hình đắt cho trường hợp (case / 사례) khó:
@@ -175,9 +204,13 @@ small classifier
 
 Cascade có thể giảm chi phí (cost / 비용) trung bình nếu routing đủ đáng tin.
 
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Batching** tiếp nhận điểm tựa từ **Cascade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KV bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Batching
 
 Scheduler online có thể gom nhiều yêu cầu (request / 요청) thành batch GPU để tăng thông lượng (throughput / 처리량). Nhưng chờ đủ batch lại làm độ trễ (latency / 지연 시간) tăng. động (dynamic / 동적) hoặc continuous batching giúp cân bằng hai mục tiêu này.
+
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **KV bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Batching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefix Caching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## KV bộ nhớ đệm (cache / 캐시)
 
@@ -191,9 +224,13 @@ batch × sequence length × layers × hidden/head dimensions
 
 Trong LLM serving, KV bộ nhớ đệm (cache / 캐시) thường giới hạn tính đồng thời (concurrency / 동시성) mạnh hơn bản thân weights.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Prefix Caching** tiếp nhận điểm tựa từ **KV bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prefix Caching
 
 Nếu nhiều yêu cầu (request / 요청) dùng chung hệ thống (system / 시스템) prefix hoặc document dài giống nhau, có thể bộ nhớ đệm (cache / 캐시) kết quả prefill/KV để giảm compute, với điều kiện prefix và mô hình (model / 모델) cấu hình (config / 설정) phải khớp chính xác và dữ liệu được cô lập đúng theo privacy phạm vi (scope / 범위).
+
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Kiểm tra đầu ra (output / 출력)** tiếp nhận điểm tựa từ **Prefix Caching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm tra đầu ra (output / 출력)
 
@@ -208,6 +245,8 @@ model output
 
 Không nên cho generative đầu ra (output / 출력) trực tiếp thay đổi trọng yếu (critical / 중요) hệ thống (system / 시스템) mà không qua kiểm tra hợp lệ (validation / 검증).
 
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Logging** tiếp nhận điểm tựa từ **Kiểm tra đầu ra (output / 출력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Logging
 
 Nên ghi lại một cách an toàn:
@@ -221,9 +260,13 @@ Nên ghi lại một cách an toàn:
 
 Không nên log raw secret hoặc PII theo mặc định.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Mô hình tư duy** gom các mảnh từ **Logging** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > **suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인) là một đồ thị (graph / 그래프) biến đổi có deadline độ trễ (latency / 지연 시간), trong đó ngữ nghĩa (semantics / 의미론) phải khớp với huấn luyện (training / 학습) và mọi dạng thất bại (failure mode / 실패 모드) quan trọng phải được định nghĩa rõ.**
+
+> **Chuyển mạch:** Trong **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -239,10 +282,12 @@ Không nhất thiết. Streaming chủ yếu làm người dùng thấy đầu r
 
 Không. Khi hệ thống quá tải, thử lại (retry / 재시도) storm có thể khiến outage nặng hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인) dẫn trực tiếp tới kiến trúc serving và sự đánh đổi (trade-off / 트레이드오프) giữa batch với online suy luận (inference / 추론).
 
 Xem tiếp: [Model Serving](./03_model_serving.md).
 
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

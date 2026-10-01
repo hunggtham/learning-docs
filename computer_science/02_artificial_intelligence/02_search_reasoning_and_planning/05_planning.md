@@ -1,7 +1,6 @@
 # Planning trong Artificial Intelligence
 
-> **Mạch đọc:** Đặt **Planning trong Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Reactive hành vi (behavior / 동작) và planning khác nhau thế nào?** sang **trạng thái (state / 상태) biểu diễn (representation / 표현) trong classical planning**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Planning trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Reactive hành vi (behavior / 동작) và planning khác nhau thế nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태) biểu diễn (representation / 표현) trong classical planning** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tìm kiếm (search / 검색) hỏi “từ trạng thái (state / 상태) này, hành động (action / 동작) nào dẫn tới goal?”. **Planning (계획 / lập kế hoạch)** làm câu hỏi đó tường minh (explicit / 명시적) hơn bằng cách biểu diễn **actions có preconditions và effects**, goal có cấu trúc (structure / 구조), và một plan là chuỗi (sequence / 시퀀스) hoặc partial thứ tự (order / 순서) actions làm goal trở thành true.
 
@@ -31,6 +30,8 @@ Reactive hành vi (behavior / 동작) nhanh và robust khi môi trường (envir
 
 Real agents thường combine both: plan high-level, react/replan low-level.
 
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Trạng thái (state / 상태) biểu diễn (representation / 표현) trong classical planning** tiếp nhận điểm tựa từ **Reactive hành vi (behavior / 동작) và planning khác nhau thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Actions: preconditions và effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trạng thái (state / 상태) biểu diễn (representation / 표현) trong classical planning
 
 Một trạng thái (state / 상태) có thể represented bằng set propositions.
@@ -45,6 +46,8 @@ DoorOpen(B,C)
 ```
 
 Closed-world giả định (assumption / 가정) trong many symbolic planners: proposition không listed được coi false. giả định (assumption / 가정) này convenient nhưng không phù hợp mọi real-world kiến thức (knowledge / 지식) setting.
+
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Actions: preconditions và effects** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) biểu diễn (representation / 표현) trong classical planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **STRIPS-style biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Actions: preconditions và effects
 
@@ -66,6 +69,8 @@ Chuyển tiếp (transition / 전이) mô hình (model / 모델) được bản 
 
 This is more structured than generic successor hàm (function / 함수) in tìm kiếm (search / 검색).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **STRIPS-style biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Actions: preconditions và effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PDDL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## STRIPS-style biểu diễn (representation / 표현)
 
 STRIPS-like hành động (action / 동작) lược đồ (schema / 스키마) thường có:
@@ -81,6 +86,8 @@ S'=(S\setminus Del(a))\cup Add(a)
 \]
 
 This compact biểu diễn (representation / 표현) lets planner reason symbolically instead of enumerate all transitions ahead of thời gian (time / 시간).
+
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **PDDL** tiếp nhận điểm tựa từ **STRIPS-style biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Goal biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## PDDL
 
@@ -101,6 +108,8 @@ PDDL separates lĩnh vực (domain / 도메인) rules from specific bài toán (
 
 Khi LLM các hệ thống (systems / 시스템들) generate structured plans, compiling natural ngôn ngữ (language / 언어) into PDDL/solver biểu diễn (representation / 표현) là một possible hybrid thiết kế (design / 설계).
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Goal biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **PDDL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward state-space planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Goal biểu diễn (representation / 표현)
 
 Goal có thể là conjunction:
@@ -114,6 +123,8 @@ At(robot, ChargingStation)
 Planner không cần reproduce chính xác (exact / 정확한) mục tiêu (target / 대상) trạng thái (state / 상태); unrelated propositions có thể vary.
 
 Goal lớp trừu tượng (abstraction / 추상화) giảm unnecessary các ràng buộc (constraints / 제약조건들).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Forward state-space planning** tiếp nhận điểm tựa từ **Goal biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backward / regression planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Forward state-space planning
 
@@ -130,6 +141,8 @@ Có thể dùng BFS/UCS/A* với planning-specific heuristics.
 
 Weakness: many applicable actions irrelevant to goal generate huge branching.
 
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Backward / regression planning** tiếp nhận điểm tựa từ **Forward state-space planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partial-order planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Backward / regression planning
 
 Start từ goal conditions và reason actions nào có thể achieve them.
@@ -137,6 +150,8 @@ Start từ goal conditions và reason actions nào có thể achieve them.
 If goal requires `At(box,Storage)`, consider hành động (action / 동작) whose tác động (effect / 효과) adds that proposition, then replace goal by its preconditions.
 
 This focuses on goal-relevant actions but regression through interactions can be complex.
+
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Partial-order planning** tiếp nhận điểm tựa từ **Backward / regression planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhân quả (causal / 인과적) links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Partial-order planning
 
@@ -158,6 +173,8 @@ Principle of **least commitment**: avoid deciding thứ tự (order / 순서) be
 
 This helps expose parallelism and flexibility.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Nhân quả (causal / 인과적) links** tiếp nhận điểm tựa từ **Partial-order planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhân quả (causal / 인과적) links
 
 If hành động (action / 동작) `A` establishes điều kiện (condition / 조건) `p` needed by `B`, nhân quả (causal / 인과적) link:
@@ -172,6 +189,8 @@ Planner must resolve threat by thứ tự (ordering / 순서) C before A or afte
 
 This makes plan phụ thuộc (dependency / 의존성) tường minh (explicit / 명시적).
 
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Planning đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Nhân quả (causal / 인과적) links** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delete relaxation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Planning đồ thị (graph / 그래프)
 
 GraphPlan-style planning đồ thị (graph / 그래프) alternates proposition levels and hành động (action / 동작) levels:
@@ -183,6 +202,8 @@ P0 → A0 → P1 → A1 → P2 ...
 It also tracks mutex (mutual exclusion) relationships.
 
 Planning đồ thị (graph / 그래프) can provide reachability thông tin (information / 정보) and heuristics without enumerating every trạng thái (state / 상태) combination.
+
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Delete relaxation** tiếp nhận điểm tựa từ **Planning đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Why delete effects matter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Delete relaxation
 
@@ -198,6 +219,8 @@ This yields heuristics like:
 
 Delete relaxation is same broader principle as heuristic tìm kiếm (search / 검색): solve an easier bài toán (problem / 문제) to estimate original.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Why delete effects matter** tiếp nhận điểm tựa từ **Delete relaxation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Why delete effects matter
 
 Ignoring delete effects can be wildly optimistic when resources/actions interfere.
@@ -205,6 +228,8 @@ Ignoring delete effects can be wildly optimistic when resources/actions interfer
 Example one truck cannot be simultaneously at two cities. Relaxed planner may act as if visiting both facts can coexist.
 
 Heuristic useful despite unrealistic relaxation because it captures goal cấu trúc (structure / 구조) cheaply.
+
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Why delete effects matter** nêu điều cần giải thích; **Tài nguyên (resource / 자원) planning** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Temporal planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tài nguyên (resource / 자원) planning
 
@@ -221,6 +246,8 @@ Temporal/numeric planning extends hành động (action / 동작) các mô hình
 
 Planning increasingly overlaps scheduling, ràng buộc (constraint / 제약조건) programming and operations research.
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Tài nguyên (resource / 자원) planning** nêu điều cần giải thích; **Temporal planning** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hierarchical tác vụ (task / 작업) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Temporal planning
 
 Actions can have duration:
@@ -236,6 +263,8 @@ Some actions overlap if no tài nguyên (resource / 자원)/xung đột (conflic
 Goal becomes not just feasibility but makespan/minimum total thời gian (time / 시간).
 
 Temporal planning needs reason about intervals and tính đồng thời (concurrency / 동시성).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Hierarchical tác vụ (task / 작업) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Temporal planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Goal decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hierarchical tác vụ (task / 작업) mạng (network / 네트워크)
 
@@ -258,6 +287,8 @@ HTN can reduce tìm kiếm (search / 검색) không gian (space / 공간) greatl
 
 This closely resembles tác vụ (task / 작업) decomposition in software workflows and LLM agents.
 
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Goal decomposition** tiếp nhận điểm tựa từ **Hierarchical tác vụ (task / 작업) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Means–Ends phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Goal decomposition
 
 If goal has subgoals `G1 ∧ G2`, solve independently only if actions do not interfere.
@@ -268,6 +299,8 @@ Classic example: Blocks World goals may undo each other if achieved in wrong th�
 
 Thus “break tác vụ (task / 작업) into subtasks” is not enough; planner must nhánh học (track / 트랙) dependencies and side effects.
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Means–Ends phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Goal decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Plan validity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Means–Ends phân tích (analysis / 분석)
 
 Means–Ends phân tích (analysis / 분석) compares trạng thái hiện tại (current state / 현재 상태) to goal, chooses difference, selects hành động (action / 동작) reducing difference, then creates subgoals for hành động (action / 동작) preconditions.
@@ -275,6 +308,8 @@ Means–Ends phân tích (analysis / 분석) compares trạng thái hiện tại
 This was historically influential in General bài toán (problem / 문제) Solver.
 
 Hiện đại (modern / 현대적) tác nhân (agent / 에이전트) prompts often rediscover similar mẫu (pattern / 패턴) in natural ngôn ngữ (language / 언어), but symbolic formulation makes các giả định (assumptions / 가정들) tường minh (explicit / 명시적).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Plan validity** tiếp nhận điểm tựa từ **Means–Ends phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning vs scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Plan validity
 
@@ -291,6 +326,8 @@ formal validator checks exact constraints
 ```
 
 Same kiến trúc (architecture / 아키텍처) useful for LLM agents: mô hình (model / 모델) proposes, deterministic tools verify.
+
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Planning vs scheduling** tiếp nhận điểm tựa từ **Plan validity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deterministic vs stochastic planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Planning vs scheduling
 
@@ -309,6 +346,8 @@ Scheduling: which machine/time slot handles each step?
 
 Conflating them hides different các ràng buộc (constraints / 제약조건들).
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Deterministic vs stochastic planning** tiếp nhận điểm tựa từ **Planning vs scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Offline planning vs online replanning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Deterministic vs stochastic planning
 
 Classical planning often assumes hành động (action / 동작) tác động (effect / 효과) deterministic.
@@ -322,6 +361,8 @@ P(s'\mid s,a)
 Then plan as fixed chuỗi (sequence / 시퀀스) may be insufficient. Need **chính sách (policy / 정책)** ánh xạ (mapping / 매핑) states/beliefs to actions, leading toward MDP/POMDP.
 
 This chuyển tiếp (transition / 전이) is covered in [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Offline planning vs online replanning** tiếp nhận điểm tựa từ **Deterministic vs stochastic planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Plan thực thi (execution / 실행) monitoring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Offline planning vs online replanning
 
@@ -345,6 +386,8 @@ Replanning handles động (dynamic / 동적) môi trường (environment / 환�
 
 Robotics often uses mô hình (model / 모델) Predictive Control-like rolling horizon ideas in continuous điều khiển (control / 제어) ngữ cảnh (context / 맥락).
 
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Plan thực thi (execution / 실행) monitoring** tiếp nhận điểm tựa từ **Offline planning vs online replanning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contingency planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Plan thực thi (execution / 실행) monitoring
 
 Plan can thất bại (fail / 실패) because world changes or hành động (action / 동작) kết quả (outcome / 결과) differs.
@@ -359,6 +402,8 @@ Thực thi (execution / 실행) hệ thống (system / 시스템) must detect:
 
 Reliable tác nhân (agent / 에이전트) kiến trúc (architecture / 아키텍처) separates planner from thực thi (execution / 실행) monitor.
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Contingency planning** tiếp nhận điểm tựa từ **Plan thực thi (execution / 실행) monitoring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning and tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Contingency planning
 
 If specific uncertainties known, plan can branch:
@@ -372,6 +417,8 @@ Try payment
 This is a conditional plan, not single chuỗi (sequence / 시퀀스).
 
 As bất định (uncertainty / 불확실성) grows, tường minh (explicit / 명시적) contingency cây (tree / 트리) explodes; policies/MDPs provide more scalable formalism.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Planning and tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Contingency planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning and CSP/SAT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Planning and tìm kiếm (search / 검색)
 
@@ -390,6 +437,8 @@ This illustrates mẫu (pattern / 패턴):
 
 > Same bài toán (problem / 문제) may become tractable when thuật toán (algorithm / 알고리즘) understands biểu diễn (representation / 표현) cấu trúc (structure / 구조).
 
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Planning and CSP/SAT** tiếp nhận điểm tựa từ **Planning and tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning and integer programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Planning and CSP/SAT
 
 Bounded planning can be encoded as SAT.
@@ -402,6 +451,8 @@ Increase `T` until satisfiable.
 
 This is another example of reducing one AI bài toán (problem / 문제) to another mature solver lĩnh vực (domain / 도메인).
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Planning and integer programming** tiếp nhận điểm tựa từ **Planning and CSP/SAT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Classical tác nhân (agent / 에이전트) vs LLM tác nhân (agent / 에이전트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Planning and integer programming
 
 Scheduling/tài nguyên (resource / 자원) planning can be encoded as MILP:
@@ -412,6 +463,8 @@ Scheduling/tài nguyên (resource / 자원) planning can be encoded as MILP:
 - mục tiêu (objective / 목표) minimize chi phí (cost / 비용)/makespan.
 
 Solver choice depends cấu trúc (structure / 구조); “AI planning thuật toán (algorithm / 알고리즘)” is not always best practical công cụ (tool / 도구).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Classical tác nhân (agent / 에이전트) vs LLM tác nhân (agent / 에이전트)** tiếp nhận điểm tựa từ **Planning and integer programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công cụ (tool / 도구) use as hành động (action / 동작) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Classical tác nhân (agent / 에이전트) vs LLM tác nhân (agent / 에이전트)
 
@@ -448,6 +501,8 @@ record actual observation
 replan
 ```
 
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Công cụ (tool / 도구) use as hành động (action / 동작) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Classical tác nhân (agent / 에이전트) vs LLM tác nhân (agent / 에이전트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Long-horizon planning and lỗi (error / 오류) accumulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công cụ (tool / 도구) use as hành động (action / 동작) mô hình (model / 모델)
 
 API/công cụ (tool / 도구) has:
@@ -460,6 +515,8 @@ API/công cụ (tool / 도구) has:
 This maps naturally to planning vocabulary.
 
 Example `send_email` should not be treated as văn bản (text / 텍스트) generation only; it has irreversible bên ngoài (external / 외부) tác động (effect / 효과), so kiểm tra hợp lệ (validation / 검증)/confirmation may be required.
+
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Long-horizon planning and lỗi (error / 오류) accumulation** tiếp nhận điểm tựa từ **Công cụ (tool / 도구) use as hành động (action / 동작) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning with learned world các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Long-horizon planning and lỗi (error / 오류) accumulation
 
@@ -482,6 +539,8 @@ Real các hệ thống (systems / 시스템들) not independent, but intuition m
 
 Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) becomes part of tác nhân (agent / 에이전트) planning độ tin cậy (reliability / 신뢰성).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Planning with learned world các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Long-horizon planning and lỗi (error / 오류) accumulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình (model / 모델) Predictive điều khiển (control / 제어) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Planning with learned world các mô hình (models / 모델들)
 
 If chuyển tiếp (transition / 전이) mô hình (model / 모델) unknown, neural mạng (network / 네트워크) can learn:
@@ -495,6 +554,8 @@ Planner searches imagined trajectories in learned mô hình (model / 모델).
 Rủi ro (risk / 위험): mô hình (model / 모델) lỗi (error / 오류) compounds outside huấn luyện (training / 학습) phân phối (distribution / 분포). Planner may exploit mô hình (model / 모델) inaccuracies, finding trajectories that look good in simulation but thất bại (fail / 실패) reality.
 
 This is known issue in model-based RL/world các mô hình (models / 모델들).
+
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, sau nội dung của **Planning with learned world các mô hình (models / 모델들)**, **Mô hình (model / 모델) Predictive điều khiển (control / 제어) liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Planning and lập luận (reasoning / 추론) tokens** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình (model / 모델) Predictive điều khiển (control / 제어) liên kết (connection / 연결)
 
@@ -510,6 +571,8 @@ repeat
 
 This is control-theory analogue of online replanning and reduces long-horizon model-error accumulation.
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, **Planning and lập luận (reasoning / 추론) tokens** tiếp nhận điểm tựa từ **Mô hình (model / 모델) Predictive điều khiển (control / 제어) liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Planning and lập luận (reasoning / 추론) tokens
 
 LLM “plan first, answer later” prompts can improve organization, but natural-language plan is not necessarily executable formal plan.
@@ -523,6 +586,8 @@ validated action plan
 ```
 
 For công cụ (tool / 도구) agents, plan chất lượng (quality / 품질) should be evaluated by feasibility, phụ thuộc (dependency / 의존성) tính đúng đắn (correctness / 정확성) and actual thực thi (execution / 실행) success, not how convincing prose sounds.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Planning trong Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Planning and lập luận (reasoning / 추론) tokens** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -539,6 +604,8 @@ Validator    = check plan semantics
 Executor     = interact with real environment
 Replanner    = update when reality differs from model
 ```
+
+> **Chuyển mạch:** Trong **Planning trong Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -558,8 +625,12 @@ Plausible steps may violate hidden các ràng buộc (constraints / 제약조건
 
 Overplanning fragile under bất định (uncertainty / 불확실성). Receding-horizon planning intentionally keeps future decisions flexible.
 
+> **Chuyển mạch:** Ở chặng này của **Planning trong Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Planning sits between tìm kiếm (search / 검색), CSP, lô-gic (logic / 논리) and quyết định (decision / 결정) lý thuyết (theory / 이론). It gives precise ngôn ngữ (language / 언어) for hiện đại (modern / 현대적) Agents: goal, trạng thái (state / 상태), hành động (action / 동작), precondition, tác động (effect / 효과), monitor and replan. Later `10_agents_and_ai_systems/` will reuse these concepts instead of redefining tác nhân (agent / 에이전트) planning from scratch.
 
 Xem tiếp: [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

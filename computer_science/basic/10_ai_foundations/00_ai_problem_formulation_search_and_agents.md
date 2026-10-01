@@ -1,7 +1,6 @@
 # Mô hình hóa bài toán AI, tìm kiếm và tác tử
 
-> **Mạch đọc:** Đọc **Mô hình hóa bài toán AI, tìm kiếm và tác tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình tác tử** sang **Tìm kiếm trong không gian trạng thái**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tác tử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm trong không gian trạng thái** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Trí tuệ nhân tạo (Artificial Intelligence — AI / 인공지능)** rộng hơn học máy. Một cách nhìn nền tảng là xây dựng **tác tử (agent)** nhận quan sát từ môi trường, duy trì hoặc ước lượng trạng thái rồi chọn hành động để đạt mục tiêu trong điều kiện có bất định và giới hạn tài nguyên.
 
@@ -11,8 +10,7 @@ Tác tử nhận **cảm nhận (percept)** từ môi trường và tạo hành 
 
 Môi trường có thể quan sát đầy đủ hoặc một phần, xác định hoặc ngẫu nhiên, theo từng phiên độc lập hoặc theo chuỗi, tĩnh hoặc động, rời rạc hoặc liên tục. Những đặc tính này ảnh hưởng trực tiếp đến họ thuật toán phù hợp.
 
-
-> **Chuyển mạch:** Từ **Mô hình tác tử**, ta sang **Tìm kiếm trong không gian trạng thái** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Tìm kiếm trong không gian trạng thái** tiếp nhận điểm tựa từ **Mô hình tác tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tìm kiếm trong không gian trạng thái
 
@@ -22,8 +20,7 @@ Lập đường đi, giải câu đố, lập kế hoạch và tìm kiếm trong
 
 BFS tìm đường ngắn nhất theo số cạnh khi chi phí các cạnh bằng nhau; Dijkstra xử lý chi phí không âm; A* dùng **hàm heuristic** để hướng quá trình tìm kiếm về phía mục tiêu.
 
-
-> **Chuyển mạch:** Từ **Tìm kiếm trong không gian trạng thái**, ta sang **Heuristic** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Heuristic** tiếp nhận điểm tựa từ **Tìm kiếm trong không gian trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bùng nổ không gian tìm kiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Heuristic
 
@@ -39,8 +36,7 @@ Nếu heuristic **chấp nhận được (admissible)**, tức không đánh gi�
 
 Heuristic tốt mã hóa kiến thức miền và giúp giảm số trạng thái phải khám phá.
 
-
-> **Chuyển mạch:** Từ **Heuristic**, ta sang **Bùng nổ không gian tìm kiếm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Bùng nổ không gian tìm kiếm** tiếp nhận điểm tựa từ **Heuristic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm đối kháng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bùng nổ không gian tìm kiếm
 
@@ -48,8 +44,7 @@ Nếu hệ số phân nhánh là `b` và độ sâu là `d`, số trạng thái 
 
 Vì vậy tìm kiếm trong AI liên hệ trực tiếp với lý thuyết độ phức tạp, thuật toán xấp xỉ và heuristic.
 
-
-> **Chuyển mạch:** Từ **Bùng nổ không gian tìm kiếm**, ta sang **Tìm kiếm đối kháng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Tìm kiếm đối kháng** tiếp nhận điểm tựa từ **Bùng nổ không gian tìm kiếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập kế hoạch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tìm kiếm đối kháng
 
@@ -57,8 +52,7 @@ Trò chơi hai người tổng bằng không có thể dùng **minimax**: một 
 
 Thứ tự xét nước đi tốt có thể làm cắt tỉa hiệu quả hơn nhưng không thay đổi kết quả minimax. Với trò chơi có không gian quá lớn, hệ thống còn cần hàm đánh giá heuristic, giới hạn độ sâu, Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색) hoặc chính sách/hàm giá trị được học.
 
-
-> **Chuyển mạch:** Từ **Tìm kiếm đối kháng**, ta sang **Lập kế hoạch** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Lập kế hoạch** tiếp nhận điểm tựa từ **Tìm kiếm đối kháng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ hữu dụng và bất định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lập kế hoạch
 
@@ -66,15 +60,13 @@ Thứ tự xét nước đi tốt có thể làm cắt tỉa hiệu quả hơn n
 
 Robot và bài toán thế giới thực bổ sung bất định, trạng thái/hành động liên tục và khả năng quan sát không đầy đủ.
 
-
-> **Chuyển mạch:** Từ **Lập kế hoạch**, ta sang **Độ hữu dụng và bất định** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Độ hữu dụng và bất định** tiếp nhận điểm tựa từ **Lập kế hoạch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với học tăng cường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ hữu dụng và bất định
 
 Khi kết quả mang tính ngẫu nhiên, câu hỏi “có đạt mục tiêu hay không” thường quá đơn giản. **Độ hữu dụng kỳ vọng (expected utility)** kết hợp xác suất với mức ưu tiên, lợi ích hoặc chi phí. Lý thuyết quyết định nối suy luận xác suất với lựa chọn hành động.
 
-
-> **Chuyển mạch:** Từ **Độ hữu dụng và bất định**, ta sang **Liên hệ với học tăng cường** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Liên hệ với học tăng cường** tiếp nhận điểm tựa từ **Độ hữu dụng và bất định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với học tăng cường
 
@@ -82,8 +74,7 @@ Khi kết quả mang tính ngẫu nhiên, câu hỏi “có đạt mục tiêu h
 
 Học máy và RL có thể được đào sâu trong thư viện riêng; ở đây trọng tâm là cầu nối khái niệm.
 
-
-> **Chuyển mạch:** Từ **Liên hệ với học tăng cường**, ta sang **Những hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên hệ với học tăng cường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -93,18 +84,16 @@ Học máy và RL có thể được đào sâu trong thư viện riêng; ở đ
 
 **“Tác tử hợp lý luôn tạo kết quả tốt nhất trong thực tế.”** Nó chỉ chọn hành động tốt nhất theo mô hình, thông tin và mục tiêu hiện có; bất định hoặc mô hình sai vẫn có thể dẫn tới kết quả xấu.
 
-
-> **Chuyển mạch:** Từ **Những hiểu lầm thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
 > AI bắt đầu bằng việc hình thức hóa chuỗi **cảm nhận → trạng thái hoặc niềm tin → hành động → mục tiêu**. Thuật toán chỉ có ý nghĩa sau khi cách biểu diễn bài toán đã rõ.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Kết nối** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Xem [thuật toán đồ thị](../01_algorithms_data_structures/06_graphs_and_graph_algorithms.md), [độ phức tạp](../01_algorithms_data_structures/11_complexity_reductions_and_np.md), [xác suất](../../../mathematics/06_probability_statistics/01_probability_foundations.md) và [nền tảng học máy](./02_machine_learning_foundations.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 knowledge reasoning and probabilistic inference](./01_knowledge_reasoning_and_probabilistic_inference.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

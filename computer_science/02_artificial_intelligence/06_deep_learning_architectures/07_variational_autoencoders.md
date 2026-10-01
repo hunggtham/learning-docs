@@ -1,7 +1,6 @@
 # Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)
 
-> **Mạch đọc:** Đặt **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Generative mô hình (model / 모델)** sang **suy luận (inference / 추론) bài toán (problem / 문제)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Generative mô hình (model / 모델)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Suy luận (inference / 추론) bài toán (problem / 문제)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Variational Autoencoder (VAE / 변분 오토인코더) mở rộng autoencoder từ deterministic compression thành một **latent-variable generative mô hình (model / 모델)**. Encoder không đầu ra (output / 출력) một latent véc-tơ (vector / 벡터) duy nhất; nó approximate phân phối (distribution / 분포) của latent variable `z` conditioned on đầu vào (input / 입력) `x`. Decoder defines likelihood của dữ liệu (data / 데이터) given latent.
 
@@ -35,6 +34,8 @@ p_\theta(x)=\int p(z)p_\theta(x\mid z)dz
 
 Integral thường intractable với neural decoder.
 
+> **Chuyển mạch:** Trong **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Suy luận (inference / 추론) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Generative mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng chứng (evidence / 증거) Lower Bound (ELBO)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Suy luận (inference / 추론) bài toán (problem / 문제)
 
 True posterior:
@@ -52,6 +53,8 @@ q_\phi(z\mid x)
 \]
 
 để approximate posterior. Đây là **variational suy luận (inference / 추론)**.
+
+> **Chuyển mạch:** Ở chặng này của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Suy luận (inference / 추론) bài toán (problem / 문제)** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) Lower Bound (ELBO)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Why regularize latent toward prior?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng (evidence / 증거) Lower Bound (ELBO)
 
@@ -90,6 +93,8 @@ L_{VAE}=L_{recon}+D_{KL}(q(z\mid x)\|p(z))
 
 with sign/convention differences.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Bằng chứng (evidence / 증거) Lower Bound (ELBO)** nêu điều cần giải thích; **Why regularize latent toward prior?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gaussian Encoder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Why regularize latent toward prior?
 
 Vanilla autoencoder maps examples to arbitrary isolated regions. Sampling random Gaussian điểm (point / 지점) may land where decoder never trained.
@@ -103,6 +108,8 @@ z\sim\mathcal N(0,I)
 then decode feasible.
 
 Sự đánh đổi (trade-off / 트레이드오프): too much KL can reduce reconstruction detail.
+
+> **Chuyển mạch:** Trong **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Gaussian Encoder** tiếp nhận điểm tựa từ **Why regularize latent toward prior?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reparameterization Trick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gaussian Encoder
 
@@ -119,6 +126,8 @@ q_\phi(z\mid x)=\mathcal N(\mu,diag(\sigma^2))
 \]
 
 Why đầu ra (output / 출력) log variance? Variance must positive; log-space unconstrained/stable and exponentiate when needed.
+
+> **Chuyển mạch:** Ở chặng này của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Reparameterization Trick** tiếp nhận điểm tựa từ **Gaussian Encoder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Closed-form KL for Gaussian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reparameterization Trick
 
@@ -144,6 +153,8 @@ Randomness moved to parameter-independent `ε`; `z` differentiable w.r.t. `μ,σ
 
 This is **reparameterization trick**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Closed-form KL for Gaussian** tiếp nhận điểm tựa từ **Reparameterization Trick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Decoder likelihood determines reconstruction mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Closed-form KL for Gaussian
 
 For diagonal Gaussian vs tiêu chuẩn (standard / 표준) normal:
@@ -154,6 +165,8 @@ D_{KL}(q\|p)=\frac12\sum_j
 \]
 
 Thus no Monte Carlo needed for KL term in tiêu chuẩn (standard / 표준) VAE.
+
+> **Chuyển mạch:** Trong **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Decoder likelihood determines reconstruction mất mát (loss / 손실)** tiếp nhận điểm tựa từ **Closed-form KL for Gaussian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **β-VAE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Decoder likelihood determines reconstruction mất mát (loss / 손실)
 
@@ -169,6 +182,8 @@ For Bernoulli outputs, BCE-like likelihood.
 
 Choosing reconstruction mất mát (loss / 손실) is choosing observation mô hình (model / 모델) các giả định (assumptions / 가정들).
 
+> **Chuyển mạch:** Ở chặng này của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **β-VAE** tiếp nhận điểm tựa từ **Decoder likelihood determines reconstruction mất mát (loss / 손실)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Posterior Collapse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## β-VAE
 
 Modify:
@@ -180,6 +195,8 @@ L=L_{recon}+\beta D_{KL}
 `β>1` strengthens prior pressure and sometimes improves factorized/disentangled cấu trúc (structure / 구조) at chi phí (cost / 비용) reconstruction.
 
 But disentanglement is not guaranteed; identifiability needs các giả định (assumptions / 가정들).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Posterior Collapse** tiếp nhận điểm tựa từ **β-VAE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Latent Interpolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Posterior Collapse
 
@@ -200,6 +217,8 @@ Mitigations:
 - weaker decoder;
 - kiến trúc (architecture / 아키텍처)/mục tiêu (objective / 목표) changes.
 
+> **Chuyển mạch:** Trong **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Latent Interpolation** tiếp nhận điểm tựa từ **Posterior Collapse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **VAE vs GAN vs Diffusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Latent Interpolation
 
 Because latent prior is regularized, interpolation usually smoother than vanilla AE.
@@ -207,6 +226,8 @@ Because latent prior is regularized, interpolation usually smoother than vanilla
 But tuyến tính (linear / 선형) interpolation in Gaussian không gian (space / 공간) not always probability-geodesic optimal; spherical interpolation sometimes used.
 
 Smooth visualization does not prove ngữ nghĩa (semantic / 의미적) disentanglement.
+
+> **Chuyển mạch:** Ở chặng này của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **VAE vs GAN vs Diffusion** tiếp nhận điểm tựa từ **Latent Interpolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Latent Diffusion liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## VAE vs GAN vs Diffusion
 
@@ -231,6 +252,8 @@ Diffusion:
 
 Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) combine ideas, e.g. latent diffusion uses VAE-like ảnh (image / 이미지) autoencoder to compress images before diffusion.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, sau nội dung của **VAE vs GAN vs Diffusion**, **Latent Diffusion liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Variational suy luận (inference / 추론) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Latent Diffusion liên kết (connection / 연결)
 
 Stable-Diffusion-like chuỗi xử lý (pipeline / 파이프라인) often:
@@ -248,11 +271,15 @@ VAE here reduces compute by moving diffusion from raw pixels to compressed laten
 
 Thus VAE remains central even when diffusion is visible generation cơ chế (mechanism / 메커니즘).
 
+> **Chuyển mạch:** Trong **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Variational suy luận (inference / 추론) liên kết (connection / 연결)** tiếp nhận điểm tựa từ **Latent Diffusion liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Variational suy luận (inference / 추론) liên kết (connection / 연결)
 
 VAE is not only autoencoder with noise. It is amortized variational suy luận (inference / 추론): one encoder mạng (network / 네트워크) learns ánh xạ (mapping / 매핑) from any `x` to approximate posterior parameters, instead of running separate tối ưu hóa (optimization / 최적화) per datapoint.
 
 **Amortization** shares suy luận (inference / 추론) computation across dataset.
+
+> **Chuyển mạch:** Ở chặng này của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Variational suy luận (inference / 추론) liên kết (connection / 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -264,6 +291,8 @@ Prior:   regularizes latent world to a sampleable space
 Decoder: z → distribution over observations x
 ELBO:    balance explaining data vs keeping latent posterior compatible with prior
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -283,8 +312,12 @@ Reconstruction term depends chosen likelihood; MSE is one trường hợp (case 
 
 No. Disentanglement requires stronger các giả định (assumptions / 가정들)/objectives/dữ liệu (data / 데이터).
 
+> **Chuyển mạch:** Trong **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 VAE combines [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [KL Divergence / Information Theory](../01_mathematical_foundations/05_information_theory.md), [Autoencoders](./06_autoencoders.md) and variational suy luận (inference / 추론).
 
 Xem tiếp: [Generative Adversarial Networks](./08_generative_adversarial_networks.md) and [Diffusion Models](./09_diffusion_models.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

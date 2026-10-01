@@ -1,7 +1,6 @@
 # Kotlin + Android Master ghi chú (note / 노트) — Intermediate
 
-> **Mạch đọc:** Đặt **Kotlin + Android Master ghi chú (note / 노트) — Intermediate** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục lục** sang **8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục lục** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Mục tiêu: chuyển từ “viết được app” sang “xây app có cấu trúc đúng”, hiểu coroutine/luồng (flow / 흐름), ViewModel, nguồn chuẩn (source of truth / 정본), Room/networking, vòng đời (lifecycle / 생명주기), testing, DI, di chuyển (migration / 마이그레이션) và các dạng thất bại (failure mode / 실패 모드) cơ bản trước khi sang cấp cao (senior / 시니어). Ở mức (level / 수준) này, mỗi API phải được đặt vào đúng **đơn vị sở hữu (owner / 오너), thời gian tồn tại (lifetime / 수명) và luồng dữ liệu (data flow / 데이터 흐름)**.
 
@@ -66,7 +65,6 @@ Không chuỗi (chain / 사슬) phạm vi (scope / 범위) hàm (function / 함�
 
 # 2. Scope functions: `let`, `run`, `with`, `apply`, `also`
 Phần này nối mạch Android vừa học với “2. Scope functions: `let`, `run`, `with`, `apply`, `also`”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 | hàm (function / 함수) | Receiver | Trả về | Dùng tốt khi |
 |---|---|---|---|
@@ -196,6 +194,8 @@ suspend fun loadUser(): User {
 }
 ```
 
+> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, sau nội dung của **Mục lục**, **8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8.2 launch, async, withContext khác nhau về đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)
 
 Mỗi coroutine phải trả lời được “ai chịu trách nhiệm cancel nó?”. Android có vài phạm vi (scope / 범위) phổ biến:
@@ -219,6 +219,8 @@ application/external scope
 
 Nếu tạo `CoroutineScope(SupervisorJob() + Dispatchers.IO)` tùy ý trong repository mà không có đơn vị sở hữu (owner / 오너)/shutdown chính sách (policy / 정책), ta đã tạo thời gian tồn tại (lifetime / 수명) ẩn.
 
+> **Chuyển mạch:** Scope quyết định owner và lifetime; `launch`/`async`/`withContext` tiếp theo chọn semantics cho child work, còn main-safety là contract của lower layer.
+
 ## 8.2 `launch`, `async`, `withContext` khác nhau về đặc tả hợp đồng (contract / 계약)
 
 Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
@@ -239,6 +241,8 @@ mà không chạy song song với gì thường chỉ thêm `Deferred` không c�
 
 `withContext` không tạo “background job độc lập”; caller chờ khối (block / 블록) đó hoàn tất và cancellation vẫn nằm trong structured phạm vi (scope / 범위).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **8.3 Main-safety là đặc tả hợp đồng (contract / 계약) của lower tầng (layer / 계층)** tiếp nhận điểm tựa từ **8.2 launch, async, withContext khác nhau về đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8.4 Cancellation là cooperative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8.3 Main-safety là đặc tả hợp đồng (contract / 계약) của lower tầng (layer / 계층)
 
 Suspend hàm (function / 함수) ở repository/use trường hợp (case / 사례) nên đủ main-safe để caller không phải nhớ dispatcher hiện thực (implementation / 구현) detail.
@@ -254,6 +258,8 @@ class FileRepository(
 ```
 
 Nếu mỗi ViewModel phải nhớ phương thức (method / 메서드) nào cần `Dispatchers.IO`, threading chính sách (policy / 정책) đã leak lên UI tầng (layer / 계층).
+
+> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **8.4 Cancellation là cooperative** tiếp nhận điểm tựa từ **8.3 Main-safety là đặc tả hợp đồng (contract / 계약) của lower tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.1 tính đồng thời (concurrency / 동시성) không đồng nghĩa parallelism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8.4 Cancellation là cooperative
 
@@ -315,6 +321,8 @@ supervisorScope {
 
 Nhưng supervision không có nghĩa “bỏ qua exception”. Mỗi thất bại (failure / 실패) vẫn cần đơn vị sở hữu (owner / 오너) và lỗi (error / 오류) chính sách (policy / 정책).
 
+> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **9.1 tính đồng thời (concurrency / 동시성) không đồng nghĩa parallelism** tiếp nhận điểm tựa từ **8.4 Cancellation là cooperative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.2 Duplicate hành động (action / 동작) và stale kết quả (result / 결과) là bug tính đồng thời (concurrency / 동시성) rất phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9.1 tính đồng thời (concurrency / 동시성) không đồng nghĩa parallelism
 
 Hai coroutine có thể concurrent nhưng chạy trên cùng luồng thực thi (thread / 스레드) theo thời gian xen kẽ. Parallelism chỉ xảy ra khi thời gian chạy (runtime / 런타임)/dispatcher cho phép chạy thật sự đồng thời trên nhiều luồng thực thi (thread / 스레드)/cốt lõi (core / 핵심).
@@ -327,6 +335,8 @@ operation nào phải serialize?
 operation cũ có được overwrite result mới không?
 bao nhiêu request cùng lúc là hợp lý?
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **9.2 Duplicate hành động (action / 동작) và stale kết quả (result / 결과) là bug tính đồng thời (concurrency / 동시성) rất phổ biến** tiếp nhận điểm tựa từ **9.1 tính đồng thời (concurrency / 동시성) không đồng nghĩa parallelism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.1 Operator là ngữ nghĩa (semantic / 의미적), không chỉ cú pháp (syntax / 문법) chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9.2 Duplicate hành động (action / 동작) và stale kết quả (result / 결과) là bug tính đồng thời (concurrency / 동시성) rất phổ biến
 
@@ -353,6 +363,8 @@ fun observeUsers(): Flow<List<User>> = dao.observeUsers()
 
 Một cold luồng (flow / 흐름) không phải “background tác vụ (task / 작업) tự chạy”. Nếu không collect, phần lớn upstream cold luồng (flow / 흐름) không thực thi.
 
+> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **9.2 Duplicate hành động (action / 동작) và stale kết quả (result / 결과) là bug tính đồng thời (concurrency / 동시성) rất phổ biến** xác định đầu vào; **10.1 Operator là ngữ nghĩa (semantic / 의미적), không chỉ cú pháp (syntax / 문법) chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10.2 luồng (flow / 흐름) ngữ cảnh (context / 맥락) và flowOn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10.1 Operator là ngữ nghĩa (semantic / 의미적), không chỉ cú pháp (syntax / 문법) chuỗi (chain / 사슬)
 
 Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
@@ -377,6 +389,8 @@ query
     .flatMapLatest(repository::search)
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **10.1 Operator là ngữ nghĩa (semantic / 의미적), không chỉ cú pháp (syntax / 문법) chuỗi (chain / 사슬)** xác định đầu vào; **10.2 luồng (flow / 흐름) ngữ cảnh (context / 맥락) và flowOn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10.3 Backpressure: producer nhanh hơn bên tiêu thụ (consumer / 소비자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10.2 luồng (flow / 흐름) ngữ cảnh (context / 맥락) và `flowOn`
 
 Luồng (flow / 흐름) giữ ngữ cảnh (context / 맥락) preservation. `flowOn(dispatcher)` thay ngữ cảnh (context / 맥락) của **upstream trước nó**, không đơn giản là “mọi thứ sau đây chạy IO”. Collector vẫn chạy trong ngữ cảnh (context / 맥락) nơi collect trừ khi ranh giới (boundary / 경계) khác thay đổi.
@@ -390,6 +404,8 @@ flow {
 ```
 
 Hiểu upstream/downstream quan trọng khi gỡ lỗi (debug / 디버그) luồng thực thi (thread / 스레드), cancellation và hiệu năng (performance / 성능).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **10.2 luồng (flow / 흐름) ngữ cảnh (context / 맥락) và flowOn** xác định đầu vào; **10.3 Backpressure: producer nhanh hơn bên tiêu thụ (consumer / 소비자)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10.4 StateFlow là trạng thái (state / 상태) holder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10.3 Backpressure: producer nhanh hơn bên tiêu thụ (consumer / 소비자)
 
@@ -407,6 +423,8 @@ collectLatest
 ```
 
 Không dùng `conflate` cho sự kiện (event / 이벤트) mà từng item đều phải xử lý, ví dụ giao dịch (transaction / 트랜잭션) mutation hàng đợi (queue / 큐).
+
+> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **10.3 Backpressure: producer nhanh hơn bên tiêu thụ (consumer / 소비자)** xác định đầu vào; **10.4 StateFlow là trạng thái (state / 상태) holder** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10.5 SharedFlow là dùng chung (shared / 공유) stream, không mặc định là “sự kiện (event / 이벤트) solution”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10.4 `StateFlow` là trạng thái (state / 상태) holder
 
@@ -427,11 +445,15 @@ UI trạng thái (state / 상태) nên immutable từ bên ngoài; ViewModel là
 
 `StateFlow` conflates theo equality/giá trị (value / 값) cập nhật (update / 업데이트) ngữ nghĩa (semantics / 의미론); collector chậm không có nghĩa được nhận mọi intermediate snapshot. Đây thường đúng với trạng thái (state / 상태) vì UI quan tâm latest truth.
 
+> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **10.4 StateFlow là trạng thái (state / 상태) holder** xác định đầu vào; **10.5 SharedFlow là dùng chung (shared / 공유) stream, không mặc định là “sự kiện (event / 이벤트) solution”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10.6 stateIn và shareIn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10.5 `SharedFlow` là dùng chung (shared / 공유) stream, không mặc định là “sự kiện (event / 이벤트) solution”
 
 `SharedFlow` có thể cấu hình replay/buffer và share emission cho nhiều collector. Nó hữu ích cho dùng chung (shared / 공유) upstream hoặc sự kiện (event / 이벤트) stream thực sự.
 
 Nhưng các sự kiện (event / 이벤트) có nghiệp vụ (business / 비즈니스) meaning lâu dài nên thường mô hình (model / 모델) thành trạng thái (state / 상태)/durable dữ liệu (data / 데이터) thay vì phát một tín hiệu có thể mất khi UI không collect. Ví dụ “payment completed” là lĩnh vực (domain / 도메인) trạng thái (state / 상태); snackbar “Copied” có thể transient.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **10.5 SharedFlow là dùng chung (shared / 공유) stream, không mặc định là “sự kiện (event / 이벤트) solution”** xác định đầu vào; **10.6 stateIn và shareIn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11.1 kiến trúc (architecture / 아키텍처) bắt đầu từ trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10.6 `stateIn` và `shareIn`
 
@@ -466,6 +488,8 @@ UI
 
 UI không gọi Retrofit/Room trực tiếp vì UI không nên biết chính sách (policy / 정책) bộ nhớ đệm (cache / 캐시)/thử lại (retry / 재시도)/sync. Repository không biết Button/NavController vì dữ liệu (data / 데이터) tầng (layer / 계층) không nên phụ thuộc presentation.
 
+> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **11.1 kiến trúc (architecture / 아키텍처) bắt đầu từ trạng thái (state / 상태)** tiếp nhận điểm tựa từ **10.6 stateIn và shareIn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11.2 lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11.1 kiến trúc (architecture / 아키텍처) bắt đầu từ trạng thái (state / 상태)
 
 Trước khi tạo lớp (class / 클래스), phân loại trạng thái (state / 상태):
@@ -479,6 +503,8 @@ server truth
 ```
 
 Ví dụ tìm kiếm (search / 검색) văn bản (text / 텍스트) nhỏ có thể ở ViewModel/SavedStateHandle; danh sách article không nên bị nhét vào saved trạng thái (state / 상태) nếu có thể reload từ Room.
+
+> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, **11.2 lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional** tiếp nhận điểm tựa từ **11.1 kiến trúc (architecture / 아키텍처) bắt đầu từ trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 11.2 lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional
 
@@ -1323,4 +1349,4 @@ Một project kết thúc Intermediate nên có ít nhất một flow từ UI �
 Ngoài happy path, project nên chứng minh được ít nhất các case: rotate/recreate screen không mất state cần thiết; process death có thể reconstruct bằng stable ID/source of truth; search/query mới không bị result cũ overwrite; collector dừng khi UI không active; cancellation không bị convert thành generic error; release behavior không phụ thuộc `GlobalScope` hay ad-hoc thời gian tồn tại (lifetime / 수명).
 <!-- end merged variant -->
 
-> **Bàn giao:** Sau **11.2 Lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **11.2 lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

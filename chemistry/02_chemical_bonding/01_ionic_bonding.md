@@ -1,7 +1,6 @@
 # Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu
 
-> **Mạch đọc:** Đọc **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ sự hình thành ion đến tinh thể** sang **Lực hút Coulomb trong mạng tinh thể**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ sự hình thành ion đến tinh thể** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lực hút Coulomb trong mạng tinh thể** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Liên kết ion (ionic bonding / 이온 결합)** là cách mô tả liên kết khi sự phân tách điện tích đủ lớn để hệ có thể được hiểu hữu ích như các cation và anion tương tác chủ yếu bằng lực hút tĩnh điện. Trong chất rắn ion, đối tượng cấu trúc quan trọng thường không phải một “phân tử NaCl riêng lẻ” mà là một **mạng tinh thể mở rộng (extended crystal lattice)**.
 
@@ -25,6 +24,8 @@ nguyên tử trung hòa
 
 Bước tạo ion có thể tốn năng lượng, nhưng sự tạo mạng có thể bù lại rất mạnh. Đây là lý do “electron transfer” không tự nó quyết định chất ion có bền hay không.
 
+> **Chuyển mạch:** Trong **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Lực hút Coulomb trong mạng tinh thể** tiếp nhận điểm tựa từ **Từ sự hình thành ion đến tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng mạng tinh thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lực hút Coulomb trong mạng tinh thể
 
 Với hai điện tích điểm, năng lượng tương tác có dạng:
@@ -47,6 +48,8 @@ Hạng thứ nhất là hút Coulomb, hạng thứ hai mô tả lực đẩy ng�
 
 Điều này nối trực tiếp liên kết ion với ý tưởng tổng quát về **cảnh quan thế năng (potential-energy landscape)**.
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Năng lượng mạng tinh thể** tiếp nhận điểm tựa từ **Lực hút Coulomb trong mạng tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hằng số Madelung — hình học trở thành năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năng lượng mạng tinh thể
 
 **Năng lượng mạng tinh thể (lattice energy / 격자 에너지)** mô tả năng lượng liên quan tới việc tạo mạng tinh thể từ ion khí hoặc phá mạng thành ion khí, tùy quy ước. Khi đọc số liệu luôn phải kiểm tra định nghĩa dấu.
@@ -60,6 +63,8 @@ Về xu hướng, lực hút mạng mạnh hơn khi điện tích ion lớn và 
 Do đó MgO với `Mg²+` và `O²-` thường có năng lượng mạng lớn hơn đáng kể so với NaCl có ion đơn điện tích với kích thước tương tự.
 
 Nhưng đây mới là xu hướng bậc nhất. Hình học mạng cũng quan trọng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Hằng số Madelung — hình học trở thành năng lượng** tiếp nhận điểm tựa từ **Năng lượng mạng tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu trình Born–Haber: dùng bảo toàn năng lượng để suy luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hằng số Madelung — hình học trở thành năng lượng
 
@@ -84,6 +89,8 @@ Trong đó:
 
 Vì vậy cấu trúc tinh thể không chỉ là hình học trang trí; nó là một phần của nhiệt động lực học.
 
+> **Chuyển mạch:** Trong **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Chu trình Born–Haber: dùng bảo toàn năng lượng để suy luận** tiếp nhận điểm tựa từ **Hằng số Madelung — hình học trở thành năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn ion không gồm các phân tử độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chu trình Born–Haber: dùng bảo toàn năng lượng để suy luận
 
 **Chu trình Born–Haber (Born–Haber cycle / 보른-하버 순환)** dùng định luật Hess để phân tách quá trình tạo chất rắn ion thành các bước giả định như:
@@ -101,11 +108,15 @@ Chu trình Born–Haber rất hữu ích khi một thành phần như năng lư�
 
 Đây là một ví dụ điển hình cho việc nhiệt động lực học cho phép suy ra một đại lượng vi mô từ một chuỗi đại lượng vĩ mô.
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Chất rắn ion không gồm các phân tử độc lập** tiếp nhận điểm tựa từ **Chu trình Born–Haber: dùng bảo toàn năng lượng để suy luận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phối trí và tỉ lệ bán kính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất rắn ion không gồm các phân tử độc lập
 
 Trong tinh thể NaCl, mỗi `Na+` được bao quanh bởi nhiều `Cl-` và ngược lại. Công thức `NaCl` biểu diễn **đơn vị công thức (formula unit)**, tức tỉ lệ nguyên tử tối giản bảo đảm trung hòa điện tích, chứ không nhất thiết là một phân tử rời rạc.
 
 Điều này góp phần giải thích vì sao nhiều chất rắn ion có nhiệt độ nóng chảy cao: muốn làm mạng mất trật tự phải thắng một tập hợp lớn các tương tác tĩnh điện trên toàn mạng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Số phối trí và tỉ lệ bán kính** tiếp nhận điểm tựa từ **Chất rắn ion không gồm các phân tử độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán kính ion không phải hằng số tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Số phối trí và tỉ lệ bán kính
 
@@ -116,6 +127,8 @@ Ví dụ mô hình NaCl có phối trí 6:6; kiểu CsCl có phối trí 8:8; nh
 Quy tắc **tỉ lệ bán kính (radius-ratio rule)** đôi khi được dùng để dự đoán hình học phối trí từ tỉ lệ bán kính cation/anion. Tuy nhiên đây chỉ là mô hình hình học sơ bộ vì ion không phải những quả cầu cứng hoàn hảo và mức độ cộng hóa trị cũng có thể đáng kể.
 
 Một cách hiểu tốt hơn là: cấu trúc được chọn bởi **tổng năng lượng tự do thấp nhất**, trong đó kích thước ion là một yếu tố hình học quan trọng nhưng không phải yếu tố duy nhất.
+
+> **Chuyển mạch:** Trong **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Bán kính ion không phải hằng số tuyệt đối** tiếp nhận điểm tựa từ **Số phối trí và tỉ lệ bán kính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dẫn điện — cần hạt mang điện có khả năng di chuyển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bán kính ion không phải hằng số tuyệt đối
 
@@ -130,6 +143,8 @@ Ví dụ cation ở trạng thái oxy hóa cao thường nhỏ hơn cùng nguyê
 
 Do đó bảng bán kính ion phải luôn được hiểu gắn với quy ước và môi trường phối trí.
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Độ dẫn điện — cần hạt mang điện có khả năng di chuyển** tiếp nhận điểm tựa từ **Bán kính ion không phải hằng số tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật Schottky và Frenkel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ dẫn điện — cần hạt mang điện có khả năng di chuyển
 
 NaCl rắn không dẫn điện tốt dù chứa các hạt mang điện, vì ion bị giữ tại các vị trí mạng và không thể dịch chuyển xa.
@@ -137,6 +152,8 @@ NaCl rắn không dẫn điện tốt dù chứa các hạt mang điện, vì io
 Khi nóng chảy hoặc hòa tan trong nước, ion trở nên linh động và có thể mang dòng điện. Đây là mối nối trực tiếp giữa **độ linh động vi mô (microscopic mobility)** và **độ dẫn điện vĩ mô (macroscopic conductivity)**.
 
 Trong một số chất rắn ion đặc biệt, ion vẫn có thể di chuyển qua các khuyết tật mạng ngay ở trạng thái rắn. Đó là nền tảng của **chất dẫn ion rắn (solid ionic conductor)** dùng trong pin, pin nhiên liệu và cảm biến.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Khuyết tật Schottky và Frenkel** tiếp nhận điểm tựa từ **Độ dẫn điện — cần hạt mang điện có khả năng di chuyển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha tạp khác hóa trị và bù điện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khuyết tật Schottky và Frenkel
 
@@ -156,6 +173,8 @@ Khuyết tật không chỉ là “lỗi”. Chúng tạo đường cho:
 
 Trong vật liệu chức năng, mật độ khuyết tật thường được **thiết kế có chủ ý**.
 
+> **Chuyển mạch:** Trong **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Pha tạp khác hóa trị và bù điện tích** tiếp nhận điểm tựa từ **Khuyết tật Schottky và Frenkel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính giòn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pha tạp khác hóa trị và bù điện tích
 
 Nếu thay một ion bằng ion có hóa trị khác, mạng phải bù điện tích.
@@ -174,6 +193,8 @@ thành phần pha tạp
 → chức năng thiết bị
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Tính giòn** tiếp nhận điểm tựa từ **Pha tạp khác hóa trị và bù điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tan trong nước là cuộc cạnh tranh nhiệt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính giòn
 
 Tinh thể ion thường giòn. Khi một lớp mạng bị trượt, các ion cùng điện tích có thể bị đưa đến gần nhau. Lực đẩy mạnh làm tinh thể nứt thay vì biến dạng dẻo liên tục như nhiều kim loại.
@@ -181,6 +202,8 @@ Tinh thể ion thường giòn. Khi một lớp mạng bị trượt, các ion c
 Tính chất cơ học này không phải một dữ kiện phải học thuộc; nó có thể suy ra từ trật tự điện tích trong mạng tinh thể và số lượng hệ trượt khả dụng.
 
 Tuy nhiên không phải mọi chất rắn ion đều giòn giống nhau. Vi cấu trúc, khuyết tật, kích thước hạt và mức cộng hóa trị có thể thay đổi cơ chế phá hủy.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Độ tan trong nước là cuộc cạnh tranh nhiệt động** tiếp nhận điểm tựa từ **Tính giòn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tan còn phụ thuộc pH và phản ứng phụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ tan trong nước là cuộc cạnh tranh nhiệt động
 
@@ -205,6 +228,8 @@ Phân tử nước định hướng lưỡng cực quanh các ion và làm hạ 
 
 Do đó có muối ion tan rất tốt và cũng có muối gần như không tan. Không thể suy luận đơn giản “chất ion = tan trong nước”.
 
+> **Chuyển mạch:** Trong **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Độ tan còn phụ thuộc pH và phản ứng phụ** tiếp nhận điểm tựa từ **Độ tan trong nước là cuộc cạnh tranh nhiệt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính ion là một phổ liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ tan còn phụ thuộc pH và phản ứng phụ
 
 Nếu một ion trong muối phản ứng với `H+`, `OH−` hoặc ligand khác, cân bằng hòa tan có thể bị kéo mạnh.
@@ -212,6 +237,8 @@ Nếu một ion trong muối phản ứng với `H+`, `OH−` hoặc ligand khá
 Ví dụ carbonate ít tan có thể tan nhiều hơn trong acid vì `CO₃²−` bị proton hóa thành `HCO₃−` rồi `CO₂/H₂CO₃`.
 
 Do đó độ tan của chất ion thường là một bài toán **cân bằng ghép (coupled equilibria)**, không chỉ là một con số `Ksp` độc lập.
+
+> **Chuyển mạch:** Ở chặng này của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Tính ion là một phổ liên tục** tiếp nhận điểm tựa từ **Độ tan còn phụ thuộc pH và phản ứng phụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ electron và điện tích hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tính ion là một phổ liên tục
 
@@ -223,6 +250,8 @@ Ví dụ `AlCl₃` có đặc tính cộng hóa trị đáng kể hơn `NaCl` d�
 
 Điều này nhắc rằng “ion” là một mô hình hữu ích chứ không phải nhãn nhị phân tuyệt đối.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Mật độ electron và điện tích hiệu dụng** tiếp nhận điểm tựa từ **Tính ion là một phổ liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với chất rắn và vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mật độ electron và điện tích hiệu dụng
 
 Điện tích hình thức `Na+`, `Cl−`, `Mg²+` rất hữu ích cho hóa lượng và điện trung hòa, nhưng điện tích thực suy ra từ mật độ electron có thể không bằng đúng số nguyên đó.
@@ -230,6 +259,8 @@ Ví dụ `AlCl₃` có đặc tính cộng hóa trị đáng kể hơn `NaCl` d�
 Các phương pháp như phân tích mật độ electron, Bader charge hoặc population phân tích (analysis / 분석) cho những giá trị phụ thuộc mô hình phân chia electron.
 
 Điều này không làm mô hình ion “sai”. Nó chỉ cho thấy mô hình ion là một **mức trừu tượng hóa** đặc biệt hiệu quả cho nhiều tính chất tập thể.
+
+> **Chuyển mạch:** Trong **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Liên hệ với chất rắn và vật liệu** tiếp nhận điểm tựa từ **Mật độ electron và điện tích hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với chất rắn và vật liệu
 
@@ -256,6 +287,8 @@ mạng tinh thể
 
 Đây là cầu nối từ hóa học liên kết sang khoa học vật liệu.
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên hệ với chất rắn và vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các hiểu lầm thường gặp
 
 ### “Hợp chất ion luôn tồn tại dưới dạng phân tử riêng lẻ”
@@ -278,10 +311,12 @@ Không. Nhiều vật liệu chức năng cần khuyết tật để dẫn ion, 
 
 Không. Điện tích ion là mô hình rất hữu ích nhưng mật độ electron thật thường phân bố liên tục hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Chất rắn ion là **mạng điện tích ba chiều có năng lượng được quyết định đồng thời bởi Coulomb, lực đẩy ngắn hạn, hình học mạng và khuyết tật**. Từ mô hình đó có thể suy ra không chỉ nhiệt độ nóng chảy hay độ giòn, mà còn độ tan, dẫn ion, pha tạp và hành vi của nhiều vật liệu kỹ thuật.
 
 Xem tiếp: [Liên kết cộng hóa trị](./02_covalent_bonding.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

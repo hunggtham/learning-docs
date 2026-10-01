@@ -1,7 +1,6 @@
 # Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường
 
-> **Mạch đọc:** Đọc **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mối nguy không đồng nghĩa rủi ro** sang **“Liều tạo nên độc tính” — nhưng liều nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mối nguy không đồng nghĩa rủi ro** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **“Liều tạo nên độc tính” — nhưng liều nào?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Hóa học độc chất (toxic chemistry / 독성 화학)** không thể được suy ra chỉ từ tên một chất. Mức gây hại phụ thuộc **liều × đường phơi nhiễm × thời gian × dạng hóa học × chuyển hóa × độ nhạy của đối tượng**. Trong môi trường còn phải xét vận chuyển, độ bền và khả năng chất thật sự tới được sinh vật hay cơ quan đích.
 
@@ -23,6 +22,8 @@ hazard vừa + exposure kéo dài rộng khắp
 
 Do đó phát hiện một chất trong mẫu chưa đủ để kết luận mức nguy hiểm thực tế.
 
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **“Liều tạo nên độc tính” — nhưng liều nào?** tiếp nhận điểm tựa từ **Mối nguy không đồng nghĩa rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường phơi nhiễm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “Liều tạo nên độc tính” — nhưng liều nào?
 
 “Liều” có thể nghĩa:
@@ -35,6 +36,8 @@ Do đó phát hiện một chất trong mẫu chưa đủ để kết luận m�
 - tổng phơi nhiễm tích lũy.
 
 Cùng liều ngoài không đảm bảo cùng liều trong vì hấp thu, phân bố, chuyển hóa và thải trừ khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Đường phơi nhiễm** tiếp nhận điểm tựa từ **“Liều tạo nên độc tính” — nhưng liều nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độc tính cấp và mãn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đường phơi nhiễm
 
@@ -49,6 +52,8 @@ Các đường chính gồm:
 
 Một chất hít vào có thể tới phổi rất nhanh, trong khi chất ăn vào có thể trải qua acid dạ dày và chuyển hóa qua gan trước.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc tính cấp và mãn** tiếp nhận điểm tựa từ **Đường phơi nhiễm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ liều–đáp ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độc tính cấp và mãn
 
 **Độc tính cấp (acute toxicity)** xuất hiện sau phơi nhiễm ngắn hoặc liều cao.
@@ -56,6 +61,8 @@ Một chất hít vào có thể tới phổi rất nhanh, trong khi chất ăn 
 **Độc tính mãn (chronic toxicity)** liên quan phơi nhiễm kéo dài/lặp lại và có thể gây ảnh hưởng cơ quan, thần kinh, sinh sản hoặc ung thư.
 
 `LD50` chỉ là một endpoint tử vong cấp trong điều kiện thử nghiệm cụ thể, không phải “điểm độc tính tổng quát”.
+
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Quan hệ liều–đáp ứng** tiếp nhận điểm tựa từ **Độc tính cấp và mãn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độc động học — cơ thể làm gì với chất?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ liều–đáp ứng
 
@@ -69,6 +76,8 @@ Các đại lượng thường gặp gồm:
 - liều tham chiếu.
 
 Chúng là kết quả của mô hình và dữ liệu, không phải hằng số phân tử bất biến.
+
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc động học — cơ thể làm gì với chất?** tiếp nhận điểm tựa từ **Quan hệ liều–đáp ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độc động học — cơ thể làm gì với chất?
 
@@ -99,6 +108,8 @@ Nếu chất được đưa vào lặp lại nhanh hơn tốc độ thải trừ
 
 Đây là ứng dụng trực tiếp của động học bậc nhất, không phải một công thức độc học tách biệt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính** tiếp nhận điểm tựa từ **Độc động học — cơ thể làm gì với chất?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dạng tồn tại hóa học quyết định hành vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính
 
 Chuyển hóa thường làm phân tử phân cực hơn và dễ thải hơn, nhưng có thể tạo chất trung gian phản ứng mạnh hơn chất mẹ.
@@ -126,6 +137,8 @@ GSH + electrophile
 
 Nếu hệ giải độc bị quá tải, phản ứng cộng hóa trị với đại phân tử sinh học có thể tăng.
 
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Dạng tồn tại hóa học quyết định hành vi** tiếp nhận điểm tựa từ **Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Redox và stress oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dạng tồn tại hóa học quyết định hành vi
 
 Cùng một nguyên tố có thể có độc tính và độ linh động rất khác tùy trạng thái oxy hóa, ligand và dạng pha.
@@ -141,6 +154,8 @@ Cr(III) và Cr(VI) khác mạnh về trạng thái oxy hóa, hình học ion, v�
 Vì vậy “tổng Cr” không mô tả đầy đủ rủi ro.
 
 Phần này nối trực tiếp với khái niệm **speciation** trong [hóa học nước](./01_water_chemistry.md) và [hóa vô cơ](../10_inorganic_chemistry/00_inorganic_compounds.md).
+
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Redox và stress oxy hóa** tiếp nhận điểm tựa từ **Dạng tồn tại hóa học quyết định hành vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất ô nhiễm hữu cơ bền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Redox và stress oxy hóa
 
@@ -158,6 +173,8 @@ Gốc hydroxyl phản ứng rất nhanh gần nơi được tạo.
 
 ROS không phải lúc nào cũng “xấu”; chúng còn tham gia tín hiệu tế bào. Vấn đề là **liều, vị trí và khả năng kiểm soát**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chất ô nhiễm hữu cơ bền** tiếp nhận điểm tựa từ **Redox và stress oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích lũy và khuếch đại sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất ô nhiễm hữu cơ bền
 
 **Chất ô nhiễm hữu cơ bền (persistent organic pollutants, POPs)** thường có một số đặc điểm:
@@ -170,6 +187,8 @@ ROS không phải lúc nào cũng “xấu”; chúng còn tham gia tín hiệu 
 
 Các ví dụ lịch sử gồm PCB và một số thuốc trừ sâu organochlorine.
 
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Tích lũy và khuếch đại sinh học** tiếp nhận điểm tựa từ **Chất ô nhiễm hữu cơ bền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số phân bố octanol/nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tích lũy và khuếch đại sinh học
 
 **Tích lũy sinh học (bioaccumulation)** xảy ra khi tốc độ hấp thu vượt tốc độ thải trong khoảng thời gian đủ dài.
@@ -179,6 +198,8 @@ Các ví dụ lịch sử gồm PCB và một số thuốc trừ sâu organochlo
 **Khuếch đại sinh học (biomagnification)** mô tả nồng độ tăng qua các bậc dinh dưỡng khi chất bền được truyền qua thức ăn.
 
 Không phải mọi chất bền đều khuếch đại giống nhau vì chuyển hóa và thải trừ khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Hệ số phân bố octanol/nước** tiếp nhận điểm tựa từ **Tích lũy và khuếch đại sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PFAS — một họ hóa chất, không phải một chất duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ số phân bố octanol/nước
 
@@ -194,6 +215,8 @@ Nhưng với chất có thể ion hóa, **hệ số phân bố D ở pH xác đ�
 
 Đây là ứng dụng của phân bố pha và acid–cơ sở (base / 기반), không chỉ là một chỉ số độc học độc lập.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **PFAS — một họ hóa chất, không phải một chất duy nhất** tiếp nhận điểm tựa từ **Hệ số phân bố octanol/nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất gây rối loạn nội tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## PFAS — một họ hóa chất, không phải một chất duy nhất
 
 Nhiều PFAS có các phần carbon fluor hóa với liên kết C–F bền.
@@ -203,6 +226,8 @@ Tuy nhiên độ dài chuỗi, nhóm đầu và tiền chất làm vận chuyể
 Một số PFAS chuỗi ngắn linh động trong nước; một số chất chuỗi dài liên kết mạnh hơn với protein/trầm tích.
 
 Cụm từ “forever chemicals” dễ nhớ nhưng không thay thế phân tích hóa học từng cấu trúc và sản phẩm biến đổi.
+
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chất gây rối loạn nội tiết** tiếp nhận điểm tựa từ **PFAS — một họ hóa chất, không phải một chất duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độc gen và sinh ung thư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất gây rối loạn nội tiết
 
@@ -218,6 +243,8 @@ Chất ngoại lai có thể:
 
 Một số hệ có quan hệ liều–đáp ứng không đơn điệu, nên ngoại suy từ liều cao xuống liều thấp cần thận trọng.
 
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc gen và sinh ung thư** tiếp nhận điểm tựa từ **Chất gây rối loạn nội tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độc tính của hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độc gen và sinh ung thư
 
 Chất độc gen có thể làm tổn thương DNA trực tiếp hoặc gián tiếp.
@@ -227,6 +254,8 @@ Một số chất được chuyển hóa thành electrophile tạo **adduct DNA*
 Nhưng sinh ung thư là quá trình nhiều bước còn phụ thuộc sửa chữa, tăng sinh, miễn dịch và bối cảnh mô.
 
 Đây là cầu nối trực tiếp giữa cơ chế hữu cơ và sinh học phân tử.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc tính của hạt** tiếp nhận điểm tựa từ **Độc gen và sinh ung thư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất ô nhiễm không khí và nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độc tính của hạt
 
@@ -245,6 +274,8 @@ Sợi asbestos còn có yếu tố hình học và độ bền sinh học làm q
 
 Phần nền về kích thước/bề mặt nối với [vật liệu nano](../14_materials_and_polymer_chemistry/04_nanomaterials.md).
 
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chất ô nhiễm không khí và nước** tiếp nhận điểm tựa từ **Độc tính của hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phú dưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất ô nhiễm không khí và nước
 
 Không khí có thể chứa bụi hạt, ozone, `NOx`, `SO2`, CO và VOC. Nhiều chất quan trọng là **ô nhiễm thứ cấp**, không phải chất phát thải ban đầu.
@@ -253,6 +284,8 @@ Nước có thể chứa N/P, mầm bệnh, kim loại, thuốc trừ sâu, dung
 
 Cách xử lý phụ thuộc dạng hóa học, kích thước, pha và cơ chế phân hủy.
 
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Phú dưỡng** tiếp nhận điểm tựa từ **Chất ô nhiễm không khí và nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phận môi trường — chất đi đâu và biến đổi thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phú dưỡng
 
 Dư nitrogen/phosphorus thúc đẩy tăng trưởng sinh khối.
@@ -260,6 +293,8 @@ Dư nitrogen/phosphorus thúc đẩy tăng trưởng sinh khối.
 Khi sinh khối phân hủy, oxygen bị tiêu thụ và có thể tạo vùng thiếu oxygen hoặc kỵ khí.
 
 Chuỗi cơ chế đã được giải thích sâu hơn ở [hóa học nước](./01_water_chemistry.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Số phận môi trường — chất đi đâu và biến đổi thế nào?** tiếp nhận điểm tựa từ **Phú dưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Số phận môi trường — chất đi đâu và biến đổi thế nào?
 
@@ -274,6 +309,8 @@ Chất ô nhiễm có thể trải qua:
 - chuyển pha.
 
 Sản phẩm biến đổi có thể ít độc hơn, tương đương hoặc độc hơn chất ban đầu.
+
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Số phận môi trường — chất đi đâu và biến đổi thế nào?** đã nêu tiêu chí phân biệt, còn **Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Quang phân trực tiếp và gián tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm
 
@@ -296,6 +333,8 @@ phân hủy thật
 ≠ chuyển sang pha khác
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm** đã nêu tiêu chí phân biệt, còn **Quang phân trực tiếp và gián tiếp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quang phân trực tiếp và gián tiếp
 
 Quang phân trực tiếp yêu cầu chất hấp thụ ánh sáng ở vùng bước sóng thật sự tới môi trường.
@@ -306,6 +345,8 @@ Tốc độ phụ thuộc phổ ánh sáng, độ sâu, độ đục và thành 
 
 Phần nền photon/phổ được nối với [phổ học](../12_analytical_chemistry/03_spectroscopy.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất** tiếp nhận điểm tựa từ **Quang phân trực tiếp và gián tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đám ô nhiễm nước ngầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất
 
 Một chất hấp phụ mạnh lên đất có thể di chuyển chậm nhưng vẫn tồn tại nguyên vẹn.
@@ -313,6 +354,8 @@ Một chất hấp phụ mạnh lên đất có thể di chuyển chậm nhưng 
 Nếu pH, độ mặn hoặc chất hữu cơ thay đổi, nó có thể giải hấp và trở lại pha nước.
 
 Do đó **cố định** giảm phơi nhiễm hiện tại nhưng không đồng nghĩa **phân hủy**.
+
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Đám ô nhiễm nước ngầm** tiếp nhận điểm tựa từ **Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khung đánh giá rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đám ô nhiễm nước ngầm
 
@@ -329,6 +372,8 @@ Vận chuyển dưới đất ghép:
 
 Hình dạng đám ô nhiễm vì vậy phản ánh cả thủy văn lẫn hóa học.
 
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Khung đánh giá rủi ro** tiếp nhận điểm tựa từ **Đám ô nhiễm nước ngầm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá phơi nhiễm và vai trò của hóa phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khung đánh giá rủi ro
 
 Một quy trình thường gồm:
@@ -339,6 +384,8 @@ Một quy trình thường gồm:
 4. đặc trưng hóa rủi ro.
 
 Độ không đảm bảo và khác biệt giữa cá thể/quần thể phải được thể hiện rõ thay vì giấu trong một con số duy nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Đánh giá phơi nhiễm và vai trò của hóa phân tích** tiếp nhận điểm tựa từ **Khung đánh giá rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liều tham chiếu và hệ số không đảm bảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đánh giá phơi nhiễm và vai trò của hóa phân tích
 
@@ -355,11 +402,15 @@ Nếu dữ liệu lấy mẫu hoặc định lượng bị độ lệch (bias / 
 
 Đây là lý do [thẩm định phương pháp](../12_analytical_chemistry/07_method_validation_and_chemometrics.md) là prerequisite thực tế của rủi ro (risk / 위험) assessment.
 
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, sau nội dung của **Đánh giá phơi nhiễm và vai trò của hóa phân tích**, **Liều tham chiếu và hệ số không đảm bảo** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Độc tính hỗn hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liều tham chiếu và hệ số không đảm bảo
 
 Mức hướng dẫn có thể được xây từ một điểm hiệu ứng rồi áp dụng hệ số không đảm bảo để xét khác biệt loài, quần thể và thiếu dữ liệu.
 
 Các hệ số này là công cụ quản lý rủi ro, không phải ngưỡng sinh học chính xác tuyệt đối.
+
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc tính hỗn hợp** tiếp nhận điểm tựa từ **Liều tham chiếu và hệ số không đảm bảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truyền thông rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độc tính hỗn hợp
 
@@ -373,6 +424,8 @@ Tác động có thể:
 - đối kháng.
 
 Số tổ hợp tăng rất nhanh nên đánh giá hỗn hợp là bài toán khó. Nhóm chất theo cơ chế tác động đôi khi giúp giảm độ phức tạp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Truyền thông rủi ro** tiếp nhận điểm tựa từ **Độc tính hỗn hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Truyền thông rủi ro
 
@@ -391,6 +444,8 @@ presence
 ≠ risk
 ```
 
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Truyền thông rủi ro** cho ta quy tắc; **Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?
 
 Hai mẫu cá có thể có cùng tổng Hg nhưng tỷ lệ methylmercury khác nhau.
@@ -399,6 +454,8 @@ Methylmercury có khả năng tích lũy và phân bố sinh học khác nhiều
 
 Do đó **speciation** có thể quan trọng hơn tổng nguyên tố khi đánh giá phơi nhiễm thực.
 
+> **Chuyển mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?** cho ta quy tắc; **Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?
 
 Nếu chất hấp phụ lên trầm tích, nồng độ nước giảm nhưng tổng khối lượng trong hệ gần như không đổi.
@@ -406,6 +463,8 @@ Nếu chất hấp phụ lên trầm tích, nồng độ nước giảm nhưng t
 Một thay đổi pH hoặc redox sau này có thể làm chất được giải phóng trở lại.
 
 Cần theo dõi **mass balance + phase phân phối (distribution / 분포) + transformation**, không chỉ một pha nước.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -429,6 +488,8 @@ Không. Dạng tồn tại, khả năng sinh học và đường phơi nhiễm r
 
 Không. Phát hiện chỉ nói tín hiệu vượt tiêu chí đo; rủi ro (risk / 위험) cần thêm hazard và exposure.
 
+> **Chuyển mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy theo dõi chất ô nhiễm như **một dòng khối lượng đi qua nhiều trạng thái hóa học và ngăn sinh học**:
@@ -448,4 +509,4 @@ nguồn
 
 Xem tiếp: [Hóa học xanh](./04_green_chemistry.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atmospheric chemistry](./00_atmospheric_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

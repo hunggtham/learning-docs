@@ -1,6 +1,6 @@
 # Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference
 
-> **Mạch đọc:** Đọc **toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Toàn cục (global / 전역) justice đặt câu hỏi nghĩa vụ vượt biên giới: ai hưởng lợi từ trade, extraction, di chuyển (migration / 마이그레이션) và historical institutions; ai chịu climate harm, debt, war hoặc supply-chain rủi ro (risk / 위험); và ai có voice trong quy tắc (rule / 규칙) chung. Citizenship giải thích một phần quyền pháp lý nhưng không tự biện minh cho mọi bất bình đẳng giữa citizen và non-citizen.
 
@@ -8,4 +8,4 @@ Toàn cục (global / 전역) justice đặt câu hỏi nghĩa vụ vượt biê
 
 Difference không đồng nghĩa relativism. Ta có thể tôn trọng plural ways of life và vẫn tranh luận về coercion, domination, consent và basic rights bằng công khai (public / 공개) reasons.
 
-> **Bàn giao:** Sau **toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 justice power and legitimacy](./00_justice_power_and_legitimacy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

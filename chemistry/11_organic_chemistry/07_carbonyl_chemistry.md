@@ -1,7 +1,6 @@
 # Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng
 
-> **Mạch đọc:** Đọc **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc điện tử — vì sao carbon có tính ái điện** sang **Thay đổi hình học khi nucleophile tấn công**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc điện tử — vì sao carbon có tính ái điện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thay đổi hình học khi nucleophile tấn công** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Nhóm carbonyl (carbonyl group / 카보닐기)** chứa liên kết đôi carbon–oxygen. Vì oxygen âm điện hơn carbon, C=O có sự bất đối xứng điện tử thường trực: oxygen giàu electron còn carbon nghèo electron. Chính sự phân cực đơn giản này tạo ra một trong những lô-gic (logic / 논리) phản ứng tái sử dụng nhiều nhất trong hóa hữu cơ.
 
@@ -33,8 +32,7 @@ Cấu trúc thứ hai đóng góp ít hơn nhưng làm nổi bật sự phân c�
 
 Cặp electron tự do trên oxygen lại làm oxygen có tính cơ sở (base / 기반) và ái nhân đối với proton hoặc acid Lewis.
 
-
-> **Chuyển mạch:** Từ **Cấu trúc điện tử — vì sao carbon có tính ái điện**, ta sang **Thay đổi hình học khi nucleophile tấn công** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Thay đổi hình học khi nucleophile tấn công** tiếp nhận điểm tựa từ **Cấu trúc điện tử — vì sao carbon có tính ái điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thay đổi hình học khi nucleophile tấn công
 
@@ -44,8 +42,7 @@ Thay đổi hình học này có ý nghĩa lập thể. Nếu carbonyl carbon l�
 
 Enzyme và chất xúc tác đối quang khai thác tính chọn lọc theo mặt này để tạo sản phẩm giàu một enantiomer.
 
-
-> **Chuyển mạch:** Từ **Thay đổi hình học khi nucleophile tấn công**, ta sang **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** tiếp nhận điểm tựa từ **Thay đổi hình học khi nucleophile tấn công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khử bằng hydride** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn
 
@@ -73,8 +70,7 @@ proton hóa / xử lý sau phản ứng
 
 Trong môi trường giàu nucleophile hoặc cơ sở (base / 기반), nucleophile thường tấn công trước. Trong xúc tác acid, oxygen carbonyl được proton hóa trước, làm hạ năng lượng LUMO ái điện và khiến carbon phản ứng mạnh hơn.
 
-
-> **Chuyển mạch:** Từ **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn**, ta sang **Khử bằng hydride** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Khử bằng hydride** tiếp nhận điểm tựa từ **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khử bằng hydride
 
@@ -86,8 +82,7 @@ Khử aldehyde cho alcohol bậc một; khử ketone cho alcohol bậc hai.
 
 Về cơ chế, đây là cộng ái nhân của hydride rồi proton hóa.
 
-
-> **Chuyển mạch:** Từ **Khử bằng hydride**, ta sang **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, sau nội dung của **Khử bằng hydride**, **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Tạo cyanohydrin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C
 
@@ -109,8 +104,7 @@ Biến đổi này mạnh vì tạo một liên kết C–C mới. Loại alcoho
 
 Tuy nhiên các thuốc thử này cũng là cơ sở (base / 기반) mạnh, nên nước, alcohol, acid và các nhóm có proton dễ tách sẽ phá hủy chúng. Tính tương thích nhóm chức vì vậy là một phần của thiết kế cơ chế.
 
-
-> **Chuyển mạch:** Từ **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C**, ta sang **Tạo cyanohydrin** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Tạo cyanohydrin** tiếp nhận điểm tựa từ **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ sinh học: hemiacetal vòng trong đường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tạo cyanohydrin
 
@@ -142,8 +136,7 @@ Acetal là nhóm bảo vệ carbonyl hữu ích vì tương đối bền trong n
 
 Đây là một chiến lược tổng hợp điển hình: tạm thời biến một nhóm phản ứng mạnh thành nhóm tương thích hơn với bước tiếp theo, sau đó khôi phục lại.
 
-
-> **Chuyển mạch:** Từ **Tạo cyanohydrin**, ta sang **Liên hệ sinh học: hemiacetal vòng trong đường** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Liên hệ sinh học: hemiacetal vòng trong đường** tiếp nhận điểm tựa từ **Tạo cyanohydrin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Amination khử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ sinh học: hemiacetal vòng trong đường
 
@@ -161,8 +154,7 @@ Các phản ứng này được xúc tác acid nhưng cần độ acid phù hợ
 
 Đây là ví dụ rõ của một điều kiện xúc tác tối ưu: acid giúp hoạt hóa carbonyl và tách nước, nhưng acid dư lại ức chế nucleophile.
 
-
-> **Chuyển mạch:** Từ **Liên hệ sinh học: hemiacetal vòng trong đường**, ta sang **Amination khử** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Amination khử** tiếp nhận điểm tựa từ **Liên hệ sinh học: hemiacetal vòng trong đường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng enol–keto** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Amination khử
 
@@ -202,8 +194,7 @@ Enolate không phải “chỉ là anion oxygen” hay “chỉ là carbanion”
 
 Vì đầu carbon vẫn mang tính ái nhân đáng kể, enolate là tác nhân quan trọng để tạo liên kết C–C.
 
-
-> **Chuyển mạch:** Từ **Amination khử**, ta sang **Cân bằng enol–keto** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Cân bằng enol–keto** tiếp nhận điểm tựa từ **Amination khử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aldol chéo và bài toán chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cân bằng enol–keto
 
@@ -245,8 +236,7 @@ Hóa học aldol là một trong các họ tạo liên kết C–C quan trọng 
 
 Aldol nội phân tử có thể tạo vòng năm hoặc sáu cạnh hiệu quả vì sự nối sẵn trong cùng phân tử làm tăng xác suất gặp nhau và các kích thước vòng này có hình học thuận lợi.
 
-
-> **Chuyển mạch:** Từ **Cân bằng enol–keto**, ta sang **Aldol chéo và bài toán chọn lọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Aldol chéo và bài toán chọn lọc** tiếp nhận điểm tựa từ **Cân bằng enol–keto** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng Michael** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Aldol chéo và bài toán chọn lọc
 
@@ -268,8 +258,7 @@ Nucleophile cứng và cơ sở (base / 기반) mạnh thường ưu tiên tấn
 
 Điều này nối tư duy kiểu HSAB với chọn lọc vị trí trong hóa hữu cơ.
 
-
-> **Chuyển mạch:** Từ **Aldol chéo và bài toán chọn lọc**, ta sang **Cộng Michael** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Cộng Michael** tiếp nhận điểm tựa từ **Aldol chéo và bài toán chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cộng Michael
 
@@ -307,8 +296,7 @@ Không. Chúng khác vị trí proton và cách kết nối liên kết; chúng 
 
 Không. Đây là cân bằng nhiều bước xúc tác acid gồm cộng, chuyển proton và tách nước.
 
-
-> **Chuyển mạch:** Từ **Cộng Michael**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Mô hình tư duy** gom các mảnh từ **Cộng Michael** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -316,4 +304,4 @@ Không. Đây là cân bằng nhiều bước xúc tác acid gồm cộng, chuy�
 
 Xem tiếp: [Acid carboxylic và dẫn xuất](./08_carboxylic_acids_and_derivatives.md), nơi lô-gic (logic / 논리) chất trung gian tứ diện chuyển từ cộng ái nhân sang thế acyl ái nhân.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

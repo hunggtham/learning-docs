@@ -1,7 +1,6 @@
 # Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng
 
-> **Mạch đọc:** Đọc **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Trước khi thêm cơ sở (base / 기반) — cân bằng phân ly của acid yếu** sang **2. Trước điểm tương đương — vùng đệm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Trước khi thêm cơ sở (base / 기반) — cân bằng phân ly của acid yếu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trước điểm tương đương — vùng đệm** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Chuẩn độ (titration / 적정)** dùng một thuốc thử có nồng độ đã biết để đưa hệ đi qua một chuỗi trạng thái acid–cơ sở (base / 기반) có kiểm soát. Giá trị của chuẩn độ không chỉ nằm ở thể tích tại điểm cuối. Toàn bộ đường cong pH theo thể tích chứa thông tin về hóa lượng, \(pK_a\), khả năng đệm, trạng thái proton hóa và độ mạnh tương đối của acid/cơ sở (base / 기반).
 
@@ -55,8 +54,7 @@ Nếu acid không quá loãng và phân ly nhỏ, có thể dùng gần đúng:
 
 Nhưng gần đúng này phải được kiểm tra; ở dung dịch rất loãng, tự ion hóa của nước và activity có thể trở nên quan trọng.
 
-
-> **Chuyển mạch:** Từ **1. Trước khi thêm cơ sở (base / 기반) — cân bằng phân ly của acid yếu**, ta sang **2. Trước điểm tương đương — vùng đệm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng**, **2. Trước điểm tương đương — vùng đệm** tiếp nhận điểm tựa từ **1. Trước khi thêm cơ sở (base / 기반) — cân bằng phân ly của acid yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Nửa điểm tương đương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Trước điểm tương đương — vùng đệm
 
@@ -72,8 +70,7 @@ là một biểu diễn thuận tiện của cân bằng, với điều kiện c
 
 Điều đáng chú ý là pH trong vùng này phụ thuộc mạnh vào **tỉ số** \([A^-]/[HA]\), không chỉ tổng nồng độ.
 
-
-> **Chuyển mạch:** Từ **2. Trước điểm tương đương — vùng đệm**, ta sang **3. Nửa điểm tương đương** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng**, **3. Nửa điểm tương đương** tiếp nhận điểm tựa từ **2. Trước điểm tương đương — vùng đệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Tại điểm tương đương — cơ sở (base / 기반) liên hợp thủy phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Nửa điểm tương đương
 
@@ -93,8 +90,7 @@ nên:
 
 Tuy nhiên trong hệ hoạt độ không lý tưởng hoặc acid nhiều chức, phép đọc có thể cần hiệu chỉnh.
 
-
-> **Chuyển mạch:** Từ **3. Nửa điểm tương đương**, ta sang **4. Tại điểm tương đương — cơ sở (base / 기반) liên hợp thủy phân** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng**, **4. Tại điểm tương đương — cơ sở (base / 기반) liên hợp thủy phân** tiếp nhận điểm tựa từ **3. Nửa điểm tương đương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Sau điểm tương đương — titrant dư chi phối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Tại điểm tương đương — cơ sở (base / 기반) liên hợp thủy phân
 
@@ -114,8 +110,7 @@ Do đó pH thường >7 cho acid yếu chuẩn độ bằng cơ sở (base / 기
 
 Điểm này cho thấy một nguyên tắc quan trọng: **pH tại equivalence điểm (point / 지점) do sản phẩm hóa lượng tiếp tục cân bằng với nước quyết định**.
 
-
-> **Chuyển mạch:** Từ **4. Tại điểm tương đương — cơ sở (base / 기반) liên hợp thủy phân**, ta sang **5. Sau điểm tương đương — titrant dư chi phối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng**, **5. Sau điểm tương đương — titrant dư chi phối** tiếp nhận điểm tựa từ **4. Tại điểm tương đương — cơ sở (base / 기반) liên hợp thủy phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 5. Sau điểm tương đương — titrant dư chi phối
 
@@ -363,4 +358,4 @@ Một phép chuẩn độ acid–cơ sở (base / 기반) là **quá trình ch�
 
 Xem tiếp: [Cân bằng độ tan](./05_solubility_equilibria.md) và [Phân tích thể tích](../12_analytical_chemistry/01_volumetric_analysis.md).
 
-> **Bàn giao:** Sau **“pH meter loại bỏ mọi sai số endpoint”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 acid base models](./00_acid_base_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **5. Sau điểm tương đương — titrant dư chi phối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

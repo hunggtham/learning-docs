@@ -1,7 +1,6 @@
 # Belief, bất định (uncertainty / 불확실성) và Calibration
 
-> **Mạch đọc:** Đọc **Belief, bất định (uncertainty / 불확실성) và Calibration** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tin một điều không phải là nhị phân** sang **Bayes như quy tắc cập nhật**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Belief, bất định (uncertainty / 불확실성) và Calibration**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tin một điều không phải là nhị phân** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bayes như quy tắc cập nhật** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Tin một điều không phải là nhị phân
 
@@ -9,12 +8,9 @@ Belief có thể biểu diễn như mức độ tin tưởng thay đổi theo b�
 
 Calibration hỏi: trong các claim được gắn 70% confidence, khoảng 70% có đúng không? Đây là chuẩn thực dụng cho forecasting, diagnosis, science communication và AI. Calibration tốt vẫn có thể sai ở từng trường hợp; nó đánh giá phân phối dự đoán qua nhiều trường hợp.
 
-
-> **Chuyển mạch:** Từ **Tin một điều không phải là nhị phân**, ta sang **Bayes như quy tắc cập nhật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Belief có độ tin cậy liên tục, không chỉ yes/no; Bayes cập nhật belief theo evidence, còn calibration kiểm tra xác suất có khớp outcome dài hạn không.
 
 ## Bayes như quy tắc cập nhật
-Phần “Bayes như quy tắc cập nhật” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 posterior ∝ likelihood × prior
@@ -22,15 +18,13 @@ posterior ∝ likelihood × prior
 
 Prior không nhất thiết là định kiến tùy tiện; nó ghi lại thông tin trước đó. Likelihood hỏi bằng chứng (evidence / 증거) này phù hợp với hypothesis nào hơn. Một kiểm thử (test / 테스트) có sensitivity cao nhưng cơ sở (base / 기반) tỷ lệ (rate / 비율) thấp vẫn có thể tạo nhiều false positive — đây là lý do cần phân biệt likelihood ratio với “kiểm thử (test / 테스트) positive nghĩa là chắc chắn có bệnh”.
 
-
-> **Chuyển mạch:** Từ **Bayes như quy tắc cập nhật**, ta sang **Ranh giới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Belief, bất định (uncertainty / 불확실성) và Calibration**, **Ranh giới** tiếp nhận điểm tựa từ **Bayes như quy tắc cập nhật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ cơ sở (base / 기반) tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới
 
 Không nên biến mọi câu hỏi giá trị thành một con số xác suất (probability / 확률). xác suất (probability / 확률) giúp quản lý bất định (uncertainty / 불확실성) về claim; nó không tự quyết định điều gì đáng mong muốn, công bằng hay đúng về mặt đạo đức.
 
-
-> **Chuyển mạch:** Từ **Ranh giới**, ta sang **Ví dụ cơ sở (base / 기반) tỷ lệ (rate / 비율)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Belief, bất định (uncertainty / 불확실성) và Calibration**, **Ranh giới** cho ta quy tắc; **Ví dụ cơ sở (base / 기반) tỷ lệ (rate / 비율)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Updating mà không overreact** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ cơ sở (base / 기반) tỷ lệ (rate / 비율)
 
@@ -38,11 +32,10 @@ Giả sử một bệnh có prevalence 1%, kiểm thử (test / 테스트) có s
 
 Ví dụ này cũng cho thấy calibration cần ngữ cảnh (context / 맥락). Một con số “90% accurate” không đủ nếu không biết prevalence, threshold, chi phí (cost / 비용) của false positive/negative và population mà kiểm thử (test / 테스트) được validate.
 
-
-> **Chuyển mạch:** Từ **Ví dụ cơ sở (base / 기반) tỷ lệ (rate / 비율)**, ta sang **Updating mà không overreact** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Belief, bất định (uncertainty / 불확실성) và Calibration**, **Ví dụ cơ sở (base / 기반) tỷ lệ (rate / 비율)** cho ta quy tắc; **Updating mà không overreact** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Updating mà không overreact
 
 Bằng chứng (evidence / 증거) mạnh khi likelihood ratio lớn, không chỉ vì nó gây ấn tượng. Hãy ghi prior, dự đoán trước bằng chứng (evidence / 증거), cập nhật theo magnitude và kiểm tra posterior predictive: nếu mô hình (model / 모델) không dự đoán được mẫu (pattern / 패턴) mới, vấn đề có thể nằm ở mô hình (model / 모델) chứ không chỉ ở confidence.
 
-> **Bàn giao:** Sau **Updating mà không overreact**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge justification and evidence](./00_knowledge_justification_and_evidence.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Updating mà không overreact**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

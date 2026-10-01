@@ -1,7 +1,6 @@
 # Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về
 
-> **Mạch đọc:** Đọc **liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. trình duyệt (browser / 브라우저) biến intent thành HTTP yêu cầu (request / 요청)** sang **2. Name resolution**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. trình duyệt (browser / 브라우저) biến intent thành HTTP yêu cầu (request / 요청)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Name resolution** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Một click “Đăng nhập” hoặc “Xem đơn hàng” có thể chạm gần như toàn bộ nền tảng Khoa học máy tính (computer science / 컴퓨터 과학). Chapter này nối trình duyệt (browser / 브라우저), DNS, vận chuyển (transport / 전송), TLS, máy chủ (server / 서버) scheduling, thời gian chạy (runtime / 런타임), cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) và phản hồi (response / 응답) thành một chuỗi nhân quả (causal chain / 인과 사슬).
 
@@ -11,11 +10,15 @@ JavaScript/UI mã (code / 코드) tạo yêu cầu (request / 요청) theo URL/p
 
 Cookie/session/đơn vị từ (token / 토큰) được attach theo trình duyệt (browser / 브라우저) policies; SameSite/Secure/lĩnh vực (domain / 도메인)/đường dẫn (path / 경로) affect hành vi (behavior / 동작). Đây đã là ranh giới bảo mật (security boundary / 보안 경계) trước khi packet rời máy.
 
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **2. Name resolution** tiếp nhận điểm tựa từ **1. trình duyệt (browser / 브라우저) biến intent thành HTTP yêu cầu (request / 요청)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. cục bộ (local / 로컬) mạng (network / 네트워크) và routing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Name resolution
 
 Trình duyệt (browser / 브라우저)/OS resolver tìm cached DNS entry hoặc truy vấn (query / 쿼리) recursive resolver để map hostname tới A/AAAA records. bộ nhớ đệm (cache / 캐시) TTL có thể khiến two clients thấy different addresses during rollout.
 
 DNS trả address, chưa tạo liên kết (connection / 연결).
+
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **3. cục bộ (local / 로컬) mạng (network / 네트워크) và routing** tiếp nhận điểm tựa từ **2. Name resolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. vận chuyển (transport / 전송) và TLS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. cục bộ (local / 로컬) mạng (network / 네트워크) và routing
 
@@ -23,11 +26,15 @@ Host quyết định destination cục bộ (local / 로컬) subnet hay via defa
 
 NAT/firewall/bộ cân bằng tải (load balancer / 로드 밸런서) may transform/filter đường dẫn (path / 경로).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **4. vận chuyển (transport / 전송) và TLS** tiếp nhận điểm tựa từ **3. cục bộ (local / 로컬) mạng (network / 네트워크) và routing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Edge/proxy/máy chủ (server / 서버) receives yêu cầu (request / 요청)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. vận chuyển (transport / 전송) và TLS
 
 TCP establishes ordered byte stream (or QUIC for HTTP/3). Congestion/luồng (flow / 흐름) điều khiển (control / 제어) limit in-flight dữ liệu (data / 데이터). TLS authenticates máy chủ (server / 서버) certificate and establishes encryption keys.
 
 A 50 ms RTT đường dẫn (path / 경로) means each handshake round trip is expensive relative to nanosecond CPU operations. liên kết (connection / 연결) reuse therefore matters.
+
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **5. Edge/proxy/máy chủ (server / 서버) receives yêu cầu (request / 요청)** tiếp nhận điểm tựa từ **4. vận chuyển (transport / 전송) và TLS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Authentication và authorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Edge/proxy/máy chủ (server / 서버) receives yêu cầu (request / 요청)
 
@@ -35,11 +42,15 @@ CDN/reverse proxy may terminate TLS, serve bộ nhớ đệm (cache / 캐시), e
 
 Kernel NIC driver receives packets via DMA, mạng (network / 네트워크) ngăn xếp (stack / 스택) reconstructs socket bytes, scheduler wakes event-loop/luồng thực thi (thread / 스레드)/tác vụ (task / 작업). thời gian chạy (runtime / 런타임) parses HTTP and dispatches tuyến (route / 경로).
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **6. Authentication và authorization** tiếp nhận điểm tựa từ **5. Edge/proxy/máy chủ (server / 서버) receives yêu cầu (request / 요청)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. cơ sở dữ liệu (database / 데이터베이스) đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Authentication và authorization
 
 Ứng dụng (application / 애플리케이션) verifies session/đơn vị từ (token / 토큰), then checks permission for requested tài nguyên (resource / 자원). Authentication success is not enough; `GET /orders/123` must verify người dùng (user / 사용자) may read thứ tự (order / 순서) 123.
 
 Đầu vào (input / 입력) is validated before truy vấn (query / 쿼리)/nghiệp vụ (business / 비즈니스) thao tác (operation / 연산).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **6. Authentication và authorization** nêu điều cần giải thích; **7. cơ sở dữ liệu (database / 데이터베이스) đường dẫn (path / 경로)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. phản hồi (response / 응답) đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. cơ sở dữ liệu (database / 데이터베이스) đường dẫn (path / 경로)
 
@@ -49,17 +60,23 @@ Chỉ mục (index / 인덱스) lookup traverses B+ cây (tree / 트리) pages l
 
 For ghi (write / 쓰기), DB updates bộ nhớ (memory / 메모리) pages/phiên bản (version / 버전) structures, appends WAL; lần ghi nhận (commit / 커밋) waits durability chính sách (policy / 정책). Replica acknowledgment may be involved depending hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **7. cơ sở dữ liệu (database / 데이터베이스) đường dẫn (path / 경로)** nêu điều cần giải thích; **8. phản hồi (response / 응답) đường dẫn (path / 경로)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thất bại (failure / 실패) can happen at every ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. phản hồi (response / 응답) đường dẫn (path / 경로)
 
 Ứng dụng (application / 애플리케이션) maps lĩnh vực (domain / 도메인) kết quả (result / 결과) → DTO → JSON bytes, may compress, returns status/headers. Reverse proxy may bộ nhớ đệm (cache / 캐시); TLS encrypts records; TCP/QUIC transports; trình duyệt (browser / 브라우저) decrypts/parses.
 
 Trình duyệt (browser / 브라우저) updates trạng thái (state / 상태)/rendering. If phản hồi (response / 응답) arrives after người dùng (user / 사용자) navigated away, frontend must handle stale/cancelled yêu cầu (request / 요청) — phân tán (distributed / 분산) thời gian (time / 시간) at small quy mô (scale / 규모).
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **8. phản hồi (response / 응답) đường dẫn (path / 경로)** đã nêu tiêu chí phân biệt, còn **Thất bại (failure / 실패) can happen at every ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ trễ (latency / 지연 시간) decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thất bại (failure / 실패) can happen at every ranh giới (boundary / 경계)
 
 DNS hết thời gian chờ (timeout / 타임아웃), TCP reset, TLS certificate thất bại (failure / 실패), proxy 502, thread-pool saturation, pool exhaustion, deadlock victim, DB hết thời gian chờ (timeout / 타임아웃), serialization lỗi (error / 오류), máy khách (client / 클라이언트) disconnect. A single “500 lỗi (error / 오류)” without ngữ cảnh dấu vết (trace context / 추적 컨텍스트) hides which stage failed.
 
 Phân tán (distributed / 분산) tracing propagates correlation ngữ cảnh (context / 맥락) across boundaries to reconstruct đường dẫn (path / 경로).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **Thất bại (failure / 실패) can happen at every ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Độ trễ (latency / 지연 시간) decomposition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bảo mật (security / 보안) composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ trễ (latency / 지연 시간) decomposition
 
@@ -73,9 +90,13 @@ DNS + connect/TLS + queueing + app CPU
 
 Optimize measured dominant terms. Reducing Java vòng lặp (loop / 루프) from 50 µs to 25 µs is irrelevant if DB wait is 200 ms.
 
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **Bảo mật (security / 보안) composition** tiếp nhận điểm tựa từ **Độ trễ (latency / 지연 시간) decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mermaid chuỗi (sequence / 시퀀스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bảo mật (security / 보안) composition
 
 TLS protects channel, WAF may filter patterns, app authenticates/authorizes, parameterized truy vấn (query / 쿼리) prevents injection, DB account least-privilege, kiểm tra (audit / 감사) logs bản ghi (record / 레코드) hành động (action / 동작). No single tầng (layer / 계층) substitutes all others.
+
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **Bảo mật (security / 보안) composition** xác định đầu vào; **Mermaid chuỗi (sequence / 시퀀스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mermaid chuỗi (sequence / 시퀀스)
 
@@ -100,9 +121,13 @@ sequenceDiagram
     E-->>B: encrypted response
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Mermaid chuỗi (sequence / 시퀀스)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cross-references** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > A web yêu cầu (request / 요청) is a **chuỗi xử lý (pipeline / 파이프라인) of queues, trạng thái (state / 상태) machines and trust boundaries**. “Backend độ trễ (latency / 지연 시간)” là tổng của nhiều mechanisms; debugging tốt xác định stage và bất biến (invariant / 불변식) bị phá.
+
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**, **Cross-references** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cross-references
 
@@ -115,4 +140,4 @@ Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng
 - [Identity/authorization](../07_security_reliability/02_identity_authentication_and_authorization.md)
 - [Observability/reliability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md)
 
-> **Bàn giao:** Sau **Cross-references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 source code to cpu](./00_source_code_to_cpu.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cross-references**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

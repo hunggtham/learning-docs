@@ -1,7 +1,6 @@
 # Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency
 
-> **Mạch đọc:** Đặt **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trung bình fleet có thể che thất bại (failure / 실패) cục bộ (local / 로컬)** sang **2. Fleet heterogeneity làm benchmark đơn lẻ mất đại diện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Trung bình fleet có thể che thất bại (failure / 실패) cục bộ (local / 로컬)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. Fleet heterogeneity làm benchmark đơn lẻ mất đại diện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Đọc trước [Capacity planning, utilization knee và admission control](./01_capacity_planning_utilization_knee_and_admission_control.md) và [Queueing, tail latency, backpressure](./00_queueing_tail_latency_and_backpressure.md). Chapter này mở rộng từ một dịch vụ (service / 서비스) instance sang một **fleet**: hàng trăm hoặc hàng nghìn processes/VMs/containers/accelerators chạy nhiều versions, regions, hardware types và tenants.
 
@@ -29,6 +28,8 @@ Aggregation càng lớn càng dễ che skew. Do đó môi trường vận hành 
 
 Nhưng dimensions quá nhiều tạo cardinality explosion. khả năng quan sát (observability / 관측 가능성) thiết kế (design / 설계) là sự đánh đổi (trade-off / 트레이드오프) giữa diagnosability và chi phí (cost / 비용).
 
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **2. Fleet heterogeneity làm benchmark đơn lẻ mất đại diện** tiếp nhận điểm tựa từ **1. Trung bình fleet có thể che thất bại (failure / 실패) cục bộ (local / 로컬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. chi phí (cost / 비용) per useful kết quả (outcome / 결과) tốt hơn raw tài nguyên (resource / 자원) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Fleet heterogeneity làm benchmark đơn lẻ mất đại diện
 
 Cùng dịch vụ (service / 서비스) nhị phân (binary / 이진) có thể chạy trên CPU generations khác nhau, NUMA topology khác nhau, bộ nhớ (memory / 메모리) bandwidth khác nhau hoặc cloud instance noisy-neighbor khác nhau.
@@ -46,6 +47,8 @@ hoặc với batch:
 ```text
 records processed correctly / dollar
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **2. Fleet heterogeneity làm benchmark đơn lẻ mất đại diện** nêu điều cần giải thích; **3. chi phí (cost / 비용) per useful kết quả (outcome / 결과) tốt hơn raw tài nguyên (resource / 자원) chi phí (cost / 비용)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Headroom không phải waste mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. chi phí (cost / 비용) per useful kết quả (outcome / 결과) tốt hơn raw tài nguyên (resource / 자원) chi phí (cost / 비용)
 
@@ -66,6 +69,8 @@ compute
 
 Mục tiêu không phải minimize từng line item mà minimize chi phí (cost / 비용) với bất biến (invariant / 불변식) SLO/tính đúng đắn (correctness / 정확성)/bảo mật (security / 보안) vẫn giữ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **3. chi phí (cost / 비용) per useful kết quả (outcome / 결과) tốt hơn raw tài nguyên (resource / 자원) chi phí (cost / 비용)** nêu điều cần giải thích; **4. Headroom không phải waste mặc định** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Bin packing có thể tăng efficiency và tăng blast radius cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Headroom không phải waste mặc định
 
 Nếu traffic burst nhanh hơn autoscaler, fleet cần spare sức chứa (capacity / 용량) để hấp thụ shock. Nếu failover một zone yêu cầu các zone còn lại gánh traffic, headroom là insurance cho thất bại (failure / 실패) mô hình (model / 모델).
@@ -81,11 +86,15 @@ steady-state utilization
 
 Chạy 95% mọi lúc có thể nhìn “efficient” nhưng làm hệ thống (system / 시스템) brittle.
 
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **5. Bin packing có thể tăng efficiency và tăng blast radius cùng lúc** tiếp nhận điểm tựa từ **4. Headroom không phải waste mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Requested resources và actual demand là hai phân phối (distribution / 분포) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Bin packing có thể tăng efficiency và tăng blast radius cùng lúc
 
 Packing nhiều workloads lên cùng hosts giảm idle fragmentation. Nhưng co-location tạo dùng chung (shared / 공유) miền lỗi (failure domain / 장애 도메인) và noisy-neighbor rủi ro (risk / 위험).
 
 Một scheduler tối ưu chi phí (cost / 비용) cần cân CPU, bộ nhớ (memory / 메모리), I/O, mạng (network / 네트워크), NUMA/accelerator locality và anti-affinity. Packing chỉ theo CPU yêu cầu (request / 요청) dễ tạo memory-bandwidth hoặc I/O hotspot.
+
+> **Chuyển mạch:** Ở chặng này của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **5. Bin packing có thể tăng efficiency và tăng blast radius cùng lúc** nêu điều cần giải thích; **6. Requested resources và actual demand là hai phân phối (distribution / 분포) khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Noisy neighbor là multi-resource contention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Requested resources và actual demand là hai phân phối (distribution / 분포) khác nhau
 
@@ -95,6 +104,8 @@ Rightsizing không nên lấy peak một ngày rồi set cứng. Cần phân ph�
 
 Bộ nhớ (memory / 메모리) khác CPU: CPU có thể throttle, còn bộ nhớ (memory / 메모리) exhaustion có thể OOM/evict. Vì vậy overcommit ngữ nghĩa (semantics / 의미론) khác nhau theo tài nguyên (resource / 자원).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **6. Requested resources và actual demand là hai phân phối (distribution / 분포) khác nhau** nêu điều cần giải thích; **7. Noisy neighbor là multi-resource contention** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Multi-tenant fairness cần định nghĩa công việc (work / 작업) đơn vị (unit / 단위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Noisy neighbor là multi-resource contention
 
 Hai tenants có thể không cạnh tranh CPU nhưng vẫn tranh LLC, bộ nhớ (memory / 메모리) bandwidth, disk hàng đợi (queue / 큐), NIC, liên kết (connection / 연결) pool hoặc downstream quota.
@@ -103,6 +114,8 @@ Symptoms thường là tail độ trễ (latency / 지연 시간) tăng theo co-
 
 Bằng chứng (evidence / 증거) cần correlation giữa placement và lower-layer contention, không chỉ ứng dụng (application / 애플리케이션) metrics.
 
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **7. Noisy neighbor là multi-resource contention** nêu điều cần giải thích; **8. Multi-tenant fairness cần định nghĩa công việc (work / 작업) đơn vị (unit / 단위)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. chi phí (cost / 비용) attribution trong dùng chung (shared / 공유) hệ thống (system / 시스템) không hoàn toàn “đo trực tiếp” được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Multi-tenant fairness cần định nghĩa công việc (work / 작업) đơn vị (unit / 단위)
 
 Fairness theo yêu cầu (request / 요청) count có thể sai nếu requests chi phí (cost / 비용) khác nhau 100×. Fairness theo CPU thời gian (time / 시간) có thể bỏ qua bộ nhớ (memory / 메모리)/mạng (network / 네트워크) pressure.
@@ -110,6 +123,8 @@ Fairness theo yêu cầu (request / 요청) count có thể sai nếu requests c
 Hệ thống có thể dùng weighted quotas, tính đồng thời (concurrency / 동시성) limits, đơn vị từ (token / 토큰) buckets hoặc dominant-resource style accounting tùy bất biến (invariant / 불변식).
 
 Câu hỏi trước thuật toán (algorithm / 알고리즘) là: **tenant đang được chia công bằng theo thứ gì?**
+
+> **Chuyển mạch:** Ở chặng này của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **9. chi phí (cost / 비용) attribution trong dùng chung (shared / 공유) hệ thống (system / 시스템) không hoàn toàn “đo trực tiếp” được** tiếp nhận điểm tựa từ **8. Multi-tenant fairness cần định nghĩa công việc (work / 작업) đơn vị (unit / 단위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Chargeback và showback tạo behavioral phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. chi phí (cost / 비용) attribution trong dùng chung (shared / 공유) hệ thống (system / 시스템) không hoàn toàn “đo trực tiếp” được
 
@@ -125,6 +140,8 @@ fixed shared cost
 
 Allocation key có thể là CPU thời gian (time / 시간), lưu trữ (storage / 저장소) bytes, yêu cầu (request / 요청) weight, rows scanned hoặc nghiệp vụ (business / 비즈니스) đơn vị (unit / 단위). Đây là accounting mô hình (model / 모델); cần công khai giả định (assumption / 가정) để tránh biến estimate thành “fact”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **10. Chargeback và showback tạo behavioral phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **9. chi phí (cost / 비용) attribution trong dùng chung (shared / 공유) hệ thống (system / 시스템) không hoàn toàn “đo trực tiếp” được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. phân tán (distributed / 분산) tracing không phải fleet profiler hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Chargeback và showback tạo behavioral phản hồi (feedback / 피드백)
 
 **Showback** hiển thị chi phí (cost / 비용) theo nhóm (team / 팀)/tenant nhưng không billing trực tiếp. **Chargeback** đưa chi phí (cost / 비용) vào ngân sách (budget / 예산)/accounting.
@@ -132,6 +149,8 @@ Allocation key có thể là CPU thời gian (time / 시간), lưu trữ (storag
 Hai cơ chế có thể thay đổi hành vi (behavior / 동작), đôi khi theo hướng xấu nếu chỉ số (metric / 지표) dễ game. Ví dụ nhóm (team / 팀) giảm logs quan trọng chỉ để giảm bill khả năng quan sát (observability / 관측 가능성).
 
 Chi phí (cost / 비용) chỉ số (metric / 지표) vì vậy cần guardrail về độ tin cậy (reliability / 신뢰성)/bảo mật (security / 보안).
+
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **11. phân tán (distributed / 분산) tracing không phải fleet profiler hoàn chỉnh** tiếp nhận điểm tựa từ **10. Chargeback và showback tạo behavioral phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Sampling có thể độ lệch (bias / 편향) dữ liệu chi phí (cost / 비용)/hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. phân tán (distributed / 분산) tracing không phải fleet profiler hoàn chỉnh
 
@@ -146,6 +165,8 @@ metric: pressure/rate thay đổi ra sao?
 log/event: state transition nào xảy ra?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **11. phân tán (distributed / 분산) tracing không phải fleet profiler hoàn chỉnh** nêu điều cần giải thích; **12. Sampling có thể độ lệch (bias / 편향) dữ liệu chi phí (cost / 비용)/hiệu năng (performance / 성능)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. phiên bản (version / 버전)/cohort comparison là công cụ mạnh nhất khi rollout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Sampling có thể độ lệch (bias / 편향) dữ liệu chi phí (cost / 비용)/hiệu năng (performance / 성능)
 
 Nếu dấu vết (trace / 추적) sampling chỉ random 1%, rare slow requests có thể bị thiếu. Tail-based sampling giữ slow/lỗi (error / 오류) traces tốt hơn nhưng tốn buffer và có selection độ lệch (bias / 편향) cho tải công việc (workload / 워크로드) phân tích (analysis / 분석).
@@ -153,6 +174,8 @@ Nếu dấu vết (trace / 추적) sampling chỉ random 1%, rare slow requests 
 Profiler sampling interval cũng ảnh hưởng visibility của short-lived functions.
 
 Bằng chứng (evidence / 증거) chuỗi xử lý (pipeline / 파이프라인) phải biết sampling chính sách (policy / 정책), không coi sampled phân phối (distribution / 분포) như full population mặc định.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **12. Sampling có thể độ lệch (bias / 편향) dữ liệu chi phí (cost / 비용)/hiệu năng (performance / 성능)** nêu điều cần giải thích; **13. phiên bản (version / 버전)/cohort comparison là công cụ mạnh nhất khi rollout** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Tail độ trễ (latency / 지연 시간) ở fleet mức (level / 수준) thường đến từ minority cohort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. phiên bản (version / 버전)/cohort comparison là công cụ mạnh nhất khi rollout
 
@@ -170,6 +193,8 @@ old vs new version
 → compare service time / allocation / downstream calls / success under SLO
 ```
 
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **14. Tail độ trễ (latency / 지연 시간) ở fleet mức (level / 수준) thường đến từ minority cohort** tiếp nhận điểm tựa từ **13. phiên bản (version / 버전)/cohort comparison là công cụ mạnh nhất khi rollout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. chi phí (cost / 비용) regression có thể không đi cùng độ trễ (latency / 지연 시간) regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Tail độ trễ (latency / 지연 시간) ở fleet mức (level / 수준) thường đến từ minority cohort
 
 p99 toàn cục (global / 전역) có thể do một zone, shard, phụ thuộc (dependency / 의존성) pool hoặc tenant cực nhỏ. Average profile của toàn fleet pha loãng tín hiệu (signal / 신호).
@@ -186,6 +211,8 @@ SLO tail cohort
 
 Không profile toàn fleet rồi hy vọng hot ngăn xếp (stack / 스택) tự lộ rõ.
 
+> **Chuyển mạch:** Ở chặng này của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **15. chi phí (cost / 비용) regression có thể không đi cùng độ trễ (latency / 지연 시간) regression** tiếp nhận điểm tựa từ **14. Tail độ trễ (latency / 지연 시간) ở fleet mức (level / 수준) thường đến từ minority cohort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Autoscaling là phản hồi (feedback / 피드백) controller nên có oscillation rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. chi phí (cost / 비용) regression có thể không đi cùng độ trễ (latency / 지연 시간) regression
 
 Phiên bản (version / 버전) mới có cùng độ trễ (latency / 지연 시간) nhưng allocate gấp đôi, tăng GC frequency và yêu cầu nhiều hosts để giữ headroom. Nếu chỉ monitor SLO, regression kinh tế bị bỏ sót.
@@ -193,6 +220,8 @@ Phiên bản (version / 버전) mới có cùng độ trễ (latency / 지연 �
 Ngược lại phiên bản (version / 버전) dùng thêm CPU nhưng giảm lưu trữ (storage / 저장소)/mạng (network / 네트워크) chi phí (cost / 비용) nhiều hơn có thể tốt tổng thể.
 
 Hiệu năng (performance / 성능) và chi phí (cost / 비용) phải được đọc theo kết quả (outcome / 결과), không theo một tài nguyên (resource / 자원) riêng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **16. Autoscaling là phản hồi (feedback / 피드백) controller nên có oscillation rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **15. chi phí (cost / 비용) regression có thể không đi cùng độ trễ (latency / 지연 시간) regression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Scale-to-zero đổi chi phí (cost / 비용) lấy cold-start tail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Autoscaling là phản hồi (feedback / 피드백) controller nên có oscillation rủi ro (risk / 위험)
 
@@ -210,6 +239,8 @@ load ↑
 
 Scaling chính sách (policy / 정책) cần xét đo lường (measurement / 측정) lag, provisioning thời gian (time / 시간) và hàng đợi (queue / 큐) dynamics. Đọc cùng chapter sức chứa (capacity / 용량)/admission thay vì coi autoscaling là magic elasticity.
 
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **17. Scale-to-zero đổi chi phí (cost / 비용) lấy cold-start tail** tiếp nhận điểm tựa từ **16. Autoscaling là phản hồi (feedback / 피드백) controller nên có oscillation rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Accelerator/GPU utilization cần nhìn bộ nhớ (memory / 메모리) và hàng đợi (queue / 큐) chứ không chỉ compute %** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Scale-to-zero đổi chi phí (cost / 비용) lấy cold-start tail
 
 Serverless hoặc batch workers có thể về zero khi idle. chi phí (cost / 비용) baseline giảm nhưng first yêu cầu (request / 요청) trả cold-start chi phí (cost / 비용): ảnh (image / 이미지) tải (load / 로드), thời gian chạy (runtime / 런타임) init, JIT, liên kết (connection / 연결) warmup, trượt bộ nhớ đệm (cache miss / 캐시 미스).
@@ -217,6 +248,8 @@ Serverless hoặc batch workers có thể về zero khi idle. chi phí (cost / �
 Nếu SLO không chấp nhận cold start, phải giữ warm sức chứa (capacity / 용량) hoặc prewarm dựa forecast.
 
 Efficiency là sự đánh đổi (trade-off / 트레이드오프) trạng thái (state / 상태), không phải một con số.
+
+> **Chuyển mạch:** Ở chặng này của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **18. Accelerator/GPU utilization cần nhìn bộ nhớ (memory / 메모리) và hàng đợi (queue / 큐) chứ không chỉ compute %** tiếp nhận điểm tựa từ **17. Scale-to-zero đổi chi phí (cost / 비용) lấy cold-start tail** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Carbon/năng lượng (energy / 에너지) có thể là dimension nhưng không nên thay SLO/bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Accelerator/GPU utilization cần nhìn bộ nhớ (memory / 메모리) và hàng đợi (queue / 큐) chứ không chỉ compute %
 
@@ -226,11 +259,15 @@ Accelerator “utilization cao” chưa chắc useful tokens/samples cao nếu q
 
 Chi phí (cost / 비용) per đơn vị từ (token / 토큰)/mẫu (sample / 표본) dưới độ trễ (latency / 지연 시간) mục tiêu (target / 대상) là chỉ số (metric / 지표) gần kết quả (outcome / 결과) hơn thiết bị (device / 장치) utilization đơn lẻ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **19. Carbon/năng lượng (energy / 에너지) có thể là dimension nhưng không nên thay SLO/bảo mật (security / 보안)** tiếp nhận điểm tựa từ **18. Accelerator/GPU utilization cần nhìn bộ nhớ (memory / 메모리) và hàng đợi (queue / 큐) chứ không chỉ compute %** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Worked example: CPU thấp nhưng fleet vẫn cần scale-out** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Carbon/năng lượng (energy / 에너지) có thể là dimension nhưng không nên thay SLO/bảo mật (security / 보안)
 
 Năng lượng (energy / 에너지) per useful yêu cầu (request / 요청) có thể quan trọng ở fleet lớn. DVFS, hardware generation và region năng lượng (energy / 에너지) mix ảnh hưởng. Tuy nhiên tối ưu hóa (optimization / 최적화) năng lượng không được làm mất availability reserve hoặc data-residency ràng buộc (constraint / 제약조건).
 
 Đây là thêm một tài nguyên (resource / 자원)/economic dimension, không phải mục tiêu tuyệt đối.
+
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **19. Carbon/năng lượng (energy / 에너지) có thể là dimension nhưng không nên thay SLO/bảo mật (security / 보안)** cho ta quy tắc; **20. Worked example: CPU thấp nhưng fleet vẫn cần scale-out** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **21. Worked example: tenant scan làm tăng bill toàn cluster** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Worked example: CPU thấp nhưng fleet vẫn cần scale-out
 
@@ -240,11 +277,15 @@ Scale-out API tạo thêm pools, có thể làm DB overload nặng hơn. CPU hea
 
 Correct hành động (action / 동작) có thể là admission limit, truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) hoặc DB sức chứa (capacity / 용량)—not “thêm app instances”.
 
+> **Chuyển mạch:** Ở chặng này của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **20. Worked example: CPU thấp nhưng fleet vẫn cần scale-out** cho ta quy tắc; **21. Worked example: tenant scan làm tăng bill toàn cluster** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **22. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Worked example: tenant scan làm tăng bill toàn cluster
 
 Một analytical tenant chạy truy vấn (query / 쿼리) scan rất rộng. CPU cluster tăng vừa phải nhưng object-storage read và mạng (network / 네트워크) shuffle tăng mạnh; bộ nhớ đệm (cache / 캐시) bị evict, làm tenants khác đọc chậm hơn.
 
 Attribution cần bytes scanned/shuffled và bộ nhớ đệm (cache / 캐시) impact, không chỉ yêu cầu (request / 요청) count. Quota có thể dựa scan bytes/tính đồng thời (concurrency / 동시성); chargeback/showback làm chi phí (cost / 비용) visible. Nhưng truy vấn (query / 쿼리) optimizer/pruning mới là fix giảm useful-work waste.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **21. Worked example: tenant scan làm tăng bill toàn cluster** cho ta quy tắc; **22. bằng chứng vận hành (production evidence / 운영 증거)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. Kết nối sang các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -265,10 +306,12 @@ cost unit
 
 Sau đó drill down thay vì export mọi dimension vào một chỉ số (metric / 지표) cardinality vô hạn.
 
+> **Chuyển mạch:** Trong **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**, **22. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **23. Kết nối sang các chapter khác** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 23. Kết nối sang các chapter khác
 
 Fleet profiling nối với [capacity planning](./01_capacity_planning_utilization_knee_and_admission_control.md), [load balancing/locality](./03_load_balancing_connection_pools_and_locality.md), [multi-region tradeoffs](../../06_networks_distributed_systems/advanced/05_multi_region_replication_and_geo_distributed_tradeoffs.md), [deployment canary](../../09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md) và [debugging xuyên layers](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
 
 Mô hình tư duy (mental model / 사고 모델) cuối cùng: **fleet efficiency là tối ưu chi phí (cost / 비용) của useful kết quả (outcome / 결과) dưới SLO/thất bại (failure / 실패)/bảo mật (security / 보안) các ràng buộc (constraints / 제약조건들), không phải ép mọi tài nguyên (resource / 자원) lên 100% utilization.**
 
-> **Bàn giao:** Sau **23. Kết nối sang các chapter khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 queueing tail latency and backpressure](./00_queueing_tail_latency_and_backpressure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **23. Kết nối sang các chapter khác**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

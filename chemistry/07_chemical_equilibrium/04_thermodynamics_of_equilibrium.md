@@ -1,7 +1,6 @@
 # Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng
 
-> **Mạch đọc:** Đọc **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ mức tiến triển phản ứng tới độ dốc của Gibbs** sang **Cân bằng bền cần nhiều hơn \(dG/d\xi=0\)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ mức tiến triển phản ứng tới độ dốc của Gibbs** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cân bằng bền cần nhiều hơn \(dG/d\xi=0\)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Cân bằng hóa học không phải một tập hợp quy tắc rời như `K`, `Q`, Le Châtelier, `Ksp`, `Ka` hay `Kf`. Tất cả đều có thể được nhìn trong một khuôn khổ duy nhất: **hệ thay đổi thành phần cho tới khi thế nhiệt động phù hợp đạt cực tiểu dưới các ràng buộc bảo toàn**.
 
@@ -48,6 +47,8 @@ Vì vậy **năng lượng Gibbs phản ứng** chính là độ dốc của Gib
 
 Đây là nền nhiệt động của hướng phản ứng.
 
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Cân bằng bền cần nhiều hơn \(dG/d\xi=0\)** tiếp nhận điểm tựa từ **Từ mức tiến triển phản ứng tới độ dốc của Gibbs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ thế hóa học tới \(Q\) và \(K\)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cân bằng bền cần nhiều hơn \(dG/d\xi=0\)
 
 Điều kiện:
@@ -65,6 +66,8 @@ chỉ cho một điểm dừng. Để cân bằng bền cục bộ còn cần đ
 Nếu độ cong âm, trạng thái đó không bền trước nhiễu nhỏ.
 
 Ý tưởng ổn định này mở rộng trực tiếp sang tách pha, spinodal decomposition và nhiều hiện tượng vật liệu.
+
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Từ thế hóa học tới \(Q\) và \(K\)** tiếp nhận điểm tựa từ **Cân bằng bền cần nhiều hơn \(dG/d\xi=0\)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao \(K\) phụ thuộc cách viết phương trình?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ thế hóa học tới \(Q\) và \(K\)
 
@@ -114,6 +117,8 @@ suy ra:
 
 Hằng số cân bằng vì thế là cách mã hóa chênh lệch năng lượng tự do chuẩn bằng hàm logarithm/exponential.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Vì sao \(K\) phụ thuộc cách viết phương trình?** tiếp nhận điểm tựa từ **Từ thế hóa học tới \(Q\) và \(K\)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng ghép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao \(K\) phụ thuộc cách viết phương trình?
 
 Nếu đảo phản ứng:
@@ -142,6 +147,8 @@ K_{new}=K^m
 
 Điều này chứng minh \(K\) không phải thuộc tính của “một cặp chất” độc lập với phương trình. Nó thuộc về **một phản ứng được định nghĩa với hóa lượng cụ thể**.
 
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Phản ứng ghép** tiếp nhận điểm tựa từ **Vì sao \(K\) phụ thuộc cách viết phương trình?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoạt độ và fugacity — dùng, không định nghĩa lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phản ứng ghép
 
 Nếu cộng hai phản ứng:
@@ -167,6 +174,8 @@ K_3=K_1K_2
 Đây là nền nhiệt động cho ghép phản ứng trong chuyển hóa sinh học hoặc tổng hợp hóa học.
 
 Một phản ứng riêng lẻ có \(K<1\) vẫn có thể được kéo theo chiều thuận nếu được ghép cơ chế với phản ứng thứ hai có lực dẫn động đủ lớn và hai phản ứng chia sẻ chất trung gian phù hợp.
+
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Hoạt độ và fugacity — dùng, không định nghĩa lại** tiếp nhận điểm tựa từ **Phản ứng ghép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh hưởng của nhiệt độ lên \(K\)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hoạt độ và fugacity — dùng, không định nghĩa lại
 
@@ -196,6 +205,8 @@ Vì vậy hằng số biểu kiến dựa trên nồng độ có thể thay đ�
 
 Điều này đặc biệt quan trọng trong nước biển, điện ly pin đậm đặc, acid/cơ sở (base / 기반) đậm đặc, dung dịch protein và nước muối địa hóa.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Ảnh hưởng của nhiệt độ lên \(K\)** tiếp nhận điểm tựa từ **Hoạt độ và fugacity — dùng, không định nghĩa lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu chỉnh theo nhiệt dung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ảnh hưởng của nhiệt độ lên \(K\)
 
 Quan hệ van ’t Hoff:
@@ -217,6 +228,8 @@ Nếu \(\Delta H^\circ\) gần không đổi trong khoảng nhiệt độ hẹp:
 
 Nếu \(\Delta C_p\) đáng kể, \(\Delta H^\circ\) và \(\Delta S^\circ\) cũng thay theo nhiệt độ nên giả định enthalpy không đổi mất dần độ chính xác.
 
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Hiệu chỉnh theo nhiệt dung** tiếp nhận điểm tựa từ **Ảnh hưởng của nhiệt độ lên \(K\)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng pha là điều kiện bằng nhau của thế hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu chỉnh theo nhiệt dung
 
 Định luật Kirchhoff:
@@ -228,6 +241,8 @@ Nếu \(\Delta C_p\) đáng kể, \(\Delta H^\circ\) và \(\Delta S^\circ\) cũn
 cho phép cập nhật enthalpy phản ứng theo nhiệt độ.
 
 Khi cần dự đoán \(K\) trên khoảng nhiệt độ rộng, phải tích hợp sự thay đổi của các hàm nhiệt động thay vì ngoại suy một \(\Delta H\) cố định quá xa.
+
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Cân bằng pha là điều kiện bằng nhau của thế hóa học** tiếp nhận điểm tựa từ **Hiệu chỉnh theo nhiệt dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Clapeyron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cân bằng pha là điều kiện bằng nhau của thế hóa học
 
@@ -241,6 +256,8 @@ Với thành phần \(i\) tồn tại trong hai pha \(\alpha\) và \(\beta\), c�
 Nếu thế hóa học trong pha lỏng cao hơn pha hơi, chuyển lỏng → hơi làm Gibbs giảm; nếu ngược lại, ngưng tụ thuận lợi.
 
 Tại cân bằng hai pha, không còn lực dẫn động ròng cho truyền vật chất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Phương trình Clapeyron** tiếp nhận điểm tựa từ **Cân bằng pha là điều kiện bằng nhau của thế hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiếp tuyến chung và tách pha trong hỗn hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương trình Clapeyron
 
@@ -256,6 +273,8 @@ Phương trình này giải thích độ dốc của đường đồng tồn t�
 
 Đối với hóa hơi, \(\Delta V\) thường lớn và có thể dùng gần đúng khí lý tưởng để suy dạng Clausius–Clapeyron.
 
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Tiếp tuyến chung và tách pha trong hỗn hợp** tiếp nhận điểm tựa từ **Phương trình Clapeyron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spinodal và trạng thái siêu bền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tiếp tuyến chung và tách pha trong hỗn hợp
 
 Với hỗn hợp hai thành phần ở \(T,P\) cố định, đồ thị Gibbs mol theo thành phần có thể có vùng mà một pha đồng nhất không phải cực tiểu toàn cục.
@@ -265,6 +284,8 @@ Hai pha có thành phần \(x_\alpha\), \(x_\beta\) cùng tồn tại khi một 
 Sự bằng nhau của độ dốc tương ứng với sự bằng nhau của thế hóa học giữa hai pha.
 
 Đây là nền của giản đồ pha hợp kim, trộn polymer và chiết lỏng–lỏng.
+
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Spinodal và trạng thái siêu bền** tiếp nhận điểm tựa từ **Tiếp tuyến chung và tách pha trong hỗn hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quá bão hòa không đồng nghĩa đã cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Spinodal và trạng thái siêu bền
 
@@ -285,6 +306,8 @@ thermodynamics → trạng thái cuối ưu tiên
 kinetics       → hệ có vượt được hàng rào hay không
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Quá bão hòa không đồng nghĩa đã cân bằng** tiếp nhận điểm tựa từ **Spinodal và trạng thái siêu bền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cực tiểu hóa Gibbs cho nhiều phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quá bão hòa không đồng nghĩa đã cân bằng
 
 Một dung dịch có thể có:
@@ -298,6 +321,8 @@ nhưng vẫn trong suốt nếu chưa tạo mầm tinh thể.
 Đó là trạng thái siêu bền: kết tủa làm Gibbs giảm nhưng cần tạo mặt phân cách mới nên xuất hiện hàng rào tạo mầm.
 
 Thêm tinh thể mồi cung cấp bề mặt sẵn có, giảm chi phí tạo mầm và có thể làm kết tủa bắt đầu gần như tức thời.
+
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Cực tiểu hóa Gibbs cho nhiều phản ứng** tiếp nhận điểm tựa từ **Quá bão hòa không đồng nghĩa đã cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhân tử Lagrange và bảo toàn nguyên tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cực tiểu hóa Gibbs cho nhiều phản ứng
 
@@ -321,11 +346,15 @@ n_i\ge0
 
 Cách này không phụ thuộc vào lựa chọn một tập phản ứng độc lập cụ thể. Nó đặc biệt hữu ích trong cháy, luyện kim và cân bằng nhiệt độ cao.
 
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Nhân tử Lagrange và bảo toàn nguyên tố** tiếp nhận điểm tựa từ **Cực tiểu hóa Gibbs cho nhiều phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dạng tồn tại trong dung dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhân tử Lagrange và bảo toàn nguyên tố
 
 Cực tiểu Gibbs dưới các ràng buộc bảo toàn có thể dùng nhân tử Lagrange.
 
 Về mặt toán học, thành phần cân bằng là nghiệm tối ưu có ràng buộc. Đây là liên hệ trực tiếp giữa nhiệt động lực học hóa học và lý thuyết tối ưu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Dạng tồn tại trong dung dịch** tiếp nhận điểm tựa từ **Nhân tử Lagrange và bảo toàn nguyên tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hằng số cân bằng có điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dạng tồn tại trong dung dịch
 
@@ -351,6 +380,8 @@ kết hợp cân bằng điện tích và \(K_{a1},K_{a2}\) xác định phân b
 
 Đây vẫn là cùng một nhiệt động lực học, chỉ được biểu diễn dưới dạng giải hệ phương trình thay vì cực tiểu hóa trực tiếp.
 
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Hằng số cân bằng có điều kiện** tiếp nhận điểm tựa từ **Dạng tồn tại trong dung dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế điện hóa trong cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hằng số cân bằng có điều kiện
 
 Nếu phản ứng chính phụ thuộc một tiểu phần chỉ tồn tại theo phân số \(\alpha\), có thể dùng hằng số hiệu dụng.
@@ -371,6 +402,8 @@ Vì \(\alpha_L\) phụ thuộc pH, khả năng liên kết biểu kiến cũng p
 
 Đây là cách cân bằng acid–cơ sở (base / 기반) ghép vào [hóa học phối trí](../10_inorganic_chemistry/03_coordination_chemistry.md).
 
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Thế điện hóa trong cân bằng** tiếp nhận điểm tựa từ **Hằng số cân bằng có điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thẩm thấu cũng là cân bằng thế hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thế điện hóa trong cân bằng
 
 Với ion điện tích \(z_i\) trong điện thế \(\phi\):
@@ -386,6 +419,8 @@ Cân bằng ion qua màng không chỉ yêu cầu thế hóa học bằng nhau m
 
 Từ đây xuất hiện phương trình Nernst, điện thế màng và điện áp pin. Phần nền được xây chi tiết ở [Nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md) và [phương trình Nernst](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Thẩm thấu cũng là cân bằng thế hóa học** tiếp nhận điểm tựa từ **Thế điện hóa trong cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng trong sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thẩm thấu cũng là cân bằng thế hóa học
 
 Qua màng bán thấm, dung môi dịch chuyển cho tới khi thế hóa học của dung môi đạt điều kiện cân bằng giữa hai phía.
@@ -399,6 +434,8 @@ Trong dung dịch loãng:
 \]
 
 Đây là cùng khung phần mềm (framework / 프레임워크) thế hóa học, không phải một hiện tượng tách biệt khỏi cân bằng hóa học.
+
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Cân bằng trong sinh học** tiếp nhận điểm tựa từ **Thẩm thấu cũng là cân bằng thế hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng trong pin và lưu trữ năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cân bằng trong sinh học
 
@@ -418,6 +455,8 @@ Nhưng tế bào nhìn chung không ở cân bằng toàn cục. Chuyển hóa A
 
 Do đó **xấp xỉ cân bằng cục bộ** có thể hữu ích cho một subsystem dù toàn tế bào ở trạng thái ổn định ngoài cân bằng.
 
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Cân bằng trong pin và lưu trữ năng lượng** tiếp nhận điểm tựa từ **Cân bằng trong sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ giải số và kiểm tra ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cân bằng trong pin và lưu trữ năng lượng
 
 Điện áp hở mạch liên hệ với năng lượng Gibbs phản ứng:
@@ -431,6 +470,8 @@ Phương trình Nernst mô tả đóng góp của thành phần.
 Khi pin phóng điện tiến gần trạng thái cân bằng hơn, công thuận nghịch khả dụng giảm. Nhưng pin thật còn có quá thế động học và tổn hao ohmic, nên điện áp đầu cực dưới tải không bằng điện áp cân bằng.
 
 Đây là điểm nối giữa cân bằng nhiệt động và động học điện hóa.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Bộ giải số và kiểm tra ổn định** tiếp nhận điểm tựa từ **Cân bằng trong pin và lưu trữ năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ giải số và kiểm tra ổn định
 
@@ -448,6 +489,8 @@ Một nghiệm của hệ phương trình có thể không phải cân bằng v�
 ### Ví dụ lập luận (reasoning / 추론): vì sao nghiệm toán học chưa đủ?
 
 Một solver có thể tìm được nghiệm thỏa phương trình cân bằng nhưng đặt hệ ở nhánh siêu bền hoặc dùng hệ số hoạt độ ngoài phạm vi mô hình. Vì vậy kiểm tra hợp lệ (validation / 검증) phải kiểm tra cả **conservation + mô hình (model / 모델) validity + thermodynamic stability**, không chỉ residual nhỏ.
+
+> **Chuyển mạch:** Trong **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Bộ giải số và kiểm tra ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -475,6 +518,8 @@ Không. Cần kiểm tra bảo toàn, ràng buộc vật lý, phạm vi mô hìn
 
 Không. Đây là chapter ứng dụng. Định nghĩa và mô hình tính không lý tưởng thuộc [Nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md).
 
+> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Có thể nén toàn bộ cân bằng hóa học vào một sơ đồ:
@@ -500,4 +545,4 @@ G minimizer   → nhìn theo tối ưu toàn cục
 
 Xem tiếp: [Các mô hình acid–base](../08_acids_bases/00_acid_base_models.md), [Điện hóa](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md) và quay lại [Nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md) nếu cần activity/fugacity/nonideality chi tiết hơn.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

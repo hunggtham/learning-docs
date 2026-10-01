@@ -1,7 +1,6 @@
 # Mind, Consciousness và Personal định danh (identity / 식별자)
 
-> **Mạch đọc:** Đọc **Mind, Consciousness và Personal định danh (identity / 식별자)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ba câu hỏi không đồng nhất** sang **Các lập trường cần phân biệt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mind, Consciousness và Personal định danh (identity / 식별자)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba câu hỏi không đồng nhất** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Các lập trường cần phân biệt** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Ba câu hỏi không đồng nhất
 
@@ -11,15 +10,13 @@
 
 Functional description, neural cơ chế (mechanism / 메커니즘) và first-person phenomenology trả lời các lớp khác nhau. Neural correlate của một experience chưa tự nó là nguyên nhân, còn báo cáo chủ quan không phải dữ liệu “phi khoa học”; nó cần được đo, kiểm tra và đặt cạnh hành vi (behavior / 동작)/neural bằng chứng (evidence / 증거) đúng cách.
 
-
-> **Chuyển mạch:** Từ **Ba câu hỏi không đồng nhất**, ta sang **Các lập trường cần phân biệt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Các lập trường cần phân biệt** tiếp nhận điểm tựa từ **Ba câu hỏi không đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định danh (identity / 식별자) và continuity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các lập trường cần phân biệt
 
 Dualism nhấn mạnh sự khác biệt giữa mental và vật lý (physical / 물리적); physicalism tìm cách giải thích mind trong thế giới vật lý; functionalism nhận diện trạng thái qua vai trò nhân quả; enactivism/embodied views nhấn mạnh body–môi trường (environment / 환경) coupling. Đây là các khung triết học, không phải tên của một thí nghiệm duy nhất.
 
-
-> **Chuyển mạch:** Từ **Các lập trường cần phân biệt**, ta sang **định danh (identity / 식별자) và continuity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Định danh (identity / 식별자) và continuity** tiếp nhận điểm tựa từ **Các lập trường cần phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo lường (measurement / 측정) không giải quyết ontology một mình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Định danh (identity / 식별자) và continuity
 
@@ -27,22 +24,19 @@ Bộ nhớ (memory / 메모리), body, psychological mẫu (pattern / 패턴), a
 
 Đọc tiếp Psychology về [brain and mind](../../psychology/01_brain_and_mind/00_nervous_system_and_brain.md) và [consciousness](../../psychology/01_brain_and_mind/09_consciousness_theories_and_evidence.md).
 
-
-> **Chuyển mạch:** Từ **định danh (identity / 식별자) và continuity**, ta sang **đo lường (measurement / 측정) không giải quyết ontology một mình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Định danh (identity / 식별자) và continuity** nêu điều cần giải thích; **Đo lường (measurement / 측정) không giải quyết ontology một mình** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Định danh (identity / 식별자), agency và continuity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đo lường (measurement / 측정) không giải quyết ontology một mình
 
 Một report chủ quan, behavioral truy cập (access / 접근), neural decoding và perturbation có thể cung cấp bằng chứng (evidence / 증거) cho các khía cạnh khác nhau của consciousness. Neural activity tương quan với report không tự chứng minh activity đó là sufficient điều kiện (condition / 조건); absence of report cũng có thể do communication thất bại (failure / 실패), attention hoặc tác vụ (task / 작업) demand. Vì vậy, lý thuyết (theory / 이론) cần tạo predictions phân biệt được giữa các mô hình (model / 모델), không chỉ giải thích mọi kết quả sau khi biết dữ liệu.
 
-
-> **Chuyển mạch:** Từ **đo lường (measurement / 측정) không giải quyết ontology một mình**, ta sang **định danh (identity / 식별자), agency và continuity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Đo lường (measurement / 측정) không giải quyết ontology một mình** nêu điều cần giải thích; **Định danh (identity / 식별자), agency và continuity** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Định danh (identity / 식별자), agency và continuity
 
 Trong thực hành, personal định danh (identity / 식별자) thường vận hành như một bundle: bộ nhớ (memory / 메모리) để quy trách nhiệm, body để duy trì nhân quả (causal / 인과적) continuity, values để nhận diện tác nhân (agent / 에이전트), xã hội (social / 사회적) recognition để phân bổ rights. Thought experiment hữu ích khi làm một thành phần biến mất, nhưng chính sách (policy / 정책) cần thêm empirical bằng chứng (evidence / 증거) về năng lực, vulnerability và khả năng phục hồi — không thể suy ra trực tiếp từ intuition về “cùng người”.
 
-
-> **Chuyển mạch:** Từ **định danh (identity / 식별자), agency và continuity**, ta sang **độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Định danh (identity / 식별자), agency và continuity** nêu điều cần giải thích; **Độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)
 
@@ -62,4 +56,4 @@ Neural correlate có thể chỉ là prerequisite, consequence hoặc dùng chun
 
 Consciousness đo lường (measurement / 측정) cần convergent bằng chứng (evidence / 증거), adversarial paradigms và bất định (uncertainty / 불확실성), nhất là với trẻ nhỏ, bệnh nhân không giao tiếp và động vật. Implication cho định danh (identity / 식별자) và AI: functional hiệu năng (performance / 성능) không tự chứng minh experience; ngược lại, bất định (uncertainty / 불확실성) về experience tạo lý do cho safeguards, consent và reversible triển khai (deployment / 배포).
 
-> **Bàn giao:** Sau **Empirical ranh giới (boundary / 경계) và implication**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 mental causation embodiment and extended mind](./01_mental_causation_embodiment_and_extended_mind.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

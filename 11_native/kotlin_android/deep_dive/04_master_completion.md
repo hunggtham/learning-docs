@@ -1,7 +1,6 @@
 # Kotlin + Android Master — kỹ thuật (engineering / 엔지니어링) & quản trị (governance / 거버넌스) Deep Dive
 
-> **Mạch đọc:** Đọc **Kotlin + Android Master — kỹ thuật (engineering / 엔지니어링) & quản trị (governance / 거버넌스) Deep Dive** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kotlin + Android Master — kỹ thuật (engineering / 엔지니어링) & quản trị (governance / 거버넌스) Deep Dive**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Kotlin + Android Master — kỹ thuật (engineering / 엔지니어링) & quản trị (governance / 거버넌스) Deep Dive** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > tệp (file / 파일) này bổ sung cho [`../04_kotlin_master.md`](../04_kotlin_master.md). Mục tiêu là hoàn thiện lớp kiến thức môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) mà một codebase Android sống nhiều năm cần có: bản dựng (build / 빌드) kỹ thuật (engineering / 엔지니어링), phụ thuộc (dependency / 의존성)/supply-chain quản trị (governance / 거버넌스), ABI, di chuyển (migration / 마이그레이션), khả năng quan sát (observability / 관측 가능성), hiệu năng (performance / 성능) ngân sách (budget / 예산), bảo mật (security / 보안)/integrity, privacy, khả năng tiếp cận (accessibility / 접근성)/adaptive UI, ADR/quyền sở hữu (ownership / 소유권), cổng chất lượng (quality gate / 품질 게이트) và Kotlin Multiplatform chiến lược (strategy / 전략).
 
@@ -235,4 +234,4 @@ Lần theo từ người dùng (user / 사용자) hành động (action / 동작
 
 Nếu hệ thống có câu trả lời nhất quán cho chuỗi này, kiến thức đã vượt khỏi mức “biết khung phần mềm (framework / 프레임워크)” và tiến tới kỹ thuật (engineering / 엔지니어링) mastery.
 
-> **Bàn giao:** Sau **Kotlin + Android Master — kỹ thuật (engineering / 엔지니어링) & quản trị (governance / 거버넌스) Deep Dive**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 beginner completion](./01_beginner_completion.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kotlin + Android Master — kỹ thuật (engineering / 엔지니어링) & quản trị (governance / 거버넌스) Deep Dive**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

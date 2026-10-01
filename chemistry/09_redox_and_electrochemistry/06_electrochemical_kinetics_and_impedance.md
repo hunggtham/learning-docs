@@ -1,7 +1,6 @@
 # Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế
 
-> **Mạch đọc:** Đọc **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Điện thế cân bằng không quyết định dòng điện** sang **Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Điện thế cân bằng không quyết định dòng điện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Nhiệt động lực học điện hóa cho biết phản ứng oxy hóa–khử có xu hướng thuận lợi tới đâu; **động học điện hóa (electrochemical kinetics / 전기화학 반응속도론)** cho biết cần đẩy điện thế ra khỏi cân bằng bao nhiêu để tạo tốc độ phản ứng mong muốn. **Phổ trở kháng điện hóa (electrochemical impedance spectroscopy, EIS / 전기화학 임피던스 분광법)** dùng đáp ứng theo tần số để tách các quá trình xảy ra ở những thang thời gian khác nhau.
 
@@ -41,6 +40,8 @@ quá thế → mức dịch khỏi cân bằng
 
 Đây là điểm quan trọng: điện thế lớn không tự động đồng nghĩa dòng lớn nếu hàng rào chuyển electron hoặc vận chuyển khối vẫn chậm.
 
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0** tiếp nhận điểm tựa từ **Điện thế cân bằng không quyết định dòng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Butler–Volmer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0
 
 Tại cân bằng, dòng oxy hóa và dòng khử có độ lớn bằng nhau. Thang tốc độ của sự trao đổi hai chiều đó được mô tả bằng **mật độ dòng trao đổi (exchange current density, \(j_0\))**.
@@ -48,6 +49,8 @@ Tại cân bằng, dòng oxy hóa và dòng khử có độ lớn bằng nhau. T
 Nếu \(j_0\) lớn, bề mặt trao đổi electron nhanh và chỉ cần quá thế nhỏ để tạo dòng ròng đáng kể. Nếu \(j_0\) nhỏ, cần quá thế lớn hơn cho cùng mật độ dòng.
 
 Ví dụ, phản ứng tạo hydrogen trên Pt thường có động học thuận lợi hơn trên nhiều vật liệu khác. Khác biệt này không đến từ phương trình Nernst; nó đến từ năng lượng hấp phụ trung gian, cấu trúc bề mặt và hàng rào hoạt hóa.
+
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Phương trình Butler–Volmer** tiếp nhận điểm tựa từ **Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng gần cân bằng và điện trở chuyển điện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương trình Butler–Volmer
 
@@ -72,6 +75,8 @@ Trong đó:
 Thông điệp quan trọng hơn việc ghi nhớ biểu thức là: trong vùng chuyển điện tích chi phối, tốc độ phản ứng điện cực thay đổi rất mạnh theo quá thế.
 
 Phương trình này vẫn là mô hình. Khi cơ chế gồm nhiều bước, hấp phụ mạnh, tái cấu trúc bề mặt hoặc vận chuyển khối chi phối, một tập tham số Butler–Volmer đơn giản có thể không đủ mô tả toàn bộ hệ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Vùng gần cân bằng và điện trở chuyển điện tích** tiếp nhận điểm tựa từ **Phương trình Butler–Volmer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ Tafel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vùng gần cân bằng và điện trở chuyển điện tích
 
@@ -98,6 +103,8 @@ j0 nhỏ → chuyển electron chậm → Rct lớn
 
 Đây là lý do \(R_{ct}\) thường được dùng trong EIS để theo dõi pin, ăn mòn, cảm biến và xúc tác.
 
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Quan hệ Tafel** tiếp nhận điểm tựa từ **Vùng gần cân bằng và điện trở chuyển điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba nguồn phân cực chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quan hệ Tafel
 
 Ở quá thế đủ lớn để một nhánh trong Butler–Volmer chi phối, có thể thu được dạng gần tuyến tính:
@@ -120,6 +127,8 @@ j0 nhỏ → chuyển electron chậm → Rct lớn
 - bề mặt thay đổi trong lúc đo.
 
 Do đó Tafel chỉ hữu ích khi vùng dữ liệu thực sự thuộc chế độ động học phù hợp.
+
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Quan hệ Tafel** nêu điều cần giải thích; **Ba nguồn phân cực chính** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dòng giới hạn và vận chuyển khối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ba nguồn phân cực chính
 
@@ -151,6 +160,8 @@ Xuất hiện khi phản ứng tiêu thụ chất tại bề mặt nhanh hơn t�
 
 Ba đóng góp có thể chồng lên nhau. Vì vậy khi điện áp pin tụt dưới tải, không thể quy mọi tổn thất cho “điện trở trong” theo nghĩa thuần ohmic.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Ba nguồn phân cực chính** đã nêu tiêu chí phân biệt, còn **Dòng giới hạn và vận chuyển khối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Điện cực đĩa quay — kiểm soát thủy động lực học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dòng giới hạn và vận chuyển khối
 
 Nếu chuyển electron rất nhanh, bước giới hạn có thể trở thành việc đưa chất phản ứng tới bề mặt.
@@ -170,6 +181,8 @@ trong đó:
 Khuấy mạnh hơn hoặc tạo dòng chảy có kiểm soát làm \(\delta\) nhỏ hơn và tăng dòng giới hạn.
 
 Khi hệ đã bị giới hạn vận chuyển, tăng quá thế thêm không làm dòng tăng tương ứng; thay vào đó phản ứng phụ có thể tăng.
+
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Dòng giới hạn và vận chuyển khối** đã nêu tiêu chí phân biệt, còn **Điện cực đĩa quay — kiểm soát thủy động lực học** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Quan hệ Koutecký–Levich** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện cực đĩa quay — kiểm soát thủy động lực học
 
@@ -191,6 +204,8 @@ i_L\propto\omega^{1/2}
 
 cho phép kiểm tra xem dòng có chịu ảnh hưởng mạnh của vận chuyển khối hay không.
 
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Quan hệ Koutecký–Levich** tiếp nhận điểm tựa từ **Điện cực đĩa quay — kiểm soát thủy động lực học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc bề mặt quyết định động học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quan hệ Koutecký–Levich
 
 Nếu cả động học điện cực và vận chuyển khối đều quan trọng:
@@ -202,6 +217,8 @@ Nếu cả động học điện cực và vận chuyển khối đều quan tr�
 Có thể hình dung hai giới hạn này như hai “điện trở tốc độ” mắc nối tiếp: dòng tổng bị giới hạn bởi cả phản ứng bề mặt và khả năng cung cấp chất.
 
 Điểm mạnh của cách biểu diễn này là tách được dòng động học \(i_k\) khỏi dòng giới hạn \(i_L\) dưới những giả định thích hợp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Cấu trúc bề mặt quyết định động học** tiếp nhận điểm tựa từ **Quan hệ Koutecký–Levich** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xúc tác điện hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc bề mặt quyết định động học
 
@@ -221,6 +238,8 @@ Một tên nguyên tố không đủ mô tả hoạt tính điện hóa. Tốc �
 Bề mặt Pt sạch, Pt bị CO hấp phụ và nanoparticle Pt trên carbon đều có thể hành xử khác nhau dù cùng là Pt.
 
 Đây là cầu nối trực tiếp với [hóa học bề mặt và giao diện](../14_materials_and_polymer_chemistry/05_surface_and_interface_chemistry.md).
+
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Xúc tác điện hóa** tiếp nhận điểm tựa từ **Cấu trúc bề mặt quyết định động học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thế khởi phát không phải hằng số cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xúc tác điện hóa
 
@@ -242,6 +261,8 @@ Một chất xúc tác tốt không chỉ cần hoạt tính cao. Nó còn phả
 + khả năng vận hành ở mật độ dòng thực tế
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Điện thế khởi phát không phải hằng số cơ bản** tiếp nhận điểm tựa từ **Xúc tác điện hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn hóa dòng điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện thế khởi phát không phải hằng số cơ bản
 
 Trong đường cong dòng–điện thế, **điện thế khởi phát (onset potential)** thường được báo cáo như điểm dòng bắt đầu tăng đáng kể.
@@ -257,6 +278,8 @@ Nhưng giá trị này phụ thuộc:
 
 Vì vậy so sánh xúc tác chỉ bằng một giá trị onset có thể gây hiểu sai.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Chuẩn hóa dòng điện** tiếp nhận điểm tựa từ **Điện thế khởi phát không phải hằng số cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu suất Faraday** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuẩn hóa dòng điện
 
 Dòng điện có thể được chuẩn hóa theo:
@@ -269,6 +292,8 @@ Dòng điện có thể được chuẩn hóa theo:
 Mỗi cách trả lời một câu hỏi khác nhau.
 
 Một điện cực xốp có dòng tổng rất lớn chưa chắc từng tâm phản ứng có hoạt tính cao; nó có thể đơn giản sở hữu nhiều diện tích bề mặt hơn.
+
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Hiệu suất Faraday** tiếp nhận điểm tựa từ **Chuẩn hóa dòng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện trở dung dịch và bù iR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu suất Faraday
 
@@ -289,6 +314,8 @@ hoạt tính
 + hiệu suất năng lượng
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Điện trở dung dịch và bù iR** tiếp nhận điểm tựa từ **Hiệu suất Faraday** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp điện kép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện trở dung dịch và bù iR
 
 Nếu chất điện ly có điện trở \(R_s\), sụt áp gần:
@@ -302,6 +329,8 @@ Nếu chất điện ly có điện trở \(R_s\), sụt áp gần:
 Trong đo động học chính xác, cần xác định và bù \(iR\) hợp lý.
 
 Bù quá mức có thể gây dao động hoặc tạo dữ liệu giả. Bù không đủ làm đường phân cực trông kém hơn động học thật.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Lớp điện kép** tiếp nhận điểm tựa từ **Điện trở dung dịch và bù iR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao EIS dùng tín hiệu xoay chiều nhỏ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lớp điện kép
 
@@ -318,6 +347,8 @@ i_C=C\frac{dV}{dt}
 không cần phản ứng oxy hóa–khử ròng.
 
 Dòng điện dung phải được phân biệt với **dòng Faraday (Faradaic current)** do phản ứng chuyển electron.
+
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Vì sao EIS dùng tín hiệu xoay chiều nhỏ?** tiếp nhận điểm tựa từ **Lớp điện kép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phức trong biểu diễn trở kháng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao EIS dùng tín hiệu xoay chiều nhỏ?
 
@@ -340,6 +371,8 @@ Z(\omega)=\frac{\tilde E(\omega)}{\tilde I(\omega)}
 \]
 
 Khác với điện trở DC, trở kháng có cả độ lớn và pha.
+
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Số phức trong biểu diễn trở kháng** tiếp nhận điểm tựa từ **Vì sao EIS dùng tín hiệu xoay chiều nhỏ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao quét tần số giúp tách cơ chế?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Số phức trong biểu diễn trở kháng
 
@@ -369,6 +402,8 @@ Z_L=j\omega L
 
 Trong hệ điện hóa, đáp ứng cảm có thể đến từ dây dẫn hoặc một số cơ chế hấp phụ/bề mặt, nên không nên tự động quy mọi vòng lặp (loop / 루프) cảm cho một cuộn cảm vật lý thực sự trong cell.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Số phức trong biểu diễn trở kháng** xác định đầu vào; **Vì sao quét tần số giúp tách cơ chế?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mạch Randles — mô hình tương đương tối thiểu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao quét tần số giúp tách cơ chế?
 
 Mỗi quá trình có một thang thời gian đặc trưng.
@@ -391,6 +426,8 @@ Trực giác cốt lõi của EIS là:
 
 > tần số đóng vai trò như một bộ lọc theo thang thời gian.
 
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Vì sao quét tần số giúp tách cơ chế?** xác định đầu vào; **Mạch Randles — mô hình tương đương tối thiểu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Biểu đồ Nyquist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mạch Randles — mô hình tương đương tối thiểu
 
 Một mô hình thường dùng gồm:
@@ -410,6 +447,8 @@ Mạch tương đương là **mô hình toán học**, không phải sơ đồ l
 
 Nhiều mạch khác nhau có thể khớp cùng dữ liệu khá tốt. Vì vậy mô hình phải được ràng buộc bởi cơ chế hóa–lý và hình học hệ.
 
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Biểu đồ Nyquist** tiếp nhận điểm tựa từ **Mạch Randles — mô hình tương đương tối thiểu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu đồ Bode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu đồ Nyquist
 
 **Biểu đồ Nyquist** thường vẽ:
@@ -422,6 +461,8 @@ Trong mô hình đơn giản, bán nguyệt có thể liên hệ với nhánh \(
 
 Nhưng không nên “đọc hình” rồi gán cơ chế ngay lập tức. Nhiều hệ vật lý khác nhau có thể tạo hình dạng tương tự.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Biểu đồ Bode** tiếp nhận điểm tựa từ **Biểu đồ Nyquist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phần tử pha không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu đồ Bode
 
 Biểu đồ Bode thường thể hiện:
@@ -432,6 +473,8 @@ Biểu đồ Bode thường thể hiện:
 Dạng này thuận tiện để quan sát nhiều hằng số thời gian trải trên nhiều bậc tần số.
 
 Đỉnh hoặc vai của góc pha có thể gợi ý một quá trình thư giãn riêng biệt, nhưng vẫn cần mô hình hỗ trợ.
+
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Phần tử pha không đổi** tiếp nhận điểm tựa từ **Biểu đồ Bode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trở kháng Warburg và khuếch tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phần tử pha không đổi
 
@@ -453,6 +496,8 @@ Khi \(n=1\), biểu thức trở về tụ điện lý tưởng.
 
 CPE là phần tử mô hình hóa. Không nên tự động gán một ý nghĩa vi mô duy nhất cho mọi giá trị \(n\).
 
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Trở kháng Warburg và khuếch tán** tiếp nhận điểm tựa từ **Phần tử pha không đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **EIS trong pin lithium-ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trở kháng Warburg và khuếch tán
 
 Với khuếch tán bán vô hạn lý tưởng:
@@ -466,6 +511,8 @@ Trong biểu đồ Nyquist, điều này thường tạo đoạn gần 45°.
 Trong pin thật, chiều dài khuếch tán hữu hạn, hình học hạt, độ xốp điện cực và trạng thái sạc làm đáp ứng phức tạp hơn nhiều.
 
 Do đó “đuôi 45° = một hệ số khuếch tán duy nhất” thường là diễn giải quá mức.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **EIS trong pin lithium-ion** tiếp nhận điểm tựa từ **Trở kháng Warburg và khuếch tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **EIS trong ăn mòn và lớp phủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## EIS trong pin lithium-ion
 
@@ -484,6 +531,8 @@ Nhưng EIS không tự trả lời “cơ chế lão hóa là gì”. Cần kế
 
 Xem thêm: [Pin, ăn mòn và lưu trữ năng lượng](./05_batteries_corrosion_and_energy_storage.md).
 
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **EIS trong ăn mòn và lớp phủ** tiếp nhận điểm tựa từ **EIS trong pin lithium-ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba điều kiện nền để EIS có ý nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## EIS trong ăn mòn và lớp phủ
 
 Trong nghiên cứu ăn mòn, điện trở phân cực hoặc \(R_{ct}\) cao thường liên hệ với tốc độ phản ứng điện hóa thấp hơn trong cùng mô hình phù hợp.
@@ -495,6 +544,8 @@ Một lớp phủ bảo vệ có thể thêm các hằng số thời gian liên 
 - phản ứng tại kim loại bên dưới.
 
 Theo dõi phổ theo thời gian có thể phát hiện sự xâm nhập nước/ion trước khi hư hỏng nhìn thấy bằng mắt.
+
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Ba điều kiện nền để EIS có ý nghĩa** tiếp nhận điểm tựa từ **EIS trong ăn mòn và lớp phủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguy cơ khi khớp mạch tương đương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ba điều kiện nền để EIS có ý nghĩa
 
@@ -514,6 +565,8 @@ Nếu trạng thái sạc (**state of charge, SOC**) trôi mạnh hoặc bề m�
 
 Các kiểm tra kiểu **Kramers–Kronig** có thể giúp đánh giá tính tự nhất quán của dữ liệu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Nguy cơ khi khớp mạch tương đương** tiếp nhận điểm tựa từ **Ba điều kiện nền để EIS có ý nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân bố thời gian thư giãn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguy cơ khi khớp mạch tương đương
 
 Một mạch có nhiều tham số thường có thể khớp dữ liệu tốt hơn, nhưng đường khớp đẹp không chứng minh cơ chế đúng.
@@ -528,6 +581,8 @@ Cần hỏi:
 
 Đây là bài toán **nhận dạng mô hình (model identification)**, không chỉ là bài toán tối ưu đường cong.
 
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Phân bố thời gian thư giãn** tiếp nhận điểm tựa từ **Nguy cơ khi khớp mạch tương đương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hệ điều khiển và xử lý tín hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân bố thời gian thư giãn
 
 **Phân bố thời gian thư giãn (distribution of relaxation times, DRT)** cố gắng biểu diễn phổ như tổng đóng góp của nhiều thang thời gian mà không cần chọn trước một mạch tương đương quá cụ thể.
@@ -535,6 +590,8 @@ Cần hỏi:
 DRT có thể giúp tách các quá trình chồng lấp, nhưng đây là một bài toán nghịch đảo không ổn định và thường cần **điều chuẩn (regularization)**.
 
 Một đỉnh DRT không nên tự động được gán cho một cơ chế nếu chưa có bằng chứng bổ sung.
+
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Liên hệ với hệ điều khiển và xử lý tín hiệu** tiếp nhận điểm tựa từ **Phân bố thời gian thư giãn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng công suất kém?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với hệ điều khiển và xử lý tín hiệu
 
@@ -551,6 +608,8 @@ Vì vậy các khái niệm số phức, Fourier, hệ tuyến tính và hàm tr
 
 Đây là một trong những cầu nối rõ nhất giữa Hóa học, Vật lý, Điện tử và xử lý tín hiệu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Liên hệ với hệ điều khiển và xử lý tín hiệu** cho ta quy tắc; **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng công suất kém?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: so sánh hai chất xúc tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng công suất kém?
 
 Một cell nghỉ lâu có thể đo điện áp hở mạch gần bình thường. Giá trị này chủ yếu phản ánh trạng thái nhiệt động.
@@ -563,6 +622,8 @@ Khi nối tải lớn, điện áp có thể tụt mạnh nếu:
 - tiếp xúc điện kém.
 
 Vì vậy điện áp hở mạch không đủ để đánh giá khả năng cấp công suất.
+
+> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng công suất kém?** cho ta quy tắc; **Ví dụ suy luận: so sánh hai chất xúc tác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ suy luận: so sánh hai chất xúc tác
 
@@ -580,6 +641,8 @@ Tuy nhiên chưa thể kết luận A “tốt hơn toàn diện” nếu chưa 
 - điện áp toàn cell.
 
 Đây là ví dụ điển hình của **sự đánh đổi (trade-off / 트레이드오프)**: một chỉ số hoạt tính không thể đại diện toàn bộ hiệu năng hệ.
+
+> **Chuyển mạch:** Ở chặng này của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Ví dụ suy luận: so sánh hai chất xúc tác** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -603,6 +666,8 @@ Không. Quá nhiều tham số có thể tạo **quá khớp (overfitting)** và
 
 Biên độ nhiễu nhỏ, nhưng hệ vẫn có thể thay đổi nếu thời gian quét dài hoặc điểm làm việc không ổn định.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy tách điện hóa thành ba câu hỏi:
@@ -615,4 +680,4 @@ Nernst trả lời câu đầu. Butler–Volmer, Tafel và các mô hình vận 
 
 Xem tiếp hoặc đối chiếu với [Điện thế pin và phương trình Nernst](./03_cell_potential_and_nernst_equation.md), [Điện phân](./04_electrolysis.md), [Pin, ăn mòn và lưu trữ năng lượng](./05_batteries_corrosion_and_energy_storage.md) và [Phương pháp điện phân tích](../12_analytical_chemistry/06_electroanalytical_methods.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?
 
-> **Mạch đọc:** Đặt **chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **chuỗi (sequence / 시퀀스) notation** sang **Markov giả định (assumption / 가정)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuỗi (sequence / 시퀀스) notation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Markov giả định (assumption / 가정)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Chuỗi (sequence / 시퀀스) dữ liệu (data / 데이터) khác fixed unordered tính năng (feature / 기능) véc-tơ (vector / 벡터) vì **thứ tự và ngữ cảnh (context / 맥락)** mang meaning. Câu `dog bites man` khác `man bites dog`; sensor readings cùng values nhưng thứ tự (order / 순서) khác biểu diễn dynamics khác. Vì vậy chuỗi (sequence / 시퀀스) mô hình (model / 모델) phải xử lý variable length, phụ thuộc (dependency / 의존성) qua positions và đôi khi nhân quả (causal / 인과적) direction.
 
@@ -25,6 +24,8 @@ x_{1:T}=(x_1,x_2,...,x_T)
 
 Kiến trúc (architecture / 아키텍처) phụ thuộc đầu ra (output / 출력) cấu trúc (structure / 구조).
 
+> **Chuyển mạch:** Trong **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Chuỗi (sequence / 시퀀스) notation** xác định đầu vào; **Markov giả định (assumption / 가정)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Autoregressive Factorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Markov giả định (assumption / 가정)
 
 Simplest chuỗi (sequence / 시퀀스) mô hình (model / 모델) assume future phụ thuộc limited past.
@@ -40,6 +41,8 @@ This drastically simplifies modeling nhưng bỏ long-range dependencies.
 Higher-order increases ngữ cảnh (context / 맥락) nhưng trạng thái (state / 상태) combinations explode.
 
 RNN attempts learn compressed trạng thái (state / 상태) summarizing arbitrary lịch sử (history / 이력).
+
+> **Chuyển mạch:** Ở chặng này của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Autoregressive Factorization** tiếp nhận điểm tựa từ **Markov giả định (assumption / 가정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (sequence / 시퀀스) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Autoregressive Factorization
 
@@ -60,6 +63,8 @@ append
 repeat
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Autoregressive Factorization** xác định đầu vào; **Chuỗi (sequence / 시퀀스) trạng thái (state / 상태)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Variable Length và Padding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuỗi (sequence / 시퀀스) trạng thái (state / 상태)
 
 A recurrent mô hình (model / 모델) maintains hidden trạng thái (state / 상태):
@@ -74,6 +79,8 @@ This is elegant but creates thông tin (information / 정보) bottleneck: long l
 
 Attention later avoids forcing all nguồn (source / 소스) thông tin (information / 정보) into one véc-tơ (vector / 벡터).
 
+> **Chuyển mạch:** Trong **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Chuỗi (sequence / 시퀀스) trạng thái (state / 상태)** xác định đầu vào; **Variable Length và Padding** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Position Matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Variable Length và Padding
 
 Batching sequences of different lengths often uses padding. mô hình (model / 모델)/mất mát (loss / 손실) must mask padded positions.
@@ -82,6 +89,8 @@ If padding accidentally participates attention/mất mát (loss / 손실), mô h
 
 Chuỗi (sequence / 시퀀스) batching also uses bucketing by length to reduce wasted compute.
 
+> **Chuyển mạch:** Ở chặng này của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Position Matters** tiếp nhận điểm tựa từ **Variable Length và Padding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhân quả (causal / 인과적) vs Bidirectional ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Position Matters
 
 RNN inherently processes thứ tự (order / 순서) sequentially. Pure self-attention without positional thông tin (information / 정보) is permutation-equivariant: reorder tokens and same set interactions reorder correspondingly.
@@ -89,6 +98,8 @@ RNN inherently processes thứ tự (order / 순서) sequentially. Pure self-att
 Transformer therefore injects positional thông tin (information / 정보) explicitly: sinusoidal, learned position embeddings, relative độ lệch (bias / 편향), RoPE, ALiBi etc.
 
 Position encoding is not optional decoration; it tells mô hình (model / 모델) about chuỗi (sequence / 시퀀스) hình học (geometry / 기하학)/thứ tự (order / 순서).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Nhân quả (causal / 인과적) vs Bidirectional ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Position Matters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Teacher Forcing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhân quả (causal / 인과적) vs Bidirectional ngữ cảnh (context / 맥락)
 
@@ -99,6 +110,8 @@ Bidirectional encoder can see left and right ngữ cảnh (context / 맥락), us
 Attention mask defines thông tin (information / 정보) luồng (flow / 흐름).
 
 A mô hình (model / 모델) kiến trúc (architecture / 아키텍처) can be similar but masking mục tiêu (objective / 목표) changes ngữ nghĩa (semantics / 의미론) profoundly.
+
+> **Chuyển mạch:** Trong **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Teacher Forcing** tiếp nhận điểm tựa từ **Nhân quả (causal / 인과적) vs Bidirectional ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sequence-to-Sequence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Teacher Forcing
 
@@ -112,6 +125,8 @@ At suy luận (inference / 추론) it conditions on generated lịch sử (histo
 
 Scheduled sampling was proposed to cầu nối (bridge / 브리지) gap, though hiện đại (modern / 현대적) ngôn ngữ (language / 언어) các mô hình (models / 모델들) largely still use teacher-forced next-token huấn luyện (training / 학습) and address hành vi (behavior / 동작) through quy mô (scale / 규모)/objectives/suy luận (inference / 추론) methods.
 
+> **Chuyển mạch:** Ở chặng này của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Sequence-to-Sequence** tiếp nhận điểm tựa từ **Teacher Forcing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Temporal Dependencies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sequence-to-Sequence
 
 Translation đầu vào (input / 입력) length and đầu ra (output / 출력) length differ. Encoder builds nguồn (source / 소스) representations; decoder generates mục tiêu (target / 대상) autoregressively conditioned on nguồn (source / 소스).
@@ -119,6 +134,8 @@ Translation đầu vào (input / 입력) length and đầu ra (output / 출력) 
 Early seq2seq compressed nguồn (source / 소스) into final RNN trạng thái (state / 상태), creating bottleneck. Attention let decoder truy cập (access / 접근) all encoder states dynamically.
 
 This historical đường dẫn (path / 경로) leads directly to Transformer.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Temporal Dependencies** tiếp nhận điểm tựa từ **Sequence-to-Sequence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **State-Space các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Temporal Dependencies
 
@@ -132,6 +149,8 @@ Dependencies differ timescale:
 Mô hình (model / 모델) needs receptive ngữ cảnh (context / 맥락) matching tác vụ (task / 작업).
 
 RNN theoretically carries indefinite lịch sử (history / 이력) but practical độ dốc (gradient / 기울기)/bộ nhớ (memory / 메모리) decay. CNN chuỗi (sequence / 시퀀스) các mô hình (models / 모델들) get finite receptive trường dữ liệu (field / 필드) unless dilated/deep. Attention directly connects distant positions but quadratic chi phí (cost / 비용) in vanilla form.
+
+> **Chuyển mạch:** Trong **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **State-Space các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Temporal Dependencies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian (time / 시간) Series vs ngôn ngữ (language / 언어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## State-Space các mô hình (models / 모델들)
 
@@ -149,6 +168,8 @@ Kalman filters add stochastic các giả định (assumptions / 가정들). hi�
 
 Chuỗi (sequence / 시퀀스) modeling landscape is broader than RNN vs Transformer.
 
+> **Chuyển mạch:** Ở chặng này của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Thời gian (time / 시간) Series vs ngôn ngữ (language / 언어)** tiếp nhận điểm tựa từ **State-Space các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (sequence / 시퀀스) Evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thời gian (time / 시간) Series vs ngôn ngữ (language / 언어)
 
 Both are sequences nhưng các giả định (assumptions / 가정들) differ.
@@ -159,15 +180,21 @@ Ngôn ngữ (language / 언어) tokens are discrete and order-relative; future �
 
 Do not blindly reuse NLP architectures without modeling thời gian (time / 시간) ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Thời gian (time / 시간) Series vs ngôn ngữ (language / 언어)** xác định đầu vào; **Chuỗi (sequence / 시퀀스) Evaluation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuỗi (sequence / 시퀀스) Evaluation
 
 Đơn vị từ (token / 토큰) accuracy can miss chuỗi (sequence / 시퀀스) chất lượng (quality / 품질). Translation uses BLEU/COMET-like metrics; speech uses WER; forecasting uses MAE/RMSE/probabilistic scores; generation needs human/model-based evaluation.
 
 Lỗi (error / 오류) compounds across chuỗi (sequence / 시퀀스), so per-step chỉ số (metric / 지표) and sequence-level chỉ số (metric / 지표) can differ.
 
+> **Chuyển mạch:** Trong **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chuỗi (sequence / 시퀀스) Evaluation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > chuỗi (sequence / 시퀀스) modeling = represent thông tin (information / 정보) phân tán (distributed / 분산) across ordered positions, decide which past/future ngữ cảnh (context / 맥락) each đầu ra (output / 출력) may use, and mô hình (model / 모델) dependencies across appropriate timescales.
+
+> **Chuyển mạch:** Ở chặng này của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -187,10 +214,12 @@ Classification/tagging/denoising/forecasting may use different objectives/ngữ 
 
 Temporal quy mô (scale / 규모), continuous values, irregular thời gian (time / 시간) and nhân quả (causal / 인과적) covariates create different modeling các ràng buộc (constraints / 제약조건들).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들) connect classical [Markov Decision/State ideas](../02_search_reasoning_and_planning/06_decision_making_under_uncertainty.md), [Probabilistic Reasoning](../03_knowledge_and_reasoning/04_probabilistic_reasoning.md) and Neural Networks.
 
 Xem tiếp: [RNN, LSTM and GRU](./02_rnn_lstm_gru.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

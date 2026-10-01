@@ -1,6 +1,6 @@
 # Đường đi của durability: ứng dụng (application / 애플리케이션) giao dịch (transaction / 트랜잭션) → MVCC/WAL → filesystem → lưu trữ (storage / 저장소) → replication
 
-> **Mạch đọc:** Đặt **Đường đi của durability: ứng dụng (application / 애플리케이션) giao dịch (transaction / 트랜잭션) → MVCC/WAL → filesystem → lưu trữ (storage / 저장소) → replication** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. bất biến (invariant / 불변식) cốt lõi: acknowledgement không được mạnh hơn trạng thái (state / 상태) đã đạt** sang **2. giao dịch (transaction / 트랜잭션) visibility và durability là hai trục khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của tuyến durability nâng cao trong Khoa học máy tính. File theo một câu hỏi duy nhất: acknowledgement đang hứa mức sống sót nào, và bằng chứng ở tầng dưới có đủ cho lời hứa đó không? Vì vậy mạch đi từ visibility/commit sang WAL, filesystem, thiết bị, replication rồi tới bằng chứng vận hành và crash test.
 
 
 Khi ứng dụng (application / 애플리케이션) nhận `COMMIT OK`, câu hỏi đúng không phải chỉ là “cơ sở dữ liệu (database / 데이터베이스) đã ghi xuống disk chưa?”. Một giao dịch (transaction / 트랜잭션) đi qua nhiều máy trạng thái (state machine / 상태 머신) và nhiều thất bại (failure / 실패) ranh giới (boundary / 경계): ứng dụng (application / 애플리케이션) giao dịch (transaction / 트랜잭션), MVCC/khóa (lock / 잠금) trạng thái (state / 상태), WAL, buffer pool, kernel page bộ nhớ đệm (cache / 캐시) hoặc direct-I/O đường dẫn (path / 경로), filesystem/khối (block / 블록) tầng (layer / 계층), controller, non-volatile media và có thể cả replication giao thức (protocol / 프로토콜).
@@ -27,6 +27,8 @@ Do đó bất biến (invariant / 불변식) không phải “disk luôn chỉ c
 
 Đọc sâu hơn tại [MVCC, visibility, WAL và recovery internals](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md).
 
+> **Chuyển mạch:** MVCC trả lời ai được nhìn thấy phiên bản nào; WAL phải bảo đảm lịch sử đó còn dựng lại được sau crash. **3. WAL giải bài toán gì?** là bước chuyển từ ngữ nghĩa giao dịch sang cơ chế ghi trước.
+
 ## 3. WAL giải bài toán gì?
 
 **Nhật ký ghi trước (Write-Ahead Logging, WAL)** yêu cầu log chứa đủ thông tin (information / 정보) để khôi phục (recovery / 복구) một thay đổi phải đạt durability cần thiết trước khi dữ liệu (data / 데이터) page phụ thuộc vào log đó được coi là an toàn để ghi theo giao thức (protocol / 프로토콜).
@@ -51,6 +53,8 @@ page state không được đi trước durable log state theo cách làm recove
 ```
 
 Nếu ghi (write / 쓰기) thứ tự (ordering / 순서) bị phá ở lưu trữ (storage / 저장소) ngăn xếp (stack / 스택), WAL giao thức (protocol / 프로토콜) có thể mất ý nghĩa dù cơ sở dữ liệu (database / 데이터베이스) mã (code / 코드) nhìn đúng.
+
+> **Chuyển mạch:** LSN cho biết log và page phải được giải thích theo thứ tự nào; **5. `write()` success không đồng nghĩa durable** kiểm tra xem thứ tự đó có thực sự đi qua kernel, filesystem và thiết bị hay mới dừng ở bộ đệm.
 
 ## 5. `write()` success không đồng nghĩa durable
 
@@ -84,6 +88,8 @@ filesystem journal -> filesystem metadata/data-structure consistency
 ```
 
 Một lớp không tự thay thế lớp kia. cơ sở dữ liệu (database / 데이터베이스) vẫn cần biết ghi (write / 쓰기)/flush ngữ nghĩa (semantics / 의미론) mà filesystem cung cấp.
+
+> **Chuyển mạch:** WAL và journal giữ hai loại bất biến khác nhau; **8. Controller bộ nhớ đệm, flush và power-loss protection** đi xuống điểm mà lời hứa `flush` có thể bị yếu đi nếu controller hoặc nguồn điện không bảo vệ dữ liệu.
 
 ## 8. Controller bộ nhớ đệm (cache / 캐시), flush và power-loss protection
 
@@ -146,6 +152,8 @@ Tùy giao thức (protocol / 프로토콜), máy khách (client / 클라이언�
 
 Đây là nơi giao dịch (transaction / 트랜잭션) durability nối với consensus/log replication thay vì kết thúc ở cục bộ (local / 로컬) disk.
 
+> **Chuyển mạch:** Khi replication thêm một máy trạng thái, số bản sao không còn là câu trả lời đủ. **13. Replication không tự động đồng nghĩa durability** tách rõ persistence cục bộ, quy tắc commit và độc lập failure domain.
+
 ## 13. Replication không tự động đồng nghĩa durability
 
 Nếu leader và replica đều chỉ giữ ghi (write / 쓰기) trong volatile bộ nhớ đệm (cache / 캐시), một power sự kiện (event / 이벤트) chung vẫn có thể làm mất trạng thái (state / 상태). Nếu các replica cùng miền lỗi (failure domain / 장애 도메인), “ba bản sao” cũng không bảo vệ khỏi mất cả lĩnh vực (domain / 도메인) đó.
@@ -204,6 +212,8 @@ Hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)
 Ứng dụng (application / 애플리케이션) tầng (layer / 계층) cần giao dịch (transaction / 트랜잭션) độ trễ (latency / 지연 시간), hết thời gian chờ (timeout / 타임아웃) và acknowledgement ngữ nghĩa (semantics / 의미론). cơ sở dữ liệu (database / 데이터베이스) tầng (layer / 계층) cần WAL bytes/flush độ trễ (latency / 지연 시간), checkpoint activity, dirty pages, khóa (lock / 잠금)/MVCC horizon và replication LSN/lag. OS tầng (layer / 계층) cần dirty/writeback pages, I/O wait, block-device độ trễ (latency / 지연 시간)/hàng đợi (queue / 큐) độ sâu (depth / 깊이) và filesystem errors. lưu trữ (storage / 저장소) tầng (layer / 계층) cần thiết bị (device / 장치) độ trễ (latency / 지연 시간), utilization, lỗi (error / 오류) counters và flush hành vi (behavior / 동작) nếu telemetry cho phép. phân tán (distributed / 분산) tầng (layer / 계층) cần quorum trạng thái (state / 상태), leader term/epoch, replica match/applied positions và failover timeline.
 
 Một đồ thị (graph / 그래프) `DB commit latency` đơn độc không đủ để xác định cơ chế.
+
+> **Chuyển mạch:** Chỉ số theo từng tầng giúp dựng giả thuyết, nhưng durability còn cần chứng minh khi có gián đoạn thật. **19. Crash testing** biến invariant thành một kiểm tra có thể tái hiện thay vì một lời hứa trên giấy.
 
 ## 19. Crash testing là cách kiểm tra bất biến (invariant / 불변식), không phải edge-case luxury
 

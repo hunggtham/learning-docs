@@ -1,7 +1,6 @@
 # Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability
 
-> **Mạch đọc:** Đọc **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Reading thứ tự (order / 순서)** sang **phụ thuộc (dependency / 의존성) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Reading thứ tự (order / 순서)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder này trả lời câu hỏi: **làm sao biết một AI hệ thống (system / 시스템) thực sự tốt, ổn định, có thể giải thích và đáng tin trong use trường hợp (case / 사례) cụ thể?** Nội dung đi từ evaluation thiết kế (design / 설계) tới calibration, robustness, interpretability, behavioral testing, red teaming và độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
 
@@ -20,8 +19,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 07_reliability_engineering.md
 ```
 
-
-> **Chuyển mạch:** Từ **Reading thứ tự (order / 순서)**, ta sang **phụ thuộc (dependency / 의존성) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Phụ thuộc (dependency / 의존성) map** tiếp nhận điểm tựa từ **Reading thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -42,8 +40,7 @@ flowchart TD
     RT --> REL
 ```
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Phụ thuộc (dependency / 의존성) map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Distinctions cần giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -59,8 +56,7 @@ Define contract
 → engineer bounded failure and recovery
 ```
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Distinctions cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Distinctions cần giữ** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cross-links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Distinctions cần giữ
 
@@ -79,9 +75,10 @@ HTTP Availability    ≠ Task Reliability
 Fallback             ≠ Always Safer
 ```
 
-
-> **Chuyển mạch:** Từ **Distinctions cần giữ**, ta sang **Cross-links** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Cross-links** tiếp nhận điểm tựa từ **Distinctions cần giữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cross-links
 
 Layer này phụ thuộc [Machine Learning Evaluation](../04_machine_learning/15_model_evaluation.md), [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md), [Monitoring](../16_mlops_and_llmops/06_monitoring_and_observability.md) và [Compute Infrastructure](../17_ai_compute_and_infrastructure/README.md). Tiếp theo là [AI Safety, Security & Alignment](../19_ai_safety_security_alignment/README.md).
+
+> **Bàn giao:** Sau **Cross-links**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

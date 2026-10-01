@@ -1,7 +1,6 @@
 # Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử
 
-> **Mạch đọc:** Đọc **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hệ thiếu electron** sang **Species có số electron lẻ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hệ thiếu electron** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Species có số electron lẻ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Cấu trúc Lewis (Lewis structure / 루이스 구조)** là mô hình hạch toán electron hóa trị. Nó giúp trả lời nhanh nguyên tử nào nối với nguyên tử nào, có bao nhiêu cặp electron liên kết, cặp electron không liên kết và điện tích hình thức. Lewis không phải ảnh chụp mật độ electron thật; nó là một lớp mô hình đơn giản hóa cực kỳ hữu ích trước khi chuyển sang VSEPR, liên kết hóa trị và obitan phân tử.
 
@@ -126,8 +125,7 @@ BF_3+NH_3\rightarrow F_3B\leftarrow NH_3
 
 Ngoại lệ octet ở đây trực tiếp giải thích reactivity.
 
-
-> **Chuyển mạch:** Từ **Hệ thiếu electron**, ta sang **Species có số electron lẻ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Species có số electron lẻ** tiếp nhận điểm tựa từ **Hệ thiếu electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ siêu hóa trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Species có số electron lẻ
 
@@ -135,8 +133,7 @@ Ngoại lệ octet ở đây trực tiếp giải thích reactivity.
 
 Các **gốc tự do (radicals / 라디칼)** thường có electron độc thân và có chemistry rất khác closed-shell molecules.
 
-
-> **Chuyển mạch:** Từ **Species có số electron lẻ**, ta sang **Hệ siêu hóa trị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Hệ siêu hóa trị** tiếp nhận điểm tựa từ **Species có số electron lẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ siêu hóa trị
 
@@ -405,8 +402,7 @@ Không phải giải thích mặc định hiện đại cho main-group hypervale
 
 Thường không. Cần MO/electronic-state các mô hình (models / 모델들).
 
-
-> **Chuyển mạch:** Từ **Hệ siêu hóa trị**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Mô hình tư duy** gom các mảnh từ **Hệ siêu hóa trị** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -424,4 +420,4 @@ Sau đó VSEPR, VB và MO cung cấp các lớp mô hình sâu hơn cho hình h�
 
 Xem tiếp: [VSEPR và hình học phân tử](./04_vsepr_and_molecular_geometry.md), [Liên kết hóa trị và lai hóa](./05_valence_bond_and_hybridization.md), [MO theory](./06_molecular_orbital_theory.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

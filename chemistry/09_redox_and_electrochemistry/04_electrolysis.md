@@ -1,7 +1,6 @@
 # Điện phân — dùng công điện để thúc đẩy biến đổi hóa học
 
-> **Mạch đọc:** Đọc **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Pin Galvani và bình điện phân** sang **Dấu điện cực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pin Galvani và bình điện phân** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dấu điện cực** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Điện phân (electrolysis / 전기분해)** sử dụng công điện từ nguồn bên ngoài để thúc đẩy phản ứng oxy hóa–khử theo chiều không tự phát trong điều kiện đang xét. Nếu pin Galvani chuyển năng lượng tự do hóa học thành công điện, thì bình điện phân làm chiều ngược lại: dùng điện năng để thay đổi thành phần hóa học.
 
@@ -34,6 +33,8 @@ công điện → biến đổi hóa học
 
 Nguồn điện ngoài tạo một chênh lệch thế đủ lớn để đẩy electron theo chiều cần thiết.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Dấu điện cực** tiếp nhận điểm tựa từ **Pin Galvani và bình điện phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện lượng là số electron đã được truyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dấu điện cực
 
 Trong một bình điện phân điển hình, nguồn điện kéo electron khỏi anode và cung cấp electron cho cathode.
@@ -53,6 +54,8 @@ cathode → khử
 ```
 
 Quy tắc này vẫn đúng khi chuyển giữa pin Galvani, bình điện phân và các hệ điện hóa khác.
+
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện lượng là số electron đã được truyền** tiếp nhận điểm tựa từ **Dấu điện cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Faraday của điện phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện lượng là số electron đã được truyền
 
@@ -93,6 +96,8 @@ dòng điện × thời gian
 
 Điện phân vì vậy có thể được nhìn như một phép **đếm electron bằng điện lượng**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Định luật Faraday của điện phân** tiếp nhận điểm tựa từ **Điện lượng là số electron đã được truyền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: mạ đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Định luật Faraday của điện phân
 
 Với bán phản ứng:
@@ -116,6 +121,8 @@ m_M=\frac{QM_M}{zF}
 trong đó \(M_M\) là khối lượng mol của kim loại.
 
 Công thức này chỉ cho lượng lý tưởng khi toàn bộ điện lượng đi vào đúng phản ứng mong muốn.
+
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Định luật Faraday của điện phân** cho ta quy tắc; **Ví dụ: mạ đồng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hiệu suất Faraday** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: mạ đồng
 
@@ -151,6 +158,8 @@ m\approx0.0187\times63.55\approx1.19\,g
 
 Nếu thí nghiệm chỉ thu được `1.07 g`, phần chênh lệch có thể đến từ phản ứng phụ, thất thoát vật liệu hoặc sai số đo.
 
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Ví dụ: mạ đồng** cho ta quy tắc; **Hiệu suất Faraday** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hiệu suất năng lượng khác hiệu suất Faraday** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu suất Faraday
 
 **Hiệu suất Faraday (Faradaic efficiency, FE)** đo phần điện lượng thực sự tạo sản phẩm mong muốn:
@@ -170,6 +179,8 @@ khi hệ số electron `z` đã được xác định rõ.
 Nếu nhiều sản phẩm cùng hình thành, tổng FE của tất cả con đường Faraday có thể gần 100% khi mọi sản phẩm đều được định lượng đầy đủ.
 
 FE thấp thường cho thấy điện lượng bị tiêu thụ bởi phản ứng phụ hoặc cân bằng vật chất chưa được theo dõi đầy đủ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Hiệu suất năng lượng khác hiệu suất Faraday** tiếp nhận điểm tựa từ **Hiệu suất Faraday** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện áp thuận nghịch và điện áp thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu suất năng lượng khác hiệu suất Faraday
 
@@ -197,6 +208,8 @@ hiệu suất năng lượng → phải trả bao nhiêu điện năng cho sản
 ```
 
 Hai đại lượng trả lời hai câu hỏi khác nhau.
+
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện áp thuận nghịch và điện áp thực** tiếp nhận điểm tựa từ **Hiệu suất năng lượng khác hiệu suất Faraday** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quá thế và động học điện cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện áp thuận nghịch và điện áp thực
 
@@ -228,6 +241,8 @@ Các phần bổ sung gồm:
 
 Vì vậy điện năng tiêu thụ thực tế luôn lớn hơn giới hạn thuận nghịch nếu cùng trạng thái đầu và cuối.
 
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Quá thế và động học điện cực** tiếp nhận điểm tựa từ **Điện áp thuận nghịch và điện áp thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng cạnh tranh tại điện cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quá thế và động học điện cực
 
 Tại điện thế cân bằng, dòng Faraday ròng bằng 0. Muốn tạo mật độ dòng hữu ích, điện thế điện cực phải lệch khỏi giá trị cân bằng.
@@ -247,6 +262,8 @@ j=j_0\left[
 Trong đó \(j_0\) là **mật độ dòng trao đổi (exchange current density)**.
 
 Một chất xúc tác điện hóa tốt thường làm tăng \(j_0\) hoặc giảm quá thế cần thiết để đạt một mật độ dòng xác định.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Phản ứng cạnh tranh tại điện cực** tiếp nhận điểm tựa từ **Quá thế và động học điện cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện phân NaCl nóng chảy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phản ứng cạnh tranh tại điện cực
 
@@ -279,6 +296,8 @@ thế nhiệt động
 
 Vì vậy quy tắc “cation về cathode, anion về anode” không đủ để dự đoán sản phẩm.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện phân NaCl nóng chảy** tiếp nhận điểm tựa từ **Phản ứng cạnh tranh tại điện cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao không thể sản xuất sodium bằng NaCl nước?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện phân NaCl nóng chảy
 
 NaCl nóng chảy chứa chủ yếu các ion `Na+` và `Cl−`.
@@ -299,6 +318,8 @@ Do không có nước, không xuất hiện cạnh tranh tạo hydrogen hoặc o
 
 Đây là cơ sở của quá trình Downs để sản xuất sodium kim loại.
 
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Vì sao không thể sản xuất sodium bằng NaCl nước?** tiếp nhận điểm tựa từ **Điện phân NaCl nóng chảy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quá trình chlorine–kiềm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao không thể sản xuất sodium bằng NaCl nước?
 
 Trong dung dịch nước, khử nước hoặc proton để tạo hydrogen thuận lợi hơn việc tạo sodium kim loại trong điều kiện thông thường.
@@ -308,6 +329,8 @@ Ngay cả nếu một lượng Na được tạo thành, nó cũng phản ứng 
 Do đó sản xuất sodium cần **chất điện ly không nước**, thường là muối nóng chảy.
 
 Đây là ví dụ rõ cho việc **hóa học dung môi (solvent chemistry)** quyết định sản phẩm điện phân.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Quá trình chlorine–kiềm** tiếp nhận điểm tựa từ **Vì sao không thể sản xuất sodium bằng NaCl nước?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện phân nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quá trình chlorine–kiềm
 
@@ -337,6 +360,8 @@ Màng chọn lọc ion giúp tách sản phẩm và hạn chế chlorine phản 
 
 Quá trình này cho thấy vận chuyển ion qua màng quan trọng không kém phản ứng điện cực.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện phân nước** tiếp nhận điểm tựa từ **Quá trình chlorine–kiềm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng tạo hydrogen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện phân nước
 
 Phản ứng tổng:
@@ -353,6 +378,8 @@ Phản ứng tổng:
 
 Thiết bị thực phải dùng điện áp cao hơn vì động học của **phản ứng tạo hydrogen (hydrogen evolution reaction, HER)** và đặc biệt **phản ứng tạo oxygen (oxygen evolution reaction, OER)**, cộng thêm tổn thất điện trở và vận chuyển khối.
 
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Phản ứng tạo hydrogen** tiếp nhận điểm tựa từ **Điện phân nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng tạo oxygen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phản ứng tạo hydrogen
 
 Trong môi trường acid, phương trình tổng có thể viết:
@@ -367,6 +394,8 @@ Cơ chế có thể gồm các trung gian hydrogen hấp phụ và các bước 
 
 Platinum có hoạt tính HER rất cao trong nhiều điều kiện, nhưng chi phí lớn thúc đẩy nghiên cứu các chất xúc tác thay thế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Phản ứng tạo oxygen** tiếp nhận điểm tựa từ **Phản ứng tạo hydrogen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tách khí là yêu cầu an toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phản ứng tạo oxygen
 
 Trong acid, có thể viết:
@@ -378,6 +407,8 @@ Trong acid, có thể viết:
 OER là phản ứng nhiều electron–proton và phải hình thành liên kết O–O. Nó thường có quá thế lớn hơn HER và trở thành nút thắt động học của điện phân nước.
 
 Các oxide dựa trên Ni/Fe, `IrO2`, `RuO2` và nhiều hệ khác được sử dụng hoặc nghiên cứu tùy pH, nhiệt độ và loại điện phân.
+
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Tách khí là yêu cầu an toàn** tiếp nhận điểm tựa từ **Phản ứng tạo oxygen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện phân kiềm, PEM và oxide rắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tách khí là yêu cầu an toàn
 
@@ -391,6 +422,8 @@ Thiết bị điện phân phải kiểm soát:
 - sự xuyên khí giữa hai ngăn.
 
 Do đó hiệu suất điện hóa không thể tách khỏi thiết kế an toàn.
+
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện phân kiềm, PEM và oxide rắn** tiếp nhận điểm tựa từ **Tách khí là yêu cầu an toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện áp nhiệt trung hòa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện phân kiềm, PEM và oxide rắn
 
@@ -411,6 +444,8 @@ Không có công nghệ tốt nhất cho mọi mục tiêu. Các đánh đổi g
 - điều kiện nhiệt độ và áp suất;
 - nguồn nhiệt và nguồn điện sẵn có.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện áp nhiệt trung hòa** tiếp nhận điểm tựa từ **Điện phân kiềm, PEM và oxide rắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạ điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện áp nhiệt trung hòa
 
 Với phản ứng tách nước:
@@ -430,6 +465,8 @@ E_{th}=\frac{\Delta H}{nF}
 Nếu cell vận hành dưới điện áp nhiệt trung hòa, nó phải hấp thụ một phần nhiệt từ môi trường để cân bằng năng lượng. Nếu vận hành cao hơn, phần điện năng dư có xu hướng chuyển thành nhiệt.
 
 Khái niệm này rất quan trọng khi thiết kế quản lý nhiệt cho máy điện phân.
+
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Mạ điện** tiếp nhận điểm tựa từ **Điện áp nhiệt trung hòa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo mầm trong kết tủa điện hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạ điện
 
@@ -452,6 +489,8 @@ Nhưng chất lượng lớp mạ không chỉ phụ thuộc tổng điện lư�
 
 Nếu mật độ dòng quá cao, vận chuyển ion không theo kịp và lớp mạ có thể thô, xốp hoặc dạng nhánh.
 
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Tạo mầm trong kết tủa điện hóa** tiếp nhận điểm tựa từ **Mạ điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện tinh luyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tạo mầm trong kết tủa điện hóa
 
 Kim loại mới không nhất thiết phủ đều thành một lớp nguyên tử ngay từ đầu. Nó có thể tạo các đảo nhỏ, sau đó các đảo lớn dần và hợp nhất.
@@ -459,6 +498,8 @@ Kim loại mới không nhất thiết phủ đều thành một lớp nguyên t
 Năng lượng bề mặt và quá thế ảnh hưởng mật độ mầm và kích thước hạt.
 
 Đây là điểm nối giữa electrochemistry, lý thuyết tạo mầm và khoa học vật liệu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện tinh luyện** tiếp nhận điểm tựa từ **Tạo mầm trong kết tủa điện hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thắng kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện tinh luyện
 
@@ -474,6 +515,8 @@ Tạp chất có hành vi khác nhau tùy thế redox và độ tan; một số 
 
 Quá trình khai thác độ chọn lọc điện hóa để tinh chế kim loại ở quy mô công nghiệp.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện thắng kim loại** tiếp nhận điểm tựa từ **Điện tinh luyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện phân nhôm Hall–Héroult** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện thắng kim loại
 
 **Điện thắng (electrowinning)** thu kim loại từ dung dịch chứa ion kim loại, thường sau bước hòa tách quặng.
@@ -482,6 +525,8 @@ Khác với điện tinh luyện, anode không nhất thiết là chính kim lo�
 
 Điện thắng Cu, Zn và nhiều kim loại khác là cầu nối giữa luyện kim và electrochemistry.
 
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện phân nhôm Hall–Héroult** tiếp nhận điểm tựa từ **Điện thắng kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện khử CO₂** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện phân nhôm Hall–Héroult
 
 Ion `Al³+` rất khó khử trong dung dịch nước. Công nghiệp hòa tan alumina trong cryolite nóng chảy rồi điện phân ở nhiệt độ cao.
@@ -489,6 +534,8 @@ Ion `Al³+` rất khó khử trong dung dịch nước. Công nghiệp hòa tan 
 Tại cathode tạo nhôm lỏng. Anode carbon tham gia phản ứng với các tiểu phần oxygen và dần bị tiêu hao thành `CO2` hoặc `CO`.
 
 Sản xuất nhôm nguyên sinh vì vậy tiêu tốn nhiều điện năng. Tái chế nhôm tiết kiệm năng lượng đáng kể vì tránh phải lặp lại bước khử điện hóa từ oxide.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện khử CO₂** tiếp nhận điểm tựa từ **Điện phân nhôm Hall–Héroult** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện tổng hợp hữu cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện khử CO₂
 
@@ -506,6 +553,8 @@ Thách thức gồm:
 
 Hiệu suất Faraday cao chưa đủ để kết luận quy trình hiệu quả. Còn phải xem điện áp cell, tỷ lệ carbon thực sự đi vào sản phẩm và chi phí tách.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện tổng hợp hữu cơ** gom các mảnh từ **Điện khử CO₂** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Khi vận chuyển khối trở thành giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện tổng hợp hữu cơ
 
 Điện cực có thể thay một phần chất oxy hóa hoặc chất khử stoichiometric bằng electron từ mạch điện.
@@ -519,6 +568,8 @@ Hiệu suất Faraday cao chưa đủ để kết luận quy trình hiệu quả
 - xử lý và tách sản phẩm phía sau.
 
 Nói “electron là thuốc thử sạch” chỉ có ý nghĩa khi đánh giá toàn bộ vòng đời và vật liệu phụ trợ.
+
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Điện tổng hợp hữu cơ** đã nêu tiêu chí phân biệt, còn **Khi vận chuyển khối trở thành giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ảnh hưởng của bọt khí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi vận chuyển khối trở thành giới hạn
 
@@ -542,6 +593,8 @@ Khuấy, tạo dòng chảy hoặc dùng điện cực quay làm \(\delta\) nh�
 
 Nếu tiếp tục tăng điện áp sau khi đã bị giới hạn vận chuyển, phản ứng phụ có thể tăng thay vì sản lượng mong muốn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Khi vận chuyển khối trở thành giới hạn** đã nêu tiêu chí phân biệt, còn **Ảnh hưởng của bọt khí** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phân bố dòng điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ảnh hưởng của bọt khí
 
 Phản ứng tạo khí sinh bọt trên điện cực. Bọt có thể:
@@ -554,11 +607,15 @@ Phản ứng tạo khí sinh bọt trên điện cực. Bọt có thể:
 
 Do đó máy điện phân phải quản lý bọt khí chứ không chỉ tối ưu chất xúc tác.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Phân bố dòng điện** tiếp nhận điểm tựa từ **Ảnh hưởng của bọt khí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sạc pin là điện phân có kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân bố dòng điện
 
 Trường điện và hình học làm mật độ dòng không đồng đều. Các góc và cạnh có thể tập trung dòng, gây lớp mạ dày cục bộ hoặc tăng nguy cơ dendrite.
 
 Thiết kế hình dạng điện cực, khoảng cách, độ dẫn điện ly và cách cấp dòng là một bài toán ghép giữa electrochemistry và kỹ thuật thiết bị.
+
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Sạc pin là điện phân có kiểm soát** tiếp nhận điểm tựa từ **Phân bố dòng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu suất Coulomb trong pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sạc pin là điện phân có kiểm soát
 
@@ -575,6 +632,8 @@ Sạc quá nhanh có thể thúc đẩy:
 
 Do đó bộ sạc phải giới hạn điện áp, dòng điện và nhiệt độ theo nhiệt động lực học, động học và vận chuyển của cell.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Hiệu suất Coulomb trong pin** tiếp nhận điểm tựa từ **Sạc pin là điện phân có kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dendrite và mạ kim loại không đồng đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu suất Coulomb trong pin
 
 Trong một chu kỳ:
@@ -589,6 +648,8 @@ Nếu CE nhỏ hơn 100%, một phần điện lượng mỗi chu kỳ bị mấ
 
 Ngay cả `99.9%` cũng có thể chưa đủ cho hàng nghìn chu kỳ vì tổn thất tích lũy theo thời gian.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Dendrite và mạ kim loại không đồng đều** tiếp nhận điểm tựa từ **Hiệu suất Coulomb trong pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt và an toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dendrite và mạ kim loại không đồng đều
 
 Khi kim loại bám không đều, một chỗ lồi có thể tập trung điện trường và mật độ dòng, làm nó phát triển nhanh hơn vùng xung quanh.
@@ -596,6 +657,8 @@ Khi kim loại bám không đều, một chỗ lồi có thể tập trung đi�
 Dendrite có thể xuyên separator trong pin hoặc làm lớp mạ mất chất lượng.
 
 Kiểm soát chất điện ly, mật độ dòng, bề mặt và ràng buộc cơ học là một bài toán đa vật lý.
+
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Nhiệt và an toàn** tiếp nhận điểm tựa từ **Dendrite và mạ kim loại không đồng đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự đánh đổi (trade-off / 트레이드오프) quan trọng trong thiết kế điện phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhiệt và an toàn
 
@@ -619,6 +682,8 @@ Thiết kế phải đồng thời kiểm soát:
 - cách điện;
 - áp suất;
 - chế độ khẩn cấp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Sự đánh đổi (trade-off / 트레이드오프) quan trọng trong thiết kế điện phân** tiếp nhận điểm tựa từ **Nhiệt và an toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sự đánh đổi (trade-off / 트레이드오프) quan trọng trong thiết kế điện phân
 
@@ -650,6 +715,8 @@ chất xúc tác hoạt tính cao
 
 Do đó một cell tốt là kết quả tối ưu đa mục tiêu, không phải tối đa một đại lượng duy nhất.
 
+> **Chuyển mạch:** Trong **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Sự đánh đổi (trade-off / 트레이드오프) quan trọng trong thiết kế điện phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các hiểu lầm thường gặp
 
 ### “Điện phân vi phạm tính tự phát của nhiệt động lực học”
@@ -675,6 +742,8 @@ Không. Khi bị giới hạn vận chuyển, tăng điện áp có thể chỉ 
 ### “Điện phân nước chỉ cần đúng 1.23 V trong thực tế”
 
 `1.23 V` gần điều kiện chuẩn là giới hạn nhiệt động thuận nghịch, không phải điện áp vận hành thực tế của thiết bị.
+
+> **Chuyển mạch:** Ở chặng này của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -703,4 +772,4 @@ nhiệt động lực học
 
 Xem tiếp: [Pin, ăn mòn và lưu trữ năng lượng](./05_batteries_corrosion_and_energy_storage.md) và [Động học điện hóa và phổ trở kháng](./06_electrochemical_kinetics_and_impedance.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

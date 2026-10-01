@@ -1,7 +1,6 @@
 # Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI
 
-> **Mạch đọc:** Đặt **độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **độ trễ (latency / 지연 시간)** sang **Tail độ trễ (latency / 지연 시간)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ trễ (latency / 지연 시간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tail độ trễ (latency / 지연 시간)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Môi trường vận hành (production / 운영 환경) AI không chỉ hỏi “mô hình có chính xác không?” mà còn phải hỏi **mất bao lâu, phục vụ được bao nhiêu yêu cầu (request / 요청) và tốn bao nhiêu tiền**. Ba đại lượng `latency`, `throughput` và `cost` liên hệ chặt chẽ nhưng không cùng hướng tối ưu.
 
@@ -21,6 +20,8 @@ network overhead
 
 Total độ trễ (latency / 지연 시간) có thể cao dù riêng mô hình (model / 모델) suy luận (inference / 추론) rất nhanh.
 
+> **Chuyển mạch:** Trong **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Tail độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thông lượng (throughput / 처리량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tail độ trễ (latency / 지연 시간)
 
 Average độ trễ (latency / 지연 시간) không đủ. môi trường vận hành (production / 운영 환경) thường theo dõi `p50`, `p95`, `p99`.
@@ -28,6 +29,8 @@ Average độ trễ (latency / 지연 시간) không đủ. môi trường vận
 Nếu p99 bằng 8 giây, một nhóm người dùng vẫn có trải nghiệm rất kém dù average chỉ 1 giây.
 
 Tail độ trễ (latency / 지연 시간) thường đến từ queueing, straggler, cold start, prompt dài, công cụ (tool / 도구) chậm hoặc noisy neighbor.
+
+> **Chuyển mạch:** Ở chặng này của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Thông lượng (throughput / 처리량)** tiếp nhận điểm tựa từ **Tail độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức chứa (capacity / 용량) và Utilization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thông lượng (throughput / 처리량)
 
@@ -41,6 +44,8 @@ Với LLM có thể đo bằng requests/s hoặc tokens/s.
 
 Batching thường giúp tăng thông lượng (throughput / 처리량) nhưng có thể tăng hàng đợi (queue / 큐) độ trễ (latency / 지연 시간).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Sức chứa (capacity / 용량) và Utilization** tiếp nhận điểm tựa từ **Thông lượng (throughput / 처리량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí trên mỗi yêu cầu (request / 요청)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sức chứa (capacity / 용량) và Utilization
 
 Nếu utilization quá thấp, tài nguyên bị lãng phí. Nếu utilization quá cao, queueing tăng mạnh.
@@ -48,6 +53,8 @@ Nếu utilization quá thấp, tài nguyên bị lãng phí. Nếu utilization q
 Sức chứa (capacity / 용량) planning cần chừa headroom cho burst và thất bại (failure / 실패).
 
 Autoscaling cũng cần đúng tín hiệu (signal / 신호). CPU utilization không phải lúc nào cũng phản ánh bottleneck ở GPU hoặc KV bộ nhớ đệm (cache / 캐시).
+
+> **Chuyển mạch:** Trong **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Chi phí trên mỗi yêu cầu (request / 요청)** tiếp nhận điểm tựa từ **Sức chứa (capacity / 용량) và Utilization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economics của đầu vào (input / 입력) và đầu ra (output / 출력) đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí trên mỗi yêu cầu (request / 요청)
 
@@ -59,11 +66,15 @@ chi phí (cost / 비용)/yêu cầu (request / 요청)\approx\frac{hạ tầng (
 
 Nhưng generative tải công việc (workload / 워크로드) biến động mạnh theo đơn vị từ (token / 토큰) count, vì vậy chi phí (cost / 비용)/đơn vị từ (token / 토큰) hoặc chi phí (cost / 비용)/tác vụ (task / 작업) đôi khi có ý nghĩa hơn chi phí (cost / 비용)/yêu cầu (request / 요청).
 
+> **Chuyển mạch:** Ở chặng này của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Economics của đầu vào (input / 입력) và đầu ra (output / 출력) đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **Chi phí trên mỗi yêu cầu (request / 요청)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí của Chất lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Economics của đầu vào (input / 입력) và đầu ra (output / 출력) đơn vị từ (token / 토큰)
 
 Prompt dài làm prefill compute và KV bộ nhớ (memory / 메모리) tăng. đầu ra (output / 출력) dài làm số bước decode tăng.
 
 Hai yêu cầu (request / 요청) đều được tính là “một chat message” nhưng chi phí (cost / 비용) có thể khác nhau hàng chục lần.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Chi phí của Chất lượng** tiếp nhận điểm tựa từ **Economics của đầu vào (input / 입력) và đầu ra (output / 출력) đơn vị từ (token / 토큰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí của Chất lượng
 
@@ -76,6 +87,8 @@ small/default model
 ```
 
 Mô hình (model / 모델) routing biến sự đánh đổi (trade-off / 트레이드오프) giữa chất lượng (quality / 품질) và chi phí (cost / 비용) thành một chính sách (policy / 정책) động.
+
+> **Chuyển mạch:** Trong **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Chi phí của Chất lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Little's Law và Queueing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)
 
@@ -92,6 +105,8 @@ postprocess       100 ms
 
 Nếu không có ngân sách (budget / 예산) cho từng stage, đội ngũ dễ tối ưu nhầm chỗ.
 
+> **Chuyển mạch:** Ở chặng này của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Little's Law và Queueing** tiếp nhận điểm tựa từ **Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự đánh đổi (trade-off / 트레이드오프) của Batching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Little's Law và Queueing
 
 \[
@@ -99,6 +114,8 @@ L=\lambda W
 \]
 
 Khi arrival tỷ lệ (rate / 비율) tiến gần dịch vụ (service / 서비스) sức chứa (capacity / 용량), `W` tăng mạnh. Vì vậy “GPU luôn chạy 100%” có thể làm người dùng (user / 사용자) độ trễ (latency / 지연 시간) tệ hơn đáng kể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Sự đánh đổi (trade-off / 트레이드오프) của Batching** tiếp nhận điểm tựa từ **Little's Law và Queueing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Memory-Bound và Compute-Bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sự đánh đổi (trade-off / 트레이드오프) của Batching
 
@@ -113,6 +130,8 @@ Batch lớn hơn thường có:
 
 Online scheduler cần tìm operating điểm (point / 지점) phù hợp với SLO.
 
+> **Chuyển mạch:** Trong **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Memory-Bound và Compute-Bound** tiếp nhận điểm tựa từ **Sự đánh đổi (trade-off / 트레이드오프) của Batching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí của RAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Memory-Bound và Compute-Bound
 
 Một kernel có thể bị giới hạn bởi **compute** hoặc **bộ nhớ (memory / 메모리) bandwidth**.
@@ -120,6 +139,8 @@ Một kernel có thể bị giới hạn bởi **compute** hoặc **bộ nhớ (
 Quantization hữu ích nhất khi bộ nhớ (memory / 메모리) bandwidth là bottleneck. Nếu compute kernel chiếm ưu thế, compression có thể mang lợi ích khác.
 
 Tư duy kiểu roofline giúp tránh tối ưu mù.
+
+> **Chuyển mạch:** Ở chặng này của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Chi phí của RAG** tiếp nhận điểm tựa từ **Memory-Bound và Compute-Bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí của tác nhân (agent / 에이전트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí của RAG
 
@@ -135,6 +156,8 @@ LLM generation
 
 Retrieve nhiều chunk có thể tăng recall nhưng đồng thời làm ngữ cảnh (context / 맥락) chi phí (cost / 비용) và độ trễ (latency / 지연 시간) tăng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Chi phí của tác nhân (agent / 에이전트)** tiếp nhận điểm tựa từ **Chi phí của RAG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economics của Caching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chi phí của tác nhân (agent / 에이전트)
 
 Tác nhân (agent / 에이전트) có số bước biến động. Một tác vụ (task / 작업) tưởng như đơn giản có thể vòng lặp (loop / 루프) qua nhiều mô hình (model / 모델)/công cụ (tool / 도구) lời gọi (call / 호출).
@@ -149,17 +172,25 @@ Nên có:
 
 Nếu không có ngân sách (budget / 예산), phân phối chi phí (cost / 비용) có thể có heavy tail rất lớn.
 
+> **Chuyển mạch:** Trong **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Economics của Caching** tiếp nhận điểm tựa từ **Chi phí của tác nhân (agent / 에이전트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí (cost / 비용) Offline và Online** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Economics của Caching
 
 Bộ nhớ đệm (cache / 캐시) hit tránh expensive compute nhưng cần lưu trữ (storage / 저장소) và vô hiệu hóa (invalidation / 무효화). Giá trị của bộ nhớ đệm (cache / 캐시) phụ thuộc tần suất tái sử dụng và mức freshness mà hệ thống chấp nhận.
+
+> **Chuyển mạch:** Ở chặng này của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Chi phí (cost / 비용) Offline và Online** tiếp nhận điểm tựa từ **Economics của Caching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí (cost / 비용) Attribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí (cost / 비용) Offline và Online
 
 Batch processing thường tận dụng hardware tốt hơn. Nếu kết quả có thể tái sử dụng, precompute giúp chuyển chi phí ra khỏi đường xử lý nóng (hot path / 핫 패스).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Chi phí (cost / 비용) Attribution** tiếp nhận điểm tựa từ **Chi phí (cost / 비용) Offline và Online** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự tối ưu hợp lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chi phí (cost / 비용) Attribution
 
 Nền tảng multi-tenant nên quy chi phí theo tenant, tính năng (feature / 기능), mô hình (model / 모델) và workflow. Nếu chỉ nhìn tổng GPU bill, rất khó biết tính năng (feature / 기능) nào thực sự tạo giá trị.
+
+> **Chuyển mạch:** Trong **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Thứ tự tối ưu hợp lý** tiếp nhận điểm tựa từ **Chi phí (cost / 비용) Attribution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự tối ưu hợp lý
 
@@ -178,6 +209,8 @@ Trước khi tune kernel thấp tầng:
 
 Tối ưu hóa (optimization / 최적화) ở cấp kiến trúc (architecture / 아키텍처) thường tạo gain lớn hơn micro-optimization.
 
+> **Chuyển mạch:** Ở chặng này của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Mô hình tư duy** gom các mảnh từ **Thứ tự tối ưu hợp lý** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -189,6 +222,8 @@ Cost       = tài nguyên tiêu thụ cho một outcome hữu ích
 ```
 
 Mục tiêu cuối không phải tối thiểu từng chỉ số (metric / 지표) riêng lẻ mà là đạt **chất lượng và độ tin cậy yêu cầu trong giới hạn ngân sách**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -204,6 +239,10 @@ Không. Nếu chất lượng thấp làm thử lại (retry / 재시도) hoặc
 
 Không. Retrieval, công cụ (tool / 도구), parsing và mạng (network / 네트워크) có thể mới là bottleneck chính.
 
+> **Chuyển mạch:** Trong **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Xem [Caching and Batching](./05_caching_and_batching.md), [Model Compression](./08_model_compression.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md) và [AI Compute](../17_ai_compute_and_infrastructure/README.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

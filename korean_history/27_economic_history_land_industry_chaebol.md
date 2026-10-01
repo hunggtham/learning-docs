@@ -10,7 +10,7 @@ Late Joseon markets, money use và merchant mạng (network / 네트워크) tăn
 
 ## Land reform và postwar foundation
 
-Land reform around founding of South Korea phá vỡ phần lớn large landlord hệ thống (system / 시스템). Rural household cấu trúc (structure / 구조) mới giúp giảm old landed elite power, dù poverty vẫn cao.
+Cải cách ruộng đất quanh thời điểm thành lập Hàn Quốc đã phá vỡ phần lớn hệ thống đại địa chủ. Cấu trúc hộ nông thôn mới làm suy yếu quyền lực của tầng lớp địa chủ cũ, dù nghèo đói vẫn ở mức cao.
 
 ## Developmental industrialization
 

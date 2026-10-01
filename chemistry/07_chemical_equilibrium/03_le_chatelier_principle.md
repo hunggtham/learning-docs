@@ -1,6 +1,6 @@
 # Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential
 
-> **Mạch đọc:** Đọc **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Công thức tổng quát** sang **Giảm thể tích**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Công thức tổng quát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Giảm thể tích** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Nguyên lý Le Châtelier (Le Châtelier's principle / 르샤틀리에 원리)** nói rằng khi điều kiện của một hệ đang cân bằng bị thay đổi, thành phần thường dịch theo chiều làm giảm tác động của nhiễu loạn đó. Đây là một quy tắc trực giác hữu ích, nhưng không phải định luật nền tảng. Cách suy luận đáng tin cậy hơn là hỏi: perturbation làm **Q** thay đổi thế nào, **K** có đổi không, và chemical potential của các species thay đổi ra sao?
 
@@ -139,15 +139,13 @@ Nếu \(\Delta n_{gas}=0\), compression lý tưởng không làm Q thay đổi.
 
 Có nhiều cách làm total pressure tăng.
 
-
-> **Chuyển mạch:** Từ **Công thức tổng quát**, ta sang **Giảm thể tích** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Giảm thể tích** tiếp nhận điểm tựa từ **Công thức tổng quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thêm khí trơ ở thể tích không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giảm thể tích
 
 Partial pressures của reactive gases tăng → Q thường thay đổi.
 
-
-> **Chuyển mạch:** Từ **Giảm thể tích**, ta sang **Thêm khí trơ ở thể tích không đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Thêm khí trơ ở thể tích không đổi** tiếp nhận điểm tựa từ **Giảm thể tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thêm khí trơ ở áp suất tổng không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thêm khí trơ ở thể tích không đổi
 
@@ -161,8 +159,7 @@ của reactive species không đổi.
 
 Do đó Q không đổi và equilibrium không shift trong mô hình ideal gas.
 
-
-> **Chuyển mạch:** Từ **Thêm khí trơ ở thể tích không đổi**, ta sang **Thêm khí trơ ở áp suất tổng không đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Thêm khí trơ ở áp suất tổng không đổi** tiếp nhận điểm tựa từ **Thêm khí trơ ở thể tích không đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thêm khí trơ ở áp suất tổng không đổi
 
@@ -396,8 +393,7 @@ Không. Catalyst thay kinetics.
 
 Không. Nó chỉ là equilibrium direction heuristic.
 
-
-> **Chuyển mạch:** Từ **Thêm khí trơ ở áp suất tổng không đổi**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Mô hình tư duy** gom các mảnh từ **Thêm khí trơ ở áp suất tổng không đổi** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -421,4 +417,4 @@ Nguyên lý Le Châtelier khi đó trở thành một shortcut có nền tảng,
 
 Xem tiếp: [Nhiệt động lực học của cân bằng](./04_thermodynamics_of_equilibrium.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

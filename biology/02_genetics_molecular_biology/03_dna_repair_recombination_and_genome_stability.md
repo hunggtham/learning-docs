@@ -1,7 +1,6 @@
 # Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)
 
-> **Mạch đọc:** Đọc **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Tổn thương DNA là trạng thái bình thường của một molecule sống trong chemistry hoạt động** sang **2. Độ chính xác sao chép bắt đầu ngay tại DNA polymerase**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tổn thương DNA là trạng thái bình thường của một molecule sống trong chemistry hoạt động** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Độ chính xác sao chép bắt đầu ngay tại DNA polymerase** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Sau khi học DNA replication, biểu hiện gen (gene expression), inheritance và đột biến (mutation), một câu hỏi quan trọng xuất hiện: **nếu DNA luôn bị chemical damage và replication không hoàn hảo, vì sao genome vẫn đủ ổn định để cell sống nhiều năm và lineage tồn tại qua hàng triệu generation?** Câu trả lời là genome không phải một “tệp (file / 파일) read-only”. Nó được proofread, kiểm tra, sửa chữa, tái tổ hợp, đóng gói và đôi khi hy sinh cả tế bào (cell) để bảo vệ sinh vật (organism).
 
@@ -16,6 +15,8 @@ DNA bị hỏng không chỉ do radiation hay toxin. Water có thể thúc đẩ
 Vì vậy mỗi cell sống trong **damage–repair balance** liên tục. Đây là điểm quan trọng: repair hệ thống (system / 시스템) không chỉ là emergency phản hồi (response / 응답). Nó là hạ tầng (infrastructure / 인프라) thường trực giống hệ thống bảo trì của một mạng máy tính luôn hoạt động.
 
 Cần phân biệt **Tổn thương DNA (tổn thương DNA / DNA 손상)** với **đột biến (đột biến / 돌연변이)**. Damage là trạng thái hóa học hoặc structural abnormality. Nếu được sửa đúng, trình tự (sequence) ban đầu được khôi phục. Mutation là chuỗi (sequence / 시퀀스) thay đổi (change / 변경) đã trở thành ổn định qua sao chép (replication). Damage có thể dẫn tới mutation, nhưng hai khái niệm không đồng nghĩa.
+
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **2. Độ chính xác sao chép bắt đầu ngay tại DNA polymerase** tiếp nhận điểm tựa từ **1. Tổn thương DNA là trạng thái bình thường của một molecule sống trong chemistry hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tỉ lệ lỗi (error rate) và genome kích thước (size / 크기) liên kết toán học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Độ chính xác sao chép bắt đầu ngay tại DNA polymerase
 
@@ -34,6 +35,8 @@ base selection
 
 Mỗi tầng (layer / 계층) giảm lỗi (error / 오류) thêm một bậc. Đây là redundancy có chủ đích: thông tin (information / 정보) quan trọng đến mức evolution đầu tư nhiều cơ chế (mechanism / 메커니즘) độc lập để bảo vệ nó.
 
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, sau nội dung của **2. Độ chính xác sao chép bắt đầu ngay tại DNA polymerase**, **3. Tỉ lệ lỗi (error rate) và genome kích thước (size / 크기) liên kết toán học** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **4. Sửa chữa bắt cặp sai (mismatch repair): sửa lỗi còn sót sau sao chép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Tỉ lệ lỗi (error rate) và genome kích thước (size / 크기) liên kết toán học
 
 Nếu xác suất (probability / 확률) lỗi mỗi cơ sở (base / 기반) là \(\mu\) và genome segment có chiều dài \(L\), xác suất một bản sao (copy / 복사) không có lỗi trong approximation đơn giản là:
@@ -46,6 +49,8 @@ Khi \(L\) tăng, cùng tỉ lệ lỗi sẽ tạo nhiều lỗi tuyệt đối h
 
 Tuy nhiên “lỗi (error / 오류) càng thấp càng tốt” không phải kết luận cuối cùng. Fidelity có energetic và kinetic chi phí (cost / 비용); hơn nữa evolution cần variation. Hệ thống sinh học (biological system) tối ưu sự đánh đổi (trade-off / 트레이드오프), không tối đa một chỉ số (metric / 지표) duy nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **4. Sửa chữa bắt cặp sai (mismatch repair): sửa lỗi còn sót sau sao chép** tiếp nhận điểm tựa từ **3. Tỉ lệ lỗi (error rate) và genome kích thước (size / 크기) liên kết toán học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Sửa chữa cắt bỏ cơ sở (base / 기반) (base excision repair): sửa lesion nhỏ ở từng cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Sửa chữa bắt cặp sai (mismatch repair): sửa lỗi còn sót sau sao chép
 
 **Sửa chữa bắt cặp sai, MMR (불일치 복구)** nhận biết cơ sở (base / 기반) pair sai hoặc small insertion/deletion vòng lặp (loop / 루프) còn sót sau sao chép. hệ thống (system / 시스템) cắt đoạn chứa mismatch rồi resynthesize dựa trên strand đúng.
@@ -53,6 +58,8 @@ Tuy nhiên “lỗi (error / 오류) càng thấp càng tốt” không phải k
 Ý tưởng sâu ở đây là repair cần biết **template nào đáng tin hơn**. Trong nhiều ngữ cảnh (context / 맥락), newly synthesized strand được nhận diện nhờ tín hiệu (signal / 신호) liên quan replication trạng thái (state / 상태). Sau khi mismatch được excise, DNA polymerase và ligase hoàn thiện patch.
 
 Defect MMR làm tốc độ đột biến (mutation rate) tăng mạnh. Điều này giúp hiểu **mutator phenotype**: cancer có thể không cần mutation đầu tiên trực tiếp kích hoạt proliferation; chỉ cần phá gen (gene) giữ hệ gen (genome) ổn định, toàn clone sau đó tạo mutation nhanh hơn và tăng cơ hội xuất hiện driver mutation.
+
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **5. Sửa chữa cắt bỏ cơ sở (base / 기반) (base excision repair): sửa lesion nhỏ ở từng cơ sở (base / 기반)** tiếp nhận điểm tựa từ **4. Sửa chữa bắt cặp sai (mismatch repair): sửa lỗi còn sót sau sao chép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Sửa chữa cắt bỏ nucleotit (nucleotide excision repair): cắt cả đoạn khi helix bị biến dạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Sửa chữa cắt bỏ cơ sở (base / 기반) (base excision repair): sửa lesion nhỏ ở từng cơ sở (base / 기반)
 
@@ -62,6 +69,8 @@ DNA glycosylase nhận biết cơ sở (base / 기반) bất thường và bỏ 
 
 BER cho thấy double-stranded DNA có một lợi thế sâu: **redundancy**. Khi một strand bị damage cục bộ, strand đối diện thường giữ thông tin (information / 정보) để phục hồi. DNA vì vậy vừa là lưu trữ (storage / 저장소) medium vừa có built-in error-correction lô-gic (logic / 논리) ở structural mức (level / 수준).
 
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **6. Sửa chữa cắt bỏ nucleotit (nucleotide excision repair): cắt cả đoạn khi helix bị biến dạng** tiếp nhận điểm tựa từ **5. Sửa chữa cắt bỏ cơ sở (base / 기반) (base excision repair): sửa lesion nhỏ ở từng cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Direct reversal và tại sao đôi khi “sửa” không cần cắt DNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Sửa chữa cắt bỏ nucleotit (nucleotide excision repair): cắt cả đoạn khi helix bị biến dạng
 
 **Sửa chữa cắt bỏ nucleotit, NER (뉴클레오타이드 절제 복구)** xử lý lesion cồng kềnh làm biến dạng helix, như một số UV-induced photoproduct.
@@ -70,11 +79,15 @@ Thay vì chỉ bỏ một cơ sở (base / 기반), hệ thống (system / 시�
 
 Một lesson quan trọng là repair pathway được chọn theo **loại damage**, không phải theo một thuật toán (algorithm / 알고리즘) duy nhất. Biology dùng modular repair kiến trúc (architecture / 아키텍처) vì lesion có vật lý (physical / 물리적) chemistry khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **7. Direct reversal và tại sao đôi khi “sửa” không cần cắt DNA** tiếp nhận điểm tựa từ **6. Sửa chữa cắt bỏ nucleotit (nucleotide excision repair): cắt cả đoạn khi helix bị biến dạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Đứt gãy hai mạch (double-strand break): khi cả hai bản template cùng bị đứt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Direct reversal và tại sao đôi khi “sửa” không cần cắt DNA
 
 Một số damage có thể được đảo trực tiếp về chemical trạng thái (state / 상태) ban đầu. Concept này được gọi chung là **direct reversal**. Ở nhiều organism, photolyase có thể dùng light năng lượng (energy / 에너지) để sửa một số UV-induced lesion; ở human, pathway cụ thể này không đóng vai trò tương tự như ở nhiều species khác.
 
 Điểm cần nhớ không phải tên enzyme, mà là lôgic (logic): nếu chemical modification có thể reverse trực tiếp, việc cắt backbone là không cần thiết. Repair chiến lược (strategy / 전략) phản ánh chemistry của lesion.
+
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **8. Đứt gãy hai mạch (double-strand break): khi cả hai bản template cùng bị đứt** tiếp nhận điểm tựa từ **7. Direct reversal và tại sao đôi khi “sửa” không cần cắt DNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Tế bào-cycle phase quyết định repair choice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Đứt gãy hai mạch (double-strand break): khi cả hai bản template cùng bị đứt
 
@@ -88,6 +101,8 @@ HR dùng homologous chuỗi (sequence / 시퀀스), thường nhiễm sắc tử
 
 Sự đánh đổi (trade-off / 트레이드오프) rất rõ: **speed và availability** của NHEJ đối lại **khuôn (template)-based fidelity** của HR.
 
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **9. Tế bào-cycle phase quyết định repair choice** tiếp nhận điểm tựa từ **8. Đứt gãy hai mạch (double-strand break): khi cả hai bản template cùng bị đứt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Tái tổ hợp tương đồng: repair machinery được tái sử dụng để tạo biến dị (variation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Tế bào-cycle phase quyết định repair choice
 
 Repair pathway không hoạt động trong vacuum. Khi tế bào ở G1 chưa có nhiễm sắc tử chị em, HR bị hạn chế. Sau DNA replication ở S/G2, nhiễm sắc tử chị em cung cấp template tốt hơn.
@@ -95,6 +110,8 @@ Repair pathway không hoạt động trong vacuum. Khi tế bào ở G1 chưa c�
 Vì vậy độ ổn định hệ gen nối trực tiếp với [Truyền tín hiệu và Chu kỳ tế bào](../01_cell_biology/02_cell_signaling_and_cell_cycle.md). Điểm kiểm soát chu kỳ tế bào không chỉ hỏi “đã đủ lớn chưa?” mà còn hỏi genome có đủ an toàn để tiếp tục không.
 
 Nếu Tổn thương DNA quá nhiều, cell có thể pause cycle, repair, senescence hoặc apoptosis. Continuation của chu kỳ tế bào (cell cycle) là một **quyết định (decision / 결정) under rủi ro (risk / 위험)**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **10. Tái tổ hợp tương đồng: repair machinery được tái sử dụng để tạo biến dị (variation)** tiếp nhận điểm tựa từ **9. Tế bào-cycle phase quyết định repair choice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Recombination khác mutation ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Tái tổ hợp tương đồng: repair machinery được tái sử dụng để tạo biến dị (variation)
 
@@ -104,6 +121,8 @@ Trao đổi chéo vừa tạo allele combination mới vừa giúp nhiễm sắc
 
 Do đó recombination là ví dụ đẹp cho một motif sinh học: **cơ chế (mechanism / 메커니즘) ban đầu giải một ràng buộc (constraint / 제약조건) có thể được co-opt cho hàm (function / 함수) mới**.
 
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **11. Recombination khác mutation ở đâu?** tiếp nhận điểm tựa từ **10. Tái tổ hợp tương đồng: repair machinery được tái sử dụng để tạo biến dị (variation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Chạc sao chép stress: genome damage có thể sinh ra ngay trong quá trình bản sao (copy / 복사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Recombination khác mutation ở đâu?
 
 Mutation tạo chuỗi (sequence / 시퀀스) thay đổi (change / 변경) mới. Recombination chủ yếu reshuffle chuỗi (sequence / 시퀀스)/haplotype đã tồn tại.
@@ -112,6 +131,8 @@ Nếu chromosome homolog mang `AB` và `ab`, trao đổi chéo có thể tạo `
 
 Mutation tạo “new letters”; recombination tạo “new arrangement of existing paragraphs”. Cả hai đều quan trọng cho evolution nhưng theo cách khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **12. Chạc sao chép stress: genome damage có thể sinh ra ngay trong quá trình bản sao (copy / 복사)** tiếp nhận điểm tựa từ **11. Recombination khác mutation ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Telomere: chromosome tuyến tính (linear / 선형) tạo một bài toán (problem / 문제) mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Chạc sao chép stress: genome damage có thể sinh ra ngay trong quá trình bản sao (copy / 복사)
 
 DNA bộ máy sao chép (replication machinery) phải đi qua repeat, tightly bound protein, unusual DNA cấu trúc (structure / 구조) và vùng transcription active. Fork có thể slow hoặc stall. Nếu fork collapse, DSB có thể xuất hiện.
@@ -119,6 +140,8 @@ DNA bộ máy sao chép (replication machinery) phải đi qua repeat, tightly b
 **Căng thẳng sao chép (replication stress) (복제 스트레스)** vì vậy là cầu nối (bridge / 브리지) giữa normal replication và genome instability. Oncogene thúc cell proliferate quá mạnh có thể tăng căng thẳng sao chép, tạo thêm damage và đột biến — một phản hồi dương (positive feedback) nguy hiểm trong tumor evolution.
 
 Điểm này sửa một misconception: mutation không chỉ đến từ “environmental mutagen”; chính việc cell cố bản sao (copy / 복사) genome dưới pressure cũng có thể tạo damage.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **13. Telomere: chromosome tuyến tính (linear / 선형) tạo một bài toán (problem / 문제) mới** tiếp nhận điểm tựa từ **12. Chạc sao chép stress: genome damage có thể sinh ra ngay trong quá trình bản sao (copy / 복사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Telomere, senescence và cancer là một sự đánh đổi (trade-off / 트레이드오프) multicellular** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Telomere: chromosome tuyến tính (linear / 선형) tạo một bài toán (problem / 문제) mới
 
@@ -130,6 +153,8 @@ Telomere còn giải một bài toán (problem / 문제) nhận diện: chromoso
 
 Vì vậy telomere vừa là sao chép solution vừa là định danh (identity / 식별자) tín hiệu (signal / 신호) cho chromosome end.
 
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **14. Telomere, senescence và cancer là một sự đánh đổi (trade-off / 트레이드오프) multicellular** tiếp nhận điểm tựa từ **13. Telomere: chromosome tuyến tính (linear / 선형) tạo một bài toán (problem / 문제) mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Transposable Element: genome chứa thành phần có “lợi ích riêng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Telomere, senescence và cancer là một sự đánh đổi (trade-off / 트레이드오프) multicellular
 
 Nhiều somatic cell có telomerase thấp. Sau nhiều division, telomere có thể ngắn đến mức kích hoạt DNA-damage phản hồi (response / 응답) và **senescence (lão hóa tế bào / 세포 노화)**.
@@ -137,6 +162,8 @@ Nhiều somatic cell có telomerase thấp. Sau nhiều division, telomere có t
 Điều này giới hạn proliferation — có lợi để giảm cancer rủi ro (risk / 위험) — nhưng cũng làm tissue renewal giảm theo tuổi. Nhiều tumor tái kích hoạt telomerase hoặc alternative telomere maintenance để vượt proliferative limit.
 
 Do đó aging và cancer không phải hai chủ đề hoàn toàn tách rời. Cả hai chạm vào cùng sự đánh đổi (trade-off / 트레이드오프) giữa tissue regeneration và suppression của uncontrolled proliferation.
+
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **15. Transposable Element: genome chứa thành phần có “lợi ích riêng”** tiếp nhận điểm tựa từ **14. Telomere, senescence và cancer là một sự đánh đổi (trade-off / 트레이드오프) multicellular** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Biến thể cấu trúc (structural variation): mutation không chỉ là đổi một nucleotide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Transposable Element: genome chứa thành phần có “lợi ích riêng”
 
@@ -146,6 +173,8 @@ TE có thể gây damage nếu insert vào coding/vùng điều hòa (regulatory
 
 Đây là ví dụ xung đột (conflict / 충돌)–sự phối hợp (cooperation) ở quy mô phân tử (molecular scale): element có replication interest riêng nhưng sản phẩm (product / 제품) của nó đôi khi trở thành raw material cho host evolution.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **16. Biến thể cấu trúc (structural variation): mutation không chỉ là đổi một nucleotide** tiếp nhận điểm tựa từ **15. Transposable Element: genome chứa thành phần có “lợi ích riêng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. p53 và Tổn thương DNA phản hồi (response / 응답): repair phải được nối với quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Biến thể cấu trúc (structural variation): mutation không chỉ là đổi một nucleotide
 
 Genome có thể thay đổi ở quy mô (scale / 규모) lớn qua deletion, duplication, inversion, translocation và copy-number variation.
@@ -154,6 +183,8 @@ Genome có thể thay đổi ở quy mô (scale / 규모) lớn qua deletion, du
 
 Nhiều gene family và molecular innovation có nguồn gốc từ lô-gic (logic / 논리) duplication–divergence. Genome evolution vì vậy là lịch sử (history / 이력) của cả base-level thay đổi (change / 변경) và kiến trúc-level thay đổi (change / 변경).
 
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **17. p53 và Tổn thương DNA phản hồi (response / 응답): repair phải được nối với quyết định (decision / 결정)** tiếp nhận điểm tựa từ **16. Biến thể cấu trúc (structural variation): mutation không chỉ là đổi một nucleotide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Somatic và Đột biến dòng mầm (germline mutation) có consequence khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. p53 và Tổn thương DNA phản hồi (response / 응답): repair phải được nối với quyết định (decision / 결정)
 
 Cell cần đánh giá damage có sửa được không. Một nút (node / 노드) quan trọng trong nhiều mammalian cell là p53. Tổn thương DNA có thể làm pathway ổn định p53; p53 kích hoạt gene liên quan cell-cycle arrest, repair, senescence hoặc apoptosis tùy ngữ cảnh (context / 맥락).
@@ -161,6 +192,8 @@ Cell cần đánh giá damage có sửa được không. Một nút (node / 노�
 Điểm quan trọng không phải xem p53 như “gene chống ung thư đơn lẻ”, mà như một **quyết định (decision / 결정) nút (node / 노드)** nối thông tin (information / 정보) về damage với hành động (action / 동작) của whole cell.
 
 Nếu damage nhẹ, pause và repair có lợi. Nếu damage quá nặng, apoptosis có thể tốt hơn cho organism dù bất lợi cho tế bào đó. Đây là ví dụ sinh vật-level fitness thắng cell-level survival.
+
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **18. Somatic và Đột biến dòng mầm (germline mutation) có consequence khác nhau** tiếp nhận điểm tựa từ **17. p53 và Tổn thương DNA phản hồi (response / 응답): repair phải được nối với quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Mosaicism: một body không hoàn toàn có một genome duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Somatic và Đột biến dòng mầm (germline mutation) có consequence khác nhau
 
@@ -180,11 +213,15 @@ Somatic mutation
 
 Cùng molecular sự kiện (event / 이벤트) nhưng quy mô (scale / 규모) khác tạo ý nghĩa sinh học (biological meaning) khác. Đây là lý do “mutation tốt hay xấu?” là câu hỏi thiếu ngữ cảnh (context / 맥락).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **19. Mosaicism: một body không hoàn toàn có một genome duy nhất** tiếp nhận điểm tựa từ **18. Somatic và Đột biến dòng mầm (germline mutation) có consequence khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Tốc độ đột biến là phenotype có thể tiến hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Mosaicism: một body không hoàn toàn có một genome duy nhất
 
 Mặc dù textbook thường nói mọi somatic cell có cùng genome, mutation tích lũy trong development và aging tạo **khảm soma (somatic mosaicism) (체세포 모자이크)**. Một clone có variant riêng có thể chiếm một fraction tissue.
 
 Phần lớn mosaic variant không gây phenotype rõ. Một số ảnh hưởng developmental disorder, aging hoặc cancer rủi ro (risk / 위험). Điều này bổ sung nuance cho statement “mọi cell có cùng DNA”: đúng như approximation nền tảng, nhưng organism thật là một population dòng dõi (lineage) cell có lịch sử (history / 이력) mutation riêng.
+
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **20. Tốc độ đột biến là phenotype có thể tiến hóa** tiếp nhận điểm tựa từ **19. Mosaicism: một body không hoàn toàn có một genome duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Tình huống phân tích (case study): BRCA pathway và synthetic lethality như lô-gic (logic / 논리) sinh học hệ thống (systems biology)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Tốc độ đột biến là phenotype có thể tiến hóa
 
@@ -194,6 +231,8 @@ High tốc độ đột biến tạo nhiều beneficial variant hơn khi môi tr
 
 RNA virus thường có tốc độ đột biến cao hơn cellular organism; DNA organism đầu tư mạnh hơn vào đọc sửa/repair. Không có một tốc độ đột biến “tối ưu cho mọi life”.
 
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **20. Tốc độ đột biến là phenotype có thể tiến hóa** cho ta quy tắc; **21. Tình huống phân tích (case study): BRCA pathway và synthetic lethality như lô-gic (logic / 논리) sinh học hệ thống (systems biology)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **22. Tình huống phân tích lập luận (reasoning / 추론): tại sao repair “quá tích cực” cũng có thể nguy hiểm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Tình huống phân tích (case study): BRCA pathway và synthetic lethality như lô-gic (logic / 논리) sinh học hệ thống (systems biology)
 
 Một số protein BRCA tham gia tái tổ hợp tương đồng repair. Khi tumor mất HR hàm (function / 함수), nó phụ thuộc mạnh hơn vào repair pathway khác để sống.
@@ -202,11 +241,15 @@ Nếu một second pathway bị inhibit, combination có thể gây **synthetic 
 
 Trường hợp (case / 사례) này quan trọng vì nó nối độ ổn định hệ gen với sinh học hệ thống và therapy: weakness của mạng (network / 네트워크) có thể xuất hiện không ở một gene riêng mà ở **phụ thuộc (dependency / 의존성) tạo bởi mạng (network / 네트워크) trạng thái**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **21. Tình huống phân tích (case study): BRCA pathway và synthetic lethality như lô-gic (logic / 논리) sinh học hệ thống (systems biology)** cho ta quy tắc; **22. Tình huống phân tích lập luận (reasoning / 추론): tại sao repair “quá tích cực” cũng có thể nguy hiểm?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. Giải trình tự (sequencing) đo lường (measurement / 측정) cũng có bài toán fidelity giống replication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Tình huống phân tích lập luận (reasoning / 추론): tại sao repair “quá tích cực” cũng có thể nguy hiểm?
 
 Nếu DSB xảy ra ở repeat-rich region, nối nhầm hai trình tự giống nhau nhưng ở vị trí khác có thể gây deletion hoặc translocation. Repair nhanh không đồng nghĩa repair đúng.
 
 Điều này minh họa principle chung: hệ thống sinh học không tối ưu speed riêng, mà phải sự đánh đổi (trade-off / 트레이드오프) speed, fidelity và availability của template. NHEJ hữu ích vì nhanh, nhưng khi accuracy cực quan trọng và nhiễm sắc tử chị em có sẵn, HR thường cho tuyến (route / 경로) an toàn hơn.
+
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **22. Tình huống phân tích lập luận (reasoning / 추론): tại sao repair “quá tích cực” cũng có thể nguy hiểm?** cho ta quy tắc; **23. Giải trình tự (sequencing) đo lường (measurement / 측정) cũng có bài toán fidelity giống replication** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Giải trình tự (sequencing) đo lường (measurement / 측정) cũng có bài toán fidelity giống replication
 
@@ -221,6 +264,8 @@ sequencer: molecule → digital copy
 
 Cả hai đều cần lỗi (error / 오류) mô hình (model / 모델) và redundancy. Chương (chapter) [Phương pháp thực nghiệm và đo lường trong Sinh học](../06_biotechnology_computation/01_experimental_methods_and_measurement.md) và [Bioinformatics, thuật toán và Omics Workflow](../06_biotechnology_computation/02_bioinformatics_algorithms_and_omics_workflows.md) phát triển tiếp lô-gic (logic / 논리) này.
 
+> **Chuyển mạch:** Ở chặng này của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **23. Giải trình tự (sequencing) đo lường (measurement / 측정) cũng có bài toán fidelity giống replication** nêu điều cần giải thích; **24. Các hiểu lầm phổ biến (common misconceptions)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Các hiểu lầm phổ biến (common misconceptions)
 
 “Mutation xảy ra vì organism cần thích nghi” là sai. Mutation không được tạo có chủ đích theo future need; selection thay đổi frequency của variation sau khi variation xuất hiện.
@@ -230,6 +275,8 @@ Cả hai đều cần lỗi (error / 오류) mô hình (model / 모델) và redu
 “Recombination chỉ gây mutation” không đúng. Recombination là cơ chế (mechanism / 메커니즘) bình thường và thiết yếu của meiosis, đồng thời là repair pathway.
 
 “Hệ gen ổn định nghĩa mọi cell có DNA giống hệt nhau” quá đơn giản. Khảm soma và biến thể cấu trúc tồn tại, nhưng được giữ trong giới hạn mà organism vẫn hàm (function / 함수).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **25. Mô hình tư duy tổng hợp** gom các mảnh từ **24. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **26. cầu nối (bridge / 브리지) sang Evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Mô hình tư duy tổng hợp
 
@@ -257,6 +304,8 @@ unrepaired / misrepaired change
 
 Stability và evolution vì vậy không đối lập. Evolution cần một hệ thống (system / 시스템) đủ ổn định để heredity có ý nghĩa, đồng thời đủ không hoàn hảo để variation tồn tại.
 
+> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **26. cầu nối (bridge / 브리지) sang Evolution** gom các mảnh từ **25. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 26. cầu nối (bridge / 브리지) sang Evolution
 
 Sau chapter này, nguồn variation không còn là một từ chung chung “đột biến”. Ta đã thấy variation xuất phát từ replication lỗi (error / 오류), oxidative damage, repair choice, tái tổ hợp, transposable element, gene duplication và structural rearrangement.
@@ -270,4 +319,4 @@ Nhưng một variant xuất hiện trong một genome vẫn chưa phải evoluti
 <!-- biology-learning-navigation -->
 **Điều hướng học:** [← Genomics, Epigenetics và Điều hòa hệ gene](02_genomics_epigenetics_and_regulation.md) · [Mục lục Biology](../README.md) · [Tiến hóa và Di truyền quần thể →](../03_evolution_and_diversity/00_evolution_and_population_genetics.md)
 
-> **Bàn giao:** Sau **26. cầu nối (bridge / 브리지) sang Evolution**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dna genes and gene expression](./00_dna_genes_and_gene_expression.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **26. cầu nối (bridge / 브리지) sang Evolution**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

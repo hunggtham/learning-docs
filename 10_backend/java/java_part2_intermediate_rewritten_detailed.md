@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed
 
-> **Mạch đọc:** Đọc **Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”** sang **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”
 
@@ -8,9 +8,7 @@
 >
 > Các ghi chú kiểu cấp cao (senior / 시니어), idiom và mẫu (pattern / 패턴) không được tách thành mục riêng sau mỗi chương. Khi một tư duy nâng cao cần thiết, nó được giải thích ngay trong nội dung cùng ví dụ để bạn học như một phần tự nhiên của Java.
 
-
-
-> **Chuyển mạch:** Từ **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”**, ta sang **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed**, **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”** đã nêu tiêu chí phân biệt, còn **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thread: đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)
 
@@ -1051,12 +1049,9 @@ Hai threads có thể cùng read 10 và cùng ghi (write / 쓰기) 11, mất m�
 
 Thread-safe thiết kế (design / 설계) bắt đầu bằng việc giảm dùng chung (shared / 공유) mutable trạng thái (state / 상태). Immutable dữ liệu (data / 데이터) và luồng thực thi (thread / 스레드) confinement thường đơn giản hơn locks.
 
-
-
 ---
 
-
-> **Chuyển mạch:** Từ **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)**, ta sang **luồng thực thi (thread / 스레드): đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Part 2 bắt đầu từ nền tảng object và chuyển sang concurrency/runtime. Câu hỏi về **Thread: đối tượng Java và execution context khác nhau thế nào?** là cầu nối để đọc các phần sau về memory visibility, coordination và failure.
 
 ## `Thread`: đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?
 
@@ -2734,4 +2729,4 @@ https://docs.oracle.com/en/java/javase/
 OpenJDK JEP chỉ mục (index / 인덱스):
 https://openjdk.org/jeps/0
 
-> **Bàn giao:** Sau **luồng thực thi (thread / 스레드): đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [java master supplement rewritten detailed](./java_master_supplement_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Thread: đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

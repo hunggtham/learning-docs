@@ -1,6 +1,6 @@
 # Timeline và các mốc chính của lịch sử Hàn Quốc
 
-> **Mạch đọc:** Đặt **Timeline và các mốc chính của lịch sử Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Timeline và các mốc chính của lịch sử Hàn Quốc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Cách dùng timeline với bốn neo** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Timeline này là coordinate để tra cứu, không phải bản thân lời giải thích lịch sử. Khi một mốc chưa rõ “vì sao”, quay về chapter tương ứng.
 
@@ -73,7 +73,7 @@ e1 --causes/constrains--> e2
 
 và xác định edge nào mạnh, edge nào chỉ correlation.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Chuyển mạch:** Mental model supplies the four anchors—time, institution, actors and consequence; timeline then orders events without pretending dates alone explain causality.
 
 ## Cách dùng timeline với bốn neo
 
@@ -89,3 +89,5 @@ Mỗi mốc dưới đây nên được đọc ít nhất qua bốn câu hỏi: 
 | 1961–1997 | Chiến tranh Việt Nam, 1975, Đổi Mới 1986 | Ulsan, Gwangju, Seoul Olympic Park | Tăng trưởng, dân chủ và phân phối nối với nhau thế nào? |
 
 Bảng này không thay thế các chapter theo giai đoạn. Nó là bộ định tuyến: nếu câu hỏi là về đất và thuế, đi sang `27` hoặc `35`; nếu là về ký ức, đi sang `29`; nếu là về địa lý và logistics, đi sang `34` hoặc `36`; nếu muốn luyện cách nối mọi lớp, đi sang `37_historical_case_labs.md`.
+
+> **Bàn giao:** Sau **Cách dùng timeline với bốn neo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

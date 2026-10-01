@@ -1,11 +1,12 @@
 # 10. Cổng chính thức và workflow tự tra cứu
 
-> **Mạch đọc:** Đặt **10. Cổng chính thức và workflow tự tra cứu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Mục tiêu** sang **2. Pháp luật**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **10. Cổng chính thức và workflow tự tra cứu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mục tiêu** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Pháp luật** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Mục tiêu
 
 Một người sống lâu dài tại Hàn Quốc nên biết **đi đâu trước khi hỏi cộng đồng**. tệp (file / 파일) này là bản đồ cổng chính thức theo loại vấn đề.
+
+> **Chuyển mạch:** Trong **10. Cổng chính thức và workflow tự tra cứu**, **2. Pháp luật** tiếp nhận điểm tựa từ **1. Mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dịch vụ hành chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Pháp luật
 
@@ -41,6 +42,8 @@ Hữu ích để hiểu hệ thống pháp chế, giải thích về lập pháp
 
 Giải thích luật theo tình huống đời sống. Đây là nguồn rất tốt để học, nhưng chính trang cũng cảnh báo nội dung giải thích không phải phán quyết có hiệu lực pháp lý. Khi vấn đề quan trọng, quay lại luật gốc.
 
+> **Chuyển mạch:** Ở chặng này của **10. Cổng chính thức và workflow tự tra cứu**, **3. Dịch vụ hành chính** tiếp nhận điểm tựa từ **2. Pháp luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Tòa án và đăng ký** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Dịch vụ hành chính
 
 ### 정부24 — gov.kr
@@ -61,6 +64,8 @@ Dùng để gửi nhiều loại `민원`, phản ánh, kiến nghị đến cơ
 
 Dùng để hiểu `고충민원`, 국민신문고, hành chính khiếu nại và các cơ chế quyền lợi công dân.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. Cổng chính thức và workflow tự tra cứu**, **4. Tòa án và đăng ký** tiếp nhận điểm tựa từ **3. Dịch vụ hành chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Lao động và việc làm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Tòa án và đăng ký
 
 ### 대한민국 법원 — scourt.go.kr
@@ -76,6 +81,8 @@ Dùng để:
 ### 인터넷등기소 — iros.go.kr
 
 Dùng để tra cứu/phát hành thông tin đăng ký như bất động sản trong phạm vi dịch vụ.
+
+> **Chuyển mạch:** Trong **10. Cổng chính thức và workflow tự tra cứu**, **5. Lao động và việc làm** tiếp nhận điểm tựa từ **4. Tòa án và đăng ký** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Thuế và bảo hiểm xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Lao động và việc làm
 
@@ -99,6 +106,8 @@ Liên quan các tranh chấp thuộc thẩm quyền như `부당해고` và quan
 
 Liên quan `산재보험`, 고용·산재보험 nghiệp vụ và phúc lợi lao động.
 
+> **Chuyển mạch:** Ở chặng này của **10. Cổng chính thức và workflow tự tra cứu**, **6. Thuế và bảo hiểm xã hội** tiếp nhận điểm tựa từ **5. Lao động và việc làm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phúc lợi và y tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Thuế và bảo hiểm xã hội
 
 ### 국세청 — nts.go.kr
@@ -121,6 +130,8 @@ Tra tư cách bảo hiểm y tế, phí, người phụ thuộc, trung tâm hỗ
 
 Dùng để xem các nghiệp vụ liên kết của bốn bảo hiểm xã hội.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. Cổng chính thức và workflow tự tra cứu**, **7. Phúc lợi và y tế** tiếp nhận điểm tựa từ **6. Thuế và bảo hiểm xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Nhà ở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Phúc lợi và y tế
 
 ### 복지로 — bokjiro.go.kr
@@ -134,6 +145,8 @@ Cũng có nhiều dịch vụ liên quan sức khỏe, gia đình và trợ cấ
 ### 보건소
 
 Website của địa phương để xem chương trình y tế công cộng, tiêm chủng, khám và hỗ trợ khu vực.
+
+> **Chuyển mạch:** Trong **10. Cổng chính thức và workflow tự tra cứu**, **8. Nhà ở** tiếp nhận điểm tựa từ **7. Phúc lợi và y tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Người tiêu dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Nhà ở
 
@@ -153,6 +166,8 @@ Chính sách và hướng dẫn nhà ở/bất động sản.
 
 Thông tin về một số cơ chế bảo lãnh/보증 nhà ở; điều kiện sản phẩm cần kiểm tra tại thời điểm thực tế.
 
+> **Chuyển mạch:** Ở chặng này của **10. Cổng chính thức và workflow tự tra cứu**, **9. Người tiêu dùng** tiếp nhận điểm tựa từ **8. Nhà ở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Ngân hàng và tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Người tiêu dùng
 
 ### 소비자24 — bên tiêu thụ (consumer / 소비자).go.kr
@@ -167,6 +182,8 @@ Tổng hợp thông tin tiêu dùng và một số dịch vụ giải quyết v�
 
 Điều khoản giao dịch, cạnh tranh và bảo vệ người tiêu dùng trong phạm vi chức năng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. Cổng chính thức và workflow tự tra cứu**, **10. Ngân hàng và tín dụng** tiếp nhận điểm tựa từ **9. Người tiêu dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Xuất nhập cảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Ngân hàng và tín dụng
 
 ### 금융감독원 — fss.or.kr
@@ -180,6 +197,8 @@ Cổng thông tin tài chính cho người tiêu dùng.
 ### Credit4U — credit4u.or.kr
 
 Tra thông tin tín dụng của chính mình.
+
+> **Chuyển mạch:** Trong **10. Cổng chính thức và workflow tự tra cứu**, **11. Xuất nhập cảnh** tiếp nhận điểm tựa từ **10. Ngân hàng và tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Công thức tìm kiếm hiệu quả bằng tiếng Hàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Xuất nhập cảnh
 
@@ -198,6 +217,8 @@ Kênh tư vấn xuất nhập cảnh đa ngôn ngữ.
 ### Socinet — socinet.go.kr
 
 KIIP và chương trình hội nhập xã hội.
+
+> **Chuyển mạch:** Ở chặng này của **10. Cổng chính thức và workflow tự tra cứu**, **12. Công thức tìm kiếm hiệu quả bằng tiếng Hàn** tiếp nhận điểm tựa từ **11. Xuất nhập cảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Quy tắc xác minh ba lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Công thức tìm kiếm hiệu quả bằng tiếng Hàn
 
@@ -225,6 +246,8 @@ Cấu trúc truy vấn (query / 쿼리) tốt:
 [đối tượng] + [vấn đề] + [tên cơ quan hoặc tên luật]
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. Cổng chính thức và workflow tự tra cứu**, **13. Quy tắc xác minh ba lớp** tiếp nhận điểm tựa từ **12. Công thức tìm kiếm hiệu quả bằng tiếng Hàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Khi nào cần lưu PDF/screenshot?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Quy tắc xác minh ba lớp
 
 Khi một vấn đề quan trọng, cố gắng có đủ:
@@ -236,6 +259,8 @@ Khi một vấn đề quan trọng, cố gắng có đủ:
 ```
 
 Nếu ba nguồn không khớp, đừng tự chọn nguồn thuận mắt nhất; kiểm tra ngày cập nhật, bản luật và gọi cơ quan có thẩm quyền.
+
+> **Chuyển mạch:** Trong **10. Cổng chính thức và workflow tự tra cứu**, **14. Khi nào cần lưu PDF/screenshot?** tiếp nhận điểm tựa từ **13. Quy tắc xác minh ba lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 14. Khi nào cần lưu PDF/screenshot?
 
@@ -257,4 +282,4 @@ Tên tệp (file / 파일) nên có ngày:
 
 Cách này biến việc tra cứu thành một kiểm tra (audit / 감사) trail có thể kiểm tra lại.
 
-> **Bàn giao:** Sau **14. Khi nào cần lưu PDF/screenshot?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **14. Khi nào cần lưu PDF/screenshot?**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

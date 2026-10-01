@@ -1,6 +1,6 @@
 # Hóa lượng — định lượng phản ứng từ các định luật bảo toàn
 
-> **Mạch đọc:** Đọc **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Độ chuyển hóa** sang **Độ chọn lọc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ chuyển hóa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ chọn lọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Hóa lượng (stoichiometry / 화학량론)** là ngôn ngữ định lượng của phản ứng hóa học. Nó dùng phương trình cân bằng để liên hệ lượng các chất thông qua bảo toàn nguyên tử, điện tích và khối lượng. Bản chất của hóa lượng không phải một tập công thức đổi gram–mol, mà là **một hệ ràng buộc tuyến tính giữa các lượng chất**.
 
@@ -268,8 +268,7 @@ X_A=\frac{n_{A,0}-n_A}{n_{A,0}}
 
 cho biết phần A đã phản ứng.
 
-
-> **Chuyển mạch:** Từ **Độ chuyển hóa**, ta sang **Độ chọn lọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn**, **Độ chọn lọc** tiếp nhận điểm tựa từ **Độ chuyển hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu suất tạo sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ chọn lọc
 
@@ -283,8 +282,7 @@ S_{P/U}=\frac{n_P}{n_U}
 
 sau khi hiệu chỉnh theo hóa lượng nếu cần.
 
-
-> **Chuyển mạch:** Từ **Độ chọn lọc**, ta sang **Hiệu suất tạo sản phẩm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn**, **Hiệu suất tạo sản phẩm** tiếp nhận điểm tựa từ **Độ chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Hiệu suất tạo sản phẩm
 
@@ -547,4 +545,4 @@ Hóa lượng là **hình học tuyến tính của bảo toàn vật chất**. 
 
 Xem tiếp: [Chất phản ứng giới hạn và hiệu suất](./04_limiting_reagent_and_yield.md).
 
-> **Bàn giao:** Sau **“Conversion cao nghĩa quy trình tốt”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Hiệu suất tạo sản phẩm**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

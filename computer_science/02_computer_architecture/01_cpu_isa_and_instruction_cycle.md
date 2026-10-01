@@ -1,7 +1,6 @@
 # CPU, ISA và instruction cycle
 
-> **Mạch đọc:** Đặt **CPU, ISA và instruction cycle** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **ISA như ranh giới (boundary / 경계) giữa software và hardware** sang **Registers**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CPU, ISA và instruction cycle**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **ISA như ranh giới (boundary / 경계) giữa software và hardware** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Registers** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 CPU (Central Processing Unit / 중앙 처리 장치) là engine thực thi instructions. Để hiểu nó, cần tách hai tầng: **ISA** là đặc tả hợp đồng (contract / 계약) software-visible; **microarchitecture** là cách chip cụ thể hiện thực đặc tả hợp đồng (contract / 계약) đó.
 
@@ -13,8 +12,7 @@ Một executable được compile cho ARM64 không trực tiếp chạy trên x8
 
 Microarchitecture có thể thay đổi mạnh giữa CPU generations nhưng vẫn chạy cùng ISA, giống hai cơ sở dữ liệu (database / 데이터베이스) engines cùng expose SQL subset nhưng nội bộ (internal / 내부) thực thi (execution / 실행) khác.
 
-
-> **Chuyển mạch:** Từ **ISA như ranh giới (boundary / 경계) giữa software và hardware**, ta sang **Registers** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **CPU, ISA và instruction cycle**, **ISA như ranh giới (boundary / 경계) giữa software và hardware** đã nêu tiêu chí phân biệt, còn **Registers** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Fetch, decode, execute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Registers
 
@@ -22,8 +20,7 @@ Registers là lưu trữ (storage / 저장소) cực nhanh trong CPU. General-pu
 
 Trình biên dịch (compiler / 컴파일러) register allocation cố giữ hot values trong registers thay vì spill ra bộ nhớ (memory / 메모리).
 
-
-> **Chuyển mạch:** Từ **Registers**, ta sang **Fetch, decode, execute** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **CPU, ISA và instruction cycle**, **Fetch, decode, execute** tiếp nhận điểm tựa từ **Registers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tải (load / 로드)/store và computation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fetch, decode, execute
 
@@ -39,8 +36,7 @@ Textbook mô tả instruction cycle:
 
 Đây là conceptual mô hình (model / 모델). CPU hiện đại chuỗi xử lý (pipeline / 파이프라인) và overlap nhiều instructions, thậm chí execute out-of-order trong khi giữ architectural kết quả (result / 결과) tương đương allowed ngữ nghĩa (semantics / 의미론).
 
-
-> **Chuyển mạch:** Từ **Fetch, decode, execute**, ta sang **tải (load / 로드)/store và computation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CPU, ISA và instruction cycle**, **Tải (load / 로드)/store và computation** tiếp nhận điểm tựa từ **Fetch, decode, execute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Branch và điều khiển (control / 제어) luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tải (load / 로드)/store và computation
 
@@ -48,8 +44,7 @@ CPU không thường arithmetic trực tiếp trên arbitrary disk/tệp (file /
 
 Tải (load / 로드)/store distinction giải thích vì sao bộ nhớ (memory / 메모리) độ trễ (latency / 지연 시간) quan trọng: arithmetic có thể rất nhanh nhưng waiting dữ liệu (data / 데이터) stall phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬).
 
-
-> **Chuyển mạch:** Từ **tải (load / 로드)/store và computation**, ta sang **Branch và điều khiển (control / 제어) luồng (flow / 흐름)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **CPU, ISA và instruction cycle**, **Tải (load / 로드)/store và computation** xác định đầu vào; **Branch và điều khiển (control / 제어) luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Privilege levels** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Branch và điều khiển (control / 제어) luồng (flow / 흐름)
 
@@ -57,8 +52,7 @@ Conditional branch thay PC theo điều kiện (condition / 조건). High-level 
 
 Vì vậy data-dependent unpredictable branches đôi khi chậm hơn branchless vectorizable mã (code / 코드), dù nguồn (source / 소스) operations count tương tự.
 
-
-> **Chuyển mạch:** Từ **Branch và điều khiển (control / 제어) luồng (flow / 흐름)**, ta sang **Privilege levels** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **CPU, ISA và instruction cycle**, **Branch và điều khiển (control / 제어) luồng (flow / 흐름)** xác định đầu vào; **Privilege levels** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Exceptions và interrupts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Privilege levels
 
@@ -66,8 +60,7 @@ CPU hỗ trợ privilege modes để OS kernel chạy quyền cao hơn người 
 
 Hardware privilege là nền của tiến trình (process / 프로세스) isolation và bảo mật (security / 보안) boundaries; OS không thể chỉ “nhờ program ngoan”.
 
-
-> **Chuyển mạch:** Từ **Privilege levels**, ta sang **Exceptions và interrupts** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CPU, ISA và instruction cycle**, **Exceptions và interrupts** tiếp nhận điểm tựa từ **Privilege levels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Out-of-order và speculative thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Exceptions và interrupts
 
@@ -75,8 +68,7 @@ Synchronous exception phát sinh do hiện tại (current / 현재) instruction,
 
 Page fault nghe như lỗi (error / 오류) nhưng có thể là normal cơ chế (mechanism / 메커니즘) để demand-load virtual bộ nhớ (memory / 메모리) page.
 
-
-> **Chuyển mạch:** Từ **Exceptions và interrupts**, ta sang **Out-of-order và speculative thực thi (execution / 실행)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **CPU, ISA và instruction cycle**, **Out-of-order và speculative thực thi (execution / 실행)** tiếp nhận điểm tựa từ **Exceptions và interrupts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Out-of-order và speculative thực thi (execution / 실행)
 
@@ -84,15 +76,13 @@ Hiện đại (modern / 현대적) CPU có thể decode instructions thành micr
 
 Speculation tăng hiệu năng (performance / 성능) nhưng tạo side channels nếu microarchitectural traces như bộ nhớ đệm (cache / 캐시) trạng thái (state / 상태) lộ thông tin, điển hình Spectre-class attacks. Đây là liên kết (connection / 연결) sâu giữa hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) và bảo mật (security / 보안) mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **Out-of-order và speculative thực thi (execution / 실행)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **CPU, ISA và instruction cycle**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Out-of-order và speculative thực thi (execution / 실행)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > ISA là **hợp đồng**: software thấy registers/instructions/bộ nhớ (memory / 메모리) ngữ nghĩa (semantics / 의미론). Microarchitecture là **hiện thực (implementation / 구현)** có chuỗi xử lý (pipeline / 파이프라인), bộ nhớ đệm (cache / 캐시), speculation và thực thi (execution / 실행) units để thực hiện hợp đồng đó nhanh nhất có thể.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CPU, ISA và instruction cycle**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -102,11 +92,10 @@ Speculation tăng hiệu năng (performance / 성능) nhưng tạo side channels
 
 **“x86/ARM chỉ khác cú pháp assembly.”** Chúng khác ISA encoding, registers, bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và ecosystem ABI, dù compilers che nhiều chi tiết.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **CPU, ISA và instruction cycle**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 [Machine representation](../00_computation_information/02_numbers_and_machine_representation.md) giải thích operands; [cache](./02_memory_hierarchy_and_cache.md) giải thích dữ liệu (data / 데이터) arrival; [assembly/ABI](./04_machine_code_assembly_and_abi.md) nối instructions với compiled programs; [kernel/syscall](../03_operating_systems/00_kernel_syscalls_and_os_abstractions.md) dùng privilege chuyển tiếp (transition / 전이) của CPU.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 digital logic and circuits](./00_digital_logic_and_circuits.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

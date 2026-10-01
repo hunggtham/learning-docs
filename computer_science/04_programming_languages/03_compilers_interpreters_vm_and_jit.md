@@ -1,7 +1,6 @@
 # Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT
 
-> **Mạch đọc:** Đặt **trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lexing và parsing** sang **ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lexing và parsing** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Mã nguồn (source code / 소스 코드) phải được biến thành actions ở machine mức (level / 수준). trình biên dịch (compiler / 컴파일러) thiết kế (design / 설계) cho thấy một chuỗi abstractions: văn bản (text / 텍스트) → tokens → cú pháp (syntax / 문법) cây (tree / 트리) → ngữ nghĩa (semantic / 의미적) biểu diễn (representation / 표현) → intermediate biểu diễn (representation / 표현) → optimized mã (code / 코드) → machine/thời gian chạy (runtime / 런타임) thực thi (execution / 실행).
 
@@ -15,17 +14,23 @@ Regular-language techniques phù hợp nhiều đơn vị từ (token / 토큰) 
 
 AST bỏ bớt punctuation không cần thiết và giữ ngữ nghĩa (semantic / 의미적) cấu trúc (structure / 구조). `1 + 2 * 3` phải thành cây (tree / 트리) thể hiện multiplication binding mạnh hơn addition.
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Lexing và parsing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intermediate biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)
 
 Trình biên dịch (compiler / 컴파일러) resolve names, check types, validate điều khiển (control / 제어) rules, infer types/generics tùy ngôn ngữ (language / 언어). cú pháp (syntax / 문법) hợp lệ vẫn có thể semantically invalid, như use undefined variable hoặc return wrong kiểu (type / 타입).
 
 Symbol bảng (table / 테이블) là ánh xạ (mapping / 매핑) names → declarations/siêu dữ liệu (metadata / 메타데이터) theo scopes.
 
+> **Chuyển mạch:** Ở chặng này của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Intermediate biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Intermediate biểu diễn (representation / 표현)
 
 IR là biểu diễn (representation / 표현) giữa nguồn (source / 소스) và mục tiêu (target / 대상), giúp tối ưu hóa (optimization / 최적화) độc lập ngôn ngữ (language / 언어)/hardware phần nào. SSA — Static Single Assignment — cho mỗi variable phiên bản (version / 버전) một assignment, làm dataflow/use-def chains rõ.
 
 LLVM IR, JVM bytecode và compiler-specific IRs ở lớp trừu tượng (abstraction / 추상화) levels khác nhau. Không nên đồng nhất mọi IR với “assembly trung gian”; một IR có thể giữ kiểu (type / 타입), exception, control-flow hoặc thời gian chạy (runtime / 런타임) siêu dữ liệu (metadata / 메타데이터) mà machine ISA không biểu diễn trực tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **Intermediate biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ahead-of-time compilation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tối ưu hóa (optimization / 최적화)
 
@@ -35,17 +40,23 @@ Trình biên dịch (compiler / 컴파일러) chỉ được optimize nếu gi�
 
 Dòng mã nguồn (source line / 소스 코드 줄) không map một-một tới lệnh máy (machine instruction / 기계 명령어). Debugger, profiler và disassembly đều đang quan sát một biểu diễn (representation / 표현) sau tối ưu hóa (optimization / 최적화), không phải “nguồn (source / 소스) chạy từng dòng”.
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Ahead-of-time compilation** tiếp nhận điểm tựa từ **Tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interpretation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ahead-of-time compilation
 
 AOT compile trước thời gian chạy (runtime / 런타임) thành mã máy (machine code / 기계어). Startup predictable, không cần thời gian chạy (runtime / 런타임) trình biên dịch (compiler / 컴파일러), nhưng khó tận dụng chính xác (exact / 정확한) thời gian chạy (runtime / 런타임) profile/hardware trạng thái (state / 상태) trừ profile-guided tối ưu hóa (optimization / 최적화).
 
 C/C++/Rust thường AOT. Native-image các hệ thống (systems / 시스템들) compile managed languages với trade-offs reflection/động (dynamic / 동적) features.
 
+> **Chuyển mạch:** Ở chặng này của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Interpretation** tiếp nhận điểm tựa từ **Ahead-of-time compilation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JIT compilation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Interpretation
 
 Trình thông dịch (interpreter / 인터프리터) có thể walk AST hoặc execute bytecode dispatch vòng lặp (loop / 루프). Nó giảm compile startup và dễ động (dynamic / 동적) hành vi (behavior / 동작) nhưng dispatch overhead mỗi thao tác (operation / 연산) có thể lớn.
 
 Bytecode VM đưa nguồn (source / 소스) vào compact instruction set portable. JVM bytecode chạy trên JVM implementations cho platforms khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **JIT compilation** tiếp nhận điểm tựa từ **Interpretation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Garbage collector và thời gian chạy (runtime / 런타임) services** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## JIT compilation
 
@@ -55,17 +66,23 @@ Java HotSpot tiered compilation và hiện đại (modern / 현대적) JS engine
 
 Phần internals sâu hơn nằm ở [JIT profiling, speculative optimization và deoptimization](./advanced/05_jit_profiling_speculative_optimization_and_deoptimization.md).
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Garbage collector và thời gian chạy (runtime / 런타임) services** tiếp nhận điểm tựa từ **JIT compilation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Linker và loader** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Garbage collector và thời gian chạy (runtime / 런타임) services
 
 Managed thời gian chạy (runtime / 런타임) thường cung cấp GC, nạp lớp (class loading / 클래스 로딩), exceptions, synchronization, reflection và profiling. hiệu năng (performance / 성능) không chỉ trình biên dịch (compiler / 컴파일러) generated mã (code / 코드) mà cả hành vi thời gian chạy (runtime behavior / 런타임 동작).
 
 Safepoint là điểm thời gian chạy (runtime / 런타임) có thể dừng/coordinate threads cho GC/deoptimization. Stop-the-world pauses không phải toàn bộ GC; concurrent collectors làm nhiều phases song song với ứng dụng (application / 애플리케이션) nhưng vẫn cần coordination.
 
+> **Chuyển mạch:** Ở chặng này của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Linker và loader** tiếp nhận điểm tựa từ **Garbage collector và thời gian chạy (runtime / 런타임) services** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FFI tồn tại vì hai thời gian chạy (runtime / 런타임) không chia sẻ cùng một thế giới mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Linker và loader
 
 Bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러) đầu ra (output / 출력) đối tượng (object / 객체) files; linker resolve symbols/relocations. Loader map executable/dùng chung (shared / 공유) libraries vào tiến trình (process / 프로세스). động (dynamic / 동적) linker có thể lazily resolve symbols. Đây là continuation của [machine code, assembly và ABI](../basic/02_computer_architecture/04_machine_code_assembly_and_abi.md).
 
 API ở nguồn (source / 소스) mức (level / 수준) và ABI ở nhị phân (binary / 이진) mức (level / 수준) không phải một đặc tả hợp đồng (contract / 계약). Hai thư viện có thể giữ hàm (function / 함수) name giống nhau nhưng đổi bố cục (layout / 레이아웃)/calling convention và trở thành binary-incompatible.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **FFI tồn tại vì hai thời gian chạy (runtime / 런타임) không chia sẻ cùng một thế giới mặc định** tiếp nhận điểm tựa từ **Linker và loader** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểu (type / 타입) ở nguồn (source / 소스) không tự quyết định nhị phân (binary / 이진) biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## FFI tồn tại vì hai thời gian chạy (runtime / 런타임) không chia sẻ cùng một thế giới mặc định
 
@@ -84,6 +101,8 @@ source type system
 
 Nếu hai phía không thống nhất biểu diễn (representation / 표현), quyền sở hữu (ownership / 소유권) hoặc thời gian tồn tại (lifetime / 수명), kiểu (type / 타입) checker ở phía caller không thể tự cứu chương trình.
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **FFI tồn tại vì hai thời gian chạy (runtime / 런타임) không chia sẻ cùng một thế giới mặc định** nêu điều cần giải thích; **Kiểu (type / 타입) ở nguồn (source / 소스) không tự quyết định nhị phân (binary / 이진) biểu diễn (representation / 표현)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đối tượng (object / 객체) bố cục (layout / 레이아웃) là hiện thực (implementation / 구현) đặc tả hợp đồng (contract / 계약), không nên đoán từ lớp (class / 클래스) definition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểu (type / 타입) ở nguồn (source / 소스) không tự quyết định nhị phân (binary / 이진) biểu diễn (representation / 표현)
 
 Một `String`, `boolean`, đối tượng (object / 객체) tham chiếu (reference / 참조) hay generic collection ở managed ngôn ngữ (language / 언어) thường không có nhị phân (binary / 이진) bố cục (layout / 레이아웃) giống `char*`, `bool` hay C struct.
@@ -94,6 +113,8 @@ Ví dụ Java `String` không nên được suy luận là một C NUL-terminate
 
 Signature nhìn giống nhau ở nguồn (source / 소스) chưa đủ chứng minh interoperability.
 
+> **Chuyển mạch:** Ở chặng này của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Kiểu (type / 타입) ở nguồn (source / 소스) không tự quyết định nhị phân (binary / 이진) biểu diễn (representation / 표현)** nêu điều cần giải thích; **Đối tượng (object / 객체) bố cục (layout / 레이아웃) là hiện thực (implementation / 구현) đặc tả hợp đồng (contract / 계약), không nên đoán từ lớp (class / 클래스) definition** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명) là nơi FFI bug thường nghiêm trọng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đối tượng (object / 객체) bố cục (layout / 레이아웃) là hiện thực (implementation / 구현) đặc tả hợp đồng (contract / 계약), không nên đoán từ lớp (class / 클래스) definition
 
 Đối tượng (object / 객체) trong managed thời gian chạy (runtime / 런타임) có thể chứa header, mark word, lớp (class / 클래스) pointer, alignment padding hoặc compressed tham chiếu (reference / 참조) tùy thời gian chạy (runtime / 런타임)/cấu hình (configuration / 구성). GC cũng có thể di chuyển đối tượng (object / 객체).
@@ -103,6 +124,8 @@ Bản địa (native / 네이티브) mã (code / 코드) giữ raw pointer tới
 Ngược lại, pin quá nhiều đối tượng (object / 객체) để giữ address cố định có thể làm GC khó compact vùng nhớ động (heap / 힙) và tăng fragmentation/độ trễ (latency / 지연 시간).
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) trực tiếp giữa interop convenience và memory-management bất biến (invariant / 불변식).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명) là nơi FFI bug thường nghiêm trọng nhất** tiếp nhận điểm tựa từ **Đối tượng (object / 객체) bố cục (layout / 레이아웃) là hiện thực (implementation / 구현) đặc tả hợp đồng (contract / 계약), không nên đoán từ lớp (class / 클래스) definition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗi (error / 오류) mô hình (model / 모델) cũng phải được dịch qua ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명) là nơi FFI bug thường nghiêm trọng nhất
 
@@ -121,6 +144,8 @@ Free bộ nhớ (memory / 메모리) bằng allocator khác allocator đã alloc
 
 Senior-level FFI mã (code / 코드) vì vậy thường dùng tường minh (explicit / 명시적) quyền sở hữu (ownership / 소유권) wrapper, `close`/`dispose`/RAII guard hoặc safe handle lớp trừu tượng (abstraction / 추상화) thay vì truyền raw pointer tự do.
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명) là nơi FFI bug thường nghiêm trọng nhất** đã nêu tiêu chí phân biệt, còn **Lỗi (error / 오류) mô hình (model / 모델) cũng phải được dịch qua ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Luồng thực thi (thread / 스레드) attachment và thời gian chạy (runtime / 런타임) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lỗi (error / 오류) mô hình (model / 모델) cũng phải được dịch qua ranh giới (boundary / 경계)
 
 C có thể báo lỗi bằng return mã (code / 코드) + `errno`; C++ có exception; Java/Python có managed exception; Rust dùng `Result` và panic ngữ nghĩa (semantics / 의미론) riêng.
@@ -131,6 +156,8 @@ Nếu C++ exception unwind xuyên qua C ABI hoặc panic crossing unsupported FF
 
 Bất biến (invariant / 불변식) an toàn là: **mỗi thời gian chạy (runtime / 런타임) xử lý stack-unwinding theo đặc tả hợp đồng (contract / 계약) của chính nó; ranh giới (boundary / 경계) chuyển lỗi (error / 오류) bằng giao thức (protocol / 프로토콜) tường minh (explicit / 명시적)**.
 
+> **Chuyển mạch:** Ở chặng này của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Lỗi (error / 오류) mô hình (model / 모델) cũng phải được dịch qua ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Luồng thực thi (thread / 스레드) attachment và thời gian chạy (runtime / 런타임) trạng thái (state / 상태)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Crossing ranh giới (boundary / 경계) có fixed chi phí (cost / 비용) nên lời gọi (call / 호출) granularity quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Luồng thực thi (thread / 스레드) attachment và thời gian chạy (runtime / 런타임) trạng thái (state / 상태)
 
 Một bản địa (native / 네이티브) luồng thực thi (thread / 스레드) do foreign thư viện (library / 라이브러리) tạo ra chưa chắc đã được managed thời gian chạy (runtime / 런타임) biết tới. Muốn gọi callback vào JVM/Python/VM khác, luồng thực thi (thread / 스레드) có thể phải attach/acquire thời gian chạy (runtime / 런타임) trạng thái (state / 상태) hoặc tuân thủ toàn cục (global / 전역) trình thông dịch (interpreter / 인터프리터) khóa (lock / 잠금)/safepoint rules tùy ecosystem.
@@ -138,6 +165,8 @@ Một bản địa (native / 네이티브) luồng thực thi (thread / 스레�
 Ngược lại, giữ thời gian chạy (runtime / 런타임) khóa (lock / 잠금) khi gọi một bản địa (native / 네이티브) thao tác (operation / 연산) blocking lâu có thể làm các logical tasks khác bị stall.
 
 Hiệu năng (performance / 성능) của FFI không chỉ là nanoseconds lời gọi (call / 호출) overhead; nó còn phụ thuộc thread-state chuyển tiếp (transition / 전이), khóa (lock / 잠금), pin/bản sao (copy / 복사), allocation và callback frequency.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Luồng thực thi (thread / 스레드) attachment và thời gian chạy (runtime / 런타임) trạng thái (state / 상태)** đã nêu tiêu chí phân biệt, còn **Crossing ranh giới (boundary / 경계) có fixed chi phí (cost / 비용) nên lời gọi (call / 호출) granularity quan trọng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **ABI stability và phiên bản (version / 버전) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Crossing ranh giới (boundary / 경계) có fixed chi phí (cost / 비용) nên lời gọi (call / 호출) granularity quan trọng
 
@@ -158,6 +187,8 @@ actual I/O
 
 Nếu không, ta dễ kết luận sai “bản địa (native / 네이티브) mã (code / 코드) chậm” trong khi chi phí (cost / 비용) nằm ở conversion đường dẫn (path / 경로).
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Crossing ranh giới (boundary / 경계) có fixed chi phí (cost / 비용) nên lời gọi (call / 호출) granularity quan trọng** đã nêu tiêu chí phân biệt, còn **ABI stability và phiên bản (version / 버전) evolution** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bảo mật (security / 보안): bản địa (native / 네이티브) ranh giới (boundary / 경계) có thể bỏ qua an toàn (safety / 안전) guarantees của ngôn ngữ (language / 언어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ABI stability và phiên bản (version / 버전) evolution
 
 Nguồn (source / 소스) API có thể tương thích nhưng bản địa (native / 네이티브) nhị phân (binary / 이진) vẫn hỏng nếu struct bố cục (layout / 레이아웃), symbol name, calling convention hoặc trình biên dịch (compiler / 컴파일러) ABI thay đổi. C ABI thường được dùng làm interoperability ranh giới (boundary / 경계) vì tương đối ổn và đơn giản hơn C++ ABI, nhưng vẫn cần tường minh (explicit / 명시적) versioning/kích thước (size / 크기) fields khi cấu trúc (structure / 구조) evolve.
@@ -172,6 +203,8 @@ destroy_handle(handle)
 
 Caller không phụ thuộc trực tiếp nội bộ (internal / 내부) struct bố cục (layout / 레이아웃). Đây là thông tin (information / 정보) hiding ở nhị phân (binary / 이진) ranh giới (boundary / 경계).
 
+> **Chuyển mạch:** Ở chặng này của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **ABI stability và phiên bản (version / 버전) evolution** đã nêu tiêu chí phân biệt, còn **Bảo mật (security / 보안): bản địa (native / 네이티브) ranh giới (boundary / 경계) có thể bỏ qua an toàn (safety / 안전) guarantees của ngôn ngữ (language / 언어)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Debugging qua mixed ngăn xếp (stack / 스택)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bảo mật (security / 보안): bản địa (native / 네이티브) ranh giới (boundary / 경계) có thể bỏ qua an toàn (safety / 안전) guarantees của ngôn ngữ (language / 언어)
 
 Một memory-safe ngôn ngữ (language / 언어) gọi bản địa (native / 네이티브) thư viện (library / 라이브러리) không làm bản địa (native / 네이티브) thư viện (library / 라이브러리) trở nên memory-safe. Buffer overflow, use-after-free, integer truncation hoặc unchecked length ở FFI có thể phá tiến trình (process / 프로세스) dù phần ứng dụng (application / 애플리케이션) còn lại an toàn.
@@ -179,6 +212,8 @@ Một memory-safe ngôn ngữ (language / 언어) gọi bản địa (native / �
 Đầu vào (input / 입력) crossing FFI vẫn phải được validate theo trust ranh giới (boundary / 경계). Với parser/codec/ảnh (image / 이미지)/bản địa (native / 네이티브) crypto thư viện (library / 라이브러리) xử lý bytes từ mạng (network / 네트워크), bản địa (native / 네이티브) bug có thể trở thành remote attack surface.
 
 Sandbox/tiến trình (process / 프로세스) isolation đôi khi là ranh giới (boundary / 경계) tốt hơn in-process FFI nếu thành phần (component / 컴포넌트) bản địa (native / 네이티브) có rủi ro cao hoặc crash không được phép kéo theo tiến trình (process / 프로세스) chính.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Bảo mật (security / 보안): bản địa (native / 네이티브) ranh giới (boundary / 경계) có thể bỏ qua an toàn (safety / 안전) guarantees của ngôn ngữ (language / 언어)** đã nêu tiêu chí phân biệt, còn **Debugging qua mixed ngăn xếp (stack / 스택)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Reproducibility và tối ưu hóa (optimization / 최적화) traps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Debugging qua mixed ngăn xếp (stack / 스택)
 
@@ -188,15 +223,21 @@ Optimized mã (code / 코드) có thể inline/omit frames; JIT mã (code / 코�
 
 Một debugging workflow tốt xác định ranh giới (boundary / 경계) lời gọi (call / 호출) gần nhất rồi kiểm tra quyền sở hữu (ownership / 소유권), lengths, luồng thực thi (thread / 스레드) định danh (identity / 식별자), bản địa (native / 네이티브) lỗi (error / 오류)/crash address và phiên bản (version / 버전) của dùng chung (shared / 공유) thư viện (library / 라이브러리).
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Reproducibility và tối ưu hóa (optimization / 최적화) traps** tiếp nhận điểm tựa từ **Debugging qua mixed ngăn xếp (stack / 스택)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reproducibility và tối ưu hóa (optimization / 최적화) traps
 
 Microbenchmark dễ bị dead-code elimination, constant folding, JIT warmup, GC và CPU frequency changes. Benchmark khung phần mềm (framework / 프레임워크) như JMH tồn tại để giảm nhiều trap, nhưng vẫn cần representative tải công việc (workload / 워크로드).
 
 Với bản địa (native / 네이티브)/FFI benchmark còn phải kiểm soát thư viện (library / 라이브러리) bản dựng (build / 빌드) flags, symbol/phiên bản (version / 버전), allocator, CPU kiến trúc (architecture / 아키텍처) và marshalling đường dẫn (path / 경로). So sánh gỡ lỗi (debug / 디버그) bản địa (native / 네이티브) bản dựng (build / 빌드) với optimized managed bản dựng (build / 빌드) thường không có ý nghĩa.
 
+> **Chuyển mạch:** Ở chặng này của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reproducibility và tối ưu hóa (optimization / 최적화) traps** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) là **semantic-preserving transformation chuỗi xử lý (pipeline / 파이프라인)**. Khi chương trình đi qua FFI, nó rời một ngữ nghĩa (semantic / 의미적) universe duy nhất và phải dựng một đặc tả hợp đồng (contract / 계약) mới về nhị phân (binary / 이진) calling, biểu diễn (representation / 표현), quyền sở hữu (ownership / 소유권), lỗi (error / 오류), luồng thực thi (thread / 스레드) trạng thái (state / 상태) và thời gian tồn tại (lifetime / 수명). ABI nói hai nhị phân (binary / 이진) pieces “nói chuyện” thế nào; FFI quyết định cách ngữ nghĩa (semantics / 의미론) của hai thời gian chạy (runtime / 런타임) được dịch qua cuộc hội thoại đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -212,8 +253,10 @@ Với bản địa (native / 네이티브)/FFI benchmark còn phải kiểm soá
 
 **“FFI chậm chỉ vì hàm (function / 함수) lời gọi (call / 호출).”** bản sao (copy / 복사)/marshalling, thời gian chạy (runtime / 런타임) locks, pinning, allocation và lời gọi (call / 호출) granularity thường quyết định chi phí (cost / 비용) lớn hơn instruction `call`.
 
+> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối
 
 Formal ngôn ngữ (language / 언어)/computability ở [Computability](../basic/00_computation_information/04_computability_and_limits.md), machine mục tiêu (target / 대상) và calling convention ở [CPU/ISA](../basic/02_computer_architecture/01_cpu_isa_and_instruction_cycle.md) và [machine code/ABI](../basic/02_computer_architecture/04_machine_code_assembly_and_abi.md), thời gian chạy (runtime / 런타임) bộ nhớ (memory / 메모리) ở [types/memory](./01_types_values_references_and_memory.md), quyền sở hữu (ownership / 소유권) sâu hơn ở [Ownership, borrowing và linear types](./advanced/02_ownership_borrowing_linear_types_and_memory_safety.md), bản dựng (build / 빌드)/link chuỗi xử lý (pipeline / 파이프라인) ở [build/link/packages](../08_software_systems/01_version_control_build_link_and_packages.md), và sandbox ranh giới (boundary / 경계) ở [Memory safety, mitigations và sandbox](../07_security_reliability/advanced/04_memory_safety_mitigations_and_sandbox_boundaries.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language semantics and execution models](./00_language_semantics_and_execution_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

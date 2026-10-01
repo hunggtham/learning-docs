@@ -1,6 +1,6 @@
 # Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript
 
-> **Mạch đọc:** Đọc **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Đặc tả trước kiểm thử** sang **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đặc tả trước kiểm thử** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **DSA Testing & Benchmarking / 자료구조·알고리즘 테스트와 벤치마킹**
 
@@ -31,6 +31,8 @@ yêu cầu độ phức tạp nào là bắt buộc?
 
 Ví dụ `topK(items, k)` có thể trả một tập không thứ tự, một danh sách đã sắp xếp hoặc một thứ tự tùy ý giữa các phần tử bằng nhau. Nếu đặc tả mơ hồ, một kiểm thử “thất bại” có thể chỉ phản ánh hai cách hiểu khác nhau về hợp đồng.
 
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau** tiếp nhận điểm tựa từ **1. Đặc tả trước kiểm thử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Assertion như một đặc tả có thể thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau
 
 Hàng đợi phải giữ FIFO dù được cài bằng danh sách liên kết hay bộ đệm vòng. Kiểm thử hành vi công khai không nên phụ thuộc cách biểu diễn bên trong.
@@ -47,6 +49,8 @@ Segment Tree: nút cha = phép gộp của các nút con
 ```
 
 Kiểm thử hành vi bảo vệ lớp trừu tượng; kiểm tra bất biến giúp phát hiện hỏng cấu trúc sớm hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **3. Assertion như một đặc tả có thể thực thi** tiếp nhận điểm tựa từ **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. đơn vị (unit / 단위) kiểm thử (test / 테스트) nên bắt đầu từ trường hợp biên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Assertion như một đặc tả có thể thực thi
 
@@ -67,6 +71,8 @@ validateFreeList()
 Assertion không thay cho việc kiểm tra đầu vào ở ranh giới API. Nó dùng để phát hiện giả định của lập trình viên bị phá vỡ.
 
 Một phép kiểm tra bất biến `O(n)` sau mỗi cập nhật có thể quá đắt cho môi trường vận hành (production / 운영 환경) nhưng hoàn toàn hợp lý trong kiểm thử ngẫu nhiên.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **4. đơn vị (unit / 단위) kiểm thử (test / 테스트) nên bắt đầu từ trường hợp biên** tiếp nhận điểm tựa từ **3. Assertion như một đặc tả có thể thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Kiểm thử đối chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. đơn vị (unit / 단위) kiểm thử (test / 테스트) nên bắt đầu từ trường hợp biên
 
@@ -97,6 +103,8 @@ gộp hai thành phần
 
 Không nên chỉ kiểm thử trạng thái “bình thường ở giữa”.
 
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **4. đơn vị (unit / 단위) kiểm thử (test / 테스트) nên bắt đầu từ trường hợp biên** đã nêu tiêu chí phân biệt, còn **5. Kiểm thử đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Kiểm thử dựa trên tính chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Kiểm thử đối chiếu
 
 **Kiểm thử đối chiếu (differential testing)** chạy cách triển khai cần kiểm tra và một cách làm tham chiếu đơn giản trên cùng đầu vào.
@@ -111,6 +119,8 @@ Quickselect           vs sắp xếp toàn bộ
 ```
 
 Bộ tham chiếu không cần nhanh. Với đầu vào nhỏ, một cách làm chậm nhưng đơn giản thường đáng tin hơn một “oracle” tối ưu nhưng phức tạp.
+
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **5. Kiểm thử đối chiếu** đã nêu tiêu chí phân biệt, còn **6. Kiểm thử dựa trên tính chất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Kiểm thử biến hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Kiểm thử dựa trên tính chất
 
@@ -141,6 +151,8 @@ mọi vị trí trước đáp án không thỏa điều kiện
 
 Kiểm thử dựa trên tính chất thường gần với đặc tả toán học hơn một tập nhỏ các ví dụ viết tay.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **7. Kiểm thử biến hình** tiếp nhận điểm tựa từ **6. Kiểm thử dựa trên tính chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Kiểm thử dựa trên mô hình cho cấu trúc có trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Kiểm thử biến hình
 
 Khi khó tạo một oracle trực tiếp, có thể biến đổi đầu vào theo một quan hệ đã biết và kiểm tra đầu ra biến đổi tương ứng.
@@ -156,6 +168,8 @@ nhân mọi trọng số MST dương với cùng c -> cấu trúc tối ưu tư�
 ```
 
 Đây được gọi là **kiểm thử biến hình (metamorphic testing)** và đặc biệt hữu ích với đồ thị, tối ưu hóa và thuật toán ngẫu nhiên.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **8. Kiểm thử dựa trên mô hình cho cấu trúc có trạng thái** tiếp nhận điểm tựa từ **7. Kiểm thử biến hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Fuzzing có trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Kiểm thử dựa trên mô hình cho cấu trúc có trạng thái
 
@@ -179,6 +193,8 @@ kiểm tra bất biến
 
 Ví dụ, deque tự cài đặt có thể được đối chiếu với deque của thư viện chuẩn. Phương pháp này rất hiệu quả với lỗi chỉ xuất hiện sau một chuỗi thao tác dài.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **9. Fuzzing có trạng thái** tiếp nhận điểm tựa từ **8. Kiểm thử dựa trên mô hình cho cấu trúc có trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Thu nhỏ trường hợp lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Fuzzing có trạng thái
 
 Fuzzer không nhất thiết chỉ sinh một đầu vào độc lập. Nó có thể sinh chuỗi thao tác phụ thuộc trạng thái:
@@ -194,6 +210,8 @@ remove index 0
 
 Cách này có thể phát hiện lỗi thay đổi kích thước, con trỏ cũ, sai lệch siêu dữ liệu hoặc lỗi xóa ở trường hợp góc. Luôn ghi lại hạt giống và chuỗi thao tác để tái hiện lỗi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **10. Thu nhỏ trường hợp lỗi** tiếp nhận điểm tựa từ **9. Fuzzing có trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Bộ sinh dữ liệu phải biết các dạng lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Thu nhỏ trường hợp lỗi
 
 Một chuỗi 100.000 thao tác gây lỗi ít hữu ích hơn một chuỗi 7 thao tác tối thiểu vẫn gây cùng lỗi. **Thu nhỏ (shrinking/minimization)** cố loại bớt thao tác hoặc giảm giá trị trong khi vẫn giữ lỗi.
@@ -207,6 +225,8 @@ lặp lại
 ```
 
 Phản ví dụ nhỏ thường làm nguyên nhân phá bất biến trở nên rõ ràng.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **10. Thu nhỏ trường hợp lỗi** nêu điều cần giải thích; **11. Bộ sinh dữ liệu phải biết các dạng lỗi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Hạt giống phải tái hiện được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Bộ sinh dữ liệu phải biết các dạng lỗi
 
@@ -227,6 +247,8 @@ Bảng băm nên thử va chạm nhiều, chèn/xóa liên tục, ngưỡng hệ
 
 Bộ sinh tốt tạo **trường hợp đối nghịch có cấu trúc**, không chỉ tạo nhiễu ngẫu nhiên.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **11. Bộ sinh dữ liệu phải biết các dạng lỗi** nêu điều cần giải thích; **12. Hạt giống phải tái hiện được** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Kiểm thử thuật toán ngẫu nhiên mà không làm kiểm thử (test / 테스트) chập chờn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Hạt giống phải tái hiện được
 
 Mọi kiểm thử ngẫu nhiên và benchmark có sinh dữ liệu nên cho phép cấu hình hạt giống. Báo cáo lỗi nên chứa:
@@ -241,6 +263,8 @@ chuỗi thao tác hoặc trường hợp đã sinh
 
 Không tái hiện được lỗi sẽ làm chi phí gỡ lỗi tăng mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **13. Kiểm thử thuật toán ngẫu nhiên mà không làm kiểm thử (test / 테스트) chập chờn** tiếp nhận điểm tựa từ **12. Hạt giống phải tái hiện được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Kiểm thử cấu trúc dữ liệu xác suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Kiểm thử thuật toán ngẫu nhiên mà không làm kiểm thử (test / 테스트) chập chờn
 
 Không nên kiểm tra kiểu “Quickselect luôn dùng ít hơn X phép so sánh” trong một lần chạy ngẫu nhiên. Thay vào đó:
@@ -252,6 +276,8 @@ kiểm tra thống kê về hiệu năng/xác suất ở một bài test riêng 
 ```
 
 Cấu trúc xác suất cần kiểm tra thống kê trên nhiều lần thử với dung sai và mức tin cậy phù hợp.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **13. Kiểm thử thuật toán ngẫu nhiên mà không làm kiểm thử (test / 테스트) chập chờn** nêu điều cần giải thích; **14. Kiểm thử cấu trúc dữ liệu xác suất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Mutation testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Kiểm thử cấu trúc dữ liệu xác suất
 
@@ -278,6 +304,8 @@ thống kê sai số phù hợp với tham số cấu hình
 
 Bảo đảm thống kê phải được kiểm thử bằng tiêu chí thống kê, không phải bằng so sánh bằng tuyệt đối.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **14. Kiểm thử cấu trúc dữ liệu xác suất** nêu điều cần giải thích; **15. Mutation testing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Benchmark khác kiểm thử ở mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Mutation testing
 
 Một cách đánh giá chất lượng bộ kiểm thử (test suite / 테스트 스위트) là cố tình đưa vào các lỗi nhỏ:
@@ -292,6 +320,8 @@ sai biên +1
 
 Nếu toàn bộ kiểm thử (test / 테스트) vẫn vượt qua, bộ kiểm thử đang thiếu khả năng phát hiện hành vi đó. **Mutation testing** đặc biệt hữu ích với DSA vì nhiều lỗi chỉ là một dòng nhưng phá bất biến sâu bên trong.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **16. Benchmark khác kiểm thử ở mục tiêu** tiếp nhận điểm tựa từ **15. Mutation testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Đo ở nhiều quy mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Benchmark khác kiểm thử ở mục tiêu
 
 Kiểm thử hỏi đúng hay sai. Benchmark hỏi chi phí bao nhiêu.
@@ -299,6 +329,8 @@ Kiểm thử hỏi đúng hay sai. Benchmark hỏi chi phí bao nhiêu.
 Không nên đặt các hàm xác minh nặng vào bên trong vòng đo đường chạy nóng nếu chúng không thuộc tải công việc thật. Khâu chuẩn bị dữ liệu cũng cần tách ra nếu câu hỏi chỉ là chi phí của một thao tác cụ thể.
 
 Ví dụ, nếu đo `HashMap.get`, nên tạo sẵn map trước khi bắt đầu tính giờ, trừ khi mục tiêu thật sự là đo cả quá trình xây dựng và tra cứu.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **17. Đo ở nhiều quy mô** tiếp nhận điểm tựa từ **16. Benchmark khác kiểm thử ở mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Hình dạng đầu vào là một chiều của benchmark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Đo ở nhiều quy mô
 
@@ -318,6 +350,8 @@ hơn 2 lần một chút -> có thể là n log n hoặc hiệu ứng bộ nhớ
 
 Đây không phải chứng minh Big-O, nhưng rất hữu ích để phát hiện suy giảm độ phức tạp ngoài ý muốn.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **18. Hình dạng đầu vào là một chiều của benchmark** tiếp nhận điểm tựa từ **17. Đo ở nhiều quy mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Thông lượng và độ trễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Hình dạng đầu vào là một chiều của benchmark
 
 Hiệu năng Quicksort phụ thuộc cách chọn pivot và thứ tự đầu vào. Bảng băm phụ thuộc phân phối khóa. Thuật toán đồ thị phụ thuộc mật độ. DP phụ thuộc mật độ trạng thái đạt tới được.
@@ -334,6 +368,8 @@ bộ nhớ đệm nóng/lạnh
 
 Một tập dữ liệu ngẫu nhiên đồng đều duy nhất không đại diện cho mọi tải công việc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **19. Thông lượng và độ trễ** tiếp nhận điểm tựa từ **18. Hình dạng đầu vào là một chiều của benchmark** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Bộ nhớ đệm nóng và lạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Thông lượng và độ trễ
 
 **thông lượng (throughput / 처리량)** thường đo số thao tác mỗi giây. **độ trễ (latency / 지연 시간)** đo thời gian cho một thao tác hoặc yêu cầu.
@@ -349,6 +385,8 @@ p99
 max
 ```
 
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **20. Bộ nhớ đệm nóng và lạnh** tiếp nhận điểm tựa từ **19. Thông lượng và độ trễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. C: tối ưu hóa của trình biên dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Bộ nhớ đệm nóng và lạnh
 
 Quét lặp lại cùng một mảng có thể chủ yếu đo trường hợp dữ liệu đã nằm trong bộ nhớ đệm (cache / 캐시). Điều này khác với lần truy cập đầu tiên hoặc tải công việc có tập dữ liệu lớn hơn LLC.
@@ -361,6 +399,8 @@ lần truy cập đầu tiên?
 tập làm việc lớn hơn cache?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **21. C: tối ưu hóa của trình biên dịch** tiếp nhận điểm tựa từ **20. Bộ nhớ đệm nóng và lạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. C: bộ cấp phát là một phần của tải công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. C: tối ưu hóa của trình biên dịch
 
 Benchmark C với `-O0` không đại diện cho bản dựng môi trường vận hành (production / 운영 환경) đã tối ưu. Cần ghi lại cờ biên dịch, phiên bản trình biên dịch (compiler / 컴파일러) và kiến trúc đích.
@@ -369,6 +409,8 @@ Trình biên dịch (compiler / 컴파일러) còn có thể loại bỏ phép t
 
 Nếu chương trình có hành vi không xác định (undefined behavior), kết luận hiệu năng có thể hoàn toàn vô nghĩa vì optimizer được phép giả định UB không xảy ra.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **22. C: bộ cấp phát là một phần của tải công việc** tiếp nhận điểm tựa từ **21. C: tối ưu hóa của trình biên dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. C: sanitizer và benchmark phải tách riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. C: bộ cấp phát là một phần của tải công việc
 
 Danh sách liên kết gọi `malloc` cho từng nút đang đo cả thuật toán lẫn bộ cấp phát. Điều đó đúng nếu hệ thống thật cũng cấp phát như vậy.
@@ -376,6 +418,8 @@ Danh sách liên kết gọi `malloc` cho từng nút đang đo cả thuật to�
 Nếu muốn tách riêng chi phí duyệt, có thể cấp phát trước các nút. Nếu muốn so arena với `malloc`, thao tác cấp phát phải nằm trong vùng đo.
 
 Không có benchmark “thuần cấu trúc dữ liệu” tách hoàn toàn khỏi cách biểu diễn nếu cấp phát chính là một phần của cách triển khai.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **23. C: sanitizer và benchmark phải tách riêng** tiếp nhận điểm tựa từ **22. C: bộ cấp phát là một phần của tải công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Java: làm nóng JIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. C: sanitizer và benchmark phải tách riêng
 
@@ -389,6 +433,8 @@ benchmark bằng bản dựng tối ưu riêng
 ```
 
 Tính đúng đắn trước, hiệu năng sau.
+
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **24. Java: làm nóng JIT** tiếp nhận điểm tựa từ **23. C: sanitizer và benchmark phải tách riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Java: GC và tốc độ cấp phát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Java: làm nóng JIT
 
@@ -406,6 +452,8 @@ state scopes
 
 Tự viết một vòng `System.nanoTime()` rất dễ gặp tối ưu loại mã chết, gộp hằng hoặc làm nóng không đủ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **25. Java: GC và tốc độ cấp phát** tiếp nhận điểm tựa từ **24. Java: làm nóng JIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Java: escape phân tích (analysis / 분석) và scalar replacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Java: GC và tốc độ cấp phát
 
 Hai thuật toán có độ trễ trung bình giống nhau có thể có tốc độ cấp phát rất khác. Cấp phát nhiều làm GC hoạt động nhiều hơn và có thể ảnh hưởng độ trễ đuôi.
@@ -421,11 +469,15 @@ peak/live heap
 
 Mảng kiểu nguyên thủy và collection chứa đối tượng (object / 객체) đóng hộp có thể tạo khác biệt lớn về bộ nhớ và GC.
 
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **26. Java: escape phân tích (analysis / 분석) và scalar replacement** tiếp nhận điểm tựa từ **25. Java: GC và tốc độ cấp phát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. JavaScript: JIT và hình dạng dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Java: escape phân tích (analysis / 분석) và scalar replacement
 
 JIT có thể loại bỏ một số cấp phát ngắn hạn nếu đối tượng không thoát khỏi phạm vi phân tích. Một microbenchmark quá nhân tạo có thể được tối ưu khác xa hệ thống thật, nơi đối tượng (object / 객체) thoát qua collection hoặc API.
 
 Benchmark nên mô phỏng vòng đời dữ liệu thật; không nên suy rộng quá xa từ một ví dụ nhỏ sang toàn bộ dịch vụ.
+
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **26. Java: escape phân tích (analysis / 분석) và scalar replacement** nêu điều cần giải thích; **27. JavaScript: JIT và hình dạng dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. JavaScript: vòng lặp sự kiện (event loop / 이벤트 루프) và nhiễu bất đồng bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. JavaScript: JIT và hình dạng dữ liệu
 
@@ -433,17 +485,23 @@ Engine JavaScript tối ưu dựa trên phản hồi khi chạy. Kiểu dữ li�
 
 Dữ liệu benchmark phải có hình dạng gần tải công việc thật. Một phép đo chỉ dùng mảng số dày đặc không đại diện cho hệ thống chứa đối tượng (object / 객체) và chuỗi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **27. JavaScript: JIT và hình dạng dữ liệu** nêu điều cần giải thích; **28. JavaScript: vòng lặp sự kiện (event loop / 이벤트 루프) và nhiễu bất đồng bộ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. JavaScript: độ phân giải thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. JavaScript: vòng lặp sự kiện (event loop / 이벤트 루프) và nhiễu bất đồng bộ
 
 Nếu đo DSA thuần CPU trong nút (node / 노드).js hoặc trình duyệt, nên tách mạng, tệp (file / 파일), timer và các nguồn nhiễu khác càng nhiều càng tốt.
 
 `async` không làm một thuật toán CPU-bound nhanh hơn; nó thay đổi cách lập lịch. Chỉ đưa thời gian chờ vòng lặp sự kiện (event loop / 이벤트 루프) vào benchmark nếu đó thực sự là một phần của tải công việc cần nghiên cứu.
 
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **29. JavaScript: độ phân giải thời gian** tiếp nhận điểm tựa từ **28. JavaScript: vòng lặp sự kiện (event loop / 이벤트 루프) và nhiễu bất đồng bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Benchmark đa ngôn ngữ phải định nghĩa câu hỏi trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. JavaScript: độ phân giải thời gian
 
 Thao tác quá nhanh cần được lặp theo lô để thời gian đo vượt nhiễu và độ phân giải của đồng hồ. Tuy nhiên, lặp quá nhiều có thể chuyển chương trình sang chế độ JIT hoặc GC khác.
 
 Nên đo nhiều lần, bỏ giai đoạn làm nóng và xem phân phối kết quả thay vì chỉ lấy một lần chạy.
+
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **30. Benchmark đa ngôn ngữ phải định nghĩa câu hỏi trước** tiếp nhận điểm tựa từ **29. JavaScript: độ phân giải thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Công bằng không có nghĩa là mã nguồn giống hệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Benchmark đa ngôn ngữ phải định nghĩa câu hỏi trước
 
@@ -464,17 +522,23 @@ cờ compiler
 giới hạn bộ nhớ
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **30. Benchmark đa ngôn ngữ phải định nghĩa câu hỏi trước** nêu điều cần giải thích; **31. Công bằng không có nghĩa là mã nguồn giống hệt** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **32. Tính đúng đắn phải tương đương trước khi so hiệu năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Công bằng không có nghĩa là mã nguồn giống hệt
 
 Java dùng `int[]`, JavaScript dùng `TypedArray` và C dùng mảng phẳng có thể là một so sánh công bằng hơn việc ép cả ba dùng cấu trúc object-heavy giống nhau về hình thức.
 
 Phải nói rõ đang so **cách triển khai hợp lý nhất cho cùng ngữ nghĩa** hay **cùng một cấu trúc cấp cao được mô phỏng giống nhau**. Đây là hai câu hỏi nghiên cứu khác nhau.
 
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **31. Công bằng không có nghĩa là mã nguồn giống hệt** nêu điều cần giải thích; **32. Tính đúng đắn phải tương đương trước khi so hiệu năng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **33. Ngữ nghĩa số giữa các ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Tính đúng đắn phải tương đương trước khi so hiệu năng
 
 Trước khi đo thời gian giữa các ngôn ngữ, phải xác nhận đầu ra và miền số tương đương. Nếu C dùng số nguyên 64 bit còn JavaScript dùng `Number` đã mất độ chính xác, hai chương trình không còn giải cùng một bài toán về mặt ngữ nghĩa.
 
 Tương tự, nếu quy tắc phá hòa hoặc tính ổn định khi sắp xếp khác nhau, hợp đồng đầu ra cũng khác.
+
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **33. Ngữ nghĩa số giữa các ngôn ngữ** tiếp nhận điểm tựa từ **32. Tính đúng đắn phải tương đương trước khi so hiệu năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Dung lượng bộ nhớ thực tế giữa các ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Ngữ nghĩa số giữa các ngôn ngữ
 
@@ -483,6 +547,8 @@ C có thể có hành vi không xác định khi số nguyên có dấu tràn tr
 Thuật toán đếm hoặc cộng khoảng cách phải dùng cách biểu diễn tương đương, hoặc tài liệu phải ghi rõ khác biệt ngữ nghĩa.
 
 `BigInt` trong JavaScript và `BigInteger` trong Java cũng có chi phí khác đáng kể so với kiểu số nguyên nguyên thủy.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **34. Dung lượng bộ nhớ thực tế giữa các ngôn ngữ** tiếp nhận điểm tựa từ **33. Ngữ nghĩa số giữa các ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. CPU profiling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 34. Dung lượng bộ nhớ thực tế giữa các ngôn ngữ
 
@@ -495,6 +561,8 @@ JS   -> object shape + vùng lưu thuộc tính của engine
 ```
 
 Không thể chỉ đếm “một triệu nút” rồi kết luận bộ nhớ giống nhau. Nên đo lượng bộ nhớ thực tế. Mảng phẳng, `TypedArray` và mảng kiểu nguyên thủy thường cho cách so sánh bố trí dữ liệu rõ hơn đồ thị đối tượng (object / 객체).
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **35. CPU profiling** tiếp nhận điểm tựa từ **34. Dung lượng bộ nhớ thực tế giữa các ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Bộ đếm phần cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. CPU profiling
 
@@ -512,6 +580,8 @@ runtime helper
 
 Tối ưu mà không profile rất dễ tập trung sai chỗ.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **36. Bộ đếm phần cứng** tiếp nhận điểm tựa từ **35. CPU profiling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Benchmark bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. Bộ đếm phần cứng
 
 Trong môi trường bản địa (native / 네이티브) hoặc nhạy về hiệu năng, các chỉ số như:
@@ -524,6 +594,8 @@ branch misses
 ```
 
 có thể giải thích vì sao hai cách triển khai cùng `O(n)` lại chênh lệch mạnh. Mảng và danh sách liên kết là ví dụ điển hình do tính cục bộ bộ nhớ khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **37. Benchmark bộ nhớ** tiếp nhận điểm tựa từ **36. Bộ đếm phần cứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Benchmark đầu-cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 37. Benchmark bộ nhớ
 
@@ -539,6 +611,8 @@ fragmentation
 ```
 
 Bảng băm có ô dự phòng, cây có con trỏ hoặc đối tượng (object / 객체) header, còn danh sách kề bằng đối tượng (object / 객체) có thể tốn nhiều hơn CSR dùng mảng phẳng.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **38. Benchmark đầu-cuối** tiếp nhận điểm tựa từ **37. Benchmark bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Benchmark xử lý đồng thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 38. Benchmark đầu-cuối
 
@@ -557,6 +631,8 @@ tranh chấp tài nguyên
 
 Profile trước khi tối ưu.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **39. Benchmark xử lý đồng thời** tiếp nhận điểm tựa từ **38. Benchmark đầu-cuối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Chia sẻ giả và tranh chấp dòng bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 39. Benchmark xử lý đồng thời
 
 Chi phí tuần tự không dự đoán trực tiếp thông lượng khi nhiều luồng cùng truy cập. Nên thay đổi:
@@ -573,11 +649,15 @@ Một concurrent map có thể mở rộng tốt khi khóa phân tán nhưng s�
 
 Nên báo cáo đường cong thông lượng theo số luồng, không chỉ một kết quả ở 8 luồng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **40. Chia sẻ giả và tranh chấp dòng bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **39. Benchmark xử lý đồng thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Kỷ luật thống kê trong benchmark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 40. Chia sẻ giả và tranh chấp dòng bộ nhớ đệm (cache / 캐시)
 
 Hai bộ đếm lô-gic (logic / 논리) khác nhau nhưng nằm trên cùng một dòng bộ nhớ đệm (cache / 캐시) có thể khiến các lõi liên tục chuyển quyền sở hữu dòng bộ nhớ đệm (cache / 캐시) cho nhau. Đây là **chia sẻ giả (false sharing)**.
 
 Khi benchmark mảng hoặc hàng đợi dùng đồng thời, cần cân nhắc padding và alignment nếu kết quả có dấu hiệu bất thường. Đây là hiệu ứng phần cứng nằm ngoài Big-O tuần tự nhưng có tác động thực tế lớn.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **41. Kỷ luật thống kê trong benchmark** tiếp nhận điểm tựa từ **40. Chia sẻ giả và tranh chấp dòng bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Benchmark hồi quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 41. Kỷ luật thống kê trong benchmark
 
@@ -593,6 +673,8 @@ phân tích outlier
 
 Bộ lập lịch hệ điều hành, giới hạn nhiệt, tiến trình nền và thay đổi tần số CPU đều tạo nhiễu. Không cần biến mọi benchmark thành nghiên cứu khoa học, nhưng phải đủ kỷ luật để tránh tự kết luận từ nhiễu.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **42. Benchmark hồi quy** tiếp nhận điểm tựa từ **41. Kỷ luật thống kê trong benchmark** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Kiểm tra hồi quy độ phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 42. Benchmark hồi quy
 
 Benchmark hữu ích khi được chạy lặp lại qua lần ghi nhận (commit / 커밋) hoặc bản phát hành (release / 릴리스) với ngưỡng hợp lý.
@@ -606,6 +688,8 @@ bộ nhớ cực đại của graph parser không tăng quá 15%
 
 Ngưỡng phải chừa khoảng cho nhiễu. Một microbenchmark quá chập chờn sẽ làm CI mất giá trị.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **43. Kiểm tra hồi quy độ phức tạp** tiếp nhận điểm tựa từ **42. Benchmark hồi quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Benchmark đầu vào đối nghịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 43. Kiểm tra hồi quy độ phức tạp
 
 Có thể kiểm tra tỷ lệ tăng theo quy mô thay vì chỉ dùng số mili giây tuyệt đối.
@@ -617,6 +701,8 @@ time(2n) / time(n)
 ```
 
 không nên liên tục tiến gần 4 trong một miền `n` đủ lớn và ổn định. Cách này không chứng minh độ phức tạp nhưng có thể phát hiện vòng lặp lồng nhau ngoài ý muốn hoặc sao chép ẩn.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **44. Benchmark đầu vào đối nghịch** tiếp nhận điểm tựa từ **43. Kiểm tra hồi quy độ phức tạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Báo cáo benchmark có thể tái hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 44. Benchmark đầu vào đối nghịch
 
@@ -631,6 +717,8 @@ ranh giới thay đổi dung lượng cực đại
 ```
 
 Nếu API công khai hoặc hệ thống nhạy với độ trễ, hành vi trường hợp xấu nhất có thể trở thành vấn đề bảo mật hoặc độ tin cậy.
+
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **45. Báo cáo benchmark có thể tái hiện** tiếp nhận điểm tựa từ **44. Benchmark đầu vào đối nghịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Quy trình hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 45. Báo cáo benchmark có thể tái hiện
 
@@ -649,6 +737,8 @@ cấu hình warmup và measurement
 ```
 
 Không có siêu dữ liệu, kết quả vài tháng sau gần như không thể kiểm tra lại.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **45. Báo cáo benchmark có thể tái hiện** xác định đầu vào; **46. Quy trình hoàn chỉnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **47. Ví dụ: hàng đợi ưu tiên tự cài đặt trên ba ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 46. Quy trình hoàn chỉnh
 
@@ -671,6 +761,8 @@ Không có siêu dữ liệu, kết quả vài tháng sau gần như không th�
 **Bước 9 — Benchmark đầu-cuối:** dùng tải công việc gần hệ thống thực tế.
 
 **Bước 10 — Tự động hóa hồi quy:** giữ tính đúng đắn và hiệu năng qua các thay đổi.
+
+> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, sau khi thấy quy trình trong **46. Quy trình hoàn chỉnh**, **47. Ví dụ: hàng đợi ưu tiên tự cài đặt trên ba ngôn ngữ** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **48. Các lỗi benchmark phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 47. Ví dụ: hàng đợi ưu tiên tự cài đặt trên ba ngôn ngữ
 
@@ -698,6 +790,8 @@ C cần xét chiến lược cấp phát, bố trí `struct` và cờ trình bi�
 
 Đó mới là một so sánh có ý nghĩa; chạy một vùng nhớ động (heap / 힙) 1.000 phần tử đúng một lần là chưa đủ.
 
+> **Chuyển mạch:** Ở chặng này của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **47. Ví dụ: hàng đợi ưu tiên tự cài đặt trên ba ngôn ngữ** cho ta quy tắc; **48. Các lỗi benchmark phổ biến** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 48. Các lỗi benchmark phổ biến
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -715,6 +809,8 @@ kết luận từ một giá trị trung bình duy nhất
 lấy microbenchmark để suy ra toàn bộ ứng dụng
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **Mô hình tư duy** gom các mảnh từ **48. Các lỗi benchmark phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > **Chứng minh** giải thích vì sao thuật toán đúng và tăng trưởng ra sao. **Kiểm thử** cố phá cách triển khai. **Benchmark** đo chi phí thật dưới một tải công việc và môi trường cụ thể.
@@ -722,3 +818,5 @@ lấy microbenchmark để suy ra toàn bộ ứng dụng
 Ba lớp này phải liên kết với nhau nhưng không thay thế nhau. Một cách triển khai DSA tốt là nơi **hợp đồng toán học, kiểm thử có thể thực thi và số liệu hiệu năng thực nghiệm** cùng mô tả nhất quán một hệ thống.
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [C Implementation](./00_c_dsa_implementation_patterns.md), [Java Collections](./01_java_collections_and_dsa.md), [JavaScript Runtime](./02_javascript_dsa_runtime_patterns.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

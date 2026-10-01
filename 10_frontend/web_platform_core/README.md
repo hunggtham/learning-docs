@@ -1,6 +1,6 @@
 # Nền tảng Web (web platform / 웹 플랫폼) cốt lõi (core / 핵심)
 
-> **Mạch đọc:** Đọc **Nền tảng Web (web platform / 웹 플랫폼) cốt lõi (core / 핵심)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **chuẩn gốc (canonical / 정본) conceptual spine** sang **Cách đọc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng Web (web platform / 웹 플랫폼) cốt lõi (core / 핵심)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) conceptual spine** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Cách đọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 `web_platform_core/` là đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) cho các concept đứng trước một
 khung phần mềm (framework / 프레임워크) frontend cụ thể. Lớp này trả lời trình duyệt (browser / 브라우저) thực thi document, style,
@@ -8,8 +8,6 @@ script, đầu vào (input / 입력) và mạng (network / 네트워크) như th
 WebSquare sau đó hiện thực hoặc mở rộng các concept đó ở những ranh giới (boundary / 경계) riêng.
 
 ## Chuẩn gốc (canonical / 정본) conceptual spine
-Phần “Chuẩn gốc (canonical / 정본) conceptual spine” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 Web Platform
@@ -35,8 +33,7 @@ bảo mật (security / 보안) và hiệu năng (performance / 성능) là tín
 WebSquare tổ chức những thành phần nguyên thủy (primitive / 기본 요소) này thành mô hình ứng dụng (application model / 애플리케이션 모델) riêng nhưng
 không thay đổi ngữ nghĩa (semantics / 의미론) của HTML, DOM, CSS hoặc trình duyệt (browser / 브라우저) ranh giới bảo mật (security boundary / 보안 경계).
 
-
-> **Chuyển mạch:** Từ **chuẩn gốc (canonical / 정본) conceptual spine**, ta sang **Cách đọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Conceptual spine xác định thứ tự từ browser runtime tới framework boundary; **Cách đọc** biến thứ tự đó thành route có prerequisite. Ranh giới và ownership tiếp theo ghi rõ phần nào thuộc web core, phần nào thuộc nhánh implementation.
 
 ## Cách đọc
 
@@ -64,8 +61,7 @@ toàn bộ lớp cốt lõi (core / 핵심). Sau vòng đọc này, chọn nhán
 - [React](../react/00_index.md) và [WebSquare](../websquare/README.md) sở hữu
   khung phần mềm (framework / 프레임워크) vòng đời (lifecycle / 생명주기), composition, trạng thái (state / 상태) và môi trường vận hành (production / 운영 환경) tích hợp (integration / 통합).
 
-
-> **Chuyển mạch:** Từ **Cách đọc**, ta sang **ranh giới (boundary / 경계) và nguyên tắc quyền sở hữu (ownership / 소유권)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Route đã chỉ ra prerequisite và owner; phần boundary/ownership dùng chúng để ngăn duplicate giữa HTML, CSS, JavaScript, React và WebSquare. Đây là điều kiện để chọn nhánh học tiếp mà không mất mental model web platform.
 
 ## Ranh giới (boundary / 경계) và nguyên tắc quyền sở hữu (ownership / 소유권)
 
@@ -85,4 +81,4 @@ Khi một khái niệm đã có đơn vị sở hữu (owner / 오너) sâu hơn
 sao. Khi một khung phần mềm (framework / 프레임워크) có hành vi (behavior / 동작) riêng, luôn tách trình duyệt (browser / 브라우저) thành phần nguyên thủy (primitive / 기본 요소),
 khung phần mềm (framework / 프레임워크) lớp trừu tượng (abstraction / 추상화) và đặc tả ứng dụng (application contract / 애플리케이션 계약) trước khi kết luận nguyên nhân.
 
-> **Bàn giao:** Sau **ranh giới (boundary / 경계) và nguyên tắc quyền sở hữu (ownership / 소유권)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 web platform model](./00_web_platform_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Ranh giới (boundary / 경계) và nguyên tắc quyền sở hữu (ownership / 소유권)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị
 
-> **Mạch đọc:** Đọc **trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Mô hình đồ thị** sang **2. Adjacency danh sách (list / 목록) hay ma trận (matrix / 행렬)?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mô hình đồ thị** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Adjacency danh sách (list / 목록) hay ma trận (matrix / 행렬)?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Routing hệ thống (system / 시스템) trường hợp (case / 사례) Study / 라우팅 시스템 설계 사례**
 
@@ -20,6 +20,8 @@ latency / cost / hop        -> trọng số
 
 Nếu link hai chiều có chi phí khác nhau theo từng hướng, mô hình đúng là hai cạnh có hướng chứ không phải một cạnh vô hướng.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **2. Adjacency danh sách (list / 목록) hay ma trận (matrix / 행렬)?** tiếp nhận điểm tựa từ **1. Mô hình đồ thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dijkstra và bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Adjacency danh sách (list / 목록) hay ma trận (matrix / 행렬)?
 
 Mạng thực thường thưa: mỗi router chỉ nối trực tiếp một phần nhỏ tổng số router. Vì vậy danh sách kề thường có bộ nhớ:
@@ -31,6 +33,8 @@ O(V+E)
 và duyệt cạnh hiệu quả hơn ma trận `O(V^2)`.
 
 Nếu cần kiểm tra adjacency cực thường xuyên trên đồ thị nhỏ/dày, ma trận (matrix / 행렬) có thể hợp lý. biểu diễn (representation / 표현) phải theo tải công việc (workload / 워크로드).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **3. Dijkstra và bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **2. Adjacency danh sách (list / 목록) hay ma trận (matrix / 행렬)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lazy Priority hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Dijkstra và bất biến (invariant / 불변식)
 
@@ -45,6 +49,8 @@ Khi một đỉnh `u` được lấy ra với khoảng cách nhỏ nhất còn h
 Lý do là mọi đường đi khác chưa xét phải đi qua các đỉnh có khoảng cách ít nhất bằng `dist[u]`; với cạnh không âm, chúng không thể tạo đường tới `u` ngắn hơn giá trị hiện tại.
 
 Priority hàng đợi (queue / 큐) giúp chọn frontier nhỏ nhất nhanh hơn quét toàn bộ đỉnh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **4. Lazy Priority hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **3. Dijkstra và bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Tie-break không chỉ là chi tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Lazy Priority hàng đợi (queue / 큐)
 
@@ -62,6 +68,8 @@ nếu d != dist[node] -> bỏ qua entry cũ
 
 Đây là một ví dụ dùng thêm bộ nhớ để đổi lấy hiện thực (implementation / 구현) đơn giản và robust.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **5. Tie-break không chỉ là chi tiết** tiếp nhận điểm tựa từ **4. Lazy Priority hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Nếu trọng số có thể âm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Tie-break không chỉ là chi tiết
 
 Hai đường đi có cùng chi phí (cost / 비용) có thể cần tie-break theo:
@@ -75,6 +83,8 @@ policy cụ thể
 
 Nếu tie-break là một phần của đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약), comparator/trạng thái (state / 상태) phải phản ánh nó. Chỉ so `distance` có thể trả lời đúng về chi phí (cost / 비용) nhưng sai về ngữ nghĩa (semantics / 의미론) của sản phẩm.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **6. Nếu trọng số có thể âm?** tiếp nhận điểm tựa từ **5. Tie-break không chỉ là chi tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. All-pairs hay single-source?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Nếu trọng số có thể âm?
 
 Dijkstra không còn hợp lệ. Khi đó có thể cần Bellman–Ford hoặc mô hình khác.
@@ -83,6 +93,8 @@ Trong routing thực, chỉ số (metric / 지표) thường được thiết k�
 
 Đây là ví dụ lĩnh vực (domain / 도메인) ràng buộc (constraint / 제약조건) được chọn để làm thuật toán dễ và đáng tin cậy hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **6. Nếu trọng số có thể âm?** nêu điều cần giải thích; **7. All-pairs hay single-source?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. động (dynamic / 동적) topology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. All-pairs hay single-source?
 
 Nếu một router cần đường tới mọi đích, chạy single-source shortest đường dẫn (path / 경로) từ router đó là tự nhiên. Nếu hệ thống trung tâm cần mọi cặp trên đồ thị (graph / 그래프) nhỏ, Floyd–Warshall có thể hợp lý.
@@ -90,6 +102,8 @@ Nếu một router cần đường tới mọi đích, chạy single-source shor
 Nếu đồ thị (graph / 그래프) lớn và sparse, chạy Dijkstra từ nhiều nguồn có thể tốt hơn `O(V^3)`.
 
 Cần chọn thuật toán theo số nguồn truy vấn chứ không chỉ theo `V` và `E`.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **7. All-pairs hay single-source?** nêu điều cần giải thích; **8. động (dynamic / 동적) topology** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Link-state mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. động (dynamic / 동적) topology
 
@@ -103,6 +117,8 @@ Nguyên tắc thực dụng:
 update hiếm -> recompute đơn giản
 update dày -> cân nhắc incremental/dynamic algorithm
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **9. Link-state mô hình (model / 모델)** tiếp nhận điểm tựa từ **8. động (dynamic / 동적) topology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Distance-vector mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Link-state mô hình (model / 모델)
 
@@ -124,6 +140,8 @@ routing table
 
 DSA nằm ở đồ thị (graph / 그래프) lưu trữ (storage / 저장소) và shortest đường dẫn (path / 경로); phân tán (distributed / 분산) giao thức (protocol / 프로토콜) chịu trách nhiệm dissemination và convergence.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **10. Distance-vector mô hình (model / 모델)** tiếp nhận điểm tựa từ **9. Link-state mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Longest Prefix Match trong mặt phẳng dữ liệu (data plane / 데이터 플레인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Distance-vector mô hình (model / 모델)
 
 Distance-vector gần với repeated relaxation kiểu Bellman–Ford:
@@ -136,6 +154,8 @@ router cập nhật khoảng cách tốt hơn
 Thông tin phân tán nên router không có toàn đồ thị (graph / 그래프). Đổi lại, hệ thống có các vấn đề hội tụ như count-to-infinity.
 
 Hai kiến trúc dùng các thành phần nguyên thủy (primitive / 기본 요소) thuật toán khác nhau vì trạng thái (state / 상태) được phân phối khác nhau.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **10. Distance-vector mô hình (model / 모델)** nêu điều cần giải thích; **11. Longest Prefix Match trong mặt phẳng dữ liệu (data plane / 데이터 플레인)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. ECMP và nhiều đường bằng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Longest Prefix Match trong mặt phẳng dữ liệu (data plane / 데이터 플레인)
 
@@ -155,6 +175,8 @@ Trie/Patricia/Radix cây (tree / 트리) phù hợp vì các tuyến (route / �
 
 Một hệ thống routing vì vậy kết hợp đồ thị (graph / 그래프) + Trie, chứ không chỉ một cấu trúc.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **11. Longest Prefix Match trong mặt phẳng dữ liệu (data plane / 데이터 플레인)** nêu điều cần giải thích; **12. ECMP và nhiều đường bằng nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. thất bại (failure / 실패) và rerouting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. ECMP và nhiều đường bằng nhau
 
 Nếu có nhiều đường cùng chi phí (cost / 비용), hệ thống có thể dùng **Equal-Cost Multi-Path (ECMP)** để chia lưu lượng.
@@ -164,6 +186,8 @@ Routing bảng (table / 테이블) khi đó có thể lưu một tập next-hop 
 Băm (hash / 해시) luồng (flow / 흐름) key tới next-hop giúp một luồng (flow / 흐름) giữ ổn định đường đi trong khi phân phối nhiều luồng (flow / 흐름) qua nhiều đường.
 
 Hashing trở thành một phần của routing mặt phẳng dữ liệu (data plane / 데이터 플레인).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **13. thất bại (failure / 실패) và rerouting** tiếp nhận điểm tựa từ **12. ECMP và nhiều đường bằng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. K-shortest paths** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. thất bại (failure / 실패) và rerouting
 
@@ -178,6 +202,8 @@ trả thêm bộ nhớ/update cost trước
 
 Giống nhiều cấu trúc DSA khác, hệ thống materialize thông tin phục vụ một tình huống quan trọng.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **13. thất bại (failure / 실패) và rerouting** xác định đầu vào; **14. K-shortest paths** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Constrained routing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. K-shortest paths
 
 Nếu cần nhiều tuyến (route / 경로) dự phòng hoặc candidate routes, shortest đường dẫn (path / 경로) duy nhất không đủ.
@@ -185,6 +211,8 @@ Nếu cần nhiều tuyến (route / 경로) dự phòng hoặc candidate routes
 Các bài toán k-shortest paths như Yen/Eppstein mở rộng không gian kết quả. độ phức tạp (complexity / 복잡도) tăng đáng kể, vì đầu ra (output / 출력) bản thân có kích thước `k`.
 
 Không nên kỳ vọng giữ cùng chi phí với single shortest đường dẫn (path / 경로) khi yêu cầu đầu ra (output / 출력) mạnh hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **14. K-shortest paths** xác định đầu vào; **15. Constrained routing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. A khi có heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Constrained routing
 
@@ -200,6 +228,8 @@ hop <= H
 Nhiều ràng buộc làm bài toán khó hơn shortest đường dẫn (path / 경로) chuẩn và có thể dẫn tới multi-criteria tối ưu hóa (optimization / 최적화) hoặc NP-hard variants.
 
 Đây là nơi phải nhận ra giới hạn của thành phần nguyên thủy (primitive / 기본 요소) cổ điển thay vì cố ép mọi yêu cầu (requirement / 요구사항) vào Dijkstra.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **16. A khi có heuristic** tiếp nhận điểm tựa từ **15. Constrained routing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Bidirectional tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. A* khi có heuristic
 
@@ -217,6 +247,8 @@ Nếu heuristic không vượt chi phí (cost / 비용) thật, A* giữ tính t
 
 Đây là ví dụ thêm lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식) để giảm tìm kiếm (search / 검색) không gian (space / 공간).
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **17. Bidirectional tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **16. A khi có heuristic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. bộ nhớ đệm (cache / 캐시) tuyến (route / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Bidirectional tìm kiếm (search / 검색)
 
 Nếu chỉ cần tuyến (route / 경로) giữa một cặp nguồn–đích trên đồ thị (graph / 그래프) lớn, tìm kiếm hai chiều có thể giảm vùng duyệt:
@@ -227,6 +259,8 @@ backward từ target
 ```
 
 Nhưng điều kiện dừng và cách ghép chi phí (cost / 비용) phải được chứng minh cẩn thận, đặc biệt với Dijkstra hai chiều.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **18. bộ nhớ đệm (cache / 캐시) tuyến (route / 경로)** tiếp nhận điểm tựa từ **17. Bidirectional tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Incremental vô hiệu hóa (invalidation / 무효화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. bộ nhớ đệm (cache / 캐시) tuyến (route / 경로)
 
@@ -242,11 +276,15 @@ invalidation complexity
 
 Có thể phiên bản (version / 버전) topology; bộ nhớ đệm (cache / 캐시) entry chỉ hợp lệ nếu phiên bản (version / 버전) phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **19. Incremental vô hiệu hóa (invalidation / 무효화)** tiếp nhận điểm tựa từ **18. bộ nhớ đệm (cache / 캐시) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. độ phức tạp (complexity / 복잡도) mô hình (model / 모델) thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Incremental vô hiệu hóa (invalidation / 무효화)
 
 Khi một cạnh thay đổi, không phải mọi cached tuyến (route / 경로) đều bị ảnh hưởng. Nếu lưu phụ thuộc (dependency / 의존성) tuyến (route / 경로) → edge, có thể invalidate có chọn lọc.
 
 Nhưng siêu dữ liệu (metadata / 메타데이터) phụ thuộc (dependency / 의존성) có thể rất lớn. Đây là ví dụ hệ thống đổi thêm trạng thái (state / 상태) để giảm phạm vi recomputation.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **20. độ phức tạp (complexity / 복잡도) mô hình (model / 모델) thực tế** tiếp nhận điểm tựa từ **19. Incremental vô hiệu hóa (invalidation / 무효화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. CSR và đồ thị (graph / 그래프) tĩnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. độ phức tạp (complexity / 복잡도) mô hình (model / 모델) thực tế
 
@@ -268,6 +306,8 @@ branch prediction
 
 Trong đồ thị (graph / 그래프) cực lớn, bố trí CSR có thể nhanh hơn đồ thị (graph / 그래프) object-heavy dù cùng Big-O.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **21. CSR và đồ thị (graph / 그래프) tĩnh** tiếp nhận điểm tựa từ **20. độ phức tạp (complexity / 복잡도) mô hình (model / 모델) thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. CSR và đồ thị (graph / 그래프) tĩnh
 
 Nếu topology ít thay đổi, CSR:
@@ -283,6 +323,8 @@ cho bộ nhớ gọn và locality tốt.
 Nếu edge cập nhật (update / 업데이트) nhiều, adjacency danh sách (list / 목록) động dễ cập nhật hơn.
 
 Static/động (dynamic / 동적) tải công việc (workload / 워크로드) lại quyết định biểu diễn (representation / 표현).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **22. Testing** tiếp nhận điểm tựa từ **21. CSR và đồ thị (graph / 그래프) tĩnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Benchmark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Testing
 
@@ -308,6 +350,8 @@ sum weight đúng dist
 dist không vi phạm triangle inequality trên edge đã relax hoàn tất
 ```
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **23. Benchmark** tiếp nhận điểm tựa từ **22. Testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. chuỗi xử lý (pipeline / 파이프라인) hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Benchmark
 
 Phải thay đổi:
@@ -323,6 +367,8 @@ source distribution
 ```
 
 Đồ thị (graph / 그래프) ngẫu nhiên đồng đều không đại diện topology thật, vốn thường có hub và cấu trúc phân cấp.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **23. Benchmark** xác định đầu vào; **24. chuỗi xử lý (pipeline / 파이프라인) hệ thống** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. chuỗi xử lý (pipeline / 파이프라인) hệ thống
 
@@ -346,8 +392,12 @@ Hash/ECMP next-hop selection
 
 Mỗi tầng dùng một cấu trúc khác vì câu hỏi khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**, **Mô hình tư duy** gom các mảnh từ **24. chuỗi xử lý (pipeline / 파이프라인) hệ thống** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Một hệ thống routing là sự kết hợp giữa **đồ thị (graph / 그래프) lập luận (reasoning / 추론) ở điều khiển (control / 제어) plane** và **prefix/băm (hash / 해시) lookup ở mặt phẳng dữ liệu (data plane / 데이터 플레인)**. Dijkstra giải một thành phần nguyên thủy (primitive / 기본 요소) quan trọng, nhưng thiết kế thật còn cần biểu diễn (representation / 표현), cập nhật (update / 업데이트) chiến lược (strategy / 전략), tie-break, failover, bộ nhớ đệm (cache / 캐시) và consistency.
 
 Xem thêm: [Graph Modeling](../03_graphs/00_graph_modeling_and_representation.md), [Shortest Paths](../03_graphs/02_shortest_paths.md), [Priority Queues](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Trie](../02_trees/04_tries.md), [Hash Tables](../01_linear_structures/04_hash_tables.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

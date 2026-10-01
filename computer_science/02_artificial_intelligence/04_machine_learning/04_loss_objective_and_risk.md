@@ -1,7 +1,6 @@
 # Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)
 
-> **Mạch đọc:** Đặt **mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ prediction tới measurable lỗi (error / 오류)** sang **mất mát (loss / 손실) và probabilistic modeling**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ prediction tới measurable lỗi (error / 오류)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Mất mát (loss / 손실) và probabilistic modeling** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Machine học tập (learning / 학습) không học một cách mơ hồ. Muốn mô hình (model / 모델) thay đổi parameters theo hướng có ích, ta cần biến câu hỏi “mô hình (model / 모델) đang làm tốt đến đâu?” thành một đại lượng có thể tính được. Từ đây xuất hiện ba concept dễ bị trộn lẫn: **hàm mất mát (loss function / 손실 함수)**, **mục tiêu (objective / 목표) hàm (function / 함수)** và **rủi ro (risk / 위험)**.
 
@@ -41,6 +40,8 @@ L=|y-\hat y|
 
 ít nhạy với outlier hơn. Chỉ khác hàm mất mát (loss function / 손실 함수), hành vi (behavior / 동작) học được đã có thể thay đổi rõ rệt.
 
+> **Chuyển mạch:** Trong **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Mất mát (loss / 손실) và probabilistic modeling** tiếp nhận điểm tựa từ **Từ prediction tới measurable lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ mẫu (sample / 표본) mất mát (loss / 손실) tới empirical rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mất mát (loss / 손실) và probabilistic modeling
 
 Nhiều mất mát (loss / 손실) không phải công thức arbitrary mà xuất phát từ statistical các giả định (assumptions / 가정들).
@@ -68,6 +69,8 @@ L=-\log p_\theta(y\mid x)
 phạt mô hình (model / 모델) rất mạnh khi nó gán xác suất thấp cho đáp án đúng.
 
 Đây là nền trực tiếp của language-model huấn luyện (training / 학습): next-token prediction thường minimize token-level negative log-likelihood.
+
+> **Chuyển mạch:** Ở chặng này của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Từ mẫu (sample / 표본) mất mát (loss / 손실) tới empirical rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Mất mát (loss / 손실) và probabilistic modeling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu (objective / 목표) hàm (function / 함수) rộng hơn mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ mẫu (sample / 표본) mất mát (loss / 손실) tới empirical rủi ro (risk / 위험)
 
@@ -103,6 +106,8 @@ R(\theta)=\mathbb E_{(x,y)\sim P}[L(y,f_\theta(x))]
 
 Khoảng cách giữa hai thứ này chính là trung tâm của generalization.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Mục tiêu (objective / 목표) hàm (function / 함수) rộng hơn mất mát (loss / 손실)** tiếp nhận điểm tựa từ **Từ mẫu (sample / 표본) mất mát (loss / 손실) tới empirical rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Surrogate mất mát (loss / 손실): optimize thứ dễ tính để đạt mục tiêu khó hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mục tiêu (objective / 목표) hàm (function / 함수) rộng hơn mất mát (loss / 손실)
 
 Trong thực tế mục tiêu (objective / 목표) thường có thêm regularization:
@@ -137,6 +142,8 @@ J=J_{tác vụ (task / 작업)}+\alpha J_{aux}+\beta J_{ràng buộc (constraint
 
 Trong hiện đại (modern / 현대적) AI, multi-task học tập (learning / 학습), biểu diễn (representation / 표현) học tập (learning / 학습) và alignment thường dùng mục tiêu (objective / 목표) composed như vậy.
 
+> **Chuyển mạch:** Trong **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Surrogate mất mát (loss / 손실): optimize thứ dễ tính để đạt mục tiêu khó hơn** tiếp nhận điểm tựa từ **Mục tiêu (objective / 목표) hàm (function / 함수) rộng hơn mất mát (loss / 손실)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) imbalance và asymmetric chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Surrogate mất mát (loss / 손실): optimize thứ dễ tính để đạt mục tiêu khó hơn
 
 Nhiều nghiệp vụ (business / 비즈니스) chỉ số (metric / 지표) hoặc tác vụ (task / 작업) chỉ số (metric / 지표) không differentiable.
@@ -155,6 +162,8 @@ Ví dụ fraud mô hình (model / 모델) có thể optimize log mất mát (los
 
 Môi trường vận hành (production / 운영 환경) ML thất bại nhiều khi không phải vì optimizer yếu, mà vì ba tầng mục tiêu (objective / 목표) này không aligned.
 
+> **Chuyển mạch:** Ở chặng này của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Lớp (class / 클래스) imbalance và asymmetric chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Surrogate mất mát (loss / 손실): optimize thứ dễ tính để đạt mục tiêu khó hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hinge mất mát (loss / 손실) và margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lớp (class / 클래스) imbalance và asymmetric chi phí (cost / 비용)
 
 Nếu 99.9% transactions bình thường, mô hình (model / 모델) đoán luôn “normal” có accuracy rất cao nhưng vô dụng.
@@ -171,6 +180,8 @@ Một hướng khác là resampling, focal mất mát (loss / 손실) hoặc quy
 
 Quan trọng: **mất mát (loss / 손실) weighting và thresholding giải quyết các tầng khác nhau**. Weight thay học tập (learning / 학습) dynamics; threshold thay quyết định (decision / 결정) quy tắc (rule / 규칙) sau khi mô hình (model / 모델) tạo score.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Hinge mất mát (loss / 손실) và margin** tiếp nhận điểm tựa từ **Lớp (class / 클래스) imbalance và asymmetric chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Robust losses** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hinge mất mát (loss / 손실) và margin
 
 Hỗ trợ (support / 지원) véc-tơ (vector / 벡터) Machine dùng hinge mất mát (loss / 손실):
@@ -184,6 +195,8 @@ với `y∈{-1,+1}`.
 Không chỉ yêu cầu prediction đúng sign, hinge mất mát (loss / 손실) còn muốn điểm (point / 지점) nằm ngoài margin. Điều này đưa geometric principle trực tiếp vào mục tiêu (objective / 목표).
 
 Xem thêm: [Support Vector Machines](./10_support_vector_machines.md).
+
+> **Chuyển mạch:** Trong **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Robust losses** tiếp nhận điểm tựa từ **Hinge mất mát (loss / 손실) và margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-objective tối ưu hóa (optimization / 최적화) trong AI hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Robust losses
 
@@ -201,6 +214,8 @@ Lỗi (error / 오류) nhỏ dùng quadratic hành vi (behavior / 동작); lỗi
 
 Đây là ví dụ điển hình của kỹ thuật (engineering / 엔지니어링) sự đánh đổi (trade-off / 트레이드오프) giữa statistical robustness và tối ưu hóa (optimization / 최적화) properties.
 
+> **Chuyển mạch:** Ở chặng này của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Multi-objective tối ưu hóa (optimization / 최적화) trong AI hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Robust losses** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu (objective / 목표) misspecification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Multi-objective tối ưu hóa (optimization / 최적화) trong AI hệ thống (system / 시스템)
 
 Một recommender không chỉ cần engagement. Nếu chỉ optimize click, hệ thống (system / 시스템) có thể học clickbait. mục tiêu (objective / 목표) thực tế có thể phải balance retention, diversity, fairness, độ trễ (latency / 지연 시간) và an toàn (safety / 안전).
@@ -209,6 +224,8 @@ Một LLM hệ thống (system / 시스템) cũng tương tự. chất lượng 
 
 Không phải mọi sự đánh đổi (trade-off / 트레이드오프) đều nên nhét vào một scalar mất mát (loss / 손실). Có trường hợp cần hard ràng buộc (constraint / 제약조건), chính sách (policy / 정책) tầng (layer / 계층) hoặc multi-stage hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Mục tiêu (objective / 목표) misspecification** tiếp nhận điểm tựa từ **Multi-objective tối ưu hóa (optimization / 최적화) trong AI hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mục tiêu (objective / 목표) misspecification
 
 Optimizer thực hiện đúng điều mục tiêu (objective / 목표) yêu cầu, không phải điều con người “thực sự muốn nhưng không encode”.
@@ -216,6 +233,8 @@ Optimizer thực hiện đúng điều mục tiêu (objective / 목표) yêu c�
 Nếu reward proxy có loophole, mô hình (model / 모델) có thể exploit proxy. Đây là một dạng **Goodhart's Law**: khi measure trở thành mục tiêu (target / 대상), measure có thể mất khả năng phản ánh goal ban đầu.
 
 Liên kết (connection / 연결) này nối supervised ML với Reinforcement học tập (learning / 학습) và AI an toàn (safety / 안전).
+
+> **Chuyển mạch:** Trong **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Mục tiêu (objective / 목표) misspecification** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -235,6 +254,8 @@ Parameter update
 
 Mỗi mũi tên là nơi mismatch có thể xuất hiện.
 
+> **Chuyển mạch:** Ở chặng này của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng chung (common / 공통) Misconceptions
 
 ### “mất mát (loss / 손실) thấp nghĩa mô hình (model / 모델) tốt”
@@ -253,10 +274,12 @@ Regularization encode preference/inductive độ lệch (bias / 편향) về sol
 
 Không. phân phối (distribution / 분포) shift, dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) lỗi, calibration, threshold, hệ thống (system / 시스템) tương tác (interaction / 상호작용) và người dùng (user / 사용자) phản hồi (feedback / 피드백) đều có thể làm hành vi (behavior / 동작) khác huấn luyện (training / 학습) các giả định (assumptions / 가정들).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Mất mát (loss / 손실) nối xác suất (probability / 확률), thông tin (information / 정보) lý thuyết (theory / 이론) và tối ưu hóa (optimization / 최적화). rủi ro (risk / 위험) nối Statistics với generalization. mục tiêu (objective / 목표) nối mathematical huấn luyện (training / 학습) với sản phẩm (product / 제품) thiết kế (design / 설계) và AI an toàn (safety / 안전).
 
 Xem tiếp: [Linear Regression](./05_linear_regression.md), [Logistic Regression](./06_logistic_regression.md), [Bias, Variance and Generalization](./14_bias_variance_and_generalization.md) và [Model Evaluation](./15_model_evaluation.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

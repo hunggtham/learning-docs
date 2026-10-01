@@ -1,6 +1,6 @@
 # Thư viện kiến thức phát triển phía máy chủ (backend development knowledge library / 백엔드 개발 지식 라이브러리)
 
-> **Mạch đọc:** Đọc **Thư viện kiến thức phát triển phía máy chủ (backend development knowledge library / 백엔드 개발 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cách đọc** sang **Bản đồ nội dung**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner cấp domain của **Thư viện kiến thức phát triển phía máy chủ**. **Cách đọc** xác định prerequisite và câu hỏi trung tâm; **Bản đồ nội dung** chỉ rõ chapter nào sở hữu cơ chế, còn các nhánh Java, Spring và Python chỉ là những hiện thực khác nhau của cùng contract backend.
 
 Đây là không gian tên (namespace / 네임스페이스) chuẩn gốc (canonical / 정본) cho Phát triển phía máy chủ (backend development / 백엔드 개발). `backend_core/` giữ các
 concept và bất biến (invariant / 불변식) dùng chung cho mọi backend; `java/`, `spring_java/` và
@@ -29,12 +29,9 @@ thích ngữ nghĩa (semantics / 의미론) của thời gian chạy (runtime / 
 các backend concept vào ứng dụng (application / 애플리케이션). Không đọc các nhánh học (track / 트랙) như ba bản sao của
 một giáo trình backend.
 
-
-> **Chuyển mạch:** Từ **Cách đọc**, ta sang **Bản đồ nội dung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi hiểu cách đọc, Bản đồ nội dung cho biết đường đi từ backend core tới các nhánh ngôn ngữ/framework. Phần kế tiếp đặt ranh giới với Computer Science để tránh trùng owner của database, network và distributed systems.
 
 ## Bản đồ nội dung
-Phần “Bản đồ nội dung” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Phần | Mục tiêu |
 |---|---|
@@ -43,8 +40,7 @@ Phần “Bản đồ nội dung” nối kiến thức trước với nội dun
 | [`spring_java/`](./spring_java/) | Spring ecosystem và cách triển khai backend bằng Java |
 | [`python/`](./python/README.md) | Python ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임), packaging, tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) |
 
-
-> **Chuyển mạch:** Từ **Bản đồ nội dung**, ta sang **Ranh giới với các lĩnh vực (domain / 도메인) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ranh giới owner xác định phần backend chỉ cần giải thích ở mức application contract. **Nguyên tắc học** dùng ranh giới đó để nối quyết định thiết kế với test và telemetry.
 
 ## Ranh giới với các lĩnh vực (domain / 도메인) khác
 
@@ -62,8 +58,7 @@ ghi rõ bất biến (invariant / 불변식) cần bảo vệ và dẫn sang đ�
 dùng HTTP, SQL, hàng đợi (queue / 큐) hoặc tracing nhưng không biến sản phẩm (product / 제품)/công cụ (tool / 도구) cụ thể thành
 kiến thức chuẩn gốc (canonical / 정본).
 
-
-> **Chuyển mạch:** Từ **Ranh giới với các lĩnh vực (domain / 도메인) khác**, ta sang **Nguyên tắc học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Nguyên tắc học gom các trục correctness, latency, durability, safe change và scale thành cách đọc có thể kiểm chứng; đây là điểm bàn giao để chọn chapter cụ thể.
 
 ## Nguyên tắc học
 
@@ -79,4 +74,4 @@ idempotency), **độ trễ (latency / 지연 시간)** (budget, cache, queue, d
 rollout). Mỗi vòng phải nối được thiết kế (design / 설계) quyết định (decision / 결정) với kiểm thử (test / 테스트) và telemetry, không chỉ
 với một mẫu (pattern / 패턴) có sẵn.
 
-> **Bàn giao:** Sau **Nguyên tắc học**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **Nguyên tắc học**, hãy chọn chapter trong [backend_core](./backend_core/README.md) hoặc nhánh ngôn ngữ tương ứng; README này vẫn là owner cấp domain.

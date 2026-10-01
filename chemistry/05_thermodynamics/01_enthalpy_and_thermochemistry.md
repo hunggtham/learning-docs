@@ -1,7 +1,6 @@
 # Enthalpy và nhiệt hóa học — hạch toán năng lượng phản ứng ở áp suất gần không đổi
 
-> **Mạch đọc:** Đọc **Enthalpy và nhiệt hóa học — hạch toán năng lượng phản ứng ở áp suất gần không đổi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Enthalpy là heat chứa trong hệ thống (system / 시스템)”** sang **“ΔH âm nghĩa reaction nhanh và spontaneous”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Enthalpy và nhiệt hóa học — hạch toán năng lượng phản ứng ở áp suất gần không đổi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > **Enthalpy (entanpi, \(H\) / 엔탈피)** là hàm trạng thái được định nghĩa bởi:
 
@@ -554,4 +553,4 @@ Nó trả lời “bao nhiêu heat tương ứng với trạng thái (state / �
 
 Xem tiếp: [Entropy](./02_entropy.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 energy heat and work](./00_energy_heat_and_work.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

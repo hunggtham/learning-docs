@@ -1,7 +1,6 @@
 # Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đọc **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Baseline phiên bản (version / 버전) — cập nhật 21/09/2026** sang **chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Baseline phiên bản (version / 버전) — cập nhật 21/09/2026** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Bộ tài liệu này là lộ trình chuẩn gốc (canonical / 정본) để học Swift và iOS từ gần như số 0 đến mức có thể quyền sở hữu (ownership / 소유권) một hệ thống môi trường vận hành (production / 운영 환경). Đây không phải cheat sheet. Mỗi mức (level / 수준) cố gắng giải thích theo mạch: khái niệm là gì → vì sao tồn tại → hoạt động thế nào → khi nào dùng → cách dùng → lỗi/trường hợp biên (edge case / 경계 사례) → cách người có kinh nghiệm sử dụng trong môi trường vận hành (production / 운영 환경).
 
@@ -11,8 +10,7 @@ Baseline stable hiện hành là **Xcode 27 + Swift 6.4 + iOS 27 SDK**. Swift 6.
 
 Tài liệu vẫn giữ kiến thức Swift 5.x, UIKit, Combine, cốt lõi (core / 핵심) dữ liệu (data / 데이터) và Objective-C interoperability ở những nơi cần thiết để đọc, migrate và maintain codebase môi trường vận hành (production / 운영 환경) nhiều thế hệ.
 
-
-> **Chuyển mạch:** Từ **Baseline phiên bản (version / 버전) — cập nhật 21/09/2026**, ta sang **chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, sau nội dung của **Baseline phiên bản (version / 버전) — cập nhật 21/09/2026**, **Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)
 
@@ -58,8 +56,7 @@ Từ đó tài liệu đi vào version-support chính sách (policy / 정책), S
 
 Sau Master, mục tiêu không phải “thuộc toàn bộ Apple SDK”. Bạn phải có mô hình tư duy (mental model / 사고 모델) đủ mạnh để khi Swift/Xcode/iOS thay đổi, có thể xác định cái gì thực sự đổi, ranh giới (boundary / 경계) nào bị ảnh hưởng, di chuyển (migration / 마이그레이션)/kiểm thử (test / 테스트) nào cần chạy và bản phát hành (release / 릴리스) thế nào để không biến môi trường vận hành (production / 운영 환경) người dùng (user / 사용자) thành di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트).
 
-
-> **Chuyển mạch:** Từ **chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)**, ta sang **môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** xác định đầu vào; **Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo
 
@@ -69,8 +66,7 @@ Dùng tệp (file / 파일) này sau Master hoặc khi cần tra cứu một d�
 
 Không đọc 05 thay cho 01–04. tham chiếu (reference / 참조) cố tình cross-cutting và giả định bạn đã có vocabulary về quyền sở hữu (ownership / 소유권), isolation, trạng thái (state / 상태), vòng đời (lifecycle / 생명주기) và tính tương thích (compatibility / 호환성).
 
-
-> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo**, ta sang **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua** tiếp nhận điểm tựa từ **Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên bản (version / 버전) principles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua
 
@@ -84,8 +80,7 @@ Không đọc 05 thay cho 01–04. tham chiếu (reference / 참조) cố tình 
 
 **môi trường vận hành (production / 운영 환경) hiện thực (implementation / 구현) trước phiên bản (version / 버전) quản trị (governance / 거버넌스).** Master giả định bạn đã biết hiện thực (implementation / 구현) hoạt động; lúc đó mới đánh giá di chuyển (migration / 마이그레이션), tính tương thích (compatibility / 호환성), rollout và khôi phục (recovery / 복구) có ý nghĩa.
 
-
-> **Chuyển mạch:** Từ **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua**, ta sang **phiên bản (version / 버전) principles** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Phiên bản (version / 버전) principles** tiếp nhận điểm tựa từ **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트) progression đề xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phiên bản (version / 버전) principles
 
@@ -95,8 +90,7 @@ Thời gian chạy (runtime / 런타임) availability dùng `#available`; compil
 
 Khi tài liệu/blog cũ mâu thuẫn hành vi (behavior / 동작) của toolchain đang dùng, ưu tiên Swift.org/Swift Evolution, Apple nhà phát triển (developer / 개발자) Documentation và Xcode bản phát hành (release / 릴리스) notes chính thức.
 
-
-> **Chuyển mạch:** Từ **phiên bản (version / 버전) principles**, ta sang **dự án (project / 프로젝트) progression đề xuất** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Dự án (project / 프로젝트) progression đề xuất** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) principles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dự án (project / 프로젝트) progression đề xuất
 
@@ -104,4 +98,4 @@ Khi tài liệu/blog cũ mâu thuẫn hành vi (behavior / 동작) của toolcha
 
 Cách học này biến bốn tệp (file / 파일) thành một hệ thống liên tục thay vì bốn tập kiến thức độc lập.
 
-> **Bàn giao:** Sau **dự án (project / 프로젝트) progression đề xuất**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 INDEX](./00_INDEX.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dự án (project / 프로젝트) progression đề xuất**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

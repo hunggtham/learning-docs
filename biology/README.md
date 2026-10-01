@@ -1,7 +1,6 @@
 # Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học
 
-> **Mạch đọc:** Đọc **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09** sang **1. Đồ thị kiến thức (knowledge graph) toàn thư viện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Sinh học (Biology / 생물학) trong thư viện này được viết như một **hệ thống kiến thức liên tục**, không phải tập hợp ghi chú (tập hợp ghi chú (collection note)) hay cheat sheet. Người đọc được giả định có thể đã quên phần lớn Sinh học phổ thông, vì vậy mỗi chapter phải tự dựng nền cần thiết, giải thích vì sao concept xuất hiện, cơ chế (mechanism / 메커니즘) hoạt động ra sao, mô hình (model / 모델) nào giúp suy luận và khái niệm (concept) đó dẫn tự nhiên sang chapter nào tiếp theo.
 
@@ -12,6 +11,7 @@ Mục tiêu cuối cùng không phải nhớ thật nhiều thuật ngữ. Mục
 ---
 
 <!-- depth-audit-2026:central-chain -->
+
 ## Mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09
 
 Toàn bộ thư viện được đọc theo chuỗi:
@@ -41,8 +41,7 @@ structure
 
 Nếu chapter chỉ kể tên cấu trúc (structure / 구조) mà không giải cơ chế (mechanism / 메커니즘), hoặc chỉ mô tả hàm (function / 함수) mà không nói thất bại (failure / 실패)/ranh giới (boundary / 경계) điều kiện (condition / 조건), chapter chưa đạt chuẩn dù có nhiều từ khóa (keyword / 키워드).
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09**, ta sang **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **2. Cấu trúc thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. Đồ thị kiến thức (knowledge graph) toàn thư viện
 
@@ -103,8 +102,7 @@ flowchart TD
 
 ---
 
-
-> **Chuyển mạch:** Từ **1. Đồ thị kiến thức (knowledge graph) toàn thư viện**, ta sang **2. Cấu trúc thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **2. Cấu trúc thư viện** tiếp nhận điểm tựa từ **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Chuẩn hoàn thiện của một chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Cấu trúc thư viện
 
@@ -159,8 +157,7 @@ biology/
 
 ---
 
-
-> **Chuyển mạch:** Từ **2. Cấu trúc thư viện**, ta sang **3. Chuẩn hoàn thiện của một chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **3. Chuẩn hoàn thiện của một chapter** tiếp nhận điểm tựa từ **2. Cấu trúc thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lộ trình đọc từ số 0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Chuẩn hoàn thiện của một chapter
 
@@ -185,8 +182,7 @@ Các tình huống phân tích (case study) không dùng chỉ để “trang tr
 
 ---
 
-
-> **Chuyển mạch:** Từ **3. Chuẩn hoàn thiện của một chapter**, ta sang **4. Lộ trình đọc từ số 0** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **4. Lộ trình đọc từ số 0** tiếp nhận điểm tựa từ **3. Chuẩn hoàn thiện của một chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Các motif xuyên toàn thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Lộ trình đọc từ số 0
 
@@ -260,8 +256,7 @@ Hai chapter này không dùng để học tắt; chúng được đọc sau khi 
 
 ---
 
-
-> **Chuyển mạch:** Từ **4. Lộ trình đọc từ số 0**, ta sang **5. Các motif xuyên toàn thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **5. Các motif xuyên toàn thư viện** tiếp nhận điểm tựa từ **4. Lộ trình đọc từ số 0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cách tự kiểm tra sau mỗi chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Các motif xuyên toàn thư viện
 
@@ -295,8 +290,7 @@ Chuyển hóa (metabolism), plant hydraulic/carbon allocation, tuần hoàn (cir
 
 ---
 
-
-> **Chuyển mạch:** Từ **5. Các motif xuyên toàn thư viện**, ta sang **6. Cách tự kiểm tra sau mỗi chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **6. Cách tự kiểm tra sau mỗi chapter** tiếp nhận điểm tựa từ **5. Các motif xuyên toàn thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phạm vi của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Cách tự kiểm tra sau mỗi chapter
 
@@ -306,8 +300,7 @@ Nếu bạn chỉ nhớ tên `ATP synthase`, `p53`, `Nernst`, `Hardy–Weinberg`
 
 ---
 
-
-> **Chuyển mạch:** Từ **6. Cách tự kiểm tra sau mỗi chapter**, ta sang **7. Phạm vi của thư viện (library / 라이브러리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **7. Phạm vi của thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **6. Cách tự kiểm tra sau mỗi chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Trạng thái hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Phạm vi của thư viện (library / 라이브러리)
 
@@ -317,8 +310,7 @@ Hai chapter Human Health cung cấp nền systems-level và preventive-health l�
 
 ---
 
-
-> **Chuyển mạch:** Từ **7. Phạm vi của thư viện (library / 라이브러리)**, ta sang **8. Trạng thái hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **8. Trạng thái hiện tại** tiếp nhận điểm tựa từ **7. Phạm vi của thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy ước ngôn ngữ và liên kết nội bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Trạng thái hiện tại
 
@@ -341,10 +333,12 @@ Chi tiết kiểm tra coverage và continuity nằm trong [Biology Knowledge Lib
 
 <!-- continuity-2026:language-links -->
 
-> **Chuyển mạch:** Từ **8. Trạng thái hiện tại**, ta sang **Quy ước ngôn ngữ và liên kết nội bộ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, sau nội dung của **8. Trạng thái hiện tại**, **Quy ước ngôn ngữ và liên kết nội bộ** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Quy ước ngôn ngữ và liên kết nội bộ
 
 Phần giải thích dùng **tiếng Việt làm ngôn ngữ chính**. Thuật ngữ quốc tế được giữ trong ngoặc ở lần xuất hiện cần thiết, ví dụ `phản hồi âm (negative feedback)` hoặc `điện thế hoạt động (action potential)`. Không dùng từ tiếng Anh như thành phần ngữ pháp chính của câu nếu đã có cách diễn đạt tiếng Việt rõ ràng; các viết tắt chuẩn như DNA, RNA, ATP, PCR, CRISPR vẫn được giữ.
 
 Link giữa chapter dùng Markdown link chuẩn thay cho wikilink riêng của Obsidian để hoạt động trên GitHub và GitHub Pages. Mỗi chapter trong learning path có footer điều hướng tới chapter trước, mục lục Biology và chapter kế tiếp. Vì vậy người đọc có thể đi liên tục từ phân tử → tế bào → cơ thể → quần thể → hệ sinh thái mà không phải quay lại cây thư mục.
+
+> **Bàn giao:** Sau **Quy ước ngôn ngữ và liên kết nội bộ**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

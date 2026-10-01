@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed
 
-> **Mạch đọc:** Đọc **Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”** sang **Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”
 
@@ -10,9 +10,7 @@
 >
 > Baseline phiên bản (version / 버전) của supplement này là **Java 25 LTS** với awareness tới **Java 26**, là bản phát hành (release / 릴리스) mới nhất tại thời điểm cập nhật. Java 26 là non-LTS; Java 25 là LTS hiện tại. Các preview/incubator APIs được đánh dấu rõ để tránh nhầm với API final.
 
-
-
-> **Chuyển mạch:** Từ **Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”**, ta sang **Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed**, **Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”** xác định đầu vào; **Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)
 
@@ -2826,8 +2824,7 @@ and inspect actual sản phẩm tạo ra (artifact / 산출물).
 
 ---
 
-
-> **Chuyển mạch:** Từ **Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)**, ta sang **Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Vị trí của Master Supplement xác định prerequisite và phạm vi phiên bản cần giữ. Phần **Java 8 → 11 → 17 → 21** giải thích vì sao các thay đổi runtime và API cũ vẫn ảnh hưởng quyết định hiện tại, rồi bàn giao sang các case vận hành.
 
 ## Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26
 
@@ -3360,4 +3357,4 @@ https://docs.oracle.com/javase/specs/
 OpenJDK JEP chỉ mục (index / 인덱스)
 https://openjdk.org/jeps/0
 
-> **Bàn giao:** Sau **Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [java part1 beginner rewritten detailed](./java_part1_beginner_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

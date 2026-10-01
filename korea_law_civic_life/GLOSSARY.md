@@ -1,6 +1,6 @@
 # Glossary Việt–Hàn–Anh
 
-> **Mạch đọc:** Đặt **Glossary Việt–Hàn–Anh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Glossary Việt–Hàn–Anh**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Glossary Việt–Hàn–Anh** để chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > Giữ nguyên thuật ngữ Hàn khi nó có ý nghĩa pháp lý hoặc hành chính riêng. Bản dịch tiếng Việt chỉ nhằm hỗ trợ hiểu nhanh.
 
@@ -95,4 +95,4 @@
 | căn cứ pháp lý | 법적 근거 | legal basis |  |
 | người phụ trách | 담당자 | officer in charge | Ghi lại khi liên hệ |
 
-> **Bàn giao:** Sau **Glossary Việt–Hàn–Anh**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Glossary Việt–Hàn–Anh**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

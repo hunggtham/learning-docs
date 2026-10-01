@@ -1,7 +1,6 @@
 # Convolutional Neural Networks cho Vision
 
-> **Mạch đọc:** Đặt **Convolutional Neural Networks cho Vision** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Convolution tầng (layer / 계층)** sang **Weight Sharing**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Convolutional Neural Networks cho Vision**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Convolution tầng (layer / 계층)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Weight Sharing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Convolutional Neural mạng (network / 네트워크)** đưa một inductive độ lệch (bias / 편향) rất phù hợp với ảnh (image / 이미지): cục bộ (local / 로컬) patterns quan trọng và mẫu (pattern / 패턴) tương tự có thể xuất hiện ở nhiều vị trí.
 
@@ -31,11 +30,15 @@ Số parameters không depend trực tiếp vào ảnh (image / 이미지) width
 
 Đây là lý do CNN parameter-efficient hơn dense mạng (network / 네트워크) trên images.
 
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, **Weight Sharing** tiếp nhận điểm tựa từ **Convolution tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Translation Equivariance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Weight Sharing
 
 Cùng kernel được slide qua mọi location. Nếu kernel học vertical edge, nó detect edge ở left hay right bằng same weights.
 
 Đây encode translation-related prior.
+
+> **Chuyển mạch:** Ở chặng này của **Convolutional Neural Networks cho Vision**, **Translation Equivariance** tiếp nhận điểm tựa từ **Weight Sharing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Receptive trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Translation Equivariance
 
@@ -49,6 +52,8 @@ Translate đầu vào (input / 입력) → tính năng (feature / 기능) map tr
 
 Classification sau pooling có thể trở nên more bất biến (invariant / 불변식).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Convolutional Neural Networks cho Vision**, **Translation Equivariance** nêu điều cần giải thích; **Receptive trường dữ liệu (field / 필드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Stride** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Receptive trường dữ liệu (field / 필드)
 
 Neuron tầng (layer / 계층) đầu thấy cục bộ (local / 로컬) patch. ngăn xếp (stack / 스택) layers làm effective receptive trường dữ liệu (field / 필드) grow.
@@ -56,6 +61,8 @@ Neuron tầng (layer / 계층) đầu thấy cục bộ (local / 로컬) patch. 
 Ví dụ nhiều 3×3 convolutions có thể cover region lớn hơn trong khi thêm nonlinearities.
 
 Receptive trường dữ liệu (field / 필드) quyết định mô hình (model / 모델) nhìn ngữ cảnh (context / 맥락) rộng tới đâu.
+
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, **Receptive trường dữ liệu (field / 필드)** nêu điều cần giải thích; **Stride** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Padding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stride
 
@@ -69,9 +76,13 @@ H_{out}=\left\lfloor\frac{H+2P-K}{S}\right\rfloor+1
 
 Downsampling giảm compute nhưng mất spatial detail.
 
+> **Chuyển mạch:** Ở chặng này của **Convolutional Neural Networks cho Vision**, **Padding** tiếp nhận điểm tựa từ **Stride** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pooling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Padding
 
 `same`-style padding giữ resolution tương đối; `valid` giảm kích thước (size / 크기). Border treatment ảnh hưởng features near edges.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Convolutional Neural Networks cho Vision**, **Pooling** tiếp nhận điểm tựa từ **Padding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Channels như Learned tính năng (feature / 기능) Types** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pooling
 
@@ -81,9 +92,13 @@ Pooling giảm resolution và tăng cục bộ (local / 로컬) invariance nhưn
 
 Hiện đại (modern / 현대적) CNN nhiều khi dùng strided convolution thay pooling.
 
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, **Channels như Learned tính năng (feature / 기능) Types** tiếp nhận điểm tựa từ **Pooling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hierarchical Features** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Channels như Learned tính năng (feature / 기능) Types
 
 Đầu vào (input / 입력) RGB có 3 channels; hidden layers có dozens/hundreds channels. Mỗi channel không necessarily interpretable đơn giản, nhưng có thể encode families of patterns.
+
+> **Chuyển mạch:** Ở chặng này của **Convolutional Neural Networks cho Vision**, **Hierarchical Features** tiếp nhận điểm tựa từ **Channels như Learned tính năng (feature / 기능) Types** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Residual Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hierarchical Features
 
@@ -98,6 +113,8 @@ pixels
 
 Thực tế representations phân tán (distributed / 분산) và nonlinear, nhưng hierarchy giải thích lợi ích độ sâu (depth / 깊이).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Convolutional Neural Networks cho Vision**, **Residual Connections** tiếp nhận điểm tựa từ **Hierarchical Features** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Residual Connections
 
 Deep CNN gặp tối ưu hóa (optimization / 최적화) difficulty. ResNet khối (block / 블록):
@@ -110,11 +127,15 @@ cho độ dốc (gradient / 기울기)/biểu diễn (representation / 표현) m
 
 Residual liên kết (connection / 연결) sau này là cốt lõi (core / 핵심) Transformer mẫu (pattern / 패턴).
 
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, **Batch Normalization** tiếp nhận điểm tựa từ **Residual Connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Depthwise Separable Convolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Batch Normalization
 
 CNN historically dùng BatchNorm để stabilize activation statistics và tối ưu hóa (optimization / 최적화). hành vi (behavior / 동작) train/eval khác nhau vì running statistics.
 
 Small batch sizes có thể làm BatchNorm unstable; alternatives GroupNorm/LayerNorm phù hợp contexts khác.
+
+> **Chuyển mạch:** Ở chặng này của **Convolutional Neural Networks cho Vision**, **Depthwise Separable Convolution** tiếp nhận điểm tựa từ **Batch Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1×1 Convolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Depthwise Separable Convolution
 
@@ -125,17 +146,25 @@ Tiêu chuẩn (standard / 표준) convolution mix spatial + channels cùng lúc.
 
 Compute giảm mạnh, popular trong mobile architectures.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Convolutional Neural Networks cho Vision**, **1×1 Convolution** tiếp nhận điểm tựa từ **Depthwise Separable Convolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dilated Convolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1×1 Convolution
 
 Kernel 1×1 không nhìn neighbors nhưng mix channels tại mỗi position. Nó hoạt động như per-pixel tuyến tính (linear / 선형) projection và dùng để thay đổi (change / 변경) channel dimensions/bottleneck.
+
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, **Dilated Convolution** tiếp nhận điểm tựa từ **1×1 Convolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grouped Convolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dilated Convolution
 
 Dilated convolution chèn gaps trong kernel sampling, tăng receptive trường dữ liệu (field / 필드) mà không tăng kernel kích thước (size / 크기)/downsample nhiều. Hữu ích segmentation/audio.
 
+> **Chuyển mạch:** Ở chặng này của **Convolutional Neural Networks cho Vision**, **Grouped Convolution** tiếp nhận điểm tựa từ **Dilated Convolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) Average Pooling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Grouped Convolution
 
 Channels chia groups, giảm compute và tạo structural sparsity. Depthwise là extreme trường hợp (case / 사례) mỗi channel một group.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Convolutional Neural Networks cho Vision**, **Toàn cục (global / 전역) Average Pooling** tiếp nhận điểm tựa từ **Grouped Convolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CNN Compute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Toàn cục (global / 전역) Average Pooling
 
@@ -147,11 +176,15 @@ z_c=\frac1{HW}\sum_{i,j}X_{i,j,c}
 
 Giảm parameters và kết nối channel bằng chứng (evidence / 증거) tới classification head.
 
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, **CNN Compute** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) Average Pooling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) Augmentation và CNN độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## CNN Compute
 
 Convolution được implement hiệu quả bằng specialized kernels/GEMM. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃), kernel fusion và accelerator libraries ảnh hưởng hiệu năng (performance / 성능) thực tế.
 
 FLOPs không phản ánh hoàn toàn độ trễ (latency / 지연 시간); bộ nhớ (memory / 메모리) bandwidth và hardware utilization cũng quan trọng.
+
+> **Chuyển mạch:** Ở chặng này của **Convolutional Neural Networks cho Vision**, **CNN Compute** nêu điều cần giải thích; **Dữ liệu (data / 데이터) Augmentation và CNN độ lệch (bias / 편향)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Transfer học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dữ liệu (data / 데이터) Augmentation và CNN độ lệch (bias / 편향)
 
@@ -159,9 +192,13 @@ Crop/flip/color jitter reinforce invariances CNN kiến trúc (architecture / �
 
 Kiến trúc (architecture / 아키텍처) prior + augmentation prior + dataset cùng quyết định hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Convolutional Neural Networks cho Vision**, **Dữ liệu (data / 데이터) Augmentation và CNN độ lệch (bias / 편향)** nêu điều cần giải thích; **Transfer học tập (learning / 학습)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **CNN vs Vision Transformer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Transfer học tập (learning / 학습)
 
 CNN pretrained trên large dataset có thể fine-tune downstream. Early/mid features often reusable, nhưng lĩnh vực (domain / 도메인) gap như natural images → medical images có thể lớn.
+
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, **CNN vs Vision Transformer** tiếp nhận điểm tựa từ **Transfer học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CNN vs Vision Transformer
 
@@ -183,11 +220,15 @@ scales strongly with large pretraining
 
 Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) often combine ideas từ cả hai.
 
+> **Chuyển mạch:** Ở chặng này của **Convolutional Neural Networks cho Vision**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **CNN vs Vision Transformer** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **CNN không “hiểu ảnh” vì convolution magic; nó giới hạn hypothesis không gian (space / 공간) theo giả định rằng cục bộ (local / 로컬) spatial patterns và repeated detectors là useful.**
 
 Inductive độ lệch (bias / 편향) phù hợp giúp học tập (learning / 학습) efficient.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Convolutional Neural Networks cho Vision**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -203,10 +244,12 @@ Tối ưu hóa (optimization / 최적화), resolution, compute và tác vụ (ta
 
 CNN vẫn strong/efficient trong nhiều edge, detection và specialized vision workloads.
 
+> **Chuyển mạch:** Trong **Convolutional Neural Networks cho Vision**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 CNN là concrete example của [Inductive Bias](../04_machine_learning/01_learning_problem_and_inductive_bias.md) và [Representation Learning](../05_neural_networks/08_representation_learning.md).
 
 Xem tiếp: [Image Classification](./04_image_classification.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 images as data](./00_images_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

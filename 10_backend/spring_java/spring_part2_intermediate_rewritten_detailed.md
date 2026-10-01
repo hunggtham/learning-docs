@@ -1,6 +1,6 @@
 # Java Spring — Part 2: Intermediate
 
-> **Mạch đọc:** Đọc **Java Spring — Part 2: Intermediate** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ “biết dùng Spring” đến “hiểu bộ chứa (container / 컨테이너), proxy, giao dịch (transaction / 트랜잭션) và persistence thời gian chạy (runtime / 런타임)”** sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 2: Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ “biết dùng Spring” đến “hiểu bộ chứa (container / 컨테이너), proxy, giao dịch (transaction / 트랜잭션) và persistence thời gian chạy (runtime / 런타임)”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Từ “biết dùng Spring” đến “hiểu bộ chứa (container / 컨테이너), proxy, giao dịch (transaction / 트랜잭션) và persistence thời gian chạy (runtime / 런타임)”
 
@@ -8,10 +8,9 @@
 
 ---
 
-
 <!-- VERSION_UPDATE_2026-09-12_START -->
 
-> **Chuyển mạch:** Từ **Từ “biết dùng Spring” đến “hiểu bộ chứa (container / 컨테이너), proxy, giao dịch (transaction / 트랜잭션) và persistence thời gian chạy (runtime / 런타임)”**, ta sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bản đồ phiên bản nối câu hỏi “biết dùng Spring” với container, proxy, transaction và persistence runtime. Tiếp theo, `ApplicationContext.refresh()` được đọc như pipeline metadata → object graph để thấy cơ chế thay vì ghi nhớ annotation.
 
 ## Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
@@ -162,7 +161,7 @@ Nếu bạn hiểu hai giai đoạn này, `BeanFactoryPostProcessor` và `BeanPo
 
 <!-- SPRING_BATCH1_IOC_INTERMEDIATE -->
 
-> **Chuyển mạch:** Từ **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**, ta sang **ApplicationContext.refresh() dưới dạng một chuỗi xử lý (pipeline / 파이프라인) siêu dữ liệu (metadata / 메타데이터) → đối tượng (object / 객체) đồ thị (graph / 그래프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 2: Intermediate**, **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** nêu điều cần giải thích; **ApplicationContext.refresh() dưới dạng một chuỗi xử lý (pipeline / 파이프라인) siêu dữ liệu (metadata / 메타데이터) → đối tượng (object / 객체) đồ thị (graph / 그래프)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vòng đời yêu cầu (request lifecycle / 요청 생명주기) end-to-end: từ servlet bộ chứa (container / 컨테이너) tới phản hồi (response / 응답) lần ghi nhận (commit / 커밋)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `ApplicationContext.refresh()` dưới dạng một chuỗi xử lý (pipeline / 파이프라인) siêu dữ liệu (metadata / 메타데이터) → đối tượng (object / 객체) đồ thị (graph / 그래프)
 
@@ -724,7 +723,7 @@ Mỗi stage giải quyết một loại lớp trừu tượng (abstraction / 추
 
 <!-- SPRING_BATCH2_REQUEST_INTERMEDIATE -->
 
-> **Chuyển mạch:** Từ **ApplicationContext.refresh() dưới dạng một chuỗi xử lý (pipeline / 파이프라인) siêu dữ liệu (metadata / 메타데이터) → đối tượng (object / 객체) đồ thị (graph / 그래프)**, ta sang **vòng đời yêu cầu (request lifecycle / 요청 생명주기) end-to-end: từ servlet bộ chứa (container / 컨테이너) tới phản hồi (response / 응답) lần ghi nhận (commit / 커밋)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Spring — Part 2: Intermediate**, **ApplicationContext.refresh() dưới dạng một chuỗi xử lý (pipeline / 파이프라인) siêu dữ liệu (metadata / 메타데이터) → đối tượng (object / 객체) đồ thị (graph / 그래프)** nêu điều cần giải thích; **Vòng đời yêu cầu (request lifecycle / 요청 생명주기) end-to-end: từ servlet bộ chứa (container / 컨테이너) tới phản hồi (response / 응답) lần ghi nhận (commit / 커밋)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **@Transactional đi từ siêu dữ liệu (metadata / 메타데이터) tới liên kết (connection / 연결) như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vòng đời yêu cầu (request lifecycle / 요청 생명주기) end-to-end: từ servlet bộ chứa (container / 컨테이너) tới phản hồi (response / 응답) lần ghi nhận (commit / 커밋)
 
@@ -1001,7 +1000,7 @@ Nếu lời gọi (call / 호출) không đi qua proxy, declarative giao dịch 
 
 <!-- SPRING_BATCH3_TX_INTERMEDIATE -->
 
-> **Chuyển mạch:** Từ **vòng đời yêu cầu (request lifecycle / 요청 생명주기) end-to-end: từ servlet bộ chứa (container / 컨테이너) tới phản hồi (response / 응답) lần ghi nhận (commit / 커밋)**, ta sang **@Transactional đi từ siêu dữ liệu (metadata / 메타데이터) tới liên kết (connection / 연결) như thế nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java Spring — Part 2: Intermediate**, cơ chế trong **Vòng đời yêu cầu (request lifecycle / 요청 생명주기) end-to-end: từ servlet bộ chứa (container / 컨테이너) tới phản hồi (response / 응답) lần ghi nhận (commit / 커밋)** cần được kiểm chứng bằng dấu vết cụ thể; **@Transactional đi từ siêu dữ liệu (metadata / 메타데이터) tới liên kết (connection / 연결) như thế nào?** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Spring bảo mật (security / 보안) yêu cầu (request / 요청) luồng (flow / 흐름): từ filter matching tới Authentication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `@Transactional` đi từ siêu dữ liệu (metadata / 메타데이터) tới liên kết (connection / 연결) như thế nào?
 
@@ -1662,7 +1661,7 @@ Nếu yêu cầu (request / 요청) không vào controller, lỗi có thể nằ
 
 <!-- SPRING_BATCH4_SECURITY_INTERMEDIATE -->
 
-> **Chuyển mạch:** Từ **@Transactional đi từ siêu dữ liệu (metadata / 메타데이터) tới liên kết (connection / 연결) như thế nào?**, ta sang **Spring bảo mật (security / 보안) yêu cầu (request / 요청) luồng (flow / 흐름): từ filter matching tới Authentication** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 2: Intermediate**, **@Transactional đi từ siêu dữ liệu (metadata / 메타데이터) tới liên kết (connection / 연결) như thế nào?** nêu điều cần giải thích; **Spring bảo mật (security / 보안) yêu cầu (request / 요청) luồng (flow / 흐름): từ filter matching tới Authentication** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chọn kiểm thử (test / 테스트) theo ranh giới (boundary / 경계) thay vì chọn annotation theo thói quen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Spring bảo mật (security / 보안) yêu cầu (request / 요청) luồng (flow / 흐름): từ filter matching tới `Authentication`
 
@@ -1746,7 +1745,7 @@ Chọn slice giúp kiểm thử (test / 테스트) nhanh và thất bại (failu
 
 <!-- SPRING_BATCH4_TEST_INTERMEDIATE -->
 
-> **Chuyển mạch:** Từ **Spring bảo mật (security / 보안) yêu cầu (request / 요청) luồng (flow / 흐름): từ filter matching tới Authentication**, ta sang **Chọn kiểm thử (test / 테스트) theo ranh giới (boundary / 경계) thay vì chọn annotation theo thói quen** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Java Spring — Part 2: Intermediate**, **Spring bảo mật (security / 보안) yêu cầu (request / 요청) luồng (flow / 흐름): từ filter matching tới Authentication** đã nêu tiêu chí phân biệt, còn **Chọn kiểm thử (test / 테스트) theo ranh giới (boundary / 경계) thay vì chọn annotation theo thói quen** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인): thao tác (operation / 연산) → Observation → metrics/traces, còn log là bằng chứng (evidence / 증거) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chọn kiểm thử (test / 테스트) theo ranh giới (boundary / 경계) thay vì chọn annotation theo thói quen
 
@@ -1839,7 +1838,7 @@ Trong sự cố (incident / 인시던트), `/actuator/conditions`/mappings/metri
 
 <!-- SPRING_BATCH5_OBS_INTERMEDIATE -->
 
-> **Chuyển mạch:** Từ **Chọn kiểm thử (test / 테스트) theo ranh giới (boundary / 경계) thay vì chọn annotation theo thói quen**, ta sang **khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인): thao tác (operation / 연산) → Observation → metrics/traces, còn log là bằng chứng (evidence / 증거) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi boundary test đã xác định phần nào cần container thật, observability pipeline cho biết cùng thao tác đó được chứng minh bằng Observation, metrics, traces hay log. Handoff này nối test evidence với chẩn đoán runtime.
 
 ## Khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인): thao tác (operation / 연산) → Observation → metrics/traces, còn log là bằng chứng (evidence / 증거) khác
 
@@ -2032,4 +2031,4 @@ Spring dữ liệu (data / 데이터) JPA: https://docs.spring.io/spring-data/jp
 
 Spring bảo mật (security / 보안): https://docs.spring.io/spring-security/tham chiếu (reference / 참조)/
 
-> **Bàn giao:** Sau **khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인): thao tác (operation / 연산) → Observation → metrics/traces, còn log là bằng chứng (evidence / 증거) khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [spring part1 beginner rewritten detailed](./spring_part1_beginner_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인): thao tác (operation / 연산) → Observation → metrics/traces, còn log là bằng chứng (evidence / 증거) khác**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

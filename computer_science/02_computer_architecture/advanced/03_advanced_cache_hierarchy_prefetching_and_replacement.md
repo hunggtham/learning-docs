@@ -1,7 +1,6 @@
 # Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế
 
-> **Mạch đọc:** Đặt **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tính cục bộ là giả định, không phải định luật** sang **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính cục bộ là giả định, không phải định luật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Bộ nhớ đệm (cache / 캐시) tồn tại vì bộ xử lý (processor) và bộ nhớ chính có tốc độ rất khác nhau. Khi đi sâu hơn các tầng L1/L2/L3, câu hỏi không còn chỉ là “bộ nhớ đệm (cache / 캐시) nhanh hơn RAM”, mà là cách một hệ thống phân cấp hữu hạn dự đoán dữ liệu nào đáng giữ gần lõi xử lý (core), dữ liệu nào nên chuyển xuống tầng thấp hơn và khi nào nên chủ động đưa dữ liệu về trước khi chương trình yêu cầu.
 
@@ -11,8 +10,7 @@ Bộ nhớ đệm (cache / 캐시) dựa trên **tính cục bộ theo thời gi
 
 Một dòng bộ nhớ đệm (cache / 캐시) thường chứa nhiều byte hơn đúng đối tượng mà CPU đang cần. Điều này giảm số lần giao dịch bộ nhớ khi chương trình có tính cục bộ theo không gian, nhưng cũng có thể gây **chia sẻ giả (false sharing)** khi nhiều lõi sửa các biến độc lập nhưng các biến đó lại nằm chung một dòng bộ nhớ đệm (cache / 캐시).
 
-
-> **Chuyển mạch:** Từ **Tính cục bộ là giả định, không phải định luật**, ta sang **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Tính cục bộ là giả định, không phải định luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân cấp bao hàm, loại trừ và không bao hàm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)
 
@@ -20,15 +18,13 @@ Bộ nhớ đệm (cache / 캐시) ánh xạ trực tiếp (direct-mapped cache)
 
 Một lần trượt bộ nhớ đệm (cache / 캐시) (cache miss) vì vậy không chỉ xuất hiện khi dữ liệu “quá lớn”. Ta thường phân biệt trượt bắt buộc (compulsory miss), trượt do thiếu dung lượng (capacity miss) và trượt do xung đột (conflict miss) để hiểu nguyên nhân thật sự làm mất tính cục bộ.
 
-
-> **Chuyển mạch:** Từ **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)**, ta sang **Phân cấp bao hàm, loại trừ và không bao hàm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Phân cấp bao hàm, loại trừ và không bao hàm** tiếp nhận điểm tựa từ **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách thay thế không thể biết trước tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân cấp bao hàm, loại trừ và không bao hàm
 
 Nếu bộ nhớ đệm (cache / 캐시) cấp cuối (LLC) sử dụng chính sách bao hàm (inclusive), dữ liệu có mặt ở bộ nhớ đệm (cache / 캐시) nhỏ hơn cũng phải có đại diện tại LLC. Cách này hỗ trợ một số cơ chế nhất quán bộ nhớ đệm (cache / 캐시) (cache coherence) nhưng làm giảm dung lượng hiệu dụng. Phân cấp loại trừ (exclusive) cố tránh lưu trùng một dòng ở nhiều tầng, đổi lại việc di chuyển dữ liệu phức tạp hơn. Nhiều CPU hiện đại dùng chính sách không hoàn toàn bao hàm cũng không hoàn toàn loại trừ để cân bằng hai phía.
 
-
-> **Chuyển mạch:** Từ **Phân cấp bao hàm, loại trừ và không bao hàm**, ta sang **Chính sách thay thế không thể biết trước tương lai** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Chính sách thay thế không thể biết trước tương lai** tiếp nhận điểm tựa từ **Phân cấp bao hàm, loại trừ và không bao hàm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nạp trước của phần cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách thay thế không thể biết trước tương lai
 
@@ -36,8 +32,7 @@ Về lý thuyết, chính sách thay thế tối ưu (optimal replacement) sẽ 
 
 Bản chất của chính sách thay thế là ước lượng **khoảng cách tái sử dụng (reuse distance)**. Với luồng đọc tuần tự, giữ một dòng vừa đọc quá lâu có thể vô ích; với tập dữ liệu nóng, loại nhầm dòng sẽ làm tỷ lệ trượt bộ nhớ đệm (cache / 캐시) tăng mạnh.
 
-
-> **Chuyển mạch:** Từ **Chính sách thay thế không thể biết trước tương lai**, ta sang **Bộ nạp trước của phần cứng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Bộ nạp trước của phần cứng** tiếp nhận điểm tựa từ **Chính sách thay thế không thể biết trước tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bố trí dữ liệu trong phần mềm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ nạp trước của phần cứng
 
@@ -83,8 +78,7 @@ Nếu tắt hoặc giảm prefetch làm LLC miss count tăng nhưng demand độ
 
 Prefetch pathology cũng nối với power/thermal: yêu cầu (request / 요청) thừa làm bộ nhớ (memory / 메모리) fabric và DRAM hoạt động nhiều hơn, tăng năng lượng (energy / 에너지) per useful kết quả (outcome / 결과) và có thể đẩy controller vào operating điểm (point / 지점) thấp hơn. Vì vậy bộ nhớ đệm (cache / 캐시) tuning cần đánh giá cả useful công việc (work / 작업), bandwidth và sustained hiệu năng (performance / 성능), không chỉ peak IPC.
 
-
-> **Chuyển mạch:** Từ **Bộ nạp trước của phần cứng**, ta sang **Bố trí dữ liệu trong phần mềm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Bộ nạp trước của phần cứng** nêu điều cần giải thích; **Bố trí dữ liệu trong phần mềm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhất quán bộ nhớ đệm (cache / 캐시) không đồng nghĩa với mô hình nhất quán bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bố trí dữ liệu trong phần mềm
 
@@ -92,8 +86,7 @@ Cấu trúc “mảng các cấu trúc” (Array of Structures — AoS) thuận 
 
 Kỹ thuật chia khối (blocking/tiling) trong nhân ma trận cũng dựa trên cùng lập luận: chia bài toán để tập dữ liệu của mỗi khối vừa với bộ nhớ đệm (cache / 캐시), nhờ đó một dòng dữ liệu được tái sử dụng nhiều lần trước khi bị thay thế.
 
-
-> **Chuyển mạch:** Từ **Bố trí dữ liệu trong phần mềm**, ta sang **Nhất quán bộ nhớ đệm (cache / 캐시) không đồng nghĩa với mô hình nhất quán bộ nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Bố trí dữ liệu trong phần mềm** nêu điều cần giải thích; **Nhất quán bộ nhớ đệm (cache / 캐시) không đồng nghĩa với mô hình nhất quán bộ nhớ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Suy luận trong hệ thống thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhất quán bộ nhớ đệm (cache / 캐시) không đồng nghĩa với mô hình nhất quán bộ nhớ
 
@@ -101,8 +94,7 @@ Nhất quán bộ nhớ đệm (cache / 캐시) (cache coherence) trả lời c�
 
 Xem thêm: [Memory consistency, cache coherence và ordering](./00_memory_consistency_cache_coherence_and_ordering.md).
 
-
-> **Chuyển mạch:** Từ **Nhất quán bộ nhớ đệm (cache / 캐시) không đồng nghĩa với mô hình nhất quán bộ nhớ**, ta sang **Suy luận trong hệ thống thực tế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Suy luận trong hệ thống thực tế** tiếp nhận điểm tựa từ **Nhất quán bộ nhớ đệm (cache / 캐시) không đồng nghĩa với mô hình nhất quán bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Suy luận trong hệ thống thực tế
 
@@ -112,11 +104,10 @@ Các bộ đếm hiệu năng (performance counter) như `cache-misses`, `LLC-lo
 
 Khi điều tra prefetch, hãy ghi rõ counter là demand hay prefetch traffic nếu phần cứng cung cấp distinction đó. Nếu không có distinction, dùng controlled comparison và hardware sự kiện (event / 이벤트) correlation để tránh gán toàn bộ bộ nhớ (memory / 메모리) traffic cho demand đường dẫn (path / 경로). Kết luận tốt phải chỉ ra được pathology nào chiếm ưu thế: coverage thấp, timeliness kém, pollution, bandwidth theft hay hàng đợi (queue / 큐) pressure.
 
-
-> **Chuyển mạch:** Từ **Suy luận trong hệ thống thực tế**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Mô hình tư duy** gom các mảnh từ **Suy luận trong hệ thống thực tế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
 > Phân cấp bộ nhớ đệm (cache / 캐시) là một hệ thống dự đoán khả năng tái sử dụng dữ liệu dưới giới hạn dung lượng và băng thông. Tối ưu bộ nhớ đệm (cache / 캐시) không phải làm mọi thứ “nằm trong bộ nhớ đệm (cache / 캐시)”, mà là tổ chức tính toán để dữ liệu có giá trị được tái sử dụng đủ sớm, giảm xung đột và tránh tạo lưu lượng không cần thiết.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 memory consistency cache coherence and ordering](./00_memory_consistency_cache_coherence_and_ordering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

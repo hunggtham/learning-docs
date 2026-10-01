@@ -1,7 +1,6 @@
 # Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** Đọc **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **phụ thuộc (dependency / 의존성) Map** sang **Chapters**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) Map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder này xây Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) từ phụ thuộc (dependency / 의존성) đã có ở NLP, Deep học tập (learning / 학습) và Transformer. Mục tiêu không phải học cách gọi API, mà hiểu **LLM được tạo ra như thế nào, hành vi (behavior / 동작) sau post-training đến từ đâu, vì sao prompting/RAG/tác nhân (agent / 에이전트) hoạt động và giới hạn nào vẫn tồn tại**.
 
@@ -30,8 +29,7 @@ flowchart TD
     EVAL --> LIM[Limitations]
 ```
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) Map**, ta sang **Chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chapters** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reading lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chapters
 
@@ -56,15 +54,13 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 15_llm_limitations.md
 ```
 
-
-> **Chuyển mạch:** Từ **Chapters**, ta sang **Reading lô-gic (logic / 논리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Reading lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reading lô-gic (logic / 논리)
 
 Bốn chapter đầu giải thích đầu vào (input / 입력) biểu diễn (representation / 표현) và computation cốt lõi (core / 핵심). `04–09` giải thích mô hình (model / 모델) vòng đời (lifecycle / 생명주기) từ cơ sở (base / 기반) mô hình (model / 모델) tới assistant-aligned mô hình (model / 모델). `10–12` chuyển sang inference-time adaptation và lập luận (reasoning / 추론). `13–15` tập trung độ tin cậy (reliability / 신뢰성): hallucination, evaluation và structural limitations.
 
-
-> **Chuyển mạch:** Từ **Reading lô-gic (logic / 논리)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Reading lô-gic (logic / 논리)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cốt lõi (core / 핵심) Distinctions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -83,8 +79,7 @@ Raw text
 
 LLM ứng dụng (application / 애플리케이션) thực tế còn thêm retrieval, tools, bộ nhớ (memory / 메모리), kiểm tra hợp lệ (validation / 검증) và monitoring. Vì vậy folder này kết thúc ngay trước `09_retrieval_and_rag/` và `10_agents_and_ai_systems/`.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **cốt lõi (core / 핵심) Distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Cốt lõi (core / 핵심) Distinctions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Next** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cốt lõi (core / 핵심) Distinctions
 
@@ -102,9 +97,10 @@ low temperature              ≠ factuality
 LLM                          ≠ complete AI system
 ```
 
-
-> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) Distinctions**, ta sang **Next** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Next** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) Distinctions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Next
 
 Tiếp theo: [Retrieval & RAG](../09_retrieval_and_rag/README.md), nơi parameterized model được kết nối với external evidence và searchable knowledge.
+
+> **Bàn giao:** Sau **Next**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

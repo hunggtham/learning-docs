@@ -1,7 +1,6 @@
 # Kotlin + Android Master ghi chú (note / 노트) — Master / môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) Supplement
 
-> **Mạch đọc:** Đặt **Kotlin + Android Master ghi chú (note / 노트) — Master / môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) Supplement** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục lục** sang **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android Master ghi chú (note / 노트) — Master / môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) Supplement**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục lục** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Mục tiêu: đưa người học từ mức cấp cao (senior / 시니어) lên mức có thể lập luận (reasoning / 추론) về trình biên dịch (compiler / 컴파일러), thời gian chạy (runtime / 런타임), vòng đời (lifecycle / 생명주기), tính đồng thời (concurrency / 동시성), API tính tương thích (compatibility / 호환성), kiến trúc vận hành (production architecture / 운영 아키텍처), bản dựng (build / 빌드)/bản phát hành (release / 릴리스) và di chuyển (migration / 마이그레이션) qua nhiều thế hệ Kotlin/Android. tệp (file / 파일) này là chuẩn gốc (canonical / 정본) Master ghi chú (note / 노트); các `deep_dive/`, `production_casebook/` và `depth_labs/` chỉ mở rộng những ranh giới (boundary / 경계) khó, không thay thế mạch học (learning flow / 학습 흐름) của tệp (file / 파일) này.
 
@@ -92,8 +91,7 @@ Google Play policy
 
 Các tầng này liên quan nhưng không đồng nhất. `Kotlin 2.4.20`, `AGP 9.4.1`, `compileSdk 37`, `targetSdk 36` và `Compose BOM 2026.09.00` hoàn toàn có thể cùng tồn tại vì chúng mô tả các đặc tả hợp đồng (contract / 계약) khác nhau.
 
-
-> **Chuyển mạch:** Từ **Mục lục**, ta sang **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Master track bắt đầu bằng việc tách Kotlin release, languageVersion và API surface; phần sau dùng các boundary này để đọc build, compiler và migration evidence.
 
 ## 1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)
 
@@ -988,4 +986,4 @@ Legacy đường dẫn (path / 경로) bao giờ được xóa?
 
 Mastery không phải nhớ toàn bộ Android SDK. Nó là khả năng hạ một vấn đề từ UI xuống trạng thái (state / 상태)/vòng đời (lifecycle / 생명주기), từ coroutine xuống thứ tự (ordering / 순서)/cancellation, từ Kotlin nguồn (source / 소스) xuống trình biên dịch (compiler / 컴파일러)/bytecode, từ Gradle xuống sản phẩm tạo ra (artifact / 산출물), và từ bug môi trường vận hành (production / 운영 환경) xuống bất biến (invariant / 불변식) + bằng chứng (evidence / 증거) thay vì đoán.
 
-> **Bàn giao:** Sau **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

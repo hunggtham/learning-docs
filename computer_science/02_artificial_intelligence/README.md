@@ -1,12 +1,14 @@
 # Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** README này là owner của bản đồ AI. Hãy dùng đồ thị để thấy các prerequisite và nhánh phụ thuộc, rồi đọc mô hình tư duy để hiểu dữ liệu biến thành biểu diễn, suy luận, hành động và phản hồi như thế nào.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Reading đồ thị (graph / 그래프)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Artificial Intelligence (AI / Trí tuệ nhân tạo / 인공지능)** không chỉ là ChatGPT, Large ngôn ngữ (language / 언어) mô hình (model / 모델) hay Machine học tập (learning / 학습). Đây là lĩnh vực nghiên cứu cách xây dựng những hệ thống có thể **biểu diễn thông tin, suy luận, học từ dữ liệu, dự đoán, lập kế hoạch, ra quyết định và hành động** trong một môi trường để đạt mục tiêu.
 
 Thư viện (library / 라이브러리) này được tổ chức theo **conceptual phụ thuộc (dependency / 의존성)** thay vì Beginner → Intermediate → Advanced. Mỗi chapter cố gắng trả lời một câu hỏi nền tảng, giải thích từ bản chất, sau đó kết nối sang Mathematics, Khoa học máy tính (computer science / 컴퓨터 과학), Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) và các hệ thống AI hiện đại.
 
 ## Reading đồ thị (graph / 그래프)
+
+Đồ thị đọc này cho biết AI đi từ biểu diễn và tối ưu tới mô hình, dữ liệu, hệ thống và an toàn. Hãy dùng nó để nhận ra chapter hiện tại đang dựa trên lớp nào và kết quả của nó được dùng ở đâu.
 
 ```mermaid
 flowchart TD
@@ -35,9 +37,11 @@ flowchart TD
     SAFE --> GOV[20 Ethics / Governance / Society]
 ```
 
-> **Chuyển mạch:** Đồ thị cho biết các chapter đứng ở đâu; mô hình tư duy bên dưới giải thích điều chạy xuyên qua chúng: hệ thống nhận quan sát, tạo biểu diễn, suy luận rồi nhận phản hồi. Vì vậy, phần tiếp theo không lặp lại bản đồ mà đưa ra một cách đọc chung cho từng nhánh.
+> **Chuyển mạch:** Trong **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** gom các mảnh từ **Reading đồ thị (graph / 그래프)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiện tại (current / 현재) cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) xuyên suốt
+
+Sau bản đồ dependency, phần này nén toàn bộ layer thành một chuỗi suy luận. Mục tiêu là nối dữ liệu, objective, model, evaluation và deployment thành một vòng lặp thay vì học từng thuật toán riêng lẻ.
 
 ```text
 Environment / Problem
@@ -59,42 +63,43 @@ Feedback
 
 Hiện đại (modern / 현대적) AI ứng dụng (application / 애플리케이션) thường thêm bên ngoài (external / 외부) retrieval, tools, bộ nhớ (memory / 메모리), xác minh (verification / 확인) và khả năng quan sát (observability / 관측 가능성) quanh mô hình (model / 모델). Vì vậy thư viện (library / 라이브러리) phân biệt rõ **mô hình (model / 모델)** và **hệ thống (system / 시스템)**.
 
-> **Chuyển mạch:** Mô hình trên là tiêu chí đọc; cấu trúc thư mục tiếp theo cho biết tiêu chí đó đang được triển khai thành những owner nào trong repository.
+> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Hiện tại (current / 현재) cấu trúc (structure / 구조)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những distinction quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiện tại (current / 현재) cấu trúc (structure / 구조)
 
-Các thư mục `00`–`20` hiện đều đã có nội dung canonical trong repository; không dùng marker cũ kiểu `← next` để suy ra section còn trống. Connection route xuyên các lớp AI hiện được đặt ở Computer Science Connections để tránh tạo một namespace AI thứ hai.
+Cấu trúc hiện tại đi từ foundations và mathematics tới model, retrieval, agents, engineering, operations và safety. Mỗi layer kế thừa assumption của layer trước, nên hãy kiểm tra dependency trước khi nhảy vào một công cụ cụ thể.
 
 ```text
 02_artificial_intelligence/
-├── 00_foundations/                         ✅ canonical
-├── 01_mathematical_foundations/            ✅ canonical
-├── 02_search_reasoning_and_planning/       ✅ canonical
-├── 03_knowledge_and_reasoning/              ✅ canonical
-├── 04_machine_learning/                    ✅ canonical
-├── 05_neural_networks/                     ✅ canonical
-├── 06_deep_learning_architectures/         ✅ canonical
-├── 07_natural_language_processing/         ✅ canonical
-├── 08_large_language_models/               ✅ canonical
-├── 09_retrieval_and_rag/                   ✅ canonical
-├── 10_agents_and_ai_systems/               ✅ canonical
-├── 11_reinforcement_learning/              ✅ canonical
-├── 12_computer_vision/                     ✅ canonical
-├── 13_speech_audio_and_multimodal/         ✅ canonical
-├── 14_data_for_ai/                         ✅ canonical
-├── 15_ai_engineering/                      ✅ canonical
-├── 16_mlops_and_llmops/                    ✅ canonical
-├── 17_ai_compute_and_infrastructure/       ✅ canonical
-├── 18_evaluation_reliability_interpretability/ ✅ canonical
-├── 19_ai_safety_security_alignment/        ✅ canonical
-└── 20_ethics_governance_and_society/       ✅ canonical
+├── 00_foundations/                         ✅ complete
+├── 01_mathematical_foundations/            ✅ complete
+├── 02_search_reasoning_and_planning/       ✅ complete
+├── 03_knowledge_and_reasoning/              ✅ complete
+├── 04_machine_learning/                    ✅ complete
+├── 05_neural_networks/                     ✅ complete
+├── 06_deep_learning_architectures/         ✅ complete
+├── 07_natural_language_processing/         ✅ complete
+├── 08_large_language_models/               ✅ complete
+├── 09_retrieval_and_rag/                   ✅ complete
+├── 10_agents_and_ai_systems/               ✅ complete
+├── 11_reinforcement_learning/              ✅ complete
+├── 12_computer_vision/                     ✅ complete
+├── 13_speech_audio_and_multimodal/         ✅ complete
+├── 14_data_for_ai/                         ✅ complete
+├── 15_ai_engineering/                      ← next
+├── 16_mlops_and_llmops/
+├── 17_ai_compute_and_infrastructure/
+├── 18_evaluation_reliability_interpretability/
+├── 19_ai_safety_security_alignment/
+├── 20_ethics_governance_and_society/
+└── 90_connections/
 ```
 
-Tuyến xuyên tầng mới: [AI data → evaluation → provenance → production evidence](../90_connections/07_ai_data_evaluation_provenance_and_production_evidence.md). Route này nối Data for AI, MLOps/LLMOps, Evaluation/Reliability, Research Methods và production observability thành một evidence lifecycle duy nhất.
-
-> **Chuyển mạch:** Cây thư mục cho biết nơi tìm nội dung, nhưng chưa cho biết các khái niệm dễ bị nhập làm một. Phần tiếp theo đặt các cặp đó cạnh nhau để người đọc biết ranh giới cần giữ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Những distinction quan trọng** tiếp nhận điểm tựa từ **Hiện tại (current / 현재) cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Terminology convention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những distinction quan trọng
+
+Các phân biệt dưới đây ngăn những từ gần nhau bị dùng lẫn: model với system, retrieval với reasoning, automation với agency và benchmark với reliability. Đọc từng cặp như một ranh giới thiết kế có hệ quả thực tế.
 
 ```text
 AI                  ≠ Machine Learning
@@ -124,22 +129,14 @@ Vector Similarity   ≠ Semantic Truth
 Fine-tuning         ≠ Knowledge Database
 Long Context        ≠ Persistent Memory
 Model says “done”   ≠ Verified completion
-Offline score       ≠ Production utility
-Model version       ≠ Full AI system version
 ```
 
-> **Chuyển mạch:** Sau khi phân biệt các cặp khái niệm, quy ước thuật ngữ giúp giữ cùng một nghĩa khi chúng xuất hiện ở nhiều chapter và nhiều ngôn ngữ.
+> **Chuyển mạch:** Trong **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Terminology convention** tiếp nhận điểm tựa từ **Những distinction quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Terminology convention
 
 Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`, `reward (보상 / phần thưởng)`, `data leakage (데이터 누수 / rò rỉ dữ liệu)`, `data governance (데이터 거버넌스 / quản trị dữ liệu)`.
 
-> **Chuyển mạch:** Quy ước tên gọi chỉ giải quyết khả năng tra cứu; nguyên tắc học tập tiếp theo nói rõ cách dùng bản đồ, prerequisite và ví dụ để hình thành hiểu biết thay vì chỉ ghi nhớ nhãn.
+Mỗi layer vì vậy đi từ problem → mechanism → assumptions → examples → limitations → system connections.
 
-## Học tập (learning / 학습) principle
-
-Không học khung phần mềm (framework / 프레임워크) trước cơ chế (mechanism / 메커니즘). PyTorch, Hugging Face, véc-tơ (vector / 벡터) databases hoặc tác nhân (agent / 에이전트) frameworks có thể thay đổi nhanh; các concept như xác suất (probability / 확률), biểu diễn (representation / 표현), attention, retrieval, trạng thái (state / 상태), planning, dữ liệu (data / 데이터) lineage, evaluation và bảo mật (security / 보안) bền vững hơn.
-
-Mỗi tầng (layer / 계층) vì vậy đi từ bài toán (problem / 문제) → cơ chế (mechanism / 메커니즘) → các giả định (assumptions / 가정들) → examples → limitations → hệ thống (system / 시스템) connections.
-
-> **Bàn giao:** Sau **học tập (learning / 학습) principle**, nếu đã học từng module riêng lẻ nhưng chưa thấy cách chúng nối thành release evidence, đọc [AI data → evaluation → provenance → production evidence](../90_connections/07_ai_data_evaluation_provenance_and_production_evidence.md).
+> **Bàn giao:** Sau **Terminology convention**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

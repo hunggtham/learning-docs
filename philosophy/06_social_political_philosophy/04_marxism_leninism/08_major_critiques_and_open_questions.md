@@ -1,5 +1,7 @@
 # Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Historical materialism: law of lịch sử (history / 이력) hay ràng buộc (constraint / 제약조건) khung phần mềm (framework / 프레임워크)?** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Functional explanation: does capitalism fall because it blocks productive forces?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Sau khi đi từ Marx tới Lenin, doctrine và historical hiện thực (implementation / 구현), critique không nên bắt đầu bằng verdict “đúng/sai toàn bộ”. Một tradition lớn chứa claims khác loại: lý thuyết (theory / 이론) of lịch sử (history / 이력), giá trị (value / 값) lý thuyết (theory / 이론), lớp (class / 클래스) phân tích (analysis / 분석), account of trạng thái (state / 상태), chuyển tiếp (transition / 전이) chiến lược (strategy / 전략), institutional thiết kế (design / 설계) và normative critique. Một objection chỉ có force trong phạm vi claim nó thực sự chạm tới.
 
 Chapter này vì vậy dùng nguyên tắc:
@@ -40,6 +42,8 @@ material structure uniquely determines political outcome
 
 This is a recurring sự đánh đổi (trade-off / 트레이드오프) in xã hội (social / 사회적) lý thuyết (theory / 이론): stronger claims predict more but are easier to falsify; weaker frameworks travel better but explain less by themselves.
 
+> **Chuyển mạch:** Trong **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Functional explanation: does capitalism fall because it blocks productive forces?** tiếp nhận điểm tựa từ **Historical materialism: law of lịch sử (history / 이력) hay ràng buộc (constraint / 제약조건) khung phần mềm (framework / 프레임워크)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스): central variable versus total explanation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Functional explanation: does capitalism fall because it blocks productive forces?
 
 Some reconstructions of Marxian lịch sử (history / 이력) use functional explanation: relations of môi trường vận hành (production / 운영 환경) persist because they help develop productive forces, then are replaced when they become obstacles.
@@ -58,6 +62,8 @@ institutional variation
 ```
 
 Analytical Marxists such as G. A. Cohen made this issue tường minh (explicit / 명시적), which is one reason the tradition is useful even when one rejects parts of its answer.
+
+> **Chuyển mạch:** Ở chặng này của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Lớp (class / 클래스): central variable versus total explanation** tiếp nhận điểm tựa từ **Functional explanation: does capitalism fall because it blocks productive forces?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **From lớp (class / 클래스) position to lớp (class / 클래스) consciousness: missing cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lớp (class / 클래스): central variable versus total explanation
 
@@ -80,6 +86,8 @@ These variables can interact. For example, lớp (class / 클래스) position ca
 
 The burden of proof depends on claim strength. “Lớp (class / 클래스) matters” is empirically modest. “Lớp (class / 클래스) is the ultimately decisive explanation of all major xung đột (conflict / 충돌)” is much stronger and requires bằng chứng (evidence / 증거) showing why alternative dimensions are derivative rather than independently nhân quả (causal / 인과적).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Lớp (class / 클래스): central variable versus total explanation** xác định đầu vào; **From lớp (class / 클래스) position to lớp (class / 클래스) consciousness: missing cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Labor lý thuyết (theory / 이론) of giá trị (value / 값): what exactly is being challenged?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## From lớp (class / 클래스) position to lớp (class / 클래스) consciousness: missing cơ chế (mechanism / 메커니즘)
 
 A structural quan hệ (relation / 관계) does not automatically produce dùng chung (common / 공통) political định danh (identity / 식별자). Collective hành động (action / 동작) faces coordination, thông tin (information / 정보), trust and free-rider problems.
@@ -96,6 +104,8 @@ shared structural position
 ```
 
 Break any arrow and similar lớp (class / 클래스) positions can produce different political hành vi (behavior / 동작). This is one place where Marxist lý thuyết (theory / 이론) benefits from political sociology rather than relying on lớp (class / 클래스) cấu trúc (structure / 구조) alone.
+
+> **Chuyển mạch:** Trong **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, sau khi thấy quy trình trong **From lớp (class / 클래스) position to lớp (class / 클래스) consciousness: missing cơ chế (mechanism / 메커니즘)**, **Labor lý thuyết (theory / 이론) of giá trị (value / 값): what exactly is being challenged?** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Transformation bài toán (problem / 문제): values, môi trường vận hành (production / 운영 환경) prices and profit rates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Labor lý thuyết (theory / 이론) of giá trị (value / 값): what exactly is being challenged?
 
@@ -123,6 +133,8 @@ does rejecting labor values remove the explanation of power/exploitation?
 
 They are not the same.
 
+> **Chuyển mạch:** Ở chặng này của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Labor lý thuyết (theory / 이론) of giá trị (value / 값): what exactly is being challenged?** cho ta quy tắc; **Transformation bài toán (problem / 문제): values, môi trường vận hành (production / 운영 환경) prices and profit rates** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Exploitation without labor lý thuyết (theory / 이론) of giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Transformation bài toán (problem / 문제): values, môi trường vận hành (production / 운영 환경) prices and profit rates
 
 A major technical issue arises because industries use different ratios of labor to machinery/materials. If only living labor creates surplus giá trị (value / 값) in Marx's khung phần mềm (framework / 프레임워크), industries with more labor should mechanically generate different profit rates. Yet competition tends to equalize profit rates across capitals.
@@ -141,6 +153,8 @@ competitive profit-rate equalization
 ```
 
 Any reconstruction has to show that its equations and definitions remain coherent.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Transformation bài toán (problem / 문제): values, môi trường vận hành (production / 운영 환경) prices and profit rates** cho ta quy tắc; **Exploitation without labor lý thuyết (theory / 이론) of giá trị (value / 값)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Voluntary đặc tả hợp đồng (contract / 계약) versus structural phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Exploitation without labor lý thuyết (theory / 이론) of giá trị (value / 값)
 
@@ -168,6 +182,8 @@ which definition of exploitation?
 → which evidence supports those premises?
 ```
 
+> **Chuyển mạch:** Trong **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Exploitation without labor lý thuyết (theory / 이론) of giá trị (value / 값)** cho ta quy tắc; **Voluntary đặc tả hợp đồng (contract / 계약) versus structural phụ thuộc (dependency / 의존성)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Profit: surplus giá trị (value / 값) versus entrepreneurship, rủi ro (risk / 위험) and rents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Voluntary đặc tả hợp đồng (contract / 계약) versus structural phụ thuộc (dependency / 의존성)
 
 A central normative disagreement is whether a voluntarily signed employment đặc tả hợp đồng (contract / 계약) can still be exploitative.
@@ -185,6 +201,8 @@ background fairness / independence
 Both can be evaluated separately. Đặc tả hợp đồng (contract / 계약) can be non-coerced in a narrow legal sense while background institutions remain unequal; conversely inequality alone does not prove every giao dịch (transaction / 트랜잭션) unjust.
 
 This is why normative phân tích (analysis / 분석) needs tường minh (explicit / 명시적) premises rather than importing moral conclusion from economic vocabulary.
+
+> **Chuyển mạch:** Ở chặng này của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Profit: surplus giá trị (value / 값) versus entrepreneurship, rủi ro (risk / 위험) and rents** tiếp nhận điểm tựa từ **Voluntary đặc tả hợp đồng (contract / 계약) versus structural phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Crisis lý thuyết (theory / 이론): tendency is not a single prediction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Profit: surplus giá trị (value / 값) versus entrepreneurship, rủi ro (risk / 위험) and rents
 
@@ -206,6 +224,8 @@ labor bargaining outcomes
 
 Therefore an empirical claim that all observed profit maps directly to one Marxian category needs additional công việc (work / 작업).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Crisis lý thuyết (theory / 이론): tendency is not a single prediction** tiếp nhận điểm tựa từ **Profit: surplus giá trị (value / 값) versus entrepreneurship, rủi ro (risk / 위험) and rents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Falling tỷ lệ (rate / 비율) of profit: tendency, countertendencies and testability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Crisis lý thuyết (theory / 이론): tendency is not a single prediction
 
 Marx discusses several crisis-generating mechanisms across his works: disproportionality, credit, overaccumulation, realization problems, competitive pressure and profitability dynamics. Later Marxists developed different crisis theories.
@@ -224,6 +244,8 @@ hypothesis
 
 A banking crisis driven by leverage and liquidity is not automatically bằng chứng (evidence / 증거) for every Marxian crisis lý thuyết (theory / 이론).
 
+> **Chuyển mạch:** Trong **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Falling tỷ lệ (rate / 비율) of profit: tendency, countertendencies and testability** tiếp nhận điểm tựa từ **Crisis lý thuyết (theory / 이론): tendency is not a single prediction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Revolution versus reform: chuyển tiếp (transition / 전이) burden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Falling tỷ lệ (rate / 비율) of profit: tendency, countertendencies and testability
 
 Marx's discussion of a **tendency of the tỷ lệ (rate / 비율) of profit to fall** links accumulation and rising capital intensity with pressure on profitability, while also discussing counteracting forces.
@@ -231,6 +253,8 @@ Marx's discussion of a **tendency of the tỷ lệ (rate / 비율) of profit to 
 The empirical challenge is specification. Which profit tỷ lệ (rate / 비율)? Which denominator? At firm, sector or economy mức (level / 수준)? How giá trị (value / 값) categories map to national accounts? What countertendencies are allowed?
 
 If countertendencies can explain every reversal, the hypothesis risks weak falsifiability. If definitions are fixed and dữ liệu (data / 데이터) ánh xạ (mapping / 매핑) transparent, it becomes a legitimate empirical research program—even if results disagree.
+
+> **Chuyển mạch:** Ở chặng này của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Revolution versus reform: chuyển tiếp (transition / 전이) burden** tiếp nhận điểm tựa từ **Falling tỷ lệ (rate / 비율) of profit: tendency, countertendencies and testability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển tiếp (transition / 전이) bài toán (problem / 문제): who constrains the chuyển tiếp (transition / 전이) authority?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Revolution versus reform: chuyển tiếp (transition / 전이) burden
 
@@ -246,6 +270,8 @@ Which path can survive organized opposition from losers?
 ```
 
 Historical cases show both reform durability and quay lui (rollback / 롤백), as well as revolutionary transformation and authoritarian consolidation. No general answer follows from one trường hợp (case / 사례).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Chuyển tiếp (transition / 전이) bài toán (problem / 문제): who constrains the chuyển tiếp (transition / 전이) authority?** tiếp nhận điểm tựa từ **Revolution versus reform: chuyển tiếp (transition / 전이) burden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning and kiến thức (knowledge / 지식): computational power is not the whole bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuyển tiếp (transition / 전이) bài toán (problem / 문제): who constrains the chuyển tiếp (transition / 전이) authority?
 
@@ -265,6 +291,8 @@ conditions for decentralization
 ```
 
 Without these, “withering away” remains an endpoint description rather than cơ chế (mechanism / 메커니즘).
+
+> **Chuyển mạch:** Trong **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Planning and kiến thức (knowledge / 지식): computational power is not the whole bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Chuyển tiếp (transition / 전이) bài toán (problem / 문제): who constrains the chuyển tiếp (transition / 전이) authority?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công khai (public / 공개) power and private power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Planning and kiến thức (knowledge / 지식): computational power is not the whole bài toán (problem / 문제)
 
@@ -292,6 +320,8 @@ who bears cost of error?
 
 This lets planning and thị trường (market / 시장) institutions be compared symmetrically.
 
+> **Chuyển mạch:** Ở chặng này của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Công khai (public / 공개) power and private power** tiếp nhận điểm tựa từ **Planning and kiến thức (knowledge / 지식): computational power is not the whole bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prediction, retrodiction and unfalsifiability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công khai (public / 공개) power and private power
 
 Liberal critique of Marxism–Leninism emphasizes concentration of trạng thái (state / 상태)/party power and risks to civil liberty. Marxian critique of capitalism emphasizes private power through quyền sở hữu (ownership / 소유권), employment, credit and thị trường (market / 시장) concentration.
@@ -304,6 +334,8 @@ private domination risk
 ```
 
 A khung phần mềm (framework / 프레임워크) that recognizes only one kind of power will systematically miss institutional failures on the other side.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **Prediction, retrodiction and unfalsifiability** tiếp nhận điểm tựa từ **Công khai (public / 공개) power and private power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **What survives decomposition?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Prediction, retrodiction and unfalsifiability
 
@@ -321,6 +353,8 @@ auxiliary assumptions
 
 Then historical bằng chứng (evidence / 증거) can actually revise belief rather than only decorate prior commitments.
 
+> **Chuyển mạch:** Trong **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **What survives decomposition?** tiếp nhận điểm tựa từ **Prediction, retrodiction and unfalsifiability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn định hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## What survives decomposition?
 
 Decomposing the tradition leaves a mixed picture rather than one verdict. Some claims—such as the centrality of quyền sở hữu (ownership / 소유권), bargaining power, institutional reproduction and capital concentration—remain live research questions. Other claims, especially strong deterministic readings or technical value-theory propositions, face substantial theoretical and empirical criticism.
@@ -329,9 +363,9 @@ This is exactly why a thư viện kiến thức (knowledge library / 지식 라�
 
 The next chapter [Later Marxist traditions](09_later_marxist_traditions.md) shows how thinkers within or near the tradition responded by revising lớp (class / 클래스) lý thuyết (theory / 이론), culture, exploitation, methodology and institutional thiết kế (design / 설계) rather than preserving every thành phần (component / 컴포넌트) unchanged.
 
-## Nguồn định hướng
-Phần “Nguồn định hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist lý thuyết (theory / 이론)**, **What survives decomposition?** nêu điều cần giải thích; **Nguồn định hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Nguồn định hướng
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Analytical Marxism”: https://plato.stanford.edu/entries/marxism-analytical/
@@ -340,3 +374,5 @@ Phần “Nguồn định hướng” nối kiến thức trước với nội d
 - Stanford Encyclopedia of Philosophy, “Markets”: https://plato.stanford.edu/entries/markets/
 
 Use primary texts to establish what Marx or Lenin argued; use economics, lịch sử (history / 이력) and political philosophy separately to evaluate whether each claim survives contemporary bằng chứng (evidence / 증거) and argument.
+
+> **Bàn giao:** Sau **Nguồn định hướng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

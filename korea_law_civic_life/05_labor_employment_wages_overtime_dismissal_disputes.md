@@ -1,7 +1,6 @@
 # 05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp
 
-> **Mạch đọc:** Đặt **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu từ quan hệ lao động, không chỉ từ tên visa** sang **2. Hợp đồng lao động (근로계약서)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bắt đầu từ quan hệ lao động, không chỉ từ tên visa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Hợp đồng lao động (근로계약서)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Bắt đầu từ quan hệ lao động, không chỉ từ tên visa
 
@@ -15,8 +14,7 @@ quyền và nghĩa vụ trong quan hệ lao động (근로관계)
 
 Có visa cho phép làm việc không có nghĩa mọi điều khoản công ty đưa ra đều hợp pháp. Ngược lại, có quyền theo luật lao động cũng không tự động giải quyết vấn đề về tư cách lưu trú. Hai hệ thống cần được kiểm tra riêng.
 
-
-> **Chuyển mạch:** Từ **1. Bắt đầu từ quan hệ lao động, không chỉ từ tên visa**, ta sang **2. Hợp đồng lao động (근로계약서)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Employment relationship is distinct from visa label; 근로계약서 records duties and conditions, then wage rules determine what counts as payable work and dispute evidence.
 
 ## 2. Hợp đồng lao động (근로계약서)
 
@@ -39,8 +37,7 @@ Khi đọc `근로계약서`, nên xác định ít nhất:
 
 Đừng chỉ nhìn `연봉`. Cần hiểu tổng lương gồm những thành phần nào, khoản nào cố định, khoản nào phụ thuộc giờ làm hoặc điều kiện khác.
 
-
-> **Chuyển mạch:** Từ **2. Hợp đồng lao động (근로계약서)**, ta sang **3. Tiền lương (임금)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **3. Tiền lương (임금)** tiếp nhận điểm tựa từ **2. Hợp đồng lao động (근로계약서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Thời giờ làm việc và overtime (연장근로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Tiền lương (임금)
 
@@ -63,8 +60,7 @@ Khi kiểm tra bảng lương (`급여명세서`), nên tách:
 
 Nếu có tranh chấp lương, cần lưu `근로계약서`, `급여명세서`, sao kê ngân hàng, lịch làm việc, log chấm công (`출퇴근기록`) và tin nhắn giao việc.
 
-
-> **Chuyển mạch:** Từ **3. Tiền lương (임금)**, ta sang **4. Thời giờ làm việc và overtime (연장근로)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **4. Thời giờ làm việc và overtime (연장근로)** tiếp nhận điểm tựa từ **3. Tiền lương (임금)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Thời giờ làm việc và overtime (연장근로)
 
@@ -83,8 +79,7 @@ người đó có thuộc phạm vi áp dụng của điều khoản không?
 
 Đây là lý do thư viện (library / 라이브러리) tập trung vào cơ chế và nguồn tra cứu thay vì một bảng tính duy nhất.
 
-
-> **Chuyển mạch:** Từ **4. Thời giờ làm việc và overtime (연장근로)**, ta sang **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”** tiếp nhận điểm tựa từ **4. Thời giờ làm việc và overtime (연장근로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Sa thải (해고) không chỉ là “báo trước 30 ngày”
 
@@ -102,8 +97,7 @@ Tại thời điểm kiểm tra, `근로기준법` Điều 26 quy định nguyê
 
 Vì thời hạn tranh chấp quan trọng, khi nhận thông báo sa thải cần ghi chính xác **ngày xảy ra sự việc**, không chỉ giữ bản chụp.
 
-
-> **Chuyển mạch:** Từ **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”**, ta sang **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau** tiếp nhận điểm tựa từ **5. Sa thải (해고) không chỉ là “báo trước 30 ngày”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Tranh chấp nơi làm việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau
 
@@ -117,8 +111,7 @@ Sau khi đọc quy tắc sa thải, ta cần phân loại đúng cách quan hệ
 
 Tên gọi trong HR hệ thống (system / 시스템) không quyết định toàn bộ bản chất. Cần xem sự kiện thực tế và chứng cứ.
 
-
-> **Chuyển mạch:** Từ **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau**, ta sang **7. Tranh chấp nơi làm việc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **7. Tranh chấp nơi làm việc** tiếp nhận điểm tựa từ **6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Lao động nước ngoài và bảo hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Tranh chấp nơi làm việc
 
@@ -138,8 +131,7 @@ Có thể liên quan Ủy ban Quan hệ Lao động (노동위원회). Thời h�
 
 Cần kiểm tra định nghĩa, nghĩa vụ của công ty và thủ tục hiện hành theo `근로기준법` và hướng dẫn của Bộ Lao động. Không nên gắn nhãn pháp lý chỉ dựa trên một trải nghiệm khó chịu mà chưa đối chiếu tiêu chí luật.
 
-
-> **Chuyển mạch:** Từ **7. Tranh chấp nơi làm việc**, ta sang **8. Lao động nước ngoài và bảo hiểm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **8. Lao động nước ngoài và bảo hiểm** tiếp nhận điểm tựa từ **7. Tranh chấp nơi làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Workflow tự tra cứu tranh chấp lao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Lao động nước ngoài và bảo hiểm
 
@@ -147,8 +139,7 @@ Tư cách visa ảnh hưởng một số chế độ, đặc biệt `고용보�
 
 Với E-9 và H-2 còn có các bảo hiểm chuyên biệt của hệ thống cấp phép lao động nước ngoài như `출국만기보험`, `보증보험`, `귀국비용보험`, `상해보험`. Không nên nhầm chúng với bốn bảo hiểm xã hội chung.
 
-
-> **Chuyển mạch:** Từ **8. Lao động nước ngoài và bảo hiểm**, ta sang **9. Workflow tự tra cứu tranh chấp lao động** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **8. Lao động nước ngoài và bảo hiểm** xác định đầu vào; **9. Workflow tự tra cứu tranh chấp lao động** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Workflow tự tra cứu tranh chấp lao động
 
@@ -165,8 +156,7 @@ Khi đã xác định loại tranh chấp, hãy chuyển từ cảm giác “b�
 8. kiểm tra deadline trước khi thương lượng kéo dài
 ```
 
-
-> **Chuyển mạch:** Từ **9. Workflow tự tra cứu tranh chấp lao động**, ta sang **10. Nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, cơ chế trong **9. Workflow tự tra cứu tranh chấp lao động** cần được kiểm chứng bằng dấu vết cụ thể; **10. Nguồn chính thức** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **11. Không phải legal advice cá nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Nguồn chính thức
 
@@ -179,9 +169,10 @@ Các nguồn này là điểm kiểm tra cuối cho luật, thủ tục và hư�
 - 중앙노동위원회: https://www.nlrc.go.kr/
 - 근로복지공단: https://www.comwel.or.kr/
 
-
-> **Chuyển mạch:** Từ **10. Nguồn chính thức**, ta sang **11. Không phải legal advice cá nhân** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**, **10. Nguồn chính thức** nêu điều cần giải thích; **11. Không phải legal advice cá nhân** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 11. Không phải legal advice cá nhân
 
 Một tình huống lao động có thể thay đổi kết quả chỉ vì một chi tiết như số nhân viên, thời gian làm việc, loại hợp đồng hoặc tư cách người lao động. File này giúp bạn biết **câu hỏi nào cần hỏi và nguồn nào cần mở**, không kết luận thay cơ quan có thẩm quyền hoặc chuyên gia cho một tranh chấp cụ thể.
+
+> **Bàn giao:** Sau **11. Không phải legal advice cá nhân**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

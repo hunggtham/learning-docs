@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Part 1: Beginner — Rewritten Detailed
 
-> **Mạch đọc:** Đọc **Java cốt lõi (core / 핵심) — Part 1: Beginner — Rewritten Detailed** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Học Java từ số 0 theo cách hiểu bản chất, không học thuộc cú pháp** sang **Cách đọc bộ Java chuẩn gốc (canonical / 정본)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Part 1: Beginner — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Học Java từ số 0 theo cách hiểu bản chất, không học thuộc cú pháp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cách đọc bộ Java chuẩn gốc (canonical / 정본)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Học Java từ số 0 theo cách hiểu bản chất, không học thuộc cú pháp
 
@@ -8,9 +8,7 @@
 >
 > Các “cấp cao (senior / 시니어) ghi chú (note / 노트)”, “lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)”, “mẫu lập trình (programming pattern / 프로그래밍 패턴)” và “mẫu thiết kế (design pattern / 디자인 패턴)” không được tách thành checklist riêng sau mỗi mục. Khi một mẫu (pattern / 패턴) thực sự quan trọng, nó sẽ được giải thích ngay trong nội dung để bạn hiểu nó như một phần tự nhiên của Java chứ không phải một danh sách thuật ngữ cần học thuộc.
 
-
-
-> **Chuyển mạch:** Từ **Học Java từ số 0 theo cách hiểu bản chất, không học thuộc cú pháp**, ta sang **Cách đọc bộ Java chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi dựng mental model Java từ execution và object, **Cách đọc bộ Java chuẩn gốc (canonical / 정본)** chỉ ra API/spec nào là owner cho từng câu hỏi. Handoff này giữ Part 1 ở nền tảng ngôn ngữ thay vì lấn sang framework.
 
 ## Cách đọc bộ Java chuẩn gốc (canonical / 정본)
 
@@ -2686,4 +2684,4 @@ https://www.oracle.com/java/technologies/javase/26all-relnotes.html
 Oracle Java ngôn ngữ (language / 언어) documentation:
 https://docs.oracle.com/en/java/javase/
 
-> **Bàn giao:** Sau **Cách đọc bộ Java chuẩn gốc (canonical / 정본)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [java master supplement rewritten detailed](./java_master_supplement_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cách đọc bộ Java chuẩn gốc (canonical / 정본)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

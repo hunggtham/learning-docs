@@ -1,6 +1,6 @@
 # Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** Đọc **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **phụ thuộc (dependency / 의존성) map** sang **Chapters**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder này giải thích Neural Networks (신경망 / mạng nơ-ron) như một **parameterized differentiable computation hệ thống (system / 시스템)**, không như một collection khung phần mềm (framework / 프레임워크) APIs. Nó nối trực tiếp Machine học tập (learning / 학습), tuyến tính (linear / 선형) Algebra, Calculus và tối ưu hóa (optimization / 최적화) với Deep học tập (learning / 학습) architectures phía sau.
 
@@ -26,8 +26,7 @@ flowchart TD
     I --> J
 ```
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **Chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chapters** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chapters
 
@@ -51,8 +50,7 @@ flowchart TD
 
 **[09 — Training Dynamics](./09_deep_learning_training_dynamics.md)** tổng hợp học tập (learning / 학습) curves, cập nhật (update / 업데이트)/độ dốc (gradient / 기울기)/activation diagnostics, curriculum/dữ liệu (data / 데이터) mixture, catastrophic forgetting, checkpointing, phân tán (distributed / 분산) batch và systematic debugging.
 
-
-> **Chuyển mạch:** Từ **Chapters**, ta sang **mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** gom các mảnh từ **Chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển tiếp sang Deep học tập (learning / 학습) Architectures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)
 
@@ -74,11 +72,12 @@ Learned internal representation
 
 Kiến trúc (architecture / 아키텍처) quyết định đồ thị (graph / 그래프) và inductive độ lệch (bias / 편향). mất mát (loss / 손실) quyết định tín hiệu (signal / 신호). Backprop tính credit/blame. Optimizer quyết định cập nhật (update / 업데이트) trajectory. dữ liệu (data / 데이터) phân phối (distribution / 분포) quyết định experience. Generalization vẫn phải được chứng minh bằng evaluation ngoài huấn luyện (training / 학습) set.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)**, ta sang **Chuyển tiếp sang Deep học tập (learning / 학습) Architectures** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chuyển tiếp sang Deep học tập (learning / 학습) Architectures** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Chuyển tiếp sang Deep học tập (learning / 학습) Architectures
 
 `06_deep_learning_architectures/` sẽ trả lời câu hỏi: nếu MLP general-purpose như vậy, vì sao cần CNN, RNN, attention, Transformer, Autoencoder, VAE, GAN và Diffusion?
 
 Câu trả lời là **structure và inductive bias**. Image có local spatial structure; sequence có temporal/order dependency; generative modeling cần probabilistic/data-generation objectives khác nhau. Các architecture mới không bỏ core neural-network mechanics ở folder này; chúng tổ chức computation graph theo những assumptions hiệu quả hơn.
+
+> **Bàn giao:** Sau **Chuyển tiếp sang Deep học tập (learning / 학습) Architectures**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

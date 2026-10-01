@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Android SDK và NDK giải quyết hai thế giới khác nhau** sang **2. bản địa (native / 네이티브) thư viện (library / 라이브러리) .so là dùng chung (shared / 공유) đối tượng (object / 객체) theo ABI**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Android SDK và NDK giải quyết hai thế giới khác nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. bản địa (native / 네이티브) thư viện (library / 라이브러리) .so là dùng chung (shared / 공유) đối tượng (object / 객체) theo ABI** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Phần lớn Android app nghiệp vụ (business / 비즈니스) không cần viết C/C++. Kotlin/Java + Android SDK đủ cho UI, mạng (network / 네트워크), cơ sở dữ liệu (database / 데이터베이스), background công việc (work / 작업) và phần lớn media/hardware use trường hợp (case / 사례). Tuy nhiên khi app dùng codec, computer vision, cryptography thư viện (library / 라이브러리), game engine, ML thời gian chạy (runtime / 런타임), vendor SDK hoặc legacy C/C++ mã (code / 코드), bản địa (native / 네이티브) tầng (layer / 계층) trở thành một phần của môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템). Khi đó bug không còn chỉ là Kotlin exception; nó có thể là `SIGSEGV`, missing symbol, ABI mismatch, use-after-free, double free, JNI tham chiếu (reference / 참조) leak hoặc bản địa (native / 네이티브) nhị phân (binary / 이진) không compatible với nền tảng (platform / 플랫폼) mới.
 
@@ -13,6 +13,8 @@ Android SDK cung cấp API Java/Kotlin-level. Android NDK cung cấp headers/too
 Một app có thể chạy toàn bộ bằng managed mã (code / 코드). bản địa (native / 네이티브) mã (code / 코드) chỉ nên được thêm khi có lý do cụ thể: reuse thư viện C/C++, low-level hiệu năng (performance / 성능) tải công việc (workload / 워크로드) đã đo, engine có sẵn, vendor yêu cầu (requirement / 요구사항) hoặc API bản địa (native / 네이티브) đặc thù.
 
 “C++ nhanh hơn Kotlin” không phải justification đủ. JNI crossing, manual bộ nhớ (memory / 메모리), nhị phân (binary / 이진) kích thước (size / 크기) và portability có chi phí (cost / 비용) lớn.
+
+> **Chuyển mạch:** SDK và NDK có boundary khác nhau; `.so` là shared object gắn với ABI, nên ABI inventory tiếp theo quyết định device compatibility và native memory risk.
 
 ## 2. bản địa (native / 네이티브) thư viện (library / 라이브러리) `.so` là dùng chung (shared / 공유) đối tượng (object / 객체) theo ABI
 
@@ -33,6 +35,8 @@ Mỗi `.so` được compile cho ABI cụ thể. thiết bị (device / 장치) 
 
 ABI không chỉ là CPU name; nó là đặc tả hợp đồng (contract / 계약) về instruction set, calling convention, dữ liệu (data / 데이터) bố cục (layout / 레이아웃) và nhị phân (binary / 이진) giao diện (interface / 인터페이스).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **3. Các ABI phổ biến cần nhận diện** tiếp nhận điểm tựa từ **2. bản địa (native / 네이티브) thư viện (library / 라이브러리) .so là dùng chung (shared / 공유) đối tượng (object / 객체) theo ABI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. JNI là cầu nối (bridge / 브리지), không phải nghiệp vụ (business / 비즈니스) kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Các ABI phổ biến cần nhận diện
 
 `arm64-v8a` là 64-bit ARM phổ biến trên phone/tablet hiện đại. `armeabi-v7a` là ARM 32-bit legacy hơn. `x86_64` thường gặp ở emulator và một số môi trường (environment / 환경).
@@ -40,6 +44,8 @@ ABI không chỉ là CPU name; nó là đặc tả hợp đồng (contract / 계
 Không nên ship mọi ABI theo thói quen. Hỗ trợ ABI nào phụ thuộc sản phẩm (product / 제품)/thiết bị (device / 장치) chính sách (policy / 정책) và phụ thuộc (dependency / 의존성) availability.
 
 AAB giúp Play phân phối ABI split phù hợp, nhưng nguồn (source / 소스) bundle vẫn phải chứa bản địa (native / 네이티브) sản phẩm tạo ra (artifact / 산출물) đúng cho ABI cần hỗ trợ (support / 지원).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **4. JNI là cầu nối (bridge / 브리지), không phải nghiệp vụ (business / 비즈니스) kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **3. Các ABI phổ biến cần nhận diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. System.loadLibrary() và thư viện (library / 라이브러리) loading** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. JNI là cầu nối (bridge / 브리지), không phải nghiệp vụ (business / 비즈니스) kiến trúc (architecture / 아키텍처)
 
@@ -61,6 +67,8 @@ C/C++ side có symbol tương ứng hoặc dùng tường minh (explicit / 명�
 
 JNI nên được bọc sau một Kotlin-facing API nhỏ. Không để ViewModel/UI rải `external` lời gọi (call / 호출) khắp codebase. ranh giới (boundary / 경계) nhỏ giúp kiểm thử (test / 테스트), fallback, crash isolation lập luận (reasoning / 추론) và di chuyển (migration / 마이그레이션) dễ hơn.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **5. System.loadLibrary() và thư viện (library / 라이브러리) loading** tiếp nhận điểm tựa từ **4. JNI là cầu nối (bridge / 브리지), không phải nghiệp vụ (business / 비즈니스) kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Static registration và động (dynamic / 동적) registration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. `System.loadLibrary()` và thư viện (library / 라이브러리) loading
 
 `System.loadLibrary("nativecore")` tìm `libnativecore.so`. tải (load / 로드) có thể thất bại (fail / 실패) vì:
@@ -74,6 +82,8 @@ JNI nên được bọc sau một Kotlin-facing API nhỏ. Không để ViewMode
 
 `UnsatisfiedLinkError` là dấu hiệu ranh giới (boundary / 경계) packaging/linking, không phải Kotlin lô-gic (logic / 논리) lỗi (error / 오류) thông thường.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **6. Static registration và động (dynamic / 동적) registration** tiếp nhận điểm tựa từ **5. System.loadLibrary() và thư viện (library / 라이브러리) loading** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. JNI types không giống Kotlin types về quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Static registration và động (dynamic / 동적) registration
 
 JNI hàm (function / 함수) có thể được tìm bằng naming convention hoặc đăng ký bằng `RegisterNatives`.
@@ -82,6 +92,8 @@ Naming convention đơn giản cho demo nhưng tên symbol dài và coupling l�
 
 Dù cách nào, R8/obfuscation có thể ảnh hưởng lớp (class / 클래스)/phương thức (method / 메서드) name nếu bản địa (native / 네이티브) mã (code / 코드) dựa reflection/name. thư viện (library / 라이브러리) cần keep rules đúng hoặc registration chiến lược (strategy / 전략) phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, sau nội dung của **6. Static registration và động (dynamic / 동적) registration**, **7. JNI types không giống Kotlin types về quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8. cục bộ (local / 로컬) tham chiếu (reference / 참조) và toàn cục (global / 전역) tham chiếu (reference / 참조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. JNI types không giống Kotlin types về quyền sở hữu (ownership / 소유권)
 
 JNI dùng `jobject`, `jstring`, `jbyteArray`, `jclass`... Đây là handles managed objects, không phải raw pointer vào đối tượng (object / 객체) bố cục (layout / 레이아웃) JVM.
@@ -89,6 +101,8 @@ JNI dùng `jobject`, `jstring`, `jbyteArray`, `jclass`... Đây là handles mana
 Bản địa (native / 네이티브) mã (code / 코드) phải dùng `JNIEnv*` APIs để thao tác. Không cast tùy tiện `jobject` thành struct pointer.
 
 Managed GC có quyền di chuyển/collect đối tượng (object / 객체) theo đặc tả hợp đồng (contract / 계약) thời gian chạy (runtime / 런타임). JNI API tồn tại để giữ lớp trừu tượng (abstraction / 추상화) này.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **8. cục bộ (local / 로컬) tham chiếu (reference / 참조) và toàn cục (global / 전역) tham chiếu (reference / 참조)** tiếp nhận điểm tựa từ **7. JNI types không giống Kotlin types về quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. JNIEnv là thread-affine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. cục bộ (local / 로컬) tham chiếu (reference / 참조) và toàn cục (global / 전역) tham chiếu (reference / 참조)
 
@@ -100,6 +114,8 @@ Weak toàn cục (global / 전역) tham chiếu (reference / 참조) có ngữ n
 
 Quyền sở hữu (ownership / 소유권) quy tắc (rule / 규칙) phải được document giống tài nguyên (resource / 자원) khác.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **9. JNIEnv là thread-affine** tiếp nhận điểm tựa từ **8. cục bộ (local / 로컬) tham chiếu (reference / 참조) và toàn cục (global / 전역) tham chiếu (reference / 참조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. JavaVM, luồng thực thi (thread / 스레드) và callback về Kotlin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. `JNIEnv*` là thread-affine
 
 `JNIEnv*` không được lấy ở luồng thực thi (thread / 스레드) A rồi dùng ở luồng thực thi (thread / 스레드) B. bản địa (native / 네이티브) luồng thực thi (thread / 스레드) muốn gọi JVM phải attach với `JavaVM`, lấy môi trường (environment / 환경) đúng luồng thực thi (thread / 스레드), rồi detach theo vòng đời (lifecycle / 생명주기) phù hợp.
@@ -107,6 +123,8 @@ Quyền sở hữu (ownership / 소유권) quy tắc (rule / 규칙) phải đư
 Sai luồng thực thi (thread / 스레드) quyền sở hữu (ownership / 소유권) là nguồn crash khó reproduce.
 
 Một thiết kế (design / 설계) tốt centralize attach/detach lô-gic (logic / 논리), không rải manual JNI luồng thực thi (thread / 스레드) handling ở nhiều nơi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **10. JavaVM, luồng thực thi (thread / 스레드) và callback về Kotlin** tiếp nhận điểm tựa từ **9. JNIEnv là thread-affine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. bản địa (native / 네이티브) exception và Java exception không tự map an toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. JavaVM, luồng thực thi (thread / 스레드) và callback về Kotlin
 
@@ -124,6 +142,8 @@ native worker
 
 Callback không tự động chạy main luồng thực thi (thread / 스레드). Nếu callback ảnh hưởng UI/trạng thái (state / 상태) main-confined, Kotlin ranh giới (boundary / 경계) phải dispatch phù hợp.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **11. bản địa (native / 네이티브) exception và Java exception không tự map an toàn** tiếp nhận điểm tựa từ **10. JavaVM, luồng thực thi (thread / 스레드) và callback về Kotlin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. String conversion có encoding và thời gian tồn tại (lifetime / 수명)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. bản địa (native / 네이티브) exception và Java exception không tự map an toàn
 
 C++ exception không nên xuyên JNI ranh giới (boundary / 경계) một cách không kiểm soát. Java exception pending trong JNI cũng phải được check/clear/propagate đúng.
@@ -131,6 +151,8 @@ C++ exception không nên xuyên JNI ranh giới (boundary / 경계) một cách
 Ranh giới (boundary / 경계) nên chuyển thất bại (failure / 실패) thành tường minh (explicit / 명시적) lỗi (error / 오류)/kết quả (result / 결과) đặc tả hợp đồng (contract / 계약).
 
 Ví dụ bản địa (native / 네이티브) parser có thể trả status mã (code / 코드) + message, Kotlin wrapper map thành lĩnh vực (domain / 도메인) lỗi (error / 오류) thay vì để undefined exception hành vi (behavior / 동작) xuyên tầng (layer / 계층).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **12. String conversion có encoding và thời gian tồn tại (lifetime / 수명)** tiếp nhận điểm tựa từ **11. bản địa (native / 네이티브) exception và Java exception không tự map an toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Array bản sao (copy / 복사) vs pinning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. String conversion có encoding và thời gian tồn tại (lifetime / 수명)
 
@@ -140,6 +162,8 @@ Không giữ pointer sau bản phát hành (release / 릴리스). Không assume 
 
 Với nhị phân (binary / 이진) dữ liệu (data / 데이터), dùng `ByteArray`/buffer đặc tả hợp đồng (contract / 계약) rõ thay vì lạm dụng string.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **13. Array bản sao (copy / 복사) vs pinning** tiếp nhận điểm tựa từ **12. String conversion có encoding và thời gian tồn tại (lifetime / 수명)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Direct ByteBuffer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Array bản sao (copy / 복사) vs pinning
 
 JNI API truy cập thành phần nguyên thủy (primitive / 기본 요소) array có thể bản sao (copy / 복사) hoặc pin tùy thời gian chạy (runtime / 런타임). Không nên assume pointer luôn trỏ trực tiếp vùng nhớ động (heap / 힙) đối tượng (object / 객체).
@@ -148,6 +172,8 @@ Trọng yếu (critical / 중요) sections phải ngắn. Giữ array pinned lâ
 
 Large streaming dữ liệu (data / 데이터) nên cân nhắc direct buffers hoặc native-owned bộ nhớ (memory / 메모리) với đặc tả hợp đồng (contract / 계약) rõ thay vì bản sao (copy / 복사) liên tục qua JNI.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **14. Direct ByteBuffer** tiếp nhận điểm tựa từ **13. Array bản sao (copy / 복사) vs pinning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. bản địa (native / 네이티브) bộ nhớ (memory / 메모리) không nằm hoàn toàn trong JVM vùng nhớ động (heap / 힙) chỉ số (metric / 지표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Direct `ByteBuffer`
 
 Direct buffer có thể cung cấp bộ nhớ (memory / 메모리) region thuận lợi cho bản địa (native / 네이티브) interoperability, giảm một số bản sao (copy / 복사) trong tải công việc (workload / 워크로드) phù hợp.
@@ -155,6 +181,8 @@ Direct buffer có thể cung cấp bộ nhớ (memory / 메모리) region thuậ
 Nhưng zero-copy không tự động đồng nghĩa nhanh hơn. Allocation, quyền sở hữu (ownership / 소유권), synchronization và bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작) vẫn cần đo.
 
 Nếu bản địa (native / 네이티브) giữ pointer tới direct buffer, thời gian tồn tại (lifetime / 수명) của buffer phía managed phải đảm bảo đủ lâu.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **15. bản địa (native / 네이티브) bộ nhớ (memory / 메모리) không nằm hoàn toàn trong JVM vùng nhớ động (heap / 힙) chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **14. Direct ByteBuffer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. RAII và quyền sở hữu (ownership / 소유권) trong C++** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. bản địa (native / 네이티브) bộ nhớ (memory / 메모리) không nằm hoàn toàn trong JVM vùng nhớ động (heap / 힙) chỉ số (metric / 지표)
 
@@ -171,6 +199,8 @@ OOM diagnosis phải xem:
 
 Trường hợp (case / 사례) 09 đã xây tiến trình (process / 프로세스)/bộ nhớ (memory / 메모리) mô hình tư duy (mental model / 사고 모델); bản địa (native / 네이티브) tầng (layer / 계층) là lý do quan trọng cần nhìn process-level bằng chứng (evidence / 증거) thay vì chỉ Android Studio Java vùng nhớ động (heap / 힙).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, sau nội dung của **15. bản địa (native / 네이티브) bộ nhớ (memory / 메모리) không nằm hoàn toàn trong JVM vùng nhớ động (heap / 힙) chỉ số (metric / 지표)**, **16. RAII và quyền sở hữu (ownership / 소유권) trong C++** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **17. Use-after-free và double free** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. RAII và quyền sở hữu (ownership / 소유권) trong C++
 
 C++ môi trường vận hành (production / 운영 환경) mã (code / 코드) nên ưu tiên RAII và smart pointers để tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) gắn đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명).
@@ -180,6 +210,8 @@ C++ môi trường vận hành (production / 운영 환경) mã (code / 코드) 
 JNI handles/tệp (file / 파일) descriptors/mutex/bản địa (native / 네이티브) cửa sổ (window / 윈도우) cũng nên được wrap trong RAII đối tượng (object / 객체) khi hợp lý.
 
 Manual `new/delete` rải rác qua callback paths là mùi mã (code / 코드) mạnh.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **17. Use-after-free và double free** tiếp nhận điểm tựa từ **16. RAII và quyền sở hữu (ownership / 소유권) trong C++** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Race điều kiện (condition / 조건) bản địa (native / 네이티브) và Kotlin vẫn là cùng một tính đồng thời (concurrency / 동시성) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Use-after-free và double free
 
@@ -196,11 +228,15 @@ callback checks liveness/generation
 
 Không fix use-after-free bằng sleep hoặc null check ngẫu nhiên.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **18. Race điều kiện (condition / 조건) bản địa (native / 네이티브) và Kotlin vẫn là cùng một tính đồng thời (concurrency / 동시성) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **17. Use-after-free và double free** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. CMake và externalNativeBuild** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Race điều kiện (condition / 조건) bản địa (native / 네이티브) và Kotlin vẫn là cùng một tính đồng thời (concurrency / 동시성) bài toán (problem / 문제)
 
 JNI không tạo automatic synchronization. Nếu Kotlin luồng thực thi (thread / 스레드) và bản địa (native / 네이티브) worker cùng truy cập (access / 접근) bản địa (native / 네이티브) trạng thái (state / 상태), cần mutex/atomic/message passing theo bất biến (invariant / 불변식) rõ.
 
 Một Kotlin `Mutex` không bảo vệ mã (code / 코드) C++ nếu bản địa (native / 네이티브) truy cập trạng thái (state / 상태) bên ngoài trọng yếu (critical / 중요) section đó. khóa (lock / 잠금) ranh giới (boundary / 경계) phải bao trùm đúng trạng thái dùng chung (shared state / 공유 상태) ở đúng tầng (layer / 계층).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **19. CMake và externalNativeBuild** tiếp nhận điểm tựa từ **18. Race điều kiện (condition / 조건) bản địa (native / 네이티브) và Kotlin vẫn là cùng một tính đồng thời (concurrency / 동시성) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Prebuilt .so và jniLibs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. CMake và `externalNativeBuild`
 
@@ -231,6 +267,8 @@ target_link_libraries(nativecore ${log-lib})
 
 Phiên bản (version / 버전)/toolchain thực tế phải theo dự án (project / 프로젝트) baseline, không bản sao (copy / 복사) con số mẫu (sample / 표본) một cách máy móc.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **20. Prebuilt .so và jniLibs** tiếp nhận điểm tựa từ **19. CMake và externalNativeBuild** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. 16 KB bộ nhớ (memory / 메모리) page kích thước (size / 크기) là tính tương thích (compatibility / 호환성) yêu cầu (requirement / 요구사항) quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Prebuilt `.so` và `jniLibs`
 
 Vendor SDK có thể ship prebuilt libraries trong `src/main/jniLibs/<abi>/` hoặc AAR.
@@ -247,6 +285,8 @@ Prebuilt nhị phân (binary / 이진) là supply-chain sản phẩm tạo ra (a
 
 Một AAR upgrade có thể đổi `.so` mà Gradle phụ thuộc (dependency / 의존성) diff không làm rủi ro (risk / 위험) này hiển nhiên.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **21. 16 KB bộ nhớ (memory / 메모리) page kích thước (size / 크기) là tính tương thích (compatibility / 호환성) yêu cầu (requirement / 요구사항) quan trọng** tiếp nhận điểm tựa từ **20. Prebuilt .so và jniLibs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. NDK phiên bản (version / 버전) là toolchain phụ thuộc (dependency / 의존성), không phải chi tiết cục bộ (local / 로컬) machine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. 16 KB bộ nhớ (memory / 메모리) page kích thước (size / 크기) là tính tương thích (compatibility / 호환성) yêu cầu (requirement / 요구사항) quan trọng
 
 Android ecosystem đang hỗ trợ thiết bị (device / 장치) có page kích thước (size / 크기) lớn hơn 4 KB. bản địa (native / 네이티브) dùng chung (shared / 공유) libraries phải có ELF segment alignment phù hợp để chạy đúng trên thiết bị (device / 장치) 16 KB page kích thước (size / 크기).
@@ -254,6 +294,8 @@ Android ecosystem đang hỗ trợ thiết bị (device / 장치) có page kích
 NDK mới hỗ trợ bản dựng (build / 빌드) alignment phù hợp tốt hơn; nhưng prebuilt `.so` cũ vẫn có thể không compatible. Vì vậy dự án (project / 프로젝트) có bản địa (native / 네이티브) phụ thuộc (dependency / 의존성) phải inventory **tất cả bản địa (native / 네이티브) libraries**, không chỉ mã (code / 코드) C++ tự bản dựng (build / 빌드).
 
 Kiểm thử (test / 테스트) nên gồm emulator/thiết bị (device / 장치) cấu hình (configuration / 구성) hỗ trợ 16 KB page kích thước (size / 크기) và inspect bundle/bản địa (native / 네이티브) alignment trong bản phát hành (release / 릴리스) chuỗi xử lý (pipeline / 파이프라인).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **22. NDK phiên bản (version / 버전) là toolchain phụ thuộc (dependency / 의존성), không phải chi tiết cục bộ (local / 로컬) machine** tiếp nhận điểm tựa từ **21. 16 KB bộ nhớ (memory / 메모리) page kích thước (size / 크기) là tính tương thích (compatibility / 호환성) yêu cầu (requirement / 요구사항) quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. STL và C++ thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. NDK phiên bản (version / 버전) là toolchain phụ thuộc (dependency / 의존성), không phải chi tiết cục bộ (local / 로컬) machine
 
@@ -267,6 +309,8 @@ android {
 
 Upgrade NDK có thể thay trình biên dịch (compiler / 컴파일러)/linker hành vi (behavior / 동작), libc++ hiện thực (implementation / 구현), warning, symbol hoặc nhị phân (binary / 이진) đầu ra (output / 출력). Với native-heavy app, NDK upgrade nên có benchmark/crash/thiết bị (device / 장치) kiểm tra hợp lệ (validation / 검증) riêng.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **23. STL và C++ thời gian chạy (runtime / 런타임)** tiếp nhận điểm tựa từ **22. NDK phiên bản (version / 버전) là toolchain phụ thuộc (dependency / 의존성), không phải chi tiết cục bộ (local / 로컬) machine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. API mức (level / 수준) trong bản địa (native / 네이티브) mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. STL và C++ thời gian chạy (runtime / 런타임)
 
 Hiện đại (modern / 현대적) NDK dùng libc++ cho C++ thư viện chuẩn (standard library / 표준 라이브러리). Static/dùng chung (shared / 공유) thời gian chạy (runtime / 런타임) choice có packaging implications khi nhiều `.so` cùng dùng C++ thời gian chạy (runtime / 런타임).
@@ -275,6 +319,8 @@ Không trộn prebuilt bản địa (native / 네이티브) libraries có incomp
 
 Bản địa (native / 네이티브) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) giống managed dependencies: transitive nhị phân (binary / 이진) đặc tả hợp đồng (contract / 계약) có thể gây thời gian chạy (runtime / 런타임) thất bại (failure / 실패) dù link bản dựng (build / 빌드) pass.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **24. API mức (level / 수준) trong bản địa (native / 네이티브) mã (code / 코드)** tiếp nhận điểm tựa từ **23. STL và C++ thời gian chạy (runtime / 런타임)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. tệp (file / 파일) descriptor là cầu nối (bridge / 브리지) mạnh giữa managed và bản địa (native / 네이티브)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. API mức (level / 수준) trong bản địa (native / 네이티브) mã (code / 코드)
 
 NDK API availability cũng phụ thuộc Android API mức (level / 수준). Compile against symbol mới không có nghĩa thiết bị (device / 장치) minSdk cũ có symbol thời gian chạy (runtime / 런타임) đó.
@@ -282,6 +328,8 @@ NDK API availability cũng phụ thuộc Android API mức (level / 수준). Com
 Cần guard API hoặc động (dynamic / 동적) lookup phù hợp khi hỗ trợ (support / 지원) OS cũ.
 
 Không sử dụng private/non-NDK vendor thư viện (library / 라이브러리) như stable API công khai (public API / 공개 API). nền tảng (platform / 플랫폼) restrictions với non-public bản địa (native / 네이티브) libraries đã chặt hơn qua các Android versions.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **25. tệp (file / 파일) descriptor là cầu nối (bridge / 브리지) mạnh giữa managed và bản địa (native / 네이티브)** tiếp nhận điểm tựa từ **24. API mức (level / 수준) trong bản địa (native / 네이티브) mã (code / 코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. AHardwareBuffer và graphics/media bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. tệp (file / 파일) descriptor là cầu nối (bridge / 브리지) mạnh giữa managed và bản địa (native / 네이티브)
 
@@ -300,6 +348,8 @@ ContentResolver opens descriptor
 
 Quyền sở hữu (ownership / 소유권) fd phải tường minh (explicit / 명시적) để tránh leak/double close.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **26. AHardwareBuffer và graphics/media bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **25. tệp (file / 파일) descriptor là cầu nối (bridge / 브리지) mạnh giữa managed và bản địa (native / 네이티브)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. bản địa (native / 네이티브) logging và symbolication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. AHardwareBuffer và graphics/media bộ nhớ (memory / 메모리)
 
 Advanced camera/graphics/ML pipelines có thể dùng hardware buffers để chia bộ nhớ (memory / 메모리) giữa components/hardware paths hiệu quả hơn.
@@ -308,6 +358,8 @@ Advanced camera/graphics/ML pipelines có thể dùng hardware buffers để chi
 
 Một lớp trừu tượng (abstraction / 추상화) “zero-copy” sai có thể tạo corruption hoặc GPU/CPU sync stall khó gỡ lỗi (debug / 디버그).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **27. bản địa (native / 네이티브) logging và symbolication** tiếp nhận điểm tựa từ **26. AHardwareBuffer và graphics/media bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Tombstone và bản địa (native / 네이티브) crash** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. bản địa (native / 네이티브) logging và symbolication
 
 `__android_log_print` hoặc logging wrapper giúp bản địa (native / 네이티브) log, nhưng môi trường vận hành (production / 운영 환경) crash cần bản địa (native / 네이티브) symbols.
@@ -315,6 +367,8 @@ Một lớp trừu tượng (abstraction / 추상화) “zero-copy” sai có th
 Bản phát hành (release / 릴리스) chuỗi xử lý (pipeline / 파이프라인) nên archive unstripped symbols hoặc symbol gói (package / 패키지) tương ứng phiên bản (version / 버전). Crash address không có symbol gần như vô dụng.
 
 R8 ánh xạ (mapping / 매핑) giải Java/Kotlin obfuscation; bản địa (native / 네이티브) symbols giải C/C++ ngăn xếp (stack / 스택). Hai sản phẩm tạo ra (artifact / 산출물) khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **28. Tombstone và bản địa (native / 네이티브) crash** tiếp nhận điểm tựa từ **27. bản địa (native / 네이티브) logging và symbolication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Sanitizers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Tombstone và bản địa (native / 네이티브) crash
 
@@ -333,6 +387,8 @@ identify exact build/version/ABI
 
 Không kết luận “NDK bug” chỉ vì ngăn xếp (stack / 스택) có bản địa (native / 네이티브) frame.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **29. Sanitizers** tiếp nhận điểm tựa từ **28. Tombstone và bản địa (native / 네이티브) crash** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. hiệu năng (performance / 성능): JNI lời gọi (call / 호출) overhead và batching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Sanitizers
 
 AddressSanitizer/HWASan hoặc các sanitizer phù hợp có thể phát hiện bộ nhớ (memory / 메모리) bug như buffer overflow/use-after-free trong kiểm thử (test / 테스트)/dev môi trường (environment / 환경).
@@ -340,6 +396,8 @@ AddressSanitizer/HWASan hoặc các sanitizer phù hợp có thể phát hiện 
 ThreadSanitizer hỗ trợ (support / 지원)/use trường hợp (case / 사례) tùy nền tảng (platform / 플랫폼)/toolchain; overhead cao nên không phải môi trường vận hành (production / 운영 환경) default.
 
 Native-heavy codebase nên có sanitizer chiến lược (strategy / 전략) trong CI/thiết bị (device / 장치) testing cho trọng yếu (critical / 중요) libraries.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **30. hiệu năng (performance / 성능): JNI lời gọi (call / 호출) overhead và batching** tiếp nhận điểm tựa từ **29. Sanitizers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. bản địa (native / 네이티브) luồng thực thi (thread / 스레드) priority và hiệu năng (performance / 성능) hint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. hiệu năng (performance / 성능): JNI lời gọi (call / 호출) overhead và batching
 
@@ -359,6 +417,8 @@ pass buffer/frame → native processes whole batch → one result
 
 Nhưng batch quá lớn tăng độ trễ (latency / 지연 시간)/bộ nhớ (memory / 메모리). Đo tải công việc (workload / 워크로드) thật.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **31. bản địa (native / 네이티브) luồng thực thi (thread / 스레드) priority và hiệu năng (performance / 성능) hint** tiếp nhận điểm tựa từ **30. hiệu năng (performance / 성능): JNI lời gọi (call / 호출) overhead và batching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. bản địa (native / 네이티브) thư viện (library / 라이브러리) bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. bản địa (native / 네이티브) luồng thực thi (thread / 스레드) priority và hiệu năng (performance / 성능) hint
 
 Real-time-ish media/game tải công việc (workload / 워크로드) đôi khi cần luồng thực thi (thread / 스레드) scheduling/hiệu năng (performance / 성능) hint APIs. Đây là platform-level tối ưu hóa (optimization / 최적화), không phải thứ nghiệp vụ (business / 비즈니스) app nên dùng mặc định.
@@ -366,6 +426,8 @@ Real-time-ish media/game tải công việc (workload / 워크로드) đôi khi 
 Trước khi điều chỉnh priority/hint, đo frame deadline, CPU utilization, thermal throttling và battery impact.
 
 Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) bản địa (native / 네이티브) không tách khỏi thiết bị (device / 장치) thermal/power chính sách (policy / 정책).
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **32. bản địa (native / 네이티브) thư viện (library / 라이브러리) bảo mật (security / 보안)** tiếp nhận điểm tựa từ **31. bản địa (native / 네이티브) luồng thực thi (thread / 스레드) priority và hiệu năng (performance / 성능) hint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Khi nào không nên viết NDK** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 32. bản địa (native / 네이티브) thư viện (library / 라이브러리) bảo mật (security / 보안)
 
@@ -381,6 +443,8 @@ Best practices gồm:
 - giảm exposed JNI surface;
 - không parse attacker-controlled nhị phân (binary / 이진) bằng legacy thư viện (library / 라이브러리) không maintained.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **33. Khi nào không nên viết NDK** tiếp nhận điểm tựa từ **32. bản địa (native / 네이티브) thư viện (library / 라이브러리) bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Boundary design mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. Khi nào không nên viết NDK
 
 Không dùng NDK chỉ để:
@@ -393,9 +457,10 @@ Không dùng NDK chỉ để:
 
 Managed mã (code / 코드) thường an toàn, maintainable và portable hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **33. Khi nào không nên viết NDK** đã nêu tiêu chí phân biệt, còn **34. Boundary design mẫu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **35. bản phát hành (release / 릴리스) checklist bản địa (native / 네이티브)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Boundary design mẫu
 Phần này nối mạch Android vừa học với “34. Boundary design mẫu”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```kotlin
 interface ImageEngine {
@@ -416,6 +481,8 @@ Môi trường vận hành (production / 운영 환경) hiện thực (implement
 
 Kiểm thử (test / 테스트) có thể dùng fake `ImageEngine` mà không tải (load / 로드) `.so`.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, **34. Boundary design mẫu** đã nêu tiêu chí phân biệt, còn **35. bản phát hành (release / 릴리스) checklist bản địa (native / 네이티브)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **36. Official references** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 35. bản phát hành (release / 릴리스) checklist bản địa (native / 네이티브)
 
 Trước bản phát hành (release / 릴리스) app có bản địa (native / 네이티브) mã (code / 코드), verify:
@@ -431,9 +498,10 @@ Trước bản phát hành (release / 릴리스) app có bản địa (native / 
 9. bản địa (native / 네이티브) bộ nhớ (memory / 메모리)/leak benchmark.
 10. third-party bản địa (native / 네이티브) thư viện (library / 라이브러리) inventory/CVE/license.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 17 — Android NDK, JNI, ABI, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB Page kích thước (size / 크기)**, sau nội dung của **35. bản phát hành (release / 릴리스) checklist bản địa (native / 네이티브)**, **36. Official references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 36. Official references
 Phần này nối mạch Android vừa học với “36. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 - Android NDK guides: https://nhà phát triển (developer / 개발자).android.com/ndk/guides
 - NDK API tham chiếu (reference / 참조): https://nhà phát triển (developer / 개발자).android.com/ndk/tham chiếu (reference / 참조)
@@ -441,3 +509,5 @@ Phần này nối mạch Android vừa học với “36. Official references”
 - 16 KB page sizes: https://nhà phát triển (developer / 개발자).android.com/guide/practices/page-sizes
 
 Native toolchain và platform constraints thay đổi theo Android/NDK release. Luôn kiểm tra documentation của NDK version và device target thực tế khi ship.
+
+> **Bàn giao:** Sau **36. Official references**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

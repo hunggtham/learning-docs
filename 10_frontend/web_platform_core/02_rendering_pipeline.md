@@ -1,7 +1,6 @@
 # Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels
 
-> **Mạch đọc:** Đặt **Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Các ranh giới (boundary / 경계) chính** sang **vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các ranh giới (boundary / 경계) chính** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Rendering là quá trình biến tài nguyên (resource / 자원) và trạng thái (state / 상태) thành đầu ra (output / 출력) quan sát được. DOM
 không phải rendering cây (tree / 트리), và khung phần mềm (framework / 프레임워크) thành phần (component / 컴포넌트) cây (tree / 트리) cũng không phải DOM.
@@ -18,8 +17,7 @@ Tách các cây (tree / 트리) này giúp tránh giải thích mọi vấn đ�
 DOM cây (tree / 트리) có nút (node / 노드) không vẽ, còn pseudo-element hoặc anonymous box có thể xuất
    hiện trong formatting/paint mô hình (model / 모델). Vì vậy `querySelector`, cây khả năng tiếp cận (accessibility tree / 접근성 트리), bố cục (layout / 레이아웃) box và compositor tầng (layer / 계층) là các quan sát khác nhau.
 
-
-> **Chuyển mạch:** Từ **Các ranh giới (boundary / 경계) chính**, ta sang **vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels**, **Các ranh giới (boundary / 경계) chính** đã nêu tiêu chí phân biệt, còn **Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **SSR, hydration và khung phần mềm (framework / 프레임워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)
 
@@ -34,8 +32,7 @@ minh nhân quả (causal / 인과적) chi phí (cost / 비용). Xem [CSS track](
 cascade/bố cục (layout / 레이아웃) detail và [JavaScript performance](../javascript/javascript_senior.md)
 cho thời gian chạy (runtime / 런타임) profiling.
 
-
-> **Chuyển mạch:** Từ **vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)**, ta sang **SSR, hydration và khung phần mềm (framework / 프레임워크)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Invalidation và evidence cho biết thay đổi nào buộc pipeline tính lại style/layout/paint. SSR và hydration tiếp theo đối chiếu pipeline server–client để tìm mismatch thay vì xem framework như một lớp che toàn bộ browser.
 
 ## SSR, hydration và khung phần mềm (framework / 프레임워크)
 
@@ -44,4 +41,4 @@ DOM repair, nondeterministic dữ liệu (data / 데이터) hoặc khác biệt 
 không khớp. React reconciliation và WebSquare rendering có vòng đời (lifecycle / 생명주기) riêng,
 nhưng cuối cùng vẫn bị ràng buộc bởi DOM, CSS và trình duyệt (browser / 브라우저) scheduling.
 
-> **Bàn giao:** Sau **SSR, hydration và khung phần mềm (framework / 프레임워크)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 web platform model](./00_web_platform_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **SSR, hydration và khung phần mềm (framework / 프레임워크)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어
 
-> **Mạch đọc:** Đặt **Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어** để chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Glossary này giúp nhận diện thuật ngữ khi đọc textbook, documentation, 기사 시험 hoặc trao đổi trong công ty Hàn Quốc. Nó không thay chapter giải thích concept; cột cuối dẫn tới ngữ cảnh (context / 맥락) đầy đủ.
 
@@ -121,4 +121,4 @@ Glossary này giúp nhận diện thuật ngữ khi đọc textbook, documentati
 | Open-source license | 오픈소스 라이선스 | Rights/obligations cho use/modify/distribute nguồn (source / 소스) | [Law/Licensing](./12_society_ethics_profession/02_software_law_licenses_and_intellectual_property.md) |
 | Digital divide | 디지털 격차 | Chênh lệch truy cập (access / 접근)/năng lực (capability / 역량) với computing hạ tầng (infrastructure / 인프라) | [Society](./12_society_ethics_profession/03_sustainability_accessibility_and_social_infrastructure.md) |
 
-> **Bàn giao:** Sau **Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

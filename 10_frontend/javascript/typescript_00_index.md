@@ -1,7 +1,6 @@
 # TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)
 
-> **Mạch đọc:** Đọc **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Conceptual ranh giới (boundary / 경계)** sang **Thứ tự học chuẩn gốc (canonical / 정본)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Conceptual ranh giới (boundary / 경계)** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Thứ tự học chuẩn gốc (canonical / 정본)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 TypeScript trong repository này **không phải một thư viện (library / 라이브러리) độc lập tách khỏi JavaScript**. Nó là nhánh học (track / 트랙) chuẩn gốc (canonical / 정본) nằm ngay trong `10_frontend/javascript/` vì mọi TypeScript program cuối cùng vẫn phải sống trên ngữ nghĩa (semantics / 의미론) và thời gian chạy (runtime / 런타임) của JavaScript. Cách tổ chức này cố ý giữ ranh giới rõ: JavaScript giải thích thời gian chạy (runtime / 런타임), mô hình thực thi (execution model / 실행 모델), mô hình đối tượng (object model / 객체 모델), async/vòng lặp sự kiện (event loop / 이벤트 루프) và trình duyệt (browser / 브라우저)/nút (node / 노드) hành vi (behavior / 동작); TypeScript giải thích lớp kiểm tra kiểu tĩnh, trình biên dịch (compiler / 컴파일러)/tooling và cách mô hình hóa đặc tả hợp đồng (contract / 계약) trước khi mã (code / 코드) chạy.
 
@@ -13,8 +12,7 @@ TypeScript không “thay JavaScript bằng một ngôn ngữ khác”. Nó thê
 
 Nếu chưa chắc về JavaScript thời gian chạy (runtime / 런타임), hãy quay lại [JavaScript Beginner](javascript_beginner_rebuilt.md) và [JavaScript Intermediate](javascript_intermediate.md). Khi cần internals, hiệu năng (performance / 성능), trình duyệt (browser / 브라우저)/thời gian chạy (runtime / 런타임) môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작), đọc tiếp [JavaScript Senior](javascript_senior.md) và [JavaScript Master](javascript_master_supplement_detailed.md). Sau TypeScript, nhánh học (track / 트랙) React nằm tại [React Index](../react/00_index.md).
 
-
-> **Chuyển mạch:** Từ **Conceptual ranh giới (boundary / 경계)**, ta sang **Thứ tự học chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)**, **Conceptual ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Thứ tự học chuẩn gốc (canonical / 정본)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델) cốt lõi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự học chuẩn gốc (canonical / 정본)
 
@@ -26,8 +24,7 @@ Nếu chưa chắc về JavaScript thời gian chạy (runtime / 런타임), hã
 
 Luồng lập luận (reasoning / 추론) xuyên suốt là **JavaScript giá trị (value / 값)/thời gian chạy (runtime / 런타임) → TypeScript mô hình (model / 모델) → trình biên dịch (compiler / 컴파일러) proof/diagnostic → emitted/thời gian chạy (runtime / 런타임) mã (code / 코드) → bằng chứng vận hành (production evidence / 운영 증거)**. Nếu một kiểu (type / 타입) trick làm mã (code / 코드) “thông minh hơn” nhưng che khuất hành vi thời gian chạy (runtime behavior / 런타임 동작) hoặc tạo trình biên dịch (compiler / 컴파일러) chi phí (cost / 비용) không đáng có, nhánh học (track / 트랙) này ưu tiên mã (code / 코드) dễ lập luận (reasoning / 추론) hơn.
 
-
-> **Chuyển mạch:** Từ **Thứ tự học chuẩn gốc (canonical / 정본)**, ta sang **mô hình tư duy (mental model / 사고 모델) cốt lõi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)**, **Mô hình tư duy (mental model / 사고 모델) cốt lõi** gom các mảnh từ **Thứ tự học chuẩn gốc (canonical / 정본)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phiên bản (version / 버전) evolution nên hiểu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) cốt lõi
 
@@ -37,8 +34,7 @@ TypeScript cũng không hướng tới một hệ kiểu sound tuyệt đối th
 
 Sau độ sâu (depth / 깊이) kiểm tra (audit / 감사), một mô hình tư duy (mental model / 사고 모델) thứ hai được thêm rõ hơn: **kiểu (type / 타입) là proof, nhưng proof có nguồn gốc**. Proof có thể do checker suy ra từ điều khiển (control / 제어) luồng (flow / 흐름), do thời gian chạy (runtime / 런타임) validator tạo ra, hoặc do nhà phát triển (developer / 개발자) tự tuyên bố bằng assertion/declaration. Ba nguồn này có trust khác nhau. TypeScript môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) chủ yếu là quản lý nguồn proof và blast radius khi proof sai.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델) cốt lõi**, ta sang **phiên bản (version / 버전) evolution nên hiểu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)**, **Phiên bản (version / 버전) evolution nên hiểu** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) cốt lõi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thuật ngữ chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phiên bản (version / 버전) evolution nên hiểu
 
@@ -46,12 +42,9 @@ TypeScript 1.x đặt nền với annotation, giao diện (interface / 인터페
 
 Một consequence thực tế là khi đọc bài cũ, phải tách **ngôn ngữ (language / 언어) tính năng (feature / 기능)** khỏi **trình biên dịch (compiler / 컴파일러)/toolchain generation**. `satisfies`, conditional kiểu (type / 타입) hay discriminated union vẫn là kiến thức type-system; bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러) 7.0 chủ yếu thay đổi cách công cụ (tool / 도구) chạy và quy mô (scale / 규모) chứ không làm những concept đó thành legacy. Chi tiết version-by-version và di chuyển (migration / 마이그레이션) consequences nằm ở [05 — Version Evolution & Migration](typescript_05_version_evolution_migration.md).
 
-
-> **Chuyển mạch:** Từ **phiên bản (version / 버전) evolution nên hiểu**, ta sang **Thuật ngữ chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Version evolution xác định claim nào phụ thuộc compiler/release; **Thuật ngữ chính** cố định vocabulary để các file foundations, type system và tooling nói cùng một ngôn ngữ. Coverage audit sau đó kiểm tra owner và khoảng trống.
 
 ## Thuật ngữ chính
-Phần “Thuật ngữ chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Tiếng Việt | English term | 한국어 용어 | Ý nghĩa ngắn |
 |---|---|---|---|
@@ -71,8 +64,7 @@ Phần “Thuật ngữ chính” nối kiến thức trước với nội dung 
 | xóa kiểu | kiểu (type / 타입) erasure | 타입 소거 | kiểu (type / 타입) cú pháp (syntax / 문법)/info không còn tồn tại như thời gian chạy (runtime / 런타임) check sau emit trong đa số trường hợp. |
 | biên tin cậy | trust ranh giới (boundary / 경계) | 신뢰 경계 | Điểm dữ liệu bên ngoài phải được parse/validate trước khi vào typed lĩnh vực (domain / 도메인). |
 
-
-> **Chuyển mạch:** Từ **Thuật ngữ chính**, ta sang **Coverage kiểm tra (audit / 감사)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Thuật ngữ chính cố định vocabulary cho các lesson; coverage audit dùng vocabulary đó để đánh owner, duplicate và evidence. Nguồn chuẩn tiếp theo xác minh claim theo version/compiler.
 
 ## Coverage kiểm tra (audit / 감사)
 
@@ -86,12 +78,9 @@ Coverage phiên bản (version / 버전)/di chuyển (migration / 마이그레�
 
 Không tạo chapter riêng chỉ để liệt kê cú pháp (syntax / 문법) mới. tính năng (feature / 기능) mới chỉ được thêm khi nó thay đổi mô hình tư duy (mental model / 사고 모델), di chuyển (migration / 마이그레이션) hành vi (behavior / 동작) hoặc môi trường vận hành (production / 운영 환경) practice.
 
-
-> **Chuyển mạch:** Từ **Coverage kiểm tra (audit / 감사)**, ta sang **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)**, **Coverage kiểm tra (audit / 감사)** đã nêu tiêu chí phân biệt, còn **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguồn chuẩn để đối chiếu phiên bản (version / 버전)
-Phần “Nguồn chuẩn để đối chiếu phiên bản (version / 버전)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - TypeScript Handbook, TSConfig tham chiếu (reference / 참조) và bản phát hành (release / 릴리스) notes trên `typescriptlang.org`.
 - TypeScript nhóm (team / 팀) blog trên `devblogs.microsoft.com/typescript/`, đặc biệt bản phát hành (release / 릴리스) notes 6.0 và 7.0.
@@ -100,4 +89,4 @@ Phần “Nguồn chuẩn để đối chiếu phiên bản (version / 버전)�
 
 Nhánh học (track / 트랙) được kiểm tra (audit / 감사) lại theo trạng thái TypeScript 7.0, tháng 09/2026. độ sâu (depth / 깊이) kiểm tra (audit / 감사) hiện tại tập trung vào proof origin, trình biên dịch (compiler / 컴파일러)/dự án (project / 프로젝트) đồ thị (graph / 그래프), hiện đại (modern / 현대적) mô-đun (module / 모듈)/gói (package / 패키지) ranh giới (boundary / 경계), phiên bản (version / 버전) di chuyển (migration / 마이그레이션) và bằng chứng vận hành (production evidence / 운영 증거) thay vì tăng số chapter.
 
-> **Bàn giao:** Sau **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

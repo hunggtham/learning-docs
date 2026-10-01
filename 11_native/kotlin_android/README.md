@@ -1,7 +1,6 @@
 # Kotlin + Android Master Notes
 
-> **Mạch đọc:** Đọc **Kotlin + Android Master Notes** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy tắc chống duplicate ghi chú (note / 노트)** sang **phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android Master Notes**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy tắc chống duplicate ghi chú (note / 노트)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Bộ tài liệu học Kotlin cho Android có **trục học (learning spine / 학습 축) chuẩn gốc (canonical / 정본) duy nhất** theo thứ tự:
 
@@ -41,8 +40,7 @@ Khi nội dung quan trọng chỉ tồn tại ở supplement nhưng cần thiế
 
 Không xóa tệp (file / 파일) chỉ vì có overlap từ khóa. Overlap có chủ đích giữa chuẩn gốc (canonical / 정본) → deep dive → casebook → độ sâu (depth / 깊이) lab được giữ khi mỗi tầng trả lời câu hỏi khác nhau. Chỉ xóa/merge khi hai tệp (file / 파일) cùng đơn vị sở hữu (owner / 오너), cùng học tập (learning / 학습) mục tiêu (objective / 목표) và một tệp (file / 파일) không còn giá trị riêng.
 
-
-> **Chuyển mạch:** Từ **Quy tắc chống duplicate ghi chú (note / 노트)**, ta sang **phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kotlin + Android Master Notes**, **Phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại** tiếp nhận điểm tựa từ **Quy tắc chống duplicate ghi chú (note / 노트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deep dives theo từng level** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại
 
@@ -60,15 +58,14 @@ Không xóa tệp (file / 파일) chỉ vì có overlap từ khóa. Overlap có 
 
 Khi học chuẩn gốc (canonical / 정본), có thể mở tệp (file / 파일) này theo nhu cầu; khi làm di chuyển (migration / 마이그레이션) thực tế, đọc thêm `production_casebook/18_android_compatibility_api_levels_sdk_extensions.md` và `depth_labs/08_version_compatibility_migration_forensics.md`.
 
+> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master Notes**, **Deep dives theo từng level** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deep dives theo từng mức (level / 수준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Deep dives theo từng level
 Phần này nối mạch Android vừa học với “Deep dives theo từng level”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
-
-> **Chuyển mạch:** Từ **phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại**, ta sang **Deep dives theo từng mức (level / 수준)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master Notes**, **Deep dives theo từng mức (level / 수준)** tiếp nhận điểm tựa từ **Deep dives theo từng level** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Deep dives theo từng mức (level / 수준)
-Phần “Deep dives theo từng mức (level / 수준)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [`deep_dive/01_beginner_completion.md`](deep_dive/01_beginner_completion.md) — gói (package / 패키지)/import, equality, phạm vi (range / 범위)/array, collection transformation, nested/inner lớp (class / 클래스), precondition, data-class định danh (identity / 식별자), ngữ cảnh (context / 맥락)/Intent/Uri, Compose bố cục (layout / 레이아웃) và testing căn bản.
 - [`deep_dive/02_intermediate_completion.md`](deep_dive/02_intermediate_completion.md) — CoroutineContext/Job hierarchy, supervision, luồng (flow / 흐름) cold/hot/ngữ cảnh (context / 맥락), `stateIn`/`shareIn`, `callbackFlow`, tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명), mạng (network / 네트워크) lỗi (error / 오류) mô hình (model / 모델), Room source-of-truth, Compose tác động (effect / 효과)/trạng thái (state / 상태), coroutine testing, DI phạm vi (scope / 범위) và điều hướng (navigation / 내비게이션) đặc tả hợp đồng (contract / 계약).
@@ -77,8 +74,7 @@ Phần “Deep dives theo từng mức (level / 수준)” nối kiến thức t
 
 [`coverage_audit.md`](coverage_audit.md) là ma trận coverage và checklist dùng để chọn **chuẩn gốc (canonical / 정본) gap yếu nhất** cho vòng cập nhật (update / 업데이트) tiếp theo.
 
-
-> **Chuyển mạch:** Từ **Deep dives theo từng mức (level / 수준)**, ta sang **độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kotlin + Android Master Notes**, **Deep dives theo từng mức (level / 수준)** cho ta quy tắc; **Độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)
 
@@ -95,14 +91,14 @@ Các lab hiện có:
 7. [`depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md`](depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md) — API công khai (public API / 공개 API)/ABI, SDK bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전), JNI/bản địa (native / 네이티브) quyền sở hữu (ownership / 소유권), tính tương thích (compatibility / 호환성) và publishing evolution.
 8. [`depth_labs/08_version_compatibility_migration_forensics.md`](depth_labs/08_version_compatibility_migration_forensics.md) — Kotlin siêu dữ liệu (metadata / 메타데이터), producer/bên tiêu thụ (consumer / 소비자) trình biên dịch (compiler / 컴파일러) ranh giới (boundary / 경계), JVM mục tiêu (target / 대상) mismatch, compiler-plugin lockstep, di chuyển (migration / 마이그레이션) forensics, CI tính tương thích (compatibility / 호환성) gates và sản phẩm tạo ra (artifact / 산출물) traceability.
 
-
-> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)**, ta sang **môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master Notes**, **Độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)** cho ta quy tắc; **Môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Baseline version** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master Notes**, **Môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế** cho ta quy tắc; **Baseline version** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cách học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Baseline version
 Phần này nối mạch Android vừa học với “Baseline version”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 - Kotlin: **2.4.20** stable (2026-09-07).
 - Android Studio: **Quail 4 / 2026.1.4 Patch 1** stable.
@@ -114,8 +110,7 @@ Phần này nối mạch Android vừa học với “Baseline version”, giả
 
 Phiên bản (version / 버전) ở đây là snapshot để đọc dự án (project / 프로젝트) tại thời điểm biên soạn, không phải con số phải bản sao (copy / 복사) cứng mãi mãi. Khi upgrade cần đọc tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) và bản phát hành (release / 릴리스) notes của Kotlin, Android Studio/AGP, Android nền tảng (platform / 플랫폼), Google Play chính sách (policy / 정책) và từng Jetpack/thư viện (library / 라이브러리) phụ thuộc (dependency / 의존성).
 
-
-> **Chuyển mạch:** Từ **Baseline phiên bản (version / 버전)**, ta sang **Cách học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kotlin + Android Master Notes**, **Cách học** tiếp nhận điểm tựa từ **Baseline version** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phạm vi đã cover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách học
 
@@ -141,8 +136,7 @@ Canonical Beginner → Master
 
 Khi học Casebook và độ sâu (depth / 깊이) Labs, không chỉ bản sao (copy / 복사) mã (code / 코드). Với mỗi trường hợp (case / 사례) hãy tự trả lời: trạng thái (state / 상태) đơn vị sở hữu (owner / 오너) là ai; nguồn chuẩn (source of truth / 정본) ở đâu; tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드)/vòng đời (lifecycle / 생명주기) nào đang chạy; bất biến (invariant / 불변식) nào bắt buộc luôn đúng; thất bại (failure / 실패) nào thử lại (retry / 재시도) được; kết quả (result / 결과) nào có thể stale; thao tác (operation / 연산) nào có ambiguous kết quả (outcome / 결과); permission/năng lực (capability / 역량) nào có thể biến mất; sản phẩm tạo ra (artifact / 산출물) nào thật sự tới thiết bị (device / 장치); bản địa (native / 네이티브)/tài nguyên (resource / 자원)/bản dựng (build / 빌드) ranh giới (boundary / 경계) nào có thể leak; dữ liệu nào nhạy cảm; thao tác (operation / 연산) nào cần idempotency; kiểm thử (test / 테스트) nào chứng minh bất biến (invariant / 불변식); bản phát hành (release / 릴리스) gặp lỗi thì quay lui (rollback / 롤백) hoặc disable bằng cách nào.
 
-
-> **Chuyển mạch:** Từ **Cách học**, ta sang **Phạm vi đã cover** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master Notes**, **Phạm vi đã cover** tiếp nhận điểm tựa từ **Cách học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Phạm vi đã cover
 
@@ -167,4 +161,4 @@ invariant
 
 và khi cần có thể hạ xuống trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임)/nền tảng (platform / 플랫폼)/bản địa (native / 네이티브)/hệ thống dựng (build system / 빌드 시스템) để giải thích hành vi (behavior / 동작) thay vì dựa vào “magic”.
 
-> **Bàn giao:** Sau **Phạm vi đã cover**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Phạm vi đã cover**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

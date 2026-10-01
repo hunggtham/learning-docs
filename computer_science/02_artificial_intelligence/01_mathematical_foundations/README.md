@@ -1,6 +1,6 @@
 # Mathematical Foundations for Artificial Intelligence
 
-> **Mạch đọc:** Đọc **Mathematical Foundations for Artificial Intelligence** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **phụ thuộc (dependency / 의존성) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mathematical Foundations for Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder này không phải một “khóa toán trước khi học AI”. Nó là tập các chapter giải thích những mathematical tools xuất hiện lặp lại trong AI và vì sao chúng cần tồn tại.
 
@@ -17,8 +17,7 @@ Bắt đầu bằng [Mathematics for AI](./00_mathematics_for_ai.md) để có b
 7. [Optimization for AI](./06_optimization.md) — SGD, momentum, Adam/AdamW, schedules, conditioning, các ràng buộc (constraints / 제약조건들) và mục tiêu (objective / 목표) alignment.
 8. [Numerical Computation](./07_numerical_computation.md) — floating điểm (point / 지점), stability, mixed precision, quantization, stable kernels và hardware-aware computation.
 
-
-> **Chuyển mạch:** Từ **Chapters**, ta sang **phụ thuộc (dependency / 의존성) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mathematical Foundations for Artificial Intelligence**, **Phụ thuộc (dependency / 의존성) map** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -43,8 +42,7 @@ flowchart TD
 
 Không cần đọc theo một đường duy nhất. Nếu đang học Transformer, tuyến tính (linear / 선형) Algebra + Calculus + tối ưu hóa (optimization / 최적화) + Numerical Computation có priority cao. Nếu đang học evaluation, Statistics + xác suất (probability / 확률) quan trọng hơn. Nếu đang học ngôn ngữ (language / 언어) modeling, xác suất (probability / 확률) + thông tin (information / 정보) lý thuyết (theory / 이론) là phụ thuộc (dependency / 의존성) trực tiếp.
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mathematical Foundations for Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Phụ thuộc (dependency / 의존성) map** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -61,3 +59,5 @@ Numerical Computing → làm toán chạy ổn định trên hardware thật
 ```
 
 Các chapter sau trong library sẽ cross-reference lại folder này khi mathematical mechanism thực sự cần thiết.
+
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

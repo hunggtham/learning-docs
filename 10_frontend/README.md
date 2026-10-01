@@ -1,6 +1,6 @@
 # Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)
 
-> **Mạch đọc:** Đọc **Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **mô hình tư duy (mental model / 사고 모델) cấp lĩnh vực (domain / 도메인)** sang **Cách đọc chuẩn gốc (canonical / 정본)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy (mental model / 사고 모델) cấp lĩnh vực (domain / 도메인)** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Cách đọc chuẩn gốc (canonical / 정본)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 `10_frontend/` là không gian tên (namespace / 네임스페이스) chuẩn gốc (canonical / 정본) cho Phát triển giao diện web (frontend development / 프런트엔드 개발). Đây không phải
 là một danh sách khung phần mềm (framework / 프레임워크) rời rạc; nó là một lộ trình giải thích cách một yêu
@@ -60,8 +60,7 @@ thành phần nguyên thủy (primitive / 기본 요소) và đặc tả hợp �
 sự kiện (event / 이벤트)/đầu vào (input / 입력), lưu trữ trình duyệt (browser storage / 브라우저 저장소), networking, cây khả năng tiếp cận (accessibility tree / 접근성 트리) và ranh giới bảo mật (security boundary / 보안 경계). React, WebSquare và các khung phần mềm (framework / 프레임워크) khác tổ chức các thành phần nguyên thủy (primitive / 기본 요소) đó thành
 mô hình ứng dụng (application model / 애플리케이션 모델) riêng; chúng không xóa được ngữ nghĩa (semantics / 의미론) của trình duyệt (browser / 브라우저).
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델) cấp lĩnh vực (domain / 도메인)**, ta sang **Cách đọc chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)**, **Cách đọc chuẩn gốc (canonical / 정본)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) cấp lĩnh vực (domain / 도메인)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bản đồ thư mục và đơn vị sở hữu (owner / 오너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đọc chuẩn gốc (canonical / 정본)
 
@@ -94,12 +93,9 @@ không nên bỏ qua HTML/CSS/trình duyệt (browser / 브라우저) chỉ vì 
 vậy sẽ biến lỗi parser, cascade, vòng lặp sự kiện (event loop / 이벤트 루프), hydration, focus, bộ nhớ đệm (cache / 캐시) hoặc
 bảo mật (security / 보안) thành “phép màu của khung phần mềm (framework magic / 프레임워크 마법)”.
 
-
-> **Chuyển mạch:** Từ **Cách đọc chuẩn gốc (canonical / 정본)**, ta sang **Bản đồ thư mục và đơn vị sở hữu (owner / 오너)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Canonical reading order cho biết prerequisite; directory/owner map biến order đó thành đường dẫn có thể quay lại. Boundary với domain khác tiếp theo ngăn frontend lấn sang backend, browser platform hoặc design owner.
 
 ## Bản đồ thư mục và đơn vị sở hữu (owner / 오너)
-Phần “Bản đồ thư mục và đơn vị sở hữu (owner / 오너)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | nhánh học (track / 트랙) | tệp chuẩn gốc (canonical file / 정본 파일) bắt đầu | Vai trò trong lĩnh vực (domain / 도메인) |
 |---|---|---|
@@ -117,8 +113,7 @@ rộng một đơn vị sở hữu (owner / 오너) đã có. Chúng không tạ
 điểm vào (entrypoint / 진입점) của lĩnh vực (domain / 도메인). Ví dụ, `react/00_index.md` là chỉ mục (index / 인덱스) của React nhánh học (track / 트랙),
 không phải điểm vào (entrypoint / 진입점) của toàn Frontend.
 
-
-> **Chuyển mạch:** Từ **Bản đồ thư mục và đơn vị sở hữu (owner / 오너)**, ta sang **ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)**, **Bản đồ thư mục và đơn vị sở hữu (owner / 오너)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nguyên tắc chống duplicate và framework-first** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác
 
@@ -139,8 +134,7 @@ toàn bộ nội dung của chúng:
   WebView/hybrid app đưa trình duyệt (browser / 브라우저) content vào bản địa (native / 네이티브) vòng đời (lifecycle / 생명주기). WebSquare có
   nhánh học (track / 트랙) riêng cho cầu nối (bridge / 브리지) nhưng không biến bản địa (native / 네이티브) API thành trình duyệt (browser / 브라우저) API.
 
-
-> **Chuyển mạch:** Từ **ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác**, ta sang **Nguyên tắc chống duplicate và framework-first** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)**, **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác** đã nêu tiêu chí phân biệt, còn **Nguyên tắc chống duplicate và framework-first** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên tắc chống duplicate và framework-first
 
@@ -160,8 +154,24 @@ Khi khung phần mềm (framework / 프레임워크) có hành vi (behavior / �
 Tách lớp như vậy giúp đọc mã (code / 코드) legacy, migrate khung phần mềm (framework / 프레임워크) và kiểm tra lỗi môi trường vận hành (production / 운영 환경)
 mà không cần học lại toàn bộ lĩnh vực (domain / 도메인) từ đầu.
 
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)**, **Nguyên tắc chống duplicate và framework-first** cho ta quy tắc; **Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
-> **Chuyển mạch:** Từ **Nguyên tắc chống duplicate và framework-first**, ta sang **trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+## Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab
+
+[`90_case_studies/README.md`](./90_case_studies/README.md) là lớp tích hợp (integration / 통합) cấp
+lĩnh vực (domain / 도메인). Nó không tạo đơn vị sở hữu (owner / 오너) lý thuyết (theory / 이론) mới mà buộc người học nối các đơn vị sở hữu (owner / 오너) hiện có
+thành nhân quả (causal / 인과적) dấu vết (trace / 추적) có thể đo và rà soát (review / 검토).
+
+Bắt đầu với:
+
+- [`Request → Pixel → Interaction Trace`](./90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md) để dấu vết (trace / 추적) một màn hình từ document yêu cầu (request / 요청), parser, DOM/CSSOM và rendering tới async trạng thái (state / 상태), ranh giới bảo mật (security boundary / 보안 경계) và deployed sản phẩm tạo ra (artifact / 산출물).
+- [`Rendering Performance Measurement Lab`](./90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md) để đo scripting/style/bố cục (layout / 레이아웃)/paint/composite, bố cục (layout / 레이아웃) vô hiệu hóa (invalidation / 무효화) và khung phần mềm (framework / 프레임워크)/trình duyệt (browser / 브라우저) rendering bằng baseline → dấu vết (trace / 추적) → hypothesis → one thay đổi (change / 변경) → re-measure.
+
+Hai trường hợp (case / 사례) này là bằng chứng (evidence / 증거) đường dẫn (path / 경로) cho các gap cấp lĩnh vực (domain / 도메인) mà lý thuyết (theory / 이론) riêng lẻ khó kiểm
+tra: người đọc phải chứng minh trình duyệt (browser / 브라우저) đang làm công việc (work / 작업) gì thay vì suy nguyên nhân
+từ tên CSS thuộc tính (property / 속성) hoặc khung phần mềm (framework / 프레임워크) lớp trừu tượng (abstraction / 추상화).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức phát triển giao diện web (frontend development knowledge library / 프런트엔드 개발 지식 라이브러리)**, **Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab** cho ta quy tắc; **Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kiểm tra coverage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab
 
@@ -178,23 +188,7 @@ Hai trường hợp (case / 사례) này là bằng chứng (evidence / 증거) 
 tra: người đọc phải chứng minh trình duyệt (browser / 브라우저) đang làm công việc (work / 작업) gì thay vì suy nguyên nhân
 từ tên CSS thuộc tính (property / 속성) hoặc khung phần mềm (framework / 프레임워크) lớp trừu tượng (abstraction / 추상화).
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab**, ta sang **Kiểm tra coverage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab
-
-[`90_case_studies/README.md`](./90_case_studies/README.md) là lớp tích hợp (integration / 통합) cấp
-lĩnh vực (domain / 도메인). Nó không tạo đơn vị sở hữu (owner / 오너) lý thuyết (theory / 이론) mới mà buộc người học nối các đơn vị sở hữu (owner / 오너) hiện có
-thành nhân quả (causal / 인과적) dấu vết (trace / 추적) có thể đo và rà soát (review / 검토).
-
-Bắt đầu với:
-
-- [`Request → Pixel → Interaction Trace`](./90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md) để dấu vết (trace / 추적) một màn hình từ document yêu cầu (request / 요청), parser, DOM/CSSOM và rendering tới async trạng thái (state / 상태), ranh giới bảo mật (security boundary / 보안 경계) và deployed sản phẩm tạo ra (artifact / 산출물).
-- [`Rendering Performance Measurement Lab`](./90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md) để đo scripting/style/bố cục (layout / 레이아웃)/paint/composite, bố cục (layout / 레이아웃) vô hiệu hóa (invalidation / 무효화) và khung phần mềm (framework / 프레임워크)/trình duyệt (browser / 브라우저) rendering bằng baseline → dấu vết (trace / 추적) → hypothesis → one thay đổi (change / 변경) → re-measure.
-
-Hai trường hợp (case / 사례) này là bằng chứng (evidence / 증거) đường dẫn (path / 경로) cho các gap cấp lĩnh vực (domain / 도메인) mà lý thuyết (theory / 이론) riêng lẻ khó kiểm
-tra: người đọc phải chứng minh trình duyệt (browser / 브라우저) đang làm công việc (work / 작업) gì thay vì suy nguyên nhân
-từ tên CSS thuộc tính (property / 속성) hoặc khung phần mềm (framework / 프레임워크) lớp trừu tượng (abstraction / 추상화).
+> **Chuyển mạch:** Case studies và evidence labs biến mental model thành thao tác kiểm chứng; coverage audit dùng chúng để tìm owner/gap thay vì chỉ đếm chapter. Đây là điểm kết thúc của route frontend.
 
 ## Kiểm tra coverage
 
@@ -203,4 +197,4 @@ chỉ đếm số tệp (file / 파일); nó kiểm tra mỗi stage có đơn v�
 tiên bổ sung vào đơn vị sở hữu chuẩn gốc (canonical owner / 정본 소유자) hoặc kiểm tra (audit / 감사) trước khi mở một title khung phần mềm (framework / 프레임워크)
 mới.
 
-> **Bàn giao:** Sau **Kiểm tra coverage**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kiểm tra coverage**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

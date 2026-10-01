@@ -1,7 +1,6 @@
 # Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility
 
-> **Mạch đọc:** Đặt **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Từ “dữ liệu dài” tới “mô tả ngắn”** sang **2. Tại sao phải cố định universal machine**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ “dữ liệu dài” tới “mô tả ngắn”** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Tại sao phải cố định universal machine** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Có những chuỗi dữ liệu nhìn rất dài nhưng thực ra chứa rất ít thông tin mới. Chuỗi `010101...` lặp lại một triệu lần có thể được mô tả bằng một chương trình rất ngắn: “in `01` năm trăm nghìn lần”. Ngược lại, một chuỗi bit được chọn ngẫu nhiên đủ dài thường không có mô tả nào ngắn hơn đáng kể so với chính nó.
 
@@ -41,6 +40,8 @@ K_U(x) = min |p|
 
 Một đối tượng (object / 객체) có `K(x)` nhỏ là **compressible**: có cấu trúc (structure / 구조) cho phép mô tả ngắn. đối tượng (object / 객체) có `K(x)` gần độ dài của chính nó là **incompressible**.
 
+> **Chuyển mạch:** Trong **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **1. Từ “dữ liệu dài” tới “mô tả ngắn”** nêu điều cần giải thích; **2. Tại sao phải cố định universal machine** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Compression là tìm mô hình (model / 모델), không chỉ xóa byte thừa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Tại sao phải cố định universal machine
 
 Nếu ta được phép phát minh một machine mới cho từng đối tượng (object / 객체), khái niệm trở nên vô nghĩa. Ta có thể tạo machine đặc biệt với instruction một bit mang nghĩa “in toàn bộ cuốn sách này”.
@@ -56,6 +57,8 @@ K_U(x) ≤ K_V(x) + c_VU
 Với đối tượng (object / 객체) rất lớn, constant này thường không làm thay đổi trực giác về việc đối tượng (object / 객체) có cấu trúc (structure / 구조) mạnh hay gần incompressible.
 
 Nó cũng giải thích tại sao không nên hiểu `K(x)` như kích thước tệp (file / 파일) chính xác theo byte. Đây là một đại lượng lý thuyết về **minimal effective description**.
+
+> **Chuyển mạch:** Ở chặng này của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **3. Compression là tìm mô hình (model / 모델), không chỉ xóa byte thừa** tiếp nhận điểm tựa từ **2. Tại sao phải cố định universal machine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Kolmogorov độ phức tạp (complexity / 복잡도) không tính được trong trường hợp tổng quát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Compression là tìm mô hình (model / 모델), không chỉ xóa byte thừa
 
@@ -73,6 +76,8 @@ Ví dụ một ảnh bầu trời xanh lớn có nhiều điểm ảnh (pixel / 
 
 Nếu residual vẫn có cấu trúc (structure / 구조), mô hình (model / 모델) chưa khai thác hết redundancy. Nếu residual gần incompressible đối với lớp (class / 클래스) mô hình (model / 모델) đang dùng, compressor đã đi gần giới hạn của chính mô hình (model / 모델) đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **4. Kolmogorov độ phức tạp (complexity / 복잡도) không tính được trong trường hợp tổng quát** tiếp nhận điểm tựa từ **3. Compression là tìm mô hình (model / 모델), không chỉ xóa byte thừa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Không thể có compressor lossless làm mọi chuỗi ngắn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Kolmogorov độ phức tạp (complexity / 복잡도) không tính được trong trường hợp tổng quát
 
 Một câu hỏi tự nhiên là: tại sao không viết chương trình thử mọi program rồi lấy program ngắn nhất sinh ra `x`?
@@ -88,6 +93,8 @@ Liên kết (connection / 연결) trực tiếp:
 
 Điều này tạo một mẫu (pattern / 패턴) quan trọng: một đại lượng có thể được định nghĩa rất rõ nhưng không có thuật toán tổng quát luôn tính chính xác nó.
 
+> **Chuyển mạch:** Trong **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **4. Kolmogorov độ phức tạp (complexity / 복잡도) không tính được trong trường hợp tổng quát** xác định đầu vào; **5. Không thể có compressor lossless làm mọi chuỗi ngắn hơn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Incompressibility phương thức (method / 메서드): chứng minh bằng cách đếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Không thể có compressor lossless làm mọi chuỗi ngắn hơn
 
 Giả sử mọi chuỗi `n` bit đều có thể nén thành ít hơn `n` bit. Số chuỗi đầu vào là `2^n`, nhưng tổng số chuỗi ngắn hơn `n` bit chỉ là:
@@ -102,6 +109,8 @@ Vì vậy bất kỳ lossless compressor nào cũng phải làm một số đầ
 
 Kết luận thực tế: “tệp (file / 파일) không nén thêm được” không chứng minh tệp (file / 파일) thật sự ngẫu nhiên, nhưng không thể kỳ vọng một compressor universal luôn giảm kích thước mọi đầu vào (input / 입력).
 
+> **Chuyển mạch:** Ở chặng này của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **5. Không thể có compressor lossless làm mọi chuỗi ngắn hơn** xác định đầu vào; **6. Incompressibility phương thức (method / 메서드): chứng minh bằng cách đếm** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. Randomness như thiếu description ngắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Incompressibility phương thức (method / 메서드): chứng minh bằng cách đếm
 
 Một insight mạnh của Kolmogorov độ phức tạp (complexity / 복잡도) là phần lớn chuỗi dài phải incompressible.
@@ -111,6 +120,8 @@ Với chuỗi dài `n`, số description ngắn hơn `n-c` bit bị giới hạn
 Từ đó có **incompressibility phương thức (method / 메서드)**: thay vì xây trực tiếp một đối tượng (object / 객체) “ngẫu nhiên”, ta lập luận (reasoning / 추론) rằng đa số đối tượng (object / 객체) không thể có description ngắn; chọn một đối tượng (object / 객체) incompressible rồi suy ra nó không thể sở hữu quá nhiều regularity đặc biệt, vì regularity đó sẽ tạo description ngắn.
 
 Đây là proof technique, không phải compression thuật toán (algorithm / 알고리즘).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **7. Randomness như thiếu description ngắn** tiếp nhận điểm tựa từ **6. Incompressibility phương thức (method / 메서드): chứng minh bằng cách đếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Kolmogorov độ phức tạp (complexity / 복잡도) và Shannon entropy không phải cùng một đại lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Randomness như thiếu description ngắn
 
@@ -128,6 +139,8 @@ Một PRNG có seed 256 bit có thể sinh stream dài hàng gigabyte trông th�
 
 Dù vậy nếu PRNG là cryptographically secure, một attacker bị giới hạn tài nguyên tính toán vẫn không dự đoán được đầu ra (output / 출력) tiếp theo. Đó là **computational unpredictability**, sẽ được đào sâu ở [Randomness, entropy sources và computational unpredictability](./05_randomness_entropy_sources_and_computational_unpredictability.md).
 
+> **Chuyển mạch:** Trong **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **8. Kolmogorov độ phức tạp (complexity / 복잡도) và Shannon entropy không phải cùng một đại lượng** tiếp nhận điểm tựa từ **7. Randomness như thiếu description ngắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Minimum Description Length: mô hình (model / 모델) tốt phải trả cả giá mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Kolmogorov độ phức tạp (complexity / 복잡도) và Shannon entropy không phải cùng một đại lượng
 
 **Shannon entropy** mô tả bất định (uncertainty / 불확실성) trung bình của một random variable/phân phối (distribution / 분포). Kolmogorov độ phức tạp (complexity / 복잡도) nói về minimal description của một đối tượng (object / 객체) cụ thể.
@@ -139,6 +152,8 @@ Ngược lại, nếu chỉ có một tệp (file / 파일) duy nhất mà khôn
 Hai lý thuyết gặp nhau khi xét typical sequences và coding, nhưng không được dùng hai từ `entropy` và `complexity` như đồng nghĩa.
 
 Đọc tiếp: [Information theory, coding bounds và noisy channels](./04_information_theory_coding_bounds_and_noisy_channels.md).
+
+> **Chuyển mạch:** Ở chặng này của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **9. Minimum Description Length: mô hình (model / 모델) tốt phải trả cả giá mô hình (model / 모델)** tiếp nhận điểm tựa từ **8. Kolmogorov độ phức tạp (complexity / 복잡도) và Shannon entropy không phải cùng một đại lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Compression ratio là bằng chứng (evidence / 증거) có điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Minimum Description Length: mô hình (model / 모델) tốt phải trả cả giá mô hình (model / 모델)
 
@@ -155,6 +170,8 @@ Total description length
 Mô hình (model / 모델) quá đơn giản làm residual dài. mô hình (model / 모델) quá phức tạp làm phần mô tả mô hình (model / 모델) dài. Điểm cân bằng tạo liên kết (connection / 연결) với Occam's razor, regularization và mô hình (model / 모델) selection.
 
 Không nên biến MDL thành câu “mô hình (model / 모델) nhỏ luôn tốt hơn”. Một mô hình (model / 모델) lớn vẫn hợp lý nếu nó giảm residual đủ nhiều và generalize tốt cho mục tiêu đang xét.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **9. Minimum Description Length: mô hình (model / 모델) tốt phải trả cả giá mô hình (model / 모델)** nêu điều cần giải thích; **10. Compression ratio là bằng chứng (evidence / 증거) có điều kiện** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Encryption thường phá compressibility quan sát được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Compression ratio là bằng chứng (evidence / 증거) có điều kiện
 
@@ -174,6 +191,8 @@ Nếu một dataset nén rất tốt bằng codec phù hợp, đó là bằng ch
 
 Do đó compression ratio là bằng chứng (evidence / 증거) về **dữ liệu (data / 데이터) + mô hình (model / 모델)**, không phải chứng minh tuyệt đối về intrinsic thông tin (information / 정보).
 
+> **Chuyển mạch:** Trong **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **10. Compression ratio là bằng chứng (evidence / 증거) có điều kiện** nêu điều cần giải thích; **11. Encryption thường phá compressibility quan sát được** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Dữ liệu có cấu trúc (structure / 구조) nhưng vẫn khó học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Encryption thường phá compressibility quan sát được
 
 Ciphertext của encryption hiện đại được thiết kế để khó phân biệt với random đối với attacker hiệu quả. Vì vậy ciphertext thường không còn mẫu (pattern / 패턴) dễ nén.
@@ -192,6 +211,8 @@ Tuy nhiên compression trước encryption có thể tạo side channel khi atta
 
 Liên kết (connection / 연결) này cho thấy “compression tốt” và “bảo mật (security / 보안) tốt” không thể lập luận (reasoning / 추론) tách rời khỏi threat mô hình (model / 모델).
 
+> **Chuyển mạch:** Ở chặng này của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **11. Encryption thường phá compressibility quan sát được** nêu điều cần giải thích; **12. Dữ liệu có cấu trúc (structure / 구조) nhưng vẫn khó học** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Ví dụ lập luận (reasoning / 추론): log môi trường vận hành (production / 운영 환경) tăng kích thước bất thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Dữ liệu có cấu trúc (structure / 구조) nhưng vẫn khó học
 
 Một đối tượng (object / 객체) có description ngắn không đồng nghĩa một learner cụ thể sẽ tìm được description đó. Shortest program có thể tồn tại nhưng computationally rất khó khám phá.
@@ -207,6 +228,8 @@ ability to discover it efficiently
 Trong machine học tập (learning / 학습), một dataset có generative quy tắc (rule / 규칙) ngắn nhưng tối ưu hóa (optimization / 최적화) procedure có thể không tìm được mô hình (model / 모델) tương ứng. Trong program synthesis, solution ngắn có thể nằm trong tìm kiếm (search / 검색) không gian (space / 공간) quá lớn.
 
 Kolmogorov độ phức tạp (complexity / 복잡도) vì vậy là thước đo description-theoretic, không phải thời gian chạy (runtime / 런타임) độ phức tạp (complexity / 복잡도) của quá trình tìm description.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **12. Dữ liệu có cấu trúc (structure / 구조) nhưng vẫn khó học** cho ta quy tắc; **13. Ví dụ lập luận (reasoning / 추론): log môi trường vận hành (production / 운영 환경) tăng kích thước bất thường** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **14. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Ví dụ lập luận (reasoning / 추론): log môi trường vận hành (production / 운영 환경) tăng kích thước bất thường
 
@@ -226,6 +249,8 @@ Có thể một bản phát hành (release / 릴리스) mới đưa yêu cầu (
 
 Bằng chứng (evidence / 증거) cần gồm raw bytes/sự kiện (event / 이벤트), trường dữ liệu (field / 필드) cardinality, template phân phối (distribution / 분포), khối (block / 블록) kích thước (size / 크기), codec ratio và CPU chi phí (cost / 비용). Đây là cách đưa lý thuyết (theory / 이론) về regularity vào hệ thống (system / 시스템) diagnosis.
 
+> **Chuyển mạch:** Trong **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, trường hợp ở **13. Ví dụ lập luận (reasoning / 추론): log môi trường vận hành (production / 운영 환경) tăng kích thước bất thường** cho thấy quy tắc hoạt động; **14. Những nhầm lẫn thường gặp** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **15. liên kết (connection / 연결) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Những nhầm lẫn thường gặp
 
 **“Kolmogorov độ phức tạp (complexity / 복잡도) là tệp (file / 파일) kích thước (size / 크기) sau gzip.”** Không đúng. gzip chỉ là một compressor cụ thể và cho một upper bound thực dụng.
@@ -238,9 +263,9 @@ Bằng chứng (evidence / 증거) cần gồm raw bytes/sự kiện (event / �
 
 **“Không tính được K(x) nên khái niệm vô dụng.”** Không đúng. Nó cung cấp lower-bound intuition, proof technique và ngôn ngữ thống nhất cho compression/randomness/mô hình (model / 모델) độ phức tạp (complexity / 복잡도).
 
-## 15. liên kết (connection / 연결) map
-Phần “15. liên kết (connection / 연결) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **14. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **15. liên kết (connection / 연결) map** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Checklist lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 15. liên kết (connection / 연결) map
 
 ```text
 Computability
@@ -265,6 +290,8 @@ Machine learning
 → model complexity + residual / MDL intuition
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **16. Checklist lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **15. liên kết (connection / 연결) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Checklist lập luận (reasoning / 추론)
 
 Khi gặp một vấn đề liên quan “thông tin”, “random”, “compression” hoặc “mô hình (model / 모델) độ phức tạp (complexity / 복잡도)”, hãy hỏi:
@@ -279,6 +306,8 @@ Deterministic transform có đang bị nhầm là tạo entropy mới không?
 Compression ratio phản ánh intrinsic structure hay limitation của codec?
 Security threat model có biến length/pattern thành side channel không?
 ```
+
+> **Chuyển mạch:** Trong **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **Kết luận** gom các mảnh từ **16. Checklist lập luận (reasoning / 추론)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết luận
 
@@ -300,4 +329,4 @@ algorithmic randomness
 
 Các distinction này là prerequisite tự nhiên cho thông tin (information / 정보) lý thuyết (theory / 이론), cryptographic randomness, mô hình (model / 모델) selection và lập luận (reasoning / 추론) về dữ liệu ở quy mô hệ thống.
 
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 formal models reductions and computability](./00_formal_models_reductions_and_computability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

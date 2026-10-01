@@ -1,7 +1,6 @@
 # Numerical Computation cho Artificial Intelligence
 
-> **Mạch đọc:** Đặt **Numerical Computation cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Floating-point numbers không phải real numbers** sang **Precision formats trong AI**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Numerical Computation cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Floating-point numbers không phải real numbers** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Precision formats trong AI** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Mathematics trên giấy giả định real numbers có precision vô hạn. Computer thì không. AI chạy trên finite bộ nhớ (memory / 메모리), finite precision và hardware kernels cụ thể. Vì vậy một công thức mathematically correct vẫn có thể overflow, underflow, lose precision hoặc produce NaN khi hiện thực (implementation / 구현).
 
@@ -31,6 +30,8 @@ có thể false trong dùng chung (common / 공통) languages.
 
 Trong normal software, lỗi (error / 오류) này nhỏ. Trong repeated large-scale accumulation hoặc unstable formula, small errors có thể amplify.
 
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Precision formats trong AI** tiếp nhận điểm tựa từ **Floating-point numbers không phải real numbers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Machine epsilon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Precision formats trong AI
 
 ### FP32
@@ -53,6 +54,8 @@ Hiện đại (modern / 현대적) accelerators hỗ trợ FP8-like formats tron
 
 INT8/INT4-like formats thường dùng suy luận (inference / 추론) để giảm bộ nhớ (memory / 메모리) bandwidth và compute. Quantization không chỉ “convert kiểu (type / 타입)”; cần map real values sang discrete levels.
 
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Machine epsilon** tiếp nhận điểm tựa từ **Precision formats trong AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rounding lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Machine epsilon
 
 Machine epsilon là khoảng cách relative nhỏ nhất quanh 1 mà floating-point có thể distinguish theo format/convention.
@@ -67,6 +70,8 @@ large + tiny \approx large
 
 trong floating điểm (point / 지점).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Rounding lỗi (error / 오류)** tiếp nhận điểm tựa từ **Machine epsilon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Catastrophic cancellation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rounding lỗi (error / 오류)
 
 Thao tác (operation / 연산) chính xác (exact / 정확한) `a+b` có thể được stored thành nearest representable floating-point number:
@@ -78,6 +83,8 @@ fl(a+b)=(a+b)(1+\delta)
 với small `δ` dưới các giả định (assumptions / 가정들).
 
 Một thao tác (operation / 연산) lỗi (error / 오류) nhỏ, nhưng thuật toán (algorithm / 알고리즘) với millions operations cần consider accumulation and conditioning.
+
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Catastrophic cancellation** tiếp nhận điểm tựa từ **Rounding lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Overflow và underflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Catastrophic cancellation
 
@@ -99,6 +106,8 @@ có thể unstable nếu hai terms rất gần nhau.
 
 Stable algorithms như Welford's phương thức (method / 메서드) cập nhật (update / 업데이트) mean/variance incrementally để giảm cancellation issues.
 
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Catastrophic cancellation** xác định đầu vào; **Overflow và underflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Stable softmax** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Overflow và underflow
 
 **Overflow** xảy ra khi magnitude vượt representable max → `Inf` hoặc lỗi (error / 오류) hành vi (behavior / 동작).
@@ -106,6 +115,8 @@ Stable algorithms như Welford's phương thức (method / 메서드) cập nh�
 **Underflow** khi magnitude quá nhỏ, thành subnormal hoặc zero.
 
 Exponentials/log probabilities rất dễ gặp vấn đề này.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Overflow và underflow** xác định đầu vào; **Stable softmax** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Log-sum-exp trick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stable softmax
 
@@ -133,6 +144,8 @@ làm largest exponent bằng `e^0=1`, tránh overflow.
 
 Đây là chuẩn gốc (canonical / 정본) example của numerical stability: mathematically equivalent formulas có radically different computational hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Log-sum-exp trick** tiếp nhận điểm tựa từ **Stable softmax** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính xác suất (probability / 확률) trong log không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Log-sum-exp trick
 
 Ta thường cần:
@@ -157,6 +170,8 @@ Log-sum-exp xuất hiện trong log-likelihood, softmax, CRF, probabilistic các
 
 Frameworks thường cung cấp thành phần nguyên thủy (primitive / 기본 요소) stable; nên dùng thay vì tự compose `log(sum(exp(x)))`.
 
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Tính xác suất (probability / 확률) trong log không gian (space / 공간)** tiếp nhận điểm tựa từ **Log-sum-exp trick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditioning khác stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính xác suất (probability / 확률) trong log không gian (space / 공간)
 
 Sản phẩm (product / 제품) nhiều probabilities nhỏ:
@@ -177,6 +192,8 @@ biến multiplication thành addition và stable hơn.
 
 Đây là lý do chuỗi (sequence / 시퀀스) likelihood thường computed as sum of log-probabilities.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Conditioning khác stability** tiếp nhận điểm tựa từ **Tính xác suất (probability / 확률) trong log không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện (condition / 조건) number** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Conditioning khác stability
 
 **Conditioning** là thuộc tính (property / 속성) của mathematical bài toán (problem / 문제): đầu vào (input / 입력) perturb nhỏ có thể làm đầu ra (output / 출력) đổi bao nhiêu.
@@ -186,6 +203,8 @@ biến multiplication thành addition và stable hơn.
 Một bài toán (problem / 문제) ill-conditioned không thể magically fix hoàn toàn bằng thuật toán (algorithm / 알고리즘); stable thuật toán (algorithm / 알고리즘) chỉ tránh thêm unnecessary lỗi (error / 오류).
 
 Ví dụ solving hệ tuyến tính (linear system / 선형 시스템) với nearly singular ma trận (matrix / 행렬) inherently sensitive.
+
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Điều kiện (condition / 조건) number** tiếp nhận điểm tựa từ **Conditioning khác stability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không nên tính inverse khi không cần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điều kiện (condition / 조건) number
 
@@ -200,6 +219,8 @@ Large `κ` nghĩa small đầu vào (input / 입력)/rounding errors có thể a
 Trong tối ưu hóa (optimization / 최적화), ill-conditioned Hessian dẫn độ dốc (gradient / 기울기) descent zig-zag và slow convergence.
 
 Tính năng (feature / 기능) scaling và normalization có thể improve effective conditioning.
+
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Không nên tính inverse khi không cần** tiếp nhận điểm tựa từ **Điều kiện (condition / 조건) number** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Summation lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Không nên tính inverse khi không cần
 
@@ -223,6 +244,8 @@ Quy tắc (rule / 규칙) kỹ thuật (engineering / 엔지니어링):
 
 > Solve the hệ thống (system / 시스템); do not automatically form the inverse.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Summation lỗi (error / 오류)** tiếp nhận điểm tựa từ **Không nên tính inverse khi không cần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Determinism và reproducibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Summation lỗi (error / 오류)
 
 Sum millions floating-point values depends thứ tự (order / 순서) vì floating-point addition không associative:
@@ -236,6 +259,8 @@ exactly.
 Pairwise summation hoặc Kahan summation có thể reduce lỗi (error / 오류).
 
 Parallel GPU reductions thay đổi (change / 변경) thao tác (operation / 연산) thứ tự (order / 순서), nên identical mã (code / 코드)/hardware settings vẫn có slight nondeterminism depending kernels.
+
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Determinism và reproducibility** tiếp nhận điểm tựa từ **Summation lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mixed-precision huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Determinism và reproducibility
 
@@ -251,6 +276,8 @@ Deep học tập (learning / 학습) kết quả (result / 결과) có thể kh�
 Setting seed không guarantee bitwise determinism nếu kernel nondeterministic.
 
 Reproducibility cần bản ghi (record / 레코드) software versions, hardware, seeds, configs, dataset phiên bản (version / 버전) và deterministic settings khi required.
+
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Mixed-precision huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **Determinism và reproducibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mất mát (loss / 손실) scaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mixed-precision huấn luyện (training / 학습)
 
@@ -269,6 +296,8 @@ optimizer update
 Chính xác (exact / 정확한) hành vi (behavior / 동작) phụ thuộc hardware/khung phần mềm (framework / 프레임워크).
 
 Goal là giảm bộ nhớ (memory / 메모리) + tăng thông lượng (throughput / 처리량) mà không destroy huấn luyện (training / 학습) tín hiệu (signal / 신호).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Mất mát (loss / 손실) scaling** tiếp nhận điểm tựa từ **Mixed-precision huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) overflow và NaN debugging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mất mát (loss / 손실) scaling
 
@@ -289,6 +318,8 @@ sau backward, divide độ dốc (gradient / 기울기) by `S` trước optimize
 Động (dynamic / 동적) mất mát (loss / 손실) scaling adjust `S` khi detect overflow.
 
 BF16 exponent phạm vi (range / 범위) rộng hơn nên often less dependent on mất mát (loss / 손실) scaling.
+
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Mất mát (loss / 손실) scaling** xác định đầu vào; **Độ dốc (gradient / 기울기) overflow và NaN debugging** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Stable normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ dốc (gradient / 기울기) overflow và NaN debugging
 
@@ -317,6 +348,8 @@ learning rate / scaling / input values
 
 Khung phần mềm (framework / 프레임워크) anomaly detection giúp locate first invalid thao tác (operation / 연산), nhưng có hiệu năng (performance / 성능) chi phí (cost / 비용).
 
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Độ dốc (gradient / 기울기) overflow và NaN debugging** xác định đầu vào; **Stable normalization** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quantization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stable normalization
 
 Variance computation:
@@ -334,6 +367,8 @@ có thể suffer cancellation. Implementations dùng stable reductions và add e
 `ε` không chỉ tránh divide by zero; nó ảnh hưởng hành vi (behavior / 동작) khi variance rất nhỏ.
 
 Different normalization layers choose axes differently, affecting both statistics and numerical hành vi (behavior / 동작).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Quantization** tiếp nhận điểm tựa từ **Stable normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symmetric vs asymmetric quantization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quantization
 
@@ -355,6 +390,8 @@ x\approx s(q-z)
 
 Quantization lỗi (error / 오류) là difference giữa original và reconstructed giá trị (value / 값).
 
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Symmetric vs asymmetric quantization** tiếp nhận điểm tựa từ **Quantization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Per-tensor vs per-channel quantization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Symmetric vs asymmetric quantization
 
 Symmetric quantization thường set zero-point near 0 và phạm vi (range / 범위) symmetric quanh zero. Simpler/faster trên some hardware.
@@ -362,6 +399,8 @@ Symmetric quantization thường set zero-point near 0 và phạm vi (range / �
 Asymmetric quantization dùng zero-point để fit non-symmetric phạm vi (range / 범위) tốt hơn.
 
 Choice depends weights/activations phân phối (distribution / 분포) và hardware kernels.
+
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Per-tensor vs per-channel quantization** tiếp nhận điểm tựa từ **Symmetric vs asymmetric quantization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Post-training quantization và quantization-aware huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Per-tensor vs per-channel quantization
 
@@ -371,6 +410,8 @@ Choice depends weights/activations phân phối (distribution / 분포) và hard
 
 LLM weight quantization còn dùng group-wise schemes: một quy mô (scale / 규모) per group of weights.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Post-training quantization và quantization-aware huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **Per-tensor vs per-channel quantization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LLM quantization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Post-training quantization và quantization-aware huấn luyện (training / 학습)
 
 **Post-Training Quantization (PTQ)** quantize trained mô hình (model / 모델) sau huấn luyện (training / 학습), dùng calibration dữ liệu (data / 데이터) khi cần.
@@ -378,6 +419,8 @@ LLM weight quantization còn dùng group-wise schemes: một quy mô (scale / �
 **Quantization-Aware huấn luyện (training / 학습) (QAT)** simulate quantization effects trong huấn luyện (training / 학습) để mô hình (model / 모델) thích nghi.
 
 PTQ dễ hơn; QAT có thể preserve chất lượng (quality / 품질) tốt hơn ở aggressive low precision nhưng tốn huấn luyện (training / 학습) effort.
+
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **LLM quantization** tiếp nhận điểm tựa từ **Post-training quantization và quantization-aware huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KV bộ nhớ đệm (cache / 캐시) và precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## LLM quantization
 
@@ -397,6 +440,8 @@ Actual thời gian chạy (runtime / 런타임) cần thêm siêu dữ liệu (m
 
 Chất lượng (quality / 품질) impact phụ thuộc quantization thuật toán (algorithm / 알고리즘), outlier handling, group kích thước (size / 크기) và mô hình (model / 모델) kiến trúc (architecture / 아키텍처).
 
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **KV bộ nhớ đệm (cache / 캐시) và precision** tiếp nhận điểm tựa từ **LLM quantization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Accumulation precision trong phép nhân ma trận (matrix multiplication / 행렬 곱셈)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KV bộ nhớ đệm (cache / 캐시) và precision
 
 Autoregressive Transformer suy luận (inference / 추론) bộ nhớ đệm (cache / 캐시) Key/giá trị (value / 값) của previous tokens để không recompute toàn chuỗi (sequence / 시퀀스).
@@ -408,6 +453,8 @@ batch × sequence length × layers × KV heads × head dimension × bytes
 ```
 
 Long ngữ cảnh (context / 맥락) có thể khiến KV bộ nhớ đệm (cache / 캐시) dominate bộ nhớ (memory / 메모리). Quantizing KV bộ nhớ đệm (cache / 캐시) hoặc using grouped-query/multi-query attention giảm bộ nhớ (memory / 메모리) pressure, nhưng may affect chất lượng (quality / 품질).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Accumulation precision trong phép nhân ma trận (matrix multiplication / 행렬 곱셈)** tiếp nhận điểm tựa từ **KV bộ nhớ đệm (cache / 캐시) và precision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fused kernels** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Accumulation precision trong phép nhân ma trận (matrix multiplication / 행렬 곱셈)
 
@@ -422,6 +469,8 @@ s=\sum_i a_ib_i
 nếu accumulate hoàn toàn low precision, rounding lỗi (error / 오류) tăng theo many terms.
 
 Accelerator thiết kế (design / 설계) thường separate đầu vào (input / 입력) format và accumulation format.
+
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Fused kernels** tiếp nhận điểm tựa từ **Accumulation precision trong phép nhân ma trận (matrix multiplication / 행렬 곱셈)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) bandwidth vs FLOPs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fused kernels
 
@@ -439,6 +488,8 @@ FlashAttention là example sâu hơn: restructure attention computation để re
 
 Numerical thuật toán (algorithm / 알고리즘) và hardware efficiency có thể cùng được cải thiện bằng reformulation.
 
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Bộ nhớ (memory / 메모리) bandwidth vs FLOPs** tiếp nhận điểm tựa từ **Fused kernels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sparse computation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ nhớ (memory / 메모리) bandwidth vs FLOPs
 
 AI hiệu năng (performance / 성능) không chỉ phụ thuộc số floating-point operations. thao tác (operation / 연산) có thể **compute-bound** hoặc **memory-bound**.
@@ -453,6 +504,8 @@ Phép nhân ma trận (matrix multiplication / 행렬 곱셈) lớn có high ari
 
 Đây là lý do vectorization/fusion quan trọng, và tại sao kiến trúc (architecture / 아키텍처) AI co-evolve với hardware.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Sparse computation** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) bandwidth vs FLOPs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Approximation lỗi (error / 오류) và mô hình (model / 모델) lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sparse computation
 
 Nếu tensor có nhiều zeros, sparse biểu diễn (representation / 표현) có thể tiết kiệm compute/bộ nhớ (memory / 메모리). Nhưng sparsity chỉ có lợi nếu hardware/software exploit mẫu (pattern / 패턴).
@@ -460,6 +513,8 @@ Nếu tensor có nhiều zeros, sparse biểu diễn (representation / 표현) c
 Unstructured random sparsity có overhead indexing cao; structured sparsity dễ accelerate hơn.
 
 “90% weights zero” không tự động nghĩa suy luận (inference / 추론) nhanh 10×.
+
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Approximation lỗi (error / 오류) và mô hình (model / 모델) lỗi (error / 오류)** tiếp nhận điểm tựa từ **Sparse computation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stable sigmoid và nhị phân (binary / 이진) cross-entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Approximation lỗi (error / 오류) và mô hình (model / 모델) lỗi (error / 오류)
 
@@ -475,6 +530,8 @@ modeling error
 Mô hình (model / 모델) prediction sai có thể do mô hình (model / 모델) lớp (class / 클래스) không đủ, dữ liệu (data / 데이터) thiếu, optimizer chưa converge hoặc numerical precision.
 
 Không nên blame floating điểm (point / 지점) trước khi kiểm tra larger sources, nhưng ở quy mô (scale / 규모) lớn numerical issues là real dạng thất bại (failure mode / 실패 모드).
+
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Stable sigmoid và nhị phân (binary / 이진) cross-entropy** tiếp nhận điểm tựa từ **Approximation lỗi (error / 오류) và mô hình (model / 모델) lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) accumulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stable sigmoid và nhị phân (binary / 이진) cross-entropy
 
@@ -494,6 +551,8 @@ có thể unstable cho extreme logits.
 
 Frameworks cung cấp `binary_cross_entropy_with_logits`-like fused stable formulation. kỹ thuật (engineering / 엔지니어링) quy tắc (rule / 규칙): use numerically stable mất mát (loss / 손실) primitives từ khung phần mềm (framework / 프레임워크) thay vì manually compose probabilities nếu possible.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Độ dốc (gradient / 기울기) accumulation** tiếp nhận điểm tựa từ **Stable sigmoid và nhị phân (binary / 이진) cross-entropy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tán (distributed / 분산) numerical hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ dốc (gradient / 기울기) accumulation
 
 Nếu GPU bộ nhớ (memory / 메모리) không đủ batch lớn, có thể accumulate gradients qua micro-batches:
@@ -509,6 +568,8 @@ Nếu mất mát (loss / 손실) scaling/normalization đúng, effective batch c
 
 Nhưng BatchNorm-like layers và stochastic trạng thái (state / 상태) có thể làm ngữ nghĩa (semantics / 의미론) khác true large batch.
 
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, **Phân tán (distributed / 분산) numerical hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) accumulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân tán (distributed / 분산) numerical hành vi (behavior / 동작)
 
 Phân tán (distributed / 분산) huấn luyện (training / 학습) aggregate gradients qua all-reduce. thứ tự (order / 순서) và precision communication ảnh hưởng rounding.
@@ -516,6 +577,8 @@ Phân tán (distributed / 분산) huấn luyện (training / 학습) aggregate g
 Độ dốc (gradient / 기울기) compression, reduced-precision communication và sharding tiết kiệm bandwidth/bộ nhớ (memory / 메모리) nhưng introduce trade-offs.
 
 At quy mô (scale / 규모), numerical phân tích (analysis / 분석) merge với distributed-systems kỹ thuật (engineering / 엔지니어링).
+
+> **Chuyển mạch:** Ở chặng này của **Numerical Computation cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Phân tán (distributed / 분산) numerical hành vi (behavior / 동작)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -531,6 +594,8 @@ Mixed precision      = dùng format phù hợp cho từng operation
 Quantization         = trade numerical fidelity for memory/throughput
 Kernel design        = reformulate computation for hardware + stability
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical Computation cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -550,8 +615,12 @@ Có thể là bug, nhưng thường cũng có thể do unstable mục tiêu (obj
 
 Không trong floating điểm (point / 지점). Softmax và log-sum-exp là examples điển hình.
 
+> **Chuyển mạch:** Trong **Numerical Computation cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Numerical Computation nối Mathematics với [AI System Architecture](../00_foundations/04_ai_system_architecture.md), tối ưu hóa (optimization / 최적화) và Compute hạ tầng (infrastructure / 인프라). Những concepts này sẽ quay lại khi học mixed-precision huấn luyện (training / 학습), quantization, Transformer kernels, phân tán (distributed / 분산) huấn luyện (training / 학습) và efficient suy luận (inference / 추론).
 
 Khi model gặp instability hoặc deployment cost cao, hãy nhìn cả equation, precision format, tensor range, reduction order, memory movement và hardware kernel — không chỉ nhìn architecture trên paper.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

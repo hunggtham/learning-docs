@@ -1,5 +1,7 @@
 # 02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Thị trường (market / 시장) cấu trúc (structure / 구조) mô tả ràng buộc (constraint / 제약조건) mà firm đối mặt; game lý thuyết (theory / 이론) mô tả cách payoff của một tác nhân phụ thuộc vào hành động của tác nhân khác. Mô-đun (module / 모듈) này nối trực tiếp từ competitive benchmark của Microeconomics sang thị trường (market / 시장) power, oligopoly, repeated tương tác (interaction / 상호작용) và cơ chế (mechanism / 메커니즘) thiết kế (design / 설계).
 
 ## Thứ tự học chuẩn gốc (canonical / 정본)
@@ -9,9 +11,9 @@ Thị trường (market / 시장) cấu trúc (structure / 구조) mô tả ràn
 3. [Repeated Games, Entry & Collusion](./02_repeated_games_entry_and_collusion.md) — discount factor, trigger strategies, monitoring, tacit/tường minh (explicit / 명시적) coordination, predation, entry deterrence, reputation và động (dynamic / 동적) competition.
 4. [Auctions & Mechanism Design](./03_auctions_and_mechanism_design.md) — private/dùng chung (common / 공통) values, first/second-price, winner’s curse, revenue equivalence, incentive tính tương thích (compatibility / 호환성), participation, revelation principle, VCG và matching.
 
-## Trục học (learning spine / 학습 축)
-Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**, **Trục học (learning spine / 학습 축)** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết quả cần đạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Trục học (learning spine / 학습 축)
 
 ```text
 Competitive benchmark
@@ -28,11 +30,15 @@ Competitive benchmark
 
 Perfect competition và monopoly là benchmarks chứ không phải two labels đủ để classify mọi thị trường (market / 시장). Oligopoly kết quả (outcome / 결과) phụ thuộc hành động (action / 동작) variable, sản phẩm (product / 제품) differentiation, sức chứa (capacity / 용량), thông tin (information / 정보) và timing. Repeated games thêm lịch sử (history / 이력)/future punishment. Cơ chế (mechanism / 메커니즘) thiết kế (design / 설계) đảo chiều lập luận (reasoning / 추론): thay vì nhận rules có sẵn rồi tìm equilibrium, designer chọn rules để tạo incentive mong muốn.
 
+> **Chuyển mạch:** Ở chặng này của **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**, **Kết quả cần đạt** tiếp nhận điểm tựa từ **Trục học (learning spine / 학습 축)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Welfare và bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kết quả cần đạt
 
 Sau mô-đun (module / 모듈) này, người học phải có thể xác định thị trường (market / 시장) power đến từ demand elasticity, entry barrier, mạng (network / 네트워크)/switching tác động (effect / 효과) hay institutional điều khiển (control / 제어); derive monopoly và Cournot/Bertrand benchmark trong simple các mô hình (models / 모델들); viết best phản hồi (response / 응답) và nhận diện Nash equilibrium; phân biệt simultaneous với sequential game; kiểm tra threat/commitment có credible không; lý giải repeated-game cooperation bằng discounting/monitoring; phân biệt parallel pricing với bằng chứng (evidence / 증거) của collusion; và phân tích auction theo giá trị (value / 값) cấu trúc (structure / 구조), thông tin (information / 정보), allocation/payment quy tắc (rule / 규칙) cùng incentive các ràng buộc (constraints / 제약조건들).
 
 Quan trọng hơn, người học phải biết **mô hình (model / 모델) selection**: không dùng Cournot chỉ vì có ít firms, không dùng Nash như synonym của optimal kết quả (outcome / 결과), không nói second-price auction luôn truthful ngoài private-value các giả định (assumptions / 가정들), và không kết luận thị trường (market / 시장) power chỉ từ concentration hoặc accounting margin.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**, **Kết quả cần đạt** đã nêu tiêu chí phân biệt, còn **Welfare và bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Applied Economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Welfare và bằng chứng (evidence / 증거) ranh giới (boundary / 경계)
 
@@ -40,8 +46,12 @@ Mỗi market-structure mô hình (model / 모델) phải quay lại [Welfare & M
 
 Lý thuyết (theory / 이론) chỉ tạo cơ chế (mechanism / 메커니즘) và testable predictions. Claim về thị trường (market / 시장) power, collusion, merger tác động (effect / 효과), entry deterrence hoặc auction hiệu năng (performance / 성능) cần bằng chứng (evidence / 증거) và nhân quả (causal / 인과적) identification từ Econometrics/Industrial Organization. Concentration chỉ mục (index / 인덱스), price parallelism hay một anecdote riêng lẻ không đủ làm kết luận structural.
 
+> **Chuyển mạch:** Trong **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**, **Welfare và bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Applied Economics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Ranh giới (boundary / 경계) với Applied Economics
 
 Applied Industrial Organization sẽ dùng mô-đun (module / 모듈) này để estimate demand, markups, merger effects, entry và strategic conduct trong industry cụ thể. Competition chính sách (policy / 정책) cũng cần legal/institutional ranh giới (boundary / 경계); economic mô hình (model / 모델) cung cấp counterfactual và welfare cơ chế (mechanism / 메커니즘) nhưng không tự thay thế legal tiêu chuẩn (standard / 표준).
 
 Đọc trước: [01 — Microeconomics](../01_microeconomics/README.md), [00 — Economic reasoning](../00_foundations/00_economic_reasoning.md). Đọc tiếp theo tuyến (route / 경로) chung: [Economics README](../README.md).
+
+> **Bàn giao:** Sau **Ranh giới (boundary / 경계) với Applied Economics**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

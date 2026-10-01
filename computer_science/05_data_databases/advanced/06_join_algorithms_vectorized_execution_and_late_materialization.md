@@ -1,7 +1,6 @@
 # Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn
 
-> **Mạch đọc:** Đặt **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. phép nối (join / 조인) thực chất là bài toán tìm quan hệ giữa hai tập bản ghi** sang **Nested-loop phép nối (join / 조인)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. phép nối (join / 조인) thực chất là bài toán tìm quan hệ giữa hai tập bản ghi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. bản dựng (build / 빌드) side và probe side không phải chi tiết nhỏ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Một hệ quản trị cơ sở dữ liệu không dừng ở việc chọn một kế hoạch truy vấn. Sau khi bộ tối ưu (optimizer) quyết định thứ tự bảng, chỉ mục (index / 인덱스) và phép toán, **bộ máy thực thi truy vấn (query execution engine / 질의 실행 엔진)** phải biến kế hoạch đó thành công việc CPU, truy cập bộ nhớ và I/O cụ thể. Hai kế hoạch có cùng độ phức tạp Big-O vẫn có thể khác nhau hàng chục lần vì locality, số lần gọi hàm, branch prediction, kích thước dữ liệu trung gian và cách dữ liệu đi qua bộ nhớ đệm (cache / 캐시) CPU.
 
@@ -49,11 +48,15 @@ Khi dữ liệu không vừa RAM, hệ thống có thể partition hai phía the
 
 Điểm quan trọng là không có “phép nối (join / 조인) tốt nhất”. Optimizer phải ước lượng cardinality, phân phối (distribution / 분포), thứ tự (ordering / 순서) và bộ nhớ (memory / 메모리) ngân sách (budget / 예산) để chọn thuật toán phù hợp.
 
+> **Chuyển mạch:** Trong **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **2. bản dựng (build / 빌드) side và probe side không phải chi tiết nhỏ** tiếp nhận điểm tựa từ **1. phép nối (join / 조인) thực chất là bài toán tìm quan hệ giữa hai tập bản ghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Volcano mô hình (model / 모델): đơn giản nhưng có overhead** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. bản dựng (build / 빌드) side và probe side không phải chi tiết nhỏ
 
 Trong băm (hash / 해시) phép nối (join / 조인), phía được dùng để xây bảng băm (hash table / 해시 테이블) gọi là **phía xây dựng (build side)**; phía còn lại là **phía dò tìm (probe side)**. Thường muốn bản dựng (build / 빌드) side nhỏ hơn để giảm bộ nhớ (memory / 메모리) footprint.
 
 Nếu optimizer ước lượng sai rằng bảng A có 10 nghìn hàng trong khi thực tế có 100 triệu hàng, nó có thể chọn A làm bản dựng (build / 빌드) side. Kế hoạch về mặt lô-gic (logic / 논리) vẫn đúng nhưng thời gian chạy (runtime / 런타임) có thể spill hàng GB dữ liệu ra đĩa. Đây là ví dụ rõ về liên kết (connection / 연결) giữa statistics, cardinality estimation và thực thi (execution / 실행) hành vi (behavior / 동작).
+
+> **Chuyển mạch:** Ở chặng này của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **3. Volcano mô hình (model / 모델): đơn giản nhưng có overhead** tiếp nhận điểm tựa từ **2. bản dựng (build / 빌드) side và probe side không phải chi tiết nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Thực thi véc-tơ (vector / 벡터) hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Volcano mô hình (model / 모델): đơn giản nhưng có overhead
 
@@ -66,6 +69,8 @@ Project.next()
 ```
 
 Thiết kế này modular và dễ kết hợp operator. Tuy nhiên, xử lý từng tuple tạo nhiều lời gọi hàm, virtual dispatch, branch và ít cơ hội dùng SIMD. Khi truy vấn phân tích phải xử lý hàng trăm triệu giá trị, overhead trên mỗi tuple trở nên đáng kể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **4. Thực thi véc-tơ (vector / 벡터) hóa** tiếp nhận điểm tựa từ **3. Volcano mô hình (model / 모델): đơn giản nhưng có overhead** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Selection véc-tơ (vector / 벡터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Thực thi véc-tơ (vector / 벡터) hóa
 
@@ -83,6 +88,8 @@ Ví dụ, thay vì gọi một hàm filter một triệu lần, engine có thể
 
 > mô hình tư duy (mental model / 사고 모델): vectorization không làm thay đổi lô-gic (logic / 논리) SQL; nó thay đổi **đơn vị công việc (unit of work)** từ một tuple thành một batch phù hợp hơn với phần cứng.
 
+> **Chuyển mạch:** Trong **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **5. Selection véc-tơ (vector / 벡터)** tiếp nhận điểm tựa từ **4. Thực thi véc-tơ (vector / 벡터) hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Vật chất hóa muộn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Selection véc-tơ (vector / 벡터)
 
 Sau filter, engine không nhất thiết sao chép các hàng đạt điều kiện sang buffer mới. Nó có thể giữ một **véc-tơ (vector / 벡터) lựa chọn (selection vector)** chứa chỉ số các phần tử còn sống:
@@ -94,6 +101,8 @@ selection: [2, 4]
 ```
 
 Operator tiếp theo chỉ xử lý vị trí 2 và 4. Cách này giảm sao chép dữ liệu nhưng tạo thêm indirection. Nếu selectivity rất cao hoặc rất thấp, chiến lược tối ưu có thể khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **6. Vật chất hóa muộn** tiếp nhận điểm tựa từ **5. Selection véc-tơ (vector / 벡터)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. chuỗi xử lý (pipeline / 파이프라인) và chuỗi xử lý (pipeline / 파이프라인) breaker** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Vật chất hóa muộn
 
@@ -113,11 +122,15 @@ aggregate
 
 Ngược lại, vật chất hóa quá muộn có thể làm tăng random truy cập (access / 접근) khi cần lấy nhiều cột ở giai đoạn cuối. Vì vậy đây vẫn là một đánh đổi (trade-off), không phải quy tắc tuyệt đối.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **6. Vật chất hóa muộn** xác định đầu vào; **7. chuỗi xử lý (pipeline / 파이프라인) và chuỗi xử lý (pipeline / 파이프라인) breaker** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Spill khi bộ nhớ không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. chuỗi xử lý (pipeline / 파이프라인) và chuỗi xử lý (pipeline / 파이프라인) breaker
 
 Các operator như filter và projection có thể truyền dữ liệu liên tục qua **đường ống (pipeline)**. Nhưng sort thường phải nhìn thấy toàn bộ đầu vào (input / 입력) trước khi trả kết quả; băm (hash / 해시) aggregate hoặc băm (hash / 해시) phép nối (join / 조인) cũng cần xây trạng thái (state / 상태) trước một số giai đoạn. Những operator như vậy tạo **điểm ngắt đường ống (pipeline breaker)**.
 
 Chuỗi xử lý (pipeline / 파이프라인) breaker ảnh hưởng bộ nhớ (memory / 메모리), độ trễ (latency / 지연 시간) và khả năng song song. Một kế hoạch truy vấn (query plan / 쿼리 계획) không chỉ là cây operator; nó còn là đồ thị các giai đoạn có thể stream và các điểm buộc phải materialize trạng thái (state / 상태).
+
+> **Chuyển mạch:** Trong **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **7. chuỗi xử lý (pipeline / 파이프라인) và chuỗi xử lý (pipeline / 파이프라인) breaker** xác định đầu vào; **8. Spill khi bộ nhớ không đủ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. dữ liệu (data / 데이터) skew phá giả định trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Spill khi bộ nhớ không đủ
 
@@ -127,11 +140,15 @@ Một bên ngoài (external / 외부) sort thường tạo các run đã sắp x
 
 Do đó giới hạn bộ nhớ (memory limit / 메모리 제한) cho một truy vấn (query / 쿼리) là vấn đề quản trị tài nguyên, không chỉ là cấu hình hiệu năng. Cho một truy vấn (query / 쿼리) quá nhiều RAM có thể làm truy vấn (query / 쿼리) đó nhanh hơn nhưng khiến các truy vấn (query / 쿼리) khác hoặc OS rơi vào bộ nhớ (memory / 메모리) pressure.
 
+> **Chuyển mạch:** Ở chặng này của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **8. Spill khi bộ nhớ không đủ** nêu điều cần giải thích; **9. dữ liệu (data / 데이터) skew phá giả định trung bình** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Row engine và columnar engine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. dữ liệu (data / 데이터) skew phá giả định trung bình
 
 Nếu `customer_id=1` chiếm 40% orders, băm (hash / 해시) partition theo `customer_id` không cân bằng. Một worker có thể nhận phần lớn dữ liệu trong khi các worker khác rảnh.
 
 Đây là **độ lệch dữ liệu (data skew)**. phân tán (distributed / 분산) truy vấn (query / 쿼리) engine thường cần kỹ thuật như phát hiện heavy hitter, repartition đặc biệt hoặc broadcast phía nhỏ. Average cardinality không mô tả được tail hành vi (behavior / 동작) này.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **9. dữ liệu (data / 데이터) skew phá giả định trung bình** nêu điều cần giải thích; **10. Row engine và columnar engine** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Parallel truy vấn (query / 쿼리) thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Row engine và columnar engine
 
@@ -139,11 +156,15 @@ OLTP thường truy cập vài hàng nhưng nhiều cột và cần cập nhật
 
 Thực thi (execution / 실행) engine thường phản ánh tải công việc (workload / 워크로드) này. Row-oriented engine có thể ưu tiên độ trễ (latency / 지연 시간) của điểm (point / 지점) lookup; analytical engine ưu tiên batch, SIMD, compression và parallel scan.
 
+> **Chuyển mạch:** Trong **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **11. Parallel truy vấn (query / 쿼리) thực thi (execution / 실행)** tiếp nhận điểm tựa từ **10. Row engine và columnar engine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Quan sát thực thi (execution / 실행) engine trong thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Parallel truy vấn (query / 쿼리) thực thi (execution / 실행)
 
 Một scan lớn có thể chia thành nhiều morsel hoặc partition cho nhiều worker. Nhưng song song không miễn phí. Cần phân phối công việc, đồng bộ, merge kết quả và kiểm soát bộ nhớ (memory / 메모리).
 
 Nếu truy vấn (query / 쿼리) chỉ mất 2 ms, tạo thêm nhiều tác vụ (task / 작업) có thể tốn hơn phần tính toán được tiết kiệm. Nếu truy vấn (query / 쿼리) quét 500 GB, parallelism lại là điều thiết yếu. Vì vậy degree of parallelism phải gắn với kích thước công việc và tài nguyên toàn hệ thống.
+
+> **Chuyển mạch:** Ở chặng này của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **12. Quan sát thực thi (execution / 실행) engine trong thực tế** tiếp nhận điểm tựa từ **11. Parallel truy vấn (query / 쿼리) thực thi (execution / 실행)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Quan sát thực thi (execution / 실행) engine trong thực tế
 
@@ -159,6 +180,8 @@ Khi `EXPLAIN` hoặc thực thi (execution / 실행) plan cho thấy một truy 
 
 Những câu hỏi này nối optimizer với thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **12. Quan sát thực thi (execution / 실행) engine trong thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng chung (common / 공통) Misconceptions
 
 **“băm (hash / 해시) phép nối (join / 조인) luôn nhanh hơn nested-loop.”** Không đúng. Nested-loop với outer nhỏ và indexed inner có thể cực kỳ hiệu quả.
@@ -169,6 +192,8 @@ Những câu hỏi này nối optimizer với thời gian chạy (runtime / 런�
 
 **“Thêm RAM luôn giải quyết truy vấn (query / 쿼리) chậm.”** RAM có thể giảm spill, nhưng cardinality sai, skew, tranh chấp khóa (lock contention / 잠금 경합) hoặc plan xấu vẫn tồn tại.
 
+> **Chuyển mạch:** Trong **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Optimizer tạo chiến lược; thực thi (execution / 실행) engine biến chiến lược đó thành luồng byte và phép toán trên phần cứng.
@@ -177,4 +202,4 @@ Muốn hiểu hiệu năng cơ sở dữ liệu (database / 데이터베이스) 
 
 Xem tiếp: [Distributed transactions](./07_distributed_transactions_2pc_consensus_sagas_and_outbox.md) và [Computer Architecture](../../02_computer_architecture/advanced/README.md).
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mvcc visibility wal and recovery internals](./00_mvcc_visibility_wal_and_recovery_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

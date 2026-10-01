@@ -1,7 +1,6 @@
 # Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)
 
-> **Mạch đọc:** Đọc **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Vì sao một cell không thể chỉ lớn mãi?** sang **2. Từ colony đến organism: cooperation phải trở thành ổn định**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao một cell không thể chỉ lớn mãi?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Từ colony đến organism: cooperation phải trở thành ổn định** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Các chapter trước chủ yếu nhìn tế bào như một đơn vị sống tương đối độc lập: nó có màng (membrane), tạo ATP, xử lý tín hiệu (signal / 신호) và kiểm soát chu kỳ tế bào (cell cycle). Nhưng một organism đa bào không đơn giản là “nhiều cell đặt cạnh nhau”. Khi hàng triệu hay hàng nghìn tỉ cell cùng tồn tại trong một body, một cấp bài toán mới xuất hiện: cell nào làm việc gì, làm sao giữ đúng vị trí, ai được phép divide, chất dinh dưỡng (nutrient) đi đến nơi xa bằng cách nào, tissue sửa chữa ra sao, và điều gì ngăn một clone cell tối đa hóa lợi ích riêng đến mức phá hủy toàn organism?
 
@@ -27,6 +26,8 @@ Khoảng cách tăng 10 lần có thể làm thời gian khuếch tán tăng kho
 
 Multicellularity giải bài toán bằng cách giữ individual cell tương đối nhỏ nhưng xây **bulk vận chuyển (transport / 전송) hệ thống (system / 시스템)** ở quy mô (scale / 규모) lớn hơn. Animal dùng circulation; plant dùng xylem/mạch rây (phloem); tissue tạo folded surface như villi hay alveoli để tăng area. Một ràng buộc (constraint / 제약조건) vật lý ở quy mô micromet (micron scale) vì vậy dẫn tới anatomy ở centimet–quy mô mét (metre scale).
 
+> **Chuyển mạch:** Trong **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **2. Từ colony đến organism: cooperation phải trở thành ổn định** tiếp nhận điểm tựa từ **1. Vì sao một cell không thể chỉ lớn mãi?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cùng genome, khác loại tế bào (cell type): differentiation là regulation chứ không phải đổi DNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Từ colony đến organism: cooperation phải trở thành ổn định
 
 Nhiều cell có thể sống cạnh nhau mà chưa tạo organism thực sự. Multicellularity bền vững cần ít nhất bốn lớp tích hợp (integration / 통합): cell phải bám nhau; phải communicate; phải differentiation thành role khác nhau; và reproduction của whole organism phải được tổ chức sao cho tế bào-level xung đột (conflict / 충돌) không phá hệ.
@@ -34,6 +35,8 @@ Nhiều cell có thể sống cạnh nhau mà chưa tạo organism thực sự. 
 Đa bào đã tiến hóa độc lập ở animal, plant, fungi và nhiều algae. Điều đó cho thấy không có một blueprint duy nhất. Tuy nhiên các lineage phức tạp thường hội tụ vào cùng loại bài toán (problem / 문제): sự bám dính (adhesion), truyền tín hiệu (signaling), tính phân cực (polarity), tạo mẫu hình phát triển (developmental patterning), tài nguyên (resource / 자원) vận chuyển (transport / 전송) và kiểm soát xung đột (conflict suppression).
 
 Một yếu tố evolutionary quan trọng là **nút thắt một tế bào (single-cell bottleneck)**. Nhiều organism bắt đầu development từ một zygote. Điều này làm các cell trong body có relatedness rất cao, nên cooperation dễ được selection duy trì hơn so với tập hợp cell không liên quan. Bottleneck cũng gắn reproduction với organism-level program thay vì để mỗi somatic cell tự truyền lineage độc lập.
+
+> **Chuyển mạch:** Ở chặng này của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **3. Cùng genome, khác loại tế bào (cell type): differentiation là regulation chứ không phải đổi DNA** tiếp nhận điểm tựa từ **2. Từ colony đến organism: cooperation phải trở thành ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Tính phân cực tế bào (cell polarity): một cell trong tissue thường có “phía trên” và “phía dưới”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Cùng genome, khác loại tế bào (cell type): differentiation là regulation chứ không phải đổi DNA
 
@@ -43,6 +46,8 @@ Yếu tố phiên mã (transcription factor), enhancer, trạng thái nhiễm s�
 
 Điểm quan trọng là differentiation không chỉ là “bật vài gene dấu ấn (marker)”. Một loại tế bào là một **stable regulatory trạng thái (state / 상태)**: protein màng (membrane protein), bộ xương tế bào (cytoskeleton), chuyển hóa (metabolism), secreted molecule và đáp ứng (response) con đường (pathway) được phối hợp thành whole phenotype. Chương (chapter) [Genomics, Epigenetics và Điều hòa hệ gene](../02_genetics_molecular_biology/02_genomics_epigenetics_and_regulation.md) giải cơ chế molecular của việc này, còn [Sinh sản và Phát triển](../04_organismal_biology/03_reproduction_and_development.md) giải cách mẫu (pattern / 패턴) này được xây trong embryo.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **4. Tính phân cực tế bào (cell polarity): một cell trong tissue thường có “phía trên” và “phía dưới”** tiếp nhận điểm tựa từ **3. Cùng genome, khác loại tế bào (cell type): differentiation là regulation chứ không phải đổi DNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Junction tạo kiến trúc (architecture / 아키텍처), permeability và communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Tính phân cực tế bào (cell polarity): một cell trong tissue thường có “phía trên” và “phía dưới”
 
 Trong textbook cơ bản, cell thường được vẽ như hình tròn đồng đều. Nhưng nhiều epithelial cell có **tính phân cực tế bào (tính phân cực tế bào / 세포 극성)** rất rõ. Bề mặt đỉnh (apical surface) hướng về lumen hoặc exterior; bề mặt đáy (basal surface) gắn màng đáy (basement membrane); bề mặt bên (lateral surface) tiếp xúc tế bào lân cận (neighboring cell).
@@ -50,6 +55,8 @@ Trong textbook cơ bản, cell thường được vẽ như hình tròn đồng 
 Polarity làm protein transporter được đặt ở đúng side. Ví dụ intestinal epithelial cell có transporter ở apical membrane để lấy nutrient từ lumen và transporter khác ở basolateral membrane để đưa nutrient vào blood. Nếu cùng transporter bị phân bố ngẫu nhiên toàn membrane, vận chuyển có định hướng (directed transport) qua tissue sẽ mất hiệu quả.
 
 Vì vậy, multicellular hàm (function / 함수) đòi hỏi không chỉ biết cell nào ở đâu mà còn biết **orientation của từng cell**.
+
+> **Chuyển mạch:** Trong **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **5. Junction tạo kiến trúc (architecture / 아키텍처), permeability và communication** tiếp nhận điểm tựa từ **4. Tính phân cực tế bào (cell polarity): một cell trong tissue thường có “phía trên” và “phía dưới”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Sự bám dính tế bào (cell adhesion) molecule không chỉ là keo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Junction tạo kiến trúc (architecture / 아키텍처), permeability và communication
 
@@ -59,6 +66,8 @@ Tế bào trong mô được nối bằng nhiều loại junction vì mỗi lo�
 
 Điểm cần nhìn thấy là tissue barrier không phải một “bức tường”. Nó là một **selective giao diện (interface / 인터페이스)**. Mối nối kín quyết định paracellular tuyến (route / 경로); protein vận chuyển màng (membrane transporter) quyết định transcellular tuyến (route / 경로); signaling quyết định barrier được mở, đóng hay remodeled khi điều kiện (condition / 조건) thay đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **6. Sự bám dính tế bào (cell adhesion) molecule không chỉ là keo** tiếp nhận điểm tựa từ **5. Junction tạo kiến trúc (architecture / 아키텍처), permeability và communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. ECM: scaffold, reservoir và thông tin (information / 정보) trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Sự bám dính tế bào (cell adhesion) molecule không chỉ là keo
 
 **Cadherin** giúp cell–sự bám dính tế bào, còn **integrin** nối cell với **chất nền ngoại bào (Extracellular Matrix, ECM / 세포외기질)**. Nhưng adhesion receptor không chỉ giữ cell tại chỗ. Chúng nối với cytoskeleton và truyền tín hiệu (signaling) bộ máy (machinery), vì vậy mechanical force có thể đổi biochemical trạng thái (state / 상태).
@@ -66,6 +75,8 @@ Tế bào trong mô được nối bằng nhiều loại junction vì mỗi lo�
 Quá trình biến force thành intracellular tín hiệu (signal / 신호) được gọi là **mechanotransduction (기계적 신호전달)**. Nếu ECM cứng hơn, integrin tension và downstream pathway có thể thay đổi, dẫn tới thay đổi proliferation, di chuyển (migration / 마이그레이션) hoặc differentiation.
 
 Một cell do đó đọc môi trường (environment / 환경) bằng ít nhất hai “ngôn ngữ”: chemical ligand và mechanical thuộc tính (property / 속성).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **6. Sự bám dính tế bào (cell adhesion) molecule không chỉ là keo** nêu điều cần giải thích; **7. ECM: scaffold, reservoir và thông tin (information / 정보) trường dữ liệu (field / 필드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Bốn nhóm tissue chính ở animal chỉ là điểm bắt đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. ECM: scaffold, reservoir và thông tin (information / 정보) trường dữ liệu (field / 필드)
 
@@ -85,11 +96,15 @@ cell signaling
 
 Đây là vòng phản hồi (feedback loop / 피드백 루프) giữa mechanics và điều hòa gen (gene regulation).
 
+> **Chuyển mạch:** Trong **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **7. ECM: scaffold, reservoir và thông tin (information / 정보) trường dữ liệu (field / 필드)** nêu điều cần giải thích; **8. Bốn nhóm tissue chính ở animal chỉ là điểm bắt đầu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Diffusion limit dẫn tới vascularization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Bốn nhóm tissue chính ở animal chỉ là điểm bắt đầu
 
 **Biểu mô (Epithelial Tissue / 상피조직)** tạo ranh giới (boundary / 경계), absorption surface và gland. **Mô liên kết (Connective Tissue / 결합조직)** nhấn mạnh ECM và hỗ trợ (support / 지원). **Mô cơ (Muscle Tissue / 근육조직)** chuyển chemical năng lượng (energy / 에너지) thành mechanical force. **Mô thần kinh (Nervous Tissue / 신경조직)** xử lý và truyền thông tin (information / 정보) nhanh.
 
 Nhưng một organ thật luôn là tích hợp (integration / 통합) của nhiều tissue. Ruột non cần epithelium hấp thu, smooth muscle tạo motility, nơron điều khiển cục bộ (local / 로컬) reflex, connective tissue hỗ trợ (support / 지원) và mạch máu (blood vessel) mang nutrient đi. “hàm (function / 함수) của ruột” không nằm riêng trong bất kỳ tissue nào; nó là **đặc tính nổi trội (emergent property) của kiến trúc (architecture / 아키텍처) nhiều tissue**.
+
+> **Chuyển mạch:** Ở chặng này của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **8. Bốn nhóm tissue chính ở animal chỉ là điểm bắt đầu** đã nêu tiêu chí phân biệt, còn **9. Diffusion limit dẫn tới vascularization** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Tế bào gốc (stem cell), progenitor và tissue turnover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Diffusion limit dẫn tới vascularization
 
@@ -99,6 +114,8 @@ Tumor cũng gặp ràng buộc (constraint / 제약조건) này. Khối tumor nh
 
 Trường hợp (case / 사례) này cho thấy một nguyên lý vật lý tái xuất trong pathology: growth của tissue bị giới hạn bởi vận chuyển (transport / 전송) hạ tầng (infrastructure / 인프라). Organismal circulation không phải một chapter anatomy tách rời; nó là solution trực tiếp của tissue-scale diffusion vấn đề (problem).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **9. Diffusion limit dẫn tới vascularization** đã nêu tiêu chí phân biệt, còn **10. Tế bào gốc (stem cell), progenitor và tissue turnover** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Tái sinh (regeneration): repair kiến trúc (architecture / 아키텍처) khó hơn thay cell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Tế bào gốc (stem cell), progenitor và tissue turnover
 
 **Tế bào gốc (Stem Cell / 줄기세포)** có hai đặc tính (property): self-renew và khả năng tạo differentiated descendants. Nhưng stemness không chỉ nằm “bên trong” tế bào; nó phụ thuộc **thân (stem)-cell niche (줄기세포 미세환경)** gồm tế bào lân cận, ECM, oxy (oxygen), nutrient và tín hiệu (signal / 신호).
@@ -106,6 +123,8 @@ Trường hợp (case / 사례) này cho thấy một nguyên lý vật lý tái
 Skin, intestinal epithelium và blood có turnover cao nên cần stem/progenitor hệ thống (system / 시스템) hoạt động liên tục. Neuron hoặc cardiomyocyte trưởng thành có turnover thấp hơn nhiều. Điều này tạo sự đánh đổi (trade-off / 트레이드오프): tissue renew nhanh sửa damage tốt nhưng mỗi cycle proliferation lại là một cơ hội replication lỗi (error / 오류) và oncogenic mutation.
 
 Vì vậy regeneration và cancer rủi ro (risk / 위험) liên kết sâu với nhau.
+
+> **Chuyển mạch:** Trong **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **11. Tái sinh (regeneration): repair kiến trúc (architecture / 아키텍처) khó hơn thay cell** tiếp nhận điểm tựa từ **10. Tế bào gốc (stem cell), progenitor và tissue turnover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Tạo hình (morphogenesis): tissue shape xuất hiện từ cục bộ (local / 로컬) force và cục bộ (local / 로컬) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Tái sinh (regeneration): repair kiến trúc (architecture / 아키텍처) khó hơn thay cell
 
@@ -115,6 +134,8 @@ Inflammation loại debris và phát tín hiệu (signal / 신호) repair. Fibro
 
 Nếu repair quá yếu, wound không lành. Nếu phản hồi (response / 응답) quá mạnh hoặc kéo dài, **xơ hóa (fibrosis / 섬유화)** có thể làm quá nhiều ma trận (matrix / 행렬) tích tụ và giảm hàm (function / 함수). Đây là ví dụ “more phản hồi (response / 응답)” không đồng nghĩa “better phản hồi (response / 응답)”. Biology thường tối ưu một phạm vi (range / 범위), không tối đa một variable.
 
+> **Chuyển mạch:** Ở chặng này của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **12. Tạo hình (morphogenesis): tissue shape xuất hiện từ cục bộ (local / 로컬) force và cục bộ (local / 로컬) quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **11. Tái sinh (regeneration): repair kiến trúc (architecture / 아키텍처) khó hơn thay cell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Plant multicellularity: cùng bài toán (problem / 문제), khác vật lý (physical / 물리적) solution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Tạo hình (morphogenesis): tissue shape xuất hiện từ cục bộ (local / 로컬) force và cục bộ (local / 로컬) quy tắc (rule / 규칙)
 
 Development không có một “bàn tay” kéo tissue thành shape. Shape xuất hiện từ phân chia tế bào (cell division), sinh trưởng (growth), sự bám dính, sự di chuyển (migration / 마이그레이션), tính phân cực, apoptosis và mechanical force.
@@ -122,6 +143,8 @@ Development không có một “bàn tay” kéo tissue thành shape. Shape xu�
 Nếu epithelial sheet co ở một phía, nó có thể bend. Nếu một nhóm cell thay adhesion và bộ xương tế bào, chúng có thể invaginate hoặc migrate. Nếu proliferation nhanh hơn ở một region, tissue có thể fold.
 
 Đây là **tạo hình (hình thái phát sinh / 형태형성)**: gen (gene)-regulatory program tạo cục bộ (local / 로컬) cell hành vi; cục bộ (local / 로컬) hành vi (behavior / 동작) tạo force; force và hình học (geometry / 기하학) quay lại ảnh hưởng signaling. Development vì vậy là coupling giữa thông tin (information / 정보) và mechanics.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **13. Plant multicellularity: cùng bài toán (problem / 문제), khác vật lý (physical / 물리적) solution** tiếp nhận điểm tựa từ **12. Tạo hình (morphogenesis): tissue shape xuất hiện từ cục bộ (local / 로컬) force và cục bộ (local / 로컬) quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Cạnh tranh tế bào (cell competition) và kiểm soát chất lượng (quality control) trong mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Plant multicellularity: cùng bài toán (problem / 문제), khác vật lý (physical / 물리적) solution
 
@@ -131,6 +154,8 @@ Auxin độ dốc (gradient / 기울기), tế bào-wall loosening và meristem 
 
 Plant cũng có developmental plasticity cao; một số differentiated plant cell có thể dedifferentiate và tái tạo whole organism trong điều kiện (condition / 조건) phù hợp. Điều này cho thấy multicellularity không có một thiết kế (design / 설계) bắt buộc, mà là nhiều evolutionary solution dưới ràng buộc (constraint / 제약조건) khác nhau.
 
+> **Chuyển mạch:** Trong **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **14. Cạnh tranh tế bào (cell competition) và kiểm soát chất lượng (quality control) trong mô** tiếp nhận điểm tựa từ **13. Plant multicellularity: cùng bài toán (problem / 문제), khác vật lý (physical / 물리적) solution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Cancer như breakdown của multicellular đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Cạnh tranh tế bào (cell competition) và kiểm soát chất lượng (quality control) trong mô
 
 Trong mô, cell không chỉ hợp tác; chúng còn có thể được so sánh tương đối. Cell damaged hoặc less fit có thể bị loại qua apoptosis hoặc cell-competition cơ chế (mechanism / 메커니즘). Hệ miễn dịch (immune system) cũng giám sát abnormal cell.
@@ -138,6 +163,8 @@ Trong mô, cell không chỉ hợp tác; chúng còn có thể được so sánh
 Kiểm soát chất lượng giúp tissue không tích lũy defect quá nhanh. Nhưng hệ thống (system / 시스템) không hoàn hảo: clone có đột biến (mutation) giúp tránh apoptosis, ignore growth inhibition hoặc evade immune surveillance có thể mở đầu tumor evolution.
 
 Đây là nơi sinh học tế bào (cell biology), genetics và evolution gặp nhau ngay bên trong một organism.
+
+> **Chuyển mạch:** Ở chặng này của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **15. Cancer như breakdown của multicellular đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **14. Cạnh tranh tế bào (cell competition) và kiểm soát chất lượng (quality control) trong mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Tình huống phân tích (case study): intestinal epithelium như một hệ thống đa tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Cancer như breakdown của multicellular đặc tả hợp đồng (contract / 계약)
 
@@ -147,6 +174,8 @@ Cancer xuất hiện khi clone tích lũy thay đổi (change / 변경) phá d�
 
 Vì vậy cancer không chỉ là “cell divide nhanh”. Nó là **somatic evolution trong một ecosystem mô** và là thất bại (failure / 실패) của cooperation ở mức (level / 수준) multicellular.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **15. Cancer như breakdown của multicellular đặc tả hợp đồng (contract / 계약)** cho ta quy tắc; **16. Tình huống phân tích (case study): intestinal epithelium như một hệ thống đa tầng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Tình huống phân tích định lượng: tại sao tissue phải gần vessel?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Tình huống phân tích (case study): intestinal epithelium như một hệ thống đa tầng
 
 Ruột là ví dụ tốt để nối nhiều concept. Lumen chứa food và microbe nên epithelium phải tạo barrier. Mối nối kín hạn chế uncontrolled paracellular luồng (flow / 흐름). Apical transporter hấp thu nutrient. Basolateral transporter chuyển nutrient về blood. Tế bào gốc ở crypt tạo cell mới để thay epithelium turnover nhanh. Immune cell bên dưới giám sát pathogen. Smooth muscle tạo movement và enteric neuron điều khiển cục bộ (local / 로컬) reflex.
@@ -155,6 +184,8 @@ Nếu chỉ học từng loại tế bào riêng, ta không hiểu intestine. h�
 
 Đó chính là cách nên đọc mọi organ sau này.
 
+> **Chuyển mạch:** Trong **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **16. Tình huống phân tích (case study): intestinal epithelium như một hệ thống đa tầng** cho ta quy tắc; **17. Tình huống phân tích định lượng: tại sao tissue phải gần vessel?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Tình huống phân tích định lượng: tại sao tissue phải gần vessel?
 
 Thời gian khuếch tán tăng theo \(x^2\). Nếu oxygen diffusion effective distance tăng từ 20 µm lên 200 µm, distance tăng 10 lần nên thời gian khuếch tán đặc trưng (characteristic diffusion time) tăng khoảng 100 lần trong approximation đơn giản.
@@ -162,6 +193,8 @@ Thời gian khuếch tán tăng theo \(x^2\). Nếu oxygen diffusion effective d
 Vì cell tiêu thụ oxygen liên tục, chỉ tăng thời gian khuếch tán đã chưa đủ mô tả toàn vấn đề; concentration còn giảm theo consumption. Điều này giải thích tại sao capillary mạng (network / 네트워크) phải dày đặc trong tissue hoạt động mạnh và vì sao hypoxia xuất hiện khi perfusion giảm.
 
 Math ở đây biến một fact anatomy thành nhân quả (causal / 인과적) explanation.
+
+> **Chuyển mạch:** Ở chặng này của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **17. Tình huống phân tích định lượng: tại sao tissue phải gần vessel?** cho ta quy tắc; **18. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -172,6 +205,8 @@ Math ở đây biến một fact anatomy thành nhân quả (causal / 인과적)
 “Tế bào gốc càng nhiều càng tốt” không đúng; proliferation potential phải cân bằng với mutation/cancer rủi ro (risk / 위험).
 
 “Multicellularity chỉ giúp organism lớn hơn” quá hẹp. Lợi ích quan trọng hơn là phân công chức năng, buffering, complex sensing, vận chuyển (transport / 전송) và reproduction chiến lược (strategy / 전략) mới.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **19. Mô hình tư duy tổng hợp** gom các mảnh từ **18. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **20. cầu nối (bridge / 브리지) sang Organismal Biology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Mô hình tư duy tổng hợp
 
@@ -192,6 +227,8 @@ cell nhỏ giải exchange tốt
 
 Mỗi step thêm năng lực (capability / 역량) mới nhưng cũng tạo vulnerability mới. Sự bám dính cho tissue nhưng mở đường metastasis khi regulation hỏng. Proliferation giúp repair nhưng tăng cancer rủi ro (risk / 위험). Barrier bảo vệ nhưng phải vẫn cho selective exchange. Multicellularity luôn là bài toán sự đánh đổi (trade-off / 트레이드오프) và điều khiển.
 
+> **Chuyển mạch:** Trong **Đa bào, mô và chất nền ngoại bào — Multicellularity, Tissues and Extracellular ma trận (matrix / 행렬)**, **20. cầu nối (bridge / 브리지) sang Organismal Biology** gom các mảnh từ **19. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 20. cầu nối (bridge / 브리지) sang Organismal Biology
 
 Khi tissue và cơ quan đã tồn tại, câu hỏi tiếp theo không còn là “cell này làm gì?” mà là **nhiều organ phối hợp thế nào để giữ môi trường bên trong cơ thể (internal environment) đủ ổn định cho hàng nghìn loại cell cùng sống?** Oxygen phải đi từ lung tới mitochondria; nutrient phải đi từ gut tới tissue; waste phải được kidney loại; temperature và pH phải được giữ trong phạm vi (range / 범위); tín hiệu (signal / 신호) phải đi nhanh hoặc đi xa.
@@ -203,4 +240,4 @@ Khi tissue và cơ quan đã tồn tại, câu hỏi tiếp theo không còn là
 <!-- biology-learning-navigation -->
 **Điều hướng học:** [← Truyền tín hiệu và Chu kỳ tế bào](02_cell_signaling_and_cell_cycle.md) · [Mục lục Biology](../README.md) · [DNA, Gene và Biểu hiện gene →](../02_genetics_molecular_biology/00_dna_genes_and_gene_expression.md)
 
-> **Bàn giao:** Sau **20. cầu nối (bridge / 브리지) sang Organismal Biology**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 cells membranes and transport](./00_cells_membranes_and_transport.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **20. cầu nối (bridge / 브리지) sang Organismal Biology**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

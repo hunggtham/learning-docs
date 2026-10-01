@@ -1,7 +1,6 @@
 # Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence
 
-> **Mạch đọc:** Đặt **tối ưu hóa (optimization / 최적화) cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **mục tiêu (objective / 목표) hàm (function / 함수)** sang **mất mát (loss / 손실), mục tiêu (objective / 목표) và chỉ số (metric / 지표) khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu (objective / 목표) hàm (function / 함수)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Mất mát (loss / 손실), mục tiêu (objective / 목표) và chỉ số (metric / 지표) khác nhau** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tối ưu hóa (optimization / 최적화) là quá trình tìm giá trị của variables để một mục tiêu (objective / 목표) trở nên tốt hơn. Trong Machine học tập (learning / 학습), kiến trúc (architecture / 아키텍처) xác định lớp (class / 클래스) of functions mô hình (model / 모델) có thể biểu diễn, dữ liệu (data / 데이터) cung cấp examples, hàm mất mát (loss function / 손실 함수) định nghĩa hành vi (behavior / 동작) nào được coi là tốt, còn optimizer tìm parameters phù hợp mục tiêu (objective / 목표) đó.
 
@@ -27,6 +26,8 @@ Term đầu đo fit với dữ liệu (data / 데이터). `Ω(θ)` regularize pa
 
 Nếu maximize reward `R`, ta có thể equivalently minimize `-R`. `argmin` và `argmax` nói về location của optimum, không phải giá trị (value / 값) minimum/maximum.
 
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Mất mát (loss / 손실), mục tiêu (objective / 목표) và chỉ số (metric / 지표) khác nhau** tiếp nhận điểm tựa từ **Mục tiêu (objective / 목표) hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ràng buộc (constraint / 제약조건) tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mất mát (loss / 손실), mục tiêu (objective / 목표) và chỉ số (metric / 지표) khác nhau
 
 **hàm mất mát (loss function / 손실 함수)** thường là differentiable quantity optimizer minimize trên examples.
@@ -40,6 +41,8 @@ Chỉ số (metric / 지표) không nhất thiết differentiable. Ta có thể 
 Đây là idea của **surrogate mất mát (loss / 손실)**: optimize quantity tractable có relationship với mục tiêu (target / 대상) chỉ số (metric / 지표).
 
 Nếu surrogate và real mục tiêu (objective / 목표) misaligned, huấn luyện (training / 학습) mất mát (loss / 손실) giảm nhưng sản phẩm (product / 제품) kết quả (outcome / 결과) có thể không tốt hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Mất mát (loss / 손실), mục tiêu (objective / 목표) và chỉ số (metric / 지표) khác nhau** đặt câu hỏi cần giải quyết; **Ràng buộc (constraint / 제약조건) tối ưu hóa (optimization / 최적화)** biến câu hỏi đó thành những điều kiện không được phá vỡ khi đi vào thực hành. Từ đây, **Convexity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ràng buộc (constraint / 제약조건) tối ưu hóa (optimization / 최적화)
 
@@ -71,6 +74,8 @@ safety violations ↓
 
 Không có một mô hình (model / 모델) “best” độc lập ngữ cảnh (context / 맥락); có Pareto trade-offs.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Convexity** tiếp nhận điểm tựa từ **Ràng buộc (constraint / 제약조건) tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cục bộ (local / 로컬) minima, saddle points và flat regions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Convexity
 
 Hàm (function / 함수) `f` convex nếu line segment giữa hai points trên đồ thị (graph / 그래프) nằm trên/above đồ thị (graph / 그래프) theo convexity inequality:
@@ -89,6 +94,8 @@ Tuyến tính (linear / 선형) regression với squared mất mát (loss / 손�
 
 Deep neural networks generally non-convex vì composition và parameter interactions tạo complex landscape.
 
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Cục bộ (local / 로컬) minima, saddle points và flat regions** tiếp nhận điểm tựa từ **Convexity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) descent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cục bộ (local / 로컬) minima, saddle points và flat regions
 
 Trong non-convex landscape, độ dốc (gradient / 기울기) bằng zero có thể là:
@@ -101,6 +108,8 @@ Trong non-convex landscape, độ dốc (gradient / 기울기) bằng zero có t
 High-dimensional neural networks có rất nhiều saddle/flat directions. tối ưu hóa (optimization / 최적화) hành vi (behavior / 동작) không nên được tưởng tượng chỉ như “quả bóng lăn xuống một cái bát”.
 
 Landscape phụ thuộc parameterization và symmetries. Hai parameter sets khác nhau có thể represent same hàm (function / 함수).
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Độ dốc (gradient / 기울기) descent** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) minima, saddle points và flat regions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stochastic độ dốc (gradient / 기울기) Descent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ dốc (gradient / 기울기) descent
 
@@ -134,6 +143,8 @@ w_{t+1}=(1-\eta a)w_t
 
 Từ đây thấy học tập (learning / 학습) tỷ lệ (rate / 비율) stability phụ thuộc curvature `a`. Một học tập (learning / 학습) tỷ lệ (rate / 비율) phù hợp direction flat có thể quá lớn ở direction steep.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Stochastic độ dốc (gradient / 기울기) Descent** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) descent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stochastic độ dốc (gradient / 기울기) Descent
 
 Dataset lớn khiến compute full độ dốc (gradient / 기울기) expensive. SGD dùng one mẫu (sample / 표본) hoặc mini-batch:
@@ -151,6 +162,8 @@ g_t=\frac{1}{B}\sum_{i\in\mathcal{B}_t}\nabla L_i(\theta_t)
 Noise không chỉ là drawback. Nó giảm compute/cập nhật (update / 업데이트), có thể giúp exploration landscape và tạo implicit regularization effects.
 
 Hiện đại (modern / 현대적) “SGD” trong practice thường nghĩa mini-batch SGD, không phải exactly one mẫu (sample / 표본).
+
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Batch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Stochastic độ dốc (gradient / 기울기) Descent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Momentum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)
 
@@ -171,6 +184,8 @@ Small batch:
 
 Không có batch kích thước (size / 크기) universally optimal. Nó tương tác học tập (learning / 학습) tỷ lệ (rate / 비율), optimizer, mô hình (model / 모델), hardware và dataset quy mô (scale / 규모).
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Momentum** tiếp nhận điểm tựa từ **Batch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nesterov momentum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Momentum
 
 Vanilla SGD dễ oscillate trong ravine có curvature khác nhau theo axes.
@@ -189,11 +204,15 @@ Mô hình tư duy (mental model / 사고 모델): gradients consistent qua nhi�
 
 Momentum không phải vật lý (physical / 물리적) momentum chính xác (exact / 정확한), nhưng analogy hữu ích vừa phải.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Nesterov momentum** tiếp nhận điểm tựa từ **Momentum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptive học tập (learning / 학습) rates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nesterov momentum
 
 Nesterov-style phương thức (method / 메서드) evaluates/look-ahead độ dốc (gradient / 기울기) relative to momentum-shifted điểm (point / 지점) trong một formulation phổ biến. Nó có theoretical advantages trong convex settings và variants practical.
 
 Khung phần mềm (framework / 프레임워크) implementations có conventions khác nhau, nên khi reproduce kết quả (result / 결과) cần check chính xác (exact / 정확한) optimizer definition thay vì chỉ name.
+
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Adaptive học tập (learning / 학습) rates** tiếp nhận điểm tựa từ **Nesterov momentum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AdamW và weight decay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Adaptive học tập (learning / 학습) rates
 
@@ -253,6 +272,8 @@ Cập nhật (update / 업데이트):
 
 Adam phổ biến vì robust across many tasks, nhưng không automatically best mọi setting.
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **AdamW và weight decay** tiếp nhận điểm tựa từ **Adaptive học tập (learning / 학습) rates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Learning-rate schedule** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## AdamW và weight decay
 
 L2 regularization và weight decay có equivalence trong simple SGD settings, nhưng với adaptive optimizer chúng không necessarily equivalent.
@@ -264,6 +285,8 @@ AdamW decouples weight decay khỏi gradient-based adaptive scaling:
 \]
 
 Đây là reason AdamW phổ biến trong Transformer huấn luyện (training / 학습).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Learning-rate schedule** tiếp nhận điểm tựa từ **AdamW và weight decay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weight initialization và tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Learning-rate schedule
 
@@ -288,6 +311,8 @@ Cosine schedule giảm smoothly:
 
 Schedule là part của tối ưu hóa (optimization / 최적화) thuật toán (algorithm / 알고리즘), không phải cosmetic cấu hình (config / 설정).
 
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Weight initialization và tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **Learning-rate schedule** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Normalization và trainability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Weight initialization và tối ưu hóa (optimization / 최적화)
 
 Nếu weights quá lớn, activations/gradients có thể explode hoặc saturate. Quá nhỏ, signals có thể vanish.
@@ -298,6 +323,8 @@ He/Kaiming initialization điều chỉnh cho ReLU-like activations.
 
 Initialization không chỉ “random seed”; nó đặt starting hình học (geometry / 기하학) và tín hiệu (signal / 신호) quy mô (scale / 규모) cho tối ưu hóa (optimization / 최적화).
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Normalization và trainability** tiếp nhận điểm tựa từ **Weight initialization và tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Normalization và trainability
 
 BatchNorm, LayerNorm và variants normalize activations theo different axes.
@@ -307,6 +334,8 @@ Ngoài regularization effects, normalization cải thiện tối ưu hóa (optim
 Transformer thường dùng LayerNorm/RMSNorm-like mechanisms vì chuỗi (sequence / 시퀀스)/batch ngữ nghĩa (semantics / 의미론) khác CNN.
 
 Normalization placement (`pre-norm` vs `post-norm`) ảnh hưởng độ dốc (gradient / 기울기) luồng (flow / 흐름) và deep Transformer stability.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Conditioning** tiếp nhận điểm tựa từ **Normalization và trainability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Second-order methods** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Conditioning
 
@@ -322,6 +351,8 @@ large `κ` khiến độ dốc (gradient / 기울기) descent zig-zag và requir
 
 Tính năng (feature / 기능) scaling, normalization, preconditioning và adaptive methods cố improve effective conditioning.
 
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Second-order methods** tiếp nhận điểm tựa từ **Conditioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) clipping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Second-order methods
 
 Newton cập nhật (update / 업데이트):
@@ -336,6 +367,8 @@ Nếu mục tiêu (objective / 목표) locally quadratic, Newton can converge fa
 
 Quasi-Newton methods như BFGS/L-BFGS approximate curvature và useful ở smaller problems, nhưng large-scale stochastic Deep học tập (learning / 학습) chủ yếu dùng first-order methods.
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Độ dốc (gradient / 기울기) clipping** tiếp nhận điểm tựa từ **Second-order methods** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regularization và tối ưu hóa (optimization / 최적화) không hoàn toàn tách rời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ dốc (gradient / 기울기) clipping
 
 Toàn cục (global / 전역) norm clipping:
@@ -347,6 +380,8 @@ g\leftarrow g\cdot\min\left(1,\frac{c}{\|g\|}\right)
 nếu độ dốc (gradient / 기울기) norm vượt threshold `c`.
 
 Clipping giúp prevent catastrophic huge cập nhật (update / 업데이트), đặc biệt chuỗi (sequence / 시퀀스) các mô hình (models / 모델들). Nhưng nếu clipping xảy ra liên tục, có thể là symptom học tập (learning / 학습) tỷ lệ (rate / 비율), normalization hoặc numerical instability khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Regularization và tối ưu hóa (optimization / 최적화) không hoàn toàn tách rời** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) clipping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Early stopping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Regularization và tối ưu hóa (optimization / 최적화) không hoàn toàn tách rời
 
@@ -360,6 +395,8 @@ Dữ liệu (data / 데이터) augmentation thay empirical phân phối (distrib
 
 Do đó generalization hành vi (behavior / 동작) là tương tác (interaction / 상호작용) giữa mục tiêu (objective / 목표), dữ liệu (data / 데이터) và tối ưu hóa (optimization / 최적화) trajectory.
 
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Early stopping** tiếp nhận điểm tựa từ **Regularization và tối ưu hóa (optimization / 최적화) không hoàn toàn tách rời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hyperparameters như outer tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Early stopping
 
 Kiểm tra hợp lệ (validation / 검증) mất mát (loss / 손실) có thể bắt đầu tăng dù huấn luyện (training / 학습) mất mát (loss / 손실) tiếp tục giảm. Early stopping chọn checkpoint trước overfitting.
@@ -367,6 +404,8 @@ Kiểm tra hợp lệ (validation / 검증) mất mát (loss / 손실) có thể
 Đây là implicit regularization: ta giới hạn number of tối ưu hóa (optimization / 최적화) steps.
 
 Nhưng noisy kiểm tra hợp lệ (validation / 검증) chỉ số (metric / 지표) có thể khiến stop quá sớm; practical các hệ thống (systems / 시스템들) dùng patience/smoothing/checkpoint chiến lược (strategy / 전략).
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Hyperparameters như outer tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **Early stopping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-objective tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hyperparameters như outer tối ưu hóa (optimization / 최적화)
 
@@ -382,6 +421,8 @@ outer loop: choose hyperparameters h
 Grid tìm kiếm (search / 검색), random tìm kiếm (search / 검색), Bayesian tối ưu hóa (optimization / 최적화) và population-based methods là strategies cho outer bài toán (problem / 문제).
 
 Nếu tune quá nhiều trên một kiểm tra hợp lệ (validation / 검증) set, kiểm tra hợp lệ (validation / 검증) overfitting cũng xảy ra.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Multi-objective tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **Hyperparameters như outer tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Constrained tối ưu hóa (optimization / 최적화) và Lagrangian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Multi-objective tối ưu hóa (optimization / 최적화)
 
@@ -403,6 +444,8 @@ Pareto frontier chứa solutions không thể improve một mục tiêu (objecti
 
 AI triển khai (deployment / 배포) thường chọn điểm (point / 지점) trên frontier theo sản phẩm (product / 제품) các ràng buộc (constraints / 제약조건들).
 
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Constrained tối ưu hóa (optimization / 최적화) và Lagrangian** tiếp nhận điểm tựa từ **Multi-objective tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tối ưu hóa (optimization / 최적화) trong Reinforcement học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Constrained tối ưu hóa (optimization / 최적화) và Lagrangian
 
 Bài toán (problem / 문제):
@@ -423,6 +466,8 @@ Lagrange multipliers có interpretation shadow price: chi phí (cost / 비용) m
 
 Idea này xuất hiện trong fairness các ràng buộc (constraints / 제약조건들), tài nguyên (resource / 자원) allocation và Reinforcement học tập (learning / 학습) constrained objectives.
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Tối ưu hóa (optimization / 최적화) trong Reinforcement học tập (learning / 학습)** tiếp nhận điểm tựa từ **Constrained tối ưu hóa (optimization / 최적화) và Lagrangian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tối ưu hóa (optimization / 최적화) trong LLM pretraining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tối ưu hóa (optimization / 최적화) trong Reinforcement học tập (learning / 학습)
 
 RL tối ưu expected cumulative reward:
@@ -442,6 +487,8 @@ Chính sách (policy / 정책) độ dốc (gradient / 기울기) theorem cho đ
 
 Noise/variance rất lớn, dẫn tới baselines, actor-critic và advanced tối ưu hóa (optimization / 최적화) methods.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Tối ưu hóa (optimization / 최적화) trong LLM pretraining** tiếp nhận điểm tựa từ **Tối ưu hóa (optimization / 최적화) trong Reinforcement học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tối ưu hóa (optimization / 최적화) trong alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tối ưu hóa (optimization / 최적화) trong LLM pretraining
 
 LLM pretraining mục tiêu (objective / 목표) thường next-token cross-entropy trên huge đơn vị từ (token / 토큰) corpus.
@@ -459,6 +506,8 @@ Quy mô (scale / 규모) tạo challenges:
 
 Tối ưu hóa (optimization / 최적화) không chỉ là equation; nó là phân tán (distributed / 분산) các hệ thống (systems / 시스템들) bài toán (problem / 문제) ở large quy mô (scale / 규모).
 
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Tối ưu hóa (optimization / 최적화) trong alignment** tiếp nhận điểm tựa từ **Tối ưu hóa (optimization / 최적화) trong LLM pretraining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reward hacking / specification gaming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tối ưu hóa (optimization / 최적화) trong alignment
 
 Instruction tuning vẫn supervised tối ưu hóa (optimization / 최적화) trên curated responses.
@@ -471,6 +520,8 @@ Quan trọng: optimizer không biết “helpful” hay “safe” theo human se
 
 Liên kết (connection / 연결) này là cốt lõi (core / 핵심) của specification gaming và alignment.
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Reward hacking / specification gaming** tiếp nhận điểm tựa từ **Tối ưu hóa (optimization / 최적화) trong alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **No Free Lunch intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reward hacking / specification gaming
 
 Nếu mục tiêu (objective / 목표) proxy không exactly match desired kết quả (outcome / 결과), tác nhân (agent / 에이전트)/mô hình (model / 모델) có thể exploit loophole.
@@ -481,11 +532,15 @@ Trong ML sản phẩm (product / 제품), optimizing click-through tỷ lệ (ra
 
 Tối ưu hóa (optimization / 최적화) amplifies chỉ số (metric / 지표) thiết kế (design / 설계) mistakes.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **No Free Lunch intuition** tiếp nhận điểm tựa từ **Reward hacking / specification gaming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## No Free Lunch intuition
 
 Không optimizer hoặc mô hình (model / 모델) universally best trên mọi possible bài toán (problem / 문제). hiệu năng (performance / 성능) dựa vào structural các giả định (assumptions / 가정들)/inductive biases về lớp (class / 클래스) of tasks.
 
 Adam mạnh trong nhiều Deep học tập (learning / 학습) tasks, nhưng không có theorem “Adam always best”. Hyperparameter defaults cũng là lĩnh vực (domain / 도메인) priors, không universal constants.
+
+> **Chuyển mạch:** Trong **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **No Free Lunch intuition** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -501,6 +556,8 @@ Regularization      → preference ngoài pure training fit
 Constraints         → boundaries system không được vượt
 Evaluation          → objective có thực sự map tới desired outcome không
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -520,8 +577,12 @@ Trong Deep học tập (learning / 학습), solution có good generalization qua
 
 Không. Optimizer faithfully follows provided tín hiệu (signal / 신호); mis-specified objectives tạo misaligned hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Tối ưu hóa (optimization / 최적화) nối [Calculus](./04_calculus_for_ai.md) với Machine học tập (learning / 학습) huấn luyện (training / 학습) và nối trực tiếp tới AI an toàn (safety / 안전) qua mục tiêu (objective / 목표) specification. Sau này SGD/AdamW sẽ quay lại trong Neural Networks; constrained and chính sách (policy / 정책) tối ưu hóa (optimization / 최적화) quay lại trong Reinforcement học tập (learning / 학습); preference objectives quay lại trong LLM Alignment.
 
 Khi training fails, đừng chỉ đổi optimizer. Hãy kiểm tra objective, data scale, normalization, gradient statistics, learning-rate schedule, batch size, initialization và numerical precision như một coupled system.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

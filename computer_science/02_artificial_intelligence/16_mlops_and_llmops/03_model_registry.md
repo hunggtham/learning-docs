@@ -1,7 +1,6 @@
 # Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)
 
-> **Mạch đọc:** Đặt **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **sản phẩm tạo ra (artifact / 산출물) và Bản ghi Registry** sang **Trạng thái vòng đời**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sản phẩm tạo ra (artifact / 산출물) và Bản ghi Registry** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái vòng đời** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Sổ đăng ký mô hình (Model Registry / 모델 레지스트리)** là nơi quản lý sản phẩm tạo ra (artifact / 산출물) mô hình cùng siêu dữ liệu (metadata / 메타데이터) và trạng thái vòng đời. Registry không chỉ là nơi lưu trữ. Nó trả lời mô hình nào là ứng viên, mô hình nào đã được kiểm định, mô hình nào đang chạy môi trường vận hành (production / 운영 환경) và vì sao một sản phẩm tạo ra (artifact / 산출물) được thăng cấp.
 
@@ -31,6 +30,8 @@ trạng thái phê duyệt
 lịch sử triển khai
 ```
 
+> **Chuyển mạch:** Trong **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Trạng thái vòng đời** tiếp nhận điểm tựa từ **Sản phẩm tạo ra (artifact / 산출물) và Bản ghi Registry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng thăng cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trạng thái vòng đời
 
 Một luồng phổ biến:
@@ -46,6 +47,8 @@ Một luồng phổ biến:
 
 Tên trạng thái có thể khác nhau giữa các tổ chức nhưng chuyển trạng thái nên được định nghĩa tường minh.
 
+> **Chuyển mạch:** Ở chặng này của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Cổng thăng cấp** tiếp nhận điểm tựa từ **Trạng thái vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Champion–Challenger** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cổng thăng cấp
 
 Việc thăng cấp (promotion) không nên chỉ dựa vào một chỉ số “cao hơn”. Cổng kiểm soát có thể kiểm tra:
@@ -59,11 +62,15 @@ Việc thăng cấp (promotion) không nên chỉ dựa vào một chỉ số �
 - khả năng tương thích lược đồ (schema / 스키마);
 - phê duyệt pháp lý hoặc quản trị.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Champion–Challenger** tiếp nhận điểm tựa từ **Cổng thăng cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tách Registry khỏi Triển khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Champion–Challenger
 
 Mô hình môi trường vận hành (production / 운영 환경) hiện tại là **champion**; ứng viên mới là **challenger**. Nên so sánh trên bộ đánh giá cố định và dữ liệu shadow/canary trước khi thay thế.
 
 Mẫu này tránh tình trạng “checkpoint mới nhất tự động thắng”.
+
+> **Chuyển mạch:** Trong **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Tách Registry khỏi Triển khai** tiếp nhận điểm tựa từ **Champion–Challenger** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản phẩm tạo ra (artifact / 산출물) phải bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tách Registry khỏi Triển khai
 
@@ -71,11 +78,15 @@ Trạng thái registry kiểu `production-approved` không nhất thiết nghĩa
 
 Tách phê duyệt khỏi thực thi giúp quay lui (rollback / 롤백) và kiểm tra (audit / 감사) rõ hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Sản phẩm tạo ra (artifact / 산출물) phải bất biến** tiếp nhận điểm tựa từ **Tách Registry khỏi Triển khai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng tương thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản phẩm tạo ra (artifact / 산출물) phải bất biến
 
 Một phiên bản đã được đăng ký nên bất biến. Nếu cần sửa, tạo phiên bản mới.
 
 Sản phẩm tạo ra (artifact / 산출물) có thể thay đổi làm lineage mất ý nghĩa.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Khả năng tương thích** tiếp nhận điểm tựa từ **Sản phẩm tạo ra (artifact / 산출물) phải bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Registry cho ứng dụng LLM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khả năng tương thích
 
@@ -90,6 +101,8 @@ dependency runtime
 ```
 
 Cổng triển khai có thể phát hiện môi trường phục vụ không tương thích trước khi lỗi thời gian chạy (runtime / 런타임) xảy ra.
+
+> **Chuyển mạch:** Trong **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Registry cho ứng dụng LLM** tiếp nhận điểm tựa từ **Khả năng tương thích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quay lui (rollback / 롤백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Registry cho ứng dụng LLM
 
@@ -109,15 +122,21 @@ chính sách an toàn
 
 Phiên bản hành vi phải bao phủ toàn bộ bundle này.
 
+> **Chuyển mạch:** Ở chặng này của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Quay lui (rollback / 롤백)** tiếp nhận điểm tựa từ **Registry cho ứng dụng LLM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dấu vết kiểm toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quay lui (rollback / 롤백)
 
 Registry cần biết bản phát hành tốt gần nhất (previous known-good release). quay lui (rollback / 롤백) phải khôi phục cả cấu hình và phụ thuộc (dependency / 의존성) dữ liệu tương thích, không chỉ trọng số mô hình.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Dấu vết kiểm toán** tiếp nhận điểm tựa từ **Quay lui (rollback / 롤백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Registry không nhất thiết chứa trực tiếp nhị phân (binary / 이진) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dấu vết kiểm toán
 
 Ai đã thăng cấp? Khi nào? Dựa trên bằng chứng gì? Có ngoại lệ nào được phê duyệt?
 
 Dấu vết kiểm toán (audit trail) hữu ích cho debugging và quản trị (governance / 거버넌스).
+
+> **Chuyển mạch:** Trong **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Registry không nhất thiết chứa trực tiếp nhị phân (binary / 이진) lớn** tiếp nhận điểm tựa từ **Dấu vết kiểm toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Registry không nhất thiết chứa trực tiếp nhị phân (binary / 이진) lớn
 
@@ -126,6 +145,8 @@ Nhị phân (binary / 이진) lớn thường nằm trong đối tượng (objec
 ```text
 Metadata registry → URI / hash của artifact bất biến
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Mô hình tư duy** gom các mảnh từ **Registry không nhất thiết chứa trực tiếp nhị phân (binary / 이진) lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -136,6 +157,8 @@ Thí nghiệm tạo artifact
 Registry gán danh tính + bằng chứng + trạng thái vòng đời
 Triển khai sử dụng artifact đã được phê duyệt
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -151,6 +174,10 @@ Alias có thể thay đổi được, nhưng phiên bản bất biến phía dư
 
 Không. Hành vi của ứng dụng vẫn phụ thuộc mô hình, prompt và bundle cấu hình cần versioning.
 
+> **Chuyển mạch:** Trong **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Xem [Experiment Tracking](./01_experiment_tracking_and_reproducibility.md), [Data & Model Versioning](./02_data_and_model_versioning.md), [CI/CD/CT](./04_ci_cd_ct_for_ai.md) và [AI System Design](../15_ai_engineering/10_ai_system_design.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

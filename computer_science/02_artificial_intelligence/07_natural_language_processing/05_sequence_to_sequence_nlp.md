@@ -1,7 +1,6 @@
 # Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)
 
-> **Mạch đọc:** Đặt **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Conditional ngôn ngữ (language / 언어) Modeling** sang **Neural Machine Translation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Conditional ngôn ngữ (language / 언어) Modeling** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Neural Machine Translation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Sequence-to-Sequence (Seq2Seq / 시퀀스-투-시퀀스) NLP xử lý tasks nơi đầu vào (input / 입력) là một chuỗi (sequence / 시퀀스) và đầu ra (output / 출력) là một chuỗi (sequence / 시퀀스) khác có thể khác length/alignment. Translation, summarization, grammatical correction, question generation và many structured-to-text tasks thuộc family này.
 
@@ -23,6 +22,8 @@ L=-\sum_t\log P(y_t^{true}\mid y_{<t}^{true},x)
 
 Nguồn (source / 소스) điều kiện (condition / 조건) distinguishes seq2seq from unconditional/autoregressive LM continuation.
 
+> **Chuyển mạch:** Trong **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Neural Machine Translation** tiếp nhận điểm tựa từ **Conditional ngôn ngữ (language / 언어) Modeling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Neural Machine Translation
 
 Classical statistical MT used phrase tables, alignment các mô hình (models / 모델들) and ngôn ngữ (language / 언어) các mô hình (models / 모델들). Neural MT learned end-to-end conditional mô hình (model / 모델).
@@ -31,6 +32,8 @@ RNN encoder-decoder first, then attention removed fixed-vector bottleneck, then 
 
 Translation chất lượng (quality / 품질) requires more than word substitution because word thứ tự (order / 순서), morphology, idioms and discourse differ languages.
 
+> **Chuyển mạch:** Ở chặng này của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Alignment** tiếp nhận điểm tựa từ **Neural Machine Translation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản sao (copy / 복사) cơ chế (mechanism / 메커니즘) / Pointer Networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Alignment
 
 Attention weights often correlate source-target alignment but are not guaranteed tường minh (explicit / 명시적) linguistic alignments.
@@ -38,6 +41,8 @@ Attention weights often correlate source-target alignment but are not guaranteed
 Traditional alignment asks which nguồn (source / 소스) word generated mục tiêu (target / 대상) word. Neural seq2seq may distribute nguồn (source / 소스) thông tin (information / 정보) across states/heads.
 
 For explainable translation, dedicated alignment extraction/các ràng buộc (constraints / 제약조건들) may be needed.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Alignment** xác định đầu vào; **Bản sao (copy / 복사) cơ chế (mechanism / 메커니즘) / Pointer Networks** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Summarization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bản sao (copy / 복사) cơ chế (mechanism / 메커니즘) / Pointer Networks
 
@@ -55,6 +60,8 @@ Useful summarization, data-to-text and entity-heavy tasks.
 
 Hiện đại (modern / 현대적) subword LMs reduce OOV but chính xác (exact / 정확한) copying still important.
 
+> **Chuyển mạch:** Trong **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Bản sao (copy / 복사) cơ chế (mechanism / 메커니즘) / Pointer Networks** xác định đầu vào; **Summarization** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Teacher Forcing và Exposure độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Summarization
 
 **Extractive** summarization selects nguồn (source / 소스) spans/sentences.
@@ -65,11 +72,15 @@ Abstractive các mô hình (models / 모델들) rủi ro (risk / 위험) halluci
 
 Faithfulness evaluation therefore separate from fluency/coverage.
 
+> **Chuyển mạch:** Ở chặng này của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Teacher Forcing và Exposure độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Summarization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Beam tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Teacher Forcing và Exposure độ lệch (bias / 편향)
 
 Huấn luyện (training / 학습) sees correct previous mục tiêu (target / 대상). suy luận (inference / 추론) sees own generated lịch sử (history / 이력).
 
 Sequence-level huấn luyện (training / 학습) approaches such as minimum rủi ro (risk / 위험) huấn luyện (training / 학습) or reinforcement học tập (learning / 학습) have been explored, but token-level MLE remains foundation due stability/scalability.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Beam tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Teacher Forcing và Exposure độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coverage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Beam tìm kiếm (search / 검색)
 
@@ -85,11 +96,15 @@ or other penalties balance length.
 
 Larger beam does not always improve human chất lượng (quality / 품질); mô hình (model / 모델) xác suất (probability / 확률) may prefer generic/short hypotheses.
 
+> **Chuyển mạch:** Trong **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Coverage** tiếp nhận điểm tựa từ **Beam tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Text-to-Text Unification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Coverage
 
 Seq2seq may under-translate/repeat nguồn (source / 소스). Coverage mechanisms nhánh học (track / 트랙) how much attention each nguồn (source / 소스) position received.
 
 Hiện đại (modern / 현대적) Transformers reduce but do not eliminate omissions/repetitions.
+
+> **Chuyển mạch:** Ở chặng này của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Text-to-Text Unification** tiếp nhận điểm tựa từ **Coverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Denoising Seq2Seq Pretraining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Text-to-Text Unification
 
@@ -110,6 +125,8 @@ One conditional generation kiến trúc (architecture / 아키텍처) handles cl
 
 This foreshadows instruction-tuned LLMs where natural ngôn ngữ (language / 언어) defines tác vụ (task / 작업).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Denoising Seq2Seq Pretraining** tiếp nhận điểm tựa từ **Text-to-Text Unification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Constrained Decoding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Denoising Seq2Seq Pretraining
 
 Corrupt đầu vào (input / 입력) spans and train mô hình (model / 모델) reconstruct original:
@@ -123,6 +140,8 @@ This lets encoder-decoder learn ngôn ngữ (language / 언어) from unlabeled c
 
 BART/T5-style objectives are examples.
 
+> **Chuyển mạch:** Trong **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Constrained Decoding** tiếp nhận điểm tựa từ **Denoising Seq2Seq Pretraining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multilingual Translation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Constrained Decoding
 
 Some applications require đầu ra (output / 출력) format/terminology các ràng buộc (constraints / 제약조건들).
@@ -133,6 +152,8 @@ For structured JSON generation, hiện đại (modern / 현대적) các hệ th�
 
 This connects ngôn ngữ (language / 언어) generation with classical tìm kiếm (search / 검색)/ràng buộc (constraint / 제약조건) satisfaction.
 
+> **Chuyển mạch:** Ở chặng này của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Multilingual Translation** tiếp nhận điểm tựa từ **Constrained Decoding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation: BLEU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Multilingual Translation
 
 One mô hình (model / 모델) can handle many ngôn ngữ (language / 언어) pairs with ngôn ngữ (language / 언어) tags/instructions.
@@ -140,6 +161,8 @@ One mô hình (model / 모델) can handle many ngôn ngữ (language / 언어) p
 Transfer helps low-resource pairs, but sức chứa (capacity / 용량)/dữ liệu (data / 데이터) imbalance can cause interference. Sampling temperature/reweighting often used so high-resource English does not dominate.
 
 Zero-shot translation may emerge between pairs not directly trained, but chất lượng (quality / 품질) varies.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Evaluation: BLEU** tiếp nhận điểm tựa từ **Multilingual Translation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sequence-Level lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Evaluation: BLEU
 
@@ -162,6 +185,8 @@ Neural metrics like COMET/BERTScore use learned representations but introduce m�
 
 Human evaluation remains important for adequacy/fluency/faithfulness.
 
+> **Chuyển mạch:** Trong **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Sequence-Level lỗi (error / 오류)** tiếp nhận điểm tựa từ **Evaluation: BLEU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lĩnh vực (domain / 도메인) Adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sequence-Level lỗi (error / 오류)
 
 A single early decoding lỗi (error / 오류) changes subsequent lịch sử (history / 이력). đơn vị từ (token / 토큰) accuracy does not capture toàn cục (global / 전역) coherence.
@@ -178,17 +203,23 @@ terminology consistency
 repetition
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Lĩnh vực (domain / 도메인) Adaptation** tiếp nhận điểm tựa từ **Sequence-Level lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lĩnh vực (domain / 도메인) Adaptation
 
 General MT may thất bại (fail / 실패) legal/medical/company terminology. Fine-tuning/adapters, terminology các ràng buộc (constraints / 제약조건들) and retrieval of translation bộ nhớ (memory / 메모리) can help.
 
 But lĩnh vực (domain / 도메인) adaptation can cause catastrophic forgetting general ngôn ngữ (language / 언어); mixing/general dữ liệu (data / 데이터) and controlled fine-tuning matter.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Lĩnh vực (domain / 도메인) Adaptation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Seq2Seq NLP is conditional ngôn ngữ (language / 언어) modeling plus a source-information truy cập (access / 접근) cơ chế (mechanism / 메커니즘) and a decoding/tìm kiếm (search / 검색) procedure.
 
 Kiến trúc (architecture / 아키텍처) gives xác suất (probability / 확률) phân phối (distribution / 분포); decoding turns phân phối (distribution / 분포) into final chuỗi (sequence / 시퀀스).
+
+> **Chuyển mạch:** Trong **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -204,8 +235,10 @@ BLEU overlap cannot reliably detect hallucinated facts.
 
 Encoder-decoder remains efficient/natural for conditional transformation and widely used; decoder-only unifies via prompting but not universally optimal.
 
+> **Chuyển mạch:** Ở chặng này của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Seq2Seq combines [Language Models](./02_language_models.md), [Encoder–Decoder](../06_deep_learning_architectures/03_encoder_decoder_models.md), [Attention](../06_deep_learning_architectures/04_attention.md), and connects classical tìm kiếm (search / 검색) via decoding.
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language as data](./00_language_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

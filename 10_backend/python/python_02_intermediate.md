@@ -1,7 +1,6 @@
 # Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** Đặt **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. lớp (class / 클래스) không chỉ là nơi chứa trường dữ liệu (field / 필드)** sang **lớp (class / 클래스) attribute và instance attribute**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. lớp (class / 클래스) không chỉ là nơi chứa trường dữ liệu (field / 필드)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. mô hình dữ liệu (data model / 데이터 모델) và dunder methods** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 
@@ -41,6 +40,8 @@ class BadCart:
 ```
 
 Nếu trạng thái dùng chung (shared state / 공유 상태) là chủ đích, lớp (class / 클래스) attribute có thể đúng. Nếu không, initialize trong `__init__` hoặc dùng `dataclass` với `default_factory`.
+
+> **Chuyển mạch:** Trong **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **1. lớp (class / 클래스) không chỉ là nơi chứa trường dữ liệu (field / 필드)** nêu điều cần giải thích; **2. mô hình dữ liệu (data model / 데이터 모델) và dunder methods** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Encapsulation trong Python: ranh giới (boundary / 경계) bằng convention và thuộc tính (property / 속성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. mô hình dữ liệu (data model / 데이터 모델) và dunder methods
 
@@ -97,6 +98,8 @@ Trả `False` ngay cho mọi kiểu (type / 타입) lạ có thể khóa mất c
 
 Giá trị (value / 값) đối tượng (object / 객체) immutable là ứng viên tốt cho equality/băm (hash / 해시) dựa trên fields; `@dataclass(frozen=True)` có thể phù hợp nếu ngữ nghĩa (semantics / 의미론) đúng.
 
+> **Chuyển mạch:** Ở chặng này của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **2. mô hình dữ liệu (data model / 데이터 모델) và dunder methods** đã nêu tiêu chí phân biệt, còn **3. Encapsulation trong Python: ranh giới (boundary / 경계) bằng convention và thuộc tính (property / 속성)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Inheritance và composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Encapsulation trong Python: ranh giới (boundary / 경계) bằng convention và thuộc tính (property / 속성)
 
 Python không có private trường dữ liệu (field / 필드) tuyệt đối như một số ngôn ngữ. Một leading underscore như `_balance` nói “nội bộ (internal / 내부) API”; name mang double leading underscore kích hoạt name mangling chủ yếu để tránh collision trong inheritance, không phải bảo mật (security / 보안) cơ chế (mechanism / 메커니즘).
@@ -122,6 +125,8 @@ class Temperature:
 Điểm cơ chế quan trọng: `property` là một descriptor. Khi `self.celsius = value`, assignment không đơn giản ghi `celsius` vào `self.__dict__`; descriptor trên lớp (class / 클래스) có thể intercept thao tác (operation / 연산) và chuyển nó sang setter. Đây là cầu nối (bridge / 브리지) trực tiếp sang Part 4, nơi chính xác (exact / 정확한) precedence của dữ liệu (data / 데이터) descriptor, instance dictionary, non-data descriptor và lớp (class / 클래스) attribute được giải thích đầy đủ.
 
 Mô hình tư duy (mental model / 사고 모델) hữu ích là: cú pháp (syntax / 문법) `obj.attr` là một giao thức (protocol / 프로토콜) lookup, không phải “đọc trường dữ liệu (field / 필드)”. Điều đó giải thích vì sao ORM trường dữ liệu (field / 필드), cached thuộc tính (property / 속성), phương thức (method / 메서드) binding và khung phần mềm (framework / 프레임워크) injection có thể nhìn giống attribute bình thường nhưng thực hiện lô-gic (logic / 논리) phía sau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **3. Encapsulation trong Python: ranh giới (boundary / 경계) bằng convention và thuộc tính (property / 속성)** đã nêu tiêu chí phân biệt, còn **4. Inheritance và composition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. dataclass: giảm boilerplate nhưng không thay lĩnh vực (domain / 도메인) modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Inheritance và composition
 
@@ -151,6 +156,8 @@ Một lỗi thiết kế điển hình là một lớp (class / 클래스) trong
 
 Nếu bạn không thể giải thích MRO của hierarchy trong vài câu, composition có thể là thiết kế dễ bảo trì hơn.
 
+> **Chuyển mạch:** Inheritance/composition quyết định object boundary; dataclass chỉ giảm phần ceremony, không thay domain model. Iterable/iterator tiếp theo chuyển boundary đó sang protocol của việc tạo và tiêu thụ dữ liệu.
+
 ## 5. `dataclass`: giảm boilerplate nhưng không thay lĩnh vực (domain / 도메인) modeling
 
 `lớp dữ liệu (data class / 데이터 클래스)`
@@ -171,6 +178,8 @@ class Job:
 `frozen=True` cũng không tạo deep immutability. Nó chủ yếu ngăn assignment/delete trường dữ liệu (field / 필드) qua generated cơ chế (mechanism / 메커니즘); nếu trường dữ liệu (field / 필드) chứa danh sách (list / 목록)/dict mutable thì đối tượng (object / 객체) đồ thị (graph / 그래프) bên trong vẫn có thể đổi. Vì vậy “frozen dataclass” và “immutable lĩnh vực (domain / 도메인) giá trị (value / 값)” chỉ tương đương khi toàn trạng thái (state / 상태) transitively phù hợp với bất biến (invariant / 불변식) bất biến.
 
 Nếu lớp (class / 클래스) có bất biến (invariant / 불변식) phức tạp, vòng đời (lifecycle / 생명주기), hành vi (behavior / 동작) và định danh (identity / 식별자) lĩnh vực (domain / 도메인) mạnh, đừng dùng dataclass chỉ vì muốn ít mã (code / 코드). Boilerplate reduction không phải kiến trúc (architecture / 아키텍처).
+
+> **Chuyển mạch:** Dataclass mô tả dữ liệu; iterable/iterator mô tả protocol đọc dữ liệu và trạng thái exhaustion. Generator tiếp theo làm state machine lazy ấy hiện rõ qua từng lần `yield`.
 
 ## 6. Iterable, iterator và iterator exhaustion
 
@@ -217,6 +226,8 @@ items = [item for item in items if item % 2 != 0]
 ```
 
 Nếu thật sự cần mutate original, iterate trên snapshot như `for key in list(mapping): ...` và chấp nhận chi phí (cost / 비용) bản sao (copy / 복사) rõ ràng. mô hình tư duy (mental model / 사고 모델) là iterator và bộ chứa (container / 컨테이너) đang chia sẻ vòng đời (lifecycle / 생명주기)/trạng thái (state / 상태); mutation chính sách (policy / 정책) phải tường minh (explicit / 명시적).
+
+> **Chuyển mạch:** Generator cho thấy mỗi lần tiếp tục đều phụ thuộc state trước đó. Context manager tiếp theo áp dụng cùng tư duy lifecycle cho resource, đặc biệt ở nhánh exception và cleanup.
 
 ## 7. Generator: lazy máy trạng thái (state machine / 상태 머신)
 
@@ -282,6 +293,8 @@ async def poll(source):
 
 Part 3 sẽ giải vòng lặp sự kiện (event loop / 이벤트 루프), tác vụ (task / 작업) và cancellation sâu hơn. Ở đây chỉ cần giữ mô hình tư duy (mental model / 사고 모델): iterator giao thức (protocol / 프로토콜) quyết định **cách lấy item tiếp theo**, còn sync hay async quyết định việc lấy item có thể khối (block / 블록)/suspend thực thi (execution / 실행) ngữ cảnh (context / 맥락) như thế nào.
 
+> **Chuyển mạch:** Trong **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **7. Generator: lazy máy trạng thái (state machine / 상태 머신)** nêu điều cần giải thích; **8. ngữ cảnh (context / 맥락) manager và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Decorator: transform binding có chủ đích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. ngữ cảnh (context / 맥락) manager và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)
 
 `trình quản lý ngữ cảnh (context manager / 컨텍스트 매니저)`
@@ -318,6 +331,8 @@ Ngữ cảnh (context / 맥락) manager không nên nuốt exception trừ khi �
 
 Đây là lý do ngữ cảnh (context / 맥락) manager cho giao dịch (transaction / 트랜잭션) cần `raise` lại sau quay lui (rollback / 롤백). “Cleanup thành công” không đồng nghĩa “nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) thành công”. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) là hai đặc tả hợp đồng (contract / 계약) riêng.
 
+> **Chuyển mạch:** Ở chặng này của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **8. ngữ cảnh (context / 맥락) manager và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)** nêu điều cần giải thích; **9. Decorator: transform binding có chủ đích** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Typing: documentation + static đặc tả hợp đồng (contract / 계약), không phải thời gian chạy (runtime / 런타임) enforcement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Decorator: transform binding có chủ đích
 
 `bộ trang trí (decorator / 데코레이터)`
@@ -353,6 +368,8 @@ Decorator có thể làm điều khiển (control / 제어) luồng (flow / 흐�
 
 Decorator có trạng thái (state / 상태) cũng cần tính đồng thời (concurrency / 동시성)/vòng đời (lifecycle / 생명주기) lập luận (reasoning / 추론). Nếu closure của decorator giữ mutable dict bộ nhớ đệm (cache / 캐시) hoặc counter, trạng thái (state / 상태) đó được share theo thời gian tồn tại (lifetime / 수명) của decorated hàm (function / 함수) đối tượng (object / 객체). Khi mã (code / 코드) chạy nhiều threads/processes, “decorator chỉ là cú pháp (syntax / 문법)” không còn là mô hình tư duy (mental model / 사고 모델) đủ sâu.
 
+> **Chuyển mạch:** Decorator thay đổi binding có chủ đích; typing mô tả contract tĩnh của binding đó nhưng không enforce runtime. Exception design tiếp theo kiểm tra contract khi control-flow đi qua boundary lỗi.
+
 ## 10. Typing: documentation + static đặc tả hợp đồng (contract / 계약), không phải thời gian chạy (runtime / 런타임) enforcement
 
 `gợi ý kiểu (type hint / 타입 힌트)`
@@ -375,10 +392,8 @@ Kiểu (type / 타입) hint tốt làm luồng dữ liệu (data flow / 데이�
 ```python
 from typing import Any
 
-
 def unsafe(value: Any) -> None:
     value.this_might_not_exist()  # checker thường cho qua
-
 
 def inspect_value(value: object) -> None:
     if isinstance(value, str):
@@ -388,15 +403,12 @@ def inspect_value(value: object) -> None:
 Vì vậy dùng `object` khi muốn biểu diễn unknown giá trị (value / 값) nhưng vẫn giữ kiểu (type / 타입) an toàn (safety / 안전); dùng `Any` khi ranh giới (boundary / 경계) thực sự cần escape hatch và kiểm soát nơi bất định (uncertainty / 불확실성) đi vào.
 
 ### `Protocol` và duck typing có kiểu (type / 타입) an toàn (safety / 안전)
-Phần “`Protocol` và duck typing có kiểu (type / 타입) an toàn (safety / 안전)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```python
 from typing import Protocol
 
 class Writer(Protocol):
     def write(self, text: str) -> int: ...
-
 
 def save_report(writer: Writer, report: str) -> None:
     writer.write(report)
@@ -419,7 +431,6 @@ Legacy-compatible mã (code / 코드) thường dùng `TypeVar`:
 from typing import TypeVar
 T = TypeVar("T")
 
-
 def first(items: list[T]) -> T:
     return items[0]
 ```
@@ -432,7 +443,6 @@ Nếu hàm (function / 함수) chỉ cần đọc, kiểu (type / 타입) rộng
 
 ```python
 from collections.abc import Sequence
-
 
 def feed_all(animals: Sequence[Animal]) -> None:
     for animal in animals:
@@ -467,7 +477,6 @@ Một helper thời gian chạy (runtime / 런타임) có thể kiểm tra dữ 
 ```python
 from typing import TypeIs
 
-
 def is_str(value: object) -> TypeIs[str]:
     return isinstance(value, str)
 ```
@@ -480,6 +489,8 @@ def is_str(value: object) -> TypeIs[str]:
 
 Python 3.14 thay đổi annotation evaluation theo PEP 649/749: annotation được deferred/lazy hơn so với nhiều mã (code / 코드) cũ kỳ vọng. mã (code / 코드) khung phần mềm (framework / 프레임워크) tự đọc `__annotations__` cần theo API/best practices hiện hành như `annotationlib`/`inspect` guidance thay vì giả định mọi annotation đã là thời gian chạy (runtime / 런타임) đối tượng (object / 객체) ngay tại definition. ứng dụng (application / 애플리케이션) nhà phát triển (developer / 개발자) thông thường nên để kiểu (type / 타입) checker/khung phần mềm (framework / 프레임워크) xử lý hơn là tự introspect thô.
 
+> **Chuyển mạch:** Typing mô tả contract tĩnh nhưng không xử lý failure lúc chạy. Exception design tiếp theo quyết định tầng nào thêm context, đổi loại lỗi hoặc để lỗi đi qua; I/O sau đó áp dụng cùng boundary cho resource.
+
 ## 11. Exception thiết kế (design / 설계) và exception propagation
 
 Bắt exception ở tầng (layer / 계층) có khả năng thêm ngữ cảnh (context / 맥락) hoặc quyết định khôi phục (recovery / 복구). Một repository hàm (function / 함수) có thể convert low-level cơ sở dữ liệu (database / 데이터베이스) exception thành domain-specific exception nếu caller không nên biết driver; một CLI tầng (layer / 계층) có thể catch lĩnh vực (domain / 도메인) exception để in message và chọn exit mã (code / 코드).
@@ -487,7 +498,6 @@ Bắt exception ở tầng (layer / 계층) có khả năng thêm ngữ cảnh (
 ```python
 class ConfigError(Exception):
     pass
-
 
 def load_config(path):
     try:
@@ -512,6 +522,8 @@ LBYL (“look before you leap”) như `if key in mapping` không luôn xấu. V
 Concurrent/structured operations có thể có nhiều child failures thay vì một exception đơn. Python 3.11+ có `ExceptionGroup` và `except*` để biểu diễn và xử lý nhóm exception mà không làm mất các thất bại (failure / 실패) còn lại.
 
 Intermediate reader chưa cần dùng chúng ở mọi nơi, nhưng cần biết mô hình tư duy (mental model / 사고 모델) này trước khi sang `asyncio.TaskGroup` ở Part 3: structured tính đồng thời (concurrency / 동시성) có thể cần báo cáo nhiều lỗi sibling, nên exception mô hình (model / 모델) cũng phải biểu diễn nhiều thất bại (failure / 실패) cùng lúc thay vì ép chọn một “gốc (root / 루트) exception” duy nhất.
+
+> **Chuyển mạch:** Ở chặng này của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **11. Exception thiết kế (design / 설계) và exception propagation** xác định đầu vào; **12. tệp (file / 파일) I/O, pathlib, buffer và streaming** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Serialization: dữ liệu, tính tương thích (compatibility / 호환성) và trust ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. tệp (file / 파일) I/O, `pathlib`, buffer và streaming
 
@@ -552,6 +564,8 @@ Nhưng zero-copy không phải miễn phí về thiết kế (design / 설계). 
 
 Nghiệp vụ (business / 비즈니스) mã (code / 코드) nhỏ không cần đổi mọi `bytes` thành `memoryview`. Chỉ dùng khi profiling hoặc data-flow cho thấy bản sao (copy / 복사) là dominant chi phí (cost / 비용), hoặc khi API nhị phân (binary / 이진) cụ thể đã thiết kế quanh buffer giao thức (protocol / 프로토콜). mô hình tư duy (mental model / 사고 모델) quan trọng là phân biệt **giá trị (value / 값) bản sao (copy / 복사)** với **view lên cùng lưu trữ (storage / 저장소)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **12. tệp (file / 파일) I/O, pathlib, buffer và streaming** đã nêu tiêu chí phân biệt, còn **13. Serialization: dữ liệu, tính tương thích (compatibility / 호환성) và trust ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. datetime, timezone và thời gian thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Serialization: dữ liệu, tính tương thích (compatibility / 호환성) và trust ranh giới (boundary / 경계)
 
 `tuần tự hóa (serialization / 직렬화)`
@@ -567,6 +581,8 @@ restored = json.loads(payload)
 Môi trường vận hành (production / 운영 환경) thiết kế (design / 설계) cần lược đồ (schema / 스키마)/phiên bản (version / 버전) chiến lược (strategy / 전략). Serialization format là đặc tả hợp đồng (contract / 계약) giữa producer và bên tiêu thụ (consumer / 소비자); thay trường dữ liệu (field / 필드)/meaning có thể là breaking thay đổi (change / 변경) dù Python mã (code / 코드) compile bình thường.
 
 Một subtle thất bại (failure / 실패) là “parse thành công” nhưng ngữ nghĩa (semantic / 의미적) dữ liệu (data / 데이터) vẫn sai. JSON parser chỉ chứng minh đầu vào (input / 입력) là JSON hợp lệ, không chứng minh `age` nằm trong phạm vi (range / 범위), `currency` được hỗ trợ hoặc đối tượng (object / 객체) đúng phiên bản (version / 버전) lược đồ (schema / 스키마). cú pháp (syntax / 문법) kiểm tra hợp lệ (validation / 검증) và lĩnh vực (domain / 도메인) kiểm tra hợp lệ (validation / 검증) là hai tầng khác nhau.
+
+> **Chuyển mạch:** Trong **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**, **13. Serialization: dữ liệu, tính tương thích (compatibility / 호환성) và trust ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **14. datetime, timezone và thời gian thật** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Regex: parser nhỏ nhưng dễ trở thành debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. `datetime`, timezone và thời gian thật
 
@@ -590,6 +606,8 @@ Một cục bộ (local / 로컬) civil thời gian (time / 시간) có thể am
 
 Duration đo lường (measurement / 측정) cho hết thời gian chờ (timeout / 타임아웃)/hiệu năng (performance / 성능) nên dùng monotonic clock như `time.monotonic()`/`perf_counter()` thay vì wall clock có thể được chỉnh.
 
+> **Chuyển mạch:** Datetime/timezone làm rõ dữ liệu thời gian và ambiguity; regex tiếp theo xử lý text boundary nhưng có thể thành parser debt. Logging sau đó ghi lại failure và context thay vì chỉ in chuỗi.
+
 ## 15. Regex: parser nhỏ nhưng dễ trở thành debt
 
 `biểu thức chính quy (regular expression / 정규 표현식)`
@@ -604,6 +622,8 @@ USER_ID = re.compile(r'"user_id"\s*:\s*"([^"]+)"')
 Nếu đầu vào (input / 입력) thật sự là JSON, hãy parse JSON thay vì regex. Regex trên structured format thường thất bại khi whitespace, escaping, nesting hoặc thứ tự (ordering / 순서) thay đổi. cấp cao (senior / 시니어) ghi chú (note / 노트): dùng công cụ (tool / 도구) khớp với grammar của dữ liệu.
 
 Catastrophic backtracking có thể thành hiệu năng (performance / 성능)/bảo mật (security / 보안) rủi ro (risk / 위험) khi regex nhận untrusted đầu vào (input / 입력). Hạn chế mẫu (pattern / 패턴) mơ hồ, kiểm thử (test / 테스트) worst trường hợp (case / 사례) và cân nhắc parser khác nếu độ phức tạp (complexity / 복잡도) tăng.
+
+> **Chuyển mạch:** Regex tạo ra các failure cần context khi parse input; logging làm context đó có thể truy nguyên. CLI/argparse tiếp theo đưa validation và exit behavior ra boundary của chương trình.
 
 ## 16. Logging: sự kiện (event / 이벤트) có ngữ cảnh (context / 맥락), không phải `print` nâng cấp
 
@@ -630,13 +650,14 @@ thay vì luôn bản dựng (build / 빌드) expensive f-string trước khi log
 
 Một log bản ghi (record / 레코드) hữu ích nên mang ngữ nghĩa (semantic / 의미적) ngữ cảnh (context / 맥락) chứ không chỉ dump đối tượng (object / 객체). `repr` và log có thể vô tình kéo secret từ nested đối tượng (object / 객체) vào đầu ra (output / 출력); redaction phải dựa trên dữ liệu (data / 데이터) classification chứ không chỉ string replace ở cuối chuỗi xử lý (pipeline / 파이프라인).
 
+> **Chuyển mạch:** CLI biến validation và logging thành interface người dùng; subprocess mở rộng boundary đó sang process, environment và security. Vì vậy input contract phải được giữ qua cả hai lớp.
+
 ## 17. CLI và `argparse`
 
 CLI là công khai (public / 공개) giao diện (interface / 인터페이스) cho người dùng/script khác. `argparse` đủ cho nhiều standard-library công cụ (tool / 도구).
 
 ```python
 import argparse
-
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -648,6 +669,8 @@ def parse_args():
 Exit mã (code / 코드), stdout/stderr, stable option names và help văn bản (text / 텍스트) là Đặc tả API (API contract / API 계약). Không trộn lô-gic nghiệp vụ (business logic / 비즈니스 로직) vào parser; parse đầu vào (input / 입력) → validate/configure → gọi ứng dụng (application / 애플리케이션) hàm (function / 함수) → map kết quả (result / 결과)/exception thành đầu ra (output / 출력)/exit mã (code / 코드).
 
 CLI dùng trong automation còn có machine-consumer. Nếu stdout được parse bởi script khác, format đầu ra (output / 출력) là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약); diagnostic nên đi stderr để không phá dữ liệu (data / 데이터) stream.
+
+> **Chuyển mạch:** **17. CLI và argparse** tách đầu vào khỏi lô-gic ứng dụng; sang **18. subprocess**, ta hỏi thêm dữ liệu ấy đi qua ranh giới tiến trình và quyền hạn như thế nào. Mục 19 sẽ đặt hai nguyên tắc đó vào một case study nhỏ về boundary an toàn.
 
 ## 18. `subprocess`: tiến trình (process / 프로세스) ranh giới (boundary / 경계) và bảo mật (security / 보안)
 
@@ -672,9 +695,11 @@ Hết thời gian chờ (timeout / 타임아웃), đầu ra (output / 출력) k�
 
 Hết thời gian chờ (timeout / 타임아웃) của một child tiến trình (process / 프로세스) cũng không tự định nghĩa vòng đời (lifecycle / 생명주기) cho toàn tiến trình (process / 프로세스) cây (tree / 트리). Child có thể tạo descendants, daemon hoặc bên ngoài (external / 외부) side tác động (effect / 효과) không biến mất chỉ vì parent wrapper raise `TimeoutExpired`. Khi cần hard isolation/cancellation, tiến trình (process / 프로세스) group/bộ chứa (container / 컨테이너)/job runner ngữ nghĩa (semantics / 의미론) phải được thiết kế ở OS/triển khai (deployment / 배포) tầng (layer / 계층).
 
-## 19. Automation trường hợp (case / 사례) study trong repository
+> **Chuyển mạch:** Biết cách gọi subprocess chưa đủ; cần nhìn cả timeout, kích thước output, cleanup và cách kiểm thử. Mục **19. Case study: subprocess và boundary an toàn** làm rõ các điểm đó, rồi mục 20 nối kết luận sang các câu hỏi dự án của Part 3.
 
-[automation/pipeline.py](../../automation/pipeline.py) là ví dụ hiện hữu dùng `dataclass`, `Path`, `subprocess`, regex, JSON, môi trường (environment / 환경) variables và HTTP I/O. Hãy đọc nó bằng mô hình tư duy (mental model / 사고 모델) của Part này:
+## 19. Case study: subprocess và boundary an toàn
+
+Một case study được viết riêng cho mục này có thể kết hợp `dataclass`, `Path`, `subprocess`, regex, JSON, biến môi trường và HTTP I/O. Hãy đọc nó bằng mô hình tư duy của Part này:
 
 `Usage` là data-oriented trạng thái (state / 상태) phù hợp với `dataclass`; `Path` tạo filesystem ranh giới (boundary / 경계) rõ; `subprocess.run([...])` dùng argument danh sách (list / 목록); `clean()`/`split_parts()` dùng regex cho văn bản (text / 텍스트) transformation; `json.loads` parse structured phản hồi (response / 응답); exception được raise khi bên ngoài (external / 외부) thao tác (operation / 연산) vi phạm bất biến (invariant / 불변식).
 
@@ -682,32 +707,34 @@ Hết thời gian chờ (timeout / 타임아웃) của một child tiến trình
 
 Khi rà soát (review / 검토) tệp (file / 파일) này, hãy để ý thêm hidden contracts vừa học: collection nào bị mutate hay snapshot; iterator nào single-pass; subprocess đầu ra (output / 출력) có bounded không; JSON parse xong đã domain-validate chưa; exception nào được translate và exception nào nên propagate; annotation đang là static đặc tả hợp đồng (contract / 계약) hay thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Case study đã cho thấy dữ liệu, tiến trình và lỗi gặp nhau ở cùng một boundary. Sang **20. Cầu nối tới Part 3**, ta mở rộng câu hỏi: khi có nhiều dependency, test suite và I/O đồng thời, làm sao giữ được khả năng tái lập? Phần Nguồn chính sẽ đối chiếu câu trả lời với tài liệu gốc.
+
 ## 20. cầu nối (bridge / 브리지) sang Part 3
 
 Khi mã (code / 코드) bắt đầu có phụ thuộc (dependency / 의존성) ngoài, nhiều worker, bộ kiểm thử (test suite / 테스트 스위트), gói (package / 패키지) install, concurrent I/O, CPU công việc (work / 작업) hoặc triển khai (deployment / 배포), câu hỏi đổi từ “đối tượng (object / 객체) này hoạt động thế nào?” sang “dự án (project / 프로젝트) này tái lập, kiểm thử (test / 테스트), profile, chạy đồng thời và vận hành ra sao?”. Đó là ranh giới (boundary / 경계) của Part 3.
 
 Trước khi sang Part 3, bạn nên tự giải thích được vì sao `property` là descriptor-based lookup chứ không phải magic cú pháp (syntax / 문법); vì sao `NotImplemented` khác `False`; vì sao mutate bộ chứa (container / 컨테이너) trong iteration nguy hiểm; vì sao generator và async generator có vòng đời (lifecycle / 생명주기) riêng; ngữ cảnh (context / 맥락) manager có thể suppress exception bằng đặc tả hợp đồng (contract / 계약) nào; vì sao `Any` khác `object`; vì sao mutable generic dẫn tới variance ràng buộc (constraint / 제약조건); `Self`/`TypeIs` đang hứa điều gì với checker; khi nào `memoryview` là view thay vì bản sao (copy / 복사); và vì sao một timestamp cục bộ (local / 로컬) không luôn ánh xạ đơn giản tới một instant.
 
+> **Chuyển mạch:** Cầu nối sang Part 3 gom data model và standard library thành các concern về packaging, testing, concurrency và operations. **Nguồn chính** xác nhận behavior trước khi người học chuyển sang các failure mode cấp hệ thống.
+
 ## Nguồn chính
-Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
-- mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
-- `dataclasses`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/dataclasses.html
-- `typing`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/typing.html
-- `collections.abc`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/collections.abc.html
-- Iterators: https://docs.python.org/3.14/thư viện (library / 라이브러리)/stdtypes.html#iterator-types
-- Async iteration: https://docs.python.org/3.14/tham chiếu (reference / 참조)/expressions.html#asynchronous-generator-iterator-methods
-- `contextlib`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/contextlib.html
-- Exceptions and `ExceptionGroup`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/exceptions.html
-- `pathlib`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/pathlib.html
-- `memoryview`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/stdtypes.html#memoryview
+- mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/reference/datamodel.html
+- `dataclasses`: https://docs.python.org/3.14/library/dataclasses.html
+- `typing`: https://docs.python.org/3.14/library/typing.html
+- `collections.abc`: https://docs.python.org/3.14/library/collections.abc.html
+- Iterators: https://docs.python.org/3.14/library/stdtypes.html#iterator-types
+- Async iteration: https://docs.python.org/3.14/reference/expressions.html#asynchronous-generator-iterator-methods
+- `contextlib`: https://docs.python.org/3.14/library/contextlib.html
+- Exceptions and `ExceptionGroup`: https://docs.python.org/3.14/library/exceptions.html
+- `pathlib`: https://docs.python.org/3.14/library/pathlib.html
+- `memoryview`: https://docs.python.org/3.14/library/stdtypes.html#memoryview
 - Buffer giao thức (protocol / 프로토콜): https://docs.python.org/3.14/c-api/buffer.html
-- `datetime`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/datetime.html
-- `zoneinfo`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/zoneinfo.html
-- `re`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/re.html
-- `logging`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/logging.html
-- `subprocess`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/subprocess.html
+- `datetime`: https://docs.python.org/3.14/library/datetime.html
+- `zoneinfo`: https://docs.python.org/3.14/library/zoneinfo.html
+- `re`: https://docs.python.org/3.14/library/re.html
+- `logging`: https://docs.python.org/3.14/library/logging.html
+- `subprocess`: https://docs.python.org/3.14/library/subprocess.html
 - Annotation best practices: https://docs.python.org/3.14/howto/annotations.html
 
-> **Bàn giao:** Sau **Nguồn chính**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn chính**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

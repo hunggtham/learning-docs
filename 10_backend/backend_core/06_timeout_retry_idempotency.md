@@ -1,7 +1,6 @@
 # 06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency
 
-> **Mạch đọc:** Đặt **06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** sang **thử lại (retry / 재시도) có điều kiện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thử lại (retry / 재시도) có điều kiện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Ngân sách thời gian chờ (timeout budget / 타임아웃 예산)
 
@@ -10,8 +9,7 @@ không được mỗi cái tự chờ 2 giây. Truyền deadline/cancellation xu
 dành ngân sách cho serialization, queueing và phản hồi (response / 응답). hết thời gian chờ (timeout / 타임아웃) cần phân biệt
 connect, TLS, pool acquire, read và total deadline khi máy khách (client / 클라이언트) hỗ trợ.
 
-
-> **Chuyển mạch:** Từ **ngân sách thời gian chờ (timeout budget / 타임아웃 예산)**, ta sang **thử lại (retry / 재시도) có điều kiện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Deadline còn lại quyết định retry còn hợp lý hay không. **Thử lại (retry / 재시도) có điều kiện** lọc lỗi tạm thời, số attempt và backoff trước khi phần **Idempotency** bảo vệ mutation khỏi side effect lặp.
 
 ## Thử lại (retry / 재시도) có điều kiện
 
@@ -20,8 +18,7 @@ thử lại (retry / 재시도) kiểm tra hợp lệ (validation / 검증), per
 Exponential backoff + jitter và giới hạn attempts ngăn synchronized thử lại (retry / 재시도) storm.
 Mỗi tầng (layer / 계층) không nên thử lại (retry / 재시도) độc lập đến khi tổng số lần nhân lên ngoài dự kiến.
 
-
-> **Chuyển mạch:** Từ **thử lại (retry / 재시도) có điều kiện**, ta sang **Idempotency** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Retry chỉ an toàn khi server nhận diện cùng một mutation. **Idempotency** vì thế cố định key, fingerprint và terminal result; **Quan sát** tiếp theo sẽ phân biệt timeout trước commit với timeout sau commit.
 
 ## Idempotency
 
@@ -38,8 +35,7 @@ Unique ràng buộc (constraint / 제약조건), chuyển tiếp trạng thái (
 vệ lớp cơ sở dữ liệu (database / 데이터베이스)/bên tiêu thụ (consumer / 소비자). Idempotency key không thay thế authorization: cùng key
 nhưng subject/tenant khác phải bị từ chối.
 
-
-> **Chuyển mạch:** Từ **Idempotency**, ta sang **Quan sát** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Có idempotency key vẫn chưa cho biết request đang ở đâu trong hệ thống. **Quan sát** ghi attempt, dependency và commit outcome; dữ liệu này là đầu vào để vẽ retry topology và tìm amplification.
 
 ## Quan sát
 
@@ -47,8 +43,7 @@ Ghi attempt number, original yêu cầu (request / 요청) ID, phụ thuộc (de
 kết quả (outcome / 결과). Phân biệt “hết thời gian chờ (timeout / 타임아웃) nhưng máy chủ (server / 서버) đã lần ghi nhận (commit / 커밋)” với “chưa tới máy chủ (server / 서버)”; đây là
 lý do caller phải truy vấn (query / 쿼리) trạng thái trước khi tạo lại side tác động (effect / 효과).
 
-
-> **Chuyển mạch:** Từ **Quan sát**, ta sang **Đào sâu: thử lại (retry / 재시도) topology** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Các attempt đã đo được phải được đặt lên toàn tuyến browser → API → service → provider. **Đào sâu: thử lại (retry / 재시도) topology** làm lộ retry multiplication và unknown result; **Bài tập suy luận** kiểm tra ngân sách deadline bằng con số cụ thể.
 
 ## Đào sâu: thử lại (retry / 재시도) topology
 
@@ -68,8 +63,7 @@ thể an toàn; với mutation, truy vấn (query / 쿼리) status bằng idempo
 tạo thao tác (operation / 연산) mới. API nên cung cấp endpoint status nếu thao tác (operation / 연산) có thể chạy sau
 khi caller mất kết nối.
 
-
-> **Chuyển mạch:** Từ **Đào sâu: thử lại (retry / 재시도) topology**, ta sang **Bài tập suy luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Retry topology cho thấy deadline bị tiêu hao và attempt bị nhân lên ở đâu. **Bài tập suy luận** biến topology đó thành ngân sách hop cụ thể; sau đó circuit breaker, bulkhead và load shedding sẽ giới hạn blast radius khi ngân sách không còn đủ.
 
 ## Bài tập suy luận
 
@@ -77,8 +71,7 @@ Cho deadline 2 giây, gateway overhead 100 ms, dịch vụ (service / 서비스)
 Đề xuất ngân sách (budget / 예산) từng hop, connect/read hết thời gian chờ (timeout / 타임아웃), số thử lại (retry / 재시도) tối đa và điều kiện dừng;
 giải thích vì sao tổng hết thời gian chờ (timeout / 타임아웃) không được vượt deadline dù có backoff.
 
-
-> **Chuyển mạch:** Từ **Bài tập suy luận**, ta sang **Circuit breaker, bulkhead và tải (load / 로드) shedding** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bài tập deadline cho thấy retry có thể ăn hết capacity dù từng hop “hợp lệ”. **Circuit breaker, bulkhead và tải (load / 로드) shedding** là lớp bảo vệ cuối để giới hạn blast radius khi dependency vẫn suy giảm.
 
 ## Circuit breaker, bulkhead và tải (load / 로드) shedding
 
@@ -100,4 +93,4 @@ Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산) nên đư�
 công việc (work / 작업). Khi queueing và saturation tăng, thử lại (retry / 재시도) thường làm tình hình xấu hơn; hãy
 giảm intake trước khi tăng số worker.
 
-> **Bàn giao:** Sau **Circuit breaker, bulkhead và tải (load / 로드) shedding**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Giữ lại deadline propagation, retry ownership, idempotency và unknown-result handling; quay về [README](./README.md) để nối sang testing hoặc observability của các failure mode này.

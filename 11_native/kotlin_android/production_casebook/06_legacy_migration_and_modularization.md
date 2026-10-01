@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Đầu tiên phải inventory, không mã (code / 코드) ngay** sang **2. Phân biệt legacy, deprecated và simply-not-fashionable**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đầu tiên phải inventory, không mã (code / 코드) ngay** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Phân biệt legacy, deprecated và simply-not-fashionable** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Nhiều Android nhà phát triển (developer / 개발자) không bắt đầu từ một greenfield Compose dự án (project / 프로젝트). Họ bước vào codebase có XML, Fragment, custom View, callback, RxJava, LiveData, AsyncTask-era utility, singleton dịch vụ (service / 서비스) locator, Java lớp (class / 클래스), `startActivityForResult`, dùng chung (shared / 공유) mutable trạng thái (state / 상태) và Gradle script tích lũy qua nhiều năm. Nếu approach là “rewrite toàn bộ sang Compose/Clean kiến trúc (architecture / 아키텍처)”, rủi ro (risk / 위험) thường tăng mạnh: nghiệp vụ (business / 비즈니스) regression, bản phát hành (release / 릴리스) freeze, merge xung đột (conflict / 충돌), mất kiến thức (knowledge / 지식) và kéo dài di chuyển (migration / 마이그레이션) vô hạn.
 
@@ -26,6 +26,8 @@ entry points
 
 Một màn hình 2.000 dòng nhưng ít người dùng (user / 사용자) có thể rủi ro (risk / 위험) thấp hơn một utility 50 dòng dùng ở mọi payment luồng (flow / 흐름).
 
+> **Chuyển mạch:** Inventory tạo evidence trước khi sửa; phân biệt legacy/deprecated/not-fashionable, rồi establish seam để migration thay implementation mà giữ contract.
+
 ## 2. Phân biệt legacy, deprecated và simply-not-fashionable
 
 XML/View không phải “sai”. Fragment cũng không mặc định cần xóa. Một API cũ nhưng stable có thể tiếp tục hợp lý trong mô-đun (module / 모듈) maintenance.
@@ -33,6 +35,8 @@ XML/View không phải “sai”. Fragment cũng không mặc định cần xóa
 Chỉ migrate khi có mục tiêu: giảm bug/vòng đời (lifecycle / 생명주기) độ phức tạp (complexity / 복잡도), unify ngăn xếp (stack / 스택), improve testability, remove unsupported phụ thuộc (dependency / 의존성), speed tính năng (feature / 기능) delivery hoặc satisfy nền tảng (platform / 플랫폼) yêu cầu (requirement / 요구사항).
 
 Di chuyển (migration / 마이그레이션) không có nghiệp vụ (business / 비즈니스)/kỹ thuật (engineering / 엔지니어링) kết quả (outcome / 결과) rõ ràng dễ biến thành rewrite vì sở thích.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **3. Establish seam trước khi replace hiện thực (implementation / 구현)** tiếp nhận điểm tựa từ **2. Phân biệt legacy, deprecated và simply-not-fashionable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Java ↔ Kotlin di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Establish seam trước khi replace hiện thực (implementation / 구현)
 
@@ -49,6 +53,8 @@ Sau khi seam ổn định, hiện thực (implementation / 구현) có thể mig
 
 Đây là nguyên tắc quan trọng: **decouple first, modernize second**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **4. Java ↔ Kotlin di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **3. Establish seam trước khi replace hiện thực (implementation / 구현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Callback → suspend** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Java ↔ Kotlin di chuyển (migration / 마이그레이션)
 
 Kotlin interoperates Java tốt nhưng có trường hợp biên (edge case / 경계 사례).
@@ -58,6 +64,8 @@ Java nền tảng (platform / 플랫폼) kiểu (type / 타입) không biết nu
 Java bean getter/setter có thể xuất hiện như Kotlin thuộc tính (property / 속성). SAM giao diện (interface / 인터페이스) có lambda interop. Checked exception không được Kotlin enforce. Wildcard/generic variance có thể cần `@JvmSuppressWildcards` hoặc API thiết kế (design / 설계) cẩn thận.
 
 Không convert 500 tệp (file / 파일) Java bằng công cụ (tool / 도구) rồi gọi là di chuyển (migration / 마이그레이션) hoàn tất. Chọn ranh giới (boundary / 경계), chạy kiểm thử (test / 테스트) và refactor idiomatic Kotlin dần.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **5. Callback → suspend** tiếp nhận điểm tựa từ **4. Java ↔ Kotlin di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Listener/stream → callbackFlow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Callback → suspend
 
@@ -93,6 +101,8 @@ suspend fun LegacyApi.awaitUser(id: String): User =
 
 Cancellation cầu nối (bridge / 브리지) rất quan trọng. Nếu coroutine cancel mà underlying yêu cầu (request / 요청) vẫn chạy và giữ callback/UI tham chiếu (reference / 참조), di chuyển (migration / 마이그레이션) chỉ đổi cú pháp (syntax / 문법) chứ chưa sửa vòng đời (lifecycle / 생명주기).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **5. Callback → suspend** xác định đầu vào; **6. Listener/stream → callbackFlow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. LiveData → luồng (flow / 흐름) không cần big-bang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Listener/stream → callbackFlow
 
 Listener nhiều sự kiện (event / 이벤트) phù hợp với `callbackFlow`:
@@ -112,6 +122,8 @@ fun LocationClient.locations(): Flow<Location> = callbackFlow {
 
 Luôn có cleanup. `callbackFlow` không tự biết cách unregister listener của thư viện (library / 라이브러리).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **6. Listener/stream → callbackFlow** xác định đầu vào; **7. LiveData → luồng (flow / 흐름) không cần big-bang** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. RxJava → Coroutine/luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. LiveData → luồng (flow / 흐름) không cần big-bang
 
 ViewModel cũ có thể expose LiveData cho XML Fragment. dữ liệu (data / 데이터) tầng (layer / 계층) mới có thể dùng luồng (flow / 흐름) rồi adapt ở ranh giới (boundary / 경계).
@@ -124,6 +136,8 @@ Ngược lại có thể cầu nối (bridge / 브리지) LiveData thành luồn
 
 Khi Compose screen thay Fragment, có thể dùng StateFlow trực tiếp với lifecycle-aware collection.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **7. LiveData → luồng (flow / 흐름) không cần big-bang** xác định đầu vào; **8. RxJava → Coroutine/luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. XML Fragment → Compose từng screen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. RxJava → Coroutine/luồng (flow / 흐름)
 
 Nếu codebase RxJava lớn, đừng replace operator-by-operator một cách máy móc. Rx có ngữ nghĩa (semantics / 의미론) scheduler/backpressure/disposal riêng.
@@ -131,6 +145,8 @@ Nếu codebase RxJava lớn, đừng replace operator-by-operator một cách m�
 Chọn mô-đun (module / 모듈)/tính năng (feature / 기능) ranh giới (boundary / 경계). cầu nối (bridge / 브리지) Single/Maybe/Observable sang suspend/luồng (flow / 흐름) bằng official/interoperability adapter phù hợp, rồi giữ một side làm đơn vị sở hữu (owner / 오너).
 
 Tránh chuỗi (chain / 사슬) kiểu Rx → LiveData → luồng (flow / 흐름) → StateFlow chỉ để nối khung phần mềm (framework / 프레임워크); mỗi cầu nối (bridge / 브리지) thêm ngữ nghĩa (semantics / 의미론) và gỡ lỗi (debug / 디버그) độ phức tạp (complexity / 복잡도).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **8. RxJava → Coroutine/luồng (flow / 흐름)** xác định đầu vào; **9. XML Fragment → Compose từng screen** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Fragment vòng đời (lifecycle / 생명주기) vs Compose vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. XML Fragment → Compose từng screen
 
@@ -159,11 +175,15 @@ AndroidView(
 
 Interoperability là di chuyển (migration / 마이그레이션) công cụ (tool / 도구), không nên trở thành permanent nesting 5 tầng nếu không có lý do.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **9. XML Fragment → Compose từng screen** xác định đầu vào; **10. Fragment vòng đời (lifecycle / 생명주기) vs Compose vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. View Binding thay Kotlin synthetic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Fragment vòng đời (lifecycle / 생명주기) vs Compose vòng đời (lifecycle / 생명주기)
 
 Khi Compose nằm trong Fragment, composition disposal chiến lược (strategy / 전략) phải phù hợp View vòng đời (lifecycle / 생명주기). Nếu composition sống lâu hơn Fragment View, có thể giữ tham chiếu (reference / 참조)/leak.
 
 Đừng assume “Compose tự xử lý vòng đời (lifecycle / 생명주기)”. Host ranh giới (boundary / 경계) vẫn cần đúng đơn vị sở hữu (owner / 오너).
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **10. Fragment vòng đời (lifecycle / 생명주기) vs Compose vòng đời (lifecycle / 생명주기)** xác định đầu vào; **11. View Binding thay Kotlin synthetic** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. startActivityForResult → Activity kết quả (result / 결과) API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. View Binding thay Kotlin synthetic
 
@@ -183,11 +203,15 @@ override fun onDestroyView() {
 
 Đây là vòng đời (lifecycle / 생명주기) issue, không chỉ cú pháp (syntax / 문법) replacement.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **12. startActivityForResult → Activity kết quả (result / 결과) API** tiếp nhận điểm tựa từ **11. View Binding thay Kotlin synthetic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. SharedPreferences → DataStore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. `startActivityForResult` → Activity kết quả (result / 결과) API
 
 Legacy requestCode/onActivityResult dễ collision và phân tán handling. Activity kết quả (result / 결과) API register đặc tả hợp đồng (contract / 계약) theo vòng đời (lifecycle / 생명주기).
 
 Di chuyển (migration / 마이그레이션) nên centralize kết quả (result / 결과) ngữ nghĩa (semantics / 의미론) ở screen ranh giới (boundary / 경계) và kiểm thử (test / 테스트) tiến trình (process / 프로세스) recreation/permission cases.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **13. SharedPreferences → DataStore** tiếp nhận điểm tựa từ **12. startActivityForResult → Activity kết quả (result / 결과) API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. SQLiteOpenHelper → Room** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. SharedPreferences → DataStore
 
@@ -204,11 +228,15 @@ UI chỉ biết repository đặc tả hợp đồng (contract / 계약). Backen
 
 Dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) từ SharedPreferences sang DataStore phải idempotent và preserve key ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **14. SQLiteOpenHelper → Room** tiếp nhận điểm tựa từ **13. SharedPreferences → DataStore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. AsyncTask/luồng thực thi (thread / 스레드)/Handler → coroutine hoặc WorkManager** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. SQLiteOpenHelper → Room
 
 Nếu legacy cơ sở dữ liệu (database / 데이터베이스) quan trọng, di chuyển (migration / 마이그레이션) cần lược đồ (schema / 스키마) inventory và tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트). Không `fallbackToDestructiveMigration` chỉ để app mở được.
 
 Có thể đưa Room quản lý cơ sở dữ liệu (database / 데이터베이스) hiện có nếu lược đồ (schema / 스키마) ánh xạ (mapping / 매핑) phù hợp hoặc viết di chuyển (migration / 마이그레이션) bản sao (copy / 복사) dữ liệu. kiểm thử (test / 테스트) bằng cơ sở dữ liệu (database / 데이터베이스) snapshot từ môi trường vận hành (production / 운영 환경) lược đồ (schema / 스키마) cũ.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **15. AsyncTask/luồng thực thi (thread / 스레드)/Handler → coroutine hoặc WorkManager** tiếp nhận điểm tựa từ **14. SQLiteOpenHelper → Room** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. dịch vụ (service / 서비스) locator → DI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. AsyncTask/luồng thực thi (thread / 스레드)/Handler → coroutine hoặc WorkManager
 
@@ -221,6 +249,8 @@ Không đổi mọi background công việc (work / 작업) thành `viewModelSco
 - chính xác (exact / 정확한) alarm chỉ khi ngữ nghĩa (semantics / 의미론) thật sự chính xác (exact / 정확한).
 
 Di chuyển (migration / 마이그레이션) phải chọn thời gian tồn tại (lifetime / 수명) đúng, không chỉ chọn API mới.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **16. dịch vụ (service / 서비스) locator → DI** tiếp nhận điểm tựa từ **15. AsyncTask/luồng thực thi (thread / 스레드)/Handler → coroutine hoặc WorkManager** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. God Activity/God Fragment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. dịch vụ (service / 서비스) locator → DI
 
@@ -236,6 +266,8 @@ object ServiceLocator {
 Có thể migrate bằng constructor injection từng lớp (class / 클래스). Hilt/Koin/Dagger chỉ automate đồ thị (graph / 그래프) sau khi phụ thuộc (dependency / 의존성) ranh giới (boundary / 경계) sạch.
 
 Một chiến lược là giữ ServiceLocator ở composition gốc (root / 루트), nhưng nội bộ (internal / 내부) tính năng (feature / 기능) nhận phụ thuộc (dependency / 의존성) qua constructor. Sau đó thay gốc (root / 루트) bằng DI khung phần mềm (framework / 프레임워크) mà tính năng (feature / 기능) mã (code / 코드) ít đổi.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **17. God Activity/God Fragment** tiếp nhận điểm tựa từ **16. dịch vụ (service / 서비스) locator → DI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. toàn cục (global / 전역) sự kiện (event / 이벤트) bus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. God Activity/God Fragment
 
@@ -254,6 +286,8 @@ platform integration
 
 Mỗi extraction nên có kiểm thử (test / 테스트) hoặc hành vi (behavior / 동작) proof.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **18. toàn cục (global / 전역) sự kiện (event / 이벤트) bus** tiếp nhận điểm tựa từ **17. God Activity/God Fragment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Multi-module di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. toàn cục (global / 전역) sự kiện (event / 이벤트) bus
 
 EventBus/Rx subject singleton thường tạo hidden phụ thuộc (dependency / 의존성). di chuyển (migration / 마이그레이션) nên tìm sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론).
@@ -265,6 +299,8 @@ EventBus/Rx subject singleton thường tạo hidden phụ thuộc (dependency /
 - app-level session → SessionRepository observable trạng thái (state / 상태).
 
 Đừng replace EventBus bằng một toàn cục (global / 전역) SharedFlow rồi giữ nguyên vấn đề.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **19. Multi-module di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **18. toàn cục (global / 전역) sự kiện (event / 이벤트) bus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. tính năng (feature / 기능) API và hiện thực (implementation / 구현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Multi-module di chuyển (migration / 마이그레이션)
 
@@ -283,6 +319,8 @@ extract stable core:model/common contracts
 
 Nếu mô-đun (module / 모듈) hóa không giảm coupling/bản dựng (build / 빌드)/quyền sở hữu (ownership / 소유권) bài toán (problem / 문제), nó chỉ chuyển độ phức tạp (complexity / 복잡도) sang Gradle.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **20. tính năng (feature / 기능) API và hiện thực (implementation / 구현)** tiếp nhận điểm tựa từ **19. Multi-module di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. phụ thuộc (dependency / 의존성) cycle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. tính năng (feature / 기능) API và hiện thực (implementation / 구현)
 
 Tính năng (feature / 기능) lớn có thể expose đặc tả hợp đồng (contract / 계약) nhỏ:
@@ -295,11 +333,15 @@ interface ProfileEntryPoint {
 
 Các mô-đun (module / 모듈) khác không import nội bộ (internal / 내부) ViewModel/Repository của Profile. Điều này giảm accidental coupling và giúp tính năng (feature / 기능) refactor độc lập.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **21. phụ thuộc (dependency / 의존성) cycle** tiếp nhận điểm tựa từ **20. tính năng (feature / 기능) API và hiện thực (implementation / 구현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. thiết kế (design / 설계) hệ thống (system / 시스템) extraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. phụ thuộc (dependency / 의존성) cycle
 
 Mô-đun (module / 모듈) đồ thị (graph / 그래프) cycle là dấu hiệu ranh giới (boundary / 경계) sai. Đừng giải bằng mô-đun (module / 모듈) `common` chứa mọi thứ.
 
 Nếu A và B cần kiểu (type / 타입) chung, extract lớp trừu tượng (abstraction / 추상화)/mô hình (model / 모델) thật sự dùng chung (shared / 공유). Nếu A gọi B và B callback A vì workflow, có thể cần coordinator ở tầng (layer / 계층) trên.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **22. thiết kế (design / 설계) hệ thống (system / 시스템) extraction** tiếp nhận điểm tựa từ **21. phụ thuộc (dependency / 의존성) cycle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. điều hướng (navigation / 내비게이션) di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. thiết kế (design / 설계) hệ thống (system / 시스템) extraction
 
@@ -307,17 +349,23 @@ Compose di chuyển (migration / 마이그레이션) thường tạo thành ph�
 
 Không abstract thành phần (component / 컴포넌트) quá sớm. Nếu hai button “trông giống” nhưng ngữ nghĩa (semantics / 의미론)/hành vi (behavior / 동작) khác, ép chung API khổng lồ có thể tệ hơn duplicate nhỏ.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **23. điều hướng (navigation / 내비게이션) di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **22. thiết kế (design / 설계) hệ thống (system / 시스템) extraction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Backend tính tương thích (compatibility / 호환성) trong di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. điều hướng (navigation / 내비게이션) di chuyển (migration / 마이그레이션)
 
 XML điều hướng (navigation / 내비게이션) thành phần (component / 컴포넌트) + Fragment có thể coexist với Compose. Bạn có thể migrate screen content trước, điều hướng (navigation / 내비게이션) đồ thị (graph / 그래프) sau.
 
 Nếu đổi điều hướng (navigation / 내비게이션) và UI cùng PR cho tính năng (feature / 기능) trọng yếu (critical / 중요), quay lui (rollback / 롤백)/gỡ lỗi (debug / 디버그) khó hơn. Separate di chuyển (migration / 마이그레이션) axis giảm rủi ro (risk / 위험).
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **24. Backend tính tương thích (compatibility / 호환성) trong di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **23. điều hướng (navigation / 내비게이션) di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Branch-by-abstraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Backend tính tương thích (compatibility / 호환성) trong di chuyển (migration / 마이그레이션)
 
 Máy khách (client / 클라이언트) di chuyển (migration / 마이그레이션) không được assume backend dừng hỗ trợ phiên bản (version / 버전) cũ. Mobile rollout chậm; nhiều phiên bản (version / 버전) coexist.
 
 Nếu new app đổi yêu cầu (request / 요청) lược đồ (schema / 스키마), backend cần tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우). Nếu cơ sở dữ liệu (database / 데이터베이스)/cục bộ (local / 로컬) pending payload đổi, new phiên bản (version / 버전) phải đọc pending thao tác (operation / 연산) cũ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **25. Branch-by-abstraction** tiếp nhận điểm tựa từ **24. Backend tính tương thích (compatibility / 호환성) trong di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Strangler mẫu (pattern / 패턴) cho tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Branch-by-abstraction
 
@@ -332,6 +380,8 @@ interface SearchEngine {
 OldSearchEngine và NewSearchEngine có thể A/B/nội bộ (internal / 내부) switch. Khi new ổn định, xóa old hiện thực (implementation / 구현) và flag.
 
 Điều này an toàn hơn branch kéo dài vài tháng với big-bang merge.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **26. Strangler mẫu (pattern / 패턴) cho tính năng (feature / 기능)** tiếp nhận điểm tựa từ **25. Branch-by-abstraction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. kiểm thử (test / 테스트) trước khi refactor hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Strangler mẫu (pattern / 패턴) cho tính năng (feature / 기능)
 
@@ -348,6 +398,8 @@ Sau đó dữ liệu (data / 데이터) tầng (layer / 계층) được migrate
 
 Chọn direction theo nơi rủi ro (risk / 위험)/chi phí (cost / 비용) cao nhất.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **27. kiểm thử (test / 테스트) trước khi refactor hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **26. Strangler mẫu (pattern / 패턴) cho tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. khả năng quan sát (observability / 관측 가능성) trong di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. kiểm thử (test / 테스트) trước khi refactor hành vi (behavior / 동작)
 
 Legacy mã (code / 코드) thường thiếu kiểm thử (test / 테스트). Trước extraction, thêm characterization kiểm thử (test / 테스트): kiểm thử (test / 테스트) hiện tại (current / 현재) hành vi (behavior / 동작) kể cả hành vi (behavior / 동작) hơi kỳ.
@@ -355,6 +407,8 @@ Legacy mã (code / 코드) thường thiếu kiểm thử (test / 테스트). Tr
 Sau đó refactor cấu trúc (structure / 구조) mà kiểm thử (test / 테스트) vẫn pass. Khi muốn sửa nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작), làm thay đổi (change / 변경) riêng với yêu cầu (requirement / 요구사항) rõ.
 
 Refactor và hành vi (behavior / 동작) thay đổi (change / 변경) cùng lúc làm khó biết regression đến từ đâu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **28. khả năng quan sát (observability / 관측 가능성) trong di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **27. kiểm thử (test / 테스트) trước khi refactor hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. cờ tính năng (feature flag / 기능 플래그) rollout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. khả năng quan sát (observability / 관측 가능성) trong di chuyển (migration / 마이그레이션)
 
@@ -369,11 +423,15 @@ Refactor và hành vi (behavior / 동작) thay đổi (change / 변경) cùng l�
 
 “mã (code / 코드) mới đẹp hơn” không đủ nếu môi trường vận hành (production / 운영 환경) chỉ số (metric / 지표) xấu hơn.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **29. cờ tính năng (feature flag / 기능 플래그) rollout** tiếp nhận điểm tựa từ **28. khả năng quan sát (observability / 관측 가능성) trong di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Definition of done của di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. cờ tính năng (feature flag / 기능 플래그) rollout
 
 New Compose screen có thể rollout 5% nội bộ (internal / 내부)/beta/môi trường vận hành (production / 운영 환경) cohort. Nếu chỉ số (metric / 지표) ổn, tăng dần. Nếu lỗi, disable flag mà không cần emergency nhị phân (binary / 이진) bản phát hành (release / 릴리스) tùy kiến trúc (architecture / 아키텍처).
 
 Flag cần cleanup sau di chuyển (migration / 마이그레이션).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **30. Definition of done của di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **29. cờ tính năng (feature flag / 기능 플래그) rollout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Anti-pattern: rewrite toàn bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Definition of done của di chuyển (migration / 마이그레이션)
 
@@ -389,11 +447,15 @@ Di chuyển (migration / 마이그레이션) chưa xong khi mã (code / 코드) 
 
 Nếu old/new sống mãi song song, maintenance chi phí (cost / 비용) tăng gấp đôi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **31. Anti-pattern: rewrite toàn bộ** tiếp nhận điểm tựa từ **30. Definition of done của di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Anti-pattern: kiến trúc (architecture / 아키텍처) astronaut** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Anti-pattern: rewrite toàn bộ
 
 Rewrite hấp dẫn vì mã (code / 코드) mới sạch trên whiteboard. Nhưng nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) ẩn trong legacy mã (code / 코드) thường chỉ lộ khi môi trường vận hành (production / 운영 환경) trường hợp biên (edge case / 경계 사례) xảy ra.
 
 Incremental di chuyển (migration / 마이그레이션) giữ vòng phản hồi (feedback loop / 피드백 루프) và cho phép ship giá trị (value / 값) trong khi modernize. Big-bang chỉ hợp lý khi hệ thống (system / 시스템) nhỏ, hành vi (behavior / 동작) hiểu đầy đủ và rewrite chi phí (cost / 비용)/rủi ro (risk / 위험) thực sự thấp.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **32. Anti-pattern: kiến trúc (architecture / 아키텍처) astronaut** tiếp nhận điểm tựa từ **31. Anti-pattern: rewrite toàn bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Migration roadmap mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 32. Anti-pattern: kiến trúc (architecture / 아키텍처) astronaut
 
@@ -401,9 +463,10 @@ Một legacy app đơn mô-đun (module / 모듈) không tự động cần 50 G
 
 Đo compile thời gian (time / 시간), quyền sở hữu (ownership / 소유권) xung đột (conflict / 충돌), kiểm thử (test / 테스트) isolation và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) trước/sau.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **33. Migration roadmap mẫu** tiếp nhận điểm tựa từ **32. Anti-pattern: kiến trúc (architecture / 아키텍처) astronaut** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. cấp cao (senior / 시니어) notes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. Migration roadmap mẫu
 Phần này nối mạch Android vừa học với “33. Migration roadmap mẫu”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```text
 Phase 0: inventory + metrics + critical characterization tests
@@ -419,10 +482,12 @@ Phase 8: delete adapters/old dependencies/flags
 
 Roadmap phải thay đổi theo dự án (project / 프로젝트); đây là lập luận (reasoning / 추론) template, không phải mandatory thứ tự (order / 순서).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Legacy Android di chuyển (migration / 마이그레이션) và Modularization**, **34. cấp cao (senior / 시니어) notes** tiếp nhận điểm tựa từ **33. Migration roadmap mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 34. cấp cao (senior / 시니어) notes
 
 Legacy di chuyển (migration / 마이그레이션) là rủi ro (risk / 위험) management. Người cấp cao (senior / 시니어) không chỉ biết API mới; họ biết **cách thay hệ thống đang chạy mà không làm mất nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작)**.
 
 Mỗi di chuyển (migration / 마이그레이션) step nên nhỏ đủ để rà soát (review / 검토), kiểm thử (test / 테스트), rollout và quay lui (rollback / 롤백). Tạo seam trước, cầu nối (bridge / 브리지) thời gian tồn tại (lifetime / 수명)/cancellation đúng, đo môi trường vận hành (production / 운영 환경) chỉ số (metric / 지표), và xóa cầu nối (bridge / 브리지) khi hoàn tất. Interop là công cụ tạm thời; ranh giới (boundary / 경계) rõ ràng mới là tài sản lâu dài.
 
-> **Bàn giao:** Sau **34. cấp cao (senior / 시니어) notes**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **34. cấp cao (senior / 시니어) notes**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

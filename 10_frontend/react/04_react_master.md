@@ -1,7 +1,6 @@
 # React Master ghi chú (note / 노트) — Master
 
-> **Mạch đọc:** Đọc **React Master ghi chú (note / 노트) — Master** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. phiên bản (version / 버전) map React 15 → 19.3 và cách đọc phiên bản (version / 버전) đúng** sang **phiên bản (version / 버전) ma trận (matrix / 행렬) dùng khi rà soát (review / 검토) kiến trúc (architecture / 아키텍처)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Master**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. phiên bản (version / 버전) map React 15 → 19.3 và cách đọc phiên bản (version / 버전) đúng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1A. Timeline chi tiết React 15 → 19 để định vị API** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Mục tiêu của mức (level / 수준) Master không phải “thuộc mọi API”, mà là hiểu sâu invariants của React, trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계), máy chủ (server / 서버) kiến trúc (architecture / 아키텍처), thư viện (library / 라이브러리) thiết kế (design / 설계), di chuyển (migration / 마이그레이션), khả năng quan sát (observability / 관측 가능성), bảo mật (security / 보안) và cách ra quyết định khi ecosystem tiếp tục thay đổi.
 
@@ -39,6 +38,8 @@ React docs hiện hành bám latest, trong khi enterprise codebase có thể v�
 | React trình biên dịch (compiler / 컴파일러) stable | trình biên dịch (compiler / 컴파일러) 1.0 | Tooling phiên bản (version / 버전) độc lập React; không suy ra từ `react` gói (package / 패키지) phiên bản (version / 버전). |
 
 Một nguyên tắc tốt khi rà soát (review / 검토) PR là yêu cầu nhà phát triển (developer / 개발자) nói rõ “API này xuất hiện từ phiên bản (version / 버전) nào và gói (package / 패키지) nào cung cấp”, thay vì chỉ nói “React hỗ trợ”.
+
+> **Chuyển mạch:** Version map đặt API vào mốc release và compatibility boundary; timeline 15 → 19 giải thích behavior nào thay đổi qua từng era. Compiler 1.0 tiếp theo được đọc trên timeline đó, không như một feature rời.
 
 ## 1A. Timeline chi tiết React 15 → 19 để định vị API
 
@@ -103,6 +104,8 @@ Actions, `use`, `useActionState`, `useOptimistic`, form Actions, ref-as-prop và
 
 Các minor này tiếp tục mở rộng máy chủ (server / 서버)/RSC/prerender, rồi thêm `Activity`, `useEffectEvent`, hiệu năng (performance / 성능)/máy chủ (server / 서버) capabilities và đến 19.3 có stable View chuyển tiếp (transition / 전이) tích hợp (integration / 통합), Fragment refs cùng các năng lực (capability / 역량) React DOM mới. Vì tính năng (feature / 기능) có thể xuất hiện ở minor, thư viện (library / 라이브러리) author phải khai minimum peer phiên bản (version / 버전) chính xác.
 
+> **Chuyển mạch:** Timeline xác định runtime/compiler assumptions; Compiler 1.0 đặt optimization vào pipeline cụ thể. Mental model tiếp theo giải thích khi nào compiler được phép thay đổi code mà vẫn giữ semantics.
+
 ## 2. React trình biên dịch (compiler / 컴파일러) 1.0
 
 React trình biên dịch (compiler / 컴파일러) 1.0 đã stable. Đây là build-time optimizer hiểu Rules of React và có thể tự động memoize thành phần (component / 컴포넌트)/giá trị (value / 값) để giảm nhu cầu tự viết `useMemo`, `useCallback` và `memo` trong nhiều trường hợp.
@@ -114,6 +117,8 @@ Trình biên dịch (compiler / 컴파일러) hỗ trợ React 17, 18 và 19 v�
 > ### phiên bản (version / 버전) ghi chú (note / 노트) — React trình biên dịch (compiler / 컴파일러) không đi cùng số phiên bản (version / 버전) React
 >
 > Trước khi stable, các gói (package / 패키지)/trình biên dịch (compiler / 컴파일러) prerelease từng có cách đánh phiên bản (version / 버전) dễ gây nhầm với React 19.x. Từ trình biên dịch (compiler / 컴파일러) 1.0, hãy xem trình biên dịch (compiler / 컴파일러) là toolchain có vòng đời (lifecycle / 생명주기) riêng. Khi nâng `react` từ 19.2 lên 19.3 không có nghĩa bạn tự động “nâng trình biên dịch (compiler / 컴파일러)”; và ngược lại, nâng trình biên dịch (compiler / 컴파일러) phải kiểm tra tính tương thích (compatibility / 호환성)/cấu hình (configuration / 구성) riêng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **3. trình biên dịch (compiler / 컴파일러) mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **2. React trình biên dịch (compiler / 컴파일러) 1.0** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **4. Rules of React là trình biên dịch (compiler / 컴파일러) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. trình biên dịch (compiler / 컴파일러) mô hình tư duy (mental model / 사고 모델)
 
@@ -132,6 +137,8 @@ const Child = memo(...);
 Trình biên dịch (compiler / 컴파일러) có thể phân tích phụ thuộc (dependency / 의존성) và tự tạo memoization phù hợp. Điều này làm thay đổi tối ưu hóa (optimization / 최적화) idiom: mã (code / 코드) mới nên được viết pure, đơn giản và đúng Rules of React trước, rồi để trình biên dịch (compiler / 컴파일러) tối ưu.
 
 Manual memoization vẫn hợp lệ khi cần định danh (identity / 식별자) đặc tả hợp đồng (contract / 계약) cụ thể, tác động (effect / 효과) phụ thuộc (dependency / 의존성) stability, hoặc khi profiler cho thấy trình biên dịch (compiler / 컴파일러) không tối ưu đúng bottleneck. Không xóa hàng loạt `useMemo`/`useCallback` trong mã (code / 코드) cũ chỉ vì bật trình biên dịch (compiler / 컴파일러); existing memoization có thể ảnh hưởng hành vi (behavior / 동작) hoặc đầu ra (output / 출력) compilation.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **4. Rules of React là trình biên dịch (compiler / 컴파일러) đặc tả hợp đồng (contract / 계약)** gom các mảnh từ **3. trình biên dịch (compiler / 컴파일러) mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **5. Manual memoization trong thời đại trình biên dịch (compiler / 컴파일러)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Rules of React là trình biên dịch (compiler / 컴파일러) đặc tả hợp đồng (contract / 계약)
 
@@ -164,6 +171,8 @@ Hoặc dùng non-mutating API khi môi trường (environment / 환경) hỗ tr�
 cart.toSorted(comparePrice)
 ```
 
+> **Chuyển mạch:** Rules of React là contract mà compiler dựa vào; manual memoization vì vậy phải được xem như compatibility decision, không phải mặc định tối ưu. Adoption strategy tiếp theo cân compiler coverage với risk migration.
+
 ## 5. Manual memoization trong thời đại trình biên dịch (compiler / 컴파일러)
 
 Manual memoization vẫn có chỗ đứng.
@@ -171,6 +180,8 @@ Manual memoization vẫn có chỗ đứng.
 Một bên ngoài (external / 외부) tích hợp (integration / 통합) có thể yêu cầu callback định danh (identity / 식별자) ổn định. Một tác động (effect / 효과) có thể cần đối tượng (object / 객체)/hàm (function / 함수) ổn định để không restart synchronization. Một phép tính rất nặng có thể cần bộ nhớ đệm (cache / 캐시) mà profiler xác nhận. thư viện (library / 라이브러리) có thể chạy trong app không bật trình biên dịch (compiler / 컴파일러) nên vẫn cần hiệu năng (performance / 성능) chiến lược (strategy / 전략) riêng.
 
 Cấp cao (senior / 시니어) mã (code / 코드) không được đánh giá bằng số lượng `useMemo`; thường mã (code / 코드) càng đơn giản càng tốt nếu trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) đã xử lý phần tối ưu.
+
+> **Chuyển mạch:** Memoization policy cho biết chỗ nào đang phụ thuộc optimization thủ công; adoption strategy chọn phạm vi rollout và rollback. Directives tiếp theo làm explicit boundary cho compilation.
 
 ## 6. Chiến lược adopt trình biên dịch (compiler / 컴파일러)
 
@@ -186,11 +197,15 @@ Với codebase lớn, adoption nên incremental:
 
 Không nên bật trình biên dịch (compiler / 컴파일러) rồi bỏ qua warning. Một số mã (code / 코드) có thể bị skip; mục tiêu là codebase tuân Rules of React, không chỉ “bản dựng (build / 빌드) thành công”.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **6. Chiến lược adopt trình biên dịch (compiler / 컴파일러)** đã nêu tiêu chí phân biệt, còn **7. trình biên dịch (compiler / 컴파일러) directives và compilation ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Scheduling và priority ở mức ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. trình biên dịch (compiler / 컴파일러) directives và compilation ranh giới (boundary / 경계)
 
 React trình biên dịch (compiler / 컴파일러) có directives/cấu hình (configuration / 구성) để điều khiển compilation trong các trường hợp cần thiết. Đây là exception cơ chế (mechanism / 메커니즘), không phải default coding style. Nếu codebase phải rải directive tắt trình biên dịch (compiler / 컴파일러) khắp nơi, thường cần refactor lô-gic (logic / 논리) vi phạm Rules of React hoặc tích hợp (integration / 통합) ranh giới (boundary / 경계) chưa đúng.
 
 Vì directives có thể tiến hóa, luôn đọc tham chiếu (reference / 참조) đúng trình biên dịch (compiler / 컴파일러) phiên bản (version / 버전) thay vì bản sao (copy / 복사) cấu hình (config / 설정) cũ từ blog.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **7. trình biên dịch (compiler / 컴파일러) directives và compilation ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **8. Scheduling và priority ở mức ứng dụng (application / 애플리케이션)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Suspense kiến trúc (architecture / 아키텍처) và reveal chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Scheduling và priority ở mức ứng dụng (application / 애플리케이션)
 
@@ -204,6 +219,8 @@ Non-urgent: render result lớn, đổi tab nặng, background refresh
 ```
 
 Một lỗi là biến mọi cập nhật (update / 업데이트) thành chuyển tiếp (transition / 전이). Nếu người dùng (user / 사용자) bấm toggle mà visual phản hồi (feedback / 피드백) bị trì hoãn, UX xấu. Priority là ngữ nghĩa (semantic / 의미적) UX, không chỉ hiệu năng (performance / 성능) knob.
+
+> **Chuyển mạch:** Scheduling/priority quyết định khi nào work được xử lý; Suspense tiếp theo quyết định reveal boundary, rồi streaming đưa boundary đó qua network.
 
 ## 9. Suspense kiến trúc (architecture / 아키텍처) và reveal chiến lược (strategy / 전략)
 
@@ -225,11 +242,15 @@ Suspense ranh giới (boundary / 경계) nên phản ánh “reveal đơn vị (
 
 Nếu sản phẩm (product / 제품) trọng yếu (critical / 중요) còn reviews secondary, hai ranh giới (boundary / 경계) riêng cho phép progressive reveal. ranh giới (boundary / 경계) quá cao khiến toàn màn hình đổi spinner; ranh giới (boundary / 경계) quá nhỏ tạo loading rời rạc. Skeleton nên giữ bố cục (layout / 레이아웃) để tránh CLS.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **10. Streaming kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **9. Suspense kiến trúc (architecture / 아키텍처) và reveal chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Partial pre-rendering và prerender/resume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Streaming kiến trúc (architecture / 아키텍처)
 
 SSR streaming gửi phần HTML sẵn sàng trước thay vì chờ toàn cây (tree / 트리). nút (node / 노드) thường dùng `renderToPipeableStream`; Web Streams môi trường (environment / 환경) dùng `renderToReadableStream`. React 19.x còn có nhóm prerender/resume cho kiến trúc (architecture / 아키텍처) máy chủ (server / 서버) phức tạp hơn.
 
 Tự xây SSR khung phần mềm (framework / 프레임워크) đòi hỏi xử lý asset injection, abort, lỗi (error / 오류) status, CSP nonce, hydration dữ liệu (data / 데이터), bộ nhớ đệm (cache / 캐시), routing và triển khai (deployment / 배포). ứng dụng (application / 애플리케이션) nhóm (team / 팀) thường nên dùng khung phần mềm (framework / 프레임워크) thay vì tự viết toàn bộ giao thức (protocol / 프로토콜).
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **11. Partial pre-rendering và prerender/resume** tiếp nhận điểm tựa từ **10. Streaming kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. React máy chủ (server / 서버) Components kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Partial pre-rendering và prerender/resume
 
@@ -249,6 +270,8 @@ data nào tuyệt đối không được cache cross-user?
 
 Nếu không trả lời rõ bộ nhớ đệm (cache / 캐시) key và phạm vi (scope / 범위), chưa nên bộ nhớ đệm (cache / 캐시).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **12. React máy chủ (server / 서버) Components kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **11. Partial pre-rendering và prerender/resume** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. RSC payload và máy khách (client / 클라이언트) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. React máy chủ (server / 서버) Components kiến trúc (architecture / 아키텍처)
 
 RSC chuyển một phần thành phần (component / 컴포넌트) thực thi (execution / 실행) sang máy chủ (server / 서버)/bản dựng (build / 빌드) môi trường (environment / 환경) và chỉ gửi máy khách (client / 클라이언트) những gì cần cho interactivity.
@@ -259,11 +282,15 @@ Chi phí: mô hình tư duy (mental model / 사고 모델) hai môi trường; s
 
 Không chọn RSC chỉ vì “mới”. Chọn khi sản phẩm (product / 제품) và khung phần mềm (framework / 프레임워크) thực sự hưởng lợi.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **12. React máy chủ (server / 서버) Components kiến trúc (architecture / 아키텍처)** đã nêu tiêu chí phân biệt, còn **13. RSC payload và máy khách (client / 클라이언트) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. bộ nhớ đệm (cache / 캐시)/dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) trong RSC/full-stack React** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. RSC payload và máy khách (client / 클라이언트) ranh giới (boundary / 경계)
 
 Máy chủ (server / 서버) Components không chỉ “kết xuất (render / 렌더링) thành HTML”. khung phần mềm (framework / 프레임워크) sử dụng RSC giao thức (protocol / 프로토콜)/payload để biểu diễn rendered máy chủ (server / 서버) cây (tree / 트리), references tới máy khách (client / 클라이언트) Components và dữ liệu serializable. SSR có thể phối hợp để tạo initial HTML.
 
 `"use client"` tạo máy khách (client / 클라이언트) ranh giới mô-đun (module boundary / 모듈 경계). Props từ máy chủ (server / 서버) đi qua máy khách (client / 클라이언트) thành phần (component / 컴포넌트) ranh giới (boundary / 경계) phải serializable theo đặc tả hợp đồng (contract / 계약) hỗ trợ. Không truyền tùy tiện lớp (class / 클래스) instance, DB liên kết (connection / 연결) hoặc hàm (function / 함수) thường. máy chủ (server / 서버) hàm (function / 함수) tham chiếu (reference / 참조) là trường hợp giao thức (protocol / 프로토콜) xử lý riêng.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **13. RSC payload và máy khách (client / 클라이언트) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **14. bộ nhớ đệm (cache / 캐시)/dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) trong RSC/full-stack React** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. bảo mật (security / 보안) cho RSC và máy chủ (server / 서버) Functions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. bộ nhớ đệm (cache / 캐시)/dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) trong RSC/full-stack React
 
@@ -281,6 +308,8 @@ client query cache
 Sai lầm nghiêm trọng là bộ nhớ đệm (cache / 캐시) toàn cục (global / 전역) dữ liệu theo người dùng (user / 사용자) nhưng key không chứa người dùng (user / 사용자) định danh (identity / 식별자), dẫn tới dữ liệu (data / 데이터) leak. Mỗi bộ nhớ đệm (cache / 캐시) phải có phạm vi (scope / 범위), key, thời gian tồn tại (lifetime / 수명) và vô hiệu hóa (invalidation / 무효화) rõ.
 
 Một idiom tốt: “Nếu không mô tả được bộ nhớ đệm (cache / 캐시) key bằng một câu hoàn chỉnh, chưa nên bộ nhớ đệm (cache / 캐시).”
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **14. bộ nhớ đệm (cache / 캐시)/dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) trong RSC/full-stack React** nêu điều cần giải thích; **15. bảo mật (security / 보안) cho RSC và máy chủ (server / 서버) Functions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Trusted Types và XSS ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. bảo mật (security / 보안) cho RSC và máy chủ (server / 서버) Functions
 
@@ -307,11 +336,15 @@ Không tin hidden trường dữ liệu (field / 필드), role gửi từ máy k
 >
 > Các advisory React máy chủ (server / 서버) Components cuối năm 2025 cho thấy một major/minor label như `19.1` không đủ để đánh giá an toàn; fix đã được backport qua nhiều patch branch và một số bản fix ban đầu còn tiếp tục được cập nhật. Với RSC, quy trình bản phát hành (release / 릴리스) phải bao gồm phụ thuộc (dependency / 의존성)/bảo mật (security / 보안) monitoring và upgrade theo advisory chính thức của React/khung phần mềm (framework / 프레임워크). Baseline 19.3 của tài liệu giúp học API mới nhất, nhưng môi trường vận hành (production / 운영 환경) vẫn phải theo patch bản phát hành (release / 릴리스) hiện hành thay vì “đóng băng vì đã ở 19.3”.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **15. bảo mật (security / 보안) cho RSC và máy chủ (server / 서버) Functions** đã nêu tiêu chí phân biệt, còn **16. Trusted Types và XSS ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Large-scale trạng thái (state / 상태) kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Trusted Types và XSS ranh giới (boundary / 경계)
 
 React escape văn bản (text / 텍스트) mặc định nhưng XSS vẫn có thể xuất hiện qua `dangerouslySetInnerHTML`, URL nguy hiểm, third-party DOM thư viện (library / 라이브러리), raw HTML renderer hoặc máy chủ (server / 서버) đầu ra (output / 출력) không sanitize.
 
 React 19.3 có cải tiến liên quan Trusted Types. Trusted Types + CSP + sanitization là defense-in-depth; không nên coi React escaping là lớp bảo vệ toàn diện.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **16. Trusted Types và XSS ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **17. Large-scale trạng thái (state / 상태) kiến trúc (architecture / 아키텍처)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. máy trạng thái (state machine / 상태 머신) và reducer thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Large-scale trạng thái (state / 상태) kiến trúc (architecture / 아키텍처)
 
@@ -331,6 +364,8 @@ Cross-feature client state
 ```
 
 Giant toàn cục (global / 전역) store chứa tuyến (route / 경로), API bộ nhớ đệm (cache / 캐시), modal, form draft, người dùng (user / 사용자) profile và mọi thực thể (entity / 엔터티) trở thành coupling hub. Maturity kiến trúc (architecture / 아키텍처) thể hiện ở khả năng không globalize dữ liệu không cần toàn cục (global / 전역).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **18. máy trạng thái (state machine / 상태 머신) và reducer thiết kế (design / 설계)** tiếp nhận điểm tựa từ **17. Large-scale trạng thái (state / 상태) kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Event-driven UI kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. máy trạng thái (state machine / 상태 머신) và reducer thiết kế (design / 설계)
 
@@ -356,6 +391,8 @@ type State =
 
 Workflow phức tạp có thể dùng máy trạng thái (state machine / 상태 머신). máy trạng thái (state machine / 상태 머신) phù hợp khi chuyển tiếp (transition / 전이) quy tắc (rule / 규칙) chặt, nhiều side tác động (effect / 효과) và cần mô hình (model / 모델) rõ. Không dùng cho counter đơn giản.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **19. Event-driven UI kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **18. máy trạng thái (state machine / 상태 머신) và reducer thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. thiết kế (design / 설계) hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Event-driven UI kiến trúc (architecture / 아키텍처)
 
 Event-driven mô hình (model / 모델) tách “điều gì xảy ra” khỏi “trạng thái (state / 상태) thay đổi ra sao”:
@@ -368,6 +405,8 @@ dispatch({
 ```
 
 Reducer/máy trạng thái (state machine / 상태 머신) xử lý chuyển tiếp (transition / 전이); tác động (effect / 효과)/dịch vụ (service / 서비스) tầng (layer / 계층) xử lý I/O. mẫu (pattern / 패턴) này hữu ích ở workflow enterprise nhưng không nên tự xây khung phần mềm (framework / 프레임워크) sự kiện (event / 이벤트) bus riêng nếu thư viện (library / 라이브러리) hiện có đã giải quyết tốt.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **20. thiết kế (design / 설계) hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **19. Event-driven UI kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. thư viện (library / 라이브러리) authoring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. thiết kế (design / 설계) hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처)
 
@@ -386,11 +425,15 @@ versioning
 
 Thành phần nguyên thủy (primitive / 기본 요소) như Button/đầu vào (input / 입력)/Dialog phải rất ổn định vì hàng trăm bên tiêu thụ (consumer / 소비자) phụ thuộc. API quá mở làm phá consistency; API quá đóng làm nhóm (team / 팀) fork thành phần (component / 컴포넌트). Headless thành phần nguyên thủy (primitive / 기본 요소) + đơn vị từ (token / 토큰)/variant tầng (layer / 계층) thường cân bằng tốt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **21. thư viện (library / 라이브러리) authoring** tiếp nhận điểm tựa từ **20. thiết kế (design / 설계) hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. gói (package / 패키지) exports và peer dependencies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. thư viện (library / 라이브러리) authoring
 
 React thư viện (library / 라이브러리) phải cân nhắc công khai (public / 공개) kiểu (type / 타입) surface, peer phụ thuộc (dependency / 의존성), SSR tính tương thích (compatibility / 호환성), ESM/CJS chiến lược (strategy / 전략), cây (tree / 트리) shaking, side effects, styling injection, khả năng tiếp cận (accessibility / 접근성), ref API, trình biên dịch (compiler / 컴파일러) tính tương thích (compatibility / 호환성) và phiên bản (version / 버전) hỗ trợ (support / 지원).
 
 Không nên bundle React vào thư viện (library / 라이브러리) thông thường; React thường là peer phụ thuộc (dependency / 의존성) để tránh duplicate React và Hook thất bại (failure / 실패). Không truy cập `window` ở mô-đun (module / 모듈) top mức (level / 수준) nếu thư viện (library / 라이브러리) cần SSR.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **22. gói (package / 패키지) exports và peer dependencies** tiếp nhận điểm tựa từ **21. thư viện (library / 라이브러리) authoring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. React phiên bản (version / 버전) di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. gói (package / 패키지) exports và peer dependencies
 
@@ -413,6 +456,8 @@ Ví dụ conceptual:
 ```
 
 Nếu dùng API 19.3-only, minimum peer phiên bản (version / 버전) phải phản ánh điều đó. Dual ESM/CJS cần kiểm thử (test / 테스트) trên bundler/nút (node / 노드)/kiểm thử (test / 테스트) runner thật; gói (package / 패키지) resolution khác nhau giữa toolchains.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **23. React phiên bản (version / 버전) di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **22. gói (package / 패키지) exports và peer dependencies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23A. di chuyển (migration / 마이그레이션) là behavior-preserving transformation, không phải đổi cú pháp (syntax / 문법) hàng loạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. React phiên bản (version / 버전) di chuyển (migration / 마이그레이션)
 
@@ -442,6 +487,8 @@ Một di chuyển (migration / 마이그레이션) không nên được đánh g
 
 Đối với khung phần mềm (framework / 프레임워크) RSC, không force một React minor/patch mới hơn khung phần mềm (framework / 프레임워크) hỗ trợ (support / 지원) ma trận (matrix / 행렬). khung phần mềm (framework / 프레임워크) có thể pin hoặc thử nghiệm một bản dựng (build / 빌드) React cụ thể để đồng bộ giao thức (protocol / 프로토콜)/máy chủ (server / 서버) thời gian chạy (runtime / 런타임).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **23A. di chuyển (migration / 마이그레이션) là behavior-preserving transformation, không phải đổi cú pháp (syntax / 문법) hàng loạt** tiếp nhận điểm tựa từ **23. React phiên bản (version / 버전) di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Legacy lớp (class / 클래스) thành phần (component / 컴포넌트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23A. di chuyển (migration / 마이그레이션) là behavior-preserving transformation, không phải đổi cú pháp (syntax / 문법) hàng loạt
 
 Một di chuyển (migration / 마이그레이션) React tốt giữ hành vi (behavior / 동작) và quyền sở hữu (ownership / 소유권) ổn định trước khi đổi lớp trừu tượng (abstraction / 추상화). Với lớp (class / 클래스) mã (code / 코드), hãy inventory trạng thái (state / 상태), derived values, subscriptions, DOM refs, async requests, lỗi (error / 오류) boundaries và công khai (public / 공개) thành phần (component / 컴포넌트) đặc tả hợp đồng (contract / 계약). Sau đó tách lô-gic (logic / 논리) theo intent: kết xuất (render / 렌더링) derivation ở kết xuất (render / 렌더링), user-caused công việc (work / 작업) ở sự kiện (event / 이벤트) handler, bên ngoài (external / 외부) synchronization ở tác động (effect / 효과), complex chuyển tiếp trạng thái (state transition / 상태 전이) ở reducer, dùng chung (shared / 공유) cross-tree phụ thuộc (dependency / 의존성) ở ngữ cảnh (context / 맥락)/store.
@@ -449,6 +496,8 @@ Một di chuyển (migration / 마이그레이션) React tốt giữ hành vi (b
 Không cần đổi toàn bộ cây (tree / 트리) trong một PR. Leaf thành phần (component / 컴포넌트) ít phụ thuộc (dependency / 의존성) là điểm bắt đầu tốt; wrapper/HOC có thể tiếp tục bao quanh hàm (function / 함수) thành phần (component / 컴포넌트) mới. lỗi (error / 오류) ranh giới (boundary / 경계) lớp (class / 클래스) có thể được giữ lại nếu đang hoạt động ổn. Snapshot/tích hợp (integration / 통합)/E2E tests dùng làm an toàn (safety / 안전) net cho hành vi (behavior / 동작), còn codemod chỉ giải quyết mechanical API changes.
 
 Khi nâng phiên bản (version / 버전) đồng thời với refactor thành phần (component / 컴포넌트) mô hình (model / 모델), rủi ro tăng vì khó phân biệt lỗi do hành vi thời gian chạy (runtime behavior / 런타임 동작) thay đổi (change / 변경) hay do rewrite. Với codebase lớn, tách **phiên bản (version / 버전) di chuyển (migration / 마이그레이션)**, **deprecated API removal** và **kiến trúc (architecture / 아키텍처) refactor** thành các bước quan sát được thường an toàn hơn.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **24. Legacy lớp (class / 클래스) thành phần (component / 컴포넌트)** tiếp nhận điểm tựa từ **23A. di chuyển (migration / 마이그레이션) là behavior-preserving transformation, không phải đổi cú pháp (syntax / 문법) hàng loạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24A. Legacy React tham chiếu (reference / 참조) — đủ để đọc dự án (project / 프로젝트) React 15–18** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Legacy lớp (class / 클래스) thành phần (component / 컴포넌트)
 
@@ -483,6 +532,8 @@ class Counter extends React.Component {
 Các API cần biết để đọc mã (code / 코드) cũ: `props`, `state`, `setState`, `render`, `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`, `getDerivedStateFromProps`, `getSnapshotBeforeUpdate`, `componentDidCatch`.
 
 Không migrate vòng đời (lifecycle / 생명주기) sang `useEffect` theo ánh xạ (mapping / 매핑) một-một máy móc. Hook mô hình (model / 모델) dựa trên synchronization và luồng dữ liệu (data flow / 데이터 흐름) khác vòng đời (lifecycle / 생명주기) mô hình (model / 모델) của lớp (class / 클래스).
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, sau nội dung của **24. Legacy lớp (class / 클래스) thành phần (component / 컴포넌트)**, **24A. Legacy React tham chiếu (reference / 참조) — đủ để đọc dự án (project / 프로젝트) React 15–18** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **25. Legacy APIs và deprecation mindset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24A. Legacy React tham chiếu (reference / 참조) — đủ để đọc dự án (project / 프로젝트) React 15–18
 
@@ -540,7 +591,6 @@ Yêu cầu thành phần (component / 컴포넌트) re-render dù React không �
 ### Class lifecycle reference
 Phần này nối mạch bài học với “Class lifecycle reference”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```text
 constructor
 static getDerivedStateFromProps
@@ -582,7 +632,6 @@ Các tên không có `UNSAFE_` từng tồn tại trong mã (code / 코드) cũ 
 ### Ref APIs theo thời đại
 Phần này nối mạch bài học với “Ref APIs theo thời đại”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```text
 string ref
 → callback ref
@@ -597,7 +646,6 @@ Không phải bước sau luôn “xóa” bước trước. Callback ref vẫn 
 ### ReactDOM legacy root APIs
 Phần này nối mạch bài học với “ReactDOM legacy root APIs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 ReactDOM.render(element, container);
 ReactDOM.hydrate(element, container);
@@ -609,7 +657,6 @@ Các API này là dấu hiệu rõ nhất của codebase pre-modern gốc (root 
 
 ### Legacy Context
 Phần này nối mạch bài học với “Legacy Context”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```text
 childContextTypes
@@ -631,17 +678,23 @@ Mixins → HOC → kết xuất (render / 렌더링) props → Custom Hooks là 
 
 Enzyme/shallow-rendering-style kiểm thử (test / 테스트) từng rất phổ biến vì lớp (class / 클래스) thành phần (component / 컴포넌트) và hiện thực (implementation / 구현) detail dễ inspect. React hiện đại khuyến nghị kiểm thử (test / 테스트) hành vi (behavior / 동작) qua DOM/bản địa (native / 네이티브) môi trường (environment / 환경) hơn. Khi migrate, đừng chỉ đổi kiểm thử (test / 테스트) API; hãy chuyển assertion từ trạng thái nội bộ (internal state / 내부 상태)/instance phương thức (method / 메서드) sang đầu ra (output / 출력) và người dùng (user / 사용자) tương tác (interaction / 상호작용) khi có thể.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **25. Legacy APIs và deprecation mindset** tiếp nhận điểm tựa từ **24A. Legacy React tham chiếu (reference / 참조) — đủ để đọc dự án (project / 프로젝트) React 15–18** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Hydration at quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Legacy APIs và deprecation mindset
 
 Mã (code / 코드) cũ có thể chứa string refs, old ngữ cảnh (context / 맥락), `findDOMNode`, legacy gốc (root / 루트) hoặc vòng đời (lifecycle / 생명주기) `UNSAFE_...`. Không chỉ thay tên API; cần hiểu vì sao API cũ xung đột với concurrent kiến trúc (architecture / 아키텍처), encapsulation hoặc new rendering mô hình (model / 모델).
 
 Di chuyển (migration / 마이그레이션) tốt sửa mô hình tư duy (mental model / 사고 모델), không chỉ làm warning biến mất.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **26. Hydration at quy mô (scale / 규모)** tiếp nhận điểm tựa từ **25. Legacy APIs và deprecation mindset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. hiệu năng (performance / 성능) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Hydration at quy mô (scale / 규모)
 
 Hydration chi phí (cost / 비용) lớn nếu page có quá nhiều máy khách (client / 클라이언트) Components. Các chiến lược gồm giảm máy khách (client / 클라이언트) ranh giới (boundary / 경계), máy chủ (server / 서버) kết xuất (render / 렌더링) static content, mã (code / 코드) split, defer non-critical tương tác (interaction / 상호작용), stream, tránh gốc (root / 루트) provider quá lớn và không serialize dữ liệu (data / 데이터) khổng lồ.
 
 Hydration mismatch nên được monitor ở môi trường vận hành (production / 운영 환경). Lỗi timezone/locale/ngẫu nhiên có thể rất khó tái hiện cục bộ (local / 로컬).
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **27. hiệu năng (performance / 성능) ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **26. Hydration at quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. tương tác (interaction / 상호작용) hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. hiệu năng (performance / 성능) ngân sách (budget / 예산)
 
@@ -661,11 +714,15 @@ React commit duration
 
 Ngân sách (budget / 예산) phải dựa trên thiết bị (device / 장치)/mạng (network / 네트워크) mục tiêu (target / 대상) thật. Máy desktop mạnh của nhà phát triển (developer / 개발자) không đại diện người dùng (user / 사용자) mobile mid-range.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **28. tương tác (interaction / 상호작용) hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **27. hiệu năng (performance / 성능) ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. bộ nhớ (memory / 메모리) leak và tài nguyên (resource / 자원) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. tương tác (interaction / 상호작용) hiệu năng (performance / 성능)
 
 INP/tương tác (interaction / 상호작용) độ trễ (latency / 지연 시간) có thể xấu khi sự kiện (event / 이벤트) kích hoạt JS/kết xuất (render / 렌더링)/bố cục (layout / 레이아웃) dài. Các hướng xử lý: giảm công việc (work / 작업) trong sự kiện (event / 이벤트); chuyển non-urgent công việc (work / 작업) sang chuyển tiếp (transition / 전이); virtualize; split computation; tránh bố cục (layout / 레이아웃) thrash; dùng Web Worker nếu CPU-heavy thích hợp; tối ưu thuật toán (algorithm / 알고리즘) trước memo.
 
 React tối ưu hóa (optimization / 최적화) không thay algorithmic tối ưu hóa (optimization / 최적화).
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **28. tương tác (interaction / 상호작용) hiệu năng (performance / 성능)** nêu điều cần giải thích; **29. bộ nhớ (memory / 메모리) leak và tài nguyên (resource / 자원) vòng đời (lifecycle / 생명주기)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. bộ nhớ (memory / 메모리) leak và tài nguyên (resource / 자원) vòng đời (lifecycle / 생명주기)
 
@@ -682,11 +739,15 @@ useEffect(() => {
 
 Cleanup phải đối xứng setup. Abort yêu cầu (request / 요청) cũng giảm tài nguyên (resource / 자원)/mạng (network / 네트워크) lãng phí khi phù hợp.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **29. bộ nhớ (memory / 메모리) leak và tài nguyên (resource / 자원) vòng đời (lifecycle / 생명주기)** nêu điều cần giải thích; **30. khả năng quan sát (observability / 관측 가능성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **31. Testing pyramid ở quy mô (scale / 규모) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. khả năng quan sát (observability / 관측 가능성)
 
 Môi trường vận hành (production / 운영 환경) React cần lỗi (error / 오류) tracking và hiệu năng (performance / 성능) telemetry. Một lỗi (error / 오류) sự kiện (event / 이벤트) hữu ích có thể chứa bản phát hành (release / 릴리스) phiên bản (version / 버전), tuyến (route / 경로), tính năng (feature / 기능), pseudonymous session/người dùng (user / 사용자) identifier nếu chính sách (policy / 정책) cho phép, correlation/yêu cầu (request / 요청) ID, thành phần (component / 컴포넌트) ranh giới (boundary / 경계), ngăn xếp (stack / 스택), trình duyệt (browser / 브라우저)/thiết bị (device / 장치) và mạng (network / 네트워크) ngữ cảnh (context / 맥락).
 
 Không log đơn vị từ (token / 토큰), password, PII nhạy cảm hoặc toàn bộ form payload. lỗi (error / 오류) ranh giới (boundary / 경계) nên report unexpected kết xuất (render / 렌더링) lỗi (error / 오류) nhưng tránh duplicate flood.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **31. Testing pyramid ở quy mô (scale / 규모) lớn** tiếp nhận điểm tựa từ **30. khả năng quan sát (observability / 관측 가능성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. khả năng tiếp cận (accessibility / 접근성) quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Testing pyramid ở quy mô (scale / 규모) lớn
 
@@ -705,11 +766,15 @@ A11y        -> automated + manual
 
 Mục tiêu là confidence/thời gian (time / 시간) ratio, không phải số kiểm thử (test / 테스트) tối đa.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **32. khả năng tiếp cận (accessibility / 접근성) quản trị (governance / 거버넌스)** tiếp nhận điểm tựa từ **31. Testing pyramid ở quy mô (scale / 규모) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Internationalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. khả năng tiếp cận (accessibility / 접근성) quản trị (governance / 거버넌스)
 
 Ở organization quy mô (scale / 규모), khả năng tiếp cận (accessibility / 접근성) phải được encode vào thành phần nguyên thủy (primitive / 기본 요소)/thiết kế (design / 설계) hệ thống (system / 시스템) và CI thay vì phụ thuộc từng nhà phát triển (developer / 개발자) nhớ ARIA. thiết kế (design / 설계) hệ thống (system / 시스템) nên cung cấp Dialog, Menu, Tabs, Tooltip, Combobox có hành vi (behavior / 동작) accessible.
 
 PR checklist nên bao gồm keyboard, focus và accessible name. Automated khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) chỉ bắt một phần lỗi; manual testing vẫn cần.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **33. Internationalization** tiếp nhận điểm tựa từ **32. khả năng tiếp cận (accessibility / 접근성) quản trị (governance / 거버넌스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Forms ở quy mô (scale / 규모) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Internationalization
 
@@ -723,11 +788,15 @@ Không nối string kiểu:
 
 nếu cần plural đa ngôn ngữ. Dùng message formatter. SSR/hydration phải dùng locale/timezone nhất quán hoặc có kết xuất (render / 렌더링) chiến lược (strategy / 전략) rõ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **34. Forms ở quy mô (scale / 규모) lớn** tiếp nhận điểm tựa từ **33. Internationalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. React + TypeScript advanced patterns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Forms ở quy mô (scale / 규모) lớn
 
 Large form không nhất thiết dùng một trạng thái (state / 상태) đối tượng (object / 객체) khổng lồ khiến toàn form kết xuất (render / 렌더링) mỗi keystroke. Có thể dùng uncontrolled/bản địa (native / 네이티브) FormData, field-level subscription, lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증), máy chủ (server / 서버) Actions hoặc máy trạng thái (state machine / 상태 머신) cho multi-step luồng (flow / 흐름).
 
 Async kiểm tra hợp lệ (validation / 검증) cần debounce/cancel. kiểm tra hợp lệ (validation / 검증) lược đồ (schema / 스키마) có thể dùng chung máy khách (client / 클라이언트)/máy chủ (server / 서버) nếu hợp lý, nhưng authorization luôn ở máy chủ (server / 서버). lỗi (error / 오류) summary và focus tới trường dữ liệu (field / 필드) lỗi là khả năng tiếp cận (accessibility / 접근성) yêu cầu (requirement / 요구사항) quan trọng.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **35. React + TypeScript advanced patterns** tiếp nhận điểm tựa từ **34. Forms ở quy mô (scale / 규모) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. API stability và ngữ nghĩa (semantic / 의미적) versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. React + TypeScript advanced patterns
 
@@ -773,11 +842,15 @@ type ListProps<T> = {
 
 Generic lớp trừu tượng (abstraction / 추상화) chỉ nên dùng khi có reuse thật; ứng dụng (application / 애플리케이션) lĩnh vực (domain / 도메인) mã (code / 코드) không cần generic hóa mọi thứ.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **36. API stability và ngữ nghĩa (semantic / 의미적) versioning** tiếp nhận điểm tựa từ **35. React + TypeScript advanced patterns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. cấp cao (senior / 시니어)/Master coding idioms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. API stability và ngữ nghĩa (semantic / 의미적) versioning
 
 Công khai (public / 공개) thành phần (component / 컴포넌트) API là đặc tả hợp đồng (contract / 계약). Breaking thay đổi (change / 변경) không chỉ là đổi prop name. Thay DOM cấu trúc (structure / 구조), focus hành vi (behavior / 동작), default controlled chế độ (mode / 모드), CSS specificity hoặc sự kiện (event / 이벤트) timing cũng có thể break bên tiêu thụ (consumer / 소비자).
 
 Thiết kế (design / 설계) hệ thống (system / 시스템) cần changelog, di chuyển (migration / 마이그레이션) guide và codemod cho breaking thay đổi (change / 변경) lớn. cờ tính năng (feature flag / 기능 플래그)/canary triển khai (deployment / 배포) giảm blast radius.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **37. cấp cao (senior / 시니어)/Master coding idioms** tiếp nhận điểm tựa từ **36. API stability và ngữ nghĩa (semantic / 의미적) versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Anti-pattern danh mục (catalog / 카탈로그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 37. cấp cao (senior / 시니어)/Master coding idioms
 
@@ -813,6 +886,8 @@ Không tối ưu theo intuition.
 
 Bộ nhớ đệm (cache / 캐시)/revalidate/router ngữ nghĩa (semantics / 의미론) của một khung phần mềm (framework / 프레임워크) không nên được mô tả là hành vi (behavior / 동작) chung của React.
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **38. Anti-pattern danh mục (catalog / 카탈로그)** tiếp nhận điểm tựa từ **37. cấp cao (senior / 시니어)/Master coding idioms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38A. môi trường vận hành (production / 운영 환경) triển khai (deployment / 배포): bản dựng (build / 빌드) → canary → quay lui (rollback / 롤백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 38. Anti-pattern danh mục (catalog / 카탈로그)
 
 ### Tác động (effect / 효과) như sự kiện (event / 이벤트) bus
@@ -832,7 +907,6 @@ Thường nên gọi `save()` từ sự kiện (event / 이벤트)/hành động
 ### Mirrored props
 Phần này nối mạch bài học với “Mirrored props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```jsx
 const [value, setValue] = useState(propValue);
 ```
@@ -841,7 +915,6 @@ mà không có ngữ nghĩa (semantics / 의미론) cục bộ (local / 로컬) 
 
 ### Global mutable singleton
 Phần này nối mạch bài học với “Global mutable singleton”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 export const state = {};
@@ -877,6 +950,8 @@ Gọi API, analytics, mutate toàn cục (global / 전역).
 
 Ẩn nút nhưng máy chủ (server / 서버) không authorize.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **38A. môi trường vận hành (production / 운영 환경) triển khai (deployment / 배포): bản dựng (build / 빌드) → canary → quay lui (rollback / 롤백)** tiếp nhận điểm tựa từ **38. Anti-pattern danh mục (catalog / 카탈로그)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38B. kiến trúc vận hành (production architecture / 운영 아키텍처) phải có ranh giới (boundary / 경계), ngân sách (budget / 예산) và khôi phục (recovery / 복구) đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 38A. môi trường vận hành (production / 운영 환경) triển khai (deployment / 배포): bản dựng (build / 빌드) → canary → quay lui (rollback / 롤백)
 
 Triển khai (deployment / 배포) React không chỉ là `npm run build`. SPA/static hosting cần asset hashing, bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) khác nhau giữa HTML entry và immutable JS/CSS, cùng lịch sử (history / 이력) fallback để deep link không 404. Giá trị môi trường (environment / 환경) bundle vào máy khách (client / 클라이언트) phải xem là công khai (public / 공개); secret chỉ ở máy chủ (server / 서버) thời gian chạy (runtime / 런타임).
@@ -885,6 +960,8 @@ SSR/RSC còn có máy chủ (server / 서버) thời gian chạy (runtime / 런�
 
 Chuỗi xử lý (pipeline / 파이프라인) môi trường vận hành (production / 운영 환경) nên có lint/typecheck/kiểm thử (test / 테스트)/bản dựng (build / 빌드), phụ thuộc (dependency / 의존성)/bảo mật (security / 보안) scan, khả năng tiếp cận (accessibility / 접근성)/hiệu năng (performance / 성능) checks cho trọng yếu (critical / 중요) luồng (flow / 흐름), preview/canary, bản phát hành (release / 릴리스) ID cho nguồn (source / 소스) maps/logs, health check, lỗi (error / 오류)/Web Vitals monitoring và quay lui (rollback / 롤백) sản phẩm tạo ra (artifact / 산출물) known-good. cờ tính năng (feature flag / 기능 플래그) tách deploy mã (code / 코드) khỏi enable hành vi (behavior / 동작). Khi migrate CRA → Vite/khung phần mềm (framework / 프레임워크) cần kiểm tra (audit / 감사) env ngữ nghĩa (semantics / 의미론), công khai (public / 공개) đường dẫn (path / 경로), router fallback, động (dynamic / 동적) imports, dịch vụ (service / 서비스) worker/PWA, kiểm thử (test / 테스트) runner và triển khai (deployment / 배포) cơ sở (base / 기반) đường dẫn (path / 경로).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **38A. môi trường vận hành (production / 운영 환경) triển khai (deployment / 배포): bản dựng (build / 빌드) → canary → quay lui (rollback / 롤백)** đã nêu tiêu chí phân biệt, còn **38B. kiến trúc vận hành (production architecture / 운영 아키텍처) phải có ranh giới (boundary / 경계), ngân sách (budget / 예산) và khôi phục (recovery / 복구) đường dẫn (path / 경로)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **39. kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 38B. kiến trúc vận hành (production architecture / 운영 아키텍처) phải có ranh giới (boundary / 경계), ngân sách (budget / 예산) và khôi phục (recovery / 복구) đường dẫn (path / 경로)
 
 Một React kiến trúc vận hành (production architecture / 운영 아키텍처) nên mô tả rõ ít nhất năm ranh giới (boundary / 경계): **kết xuất (render / 렌더링) ranh giới (boundary / 경계)** (component/Suspense/Error Boundary), **quyền sở hữu trạng thái (state ownership / 상태 소유권) ranh giới (boundary / 경계)**, **mạng (network / 네트워크)/bộ nhớ đệm (cache / 캐시) ranh giới (boundary / 경계)**, **máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới mô-đun (module boundary / 모듈 경계)**, và **triển khai (deployment / 배포)/khả năng quan sát (observability / 관측 가능성) ranh giới (boundary / 경계)**. Nếu mọi concern hội tụ ở gốc (root / 루트) provider hoặc một toàn cục (global / 전역) store, thất bại (failure / 실패) blast radius và vô hiệu hóa (invalidation / 무효화) phạm vi (scope / 범위) thường quá lớn.
@@ -892,6 +969,8 @@ Một React kiến trúc vận hành (production architecture / 운영 아키텍
 Mỗi trọng yếu (critical / 중요) luồng (flow / 흐름) nên có ngân sách (budget / 예산) và khôi phục (recovery / 복구) đường dẫn (path / 경로): loading bao lâu thì đổi UX, thử lại (retry / 재시도) ở đâu, stale dữ liệu (data / 데이터) được giữ bao lâu, lỗi nào người dùng (user / 사용자) có thể sửa, lỗi nào cần report, bundle/tương tác (interaction / 상호작용) ngân sách (budget / 예산) là bao nhiêu, quay lui (rollback / 롤백) phiên bản (version / 버전) nào là known-good. cờ tính năng (feature flag / 기능 플래그) giúp tách deploy khỏi bản phát hành (release / 릴리스) hành vi (behavior / 동작); bản phát hành (release / 릴리스) ID nối bản đồ mã nguồn (source map / 소스 맵), log và chỉ số (metric / 지표) với đúng sản phẩm tạo ra (artifact / 산출물).
 
 Môi trường vận hành (production / 운영 환경) rà soát (review / 검토) cũng phải kiểm tra bộ nhớ đệm (cache / 캐시) quyền sở hữu (ownership / 소유권). trình duyệt (browser / 브라우저)/CDN/máy chủ (server / 서버)/truy vấn (query / 쿼리) bộ nhớ đệm (cache / 캐시) cùng tồn tại có thể tạo nhiều lớp stale dữ liệu (data / 데이터). Không bộ nhớ đệm (cache / 캐시) personalized HTML/dữ liệu (data / 데이터) bằng key chung. Mutation phải xác định vô hiệu hóa (invalidation / 무효화) hoặc optimistic reconciliation rõ; nếu không, UI có thể “nhanh” nhưng sai consistency.
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **38B. kiến trúc vận hành (production architecture / 운영 아키텍처) phải có ranh giới (boundary / 경계), ngân sách (budget / 예산) và khôi phục (recovery / 복구) đường dẫn (path / 경로)** đã nêu tiêu chí phân biệt, còn **39. kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **40. Lộ trình sau React cốt lõi (core / 핵심)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 39. kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist
 
@@ -917,6 +996,8 @@ Khi rà soát (review / 검토) tính năng (feature / 기능) React môi trư�
 
 **Versioning:** API có tương thích React/khung phần mềm (framework / 프레임워크) mục tiêu (target / 대상) không.
 
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **40. Lộ trình sau React cốt lõi (core / 핵심)** tiếp nhận điểm tựa từ **39. kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Bản đồ API quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 40. Lộ trình sau React cốt lõi (core / 핵심)
 
 SPA enterprise nên học sâu router, TanStack truy vấn (query / 쿼리) hoặc server-state equivalent, form thư viện (library / 라이브러리), khả năng tiếp cận (accessibility / 접근성) primitives, TypeScript, testing và khả năng quan sát (observability / 관측 가능성).
@@ -929,9 +1010,10 @@ Hiệu năng (performance / 성능) engineer nên học trình duyệt (browser 
 
 React bản địa (native / 네이티브) cần học host môi trường (environment / 환경) riêng; DOM kiến thức (knowledge / 지식) không áp dụng nguyên xi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **41. Bản đồ API quan trọng** tiếp nhận điểm tựa từ **40. Lộ trình sau React cốt lõi (core / 핵심)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Versioning principles cần mang theo sau khi học xong** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 41. Bản đồ API quan trọng
 Phần này nối mạch bài học với “41. Bản đồ API quan trọng”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 | Nhóm | API / thành phần | Vai trò |
 |---|---|---|
@@ -955,11 +1037,15 @@ Phần này nối mạch bài học với “41. Bản đồ API quan trọng”
 | React 19.3 | View Transitions, Fragment refs và năng lực (capability / 역량) mới theo bản phát hành (release / 릴리스) | hiện đại (modern / 현대적) UI/máy chủ (server / 서버) primitives |
 | Build-time | React trình biên dịch (compiler / 컴파일러) 1.0 | Automatic memoization/tối ưu hóa (optimization / 최적화) |
 
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **Versioning principles cần mang theo sau khi học xong** tiếp nhận điểm tựa từ **41. Bản đồ API quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Versioning principles cần mang theo sau khi học xong
 
 React versioning nên được nhìn như một ma trận năng lực (capability / 역량) chứ không phải một chuỗi tutorial riêng biệt. thành phần (component / 컴포넌트)/props/trạng thái (state / 상태)/purity vẫn là nền xuyên phiên bản (version / 버전); React 18 thay đổi nền scheduling/gốc (root / 루트); React 19 mở rộng async/máy chủ (server / 서버) mô hình (model / 모델); minor 19.2 và 19.3 tiếp tục thêm API công khai (public API / 공개 API). Vì vậy lộ trình đúng là học mô hình tư duy (mental model / 사고 모델) bền vững trước, sau đó gắn phiên bản (version / 버전) vào đúng API.
 
 Khi gặp mã (code / 코드) lạ, hãy kiểm tra theo thứ tự: `react` → `react-dom` → khung phần mềm (framework / 프레임워크) → trình biên dịch (compiler / 컴파일러)/bundler → thư viện (library / 라이브러리) peer phụ thuộc (dependency / 의존성) → patch/bảo mật (security / 보안) advisory. Cách này đáng tin hơn việc nhớ “React 19 có gì” vì ecosystem và patch mức (level / 수준) có thể thay đổi độc lập.
+
+> **Chuyển mạch:** Ở chặng này của **React Master ghi chú (note / 노트) — Master**, **42. Kết luận** gom các mảnh từ **Versioning principles cần mang theo sau khi học xong** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phiên bản (version / 버전) Notes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 42. Kết luận
 
@@ -967,12 +1053,16 @@ Master React không phải nhớ càng nhiều Hook càng tốt. Cốt lõi là 
 
 Người mới thường hỏi “Hook nào giải quyết việc này?”. Engineer có kinh nghiệm hơn hỏi “dữ liệu này thuộc ai, chuyển tiếp (transition / 전이) nào xảy ra, hệ thống bên ngoài (external system / 외부 시스템) nào cần synchronize, ranh giới (boundary / 경계) nào chịu trách nhiệm và thất bại (failure / 실패)/hiệu năng (performance / 성능)/bảo mật (security / 보안) ngữ nghĩa (semantics / 의미론) là gì?”. Khi câu hỏi thay đổi theo hướng đó, React thường trở nên đơn giản hơn vì Hook chỉ còn là công cụ biểu đạt kiến trúc (architecture / 아키텍처).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Master**, **Phiên bản (version / 버전) Notes** gom các mảnh từ **42. Kết luận** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn chuẩn để kiểm chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phiên bản (version / 버전) Notes
 
 Bộ tài liệu lấy React 19.3 làm baseline. React 19.3 phát hành ngày 09/09/2026. React trình biên dịch (compiler / 컴파일러) 1.0 đã stable và production-ready. máy chủ (server / 서버) Components trong React 19 có mô hình (model / 모델) ổn định cho ứng dụng (application / 애플리케이션) usage, trong khi APIs dành cho bundler/khung phần mềm (framework / 프레임워크) implement RSC có versioning các ràng buộc (constraints / 제약조건들) riêng. bảo mật (security / 보안) advisory phải được theo dõi theo patch/minor thực tế, không chỉ major phiên bản (version / 버전).
+
+> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **Phiên bản (version / 버전) Notes** nêu điều cần giải thích; **Nguồn chuẩn để kiểm chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguồn chuẩn để kiểm chứng
 
 Ưu tiên tài liệu chính thức React: React Versions, React Blog bản phát hành (release / 릴리스) notes, Learn, API tham chiếu (reference / 참조), React DOM máy chủ (server / 서버), React máy chủ (server / 서버) Components và React trình biên dịch (compiler / 컴파일러). Với khung phần mềm (framework / 프레임워크), phải đọc tài liệu đúng phiên bản (version / 버전) của khung phần mềm (framework / 프레임워크) vì router, bộ nhớ đệm (cache / 캐시), triển khai (deployment / 배포) và RSC tích hợp (integration / 통합) không hoàn toàn thuộc React cốt lõi (core / 핵심).
 
-> **Bàn giao:** Sau **Nguồn chuẩn để kiểm chứng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index](./00_index.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn chuẩn để kiểm chứng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

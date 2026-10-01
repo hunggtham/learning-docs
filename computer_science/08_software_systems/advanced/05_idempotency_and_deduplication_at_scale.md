@@ -1,7 +1,6 @@
 # Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)
 
-> **Mạch đọc:** Đặt **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **thử lại (retry / 재시도) tạo ambiguity** sang **Idempotency key**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thử lại (retry / 재시도) tạo ambiguity** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Idempotency key** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Phân tán (distributed / 분산) yêu cầu (request / 요청) có thể hết thời gian chờ (timeout / 타임아웃) dù máy chủ (server / 서버) đã thực hiện side tác động (effect / 효과). máy khách (client / 클라이언트) không biết nên thử lại (retry / 재시도) hay không. **Idempotency** giải quyết ambiguity bằng cách làm nhiều lần cùng logical thao tác (operation / 연산) có observable kết quả (result / 결과) tương đương một lần.
 
@@ -11,8 +10,7 @@ Máy khách (client / 클라이언트) gửi payment yêu cầu (request / 요�
 
 Mạng (network / 네트워크) không thể luôn nói cho máy khách (client / 클라이언트) giao dịch (transaction / 트랜잭션) đã lần ghi nhận (commit / 커밋) hay chưa. giao thức (protocol / 프로토콜) phải encode logical định danh (identity / 식별자) của thao tác (operation / 연산).
 
-
-> **Chuyển mạch:** Từ **thử lại (retry / 재시도) tạo ambiguity**, ta sang **Idempotency key** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**, **Idempotency key** tiếp nhận điểm tựa từ **Thử lại (retry / 재시도) tạo ambiguity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở dữ liệu (database / 데이터베이스) uniqueness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Idempotency key
 
@@ -20,8 +18,7 @@ Máy khách (client / 클라이언트) tạo key ổn định cho một logical 
 
 Key phải có phạm vi (scope / 범위) rõ: per account/endpoint? TTL bao lâu? Payload khác nhưng reuse cùng key xử lý thế nào? Những chi tiết này là part of Đặc tả API (API contract / API 계약).
 
-
-> **Chuyển mạch:** Từ **Idempotency key**, ta sang **cơ sở dữ liệu (database / 데이터베이스) uniqueness** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**, **Idempotency key** nêu điều cần giải thích; **Cơ sở dữ liệu (database / 데이터베이스) uniqueness** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Inbox/outbox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) uniqueness
 
@@ -29,8 +26,7 @@ Unique ràng buộc (constraint / 제약조건) thường là dedup ranh giới 
 
 Check-then-insert ngoài giao dịch (transaction / 트랜잭션) dễ race khi hai retries đến đồng thời.
 
-
-> **Chuyển mạch:** Từ **cơ sở dữ liệu (database / 데이터베이스) uniqueness**, ta sang **Inbox/outbox** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**, **Cơ sở dữ liệu (database / 데이터베이스) uniqueness** nêu điều cần giải thích; **Inbox/outbox** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dedup cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Inbox/outbox
 
@@ -38,8 +34,7 @@ Message bên tiêu thụ (consumer / 소비자) có thể ghi message ID vào in
 
 Relay có thể publish duplicate, nhưng bên tiêu thụ (consumer / 소비자) idempotency xử lý. Đây là cách đạt reliable tác động (effect / 효과) mà không cần phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) cho mọi thành phần (component / 컴포넌트).
 
-
-> **Chuyển mạch:** Từ **Inbox/outbox**, ta sang **Dedup cửa sổ (window / 윈도우)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**, **Dedup cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **Inbox/outbox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Natural idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dedup cửa sổ (window / 윈도우)
 
@@ -47,8 +42,7 @@ Giữ mọi idempotency key vĩnh viễn không quy mô (scale / 규모). TTL gi
 
 Payment có thể cần retention dài hơn analytics sự kiện (event / 이벤트).
 
-
-> **Chuyển mạch:** Từ **Dedup cửa sổ (window / 윈도우)**, ta sang **Natural idempotency** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**, **Natural idempotency** tiếp nhận điểm tựa từ **Dedup cửa sổ (window / 윈도우)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exactly-once tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Natural idempotency
 
@@ -56,18 +50,16 @@ Payment có thể cần retention dài hơn analytics sự kiện (event / 이�
 
 Nhưng conditional transitions vẫn cần tính đồng thời (concurrency / 동시성) điều khiển (control / 제어): “activate subscription phiên bản (version / 버전) 7” có thể dùng phiên bản (version / 버전)/precondition để tránh stale ghi (write / 쓰기).
 
-
-> **Chuyển mạch:** Từ **Natural idempotency**, ta sang **Exactly-once tác động (effect / 효과)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**, **Exactly-once tác động (effect / 효과)** tiếp nhận điểm tựa từ **Natural idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Exactly-once tác động (effect / 효과)
 
 Vận chuyển (transport / 전송) có thể deliver at-least-once; ứng dụng (application / 애플리케이션) vẫn tạo exactly-once-like nghiệp vụ (business / 비즈니스) tác động (effect / 효과) bằng stable định danh (identity / 식별자) + atomic dedup + idempotent side tác động (effect / 효과). bên ngoài (external / 외부) các hệ thống (systems / 시스템들) không hỗ trợ idempotency làm end-to-end guarantee yếu đi.
 
-
-> **Chuyển mạch:** Từ **Exactly-once tác động (effect / 효과)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Exactly-once tác động (effect / 효과)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Idempotency không ngăn duplicate delivery; nó ngăn duplicate delivery trở thành duplicate nghiệp vụ (business / 비즈니스) tác động (effect / 효과). Stable thao tác (operation / 연산) định danh (identity / 식별자) và atomic dedup ranh giới (boundary / 경계) là cốt lõi, còn thử lại (retry / 재시도) chỉ là vận chuyển (transport / 전송) hành vi (behavior / 동작).
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 queueing tail latency and backpressure](./00_queueing_tail_latency_and_backpressure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

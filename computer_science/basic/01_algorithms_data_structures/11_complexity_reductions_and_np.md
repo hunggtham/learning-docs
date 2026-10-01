@@ -1,7 +1,6 @@
 # Độ phức tạp (complexity / 복잡도), reductions và NP
 
-> **Mạch đọc:** Đọc **độ phức tạp (complexity / 복잡도), reductions và NP** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **bài toán (problem / 문제) khác thuật toán (algorithm / 알고리즘)** sang **quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Độ phức tạp (complexity / 복잡도), reductions và NP**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài toán (problem / 문제) khác thuật toán (algorithm / 알고리즘)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Big-O trả lời “thời gian chạy (runtime / 런타임) tăng thế nào với đầu vào (input / 입력) kích thước (size / 크기)”, nhưng độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) hỏi sâu hơn: **một bài toán (problem / 문제) về bản chất cần bao nhiêu tài nguyên để giải, và các problems liên hệ với nhau qua khả năng chuyển đổi như thế nào?** Đây là nơi xuất hiện P, NP, NP-hard, reductions và lower bounds.
 
@@ -11,8 +10,7 @@ Một thuật toán (algorithm / 알고리즘) là một procedure cụ thể. M
 
 Độ phức tạp (complexity / 복잡도) lớp (class / 클래스) phân loại problems, không phân loại một đoạn mã (code / 코드) cụ thể. Khi nói SAT thuộc NP, ta đang nói về quyết định (decision / 결정) bài toán (problem / 문제) Boolean satisfiability, không phải hiệu năng (performance / 성능) của một hiện thực (implementation / 구현) SAT solver cụ thể.
 
-
-> **Chuyển mạch:** Từ **bài toán (problem / 문제) khác thuật toán (algorithm / 알고리즘)**, ta sang **quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도), reductions và NP**, **Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Bài toán (problem / 문제) khác thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **P: giải được trong polynomial thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)
 
@@ -20,8 +18,7 @@ Nhiều tối ưu hóa (optimization / 최적화) problems có thể chuyển sa
 
 Điều này không có nghĩa practical software chỉ dùng yes/no. Nó là lớp trừu tượng (abstraction / 추상화) lý thuyết để so sánh difficulty.
 
-
-> **Chuyển mạch:** Từ **quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)**, ta sang **P: giải được trong polynomial thời gian (time / 시간)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도), reductions và NP**, **P: giải được trong polynomial thời gian (time / 시간)** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NP: solution có thể verify nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## P: giải được trong polynomial thời gian (time / 시간)
 
@@ -29,8 +26,7 @@ P chứa quyết định (decision / 결정) problems có deterministic thuật 
 
 Polynomial không đồng nghĩa “nhanh trong thực tế”. `n^100` là polynomial nhưng vô dụng cho đầu vào (input / 입력) vừa phải. P chủ yếu biểu thị một ranh giới (boundary / 경계) lý thuyết giữa growth polynomial và nhiều dạng combinatorial explosion.
 
-
-> **Chuyển mạch:** Từ **P: giải được trong polynomial thời gian (time / 시간)**, ta sang **NP: solution có thể verify nhanh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도), reductions và NP**, **NP: solution có thể verify nhanh** tiếp nhận điểm tựa từ **P: giải được trong polynomial thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## NP: solution có thể verify nhanh
 
@@ -42,8 +38,7 @@ Ví dụ với Hamiltonian cycle, certificate là một thứ tự vertices. Ver
 
 Mọi bài toán (problem / 문제) trong P cũng thuộc NP vì nếu tự giải nhanh được thì tất nhiên có thể verify nhanh.
 
-
-> **Chuyển mạch:** Từ **NP: solution có thể verify nhanh**, ta sang **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도), reductions và NP**, **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B** tiếp nhận điểm tựa từ **NP: solution có thể verify nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NP-hard và NP-complete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B
 
@@ -53,8 +48,7 @@ Nếu A reduce sang B, ta có thể dùng solver cho B để giải A sau bướ
 
 Reduction là một trong những ideas xuyên suốt CS: trình biên dịch (compiler / 컴파일러) lowering, serialization, truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) rewriting và giao thức (protocol / 프로토콜) translation đều có bóng dáng “đổi biểu diễn (representation / 표현) nhưng bảo toàn meaning”, dù formal reduction trong độ phức tạp (complexity / 복잡도) có definition chặt hơn.
 
-
-> **Chuyển mạch:** Từ **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B**, ta sang **NP-hard và NP-complete** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도), reductions và NP**, **NP-hard và NP-complete** tiếp nhận điểm tựa từ **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **P versus NP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## NP-hard và NP-complete
 
@@ -66,8 +60,7 @@ Một bài toán (problem / 문제) là NP-complete nếu vừa thuộc NP vừa
 
 Hướng reduction thường bị nhầm. Nếu reduce X → Y, điều đó chỉ cho thấy Y ít nhất khó như X, không chứng minh X khó.
 
-
-> **Chuyển mạch:** Từ **NP-hard và NP-complete**, ta sang **P versus NP** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도), reductions và NP**, **P versus NP** tiếp nhận điểm tựa từ **NP-hard và NP-complete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lower bounds và comparison sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## P versus NP
 
@@ -77,8 +70,7 @@ Không nên suy diễn rằng “NP-complete nghĩa là không thể giải”. 
 
 SAT solvers hiện đại giải nhiều industrial instances rất lớn vì real-world cấu trúc (structure / 구조) khác worst-case adversarial instances.
 
-
-> **Chuyển mạch:** Từ **P versus NP**, ta sang **Lower bounds và comparison sorting** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도), reductions và NP**, **Lower bounds và comparison sorting** tiếp nhận điểm tựa từ **P versus NP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameterized độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lower bounds và comparison sorting
 
@@ -88,8 +80,7 @@ Comparison-based sorting có lower bound `Ω(n log n)` comparisons vì có `n!` 
 
 Counting sort có thể `O(n+k)` vì nó không bị giới hạn trong comparison mô hình (model / 모델); nó khai thác cấu trúc (structure / 구조) của keys. Vì vậy lower bound luôn phụ thuộc computational mô hình (model / 모델) và các giả định (assumptions / 가정들).
 
-
-> **Chuyển mạch:** Từ **Lower bounds và comparison sorting**, ta sang **Parameterized độ phức tạp (complexity / 복잡도)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도), reductions và NP**, **Parameterized độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Lower bounds và comparison sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Parameterized độ phức tạp (complexity / 복잡도)
 
@@ -97,8 +88,7 @@ Có bài toán (problem / 문제) exponential theo `n` nhưng practical nếu m�
 
 Cách nhìn này quan trọng trong practice: difficulty không chỉ phụ thuộc raw đầu vào (input / 입력) kích thước (size / 크기) mà còn cấu trúc instance.
 
-
-> **Chuyển mạch:** Từ **Parameterized độ phức tạp (complexity / 복잡도)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp (complexity / 복잡도), reductions và NP**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Parameterized độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -108,18 +98,16 @@ Cách nhìn này quan trọng trong practice: difficulty không chỉ phụ thu�
 
 **“Một thuật toán (algorithm / 알고리즘) O(n²) luôn tốt hơn O(2^n).”** Với đầu vào (input / 입력) nhỏ và constants khác nhau, không nhất thiết. độ phức tạp (complexity / 복잡도) mô tả scaling, không thay benchmark.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Độ phức tạp (complexity / 복잡도), reductions và NP**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) không chỉ hỏi “thuật toán (algorithm / 알고리즘) này tốn bao lâu”, mà xây bản đồ giữa problems: bài toán (problem / 문제) nào biến được thành bài toán (problem / 문제) nào, ranh giới (boundary / 경계) tài nguyên nằm ở đâu, và limitation nào đến từ bản chất chứ không phải hiện thực (implementation / 구현) yếu.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Độ phức tạp (complexity / 복잡도), reductions và NP**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc cùng [asymptotic analysis](./01_complexity_and_asymptotic_analysis.md), [algorithmic strategies](./08_algorithmic_strategies.md) và [randomized/approximation algorithms](./10_randomized_approximation_and_online_algorithms.md). Nền lô-gic (logic / 논리)/computability nằm tại [Computability](../00_computation_information/04_computability_and_limits.md) và [Automata/Formal Languages](../../../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

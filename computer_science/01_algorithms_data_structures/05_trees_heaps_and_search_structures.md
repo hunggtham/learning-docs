@@ -1,7 +1,6 @@
 # Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures
 
-> **Mạch đọc:** Đặt **cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **cây (tree / 트리) vocabulary từ cấu trúc (structure / 구조)** sang **tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cây (tree / 트리) vocabulary từ cấu trúc (structure / 구조)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Cây (tree / 트리) biểu diễn hierarchy và recursive decomposition. Filesystem directories, DOM, AST, cơ sở dữ liệu (database / 데이터베이스) indexes và organizational structures đều có tree-like shape. Nhưng không phải mọi cây (tree / 트리) phục vụ cùng thao tác (operation / 연산); shape và bất biến (invariant / 불변식) quyết định hiệu năng (performance / 성능).
 
@@ -13,8 +12,7 @@ Recursive definition tự nhiên: cây (tree / 트리) là gốc (root / 루트)
 
 DFS traversals gồm preorder, inorder, postorder tùy vị trí xử lý nút (node / 노드). BFS/level-order dùng hàng đợi (queue / 큐).
 
-
-> **Chuyển mạch:** Từ **cây (tree / 트리) vocabulary từ cấu trúc (structure / 구조)**, ta sang **tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** tiếp nhận điểm tựa từ **Cây (tree / 트리) vocabulary từ cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **B-tree và B+ cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)
 
@@ -24,8 +22,7 @@ Nếu cây (tree / 트리) balanced, height O(log n). Nếu insert sorted chuỗ
 
 Self-balancing trees như AVL hoặc Red-Black cây (tree / 트리) dùng rotations và balance siêu dữ liệu (metadata / 메타데이터) để giữ height O(log n). thư viện chuẩn (standard library / 표준 라이브러리) ordered map/set thường dùng một dạng balanced cây (tree / 트리).
 
-
-> **Chuyển mạch:** Từ **tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)**, ta sang **B-tree và B+ cây (tree / 트리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **B-tree và B+ cây (tree / 트리)** tiếp nhận điểm tựa từ **Tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) và priority hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## B-tree và B+ cây (tree / 트리)
 
@@ -33,8 +30,7 @@ Nhị phân (binary / 이진) cây (tree / 트리) tối ưu không nhất thi�
 
 Cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스) có thể chỉ cần 3–4 page reads để tìm trong hàng triệu rows nhờ fan-out lớn. Đây là ví dụ cấu trúc dữ liệu (data structure / 자료구조) được thiết kế theo I/O chi phí (cost / 비용) mô hình (model / 모델), không chỉ comparison count.
 
-
-> **Chuyển mạch:** Từ **B-tree và B+ cây (tree / 트리)**, ta sang **vùng nhớ động (heap / 힙) và priority hàng đợi (queue / 큐)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Vùng nhớ vùng nhớ động (heap / 힙) và priority hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **B-tree và B+ cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trie: tìm kiếm (search / 검색) theo prefix** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙) và priority hàng đợi (queue / 큐)
 
@@ -44,36 +40,31 @@ Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) array ánh xạ (
 
 `peek-min O(1)`, insert và extract-min `O(log n)`. Priority hàng đợi (queue / 큐) dùng vùng nhớ động (heap / 힙) để scheduler lấy tác vụ (task / 작업) priority cao nhất, Dijkstra lấy vertex distance nhỏ nhất, sự kiện (event / 이벤트) simulation lấy next sự kiện (event / 이벤트).
 
-
-> **Chuyển mạch:** Từ **vùng nhớ động (heap / 힙) và priority hàng đợi (queue / 큐)**, ta sang **Trie: tìm kiếm (search / 검색) theo prefix** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Trie: tìm kiếm (search / 검색) theo prefix** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) và priority hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cây (tree / 트리) traversal như một mẫu (pattern / 패턴) computation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trie: tìm kiếm (search / 검색) theo prefix
 
 Trie (prefix tree / 트라이) đi theo symbols của key. Lookup chi phí (cost / 비용) phụ thuộc key length hơn number of keys. Autocomplete, routing prefix và dictionaries dùng variants. Đổi lại bộ nhớ (memory / 메모리) overhead có thể lớn; compressed radix cây (tree / 트리) gộp chains để tiết kiệm.
 
-
-> **Chuyển mạch:** Từ **Trie: tìm kiếm (search / 검색) theo prefix**, ta sang **cây (tree / 트리) traversal như một mẫu (pattern / 패턴) computation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Cây (tree / 트리) traversal như một mẫu (pattern / 패턴) computation** tiếp nhận điểm tựa từ **Trie: tìm kiếm (search / 검색) theo prefix** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Balanced không luôn có nghĩa “đẹp”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cây (tree / 트리) traversal như một mẫu (pattern / 패턴) computation
 
 Nhiều algorithms trên hierarchical dữ liệu (data / 데이터) là fold: tính kết quả nút (node / 노드) từ kết quả children. Directory kích thước (size / 크기) = tệp (file / 파일) sizes + subtree sizes; expression cây (tree / 트리) evaluation = apply operator vào child results; trình biên dịch (compiler / 컴파일러) AST phân tích (analysis / 분석) tương tự.
 
-
-> **Chuyển mạch:** Từ **cây (tree / 트리) traversal như một mẫu (pattern / 패턴) computation**, ta sang **Balanced không luôn có nghĩa “đẹp”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Balanced không luôn có nghĩa “đẹp”** tiếp nhận điểm tựa từ **Cây (tree / 트리) traversal như một mẫu (pattern / 패턴) computation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Balanced không luôn có nghĩa “đẹp”
 
 Balance bất biến (invariant / 불변식) tồn tại để bound height. Mỗi cập nhật (update / 업데이트) phải trả giá rotations/restructuring. Nếu tải công việc (workload / 워크로드) append-only rồi scan, một sorted array có thể tốt hơn cây (tree / 트리). Nếu phạm vi (range / 범위) queries nhiều và writes moderate, B+ cây (tree / 트리) hợp lý. cấu trúc dữ liệu (data structure / 자료구조) phải match operations.
 
-
-> **Chuyển mạch:** Từ **Balanced không luôn có nghĩa “đẹp”**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Balanced không luôn có nghĩa “đẹp”** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > cây (tree / 트리) biến một tìm kiếm (search / 검색) không gian (space / 공간) lớn thành hierarchy. hiệu năng (performance / 성능) đến từ **height × chi phí (cost / 비용) per nút (node / 노드)**, vì vậy branching factor, balance và vật lý (physical / 물리적) nút (node / 노드) kích thước (size / 크기) đều quan trọng.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -83,11 +74,10 @@ Balance bất biến (invariant / 불변식) tồn tại để bound height. M�
 
 **“B-tree chỉ là BST nhiều children.”** Quan trọng nhất là nút (node / 노드) sizing/fan-out được thiết kế cho khối (block / 블록)/page truy cập (access / 접근), làm chi phí (cost / 비용) mô hình (model / 모델) khác.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Trees nối [memory locality](./02_memory_models_and_data_layout.md) với [database indexes](../05_data_databases/03_indexes_and_query_execution.md), [compiler AST](../04_programming_languages/03_compilers_interpreters_vm_and_jit.md), [filesystem](../03_operating_systems/04_filesystems_storage_and_io.md) và [graph algorithms](./06_graphs_and_graph_algorithms.md) vì cây (tree / 트리) là một đồ thị (graph / 그래프) đặc biệt.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

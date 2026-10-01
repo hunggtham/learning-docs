@@ -1,7 +1,6 @@
 # Backend cốt lõi (core / 핵심) — coverage kiểm tra (audit / 감사)
 
-> **Mạch đọc:** Đặt **Backend cốt lõi (core / 핵심) — coverage kiểm tra (audit / 감사)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Coverage ma trận (matrix / 행렬)** sang **ranh giới (boundary / 경계) cố ý không duplicate**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Backend cốt lõi (core / 핵심) — coverage kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Coverage ma trận (matrix / 행렬)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ranh giới (boundary / 경계) cố ý không duplicate** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Ngày kiểm tra (audit / 감사): 2026-09-23. kiểm tra (audit / 감사) này kiểm tra **coverage của lập luận (reasoning / 추론)**, không đếm
 số từ khóa (keyword / 키워드) hay số dòng. Một chủ đề được coi là covered khi có đặc tả hợp đồng (contract / 계약), bất biến (invariant / 불변식),
@@ -28,8 +27,7 @@ nhánh học (track / 트랙).
 | API bảo mật (security / 보안) headers/CORS/tỷ lệ (rate / 비율) chính sách (policy / 정책) | `01`/`02` | covered | limiter đặc tả hợp đồng (contract / 계약), CORS ranh giới (boundary / 경계), kiểm tra hợp lệ (validation / 검증), auth |
 | privacy/dữ liệu (data / 데이터) retention/erasure | `02`/`03`/`08` | covered at cốt lõi (core / 핵심) mức (level / 수준) | vòng đời (lifecycle / 생명주기), deletion phạm vi (scope / 범위), redaction và telemetry classification |
 
-
-> **Chuyển mạch:** Từ **Coverage ma trận (matrix / 행렬)**, ta sang **ranh giới (boundary / 경계) cố ý không duplicate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Coverage matrix cho biết năng lực nào đã có owner và bằng chứng. **Ranh giới (boundary / 경계) cố ý không duplicate** dùng matrix đó để tránh kéo database, network hoặc runtime semantics vào backend core lần nữa; phần backlog chỉ giữ những khoảng trống còn có owner.
 
 ## Ranh giới (boundary / 경계) cố ý không duplicate
 
@@ -44,8 +42,7 @@ nhánh học (track / 트랙).
 - Java/Python ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) và Spring API thuộc các nhánh học (track / 트랙) hiện thực (implementation / 구현)
   bên cạnh, không trở thành prerequisite ngầm của Backend cốt lõi (core / 핵심).
 
-
-> **Chuyển mạch:** Từ **ranh giới (boundary / 경계) cố ý không duplicate**, ta sang **Backlog có thứ tự** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi boundary đã chỉ rõ phần nào thuộc chapter khác, **Backlog có thứ tự** chỉ ưu tiên cập nhật có đơn vị sở hữu và invariant riêng. **Tiêu chí hoàn tất một cập nhật (update / 업데이트)** biến nguyên tắc đó thành điều kiện review có thể kiểm tra.
 
 ## Backlog có thứ tự
 
@@ -56,8 +53,7 @@ nhánh học (track / 트랙).
 3. Chỉ tạo chapter riêng khi các phần trên đủ lớn và có bất biến (invariant / 불변식) khác biệt;
    không tách tệp (file / 파일) chỉ để tăng số lượng.
 
-
-> **Chuyển mạch:** Từ **Backlog có thứ tự**, ta sang **Tiêu chí hoàn tất một cập nhật (update / 업데이트)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Tiêu chí hoàn tất yêu cầu owner, failure mode, test, telemetry và link check; đó là ngưỡng để một dòng trong matrix chuyển từ “covered” thành bằng chứng có thể review lại.
 
 ## Tiêu chí hoàn tất một cập nhật (update / 업데이트)
 
@@ -69,4 +65,4 @@ Mỗi cập nhật (update / 업데이트) mới cần:
 4. có trường hợp (case / 사례) hoặc bài tập để kiểm tra lập luận nhân quả (causal reasoning / 인과적 추론);
 5. chạy link/whitespace check trước khi merge.
 
-> **Bàn giao:** Sau **Tiêu chí hoàn tất một cập nhật (update / 업데이트)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Giữ lại coverage matrix, boundary map và completion criteria; quay về [README](./README.md) để chọn chapter backend core hoặc nhánh implementation có owner tương ứng.

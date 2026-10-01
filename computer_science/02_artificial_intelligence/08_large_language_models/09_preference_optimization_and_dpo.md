@@ -1,7 +1,6 @@
 # Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)
 
-> **Mạch đọc:** Đặt **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Preference pair** sang **Intuition của DPO**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Preference pair** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Intuition của DPO** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Sau RLHF cổ điển, một câu hỏi tự nhiên xuất hiện: nếu ta đã có preference pairs `chosen > rejected`, có nhất thiết phải train reward mô hình (model / 모델) riêng rồi chạy reinforcement học tập (learning / 학습) như PPO không? **Direct Preference tối ưu hóa (optimization / 최적화) (DPO)** là một family phương thức (method / 메서드) cho phép cập nhật (update / 업데이트) ngôn ngữ (language / 언어) mô hình (model / 모델) trực tiếp từ preference dữ liệu (data / 데이터) bằng mục tiêu (objective / 목표) supervised-like, giảm độ phức tạp chuỗi xử lý (pipeline / 파이프라인).
 
@@ -16,6 +15,8 @@ rejected response y_l
 ```
 
 Ta muốn chính sách (policy / 정책) gán relative preference lớn hơn cho `y_w` so với `y_l`, nhưng vẫn giữ chính sách (policy / 정책) không drift quá xa tham chiếu (reference / 참조) mô hình (model / 모델).
+
+> **Chuyển mạch:** Trong **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Intuition của DPO** tiếp nhận điểm tựa từ **Preference pair** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao cần tham chiếu (reference / 참조) mô hình (model / 모델)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Intuition của DPO
 
@@ -37,11 +38,15 @@ Một form phổ biến:
 
 Không cần học thuộc formula ngay. Ý chính là mô hình (model / 모델) được khuyến khích **increase chosen relative to rejected**, sau khi accounting cho hành vi (behavior / 동작) ban đầu của tham chiếu (reference / 참조) mô hình (model / 모델).
 
+> **Chuyển mạch:** Ở chặng này của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, sau nội dung của **Intuition của DPO**, **Tại sao cần tham chiếu (reference / 참조) mô hình (model / 모델)?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Vai trò của beta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tại sao cần tham chiếu (reference / 참조) mô hình (model / 모델)?
 
 Nếu chỉ maximize chosen phản hồi (response / 응답) xác suất (probability / 확률), mô hình (model / 모델) có thể overfit preference set và drift khỏi ngôn ngữ (language / 언어) phân phối (distribution / 분포) tốt đã học.
 
 Tham chiếu (reference / 참조) mô hình (model / 모델) tạo anchor. Preference cập nhật (update / 업데이트) đo “thay đổi so với chính sách (policy / 정책) ban đầu”, không chỉ raw likelihood.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Vai trò của beta** tiếp nhận điểm tựa từ **Tại sao cần tham chiếu (reference / 참조) mô hình (model / 모델)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DPO không phải magic replacement cho RLHF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vai trò của beta
 
@@ -56,6 +61,8 @@ Trực giác:
 
 Khi dùng thư viện (library / 라이브러리) cụ thể cần kiểm tra chính xác (exact / 정확한) parameterization; không nên chuyển meaning của `β` giữa implementations một cách máy móc.
 
+> **Chuyển mạch:** Trong **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **DPO không phải magic replacement cho RLHF** tiếp nhận điểm tựa từ **Vai trò của beta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chosen phản hồi (response / 응답) không phải absolute truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## DPO không phải magic replacement cho RLHF
 
 DPO đơn giản hóa kỹ thuật (engineering / 엔지니어링) vì bỏ tường minh (explicit / 명시적) reward mô hình (model / 모델) + on-policy RL vòng lặp (loop / 루프). Nhưng nó vẫn phụ thuộc mạnh vào preference dữ liệu (data / 데이터) chất lượng (quality / 품질) và coverage.
@@ -64,11 +71,15 @@ Nếu preference dataset được thu từ chính sách (policy / 정책) cũ v�
 
 RL methods có advantage khi muốn online exploration hoặc reward tín hiệu (signal / 신호) phức tạp.
 
+> **Chuyển mạch:** Ở chặng này của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Chosen phản hồi (response / 응답) không phải absolute truth** tiếp nhận điểm tựa từ **DPO không phải magic replacement cho RLHF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Length độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chosen phản hồi (response / 응답) không phải absolute truth
 
 Preference pair chỉ nói `A` được chọn hơn `B` theo guideline/annotator. Nếu cả hai đều sai, DPO vẫn có thể reinforce answer “ít tệ hơn”.
 
 Vì vậy preference tối ưu hóa (optimization / 최적화) không thay factual xác minh (verification / 확인).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Length độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Chosen phản hồi (response / 응답) không phải absolute truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pair difficulty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Length độ lệch (bias / 편향)
 
@@ -82,11 +93,15 @@ Dataset phân tích (analysis / 분석) nên kiểm tra:
 - annotator disagreement;
 - position/thứ tự (order / 순서) effects.
 
+> **Chuyển mạch:** Trong **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Pair difficulty** tiếp nhận điểm tựa từ **Length độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DPO và SFT dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pair difficulty
 
 Nếu chosen và rejected quá khác chất lượng (quality / 품질), tín hiệu (signal / 신호) dễ nhưng ít fine-grained. Nếu quá giống, labels có thể noisy.
 
 Một good preference dataset thường cần mixture difficulty để mô hình (model / 모델) học distinctions meaningful.
+
+> **Chuyển mạch:** Ở chặng này của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Pair difficulty** nêu điều cần giải thích; **DPO và SFT dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Other preference objectives** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## DPO và SFT dữ liệu (data / 데이터)
 
@@ -102,6 +117,8 @@ SFT tạo stable instruction-following baseline. DPO sau đó refine ranking gi�
 
 DPO trực tiếp từ weak cơ sở (base / 기반) mô hình (model / 모델) có thể khó vì chosen samples quá xa hiện tại (current / 현재) chính sách (policy / 정책) phân phối (distribution / 분포).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **DPO và SFT dữ liệu (data / 데이터)** nêu điều cần giải thích; **Other preference objectives** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Preference tối ưu hóa (optimization / 최적화) và an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Other preference objectives
 
 DPO không phải only phương thức (method / 메서드). Có nhiều variants/alternatives nhằm xử lý noise, reference-free setup, reward margins hoặc online updates. Tên algorithms thay đổi nhanh; mô hình tư duy (mental model / 사고 모델) bền vững hơn là:
@@ -112,11 +129,15 @@ preference data
 → objective làm preferred output tương đối có xác suất cao hơn
 ```
 
+> **Chuyển mạch:** Trong **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Preference tối ưu hóa (optimization / 최적화) và an toàn (safety / 안전)** tiếp nhận điểm tựa từ **Other preference objectives** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Offline phân phối (distribution / 분포) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Preference tối ưu hóa (optimization / 최적화) và an toàn (safety / 안전)
 
 Preference pairs có thể encode safe hành vi (behavior / 동작), nhưng an toàn (safety / 안전) chính sách (policy / 정책) thường multi-dimensional và adversarial. Một mô hình (model / 모델) optimized trên static pairs vẫn có thể thất bại (fail / 실패) prompt injection/jailbreak.
 
 An toàn (safety / 안전) cần evaluation và defense-in-depth ở hệ thống (system / 시스템) tầng (layer / 계층).
+
+> **Chuyển mạch:** Ở chặng này của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Offline phân phối (distribution / 분포) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Preference tối ưu hóa (optimization / 최적화) và an toàn (safety / 안전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Offline phân phối (distribution / 분포) bài toán (problem / 문제)
 
@@ -124,9 +145,13 @@ Preference dataset phản ánh prompts và candidates đã sampled. Nếu triể
 
 Đây là liên kết (connection / 연결) với statistical phân phối (distribution / 분포) shift.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Offline phân phối (distribution / 분포) bài toán (problem / 문제)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > DPO biến “human thích A hơn B” thành **relative likelihood cập nhật (update / 업데이트)** trực tiếp trên chính sách (policy / 정책), thay vì bắt buộc xây reward mô hình (model / 모델) rồi chạy RL optimizer.
+
+> **Chuyển mạch:** Trong **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -142,10 +167,12 @@ Không. Choice phụ thuộc dữ liệu (data / 데이터), online phản hồi
 
 Nó optimize observed preferences. Alignment rộng hơn dataset và mục tiêu (objective / 목표).
 
+> **Chuyển mạch:** Ở chặng này của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 DPO nối [RLHF](./08_rlhf.md), [SFT](./07_supervised_fine_tuning.md), [Probability](../01_mathematical_foundations/02_probability_for_ai.md) và [Distribution Shift](../04_machine_learning/14_bias_variance_and_generalization.md).
 
 Xem tiếp: [In-Context Learning](./10_in_context_learning.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

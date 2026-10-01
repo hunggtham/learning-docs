@@ -1,6 +1,6 @@
 # Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics
 
-> **Mạch đọc:** Đặt **độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. phiên bản (version / 버전) không phải một con số — nó là tập hợp các đặc tả hợp đồng (contract / 계약)** sang **4.1 Vì sao “bytecode chạy được” chưa đủ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. phiên bản (version / 버전) không phải một con số — nó là tập hợp các đặc tả hợp đồng (contract / 계약)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **4.1 Vì sao “bytecode chạy được” chưa đủ?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tệp (file / 파일) `05_kotlin_android_version_evolution.md` trả lời câu hỏi **Kotlin và Android đã tiến hóa như thế nào theo thời gian**. độ sâu (depth / 깊이) Lab này đi thêm một tầng: **vì sao một thay đổi phiên bản (version / 버전) có thể làm bản dựng (build / 빌드), nhị phân (binary / 이진), generated mã (code / 코드) hoặc hành vi thời gian chạy (runtime behavior / 런타임 동작) hỏng dù mã nguồn (source code / 소스 코드) gần như không đổi**.
 
@@ -187,8 +187,7 @@ consumer compiler có support không?
 
 ---
 
-
-> **Chuyển mạch:** Từ **1. phiên bản (version / 버전) không phải một con số — nó là tập hợp các đặc tả hợp đồng (contract / 계약)**, ta sang **4.1 Vì sao “bytecode chạy được” chưa đủ?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Version là tập contract, không chỉ bytecode; “chạy được” chưa chứng minh metadata, ABI, target hoặc compiler-plugin compatibility, nên toolchain evidence phải được truy vết riêng.
 
 ## 4.1 Vì sao “bytecode chạy được” chưa đủ?
 
@@ -260,8 +259,7 @@ Dùng JDK 21 để chạy Gradle không có nghĩa đầu ra (output / 출력) b
 
 ---
 
-
-> **Chuyển mạch:** Từ **4.1 Vì sao “bytecode chạy được” chưa đủ?**, ta sang **6.1 Toolchain giúp gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **6.1 Toolchain giúp gì?** tiếp nhận điểm tựa từ **4.1 Vì sao “bytecode chạy được” chưa đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.1 Toolchain giúp gì?
 
@@ -399,8 +397,7 @@ Compose UI libraries vẫn được quản lý theo bản phát hành (release /
 
 ---
 
-
-> **Chuyển mạch:** Từ **6.1 Toolchain giúp gì?**, ta sang **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)** tiếp nhận điểm tựa từ **6.1 Toolchain giúp gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)
 
@@ -420,8 +417,7 @@ BOM không tự thêm `ui`, `material3` hay trình biên dịch (compiler / 컴�
 
 ---
 
-
-> **Chuyển mạch:** Từ **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)**, ta sang **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới** tiếp nhận điểm tựa từ **9.1 BOM không “cài Compose” cho dự án (project / 프로젝트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới
 
@@ -464,8 +460,7 @@ chỉ vì KSP mới hơn. Processor phải thực sự hỗ trợ KSP và hành 
 
 ---
 
-
-> **Chuyển mạch:** Từ **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới**, ta sang **10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Độ sâu (depth / 깊이) Lab 08 — Kotlin + Android phiên bản (version / 버전) tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션) và Upgrade Forensics**, **9.2 sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드) bằng Compose trình biên dịch (compiler / 컴파일러) cũ vẫn có thể ảnh hưởng app mới** đã nêu tiêu chí phân biệt, còn **10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)
 
@@ -702,7 +697,6 @@ Trình biên dịch (compiler / 컴파일러) upgrade không được che mất 
 
 # 20. Android version axis: `minSdk`, `compileSdk`, `targetSdk` không thể gộp
 Phần này nối mạch Android vừa học với “20. Android version axis: `minSdk`, `compileSdk`, `targetSdk` không thể gộp”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```text
 minSdk
@@ -1257,7 +1251,6 @@ Trình biên dịch (compiler / 컴파일러) flag bỏ check chỉ nên là dia
 # 43. Lỗi JVM target mismatch — playbook điều tra
 Phần này nối mạch Android vừa học với “43. Lỗi JVM target mismatch — playbook điều tra”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
-
 ```text
 1. xem Java targetCompatibility
 2. xem Kotlin jvmTarget effective
@@ -1430,7 +1423,6 @@ Không kết luận tốt/xấu chỉ từ bản phát hành (release / 릴리�
 
 # 51. Build performance cũng phải được đo clean và incremental riêng
 Phần này nối mạch Android vừa học với “51. Build performance cũng phải được đo clean và incremental riêng”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
-
 
 ```text
 clean build
@@ -1696,3 +1688,5 @@ Evidence nào chứng minh migration thành công?
 Phiên bản (version / 버전) kỹ thuật (engineering / 엔지니어링) tốt là khả năng giữ **nguồn (source / 소스), nhị phân (binary / 이진), siêu dữ liệu (metadata / 메타데이터), generated mã (code / 코드), Android hành vi (behavior / 동작), persisted dữ liệu (data / 데이터) và bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물)** cùng tiến hóa mà không làm hệ thống mất khả năng bản dựng (build / 빌드), chạy, quay lui (rollback / 롤백) hoặc được gỡ lỗi (debug / 디버그).
 
 Đó là điểm mà kiến thức version vượt khỏi “biết Kotlin 2.4 mới hơn Kotlin 1.9” và trở thành **compatibility engineering** thực sự.
+
+> **Bàn giao:** Sau **10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

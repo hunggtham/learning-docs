@@ -1,7 +1,6 @@
 # JavaScript Beginner — Giáo trình nền tảng từ con số 0
 
-> **Mạch đọc:** Đọc **JavaScript Beginner — Giáo trình nền tảng từ con số 0** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Timeline tối thiểu nên hiểu** sang **Ví dụ đầu tiên**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **JavaScript Beginner — Giáo trình nền tảng từ con số 0**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Timeline tối thiểu nên hiểu** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > **Mục tiêu của tài liệu này**: giúp người chưa có nền tảng JavaScript có thể đọc từ đầu đến cuối và hiểu được JavaScript theo đúng mô hình tư duy (mental model / 사고 모델), thay vì chỉ học thuộc cú pháp. Phần này đi chậm, giải thích vì sao một cú pháp tồn tại, cách nó hoạt động, khi nào nên dùng, lỗi người mới thường gặp, và liên hệ với cách viết mã (code / 코드) thực tế trong frontend/WebSquare/React sau này.
 >
@@ -41,7 +40,6 @@ Tên chuẩn của lõi ngôn ngữ là ECMAScript. Khi tài liệu nhắc ES201
 
 ### Ví dụ đầu tiên
 Phần này nối mạch bài học với “Ví dụ đầu tiên”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 const userName = "Kim";
@@ -201,7 +199,6 @@ Nhưng:
 
 ### Language idiom
 Phần này nối mạch bài học với “Language idiom”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 const users = [];
@@ -1111,7 +1108,6 @@ const hasAdmin = users.some(
 ### Language idiom
 Phần này nối mạch bài học với “Language idiom”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 const activeNames = users
   .filter((user) => user.active)
@@ -1561,7 +1557,6 @@ try {
 ### Anti-pattern
 Phần này nối mạch bài học với “Anti-pattern”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 try {
   await saveUser();
@@ -1576,7 +1571,6 @@ Swallowing lỗi (error / 오류) chỉ phù hợp nếu thất bại (failure /
 
 # Chương 36 — Custom Error cơ bản
 Phần này nối mạch bài học với “Chương 36 — Custom Error cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 class ValidationError extends Error {
@@ -1696,7 +1690,6 @@ list.append(li);
 # Chương 40 — `classList`, attributes và style
 Phần này nối mạch bài học với “Chương 40 — `classList`, attributes và style”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 element.classList.add("active");
 element.classList.remove("hidden");
@@ -1721,7 +1714,6 @@ Trong codebase lớn, trạng thái (state / 상태) → CSS lớp (class / 클�
 
 # Chương 41 — Events và event object
 Phần này nối mạch bài học với “Chương 41 — Events và event object”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 button.addEventListener("click", (event) => {
@@ -1750,7 +1742,6 @@ Không dùng `stopPropagation()` như default habit vì sự kiện (event / 이
 # Chương 42 — Event listener lifecycle và cleanup
 Phần này nối mạch bài học với “Chương 42 — Event listener lifecycle và cleanup”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 function handleClick() {
   save();
@@ -1776,7 +1767,6 @@ Phải cùng hàm (function / 함수) tham chiếu (reference / 참조). Vì v�
 ### Programming pattern — lifecycle pair
 Phần này nối mạch bài học với “Programming pattern — lifecycle pair”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```text
 addEventListener ↔ removeEventListener
 setInterval      ↔ clearInterval
@@ -1790,7 +1780,6 @@ Tư duy quyền sở hữu (ownership / 소유권) này sẽ trở thành chủ 
 
 # Chương 43 — Form và FormData
 Phần này nối mạch bài học với “Chương 43 — Form và FormData”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 const form = document.querySelector("form");
@@ -1991,7 +1980,6 @@ Beginner cần hiểu distinction, nhưng đừng chạy hàng nghìn tác vụ 
 # Chương 49 — `fetch` và HTTP căn bản
 Phần này nối mạch bài học với “Chương 49 — `fetch` và HTTP căn bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 const response = await fetch("/api/users");
 ```
@@ -2117,7 +2105,6 @@ Side tác động (effect / 효과) không xấu. UI ứng dụng (application /
 
 ### Programming pattern — Functional Core / Imperative Shell
 Phần này nối mạch bài học với “Programming pattern — Functional Core / Imperative Shell”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```text
 read input
@@ -2409,4 +2396,4 @@ Bạn nên tự giải thích được vì sao `const` đối tượng (object /
 
 Bạn cũng nên tự viết được một tính năng (feature / 기능) nhỏ có đầu vào (input / 입력), kiểm tra hợp lệ (validation / 검증), pure lô-gic (logic / 논리), API/lưu trữ (storage / 저장소) và kết xuất (render / 렌더링) mà không cần bản sao (copy / 복사) nguyên mẫu từ tài liệu. Khi đã đạt mức này, bạn sẵn sàng sang Intermediate — nơi mục tiêu không còn là biết cú pháp mà là hiểu **ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론)** của JavaScript.
 
-> **Bàn giao:** Sau **mẫu lập trình (programming pattern / 프로그래밍 패턴) — Functional cốt lõi (core / 핵심) / Imperative Shell**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript intermediate](./javascript_intermediate.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Timeline tối thiểu nên hiểu**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

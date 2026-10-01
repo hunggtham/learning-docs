@@ -1,7 +1,6 @@
 # An toàn, Bảo mật và Căn chỉnh AI
 
-> **Mạch đọc:** Đọc **An toàn, Bảo mật và Căn chỉnh AI** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Kiến thức cần có trước** sang **Thứ tự đọc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **An toàn, Bảo mật và Căn chỉnh AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thứ tự đọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tầng (layer / 계층) này nối ba bài toán thường bị trộn lẫn: **an toàn (safety / 안전)**, **bảo mật (security / 보안)** và **căn chỉnh (alignment)**. An toàn hỏi hệ thống có thể gây hậu quả nguy hiểm bằng cách nào; bảo mật hỏi attacker có thể khai thác hệ thống bằng cách nào; căn chỉnh hỏi mục tiêu và hành vi có phù hợp ý định, ràng buộc và quyền hạn mong muốn hay không.
 
@@ -35,8 +34,7 @@ Trước tầng (layer / 계층) này nên nắm:
 
 Không nên đọc bảo mật (security / 보안) như một chủ đề tách khỏi kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경), vì nhiều rủi ro chỉ xuất hiện khi mô hình (model / 모델) được nối với retrieval, bộ nhớ (memory / 메모리), công cụ (tool / 도구) và quyền thực thi.
 
-
-> **Chuyển mạch:** Từ **Kiến thức cần có trước**, ta sang **Thứ tự đọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **An toàn, Bảo mật và Căn chỉnh AI**, **Thứ tự đọc** tiếp nhận điểm tựa từ **Kiến thức cần có trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản đồ phụ thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự đọc
 
@@ -55,8 +53,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 09_alignment_techniques_and_oversight.md
 ```
 
-
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Bản đồ phụ thuộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **An toàn, Bảo mật và Căn chỉnh AI**, **Bản đồ phụ thuộc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checklist cho mỗi chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bản đồ phụ thuộc
 
@@ -79,8 +76,7 @@ flowchart TD
     SEC --> O
 ```
 
-
-> **Chuyển mạch:** Từ **Bản đồ phụ thuộc**, ta sang **Checklist cho mỗi chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn, Bảo mật và Căn chỉnh AI**, **Checklist cho mỗi chapter** tiếp nhận điểm tựa từ **Bản đồ phụ thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Checklist cho mỗi chapter
 
@@ -99,8 +95,7 @@ Mỗi chapter trong tầng (layer / 계층) này phải trả lời đủ tám c
 
 Nếu chỉ mô tả tên attack hoặc tên kỹ thuật mà không nối tới kiến trúc (architecture / 아키텍처) và khôi phục (recovery / 복구) thì chưa đủ cho production-level understanding.
 
-
-> **Chuyển mạch:** Từ **Checklist cho mỗi chapter**, ta sang **Mô hình tư duy xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **An toàn, Bảo mật và Căn chỉnh AI**, **Mô hình tư duy xuyên suốt** gom các mảnh từ **Checklist cho mỗi chapter** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những phân biệt phải giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy xuyên suốt
 
@@ -117,8 +112,7 @@ xác định hazard / attacker / objective gap
 → thu hồi / rollback / phục hồi
 ```
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy xuyên suốt**, ta sang **Những phân biệt phải giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **An toàn, Bảo mật và Căn chỉnh AI**, **Những phân biệt phải giữ** gom các mảnh từ **Mô hình tư duy xuyên suốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cơ chế kiểm soát theo lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những phân biệt phải giữ
 
@@ -140,8 +134,7 @@ Human approval                  ≠ Bảo đảm tự động
 Model alignment                 ≠ Access control
 ```
 
-
-> **Chuyển mạch:** Từ **Những phân biệt phải giữ**, ta sang **Cơ chế kiểm soát theo lớp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn, Bảo mật và Căn chỉnh AI**, **Những phân biệt phải giữ** xác định đầu vào; **Cơ chế kiểm soát theo lớp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Từ mô hình đe dọa tới điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cơ chế kiểm soát theo lớp
 
@@ -162,8 +155,7 @@ model behavior
 
 Không có một điều khiển (control / 제어) đơn lẻ nào đủ bao phủ toàn bộ thất bại (failure / 실패) surface.
 
-
-> **Chuyển mạch:** Từ **Cơ chế kiểm soát theo lớp**, ta sang **Từ mô hình đe dọa tới điều khiển (control / 제어)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **An toàn, Bảo mật và Căn chỉnh AI**, **Cơ chế kiểm soát theo lớp** xác định đầu vào; **Từ mô hình đe dọa tới điều khiển (control / 제어)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ mô hình đe dọa tới điều khiển (control / 제어)
 
@@ -180,8 +172,7 @@ failure nào phải fail closed?
 
 Từ đó mới chọn tỷ lệ (rate / 비율) limit, sandbox, ACL, verifier, approval hoặc isolation phù hợp.
 
-
-> **Chuyển mạch:** Từ **Từ mô hình đe dọa tới điều khiển (control / 제어)**, ta sang **môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **An toàn, Bảo mật và Căn chỉnh AI**, **Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** tiếp nhận điểm tựa từ **Từ mô hình đe dọa tới điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội bộ (internal / 내부) links chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate
 
@@ -200,8 +191,7 @@ unit / schema test
 
 Một điểm benchmark tăng không đủ để promote nếu attack surface hoặc authority ranh giới (boundary / 경계) bị mở rộng.
 
-
-> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate**, ta sang **nội bộ (internal / 내부) links chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn, Bảo mật và Căn chỉnh AI**, **Nội bộ (internal / 내부) links chính** tiếp nhận điểm tựa từ **Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nội bộ (internal / 내부) links chính
 
@@ -216,3 +206,5 @@ Bảo mật (security / 보안) tầng (layer / 계층) nối trực tiếp vớ
 - [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md).
 
 Đây là điểm kết thúc của tuyến production hiện đã hoàn thiện. `20_ethics_governance_and_society/` và `90_connections/` là phần mở rộng dự kiến của roadmap tổng nhưng chưa được đưa vào branch hiện tại, vì vậy README này không tạo liên kết tới các đường dẫn chưa tồn tại.
+
+> **Bàn giao:** Sau **Nội bộ (internal / 내부) links chính**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

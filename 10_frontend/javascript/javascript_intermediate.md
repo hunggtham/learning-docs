@@ -1,7 +1,6 @@
 # JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong
 
-> **Mạch đọc:** Đọc **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **thực thi (execution / 실행) ngữ cảnh (context / 맥락) không đồng nghĩa lexical phạm vi (scope / 범위)** sang **Creation/initialization trước evaluation: nền tảng của hoisting**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thực thi (execution / 실행) ngữ cảnh (context / 맥락) không đồng nghĩa lexical phạm vi (scope / 범위)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Creation/initialization trước evaluation: nền tảng của hoisting** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Mục tiêu của phần này**: chuyển từ mức “biết dùng JavaScript” sang mức “hiểu vì sao JavaScript hoạt động như vậy”. Bạn sẽ học thực thi (execution / 실행) ngữ cảnh (context / 맥락), lexical môi trường (environment / 환경), closure, `this`, prototype, lớp (class / 클래스) internals, modules, Promise/vòng lặp sự kiện (event loop / 이벤트 루프), iterator/generator, functional composition, trạng thái (state / 상태) modeling, lỗi (error / 오류) kiến trúc (architecture / 아키텍처), API tầng (layer / 계층), testing và các programming/thiết kế (design / 설계) patterns quan trọng.
 >
@@ -122,6 +121,8 @@ factorial(1)
 
 Mỗi frame giữ `n` riêng. Khi `factorial(1)` return, frame đó biến mất khỏi ngăn xếp (stack / 스택); kết quả được dùng để tiếp tục frame `factorial(2)`.
 
+> **Chuyển mạch:** Execution context xác định lexical environment và bindings; creation/initialization giải thích hoisting trước evaluation. Call stack tiếp theo cho thấy các bindings đó tồn tại trong synchronous execution nào.
+
 ## Creation/initialization trước evaluation: nền tảng của hoisting
 
 Một mô hình tư duy (mental model / 사고 모델) rất quan trọng là engine phải chuẩn bị môi trường (environment / 환경) và bindings trước khi thực thi lần lượt các statements. Vì thế “hoisting” không nên được hiểu là engine thật sự cắt một dòng mã (code / 코드) rồi di chuyển nó lên đầu tệp (file / 파일). Đúng hơn, declaration được xử lý trong quá trình khởi tạo môi trường (environment / 환경), nhưng **mỗi loại declaration được khởi tạo khác nhau**.
@@ -151,6 +152,8 @@ const value = 10;
 ```
 
 Vì vậy câu “`let` không hoist” là cách nói đơn giản nhưng không chính xác về mô hình tư duy (mental model / 사고 모델). Binding tồn tại trong lexical môi trường (environment / 환경), nhưng chưa thể truy cập (access / 접근) trước initialization.
+
+> **Chuyển mạch:** Hoisting được quyết định trong creation phase; call stack chỉ chứa execution hiện tại, còn environment record mới giữ binding sống qua các scope.
 
 ## Ngăn xếp lời gọi (call stack / 호출 스택) chỉ chứa synchronous thực thi (execution / 실행) hiện tại
 
@@ -238,6 +241,8 @@ function run() {
 
 Shadowing không sai, nhưng quá nhiều biến cùng tên trong nested scopes làm cognitive tải (load / 로드) cao.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Môi trường (environment / 환경) là nơi binding sống, không phải chỉ là một đối tượng (object / 객체) thường** tiếp nhận điểm tựa từ **Ngăn xếp lời gọi (call stack / 호출 스택) chỉ chứa synchronous thực thi (execution / 실행) hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Identifier resolution là một quá trình tìm từ trong ra ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Môi trường (environment / 환경) là nơi binding sống, không phải chỉ là một đối tượng (object / 객체) thường
 
 Khi học phạm vi (scope / 범위), nhiều người hình dung mỗi phạm vi (scope / 범위) là một JavaScript đối tượng (object / 객체) như `{ name: value }`. mô hình tư duy (mental model / 사고 모델) đó chỉ đúng rất sơ bộ. Specification dùng **môi trường (environment / 환경) Records** để mô tả bindings. Điều này quan trọng vì binding có hành vi (behavior / 동작) riêng: TDZ, immutable `const`, hàm (function / 함수) parameter bindings, mô-đun (module / 모듈) imports là live bindings, và toàn cục (global / 전역) `var`/toàn cục (global / 전역) lexical declarations không hoàn toàn giống nhau.
@@ -249,6 +254,8 @@ console.log(currentLexicalEnvironment);
 ```
 
 vì lexical môi trường (environment / 환경) là khái niệm thời gian chạy (runtime / 런타임)/spec, không phải ordinary đối tượng (object / 객체) được expose trực tiếp.
+
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Identifier resolution là một quá trình tìm từ trong ra ngoài** tiếp nhận điểm tựa từ **Môi trường (environment / 환경) là nơi binding sống, không phải chỉ là một đối tượng (object / 객체) thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối (block / 블록) phạm vi (scope / 범위) và per-iteration binding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Identifier resolution là một quá trình tìm từ trong ra ngoài
 
@@ -290,6 +297,8 @@ console.log(name);      // ReferenceError nếu không có binding name
 ```
 
 Một bên là **thuộc tính (property / 속성) lookup trên đối tượng (object / 객체)**, một bên là **identifier resolution qua lexical environments**. Phân biệt này rất quan trọng khi gỡ lỗi (debug / 디버그).
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Khối (block / 블록) phạm vi (scope / 범위) và per-iteration binding** tiếp nhận điểm tựa từ **Identifier resolution là một quá trình tìm từ trong ra ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) phạm vi (scope / 범위) không đơn giản là window** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khối (block / 블록) phạm vi (scope / 범위) và per-iteration binding
 
@@ -342,6 +351,8 @@ for (var i = 0; i < 3; i += 1) {
 ```
 
 Đây là ví dụ điển hình cho **hiện đại (modern / 현대적) cú pháp (syntax / 문법) xuất hiện để diễn đạt intent mà legacy JavaScript phải mô phỏng bằng mẫu (pattern / 패턴)**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Toàn cục (global / 전역) phạm vi (scope / 범위) không đơn giản là window** tiếp nhận điểm tựa từ **Khối (block / 블록) phạm vi (scope / 범위) và per-iteration binding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Closure giữ binding, không phải snapshot giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Toàn cục (global / 전역) phạm vi (scope / 범위) không đơn giản là `window`
 
@@ -419,6 +430,8 @@ function createUserStore() {
 
 `user` không exposed trực tiếp ra ngoài.
 
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Closure giữ binding, không phải snapshot giá trị (value / 값)** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) phạm vi (scope / 범위) không đơn giản là window** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mỗi factory call có một private environment khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Closure giữ binding, không phải snapshot giá trị (value / 값)
 
 Đây là một distinction rất quan trọng. Closure thường không “bản sao (copy / 복사) giá trị (value / 값) tại thời điểm hàm (function / 함수) được tạo”; nó giữ khả năng truy cập **binding**.
@@ -439,9 +452,10 @@ Nếu closure chỉ snapshot `"idle"`, đầu ra (output / 출력) đã là `"id
 
 Điều này giải thích cả sức mạnh lẫn bug của closure. Một callback có thể thấy trạng thái (state / 상태) mới nếu binding bị mutate; nhưng một hệ thống kết xuất (render / 렌더링) tạo **binding mới cho mỗi kết xuất (render / 렌더링)/lời gọi (call / 호출)** có thể khiến callback giữ binding cũ, tạo stale closure.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Mỗi factory call có một private environment khác nhau** tiếp nhận điểm tựa từ **Closure giữ binding, không phải snapshot giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Closure và vòng đời (lifecycle / 생명주기)/bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mỗi factory call có một private environment khác nhau
 Phần này nối mạch bài học với “Mỗi factory call có một private environment khác nhau”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 function createCounter() {
@@ -459,6 +473,8 @@ console.log(b()); // 1
 ```
 
 `a` và `b` không share `count`, vì chúng được tạo từ hai lần gọi khác nhau, mỗi lần có môi trường (environment / 환경) riêng. Đây là nền tảng của factory/mô-đun (module / 모듈) patterns dựa closure.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Mỗi factory call có một private environment khác nhau** xác định đầu vào; **Closure và vòng đời (lifecycle / 생명주기)/bộ nhớ (memory / 메모리)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Stale closure: timing + vòng đời (lifecycle / 생명주기), không phải closure “hỏng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Closure và vòng đời (lifecycle / 생명주기)/bộ nhớ (memory / 메모리)
 
@@ -493,6 +509,8 @@ function mount(bigData) {
 ```
 
 Ở đây closure có thời gian tồn tại (lifetime / 수명) tường minh (explicit / 명시적) qua cleanup hàm (function / 함수).
+
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Closure và vòng đời (lifecycle / 생명주기)/bộ nhớ (memory / 메모리)** xác định đầu vào; **Stale closure: timing + vòng đời (lifecycle / 생명주기), không phải closure “hỏng”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bốn binding rules thực dụng cho normal hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stale closure: timing + vòng đời (lifecycle / 생명주기), không phải closure “hỏng”
 
@@ -579,7 +597,6 @@ loggedAdd(1, 2);
 ### Programming pattern — decorator-like wrapper
 Phần này nối mạch bài học với “Programming pattern — decorator-like wrapper”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 function withTiming(fn) {
   return (...args) => {
@@ -648,6 +665,8 @@ const user = new User("Kim");
 
 `new` tạo đối tượng (object / 객체) mới và bind `this` vào đối tượng (object / 객체) đó trong quá trình constructor chạy.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Stale closure: timing + vòng đời (lifecycle / 생명주기), không phải closure “hỏng”** xác định đầu vào; **Bốn binding rules thực dụng cho normal hàm (function / 함수)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Thuộc tính (property / 속성) lookup là chuỗi (chain / 사슬) traversal, không phải bản sao (copy / 복사) phương thức (method / 메서드) vào từng instance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bốn binding rules thực dụng cho normal hàm (function / 함수)
 
 Khi nhìn một normal hàm (function / 함수), hãy xác định `this` bằng lời gọi (call / 호출) expression chứ không nhìn nơi hàm (function / 함수) được khai báo. Một mô hình tư duy (mental model / 사고 모델) thực dụng là:
@@ -672,7 +691,6 @@ Arrow hàm (function / 함수) là exception lớn vì không tạo own động 
 
 ### Implicit receiver là expression ngay trước dấu `.`/`[]`
 Phần này nối mạch bài học với “Implicit receiver là expression ngay trước dấu `.`/`[]`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 const account = {
@@ -701,7 +719,6 @@ receiver vẫn là đơn vị sở hữu (owner / 오너) đối tượng (objec
 ### Detached method làm mất receiver
 Phần này nối mạch bài học với “Detached method làm mất receiver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 const show = account.owner.show;
 show();
@@ -723,7 +740,6 @@ button.addEventListener("click", handleClick);
 ### `this` và lexical variables là hai cơ chế khác nhau
 Phần này nối mạch bài học với “`this` và lexical variables là hai cơ chế khác nhau”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 const name = "outer";
 
@@ -741,7 +757,6 @@ const user = {
 
 ### Class không thay đổi quy tắc cốt lõi của detached method
 Phần này nối mạch bài học với “Class không thay đổi quy tắc cốt lõi của detached method”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 class User {
@@ -824,7 +839,6 @@ element.addEventListener(
 
 ### Partial application
 Phần này nối mạch bài học với “Partial application”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 function multiply(a, b) {
@@ -979,6 +993,8 @@ Object.prototype
 null
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Bốn binding rules thực dụng cho normal hàm (function / 함수)** xác định đầu vào; **Thuộc tính (property / 속성) lookup là chuỗi (chain / 사슬) traversal, không phải bản sao (copy / 복사) phương thức (method / 메서드) vào từng instance** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Shadowing inherited property** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thuộc tính (property / 속성) lookup là chuỗi (chain / 사슬) traversal, không phải bản sao (copy / 복사) phương thức (method / 메서드) vào từng instance
 
 Với:
@@ -999,9 +1015,10 @@ User.prototype
 
 Sau đó hàm (function / 함수) được gọi với receiver `user`, nên bên trong phương thức (method / 메서드) `this` vẫn là `user`, **không phải `User.prototype`**. Đây là chỗ `this` và prototype chuỗi (chain / 사슬) giao nhau: prototype quyết định **tìm hàm (function / 함수) ở đâu**; call-site quyết định **receiver là ai**.
 
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Thuộc tính (property / 속성) lookup là chuỗi (chain / 사슬) traversal, không phải bản sao (copy / 복사) phương thức (method / 메서드) vào từng instance** xác định đầu vào; **Shadowing inherited property** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **instanceof kiểm tra prototype relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Shadowing inherited property
 Phần này nối mạch bài học với “Shadowing inherited property”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 const proto = {
@@ -1027,9 +1044,10 @@ Object.getPrototypeOf(account);
 
 Accessor descriptors có thể làm assignment ngữ nghĩa (semantics / 의미론) phức tạp hơn, vì inherited setter có thể được gọi. Chương thuộc tính (property / 속성) Descriptors giải thích cơ chế đó.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **instanceof kiểm tra prototype relationship** tiếp nhận điểm tựa từ **Shadowing inherited property** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prototype mutation là global-ish behavior change cho descendants** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `instanceof` kiểm tra prototype relationship
 Phần này nối mạch bài học với “`instanceof` kiểm tra prototype relationship”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 user instanceof User;
@@ -1039,9 +1057,10 @@ user instanceof User;
 
 Vì thế prototype mutation có thể thay đổi kết quả (result / 결과), và cross-realm objects có thể làm `instanceof Array`/`instanceof Error` không hoạt động như bạn kỳ vọng. Với arrays, `Array.isArray()` thường robust hơn cross-realm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Prototype mutation là global-ish behavior change cho descendants** tiếp nhận điểm tựa từ **instanceof kiểm tra prototype relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Class syntax không xóa prototype model** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prototype mutation là global-ish behavior change cho descendants
 Phần này nối mạch bài học với “Prototype mutation là global-ish behavior change cho descendants”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 User.prototype.greet = function () {
@@ -1059,9 +1078,10 @@ Array.prototype.last = function () {
 
 Bạn đã thay hành vi (behavior / 동작) của mọi array trong realm và có nguy cơ xung đột (conflict / 충돌) với thư viện (library / 라이브러리)/tiêu chuẩn (standard / 표준) tương lai.
 
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Class syntax không xóa prototype model** tiếp nhận điểm tựa từ **Prototype mutation là global-ish behavior change cho descendants** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Settled không đồng nghĩa fulfilled** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Class syntax không xóa prototype model
 Phần này nối mạch bài học với “Class syntax không xóa prototype model”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 class User {
@@ -1163,7 +1183,6 @@ class Counter {
 
 # Chương 12 — Inheritance và composition over inheritance
 Phần này nối mạch bài học với “Chương 12 — Inheritance và composition over inheritance”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 class Employee extends User {
@@ -1510,6 +1529,8 @@ loadUser()
 
 Đây là một async bug rất phổ biến.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Settled không đồng nghĩa fulfilled** tiếp nhận điểm tựa từ **Class syntax không xóa prototype model** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Resolution khác fulfillment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Settled không đồng nghĩa fulfilled
 
 “Settled” nghĩa Promise không còn pending; nó có thể **fulfilled** hoặc **rejected**.
@@ -1531,6 +1552,8 @@ new Promise((resolve, reject) => {
 ```
 
 settlement đầu tiên quyết định trạng thái (state / 상태).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Resolution khác fulfillment** tiếp nhận điểm tựa từ **Settled không đồng nghĩa fulfilled** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **.then() không sửa Promise cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Resolution khác fulfillment
 
@@ -1559,9 +1582,10 @@ return Promise/thenable
 → next Promise adopt eventual state
 ```
 
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **.then() không sửa Promise cũ** tiếp nhận điểm tựa từ **Resolution khác fulfillment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Promise handlers luôn asynchronous so với current synchronous stack** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `.then()` không sửa Promise cũ
 Phần này nối mạch bài học với “`.then()` không sửa Promise cũ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 const p1 = Promise.resolve(10);
@@ -1570,9 +1594,10 @@ const p2 = p1.then((value) => value * 2);
 
 `p1` và `p2` là hai Promise khác nhau. Đây là nền tảng của chaining. Mỗi `.then()` tạo một continuation và một Promise cho kết quả continuation đó.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Promise handlers luôn asynchronous so với current synchronous stack** tiếp nhận điểm tựa từ **.then() không sửa Promise cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thenable assimilation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Promise handlers luôn asynchronous so với current synchronous stack
 Phần này nối mạch bài học với “Promise handlers luôn asynchronous so với current synchronous stack”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 console.log("A");
@@ -1594,6 +1619,8 @@ B
 
 Ngay cả Promise đã fulfilled sẵn, handler `.then()` vẫn không chạy inline giữa `A` và `C`; nó được enqueue để chạy ở microtask checkpoint.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Thenable assimilation** tiếp nhận điểm tựa từ **Promise handlers luôn asynchronous so với current synchronous stack** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **.catch() và .finally() cũng tiếp tục chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thenable assimilation
 
 Promise resolution không chỉ nhận bản địa (native / 네이티브) Promise. đối tượng (object / 객체) có callable `then` cũng có thể được assimilate:
@@ -1610,6 +1637,8 @@ console.log(value); // 123
 ```
 
 Điều này cho interoperability với Promise-like implementations, nhưng cũng có nghĩa “đọc/resolve một thenable” có thể invoke user-defined hành vi (behavior / 동작). Ở ứng dụng (application / 애플리케이션) mã (code / 코드) bình thường bạn không cần tự implement thenable; chỉ cần hiểu tại sao Promise có thể adopt non-native Promise-like values.
+
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Thenable assimilation** xác định đầu vào; **.catch() và .finally() cũng tiếp tục chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **await tạm dừng function, không tạm dừng thread** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `.catch()` và `.finally()` cũng tiếp tục chuỗi (chain / 사슬)
 
@@ -1663,9 +1692,10 @@ const [profile, settings] = await Promise.all([
 ]);
 ```
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **.catch() và .finally() cũng tiếp tục chuỗi (chain / 사슬)** xác định đầu vào; **await tạm dừng function, không tạm dừng thread** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Async function luôn wrap return value thành Promise outcome** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `await` tạm dừng function, không tạm dừng thread
 Phần này nối mạch bài học với “`await` tạm dừng function, không tạm dừng thread”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 async function load() {
@@ -1691,9 +1721,10 @@ return control to runtime
 resume function later with result
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Async function luôn wrap return value thành Promise outcome** tiếp nhận điểm tựa từ **await tạm dừng function, không tạm dừng thread** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **try/catch chỉ bắt rejection của phần bạn thật sự await** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Async function luôn wrap return value thành Promise outcome
 Phần này nối mạch bài học với “Async function luôn wrap return value thành Promise outcome”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 async function getNumber() {
@@ -1727,9 +1758,10 @@ async function fail() {
 
 caller nhận rejected Promise.
 
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **try/catch chỉ bắt rejection của phần bạn thật sự await** tiếp nhận điểm tựa từ **Async function luôn wrap return value thành Promise outcome** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Start concurrent công việc (work / 작업) trước, await sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `try/catch` chỉ bắt rejection của phần bạn thật sự `await`
 Phần này nối mạch bài học với “`try/catch` chỉ bắt rejection của phần bạn thật sự `await`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 async function run() {
@@ -1754,6 +1786,8 @@ async function run() {
 ```
 
 Đây là nguồn phổ biến của unhandled rejections trong mã (code / 코드) tưởng rằng đã có try/catch.
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Start concurrent công việc (work / 작업) trước, await sau** tiếp nhận điểm tựa từ **try/catch chỉ bắt rejection của phần bạn thật sự await** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trình duyệt (browser / 브라우저) vòng lặp sự kiện (event loop / 이벤트 루프) không phải một “hàng đợi (queue / 큐) duy nhất”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Start concurrent công việc (work / 작업) trước, await sau
 
@@ -1787,7 +1821,6 @@ Cấp cao (senior / 시니어) concern ở đây là **phụ thuộc (dependency
 
 ### Async `forEach` trap
 Phần này nối mạch bài học với “Async `forEach` trap”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 items.forEach(async (item) => {
@@ -1852,6 +1885,8 @@ queueMicrotask(() => {
 });
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Trình duyệt (browser / 브라우저) vòng lặp sự kiện (event loop / 이벤트 루프) không phải một “hàng đợi (queue / 큐) duy nhất”** tiếp nhận điểm tựa từ **Start concurrent công việc (work / 작업) trước, await sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Microtask checkpoint drain đến khi hàng đợi (queue / 큐) rỗng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trình duyệt (browser / 브라우저) vòng lặp sự kiện (event loop / 이벤트 루프) không phải một “hàng đợi (queue / 큐) duy nhất”
 
 Mô hình tư duy (mental model / 사고 모델) beginner thường nói “callback hàng đợi (queue / 큐)”. Đủ để bắt đầu, nhưng ở Intermediate nên nâng lên:
@@ -1869,6 +1904,8 @@ select next task
 ```
 
 “tác vụ (task / 작업)” có thể đến từ timer, người dùng (user / 사용자) tương tác (interaction / 상호작용), networking/other host sources tùy trình duyệt (browser / 브라우저) specification. Không nên dựa vào một thứ tự tổng quát giữa mọi tác vụ (task / 작업) nguồn (source / 소스) ngoài guarantees cụ thể.
+
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Microtask checkpoint drain đến khi hàng đợi (queue / 큐) rỗng** tiếp nhận điểm tựa từ **Trình duyệt (browser / 브라우저) vòng lặp sự kiện (event loop / 이벤트 루프) không phải một “hàng đợi (queue / 큐) duy nhất”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Promise continuation và queueMicrotask() cùng thuộc microtask-level scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Microtask checkpoint drain đến khi hàng đợi (queue / 큐) rỗng
 
@@ -1896,9 +1933,10 @@ loop();
 
 Đây là mã (code / 코드) pathological; trình duyệt (browser / 브라우저) không có cơ hội bình thường để tiến tới tác vụ (task / 작업)/rendering tiếp theo.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Promise continuation và queueMicrotask() cùng thuộc microtask-level scheduling** tiếp nhận điểm tựa từ **Microtask checkpoint drain đến khi hàng đợi (queue / 큐) rỗng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rendering không xảy ra sau mọi dòng mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling
 Phần này nối mạch bài học với “Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 console.log("A");
@@ -1920,6 +1958,8 @@ console.log("B");
 
 Các microtasks được enqueue theo thứ tự (order / 순서) thời gian chạy (runtime / 런타임) tạo chúng, nên mental dấu vết (trace / 추적) quan trọng là **thời điểm enqueue**, không phải cú pháp (syntax / 문법) trông “Promise quan trọng hơn queueMicrotask”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **Rendering không xảy ra sau mọi dòng mã (code / 코드)** tiếp nhận điểm tựa từ **Promise continuation và queueMicrotask() cùng thuộc microtask-level scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **requestAnimationFrame() không phải microtask hay timer replacement chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rendering không xảy ra sau mọi dòng mã (code / 코드)
 
 Trình duyệt (browser / 브라우저) thường có rendering opportunities giữa event-loop turns/checkpoints khi phù hợp. Nếu một tác vụ (task / 작업) synchronous dài 200ms, trình duyệt (browser / 브라우저) không thể paint UI giữa các dòng JavaScript đó dù bạn vừa thay DOM ở đầu tác vụ (task / 작업).
@@ -1934,6 +1974,8 @@ Nếu `heavySynchronousWork()` khối (block / 블록) lâu, người dùng (use
 
 Đây là lý do long tác vụ (task / 작업) ảnh hưởng responsiveness.
 
+> **Chuyển mạch:** Trong **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **requestAnimationFrame() không phải microtask hay timer replacement chung** tiếp nhận điểm tựa từ **Rendering không xảy ra sau mọi dòng mã (code / 코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trace một ví dụ đầy đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `requestAnimationFrame()` không phải microtask hay timer replacement chung
 
 `requestAnimationFrame()` là Web API để schedule callback phù hợp với rendering cycle. Nó hữu ích cho animation/DOM visual cập nhật (update / 업데이트) coordination, không phải cơ chế (mechanism / 메커니즘) để chạy mọi nghiệp vụ (business / 비즈니스) async công việc (work / 작업).
@@ -1946,9 +1988,10 @@ requestAnimationFrame(() => {
 
 Trong background tab, rendering/rAF có thể throttled hoặc pause tùy trình duyệt (browser / 브라우저). Vì vậy đừng dùng rAF làm nghiệp vụ (business / 비즈니스) clock.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**, **requestAnimationFrame() không phải microtask hay timer replacement chung** cho ta quy tắc; **Trace một ví dụ đầy đủ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Trace một ví dụ đầy đủ
 Phần này nối mạch bài học với “Trace một ví dụ đầy đủ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 console.log("script start");
@@ -2291,7 +2334,6 @@ Side effects như mạng (network / 네트워크)/lưu trữ (storage / 저장�
 ### Programming pattern — Functional Core / Imperative Shell
 Phần này nối mạch bài học với “Programming pattern — Functional Core / Imperative Shell”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```text
 read input
 ↓
@@ -2451,7 +2493,6 @@ Benefits: ít listeners hơn, động (dynamic / 동적) children vẫn được
 
 # Chương 36 — DOM lifecycle: init và cleanup
 Phần này nối mạch bài học với “Chương 36 — DOM lifecycle: init và cleanup”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 function init() {
@@ -2739,7 +2780,6 @@ error → loading
 ### Programming pattern — explicit state machine lite
 Phần này nối mạch bài học với “Programming pattern — explicit state machine lite”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 const STATUS = {
   IDLE: "idle",
@@ -2835,7 +2875,6 @@ Sự kiện (event / 이벤트) bus giảm coupling trực tiếp nhưng tạo h
 
 # Chương 45 — Strategy Pattern bằng function
 Phần này nối mạch bài học với “Chương 45 — Strategy Pattern bằng function”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
-
 
 ```js
 const discountStrategies = {
@@ -3231,7 +3270,6 @@ Dự án (project / 프로젝트) này kết hợp closure, cancellation, dịch
 # Chương 58 — Mini Project: Event-driven Store
 Phần này nối mạch bài học với “Chương 58 — Mini Project: Event-driven Store”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 function createStore(
   reducer,
@@ -3291,3 +3329,5 @@ Bạn cũng phải có thể refactor một tính năng (feature / 기능) trộ
 # Chương 60 — Hướng sang cấp cao (senior / 시니어)
 
 Senior JavaScript sẽ không tập trung thêm syntax. Nó tập trung runtime/engine, memory/GC, resource ownership, bounded concurrency, Workers/Streams/backpressure, performance profiling, security, XSS/CSP/Trusted Types, prototype pollution, architecture boundaries, resilience, caching, observability và production testing. Đây là bước chuyển từ “developer hiểu language” sang “developer chịu trách nhiệm hệ thống chạy ổn trong production”.
+
+> **Bàn giao:** Sau **Trace một ví dụ đầy đủ**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

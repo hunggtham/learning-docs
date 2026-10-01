@@ -1,7 +1,6 @@
 # Advanced I/O: epoll, io_uring, zero-copy và DMA
 
-> **Mạch đọc:** Đặt **Advanced I/O: epoll, iouring, zero-copy và DMA** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bài toán ban đầu: nhiều logical operations hơn số thực thi (execution / 실행) threads** sang **2. Readiness và completion là hai đặc tả hợp đồng (contract / 계약) khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced I/O: epoll, iouring, zero-copy và DMA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: nhiều logical operations hơn số thực thi (execution / 실행) threads** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Readiness và completion là hai đặc tả hợp đồng (contract / 계약) khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 I/O hiệu năng (performance / 성능) không chỉ phụ thuộc thiết bị (device / 장치) nhanh hay chậm. Nó phụ thuộc cách ứng dụng (application / 애플리케이션) biểu diễn tính đồng thời (concurrency / 동시성), số lần chuyển người dùng (user / 사용자)/kernel, số copies, hàng đợi (queue / 큐) độ sâu (depth / 깊이), quyền sở hữu (ownership / 소유권) của buffers và việc ứng dụng (application / 애플리케이션) biết một thao tác (operation / 연산) **sẵn sàng** hay **đã hoàn tất** bằng cách nào.
 
@@ -21,6 +20,8 @@ OS thread phải đứng yên chờ operation đó
 
 Đây là bất biến (invariant / 불변식) tài nguyên, không phải lời hứa rằng mỗi thao tác (operation / 연산) sẽ nhanh hơn.
 
+> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **2. Readiness và completion là hai đặc tả hợp đồng (contract / 계약) khác nhau** tiếp nhận điểm tựa từ **1. Bài toán ban đầu: nhiều logical operations hơn số thực thi (execution / 실행) threads** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. select/poll tới epoll/kqueue: giữ interest trạng thái (state / 상태) ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Readiness và completion là hai đặc tả hợp đồng (contract / 계약) khác nhau
 
 **Readiness mô hình (model / 모델)** báo rằng một fd *có khả năng* thực hiện thao tác (operation / 연산) mà không khối (block / 블록) theo điều kiện hiện tại. `epoll`/`kqueue` thuộc family này.
@@ -37,6 +38,8 @@ submit operation → kernel/device xử lý → completion event/result
 
 Nhầm hai mô hình (model / 모델) tạo bug: “socket writable” không nghĩa toàn buffer đã gửi; “completion nhận được” mới là ranh giới (boundary / 경계) cho thao tác (operation / 연산) cụ thể đã submit.
 
+> **Chuyển mạch:** Ở chặng này của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **3. select/poll tới epoll/kqueue: giữ interest trạng thái (state / 상태) ở đâu?** tiếp nhận điểm tựa từ **2. Readiness và completion là hai đặc tả hợp đồng (contract / 계약) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Level-triggered và edge-triggered thay đổi giao thức (protocol / 프로토콜) đọc sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. `select`/`poll` tới `epoll`/`kqueue`: giữ interest trạng thái (state / 상태) ở đâu?
 
 `select`/`poll` thường yêu cầu ứng dụng (application / 애플리케이션) đưa tập descriptors vào kernel và scan kết quả lặp lại. `epoll`/`kqueue` giữ registration/interest trạng thái (state / 상태) phía kernel và trả các events liên quan, giảm overhead khi tập fd rất lớn nhưng chỉ ít fd active.
@@ -44,6 +47,8 @@ Nhầm hai mô hình (model / 모델) tạo bug: “socket writable” không ng
 Bất biến (invariant / 불변식) không phải “epoll luôn O(1) và nhanh”. chi phí (cost / 비용) vẫn phụ thuộc sự kiện (event / 이벤트) tỷ lệ (rate / 비율), wakeups, tranh chấp khóa (lock contention / 잠금 경합), bộ nhớ đệm (cache / 캐시) locality và ứng dụng (application / 애플리케이션) xử lý sự kiện (event / 이벤트) thế nào.
 
 Một vòng lặp sự kiện (event loop / 이벤트 루프) vẫn phải xử lý partial read/ghi (write / 쓰기), `EAGAIN`-like conditions, closed peer và fd vòng đời (lifecycle / 생명주기) chính xác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **4. Level-triggered và edge-triggered thay đổi giao thức (protocol / 프로토콜) đọc sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **3. select/poll tới epoll/kqueue: giữ interest trạng thái (state / 상태) ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Partial I/O là normal hành vi (behavior / 동작), không phải rare lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Level-triggered và edge-triggered thay đổi giao thức (protocol / 프로토콜) đọc sự kiện (event / 이벤트)
 
@@ -61,6 +66,8 @@ edge arrives
 
 Đây là giao thức (protocol / 프로토콜) bug ở ứng dụng (application / 애플리케이션), không phải kernel đánh mất packet.
 
+> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **5. Partial I/O là normal hành vi (behavior / 동작), không phải rare lỗi (error / 오류)** tiếp nhận điểm tựa từ **4. Level-triggered và edge-triggered thay đổi giao thức (protocol / 프로토콜) đọc sự kiện (event / 이벤트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. FD vòng đời (lifecycle / 생명주기) và stale sự kiện (event / 이벤트) race** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Partial I/O là normal hành vi (behavior / 동작), không phải rare lỗi (error / 오류)
 
 `read` có thể trả ít bytes hơn message lô-gic (logic / 논리); `write` có thể chỉ accept một phần buffer. TCP là byte stream nên ứng dụng (application / 애플리케이션) phải giữ framing/trạng thái (state / 상태) riêng.
@@ -77,6 +84,8 @@ deadline/cancellation
 
 Nếu mã (code / 코드) giả định “một ghi (write / 쓰기) gửi cả phản hồi (response / 응답)”, bug sẽ chỉ xuất hiện dưới pressure khi socket buffer đầy hơn—đúng lúc môi trường vận hành (production / 운영 환경) khác cục bộ (local / 로컬) kiểm thử (test / 테스트).
 
+> **Chuyển mạch:** Ở chặng này của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **5. Partial I/O là normal hành vi (behavior / 동작), không phải rare lỗi (error / 오류)** xác định đầu vào; **6. FD vòng đời (lifecycle / 생명주기) và stale sự kiện (event / 이벤트) race** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. iouring: submission/completion rings đổi syscall đường dẫn (path / 경로), không đổi sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. FD vòng đời (lifecycle / 생명주기) và stale sự kiện (event / 이벤트) race
 
 Tệp (file / 파일) descriptor là một integer handle có thể được kernel tái sử dụng sau close. Nếu ứng dụng (application / 애플리케이션) giữ sự kiện (event / 이벤트) cũ rồi descriptor number được cấp lại cho liên kết (connection / 연결) khác, xử lý sự kiện (event / 이벤트) stale theo chỉ số fd đơn thuần có thể tác động nhầm đối tượng (object / 객체).
@@ -86,6 +95,8 @@ Thời gian chạy (runtime / 런타임) thường cần generation/đơn vị t
 > Một completion/readiness sự kiện (event / 이벤트) chỉ được áp dụng cho logical tài nguyên (resource / 자원) đã tạo registration/thao tác (operation / 연산) đó, không phải bất kỳ tài nguyên (resource / 자원) mới nào tình cờ có cùng integer handle.
 
 Đây là cùng family với ABA: định danh (identity / 식별자) và thời gian tồn tại (lifetime / 수명) không thể suy ra chỉ từ bit mẫu (pattern / 패턴) của handle.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **6. FD vòng đời (lifecycle / 생명주기) và stale sự kiện (event / 이벤트) race** xác định đầu vào; **7. iouring: submission/completion rings đổi syscall đường dẫn (path / 경로), không đổi sức chứa (capacity / 용량)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. hàng đợi (queue / 큐) độ sâu (depth / 깊이): quá ít thì thiết bị (device / 장치) idle, quá nhiều thì tail độ trễ (latency / 지연 시간) phình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. `io_uring`: submission/completion rings đổi syscall đường dẫn (path / 경로), không đổi sức chứa (capacity / 용량)
 
@@ -104,6 +115,8 @@ prepare SQ entries
 
 Tính đúng đắn (correctness / 정확성) cần quyền sở hữu (ownership / 소유권) rõ: entry nào thuộc thao tác (operation / 연산) nào, buffer còn sống tới khi nào, cancellation/hết thời gian chờ (timeout / 타임아웃) race với completion ra sao.
 
+> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **7. iouring: submission/completion rings đổi syscall đường dẫn (path / 경로), không đổi sức chứa (capacity / 용량)** xác định đầu vào; **8. hàng đợi (queue / 큐) độ sâu (depth / 깊이): quá ít thì thiết bị (device / 장치) idle, quá nhiều thì tail độ trễ (latency / 지연 시간) phình** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Cancellation là một chuyển tiếp trạng thái (state transition / 상태 전이), không phải xóa lịch sử thao tác (operation / 연산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. hàng đợi (queue / 큐) độ sâu (depth / 깊이): quá ít thì thiết bị (device / 장치) idle, quá nhiều thì tail độ trễ (latency / 지연 시간) phình
 
 Lưu trữ (storage / 저장소)/NIC thường cần nhiều requests in-flight để đạt thông lượng (throughput / 처리량). Nhưng hàng đợi (queue / 큐) sâu tạo waiting thời gian (time / 시간) và giữ nhiều bộ nhớ (memory / 메모리)/trạng thái (state / 상태) hơn.
@@ -120,6 +133,8 @@ queue depth cao quá
 
 Điểm tối ưu phụ thuộc thiết bị (device / 장치), tải công việc (workload / 워크로드), yêu cầu (request / 요청) kích thước (size / 크기) và SLO. Async API không thay định luật queueing.
 
+> **Chuyển mạch:** Ở chặng này của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **9. Cancellation là một chuyển tiếp trạng thái (state transition / 상태 전이), không phải xóa lịch sử thao tác (operation / 연산)** tiếp nhận điểm tựa từ **8. hàng đợi (queue / 큐) độ sâu (depth / 깊이): quá ít thì thiết bị (device / 장치) idle, quá nhiều thì tail độ trễ (latency / 지연 시간) phình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Registered/pinned buffers đổi syscall/bản sao (copy / 복사) chi phí (cost / 비용) thành thời gian tồn tại (lifetime / 수명) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Cancellation là một chuyển tiếp trạng thái (state transition / 상태 전이), không phải xóa lịch sử thao tác (operation / 연산)
 
 Khi cancel một async thao tác (operation / 연산), có race:
@@ -135,11 +150,15 @@ cancel request đang đến
 
 Bất biến (invariant / 불변식) quan trọng là buffer/tài nguyên (resource / 자원) chỉ được free/reuse sau ranh giới (boundary / 경계) mà API bảo đảm kernel/thiết bị (device / 장치) không còn truy cập nó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **10. Registered/pinned buffers đổi syscall/bản sao (copy / 복사) chi phí (cost / 비용) thành thời gian tồn tại (lifetime / 수명) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **9. Cancellation là một chuyển tiếp trạng thái (state transition / 상태 전이), không phải xóa lịch sử thao tác (operation / 연산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. DMA: CPU không bản sao (copy / 복사) từng byte nhưng vẫn quản lý giao thức (protocol / 프로토콜)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Registered/pinned buffers đổi syscall/bản sao (copy / 복사) chi phí (cost / 비용) thành thời gian tồn tại (lifetime / 수명) chi phí (cost / 비용)
 
 Một số async mechanisms cho phép register hoặc pin buffers để giảm repeated ánh xạ (mapping / 매핑)/setup. hiệu năng (performance / 성능) tốt hơn nhưng bộ nhớ (memory / 메모리) đó ít linh hoạt hơn với allocator/reclaim và quyền sở hữu (ownership / 소유권) giao thức (protocol / 프로토콜) phức tạp hơn.
 
 Nếu buffer được tái sử dụng trước completion, DMA/kernel có thể ghi vào bộ nhớ (memory / 메모리) hiện đã thuộc logical yêu cầu (request / 요청) khác. Đây là tính đúng đắn (correctness / 정확성) bug do thời gian tồn tại (lifetime / 수명), không phải “dữ liệu (data / 데이터) corruption ngẫu nhiên”.
+
+> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **11. DMA: CPU không bản sao (copy / 복사) từng byte nhưng vẫn quản lý giao thức (protocol / 프로토콜)** tiếp nhận điểm tựa từ **10. Registered/pinned buffers đổi syscall/bản sao (copy / 복사) chi phí (cost / 비용) thành thời gian tồn tại (lifetime / 수명) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Zero-copy là giảm copies, không phải “dữ liệu (data / 데이터) không di chuyển”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. DMA: CPU không bản sao (copy / 복사) từng byte nhưng vẫn quản lý giao thức (protocol / 프로토콜)
 
@@ -158,6 +177,8 @@ user buffer
 
 Lower lớp trừu tượng (abstraction / 추상화) quyết định độ trễ (latency / 지연 시간) có thể là IOMMU/TLB, PCIe/interconnect hoặc thiết bị (device / 장치) hàng đợi (queue / 큐), không phải user-space hàm (function / 함수).
 
+> **Chuyển mạch:** Ở chặng này của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **11. DMA: CPU không bản sao (copy / 복사) từng byte nhưng vẫn quản lý giao thức (protocol / 프로토콜)** nêu điều cần giải thích; **12. Zero-copy là giảm copies, không phải “dữ liệu (data / 데이터) không di chuyển”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Interrupt, interrupt moderation và polling là sự đánh đổi (trade-off / 트레이드오프) độ trễ (latency / 지연 시간)–thông lượng (throughput / 처리량)–CPU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Zero-copy là giảm copies, không phải “dữ liệu (data / 데이터) không di chuyển”
 
 “Zero-copy” thường nghĩa loại bỏ một hoặc nhiều copies giữa layers. `sendfile`, splice-like paths, bộ nhớ (memory / 메모리) ánh xạ (mapping / 매핑) hoặc NIC offloads có thể tránh user-buffer → kernel-buffer bản sao (copy / 복사) trong một số workloads.
@@ -166,11 +187,15 @@ Nhưng dữ liệu (data / 데이터) vẫn di chuyển qua bộ nhớ (memory /
 
 Zero-copy có lợi khi bản sao (copy / 복사) + bộ nhớ (memory / 메모리) bandwidth là bottleneck; với payload nhỏ, setup/thời gian tồn tại (lifetime / 수명) độ phức tạp (complexity / 복잡도) có thể lớn hơn lợi ích.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **12. Zero-copy là giảm copies, không phải “dữ liệu (data / 데이터) không di chuyển”** nêu điều cần giải thích; **13. Interrupt, interrupt moderation và polling là sự đánh đổi (trade-off / 트레이드오프) độ trễ (latency / 지연 시간)–thông lượng (throughput / 처리량)–CPU** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. vòng lặp sự kiện (event loop / 이벤트 루프) vẫn có thể bị starvation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Interrupt, interrupt moderation và polling là sự đánh đổi (trade-off / 트레이드오프) độ trễ (latency / 지연 시간)–thông lượng (throughput / 처리량)–CPU
 
 Interrupt phù hợp sự kiện (event / 이벤트) thưa: CPU làm việc khác rồi được đánh thức. Ở packet tỷ lệ (rate / 비율) cao, một interrupt mỗi sự kiện (event / 이벤트) có overhead lớn; hệ thống có thể coalesce/moderate interrupts hoặc chuyển sang polling/batched processing.
 
 Busy-poll có thể giảm wakeup độ trễ (latency / 지연 시간) nhưng dùng CPU ngay cả khi ít công việc (work / 작업). Không có chế độ (mode / 모드) “luôn nhanh nhất”; tải công việc (workload / 워크로드) thay đổi thì operating điểm (point / 지점) tối ưu cũng thay đổi.
+
+> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **14. vòng lặp sự kiện (event loop / 이벤트 루프) vẫn có thể bị starvation** tiếp nhận điểm tựa từ **13. Interrupt, interrupt moderation và polling là sự đánh đổi (trade-off / 트레이드오프) độ trễ (latency / 지연 시간)–thông lượng (throughput / 처리량)–CPU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Backpressure phải bắt đầu trước khi buffers đầy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. vòng lặp sự kiện (event loop / 이벤트 루프) vẫn có thể bị starvation
 
@@ -187,6 +212,8 @@ network/storage service time
 ```
 
 CPU toàn máy có thể chỉ 20% trên máy nhiều cốt lõi (core / 핵심) nhưng một event-loop cốt lõi (core / 핵심) đã saturated.
+
+> **Chuyển mạch:** Ở chặng này của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **15. Backpressure phải bắt đầu trước khi buffers đầy** tiếp nhận điểm tựa từ **14. vòng lặp sự kiện (event loop / 이벤트 루프) vẫn có thể bị starvation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Backpressure phải bắt đầu trước khi buffers đầy
 
@@ -206,11 +233,15 @@ arrival > service capacity
 
 Bounded queues, per-connection/per-tenant limits, luồng (flow / 흐름) điều khiển (control / 제어), semaphore/admission điều khiển (control / 제어) và stop-reading chiến lược (strategy / 전략) là các cách biểu diễn sức chứa (capacity / 용량). Đọc [Queueing, tail latency và backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **16. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** tiếp nhận điểm tựa từ **15. Backpressure phải bắt đầu trước khi buffers đầy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase
 
 Ở low tính đồng thời (concurrency / 동시성), syscall/bản sao (copy / 복사) overhead có thể negligible. Khi QPS tăng, chuyển tiếp (transition / 전이)/bản sao (copy / 복사)/bộ nhớ đệm (cache / 캐시) pollution trở nên đáng kể; batching và async giúp thông lượng (throughput / 처리량). Khi tính đồng thời (concurrency / 동시성) tiếp tục tăng, hàng đợi (queue / 큐) wait và bộ nhớ (memory / 메모리) pressure lại dominate.
 
 Vì vậy “io_uring nhanh hơn epoll” không phải universal conclusion. Hai các mô hình (models / 모델들) phù hợp thao tác (operation / 연산) mix khác nhau; benchmark phải giữ yêu cầu (request / 요청) kích thước (size / 크기), tính đồng thời (concurrency / 동시성), hàng đợi (queue / 큐) độ sâu (depth / 깊이), CPU pinning, thiết bị (device / 장치)/mạng (network / 네트워크) conditions và SLO tương đồng.
+
+> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **16. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** nêu điều cần giải thích; **17. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -238,16 +269,22 @@ Hardware/device:
 
 Một flame đồ thị (graph / 그래프) on-CPU không giải thích thời gian đang nằm trong thiết bị (device / 장치) hàng đợi (queue / 큐); một lưu trữ (storage / 저장소) độ trễ (latency / 지연 시간) đồ thị (graph / 그래프) không giải thích event-loop starvation. Cần nhân quả (causal / 인과적) timeline xuyên layers.
 
+> **Chuyển mạch:** Ở chặng này của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **17. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)
 
 Nếu fd “ready nhưng không chạy tiếp”, kiểm tra edge-triggered drain/vòng đời (lifecycle / 생명주기) trước khi nghi kernel. Nếu dữ liệu (data / 데이터) bị ghi vào yêu cầu (request / 요청) sai, kiểm tra buffer/fd định danh (identity / 식별자) và late completion. Nếu thông lượng (throughput / 처리량) thấp nhưng thiết bị (device / 장치) idle, xem hàng đợi (queue / 큐) độ sâu (depth / 깊이)/submission batching. Nếu p99 tăng khi QPS cao, xem hàng đợi (queue / 큐)/backpressure trước khi chỉ tối ưu syscall.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced I/O: epoll, iouring, zero-copy và DMA**, **19. Mô hình tư duy** gom các mảnh từ **18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Mô hình tư duy
 
 > Advanced I/O là bài toán **quyền sở hữu (ownership / 소유권) + queues + completion ngữ nghĩa (semantics / 의미론)**. Readiness cho biết lúc nào nên thử; completion cho biết thao tác (operation / 연산) nào đã kết thúc; DMA/zero-copy giảm CPU/bản sao (copy / 복사) chi phí (cost / 비용) nhưng làm buffer thời gian tồn tại (lifetime / 수명) quan trọng hơn; async giữ chuỗi xử lý (pipeline / 파이프라인) đầy nhưng không tạo sức chứa (capacity / 용량). **Khi tính đồng thời (concurrency / 동시성) tăng, backpressure quyết định hệ thống còn ổn định hay chỉ tích lũy công việc (work / 작업) nhanh hơn.**
 
+> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **Kết nối** gom các mảnh từ **19. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối
 
 Ôn [OS async I/O foundation](../../basic/03_operating_systems/07_boot_device_drivers_and_async_io.md), [runtime coroutine/event loop](../../04_programming_languages/advanced/07_coroutines_continuations_async_runtimes_and_structured_concurrency.md), [queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md) và [end-to-end request path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kernel execution contexts and syscall path](./00_kernel_execution_contexts_and_syscall_path.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

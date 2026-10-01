@@ -1,6 +1,6 @@
 # Khả năng tiếp cận (accessibility / 접근성), bảo mật (security / 보안) và hiệu năng (performance / 성능) như tính đúng đắn (correctness / 정확성)
 
-> **Mạch đọc:** Đặt **khả năng tiếp cận (accessibility / 접근성), bảo mật (security / 보안) và hiệu năng (performance / 성능) như tính đúng đắn (correctness / 정확성)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **khả năng tiếp cận (accessibility / 접근성)** sang **bảo mật (security / 보안)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khả năng tiếp cận (accessibility / 접근성), bảo mật (security / 보안) và hiệu năng (performance / 성능) như tính đúng đắn (correctness / 정확성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khả năng tiếp cận (accessibility / 접근성)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bảo mật (security / 보안)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Ba concern này không phải checklist cuối sprint. Chúng là ràng buộc (constraint / 제약조건) của cùng
 một nền tảng (platform / 플랫폼) đặc tả hợp đồng (contract / 계약): người dùng phải có thể hiểu/tương tác, dữ liệu không
@@ -14,8 +14,7 @@ ARIA chỉ bổ sung khi bản địa (native / 네이티브) element không đ�
 sai. Conditional rendering, portal, popup, WFrame, lazy loading và hydration
 đều phải giữ ngữ nghĩa (semantics / 의미론) và focus restoration.
 
-
-> **Chuyển mạch:** Từ **khả năng tiếp cận (accessibility / 접근성)**, ta sang **bảo mật (security / 보안)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Accessibility đặt ra những user-visible constraints cho interface; security tiếp theo bảo vệ dữ liệu và capability trong cùng boundary. Performance phải được đo sau hai constraint đó, không được tối ưu bằng cách phá semantics.
 
 ## Bảo mật (security / 보안)
 
@@ -24,8 +23,7 @@ Tách kiểm tra hợp lệ (validation / 검증), encoding, sanitization và au
 được xác định. XSS, CSRF, CORS, cookie/đơn vị từ (token / 토큰), CSP/Trusted Types và phụ thuộc (dependency / 의존성)
 supply chuỗi (chain / 사슬) có dạng thất bại (failure mode / 실패 모드) khác nhau; UI kiểm tra hợp lệ (validation / 검증) không thay máy chủ (server / 서버) check.
 
-
-> **Chuyển mạch:** Từ **bảo mật (security / 보안)**, ta sang **hiệu năng (performance / 성능)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Security boundary xác định dữ liệu và hành động nào được phép; performance đo latency, work và resource cost trong boundary đó. Kết luận là một correctness claim chỉ có ý nghĩa khi cả ba trục cùng được giữ.
 
 ## Hiệu năng (performance / 성능)
 
@@ -38,4 +36,4 @@ Các nhánh học (track / 트랙) hiện thực (implementation / 구현) cung 
 [WebSquare accessibility](../websquare/09_forms_validation_i18n_accessibility.md)
 và [WebSquare profiling](../websquare/24_event_semantics_performance_profiling.md).
 
-> **Bàn giao:** Sau **hiệu năng (performance / 성능)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 web platform model](./00_web_platform_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Hiệu năng (performance / 성능)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

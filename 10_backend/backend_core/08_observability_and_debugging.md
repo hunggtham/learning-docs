@@ -1,10 +1,8 @@
 # 08. khả năng quan sát (observability / 관측 가능성) và debugging
 
-> **Mạch đọc:** Đặt **08. khả năng quan sát (observability / 관측 가능성) và debugging** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Ba tín hiệu, một câu hỏi** sang **Debugging vòng lặp (loop / 루프)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **08. khả năng quan sát (observability / 관측 가능성) và debugging**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba tín hiệu, một câu hỏi** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Debugging vòng lặp (loop / 루프)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Ba tín hiệu, một câu hỏi
-Phần “Ba tín hiệu, một câu hỏi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **Logs**: sự kiện có ngữ cảnh, yêu cầu (request / 요청) ID, actor/tenant đã redact.
 - **Metrics**: xu hướng và tỷ lệ (rate, error, duration, saturation).
@@ -14,8 +12,7 @@ Khả năng quan sát (observability / 관측 가능성) không phải bật th�
 thuyết: độ trễ (latency / 지연 시간) tăng ở hàng đợi (queue / 큐) hay cơ sở dữ liệu (database / 데이터베이스), lỗi theo tenant hay toàn hệ thống,
 chỉ hết thời gian chờ (timeout / 타임아웃) hay đã lần ghi nhận (commit / 커밋).
 
-
-> **Chuyển mạch:** Từ **Ba tín hiệu, một câu hỏi**, ta sang **Debugging vòng lặp (loop / 루프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ba tín hiệu chỉ hữu ích khi chúng trả lời được một symptom cụ thể. **Debugging vòng lặp (loop / 루프)** dùng logs, metrics và traces để khoanh boundary đầu tiên bị phá; sau đó **Độ tin cậy (reliability / 신뢰성) signals** chuyển bằng chứng ấy thành tín hiệu vận hành.
 
 ## Debugging vòng lặp (loop / 루프)
 
@@ -29,8 +26,7 @@ Correlation ID cần truyền qua HTTP, job và message; ngữ cảnh dấu vế
 drop ở adapter. chỉ số (metric / 지표) label không được chứa người dùng (user / 사용자) ID/card number vô hạn cardinality.
 Log structured, có severity và sampling; redact secret trước khi serialize.
 
-
-> **Chuyển mạch:** Từ **Debugging vòng lặp (loop / 루프)**, ta sang **độ tin cậy (reliability / 신뢰성) signals** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi khoanh symptom và boundary, reliability signals cho biết sự cố có lan rộng và có hành động nào sẵn sàng hay không. **Đào sâu: từ telemetry đến nhân quả (causal / 인과적) đồ thị (graph / 그래프)** nối các tín hiệu thành chuỗi nguyên nhân thay vì xem dashboard rời rạc.
 
 ## Độ tin cậy (reliability / 신뢰성) signals
 
@@ -44,8 +40,7 @@ nào làm thay đổi quyết định.
 
 Nền fault tolerance và khả năng quan sát (observability / 관측 가능성) sâu hơn nằm ở [Security & Reliability](../../computer_science/07_security_reliability/README.md).
 
-
-> **Chuyển mạch:** Từ **độ tin cậy (reliability / 신뢰성) signals**, ta sang **Đào sâu: từ telemetry đến nhân quả (causal / 인과적) đồ thị (graph / 그래프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Causal graph đặt deploy, saturation, latency, timeout và duplicate work trên cùng một đường đi. **Bài tập suy luận** kiểm tra khả năng đọc đường đi đó bằng một p99 tăng nhưng error rate chưa tăng.
 
 ## Đào sâu: từ telemetry đến nhân quả (causal / 인과적) đồ thị (graph / 그래프)
 
@@ -73,8 +68,7 @@ Mitigation môi trường vận hành (production / 운영 환경) phải có qu
 traffic, pause bên tiêu thụ (consumer / 소비자), tăng sức chứa (capacity / 용량) hoặc chuyển read-only. Không sửa dữ liệu
 trực tiếp chỉ để dashboard “xanh”.
 
-
-> **Chuyển mạch:** Từ **Đào sâu: từ telemetry đến nhân quả (causal / 인과적) đồ thị (graph / 그래프)**, ta sang **Bài tập suy luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bài tập p99 buộc chọn metric/span có giá trị chẩn đoán trước khi timeout xuất hiện. **Health, SLO và privacy-safe telemetry** tiếp tục bằng cách biến chẩn đoán thành probe, budget và dữ liệu được phép lưu.
 
 ## Bài tập suy luận
 
@@ -82,8 +76,7 @@ Một endpoint p99 tăng từ 200 ms lên 2 s nhưng lỗi (error / 오류) tỷ
 chỉ số (metric / 지표)/span cần xem trước, phân biệt queueing với cơ sở dữ liệu (database / 데이터베이스) độ trễ (latency / 지연 시간), và nêu alert
 nào nên kích hoạt trước khi người dùng gặp hết thời gian chờ (timeout / 타임아웃).
 
-
-> **Chuyển mạch:** Từ **Bài tập suy luận**, ta sang **Health, SLO và privacy-safe telemetry** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Probe, SLO và privacy classification biến kết quả debugging thành điều kiện vận hành có thể kiểm tra. Phần này khép mạch bằng cách nối health/readiness với user-visible outcome và retention có mục đích.
 
 ## Health, SLO và privacy-safe telemetry
 
@@ -102,4 +95,4 @@ Telemetry phải có dữ liệu (data / 데이터) classification. Không dùng
 yêu cầu (request / 요청) body hay full truy vấn (query / 쿼리) làm label/log mặc định. Dùng allowlist trường dữ liệu (field / 필드), redaction
 trước serialize, retention theo purpose và truy cập (access / 접근) kiểm tra (audit / 감사) cho log/traces.
 
-> **Bàn giao:** Sau **Health, SLO và privacy-safe telemetry**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Giữ lại debugging loop, causal telemetry, SLO và privacy classification; quay về [README](./README.md) khi cần nối sang testing, retry hoặc security reliability.

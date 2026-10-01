@@ -1,6 +1,6 @@
 # Debugging xuyên lớp trừu tượng (abstraction / 추상화) layers: từ symptom đến bất biến (invariant / 불변식) và sự cố (incident / 인시던트) containment
 
-> **Mạch đọc:** Đặt **Debugging xuyên lớp trừu tượng (abstraction / 추상화) layers: từ symptom đến bất biến (invariant / 불변식) và sự cố (incident / 인시던트) containment** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Symptom không phải cơ chế (mechanism / 메커니즘), cơ chế (mechanism / 메커니즘) chưa chắc là gốc (root / 루트) điều kiện (condition / 조건)** sang **2. Viết bất biến (invariant / 불변식) trước khi mở thêm dashboard**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của tuyến debugging nâng cao. File đi từ symptom tới invariant, boundary, evidence rồi mới xuống lower layer; các ví dụ về request, durability, concurrency và security chỉ minh họa cùng một quy tắc: sửa ở tầng sở hữu invariant.
 
 
 Môi trường vận hành (production / 운영 환경) bug thường xuất hiện ở tầng (layer / 계층) A nhưng nguyên nhân nằm ở tầng (layer / 계층) B hoặc tương tác (interaction / 상호작용) giữa nhiều layers. Advanced debugging vì vậy cần tránh hai cực: nhảy ngay xuống assembly/kernel, hoặc chỉ nhìn ứng dụng (application / 애플리케이션) log và giả định lớp trừu tượng (abstraction / 추상화) luôn giữ.
@@ -67,6 +67,8 @@ mechanism thấp hơn nào giải thích behavior?
 
 Dấu vết (trace / 추적) cho nhân quả (causal / 인과적) cấu trúc (structure / 구조); metrics cho population/saturation; profiler/counters cho cơ chế (mechanism / 메커니즘); logs cho sự kiện (event / 이벤트)/ngữ cảnh (context / 맥락). Không công cụ (tool / 도구) nào một mình là “truth”.
 
+> **Chuyển mạch:** Sau khi xác định loại bằng chứng cần thu, các ví dụ tiếp theo cho thấy cùng một triệu chứng có thể dẫn tới các owner khác nhau; trước hết là request chậm nhưng query vẫn nhanh.
+
 ## 5. Ví dụ: yêu cầu (request / 요청) chậm nhưng truy vấn (query / 쿼리) nhanh
 
 DB dashboard báo truy vấn (query / 쿼리) 20 ms, API mất 2 s. Có thể 1.8 s nằm ở connection-pool wait trước khi truy vấn (query / 쿼리) bắt đầu. truy vấn (query / 쿼리) tracing chỉ đo dịch vụ (service / 서비스) thời gian (time / 시간) sau acquire nên bỏ qua hàng đợi (queue / 큐) delay.
@@ -84,6 +86,8 @@ Fix chỉ mục (index / 인덱스) không giải. bằng chứng (evidence / �
 Mã nguồn (source code / 소스 코드) nhìn ordered, kiểm thử (test / 테스트) trên một ISA pass nhưng môi trường vận hành (production / 운영 환경) thất bại (fail / 실패). Nếu program thiếu happens-before, kiểm thử (test / 테스트) chỉ đang dựa vào accidental timing hoặc stronger thứ tự (ordering / 순서) của một nền tảng (platform / 플랫폼).
 
 Đi xuống ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model / 모델) → trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) → ISA thứ tự (ordering / 순서) → bộ nhớ đệm (cache / 캐시)/coherence để giải thích hành vi (behavior / 동작), nhưng fix phải quay lại tầng sở hữu bất biến (invariant / 불변식) đồng bộ. Xem [đường correctness xuyên tầng](./02_correctness_path_language_os_cpu_memory_ordering.md).
+
+> **Chuyển mạch:** Hai ví dụ về durability và concurrency cho thấy việc đi xuống tầng thấp chỉ có ích khi đã viết invariant. Từ đó, **8. bảo mật đường dẫn** mở rộng cùng quy tắc sang authority và trust boundary.
 
 ## 8. bảo mật (security / 보안) đường dẫn (path / 경로): định danh (identity / 식별자) → authorization → secret → TLS → dịch vụ (service / 서비스) ranh giới (boundary / 경계)
 

@@ -1,7 +1,6 @@
 # Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)
 
-> **Mạch đọc:** Đọc **bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address** sang **Spatial và temporal locality**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Spatial và temporal locality** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Cấu trúc dữ liệu (data structure / 자료구조) không tồn tại trong khoảng không trừu tượng. Nó cuối cùng phải chiếm bytes trong bộ nhớ (memory / 메모리). Cùng độ phức tạp (complexity / 복잡도) lớp (class / 클래스), hai representations có thể khác hiệu năng (performance / 성능) rất lớn vì cách CPU bộ nhớ đệm (cache / 캐시), allocator và pointer chasing hoạt động.
 
@@ -11,8 +10,7 @@ Bộ nhớ (memory / 메모리) có thể hình dung như một dãy bytes, mỗ
 
 Một array của 1 triệu integers contiguous tạo mẫu (pattern / 패턴) địa chỉ đều. CPU prefetcher và bộ nhớ đệm (cache / 캐시) line có thể lấy nhiều neighboring values cùng lúc. Linked danh sách (list / 목록) đặt nodes rải rác, mỗi pointer dereference có thể dẫn tới trượt bộ nhớ đệm (cache miss / 캐시 미스).
 
-
-> **Chuyển mạch:** Từ **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address**, ta sang **Spatial và temporal locality** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Spatial và temporal locality** tiếp nhận điểm tựa từ **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Spatial và temporal locality
 
@@ -22,8 +20,7 @@ Bộ nhớ đệm (cache / 캐시) hoạt động tốt vì programs thường c
 
 Thuật toán (algorithm / 알고리즘) thiết kế (design / 설계) và dữ liệu (data / 데이터) bố cục (layout / 레이아웃) có thể tăng locality mà không đổi Big O.
 
-
-> **Chuyển mạch:** Từ **Spatial và temporal locality**, ta sang **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Spatial và temporal locality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Array of Structures và cấu trúc (structure / 구조) of Arrays** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)
 
@@ -33,8 +30,7 @@ Linked structures dùng pointers để nối nodes. Insert/delete tại known n�
 
 Vì vậy câu “linked danh sách (list / 목록) insert nhanh hơn array” thiếu ngữ cảnh (context / 맥락). Nếu tải công việc (workload / 워크로드) chủ yếu scan, động (dynamic / 동적) array thường tốt hơn đáng kể.
 
-
-> **Chuyển mạch:** Từ **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)**, ta sang **Array of Structures và cấu trúc (structure / 구조) of Arrays** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Array of Structures và cấu trúc (structure / 구조) of Arrays** tiếp nhận điểm tựa từ **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alignment, padding và đối tượng (object / 객체) overhead** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Array of Structures và cấu trúc (structure / 구조) of Arrays
 
@@ -44,8 +40,7 @@ Nếu computation cần tất cả fields của từng điểm (point / 지점),
 
 Data-oriented thiết kế (design / 설계) bắt đầu từ truy cập (access / 접근) mẫu (pattern / 패턴) chứ không chỉ đối tượng (object / 객체) modeling.
 
-
-> **Chuyển mạch:** Từ **Array of Structures và cấu trúc (structure / 구조) of Arrays**, ta sang **Alignment, padding và đối tượng (object / 객체) overhead** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Alignment, padding và đối tượng (object / 객체) overhead** tiếp nhận điểm tựa từ **Array of Structures và cấu trúc (structure / 구조) of Arrays** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Alignment, padding và đối tượng (object / 객체) overhead
 
@@ -55,8 +50,7 @@ Hàng triệu tiny objects vì vậy có bộ nhớ (memory / 메모리) footpri
 
 Xem biểu diễn (representation / 표현) chi tiết tại [Numbers & machine representation](../00_computation_information/02_numbers_and_machine_representation.md).
 
-
-> **Chuyển mạch:** Từ **Alignment, padding và đối tượng (object / 객체) overhead**, ta sang **ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Alignment, padding và đối tượng (object / 객체) overhead** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Pointer chasing và indirection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)
 
@@ -66,8 +60,7 @@ Xem biểu diễn (representation / 표현) chi tiết tại [Numbers & machine 
 
 Phần language-level bộ nhớ (memory / 메모리) được giải thích ở [Types, values, references and memory](../04_programming_languages/01_types_values_references_and_memory.md).
 
-
-> **Chuyển mạch:** Từ **ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)**, ta sang **Pointer chasing và indirection** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Pointer chasing và indirection** gom các mảnh từ **Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Compactness và encoded representations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pointer chasing và indirection
 
@@ -75,8 +68,7 @@ Lớp trừu tượng (abstraction / 추상화) thường thêm indirection: poi
 
 Đây chính là lý do cơ sở dữ liệu (database / 데이터베이스) indexes thích B/B+ trees.
 
-
-> **Chuyển mạch:** Từ **Pointer chasing và indirection**, ta sang **Compactness và encoded representations** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Compactness và encoded representations** tiếp nhận điểm tựa từ **Pointer chasing và indirection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mutability và sharing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Compactness và encoded representations
 
@@ -84,8 +76,7 @@ Bitsets pack booleans thành bits thay vì bytes/objects. Integer compression, d
 
 Tuy nhiên compression cần CPU decode. Đây là time-space-bandwidth sự đánh đổi (trade-off / 트레이드오프).
 
-
-> **Chuyển mạch:** Từ **Compactness và encoded representations**, ta sang **Mutability và sharing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Mutability và sharing** tiếp nhận điểm tựa từ **Compactness và encoded representations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mutability và sharing
 
@@ -93,15 +84,13 @@ Immutable persistent dữ liệu (data / 데이터) structures có thể share c
 
 Dữ liệu (data / 데이터) bố cục (layout / 레이아웃) vì vậy chịu ảnh hưởng không chỉ bởi hiệu năng (performance / 성능) mà cả ngữ nghĩa (semantic / 의미적) requirements như immutability, snapshot và isolation.
 
-
-> **Chuyển mạch:** Từ **Mutability và sharing**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Mutability và sharing** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > cấu trúc dữ liệu (data structure / 자료구조) có hai mặt: **abstract operations** và **vật lý (physical / 물리적) biểu diễn (representation / 표현)/truy cập (access / 접근) mẫu (pattern / 패턴)**. Big O mô tả mặt thứ nhất; bộ nhớ đệm (cache / 캐시) line, pointer, allocation và bố cục (layout / 레이아웃) quyết định rất nhiều ở mặt thứ hai.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -111,11 +100,10 @@ Dữ liệu (data / 데이터) bố cục (layout / 레이아웃) vì vậy ch�
 
 **“Linked danh sách (list / 목록) luôn phù hợp insert/delete nhiều.”** Chỉ khi đã có vị trí/nút (node / 노드) phù hợp và locality/traversal không chi phối.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Chapter này là cầu nối từ algorithms sang [memory hierarchy/cache](../02_computer_architecture/02_memory_hierarchy_and_cache.md), đồng thời giải thích vì sao [linear structures](./03_linear_data_structures.md), [hash tables](./04_hashing_and_hash_tables.md), [trees](./05_trees_heaps_and_search_structures.md) có hiệu năng (performance / 성능) thực tế khác với notation đơn giản.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

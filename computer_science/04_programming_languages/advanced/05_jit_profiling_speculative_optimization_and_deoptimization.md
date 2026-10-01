@@ -1,7 +1,6 @@
 # JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization
 
-> **Mạch đọc:** Đặt **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bài toán ban đầu: tối ưu mạnh cần biết hành vi (behavior / 동작) thật** sang **2. Tiered compilation là tài nguyên (resource / 자원) scheduler cho trình biên dịch (compiler / 컴파일러)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: tối ưu mạnh cần biết hành vi (behavior / 동작) thật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tiered compilation là tài nguyên (resource / 자원) scheduler cho trình biên dịch (compiler / 컴파일러)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Ahead-of-time trình biên dịch (compiler / 컴파일러) phải tối ưu khi chưa biết tải công việc (workload / 워크로드) thời gian chạy (runtime / 런타임) cụ thể. **JIT — Just-In-Time compilation (적시 컴파일)** có lợi thế quan sát chương trình đang chạy: kiểu (type / 타입) nào xuất hiện, branch nào thường đi, lời gọi (call / 호출) site nào monomorphic, allocation nào escape và phương thức (method / 메서드)/vòng lặp (loop / 루프) nào thật sự hot.
 
@@ -23,6 +22,8 @@ Thời gian chạy (runtime / 런타임) vì vậy thường dùng nhiều tiers
 
 Mục tiêu không phải compile toàn bộ chương trình “tốt nhất”; mục tiêu là đặt compilation ngân sách (budget / 예산) vào mã (code / 코드) có return-on-investment cao.
 
+> **Chuyển mạch:** Trong **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **1. Bài toán ban đầu: tối ưu mạnh cần biết hành vi (behavior / 동작) thật** nêu điều cần giải thích; **2. Tiered compilation là tài nguyên (resource / 자원) scheduler cho trình biên dịch (compiler / 컴파일러)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Profile không phải truth vĩnh viễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Tiered compilation là tài nguyên (resource / 자원) scheduler cho trình biên dịch (compiler / 컴파일러)
 
 Một phương thức (method / 메서드) có thể đi qua trạng thái (state / 상태) gần như:
@@ -41,6 +42,8 @@ cold/interpreted
 Threshold không chỉ ảnh hưởng thông lượng (throughput / 처리량). Threshold quá thấp làm compile storm và code-cache pressure; quá cao kéo dài warm-up.
 
 Thời gian chạy (runtime / 런타임) do đó vừa là thực thi (execution / 실행) engine vừa là scheduler phân bổ CPU cho compilation.
+
+> **Chuyển mạch:** Ở chặng này của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **2. Tiered compilation là tài nguyên (resource / 자원) scheduler cho trình biên dịch (compiler / 컴파일러)** nêu điều cần giải thích; **3. Profile không phải truth vĩnh viễn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Inline bộ nhớ đệm (cache / 캐시) và devirtualization là ví dụ về specialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Profile không phải truth vĩnh viễn
 
@@ -61,6 +64,8 @@ proof-based optimization       -> đúng cho mọi execution thỏa semantics đ
 profile/speculative optimization -> nhanh nếu observed assumption tiếp tục đúng, cần guard/deopt
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **3. Profile không phải truth vĩnh viễn** cho ta quy tắc; **4. Inline bộ nhớ đệm (cache / 캐시) và devirtualization là ví dụ về specialization** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. Inlining mở khóa tối ưu hóa (optimization / 최적화) khác nhưng làm mã (code / 코드) kích thước (size / 크기) tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Inline bộ nhớ đệm (cache / 캐시) và devirtualization là ví dụ về specialization
 
 Lời gọi (call / 호출) site có thể là:
@@ -72,6 +77,8 @@ Lời gọi (call / 호출) site có thể là:
 Monomorphic site dễ inline và optimize xuyên ranh giới (boundary / 경계). Khi diversity tăng, mã (code / 코드) có thể cần polymorphic guard chuỗi (chain / 사슬) hoặc quay về generic dispatch.
 
 Hiệu năng (performance / 성능) vì thế có thể đổi sau triển khai (deployment / 배포) mà mã nguồn (source code / 소스 코드) không đổi: dữ liệu (data / 데이터) mix mới làm lời gọi (call / 호출) site chuyển từ monomorphic sang megamorphic và tối ưu hóa (optimization / 최적화) landscape thay đổi.
+
+> **Chuyển mạch:** Trong **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **4. Inline bộ nhớ đệm (cache / 캐시) và devirtualization là ví dụ về specialization** cho ta quy tắc; **5. Inlining mở khóa tối ưu hóa (optimization / 최적화) khác nhưng làm mã (code / 코드) kích thước (size / 크기) tăng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **6. Guards biến giả định (assumption / 가정) thành executable đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Inlining mở khóa tối ưu hóa (optimization / 최적화) khác nhưng làm mã (code / 코드) kích thước (size / 크기) tăng
 
@@ -88,6 +95,8 @@ machine-code size ↑
 
 JIT dùng heuristic vì “inline mọi thứ” không tối ưu toàn hệ thống.
 
+> **Chuyển mạch:** Ở chặng này của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **6. Guards biến giả định (assumption / 가정) thành executable đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **5. Inlining mở khóa tối ưu hóa (optimization / 최적화) khác nhưng làm mã (code / 코드) kích thước (size / 크기) tăng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Deoptimization phải reconstruct nguồn (source / 소스)/thời gian chạy (runtime / 런타임) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Guards biến giả định (assumption / 가정) thành executable đặc tả hợp đồng (contract / 계약)
 
 Optimized đường dẫn (path / 경로) thường có guard:
@@ -102,6 +111,8 @@ else:
 Guard là ranh giới (boundary / 경계) giữa observed profile và ngữ nghĩa (semantic / 의미적) tính đúng đắn (correctness / 정확성). Nếu guard thất bại (fail / 실패), thời gian chạy (runtime / 런타임) không được tiếp tục dùng trạng thái (state / 상태) biểu diễn (representation / 표현) đã specialized dưới giả định (assumption / 가정) cũ.
 
 Đây là lý do deoptimization siêu dữ liệu (metadata / 메타데이터) quan trọng như optimized instructions.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **6. Guards biến giả định (assumption / 가정) thành executable đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **7. Deoptimization phải reconstruct nguồn (source / 소스)/thời gian chạy (runtime / 런타임) trạng thái (state / 상태)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Safepoint và trạng thái (state / 상태) siêu dữ liệu (metadata / 메타데이터) là hidden thời gian chạy (runtime / 런타임) machinery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Deoptimization phải reconstruct nguồn (source / 소스)/thời gian chạy (runtime / 런타임) trạng thái (state / 상태)
 
@@ -118,11 +129,15 @@ Bất biến (invariant / 불변식) là:
 
 > Sau deoptimization, chương trình phải tiếp tục như một thực thi (execution / 실행) hợp lệ của ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론), dù biểu diễn (representation / 표현) vật lý trước đó khác hoàn toàn nguồn (source / 소스) mô hình (model / 모델).
 
+> **Chuyển mạch:** Trong **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **7. Deoptimization phải reconstruct nguồn (source / 소스)/thời gian chạy (runtime / 런타임) trạng thái (state / 상태)** nêu điều cần giải thích; **8. Safepoint và trạng thái (state / 상태) siêu dữ liệu (metadata / 메타데이터) là hidden thời gian chạy (runtime / 런타임) machinery** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. On-Stack Replacement cho phép đổi tier giữa active vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Safepoint và trạng thái (state / 상태) siêu dữ liệu (metadata / 메타데이터) là hidden thời gian chạy (runtime / 런타임) machinery
 
 GC, ngăn xếp (stack / 스택) walking, deoptimization hoặc thời gian chạy (runtime / 런타임) operations khác cần biết references/live trạng thái (state / 상태) tại những program points phù hợp. Optimized mã (code / 코드) vì vậy thường mang siêu dữ liệu (metadata / 메타데이터) như ngăn xếp (stack / 스택) maps, deopt maps và safepoint thông tin (information / 정보).
 
 Hiệu năng (performance / 성능) pressure xuất hiện khi long-running generated mã (code / 코드) hiếm safepoint hoặc khi toàn cục (global / 전역) thời gian chạy (runtime / 런타임) thao tác (operation / 연산) cần chờ threads đạt safe trạng thái (state / 상태). “mã (code / 코드) đang chạy người dùng (user / 사용자) lô-gic (logic / 논리)” và “thời gian chạy (runtime / 런타임) có thể inspect/relocate trạng thái (state / 상태)” là hai concerns phải được phối hợp.
+
+> **Chuyển mạch:** Ở chặng này của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **8. Safepoint và trạng thái (state / 상태) siêu dữ liệu (metadata / 메타데이터) là hidden thời gian chạy (runtime / 런타임) machinery** nêu điều cần giải thích; **9. On-Stack Replacement cho phép đổi tier giữa active vòng lặp (loop / 루프)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Escape phân tích (analysis / 분석): nguồn (source / 소스) new không đồng nghĩa vùng nhớ động (heap / 힙) allocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. On-Stack Replacement cho phép đổi tier giữa active vòng lặp (loop / 루프)
 
@@ -137,6 +152,8 @@ optimized representation
 ```
 
 Nếu benchmark có vòng lặp (loop / 루프) dài, thời gian đầu và cuối có thể chạy ở tier khác nhau; đo lường (measurement / 측정) cần hiểu phase thay vì giả định executable mã (code / 코드) cố định.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **9. On-Stack Replacement cho phép đổi tier giữa active vòng lặp (loop / 루프)** nêu điều cần giải thích; **10. Escape phân tích (analysis / 분석): nguồn (source / 소스) new không đồng nghĩa vùng nhớ động (heap / 힙) allocation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Bounds-check elimination và vòng lặp (loop / 루프) tối ưu hóa (optimization / 최적화) dựa vào invariants** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Escape phân tích (analysis / 분석): nguồn (source / 소스) `new` không đồng nghĩa vùng nhớ động (heap / 힙) allocation
 
@@ -154,11 +171,15 @@ Một refactor tưởng như “giảm đối tượng (object / 객체)” chư
 
 Bằng chứng vận hành (production evidence / 운영 증거) phải nhìn allocation tỷ lệ (rate / 비율) và trình biên dịch (compiler / 컴파일러) quyết định (decision / 결정), không đếm `new` trong nguồn (source / 소스).
 
+> **Chuyển mạch:** Trong **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **10. Escape phân tích (analysis / 분석): nguồn (source / 소스) new không đồng nghĩa vùng nhớ động (heap / 힙) allocation** nêu điều cần giải thích; **11. Bounds-check elimination và vòng lặp (loop / 루프) tối ưu hóa (optimization / 최적화) dựa vào invariants** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Speculation thất bại (failure / 실패) có thể tạo deoptimization storm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Bounds-check elimination và vòng lặp (loop / 루프) tối ưu hóa (optimization / 최적화) dựa vào invariants
 
 Thời gian chạy (runtime / 런타임) có thể hoist/eliminate repeated checks khi chứng minh chỉ mục (index / 인덱스) phạm vi (range / 범위) an toàn trong vòng lặp (loop / 루프). Vectorization/unrolling cũng phụ thuộc aliasing, trip count và bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃).
 
 Một small mã (code / 코드) thay đổi (change / 변경) có thể phá proof và làm mã máy (machine code / 기계어) chậm hơn mà big-O không đổi. Đây là hiệu năng (performance / 성능) cliff do optimizer, không nhất thiết “JIT ngẫu nhiên”.
+
+> **Chuyển mạch:** Ở chặng này của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **12. Speculation thất bại (failure / 실패) có thể tạo deoptimization storm** tiếp nhận điểm tựa từ **11. Bounds-check elimination và vòng lặp (loop / 루프) tối ưu hóa (optimization / 최적화) dựa vào invariants** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. mã (code / 코드) bộ nhớ đệm (cache / 캐시) là một tài nguyên hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Speculation thất bại (failure / 실패) có thể tạo deoptimization storm
 
@@ -177,17 +198,23 @@ Thời gian chạy (runtime / 런타임) có thể tiêu nhiều CPU cho compila
 
 Tối ưu hóa (optimization / 최적화) vòng phản hồi (feedback loop / 피드백 루프) là môi trường vận hành (production / 운영 환경) phenomenon cần quan sát, không chỉ trình biên dịch (compiler / 컴파일러) lý thuyết (theory / 이론).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **13. mã (code / 코드) bộ nhớ đệm (cache / 캐시) là một tài nguyên hữu hạn** tiếp nhận điểm tựa từ **12. Speculation thất bại (failure / 실패) có thể tạo deoptimization storm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Warm-up, steady trạng thái (state / 상태) và phase thay đổi (change / 변경) là ba tải công việc (workload / 워크로드) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. mã (code / 코드) bộ nhớ đệm (cache / 캐시) là một tài nguyên hữu hạn
 
 Generated mã máy (machine code / 기계어) phải sống đâu đó. mã (code / 코드) bộ nhớ đệm (cache / 캐시) pressure có thể khiến thời gian chạy (runtime / 런타임) sweep/evict compiled mã (code / 코드) hoặc hạn chế tối ưu hóa (optimization / 최적화) mới tùy hiện thực (implementation / 구현).
 
 Do đó bộ nhớ (memory / 메모리) planning của managed thời gian chạy (runtime / 런타임) không chỉ gồm vùng nhớ động (heap / 힙). Cần nghĩ tới siêu dữ liệu (metadata / 메타데이터), bản địa (native / 네이티브) bộ nhớ (memory / 메모리), luồng thực thi (thread / 스레드) stacks, direct buffers và compiled-code lưu trữ (storage / 저장소).
 
+> **Chuyển mạch:** Trong **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **14. Warm-up, steady trạng thái (state / 상태) và phase thay đổi (change / 변경) là ba tải công việc (workload / 워크로드) khác nhau** tiếp nhận điểm tựa từ **13. mã (code / 코드) bộ nhớ đệm (cache / 캐시) là một tài nguyên hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Microbenchmark dễ đo optimizer hơn là đo mã (code / 코드) mình tưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Warm-up, steady trạng thái (state / 상태) và phase thay đổi (change / 변경) là ba tải công việc (workload / 워크로드) khác nhau
 
 Startup có trình thông dịch (interpreter / 인터프리터)/baseline công việc (work / 작업) và lớp (class / 클래스)/mô-đun (module / 모듈) initialization. Warm-up có compilation/profile collection. Steady trạng thái (state / 상태) có optimized mã (code / 코드). Sau đó tải công việc (workload / 워크로드) vẫn có thể phase-change do dữ liệu (data / 데이터) mix, plugin/mô-đun (module / 모듈) tải (load / 로드) hoặc mã (code / 코드) paths mới.
 
 Một dịch vụ (service / 서비스) autoscale nhanh nhưng instances chết trước khi warm-up xong có thể liên tục phục vụ ở inefficient tier. Đây là liên kết (connection / 연결) giữa JIT và hệ thống (system / 시스템) sức chứa (capacity / 용량)/autoscaling.
+
+> **Chuyển mạch:** Ở chặng này của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **15. Microbenchmark dễ đo optimizer hơn là đo mã (code / 코드) mình tưởng** tiếp nhận điểm tựa từ **14. Warm-up, steady trạng thái (state / 상태) và phase thay đổi (change / 변경) là ba tải công việc (workload / 워크로드) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. AOT và JIT tối ưu cho giả định (assumption / 가정) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Microbenchmark dễ đo optimizer hơn là đo mã (code / 코드) mình tưởng
 
@@ -205,6 +232,8 @@ Benchmark đúng cần harness chống optimizer artifacts, warm-up/đo lường
 
 Quan trọng hơn: microbenchmark chỉ trả lời cục bộ (local / 로컬) cơ chế (mechanism / 메커니즘); môi trường vận hành (production / 운영 환경) thông lượng (throughput / 처리량)/p99 còn phụ thuộc queueing, GC, locks, I/O và downstream.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **16. AOT và JIT tối ưu cho giả định (assumption / 가정) khác nhau** tiếp nhận điểm tựa từ **15. Microbenchmark dễ đo optimizer hơn là đo mã (code / 코드) mình tưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. AOT và JIT tối ưu cho giả định (assumption / 가정) khác nhau
 
 AOT có thể giảm warm-up, giảm thời gian chạy (runtime / 런타임) trình biên dịch (compiler / 컴파일러) chi phí (cost / 비용) và làm startup/predictability tốt hơn. JIT có adaptive profile giúp specialize theo tải công việc (workload / 워크로드) thật.
@@ -212,6 +241,8 @@ AOT có thể giảm warm-up, giảm thời gian chạy (runtime / 런타임) tr
 Không có winner universal. Nếu dịch vụ (service / 서비스) short-lived/serverless, startup có trọng lượng lớn; nếu dịch vụ (service / 서비스) sống lâu với hot loops ổn định, adaptive tối ưu hóa (optimization / 최적화) có thể đáng giá.
 
 Câu hỏi đúng là **tải công việc (workload / 워크로드) thời gian tồn tại (lifetime / 수명) + độ trễ (latency / 지연 시간) SLO + mã (code / 코드) dynamism + bộ nhớ (memory / 메모리) ngân sách (budget / 예산)**.
+
+> **Chuyển mạch:** Trong **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **16. AOT và JIT tối ưu cho giả định (assumption / 가정) khác nhau** nêu điều cần giải thích; **17. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -230,18 +261,24 @@ Bằng chứng (evidence / 증거) nên nối nguồn (source / 소스) → trì
 
 Một flame đồ thị (graph / 그래프) chỉ cho hot mã máy (machine code / 기계어) hiện tại; nó không nói mã (code / 코드) đã deopt 50 lần trước đó. trình biên dịch (compiler / 컴파일러) logs một mình lại không nói yêu cầu (request / 요청) p99. Cần correlate trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) với tải công việc (workload / 워크로드) timeline.
 
+> **Chuyển mạch:** Ở chặng này của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **17. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)
 
 Nếu độ trễ (latency / 지연 시간) regression xuất hiện sau thay đổi kiểu (type / 타입) mix, kiểm tra devirtualization/profile trước khi chỉ nhìn GC. Nếu allocation tăng sau refactor nhỏ, kiểm tra escape hành vi (behavior / 동작). Nếu startup chậm nhưng steady-state nhanh, tách compilation/warm-up khỏi dịch vụ (service / 서비스) thực thi (execution / 실행). Nếu only môi trường vận hành (production / 운영 환경) chậm, kiểm tra tải công việc (workload / 워크로드) phase/profile khác benchmark cục bộ (local / 로컬).
 
 Lower tầng (layer / 계층) quyết định hành vi (behavior / 동작) có thể là instruction bộ nhớ đệm (cache / 캐시), branch hành vi (behavior / 동작) hoặc bộ nhớ (memory / 메모리) bandwidth, nhưng fix thường nằm ở nguồn (source / 소스) shape/thời gian chạy (runtime / 런타임) cấu hình (config / 설정)/tải công việc (workload / 워크로드) vòng đời (lifecycle / 생명주기)—tầng sở hữu giả định (assumption / 가정).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **19. Mô hình tư duy** gom các mảnh từ **18. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Mô hình tư duy
 
 > JIT là optimizer thích nghi có quyền **đặt cược** vào hành vi (behavior / 동작) thời gian chạy (runtime / 런타임). Profile cung cấp bằng chứng (evidence / 증거), guard biến giả định (assumption / 가정) thành executable đặc tả hợp đồng (contract / 계약), siêu dữ liệu (metadata / 메타데이터) giữ khả năng reconstruct trạng thái (state / 상태), deoptimization là quay lui (rollback / 롤백) đường dẫn (path / 경로), còn thời gian chạy (runtime / 런타임) scheduler quyết định khi nào compilation đáng chi phí (cost / 비용). **hiệu năng (performance / 성능) cao đến từ specialization có thể kiểm chứng và phục hồi, không phải từ giả định (assumption / 가정) vĩnh viễn về tải công việc (workload / 워크로드).**
+
+> **Chuyển mạch:** Trong **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**, **Kết nối** gom các mảnh từ **19. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Ôn [compiler/runtime foundation](../../basic/04_programming_languages/03_compilers_interpreters_vm_and_jit.md), đọc [compiler IR/SSA](./04_compiler_ir_ssa_dataflow_and_optimization.md), [GC internals](./06_garbage_collection_generational_concurrent_compacting_and_barriers.md), [CPU OoO](../../02_computer_architecture/advanced/01_out_of_order_execution_register_renaming_and_rob.md) và [Performance/capacity](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 type systems effects and runtime contracts](./00_type_systems_effects_and_runtime_contracts.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)
 
-> **Mạch đọc:** Đọc **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Power-of-two decomposition** sang **Tại sao các lũy thừa của hai?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Power-of-two decomposition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tại sao các lũy thừa của hai?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **스파스 테이블과 정적 구간 질의**
 
@@ -46,6 +46,8 @@ O(n\log n)
 
 Thời gian (time / 시간) và bộ nhớ.
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Tại sao các lũy thừa của hai?** tiếp nhận điểm tựa từ **Power-of-two decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java construction cho RMQ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tại sao các lũy thừa của hai?
 
 Mọi positive length có logarithmic cách biểu diễn (representation / 표현) theo các lũy thừa của hai. Precompute intervals tăng gấp đôi giúp ta reuse kết quả nhỏ để tạo khối (block / 블록) lớn.
@@ -60,6 +62,8 @@ sparse table
 ```
 
 các lũy thừa của hai không phải magic; chúng tạo hierarchy có số các tầng logarithmic.
+
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Java construction cho RMQ** tiếp nhận điểm tựa từ **Tại sao các lũy thừa của hai?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **O(1) RMQ nhờ idempotence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Java construction cho RMQ
 
@@ -111,6 +115,8 @@ final class SparseMin {
 
 Precompute `floor(log2(x))` tránh logarit dấu phẩy động trong truy vấn và làm ngữ nghĩa (semantics / 의미론) integer rõ ràng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **O(1) RMQ nhờ idempotence** tiếp nhận điểm tựa từ **Java construction cho RMQ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Associative chưa đủ cho classic O(1) trick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## O(1) RMQ nhờ idempotence
 
 Cho phạm vi (range / 범위) `[L,R]`, đặt:
@@ -146,6 +152,8 @@ Min, max và GCD là các examples quan trọng.
 
 Do đó truy vấn chỉ kết hợp hai precomputed các giá trị → `O(1)`.
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Associative chưa đủ cho classic O(1) trick** tiếp nhận điểm tựa từ **O(1) RMQ nhờ idempotence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bảng thưa cho GCD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Associative chưa đủ cho classic O(1) trick
 
 Sum có tính kết hợp (associative):
@@ -171,6 +179,8 @@ associative -> dễ combine partition không overlap
 idempotent  -> cho phép overlap mà result không đổi
 ```
 
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bảng thưa cho GCD** tiếp nhận điểm tựa từ **Associative chưa đủ cho classic O(1) trick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bảng thưa cho AND/OR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## bảng thưa cho GCD
 
 GCD lũy đẳng (idempotent):
@@ -182,6 +192,8 @@ GCD lũy đẳng (idempotent):
 nên truy vấn phạm vi (range / 범위) GCD cũng `O(1)` bằng hai blocks overlap.
 
 Điều này hữu ích trong number-theory phạm vi (range / 범위) problems.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bảng thưa cho AND/OR** tiếp nhận điểm tựa từ **bảng thưa cho GCD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Non-overlapping decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## bảng thưa cho AND/OR
 
@@ -202,6 +214,8 @@ x ^ x = 0
 
 nên overlap trick không đúng.
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Non-overlapping decomposition** tiếp nhận điểm tựa từ **bảng thưa cho AND/OR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disjoint bảng thưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Non-overlapping decomposition
 
 Ngay cả với có tính kết hợp (associative) non-lũy đẳng (idempotent) thao tác, ordinary bảng thưa blocks vẫn có thể decompose phạm vi (range / 범위) thành `O(log n)` disjoint power-of-two blocks.
@@ -215,6 +229,8 @@ length 13 = 8 + 4 + 1
 truy vấn `O(log n)`.
 
 Nhưng với tĩnh sum, tổng tiền tố cho `O(1)` và bộ nhớ `O(n)` nên bảng thưa thường không phải lựa chọn tốt.
+
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Disjoint bảng thưa** tiếp nhận điểm tựa từ **Non-overlapping decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bảng thưa vs tổng tiền tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Disjoint bảng thưa
 
@@ -242,6 +258,8 @@ tiền xử lý vẫn khoảng `O(n log n)`, truy vấn `O(1)`.
 
 DST phức tạp hơn và constants lớn hơn; dùng khi tĩnh có tính kết hợp (associative) các truy vấn thật sự cần extreme truy vấn speed.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bảng thưa vs tổng tiền tố** tiếp nhận điểm tựa từ **Disjoint bảng thưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bảng thưa vs cây đoạn (Segment Tree)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## bảng thưa vs tổng tiền tố
 
 tĩnh sum:
@@ -266,6 +284,8 @@ query O(1)
 
 cấu trúc dữ liệu phải match algebra của thao tác.
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bảng thưa vs cây đoạn (Segment Tree)** tiếp nhận điểm tựa từ **bảng thưa vs tổng tiền tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bảng thưa vs cây Fenwick (Fenwick Tree)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## bảng thưa vs cây đoạn (Segment Tree)
 
 cây đoạn:
@@ -287,6 +307,8 @@ updates rất không phù hợp
 
 Nếu có sự thay đổi dữ liệu, cây đoạn thường là choice tự nhiên hơn.
 
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bảng thưa vs cây Fenwick (Fenwick Tree)** tiếp nhận điểm tựa từ **bảng thưa vs cây đoạn (Segment Tree)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao cập nhật đắt?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## bảng thưa vs cây Fenwick (Fenwick Tree)
 
 cây Fenwick tối ưu prefix-like group các thao tác và điểm (point / 지점) các cập nhật:
@@ -301,6 +323,8 @@ bảng thưa tối ưu tĩnh lũy đẳng (idempotent) các truy vấn.
 
 Hai structures giải khối lượng công việc khác nhau; không nên chọn theo “cái nào advanced hơn”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Vì sao cập nhật đắt?** tiếp nhận điểm tựa từ **bảng thưa vs cây Fenwick (Fenwick Tree)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bộ nhớ bố trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao cập nhật đắt?
 
 Một cập nhật điểm `a[p]` ảnh hưởng mọi precomputed khối (block / 블록) chứa `p`.
@@ -310,6 +334,8 @@ Một cập nhật điểm `a[p]` ảnh hưởng mọi precomputed khối (block
 bảng thưa intentionally các phần tử trùng thông tin để truy vấn nhanh. sự thay đổi dữ liệu phá nhiều copies đó.
 
 Đây là sự đánh đổi giữa **redundant tiền xử lý** và cập nhật chi phí.
+
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bộ nhớ bố trí** tiếp nhận điểm tựa từ **Vì sao cập nhật đắt?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bộ nhớ estimation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## bộ nhớ bố trí
 
@@ -327,6 +353,8 @@ st[k * n + i]
 
 Java object-per-row overhead thường chấp nhận được, nhưng dataset rất lớn cần estimate bộ nhớ.
 
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bộ nhớ estimation** tiếp nhận điểm tựa từ **bộ nhớ bố trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Precomputing logs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## bộ nhớ estimation
 
 Với `n = 1,000,000`, các tầng khoảng 20.
@@ -343,6 +371,8 @@ chưa tính mảng headers/các tham chiếu.
 Nếu dùng `long`, raw dữ liệu (data / 데이터) khoảng 160 MB.
 
 Đây là lý do bảng thưa không “free” chỉ vì truy vấn nhanh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Precomputing logs** tiếp nhận điểm tựa từ **bộ nhớ estimation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **rỗng mảng và không hợp lệ phạm vi (range / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Precomputing logs
 
@@ -366,6 +396,8 @@ nhưng `Math.clz32` có 32-bit ngữ nghĩa. Với very large lengths, cách bi�
 
 Choice là readability vs small bộ nhớ saving/môi trường chạy (runtime) detail.
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **rỗng mảng và không hợp lệ phạm vi (range / 범위)** tiếp nhận điểm tựa từ **Precomputing logs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inclusive vs half-open intervals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## rỗng mảng và không hợp lệ phạm vi (range / 범위)
 
 Trong hệ thống thực tế, API phải định nghĩa:
@@ -377,6 +409,8 @@ range out of bounds?
 ```
 
 Competitive-programming cách triển khai thường assume hợp lệ đầu vào; reusable thư viện (library / 라이브러리) không nên.
+
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Inclusive vs half-open intervals** tiếp nhận điểm tựa từ **rỗng mảng và không hợp lệ phạm vi (range / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RMQ — Truy vấn cực tiểu trên khoảng (Range Minimum Query)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Inclusive vs half-open intervals
 
@@ -396,6 +430,8 @@ R - 2^k
 
 Hãy chọn một convention và giữ nhất quán. Mixing interval ngữ nghĩa là nguồn off-by-one phổ biến.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **RMQ — Truy vấn cực tiểu trên khoảng (Range Minimum Query)** tiếp nhận điểm tựa từ **Inclusive vs half-open intervals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RMQ và LCA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## RMQ — Truy vấn cực tiểu trên khoảng (Range Minimum Query)
 
 RMQ là một foundational bài toán (problem / 문제):
@@ -409,6 +445,8 @@ bảng thưa cho tĩnh RMQ `O(1)` sau `O(n log n)` preprocess.
 Nhưng RMQ còn có deeper các thuật toán đạt tuyến tính (linear / 선형) tiền xử lý + O(1) truy vấn bằng Cartesian cây/LCA reductions. Đây là chủ đề lý thuyết nâng cao hơn.
 
 bảng thưa nổi bật vì cách triển khai đơn giản và constants practical.
+
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **RMQ và LCA** tiếp nhận điểm tựa từ **RMQ — Truy vấn cực tiểu trên khoảng (Range Minimum Query)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cartesian cây liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## RMQ và LCA
 
@@ -436,6 +474,8 @@ Tree
 
 Đây là example tuyệt đẹp của bài toán (problem / 문제) phép biến đổi.
 
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, sau nội dung của **RMQ và LCA**, **Cartesian cây liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **tĩnh lũy đẳng (idempotent) truy vấn như semilattice intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cartesian cây liên kết (connection / 연결)
 
 Cartesian cây (tree / 트리) của mảng duy trì tính chất vùng nhớ động (heap / 힙) theo giá trị và thứ tự inorder theo các chỉ số ban đầu.
@@ -443,6 +483,8 @@ Cartesian cây (tree / 트리) của mảng duy trì tính chất vùng nhớ đ
 RMQ giữa hai vị trí có liên hệ với LCA của hai nút tương ứng trong Cartesian cây (tree / 트리).
 
 Vì vậy RMQ, Cartesian cây và LCA có equivalence sâu về cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **tĩnh lũy đẳng (idempotent) truy vấn như semilattice intuition** tiếp nhận điểm tựa từ **Cartesian cây liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2D bảng thưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## tĩnh lũy đẳng (idempotent) truy vấn như semilattice intuition
 
@@ -458,6 +500,8 @@ operation properties
 
 Đây là tư duy tổng quát có ích cho cây đoạn monoid, Fenwick group-like prefix difference và bảng thưa idempotence.
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **2D bảng thưa** tiếp nhận điểm tựa từ **tĩnh lũy đẳng (idempotent) truy vấn như semilattice intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bảng thưa trên strings/các đối tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2D bảng thưa
 
 Với truy vấn cực tiểu 2D trên dữ liệu tĩnh, Sparse bảng (table / 테이블) có thể được mở rộng theo hai chiều:
@@ -471,6 +515,8 @@ bộ nhớ/tiền xử lý tăng mạnh khoảng `O(nm log n log m)`.
 truy vấn rectangle có thể kết hợp bốn blocks nếu thao tác lũy đẳng (idempotent).
 
 Practical only khi dimensions vừa phải và truy vấn volume rất lớn.
+
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bảng thưa trên strings/các đối tượng** tiếp nhận điểm tựa từ **2D bảng thưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **quy tắc phân xử khi bằng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## bảng thưa trên strings/các đối tượng
 
@@ -486,6 +532,8 @@ st[k][i] = index của best element trong block
 
 kết hợp compares `a[idx1]` và `a[idx2]`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **quy tắc phân xử khi bằng nhau** tiếp nhận điểm tựa từ **bảng thưa trên strings/các đối tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ngoại tuyến các truy vấn vs bảng thưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## quy tắc phân xử khi bằng nhau
 
 Nếu truy vấn cực tiểu trên khoảng cần trả chỉ số sớm nhất khi nhiều giá trị bằng nhau, bộ so sánh phải định nghĩa rõ quy tắc phân xử:
@@ -497,6 +545,8 @@ if equal, smaller index wins
 
 Tie ngữ nghĩa phải được encoded trong `combine`. Otherwise giá trị đúng nhưng chỉ mục (index / 인덱스) kết quả có thể không đúng specification.
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **ngoại tuyến các truy vấn vs bảng thưa** tiếp nhận điểm tựa từ **quy tắc phân xử khi bằng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mo's thuật toán khác gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ngoại tuyến các truy vấn vs bảng thưa
 
 Nếu tất cả các truy vấn biết trước, có thể có ngoại tuyến các thuật toán khác mạnh hơn.
@@ -504,6 +554,8 @@ Nếu tất cả các truy vấn biết trước, có thể có ngoại tuyến 
 Ví dụ tĩnh RMQ ngoại tuyến có Tarjan LCA-like reductions hoặc Mo's thuật toán cho truy vấn classes khác.
 
 bảng thưa phù hợp khi muốn trực tuyến truy vấn sau one-time preprocess và dữ liệu (data / 데이터) tĩnh.
+
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Mo's thuật toán khác gì?** tiếp nhận điểm tựa từ **ngoại tuyến các truy vấn vs bảng thưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **truy vấn volume và break-even** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mo's thuật toán khác gì?
 
@@ -517,6 +569,8 @@ operation không có simple prefix/segment structure
 Độ phức tạp (complexity / 복잡도) thường khoảng `O((n+q)sqrt(n))` style tùy variant.
 
 bảng thưa là preprocessing-based trực tuyến O(1) cho thao tác lớp (class / 클래스) hẹp hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **truy vấn volume và break-even** tiếp nhận điểm tựa từ **Mo's thuật toán khác gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **bộ nhớ đệm hành vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## truy vấn volume và break-even
 
@@ -532,6 +586,8 @@ preprocess + q\times truy vấn + các cập nhật\times cập nhật
 
 không chỉ fastest truy vấn độ phức tạp (complexity / 복잡도).
 
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **bộ nhớ đệm hành vi** tiếp nhận điểm tựa từ **truy vấn volume và break-even** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JavaScript cách triển khai caveat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## bộ nhớ đệm hành vi
 
 truy vấn classic bảng thưa đọc hai positions. Rất ít bộ nhớ accesses, tốt cho độ trễ nhưng bảng (table / 테이블) lớn có thể vượt bộ nhớ đệm.
@@ -541,6 +597,8 @@ tiền xử lý quét các tầng sequentially, khá thân thiện với bộ nh
 cây đoạn truy vấn chạm logarithmic các nút có mẫu nhảy hơn.
 
 Actual hiệu năng phụ thuộc n và phân cấp bộ nhớ.
+
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **JavaScript cách triển khai caveat** tiếp nhận điểm tựa từ **bộ nhớ đệm hành vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **C cách triển khai caveat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## JavaScript cách triển khai caveat
 
@@ -554,11 +612,15 @@ gọn hơn nếu miền giá trị số fit 32-bit.
 
 Nếu các giá trị vượt phạm vi (range / 범위), `Float64Array` hoặc BigInt cách biểu diễn cần cân nhắc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **C cách triển khai caveat** tiếp nhận điểm tựa từ **JavaScript cách triển khai caveat** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## C cách triển khai caveat
 
 Nếu `1 << k` dùng `int` có dấu, phép dịch lớn có thể gây tràn hoặc rơi vào trường hợp hành vi không xác định tùy ngữ cảnh. Nên dùng kiểu không dấu hoặc kiểu kích thước phù hợp và bảo đảm `k` nằm trong độ rộng kiểu dữ liệu.
 
 cấp phát bộ nhớ `levels * n * sizeof(T)` cũng cần tràn số check cho general-purpose thư viện (library / 라이브러리).
+
+> **Chuyển mạch:** Trong **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **C cách triển khai caveat** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -571,6 +633,8 @@ cấp phát bộ nhớ `levels * n * sizeof(T)` cũng cần tràn số check cho
 “bảng thưa luôn tốt hơn cây đoạn vì O(1)” — bỏ qua tiền xử lý, bộ nhớ và sự thay đổi dữ liệu.
 
 “Sum dùng hai khối (block / 블록) như min” — sai vì overlap double-count.
+
+> **Chuyển mạch:** Ở chặng này của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **kiểm thử** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## kiểm thử
 
@@ -599,6 +663,8 @@ negative values
 
 Nếu lưu chỉ mục (index / 인덱스), kiểm thử (test / 테스트) quy tắc phân xử khi bằng nhau separately.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**, **Mô hình tư duy** gom các mảnh từ **kiểm thử** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > bảng thưa là **memoization cho mọi interval power-of-two của dữ liệu tĩnh**. Với lũy đẳng (idempotent) thao tác, một arbitrary phạm vi (range / 범위) được cover bởi hai possibly-các khối chồng lấn nên truy vấn chỉ cần hai bảng (table / 테이블) reads. truy vấn cực nhanh được mua bằng redundant tiền xử lý và bộ nhớ, vì vậy cấu trúc (structure / 구조) này chỉ hợp khối lượng công việc ít/no các cập nhật và nhiều lặp lại các truy vấn.
@@ -616,3 +682,5 @@ Need online hay offline queries?
 ```
 
 Xem thêm: [Range Queries — Fenwick & Segment Tree](./01_range_queries_fenwick_segment_tree.md), [Tree Foundations — LCA](../02_trees/00_tree_foundations.md), [Bit Manipulation](./02_bit_manipulation_and_bitsets.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

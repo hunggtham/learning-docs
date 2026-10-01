@@ -1,7 +1,6 @@
 # Lịch sử và các AI Paradigm
 
-> **Mạch đọc:** Đọc **Lịch sử và các AI Paradigm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Symbolic AI: intelligence như thao tác trên symbol** sang **tìm kiếm (search / 검색) và planning: intelligence như exploration trong không gian (space / 공간) of possibilities**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lịch sử và các AI Paradigm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Symbolic AI: intelligence như thao tác trên symbol** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm (search / 검색) và planning: intelligence như exploration trong không gian (space / 공간) of possibilities** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Lịch sử Artificial Intelligence (AI / 인공지능) không phải một đường thẳng đi từ “AI yếu” tới “AI mạnh”. Nó giống một chuỗi thay đổi về **cách con người nghĩ rằng intelligence nên được xây dựng**. Mỗi giai đoạn nổi bật một giả định (assumption / 가정) khác nhau: có lúc người ta tin intelligence chủ yếu là lô-gic (logic / 논리); có lúc trọng tâm là tìm kiếm (search / 검색); có lúc là học statistical mẫu (pattern / 패턴) từ dữ liệu (data / 데이터); hiện nay phần lớn frontier các hệ thống (systems / 시스템들) dựa vào large-scale biểu diễn (representation / 표현) học tập (learning / 학습) kết hợp dữ liệu (data / 데이터), compute, tối ưu hóa (optimization / 최적화) và hệ thống (system / 시스템) kỹ thuật (engineering / 엔지니어링).
 
@@ -26,6 +25,8 @@ Nhưng bài toán (problem / 문제) xuất hiện khi world quá lớn, noisy h
 
 Điều này dẫn tới nhu cầu cho statistical học tập (learning / 학습).
 
+> **Chuyển mạch:** Trong **Lịch sử và các AI Paradigm**, **Tìm kiếm (search / 검색) và planning: intelligence như exploration trong không gian (space / 공간) of possibilities** tiếp nhận điểm tựa từ **Symbolic AI: intelligence như thao tác trên symbol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Probabilistic AI: intelligence dưới bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tìm kiếm (search / 검색) và planning: intelligence như exploration trong không gian (space / 공간) of possibilities
 
 Nhiều bài toán (problem / 문제) có thể được biểu diễn thành trạng thái (state / 상태) không gian (space / 공간). Chess, tuyến (route / 경로) planning, puzzle solving hoặc scheduling đều có nhiều khả năng, và hệ thống (system / 시스템) cần tìm chuỗi (sequence / 시퀀스) hành động (action / 동작) phù hợp.
@@ -35,6 +36,8 @@ Tìm kiếm (search / 검색) paradigm không yêu cầu hệ thống (system / 
 Ví dụ, đường dẫn (path / 경로) finding có thể được mô hình hóa thành đồ thị (graph / 그래프). Một nút (node / 노드) là trạng thái (state / 상태), edge là hành động (action / 동작), chi phí (cost / 비용) là chi phí di chuyển. thuật toán (algorithm / 알고리즘) như A* sử dụng heuristic để ưu tiên những trạng thái (state / 상태) có vẻ hứa hẹn.
 
 Idea này vẫn còn rất sống trong AI hiện đại. Beam tìm kiếm (search / 검색) được dùng trong decoding. Retrieval là một dạng tìm kiếm (search / 검색) trên document/véc-tơ (vector / 벡터) không gian (space / 공간). Planning tác nhân (agent / 에이전트) tìm chuỗi (sequence / 시퀀스) hành động (action / 동작). Một số lập luận (reasoning / 추론) các hệ thống (systems / 시스템들) kết hợp ngôn ngữ (language / 언어) mô hình (model / 모델) với tìm kiếm (search / 검색) cây (tree / 트리).
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các AI Paradigm**, **Probabilistic AI: intelligence dưới bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색) và planning: intelligence như exploration trong không gian (space / 공간) of possibilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Machine học tập (learning / 학습): thay vì viết quy tắc (rule / 규칙), hãy học ánh xạ (mapping / 매핑) từ dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Probabilistic AI: intelligence dưới bất định (uncertainty / 불확실성)
 
@@ -49,6 +52,8 @@ P(Disease \mid Symptoms)
 Probabilistic lập luận (reasoning / 추론) chuyển focus từ quy tắc (rule / 규칙) tuyệt đối sang degree of belief và bất định (uncertainty / 불확실성). Bayesian networks, hidden Markov các mô hình (models / 모델들) và probabilistic graphical các mô hình (models / 모델들) là những ví dụ lớn.
 
 Paradigm này tạo cầu nối mạnh giữa AI và Statistics.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các AI Paradigm**, **Probabilistic AI: intelligence dưới bất định (uncertainty / 불확실성)** nêu điều cần giải thích; **Machine học tập (learning / 학습): thay vì viết quy tắc (rule / 규칙), hãy học ánh xạ (mapping / 매핑) từ dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Connectionism và Neural Networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Machine học tập (learning / 학습): thay vì viết quy tắc (rule / 규칙), hãy học ánh xạ (mapping / 매핑) từ dữ liệu (data / 데이터)
 
@@ -68,6 +73,8 @@ Huấn luyện (training / 학습) tìm `w` và `b` để prediction gần mục
 
 Điều này kéo theo các khái niệm generalization, overfitting, inductive độ lệch (bias / 편향), train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) split và evaluation.
 
+> **Chuyển mạch:** Trong **Lịch sử và các AI Paradigm**, **Machine học tập (learning / 학습): thay vì viết quy tắc (rule / 규칙), hãy học ánh xạ (mapping / 매핑) từ dữ liệu (data / 데이터)** nêu điều cần giải thích; **Connectionism và Neural Networks** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Biểu diễn (representation / 표현) học tập (learning / 학습): thay đổi câu hỏi từ “tính năng (feature / 기능) nào?” sang “biểu diễn (representation / 표현) nào?”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Connectionism và Neural Networks
 
 **Connectionism** xem intelligence như emergent hành vi (behavior / 동작) từ mạng các processing units tương tác, lấy cảm hứng lỏng lẻo từ neuron sinh học nhưng không phải bản sao brain.
@@ -82,6 +89,8 @@ Deep học tập (learning / 학습) thành công mạnh vì ba yếu tố gặp
 
 Nó không chỉ là “nhiều tầng (layer / 계층) hơn”. Deep mạng (network / 네트워크) đặc biệt mạnh ở **biểu diễn (representation / 표현) học tập (learning / 학습)**: mô hình (model / 모델) tự học intermediate features thay vì phụ thuộc hoàn toàn vào hand-crafted features.
 
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các AI Paradigm**, **Biểu diễn (representation / 표현) học tập (learning / 학습): thay đổi câu hỏi từ “tính năng (feature / 기능) nào?” sang “biểu diễn (representation / 표현) nào?”** tiếp nhận điểm tựa từ **Connectionism và Neural Networks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Foundation các mô hình (models / 모델들) và quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu diễn (representation / 표현) học tập (learning / 학습): thay đổi câu hỏi từ “tính năng (feature / 기능) nào?” sang “biểu diễn (representation / 표현) nào?”
 
 Trong classical ML, engineer thường thiết kế tính năng (feature / 기능). Với ảnh (image / 이미지), có thể dùng edge detector hoặc hand-crafted descriptor. Deep học tập (learning / 학습) cho phép mô hình (model / 모델) học biểu diễn (representation / 표현) trực tiếp từ raw-ish đầu vào (input / 입력).
@@ -90,6 +99,8 @@ Một ảnh (image / 이미지) classifier không chỉ học đầu ra (output 
 
 Đây là bước chuyển rất quan trọng vì nhiều breakthrough hiện đại đến từ việc học được biểu diễn (representation / 표현) tốt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các AI Paradigm**, **Foundation các mô hình (models / 모델들) và quy mô (scale / 규모)** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) học tập (learning / 학습): thay đổi câu hỏi từ “tính năng (feature / 기능) nào?” sang “biểu diễn (representation / 표현) nào?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Generative AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Foundation các mô hình (models / 모델들) và quy mô (scale / 규모)
 
 **Foundation mô hình (model / 모델)** là mô hình (model / 모델) được train trên broad dữ liệu (data / 데이터) ở quy mô (scale / 규모) lớn, sau đó có thể adapt cho nhiều downstream tasks.
@@ -97,6 +108,8 @@ Một ảnh (image / 이미지) classifier không chỉ học đầu ra (output 
 Large ngôn ngữ (language / 언어) mô hình (model / 모델) là một dạng foundation mô hình (model / 모델) cho ngôn ngữ (language / 언어) và ngày càng multimodal. Thay vì train một mô hình (model / 모델) riêng hoàn toàn cho từng tác vụ (task / 작업), ta pretrain một mô hình (model / 모델) lớn rồi sử dụng prompting, fine-tuning, retrieval hoặc tools.
 
 Paradigm này thay đổi software kiến trúc (architecture / 아키텍처): mô hình (model / 모델) trở thành một reusable năng lực (capability / 역량) tầng (layer / 계층).
+
+> **Chuyển mạch:** Trong **Lịch sử và các AI Paradigm**, **Generative AI** tiếp nhận điểm tựa từ **Foundation các mô hình (models / 모델들) và quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hybrid và Neuro-symbolic AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Generative AI
 
@@ -109,6 +122,8 @@ P(y \mid x)
 Generative modeling cố học phân phối (distribution / 분포) của dữ liệu (data / 데이터) hoặc cách sinh mẫu (sample / 표본) mới. ngôn ngữ (language / 언어) mô hình (model / 모델) học xác suất (probability / 확률) của đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스); diffusion mô hình (model / 모델) học reverse denoising tiến trình (process / 프로세스) để tạo ảnh (image / 이미지); autoregressive mô hình (model / 모델) sinh đầu ra (output / 출력) từng bước.
 
 Generative AI trở nên nổi bật vì đầu ra (output / 출력) không còn chỉ là lớp (class / 클래스) hoặc score mà có thể là văn bản (text / 텍스트), ảnh (image / 이미지), audio, video, mã (code / 코드) hoặc structured hành động (action / 동작).
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các AI Paradigm**, **Hybrid và Neuro-symbolic AI** tiếp nhận điểm tựa từ **Generative AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI winters và bài học về expectation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hybrid và Neuro-symbolic AI
 
@@ -128,6 +143,8 @@ Optimizer → resource allocation
 
 Đây là reminder quan trọng rằng “deep học tập (learning / 학습) thắng symbolic AI” là cách kể lịch sử quá đơn giản. Different mechanisms phù hợp different subproblems.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các AI Paradigm**, **AI winters và bài học về expectation** tiếp nhận điểm tựa từ **Hybrid và Neuro-symbolic AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Paradigm map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## AI winters và bài học về expectation
 
 Lịch sử AI có các giai đoạn funding và optimism tăng mạnh, sau đó giảm khi hệ thống (system / 시스템) không đạt expectation. Những giai đoạn này thường được gọi là **AI winter**.
@@ -141,6 +158,8 @@ Bài học không phải “AI luôn hype”. Bài học tốt hơn là phân bi
 - claim về tương lai.
 
 Một mô hình (model / 모델) có thể đạt benchmark cao nhưng vẫn chưa production-ready vì độ trễ (latency / 지연 시간), chi phí (cost / 비용), robustness hoặc an toàn (safety / 안전).
+
+> **Chuyển mạch:** Trong **Lịch sử và các AI Paradigm**, **Paradigm map** tiếp nhận điểm tựa từ **AI winters và bài học về expectation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Paradigm map
 
@@ -163,6 +182,8 @@ flowchart TD
 
 Sơ đồ này không phải hierarchy lịch sử tuyệt đối. Nhiều branch overlap và coexist.
 
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các AI Paradigm**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Paradigm map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết (connection / 연결) với AI hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Khi gặp một AI technique mới, thay vì hỏi “đây là generation mới nhất chưa?”, hãy hỏi bốn câu:
@@ -173,6 +194,8 @@ Khi gặp một AI technique mới, thay vì hỏi “đây là generation mới
 4. **bất định (uncertainty / 불확실성) được xử lý ra sao?** Bỏ qua, quy tắc (rule / 규칙) deterministic, xác suất (probability / 확률) phân phối (distribution / 분포) hay sampling?
 
 Bốn câu này thường đủ để đặt một technique mới vào kiến thức (knowledge / 지식) đồ thị (graph / 그래프).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các AI Paradigm**, **Liên kết (connection / 연결) với AI hiện đại** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết (connection / 연결) với AI hiện đại
 
@@ -191,3 +214,5 @@ Human feedback           → learning signal
 Vì vậy hiểu lịch sử paradigm giúp nhìn hệ thống (system / 시스템) hiện đại rõ hơn: hiện đại (modern / 현대적) AI không xóa sạch những idea cũ, mà thường recombine chúng ở quy mô (scale / 규모) và biểu diễn (representation / 표현) mới.
 
 Xem tiếp: [Intelligence, Agents and Environments](./02_intelligence_agents_and_environments.md).
+
+> **Bàn giao:** Sau **Liên kết (connection / 연결) với AI hiện đại**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

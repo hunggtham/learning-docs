@@ -1,7 +1,6 @@
 # Imperative, object-oriented, functional và declarative paradigms
 
-> **Mạch đọc:** Đặt **Imperative, object-oriented, functional và declarative paradigms** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Imperative programming** sang **Object-oriented programming**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Imperative, object-oriented, functional và declarative paradigms**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Imperative programming** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Object-oriented programming** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Programming paradigm (프로그래밍 패러다임 / mô hình lập trình) là một cách tổ chức trạng thái (state / 상태), computation và lớp trừu tượng (abstraction / 추상화). Languages hiện đại thường multi-paradigm; điều có giá trị không phải gắn nhãn ngôn ngữ (language / 언어) mà hiểu mô hình tư duy (mental model / 사고 모델) nào phù hợp bài toán (problem / 문제).
 
@@ -11,8 +10,7 @@ Imperative style mô tả chuỗi (sequence / 시퀀스) commands thay đổi tr
 
 Điểm yếu xuất hiện khi mutable trạng thái (state / 상태) lan rộng: muốn hiểu hiện tại (current / 현재) giá trị (value / 값) phải biết lịch sử (history / 이력) of writes. cục bộ (local / 로컬) mutation có thể rõ và efficient; toàn cục (global / 전역) dùng chung (shared / 공유) mutation khó reason.
 
-
-> **Chuyển mạch:** Từ **Imperative programming**, ta sang **Object-oriented programming** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Imperative, object-oriented, functional và declarative paradigms**, **Object-oriented programming** tiếp nhận điểm tựa từ **Imperative programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Functional programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Object-oriented programming
 
@@ -22,8 +20,7 @@ Inheritance là một cơ chế (mechanism / 메커니즘), không phải essenc
 
 Lĩnh vực (domain / 도메인) mô hình (model / 모델) tốt không đồng nghĩa tạo lớp (class / 클래스) cho mọi noun. giá trị (value / 값) objects, services, modules và data-oriented structures đều có chỗ.
 
-
-> **Chuyển mạch:** Từ **Object-oriented programming**, ta sang **Functional programming** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Imperative, object-oriented, functional và declarative paradigms**, **Functional programming** tiếp nhận điểm tựa từ **Object-oriented programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Declarative programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Functional programming
 
@@ -33,8 +30,7 @@ Real programs vẫn cần I/O/trạng thái (state / 상태). Functional các h�
 
 Persistent immutable dữ liệu (data / 데이터) structures dùng structural sharing để tránh full bản sao (copy / 복사).
 
-
-> **Chuyển mạch:** Từ **Functional programming**, ta sang **Declarative programming** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Imperative, object-oriented, functional và declarative paradigms**, **Declarative programming** tiếp nhận điểm tựa từ **Functional programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lô-gic (logic / 논리) programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Declarative programming
 
@@ -42,15 +38,13 @@ Declarative style mô tả **what** desired kết quả (result / 결과)/thuộ
 
 Declarative lớp trừu tượng (abstraction / 추상화) mạnh khi engine có thể optimize chiến lược (strategy / 전략), nhưng hiệu năng (performance / 성능) debugging đòi hiểu engine mô hình thực thi (execution model / 실행 모델).
 
-
-> **Chuyển mạch:** Từ **Declarative programming**, ta sang **lô-gic (logic / 논리) programming** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Imperative, object-oriented, functional và declarative paradigms**, **Lô-gic (logic / 논리) programming** tiếp nhận điểm tựa từ **Declarative programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Event-driven và reactive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lô-gic (logic / 논리) programming
 
 Lô-gic (logic / 논리) programming biểu diễn facts/rules và truy vấn (query / 쿼리); engine tìm kiếm (search / 검색)/suy luận (inference / 추론) tìm substitutions. Prolog là example kinh điển. Dù ít dùng mainstream backend, ideas unification, các ràng buộc (constraints / 제약조건들) và quy tắc (rule / 규칙) engines xuất hiện trong solvers/static phân tích (analysis / 분석).
 
-
-> **Chuyển mạch:** Từ **lô-gic (logic / 논리) programming**, ta sang **Event-driven và reactive** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Imperative, object-oriented, functional và declarative paradigms**, **Event-driven và reactive** tiếp nhận điểm tựa từ **Lô-gic (logic / 논리) programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Event-driven và reactive
 
@@ -58,8 +52,7 @@ Event-driven các hệ thống (systems / 시스템들) react events/callbacks/m
 
 Hidden temporal dependencies có thể khó gỡ lỗi (debug / 디버그); tường minh (explicit / 명시적) trạng thái (state / 상태) machines/observable streams giúp cấu trúc (structure / 구조).
 
-
-> **Chuyển mạch:** Từ **Event-driven và reactive**, ta sang **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Imperative, object-oriented, functional và declarative paradigms**, **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** tiếp nhận điểm tựa từ **Event-driven và reactive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)
 
@@ -70,15 +63,13 @@ Declarative: specify relations/goals, engine điều khiển (control / 제어) 
 
 Không có paradigm universal winner. truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) bằng SQL declarative hợp hơn manual page vòng lặp (loop / 루프); low-level driver imperative điều khiển (control / 제어) cần thiết; nghiệp vụ (business / 비즈니스) lĩnh vực (domain / 도메인) có thể dùng OOP + functional giá trị (value / 값) transformations.
 
-
-> **Chuyển mạch:** Từ **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Imperative, object-oriented, functional và declarative paradigms**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Paradigms khác nhau chủ yếu ở **trạng thái (state / 상태) nằm đâu, điều khiển (control / 제어) nằm đâu, và contracts được biểu đạt thế nào**. Hãy chọn mô hình (model / 모델) làm invariants và thay đổi (change / 변경) boundaries rõ nhất.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Imperative, object-oriented, functional và declarative paradigms**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -88,11 +79,10 @@ Không có paradigm universal winner. truy vấn cơ sở dữ liệu (database 
 
 **“Declarative mã (code / 코드) không có thuật toán (algorithm / 알고리즘).”** Engine vẫn execute algorithms; declarative tầng (layer / 계층) chuyển thuật toán (algorithm / 알고리즘) choice sang optimizer/thời gian chạy (runtime / 런타임).
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Imperative, object-oriented, functional và declarative paradigms**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 [State/invariants](../00_computation_information/03_logic_state_abstraction_and_invariants.md) là dùng chung (common / 공통) foundation; SQL được đào sâu ở [Relational Model](../05_data_databases/01_relational_model_keys_and_normalization.md); sự kiện (event / 이벤트)/async ở [scope/control flow](./02_scope_closures_functions_and_control_flow.md) và [queues/backpressure](../08_software_systems/03_state_queues_backpressure_and_boundaries.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language semantics and execution models](./00_language_semantics_and_execution_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

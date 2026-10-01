@@ -1,7 +1,6 @@
 # Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **3. dịch vụ (service / 서비스) không đồng nghĩa background luồng thực thi (thread / 스레드)** sang **4. Started dịch vụ (service / 서비스) và bound dịch vụ (service / 서비스)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **3. dịch vụ (service / 서비스) không đồng nghĩa background luồng thực thi (thread / 스레드)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **4. Started dịch vụ (service / 서비스) và bound dịch vụ (service / 서비스)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Một lỗi tư duy phổ biến khi học Android hiện đại là coi app = một Activity chứa Compose. Trên thực tế Android là thành phần (component / 컴포넌트) nền tảng (platform / 플랫폼). Hệ thống, app khác hoặc người dùng (user / 사용자) có thể tương tác với app qua notification, broadcast, content URI, widget, shortcut, tile, dịch vụ (service / 서비스) hoặc deep link ngay cả khi Activity chính chưa tồn tại.
 
@@ -44,11 +43,15 @@ Dịch vụ (service / 서비스) là thành phần (component / 컴포넌트)/t
 
 Nếu dịch vụ (service / 서비스) cần asynchronous công việc (work / 작업), nó vẫn phải dùng coroutine/executor phù hợp và quản cancellation/tài nguyên (resource / 자원).
 
+> **Chuyển mạch:** Service là component lifecycle, không phải thread; started/bound service có ownership khác nhau, còn foreground service thêm user-visible execution contract.
+
 ## 4. Started dịch vụ (service / 서비스) và bound dịch vụ (service / 서비스)
 
 Started dịch vụ (service / 서비스) được start để thực hiện nhiệm vụ theo vòng đời (lifecycle / 생명주기) dịch vụ (service / 서비스). Bound dịch vụ (service / 서비스) expose giao diện (interface / 인터페이스) cho máy khách (client / 클라이언트) bind và gọi.
 
 Bound dịch vụ (service / 서비스) hữu ích cho long-lived cục bộ (local / 로컬)/remote dịch vụ (service / 서비스) tương tác (interaction / 상호작용), nhưng phần lớn app CRUD thông thường không cần tự tạo bound dịch vụ (service / 서비스).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **5. Foreground dịch vụ (service / 서비스)** tiếp nhận điểm tựa từ **4. Started dịch vụ (service / 서비스) và bound dịch vụ (service / 서비스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. dịch vụ (service / 서비스) restart ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Foreground dịch vụ (service / 서비스)
 
@@ -58,6 +61,8 @@ Nó phải hiển thị notification và không phải loophole để giữ ti�
 
 Nếu công việc (work / 작업) có thể trì hoãn, durable và không cần chạy ngay liên tục, WorkManager thường đúng hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **6. dịch vụ (service / 서비스) restart ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **5. Foreground dịch vụ (service / 서비스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Receiver phải làm ít và nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. dịch vụ (service / 서비스) restart ngữ nghĩa (semantics / 의미론)
 
 `onStartCommand()` trả chế độ (mode / 모드) như `START_NOT_STICKY`, `START_STICKY`, `START_REDELIVER_INTENT` theo đặc tả hợp đồng (contract / 계약). Không chọn `START_STICKY` chỉ vì muốn dịch vụ (service / 서비스) “không chết”.
@@ -65,6 +70,8 @@ Nếu công việc (work / 작업) có thể trì hoãn, durable và không cầ
 Tiến trình (process / 프로세스) vẫn có thể bị kill; dịch vụ (service / 서비스) có thể được recreate tùy ngữ nghĩa (semantics / 의미론) nhưng in-memory trạng thái (state / 상태) mất. Durable tác vụ (task / 작업) phải persist progress/đầu vào (input / 입력) nếu cần khôi phục (recovery / 복구).
 
 # BroadcastReceiver
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **7. Receiver phải làm ít và nhanh** tiếp nhận điểm tựa từ **6. dịch vụ (service / 서비스) restart ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. goAsync() không biến receiver thành dịch vụ (service / 서비스) vô hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Receiver phải làm ít và nhanh
 
@@ -80,9 +87,13 @@ broadcast arrives
 → return
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **8. goAsync() không biến receiver thành dịch vụ (service / 서비스) vô hạn** tiếp nhận điểm tựa từ **7. Receiver phải làm ít và nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Exported receiver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. `goAsync()` không biến receiver thành dịch vụ (service / 서비스) vô hạn
 
 `goAsync()` cho phép hoàn thành một ít async công việc (work / 작업) sau `onReceive`, nhưng vẫn có thời gian (time / 시간)/thời gian tồn tại (lifetime / 수명) ràng buộc (constraint / 제약조건). Dùng cho thao tác (operation / 연산) ngắn; durable/long công việc (work / 작업) vẫn nên chuyển WorkManager.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **9. Exported receiver** tiếp nhận điểm tựa từ **8. goAsync() không biến receiver thành dịch vụ (service / 서비스) vô hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Provider là dữ liệu (data / 데이터) IPC ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Exported receiver
 
@@ -92,11 +103,15 @@ Receiver exported nhận đầu vào (input / 입력) từ ngoài app phải coi
 
 # ContentProvider
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **9. Exported receiver** đã nêu tiêu chí phân biệt, còn **10. Provider là dữ liệu (data / 데이터) IPC ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. ContentResolver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Provider là dữ liệu (data / 데이터) IPC ranh giới (boundary / 경계)
 
 ContentProvider expose structured dữ liệu (data / 데이터)/URI giao diện (interface / 인터페이스) giữa tiến trình (process / 프로세스)/app. Android hệ thống (system / 시스템) sử dụng provider concept cho contacts/media/document và app có thể tạo provider riêng.
 
 Nó không chỉ là “cơ sở dữ liệu (database / 데이터베이스) wrapper”. Provider là IPC/bảo mật (security / 보안)/versioning ranh giới (boundary / 경계).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **10. Provider là dữ liệu (data / 데이터) IPC ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **11. ContentResolver** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. URI permission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. `ContentResolver`
 
@@ -114,9 +129,13 @@ contentResolver.query(
 
 Môi trường vận hành (production / 운영 환경) mã (code / 코드) cần close Cursor/tài nguyên (resource / 자원) bằng `use` và không truy vấn (query / 쿼리) khối lượng lớn trên main luồng thực thi (thread / 스레드).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **12. URI permission** tiếp nhận điểm tựa từ **11. ContentResolver** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. FileProvider** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. URI permission
 
 Provider có thể grant temporary URI permission thay vì expose toàn dữ liệu (data / 데이터) store. Đây là principle of least privilege ở data-sharing tầng (layer / 계층).
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **13. FileProvider** tiếp nhận điểm tựa từ **12. URI permission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Notification là hệ thống (system / 시스템) surface, không chỉ UI banner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. FileProvider
 
@@ -124,11 +143,15 @@ Provider có thể grant temporary URI permission thay vì expose toàn dữ li�
 
 # Notification
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **14. Notification là hệ thống (system / 시스템) surface, không chỉ UI banner** tiếp nhận điểm tựa từ **13. FileProvider** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Stable notification ID** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Notification là hệ thống (system / 시스템) surface, không chỉ UI banner
 
 Notification tồn tại ngoài Activity vòng đời (lifecycle / 생명주기), có thể được người dùng (user / 사용자) tap khi tiến trình (process / 프로세스) chết. Vì vậy `PendingIntent` phải reconstruct điều hướng (navigation / 내비게이션) từ durable/typed identifier.
 
 Không dựa vào singleton bộ nhớ (memory / 메모리) khi handling notification tap.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **15. Stable notification ID** tiếp nhận điểm tựa từ **14. Notification là hệ thống (system / 시스템) surface, không chỉ UI banner** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Channel ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Stable notification ID
 
@@ -140,11 +163,15 @@ Ví dụ download progress:
 notificationId = hash(downloadId)
 ```
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **16. Channel ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **15. Stable notification ID** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. hành động (action / 동작) button** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Channel ngữ nghĩa (semantics / 의미론)
 
 Channel nên đại diện category người dùng (user / 사용자) hiểu. Importance/sound sau khi channel tồn tại phần lớn thuộc người dùng (user / 사용자) điều khiển (control / 제어).
 
 Đừng phiên bản (version / 버전) channel theo mỗi bản phát hành (release / 릴리스) để reset preference người dùng (user / 사용자).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **17. hành động (action / 동작) button** tiếp nhận điểm tựa từ **16. Channel ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. PendingIntent là năng lực (capability / 역량) đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. hành động (action / 동작) button
 
@@ -152,17 +179,23 @@ Notification hành động (action / 동작) có thể trigger receiver/dịch v
 
 # PendingIntent
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **18. PendingIntent là năng lực (capability / 역량) đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **17. hành động (action / 동작) button** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Immutable mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. PendingIntent là năng lực (capability / 역량) đơn vị từ (token / 토큰)
 
 Khi app tạo PendingIntent, app cho hệ thống (system / 시스템)/other thành phần (component / 컴포넌트) quyền thực hiện một Intent với định danh (identity / 식별자) của app trong phạm vi nhất định.
 
 Vì vậy uniqueness, mutability và payload đều là bảo mật (security / 보안)/tính đúng đắn (correctness / 정확성) concern.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **19. Immutable mặc định** tiếp nhận điểm tựa từ **18. PendingIntent là năng lực (capability / 역량) đơn vị từ (token / 토큰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. PendingIntent định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Immutable mặc định
 
 Nếu use trường hợp (case / 사례) không cần bên ngoài (external / 외부) party fill/thay đổi (change / 변경) Intent, dùng immutable.
 
 Mutable chỉ khi nền tảng (platform / 플랫폼) API thực sự cần mutate, ví dụ một số inline reply/tương tác (interaction / 상호작용) đặc tả hợp đồng (contract / 계약).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **20. PendingIntent định danh (identity / 식별자)** tiếp nhận điểm tựa từ **19. Immutable mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Widget không phải mini Activity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. PendingIntent định danh (identity / 식별자)
 
@@ -172,11 +205,15 @@ Nếu notification hành động (action / 동작) cho item khác nhau, cần đ
 
 # App Widget
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **21. Widget không phải mini Activity** tiếp nhận điểm tựa từ **20. PendingIntent định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Widget trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Widget không phải mini Activity
 
 App Widget kết xuất (render / 렌더링) qua `RemoteViews` hoặc Glance lớp trừu tượng (abstraction / 추상화) tùy hiện thực (implementation / 구현). Nó chạy dưới ràng buộc (constraint / 제약조건) hệ thống (system / 시스템) surface, cập nhật (update / 업데이트)/vòng đời (lifecycle / 생명주기) khác Compose screen.
 
 Không cố nhúng arbitrary UI lô-gic (logic / 논리) từ screen vào widget.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **22. Widget trạng thái (state / 상태)** tiếp nhận điểm tựa từ **21. Widget không phải mini Activity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. cập nhật (update / 업데이트) frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Widget trạng thái (state / 상태)
 
@@ -184,9 +221,13 @@ Widget có thể tồn tại lâu hơn tiến trình (process / 프로세스). t
 
 Nếu người dùng (user / 사용자) pin nhiều widget instance, mỗi `appWidgetId` có cấu hình (configuration / 구성)/trạng thái (state / 상태) riêng.
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **23. cập nhật (update / 업데이트) frequency** tiếp nhận điểm tựa từ **22. Widget trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Widget bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. cập nhật (update / 업데이트) frequency
 
 Periodic widget cập nhật (update / 업데이트) quá thường xuyên tốn battery và bị nền tảng (platform / 플랫폼) ràng buộc (constraint / 제약조건). Event-driven cập nhật (update / 업데이트) khi dữ liệu (data / 데이터) đổi thường tốt hơn polling ngắn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **24. Widget bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **23. cập nhật (update / 업데이트) frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Static và động (dynamic / 동적) shortcut** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Widget bộ nhớ (memory / 메모리)
 
@@ -194,11 +235,15 @@ RemoteViews payload có tài nguyên (resource / 자원)/bộ nhớ (memory / �
 
 # App Shortcut
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **25. Static và động (dynamic / 동적) shortcut** tiếp nhận điểm tựa từ **24. Widget bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Shortcut ID là đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Static và động (dynamic / 동적) shortcut
 
 Shortcut giúp người dùng (user / 사용자) nhảy trực tiếp vào hành động (action / 동작)/destination. Static shortcut phù hợp hành động (action / 동작) cố định; động (dynamic / 동적) shortcut phù hợp thực thể (entity / 엔터티)/hành động (action / 동작) thay đổi theo người dùng (user / 사용자) usage.
 
 Shortcut phải mở được luồng (flow / 흐름) đúng khi tiến trình (process / 프로세스) cold-start.
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **26. Shortcut ID là đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **25. Static và động (dynamic / 동적) shortcut** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Tile là quick hệ thống (system / 시스템) điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Shortcut ID là đặc tả hợp đồng (contract / 계약)
 
@@ -206,17 +251,23 @@ Nếu shortcut đại diện conversation/thứ tự (order / 순서), ID cần 
 
 # Quick Settings Tile
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **27. Tile là quick hệ thống (system / 시스템) điều khiển (control / 제어)** tiếp nhận điểm tựa từ **26. Shortcut ID là đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Tile trạng thái (state / 상태) phải phản ánh truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Tile là quick hệ thống (system / 시스템) điều khiển (control / 제어)
 
 Tile phù hợp hành động (action / 동작) trạng thái đơn giản người dùng (user / 사용자) muốn truy cập nhanh, ví dụ toggle VPN-like tính năng (feature / 기능) hoặc start/stop dịch vụ (service / 서비스) hợp lệ.
 
 Tile dịch vụ (service / 서비스) có vòng đời (lifecycle / 생명주기) riêng; đừng assume Activity exists.
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **28. Tile trạng thái (state / 상태) phải phản ánh truth** tiếp nhận điểm tựa từ **27. Tile là quick hệ thống (system / 시스템) điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Entry từ hệ thống (system / 시스템) phải reconstruct đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Tile trạng thái (state / 상태) phải phản ánh truth
 
 Nếu tile hiển thị active/inactive nhưng underlying dịch vụ (service / 서비스) thất bại (fail / 실패), UI hệ thống sai. trạng thái (state / 상태) phải derive từ nguồn chuẩn (source of truth / 정본) và cập nhật (update / 업데이트) khi actual status đổi.
 
 # Deep link và bên ngoài (external / 외부) điều hướng (navigation / 내비게이션)
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **29. Entry từ hệ thống (system / 시스템) phải reconstruct đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **28. Tile trạng thái (state / 상태) phải phản ánh truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. android:process** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Entry từ hệ thống (system / 시스템) phải reconstruct đồ thị (graph / 그래프)
 
@@ -237,6 +288,8 @@ Không serialize whole `Order` đối tượng (object / 객체) vào PendingInt
 
 # Multi-process awareness
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **29. Entry từ hệ thống (system / 시스템) phải reconstruct đồ thị (graph / 그래프)** xác định đầu vào; **30. android:process** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **31. Receiver/dịch vụ (service / 서비스) không thay WorkManager** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. `android:process`
 
 Một số thành phần (component / 컴포넌트)/thư viện (library / 라이브러리) có thể chạy tiến trình (process / 프로세스) riêng. Khi đó singleton, DI đồ thị (graph / 그래프), static bộ nhớ đệm (cache / 캐시) và bộ nhớ (memory / 메모리) trạng thái (state / 상태) tách biệt.
@@ -244,6 +297,8 @@ Một số thành phần (component / 컴포넌트)/thư viện (library / 라�
 Đa số app không cần custom multi-process. Chỉ dùng khi nền tảng (platform / 플랫폼)/thư viện (library / 라이브러리) yêu cầu (requirement / 요구사항) rõ vì độ phức tạp (complexity / 복잡도) tăng mạnh: IPC, initialization, dữ liệu (data / 데이터) consistency, logging và crash hành vi (behavior / 동작).
 
 # WorkManager và hệ thống (system / 시스템) components
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **30. android:process** xác định đầu vào; **31. Receiver/dịch vụ (service / 서비스) không thay WorkManager** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **32. Unique công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Receiver/dịch vụ (service / 서비스) không thay WorkManager
 
@@ -259,6 +314,8 @@ BroadcastReceiver
 → notification update nếu cần
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **32. Unique công việc (work / 작업)** tiếp nhận điểm tựa từ **31. Receiver/dịch vụ (service / 서비스) không thay WorkManager** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. ContentProvider có thể khởi tạo rất sớm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Unique công việc (work / 작업)
 
 Nếu cùng sync sự kiện (event / 이벤트) tới nhiều lần, unique công việc (work / 작업) chính sách (policy / 정책) giúp deduplicate/coalesce theo nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론).
@@ -267,17 +324,23 @@ Nhưng đừng dùng unique công việc (work / 작업) để che underlying id
 
 # Tiến trình (process / 프로세스) initialization
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **33. ContentProvider có thể khởi tạo rất sớm** tiếp nhận điểm tựa từ **32. Unique công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. App Startup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. ContentProvider có thể khởi tạo rất sớm
 
 Một số thư viện (library / 라이브러리) dùng provider-based initializer để chạy trước `Application.onCreate()`. Điều này tiện nhưng có startup chi phí (cost / 비용).
 
 Khi kiểm tra (audit / 감사) cold start, nhớ initialization có thể đến từ manifest/provider chứ không chỉ mã (code / 코드) bạn thấy trong ứng dụng (application / 애플리케이션).
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **34. App Startup** tiếp nhận điểm tựa từ **33. ContentProvider có thể khởi tạo rất sớm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. thành phần (component / 컴포넌트) attack surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. App Startup
 
 Jetpack App Startup cung cấp cách quản initializer/phụ thuộc (dependency / 의존성) rõ hơn cho thư viện (library / 라이브러리)/app initialization, nhưng vẫn cần lazy/defer khi initialization không cần trước first frame.
 
 # Bảo mật (security / 보안)
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **35. thành phần (component / 컴포넌트) attack surface** tiếp nhận điểm tựa từ **34. App Startup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. tường minh (explicit / 명시적) Intent cho nội bộ (internal / 내부) lời gọi (call / 호출)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. thành phần (component / 컴포넌트) attack surface
 
@@ -295,15 +358,21 @@ URI grant
 
 Mỗi exported thành phần (component / 컴포넌트) là API surface của app.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **36. tường minh (explicit / 명시적) Intent cho nội bộ (internal / 내부) lời gọi (call / 호출)** tiếp nhận điểm tựa từ **35. thành phần (component / 컴포넌트) attack surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Signature permission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. tường minh (explicit / 명시적) Intent cho nội bộ (internal / 내부) lời gọi (call / 호출)
 
 Nếu mục tiêu (target / 대상) thành phần (component / 컴포넌트) nội bộ đã biết, tường minh (explicit / 명시적) Intent giảm ambiguity/hijacking so với implicit Intent không cần thiết.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **37. Signature permission** tiếp nhận điểm tựa từ **36. tường minh (explicit / 명시적) Intent cho nội bộ (internal / 내부) lời gọi (call / 호출)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Cold-start kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 37. Signature permission
 
 Trong ecosystem nhiều app cùng tổ chức và signing điều khiển (control / 제어), signature-level permission có thể protect IPC giữa app. Nhưng certificate rotation/phân phối (distribution / 분포) kiến trúc (architecture / 아키텍처) cần tính trước.
 
 # Testing hệ thống (system / 시스템) surfaces
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **38. Cold-start kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **37. Signature permission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Duplicate delivery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 38. Cold-start kiểm thử (test / 테스트)
 
@@ -317,9 +386,13 @@ kill process
 
 Tương tự widget/shortcut/deep link.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **39. Duplicate delivery** tiếp nhận điểm tựa từ **38. Cold-start kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Permission/export bảo mật (security / 보안) kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 39. Duplicate delivery
 
 Kiểm thử (test / 테스트) notification hành động (action / 동작)/broadcast/công việc (work / 작업) sự kiện (event / 이벤트) lặp. nghiệp vụ (business / 비즈니스) mutation không được double-charge/double-submit.
+
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **40. Permission/export bảo mật (security / 보안) kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **39. Duplicate delivery** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. hệ thống (system / 시스템) surface là công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 40. Permission/export bảo mật (security / 보안) kiểm thử (test / 테스트)
 
@@ -327,17 +400,25 @@ Thử gửi malformed Intent từ adb/kiểm thử (test / 테스트) app tới 
 
 # Cấp cao (senior / 시니어) Notes
 
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **41. hệ thống (system / 시스템) surface là công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **40. Permission/export bảo mật (security / 보안) kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Entry điểm (point / 지점) mỏng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 41. hệ thống (system / 시스템) surface là công khai (public / 공개) đặc tả hợp đồng (contract / 계약)
 
 Notification hành động (action / 동작), shortcut, deep link, provider URI hoặc exported receiver đều có thể sống qua nhiều app phiên bản (version / 버전). Thay đặc tả hợp đồng (contract / 계약) cần di chuyển (migration / 마이그레이션)/versioning mindset.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **42. Entry điểm (point / 지점) mỏng** tiếp nhận điểm tựa từ **41. hệ thống (system / 시스템) surface là công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Reconstruct thay vì vận chuyển (transport / 전송) giant trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 42. Entry điểm (point / 지점) mỏng
 
 Thành phần (component / 컴포넌트) callback nên chủ yếu parse/validate → delegate. lô-gic nghiệp vụ (business logic / 비즈니스 로직) ở repository/use trường hợp (case / 사례) giúp reuse và kiểm thử (test / 테스트).
 
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **43. Reconstruct thay vì vận chuyển (transport / 전송) giant trạng thái (state / 상태)** tiếp nhận điểm tựa từ **42. Entry điểm (point / 지점) mỏng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Không dùng thành phần (component / 컴포넌트) để chống tiến trình (process / 프로세스) death** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 43. Reconstruct thay vì vận chuyển (transport / 전송) giant trạng thái (state / 상태)
 
 Hệ thống (system / 시스템) surface nên truyền stable ID/intention, sau đó app reconstruct trạng thái (state / 상태) từ nguồn chuẩn (source of truth / 정본). Đây là mẫu (pattern / 패턴) chung nối điều hướng (navigation / 내비게이션), Binder limit, tiến trình (process / 프로세스) death và bảo mật (security / 보안).
+
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 14 — Android hệ thống (system / 시스템) Surfaces: dịch vụ (service / 서비스), Receiver, Provider, Notification, Widget, Shortcut và Tile**, **43. Reconstruct thay vì vận chuyển (transport / 전송) giant trạng thái (state / 상태)** xác định đầu vào; **44. Không dùng thành phần (component / 컴포넌트) để chống tiến trình (process / 프로세스) death** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 44. Không dùng thành phần (component / 컴포넌트) để chống tiến trình (process / 프로세스) death
 
@@ -347,4 +428,4 @@ Dịch vụ (service / 서비스)/widget/provider không phải mẹo để gi�
 
 Bạn nên giải thích được vì sao dịch vụ (service / 서비스) không phải background luồng thực thi (thread / 스레드); Receiver vì sao phải ngắn; ContentProvider là IPC/dữ liệu (data / 데이터) ranh giới bảo mật (security boundary / 보안 경계); notification tap phải hoạt động từ cold tiến trình (process / 프로세스); PendingIntent vì sao là năng lực (capability / 역량) đơn vị từ (token / 토큰); widget/shortcut/tile có vòng đời (lifecycle / 생명주기) khác Activity; WorkManager khác dịch vụ (service / 서비스)/Receiver; multi-process làm singleton sai thế nào; và vì sao exported thành phần (component / 컴포넌트) cần được rà soát (review / 검토) như một API công khai (public API / 공개 API)/bảo mật (security / 보안) surface.
 
-> **Bàn giao:** Sau **44. Không dùng thành phần (component / 컴포넌트) để chống tiến trình (process / 프로세스) death**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **44. Không dùng thành phần (component / 컴포넌트) để chống tiến trình (process / 프로세스) death**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

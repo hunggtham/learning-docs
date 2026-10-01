@@ -1,7 +1,6 @@
 # Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** Đọc **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Phân tích thứ nguyên (dimensional analysis): kiểm tra một mô hình (model / 모델) trước khi tính** sang **2. Random motion tạo directed flux ở population mức (level / 수준)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Phân tích thứ nguyên (dimensional analysis): kiểm tra một mô hình (model / 모델) trước khi tính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Random motion tạo directed flux ở population mức (level / 수준)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Sinh học không đứng ngoài các định luật Vật lý và Hóa học. Tế bào (cell), tissue và hệ sinh thái (ecosystem) đều dùng cùng matter, năng lượng (energy / 에너지) và force như mọi hệ thống (system / 시스템) khác. Điều đặc biệt ở living hệ thống (system / 시스템) là các tương tác (interaction / 상호작용) này được tổ chức thành mạng (network / 네트워크) có ranh giới (boundary / 경계), phản hồi (feedback / 피드백), thông tin (information / 정보), heredity và evolutionary lịch sử (history / 이력).
 
@@ -17,6 +16,8 @@ Phân tích thứ nguyên còn giúp suy relationship. Hệ số khuếch tán (
 
 Thói quen kiểm đơn vị (unit / 단위) là một trong những cách rẻ nhất để bắt lỗi lập luận (reasoning / 추론).
 
+> **Chuyển mạch:** Dimensional analysis kiểm tra model trước; random motion tạo net flux ở population level, và diffusion time tiếp theo biến flux thành giới hạn kích thước có thể tính.
+
 ## 2. Random motion tạo directed flux ở population mức (level / 수준)
 
 Một molecule trong liquid chuyển động ngẫu nhiên (random walk). Không molecule nào biết nơi concentration thấp. Nhưng nếu phía trái có nhiều molecule hơn, số molecule random bước sang phải mỗi giây trung bình cũng nhiều hơn số từ phải sang trái.
@@ -31,6 +32,8 @@ J=-D\frac{dC}{dx}
 
 Dấu âm cho biết flux đi theo chiều giảm concentration. Đây là emergence: motion microscopic không có direction nhưng dòng quần thể (population flux) có direction.
 
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **2. Random motion tạo directed flux ở population mức (level / 수준)** đã nêu tiêu chí phân biệt, còn **3. Thời gian khuếch tán (diffusion time) giải thích giới hạn kích thước** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Surface-area-to-volume ratio là hình học (geometry / 기하학) trở thành physiology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Thời gian khuếch tán (diffusion time) giải thích giới hạn kích thước
 
 Thời gian khuếch tán đặc trưng:
@@ -42,6 +45,8 @@ t\sim\frac{x^2}{2D}
 Distance tăng 10 lần làm thời gian (time / 시간) tăng khoảng 100 lần. Đây là lý do diffusion xuất sắc ở quy mô micromet (micron scale) nhưng tệ ở quy mô mét (metre scale).
 
 Từ một equation này ta suy ra vì sao cell nhỏ, vì sao lung cần circulation, vì sao plant cần mô mạch (vascular tissue) và vì sao tumor lớn cần angiogenesis.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **3. Thời gian khuếch tán (diffusion time) giải thích giới hạn kích thước** đã nêu tiêu chí phân biệt, còn **4. Surface-area-to-volume ratio là hình học (geometry / 기하학) trở thành physiology** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Osmosis và thế hóa học (chemical potential)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Surface-area-to-volume ratio là hình học (geometry / 기하학) trở thành physiology
 
@@ -61,6 +66,8 @@ Organism lớn có ít exchange area relative volume hơn nếu chỉ quy mô (s
 
 Alveoli, intestinal villi, gill lamellae và gốc (root / 루트) hair đều là geometric solution cho cùng ràng buộc (constraint / 제약조건).
 
+> **Chuyển mạch:** Surface-area/volume turns geometry into exchange capacity; osmosis follows chemical potential, while ions additionally require electrochemical potential.
+
 ## 5. Osmosis và thế hóa học (chemical potential)
 
 Water không “muốn đi về nơi nhiều muối”. Net water movement phản ánh thế hóa học và membrane permeability.
@@ -74,6 +81,8 @@ Với dilute solution, osmotic pressure gần:
 Equation cho thấy particle concentration có thể tạo áp suất (pressure). Cell phải regulate osmolarity vì membrane mechanics có giới hạn.
 
 Plant tận dụng turgor; animal cell tránh swelling bằng ion pump và extracellular regulation.
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **6. Chênh lệch nồng độ (concentration gradient) chưa đủ cho ion: cần electrochemical potential** tiếp nhận điểm tựa từ **5. Osmosis và thế hóa học (chemical potential)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Chênh lệch nồng độ (concentration gradient) chưa đủ cho ion: cần electrochemical potential
 
@@ -89,6 +98,8 @@ E=\frac{RT}{zF}\ln\frac{[ion]_{out}}{[ion]_{in}}
 
 Nơron điện thế màng (membrane potential) và động lực proton (proton motive force) ở mitochondria cùng dùng một principle: **charge separation + concentration difference lưu năng lượng tự do (free energy)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học** tiếp nhận điểm tựa từ **6. Chênh lệch nồng độ (concentration gradient) chưa đủ cho ion: cần electrochemical potential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Thermodynamics: favorable không đồng nghĩa fast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học
 
 Lớp kép lipid (lipid bilayer) cách điện tương đối giữa hai conductive fluid. Vì vậy membrane có thể được mô hình (model / 모델) như capacitor.
@@ -102,6 +113,8 @@ Kênh ion (ion channel) giống conductance pathway; membrane capacitance làm v
 RC-like hằng số thời gian (time constant) giúp hiểu vì sao neuron integrate đầu vào (input / 입력) qua thời gian (time / 시간) thay vì phản ứng tức thì với từng ion riêng.
 
 Kỹ thuật (engineering / 엔지니어링) circuit analogy không nói neuron là wire; nó giúp formalize một phần biophysics.
+
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **8. Thermodynamics: favorable không đồng nghĩa fast** tiếp nhận điểm tựa từ **7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Thermodynamics: favorable không đồng nghĩa fast
 
@@ -117,6 +130,8 @@ Enzym (enzyme) giảm activation barrier, thay kinetics, nhưng không đổi eq
 
 Đây là distinction nền tảng giữa thermodynamics và kinetics.
 
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản** tiếp nhận điểm tựa từ **8. Thermodynamics: favorable không đồng nghĩa fast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Redox potential và electron luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản
 
 ATP hydrolysis favorable trong cellular điều kiện (condition / 조건) vì sản phẩm (product / 제품) trạng thái (state / 상태) có lower năng lượng tự do tổng thể. Cell coupling ATP hydrolysis với unfavorable tiến trình (process / 프로세스) qua dùng chung (shared / 공유) intermediate hoặc conformational thay đổi (change / 변경).
@@ -124,6 +139,8 @@ ATP hydrolysis favorable trong cellular điều kiện (condition / 조건) vì 
 Vận chuyển chủ động (active transport), biosynthesis và protein vận động (motor protein) đều dùng lô-gic (logic / 논리) này.
 
 ATP không phải battery độc lập; nó là **currency trong mạng lưới phản ứng (reaction network)** được regenerate liên tục.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản** xác định đầu vào; **10. Redox potential và electron luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Redox potential và electron luồng (flow / 흐름)
 
@@ -133,6 +150,8 @@ Quang hợp (photosynthesis) dùng photon để nâng electron lên năng lượ
 
 Do đó metabolism có thể đọc như **controlled electron luồng (flow / 흐름) → chênh lệch ion (ion gradient) → chemical công việc (work / 작업)**.
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **10. Redox potential và electron luồng (flow / 흐름)** xác định đầu vào; **11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Động học enzym (enzyme kinetics) và bão hòa (saturation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử
 
 Chuỗi chuyền electron (electron transport chain) tạo chênh lệch proton (proton gradient). Proton quay về qua ATP synthase (ATP synthase) và drive rotary/conformational cơ chế (mechanism / 메커니즘) tạo ATP.
@@ -140,6 +159,8 @@ Chuỗi chuyền electron (electron transport chain) tạo chênh lệch proton 
 Đây là một concept đặc biệt quan trọng vì cùng kiến trúc (architecture / 아키텍처) xuất hiện ở bacteria, mitochondria và chloroplast.
 
 Tiến hóa (evolution) đã tái sử dụng membrane độ dốc (gradient / 기울기) như universal năng lượng (energy / 에너지) transducer.
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **12. Động học enzym (enzyme kinetics) và bão hòa (saturation)** tiếp nhận điểm tựa từ **11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Hill equation và cooperativity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Động học enzym (enzyme kinetics) và bão hòa (saturation)
 
@@ -153,6 +174,8 @@ v=\frac{V_{max}[S]}{K_m+[S]}
 
 Saturation xuất hiện rộng hơn enzyme: transporter, thụ thể (receptor), oxy (oxygen) binding và many physiological phản hồi (response / 응답) đều có ceiling.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **13. Hill equation và cooperativity** tiếp nhận điểm tựa từ **12. Động học enzym (enzyme kinetics) và bão hòa (saturation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Binding affinity và occupancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Hill equation và cooperativity
 
 Một phản hồi (response / 응답) cooperative thường được mô hình (model / 모델) bằng:
@@ -165,6 +188,8 @@ Khi \(n>1\), curve steep hơn. Hemoglobin oxygen binding là classic ngữ cản
 
 Nhưng Hill coefficient là phenomenological summary, không tự nói full molecular cơ chế (mechanism / 메커니즘).
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **14. Binding affinity và occupancy** tiếp nhận điểm tựa từ **13. Hill equation và cooperativity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Binding affinity và occupancy
 
 Simple one-site binding:
@@ -176,6 +201,8 @@ Simple one-site binding:
 \(K_d\) thấp thường nghĩa affinity cao hơn. Tuy nhiên receptor thật có conformational trạng thái (state / 상태), competition và downstream amplification.
 
 Occupancy không đồng nghĩa phản hồi (response / 응답); few occupied receptor có thể tạo large downstream tín hiệu (signal / 신호) nếu amplification mạnh.
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **14. Binding affinity và occupancy** xác định đầu vào; **15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)
 
@@ -191,6 +218,8 @@ Radius xuất hiện lũy thừa 4. Vì vậy thay đổi nhỏ arteriole radius
 
 Điều này giải thích tại sao smooth muscle quanh vessel là điều khiển (control / 제어) điểm (point / 지점) mạnh của circulation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)** xác định đầu vào; **16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. Compliance: vessel không phải pipe cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?
 
 Một dimensionless number quan trọng:
@@ -205,6 +234,8 @@ Dòng máu (blood flow) ở nhiều small vessel laminar, nhưng turbulence có 
 
 Dimensionless number giúp compare hệ thống (system / 시스템) khác quy mô (scale / 규모).
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?** xác định đầu vào; **17. Compliance: vessel không phải pipe cứng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. Căng thẳng (stress), strain và viscoelastic tissue** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Compliance: vessel không phải pipe cứng
 
 Mạch máu (blood vessel) deform dưới pressure. **Compliance** gần:
@@ -217,6 +248,8 @@ Artery elasticity giúp smooth pulsatile đầu ra (output / 출력) của heart
 
 Mechanics của material vì vậy trực tiếp thành physiology.
 
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **18. Căng thẳng (stress), strain và viscoelastic tissue** tiếp nhận điểm tựa từ **17. Compliance: vessel không phải pipe cứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Căng thẳng (stress), strain và viscoelastic tissue
 
 Stress gần force/area; strain là relative deformation.
@@ -226,6 +259,8 @@ Bone, tendon, cartilage và vessel không phải ideal spring. Nhiều tissue **
 Cartilage có thể creep dưới tải (load / 로드) lâu; tendon store elastic năng lượng (energy / 에너지); cell cảm ECM stiffness qua integrin.
 
 Mechanical thuộc tính (property / 속성) đi thẳng vào signaling và biểu hiện gen (gene expression) qua mechanotransduction.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel** tiếp nhận điểm tựa từ **18. Căng thẳng (stress), strain và viscoelastic tissue** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel
 
@@ -239,6 +274,8 @@ Small alveolus sẽ cần pressure cao hơn nếu surface tension giống nhau. 
 
 Một quan hệ (relation / 관계) physics giải thích vì sao một biochemical secretion là essential cho lung hàm (function / 함수).
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)** tiếp nhận điểm tựa từ **19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Phản hồi dương (positive feedback) và ngưỡng (threshold)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)
 
 Phản hồi âm (negative feedback) gồm sensor, điều khiển lô-gic (logic / 논리) và bộ phận đáp ứng (effector). Nhưng biological điểm đặt (set point) có thể shift; điều khiển (control / 제어) phân tán (distributed / 분산); delay và nonlinear phản hồi (response / 응답) phổ biến.
@@ -246,6 +283,8 @@ Phản hồi âm (negative feedback) gồm sensor, điều khiển lô-gic (logi
 Glucose, nhiệt độ (temperature), huyết áp (blood pressure) và trục nội tiết (endocrine axis) đều có phản hồi (feedback / 피드백) motif.
 
 Kỹ thuật (engineering / 엔지니어링) ngôn ngữ (language / 언어) giúp hỏi: bộ cảm nhận (sensor) ở đâu? delay bao nhiêu? gain mạnh quá có oscillate không? nhiễu động (disturbance) đi vào điểm (point / 지점) nào?
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **21. Phản hồi dương (positive feedback) và ngưỡng (threshold)** tiếp nhận điểm tựa từ **20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Phản hồi dương (positive feedback) và ngưỡng (threshold)
 
@@ -255,6 +294,8 @@ Phản hồi dương amplifies phản hồi (response / 응답) nhưng cần sto
 
 Kết hợp positive + phản hồi âm thường tạo công tắc (switch) ổn định hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay** tiếp nhận điểm tựa từ **21. Phản hồi dương (positive feedback) và ngưỡng (threshold)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay
 
 Circadian clock, respiratory rhythm và chu kỳ tế bào (cell cycle) có periodic dynamics.
@@ -263,11 +304,15 @@ Phản hồi âm + delay + tính phi tuyến (nonlinearity) là motif chung tạ
 
 Một static diagram không thể cho biết period hoặc phase. Sinh học động cần thời gian (time / 시간) dimension.
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Scaling law và allometry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)
 
 Activator và inhibitor có sự tạo ra (production)/diffusion khác nhau có thể tự tạo mẫu hình (pattern). Turing-type phản ứng–khuếch tán mô hình (model / 모델) minh họa cách stripe/spot có thể emerge từ cục bộ (local / 로컬) quy tắc (rule / 규칙).
 
 Developmental mẫu (pattern / 패턴) không nhất thiết cần mỗi cell có coordinate prewritten. độ dốc (gradient / 기울기) và cục bộ (local / 로컬) tương tác (interaction / 상호작용) có thể tạo spatial thông tin (information / 정보).
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **24. Scaling law và allometry** tiếp nhận điểm tựa từ **23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Scaling law và allometry
 
@@ -287,6 +332,8 @@ Giúp estimate exponent \(b\). Nhưng exponent có thể khác taxon/phạm vi (
 
 Quy mô (scale / 규모) thay ràng buộc (constraint / 제약조건) sinh lý học (physiology), life lịch sử (history / 이력) và sinh thái học (ecology).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)** tiếp nhận điểm tựa từ **24. Scaling law và allometry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)
 
 Shannon entropy:
@@ -299,6 +346,8 @@ H=-\sum_i p_i\log_2p_i
 
 Nhưng Shannon thông tin (information / 정보) không tự chứa ý nghĩa sinh học (biological meaning). DNA chuỗi (sequence / 시퀀스) có hàm (function / 함수) vì molecular hệ thống (system / 시스템) interpret nó; lý thuyết thông tin chỉ formalize bất định (uncertainty / 불확실성)/năng lực (capacity).
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)** nêu điều cần giải thích; **26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. Tính bền vững, redundancy và fragility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)
 
 Biểu hiện gen fluctuates vì reaction stochastic. Cell khác kích thước (size / 크기)/trạng thái (state / 상태) tạo extrinsic variability. Instrument thêm nhiễu đo lường (measurement noise).
@@ -306,6 +355,8 @@ Biểu hiện gen fluctuates vì reaction stochastic. Cell khác kích thước 
 Ba loại variation phải tách nếu muốn hiểu cơ chế (mechanism / 메커니즘).
 
 Hệ thống (system / 시스템) có thể buffer noise bằng phản hồi âm, averaging molecule hoặc redundancy; đôi khi noise lại tạo bet-hedging.
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)** nêu điều cần giải thích; **27. Tính bền vững, redundancy và fragility** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. Tính bền vững, redundancy và fragility
 
@@ -315,6 +366,8 @@ Một mạng (network / 네트워크) robust với single perturbation có thể
 
 Đây là lô-gic (logic / 논리) của synthetic lethality và khả năng phục hồi hệ sinh thái (ecosystem resilience).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều** tiếp nhận điểm tựa từ **27. Tính bền vững, redundancy và fragility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. tối ưu hóa (optimization / 최적화) và fitness landscape** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều
 
 Hệ miễn dịch (immune system) nhạy tăng pathogen defense nhưng tăng autoimmunity rủi ro (risk / 위험). Tốc độ đột biến (mutation rate) cao tăng adaptation speed nhưng tăng deleterious tải (load / 로드). Thick armor tăng protection nhưng giảm mobility.
@@ -322,6 +375,8 @@ Hệ miễn dịch (immune system) nhạy tăng pathogen defense nhưng tăng au
 Biological thiết kế (design / 설계) gần như luôn multi-objective dưới ràng buộc (constraint / 제약조건).
 
 Evolution không tìm toàn cục (global / 전역) optimum; nó thay đổi cục bộ (local / 로컬) population qua available variation và lịch sử (history / 이력).
+
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **29. tối ưu hóa (optimization / 최적화) và fitness landscape** tiếp nhận điểm tựa từ **28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. tối ưu hóa (optimization / 최적화) và fitness landscape
 
@@ -331,11 +386,15 @@ Landscape cũng thay khi môi trường (environment / 환경) hoặc species kh
 
 Kỹ thuật (engineering / 엔지니어링) tối ưu hóa (optimization / 최적화) hữu ích như analogy, nhưng biological mục tiêu (objective / 목표) không được engineer định trước.
 
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)** tiếp nhận điểm tựa từ **29. tối ưu hóa (optimization / 최적화) và fitness landscape** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)
 
 Trong kỹ thuật (engineering / 엔지니어링), hệ thống (system / 시스템) **observable** nếu trạng thái nội bộ (internal state / 내부 상태) có thể infer từ đầu ra (output / 출력) đủ tốt. Biology thường partially observable: hormone concentration không cho toàn trạng thái (state / 상태); biểu hiện gen snapshot không cho full lịch sử (history / 이력).
 
 Điều này giải thích vì sao multiple đo lường (measurement / 측정) tầng (layer / 계층) và time-series quan trọng. Hidden trạng thái (state / 상태) là challenge central của physiology và sinh học hệ thống (systems biology).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, sau nội dung của **30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)**, **31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết
 
@@ -345,6 +404,8 @@ Nhưng edge kiểu (type / 타입), strength, sign và delay cũng quan trọng.
 
 Đồ thị (graph / 그래프) là biểu diễn (representation / 표현), không phải full hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)
 
 Mô-đun (module / 모듈) giúp lập luận (reasoning / 추론): receptor mô-đun (module / 모듈), signaling mô-đun (module / 모듈), metabolic mô-đun (module / 모듈). Nhưng mô-đun (module / 모듈) share ATP, ribosome, membrane và metabolite.
@@ -352,6 +413,8 @@ Mô-đun (module / 모듈) giúp lập luận (reasoning / 추론): receptor mô
 Mạch sinh học tổng hợp (synthetic circuit) có thể thất bại (fail / 실패) vì tài nguyên (resource / 자원) competition dù logical diagram đúng.
 
 Biology dạy một lesson kỹ thuật (engineering / 엔지니어링) ngược lại: giao diện (interface / 인터페이스) không bao giờ hoàn toàn context-free trong living hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)** cho ta quy tắc; **33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc
 
@@ -361,17 +424,23 @@ Một physiological hàm (function / 함수) duy nhất nối diffusion + hình 
 
 Đây là kiểu synthesis nên hướng tới thay vì thuộc riêng từng equation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc** cho ta quy tắc; **34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi
 
 Na⁺ độ dốc (gradient / 기울기) chứa electrochemical năng lượng (energy / 에너지). Khử cực mở voltage-gated Na⁺ channel, gây thêm khử cực — phản hồi dương. K⁺ channel và Na⁺ channel inactivation terminate spike. Pump về lâu dài restore gradients.
 
 Điện thế hoạt động vì vậy là động (dynamic / 동적) sự kiện (event / 이벤트) của độ dốc (gradient / 기울기) + nonlinear conductance + phản hồi, không phải “electricity chạy dọc dây”.
 
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi** cho ta quy tắc; **35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **36. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition
 
 Gene circuit có tính lưỡng ổn (bistability); shallow lake cũng có trạng thái ổn định thay thế (alternative stable state). quy mô (scale / 규모) khác nhau nhưng cả hai có phản hồi dương, threshold và hiện tượng trễ (hysteresis).
 
 Đây là sức mạnh của mathematical lớp trừu tượng (abstraction / 추상화): không nói hai hệ thống giống nhau về vật chất, mà nhận ra **cùng dynamical motif**.
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition** cho ta quy tắc; **36. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **37. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 36. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -382,6 +451,8 @@ Gene circuit có tính lưỡng ổn (bistability); shallow lake cũng có trạ
 “kỹ thuật (engineering / 엔지니어링) analogy chứng minh organism được thiết kế” sai; analogy chỉ giúp phân tích điều khiển (control / 제어)/chức năng (function).
 
 “Mô hình đơn giản là sai vì reality phức tạp” cũng sai. mô hình (model / 모델) đơn giản hữu ích nếu giữ đúng relationship cho câu hỏi cụ thể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **37. Mô hình tư duy tổng hợp** gom các mảnh từ **36. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 37. Mô hình tư duy tổng hợp
 
@@ -410,6 +481,9 @@ network
 Mục tiêu cuối cùng không phải nhớ thêm hàng chục formula, mà biết **formula nào là mô hình (model / 모델) của quan hệ (relation / 관계) nào và tại sao quan hệ (relation / 관계) đó tái xuất ở quy mô (scale / 규모) khác**.
 
 <!-- depth-audit-2026:structure-mechanism-failure -->
+
+> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem** gom các mảnh từ **37. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem
 
 Khi gặp bất kỳ hệ thống (system / 시스템) sinh học nào, hãy đi theo sáu câu hỏi liên tục. **cấu trúc (structure / 구조)** xác định degree of freedom và ràng buộc (constraint / 제약조건) vật lý. **cơ chế (mechanism / 메커니즘)** mô tả luồng (flow / 흐름) của matter/năng lượng (energy / 에너지)/thông tin (information / 정보). **Regulation** cho biết phản hồi (feedback / 피드백) nào giữ trạng thái (state / 상태) trong vùng hoạt động. **hàm (function / 함수)** là năng lực (capability / 역량) xuất hiện ở quy mô (scale / 규모) cao hơn. **thất bại (failure / 실패)** cho thấy ranh giới (boundary / 경계) điều kiện (condition / 조건) bị vượt hoặc điều khiển (control / 제어) mất ổn định. **Adaptation/evolution** giải thích vì sao kiến trúc (architecture / 아키텍처) hiện tại tồn tại và sự đánh đổi (trade-off / 트레이드오프) nào nó chấp nhận.
@@ -417,6 +491,8 @@ Khi gặp bất kỳ hệ thống (system / 시스템) sinh học nào, hãy đi
 Ví dụ membrane có phospholipid bilayer (structure) → selective diffusion/vận chuyển (transport / 전송) (mechanism) → pump/channel regulation (regulation) → giữ nội bộ (internal / 내부) môi trường (environment / 환경) (function) → ATP depletion gây độ dốc (gradient / 기울기) collapse (failure) → lipid composition và transporter family thay đổi theo môi trường qua adaptation/evolution.
 
 Cùng template áp dụng cho kidney, immune hệ thống (system / 시스템), development, food web và synthetic circuit. Nó ngăn thư viện (library / 라이브러리) trở thành atlas tên gọi vì mỗi thành phần (component / 컴포넌트) chỉ có ý nghĩa khi được đặt trong nhân quả (causal / 인과적) hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)** tiếp nhận điểm tựa từ **Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)
 
@@ -429,4 +505,4 @@ Nếu quay lại chapter đầu [Cách tư duy trong Sinh học](../00_foundatio
 <!-- biology-learning-navigation -->
 **Điều hướng học:** [← Biology × Mathematics × Computation × Scale](00_biology_math_computation_and_scale.md) · [Mục lục Biology](../README.md)
 
-> **Bàn giao:** Sau **38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 biology math computation and scale](./00_biology_math_computation_and_scale.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

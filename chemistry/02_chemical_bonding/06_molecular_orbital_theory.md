@@ -1,7 +1,6 @@
 # Lý thuyết obitan phân tử — nhìn electron như trạng thái của toàn phân tử
 
-> **Mạch đọc:** Đọc **Lý thuyết obitan phân tử — nhìn electron như trạng thái của toàn phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Antibonding electron không thuộc molecule”** sang **“HOMO–LUMO gap luôn bằng optical absorption năng lượng (energy / 에너지)”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lý thuyết obitan phân tử — nhìn electron như trạng thái của toàn phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > **Lý thuyết obitan phân tử (molecular orbital theory, MO / 분자 오비탈 이론)** mô tả electron bằng các obitan có thể trải trên toàn bộ phân tử thay vì mặc định gán mỗi cặp electron cho một liên kết cục bộ. MO lý thuyết (theory / 이론) đặc biệt mạnh khi cần hiểu **sự phi định xứ, bậc liên kết, từ tính, màu, kích thích electron, quang hóa và sự hình thành dải năng lượng trong chất rắn**.
 
@@ -592,4 +591,4 @@ atomic basis
 
 Xem tiếp: [Lực liên phân tử](./07_intermolecular_forces.md), [Hóa học trường phối tử](../10_inorganic_chemistry/04_crystal_field_and_ligand_field.md) và [Chất bán dẫn](../14_materials_and_polymer_chemistry/03_semiconductors.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

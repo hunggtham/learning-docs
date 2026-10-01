@@ -1,6 +1,6 @@
 # Trie và các cấu trúc chỉ mục tiền tố
 
-> **Mạch đọc:** Đọc **Trie và các cấu trúc chỉ mục tiền tố** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Khi nào Trie đáng dùng?** sang **2. tìm kiếm (search / 검색) và Insert**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trie và các cấu trúc chỉ mục tiền tố**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Khi nào Trie đáng dùng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. tìm kiếm (search / 검색) và Insert** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Trie / Prefix cây (tree / 트리) / 트라이·접두사 트리**
 
@@ -42,6 +42,8 @@ multi-pattern matching khi mở rộng thành automaton
 
 Nếu chỉ cần chính xác (exact / 정확한) lookup và không khai thác prefix, băm (hash / 해시) Map thường đơn giản và tiết kiệm bộ nhớ hơn.
 
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **2. tìm kiếm (search / 검색) và Insert** tiếp nhận điểm tựa từ **1. Khi nào Trie đáng dùng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Prefix truy vấn (query / 쿼리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. tìm kiếm (search / 검색) và Insert
 
 Với khóa dài `L`, đi từ gốc qua từng symbol.
@@ -65,6 +67,8 @@ O(L)
 
 phụ thuộc độ dài khóa hơn là số lượng khóa trong dictionary.
 
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **3. Prefix truy vấn (query / 쿼리)** tiếp nhận điểm tựa từ **2. tìm kiếm (search / 검색) và Insert** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Bất biến quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Prefix truy vấn (query / 쿼리)
 
 Để kiểm tra `startsWith(prefix)`, chỉ cần đi hết prefix. Không cần nút cuối là `isEnd`.
@@ -78,6 +82,8 @@ O(|prefix| + k + \text{characters emitted})
 với `k` là số kết quả.
 
 Một hệ thống autocomplete không thể trả một triệu gợi ý trong `O(|prefix|)` chỉ vì Trie tìm prefix nhanh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **4. Bất biến quan trọng** tiếp nhận điểm tựa từ **3. Prefix truy vấn (query / 쿼리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Child biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Bất biến quan trọng
 
@@ -93,6 +99,8 @@ passCount/endCount nếu có phải nhất quán với subtree
 Nếu hỗ trợ duplicate keys, `endCount` tốt hơn `boolean isEnd`.
 
 Nếu lưu `passCount`, insert/delete phải cập nhật mọi nút trên đường dẫn (path / 경로). siêu dữ liệu (metadata / 메타데이터) tăng tốc truy vấn (query / 쿼리) nhưng tạo thêm bất biến (invariant / 불변식) cần bảo trì.
+
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **5. Child biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **4. Bất biến quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Bộ nhớ là điểm yếu lớn của Trie ngây thơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Child biểu diễn (representation / 표현)
 
@@ -128,6 +136,8 @@ Nếu branching factor thường nhỏ, một véc-tơ (vector / 벡터) cặp `
 
 Biểu diễn (representation / 표현) nên dựa trên phân phối branching thực tế.
 
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **6. Bộ nhớ là điểm yếu lớn của Trie ngây thơ** tiếp nhận điểm tựa từ **5. Child biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Delete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Bộ nhớ là điểm yếu lớn của Trie ngây thơ
 
 Số nút (node / 노드) có thể gần tổng độ dài mọi key:
@@ -151,6 +161,8 @@ LOUDS / succinct representation
 FST/automaton compression
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **7. Delete** tiếp nhận điểm tựa từ **6. Bộ nhớ là điểm yếu lớn của Trie ngây thơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Lexicographic Traversal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Delete
 
 Xóa `car` khi vẫn còn `card` không được giải phóng toàn đường dẫn (path / 경로) `c-a-r`.
@@ -166,6 +178,8 @@ Nếu có `passCount`, nút (node / 노드) có thể được thu hồi khi cou
 
 Delete là nơi shared-prefix quyền sở hữu (ownership / 소유권) trở nên rõ nhất.
 
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **8. Lexicographic Traversal** tiếp nhận điểm tựa từ **7. Delete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Radix cây (tree / 트리) / Patricia Trie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Lexicographic Traversal
 
 Nếu child được duyệt theo symbol thứ tự (order / 순서), DFS xuất key theo thứ tự từ điển.
@@ -173,6 +187,8 @@ Nếu child được duyệt theo symbol thứ tự (order / 순서), DFS xuất
 Nếu child dùng băm (hash / 해시) Map, iteration thứ tự (order / 순서) có thể không tương ứng lexicographic thứ tự (order / 순서); cần sort symbol hoặc dùng ordered biểu diễn (representation / 표현).
 
 Đây là một ví dụ thứ tự (order / 순서) ngữ nghĩa (semantics / 의미론) ảnh hưởng trực tiếp bố cục (layout / 레이아웃).
+
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **9. Radix cây (tree / 트리) / Patricia Trie** tiếp nhận điểm tựa từ **8. Lexicographic Traversal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Split Edge khi Insert vào Radix cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Radix cây (tree / 트리) / Patricia Trie
 
@@ -187,6 +203,8 @@ c -> o -> m -> p -> u -> t -> e
 **Radix cây (tree / 트리) / Patricia Trie** giảm số nút (node / 노드), pointer và cấp phát. tìm kiếm (search / 검색) phải so nhiều symbol trên mỗi cạnh, nhưng tổng ký tự xử lý vẫn gắn với độ dài khóa.
 
 Đường dẫn (path / 경로) compression đặc biệt hữu ích khi key dài nhưng branching xảy ra ít.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **10. Split Edge khi Insert vào Radix cây (tree / 트리)** tiếp nhận điểm tựa từ **9. Radix cây (tree / 트리) / Patricia Trie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Patricia Trie và Bit Prefix** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Split Edge khi Insert vào Radix cây (tree / 트리)
 
@@ -210,6 +228,8 @@ mismatch giữa edge
 
 Đây là lý do compressed trie tiết kiệm bộ nhớ (memory / 메모리) nhưng hiện thực (implementation / 구현) phức tạp hơn Trie một ký tự mỗi cạnh.
 
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **11. Patricia Trie và Bit Prefix** tiếp nhận điểm tựa từ **10. Split Edge khi Insert vào Radix cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Longest Prefix Match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Patricia Trie và Bit Prefix
 
 Patricia Trie thường được dùng cho bit strings hoặc IP prefixes. Nó chỉ giữ các bit/position phân nhánh quan trọng thay vì mọi bit trung gian.
@@ -226,6 +246,8 @@ khi lookup destination, cần chọn tuyến (route / 경로) có **prefix dài 
 
 Trie/Radix cây (tree / 트리) mã hóa yêu cầu (requirement / 요구사항) này tự nhiên hơn bảng băm (hash table / 해시 테이블) exact-match.
 
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **12. Longest Prefix Match** tiếp nhận điểm tựa từ **11. Patricia Trie và Bit Prefix** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. nhị phân (binary / 이진) Trie và Maximum XOR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Longest Prefix Match
 
 Duyệt key từ gốc, đồng thời ghi nhớ terminal nút (node / 노드) gần nhất đã gặp.
@@ -233,6 +255,8 @@ Duyệt key từ gốc, đồng thời ghi nhớ terminal nút (node / 노드) g
 Khi không còn edge phù hợp, terminal gần nhất chính là longest matching prefix.
 
 Đây là mẫu (pattern / 패턴) quan trọng trong routing và quy tắc (rule / 규칙) matching.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **13. nhị phân (binary / 이진) Trie và Maximum XOR** tiếp nhận điểm tựa từ **12. Longest Prefix Match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Count theo Prefix** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. nhị phân (binary / 이진) Trie và Maximum XOR
 
@@ -248,6 +272,8 @@ x bit = 1 -> ưu tiên y bit = 0
 Với word width cố định, insert/truy vấn (query / 쿼리) là `O(W)`.
 
 Nhị phân (binary / 이진) Trie minh họa rằng Trie không chỉ dành cho văn bản (text / 텍스트); bất kỳ key có cấu trúc tuần tự đều có thể được chỉ mục (index / 인덱스) theo prefix.
+
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **14. Count theo Prefix** tiếp nhận điểm tựa từ **13. nhị phân (binary / 이진) Trie và Maximum XOR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Autocomplete không chỉ là Trie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Count theo Prefix
 
@@ -266,6 +292,8 @@ countExact(k)  = endCount(node(k))
 ```
 
 Siêu dữ liệu (metadata / 메타데이터) này rất hữu ích cho dictionary frequency nhưng insert/delete phải cập nhật toàn đường dẫn (path / 경로) đúng thứ tự.
+
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **15. Autocomplete không chỉ là Trie** tiếp nhận điểm tựa từ **14. Count theo Prefix** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Best-First Autocomplete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Autocomplete không chỉ là Trie
 
@@ -290,6 +318,8 @@ nhưng update ranking phải propagate lên nhiều prefix node
 
 Đây là read/ghi (write / 쓰기) sự đánh đổi (trade-off / 트레이드오프) điển hình của materialized siêu dữ liệu (metadata / 메타데이터).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **16. Best-First Autocomplete** tiếp nhận điểm tựa từ **15. Autocomplete không chỉ là Trie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Aho–Corasick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Best-First Autocomplete
 
 Nếu mỗi nút (node / 노드) có `maxScore` của subtree, ta không cần bộ nhớ đệm (cache / 캐시) toàn Top-K tại từng prefix. Sau khi tới prefix nút (node / 노드), có thể dùng priority hàng đợi (queue / 큐) ưu tiên subtree có upper bound lớn nhất.
@@ -304,6 +334,8 @@ upper bound = max score dưới node
 Khi đã tìm đủ K kết quả (result / 결과) và bound còn lại không thể thắng, dừng.
 
 Trie có thể kết hợp vùng nhớ động (heap / 힙) để tạo ranking tìm kiếm (search / 검색) thay vì chỉ DFS toàn subtree.
+
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **17. Aho–Corasick** tiếp nhận điểm tựa từ **16. Best-First Autocomplete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. thất bại (failure / 실패) Link như tái sử dụng trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Aho–Corasick
 
@@ -321,6 +353,8 @@ O(|text| + \text{number of matches})
 
 với các giả định biểu diễn (representation / 표현) phù hợp.
 
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **18. thất bại (failure / 실패) Link như tái sử dụng trạng thái** tiếp nhận điểm tựa từ **17. Aho–Corasick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Double-Array Trie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. thất bại (failure / 실패) Link như tái sử dụng trạng thái
 
 Thất bại (failure / 실패) link có cùng tinh thần với KMP prefix hàm (function / 함수) và suffix link:
@@ -328,6 +362,8 @@ Thất bại (failure / 실패) link có cùng tinh thần với KMP prefix hàm
 > Khi ngữ cảnh (context / 맥락) dài không còn hợp lệ, đừng quay về trạng thái rỗng; tái sử dụng suffix dài nhất còn có ý nghĩa.
 
 Đây là motif rất sâu trong string algorithms.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **19. Double-Array Trie** tiếp nhận điểm tựa từ **18. thất bại (failure / 실패) Link như tái sử dụng trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Succinct Trie và LOUDS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Double-Array Trie
 
@@ -345,6 +381,8 @@ lookup nhanh
 
 Nhược điểm là construction/cập nhật (update / 업데이트) phức tạp và quản lý slot trống khó hơn.
 
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **20. Succinct Trie và LOUDS** tiếp nhận điểm tựa từ **19. Double-Array Trie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Finite-State Transducer / Minimal Automaton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Succinct Trie và LOUDS
 
 Nếu dictionary rất lớn và gần tĩnh, có thể biểu diễn topology bằng bitvector thay vì pointer per nút (node / 노드).
@@ -354,6 +392,8 @@ Nếu dictionary rất lớn và gần tĩnh, có thể biểu diễn topology b
 Mục tiêu không còn là “mã (code / 코드) dễ nhất” mà là giảm bits per nút (node / 노드) tới gần giới hạn thông tin.
 
 Đây là ví dụ succinct cấu trúc dữ liệu (data structure / 자료구조): vẫn hỗ trợ điều hướng (navigation / 내비게이션) nhưng với bộ nhớ (memory / 메모리) gần tối ưu hơn pointer đồ thị (graph / 그래프).
+
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **21. Finite-State Transducer / Minimal Automaton** tiếp nhận điểm tựa từ **20. Succinct Trie và LOUDS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Trie vs bảng băm (hash table / 해시 테이블)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Finite-State Transducer / Minimal Automaton
 
@@ -369,6 +409,8 @@ Mô hình tư duy:
 Trie       -> chia sẻ prefix
 minimal DFA/FST -> chia sẻ các continuation tương đương
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **22. Trie vs bảng băm (hash table / 해시 테이블)** tiếp nhận điểm tựa từ **21. Finite-State Transducer / Minimal Automaton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Trie vs Sorted Array** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Trie vs bảng băm (hash table / 해시 테이블)
 
@@ -386,6 +428,8 @@ structure bên trong key
 
 Không nên chọn Trie chỉ vì key là string.
 
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **23. Trie vs Sorted Array** tiếp nhận điểm tựa từ **22. Trie vs bảng băm (hash table / 해시 테이블)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Trie vs TreeMap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Trie vs Sorted Array
 
 Dictionary tĩnh có thể dùng sorted array + tìm kiếm nhị phân (binary search / 이진 탐색) để tìm prefix phạm vi (range / 범위).
@@ -402,6 +446,8 @@ Trie mạnh hơn khi động (dynamic / 동적) cập nhật (update / 업데이
 
 Đối với tải công việc (workload / 워크로드) static, sorted array đôi khi thực dụng hơn Trie.
 
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **24. Trie vs TreeMap** tiếp nhận điểm tựa từ **23. Trie vs Sorted Array** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Unicode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Trie vs TreeMap
 
 TreeMap giữ full key thứ tự (order / 순서). Prefix truy vấn (query / 쿼리) có thể chuyển thành phạm vi (range / 범위) trong lexicographic thứ tự (order / 순서).
@@ -411,6 +457,8 @@ Nhưng mỗi comparator có thể phải so lại nhiều prefix character ở n
 Trie chia sẻ phần prefix đã duyệt một lần, nhưng trả giá bằng nhiều nút (node / 노드) hơn.
 
 Không có lựa chọn tốt nhất nếu chưa biết key length, cập nhật (update / 업데이트) tỷ lệ (rate / 비율) và truy vấn (query / 쿼리) mix.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **25. Unicode** tiếp nhận điểm tựa từ **24. Trie vs TreeMap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. trường hợp (case / 사례) Folding và Locale** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Unicode
 
@@ -430,6 +478,8 @@ normalized form
 
 String chỉ mục (index / 인덱스) môi trường vận hành (production / 운영 환경) phải xác định normalization chính sách (policy / 정책) trước khi xây Trie.
 
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **25. Unicode** cho ta quy tắc; **26. trường hợp (case / 사례) Folding và Locale** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **27. bộ nhớ (memory / 메모리) Allocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. trường hợp (case / 사례) Folding và Locale
 
 Autocomplete/tìm kiếm (search / 검색) không phân biệt hoa thường có thể cần trường hợp (case / 사례) folding. Nhưng ánh xạ (mapping / 매핑) chữ thường không luôn là phép một-ký-tự thành một-ký-tự ở mọi ngôn ngữ.
@@ -437,6 +487,8 @@ Autocomplete/tìm kiếm (search / 검색) không phân biệt hoa thường có
 Nếu normalization/trường hợp (case / 사례) folding là một phần của định danh (identity / 식별자), phải thực hiện nhất quán cả lúc insert và truy vấn (query / 쿼리).
 
 Băm (hash / 해시)/equality và Trie đường dẫn (path / 경로) đều phụ thuộc cùng canonicalization đặc tả hợp đồng (contract / 계약).
+
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **26. trường hợp (case / 사례) Folding và Locale** cho ta quy tắc; **27. bộ nhớ (memory / 메모리) Allocation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **28. bộ nhớ đệm (cache / 캐시) Locality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. bộ nhớ (memory / 메모리) Allocation
 
@@ -446,6 +498,8 @@ Trong Java/JavaScript, nhiều đối tượng (object / 객체) nhỏ tạo pre
 
 Mảng nút (node / 노드) + integer child chỉ mục (index / 인덱스) có thể giảm đối tượng (object / 객체) overhead, đặc biệt với dictionary lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **28. bộ nhớ đệm (cache / 캐시) Locality** tiếp nhận điểm tựa từ **27. bộ nhớ (memory / 메모리) Allocation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Persistent Trie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. bộ nhớ đệm (cache / 캐시) Locality
 
 Pointer-heavy Trie có lookup `O(L)` nhưng mỗi bước có thể gây trượt bộ nhớ đệm (cache miss / 캐시 미스).
@@ -453,6 +507,8 @@ Pointer-heavy Trie có lookup `O(L)` nhưng mỗi bước có thể gây trượ
 Radix compression giảm số nút (node / 노드) truy cập. Double-array hoặc compact arrays tăng locality.
 
 Big-O `O(L)` không nói bao nhiêu bộ nhớ đệm (cache / 캐시) line phải chạm.
+
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **29. Persistent Trie** tiếp nhận điểm tựa từ **28. bộ nhớ đệm (cache / 캐시) Locality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Concurrent Trie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Persistent Trie
 
@@ -469,6 +525,8 @@ snapshot
 
 Chi phí cập nhật (update / 업데이트) thường tỷ lệ độ dài key hoặc số bit.
 
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **30. Concurrent Trie** tiếp nhận điểm tựa từ **29. Persistent Trie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Trie trong cơ sở dữ liệu (database / 데이터베이스)/tìm kiếm (search / 검색) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Concurrent Trie
 
 Fine-grained locking hoặc lock-free Trie phức tạp vì insert/delete thay đổi child pointers và thời gian tồn tại (lifetime / 수명) nút (node / 노드).
@@ -476,6 +534,8 @@ Fine-grained locking hoặc lock-free Trie phức tạp vì insert/delete thay �
 Radix cây (tree / 트리) còn có split/merge edge, làm atomic cập nhật (update / 업데이트) khó hơn.
 
 Trong read-mostly tải công việc (workload / 워크로드), immutable snapshot + sao chép khi ghi (copy-on-write / 쓰기 시 복사) có thể đơn giản hơn mutable concurrent cây (tree / 트리).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **30. Concurrent Trie** nêu điều cần giải thích; **31. Trie trong cơ sở dữ liệu (database / 데이터베이스)/tìm kiếm (search / 검색) hệ thống (system / 시스템)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **32. Kiểm thử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Trie trong cơ sở dữ liệu (database / 데이터베이스)/tìm kiếm (search / 검색) hệ thống (system / 시스템)
 
@@ -490,6 +550,8 @@ in-memory ordered key index
 ```
 
 B+cây (tree / 트리) page cũng có thể dùng prefix compression giữa các key gần nhau để giảm lưu trữ (storage / 저장소). Ý tưởng chia sẻ prefix xuất hiện ngoài Trie thuần túy.
+
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **31. Trie trong cơ sở dữ liệu (database / 데이터베이스)/tìm kiếm (search / 검색) hệ thống (system / 시스템)** nêu điều cần giải thích; **32. Kiểm thử** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **33. Validator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 32. Kiểm thử
 
@@ -509,6 +571,8 @@ high branching node
 
 Với Trie tự cài, có thể differential-test chính xác (exact / 정확한) lookup với băm (hash / 해시) Set và prefix truy vấn (query / 쿼리) với brute-force filter trên tập string nhỏ.
 
+> **Chuyển mạch:** Ở chặng này của **Trie và các cấu trúc chỉ mục tiền tố**, **33. Validator** tiếp nhận điểm tựa từ **32. Kiểm thử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. Validator
 
 Nếu có `passCount/endCount`, có thể kiểm tra:
@@ -522,6 +586,8 @@ mọi child symbol unique
 
 Radix cây (tree / 트리) còn cần kiểm tra không có hai outgoing edge bắt đầu bằng cùng symbol và không có unary nút (node / 노드) nếu biểu diễn (representation / 표현) yêu cầu compression tối đa.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trie và các cấu trúc chỉ mục tiền tố**, **34. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **33. Validator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Những hiểu lầm phổ biến
 
 “Trie lookup O(L) nên luôn nhanh hơn HashMap” — sai; constant factor và bộ nhớ (memory / 메모리) locality rất khác.
@@ -534,6 +600,8 @@ Radix cây (tree / 트리) còn cần kiểm tra không có hai outgoing edge b�
 
 “Compressed Trie chỉ là Trie ít nút (node / 노드) hơn” — đúng ở mức ý tưởng nhưng cập nhật (update / 업데이트)/split invariants phức tạp hơn nhiều.
 
+> **Chuyển mạch:** Trong **Trie và các cấu trúc chỉ mục tiền tố**, **Mô hình tư duy** gom các mảnh từ **34. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Trie biến **prefix từ một quan hệ ngầm trong khóa thành một trạng thái tường minh trong cấu trúc**. Nhờ đó truy vấn (query / 쿼리) prefix không phải so lại toàn bộ keyspace.
@@ -542,4 +610,4 @@ Khi cân nhắc Trie, hãy hỏi: **truy vấn (query / 쿼리) có thực sự 
 
 Xem thêm: [String Algorithms](../05_specialized/00_string_algorithms.md), [Suffix Structures](../05_specialized/04_suffix_arrays_suffix_trees_and_lcp.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [B/B+Tree](./05_b_trees_and_external_memory.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 tree foundations](./00_tree_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

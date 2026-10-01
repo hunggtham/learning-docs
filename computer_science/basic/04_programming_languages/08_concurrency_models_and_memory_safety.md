@@ -1,7 +1,6 @@
 # Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)
 
-> **Mạch đọc:** Đọc **tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. tính đồng thời (concurrency / 동시성) và parallelism không giống nhau** sang **2. bất biến (invariant / 불변식) phải được viết trước synchronization thành phần nguyên thủy (primitive / 기본 요소)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. tính đồng thời (concurrency / 동시성) và parallelism không giống nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. bất biến (invariant / 불변식) phải được viết trước synchronization thành phần nguyên thủy (primitive / 기본 요소)** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tính đồng thời (concurrency / 동시성) không chỉ là “dùng nhiều threads”. Một tính đồng thời (concurrency / 동시성) mô hình (model / 모델) trả lời bốn câu hỏi nền tảng: **thực thi (execution / 실행) units nào tồn tại, trạng thái (state / 상태) thuộc về ai, communication diễn ra qua dùng chung (shared / 공유) bộ nhớ (memory / 메모리) hay messages, và thứ tự (ordering / 순서)/thời gian tồn tại (lifetime / 수명) nào được guarantee**. Threads + locks, actors, CSP/channels, async tasks, immutable dữ liệu (data / 데이터) và quyền sở hữu (ownership / 소유권) chỉ là những cách khác nhau để đặt ranh giới (boundary / 경계) cho cùng bài toán: nhiều hoạt động tiến triển cùng lúc nhưng vẫn phải giữ bất biến (invariant / 불변식).
 
@@ -14,6 +13,8 @@ Advanced lập luận (reasoning / 추론) không bắt đầu bằng API như `
 Một vòng lặp sự kiện (event loop / 이벤트 루프) single-thread vẫn concurrent nếu nó multiplex nhiều I/O tasks. Một CPU 8 cores có thể chạy 8 threads song song, nhưng nếu tất cả chờ cùng khóa (lock / 잠금) thì parallelism hữu ích gần bằng zero.
 
 Phân biệt này quan trọng vì async có thể tăng utilization mà không tạo thêm CPU compute sức chứa (capacity / 용량).
+
+> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **2. bất biến (invariant / 불변식) phải được viết trước synchronization thành phần nguyên thủy (primitive / 기본 요소)** tiếp nhận điểm tựa từ **1. tính đồng thời (concurrency / 동시성) và parallelism không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Shared-memory threading: flexibility đổi lấy proof burden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. bất biến (invariant / 불변식) phải được viết trước synchronization thành phần nguyên thủy (primitive / 기본 요소)
 
@@ -29,6 +30,8 @@ Sau khi biết bất biến (invariant / 불변식), mới chọn thành phần 
 
 Dùng thành phần nguyên thủy (primitive / 기본 요소) mạnh mà không hiểu bất biến (invariant / 불변식) dễ tạo over-synchronization; dùng thành phần nguyên thủy (primitive / 기본 요소) yếu dễ tạo race tinh vi.
 
+> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **3. Shared-memory threading: flexibility đổi lấy proof burden** tiếp nhận điểm tựa từ **2. bất biến (invariant / 불변식) phải được viết trước synchronization thành phần nguyên thủy (primitive / 기본 요소)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Shared-memory threading: flexibility đổi lấy proof burden
 
 OS/thời gian chạy (runtime / 런타임) threads thường chia sẻ vùng nhớ động (heap / 힙) và có ngăn xếp (stack / 스택) riêng. dùng chung (shared / 공유) mutable trạng thái (state / 상태) tạo giao tiếp rất rẻ nhưng tính đúng đắn (correctness / 정확성) khó vì mọi interleaving hợp lệ phải được xét.
@@ -36,6 +39,8 @@ OS/thời gian chạy (runtime / 런타임) threads thường chia sẻ vùng nh
 Mutex tạo **mutual exclusion** cho trọng yếu (critical / 중요) section. điều kiện (condition / 조건) variable cho luồng thực thi (thread / 스레드) chờ predicate thay vì busy-spin. Atomics cung cấp read-modify-write và memory-order ngữ nghĩa (semantics / 의미론).
 
 Khóa (lock / 잠금) không “bảo vệ variable” theo phép màu. Nó bảo vệ bất biến (invariant / 불변식) nếu mọi truy cập (access / 접근) liên quan đều tuân cùng khóa (lock / 잠금) discipline.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **3. Shared-memory threading: flexibility đổi lấy proof burden** nêu điều cần giải thích; **4. Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Happens-before là nền tảng lập luận (reasoning / 추론) cho dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race khác nhau
 
@@ -54,6 +59,8 @@ Mỗi truy cập (access / 접근) có thể thread-safe riêng, nhưng check-th
 
 Vì vậy “race detector không báo” không chứng minh concurrent giao thức (protocol / 프로토콜) đúng.
 
+> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **4. Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race khác nhau** nêu điều cần giải thích; **5. Happens-before là nền tảng lập luận (reasoning / 추론) cho dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Atomicity, visibility và thứ tự (ordering / 순서) phải tách riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Happens-before là nền tảng lập luận (reasoning / 추론) cho dùng chung (shared / 공유) bộ nhớ (memory / 메모리)
 
 Trình biên dịch (compiler / 컴파일러) và CPU được phép reorder nhiều operations miễn không phá observable ngữ nghĩa (semantics / 의미론) theo đặc tả hợp đồng (contract / 계약). Vì vậy nguồn (source / 소스) thứ tự (order / 순서) một mình không đủ.
@@ -63,6 +70,8 @@ Ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model
 Không có synchronization edge, việc “kiểm thử (test / 테스트) nhiều lần đều thấy đúng” không phải proof.
 
 Đường xuyên tầng đầy đủ nằm ở [CPU cache → memory ordering → language memory model → concurrency bug](../../90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md).
+
+> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **6. Atomicity, visibility và thứ tự (ordering / 순서) phải tách riêng** tiếp nhận điểm tựa từ **5. Happens-before là nền tảng lập luận (reasoning / 추론) cho dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. khóa (lock / 잠금) tính đúng đắn (correctness / 정확성) có nhiều dạng thất bại (failure mode / 실패 모드) hơn deadlock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Atomicity, visibility và thứ tự (ordering / 순서) phải tách riêng
 
@@ -77,6 +86,8 @@ Ordering   -> các operations liên quan được phép xuất hiện theo thứ
 Một `volatile` trường dữ liệu (field / 필드) trong Java có visibility/thứ tự (order / 순서) ngữ nghĩa (semantics / 의미론) nhưng `count++` vẫn không phải atomic read-modify-write. Một CAS atomic có thể bảo vệ một chuyển tiếp (transition / 전이) nhưng giao thức (protocol / 프로토콜) nhiều fields vẫn cần thứ tự (ordering / 순서) đúng.
 
 Rà soát (review / 검토) concurrent mã (code / 코드) nên kiểm tra cả ba, không chỉ “có dùng atomic không?”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **7. khóa (lock / 잠금) tính đúng đắn (correctness / 정확성) có nhiều dạng thất bại (failure mode / 실패 모드) hơn deadlock** tiếp nhận điểm tựa từ **6. Atomicity, visibility và thứ tự (ordering / 순서) phải tách riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Lock-free không có nghĩa không chờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. khóa (lock / 잠금) tính đúng đắn (correctness / 정확성) có nhiều dạng thất bại (failure mode / 실패 모드) hơn deadlock
 
@@ -94,6 +105,8 @@ Khóa (lock / 잠금) phạm vi (scope / 범위) quá lớn giữ tính đúng �
 
 Hiệu năng (performance / 성능) pressure không cho phép bỏ bất biến (invariant / 불변식); nó buộc giao thức (protocol / 프로토콜) tốt hơn hoặc partition trạng thái (state / 상태) hợp lý hơn.
 
+> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **8. Lock-free không có nghĩa không chờ** tiếp nhận điểm tựa từ **7. khóa (lock / 잠금) tính đúng đắn (correctness / 정확성) có nhiều dạng thất bại (failure mode / 실패 모드) hơn deadlock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Actor mô hình (model / 모델): isolate mutable trạng thái (state / 상태), nhưng mailbox là hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Lock-free không có nghĩa không chờ
 
 Lock-free algorithms thường dùng compare-and-swap và đảm bảo system-wide progress theo định nghĩa. Một luồng thực thi (thread / 스레드) cụ thể vẫn có thể thử lại (retry / 재시도)/starve. Wait-free guarantee mạnh hơn vì mỗi thao tác (operation / 연산) có bounded progress theo mô hình (model / 모델).
@@ -101,6 +114,8 @@ Lock-free algorithms thường dùng compare-and-swap và đảm bảo system-wi
 Tính đúng đắn (correctness / 정확성) còn cần linearization điểm (point / 지점), bộ nhớ (memory / 메모리) thứ tự (ordering / 순서), ABA handling và bộ nhớ (memory / 메모리) reclamation. CAS thành công không tự chứng minh đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명) hoặc toàn giao thức (protocol / 프로토콜) đúng.
 
 Lock-free đổi blocking rủi ro (risk / 위험) lấy proof độ phức tạp (complexity / 복잡도); nó không phải tối ưu hóa (optimization / 최적화) mặc định.
+
+> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **9. Actor mô hình (model / 모델): isolate mutable trạng thái (state / 상태), nhưng mailbox là hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **8. Lock-free không có nghĩa không chờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. CSP/channels: communication thành phần nguyên thủy (primitive / 기본 요소) đồng thời là flow-control thành phần nguyên thủy (primitive / 기본 요소)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Actor mô hình (model / 모델): isolate mutable trạng thái (state / 상태), nhưng mailbox là hàng đợi (queue / 큐)
 
@@ -118,6 +133,8 @@ state transition có idempotent không?
 
 Mailbox unbounded có thể biến burst thành bộ nhớ (memory / 메모리) growth và độ trễ (latency / 지연 시간) vô hạn. Actor isolation không thay backpressure.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **9. Actor mô hình (model / 모델): isolate mutable trạng thái (state / 상태), nhưng mailbox là hàng đợi (queue / 큐)** xác định đầu vào; **10. CSP/channels: communication thành phần nguyên thủy (primitive / 기본 요소) đồng thời là flow-control thành phần nguyên thủy (primitive / 기본 요소)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Async/await thay thực thi (execution / 실행) biểu diễn (representation / 표현), không xóa tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. CSP/channels: communication thành phần nguyên thủy (primitive / 기본 요소) đồng thời là flow-control thành phần nguyên thủy (primitive / 기본 요소)
 
 Communicating Sequential Processes nhấn mạnh các processes giao tiếp qua channels. Unbuffered channel thường tạo rendezvous: sender và receiver đồng bộ tại communication điểm (point / 지점). Buffered channel tạo hàng đợi (queue / 큐).
@@ -131,6 +148,8 @@ capacity lớn       -> hấp thụ burst, nhưng tăng queued state và latency
 
 “Không share bộ nhớ (memory / 메모리); communicate” không loại bỏ overload. hàng đợi (queue / 큐) chỉ chuyển vào channel/mailbox.
 
+> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **10. CSP/channels: communication thành phần nguyên thủy (primitive / 기본 요소) đồng thời là flow-control thành phần nguyên thủy (primitive / 기본 요소)** nêu điều cần giải thích; **11. Async/await thay thực thi (execution / 실행) biểu diễn (representation / 표현), không xóa tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Structured tính đồng thời (concurrency / 동시성) giữ thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식) của tasks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Async/await thay thực thi (execution / 실행) biểu diễn (representation / 표현), không xóa tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건)
 
 Async tác vụ (task / 작업) cho phép suspension khi chờ I/O thay vì giữ OS luồng thực thi (thread / 스레드) blocked, tùy thời gian chạy (runtime / 런타임). Điều này rất hữu ích khi có nhiều I/O waits.
@@ -138,6 +157,8 @@ Async tác vụ (task / 작업) cho phép suspension khi chờ I/O thay vì gi�
 Nhưng async CPU-bound công việc (work / 작업) vẫn cần CPU. Nếu callback/continuation khối (block / 블록) vòng lặp sự kiện (event loop / 이벤트 루프) bằng compute dài, hàng nghìn sockets có thể bị stall cùng lúc.
 
 Thời gian chạy (runtime / 런타임) có worker pool, timer hàng đợi (queue / 큐), I/O completion cơ chế (mechanism / 메커니즘) và tác vụ (task / 작업) scheduler; tất cả đều có sức chứa (capacity / 용량). “Async” là programming mô hình (model / 모델), không phải infinite tính đồng thời (concurrency / 동시성).
+
+> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **11. Async/await thay thực thi (execution / 실행) biểu diễn (representation / 표현), không xóa tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건)** nêu điều cần giải thích; **12. Structured tính đồng thời (concurrency / 동시성) giữ thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식) của tasks** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Cancellation là một thất bại (failure / 실패) injection vào điều khiển (control / 제어) luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Structured tính đồng thời (concurrency / 동시성) giữ thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식) của tasks
 
@@ -150,6 +171,8 @@ Fire-and-forget tác vụ (task / 작업) dễ leak thời gian tồn tại (lif
 Điều này làm tác vụ (task / 작업) thời gian tồn tại (lifetime / 수명) giống tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) hơn, giảm orphan công việc (work / 작업) và giúp deadline/cancellation đi xuyên lời gọi (call / 호출) cây (tree / 트리).
 
 Đọc [coroutines, async runtime và structured concurrency](../../04_programming_languages/advanced/07_coroutines_continuations_async_runtimes_and_structured_concurrency.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, biết phải giữ gì trong **12. Structured tính đồng thời (concurrency / 동시성) giữ thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식) của tasks**, ta theo dõi trong **13. Cancellation là một thất bại (failure / 실패) injection vào điều khiển (control / 제어) luồng (flow / 흐름)** cách hệ thống thực hiện và phản hồi qua từng bước. Từ đây, **14. quyền sở hữu (ownership / 소유권) đưa một phần tính đồng thời (concurrency / 동시성) proof vào hệ kiểu (type system / 타입 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Cancellation là một thất bại (failure / 실패) injection vào điều khiển (control / 제어) luồng (flow / 흐름)
 
@@ -167,6 +190,8 @@ lock/resource có release không?
 
 RAII, `finally`, defer-style cleanup và structured thời gian tồn tại (lifetime / 수명) giúp giữ bất biến (invariant / 불변식). Cancellation không nên được coi như `return` bình thường.
 
+> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **13. Cancellation là một thất bại (failure / 실패) injection vào điều khiển (control / 제어) luồng (flow / 흐름)** xác định đầu vào; **14. quyền sở hữu (ownership / 소유권) đưa một phần tính đồng thời (concurrency / 동시성) proof vào hệ kiểu (type system / 타입 시스템)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Immutability giảm state-space cần lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. quyền sở hữu (ownership / 소유권) đưa một phần tính đồng thời (concurrency / 동시성) proof vào hệ kiểu (type system / 타입 시스템)
 
 Quyền sở hữu (ownership / 소유권)/borrowing giới hạn aliasing và mutable truy cập (access / 접근). Nếu mutable trạng thái (state / 상태) không thể được unrestricted-share giữa threads, một lớp (class / 클래스) dữ liệu (data / 데이터) race bị loại trước thời gian chạy (runtime / 런타임).
@@ -174,6 +199,8 @@ Quyền sở hữu (ownership / 소유권)/borrowing giới hạn aliasing và m
 Nhưng quyền sở hữu (ownership / 소유권) không loại deadlock, logical race hoặc phân tán (distributed / 분산) inconsistency. Static proof chỉ mạnh trong ranh giới (boundary / 경계) mà hệ kiểu (type system / 타입 시스템) kiểm soát; FFI/unsafe mã (code / 코드) mở lại các giả định (assumptions / 가정들).
 
 Đọc [Ownership, borrowing và memory safety](../../04_programming_languages/advanced/02_ownership_borrowing_linear_types_and_memory_safety.md).
+
+> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **15. Immutability giảm state-space cần lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **14. quyền sở hữu (ownership / 소유권) đưa một phần tính đồng thời (concurrency / 동시성) proof vào hệ kiểu (type system / 타입 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. bộ nhớ (memory / 메모리) an toàn (safety / 안전) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전) giao nhau nhưng không đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Immutability giảm state-space cần lập luận (reasoning / 추론)
 
@@ -183,6 +210,8 @@ Sự đánh đổi (trade-off / 트레이드오프) có thể là allocation/cop
 
 Tính đồng thời (concurrency / 동시성) thiết kế (design / 설계) tốt thường **partition mutable trạng thái (state / 상태)** trước khi cố synchronize mọi thứ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **16. bộ nhớ (memory / 메모리) an toàn (safety / 안전) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전) giao nhau nhưng không đồng nhất** tiếp nhận điểm tựa từ **15. Immutability giảm state-space cần lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. hiệu năng (performance / 성능) pressure thay đổi mô hình (model / 모델) nào phù hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. bộ nhớ (memory / 메모리) an toàn (safety / 안전) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전) giao nhau nhưng không đồng nhất
 
 Bộ nhớ (memory / 메모리) an toàn (safety / 안전) ngăn use-after-free, invalid pointer/bounds truy cập (access / 접근) theo mô hình (model / 모델). tính đồng thời (concurrency / 동시성) an toàn (safety / 안전) quan tâm race/thứ tự (order / 순서)/progress. Một GC ngôn ngữ (language / 언어) có thể memory-safe ở vùng nhớ động (heap / 힙) thời gian tồn tại (lifetime / 수명) nhưng vẫn có dữ liệu (data / 데이터) race/logical race. Một quyền sở hữu (ownership / 소유권) ngôn ngữ (language / 언어) có thể ngăn nhiều alias/thời gian tồn tại (lifetime / 수명) bugs nhưng vẫn deadlock.
@@ -190,6 +219,8 @@ Bộ nhớ (memory / 메모리) an toàn (safety / 안전) ngăn use-after-free,
 FFI/bản địa (native / 네이티브) extension, unsafe khối (block / 블록) và shared-memory ranh giới (boundary / 경계) là nơi guarantee có thể suy yếu.
 
 Bảo mật (security / 보안) cũng liên quan: memory-unsafe race/use-after-free có thể trở thành vulnerability, nhưng logical authorization race có thể xảy ra trong memory-safe ngôn ngữ (language / 언어).
+
+> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **17. hiệu năng (performance / 성능) pressure thay đổi mô hình (model / 모델) nào phù hợp** tiếp nhận điểm tựa từ **16. bộ nhớ (memory / 메모리) an toàn (safety / 안전) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전) giao nhau nhưng không đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. bằng chứng vận hành (production evidence / 운영 증거) cho tính đồng thời (concurrency / 동시성) bug và contention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. hiệu năng (performance / 성능) pressure thay đổi mô hình (model / 모델) nào phù hợp
 
@@ -205,11 +236,15 @@ low-level shared counters   -> atomics nếu invariant thật sự local
 complex multi-field state   -> lock/transaction thường dễ proof hơn
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **17. hiệu năng (performance / 성능) pressure thay đổi mô hình (model / 모델) nào phù hợp** nêu điều cần giải thích; **18. bằng chứng vận hành (production evidence / 운영 증거) cho tính đồng thời (concurrency / 동시성) bug và contention** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. thất bại (failure / 실패) ở tầng thấp hơn có thể quyết định hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. bằng chứng vận hành (production evidence / 운영 증거) cho tính đồng thời (concurrency / 동시성) bug và contention
 
 Tính đúng đắn (correctness / 정확성) bằng chứng (evidence / 증거) gồm race detector/sanitizer khi ecosystem hỗ trợ, stress testing, bất biến (invariant / 불변식) assertion và minimal reproducer. bằng chứng hiệu năng (performance evidence / 성능 증거) gồm luồng thực thi (thread / 스레드) dump, khóa (lock / 잠금)/park wait, on/off-CPU profiler, scheduler delay, run hàng đợi (queue / 큐), ngữ cảnh (context / 맥락) switches, cache-line/coherence counters và NUMA placement khi cần.
 
 Một deadlock cần wait-for đồ thị (graph / 그래프)/ngăn xếp (stack / 스택) bằng chứng (evidence / 증거). Một false-sharing issue cần bộ nhớ đệm (cache / 캐시)/coherence bằng chứng (evidence / 증거). Một event-loop stall cần long-task/on-CPU bằng chứng (evidence / 증거). Cùng symptom “yêu cầu (request / 요청) treo” có thể có cơ chế (mechanism / 메커니즘) hoàn toàn khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **18. bằng chứng vận hành (production evidence / 운영 증거) cho tính đồng thời (concurrency / 동시성) bug và contention** nêu điều cần giải thích; **19. thất bại (failure / 실패) ở tầng thấp hơn có thể quyết định hành vi (behavior / 동작)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. thất bại (failure / 실패) ở tầng thấp hơn có thể quyết định hành vi (behavior / 동작)
 
@@ -225,9 +260,13 @@ safe publication          -> language memory model mapped xuống ISA ordering
 
 Ta không cần gỡ lỗi (debug / 디버그) mọi bug bằng assembly, nhưng phải biết khi nào lớp trừu tượng (abstraction / 추상화) hiện tại không giải thích được bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **20. Mô hình tư duy** gom các mảnh từ **19. thất bại (failure / 실패) ở tầng thấp hơn có thể quyết định hành vi (behavior / 동작)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu nhầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Mô hình tư duy
 
 > tính đồng thời (concurrency / 동시성) mô hình (model / 모델) là giao thức (protocol / 프로토콜) về **quyền sở hữu (ownership / 소유권), communication, thứ tự (ordering / 순서), thời gian tồn tại (lifetime / 수명) và progress**. Threads/locks dùng trạng thái dùng chung (shared state / 공유 상태) trực tiếp; actors/channels di chuyển communication sang message/hàng đợi (queue / 큐); async tách logical tasks khỏi blocking OS threads; quyền sở hữu (ownership / 소유권) đưa một phần proof vào hệ kiểu (type system / 타입 시스템). Không mô hình (model / 모델) nào xóa tính đồng thời (concurrency / 동시성) độ phức tạp (complexity / 복잡도)—mỗi mô hình (model / 모델) chuyển bất biến (invariant / 불변식) và dạng thất bại (failure mode / 실패 모드) sang ranh giới (boundary / 경계) khác.
+
+> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **20. Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những hiểu nhầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu nhầm thường gặp
 
@@ -239,8 +278,10 @@ Ta không cần gỡ lỗi (debug / 디버그) mọi bug bằng assembly, nhưng
 
 **“Lock-free luôn nhanh hơn khóa (lock / 잠금).”** Contention, retries, coherence và reclamation có thể làm lock-free tệ hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Những hiểu nhầm thường gặp** đã nêu tiêu chí phân biệt, còn **Kết nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối
 
 Đọc cùng [OS concurrency](../03_operating_systems/02_concurrency_synchronization_and_deadlock.md), [Advanced memory ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md), [Ownership](../../04_programming_languages/advanced/02_ownership_borrowing_linear_types_and_memory_safety.md), [Structured concurrency](../../04_programming_languages/advanced/07_coroutines_continuations_async_runtimes_and_structured_concurrency.md), [Queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md) và [Correctness path xuyên tầng](../../90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language semantics and execution models](./00_language_semantics_and_execution_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

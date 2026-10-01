@@ -1,6 +1,6 @@
 # Đường đi của tính đúng đắn: CPU bộ nhớ đệm (cache / 캐시) → bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) → ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model / 모델) → tính đồng thời (concurrency / 동시성) bug
 
-> **Mạch đọc:** Đặt **Đường đi của tính đúng đắn: CPU bộ nhớ đệm (cache / 캐시) → bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) → ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model / 모델) → tính đồng thời (concurrency / 동시성) bug** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bài toán ban đầu: nhiều thực thi (execution / 실행) ngữ cảnh (context / 맥락) cùng nhìn một trạng thái (state / 상태)** sang **2. bộ nhớ đệm (cache / 캐시) coherence không tạo ra language-level tính đúng đắn (correctness / 정확성)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của tuyến correctness nâng cao. File tách ba lớp thường bị trộn lẫn—coherence của cache, ordering của hardware/ISA và happens-before của ngôn ngữ—rồi nối chúng với publication, atomicity, false sharing và bằng chứng vận hành.
 
 
 Lỗi đồng thời thường bị rút gọn thành câu “CPU reorder instruction”. Cách giải thích đó quá thấp tầng để sửa mã (code / 코드) và cũng quá đơn giản để giải thích hành vi (behavior / 동작) thật. Tính đúng đắn của chương trình concurrent là một hợp đồng xuyên nhiều lớp trừu tượng (abstraction / 추상화): mã nguồn (source code / 소스 코드) → mô hình bộ nhớ của ngôn ngữ (language memory model) → trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) → thành phần nguyên thủy (primitive / 기본 요소) đồng bộ của OS → ISA và bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) → bộ nhớ đệm (cache / 캐시)/coherence → phần cứng thật.
@@ -51,6 +51,8 @@ Bất biến (invariant / 불변식) của hardware không phải “mọi cốt
 
 Đọc sâu hơn tại [Memory consistency, cache coherence và ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md).
 
+> **Chuyển mạch:** Coherence chỉ nói về từng cache line; để giải thích nhiều biến cùng nhau, **4. trình biên dịch cũng reorder** chuyển câu hỏi sang đặc tả hợp đồng của ngôn ngữ.
+
 ## 4. trình biên dịch (compiler / 컴파일러) cũng reorder, nhưng theo đặc tả hợp đồng (contract / 계약) khác
 
 Trình biên dịch (compiler / 컴파일러) không chỉ chuyển dòng mã nguồn (source line / 소스 코드 줄) thành lệnh máy (machine instruction / 기계 명령어) một-một. Nó có thể hoist tải (load / 로드), eliminate redundant read, giữ giá trị (value / 값) trong register, vectorize hoặc reorder operations nếu transformation giữ hành vi (behavior / 동작) mà ngôn ngữ (language / 언어) specification cho phép.
@@ -79,6 +81,8 @@ read data
 
 Nếu chuỗi edge tồn tại, software có cơ sở để yêu cầu thời gian chạy (runtime / 런타임)/trình biên dịch (compiler / 컴파일러)/hardware giữ visibility cần thiết. Nếu không có edge, việc “thường xuyên thấy đúng” chỉ là accidental hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Happens-before biến giả định về visibility thành quan hệ có thể lập luận; **6. Publication bug** cho thấy invariant đó hỏng thế nào trong một object cụ thể.
+
 ## 6. Publication bug: đối tượng (object / 객체) đã có tham chiếu (reference / 참조) nhưng trạng thái (state / 상태) chưa hợp lệ
 
 Giả sử một luồng thực thi (thread / 스레드) khởi tạo đối tượng (object / 객체) rồi publish tham chiếu (reference / 참조) cho luồng thực thi (thread / 스레드) khác mà không có synchronization đúng. bất biến (invariant / 불변식) mong muốn là:
@@ -102,6 +106,8 @@ Atomicity: operation có bị interleave thành lost update không?
 Visibility: write có được reader hợp lệ quan sát không?
 Ordering: reader được phép suy luận các operation khác trước/sau nó thế nào?
 ```
+
+> **Chuyển mạch:** Tách atomicity, visibility và ordering giúp tránh sửa nhầm bằng scheduler; **8. OS scheduler** chỉ thay interleaving, không tự tạo memory guarantee.
 
 ## 8. OS scheduler quyết định interleaving, không quyết định bộ nhớ (memory / 메모리) ngữ nghĩa (semantics / 의미론)
 

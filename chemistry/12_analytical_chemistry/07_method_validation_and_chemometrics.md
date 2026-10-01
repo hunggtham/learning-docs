@@ -1,7 +1,6 @@
 # Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy
 
-> **Mạch đọc:** Đọc **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thử nghiệm nhiễu** sang **Độ lặp lại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thử nghiệm nhiễu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ lặp lại** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Thẩm định phương pháp (method validation / 분석법 검증)** trả lời câu hỏi: một phương pháp đo có thực sự phù hợp với mục đích sử dụng đã định hay không? **Chemometrics (hóa lượng học / 화학계량학)** sử dụng thống kê, đại số tuyến tính và mô hình tính toán để trích xuất thông tin hóa học từ dữ liệu nhiều chiều. Hai lĩnh vực gặp nhau ở một điểm chung: không chỉ tạo ra con số, mà phải chứng minh con số đó có ý nghĩa trong điều kiện thực tế.
 
@@ -103,8 +102,7 @@ Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương 
 
 Độ chụm không phải một con số duy nhất.
 
-
-> **Chuyển mạch:** Từ **Thử nghiệm nhiễu**, ta sang **Độ lặp lại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ lặp lại** tiếp nhận điểm tựa từ **Thử nghiệm nhiễu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ chụm trung gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ lặp lại
 
@@ -115,15 +113,13 @@ Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương 
 - khoảng thời gian ngắn;
 - cùng phòng thí nghiệm.
 
-
-> **Chuyển mạch:** Từ **Độ lặp lại**, ta sang **Độ chụm trung gian** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ chụm trung gian** tiếp nhận điểm tựa từ **Độ lặp lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tái lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ chụm trung gian
 
 **Độ chụm trung gian (intermediate precision)** mở rộng sang khác ngày, khác người, khác lô thuốc thử hoặc đôi khi khác thiết bị trong cùng phòng thí nghiệm.
 
-
-> **Chuyển mạch:** Từ **Độ chụm trung gian**, ta sang **Độ tái lập** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ tái lập** tiếp nhận điểm tựa từ **Độ chụm trung gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ tái lập
 
@@ -510,4 +506,4 @@ Thẩm định phương pháp là **kiểm thử hợp đồng giữa phép đo 
 
 Xem thêm: [Đo lường và lấy mẫu](./00_measurement_and_sampling.md), [Quang phổ](./03_spectroscopy.md), [Sắc ký](./04_chromatography.md), [Khối phổ](./05_mass_spectrometry.md) và [Sai số, độ không đảm bảo và phân tích dữ liệu](../17_laboratory/05_error_uncertainty_and_data_analysis.md).
 
-> **Bàn giao:** Sau **“Mô hình máy học có thể thay thế hiểu biết hóa học”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ tái lập**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

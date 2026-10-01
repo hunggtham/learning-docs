@@ -1,7 +1,6 @@
 # Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô
 
-> **Mạch đọc:** Đọc **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Molecularity khác reaction thứ tự (order / 순서)** sang **“Intermediate là chuyển tiếp (transition / 전이) trạng thái (state / 상태)”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Molecularity khác reaction thứ tự (order / 순서)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Cơ chế phản ứng (reaction mechanism / 반응 메커니즘)** là mô hình mô tả chuỗi các bước vi mô biến chất phản ứng thành sản phẩm. Phương trình hóa học tổng chỉ là hạch toán đầu vào–đầu ra; cơ chế cố gắng giải thích **liên kết nào thay đổi trước, chất trung gian nào xuất hiện, trạng thái chuyển tiếp nào phải vượt qua và bước nào kiểm soát tốc độ trong từng điều kiện**.
 
@@ -418,8 +417,7 @@ Không. Nhiều mechanisms có thể tạo cùng tỷ lệ (rate / 비율) law h
 
 Không. Detection phụ thuộc thời gian tồn tại (lifetime / 수명), concentration và thời gian (time / 시간) resolution.
 
-
-> **Chuyển mạch:** Từ **Molecularity khác reaction thứ tự (order / 순서)**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô**, **Mô hình tư duy** gom các mảnh từ **Molecularity khác reaction thứ tự (order / 순서)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -429,4 +427,4 @@ Một cơ chế tốt không chỉ giải thích dữ liệu cũ mà phải tạ
 
 Xem tiếp: [Năng lượng hoạt hóa và Arrhenius](./03_activation_energy_and_arrhenius.md), [Xúc tác](./04_catalysis.md) và [Mạng phản ứng](../04_chemical_quantities/06_stoichiometric_matrices_and_reaction_networks.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reaction rates](./00_reaction_rates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

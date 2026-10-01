@@ -1,6 +1,6 @@
 # SOURCES — Nguồn chính thức và chính sách cập nhật
 
-> **Mạch đọc:** Đặt **SOURCES — Nguồn chính thức và chính sách cập nhật** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Pháp luật và pháp chế** sang **국가법령정보센터**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **SOURCES — Nguồn chính thức và chính sách cập nhật**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Pháp luật và pháp chế** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Cấu trúc nhà nước và civic** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Lần kiểm tra nguồn:** 2026-09-21.
 
@@ -31,8 +31,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - Mục đích: giải thích pháp luật theo tình huống đời sống.
 - Lưu ý: chính trang này nêu nội dung giải thích không phải 유권해석/phán quyết có giá trị pháp lý; luôn quay lại luật gốc khi cần.
 
-
-> **Chuyển mạch:** Từ **1. Pháp luật và pháp chế**, ta sang **2. Cấu trúc nhà nước và civic** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **SOURCES — Nguồn chính thức và chính sách cập nhật**, **2. Cấu trúc nhà nước và civic** tiếp nhận điểm tựa từ **1. Pháp luật và pháp chế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tòa án, cảnh sát, công tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Cấu trúc nhà nước và civic
 
@@ -57,8 +56,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - tra trên https://www.law.go.kr/
 - Dùng để kiểm tra các loại chính quyền địa phương và cơ sở pháp lý hiện hành.
 
-
-> **Chuyển mạch:** Từ **2. Cấu trúc nhà nước và civic**, ta sang **3. Tòa án, cảnh sát, công tố** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **SOURCES — Nguồn chính thức và chính sách cập nhật**, **3. Tòa án, cảnh sát, công tố** tiếp nhận điểm tựa từ **2. Cấu trúc nhà nước và civic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Hành chính, 민원, khiếu nại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Tòa án, cảnh sát, công tố
 
@@ -91,8 +89,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.spo.go.kr/
 - Dùng để tra cơ cấu và chức năng công tố.
 
-
-> **Chuyển mạch:** Từ **3. Tòa án, cảnh sát, công tố**, ta sang **4. Hành chính, 민원, khiếu nại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SOURCES — Nguồn chính thức và chính sách cập nhật**, **4. Hành chính, 민원, khiếu nại** tiếp nhận điểm tựa từ **3. Tòa án, cảnh sát, công tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Lao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Hành chính, 민원, khiếu nại
 
@@ -121,8 +118,7 @@ Nguồn đã kiểm tra:
 - 국민신문고 소개 / 고충민원: ACRC, nội dung truy cập 2026-09-21.
 - 온라인 행정심판 안내: ACRC.
 
-
-> **Chuyển mạch:** Từ **4. Hành chính, 민원, khiếu nại**, ta sang **5. Lao động** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **SOURCES — Nguồn chính thức và chính sách cập nhật**, **5. Lao động** tiếp nhận điểm tựa từ **4. Hành chính, 민원, khiếu nại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Nhà ở và đăng ký bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Lao động
 
@@ -173,8 +169,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - Điều 28: 부당해고등의 구제신청.
 - Điều 56: 연장·야간·휴일근로 가산.
 
-
-> **Chuyển mạch:** Từ **5. Lao động**, ta sang **6. Nhà ở và đăng ký bất động sản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **SOURCES — Nguồn chính thức và chính sách cập nhật**, **6. Nhà ở và đăng ký bất động sản** tiếp nhận điểm tựa từ **5. Lao động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Thuế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Nhà ở và đăng ký bất động sản
 
@@ -215,8 +210,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.khug.or.kr/
 - Dùng để kiểm tra sản phẩm 보증 liên quan thuê nhà tại thời điểm thực tế.
 
-
-> **Chuyển mạch:** Từ **6. Nhà ở và đăng ký bất động sản**, ta sang **7. Thuế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SOURCES — Nguồn chính thức và chính sách cập nhật**, **7. Thuế** tiếp nhận điểm tựa từ **6. Nhà ở và đăng ký bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Bảo hiểm xã hội và phúc lợi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Thuế
 
@@ -241,8 +235,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.wetax.go.kr/
 - Dùng cho nhiều nghiệp vụ thuế địa phương.
 
-
-> **Chuyển mạch:** Từ **7. Thuế**, ta sang **8. Bảo hiểm xã hội và phúc lợi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **SOURCES — Nguồn chính thức và chính sách cập nhật**, **8. Bảo hiểm xã hội và phúc lợi** tiếp nhận điểm tựa từ **7. Thuế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Người tiêu dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Bảo hiểm xã hội và phúc lợi
 
@@ -288,8 +281,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.bokjiro.go.kr/
 - Dùng để tìm chương trình phúc lợi hiện hành.
 
-
-> **Chuyển mạch:** Từ **8. Bảo hiểm xã hội và phúc lợi**, ta sang **9. Người tiêu dùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **SOURCES — Nguồn chính thức và chính sách cập nhật**, **9. Người tiêu dùng** tiếp nhận điểm tựa từ **8. Bảo hiểm xã hội và phúc lợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Tài chính và tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Người tiêu dùng
 
@@ -313,8 +305,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 - https://www.ftc.go.kr/
 
-
-> **Chuyển mạch:** Từ **9. Người tiêu dùng**, ta sang **10. Tài chính và tín dụng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **SOURCES — Nguồn chính thức và chính sách cập nhật**, **10. Tài chính và tín dụng** tiếp nhận điểm tựa từ **9. Người tiêu dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Xuất nhập cảnh, thường trú và quốc tịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Tài chính và tín dụng
 
@@ -350,8 +341,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.law.go.kr/
 - Bản kiểm tra: hiệu lực 2026-01-02 trong kết quả hiện hành.
 
-
-> **Chuyển mạch:** Từ **10. Tài chính và tín dụng**, ta sang **11. Xuất nhập cảnh, thường trú và quốc tịch** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **SOURCES — Nguồn chính thức và chính sách cập nhật**, **11. Xuất nhập cảnh, thường trú và quốc tịch** tiếp nhận điểm tựa từ **10. Tài chính và tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Chính sách cập nhật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Xuất nhập cảnh, thường trú và quốc tịch
 
@@ -397,8 +387,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.socinet.go.kr/
 - KIIP và chương trình hội nhập.
 
-
-> **Chuyển mạch:** Từ **11. Xuất nhập cảnh, thường trú và quốc tịch**, ta sang **12. Chính sách cập nhật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **SOURCES — Nguồn chính thức và chính sách cập nhật**, **12. Chính sách cập nhật** tiếp nhận điểm tựa từ **11. Xuất nhập cảnh, thường trú và quốc tịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 12. Chính sách cập nhật
 
@@ -414,3 +403,5 @@ Khi sửa thư viện (library / 라이브러리):
 ```
 
 Nếu một file đưa ra số tiền, tỷ lệ, danh sách visa, deadline hoặc điều kiện pháp lý cụ thể, người cập nhật phải kiểm tra lại nguồn chính thức tại thời điểm sửa.
+
+> **Bàn giao:** Sau **12. Chính sách cập nhật**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

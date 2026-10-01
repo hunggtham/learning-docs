@@ -1,7 +1,6 @@
 # Trường tinh thể và trường phối tử — sự tách mức orbital d
 
-> **Mạch đọc:** Đọc **Trường tinh thể và trường phối tử — sự tách mức orbital d** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ ion kim loại tự do** sang **Trường bát diện — vì sao \(eg\) cao hơn \(t{2g}\)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường tinh thể và trường phối tử — sự tách mức orbital d**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ ion kim loại tự do** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trường bát diện — vì sao \(eg\) cao hơn \(t{2g}\)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Lý thuyết trường tinh thể (crystal field theory, CFT / 결정장 이론)** mô hình hóa phối tử như nguồn trường tĩnh điện làm mất tính suy biến của các orbital d trên kim loại. **Lý thuyết trường phối tử (ligand field theory, LFT / 리간드장 이론)** mở rộng mô hình đó bằng liên kết orbital phân tử và thành phần cộng hóa trị. Hai mô hình giúp giải thích màu sắc, từ tính, trạng thái spin, hình học và một phần khả năng phản ứng của phức kim loại chuyển tiếp.
 
@@ -17,6 +16,8 @@ Năm orbital có định hướng không gian khác nhau. \(d_{z^2}\) và \(d_{x
 
 Khi phối tử tiến tới theo một hình học xác định, khác biệt định hướng trở thành khác biệt về năng lượng tương tác. Đây là điểm cốt lõi: **hình học không chỉ thay đổi hình dáng phân tử mà còn thay đổi Hamiltonian điện tử**.
 
+> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Trường bát diện — vì sao \(eg\) cao hơn \(t{2g}\)** tiếp nhận điểm tựa từ **Bắt đầu từ ion kim loại tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tâm trọng năng lượng — sự tách mức không tự tạo hay phá năng lượng orbital trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trường bát diện — vì sao \(e_g\) cao hơn \(t_{2g}\)
 
 Trong phức bát diện, sáu phối tử nằm dọc \(+x,-x,+y,-y,+z,-z\).
@@ -26,6 +27,8 @@ Hai orbital \(d_{x^2-y^2}\) và \(d_{z^2}\) hướng trực tiếp về phía ph
 Ba orbital \(d_{xy}\), \(d_{xz}\), \(d_{yz}\) hướng giữa các trục phối tử nên tương tác trực tiếp yếu hơn và tạo tập \(t_{2g}\) năng lượng thấp hơn.
 
 Khoảng cách năng lượng giữa hai tập gọi là **độ tách bát diện \(\Delta_o\) (octahedral splitting)**.
+
+> **Chuyển mạch:** Ở chặng này của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Tâm trọng năng lượng — sự tách mức không tự tạo hay phá năng lượng orbital trung bình** tiếp nhận điểm tựa từ **Trường bát diện — vì sao \(eg\) cao hơn \(t{2g}\)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách electron chiếm mức: cạnh tranh giữa tách mức và ghép đôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tâm trọng năng lượng — sự tách mức không tự tạo hay phá năng lượng orbital trung bình
 
@@ -46,6 +49,8 @@ Ba orbital \(t_{2g}\) và hai orbital \(e_g\) cho tổng có trọng số:
 \]
 
 Điều này không có nghĩa tổng năng lượng phân tử không thay đổi khi phối tử liên kết. Nó chỉ nói phần tách mức d trong mô hình CFT được tham chiếu quanh năng lượng trung bình của năm orbital d.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Cách electron chiếm mức: cạnh tranh giữa tách mức và ghép đôi** tiếp nhận điểm tựa từ **Tâm trọng năng lượng — sự tách mức không tự tạo hay phá năng lượng orbital trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: Fe(II) d6** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách electron chiếm mức: cạnh tranh giữa tách mức và ghép đôi
 
@@ -72,6 +77,8 @@ thì trạng thái **spin thấp (low spin)** có thể thuận lợi hơn.
 
 Cạnh tranh này đặc biệt quan trọng với cấu hình bát diện \(d^4\) đến \(d^7\). Với \(d^1\)–\(d^3\), chưa cần ghép đôi để ở lại \(t_{2g}\); còn \(d^8\)–\(d^{10}\) có mức chiếm electron bị ràng buộc hơn.
 
+> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Cách electron chiếm mức: cạnh tranh giữa tách mức và ghép đôi** cho ta quy tắc; **Ví dụ: Fe(II) d6** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Năng lượng ổn định trường tinh thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ: Fe(II) d6
 
 \(Fe^{2+}\) là \(d^6\).
@@ -85,6 +92,8 @@ t_{2g}^6e_g^0
 và tất cả electron được ghép đôi.
 
 Vì vậy cùng trạng thái oxy hóa Fe(II) nhưng phối tử khác nhau có thể tạo hành vi từ tính hoàn toàn khác. Chỉ biết số oxy hóa chưa đủ để suy trạng thái spin.
+
+> **Chuyển mạch:** Ở chặng này của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Ví dụ: Fe(II) d6** cho ta quy tắc; **Năng lượng ổn định trường tinh thể** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dãy phổ hóa học — bản chất phối tử thay đổi \(\Delta\)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Năng lượng ổn định trường tinh thể
 
@@ -104,6 +113,8 @@ CFSE giúp giải thích định tính năng lượng hydrat hóa, hình học �
 
 Hai phức có CFSE tương tự chưa chắc có độ bền nhiệt động, tốc độ thế phối tử hay năng lượng liên kết giống nhau. CFSE chỉ là một đóng góp điện tử trong một mô hình có độ phân giải hữu hạn; solvat hóa, entropy, cộng hóa trị và cấu trúc phối tử vẫn có thể thay đổi mạnh tổng \(\Delta G\).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Dãy phổ hóa học — bản chất phối tử thay đổi \(\Delta\)** tiếp nhận điểm tựa từ **Năng lượng ổn định trường tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao CO và CN− là phối tử trường mạnh — cần mô hình trường phối tử và orbital phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dãy phổ hóa học — bản chất phối tử thay đổi \(\Delta\)
 
 Các phối tử không tạo trường có độ mạnh giống nhau. Một dãy gần đúng từ trường yếu tới mạnh là:
@@ -116,6 +127,8 @@ Thứ tự chi tiết có thể phụ thuộc hoàn cảnh, nhưng xu hướng p
 
 Phối tử trường yếu thường tạo \(\Delta_o\) nhỏ và ưu tiên spin cao. Phối tử trường mạnh tạo tách mức lớn hơn và có thể ưu tiên spin thấp.
 
+> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Vì sao CO và CN− là phối tử trường mạnh — cần mô hình trường phối tử và orbital phân tử** tiếp nhận điểm tựa từ **Dãy phổ hóa học — bản chất phối tử thay đổi \(\Delta\)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường tứ diện — thứ tự đảo nhưng độ tách nhỏ hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao CO và CN− là phối tử trường mạnh — cần mô hình trường phối tử và orbital phân tử
 
 CFT thuần túy chỉ nói phối tử “tạo trường” nhưng không giải thích sâu vì sao phối tử nhận π lại mạnh.
@@ -125,6 +138,8 @@ Trong LFT, cho σ từ phối tử tạo các tổ hợp liên kết và phản 
 Ngược lại, phối tử cho π có các orbital π đã chiếm tương tác với \(t_{2g}\) của kim loại, có thể nâng năng lượng các orbital này và làm giảm độ tách mức.
 
 Vì vậy dãy phổ hóa học xuất hiện từ **đối xứng orbital + mức tương hợp năng lượng + khả năng cho/nhận π**.
+
+> **Chuyển mạch:** Ở chặng này của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Trường tứ diện — thứ tự đảo nhưng độ tách nhỏ hơn** tiếp nhận điểm tựa từ **Vì sao CO và CN− là phối tử trường mạnh — cần mô hình trường phối tử và orbital phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường vuông phẳng — vì sao hệ d8 thường ưa hình học này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường tứ diện — thứ tự đảo nhưng độ tách nhỏ hơn
 
@@ -140,6 +155,8 @@ khi so sánh lý tưởng cùng kim loại và phối tử.
 
 Vì \(\Delta_t\) nhỏ, chi phí đưa electron lên mức cao thường thấp hơn ghép đôi; do đó phức tứ diện gần như luôn spin cao.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Trường vuông phẳng — vì sao hệ d8 thường ưa hình học này** tiếp nhận điểm tựa từ **Trường tứ diện — thứ tự đảo nhưng độ tách nhỏ hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Màu sắc — từ khoảng năng lượng tới bước sóng quan sát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trường vuông phẳng — vì sao hệ d8 thường ưa hình học này
 
 Trong hình học vuông phẳng, bốn phối tử nằm trên mặt phẳng x/y và không có phối tử trục z. Orbital \(d_{x^2-y^2}\) hướng thẳng vào cả bốn phối tử nên bị nâng năng lượng rất mạnh.
@@ -151,6 +168,8 @@ Vì vậy ưu tiên hình học có nguồn gốc điện tử, không chỉ do 
 ### Ví dụ suy luận: cùng Ni(II), vì sao hình học có thể khác?
 
 \([NiCl_4]^{2-}\) với phối tử trường yếu thường có tách mức nhỏ và hình học tứ diện spin cao. \([Ni(CN)_4]^{2-}\) với phối tử nhận π mạnh tạo trường lớn hơn, thuận lợi cho ghép đôi electron và cấu hình vuông phẳng. Ví dụ này cho thấy hình học, trạng thái spin và liên kết không phải ba phần kiến thức rời; chúng là ba biểu hiện của cùng một cảnh quan năng lượng điện tử.
+
+> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Màu sắc — từ khoảng năng lượng tới bước sóng quan sát** tiếp nhận điểm tựa từ **Trường vuông phẳng — vì sao hệ d8 thường ưa hình học này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ chuyển điện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Màu sắc — từ khoảng năng lượng tới bước sóng quan sát
 
@@ -176,6 +195,8 @@ Phức tứ diện không có tâm đảo nên dải d–d thường mạnh hơn
 
 Chuyển mức làm thay đổi tổng bội spin thường yếu. Vì vậy cấu hình electron quyết định không chỉ vị trí năng lượng mà cả cường độ phổ.
 
+> **Chuyển mạch:** Ở chặng này của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Phổ chuyển điện tích** tiếp nhận điểm tựa từ **Màu sắc — từ khoảng năng lượng tới bước sóng quan sát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ tính và trạng thái spin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phổ chuyển điện tích
 
 **Chuyển điện tích phối tử → kim loại (ligand-to-metal charge transfer, LMCT)** xảy ra khi electron được kích thích từ orbital chủ yếu trên phối tử sang orbital chủ yếu trên kim loại. **Chuyển điện tích kim loại → phối tử (metal-to-ligand charge transfer, MLCT)** là chiều ngược lại.
@@ -183,6 +204,8 @@ Chuyển mức làm thay đổi tổng bội spin thường yếu. Vì vậy c�
 Dải chuyển điện tích thường rất mạnh vì không bị hạn chế theo cách các chuyển d–d bị giới hạn.
 
 Permanganate \(MnO_4^-\) chứa Mn(VII), cấu hình \(d^0\), nên không thể có chuyển d–d thông thường; màu tím mạnh chủ yếu đến từ kích thích chuyển điện tích. Đây là phản ví dụ rất tốt cho câu đơn giản “màu của kim loại chuyển tiếp = chuyển d–d”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Từ tính và trạng thái spin** tiếp nhận điểm tựa từ **Phổ chuyển điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến dạng Jahn–Teller — hệ có thể tự giảm đối xứng để hạ năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ tính và trạng thái spin
 
@@ -200,6 +223,8 @@ Nếu mômen từ đo được khác dự đoán, có thể cần xét ghép spi
 
 Đây là một ví dụ quan trọng về **giới hạn mô hình**: công thức chỉ xét spin là điểm bắt đầu, không phải mô tả đầy đủ mọi ion kim loại.
 
+> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Biến dạng Jahn–Teller — hệ có thể tự giảm đối xứng để hạ năng lượng** tiếp nhận điểm tựa từ **Từ tính và trạng thái spin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển đổi spin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biến dạng Jahn–Teller — hệ có thể tự giảm đối xứng để hạ năng lượng
 
 **Định lý Jahn–Teller (Jahn–Teller theorem)** nói rằng một phân tử phi tuyến có trạng thái cơ bản điện tử suy biến thường tự biến dạng để loại bỏ suy biến và hạ tổng năng lượng.
@@ -208,11 +233,15 @@ Phức Cu(II) bát diện, \(d^9\), thường kéo dài hai liên kết theo tr�
 
 Đây là cầu nối sâu giữa suy biến lượng tử và hình học phân tử thực tế.
 
+> **Chuyển mạch:** Ở chặng này của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Chuyển đổi spin** tiếp nhận điểm tựa từ **Biến dạng Jahn–Teller — hệ có thể tự giảm đối xứng để hạ năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ổn định trường phối tử và động học thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển đổi spin
 
 Một số phức \(d^4\)–\(d^7\) có \(\Delta_o\) và năng lượng ghép đôi gần nhau đến mức nhiệt độ, áp suất hoặc ánh sáng có thể chuyển đổi giữa trạng thái spin cao và spin thấp.
 
 **Vật liệu chuyển spin (spin-crossover materials)** có thể thay đổi màu, từ tính và thể tích theo kích thích ngoài. Đây là cầu nối từ hóa học phối trí tới vật liệu thông minh và thiết bị phân tử.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Ổn định trường phối tử và động học thế** tiếp nhận điểm tựa từ **Chuyển đổi spin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phức kim loại trong protein** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ổn định trường phối tử và động học thế
 
@@ -225,11 +254,15 @@ Cần giữ hai lớp phân tích riêng:
 
 Để xem chi tiết hơn về labile/inert và cơ chế thế, quay lại [hóa học phối trí](./03_coordination_chemistry.md).
 
+> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Phức kim loại trong protein** tiếp nhận điểm tựa từ **Ổn định trường phối tử và động học thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CFT và LFT khác nhau ở mức trừu tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phức kim loại trong protein
 
 Phối tử protein như N của histidine, S của cysteine, O của carboxylate và N của porphyrin tạo trường phối tử được tinh chỉnh rất chính xác. Fe trong hemoglobin không chỉ là “\(Fe^{2+}\) gắn protein”; mặt phẳng porphyrin, histidine gần tâm và quá trình liên kết \(O_2\) cùng thay đổi trạng thái spin và cấu trúc điện tử.
 
 Sinh học sử dụng điều khiển trường phối tử để thực hiện oxy hóa-khử và liên kết chọn lọc trong nước theo cách ion kim loại tự do khó thực hiện an toàn.
+
+> **Chuyển mạch:** Ở chặng này của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **CFT và LFT khác nhau ở mức trừu tượng** tiếp nhận điểm tựa từ **Phức kim loại trong protein** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CFT và LFT khác nhau ở mức trừu tượng
 
@@ -238,6 +271,8 @@ CFT xem tương tác phối tử–kim loại chủ yếu là tĩnh điện và 
 LFT dùng ngôn ngữ orbital phân tử, cho phép orbital của phối tử và kim loại trộn với nhau theo đối xứng và năng lượng. Nó giải thích tốt hơn tính cộng hóa trị, liên kết π, dãy phổ hóa học và chuyển điện tích.
 
 CFT không “sai”; nó là mô hình độ phân giải thấp hơn với phạm vi sử dụng rõ ràng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **CFT và LFT khác nhau ở mức trừu tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -261,10 +296,12 @@ Không có quan hệ phổ quát. Khả năng phản ứng phụ thuộc mức c
 
 Không. Chúng có độ chi tiết khác nhau. CFT phù hợp cho trực giác nhanh; LFT cần khi tính cộng hóa trị và tương tác π trở nên quan trọng.
 
+> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Phối tử tạo một **cảnh quan năng lượng phụ thuộc đối xứng** cho electron d của kim loại. Cách electron chiếm cảnh quan này quyết định spin, phổ và một phần hình học/khả năng phản ứng. CFT cho bản đồ đơn giản; LFT giải thích bản đồ đó xuất hiện từ tương tác orbital như thế nào.
 
 Xem tiếp: [Hóa học trạng thái rắn và khuyết tật](./05_solid_state_and_defect_chemistry.md), nơi các ý tưởng về mức năng lượng, ion kim loại và cấu trúc cục bộ được mở rộng từ một phức riêng lẻ sang mạng tinh thể và vật liệu.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 inorganic compounds](./00_inorganic_compounds.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

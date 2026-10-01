@@ -1,7 +1,6 @@
 # Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects
 
-> **Mạch đọc:** Đặt **tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Side tác động (effect / 효과) là thay đổi observable ngữ cảnh (context / 맥락)** sang **Pure cốt lõi (core / 핵심) và effectful shell**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Side tác động (effect / 효과) là thay đổi observable ngữ cảnh (context / 맥락)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Pure cốt lõi (core / 핵심) và effectful shell** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Hệ kiểu (type system / 타입 시스템) thường trả lời một expression tạo ra loại giá trị (value / 값) nào. Nhưng hai functions cùng trả `String` có thể rất khác: một hàm (function / 함수) thuần chỉ format dữ liệu; hàm (function / 함수) khác đọc mạng (network / 네트워크), ghi cơ sở dữ liệu (database / 데이터베이스) hoặc throw exception. **tác động (effect / 효과) hệ thống (system / 시스템)** mở rộng static lập luận (reasoning / 추론) để mô tả computation có thể làm gì ngoài việc trả giá trị (value / 값).
 
@@ -11,8 +10,7 @@ I/O, mutation, exception, async suspension và nondeterminism đều có thể �
 
 Nếu hàm (function / 함수) signature cho thấy tác động (effect / 효과), caller có thể biết phụ thuộc (dependency / 의존성) và thất bại (failure / 실패) modes mà không đọc toàn hiện thực (implementation / 구현).
 
-
-> **Chuyển mạch:** Từ **Side tác động (effect / 효과) là thay đổi observable ngữ cảnh (context / 맥락)**, ta sang **Pure cốt lõi (core / 핵심) và effectful shell** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, **Pure cốt lõi (core / 핵심) và effectful shell** tiếp nhận điểm tựa từ **Side tác động (effect / 효과) là thay đổi observable ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exceptions như tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pure cốt lõi (core / 핵심) và effectful shell
 
@@ -20,8 +18,7 @@ Functional thiết kế (design / 설계) thường cố giữ nghiệp vụ (bu
 
 Một pricing hàm (function / 함수) nhận đầu vào (input / 입력) và trả kết quả (result / 결과) dễ kiểm thử (test / 테스트) hơn hàm (function / 함수) tự đọc clock, cơ sở dữ liệu (database / 데이터베이스) và môi trường (environment / 환경). Các phụ thuộc (dependency / 의존성) effectful có thể được truyền vào rõ ràng.
 
-
-> **Chuyển mạch:** Từ **Pure cốt lõi (core / 핵심) và effectful shell**, ta sang **Exceptions như tác động (effect / 효과)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, **Exceptions như tác động (effect / 효과)** tiếp nhận điểm tựa từ **Pure cốt lõi (core / 핵심) và effectful shell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Async và suspension** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Exceptions như tác động (effect / 효과)
 
@@ -29,8 +26,7 @@ Checked exceptions trong Java là một dạng tác động (effect / 효과) an
 
 Unchecked exceptions linh hoạt hơn nhưng tác động (effect / 효과) trở nên implicit. sự đánh đổi (trade-off / 트레이드오프) là verbosity và composability so với explicitness.
 
-
-> **Chuyển mạch:** Từ **Exceptions như tác động (effect / 효과)**, ta sang **Async và suspension** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, **Async và suspension** tiếp nhận điểm tựa từ **Exceptions như tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Capability-based thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Async và suspension
 
@@ -38,8 +34,7 @@ Kotlin `suspend` đánh dấu hàm (function / 함수) có thể suspend mà kh�
 
 Structured tính đồng thời (concurrency / 동시성) tiếp tục idea này bằng cách đưa thời gian tồn tại (lifetime / 수명)/cancellation relationship vào cấu trúc (structure / 구조) thay vì để tasks sống tự do.
 
-
-> **Chuyển mạch:** Từ **Async và suspension**, ta sang **Capability-based thiết kế (design / 설계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, **Capability-based thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Async và suspension** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Algebraic effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Capability-based thiết kế (design / 설계)
 
@@ -47,8 +42,7 @@ Structured tính đồng thời (concurrency / 동시성) tiếp tục idea này
 
 Điều này kết nối kiểu (type / 타입)/thiết kế (design / 설계) với bảo mật (security / 보안) principle of least privilege. Nếu hàm (function / 함수) không nhận cơ sở dữ liệu (database / 데이터베이스) năng lực (capability / 역량), ta có bằng chứng cấu trúc rằng nó không thể trực tiếp gọi cơ sở dữ liệu (database / 데이터베이스) qua đường dẫn (path / 경로) bình thường.
 
-
-> **Chuyển mạch:** Từ **Capability-based thiết kế (design / 설계)**, ta sang **Algebraic effects** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, **Algebraic effects** tiếp nhận điểm tựa từ **Capability-based thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tác động (effect / 효과) polymorphism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Algebraic effects
 
@@ -56,8 +50,7 @@ Algebraic effects tách việc “yêu cầu một tác động (effect / 효과
 
 Mô hình tư duy (mental model / 사고 모델) gần phụ thuộc (dependency / 의존성) injection nhưng được đưa vào ngữ nghĩa (semantics / 의미론) của ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) và có thể compose điều khiển (control / 제어) effects mạnh hơn.
 
-
-> **Chuyển mạch:** Từ **Algebraic effects**, ta sang **tác động (effect / 효과) polymorphism** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, **Tác động (effect / 효과) polymorphism** tiếp nhận điểm tựa từ **Algebraic effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tác động (effect / 효과) polymorphism
 
@@ -65,8 +58,7 @@ Nếu lớp trừu tượng (abstraction / 추상화) chỉ dùng tác động (
 
 Đây là nơi thiết kế (design / 설계) trở nên phức tạp: hệ thống càng biểu đạt chính xác, suy luận (inference / 추론) và lỗi (error / 오류) messages càng khó.
 
-
-> **Chuyển mạch:** Từ **tác động (effect / 효과) polymorphism**, ta sang **môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, sau nội dung của **Tác động (effect / 효과) polymorphism**, **Môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)
 
@@ -74,11 +66,10 @@ Tác động (effect / 효과) visibility giúp rà soát (review / 검토) ki�
 
 Do đó tác động (effect / 효과) không chỉ là PL lý thuyết (theory / 이론); nó là cách nối static đặc tả hợp đồng (contract / 계약) với operational hành vi (behavior / 동작).
 
-
-> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > kiểu (type / 타입) nói “giá trị gì có thể đi ra”; tác động (effect / 효과) nói “trong lúc tạo giá trị đó computation có thể tác động gì lên thế giới”. Thiết kế tốt làm authority và effects đủ rõ để người đọc lập luận (reasoning / 추론) mà không phải giả định hidden hành vi (behavior / 동작).
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 type systems effects and runtime contracts](./00_type_systems_effects_and_runtime_contracts.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

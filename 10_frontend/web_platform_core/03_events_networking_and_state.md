@@ -1,6 +1,6 @@
 # Events, networking và quyền sở hữu trạng thái (state ownership / 상태 소유권)
 
-> **Mạch đọc:** Đặt **Events, networking và quyền sở hữu trạng thái (state ownership / 상태 소유권)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론)** sang **yêu cầu (request / 요청) và stale kết quả (result / 결과)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Events, networking và quyền sở hữu trạng thái (state ownership / 상태 소유권)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Yêu cầu (request / 요청) và stale kết quả (result / 결과)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Frontend hành vi (behavior / 동작) thường là kết quả của hai luồng cùng lúc: người dùng (user / 사용자) intent đi qua
 sự kiện (event / 이벤트) hệ thống (system / 시스템) và tài nguyên (resource / 자원)/phản hồi (response / 응답) đi qua mạng (network / 네트워크). Sai lầm phổ biến là coi
@@ -15,8 +15,7 @@ khác nhau; delegation phải giữ mục tiêu (target / 대상), currentTarget
 hành vi (behavior / 동작). khung phần mềm (framework / 프레임워크) sự kiện (event / 이벤트) lớp trừu tượng (abstraction / 추상화) chỉ là lớp dispatch thêm, không xóa
 capture/bubble hoặc bản địa (native / 네이티브) default hành động (action / 동작).
 
-
-> **Chuyển mạch:** Từ **sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론)**, ta sang **yêu cầu (request / 요청) và stale kết quả (result / 결과)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Event semantics quyết định intent và ordering; request/stale result kiểm tra điều gì xảy ra khi response về muộn hoặc bị lặp. Source of truth tiếp theo chọn nơi sở hữu state để tránh race giữa UI và network.
 
 ## Yêu cầu (request / 요청) và stale kết quả (result / 결과)
 
@@ -30,8 +29,7 @@ Thử lại (retry / 재시도), bộ nhớ đệm (cache / 캐시) và optimist
 quay lui (rollback / 롤백)/reconciliation. HTTP status hoặc lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) là đặc tả hợp đồng (contract / 계약) với
 backend, không phải authorization của máy khách (client / 클라이언트).
 
-
-> **Chuyển mạch:** Từ **yêu cầu (request / 요청) và stale kết quả (result / 결과)**, ta sang **Chọn nguồn chuẩn (source of truth / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi stale response đã được mô tả, source of truth biến nó thành policy cụ thể cho cache, optimistic update và rollback. Đây là điều kiện để phần state ownership kết thúc bằng một invariant kiểm tra được.
 
 ## Chọn nguồn chuẩn (source of truth / 정본)
 
@@ -43,4 +41,4 @@ Chi tiết JS async nằm ở [JavaScript intermediate](../javascript/javascript
 Đặc tả API (API contract / API 계약) ở [Backend Core](../../10_backend/backend_core/README.md), còn
 React/WebSquare chỉ mô tả cách họ tổ chức quyền sở hữu (ownership / 소유권) trong khung phần mềm (framework / 프레임워크).
 
-> **Bàn giao:** Sau **Chọn nguồn chuẩn (source of truth / 정본)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 web platform model](./00_web_platform_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Chọn nguồn chuẩn (source of truth / 정본)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

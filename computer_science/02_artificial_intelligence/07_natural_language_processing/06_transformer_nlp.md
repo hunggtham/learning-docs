@@ -1,7 +1,6 @@
 # Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation
 
-> **Mạch đọc:** Đặt **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Encoder-Only NLP** sang **Decoder-Only NLP**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Encoder-Only NLP** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Decoder-Only NLP** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Transformer kiến trúc (architecture / 아키텍처) là general cơ chế (mechanism / 메커니즘); NLP biến cơ chế (mechanism / 메커니즘) đó thành các mô hình (model / 모델) families khác nhau bằng **masking, pretraining mục tiêu (objective / 목표), pooling/head và fine-tuning chiến lược (strategy / 전략)**. BERT, GPT và T5 không chỉ khác tên — chúng encode thông tin (information / 정보) luồng (flow / 흐름) khác nhau.
 
@@ -21,6 +20,8 @@ Biểu diễn (representation / 표현) tốt cho:
 
 Encoder-only không naturally generate long autoregressive văn bản (text / 텍스트), vì huấn luyện (training / 학습)/thông tin (information / 정보) luồng (flow / 흐름) không nhân quả (causal / 인과적).
 
+> **Chuyển mạch:** Trong **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Decoder-Only NLP** tiếp nhận điểm tựa từ **Encoder-Only NLP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Encoder–Decoder NLP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Decoder-Only NLP
 
 Nhân quả (causal / 인과적) mask:
@@ -35,6 +36,8 @@ This flexibility scales naturally into LLM/instruction following.
 
 For pure classification, decoder mô hình (model / 모델) may be compute-inefficient compared with smaller encoder but unified triển khai (deployment / 배포) can justify it.
 
+> **Chuyển mạch:** Ở chặng này của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Encoder–Decoder NLP** tiếp nhận điểm tựa từ **Decoder-Only NLP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pretraining mục tiêu (objective / 목표) Shapes năng lực (capability / 역량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Encoder–Decoder NLP
 
 Encoder reads full nguồn (source / 소스) bidirectionally; decoder generates mục tiêu (target / 대상) causally with cross-attention.
@@ -47,6 +50,8 @@ Natural for:
 - conditional generation.
 
 T5/BART families show strong text-to-text paradigm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Pretraining mục tiêu (objective / 목표) Shapes năng lực (capability / 역량)** tiếp nhận điểm tựa từ **Encoder–Decoder NLP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fine-Tuning for Classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pretraining mục tiêu (objective / 목표) Shapes năng lực (capability / 역량)
 
@@ -61,6 +66,8 @@ Denoising seq2seq rewards reconstruct entire văn bản (text / 텍스트) from 
 Contrastive objectives reward similarity hình học (geometry / 기하학).
 
 Do not infer năng lực (capability / 역량) solely from kiến trúc (architecture / 아키텍처).
+
+> **Chuyển mạch:** Trong **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Fine-Tuning for Classification** tiếp nhận điểm tựa từ **Pretraining mục tiêu (objective / 목표) Shapes năng lực (capability / 역량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị từ (token / 토큰) Classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fine-Tuning for Classification
 
@@ -80,6 +87,8 @@ Fine-tuning updates all/partial encoder + head.
 
 Small dataset risks overfit/catastrophic forgetting; lower LR, regularization, adapters can help.
 
+> **Chuyển mạch:** Ở chặng này của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Đơn vị từ (token / 토큰) Classification** tiếp nhận điểm tựa từ **Fine-Tuning for Classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Extractive Question Answering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đơn vị từ (token / 토큰) Classification
 
 NER/POS tagging uses per-token hidden trạng thái (state / 상태):
@@ -92,6 +101,8 @@ Subword complication: one word may split multiple pieces. Labeling chiến lư�
 
 Metrics should reconstruct word/thực thể (entity / 엔터티) spans correctly.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Extractive Question Answering** tiếp nhận điểm tựa từ **Đơn vị từ (token / 토큰) Classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Natural ngôn ngữ (language / 언어) suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Extractive Question Answering
 
 Given `[question ; context]`, encoder outputs đơn vị từ (token / 토큰) states. Two heads predict start/end positions:
@@ -102,11 +113,15 @@ P(start=i),\qquad P(end=j)
 
 Answer constrained to span in ngữ cảnh (context / 맥락), reducing free-form hallucination but cannot answer if answer absent unless no-answer modeled.
 
+> **Chuyển mạch:** Trong **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Natural ngôn ngữ (language / 언어) suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Extractive Question Answering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sentence Pair Cross-Encoding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Natural ngôn ngữ (language / 언어) suy luận (inference / 추론)
 
 Đầu vào (input / 입력) premise+hypothesis, classify entailment/contradiction/neutral.
 
 NLI datasets useful for ngữ nghĩa (semantic / 의미적) lập luận (reasoning / 추론) but các mô hình (models / 모델들) may exploit annotation artifacts. High benchmark score does not prove robust logical suy luận (inference / 추론).
+
+> **Chuyển mạch:** Ở chặng này của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Sentence Pair Cross-Encoding** tiếp nhận điểm tựa từ **Natural ngôn ngữ (language / 언어) suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt-Based Fine-Tuning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sentence Pair Cross-Encoding
 
@@ -120,6 +135,8 @@ joint self-attention lets every đơn vị từ (token / 토큰) pair interact, 
 
 Bi-encoder vs cross-encoder sự đánh đổi (trade-off / 트레이드오프) becomes central retrieval kiến trúc (architecture / 아키텍처).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Prompt-Based Fine-Tuning** tiếp nhận điểm tựa từ **Sentence Pair Cross-Encoding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameter-Efficient Fine-Tuning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prompt-Based Fine-Tuning
 
 Instead of classification head, reformulate tác vụ (task / 작업) as ngôn ngữ (language / 언어) prediction:
@@ -132,6 +149,8 @@ or generation.
 
 Prompting aligns downstream tác vụ (task / 작업) with pretraining mục tiêu (objective / 목표), useful few-shot regimes. Verbalizer choice can độ lệch (bias / 편향) results.
 
+> **Chuyển mạch:** Trong **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Parameter-Efficient Fine-Tuning** tiếp nhận điểm tựa từ **Prompt-Based Fine-Tuning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Long Documents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Parameter-Efficient Fine-Tuning
 
 Rather than cập nhật (update / 업데이트) all weights:
@@ -142,6 +161,8 @@ Rather than cập nhật (update / 업데이트) all weights:
 - bias-only methods cập nhật (update / 업데이트) subset.
 
 Benefits: bộ nhớ (memory / 메모리)/lưu trữ (storage / 저장소), multi-tenant specialization and reduced forgetting. sự đánh đổi (trade-off / 트레이드오프) can be lower ceiling/task-specific quirks.
+
+> **Chuyển mạch:** Ở chặng này của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Long Documents** tiếp nhận điểm tựa từ **Parameter-Efficient Fine-Tuning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Domain-Specific NLP các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Long Documents
 
@@ -155,17 +176,23 @@ Vanilla Transformer ngữ cảnh (context / 맥락) finite/quadratic. Strategies
 
 Tác vụ (task / 작업) determines whether cục bộ (local / 로컬) chunking loses discourse quan hệ (relation / 관계).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Domain-Specific NLP các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Long Documents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multilingual Transformer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Domain-Specific NLP các mô hình (models / 모델들)
 
 Biomedical/legal/financial corpora contain vocabulary/style/entities not well represented general các mô hình (models / 모델들). Continued pretraining on lĩnh vực (domain / 도메인) corpus then tác vụ (task / 작업) fine-tuning can improve.
 
 But lĩnh vực (domain / 도메인) pretraining needs chất lượng (quality / 품질)/copyright/privacy controls and can shift general năng lực (capability / 역량).
 
+> **Chuyển mạch:** Trong **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Multilingual Transformer** tiếp nhận điểm tựa từ **Domain-Specific NLP các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distillation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Multilingual Transformer
 
 Dùng chung (shared / 공유) tokenizer + parameters across languages enables transfer. High-resource languages may dominate sức chứa (capacity / 용량); scripts/đơn vị từ (token / 토큰) efficiency and corpus balance matter.
 
 Cross-lingual transfer works because dùng chung (shared / 공유) representations align statistical structures, but hiệu năng (performance / 성능) uneven. Evaluate each ngôn ngữ (language / 언어), especially Korean/Vietnamese mục tiêu (target / 대상) use.
+
+> **Chuyển mạch:** Ở chặng này của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Distillation** tiếp nhận điểm tựa từ **Multilingual Transformer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quantization-aware NLP Preview** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Distillation
 
@@ -175,11 +202,15 @@ Goal reduce độ trễ (latency / 지연 시간)/bộ nhớ (memory / 메모리
 
 Distillation will reappear in triển khai (deployment / 배포)/suy luận (inference / 추론) tầng (layer / 계층).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Quantization-aware NLP Preview** tiếp nhận điểm tựa từ **Distillation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quantization-aware NLP Preview
 
 Suy luận (inference / 추론) can quantize weights/activations. Some NLP các mô hình (models / 모델들) tolerate INT8/4-bit well; sensitive layers/outliers may require mixed precision/calibration.
 
 Mô hình (model / 모델) compression is hệ thống (system / 시스템) ràng buộc (constraint / 제약조건), not separate from NLP triển khai (deployment / 배포).
+
+> **Chuyển mạch:** Trong **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Quantization-aware NLP Preview** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -193,6 +224,8 @@ Transformer mechanism
 + adaptation method
 = NLP model behavior
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -212,6 +245,10 @@ Small dữ liệu (data / 데이터)/multi-task/serving các ràng buộc (const
 
 Cross-lingual alignment is imperfect and data-dependent.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Transformer architecture](../06_deep_learning_architectures/05_transformer.md), [Seq2Seq NLP](./05_sequence_to_sequence_nlp.md), and next [Information Extraction](./07_information_extraction.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

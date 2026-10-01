@@ -1,7 +1,6 @@
 # CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)
 
-> **Mạch đọc:** Đọc **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy ước thuật ngữ Việt–Anh** sang **1. thuộc tính (property / 속성) / cú pháp (syntax / 문법)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy ước thuật ngữ Việt–Anh** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1. thuộc tính (property / 속성) / cú pháp (syntax / 문법)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Mục tiêu: đây không phải là danh sách thuộc tính (property / 속성) để học thuộc. Tài liệu được tổ chức theo **mô hình tư duy (mental model / 사고 모델) của trình duyệt (browser / 브라우저)**, sau đó mới đến thuộc tính (property / 속성), bố cục (layout / 레이아웃), responsive, kiến trúc (architecture / 아키텍처) và CSS hiện đại.
 > Nếu đọc + tự mã (code / 코드) lại toàn bộ ví dụ + làm các bài tập cuối mỗi phần, bạn sẽ có nền tảng CSS đủ để làm môi trường vận hành (production / 운영 환경) frontend ở mức cấp cao (senior / 시니어).
@@ -19,8 +18,6 @@
 
 Trong tài liệu này, thuật ngữ chuyên môn được ưu tiên diễn đạt bằng tiếng Việt tự nhiên và giữ thuật ngữ gốc bên cạnh để dễ đối chiếu. Ví dụ: **cơ chế phân tầng (cascade)**, **độ đặc hiệu (specificity)**, **kế thừa (inheritance)**, **mô hình hộp (box model / 박스 모델)**, **luồng bố cục thông thường (normal flow / 일반 흐름)**, **ngữ cảnh định dạng (formatting context / 서식 컨텍스트)**, **khối chứa tham chiếu (containing block / 컨테이닝 블록)**, **định cỡ nội tại (intrinsic sizing / 내재 크기 결정)** và **ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)**. Tên thuộc tính (property / 속성), giá trị (value / 값), selector, at-rule và API khi xuất hiện dưới dạng mã vẫn được giữ nguyên để không làm sai cú pháp.
 
-
-
 # Cách đọc tài liệu chuẩn gốc (canonical / 정본)
 
 Mỗi nhóm kiến thức quan trọng được đọc theo 4 tầng tư duy:
@@ -32,6 +29,8 @@ Property / Syntax
 → Design / Architecture Pattern
 ```
 
+> **Chuyển mạch:** Thuật ngữ và syntax xác định cách đọc một declaration; CSS idiom tiếp theo cho thấy declaration được nhóm, cascade và tổ chức thành pattern bảo trì được thế nào.
+
 ## 1. thuộc tính (property / 속성) / cú pháp (syntax / 문법)
 
 Đây là tầng thấp nhất: thuộc tính (property / 속성) làm gì, nhận giá trị (value / 값) nào, computed hành vi (behavior / 동작) ra sao.
@@ -42,6 +41,8 @@ Ví dụ:
 display: flex;
 gap: 1rem;
 ```
+
+> **Chuyển mạch:** Property và syntax là primitives; CSS idiom tiếp theo tổ chức chúng thành pattern dễ đọc, dễ cascade và dễ bảo trì.
 
 ## 2. CSS lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)
 
@@ -57,6 +58,8 @@ Ví dụ:
 ```
 
 Đây là idiom **fluid centered bộ chứa (container / 컨테이너)**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **3. Coding / mẫu lập trình (programming pattern / 프로그래밍 패턴)** tiếp nhận điểm tựa từ **2. CSS lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Coding / mẫu lập trình (programming pattern / 프로그래밍 패턴)
 
@@ -76,6 +79,8 @@ Dùng cho:
 - avatar + content,
 - icon + văn bản (text / 텍스트),
 - thumbnail + description.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **3. Coding / mẫu lập trình (programming pattern / 프로그래밍 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)
 
@@ -137,25 +142,37 @@ selector matching
 
 Khi CSS “không chạy”, hãy truy theo đúng trục này thay vì đổi thuộc tính (property / 속성) ngẫu nhiên. Ví dụ `.card { width: 100% }` có thể không cho kết quả mong muốn vì bộ chọn (selector) không match, quy tắc (rule / 규칙) ở tầng (layer / 계층) khác thắng, percentage resolve theo khối chứa tham chiếu (containing block / 컨테이닝 블록) khác, phần tử Flex (flex item) bị kích thước tối thiểu tự động (automatic minimum size) chặn co, hoặc parent tạo overflow/ngữ cảnh định dạng (formatting context / 서식 컨텍스트) khác với giả định (assumption / 가정). Thêm `!important` chỉ giải quyết một nhánh rất nhỏ của cây nguyên nhân.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4. CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴)** xác định đầu vào; **cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau
 
 độ đặc hiệu (specificity) không phải luật đầu tiên của CSS. cơ chế phân tầng (cascade) trước tiên xét relevance, nguồn và mức quan trọng (origin/importance) và lớp phân tầng (cascade layer). độ đặc hiệu (specificity) chỉ được so giữa những khai báo (declaration) vẫn còn cạnh tranh trong cùng ngữ cảnh (context / 맥락) precedence. Nếu độ đặc hiệu (specificity) bằng nhau, `@scope` có thể đưa scoping proximity vào quyết định; thứ tự nguồn (source order) là tie-breaker cuối. Vì thế kiến trúc (architecture / 아키텍처) với `@layer`, bộ chọn (selector) nhẹ và thành phần (component / 컴포넌트) ranh giới (boundary / 경계) thường bền hơn cuộc chiến độ đặc hiệu (specificity war).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **cơ chế phân tầng (cascade) trước, độ đặc hiệu (specificity) sau** xác định đầu vào; **kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”
 
 Một `color` trên parent thường truyền xuống child vì `color` là inherited thuộc tính (property / 속성); `padding` thì không. Nếu child có quy tắc (rule / 규칙) trực tiếp mục tiêu (target / 대상) nó, direct giá trị (value / 값) thắng inherited giá trị (value / 값) bất kể bộ chọn (selector) của parent mạnh đến đâu. Khi gỡ lỗi (debug / 디버그) typography, custom thuộc tính (property / 속성) hoặc theme, hãy luôn phân biệt khai báo (declaration) thắng trên chính element với giá trị (value / 값) inherited từ ancestor.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** tiếp nhận điểm tựa từ **kế thừa (inheritance) không phải “độ đặc hiệu (specificity) của parent truyền xuống con”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)
 
 `content`, `padding`, `border`, `margin` chỉ mô tả box. Cách box được đặt phụ thuộc ngữ cảnh định dạng (formatting context / 서식 컨텍스트). ngữ cảnh định dạng khối (block formatting context) có rules về khối (block / 블록) luồng (flow / 흐름), floats và margin tương tác (interaction / 상호작용); ngữ cảnh định dạng nội dòng (inline formatting context) tạo các hộp dòng (line boxes) và đường cơ sở (baseline); Flexbox/Grid chạy sizing/placement thuật toán (algorithm / 알고리즘) riêng. Đây là lý do cùng `width`, `margin:auto` hay alignment thuộc tính (property / 속성) có thể hành xử khác ở các ngữ cảnh (context / 맥락) khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mô hình hộp (box model / 박스 모델) phải được đặt trong ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** xác định đầu vào; **Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning
 
 Trước `absolute`, `fixed`, `sticky`, cần hiểu luồng bố cục thông thường (normal flow / 일반 흐름). `position: relative` vẫn giữ slot trong luồng (flow / 흐름) rồi offset visual box. `absolute` rời luồng bố cục thông thường (normal flow / 일반 흐름) và tìm khối chứa tham chiếu (containing block / 컨테이닝 블록). `fixed` thường liên hệ vùng nhìn (viewport)/top-level containing ngữ cảnh (context / 맥락). `sticky` vẫn tham gia luồng (flow / 흐름) nhưng bị ràng buộc bởi vùng chứa cuộn (scroll container), inset và scroll phạm vi (range / 범위). Khi positioning sai, câu hỏi đúng là “khối chứa tham chiếu (containing block / 컨테이닝 블록)/vùng chứa cuộn (scroll container) là ai?” trước khi hỏi “top bao nhiêu px?”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Luồng bố cục thông thường (normal flow / 일반 흐름) là đường cơ sở (baseline) của positioning** xác định đầu vào; **Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)
 
 truy vấn môi trường (media query) bật/tắt các khai báo (declarations) theo vùng nhìn (viewport), đầu vào (input / 입력) năng lực (capability / 역량), motion preference hoặc color scheme. truy vấn vùng chứa (container query) làm điều tương tự nhưng truy vấn (query / 쿼리) bộ chứa (container / 컨테이너) thay vì vùng nhìn (viewport). Bên trong điều kiện đó, bố cục (layout / 레이아웃) vẫn do luồng bố cục thông thường (normal flow / 일반 흐름), Flexbox, Grid và sizing algorithms thực thi. Responsive tốt thường bắt đầu bằng fluid/intrinsic các ràng buộc (constraints / 제약조건들), rồi điểm ngắt (breakpoint) chỉ xuất hiện ở nơi hành vi (behavior / 동작) thực sự cần đổi.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Responsive chỉ đổi điều kiện; bộ máy bố cục (layout engine) vẫn là CSS bố cục (layout / 레이아웃)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thứ tự ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)
 
@@ -163,6 +180,7 @@ Sau bố cục (layout / 레이아웃), trình duyệt (browser / 브라우저) 
 
 Khi gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운영 환경), dấu vết (trace / 추적) chuẩn là: bộ chọn (selector) match → khai báo (declaration) valid → cơ chế phân tầng (cascade)/tầng (layer / 계층)/độ đặc hiệu (specificity) → computed giá trị (value / 값) → kế thừa (inheritance)/defaulting → ngữ cảnh định dạng (formatting context / 서식 컨텍스트)/khối chứa tham chiếu (containing block / 컨테이닝 블록) → intrinsic/min/max/overflow → stacking/paint/composite. Đây là xương sống nối mọi chapter còn lại.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Thứ tự ưu tiên** gom các mảnh từ **Rendering/hiệu năng (performance / 성능) là phần cuối của cùng mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델) quan trọng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự ưu tiên
 
@@ -177,6 +195,8 @@ Khi gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운�
 9. **Custom các thuộc tính (properties) → đơn vị từ (token / 토큰) thiết kế (design tokens)**
 10. **kiến trúc (architecture / 아키텍처) → khả năng tiếp cận (accessibility / 접근성) → hiệu năng (performance / 성능) → gỡ lỗi (debugging)**
 11. **CSS hiện đại:** lồng cú pháp (nesting), các lớp phân tầng (cascade layers), `@scope`, `:has()`, Subgrid, định vị theo điểm neo (anchor positioning), hoạt ảnh điều khiển bằng cuộn (scroll-driven animations), chuyển cảnh giao diện (view transitions), `@property`, hiện đại (modern / 현대적) color.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mô hình tư duy (mental model / 사고 모델) quan trọng nhất** gom các mảnh từ **Thứ tự ưu tiên** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1.1 quy tắc (rule / 규칙) cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) quan trọng nhất
 
@@ -199,6 +219,8 @@ Selector có match không?
 ---
 
 # 1. CSS cú pháp (syntax / 문법) & cách trình duyệt (browser / 브라우저) áp dụng CSS [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.1 quy tắc (rule / 규칙) cơ bản** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) quan trọng nhất** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **1.2 Cách đưa CSS vào HTML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1.1 quy tắc (rule / 규칙) cơ bản
 
@@ -225,6 +247,8 @@ Nếu một khai báo (declaration) sai, trình duyệt (browser / 브라우저)
   padding: abc; /* invalid → ignored */
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.2 Cách đưa CSS vào HTML** tiếp nhận điểm tựa từ **1.1 quy tắc (rule / 규칙) cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.3 Comment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1.2 Cách đưa CSS vào HTML
 
@@ -259,6 +283,8 @@ Inline style có độ đặc hiệu (specificity) cao và khó maintain. Chỉ 
 - email HTML,
 - khung phần mềm (framework / 프레임워크)/thời gian chạy (runtime / 런타임) buộc phải dùng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.3 Comment** tiếp nhận điểm tựa từ **1.2 Cách đưa CSS vào HTML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.4 Shorthand và longhand** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1.3 Comment
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -268,6 +294,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```
 
 CSS không hỗ trợ `//` như JavaScript/SCSS.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1.4 Shorthand và longhand** tiếp nhận điểm tựa từ **1.3 Comment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1.4 Shorthand và longhand
 
@@ -311,6 +339,8 @@ margin: 10px 20px 30px 40px; /* top | right | bottom | left */
 ---
 
 # 2. các bộ chọn (selectors) [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)** tiếp nhận điểm tựa từ **1.4 Shorthand và longhand** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Descendant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)
 
@@ -384,7 +414,6 @@ bộ chọn (selector) tốt thường:
 - đủ yếu để override,
 - không encode quá nhiều DOM cấu trúc (structure / 구조),
 - phản ánh role/trạng thái (state / 상태) thay vì vị trí ngẫu nhiên.
-
 
 # 2.1 Universal bộ chọn (selector)
 
@@ -485,6 +514,8 @@ a[href$=".PDF" i] {}
 
 # 3. Combinators [cốt lõi (core / 핵심)]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Descendant** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — các bộ chọn (selectors)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Child >** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Descendant
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -494,6 +525,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```
 
 Match `p` ở bất kỳ độ sâu (depth / 깊이) nào trong `.card`.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Child >** tiếp nhận điểm tựa từ **Descendant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adjacent sibling +** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Child `>`
 
@@ -505,6 +538,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 Chỉ match con trực tiếp.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Adjacent sibling +** tiếp nhận điểm tựa từ **Child >** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **General sibling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Adjacent sibling `+`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -514,6 +549,8 @@ label + input {}
 ```
 
 Match `input` ngay sau `label`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **General sibling** tiếp nhận điểm tựa từ **Adjacent sibling +** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.1 tương tác (interaction / 상호작용) các trạng thái (states)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## General sibling `~`
 
@@ -542,6 +579,8 @@ Nên:
 ---
 
 # 4. các lớp giả (pseudo-classes) [cốt lõi (core / 핵심) → ADV]
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.1 tương tác (interaction / 상호작용) các trạng thái (states)** tiếp nhận điểm tựa từ **General sibling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.2 Form các trạng thái (states)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4.1 tương tác (interaction / 상호작용) các trạng thái (states)
 
@@ -580,6 +619,8 @@ Không nên:
 
 vì phá keyboard khả năng tiếp cận (accessibility / 접근성).
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.2 Form các trạng thái (states)** tiếp nhận điểm tựa từ **4.1 tương tác (interaction / 상호작용) các trạng thái (states)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.3 Structural các bộ chọn (selectors)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4.2 Form các trạng thái (states)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -603,6 +644,8 @@ input:invalid:not(:placeholder-shown) {
   border-color: crimson;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.3 Structural các bộ chọn (selectors)** tiếp nhận điểm tựa từ **4.2 Form các trạng thái (states)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.4 :not()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4.3 Structural các bộ chọn (selectors)
 
@@ -638,6 +681,8 @@ Công thức `an+b`:
 n+4     → từ phần tử 4 trở đi
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.4 :not()** tiếp nhận điểm tựa từ **4.3 Structural các bộ chọn (selectors)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.5 :is() [ADV]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4.4 `:not()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -651,6 +696,8 @@ Có thể nhận bộ chọn (selector) danh sách (list / 목록):
 ```css
 input:not([type="checkbox"], [type="radio"]) {}
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.5 :is() [ADV]** tiếp nhận điểm tựa từ **4.4 :not()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.6 :where() [ADV]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4.5 `:is()` [ADV]
 
@@ -676,6 +723,8 @@ Hữu ích với bộ chọn (selector) dài:
 
 độ đặc hiệu (specificity) của `:is()` lấy độ đặc hiệu (specificity) cao nhất trong arguments.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.6 :where() [ADV]** tiếp nhận điểm tựa từ **4.5 :is() [ADV]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.7 :has() [ADV/hiện đại (modern / 현대적)]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4.6 `:where()` [ADV]
 
 Cú pháp (syntax / 문법) tương tự `:is()` nhưng **độ đặc hiệu (specificity) = 0**.
@@ -687,6 +736,8 @@ Cú pháp (syntax / 문법) tương tự `:is()` nhưng **độ đặc hiệu (s
 ```
 
 Rất hữu ích khi xây cơ sở (base / 기반)/theme dễ override.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4.7 :has() [ADV/hiện đại (modern / 현대적)]** tiếp nhận điểm tựa từ **4.6 :where() [ADV]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **::before / ::after** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4.7 `:has()` [ADV/hiện đại (modern / 현대적)]
 
@@ -733,6 +784,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ::file-selector-button
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::before / ::after** tiếp nhận điểm tựa từ **4.7 :has() [ADV/hiện đại (modern / 현대적)]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **::marker** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `::before` / `::after`
 
 Cần `content`:
@@ -756,6 +809,8 @@ Decoration:
 
 Không dùng phần tử giả (pseudo-element) cho content quan trọng về ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::marker** tiếp nhận điểm tựa từ **::before / ::after** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **::selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `::marker`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -766,6 +821,8 @@ li::marker {
   font-weight: 700;
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::selection** tiếp nhận điểm tựa từ **::marker** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `::selection`
 
@@ -781,6 +838,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 6. cơ chế phân tầng (cascade) — nền tảng sống còn của CSS [cốt lõi (core / 핵심)/ADV]
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **::selection** xác định đầu vào; **Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6.1 độ đặc hiệu (specificity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)
 
@@ -852,7 +911,6 @@ Mục tiêu:
 
 Nếu phải hỏi "bộ chọn (selector) nào mạnh hơn" quá thường xuyên, vấn đề thường nằm ở kiến trúc (architecture / 아키텍처) chứ không phải thiếu kiến thức độ đặc hiệu (specificity).
 
-
 cơ chế phân tầng (cascade) quyết định khai báo (declaration) nào thắng.
 
 Các yếu tố chính:
@@ -862,6 +920,8 @@ Các yếu tố chính:
 3. độ đặc hiệu (specificity).
 4. độ gần phạm vi (scope proximity) trong scoped CSS.
 5. thứ tự nguồn (source order).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — cơ chế phân tầng (cascade)** xác định đầu vào; **6.1 độ đặc hiệu (specificity)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6.2 thứ tự nguồn (source order)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.1 độ đặc hiệu (specificity)
 
@@ -891,6 +951,8 @@ cao hơn:
 .card p {}
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6.1 độ đặc hiệu (specificity)** nêu điều cần giải thích; **6.2 thứ tự nguồn (source order)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6.3 !important** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6.2 thứ tự nguồn (source order)
 
 Nếu độ đặc hiệu (specificity) bằng nhau, quy tắc (rule / 규칙) viết sau thắng:
@@ -899,6 +961,8 @@ Nếu độ đặc hiệu (specificity) bằng nhau, quy tắc (rule / 규칙) v
 .btn { color: blue; }
 .btn { color: red; } /* thắng */
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6.2 thứ tự nguồn (source order)** nêu điều cần giải thích; **6.3 !important** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6.4 toàn cục (global / 전역) keywords** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.3 `!important`
 
@@ -914,6 +978,8 @@ Chỉ hợp lý khi:
 - tiện ích (utility) API có chủ đích,
 - override bên ngoài (external / 외부) styles khó kiểm soát,
 - khả năng tiếp cận (accessibility / 접근성)/người dùng (user / 사용자) override đặc biệt.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6.4 toàn cục (global / 전역) keywords** tiếp nhận điểm tựa từ **6.3 !important** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Absolute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.4 toàn cục (global / 전역) keywords
 
@@ -1048,6 +1114,8 @@ Con thường tự kế thừa.
 
 # 9.1 Length units
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Absolute** tiếp nhận điểm tựa từ **6.4 toàn cục (global / 전역) keywords** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Font-relative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Absolute
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1062,6 +1130,8 @@ pc
 ```
 
 Web UI gần như chủ yếu dùng `px`.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Font-relative** tiếp nhận điểm tựa từ **Absolute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **vùng nhìn (viewport) units** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Font-relative
 
@@ -1101,6 +1171,8 @@ Hữu ích khi thành phần (component / 컴포넌트) cần quy mô (scale / �
 
 ⚠ nested `em` cho `font-size` có thể compound.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **vùng nhìn (viewport) units** tiếp nhận điểm tựa từ **Font-relative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **truy vấn vùng chứa (container query) units** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## vùng nhìn (viewport) units
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1126,6 +1198,8 @@ Mobile full-screen:
 ```
 
 Thường tốt hơn `100vh` trên mobile trình duyệt (browser / 브라우저) có thanh address thay đổi kích thước.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **truy vấn vùng chứa (container query) units** tiếp nhận điểm tựa từ **vùng nhìn (viewport) units** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **calc()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## truy vấn vùng chứa (container query) units
 
@@ -1169,6 +1243,8 @@ Percentage padding truyền thống resolve theo inline kích thước (size / �
 
 # 11. CSS Math các hàm (functions) [cốt lõi (core / 핵심)/ADV]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **calc()** tiếp nhận điểm tựa từ **truy vấn vùng chứa (container query) units** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **min()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `calc()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1176,6 +1252,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 width: calc(100% - 2rem);
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **min()** tiếp nhận điểm tựa từ **calc()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **max()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `min()`
 
@@ -1185,6 +1263,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 width: min(100%, 70rem);
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **max()** tiếp nhận điểm tựa từ **min()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **clamp(min, preferred, max)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `max()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -1192,6 +1272,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 padding-inline: max(1rem, 5vw);
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **clamp(min, preferred, max)** tiếp nhận điểm tựa từ **max()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `clamp(min, preferred, max)`
 
@@ -1210,6 +1292,8 @@ Rất hữu ích cho:
 ---
 
 # 12. Custom các thuộc tính (properties) / CSS các biến (variables) [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)** tiếp nhận điểm tựa từ **clamp(min, preferred, max)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)
 
@@ -1276,7 +1360,6 @@ Thành phần (component / 컴포넌트) không cần biết dark/light:
 
 Custom thuộc tính (property / 속성) mạnh nhất khi dùng như **thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약)**, không chỉ thay literal giá trị (value / 값).
 
-
 ```css
 :root {
   --color-primary: #2563eb;
@@ -1295,6 +1378,8 @@ phương án dự phòng (fallback):
 color: var(--text-color, #222);
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Custom các thuộc tính (properties)** xác định đầu vào; **Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **giao diện thành phần (component API)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -1305,6 +1390,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   --text: #fff;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Custom thuộc tính (property / 속성) có cơ chế phân tầng (cascade) + inherit** xác định đầu vào; **giao diện thành phần (component API)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## giao diện thành phần (component API)
 
@@ -1363,6 +1450,8 @@ Descriptors:
 
 # 14. mô hình hộp (box model / 박스 모델) [cốt lõi (core / 핵심)]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)** tiếp nhận điểm tựa từ **giao diện thành phần (component API)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **box-sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)
 
 ### CSS Idiom — Universal border-box
@@ -1408,7 +1497,6 @@ inner box → content flow
 
 Không phải lúc nào cũng cần nhiều wrapper; đây là mô hình tư duy (mental model / 사고 모델) để gỡ lỗi (debug / 디버그).
 
-
 Một box gồm:
 
 ```text
@@ -1417,6 +1505,8 @@ padding
 border
 margin
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **box-sizing** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — mô hình hộp (box model / 박스 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `box-sizing`
 
@@ -1455,6 +1545,8 @@ Toàn cục (global / 전역) best practice:
 ---
 
 # 15. Width / Height / Sizing [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Sizing** tiếp nhận điểm tựa từ **box-sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) các giá trị (values)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — Sizing
 
@@ -1506,7 +1598,6 @@ Ví dụ:
 width: clamp(16rem, 40vw, 32rem);
 ```
 
-
 ```css
 width
 height
@@ -1515,6 +1606,8 @@ min-height
 max-width
 max-height
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Dùng chung (common / 공통) các giá trị (values)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **aspect-ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) các giá trị (values)
 
@@ -1549,6 +1642,8 @@ Thực tế:
   width: fit-content;
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **aspect-ratio** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) các giá trị (values)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **gộp lề (margin collapsing) [ADV]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `aspect-ratio`
 
@@ -1591,6 +1686,8 @@ Center khối (block / 블록) có width:
   margin-inline: auto;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **gộp lề (margin collapsing) [ADV]** tiếp nhận điểm tựa từ **aspect-ratio** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## gộp lề (margin collapsing) [ADV]
 
@@ -1695,6 +1792,8 @@ Khác border:
 
 # 20. Display & ngữ cảnh định dạng (formatting context / 서식 컨텍스트) [cốt lõi (core / 핵심)/ADV]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** tiếp nhận điểm tựa từ **gộp lề (margin collapsing) [ADV]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **display: block** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)
 
 ### CSS Idiom — `flow-root` để isolate khối (block / 블록) luồng (flow / 흐름)
@@ -1737,7 +1836,6 @@ Thành phần (component / 컴포넌트) phức tạp nên chủ động tạo r
 
 Điều này giảm tác dụng phụ (side effect) từ bên ngoài.
 
-
 Thuộc tính (property / 속성):
 
 ```css
@@ -1761,12 +1859,16 @@ table
 list-item
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: block** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — ngữ cảnh định dạng (formatting context / 서식 컨텍스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **display: inline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `display: block`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 - thường chiếm available inline width.
 - bắt đầu dòng mới.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: inline** tiếp nhận điểm tựa từ **display: block** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **inline-block** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `display: inline`
 
@@ -1776,13 +1878,19 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - width/height không hoạt động như block.
 - vertical margin/padding có behavior khác block.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **inline-block** tiếp nhận điểm tựa từ **display: inline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **display: none** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `inline-block`
 
 Inline bên ngoài, block-like sizing bên trong.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: none** tiếp nhận điểm tựa từ **inline-block** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **display: flow-root [ADV]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `display: none`
 
 Loại khỏi bố cục (layout / 레이아웃) và cây khả năng tiếp cận (accessibility tree / 접근성 트리) trong hầu hết trường hợp.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: none** xác định đầu vào; **display: flow-root [ADV]** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **display: contents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `display: flow-root` [ADV]
 
@@ -1796,6 +1904,8 @@ Useful clear float / isolate luồng (flow / 흐름):
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **display: flow-root [ADV]** xác định đầu vào; **display: contents** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **visibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `display: contents`
 
 Box của element biến mất nhưng children vẫn participate bố cục (layout / 레이아웃).
@@ -1805,6 +1915,8 @@ Box của element biến mất nhưng children vẫn participate bố cục (lay
 ---
 
 # 21. Visibility & Opacity
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **visibility** tiếp nhận điểm tựa từ **display: contents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **opacity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `visibility`
 
@@ -1816,6 +1928,8 @@ visibility: hidden;
 ```
 
 `hidden`: giữ bố cục (layout / 레이아웃) không gian (space / 공간) nhưng không paint.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **opacity** tiếp nhận điểm tựa từ **visibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Positioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `opacity`
 
@@ -1849,6 +1963,8 @@ Cấp cao (senior / 시니어) phải hiểu "default hành vi (behavior / 동�
 ---
 
 # 23. Positioning [cốt lõi (core / 핵심)/ADV]
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Positioning** tiếp nhận điểm tựa từ **opacity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **static** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — Positioning
 
@@ -1911,7 +2027,6 @@ scroll-affixed UI → sticky
 top-layer UI → dialog/popover
 ```
 
-
 ```css
 position: static;
 position: relative;
@@ -1930,9 +2045,13 @@ left
 inset
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **static** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Positioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **relative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `static`
 
 Default. Offset không áp dụng.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **relative** tiếp nhận điểm tựa từ **static** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **absolute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `relative`
 
@@ -1951,6 +2070,8 @@ Quan trọng hơn: thường tạo khối chứa tham chiếu (containing block 
   right: 8px;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **absolute** tiếp nhận điểm tựa từ **relative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **fixed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `absolute`
 
@@ -1973,6 +2094,8 @@ bottom: 0;
 left: 0;
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **fixed** tiếp nhận điểm tựa từ **absolute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **sticky** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `fixed`
 
 Thường cố định theo vùng nhìn (viewport).
@@ -1986,6 +2109,8 @@ Thường cố định theo vùng nhìn (viewport).
 ```
 
 ⚠ ancestor có `transform`, `filter`, `perspective`... có thể thay khối chứa tham chiếu (containing block / 컨테이닝 블록) hành vi (behavior / 동작).
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **sticky** tiếp nhận điểm tựa từ **fixed** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Stacking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `sticky`
 
@@ -2021,6 +2146,8 @@ Gỡ lỗi (debug / 디버그) absolute/fixed lỗi phải hỏi:
 ---
 
 # 25. z-index & ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) [cốt lõi (core / 핵심)/ADV]
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Stacking** tiếp nhận điểm tựa từ **sticky** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **hidden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — Stacking
 
@@ -2063,7 +2190,6 @@ Không cho từng thành phần (component / 컴포넌트) tự tạo số `z-in
 ### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
 Khi `z-index` lỗi, gỡ lỗi (debug / 디버그) parent ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) trước khi tăng số.
-
 
 `z-index` không phải toàn cục (global / 전역) number ranking đơn giản.
 
@@ -2128,13 +2254,19 @@ scroll
 auto
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hidden** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Stacking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **clip** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `hidden`
 
 Clip overflow và thường tạo vùng chứa cuộn (scroll container) ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **clip** tiếp nhận điểm tựa từ **hidden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **auto** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `clip`
 
 Clip mà không cung cấp scrolling như `hidden`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **auto** tiếp nhận điểm tựa từ **clip** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **contain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `auto`
 
@@ -2165,6 +2297,8 @@ Multiline line clamp:
 
 # 27. `contain` & `content-visibility` [ADV]
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **contain** tiếp nhận điểm tựa từ **auto** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **content-visibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `contain`
 
 Giới hạn ảnh hưởng của subtree tới bên ngoài.
@@ -2184,6 +2318,8 @@ các giá trị (values) conceptually:
 - combinations / `strict` / `content`
 
 Dùng cẩn thận vì có thể thay sizing/positioning hành vi (behavior / 동작).
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **content-visibility** tiếp nhận điểm tựa từ **contain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Flexbox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `content-visibility`
 
@@ -2208,6 +2344,8 @@ contain-intrinsic-size: auto 500px;
 ---
 
 # 28. Flexbox [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Flexbox** tiếp nhận điểm tựa từ **content-visibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — Flexbox
 
@@ -2279,7 +2417,6 @@ items in a column
 
 Nếu cần điều khiển nhiều rows + columns đồng thời, chuyển mô hình tư duy (mental model / 사고 모델) sang Grid.
 
-
 Flexbox là bố cục (layout / 레이아웃) **1 chiều**: row hoặc column.
 
 ```css
@@ -2287,6 +2424,8 @@ Flexbox là bố cục (layout / 레이아웃) **1 chiều**: row hoặc column.
   display: flex;
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Flexbox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **flex-grow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)
 
@@ -2399,6 +2538,8 @@ column-gap: 2rem;
 
 # 29. phần tử Flex (flex item) các thuộc tính (properties) [cốt lõi (core / 핵심)]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex-grow** tiếp nhận điểm tựa từ **28.1 bộ chứa (container / 컨테이너) các thuộc tính (properties)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **flex-shrink** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `flex-grow`
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -2410,6 +2551,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 ```
 
 Phân chia **positive không gian dư (free space)** theo tỉ lệ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex-shrink** tiếp nhận điểm tựa từ **flex-grow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **flex-basis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `flex-shrink`
 
@@ -2423,6 +2566,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 
 Quyết định item co khi thiếu không gian (space / 공간).
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex-basis** tiếp nhận điểm tựa từ **flex-shrink** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **flex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `flex-basis`
 
 Initial main-size trước grow/shrink.
@@ -2432,6 +2577,8 @@ Initial main-size trước grow/shrink.
   flex-basis: 20rem;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **flex** tiếp nhận điểm tựa từ **flex-basis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **align-self** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `flex`
 
@@ -2456,9 +2603,13 @@ flex: 1;          /* grow */
 flex: 0 0 200px;  /* fixed basis */
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **align-self** tiếp nhận điểm tựa từ **flex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **order** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `align-self`
 
 Override `align-items` cho một item.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **order** tiếp nhận điểm tựa từ **align-self** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Center** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `order`
 
@@ -2503,6 +2654,8 @@ Tương tự vertical flex:
 
 # 31. Flex Patterns
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Center** tiếp nhận điểm tựa từ **order** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Navbar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Center
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -2514,6 +2667,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   justify-content: center;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Navbar** tiếp nhận điểm tựa từ **Center** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Equal cards** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Navbar
 
@@ -2530,6 +2685,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   margin-inline-start: auto;
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Equal cards** tiếp nhận điểm tựa từ **Navbar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Grid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Equal cards
 
@@ -2550,6 +2707,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 32. CSS Grid [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Grid** tiếp nhận điểm tựa từ **Equal cards** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32.1 các dải lưới (grid tracks)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — Grid
 
@@ -2603,7 +2762,6 @@ card matrix
 
 Bạn thiết kế tracks trước rồi đặt content vào.
 
-
 Grid là bố cục (layout / 레이아웃) **2 chiều**.
 
 ```css
@@ -2612,6 +2770,8 @@ Grid là bố cục (layout / 레이아웃) **2 chiều**.
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **32.1 các dải lưới (grid tracks)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Grid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **fr** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32.1 các dải lưới (grid tracks)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -2619,6 +2779,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 ```css
 grid-template-columns: 1fr 1fr 1fr;
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **fr** tiếp nhận điểm tựa từ **32.1 các dải lưới (grid tracks)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **repeat()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `fr`
 
@@ -2630,6 +2792,8 @@ grid-template-columns: 240px 1fr;
 
 Sidebar + content.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **repeat()** tiếp nhận điểm tựa từ **fr** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **minmax()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `repeat()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -2637,6 +2801,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 grid-template-columns: repeat(3, 1fr);
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **minmax()** tiếp nhận điểm tựa từ **repeat()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Responsive grid không truy vấn môi trường (media query)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `minmax()`
 
@@ -2647,6 +2813,8 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 ```
 
 `minmax(0, 1fr)` thường chống intrinsic overflow tốt hơn plain `1fr`.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Responsive grid không truy vấn môi trường (media query)** tiếp nhận điểm tựa từ **minmax()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Subgrid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Responsive grid không truy vấn môi trường (media query)
 
@@ -2791,6 +2959,8 @@ column dense
 
 # 37. Subgrid [ADV/hiện đại (modern / 현대적)]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Subgrid** tiếp nhận điểm tựa từ **Responsive grid không truy vấn môi trường (media query)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Typography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — Subgrid
 
 ### CSS Idiom — Aligned card internals
@@ -2817,7 +2987,6 @@ Parent định nghĩa nhánh học (track / 트랙) hệ thống (system / 시�
 ### Mẫu thiết kế (design pattern / 디자인 패턴) — Nested alignment without duplicated dimensions
 
 Subgrid giảm duplicate bố cục (layout / 레이아웃) constants và giữ alignment xuyên hierarchy.
-
 
 Child grid có thể kế thừa tracks từ parent.
 
@@ -2914,6 +3083,8 @@ Useful cho newspaper/text-heavy layouts.
 
 # 41. Typography [cốt lõi (core / 핵심)]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Typography** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Subgrid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **font-family** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — Typography
 
 ### CSS Idiom — Unitless line-height
@@ -2960,6 +3131,7 @@ Xây một hệ kiểu (type system / 타입 시스템):
 
 Không chọn từng font-size ngẫu nhiên.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-family** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Typography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **font-size** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `font-family`
 
@@ -2986,6 +3158,8 @@ Generic families:
 - `fantasy`
 - `system-ui`
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-size** tiếp nhận điểm tựa từ **font-family** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **font-weight** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `font-size`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3000,6 +3174,8 @@ Fluid:
 font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-weight** tiếp nhận điểm tựa từ **font-size** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **font-style** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `font-weight`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3012,6 +3188,8 @@ bold ≈ 700
 
 biến (variable) font có thể hỗ trợ phạm vi (range / 범위).
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font-style** tiếp nhận điểm tựa từ **font-weight** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **line-height** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `font-style`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3021,6 +3199,8 @@ normal
 italic
 oblique
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **line-height** tiếp nhận điểm tựa từ **font-style** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **font shorthand** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `line-height`
 
@@ -3042,6 +3222,8 @@ h1 {
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **font shorthand** tiếp nhận điểm tựa từ **line-height** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **text-align** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `font` shorthand
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3055,6 +3237,8 @@ font: italic 600 1rem/1.5 Inter, sans-serif;
 ---
 
 # 42. văn bản (text / 텍스트) các thuộc tính (properties) [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-align** tiếp nhận điểm tựa từ **font shorthand** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **text-decoration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `text-align`
 
@@ -3070,6 +3254,8 @@ justify
 ```
 
 Ưu tiên `start/end` cho internationalization.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-decoration** tiếp nhận điểm tựa từ **text-align** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **text-transform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `text-decoration`
 
@@ -3089,6 +3275,8 @@ Sub-properties:
 - `text-decoration-style`
 - `text-decoration-thickness`
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-transform** tiếp nhận điểm tựa từ **text-decoration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **letter-spacing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `text-transform`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3102,6 +3290,8 @@ capitalize
 
 Không dùng CSS uppercase thay cho dữ liệu nếu ngữ nghĩa (semantics / 의미론)/bản sao (copy / 복사) thực sự cần uppercase.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **letter-spacing** tiếp nhận điểm tựa từ **text-transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **word-spacing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `letter-spacing`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3112,9 +3302,13 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **word-spacing** tiếp nhận điểm tựa từ **letter-spacing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **text-indent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `word-spacing`
 
 Điều chỉnh không gian (space / 공간) giữa từ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-indent** tiếp nhận điểm tựa từ **word-spacing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **white-space** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `text-indent`
 
@@ -3123,6 +3317,8 @@ Indent dòng đầu.
 ---
 
 # 43. Wrapping / Breaking [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **white-space** tiếp nhận điểm tựa từ **text-indent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **overflow-wrap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `white-space`
 
@@ -3149,6 +3345,8 @@ Giữ whitespace + newline, không wrap tự nhiên.
 
 Giữ whitespace/newline nhưng cho wrap.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **white-space** xác định đầu vào; **overflow-wrap** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **word-break** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `overflow-wrap`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3158,6 +3356,8 @@ overflow-wrap: anywhere;
 ```
 
 Cho phép break long URL/đơn vị từ (token / 토큰).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **overflow-wrap** xác định đầu vào; **word-break** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **hyphens** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `word-break`
 
@@ -3171,6 +3371,8 @@ keep-all
 
 Cẩn thận `break-all` vì có thể break rất xấu.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hyphens** tiếp nhận điểm tựa từ **word-break** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **text-overflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `hyphens`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3183,6 +3385,8 @@ p {
 
 Cần `lang` đúng trong HTML để trình duyệt (browser / 브라우저) hyphenate tốt.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hyphens** xác định đầu vào; **text-overflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **text-wrap [hiện đại (modern / 현대적)]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `text-overflow`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3192,6 +3396,8 @@ text-overflow: ellipsis;
 ```
 
 Thường đi cùng `overflow:hidden` + `white-space:nowrap`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-overflow** xác định đầu vào; **text-wrap [hiện đại (modern / 현대적)]** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mẫu (pattern / 패턴) notes — Color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `text-wrap` [hiện đại (modern / 현대적)]
 
@@ -3257,6 +3463,8 @@ Hiệu năng (performance / 성능): ưu tiên WOFF2, subset khi cần, không t
 
 # 45. Color [cốt lõi (core / 핵심) → hiện đại (modern / 현대적)]
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Color** tiếp nhận điểm tựa từ **text-wrap [hiện đại (modern / 현대적)]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Keywords** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — Color
 
 ### CSS Idiom — `currentColor`
@@ -3293,6 +3501,7 @@ blue-600
 
 Oklch phù hợp khi cần tạo palette có lightness dễ kiểm soát hơn HSL.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Keywords** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Keywords
 
@@ -3312,6 +3521,8 @@ color: currentColor;
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hex** tiếp nhận điểm tựa từ **Keywords** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **rgb()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hex
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3324,6 +3535,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **rgb()** tiếp nhận điểm tựa từ **Hex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **hsl()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `rgb()`
 
 Hiện đại (modern / 현대적) cú pháp (syntax / 문법):
@@ -3332,6 +3545,8 @@ Hiện đại (modern / 현대적) cú pháp (syntax / 문법):
 color: rgb(255 0 0 / 80%);
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **hsl()** tiếp nhận điểm tựa từ **rgb()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **oklch() [hiện đại (modern / 현대적)]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `hsl()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3339,6 +3554,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 color: hsl(220 90% 56%);
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **oklch() [hiện đại (modern / 현대적)]** tiếp nhận điểm tựa từ **hsl()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relative colors [hiện đại (modern / 현대적)]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `oklch()` [hiện đại (modern / 현대적)]
 
@@ -3356,6 +3573,8 @@ Oklch hữu ích cho hệ thống thiết kế (design system) vì lightness g�
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Relative colors [hiện đại (modern / 현대적)]** tiếp nhận điểm tựa từ **oklch() [hiện đại (modern / 현대적)]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **color-mix()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Relative colors [hiện đại (modern / 현대적)]
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3365,6 +3584,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   oklch(from var(--brand) calc(l - 0.08) c h);
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **color-mix()** tiếp nhận điểm tựa từ **Relative colors [hiện đại (modern / 현대적)]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **light-dark()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `color-mix()`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3373,6 +3594,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 background:
   color-mix(in oklab, var(--brand) 20%, white);
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **light-dark()** tiếp nhận điểm tựa từ **color-mix()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **background-size** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `light-dark()`
 
@@ -3415,6 +3638,8 @@ Example:
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **background-size** tiếp nhận điểm tựa từ **light-dark()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `background-size`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3434,6 +3659,8 @@ contain
 
 # 47. Gradients [cốt lõi (core / 핵심)/ADV]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Tuyến tính (linear / 선형)** tiếp nhận điểm tựa từ **background-size** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Radial** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tuyến tính (linear / 선형)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3443,6 +3670,8 @@ background:
   linear-gradient(135deg, #2563eb, #7c3aed);
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Radial** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Radial
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3451,6 +3680,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 background:
   radial-gradient(circle at top, white, #ddd);
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Conic** tiếp nhận điểm tựa từ **Radial** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **box-shadow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Conic
 
@@ -3469,6 +3700,8 @@ Useful:
 ---
 
 # 48. Shadows [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **box-shadow** tiếp nhận điểm tựa từ **Conic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **text-shadow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `box-shadow`
 
@@ -3492,6 +3725,8 @@ box-shadow:
   0 8px 24px rgb(0 0 0 / .10);
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **text-shadow** tiếp nhận điểm tựa từ **box-shadow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **object-fit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `text-shadow`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3503,6 +3738,8 @@ text-shadow: 0 1px 2px rgb(0 0 0 / .3);
 ---
 
 # 49. đối tượng (object / 객체) sizing: images/video [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **object-fit** tiếp nhận điểm tựa từ **text-shadow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **object-position** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `object-fit`
 
@@ -3523,6 +3760,8 @@ scale-down
   object-fit: cover;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **object-position** tiếp nhận điểm tựa từ **object-fit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **backdrop-filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `object-position`
 
@@ -3571,6 +3810,8 @@ các hàm (functions):
 - `saturate()`
 - `sepia()`
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **backdrop-filter** tiếp nhận điểm tựa từ **object-position** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `backdrop-filter`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3608,6 +3849,8 @@ Dùng chung (common / 공통) blend modes:
 
 # 53. thuộc tính lô-gic (logic / 논리) (logical properties) [cốt lõi (core / 핵심)/ADV]
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)** tiếp nhận điểm tựa từ **backdrop-filter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)
 
 ### CSS Idiom — Inline centering
@@ -3639,7 +3882,6 @@ border-inline-start: 1px solid;
 ### Mẫu thiết kế (design pattern / 디자인 패턴) — Direction-agnostic UI
 
 Thành phần (component / 컴포넌트) tránh hard-code LTR các giả định (assumptions / 가정들) để hỗ trợ RTL/localization tốt hơn.
-
 
 Thay vì phụ thuộc `left/right/top/bottom`, dùng writing-mode-aware các thuộc tính (properties).
 
@@ -3709,6 +3951,8 @@ Không nên dùng `direction` chỉ để reorder UI tùy tiện.
 
 # 55. thiết kế đáp ứng (responsive design) [cốt lõi (core / 핵심)]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — thuộc tính lô-gic (logic / 논리) (logical properties)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Media features quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)
 
 ### CSS Idiom — Content-driven điểm ngắt (breakpoint)
@@ -3744,7 +3988,6 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 
 Thành phần (component / 컴포넌트) tự thích ứng theo không gian nó thực sự nhận được.
 
-
 Responsive không chỉ là "mobile điểm ngắt (breakpoint)".
 
 Cấp cao (senior / 시니어) approach:
@@ -3779,6 +4022,8 @@ Có thể:
 ```css
 @media (48rem <= width < 80rem) {}
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Media features quan trọng** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — thiết kế đáp ứng (responsive design)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dark chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Media features quan trọng
 
@@ -3826,6 +4071,8 @@ Không bắt buộc mọi dự án (project / 프로젝트) phải mobile-first,
 
 # 58. người dùng (user / 사용자) Preference các truy vấn môi trường (media queries) [cốt lõi (core / 핵심)/ADV]
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Dark chế độ (mode / 모드)** tiếp nhận điểm tựa từ **Media features quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **giảm chuyển động (reduced motion)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dark chế độ (mode / 모드)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3838,6 +4085,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   }
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **giảm chuyển động (reduced motion)** tiếp nhận điểm tựa từ **Dark chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pointer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## giảm chuyển động (reduced motion)
 
@@ -3858,6 +4107,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 Trong môi trường vận hành (production / 운영 환경) có thể viết targeted hơn thay vì kill toàn bộ motion.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Pointer** tiếp nhận điểm tựa từ **giảm chuyển động (reduced motion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pointer
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -3875,6 +4126,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 59. các truy vấn vùng chứa (container queries) [ADV/hiện đại (modern / 현대적)]
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)** tiếp nhận điểm tựa từ **Pointer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Individual transform các thuộc tính (properties)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)
 
@@ -3914,7 +4167,6 @@ Thành phần (component / 컴포넌트) hỏi:
 > "Không gian tôi thực sự nhận được rộng bao nhiêu?"
 
 thay vì chỉ hỏi vùng nhìn (viewport).
-
 
 truy vấn môi trường (media query) hỏi vùng nhìn (viewport).
 
@@ -4029,6 +4281,8 @@ transform: translateY(-2px) scale(1.02);
 
 ⚠ transform thứ tự (order / 순서) matters.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Individual transform các thuộc tính (properties)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — truy vấn vùng chứa (container query)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **transform-origin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Individual transform các thuộc tính (properties)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4039,6 +4293,8 @@ rotate: 5deg;
 scale: 1.05;
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **transform-origin** tiếp nhận điểm tựa từ **Individual transform các thuộc tính (properties)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3D** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `transform-origin`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4047,6 +4303,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 transform-origin: center;
 transform-origin: top left;
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **3D** tiếp nhận điểm tựa từ **transform-origin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3D
 
@@ -4062,6 +4320,8 @@ backface-visibility: hidden;
 ---
 
 # 63. Transitions [cốt lõi (core / 핵심)]
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **3D** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — Animation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)
 
@@ -4097,7 +4357,6 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 ### Mẫu thiết kế (design pattern / 디자인 패턴) — Motion as trạng thái (state / 상태) phản hồi (feedback / 피드백)
 
 Motion nên giải thích trạng thái (state / 상태) thay đổi (change / 변경), không chỉ để trang "đẹp hơn".
-
 
 ```css
 .button {
@@ -4152,6 +4411,8 @@ transition: opacity 150ms ease, transform 150ms ease;
 
 # 64. Animations [cốt lõi (core / 핵심)/ADV]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — Animation** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **animation-iteration-count** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — Animation
 
 ### CSS Idiom — Reduced-motion override
@@ -4187,7 +4448,6 @@ CSS → visual state
 
 JS không nên hard-code visual details; CSS không nên tự quyết định nghiệp vụ (business / 비즈니스) trạng thái (state / 상태).
 
-
 ```css
 @keyframes spin {
   to {
@@ -4214,6 +4474,8 @@ animation-play-state
 animation
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-iteration-count** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — Animation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **animation-direction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `animation-iteration-count`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4223,6 +4485,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 2
 infinite
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-direction** tiếp nhận điểm tựa từ **animation-iteration-count** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **animation-fill-mode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `animation-direction`
 
@@ -4235,6 +4499,8 @@ alternate
 alternate-reverse
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-fill-mode** tiếp nhận điểm tựa từ **animation-direction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **animation-play-state** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `animation-fill-mode`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4245,6 +4511,8 @@ forwards
 backwards
 both
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **animation-play-state** tiếp nhận điểm tựa từ **animation-fill-mode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **will-change** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `animation-play-state`
 
@@ -4271,6 +4539,8 @@ Cẩn thận animation liên tục của:
 vì có thể trigger bố cục (layout / 레이아웃) nhiều hơn.
 
 Nhưng đừng biến "transform always fast" thành luật tuyệt đối; profiling với DevTools khi animation phức tạp.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **will-change** tiếp nhận điểm tựa từ **animation-play-state** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `will-change`
 
@@ -4435,6 +4705,8 @@ Cấp cao (senior / 시니어) quy tắc (rule / 규칙): kiểm tra trình duy�
 
 # 71. CSS lồng cú pháp (nesting) [hiện đại (modern / 현대적)]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)** tiếp nhận điểm tựa từ **will-change** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)
 
 ### CSS Idiom — Nest các trạng thái (states), not DOM độ sâu (depth / 깊이)
@@ -4463,7 +4735,6 @@ lồng cú pháp (nesting) phù hợp cho:
 ### Mẫu thiết kế (design pattern / 디자인 패턴) — Flat giao diện công khai (public API), nested hiện thực (implementation / 구현)
 
 Công khai (public / 공개) các bộ chọn (selectors) vẫn nên đơn giản; lồng cú pháp (nesting) chỉ hỗ trợ tổ chức nguồn (source / 소스).
-
 
 Bản địa (native / 네이티브) CSS lồng cú pháp (nesting):
 
@@ -4509,6 +4780,8 @@ Quy tắc (rule / 규칙) thực tế: 1–3 levels là đủ trong đa số th�
 
 # 72. `@scope` [hiện đại (modern / 현대적)/ADV]
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — lồng cú pháp (nesting)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **appearance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)
 
 ### CSS Idiom — Scoped typography
@@ -4534,7 +4807,6 @@ Dùng cho:
 ### Mẫu thiết kế (design pattern / 디자인 패턴) — Controlled ranh giới style (style boundary)
 
 `@scope` nằm giữa toàn cục (global / 전역) CSS và full đóng gói (encapsulation) như Shadow DOM (cây DOM đóng gói)/CSS Modules.
-
 
 Giới hạn bộ chọn (selector) trong vùng DOM.
 
@@ -4697,6 +4969,8 @@ Responsive bảng (table / 테이블) thường cần wrapper:
 
 # 77. Forms & Controls [cốt lõi (core / 핵심)]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **appearance** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — phạm vi (scope / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **accent-color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `appearance`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4720,6 +4994,8 @@ select {
 - độ tương phản cao (high contrast),
 - khả năng tiếp cận (accessibility / 접근성) visuals.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **accent-color** tiếp nhận điểm tựa từ **appearance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **caret-color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `accent-color`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4736,6 +5012,8 @@ Style bản địa (native / 네이티브):
 - phạm vi (range / 범위),
 - progress (tùy browser).
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **caret-color** tiếp nhận điểm tựa từ **accent-color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **resize** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `caret-color`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4745,6 +5023,8 @@ input {
   caret-color: var(--brand);
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **resize** tiếp nhận điểm tựa từ **caret-color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **field-sizing [hiện đại (modern / 현대적)]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `resize`
 
@@ -4762,6 +5042,8 @@ các giá trị (values):
 - `horizontal`
 - `vertical`
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **field-sizing [hiện đại (modern / 현대적)]** tiếp nhận điểm tựa từ **resize** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cursor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `field-sizing` [hiện đại (modern / 현대적)]
 
 Trong mức hỗ trợ trình duyệt (browser support / 브라우저 지원) phù hợp, giúp form controls kích thước (size / 크기) theo content.
@@ -4769,6 +5051,8 @@ Trong mức hỗ trợ trình duyệt (browser support / 브라우저 지원) ph
 ---
 
 # 78. Cursor & Pointer hành vi (behavior / 동작)
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **cursor** tiếp nhận điểm tựa từ **field-sizing [hiện đại (modern / 현대적)]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **pointer-events** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `cursor`
 
@@ -4790,6 +5074,8 @@ crosshair
 
 Đừng dùng `cursor:pointer` cho non-interactive element nếu ngữ nghĩa (semantics / 의미론) không click được.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **pointer-events** tiếp nhận điểm tựa từ **cursor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **user-select** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `pointer-events`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4805,6 +5091,8 @@ các giá trị (values) web UI thường:
 - `none`
 
 ⚠ `pointer-events:none` không đồng nghĩa disabled mang tính ngữ nghĩa (semantic / 의미적).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **user-select** tiếp nhận điểm tựa từ **pointer-events** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **clip-path** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `user-select`
 
@@ -4846,6 +5134,8 @@ Không nhét thông tin (information / 정보) quan trọng chỉ trong CSS-gene
 
 # 80. Shapes, Clip & Mask [ADV/hiện đại (modern / 현대적)]
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **user-select** xác định đầu vào; **clip-path** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **shape-outside** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `clip-path`
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4863,9 +5153,13 @@ clip-path:
   polygon(50% 0, 100% 100%, 0 100%);
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **clip-path** xác định đầu vào; **shape-outside** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Masks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `shape-outside`
 
 Văn bản (text / 텍스트) wrap quanh shape, thường với float.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Masks** tiếp nhận điểm tựa từ **shape-outside** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **[cốt lõi (core / 핵심)]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Masks
 
@@ -4932,6 +5226,8 @@ text-align: start;
 
 # 84. At-rules cần biết
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **[cốt lõi (core / 핵심)]** tiếp nhận điểm tựa từ **Masks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **[ADV/hiện đại (modern / 현대적)]** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## [cốt lõi (core / 핵심)]
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -4942,6 +5238,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 @font-face
 @keyframes
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **[ADV/hiện đại (modern / 현대적)]** tiếp nhận điểm tựa từ **[cốt lõi (core / 핵심)]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## [ADV/hiện đại (modern / 현대적)]
 
@@ -5016,6 +5314,8 @@ trong các mức hỗ trợ trình duyệt (browser support / 브라우저 지�
 
 # 88. kiến trúc (architecture / 아키텍처): tổ chức CSS như cấp cao (senior / 시니어) [ADV]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **[ADV/hiện đại (modern / 현대적)]** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BEM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)
 
 ### CSS Idiom — One responsibility per tầng (layer / 계층)
@@ -5073,7 +5373,6 @@ Kiến trúc (architecture / 아키텍처) tốt là kiến trúc (architecture 
 - đơn vị từ (token / 토큰) nào được dùng,
 - thành phần (component / 컴포넌트) nào chịu trách nhiệm bố cục (layout / 레이아웃).
 
-
 CSS môi trường vận hành (production / 운영 환경) không chỉ là biết thuộc tính (property / 속성).
 
 Bạn cần quản lý:
@@ -5096,6 +5395,8 @@ build output
 
 # 89. Naming Strategies
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **BEM** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ưu tiên tiện ích (utility-first)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## BEM
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5115,6 +5416,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 Nhược:
 - verbose.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **ưu tiên tiện ích (utility-first)** tiếp nhận điểm tựa từ **BEM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CSS Modules** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ưu tiên tiện ích (utility-first)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5132,6 +5435,8 @@ Nhược:
 - markup nhiều lớp (class / 클래스),
 - cần convention/tooling.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **CSS Modules** tiếp nhận điểm tựa từ **ưu tiên tiện ích (utility-first)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CSS-in-JS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## CSS Modules
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -5145,6 +5450,8 @@ Hệ thống dựng (build system / 빌드 시스템) tạo scoped lớp (class 
 Ưu:
 - cục bộ (local / 로컬) phạm vi (scope / 범위),
 - giảm collision.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **CSS-in-JS** tiếp nhận điểm tựa từ **CSS Modules** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CSS-in-JS
 
@@ -5176,6 +5483,8 @@ overrides   → rare integration overrides
 
 # 91. đơn vị từ (token / 토큰) thiết kế (design tokens)
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)** tiếp nhận điểm tựa từ **CSS-in-JS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)
 
 ### CSS Idiom — mang tính ngữ nghĩa (semantic / 의미적) alias
@@ -5201,7 +5510,6 @@ Foundation token
 ### Mẫu thiết kế (design pattern / 디자인 패턴) — hợp đồng chủ đề (theme contract)
 
 Theme ưu tiên override mang tính ngữ nghĩa (semantic / 의미적) tokens. thành phần (component / 컴포넌트) tokens chỉ override khi thành phần (component / 컴포넌트) có yêu cầu (requirement / 요구사항) riêng.
-
 
 ```css
 :root {
@@ -5261,6 +5569,8 @@ body {
 
 # 93. thành phần (component / 컴포넌트) trạng thái (state / 상태)
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — đơn vị từ (token / 토큰) thiết kế (design tokens)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)
 
 ### CSS Idiom — Attribute-driven trạng thái (state / 상태)
@@ -5290,7 +5600,6 @@ biến thể (variant) = định danh (identity / 식별자)/style chế độ (
 Trạng thái (state / 상태) = tình trạng thời gian chạy (runtime / 런타임)/tương tác (interaction / 상호작용).
 
 Không trộn thành lớp (class / 클래스) kiểu `.button-danger-disabled`.
-
 
 Nên encode trạng thái (state / 상태) rõ:
 
@@ -5395,6 +5704,8 @@ Không blindly bản sao (copy / 복사) reset từ internet; hiểu từng line
 
 # 96. khả năng tiếp cận (accessibility / 접근성) [cốt lõi (core / 핵심)/cấp cao (senior / 시니어)]
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — thành phần (component / 컴포넌트) trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Focus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)
 
 ### CSS Idiom — Focus-visible ring
@@ -5431,8 +5742,9 @@ Cơ sở (base / 기반) experience phải dùng được trước; animation/fi
 
 Style đẹp nhưng làm mất focus, cắt văn bản (text / 텍스트) khi zoom hoặc reorder visual khác DOM là regression.
 
-
 CSS có thể phá khả năng tiếp cận (accessibility / 접근성) dù HTML đúng.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Focus** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contrast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Focus
 
@@ -5444,6 +5756,8 @@ Phải có visible focus:
   outline-offset: 3px;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Focus** đã nêu tiêu chí phân biệt, còn **Contrast** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **giảm chuyển động (reduced motion)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Contrast
 
@@ -5460,6 +5774,8 @@ green = success
 
 Nên có icon/văn bản (text / 텍스트)/trạng thái (state / 상태) thêm.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Contrast** đã nêu tiêu chí phân biệt, còn **giảm chuyển động (reduced motion)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Zoom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## giảm chuyển động (reduced motion)
 
 Hỗ trợ (support / 지원):
@@ -5471,6 +5787,8 @@ Hỗ trợ (support / 지원):
   }
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Zoom** tiếp nhận điểm tựa từ **giảm chuyển động (reduced motion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Visual thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Zoom
 
@@ -5493,9 +5811,13 @@ Tốt hơn:
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Visual thứ tự (order / 순서)** tiếp nhận điểm tựa từ **Zoom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hidden content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Visual thứ tự (order / 순서)
 
 Đừng dùng Flex/Grid `order` để tạo visual thứ tự (order / 순서) khác hoàn toàn DOM thứ tự (order / 순서).
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hidden content** tiếp nhận điểm tựa từ **Visual thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hidden content
 
@@ -5551,6 +5873,8 @@ Không assume colors/shadows luôn được kết xuất (render / 렌더링) nh
 
 # 99. hiệu năng (performance / 성능) [ADV/cấp cao (senior / 시니어)]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **Hidden content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không micro-optimize bộ chọn (selector) vô nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)
 
 ### CSS Idiom — Skip off-screen rendering khi phù hợp
@@ -5578,7 +5902,6 @@ Theo dõi:
 - long animation,
 - large filter/backdrop regions.
 
-
 CSS hiệu năng (performance / 성능) thường liên quan:
 - biểu định kiểu (stylesheet / 스타일시트) kích thước (size / 크기),
 - unused CSS,
@@ -5590,9 +5913,13 @@ CSS hiệu năng (performance / 성능) thường liên quan:
 - animation,
 - tính lại style (style recalculation).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Không micro-optimize bộ chọn (selector) vô nghĩa** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tập trung vào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Không micro-optimize bộ chọn (selector) vô nghĩa
 
 Hiện đại (modern / 현대적) trình duyệt (browser / 브라우저) bộ chọn (selector) engine rất tối ưu. Vấn đề maintainability thường lớn hơn việc `.a > .b` nhanh hơn hay chậm hơn vài microsecond.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Tập trung vào** tiếp nhận điểm tựa từ **Không micro-optimize bộ chọn (selector) vô nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tập trung vào
 
@@ -5661,6 +5988,8 @@ Checklist:
 
 # 103. CSS gỡ lỗi (debugging) Workflow [cấp cao (senior / 시니어)]
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)** tiếp nhận điểm tựa từ **Tập trung vào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Step 1 — Inspect element** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)
 
 ### Mẫu lập trình (coding pattern / 코딩 패턴) — ràng buộc (constraint / 제약조건) tracing
@@ -5698,8 +6027,9 @@ Tìm hệ thống (system / 시스템) quyết định hành vi (behavior / 동�
 - positioning,
 - stacking.
 
-
 Khi bố cục (layout / 레이아웃) sai:
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 1 — Inspect element** tiếp nhận điểm tựa từ **Mẫu (pattern / 패턴) notes — gỡ lỗi (debugging)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Step 2 — mô hình hộp (box model / 박스 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Step 1 — Inspect element
 
@@ -5709,6 +6039,8 @@ DevTools:
 - computed giá trị (value / 값)?
 - inherited từ đâu?
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 2 — mô hình hộp (box model / 박스 모델)** tiếp nhận điểm tựa từ **Step 1 — Inspect element** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Step 2 — mô hình hộp (box model / 박스 모델)
 
 Check:
@@ -5716,6 +6048,8 @@ Check:
 - padding,
 - border,
 - margin.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Step 2 — mô hình hộp (box model / 박스 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Step 4 — các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)
 
@@ -5726,6 +6060,8 @@ Element là:
 - positioned?
 - vùng chứa cuộn (scroll container)?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 4 — các ràng buộc (constraints / 제약조건들)** tiếp nhận điểm tựa từ **Step 3 — bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Step 5 — Position ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Step 4 — các ràng buộc (constraints / 제약조건들)
 
 Check:
@@ -5735,12 +6071,16 @@ Check:
 - overflow,
 - aspect ratio.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 5 — Position ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Step 4 — các ràng buộc (constraints / 제약조건들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Step 6 — trình duyệt (browser / 브라우저) responsive modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Step 5 — Position ngữ cảnh (context / 맥락)
 
 Check:
 - khối chứa tham chiếu (containing block / 컨테이닝 블록),
 - ngữ cảnh xếp chồng (stacking context / 쌓임 맥락),
 - clipping ancestor.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Step 6 — trình duyệt (browser / 브라우저) responsive modes** tiếp nhận điểm tựa từ **Step 5 — Position ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bug 1 — z-index không chạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Step 6 — trình duyệt (browser / 브라우저) responsive modes
 
@@ -5779,12 +6119,16 @@ Grid/Flex overlays trong Chrome/Firefox DevTools cực hữu ích.
 
 # 105. dùng chung (common / 공통) CSS Bugs cấp cao (senior / 시니어) phải nhận ra ngay
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 1 — z-index không chạy** tiếp nhận điểm tựa từ **Step 6 — trình duyệt (browser / 브라우저) responsive modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bug 2 — Flex child overflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bug 1 — `z-index` không chạy
 
 Cause thường:
 - ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) parent,
 - `z-index` chưa applicable theo ngữ cảnh (context / 맥락),
 - clipping.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 1 — z-index không chạy** xác định đầu vào; **Bug 2 — Flex child overflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bug 3 — Vertical flex scroll không chạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bug 2 — Flex child overflow
 
@@ -5795,6 +6139,8 @@ Fix thường:
   min-width: 0;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 2 — Flex child overflow** xác định đầu vào; **Bug 3 — Vertical flex scroll không chạy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bug 4 — position: sticky không stick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bug 3 — Vertical flex scroll không chạy
 
@@ -5813,6 +6159,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 4 — position: sticky không stick** tiếp nhận điểm tựa từ **Bug 3 — Vertical flex scroll không chạy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bug 5 — height:100% không có tác dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bug 4 — `position: sticky` không stick
 
 Check:
@@ -5820,6 +6168,8 @@ Check:
 - ancestor overflow?
 - vùng chứa cuộn (scroll container) nào?
 - parent height?
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 5 — height:100% không có tác dụng** tiếp nhận điểm tựa từ **Bug 4 — position: sticky không stick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bug 6 — Ellipsis không chạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bug 5 — `height:100%` không có tác dụng
 
@@ -5830,6 +6180,8 @@ Dùng đúng ngữ cảnh (context / 맥락) hoặc:
 ```css
 min-height: 100dvh;
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 6 — Ellipsis không chạy** tiếp nhận điểm tựa từ **Bug 5 — height:100% không có tác dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bug 7 — margin:auto tưởng luôn center** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bug 6 — Ellipsis không chạy
 
@@ -5844,9 +6196,13 @@ Cần các ràng buộc (constraints / 제약조건들):
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 7 — margin:auto tưởng luôn center** tiếp nhận điểm tựa từ **Bug 6 — Ellipsis không chạy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bug 8 — absolute element "bay" sai nơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bug 7 — `margin:auto` tưởng luôn center
 
 Auto margins hoạt động khác nhau tùy ngữ cảnh định dạng (formatting context / 서식 컨텍스트)/axis/available không gian dư (free space).
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bug 8 — absolute element "bay" sai nơi** tiếp nhận điểm tựa từ **Bug 7 — margin:auto tưởng luôn center** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fluid bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bug 8 — absolute element "bay" sai nơi
 
@@ -5855,6 +6211,8 @@ Khối chứa tham chiếu (containing block / 컨테이닝 블록) không phả
 ---
 
 # 106. Responsive bố cục (layout / 레이아웃) Recipes
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Fluid bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **Bug 8 — absolute element "bay" sai nơi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Auto-responsive cards** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fluid bộ chứa (container / 컨테이너)
 
@@ -5866,6 +6224,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   margin-inline: auto;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Auto-responsive cards** tiếp nhận điểm tựa từ **Fluid bộ chứa (container / 컨테이너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sidebar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Auto-responsive cards
 
@@ -5880,6 +6240,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Sidebar** tiếp nhận điểm tựa từ **Auto-responsive cards** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sticky sidebar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sidebar
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -5893,6 +6255,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   gap: 2rem;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Sticky sidebar** tiếp nhận điểm tựa từ **Sidebar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bố cục (layout / 레이아웃)/math** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sticky sidebar
 
@@ -6024,6 +6388,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 
 # 112. CSS các hàm (functions) nên biết
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bố cục (layout / 레이아웃)/math** tiếp nhận điểm tựa từ **Sticky sidebar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **các biến (variables)/môi trường (environment / 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bố cục (layout / 레이아웃)/math
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -6038,6 +6404,8 @@ repeat()
 fit-content()
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **các biến (variables)/môi trường (environment / 환경)** tiếp nhận điểm tựa từ **Bố cục (layout / 레이아웃)/math** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## các biến (variables)/môi trường (environment / 환경)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -6047,6 +6415,8 @@ var()
 env()
 attr()
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Color** tiếp nhận điểm tựa từ **các biến (variables)/môi trường (environment / 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Images** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Color
 
@@ -6065,6 +6435,8 @@ color-mix()
 light-dark()
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Images** tiếp nhận điểm tựa từ **Color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Images
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6075,6 +6447,8 @@ radial-gradient()
 conic-gradient()
 image-set()
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Transform** tiếp nhận điểm tựa từ **Images** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Filters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Transform
 
@@ -6087,6 +6461,8 @@ rotate()
 matrix()
 perspective()
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Filters** tiếp nhận điểm tựa từ **Transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shapes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Filters
 
@@ -6103,6 +6479,8 @@ invert()
 saturate()
 sepia()
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Shapes** tiếp nhận điểm tựa từ **Filters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bố cục (layout / 레이아웃) / Box** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Shapes
 
@@ -6138,6 +6516,8 @@ Ngoài ra CSS-wide từ khóa (keyword / 키워드) thường có `initial`, `in
 
 Đây chỉ là appendix để tra cứu sau khi đã hiểu mô hình tư duy (mental model / 사고 모델) ở các phần trước. Không dùng section này như lộ trình học (learning path / 학습 경로) và không học thuộc thuộc tính (property / 속성) theo kiểu danh sách.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bố cục (layout / 레이아웃) / Box** tiếp nhận điểm tựa từ **Shapes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Position / stacking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bố cục (layout / 레이아웃) / Box
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -6167,6 +6547,8 @@ content-visibility
 contain-intrinsic-size
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Position / stacking** tiếp nhận điểm tựa từ **Bố cục (layout / 레이아웃) / Box** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flexbox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Position / stacking
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6181,6 +6563,8 @@ inset
 z-index
 isolation
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Flexbox** tiếp nhận điểm tựa từ **Position / stacking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Flexbox
 
@@ -6203,6 +6587,8 @@ gap
 row-gap
 column-gap
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Grid** tiếp nhận điểm tựa từ **Flexbox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Typography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Grid
 
@@ -6235,6 +6621,8 @@ align-content
 place-content
 gap
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Typography** tiếp nhận điểm tựa từ **Grid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Color / background** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Typography
 
@@ -6272,6 +6660,8 @@ hyphens
 vertical-align
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Color / background** tiếp nhận điểm tựa từ **Typography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Border / visual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Color / background
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6290,6 +6680,8 @@ background-clip
 color-scheme
 accent-color
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Border / visual** tiếp nhận điểm tựa từ **Color / background** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Images / replaced content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Border / visual
 
@@ -6314,6 +6706,8 @@ mix-blend-mode
 background-blend-mode
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Images / replaced content** tiếp nhận điểm tựa từ **Border / visual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transform / animation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Images / replaced content
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6324,6 +6718,8 @@ object-position
 image-rendering
 aspect-ratio
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Transform / animation** tiếp nhận điểm tựa từ **Images / replaced content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scroll** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Transform / animation
 
@@ -6359,6 +6755,8 @@ animation-range
 will-change
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Scroll** tiếp nhận điểm tựa từ **Transform / animation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **UI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Scroll
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6375,6 +6773,8 @@ scrollbar-color
 scrollbar-width
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **UI** tiếp nhận điểm tựa từ **Scroll** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Danh sách (list / 목록) / counters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## UI
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6388,6 +6788,8 @@ resize
 caret-color
 touch-action
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Danh sách (list / 목록) / counters** tiếp nhận điểm tựa từ **UI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng (table / 테이블)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Danh sách (list / 목록) / counters
 
@@ -6405,6 +6807,8 @@ content
 quotes
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Bảng (table / 테이블)** tiếp nhận điểm tựa từ **Danh sách (list / 목록) / counters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Columns / fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bảng (table / 테이블)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6416,6 +6820,8 @@ table-layout
 caption-side
 empty-cells
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Columns / fragmentation** tiếp nhận điểm tựa từ **Bảng (table / 테이블)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **thuộc tính lô-gic (logic / 논리) (logical properties)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Columns / fragmentation
 
@@ -6432,6 +6838,8 @@ break-before
 break-after
 break-inside
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **thuộc tính lô-gic (logic / 논리) (logical properties)** tiếp nhận điểm tựa từ **Columns / fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Writing / direction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## thuộc tính lô-gic (logic / 논리) (logical properties)
 
@@ -6454,6 +6862,8 @@ border-inline
 border-block
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Writing / direction** tiếp nhận điểm tựa từ **thuộc tính lô-gic (logic / 논리) (logical properties)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shape / clipping / mask** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Writing / direction
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6464,6 +6874,8 @@ direction
 unicode-bidi
 text-orientation
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Shape / clipping / mask** tiếp nhận điểm tựa từ **Writing / direction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Shape / clipping / mask
 
@@ -6479,6 +6891,8 @@ mask-size
 mask-position
 mask-repeat
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive** tiếp nhận điểm tựa từ **Shape / clipping / mask** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive
 
@@ -6574,6 +6988,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 # 117. CSS cấp cao (senior / 시니어) Checklist trước khi merge PR
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **Hiện đại (modern / 현대적) thành phần (component / 컴포넌트)/responsive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Responsive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính đúng đắn (correctness / 정확성)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6585,6 +7001,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - Có toàn cục (global / 전역) tác dụng phụ (side effect) không?
 - Long văn bản (text / 텍스트) có break bố cục (layout / 레이아웃) không?
 - Loading trạng thái (state / 상태)/empty trạng thái (state / 상태)/lỗi (error / 오류) trạng thái (state / 상태) ổn không?
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Responsive** tiếp nhận điểm tựa từ **Tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Responsive
 
@@ -6598,6 +7016,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 - orientation thay đổi (change / 변경)?
 - thành phần (component / 컴포넌트) trong bộ chứa (container / 컨테이너) khác?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **Responsive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khả năng tiếp cận (accessibility / 접근성)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6609,6 +7029,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - trạng thái (state / 상태) không chỉ dựa vào color?
 - visual thứ tự (order / 순서) = logical thứ tự (order / 순서)?
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **Khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu năng (performance / 성능)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6618,6 +7040,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - unused CSS?
 - font weights thừa?
 - ảnh (image / 이미지) dimensions reserved?
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. !important everywhere** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiến trúc (architecture / 아키텍처)
 
@@ -6633,6 +7057,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 # 118. Những phản mẫu (anti-pattern) cần bỏ
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **1. !important everywhere** tiếp nhận điểm tựa từ **Kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Magic z-index** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. `!important` everywhere
 
 Sai:
@@ -6645,6 +7071,8 @@ Sai:
 
 Hãy sửa cơ chế phân tầng (cascade) kiến trúc (architecture / 아키텍처).
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **2. Magic z-index** tiếp nhận điểm tựa từ **1. !important everywhere** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Fixed điểm ảnh (pixel / 픽셀) everything** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Magic z-index
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -6654,6 +7082,8 @@ z-index: 999999999;
 ```
 
 Không sửa được ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) cha.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **3. Fixed điểm ảnh (pixel / 픽셀) everything** tiếp nhận điểm tựa từ **2. Magic z-index** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. DOM-coupled bộ chọn (selector)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Fixed điểm ảnh (pixel / 픽셀) everything
 
@@ -6666,6 +7096,8 @@ height: 600px;
 
 Dễ phá responsive/zoom/content.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **4. DOM-coupled bộ chọn (selector)** tiếp nhận điểm tựa từ **3. Fixed điểm ảnh (pixel / 픽셀) everything** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. transition: all** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. DOM-coupled bộ chọn (selector)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -6676,9 +7108,13 @@ main > div > div:nth-child(2) span {}
 
 Rất fragile.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **5. transition: all** tiếp nhận điểm tựa từ **4. DOM-coupled bộ chọn (selector)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Remove focus outline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. `transition: all`
 
 Animate unintended changes.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **6. Remove focus outline** tiếp nhận điểm tựa từ **5. transition: all** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Remove focus outline
 
@@ -6690,9 +7126,13 @@ outline: none;
 
 mà không replacement.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)** tiếp nhận điểm tựa từ **6. Remove focus outline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)
 
 Dùng Grid/Flex trước.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names** tiếp nhận điểm tựa từ **7. Absolute positioning để làm toàn bộ bố cục (layout / 레이아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. JavaScript cho vấn đề CSS giải được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names
 
@@ -6703,6 +7143,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 ```
 
 Hãy chọn điểm ngắt (breakpoint) theo content/bố cục (layout / 레이아웃), không theo tên thiết bị.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **9. JavaScript cho vấn đề CSS giải được** tiếp nhận điểm tựa từ **8. truy vấn môi trường (media query) theo thiết bị (device / 장치) names** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 1–3 — cốt lõi (core / 핵심) mechanics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. JavaScript cho vấn đề CSS giải được
 
@@ -6743,6 +7185,8 @@ Ví dụ nhiều bố cục (layout / 레이아웃) responsive/trạng thái (st
 
 # 120. Roadmap 30 ngày
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 1–3 — cốt lõi (core / 핵심) mechanics** tiếp nhận điểm tựa từ **9. JavaScript cho vấn đề CSS giải được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngày 1–3 — cốt lõi (core / 핵심) mechanics
 
 Học:
@@ -6756,6 +7200,8 @@ Học:
 Đầu ra (output / 출력):
 - 20 bộ chọn (selector) examples,
 - độ đặc hiệu (specificity) playground.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals** tiếp nhận điểm tựa từ **Ngày 1–3 — cốt lõi (core / 핵심) mechanics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 7–9 — Positioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals
 
@@ -6771,6 +7217,8 @@ Học:
 - cards,
 - truncation cases.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 7–9 — Positioning** tiếp nhận điểm tựa từ **Ngày 4–6 — Box/bố cục (layout / 레이아웃) fundamentals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 10–13 — Flexbox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngày 7–9 — Positioning
 
 Học:
@@ -6784,6 +7232,8 @@ Học:
 - modal,
 - dropdown.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 10–13 — Flexbox** tiếp nhận điểm tựa từ **Ngày 7–9 — Positioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 14–17 — Grid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngày 10–13 — Flexbox
 
 Đầu ra (output / 출력):
@@ -6791,6 +7241,8 @@ Học:
 - toolbar,
 - media đối tượng (object / 객체),
 - responsive card row.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 14–17 — Grid** tiếp nhận điểm tựa từ **Ngày 10–13 — Flexbox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 18–19 — Typography & visual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngày 14–17 — Grid
 
@@ -6800,6 +7252,8 @@ Học:
 - auto-fit cards,
 - named areas,
 - subgrid.
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 18–19 — Typography & visual** tiếp nhận điểm tựa từ **Ngày 14–17 — Grid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 20–21 — Responsive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngày 18–19 — Typography & visual
 
@@ -6812,6 +7266,8 @@ Học:
 - shadows,
 - gradients.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 20–21 — Responsive** tiếp nhận điểm tựa từ **Ngày 18–19 — Typography & visual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 22–23 — Motion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngày 20–21 — Responsive
 
 Học:
@@ -6819,6 +7275,8 @@ Học:
 - các truy vấn môi trường (media queries),
 - người dùng (user / 사용자) preferences,
 - các truy vấn vùng chứa (container queries).
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 22–23 — Motion** tiếp nhận điểm tựa từ **Ngày 20–21 — Responsive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngày 22–23 — Motion
 
@@ -6829,6 +7287,8 @@ Học:
 - scroll snap,
 - giảm chuyển động (reduced motion).
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Ngày 22–23 — Motion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 26–27 — hiện đại (modern / 현대적) CSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)
 
 Học:
@@ -6837,6 +7297,8 @@ Học:
 - naming,
 - layers,
 - thành phần (component / 컴포넌트) trạng thái (state / 상태).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 26–27 — hiện đại (modern / 현대적) CSS** tiếp nhận điểm tựa từ **Ngày 24–25 — Tokens & kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 28 — khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngày 26–27 — hiện đại (modern / 현대적) CSS
 
@@ -6849,6 +7311,8 @@ Học:
 - hoạt ảnh điều khiển bằng cuộn (scroll-driven animations),
 - hiện đại (modern / 현대적) colors.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 28 — khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **Ngày 26–27 — hiện đại (modern / 현대적) CSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngày 28 — khả năng tiếp cận (accessibility / 접근성)
 
 Kiểm thử (test / 테스트):
@@ -6859,6 +7323,8 @@ Kiểm thử (test / 테스트):
 - contrast,
 - RTL/logical props.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)** tiếp nhận điểm tựa từ **Ngày 28 — khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngày 30 — Final dự án (project / 프로젝트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)
 
 DevTools:
@@ -6867,6 +7333,8 @@ DevTools:
 - Layers,
 - hiệu năng (performance / 성능),
 - Rendering.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ngày 30 — Final dự án (project / 프로젝트)** tiếp nhận điểm tựa từ **Ngày 29 — hiệu năng (performance / 성능)/gỡ lỗi (debugging)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.1 Fluid centered bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngày 30 — Final dự án (project / 프로젝트)
 
@@ -7090,8 +7558,9 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 ---
 
-
 # 125. danh mục (catalog / 카탈로그) — CSS ngôn ngữ (language / 언어) Idioms quan trọng phải nhớ
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.1 Fluid centered bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **Ngày 30 — Final dự án (project / 프로젝트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.2 ngăn xếp (stack / 스택)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.1 Fluid centered bộ chứa (container / 컨테이너)
 
@@ -7104,6 +7573,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.2 ngăn xếp (stack / 스택)** tiếp nhận điểm tựa từ **125.1 Fluid centered bộ chứa (container / 컨테이너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.3 Cluster** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.2 ngăn xếp (stack / 스택)
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7115,6 +7586,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   gap: var(--stack-gap, 1rem);
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.3 Cluster** tiếp nhận điểm tựa từ **125.2 ngăn xếp (stack / 스택)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.4 Center** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.3 Cluster
 
@@ -7129,6 +7602,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.4 Center** tiếp nhận điểm tựa từ **125.3 Cluster** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.5 Cover vùng nhìn (viewport)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.4 Center
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7139,6 +7614,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   place-items: center;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.5 Cover vùng nhìn (viewport)** tiếp nhận điểm tựa từ **125.4 Center** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.6 Sidebar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.5 Cover vùng nhìn (viewport)
 
@@ -7151,6 +7628,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   place-items: center;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.6 Sidebar** tiếp nhận điểm tựa từ **125.5 Cover vùng nhìn (viewport)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.7 Auto grid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.6 Sidebar
 
@@ -7166,6 +7645,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.7 Auto grid** tiếp nhận điểm tựa từ **125.6 Sidebar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.8 Media đối tượng (object / 객체)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.7 Auto grid
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7179,6 +7660,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.8 Media đối tượng (object / 객체)** tiếp nhận điểm tựa từ **125.7 Auto grid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.9 Push hành động (action / 동작) right** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.8 Media đối tượng (object / 객체)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7191,6 +7674,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.9 Push hành động (action / 동작) right** tiếp nhận điểm tựa từ **125.8 Media đối tượng (object / 객체)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.10 Safe flex văn bản (text / 텍스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.9 Push hành động (action / 동작) right
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7201,6 +7686,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.10 Safe flex văn bản (text / 텍스트)** tiếp nhận điểm tựa từ **125.9 Push hành động (action / 동작) right** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.11 Safe vertical flex scroll** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.10 Safe flex văn bản (text / 텍스트)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7210,6 +7697,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   min-width: 0;
 }
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.11 Safe vertical flex scroll** tiếp nhận điểm tựa từ **125.10 Safe flex văn bản (text / 텍스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.12 Single-line truncate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.11 Safe vertical flex scroll
 
@@ -7228,6 +7717,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.12 Single-line truncate** tiếp nhận điểm tựa từ **125.11 Safe vertical flex scroll** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.13 Ratio media** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.12 Single-line truncate
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7240,6 +7731,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   white-space: nowrap;
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.13 Ratio media** tiếp nhận điểm tựa từ **125.12 Single-line truncate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.14 Sticky region** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.13 Ratio media
 
@@ -7258,6 +7751,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.14 Sticky region** tiếp nhận điểm tựa từ **125.13 Ratio media** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.15 cục bộ (local / 로컬) overlay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.14 Sticky region
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7269,6 +7764,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   z-index: var(--z-sticky);
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.15 cục bộ (local / 로컬) overlay** tiếp nhận điểm tựa từ **125.14 Sticky region** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.16 Modal shell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.15 cục bộ (local / 로컬) overlay
 
@@ -7285,6 +7782,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.16 Modal shell** tiếp nhận điểm tựa từ **125.15 cục bộ (local / 로컬) overlay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.17 Intrinsic button** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.16 Modal shell
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7299,6 +7798,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.17 Intrinsic button** tiếp nhận điểm tựa từ **125.16 Modal shell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.18 Fluid font** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.17 Intrinsic button
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7311,6 +7812,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.18 Fluid font** tiếp nhận điểm tựa từ **125.17 Intrinsic button** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.19 Readable prose** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.18 Fluid font
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7320,6 +7823,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   font-size: clamp(1.75rem, 1rem + 3vw, 4rem);
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.19 Readable prose** tiếp nhận điểm tựa từ **125.18 Fluid font** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.20 Theme đơn vị từ (token / 토큰) consumption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.19 Readable prose
 
@@ -7332,6 +7837,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.20 Theme đơn vị từ (token / 토큰) consumption** tiếp nhận điểm tựa từ **125.19 Readable prose** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.20 Theme đơn vị từ (token / 토큰) consumption
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7343,6 +7850,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.20 Theme đơn vị từ (token / 토큰) consumption** nêu điều cần giải thích; **125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7351,6 +7860,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 .panel[data-state="open"] {}
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.21 trạng thái (state / 상태) via dữ liệu (data / 데이터) attribute** nêu điều cần giải thích; **125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **125.23 Focus ring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
@@ -7358,6 +7869,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ```css
 .tab[aria-selected="true"] {}
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.23 Focus ring** tiếp nhận điểm tựa từ **125.22 mang tính ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태) via ARIA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125.24 giảm chuyển động (reduced motion)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.23 Focus ring
 
@@ -7369,6 +7882,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
   outline-offset: 3px;
 }
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **125.24 giảm chuyển động (reduced motion)** tiếp nhận điểm tựa từ **125.23 Focus ring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 125.24 giảm chuyển động (reduced motion)
 
@@ -7386,6 +7901,8 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 ---
 
 # 126. danh mục (catalog / 카탈로그) — Coding / Programming Patterns
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition** tiếp nhận điểm tựa từ **125.24 giảm chuyển động (reduced motion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition
 
@@ -7406,6 +7923,8 @@ Thành phần (component / 컴포넌트):
   ...
 </article>
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.1 thành phần nguyên thủy (primitive / 기본 요소) → thành phần (component / 컴포넌트) composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.3 Slot mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)
 
@@ -7428,6 +7947,8 @@ JS → state
 CSS → presentation
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.3 Slot mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.2 trạng thái (state / 상태) Attribute mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.4 biến thể (variant) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 126.3 Slot mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -7445,6 +7966,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 Useful khi muốn expose mang tính ngữ nghĩa (semantic / 의미적) thành phần (component / 컴포넌트) slots.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.4 biến thể (variant) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.3 Slot mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 126.4 biến thể (variant) mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -7455,6 +7978,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 .button[data-variant="danger"] {}
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.4 biến thể (variant) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -7464,6 +7989,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 .button[data-size="md"] {}
 .button[data-size="lg"] {}
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.5 kích thước (size / 크기) biến thể (variant) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)
 
@@ -7482,6 +8009,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 Override đơn vị từ (token / 토큰) thường ổn hơn override nhiều internals.
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.6 đơn vị từ (token / 토큰) Override mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7497,6 +8026,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
 Responsibility:
 - `section`: background + vertical rhythm,
 - `container`: horizontal ràng buộc (constraint / 제약조건).
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.7 bố cục (layout / 레이아웃) Wrapper mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.9 Container-responsive mẫu thành phần (component pattern)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)
 
@@ -7514,6 +8045,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 }
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.9 Container-responsive mẫu thành phần (component pattern)** tiếp nhận điểm tựa từ **126.8 cải tiến lũy tiến (progressive enhancement) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 126.9 Container-responsive mẫu thành phần (component pattern)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7529,6 +8062,8 @@ Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout v�
   }
 }
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.9 Container-responsive mẫu thành phần (component pattern)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)
 
@@ -7546,6 +8081,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 }
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **126.10 trạng thái (state / 상태) + chuyển tiếp (transition / 전이) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)
 
 Expose:
@@ -7559,6 +8096,8 @@ Không expose nội bộ (internal / 내부) DOM độ sâu (depth / 깊이) nh�
 ---
 
 # 127. danh mục (catalog / 카탈로그) — CSS thiết kế (design / 설계) / kiến trúc (architecture / 아키텍처) Patterns
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **126.11 mang tính ngữ nghĩa (semantic / 의미적) CSS API mẫu (pattern / 패턴)** xác định đầu vào; **127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)
 
@@ -7575,6 +8114,8 @@ overrides
 ```
 
 Implement tốt bằng `@layer`.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.1 Layered cơ chế phân tầng (cascade) mẫu (pattern / 패턴)** xác định đầu vào; **127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **127.3 Composition mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)
 
@@ -7596,6 +8137,8 @@ blue-600
 → button-bg-hover
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.3 Composition mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **127.2 phân cấp đơn vị từ (token / 토큰) (token hierarchy) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 127.3 Composition mẫu (pattern / 패턴)
 
 Thành phần (component / 컴포넌트) compose các primitives:
@@ -7611,6 +8154,8 @@ Container
 
 thay vì mỗi thành phần (component / 컴포넌트) viết lại bố cục (layout / 레이아웃).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **127.3 Composition mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127.5 Exception mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)
 
 Mức cô lập (isolation) tăng dần:
@@ -7623,6 +8168,8 @@ naming convention
 ```
 
 Chọn đúng mức thay vì luôn dùng mức mạnh nhất.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.5 Exception mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **127.4 đóng gói (encapsulation) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127.6 Theme-by-contract mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 127.5 Exception mẫu (pattern / 패턴)
 
@@ -7640,6 +8187,8 @@ Exception:
 
 Không duplicate thành `.special-card-special`.
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.6 Theme-by-contract mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **127.5 Exception mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 127.6 Theme-by-contract mẫu (pattern / 패턴)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
@@ -7653,6 +8202,8 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 
 Components consume mang tính ngữ nghĩa (semantic / 의미적) tokens.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, sau nội dung của **127.6 Theme-by-contract mẫu (pattern / 패턴)**, **127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)
 
 Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
@@ -7663,6 +8214,8 @@ Component-level layout   → @container
 User preference          → media features
 Feature availability     → @supports
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127.9 Accessibility-first Styling mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)
 
@@ -7676,6 +8229,8 @@ top-layer UI     → dialog/popover
 anchor UI        → Anchor Positioning
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.9 Accessibility-first Styling mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **127.8 Overlay quyền sở hữu (ownership / 소유권) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 127.9 Accessibility-first Styling mẫu (pattern / 패턴)
 
 Cơ sở (base / 기반) thành phần (component / 컴포넌트) phải:
@@ -7685,6 +8240,8 @@ Cơ sở (base / 기반) thành phần (component / 컴포넌트) phải:
 - reduced-motion compatible.
 
 Visual enhancement đến sau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **127.9 Accessibility-first Styling mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ellipsis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)
 
@@ -7712,6 +8269,8 @@ CSS hiện đại (`min`, `max`, `clamp`, Grid, truy vấn vùng chứa (contain
 
 # 128. cấp cao (senior / 시니어) mẫu (pattern / 패턴) map khóa–giá trị (map) — thuộc tính (property / 속성) nào thường đi cùng thuộc tính (property / 속성) nào
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Ellipsis** tiếp nhận điểm tựa từ **127.10 bố cục theo ràng buộc (constraint-driven layout) mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Responsive ảnh (image / 이미지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ellipsis
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -7722,6 +8281,8 @@ min-width: 0
 + white-space: nowrap
 + text-overflow: ellipsis
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Responsive ảnh (image / 이미지)** tiếp nhận điểm tựa từ **Ellipsis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sticky** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Responsive ảnh (image / 이미지)
 
@@ -7734,6 +8295,8 @@ width/max-width
 + aspect-ratio
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Sticky** tiếp nhận điểm tựa từ **Responsive ảnh (image / 이미지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Absolute overlay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sticky
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -7745,6 +8308,8 @@ position: sticky
 + enough scrollable space
 ```
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Absolute overlay** tiếp nhận điểm tựa từ **Sticky** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Modal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Absolute overlay
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -7755,6 +8320,8 @@ parent position:relative
 + inset
 + z-index nếu cần
 ```
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Modal** tiếp nhận điểm tựa từ **Absolute overlay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flexible văn bản (text / 텍스트) row** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Modal
 
@@ -7768,6 +8335,8 @@ fixed/top-layer
 + overflow:auto
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Flexible văn bản (text / 텍스트) row** tiếp nhận điểm tựa từ **Modal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Accessible interactive điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Flexible văn bản (text / 텍스트) row
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -7777,6 +8346,8 @@ display:flex/grid
 + minmax(0,1fr) hoặc min-width:0
 + gap
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Accessible interactive điều khiển (control / 제어)** tiếp nhận điểm tựa từ **Flexible văn bản (text / 텍스트) row** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Theme** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Accessible interactive điều khiển (control / 제어)
 
@@ -7791,6 +8362,8 @@ minimum target size
 + hover as enhancement
 ```
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Theme** tiếp nhận điểm tựa từ **Accessible interactive điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Animation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Theme
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -7802,6 +8375,8 @@ custom properties
 + prefers-color-scheme optional
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Animation** tiếp nhận điểm tựa từ **Theme** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thành phần (component / 컴포넌트) responsive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Animation
 
 Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
@@ -7812,6 +8387,8 @@ state attribute
 + transition/animation
 + prefers-reduced-motion
 ```
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Thành phần (component / 컴포넌트) responsive** tiếp nhận điểm tựa từ **Animation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BEM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thành phần (component / 컴포넌트) responsive
 
@@ -7827,6 +8404,8 @@ container-type
 
 # 129. Khi nào mẫu (pattern / 패턴) trở thành phản mẫu (anti-pattern)?
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **BEM** tiếp nhận điểm tựa từ **Thành phần (component / 컴포넌트) responsive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tiện ích (utility) classes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## BEM
 
 Tốt khi:
@@ -7835,6 +8414,8 @@ Tốt khi:
 
 Có thể dư khi:
 - CSS Modules/Shadow DOM (cây DOM đóng gói) đã phạm vi (scope / 범위).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **tiện ích (utility) classes** tiếp nhận điểm tựa từ **BEM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **lồng cú pháp (nesting)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## tiện ích (utility) classes
 
@@ -7847,6 +8428,8 @@ Có thể xấu khi:
 - không có đơn vị từ (token / 토큰) hệ thống (system / 시스템),
 - dùng tiện ích (utility) để encode nghiệp vụ (business / 비즈니스) trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **lồng cú pháp (nesting)** tiếp nhận điểm tựa từ **tiện ích (utility) classes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Custom các thuộc tính (properties)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## lồng cú pháp (nesting)
 
 Tốt:
@@ -7856,6 +8439,8 @@ Tốt:
 
 Xấu:
 - phản chiếu toàn bộ DOM cây (tree / 트리).
+
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Custom các thuộc tính (properties)** tiếp nhận điểm tựa từ **lồng cú pháp (nesting)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **@layer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Custom các thuộc tính (properties)
 
@@ -7868,6 +8453,8 @@ Xấu:
 - hàng trăm các biến (variables) không có ngữ nghĩa (semantics / 의미론),
 - lớp trừu tượng (abstraction / 추상화) cho giá trị (value / 값) chỉ dùng một lần.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **@layer** tiếp nhận điểm tựa từ **Custom các thuộc tính (properties)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **truy vấn vùng chứa (container query)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `@layer`
 
 Tốt:
@@ -7877,6 +8464,8 @@ Tốt:
 
 Có thể overkill:
 - một thành phần (component / 컴포넌트)/tệp (file / 파일) cực nhỏ.
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **truy vấn vùng chứa (container query)** tiếp nhận điểm tựa từ **@layer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Beginner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## truy vấn vùng chứa (container query)
 
@@ -7941,6 +8530,8 @@ Một tệp (file / 파일) CSS dễ maintain khi dev khác đọc được lu�
 
 # 131. học tập (learning / 학습) Checkpoints theo cấp độ
 
+> **Chuyển mạch:** Ở chặng này của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Beginner** tiếp nhận điểm tựa từ **truy vấn vùng chứa (container query)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Beginner
 
 Phải làm được:
@@ -7961,6 +8552,8 @@ Patterns cần nhớ:
 - truncate,
 - responsive ảnh (image / 이미지).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Intermediate** tiếp nhận điểm tựa từ **Beginner** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp cao (senior / 시니어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Intermediate
 
 Phải hiểu:
@@ -7980,6 +8573,8 @@ Patterns cần biết:
 - đơn vị từ (token / 토큰) override,
 - trạng thái (state / 상태) attribute,
 - responsive thành phần (component / 컴포넌트).
+
+> **Chuyển mạch:** Trong **CSS — Beginner → cấp cao (senior / 시니어) Handbook (2026)**, **Cấp cao (senior / 시니어)** tiếp nhận điểm tựa từ **Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cấp cao (senior / 시니어)
 
@@ -8212,4 +8807,4 @@ rồi sửa đúng nguyên nhân.
 
 Đó là cách nên học CSS.
 
-> **Bàn giao:** Sau **cấp cao (senior / 시니어)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CSS Master Supplement 2026](./CSS_Master_Supplement_2026.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cấp cao (senior / 시니어)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

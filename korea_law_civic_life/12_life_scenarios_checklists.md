@@ -1,7 +1,6 @@
 # 12. Các tình huống đời sống và checklist tra cứu
 
-> **Mạch đọc:** Đặt **12. Các tình huống đời sống và checklist tra cứu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Công ty trả thiếu lương hoặc chưa trả lương** sang **2. Làm overtime nhưng không hiểu cách tính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **12. Các tình huống đời sống và checklist tra cứu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Công ty trả thiếu lương hoặc chưa trả lương** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Làm overtime nhưng không hiểu cách tính** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Công ty trả thiếu lương hoặc chưa trả lương
 
@@ -28,6 +27,8 @@ Sau đó:
 
 Mục tiêu của checklist là xác định đúng loại tranh chấp và chứng cứ, không tự kết luận trách nhiệm pháp lý cuối cùng.
 
+> **Chuyển mạch:** Trong **12. Các tình huống đời sống và checklist tra cứu**, **2. Làm overtime nhưng không hiểu cách tính** tiếp nhận điểm tựa từ **1. Công ty trả thiếu lương hoặc chưa trả lương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Bị thông báo nghỉ việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Làm overtime nhưng không hiểu cách tính
 
 Khi đã có hồ sơ lương, bước tiếp theo là phân loại chính xác giờ làm trước khi nhân hệ số. Checklist này nối lịch làm việc, loại giờ, mức lương chuẩn và ngoại lệ pháp luật.
@@ -43,6 +44,8 @@ Khi đã có hồ sơ lương, bước tiếp theo là phân loại chính xác 
 ```
 
 Không dùng một phép nhân duy nhất trước khi phân loại giờ làm.
+
+> **Chuyển mạch:** Ở chặng này của **12. Các tình huống đời sống và checklist tra cứu**, **3. Bị thông báo nghỉ việc** tiếp nhận điểm tựa từ **2. Làm overtime nhưng không hiểu cách tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Chuẩn bị ký 월세** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Bị thông báo nghỉ việc
 
@@ -60,6 +63,8 @@ Một thông báo nghỉ việc chỉ trở thành vấn đề pháp lý sau khi
 
 Giữ bản gốc email, messenger và văn bản HR.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12. Các tình huống đời sống và checklist tra cứu**, **4. Chuẩn bị ký 월세** tiếp nhận điểm tựa từ **3. Bị thông báo nghỉ việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Chuẩn bị ký 전세** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Chuẩn bị ký 월세
 
 Trước khi chuyển tiền thuê, cần kiểm tra cả người có quyền ký, khoản tiền, điều khoản đặc biệt và bước đăng ký sau khi nhận nhà. Checklist đi theo thứ tự từ quyền sở hữu tới bằng chứng thanh toán.
@@ -76,6 +81,8 @@ Trước khi chuyển tiền thuê, cần kiểm tra cả người có quyền k
 
 Sau khi ký, lưu hợp đồng scan và chứng từ chuyển tiền.
 
+> **Chuyển mạch:** Trong **12. Các tình huống đời sống và checklist tra cứu**, **5. Chuẩn bị ký 전세** tiếp nhận điểm tựa từ **4. Chuẩn bị ký 월세** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Chủ nhà không trả lại 보증금** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Chuẩn bị ký 전세
 
 Ngoài checklist 월세, thêm:
@@ -91,6 +98,8 @@ Ngoài checklist 월세, thêm:
 
 Không dùng checklist này để kết luận “an toàn”. Nó chỉ cho biết dữ liệu nào phải kiểm tra.
 
+> **Chuyển mạch:** Ở chặng này của **12. Các tình huống đời sống và checklist tra cứu**, **6. Chủ nhà không trả lại 보증금** tiếp nhận điểm tựa từ **5. Chuẩn bị ký 전세** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Nhận giấy phạt hoặc giấy từ cơ quan nhà nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Chủ nhà không trả lại 보증금
 
 Tranh chấp tiền đặt cọc phụ thuộc vào thời điểm chấm dứt, tình trạng đăng ký và chứng cứ yêu cầu hoàn trả. Hãy kiểm tra từng mốc trước khi chọn biện pháp pháp lý.
@@ -105,6 +114,8 @@ Tranh chấp tiền đặt cọc phụ thuộc vào thời điểm chấm dứt,
 ```
 
 Nếu số tiền lớn, nên kiểm tra cơ chế pháp lý chính thức sớm thay vì kéo dài thương lượng không có deadline.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12. Các tình huống đời sống và checklist tra cứu**, **7. Nhận giấy phạt hoặc giấy từ cơ quan nhà nước** tiếp nhận điểm tựa từ **6. Chủ nhà không trả lại 보증금** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cần một giấy chứng nhận hành chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Nhận giấy phạt hoặc giấy từ cơ quan nhà nước
 
@@ -124,6 +135,8 @@ Nếu số tiền lớn, nên kiểm tra cơ chế pháp lý chính thức sớm
 
 Sau đó mở luật và trang của cơ quan. Không trả lời chỉ dựa trên bản dịch máy.
 
+> **Chuyển mạch:** Trong **12. Các tình huống đời sống và checklist tra cứu**, **8. Cần một giấy chứng nhận hành chính** tiếp nhận điểm tựa từ **7. Nhận giấy phạt hoặc giấy từ cơ quan nhà nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Không biết 민원 gửi cơ quan nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Cần một giấy chứng nhận hành chính
 
 Mục tiêu của tình huống này là tìm đúng tên giấy tờ và đúng cơ quan cấp, vì nhiều giấy có tên gần giống nhưng giá trị khác nhau. Đi theo các bước từ từ khóa tiếng Hàn tới phương thức nhận và thời gian xử lý.
@@ -139,6 +152,8 @@ Mục tiêu của tình huống này là tìm đúng tên giấy tờ và đúng
 
 Ví dụ các từ thường gặp: `증명서`, `확인서`, `납세증명`, `소득금액증명`, `자격득실확인서`.
 
+> **Chuyển mạch:** Ở chặng này của **12. Các tình huống đời sống và checklist tra cứu**, **9. Không biết 민원 gửi cơ quan nào** tiếp nhận điểm tựa từ **8. Cần một giấy chứng nhận hành chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Visa sắp hết hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Không biết 민원 gửi cơ quan nào
 
 Khi chưa biết cơ quan, hãy phân loại vấn đề trước rồi mới chọn cổng gửi. Cách này tránh việc gửi một yêu cầu chung chung và bỏ sót deadline của thủ tục chuyên biệt.
@@ -152,6 +167,8 @@ Khi chưa biết cơ quan, hãy phân loại vấn đề trước rồi mới ch
 ```
 
 Không giả định gửi 국민신문고 sẽ “đóng băng” mọi thời hạn khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12. Các tình huống đời sống và checklist tra cứu**, **10. Visa sắp hết hạn** tiếp nhận điểm tựa từ **9. Không biết 민원 gửi cơ quan nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Đổi công ty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Visa sắp hết hạn
 
@@ -169,6 +186,8 @@ Gia hạn visa là bài toán deadline và route, không chỉ là điền một
 
 Đừng dùng checklist từ hồ sơ của năm trước nếu quy định đã đổi.
 
+> **Chuyển mạch:** Trong **12. Các tình huống đời sống và checklist tra cứu**, **11. Đổi công ty** tiếp nhận điểm tựa từ **10. Visa sắp hết hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Muốn kiểm tra 국민연금 có đóng đúng không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Đổi công ty
 
 Hai hệ thống phải được kiểm tra song song:
@@ -183,6 +202,8 @@ xuất nhập cảnh
 
 Sau đó kiểm tra 4대보험 và thuế.
 
+> **Chuyển mạch:** Ở chặng này của **12. Các tình huống đời sống và checklist tra cứu**, **12. Muốn kiểm tra 국민연금 có đóng đúng không** tiếp nhận điểm tựa từ **11. Đổi công ty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Muốn kiểm tra 건강보험** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Muốn kiểm tra 국민연금 có đóng đúng không
 
 Đối chiếu bảo hiểm cần bắt đầu từ thời gian làm việc và trạng thái tham gia, rồi mới hỏi khoản hoàn trả hoặc quyền lợi. Hãy lưu bản ghi từ NPS để so sánh với hợp đồng và bảng lương.
@@ -195,6 +216,8 @@ Sau đó kiểm tra 4대보험 và thuế.
 5. nếu sắp rời Hàn, kiểm tra 반환일시금 theo quốc tịch/visa
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12. Các tình huống đời sống và checklist tra cứu**, **13. Muốn kiểm tra 건강보험** tiếp nhận điểm tựa từ **12. Muốn kiểm tra 국민연금 có đóng đúng không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Giao dịch online không được hoàn tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Muốn kiểm tra 건강보험
 
 Bảo hiểm y tế phụ thuộc loại tham gia, người phụ thuộc và dữ liệu cư trú. Các bước sau giúp tách lỗi về tư cách, địa chỉ, phí và nợ trước khi liên hệ NHIS.
@@ -206,6 +229,8 @@ Bảo hiểm y tế phụ thuộc loại tham gia, người phụ thuộc và d�
 4. có nợ 보험료 không?
 5. liên hệ NHIS / 외국인민원센터 nếu cần
 ```
+
+> **Chuyển mạch:** Trong **12. Các tình huống đời sống và checklist tra cứu**, **14. Giao dịch online không được hoàn tiền** tiếp nhận điểm tựa từ **13. Muốn kiểm tra 건강보험** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Nghi ngờ giao dịch ngân hàng lạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Giao dịch online không được hoàn tiền
 
@@ -222,6 +247,8 @@ Muốn đánh giá quyền hoàn tiền, cần xác định loại hàng, thời
 
 Đừng mặc định mọi giao dịch đều có cùng một thời hạn `청약철회`.
 
+> **Chuyển mạch:** Ở chặng này của **12. Các tình huống đời sống và checklist tra cứu**, **15. Nghi ngờ giao dịch ngân hàng lạ** tiếp nhận điểm tựa từ **14. Giao dịch online không được hoàn tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Chuẩn bị xin F-5** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Nghi ngờ giao dịch ngân hàng lạ
 
 Trong nghi ngờ gian lận, ưu tiên đầu tiên là chặn dòng tiền và bảo toàn bằng chứng. Sau đó mới xử lý báo cáo, thông tin tín dụng và thay đổi thông tin xác thực.
@@ -236,6 +263,8 @@ Trong nghi ngờ gian lận, ưu tiên đầu tiên là chặn dòng tiền và 
 ```
 
 Với `보이스피싱`, ưu tiên ngăn dòng tiền trước.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12. Các tình huống đời sống và checklist tra cứu**, **16. Chuẩn bị xin F-5** tiếp nhận điểm tựa từ **15. Nghi ngờ giao dịch ngân hàng lạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Chuẩn bị 귀화** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Chuẩn bị xin F-5
 
@@ -253,6 +282,8 @@ F-5 có nhiều route và điều kiện chi tiết, nên checklist phải bắt
 
 Không lấy điều kiện F-5 của một người khác làm điều kiện cho mình.
 
+> **Chuyển mạch:** Trong **12. Các tình huống đời sống và checklist tra cứu**, **17. Chuẩn bị 귀화** tiếp nhận điểm tựa từ **16. Chuẩn bị xin F-5** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Cách dùng tệp (file / 파일) này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Chuẩn bị 귀화
 
 Hồ sơ quốc tịch có hậu quả lâu dài và yêu cầu khác nhau theo route. Các bước sau giúp tách loại 귀화, căn cứ luật, yêu cầu ngôn ngữ và nguồn xác nhận trước khi chuẩn bị giấy tờ.
@@ -267,6 +298,10 @@ Hồ sơ quốc tịch có hậu quả lâu dài và yêu cầu khác nhau theo 
 
 Quốc tịch là lĩnh vực có hậu quả lâu dài, nên không dựa vào checklist community cũ.
 
+> **Chuyển mạch:** Ở chặng này của **12. Các tình huống đời sống và checklist tra cứu**, **18. Cách dùng tệp (file / 파일) này** tiếp nhận điểm tựa từ **17. Chuẩn bị 귀화** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 18. Cách dùng tệp (file / 파일) này
 
 Mỗi checklist là **đường dẫn nghiên cứu**, không phải câu trả lời pháp lý. Sau khi đi hết checklist, bạn mới có dữ liệu đủ tốt để hỏi cơ quan, tư vấn viên hoặc luật sư một câu hỏi chính xác.
+
+> **Bàn giao:** Sau **18. Cách dùng tệp (file / 파일) này**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

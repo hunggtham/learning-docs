@@ -1,6 +1,6 @@
 # Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử
 
-> **Mạch đọc:** Đọc **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Công thức không phải lúc nào cũng biểu diễn một phân tử** sang **Công thức phân tử**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Công thức không phải lúc nào cũng biểu diễn một phân tử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Công thức phân tử** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Công thức hóa học (chemical formula / 화학식)** mã hóa loại nguyên tố và tỉ lệ số nguyên tử trong một tiểu phần hóa học hoặc vật liệu. Tuy nhiên, các loại công thức khác nhau trả lời những câu hỏi khác nhau về thành phần và cấu trúc.
 
@@ -14,8 +14,7 @@ Vì vậy cần hỏi công thức đang mô tả:
 - một đơn vị công thức ion;
 - hay thành phần của một mạng mở rộng.
 
-
-> **Chuyển mạch:** Từ **Công thức không phải lúc nào cũng biểu diễn một phân tử**, ta sang **Công thức phân tử** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức phân tử** tiếp nhận điểm tựa từ **Công thức không phải lúc nào cũng biểu diễn một phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công thức thực nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công thức phân tử
 
@@ -29,8 +28,7 @@ Nhưng công thức phân tử không cho biết cách các nguyên tử nối v
 
 Đây là lý do hóa học hữu cơ cần công thức cấu tạo và ký hiệu đường gấp khúc.
 
-
-> **Chuyển mạch:** Từ **Công thức phân tử**, ta sang **Công thức thực nghiệm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức thực nghiệm** tiếp nhận điểm tựa từ **Công thức phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ phần trăm thành phần tới công thức thực nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công thức thực nghiệm
 
@@ -40,8 +38,7 @@ Glucose `C6H12O6` có công thức thực nghiệm `CH2O`. Hydrogen peroxide `H2
 
 Công thức thực nghiệm đặc biệt hữu ích khi phân tích thực nghiệm chỉ cho thành phần nguyên tố.
 
-
-> **Chuyển mạch:** Từ **Công thức thực nghiệm**, ta sang **Từ phần trăm thành phần tới công thức thực nghiệm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Từ phần trăm thành phần tới công thức thực nghiệm** tiếp nhận điểm tựa từ **Công thức thực nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phần trăm thành phần theo khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ phần trăm thành phần tới công thức thực nghiệm
 
@@ -71,8 +68,7 @@ Nếu khối lượng mol thực nghiệm khoảng `180 g/mol`, còn khối lư�
 (CH_2O)_6=C_6H_{12}O_6
 \]
 
-
-> **Chuyển mạch:** Từ **Từ phần trăm thành phần tới công thức thực nghiệm**, ta sang **Phần trăm thành phần theo khối lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Phần trăm thành phần theo khối lượng** tiếp nhận điểm tựa từ **Từ phần trăm thành phần tới công thức thực nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydrate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phần trăm thành phần theo khối lượng
 
@@ -84,8 +80,7 @@ Phần trăm khối lượng của nguyên tố `X` trong hợp chất:
 
 Đây là cầu nối giữa công thức hóa học và thành phần khối lượng có thể đo được.
 
-
-> **Chuyển mạch:** Từ **Phần trăm thành phần theo khối lượng**, ta sang **Hydrate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Hydrate** tiếp nhận điểm tựa từ **Phần trăm thành phần theo khối lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công thức cấu tạo và các mức biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hydrate
 
@@ -99,8 +94,7 @@ Dấu chấm không phải phép nhân đại số; nó biểu diễn sự kết
 
 Đun nóng hydrate có thể loại nước và cho phép xác định số phân tử nước kết tinh từ độ giảm khối lượng.
 
-
-> **Chuyển mạch:** Từ **Hydrate**, ta sang **Công thức cấu tạo và các mức biểu diễn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức cấu tạo và các mức biểu diễn** tiếp nhận điểm tựa từ **Hydrate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng công thức và khối lượng mol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công thức cấu tạo và các mức biểu diễn
 
@@ -112,8 +106,7 @@ Trong hóa học hữu cơ, **công thức khung (skeletal formula)** ẩn phầ
 
 Mỗi cách biểu diễn là một mô hình. Cùng một phân tử có thể được biểu diễn bằng công thức phân tử, cấu trúc Lewis, hình nêm–gạch thể hiện lập thể, mô hình cầu–que hoặc bề mặt mật độ electron. Mỗi cách giữ lại một loại thông tin và bỏ đi những loại khác.
 
-
-> **Chuyển mạch:** Từ **Công thức cấu tạo và các mức biểu diễn**, ta sang **Khối lượng công thức và khối lượng mol** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Khối lượng công thức và khối lượng mol** tiếp nhận điểm tựa từ **Công thức cấu tạo và các mức biểu diễn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khối lượng công thức và khối lượng mol
 
@@ -127,8 +120,7 @@ M=2M_{Na}+M_S+4M_O
 
 Không cần học thuộc kết quả; cần hiểu công thức là hướng dẫn hạch toán thành phần.
 
-
-> **Chuyển mạch:** Từ **Khối lượng công thức và khối lượng mol**, ta sang **Các hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Khối lượng công thức và khối lượng mol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -144,8 +136,7 @@ Không. Cùng công thức phân tử vẫn có thể tồn tại các đồng p
 
 Không. Chỉ số dưới thay đổi thành phần và bản sắc của tiểu phần; hệ số thay đổi số lượng tiểu phần trong phương trình.
 
-
-> **Chuyển mạch:** Từ **Các hiểu lầm thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -153,4 +144,4 @@ Hãy coi công thức như **cách nén dữ liệu về thành phần**. Trư�
 
 Xem tiếp: [Phương trình hóa học](./02_chemical_equations.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # 01. HTTP API ngữ nghĩa (semantics / 의미론)
 
-> **Mạch đọc:** Đặt **01. HTTP API ngữ nghĩa (semantics / 의미론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **API là đặc tả hợp đồng (contract / 계약)** sang **Idempotency và tính đồng thời (concurrency / 동시성)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01. HTTP API ngữ nghĩa (semantics / 의미론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **API là đặc tả hợp đồng (contract / 계약)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Idempotency và tính đồng thời (concurrency / 동시성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## API là đặc tả hợp đồng (contract / 계약)
 
@@ -23,8 +23,7 @@ không, và phản hồi (response / 응답) nào là authoritative.
 thị, thử lại (retry / 재시도), sửa đầu vào (input / 입력) hoặc báo sự cố (incident / 인시던트). lỗi (error / 오류) phản hồi (response / 응답) nên có mã (code / 코드) ổn định,
 message dành cho người đọc, trường dữ liệu (field / 필드) đường dẫn (path / 경로) (nếu validation) và yêu cầu (request / 요청) ID.
 
-
-> **Chuyển mạch:** Từ **API là đặc tả hợp đồng (contract / 계약)**, ta sang **Idempotency và tính đồng thời (concurrency / 동시성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** API contract chỉ có giá trị khi retry và concurrent request không tạo side effect ngoài invariant; **Idempotency và concurrency** chuyển contract đó thành điều kiện có thể kiểm tra.
 
 ## Idempotency và tính đồng thời (concurrency / 동시성)
 
@@ -34,8 +33,7 @@ trọng, dùng `Idempotency-Key` được lưu cùng kết quả và yêu cầu 
 `ETag`/`If-Match` hoặc phiên bản (version / 버전) number giúp phát hiện lost cập nhật (update / 업데이트) thay vì âm thầm
 ghi đè thay đổi của máy khách (client / 클라이언트) khác.
 
-
-> **Chuyển mạch:** Từ **Idempotency và tính đồng thời (concurrency / 동시성)**, ta sang **tính tương thích (compatibility / 호환성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi idempotency và concurrency đã rõ, compatibility trả lời câu hỏi thay đổi contract mà client cũ vẫn có thể hiểu đến đâu; checklist sau đó biến câu hỏi thành bước review cụ thể.
 
 ## Tính tương thích (compatibility / 호환성)
 
@@ -45,20 +43,16 @@ không tạo phiên bản (version / 버전) mới chỉ vì hiện thực (impl
 dưới concurrent writes; cursor thường ít gây duplicate/skip hơn offset ở bảng
 lớn.
 
-
-> **Chuyển mạch:** Từ **tính tương thích (compatibility / 호환성)**, ta sang **Checklist rà soát (review / 검토)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Checklist rà soát các status, method, representation và failure contract; phần đào sâu compatibility giải thích vì sao một thay đổi nhỏ có thể phá client hoặc cache.
 
 ## Checklist rà soát (review / 검토)
-Phần “Checklist rà soát (review / 검토)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - máy khách (client / 클라이언트) có biết success, kiểm tra hợp lệ (validation / 검증) thất bại (failure / 실패), auth thất bại (failure / 실패) và xung đột (conflict / 충돌) khác nhau?
 - yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) và tỷ lệ (rate / 비율) limit có được phản ánh bằng header/đặc tả hợp đồng (contract / 계약) không?
 - thử lại (retry / 재시도) cùng yêu cầu (request / 요청) có tạo duplicate không?
 - lược đồ (schema / 스키마) có backward/forward tính tương thích (compatibility / 호환성) và deprecation cửa sổ (window / 윈도우) không?
 
-
-> **Chuyển mạch:** Từ **Checklist rà soát (review / 검토)**, ta sang **Đào sâu: ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Phần compatibility đặt quy tắc vào các thay đổi representation và version; bài tập suy luận dùng các quy tắc đó để phân biệt breaking change với thay đổi tương thích.
 
 ## Đào sâu: ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성)
 
@@ -74,8 +68,7 @@ ghi nếu phiên bản (version / 버전) còn khớp, rồi trả ETag mới. `
 precondition không đúng; `409 Conflict` thường dành cho xung đột (conflict / 충돌) lĩnh vực (domain / 도메인). Chọn
 một convention và ghi vào đặc tả hợp đồng (contract / 계약).
 
-
-> **Chuyển mạch:** Từ **Đào sâu: ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성)**, ta sang **Bài tập suy luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Bài tập suy luận buộc người học theo dõi contract qua một request cụ thể; phần security và traffic policy mở rộng cùng contract sang authorization, rate limit và trust boundary.
 
 ## Bài tập suy luận
 
@@ -83,8 +76,7 @@ Thiết kế đặc tả hợp đồng (contract / 계약) cho `POST /exports` c
 cancel, duplicate `Idempotency-Key`, permission thay đổi (change / 변경) giữa chừng và retention
 của kết quả. Nếu máy khách (client / 클라이언트) mất mạng ngay sau `201`, nó tìm lại tài nguyên (resource / 자원) bằng gì?
 
-
-> **Chuyển mạch:** Từ **Bài tập suy luận**, ta sang **bảo mật (security / 보안) và traffic chính sách (policy / 정책) ở API ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** API semantics chỉ hoàn chỉnh khi request hợp lệ được gắn với principal và policy đúng; đây là điểm bàn giao sang security, không phải một checklist API riêng biệt.
 
 ## Bảo mật (security / 보안) và traffic chính sách (policy / 정책) ở API ranh giới (boundary / 경계)
 
@@ -105,4 +97,4 @@ Kiểm tra hợp lệ (validation / 검증) nên phân biệt malformed yêu c�
 Dùng lỗi (error / 오류) mã (code / 코드) ổn định + trường dữ liệu (field / 필드) đường dẫn (path / 경로); message có thể thay đổi và không được trở
 thành nguồn suy luận về sự tồn tại của người dùng (user / 사용자)/tài nguyên (resource / 자원) nhạy cảm.
 
-> **Bàn giao:** Sau **bảo mật (security / 보안) và traffic chính sách (policy / 정책) ở API ranh giới (boundary / 경계)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau phần security và traffic policy, giữ lại contract, idempotency và compatibility boundary; quay về [Backend cốt lõi README](./README.md) để nối sang persistence hoặc caching.

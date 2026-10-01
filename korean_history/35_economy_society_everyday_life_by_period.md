@@ -36,7 +36,7 @@ Hangul giảm technical barrier của writing Korean, nhưng phân phối (distr
 
 ## Wars of the late 16th–17th centuries
 
-Imjin War và Manchu invasions phá farmland, population mạng (network / 네트워크) và tax collection. Refugees, famine, disease và captive movement là part của war lịch sử (history / 이력) ngang với general và battle.
+Chiến tranh Imjin và các cuộc xâm lược của người Mãn Châu phá hủy đất canh tác, mạng lưới dân cư và việc thu thuế. Người tị nạn, nạn đói, bệnh dịch và sự di chuyển của tù binh là một phần của lịch sử chiến tranh, quan trọng không kém tướng lĩnh và trận đánh.
 
 Reconstruction buộc trạng thái (state / 상태) điều chỉnh fiscal practices. Thị trường (market / 시장) activity và monetization về sau không thể tách khỏi pressure phải phục hồi môi trường vận hành (production / 운영 환경) và revenue.
 
@@ -50,7 +50,7 @@ Status boundaries cũng trở nên less rigid ở một số ngữ cảnh (conte
 
 Fiscal weakness, cục bộ (local / 로컬) corruption, xã hội (social / 사회적) unrest và foreign pressure tương tác. Treaty ports tạo channels mới cho trade nhưng đồng thời làm sovereignty và tariff điều khiển (control / 제어) trở thành vấn đề. Reform không chỉ là “muốn Tây hoá”; trạng thái (state / 상태) phải xử lý army, tax, status, education, law và diplomacy cùng lúc.
 
-Donghak Peasant Movement cho thấy economic grievance, cục bộ (local / 로컬) administration, religion và political mobilization có thể hội tụ trong cùng crisis.
+Phong trào Nông dân Donghak cho thấy bất mãn kinh tế, quản trị địa phương, tôn giáo và huy động chính trị có thể hội tụ trong cùng một cuộc khủng hoảng.
 
 ## Colonial period 1910–1945
 

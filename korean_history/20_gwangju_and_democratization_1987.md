@@ -30,11 +30,11 @@ Authoritarian government initially framed Gwangju through controlled media. Surv
 
 ## Labor movement 1987
 
-After June political opening, Great Workers' Struggle spread across industrial workplaces. Democratization therefore included workplace bargaining, not only presidential election. Political rights and labor rights interact but do not advance at identical speed.
+Sau đợt mở cửa chính trị tháng Sáu, Phong trào Đấu tranh của Công nhân lan rộng qua các nơi làm việc công nghiệp. Vì vậy, dân chủ hóa bao gồm cả thương lượng tại nơi làm việc chứ không chỉ bầu cử tổng thống. Quyền chính trị và quyền lao động tương tác với nhau nhưng không tiến triển cùng một tốc độ.
 
 ## Constitutional thiết kế (design / 설계)
 
-1987 Constitution restored direct presidential election with single five-year term. Term limit is institutional phản hồi (response / 응답) to experience of prolonged presidency. Constitutional quy tắc (rule / 규칙) often encodes bộ nhớ (memory / 메모리) of previous dạng thất bại (failure mode / 실패 모드).
+Hiến pháp năm 1987 khôi phục bầu cử tổng thống trực tiếp với một nhiệm kỳ năm năm. Giới hạn nhiệm kỳ là phản hồi thể chế (institutional response) trước kinh nghiệm tổng thống nắm quyền kéo dài. Quy tắc hiến định thường mã hóa ký ức về những dạng thất bại trước đó.
 
 ## Neo thời gian: 1979 → 1980 → 1987
 

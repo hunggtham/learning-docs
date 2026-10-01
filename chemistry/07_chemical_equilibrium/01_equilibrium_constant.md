@@ -1,7 +1,6 @@
 # Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học
 
-> **Mạch đọc:** Đọc **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ thế hóa học tới K** sang **Vì sao hoạt độ quan trọng hơn nồng độ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ thế hóa học tới K** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao hoạt độ quan trọng hơn nồng độ?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Hằng số cân bằng (equilibrium constant, \(K\) / 평형 상수)** định lượng tỉ lệ hoạt độ của sản phẩm và chất phản ứng tại cân bằng cho một phương trình phản ứng được viết theo một dạng stoichiometric cụ thể và tại một nhiệt độ xác định.
 
@@ -49,6 +48,8 @@ Vì vậy `K` mã hóa chênh lệch năng lượng tự do chuẩn theo dạng 
 
 Nếu \(\Delta_rG^\circ\) thay đổi chỉ vài kJ/mol, `K` có thể thay đổi nhiều lần vì hàm mũ rất nhạy.
 
+> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Vì sao hoạt độ quan trọng hơn nồng độ?** tiếp nhận điểm tựa từ **Từ thế hóa học tới K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoạt độ của khí và pha tinh khiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao hoạt độ quan trọng hơn nồng độ?
 
 Nồng độ cho biết có bao nhiêu species trong một thể tích. Nhưng trong dung dịch thật, các species tương tác với nhau nên “khả năng phản ứng hiệu dụng” không còn tỉ lệ hoàn hảo với nồng độ.
@@ -76,6 +77,8 @@ a_i\approx\frac{c_i}{c^\circ}
 Nhưng ở lực ion đáng kể, đặc biệt với ion đa điện tích, \(\gamma_i\) có thể lệch đáng kể khỏi 1.
 
 Do đó một “hằng số cân bằng theo nồng độ” có thể thay đổi theo nền điện ly, trong khi hằng số nhiệt động xây từ hoạt độ vẫn giữ ý nghĩa nhất quán hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Hoạt độ của khí và pha tinh khiết** tiếp nhận điểm tựa từ **Vì sao hoạt độ quan trọng hơn nồng độ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ lớn của K** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hoạt độ của khí và pha tinh khiết
 
@@ -105,6 +108,8 @@ K\approx\frac{P_{CO_2}}{P^\circ}
 
 Lượng chất rắn có thể thay đổi mà `K` không đổi miễn là các pha tinh khiết tương ứng vẫn còn hiện diện.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Độ lớn của K** tiếp nhận điểm tựa từ **Hoạt độ của khí và pha tinh khiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K phụ thuộc cách viết phương trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ lớn của K
 
 Nếu:
@@ -132,6 +137,8 @@ K=10^6
 \]
 
 vẫn có thể còn chất phản ứng đo được, đặc biệt nếu nồng độ ban đầu rất lớn hoặc stoichiometry phức tạp.
+
+> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **K phụ thuộc cách viết phương trình** tiếp nhận điểm tựa từ **Độ lớn của K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kc và Kp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## K phụ thuộc cách viết phương trình
 
@@ -167,6 +174,8 @@ K_3=K_1K_2
 
 vì logarithm biến phép nhân thành phép cộng.
 
+> **Chuyển mạch:** Ở chặng này của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Kc và Kp** tiếp nhận điểm tựa từ **K phụ thuộc cách viết phương trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự phụ thuộc vào nhiệt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kc và Kp
 
 Giáo trình thường dùng:
@@ -185,6 +194,8 @@ khi các quy ước đơn vị và trạng thái chuẩn được xử lý nhấ
 Trong nhiệt động lực học chặt chẽ, `K` được xây từ hoạt độ nên là đại lượng không thứ nguyên.
 
 Các đơn vị đôi khi xuất hiện trong biểu thức giáo trình thực chất là dấu hiệu người ta đang dùng nồng độ/áp suất trực tiếp thay cho hoạt độ đã chuẩn hóa.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Sự phụ thuộc vào nhiệt độ** tiếp nhận điểm tựa từ **Kc và Kp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dạng tích phân của van 't Hoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sự phụ thuộc vào nhiệt độ
 
@@ -206,6 +217,8 @@ Nếu \(\Delta H^\circ<0\), tăng nhiệt độ thường làm `K` giảm.
 
 Đây là mô tả định lượng sâu hơn quy tắc nhiệt độ của Le Châtelier.
 
+> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Dạng tích phân của van 't Hoff** tiếp nhận điểm tựa từ **Sự phụ thuộc vào nhiệt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K không phụ thuộc nồng độ ban đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dạng tích phân của van 't Hoff
 
 Nếu \(\Delta H^\circ\) gần như không đổi trong khoảng nhiệt độ đang xét:
@@ -220,6 +233,8 @@ Phương trình này cho phép ước lượng `K` ở nhiệt độ mới từ 
 
 Nhưng nếu khoảng nhiệt độ lớn, \(\Delta H^\circ\) cũng thay đổi do nhiệt dung nên cần mô hình đầy đủ hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **K không phụ thuộc nồng độ ban đầu** tiếp nhận điểm tựa từ **Dạng tích phân của van 't Hoff** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất xúc tác không làm đổi K** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## K không phụ thuộc nồng độ ban đầu
 
 Ở cùng nhiệt độ và cùng trạng thái chuẩn, cùng phản ứng có cùng hằng số cân bằng nhiệt động.
@@ -231,6 +246,8 @@ Q=K
 \]
 
 Đây là lý do hai bình có thành phần ban đầu khác nhau có thể đạt các thành phần cân bằng khác nhau về số mol tuyệt đối nhưng vẫn thỏa cùng một quan hệ `Q = K`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Chất xúc tác không làm đổi K** tiếp nhận điểm tựa từ **K không phụ thuộc nồng độ ban đầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiều cân bằng cùng tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất xúc tác không làm đổi K
 
@@ -244,6 +261,8 @@ Nếu một catalyst dường như làm thay đổi thành phần cuối cùng, 
 - có phản ứng phụ mới;
 - catalyst thay đổi pha hoặc species tồn tại;
 - điều kiện nhiệt độ/áp suất đã khác.
+
+> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Nhiều cân bằng cùng tồn tại** tiếp nhận điểm tựa từ **Chất xúc tác không làm đổi K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ cân bằng ghép: độ tan carbonate trong acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhiều cân bằng cùng tồn tại
 
@@ -262,6 +281,8 @@ proton hóa/deproton hóa ligand
 Mỗi cân bằng có `K` riêng, nhưng chúng chia sẻ cùng species nên bị **ghép với nhau (coupled equilibria)**.
 
 Đây là lý do một thay đổi pH có thể làm độ tan, màu, thế redox và khả năng tạo phức thay đổi cùng lúc.
+
+> **Chuyển mạch:** Ở chặng này của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Nhiều cân bằng cùng tồn tại** cho ta quy tắc; **Ví dụ cân bằng ghép: độ tan carbonate trong acid** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hằng số cân bằng tổng từ các bước riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ cân bằng ghép: độ tan carbonate trong acid
 
@@ -288,6 +309,8 @@ thì \(CO_3^{2-}\) tự do bị giảm.
 Theo Le Châtelier hoặc trực tiếp qua `Q`, cân bằng hòa tan bị kéo sang phải.
 
 Vì vậy acid làm `CaCO3` tan mạnh hơn dù `Ksp` riêng của phản ứng hòa tan không thay đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Ví dụ cân bằng ghép: độ tan carbonate trong acid** cho ta quy tắc; **Hằng số cân bằng tổng từ các bước riêng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hằng số điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hằng số cân bằng tổng từ các bước riêng
 
@@ -325,6 +348,8 @@ Nếu một bước có `K` rất lớn, nó có thể kéo mạnh cân bằng t
 - chelation;
 - phản ứng redox ghép.
 
+> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Hằng số điều kiện** tiếp nhận điểm tựa từ **Hằng số cân bằng tổng từ các bước riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân bố species và phân số alpha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hằng số điều kiện
 
 Trong nhiều hệ, người ta gom một số cân bằng phụ vào **hằng số điều kiện (conditional equilibrium constant)**.
@@ -352,6 +377,8 @@ K_f'=\alpha_{Y^{4-}}K_f
 `K_f'` cho biết độ mạnh hiệu dụng của tạo phức tại pH đó.
 
 Đây là công cụ rất hữu ích trong hóa phân tích và hóa phối trí.
+
+> **Chuyển mạch:** Ở chặng này của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Phân bố species và phân số alpha** tiếp nhận điểm tựa từ **Hằng số điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng vật chất và cân bằng điện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân bố species và phân số alpha
 
@@ -383,6 +410,8 @@ Với hệ đa proton, các biểu thức dài hơn nhưng nguyên tắc giống
 
 **Biểu đồ phân bố species (speciation diagram)** chính là cách trực quan hóa các phân số này theo pH hoặc biến môi trường khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Cân bằng vật chất và cân bằng điện tích** tiếp nhận điểm tựa từ **Phân bố species và phân số alpha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao bảng ICE chỉ là trường hợp đơn giản?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cân bằng vật chất và cân bằng điện tích
 
 Để giải hệ nhiều cân bằng một cách tổng quát, cần kết hợp:
@@ -405,6 +434,8 @@ Cân bằng điện tích của dung dịch tổng quát:
 
 Ba loại phương trình này biến bài toán cân bằng thành một hệ phương trình phi tuyến có thể giải số.
 
+> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Vì sao bảng ICE chỉ là trường hợp đơn giản?** tiếp nhận điểm tựa từ **Cân bằng vật chất và cân bằng điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ nhạy theo K** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao bảng ICE chỉ là trường hợp đơn giản?
 
 Bảng `Initial–Change–Equilibrium` rất hữu ích cho một phản ứng đơn và số species ít.
@@ -422,6 +453,8 @@ liệt kê species
 ```
 
 Đây là cách phần mềm speciation và geochemical modeling hoạt động ở mức nền tảng.
+
+> **Chuyển mạch:** Ở chặng này của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Độ nhạy theo K** tiếp nhận điểm tựa từ **Vì sao bảng ICE chỉ là trường hợp đơn giản?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng và thế hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ nhạy theo K
 
@@ -444,6 +477,8 @@ K\ll1
 có thể coi chuyển hóa nhỏ.
 
 Nhưng khi nhiều `K` tương đương nhau, các species cạnh tranh mạnh và cần giải đồng thời.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Cân bằng và thế hóa học** tiếp nhận điểm tựa từ **Độ nhạy theo K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng hóa học và tối thiểu Gibbs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cân bằng và thế hóa học
 
@@ -469,6 +504,8 @@ thay vào ta thu được biểu thức `Q=K`.
 
 Do đó hằng số cân bằng không phải quy tắc riêng biệt; nó là hệ quả trực tiếp của việc **Gibbs free năng lượng (energy / 에너지) đạt cực tiểu dưới các ràng buộc**.
 
+> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Cân bằng hóa học và tối thiểu Gibbs** tiếp nhận điểm tựa từ **Cân bằng và thế hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cân bằng hóa học và tối thiểu Gibbs
 
 Trong hệ nhiều phản ứng, thay vì viết từng `K`, một cách tương đương là tối thiểu hóa tổng Gibbs free năng lượng (energy / 에너지) với các ràng buộc bảo toàn nguyên tố.
@@ -482,6 +519,8 @@ Cách này đặc biệt hữu ích trong:
 - tính toán nhiệt động công nghiệp.
 
 Nó biến equilibrium thành một bài toán tối ưu có ràng buộc.
+
+> **Chuyển mạch:** Ở chặng này của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Cân bằng hóa học và tối thiểu Gibbs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -509,10 +548,12 @@ Không. Nếu các cân bằng dùng chung species, chúng bị ghép với nhau
 
 Không. Proton hóa, tạo phức hoặc phản ứng phụ có thể kéo cân bằng hòa tan rất mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 `K` là **tọa độ nhiệt động của cân bằng trên địa hình Gibbs free năng lượng (energy / 에너지)**. Trong hệ đơn giản, nó cho tỉ lệ hoạt độ ở cân bằng. Trong hệ thật, nhiều `K` kết nối thành một mạng và cùng với bảo toàn vật chất + điện tích quyết định phân bố species. Vì vậy học `K` tốt nhất không phải là học từng công thức riêng, mà là học cách xây và giải một mạng cân bằng.
 
 Xem tiếp: [Thương số phản ứng](./02_reaction_quotient.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

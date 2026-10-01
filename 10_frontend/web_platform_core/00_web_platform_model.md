@@ -1,7 +1,6 @@
 # Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)
 
-> **Mạch đọc:** Đặt **Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)** sang **Ba lớp cần tách**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Ba lớp cần tách** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Nền tảng Web (web platform / 웹 플랫폼) không chỉ là tập API của trình duyệt (browser / 브라우저). Nó là hợp đồng giữa tài nguyên (resource / 자원)
 được tải, parser tạo ra cây (tree / 트리), thời gian chạy (runtime / 런타임) thực thi script, renderer tạo ra pixels,
@@ -29,8 +28,7 @@ resize, biểu định kiểu (stylesheet / 스타일시트) mới, mạng (netw
 phần cây (tree / 트리) và kích hoạt lại công việc (work / 작업). Vì vậy câu hỏi gỡ lỗi (debug / 디버그) tốt là “ranh giới (boundary / 경계) nào
 đổi trạng thái (state / 상태) và bằng chứng (evidence / 증거) nào chứng minh nó?” thay vì chỉ hỏi “thành phần (component / 컴포넌트) nào lỗi?”.
 
-
-> **Chuyển mạch:** Từ **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)**, ta sang **Ba lớp cần tách** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)**, **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)** nêu điều cần giải thích; **Ba lớp cần tách** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ba lớp cần tách
 
@@ -42,12 +40,9 @@ subscription, scheduling và rendering lớp trừu tượng (abstraction / 추�
 sản phẩm tạo ra (artifact / 산출물). Một khung phần mềm (framework / 프레임워크) không thể biến dữ liệu không đáng tin thành trusted dữ liệu (data / 데이터)
 chỉ bằng kiểu (type / 타입) hoặc thành phần (component / 컴포넌트) ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **Ba lớp cần tách**, ta sang **bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ba lớp tách host, browser và application responsibilities. **Domain invariant** dùng boundary đó để xác định điều ứng dụng phải giữ dù rendering, network hay framework thay đổi.
 
 ## Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)
-Phần “Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - Mỗi tài nguyên (resource / 자원), yêu cầu (request / 요청), DOM nút (node / 노드), thành phần (component / 컴포넌트)/page instance và async thao tác (operation / 연산)
   có định danh (identity / 식별자) và thời gian tồn tại (lifetime / 수명) rõ ràng.
@@ -65,4 +60,4 @@ Phần “Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도�
 Các chapter tiếp theo triển khai những bất biến (invariant / 불변식) này ở thời gian chạy (runtime / 런타임), renderer,
 tương tác (interaction / 상호작용)/mạng (network / 네트워크) và môi trường vận hành (production / 운영 환경) các ràng buộc (constraints / 제약조건들).
 
-> **Bàn giao:** Sau **bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 browser runtime and lifecycle](./01_browser_runtime_and_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

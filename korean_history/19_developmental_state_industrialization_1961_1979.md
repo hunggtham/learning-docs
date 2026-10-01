@@ -40,11 +40,11 @@ Trạng thái (state / 상태) needed firms with quy mô (scale / 규모) to exe
 
 ## Rural modernization
 
-Saemaul Undong (새마을운동) mobilized rural hạ tầng (infrastructure / 인프라)/community projects in 1970s. It improved some roads, roofs, cục bộ (local / 로컬) facilities and income opportunities, but also operated within authoritarian mobilization. Evaluation should separate material outcomes from political ngữ cảnh (context / 맥락).
+Saemaul Undong (새마을운동) huy động các dự án hạ tầng nông thôn và cộng đồng trong thập niên 1970. Phong trào cải thiện một số đường sá, mái nhà, cơ sở địa phương và cơ hội thu nhập, nhưng cũng vận hành trong cơ chế huy động độc đoán. Đánh giá cần tách kết quả vật chất khỏi bối cảnh chính trị.
 
 ## Education-to-industry chuỗi xử lý (pipeline / 파이프라인)
 
-Industrial upgrading needs engineers, technicians and managers. Expansion of secondary/higher education and vocational huấn luyện (training / 학습) reduced skill bottleneck. Human capital does not cause growth alone, but without matching jobs investment in education may not translate into productivity.
+Nâng cấp công nghiệp cần kỹ sư, kỹ thuật viên và nhà quản lý. Mở rộng giáo dục trung học/bậc cao và đào tạo nghề làm giảm nút thắt kỹ năng. Vốn con người không tự nó tạo ra tăng trưởng; nếu thiếu việc làm phù hợp, đầu tư vào giáo dục có thể không chuyển thành năng suất.
 
 ## Neo thời gian: từ kế hoạch 5 năm tới heavy industry
 
@@ -82,7 +82,7 @@ Nghĩ theo các hệ thống (systems / 시스템들) view: chaebol là đầu r
 
 ## Đi đâu để nhìn thấy industrialization
 
-**Ulsan** cho thấy shipbuilding, automobile và petrochemical cluster; **Pohang** gắn với steel; tuyến **Gyeongbu Expressway** cho thấy logistics tích hợp (integration / 통합); Seoul cũ quanh industrial districts và Cheonggyecheon giúp hình dung workshop/factory urbanization. Các Saemaul museums hoặc village exhibits cho phép nhìn rural modernization qua roof, road, irrigation và community organization thay vì khẩu hiệu.
+**Ulsan** cho thấy cụm đóng tàu, ô tô và hóa dầu; **Pohang** gắn với thép; tuyến **Gyeongbu Expressway** cho thấy logistics tích hợp; Seoul cũ quanh các khu công nghiệp và Cheonggyecheon giúp hình dung đô thị hóa của xưởng/nhà máy. Các bảo tàng Saemaul hoặc khu trưng bày làng cho phép nhìn hiện đại hóa nông thôn qua mái nhà, đường sá, thủy lợi và tổ chức cộng đồng thay vì khẩu hiệu.
 
 ## Cầu nối sang 1980s
 

@@ -1,6 +1,6 @@
 # Các mẫu triển khai DSA trong C
 
-> **Mạch đọc:** Đọc **Các mẫu triển khai DSA trong C** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quyền sở hữu là một phần của hợp đồng API** sang **Mảng động**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mẫu triển khai DSA trong C**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quyền sở hữu là một phần của hợp đồng API** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mảng động** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **C DSA hiện thực (implementation / 구현) Patterns / C 자료구조 구현 패턴**
 
@@ -27,6 +27,8 @@ typedef void (*destroy_fn)(void *);
 Nếu quyền sở hữu không rõ, các lỗi thường gặp là double-free, use-after-free, rò rỉ bộ nhớ hoặc giải phóng bằng sai allocator.
 
 Một API tốt phải trả lời: ai tạo/hủy bộ chứa (container / 컨테이너), ai sở hữu phần tử, con trỏ trả về sống tới khi nào và thao tác nào làm con trỏ/bộ lặp mất hiệu lực.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Mảng động** tiếp nhận điểm tựa từ **Quyền sở hữu là một phần của hợp đồng API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **realloc và mất hiệu lực của con trỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mảng động
 
@@ -57,6 +59,8 @@ if (capacity > SIZE_MAX / 2) return false;
 if (new_capacity > SIZE_MAX / sizeof *v->data) return false;
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **realloc và mất hiệu lực của con trỏ** tiếp nhận điểm tựa từ **Mảng động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cập nhật theo kiểu giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## realloc và mất hiệu lực của con trỏ
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -73,6 +77,8 @@ Không nên ghi trực tiếp kết quả `realloc` vào con trỏ cũ nếu mu�
 
 Đây là ví dụ cách biểu diễn bộ nhớ tạo ra ngữ nghĩa API.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Cập nhật theo kiểu giao dịch** tiếp nhận điểm tựa từ **realloc và mất hiệu lực của con trỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Danh sách liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cập nhật theo kiểu giao dịch
 
 Một thay đổi cấu trúc nên theo mẫu:
@@ -85,6 +91,8 @@ sau đó giải phóng trạng thái cũ
 ```
 
 Ví dụ resize bảng băm (hash table / 해시 테이블): cấp phát bảng mới, rehash thành công, đổi con trỏ/sức chứa (capacity / 용량) rồi mới giải phóng bảng cũ. Nếu cập nhật nửa chừng rồi cấp phát thất bại, cấu trúc có thể bị hỏng.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, sau nội dung của **Cập nhật theo kiểu giao dịch**, **Danh sách liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và bộ đệm vòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Danh sách liên kết
 
@@ -120,6 +128,8 @@ n->prev != NULL => n->prev->next == n
 
 Nút canh gác (sentinel) có thể giảm số trường hợp đặc biệt ở đầu/cuối danh sách và làm lô-gic (logic / 논리) nối lại đồng đều hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và bộ đệm vòng** tiếp nhận điểm tựa từ **Danh sách liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ chứa (container / 컨테이너) tổng quát với void** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và bộ đệm vòng
 
 Ngăn xếp (stack / 스택) bằng mảng thường có locality tốt và ít cấp phát. hàng đợi (queue / 큐) có thể dùng **bộ đệm vòng (ring buffer)** để tránh dịch chuyển phần tử.
@@ -138,6 +148,8 @@ Tối ưu bằng bitmask chỉ đúng khi bất biến sức chứa (capacity / 
 
 Có nhiều quy ước ring buffer như `head + size`, `head/tail + one-empty-slot` hoặc thêm cờ `full`. Phải chọn một mô hình và dùng nhất quán.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Bộ chứa (container / 컨테이너) tổng quát với void** tiếp nhận điểm tựa từ **Ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và bộ đệm vòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hợp đồng comparator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ chứa (container / 컨테이너) tổng quát với void*
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -149,6 +161,8 @@ typedef int (*compare_fn)(const void *, const void *);
 `void *` cho phép viết vùng nhớ động (heap / 힙), BST hoặc sort tổng quát nhưng đổi lại mất một phần an toàn kiểu tĩnh, cần cast và làm hợp đồng quyền sở hữu (ownership / 소유권) phức tạp hơn.
 
 Macro có thể sinh bộ chứa (container / 컨테이너) theo kiểu cụ thể, giảm cast nhưng làm gỡ lỗi (debug / 디버그) và thông báo lỗi khó hơn. C không có generics bản địa (native / 네이티브), vì vậy đây là một đánh đổi thiết kế thực sự.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Hợp đồng comparator** tiếp nhận điểm tựa từ **Bộ chứa (container / 컨테이너) tổng quát với void** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Padding, alignment và bố trí dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hợp đồng comparator
 
@@ -168,6 +182,8 @@ thường an toàn hơn.
 
 `qsort` tiện dụng nhưng gọi comparator qua hàm (function / 함수) pointer và API `void *`. Trong đường chạy số học rất nóng, sort chuyên biệt có thể nhanh hơn, nhưng chỉ nên thay thế sau khi đo.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Hợp đồng comparator** nêu điều cần giải thích; **Padding, alignment và bố trí dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Arena và pool allocator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Padding, alignment và bố trí dữ liệu
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -186,6 +202,8 @@ Trình biên dịch (compiler / 컴파일러) có thể chèn padding để căn
 
 Cách bố trí nên phù hợp mẫu truy cập.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Padding, alignment và bố trí dữ liệu** nêu điều cần giải thích; **Arena và pool allocator** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Handle thay cho con trỏ thô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Arena và pool allocator
 
 Cấu trúc nhiều nút gọi `malloc` cho từng nút có thể tốn siêu dữ liệu (metadata / 메타데이터) và gây phân mảnh.
@@ -201,11 +219,15 @@ allocate node -> lấy từ free list trước khi xin vùng mới
 
 Nếu bên ngoài giữ handle lâu dài, generation counter `(index, generation)` giúp phát hiện handle cũ sau khi slot được tái sử dụng.
 
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Handle thay cho con trỏ thô** tiếp nhận điểm tựa từ **Arena và pool allocator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng băm (hash table / 해시 테이블) và cách xử lý va chạm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Handle thay cho con trỏ thô
 
 Khi lưu trữ (storage / 저장소) có thể di chuyển hoặc compact, API công khai (public API / 공개 API) giữ raw pointer rất rủi ro. Một handle số nguyên có thể ánh xạ tới slot nội bộ. Nếu lưu trữ (storage / 저장소) di chuyển, ánh xạ thay đổi nhưng handle vẫn ổn định.
 
 Mẫu này phổ biến trong game engine và ECS.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Bảng băm (hash table / 해시 테이블) và cách xử lý va chạm** tiếp nhận điểm tựa từ **Handle thay cho con trỏ thô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảng băm (hash table / 해시 테이블) và cách xử lý va chạm
 
@@ -223,11 +245,15 @@ Quá nhiều tombstone làm probing dài hơn, vì vậy đôi khi phải rehash
 
 Nếu băm (hash / 해시) dựa vào phép quay vòng số nguyên, nên dùng kiểu unsigned vì unsigned overflow trong C có ngữ nghĩa modulo xác định; signed overflow thì không.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Độ sâu đệ quy** tiếp nhận điểm tựa từ **Bảng băm (hash table / 해시 테이블) và cách xử lý va chạm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **const, restrict và aliasing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ sâu đệ quy
 
 DFS đệ quy rất dễ đọc nhưng ngăn xếp (stack / 스택) hữu hạn. Cây lệch hoặc đồ thị dạng đường hàng trăm nghìn đỉnh có thể gây ngăn xếp (stack / 스택) overflow.
 
 Ngăn xếp (stack / 스택) tường minh trên vùng nhớ động (heap / 힙) cho phép kiểm soát dung lượng và xử lý lỗi cấp phát. Thuật toán vẫn là DFS; chỉ thay cách lưu trạng thái điều khiển.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **const, restrict và aliasing** tiếp nhận điểm tựa từ **Độ sâu đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc mất hiệu lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## const, restrict và aliasing
 
@@ -243,11 +269,15 @@ const Node *tree_find(const Tree *tree, int key);
 
 API cấu trúc dữ liệu nên hạn chế để lộ con trỏ nội bộ có thể thay đổi nếu không cần thiết.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Quy tắc mất hiệu lực** tiếp nhận điểm tựa từ **const, restrict và aliasing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mã lỗi và cleanup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy tắc mất hiệu lực
 
 Mảng động resize có thể làm con trỏ phần tử mất hiệu lực. bảng băm (hash table / 해시 테이블) rehash làm bucket/con trỏ nội bộ mất hiệu lực. Xóa nút danh sách làm con trỏ tới nút đó mất hiệu lực. Xoay cây có thể giữ địa chỉ nút nhưng thay đổi quan hệ cha–con.
 
 Thư viện C tốt nên ghi rõ các quy tắc này giống cách bộ chứa (container / 컨테이너) C++ mô tả iterator vô hiệu hóa (invalidation / 무효화).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Mã lỗi và cleanup** tiếp nhận điểm tựa từ **Quy tắc mất hiệu lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sao chép, clone và chuyển quyền sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mã lỗi và cleanup
 
@@ -265,6 +295,8 @@ typedef enum {
 Hàm khởi tạo nhiều tài nguyên phải cleanup đúng khi một bước giữa thất bại. Mẫu `goto cleanup` trong C có thể làm luồng giải phóng tập trung và dễ kiểm chứng hơn nhiều nhánh lồng nhau.
 
 Destructor có thể đặt con trỏ về `NULL` và reset siêu dữ liệu (metadata / 메타데이터) sau `free`, nhưng điều đó không làm các alias khác tự biến mất. Dùng đối tượng (object / 객체) sau khi destroy vẫn là lỗi ngữ nghĩa.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Sao chép, clone và chuyển quyền sở hữu** tiếp nhận điểm tựa từ **Mã lỗi và cleanup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa chỉ ổn định và lưu trữ gọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sao chép, clone và chuyển quyền sở hữu
 
@@ -286,11 +318,15 @@ borrow reference
 
 Tên hàm và hợp đồng rõ ràng giúp tránh sao chép nông ngoài ý muốn.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Địa chỉ ổn định và lưu trữ gọn** tiếp nhận điểm tựa từ **Sao chép, clone và chuyển quyền sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn đồ thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Địa chỉ ổn định và lưu trữ gọn
 
 Nút cấp phát riêng có địa chỉ ổn định nhưng locality kém. Nút tham chiếu nhau bằng chỉ mục (index / 인덱스) trong véc-tơ (vector / 벡터) có thể gọn hơn; véc-tơ (vector / 벡터) resize có thể đổi địa chỉ cơ sở nhưng chỉ mục (index / 인덱스) vẫn ổn định nếu thứ tự slot không đổi.
 
 Lựa chọn phụ thuộc việc bên ngoài có giữ tham chiếu (reference / 참조)/handle hay không và mẫu truy cập thực tế.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Biểu diễn đồ thị** tiếp nhận điểm tựa từ **Địa chỉ ổn định và lưu trữ gọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flexible Array Member** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biểu diễn đồ thị
 
@@ -302,6 +338,8 @@ int edges[m];
 ```
 
 Đồ thị động có thể dùng véc-tơ (vector / 벡터) cạnh cho từng đỉnh hoặc khối (block / 블록) adjacency từ pool.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Flexible Array Member** tiếp nhận điểm tựa từ **Biểu diễn đồ thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intrusive dữ liệu (data / 데이터) structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Flexible Array Member
 
@@ -322,6 +360,8 @@ malloc(sizeof(Block) + n * sizeof(int));
 
 Cách này giảm một lần gián tiếp qua con trỏ và giảm số cấp phát, nhưng phép tính kích thước phải chống overflow.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Flexible Array Member** nêu điều cần giải thích; **Intrusive dữ liệu (data / 데이터) structures** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sentinel và trạng thái tường minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Intrusive dữ liệu (data / 데이터) structures
 
 Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
@@ -335,11 +375,15 @@ typedef struct Task {
 
 Intrusive danh sách (list / 목록) nhúng trường liên kết trực tiếp vào đối tượng (object / 객체) người dùng nên không cần wrapper nút (node / 노드). Đổi lại, đối tượng (object / 객체) bị gắn với bố trí của cấu trúc; nếu muốn tham gia nhiều danh sách (list / 목록) có thể cần nhiều trường liên kết.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Intrusive dữ liệu (data / 데이터) structures** nêu điều cần giải thích; **Sentinel và trạng thái tường minh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bộ xác minh bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sentinel và trạng thái tường minh
 
 Không nên dùng `0`, `-1` hoặc một “magic giá trị (value / 값)” làm rỗng nếu miền dữ liệu hợp lệ có thể chứa chính giá trị đó. Nên dùng kích thước (size / 크기), cờ hoặc trạng thái riêng.
 
 Bài học này áp dụng cho tombstone của bảng băm (hash table / 해시 테이블) và `INF` trong thuật toán đồ thị.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Bộ xác minh bất biến** tiếp nhận điểm tựa từ **Sentinel và trạng thái tường minh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sanitizer và phân tích tĩnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ xác minh bất biến
 
@@ -353,6 +397,8 @@ Hash Table -> số slot occupied khớp size và lookup tìm được mọi entr
 ```
 
 Chạy validator sau chuỗi thao tác ngẫu nhiên giúp bắt lỗi cấu trúc ngay tại thời điểm bất biến bị phá.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Sanitizer và phân tích tĩnh** tiếp nhận điểm tựa từ **Bộ xác minh bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fuzzing và kiểm thử đối chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sanitizer và phân tích tĩnh
 
@@ -368,6 +414,8 @@ Valgrind, trình biên dịch (compiler / 컴파일러) warnings và static anal
 
 Đầu ra đúng trên vài kiểm thử (test / 테스트) không chứng minh chương trình an toàn bộ nhớ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Sanitizer và phân tích tĩnh** đã nêu tiêu chí phân biệt, còn **Fuzzing và kiểm thử đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Benchmark đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Fuzzing và kiểm thử đối chiếu
 
 Cấu trúc dữ liệu rất phù hợp với chuỗi thao tác ngẫu nhiên:
@@ -382,11 +430,15 @@ Vùng nhớ vùng nhớ động (heap / 힙) tự cài đặt có thể đối c
 
 Một oracle chậm nhưng đơn giản thường tốt hơn một oracle tối ưu phức tạp.
 
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Fuzzing và kiểm thử đối chiếu** đã nêu tiêu chí phân biệt, còn **Benchmark đúng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **ABI và kiểu mờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Benchmark đúng
 
 Benchmark C nên dùng cờ tối ưu nhất quán như `-O2` hoặc `-O3`, đồng thời bảo đảm trình biên dịch (compiler / 컴파일러) không loại bỏ công việc vì kết quả không được quan sát.
 
 Nên thử nhiều hình dạng đầu vào, đo cả cấp phát nếu cấu trúc dùng nhiều nút và phân biệt rõ bộ nhớ đệm (cache / 캐시) nóng/lạnh khi điều đó quan trọng.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **ABI và kiểu mờ** tiếp nhận điểm tựa từ **Benchmark đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pool, luồng và atomic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## ABI và kiểu mờ
 
@@ -398,11 +450,15 @@ typedef struct HashMap HashMap;
 
 có thể khai báo kiểu mờ trong header và giữ trường thật trong tệp (file / 파일) `.c`. Khi đó hiện thực (implementation / 구현) có thể đổi cách biểu diễn mà không thay API công khai (public API / 공개 API).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Pool, luồng và atomic** tiếp nhận điểm tựa từ **ABI và kiểu mờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pool, luồng và atomic
 
 Allocator/pool tùy biến không tự an toàn luồng. Môi trường concurrent cần khóa, pool theo luồng hoặc giao thức đồng bộ phù hợp.
 
 Thêm `_Atomic` vào con trỏ cũng không tự biến danh sách thành lock-free. Các vấn đề như ABA, bộ nhớ (memory / 메모리) reclamation, hazard pointer và epoch cần thiết kế thuật toán riêng.
+
+> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Pool, luồng và atomic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checklist triển khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -413,6 +469,8 @@ Thêm `_Atomic` vào con trỏ cũng không tự biến danh sách thành lock-f
 “Big-O đúng thì hiện thực (implementation / 구현) đúng” — sai; UB và lỗi bộ nhớ có thể phá mọi bảo đảm.
 
 “Linked danh sách (list / 목록) chèn O(1) nên luôn nhanh hơn véc-tơ (vector / 벡터)” — bỏ qua chi phí tìm vị trí, cấp phát và bộ nhớ đệm (cache / 캐시) locality.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu triển khai DSA trong C**, **Checklist triển khai** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Checklist triển khai
 
@@ -431,6 +489,8 @@ Sanitizer đã chạy sạch chưa?
 Benchmark có phản ánh tải công việc thật không?
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu triển khai DSA trong C**, **Mô hình tư duy** gom các mảnh từ **Checklist triển khai** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Trong C, cấu trúc dữ liệu tồn tại đồng thời ở hai thế giới: **cấu trúc lô-gic (logic / 논리) của khóa/nút/cạnh** và **cấu trúc vật lý của byte/vùng cấp phát/con trỏ**. Tính đúng đắn và hiệu năng đều phụ thuộc cả hai.
@@ -438,3 +498,5 @@ Benchmark có phản ánh tải công việc thật không?
 Một triển khai DSA hoàn chỉnh không chỉ có `push`, `pop`, `find`; nó còn cần `init/destroy`, xử lý lỗi, hợp đồng quyền sở hữu (ownership / 소유권), validator, kiểm thử đối chiếu ngẫu nhiên và kiểm tra an toàn bộ nhớ.
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

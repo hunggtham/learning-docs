@@ -1,7 +1,6 @@
 # Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức
 
-> **Mạch đọc:** Đọc **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vị trí trong thư viện Khoa học máy tính** sang **Cấu trúc đầy đủ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vị trí trong thư viện Khoa học máy tính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cấu trúc đầy đủ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Đây là thư viện chuyên sâu về **Cấu trúc dữ liệu và thuật toán (Data Structures & Algorithms — DSA / 자료구조와 알고리즘)** trong nhánh Khoa học máy tính của repository.
 
@@ -35,8 +34,7 @@ computer_science/
 
 Từ **nâng cao (advanced)** mô tả vị trí của thư viện so với lớp nền tảng. Bên trong vẫn không tổ chức cứng theo Beginner → Intermediate → Advanced; các chương được chia theo quan hệ phụ thuộc kiến thức và ranh giới khái niệm.
 
-
-> **Chuyển mạch:** Từ **Vị trí trong thư viện Khoa học máy tính**, ta sang **Cấu trúc đầy đủ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Cấu trúc đầy đủ** tiếp nhận điểm tựa từ **Vị trí trong thư viện Khoa học máy tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ phụ thuộc kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc đầy đủ
 
@@ -116,8 +114,7 @@ advanced/
 
 Mỗi nhóm có `_index.md` để điều hướng ngắn gọn trong Obsidian, GitHub và GitHub Pages.
 
-
-> **Chuyển mạch:** Từ **Cấu trúc đầy đủ**, ta sang **Quan hệ phụ thuộc kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Quan hệ phụ thuộc kiến thức** tiếp nhận điểm tựa từ **Cấu trúc đầy đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đọc nếu đã học phần nền tảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ phụ thuộc kiến thức
 
@@ -165,8 +162,7 @@ flowchart TD
 
 Quan hệ phụ thuộc không phải mức độ khó. Nó chỉ cho biết một mô hình tư duy trước được tái sử dụng trong mô hình sau.
 
-
-> **Chuyển mạch:** Từ **Quan hệ phụ thuộc kiến thức**, ta sang **Cách đọc nếu đã học phần nền tảng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Cách đọc nếu đã học phần nền tảng** tiếp nhận điểm tựa từ **Quan hệ phụ thuộc kiến thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường hợp (case / 사례) study xuyên nhiều cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đọc nếu đã học phần nền tảng
 
@@ -212,8 +208,7 @@ Heap → binary heap → indexed/meldable/radix/relaxed priority queues
 
 Các từ trong sơ đồ được giữ bằng tiếng Anh khi chúng là tên cấu trúc, tên thuật toán hoặc từ khóa tra cứu; phần giải thích xung quanh ưu tiên tiếng Việt.
 
-
-> **Chuyển mạch:** Từ **Cách đọc nếu đã học phần nền tảng**, ta sang **trường hợp (case / 사례) study xuyên nhiều cấu trúc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Cách đọc nếu đã học phần nền tảng** cho ta quy tắc; **Trường hợp (case / 사례) study xuyên nhiều cấu trúc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) study xuyên nhiều cấu trúc
 
@@ -240,8 +235,7 @@ Các trường hợp (case / 사례) study không giới thiệu “một thuậ
 
 Một cách đọc hiệu quả là đọc trường hợp (case / 사례) study một lần để hiểu kiến trúc, quay lại các chapter được liên kết để đào sâu từng thành phần nguyên thủy (primitive / 기본 요소), sau đó đọc lại trường hợp (case / 사례) study và tự thay đổi tải công việc (workload / 워크로드). Ví dụ, cơ sở dữ liệu (database / 데이터베이스) chuyển từ read-heavy sang write-heavy sẽ làm lựa chọn giữa B+cây (tree / 트리) và LSM thay đổi; autocomplete chuyển từ dictionary tĩnh sang cập nhật liên tục sẽ làm lựa chọn giữa FST và Trie thay đổi.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) study xuyên nhiều cấu trúc**, ta sang **Mô hình tư duy xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Trường hợp (case / 사례) study xuyên nhiều cấu trúc** cho ta quy tắc; **Mô hình tư duy xuyên suốt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tại sao có các chương ngoài “DSA phỏng vấn”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy xuyên suốt
 
@@ -263,8 +257,7 @@ Cần kết quả chính xác hay xấp xỉ đã đủ?
 
 Đó là cách DSA trở thành công cụ thiết kế thay vì danh sách công thức.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy xuyên suốt**, ta sang **Tại sao có các chương ngoài “DSA phỏng vấn”?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Tại sao có các chương ngoài “DSA phỏng vấn”?** gom các mảnh từ **Mô hình tư duy xuyên suốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **C, Java và JavaScript không phải ba bộ DSA riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tại sao có các chương ngoài “DSA phỏng vấn”?
 
@@ -276,8 +269,7 @@ Các chapter sau-core mở rộng tiếp: vùng nhớ động (heap / 힙) nâng
 
 Những phần này cho thấy cùng các nguyên lý nền tảng được mở rộng như thế nào khi khối lượng công việc thay đổi.
 
-
-> **Chuyển mạch:** Từ **Tại sao có các chương ngoài “DSA phỏng vấn”?**, ta sang **C, Java và JavaScript không phải ba bộ DSA riêng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **C, Java và JavaScript không phải ba bộ DSA riêng** tiếp nhận điểm tựa từ **Tại sao có các chương ngoài “DSA phỏng vấn”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra phạm vi thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## C, Java và JavaScript không phải ba bộ DSA riêng
 
@@ -287,9 +279,10 @@ C buộc ta suy luận về quyền sở hữu, vòng đời con trỏ và cấp
 
 Mô hình thuật toán không đổi; các ràng buộc triển khai thay đổi.
 
-
-> **Chuyển mạch:** Từ **C, Java và JavaScript không phải ba bộ DSA riêng**, ta sang **Kiểm tra phạm vi thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Kiểm tra phạm vi thư viện** tiếp nhận điểm tựa từ **C, Java và JavaScript không phải ba bộ DSA riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kiểm tra phạm vi thư viện
 
 [`MANIFEST.md`](./MANIFEST.md) liệt kê toàn bộ tệp và quy mô gần đúng. Thư viện được thiết kế để mỗi chương có thể đọc tương đối độc lập nhưng vẫn liên kết tới kiến thức tiên quyết cần thiết, tránh cả hai cực: một tệp “master book” khổng lồ và hàng trăm ghi chú nhỏ bị phân mảnh.
+
+> **Bàn giao:** Sau **Kiểm tra phạm vi thư viện**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

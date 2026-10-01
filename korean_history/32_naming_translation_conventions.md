@@ -1,6 +1,6 @@
 # Quy ước tên riêng Việt–Hàn–Anh
 
-> **Mạch đọc:** Đặt **Quy ước tên riêng Việt–Hàn–Anh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bảng tra nhanh** sang **mô hình tư duy (mental model / 사고 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quy ước tên riêng Việt–Hàn–Anh**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bảng tra nhanh** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tên địa điểm và thiết chế trong các companion mới** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Tên người, địa điểm, triều đại, sự kiện, văn bản, công trình và thiết chế quan trọng được ghi lần đầu theo mẫu:
 
@@ -59,6 +59,7 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | Đấu tranh Dân chủ Tháng Sáu | 6월 민주항쟁 | June Democratic Struggle |
 | Làn sóng Hàn Quốc | 한류 | Hallyu / Korean Wave |
 
+> **Chuyển mạch:** Quick table giúp tra cứu; place/institution names trong companion phải giữ mapping Việt–Hàn–Anh ổn định, rồi mental model giải thích khi nào dùng dạng nào.
 
 ## Tên địa điểm và thiết chế trong các companion mới
 
@@ -79,10 +80,10 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 Với thuật ngữ nhà ở hiện đại, giữ **jeonse (전세)** và **wolse (월세)** sau bản dịch giải thích ở lần đầu; không dùng “thuê nhà Hàn Quốc” như một nhãn chung vì hai cơ chế tiền đặt cọc và trả tháng khác nhau. Với tên sự kiện gây tranh luận, giữ số hiệu hoặc tên gốc trong ngoặc để tránh làm mất lịch sử của cách gọi.
 
-> **Chuyển mạch:** Từ **Bảng tra nhanh**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Companion names provide the mapping cases; mental model next explains when a historical place/institution needs a stable Korean, Vietnamese or English form.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Ba dạng tên là ba key trỏ tới cùng một nút (node / 노드) trong kiến thức (knowledge / 지식) đồ thị (graph / 그래프): tiếng Việt giúp hiểu và nhớ, Hangul giúp nhận diện trong môi trường Hàn Quốc, English giúp tra cứu tài liệu quốc tế.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron
 
-> **Mạch đọc:** Đọc **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao phản ứng redox khó cân bằng hơn phản ứng thông thường?** sang **Electron trong bán phản ứng là công cụ ghi sổ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao phản ứng redox khó cân bằng hơn phản ứng thông thường?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Electron trong bán phản ứng là công cụ ghi sổ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > Cân bằng phản ứng oxy hóa–khử phải đồng thời thỏa **bảo toàn nguyên tử**, **bảo toàn điện tích** và **bảo toàn electron chuyển giao**. Phương pháp bán phản ứng (half-reaction method / 반쪽 반응법) biến một bài toán phức tạp thành hai bài toán ghi sổ electron rõ ràng rồi ghép chúng lại.
 
@@ -28,6 +27,8 @@ bảo toàn nguyên tố
 → ghép số electron mất = số electron nhận
 ```
 
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Electron trong bán phản ứng là công cụ ghi sổ** tiếp nhận điểm tựa từ **Vì sao phản ứng redox khó cân bằng hơn phản ứng thông thường?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 1: xác định quá trình oxy hóa và khử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Electron trong bán phản ứng là công cụ ghi sổ
 
 Khi viết:
@@ -43,6 +44,8 @@ Phương trình chỉ ghi rằng oxidation trạng thái (state / 상태) của 
 Trong pin, electron có thể đi qua dây dẫn. Trong phản ứng đồng thể, electron có thể chuyển trực tiếp hoặc qua nhiều bước trung gian.
 
 Vì vậy bán phản ứng là **mô hình hạch toán**, không phải cơ chế đầy đủ.
+
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Bước 1: xác định quá trình oxy hóa và khử** tiếp nhận điểm tựa từ **Electron trong bán phản ứng là công cụ ghi sổ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuật toán trong môi trường acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 1: xác định quá trình oxy hóa và khử
 
@@ -68,6 +71,8 @@ Electron mất và nhận đã bằng nhau nên cộng hai bán phản ứng cho
 
 Trong phản ứng phức tạp hơn, việc xác định oxidation trạng thái (state / 상태) trước giúp nhận ra tiểu phần nào bị oxy hóa và tiểu phần nào bị khử.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Thuật toán trong môi trường acid** tiếp nhận điểm tựa từ **Bước 1: xác định quá trình oxy hóa và khử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ đầy đủ: permanganate và Fe²⁺ trong acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thuật toán trong môi trường acid
 
 Một quy trình chắc chắn:
@@ -82,6 +87,8 @@ Một quy trình chắc chắn:
 8. kiểm tra lại nguyên tử và điện tích.
 
 Điều quan trọng là hiểu từng bước đều xuất phát từ một định luật bảo toàn.
+
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Thuật toán trong môi trường acid** cho ta quy tắc; **Ví dụ đầy đủ: permanganate và Fe²⁺ trong acid** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Vì sao phải cân bằng O và H bằng H₂O/H⁺?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ đầy đủ: permanganate và Fe²⁺ trong acid
 
@@ -134,6 +141,8 @@ phải: +2 +15 = +17
 
 Phương trình thỏa cả bảo toàn nguyên tử lẫn điện tích.
 
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Ví dụ đầy đủ: permanganate và Fe²⁺ trong acid** cho ta quy tắc; **Vì sao phải cân bằng O và H bằng H₂O/H⁺?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Môi trường cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao phải cân bằng O và H bằng H₂O/H⁺?
 
 Trong dung dịch nước acid, nước và proton là các tiểu phần nền có thể tham gia cân bằng nguyên tố.
@@ -143,6 +152,8 @@ Ta không “bịa thêm chất” tùy ý. Ta đang viết phản ứng ròng t
 Nếu môi trường khác, sản phẩm và cách cân bằng có thể khác.
 
 Đó là lý do điều kiện phản ứng là một phần của phương trình hóa học thực tế.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Môi trường cơ sở (base / 기반)** tiếp nhận điểm tựa từ **Vì sao phải cân bằng O và H bằng H₂O/H⁺?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ cơ sở (base / 기반): permanganate tạo MnO₂** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường cơ sở (base / 기반)
 
@@ -154,6 +165,8 @@ Cách an toàn nhất:
 4. rút gọn nước nếu xuất hiện ở cả hai vế.
 
 Cách này tránh học hai thuật toán hoàn toàn tách biệt.
+
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Môi trường cơ sở (base / 기반)** cho ta quy tắc; **Ví dụ cơ sở (base / 기반): permanganate tạo MnO₂** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Sản phẩm redox phụ thuộc môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ cơ sở (base / 기반): permanganate tạo MnO₂
 
@@ -193,6 +206,8 @@ MnO_4^-+2H_2O+3e^-
 
 Kiểm tra điện tích hai vế đều bằng `−4`.
 
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Ví dụ cơ sở (base / 기반): permanganate tạo MnO₂** cho ta quy tắc; **Sản phẩm redox phụ thuộc môi trường** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Phương pháp số oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản phẩm redox phụ thuộc môi trường
 
 Permanganate là ví dụ rõ:
@@ -202,6 +217,8 @@ Permanganate là ví dụ rõ:
 - trong cơ sở (base / 기반) rất mạnh có thể xuất hiện manganate `MnO4²−` tùy hệ.
 
 Do đó không thể nói một oxidant “luôn nhận đúng cùng số electron” nếu sản phẩm cuối thay đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Phương pháp số oxy hóa** tiếp nhận điểm tựa từ **Sản phẩm redox phụ thuộc môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào dùng phương pháp nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương pháp số oxy hóa
 
@@ -231,6 +248,8 @@ mỗi O nhận tương đương 2 electron.
 
 Phương pháp số oxy hóa giúp chọn tỷ lệ electron nhanh, nhưng trong phản ứng ion nhiều H/O vẫn cần kiểm tra khối lượng và điện tích.
 
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Khi nào dùng phương pháp nào?** tiếp nhận điểm tựa từ **Phương pháp số oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disproportionation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khi nào dùng phương pháp nào?
 
 **Phương pháp bán phản ứng** mạnh khi:
@@ -249,6 +268,8 @@ Phương pháp số oxy hóa giúp chọn tỷ lệ electron nhanh, nhưng trong
 
 Hai phương pháp dựa trên cùng nguyên lý bảo toàn electron.
 
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Disproportionation** tiếp nhận điểm tựa từ **Khi nào dùng phương pháp nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Comproportionation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Disproportionation
 
 Trong **phản ứng tự oxy hóa–khử (disproportionation)**, cùng một nguyên tố ở trạng thái ban đầu vừa bị oxy hóa vừa bị khử.
@@ -265,6 +286,8 @@ Một phần chuyển xuống `−2` trong nước; phần khác tăng lên `0` 
 
 Phản ứng vẫn cân bằng electron dù donor và acceptor ban đầu nằm trong cùng loại phân tử.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Comproportionation** tiếp nhận điểm tựa từ **Disproportionation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron equivalent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Comproportionation
 
 Chiều ngược là **comproportionation**, khi hai oxidation trạng thái (state / 상태) khác nhau tạo trạng thái trung gian.
@@ -276,6 +299,8 @@ M^{high}+M^{low}\rightarrow 2M^{mid}
 \]
 
 Khả năng xảy ra phụ thuộc năng lượng tự do và thế redox của các cặp liên quan.
+
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Electron equivalent** tiếp nhận điểm tựa từ **Comproportionation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với phương trình Nernst** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Electron equivalent
 
@@ -300,6 +325,8 @@ Do đó cùng hệ số electron được dùng trong:
 - điện phân;
 - pin.
 
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Liên hệ với phương trình Nernst** tiếp nhận điểm tựa từ **Electron equivalent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với phương trình Nernst
 
 Trong electrochemistry, bán phản ứng không chỉ dùng để cân bằng.
@@ -320,6 +347,8 @@ Nếu cân bằng sai số electron, điện thế và năng lượng tự do t�
 
 Vì vậy hạch toán electron là cầu nối giữa stoichiometry và thermodynamics điện hóa.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Liên hệ với sinh học** tiếp nhận điểm tựa từ **Liên hệ với phương trình Nernst** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với sinh học
 
 Nhiều phản ứng sinh học chuyển hai electron cùng proton, ví dụ các cặp `NAD+/NADH`, quinone/hydroquinone.
@@ -327,6 +356,8 @@ Nhiều phản ứng sinh học chuyển hai electron cùng proton, ví dụ cá
 Trong protein, electron và proton có thể được ghép theo cơ chế **chuyển proton–electron ghép (proton-coupled electron transfer, PCET)**.
 
 Viết bán phản ứng đúng giúp kiểm tra cân bằng khối lượng, điện tích và proton trong bioenergetics.
+
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Liên hệ với môi trường** tiếp nhận điểm tựa từ **Liên hệ với sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hữu cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với môi trường
 
@@ -341,6 +372,8 @@ Cân bằng bán phản ứng giúp xây dựng các quá trình như:
 
 Nhưng cân bằng stoichiometric không tự cho biết quá trình nào xảy ra nhanh hay vi sinh vật nào xúc tác.
 
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Liên hệ với hữu cơ** tiếp nhận điểm tựa từ **Liên hệ với môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng bằng đại số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với hữu cơ
 
 Trong hóa hữu cơ, oxidation trạng thái (state / 상태) của carbon có thể thay đổi khi:
@@ -353,6 +386,8 @@ Dù cơ chế thường được mô tả bằng mũi tên electron cặp và nh
 
 Không nên dùng oxidation trạng thái (state / 상태) thay cho cơ chế hữu cơ; hai lớp thông tin khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Cân bằng bằng đại số** tiếp nhận điểm tựa từ **Liên hệ với hữu cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới hạn của số oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cân bằng bằng đại số
 
 Mọi phản ứng có thể được xem là hệ phương trình bảo toàn nguyên tố và điện tích.
@@ -362,6 +397,8 @@ Ta có thể tạo ma trận thành phần rồi tìm véc-tơ (vector / 벡터)
 Với redox, bảo toàn điện tích đã ngầm chứa yêu cầu electron toàn hệ không tự sinh hay mất.
 
 Cách đại số đặc biệt hữu ích trong phần mềm hoặc mạng phản ứng lớn, nhưng phương pháp bán phản ứng thường dễ hiểu hơn cho người học vì làm electron transfer hiện rõ.
+
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Cân bằng bằng đại số** đã nêu tiêu chí phân biệt, còn **Giới hạn của số oxy hóa** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bán phản ứng không phải cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giới hạn của số oxy hóa
 
@@ -378,6 +415,8 @@ việc gán oxidation trạng thái (state / 상태) có thể là mô hình hì
 
 Phương trình vẫn có thể được cân bằng bằng nguyên tố và điện tích, nhưng không nên suy quá mức từ oxidation trạng thái (state / 상태) sang phân bố electron đo được.
 
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Giới hạn của số oxy hóa** đã nêu tiêu chí phân biệt, còn **Bán phản ứng không phải cơ chế** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Quy trình kiểm tra cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bán phản ứng không phải cơ chế
 
 Nếu viết:
@@ -392,6 +431,8 @@ Cơ chế thật có thể gồm nhiều trạng thái oxy hóa trung gian và n
 
 Phương trình bán phản ứng chỉ mô tả **chuyển đổi ròng**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Bán phản ứng không phải cơ chế** xác định đầu vào; **Quy trình kiểm tra cuối** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy trình kiểm tra cuối
 
 Sau khi cân bằng, luôn kiểm tra bốn lớp:
@@ -404,6 +445,8 @@ Sau khi cân bằng, luôn kiểm tra bốn lớp:
 ```
 
 Nếu dùng cho tính toán định lượng, kiểm tra thêm số electron `n` tương ứng với phương trình đã nhân hệ số.
+
+> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Quy trình kiểm tra cuối** xác định đầu vào; **Các hiểu lầm thường gặp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -431,6 +474,8 @@ Không. Nó là quy ước formal để ghi sổ electron.
 
 Không. Nó mô tả biến đổi ròng.
 
+> **Chuyển mạch:** Ở chặng này của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Cân bằng redox là **kế toán kép của vật chất và electron**.
@@ -446,4 +491,4 @@ Sau khi phương trình đã đúng, cùng bộ hệ số electron đó tiếp t
 
 Xem tiếp: [Pin Galvani](./02_galvanic_cells.md), [Điện thế pin và Nernst](./03_cell_potential_and_nernst_equation.md) và [Điện phân](./04_electrolysis.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

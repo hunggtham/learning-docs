@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-30
+last_reviewed: 2026-09-25
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -13,7 +13,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: First-principles mathematics from foundations through analysis, probability, optimization, and connections.
     prerequisites: []
-    related: [physics, computer_science, investing, thinking]
+    related: [physics, computer_science, investing]
   - id: physics
     title: Physics
     group: Science
@@ -53,7 +53,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Life from chemistry and cells through genetics, evolution, physiology, ecology, biotechnology, and systems biology.
     prerequisites: [chemistry]
-    related: [psychology, chemistry, computer_science, thinking]
+    related: [psychology, chemistry, computer_science]
   - id: philosophy
     title: Philosophy
     group: Human & Society
@@ -63,7 +63,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Philosophical reasoning, epistemology, metaphysics, philosophy of science, philosophy of mind, ethics, social-political philosophy, technology, history, and cross-domain connections.
     prerequisites: []
-    related: [mathematics, physics, biology, psychology, computer_science, research_methods, sociology, thinking]
+    related: [mathematics, physics, biology, psychology, computer_science, research_methods, sociology]
   - id: research_methods
     title: Research Methods
     group: Methods
@@ -73,17 +73,7 @@ domains:
     last_reviewed: 2026-09-24
     scope: Research questions and design, measurement and sampling, survey design, qualitative methods, systematic review and evidence synthesis, mixed methods, ethics, reproducibility, and open science.
     prerequisites: []
-    related: [philosophy, mathematics, economics, psychology, sociology, world_history, computer_science, thinking]
-  - id: thinking
-    title: Thinking Toolkit
-    group: Methods
-    path: thinking/
-    entrypoint: thinking/README.md
-    status: canonical
-    last_reviewed: 2026-09-30
-    scope: Practical cross-domain reasoning integration layer covering problem framing, evidence, uncertainty, causality, forecasting, model selection, trade-offs, incentives, systems, risk and decision practice without duplicating canonical theory.
-    prerequisites: []
-    related: [philosophy, mathematics, psychology, economics, research_methods, investing, personal_finance, pmp, computer_science]
+    related: [philosophy, mathematics, economics, psychology, sociology, world_history, computer_science]
 
   - id: computer_science
     title: Computer Science
@@ -94,7 +84,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Computing foundations, algorithms, systems, AI, databases, networks, security, software engineering, and professional connections.
     prerequisites: [mathematics]
-    related: [electrical_engineering, data_engineering, devops_platform_engineering, backend, frontend, thinking]
+    related: [electrical_engineering, data_engineering, devops_platform_engineering, backend, frontend]
   - id: backend
     title: Backend Development
     group: Computing
@@ -104,7 +94,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Framework-independent backend core concepts plus Java, Spring, and Python language/framework tracks.
     prerequisites: [computer_science]
-    related: [data_engineering, devops_platform_engineering, frontend, thinking]
+    related: [data_engineering, devops_platform_engineering, frontend]
   - id: frontend
     title: Frontend Development
     group: Computing
@@ -114,14 +104,14 @@ domains:
     last_reviewed: 2026-09-23
     scope: Web platform, JavaScript, TypeScript, React, CSS, XML, WebSquare, and frontend production practice.
     prerequisites: [computer_science]
-    related: [backend, native, devops_platform_engineering, thinking]
+    related: [backend, native, devops_platform_engineering]
   - id: native
     title: Native Mobile Development
     group: Computing
     path: 11_native/
-    entrypoint: 11_native/README.md
+    entrypoint: 11_native/00_INDEX.md
     status: canonical
-    last_reviewed: 2026-09-29
+    last_reviewed: 2026-09-23
     scope: Swift/iOS and Kotlin/Android from language foundations through platform and production engineering.
     prerequisites: [computer_science, frontend]
     related: [backend, frontend]
@@ -134,7 +124,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Data lifecycle and pipeline semantics; analytical storage; modeling and transformation; distributed and streaming processing; orchestration/backfill; warehouse/lakehouse; serving and semantic metrics; governance, lineage, security, cost/capacity; and end-to-end case studies.
     prerequisites: [computer_science, mathematics]
-    related: [backend, devops_platform_engineering, sql, thinking]
+    related: [backend, devops_platform_engineering, sql]
   - id: devops_platform_engineering
     title: DevOps / Platform Engineering
     group: Computing
@@ -144,7 +134,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Runtime, delivery, containers, infrastructure, Kubernetes, GitOps, SRE, security, platform, and production practice.
     prerequisites: [computer_science, linux]
-    related: [backend, data_engineering, linux, thinking]
+    related: [backend, data_engineering, linux]
   - id: linux
     title: Linux
     group: Computing
@@ -175,7 +165,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Psychology as a science with concepts, mechanisms, evidence status, limitations, and cross-domain connections.
     prerequisites: [biology]
-    related: [computer_science, korean_culture, research_methods, sociology, thinking]
+    related: [computer_science, korean_culture, research_methods, sociology]
   - id: sociology
     title: Sociology
     group: Human & Society
@@ -185,7 +175,7 @@ domains:
     last_reviewed: 2026-09-25
     scope: Social structure, culture and socialization, identity and deviance, groups/networks/organizations, stratification and mobility, social institutions, population, urbanization, collective behavior, and social change.
     prerequisites: []
-    related: [research_methods, psychology, economics, world_history, world_geography, korean_culture, thinking]
+    related: [research_methods, psychology, economics, world_history, world_geography, korean_culture]
   - id: korean_history
     title: Korean History
     group: Human & Society
@@ -205,7 +195,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: World history as a causal system from human origins through agrarian states, classical and medieval networks, industrialisation, imperialism, world wars, the Cold War, decolonisation, and the post-Cold-War world.
     prerequisites: []
-    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life, research_methods, sociology, thinking]
+    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life, research_methods, sociology]
   - id: korean_culture
     title: Korean Culture
     group: Human & Society
@@ -225,7 +215,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean business, economy, company cases, institutions, and market reasoning.
     prerequisites: [korean_history]
-    related: [economics, investing, korean_culture, korea_law_civic_life, thinking]
+    related: [economics, investing, korean_culture, korea_law_civic_life]
   - id: korea_law_civic_life
     title: Korea Law, Civic & Everyday Life
     group: Human & Society
@@ -235,7 +225,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean law, public administration, labor, housing, tax, insurance, finance, immigration, and daily procedures.
     prerequisites: [korean_history, korean_culture]
-    related: [kiip, korea_business_economy, personal_finance, thinking]
+    related: [kiip, korea_business_economy]
   - id: economics
     title: Economics
     group: Human & Society
@@ -245,7 +235,7 @@ domains:
     last_reviewed: 2026-09-24
     scope: Core-domain complete Economics library covering foundations, microeconomics, market structure/game theory, macroeconomics, applied economics, econometrics, and economic history/institutions with explicit evidence and integration boundaries.
     prerequisites: [mathematics]
-    related: [personal_finance, investing, korea_business_economy, psychology, sociology, world_history, world_geography, computer_science, research_methods, thinking]
+    related: [investing, korea_business_economy, psychology, sociology, world_history, world_geography, computer_science, research_methods]
   - id: world_geography
     title: World Geography
     group: Human & Society
@@ -257,16 +247,6 @@ domains:
     prerequisites: []
     related: [world_history, biology, physics, korea_business_economy, sociology]
 
-  - id: personal_finance
-    title: Personal Finance
-    group: Professional
-    path: personal-finance/
-    entrypoint: personal-finance/README.md
-    status: canonical
-    last_reviewed: 2026-09-29
-    scope: Personal and household financial literacy from money, banking, interest, inflation, credit, debt, insurance and taxes through housing, car finance, retirement, emergency liquidity, financial scams and personal balance-sheet reasoning.
-    prerequisites: []
-    related: [economics, investing, korea_law_civic_life, thinking]
   - id: investing
     title: Investing
     group: Professional
@@ -276,7 +256,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Investing foundations, asset classes, company analysis, applied economics, trading, derivatives, and Korea/Vietnam markets.
     prerequisites: [mathematics]
-    related: [personal_finance, economics, korea_business_economy, pmp, sql, thinking]
+    related: [economics, korea_business_economy, pmp, sql]
   - id: pmp
     title: Project Management / PMP
     group: Professional
@@ -286,15 +266,15 @@ domains:
     last_reviewed: 2026-09-23
     scope: Project value, delivery, people, planning, risk, governance, adaptive delivery, quantitative practice, and case studies.
     prerequisites: []
-    related: [investing, devops_platform_engineering, psychology, thinking]
+    related: [investing, devops_platform_engineering, psychology]
 
   - id: information_processing_engineer
     title: 정보처리기사
     group: Certifications
     path: 정보처리기사/
-    entrypoint: 정보처리기사/README.md
+    entrypoint: 정보처리기사/output/README.md
     status: canonical
-    last_reviewed: 2026-09-29
+    last_reviewed: 2026-09-23
     scope: Korean Information Processing Engineer certification subjects and structured study outputs.
     prerequisites: [computer_science]
     related: [sql, backend, computer_science]
@@ -302,9 +282,9 @@ domains:
     title: SQLD / SQL
     group: Certifications
     path: sql/
-    entrypoint: sql/README.md
+    entrypoint: sql/output/README.md
     status: canonical
-    last_reviewed: 2026-09-29
+    last_reviewed: 2026-09-23
     scope: Data modeling, SQL fundamentals, query patterns, normalization, and database reasoning.
     prerequisites: [computer_science]
     related: [data_engineering, investing]
@@ -341,11 +321,11 @@ supporting:
 
 # Repository catalog
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Repository catalog**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cây domain** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Metadata contract** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 `main` là source of truth hiện tại. Các branch feature chỉ là lịch sử phát triển; không dùng tên branch để mô tả trạng thái canonical của library.
 
 ## Cây domain
-Phần “Cây domain” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 Science
@@ -358,8 +338,7 @@ Engineering
 └── Electrical Engineering
 
 Methods
-├── Research Methods
-└── Thinking Toolkit
+└── Research Methods
 
 Computing
 ├── Computer Science
@@ -384,7 +363,6 @@ Human & Society
 └── World Geography
 
 Professional
-├── Personal Finance
 ├── Investing
 └── Project Management / PMP
 
@@ -399,6 +377,8 @@ Supporting
 └── Templates
 ```
 
+> **Chuyển mạch:** Trong **Repository catalog**, **Metadata contract** tiếp nhận điểm tựa từ **Cây domain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Economics: core-domain complete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Metadata contract
 
 Mỗi entry trong YAML front matter có các field tối thiểu:
@@ -411,11 +391,15 @@ Mỗi entry trong YAML front matter có các field tối thiểu:
 
 Khi thêm library mới, cập nhật cả YAML metadata và cây domain trong file này. Không rename/move hàng loạt folder nếu chưa có kế hoạch cập nhật internal links.
 
+> **Chuyển mạch:** Ở chặng này của **Repository catalog**, **7. Economics: core-domain complete** tiếp nhận điểm tựa từ **Metadata contract** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Research Methods: cross-domain methodology foundation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Economics: core-domain complete
 
 [`economics/`](economics/README.md) hiện có full canonical route từ Foundations → Microeconomics → Market Structure & Game Theory → Macroeconomics → Econometrics → Applied Economics → Economic History & Institutions. Applied layer bao phủ labor, public economics, trade, development và industrial organization; historical/institutional layer bao phủ state capacity, finance/fiscal states, industrialization/globalization và crises/path dependence.
 
 Economics giữ explicit boundaries: theory không thay evidence, accounting identity không thay causal theory, estimator không thay identification strategy, causal estimate không tự trở thành policy recommendation. [`investing/04_economics/`](investing/04_economics/) tiếp tục giữ market/application layer về macro data, liquidity, transmission, crisis cases và nowcasting; World/Korean History giữ chronology; Korea Business giữ Korean company/institution cases.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Repository catalog**, **8. Research Methods: cross-domain methodology foundation** tiếp nhận điểm tựa từ **7. Economics: core-domain complete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Sociology: social structure and institutions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Research Methods: cross-domain methodology foundation
 
@@ -423,11 +407,15 @@ Economics giữ explicit boundaries: theory không thay evidence, accounting ide
 
 Mục tiêu là tránh mỗi domain tự lặp lại generic research methods và tạo một evidence contract thống nhất cho các library sau này.
 
+> **Chuyển mạch:** Trong **Repository catalog**, **9. Sociology: social structure and institutions** tiếp nhận điểm tựa từ **8. Research Methods: cross-domain methodology foundation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. P3 — Electrical / Electronics / Control** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Sociology: social structure and institutions
 
 [`sociology/`](sociology/README.md) giữ canonical sociological mechanisms từ agency/structure, culture/socialization/identity và deviance đến groups/networks/organizations, stratification/mobility, family/education/work/media/civic institutions và population/urbanization/social change. Generic methodology được cross-link sang Research Methods; individual cognition/behavior sang Psychology; markets/incentives sang Economics; chronology sang History.
 
 Domain được tổ chức theo levels và mechanisms thay vì các “vấn đề xã hội” rời rạc, nhằm giúp người đọc phân biệt individual attribute với relational/institutional explanations.
+
+> **Chuyển mạch:** Ở chặng này của **Repository catalog**, **10. P3 — Electrical / Electronics / Control** tiếp nhận điểm tựa từ **9. Sociology: social structure and institutions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Domain entrypoints** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. P3 — Electrical / Electronics / Control
 
@@ -461,38 +449,10 @@ Physics
 
 Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
 
-## 11. Personal Finance: household financial system
-
-[`personal-finance/`](personal-finance/README.md) là canonical owner cho quyết định tài chính cá nhân/hộ gia đình: cash flow, banking, interest, inflation at household level, credit/debt, insurance, taxes, housing, car finance, retirement, emergency liquidity, scams và personal balance sheet. Nó không thay Economics và không biến mọi vấn đề tiền bạc thành Investing.
-
-Bridge kiến thức chủ đích:
-
-```text
-Personal Finance
-→ Economics
-→ Investing
-   ↙      ↘
-Stocks   Forex
-```
-
-Personal Finance quyết định phần vốn nào thực sự có thể chịu lock-up hoặc market risk; Economics giải thích môi trường lãi suất, inflation, growth và policy; Investing sở hữu asset allocation, valuation, portfolio risk, stocks và Forex. Các domain cross-link theo ownership này thay vì duplicate lý thuyết.
-
-## 12. Thinking Toolkit: cross-domain reasoning integration
-
-[`thinking/`](thinking/README.md) là lớp tích hợp thực hành cho reasoning dùng xuyên domain. Nó không sở hữu lại logic, probability/statistics, cognitive science, economics hay research methodology; thay vào đó nó ghép problem framing, evidence, uncertainty, causality, forecasting, trade-offs, incentives, systems, risk và decision review thành workflow, deliberate-practice drills và applied casebook.
-
-Ownership chủ đích:
-
-```text
-canonical theory / evidence
-          ↓
-Thinking Toolkit
-          ↓
-cross-domain application + feedback loop
-```
-
-Khi một vấn đề chạm mechanics chuyên ngành — tài chính cá nhân, investing, medical evidence, software reliability, project governance hay institutions — `thinking/` handoff về canonical domain tương ứng thay vì biến generic mental model thành subject-matter advice.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Repository catalog**, **Domain entrypoints** tiếp nhận điểm tựa từ **10. P3 — Electrical / Electronics / Control** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Domain entrypoints
 
 Các link entrypoint đầy đủ nằm trong YAML ở đầu file để máy đọc được; README root chỉ là phần giới thiệu ngắn. Đây là catalog cấp repository, không thay thế README chuyên sâu của từng library.
+
+> **Bàn giao:** Sau **Domain entrypoints**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

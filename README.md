@@ -1,10 +1,14 @@
 # Học tập (learning / 학습) Docs
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Học tập (learning / 학습) Docs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bộ tài liệu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quy ước biên soạn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Kho tài liệu học được tổ chức theo từng chủ đề. Mỗi bộ có nguồn gốc (`raw`/`raw_md`), script generate và thư mục `output` đã chuẩn hóa để học.
 
 Danh mục lĩnh vực (domain / 도메인) đầy đủ, siêu dữ liệu (metadata / 메타데이터) YAML, prerequisite và related links được quản lý tại [CATALOG.md](CATALOG.md). README này giữ phần giới thiệu ngắn; `CATALOG.md` là bản đồ cấu trúc repository và dùng `main` làm nguồn chuẩn (source of truth / 정본).
 
 ## Bộ tài liệu
+
+Phần này là bản đồ của toàn bộ kho học tập. Hãy chọn một bộ theo mục tiêu, rồi đi vào tài liệu liên quan để theo dõi mạch khái niệm → cơ chế → ví dụ → ôn tập.
 
 - [정보처리기사](정보처리기사/output/README.md): 5 môn, tài liệu Hàn–Anh–Việt, sắp xếp theo mạch kiến thức.
 - [SQLD](sql/output/README.md): mô hình dữ liệu và SQL cơ bản/nâng cao, có ví dụ truy vấn và quy tắc dễ nhầm.
@@ -13,7 +17,6 @@ Danh mục lĩnh vực (domain / 도메인) đầy đủ, siêu dữ liệu (met
 - [Electrical Engineering Knowledge Library](electrical_engineering/README.md): lĩnh vực (domain / 도메인) P3 nối Physics → Electronics → Digital lô-gic (logic / 논리) → Computer Kiến trúc (architecture / 아키텍처) → Embedded → Software qua circuits, analog/digital electronics, signals, communications, điều khiển (control / 제어), embedded, power và hardware–software interfaces.
 - [Biology Knowledge Library](biology/README.md): thư viện Sinh học tổ chức theo conceptual ranh giới (boundary / 경계) từ hóa học của sự sống, tế bào, di truyền, tiến hóa và vi sinh vật đến sinh lý cơ thể, sinh thái, công nghệ sinh học, bioinformatics và các hệ thống (systems / 시스템들) biology; dùng thuật ngữ Việt–Anh–Hàn, mô hình tư duy (mental model / 사고 모델), mathematical connections và coverage kiểm tra (audit / 감사).
 - [Philosophy Knowledge Library](philosophy/README.md): thư viện Triết học về philosophical lập luận (reasoning / 추론), epistemology, metaphysics, philosophy of science, mind, ethics, xã hội (social / 사회적)–political philosophy và philosophy of technology; làm cầu nối giữa Mathematics, Physics, Biology, Psychology, Khoa học máy tính (computer science / 컴퓨터 과학) và AI.
-- [Thinking Toolkit](thinking/README.md): lớp tích hợp các công cụ suy nghĩ dùng xuyên domain — problem framing, critical thinking, probability/statistics for life, causal reasoning, forecasting, model selection, cognitive bias/fallacies, expected value, value of information, risk, opportunity cost, incentives, systems thinking, game theory và decision making — kèm dependency map và applied casebook thay vì duplicate theory từ Mathematics, Philosophy, Psychology, Economics và Research Methods.
 - [Research Methods Knowledge Library](research_methods/README.md): lĩnh vực (domain / 도메인) chuẩn gốc (canonical / 정본) về research question, lý thuyết (theory / 이론)/thiết kế (design / 설계), đo lường (measurement / 측정)/sampling/surveys, qualitative methods, systematic reviews/bằng chứng (evidence / 증거) synthesis, mixed methods, ethics, reproducibility và open science; cross-link Econometrics cho estimator/causal-inference detail thay vì duplicate.
 - [Sociology Knowledge Library](sociology/README.md): xã hội (social / 사회적) cấu trúc (structure / 구조) và sociological imagination → culture/socialization/định danh (identity / 식별자)/deviance → groups/networks/organizations → stratification/mobility → family/education/công việc (work / 작업)/media/civic institutions → population, urbanization và xã hội (social / 사회적) thay đổi (change / 변경); dùng Research Methods làm methodology chung và cross-link Psychology/Economics/Lịch sử (history / 이력) thay vì duplicate.
 - [Computer Science Knowledge Library](computer_science/README.md): không gian tên (namespace / 네임스페이스) Khoa học máy tính (computer science / 컴퓨터 과학); phần **Basic/Foundation** gồm 100 topic chapters được đặt tại `computer_science/basic/`, còn các thư viện (library / 라이브러리) chuyên sâu như Dữ liệu (data / 데이터) Structures & Algorithms được tách riêng để không trộn foundation với advanced kiến thức (knowledge / 지식).
@@ -34,11 +37,31 @@ Danh mục lĩnh vực (domain / 도메인) đầy đủ, siêu dữ liệu (met
 - [Economics Knowledge Library](economics/README.md): core-domain complete từ foundations, micro, thị trường (market / 시장) cấu trúc (structure / 구조)/game lý thuyết (theory / 이론), macro, applied economics và econometrics đến economic lịch sử (history / 이력)/institutions; phần macro ứng dụng đầu tư tiếp tục nằm tại `investing/04_economics/`.
 - [Native Mobile Development](11_native/00_INDEX.md): lộ trình Swift/iOS và Kotlin/Android từ Beginner → Intermediate → Advanced/Cấp cao (senior / 시니어) → Master, gồm cả hiện đại (modern / 현대적) ngăn xếp (stack / 스택), legacy interoperability và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링).
 - [Investing Knowledge Library](investing/README.md): thư viện đầu tư theo 6 lĩnh vực (domain / 도메인) chính — Foundations, Asset Classes, Company Phân tích (analysis / 분석), applied Economics, Trading & Derivatives, Korea & Vietnam Markets — cộng glossary/quy chuẩn nghiên cứu, Advanced Labs, [Advanced Depth Path](investing/ADVANCED_DEPTH_PATH.md), [Advanced Practice Workbook](investing/ADVANCED_PRACTICE_WORKBOOK.md) và capstone tích hợp; phần Economics general-purpose được tách dần sang [Economics Knowledge Library](economics/README.md), còn investing giữ macro/chính sách (policy / 정책)/market-transmission phục vụ investment.
-- [Study Planner](https://github.com/hunggtham/my-study-planner): ứng dụng lập kế hoạch học tập đồng bộ Supabase; source được gắn vào repository này bằng git submodule `planner/study-planner`.
+- [Study Planner](planner/study-planner/README.md): ứng dụng lập kế hoạch học tập đồng bộ Supabase.
 - [Study Library](learning-library/README.md): trình đọc Markdown/PDF tĩnh cho GitHub Pages.
+
+> **Chuyển mạch:** Trong **Học tập (learning / 학습) Docs**, **Quy ước biên soạn** tiếp nhận điểm tựa từ **Bộ tài liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lecture contract cho tài liệu học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy ước biên soạn
 
+Các quy ước dưới đây giải thích cách đọc, cách cập nhật và cách phân biệt nguồn thô với bản học đã được chuẩn hóa.
+
 - Giữ thuật ngữ gốc để đối chiếu đề thi, kèm English và nghĩa tiếng Việt khi có thể.
-- Chọn cách trình bày phù hợp với topic; có thể dùng khái niệm, cơ chế, so sánh, ví dụ hoặc bảng khi chúng thực sự giúp người học.
-- Không sửa nguồn thô; bản học canonical được research, viết và review thủ công theo prompt của repository.
+- Trình bày theo thứ tự: khái niệm → cơ chế/quy tắc → so sánh → ví dụ → ôn tập.
+- Không sửa nguồn thô; mọi bản học được tạo lại bằng script tương ứng trong `scripts/`.
+
+> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) Docs**, **Lecture contract cho tài liệu học** tiếp nhận điểm tựa từ **Quy ước biên soạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
+## Lecture contract cho tài liệu học
+
+Mọi chapter hoặc section đang dạy kiến thức phải được viết như một buổi giảng ngắn cho người mới, không chỉ như danh sách header và ghi chú. Mỗi khối cần có:
+
+1. **Định vị:** người học cần biết gì trước, câu hỏi hiện tại là gì và phần này nối với phần trước ở đâu.
+2. **Giải thích có liên kết:** đi từ đối tượng/mục tiêu → cơ chế hoặc ràng buộc → hệ quả; bullet, bảng, công thức và ví dụ phải được dẫn vào và tổng hợp lại bằng prose.
+3. **Chốt và bàn giao:** nêu mental model hoặc boundary vừa hình thành, điểm dễ nhầm nếu có, rồi nói rõ phần kế tiếp sẽ dùng, mở rộng hay đối chiếu điều gì.
+
+Không được đạt contract bằng cách lặp một câu wrapper quanh mọi header. Header chỉ là nhãn điều hướng; câu hỏi, quan hệ giữa các ý và kết luận phải được viết theo nội dung thật của topic. Glossary, index, atlas profile và bảng tra cứu thuần tham chiếu có thể ngắn hơn, nhưng phải chỉ rõ cách dùng và đường quay lại phần giảng giải.
+
+Contract chi tiết và các prompt sinh/QA nằm tại [`prompt/COMMON_PROMPT.md`](prompt/COMMON_PROMPT.md). Các corpus có generator phải sửa source hoặc generator rồi tái sinh và audit, không sửa tay từng output.
+
+> **Bàn giao:** Sau **Lecture contract cho tài liệu học**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

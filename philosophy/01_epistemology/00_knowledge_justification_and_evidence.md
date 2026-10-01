@@ -1,7 +1,6 @@
 # Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)
 
-> **Mạch đọc:** Đọc **kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ba thành phần cần tách** sang **Claim–bằng chứng (evidence / 증거) matching**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba thành phần cần tách** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Claim–bằng chứng (evidence / 증거) matching** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Ba thành phần cần tách
 
@@ -9,12 +8,9 @@ Một người có thể **tin** một mệnh đề, mệnh đề có thể **đ
 
 Justification không phải một nhãn tuyệt đối. Nó phụ thuộc vào loại claim, chất lượng nguồn, chuỗi (chain / 사슬) of lập luận (reasoning / 추론), mức bất định (uncertainty / 불확실성) và khả năng phản bác. bằng chứng (evidence / 증거) tốt làm tăng hoặc giảm mức tin hợp lý; bằng chứng (evidence / 증거) hiếm khi biến một claim thực nghiệm thành certainty tuyệt đối.
 
-
-> **Chuyển mạch:** Từ **Ba thành phần cần tách**, ta sang **Claim–bằng chứng (evidence / 증거) matching** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Ba thành phần cần tách** nêu điều cần giải thích; **Claim–bằng chứng (evidence / 증거) matching** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Fallibilism và intellectual humility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Claim–bằng chứng (evidence / 증거) matching
-Phần “Claim–bằng chứng (evidence / 증거) matching” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Claim | bằng chứng (evidence / 증거) thích hợp | Rủi ro nhầm lẫn |
 |---|---|---|
@@ -23,8 +19,7 @@ Phần “Claim–bằng chứng (evidence / 증거) matching” nối kiến th
 | “X nên làm” | premise thực nghiệm + premise giá trị + lập luận | is–ought gap |
 | “Khái niệm X nghĩa là…” | định nghĩa, usage, ranh giới (boundary / 경계) cases | tranh cãi từ ngữ bị tưởng là fact dispute |
 
-
-> **Chuyển mạch:** Từ **Claim–bằng chứng (evidence / 증거) matching**, ta sang **Fallibilism và intellectual humility** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Claim–bằng chứng (evidence / 증거) matching** nêu điều cần giải thích; **Fallibilism và intellectual humility** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gettier và sự may mắn nhận thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fallibilism và intellectual humility
 
@@ -32,19 +27,15 @@ Fallibilism không nói mọi belief đều ngang nhau. Nó nói justification c
 
 Xem [Belief, uncertainty và calibration](01_belief_uncertainty_and_calibration.md) để nối justification với xác suất; xem [Philosophy, science, mathematics và AI](../90_connections/00_philosophy_science_mathematics_and_ai.md) để nối epistemology với suy luận (inference / 추론) và mô hình (model / 모델) evaluation.
 
-
-> **Chuyển mạch:** Từ **Fallibilism và intellectual humility**, ta sang **Gettier và sự may mắn nhận thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Fallibilism chấp nhận khả năng sai; Gettier cho thấy true justified belief vẫn có thể đúng nhờ luck, nên evidence ladder phải phân biệt strength và reliability.
 
 ## Gettier và sự may mắn nhận thức
 
 Giả sử một người nhìn thấy đồng hồ chạy đúng vào 10:00 và tin rằng hiện là 10:00, nhưng đồng hồ đã hỏng từ hôm qua và chỉ tình cờ đứng đúng giờ. Belief là true, người đó có lý do quan sát, nhưng dường như chưa có kiến thức (knowledge / 지식) vì truth phụ thuộc vào luck. Bài học không phải “mọi kiến thức (knowledge / 지식) đều bất khả”, mà là justification cần một liên hệ không quá may rủi với truth — ví dụ độ tin cậy (reliability / 신뢰성) của tiến trình (process / 프로세스) trong hoàn cảnh đó.
 
-
-> **Chuyển mạch:** Từ **Gettier và sự may mắn nhận thức**, ta sang **bằng chứng (evidence / 증거) ladder** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Gettier và sự may mắn nhận thức** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) ladder** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng (evidence / 증거) ladder
-Phần “Bằng chứng (evidence / 증거) ladder” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 assertion → anecdote → uncontrolled observation
@@ -54,15 +45,13 @@ assertion → anecdote → uncontrolled observation
 
 Ladder không phải thứ hạng tuyệt đối. Một observation hiếm có thể rất informative; một meta-analysis của studies biased vẫn có thể sai. Câu hỏi đúng là bằng chứng (evidence / 증거) này loại trừ hypothesis nào, còn confounder nào, và conclusion nên rộng đến đâu.
 
-
-> **Chuyển mạch:** Từ **bằng chứng (evidence / 증거) ladder**, ta sang **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Bằng chứng (evidence / 증거) ladder** nêu điều cần giải thích; **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)
 
 Mathematical proof cần validity trong hệ tiên đề; historical claim cần provenance và nguồn (source / 소스) criticism; nhân quả (causal / 인과적) medical claim cần intervention và an toàn (safety / 안전) bằng chứng (evidence / 증거); moral claim cần normative premise có thể biện minh. Dùng tiêu chuẩn (standard / 표준) của lĩnh vực (domain / 도메인) này để kết luận lĩnh vực (domain / 도메인) khác là category lỗi (error / 오류).
 
-
-> **Chuyển mạch:** Từ **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)**, ta sang **độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?** tiếp nhận điểm tựa từ **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?
 
@@ -82,4 +71,4 @@ Objection: độ tin cậy (reliability / 신뢰성) không đủ vì một ngư
 
 Psychology đo calibration, bộ nhớ (memory / 메모리) lỗi (error / 오류) và group influence; nó không tự quyết định chuẩn normatively gọi là “đủ biết”. Trong nghiên cứu, kiểm tra (audit / 감사) trail, preregistration và replication làm justification công khai (public / 공개) hơn nhưng không loại bỏ underdetermination. Implication: mỗi claim nên ghi nguồn (source / 소스), bất định (uncertainty / 불확실성), disconfirming bằng chứng (evidence / 증거) và threshold hành động; kiến thức (knowledge / 지식) không đồng nghĩa permission hành động rủi ro cao.
 
-> **Bàn giao:** Sau **Empirical ranh giới (boundary / 경계) và implication**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 belief uncertainty and calibration](./01_belief_uncertainty_and_calibration.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

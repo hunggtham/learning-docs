@@ -1,6 +1,6 @@
 # Các mẫu DSA và môi trường chạy JavaScript
 
-> **Mạch đọc:** Đọc **Các mẫu DSA và môi trường chạy JavaScript** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Number và độ chính xác số nguyên** sang **BigInt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mẫu DSA và môi trường chạy JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Number và độ chính xác số nguyên** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **BigInt** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **JavaScript DSA & thời gian chạy (runtime / 런타임) Patterns / JavaScript 자료구조와 런타임 패턴**
 
@@ -32,6 +32,8 @@ Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2
 
 Biểu thức trên minh họa việc hai số nguyên toán học khác nhau có thể không còn được phân biệt chính xác bằng `Number`.
 
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **BigInt** tiếp nhận điểm tựa từ **Number và độ chính xác số nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Infinity và BigInt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `BigInt`
 
 `BigInt` hỗ trợ số nguyên có độ lớn tùy ý:
@@ -54,6 +56,8 @@ Khi sắp xếp `BigInt`, nên dùng so sánh quan hệ:
 
 thay vì dựa vào `a - b`.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Infinity và BigInt** tiếp nhận điểm tựa từ **BigInt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mảng JavaScript không phải mảng C** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `Infinity` và `BigInt`
 
 `Infinity` là giá trị canh gác thuận tiện cho thuật toán đường đi ngắn nhất dùng `Number`:
@@ -66,6 +70,8 @@ const dist = Array(n).fill(Infinity);
 
 Lựa chọn giá trị canh gác là một phần của **cách biểu diễn (representation / 표현)**, không chỉ là chi tiết cú pháp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Mảng JavaScript không phải mảng C** tiếp nhận điểm tựa từ **Infinity và BigInt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mảng dày đặc, mảng thưa và lỗ trống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mảng JavaScript không phải mảng C
 
 JavaScript `Array` có độ dài động và có thể chứa nhiều loại giá trị:
@@ -77,6 +83,8 @@ a.push(2);
 ```
 
 Các engine thường tối ưu tốt mảng dày đặc có kiểu phần tử ổn định, nhưng mảng thưa hoặc trộn nhiều kiểu có thể được biểu diễn khác. Không nên giả định mỗi phần tử luôn nằm trong một ô nhớ liên tiếp giống `double[]` của C.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Mảng dày đặc, mảng thưa và lỗ trống** tiếp nhận điểm tựa từ **Mảng JavaScript không phải mảng C** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng mảng làm ngăn xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mảng dày đặc, mảng thưa và lỗ trống
 
@@ -104,6 +112,8 @@ Array(n).fill(0)
 
 hoặc một `TypedArray` phù hợp.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Dùng mảng làm ngăn xếp** tiếp nhận điểm tựa từ **Mảng dày đặc, mảng thưa và lỗ trống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng đợi và shift()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng mảng làm ngăn xếp
 
 Mảng rất tự nhiên khi dùng làm ngăn xếp:
@@ -114,6 +124,8 @@ stack.pop();
 ```
 
 Các thao tác ở cuối mảng thường phù hợp với mô hình này.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Hàng đợi và shift()** tiếp nhận điểm tựa từ **Dùng mảng làm ngăn xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deque tự cài đặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàng đợi và `shift()`
 
@@ -140,6 +152,8 @@ if (head > 4096 && head * 2 > q.length) {
 
 Không cần nén sau mỗi lần lấy phần tử khỏi hàng đợi.
 
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Deque tự cài đặt** tiếp nhận điểm tựa từ **Hàng đợi và shift()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Object và Map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Deque tự cài đặt
 
 Nếu thường xuyên thêm và lấy ở cả hai đầu, nên cân nhắc bộ đệm vòng (ring buffer) thay vì dựa vào `shift()` và `unshift()`.
@@ -155,6 +169,8 @@ capacity
 ```
 
 Khi đầy, có thể tăng dung lượng tương tự mảng động rồi sao chép theo thứ tự lô-gic (logic / 논리).
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Object và Map** tiếp nhận điểm tựa từ **Deque tự cài đặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển đổi khóa của Object** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `Object` và `Map`
 
@@ -172,6 +188,8 @@ map.set(objectKey, value);
 ```
 
 Với bài toán DSA cần từ điển hoặc bảng ánh xạ tổng quát, `Map` thường thể hiện ý định rõ hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Chuyển đổi khóa của Object** tiếp nhận điểm tựa từ **Object và Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định danh đối tượng trong Map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuyển đổi khóa của `Object`
 
@@ -192,6 +210,8 @@ const dict = Object.create(null);
 ```
 
 nhưng `Map` vẫn thường là lựa chọn dễ hiểu hơn cho cấu trúc ánh xạ thuật toán.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Định danh đối tượng trong Map** tiếp nhận điểm tựa từ **Chuyển đổi khóa của Object** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mã hóa trạng thái chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Định danh đối tượng trong `Map`
 
@@ -216,6 +236,8 @@ chuẩn hóa thành một đối tượng dùng chung
 
 Không nên tạo một đối tượng (object / 객체) mới rồi kỳ vọng nó bằng một đối tượng (object / 객체) cũ chỉ vì các trường giống nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Mã hóa trạng thái chuẩn** tiếp nhận điểm tựa từ **Định danh đối tượng trong Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Set và mảng đánh dấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mã hóa trạng thái chuẩn
 
 Nếu miền giá trị nhỏ và chắc chắn không vượt giới hạn toán tử bit:
@@ -231,6 +253,8 @@ const key = `${x},${y},${mask}`;
 ```
 
 Khóa chuỗi đơn giản nhưng phát sinh cấp phát và chi phí băm. Nếu các cận kích thước đã biết, mảng nhiều chiều hoặc `TypedArray` có thể hiệu quả hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Set và mảng đánh dấu** tiếp nhận điểm tựa từ **Mã hóa trạng thái chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TypedArray** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `Set` và mảng đánh dấu
 
@@ -251,6 +275,8 @@ seen[v] = 1;
 
 Đây là ví dụ điển hình về việc chọn cấu trúc theo **miền khóa**, không chỉ theo tên thao tác “membership”.
 
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **TypedArray** tiếp nhận điểm tựa từ **Set và mảng đánh dấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tràn số và chuyển đổi trong TypedArray** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `TypedArray`
 
 Các kiểu thường dùng:
@@ -264,6 +290,8 @@ BigUint64Array
 ```
 
 Ưu điểm chính là độ dài cố định, vùng lưu trữ số gọn, quy tắc chuyển đổi dễ dự đoán hơn và khả năng làm việc với dữ liệu nhị phân. Đổi lại, chúng không hỗ trợ `push/pop` như mảng động và mỗi kiểu có miền giá trị cố định.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Tràn số và chuyển đổi trong TypedArray** tiếp nhận điểm tựa từ **TypedArray** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toán tử bit dùng 32 bit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tràn số và chuyển đổi trong `TypedArray`
 
@@ -284,6 +312,8 @@ const state = new Uint8Array(n);
 ```
 
 `BigInt64Array` và `BigUint64Array` chứa số nguyên 64 bit; chúng không có miền vô hạn như `BigInt` độc lập.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Toán tử bit dùng 32 bit** tiếp nhận điểm tựa từ **Tràn số và chuyển đổi trong TypedArray** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắp xếp số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Toán tử bit dùng 32 bit
 
@@ -309,6 +339,8 @@ x >>> 0
 
 chuyển về `Number` không dấu 32 bit. Nó hữu ích trong một số thao tác băm hoặc bit, nhưng sẽ cắt bỏ các bit cao và không phải cách tổng quát để “biến số thành số dương”.
 
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Sắp xếp số** tiếp nhận điểm tựa từ **Toán tử bit dùng 32 bit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng đợi ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sắp xếp số
 
 `Array.prototype.sort()` mặc định không nên được dùng để suy ra thứ tự số tăng dần:
@@ -331,6 +363,8 @@ arr.sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
 
 ECMAScript hiện đại quy định `Array.prototype.sort()` là ổn định (stable). Nếu phải hỗ trợ môi trường cũ hoặc không chuẩn, cần kiểm tra môi trường đích thay vì giả định.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Hàng đợi ưu tiên** tiếp nhận điểm tựa từ **Sắp xếp số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấp phát đối tượng trong vùng nhớ động (heap / 힙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàng đợi ưu tiên
 
 Thư viện chuẩn JavaScript không cung cấp một `PriorityQueue` tổng quát giống Java. Mã DSA thường tự cài đặt vùng nhớ động (heap / 힙) nhị phân:
@@ -350,6 +384,8 @@ class MinHeap {
 
 Hàm so sánh phải nhất quán và có tính bắc cầu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Cấp phát đối tượng trong vùng nhớ động (heap / 힙)** tiếp nhận điểm tựa từ **Hàng đợi ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấp phát đối tượng trong vùng nhớ động (heap / 힙)
 
 Dijkstra viết theo kiểu:
@@ -361,6 +397,8 @@ heap.push({ node: v, dist: nd });
 rất dễ đọc nhưng có thể tạo nhiều đối tượng tạm thời. Nếu đo đạc cho thấy cấp phát hoặc GC là nút thắt, có thể cân nhắc mảng song song, tuple nhỏ, trạng thái mã hóa hoặc vùng nhớ động (heap / 힙) theo kiểu **struct-of-arrays**.
 
 Không nên làm mã nguồn phức tạp trước khi có số liệu đo cho thấy điều đó cần thiết.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)** tiếp nhận điểm tựa từ **Cấp phát đối tượng trong vùng nhớ động (heap / 힙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)
 
@@ -378,6 +416,8 @@ if (d !== dist[v]) continue;
 
 Mẫu này đơn giản, dễ kiểm chứng và thường đủ tốt.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Độ sâu đệ quy** tiếp nhận điểm tựa từ **Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **async không thay thế thuật toán dạng lặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ sâu đệ quy
 
 DFS hoặc quay lui (backtracking) đệ quy có thể vượt ngăn xếp lời gọi. Giới hạn cụ thể không phải một hằng số di động giữa các trình duyệt, phiên bản nút (node / 노드).js hoặc engine.
@@ -394,6 +434,8 @@ while (stack.length) {
 
 Không nên dựa vào tối ưu lời gọi đuôi như một bảo đảm an toàn ngăn xếp cho mã DSA phổ thông.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **async không thay thế thuật toán dạng lặp** tiếp nhận điểm tựa từ **Độ sâu đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `async` không thay thế thuật toán dạng lặp
 
 Chuyển một DFS sâu sang `Promise` hoặc `async` làm thay đổi cách lập lịch và tạo thêm chi phí cấp phát. Đây không phải giải pháp tổng quát thay cho việc dùng ngăn xếp tường minh.
@@ -401,6 +443,8 @@ Chuyển một DFS sâu sang `Promise` hoặc `async` làm thay đổi cách l�
 Tương tự, `await Promise.resolve()` chỉ chuyển việc tiếp tục sang hàng đợi microtask; nếu lặp không hợp lý, nó vẫn có thể làm các giai đoạn khác của vòng lặp sự kiện (event loop / 이벤트 루프) bị đói.
 
 **Lập lịch bất đồng bộ không sửa được lựa chọn thuật toán sai.**
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu** tiếp nhận điểm tựa từ **async không thay thế thuật toán dạng lặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ thu gom rác và vòng đời dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu
 
@@ -417,6 +461,8 @@ native code / WebAssembly
 
 Thiết kế xử lý đồng thời là một vấn đề riêng; nó không thay đổi độ phức tạp cơ bản của thuật toán.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu** nêu điều cần giải thích; **Bộ thu gom rác và vòng đời dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **WeakMap và WeakSet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ thu gom rác và vòng đời dữ liệu
 
 GC thu hồi đối tượng không còn đạt tới được, nhưng `Map`, `Set`, bộ nhớ đệm, closure, listener và timer có thể giữ tham chiếu sống lâu hơn dự kiến.
@@ -429,15 +475,21 @@ Nếu bộ nhớ đệm trên không có chính sách giới hạn hoặc loại
 
 GC tự động không có nghĩa là vòng đời bộ nhớ không cần được thiết kế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Bộ thu gom rác và vòng đời dữ liệu** nêu điều cần giải thích; **WeakMap và WeakSet** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Closure và giữ tham chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `WeakMap` và `WeakSet`
 
 `WeakMap` hữu ích khi cần gắn siêu dữ liệu với vòng đời của một đối tượng mà không muốn ánh xạ mạnh giữ đối tượng đó sống. Tuy nhiên, nó không hỗ trợ duyệt như `Map`, nên không phù hợp với bảng trạng thái thuật toán cần liệt kê toàn bộ phần tử.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, sau nội dung của **WeakMap và WeakSet**, **Closure và giữ tham chiếu** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hình dạng đối tượng và JIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Closure và giữ tham chiếu
 
 Closure có thể giữ tham chiếu tới mảng hoặc cây lớn ngay cả khi hàm bên ngoài đã trả về. Listener và timer cũng giữ callback cùng trạng thái được bắt giữ.
 
 Nhiều rò rỉ bộ nhớ JavaScript là **rò rỉ do khả năng đạt tới (reachability leak)** chứ không phải lỗi quên `free()` như trong C.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Hình dạng đối tượng và JIT** tiếp nhận điểm tựa từ **Closure và giữ tham chiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **class và đối tượng (object / 객체) literal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hình dạng đối tượng và JIT
 
@@ -451,11 +503,15 @@ const node = { key, left: null, right: null, size: 1 };
 
 Chi tiết về hidden lớp (class / 클래스) là đặc thù engine; không nên viết mã phụ thuộc vào các ngưỡng nội bộ không được đặc tả.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **class và đối tượng (object / 객체) literal** tiếp nhận điểm tựa từ **Hình dạng đối tượng và JIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị CSR trong JavaScript** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `class` và đối tượng (object / 객체) literal
 
 `class Node` và đối tượng (object / 객체) literal cuối cùng đều tạo đối tượng JavaScript. `class` giúp thống nhất cách xây dựng và API, nhưng không tự tạo bố trí bộ nhớ gọn giống `struct` của C.
 
 Khi có hàng triệu nút, quyết định dùng mảng, `TypedArray` hay đối tượng thường quan trọng hơn việc chọn cú pháp `class` hay đối tượng (object / 객체) literal.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Đồ thị CSR trong JavaScript** tiếp nhận điểm tựa từ **class và đối tượng (object / 객체) literal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi JavaScript dùng UTF-16** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồ thị CSR trong JavaScript
 
@@ -484,6 +540,8 @@ g[u].push(v);
 ```
 
 Khi có hàng triệu cạnh, nên đo chi phí của các mảng lồng nhau thay vì mặc định rằng chúng đủ gọn.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Đồ thị CSR trong JavaScript** xác định đầu vào; **Chuỗi JavaScript dùng UTF-16** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuỗi là bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi JavaScript dùng UTF-16
 
@@ -519,11 +577,15 @@ for (const ch of s) {
 
 xử lý cặp thay thế tốt hơn truy cập từng mã (code / 코드) đơn vị (unit / 단위), nhưng một ký tự mà người dùng nhìn thấy vẫn có thể gồm nhiều mã (code / 코드) điểm (point / 지점). Khi cần phân đoạn theo ký tự hiển thị, có thể dùng `Intl.Segmenter`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Chuỗi JavaScript dùng UTF-16** xác định đầu vào; **Chuỗi là bất biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Thứ tự duyệt của Map và Object** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuỗi là bất biến
 
 Chuỗi JavaScript không thay đổi tại chỗ. Engine có thể tối ưu phép nối trong nhiều trường hợp, nhưng khi xây chuỗi lớn, việc gom các đoạn vào mảng rồi `join()` thường là lựa chọn dễ kiểm soát hơn.
 
 Nếu đây là đường chạy nóng, cần đo trên tải công việc thực tế thay vì dựa vào giả định chung.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Chuỗi là bất biến** xác định đầu vào; **Thứ tự duyệt của Map và Object** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trạng thái dày đặc và trạng thái thưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự duyệt của `Map` và `Object`
 
@@ -532,6 +594,8 @@ Nếu đây là đường chạy nóng, cần đo trên tải công việc thự
 Quy tắc duyệt thuộc tính của `Object` có các nhóm thứ tự được đặc tả, trong đó khóa dạng số nguyên có quy tắc riêng. Không nên dùng đối tượng (object / 객체) thông thường như một ánh xạ có thứ tự tổng quát chỉ vì một ví dụ nhỏ cho ra thứ tự mong muốn.
 
 Về ngữ nghĩa, `Map` thường rõ ràng hơn khi mục tiêu thực sự là một ánh xạ.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Trạng thái dày đặc và trạng thái thưa** tiếp nhận điểm tựa từ **Thứ tự duyệt của Map và Object** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NaN, -0 và số dấu phẩy động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trạng thái dày đặc và trạng thái thưa
 
@@ -553,6 +617,8 @@ Tuy nhiên kích thước có thể tăng rất nhanh. Với không gian trạng
 
 Đây chính là sự đánh đổi **thưa–dày (sparse–dense)** quen thuộc trong quy hoạch động và biểu diễn đồ thị.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **NaN, -0 và số dấu phẩy động** tiếp nhận điểm tựa từ **Trạng thái dày đặc và trạng thái thưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sắp xếp đối tượng và hàm so sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `NaN`, `-0` và số dấu phẩy động
 
 `NaN` có ngữ nghĩa đặc biệt:
@@ -573,6 +639,8 @@ Tổng số dấu phẩy động có thể tích lũy sai số làm tròn:
 
 Với tiền tệ, thường nên lưu số nguyên theo đơn vị nhỏ nhất hoặc dùng thư viện số thập phân phù hợp. Tính đúng đắn của thuật toán phụ thuộc vào cách biểu diễn số, không chỉ vào công thức toán học.
 
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **NaN, -0 và số dấu phẩy động** đã nêu tiêu chí phân biệt, còn **Sắp xếp đối tượng và hàm so sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Đo hiệu năng trong môi trường JIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sắp xếp đối tượng và hàm so sánh
 
 Một hàm so sánh nhiều trường có thể viết:
@@ -584,6 +652,8 @@ items.sort((a, b) =>
 ```
 
 Nếu trường có thể vượt miền số nguyên an toàn, nên dùng so sánh quan hệ thay cho phép trừ. Hàm so sánh phải nhất quán và có tính bắc cầu; nếu không, kết quả sắp xếp có thể khó dự đoán.
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Sắp xếp đối tượng và hàm so sánh** đã nêu tiêu chí phân biệt, còn **Đo hiệu năng trong môi trường JIT** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Trình duyệt và nút (node / 노드).js** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đo hiệu năng trong môi trường JIT
 
@@ -602,9 +672,13 @@ Có thể dùng `performance.now()` hoặc `process.hrtime.bigint()`, nhưng ph�
 
 Một benchmark chỉ dùng mảng toàn số có thể không phản ánh hệ thống thực tế nơi dữ liệu trộn số, đối tượng (object / 객체) và chuỗi. Dữ liệu đo phải gần với tải công việc thật.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Trình duyệt và nút (node / 노드).js** tiếp nhận điểm tựa từ **Đo hiệu năng trong môi trường JIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Web Worker và workerthreads** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trình duyệt và nút (node / 노드).js
 
 Ngữ nghĩa ECMAScript cơ bản có thể giống nhau, nhưng phiên bản engine, giới hạn bộ nhớ, cấu hình GC và môi trường thực thi có thể khác. Không nên đưa ra một con số hiệu năng phổ quát cho “JavaScript” mà không nêu rõ môi trường chạy.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Web Worker và workerthreads** tiếp nhận điểm tựa từ **Trình duyệt và nút (node / 노드).js** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SharedArrayBuffer và Atomics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Web Worker và `worker_threads`
 
@@ -612,17 +686,23 @@ Công việc CPU lớn có thể được chuyển sang worker để tránh ch�
 
 Xử lý song song chỉ hữu ích khi công việc có thể chia được và phần công việc đủ lớn để bù chi phí phối hợp.
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **SharedArrayBuffer và Atomics** tiếp nhận điểm tựa từ **Web Worker và workerthreads** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với WebAssembly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `SharedArrayBuffer` và `Atomics`
 
 JavaScript có cơ chế đồng thời mức thấp trên bộ nhớ dùng chung. Tuy nhiên, viết cấu trúc dữ liệu không khóa (lock-free) đúng đắn đòi hỏi hiểu thứ tự bộ nhớ và giao thức phối hợp.
 
 Chỉ thêm `Atomics` vào một cấu trúc dữ liệu tùy ý không tự biến nó thành cấu trúc an toàn khi truy cập đồng thời.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Liên hệ với WebAssembly** tiếp nhận điểm tựa từ **SharedArrayBuffer và Atomics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử đối chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với WebAssembly
 
 Với công việc số học hoặc đồ thị rất nhạy về hiệu năng, C/Rust/WASM có thể cho bố trí bộ nhớ gọn hơn và quyền kiểm soát lớn hơn. Tuy nhiên, chi phí qua ranh giới JavaScript–WebAssembly và chuyển đổi dữ liệu có thể chi phối nếu lời gọi quá nhỏ hoặc quá thường xuyên.
 
 Khi dùng WASM, thường nên gom đủ công việc thành lô trước khi chuyển qua ranh giới môi trường.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Liên hệ với WebAssembly** đã nêu tiêu chí phân biệt, còn **Kiểm thử đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kiểm thử dựa trên tính chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm thử đối chiếu
 
@@ -650,6 +730,8 @@ so sánh vị trí KMP tìm được với cách kiểm tra ngây thơ
 thêm trường hợp Unicode phù hợp với đơn vị chuỗi đã chọn
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Kiểm thử đối chiếu** đã nêu tiêu chí phân biệt, còn **Kiểm thử dựa trên tính chất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phân tích bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểm thử dựa trên tính chất
 
 Với tìm kiếm nhị phân tìm cận dưới, kết quả `ans` phải thỏa:
@@ -663,11 +745,15 @@ Với DSU, phân hoạch liên thông phải tương đương với các thành 
 
 Kiểm thử kiểu này thường bắt được lỗi ở ranh giới biểu diễn tốt hơn một vài ví dụ viết tay.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mẫu DSA và môi trường chạy JavaScript**, **Phân tích bộ nhớ** tiếp nhận điểm tựa từ **Kiểm thử dựa trên tính chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Danh sách kiểm tra cách biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân tích bộ nhớ
 
 Vùng nhớ vùng nhớ động (heap / 힙) snapshot trong Chrome DevTools hoặc công cụ của nút (node / 노드).js có thể cho thấy `Map` còn giữ tham chiếu, cấu trúc nút dùng quá nhiều đối tượng (object / 객체) hoặc listener/closure giữ dữ liệu ngoài dự kiến.
 
 CPU profile giúp tìm vòng lặp nóng, hàm so sánh tốn kém, thao tác băm hoặc mã hóa chuỗi chiếm nhiều thời gian. Tối ưu nên dựa trên bằng chứng đo được.
+
+> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **Danh sách kiểm tra cách biểu diễn** tiếp nhận điểm tựa từ **Phân tích bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Danh sách kiểm tra cách biểu diễn
 
@@ -684,6 +770,8 @@ Cần số nguyên chính xác >2^53? -> BigInt
 DFS có thể rất sâu?          -> ngăn xếp dạng lặp
 Xử lý Unicode?               -> xác định code unit / code point / grapheme
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Các mẫu DSA và môi trường chạy JavaScript**, **Mô hình tư duy** gom các mảnh từ **Danh sách kiểm tra cách biểu diễn** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -704,3 +792,5 @@ Kiểu TypedArray có đủ miền giá trị không?
 ```
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

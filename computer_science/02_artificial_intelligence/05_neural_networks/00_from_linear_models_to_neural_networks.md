@@ -1,7 +1,6 @@
 # Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks
 
-> **Mạch đọc:** Đặt **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một tuyến tính (linear / 선형) tầng (layer / 계층) thực sự làm gì?** sang **XOR: vì sao một ranh giới (boundary / 경계) tuyến tính không đủ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một tuyến tính (linear / 선형) tầng (layer / 계층) thực sự làm gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **XOR: vì sao một ranh giới (boundary / 경계) tuyến tính không đủ?** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Neural mạng (network / 네트워크) không xuất hiện vì tuyến tính (linear / 선형)/logistic regression “sai”, mà vì nhiều relationship trong thế giới không thể biểu diễn tốt bằng một toàn cục (global / 전역) tuyến tính (linear / 선형) ranh giới (boundary / 경계) trên raw features. Ý tưởng cốt lõi của neural mạng (network / 네트워크) là **compose nhiều transformations và học biểu diễn (representation / 표현) trung gian**, thay vì yêu cầu con người hand-engineer toàn bộ nonlinear features.
 
@@ -37,6 +36,8 @@ vẫn chỉ là **một affine transformation duy nhất**.
 
 Do đó độ sâu (depth / 깊이) chỉ có ý nghĩa expressive nếu giữa layers có nonlinearity hoặc cơ chế (mechanism / 메커니즘) khác không collapse thành một tuyến tính (linear / 선형) map.
 
+> **Chuyển mạch:** Trong **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Một tuyến tính (linear / 선형) tầng (layer / 계층) thực sự làm gì?** đã nêu tiêu chí phân biệt, còn **XOR: vì sao một ranh giới (boundary / 경계) tuyến tính không đủ?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Hand-Engineered Features vs Learned Features** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## XOR: vì sao một ranh giới (boundary / 경계) tuyến tính không đủ?
 
 XOR có truth bảng (table / 테이블):
@@ -56,6 +57,8 @@ Nhưng nếu tạo hidden biểu diễn (representation / 표현) phù hợp, b�
 Đây là essence của neural networks:
 
 > Không nhất thiết cố tìm quyết định (decision / 결정) ranh giới (boundary / 경계) phức tạp trong raw không gian (space / 공간); hãy học một transformation đưa dữ liệu (data / 데이터) sang biểu diễn (representation / 표현) không gian (space / 공간) nơi tác vụ (task / 작업) trở nên đơn giản hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **XOR: vì sao một ranh giới (boundary / 경계) tuyến tính không đủ?** đã nêu tiêu chí phân biệt, còn **Hand-Engineered Features vs Learned Features** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Hàm (function / 함수) Composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hand-Engineered Features vs Learned Features
 
@@ -82,6 +85,8 @@ raw-ish input
 
 Điều này không có nghĩa tính năng (feature / 기능) kỹ thuật (engineering / 엔지니어링) biến mất. Tokenization, normalization, dữ liệu (data / 데이터) augmentation, kiến trúc (architecture / 아키텍처), position encoding và ngữ cảnh (context / 맥락) construction đều là biểu diễn (representation / 표현) decisions.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Hàm (function / 함수) Composition** tiếp nhận điểm tựa từ **Hand-Engineered Features vs Learned Features** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Universal Approximation không có nghĩa “mạng (network / 네트워크) học được mọi thứ dễ dàng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàm (function / 함수) Composition
 
 Một neural mạng (network / 네트워크) có thể viết:
@@ -100,6 +105,8 @@ h^{(l)}=\phi(W^{(l)}h^{(l-1)}+b^{(l)})
 
 Độ sâu (depth / 깊이) cho phép mô hình (model / 모델) tái sử dụng intermediate features. Thay vì học trực tiếp raw pixels → lớp (class / 클래스), mạng (network / 네트워크) có thể xây hierarchy.
 
+> **Chuyển mạch:** Trong **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Universal Approximation không có nghĩa “mạng (network / 네트워크) học được mọi thứ dễ dàng”** tiếp nhận điểm tựa từ **Hàm (function / 함수) Composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Width và độ sâu (depth / 깊이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Universal Approximation không có nghĩa “mạng (network / 네트워크) học được mọi thứ dễ dàng”
 
 Universal Approximation Theorem nói under conditions, một sufficiently wide mạng (network / 네트워크) có thể approximate continuous functions trên compact lĩnh vực (domain / 도메인) tốt tùy ý.
@@ -114,6 +121,8 @@ Nhưng theorem **không** nói:
 
 Expressivity, trainability và generalization là ba vấn đề khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Width và độ sâu (depth / 깊이)** tiếp nhận điểm tựa từ **Universal Approximation không có nghĩa “mạng (network / 네트워크) học được mọi thứ dễ dàng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameters và kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Width và độ sâu (depth / 깊이)
 
 Width tăng số units trong tầng (layer / 계층); độ sâu (depth / 깊이) tăng số composed transformations.
@@ -121,6 +130,8 @@ Width tăng số units trong tầng (layer / 계층); độ sâu (depth / 깊이
 Một số functions có thể represent compactly bằng deep mạng (network / 네트워크) nhưng cần exponentially many units nếu shallow. độ sâu (depth / 깊이) tạo compositional efficiency khi bài toán (problem / 문제) có hierarchical cấu trúc (structure / 구조).
 
 Tuy nhiên deeper không luôn better: tối ưu hóa (optimization / 최적화), độ trễ (latency / 지연 시간), bộ nhớ (memory / 메모리) và overfitting/instability matter.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Parameters và kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Width và độ sâu (depth / 깊이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neural mạng (network / 네트워크) là differentiable program** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Parameters và kiến trúc (architecture / 아키텍처)
 
@@ -131,6 +142,8 @@ Kiến trúc (architecture / 아키텍처) quyết định computation đồ th�
 Kiến trúc (architecture / 아키텍처) là một mạnh **inductive độ lệch (bias / 편향)**.
 
 CNN encode locality/weight sharing. RNN encode recurrence. Transformer encode content-dependent interactions through attention.
+
+> **Chuyển mạch:** Trong **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Neural mạng (network / 네트워크) là differentiable program** tiếp nhận điểm tựa từ **Parameters và kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neural mạng (network / 네트워크) không nhất thiết mô phỏng brain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Neural mạng (network / 네트워크) là differentiable program
 
@@ -156,6 +169,8 @@ Updated θ
 
 Đây là cốt lõi (core / 핵심) huấn luyện (training / 학습) vòng lặp (loop / 루프) của Deep học tập (learning / 학습).
 
+> **Chuyển mạch:** Ở chặng này của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Neural mạng (network / 네트워크) không nhất thiết mô phỏng brain** tiếp nhận điểm tựa từ **Neural mạng (network / 네트워크) là differentiable program** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tán (distributed / 분산) biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Neural mạng (network / 네트워크) không nhất thiết mô phỏng brain
 
 Names như neuron, synapse đến từ historical inspiration, nhưng hiện đại (modern / 현대적) neural networks không phải realistic simulation của biological brain.
@@ -164,6 +179,8 @@ Artificial neuron thường chỉ tính weighted sum + activation. Transformer c
 
 Biological analogy hữu ích ở mức lịch sử/intuitive inspiration, nhưng không nên dùng để suy luận technical hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Phân tán (distributed / 분산) biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Neural mạng (network / 네트워크) không nhất thiết mô phỏng brain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **End-to-End học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân tán (distributed / 분산) biểu diễn (representation / 표현)
 
 Trong symbolic hệ thống (system / 시스템), concept có thể map tới tường minh (explicit / 명시적) symbol. Neural networks thường dùng **phân tán (distributed / 분산) biểu diễn (representation / 표현)**: thông tin (information / 정보) được encode qua mẫu (pattern / 패턴) của nhiều dimensions/units.
@@ -171,6 +188,8 @@ Trong symbolic hệ thống (system / 시스템), concept có thể map tới t�
 Một neuron hiếm khi tương ứng đơn giản với một ngữ nghĩa (semantic / 의미적) concept duy nhất. Meaning thường nằm trong subspace/direction/activation mẫu (pattern / 패턴).
 
 Điều này giúp biểu diễn (representation / 표현) compositional/generalizable nhưng làm interpretability khó.
+
+> **Chuyển mạch:** Trong **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **End-to-End học tập (learning / 학습)** tiếp nhận điểm tựa từ **Phân tán (distributed / 분산) biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neural Networks và probabilistic outputs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## End-to-End học tập (learning / 학습)
 
@@ -183,6 +202,8 @@ Lợi ích: intermediate biểu diễn (representation / 표현) adapt tác vụ
 Rủi ro (risk / 위험): less modular/debuggable, cần more dữ liệu (data / 데이터)/compute, và thất bại (failure / 실패) origin khó dấu vết (trace / 추적).
 
 Môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들) thường vẫn hybrid, không phải mọi thứ end-to-end.
+
+> **Chuyển mạch:** Ở chặng này của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Neural Networks và probabilistic outputs** tiếp nhận điểm tựa từ **End-to-End học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy mô (scale / 규모): dữ liệu (data / 데이터), compute, parameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Neural Networks và probabilistic outputs
 
@@ -200,6 +221,8 @@ Generative các mô hình (models / 모델들) parameterize complex distribution
 
 Xác suất (probability / 확률)/calibration principles từ ML vẫn áp dụng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Neural Networks và probabilistic outputs** nêu điều cần giải thích; **Quy mô (scale / 규모): dữ liệu (data / 데이터), compute, parameters** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy mô (scale / 규모): dữ liệu (data / 데이터), compute, parameters
 
 Deep học tập (learning / 학습) thành công nhờ combination:
@@ -212,6 +235,8 @@ Deep học tập (learning / 학습) thành công nhờ combination:
 - phân tán (distributed / 분산) các hệ thống (systems / 시스템들).
 
 Không có một single “neural mạng (network / 네트워크) breakthrough” giải thích toàn bộ.
+
+> **Chuyển mạch:** Trong **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, các dấu vết trong **Quy mô (scale / 규모): dữ liệu (data / 데이터), compute, parameters** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -229,6 +254,8 @@ raw representation
 → representation where task is easier
 → simple output head
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -248,8 +275,12 @@ Nó giảm handcraft tính năng (feature / 기능) extraction nhưng dữ liệ
 
 Độ sâu (depth / 깊이) chỉ hữu ích nếu kiến trúc (architecture / 아키텍처)/huấn luyện (training / 학습)/dữ liệu (data / 데이터) hỗ trợ (support / 지원). Deeper có thể khó optimize và lãng phí compute.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Chapter này nối [Linear Regression](../04_machine_learning/05_linear_regression.md), [Logistic Regression](../04_machine_learning/06_logistic_regression.md), [Calculus](../01_mathematical_foundations/04_calculus_for_ai.md) và [Optimization](../01_mathematical_foundations/06_optimization.md).
 
 Xem tiếp: [Neuron, Perceptron and MLP](./01_neuron_perceptron_and_mlp.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

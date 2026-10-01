@@ -1,7 +1,6 @@
 # Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng
 
-> **Mạch đọc:** Đặt **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một lớp trừu tượng (abstraction / 추상화) chung** sang **Breadth-First tìm kiếm (search / 검색)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một lớp trừu tượng (abstraction / 추상화) chung** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Breadth-First tìm kiếm (search / 검색)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Uninformed tìm kiếm (search / 검색)** giải bài toán chỉ bằng bài toán (problem / 문제) definition: initial trạng thái (state / 상태), actions, chuyển tiếp (transition / 전이), goal và đường dẫn (path / 경로) chi phí (cost / 비용). thuật toán (algorithm / 알고리즘) không có domain-specific estimate cho biết trạng thái (state / 상태) nào “gần goal hơn”.
 
@@ -23,6 +22,8 @@ Bidirectional → two searches meeting
 ```
 
 Các properties phụ thuộc các giả định (assumptions / 가정들) về branching, goal độ sâu (depth / 깊이) và edge chi phí (cost / 비용).
+
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Breadth-First tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Một lớp trừu tượng (abstraction / 추상화) chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Depth-First tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Breadth-First tìm kiếm (search / 검색)
 
@@ -74,6 +75,8 @@ S → A → G
 
 Nếu edge chi phí (cost / 비용) equal, BFS tìm `S-A-G` trước vì độ sâu (depth / 깊이) nhỏ hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Depth-First tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Breadth-First tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Depth-Limited tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Depth-First tìm kiếm (search / 검색)
 
 Depth-First tìm kiếm (search / 검색) đi sâu một branch trước khi backtrack.
@@ -120,6 +123,8 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 - exhaustive traversal/backtracking;
 - topological/cycle-related đồ thị (graph / 그래프) algorithms trong CS broader ngữ cảnh (context / 맥락).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Depth-First tìm kiếm (search / 검색)** đã nêu tiêu chí phân biệt, còn **Depth-Limited tìm kiếm (search / 검색)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Iterative Deepening DFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Depth-Limited tìm kiếm (search / 검색)
 
 Depth-Limited tìm kiếm (search / 검색) (DLS) là DFS với độ sâu (depth / 깊이) limit `ℓ`.
@@ -137,6 +142,8 @@ CUTOFF     → có thể có solution sâu hơn limit
 ```
 
 Distinction này quan trọng cho Iterative Deepening.
+
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Depth-Limited tìm kiếm (search / 검색)** đã nêu tiêu chí phân biệt, còn **Iterative Deepening DFS** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Uniform-Cost tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Iterative Deepening DFS
 
@@ -167,6 +174,8 @@ O(bd)
 \]
 
 under dùng chung (common / 공통) formulation.
+
+> **Chuyển mạch:** Ở chặng này của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Uniform-Cost tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Iterative Deepening DFS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFS là special trường hợp (case / 사례) của UCS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Uniform-Cost tìm kiếm (search / 검색)
 
@@ -203,6 +212,8 @@ Một goal có thể được generated qua expensive đường dẫn (path / �
 
 Khi UCS pops goal as lowest-cost frontier nút (node / 노드) under nonnegative costs, ta mới có optimality guarantee.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Uniform-Cost tìm kiếm (search / 검색)** cho ta quy tắc; **BFS là special trường hợp (case / 사례) của UCS** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Negative edge chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## BFS là special trường hợp (case / 사례) của UCS
 
 Nếu every edge chi phí (cost / 비용) = 1:
@@ -219,6 +230,8 @@ UCS thứ tự (ordering / 순서) theo đường dẫn (path / 경로) chi phí
 BFS = UCS khi step cost uniform
 ```
 
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **BFS là special trường hợp (case / 사례) của UCS** cho ta quy tắc; **Negative edge chi phí (cost / 비용)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cycle checking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Negative edge chi phí (cost / 비용)
 
 UCS/Dijkstra các giả định (assumptions / 가정들) require nonnegative edge chi phí (cost / 비용) for tiêu chuẩn (standard / 표준) optimality lô-gic (logic / 논리).
@@ -228,6 +241,8 @@ Nếu negative edges tồn tại, một nút (node / 노드) tưởng cheapest h
 Các algorithms như Bellman–Ford handle negative edges trong đồ thị (graph / 그래프) shortest đường dẫn (path / 경로), và negative cycles làm shortest đường dẫn (path / 경로) undefined (`-∞`).
 
 Trong AI chi phí (cost / 비용) thiết kế (design / 설계), negative rewards/costs cần careful formulation.
+
+> **Chuyển mạch:** Ở chặng này của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Cycle checking** tiếp nhận điểm tựa từ **Negative edge chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Frontier duplicates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cycle checking
 
@@ -242,6 +257,8 @@ có thể tạo infinite expansion.
 Path-based cycle checking ngăn trạng thái (state / 상태) lặp trên hiện tại (current / 현재) đường dẫn (path / 경로).
 
 Toàn cục (global / 전역) explored set mạnh hơn, nhưng với weighted tìm kiếm (search / 검색) cần có best-cost lô-gic (logic / 논리): “đã thấy trạng thái (state / 상태)” không đủ nếu later đường dẫn (path / 경로) rẻ hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Frontier duplicates** tiếp nhận điểm tựa từ **Cycle checking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bidirectional tìm kiếm (search / 검색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Frontier duplicates
 
@@ -258,6 +275,8 @@ if popped_cost != best[state]:
 ```
 
 Mô hình tư duy (mental model / 사고 모델): `best` map là nguồn chuẩn (source of truth / 정본), vùng nhớ động (heap / 힙) có thể chứa stale candidates.
+
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Bidirectional tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Frontier duplicates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) thứ tự (order / 순서) và tie-breaking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bidirectional tìm kiếm (search / 검색)
 
@@ -288,6 +307,8 @@ Bidirectional tìm kiếm (search / 검색) cần:
 
 Nếu goal là predicate rộng (“bất kỳ schedule hợp lệ”), backward tìm kiếm (search / 검색) có thể không straightforward.
 
+> **Chuyển mạch:** Ở chặng này của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Tìm kiếm (search / 검색) thứ tự (order / 순서) và tie-breaking** tiếp nhận điểm tựa từ **Bidirectional tìm kiếm (search / 검색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cây (tree / 트리) độ phức tạp (complexity / 복잡도) và đồ thị (graph / 그래프) độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tìm kiếm (search / 검색) thứ tự (order / 순서) và tie-breaking
 
 Ngay cả cùng BFS/UCS, thứ tự generate successors ảnh hưởng đường dẫn (path / 경로) returned khi multiple optimal solutions tồn tại.
@@ -295,6 +316,8 @@ Ngay cả cùng BFS/UCS, thứ tự generate successors ảnh hưởng đường
 A* tie-breaking cũng ảnh hưởng nodes expanded.
 
 Reproducibility cần deterministic successor thứ tự (ordering / 순서) khi đầu ra (output / 출력) đường dẫn (path / 경로) matters.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Cây (tree / 트리) độ phức tạp (complexity / 복잡도) và đồ thị (graph / 그래프) độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색) thứ tự (order / 순서) và tie-breaking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Example: weighted routes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cây (tree / 트리) độ phức tạp (complexity / 복잡도) và đồ thị (graph / 그래프) độ phức tạp (complexity / 복잡도)
 
@@ -317,6 +340,8 @@ AI search tree view → branching/depth
 Graph algorithm view → vertices/edges
 ```
 
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Cây (tree / 트리) độ phức tạp (complexity / 복잡도) và đồ thị (graph / 그래프) độ phức tạp (complexity / 복잡도)** cho ta quy tắc; **Example: weighted routes** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Bộ nhớ (memory / 메모리) as algorithmic tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Example: weighted routes
 
 Suppose:
@@ -333,6 +358,8 @@ UCS explores theo accumulated chi phí (cost / 비용) và tìm `S-B-C-G` chi ph
 
 Đây là lý do “ít bước hơn” không đồng nghĩa “rẻ hơn”.
 
+> **Chuyển mạch:** Ở chặng này của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Example: weighted routes** cho ta quy tắc; **Bộ nhớ (memory / 메모리) as algorithmic tài nguyên (resource / 자원)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Iterative deepening và hiện đại (modern / 현대적) lập luận (reasoning / 추론) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ nhớ (memory / 메모리) as algorithmic tài nguyên (resource / 자원)
 
 BFS thường thất bại (fail / 실패) vì RAM trước CPU.
@@ -347,6 +374,8 @@ thực tế đối tượng (object / 객체) overhead có thể lớn hơn nhi�
 
 Compact trạng thái (state / 상태) encoding, parent reconstruction chiến lược (strategy / 전략), external-memory tìm kiếm (search / 검색) hoặc iterative deepening có thể quan trọng hơn micro-optimizing expansion.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Bộ nhớ (memory / 메모리) as algorithmic tài nguyên (resource / 자원)** nêu điều cần giải thích; **Iterative deepening và hiện đại (modern / 현대적) lập luận (reasoning / 추론) các hệ thống (systems / 시스템들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Beam tìm kiếm (search / 검색): informed bởi score nhưng incomplete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Iterative deepening và hiện đại (modern / 현대적) lập luận (reasoning / 추론) các hệ thống (systems / 시스템들)
 
 Idea allocate progressively larger độ sâu (depth / 깊이) ngân sách (budget / 예산) có analog trong hiện đại (modern / 현대적) các hệ thống (systems / 시스템들):
@@ -357,6 +386,8 @@ if insufficient → allow deeper search
 ```
 
 Không nên gọi mọi “lập luận (reasoning / 추론) độ sâu (depth / 깊이) setting” là literal IDDFS, nhưng resource-bounded iterative expansion là recurring mẫu thiết kế (design pattern / 디자인 패턴).
+
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Beam tìm kiếm (search / 검색): informed bởi score nhưng incomplete** tiếp nhận điểm tựa từ **Iterative deepening và hiện đại (modern / 현대적) lập luận (reasoning / 추론) các hệ thống (systems / 시스템들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색) under tài nguyên (resource / 자원) limits** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Beam tìm kiếm (search / 검색): informed bởi score nhưng incomplete
 
@@ -374,6 +405,8 @@ Beam tìm kiếm (search / 검색) tiết kiệm bộ nhớ (memory / 메모리)
 
 Machine translation và chuỗi (sequence / 시퀀스) generation historically use beam tìm kiếm (search / 검색) extensively.
 
+> **Chuyển mạch:** Ở chặng này của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Beam tìm kiếm (search / 검색): informed bởi score nhưng incomplete** đã nêu tiêu chí phân biệt, còn **Tìm kiếm (search / 검색) under tài nguyên (resource / 자원) limits** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Anytime algorithms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tìm kiếm (search / 검색) under tài nguyên (resource / 자원) limits
 
 Real các hệ thống (systems / 시스템들) có:
@@ -389,6 +422,8 @@ Resource-bounded algorithms trade solution chất lượng (quality / 품질) fo
 
 This idea later appears in anytime algorithms, beam tìm kiếm (search / 검색), Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색) and LLM tác nhân (agent / 에이전트) planning.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Tìm kiếm (search / 검색) under tài nguyên (resource / 자원) limits** đã nêu tiêu chí phân biệt, còn **Anytime algorithms** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Choosing an uninformed chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Anytime algorithms
 
 Anytime thuật toán (algorithm / 알고리즘) có thể return hiện tại (current / 현재) best solution nếu interrupted, và chất lượng (quality / 품질) cải thiện khi có thêm thời gian (time / 시간).
@@ -396,6 +431,8 @@ Anytime thuật toán (algorithm / 알고리즘) có thể return hiện tại (
 This is valuable when chính xác (exact / 정확한) compute ngân sách (budget / 예산) uncertain.
 
 Weighted A* và iterative improvement methods can have anytime variants.
+
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Choosing an uninformed chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **Anytime algorithms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Choosing an uninformed chiến lược (strategy / 전략)
 
@@ -411,6 +448,8 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 Bảng (table / 테이블) này là starting heuristic, không substitute phân tích (analysis / 분석) of actual đồ thị (graph / 그래프) kích thước (size / 크기), cycles, các ràng buộc (constraints / 제약조건들) và bộ nhớ (memory / 메모리) biểu diễn (representation / 표현).
 
+> **Chuyển mạch:** Ở chặng này của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Choosing an uninformed chiến lược (strategy / 전략)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -423,6 +462,8 @@ IDDFS = BFS-like depth guarantee using DFS-like memory
 UCS   = optimize accumulated path cost
 Bidirectional = reduce effective depth by meeting in middle
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -442,8 +483,12 @@ Trong cyclic graphs, duplicate detection có thể quyết định termination v
 
 Goal cần được settled/popped theo lowest đường dẫn (path / 경로) chi phí (cost / 비용) lô-gic (logic / 논리); generated first chưa guarantee optimal.
 
+> **Chuyển mạch:** Trong **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Uninformed tìm kiếm (search / 검색) cung cấp baseline để thấy heuristic mang lại gì. [Heuristic Search](./02_heuristic_search.md) sẽ thêm estimate `h(n)` để focus expansion, còn Planning sẽ add richer hành động (action / 동작) preconditions/effects.
 
 Khi chọn search algorithm, hãy bắt đầu bằng graph properties: branching factor, depth, edge costs, cycles, memory budget và whether goal/reverse transitions known.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

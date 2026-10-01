@@ -1,7 +1,6 @@
 # Xác suất (probability / 확률) cho Artificial Intelligence
 
-> **Mạch đọc:** Đặt **xác suất (probability / 확률) cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tại sao AI cần xác suất (probability / 확률)?** sang **mẫu (sample / 표본) không gian (space / 공간), sự kiện (event / 이벤트) và random variable**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Xác suất (probability / 확률) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao AI cần xác suất (probability / 확률)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mẫu (sample / 표본) không gian (space / 공간), sự kiện (event / 이벤트) và random variable** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Xác suất (probability / 확률) là ngôn ngữ để lập luận (reasoning / 추론) khi thông tin không đầy đủ, kết quả (outcome / 결과) không chắc chắn hoặc tiến trình (process / 프로세스) có randomness. AI gần như luôn sống trong điều kiện như vậy: ảnh (image / 이미지) có thể ambiguous, sensor có noise, người dùng (user / 사용자) hành vi (behavior / 동작) không deterministic, dữ liệu huấn luyện (training data / 학습 데이터) chỉ là mẫu (sample / 표본) của world, và ngôn ngữ (language / 언어) mô hình (model / 모델) không biết chắc đơn vị từ (token / 토큰) tiếp theo.
 
@@ -21,6 +20,8 @@ Phân phối (distribution / 분포) giữ nhiều thông tin (information / 정
 
 Xác suất (probability / 확률) vì vậy không chỉ là mathematical decoration; nó ảnh hưởng trực tiếp hệ thống (system / 시스템) thiết kế (design / 설계) và rủi ro (risk / 위험) management.
 
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Mẫu (sample / 표본) không gian (space / 공간), sự kiện (event / 이벤트) và random variable** tiếp nhận điểm tựa từ **Tại sao AI cần xác suất (probability / 확률)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất (probability / 확률) phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mẫu (sample / 표본) không gian (space / 공간), sự kiện (event / 이벤트) và random variable
 
 Một **mẫu (sample / 표본) không gian (space / 공간)** `Ω` là tập các kết quả (outcome / 결과) có thể xảy ra.
@@ -36,6 +37,8 @@ Một **sự kiện (event / 이벤트)** là subset của mẫu (sample / 표�
 Một **random variable (확률변수 / biến ngẫu nhiên)** map kết quả (outcome / 결과) thành một giá trị (value / 값). Nếu `X` là số lần ra head trong hai lần tung coin, `X` có thể nhận `0,1,2`.
 
 Trong ML, label `Y`, tính năng (feature / 기능) `X`, noise `ε` hoặc đơn vị từ (token / 토큰) tiếp theo đều thường được modeling như random variables.
+
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Xác suất (probability / 확률) phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Mẫu (sample / 표본) không gian (space / 공간), sự kiện (event / 이벤트) và random variable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Joint, marginal và conditional xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xác suất (probability / 확률) phân phối (distribution / 분포)
 
@@ -54,6 +57,8 @@ P(a\le X\le b)=\int_a^b p(x)dx
 \]
 
 Phân biệt mass và density giúp tránh câu “density lớn hơn 1 là impossible”. Density có thể lớn hơn 1 miễn total integral bằng 1.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Joint, marginal và conditional xác suất (probability / 확률)** tiếp nhận điểm tựa từ **Xác suất (probability / 확률) phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản phẩm (product / 제품) quy tắc (rule / 규칙) và chuỗi (chain / 사슬) quy tắc (rule / 규칙) of xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Joint, marginal và conditional xác suất (probability / 확률)
 
@@ -93,6 +98,8 @@ P(x_t\mid x_1,\ldots,x_{t-1})
 
 Conditional xác suất (probability / 확률) là một trong những cầu nối (bridge / 브리지) quan trọng nhất giữa xác suất (probability / 확률) lý thuyết (theory / 이론) và ML.
 
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Joint, marginal và conditional xác suất (probability / 확률)** xác định đầu vào; **Sản phẩm (product / 제품) quy tắc (rule / 규칙) và chuỗi (chain / 사슬) quy tắc (rule / 규칙) of xác suất (probability / 확률)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Independence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản phẩm (product / 제품) quy tắc (rule / 규칙) và chuỗi (chain / 사슬) quy tắc (rule / 규칙) of xác suất (probability / 확률)
 
 Từ conditional xác suất (probability / 확률):
@@ -120,6 +127,8 @@ P("I love AI")
 
 Tokenization thực tế phức tạp hơn word-level example, nhưng probabilistic cơ chế (mechanism / 메커니즘) vẫn vậy.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Sản phẩm (product / 제품) quy tắc (rule / 규칙) và chuỗi (chain / 사슬) quy tắc (rule / 규칙) of xác suất (probability / 확률)** xác định đầu vào; **Independence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bayes' theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Independence
 
 Hai events `A` và `B` independent nếu:
@@ -141,6 +150,8 @@ khi xác suất (probability / 확률) defined.
 Bayesian networks khai thác conditional independence để factorize joint phân phối (distribution / 분포) hiệu quả.
 
 Một lỗi dùng chung (common / 공통) là assume independence chỉ vì correlation thấp. Zero correlation không đồng nghĩa independence, ngoại trừ một số phân phối (distribution / 분포) đặc biệt như jointly Gaussian.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Bayes' theorem** tiếp nhận điểm tựa từ **Independence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prior, likelihood và posterior trong Machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bayes' theorem
 
@@ -190,6 +201,8 @@ Một positive kiểm thử (test / 테스트) rất accurate không tự độn
 
 Trong anomaly detection, fraud detection và bảo mật (security / 보안), base-rate neglect là dạng thất bại (failure mode / 실패 모드) cực kỳ quan trọng.
 
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Prior, likelihood và posterior trong Machine học tập (learning / 학습)** tiếp nhận điểm tựa từ **Bayes' theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Expectation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prior, likelihood và posterior trong Machine học tập (learning / 학습)
 
 Bayesian view cho parameter `θ`:
@@ -220,6 +233,8 @@ Log transform biến sản phẩm (product / 제품) thành sum:
 
 Đây là lý do negative log-likelihood xuất hiện tự nhiên như hàm mất mát (loss function / 손실 함수).
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Expectation** tiếp nhận điểm tựa từ **Prior, likelihood và posterior trong Machine học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Variance và covariance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Expectation
 
 Expected giá trị (value / 값) của discrete random variable:
@@ -243,6 +258,8 @@ R(\theta)=\mathbb{E}_{(X,Y)\sim P}[L(f_\theta(X),Y)]
 \]
 
 là mục tiêu (objective / 목표) lý tưởng trên true dữ liệu (data / 데이터) phân phối (distribution / 분포). huấn luyện (training / 학습) dataset chỉ cho empirical approximation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Variance và covariance** tiếp nhận điểm tựa từ **Expectation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bernoulli và Binomial phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Variance và covariance
 
@@ -278,6 +295,8 @@ Correlation normalize covariance:
 
 Correlation không imply causation, và correlation thấp không có nghĩa không có nonlinear phụ thuộc (dependency / 의존성).
 
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Bernoulli và Binomial phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Variance và covariance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Categorical phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bernoulli và Binomial phân phối (distribution / 분포)
 
 Bernoulli variable `X∈{0,1}` với:
@@ -296,6 +315,8 @@ Nếu có `n` independent Bernoulli trials cùng parameter `p`, count successes 
 P(K=k)=\binom{n}{k}p^k(1-p)^{n-k}
 \]
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Categorical phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Bernoulli và Binomial phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gaussian phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Categorical phân phối (distribution / 분포)
 
 Categorical phân phối (distribution / 분포) generalize Bernoulli sang `K` classes:
@@ -311,6 +332,8 @@ p_k=\frac{e^{z_k}}{\sum_j e^{z_j}}
 \]
 
 Trong ngôn ngữ (language / 언어) mô hình (model / 모델), vocabulary có thể có hàng chục nghìn đơn vị từ (token / 토큰); mỗi generation step tạo categorical phân phối (distribution / 분포) trên vocabulary.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Gaussian phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Categorical phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Softmax không phải magic xác suất (probability / 확률) converter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gaussian phân phối (distribution / 분포)
 
@@ -331,6 +354,8 @@ Multivariate Gaussian:
 được xác định bởi mean véc-tơ (vector / 벡터) và covariance ma trận (matrix / 행렬).
 
 Gaussian các giả định (assumptions / 가정들) xuất hiện trong tuyến tính (linear / 선형) các mô hình (models / 모델들), Kalman filters, probabilistic modeling và latent-variable methods.
+
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Softmax không phải magic xác suất (probability / 확률) converter** tiếp nhận điểm tựa từ **Gaussian phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Odds và log-odds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Softmax không phải magic xác suất (probability / 확률) converter
 
@@ -357,6 +382,8 @@ p_i=softmax\left(\frac{z_i}{T}\right)
 với `T<1` làm phân phối (distribution / 분포) sharper, `T>1` làm flatter.
 
 Trong LLM generation, temperature thay đổi sampling phân phối (distribution / 분포), không “làm mô hình (model / 모델) thông minh hơn” hoặc trực tiếp tăng factual accuracy.
+
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Odds và log-odds** tiếp nhận điểm tựa từ **Softmax không phải magic xác suất (probability / 확률) converter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditional expectation và quyết định (decision / 결정) making** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Odds và log-odds
 
@@ -386,6 +413,8 @@ p=\sigma(z)=\frac{1}{1+e^{-z}}
 
 Điều này giải thích sigmoid không phải arbitrary activation trong logistic regression; nó phát sinh từ modeling log-odds.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Conditional expectation và quyết định (decision / 결정) making** tiếp nhận điểm tựa từ **Odds và log-odds** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aleatoric và epistemic bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Conditional expectation và quyết định (decision / 결정) making
 
 Nếu hành động (action / 동작) `a` có utility `U(a,Y)`, rational quyết định (decision / 결정) under bất định (uncertainty / 불확실성) có thể chọn hành động (action / 동작) maximize expected utility:
@@ -398,6 +427,8 @@ Một classifier và một nghiệp vụ (business / 비즈니스) quyết đị
 
 Xác suất (probability / 확률) mô hình (model / 모델) và quyết định (decision / 결정) chính sách (policy / 정책) cần được tách rõ.
 
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Aleatoric và epistemic bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Conditional expectation và quyết định (decision / 결정) making** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Calibration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Aleatoric và epistemic bất định (uncertainty / 불확실성)
 
 **Aleatoric bất định (uncertainty / 불확실성)** đến từ intrinsic randomness/noise của tiến trình (process / 프로세스). Ví dụ cùng ngữ cảnh (context / 맥락), người dùng (user / 사용자) vẫn có thể chọn nhiều hành động (action / 동작) khác nhau.
@@ -408,6 +439,8 @@ Trong practice hai loại này không luôn tách cleanly, nhưng distinction h�
 
 Một mô hình (model / 모델) có đầu ra (output / 출력) entropy cao có thể vì đầu vào (input / 입력) thực sự ambiguous hoặc vì mô hình (model / 모델) chưa từng thấy lĩnh vực (domain / 도메인) đó. Hai trường hợp cần phản hồi (response / 응답) khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Calibration** tiếp nhận điểm tựa từ **Aleatoric và epistemic bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Calibration
 
 Nếu mô hình (model / 모델) dự đoán xác suất (probability / 확률) 0.8 cho 1,000 cases tương tự, một calibrated mô hình (model / 모델) lý tưởng sẽ đúng khoảng 80% trong nhóm đó.
@@ -417,6 +450,8 @@ Calibration khác discrimination. Một mô hình (model / 모델) có ranking/A
 Các công cụ (tool / 도구) như độ tin cậy (reliability / 신뢰성) diagram, Expected Calibration lỗi (error / 오류) và calibration methods như temperature scaling giúp evaluate/fix vấn đề này.
 
 Trong high-stakes AI, xác suất (probability / 확률) không calibrated dễ dẫn đến quyết định (decision / 결정) threshold sai.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Sampling** tiếp nhận điểm tựa từ **Calibration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monte Carlo idea** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sampling
 
@@ -432,6 +467,8 @@ LLM generation thường không đơn giản chọn đơn vị từ (token / 토
 Sampling chiến lược (strategy / 전략) thay đổi diversity và hành vi khi thất bại (failure behavior / 실패 동작) mà không thay mô hình (model / 모델) parameters.
 
 Greedy decoding là deterministic nhưng không nhất thiết tạo globally most probable chuỗi (sequence / 시퀀스) vì cục bộ (local / 로컬) best choice không guarantee toàn cục (global / 전역) optimum.
+
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Monte Carlo idea** tiếp nhận điểm tựa từ **Sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất (probability / 확률) trong generative modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Monte Carlo idea
 
@@ -455,6 +492,8 @@ và approximate:
 
 Monte Carlo methods xuất hiện trong Bayesian suy luận (inference / 추론), Reinforcement học tập (learning / 학습), bất định (uncertainty / 불확실성) estimation và simulation.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Xác suất (probability / 확률) trong generative modeling** tiếp nhận điểm tựa từ **Monte Carlo idea** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xác suất (probability / 확률) trong generative modeling
 
 Generative mô hình (model / 모델) cố modeling dữ liệu (data / 데이터) phân phối (distribution / 분포) hoặc một conditional phân phối (distribution / 분포).
@@ -475,6 +514,8 @@ Diffusion các mô hình (models / 모델들) học cách reverse một stochast
 
 Dù mechanisms khác nhau, xác suất (probability / 확률) là ngôn ngữ (language / 언어) chung để mô tả generation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất (probability / 확률) cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Xác suất (probability / 확률) trong generative modeling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -489,6 +530,8 @@ Likelihood        = data phù hợp parameters đến đâu
 Sampling          = biến distribution thành một outcome cụ thể
 Calibration       = probability output có khớp observed frequency không
 ```
+
+> **Chuyển mạch:** Trong **Xác suất (probability / 확률) cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -508,8 +551,12 @@ Không đúng nói chung. Correlation chỉ đo tuyến tính (linear / 선형) 
 
 Hallucination không chỉ do sampling. Greedy decoding cũng có thể sinh factual lỗi (error / 오류) vì learned phân phối (distribution / 분포) hoặc ngữ cảnh (context / 맥락) không grounded vào truth.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất (probability / 확률) cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xác suất (probability / 확률) là prerequisite trực tiếp cho [Statistics for AI](./03_statistics_for_ai.md) và [Information Theory](./05_information_theory.md). Nó cũng quay lại trong classification, generative các mô hình (models / 모델들), Bayesian networks, Reinforcement học tập (learning / 학습), ngôn ngữ (language / 언어) modeling, calibration và uncertainty-aware các hệ thống (systems / 시스템들).
 
 Khi gặp một probability trong AI, hãy hỏi: random variable là gì, distribution conditional trên thông tin nào, probability này là model estimate hay observed frequency, và downstream decision sẽ dùng nó thế nào.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

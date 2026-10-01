@@ -1,7 +1,6 @@
 # Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers
 
-> **Mạch đọc:** Đặt **hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **CPU submission và GPU thực thi (execution / 실행) là hai timeline** sang **Command buffer**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CPU submission và GPU thực thi (execution / 실행) là hai timeline** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Command buffer** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 GPU đạt thông lượng (throughput / 처리량) cao bằng cách chạy lượng lớn công việc (work / 작업) song song, nhưng CPU không điều khiển từng shader invocation trực tiếp. hiện đại (modern / 현대적) graphics API dùng **command buffers/queues** để CPU mô tả công việc (work / 작업) rồi GPU consume bất đồng bộ. hiệu năng (performance / 성능) và tính đúng đắn (correctness / 정확성) phụ thuộc việc tài nguyên (resource / 자원) chuyển qua các stages theo đúng phụ thuộc (dependency / 의존성).
 
@@ -11,8 +10,7 @@ CPU có thể bản ghi (record / 레코드) commands cho frame tiếp theo tron
 
 Frames-in-flight vì thế cần synchronization và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) rõ.
 
-
-> **Chuyển mạch:** Từ **CPU submission và GPU thực thi (execution / 실행) là hai timeline**, ta sang **Command buffer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, **Command buffer** tiếp nhận điểm tựa từ **CPU submission và GPU thực thi (execution / 실행) là hai timeline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi xử lý (pipeline / 파이프라인) stages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Command buffer
 
@@ -20,8 +18,7 @@ Command buffer chứa operations như bind chuỗi xử lý (pipeline / 파이�
 
 Tường minh (explicit / 명시적) APIs như Vulkan/Direct3D 12 chuyển nhiều responsibility synchronization/tài nguyên (resource / 자원) trạng thái (state / 상태) từ driver sang ứng dụng (application / 애플리케이션) để giảm hidden overhead và tăng predictability.
 
-
-> **Chuyển mạch:** Từ **Command buffer**, ta sang **chuỗi xử lý (pipeline / 파이프라인) stages** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, **Command buffer** xác định đầu vào; **Chuỗi xử lý (pipeline / 파이프라인) stages** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tài nguyên (resource / 자원) barrier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi xử lý (pipeline / 파이프라인) stages
 
@@ -29,8 +26,7 @@ Graphics chuỗi xử lý (pipeline / 파이프라인) đi qua vertex processing
 
 Phụ thuộc (dependency / 의존성) cần nói không chỉ “thao tác (operation / 연산) A trước B” mà còn **stage nào** và **truy cập (access / 접근) nào** phải visible.
 
-
-> **Chuyển mạch:** Từ **chuỗi xử lý (pipeline / 파이프라인) stages**, ta sang **tài nguyên (resource / 자원) barrier** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, cơ chế trong **Chuỗi xử lý (pipeline / 파이프라인) stages** cần được kiểm chứng bằng dấu vết cụ thể; **Tài nguyên (resource / 자원) barrier** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Bố cục (layout / 레이아웃)/chuyển tiếp trạng thái (state transition / 상태 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tài nguyên (resource / 자원) barrier
 
@@ -38,8 +34,7 @@ Barrier đảm bảo thứ tự (ordering / 순서)/visibility cần thiết gi�
 
 Barrier quá yếu gây race/corruption; barrier quá rộng serialize GPU và làm mất parallelism. Advanced graphics hiệu năng (performance / 성능) thường là bài toán đặt synchronization chính xác thay vì “thêm barrier cho chắc”.
 
-
-> **Chuyển mạch:** Từ **tài nguyên (resource / 자원) barrier**, ta sang **bố cục (layout / 레이아웃)/chuyển tiếp trạng thái (state transition / 상태 전이)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, **Tài nguyên (resource / 자원) barrier** nêu điều cần giải thích; **Bố cục (layout / 레이아웃)/chuyển tiếp trạng thái (state transition / 상태 전이)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hàng đợi (queue / 큐) và semaphore/fence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bố cục (layout / 레이아웃)/chuyển tiếp trạng thái (state transition / 상태 전이)
 
@@ -47,8 +42,7 @@ Một số APIs yêu cầu tài nguyên (resource / 자원) ở trạng thái (s
 
 Trạng thái (state / 상태) tracking vì thế là một phần tính đúng đắn (correctness / 정확성) mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **bố cục (layout / 레이아웃)/chuyển tiếp trạng thái (state transition / 상태 전이)**, ta sang **hàng đợi (queue / 큐) và semaphore/fence** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, **Hàng đợi (queue / 큐) và semaphore/fence** tiếp nhận điểm tựa từ **Bố cục (layout / 레이아웃)/chuyển tiếp trạng thái (state transition / 상태 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Async compute không tự động nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàng đợi (queue / 큐) và semaphore/fence
 
@@ -56,8 +50,7 @@ GPU có thể có graphics, compute, transfer queues. công việc (work / 작�
 
 Tên thành phần nguyên thủy (primitive / 기본 요소) khác nhau theo API nhưng câu hỏi chung là: ai chờ ai, phụ thuộc (dependency / 의존성) nằm trên timeline nào và wait có khối (block / 블록) CPU hay chỉ thứ tự (order / 순서) GPU công việc (work / 작업).
 
-
-> **Chuyển mạch:** Từ **hàng đợi (queue / 큐) và semaphore/fence**, ta sang **Async compute không tự động nhanh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, **Async compute không tự động nhanh** tiếp nhận điểm tựa từ **Hàng đợi (queue / 큐) và semaphore/fence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Frame pacing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Async compute không tự động nhanh
 
@@ -65,8 +58,7 @@ Chạy compute song song graphics chỉ có lợi nếu hardware resources còn 
 
 Profile phải xác định bottleneck thay vì bật async tính năng (feature / 기능) theo checklist.
 
-
-> **Chuyển mạch:** Từ **Async compute không tự động nhanh**, ta sang **Frame pacing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, **Frame pacing** tiếp nhận điểm tựa từ **Async compute không tự động nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Frame pacing
 
@@ -74,11 +66,10 @@ Average 60 FPS tương đương ~16.7 ms/frame nhưng nếu frame times xen kẽ
 
 Graphics hệ thống (system / 시스템) vì thế tối ưu cả thông lượng (throughput / 처리량), frame-time variance và input-to-display độ trễ (latency / 지연 시간).
 
-
-> **Chuyển mạch:** Từ **Frame pacing**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Frame pacing** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > GPU là asynchronous thông lượng (throughput / 처리량) machine. Command buffers mô tả công việc (work / 작업); queues tạo timelines; barriers encode phụ thuộc (dependency / 의존성)/visibility; fences/semaphores phối hợp producers-consumers. Correct synchronization cho phép parallelism, còn over-synchronization biến GPU song song thành chuỗi xử lý (pipeline / 파이프라인) tuần tự.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 frame pipeline gpu synchronization and frame budget](./00_frame_pipeline_gpu_synchronization_and_frame_budget.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

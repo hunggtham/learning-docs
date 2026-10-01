@@ -1,7 +1,6 @@
 # Thư viện kiến thức Hóa học
 
-> **Mạch đọc:** Đọc **Thư viện kiến thức Hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Trạng thái chuẩn gốc (canonical / 정본)** sang **phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thư viện kiến thức Hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trạng thái chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Hóa học (Chemistry / 화학)** nghiên cứu vật chất từ cấu trúc nguyên tử–electron đến phân tử, pha, phản ứng, năng lượng, tốc độ và vật liệu. Thư viện này được viết như một hệ thống học lâu dài cho người có thể đã quên gần như toàn bộ Hóa học phổ thông; mục tiêu là xây lại mô hình tư duy từ bản chất thay vì học thuộc công thức rời rạc.
 
@@ -23,8 +22,7 @@ Chemistry thư viện (library / 라이브러리) hiện là nội dung chuẩn 
 
 Không tạo một thư viện `chemistry` mới hoặc các tệp (file / 파일) kiểu `_final`, `_updated`, `_v2` khi tệp chuẩn gốc (canonical file / 정본 파일) hiện tại có thể được cập nhật trực tiếp. Mọi thay đổi mới nên đi qua `main` và được ghi nhận trong `COVERAGE_AUDIT.md`.
 
-
-> **Chuyển mạch:** Từ **Trạng thái chuẩn gốc (canonical / 정본)**, ta sang **phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học**, **Trạng thái chuẩn gốc (canonical / 정본)** xác định đầu vào; **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi
 
@@ -60,8 +58,7 @@ flowchart TD
 
 Đồ thị này là lộ trình mặc định, không phải thứ tự bắt buộc tuyệt đối. Một chapter chuyên ngành có thể quay lại prerequisite thông qua liên kết chéo.
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi**, ta sang **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** xác định đầu vào; **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quy tắc ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc chuẩn gốc (canonical / 정본) hiện tại
 
@@ -211,8 +208,7 @@ chemistry/
 
 Không tạo chapter mới chỉ để làm cây thư mục lớn hơn. Một tệp (file / 파일) mới chỉ hợp lý khi có ranh giới khái niệm đủ lớn và không thể tích hợp sạch vào tệp chuẩn gốc (canonical file / 정본 파일) hiện tại.
 
-
-> **Chuyển mạch:** Từ **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại**, ta sang **Quy tắc ngôn ngữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học**, **Quy tắc ngôn ngữ** tiếp nhận điểm tựa từ **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba tầng mô tả luôn phải nối với nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy tắc ngôn ngữ
 
@@ -236,8 +232,7 @@ Các ký hiệu và tên chuẩn quốc tế như `pH`, `pKa`, `Ka`, `ΔG`, `VSE
 
 Thuật ngữ tiếng Hàn chỉ là lớp bổ sung khi hữu ích cho học tập hoặc công việc tại Hàn Quốc; phần giải thích chính vẫn phải là tiếng Việt.
 
-
-> **Chuyển mạch:** Từ **Quy tắc ngôn ngữ**, ta sang **Ba tầng mô tả luôn phải nối với nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học**, **Ba tầng mô tả luôn phải nối với nhau** tiếp nhận điểm tựa từ **Quy tắc ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn về độ sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ba tầng mô tả luôn phải nối với nhau
 
@@ -259,8 +254,7 @@ ký hiệu: NaCl(s) → Na+(aq) + Cl−(aq)
 
 Nếu một tệp (file / 파일) chỉ có công thức mà không nối được về hiện tượng và cơ chế hạt, tệp (file / 파일) đó chưa đạt chuẩn của thư viện (library / 라이브러리).
 
-
-> **Chuyển mạch:** Từ **Ba tầng mô tả luôn phải nối với nhau**, ta sang **Chuẩn về độ sâu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Chuẩn về độ sâu** tiếp nhận điểm tựa từ **Ba tầng mô tả luôn phải nối với nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình cho người học lại từ gần số 0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuẩn về độ sâu
 
@@ -277,8 +271,7 @@ Một chapter được xem là đủ mạnh khi người đọc có thể trả 
 
 Độ dài tệp (file / 파일) chỉ là tín hiệu kiểm tra (audit / 감사), không phải tiêu chuẩn chất lượng. Một chapter phạm vi hẹp có thể ngắn mà vẫn hoàn chỉnh; một chapter phạm vi lớn nhưng chỉ vài đoạn thường cần đào sâu.
 
-
-> **Chuyển mạch:** Từ **Chuẩn về độ sâu**, ta sang **Lộ trình cho người học lại từ gần số 0** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học**, **Lộ trình cho người học lại từ gần số 0** tiếp nhận điểm tựa từ **Chuẩn về độ sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các liên hệ liên ngành được ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lộ trình cho người học lại từ gần số 0
 
@@ -321,8 +314,7 @@ Chặng 7
 
 Người đọc không cần nhớ toàn bộ trước khi đi tiếp. Mục tiêu là giữ được mô hình tư duy (mental model / 사고 모델), biết prerequisite ở đâu và có thể quay lại bằng nội bộ (internal / 내부) link.
 
-
-> **Chuyển mạch:** Từ **Lộ trình cho người học lại từ gần số 0**, ta sang **Các liên hệ liên ngành được ưu tiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học**, **Các liên hệ liên ngành được ưu tiên** tiếp nhận điểm tựa từ **Lộ trình cho người học lại từ gần số 0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bắt đầu học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các liên hệ liên ngành được ưu tiên
 
@@ -346,11 +338,12 @@ Redox + Nernst + kinetics + mass vận chuyển (transport / 전송) + material 
 
 Nấu ăn, làm sạch, bảo quản thực phẩm, gỉ sắt, thuốc, nhựa và pin được giải thích bằng cùng các cơ chế nền, không tách thành danh sách mẹo.
 
-
-> **Chuyển mạch:** Từ **Các liên hệ liên ngành được ưu tiên**, ta sang **Bắt đầu học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Bắt đầu học** tiếp nhận điểm tựa từ **Các liên hệ liên ngành được ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bắt đầu học
 
 Bắt đầu từ [Hóa học nghiên cứu điều gì?](./00_foundations/00_what_is_chemistry.md), tiếp theo [Vật chất và phép đo](./00_foundations/01_matter_and_measurement.md), rồi đi theo phụ thuộc (dependency / 의존성) luồng (flow / 흐름) ở đầu tệp (file / 파일).
 
 Trạng thái chi tiết của từng domain và các pass còn cần làm được theo dõi trong [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md).
+
+> **Bàn giao:** Sau **Bắt đầu học**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

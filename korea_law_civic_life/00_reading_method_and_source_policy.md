@@ -1,6 +1,6 @@
 # 00. Phương pháp đọc pháp luật và chính sách nguồn
 
-> **Mạch đọc:** Đặt **00. Phương pháp đọc pháp luật và chính sách nguồn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Mục tiêu của tệp (file / 파일) này** sang **2. Phân biệt bốn lớp thông tin**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **00. Phương pháp đọc pháp luật và chính sách nguồn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mục tiêu của tệp (file / 파일) này** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Phân biệt bốn lớp thông tin** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Mục tiêu của tệp (file / 파일) này
 
@@ -19,8 +19,7 @@ vấn đề thực tế
 → kết quả / cơ chế phản đối nếu không đồng ý
 ```
 
-
-> **Chuyển mạch:** Từ **1. Mục tiêu của tệp (file / 파일) này**, ta sang **2. Phân biệt bốn lớp thông tin** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Mục tiêu xác định người đọc cần làm gì; bốn lớp information tách rule, procedure, interpretation và practical note, rồi time-sensitive check quyết định nguồn nào phải mở lại.
 
 ## 2. Phân biệt bốn lớp thông tin
 
@@ -42,8 +41,7 @@ Các nguồn như `찾기쉬운 생활법령정보`, `정부24`, `국민신문�
 
 Blog, diễn đàn, YouTube, cộng đồng người nước ngoài có giá trị để biết “người khác từng gặp gì”, nhưng không nên là điểm dừng cuối cùng. Hãy dùng chúng để lấy **từ khóa**, sau đó kiểm tra lại trên nguồn chính thức.
 
-
-> **Chuyển mạch:** Từ **2. Phân biệt bốn lớp thông tin**, ta sang **3. Nhận biết thông tin nhạy theo thời gian** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **00. Phương pháp đọc pháp luật và chính sách nguồn**, **3. Nhận biết thông tin nhạy theo thời gian** tiếp nhận điểm tựa từ **2. Phân biệt bốn lớp thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cách đọc một điều luật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Nhận biết thông tin nhạy theo thời gian
 
@@ -62,8 +60,7 @@ Các nội dung sau phải coi là **động (dynamic / 동적) dữ liệu (dat
 
 Trong thư viện (library / 라이브러리) này, những phần như vậy được trình bày theo **cơ chế** và kèm nơi kiểm tra hiện hành thay vì cố nhồi thật nhiều số liệu.
 
-
-> **Chuyển mạch:** Từ **3. Nhận biết thông tin nhạy theo thời gian**, ta sang **4. Cách đọc một điều luật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00. Phương pháp đọc pháp luật và chính sách nguồn**, **4. Cách đọc một điều luật** tiếp nhận điểm tựa từ **3. Nhận biết thông tin nhạy theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Một luật thường không đứng một mình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Cách đọc một điều luật
 
@@ -90,8 +87,7 @@ Các cụm cần nhận biết:
 - `시행령`: nghị định thi hành;
 - `시행규칙`: quy tắc thi hành.
 
-
-> **Chuyển mạch:** Từ **4. Cách đọc một điều luật**, ta sang **5. Một luật thường không đứng một mình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **00. Phương pháp đọc pháp luật và chính sách nguồn**, **5. Một luật thường không đứng một mình** tiếp nhận điểm tựa từ **4. Cách đọc một điều luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tách “quy định chung” khỏi “trường hợp của tôi”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Một luật thường không đứng một mình
 
@@ -107,8 +103,7 @@ Ví dụ một vấn đề thuê nhà có thể cần đọc cả:
 
 Tương tự, vấn đề lao động có thể cần `근로기준법`, nghị định/quy tắc thi hành, hướng dẫn của `고용노동부`, hợp đồng lao động và chứng cứ thực tế như bảng lương, log chấm công.
 
-
-> **Chuyển mạch:** Từ **5. Một luật thường không đứng một mình**, ta sang **6. Tách “quy định chung” khỏi “trường hợp của tôi”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **00. Phương pháp đọc pháp luật và chính sách nguồn**, **6. Tách “quy định chung” khỏi “trường hợp của tôi”** tiếp nhận điểm tựa từ **5. Một luật thường không đứng một mình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Quy tắc ghi chép khi tự nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Tách “quy định chung” khỏi “trường hợp của tôi”
 
@@ -116,8 +111,7 @@ Một nguyên tắc rất quan trọng: **quy định chung không tự động 
 
 Ví dụ một người hỏi “tôi có được overtime không?” nhưng để trả lời chính xác có thể phải biết loại hợp đồng, vị trí, số giờ, quy mô nơi làm việc, cách tính lương, có thuộc ngoại lệ hay không, thời điểm phát sinh sự việc và nội dung thỏa thuận. Vì vậy thư viện (library / 라이브러리) này giải thích cách hệ thống vận hành, không kết luận thay cho tư vấn pháp lý cá nhân.
 
-
-> **Chuyển mạch:** Từ **6. Tách “quy định chung” khỏi “trường hợp của tôi”**, ta sang **7. Quy tắc ghi chép khi tự nghiên cứu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **00. Phương pháp đọc pháp luật và chính sách nguồn**, **7. Quy tắc ghi chép khi tự nghiên cứu** tiếp nhận điểm tựa từ **6. Tách “quy định chung” khỏi “trường hợp của tôi”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Nguồn lõi của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Quy tắc ghi chép khi tự nghiên cứu
 
@@ -152,8 +146,7 @@ YYYY-MM-DD
 
 Cách ghi này giúp bạn nhận ra một ghi chú (note / 노트) cũ cần kiểm tra lại khi luật thay đổi.
 
-
-> **Chuyển mạch:** Từ **7. Quy tắc ghi chép khi tự nghiên cứu**, ta sang **8. Nguồn lõi của thư viện (library / 라이브러리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **00. Phương pháp đọc pháp luật và chính sách nguồn**, **7. Quy tắc ghi chép khi tự nghiên cứu** nêu điều cần giải thích; **8. Nguồn lõi của thư viện (library / 라이브러리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 8. Nguồn lõi của thư viện (library / 라이브러리)
 
@@ -173,3 +166,5 @@ Các cổng được dùng lặp lại trong toàn bộ tài liệu gồm:
 - `acrc.go.kr` — 국민권익위원회.
 
 Danh sách đầy đủ và mục đích sử dụng nằm trong [`SOURCES.md`](SOURCES.md).
+
+> **Bàn giao:** Sau **8. Nguồn lõi của thư viện (library / 라이브러리)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

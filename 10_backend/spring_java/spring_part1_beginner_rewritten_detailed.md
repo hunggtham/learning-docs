@@ -1,6 +1,6 @@
 # Java Spring — Part 1: Beginner
 
-> **Mạch đọc:** Đọc **Java Spring — Part 1: Beginner** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Học Spring khung phần mềm (framework / 프레임워크) và Spring Boot từ số 0, theo hướng hiểu bản chất trước khi dùng annotation** sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 1: Beginner**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Học Spring khung phần mềm (framework / 프레임워크) và Spring Boot từ số 0, theo hướng hiểu bản chất trước khi dùng annotation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Học Spring khung phần mềm (framework / 프레임워크) và Spring Boot từ số 0, theo hướng hiểu bản chất trước khi dùng annotation
 
@@ -9,10 +9,9 @@
 
 ---
 
-
 <!-- VERSION_UPDATE_2026-09-12_START -->
 
-> **Chuyển mạch:** Từ **Học Spring khung phần mềm (framework / 프레임워크) và Spring Boot từ số 0, theo hướng hiểu bản chất trước khi dùng annotation**, ta sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau mental model về Spring container và Boot, **Bản đồ phiên bản (version / 버전)** đặt các thay đổi vào đúng mốc API. Câu hỏi metadata → bean instance tiếp theo giải thích cơ chế injection thay vì học annotation rời rạc.
 
 ## Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
@@ -146,7 +145,7 @@ Một cách rất hiệu quả để gỡ lỗi (debug / 디버그) Spring là l
 
 <!-- SPRING_BATCH1_IOC_BEGINNER -->
 
-> **Chuyển mạch:** Từ **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**, ta sang **Từ siêu dữ liệu (metadata / 메타데이터) tới bean instance: bộ chứa (container / 컨테이너) thực sự làm gì khi “inject phụ thuộc (dependency / 의존성)”?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java Spring — Part 1: Beginner**, **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** nêu điều cần giải thích; **Từ siêu dữ liệu (metadata / 메타데이터) tới bean instance: bộ chứa (container / 컨테이너) thực sự làm gì khi “inject phụ thuộc (dependency / 의존성)”?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Học phiên bản (version / 버전) theo “cách viết ứng dụng (application / 애플리케이션) thay đổi”, không theo release-note danh sách (list / 목록)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ siêu dữ liệu (metadata / 메타데이터) tới bean instance: bộ chứa (container / 컨테이너) thực sự làm gì khi “inject phụ thuộc (dependency / 의존성)”?
 
@@ -228,7 +227,7 @@ Khi đọc ngăn xếp (stack / 스택) Overflow hoặc blog, trước tiên hã
 
 <!-- SPRING_BATCH5_VERSION_BEGINNER -->
 
-> **Chuyển mạch:** Từ **Từ siêu dữ liệu (metadata / 메타데이터) tới bean instance: bộ chứa (container / 컨테이너) thực sự làm gì khi “inject phụ thuộc (dependency / 의존성)”?**, ta sang **Học phiên bản (version / 버전) theo “cách viết ứng dụng (application / 애플리케이션) thay đổi”, không theo release-note danh sách (list / 목록)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi đã theo dõi metadata đến bean instance, việc đọc phiên bản theo thay đổi cách viết ứng dụng giúp kiểm tra tác động thực tế của API. Đây là nền để chuyển sang các phần Spring nâng cao mà không biến tài liệu thành release-note list.
 
 ## Học phiên bản (version / 버전) theo “cách viết ứng dụng (application / 애플리케이션) thay đổi”, không theo release-note danh sách (list / 목록)
 
@@ -2147,4 +2146,4 @@ Boot 4 di chuyển (migration / 마이그레이션) guide: https://github.com/sp
 
 Khi đọc tài liệu cũ, luôn xác định nó thuộc Boot 2, Boot 3 hay Boot 4 trước khi bản sao (copy / 복사) mã (code / 코드).
 
-> **Bàn giao:** Sau **Học phiên bản (version / 버전) theo “cách viết ứng dụng (application / 애플리케이션) thay đổi”, không theo release-note danh sách (list / 목록)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [spring part2 intermediate rewritten detailed](./spring_part2_intermediate_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Học phiên bản (version / 버전) theo “cách viết ứng dụng (application / 애플리케이션) thay đổi”, không theo release-note danh sách (list / 목록)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -30,7 +30,7 @@ From corvée and household agriculture to wage factory labor, office employment 
 
 ## Clothing and body discipline
 
-Dress moves from status-coded premodern garments to colonial school/military uniforms, postwar Western-style office wear and contemporary fashion markets. Uniform is technology of standardization: it visually encodes membership and reduces ambiguity about role.
+Trang phục chuyển từ y phục tiền hiện đại biểu thị địa vị sang đồng phục trường học/quân đội thời thuộc địa, đồ công sở kiểu phương Tây sau chiến tranh và thị trường thời trang đương đại. Đồng phục là một công nghệ chuẩn hóa: nó mã hóa tư cách thành viên bằng hình ảnh và giảm sự mơ hồ về vai trò.
 
 ## Thời gian (time / 시간) discipline
 

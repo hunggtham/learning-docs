@@ -1,7 +1,6 @@
 # JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)
 
-> **Mạch đọc:** Đọc **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **cấp cao (senior / 시니어) quy tắc (rule / 규칙)** sang **mẫu lập trình (programming pattern / 프로그래밍 패턴) — Lazy Initialization**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hãy hình dung vùng nhớ động (heap / 힙) như một đồ thị (graph / 그래프) reachability** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Strong tham chiếu (reference / 참조) thường đến từ quyền sở hữu (ownership / 소유권) bị quên** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Mục tiêu của phần này**: giúp nhà phát triển (developer / 개발자) đã hiểu JavaScript cốt lõi (core / 핵심) có thể chịu trách nhiệm cho mã (code / 코드) môi trường vận hành (production / 운영 환경). cấp cao (senior / 시니어) JavaScript không phải người nhớ nhiều API nhất; cấp cao (senior / 시니어) là người hiểu hành vi thời gian chạy (runtime behavior / 런타임 동작), quản lý vòng đời (lifecycle / 생명주기)/tài nguyên (resource / 자원), kiểm soát async/tính đồng thời (concurrency / 동시성), đo hiệu năng (performance / 성능), thiết kế ranh giới bảo mật (security boundary / 보안 경계), tổ chức kiến trúc (architecture / 아키텍처) và gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운영 환경) bằng bằng chứng (evidence / 증거).
 >
@@ -186,6 +185,8 @@ b = null;
 
 Hai đối tượng (object / 객체) vẫn tham chiếu (reference / 참조) nhau nhưng nếu không còn đường dẫn (path / 경로) từ GC roots tới cycle, tracing GC có thể collect cả cycle. Đây là khác biệt với reference-counting mô hình (model / 모델) đơn giản mà người mới thường hình dung.
 
+> **Chuyển mạch:** Trong **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, sau nội dung của **Hãy hình dung vùng nhớ động (heap / 힙) như một đồ thị (graph / 그래프) reachability**, **Strong tham chiếu (reference / 참조) thường đến từ quyền sở hữu (ownership / 소유권) bị quên** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Closure retention phải được nhìn theo retainer đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Strong tham chiếu (reference / 참조) thường đến từ quyền sở hữu (ownership / 소유권) bị quên
 
 Ví dụ toàn cục (global / 전역) Map:
@@ -211,6 +212,8 @@ node.remove();
 
 Detached DOM chỉ thành leak khi tham chiếu (reference / 참조) sống lâu hơn intended vòng đời (lifecycle / 생명주기).
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Strong tham chiếu (reference / 참조) thường đến từ quyền sở hữu (ownership / 소유권) bị quên** xác định đầu vào; **Closure retention phải được nhìn theo retainer đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Allocation tỷ lệ (rate / 비율) cũng là hiệu năng (performance / 성능) tín hiệu (signal / 신호)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Closure retention phải được nhìn theo retainer đường dẫn (path / 경로)
 
 Closure có thể giữ bindings, nhưng không nên kết luận “closure = leak”. Câu hỏi đúng là:
@@ -235,6 +238,8 @@ Bộ nhớ (memory / 메모리) leak trong garbage-collected ngôn ngữ (langua
 Hiện đại (modern / 현대적) engines có generational/incremental/concurrent strategies khác nhau. Bạn không cần thuộc thuật toán GC cụ thể để viết ứng dụng (application / 애플리케이션) mã (code / 코드) tốt.
 
 Bạn cần biết ba điều: allocation có chi phí (cost / 비용), GC có chi phí (cost / 비용), và timing GC không phải Đặc tả API (API contract / API 계약). Không viết lô-gic (logic / 논리) kiểu “đặt tham chiếu (reference / 참조) null rồi GC chắc chắn chạy trong 2 giây”. Không dùng finalizer để đảm bảo nghiệp vụ (business / 비즈니스) cleanup.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Closure retention phải được nhìn theo retainer đường dẫn (path / 경로)** xác định đầu vào; **Allocation tỷ lệ (rate / 비율) cũng là hiệu năng (performance / 성능) tín hiệu (signal / 신호)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Leak diagnosis: tìm “ai đang giữ nó”, không đoán từ đối tượng (object / 객체) kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Allocation tỷ lệ (rate / 비율) cũng là hiệu năng (performance / 성능) tín hiệu (signal / 신호)
 
@@ -296,6 +301,8 @@ cleanup:
 clearInterval(intervalId);
 ```
 
+> **Chuyển mạch:** Allocation rate là performance signal; leak diagnosis tiếp theo truy nguyên retaining path thay vì suy đoán từ object size. Pending async work mở rộng diagnosis sang stale lifecycle và cancellation.
+
 ## Leak diagnosis: tìm “ai đang giữ nó”, không đoán từ đối tượng (object / 객체) kích thước (size / 크기)
 
 Một workflow thực tế với DevTools bộ nhớ (memory / 메모리):
@@ -320,6 +327,8 @@ Một workflow thực tế với DevTools bộ nhớ (memory / 메모리):
 ```
 
 Nếu vùng nhớ động (heap / 힙) tăng trong lúc tính năng (feature / 기능) hoạt động rồi giảm sau GC/vòng đời (lifecycle / 생명주기) cleanup, đó có thể chỉ là normal allocation. Leak thường thể hiện **baseline retained bộ nhớ (memory / 메모리) tăng qua những vòng đời (lifecycle / 생명주기) lặp lại**.
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Leak diagnosis: tìm “ai đang giữ nó”, không đoán từ đối tượng (object / 객체) kích thước (size / 크기)** xác định đầu vào; **Pending async công việc (work / 작업) và stale vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) là JavaScript engine + host môi trường (environment / 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pending async công việc (work / 작업) và stale vòng đời (lifecycle / 생명주기)
 
@@ -428,6 +437,8 @@ while (
 
 Kết quả (result / 결과) có thể là đầu vào (input / 입력) lag và animation freeze.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Pending async công việc (work / 작업) và stale vòng đời (lifecycle / 생명주기)** xác định đầu vào; **Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) là JavaScript engine + host môi trường (environment / 환경)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Main luồng thực thi (thread / 스레드) là dùng chung (shared / 공유) tài nguyên (resource / 자원) của UI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) là JavaScript engine + host môi trường (environment / 환경)
 
 Để gỡ lỗi (debug / 디버그) frontend ở mức (level / 수준) cấp cao (senior / 시니어), hãy tách các tầng (layer / 계층):
@@ -470,6 +481,8 @@ WebView thiếu API
 → host/runtime compatibility
 ```
 
+> **Chuyển mạch:** Trong **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) là JavaScript engine + host môi trường (environment / 환경)** nêu điều cần giải thích; **Main luồng thực thi (thread / 스레드) là dùng chung (shared / 공유) tài nguyên (resource / 자원) của UI** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Fetch không “chạy JavaScript trên mạng (network / 네트워크) luồng thực thi (thread / 스레드)” theo cách ứng dụng (application / 애플리케이션) cần quản lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Main luồng thực thi (thread / 스레드) là dùng chung (shared / 공유) tài nguyên (resource / 자원) của UI
 
 Trong trình duyệt (browser / 브라우저) page thông thường, nhiều việc cạnh tranh main luồng thực thi (thread / 스레드):
@@ -483,6 +496,8 @@ some browser callbacks
 ```
 
 Vì vậy “hàm (function / 함수) chỉ mất 30ms” không thể đánh giá riêng nếu nó chạy liên tục trên đầu vào (input / 입력) đường dẫn (path / 경로) hoặc nằm giữa nhiều tasks khác. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링) phải nhìn entire người dùng (user / 사용자) tương tác (interaction / 상호작용).
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Main luồng thực thi (thread / 스레드) là dùng chung (shared / 공유) tài nguyên (resource / 자원) của UI** nêu điều cần giải thích; **Fetch không “chạy JavaScript trên mạng (network / 네트워크) luồng thực thi (thread / 스레드)” theo cách ứng dụng (application / 애플리케이션) cần quản lý** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Lab profile và Real người dùng (user / 사용자) Monitoring trả lời hai câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fetch không “chạy JavaScript trên mạng (network / 네트워크) luồng thực thi (thread / 스레드)” theo cách ứng dụng (application / 애플리케이션) cần quản lý
 
@@ -1027,6 +1042,8 @@ performance.measure(
 
 Microbenchmarks dễ bị JIT, GC, warmup và unrealistic tải công việc (workload / 워크로드) làm lệch. User-perceived scenario quan trọng hơn tiny vòng lặp (loop / 루프) benchmark.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Fetch không “chạy JavaScript trên mạng (network / 네트워크) luồng thực thi (thread / 스레드)” theo cách ứng dụng (application / 애플리케이션) cần quản lý** cho ta quy tắc; **Lab profile và Real người dùng (user / 사용자) Monitoring trả lời hai câu hỏi khác nhau** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kiểm tra hợp lệ (validation / 검증), encoding và sanitization không phải cùng một việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab profile và Real người dùng (user / 사용자) Monitoring trả lời hai câu hỏi khác nhau
 
 DevTools/lab giúp bạn reproduce, inspect flame chart, vùng nhớ động (heap / 힙), waterfall trong môi trường kiểm soát. môi trường vận hành (production / 운영 환경) telemetry/RUM cho biết vấn đề có thật trên người dùng (user / 사용자) devices hay không.
@@ -1212,6 +1229,8 @@ privilege/effect
 
 Cấp cao (senior / 시니어) phải biết dữ liệu (data / 데이터) đi vào từ đâu và cuối cùng được dùng ở sink nào.
 
+> **Chuyển mạch:** Trong **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Lab profile và Real người dùng (user / 사용자) Monitoring trả lời hai câu hỏi khác nhau** cho ta quy tắc; **Kiểm tra hợp lệ (validation / 검증), encoding và sanitization không phải cùng một việc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nguồn (source / 소스) đáng tin cậy về nghiệp vụ (business / 비즈니스) không đồng nghĩa safe cho sink** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểm tra hợp lệ (validation / 검증), encoding và sanitization không phải cùng một việc
 
 **kiểm tra hợp lệ (validation / 검증)** trả lời “dữ liệu (data / 데이터) có đúng shape/phạm vi (range / 범위)/allowlist mà thao tác (operation / 연산) chấp nhận không?”. Ví dụ `action` chỉ được là `"SAVE"` hoặc `"CANCEL"`.
@@ -1221,6 +1240,8 @@ Cấp cao (senior / 시니어) phải biết dữ liệu (data / 데이터) đi 
 **Sanitization** loại/neutralize dangerous structures khi bạn chủ đích cho phép rich content như HTML subset.
 
 Đừng dùng một helper “sanitize string” chung cho mọi sink. bảo mật (security / 보안) luôn phụ thuộc ngữ cảnh (context / 맥락) nơi dữ liệu (data / 데이터) được interpret.
+
+> **Chuyển mạch:** Ở chặng này của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Kiểm tra hợp lệ (validation / 검증), encoding và sanitization không phải cùng một việc** nêu điều cần giải thích; **Nguồn (source / 소스) đáng tin cậy về nghiệp vụ (business / 비즈니스) không đồng nghĩa safe cho sink** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hãy coi message như một RPC yêu cầu (request / 요청) qua trust ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) đáng tin cậy về nghiệp vụ (business / 비즈니스) không đồng nghĩa safe cho sink
 
@@ -1377,6 +1398,8 @@ window.addEventListener(
 
 Cần validate `origin`, `source`, message kiểu (type / 타입)/lược đồ (schema / 스키마) và authorization/năng lực (capability / 역량). Origin đúng không tự chứng minh thao tác (operation / 연산) requested là allowed.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Nguồn (source / 소스) đáng tin cậy về nghiệp vụ (business / 비즈니스) không đồng nghĩa safe cho sink** đã nêu tiêu chí phân biệt, còn **Hãy coi message như một RPC yêu cầu (request / 요청) qua trust ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cầu nối (bridge / 브리지) nên giống versioned RPC giao thức (protocol / 프로토콜) hơn là toàn cục (global / 전역) God đối tượng (object / 객체)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hãy coi message như một RPC yêu cầu (request / 요청) qua trust ranh giới (boundary / 경계)
 
 Một message môi trường vận hành (production / 운영 환경) nên có shape ổn định:
@@ -1425,6 +1448,8 @@ const kycBridge = {
 ```
 
 Questions cấp cao (senior / 시니어) phải hỏi: page/origin nào được gọi cầu nối (bridge / 브리지), payload được validate ở đâu, điều hướng (navigation / 내비게이션) restriction có ở bản địa (native / 네이티브) side không, callback/deep link có yêu cầu (request / 요청) ID không, cầu nối (bridge / 브리지) expose capabilities tối thiểu chưa.
+
+> **Chuyển mạch:** Trong **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Hãy coi message như một RPC yêu cầu (request / 요청) qua trust ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Cầu nối (bridge / 브리지) nên giống versioned RPC giao thức (protocol / 프로토콜) hơn là toàn cục (global / 전역) God đối tượng (object / 객체)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): tách chính sách (policy / 정책) khỏi cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cầu nối (bridge / 브리지) nên giống versioned RPC giao thức (protocol / 프로토콜) hơn là toàn cục (global / 전역) God đối tượng (object / 객체)
 
@@ -1545,6 +1570,8 @@ export function createUserService({
 
 Không export mọi helper nội bộ (internal / 내부). API công khai (public API / 공개 API) nhỏ cho phép refactor hiện thực (implementation / 구현) mà không phá consumers.
 
+> **Chuyển mạch:** Ở chặng này của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Cầu nối (bridge / 브리지) nên giống versioned RPC giao thức (protocol / 프로토콜) hơn là toàn cục (global / 전역) God đối tượng (object / 객체)** xác định đầu vào; **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): tách chính sách (policy / 정책) khỏi cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): functional cốt lõi (core / 핵심), effectful shell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): tách chính sách (policy / 정책) khỏi cơ chế (mechanism / 메커니즘)
 
 Ví dụ generic HTTP máy khách (client / 클라이언트) nên biết cơ chế (mechanism / 메커니즘):
@@ -1562,6 +1589,8 @@ Nó không nên biết nghiệp vụ (business / 비즈니스) chính sách (pol
 Tương tự, bộ nhớ đệm (cache / 캐시) cơ chế (mechanism / 메커니즘) có thể biết TTL/eviction, còn “balance có được stale 30 giây không” là lĩnh vực (domain / 도메인) chính sách (policy / 정책).
 
 Sự tách biệt này giúp lớp trừu tượng (abstraction / 추상화) reusable mà không biến thành God dịch vụ (service / 서비스).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): tách chính sách (policy / 정책) khỏi cơ chế (mechanism / 메커니즘)** xác định đầu vào; **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): functional cốt lõi (core / 핵심), effectful shell** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): tường minh (explicit / 명시적) quyền sở hữu (ownership / 소유권) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): functional cốt lõi (core / 핵심), effectful shell
 
@@ -1584,6 +1613,8 @@ state transition/render
 ```
 
 Không cần áp dụng rigid kiến trúc (architecture / 아키텍처) cho tính năng (feature / 기능) nhỏ. Nhưng khi lô-gic nghiệp vụ (business logic / 비즈니스 로직) có giá trị kiểm thử (test / 테스트)/reuse, giữ nó khỏi DOM/mạng (network / 네트워크) side effects làm mã (code / 코드) dễ reason hơn.
+
+> **Chuyển mạch:** Trong **JavaScript cấp cao (senior / 시니어) — thời gian chạy (runtime / 런타임), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안) và kiến trúc (architecture / 아키텍처)**, sau nội dung của **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): functional cốt lõi (core / 핵심), effectful shell**, **Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): tường minh (explicit / 명시적) quyền sở hữu (ownership / 소유권) đặc tả hợp đồng (contract / 계약)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hiện đại (modern / 현대적) vs legacy: đọc mã (code / 코드) theo “bài toán (problem / 문제) được giải quyết”, không theo tuổi cú pháp (syntax / 문법)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴): tường minh (explicit / 명시적) quyền sở hữu (ownership / 소유권) đặc tả hợp đồng (contract / 계약)
 
@@ -1817,7 +1848,6 @@ Cấp cao (senior / 시니어) phải phiên bản (version / 버전) giao diệ
 # Chương 59 — Feature Flags và lifecycle của flag
 Phần này nối mạch bài học với “Chương 59 — Feature Flags và lifecycle của flag”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-
 ```js
 if (flags.newCheckout) {
   runNewCheckout();
@@ -2050,6 +2080,8 @@ Hiện đại (modern / 현대적) ECMAScript/thời gian chạy (runtime / 런�
 
 Cấp cao (senior / 시니어) không cần chạy theo mọi tính năng (feature / 기능) mới. Với trình duyệt (browser / 브라우저)/WebView enterprise, luôn hỏi mục tiêu (target / 대상) thời gian chạy (runtime / 런타임) versions, transpiler/polyfill feasibility và fallback. Stage-4/standardized không có nghĩa mọi WebView cũ đã hỗ trợ (support / 지원).
 
+> **Chuyển mạch:** Production pattern phải bắt đầu từ explicit ownership và contract; vì vậy modern/legacy được đánh giá theo problem solved, không theo tuổi syntax.
+
 ## Hiện đại (modern / 현대적) vs legacy: đọc mã (code / 코드) theo “bài toán (problem / 문제) được giải quyết”, không theo tuổi cú pháp (syntax / 문법)
 
 Legacy cú pháp (syntax / 문법) không mặc định là mã (code / 코드) xấu; nó thường phản ánh thời gian chạy (runtime / 런타임)/toolchain tại thời điểm mã (code / 코드) được viết. Khi migrate, hãy hiểu ngữ nghĩa (semantic / 의미적) reason trước khi replace.
@@ -2222,3 +2254,5 @@ JavaScript cấp cao (senior / 시니어) không phải mức (level / 수준) �
 Một câu hỏi cấp cao (senior / 시니어) không dừng ở “mã (code / 코드) chạy chưa?”. Nó tiếp tục: nếu người dùng (user / 사용자) rời page thì sao, yêu cầu (request / 요청) cũ trả về muộn thì sao, máy chủ (server / 서버) overloaded thì sao, bộ nhớ đệm (cache / 캐시) stale thì sao, đầu vào (input / 입력) malicious thì sao, worker không terminate thì sao, môi trường vận hành (production / 운영 환경) thất bại (fail / 실패) thì biết bằng cách nào, và nhóm (team / 팀) khác sửa sau một năm có hiểu quyền sở hữu (ownership / 소유권)/dependencies không.
 
 Nếu bạn có thể trả lời những câu hỏi đó một cách có hệ thống, JavaScript core của bạn đã đủ mạnh để đi sâu vào framework và system architecture mà không bị phụ thuộc vào “framework magic”.
+
+> **Bàn giao:** Sau **Hiện đại (modern / 현대적) vs legacy: đọc mã (code / 코드) theo “bài toán (problem / 문제) được giải quyết”, không theo tuổi cú pháp (syntax / 문법)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

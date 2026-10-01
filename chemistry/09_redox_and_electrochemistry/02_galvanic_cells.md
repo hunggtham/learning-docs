@@ -1,6 +1,6 @@
 # Pin Galvani — biến năng lượng tự do hóa học thành công điện
 
-> **Mạch đọc:** Đọc **Pin Galvani — biến năng lượng tự do hóa học thành công điện** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Electron đi qua cầu muối”** sang **“Anode luôn âm”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Pin Galvani — biến năng lượng tự do hóa học thành công điện**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > **Pin Galvani hay pin Volta (galvanic/voltaic cell / 갈바니 전지)** tách một phản ứng oxy hóa–khử tự phát thành hai vùng không gian khác nhau để electron buộc phải đi qua mạch ngoài. Nhờ vậy, một phần độ giảm năng lượng tự do Gibbs của phản ứng có thể được thu dưới dạng **công điện**, thay vì chủ yếu biến thành nhiệt tại cùng một vị trí phản ứng.
 
@@ -495,4 +495,4 @@ Khi có tải, kinetics và vận chuyển (transport / 전송) lấy đi một 
 
 Xem tiếp: [Điện thế pin và phương trình Nernst](./03_cell_potential_and_nernst_equation.md), [Điện hóa động học và trở kháng](./06_electrochemical_kinetics_and_impedance.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

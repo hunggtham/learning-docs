@@ -1,7 +1,6 @@
 # Machine học tập (learning / 학습) là gì?
 
-> **Mạch đọc:** Đặt **Machine học tập (learning / 학습) là gì?** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ tường minh (explicit / 명시적) rules tới learned ánh xạ (mapping / 매핑)** sang **Một formal học tập (learning / 학습) bài toán (problem / 문제)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Machine học tập (learning / 학습) là gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ tường minh (explicit / 명시적) rules tới learned ánh xạ (mapping / 매핑)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Một formal học tập (learning / 학습) bài toán (problem / 문제)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Machine học tập (learning / 학습)** nghiên cứu cách xây dựng các hệ thống (systems / 시스템들) cải thiện hiệu năng (performance / 성능) trên một tác vụ (task / 작업) bằng dữ liệu (data / 데이터) hoặc experience thay vì nhà phát triển (developer / 개발자) phải encode toàn bộ hành vi (behavior / 동작) bằng rules cố định.
 
@@ -34,6 +33,8 @@ New Input → Prediction
 Ví dụ spam filter. Viết quy tắc (rule / 규칙) `contains "free" → spam` rất brittle. Một classifier có thể học mẫu (pattern / 패턴) kết hợp từ sender, đơn vị từ (token / 토큰) phân phối (distribution / 분포), links, siêu dữ liệu (metadata / 메타데이터) và lịch sử (history / 이력).
 
 Nhưng learned mô hình (model / 모델) vẫn là software. nhà phát triển (developer / 개발자) vẫn quyết định dữ liệu (data / 데이터) collection, mục tiêu (target / 대상), features/biểu diễn (representation / 표현), mô hình (model / 모델) lớp (class / 클래스), mục tiêu (objective / 목표), evaluation và triển khai (deployment / 배포) chính sách (policy / 정책).
+
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Một formal học tập (learning / 학습) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Từ tường minh (explicit / 명시적) rules tới learned ánh xạ (mapping / 매핑)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tác vụ (task / 작업), Experience, hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một formal học tập (learning / 학습) bài toán (problem / 문제)
 
@@ -75,6 +76,8 @@ R(\theta)=\mathbb{E}_{(X,Y)\sim P_{mục tiêu (target / 대상)}}[L(f_\theta(X)
 
 Gap giữa empirical hiệu năng (performance / 성능) và future hiệu năng (performance / 성능) là heart of **generalization**.
 
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Tác vụ (task / 작업), Experience, hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **Một formal học tập (learning / 학습) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Supervised học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tác vụ (task / 작업), Experience, hiệu năng (performance / 성능)
 
 Một classical definition framing nói program learns from experience `E` with respect to tác vụ (task / 작업) `T` and hiệu năng (performance / 성능) measure `P` nếu hiệu năng (performance / 성능) tại T, measured by P, improves with E.
@@ -88,6 +91,8 @@ Performance→ đo tốt/xấu bằng gì?
 ```
 
 Nếu ba thứ mơ hồ, “dùng ML” chưa phải bài toán (problem / 문제) definition.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Supervised học tập (learning / 학습)** tiếp nhận điểm tựa từ **Tác vụ (task / 작업), Experience, hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Unsupervised học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Supervised học tập (learning / 학습)
 
@@ -111,6 +116,8 @@ Ví dụ fraud/not-fraud, document category.
 
 Mô hình (model / 모델) learns quan hệ (relation / 관계) between đầu vào (input / 입력) and mục tiêu (target / 대상).
 
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Unsupervised học tập (learning / 학습)** tiếp nhận điểm tựa từ **Supervised học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-Supervised học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Unsupervised học tập (learning / 학습)
 
 Không có tường minh (explicit / 명시적) mục tiêu (target / 대상) label theo supervised sense.
@@ -124,6 +131,8 @@ Goals include:
 - anomaly cấu trúc (structure / 구조) discovery.
 
 “Unsupervised” không nghĩa hệ thống (system / 시스템) không có mục tiêu (objective / 목표); thuật toán (algorithm / 알고리즘) vẫn optimize criterion such as reconstruction lỗi (error / 오류), likelihood or clustering mục tiêu (objective / 목표).
+
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Self-Supervised học tập (learning / 학습)** tiếp nhận điểm tựa từ **Unsupervised học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Semi-Supervised học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self-Supervised học tập (learning / 학습)
 
@@ -145,6 +154,8 @@ Contrastive học tập (learning / 학습) creates positive/negative pairs from
 
 Self-supervision lets mô hình (model / 모델) learn from massive unlabeled raw dữ liệu (data / 데이터). hiện đại (modern / 현대적) foundation các mô hình (models / 모델들) rely heavily on this paradigm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Semi-Supervised học tập (learning / 학습)** tiếp nhận điểm tựa từ **Self-Supervised học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reinforcement học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Semi-Supervised học tập (learning / 학습)
 
 Có ít labeled dữ liệu (data / 데이터) và nhiều unlabeled dữ liệu (data / 데이터).
@@ -152,6 +163,8 @@ Có ít labeled dữ liệu (data / 데이터) và nhiều unlabeled dữ liệu
 Methods may use pseudo-labels, consistency regularization, generative các mô hình (models / 모델들) or biểu diễn (representation / 표현) pretraining.
 
 Goal exploit unlabeled cấu trúc (structure / 구조) without trusting noisy pseudo-labels blindly.
+
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Reinforcement học tập (learning / 학습)** tiếp nhận điểm tựa từ **Semi-Supervised học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Online học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reinforcement học tập (learning / 학습)
 
@@ -164,6 +177,8 @@ state → action → transition → reward
 Challenge includes delayed reward, exploration and policy-dependent dữ liệu (data / 데이터).
 
 RL is học tập (learning / 학습) paradigm distinct from tiêu chuẩn (standard / 표준) supervised học tập (learning / 학습) and will have dedicated folder later.
+
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Online học tập (learning / 학습)** tiếp nhận điểm tựa từ **Reinforcement học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Online học tập (learning / 학습)
 
@@ -180,6 +195,8 @@ Need handle:
 
 Online học tập (learning / 학습) is not same as online suy luận (inference / 추론). mô hình (model / 모델) can serve requests online while huấn luyện (training / 학습) offline.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Batch học tập (learning / 학습)** tiếp nhận điểm tựa từ **Online học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Instance-Based vs Model-Based học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Batch học tập (learning / 학습)
 
 Train on fixed dataset snapshot, deploy mô hình (model / 모델), retrain periodically.
@@ -187,6 +204,8 @@ Train on fixed dataset snapshot, deploy mô hình (model / 모델), retrain peri
 Operationally simpler and reproducible.
 
 Many môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들) use batch retraining even if suy luận (inference / 추론) real-time.
+
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Instance-Based vs Model-Based học tập (learning / 학습)** tiếp nhận điểm tựa từ **Batch học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parametric vs Non-Parametric** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Instance-Based vs Model-Based học tập (learning / 학습)
 
@@ -202,6 +221,8 @@ vs
 compress structure into parameters during training
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Parametric vs Non-Parametric** tiếp nhận điểm tựa từ **Instance-Based vs Model-Based học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Generative vs Discriminative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Parametric vs Non-Parametric
 
 Parametric mô hình (model / 모델) has fixed-dimensional parameterization independent of dataset kích thước (size / 크기), e.g. tuyến tính (linear / 선형) regression.
@@ -209,6 +230,8 @@ Parametric mô hình (model / 모델) has fixed-dimensional parameterization ind
 Non-parametric methods can grow effective độ phức tạp (complexity / 복잡도) with dữ liệu (data / 데이터), e.g. k-NN, some kernel methods.
 
 “Non-parametric” does not mean “has no parameters”. It means mô hình (model / 모델) độ phức tạp (complexity / 복잡도) is not fixed by a finite parameter véc-tơ (vector / 벡터) in the same way.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Generative vs Discriminative** tiếp nhận điểm tựa từ **Parametric vs Non-Parametric** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) is part of học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Generative vs Discriminative
 
@@ -232,6 +255,8 @@ Generative modeling can mẫu (sample / 표본) dữ liệu (data / 데이터) a
 
 Hiện đại (modern / 현대적) generative AI is broader than old “generative classifier” terminology.
 
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Biểu diễn (representation / 표현) is part of học tập (learning / 학습)** tiếp nhận điểm tựa từ **Generative vs Discriminative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameters và Hyperparameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu diễn (representation / 표현) is part of học tập (learning / 학습)
 
 Raw world must become biểu diễn (representation / 표현).
@@ -249,6 +274,8 @@ raw-ish data → learned representations → prediction
 ```
 
 Tính năng (feature / 기능) kỹ thuật (engineering / 엔지니어링) has not disappeared; hệ thống (system / 시스템) still makes biểu diễn (representation / 표현) choices in tokenization, normalization, aggregation, siêu dữ liệu (metadata / 메타데이터) and kiến trúc (architecture / 아키텍처).
+
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Parameters và Hyperparameters** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) is part of học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hypothesis không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Parameters và Hyperparameters
 
@@ -270,6 +297,8 @@ architecture choices
 
 Hyperparameters may be tuned using kiểm tra hợp lệ (validation / 검증) dữ liệu (data / 데이터). If repeatedly tune against kiểm thử (test / 테스트) set, kiểm thử (test / 테스트) becomes contaminated.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Hypothesis không gian (space / 공간)** tiếp nhận điểm tựa từ **Parameters và Hyperparameters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inductive độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hypothesis không gian (space / 공간)
 
 Mô hình (model / 모델) family defines set of functions thuật toán (algorithm / 알고리즘) can choose:
@@ -281,6 +310,8 @@ Mô hình (model / 모델) family defines set of functions thuật toán (algori
 Mô hình tuyến tính (linear model / 선형 모델) chooses from tuyến tính (linear / 선형)/affine quyết định (decision / 결정) surfaces. Deep mạng (network / 네트워크) defines much richer hàm (function / 함수) lớp (class / 클래스).
 
 Học tập (learning / 학습) thuật toán (algorithm / 알고리즘) does not tìm kiếm (search / 검색) “all possible intelligence”; it searches within mô hình (model / 모델)/parameterization and tối ưu hóa (optimization / 최적화) biases.
+
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Inductive độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Hypothesis không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Generalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Inductive độ lệch (bias / 편향)
 
@@ -297,6 +328,8 @@ Finite dữ liệu (data / 데이터) can be explained by many hypotheses. To ge
 
 There is no học tập (learning / 학습) without các giả định (assumptions / 가정들). More detail: [Learning Problem and Inductive Bias](./01_learning_problem_and_inductive_bias.md).
 
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Generalization** tiếp nhận điểm tựa từ **Inductive độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân phối (distribution / 분포) matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Generalization
 
 Huấn luyện (training / 학습) hiệu năng (performance / 성능) can be perfect while future hiệu năng (performance / 성능) poor.
@@ -306,6 +339,8 @@ Overfitting occurs when mô hình (model / 모델) captures sample-specific nois
 Underfitting occurs when mô hình (model / 모델)/tối ưu hóa (optimization / 최적화) cannot capture relevant cấu trúc (structure / 구조).
 
 Generalization depends on much more than parameter count: dữ liệu (data / 데이터) quy mô (scale / 규모)/diversity, inductive độ lệch (bias / 편향), tối ưu hóa (optimization / 최적화), regularization and phân phối (distribution / 분포) match all matter.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Phân phối (distribution / 분포) matters** tiếp nhận điểm tựa từ **Generalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) is generated by các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân phối (distribution / 분포) matters
 
@@ -321,6 +356,8 @@ evaluation can break.
 
 Mô hình (model / 모델) “accuracy” is never universal; it is hiệu năng (performance / 성능) over a specified population/thời gian (time / 시간)/lĩnh vực (domain / 도메인).
 
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Phân phối (distribution / 분포) matters** nêu điều cần giải thích; **Dữ liệu (data / 데이터) is generated by các hệ thống (systems / 시스템들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mất mát (loss / 손실) is not the real-world goal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dữ liệu (data / 데이터) is generated by các hệ thống (systems / 시스템들)
 
 Dataset is not neutral snapshot of reality. It reflects collection chính sách (policy / 정책).
@@ -333,6 +370,8 @@ Examples:
 - medical dữ liệu (data / 데이터) reflects who seeks care.
 
 This creates selection độ lệch (bias / 편향) and phản hồi (feedback / 피드백) loops.
+
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Dữ liệu (data / 데이터) is generated by các hệ thống (systems / 시스템들)** nêu điều cần giải thích; **Mất mát (loss / 손실) is not the real-world goal** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Prediction vs quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mất mát (loss / 손실) is not the real-world goal
 
@@ -348,6 +387,8 @@ while preserving customer experience
 Mất mát (loss / 손실), chỉ số (metric / 지표) and quyết định (decision / 결정) chính sách (policy / 정책) must be connected carefully.
 
 A classifier xác suất (probability / 확률) mô hình (model / 모델) may be good while chosen threshold makes sản phẩm (product / 제품) bad.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Prediction vs quyết định (decision / 결정)** tiếp nhận điểm tựa từ **Mất mát (loss / 손실) is not the real-world goal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Correlation vs Causation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Prediction vs quyết định (decision / 결정)
 
@@ -369,6 +410,8 @@ based on costs, sức chứa (capacity / 용량) and chính sách (policy / 정�
 
 Do not encode all lô-gic nghiệp vụ (business logic / 비즈니스 로직) implicitly inside mô hình (model / 모델) if tường minh (explicit / 명시적) chính sách (policy / 정책) is clearer/auditable.
 
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Correlation vs Causation** tiếp nhận điểm tựa từ **Prediction vs quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Leakage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Correlation vs Causation
 
 ML predicts associations in observed dữ liệu (data / 데이터). A tính năng (feature / 기능) predictive of kết quả (outcome / 결과) does not mean intervening on tính năng (feature / 기능) changes kết quả (outcome / 결과).
@@ -376,6 +419,8 @@ ML predicts associations in observed dữ liệu (data / 데이터). A tính nă
 If goal is quyết định (decision / 결정) chính sách (policy / 정책) that changes world, lập luận nhân quả (causal reasoning / 인과적 추론) may be needed.
 
 Example users who contact hỗ trợ (support / 지원) may churn more; forcing users to contact hỗ trợ (support / 지원) does not imply churn increases.
+
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Leakage** tiếp nhận điểm tựa từ **Correlation vs Causation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Evaluation is part of mô hình (model / 모델) definition in practice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Leakage
 
@@ -386,6 +431,8 @@ Then huấn luyện (training / 학습)/kiểm thử (test / 테스트) metrics 
 Leakage is often more dangerous than choosing “wrong thuật toán (algorithm / 알고리즘)”.
 
 See [Data, Features and Labels](./02_data_features_and_labels.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Evaluation is part of mô hình (model / 모델) definition in practice** tiếp nhận điểm tựa từ **Leakage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Baseline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Evaluation is part of mô hình (model / 모델) definition in practice
 
@@ -401,6 +448,8 @@ could mean trivial always-negative mô hình (model / 모델).
 
 Precision, recall, PR-AUC, expected chi phí (cost / 비용) and calibration may matter more.
 
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Baseline** tiếp nhận điểm tựa từ **Evaluation is part of mô hình (model / 모델) definition in practice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **No Free Lunch intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Baseline
 
 Before sophisticated mô hình (model / 모델), create simple baseline:
@@ -414,6 +463,8 @@ If complex hệ thống (system / 시스템) barely beats baseline, added độ 
 
 Baseline also catches chuỗi xử lý (pipeline / 파이프라인) bugs: if mô hình (model / 모델) worse than trivial baseline, inspect dữ liệu (data / 데이터) and mục tiêu (target / 대상) first.
 
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **No Free Lunch intuition** tiếp nhận điểm tựa từ **Baseline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ML as compression of experience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## No Free Lunch intuition
 
 No thuật toán (algorithm / 알고리즘) universally best for every possible data-generating tiến trình (process / 프로세스).
@@ -426,6 +477,8 @@ Thus mô hình (model / 모델) selection asks:
 
 not simply “which thuật toán (algorithm / 알고리즘) is strongest?”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **ML as compression of experience** tiếp nhận điểm tựa từ **No Free Lunch intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình (model / 모델) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ML as compression of experience
 
 Huấn luyện (training / 학습) compresses statistical cấu trúc (structure / 구조) from dataset into parameters/representations.
@@ -433,6 +486,8 @@ Huấn luyện (training / 학습) compresses statistical cấu trúc (structure
 But compression loses detail and encodes biases. A mô hình (model / 모델) does not store a perfect cơ sở dữ liệu (database / 데이터베이스) of huấn luyện (training / 학습) examples even if memorization can occur.
 
 This mô hình tư duy (mental model / 사고 모델) helps distinguish parameterized kiến thức (knowledge / 지식) from retrieval databases.
+
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **ML as compression of experience** xác định đầu vào; **Mô hình (model / 모델) vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **When NOT to use ML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình (model / 모델) vòng đời (lifecycle / 생명주기)
 
@@ -454,6 +509,8 @@ problem definition
 
 Huấn luyện (training / 학습) is one stage, not entire ML hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, **Mô hình (model / 모델) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **When NOT to use ML** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## When NOT to use ML
 
 Prefer deterministic software when:
@@ -465,6 +522,8 @@ Prefer deterministic software when:
 - thất bại (failure / 실패) chi phí (cost / 비용) too high without xác minh (verification / 확인).
 
 Example tax formula should be mã (code / 코드)/rules. ML may predict missing categories or detect anomalies around it, not replace chính xác (exact / 정확한) arithmetic.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) là gì?**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **When NOT to use ML** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -480,6 +539,8 @@ Bias       = assumptions selecting among possible explanations
 Generalization = useful behavior on unseen target data
 Evaluation = evidence that system generalizes for intended use
 ```
+
+> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) là gì?**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -499,8 +560,12 @@ Tabular/small-data/latency-constrained tasks often favor trees, tuyến tính (l
 
 Thuật toán (algorithm / 알고리즘) still has mục tiêu (objective / 목표)/inductive độ lệch (bias / 편향) defining what cấu trúc (structure / 구조) counts as useful.
 
+> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) là gì?**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Machine học tập (learning / 학습) is where [Statistics](../01_mathematical_foundations/03_statistics_for_ai.md), [Optimization](../01_mathematical_foundations/06_optimization.md) and biểu diễn (representation / 표현) meet. The next chapters will make the học tập (learning / 학습) bài toán (problem / 문제) precise before introducing specific algorithms.
 
 Xem tiếp: [Learning Problem and Inductive Bias](./01_learning_problem_and_inductive_bias.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

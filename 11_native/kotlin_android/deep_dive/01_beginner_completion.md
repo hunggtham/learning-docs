@@ -1,7 +1,6 @@
 # Kotlin + Android Beginner — Completion Deep Dive
 
-> **Mạch đọc:** Đọc **Kotlin + Android Beginner — Completion Deep Dive** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kotlin + Android Beginner — Completion Deep Dive**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Kotlin + Android Beginner — Completion Deep Dive** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > tệp (file / 파일) này bổ sung cho [`../01_kotlin_beginner.md`](../01_kotlin_beginner.md). Mục tiêu là lấp các khoảng trống thường khiến người mới đọc dự án (project / 프로젝트) thật phải tra cứu thêm: gói (package / 패키지)/import, equality, number conversion, phạm vi (range / 범위)/array, collection transformation, nested/inner lớp (class / 클래스), precondition, đối tượng (object / 객체) định danh (identity / 식별자), ngữ cảnh (context / 맥락)/Intent/Uri, Compose bố cục (layout / 레이아웃) và testing căn bản.
 
@@ -214,4 +213,4 @@ class PriceCalculatorTest {
 
 Sau phần này, bạn nên giải thích được gói (package / 패키지)/import, structural/tham chiếu (reference / 참조) equality, phạm vi (range / 범위)/array, các collection operator phổ biến, nested/inner lớp (class / 클래스), đối tượng (object / 객체) expression, `typealias`, precondition, dữ liệu (data / 데이터) lớp (class / 클래스) equality/bản sao (copy / 복사), sự khác nhau giữa Activity/ứng dụng (application / 애플리케이션) ngữ cảnh (context / 맥락), Intent/Bundle/Uri và cục bộ (local / 로컬)/instrumented kiểm thử (test / 테스트). Khi các khái niệm này đã rõ, việc chuyển sang coroutine, luồng (flow / 흐름) và kiến trúc (architecture / 아키텍처) ở Intermediate sẽ ít tạo cảm giác “phép màu của khung phần mềm (framework magic / 프레임워크 마법)” hơn.
 
-> **Bàn giao:** Sau **Kotlin + Android Beginner — Completion Deep Dive**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 intermediate completion](./02_intermediate_completion.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kotlin + Android Beginner — Completion Deep Dive**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

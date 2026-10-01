@@ -1,7 +1,6 @@
 # AI kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** Đọc **AI kỹ thuật (engineering / 엔지니어링)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Bản đồ phụ thuộc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phụ thuộc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **Kỹ thuật AI (AI Engineering)** là tầng (layer / 계층) biến mô hình (model / 모델), dữ liệu (data / 데이터), retrieval và tác nhân (agent / 에이전트) thành năng lực môi trường vận hành (production / 운영 환경) có hiệu năng (performance / 성능), độ tin cậy (reliability / 신뢰성) và chi phí (cost / 비용) dễ dự đoán hơn. Folder này không tập trung vào một khung phần mềm (framework / 프레임워크) cụ thể mà ưu tiên các cơ chế, sự đánh đổi (trade-off / 트레이드오프) và hệ thống (system / 시스템) đặc tả hợp đồng (contract / 계약) có giá trị lâu dài.
 
@@ -23,8 +22,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 10_ai_system_design.md
 ```
 
-
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Bản đồ phụ thuộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **AI kỹ thuật (engineering / 엔지니어링)**, **Bản đồ phụ thuộc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy cốt lõi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bản đồ phụ thuộc
 
@@ -47,8 +45,7 @@ flowchart TD
     LTC --> SD[Thiết kế hệ thống AI]
 ```
 
-
-> **Chuyển mạch:** Từ **Bản đồ phụ thuộc**, ta sang **Mô hình tư duy cốt lõi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **AI kỹ thuật (engineering / 엔지니어링)**, **Mô hình tư duy cốt lõi** gom các mảnh từ **Bản đồ phụ thuộc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những phân biệt cần giữ rõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy cốt lõi
 
@@ -74,8 +71,7 @@ Một mô hình (model / 모델) tốt chưa phải một môi trường vận h
 
 AI kỹ thuật (engineering / 엔지니어링) khác với MLOps ở trọng tâm. tầng (layer / 계층) này tập trung nhiều hơn vào **thời gian chạy (runtime / 런타임), serving và hệ thống (system / 시스템) thiết kế (design / 설계)**. tầng (layer / 계층) `16_mlops_and_llmops/` đi sâu vào vòng đời (lifecycle / 생명주기): experiment, versioning, CI/CD/CT, registry, monitoring, quản trị (governance / 거버넌스) và quy trình vận hành xuyên suốt nhiều mô hình (model / 모델) phiên bản (version / 버전).
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy cốt lõi**, ta sang **Những phân biệt cần giữ rõ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **AI kỹ thuật (engineering / 엔지니어링)**, **Những phân biệt cần giữ rõ** gom các mảnh từ **Mô hình tư duy cốt lõi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cách đọc tầng (layer / 계층) này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những phân biệt cần giữ rõ
 
@@ -95,8 +91,7 @@ Prompt instruction      ≠ security boundary
 
 Các distinction này quan trọng vì nhiều tối ưu nhìn tốt ở một tầng (layer / 계층) có thể làm hệ thống tổng thể tệ hơn. Ví dụ mô hình (model / 모델) nhỏ hơn có thể tải (load / 로드) nhanh nhưng tokenizer, mạng (network / 네트워크) hoặc hàng đợi (queue / 큐) vẫn là bottleneck; GPU utilization cao có thể đến từ batch lớn nhưng làm yêu cầu (request / 요청) đơn lẻ chờ lâu hơn.
 
-
-> **Chuyển mạch:** Từ **Những phân biệt cần giữ rõ**, ta sang **Cách đọc tầng (layer / 계층) này** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **AI kỹ thuật (engineering / 엔지니어링)**, **Cách đọc tầng (layer / 계층) này** tiếp nhận điểm tựa từ **Những phân biệt cần giữ rõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đọc tầng (layer / 계층) này
 
@@ -106,11 +101,12 @@ Một nguyên tắc xuyên suốt là:
 
 > **Tối ưu mô hình (model / 모델) không đồng nghĩa tối ưu hệ thống. môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질) xuất hiện khi mô hình (model / 모델), thời gian chạy (runtime / 런타임), dữ liệu, orchestration và hạ tầng được thiết kế như một hệ thống thống nhất.**
 
-
-> **Chuyển mạch:** Từ **Cách đọc tầng (layer / 계층) này**, ta sang **Liên kết kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **AI kỹ thuật (engineering / 엔지니어링)**, sau nội dung của **Cách đọc tầng (layer / 계층) này**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức
 
 AI kỹ thuật (engineering / 엔지니어링) phụ thuộc vào [Dữ liệu cho AI](../14_data_for_ai/README.md), [RAG](../09_retrieval_and_rag/README.md), [Agent](../10_agents_and_ai_systems/README.md) và [Deep Learning](../06_deep_learning_architectures/README.md).
 
 Sau folder này nên đọc [MLOps / LLMOps](../16_mlops_and_llmops/README.md) và [AI Compute & Infrastructure](../17_ai_compute_and_infrastructure/README.md), nơi các concern về lifecycle, deployment automation, hardware, memory, networking và distributed execution được mở rộng sâu hơn.
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

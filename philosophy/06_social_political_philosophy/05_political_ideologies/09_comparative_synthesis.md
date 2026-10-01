@@ -1,5 +1,7 @@
 # Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Một label không xác định một institutional gói (package / 패키지) duy nhất** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **2. Freedom: ít nhất bốn concept khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Sau khi đọc liberalism, conservatism, socialism/xã hội (social / 사회적) democracy, anarchism, libertarianism, republicanism, nationalism và fascism, mục tiêu không phải nhớ một bảng “left/right” đơn giản. Mục tiêu là có một grammar đủ ổn định để đọc một chính sách (policy / 정책), constitution, movement hoặc institution và phân tích nó bằng các dimensions cụ thể.
 
 Prerequisite là toàn bộ mô-đun (module / 모듈), đặc biệt [Comparison framework](00_comparison_framework.md). Chapter này không chọn “winner”; nó chỉ cho thấy các traditions đặt trọng số khác nhau lên freedom, authority, thuộc tính (property / 속성), equality, community và thay đổi (change / 변경).
@@ -22,6 +24,8 @@ claim
 → failure mode
 ```
 
+> **Chuyển mạch:** Trong **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **1. Một label không xác định một institutional gói (package / 패키지) duy nhất** cho ta quy tắc; **2. Freedom: ít nhất bốn concept khác nhau** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Authority: justified, inherited, minimized hay rejected?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Freedom: ít nhất bốn concept khác nhau
 
 Các traditions có thể dùng cùng từ **freedom** nhưng nói khác đối tượng (object / 객체):
@@ -33,11 +37,15 @@ Các traditions có thể dùng cùng từ **freedom** nhưng nói khác đối 
 
 Không thể resolve disagreement bằng cách hỏi “ai ủng hộ freedom hơn”. Cần hỏi **freedom khỏi cái gì, để làm gì, và institution nào bảo vệ nó?**
 
+> **Chuyển mạch:** Ở chặng này của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **3. Authority: justified, inherited, minimized hay rejected?** tiếp nhận điểm tựa từ **2. Freedom: ít nhất bốn concept khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Thuộc tính (property / 속성): right, power, xã hội (social / 사회적) quan hệ (relation / 관계) hay institutional bundle?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Authority: justified, inherited, minimized hay rejected?
 
 Liberalism thường yêu cầu công khai (public / 공개) authority justified và rights-constrained. Conservatism cảnh báo abstract redesign và coi inherited institutions/practices có epistemic giá trị (value / 값). Libertarianism muốn minimize coercive authority. Anarchism đặt burden of proof lên authority/hierarchy nói chung. Republicanism chấp nhận công khai (public / 공개) power nhưng đòi non-arbitrary, contestable power.
 
 Fascism historically moves theo hướng ngược pluralist/checking traditions: leader/national will is elevated over institutional contestation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **4. Thuộc tính (property / 속성): right, power, xã hội (social / 사회적) quan hệ (relation / 관계) hay institutional bundle?** tiếp nhận điểm tựa từ **3. Authority: justified, inherited, minimized hay rejected?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Thị trường (market / 시장): coordination cơ chế (mechanism / 메커니즘), freedom lĩnh vực (domain / 도메인), or power cấu trúc (structure / 구조)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Thuộc tính (property / 속성): right, power, xã hội (social / 사회적) quan hệ (relation / 관계) hay institutional bundle?
 
@@ -56,11 +64,15 @@ who can transfer/sell?
 
 This avoids treating “private/công khai (public / 공개)” as complete description.
 
+> **Chuyển mạch:** Trong **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **4. Thuộc tính (property / 속성): right, power, xã hội (social / 사회적) quan hệ (relation / 관계) hay institutional bundle?** xác định đầu vào; **5. Thị trường (market / 시장): coordination cơ chế (mechanism / 메커니즘), freedom lĩnh vực (domain / 도메인), or power cấu trúc (structure / 구조)?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Equality and hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Thị trường (market / 시장): coordination cơ chế (mechanism / 메커니즘), freedom lĩnh vực (domain / 도메인), or power cấu trúc (structure / 구조)?
 
 Liberal/libertarian traditions often giá trị (value / 값) markets for decentralized choice and coordination. Conservative views can accept markets while warning they may erode inherited xã hội (social / 사회적) bonds if treated as universal principle. Socialist views may criticize private quyền sở hữu (ownership / 소유권)/power while some variants retain thị trường (market / 시장) allocation.
 
 No ideology gets to skip empirical questions about competition, externality, monopoly, công khai (public / 공개) goods, thông tin (information / 정보) and phân phối (distribution / 분포).
+
+> **Chuyển mạch:** Ở chặng này của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **5. Thị trường (market / 시장): coordination cơ chế (mechanism / 메커니즘), freedom lĩnh vực (domain / 도메인), or power cấu trúc (structure / 구조)?** xác định đầu vào; **6. Equality and hierarchy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. Community: voluntary association, inherited tradition, lớp (class / 클래스), citizenship or nation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Equality and hierarchy
 
@@ -78,11 +90,15 @@ descriptive inequality
 
 These require separate arguments.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **7. Community: voluntary association, inherited tradition, lớp (class / 클래스), citizenship or nation** tiếp nhận điểm tựa từ **6. Equality and hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Thay đổi (change / 변경): reform speed is itself a political variable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Community: voluntary association, inherited tradition, lớp (class / 클래스), citizenship or nation
 
 Conservatism often stresses inherited community/tradition. Socialism can stress lớp (class / 클래스) solidarity and collective điều khiển (control / 제어). Anarchism emphasizes voluntary/federal association. Republicanism centers civic quan hệ (relation / 관계) among citizens. Nationalism gives nation special ethical/political significance.
 
 Xung đột (conflict / 충돌) arises over ranh giới (boundary / 경계): who counts as member, what duties members owe, and whether outsiders/minorities receive equal rights.
+
+> **Chuyển mạch:** Trong **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **8. Thay đổi (change / 변경): reform speed is itself a political variable** tiếp nhận điểm tựa từ **7. Community: voluntary association, inherited tradition, lớp (class / 클래스), citizenship or nation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Voice, exit and contestation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Thay đổi (change / 변경): reform speed is itself a political variable
 
@@ -99,6 +115,8 @@ problem severity
 → distribution of transition cost
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **9. Voice, exit and contestation** tiếp nhận điểm tựa từ **8. Thay đổi (change / 변경): reform speed is itself a political variable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Công khai (public / 공개) power và private power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Voice, exit and contestation
 
 Three quản trị (governance / 거버넌스) mechanisms recur across traditions:
@@ -110,6 +128,8 @@ Three quản trị (governance / 거버넌스) mechanisms recur across tradition
 Libertarian approaches often rely strongly on exit/choice; socialist/cooperative approaches add workplace voice; republicanism emphasizes contestability; liberal democracy combines electoral voice with rights-based checks.
 
 A hệ thống (system / 시스템) with weak exit, voice and contest creates high phụ thuộc (dependency / 의존성) regardless of ideological label.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **10. Công khai (public / 공개) power và private power** tiếp nhận điểm tựa từ **9. Voice, exit and contestation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Công khai (public / 공개) power và private power
 
@@ -126,11 +146,15 @@ media/information control, social hierarchy
 
 Traditions differ partly because they fear different concentrations. A symmetrical phân tích (analysis / 분석) cannot ignore either side.
 
+> **Chuyển mạch:** Trong **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **11. Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **10. Công khai (public / 공개) power và private power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Failure-mode symmetry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)
 
 Markets compress phân tán (distributed / 분산) thông tin (information / 정보) into prices but do not automatically encode justice/externalities. Bureaucratic planning can mobilize resources toward tường minh (explicit / 명시적) goals but risks reporting distortion/bottleneck. Tradition/community can embody tacit kiến thức (knowledge / 지식) but may preserve inherited injustice. Democratic deliberation creates reason-giving/voice but has participation/thông tin (information / 정보) costs.
 
 Real institutions combine channels. Question is not which channel is universally best, but which thông tin (information / 정보) bài toán (problem / 문제) each one solves and which lỗi (error / 오류) it creates.
+
+> **Chuyển mạch:** Ở chặng này của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **12. Failure-mode symmetry** tiếp nhận điểm tựa từ **11. Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Worked comparison: labor quan hệ (relation / 관계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Failure-mode symmetry
 
@@ -154,6 +178,8 @@ Instead evaluate feasible institutions:
 
 The điểm (point / 지점) is cơ chế (mechanism / 메커니즘), not scoring.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **12. Failure-mode symmetry** cho ta quy tắc; **13. Worked comparison: labor quan hệ (relation / 관계)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **14. Worked comparison: welfare trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Worked comparison: labor quan hệ (relation / 관계)
 
 For the same workplace:
@@ -167,17 +193,23 @@ For the same workplace:
 
 Different questions can reveal different dimensions of the same institution.
 
+> **Chuyển mạch:** Trong **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **13. Worked comparison: labor quan hệ (relation / 관계)** cho ta quy tắc; **14. Worked comparison: welfare trạng thái (state / 상태)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **15. Worked comparison: constitutional checks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Worked comparison: welfare trạng thái (state / 상태)
 
 Social-democratic argument treats welfare as insurance, equality and material freedom. Liberal egalitarianism may justify it via fair opportunity or justice. Republicanism can justify it as reducing phụ thuộc (dependency / 의존성)/domination. Libertarianism can đối tượng (object / 객체) to coercive taxation or prefer voluntary/private mechanisms. Conservatism may hỗ trợ (support / 지원) some welfare when embedded in xã hội (social / 사회적) obligation while being skeptical of designs that erode intermediary institutions.
 
 Same chính sách (policy / 정책) category can rest on different moral mechanisms; bằng chứng (evidence / 증거) still decides chi phí (cost / 비용), take-up, labor effects and outcomes.
 
+> **Chuyển mạch:** Ở chặng này của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **14. Worked comparison: welfare trạng thái (state / 상태)** cho ta quy tắc; **15. Worked comparison: constitutional checks** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Final mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Worked comparison: constitutional checks
 
 Liberalism values rights/limited government; republicanism emphasizes non-domination and contestation; conservatism may giá trị (value / 값) evolved constitutional forms and institutional continuity; libertarianism supports checks limiting coercive phạm vi (scope / 범위); anarchism may still see centralized constitutional trạng thái (state / 상태) as overly hierarchical.
 
 Fascist historical politics characteristically attacked pluralist checks when they obstructed claimed national will, showing why institutional form matters independently of chính sách (policy / 정책) promises.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **15. Worked comparison: constitutional checks** cho ta quy tắc; **16. Final mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Handoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Final mô hình tư duy (mental model / 사고 모델)
 
@@ -200,15 +232,19 @@ problem definition
 
 Only after this decomposition should ideology labels be used. Labels are maps of recurring argument families, not verdicts.
 
+> **Chuyển mạch:** Trong **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **Handoff** gom các mảnh từ **16. Final mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn (source / 소스) anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Handoff
 
 Return to [Justice, power and political legitimacy](../00_justice_power_and_legitimacy.md) for normative foundations, [Comparative political economy](../04_marxism_leninism/10_comparative_political_economy.md) for quyền sở hữu (ownership / 소유권)/coordination mechanisms, and [Economics](../../../economics/README.md) or [Sociology](../../../sociology/README.md) when claims become empirical.
 
-## Nguồn (source / 소스) anchors
-Phần “Nguồn (source / 소스) anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**, **Handoff** nêu điều cần giải thích; **Nguồn (source / 소스) anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Nguồn (source / 소스) anchors
 
 - Stanford Encyclopedia of Philosophy: Liberalism, Conservatism, Socialism, Anarchism, Libertarianism, Republicanism, Nationalism.
 - United States Holocaust Memorial Museum and Encyclopaedia Britannica for historical fascism.
 
 This synthesis intentionally avoids ranking ideologies. It provides a reusable analytical grammar so the reader can make distinctions before drawing normative conclusions.
+
+> **Bàn giao:** Sau **Nguồn (source / 소스) anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

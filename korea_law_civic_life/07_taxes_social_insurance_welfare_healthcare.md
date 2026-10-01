@@ -1,6 +1,6 @@
 # 07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế
 
-> **Mạch đọc:** Đặt **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vì sao người nước ngoài dễ nhầm các hệ thống này?** sang **2. Thuế thu nhập và cơ quan thuế**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao người nước ngoài dễ nhầm các hệ thống này?** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **2. Thuế thu nhập và cơ quan thuế** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Vì sao người nước ngoài dễ nhầm các hệ thống này?
 
@@ -15,8 +15,7 @@ các khoản khác do hợp đồng hoặc công ty
 
 Một khoản bị trừ không nên được hiểu chỉ từ số tiền. Hãy nhìn `급여명세서` và tên khoản khấu trừ.
 
-
-> **Chuyển mạch:** Từ **1. Vì sao người nước ngoài dễ nhầm các hệ thống này?**, ta sang **2. Thuế thu nhập và cơ quan thuế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **1. Vì sao người nước ngoài dễ nhầm các hệ thống này?** đã nêu tiêu chí phân biệt, còn **2. Thuế thu nhập và cơ quan thuế** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. National Pension — 국민연금** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Thuế thu nhập và cơ quan thuế
 
@@ -34,8 +33,7 @@ Người lao động thường gặp:
 
 Với người nước ngoài, cách đánh thuế có thể phụ thuộc tình trạng cư trú thuế (`거주자/비거주자`), loại thu nhập, hiệp định tránh đánh thuế hai lần và lựa chọn/quy định đặc biệt. Không nên dùng visa như một proxy duy nhất cho tình trạng thuế.
 
-
-> **Chuyển mạch:** Từ **2. Thuế thu nhập và cơ quan thuế**, ta sang **3. National Pension — 국민연금** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Income tax and social insurance have different authorities and purposes; 국민연금 covers pension risk, while 국민건강보험 covers healthcare financing and eligibility rules.
 
 ## 3. National Pension — 국민연금
 
@@ -52,8 +50,7 @@ Một số từ cần biết:
 
 Đặc biệt, `반환일시금` cho người nước ngoài **không áp dụng đồng nhất cho mọi quốc tịch và visa**. NPS hiện công bố danh sách quốc gia/đối tượng và điều kiện; phải kiểm tra bản hiện hành trước khi rời Hàn Quốc.
 
-
-> **Chuyển mạch:** Từ **3. National Pension — 국민연금**, ta sang **4. National Health Insurance — 국민건강보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **4. National Health Insurance — 국민건강보험** tiếp nhận điểm tựa từ **3. National Pension — 국민연금** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Employment Insurance — 고용보험** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. National Health Insurance — 국민건강보험
 
@@ -67,8 +64,7 @@ NHIS có `외국인민원센터` và hỗ trợ tư vấn ngoại ngữ. Trang c
 
 Điểm quan trọng: **bảo hiểm y tế** và **tình trạng visa** liên quan nhưng không phải cùng một hệ thống. Thay đổi nơi làm việc, địa chỉ, visa hoặc quan hệ gia đình có thể làm thay đổi loại tư cách bảo hiểm.
 
-
-> **Chuyển mạch:** Từ **4. National Health Insurance — 국민건강보험**, ta sang **5. Employment Insurance — 고용보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **5. Employment Insurance — 고용보험** tiếp nhận điểm tựa từ **4. National Health Insurance — 국민건강보험** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Industrial Accident Insurance — 산업재해보상보험** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Employment Insurance — 고용보험
 
@@ -87,8 +83,7 @@ Do quy định phân theo visa có thể thay đổi, cách kiểm tra đúng l�
 
 Không nên suy từ việc “có trừ bảo hiểm” rằng chắc chắn đủ điều kiện nhận mọi trợ cấp.
 
-
-> **Chuyển mạch:** Từ **5. Employment Insurance — 고용보험**, ta sang **6. Industrial Accident Insurance — 산업재해보상보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **6. Industrial Accident Insurance — 산업재해보상보험** tiếp nhận điểm tựa từ **5. Employment Insurance — 고용보험** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Bốn bảo hiểm xã hội — 4대보험** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Industrial Accident Insurance — 산업재해보상보험
 
@@ -112,8 +107,7 @@ Khi xảy ra tai nạn, cần phân biệt:
 
 Không nên đợi công ty tự xử lý nếu có nghi ngờ quyền lợi bị bỏ sót. Nên kiểm tra hướng dẫn của `근로복지공단` và lưu hồ sơ y tế, biên bản tai nạn, lịch làm việc.
 
-
-> **Chuyển mạch:** Từ **6. Industrial Accident Insurance — 산업재해보상보험**, ta sang **7. Bốn bảo hiểm xã hội — 4대보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **7. Bốn bảo hiểm xã hội — 4대보험** tiếp nhận điểm tựa từ **6. Industrial Accident Insurance — 산업재해보상보험** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Phúc lợi (복지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Bốn bảo hiểm xã hội — 4대보험
 
@@ -130,8 +124,7 @@ Nhưng điều kiện tham gia của **từng hệ thống** không hoàn toàn 
 
 `4대사회보험 정보연계센터` hữu ích để kiểm tra thông tin liên quan, nhưng khi có vấn đề chuyên sâu cần quay về cơ quan quản lý từng bảo hiểm.
 
-
-> **Chuyển mạch:** Từ **7. Bốn bảo hiểm xã hội — 4대보험**, ta sang **8. Phúc lợi (복지)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **8. Phúc lợi (복지)** tiếp nhận điểm tựa từ **7. Bốn bảo hiểm xã hội — 4대보험** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Hệ thống y tế trong đời sống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Phúc lợi (복지)
 
@@ -148,8 +141,7 @@ chính phủ trung ương
 
 Người nước ngoài không nên giả định “đóng thuế thì được mọi phúc lợi” hoặc “không phải công dân thì không được gì”. Điều kiện thường do từng luật/chương trình xác định.
 
-
-> **Chuyển mạch:** Từ **8. Phúc lợi (복지)**, ta sang **9. Hệ thống y tế trong đời sống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **9. Hệ thống y tế trong đời sống** tiếp nhận điểm tựa từ **8. Phúc lợi (복지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Workflow kiểm tra bảng lương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Hệ thống y tế trong đời sống
 
@@ -167,8 +159,7 @@ Khi đi khám, nên phân biệt:
 
 Trong trường hợp cấp cứu, 119 là số cứu hỏa/cấp cứu. Đây không phải hotline tư vấn bảo hiểm.
 
-
-> **Chuyển mạch:** Từ **9. Hệ thống y tế trong đời sống**, ta sang **10. Workflow kiểm tra bảng lương** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **9. Hệ thống y tế trong đời sống** xác định đầu vào; **10. Workflow kiểm tra bảng lương** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Nguồn chính thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Workflow kiểm tra bảng lương
 
@@ -187,8 +178,7 @@ Bảng lương là nơi nhiều hệ thống cùng xuất hiện: thuế, bảo 
 
 Nếu một khoản không rõ, hỏi HR tên chính xác bằng tiếng Hàn rồi kiểm tra cơ quan phụ trách.
 
-
-> **Chuyển mạch:** Từ **10. Workflow kiểm tra bảng lương**, ta sang **11. Nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, cơ chế trong **10. Workflow kiểm tra bảng lương** cần được kiểm chứng bằng dấu vết cụ thể; **11. Nguồn chính thức** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **12. Quy tắc freshness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Nguồn chính thức
 
@@ -204,9 +194,10 @@ Các cổng dưới đây dùng cho thuế, bảo hiểm, phúc lợi và y tế
 - 복지로: https://www.bokjiro.go.kr/
 - 정부24: https://www.gov.kr/
 
-
-> **Chuyển mạch:** Từ **11. Nguồn chính thức**, ta sang **12. Quy tắc freshness** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**, **11. Nguồn chính thức** nêu điều cần giải thích; **12. Quy tắc freshness** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 12. Quy tắc freshness
 
 Mức đóng, tiêu chí, mức hỗ trợ, giới hạn thu nhập và điều kiện visa thay đổi theo thời gian. Mỗi khi dùng một con số để ra quyết định thực tế, hãy ghi **ngày kiểm tra** và link nguồn chính thức.
+
+> **Bàn giao:** Sau **12. Quy tắc freshness**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,5 +1,7 @@
 # National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. GDP đo môi trường vận hành (production / 운영 환경) luồng (flow / 흐름), không đo toàn bộ welfare** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. Ba cách tính GDP phải khớp về accounting** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 Macroeconomics bắt đầu bằng đo lường (measurement / 측정). Trước khi hỏi “nền kinh tế đang tăng trưởng hay suy thoái?”, phải biết đại lượng đang đo là luồng (flow / 흐름) hay stock, nominal hay real, aggregate hay per-capita, gross hay net, và số liệu đó đại diện cho môi trường vận hành (production / 운영 환경), income, expenditure hay wealth.
 
 Một lỗi phổ biến là nhảy thẳng vào interest tỷ lệ (rate / 비율), inflation hoặc chính sách (policy / 정책) mà không có accounting định danh (identity / 식별자) rõ. National accounts cung cấp ngôn ngữ nền để các mô hình (model / 모델) phía sau không bị mơ hồ.
@@ -16,6 +18,8 @@ Ba ý phải giữ cùng lúc:
 
 GDP không trực tiếp đo leisure, inequality, unpaid household công việc (work / 작업), environmental damage, bảo mật (security / 보안), health chất lượng (quality / 품질) hoặc subjective well-being. Nó là production-accounting measure, không phải một welfare chỉ mục (index / 인덱스) hoàn chỉnh.
 
+> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **1. GDP đo môi trường vận hành (production / 운영 환경) luồng (flow / 흐름), không đo toàn bộ welfare** xác định đầu vào; **2. Ba cách tính GDP phải khớp về accounting** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Final good không đồng nghĩa bên tiêu thụ (consumer / 소비자) good** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Ba cách tính GDP phải khớp về accounting
 
 ### Môi trường vận hành (production / 운영 환경) approach
@@ -29,8 +33,6 @@ Value Added = Output Value − Intermediate Input Cost
 Không cộng raw sales của mọi stage vì sẽ double-count intermediate goods.
 
 ### Expenditure approach
-Phần “Expenditure approach” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 Y = C + I + G + NX
@@ -51,11 +53,15 @@ Môi trường vận hành (production / 운영 환경) tạo income cho labor, 
 
 Nếu ba cách không khớp hoàn hảo trong dữ liệu (data / 데이터) thực, statistical discrepancy phản ánh sai số đo lường (measurement error / 측정 오차) và timing differences, không phá định danh (identity / 식별자) lý thuyết.
 
+> **Chuyển mạch:** GDP accounting phải khớp qua production, income và expenditure; final good tránh double counting, rồi nominal/real GDP tách price change khỏi quantity change.
+
 ## 3. Final good không đồng nghĩa bên tiêu thụ (consumer / 소비자) good
 
 Machine được firm mua là final investment good nếu nó không được resold như intermediate đầu vào (input / 입력) trong cùng môi trường vận hành (production / 운영 환경) chuỗi (chain / 사슬). Inventory tăng cũng được tính là investment vì đầu ra (output / 출력) đã được sản xuất dù chưa bán cho final customer.
 
 Used goods thường không vào hiện tại (current / 현재) GDP vì môi trường vận hành (production / 운영 환경) đã được ghi ở kỳ trước; dịch vụ (service / 서비스) fee của dealer lại là hiện tại (current / 현재) môi trường vận hành (production / 운영 환경) và được tính.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **4. Nominal GDP và Real GDP** tiếp nhận điểm tựa từ **3. Final good không đồng nghĩa bên tiêu thụ (consumer / 소비자) good** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. GDP deflator và CPI đo khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Nominal GDP và Real GDP
 
@@ -68,6 +74,8 @@ Nominal GDP_t = Σ P_t Q_t
 Real GDP cố định price cơ sở (base / 기반) hoặc dùng chain-weighting để tách quantity thay đổi (change / 변경) khỏi price thay đổi (change / 변경).
 
 Nếu nominal GDP tăng 8% nhưng price mức (level / 수준) tăng khoảng 5%, real môi trường vận hành (production / 운영 환경) không tăng 8%. Cần tách price và quantity.
+
+> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **5. GDP deflator và CPI đo khác nhau** tiếp nhận điểm tựa từ **4. Nominal GDP và Real GDP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Real GDP per capita gần living tiêu chuẩn (standard / 표준) hơn total GDP nhưng vẫn chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. GDP deflator và CPI đo khác nhau
 
@@ -83,6 +91,8 @@ Bên tiêu thụ (consumer / 소비자) Price Chỉ mục (index / 인덱스) (C
 
 Vì phạm vi (scope / 범위) và weighting khác nhau, CPI inflation và GDP-deflator inflation không cần bằng nhau.
 
+> **Chuyển mạch:** Ở chặng này của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **6. Real GDP per capita gần living tiêu chuẩn (standard / 표준) hơn total GDP nhưng vẫn chưa đủ** tiếp nhận điểm tựa từ **5. GDP deflator và CPI đo khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. GNI, GDP và cross-border income** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Real GDP per capita gần living tiêu chuẩn (standard / 표준) hơn total GDP nhưng vẫn chưa đủ
 
 Total GDP có thể tăng do population tăng. Real GDP per capita:
@@ -95,6 +105,8 @@ cho một measure gần hơn về average material môi trường vận hành (p
 
 Nhưng average che phân phối (distribution / 분포). Nếu GDP per capita tăng trong khi gains tập trung ở một nhóm nhỏ, median household experience có thể khác mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **7. GNI, GDP và cross-border income** tiếp nhận điểm tựa từ **6. Real GDP per capita gần living tiêu chuẩn (standard / 표준) hơn total GDP nhưng vẫn chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Saving và investment định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. GNI, GDP và cross-border income
 
 Gross National Income (GNI) điều chỉnh GDP bằng net primary income from abroad.
@@ -102,6 +114,8 @@ Gross National Income (GNI) điều chỉnh GDP bằng net primary income from a
 Một factory nước ngoài sản xuất tại Hàn Quốc làm tăng Korea GDP; phần profit chuyển về parent abroad ảnh hưởng difference giữa GDP và GNI.
 
 Trong economy có large foreign-owned môi trường vận hành (production / 운영 환경) hoặc citizens sở hữu nhiều assets abroad, GDP và national income có thể diverge đáng kể.
+
+> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **8. Saving và investment định danh (identity / 식별자)** tiếp nhận điểm tựa từ **7. GNI, GDP và cross-border income** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Private saving, công khai (public / 공개) saving và fiscal balance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Saving và investment định danh (identity / 식별자)
 
@@ -127,6 +141,8 @@ Trong closed economy `NX = 0`, nên accounting định danh (identity / 식별�
 
 Định danh (identity / 식별자) không nói saving “gây ra” investment theo một chiều nhân quả (causal / 인과적) cụ thể. Causality phụ thuộc financial hệ thống (system / 시스템), interest rates, expectations, chính sách (policy / 정책) và open-economy capital flows.
 
+> **Chuyển mạch:** Ở chặng này của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **9. Private saving, công khai (public / 공개) saving và fiscal balance** tiếp nhận điểm tựa từ **8. Saving và investment định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Hiện tại (current / 현재) account và capital/financial account** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Private saving, công khai (public / 공개) saving và fiscal balance
 
 Nếu taxes net of transfers là `T`:
@@ -139,6 +155,8 @@ National Saving = Private Saving + Public Saving
 
 Ngân sách (budget / 예산) deficit nghĩa công khai (public / 공개) saving âm. Nhưng deficit có crowding-out tác động (effect / 효과) đến đâu phụ thuộc monetary regime, đầu ra (output / 출력) gap, capital mobility và private hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **10. Hiện tại (current / 현재) account và capital/financial account** tiếp nhận điểm tựa từ **9. Private saving, công khai (public / 공개) saving và fiscal balance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Stock và luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Hiện tại (current / 현재) account và capital/financial account
 
 Trong simplified open-economy accounting:
@@ -150,6 +168,8 @@ Current Account ≈ S − I
 Current-account surplus nghĩa national saving vượt domestic investment và economy đang net lending abroad; deficit nghĩa domestic investment/consumption cần net financing from abroad.
 
 Đây là accounting quan hệ (relation / 관계), không phải moral label. Deficit có thể finance productive investment hoặc unsustainable consumption; surplus có thể phản ánh competitiveness, demographics, weak domestic demand hoặc precautionary saving.
+
+> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **10. Hiện tại (current / 현재) account và capital/financial account** xác định đầu vào; **11. Stock và luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Gross và net** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Stock và luồng (flow / 흐름)
 
@@ -165,6 +185,8 @@ Tương tự fiscal deficit là luồng (flow / 흐름); công khai (public / �
 
 Nhầm stock với luồng (flow / 흐름) là một trong những lỗi macro nghiêm trọng nhất.
 
+> **Chuyển mạch:** Ở chặng này của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **11. Stock và luồng (flow / 흐름)** xác định đầu vào; **12. Gross và net** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Potential đầu ra (output / 출력) và đầu ra (output / 출력) gap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Gross và net
 
 Gross investment chưa trừ depreciation. Net investment:
@@ -176,6 +198,8 @@ Net Investment = Gross Investment − Depreciation
 GDP là gross; Net Domestic Sản phẩm (product / 제품) (NDP) trừ capital consumption.
 
 Một economy có high gross investment nhưng capital depreciates rất nhanh có thể tăng productive sức chứa (capacity / 용량) ít hơn headline investment gợi ý.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **13. Potential đầu ra (output / 출력) và đầu ra (output / 출력) gap** tiếp nhận điểm tựa từ **12. Gross và net** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Business-cycle dating khác “hai quý GDP âm”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Potential đầu ra (output / 출력) và đầu ra (output / 출력) gap
 
@@ -191,11 +215,15 @@ Positive gap có thể đi kèm inflation pressure; negative gap thường đi k
 
 Nhưng potential đầu ra (output / 출력) không quan sát trực tiếp. Nó được estimate và thường revision lớn sau shock.
 
+> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **14. Business-cycle dating khác “hai quý GDP âm”** tiếp nhận điểm tựa từ **13. Potential đầu ra (output / 출력) và đầu ra (output / 출력) gap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Leading, coincident và lagging indicators** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Business-cycle dating khác “hai quý GDP âm”
 
 Một recession không nên chỉ được hiểu bằng heuristic “hai quý liên tiếp real GDP giảm”. Statistical agencies hoặc research bodies thường nhìn broad indicators như môi trường vận hành (production / 운영 환경), income, employment và sales.
 
 Heuristic hữu ích để communication nhưng không phải definition universal.
+
+> **Chuyển mạch:** Ở chặng này của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **15. Leading, coincident và lagging indicators** tiếp nhận điểm tựa từ **14. Business-cycle dating khác “hai quý GDP âm”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Frequency, seasonality và annualization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Leading, coincident và lagging indicators
 
@@ -206,6 +234,8 @@ Macro dữ liệu (data / 데이터) có timing khác nhau.
 - lagging indicators phản ứng sau cycle.
 
 Một indicator có thể thay đổi (change / 변경) role giữa regimes, nên classification không tuyệt đối.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **16. Frequency, seasonality và annualization** tiếp nhận điểm tựa từ **15. Leading, coincident và lagging indicators** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Revisions và real-time dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Frequency, seasonality và annualization
 
@@ -222,6 +252,8 @@ Một QoQ annualized tỷ lệ (rate / 비율) không phải mức tăng thực 
 
 Seasonal adjustment loại patterns lặp lại theo season, nhưng bất thường như pandemic hoặc holiday shifts có thể làm adjustment khó.
 
+> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **16. Frequency, seasonality và annualization** nêu điều cần giải thích; **17. Revisions và real-time dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Inflation đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Revisions và real-time dữ liệu (data / 데이터)
 
 GDP, employment và productivity thường được revision khi nguồn (source / 소스) dữ liệu (data / 데이터) tốt hơn xuất hiện.
@@ -230,6 +262,8 @@ Chính sách (policy / 정책) maker ra quyết định bằng real-time vintage
 
 Đây là lý do applied macro cần lưu dữ liệu (data / 데이터) vintage khi đánh giá forecast hoặc chính sách (policy / 정책) reaction.
 
+> **Chuyển mạch:** Ở chặng này của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **17. Revisions và real-time dữ liệu (data / 데이터)** nêu điều cần giải thích; **18. Inflation đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Unemployment đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Inflation đo lường (measurement / 측정)
 
 Inflation là tỷ lệ (rate / 비율) of thay đổi (change / 변경) của price chỉ mục (index / 인덱스), không phải bản thân price mức (level / 수준).
@@ -237,6 +271,8 @@ Inflation là tỷ lệ (rate / 비율) of thay đổi (change / 변경) của p
 Nếu inflation giảm từ 6% xuống 2%, prices vẫn tăng, chỉ tăng chậm hơn. Deflation là negative inflation, tức price mức (level / 수준) giảm.
 
 Cốt lõi (core / 핵심) inflation thường loại một số volatile components để quan sát underlying trend, nhưng headline inflation quan trọng cho household purchasing power.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **18. Inflation đo lường (measurement / 측정)** nêu điều cần giải thích; **19. Unemployment đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Productivity đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Unemployment đo lường (measurement / 측정)
 
@@ -250,17 +286,23 @@ Labor force gồm employed + unemployed actively seeking công việc (work / �
 
 Người không tìm việc có thể nằm ngoài labor force, nên unemployment tỷ lệ (rate / 비율) giảm không luôn nghĩa labor thị trường (market / 시장) cải thiện. Cần xem labor-force participation, employment-population ratio, hours worked và underemployment.
 
+> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **19. Unemployment đo lường (measurement / 측정)** nêu điều cần giải thích; **20. Productivity đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Phân phối (distribution / 분포) và aggregate paradox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Productivity đo lường (measurement / 측정)
 
 Labor productivity thường là đầu ra (output / 출력) per hour hoặc per worker. Total factor productivity (TFP) là residual sau khi account observed capital/labor inputs trong production-function khung phần mềm (framework / 프레임워크).
 
 TFP không đơn giản là “technology”. Nó có thể capture technology, management, reallocation, sai số đo lường (measurement error / 측정 오차) và omitted capital chất lượng (quality / 품질).
 
+> **Chuyển mạch:** Ở chặng này của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **20. Productivity đo lường (measurement / 측정)** nêu điều cần giải thích; **21. Phân phối (distribution / 분포) và aggregate paradox** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Mô hình tư duy (mental model / 사고 모델) đo macro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Phân phối (distribution / 분포) và aggregate paradox
 
 Aggregate GDP tăng có thể đồng thời với real income của một subgroup giảm. Macro aggregates là weighted totals, không nói phân phối (distribution / 분포) tự động.
 
 Do đó khi chính sách (policy / 정책) question liên quan household welfare, cần nối national accounts với distributional national accounts, wage/wealth dữ liệu (data / 데이터) và demographic composition.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **22. Mô hình tư duy (mental model / 사고 모델) đo macro** gom các mảnh từ **21. Phân phối (distribution / 분포) và aggregate paradox** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 22. Mô hình tư duy (mental model / 사고 모델) đo macro
 
@@ -278,3 +320,5 @@ Trước mọi macro claim, hãy hỏi:
 10. Aggregate che phân phối (distribution / 분포) nào?
 
 National accounts tạo skeleton. Chapter tiếp theo hỏi câu dài hạn quan trọng nhất: vì sao real đầu ra (output / 출력) per person giữa các nước và qua thời gian có thể tăng mạnh hoặc stagnate? Đó là growth và productivity.
+
+> **Bàn giao:** Sau **22. Mô hình tư duy (mental model / 사고 모델) đo macro**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

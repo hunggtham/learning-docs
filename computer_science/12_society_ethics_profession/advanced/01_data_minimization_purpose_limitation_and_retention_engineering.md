@@ -1,7 +1,6 @@
 # Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** Đặt **dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **dữ liệu (data / 데이터) minimization** sang **Purpose limitation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dữ liệu (data / 데이터) minimization** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Purpose limitation** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Privacy kỹ thuật (engineering / 엔지니어링) không chỉ là chính sách (policy / 정책) document. Một hệ thống thật sự bảo vệ dữ liệu phải biến nguyên tắc như **dữ liệu (data / 데이터) minimization**, **purpose limitation** và **retention** thành kiến trúc (architecture / 아키텍처), lược đồ (schema / 스키마), kiểm soát truy cập (access control / 접근 제어) và deletion workflow có thể kiểm chứng.
 
@@ -11,8 +10,7 @@ Dữ liệu (data / 데이터) minimization hỏi: để cung cấp năng lực 
 
 Minimization nên diễn ra từ đầu vào (input / 입력) ranh giới (boundary / 경계). Nếu trường dữ liệu (field / 필드) không cần thiết, tốt hơn không thu thập thay vì thu thập rồi hứa không dùng.
 
-
-> **Chuyển mạch:** Từ **dữ liệu (data / 데이터) minimization**, ta sang **Purpose limitation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Dữ liệu (data / 데이터) minimization** đã nêu tiêu chí phân biệt, còn **Purpose limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Retention là vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Purpose limitation
 
@@ -20,8 +18,7 @@ Cùng một dữ liệu có thể phù hợp cho mục đích A nhưng không m�
 
 Điều này ảnh hưởng sự kiện (event / 이벤트) bus, analytics lake và tính năng (feature / 기능) kỹ thuật (engineering / 엔지니어링): bản sao (copy / 복사) dữ liệu (data / 데이터) sang hệ thống khác tạo thêm processing purpose và retention ranh giới (boundary / 경계) cần quản lý.
 
-
-> **Chuyển mạch:** Từ **Purpose limitation**, ta sang **Retention là vòng đời (lifecycle / 생명주기)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Purpose limitation** đã nêu tiêu chí phân biệt, còn **Retention là vòng đời (lifecycle / 생명주기)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **TTL và scheduled deletion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Retention là vòng đời (lifecycle / 생명주기)
 
@@ -29,8 +26,7 @@ Cùng một dữ liệu có thể phù hợp cho mục đích A nhưng không m�
 
 Một row bị delete khỏi primary không có nghĩa mọi derived bản sao (copy / 복사) biến mất ngay.
 
-
-> **Chuyển mạch:** Từ **Retention là vòng đời (lifecycle / 생명주기)**, ta sang **TTL và scheduled deletion** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Retention là vòng đời (lifecycle / 생명주기)** xác định đầu vào; **TTL và scheduled deletion** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Logs là nguồn rò rỉ phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## TTL và scheduled deletion
 
@@ -38,8 +34,7 @@ TTL ở lưu trữ (storage / 저장소) tầng (layer / 계층) hữu ích như
 
 Retention SLO có thể định nghĩa khoảng thời gian tối đa từ eligibility tới deletion hoàn tất ở các active các hệ thống (systems / 시스템들).
 
-
-> **Chuyển mạch:** Từ **TTL và scheduled deletion**, ta sang **Logs là nguồn rò rỉ phổ biến** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **TTL và scheduled deletion** nêu điều cần giải thích; **Logs là nguồn rò rỉ phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Derived dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Logs là nguồn rò rỉ phổ biến
 
@@ -47,22 +42,19 @@ Retention SLO có thể định nghĩa khoảng thời gian tối đa từ eligi
 
 Structured logging nên có allowlist/redaction chính sách (policy / 정책); “log tất cả rồi filter sau” tạo blast radius lớn.
 
-
-> **Chuyển mạch:** Từ **Logs là nguồn rò rỉ phổ biến**, ta sang **Derived dữ liệu (data / 데이터)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Logs là nguồn rò rỉ phổ biến** nêu điều cần giải thích; **Derived dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kiểm soát truy cập (access control / 접근 제어) theo purpose** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Derived dữ liệu (data / 데이터)
 
 Nếu raw dữ liệu (data / 데이터) bị xóa, aggregate/mô hình (model / 모델) tính năng (feature / 기능) có cần xóa không phụ thuộc khả năng liên kết lại cá nhân và chính sách (policy / 정책)/legal ngữ cảnh (context / 맥락). kỹ thuật (engineering / 엔지니어링) cần lineage để biết sản phẩm tạo ra (artifact / 산출물) nào được tạo từ nguồn nào thay vì tranh luận sau sự cố mà không có bằng chứng (evidence / 증거).
 
-
-> **Chuyển mạch:** Từ **Derived dữ liệu (data / 데이터)**, ta sang **kiểm soát truy cập (access control / 접근 제어) theo purpose** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Derived dữ liệu (data / 데이터)** nêu điều cần giải thích; **Kiểm soát truy cập (access control / 접근 제어) theo purpose** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Deletion workflow phải idempotent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm soát truy cập (access control / 접근 제어) theo purpose
 
 RBAC chỉ nói role nào truy cập tài nguyên (resource / 자원); hệ thống phức tạp có thể cần attribute/ngữ cảnh (context / 맥락) để giới hạn theo tenant, workflow hoặc approved purpose. Nhưng chính sách (policy / 정책) càng tinh vi càng cần auditability và kiểm thử (test / 테스트), nếu không cấu hình (configuration / 구성) độ phức tạp (complexity / 복잡도) tự tạo bảo mật (security / 보안) gap.
 
-
-> **Chuyển mạch:** Từ **kiểm soát truy cập (access control / 접근 제어) theo purpose**, ta sang **Deletion workflow phải idempotent** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Kiểm soát truy cập (access control / 접근 제어) theo purpose** xác định đầu vào; **Deletion workflow phải idempotent** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Deletion workflow phải idempotent
 
@@ -70,18 +62,16 @@ Người dùng (user / 사용자) deletion thường đi qua nhiều services. t
 
 Kiểm tra (audit / 감사) bản ghi (record / 레코드) có thể cần chứng minh deletion tiến trình (process / 프로세스) đã chạy mà không giữ lại chính payload đáng lẽ phải xóa.
 
-
-> **Chuyển mạch:** Từ **Deletion workflow phải idempotent**, ta sang **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Deletion workflow phải idempotent** xác định đầu vào; **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau
 
 Một deletion hàng đợi (queue / 큐) backlog là privacy sự cố (incident / 인시던트) tiềm năng. Retention job thất bại cần alert/SLO giống môi trường vận hành (production / 운영 환경) chuỗi xử lý (pipeline / 파이프라인) khác. Privacy điều khiển (control / 제어) chỉ tồn tại trên giấy nếu không có monitoring và đơn vị sở hữu (owner / 오너).
 
-
-> **Chuyển mạch:** Từ **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Privacy principle phải trở thành dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기) có thể vận hành: collect ít hơn, bind usage với purpose, biết mọi bản sao (copy / 복사) ở đâu, đặt retention, propagate deletion và đo thất bại (failure / 실패). Privacy kỹ thuật (engineering / 엔지니어링) là hệ thống (system / 시스템) thiết kế (design / 설계) + quản trị (governance / 거버넌스) + khả năng quan sát (observability / 관측 가능성), không phải checkbox cuối dự án.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 privacy threat models governance and accountability](./00_privacy_threat_models_governance_and_accountability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

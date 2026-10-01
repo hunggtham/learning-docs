@@ -1,7 +1,6 @@
 # 03_graphs
 
-> **Mạch đọc:** Đọc **03graphs** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **03graphs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **03graphs** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Nhóm này đi từ mô hình hóa đồ thị tới traversal, tối ưu đường đi, connectivity và các cấu trúc động.
 
@@ -18,4 +17,4 @@ Nhóm này đi từ mô hình hóa đồ thị tới traversal, tối ưu đư�
 
 `09_dynamic_temporal_and_large_scale_graphs.md` là lớp tiếp theo sau cốt lõi (core / 핵심) đồ thị (graph / 그래프) algorithms: thay vì giả định topology đứng yên, nó xem topology, trọng số và thời gian tồn tại của cạnh như một phần của trạng thái (state / 상태) cần quản lý.
 
-> **Bàn giao:** Sau **03graphs**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **03graphs**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

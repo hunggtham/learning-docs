@@ -1,7 +1,6 @@
 # Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian
 
-> **Mạch đọc:** Đọc **Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Hybridization là một sự kiện xảy ra trước bonding”** sang **“sp³ nghĩa chính xác (exact / 정확한) 25% s trên mọi orbital”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > **Lý thuyết liên kết hóa trị (valence bond theory, VB / 원자가 결합 이론)** mô tả liên kết cộng hóa trị bằng sự chồng phủ của các obitan nguyên tử hoặc obitan đã được tổ hợp lại theo hướng phù hợp. **Lai hóa (hybridization / 혼성화)** là cách chọn một cơ sở obitan cục bộ thuận tiện để mô tả nhiều liên kết tương đương và hình học phân tử. Hai ý tưởng này rất mạnh trong hóa học hữu cơ, lập thể và lập luận (reasoning / 추론) về liên kết σ/π, nhưng chúng là **mô hình biểu diễn**, không phải những “cánh tay orbital” tồn tại độc lập trước khi phân tử hình thành.
 
@@ -425,4 +424,4 @@ Hybridization là coordinate hệ thống (system / 시스템) rất hữu ích 
 
 Xem tiếp: [Lý thuyết obitan phân tử](./06_molecular_orbital_theory.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

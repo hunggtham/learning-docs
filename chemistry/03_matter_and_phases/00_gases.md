@@ -1,6 +1,6 @@
 # Chất khí — từ chuyển động phân tử tới khí thực
 
-> **Mạch đọc:** Đọc **Chất khí — từ chuyển động phân tử tới khí thực** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ hiện tượng vĩ mô tới mô hình vi mô** sang **Bốn biến trạng thái cơ bản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất khí — từ chuyển động phân tử tới khí thực**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ hiện tượng vĩ mô tới mô hình vi mô** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bốn biến trạng thái cơ bản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **Chất khí (gas / 기체)** là trạng thái vật chất trong đó khoảng cách trung bình giữa các hạt thường lớn hơn nhiều kích thước riêng của chúng và các hạt chuyển động liên tục trong không gian. Vì vậy khí dễ nén, nhanh chóng lấp đầy bình chứa và thể hiện rất rõ mối liên hệ giữa chuyển động vi mô với các đại lượng vĩ mô như áp suất, nhiệt độ và thể tích.
 
@@ -21,6 +21,8 @@ P=\frac{F}{A}
 Ở cấp vi mô, lực trung bình lên thành bình xuất hiện vì phân tử thay đổi động lượng khi va chạm. Một va chạm riêng lẻ rất nhỏ, nhưng số va chạm khổng lồ tạo ra áp suất ổn định ở thang quan sát.
 
 Đây là một ví dụ quan trọng về **tính chất nổi lên (emergent property)**: áp suất không phải thuộc tính của một phân tử đơn lẻ, mà là kết quả thống kê của cả tập hợp hạt.
+
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Bốn biến trạng thái cơ bản** tiếp nhận điểm tựa từ **Từ hiện tượng vĩ mô tới mô hình vi mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Boyle, Charles và Avogadro là các lát cắt của cùng một quan hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bốn biến trạng thái cơ bản
 
@@ -52,6 +54,8 @@ R=0.082057\;\mathrm{L\,atm\,mol^{-1}\,K^{-1}}
 \]
 
 Điều quan trọng là phải dùng **nhiệt độ tuyệt đối theo Kelvin**, vì tỉ lệ trong mô hình khí liên quan tới năng lượng nhiệt tuyệt đối chứ không phải mốc tùy ý của thang Celsius.
+
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Boyle, Charles và Avogadro là các lát cắt của cùng một quan hệ** tiếp nhận điểm tựa từ **Bốn biến trạng thái cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng riêng và khối lượng mol của khí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Boyle, Charles và Avogadro là các lát cắt của cùng một quan hệ
 
@@ -86,6 +90,8 @@ V\propto n
 Đây là **định luật Avogadro (Avogadro's law)**. Thêm hạt vào hệ ở cùng áp suất và nhiệt độ đòi hỏi thể tích tăng.
 
 Ba định luật không phải ba quy tắc rời. Chúng là ba trường hợp giới hạn của \(PV=nRT\).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Khối lượng riêng và khối lượng mol của khí** tiếp nhận điểm tựa từ **Boyle, Charles và Avogadro là các lát cắt của cùng một quan hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuyết động học phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khối lượng riêng và khối lượng mol của khí
 
@@ -129,6 +135,8 @@ M=\frac{\rho RT}{P}
 
 Đây là một ví dụ cho thấy phương trình khí có thể được dùng như công cụ suy ngược từ phép đo vĩ mô về thông tin phân tử.
 
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Thuyết động học phân tử** tiếp nhận điểm tựa từ **Khối lượng riêng và khối lượng mol của khí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân bố Maxwell–Boltzmann** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thuyết động học phân tử
 
 **Thuyết động học phân tử (kinetic molecular theory / 기체 분자 운동론)** giải thích vì sao phương trình khí lý tưởng xuất hiện.
@@ -156,6 +164,8 @@ cho một phân tử, hoặc:
 cho một mol khí đơn nguyên tử lý tưởng xét phần tịnh tiến.
 
 Ở cùng nhiệt độ, các loại khí có cùng **năng lượng động học tịnh tiến trung bình**, nhưng không có cùng vận tốc đặc trưng.
+
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Phân bố Maxwell–Boltzmann** tiếp nhận điểm tựa từ **Thuyết động học phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ va chạm tới áp suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân bố Maxwell–Boltzmann
 
@@ -193,6 +203,8 @@ Khi nhiệt độ tăng, phân bố rộng hơn và dịch về vận tốc cao 
 
 Xem thêm: [Năng lượng hoạt hóa và Arrhenius](../06_chemical_kinetics/03_activation_energy_and_arrhenius.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Từ va chạm tới áp suất** tiếp nhận điểm tựa từ **Phân bố Maxwell–Boltzmann** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tần suất va chạm và quãng đường tự do trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ va chạm tới áp suất
 
 Một kết quả của thuyết động học là:
@@ -206,6 +218,8 @@ trong đó \(\rho_m\) là mật độ khối lượng của khí.
 Quan hệ này cho thấy áp suất phụ thuộc trực tiếp vào mật độ vật chất và bình phương vận tốc đặc trưng của phân tử.
 
 Nó cũng giải thích vì sao cùng một lượng khí trong thể tích cố định có áp suất tăng khi nhiệt độ tăng: phân tử chuyển động nhanh hơn và truyền động lượng mạnh hơn lên thành bình.
+
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Tần suất va chạm và quãng đường tự do trung bình** tiếp nhận điểm tựa từ **Từ va chạm tới áp suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuếch tán không đơn giản là phân tử bay thẳng từ nơi cao tới nơi thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tần suất va chạm và quãng đường tự do trung bình
 
@@ -231,6 +245,8 @@ Khái niệm này quan trọng trong chân không, khí quyển tầng cao, micr
 
 Khi kích thước thiết bị gần với quãng đường tự do trung bình, giả định môi trường liên tục của cơ học chất lưu bắt đầu suy yếu.
 
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Khuếch tán không đơn giản là phân tử bay thẳng từ nơi cao tới nơi thấp** tiếp nhận điểm tựa từ **Tần suất va chạm và quãng đường tự do trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thoát khí qua lỗ nhỏ và định luật Graham** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khuếch tán không đơn giản là phân tử bay thẳng từ nơi cao tới nơi thấp
 
 **Khuếch tán (diffusion / 확산)** xuất hiện từ chuyển động nhiệt ngẫu nhiên. Ở cấp từng phân tử, quỹ đạo là một chuỗi ngẫu nhiên của nhiều va chạm; ở cấp tập thể, dòng ròng xuất hiện theo độ dốc (gradient / 기울기) nồng độ.
@@ -247,6 +263,8 @@ Hệ số khuếch tán khí thường lớn hơn trong chất lỏng vì các p
 
 Khuếch tán là cầu nối trực tiếp từ vật lý khí sang vận chuyển khối trong động học, điện hóa và kỹ thuật phản ứng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Thoát khí qua lỗ nhỏ và định luật Graham** tiếp nhận điểm tựa từ **Khuếch tán không đơn giản là phân tử bay thẳng từ nơi cao tới nơi thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hỗn hợp khí và áp suất riêng phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thoát khí qua lỗ nhỏ và định luật Graham
 
 **Thoát khí qua lỗ nhỏ (effusion / 분출)** là quá trình phân tử đi qua một lỗ đủ nhỏ để va chạm tại lỗ ít quan trọng hơn chuyển động nhiệt của từng phân tử.
@@ -260,6 +278,8 @@ Tốc độ thoát gần tỉ lệ nghịch với căn bậc hai khối lượng
 Khí nhẹ thoát nhanh hơn vì có vận tốc nhiệt đặc trưng cao hơn.
 
 Không nên dùng định luật Graham cho mọi bài toán dòng khí qua ống hoặc lỗ lớn; khi nhiều va chạm tập thể và chênh áp đáng kể xuất hiện, cơ học dòng chảy mới là mô hình phù hợp hơn.
+
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Hỗn hợp khí và áp suất riêng phần** tiếp nhận điểm tựa từ **Thoát khí qua lỗ nhỏ và định luật Graham** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí thu trên nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hỗn hợp khí và áp suất riêng phần
 
@@ -289,6 +309,8 @@ Ví dụ trong hô hấp, không chỉ phần trăm oxygen quan trọng; áp su�
 
 Ở độ cao lớn, phần mol oxygen vẫn gần như không đổi nhưng áp suất khí quyển giảm, nên áp suất riêng phần oxygen giảm.
 
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Khí thu trên nước** tiếp nhận điểm tựa từ **Hỗn hợp khí và áp suất riêng phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí trong phản ứng hóa lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khí thu trên nước
 
 Nếu khí được thu bằng cách đẩy nước, hỗn hợp phía trên mặt nước chứa cả khí cần đo và hơi nước.
@@ -306,6 +328,8 @@ P_{gas}=P_{total}-P_{H_2O}
 \]
 
 Đây là ví dụ thực nghiệm quan trọng cho thấy áp suất riêng phần không phải khái niệm trừu tượng: nếu quên hơi nước, số mol khí tính được sẽ bị sai.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Khí trong phản ứng hóa lượng** tiếp nhận điểm tựa từ **Khí thu trên nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao khí thật lệch khỏi mô hình lý tưởng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khí trong phản ứng hóa lượng
 
@@ -328,6 +352,8 @@ P, V, T
 
 Không nên sử dụng một “thể tích mol chuẩn” duy nhất nếu đề bài không nói rõ điều kiện nhiệt độ và áp suất. Thể tích mol của khí phụ thuộc điều kiện trạng thái.
 
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Vì sao khí thật lệch khỏi mô hình lý tưởng?** tiếp nhận điểm tựa từ **Khí trong phản ứng hóa lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số nén** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao khí thật lệch khỏi mô hình lý tưởng?
 
 Mô hình lý tưởng bỏ qua hai hiệu ứng:
@@ -340,6 +366,8 @@ Mô hình lý tưởng bỏ qua hai hiệu ứng:
 Khi nén mạnh, thể tích riêng của phân tử không còn bỏ qua được. Khi hạ nhiệt độ, năng lượng nhiệt giảm và lực hút liên phân tử trở nên quan trọng hơn.
 
 Vì vậy khí thật lệch mạnh nhất khỏi lý tưởng ở **áp suất cao** và **nhiệt độ thấp**, đặc biệt gần vùng ngưng tụ.
+
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Hệ số nén** tiếp nhận điểm tựa từ **Vì sao khí thật lệch khỏi mô hình lý tưởng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình van der Waals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ số nén
 
@@ -361,6 +389,8 @@ Nếu \(Z>1\), hiệu ứng thể tích loại trừ và lực đẩy khoảng c
 
 Không nên hiểu \(Z<1\) là “khí có áp suất âm” hay \(Z>1\) là “phân tử phình to”. Nó chỉ biểu diễn mức sai lệch của quan hệ \(PV=nRT\).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Phương trình van der Waals** tiếp nhận điểm tựa từ **Hệ số nén** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khai triển virial** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phương trình van der Waals
 
 Một mô hình khí thực cổ điển là:
@@ -380,6 +410,8 @@ Phần \(V-nb\) phản ánh rằng không phải toàn bộ thể tích hình h�
 
 Van der Waals có giá trị lớn về mặt khái niệm nhưng không phải phương trình chính xác cho mọi khí và mọi điều kiện.
 
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Khai triển virial** tiếp nhận điểm tựa từ **Phương trình van der Waals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt độ Boyle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khai triển virial
 
 Một cách tổng quát hơn mô tả khí thật là **phương trình virial (virial equation)**:
@@ -394,11 +426,15 @@ Các hệ số virial chứa thông tin hiệu dụng về tương tác hai hạ
 
 Điểm quan trọng là mô hình khí thật có thể được xem như mở rộng có hệ thống quanh giới hạn khí lý tưởng.
 
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Nhiệt độ Boyle** tiếp nhận điểm tựa từ **Khai triển virial** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điểm tới hạn và sự thất bại của ranh giới khí–lỏng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhiệt độ Boyle
 
 Tại một nhiệt độ đặc biệt gọi là **nhiệt độ Boyle (Boyle temperature)**, hệ số virial bậc hai gần bằng 0. Khi đó, trong vùng áp suất thấp, lực hút và hiệu ứng thể tích loại trừ có thể gần triệt tiêu nhau nên khí hành xử gần lý tưởng hơn.
 
 Điều này nhắc rằng “tính lý tưởng” không phải thuộc tính tuyệt đối của một chất; nó phụ thuộc điều kiện nhiệt độ và áp suất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Điểm tới hạn và sự thất bại của ranh giới khí–lỏng** tiếp nhận điểm tựa từ **Nhiệt độ Boyle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fugacity — “áp suất hiệu dụng” trong nhiệt động khí thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điểm tới hạn và sự thất bại của ranh giới khí–lỏng
 
@@ -409,6 +445,8 @@ Trên nhiệt độ tới hạn, không thể hóa lỏng khí chỉ bằng các
 Gần điểm tới hạn, dao động mật độ trở nên lớn và các mô hình đơn giản như khí lý tưởng hoặc van der Waals có thể sai đáng kể về định lượng.
 
 Phần này nối trực tiếp với [Chuyển pha và giản đồ pha](./03_phase_changes_and_phase_diagrams.md).
+
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Fugacity — “áp suất hiệu dụng” trong nhiệt động khí thực** tiếp nhận điểm tựa từ **Điểm tới hạn và sự thất bại của ranh giới khí–lỏng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Joule–Thomson và làm lạnh khí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fugacity — “áp suất hiệu dụng” trong nhiệt động khí thực
 
@@ -434,6 +472,8 @@ Fugacity không cần được hiểu như một “áp suất mới” đo tr�
 
 Xem thêm: [Nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md).
 
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Hiệu ứng Joule–Thomson và làm lạnh khí** tiếp nhận điểm tựa từ **Fugacity — “áp suất hiệu dụng” trong nhiệt động khí thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí quyển là một hỗn hợp khí chịu cả nhiệt động và trọng lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu ứng Joule–Thomson và làm lạnh khí
 
 Khi một khí thật giãn qua van tiết lưu trong quá trình gần như không đổi enthalpy, nhiệt độ có thể thay đổi. Đây là **hiệu ứng Joule–Thomson (Joule–Thomson effect)**.
@@ -441,6 +481,8 @@ Khi một khí thật giãn qua van tiết lưu trong quá trình gần như kh�
 Khí lý tưởng lý tưởng hóa không có hiệu ứng này vì enthalpy chỉ phụ thuộc nhiệt độ. Với khí thật, tương tác phân tử làm enthalpy phụ thuộc thêm vào mật độ và áp suất.
 
 Tùy nhiệt độ ban đầu, một khí có thể lạnh đi hoặc nóng lên khi tiết lưu. Hiệu ứng này là nền của nhiều chu trình hóa lỏng và làm lạnh khí.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Khí quyển là một hỗn hợp khí chịu cả nhiệt động và trọng lực** tiếp nhận điểm tựa từ **Hiệu ứng Joule–Thomson và làm lạnh khí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với động học phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khí quyển là một hỗn hợp khí chịu cả nhiệt động và trọng lực
 
@@ -462,6 +504,8 @@ Khí quyển thực phức tạp hơn vì nhiệt độ thay đổi theo độ c
 
 Xem thêm: [Hóa học khí quyển](../16_environmental_chemistry/00_atmospheric_chemistry.md).
 
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, **Liên hệ với động học phản ứng** tiếp nhận điểm tựa từ **Khí quyển là một hỗn hợp khí chịu cả nhiệt động và trọng lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với kỹ thuật chân không và điện tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với động học phản ứng
 
 Động học khí phụ thuộc trực tiếp vào mật độ va chạm và phân bố năng lượng.
@@ -480,11 +524,15 @@ nhiệt độ
 
 Đây là cầu nối tự nhiên sang [Động học hóa học](../06_chemical_kinetics/00_reaction_rates.md).
 
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Liên hệ với kỹ thuật chân không và điện tử** tiếp nhận điểm tựa từ **Liên hệ với động học phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với kỹ thuật chân không và điện tử
 
 Trong buồng chân không của chế tạo bán dẫn, áp suất thấp làm quãng đường tự do trung bình tăng mạnh. Khi đó hạt có thể đi xa trước khi va chạm, điều này ảnh hưởng lắng đọng hơi vật lý, plasma, sputtering và vận chuyển precursor.
 
 Vì vậy hiểu khí không chỉ phục vụ bài toán bình kín; nó còn là nền cho công nghệ chân không và chế tạo vật liệu điện tử.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Liên hệ với kỹ thuật chân không và điện tử** cho ta quy tắc; **Ví dụ suy luận tổng hợp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Giới hạn của các mô hình trong chương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ suy luận tổng hợp
 
@@ -519,6 +567,8 @@ năng lượng động học trung bình
 ≠ vận tốc trung bình
 ```
 
+> **Chuyển mạch:** Trong **Chất khí — từ chuyển động phân tử tới khí thực**, trường hợp ở **Ví dụ suy luận tổng hợp** cho thấy quy tắc hoạt động; **Giới hạn của các mô hình trong chương** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giới hạn của các mô hình trong chương
 
 Không có một phương trình khí đơn giản nào đúng tuyệt đối cho mọi trạng thái.
@@ -529,6 +579,8 @@ Không có một phương trình khí đơn giản nào đúng tuyệt đối ch
 - gần điểm tới hạn hoặc trong điều kiện công nghiệp chính xác cao cần phương trình trạng thái tiên tiến hơn và dữ liệu thực nghiệm.
 
 Một mô hình tốt không phải mô hình phức tạp nhất, mà là mô hình đơn giản nhất vẫn giữ sai số phù hợp với mục tiêu.
+
+> **Chuyển mạch:** Ở chặng này của **Chất khí — từ chuyển động phân tử tới khí thực**, **Giới hạn của các mô hình trong chương** đã nêu tiêu chí phân biệt, còn **Những hiểu lầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -556,6 +608,8 @@ Không. `Z` cho biết mức sai lệch. Nếu `Z` đủ gần 1 so với độ 
 
 Trong hỗn hợp lý tưởng có liên hệ đơn giản với phần mol, nhưng ý nghĩa nhiệt động sâu hơn là đóng góp của từng cấu tử vào trạng thái hỗn hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất khí — từ chuyển động phân tử tới khí thực**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy đọc chất khí theo bốn lớp:
@@ -571,4 +625,4 @@ Khí lý tưởng là giới hạn nền rất mạnh. Khí thực xuất hiện
 
 Từ đây có thể chuyển sang [Chất lỏng](./01_liquids.md), nơi các hạt ở gần nhau đến mức tương tác liên phân tử trở thành yếu tố trung tâm.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 liquids](./01_liquids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

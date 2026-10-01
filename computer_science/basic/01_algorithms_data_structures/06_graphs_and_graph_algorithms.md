@@ -1,7 +1,6 @@
 # Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms
 
-> **Mạch đọc:** Đọc **đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **đồ thị (graph / 그래프) mô hình (model / 모델)** sang **biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đồ thị (graph / 그래프) mô hình (model / 모델)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Khi relationships không còn hierarchy đơn giản, đồ thị (graph / 그래프) trở thành mô hình (model / 모델) tự nhiên. xã hội (social / 사회적) mạng (network / 네트워크), road map, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), mạng (network / 네트워크) topology, hệ thống dựng (build system / 빌드 시스템), lời gọi (call / 호출) đồ thị (graph / 그래프) và cơ sở dữ liệu (database / 데이터베이스) foreign-key relationships đều có thể mô hình (model / 모델) bằng vertices và edges.
 
@@ -13,8 +12,7 @@ Degree đếm connections; đường dẫn (path / 경로) là chuỗi (sequence
 
 Xem nền toán tại [Graph Theory](../../../mathematics/07_discrete_cs/00_graph_theory.md).
 
-
-> **Chuyển mạch:** Từ **đồ thị (graph / 그래프) mô hình (model / 모델)**, ta sang **biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFS: shortest đường dẫn (path / 경로) theo số cạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)
 
@@ -22,8 +20,7 @@ Adjacency ma trận (matrix / 행렬) dùng `|V|×|V|` entries, edge lookup O(1)
 
 Adjacency danh sách (list / 목록) lưu neighbors cho mỗi vertex, không gian (space / 공간) O(V+E), phù hợp sparse graphs phổ biến. biểu diễn (representation / 표현) quyết định iteration chi phí (cost / 비용) và locality.
 
-
-> **Chuyển mạch:** Từ **biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)**, ta sang **BFS: shortest đường dẫn (path / 경로) theo số cạnh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)** xác định đầu vào; **BFS: shortest đường dẫn (path / 경로) theo số cạnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **DFS: đi sâu để lộ cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## BFS: shortest đường dẫn (path / 경로) theo số cạnh
 
@@ -33,8 +30,7 @@ Bất biến (invariant / 불변식): trước khi xử lý tầng (layer / 계�
 
 BFS dùng trong degrees-of-separation, shortest hops, crawling và level-order traversal.
 
-
-> **Chuyển mạch:** Từ **BFS: shortest đường dẫn (path / 경로) theo số cạnh**, ta sang **DFS: đi sâu để lộ cấu trúc (structure / 구조)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **BFS: shortest đường dẫn (path / 경로) theo số cạnh** xác định đầu vào; **DFS: đi sâu để lộ cấu trúc (structure / 구조)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Topological sort và phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## DFS: đi sâu để lộ cấu trúc (structure / 구조)
 
@@ -42,8 +38,7 @@ Depth-First tìm kiếm (search / 검색) dùng recursion hoặc tường minh (
 
 DFS không bảo đảm shortest đường dẫn (path / 경로) trong unweighted đồ thị (graph / 그래프), vì nó có thể chọn một nhánh dài trước.
 
-
-> **Chuyển mạch:** Từ **DFS: đi sâu để lộ cấu trúc (structure / 구조)**, ta sang **Topological sort và phụ thuộc (dependency / 의존성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Topological sort và phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **DFS: đi sâu để lộ cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dijkstra và weighted shortest đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Topological sort và phụ thuộc (dependency / 의존성)
 
@@ -51,8 +46,7 @@ Directed acyclic đồ thị (graph / 그래프) — DAG cho phép tuyến tính
 
 Nếu đồ thị (graph / 그래프) có cycle, topological thứ tự (order / 순서) không tồn tại. Cycle thường chính là tín hiệu (signal / 신호) thiết kế: gói (package / 패키지) A phụ thuộc B phụ thuộc lại A; di chuyển (migration / 마이그레이션) dependencies vòng lặp (loop / 루프); tasks deadlock lô-gic (logic / 논리).
 
-
-> **Chuyển mạch:** Từ **Topological sort và phụ thuộc (dependency / 의존성)**, ta sang **Dijkstra và weighted shortest đường dẫn (path / 경로)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Topological sort và phụ thuộc (dependency / 의존성)** xác định đầu vào; **Dijkstra và weighted shortest đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Minimum Spanning cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dijkstra và weighted shortest đường dẫn (path / 경로)
 
@@ -60,8 +54,7 @@ Dijkstra giải shortest paths khi edge weights non-negative. Nó repeatedly ch�
 
 Tại sao non-negative quan trọng? Khi chọn distance nhỏ nhất làm final, một edge âm từ nút (node / 노드) chưa xử lý có thể sau đó tạo đường ngắn hơn, phá bất biến (invariant / 불변식). Với negative edges, Bellman–Ford hoặc mô hình (model / 모델) khác cần dùng.
 
-
-> **Chuyển mạch:** Từ **Dijkstra và weighted shortest đường dẫn (path / 경로)**, ta sang **Minimum Spanning cây (tree / 트리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Dijkstra và weighted shortest đường dẫn (path / 경로)** xác định đầu vào; **Minimum Spanning cây (tree / 트리)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Union-Find** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Minimum Spanning cây (tree / 트리)
 
@@ -69,8 +62,7 @@ MST kết nối mọi vertices với total edge weight nhỏ nhất, không tạ
 
 MST khác shortest-path cây (tree / 트리): tối ưu tổng mạng (network / 네트워크) chi phí (cost / 비용), không tối ưu distance từ một nguồn (source / 소스).
 
-
-> **Chuyển mạch:** Từ **Minimum Spanning cây (tree / 트리)**, ta sang **Union-Find** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Union-Find** tiếp nhận điểm tựa từ **Minimum Spanning cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Union-Find
 
@@ -78,8 +70,7 @@ Disjoint Set Union quản lý partition thành components với `find` và `unio
 
 Nó minh họa cấu trúc dữ liệu (data structure / 자료구조) được thiết kế quanh một rất nhỏ thao tác (operation / 연산) set nhưng cực hiệu quả cho connectivity.
 
-
-> **Chuyển mạch:** Từ **Union-Find**, ta sang **đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **Union-Find** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)
 
@@ -87,15 +78,13 @@ Gói (package / 패키지) dependencies, services, quyền sở hữu (ownership
 
 Garbage collector tracing đối tượng (object / 객체) đồ thị (graph / 그래프) từ roots để xác định reachability. Git lần ghi nhận (commit / 커밋) lịch sử (history / 이력) là DAG. Web pages + links tạo directed đồ thị (graph / 그래프).
 
-
-> **Chuyển mạch:** Từ **đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi entities có **many-to-many relationships**, nghĩ bằng đồ thị (graph / 그래프). Sau đó hỏi: directed hay undirected, weighted hay unweighted, sparse hay dense, và thao tác (operation / 연산) chính là reachability, shortest đường dẫn (path / 경로), thứ tự (ordering / 순서), connectivity hay luồng (flow / 흐름)?
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -105,11 +94,10 @@ Garbage collector tracing đối tượng (object / 객체) đồ thị (graph /
 
 **“Dijkstra dùng được với negative weight nếu không có negative cycle.”** bất biến (invariant / 불변식) greedy của Dijkstra vẫn có thể sai với negative edge; dùng thuật toán (algorithm / 알고리즘) phù hợp.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đồ thị (graph / 그래프) algorithms dùng [linear structures](./03_linear_data_structures.md) và [heap](./05_trees_heaps_and_search_structures.md). phụ thuộc (dependency / 의존성) graphs xuất hiện trong [build/package systems](../08_software_systems/01_version_control_build_link_and_packages.md), routing trong [networking](../06_networks_distributed_systems/01_ethernet_ip_subnetting_and_routing.md), wait-for đồ thị (graph / 그래프) trong [deadlock](../03_operating_systems/02_concurrency_synchronization_and_deadlock.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

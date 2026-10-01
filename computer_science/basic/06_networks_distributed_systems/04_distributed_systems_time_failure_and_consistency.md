@@ -1,7 +1,6 @@
 # Thời gian, lỗi và tính nhất quán trong hệ thống phân tán
 
-> **Mạch đọc:** Đọc **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Lỗi một phần** sang **Không có thời gian toàn cục đơn giản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lỗi một phần** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Không có thời gian toàn cục đơn giản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 **hệ thống phân tán (distributed system / 분산 시스템)** gồm nhiều thành phần chạy trên các máy hoặc tiến trình khác nhau và giao tiếp qua mạng. Điều làm nó khó không chỉ là “có nhiều máy”, mà là **không có bộ nhớ chia sẻ hoàn hảo, không có đồng hồ toàn cục hoàn hảo, độ trễ thông điệp không có giới hạn chắc chắn và lỗi có thể chỉ xảy ra ở một phần hệ thống**.
 
@@ -11,8 +10,7 @@ Một tiến trình đơn lẻ bị crash thường dễ nhận biết vì nó d
 
 Hết thời gian chờ (timeout / 타임아웃) chỉ cho biết “chưa nhận được phản hồi trong thời gian chờ”; nó không chứng minh thao tác ở phía xa chưa được thực hiện. Đây là nguồn phổ biến của hiệu ứng phụ bị lặp khi hệ thống thử lại.
 
-
-> **Chuyển mạch:** Từ **Lỗi một phần**, ta sang **Không có thời gian toàn cục đơn giản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Không có thời gian toàn cục đơn giản** tiếp nhận điểm tựa từ **Lỗi một phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ nhân quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Không có thời gian toàn cục đơn giản
 
@@ -22,15 +20,13 @@ Hết thời gian chờ (timeout / 타임아웃) chỉ cho biết “chưa nhậ
 
 Đồng hồ lô-gic (logic / 논리) không đo thời gian thực; nó mã hóa thông tin về thứ tự.
 
-
-> **Chuyển mạch:** Từ **Không có thời gian toàn cục đơn giản**, ta sang **Quan hệ nhân quả** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Quan hệ nhân quả** tiếp nhận điểm tựa từ **Không có thời gian toàn cục đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các mô hình nhất quán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ nhân quả
 
 Sự kiện A **đi trước theo nhân quả (causally precedes)** sự kiện B nếu B có thể bị ảnh hưởng bởi A thông qua chuỗi thực thi hoặc thông điệp. Hai sự kiện đồng thời không có quan hệ nhân quả với nhau. Nhiều mô hình nhất quán chỉ cần bảo toàn thứ tự nhân quả chứ không cần ép toàn bộ hệ thống vào một thứ tự toàn cục.
 
-
-> **Chuyển mạch:** Từ **Quan hệ nhân quả**, ta sang **Các mô hình nhất quán** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Các mô hình nhất quán** tiếp nhận điểm tựa từ **Quan hệ nhân quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiểu đúng định lý CAP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các mô hình nhất quán
 
@@ -40,8 +36,7 @@ Sự kiện A **đi trước theo nhân quả (causally precedes)** sự kiện 
 
 Các bảo đảm theo phiên như **đọc thấy dữ liệu vừa ghi (read-your-writes)** và **đọc đơn điệu (monotonic reads)** giúp hệ thống nhất quán yếu dễ sử dụng hơn.
 
-
-> **Chuyển mạch:** Từ **Các mô hình nhất quán**, ta sang **Hiểu đúng định lý CAP** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Hiểu đúng định lý CAP** tiếp nhận điểm tựa từ **Các mô hình nhất quán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **An toàn (safety / 안전) và liveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiểu đúng định lý CAP
 
@@ -51,8 +46,7 @@ CAP không có nghĩa “luôn chọn 2 trong 3” trong vận hành bình thư�
 
 PACELC mở rộng trực giác này: khi có phân vùng thì đánh đổi giữa khả năng sẵn sàng và tính nhất quán; khi không có phân vùng thì thường còn đánh đổi giữa độ trễ và tính nhất quán.
 
-
-> **Chuyển mạch:** Từ **Hiểu đúng định lý CAP**, ta sang **an toàn (safety / 안전) và liveness** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **An toàn (safety / 안전) và liveness** tiếp nhận điểm tựa từ **Hiểu đúng định lý CAP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Huyền thoại “exactly once”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## An toàn (safety / 안전) và liveness
 
@@ -60,8 +54,7 @@ PACELC mở rộng trực giác này: khi có phân vùng thì đánh đổi gi�
 
 Thuật toán đồng thuận thường chấp nhận mất liveness trong một số kiểu phân vùng để giữ an toàn (safety / 안전).
 
-
-> **Chuyển mạch:** Từ **an toàn (safety / 안전) và liveness**, ta sang **Huyền thoại “exactly once”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Huyền thoại “exactly once”** tiếp nhận điểm tựa từ **An toàn (safety / 안전) và liveness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ phát hiện lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Huyền thoại “exactly once”
 
@@ -69,22 +62,19 @@ Mạng có thể làm mất yêu cầu hoặc phản hồi. Khi máy khách (cli
 
 Broker thông điệp có thể cung cấp bảo đảm exactly-once trong một phạm vi cụ thể, nhưng hiệu ứng phụ ở cơ sở dữ liệu hoặc API bên ngoài vẫn cần giao thức phối hợp.
 
-
-> **Chuyển mạch:** Từ **Huyền thoại “exactly once”**, ta sang **Bộ phát hiện lỗi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Bộ phát hiện lỗi** tiếp nhận điểm tựa từ **Huyền thoại “exactly once”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ phát hiện lỗi
 
 Trong mô hình hoàn toàn bất đồng bộ, không thể luôn phân biệt hoàn hảo một nút “rất chậm” với một nút “đã chết”. Hệ thống thực tế dùng heartbeat, hết thời gian chờ (timeout / 타임아웃) và các giả định cuối cùng đủ chính xác. Phát hiện quá nhạy tạo dương tính giả; phát hiện quá chậm làm failover bị trì hoãn.
 
-
-> **Chuyển mạch:** Từ **Bộ phát hiện lỗi**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Mô hình tư duy** gom các mảnh từ **Bộ phát hiện lỗi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
 > Hệ thống phân tán thay sự chắc chắn bằng **thông điệp + bất định**. Không được suy ra “không xảy ra” chỉ từ hết thời gian chờ (timeout / 타임아웃). Hãy mô tả riêng các bảo đảm về thứ tự, độ bền dữ liệu, khả năng sẵn sàng và độ trễ.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Những hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -94,11 +84,10 @@ Trong mô hình hoàn toàn bất đồng bộ, không thể luôn phân biệt 
 
 **“Sắp xếp timestamp sẽ cho đúng thứ tự toàn cục.”** Sai lệch và bất định đồng hồ phá vỡ suy luận nhân quả nếu không có giao thức hoặc giả định mạnh hơn.
 
-
-> **Chuyển mạch:** Từ **Những hiểu lầm thường gặp**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Kết nối** tiếp nhận điểm tựa từ **Những hiểu lầm thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 [Đồng thời](../03_operating_systems/02_concurrency_synchronization_and_deadlock.md) xử lý thứ tự trong bộ nhớ chia sẻ; hệ thống phân tán loại bỏ giả định về bộ nhớ và đồng hồ chung đồng thời thêm lỗi một phần. Phần [sao chép, phân vùng và đồng thuận](./05_replication_partitioning_and_consensus.md) xây dựng các cơ chế cho những ràng buộc này.
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 network layers packets and encapsulation](./00_network_layers_packets_and_encapsulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

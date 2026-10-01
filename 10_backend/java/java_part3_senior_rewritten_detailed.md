@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed
 
-> **Mạch đọc:** Đọc **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** sang **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)
 
@@ -8,9 +8,7 @@
 >
 > Các tư duy kiểu cấp cao (senior / 시니어), lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구), mẫu lập trình (programming pattern / 프로그래밍 패턴) và mẫu thiết kế (design pattern / 디자인 패턴) được hòa vào nội dung. Khi một mẫu (pattern / 패턴) được nhắc tên, nó được giải thích cùng sự đánh đổi (trade-off / 트레이드오프) và dạng thất bại (failure mode / 실패 모드) thay vì xuất hiện như một checklist để học thuộc.
 
-
-
-> **Chuyển mạch:** Từ **Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)**, ta sang **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed**, **Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** xác định đầu vào; **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)
 
@@ -1304,12 +1302,9 @@ virtual thread events
 
 Run continuous low-overhead recording where chính sách (policy / 정책) allows so sự cố (incident / 인시던트) lịch sử (history / 이력) exists before bài toán (problem / 문제).
 
-
-
 ---
 
-
-> **Chuyển mạch:** Từ **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)**, ta sang **Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed**, cơ chế trong **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)** cần được kiểm chứng bằng dấu vết cụ thể; **Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Java 8 → 11 → 17 → 21 dưới góc nhìn môi trường vận hành (production / 운영 환경) engineer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck
 
@@ -2502,12 +2497,9 @@ Don't only thay đổi (change / 변경) `<java.version>`.
 
 Run tests, phụ thuộc (dependency / 의존성) tính tương thích (compatibility / 호환성), hiệu năng (performance / 성능) baseline, GC/JFR, startup, bộ chứa (container / 컨테이너) bộ nhớ (memory / 메모리) and deprecated/nội bộ (internal / 내부) API scans.
 
-
-
 ---
 
-
-> **Chuyển mạch:** Từ **Profiling môi trường vận hành (production / 운영 환경): chọn bằng chứng theo loại bottleneck**, ta sang **Java 8 → 11 → 17 → 21 dưới góc nhìn môi trường vận hành (production / 운영 환경) engineer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Profiling chỉ có ý nghĩa khi chọn evidence theo bottleneck; phần phiên bản Java đặt kết quả đó vào các thay đổi runtime từ 8 đến 21. Hai khối này cùng dẫn tới quyết định vận hành có thể kiểm chứng, không phải danh sách release note.
 
 ## Java 8 → 11 → 17 → 21 dưới góc nhìn môi trường vận hành (production / 운영 환경) engineer
 
@@ -2992,4 +2984,4 @@ https://docs.oracle.com/javase/specs/
 Java API Documentation:
 https://docs.oracle.com/en/java/javase/
 
-> **Bàn giao:** Sau **Java 8 → 11 → 17 → 21 dưới góc nhìn môi trường vận hành (production / 운영 환경) engineer**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [java master supplement rewritten detailed](./java_master_supplement_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Java 8 → 11 → 17 → 21 dưới góc nhìn môi trường vận hành (production / 운영 환경) engineer**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

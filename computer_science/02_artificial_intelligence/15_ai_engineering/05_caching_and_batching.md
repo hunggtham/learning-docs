@@ -1,7 +1,6 @@
 # Caching và Batching trong hệ thống AI
 
-> **Mạch đọc:** Đặt **Caching và Batching trong hệ thống AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Caching ở nhiều lớp** sang **bộ nhớ đệm (cache / 캐시) Key**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Caching và Batching trong hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Caching ở nhiều lớp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bộ nhớ đệm (cache / 캐시) Key** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Caching và batching đều là kỹ thuật giúp giảm chi phí hoặc độ trễ, nhưng chúng giải quyết hai vấn đề khác nhau. **Bộ nhớ đệm (caching / 캐싱)** tái sử dụng kết quả tính toán đã có. **Gom lô (batching / 배칭)** gom nhiều phép tính mới để phần cứng xử lý hiệu quả hơn.
 
@@ -22,6 +21,8 @@ tool result
 
 Không tồn tại một “AI bộ nhớ đệm (cache / 캐시)” duy nhất. Mỗi lớp có bộ nhớ đệm (cache / 캐시) key, TTL và consistency ngữ nghĩa (semantics / 의미론) riêng.
 
+> **Chuyển mạch:** Trong **Caching và Batching trong hệ thống AI**, **Bộ nhớ đệm (cache / 캐시) Key** tiếp nhận điểm tựa từ **Caching ở nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시) và ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ nhớ đệm (cache / 캐시) Key
 
 Bộ nhớ đệm (cache / 캐시) chỉ đúng khi key phản ánh đầy đủ mọi đầu vào (input / 입력) có thể ảnh hưởng đầu ra (output / 출력).
@@ -39,6 +40,8 @@ tool state
 
 Nếu bỏ `model version`, sau khi rollout mô hình (model / 모델) mới hệ thống vẫn có thể trả kết quả cũ từ bộ nhớ đệm (cache / 캐시).
 
+> **Chuyển mạch:** Ở chặng này của **Caching và Batching trong hệ thống AI**, **Chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시) và ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Bộ nhớ đệm (cache / 캐시) Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TTL và vô hiệu hóa (invalidation / 무효화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시) và ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시)
 
 **chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시)** chỉ reuse khi key khớp chính xác.
@@ -47,11 +50,15 @@ Nếu bỏ `model version`, sau khi rollout mô hình (model / 모델) mới h�
 
 Với tác vụ rủi ro cao, ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) cần threshold, lĩnh vực (domain / 도메인) ràng buộc (constraint / 제약조건) và kiểm tra hợp lệ (validation / 검증) rõ ràng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching và Batching trong hệ thống AI**, **TTL và vô hiệu hóa (invalidation / 무효화)** tiếp nhận điểm tựa từ **Chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시) và ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KV bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## TTL và vô hiệu hóa (invalidation / 무효화)
 
 Bộ nhớ đệm (cache / 캐시) vô hiệu hóa (invalidation / 무효화) khó vì kiến thức bên ngoài luôn thay đổi. RAG retrieval bộ nhớ đệm (cache / 캐시) cần được invalidate khi corpus hoặc chỉ mục (index / 인덱스) cập nhật (update / 업데이트). công cụ (tool / 도구)/API bộ nhớ đệm (cache / 캐시) cũng cần freshness chính sách (policy / 정책) riêng.
 
 TTL nên phụ thuộc độ biến động của dữ liệu, không nên dùng một con số chung cho toàn hệ thống.
+
+> **Chuyển mạch:** Trong **Caching và Batching trong hệ thống AI**, **KV bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **TTL và vô hiệu hóa (invalidation / 무효화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefix Caching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## KV bộ nhớ đệm (cache / 캐시)
 
@@ -67,17 +74,23 @@ Long ngữ cảnh (context / 맥락) có thể làm KV bộ nhớ đệm (cache 
 
 Paged hoặc block-based KV management giúp giảm fragmentation và hỗ trợ continuous batching hiệu quả hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Caching và Batching trong hệ thống AI**, **Prefix Caching** tiếp nhận điểm tựa từ **KV bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prefix Caching
 
 Nếu nhiều yêu cầu (request / 요청) dùng chung một prefix lớn, ví dụ hệ thống (system / 시스템) prompt hoặc document ngữ cảnh (context / 맥락) giống nhau, computation ở bước prefill có thể tái sử dụng.
 
 Lợi ích lớn nhất khi dùng chung (shared / 공유) prefix dài. Tuy nhiên bộ nhớ đệm (cache / 캐시) key phải khớp mô hình (model / 모델), tokenizer và positional ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching và Batching trong hệ thống AI**, **Batching** tiếp nhận điểm tựa từ **Prefix Caching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động (dynamic / 동적) Batching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Batching
 
 Các dense accelerator kernel hoạt động hiệu quả hơn với ma trận (matrix / 행렬) lớn. Batch kích thước (size / 크기) lớn giúp tăng hardware utilization nhưng đồng thời tăng hàng đợi (queue / 큐) wait và bộ nhớ (memory / 메모리) usage.
 
 Offline huấn luyện (training / 학습) có thể dùng batch lớn. Online suy luận (inference / 추론) thường cần động (dynamic / 동적) batching.
+
+> **Chuyển mạch:** Trong **Caching và Batching trong hệ thống AI**, **Động (dynamic / 동적) Batching** tiếp nhận điểm tựa từ **Batching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Continuous Batching cho LLM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động (dynamic / 동적) Batching
 
@@ -89,6 +102,8 @@ chờ ngắn hơn → latency tốt hơn → utilization thấp hơn
 ```
 
 Không có một batch kích thước (size / 크기) tối ưu cho mọi hệ thống.
+
+> **Chuyển mạch:** Ở chặng này của **Caching và Batching trong hệ thống AI**, **Continuous Batching cho LLM** tiếp nhận điểm tựa từ **Động (dynamic / 동적) Batching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Microbatching trong huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Continuous Batching cho LLM
 
@@ -105,6 +120,8 @@ Scheduler cần quản lý:
 - max đơn vị từ (token / 토큰);
 - cancellation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching và Batching trong hệ thống AI**, **Microbatching trong huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **Continuous Batching cho LLM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Yêu cầu (request / 요청) Coalescing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Microbatching trong huấn luyện (training / 학습)
 
 Khi GPU bộ nhớ (memory / 메모리) không đủ cho một batch lớn, độ dốc (gradient / 기울기) accumulation chia logical batch thành nhiều microbatch:
@@ -118,13 +135,19 @@ optimizer step
 
 Effective batch kích thước (size / 크기) lớn hơn vật lý (physical / 물리적) batch kích thước (size / 크기).
 
+> **Chuyển mạch:** Trong **Caching và Batching trong hệ thống AI**, **Yêu cầu (request / 요청) Coalescing** tiếp nhận điểm tựa từ **Microbatching trong huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro chất lượng do bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Yêu cầu (request / 요청) Coalescing
 
 Nếu nhiều máy khách (client / 클라이언트) cùng yêu cầu một phép tính đắt tiền giống hệt nhau trong cùng thời điểm, hệ thống có thể gộp thành một in-flight yêu cầu (request / 요청) thay vì chạy nhiều bản trùng lặp.
 
+> **Chuyển mạch:** Ở chặng này của **Caching và Batching trong hệ thống AI**, **Rủi ro chất lượng do bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Yêu cầu (request / 요청) Coalescing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rủi ro chất lượng do bộ nhớ đệm (cache / 캐시)
 
 Caching có thể giữ nguyên lỗi cũ. Một câu trả lời hallucination nếu bị bộ nhớ đệm (cache / 캐시) có thể trở thành hallucination lặp lại nhiều lần. Vì vậy bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) nên phân biệt đầu ra (output / 출력) xác định và ổn định với đầu ra (output / 출력) cần freshness hoặc xác minh (verification / 확인).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching và Batching trong hệ thống AI**, **Khả năng quan sát (observability / 관측 가능성)** tiếp nhận điểm tựa từ **Rủi ro chất lượng do bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khả năng quan sát (observability / 관측 가능성)
 
@@ -143,6 +166,8 @@ memory utilization
 
 Hit tỷ lệ (rate / 비율) cao nhưng stale kết quả (result / 결과) nhiều không phải là thành công.
 
+> **Chuyển mạch:** Trong **Caching và Batching trong hệ thống AI**, **Mô hình tư duy** gom các mảnh từ **Khả năng quan sát (observability / 관측 가능성)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -151,6 +176,8 @@ Phần này chốt mental model thành một chuỗi có thể dùng lại: bố
 Caching  = tránh lặp lại công việc đã làm
 Batching = làm công việc bắt buộc phải làm hiệu quả hơn
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Caching và Batching trong hệ thống AI**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -166,6 +193,10 @@ Không. thông lượng (throughput / 처리량) có thể tăng nhưng online �
 
 Không. ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) thêm một bước learned similarity judgment nên có rủi ro chất lượng riêng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Caching và Batching trong hệ thống AI**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Xem [Model Serving](./03_model_serving.md), [Latency, Throughput and Cost](./09_latency_throughput_and_cost.md), [RAG](../09_retrieval_and_rag/README.md) và [Transformer trong LLM](../08_large_language_models/03_transformer_inside_llms.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

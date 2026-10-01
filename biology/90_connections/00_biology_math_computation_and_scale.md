@@ -1,6 +1,6 @@
 # Biology × Mathematics × Computation × quy mô (scale / 규모) — Các kết nối xuyên lĩnh vực (생물학 × 수학 × 계산)
 
-> **Mạch đọc:** Đọc **Biology × Mathematics × Computation × quy mô (scale / 규모) — Các kết nối xuyên lĩnh vực (생물학 × 수학 × 계산)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. quy mô (scale / 규모) thay đổi câu hỏi, không thay vật lý nền** sang **2. Surface-area-to-volume ratio**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README Biology](../README.md) là owner của nhánh kết nối này. File đi từ quy mô và hình học sang tốc độ, phản hồi, xác suất, mạng lưới rồi quay lại mô phỏng và các motif chung; mỗi bước chỉ giữ quan hệ có thể dùng để đọc các chapter Biology khác.
 
 
 Nếu đọc từng chapter riêng, ta có thể thấy nhiều khái niệm khác tên: khuếch tán (diffusion), động học enzym (enzyme kinetics), quần thể (population) sinh trưởng (growth), điện thế hoạt động (action potential), gen (gene) mạng lưới (network), lưới thức ăn (food web), giải trình tự (sequencing). Nhưng khi lùi lại một bước, các hệ này lặp lại một số **các mô-típ toán học và tính toán (mathematical and computational motifs)** giống nhau: tốc độ (rate), chênh lệch (gradient), phản hồi (feedback / 피드백), xác suất (probability / 확률), mạng lưới (network), tối ưu hóa (optimization / 최적화) và thông tin (information / 정보).
@@ -39,6 +39,8 @@ nên:
 - lá (leaf)/rễ (root) kiến trúc (architecture / 아키텍처) ưu tiên giao diện (interface / 인터페이스).
 
 Một equation hình học (geometry / 기하학) tạo consequences ở nhiều chapter.
+
+> **Chuyển mạch:** Tỷ lệ diện tích–thể tích cho biết hình học giới hạn trao đổi ra sao; **3. tỷ lệ thay đổi** chuyển cùng câu hỏi đó sang động lực học: không chỉ hệ có kích thước nào, mà hệ đang đổi nhanh đến mức nào.
 
 ## 3. tỷ lệ (rate / 비율) of thay đổi (change / 변경)
 
@@ -102,6 +104,8 @@ Decibel, thông tin (information / 정보) measure, fold-change visualization v�
 Log hữu ích khi quantity span nhiều thứ tự (order / 순서) of magnitude. Nó biến multiplicative difference thành additive quy mô (scale / 규모).
 
 Ví dụ pH 6 và 7 khác khoảng 10 lần [H⁺], không phải “1 đơn vị (unit / 단위) nhỏ”.
+
+> **Chuyển mạch:** Logarithm nén các khoảng cách nhân thành khoảng cách cộng để so sánh nhiều bậc độ lớn; **7. Chênh lệch** dùng một ý khác để mô tả hướng trong không gian: gradient cho biết chất hay năng lượng sẽ di chuyển về đâu.
 
 ## 7. Chênh lệch
 
@@ -192,6 +196,8 @@ Nếu disease hiếm, dương tính giả (false positive) từ population healt
 
 Biology và statistics không thể tách trong diagnostic lập luận (reasoning / 추론).
 
+> **Chuyển mạch:** Khi đã thấy prevalence làm đổi ý nghĩa của một kết quả dương tính, **13. Sampling và độ bất định** mở rộng cùng vấn đề sang sai số của mẫu và độ tin cậy của ước lượng.
+
 ## 13. Sampling và độ bất định (uncertainty / 불확실성)
 
 Experiment dùng mẫu (sample / 표본) để infer population. mẫu (sample / 표본) mean có độ bất định; lần lặp (replicate) giúp estimate variance.
@@ -217,6 +223,8 @@ Nhân quả (causal / 인과적) suy luận (inference / 추론) cần intervent
 Directed acyclic đồ thị (graph / 그래프) (DAG) giúp reason confounder/mediator.
 
 Tư duy khoa học (scientific thinking) chapter quay lại bằng formal mô hình (model / 모델).
+
+> **Chuyển mạch:** Correlation chỉ cho biết biến cùng thay đổi; **16. Lý thuyết đồ thị** cung cấp cấu trúc để biểu diễn các quan hệ và đặt câu hỏi về đường dẫn, nút trung tâm và yếu tố gây nhiễu.
 
 ## 16. Lý thuyết đồ thị (graph theory)
 

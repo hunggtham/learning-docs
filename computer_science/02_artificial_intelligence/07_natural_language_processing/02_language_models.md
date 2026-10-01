@@ -1,7 +1,6 @@
 # Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ
 
-> **Mạch đọc:** Đặt **ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Joint xác suất (probability / 확률) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** sang **n-gram ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Joint xác suất (probability / 확률) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **n-gram ngôn ngữ (language / 언어) các mô hình (models / 모델들)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Ngôn ngữ (language / 언어) mô hình (model / 모델) gán xác suất (probability / 확률) cho chuỗi (sequence / 시퀀스) hoặc dự đoán đơn vị từ (token / 토큰) dựa trên ngữ cảnh (context / 맥락). Đây là cốt lõi (core / 핵심) lớp trừu tượng (abstraction / 추상화) đứng sau autocomplete, speech decoding, machine translation và Large ngôn ngữ (language / 언어) các mô hình (models / 모델들).
 
@@ -29,6 +28,8 @@ Autoregressive ngôn ngữ (language / 언어) mô hình (model / 모델) học:
 P_\theta(x_t\mid x_{<t})
 \]
 
+> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Joint xác suất (probability / 확률) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** xác định đầu vào; **n-gram ngôn ngữ (language / 언어) các mô hình (models / 모델들)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Why Neural ngôn ngữ (language / 언어) các mô hình (models / 모델들)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## n-gram ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
 Approximate ngữ cảnh (context / 맥락) limited:
@@ -47,6 +48,8 @@ Sparse dữ liệu (data / 데이터) causes zero probabilities for unseen n-gra
 
 Smoothing methods như Laplace, Good-Turing, Kneser-Ney redistribute xác suất (probability / 확률) mass. Kneser-Ney đặc biệt uses continuation statistics and remains a landmark classical LM technique.
 
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Why Neural ngôn ngữ (language / 언어) các mô hình (models / 모델들)?** tiếp nhận điểm tựa từ **n-gram ngôn ngữ (language / 언어) các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Maximum Likelihood huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Why Neural ngôn ngữ (language / 언어) các mô hình (models / 모델들)?
 
 n-gram treats contexts mostly discrete. `the cat sat` and `the dog sat` share little unless tường minh (explicit / 명시적) backoff.
@@ -64,6 +67,8 @@ fixed previous tokens
 
 RNN removed fixed ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우). Transformer improved long-range truy cập (access / 접근) and parallel huấn luyện (training / 학습).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Maximum Likelihood huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **Why Neural ngôn ngữ (language / 언어) các mô hình (models / 모델들)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Perplexity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Maximum Likelihood huấn luyện (training / 학습)
 
 Given corpus, maximize:
@@ -79,6 +84,8 @@ L=-\frac1T\sum_t\log P_\theta(x_t\mid x_{<t})
 \]
 
 Teacher forcing gives mô hình (model / 모델) true previous tokens during huấn luyện (training / 학습).
+
+> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Perplexity** tiếp nhận điểm tựa từ **Maximum Likelihood huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Masked ngôn ngữ (language / 언어) Modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Perplexity
 
@@ -100,6 +107,8 @@ Lower perplexity on same tokenization/kiểm thử (test / 테스트) phân ph�
 
 But perplexity cannot compare cleanly across different tokenizers because đơn vị (unit / 단위) differs. Lower PPL also does not guarantee better instruction following/factuality.
 
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Masked ngôn ngữ (language / 언어) Modeling** tiếp nhận điểm tựa từ **Perplexity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhân quả (causal / 인과적) ngôn ngữ (language / 언어) Modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Masked ngôn ngữ (language / 언어) Modeling
 
 BERT-like mục tiêu (objective / 목표) masks tokens and predicts them using both left/right ngữ cảnh (context / 맥락):
@@ -109,6 +118,8 @@ P(x_i\mid x_{\setminus i})
 \]
 
 This is not autoregressive joint factorization in same direct way. It learns bidirectional representations excellent for encoding tasks.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Nhân quả (causal / 인과적) ngôn ngữ (language / 언어) Modeling** tiếp nhận điểm tựa từ **Masked ngôn ngữ (language / 언어) Modeling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prefix / Seq2Seq ngôn ngữ (language / 언어) Modeling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhân quả (causal / 인과적) ngôn ngữ (language / 언어) Modeling
 
@@ -120,6 +131,8 @@ P(x_t\mid x_{<t})
 
 Advantage: mô hình (model / 모델) can directly generate by ancestral sampling.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Prefix / Seq2Seq ngôn ngữ (language / 언어) Modeling** tiếp nhận điểm tựa từ **Nhân quả (causal / 인과적) ngôn ngữ (language / 언어) Modeling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sampling from ngôn ngữ (language / 언어) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Prefix / Seq2Seq ngôn ngữ (language / 언어) Modeling
 
 Encoder-decoder các mô hình (models / 모델들) điều kiện (condition / 조건) đầu ra (output / 출력) chuỗi (sequence / 시퀀스) on nguồn (source / 소스):
@@ -129,6 +142,8 @@ P(y\mid x)=\prod_tP(y_t\mid y_{<t},x)
 \]
 
 T5 reframes many NLP tasks as text-to-text conditional generation.
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Sampling from ngôn ngữ (language / 언어) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Prefix / Seq2Seq ngôn ngữ (language / 언어) Modeling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exposure độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sampling from ngôn ngữ (language / 언어) mô hình (model / 모델)
 
@@ -155,6 +170,8 @@ Choose smallest đơn vị từ (token / 토큰) set whose cumulative xác suấ
 
 Sampling cấu hình (configuration / 구성) affects style/diversity, not mô hình (model / 모델) kiến thức (knowledge / 지식) itself.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Exposure độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Sampling from ngôn ngữ (language / 언어) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Degeneration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Exposure độ lệch (bias / 편향)
 
 Huấn luyện (training / 학습) conditions on true lịch sử (history / 이력); generation conditions on own outputs. One lỗi (error / 오류) changes future ngữ cảnh (context / 맥락) and can cascade.
@@ -163,11 +180,15 @@ This mismatch is inherent tiêu chuẩn (standard / 표준) autoregressive maxim
 
 Instruction tuning/RL-based post-training can thay đổi (change / 변경) hành vi (behavior / 동작), but does not remove autoregressive nature.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Degeneration** tiếp nhận điểm tựa từ **Exposure độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ kiến thức (knowledge / 지식) cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Degeneration
 
 Pure maximization or poor sampling can cause repetition, generic văn bản (text / 텍스트) or loops.
 
 Reasons include phân phối (distribution / 분포) shape, huấn luyện (training / 학습) mục tiêu (objective / 목표) and decoding chiến lược (strategy / 전략). Repetition penalties can help but are heuristic and may distort phân phối (distribution / 분포).
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Degeneration** nêu điều cần giải thích; **Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ kiến thức (knowledge / 지식) cơ sở dữ liệu (database / 데이터베이스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ Truth mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ kiến thức (knowledge / 지식) cơ sở dữ liệu (database / 데이터베이스)
 
@@ -183,11 +204,15 @@ Consequences:
 
 Bên ngoài (external / 외부) retrieval (RAG) adds tường minh (explicit / 명시적) nguồn (source / 소스) truy cập (access / 접근).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ kiến thức (knowledge / 지식) cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ Truth mô hình (model / 모델)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ngữ cảnh (context / 맥락) and In-Context học tập (learning / 학습) Preview** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ Truth mô hình (model / 모델)
 
 Huấn luyện (training / 학습) corpus contains true/false fiction/speculation. Next-token likelihood rewards linguistic plausibility under corpus phân phối (distribution / 분포), not direct world xác minh (verification / 확인).
 
 This explains hallucination rủi ro (risk / 위험) at mục tiêu (objective / 목표) mức (level / 수준).
+
+> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Ngữ cảnh (context / 맥락) and In-Context học tập (learning / 학습) Preview** tiếp nhận điểm tựa từ **Ngôn ngữ (language / 언어) mô hình (model / 모델) ≠ Truth mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngữ cảnh (context / 맥락) and In-Context học tập (learning / 학습) Preview
 
@@ -197,11 +222,15 @@ Cơ chế (mechanism / 메커니즘) arises from learned chuỗi (sequence / 시
 
 Detailed in LLM folder.
 
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Scaling** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) and In-Context học tập (learning / 학습) Preview** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compression View** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Scaling
 
 As mô hình (model / 모델) parameters, dữ liệu (data / 데이터) and compute quy mô (scale / 규모), language-model mất mát (loss / 손실) often follows predictable power-law-like curves over regimes. Better predictive modeling unlocks emergent-looking downstream capabilities, though “emergence” can depend chỉ số (metric / 지표) thresholding.
 
 Scaling laws later discussed in LLM tầng (layer / 계층).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Compression View** tiếp nhận điểm tựa từ **Scaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Compression View
 
@@ -215,6 +244,8 @@ mã (code / 코드)\ length\approx-\log_2P(x)
 
 Predictive cấu trúc (structure / 구조) = compressible cấu trúc (structure / 구조).
 
+> **Chuyển mạch:** Trong **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Compression View** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -226,6 +257,8 @@ P(next token | all allowed context)
 ```
 
 The richness comes from learned contextual biểu diễn (representation / 표현), not a different basic đầu ra (output / 출력) mục tiêu (objective / 목표).
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -245,6 +278,10 @@ No. Truth is not directly optimized.
 
 It changes sampling phân phối (distribution / 분포) from same logits, not parameters/kiến thức (knowledge / 지식).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Language Models connect [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Sequence Models](../06_deep_learning_architectures/01_sequence_models.md), [Transformer](../06_deep_learning_architectures/05_transformer.md) and prepare LLM pretraining.
+
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

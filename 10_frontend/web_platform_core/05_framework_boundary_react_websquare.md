@@ -1,6 +1,6 @@
 # Khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계): React và WebSquare
 
-> **Mạch đọc:** Đặt **khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계): React và WebSquare** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **React** sang **WebSquare**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계): React và WebSquare**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **React** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **WebSquare** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Khung phần mềm (framework / 프레임워크) giúp tổ chức ứng dụng (application / 애플리케이션) trạng thái (state / 상태) và rendering, nhưng không phải một
 trình duyệt (browser / 브라우저) mới. Khi khung phần mềm (framework / 프레임워크) hành vi (behavior / 동작) khó hiểu, quay về ba câu hỏi: thành phần nguyên thủy (primitive / 기본 요소)
@@ -14,8 +14,7 @@ tính đồng thời (concurrency / 동시성) và các máy chủ (server / 서
 bản địa (native / 네이티브) events và chịu hydration/parser các ràng buộc (constraints / 제약조건들). gỡ lỗi (debug / 디버그) nên kiểm tra DOM,
 CSS, mạng (network / 네트워크) và sự kiện (event / 이벤트) timeline trước khi kết luận reconciliation là nguyên nhân.
 
-
-> **Chuyển mạch:** Từ **React**, ta sang **WebSquare** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** React và WebSquare cùng đặt UI trên web platform nhưng khác lifecycle, state model và ownership. Phần WebSquare làm rõ boundary riêng trước khi placement checklist chọn framework theo constraint thật.
 
 ## WebSquare
 
@@ -25,8 +24,7 @@ submission thứ tự (ordering / 순서), grid định danh (identity / 식별�
 không gộp chúng với trình duyệt (browser / 브라우저) vòng đời (lifecycle / 생명주기). XML nguồn (source / 소스), thời gian chạy (runtime / 런타임) engine và W-Pack
 sản phẩm tạo ra (artifact / 산출물) cần được dấu vết (trace / 추적) như ba định danh (identity / 식별자) khác nhau.
 
-
-> **Chuyển mạch:** Từ **WebSquare**, ta sang **khung phần mềm (framework / 프레임워크) placement checklist** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** WebSquare boundary cung cấp các trade-off cụ thể về runtime và migration. Placement checklist dùng chúng cùng React/web-platform constraints để kết thúc bằng quyết định có owner, không phải bảng so sánh tính năng.
 
 ## Khung phần mềm (framework / 프레임워크) placement checklist
 
@@ -40,4 +38,4 @@ Mỗi chapter khung phần mềm (framework / 프레임워크) nên chỉ rõ:
 Đọc tiếp [React index](../react/00_index.md) hoặc [WebSquare index](../websquare/README.md);
 không dùng khung phần mềm (framework / 프레임워크) README để thay thế cốt lõi (core / 핵심) nền tảng (platform / 플랫폼) mô hình tư duy (mental model / 사고 모델).
 
-> **Bàn giao:** Sau **khung phần mềm (framework / 프레임워크) placement checklist**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 web platform model](./00_web_platform_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Khung phần mềm (framework / 프레임워크) placement checklist**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

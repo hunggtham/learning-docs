@@ -1,6 +1,6 @@
 # Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế
 
-> **Mạch đọc:** Đọc **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Khan hiếm biến mong muốn thành bài toán lựa chọn** sang **2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Khan hiếm biến mong muốn thành bài toán lựa chọn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Economics bắt đầu từ một thực tế đơn giản: nhu cầu và mục tiêu có thể mở rộng, nhưng thời gian, thu nhập, lao động, vốn, đất đai, năng lượng và sự chú ý đều hữu hạn. Vì vậy mọi lựa chọn đều có chi phí cơ hội, và câu hỏi kinh tế tốt phải chỉ ra nguồn lực nào bị ràng buộc, ai ra quyết định, động lực nào thay đổi và kết quả được đo bằng gì.
 
@@ -14,8 +14,7 @@ Khan hiếm (scarcity) không có nghĩa mọi thứ đều tuyệt đối thi�
 
 Ràng buộc (constraint / 제약조건) không chỉ là tiền. Một bệnh viện có thể còn ngân sách nhưng thiếu bác sĩ; một nhà máy có thể có đơn hàng nhưng thiếu công suất; một hộ gia đình có thể có thu nhập nhưng không có thời gian. Khi ràng buộc (constraint / 제약조건) khác nhau, cùng một thay đổi về giá hoặc chính sách có thể tạo phản ứng khác nhau.
 
-
-> **Chuyển mạch:** Từ **1. Khan hiếm biến mong muốn thành bài toán lựa chọn**, ta sang **2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Scarcity biến mong muốn thành choice set; opportunity cost đo phương án tốt nhất bị bỏ, rồi marginal analysis hỏi lợi ích và chi phí của đơn vị kế tiếp.
 
 ## 2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua
 
@@ -27,8 +26,7 @@ opportunity cost = value of the best forgone alternative
 
 **Sunk chi phí (cost / 비용)** là khoản chi phí đã phát sinh và không thể thu hồi bằng quyết định hiện tại. Nó không nên quyết định lựa chọn biên hiện tại. Quyết định tiếp tục hay dừng phải so sánh lợi ích và chi phí tăng thêm từ hôm nay, đồng thời tính các nghĩa vụ không thể tránh. Ví dụ, tiền vé xem phim đã mua không làm bộ phim trở nên đáng xem hơn nếu bạn đang bị ốm; khoản tiền đó đã mất dù bạn ở nhà hay đi xem.
 
-
-> **Chuyển mạch:** Từ **2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua**, ta sang **3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”** tiếp nhận điểm tựa từ **2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”
 
@@ -42,8 +40,7 @@ choose more activity while marginal benefit ≥ marginal cost
 
 Nói ngắn gọn, marginal phân tích (analysis / 분석) hỏi: “Nếu làm thêm một chút, phần được thêm vào có đáng với phần chi phí phát sinh thêm không?”. **Externality** là chi phí hoặc lợi ích rơi sang người không trực tiếp tham gia; **bất định (uncertainty / 불확실성)** là khi kết quả chưa biết chắc. Hai yếu tố này khiến chi phí mà cá nhân tự nhìn thấy có thể khác chi phí của toàn xã hội.
 
-
-> **Chuyển mạch:** Từ **3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”**, ta sang **4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi** tiếp nhận điểm tựa từ **3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi
 
@@ -53,8 +50,7 @@ Chuỗi đọc dễ nhất là: **luật chơi đổi → lợi ích/chi phí đ
 
 Một incentive có thể tạo phản ứng bậc hai. Trợ cấp sản lượng có thể tăng đầu ra (output / 출력) nhưng cũng làm tăng giá đầu vào hoặc khuyến khích đầu tư vào hoạt động có lợi suất xã hội thấp. Thưởng theo chỉ tiêu có thể cải thiện số đo nhưng làm người thực hiện game chỉ số (metric / 지표) nếu chỉ số (metric / 지표) không đại diện đúng kết quả (outcome / 결과).
 
-
-> **Chuyển mạch:** Từ **4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi**, ta sang **5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt** tiếp nhận điểm tựa từ **4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Positive và normative economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt
 
@@ -70,8 +66,7 @@ Khi đọc một mô hình cân bằng, cần ghi rõ:
 - kỳ vọng được hình thành thế nào;
 - equilibrium là ngắn hạn, dài hạn hay steady trạng thái (state / 상태).
 
-
-> **Chuyển mạch:** Từ **5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt**, ta sang **6. Positive và normative economics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **6. Positive và normative economics** tiếp nhận điểm tựa từ **5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. PPF biến sự đánh đổi (trade-off / 트레이드오프) thành một biên có thể nhìn thấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Positive và normative economics
 
@@ -81,8 +76,7 @@ Tách hai lớp không có nghĩa economics không liên quan đến chính sác
 
 Ví dụ, “tăng thuế thuốc lá làm lượng mua giảm” là claim positive có thể kiểm tra bằng dữ liệu. “Nên tăng thuế thuốc lá dù người thu nhập thấp chịu gánh nặng lớn hơn” là claim normative; nó cần thêm judgment về sức khỏe, quyền tự chủ và phân phối.
 
-
-> **Chuyển mạch:** Từ **6. Positive và normative economics**, ta sang **7. PPF biến sự đánh đổi (trade-off / 트레이드오프) thành một biên có thể nhìn thấy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **7. PPF biến sự đánh đổi (trade-off / 트레이드오프) thành một biên có thể nhìn thấy** tiếp nhận điểm tựa từ **6. Positive và normative economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Efficiency khác equity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. PPF biến sự đánh đổi (trade-off / 트레이드오프) thành một biên có thể nhìn thấy
 
@@ -92,8 +86,7 @@ Môi trường vận hành (production / 운영 환경) Possibility Frontier (PP
 
 PPF chỉ mô tả **nền kinh tế có thể sản xuất được bao nhiêu**, không nói trực tiếp ai sở hữu sản lượng. Công nghệ mới có thể đẩy PPF ra ngoài nhưng lợi ích vẫn tập trung vào một nhóm. Vì vậy productive sức chứa (capacity / 용량) và phân phối (distribution / 분포) phải được phân tích riêng.
 
-
-> **Chuyển mạch:** Từ **7. PPF biến sự đánh đổi (trade-off / 트레이드오프) thành một biên có thể nhìn thấy**, ta sang **8. Efficiency khác equity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **8. Efficiency khác equity** tiếp nhận điểm tựa từ **7. PPF biến sự đánh đổi (trade-off / 트레이드오프) thành một biên có thể nhìn thấy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Comparative statics thay đổi một giả định tại một thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Efficiency khác equity
 
@@ -103,8 +96,7 @@ Một chính sách có thể làm tổng surplus tăng nhưng phân phối lại
 
 Efficiency là câu hỏi về việc chiếc bánh có được tạo ra hoặc phân bổ tốt không; equity là câu hỏi ai nhận phần nào của chiếc bánh. Hai câu hỏi có thể dẫn đến hai đánh giá khác nhau về cùng một chính sách.
 
-
-> **Chuyển mạch:** Từ **8. Efficiency khác equity**, ta sang **9. Comparative statics thay đổi một giả định tại một thời điểm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **9. Comparative statics thay đổi một giả định tại một thời điểm** tiếp nhận điểm tựa từ **8. Efficiency khác equity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Checklist đọc một claim kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Comparative statics thay đổi một giả định tại một thời điểm
 
@@ -114,8 +106,7 @@ Không nên gọi mọi biến động là comparative statics. Nếu adjustment
 
 Ví dụ, tăng lãi suất có thể làm đầu tư giảm trong mô hình tĩnh. Nhưng trong thực tế còn có tái cấp vốn, tỷ giá, giá tài sản, kỳ vọng lạm phát và chất lượng tín dụng. So sánh trước–sau cho biết hướng có thể xảy ra, nhưng chưa giải thích nền kinh tế đi tới trạng thái mới bằng con đường nào.
 
-
-> **Chuyển mạch:** Từ **9. Comparative statics thay đổi một giả định tại một thời điểm**, ta sang **10. Checklist đọc một claim kinh tế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **10. Checklist đọc một claim kinh tế** tiếp nhận điểm tựa từ **9. Comparative statics thay đổi một giả định tại một thời điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10. Checklist đọc một claim kinh tế
 
@@ -131,4 +122,4 @@ Ví dụ, tăng lãi suất có thể làm đầu tư giảm trong mô hình tĩ
 
 Đây là nền để đi tiếp vào bên tiêu thụ (consumer / 소비자)/producer lý thuyết (theory / 이론), thị trường (market / 시장) cấu trúc (structure / 구조), macroeconomics và econometrics mà không biến Economics thành danh sách thuật ngữ rời rạc.
 
-> **Bàn giao:** Sau **10. Checklist đọc một claim kinh tế**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **10. Checklist đọc một claim kinh tế**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

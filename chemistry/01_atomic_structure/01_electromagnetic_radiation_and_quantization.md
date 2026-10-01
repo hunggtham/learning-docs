@@ -1,7 +1,6 @@
 # Bức xạ điện từ và lượng tử hóa
 
-> **Mạch đọc:** Đọc **Bức xạ điện từ và lượng tử hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bức xạ điện từ là gì?** sang **Vì sao bước sóng và tần số đều quan trọng?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bức xạ điện từ và lượng tử hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bức xạ điện từ là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao bước sóng và tần số đều quan trọng?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Muốn hiểu electron trong nguyên tử, ta cần đi qua một vấn đề lịch sử quan trọng: **vật chất tương tác với ánh sáng như thế nào?** Chính các thí nghiệm về bức xạ và quang phổ đã cho thấy mô hình cổ điển không đủ để mô tả thế giới nguyên tử.
 
@@ -26,6 +25,8 @@ trong đó `c` là tốc độ ánh sáng.
 
 Quan hệ này nói rằng khi bước sóng ngắn hơn, tần số phải cao hơn để tích vẫn bằng `c`.
 
+> **Chuyển mạch:** Trong **Bức xạ điện từ và lượng tử hóa**, **Vì sao bước sóng và tần số đều quan trọng?** tiếp nhận điểm tựa từ **Bức xạ điện từ là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vấn đề của vật lý cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao bước sóng và tần số đều quan trọng?
 
 Bước sóng cho trực giác về thang không gian của sóng. Tần số cho biết trường điện từ dao động bao nhiêu chu kỳ trong một giây.
@@ -44,6 +45,8 @@ Dùng `c≈3.00×10^8 m/s` và `500 nm = 5.00×10^{-7} m`:
 
 Đây là tần số thuộc vùng ánh sáng nhìn thấy.
 
+> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ và lượng tử hóa**, **Vấn đề của vật lý cổ điển** tiếp nhận điểm tựa từ **Vì sao bước sóng và tần số đều quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lượng tử hóa: năng lượng không phải lúc nào cũng thay đổi liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vấn đề của vật lý cổ điển
 
 Cuối thế kỷ 19, nhiều hiện tượng liên quan đến ánh sáng đã được mô tả tốt bằng lý thuyết sóng. Tuy nhiên, một số thí nghiệm không phù hợp với dự đoán cổ điển.
@@ -51,6 +54,8 @@ Cuối thế kỷ 19, nhiều hiện tượng liên quan đến ánh sáng đã 
 Ví dụ quan trọng là **bức xạ vật đen (blackbody radiation / 흑체 복사)**. Lý thuyết cổ điển dự đoán năng lượng phát ra ở tần số cao tăng theo cách dẫn tới cái gọi là **thảm họa tử ngoại (ultraviolet catastrophe)**. Thực nghiệm không cho kết quả như vậy.
 
 Để phù hợp dữ liệu, Max Planck đề xuất rằng trao đổi năng lượng không diễn ra liên tục tùy ý mà theo những lượng rời rạc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ và lượng tử hóa**, **Lượng tử hóa: năng lượng không phải lúc nào cũng thay đổi liên tục** tiếp nhận điểm tựa từ **Vấn đề của vật lý cổ điển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Photon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lượng tử hóa: năng lượng không phải lúc nào cũng thay đổi liên tục
 
@@ -72,6 +77,8 @@ Tần số càng cao thì năng lượng của một lượng tử càng lớn.
 
 Đây là lý do photon tử ngoại có thể gây tổn thương quang hóa mạnh hơn photon ánh sáng nhìn thấy, dù cường độ tổng của chùm sáng là một đại lượng khác.
 
+> **Chuyển mạch:** Trong **Bức xạ điện từ và lượng tử hóa**, **Photon** tiếp nhận điểm tựa từ **Lượng tử hóa: năng lượng không phải lúc nào cũng thay đổi liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quang phổ nguyên tử: nguyên tử không hấp thụ mọi năng lượng tùy ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Photon
 
 Einstein mở rộng ý tưởng lượng tử hóa khi giải thích **hiệu ứng quang điện (photoelectric effect / 광전 효과)**. Ánh sáng có thể trao đổi năng lượng với vật chất theo các lượng tử gọi là **photon (광자)**.
@@ -85,6 +92,8 @@ E=h\nu=\frac{hc}{\lambda}
 Do đó bức xạ có bước sóng ngắn hơn tương ứng với photon năng lượng cao hơn.
 
 Cần tránh diễn đạt “ánh sáng là hạt chứ không phải sóng”. Lý thuyết lượng tử cho thấy ánh sáng có hành vi không thể nén hoàn toàn vào hình ảnh sóng cổ điển hoặc hạt cổ điển. Hai mô hình cổ điển chỉ mô tả những khía cạnh khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ và lượng tử hóa**, **Quang phổ nguyên tử: nguyên tử không hấp thụ mọi năng lượng tùy ý** tiếp nhận điểm tựa từ **Photon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phát xạ và hấp thụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quang phổ nguyên tử: nguyên tử không hấp thụ mọi năng lượng tùy ý
 
@@ -106,6 +115,8 @@ thì bức xạ hấp thụ hoặc phát ra có độ lớn năng lượng:
 
 Đây là mối nối cốt lõi giữa **quang phổ học (spectroscopy)** và cấu trúc mức năng lượng của nguyên tử.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ và lượng tử hóa**, **Phát xạ và hấp thụ** tiếp nhận điểm tựa từ **Quang phổ nguyên tử: nguyên tử không hấp thụ mọi năng lượng tùy ý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình Bohr: bước tiến quan trọng nhưng chưa phải mô hình cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phát xạ và hấp thụ
 
 Nếu hệ chuyển từ trạng thái năng lượng cao xuống trạng thái thấp hơn, năng lượng có thể được phát ra dưới dạng photon.
@@ -115,6 +126,8 @@ Nếu photon có đúng năng lượng phù hợp với một chuyển mức đ�
 Vì các mức năng lượng là rời rạc, nguyên tử không hấp thụ mọi tần số như nhau. Mẫu hấp thụ và phát xạ trở thành một “dấu vân tay” của tiểu phần hóa học.
 
 Đây là nền tảng của quang phổ học và nhiều kỹ thuật trong hóa học phân tích.
+
+> **Chuyển mạch:** Trong **Bức xạ điện từ và lượng tử hóa**, **Mô hình Bohr: bước tiến quan trọng nhưng chưa phải mô hình cuối** tiếp nhận điểm tựa từ **Phát xạ và hấp thụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao hình ảnh “quỹ đạo hành tinh” vẫn chưa đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình Bohr: bước tiến quan trọng nhưng chưa phải mô hình cuối
 
@@ -132,6 +145,8 @@ Mô hình Bohr giải thích khá tốt quang phổ hydrogen, nhưng không mở
 
 Giá trị quan trọng của mô hình là nó cho thấy năng lượng electron trong nguyên tử bị lượng tử hóa.
 
+> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ và lượng tử hóa**, **Vì sao hình ảnh “quỹ đạo hành tinh” vẫn chưa đủ?** tiếp nhận điểm tựa từ **Mô hình Bohr: bước tiến quan trọng nhưng chưa phải mô hình cuối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật chất cũng có tính chất giống sóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao hình ảnh “quỹ đạo hành tinh” vẫn chưa đủ?
 
 Mô hình Bohr thường được vẽ như electron chạy trên vòng tròn quanh hạt nhân. Hình ảnh này hữu ích về lịch sử nhưng dễ tạo hiểu lầm.
@@ -139,6 +154,8 @@ Mô hình Bohr thường được vẽ như electron chạy trên vòng tròn qu
 Trong cơ học lượng tử hiện đại, electron không có một quỹ đạo cổ điển xác định giống hành tinh. Ta mô tả electron bằng trạng thái lượng tử và hàm sóng.
 
 Do đó từ **quỹ đạo cổ điển (orbit)** trong mô hình Bohr được thay bằng **obitan (orbital / 오비탈)** trong mô hình lượng tử. Hai từ nghe gần giống nhau nhưng khái niệm hoàn toàn khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ và lượng tử hóa**, **Vật chất cũng có tính chất giống sóng** tiếp nhận điểm tựa từ **Vì sao hình ảnh “quỹ đạo hành tinh” vẫn chưa đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên lý bất định Heisenberg** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vật chất cũng có tính chất giống sóng
 
@@ -153,6 +170,8 @@ Louis de Broglie đề xuất rằng một hạt có động lượng `p` có b�
 Đây là bước quan trọng: **lưỡng tính sóng–hạt (wave–particle duality)** không chỉ áp dụng cho ánh sáng. Vật chất ở thang vi mô cũng có hành vi lượng tử giống sóng.
 
 Với vật thể vĩ mô, bước sóng de Broglie cực nhỏ nên hiệu ứng sóng khó quan sát. Vì vậy cơ học cổ điển vẫn là xấp xỉ rất tốt ở thang đời sống.
+
+> **Chuyển mạch:** Trong **Bức xạ điện từ và lượng tử hóa**, **Nguyên lý bất định Heisenberg** tiếp nhận điểm tựa từ **Vật chất cũng có tính chất giống sóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quang phổ học là cầu nối giữa lý thuyết và thực nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên lý bất định Heisenberg
 
@@ -172,6 +191,8 @@ trong đó:
 
 Vì vậy hình ảnh electron có vị trí điểm chính xác và vận tốc quỹ đạo xác định như hành tinh không phù hợp ở thang nguyên tử.
 
+> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ và lượng tử hóa**, **Quang phổ học là cầu nối giữa lý thuyết và thực nghiệm** tiếp nhận điểm tựa từ **Nguyên lý bất định Heisenberg** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với màu sắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quang phổ học là cầu nối giữa lý thuyết và thực nghiệm
 
 Nếu nguyên tử hoặc phân tử có các trạng thái năng lượng rời rạc, ánh sáng có thể thăm dò chênh lệch giữa các trạng thái. Đó là ý tưởng cốt lõi của quang phổ học.
@@ -185,17 +206,23 @@ Tùy thang năng lượng, bức xạ có thể thăm dò các chuyển mức kh
 
 Đây là xu hướng tổng quát chứ không phải quy tắc tuyệt đối; phổ thực tế phụ thuộc hệ và cơ chế tương tác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ và lượng tử hóa**, **Liên hệ với màu sắc** tiếp nhận điểm tựa từ **Quang phổ học là cầu nối giữa lý thuyết và thực nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với màu sắc
 
 Một vật có màu vì tương tác giữa vật chất và bức xạ điện từ vùng nhìn thấy. Phân tử hấp thụ một số bước sóng và truyền qua hoặc phản xạ các bước sóng khác. Màu ta thấy là kết quả của phổ ánh sáng đi tới mắt.
 
 Trong phức chất kim loại chuyển tiếp, môi trường phối tử làm thay đổi các mức năng lượng electron, từ đó làm thay đổi phổ hấp thụ và tạo nhiều màu sắc đặc trưng. Phần hóa học phối trí sẽ quay lại mối liên hệ này.
 
+> **Chuyển mạch:** Trong **Bức xạ điện từ và lượng tử hóa**, **Liên hệ với công nghệ** tiếp nhận điểm tựa từ **Liên hệ với màu sắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với công nghệ
 
 Đèn LED phát sáng vì electron và lỗ trống tái hợp trong chất bán dẫn, tạo photon có năng lượng liên quan tới **vùng cấm (band gap)**. Laser dựa trên **phát xạ kích thích (stimulated emission)**. Pin mặt trời chuyển năng lượng photon thành năng lượng điện. Máy quang phổ hấp thụ dùng độ hấp thụ để suy ra nồng độ.
 
 Các thiết bị này rất khác nhau nhưng cùng dựa trên một ngôn ngữ chung: mức năng lượng, photon và chuyển mức.
+
+> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ và lượng tử hóa**, **Mô hình tư duy** gom các mảnh từ **Liên hệ với công nghệ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -204,6 +231,8 @@ Hãy tưởng tượng vật lý cổ điển cho phép năng lượng như mộ
 Electron không thể đứng ở mọi mức năng lượng tùy ý giữa hai trạng thái bền. Khi hệ chuyển giữa các mức, chênh lệch năng lượng được trao đổi với môi trường bằng lượng tử phù hợp.
 
 Phép so sánh cầu thang chỉ giúp hiểu tính rời rạc; nó không có nghĩa các mức năng lượng là những vị trí vật lý xếp tầng trong không gian.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ và lượng tử hóa**, **Các hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hiểu lầm thường gặp
 
@@ -223,10 +252,12 @@ Không. Nhiễu do phép đo có thể tồn tại, nhưng quan hệ bất đị
 
 Không. **Orbit** là quỹ đạo cổ điển; **orbital** là trạng thái lượng tử có mô tả không gian bằng hàm sóng.
 
+> **Chuyển mạch:** Trong **Bức xạ điện từ và lượng tử hóa**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Lượng tử hóa và tính chất sóng cho thấy ta cần một khuôn khổ mới để mô tả electron. Chương tiếp theo xây dựng mô hình lượng tử của nguyên tử: hàm sóng, obitan và các số lượng tử.
 
 Xem tiếp: [Mô hình lượng tử của nguyên tử](./02_quantum_model_of_atom.md).
 
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atoms elements and isotopes](./00_atoms_elements_and_isotopes.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

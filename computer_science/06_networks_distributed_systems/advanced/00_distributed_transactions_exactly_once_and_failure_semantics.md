@@ -1,7 +1,6 @@
 # Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)
 
-> **Mạch đọc:** Đặt **phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **hết thời gian chờ (timeout / 타임아웃) không phải bằng chứng (evidence / 증거) của thất bại (failure / 실패)** sang **At-most-once, at-least-once và exactly-once**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hết thời gian chờ (timeout / 타임아웃) không phải bằng chứng (evidence / 증거) của thất bại (failure / 실패)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **At-most-once, at-least-once và exactly-once** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Trong một tiến trình (process / 프로세스), hàm (function / 함수) có thể return success/thất bại (failure / 실패) tương đối rõ. Trong hệ thống phân tán (distributed system / 분산 시스템), hết thời gian chờ (timeout / 타임아웃) tạo trạng thái khó hơn: **thao tác (operation / 연산) đã thất bại, hay chỉ phản hồi (response / 응답) thất lạc?** Đây là nguồn gốc của thử lại (retry / 재시도) ambiguity, duplicate side effects và nhiều giao thức (protocol / 프로토콜) patterns như idempotency key, outbox, 2PC và consensus-backed máy trạng thái (state machine / 상태 머신).
 
@@ -19,8 +18,7 @@ unknown outcome
 
 Unknown kết quả (outcome / 결과) là trạng thái thật, không nên ép thành boolean chỉ vì ứng dụng (application / 애플리케이션) API muốn đơn giản.
 
-
-> **Chuyển mạch:** Từ **hết thời gian chờ (timeout / 타임아웃) không phải bằng chứng (evidence / 증거) của thất bại (failure / 실패)**, ta sang **At-most-once, at-least-once và exactly-once** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Hết thời gian chờ (timeout / 타임아웃) không phải bằng chứng (evidence / 증거) của thất bại (failure / 실패)** nêu điều cần giải thích; **At-most-once, at-least-once và exactly-once** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Idempotency biến thử lại (retry / 재시도) thành thao tác (operation / 연산) an toàn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## At-most-once, at-least-once và exactly-once
 
@@ -28,8 +26,7 @@ Unknown kết quả (outcome / 결과) là trạng thái thật, không nên ép
 
 Một message broker nói “exactly-once” thường định nghĩa guarantee trong phạm vi producer/broker/bên tiêu thụ (consumer / 소비자) trạng thái (state / 상태) được phối hợp. Khi side tác động (effect / 효과) đi ra hệ thống khác như email, payment gateway hay bên ngoài (external / 외부) API, ranh giới (boundary / 경계) guarantee thay đổi.
 
-
-> **Chuyển mạch:** Từ **At-most-once, at-least-once và exactly-once**, ta sang **Idempotency biến thử lại (retry / 재시도) thành thao tác (operation / 연산) an toàn hơn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Idempotency biến thử lại (retry / 재시도) thành thao tác (operation / 연산) an toàn hơn** tiếp nhận điểm tựa từ **At-most-once, at-least-once và exactly-once** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Two-Phase lần ghi nhận (commit / 커밋) giải atomicity giữa participants** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Idempotency biến thử lại (retry / 재시도) thành thao tác (operation / 연산) an toàn hơn
 
@@ -39,8 +36,7 @@ API có thể dùng idempotency key. máy chủ (server / 서버) lưu key → k
 
 Nhưng deduplication cần retention chính sách (policy / 정책). Nếu key bị expire quá sớm, thử lại (retry / 재시도) muộn có thể trở thành duplicate thật.
 
-
-> **Chuyển mạch:** Từ **Idempotency biến thử lại (retry / 재시도) thành thao tác (operation / 연산) an toàn hơn**, ta sang **Two-Phase lần ghi nhận (commit / 커밋) giải atomicity giữa participants** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Two-Phase lần ghi nhận (commit / 커밋) giải atomicity giữa participants** tiếp nhận điểm tựa từ **Idempotency biến thử lại (retry / 재시도) thành thao tác (operation / 연산) an toàn hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Saga đổi atomicity mạnh lấy compensating workflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Two-Phase lần ghi nhận (commit / 커밋) giải atomicity giữa participants
 
@@ -50,8 +46,7 @@ Prepared participant thường đã giữ locks/resources và ghi durable intent
 
 2PC vì vậy cung cấp atomic quyết định (decision / 결정) nhưng có blocking/failure-management chi phí (cost / 비용). Consensus có thể dùng để replicate coordinator/quyết định (decision / 결정) trạng thái (state / 상태), nhưng 2PC và consensus giải câu hỏi khác nhau: atomic lần ghi nhận (commit / 커밋) giữa tài nguyên (resource / 자원) managers vs agreement trong replicated máy trạng thái (state machine / 상태 머신).
 
-
-> **Chuyển mạch:** Từ **Two-Phase lần ghi nhận (commit / 커밋) giải atomicity giữa participants**, ta sang **Saga đổi atomicity mạnh lấy compensating workflow** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Two-Phase lần ghi nhận (commit / 커밋) giải atomicity giữa participants** xác định đầu vào; **Saga đổi atomicity mạnh lấy compensating workflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Transactional outbox giải dual-write cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Saga đổi atomicity mạnh lấy compensating workflow
 
@@ -61,8 +56,7 @@ Ví dụ booking: reserve flight → reserve hotel → charge payment. Nếu hot
 
 Do đó saga tính đúng đắn (correctness / 정확성) cần nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론), không chỉ technical thử lại (retry / 재시도).
 
-
-> **Chuyển mạch:** Từ **Saga đổi atomicity mạnh lấy compensating workflow**, ta sang **Transactional outbox giải dual-write cục bộ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Saga đổi atomicity mạnh lấy compensating workflow** xác định đầu vào; **Transactional outbox giải dual-write cục bộ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Fencing chống stale actor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Transactional outbox giải dual-write cục bộ
 
@@ -72,8 +66,7 @@ Outbox mẫu (pattern / 패턴) ghi nghiệp vụ (business / 비즈니스) tr�
 
 Outbox không tạo exactly-once toàn cầu; nó biến “DB cập nhật (update / 업데이트) và intent-to-publish” thành atomic trong một cục bộ (local / 로컬) ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **Transactional outbox giải dual-write cục bộ**, ta sang **Fencing chống stale actor** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Fencing chống stale actor** tiếp nhận điểm tựa từ **Transactional outbox giải dual-write cục bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fencing chống stale actor
 
@@ -81,18 +74,16 @@ Lease-holder cũ có thể bị pause, lease expire, actor mới nhận quyền,
 
 Fencing đơn vị từ (token / 토큰) tăng đơn điệu; lưu trữ (storage / 저장소)/tài nguyên (resource / 자원) từ chối yêu cầu (request / 요청) có đơn vị từ (token / 토큰) nhỏ hơn đơn vị từ (token / 토큰) mới nhất đã thấy. Đây là mẫu (pattern / 패턴) quan trọng khi tính đúng đắn (correctness / 정확성) phụ thuộc quyền sở hữu (ownership / 소유권) qua mạng (network / 네트워크)/GC pause/tiến trình (process / 프로세스) freeze.
 
-
-> **Chuyển mạch:** Từ **Fencing chống stale actor**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Fencing chống stale actor** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > phân tán (distributed / 분산) tính đúng đắn (correctness / 정확성) bắt đầu từ **uncertain kết quả (outcome / 결과)**. thử lại (retry / 재시도) tạo duplicate rủi ro (risk / 위험); idempotency/dedup thuần hóa thử lại (retry / 재시도); 2PC phối hợp atomic quyết định (decision / 결정); saga phối hợp nghiệp vụ (business / 비즈니스) compensation; outbox nối cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) với messaging; fencing ngăn đơn vị sở hữu (owner / 오너) cũ quay lại phá trạng thái (state / 상태).
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phân tán (distributed / 분산) transactions, exactly-once và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Foundation: [time/failure/consistency](../../basic/06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md), [replication/consensus](../../basic/06_networks_distributed_systems/05_replication_partitioning_and_consensus.md), [idempotency](../../basic/08_software_systems/04_time_serialization_and_idempotency.md) và [event-driven systems](../../basic/08_software_systems/06_event_driven_and_stream_processing.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 failure detectors membership and gossip](./01_failure_detectors_membership_and_gossip.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

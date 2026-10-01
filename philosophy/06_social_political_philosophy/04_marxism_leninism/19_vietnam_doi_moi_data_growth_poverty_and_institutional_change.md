@@ -1,5 +1,7 @@
 # Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Baseline trước reform** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Agricultural reform: từ collective môi trường vận hành (production / 운영 환경) sang household quyết định (decision / 결정)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 [14 — Vietnam: Đổi Mới](14_case_vietnam_doi_moi_market_reform_and_socialist_orientation.md) đã giải thích reform kiến trúc (architecture / 아키텍처). Chapter này đi thêm một bước: đưa các claim về “thành công kinh tế”, “thị trường (market / 시장) reform” và “socialist orientation” về các observable variables cụ thể.
 
 Câu hỏi trung tâm là:
@@ -24,6 +26,8 @@ Reform phải được periodize:
 
 Đây là lý do “before 1986 vs after 1986” chỉ là first approximation.
 
+> **Chuyển mạch:** Trong **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **2. Agricultural reform: từ collective môi trường vận hành (production / 운영 환경) sang household quyết định (decision / 결정)** tiếp nhận điểm tựa từ **1. Baseline trước reform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Price reform và vì sao price tín hiệu (signal / 신호) quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Agricultural reform: từ collective môi trường vận hành (production / 운영 환경) sang household quyết định (decision / 결정)
 
 World Bank historical accounts nhấn mạnh agriculture là một trong những early reform fronts. Collective arrangements được dismantled/reduced, land-use điều khiển (control / 제어) chuyển mạnh về household, procurement/price relations thay đổi và farmers có greater ability giữ/sell đầu ra (output / 출력).
@@ -42,6 +46,8 @@ Một World Bank retrospective ghi rằng đến khoảng 1990, phần lớn far
 
 Cần dùng từ chính xác: **land-use rights** không đồng nghĩa full private freehold quyền sở hữu (ownership / 소유권).
 
+> **Chuyển mạch:** Ở chặng này của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **3. Price reform và vì sao price tín hiệu (signal / 신호) quan trọng** tiếp nhận điểm tựa từ **2. Agricultural reform: từ collective môi trường vận hành (production / 운영 환경) sang household quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Growth: nhìn series chứ không nhìn một năm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Price reform và vì sao price tín hiệu (signal / 신호) quan trọng
 
 Historical World Bank report ghi nhận controlled prices cho phần lớn goods/services được bãi bỏ mạnh vào 1989, cùng decline của trạng thái (state / 상태) procurement hệ thống (system / 시스템).
@@ -57,6 +63,8 @@ budget constraint
 Một administratively fixed price có thể suppress scarcity tín hiệu (signal / 신호). Khi producer có thể sell đầu ra (output / 출력) ở price phản ánh demand/supply tốt hơn, marginal môi trường vận hành (production / 운영 환경) quyết định (decision / 결정) thay đổi.
 
 Nhưng thị trường (market / 시장) pricing cũng tạo exposure mới: volatility, inequality of thị trường (market / 시장) truy cập (access / 접근) và rủi ro (risk / 위험). Price liberalization vì vậy cần được đọc cùng macro stabilization và xã hội (social / 사회적) chính sách (policy / 정책).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **4. Growth: nhìn series chứ không nhìn một năm** tiếp nhận điểm tựa từ **3. Price reform và vì sao price tín hiệu (signal / 신호) quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Poverty reduction là kết quả (outcome / 결과) lớn nhưng line/phương thức (method / 메서드) phải visible** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Growth: nhìn series chứ không nhìn một năm
 
@@ -76,6 +84,8 @@ household consumption
 
 Nominal GDP per capita bằng hiện tại (current / 현재) USD chịu exchange-rate và inflation effects nên không nên dùng một mình để measure living-standard thay đổi (change / 변경).
 
+> **Chuyển mạch:** Trong **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **5. Poverty reduction là kết quả (outcome / 결과) lớn nhưng line/phương thức (method / 메서드) phải visible** tiếp nhận điểm tựa từ **4. Growth: nhìn series chứ không nhìn một năm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Growth không tự động đồng nghĩa welfare cho mọi group** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Poverty reduction là kết quả (outcome / 결과) lớn nhưng line/phương thức (method / 메서드) phải visible
 
 World Bank poverty công việc (work / 작업) cho Vietnam cho thấy rất large poverty reduction trong 1990s và các decades sau reform. Một report dựa trên Vietnam Living Standards Surveys ghi share dưới total poverty line giảm từ khoảng **58% năm 1992/93 xuống 37% năm 1997/98** theo poverty definition của report đó.
@@ -93,6 +103,8 @@ poverty number
 
 Không viết đơn giản “poverty giảm từ X xuống Y” nếu hai endpoints không cùng series.
 
+> **Chuyển mạch:** Ở chặng này của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **6. Growth không tự động đồng nghĩa welfare cho mọi group** tiếp nhận điểm tựa từ **5. Poverty reduction là kết quả (outcome / 결과) lớn nhưng line/phương thức (method / 메서드) phải visible** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Trade tích hợp (integration / 통합) là một major cơ chế (mechanism / 메커니즘), không phải background detail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Growth không tự động đồng nghĩa welfare cho mọi group
 
 Aggregate poverty reduction và growth có thể coexist với:
@@ -108,6 +120,8 @@ Aggregate poverty reduction và growth có thể coexist với:
 Vì vậy evaluation cần distributional decomposition.
 
 Một country có thể trở nên richer on average trong khi specific groups face displacement hoặc lagging opportunities. Political economy hỏi ai nhận gains, ai chịu chuyển tiếp (transition / 전이) chi phí (cost / 비용) và institutions nào redistribute/risk-share.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **6. Growth không tự động đồng nghĩa welfare cho mọi group** xác định đầu vào; **7. Trade tích hợp (integration / 통합) là một major cơ chế (mechanism / 메커니즘), không phải background detail** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. FDI và manufacturing transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Trade tích hợp (integration / 통합) là một major cơ chế (mechanism / 메커니즘), không phải background detail
 
@@ -126,6 +140,8 @@ regional/global demand
 
 World Bank hiện tại (current / 현재) overview explicitly attributes transformation both to reforms since 1986 **and favorable toàn cục (global / 전역) trends**. Đây là wording methodologically important: kết quả (outcome / 결과) không được monocausally assigned cho domestic chính sách (policy / 정책) alone.
 
+> **Chuyển mạch:** Trong **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **7. Trade tích hợp (integration / 통합) là một major cơ chế (mechanism / 메커니즘), không phải background detail** xác định đầu vào; **8. FDI và manufacturing transformation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. SOE continuity cho thấy reform không phải simple privatization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. FDI và manufacturing transformation
 
 Opening to foreign investment giúp Vietnam bản dựng (build / 빌드) export-oriented manufacturing sức chứa (capacity / 용량). Nhưng FDI effectiveness phụ thuộc complementary factors:
@@ -139,6 +155,8 @@ Opening to foreign investment giúp Vietnam bản dựng (build / 빌드) export
 - macro stability.
 
 Vì vậy `FDI inflow → growth` không phải automatic nhân quả (causal / 인과적) arrow. FDI interacts với domestic institutions.
+
+> **Chuyển mạch:** Ở chặng này của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **9. SOE continuity cho thấy reform không phải simple privatization** tiếp nhận điểm tựa từ **8. FDI và manufacturing transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. “Kinh tế thị trường định hướng xã hội chủ nghĩa” nên được unpack thành variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. SOE continuity cho thấy reform không phải simple privatization
 
@@ -155,6 +173,8 @@ one-party political system
 ```
 
 Vì vậy label `capitalist` hoặc `socialist` một mình có thông tin (information / 정보) density thấp. Để hiểu actual economy, cần mã (code / 코드) quyền sở hữu (ownership / 소유권) share, competition, credit allocation, price formation, entry barriers và trạng thái (state / 상태) quản trị (governance / 거버넌스) separately.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **10. “Kinh tế thị trường định hướng xã hội chủ nghĩa” nên được unpack thành variables** tiếp nhận điểm tựa từ **9. SOE continuity cho thấy reform không phải simple privatization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Nhân quả (causal / 인과적) attribution — Đổi Mới có phải “nguyên nhân” của growth?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. “Kinh tế thị trường định hướng xã hội chủ nghĩa” nên được unpack thành variables
 
@@ -174,6 +194,8 @@ Competition policy mạnh yếu thế nào?
 ```
 
 Một political-economic label chỉ hữu ích khi map được sang institutions observable.
+
+> **Chuyển mạch:** Trong **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **11. Nhân quả (causal / 인과적) attribution — Đổi Mới có phải “nguyên nhân” của growth?** tiếp nhận điểm tựa từ **10. “Kinh tế thị trường định hướng xã hội chủ nghĩa” nên được unpack thành variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Before/after bằng chứng (evidence / 증거) mạnh ở đâu, yếu ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Nhân quả (causal / 인과적) attribution — Đổi Mới có phải “nguyên nhân” của growth?
 
@@ -196,6 +218,8 @@ Question đúng không phải “reform hay bên ngoài (external / 외부) fact
 
 Một plausible mechanism-based conclusion là: **Đổi Mới altered incentives, prices, household quyết định (decision / 결정) rights, private-sector không gian (space / 공간) và international tích hợp (integration / 통합), tạo institutional conditions quan trọng cho growth; magnitude của từng contribution cần empirical identification riêng.**
 
+> **Chuyển mạch:** Ở chặng này của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **11. Nhân quả (causal / 인과적) attribution — Đổi Mới có phải “nguyên nhân” của growth?** nêu điều cần giải thích; **12. Before/after bằng chứng (evidence / 증거) mạnh ở đâu, yếu ở đâu?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Vietnam và China: similarity không có nghĩa bản sao (copy / 복사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Before/after bằng chứng (evidence / 증거) mạnh ở đâu, yếu ở đâu?
 
 Strongest use của before/after là khi cơ chế (mechanism / 메커니즘) rất proximate:
@@ -209,6 +233,8 @@ Weaker suy luận (inference / 추론) là:
 - 30 years later GDP is higher → therefore one chính sách (policy / 정책) caused all growth.
 
 Long horizon chứa quá nhiều simultaneous changes.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **12. Before/after bằng chứng (evidence / 증거) mạnh ở đâu, yếu ở đâu?** nêu điều cần giải thích; **13. Vietnam và China: similarity không có nghĩa bản sao (copy / 복사)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Vietnam và Soviet trường hợp (case / 사례): correction kiến trúc (architecture / 아키텍처) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Vietnam và China: similarity không có nghĩa bản sao (copy / 복사)
 
@@ -227,6 +253,8 @@ feedback/correction
 
 Không dùng China làm “điều khiển (control / 제어) group” hoàn hảo cho Vietnam.
 
+> **Chuyển mạch:** Trong **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **13. Vietnam và China: similarity không có nghĩa bản sao (copy / 복사)** cho ta quy tắc; **14. Vietnam và Soviet trường hợp (case / 사례): correction kiến trúc (architecture / 아키텍처) khác nhau** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **15. Dữ liệu (data / 데이터) checklist khi cập nhật (update / 업데이트) chapter sau này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Vietnam và Soviet trường hợp (case / 사례): correction kiến trúc (architecture / 아키텍처) khác nhau
 
 Soviet early industrialization trường hợp (case / 사례) cho thấy tài nguyên (resource / 자원) mobilization dưới highly centralized targets. Vietnam Đổi Mới cho thấy significant decentralization of economic decision-making và expansion of price/thị trường (market / 시장) phản hồi (feedback / 피드백) mà không đồng thời chuyển sang multiparty political hệ thống (system / 시스템).
@@ -240,6 +268,8 @@ political regime type
 ```
 
 Chúng có tương tác (interaction / 상호작용) nhưng không phải cùng một variable.
+
+> **Chuyển mạch:** Ở chặng này của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **14. Vietnam và Soviet trường hợp (case / 사례): correction kiến trúc (architecture / 아키텍처) khác nhau** cho ta quy tắc; **15. Dữ liệu (data / 데이터) checklist khi cập nhật (update / 업데이트) chapter sau này** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Hiện tại (current / 현재) endpoint không được dùng để rewrite lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Dữ liệu (data / 데이터) checklist khi cập nhật (update / 업데이트) chapter sau này
 
@@ -261,6 +291,8 @@ Ví dụ GDP growth dùng World Development Indicators real-growth series; pover
 
 Không mix values chỉ vì cùng có chữ “poverty”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **15. Dữ liệu (data / 데이터) checklist khi cập nhật (update / 업데이트) chapter sau này** nêu điều cần giải thích; **16. Hiện tại (current / 현재) endpoint không được dùng để rewrite lịch sử (history / 이력)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Mô hình tư duy (mental model / 사고 모델) cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Hiện tại (current / 현재) endpoint không được dùng để rewrite lịch sử (history / 이력)
 
 World Bank hiện mô tả Vietnam là một động (dynamic / 동적) middle-income economy sau bốn decades transformation và ghi nhận large improvements in health/living standards. Đó là hiện tại (current / 현재) retrospective summary, không phải proof rằng mọi reform quyết định (decision / 결정) trước đây là optimal.
@@ -268,6 +300,8 @@ World Bank hiện mô tả Vietnam là một động (dynamic / 동적) middle-i
 Historical evaluation vẫn cần period-specific bằng chứng (evidence / 증거) và failures/costs.
 
 Success in one dimension không erase problems in another; problems cũng không erase measured gains.
+
+> **Chuyển mạch:** Trong **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **17. Mô hình tư duy (mental model / 사고 모델) cuối cùng** gom các mảnh từ **16. Hiện tại (current / 현재) endpoint không được dùng để rewrite lịch sử (history / 이력)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **18. Bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Mô hình tư duy (mental model / 사고 모델) cuối cùng
 
@@ -287,6 +321,8 @@ crisis/constraint
 
 Đây là vòng phản hồi (feedback loop / 피드백 루프), không phải một chuyển tiếp (transition / 전이) completed once in 1986.
 
+> **Chuyển mạch:** Ở chặng này của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **18. Bàn giao** gom các mảnh từ **17. Mô hình tư duy (mental model / 사고 모델) cuối cùng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Bàn giao
 
 Sau chapter này, quay lại [15 — Comparative synthesis](15_comparative_case_synthesis_soviet_china_vietnam.md) với variables cụ thể hơn. Ta có thể compare:
@@ -301,9 +337,9 @@ mà không cần collapse chúng thành ideological winner/loser.
 
 Bước tiếp theo nếu muốn deepen thêm là tạo **dữ liệu (data / 데이터) appendix** bằng consistent World Bank/PWT/Maddison-style series hoặc một trường hợp (case / 사례) riêng về land rights, SOEs, FDI hay trade tích hợp (integration / 통합). Những phần đó nên đơn vị sở hữu (owner / 오너) ở Economics nếu trọng tâm chuyển từ political philosophy sang quantitative economics.
 
-## Sources và reading anchors
-Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**, **18. Bàn giao** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Sources và reading anchors
 
 - World Bank historical report on Đổi Mới and stabilization: https://documents1.worldbank.org/curated/en/917141468762930107/pdf/multi-page.pdf
 - World Bank retrospective on Vietnam chuyển tiếp (transition / 전이) and agricultural/private-sector reforms: https://documents1.worldbank.org/curated/en/432701468155378282/pdf/560800NWP0VN0v1IC10Vietnam103081rev.pdf
@@ -312,3 +348,5 @@ Phần “Sources và reading anchors” nối kiến thức trước với nộ
 - World Bank WDI — GDP growth, Vietnam: https://dữ liệu (data / 데이터).worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=VN
 - World Bank Poverty and Inequality Nền tảng (platform / 플랫폼) / national poverty indicator: https://dữ liệu (data / 데이터).worldbank.org/indicator/SI.POV.NAHC?locations=VN
 - World Bank hiện tại (current / 현재) Vietnam overview: https://www.worldbank.org/en/country/vietnam
+
+> **Bàn giao:** Sau **Sources và reading anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Kotlin + Android Intermediate — Completion Deep Dive
 
-> **Mạch đọc:** Đọc **Kotlin + Android Intermediate — Completion Deep Dive** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kotlin + Android Intermediate — Completion Deep Dive**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Kotlin + Android Intermediate — Completion Deep Dive** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > tệp (file / 파일) này bổ sung cho [`../02_kotlin_intermediate.md`](../02_kotlin_intermediate.md). Mục tiêu là làm rõ những phần thường bị tutorial rút gọn: CoroutineContext/Job hierarchy, luồng (flow / 흐름) ngữ cảnh (context / 맥락) và hot/cold conversion, tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명), mạng (network / 네트워크) lỗi (error / 오류) mô hình (model / 모델), Room như nguồn chuẩn (source of truth / 정본), Compose trạng thái (state / 상태)/tác động (effect / 효과), coroutine testing, DI phạm vi (scope / 범위) và điều hướng (navigation / 내비게이션) đặc tả hợp đồng (contract / 계약).
 
@@ -228,4 +227,4 @@ Một kiểm thử (test / 테스트) thực tế là bật **Don't keep activit
 
 Ở cuối phần này, bạn nên giải thích được Job hierarchy, supervision, dispatcher/cancellation, luồng (flow / 흐름) cold-hot/ngữ cảnh (context / 맥락), `stateIn`/`shareIn`, callback adaptation, tài nguyên (resource / 자원) cleanup, mạng (network / 네트워크) lỗi (error / 오류) mô hình (model / 모델), Room giao dịch (transaction / 트랜잭션)/source-of-truth, Compose trạng thái (state / 상태) hoisting/tác động (effect / 효과), kiểm thử (test / 테스트) double/coroutine kiểm thử (test / 테스트), DI phạm vi (scope / 범위) và điều hướng (navigation / 내비게이션) đặc tả hợp đồng (contract / 계약). Mục tiêu không phải biết tên thư viện, mà biết thời gian tồn tại (lifetime / 수명) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) của từng lớp trừu tượng (abstraction / 추상화).
 
-> **Bàn giao:** Sau **Kotlin + Android Intermediate — Completion Deep Dive**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 beginner completion](./01_beginner_completion.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kotlin + Android Intermediate — Completion Deep Dive**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

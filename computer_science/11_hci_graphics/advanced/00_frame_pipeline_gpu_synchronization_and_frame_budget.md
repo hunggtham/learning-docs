@@ -1,7 +1,6 @@
 # Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)
 
-> **Mạch đọc:** Đặt **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **CPU và GPU chạy chuỗi xử lý (pipeline / 파이프라인) song song** sang **Frame thời gian (time / 시간) khác FPS average**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CPU và GPU chạy chuỗi xử lý (pipeline / 파이프라인) song song** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Frame thời gian (time / 시간) khác FPS average** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Real-time graphics không chỉ hỏi “kết xuất (render / 렌더링) đúng hình không?” mà hỏi “có tạo frame đúng deadline và đều không?”. 60 FPS cho khoảng 16.67 ms mỗi frame; 120 FPS khoảng 8.33 ms. Average nhanh nhưng occasional 40 ms stall vẫn tạo judder/stutter thấy rõ.
 
@@ -11,8 +10,7 @@ Real-time graphics không chỉ hỏi “kết xuất (render / 렌더링) đún
 
 Nếu CPU chờ GPU mỗi frame không cần thiết, thông lượng (throughput / 처리량) giảm. Nếu CPU submit quá xa, độ trễ (latency / 지연 시간) input-to-display tăng và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) phức tạp.
 
-
-> **Chuyển mạch:** Từ **CPU và GPU chạy chuỗi xử lý (pipeline / 파이프라인) song song**, ta sang **Frame thời gian (time / 시간) khác FPS average** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **CPU và GPU chạy chuỗi xử lý (pipeline / 파이프라인) song song** xác định đầu vào; **Frame thời gian (time / 시간) khác FPS average** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **GPU synchronization giải phụ thuộc (dependency / 의존성) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Frame thời gian (time / 시간) khác FPS average
 
@@ -20,8 +18,7 @@ FPS là reciprocal của frame thời gian (time / 시간) nhưng average FPS ch
 
 Hiệu năng (performance / 성능) phân tích (analysis / 분석) nên dùng frame-time phân phối (distribution / 분포)/percentiles và timeline traces, không chỉ counter FPS.
 
-
-> **Chuyển mạch:** Từ **Frame thời gian (time / 시간) khác FPS average**, ta sang **GPU synchronization giải phụ thuộc (dependency / 의존성) thật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **GPU synchronization giải phụ thuộc (dependency / 의존성) thật** tiếp nhận điểm tựa từ **Frame thời gian (time / 시간) khác FPS average** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Double/triple buffering và presentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## GPU synchronization giải phụ thuộc (dependency / 의존성) thật
 
@@ -29,8 +26,7 @@ Rendering công việc (work / 작업) có dependencies: compute shader viết b
 
 Barrier quá yếu tạo race/sản phẩm tạo ra (artifact / 산출물); barrier quá mạnh serialize chuỗi xử lý (pipeline / 파이프라인) và mất parallelism. Advanced graphics giống tính đồng thời (concurrency / 동시성) programming: tính đúng đắn (correctness / 정확성) và hiệu năng (performance / 성능) cùng phụ thuộc phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프).
 
-
-> **Chuyển mạch:** Từ **GPU synchronization giải phụ thuộc (dependency / 의존성) thật**, ta sang **Double/triple buffering và presentation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **Double/triple buffering và presentation** tiếp nhận điểm tựa từ **GPU synchronization giải phụ thuộc (dependency / 의존성) thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU-bound và GPU-bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Double/triple buffering và presentation
 
@@ -38,8 +34,7 @@ Back buffer cho phép kết xuất (render / 렌더링) frame mới trong khi di
 
 Triple buffering có thể cải thiện thông lượng (throughput / 처리량)/smoothness trong một số pipelines nhưng cũng có thể tăng queued frames. Low-latency modes cố giới hạn kết xuất (render / 렌더링) hàng đợi (queue / 큐).
 
-
-> **Chuyển mạch:** Từ **Double/triple buffering và presentation**, ta sang **CPU-bound và GPU-bound** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **CPU-bound và GPU-bound** tiếp nhận điểm tựa từ **Double/triple buffering và presentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batching và draw-call sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CPU-bound và GPU-bound
 
@@ -47,8 +42,7 @@ Nếu CPU mất 20 ms bản dựng (build / 빌드) frame còn GPU 8 ms, tối �
 
 GPU-bound lại chia thành vertex/hình học (geometry / 기하학), fragment/fill, bandwidth, compute, synchronization hoặc bộ nhớ (memory / 메모리) pressure. Profiling cần timestamp queries/counters/công cụ (tool / 도구) timeline thay vì suy đoán từ “GPU 100%”.
 
-
-> **Chuyển mạch:** Từ **CPU-bound và GPU-bound**, ta sang **Batching và draw-call sự đánh đổi (trade-off / 트레이드오프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **Batching và draw-call sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **CPU-bound và GPU-bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Frame ngân sách (budget / 예산) là phân bổ ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batching và draw-call sự đánh đổi (trade-off / 트레이드오프)
 
@@ -56,8 +50,7 @@ Batching giảm CPU submission overhead nhưng có thể tăng overdraw, giảm 
 
 Instancing phù hợp nhiều objects cùng mesh/material với per-instance dữ liệu (data / 데이터). Indirect draws/GPU-driven rendering chuyển culling/command generation sang GPU cho scene lớn.
 
-
-> **Chuyển mạch:** Từ **Batching và draw-call sự đánh đổi (trade-off / 트레이드오프)**, ta sang **Frame ngân sách (budget / 예산) là phân bổ ràng buộc (constraint / 제약조건)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **Frame ngân sách (budget / 예산) là phân bổ ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **Batching và draw-call sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ trễ (latency / 지연 시간) là chuỗi xử lý (pipeline / 파이프라인) end-to-end** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Frame ngân sách (budget / 예산) là phân bổ ràng buộc (constraint / 제약조건)
 
@@ -65,8 +58,7 @@ Với ngân sách (budget / 예산) 16.67 ms, graphics không sở hữu toàn b
 
 Ngân sách (budget / 예산) nên phân theo đường găng (critical path / 임계 경로) và worst realistic scene, không chỉ empty scene benchmark.
 
-
-> **Chuyển mạch:** Từ **Frame ngân sách (budget / 예산) là phân bổ ràng buộc (constraint / 제약조건)**, ta sang **độ trễ (latency / 지연 시간) là chuỗi xử lý (pipeline / 파이프라인) end-to-end** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, biết phải giữ gì trong **Frame ngân sách (budget / 예산) là phân bổ ràng buộc (constraint / 제약조건)**, ta theo dõi trong **Độ trễ (latency / 지연 시간) là chuỗi xử lý (pipeline / 파이프라인) end-to-end** cách hệ thống thực hiện và phản hồi qua từng bước. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ trễ (latency / 지연 시간) là chuỗi xử lý (pipeline / 파이프라인) end-to-end
 
@@ -74,18 +66,16 @@ Ngân sách (budget / 예산) nên phân theo đường găng (critical path / �
 
 Đây là cùng mô hình tư duy (mental model / 사고 모델) với phân tán (distributed / 분산) các hệ thống (systems / 시스템들): end-to-end độ trễ (latency / 지연 시간) là tổng/tương tác (interaction / 상호작용) của nhiều queues, không chỉ dịch vụ (service / 서비스) thời gian (time / 시간) một thành phần (component / 컴포넌트).
 
-
-> **Chuyển mạch:** Từ **độ trễ (latency / 지연 시간) là chuỗi xử lý (pipeline / 파이프라인) end-to-end**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Độ trễ (latency / 지연 시간) là chuỗi xử lý (pipeline / 파이프라인) end-to-end** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Real-time rendering là **deadline-driven producer/bên tiêu thụ (consumer / 소비자) chuỗi xử lý (pipeline / 파이프라인)**. Hãy đo frame-time timeline, tìm stage trên đường găng (critical path / 임계 경로), hiểu tài nguyên (resource / 자원) dependencies và giữ hàng đợi (queue / 큐) vừa đủ để thông lượng (throughput / 처리량) tốt mà độ trễ (latency / 지연 시간) không phình.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Ôn [graphics pipeline](../../basic/11_hci_graphics/02_computer_graphics_pipeline_and_geometry.md), [GPU architecture](../../basic/02_computer_architecture/05_parallel_computer_architecture.md) và [queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 gpu pipeline command buffers and resource barriers](./01_gpu_pipeline_command_buffers_and_resource_barriers.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
