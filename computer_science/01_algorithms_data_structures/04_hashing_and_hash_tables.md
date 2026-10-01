@@ -12,7 +12,7 @@ Vì number of possible keys lớn hơn buckets, collision (충돌) là tất y�
 
 Một bảng băm (hash table / 해시 테이블) đúng cần equality đặc tả hợp đồng (contract / 계약) phù hợp: nếu `a == b` thì hashes phải tương thích để lookup tìm cùng location. Trong Java, đây là lý do `equals()` và `hashCode()` phải nhất quán.
 
-> **Chuyển mạch:** Trong **Hashing và bảng băm (hash table / 해시 테이블)**, **Separate chaining và open addressing** tiếp nhận điểm tựa từ **Băm (hash / 해시) hàm (function / 함수) đang làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tải (load / 로드) factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Hash function ánh xạ key vào bucket; chaining giữ nhiều entry trong bucket, open addressing tìm vị trí khác, còn load factor dự báo collision và chi phí lookup.
 
 ## Separate chaining và open addressing
 

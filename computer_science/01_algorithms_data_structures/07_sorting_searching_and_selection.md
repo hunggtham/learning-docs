@@ -12,7 +12,7 @@ Tìm kiếm nhị phân (binary search / 이진 탐색) dễ viết sai vì ranh
 
 Tìm kiếm nhị phân (binary search / 이진 탐색) không chỉ tìm chính xác (exact / 정확한) key. Lower bound/upper bound tìm first position thỏa predicate monotonic. mẫu (pattern / 패턴) này áp dụng cho “minimum sức chứa (capacity / 용량) đủ”, “earliest thời gian (time / 시간) điều kiện (condition / 조건) true” nếu predicate chuyển false→true một lần.
 
-> **Chuyển mạch:** Trong **Sorting, searching và selection**, **Stable sort** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) tìm kiếm (search / 검색) và tìm kiếm nhị phân (binary search / 이진 탐색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Insertion sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Linear/binary search dựa vào cấu trúc và thứ tự dữ liệu; stable sort giữ thứ tự tương đối của key bằng nhau, còn insertion sort cho thấy trade-off giữa đơn giản, locality và complexity.
 
 ## Stable sort
 

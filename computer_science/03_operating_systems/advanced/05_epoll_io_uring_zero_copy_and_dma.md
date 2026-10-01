@@ -20,7 +20,7 @@ OS thread phải đứng yên chờ operation đó
 
 Đây là bất biến (invariant / 불변식) tài nguyên, không phải lời hứa rằng mỗi thao tác (operation / 연산) sẽ nhanh hơn.
 
-> **Chuyển mạch:** Trong **Advanced I/O: epoll, iouring, zero-copy và DMA**, **2. Readiness và completion là hai đặc tả hợp đồng (contract / 계약) khác nhau** tiếp nhận điểm tựa từ **1. Bài toán ban đầu: nhiều logical operations hơn số thực thi (execution / 실행) threads** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. select/poll tới epoll/kqueue: giữ interest trạng thái (state / 상태) ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi logical operations vượt số thread, readiness báo “có thể thử”, completion báo “đã xong”; epoll/io_uring và zero-copy/DMA khác nhau ở nơi giữ state và chuyển dữ liệu.
 
 ## 2. Readiness và completion là hai đặc tả hợp đồng (contract / 계약) khác nhau
 

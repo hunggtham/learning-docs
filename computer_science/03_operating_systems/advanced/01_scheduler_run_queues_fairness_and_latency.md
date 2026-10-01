@@ -21,7 +21,7 @@ arrival of runnable work
 
 Khi arrival pressure gần CPU dịch vụ (service / 서비스) sức chứa (capacity / 용량), scheduler delay trở thành thành phần của tail độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Trong **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **2. Per-CPU run hàng đợi (queue / 큐): giảm contention nhưng tạo bài toán cân bằng** tiếp nhận điểm tựa từ **1. Runnable không có nghĩa đang chạy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Fairness là chính sách (policy / 정책) theo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Runnable chỉ có nghĩa đủ điều kiện chạy; per-CPU run queues giảm contention nhưng cần load balancing, rồi fairness policy cân bằng throughput với latency theo thời gian.
 
 ## 2. Per-CPU run hàng đợi (queue / 큐): giảm contention nhưng tạo bài toán cân bằng
 
