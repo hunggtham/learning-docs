@@ -20,7 +20,7 @@ Fact về hậu quả không tự sinh ra nghĩa vụ nếu chưa có normative 
 
 Liên hệ với [moral psychology](../../psychology/03_human_development_and_person/08_moral_psychology_and_prosocial_behavior.md) để phân biệt cơ chế con người phán đoán đạo đức với câu hỏi hành động nào là justified.
 
-> **Chuyển mạch:** Ở chặng này của **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**, **Từ dilemma sang quyết định (decision / 결정) procedure** tiếp nhận điểm tựa từ **Is–ought và moral bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Moral remainder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Is–ought nhắc rằng fact cần normative premise, còn moral uncertainty buộc ta ghi rõ điều chưa biết và ai gánh rủi ro. **Decision procedure** biến hai lớp đó thành các bước so sánh option, quyền lợi, fairness và khả năng sửa trước khi hành động.
 
 ## Từ dilemma sang quyết định (decision / 결정) procedure
 
@@ -35,13 +35,13 @@ Khi gặp trường hợp (case / 사례) khó, dùng sáu bước:
 
 Ví dụ trong triage y tế, “cứu nhiều người nhất” có thể xung đột với ưu tiên người yếu thế, lottery công bằng hoặc duty không bỏ rơi bệnh nhân hiện tại. Không có phép tính đạo đức thuần túy nếu values và institutional role chưa được nêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**, **Moral remainder** tiếp nhận điểm tựa từ **Từ dilemma sang quyết định (decision / 결정) procedure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Procedure giúp chọn một hành động có thể giải thích nhưng không xóa được mọi mất mát, nghĩa vụ hoặc tổn thương. **Moral remainder** ghi phần còn lại để chính sách tính đến repair, compensation và solidarity; sau đó depth pass kiểm tra lập luận từ giá trị đến phán đoán.
 
 ## Moral remainder
 
 Ngay cả quyết định tốt nhất có thể còn lại mất mát (loss / 손실), grief hoặc obligation chưa được đáp ứng. Ghi nhận moral remainder giúp chính sách (policy / 정책) không biến sự đánh đổi (trade-off / 트레이드오프) thành ngôn ngữ “không ai bị hại”, và tạo không gian cho repair, compensation hoặc solidarity.
 
-> **Chuyển mạch:** Trong **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**, **Độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh** tiếp nhận điểm tựa từ **Moral remainder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Moral remainder ngăn decision procedure biến trade-off thành tuyên bố “không ai bị hại”. **Depth pass** tiếp theo làm lộ premise, objection, rival framework và điều kiện empirical để phán đoán có thể biện minh mà vẫn thừa nhận bất định.
 
 ## Độ sâu (depth / 깊이) pass: từ giá trị đến phán đoán có thể biện minh
 
