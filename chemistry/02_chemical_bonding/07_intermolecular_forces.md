@@ -1,6 +1,6 @@
 # Lực liên phân tử — từ phân bố electron đến tính chất tập thể
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao lực yếu vẫn có thể tạo hiệu ứng rất lớn?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nền vật lý: điện tích và trường điện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**. Route đi từ permanent dipoles → induction/dispersion → hydrogen bonding/ion–dipole → collective properties (boiling, viscosity, solubility, surfaces), để nối tương tác yếu với hành vi vật liệu ở quy mô lớn.
 
 > **Lực liên phân tử (intermolecular forces, IMF / 분자간 힘)** là các tương tác giữa những tiểu phần đã tồn tại như phân tử, ion hoặc cụm nguyên tử riêng biệt. Chúng thường yếu hơn liên kết cộng hóa trị hay liên kết ion bên trong một tiểu phần, nhưng khi tác dụng đồng thời trên rất nhiều hạt, chúng quyết định nhiệt độ sôi, áp suất hơi, độ nhớt, độ tan, sức căng bề mặt, sự tự lắp ráp, cấu trúc màng sinh học và nhiều tính chất của vật liệu mềm.
 

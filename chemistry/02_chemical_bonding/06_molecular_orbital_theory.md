@@ -1,6 +1,6 @@
 # Lý thuyết obitan phân tử — nhìn electron như trạng thái của toàn phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lý thuyết obitan phân tử — nhìn electron như trạng thái của toàn phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lý thuyết obitan phân tử — nhìn electron như trạng thái của toàn phân tử**. Route đi từ atomic-orbital combination → bonding/antibonding MO → bond order/magnetism → delocalization/excitation/band intuition, dùng MO khi electron không còn gán cục bộ đáng tin.
 
 > **Lý thuyết obitan phân tử (molecular orbital theory, MO / 분자 오비탈 이론)** mô tả electron bằng các obitan có thể trải trên toàn bộ phân tử thay vì mặc định gán mỗi cặp electron cho một liên kết cục bộ. MO lý thuyết (theory / 이론) đặc biệt mạnh khi cần hiểu **sự phi định xứ, bậc liên kết, từ tính, màu, kích thích electron, quang hóa và sự hình thành dải năng lượng trong chất rắn**.
 

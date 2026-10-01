@@ -1,6 +1,6 @@
 # Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phân tử hydrogen — ví dụ tối giản** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**. Route đi từ H(_2)/shared density → bonding/antibonding intuition → polarity và bond order → delocalization/multi-center bonding, rồi chuyển sang Lewis/VSEPR và MO khi mô hình cục bộ không đủ.
 
 > **Liên kết cộng hóa trị (covalent bond / 공유 결합)** là kiểu liên kết trong đó mật độ electron được chia sẻ hoặc phi định xứ giữa hai hay nhiều hạt nhân, và cách tổ chức electron này làm tổng năng lượng của hệ giảm xuống so với các mảnh tách rời.
 

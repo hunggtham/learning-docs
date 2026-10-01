@@ -1,6 +1,6 @@
 # Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hệ thiếu electron** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Species có số electron lẻ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**. Route đi từ valence-electron count → skeleton/formal charge → octet exceptions → resonance/charge placement → limits of Lewis, rồi bàn giao cho VSEPR/VB/MO.
 
 > **Cấu trúc Lewis (Lewis structure / 루이스 구조)** là mô hình hạch toán electron hóa trị. Nó giúp trả lời nhanh nguyên tử nào nối với nguyên tử nào, có bao nhiêu cặp electron liên kết, cặp electron không liên kết và điện tích hình thức. Lewis không phải ảnh chụp mật độ electron thật; nó là một lớp mô hình đơn giản hóa cực kỳ hữu ích trước khi chuyển sang VSEPR, liên kết hóa trị và obitan phân tử.
 

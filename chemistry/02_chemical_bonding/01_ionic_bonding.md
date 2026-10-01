@@ -1,6 +1,6 @@
 # Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ sự hình thành ion đến tinh thể** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lực hút Coulomb trong mạng tinh thể** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu**. Route đi từ ion formation → Coulomb/lattice energy → crystal packing/defects → conductivity, brittleness và solubility, để không nhầm một cặp ion với toàn bộ mạng tinh thể.
 
 > **Liên kết ion (ionic bonding / 이온 결합)** là cách mô tả liên kết khi sự phân tách điện tích đủ lớn để hệ có thể được hiểu hữu ích như các cation và anion tương tác chủ yếu bằng lực hút tĩnh điện. Trong chất rắn ion, đối tượng cấu trúc quan trọng thường không phải một “phân tử NaCl riêng lẻ” mà là một **mạng tinh thể mở rộng (extended crystal lattice)**.
 

@@ -1,6 +1,6 @@
 # Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian**. Route đi từ orbital overlap → sigma/pi bonds → hybrid basis → geometry/stereochemistry, rồi chỉ rõ khi nào VB/hybridization là mô hình hữu ích và khi nào cần MO.
 
 > **Lý thuyết liên kết hóa trị (valence bond theory, VB / 원자가 결합 이론)** mô tả liên kết cộng hóa trị bằng sự chồng phủ của các obitan nguyên tử hoặc obitan đã được tổ hợp lại theo hướng phù hợp. **Lai hóa (hybridization / 혼성화)** là cách chọn một cơ sở obitan cục bộ thuận tiện để mô tả nhiều liên kết tương đương và hình học phân tử. Hai ý tưởng này rất mạnh trong hóa học hữu cơ, lập thể và lập luận (reasoning / 추론) về liên kết σ/π, nhưng chúng là **mô hình biểu diễn**, không phải những “cánh tay orbital” tồn tại độc lập trước khi phân tử hình thành.
 

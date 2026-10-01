@@ -1,6 +1,6 @@
 # Vì sao nguyên tử tạo liên kết?
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vì sao nguyên tử tạo liên kết?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khi hai nguyên tử tiến lại gần nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thế năng và độ bền** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vì sao nguyên tử tạo liên kết?**. Route đi từ approaching atoms/energy curve → electron–nucleus interactions → equilibrium distance/bond energy → bond models, để giải thích “liên kết” như một minimum năng lượng có cấu trúc chứ không phải lực hút đơn giản.
 
 > **Liên kết hóa học (chemical bond / 화학 결합)** tồn tại khi một cách sắp xếp các hạt nhân và electron có tổng năng lượng thấp hơn đáng kể so với các mảnh tách rời, tạo nên một cấu trúc đủ ổn định và có thời gian tồn tại đủ dài để được xem là một tiểu phần hóa học.
 

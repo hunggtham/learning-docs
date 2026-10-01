@@ -1,6 +1,6 @@
 # VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **AX₃ — trigonal planar** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **AX₂E — bent** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**. Route đi từ electron-domain count → lone-pair/bond-pair repulsion → molecular geometry → polarity/angles, và ghi rõ VSEPR là mô hình dự đoán chứ không phải full quantum solution.
 
 > **VSEPR — thuyết đẩy cặp electron lớp hóa trị (Valence Shell Electron Pair Repulsion / 원자가 전자쌍 반발 이론)** là mô hình hình học dùng số và kiểu **miền electron (electron domain)** quanh nguyên tử trung tâm để dự đoán cách các nguyên tử sắp xếp trong không gian. VSEPR không phải lý thuyết lượng tử đầy đủ, nhưng rất hữu ích để nối cấu trúc Lewis với hình dạng, độ phân cực và phản ứng hóa học.
 
