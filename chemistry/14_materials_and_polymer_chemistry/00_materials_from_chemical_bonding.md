@@ -1,6 +1,6 @@
 # Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Liên kết kim loại** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Chất rắn ion** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**. Route đi từ kiểu liên kết và thế năng → mạng tinh thể/độ tự do cấu trúc → khuyết tật, pha và vi cấu trúc → tính cơ, nhiệt, điện và quang, để nối quyết định ở cấp nguyên tử với tính chất đo được của vật liệu.
 
 > **Hóa học vật liệu (materials chemistry / 재료화학)** nghiên cứu cách thành phần, cấu trúc điện tử, liên kết, cách sắp xếp nguyên tử, khuyết tật và lịch sử gia công phối hợp để tạo nên tính chất cơ học, điện, quang, từ và nhiệt. Khung suy luận trung tâm không phải “vật liệu X có tính chất Y”, mà là chuỗi nhân quả **thành phần → liên kết → cấu trúc → khuyết tật/vi cấu trúc → tính chất → hiệu năng**.
 

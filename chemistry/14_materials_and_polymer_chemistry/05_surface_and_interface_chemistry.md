@@ -1,6 +1,6 @@
 # Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao tạo bề mặt tốn năng lượng tự do?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mặt tinh thể và khả năng phản ứng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**. Route đi từ năng lượng tự do bề mặt → hấp phụ và cấu trúc lớp biên → điện tích, thấm ướt và truyền khối → xúc tác dị thể, ăn mòn và tự tổ chức, để hiểu vì sao cùng một chất có thể phản ứng khác hẳn ở bề mặt.
 
 > **Mặt phân cách (interface / 계면)** là vùng biên giữa hai pha. **Bề mặt (surface / 표면)** thường dùng khi một pha tiếp xúc với khí hoặc chân không. Nguyên tử và phân tử ở vùng biên có môi trường phối trí không đối xứng so với vật liệu khối, nên năng lượng tự do, mật độ electron và khả năng phản ứng có thể khác rõ rệt.
 

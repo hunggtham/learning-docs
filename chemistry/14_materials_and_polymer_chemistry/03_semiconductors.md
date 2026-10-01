@@ -1,6 +1,6 @@
 # Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ orbital phân tử tới vùng năng lượng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kim loại, chất bán dẫn và chất cách điện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**. Route đi từ orbital nguyên tử → vùng năng lượng và band gap → pha tạp, khuyết tật và mức Fermi → tiếp giáp, vận chuyển hạt tải và suy giảm, để hóa học vật liệu nối trực tiếp với hành vi thiết bị.
 
 > **Chất bán dẫn (semiconductor / 반도체)** là vật liệu mà mật độ và chuyển động của hạt tải điện có thể được điều chỉnh rất mạnh bằng nhiệt độ, ánh sáng, điện trường, thành phần hóa học, khuyết tật và pha tạp có kiểm soát. Điểm quan trọng không phải là “độ dẫn nằm giữa kim loại và chất cách điện”, mà là khả năng **thiết kế quần thể electron và lỗ trống bằng hóa học vật liệu**.
 

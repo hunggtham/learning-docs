@@ -1,6 +1,6 @@
 # Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kim loại — electron phi định xứ và khả năng biến dạng dẻo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lệch mạng — vì sao kim loại thật yếu hơn tinh thể lý tưởng nhưng lại hữu ích hơn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy**. Route đi từ liên kết kim loại/ion/cộng hóa trị → mạng tinh thể hoặc vô định hình → lệch mạng, lỗ rỗng và biên hạt → biến dạng, nứt và phá hủy, để so sánh vật liệu bằng cơ chế thay vì chỉ bằng độ cứng.
 
 > Kim loại, gốm và thủy tinh không khác nhau đơn giản theo kiểu “kim loại dẻo, gốm giòn, thủy tinh trong suốt”. Hành vi của chúng hình thành qua một chuỗi nhiều tầng: **cấu trúc điện tử → kiểu liên kết → cấu trúc tinh thể hoặc vô định hình → khuyết tật → vi cấu trúc → lịch sử gia công → tính chất**. Cùng một thành phần hóa học có thể cho tính chất rất khác nếu pha, kích thước hạt, mật độ khuyết tật hoặc trạng thái ứng suất thay đổi.
 

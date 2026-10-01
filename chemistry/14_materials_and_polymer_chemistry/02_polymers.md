@@ -1,6 +1,6 @@
 # Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao chiều dài chuỗi làm vật liệu đổi bản chất?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến trúc chuỗi** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu**. Route đi từ monomer/cơ chế trùng hợp → chiều dài, phân nhánh và liên kết ngang → kết tinh, chuyển thủy tinh và viscoelasticity → gia công, lão hóa và tái chế, để kiến trúc chuỗi giải thích được hành vi theo thời gian.
 
 > **Polymer (고분자)** là đại phân tử được tạo từ nhiều đơn vị lặp hoặc nhiều đơn vị có quan hệ cấu trúc. Chỉ biết loại monomer chưa đủ để dự đoán vật liệu cuối cùng. Tính chất xuất hiện từ **chiều dài chuỗi, kiến trúc chuỗi, lập thể, lực liên phân tử, độ kết tinh, sự vướng chuỗi, liên kết ngang và tốc độ chuyển động phân tử theo thời gian**.
 

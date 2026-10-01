@@ -1,6 +1,6 @@
 # Vật liệu nano — khi kích thước trở thành một biến hóa học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật liệu nano — khi kích thước trở thành một biến hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tỉ lệ diện tích bề mặt trên thể tích** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Năng lượng bề mặt và xu hướng kết tụ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật liệu nano — khi kích thước trở thành một biến hóa học**. Route đi từ kích thước và tỉ lệ diện tích/thể tích → năng lượng bề mặt, lượng tử hóa và giới hạn vận chuyển → kết tụ, chức năng hóa bề mặt và độc tính → tính chất quang/xúc tác/cơ, để phân biệt hiệu ứng kích thước với hiệu ứng thành phần.
 
 > **Vật liệu nano (nanomaterial / 나노소재)** là hệ có ít nhất một kích thước nằm trong vùng mà hiệu ứng bề mặt, độ cong, giam giữ lượng tử hoặc chiều dài vận chuyển trở nên cùng bậc với kích thước vật thể. Ở thang này, thay đổi kích thước có thể làm đổi màu, hoạt tính xúc tác, tính từ, độ hòa tan hoặc hành vi điện tử dù thành phần nguyên tố không đổi.
 
