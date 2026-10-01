@@ -40,7 +40,7 @@ PPE là hàng rào cuối, không phải giải pháp đầu tiên.
 
 Nếu có thể thay quy trình hoặc thuốc thử bằng lựa chọn ít nguy hiểm hơn, thiết kế lại thường đáng tin cậy hơn chỉ dựa vào găng tay dày hơn.
 
-> **Chuyển mạch:** The hierarchy ranks interventions by reliability; elimination or substitution changes the hazard at its source, while engineering controls contain the residual exposure when the chemistry cannot be replaced.
+> **Chuyển mạch:** Hệ phân cấp xếp biện pháp theo độ tin cậy; loại bỏ hoặc thay thế làm đổi mối nguy ngay tại nguồn, còn **kiểm soát kỹ thuật** bao vây phần phơi nhiễm còn lại khi không thể đổi hóa chất.
 
 ## Loại bỏ và thay thế
 
@@ -48,7 +48,7 @@ Tư duy thiết kế an toàn có thể gồm giảm quy mô, tránh gia nhiệt
 
 Tuy nhiên thay thế chỉ có ý nghĩa sau khi kiểm tra mối nguy mới. Một vật liệu ít độc hơn có thể đồng thời dễ cháy hơn hoặc bền môi trường hơn.
 
-> **Chuyển mạch:** Substitution can introduce a new hazard, so the revised exposure path must be checked; engineering controls then provide physical separation, with the fume hood as a concrete airflow barrier.
+> **Chuyển mạch:** Thay thế có thể tạo mối nguy mới nên phải rà lại đường phơi nhiễm sau thay đổi; **kiểm soát kỹ thuật** tiếp theo tạo phân cách vật lý, trong đó tủ hút là hàng rào dòng khí cụ thể.
 
 ## Kiểm soát kỹ thuật
 
@@ -58,7 +58,7 @@ Các ví dụ thường gặp gồm tủ hút, hút cục bộ, hộp găng, t�
 
 Các biện pháp này đáng tin cậy hơn việc chỉ yêu cầu “hãy cẩn thận”.
 
-> **Chuyển mạch:** Engineering controls create the barrier; a fume hood manages vapors and aerosols through airflow, while gloveboxes change the atmosphere itself for air- or moisture-sensitive materials.
+> **Chuyển mạch:** Kiểm soát kỹ thuật tạo hàng rào; tủ hút quản lý hơi và aerosol bằng dòng khí, còn **hộp găng** thay đổi chính khí quyển để xử lý vật liệu nhạy không khí hoặc độ ẩm.
 
 ## Tủ hút — công cụ kiểm soát dòng khí, không phải tủ chứa đồ
 
@@ -68,7 +68,7 @@ Trong sử dụng thông thường cần giữ cửa chắn theo độ cao làm 
 
 Tủ hút không tự động bảo vệ khỏi mọi sự kiện năng lượng cao hoặc mọi loại nguy cơ nổ.
 
-> **Chuyển mạch:** A fume hood removes airborne contaminants from the operator’s breathing zone; a glovebox controls oxygen and moisture but can accumulate incompatible chemicals, so PPE must still match the remaining substance and route of exposure.
+> **Chuyển mạch:** Tủ hút kéo chất ô nhiễm khỏi vùng hô hấp; hộp găng kiểm soát oxygen và độ ẩm nhưng có thể tích tụ hóa chất không tương thích, vì vậy **PPE** vẫn phải khớp với chất còn lại và đường phơi nhiễm.
 
 ## Hộp găng và khí quyển trơ
 
