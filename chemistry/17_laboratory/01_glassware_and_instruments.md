@@ -344,7 +344,7 @@ Bão hòa đầu dò và ánh sáng lạc (**stray light**) làm quan hệ hấp
 
 Nên pha loãng mẫu về vùng đã được thẩm định thay vì giả định hấp thụ càng lớn thì nồng độ luôn tăng tỷ lệ chính xác.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Máy ly tâm** tiếp nhận điểm tựa từ **Vùng tuyến tính của thiết bị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng rotor theo khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Once absorbance is kept inside its validated linear range, centrifugation changes the control variable to relative centrifugal force, which depends on rotor radius as well as rpm.
 
 ## Máy ly tâm
 
@@ -360,7 +360,7 @@ với \(r\) tính bằng cm.
 
 Cùng rpm nhưng rotor bán kính lớn hơn tạo RCF cao hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Cân bằng rotor theo khối lượng** tiếp nhận điểm tựa từ **Máy ly tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tủ sấy và lò nung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Centrifuge separation is set by RCF, but an unbalanced load converts that force into vibration and rotor stress; drying and ashing therefore require a different thermal safety envelope.
 
 ## Cân bằng rotor theo khối lượng
 
@@ -368,7 +368,7 @@ Các ống đối diện cần được cân bằng phù hợp.
 
 Tải lệch tạo rung và ứng suất lên rotor. Tính toàn vẹn cơ học của rotor là vấn đề an toàn hậu quả cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Tủ sấy và lò nung** tiếp nhận điểm tựa từ **Cân bằng rotor theo khối lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bơm chân không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Rotor balance protects mechanical integrity; an oven or muffle furnace instead controls temperature and material compatibility, after which reduced pressure can lower the boiling point for gentler drying.
 
 ## Tủ sấy và lò nung
 
@@ -378,7 +378,7 @@ Lò nung muffle đạt nhiệt độ cao hơn nhiều để tro hóa hoặc nung
 
 Vật liệu của chén/bình chứa phải tương thích cả với nhiệt độ và hóa học của mẫu.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Bơm chân không** tiếp nhận điểm tựa từ **Tủ sấy và lò nung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy cô quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Thermal equipment sets the heat load and material limit; a vacuum pump changes pressure, so solvent compatibility, cold trapping, and exhaust protection determine whether evaporation is safe enough for rotary concentration.
 
 ## Bơm chân không
 
