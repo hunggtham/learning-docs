@@ -20,7 +20,7 @@ pH\approx-\log_{10}[H_3O^+]
 
 Thang logarithm nén một khoảng nồng độ rất rộng. Chênh lệch 1 đơn vị pH tương ứng với chênh lệch khoảng 10 lần về hoạt độ ion hydrogen; chênh lệch 3 đơn vị tương ứng khoảng `10^3 = 1000` lần.
 
-> **Chuyển mạch:** pH là logarithm của activity; pOH/Kw nối hai thang đo trong nước, còn strong acid phải được phân biệt với concentrated solution.
+> **Chuyển mạch:** pH là logarithm của hoạt độ ion hydrogen; pOH và (K_w) nối hai thang đo trong nước, còn mục kế tiếp phải tách **acid mạnh** khỏi **dung dịch đậm đặc** vì độ phân ly và lượng chất là hai câu hỏi khác nhau.
 
 ## pOH và tích số ion của nước
 
@@ -48,7 +48,7 @@ pH+pOH\approx14.00
 
 Con số 14 không phải hằng số phổ quát vì `K_w` phụ thuộc nhiệt độ.
 
-> **Chuyển mạch:** Ở chặng này của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Acid mạnh khác acid đậm đặc** tiếp nhận điểm tựa từ **pOH và tích số ion của nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hằng số phân ly acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** (pOH+pK_w) mô tả quan hệ cân bằng của nước, nhưng không quyết định một acid có phân ly hoàn toàn hay không. **Acid mạnh khác acid đậm đặc** làm rõ sự tách biệt đó; tiếp theo **Hằng số phân ly acid** sẽ định lượng mức độ phân ly.
 
 ## Acid mạnh khác acid đậm đặc
 
@@ -58,7 +58,7 @@ Con số 14 không phải hằng số phổ quát vì `K_w` phụ thuộc nhiệ
 
 Độ mạnh và nồng độ là hai khái niệm độc lập. `0.001 M HCl` là acid mạnh nhưng loãng; `1 M CH3CO2H` là dung dịch tương đối đậm đặc nhưng acid vẫn yếu về mặt cân bằng phân ly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Hằng số phân ly acid** tiếp nhận điểm tựa từ **Acid mạnh khác acid đậm đặc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng chuyển proton từ pKa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Phân biệt acid mạnh với acid đậm đặc mới chỉ nói về loại acid và lượng chất; (K_a) và (pK_a) cho biết cân bằng phân ly cụ thể. Từ giá trị (pK_a), mục **Cân bằng chuyển proton từ pKa** suy ra chiều ưu tiên của phản ứng giữa hai cặp acid–base.
 
 ## Hằng số phân ly acid
 
@@ -82,7 +82,7 @@ pK_a=-\log_{10}K_a
 
 nên `pKa` càng nhỏ thì acid càng mạnh.
 
-> **Chuyển mạch:** Trong **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Cân bằng chuyển proton từ pKa** tiếp nhận điểm tựa từ **Hằng số phân ly acid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những yếu tố cấu trúc kiểm soát độ acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** (K_a) đo xu hướng phân ly của một acid, còn so sánh (pK_a) dự đoán proton sẽ chuyển về phía cặp yếu hơn. Muốn giải thích vì sao các (pK_a) khác nhau, mục **Những yếu tố cấu trúc kiểm soát độ acid** sẽ truy nguyên độ bền của base liên hợp.
 
 ## Cân bằng chuyển proton từ pKa
 
@@ -102,7 +102,7 @@ Cân bằng có xu hướng nghiêng về phía chứa acid yếu hơn và cơ s
 
 Đây là công cụ rất mạnh trong hóa học hữu cơ và hóa sinh vì cho phép dự đoán chiều chuyển proton chỉ bằng cách so sánh `pKa`.
 
-> **Chuyển mạch:** Ở chặng này của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Những yếu tố cấu trúc kiểm soát độ acid** tiếp nhận điểm tựa từ **Cân bằng chuyển proton từ pKa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **pH của acid mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cân bằng proton cho biết phản ứng đi theo hướng nào; độ âm điện, kích thước, cộng hưởng và hiệu ứng cảm ứng giải thích độ bền của base liên hợp đứng sau hướng đó. Sau khi hiểu nguyên nhân cấu trúc, **pH của acid mạnh** chuyển sang tính nồng độ ion trong trường hợp phân ly gần hoàn toàn.
 
 ## Những yếu tố cấu trúc kiểm soát độ acid
 
