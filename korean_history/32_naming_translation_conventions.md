@@ -59,7 +59,7 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | Đấu tranh Dân chủ Tháng Sáu | 6월 민주항쟁 | June Democratic Struggle |
 | Làn sóng Hàn Quốc | 한류 | Hallyu / Korean Wave |
 
-> **Chuyển mạch:** Quick table giúp tra cứu; place/institution names trong companion phải giữ mapping Việt–Hàn–Anh ổn định, rồi mental model giải thích khi nào dùng dạng nào.
+> **Chuyển mạch:** Quick table giữ mapping Việt–Hàn–Anh ổn định; place/institution names dùng dạng tra cứu nhất quán, còn mental model quyết định khi nào cần giữ tên gốc để tránh mất ngữ cảnh.
 
 ## Tên địa điểm và thiết chế trong các companion mới
 

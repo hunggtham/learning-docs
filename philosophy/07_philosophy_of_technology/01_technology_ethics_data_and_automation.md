@@ -6,7 +6,7 @@
 
 Dataset được tạo bởi category, sensor, sampling và institutional purpose. Missingness, label chính sách (policy / 정책) và historical practice đi vào mô hình (model / 모델) trước khi thuật toán (algorithm / 알고리즘) chạy. Privacy vì thế không chỉ là giấu một trường dữ liệu (field / 필드); nó gồm suy luận (inference / 추론), linkage, persistence, truy cập (access / 접근) và power to refuse.
 
-> **Chuyển mạch:** Trong **Technology Ethics: dữ liệu (data / 데이터), Automation và Infrastructures**, **Dữ liệu (data / 데이터) không tự nói** nêu điều cần giải thích; **Automation và responsibility gap** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hạ tầng (infrastructure / 인프라) và đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Data cần provenance và interpretation; automation phân phối trách nhiệm qua decision pipeline, còn infrastructure/path dependence giải thích vì sao lựa chọn cũ tiếp tục định hình lựa chọn mới.
 
 ## Automation và responsibility gap
 
