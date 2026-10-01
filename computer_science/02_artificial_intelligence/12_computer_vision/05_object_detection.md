@@ -22,7 +22,7 @@ Classification biết toàn ảnh (image / 이미지) thuộc lớp (class / 클
 
 Do đó mô hình (model / 모델) phải solve localization + classification + variable-length đầu ra (output / 출력).
 
-> **Chuyển mạch:** Trong **Đối tượng (object / 객체) Detection**, **Bounding Boxes** tiếp nhận điểm tựa từ **Tại sao detection khó hơn classification?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intersection over Union** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Detection phải vừa phân loại vừa định vị; bounding boxes biến vị trí thành prediction có thể so sánh, rồi IoU đo mức overlap với ground truth.
 
 ## Bounding Boxes
 

@@ -24,7 +24,7 @@ P(y_{1:T}\mid x)=\prod_{t=1}^{T}P(y_t\mid y_{<t},x)
 
 Encoder processes `x`; decoder các mô hình (models / 모델들) conditional next-token phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Trong **Encoder–Decoder các mô hình (models / 모델들): tách hiểu đầu vào (input / 입력) và tạo đầu ra (output / 출력)**, **Early RNN Seq2Seq** tiếp nhận điểm tựa từ **Sequence-to-Sequence bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ cảnh (context / 맥락) Bottleneck** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Seq2Seq tách encoding input khỏi decoding output; early RNN encoder–decoder nén toàn bộ nguồn vào context vector, tạo bottleneck khi sequence dài.
 
 ## Early RNN Seq2Seq
 

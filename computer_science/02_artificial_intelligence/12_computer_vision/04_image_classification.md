@@ -28,7 +28,7 @@ Huấn luyện (training / 학습) thường dùng cross-entropy:
 L=-\log p_y
 \]
 
-> **Chuyển mạch:** Trong **Ảnh (image / 이미지) Classification**, **Single-Label Classification** cho ta quy tắc; **Multi-Label Classification** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lớp (class / 클래스) xác suất (probability / 확률) không phải Truth xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Single-label dùng một target class, multi-label cho phép nhiều nhãn đồng thời; class probability là model belief cần calibration, không phải truth probability của thế giới.
 
 ## Multi-Label Classification
 

@@ -24,7 +24,7 @@ x_{1:T}=(x_1,x_2,...,x_T)
 
 Kiến trúc (architecture / 아키텍처) phụ thuộc đầu ra (output / 출력) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**, **Chuỗi (sequence / 시퀀스) notation** xác định đầu vào; **Markov giả định (assumption / 가정)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Autoregressive Factorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sequence notation giữ thứ tự và dependency của input; Markov assumption rút gọn lịch sử cần nhớ, rồi autoregressive factorization biến xác suất chuỗi thành tích các conditional next-step.
 
 ## Markov giả định (assumption / 가정)
 

@@ -28,7 +28,7 @@ Hidden tensor:
 X\in R^{B\times T\times d_{mô hình (model / 모델)}}
 \]
 
-> **Chuyển mạch:** Trong **Transformer: Attention + Residual Computation ở quy mô lớn**, **Cốt lõi (core / 핵심) Transformer khối (block / 블록)** tiếp nhận điểm tựa từ **Đầu vào (input / 입력) biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-Attention Sub-layer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Input representation đi qua transformer block gồm attention, feed-forward và residual/norm; self-attention là cơ chế trộn thông tin giữa các vị trí.
 
 ## Cốt lõi (core / 핵심) Transformer khối (block / 블록)
 
