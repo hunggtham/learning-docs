@@ -22,7 +22,7 @@ Mũi tên cho–nhận đôi khi được dùng để nhấn mạnh nguồn gố
 
 Với phối tử như CO, liên kết còn có hai chiều: phối tử cho σ vào kim loại và kim loại cho ngược π vào phối tử. Vì vậy liên kết phối trí thường là tổ hợp của tương tác tĩnh điện và sự trộn orbital cộng hóa trị.
 
-> **Chuyển mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Nguyên tử cho electron và độ càng của phối tử** tiếp nhận điểm tựa từ **Liên kết phối trí bắt đầu từ acid–cơ sở (base / 기반) Lewis, nhưng không kết thúc ở đó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng càng cua — không chỉ vì “nhiều liên kết nên chắc hơn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Lewis acid–base giải thích donor/acceptor; denticity cho biết một ligand bám qua bao nhiêu donor atom, và chelate effect làm phức bền hơn vì cả entropy lẫn hình học.
 
 ## Nguyên tử cho electron và độ càng của phối tử
 

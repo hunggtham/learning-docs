@@ -12,7 +12,7 @@ Ghép nối tiếp làm tăng điện áp; ghép song song làm tăng dung lư�
 
 Lưu trữ điện hóa khác tụ điện ở chỗ năng lượng chủ yếu được lưu trong trạng thái hóa học và điện tử của vật liệu, thay vì chỉ trong sự phân tách điện tích tĩnh điện. Siêu tụ điện (supercapacitor) nằm ở vùng trung gian giữa các cơ chế này.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Năng lượng và công suất là hai đại lượng khác nhau** tiếp nhận điểm tựa từ **Cell, battery và lưu trữ điện hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung lượng và trạng thái sạc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cell và battery mô tả kiến trúc chuyển hóa điện hóa; năng lượng cho biết tổng công có thể cung cấp, công suất cho biết tốc độ cung cấp, còn capacity/state of charge nối hai khái niệm với vận hành thực.
 
 ## Năng lượng và công suất là hai đại lượng khác nhau
 

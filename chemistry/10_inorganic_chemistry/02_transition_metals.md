@@ -16,7 +16,7 @@ Trong nguyên tử trung hòa, quy tắc Aufbau giúp dự đoán cấu hình el
 
 Vì vậy ion kim loại không có một “bảng xếp hạng orbital” bất biến; cảnh quan năng lượng phụ thuộc trạng thái cụ thể của hệ.
 
-> **Chuyển mạch:** Trong **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**, **Trạng thái oxy hóa — vì sao đa dạng hơn nhóm chính** tiếp nhận điểm tựa từ **Vì sao hóa học khối d phong phú** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số electron d: đại lượng hữu ích hơn số nhóm trong nhiều bài toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khối d có nhiều trạng thái oxy hóa vì ns và (n−1)d gần năng lượng; đếm d-electron tiếp theo giúp dự đoán cấu hình, màu và hoạt tính xúc tác cụ thể hơn số nhóm.
 
 ## Trạng thái oxy hóa — vì sao đa dạng hơn nhóm chính
 

@@ -16,7 +16,7 @@ Năm orbital có định hướng không gian khác nhau. \(d_{z^2}\) và \(d_{x
 
 Khi phối tử tiến tới theo một hình học xác định, khác biệt định hướng trở thành khác biệt về năng lượng tương tác. Đây là điểm cốt lõi: **hình học không chỉ thay đổi hình dáng phân tử mà còn thay đổi Hamiltonian điện tử**.
 
-> **Chuyển mạch:** Trong **Trường tinh thể và trường phối tử — sự tách mức orbital d**, **Trường bát diện — vì sao \(eg\) cao hơn \(t{2g}\)** tiếp nhận điểm tựa từ **Bắt đầu từ ion kim loại tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tâm trọng năng lượng — sự tách mức không tự tạo hay phá năng lượng orbital trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ion kim loại tự do có các orbital d suy biến; octahedral ligands đẩy (e_g) lên và (t_{2g}) xuống, nhưng tổng trọng tâm năng lượng vẫn được bảo toàn.
 
 ## Trường bát diện — vì sao \(e_g\) cao hơn \(t_{2g}\)
 
