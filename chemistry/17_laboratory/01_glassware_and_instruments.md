@@ -188,7 +188,7 @@ Với sinh hàn dùng nước, nước làm mát thường đi vào từ đầu 
 
 Lưu lượng chỉ cần đủ cho trao đổi nhiệt; dòng quá mạnh lãng phí nước và có thể làm ống mềm chịu ứng suất không cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Áo gia nhiệt và bếp gia nhiệt** tiếp nhận điểm tựa từ **Sinh hàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuấy từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A condenser removes heat after vaporization; the heating mantle or hot plate supplies that energy under a controlled, safer interface before mixing determines how evenly the heat spreads.
 
 ## Áo gia nhiệt và bếp gia nhiệt
 
@@ -196,7 +196,7 @@ Lưu lượng chỉ cần đủ cho trao đổi nhiệt; dòng quá mạnh lãng
 
 Nguồn lửa hở không phù hợp khi có hơi dung môi dễ cháy.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Khuấy từ** tiếp nhận điểm tựa từ **Áo gia nhiệt và bếp gia nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuấy cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Heating sets the energy input and safety boundary; magnetic stirring reduces concentration and temperature gradients, but scale and viscosity determine when mechanical stirring is needed.
 
 ## Khuấy từ
 
@@ -206,7 +206,7 @@ Trộn tốt làm giảm độ dốc (gradient / 기울기) nồng độ và nhi
 
 Khi tăng quy mô, khuấy từ có thể không đủ vì thời gian trộn và hình học dòng thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Khuấy cơ** tiếp nhận điểm tựa từ **Khuấy từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt kế và đầu dò nhiệt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Magnetic stirring is convenient for low-viscosity, small-scale work; mechanical agitation adds torque and controllable flow for viscous or larger systems, making probe placement the next measurement question.
 
 ## Khuấy cơ
 
@@ -216,7 +216,7 @@ Hình dạng cánh khuấy quyết định kiểu dòng.
 
 Chất lượng trộn là một phần của khả năng tái lập phản ứng chứ không chỉ là thao tác phụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Nhiệt kế và đầu dò nhiệt độ** tiếp nhận điểm tựa từ **Khuấy cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mechanical stirring changes the flow field and helps homogenize the sample; a temperature probe must therefore measure a representative region before mass is measured on the analytical balance.
 
 ## Nhiệt kế và đầu dò nhiệt độ
 
