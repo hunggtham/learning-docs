@@ -30,25 +30,25 @@ Kakao, Naver, Coupang, delivery apps và toàn cục (global / 전역) platforms
 
 Large-scale candlelight demonstrations giữa 2016–2017 cho thấy offline mass assembly và online thông tin (information / 정보) ecosystem kết hợp. Khi đọc hiện tại (current / 현재) civic lịch sử (history / 이력), cần phân biệt viral visibility với representative công khai (public / 공개) opinion.
 
-> **Chuyển mạch:** Ở chặng này của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Pandemic và trạng thái (state / 상태) sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Công khai (public / 공개) mobilization và digital media** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) thành toàn cục (global / 전역) cultural hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Digital mobilization turns visibility into political participation; the pandemic tests whether state capacity can coordinate health, privacy, work, and economic relief, while cultural export carries those institutional choices into global networks.
 
 ## Pandemic và trạng thái (state / 상태) sức chứa (capacity / 용량)
 
 COVID-19 period làm visible quan hệ (relation / 관계) giữa công khai (public / 공개) health hạ tầng (infrastructure / 인프라), digital tracing, privacy debate, small-business burden và remote công việc (work / 작업). Pandemic là bên ngoài (external / 외부) shock tương tự những shock lịch sử trước: nó không tạo mọi trend từ zero nhưng accelerate trend đã có.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) thành toàn cục (global / 전역) cultural hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Pandemic và trạng thái (state / 상태) sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Pandemic exposure revealed capacity and privacy trade-offs; Hallyu then shows how Korea’s platforms and cultural industries became transnational infrastructure, not merely a list of popular products.
 
 ## Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) thành toàn cục (global / 전역) cultural hạ tầng (infrastructure / 인프라)
 
 By 2020s, Korean content không còn chỉ là niche regional export. K-pop, film, drama, webtoon và beauty operate qua toàn cục (global / 전역) nền tảng (platform / 플랫폼) networks. Historical significance nằm ở việc Korea chuyển từ primarily technology/manufacturing exporter sang major symbolic-content producer.
 
-> **Chuyển mạch:** Trong **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) thành toàn cục (global / 전역) cultural hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Capital region concentration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Global cultural reach does not erase domestic continuity: education competition, family obligations, and housing still shape the present, leading to the spatial concentration that distributes opportunity unevenly.
 
 ## Dùng chung (common / 공통) Misconceptions
 
 “Người trẻ Hàn bây giờ hoàn toàn khác thế hệ trước” quá tuyệt đối. Institution như education competition, family obligation và housing vẫn tạo continuity, nhưng cách chúng được negotiated đã thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Capital region concentration** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Education after massification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Misconceptions about generational rupture hide structural continuity; capital-region concentration makes that continuity spatial, with jobs and services clustering while housing costs and regional drain rise, setting up education inequality.
 
 ## Capital region concentration
 
