@@ -6,7 +6,7 @@
 
 Claim “mô hình (model / 모델) giúp ưu tiên bệnh nhân tốt hơn” cần tách đo lường (measurement / 측정) (outcome nào?), nhân quả (causal / 인과적) suy luận (inference / 추론) (so với quy trình nào?), epistemology (data đại diện ai?), ethics (fairness và consent), political philosophy (ai có quyền appeal?) và technology (operator có override thật không?). Accuracy tổng thể có thể che subgroup harm hoặc calibration khác nhau.
 
-> **Chuyển mạch:** Trong **Integrated trường hợp (case / 사례) Studies: từ Claim đến quyết định (decision / 결정)**, **Trường hợp (case / 사례) 1 — AI triage trong bệnh viện** cho ta quy tắc; **Trường hợp (case / 사례) 2 — Climate adaptation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 3 — Cognitive offloading** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** AI triage làm rõ fairness và uncertainty trong quyết định lâm sàng; climate adaptation chuyển chúng sang policy trade-off, còn cognitive offloading kiểm tra agency khi công cụ tham gia reasoning.
 
 ## Trường hợp (case / 사례) 2 — Climate adaptation
 
