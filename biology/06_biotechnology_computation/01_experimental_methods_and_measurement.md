@@ -18,7 +18,7 @@ Nhưng mỗi proxy đo một aspect khác nhau. Cell count tăng có thể do di
 
 Do đó câu hỏi experimental đầu tiên luôn là: **đo lường (measurement / 측정) này đại diện cho đại lượng sinh học nào, và những tiến trình (process / 프로세스) khác nào cũng có thể thay đo lường (measurement / 측정) đó?**
 
-> **Chuyển mạch:** Operational variable biến khái niệm sinh học thành phép đo; construct validity hỏi phép đo có đúng đối tượng không, rồi control mới cho phép suy luận nhân quả.
+> **Chuyển mạch:** Biến thao tác biến khái niệm sinh học thành phép đo; **construct validity** kiểm tra phép đo có đại diện đúng đối tượng hay không. Khi đại diện đã rõ, **đối chứng** mới tạo được so sánh để suy luận nhân quả.
 
 ## 2. Độ hợp lệ của cấu trúc đo lường (construct validity): đo đúng thứ mình nghĩ đang đo chưa?
 
@@ -28,7 +28,7 @@ Ví dụ dùng một marker protein (protein) để gọi “tế bào gốc (st
 
 Khi đọc paper, hãy tách hai câu: “instrument có đo chính xác fluorescence không?” và “huỳnh quang (fluorescence) đó có thật sự đại diện cho biological concept không?”.
 
-> **Chuyển mạch:** Ở chặng này của **Phương pháp thực nghiệm và đo lường trong Sinh học — Experimental Methods and đo lường (measurement / 측정)**, **2. Độ hợp lệ của cấu trúc đo lường (construct validity): đo đúng thứ mình nghĩ đang đo chưa?** nêu điều cần giải thích; **3. điều khiển (control / 제어) là lô-gic (logic / 논리) của nhân quả (causal / 인과적) suy luận (inference / 추론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Ngẫu nhiên hóa (randomization), blinding và yếu tố gây nhiễu (confounder)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Construct validity tách “tín hiệu đo được” khỏi “khái niệm muốn biết”; **đối chứng** tiếp theo kiểm tra điều gì xảy ra khi yếu tố nhân quả bị bỏ hoặc thay thế. Sau khi có comparison, **ngẫu nhiên hóa và làm mù** sẽ giảm các giải thích thay thế do confounder.
 
 ## 3. điều khiển (control / 제어) là lô-gic (logic / 논리) của nhân quả (causal / 인과적) suy luận (inference / 추론)
 
@@ -38,7 +38,7 @@ Khi đọc paper, hãy tách hai câu: “instrument có đo chính xác fluores
 
 Nếu nhóm can thiệp (treatment group) tăng fluorescence nhưng đối chứng dung môi cũng tăng tương tự, diễn giải (interpretation) “drug có tác động (effect / 효과)” yếu đi mạnh. điều khiển (control / 제어) chính là cách experiment tạo tình huống phản thực (counterfactual) gần đúng: điều gì sẽ xảy ra nếu chỉ thiếu factor mà ta quan tâm?
 
-> **Chuyển mạch:** Controls establish the causal comparison; randomization/blinding reduce confounding, while technical and biological replicates answer precision versus generalizability.
+> **Chuyển mạch:** Đối chứng tạo comparison nhân quả; ngẫu nhiên hóa và làm mù giảm confounding. Sau đó phải tách **lặp kỹ thuật** để ước lượng nhiễu đo khỏi **lặp sinh học** để đánh giá biến thiên và khả năng khái quát.
 
 ## 4. Ngẫu nhiên hóa (randomization), blinding và yếu tố gây nhiễu (confounder)
 
@@ -48,7 +48,7 @@ Nếu toàn mẫu đối chứng (control sample) chạy sáng nay còn mẫu ca
 
 Good thiết kế thí nghiệm (experiment design) phải nghĩ trước về sai lệch, không đợi statistic “sửa” sau.
 
-> **Chuyển mạch:** Trong **Phương pháp thực nghiệm và đo lường trong Sinh học — Experimental Methods and đo lường (measurement / 측정)**, **5. Lần lặp kỹ thuật (technical replicate) và lần lặp sinh học (biological replicate) trả lời hai câu khác nhau** tiếp nhận điểm tựa từ **4. Ngẫu nhiên hóa (randomization), blinding và yếu tố gây nhiễu (confounder)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Độ chính xác (accuracy), độ chụm, độ nhạy (sensitivity), specificity và độ phân giải (resolution)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ngẫu nhiên hóa phân tán confounder chưa biết, còn làm mù giảm bias khi chấm kết quả; **lặp kỹ thuật và lặp sinh học** cho biết sai số nằm ở phép đo hay ở đơn vị sinh học. Từ hai nguồn biến thiên đó, mục **accuracy, precision, sensitivity, specificity và resolution** sẽ định nghĩa chất lượng tín hiệu cụ thể.
 
 ## 5. Lần lặp kỹ thuật (technical replicate) và lần lặp sinh học (biological replicate) trả lời hai câu khác nhau
 
