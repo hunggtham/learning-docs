@@ -62,7 +62,7 @@ Q = K → ΔrG = 0 → cân bằng
 
 Đây không phải mẹo ghi nhớ. Nó là hệ quả trực tiếp của chemical potential và Gibbs free năng lượng (energy / 에너지).
 
-> **Chuyển mạch:** Ở chặng này của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** đã nêu tiêu chí phân biệt, còn **Q không phải “lượng sản phẩm”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Q là “ảnh chụp”, K là “đích”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** So sánh (Q/K) đã cho chiều của (Delta_rG), nhưng chưa nói (Q) là bao nhiêu sản phẩm. **Q không phải “lượng sản phẩm”** vì mỗi hoạt độ còn mang lũy thừa stoichiometric; từ đó có thể đọc **Q là “ảnh chụp”, K là “đích”** của một trạng thái cụ thể.
 
 ## Q không phải “lượng sản phẩm”
 
@@ -80,7 +80,7 @@ Q=\frac{a_{NH_3}^2}{a_{N_2}a_{H_2}^3}
 
 Một thay đổi nhỏ ở \(H_2\) có thể ảnh hưởng Q mạnh vì lũy thừa ba.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Q là “ảnh chụp”, K là “đích”** tiếp nhận điểm tựa từ **Q không phải “lượng sản phẩm”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí lý tưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Vì (Q) là ảnh chụp composition hiện tại còn (K) là đích ở nhiệt độ cố định, chỉ cần thay đổi áp suất hoặc thành phần là (Q) đổi trước khi phản ứng tiến tới cân bằng. Với **Khí lý tưởng**, hoạt độ có thể thay bằng áp suất riêng phần để tính thay đổi đó.
 
 ## Q là “ảnh chụp”, K là “đích”
 
@@ -94,7 +94,7 @@ so Q/K → chiều thermodynamic driving force
 
 K không phụ thuộc composition ban đầu; Q thì thay đổi mỗi khi composition, pressure hoặc activity thay đổi.
 
-> **Chuyển mạch:** Trong **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Khí lý tưởng** tiếp nhận điểm tựa từ **Q là “ảnh chụp”, K là “đích”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung dịch và hoạt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Với khí gần lý tưởng, áp suất riêng phần cung cấp cách tính hoạt độ thuận tiện và cho thấy nén hệ làm (Q_p) đổi ngay. Trong **Dung dịch và hoạt độ**, nồng độ chỉ là xấp xỉ; hoạt độ phải phản ánh tương tác giữa các ion và phân tử.
 
 ## Khí lý tưởng
 
@@ -120,7 +120,7 @@ Q_p\approx
 
 Nếu nén hệ, các partial pressures thay đổi và Q có thể thay đổi ngay trước khi composition kịp phản ứng. Chính thay đổi Q đó tạo driving force mới.
 
-> **Chuyển mạch:** Ở chặng này của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Dung dịch và hoạt độ** tiếp nhận điểm tựa từ **Khí lý tưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn và chất lỏng tinh khiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khí lý tưởng dùng (P_i/P^\circ) làm hoạt độ gần đúng; dung dịch cần hệ số hoạt độ để sửa sai lệch do lực ion và tương tác dung môi. Ngược lại, **Chất rắn và chất lỏng tinh khiết** thường có hoạt độ quy ước gần 1 nên không xuất hiện như biến số trong (Q).
 
 ## Dung dịch và hoạt độ
 
