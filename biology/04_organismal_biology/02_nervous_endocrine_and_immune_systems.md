@@ -20,7 +20,7 @@ Sinh học tế bào (cell biology) đã xây điện thế màng (membrane pote
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **1. Neuron là cell chuyên hóa cho dòng thông tin (information flow)** xác định đầu vào; **2. Resting điện thế màng là stored electrochemical năng lượng (energy / 에너지)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Nernst intuition và điện thế cân bằng (equilibrium potential)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Neuron chuyên hóa cho information flow; resting membrane potential lưu electrochemical energy, còn Nernst/equilibrium potential nối gradient ion với tín hiệu thần kinh.
 
 ## 2. Resting điện thế màng là stored electrochemical năng lượng (energy / 에너지)
 

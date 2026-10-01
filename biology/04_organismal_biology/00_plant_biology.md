@@ -27,7 +27,7 @@ Các innovation lớn giải từng phần:
 
 ---
 
-> **Chuyển mạch:** Trong **Sinh học thực vật — Plant Biology (식물생물학)**, **1. Tại sao sống trên cạn là một bước chuyển khó?** cho ta quy tắc; **2. Sơ đồ cơ thể (body plan): rễ–shoot là phân công chức năng (division of labor)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Meristem: plant xây cơ thể suốt đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sống trên cạn đòi hỏi chống mất nước và nâng đỡ; root–shoot phân công hấp thu/vận chuyển, còn meristem giữ khả năng xây cơ thể suốt đời.
 
 ## 2. Sơ đồ cơ thể (body plan): rễ–shoot là phân công chức năng (division of labor)
 

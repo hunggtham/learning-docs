@@ -12,7 +12,7 @@ Một quần thể được mô tả không chỉ bởi số cá thể \(N\), m�
 
 Hai quần thể cùng \(N\) có thể có tương lai rất khác nếu một bên chủ yếu là juvenile còn bên kia chủ yếu là cá thể già. Vì vậy demography luôn cần hỏi **ai đang sống trong quần thể**, không chỉ “có bao nhiêu cá thể”.
 
-> **Chuyển mạch:** Trong **Quần thể, Quần xã và Hành vi — Population, Community and hành vi (behavior / 동작)**, **1. Kích thước quần thể không đủ để mô tả quần thể** đã nêu tiêu chí phân biệt, còn **2. Tăng trưởng theo hàm mũ: baseline khi giới hạn chưa chi phối mạnh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Thời gian nhân đôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Population không chỉ là size mà còn age structure, density và distribution; exponential growth là baseline, rồi doubling time cho biết tốc độ trước khi density dependence giới hạn.
 
 ## 2. Tăng trưởng theo hàm mũ: baseline khi giới hạn chưa chi phối mạnh
 
