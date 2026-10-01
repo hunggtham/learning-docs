@@ -28,7 +28,7 @@ Complementarity tạo một thuộc tính (property / 속성) rất mạnh: **m�
 
 Đây là lý do chemistry của DNA phù hợp cho tính di truyền (heredity).
 
-> **Chuyển mạch:** Ở chặng này của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **3. Directionality 5′ → 3′ không phải ký hiệu trang trí** tiếp nhận điểm tựa từ **2. DNA cấu trúc (structure / 구조): chemistry tạo khả năng bản sao (copy / 복사) thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. DNA replication: bản sao (copy / 복사) genome trước khi cell divide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** DNA’s base-pair chemistry permits copying, but polymerases extend only 5′→3′; replication must therefore coordinate leading and lagging strands around that directional constraint.
 
 ## 3. Directionality 5′ → 3′ không phải ký hiệu trang trí
 
@@ -38,7 +38,7 @@ Khi two strand antiparallel, restriction này tạo **mạch dẫn đầu (leadi
 
 Một detail hóa học nhỏ dẫn đến kiến trúc (architecture / 아키텍처) chạc sao chép (replication fork).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **4. DNA replication: bản sao (copy / 복사) genome trước khi cell divide** tiếp nhận điểm tựa từ **3. Directionality 5′ → 3′ không phải ký hiệu trang trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Đọc sửa (proofreading) và repair: thông tin (information / 정보) hệ thống (system / 시스템) phải quản lý lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Directionality turns genome copying into a coordinated fork with primers, polymerases, and fragment joining; proofreading and repair then determine which copying errors remain.
 
 ## 4. DNA replication: bản sao (copy / 복사) genome trước khi cell divide
 
@@ -55,7 +55,7 @@ Tiến trình (process / 프로세스) gồm:
 
 Danh sách enzyme chỉ có ý nghĩa khi nhìn theo vấn đề (problem): strand phải được mở, polymerase cần starting điểm (point / 지점), synthesis có directionality, fragment cần nối.
 
-> **Chuyển mạch:** Trong **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **5. Đọc sửa (proofreading) và repair: thông tin (information / 정보) hệ thống (system / 시스템) phải quản lý lỗi (error / 오류)** tiếp nhận điểm tựa từ **4. DNA replication: bản sao (copy / 복사) genome trước khi cell divide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Mutation không phải lúc nào cũng do replication lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Replication creates opportunities for mismatch; proofreading and repair lower the error rate, while unrepaired damage, chemical change, or recombination can still produce mutation.
 
 ## 5. Đọc sửa (proofreading) và repair: thông tin (information / 정보) hệ thống (system / 시스템) phải quản lý lỗi (error / 오류)
 
@@ -68,7 +68,7 @@ Không có hệ thống (system / 시스템) nào hoàn hảo. lỗi (error / �
 - đủ fidelity để organism hoạt động và tính di truyền ổn định;
 - vẫn có biến dị (variation) để evolution xảy ra.
 
-> **Chuyển mạch:** Ở chặng này của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **6. Mutation không phải lúc nào cũng do replication lỗi (error / 오류)** tiếp nhận điểm tựa từ **5. Đọc sửa (proofreading) và repair: thông tin (information / 정보) hệ thống (system / 시스템) phải quản lý lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Từ DNA sang RNA: phiên mã (transcription)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mutation is a change in sequence, not automatically a failed replication event; transcription next asks how a changed DNA template is selectively copied into RNA.
 
 ## 6. Mutation không phải lúc nào cũng do replication lỗi (error / 오류)
 
