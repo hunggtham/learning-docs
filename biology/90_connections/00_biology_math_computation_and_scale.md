@@ -40,7 +40,7 @@ nên:
 
 Một equation hình học (geometry / 기하학) tạo consequences ở nhiều chapter.
 
-> **Chuyển mạch:** Tỷ lệ diện tích–thể tích cho biết hình học giới hạn trao đổi ra sao; **3. tỷ lệ thay đổi** chuyển cùng câu hỏi đó sang động lực học: không chỉ hệ có kích thước nào, mà hệ đang đổi nhanh đến mức nào.
+> **Chuyển mạch:** Surface-area-to-volume ratio đặt giới hạn trao đổi theo kích thước; rate of change chuyển câu hỏi sang dynamics, nơi cần biết hệ thay đổi nhanh đến đâu so với capacity vận chuyển.
 
 ## 3. tỷ lệ (rate / 비율) of thay đổi (change / 변경)
 

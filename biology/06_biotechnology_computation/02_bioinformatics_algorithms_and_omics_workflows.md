@@ -18,7 +18,7 @@ Các format phổ biến phản ánh stage đó. FASTQ giữ read và chất lư
 
 Format không chỉ là cú pháp (syntax / 문법) IT; nó encode **trạng thái (state / 상태) của lập luận (reasoning / 추론)**.
 
-> **Chuyển mạch:** Trong **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**, **1. Từ molecule sang digital đối tượng (object / 객체)** nêu điều cần giải thích; **2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. QC phải diễn ra trước suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Bioinformatics biến molecule thành digital object; metadata giữ ngữ cảnh mẫu và pipeline, còn QC phải đi trước inference để tránh diễn giải tín hiệu do lỗi kỹ thuật.
 
 ## 2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)
 
