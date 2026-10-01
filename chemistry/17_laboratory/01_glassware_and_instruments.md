@@ -432,7 +432,7 @@ Rò khí, nhiễm bẩn inlet và hư hỏng cột làm thời gian lưu và hì
 
 Kiểm soát chất lượng thường dùng chuẩn kiểm tra độc lập giữa các lần hiệu chuẩn đầy đủ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Hiệu chuẩn và xác minh** nêu điều cần giải thích; **Tính truy xuất đo lường** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bảo trì phòng ngừa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Calibration and verification establish whether an instrument meets its target; metrological traceability links that claim through documented standards, and preventive maintenance keeps the chain valid over time.
 
 ## Tính truy xuất đo lường
 
@@ -440,7 +440,7 @@ Kiểm soát chất lượng thường dùng chuẩn kiểm tra độc lập gi�
 
 Điều này rất quan trọng trong phòng thí nghiệm được quản lý và khi cần so sánh kết quả giữa nhiều cơ sở.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Tính truy xuất đo lường** nêu điều cần giải thích; **Bảo trì phòng ngừa** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Traceability makes calibration evidence comparable across sites; maintenance records explain when pumps, seals, electrodes, or columns can break that comparability, which the misconceptions section makes explicit.
 
 ## Bảo trì phòng ngừa
 
@@ -448,7 +448,7 @@ Nhiều “vấn đề hóa học bí ẩn” thực ra đến từ tình trạn
 
 Lịch sử bảo trì vì vậy là một phần của siêu dữ liệu (metadata / 메타데이터) thí nghiệm.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Bảo trì phòng ngừa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Preventive maintenance preserves the measurement chain; the misconceptions show how resolution, tare, glassware markings, and rpm can still be mistaken for accuracy, setting up a reusable model.
 
 ## Những hiểu lầm thường gặp
 
@@ -468,7 +468,7 @@ Không. Cấp hiệu chuẩn của dụng cụ đặt giới hạn trước kỹ
 
 Không. RCF còn phụ thuộc bán kính rotor.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** The misconceptions become a general model: every instrument maps a physical quantity through calibration assumptions and failure modes; the next owner applies that model to solution preparation.
 
 ## Mô hình tư duy
 
