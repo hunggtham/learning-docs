@@ -20,7 +20,7 @@ Tuyến tính (linear / 선형) regression approximates quan hệ (relation / �
 Y_i = β0 + β1 X_i + u_i
 ```
 
-> **Chuyển mạch:** Conditional expectation là target tối ưu theo squared loss; linear projection xấp xỉ target trong span của regressors, rồi OLS tìm coefficients theo criterion đó.
+> **Chuyển mạch:** Conditional expectation là target tối ưu dưới squared loss; **linear projection** xấp xỉ target trong span của regressors, còn **OLS** tìm coefficient bằng cách tối thiểu hóa sai số bình phương trong mẫu.
 
 ## 2. Population tuyến tính (linear / 선형) projection
 
@@ -34,7 +34,7 @@ OLS trong mẫu (sample / 표본) estimate population tuyến tính (linear / �
 
 Điểm này giúp tránh hiểu sai rằng tuyến tính (linear / 선형) regression luôn giả định reality “thật sự tuyến tính”.
 
-> **Chuyển mạch:** Ở chặng này của **Regression, Prediction & Suy luận (inference / 추론) — OLS là projection trước khi là nhân quả (causal / 인과적) tác động (effect / 효과)**, **3. OLS criterion** tiếp nhận điểm tựa từ **2. Population tuyến tính (linear / 선형) projection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Residual và lỗi (error / 오류) term khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Population projection định nghĩa coefficient tốt nhất theo tiêu chuẩn dự báo, dù conditional expectation thật có thể nonlinear. **OLS criterion** đưa tiêu chuẩn đó vào dữ liệu mẫu; sau đó cần tách residual quan sát được khỏi error term của quá trình sinh dữ liệu.
 
 ## 3. OLS criterion
 
@@ -54,7 +54,7 @@ Với simple regression:
 
 Nên slope chỉ tồn tại khi X có variation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Regression, Prediction & Suy luận (inference / 추론) — OLS là projection trước khi là nhân quả (causal / 인과적) tác động (effect / 효과)**, **4. Residual và lỗi (error / 오류) term khác nhau** tiếp nhận điểm tựa từ **3. OLS criterion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Interpretation của slope** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** OLS chọn đường có tổng squared residual nhỏ nhất, còn error term là phần không quan sát trong population DGP. **Interpretation của slope** tiếp theo chỉ có ý nghĩa khi ghi rõ units, transformation và đây là association/prediction hay causal effect.
 
 ## 4. Residual và lỗi (error / 오류) term khác nhau
 
@@ -70,7 +70,7 @@ là mẫu (sample / 표본) estimate sau khi fit.
 
 Residual có algebraic properties của OLS mẫu (sample / 표본); lỗi (error / 오류) term là conceptual part của DGP.
 
-> **Chuyển mạch:** Trong **Regression, Prediction & Suy luận (inference / 추론) — OLS là projection trước khi là nhân quả (causal / 인과적) tác động (effect / 효과)**, **5. Interpretation của slope** tiếp nhận điểm tựa từ **4. Residual và lỗi (error / 오류) term khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Multiple regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Residual là estimate sau fit, không phải toàn bộ sai số của DGP; slope mô tả thay đổi dự báo khi X tăng một đơn vị dưới quy ước giữ các biến liên quan. **Multiple regression** mở rộng diễn giải đó bằng partial association, nhưng “hold fixed” vẫn không tự tạo intervention.
 
 ## 5. Interpretation của slope
 
