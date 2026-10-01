@@ -1,6 +1,6 @@
 # Hóa học của sự sống — Chemistry, Water and năng lượng (energy / 에너지)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học của sự sống — Chemistry, Water and năng lượng (energy / 에너지)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Atom: “viên gạch” nhưng không phải viên bi đặc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Ion: khi electron không được chia đều** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học của sự sống — Chemistry, Water and năng lượng (energy / 에너지)**. Route đi từ nguyên tử/ion và liên kết → nước, pH và tương tác phân tử → năng lượng tự do, redox và gradient → phản ứng trong tế bào, để nền hóa học giải thích môi trường mà sự sống có thể duy trì.
 
 Chapter trước kết luận rằng sự sống là một hệ vật chất được tổ chức để duy trì ranh giới (boundary / 경계), dòng năng lượng (energy flow), thông tin (information / 정보) và điều hòa (regulation). Nhưng “vật chất” ở đây không phải khái niệm trừu tượng. Tế bào (cell) được tạo từ atom và molecule cụ thể; metabolism là reaction hóa học; membrane tồn tại vì thuộc tính (property / 속성) của lipid trong nước; protein có hình dạng vì tương tác (interaction / 상호작용) giữa atom; năng lượng (energy / 에너지) được chuyển qua electron và liên kết hóa học (chemical bond).
 

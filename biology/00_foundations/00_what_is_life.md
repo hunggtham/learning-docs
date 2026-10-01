@@ -1,6 +1,6 @@
 # Sự sống là gì? — What Is Life? (생명이란 무엇인가)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao danh sách thành phần không đủ để định nghĩa sự sống?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Ranh giới: tại sao sự sống cần một “bên trong” và “bên ngoài”?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**. Route đi từ vật chất và năng lượng → ranh giới/tổ chức bên trong → tự duy trì, thông tin và sinh sản → tiến hóa, để định nghĩa sự sống dựa trên quá trình và điều kiện vận hành chứ không chỉ thành phần.
 
 Ở chapter trước, ta đã xây cách nhìn Sinh học như khoa học về **các hệ thống (systems / 시스템들), quá trình (process), quy mô (scale / 규모) và cơ chế nhân quả (causal mechanism)**. Bây giờ ta dùng chính bộ công cụ đó để hỏi câu cơ bản nhất: **một hệ vật chất phải có những đặc điểm nào để ta gọi nó là sống?**
 

@@ -1,6 +1,6 @@
 # Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ molecule sang digital đối tượng (object / 객체)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bioinformatics, thuật toán và Omics Workflow — Bioinformatics Algorithms and Omics Workflows (생물정보학, 알고리즘과 오믹스 워크플로)**. Route đi từ phân tử và metadata → tiền xử lý/quality control → alignment, assembly và statistical inference → omics workflow có provenance, để kết quả tính toán còn truy được về mẫu và giả định.
 
 Khi Biology tạo ra hàng triệu chuỗi (sequence / 시퀀스), expression giá trị (value / 값) hoặc ảnh (image / 이미지) tính năng (feature / 기능), dữ liệu (data / 데이터) không còn có thể được hiểu bằng cách đọc từng dòng. **Sinh tin học (bioinformatics / 생물정보학)** xuất hiện ở đúng điểm này: dùng thuật toán, thống kê và mô hình dữ liệu (data model / 데이터 모델) để biến đo lường (measurement / 측정) thành suy luận sinh học (biological inference).
 

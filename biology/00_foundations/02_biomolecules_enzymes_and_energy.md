@@ -1,6 +1,6 @@
 # Biomolecule, Enzyme và Năng lượng tế bào — Biomolecules, Enzymes and Cellular năng lượng (energy / 에너지)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Biomolecule, Enzyme và Năng lượng tế bào — Biomolecules, Enzymes and Cellular năng lượng (energy / 에너지)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Monomer và polyme (polymer): vì sao life thích xây molecule lớn từ đơn vị (unit / 단위) lặp lại?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Condensation và hydrolysis: xây và tháo polyme** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Biomolecule, Enzyme và Năng lượng tế bào — Biomolecules, Enzymes and Cellular năng lượng (energy / 에너지)**. Route đi từ monomer/polymer → cấu trúc và tương tác → enzyme, hàng rào hoạt hóa và điều hòa → ghép năng lượng/ATP, để hóa học phân tử nối với công việc mà tế bào thực hiện.
 
 Chương (chapter) chemistry trước đã cho ta atom, bond, nước (water), pH, năng lượng tự do (free energy), redox và khuếch tán (diffusion). Nhưng cell không được xây từ một hỗn hợp molecule ngẫu nhiên. Life dựa trên một số lớp (class / 클래스) molecule có kiến trúc (architecture / 아키텍처) đặc biệt và được tổ chức thành mạng (network / 네트워크). Đây là bước chuyển từ **chemistry nói chung** sang **biochemistry (hóa sinh / 생화학)**.
 
