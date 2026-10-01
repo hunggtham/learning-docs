@@ -1,6 +1,6 @@
 # Liên kết kiến thức (knowledge connection / 지식 연결) — Vòng đời dữ liệu: register → RAM → disk → mạng (network / 네트워크)
 
-> **Mạch đọc:** Đặt **liên kết kiến thức (knowledge connection / 지식 연결) — Vòng đời dữ liệu: register → RAM → disk → mạng (network / 네트워크)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một giá trị (value / 값) trong CPU** sang **thời gian chạy (runtime / 런타임) bộ nhớ (memory / 메모리)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vòng đời dữ liệu: register → RAM → disk → network**. Route theo representation và copy: CPU/register → runtime/heap → socket/kernel buffer → database/WAL → filesystem/device → replica/cache; ở mỗi boundary cần hỏi ownership, freshness và durability guarantee.
 
 
 “dữ liệu (data / 데이터)” không phải một đối tượng (object / 객체) đứng yên ở một chỗ. Trong thời gian tồn tại (lifetime / 수명) của một yêu cầu (request / 요청), cùng logical giá trị (value / 값) có thể tồn tại dưới nhiều representations và copies: CPU register, bộ nhớ đệm (cache / 캐시) line, vùng nhớ động (heap / 힙) đối tượng (object / 객체), kernel buffer, filesystem page, SSD khối (block / 블록), cơ sở dữ liệu (database / 데이터베이스) page, mạng (network / 네트워크) packet và remote replica.

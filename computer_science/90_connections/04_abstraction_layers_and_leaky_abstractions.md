@@ -1,6 +1,6 @@
 # Liên kết kiến thức (knowledge connection / 지식 연결) — lớp trừu tượng (abstraction / 추상화) layers và leaky abstractions
 
-> **Mạch đọc:** Đặt **liên kết kiến thức (knowledge connection / 지식 연결) — lớp trừu tượng (abstraction / 추상화) layers và leaky abstractions** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Why lớp trừu tượng (abstraction / 추상화) is essential** sang **Leaky lớp trừu tượng (abstraction / 추상화)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Abstraction layers và leaky abstractions**. Route bắt đầu từ contract/encapsulation, đi qua leakage, cross-layer debugging và performance, rồi kết thúc bằng câu hỏi layer nào thực sự sở hữu invariant khi abstraction không còn che được failure.
 
 
 Computer các hệ thống (systems / 시스템들) are possible because no one thinks about all layers simultaneously. trình duyệt (browser / 브라우저) nhà phát triển (developer / 개발자) sees DOM/HTTP; backend sees objects/transactions; cơ sở dữ liệu (database / 데이터베이스) sees pages/logs; kernel sees processes/pages/sockets; CPU sees instructions/bộ nhớ đệm (cache / 캐시) lines. Each tầng (layer / 계층) offers an lớp trừu tượng (abstraction / 추상화) đặc tả hợp đồng (contract / 계약).
