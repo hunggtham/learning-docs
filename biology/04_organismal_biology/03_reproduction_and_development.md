@@ -1,6 +1,6 @@
 # Sinh sản và Phát triển — Reproduction and Development (생식과 발생)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sinh sản và Phát triển — Reproduction and Development (생식과 발생)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Asexual và sinh sản hữu tính (sexual reproduction) giải những bài toán khác nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Gametogenesis: meiosis + cell specialization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sinh sản và Phát triển — Reproduction and Development (생식과 발생)**. Route đi từ sinh sản vô tính/hữu tính → meiosis và giao tử → thụ tinh, patterning và biệt hóa → tăng trưởng, phát triển cơ quan và môi trường, để nối di truyền với hình thành cơ thể theo thời gian.
 
 Di truyền học (genetics) cho ta meiosis và di truyền (inheritance); Sinh học tế bào (cell biology) cho ta truyền tín hiệu (signaling), điều hòa gen (gene regulation) và chu kỳ tế bào (cell cycle); Organismal Biology cho ta tissue chuyên hóa. Chapter này nối tất cả bằng một câu hỏi lớn: **làm thế nào từ một tế bào đã thụ tinh (fertilized cell) có thể xuất hiện một organism gồm hàng nghìn tỷ cell gần như cùng genome nhưng khác cấu trúc (structure / 구조), hàm (function / 함수) và position?**
 

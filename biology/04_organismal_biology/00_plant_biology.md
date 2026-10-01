@@ -1,6 +1,6 @@
 # Sinh học thực vật — Plant Biology (식물생물학)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sinh học thực vật — Plant Biology (식물생물학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao sống trên cạn là một bước chuyển khó?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Sơ đồ cơ thể (body plan): rễ–shoot là phân công chức năng (division of labor)** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sinh học thực vật — Plant Biology (식물생물학)**. Route đi từ thích nghi lên cạn → rễ/chồi và mô dẫn → quang hợp, trao đổi nước và dinh dưỡng → sinh trưởng, sinh sản và tương tác môi trường, để hình thái được giải thích bằng dòng vật chất và năng lượng.
 
 Thực vật trên cạn phải giải một bài toán rất khác động vật. Chúng không thể di chuyển tới nguồn nước hay chạy khỏi nóng, lạnh, herbivore hoặc drought. gốc (root / 루트) nằm trong đất (soil) để lấy water và khoáng chất (mineral); leaf nằm trong air để lấy CO₂ và light. Hai tài nguyên (resource / 자원) lĩnh vực (domain / 도메인) cách xa nhau, trong khi toàn organism phải giữ tính liên tục thủy lực (hydraulic continuity), kinh tế carbon (carbon economy) và developmental coordination.
 

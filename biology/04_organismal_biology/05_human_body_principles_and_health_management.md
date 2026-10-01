@@ -1,6 +1,6 @@
 # Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Cơ thể người không phải tập hợp các cơ quan độc lập** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Cân bằng nội môi (homeostasis) — cơ thể giữ ổn định bằng cách liên tục thay đổi** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nguyên lý cơ thể người và quản lý sức khỏe — Human Body Principles and Health Management (인체 원리와 건강 관리)**. Route đi từ tế bào/mô → hệ cơ quan và homeostasis → dự trữ, thích nghi và giới hạn sinh lý → quyết định sức khỏe hằng ngày, để quản lý cơ thể dựa trên cơ chế chứ không chỉ danh sách triệu chứng.
 
 Khi học Sinh học cơ thể người, người mới thường gặp hai cực. Một bên là anatomy với hàng trăm tên cơ quan, hoóc-môn (hormone), enzyme và bệnh. Bên kia là các “mẹo sức khỏe” rời rạc như uống nhiều nước, ngủ sớm, ăn ít đường hay tập thể dục. Nếu hai phần này không được nối với nhau, ta có thể nhớ nhiều lời khuyên nhưng không hiểu **vì sao chúng hợp lý, khi nào chúng không còn đúng và tín hiệu nào cho thấy cơ thể đang thật sự gặp vấn đề**.
 

@@ -1,6 +1,6 @@
 # Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao khuếch tán không đủ khi cơ thể lớn?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Cân bằng nội môi không phải giữ một con số bất biến** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**. Route đi từ giới hạn khuếch tán → hệ vận chuyển và trao đổi → điều khiển phản hồi/cân bằng nội môi → phối hợp cơ quan theo thời gian, để “ổn định” được hiểu là điều chỉnh động chứ không phải giữ một giá trị bất biến.
 
 Động vật lớn không thể để từng tế bào tự lấy oxy và chất dinh dưỡng trực tiếp từ môi trường như sinh vật đơn bào. Khi cơ thể lớn lên, khoảng cách khuếch tán tăng theo, trong khi nhu cầu chuyển hóa thay đổi nhanh theo vận động, nhiệt độ và trạng thái sinh lý. Vì vậy cơ thể cần **hệ vận chuyển khối**, các bề mặt trao đổi chuyên hóa và mạng điều hòa giữ môi trường bên trong trong vùng tế bào có thể hoạt động.
 

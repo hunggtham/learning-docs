@@ -1,6 +1,6 @@
 # Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Neuron là cell chuyên hóa cho dòng thông tin (information flow)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. Resting điện thế màng là stored electrochemical năng lượng (energy / 에너지)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**. Route đi từ tín hiệu tế bào và điện thế màng → neuron/nội tiết truyền thông tin → thụ thể và phản hồi → miễn dịch nhận diện, trí nhớ và phối hợp toàn thân, để ba hệ được nối bằng ngôn ngữ điều hòa thay vì học tách rời.
 
 Sinh lý động vật (animal physiology) cho thấy organ phải phối hợp liên tục. Nhưng không phải mọi tín hiệu (signal / 신호) có cùng yêu cầu. Có tín hiệu (signal / 신호) cần cực nhanh và định vị chính xác; có tín hiệu (signal / 신호) cần broadcast chậm nhưng kéo dài; có tín hiệu (signal / 신호) phải nhận dạng mẫu (pattern / 패턴) lạ, chọn đúng clone và ghi bộ nhớ (memory / 메모리).
 
