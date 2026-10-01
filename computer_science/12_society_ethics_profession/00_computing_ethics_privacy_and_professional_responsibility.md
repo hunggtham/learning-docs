@@ -18,7 +18,7 @@ Privacy liên quan điều khiển (control / 제어)/ngữ cảnh (context / �
 
 Thông tin (information / 정보) có thể không secret nhưng aggregation/re-identification tạo harm mới.
 
-> **Chuyển mạch:** Ở chặng này của **Computing ethics, privacy và professional responsibility**, **Privacy không chỉ là secrecy** nêu điều cần giải thích; **Dữ liệu (data / 데이터) minimization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Consent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Privacy governs control, context, access, and downstream combination—not secrecy alone; data minimization reduces collection before consent explains when a person may authorize a defined use.
 
 ## Dữ liệu (data / 데이터) minimization
 
@@ -26,7 +26,7 @@ Thu thập ít dữ liệu (data / 데이터) cần thiết giảm breach impact
 
 Minimization cũng là bảo mật (security / 보안) principle: dữ liệu (data / 데이터) không tồn tại thì không thể leak từ hệ thống (system / 시스템) đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computing ethics, privacy và professional responsibility**, **Dữ liệu (data / 데이터) minimization** nêu điều cần giải thích; **Consent** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Purpose limitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Minimization narrows what the system holds and therefore the breach surface; consent then specifies the person’s authorization, while purpose limitation constrains reuse beyond that context.
 
 ## Consent
 
@@ -34,7 +34,7 @@ Consent có ý nghĩa khi informed, specific và reasonably voluntary. Dark patt
 
 Kỹ thuật (engineering / 엔지니어링) cần làm preference enforceable trong actual dữ liệu (data / 데이터) flows, không chỉ checkbox UI.
 
-> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Consent** đã nêu tiêu chí phân biệt, còn **Purpose limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Professional responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Consent is meaningful only for a clear, bounded purpose; purpose limitation turns that boundary into a design and governance rule, making professional responsibility visible when teams must handle exceptions.
 
 ## Purpose limitation
 
@@ -42,7 +42,7 @@ Dữ liệu (data / 데이터) collected cho fraud prevention không tự độn
 
 Dữ liệu (data / 데이터) lineage giúp biết downstream các hệ thống (systems / 시스템들) đang dùng dataset nào cho purpose nào.
 
-> **Chuyển mạch:** Ở chặng này của **Computing ethics, privacy và professional responsibility**, **Purpose limitation** đã nêu tiêu chí phân biệt, còn **Professional responsibility** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dual use** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Purpose limitation defines the intended use; professional responsibility asks who must act when the design can be repurposed, which is the dual-use problem rather than a purely technical defect.
 
 ## Professional responsibility
 
