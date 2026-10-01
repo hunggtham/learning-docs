@@ -32,7 +32,7 @@ J=-D\frac{dC}{dx}
 
 Dấu âm cho biết flux đi theo chiều giảm concentration. Đây là emergence: motion microscopic không có direction nhưng dòng quần thể (population flux) có direction.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **2. Random motion tạo directed flux ở population mức (level / 수준)** đã nêu tiêu chí phân biệt, còn **3. Thời gian khuếch tán (diffusion time) giải thích giới hạn kích thước** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Surface-area-to-volume ratio là hình học (geometry / 기하학) trở thành physiology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Random motion tạo net flux ở quy mô quần thể; diffusion time tăng theo khoảng cách, và surface-area-to-volume ratio biến giới hạn hình học đó thành giới hạn sinh lý.
 
 ## 3. Thời gian khuếch tán (diffusion time) giải thích giới hạn kích thước
 
@@ -46,7 +46,7 @@ Distance tăng 10 lần làm thời gian (time / 시간) tăng khoảng 100 lầ
 
 Từ một equation này ta suy ra vì sao cell nhỏ, vì sao lung cần circulation, vì sao plant cần mô mạch (vascular tissue) và vì sao tumor lớn cần angiogenesis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **3. Thời gian khuếch tán (diffusion time) giải thích giới hạn kích thước** đã nêu tiêu chí phân biệt, còn **4. Surface-area-to-volume ratio là hình học (geometry / 기하학) trở thành physiology** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Osmosis và thế hóa học (chemical potential)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi diffusion time và surface-area-to-volume ratio đã đặt giới hạn trao đổi, osmosis và chemical potential giải thích hướng nước di chuyển qua màng.
 
 ## 4. Surface-area-to-volume ratio là hình học (geometry / 기하학) trở thành physiology
 

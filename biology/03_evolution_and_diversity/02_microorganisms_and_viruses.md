@@ -12,7 +12,7 @@ Nhóm vi sinh vật bao gồm bacteria, archaea, nhiều eukaryote đơn bào, n
 
 Điểm chung thực dụng là kích thước khiến ta thường cần kính hiển vi, nuôi cấy hoặc kỹ thuật phân tử để quan sát và đo lường.
 
-> **Chuyển mạch:** Trong **Vi sinh vật và Virus — Microorganisms and Viruses (미생물과 바이러스)**, **2. Kiến trúc tế bào bacteria** tiếp nhận điểm tựa từ **1. “Vi sinh vật” là mô tả kích thước, không phải một clade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Gram dương và Gram âm: cấu trúc vỏ tế bào tạo khác biệt chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** “Vi sinh vật” là nhóm theo kích thước, không phải clade; kiến trúc bacteria quyết định envelope và metabolism, từ đó Gram dương/âm tạo khác biệt về chức năng và đáp ứng.
 
 ## 2. Kiến trúc tế bào bacteria
 

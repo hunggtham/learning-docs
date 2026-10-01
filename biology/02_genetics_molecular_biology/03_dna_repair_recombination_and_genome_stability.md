@@ -16,7 +16,7 @@ Vì vậy mỗi cell sống trong **damage–repair balance** liên tục. Đây
 
 Cần phân biệt **Tổn thương DNA (tổn thương DNA / DNA 손상)** với **đột biến (đột biến / 돌연변이)**. Damage là trạng thái hóa học hoặc structural abnormality. Nếu được sửa đúng, trình tự (sequence) ban đầu được khôi phục. Mutation là chuỗi (sequence / 시퀀스) thay đổi (change / 변경) đã trở thành ổn định qua sao chép (replication). Damage có thể dẫn tới mutation, nhưng hai khái niệm không đồng nghĩa.
 
-> **Chuyển mạch:** Trong **Sửa chữa DNA, tái tổ hợp và ổn định genome — DNA Repair, Recombination and Genome Stability (DNA 복구, 재조합과 유전체 안정성)**, **2. Độ chính xác sao chép bắt đầu ngay tại DNA polymerase** tiếp nhận điểm tựa từ **1. Tổn thương DNA là trạng thái bình thường của một molecule sống trong chemistry hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tỉ lệ lỗi (error rate) và genome kích thước (size / 크기) liên kết toán học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** DNA damage là trạng thái thường trực; polymerase fidelity giảm lỗi lúc sao chép, còn error rate nhân với genome size dự đoán gánh nặng đột biến trước khi xét repair và recombination.
 
 ## 2. Độ chính xác sao chép bắt đầu ngay tại DNA polymerase
 
