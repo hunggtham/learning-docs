@@ -1,6 +1,6 @@
 # Enzyme — chất xúc tác phân tử và kiểm soát động học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Enzyme — chất xúc tác phân tử và kiểm soát động học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nhiệt động lực học và động học — nguyên lý đầu tiên** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vị trí hoạt động là một vi môi trường hóa học** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Enzyme — chất xúc tác phân tử và kiểm soát động học**. Route đi từ năng lượng tự do và hàng rào hoạt hóa → vị trí hoạt động/định hướng cơ chất → trạng thái chuyển tiếp và cơ chế xúc tác → động học Michaelis–Menten, ức chế và điều hòa, để tách tốc độ phản ứng khỏi chiều tự phát nhiệt động.
 
 > **Enzyme (효소)** là chất xúc tác sinh học làm tăng tốc phản ứng bằng cách hạ hàng rào năng lượng tự do hoạt hóa nhưng không thay đổi nhiệt động lực học tổng thể của phản ứng. Phần lớn enzyme là protein, nhưng RNA xúc tác (**ribozyme**) cho thấy khả năng xúc tác là tính chất của cấu trúc và động lực học phân tử, không phải đặc quyền của protein.
 

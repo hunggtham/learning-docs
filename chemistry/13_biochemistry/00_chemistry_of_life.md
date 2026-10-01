@@ -1,6 +1,6 @@
 # Hóa học của sự sống — nhìn sự sống từ hóa học phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Câu hỏi nền tảng: điều gì biến hóa học thành hóa học của sự sống?** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Nước không chỉ là nền dung môi** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**. Route đi từ nước và ion → monomer/polymer → tự tổ chức và màng → xúc tác, thông tin và chuyển hóa → điều hòa ngoài cân bằng, để các chương sinh hóa sau dùng chung một ngôn ngữ hóa học thay vì chỉ liệt kê phân tử.
 
 > **Sinh hóa (biochemistry / 생화학)** nghiên cứu cách hóa học thông thường được tổ chức thành một hệ thống có khả năng duy trì cấu trúc, chuyển hóa năng lượng, sao chép thông tin và tự điều chỉnh. Sự sống không sử dụng một bộ định luật vật lý khác; điều đặc biệt nằm ở **tổ chức, phân ngăn, xúc tác và kiểm soát ngoài cân bằng**.
 

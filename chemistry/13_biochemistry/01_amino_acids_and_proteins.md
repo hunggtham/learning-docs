@@ -1,6 +1,6 @@
 # Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Amino acid — phân tử nhỏ nhưng có nhiều trạng thái** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hóa học acid-base của amino acid** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**. Route đi từ acid–base và điện tích amino acid → liên kết peptide/trình tự → cấu trúc bậc cao và cảnh quan gấp cuộn → động lực học, vị trí liên kết và chức năng, để nối hóa học monomer với hành vi của protein hoàn chỉnh.
 
 > **Protein (단백질)** là polymer của amino acid, nhưng mô tả đó mới chỉ nói thành phần. Điều làm protein đặc biệt là trình tự tạo ra một **cảnh quan năng lượng (energy landscape)** trong đó một số cấu dạng được ưu tiên, từ đó hình thành vị trí liên kết, trung tâm xúc tác, phần tử cơ học và công tắc phân tử.
 

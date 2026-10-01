@@ -1,6 +1,6 @@
 # Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dị hóa và đồng hóa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao tế bào dùng nhiều bước thay vì một phản ứng khổng lồ?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**. Route đi từ dị hóa/đồng hóa và thế hóa học → chất mang electron/ATP → gradient ion và ghép năng lượng → flux qua mạng phản ứng, điều hòa và cân bằng vật chất, để giải thích tế bào vận hành ngoài cân bằng mà vẫn giữ được tổ chức.
 
 > **Chuyển hóa (metabolism / 대사)** là mạng phản ứng hóa học liên kết với nhau để biến đổi vật chất, lưu trữ/giải phóng năng lượng tự do và duy trì tổ chức tế bào. **Sinh năng lượng (bioenergetics / 생물에너지학)** nghiên cứu cách tế bào ghép phản ứng thuận lợi với phản ứng bất lợi, di chuyển electron, tạo độ dốc (gradient / 기울기) ion và biến độ dốc (gradient / 기울기) đó thành công hóa học.
 

@@ -1,6 +1,6 @@
 # Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nucleotide và nucleoside** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ribose và deoxyribose** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**. Route đi từ nucleoside/nucleotide và phosphate → polymer hóa theo liên kết phosphodiester → bắt cặp, xếp chồng và cấu trúc 3D → sao chép/phiên mã theo khuôn, để độ bền hóa học và khả năng đọc trình tự được giải thích cùng nhau.
 
 > **Acid nucleic (nucleic acids / 핵산)** là polymer của nucleotide. DNA và RNA đặc biệt vì khung cộng hóa trị tạo trình tự bền, còn ghép cặp cơ sở (base / 기반) thuận nghịch cho phép trình tự đó được đọc, sao chép và nhận diện. Hóa học của chúng kết hợp ester phosphate, dị vòng thơm, liên kết hydrogen, xếp chồng π, hóa học acid-base và tĩnh điện polymer.
 

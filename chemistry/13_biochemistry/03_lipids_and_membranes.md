@@ -1,6 +1,6 @@
 # Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Acid béo — đuôi hydrocarbon + đầu có thể ion hóa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuỗi bão hòa và không bão hòa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa**. Route đi từ acid béo và độ bão hòa → hình học phân tử lưỡng ưa → micelle/lớp kép và chuyển pha → độ thấm, vận chuyển và gradient điện hóa, để cấu trúc lipid giải thích được cả màng lẫn tín hiệu.
 
 > **Lipid (지질)** là một họ rất rộng của các phân tử kỵ nước hoặc lưỡng ưa. Điểm quan trọng nhất không phải một nhóm chức chung duy nhất, mà là cách các cấu trúc giàu hydrocarbon tương tác với nước và tự tổ chức thành giọt, lớp đơn, micelle và lớp kép. Từ đó, hóa học lipid trở thành nền tảng của **màng, dự trữ năng lượng, tín hiệu và phân ngăn**.
 

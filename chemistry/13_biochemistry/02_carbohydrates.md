@@ -1,6 +1,6 @@
 # Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Monosaccharide là hợp chất carbonyl có nhiều tâm lập thể** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ký hiệu D/L không phải chiều quay quang học** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**. Route đi từ carbonyl và tâm lập thể → hemiacetal/vòng và anomer → liên kết glycosidic/polymer → dự trữ năng lượng, vật liệu cấu trúc và nhận diện tế bào, để công thức 2D luôn được kiểm tra bằng cấu hình 3D.
 
 > **Carbohydrate (탄수화물)** là các aldehyde hoặc ketone đa hydroxyl cùng các dẫn xuất và polymer của chúng. Điều quan trọng không chỉ là “đường cung cấp năng lượng”, mà là cách **hóa lập thể + hóa học carbonyl + hóa học acetal** tạo ra một họ phân tử vừa tham gia chuyển hóa, vừa tạo vật liệu cấu trúc, vừa mã hóa sự nhận diện trên bề mặt tế bào.
 
