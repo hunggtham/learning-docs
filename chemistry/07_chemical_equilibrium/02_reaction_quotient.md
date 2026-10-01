@@ -1,6 +1,6 @@
 # Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Định nghĩa tổng quát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**. Route đi từ current activities → (Q) construction → compare (Q) với (K) → reaction direction và extent, để đọc “hệ đang ở đâu” trước khi dự đoán nó sẽ dịch chuyển thế nào.
 
 > **Thương số phản ứng (reaction quotient, \(Q\) / 반응 지수)** có cùng cấu trúc toán học với hằng số cân bằng nhưng được tính từ **trạng thái hiện tại** của hệ. Nếu \(K\) mô tả vị trí cân bằng ở một nhiệt độ xác định, thì \(Q\) là tọa độ tức thời cho biết hỗn hợp đang nằm ở phía nào so với vị trí đó.
 

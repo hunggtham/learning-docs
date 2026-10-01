@@ -1,6 +1,6 @@
 # Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Công thức tổng quát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Giảm thể tích** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**. Route bắt đầu từ perturbation → thay đổi (Q) hay (K) → phản ứng bù → giới hạn áp dụng cho pressure, concentration, temperature và catalyst; ưu tiên suy luận định lượng hơn khẩu quyết.
 
 > **Nguyên lý Le Châtelier (Le Châtelier's principle / 르샤틀리에 원리)** nói rằng khi điều kiện của một hệ đang cân bằng bị thay đổi, thành phần thường dịch theo chiều làm giảm tác động của nhiễu loạn đó. Đây là một quy tắc trực giác hữu ích, nhưng không phải định luật nền tảng. Cách suy luận đáng tin cậy hơn là hỏi: perturbation làm **Q** thay đổi thế nào, **K** có đổi không, và chemical potential của các species thay đổi ra sao?
 

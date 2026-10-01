@@ -1,6 +1,6 @@
 # Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ mức tiến triển phản ứng tới độ dốc của Gibbs** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cân bằng bền cần nhiều hơn \(dG/d\xi=0\)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng**. Route đi từ reaction coordinate/(dG/d\xi) → constrained minimum → chemical potential/activity → phase equilibrium, gom (K), (Q), (K_{sp}), (K_a) và (K_f) vào một framework nhiệt động thống nhất.
 
 > Cân bằng hóa học không phải một tập hợp quy tắc rời như `K`, `Q`, Le Châtelier, `Ksp`, `Ka` hay `Kf`. Tất cả đều có thể được nhìn trong một khuôn khổ duy nhất: **hệ thay đổi thành phần cho tới khi thế nhiệt động phù hợp đạt cực tiểu dưới các ràng buộc bảo toàn**.
 

@@ -1,6 +1,6 @@
 # Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ thế hóa học tới K** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao hoạt độ quan trọng hơn nồng độ?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**. Route đi từ reaction stoichiometry → activity-based (K) → temperature dependence → thermodynamic interpretation, để phân biệt vị trí cân bằng với tốc độ đạt cân bằng.
 
 > **Hằng số cân bằng (equilibrium constant, \(K\) / 평형 상수)** định lượng tỉ lệ hoạt độ của sản phẩm và chất phản ứng tại cân bằng cho một phương trình phản ứng được viết theo một dạng stoichiometric cụ thể và tại một nhiệt độ xác định.
 

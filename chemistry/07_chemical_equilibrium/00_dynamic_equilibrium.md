@@ -1,6 +1,6 @@
 # Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần khái niệm cân bằng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tốc độ ròng bằng 0** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**. Route đi từ reversible rates → dynamic steady state → disturbance/relaxation → composition và cuối cùng nối với Gibbs minimum; cân bằng được đọc như một state động chứ không phải “phản ứng đã dừng”.
 
 > **Cân bằng hóa học (chemical equilibrium / 화학 평형)** là trạng thái trong đó thành phần vĩ mô của hệ không còn thay đổi theo thời gian, dù các quá trình thuận và nghịch vẫn tiếp tục ở cấp phân tử. Vì vậy cân bằng là **động**, không phải trạng thái mọi chuyển động đã dừng.
 
