@@ -1,6 +1,6 @@
 # Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao xuất hiện chất phản ứng giới hạn?** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Xác định bằng mức tiến triển phản ứng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**. Route đi từ stoichiometric demand → extent-of-reaction → limiting/excess reagent → theoretical/actual yield → selectivity, để tách giới hạn bảo toàn khỏi loss và process performance.
 
 > **Chất phản ứng giới hạn (limiting reagent / 한계 반응물)** là chất phản ứng bị tiêu thụ trước theo yêu cầu stoichiometric và vì thế giới hạn mức tiến triển lý thuyết lớn nhất của phản ứng. Những chất còn lại sau khi phản ứng lý thuyết hoàn tất là **chất phản ứng dư (excess reagents)**.
 

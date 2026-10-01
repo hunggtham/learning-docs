@@ -1,6 +1,6 @@
 # Hóa lượng — định lượng phản ứng từ các định luật bảo toàn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ chuyển hóa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ chọn lọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn**. Route đi từ balanced equation → mole ratios → extent/conversion → yield/selectivity → linear constraints, để giải bài bằng conservation thay vì chuỗi đổi đơn vị rời rạc.
 
 > **Hóa lượng (stoichiometry / 화학량론)** là ngôn ngữ định lượng của phản ứng hóa học. Nó dùng phương trình cân bằng để liên hệ lượng các chất thông qua bảo toàn nguyên tử, điện tích và khối lượng. Bản chất của hóa lượng không phải một tập công thức đổi gram–mol, mà là **một hệ ràng buộc tuyến tính giữa các lượng chất**.
 

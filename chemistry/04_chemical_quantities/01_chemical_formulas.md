@@ -1,6 +1,6 @@
 # Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Công thức không phải lúc nào cũng biểu diễn một phân tử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Công thức phân tử** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**. Route đi từ empirical composition → molecular formula → ionic formula/unit cell → structural information, luôn nói rõ công thức đang mã hóa tỉ lệ, tiểu phần hay cấu trúc nào.
 
 > **Công thức hóa học (chemical formula / 화학식)** mã hóa loại nguyên tố và tỉ lệ số nguyên tử trong một tiểu phần hóa học hoặc vật liệu. Tuy nhiên, các loại công thức khác nhau trả lời những câu hỏi khác nhau về thành phần và cấu trúc.
 

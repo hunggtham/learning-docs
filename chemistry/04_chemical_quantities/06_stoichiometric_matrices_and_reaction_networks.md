@@ -1,6 +1,6 @@
 # Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp**. Route đi từ species/reaction incidence → stoichiometric matrix → conservation/null space → extent rates và network constraints, để mở rộng phương trình đơn thành hệ phản ứng có thể phân tích.
 
 > Hóa lượng (stoichiometry / 화학량론) thường được học qua từng phương trình riêng lẻ. Nhưng trong hệ thực tế — chuyển hóa sinh học, cháy, khí quyển, pin, reactor công nghiệp — hàng chục tới hàng nghìn phản ứng xảy ra đồng thời. Khi đó cách nhìn từng phương trình một trở nên khó kiểm soát. **Ma trận hóa lượng (stoichiometric matrix)** cung cấp một ngôn ngữ toán học thống nhất để biểu diễn bảo toàn vật chất và cấu trúc của cả mạng phản ứng.
 

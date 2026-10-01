@@ -1,6 +1,6 @@
 # Nồng độ dung dịch — các cách định lượng thành phần
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nồng độ dung dịch — các cách định lượng thành phần**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao có nhiều cách biểu diễn nồng độ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nồng độ mol** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nồng độ dung dịch — các cách định lượng thành phần**. Route đi từ solute/solvent basis → molarity/molality/mass fraction/ppm → dilution và mixing → temperature/measurement caveats, để chọn thang nồng độ theo câu hỏi và điều kiện đo.
 
 > **Nồng độ (concentration / 농도)** mô tả lượng chất tan tương đối với một lượng dung dịch hoặc dung môi được chọn. Không có một định nghĩa duy nhất; mỗi thang nồng độ được thiết kế cho một kiểu suy luận hoặc thí nghiệm khác nhau.
 

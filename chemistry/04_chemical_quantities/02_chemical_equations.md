@@ -1,6 +1,6 @@
 # Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phương trình là mô hình của biến đổi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao phải cân bằng?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**. Route đi từ reactant/product model → atom/charge conservation → balancing coefficients → states/conditions → quantitative ratios, để phương trình trở thành nền cho stoichiometry và redox.
 
 > **Phương trình hóa học (chemical equation / 화학 반응식)** là cách biểu diễn một biến đổi hóa học. Nó phải bảo toàn nguyên tử và tổng điện tích, còn các hệ số trong phương trình cân bằng cung cấp tỉ lệ stoichiometric giữa chất phản ứng và sản phẩm.
 

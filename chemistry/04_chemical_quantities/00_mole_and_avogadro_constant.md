@@ -1,6 +1,6 @@
 # Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao Hóa học cần mol?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lượng chất là một đại lượng vật lý riêng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất**. Route đi từ count particles → amount of substance → molar mass/volume → stoichiometric conversion, để chuyển đổi vi mô–vĩ mô mà không trộn “số hạt”, “khối lượng” và “lượng chất”.
 
 > **Mol (mole / 몰)** là đơn vị SI của **lượng chất (amount of substance / 물질량)**. Một mol chứa chính xác \(N_A=6.02214076\times10^{23}\) thực thể được chỉ định. **Hằng số Avogadro (Avogadro constant / 아보가드로 상수)** là hệ số chuyển đổi giữa số thực thể vi mô và lượng chất ở thang vĩ mô.
 
