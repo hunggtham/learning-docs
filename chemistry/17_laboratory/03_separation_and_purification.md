@@ -134,7 +134,7 @@ Nếu chất tồn tại cùng dạng hóa học ở hai pha:
 K_D=\frac{C_{org}}{C_{aq}}
 \]
 
-> **Chuyển mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Phần còn lại sau một lần chiết** tiếp nhận điểm tựa từ **Chiết lỏng–lỏng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Liquid–liquid extraction sets a distribution ratio between immiscible phases; the residual fraction formula turns that equilibrium into a recovery prediction after one or repeated contacts.
 
 ## Phần còn lại sau một lần chiết
 
@@ -154,7 +154,7 @@ q_n=q^n
 
 Công thức này giải thích vì sao nhiều lần chiết nhỏ thường hiệu quả hơn một lần chiết lớn khi tổng lượng dung môi bằng nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Phần còn lại sau một lần chiết** cho ta quy tắc; **Ví dụ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Chiết acid–cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The residual fraction shows why several small extractions can outperform one large contact; the numerical example makes that recovery trade-off explicit before chemical ionization changes the partition.
 
 ## Ví dụ
 
@@ -182,7 +182,7 @@ q^2=\frac19\approx0.111
 
 chỉ còn khoảng 11,1%.
 
-> **Chuyển mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Ví dụ** cho ta quy tắc; **Chiết acid–cơ sở (base / 기반)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hệ số phân bố và tỉ số phân bố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The example quantifies solvent-volume allocation; acid–base extraction adds pH-dependent ionization, so the neutral/charged fraction—not just the intrinsic partition constant—controls where the solute goes.
 
 ## Chiết acid–cơ sở (base / 기반)
 
@@ -192,7 +192,7 @@ Một carboxylic acid trung hòa có thể ưu tiên pha hữu cơ; khi bị kh�
 
 Điều này cho phép tách chọn lọc acid, cơ sở (base / 기반) và chất trung hòa bằng cách điều khiển pH.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Hệ số phân bố và tỉ số phân bố** tiếp nhận điểm tựa từ **Chiết acid–cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhũ tương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** pH changes the charged fraction and therefore the effective distribution ratio; the next section separates that equilibrium quantity from the practical phase-handling problem of emulsions.
 
 ## Hệ số phân bố và tỉ số phân bố
 
