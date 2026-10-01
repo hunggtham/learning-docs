@@ -16,7 +16,7 @@ Ví dụ:
 
 Nếu có `3 mol H2` và `3 mol O2`, lượng hydrogen không đủ để dùng hết oxygen. Theo tỉ lệ phản ứng, `3 mol H2` chỉ cần `1.5 mol O2`, nên `H2` là chất giới hạn và còn `1.5 mol O2` dư.
 
-> **Chuyển mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Vì sao xuất hiện chất phản ứng giới hạn?** đã nêu tiêu chí phân biệt, còn **Xác định bằng mức tiến triển phản ứng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ví dụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Tỉ lệ stoichiometric xác định chất phản ứng giới hạn; biểu diễn mức tiến triển giúp kiểm tra chất nào cạn trước, rồi ví dụ nối giới hạn lý thuyết với hiệu suất thực tế.
 
 ## Xác định bằng mức tiến triển phản ứng
 

@@ -24,7 +24,7 @@ trong đó:
 
 Nếu \(E>0\), phản ứng theo chiều đã viết có \(\Delta G<0\) và thuận lợi về mặt nhiệt động trong điều kiện đang xét.
 
-> **Chuyển mạch:** Trong **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Điện thế chuẩn** tiếp nhận điểm tựa từ **Vì sao phản ứng oxy hóa-khử tạo ra điện áp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy ra phương trình Nernst** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Điện thế chuẩn mô tả xu hướng trong điều kiện quy ước; phương trình Nernst tiếp theo đưa nồng độ và áp suất thực vào thế pin, nối ΔG với điện áp đo được.
 
 ## Điện thế chuẩn
 

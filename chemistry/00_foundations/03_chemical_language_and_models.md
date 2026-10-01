@@ -14,7 +14,7 @@ Ký hiệu không đơn thuần là chữ viết tắt của tên tiếng Anh. M
 
 Điều quan trọng hơn là ký hiệu đại diện cho **bản sắc nguyên tố (element identity)**, về sau sẽ được định nghĩa chính xác bằng **số hiệu nguyên tử (atomic number)**, tức số proton trong hạt nhân.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ và mô hình hóa học**, **Công thức hóa học: mô tả thành phần và đôi khi cả cấu trúc** tiếp nhận điểm tựa từ **Ký hiệu hóa học: một biểu tượng mang bản sắc nguyên tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công thức phân tử, công thức thực nghiệm và công thức cấu tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ký hiệu hóa học đặt tên nguyên tố; công thức tiếp theo ghép các ký hiệu thành tỉ lệ thành phần, rồi phân biệt công thức phân tử với công thức thực nghiệm và cấu tạo.
 
 ## Công thức hóa học: mô tả thành phần và đôi khi cả cấu trúc
 

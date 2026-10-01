@@ -16,7 +16,7 @@ không mô tả cơ chế của từng va chạm. Nó mô tả **biến đổi t
 
 Vì vậy phương trình cân bằng là một lớp hạch toán vĩ mô, không phải “bộ phim phân tử”.
 
-> **Chuyển mạch:** Trong **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Vì sao phải cân bằng?** tiếp nhận điểm tựa từ **Phương trình là mô hình của biến đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số và hệ số stoichiometric** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Phương trình mô tả biến đổi, nhưng chỉ phương trình cân bằng mới bảo toàn số nguyên tử; các hệ số sau đó trở thành tỉ lệ mol để chuyển mô tả định tính thành tính toán.
 
 ## Vì sao phải cân bằng?
 

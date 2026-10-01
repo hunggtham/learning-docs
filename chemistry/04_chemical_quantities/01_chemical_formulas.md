@@ -14,7 +14,7 @@ Vì vậy cần hỏi công thức đang mô tả:
 - một đơn vị công thức ion;
 - hay thành phần của một mạng mở rộng.
 
-> **Chuyển mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức phân tử** tiếp nhận điểm tựa từ **Công thức không phải lúc nào cũng biểu diễn một phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công thức thực nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Một công thức có thể mô tả đơn vị công thức thay vì phân tử riêng lẻ; từ đó công thức phân tử giữ số nguyên tử còn công thức thực nghiệm rút về tỉ lệ tối giản để suy luận thành phần.
 
 ## Công thức phân tử
 

@@ -139,7 +139,7 @@ Nếu \(\Delta n_{gas}=0\), compression lý tưởng không làm Q thay đổi.
 
 Có nhiều cách làm total pressure tăng.
 
-> **Chuyển mạch:** Trong **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Giảm thể tích** tiếp nhận điểm tựa từ **Công thức tổng quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thêm khí trơ ở thể tích không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Giảm thể tích làm hệ khí ưu tiên phía có ít mol khí hơn vì Q thay đổi; thêm khí trơ ở thể tích không đổi lại không đổi áp suất riêng phần, nên không làm cân bằng dịch chuyển.
 
 ## Giảm thể tích
 

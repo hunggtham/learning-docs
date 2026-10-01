@@ -268,7 +268,7 @@ X_A=\frac{n_{A,0}-n_A}{n_{A,0}}
 
 cho biết phần A đã phản ứng.
 
-> **Chuyển mạch:** Trong **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn**, **Độ chọn lọc** tiếp nhận điểm tựa từ **Độ chuyển hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu suất tạo sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Độ chuyển hóa cho biết bao nhiêu chất đã phản ứng; độ chọn lọc cho biết phần sản phẩm đi đúng hướng, và hiệu suất tiếp theo đối chiếu sản lượng thực với giới hạn lý thuyết.
 
 ## Độ chọn lọc
 

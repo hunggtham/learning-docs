@@ -10,7 +10,7 @@ Trong phòng thí nghiệm, thể tích thường dễ đo nên nồng độ mol
 
 Chọn đơn vị nồng độ là chọn cách biểu diễn phù hợp với bài toán.
 
-> **Chuyển mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Nồng độ mol** tiếp nhận điểm tựa từ **Vì sao có nhiều cách biểu diễn nồng độ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nồng độ molan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Nồng độ mol dùng thể tích dung dịch để tính molarity; molality dùng khối lượng dung môi nên bền hơn trước thay đổi nhiệt độ, tạo nền cho việc chọn thước đo phù hợp.
 
 ## Nồng độ mol
 
