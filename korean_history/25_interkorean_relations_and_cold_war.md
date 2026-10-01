@@ -6,31 +6,31 @@
 
 1953 Armistice tạo DMZ và mechanisms kiểm soát ceasefire nhưng không giải quyết final political settlement. Một temporary arrangement kéo dài hàng thập kỷ trở thành **institutionalized provisionality**: cả hai trạng thái (state / 상태) xây military, education và national định danh (identity / 식별자) quanh một xung đột (conflict / 충돌) chưa formal peace.
 
-> **Chuyển mạch:** Armistice froze a security system without peace treaty; competition for legitimacy shaped diplomacy, while the 1972 Joint Communiqué opened a recurring cycle of engagement and closure.
+> **Chuyển mạch:** Armistice đóng băng một hệ thống an ninh mà không tạo hiệp ước hòa bình; cạnh tranh legitimacy định hình ngoại giao, còn **Joint Communiqué 1972** mở một chu kỳ đối thoại rồi đổ vỡ lặp lại.
 
 ## Competition for legitimacy
 
 Trong nhiều thập kỷ, Seoul và Bình Nhưỡng (평양 / Pyongyang) đều claim đại diện toàn Korea. Diplomatic competition, propaganda và development hiệu năng (performance / 성능) trở thành phần của inter-Korean rivalry.
 
-> **Chuyển mạch:** Legitimacy competition created incentives for dialogue; the 1972 communiqué opened one cycle, and the 1991 Basic Agreement formalized a later institutional boundary.
+> **Chuyển mạch:** Cạnh tranh legitimacy tạo động lực đối thoại nhưng không xóa security dilemma; **Thông cáo 1972** mở một chu kỳ, còn **Basic Agreement 1991** cố định ranh giới thể chế muộn hơn.
 
 ## 1972 Joint Communiqué và các opening cycles
 
 1972 North–South Joint Communiqué đưa ra principles cho reunification dialogue. Nhưng inter-Korean relations thường theo cycle: tension → negotiation → agreement → breakdown, vì bảo mật (security / 보안) dilemma và domestic/international incentives thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ liên Triều và Cold War hệ thống (system / 시스템)**, **1991 Basic Agreement** tiếp nhận điểm tựa từ **1972 Joint Communiqué và các opening cycles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sunshine chính sách (policy / 정책), summits và Khai Thành (개성 / Kaesong)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Các opening cycles cho thấy đối thoại cần cơ chế duy trì chứ không chỉ tín hiệu cấp cao; **Basic Agreement 1991** biến một phần cam kết thành ranh giới thể chế. **Sunshine policy, summits và Kaesong** tiếp theo kiểm tra liệu hợp tác kinh tế có tạo interdependence đủ bền hay không.
 
 ## 1991 Basic Agreement
 
 Hai bên gia nhập UN năm 1991 và ký Basic Agreement, một bước institutionalization quan trọng. Tuy nhiên nuclear issue và alliance/bảo mật (security / 보안) dynamics sau đó tiếp tục tạo tension.
 
-> **Chuyển mạch:** Trong **Quan hệ liên Triều và Cold War hệ thống (system / 시스템)**, **Sunshine chính sách (policy / 정책), summits và Khai Thành (개성 / Kaesong)** tiếp nhận điểm tựa từ **1991 Basic Agreement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2018 và giới hạn của summit diplomacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Basic Agreement tạo khung chung nhưng không giải quyết hạt nhân, alliance và trust; **Sunshine policy** đưa khung đó vào summit, viện trợ và Kaesong, nơi chi phí rút lui trở nên cụ thể. **2018 summit diplomacy** sẽ cho thấy tín hiệu chính trị khác thế nào với settlement có enforcement.
 
 ## Sunshine chính sách (policy / 정책), summits và Khai Thành (개성 / Kaesong)
 
 Late 1990s–2000s engagement chính sách (policy / 정책) tạo 2000 summit, later 2007 summit và projects như Kaesong Industrial Complex. Economic cooperation nhằm tạo interdependence, nhưng interdependence chỉ giảm xung đột (conflict / 충돌) nếu political trust và bảo mật (security / 보안) conditions đủ ổn định.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ liên Triều và Cold War hệ thống (system / 시스템)**, **Sunshine chính sách (policy / 정책), summits và Khai Thành (개성 / Kaesong)** đã nêu tiêu chí phân biệt, còn **2018 và giới hạn của summit diplomacy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결): bảo mật (security / 보안) dilemma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sunshine và Kaesong cho thấy hợp tác có thể giảm căng thẳng khi trust và security conditions đủ ổn định, nhưng không tự xóa xung đột. **2018 summit diplomacy** là phép thử của high-level signaling; giới hạn của nó nối trực tiếp với **security dilemma** và enforcement.
 
 ## 2018 và giới hạn của summit diplomacy
 
