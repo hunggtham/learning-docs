@@ -50,7 +50,7 @@ Group fairness metrics formalize different goals: parity of positive rates, equa
 
 Không có chỉ số (metric / 지표) “fairness universal”. Selection là normative quyết định (decision / 결정) cần lĩnh vực (domain / 도메인)/stakeholder phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Quản trị (governance / 거버넌스) controls** tiếp nhận điểm tựa từ **Fairness metrics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Right to deletion và derived dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Fairness metrics expose competing normative goals; governance controls turn the chosen goal into classification, access, retention, lineage, monitoring, and deletion enforcement.
 
 ## Quản trị (governance / 거버넌스) controls
 
@@ -58,7 +58,7 @@ Useful controls gồm dữ liệu (data / 데이터) classification, truy cập 
 
 Quản trị (governance / 거버넌스) không nên chỉ là document; chính sách (policy / 정책) cần map thành technical enforcement/monitoring.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Quản trị (governance / 거버넌스) controls** nêu điều cần giải thích; **Right to deletion và derived dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Algorithmic impact assessment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Governance makes policy operational, but deletion must follow data propagation through caches, backups, analytics, and model artifacts; impact assessment then asks who is affected when those controls fail.
 
 ## Right to deletion và derived dữ liệu (data / 데이터)
 
@@ -66,7 +66,7 @@ Xóa nguồn (source / 소스) bản ghi (record / 레코드) không luôn đơn
 
 Legal obligations vary jurisdiction, nhưng kỹ thuật (engineering / 엔지니어링) principle là deletion/retention must be designed, not improvised.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Right to deletion và derived dữ liệu (data / 데이터)** nêu điều cần giải thích; **Algorithmic impact assessment** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Deletion and retention are architectural obligations, not a single database command; an algorithmic impact assessment tests affected populations, failure modes, oversight, contestability, and redress before deployment.
 
 ## Algorithmic impact assessment
 
