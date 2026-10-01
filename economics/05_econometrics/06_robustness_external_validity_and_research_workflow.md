@@ -1,5 +1,7 @@
 # Robustness, Bên ngoài (external / 외부) Validity & Research Workflow — Từ estimate đến kết luận đáng tin
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Robustness, Bên ngoài (external / 외부) Validity & Research Workflow — Từ estimate đến kết luận đáng tin**. File không dùng robustness để cứu một identification sai: đọc từ threat-specific checks, qua reproducibility/replication, rồi mới sang transportability, scale-up, significance và reporting. Kết luận cuối phải giữ được cả estimate, uncertainty, cơ chế và giới hạn áp dụng.
+
 Một econometric estimate không kết thúc phân tích (analysis / 분석). Sau điểm (point / 지점) estimate cần hỏi: kết quả (result / 결과) có phụ thuộc một specification duy nhất không, các giả định (assumptions / 가정들) nào dễ vỡ, bất định (uncertainty / 불확실성) nào chưa nằm trong tiêu chuẩn (standard / 표준) lỗi (error / 오류), và tác động (effect / 효과) có áp dụng được ngoài mẫu (sample / 표본)/ngữ cảnh (context / 맥락) hay không? Robustness không phải chạy hàng trăm regressions cho đến khi coefficient “ổn”; nó là kiểm tra có hệ thống những threats xuất phát từ thiết kế (design / 설계).
 
 ## 1. Identification trước robustness
@@ -40,6 +42,8 @@ Mỗi robustness check nên map tới threat:
 - placebo timing → anticipation/dùng chung (common / 공통) trends.
 
 Randomly changing mô hình (model / 모델) without threat mô hình (model / 모델) tạo noise, không tạo credibility.
+
+> **Chuyển mạch:** Sau **3. Robustness phải có lý do**, mỗi kiểm tra đã được gắn với một threat cụ thể; **4. Falsification tests** chuyển từ “kết quả có ổn không” sang “kết quả có xuất hiện ở nơi không nên xuất hiện không”. Passing một placebo chỉ hỗ trợ câu chuyện identification, không thay thế nó.
 
 ## 4. Falsification tests
 
@@ -132,6 +136,8 @@ Direct replication repeats closely; conceptual replication tests same cơ chế 
 
 Thất bại (failure / 실패) to replicate can reflect original false positive, contextual heterogeneity, hiện thực (implementation / 구현) differences or underpowered replication.
 
+> **Chuyển mạch:** Replication kiểm tra độ bền của finding trong dữ liệu/thiết kế khác; **16. Bên ngoài (external / 외부) validity** đặt câu hỏi khó hơn: ngay cả khi estimate lặp lại, nó có còn đúng cho population, geography, thời gian và scale mục tiêu không?
+
 ## 16. Bên ngoài (external / 외부) validity
 
 Tác động (effect / 효과) can vary by:
@@ -221,6 +227,8 @@ Effect / Cost
 
 helps compare interventions with same kết quả (outcome / 결과). Cost-benefit requires monetizing broader benefits/costs and phân phối (distribution / 분포) các giả định (assumptions / 가정들).
 
+> **Chuyển mạch:** Sau khi nối effect với chi phí ở **24. Cost-effectiveness**, phần còn lại phải tách statistical uncertainty khỏi decision uncertainty. **25. Statistical vs quyết định (decision / 결정) bất định (uncertainty / 불확실성)** vì vậy bàn về hành động dưới trade-off, không chỉ về việc interval có bao phủ zero hay không.
+
 ## 25. Statistical vs quyết định (decision / 결정) bất định (uncertainty / 불확실성)
 
 Chính sách (policy / 정책) quyết định (decision / 결정) depends not only confidence interval but asymmetric costs of errors, option giá trị (value / 값), irreversibility and học tập (learning / 학습).
@@ -271,6 +279,8 @@ data/code provenance
 ```
 
 Do not hide null results or inconvenient specifications.
+
+> **Chuyển mạch:** **30. Transparent reporting** biến các giới hạn trước đó thành thông tin mà người đọc có thể kiểm tra. **31. Research workflow** tiếp tục bằng thứ tự thao tác từ câu hỏi đến lưu trữ bằng chứng, để robustness không bị biến thành danh sách kiểm tra tách rời khỏi thiết kế.
 
 ## 31. Research workflow
 
@@ -352,3 +362,5 @@ Trước khi tin một empirical conclusion, hãy hỏi:
 10. Dữ liệu (data / 데이터)/mã (code / 코드)/kết quả (result / 결과) có reproducible và transparent không?
 
 Econometrics không phải toolkit để làm coefficient “đẹp”. Nó là discipline buộc economic claim phải nói rõ đo lường (measurement / 측정), counterfactual, nguồn (source / 소스) of variation, bất định (uncertainty / 불확실성) và phạm vi kết luận. Với foundation này, Applied Economics có thể được xây trên cả lý thuyết (theory / 이론) lẫn empirical identification thay vì trường hợp (case / 사례) narrative.
+
+> **Bàn giao:** Kết thúc file này, hãy mang sang Applied Economics một empirical claim đã có estimand, identification, threat-specific robustness, uncertainty và external-validity boundary. Quay về [README](./README.md) để định vị owner hoặc chọn lại nhánh trước khi viết case narrative.

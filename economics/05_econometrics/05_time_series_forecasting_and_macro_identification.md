@@ -1,5 +1,7 @@
 # Thời gian (time / 시간) Series, Forecasting & Macro Identification — Dependence qua thời gian và shocks
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thời gian (time / 시간) Series, Forecasting & Macro Identification — Dependence qua thời gian và shocks**. File bắt đầu bằng dependence, stationarity và forecasting; sau đó mới chuyển sang VAR/IRF, structural identification và dữ liệu real-time. Giữ riêng forecast với causal shock trong suốt mạch đọc, rồi dùng các mục cuối để kiểm tra revisions, look-ahead và regime changes.
+
 Time-series econometrics xử lý dữ liệu mà observations theo thời gian không độc lập. GDP hôm nay liên quan GDP quý trước; inflation có persistence; asset returns có volatility clustering. Mục tiêu có thể là forecast, describe dynamics hoặc identify structural shock. Ba mục tiêu này cần được tách rõ.
 
 ## 1. Thời gian (time / 시간) chỉ mục (index / 인덱스) tạo dependence
@@ -106,6 +108,8 @@ Hiện tại (current / 현재) kết quả (outcome / 결과) depends on hiện
 
 ARMA/ARIMA combine autoregressive, moving-average and differencing structures.
 
+> **Chuyển mạch:** Sau **9. Moving-average tiến trình (process / 프로세스)**, ta đã có ngôn ngữ cho dependence và lags; **10. Forecast vs nhân quả (causal / 인과적) mô hình (model / 모델)** đặt ranh giới mục tiêu trước khi chọn metric hoặc estimator. Một biến giúp dự báo không vì thế trở thành nguyên nhân cấu trúc.
+
 ## 10. Forecast vs nhân quả (causal / 인과적) mô hình (model / 모델)
 
 A lagged variable may improve forecast without causing kết quả (outcome / 결과). Granger predictability means X's past helps predict Y conditional on thông tin (information / 정보) set; it is not sufficient proof of structural causality.
@@ -182,6 +186,8 @@ Restrictions may be contemporaneous thứ tự (ordering / 순서), long-run res
 
 Every restriction is an economic giả định (assumption / 가정) and should be defended.
 
+> **Chuyển mạch:** **19. Structural VAR identification** cho biết shock chỉ có tên kinh tế sau khi áp đặt restriction; **20. Cholesky thứ tự (ordering / 순서)** làm rõ một lựa chọn cụ thể và độ nhạy của nó. Từ đây, local projections và các chiến lược external/narrative sẽ được đọc như những cách thay thế để bảo vệ impulse response, không phải như causal shortcut.
+
 ## 20. Cholesky thứ tự (ordering / 순서)
 
 Recursive identification assumes variables earlier in thứ tự (ordering / 순서) do not respond contemporaneously to later shocks.
@@ -254,6 +260,8 @@ Macro releases are revised. A forecasting mô hình (model / 모델) evaluated o
 
 Use vintages when evaluating policymaker/investor forecasts.
 
+> **Chuyển mạch:** Sau **30. Real-time dữ liệu (data / 데이터) and revisions**, forecast/nowcast chỉ đáng tin nếu tập thông tin được khóa tại thời điểm dự báo. **31. Nowcasting** tiếp tục cùng nguyên tắc với dữ liệu chưa hoàn tất; các mục sau kiểm tra look-ahead, survivorship và khác biệt giữa các horizon.
+
 ## 31. Nowcasting
 
 Nowcasting estimates current-quarter conditions before official dữ liệu (data / 데이터) complete, using partial releases and high-frequency indicators.
@@ -302,3 +310,5 @@ Khi làm thời gian (time / 시간) series, hãy hỏi:
 10. Phản hồi (response / 응답) dynamics theo horizon có economic cơ chế (mechanism / 메커니즘) gì?
 
 Time-series tools thêm một lớp mô hình (model / 모델) rủi ro (risk / 위험) lớn. Vì vậy econometric workflow cuối cùng cần robustness, transparent specification, bên ngoài (external / 외부) validity và interpretation discipline thay vì chỉ một preferred estimate.
+
+> **Bàn giao:** Sang [Robustness, External Validity & Research Workflow](./06_robustness_external_validity_and_research_workflow.md), hãy mang theo ba giới hạn: mục tiêu là forecast hay causal, shock được nhận diện bằng giả định nào, và dữ liệu có đúng vintage tại thời điểm quyết định không. Quay về [README](./README.md) để xác nhận owner của nhánh Econometrics.
