@@ -10,7 +10,7 @@ Notation dạng `Γ ⊢ e : T` có thể đọc: dưới môi trường (environ
 
 Cách nhìn này giúp tách cú pháp (syntax / 문법) khỏi ngữ nghĩa (semantics / 의미론): kiểu (type / 타입) checker không “đoán kiểu” tùy ý; nó thực hiện proof theo rules của ngôn ngữ (language / 언어).
 
-> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**, **Soundness và progress/preservation intuition** tiếp nhận điểm tựa từ **Kiểu (type / 타입) judgment như một statement có điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subtyping và variance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Type judgment là statement có điều kiện; soundness nối static proof với runtime progress/preservation, còn subtyping/variance quy định khi một value hoặc function có thể được thay thế an toàn.
 
 ## Soundness và progress/preservation intuition
 

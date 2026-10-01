@@ -21,7 +21,7 @@ memory pressure
   lượng page reclaimable và cost để reclaim chúng
 ```
 
-> **Chuyển mạch:** Trong **Page faults, reclaim, dirty pages và bộ nhớ (memory / 메모리) pressure**, **1. Free bộ nhớ (memory / 메모리) và available bộ nhớ (memory / 메모리) khác nhau** cho ta quy tắc; **2. Page fault là điều khiển (control / 제어) transfer, không đồng nghĩa lỗi nghiêm trọng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Demand paging đổi startup chi phí (cost / 비용) thành first-touch chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Free memory chỉ là page chưa dùng; available còn tính reclaimable cache. Page fault là control transfer, và demand paging đổi startup cost thành first-touch cost trước khi reclaim/dirty-page pressure xuất hiện.
 
 ## 2. Page fault là điều khiển (control / 제어) transfer, không đồng nghĩa lỗi nghiêm trọng
 
