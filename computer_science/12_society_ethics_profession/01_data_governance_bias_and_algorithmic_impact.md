@@ -10,7 +10,7 @@ Provenance trả lời dữ liệu (data / 데이터) đến từ đâu, transfo
 
 Lineage tools biến chuỗi xử lý (pipeline / 파이프라인) dependencies thành đồ thị (graph / 그래프) để impact phân tích (analysis / 분석) khi lược đồ (schema / 스키마)/nguồn (source / 소스) thay đổi.
 
-> **Chuyển mạch:** Provenance cho biết dữ liệu đến từ đâu và biến đổi thế nào; bias measurement cần metric/context rõ, còn sampling bias có thể làm sai ngay trước khi mô hình được huấn luyện.
+> **Chuyển mạch:** Provenance cho biết dữ liệu đến từ đâu và đã biến đổi ra sao; muốn đo bias phải định nghĩa metric cùng ngữ cảnh. Vì sai lệch có thể xuất hiện ngay ở nhóm được thu thập, **sampling bias** là bước kiểm tra trước cả huấn luyện mô hình.
 
 ## Đo lường (measurement / 측정) độ lệch (bias / 편향)
 
@@ -18,7 +18,7 @@ Ta thường không observe concept trực tiếp mà đo proxy. “Productivity
 
 Proxy mismatch tạo độ lệch (bias / 편향) ngay trước thuật toán (algorithm / 알고리즘).
 
-> **Chuyển mạch:** A proxy defines what “bias” can mean operationally; sampling determines who is represented, and label construction determines which outcomes the model is trained to reproduce.
+> **Chuyển mạch:** Proxy quyết định “bias” được đo như thế nào; **sampling** quyết định ai có mặt trong dữ liệu, còn cách tạo label quyết định mô hình học tái tạo outcome nào. Vì vậy phải kiểm tra đại diện trước khi tinh chỉnh thuật toán.
 
 ## Sampling độ lệch (bias / 편향)
 
@@ -26,7 +26,7 @@ Dataset chỉ phản ánh population được quan sát. Nếu dữ liệu huấ
 
 Random split không sửa biểu diễn (representation / 표현) gap nếu underlying dataset đã biased.
 
-> **Chuyển mạch:** Sampling bias leaves representation gaps that random splitting cannot repair; labels then encode institutional decisions, and feedback loops can amplify both during deployment.
+> **Chuyển mạch:** Sampling bias để lại khoảng trống đại diện mà random split không sửa được; **label** còn có thể mã hóa quyết định thể chế. Khi mô hình triển khai tác động ngược vào môi trường, feedback loop có thể khuếch đại cả hai nguồn lệch.
 
 ## Label độ lệch (bias / 편향)
 
@@ -34,7 +34,7 @@ Labels do humans/institutions tạo có inconsistency và historical chính sác
 
 ML có thể reproduce institutional độ lệch (bias / 편향) encoded trong labels.
 
-> **Chuyển mạch:** Labels can preserve historical policy rather than ground truth; when predictions change the environment and generate new labels, fairness metrics must inspect the resulting closed loop, not only the original dataset.
+> **Chuyển mạch:** Label có thể phản ánh chính sách lịch sử thay vì ground truth; khi dự đoán làm đổi môi trường và tạo label mới, **fairness metrics** phải kiểm tra vòng kín sau triển khai chứ không chỉ chấm dataset ban đầu.
 
 ## Phản hồi (feedback / 피드백) loops
 
