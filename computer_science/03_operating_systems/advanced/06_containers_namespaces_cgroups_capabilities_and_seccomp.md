@@ -23,7 +23,7 @@ Docker/Kubernetes xây lớp trừu tượng (abstraction / 추상화) cao hơn 
 
 > bộ chứa (container / 컨테이너) là một **hợp đồng cô lập (isolation contract)** được ghép từ nhiều cơ chế kernel, không phải một lớp ảo hóa duy nhất.
 
-> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp**, **2. không gian tên (namespace / 네임스페이스) thay đổi “thế giới nhìn thấy”** tiếp nhận điểm tựa từ **1. bộ chứa (container / 컨테이너) không phải một thành phần nguyên thủy (primitive / 기본 요소) duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. PID 1 trong bộ chứa (container / 컨테이너) có ý nghĩa đặc biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Container là tổ hợp namespaces, cgroups và security controls; namespace đổi thế giới nhìn thấy, còn PID 1 nhận trách nhiệm signal/reaping riêng trong không gian đó.
 
 ## 2. không gian tên (namespace / 네임스페이스) thay đổi “thế giới nhìn thấy”
 

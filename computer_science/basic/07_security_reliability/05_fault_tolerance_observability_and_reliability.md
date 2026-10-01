@@ -25,7 +25,7 @@ Ví dụ một bit flip là fault. Nếu bộ nhớ (memory / 메모리) trạng
 
 Phân biệt này quan trọng vì độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) cố chặn propagation trước khi nội bộ (internal / 내부) lỗi (error / 오류) trở thành user-visible thất bại (failure / 실패).
 
-> **Chuyển mạch:** Trong **Fault tolerance, khả năng quan sát (observability / 관측 가능성) và độ tin cậy (reliability / 신뢰성)**, **2. độ tin cậy (reliability / 신뢰성) bất biến (invariant / 불변식) phải nói bằng ngôn ngữ của người dùng** tiếp nhận điểm tựa từ **1. Fault, lỗi (error / 오류) và thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Redundancy chỉ hữu ích khi thất bại (failure / 실패) đủ độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Fault là nguyên nhân, error là trạng thái sai và failure là tác động lên người dùng; reliability invariant phải đo được, còn redundancy chỉ giúp khi các failure không cùng nguồn.
 
 ## 2. độ tin cậy (reliability / 신뢰성) bất biến (invariant / 불변식) phải nói bằng ngôn ngữ của người dùng
 

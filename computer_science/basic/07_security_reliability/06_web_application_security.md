@@ -10,7 +10,7 @@ Trình duyệt (browser / 브라우저) Same-Origin chính sách (policy / 정�
 
 SOP là isolation ranh giới (boundary / 경계) của nền tảng Web (web platform / 웹 플랫폼). CORS không “bật bảo mật (security / 보안)”; nó là cơ chế (mechanism / 메커니즘) máy chủ (server / 서버) dùng để nới quyền cross-origin read cho origins được phép.
 
-> **Chuyển mạch:** Trong **Web ứng dụng (application / 애플리케이션) bảo mật (security / 보안)**, **Same-Origin chính sách (policy / 정책)** nêu điều cần giải thích; **XSS: dữ liệu (data / 데이터) trở thành mã (code / 코드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **CSRF: trình duyệt (browser / 브라우저) mang credentials ngoài ý muốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Same-Origin giới hạn cách các origin đọc dữ liệu; XSS phá ranh giới bằng cách biến input thành code, còn CSRF lợi dụng credentials tự động để gửi request ngoài ý muốn.
 
 ## XSS: dữ liệu (data / 데이터) trở thành mã (code / 코드)
 

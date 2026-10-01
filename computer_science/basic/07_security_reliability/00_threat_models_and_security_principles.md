@@ -10,7 +10,7 @@ Bộ ba CIA là mô hình tư duy cổ điển. **Tính bí mật (Confidentiali
 
 Ngoài ra còn có tính xác thực, khả năng quy trách nhiệm và kiểm toán, chống chối bỏ trong ngữ cảnh phù hợp, quyền riêng tư và an toàn vận hành. Một hệ thống giữ bí mật rất tốt nhưng thường xuyên không phục vụ được người dùng vẫn không đáp ứng đầy đủ mục tiêu bảo mật.
 
-> **Chuyển mạch:** Trong **Mô hình đe dọa và các nguyên tắc bảo mật**, **Mô hình đe dọa** tiếp nhận điểm tựa từ **Các thuộc tính bảo mật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới tin cậy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Security properties nêu điều cần bảo vệ; threat model xác định attacker và đường tấn công, còn trust boundary chỉ rõ nơi input phải được kiểm tra lại.
 
 ## Mô hình đe dọa
 

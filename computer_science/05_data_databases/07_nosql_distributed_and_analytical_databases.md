@@ -10,7 +10,7 @@ Document cơ sở dữ liệu (database / 데이터베이스) lưu aggregate-lik
 
 Không mô hình (model / 모델) nào “schema-less” theo nghĩa không có cấu trúc (structure / 구조). lược đồ (schema / 스키마) vẫn tồn tại trong ứng dụng (application / 애플리케이션), kiểm tra hợp lệ (validation / 검증) rules hoặc implicit conventions. Chỉ là nơi enforcement và evolution khác relational lược đồ (schema / 스키마).
 
-> **Chuyển mạch:** Trong **NoSQL, phân tán (distributed / 분산) và analytical databases**, **Chọn mô hình dữ liệu (data model / 데이터 모델) từ truy cập (access / 접근) mẫu (pattern / 패턴) và invariants** nêu điều cần giải thích; **Denormalization như intentional duplication** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Partitioning và shard key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Access pattern và invariant chọn data model; denormalization đổi read speed lấy duplication, rồi partitioning/shard key quyết định dữ liệu và tải được phân bố ra sao.
 
 ## Denormalization như intentional duplication
 

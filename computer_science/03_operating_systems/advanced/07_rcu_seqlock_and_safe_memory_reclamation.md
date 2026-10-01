@@ -35,7 +35,7 @@ object lifetime management
 
 Nhiều kernel cấu trúc (structure / 구조), thời gian chạy (runtime / 런타임) bảng (table / 테이블), routing bảng (table / 테이블) và read-mostly registry tối ưu reader bằng cách tách hai vấn đề này.
 
-> **Chuyển mạch:** Trong **RCU, seqlock và safe bộ nhớ (memory / 메모리) reclamation**, **2. RCU là publication + grace period + deferred reclamation** tiếp nhận điểm tựa từ **1. Mutual exclusion và thời gian tồn tại (lifetime / 수명) an toàn (safety / 안전) là hai bài toán khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Grace period là điều kiện lô-gic (logic / 논리), không phải hết thời gian chờ (timeout / 타임아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mutual exclusion bảo vệ truy cập, còn lifetime safety bảo vệ việc reclaim; RCU công bố rồi chờ grace period lô-gic, không thể thay bằng timeout tùy ý.
 
 ## 2. RCU là publication + grace period + deferred reclamation
 

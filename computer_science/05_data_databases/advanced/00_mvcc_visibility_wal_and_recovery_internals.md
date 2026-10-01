@@ -22,7 +22,7 @@ Bất biến (invariant / 불변식) cơ bản:
 
 Hai nửa của câu này nối visibility với durability.
 
-> **Chuyển mạch:** Trong **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **2. MVCC biến một logical row thành phiên bản (version / 버전) lịch sử (history / 이력)** tiếp nhận điểm tựa từ **1. Bài toán ban đầu: tính đồng thời (concurrency / 동시성) không được phá một lịch sử hợp lệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Snapshot là một đặc tả hợp đồng (contract / 계약) về giao dịch (transaction / 트랜잭션) thứ tự (order / 순서), không phải bản sao (copy / 복사) toàn cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Concurrency cần giữ lịch sử hợp lệ; MVCC lưu nhiều row version, còn snapshot định nghĩa visibility/order của transaction chứ không phải bản copy toàn database.
 
 ## 2. MVCC biến một logical row thành phiên bản (version / 버전) lịch sử (history / 이력)
 
