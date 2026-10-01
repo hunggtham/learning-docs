@@ -10,7 +10,7 @@ Provenance trả lời dữ liệu (data / 데이터) đến từ đâu, transfo
 
 Lineage tools biến chuỗi xử lý (pipeline / 파이프라인) dependencies thành đồ thị (graph / 그래프) để impact phân tích (analysis / 분석) khi lược đồ (schema / 스키마)/nguồn (source / 소스) thay đổi.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Dữ liệu (data / 데이터) provenance** nêu điều cần giải thích; **Đo lường (measurement / 측정) độ lệch (bias / 편향)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sampling độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Provenance cho biết dữ liệu đến từ đâu và biến đổi thế nào; bias measurement cần metric/context rõ, còn sampling bias có thể làm sai ngay trước khi mô hình được huấn luyện.
 
 ## Đo lường (measurement / 측정) độ lệch (bias / 편향)
 

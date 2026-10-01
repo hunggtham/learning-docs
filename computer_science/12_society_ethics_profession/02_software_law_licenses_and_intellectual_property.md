@@ -10,7 +10,7 @@ Mã nguồn (source code / 소스 코드) thường được copyright bảo v�
 
 Publicly visible nguồn (source / 소스) không mặc định cho quyền bản sao (copy / 복사)/use tùy ý nếu không có license grant phù hợp.
 
-> **Chuyển mạch:** Trong **Software law, licenses và intellectual thuộc tính (property / 속성)**, **Copyright và software** nêu điều cần giải thích; **Open-source license** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phụ thuộc (dependency / 의존성) license tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Copyright bảo vệ expression của software; license quy định quyền sử dụng/phân phối, và dependency license compatibility phải được kiểm tra trong artifact thực tế chứ không chỉ tên package.
 
 ## Open-source license
 

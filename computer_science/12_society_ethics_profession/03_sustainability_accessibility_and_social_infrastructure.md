@@ -10,7 +10,7 @@ Thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡
 
 Moving dữ liệu (data / 데이터) often costs significant năng lượng (energy / 에너지) relative to cục bộ (local / 로컬) arithmetic. Better locality/compression/batching có thể giảm both độ trễ (latency / 지연 시간) và năng lượng (energy / 에너지).
 
-> **Chuyển mạch:** Trong **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Embodied chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) không chỉ là hardware concern** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Datacenter efficiency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Energy use không chỉ nằm ở lúc chạy hardware; embodied cost của sản xuất cộng với datacenter efficiency và accessibility quyết định tổng tác động xã hội của hạ tầng tính toán.
 
 ## Embodied chi phí (cost / 비용)
 

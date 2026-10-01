@@ -10,7 +10,7 @@ Chọn default công khai (public / 공개)/private, dữ liệu (data / 데이�
 
 Một thiết kế (design / 설계) có thể technically neutral-looking nhưng embed incentives/các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Trong **Computing ethics, privacy và professional responsibility**, **Privacy không chỉ là secrecy** tiếp nhận điểm tựa từ **Technical quyết định (decision / 결정) có giá trị (value / 값) các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) minimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Technical decisions embed value assumptions; privacy rộng hơn secrecy vì liên quan quyền kiểm soát và context, nên data minimization là nguyên tắc thiết kế tiếp theo.
 
 ## Privacy không chỉ là secrecy
 

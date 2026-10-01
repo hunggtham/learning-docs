@@ -10,7 +10,7 @@ Vẽ dữ liệu (data / 데이터) nguồn (source / 소스) → collection →
 
 “Xóa người dùng (user / 사용자) khỏi main DB” chưa chắc là deletion hoàn chỉnh nếu identifiers còn trong sự kiện (event / 이벤트) stream/backups/tìm kiếm (search / 검색) chỉ mục (index / 인덱스). dữ liệu (data / 데이터) inventory phải theo luồng (flow / 흐름) và copies.
 
-> **Chuyển mạch:** Trong **Privacy threat các mô hình (models / 모델들), quản trị (governance / 거버넌스) và accountability**, **Bắt đầu từ luồng dữ liệu (data flow / 데이터 흐름), không chỉ cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마)** nêu điều cần giải thích; **Dữ liệu (data / 데이터) minimization là kiến trúc (architecture / 아키텍처) ràng buộc (constraint / 제약조건)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Purpose limitation và hàm (function / 함수) creep** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Privacy threat model phải theo data flow qua system, không chỉ schema; minimization là architectural constraint, còn purpose limitation ngăn function creep sau khi dữ liệu đã được thu thập.
 
 ## Dữ liệu (data / 데이터) minimization là kiến trúc (architecture / 아키텍처) ràng buộc (constraint / 제약조건)
 
