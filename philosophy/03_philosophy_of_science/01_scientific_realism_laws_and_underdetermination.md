@@ -1,6 +1,6 @@
 # Scientific Realism, Laws và Underdetermination
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Scientific Realism, Laws và Underdetermination**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Realism là claim nhiều tầng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Laws và ceteris paribus** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Scientific Realism, Laws và Underdetermination**. Route đi từ claim về entity/mô hình → luật, ceteris paribus và idealization → dữ liệu cạnh tranh → underdetermination và tiêu chí chọn lý thuyết, để tách cam kết “thế giới có thật” khỏi việc một mô hình vừa khớp dữ liệu.
 
 ## Realism là claim nhiều tầng
 

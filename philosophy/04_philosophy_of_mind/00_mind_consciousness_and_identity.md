@@ -1,6 +1,6 @@
 # Mind, Consciousness và Personal định danh (identity / 식별자)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mind, Consciousness và Personal định danh (identity / 식별자)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba câu hỏi không đồng nhất** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Các lập trường cần phân biệt** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mind, Consciousness và Personal định danh (identity / 식별자)**. Route đi từ mind và mental states → consciousness/qualia → self, memory và personal identity → các lập trường vật lý, chức năng và hiện sinh, để tách câu hỏi “có trải nghiệm” khỏi câu hỏi “là cùng một người”.
 
 ## Ba câu hỏi không đồng nhất
 

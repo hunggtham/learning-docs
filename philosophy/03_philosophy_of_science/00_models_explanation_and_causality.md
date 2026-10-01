@@ -1,6 +1,6 @@
 # Các mô hình (models / 모델들), Explanation và Causality
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mô hình (models / 모델들), Explanation và Causality**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình (model / 모델) không phải bản sao của reality** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Explanation có nhiều dạng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mô hình (models / 모델들), Explanation và Causality**. Route đi từ hiện tượng và mục tiêu → mô hình/idealization → explanation cơ chế, luật hoặc thống kê → dự đoán, can thiệp và giới hạn, để không nhầm độ hữu ích của mô hình với việc nó là bản sao thực tại.
 
 ## Mô hình (model / 모델) không phải bản sao của reality
 

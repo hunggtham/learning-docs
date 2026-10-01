@@ -1,6 +1,6 @@
 # Perception, Prediction và Self-Model
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Perception, Prediction và Self-Model**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Perception và lỗi (error / 오류)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Self-model** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Perception, Prediction và Self-Model**. Route đi từ tín hiệu cảm giác → dự đoán và prediction error → attention/active inference → self-model, agency và cập nhật niềm tin, để nhận thức được đọc như vòng lặp giữa mô hình bên trong và thế giới.
 
 Perception không đơn giản là camera ghi lại world. Hệ thần kinh kết hợp sensory đầu vào (input / 입력), prior, hành động (action / 동작) và body trạng thái (state / 상태) để ước lượng điều đang xảy ra. Predictive processing là một khung phần mềm (framework / 프레임워크) về suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성), không tự động là một lý thuyết (theory / 이론) hoàn chỉnh của consciousness.
 

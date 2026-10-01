@@ -1,6 +1,6 @@
 # Philosophy of Biology và Physics
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy of Biology và Physics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Biology: hàm (function / 함수), thông tin (information / 정보) và levels** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Physics: law, symmetry và idealization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy of Biology và Physics**. Route đi từ function/thông tin và levels trong biology → law, symmetry và idealization trong physics → reduction/emergence và mô hình hóa → cách so sánh giải thích giữa các khoa học, để không áp một chuẩn duy nhất cho mọi đối tượng.
 
 ## Biology: hàm (function / 함수), thông tin (information / 정보) và levels
 

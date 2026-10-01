@@ -1,6 +1,6 @@
 # Đo lường (measurement / 측정), Statistics và Replication
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đo lường (measurement / 측정), Statistics và Replication**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ dữ liệu (data / 데이터) đến claim** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đo lường (measurement / 측정), Statistics và Replication**. Route đi từ construct và phép đo → dữ liệu/sai số → thống kê và uncertainty → replication, robustness và cập nhật claim, để một con số được đọc cùng thiết kế tạo ra nó.
 
 Đo lường (measurement / 측정) không phải cửa sổ trong suốt vào reality. Construct phải được operationalize; instrument có resolution, calibration, noise và độ lệch (bias / 편향); observed score thường là tín hiệu (signal / 신호) cộng lỗi (error / 오류). Vì vậy, một kết quả có ý nghĩa thống kê không tự cho biết tác động (effect / 효과) lớn, ổn định hay quan trọng về thực tế.
 

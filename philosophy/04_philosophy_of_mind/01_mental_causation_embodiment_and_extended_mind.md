@@ -1,6 +1,6 @@
 # Mental Causation, Embodiment và Extended Mind
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mental Causation, Embodiment và Extended Mind**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mental causation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Embodied và enactive mind** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mental Causation, Embodiment và Extended Mind**. Route đi từ trạng thái tinh thần và hành động → mental causation → thân thể, môi trường và công cụ → extended/enactive mind, để kiểm tra một giải thích bằng chuỗi cơ chế thay vì chỉ bằng vị trí của não.
 
 ## Mental causation
 
