@@ -30,7 +30,7 @@ chemical system có khả năng Darwinian evolution ngày càng mạnh
 
 Điểm quan trọng là các mô-đun (module / 모듈) không nhất thiết xuất hiện hoàn chỉnh theo thứ tự cứng. Chúng có thể **co-evolve**: compartment làm replication ổn định hơn; replication tốt hơn giúp giữ chất xúc tác; catalyst làm năng lượng (energy / 에너지) harvesting hiệu quả hơn; năng lượng (energy / 에너지) tốt hơn cho phép polymer dài và precise hơn.
 
-> **Chuyển mạch:** Trong **Nguồn gốc sự sống và tiến hóa sớm — Origin of Life and Early Evolution (생명의 기원과 초기 진화)**, **2. Hóa học tiền sinh học: khối cấu tạo có thể đến từ đâu?** tiếp nhận điểm tựa từ **1. Bài toán cốt lõi: một hệ sống tối thiểu cần gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Từ monomer đến polymer: concentration và kinetics quan trọng không kém thermodynamics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Một hệ sống tối thiểu cần boundary, chemistry và energy flow; hóa học tiền sinh học cung cấp building blocks, còn concentration và kinetics quyết định chúng có thể polymerize trước khi phân hủy hay không.
 
 ## 2. Hóa học tiền sinh học: khối cấu tạo có thể đến từ đâu?
 

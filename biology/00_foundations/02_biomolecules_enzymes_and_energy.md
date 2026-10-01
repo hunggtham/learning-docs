@@ -18,7 +18,7 @@ Kiến trúc modular có hai lợi ích lớn. Thứ nhất, cell chỉ cần m�
 
 Điều này tương tự software: alphabet ký tự nhỏ có thể tạo vô số mã nguồn (source code / 소스 코드) khác nhau nhờ thứ tự (order / 순서).
 
-> **Chuyển mạch:** Trong **Biomolecule, Enzyme và Năng lượng tế bào — Biomolecules, Enzymes and Cellular năng lượng (energy / 에너지)**, **2. Condensation và hydrolysis: xây và tháo polyme** tiếp nhận điểm tựa từ **1. Monomer và polyme (polymer): vì sao life thích xây molecule lớn từ đơn vị (unit / 단위) lặp lại?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Carbohydrate: không chỉ là “đường để lấy năng lượng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Monomer tạo polymer bằng condensation và được tháo bằng hydrolysis; carbohydrate tiếp theo cho thấy polymer vừa là vật liệu vừa là kho dự trữ, không chỉ là nhiên liệu.
 
 ## 2. Condensation và hydrolysis: xây và tháo polyme
 

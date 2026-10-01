@@ -18,7 +18,7 @@ Nhưng mỗi proxy đo một aspect khác nhau. Cell count tăng có thể do di
 
 Do đó câu hỏi experimental đầu tiên luôn là: **đo lường (measurement / 측정) này đại diện cho đại lượng sinh học nào, và những tiến trình (process / 프로세스) khác nào cũng có thể thay đo lường (measurement / 측정) đó?**
 
-> **Chuyển mạch:** Trong **Phương pháp thực nghiệm và đo lường trong Sinh học — Experimental Methods and đo lường (measurement / 측정)**, **1. Từ biological concept đến biến thao tác (operational variable)** nêu điều cần giải thích; **2. Độ hợp lệ của cấu trúc đo lường (construct validity): đo đúng thứ mình nghĩ đang đo chưa?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. điều khiển (control / 제어) là lô-gic (logic / 논리) của nhân quả (causal / 인과적) suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Operational variable biến khái niệm sinh học thành phép đo; construct validity hỏi phép đo có đúng đối tượng không, rồi control mới cho phép suy luận nhân quả.
 
 ## 2. Độ hợp lệ của cấu trúc đo lường (construct validity): đo đúng thứ mình nghĩ đang đo chưa?
 

@@ -18,7 +18,7 @@ Một tế bào sống liên tục lấy chất từ môi trường, biến đ�
 
 Khi học một thành phần, hãy đặt thêm bốn câu hỏi: nó nhận đầu vào (input / 입력) gì, biến đổi cái gì, tạo đầu ra (output / 출력) gì, và đầu ra (output / 출력) đó ảnh hưởng ngược lại hệ thống ra sao. Cách nghĩ này sẽ quay lại khi học receptor trong truyền tín hiệu (signaling), kidney trong cân bằng nội môi (homeostasis), vật săn mồi–con mồi (predator–prey) trong ecology và mạng lưới điều hòa gen (gene-regulatory network) trong phát triển (development).
 
-> **Chuyển mạch:** Trong **Cách tư duy trong Sinh học — Scientific Thinking, quy mô (scale / 규모) and các mô hình (models / 모델들)**, **1. Từ “đồ vật” sang “quá trình”** xác định đầu vào; **2. Quan sát, giải thích và cơ chế không phải cùng một thứ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. mô hình (model / 모델): công cụ để suy luận, không phải bản sao thực tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sinh học bắt đầu từ quá trình thay vì vật thể; quan sát ghi nhận dữ liệu, cơ chế giải thích cách dữ liệu sinh ra, còn model cho phép suy luận ở quy mô không thể quan sát trực tiếp.
 
 ## 2. Quan sát, giải thích và cơ chế không phải cùng một thứ
 
