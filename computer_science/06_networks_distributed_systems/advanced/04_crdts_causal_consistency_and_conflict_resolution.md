@@ -70,4 +70,4 @@ CAP không nói “chọn CP hoặc AP cho toàn cơ sở dữ liệu (database 
 
 > CRDT chuyển giải quyết xung đột (conflict resolution / 충돌 해결) từ thời gian chạy (runtime / 런타임) coordination sang data-type thiết kế (design / 설계). Muốn bỏ coordination, ta phải mã hóa merge ngữ nghĩa (semantics / 의미론) sao cho concurrent histories hội tụ mà vẫn phù hợp nghiệp vụ (business / 비즈니스) meaning.
 
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại happens-before, merge semantics, tombstone/GC và business invariant trước khi gọi một CRDT là “eventual consistency an toàn”. Sang [Consensus internals](./03_consensus_log_replication_reconfiguration_and_snapshots.md) khi invariant cần authority mạnh; sang [Multi-region replication](./05_multi_region_replication_and_geo_distributed_tradeoffs.md) khi freshness, locality và conflict policy phải đi cùng topology; quay về [README](./README.md) để xác nhận owner.
