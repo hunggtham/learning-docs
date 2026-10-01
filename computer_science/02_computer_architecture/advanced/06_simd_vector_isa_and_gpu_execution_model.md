@@ -20,7 +20,7 @@ Nếu véc-tơ (vector / 벡터) register rộng 256 bit chứa tám số `float
 
 Điều này không có nghĩa CPU hoàn thành mọi thứ nhanh hơn đúng tám lần. tải (load / 로드)/store, phụ thuộc (dependency / 의존성), trượt bộ nhớ đệm (cache miss / 캐시 미스), instruction thông lượng (throughput / 처리량) và số thực thi (execution / 실행) cổng (port / 포트) vẫn giới hạn tốc độ.
 
-> **Chuyển mạch:** Trong **SIMD, véc-tơ (vector / 벡터) ISA và mô hình thực thi GPU**, **1. Scalar thực thi (execution / 실행) và dữ liệu (data / 데이터) parallelism** nêu điều cần giải thích; **2. véc-tơ (vector / 벡터) register và lane** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. SIMD không đồng nghĩa nhiều luồng thực thi (thread / 스레드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Scalar xử lý từng phần tử, data parallelism xử lý nhiều phần tử cùng instruction; vector register/lane hiện thực SIMD, còn GPU threads là mô hình khác với SIMD lanes.
 
 ## 2. véc-tơ (vector / 벡터) register và lane
 

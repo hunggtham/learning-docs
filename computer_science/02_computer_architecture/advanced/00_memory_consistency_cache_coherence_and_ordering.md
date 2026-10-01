@@ -22,7 +22,7 @@ publish payload xong bằng release
 
 Thiết kế bộ nhớ (memory / 메모리) mô hình (model / 모델) là một thỏa hiệp: cho trình biên dịch (compiler / 컴파일러)/hardware đủ freedom để tối ưu nhưng vẫn cung cấp thành phần nguyên thủy (primitive / 기본 요소) đủ mạnh để software chứng minh tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) consistency, bộ nhớ đệm (cache / 캐시) coherence và thứ tự (ordering / 순서)**, **2. Coherence và consistency trả lời hai câu hỏi khác nhau** tiếp nhận điểm tựa từ **1. Bài toán ban đầu: hiệu năng (performance / 성능) cần tự do, software cần một hợp đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Store buffer giải thích vì sao store chưa chắc visible ngay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Performance cần hardware freedom nhưng software cần contract; coherence giữ một cache line nhất quán, consistency quy định thứ tự quan sát giữa nhiều location, và store buffer tạo độ trễ visibility.
 
 ## 2. Coherence và consistency trả lời hai câu hỏi khác nhau
 

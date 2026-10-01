@@ -12,7 +12,7 @@ Một executable được compile cho ARM64 không trực tiếp chạy trên x8
 
 Microarchitecture có thể thay đổi mạnh giữa CPU generations nhưng vẫn chạy cùng ISA, giống hai cơ sở dữ liệu (database / 데이터베이스) engines cùng expose SQL subset nhưng nội bộ (internal / 내부) thực thi (execution / 실행) khác.
 
-> **Chuyển mạch:** Trong **CPU, ISA và instruction cycle**, **ISA như ranh giới (boundary / 경계) giữa software và hardware** đã nêu tiêu chí phân biệt, còn **Registers** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Fetch, decode, execute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** ISA là contract giữa software và hardware; registers giữ operand/state gần ALU, rồi fetch–decode–execute biến instruction thành hành vi CPU cụ thể.
 
 ## Registers
 

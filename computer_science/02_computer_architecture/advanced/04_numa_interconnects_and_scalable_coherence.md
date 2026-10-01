@@ -10,7 +10,7 @@ Nếu mọi lõi chia sẻ một bus bộ nhớ duy nhất, số lõi tăng sẽ
 
 Độ trễ truy cập từ xa không chỉ là một số nanosecond cố định cộng thêm. Nó còn phụ thuộc vào băng thông của interconnect, cấu trúc liên kết (topology), hàng đợi và lưu lượng do các lõi khác tạo ra.
 
-> **Chuyển mạch:** Trong **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**, **Vì sao mô hình truy cập đồng nhất không thể mở rộng mãi** nêu điều cần giải thích; **Chính sách chạm đầu tiên và vị trí dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gắn luồng với CPU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Uniform access không scale mãi vì distance và coherence traffic; first-touch đặt page gần nơi dùng, còn thread/CPU affinity giữ locality khi NUMA mở rộng.
 
 ## Chính sách chạm đầu tiên và vị trí dữ liệu
 

@@ -10,7 +10,7 @@ Thay vì chờ instruction A đi hết fetch→decode→execute→bộ nhớ (me
 
 Hazards xuất hiện khi instructions phụ thuộc dữ liệu (data / 데이터), branch chưa biết direction hoặc cùng tranh tài nguyên (resource / 자원). Forwarding, stalling và branch prediction xử lý hazards.
 
-> **Chuyển mạch:** Trong **Pipelining, multicore, SIMD và GPU**, **Superscalar và out-of-order** tiếp nhận điểm tựa từ **Pipelining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multicore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Pipelining chồng các stage; superscalar/out-of-order khai thác instruction-level parallelism, còn multicore nhân số execution contexts và đưa coherence/coordination thành chi phí mới.
 
 ## Superscalar và out-of-order
 

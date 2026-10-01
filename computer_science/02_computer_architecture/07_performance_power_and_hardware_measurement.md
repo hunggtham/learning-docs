@@ -22,7 +22,7 @@ Instruction Count phụ thuộc thuật toán (algorithm / 알고리즘), trình
 
 Một tối ưu hóa (optimization / 최적화) có thể giảm instruction count nhưng tăng bộ nhớ đệm (cache / 캐시) misses; kết quả cuối chỉ biết qua total thực thi (execution / 실행) thời gian (time / 시간) trên tải công việc (workload / 워크로드) đại diện.
 
-> **Chuyển mạch:** Trong **Hiệu năng (performance / 성능), power và đo lường hardware**, **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** tiếp nhận điểm tựa từ **CPU thời gian (time / 시간) và ba thành phần cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** CPU time tách thành latency và throughput tùy workload; IPC/CPI diễn giải pipeline progress, còn stalls và power cho thấy giới hạn không nằm trong một metric đơn lẻ.
 
 ## Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)
 
