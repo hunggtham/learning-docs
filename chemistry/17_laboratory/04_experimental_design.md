@@ -31,7 +31,7 @@ Tương tự, “hiệu suất” có thể nghĩa hiệu suất khối lượng
 
 Định nghĩa thao tác rõ ràng ngăn việc thay đổi cách hiểu sau khi đã nhìn dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Đơn vị thí nghiệm và tính độc lập** tiếp nhận điểm tựa từ **Định nghĩa biến theo cách có thể đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu trắng và đối chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** An operational variable becomes interpretable only when its experimental unit is independent; that distinction determines whether blanks and controls can rule out background signal and alternative explanations.
 
 ## Đơn vị thí nghiệm và tính độc lập
 
@@ -43,7 +43,7 @@ Ba bình được chuẩn bị độc lập lại cung cấp thông tin mạnh h
 
 Nhầm lặp kỹ thuật với lặp độc lập gọi là **giả lặp (pseudoreplication)** và thường làm độ không đảm bảo bị đánh giá thấp một cách giả tạo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Mẫu trắng và đối chứng** tiếp nhận điểm tựa từ **Đơn vị thí nghiệm và tính độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lặp lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Independent units define the true replication level; blanks and positive/negative controls expose contamination, detection failure, or matrix effects, after which repeated preparation estimates process variation.
 
 ## Mẫu trắng và đối chứng
 
@@ -67,7 +67,7 @@ Trong hóa phân tích, nền không chứa chất phân tích hoặc nền đư
 
 Đối chứng về bản chất là công cụ phát hiện **các giải thích thay thế**.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Lặp lại** tiếp nhận điểm tựa từ **Mẫu trắng và đối chứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngẫu nhiên hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Controls identify alternative explanations, while technical, process, and biological replicates separate instrument precision from real variation; randomization then prevents run order from becoming a hidden confounder.
 
 ## Lặp lại
 
@@ -81,7 +81,7 @@ Lặp lại giúp ước lượng biến thiên và cho phép suy luận thống
 
 Số lần lặp phù hợp phụ thuộc phương sai dự kiến, kích thước hiệu ứng và mức tin cậy cần đạt. “Ba lần lặp” là quy ước thường gặp chứ không phải định luật thống kê.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Ngẫu nhiên hóa** tiếp nhận điểm tựa từ **Lặp lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chặn theo yếu tố gây nhiễu đã biết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Replication estimates variation but cannot remove time-correlated drift; randomizing treatment order spreads that drift across groups, while blocking handles a known nuisance factor directly.
 
 ## Ngẫu nhiên hóa
 
