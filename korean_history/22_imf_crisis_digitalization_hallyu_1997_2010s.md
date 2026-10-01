@@ -6,7 +6,7 @@
 
 Khủng hoảng năm 1997 phơi bày điểm yếu trong nợ nước ngoài ngắn hạn, đòn bẩy doanh nghiệp và giám sát tài chính. Hàn Quốc nhận gói cứu trợ do IMF dẫn dắt kèm các điều kiện cải cách. Tỷ giá, phá sản và thất nghiệp tạo ra cú sốc xã hội lớn.
 
-> **Chuyển mạch:** Trong **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Asian Financial Crisis như kiểm thử sức chịu tải (stress test / 스트레스 테스트)** cho ta quy tắc; **Corporate restructuring và labor thị trường (market / 시장)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Broadband hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** IMF crisis phơi bày fragility của corporate finance và labor market; restructuring thay đổi phân phối rủi ro, rồi broadband infrastructure mở không gian cho digitalization và Hallyu.
 
 ## Corporate restructuring và labor thị trường (market / 시장)
 

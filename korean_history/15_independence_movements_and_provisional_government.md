@@ -6,7 +6,7 @@
 
 Resistance chống colonial quy tắc (rule / 규칙) tồn tại dưới nhiều hình thức: armed struggle, diplomacy, education, labor/peasant movement, cultural nationalism, socialist organization, religious networks và diaspora activism. Gọi tất cả là một khối thống nhất sẽ che đi disagreement về chiến lược (strategy / 전략) và future xã hội (social / 사회적) thứ tự (order / 순서).
 
-> **Chuyển mạch:** Trong **Phong trào độc lập và Korean Provisional Government**, **Phong trào 1 tháng 3 (3·1운동 / March First Movement) 1919** tiếp nhận điểm tựa từ **Independence movement không phải một organization duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Provisional Government** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Independence movement gồm nhiều mạng lưới và chiến lược; 3·1운동 tạo mobilization rộng, còn Provisional Government thử chuyển tính chính danh đó thành đại diện và tổ chức đối ngoại.
 
 ## Phong trào 1 tháng 3 (3·1운동 / March First Movement) 1919
 
