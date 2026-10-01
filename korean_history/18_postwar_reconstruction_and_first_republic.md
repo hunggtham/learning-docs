@@ -12,31 +12,31 @@ Sau 1953, South Korea đối diện destroyed hạ tầng (infrastructure / 인�
 
 Land reform cuối 1940s–đầu 1950s làm giảm landlordism lớn và mở rộng smallholder farming. Điều này thay đổi xã hội (social / 사회적) cấu trúc (structure / 구조) trước industrialization. Khi later factories cần labor, rural households có asset cơ sở (base / 기반) khác so với societies nơi landed elite giữ phần lớn đất.
 
-> **Chuyển mạch:** Land reform changed rural structure and political coalitions; First Republic conflict exposed institutional limits, setting conditions for the Second Republic and 1961 coup.
+> **Chuyển mạch:** Land reform đổi cấu trúc nông thôn và liên minh chính trị; **First Republic** phải xử lý những lợi ích và căng thẳng mới nhưng bộc lộ giới hạn thể chế. Từ đó, **Second Republic và đảo chính 1961** trở thành bước chuyển cần giải thích, không phải sự kiện tách rời.
 
 ## First Republic và political xung đột (conflict / 충돌)
 
 Syngman Rhee (이승만 / Syngman Rhee) government xây anti-communist trạng thái (state / 상태) trong Cold War và duy trì strong presidency. Electoral/political xung đột (conflict / 충돌) tăng, culminating in protests after disputed March 1960 election. **April Revolution (4·19 혁명)** buộc Rhee từ chức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái thiết hậu chiến và First Republic**, **Second Republic và 1961 coup** tiếp nhận điểm tựa từ **First Republic và political xung đột (conflict / 충돌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** April Revolution lật đổ First Republic nhưng parliamentary Second Republic tồn tại ngắn trước đảo chính 1961. Chuỗi này cho thấy thay đổi chế độ phụ thuộc cả legitimacy lẫn năng lực xử lý kinh tế; **mô hình tư duy** sẽ gom tái thiết, cải cách đất và bộ máy trước khi chuyển sang aid economy.
 
 ## Second Republic và 1961 coup
 
 Second Republic chuyển sang parliamentary hệ thống (system / 시스템) nhưng tồn tại ngắn. May 16, 1961 military coup do Park Chung-hee (박정희 / Park Chung-hee) và associates lãnh đạo kết thúc giai đoạn này. Đây là chuyển tiếp (transition / 전이) từ postwar political instability sang developmental authoritarianism.
 
-> **Chuyển mạch:** Trong **Tái thiết hậu chiến và First Republic**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Second Republic và 1961 coup** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Aid economy và inflation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Second Republic và đảo chính 1961 không xuất hiện từ số không: chúng kế thừa xã hội đã có land reform, giáo dục và hành chính nhưng thiếu ổn định chính trị. Để hiểu nền vật chất của các lựa chọn sau đó, **aid economy và inflation** sẽ truy dòng vốn, hàng hóa và giá cả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Reconstruction là allocation bài toán (problem / 문제): vốn ít, nhu cầu rất lớn, institution quyết định thứ tự ưu tiên. Những lựa chọn ban đầu về land, education, aid và trạng thái (state / 상태) bureaucracy tạo cơ sở (base / 기반) cho growth mô hình (model / 모델) sau 1961.
 
-> **Chuyển mạch:** Ở chặng này của **Tái thiết hậu chiến và First Republic**, **Aid economy và inflation** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Education expansion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Tái thiết cần biến viện trợ thành lương thực, nhiên liệu, thiết bị và ổn định tiền tệ; lạm phát cho thấy phân phối nguồn lực không trung tính. Khi kinh tế vĩ mô còn thiếu ổn định, **education expansion** lại tạo năng lực dài hạn trước khi việc làm công nghiệp quy mô lớn xuất hiện.
 
 ## Aid economy và inflation
 
 Viện trợ nước ngoài đem vào lương thực, phân bón, nhiên liệu và thiết bị, nhưng chuyển viện trợ thành phát triển ổn định đòi hỏi quản lý tiền tệ và tài khóa. Thiếu hụt cộng với phát hành tiền có thể gây lạm phát; tỷ giá bị kiểm soát có thể tạo cơ hội kinh doanh chênh lệch. Vì vậy, tái thiết liên quan đến thể chế kinh tế vĩ mô chứ không chỉ là xây lại cầu đường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái thiết hậu chiến và First Republic**, **Education expansion** tiếp nhận điểm tựa từ **Aid economy và inflation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urban refugees and informal economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Aid và ổn định giá quyết định nguồn lực trước mắt, còn **education expansion** tích lũy human capital cho công nghiệp hóa sau 1961. Cùng lúc, dân di cư chiến tranh và thiếu nhà ở tạo **urban refugees and informal economy**, nền tảng đời sống thường bị che khuất bởi câu chuyện tăng trưởng.
 
 ## Education expansion
 
