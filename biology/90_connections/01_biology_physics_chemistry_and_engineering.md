@@ -140,7 +140,7 @@ Vận chuyển chủ động (active transport), biosynthesis và protein vận 
 
 ATP không phải battery độc lập; nó là **currency trong mạng lưới phản ứng (reaction network)** được regenerate liên tục.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản** xác định đầu vào; **10. Redox potential và electron luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** ATP coupling supplies work from free-energy differences; redox potential orders electron flow, which then builds the chemiosmotic gradient.
 
 ## 10. Redox potential và electron luồng (flow / 흐름)
 
@@ -150,7 +150,7 @@ Quang hợp (photosynthesis) dùng photon để nâng electron lên năng lượ
 
 Do đó metabolism có thể đọc như **controlled electron luồng (flow / 흐름) → chênh lệch ion (ion gradient) → chemical công việc (work / 작업)**.
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **10. Redox potential và electron luồng (flow / 흐름)** xác định đầu vào; **11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Động học enzym (enzyme kinetics) và bão hòa (saturation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Redox flow pumps charge to create a gradient; chemiosmosis converts that gradient into molecular work, while enzyme kinetics measures the rate and saturation of the downstream machinery.
 
 ## 11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử
 
@@ -202,7 +202,7 @@ Simple one-site binding:
 
 Occupancy không đồng nghĩa phản hồi (response / 응답); few occupied receptor có thể tạo large downstream tín hiệu (signal / 신호) nếu amplification mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **14. Binding affinity và occupancy** xác định đầu vào; **15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Binding occupancy describes molecular loading; fluid pressure gradients scale that local interaction into bulk transport, and Reynolds number predicts whether the flow remains laminar.
 
 ## 15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)
 
@@ -218,7 +218,7 @@ Radius xuất hiện lũy thừa 4. Vì vậy thay đổi nhỏ arteriole radius
 
 Điều này giải thích tại sao smooth muscle quanh vessel là điều khiển (control / 제어) điểm (point / 지점) mạnh của circulation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)** xác định đầu vào; **16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. Compliance: vessel không phải pipe cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Pressure gradient drives bulk flow; Reynolds number classifies the regime, then vessel compliance explains why biological conduits cannot be modeled as rigid pipes.
 
 ## 16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?
 
