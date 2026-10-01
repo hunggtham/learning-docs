@@ -91,7 +91,7 @@ cân
 
 Không nên cho chất rắn vào bình định mức rồi chỉnh ngay tới vạch trước khi hòa tan hoàn toàn nếu quá trình hòa tan làm thể tích hoặc nhiệt độ thay đổi đáng kể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Chuyển định lượng** tiếp nhận điểm tựa từ **Hòa tan trước khi đưa tới thể tích cuối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao thể tích cuối không bằng “thể tích dung môi đã thêm”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Dissolving establishes the solute phase; quantitative transfer closes the mass balance by washing residue into the volumetric flask before final volume is defined.
 
 ## Chuyển định lượng
 
@@ -101,7 +101,7 @@ Có thể rửa dụng cụ nguồn nhiều lần bằng lượng dung môi nh�
 
 “Chuyển định lượng” nghĩa là mức chuyển đủ hoàn toàn so với độ không đảm bảo mục tiêu, không phải khẳng định toán học rằng 100,000000% vật liệu đã đi qua.
 
-> **Chuyển mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Vì sao thể tích cuối không bằng “thể tích dung môi đã thêm”** tiếp nhận điểm tựa từ **Chuyển định lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha loãng từ dung dịch stock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Quantitative transfer preserves moles, but solute–solvent interactions make volume non-additive; the final volume must therefore be established by filling the calibrated mark, not by subtracting two measured volumes.
 
 ## Vì sao thể tích cuối không bằng “thể tích dung môi đã thêm”
 
@@ -117,7 +117,7 @@ rồi đo riêng hai thể tích.
 
 Cách đúng là chuyển dung dịch stock rồi **pha loãng toàn dung dịch tới vạch thể tích cuối đã hiệu chuẩn**.
 
-> **Chuyển mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Pha loãng từ dung dịch stock** tiếp nhận điểm tựa từ **Vì sao thể tích cuối không bằng “thể tích dung môi đã thêm”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha loãng nối tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Since final volume is set at the calibration mark, stock dilution preserves (C_1V_1=C_2V_2) by pipetting a measured aliquot; very large dilution factors then require serial steps.
 
 ## Pha loãng từ dung dịch stock
 
@@ -135,7 +135,7 @@ V_1=\frac{0.0100\times100.0}{0.1000}=10.00\,mL
 
 Dùng pipette phù hợp để lấy 10,00 mL rồi pha loãng tới thể tích cuối 100,0 mL.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Pha loãng nối tiếp** tiếp nhận điểm tựa từ **Pha loãng từ dung dịch stock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ không đảm bảo của pha loãng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A single stock dilution can demand an impractically tiny aliquot; serial 1:10 steps keep each pipetting action measurable, but their uncertainties accumulate and must be propagated.
 
 ## Pha loãng nối tiếp
 
