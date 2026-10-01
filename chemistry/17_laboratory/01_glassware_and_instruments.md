@@ -306,7 +306,7 @@ Thiết bị đo khả năng dẫn điện của dung dịch.
 
 Hiệu chỉnh nhiệt độ quan trọng vì độ dẫn thay đổi đáng kể khi nhiệt độ thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Máy quang phổ hấp thụ** tiếp nhận điểm tựa từ **Máy đo độ dẫn điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu trắng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Conductivity summarizes ionic transport and temperature; absorption spectroscopy measures wavelength-dependent light loss, so the next control is subtracting solvent, reagent, and cuvette background.
 
 ## Máy quang phổ hấp thụ
 
@@ -320,7 +320,7 @@ A=\varepsilon bc
 
 chỉ có ý nghĩa trong vùng nồng độ phù hợp và khi dạng hóa học của chất hấp thụ ổn định.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Mẫu trắng** tiếp nhận điểm tựa từ **Máy quang phổ hấp thụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cuvette** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Beer–Lambert relates absorbance to path length and concentration only under stable chemical conditions; a blank estimates non-analyte absorbance before the cuvette becomes the optical interface to control.
 
 ## Mẫu trắng
 
@@ -328,7 +328,7 @@ chỉ có ý nghĩa trong vùng nồng độ phù hợp và khi dạng hóa họ
 
 Blank là một phần của mô hình đo, không phải chỉ là “nút đưa máy về 0”.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Cuvette** tiếp nhận điểm tựa từ **Mẫu trắng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng tuyến tính của thiết bị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A blank removes solvent/reagent/cuvette contributions statistically; cuvette material, orientation, fingerprints, and scratches determine how much of the remaining signal is trustworthy before checking linearity.
 
 ## Cuvette
 
@@ -336,7 +336,7 @@ Vật liệu cuvette quyết định vùng bước sóng sử dụng. Nhựa ho�
 
 Dấu tay, vết xước và việc đặt cuvette khác hướng có thể làm phép đo hấp thụ bị lệch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Vùng tuyến tính của thiết bị** tiếp nhận điểm tựa từ **Cuvette** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy ly tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cuvette quality protects the optical path; detector saturation and stray light still limit linearity, so samples must be diluted or validated before a mechanical separation step such as centrifugation.
 
 ## Vùng tuyến tính của thiết bị
 
