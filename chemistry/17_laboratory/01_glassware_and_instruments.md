@@ -262,7 +262,7 @@ Bình hút ẩm duy trì môi trường khô và cho phép mẫu nóng sau sấy
 
 Đặt vật nóng trực tiếp lên cân có thể tạo dòng đối lưu và làm sai phép cân, vì vậy mẫu cần được đưa gần nhiệt độ phòng trước khi cân chính xác.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Máy đo pH — một thiết bị điện hóa** tiếp nhận điểm tựa từ **Bình hút ẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu chuẩn máy đo pH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Drying and cooling stabilize sample condition; the pH meter then maps hydrogen-ion activity to voltage, so calibration must establish the real offset and slope before interpretation.
 
 ## Máy đo pH — một thiết bị điện hóa
 
@@ -276,7 +276,7 @@ E=E^0-\frac{2.303RT}{F}\,pH
 
 Ở 25 °C, độ dốc lý tưởng gần 59,16 mV trên mỗi đơn vị pH.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Hiệu chuẩn máy đo pH** tiếp nhận điểm tựa từ **Máy đo pH — một thiết bị điện hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chăm sóc điện cực pH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The pH electrode follows a near-Nernst slope but drifts in offset and sensitivity; multi-point buffer calibration measures both, after which electrode condition becomes the dominant maintenance variable.
 
 ## Hiệu chuẩn máy đo pH
 
@@ -286,7 +286,7 @@ Hiệu chuẩn sửa cả độ lệch gốc và độ dốc.
 
 Dung dịch đệm cũ hoặc nhiễm bẩn tạo sai lệch hệ thống ngay cả khi thiết bị vẫn hiển thị nhiều chữ số.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Chăm sóc điện cực pH** tiếp nhận điểm tựa từ **Hiệu chuẩn máy đo pH** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy đo độ dẫn điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Calibration is only valid while the glass membrane stays hydrated and the reference junction remains open; care preserves that response before comparing pH with another ionic measurement.
 
 ## Chăm sóc điện cực pH
 
@@ -296,7 +296,7 @@ Sau đo có thể rửa bằng nước sạch và thấm nhẹ thay vì chà m�
 
 Mối nối tham chiếu có thể bị tắc trong mẫu bẩn hoặc giàu protein.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Máy đo độ dẫn điện** tiếp nhận điểm tựa từ **Chăm sóc điện cực pH** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy quang phổ hấp thụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Electrode care protects a potential-based measurement; conductivity instead aggregates ion concentration, charge, mobility, and temperature, leading next to an optical signal with a different blank.
 
 ## Máy đo độ dẫn điện
 
