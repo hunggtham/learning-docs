@@ -28,7 +28,7 @@ Dạng thứ hai có thể cho conclusion đúng trong một trường hợp c�
 
 Không dạng nào tự giải quyết mọi vấn đề. Deduction có thể vận hành trên premise sai; induction nhạy với mẫu (sample / 표본) và cơ sở (base / 기반) tỷ lệ (rate / 비율); abduction có thể chọn explanation đẹp nhưng chưa đủ discriminating bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리), Validity và các dạng lập luận**, **Steelman và burden of proof** tiếp nhận điểm tựa từ **Deduction, induction và abduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Deduction kiểm tra hệ quả theo cấu trúc, induction đánh giá mức khái quát từ mẫu hữu hạn, còn abduction so sánh các lời giải thích cạnh tranh. Vì mỗi dạng có tiêu chuẩn mạnh/yếu khác nhau, **steelman và burden of proof** là bước tiếp theo để làm rõ claim trước khi phản biện và đặt đúng nghĩa vụ chứng minh.
 
 ## Steelman và burden of proof
 
