@@ -54,25 +54,25 @@ By 2020s, Korean content không còn chỉ là niche regional export. K-pop, fil
 
 Seoul metropolitan area concentrates high-value jobs, universities and services. Agglomeration creates productivity benefit because firms and workers match more efficiently, but it also raises housing chi phí (cost / 비용) and drains regions. chính sách (policy / 정책) faces sự đánh đổi (trade-off / 트레이드오프) between efficiency and spatial balance.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Education after massification** tiếp nhận điểm tựa từ **Capital region concentration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gender and care economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Capital-region concentration gom việc làm, đại học và dịch vụ vào một không gian, nên phổ cập đại học không xóa cạnh tranh mà chuyển nó sang prestige, điểm thi và credential. **Gender and care economy** tiếp theo cho thấy những cơ hội đó được duy trì bằng phân bổ thời gian chăm sóc như thế nào.
 
 ## Education after massification
 
 When university truy cập (access / 접근) becomes dùng chung (common / 공통), degree alone differentiates less. Competition shifts to institution prestige, kiểm thử (test / 테스트) score, internships, certificates and ngôn ngữ (language / 언어) skill. This is **credential inflation**: more credentials may be required for same relative position even if absolute skill rises.
 
-> **Chuyển mạch:** Trong **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Gender and care economy** tiếp nhận điểm tựa từ **Education after massification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Historical caution with recent events** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Credential inflation làm tăng chi phí cạnh tranh giáo dục; **gender and care economy** hỏi ai có thời gian, thu nhập và hỗ trợ để theo đuổi cuộc cạnh tranh ấy. Vì lịch sử gần vẫn đang diễn ra, **historical caution** sẽ đặt các nhận định hiện tại trong mốc thời gian và mức chắc chắn phù hợp.
 
 ## Gender and care economy
 
 Tranh luận về mức sinh thấp không thể tách khỏi việc ai làm chăm sóc trẻ/người già và nơi làm việc khen thưởng sự nghiệp liên tục như thế nào. Vì vậy, nhân khẩu học phản ánh phân bổ thời gian ở cấp vi mô trong hộ gia đình, chứ không chỉ là “sở thích sinh con của quốc gia” trừu tượng.
 
-> **Chuyển mạch:** Ở chặng này của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Historical caution with recent events** tiếp nhận điểm tựa từ **Gender and care economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một ngày đương đại vẫn có lịch sử ở phía sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Phân bổ chăm sóc giải thích một phần mức sinh và bất bình đẳng cơ hội, nhưng không nên biến xu hướng hiện tại thành kết luận bất biến. **Historical caution** giữ mốc và điều kiện của bằng chứng; mục **Một ngày đương đại vẫn có lịch sử ở phía sau** sẽ nối các trải nghiệm hôm nay với những lớp thể chế trước đó.
 
 ## Historical caution with recent events
 
 Lịch sử gần đây còn có kho lưu trữ chưa được giải quyết và những hệ quả chính trị vẫn đang diễn ra. Một tài liệu tạo ra hôm nay có thể làm thay đổi cách diễn giải về sau. Cách làm tốt là ghi mốc thời gian cho các nhận định và tránh viết xu hướng hiện tại như đích đến bất biến. “Hàn Quốc đã trở thành X” thường yếu hơn “đến giữa thập niên 2020, các chỉ báo cho thấy xu hướng X trong điều kiện Y”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Một ngày đương đại vẫn có lịch sử ở phía sau** tiếp nhận điểm tựa từ **Historical caution with recent events** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Việt Nam cùng thời: hội nhập số và bài toán dân số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cảnh đời đương đại như thuê nhà, giao đồ ăn hay làm việc qua nền tảng là kết quả của đô thị hóa, IMF, băng rộng và tài chính hóa nhà ở. Từ chuỗi nguyên nhân đó, so sánh **Việt Nam cùng thời** cần ghi rõ khác biệt về dân số, phúc lợi, doanh nghiệp và quản trị dữ liệu thay vì dùng tuyến tính “đi trước/đi sau”.
 
 ## Một ngày đương đại vẫn có lịch sử ở phía sau
 
