@@ -1,6 +1,6 @@
 # Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phép đo bắt đầu từ “hợp đồng” của dụng cụ** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Cốc becher** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**. Route bắt đầu từ measurand/range/resolution, đi qua lựa chọn dụng cụ, calibration và thao tác đọc, rồi kết thúc ở uncertainty và failure mode; không coi mọi vật chứa là dụng cụ đo tương đương.
 
 > Thiết bị phòng thí nghiệm không thể thay thế tùy ý cho nhau. Mỗi dụng cụ được thiết kế cho một đại lượng, dải đo, độ phân giải, kiểu hiệu chuẩn, mức độ không đảm bảo và chế độ hỏng riêng. Chọn sai dụng cụ có thể làm thí nghiệm mất giá trị trước cả khi bắt đầu tính toán.
 

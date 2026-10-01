@@ -1,6 +1,6 @@
 # Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phân tách luôn có chi phí** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **“Tinh khiết” phụ thuộc mục đích** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**. Route bắt đầu từ property contrast, chọn cơ chế phase/solubility/volatility/charge/size, rồi cân bằng purity–recovery–waste; “tinh khiết” chỉ có nghĩa khi gắn với mục đích phân tích hoặc sử dụng.
 
 > Phân tách hoạt động khi các thành phần khác nhau ở ít nhất một tính chất có thể khai thác: độ bay hơi, độ tan, phân bố giữa pha, điện tích, kích thước, hấp phụ, xu hướng kết tinh hoặc độ thấm qua màng. Không có kỹ thuật nào tốt nhất cho mọi trường hợp. Tinh sạch tốt nghĩa là chọn **độ tương phản vật lý–hóa học lớn nhất có thể khai thác**, rồi khuếch đại nó qua nhiều giai đoạn với mức mất sản phẩm tối thiểu.
 

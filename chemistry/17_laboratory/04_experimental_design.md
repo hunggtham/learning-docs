@@ -1,6 +1,6 @@
 # Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ câu hỏi nhân quả hoặc mô tả** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Định nghĩa biến theo cách có thể đo** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**. Route đi từ question/estimand → operational variables → controls/randomization → measurement plan → replication và evidence; mỗi bước phải loại một giải thích thay thế cụ thể.
 
 > Một thí nghiệm hóa học không chỉ là “làm theo quy trình rồi ghi con số”. Nó là một **hệ thống suy luận được thiết kế có chủ ý**: thay đổi hoặc quan sát các biến đã định nghĩa, kiểm soát những giải thích thay thế, đo bằng phương pháp có giới hạn đã biết và thu đủ bằng chứng độc lập để phân biệt hiệu ứng hóa học thật với nhiễu, sai lệch hoặc yếu tố gây nhiễu.
 

@@ -1,6 +1,6 @@
 # An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mối nguy, phơi nhiễm và rủi ro** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hệ phân cấp kiểm soát** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**. Route đi từ hazard → exposure route → risk assessment → hierarchy of controls → PPE/emergency response; mục tiêu là giảm xác suất và hậu quả trước khi bắt đầu thao tác.
 
 > **An toàn phòng thí nghiệm (laboratory safety / 실험실 안전)** không phải tập hợp các câu “đừng làm X”. Nó là một dạng **kỹ thuật quản lý rủi ro (risk engineering)**: nhận diện mối nguy, hiểu đường phơi nhiễm, thiết kế lại thao tác để khả năng hỏng thấp hơn và hậu quả nhỏ hơn nếu sự cố vẫn xảy ra. An toàn tốt bắt đầu trước khi mở chai hóa chất.
 

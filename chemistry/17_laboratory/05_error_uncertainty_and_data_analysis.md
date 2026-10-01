@@ -1,6 +1,6 @@
 # Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sai số và độ không đảm bảo không phải cùng một khái niệm** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Đại lượng cần đo và mô hình đo** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**. Route theo measurement model: measurand → random/systematic effects → calibration/replicates → propagation → interval/reporting; mục tiêu là nói rõ claim đáng tin đến đâu, không làm con số trông chính xác hơn.
 
 > Một giá trị đo không kèm **độ không đảm bảo (uncertainty / 측정 불확도)** và bối cảnh phương pháp là một thông tin chưa hoàn chỉnh. Trong khoa học đo lường, mục tiêu không phải tạo ra một con số trông thật chính xác, mà là hiểu con số đó được tạo ra như thế nào, những nguồn biến thiên và độ chệch nào có thể ảnh hưởng nó, và mức độ tin cậy hợp lý của kết luận rút ra từ dữ liệu.
 

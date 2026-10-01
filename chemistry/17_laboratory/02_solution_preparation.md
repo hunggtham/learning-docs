@@ -1,6 +1,6 @@
 # Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ thông số cần đạt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Pha dung dịch mol từ chất rắn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**. Route đi từ concentration definition → purity/stoichiometry → dissolution/transfer → volumetric calibration → mixing và uncertainty, để một kết quả nồng độ có thể truy xuất thay vì chỉ đúng số học.
 
 > Chuẩn bị dung dịch không chỉ là “cân, hòa tan, thêm tới vạch”. Đây là một chuỗi gồm **hóa lượng + độ tinh khiết + chuyển định lượng + hiệu chuẩn thể tích + trộn + độ không đảm bảo**. Nếu một mắt xích sai, nồng độ cuối có thể bị lệch dù phép tính số học hoàn toàn đúng.
 
