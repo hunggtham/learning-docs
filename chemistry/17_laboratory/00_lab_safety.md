@@ -78,7 +78,7 @@ Tuy nhiên nó cũng là một không gian kín, nơi hóa chất không tương
 
 “Khí quyển trơ” không đồng nghĩa “an toàn”; chất tự cháy hoặc chất độc vẫn giữ nguyên mối nguy bên trong.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **PPE phải phù hợp với chất và đường phơi nhiễm** tiếp nhận điểm tựa từ **Hộp găng và khí quyển trơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo vệ mắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A glovebox controls atmosphere but does not remove toxicity or reactivity; PPE must be selected from the actual chemical, contact route, breakthrough time, and task, with eye protection covering splash risk.
 
 ## PPE phải phù hợp với chất và đường phơi nhiễm
 
@@ -88,7 +88,7 @@ Khả năng bảo vệ của găng phụ thuộc chính hóa chất và thời g
 
 Một dung môi có thể thấm qua găng trước khi găng xuất hiện dấu hiệu hỏng bằng mắt, vì vậy phải dựa vào dữ liệu tương thích thay vì suy từ độ dày.
 
-> **Chuyển mạch:** Trong **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **Bảo vệ mắt** tiếp nhận điểm tựa từ **PPE phải phù hợp với chất và đường phơi nhiễm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SDS — nguồn thông tin, không phải thủ tục hình thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** PPE compatibility data determines whether gloves resist permeation; eye protection addresses a different exposure path, so the task next needs substance-specific hazard and first-aid information from the SDS.
 
 ## Bảo vệ mắt
 
@@ -96,7 +96,7 @@ Kính an toàn giúp chống nhiều mảnh văng và hạt. Kính chống bắn
 
 Tấm che mặt thường là lớp bổ sung chứ không thay thế bảo vệ mắt chính.
 
-> **Chuyển mạch:** Ở chặng này của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **Bảo vệ mắt** nêu điều cần giải thích; **SDS — nguồn thông tin, không phải thủ tục hình thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhãn GHS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Safety glasses, splash goggles, and face shields cover different impact and liquid hazards; the SDS supplies the chemical-specific limits that make that PPE choice defensible before GHS labels summarize it at the container.
 
 ## SDS — nguồn thông tin, không phải thủ tục hình thức
 
@@ -104,7 +104,7 @@ Tấm che mặt thường là lớp bổ sung chứ không thay thế bảo vệ
 
 Cần đọc những phần liên quan trực tiếp tới thao tác thực tế trước khi bắt đầu thí nghiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **SDS — nguồn thông tin, không phải thủ tục hình thức** nêu điều cần giải thích; **Nhãn GHS** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tính tương thích hóa chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The SDS links hazard classification to exposure controls, incompatibilities, and response; GHS labels provide the fast visual signal, while compatibility analysis checks whether substances can share a container or workflow.
 
 ## Nhãn GHS
 
