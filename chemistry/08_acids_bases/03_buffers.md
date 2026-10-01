@@ -30,7 +30,7 @@ HA+OH^-\rightarrow A^-+H_2O
 
 Thay vì để toàn bộ `H+` hoặc `OH-` mới thêm tồn tại tự do, hệ chuyển chúng thành dạng acid hoặc cơ sở (base / 기반) yếu hơn. Kết quả là pH chỉ thay đổi theo sự thay đổi tỉ lệ `A-/HA`.
 
-> **Chuyển mạch:** Trong **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Cơ chế hoạt động của dung dịch đệm** xác định đầu vào; **Suy ra phương trình Henderson–Hasselbalch** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ý nghĩa của phương trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cơ chế đệm biến acid hoặc base mạnh thành dạng liên hợp yếu hơn, nên pH phụ thuộc vào tỉ lệ (A^-/HA). **Phương trình Henderson–Hasselbalch** viết chính xác tỉ lệ đó thành công cụ tính; mục kế tiếp diễn giải khi nào phép xấp xỉ này hữu ích.
 
 ## Suy ra phương trình Henderson–Hasselbalch
 
@@ -56,7 +56,7 @@ pH=pK_a+\log\frac{[A^-]}{[HA]}
 
 Dạng dùng nồng độ là xấp xỉ của biểu thức nhiệt động đầy đủ dùng hoạt độ.
 
-> **Chuyển mạch:** Ở chặng này của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Ý nghĩa của phương trình** tiếp nhận điểm tựa từ **Suy ra phương trình Henderson–Hasselbalch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng đệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ (K_a), phương trình Henderson–Hasselbalch liên hệ pH với tỉ lệ base liên hợp/acid; khi tỉ lệ bằng 1 thì pH xấp xỉ (pK_a). **Ý nghĩa của phương trình** xác định cách đọc tỉ lệ và giới hạn trước khi chọn khoảng đệm thực hành.
 
 ## Ý nghĩa của phương trình
 
@@ -76,7 +76,7 @@ Nếu tỉ lệ cơ sở (base / 기반)/acid tăng 10 lần, pH tăng khoảng 
 
 Vì sự phụ thuộc logarithm, dung dịch đệm có thể hấp thụ một lượng acid/cơ sở (base / 기반) đáng kể mà pH chỉ thay đổi vừa phải cho tới khi một thành phần gần cạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Khoảng đệm** tiếp nhận điểm tựa từ **Ý nghĩa của phương trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dung lượng đệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Phương trình cho biết tỉ lệ (A^-/HA) điều khiển pH; **Khoảng đệm** đặt tỉ lệ đó vào vùng khoảng (pK_a\pm1), nơi cả hai dạng còn đủ để phản ứng. Nhưng khoảng pH chưa nói hệ chịu được bao nhiêu acid/base, nên cần chuyển sang **Dung lượng đệm**.
 
 ## Khoảng đệm
 
@@ -96,7 +96,7 @@ và cả hai kho acid/cơ sở (base / 기반) vẫn có lượng đáng kể.
 
 Đây chỉ là hướng dẫn thực hành, không phải ranh giới vật lý cứng.
 
-> **Chuyển mạch:** Trong **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Dung lượng đệm** tiếp nhận điểm tựa từ **Khoảng đệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết kế dung dịch đệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khoảng đệm mô tả vùng pH hoạt động, còn **Dung lượng đệm** phụ thuộc lượng tuyệt đối của cả (HA) và (A^-), không chỉ tỉ lệ. Khi biết tải acid/base cần hấp thụ, **Thiết kế dung dịch đệm** sẽ chọn nồng độ và thể tích phù hợp.
 
 ## Dung lượng đệm
 
