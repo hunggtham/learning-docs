@@ -58,25 +58,25 @@ Iron tools/weapons rẻ và scalable hơn bronze khi môi trường vận hành 
 
 Sau 108 BCE, Han commanderies đặc biệt Lelang trở thành nút (node / 노드) trade, administration và cultural exchange. Không nên mô hình (model / 모델) chúng như simple “foreign khối (block / 블록)” tách khỏi cục bộ (local / 로컬) world. Frontier zone thường có mixed population, bilingual mediation và economic interdependence.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Mốc thời gian không phải đường thẳng từ “bộ lạc” tới “nhà nước”** tiếp nhận điểm tựa từ **Chinese commanderies như giao diện (interface / 인터페이스) zone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế của một xã hội chưa có “thị trường” theo nghĩa hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Chinese commanderies expose frontier interaction rather than a single takeover story; the timeline must therefore compare overlapping regional trajectories before explaining how an early economy coordinated resources.
 
 ## Mốc thời gian không phải đường thẳng từ “bộ lạc” tới “nhà nước”
 
 Có thể neo giai đoạn này bằng ba chuyển động: cộng đồng định cư và đồ gốm từ thiên niên kỷ VIII–I TCN, các xã hội đồ đồng và mộ đá phát triển trong thiên niên kỷ I TCN, rồi Cổ Triều Tiên và các nhà nước khu vực xuất hiện rõ hơn trong nguồn chữ viết. Những mốc này không phải các bậc thang đồng đều: nhiều hình thức tổ chức cùng tồn tại, thay đổi theo vùng, khí hậu, sông ngòi và mạng lưới trao đổi.
 
-> **Chuyển mạch:** Trong **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Kinh tế của một xã hội chưa có “thị trường” theo nghĩa hiện đại** tiếp nhận điểm tựa từ **Mốc thời gian không phải đường thẳng từ “bộ lạc” tới “nhà nước”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Việt Nam cùng thời: Đông Sơn và những trung tâm quyền lực khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A non-linear timeline needs an economic mechanism: tribute, household production, storage, and exchange explain how polities coordinated without assuming a modern market, then Dong Son provides a regional comparison.
 
 ## Kinh tế của một xã hội chưa có “thị trường” theo nghĩa hiện đại
 
 Hạt kê, lúa nước, cá, muối, đồ đồng và đồ sắt đi qua nhiều kênh: trao đổi giữa làng, quà tặng cho thủ lĩnh, chiến lợi phẩm, cống nạp và buôn bán đường dài. Khi một vật thể ngoại nhập xuất hiện trong mộ, ta có thể suy ra có một tuyến kết nối; chưa thể suy ra người chết đã tự mình buôn bán hay toàn xã hội giàu lên. Đời sống thường ngày nằm ở việc trữ hạt, sửa công cụ, chia lao động theo mùa và thương lượng khi thu hoạch thất bát.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Việt Nam cùng thời: Đông Sơn và những trung tâm quyền lực khác nhau** tiếp nhận điểm tựa từ **Kinh tế của một xã hội chưa có “thị trường” theo nghĩa hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đi đâu để nhìn thấy tiền sử bằng chứng cứ vật chất?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Economic coordination is not uniquely Korean; Đông Sơn shows another power center using bronze, waterways, and exchange, so the next step must return to material sites that can test both cases.
 
 ## Việt Nam cùng thời: Đông Sơn và những trung tâm quyền lực khác nhau
 
 Trong khi Cổ Triều Tiên và các nhà nước sớm phát triển ở phía bắc bán đảo, vùng Bắc Bộ Việt Nam nổi bật với văn hóa Đông Sơn, trống đồng, nông nghiệp lúa nước và các mạng lưới ven sông. Cả hai không gian đều kết nối với các tuyến trao đổi rộng hơn, nhưng vật liệu, địa hình và quan hệ với các đế chế lân cận khác nhau. So sánh nên hỏi cách một cộng đồng huy động lao động và bảo vệ lương thực, không nên tìm một “phiên bản Triều Tiên” của Đông Sơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Việt Nam cùng thời: Đông Sơn và những trung tâm quyền lực khác nhau** nêu điều cần giải thích; **Đi đâu để nhìn thấy tiền sử bằng chứng cứ vật chất?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cầu nối sang Tam Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The Đông Sơn comparison supplies a parallel hypothesis; settlement layers, burials, tools, and imported goods provide the evidence trail, which can then be carried forward into the Three Kingdoms transition.
 
 ## Đi đâu để nhìn thấy tiền sử bằng chứng cứ vật chất?
 
