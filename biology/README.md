@@ -102,7 +102,7 @@ flowchart TD
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **2. Cấu trúc thư viện** tiếp nhận điểm tựa từ **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Chuẩn hoàn thiện của một chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Knowledge graph cho biết concept phụ thuộc nhau ra sao; cấu trúc thư mục biến dependency đó thành navigation, rồi chapter standard quy định mỗi node phải giải thích tới mức nào.
 
 ## 2. Cấu trúc thư viện
 
@@ -157,7 +157,7 @@ biology/
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **3. Chuẩn hoàn thiện của một chapter** tiếp nhận điểm tựa từ **2. Cấu trúc thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lộ trình đọc từ số 0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Folder structure chỉ cho biết đi đâu; chapter standard kiểm tra problem, mechanism, evidence và handoff, từ đó lộ trình beginner có thể xếp prerequisite trước ứng dụng.
 
 ## 3. Chuẩn hoàn thiện của một chapter
 
