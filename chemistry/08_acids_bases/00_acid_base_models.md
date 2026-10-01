@@ -22,7 +22,7 @@ Lewis
 
 Mô hình rộng hơn không làm mô hình hẹp hơn trở thành sai; nó chỉ dùng ngôn ngữ tổng quát hơn.
 
-> **Chuyển mạch:** Trong **Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis**, **Mô hình Arrhenius** tiếp nhận điểm tựa từ **Vì sao cần nhiều mô hình acid–cơ sở (base / 기반)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình Brønsted–Lowry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ba mô hình mở rộng phạm vi từ ion trong nước đến chuyển proton rồi cặp electron. **Arrhenius** bắt đầu bằng cách theo dõi hydronium/hydroxide trong dung dịch nước; giới hạn đó dẫn trực tiếp sang **Brønsted–Lowry**, nơi proton mới là đơn vị trao đổi.
 
 ## Mô hình Arrhenius
 
@@ -48,7 +48,7 @@ H_3O^++OH^-\rightarrow2H_2O
 
 Mô hình này rất hiệu quả trong hóa học dung dịch nước nhưng không mô tả tự nhiên những cơ sở (base / 기반) như `NH3` nếu ta chỉ yêu cầu cơ sở (base / 기반) phải tạo `OH-` bằng phân ly trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis**, **Mô hình Brønsted–Lowry** tiếp nhận điểm tựa từ **Mô hình Arrhenius** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một chất có thể vừa là acid vừa là cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Arrhenius mô tả acid/base qua sản phẩm ion trong nước, còn **Brønsted–Lowry** mô tả cùng hiện tượng bằng đường chuyển proton nên bao quát cả (NH_3). Khi proton có thể được cho hoặc nhận tùy đối tác, **Một chất có thể vừa là acid vừa là base** trở thành hệ quả tự nhiên của mô hình.
 
 ## Mô hình Brønsted–Lowry
 
@@ -78,7 +78,7 @@ thì `BH+` là acid liên hợp.
 
 Một acid mạnh thường có cơ sở (base / 기반) liên hợp yếu vì cân bằng đã nghiêng mạnh về phía mất proton.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis**, **Một chất có thể vừa là acid vừa là cơ sở (base / 기반)** tiếp nhận điểm tựa từ **Mô hình Brønsted–Lowry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình Lewis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Brønsted–Lowry cho phép nước nhận proton trong một phản ứng nhưng cho proton trong phản ứng khác; tính lưỡng tính phụ thuộc đối tác chứ không phải nhãn cố định. Để mô tả phản ứng không cần proton, **Mô hình Lewis** chuyển trọng tâm sang cặp electron.
 
 ## Một chất có thể vừa là acid vừa là cơ sở (base / 기반)
 
@@ -102,7 +102,7 @@ Những tiểu phần có khả năng vừa cho vừa nhận proton được g�
 
 Vai trò acid hay cơ sở (base / 기반) phụ thuộc đối tác phản ứng và môi trường, không phải nhãn cố định tuyệt đối.
 
-> **Chuyển mạch:** Trong **Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis**, **Mô hình Lewis** tiếp nhận điểm tựa từ **Một chất có thể vừa là acid vừa là cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hóa học phối trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Tính lưỡng tính cho thấy cùng một chất có thể đổi vai khi đối tác đổi; **Lewis** tổng quát hóa điều này bằng acid nhận cặp electron và base cho cặp electron. Ngôn ngữ đó nối thẳng sang **hóa học phối trí**, nơi ligand cho cặp electron vào obitan trống của kim loại.
 
 ## Mô hình Lewis
 
