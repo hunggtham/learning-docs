@@ -145,7 +145,7 @@ Có nhiều cách làm total pressure tăng.
 
 Partial pressures của reactive gases tăng → Q thường thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Thêm khí trơ ở thể tích không đổi** tiếp nhận điểm tựa từ **Giảm thể tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thêm khí trơ ở áp suất tổng không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Giảm thể tích làm mọi áp suất riêng phần tăng cùng hệ số, nên (Q) đổi theo tổng số mol khí của hai vế. **Thêm khí trơ ở thể tích không đổi** không đổi các áp suất riêng phần của species phản ứng; vì vậy phải kiểm tra (Q), không suy từ áp suất tổng.
 
 ## Thêm khí trơ ở thể tích không đổi
 
@@ -159,7 +159,7 @@ của reactive species không đổi.
 
 Do đó Q không đổi và equilibrium không shift trong mô hình ideal gas.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Thêm khí trơ ở áp suất tổng không đổi** tiếp nhận điểm tựa từ **Thêm khí trơ ở thể tích không đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ở thể tích không đổi, khí trơ chỉ làm áp suất tổng tăng còn (P_i) của chất phản ứng giữ nguyên; ở áp suất tổng không đổi, thể tích phải giãn ra nên các (P_i) cùng giảm. Trường hợp thứ hai có thể làm (Q) đổi nếu số mol khí hai vế khác nhau; **Mô hình tư duy** sẽ gom hai điều kiện này thành một phép kiểm tra thống nhất.
 
 ## Thêm khí trơ ở áp suất tổng không đổi
 
