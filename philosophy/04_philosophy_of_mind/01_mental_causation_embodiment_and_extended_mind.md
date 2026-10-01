@@ -6,7 +6,7 @@
 
 Nếu mọi hành vi đã có vật lý (physical / 물리적) explanation, mental trạng thái (state / 상태) còn gây ra gì? Các hướng trả lời gồm định danh (identity / 식별자) giữa mental và vật lý (physical / 물리적) trạng thái (state / 상태), realization nhiều nền tảng, nhân quả (causal / 인과적) role của biểu diễn (representation / 표현), hoặc loại bỏ vocabulary folk psychology. Vấn đề không phải chọn “mind hoặc brain”, mà là chỉ rõ mức (level / 수준), cơ chế (mechanism / 메커니즘) và tiêu chuẩn nhân quả (causal / 인과적) explanation.
 
-> **Chuyển mạch:** Trong **Mental Causation, Embodiment và Extended Mind**, **Embodied và enactive mind** tiếp nhận điểm tựa từ **Mental causation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Mental causation hỏi trạng thái tâm trí gây ra hành động thế nào; embodiment đưa cơ thể và môi trường vào cơ chế, còn extended mind mở rộng ranh giới của hệ nhận thức.
 
 ## Embodied và enactive mind
 

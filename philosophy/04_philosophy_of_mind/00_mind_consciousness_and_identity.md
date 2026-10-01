@@ -10,7 +10,7 @@
 
 Functional description, neural cơ chế (mechanism / 메커니즘) và first-person phenomenology trả lời các lớp khác nhau. Neural correlate của một experience chưa tự nó là nguyên nhân, còn báo cáo chủ quan không phải dữ liệu “phi khoa học”; nó cần được đo, kiểm tra và đặt cạnh hành vi (behavior / 동작)/neural bằng chứng (evidence / 증거) đúng cách.
 
-> **Chuyển mạch:** Trong **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Các lập trường cần phân biệt** tiếp nhận điểm tựa từ **Ba câu hỏi không đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định danh (identity / 식별자) và continuity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Tách câu hỏi về mind, consciousness và personal identity trước; các lập trường sau đó giải thích continuity bằng thân thể, ký ức, tâm lý hoặc một tiêu chuẩn khác.
 
 ## Các lập trường cần phân biệt
 
