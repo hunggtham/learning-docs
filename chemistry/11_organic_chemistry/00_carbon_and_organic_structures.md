@@ -16,7 +16,7 @@ Ba đặc điểm phối hợp tạo nên sự đa dạng của hóa hữu cơ:
 
 Silicon cũng thuộc nhóm 14 và thường hóa trị bốn, nhưng liên kết Si–Si yếu hơn, độ chồng phủ π giữa các orbital 3p kém hơn, còn liên kết Si–O rất mạnh. Vì vậy hóa học silicon thiên về silicate và mạng mở rộng hơn là tạo sự đa dạng khung carbon giống thế giới sinh học.
 
-> **Chuyển mạch:** Trong **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Khung carbon như một đồ thị** tiếp nhận điểm tựa từ **Vì sao carbon tạo được sự đa dạng đặc biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lai hóa là mô hình hình học, không phải một sự kiện vật lý riêng biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Carbon tạo đa dạng nhờ hóa trị và khả năng nối thành mạng; nhìn khung carbon như graph giúp đọc cấu trúc, còn hybridization là model hình học để giải thích góc liên kết.
 
 ## Khung carbon như một đồ thị
 

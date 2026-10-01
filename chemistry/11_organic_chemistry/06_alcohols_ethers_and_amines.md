@@ -20,7 +20,7 @@ Ancol đơn giản thường có \(pK_a\) khoảng 16–18 trong những so sán
 
 Vì vậy ancol không “trung tính tuyệt đối”. Nó là acid Brønsted yếu và đồng thời có thể hành xử như cơ sở (base / 기반) Brønsted/Lewis yếu.
 
-> **Chuyển mạch:** Trong **Ancol, ete và amin — cặp electron tự do, proton hóa và cơ chế phản ứng**, **Alkoxide — dạng khử proton phản ứng mạnh hơn** tiếp nhận điểm tựa từ **Ancol — một nhóm vừa có tính acid vừa có tính cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao nhóm OH là nhóm rời kém?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Alcohol vừa có thể cho vừa nhận proton; deprotonation tạo alkoxide nucleophile mạnh hơn, còn OH rời kém nên thường phải proton hóa hoặc biến đổi trước khi substitution/elimination.
 
 ## Alkoxide — dạng khử proton phản ứng mạnh hơn
 

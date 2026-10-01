@@ -28,7 +28,7 @@ Do đó mọi phép MS đều bắt đầu bằng ion hóa.
 
 Hệ quả quan trọng là: **phổ quan sát được không chỉ phụ thuộc phân tử ban đầu mà còn phụ thuộc cách ion được tạo**.
 
-> **Chuyển mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Kiến trúc chung của thiết bị** tiếp nhận điểm tựa từ **Vì sao phải tạo ion?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ion hóa — chọn mức phân mảnh phù hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mass spectrometry cần ion hóa trước khi phân tích m/z; kiến trúc nguồn–analyzer–detector quyết định tín hiệu, còn mức fragmentation phải cân bằng độ nhạy với thông tin cấu trúc.
 
 ## Kiến trúc chung của thiết bị
 

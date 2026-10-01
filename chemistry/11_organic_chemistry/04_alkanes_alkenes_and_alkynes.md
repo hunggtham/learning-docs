@@ -27,7 +27,7 @@ nhiệt động lực học → phản ứng có lợi về năng lượng tới
 động học           → phản ứng xảy ra nhanh tới mức nào
 ```
 
-> **Chuyển mạch:** Trong **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**, sau nội dung của **Ankan — không “trơ”, mà thiếu vị trí phản ứng dễ tiếp cận**, **Liên kết C–H không hoàn toàn tương đương** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Halogen hóa theo cơ chế chuỗi gốc tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Alkane ít phản ứng vì liên kết sigma bền, nhưng C–H không tương đương; selectivity của halogenation tiếp theo phụ thuộc độ bền radical và cơ chế chuỗi.
 
 ## Liên kết C–H không hoàn toàn tương đương
 

@@ -14,7 +14,7 @@ Một công thức phân tử chỉ cho biết “có bao nhiêu nguyên tử m�
 
 Điều này cho thấy nhóm chức không phải nhãn gắn thêm sau cùng; nó xuất hiện trực tiếp từ cách kết nối nguyên tử.
 
-> **Chuyển mạch:** Trong **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Đồng phân lập thể — cùng đồ thị, khác cách sắp xếp 3D** tiếp nhận điểm tựa từ **Đồng phân cấu tạo — khi cách kết nối khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu dạng không phải “hình vẽ tùy ý”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Constitutional isomers đổi cách nối; stereoisomers giữ graph nhưng đổi sắp xếp 3D, còn conformation là các trạng thái quay quanh liên kết và phải xét năng lượng.
 
 ## Đồng phân lập thể — cùng đồ thị, khác cách sắp xếp 3D
 
