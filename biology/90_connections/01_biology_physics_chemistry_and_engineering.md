@@ -234,7 +234,7 @@ Dòng máu (blood flow) ở nhiều small vessel laminar, nhưng turbulence có 
 
 Dimensionless number giúp compare hệ thống (system / 시스템) khác quy mô (scale / 규모).
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?** xác định đầu vào; **17. Compliance: vessel không phải pipe cứng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. Căng thẳng (stress), strain và viscoelastic tissue** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Reynolds classifies the flow regime; compliance makes a vessel deformable, and stress/strain/viscoelasticity explain how pressure changes its diameter over time.
 
 ## 17. Compliance: vessel không phải pipe cứng
 
@@ -248,7 +248,7 @@ Artery elasticity giúp smooth pulsatile đầu ra (output / 출력) của heart
 
 Mechanics của material vì vậy trực tiếp thành physiology.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **18. Căng thẳng (stress), strain và viscoelastic tissue** tiếp nhận điểm tựa từ **17. Compliance: vessel không phải pipe cứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Compliance couples pressure to geometry; stress/strain characterize the tissue response, then Laplace-like reasoning links wall tension to alveolar or vessel radius.
 
 ## 18. Căng thẳng (stress), strain và viscoelastic tissue
 
@@ -260,7 +260,7 @@ Cartilage có thể creep dưới tải (load / 로드) lâu; tendon store elast
 
 Mechanical thuộc tính (property / 속성) đi thẳng vào signaling và biểu hiện gen (gene expression) qua mechanotransduction.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel** tiếp nhận điểm tựa từ **18. Căng thẳng (stress), strain và viscoelastic tissue** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Stress and geometry determine wall tension; Laplace-like reasoning feeds that load into feedback control, where homeostasis regulates the changing state.
 
 ## 19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel
 
@@ -274,7 +274,7 @@ Small alveolus sẽ cần pressure cao hơn nếu surface tension giống nhau. 
 
 Một quan hệ (relation / 관계) physics giải thích vì sao một biochemical secretion là essential cho lung hàm (function / 함수).
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)** tiếp nhận điểm tựa từ **19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Phản hồi dương (positive feedback) và ngưỡng (threshold)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Feedback control stabilizes homeostasis; positive feedback instead amplifies a signal, so thresholds and delays can produce switching or oscillation.
 
 ## 20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)
 
