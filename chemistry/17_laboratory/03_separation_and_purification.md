@@ -20,7 +20,7 @@ Một thuốc thử có thể đủ sạch cho tổng hợp thông thường nh�
 
 Cần định nghĩa trước hồ sơ tạp chất chấp nhận được và bằng chứng phân tích nào chứng minh yêu cầu đó.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Lọc** tiếp nhận điểm tựa từ **“Tinh khiết” phụ thuộc mục đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lọc trọng lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The purity target defines which impurities matter; filtration exploits a solid–fluid size or phase contrast, and gravity filtration is the low-shear baseline when throughput matters more than speed.
 
 ## Lọc
 
@@ -30,7 +30,7 @@ Cơ chế có thể gồm sàng kích thước, hình thành bánh lọc, giữ 
 
 Cách chọn phụ thuộc mục tiêu là thu chất rắn hay làm trong phần chất lỏng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Lọc trọng lực** tiếp nhận điểm tựa từ **Lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lọc chân không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Filtration can target clarified liquid or recovered solid; gravity uses hydrostatic pressure and preserves a hot solution, while vacuum filtration trades cooling and solvent loss for faster collection.
 
 ## Lọc trọng lực
 
@@ -38,7 +38,7 @@ Lọc trọng lực phù hợp khi cần loại tạp rắn khỏi dung dịch n
 
 Giấy lọc xếp nếp tăng diện tích hiệu dụng và tốc độ chảy.
 
-> **Chuyển mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Lọc chân không** tiếp nhận điểm tựa từ **Lọc trọng lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kích thước lỗ lọc và bánh lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Vacuum adds a pressure gradient and accelerates crystal collection; the resulting retention depends on nominal pore size, particle loading, and the cake that forms during filtration.
 
 ## Lọc chân không
 
@@ -48,7 +48,7 @@ Cách này thường phù hợp để thu tinh thể sản phẩm.
 
 Bánh tinh thể có thể được rửa bằng lượng nhỏ dung môi lạnh để loại tạp tan, đồng thời hạn chế hòa tan lại sản phẩm.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Kích thước lỗ lọc và bánh lọc** tiếp nhận điểm tựa từ **Lọc chân không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ly tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Pore size and cake permeability set filtration throughput and retention; when solids are too fine or the cake compacts, centrifugation supplies a different force field for phase separation.
 
 ## Kích thước lỗ lọc và bánh lọc
 
