@@ -138,7 +138,7 @@ Trong đo lường chính xác hơn còn có thể hiệu chỉnh lực nổi c�
 
 Cách này biến phép đo khối lượng bằng cân thành phép kiểm tra thể tích.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Burette** tiếp nhận điểm tựa từ **Kiểm tra pipette bằng phương pháp trọng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ không đảm bảo khi đọc burette** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Gravimetric testing checks one delivered aliquot; a burette instead measures a variable dose as the difference between initial and final readings, so both readings contribute uncertainty.
 
 ## Burette
 
@@ -154,7 +154,7 @@ Trước chuẩn độ, burette thường được điều hòa bằng chính du
 
 Bọt khí ở đầu burette cần được loại trước khi bắt đầu vì nó làm thể tích đọc và thể tích thực cấp ra không còn tương ứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Độ không đảm bảo khi đọc burette** tiếp nhận điểm tựa từ **Burette** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phễu chiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Burette accuracy is a difference of two meniscus readings; uncertainty propagation makes that explicit before the workflow changes from dosing to separating immiscible phases.
 
 ## Độ không đảm bảo khi đọc burette
 
@@ -168,7 +168,7 @@ u_V\approx\sqrt{u_i^2+u_f^2}
 
 Do đó độ không đảm bảo của lượng đã cấp không đơn giản chỉ bằng một vạch chia nhỏ nhất.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Phễu chiết** tiếp nhận điểm tựa từ **Độ không đảm bảo khi đọc burette** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sinh hàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Burette uncertainty concerns a single liquid scale; a separatory funnel changes the problem to phase identity, pressure release, and density before draining either layer.
 
 ## Phễu chiết
 
@@ -178,7 +178,7 @@ Các thao tác vật lý chính là trộn hai pha, giải áp khi cần, chờ 
 
 Không nên mặc định “pha hữu cơ luôn nằm trên”. Vị trí lớp phụ thuộc khối lượng riêng và cần được kiểm tra nếu không chắc chắn.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Sinh hàn** tiếp nhận điểm tựa từ **Phễu chiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áo gia nhiệt và bếp gia nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Liquid–liquid extraction separates by partition and density; a condenser instead manages vapor–liquid phase change, so cooling flow and heat-transfer area become the control variables.
 
 ## Sinh hàn
 
