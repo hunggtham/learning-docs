@@ -10,7 +10,7 @@ Ethernet frame có nguồn (source / 소스)/destination MAC addresses và Ether
 
 MAC address không phải toàn cục (global / 전역) routing định danh (identity / 식별자) Internet. Router tách Layer-2 domains; mỗi hop có thể dùng frame headers khác trong khi IP nguồn (source / 소스)/destination thường end-to-end hơn (trừ NAT/tunnels).
 
-> **Chuyển mạch:** Trong **Ethernet, IP, subnetting và routing**, **ARP và Neighbor Discovery** tiếp nhận điểm tựa từ **Ethernet và cục bộ (local / 로컬) link** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IP prefix và subnet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ethernet cung cấp local link; ARP/Neighbor Discovery ánh xạ địa chỉ mạng sang link-layer, rồi IP prefix/subnet quyết định host nào cùng mạng và gói tin cần route.
 
 ## ARP và Neighbor Discovery
 

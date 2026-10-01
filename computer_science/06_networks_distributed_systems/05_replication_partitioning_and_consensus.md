@@ -12,7 +12,7 @@ Primary-replica mô hình (model / 모델) routes writes through leader, ships l
 
 Multi-leader accepts writes in multiple regions, improving locality/offline thao tác (operation / 연산) but creates conflicts. Leaderless/quorum designs use versions/vector-like siêu dữ liệu (metadata / 메타데이터)/read-repair/anti-entropy depending cơ sở dữ liệu (database / 데이터베이스).
 
-> **Chuyển mạch:** Trong **Replication, partitioning và consensus**, **Quorum intuition** tiếp nhận điểm tựa từ **Replication goals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partitioning/sharding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Replication đặt mục tiêu availability và durability; quorum tạo điều kiện giao nhau cho read/write, còn partitioning/sharding phân bố dữ liệu và thay đổi phạm vi consensus.
 
 ## Quorum intuition
 

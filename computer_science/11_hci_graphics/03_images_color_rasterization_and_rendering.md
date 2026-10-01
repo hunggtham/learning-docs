@@ -10,7 +10,7 @@ Một digital ảnh (image / 이미지) không phải “màu thật được l�
 
 Resolution tăng mẫu (sample / 표본) density nhưng không tự tạo detail nếu nguồn (source / 소스)/optics không có thông tin (information / 정보).
 
-> **Chuyển mạch:** Trong **Images, color, rasterization và rendering**, **Sampling và aliasing** tiếp nhận điểm tựa từ **Điểm ảnh (pixel / 픽셀) là mẫu (sample / 표본), không phải ô vuông vật lý tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RGB và additive color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Pixel là sample của trường ảnh, nên sampling rate quyết định aliasing; RGB/additive color sau đó mô tả cách các kênh ánh sáng được trộn trước rasterization.
 
 ## Sampling và aliasing
 

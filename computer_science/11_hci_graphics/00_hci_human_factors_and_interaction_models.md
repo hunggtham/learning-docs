@@ -10,7 +10,7 @@ Trong interactive software, đầu ra (output / 출력) không kết thúc compu
 
 Vì vậy usability bug có thể trở thành tính đúng đắn (correctness / 정확성)/an toàn (safety / 안전) bug. Nếu banking UI làm người dùng (user / 사용자) nhầm beneficiary hoặc medical UI che warning quan trọng, bài toán (problem / 문제) không còn là “mỹ thuật”.
 
-> **Chuyển mạch:** Trong **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Người dùng (user / 사용자) là một phần của hệ thống (system / 시스템)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Affordance và signifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** User là một phần của system, nên mental model quyết định họ dự đoán gì; affordance và signifier nối dự đoán đó với hành động có thể nhận ra trên interface.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
