@@ -10,7 +10,7 @@ Chọn default công khai (public / 공개)/private, dữ liệu (data / 데이�
 
 Một thiết kế (design / 설계) có thể technically neutral-looking nhưng embed incentives/các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Technical decisions embed value assumptions; privacy rộng hơn secrecy vì liên quan quyền kiểm soát và context, nên data minimization là nguyên tắc thiết kế tiếp theo.
+> **Chuyển mạch:** Quyết định kỹ thuật luôn cài giả định về giá trị; privacy rộng hơn secrecy vì liên quan quyền kiểm soát, ngữ cảnh và khả năng kết hợp dữ liệu. Vì vậy **data minimization** là nguyên tắc thiết kế kế tiếp: giảm dữ liệu trước khi phải bảo vệ nó.
 
 ## Privacy không chỉ là secrecy
 
@@ -18,7 +18,7 @@ Privacy liên quan điều khiển (control / 제어)/ngữ cảnh (context / �
 
 Thông tin (information / 정보) có thể không secret nhưng aggregation/re-identification tạo harm mới.
 
-> **Chuyển mạch:** Privacy governs control, context, access, and downstream combination—not secrecy alone; data minimization reduces collection before consent explains when a person may authorize a defined use.
+> **Chuyển mạch:** Privacy bao gồm quyền kiểm soát, ngữ cảnh, truy cập và việc kết hợp dữ liệu về sau, không chỉ bí mật. **Data minimization** thu hẹp dữ liệu được giữ; sau đó **consent** mới xác định khi nào một người cho phép một mục đích cụ thể.
 
 ## Dữ liệu (data / 데이터) minimization
 
@@ -26,7 +26,7 @@ Thu thập ít dữ liệu (data / 데이터) cần thiết giảm breach impact
 
 Minimization cũng là bảo mật (security / 보안) principle: dữ liệu (data / 데이터) không tồn tại thì không thể leak từ hệ thống (system / 시스템) đó.
 
-> **Chuyển mạch:** Minimization narrows what the system holds and therefore the breach surface; consent then specifies the person’s authorization, while purpose limitation constrains reuse beyond that context.
+> **Chuyển mạch:** Minimization làm nhỏ bề mặt rò rỉ vì hệ thống giữ ít dữ liệu hơn; **consent** xác định phạm vi ủy quyền, còn **purpose limitation** ngăn việc tái sử dụng vượt khỏi ngữ cảnh đã thông báo.
 
 ## Consent
 
@@ -34,7 +34,7 @@ Consent có ý nghĩa khi informed, specific và reasonably voluntary. Dark patt
 
 Kỹ thuật (engineering / 엔지니어링) cần làm preference enforceable trong actual dữ liệu (data / 데이터) flows, không chỉ checkbox UI.
 
-> **Chuyển mạch:** Consent is meaningful only for a clear, bounded purpose; purpose limitation turns that boundary into a design and governance rule, making professional responsibility visible when teams must handle exceptions.
+> **Chuyển mạch:** Consent chỉ có ý nghĩa khi mục đích rõ và có giới hạn; **purpose limitation** biến giới hạn đó thành quy tắc thiết kế và quản trị. Khi phát sinh ngoại lệ hoặc khả năng tái sử dụng, trách nhiệm nghề nghiệp trở nên cụ thể.
 
 ## Purpose limitation
 
