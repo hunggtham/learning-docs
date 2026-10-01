@@ -1,6 +1,6 @@
 # Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chất xúc tác thực sự làm gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chu trình xúc tác — chất xúc tác là một mạng phản ứng nhỏ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**. Route đi từ alternate pathway/lower barrier → catalytic cycle/intermediate → homogeneous/heterogeneous surface effects → selectivity và deactivation, luôn tách rate acceleration khỏi equilibrium shift.
 
 > **Chất xúc tác (catalyst / 촉매)** làm tăng tốc độ phản ứng bằng cách cung cấp cơ chế hoặc con đường có hàng rào hoạt hóa hiệu dụng thấp hơn, đồng thời được tái sinh trong chu trình xúc tác tổng. Chất xúc tác không làm thay đổi \(\Delta G^\circ\) hay hằng số cân bằng của phản ứng ròng.
 

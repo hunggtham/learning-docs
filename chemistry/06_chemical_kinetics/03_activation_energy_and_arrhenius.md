@@ -1,6 +1,6 @@
 # Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ví dụ định tính** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?**. Route đi từ temperature sensitivity → Arrhenius plot/(E_a) → energy landscape và transition state → giới hạn khi cơ chế đổi hoặc nhiều bước cùng chi phối.
 
 > **Năng lượng hoạt hóa (activation energy, \(E_a\) / 활성화 에너지)** là tham số mô tả mức độ nhạy của hằng số tốc độ với nhiệt độ trong khuôn khổ Arrhenius. Nó liên quan tới hàng rào mà hệ phải vượt qua trên con đường từ chất phản ứng tới sản phẩm, nhưng không nên đồng nhất máy móc với “năng lượng phản ứng” hay một độ cao hình học duy nhất trong mọi cơ chế.
 

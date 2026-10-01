@@ -1,6 +1,6 @@
 # Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Molecularity khác reaction thứ tự (order / 순서)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô**. Route đi từ elementary steps/molecularity → intermediates và transition states → rate-determining step → mechanism consistency với rate law, để không suy cơ chế chỉ từ stoichiometric equation.
 
 > **Cơ chế phản ứng (reaction mechanism / 반응 메커니즘)** là mô hình mô tả chuỗi các bước vi mô biến chất phản ứng thành sản phẩm. Phương trình hóa học tổng chỉ là hạch toán đầu vào–đầu ra; cơ chế cố gắng giải thích **liên kết nào thay đổi trước, chất trung gian nào xuất hiện, trạng thái chuyển tiếp nào phải vượt qua và bước nào kiểm soát tốc độ trong từng điều kiện**.
 

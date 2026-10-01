@@ -1,6 +1,6 @@
 # Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dạng tổng quát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**. Route đi từ concentration–time data → reaction order → integrated rate laws/half-life → temperature dependence, rồi quay lại kiểm tra cơ chế; hệ số trong phương trình tổng không tự quyết định bậc phản ứng.
 
 > **Phương trình tốc độ (rate law / 속도식)** mô tả tốc độ phản ứng phụ thuộc vào trạng thái hiện tại của hệ như thế nào. Nó là cầu nối giữa dữ liệu nồng độ–thời gian và cơ chế vi mô. Các số mũ trong phương trình tốc độ nói chung phải được xác định từ thực nghiệm hoặc suy ra từ một cơ chế đã được kiểm chứng; không thể đọc trực tiếp từ phương trình phản ứng tổng.
 

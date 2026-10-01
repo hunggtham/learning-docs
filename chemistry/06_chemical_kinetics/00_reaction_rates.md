@@ -1,6 +1,6 @@
 # Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tốc độ là mức thay đổi theo thời gian** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tốc độ trung bình và tốc độ tức thời** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian**. Route đi từ measurand/time interval → average và instantaneous rate → stoichiometric rate conversion → concentration/temperature/surface effects, để phân biệt “nhanh/chậm” với cơ chế tạo ra tốc độ.
 
 > **Động học hóa học (chemical kinetics / 화학 반응 속도론)** nghiên cứu phản ứng xảy ra nhanh đến mức nào, tốc độ phụ thuộc điều kiện ra sao và những bước vi mô nào tạo nên tốc độ quan sát được. Nhiệt động lực học cho biết một biến đổi có thuận lợi hay không; động học cho biết hệ có thể đi tới trạng thái đó trong microsecond, vài giờ hay hàng triệu năm.
 
