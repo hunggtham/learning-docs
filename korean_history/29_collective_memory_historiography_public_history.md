@@ -6,25 +6,25 @@
 
 **Past** là những gì đã xảy ra. **lịch sử (history / 이력)** là attempt reconstruct/explain past từ bằng chứng (evidence / 증거). **Collective bộ nhớ (memory / 메모리)** là cách group nhớ và gán meaning cho selected past. Ba thứ overlap nhưng mục tiêu khác nhau.
 
-> **Chuyển mạch:** Past, history và memory không cùng một object; Joseon annals cho thấy archive practice, còn colonial historiography cho thấy power có thể tái cấu trúc narrative.
+> **Chuyển mạch:** Past là những gì đã xảy ra, history là nỗ lực tái dựng bằng chứng, còn memory là cách cộng đồng chọn và gán nghĩa cho quá khứ. **Joseon annals** cho thấy một thực hành lưu trữ của nhà nước; **colonial historiography** cho thấy quyền lực có thể tái cấu trúc narrative ấy.
 
 ## Joseon annals và archive culture
 
 Joseon Wangjo Sillok là một corpus lớn vì court có institution chuyên ghi chép. Nhưng archive density không có nghĩa mọi voice được represent equal. Farmer, women, enslaved/nobi people thường xuất hiện qua perspective của official records hơn là own văn bản (text / 텍스트).
 
-> **Chuyển mạch:** Joseon archive culture records a state practice; colonial historiography reinterprets that archive under power, while nationalist historiography builds a competing narrative.
+> **Chuyển mạch:** Archive Joseon ghi lại cách nhà nước tạo hồ sơ nhưng không đại diện đều cho mọi tầng lớp; **colonial historiography** đọc lại hồ sơ dưới quyền lực đế quốc. Vì vậy **nationalist historiography** xuất hiện như một narrative cạnh tranh, không phải bản sao trung tính của archive.
 
 ## Colonial historiography
 
 Japanese colonial scholarship phát triển archaeology, survey và historical research nhưng cũng có interpretations phục vụ imperial quy tắc (rule / 규칙). Post-liberation Korean historiography phản ứng mạnh với colonial narratives. Cần vừa recognize dữ liệu (data / 데이터)/scholarship methods vừa critically assess power and framing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Collective bộ nhớ (memory / 메모리), Historiography và công khai (public / 공개) lịch sử (history / 이력)**, **Nationalist historiography** tiếp nhận điểm tựa từ **Colonial historiography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) xung đột (conflict / 충돌) trong contemporary Korea** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Colonial historiography có thể áp đặt khung đế quốc, còn **nationalist historiography** phục hồi agency nhưng dễ biến lịch sử thành đường thẳng hướng tới nation hiện đại. Các ký ức xung đột ở Korea cho thấy cả hai narrative đều cần được kiểm tra bằng nguồn và tiếng nói bị loại khỏi hồ sơ.
 
 ## Nationalist historiography
 
 National narrative giúp bản dựng (build / 빌드) collective định danh (identity / 식별자), nhưng có rủi ro (risk / 위험) teleology: đọc every ancient polity như step tất yếu hướng tới hiện đại (modern / 현대적) nation. Multiethnic frontier, di chuyển (migration / 마이그레이션) và transnational mạng (network / 네트워크) dễ bị flatten.
 
-> **Chuyển mạch:** Trong **Collective bộ nhớ (memory / 메모리), Historiography và công khai (public / 공개) lịch sử (history / 이력)**, **Bộ nhớ (memory / 메모리) xung đột (conflict / 충돌) trong contemporary Korea** tiếp nhận điểm tựa từ **Nationalist historiography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Film/drama và công khai (public / 공개) lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Narrative dân tộc định hình legitimacy, nhưng ký ức về thuộc địa, Jeju 4·3, chiến tranh, Gwangju và phát triển độc đoán vẫn xung đột trong hiện tại. **Film/drama và public history** tiếp theo cho thấy các xung đột ấy được chọn cảnh, giản lược và phổ biến ra công chúng ra sao.
 
 ## Bộ nhớ (memory / 메모리) xung đột (conflict / 충돌) trong contemporary Korea
 
