@@ -40,7 +40,7 @@ m=1.461\,g
 
 Kết quả này giả định NaCl tinh khiết, khô và thể tích cuối được thiết lập đúng bằng dụng cụ định mức.
 
-> **Chuyển mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Hiệu chỉnh độ tinh khiết** tiếp nhận điểm tựa từ **Pha dung dịch mol từ chất rắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn hút ẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The stoichiometric mass assumes pure, dry reagent; purity correction converts the target amount into a weighing instruction, then hygroscopic behavior determines whether that instruction remains valid in air.
 
 ## Hiệu chỉnh độ tinh khiết
 
@@ -54,7 +54,7 @@ Chứng chỉ phân tích có thể cho giá trị assay thật, hàm lượng n
 
 Với dung dịch chuẩn chính xác cao, giá trị danh nghĩa trên nhãn chai không phải lúc nào cũng đủ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Chất rắn hút ẩm** tiếp nhận điểm tựa từ **Hiệu chỉnh độ tinh khiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn sơ cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Purity correction uses an assay value; hygroscopic solids add water and CO2 that make apparent mass drift, so a primary standard is needed when direct weighing cannot anchor the amount.
 
 ## Chất rắn hút ẩm
 
@@ -64,7 +64,7 @@ Khối lượng cân khi đó không còn đại diện đáng tin cậy cho lư
 
 Thay vì xem dung dịch pha trực tiếp là chuẩn chính xác, thường người ta pha gần đúng rồi **chuẩn hóa (standardize)** bằng một chuẩn sơ cấp phù hợp.
 
-> **Chuyển mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Chuẩn sơ cấp** tiếp nhận điểm tựa từ **Chất rắn hút ẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hòa tan trước khi đưa tới thể tích cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A primary standard supplies a stable stoichiometric reference; once its amount is trusted, dissolving completely before filling to final volume prevents undissolved material from invalidating the concentration.
 
 ## Chuẩn sơ cấp
 
@@ -72,7 +72,7 @@ Một **chuẩn sơ cấp (primary standard)** tốt thường có độ tinh kh
 
 Chuẩn sơ cấp biến phép đo khối lượng thành tham chiếu đáng tin cậy cho lượng chất.
 
-> **Chuyển mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Hòa tan trước khi đưa tới thể tích cuối** tiếp nhận điểm tựa từ **Chuẩn sơ cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển định lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The primary standard anchors moles; dissolving in a partial volume separates solute dissolution from final volume setting, after which quantitative transfer protects mass balance.
 
 ## Hòa tan trước khi đưa tới thể tích cuối
 
