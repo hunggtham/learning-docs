@@ -1,6 +1,6 @@
 # Phổ khối — đo tỉ số khối lượng trên điện tích của ion
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao phải tạo ion?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến trúc chung của thiết bị** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**. Route đi từ ion hóa → gia tốc và phân tích (m/z) → detector/abundance → đồng vị, ion phân mảnh và công thức → định lượng có chuẩn, để phân biệt khối lượng phân tử suy ra với tín hiệu phụ thuộc nguồn ion.
 
 > **Phổ khối (mass spectrometry, MS / 질량분석법)** chuyển nguyên tử hoặc phân tử thành ion trong pha khí, tách hoặc đo các ion theo **tỉ số khối lượng trên điện tích \(m/z\)** rồi phát hiện chúng. Phổ thu được có thể cung cấp khối lượng phân tử, mẫu đồng vị, công thức nguyên tố, mảnh cấu trúc và lượng tương đối.
 

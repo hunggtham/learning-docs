@@ -1,6 +1,6 @@
 # Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba cửa sổ đo của điện phân tích** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Một điện cực không có “điện thế tuyệt đối” đo trực tiếp** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**. Route đi từ thế điện cực và hoạt độ → dòng, truyền khối và động học → tế bào đo/điện cực tham chiếu → đường chuẩn và nền mẫu → nồng độ, để chọn tín hiệu phù hợp với cơ chế chi phối.
 
 > **Hóa điện phân tích (electroanalytical chemistry / 전기분석화학)** sử dụng các hiện tượng điện hóa để nhận biết hoặc định lượng chất trong mẫu. Điện thế phản ánh trạng thái nhiệt động gần cân bằng, dòng phản ánh tốc độ truyền điện tích và vận chuyển chất, còn điện lượng phản ánh tổng số electron đã trao đổi. Muốn từ ba tín hiệu này suy ra nồng độ đáng tin cậy, phải kiểm soát thêm điện cực, ma trận mẫu, hiệu chuẩn, phản ứng phụ và độ không đảm bảo.
 

@@ -1,6 +1,6 @@
 # Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Năng lượng photon và vì sao bước sóng quan trọng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hấp thụ, phát xạ và tán xạ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**. Route đi từ photon và mức năng lượng → hấp thụ/phát xạ/tán xạ → detector và phổ đo được → baseline, độ phân giải, hiệu chuẩn → nhận diện hoặc định lượng, để luôn tách tín hiệu vật lý khỏi xử lý dữ liệu.
 
 > **Phổ học (spectroscopy / 분광학)** khai thác thông tin hóa học từ cách vật chất hấp thụ, phát xạ hoặc tán xạ bức xạ điện từ. Ý tưởng thống nhất là: nguyên tử và phân tử có các trạng thái năng lượng lượng tử hóa, còn bức xạ dùng để thăm dò chênh lệch năng lượng giữa các trạng thái đó.
 

@@ -1,6 +1,6 @@
 # Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đại lượng cần đo** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Quần thể và mẫu** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**. Route đi từ claim/đại lượng cần đo → quần thể và mẫu đại diện → xử lý mẫu → tín hiệu thiết bị/hiệu chuẩn → kết quả kèm độ không đảm bảo, để biết mỗi con số đang đại diện cho đối tượng nào và giới hạn ở đâu.
 
 > **Hóa phân tích (analytical chemistry / 분석화학)** không chỉ trả lời “trong mẫu có gì?” và “có bao nhiêu?”. Nhiệm vụ sâu hơn là xây dựng một chuỗi suy luận có thể kiểm tra được từ vật thể thật ngoài thế giới → mẫu đại diện → mẫu phòng thí nghiệm → tín hiệu thiết bị → mô hình hiệu chuẩn → kết quả cùng độ không đảm bảo.
 

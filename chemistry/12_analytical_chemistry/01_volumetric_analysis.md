@@ -1,6 +1,6 @@
 # Phân tích thể tích — chuẩn độ như một phép đo định lượng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chất chuẩn sơ cấp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dung dịch chuẩn thứ cấp** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**. Route đi từ phản ứng và điểm tương đương → chất chuẩn sơ cấp/chuẩn hóa → buret và thể tích thực → chỉ thị hoặc tín hiệu endpoint → hóa lượng và độ không đảm bảo, để phân biệt endpoint quan sát với equivalence point của mô hình.
 
 > **Phân tích thể tích (volumetric analysis / 용량 분석)** xác định lượng chất phân tích từ thể tích của một thuốc thử có nồng độ đã biết và tỉ lượng phản ứng xác định. Điều cốt lõi không phải “nhỏ thuốc thử tới khi đổi màu”, mà là biến một thể tích đo được thành số mol thông qua chuẩn hóa, rồi dùng hóa lượng và cân bằng để suy lượng chất cần tìm.
 

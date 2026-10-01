@@ -1,6 +1,6 @@
 # Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thử nghiệm nhiễu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ lặp lại** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**. Route đi từ mục đích sử dụng → selectivity/linearity/range → accuracy, precision, recovery và detection limit → robustness/uncertainty → mô hình đa biến và quyết định báo cáo, để chứng minh phương pháp phù hợp thay vì chỉ đạt một con số đẹp.
 
 > **Thẩm định phương pháp (method validation / 분석법 검증)** trả lời câu hỏi: một phương pháp đo có thực sự phù hợp với mục đích sử dụng đã định hay không? **Chemometrics (hóa lượng học / 화학계량학)** sử dụng thống kê, đại số tuyến tính và mô hình tính toán để trích xuất thông tin hóa học từ dữ liệu nhiều chiều. Hai lĩnh vực gặp nhau ở một điểm chung: không chỉ tạo ra con số, mà phải chứng minh con số đó có ý nghĩa trong điều kiện thực tế.
 

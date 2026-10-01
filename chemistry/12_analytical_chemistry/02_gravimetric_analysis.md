@@ -1,6 +1,6 @@
 # Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hấp phụ bề mặt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bao giữ (occlusion)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**. Route đi từ chất phân tích trong mẫu → tạo pha có thành phần xác định → kết tủa, tiêu hóa và lọc/rửa → sấy hoặc nung → cân, kiểm tra độ tinh khiết và chuyển đổi hóa lượng, để sai số thao tác không bị nhầm với sai số cân.
 
 > **Phân tích khối lượng (gravimetric analysis / 중량 분석)** xác định lượng chất phân tích bằng cách chuyển nó thành một dạng có thành phần hóa học xác định rồi cân chính xác. Sức mạnh của phương pháp nằm ở chỗ khối lượng có thể được đo rất tốt và phép tính thường dựa trực tiếp vào hóa lượng, không cần một đường hiệu chuẩn tín hiệu phức tạp.
 

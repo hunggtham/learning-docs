@@ -1,6 +1,6 @@
 # Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ một lần phân bố tới một đỉnh sắc ký** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cân bằng phân bố** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**. Route đi từ cân bằng phân bố giữa pha động/tĩnh → hệ số lưu giữ và tốc độ di chuyển → độ chọn lọc, độ phân giải và hình dạng peak → định lượng/nhận diện, để nối cơ chế tách với giới hạn cột và detector.
 
 > **Sắc ký (chromatography / 크로마토그래피)** tách các thành phần của hỗn hợp vì mỗi chất phân tích dành một phần thời gian khác nhau trong **pha động (mobile phase)** và **pha tĩnh (stationary phase)**. Một khác biệt rất nhỏ về mức ưu tiên giữa hai pha, khi được lặp lại hàng nghìn lần dọc cột, có thể tạo chênh lệch thời gian lưu đủ lớn để đo và định lượng.
 
