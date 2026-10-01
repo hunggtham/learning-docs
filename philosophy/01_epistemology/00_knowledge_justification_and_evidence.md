@@ -8,7 +8,7 @@ Một người có thể **tin** một mệnh đề, mệnh đề có thể **đ
 
 Justification không phải một nhãn tuyệt đối. Nó phụ thuộc vào loại claim, chất lượng nguồn, chuỗi (chain / 사슬) of lập luận (reasoning / 추론), mức bất định (uncertainty / 불확실성) và khả năng phản bác. bằng chứng (evidence / 증거) tốt làm tăng hoặc giảm mức tin hợp lý; bằng chứng (evidence / 증거) hiếm khi biến một claim thực nghiệm thành certainty tuyệt đối.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Ba thành phần cần tách** nêu điều cần giải thích; **Claim–bằng chứng (evidence / 증거) matching** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Fallibilism và intellectual humility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Tách knowledge, justification và evidence để biết đang đánh giá điều gì; claim–evidence matching kiểm tra độ phù hợp, rồi fallibilism giữ chỗ cho sai số và cập nhật niềm tin.
 
 ## Claim–bằng chứng (evidence / 증거) matching
 

@@ -8,7 +8,7 @@ Alignment có ít nhất ba lớp: hệ thống làm đúng mục tiêu (objecti
 
 Một mô hình (model / 모델) dự đoán tốt chưa chắc là tác nhân (agent / 에이전트) có belief, intention hay responsibility. Khi hệ thống được trao quyền hành động, câu hỏi chuyển sang delegation, oversight, corrigibility, phạm vi (scope / 범위) of authority và liability. “AI tự quyết định” có thể che đi quyết định của người deploy, chính sách (policy / 정책), dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) và incentive.
 
-> **Chuyển mạch:** Trong **AI Alignment và Moral Agency**, **Alignment như bài toán xã hội-kỹ thuật** tiếp nhận điểm tựa từ **Agency và accountability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Agency và accountability đặt câu hỏi ai chịu trách nhiệm; alignment mở rộng câu hỏi đó thành bài toán xã hội-kỹ thuật về mục tiêu, kiểm tra và quyền can thiệp của con người.
 
 ## Alignment như bài toán xã hội-kỹ thuật
 

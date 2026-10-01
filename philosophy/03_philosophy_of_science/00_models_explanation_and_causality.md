@@ -6,7 +6,7 @@
 
 Mô hình (model / 모델) chọn biến, quan hệ và quy mô (scale / 규모) để trả lời một question. Một mô hình (model / 모델) có thể hữu ích dù không “giống thật” ở mọi chi tiết; tiêu chuẩn quan trọng là lĩnh vực (domain / 도메인) of validity, predictive/explanatory use, robustness và dạng thất bại (failure mode / 실패 모드). giả định (assumption / 가정) bị bỏ qua không biến mất — nó quay lại dưới dạng limitation.
 
-> **Chuyển mạch:** Trong **Các mô hình (models / 모델들), Explanation và Causality**, **Explanation có nhiều dạng** tiếp nhận điểm tựa từ **Mô hình (model / 모델) không phải bản sao của reality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Correlation, intervention và causality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Model chọn lọc reality để giải thích một hiện tượng; correlation chỉ mô tả cùng biến thiên, còn intervention mới kiểm tra một quan hệ nhân quả trong điều kiện đã nêu.
 
 ## Explanation có nhiều dạng
 

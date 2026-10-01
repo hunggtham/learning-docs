@@ -13,7 +13,7 @@ Metaphysics hỏi cái gì tồn tại, tồn tại theo cách nào và một v�
 
 Một người thay đổi tế bào, ký ức và vai trò xã hội nhưng vẫn được xem là cùng một person. Câu hỏi định danh (identity / 식별자) vì vậy nối tự nhiên sang continuity của body, bộ nhớ (memory / 메모리), agency và xã hội (social / 사회적) recognition — không nên trả lời chỉ bằng một tiêu chí duy nhất.
 
-> **Chuyển mạch:** Trong **Reality, định danh (identity / 식별자) và thay đổi (change / 변경)**, **Cầu nối** tiếp nhận điểm tựa từ **Một số phân biệt nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định danh (identity / 식별자) qua các trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Phân biệt reality, identity và change trước khi xét case; câu hỏi tiếp theo là một vật vẫn là “cùng một” vật nhờ cấu trúc, lịch sử hay chức năng nào.
 
 ## Cầu nối
 
