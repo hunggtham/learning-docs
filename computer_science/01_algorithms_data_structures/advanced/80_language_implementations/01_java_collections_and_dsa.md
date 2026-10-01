@@ -20,7 +20,7 @@ Deque<Task> q = new ArrayDeque<>();
 
 Mã ở cấp API nên phụ thuộc giao diện (interface / 인터페이스) khi hợp lý, nhưng mã nhạy về hiệu năng vẫn phải biết concrete kiểu (type / 타입) bên dưới.
 
-> **Chuyển mạch:** Trong **Java Collections nhìn dưới góc DSA**, **ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)** tiếp nhận điểm tựa từ **Giao diện (interface / 인터페이스) trước cách triển khai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LinkedList không tự động nhanh hơn khi chèn/xóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Interface chọn contract trước implementation; ArrayList thường thắng nhờ contiguous locality, còn LinkedList chỉ có lợi trong workload cụ thể chứ không tự động nhanh hơn khi chèn/xóa.
 
 ## ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)
 

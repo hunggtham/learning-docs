@@ -32,7 +32,7 @@ Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2
 
 Biểu thức trên minh họa việc hai số nguyên toán học khác nhau có thể không còn được phân biệt chính xác bằng `Number`.
 
-> **Chuyển mạch:** Trong **Các mẫu DSA và môi trường chạy JavaScript**, **BigInt** tiếp nhận điểm tựa từ **Number và độ chính xác số nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Infinity và BigInt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Number dùng floating-point với giới hạn integer precision; BigInt giữ integer exact nhưng không trộn trực tiếp với Number, còn Infinity cần được phân biệt khỏi overflow hợp lệ của BigInt.
 
 ## `BigInt`
 
