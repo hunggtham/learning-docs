@@ -1,6 +1,6 @@
 # Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thành phần → liên kết** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Liên kết → vi cấu trúc** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**. Route đi từ thành phần → liên kết và pha → vi cấu trúc/khuyết tật → tính chất và hiệu năng → gia công/vòng đời, để giải thích vì sao cùng thành phần có thể cho vật liệu rất khác nhau.
 
 > Khoa học vật liệu mở rộng Hóa học qua nhiều thang chiều dài. Liên kết hóa học xác định những cấu trúc nào có thể tồn tại, còn quá trình chế tạo, khuyết tật và lịch sử xử lý quyết định cấu trúc nào thực sự xuất hiện trong vật liệu thật.
 

@@ -1,6 +1,6 @@
 # Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dự đoán tính chất từ cấu trúc** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Dự đoán phản ứng** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**. Route đi từ biểu diễn phân tử/dataset → descriptor và mô hình dự đoán → xác thực ngoài mẫu → dự đoán tính chất/phản ứng → uncertainty và domain shift, để AI hỗ trợ suy luận hóa học chứ không thay thế bằng chứng thực nghiệm.
 
 > Trí tuệ nhân tạo (**Artificial Intelligence, AI**) hữu ích trong Hóa học vì số phân tử, vật liệu và điều kiện phản ứng khả dĩ lớn hơn rất nhiều so với khả năng tổng hợp, đo đạc hoặc tính toán lượng tử trực tiếp. Mô hình AI có thể đóng vai trò bộ xấp xỉ, bộ xếp hạng và công cụ định hướng tìm kiếm, nhưng kết quả chỉ có ý nghĩa khi đi kèm ràng buộc hóa học, đánh giá độ không đảm bảo và kiểm chứng thực nghiệm.
 

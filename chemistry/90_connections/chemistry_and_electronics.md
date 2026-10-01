@@ -1,6 +1,6 @@
 # Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tinh chế silicon và tăng trưởng tinh thể** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Pha tạp** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**. Route đi từ tinh chế/tăng trưởng silicon → pha tạp và khuyết tật → junction, oxide và bề mặt → chế tạo, vận chuyển điện tích và độ tin cậy, để quy trình hóa học được nối với chức năng điện tử cuối cùng.
 
 > Điện tử hiện đại phụ thuộc rất sâu vào khả năng kiểm soát nguyên tử, bề mặt phân cách và khuyết tật ở thang nanomet. Sơ đồ mạch có thể làm ta quên rằng bên dưới transistor, dây dẫn và màn hình là một lớp hóa học vật liệu rất phức tạp.
 

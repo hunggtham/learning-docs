@@ -1,6 +1,6 @@
 # Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cơ học lượng tử → cấu trúc nguyên tử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Điện từ học → liên kết** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**. Route đi từ lượng tử và cấu trúc nguyên tử → điện từ/liên kết → nhiệt động và động lực học → vận chuyển, vật chất ngưng tụ và đo lường, để chọn mức mô tả phù hợp với câu hỏi hóa học.
 
 > Hóa học và Vật lý không phải hai tập định luật tách rời. Hóa học xuất hiện từ cơ học lượng tử, điện từ học, cơ học thống kê và nhiệt động lực học khi nhiều hạt nhân và electron tổ chức thành nguyên tử, phân tử và vật liệu.
 

@@ -1,6 +1,6 @@
 # Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Biểu diễn phân tử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm cấu trúc con** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**. Route đi từ graph/SMILES và chuẩn hóa dữ liệu → tìm kiếm cấu trúc con → mô phỏng lượng tử/động lực học → pipeline tính toán và reproducibility, để mỗi kết quả máy tính giữ được ý nghĩa hóa học và provenance.
 
 > Hóa học ngày càng phụ thuộc vào tính toán vì không gian phân tử, mạng phản ứng và trạng thái lượng tử quá lớn để xử lý hoàn toàn bằng suy luận thủ công. Khoa học máy tính cung cấp cách biểu diễn, tìm kiếm, mô phỏng và tự động hóa; Hóa học cung cấp các ràng buộc miền để những phép tính đó vẫn có ý nghĩa vật lý.
 

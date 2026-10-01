@@ -1,6 +1,6 @@
 # Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đại số và phân tích thứ nguyên** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Logarithm** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**. Route đi từ đại số/phân tích thứ nguyên → logarithm và hàm mũ → vi phân/tích phân và phương trình vi phân → xác suất, thống kê và mô hình hóa, để công thức luôn quay về đại lượng hóa học cụ thể.
 
 > Toán học không chỉ xuất hiện sau khi ta đã “hiểu Hóa học” để thay số vào công thức. Nhiều khái niệm hóa học thực chất chính là **các quan hệ toán học giữa những đại lượng đo được**. Hiểu được cấu trúc toán học thường giúp ta suy luận lại công thức thay vì học thuộc.
 

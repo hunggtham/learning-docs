@@ -1,6 +1,6 @@
 # Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc phân tử → nhận diện sinh học** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hóa học acid-base → chức năng enzyme** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**. Route đi từ cấu trúc phân tử → nhận diện và liên kết → enzyme/mạng phản ứng → màng, gradient và thông tin di truyền → điều hòa ngoài cân bằng, để cơ chế hóa học giải thích được chức năng sinh học.
 
 > Sinh học có thể được đọc như **hóa học được tổ chức bởi màng, chất xúc tác, polymer thông tin và dòng năng lượng liên tục**. Các định luật hóa học không thay đổi khi đi vào tế bào; điều thay đổi là mức độ tổ chức, phân ngăn và kiểm soát.
 

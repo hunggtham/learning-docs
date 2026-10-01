@@ -1,6 +1,6 @@
 # Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nấu ăn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Làm sạch** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**. Route đi từ cấu trúc/chất liệu → nhiệt, acid–base, hòa tan và bề mặt → nấu ăn, làm sạch, bảo quản và mùi → an toàn môi trường, để hiện tượng quen thuộc được giải thích bằng cơ chế có thể kiểm tra.
 
 > Hóa học đời sống trở nên hữu ích khi ta truy ngược những quan sát quen thuộc về phân tử, cân bằng, tốc độ phản ứng và vật liệu thay vì ghi nhớ chúng như các mẹo rời rạc.
 
