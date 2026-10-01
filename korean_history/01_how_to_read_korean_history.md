@@ -87,7 +87,7 @@ Nếu chỉ nhớ được tên vua, battle và năm thì mới có coordinate. 
 
 Ví dụ, với mốc **1592**, câu trả lời tốt không dừng ở “Nhật Bản xâm lược Joseon”. Ta cần nối invasion với tình trạng quân sự và tài chính trước đó, đường biển và cảng, lương thực của hộ gia đình, vai trò của Lý Thuấn Thần (이순신 / Yi Sun-sin), Việt Nam thời Lê–Mạc và các địa điểm như Busan, Tongyeong hoặc pháo đài ven biển. Nếu chưa nói được ai chịu chi phí và bằng chứng ở đâu, ta mới có sự kiện chứ chưa có lời giải thích.
 
-> **Chuyển mạch:** Ở chặng này của **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Cách phân biệt fact, model và memory khi ghi chú** tiếp nhận điểm tựa từ **Phiếu đọc một trang cho mỗi giai đoạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối sang các lớp companion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The one-page sheet records claims and uncertainty; separating fact, interpretive model, and public memory prevents a source record from being mistaken for a timeless meaning, which the companion layers can then contextualize.
 
 ## Cách phân biệt fact, model và memory khi ghi chú
 
@@ -95,13 +95,13 @@ Một câu như “Gyeongbokgung là cung điện trung tâm của Joseon” có
 
 Ba lớp không loại trừ nhau. Tách chúng ra giúp người học vừa tôn trọng bằng chứng vật chất vừa không nhầm narrative hiện tại với ý định của người xưa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Cầu nối sang các lớp companion** tiếp nhận điểm tựa từ **Cách phân biệt fact, model và memory khi ghi chú** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Once fact, model, and memory are labeled, the companion files add Vietnam chronology, economy, places, geography, and case labs; recurring misconceptions can then be checked against that fuller context.
 
 ## Cầu nối sang các lớp companion
 
 Nếu phiếu đọc thiếu mốc Việt Nam, mở [`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md); nếu thiếu dòng nguồn lực và hộ gia đình, mở [`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md); nếu thiếu địa điểm hoặc logistics, mở [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md) và [`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md). Khi đã đi qua bốn lớp nhưng vẫn khó kể lại, luyện một tình huống trong [`37_historical_case_labs.md`](37_historical_case_labs.md) trước khi quay lại chapter chronology.
 
-> **Chuyển mạch:** Trong **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Cầu nối sang các lớp companion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Companion layers expose missing context; the misconceptions section turns those gaps into explicit guardrails, closing the method with claims that remain evidence-sensitive rather than memory-driven.
 
 ## Dùng chung (common / 공통) Misconceptions
 
