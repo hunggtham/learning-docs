@@ -18,7 +18,7 @@ premise 1 + premise 2 + hidden premise
 
 Khi đọc một argument, hãy viết lại bằng câu ngắn, tìm premise ẩn, kiểm tra premise có đúng không và xem conclusion có mạnh hơn điều các premise cho phép không. Validity là quan hệ hình thức giữa premise và conclusion; soundness còn cần premise đúng hoặc đáng tin.
 
-> **Chuyển mạch:** Ở chặng này của **Philosophical lập luận (reasoning / 추론): câu hỏi, khái niệm và lập luận**, **Các loại bất đồng** tiếp nhận điểm tựa từ **Giải phẫu một lập luận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Argument anatomy separates premises, inference, and conclusion; classifying disagreement as factual, conceptual, inferential, or normative determines which kind of evidence the bridge should carry forward.
 
 ## Các loại bất đồng
 
@@ -29,13 +29,13 @@ Khi đọc một argument, hãy viết lại bằng câu ngắn, tìm premise �
 
 Phân loại đúng giúp biết nên tìm đo lường (measurement / 측정), sửa định nghĩa, kiểm tra suy luận (inference / 추론) hay tranh luận normative premise. Một argument có thể hợp lệ nhưng vẫn không đủ để kết luận nếu premise thực nghiệm chưa được xác lập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Philosophical lập luận (reasoning / 추론): câu hỏi, khái niệm và lập luận**, **Cầu nối** tiếp nhận điểm tựa từ **Các loại bất đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked lập luận (reasoning / 추론): “Công cụ X cải thiện cognition”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Disagreement classification tells us whether to seek data, clarify a concept, test an inference, or debate a value; the worked cognition claim combines all four and makes the burden of proof visible.
 
 ## Cầu nối
 
 Tiếp theo đọc [Knowledge, justification và evidence](../01_epistemology/00_knowledge_justification_and_evidence.md), rồi dùng [Models, explanation và causality](../03_philosophy_of_science/00_models_explanation_and_causality.md) để xem lập luận thay đổi thế nào khi đối tượng là một mô hình khoa học.
 
-> **Chuyển mạch:** Trong **Philosophical lập luận (reasoning / 추론): câu hỏi, khái niệm và lập luận**, **Cầu nối** cho ta quy tắc; **Worked lập luận (reasoning / 추론): “Công cụ X cải thiện cognition”** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Checklist trước khi kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The cognition example separates measurable behavior, causal attribution, durability, transfer, and the value criterion “improvement”; the checklist turns those separations into a repeatable conclusion gate.
 
 ## Worked lập luận (reasoning / 추론): “Công cụ X cải thiện cognition”
 
@@ -50,7 +50,7 @@ X thay đổi behavior đo được
 
 Mỗi mũi tên có burden of proof khác nhau. kiểm thử (test / 테스트) có thể cho thấy score tăng nhưng không cho thấy transfer sang công việc; follow-up có thể cho thấy tác động (effect / 효과) giảm; randomized assignment giúp nhân quả (causal / 인과적) claim nhưng vẫn không quyết định “cải thiện” nếu chỉ số (metric / 지표) bỏ qua chi phí (cost / 비용) hoặc phụ thuộc (dependency / 의존성). Đây là ví dụ điển hình cho việc phân biệt conceptual, empirical và normative claim.
 
-> **Chuyển mạch:** Ở chặng này của **Philosophical lập luận (reasoning / 추론): câu hỏi, khái niệm và lập luận**, **Worked lập luận (reasoning / 추론): “Công cụ X cải thiện cognition”** cho ta quy tắc; **Checklist trước khi kết luận** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** The worked argument exposes where empirical and normative claims diverge; the final checklist asks for ambiguous terms, hidden values, counterexamples, and evidence that could lower confidence before closing the method.
 
 ## Checklist trước khi kết luận
 
