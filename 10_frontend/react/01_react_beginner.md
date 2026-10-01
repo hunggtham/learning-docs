@@ -43,7 +43,7 @@ React là thư viện UI chứ không phải một full-stack khung phần mềm
 >
 > Nếu bắt đầu mới, hãy học theo cú pháp và mô hình tư duy (mental model / 사고 모델) React 19.3 trong tài liệu này. Phần lớn kiến thức nền như thành phần (component / 컴포넌트), props, trạng thái (state / 상태), sự kiện (event / 이벤트), danh sách (list / 목록) và form vẫn áp dụng cho React 18 và cả nhiều mã (code / 코드) React 16.8/17. Sự khác nhau lớn nhất khi đọc mã (code / 코드) cũ thường nằm ở entry API, lớp (class / 클래스) thành phần (component / 컴포넌트), JSX transform và một số API mới của React 19; vì vậy không cần học từng phiên bản (version / 버전) theo thứ tự lịch sử trước khi học React.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Beginner**, **2. JavaScript nền tảng cần biết** tiếp nhận điểm tựa từ **1. React là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. React app hoạt động như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** React’s component model relies on JavaScript values/functions; once that prerequisite is clear, the app section can explain render, commit and browser updates.
 
 ## 2. JavaScript nền tảng cần biết
 

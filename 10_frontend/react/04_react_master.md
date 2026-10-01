@@ -242,7 +242,7 @@ Suspense ranh giới (boundary / 경계) nên phản ánh “reveal đơn vị (
 
 Nếu sản phẩm (product / 제품) trọng yếu (critical / 중요) còn reviews secondary, hai ranh giới (boundary / 경계) riêng cho phép progressive reveal. ranh giới (boundary / 경계) quá cao khiến toàn màn hình đổi spinner; ranh giới (boundary / 경계) quá nhỏ tạo loading rời rạc. Skeleton nên giữ bố cục (layout / 레이아웃) để tránh CLS.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Master**, **10. Streaming kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **9. Suspense kiến trúc (architecture / 아키텍처) và reveal chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Partial pre-rendering và prerender/resume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Suspense defines reveal boundaries; streaming sends those boundaries progressively, while partial prerendering separates reusable HTML from work resumed later.
 
 ## 10. Streaming kiến trúc (architecture / 아키텍처)
 

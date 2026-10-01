@@ -342,7 +342,7 @@ useEffect(() => {
 
 Ở môi trường vận hành (production / 운영 환경), server-state thư viện (library / 라이브러리) hoặc khung phần mềm (framework / 프레임워크) dữ liệu (data / 데이터) tầng (layer / 계층) thường xử lý caching, dedupe, thử lại (retry / 재시도) và race điều kiện (condition / 조건) tốt hơn fetch tác động (effect / 효과) tự viết ở mọi thành phần (component / 컴포넌트).
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Intermediate**, **5. Khi nào không cần tác động (effect / 효과)?** tiếp nhận điểm tựa từ **4. Cleanup, race điều kiện (condition / 조건) và AbortController** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5A. Hook mô hình tư duy (mental model / 사고 모델): bộ nhớ (memory / 메모리) slot theo thành phần (component / 컴포넌트) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cleanup/AbortController close the request lifecycle; the next question is whether the effect is needed at all, before Hooks are modeled as identity-indexed state slots.
 
 ## 5. Khi nào không cần tác động (effect / 효과)?
 
@@ -441,7 +441,7 @@ Không xóa `forwardRef` tùy tiện trong thư viện (library / 라이브러�
 >
 > `useRef` bản thân không phải API mới của React 19. Thay đổi đáng chú ý là **hàm (function / 함수) thành phần (component / 컴포넌트) có thể nhận `ref` như prop trong React 19**, làm giảm nhu cầu dùng `forwardRef` trong mã (code / 코드) mới. Tuy vậy `forwardRef` vẫn xuất hiện dày đặc trong thư viện (library / 라이브러리) và codebase React 18, nên cần biết cả hai dạng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Intermediate**, **7A. Lịch sử refs: string refs → callback refs → createRef → useRef → ref-as-prop** tiếp nhận điểm tựa từ **8. forwardRef và ref-as-prop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7B. findDOMNode: escape hatch legacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** `forwardRef`/ref-as-prop expose an imperative handle; ref history explains the evolution, while `findDOMNode` remains a legacy escape hatch with weaker ownership.
 
 ## 7A. Lịch sử refs: string refs → callback refs → `createRef` → `useRef` → ref-as-prop
 

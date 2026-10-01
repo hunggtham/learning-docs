@@ -81,7 +81,7 @@ function handleChange(event) {
 
 Chuyển tiếp (transition / 전이) không phải debounce. Debounce trì hoãn theo thời gian; chuyển tiếp (transition / 전이) biểu đạt priority. `startTransition` standalone dùng khi không cần pending trạng thái (state / 상태) tại caller.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **6. useDeferredValue** tiếp nhận điểm tựa từ **5. useTransition và startTransition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6A. chuyển tiếp (transition / 전이), deferred giá trị (value / 값) và debounce giải quyết ba vấn đề khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** `startTransition` lowers update priority; `useDeferredValue` lets a consumer lag, while debounce controls input frequency rather than render priority.
 
 ## 6. `useDeferredValue`
 Phần này nối mạch bài học với “6. `useDeferredValue`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -97,7 +97,7 @@ return <SearchResults query={deferredQuery} />;
 >
 > `startTransition`, `useTransition` và `useDeferredValue` thuộc wave React 18. Chúng không phải “React 19 tối ưu hóa (optimization / 최적화)”. React 19 tiếp tục xây Actions/Suspense/máy chủ (server / 서버) features trên concurrent foundations này, nên hiểu chuyển tiếp (transition / 전이) trước khi học Actions và Activity sẽ giúp luồng học tự nhiên hơn.
 
-> **Chuyển mạch:** Trong **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **6A. chuyển tiếp (transition / 전이), deferred giá trị (value / 값) và debounce giải quyết ba vấn đề khác nhau** tiếp nhận điểm tựa từ **6. useDeferredValue** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Suspense nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Transition changes scheduling priority, deferred value changes what a consumer reads, and debounce changes event frequency; Suspense then coordinates async reveal.
 
 ## 6A. chuyển tiếp (transition / 전이), deferred giá trị (value / 값) và debounce giải quyết ba vấn đề khác nhau
 
