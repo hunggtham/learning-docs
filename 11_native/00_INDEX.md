@@ -13,7 +13,7 @@ Bộ Swift/iOS được đặt riêng trong [`swift_ios/`](swift_ios/README.md),
 3. [Advanced / Senior](swift_ios/03_swift_ios_advanced_senior.md): quyền sở hữu (ownership / 소유권), actor reentrancy, hiệu năng (performance / 성능), modularization, Instruments, resilient networking, cơ sở dữ liệu (database / 데이터베이스) tính đồng thời (concurrency / 동시성), bảo mật (security / 보안), CI/CD, Objective-C/C/C++ interop, môi trường vận hành (production / 운영 환경) thiết kế (design / 설계) và sự cố (incident / 인시던트) mindset.
 4. [Master](swift_ios/04_swift_ios_master.md): Swift 5→6.x di chuyển (migration / 마이그레이션), Swift 6.4, ABI/thư viện (library / 라이브러리) evolution, macros, memory-safe các hệ thống (systems / 시스템들) APIs, offline sync, khả năng quan sát (observability / 관측 가능성), App Extensions, StoreKit, CloudKit, bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링) và production-readiness kiểm tra (audit / 감사).
 
-> **Chuyển mạch:** Trong **Phát triển di động bản địa (native mobile development / 네이티브 모바일 개발) — chỉ mục (index / 인덱스)**, **Kotlin & Android** tiếp nhận điểm tựa từ **Swift & iOS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên bản (version / 버전) baseline của Kotlin/Android** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Index đặt Kotlin/Android và Swift/iOS cạnh nhau để so sánh runtime, UI và lifecycle; trước khi chọn track, hãy chốt version baseline vì nó quyết định API, tooling và migration evidence.
 
 ## Kotlin & Android
 

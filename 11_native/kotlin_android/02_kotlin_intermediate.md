@@ -194,7 +194,7 @@ suspend fun loadUser(): User {
 }
 ```
 
-> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**, sau nội dung của **Mục lục**, **8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8.2 launch, async, withContext khác nhau về đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Scope owner quyết định lifetime của coroutine; từ đó `launch`, `async` và `withContext` được phân biệt bằng contract về kết quả, lỗi và cancellation thay vì chỉ bằng cú pháp.
 
 ## 8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)
 
