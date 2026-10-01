@@ -14,7 +14,7 @@ Nhánh học (track / 트랙) này tập trung vào cách thay đổi môi trư�
 6. [Deployment safety: canary, blue-green, feature flags và rollback limits](./05_deployment_safety_canary_blue_green_flags_and_rollback.md)
 7. [Technical debt economics, engineering metrics và Goodhart's Law](./06_technical_debt_economics_metrics_and_goodhart.md)
 
-> **Chuyển mạch:** Trong **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, **Mô hình tư duy (mental models / 사고 모델들) cần đạt** gom các mảnh từ **Chuẩn gốc (canonical / 정본) chapters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hệ thống (system / 시스템) thiết kế (design / 설계) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) giao nhau ở changeability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Canonical chapters cung cấp mental models; phần advanced kiểm tra chúng trên changeability, boundary và operational evidence của system design.
 
 ## Mô hình tư duy (mental models / 사고 모델들) cần đạt
 

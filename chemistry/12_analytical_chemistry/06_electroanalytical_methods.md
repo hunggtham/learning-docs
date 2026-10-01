@@ -38,7 +38,7 @@ Nếu phản ứng có hóa lượng electron xác định, điện lượng có
 
 Ba phép đo này trả lời ba câu hỏi khác nhau; không nên dùng một đại lượng như thể nó chứa toàn bộ thông tin của hai đại lượng còn lại.
 
-> **Chuyển mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Một điện cực không có “điện thế tuyệt đối” đo trực tiếp** tiếp nhận điểm tựa từ **Ba cửa sổ đo của điện phân tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo thế — lấy thông tin khi dòng gần bằng 0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Electroanalytical methods chọn cửa sổ potential/current/charge theo measurand; electrode potential luôn là tương đối, và potentiometric measurement đọc nó ở dòng gần bằng zero.
 
 ## Một điện cực không có “điện thế tuyệt đối” đo trực tiếp
 

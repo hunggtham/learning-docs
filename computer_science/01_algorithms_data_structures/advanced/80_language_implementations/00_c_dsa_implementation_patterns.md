@@ -28,7 +28,7 @@ Nếu quyền sở hữu không rõ, các lỗi thường gặp là double-free,
 
 Một API tốt phải trả lời: ai tạo/hủy bộ chứa (container / 컨테이너), ai sở hữu phần tử, con trỏ trả về sống tới khi nào và thao tác nào làm con trỏ/bộ lặp mất hiệu lực.
 
-> **Chuyển mạch:** Trong **Các mẫu triển khai DSA trong C**, **Mảng động** tiếp nhận điểm tựa từ **Quyền sở hữu là một phần của hợp đồng API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **realloc và mất hiệu lực của con trỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** C API phải làm rõ ownership; dynamic array minh họa capacity/length, còn `realloc` có thể move storage và invalidate pointers nên contract phải nói rõ lifetime.
 
 ## Mảng động
 

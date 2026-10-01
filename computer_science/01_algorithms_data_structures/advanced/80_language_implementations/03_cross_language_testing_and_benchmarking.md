@@ -31,7 +31,7 @@ yêu cầu độ phức tạp nào là bắt buộc?
 
 Ví dụ `topK(items, k)` có thể trả một tập không thứ tự, một danh sách đã sắp xếp hoặc một thứ tự tùy ý giữa các phần tử bằng nhau. Nếu đặc tả mơ hồ, một kiểm thử “thất bại” có thể chỉ phản ánh hai cách hiểu khác nhau về hợp đồng.
 
-> **Chuyển mạch:** Trong **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**, **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau** tiếp nhận điểm tựa từ **1. Đặc tả trước kiểm thử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Assertion như một đặc tả có thể thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Test spec xác định contract; public behavior phải tách khỏi internal invariant, rồi assertions biến cả hai thành executable checks có thể so sánh giữa C, Java và JavaScript.
 
 ## 2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau
 
