@@ -1,18 +1,26 @@
 # 130-132. 트랜잭션 (Transaction)
 
+> **Mạch đọc:** [README](../README.md) là owner của **130-132. 트랜잭션 (Transaction)**; đặt bài vào tuyến transaction/concurrency của database construction. Từ **학습 목표 (Mục tiêu)** sang **핵심 키워드 (Từ khóa)**, nối transaction boundary với commit/rollback và isolation, rồi dùng **선행·연결 개념 (Kiến thức liên kết)** để bước sang transaction state và ACID; trạng thái chỉ được hiểu đúng khi boundary đã rõ.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **130-132. 트랜잭션 (Transaction)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **130-132. 트랜잭션 (Transaction)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **130-132. 트랜잭션 (Transaction)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 트랜잭션
 
+> **Chuyển mạch:** Ở chặng này của **130-132. 트랜잭션 (Transaction)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**에서 만든 기준을 이어받아 **130-132. 트랜잭션 (Transaction)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **130-132. 트랜잭션 (Transaction)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **130-132. 트랜잭션 (Transaction)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **130-132. 트랜잭션 (Transaction)** 
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **130-132. 트랜잭션 (Transaction)** và nối nó với **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **130-132. 트랜잭션 (Transaction)**, **130-132. 트랜잭션 (Transaction)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 130-132. 트랜잭션 (Transaction)
 
@@ -47,3 +55,5 @@ Phần “130-132. 트랜잭션 (Transaction)” được nối với nội dung
   - Durability (Tính bền vững): Lưu trữ vĩnh viễn dù có lỗi hệ thống.
 
 Như vậy, **130-132. 트랜잭션 (Transaction)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **130-132. 트랜잭션 (Transaction)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
