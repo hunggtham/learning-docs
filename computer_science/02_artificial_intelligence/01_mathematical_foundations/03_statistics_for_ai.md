@@ -1,6 +1,6 @@
 # Statistics cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Statistics cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Population, mẫu (sample / 표본) và data-generating tiến trình (process / 프로세스)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Descriptive statistics: mô tả dữ liệu (data / 데이터) trước khi modeling** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Statistics for AI**. Route đi từ population/sample/data-generating process → descriptive statistics → estimation/testing → bias/variance and uncertainty → model diagnostics, để kết luận thống kê được nối với dữ liệu và quyết định model.
 
 Statistics (통계학 / thống kê) giải quyết một tension nằm ở trung tâm của Machine học tập (learning / 학습): ta chỉ quan sát một **finite mẫu (sample / 표본)**, nhưng muốn mô hình (model / 모델) hoạt động tốt trên những dữ liệu (data / 데이터) chưa từng thấy. huấn luyện (training / 학습) set không phải world. Nó chỉ là một mẫu (sample / 표본) được thu thập theo một tiến trình (process / 프로세스) cụ thể, trong một khoảng thời gian cụ thể, với sai số đo lường (measurement error / 측정 오차), selection độ lệch (bias / 편향) và missing thông tin (information / 정보).
 

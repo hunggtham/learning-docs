@@ -1,6 +1,6 @@
 # Mathematics for Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mathematics for Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một mô hình (model / 모델) như một mathematical hàm (function / 함수)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tuyến tính (linear / 선형) Algebra: ngôn ngữ (language / 언어) của biểu diễn (representation / 표현) và transformation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mathematics for AI**. Route đi từ model/function notation → linear algebra → probability/statistics → calculus/optimization → numerical computation, để mỗi công cụ toán gắn với bước model hóa và huấn luyện.
 
 AI không “dùng toán” như một phụ kiện. Mathematics là ngôn ngữ (language / 언어) giúp ta biểu diễn dữ liệu (data / 데이터), bất định (uncertainty / 불확실성), transformation, mục tiêu (objective / 목표) và học tập (learning / 학습) tiến trình (process / 프로세스). Nếu bỏ toán hoàn toàn, nhiều concept AI sẽ biến thành quy tắc (rule / 규칙) cần học thuộc: “softmax dùng ở đây”, “độ dốc (gradient / 기울기) descent dùng ở kia”, “embedding là véc-tơ (vector / 벡터)”. Nếu hiểu vai trò của từng mathematical công cụ (tool / 도구), các concept đó nối lại thành một hệ thống lập luận (reasoning / 추론) thống nhất.
 

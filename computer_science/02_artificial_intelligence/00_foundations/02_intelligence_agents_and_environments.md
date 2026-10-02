@@ -1,6 +1,6 @@
 # Intelligence, Agents và Environments
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Intelligence, Agents và Environments**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao lớp trừu tượng (abstraction / 추상화) tác nhân (agent / 에이전트) quan trọng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Rational tác nhân (agent / 에이전트)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Intelligence, agents và environments**. Route đi từ agent abstraction → observations/actions → rationality/utility → environment uncertainty/feedback → evaluation, để năng lực tác nhân được nối với môi trường và mục tiêu.
 
 Một trong những cách mạnh nhất để hiểu Artificial Intelligence là không hỏi “máy có giống người không?”, mà hỏi: **một hệ thống (system / 시스템) quan sát môi trường, lựa chọn hành động và đạt mục tiêu như thế nào?** Cách nhìn này dẫn tới khái niệm **tác nhân (agent / 에이전트)**.
 

@@ -1,6 +1,6 @@
 # Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bài toán (problem / 문제) biểu diễn (representation / 표현) trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ real-world bài toán (problem / 문제) tới computational bài toán (problem / 문제)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태) không gian (space / 공간)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Problem representation trong AI**. Route đi từ real-world goal/constraints → state-space/actions → transition/cost model → observability and uncertainty, để bài toán tính toán giữ được phần quan trọng của bài toán gốc.
 
 Trước khi một AI hệ thống (system / 시스템) có thể tìm kiếm (search / 검색), learn, reason hoặc optimize, bài toán (problem / 문제) phải được chuyển thành một **biểu diễn (representation / 표현)** mà máy có thể thao tác. Đây là bước thường bị xem nhẹ vì nó nằm trước thuật toán (algorithm / 알고리즘), nhưng biểu diễn (representation / 표현) quyết định rất lớn việc bài toán có dễ giải hay không.
 

@@ -1,6 +1,6 @@
 # AI hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처): từ mô hình (model / 모델) tới môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **AI hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처): từ mô hình (model / 모델) tới môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình (model / 모델) là thành phần (component / 컴포넌트), không phải toàn bộ hệ thống (system / 시스템)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Offline đường dẫn (path / 경로) và Online đường dẫn (path / 경로)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **AI system architecture: model → production system**. Route đi từ model component → data/training pipeline → offline evaluation → online serving/monitoring → feedback and rollback, để model quality được nối với reliability và operations.
 
 Khi học AI, người mới thường nhìn thấy một hàm (function / 함수) rất đơn giản:
 

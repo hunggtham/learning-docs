@@ -1,6 +1,6 @@
 # Artificial Intelligence là gì?
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Artificial Intelligence là gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ automation đến intelligence** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Artificial Intelligence là gì?**. Route đi từ automation → capability/intelligence criteria → agents/search/learning → evaluation and limits, để AI được định nghĩa bằng hành vi có thể quan sát chứ không bằng “magic”.
 
 Artificial Intelligence (AI / Trí tuệ nhân tạo / 인공지능) thường được mô tả bằng những câu rất rộng như “máy móc bắt chước trí thông minh con người”. Cách nói này hữu ích để tạo trực giác ban đầu nhưng chưa đủ chính xác, vì nó để lại hai câu hỏi khó hơn: **trí thông minh là gì**, và **máy cần giống con người đến mức nào mới được coi là thông minh**?
 

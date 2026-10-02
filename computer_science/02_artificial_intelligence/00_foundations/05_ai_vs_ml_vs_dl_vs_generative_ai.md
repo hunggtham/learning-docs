@@ -1,6 +1,6 @@
 # AI vs Machine học tập (learning / 학습) vs Deep học tập (learning / 학습) vs Generative AI
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **AI vs Machine học tập (learning / 학습) vs Deep học tập (learning / 학습) vs Generative AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Artificial Intelligence là umbrella trường dữ liệu (field / 필드)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Machine học tập (learning / 학습): hành vi (behavior / 동작) được học từ dữ liệu (data / 데이터)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **AI vs ML vs DL vs Generative AI**. Route đi từ AI field/problem → ML learned behavior → DL representation/scale → generative modeling/sampling, để bốn nhãn được phân biệt bằng cơ chế và loại dữ liệu cần có.
 
 Các thuật ngữ `AI`, `Machine Learning`, `Deep Learning`, `Generative AI`, `Foundation Model` và `LLM` thường được dùng lẫn nhau trong media và cả trong công việc. Điều đó dễ tạo một mô hình tư duy (mental model / 사고 모델) sai: rằng chúng là các “generation” nối tiếp nhau và cái mới thay thế cái cũ. Thực tế chúng có quan hệ **subset, overlap và ứng dụng (application / 애플리케이션) mẫu (pattern / 패턴)** phức tạp hơn.
 

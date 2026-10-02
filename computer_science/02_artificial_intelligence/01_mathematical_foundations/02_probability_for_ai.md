@@ -1,6 +1,6 @@
 # Xác suất (probability / 확률) cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Xác suất (probability / 확률) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao AI cần xác suất (probability / 확률)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mẫu (sample / 표본) không gian (space / 공간), sự kiện (event / 이벤트) và random variable** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Probability for AI**. Route đi từ sample space/events → random variables/distributions → conditional probability/Bayes → expectation/variance → uncertainty in inference and decisions, để xác suất phục vụ suy luận thay vì chỉ mô tả dữ liệu.
 
 Xác suất (probability / 확률) là ngôn ngữ để lập luận (reasoning / 추론) khi thông tin không đầy đủ, kết quả (outcome / 결과) không chắc chắn hoặc tiến trình (process / 프로세스) có randomness. AI gần như luôn sống trong điều kiện như vậy: ảnh (image / 이미지) có thể ambiguous, sensor có noise, người dùng (user / 사용자) hành vi (behavior / 동작) không deterministic, dữ liệu huấn luyện (training data / 학습 데이터) chỉ là mẫu (sample / 표본) của world, và ngôn ngữ (language / 언어) mô hình (model / 모델) không biết chắc đơn vị từ (token / 토큰) tiếp theo.
 
