@@ -1,14 +1,12 @@
 # Tunisia
 
-> **Mạch đọc:** Đặt **Tunisia** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một độ dốc (gradient / 기울기) khí hậu ngắn nhưng mạnh** sang **Relief và nước**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tunisia**. Route đi từ Mediterranean north đến bán khô hạn và Sahara → relief, nước và cây trồng → dân cư, đô thị và cảng → du lịch, công nghiệp và rủi ro nước → kết nối Maghreb, để gradient ngắn tạo ra khác biệt không gian lớn.
 
 ## Một độ dốc (gradient / 기울기) khí hậu ngắn nhưng mạnh
 
 Tunisia có diện tích nhỏ hơn nhiều nước Bắc Phi nhưng vẫn thể hiện chuyển tiếp rất rõ từ miền Địa Trung Hải phía bắc sang vùng bán khô hạn và Sahara ở phía nam. Điều này làm khoảng cách vài trăm kilomet có thể đồng nghĩa với khác biệt lớn về cây trồng, mật độ dân cư và nguồn nước.
 
-
-> **Chuyển mạch:** Từ **Một độ dốc (gradient / 기울기) khí hậu ngắn nhưng mạnh**, ta sang **Relief và nước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tunisia**, **Relief và nước** tiếp nhận điểm tựa từ **Một độ dốc (gradient / 기울기) khí hậu ngắn nhưng mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tunis và dải đô thị ven biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Relief và nước
 
@@ -16,8 +14,7 @@ Phía bắc có các đồi núi thuộc hệ Atlas và nhận nhiều mưa hơn
 
 Chính vì vậy, water stress ở Tunisia là vấn đề của cả lượng nước, tính mùa, chất lượng và phân bố không gian.
 
-
-> **Chuyển mạch:** Từ **Relief và nước**, ta sang **Tunis và dải đô thị ven biển** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tunisia**, **Tunis và dải đô thị ven biển** tiếp nhận điểm tựa từ **Relief và nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tunis và dải đô thị ven biển
 
@@ -25,8 +22,7 @@ Tunis là thủ đô và lõi dịch vụ lớn. Sousse, Sfax và các đô th�
 
 Sfax nổi bật về công nghiệp và cảng, còn các khu nghỉ dưỡng ven biển phụ thuộc mạnh vào khả năng tiếp cận (accessibility / 접근성) quốc tế.
 
-
-> **Chuyển mạch:** Từ **Tunis và dải đô thị ven biển**, ta sang **Kinh tế không gian** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tunisia**, **Kinh tế không gian** tiếp nhận điểm tựa từ **Tunis và dải đô thị ven biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Du lịch và sự đánh đổi (trade-off / 트레이드오프) nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế không gian
 
@@ -34,22 +30,19 @@ Nông nghiệp ở phía bắc và trung dựa trên olive, cereals và cây tr�
 
 Vị trí gần châu Âu cho phép Tunisia tham gia các chuỗi cung ứng Địa Trung Hải, nơi lead thời gian (time / 시간) và kết nối cảng có thể quan trọng hơn khoảng cách địa lý thuần túy.
 
-
-> **Chuyển mạch:** Từ **Kinh tế không gian**, ta sang **Du lịch và sự đánh đổi (trade-off / 트레이드오프) nước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tunisia**, **Du lịch và sự đánh đổi (trade-off / 트레이드오프) nước** tiếp nhận điểm tựa từ **Kinh tế không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Du lịch và sự đánh đổi (trade-off / 트레이드오프) nước
 
 Du lịch ven biển tạo việc làm và ngoại tệ nhưng làm nhu cầu nước, điện và hạ tầng tăng theo mùa. Đây là ví dụ rõ về **seasonal demand peak** trong môi trường khan nước.
 
-
-> **Chuyển mạch:** Từ **Du lịch và sự đánh đổi (trade-off / 트레이드오프) nước**, ta sang **Rủi ro** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tunisia**, **Rủi ro** tiếp nhận điểm tựa từ **Du lịch và sự đánh đổi (trade-off / 트레이드오프) nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro
 
 Hạn, nắng nóng, suy giảm nước ngầm, xói lở bờ biển và lũ quét cục bộ đều có thể xảy ra. Môi trường khô không đồng nghĩa không có lũ; mưa cường độ lớn trên bề mặt thấm kém có thể tạo flash flood.
 
-
-> **Chuyển mạch:** Từ **Rủi ro**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tunisia**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -57,4 +50,4 @@ Hạn, nắng nóng, suy giảm nước ngầm, xói lở bờ biển và lũ qu
 
 Xem thêm: [Khí hậu](../../../01_physical_geography/02_atmosphere_weather_climate.md), [Du lịch trong địa lý kinh tế](../../../02_human_geography/05_economic_geography.md), [Châu Phi](../../../03_regions/06_africa.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [DZA algeria](./DZA_algeria.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
