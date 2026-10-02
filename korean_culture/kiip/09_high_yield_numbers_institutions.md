@@ -1,6 +1,6 @@
 # 09. High-Yield Numbers & Institutions — phạm vi chung + 심화
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Con số nên thuộc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bộ bốn cần phản xạ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**; dùng README để định vị các fact trong Backbone 50 bài. Từ **Con số nên thuộc** nối qua nhóm institution, nhiệm kỳ, chức năng và ngoại lệ, rồi kiểm tra ý nghĩa/ngữ cảnh và current notice thay vì ghi nhớ số rời khỏi cơ chế.
 
 > **시험 범위:** `공통`
 

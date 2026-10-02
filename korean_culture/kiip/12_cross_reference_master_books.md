@@ -1,6 +1,6 @@
 # 12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Culture map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lịch sử (history / 이력) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**; dùng file này để nối ghi chú KIIP với chapter chiều sâu, không thay thế owner của các chapter cha. Từ **Culture map** qua History map, rồi quay về các bài Confucianism, family, institutions và Korean history phù hợp với topic đang học; cross-reference chỉ ra đường đọc tiếp theo.
 
 Folder KIIP là lớp ôn thi. Khi cần hiểu sâu, dùng các chapter cha thay vì kéo toàn bộ kiến thức sâu vào ghi chú (note / 노트) thi.
 

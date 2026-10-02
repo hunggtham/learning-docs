@@ -1,6 +1,6 @@
 # Sources & Provenance — KIIP inside Korean Culture
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sources & Provenance — KIIP inside Korean Culture**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Uploaded KIIP study summaries** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Official / hiện tại (current / 현재) references** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Sources & Provenance — KIIP inside Korean Culture**; dùng README để phân biệt lesson owner với provenance owner. Từ **Uploaded KIIP study summaries** nối sang official/current references, correction notes và ngày xác minh, rồi quay lại bài học để giữ giải thích tiếng Việt nhưng không biến nguồn thành nội dung học thuộc.
 
 ## Uploaded KIIP study summaries
 

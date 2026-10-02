@@ -1,6 +1,6 @@
 # 00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cách đọc tag** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phạm vi cơ bản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần**; dùng file này trước khi đọc các domain xã hội, giáo dục, văn hóa, chính trị, kinh tế và pháp luật. Từ **Cách đọc tag** nối basic scope, 귀화용 심화 và current verification với notice/owner chính thức, rồi áp dụng tag ngay tại nội dung thay vì tách thành hai cây kiến thức.
 
 ## Cách đọc tag
 

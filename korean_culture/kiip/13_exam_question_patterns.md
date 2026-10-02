@@ -1,6 +1,6 @@
 # 13. Exam Question Patterns — dạng câu hỏi và bẫy thường gặp
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **13. Exam Question Patterns — dạng câu hỏi và bẫy thường gặp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Matching — nối khái niệm với chức năng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Contrast — chọn điểm khác biệt** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **13. Exam Question Patterns — dạng câu hỏi và bẫy thường gặp**; dùng README để đặt file sau nội dung 8 domain KIIP và trước cập nhật nguồn. Từ **1. Matching — nối khái niệm với chức năng** qua contrast, cause/effect và exception patterns, rồi quay về bài học gốc để kiểm tra hiểu đúng cơ chế thay vì học thuộc đáp án.
 
 Tệp (file / 파일) này không dự đoán đề thi. Mục tiêu là biến nội dung 8 lĩnh vực (domain / 도메인) thành các **mẫu (pattern / 패턴) kiểm tra** để bạn biết cách tự hỏi lại kiến thức.
 
@@ -193,9 +193,9 @@ Các từ `항상`, `모든`, `반드시`, `자동으로`, `주로`, `일반적�
 
 Khi đọc option, gạch chân từ điều kiện và hỏi: **đúng trong trường hợp nào, có ngoại lệ hoặc giới hạn nào?**
 
-## 16. Từ đáp án trắc nghiệm sang câu nói
+## 16. Từ nhận diện phương án sang câu nói
 
-Sau mỗi câu chọn đáp án, hãy nói thêm một câu giải thích theo mẫu:
+Sau mỗi tình huống cần chọn phương án, hãy nói thêm một câu giải thích theo mẫu:
 
 `정답은 ____입니다. 왜냐하면 ____이기 때문입니다. 다만 ____와 혼동하면 안 됩니다.`
 
@@ -203,6 +203,6 @@ Ví dụ:
 
 `정답은 사회보험입니다. 보험료를 바탕으로 사회적 위험에 대비하는 제도이기 때문입니다. 공공부조와 혼동하면 안 됩니다.`
 
-Đây là bước nối multiple choice với `구술`: nếu không giải thích được vì sao phương án đúng và phương án gần sai, kiến thức vẫn đang ở mức nhận diện.
+Đây là bước nối việc nhận diện phương án với `구술`: nếu không giải thích được vì sao một phương án phù hợp và phương án gần đó không phù hợp, kiến thức vẫn đang ở mức nhận diện.
 
-> **Bàn giao:** Sau **16. Từ đáp án trắc nghiệm sang câu nói**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Sau **16. Từ nhận diện phương án sang câu nói**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

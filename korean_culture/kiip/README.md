@@ -1,6 +1,6 @@
 # KIIP exam notes — 한국사회 이해
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **KIIP exam notes — 한국사회 이해**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc hiện tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Backbone 50 bài** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của **KIIP exam notes — 한국사회 이해**. Bắt đầu ở **Cấu trúc hiện tại**, đi theo **Backbone 50 bài**, rồi dùng nhãn `공통`, `귀화용 심화`, `현재 확인` để chọn phạm vi và kiểm tra fact; quay lại README khi cần định vị bài học, nguồn hoặc chapter Korean Culture chiều sâu.
 
 Đây là **bộ ghi chú (note / 노트) duy nhất về nội dung thi KIIP trong repository**, nằm trực tiếp trong `korean_culture/`. Nội dung được tổng hợp theo chủ đề để học một mạch; **không chia theo mức (level / 수준), không tạo cây thư mục riêng cho từng loại kỳ thi**.
 

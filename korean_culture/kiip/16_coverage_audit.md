@@ -1,6 +1,6 @@
 # 16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Coverage theo 8 PDF** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. 귀화용 심화 đã được gộp ở đâu** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해**; dùng audit này để theo dõi phạm vi, nguồn, fact hiện hành và phần cần học sâu. Từ **1. Coverage theo 8 PDF** nối sang các phần 귀화용 심화, current verification và conceptual-depth links, rồi quay lại README/SOURCES khi một mục thiếu provenance hoặc cần cập nhật.
 
 Mục tiêu của tệp (file / 파일) này là kiểm tra **đã cover gì, phần nào là nguồn (source / 소스), phần nào là hiện tại (current / 현재) xác minh (verification / 확인), phần nào cần học sâu**. Nó không phải một chapter để học thuộc.
 
