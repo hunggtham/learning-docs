@@ -1,6 +1,6 @@
 # Collective bộ nhớ (memory / 메모리), Historiography và công khai (public / 공개) lịch sử (history / 이력)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Collective bộ nhớ (memory / 메모리), Historiography và công khai (public / 공개) lịch sử (history / 이력)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quá khứ ≠ lịch sử (history / 이력) ≠ bộ nhớ (memory / 메모리)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Joseon annals và archive culture** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Collective bộ nhớ (memory / 메모리), Historiography và công khai (public / 공개) lịch sử (history / 이력)**. Route đi từ past/history/memory distinction → annals và archive culture → public history, monuments và commemoration → power, identity và contestation → đọc narrative bằng nguồn và context.
 
 ## Quá khứ ≠ lịch sử (history / 이력) ≠ bộ nhớ (memory / 메모리)
 

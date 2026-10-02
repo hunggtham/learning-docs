@@ -1,6 +1,6 @@
 # 1987–1997: democratic consolidation và globalization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **1987–1997: democratic consolidation và globalization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Institutionalizing competition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1988 Seoul Olympics** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **1987–1997: democratic consolidation và globalization**. Route đi từ institutionalized competition → Seoul Olympics và global visibility → civil society, labor và media → economic opening, chaebol và inequality → 1997 crisis, để democratization nối với globalization mà không giản lược nhân quả.
 
 ## Institutionalizing competition
 

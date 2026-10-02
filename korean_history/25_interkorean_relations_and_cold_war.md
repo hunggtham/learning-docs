@@ -1,6 +1,6 @@
 # Quan hệ liên Triều và Cold War hệ thống (system / 시스템)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quan hệ liên Triều và Cold War hệ thống (system / 시스템)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Armistice tạo một “temporary hệ thống (system / 시스템)” tồn tại rất lâu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Competition for legitimacy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quan hệ liên Triều và Cold War hệ thống (system / 시스템)**. Route đi từ armistice/DMZ → competition for legitimacy → alliances, nuclear/security và diplomacy → inter-Korean exchanges/crises → institutionalized provisionality, để quan hệ liên Triều được đọc trong cả Cold War system và domestic state-building.
 
 ## Armistice tạo một “temporary hệ thống (system / 시스템)” tồn tại rất lâu
 
