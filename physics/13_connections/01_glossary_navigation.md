@@ -1,7 +1,6 @@
 # Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi
 
-> **Mạch đọc:** Đọc **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thuật ngữ nền tảng** sang **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thuật ngữ Việt–Anh–Hàn và điều hướng theo câu hỏi**. Route đi từ term/concept mapping → language variants → chapter pointers → question-based navigation → translation limits, để glossary giúp tìm đúng owner và ngữ cảnh.
 
 Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệm khi đọc tài liệu tiếng Việt, tiếng Anh hoặc tiếng Hàn. Nó không thay thế phần giải thích trong từng chương. Cột tiếng Anh giữ thuật ngữ chuẩn để tra giáo trình và bài báo; cột tiếng Hàn hỗ trợ đối chiếu tài liệu học tại Hàn Quốc.
 
@@ -135,8 +134,7 @@ Bảng thuật ngữ này là điểm tra cứu sau khi đã đọc các chapter
 | Bài toán ngược | Inverse bài toán (problem / 문제) | 역문제 | `12_experimental_computational/03_data_inference_inverse_problems.md` |
 | Tính nhận dạng tham số | Identifiability | 식별가능성 | `12_experimental_computational/03_data_inference_inverse_problems.md` |
 
-
-> **Chuyển mạch:** Từ **Thuật ngữ nền tảng**, ta sang **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** tiếp nhận điểm tựa từ **Thuật ngữ nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều hướng theo câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý
 
@@ -150,8 +148,7 @@ Hậu tố `장` có nghĩa là trường (field): `전기장` là điện trư�
 
 Trong vật lý nguyên tử, `에너지 준위` là mức năng lượng (energy level). Trong vật lý chất rắn thường gặp thêm `에너지 밴드` là dải năng lượng, `가전자대` là dải hóa trị, `전도대` là dải dẫn và `금지대` là vùng cấm.
 
-
-> **Chuyển mạch:** Từ **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý**, ta sang **Điều hướng theo câu hỏi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Điều hướng theo câu hỏi** tiếp nhận điểm tựa từ **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điều hướng theo câu hỏi
 
@@ -175,8 +172,7 @@ Nếu câu hỏi là “dữ liệu đo nói gì về tham số hoặc mô hình
 
 Nếu quan tâm sự hình thành cấu trúc lớn của Vũ trụ, một chuỗi hợp lý là [Hấp dẫn và quỹ đạo](../01_mechanics/06_gravitation_orbits.md) → [Thuyết tương đối rộng](../07_relativity/01_general_relativity.md) → [Thiên hà và vũ trụ học](../11_astrophysics_cosmology/01_galaxies_cosmology.md) → [Vũ trụ sơ khai](../11_astrophysics_cosmology/03_early_universe_dark_components.md) → [Bất ổn hấp dẫn và hình thành cấu trúc](../11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md).
 
-
-> **Chuyển mạch:** Từ **Điều hướng theo câu hỏi**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Điều hướng theo câu hỏi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -184,11 +180,10 @@ Bảng thuật ngữ chỉ là công cụ nhận diện. Mục tiêu thật sự
 
 Các thuật ngữ nâng cao cũng nên được đọc theo cùng cách: `Green's function`, `그린 함수` và “hàm Green” không phải ba kiến thức khác nhau; chúng là ba nhãn ngôn ngữ cho cùng một công cụ toán–lý. Việc giữ English/Korean bên cạnh chỉ nhằm tăng khả năng đối chiếu tài liệu, không thay thế phần giải thích tiếng Việt.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Liên hệ tiếp:** [README toàn bộ thư viện](../README.md), [Các cấu trúc lặp lại trong Vật lý](00_knowledge_connections.md), [Audit coverage và chất lượng](02_coverage_audit.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge connections](./00_knowledge_connections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

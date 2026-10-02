@@ -1,7 +1,6 @@
 # Chuyển động quay, mômen lực và mômen động lượng
 
-> **Mạch đọc:** Đọc **Chuyển động quay, mômen lực và mômen động lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ tịnh tiến sang quay** sang **Radian là đơn vị tự nhiên của góc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển động quay, mômen lực và mômen động lượng**. Route đi từ translation/rotation analogy → torque/angular acceleration → moment of inertia → angular momentum → rigid-body energy and constraints, để quay nối động lực học với hình học.
 
 Chuyển động quay không phải một tập công thức tách biệt khỏi cơ học tịnh tiến. Nó là cùng lô-gic (logic / 논리) Newton–năng lượng–bảo toàn nhưng hình học của vật mở rộng khiến phân bố khối lượng quanh trục trở nên quan trọng.
 
@@ -21,6 +20,8 @@ Một số cặp tương ứng hữu ích là:
 
 Sự tương tự này hữu ích nhưng không hoàn hảo. Ví dụ mômen động lượng và vận tốc góc của một vật rắn tổng quát không nhất thiết cùng phương. Muốn hiểu chuyển động quay ba chiều cần tensor quán tính chứ không chỉ một số `I`.
 
+> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Radian là đơn vị tự nhiên của góc** tiếp nhận điểm tựa từ **Từ tịnh tiến sang quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động học quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Radian là đơn vị tự nhiên của góc
 
 Radian được định nghĩa bởi
@@ -38,6 +39,8 @@ Giải tích lượng giác có dạng tự nhiên khi góc đo bằng radian:
 ```
 
 Đây là lý do các công thức `v=\omega r` hay `a_t=\alpha r` sử dụng trực tiếp `\theta` theo radian.
+
+> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Động học quay** tiếp nhận điểm tựa từ **Radian là đơn vị tự nhiên của góc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động học quay
 
@@ -69,6 +72,8 @@ Ngay cả khi `\omega` không đổi, hướng vận tốc vẫn thay đổi nê
 a_c=\omega^2r=\frac{v^2}{r}.
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen lực** tiếp nhận điểm tựa từ **Động học quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao τ=Iα xuất hiện?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mômen lực
 
 Mômen lực (torque / 돌림힘) được định nghĩa
@@ -86,6 +91,8 @@ Mômen lực (torque / 돌림힘) được định nghĩa
 trong đó `\ell` là cánh tay đòn vuông góc từ trục tới đường tác dụng của lực.
 
 Cùng một lực có thể tạo hiệu ứng quay rất khác nhau tùy vị trí đặt lực. Đây là lý do tay nắm cửa đặt xa bản lề.
+
+> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Vì sao τ=Iα xuất hiện?** tiếp nhận điểm tựa từ **Mômen lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen quán tính phụ thuộc trục quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao `τ=Iα` xuất hiện?
 
@@ -127,6 +134,8 @@ I=\sum_i m_ir_i^2.
 
 `I` xuất hiện vì khối lượng ở xa trục khó tăng tốc góc hơn theo hệ số `r^2`.
 
+> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen quán tính phụ thuộc trục quay** tiếp nhận điểm tựa từ **Vì sao τ=Iα xuất hiện?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý trục song song** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mômen quán tính phụ thuộc trục quay
 
 Với phân bố liên tục,
@@ -145,6 +154,8 @@ Ví dụ:
 
 Cùng `M` và `R`, vành có `I` lớn hơn đĩa vì nhiều khối lượng nằm xa trục hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Định lý trục song song** tiếp nhận điểm tựa từ **Mômen quán tính phụ thuộc trục quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động năng quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Định lý trục song song
 
 Nếu biết mômen quán tính quanh trục đi qua tâm khối,
@@ -156,6 +167,8 @@ I=I_{cm}+Md^2,
 với `d` là khoảng cách giữa hai trục song song.
 
 Định lý này rất hữu ích khi vật quay quanh bản lề hoặc trục không đi qua tâm khối.
+
+> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Động năng quay** tiếp nhận điểm tựa từ **Định lý trục song song** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động năng quay
 
@@ -186,6 +199,8 @@ P=\tau\omega.
 
 Đây là phiên bản quay của `dW=Fdx` và `P=Fv`.
 
+> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen động lượng** tiếp nhận điểm tựa từ **Động năng quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tensor quán tính và trục chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mômen động lượng
 
 Đối với chất điểm,
@@ -208,6 +223,8 @@ Nếu mômen lực ngoài bằng không,
 
 Bảo toàn mômen động lượng là nguyên lý tổng quát hơn công thức `L=I\omega`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Tensor quán tính và trục chính** tiếp nhận điểm tựa từ **Mômen động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện tượng “vợt tennis”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tensor quán tính và trục chính
 
 Trong chuyển động quay ba chiều,
@@ -224,6 +241,8 @@ L=I\omega.
 
 Tensor quán tính giải thích vì sao một vật có hình dạng bất đối xứng có thể có chuyển động quay phức tạp dù không chịu mômen lực ngoài.
 
+> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Hiện tượng “vợt tennis”** tiếp nhận điểm tựa từ **Tensor quán tính và trục chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo toàn mômen động lượng và người trượt băng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiện tượng “vợt tennis”
 
 Một vật rắn tự do có ba trục chính với ba mômen quán tính `I_1<I_2<I_3`. Quay gần trục có `I_1` nhỏ nhất hoặc `I_3` lớn nhất thường ổn định, còn quay gần trục trung gian `I_2` có thể không ổn định.
@@ -231,6 +250,8 @@ Một vật rắn tự do có ba trục chính với ba mômen quán tính `I_1<
 Đây là định lý trục trung gian (intermediate-axis theorem), thường được thấy khi ném một quyển sách hoặc vợt tennis lên không: quay quanh một trục có thể đột ngột lật hướng.
 
 Hiện tượng này cho thấy chuyển động quay ba chiều không thể hiểu đầy đủ chỉ bằng trực giác `τ=Iα` một chiều.
+
+> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Bảo toàn mômen động lượng và người trượt băng** tiếp nhận điểm tựa từ **Hiện tượng “vợt tennis”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Con quay và tiến động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo toàn mômen động lượng và người trượt băng
 
@@ -244,6 +265,8 @@ Do `I_f<I_i`, ta có `\omega_f>\omega_i`.
 
 Động năng không nhất thiết bảo toàn trong thao tác này. Người trượt băng thực hiện công bằng cơ bắp để kéo tay vào, nên năng lượng quay có thể tăng dù mômen động lượng bảo toàn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Con quay và tiến động** tiếp nhận điểm tựa từ **Bảo toàn mômen động lượng và người trượt băng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lăn không trượt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Con quay và tiến động
 
 Một con quay quay nhanh có mômen động lượng lớn. Nếu trọng lực tạo mômen lực gần vuông góc với `\vec L`, mômen lực chủ yếu đổi **hướng** của `\vec L` thay vì làm giảm nhanh độ lớn của nó.
@@ -255,6 +278,8 @@ Kết quả là trục quay tiến động (precession). Trong mô hình đơn g
 ```
 
 Hiện tượng này xuất hiện trong con quay hồi chuyển, vệ tinh, động lực học hành tinh và cảm biến quán tính.
+
+> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Lăn không trượt** tiếp nhận điểm tựa từ **Con quay và tiến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vai trò của ma sát tĩnh khi lăn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lăn không trượt
 
@@ -284,11 +309,15 @@ v^2=\frac{2gh}{1+I/(MR^2)}.
 
 Vật có `I/(MR^2)` lớn hơn sẽ có tốc độ tâm khối nhỏ hơn tại cùng độ cao vì nhiều năng lượng nằm trong chuyển động quay.
 
+> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** tiếp nhận điểm tựa từ **Lăn không trượt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: đĩa đặc lăn xuống dốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vai trò của ma sát tĩnh khi lăn
 
 Trong lăn không trượt trên bề mặt cố định, điểm tiếp xúc tức thời có vận tốc bằng không so với mặt đất. Vì vậy ma sát tại tiếp xúc có thể là ma sát tĩnh và không nhất thiết tiêu tán cơ năng.
 
 Hướng của ma sát không thể đoán chỉ từ hướng chuyển động tâm khối; phải xét xu hướng trượt tương đối tại điểm tiếp xúc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** cho ta quy tắc; **Ví dụ: đĩa đặc lăn xuống dốc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: đĩa đặc lăn xuống dốc
 
@@ -336,9 +365,13 @@ a=\frac23g\sin\theta.
 
 Gia tốc nhỏ hơn `g\sin\theta` của một vật trượt không ma sát vì một phần năng lượng đi vào quay.
 
+> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Ví dụ: đĩa đặc lăn xuống dốc** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Chuyển động quay là cơ học của **phân bố khối lượng và hình học quanh trục**. Mômen lực đo khả năng thay đổi mômen động lượng; mômen quán tính đo cách khối lượng được phân bố; còn bảo toàn mômen động lượng là hệ quả sâu hơn của đối xứng quay.
+
+> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -358,10 +391,12 @@ Không. Ma sát tĩnh trong lăn không trượt có thể không sinh công t�
 
 Chỉ đúng đơn giản khi quay quanh trục chính hoặc trong những hình học đủ đối xứng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Động học](00_kinematics.md), [Các lực thường gặp](02_common_forces.md), [Công và năng lượng](03_work_energy_power.md).
 
 **Liên hệ tiếp:** [Cơ học giải tích](08_analytical_mechanics.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md), [Dao động ghép và mode chuẩn](../02_oscillations_waves/02_coupled_oscillators_normal_modes.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
