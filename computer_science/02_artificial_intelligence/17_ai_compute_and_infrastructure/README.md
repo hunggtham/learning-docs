@@ -1,6 +1,6 @@
 # Tính toán và Hạ tầng AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tính toán và Hạ tầng AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phụ thuộc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** Đây là README owner của **Tính toán và hạ tầng AI**. Route đọc đi từ compute/memory foundations → accelerator architecture → parallel/distributed execution → scheduling/interconnect → economics/energy, để phần cứng nối với workload, SLO và ngân sách.
 
 Folder này giải thích **nền tảng vật lý (physical substrate)** của AI: bộ tăng tốc (accelerator), kiến trúc GPU, phân cấp bộ nhớ, tính toán song song, huấn luyện/suy luận phân tán, topology của cụm máy và kinh tế học tài nguyên tính toán. Mục tiêu không phải học phần cứng như một lĩnh vực (domain / 도메인) tách rời mà hiểu **vì sao hành vi của mô hình và thời gian chạy (runtime / 런타임) bị giới hạn bởi năng lực tính toán, bộ nhớ và giao tiếp**.
 

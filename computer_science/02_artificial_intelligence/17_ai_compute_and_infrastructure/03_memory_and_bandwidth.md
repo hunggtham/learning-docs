@@ -1,6 +1,6 @@
 # Bộ nhớ (memory / 메모리) Hierarchy và Bandwidth trong AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) Hierarchy và Bandwidth trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bộ nhớ (memory / 메모리) Hierarchy** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sức chứa (capacity / 용량), Bandwidth và độ trễ (latency / 지연 시간)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Memory hierarchy và bandwidth trong AI**. Route đi từ registers/cache → HBM/DRAM → capacity/bandwidth/latency → data reuse → out-of-memory and serving limits, để bottleneck bộ nhớ được đọc cùng phép tính.
 
 AI tải công việc (workload / 워크로드) xử lý tensor rất lớn. Trong nhiều trường hợp hiệu năng (performance / 성능) không bị giới hạn bởi số phép tính mà bởi việc **đưa dữ liệu tới compute đơn vị (unit / 단위) nhanh đến đâu**. Vì vậy bộ nhớ (memory / 메모리) sức chứa (capacity / 용량), hierarchy và bandwidth là phần cốt lõi của AI hạ tầng (infrastructure / 인프라).
 

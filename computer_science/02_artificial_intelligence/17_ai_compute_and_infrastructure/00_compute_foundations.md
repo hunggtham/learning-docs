@@ -1,6 +1,6 @@
 # Nền tảng Tính toán cho Trí tuệ Nhân tạo
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng Tính toán cho Trí tuệ Nhân tạo**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Năng lực tính toán không chỉ là FLOPs** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Huấn luyện và Suy luận** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Compute foundations cho AI**. Route đi từ workload/operation → FLOPs and memory movement → accelerator utilization → training/inference phases → cost and reliability, để năng lực tính toán được đo theo workload thay vì một con số đơn.
 
 AI hiện đại tồn tại ở giao điểm giữa thuật toán và tính toán vật lý. Một mô hình có thể đúng về mặt toán học nhưng không thực tế nếu bộ nhớ không đủ, băng thông quá thấp hoặc giao tiếp giữa các thiết bị chiếm phần lớn thời gian. Vì vậy hiểu **tính toán AI (AI compute / AI 연산)** giúp nối Đại số tuyến tính, Deep học tập (learning / 학습) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) với phần cứng thực tế.
 

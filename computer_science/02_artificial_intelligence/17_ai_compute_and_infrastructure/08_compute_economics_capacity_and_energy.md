@@ -1,6 +1,6 @@
 # Compute Economics, sức chứa (capacity / 용량) và năng lượng (energy / 에너지)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Compute Economics, sức chứa (capacity / 용량) và năng lượng (energy / 에너지)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Accelerator-Hour** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chi phí trên đơn vị từ (token / 토큰), suy luận (inference / 추론) và tác vụ (task / 작업)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Compute economics, capacity và energy**. Route đi từ accelerator-hours → utilization/capacity → token/task unit cost → power/cooling → demand planning, để chi phí tính toán nối với khối lượng công việc và năng lượng.
 
 Hạ tầng AI không chỉ là bài toán hiệu năng mà còn là bài toán kinh tế. Một hệ thống phải đạt chất lượng (quality / 품질) và SLO trong giới hạn ngân sách (budget / 예산), power, availability và năng lực vận hành của nhóm (team / 팀). **Kinh tế tính toán (compute economics)** hỏi: mỗi đơn vị công việc hữu ích tiêu tốn bao nhiêu tài nguyên và chi phí?
 

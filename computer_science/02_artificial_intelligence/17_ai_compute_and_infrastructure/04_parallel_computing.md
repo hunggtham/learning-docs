@@ -1,6 +1,6 @@
 # Parallel Computing trong AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Parallel Computing trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Parallelism ở nhiều cấp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dữ liệu (data / 데이터) Parallelism** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Parallel computing trong AI**. Route đi từ instruction/data/model parallelism → partition strategy → synchronization/communication → scaling efficiency → failure and reproducibility, để song song hóa nối với giới hạn hệ thống.
 
 Deep học tập (learning / 학습) có thể quy mô (scale / 규모) lớn vì phần lớn tensor thao tác (operation / 연산) có thể chạy song song. Nhưng **xử lý song song (parallelism / 병렬 처리)** không phải một kỹ thuật duy nhất. Ta có thể song song theo dữ liệu (data / 데이터), mô hình (model / 모델) dimension, chuỗi xử lý (pipeline / 파이프라인) stage hoặc yêu cầu (request / 요청). Mỗi cách tạo communication mẫu (pattern / 패턴), bộ nhớ (memory / 메모리) footprint và synchronization overhead khác nhau.
 

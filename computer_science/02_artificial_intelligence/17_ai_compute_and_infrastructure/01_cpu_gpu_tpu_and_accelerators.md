@@ -1,6 +1,6 @@
 # CPU, GPU, TPU và AI Accelerator
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CPU, GPU, TPU và AI Accelerator**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CPU** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **GPU** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CPU, GPU, TPU và AI accelerators**. Route đi từ general-purpose control → SIMD/GPU throughput → tensor-specific units → memory/interconnect constraints → workload fit, để chọn accelerator theo toán và đường dữ liệu.
 
 AI tải công việc (workload / 워크로드) có thể chạy trên nhiều loại compute hardware. Không có accelerator “tốt nhất” cho mọi tác vụ (task / 작업); mỗi kiến trúc (architecture / 아키텍처) tối ưu một mẫu (pattern / 패턴) computation khác nhau.
 

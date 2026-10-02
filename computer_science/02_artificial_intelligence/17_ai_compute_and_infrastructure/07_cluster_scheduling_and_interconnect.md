@@ -1,6 +1,6 @@
 # Cluster Scheduling và Interconnect cho AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cluster Scheduling và Interconnect cho AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vật lý (physical / 물리적) Topology** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Interconnect** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cluster scheduling và interconnect cho AI**. Route đi từ physical topology → placement/scheduling → network fabric → congestion/collectives → utilization and isolation, để hạ tầng nối topology với job completion time.
 
 Khi AI tải công việc (workload / 워크로드) chạy trên nhiều accelerator, **cluster scheduler** và **interconnect** trở thành một phần của hiệu năng (performance / 성능) mô hình (model / 모델). Một job được đặt sai topology có thể có communication chậm hơn nhiều dù dùng cùng số GPU.
 

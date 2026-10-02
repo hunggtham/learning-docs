@@ -1,6 +1,6 @@
 # Phân tán (distributed / 분산) suy luận (inference / 추론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phân tán (distributed / 분산) suy luận (inference / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hai hướng quy mô (scale / 규모) chính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Replica Parallelism** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Distributed inference**. Route đi từ replica/tensor/pipeline parallelism → request routing → batching and queueing → consistency/fault handling → latency and utilization, để scale inference nối với SLO phục vụ.
 
 **Suy luận phân tán (distributed inference / 분산 추론)** dùng nhiều thiết bị (device / 장치) hoặc nút (node / 노드) để phục vụ một mô hình (model / 모델) hoặc cả yêu cầu (request / 요청) tải công việc (workload / 워크로드). Khác phân tán (distributed / 분산) huấn luyện (training / 학습), mục tiêu thường là độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량), tính đồng thời (concurrency / 동시성) và chi phí (cost / 비용) thay vì độ dốc (gradient / 기울기) synchronization.
 

@@ -1,6 +1,6 @@
 # Kiến trúc GPU cho AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiến trúc GPU cho AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Streaming Multiprocessor** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Luồng thực thi (thread / 스레드), khối (block / 블록) và Grid** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **GPU architecture cho AI**. Route đi từ SM/warps → threads/blocks/grids → tensor cores/shared memory → occupancy and synchronization → kernel bottlenecks, để kiến trúc nối với cách workload thực thi.
 
 Để hiểu vì sao neural mạng (network / 네트워크) chạy nhanh hay chậm trên GPU, cần một mô hình tư duy về cách GPU tổ chức compute và bộ nhớ (memory / 메모리). Không cần trở thành CUDA expert, nhưng các khái niệm như luồng thực thi (thread / 스레드) group, warp hoặc wavefront, SM, register, dùng chung (shared / 공유) bộ nhớ (memory / 메모리) và HBM giúp giải thích hành vi (behavior / 동작) về hiệu năng.
 

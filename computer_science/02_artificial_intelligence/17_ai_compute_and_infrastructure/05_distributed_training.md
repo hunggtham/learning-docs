@@ -1,6 +1,6 @@
 # Phân tán (distributed / 분산) huấn luyện (training / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phân tán (distributed / 분산) huấn luyện (training / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần phân tán (distributed / 분산) huấn luyện (training / 학습)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dữ liệu (data / 데이터) Parallel huấn luyện (training / 학습)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Distributed training**. Route đi từ data/model parallelism → gradient synchronization → collective communication → checkpoint/failure recovery → scaling and convergence, để phân tán được đánh giá cả bằng tốc độ lẫn tính đúng.
 
 Khi mô hình (model / 모델), optimizer trạng thái (state / 상태) hoặc desired batch không fit trên một accelerator, huấn luyện (training / 학습) phải được phân tán qua nhiều thiết bị (device / 장치) hoặc nút (node / 노드). **Huấn luyện phân tán (distributed training / 분산 학습)** không chỉ là chạy cùng một đoạn mã (code / 코드) trên nhiều GPU; nó làm thay đổi bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃), communication mẫu (pattern / 패턴), fault mô hình (model / 모델) và khả năng tái lập.
 
