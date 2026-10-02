@@ -1,6 +1,6 @@
 # Ngôn ngữ Toán học tối thiểu để đọc Vật lý
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hàm số: một đại lượng phụ thuộc vào cái gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đạo hàm: đo tốc độ biến thiên cục bộ** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**. Route đi từ functions/relations → derivatives → integrals → vectors/linear algebra → differential equations, để công cụ toán nối trực tiếp với mô hình vật lý.
 
 Toán học trong Vật lý không chỉ là công cụ tính số. Nó là ngôn ngữ dùng để nói chính xác một đại lượng phụ thuộc vào đâu, thay đổi như thế nào, tích lũy ra sao và các bậc tự do tương tác với nhau theo cấu trúc nào.
 

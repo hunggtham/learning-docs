@@ -1,13 +1,14 @@
 # Không gian, thời gian, vectơ (vector) và hệ quy chiếu
 
-> **Mạch đọc:** Đọc **Không gian, thời gian, vectơ (vector) và hệ quy chiếu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao phải định nghĩa “ở đâu” trước khi nói về chuyển động?** sang **Tọa độ và vị trí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Không gian, thời gian, vector và hệ quy chiếu**. Route đi từ coordinates/frames → vectors → position/displacement → velocity/acceleration → frame transformations, để chuyển động được đọc độc lập với cách chọn tọa độ.
 
 ## Vì sao phải định nghĩa “ở đâu” trước khi nói về chuyển động?
 
 Chuyển động chỉ có nghĩa khi ta có cách mô tả vị trí và một đối tượng dùng làm mốc. Một người ngồi trên tàu có thể đứng yên đối với ghế nhưng chuyển động với vận tốc hàng trăm km/h so với mặt đất. Vì vậy vị trí và vận tốc không phải thuộc tính tuyệt đối tách khỏi bối cảnh; chúng được xác định trong một hệ quy chiếu (Reference Frame / 기준계, 좌표계).
 
 Trong cơ học cổ điển, một hệ quy chiếu thường gồm một gốc tọa độ, các trục không gian và một cách đo thời gian. Ta có thể gắn trục `x` dọc theo đường, `y` ngang đường, `z` theo phương thẳng đứng.
+
+> **Chuyển mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Tọa độ và vị trí** tiếp nhận điểm tựa từ **Vì sao phải định nghĩa “ở đâu” trước khi nói về chuyển động?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dời khác quãng đường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tọa độ và vị trí
 
@@ -41,6 +42,8 @@ trong đó `\hat i,\hat j,\hat k` là vectơ đơn vị theo ba trục.
 
 Công thức này là định lý Pythagoras mở rộng sang ba chiều. Nó cho thấy hình học Euclid nằm trực tiếp bên trong ngôn ngữ vectơ.
 
+> **Chuyển mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Độ dời khác quãng đường** tiếp nhận điểm tựa từ **Tọa độ và vị trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng vectơ như hợp thành ảnh hưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ dời khác quãng đường
 
 Độ dời (Displacement / 변위) là vectơ nối vị trí đầu tới vị trí cuối:
@@ -52,6 +55,8 @@ Công thức này là định lý Pythagoras mở rộng sang ba chiều. Nó ch
 Quãng đường (Distance Traveled / 이동거리) là tổng chiều dài đường thực tế đã đi.
 
 Nếu đi một vòng 400 m quanh sân vận động và trở lại vị trí ban đầu, quãng đường là 400 m nhưng độ dời bằng không (zero). Khác biệt này sẽ quyết định cách định nghĩa tốc độ và vận tốc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Cộng vectơ như hợp thành ảnh hưởng** tiếp nhận điểm tựa từ **Độ dời khác quãng đường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích vô hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cộng vectơ như hợp thành ảnh hưởng
 
@@ -68,6 +73,8 @@ Nếu đi 3 m về Đông rồi 4 m về Bắc, độ dời tổng không phải
 ```
 
 Trong đồ họa máy tính (Computer Graphics), cùng nguyên lý dùng để dịch chuyển vật thể (object) trong 2D/3D. Trong kỹ thuật robot (robotics), vị trí, vận tốc, lực và mômen (moment) đều được mô tả bằng vectơ hoặc tensor vì hướng là phần không thể tách khỏi đại lượng.
+
+> **Chuyển mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Tích vô hướng** tiếp nhận điểm tựa từ **Cộng vectơ như hợp thành ảnh hưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích có hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tích vô hướng
 
@@ -95,6 +102,8 @@ Chỉ thành phần lực cùng hướng chuyển động mới truyền năng l
 
 Trong học máy (Machine Learning), cosine similarity dùng cùng hình học để đo hướng tương tự giữa embedding các vectơ (vectors). Đây là một liên hệ (connection) trực tiếp: “hai vectơ gần cùng hướng” có thể nghĩa hai lực gần cùng hướng, hoặc hai embedding biểu diễn ngữ nghĩa gần nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Tích có hướng** tiếp nhận điểm tựa từ **Tích vô hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian và sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tích có hướng
 
 Tích có hướng (Cross Product / 외적) tạo ra vectơ vuông góc với mặt phẳng chứa hai vectơ:
@@ -117,11 +126,15 @@ và lực từ:
 
 Sine xuất hiện vì chỉ thành phần vuông góc mới tạo quay (rotation) hoặc lực từ theo dạng này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Thời gian và sự kiện** tiếp nhận điểm tựa từ **Tích có hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ quy chiếu quán tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thời gian và sự kiện
 
 Trong cơ học Newton, thời gian (Time / 시간) được giả định là một tham số tuyệt đối giống nhau cho mọi người quan sát (observer). Một sự kiện có thể mô tả bằng `(t,x,y,z)`.
 
 Thuyết tương đối sẽ thay đổi giả định (assumption / 가정) này: các người quan sát chuyển động tương đối có thể đo khác nhau về khoảng thời gian và độ dài. Tuy nhiên ở vận tốc đời thường, sai khác cực nhỏ nên thời gian Newton là mô hình rất tốt.
+
+> **Chuyển mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Hệ quy chiếu quán tính** tiếp nhận điểm tựa từ **Thời gian và sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đổi hệ tọa độ và bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ quy chiếu quán tính
 
@@ -129,11 +142,15 @@ Hệ quy chiếu quán tính (Inertial Frame / 관성계) là hệ mà vật kh�
 
 Một xe đang tăng tốc không phải hệ quy chiếu quán tính (inertial frame) lý tưởng. Người trong xe cảm thấy “bị đẩy lùi” dù không có một vật nào ở phía sau kéo họ. Trong hệ xe, ta phải đưa thêm lực quán tính giả để viết phương trình theo dạng quen thuộc.
 
+> **Chuyển mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Đổi hệ tọa độ và bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **Hệ quy chiếu quán tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: vận tốc tương đối cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đổi hệ tọa độ và bất biến (invariant / 불변식)
 
 Nếu quay hệ trục, các thành phần vectơ thay đổi nhưng độ lớn của vectơ không thay đổi. Đây là ví dụ đơn giản về bất biến (Invariant / 불변량): thứ không phụ thuộc vào cách ta chọn tọa độ.
 
 Vật lý hiện đại tìm kiếm các đại lượng bất biến rất sâu. Trong tương đối hẹp, khoảng không-thời gian là bất biến dù người quan sát khác nhau đo thời gian và khoảng cách riêng lẻ khác nhau. Trong lý thuyết chuẩn (gauge theory), nhiều biểu diễn toán học khác nhau có thể mô tả cùng trạng thái vật lý.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Đổi hệ tọa độ và bất biến (invariant / 불변식)** cho ta quy tắc; **Ví dụ: vận tốc tương đối cổ điển** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: vận tốc tương đối cổ điển
 
@@ -145,16 +162,22 @@ v_{person,ground}=v_{person,train}+v_{train,ground}=22\,m/s
 
 Quy tắc cộng này hoạt động cực tốt ở vận tốc nhỏ. Nhưng nếu thay tàu bằng ánh sáng, ta không thể cộng như vậy; thuyết tương đối sẽ thay công thức để giữ tốc độ ánh sáng `c` như bất biến.
 
+> **Chuyển mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Ví dụ: vận tốc tương đối cổ điển** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Tọa độ là nhãn do ta chọn; vectơ là đối tượng hình học không phụ thuộc nhãn đó. Một đại lượng vật lý tốt thường được diễn đạt sao cho khi đổi hệ tọa độ, cách viết có thể đổi nhưng quan hệ vật lý cốt lõi vẫn được bảo toàn.
+
+> **Chuyển mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 vectơ không phải chỉ là “mảng số”. Mảng số là các thành phần (component / 컴포넌트) của vectơ trong một cơ sở (basis) cụ thể; đổi cơ sở thì thành phần đổi nhưng vectơ hình học không nhất thiết đổi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Liên hệ tiếp:** [Động học](../01_mechanics/00_kinematics.md), [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 physical thinking](./00_physical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

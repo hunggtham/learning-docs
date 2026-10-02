@@ -1,7 +1,6 @@
 # Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)
 
-> **Mạch đọc:** Đọc **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vật lý thực sự nghiên cứu điều gì?** sang **Mô hình không phải hiện thực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tư duy Vật lý và first-principles thinking**. Route đi từ observation → idealized model → conservation/constraints → prediction → measurement feedback, để mô hình hóa nối trực giác với kiểm chứng.
 
 Vật lý không bắt đầu từ việc nhớ công thức. Nó bắt đầu bằng việc quyết định **điều gì trong hiện tượng cần được giữ lại để tạo thành một mô hình có thể đo, tính và kiểm chứng**.
 
@@ -14,6 +13,8 @@ Vật lý (Physics / 물리학) nghiên cứu các quy luật tổng quát chi p
 Nếu một quả bóng rơi, ta có thể mô tả màu sắc, vật liệu, âm thanh khi va đất, lịch sử người ném hoặc chuyển động của từng phân tử trong bóng. Nhưng nếu câu hỏi là “bao lâu thì bóng chạm đất?”, phần lớn thông tin đó không cần thiết. Chiều cao ban đầu, vận tốc ban đầu và trường hấp dẫn mới là các đại lượng chi phối ở mô hình đơn giản nhất.
 
 Quá trình loại bỏ chi tiết không liên quan được gọi là **mô hình hóa (modeling / 모델링)**.
+
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Mô hình không phải hiện thực** tiếp nhận điểm tựa từ **Vật lý thực sự nghiên cứu điều gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước đầu tiên: xác định hệ và ranh giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình không phải hiện thực
 
@@ -36,6 +37,8 @@ ta đang xây một lớp mô hình đơn giản hơn để cô lập cơ chế 
 Cùng một hệ vật lý có thể cần nhiều mô hình khác nhau. Một chiếc ô tô có thể là chất điểm trong bài đường đi, vật rắn có tâm khối trong bài lật xe, vật thể có hình học bề mặt trong khí động học và hệ nhiệt–cơ phức tạp trong bài động cơ.
 
 > Một phương trình vật lý có thể được xem như một “hợp đồng”: nó cho dự đoán chính xác trong một miền điều kiện nhất định, đổi lại ta phải tôn trọng các giả định tạo nên nó.
+
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Bước đầu tiên: xác định hệ và ranh giới** tiếp nhận điểm tựa từ **Mô hình không phải hiện thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chọn biến trạng thái và bậc tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước đầu tiên: xác định hệ và ranh giới
 
@@ -60,6 +63,8 @@ thì tương tác hấp dẫn nằm bên trong hệ và có thể được mô t
 Hai cách chọn đều hợp lệ, nhưng chúng dẫn tới cách viết phương trình và định luật bảo toàn khác nhau.
 
 Đây là lý do các câu như “động lượng có bảo toàn không?” hoặc “năng lượng có bảo toàn không?” không thể trả lời chính xác nếu chưa biết ranh giới hệ và những gì đi qua ranh giới đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Chọn biến trạng thái và bậc tự do** tiếp nhận điểm tựa từ **Bước đầu tiên: xác định hệ và ranh giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ hiện tượng đến câu hỏi đo được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chọn biến trạng thái và bậc tự do
 
@@ -92,6 +97,8 @@ T(\mathbf r,t).
 Số lượng biến độc lập cần thiết được liên hệ với **bậc tự do (degrees of freedom / 자유도)**.
 
 Chọn quá nhiều biến làm mô hình nặng mà không tăng khả năng dự đoán. Chọn quá ít biến có thể làm mất cơ chế quan trọng. Mô hình hóa tốt là tìm mức mô tả vừa đủ cho câu hỏi.
+
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Từ hiện tượng đến câu hỏi đo được** tiếp nhận điểm tựa từ **Chọn biến trạng thái và bậc tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ nguyên lý đầu tiên nghĩa là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ hiện tượng đến câu hỏi đo được
 
@@ -138,6 +145,8 @@ phép đo
 
 Không nên mặc định mọi sai khác đều do tính toán sai.
 
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Từ nguyên lý đầu tiên nghĩa là gì?** tiếp nhận điểm tựa từ **Từ hiện tượng đến câu hỏi đo được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật vật lý và quan hệ nhân quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ nguyên lý đầu tiên nghĩa là gì?
 
 Tư duy từ nguyên lý đầu tiên (first-principles thinking) không có nghĩa là lúc nào cũng phải bắt đầu từ lý thuyết cơ bản nhất của tự nhiên như Mô hình Chuẩn.
@@ -155,6 +164,8 @@ Trong điện từ học, có thể là các phương trình Maxwell.
 Trong lượng tử không tương đối tính, có thể là cấu trúc trạng thái cùng phương trình Schrödinger.
 
 Điểm cốt lõi là: thay vì nhớ một công thức chuyên biệt cho mỗi tình huống, ta cố truy nó về một tập nguyên lý tổng quát hơn và các giả định đã dùng để suy ra công thức đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Định luật vật lý và quan hệ nhân quả** tiếp nhận điểm tựa từ **Từ nguyên lý đầu tiên nghĩa là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân biệt mô tả với giải thích cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Định luật vật lý và quan hệ nhân quả
 
@@ -179,6 +190,8 @@ cơ học lượng tử → hành vi cổ điển trong các giới hạn thích
 ```
 
 Kiểm tra giới hạn là một trong những công cụ mạnh nhất để phát hiện công thức sai.
+
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Định luật vật lý và quan hệ nhân quả** xác định đầu vào; **Phân biệt mô tả với giải thích cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Phân tích thang đo trước khi giải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân biệt mô tả với giải thích cơ chế
 
@@ -207,6 +220,8 @@ mô hình cơ chế (mechanistic model)
 ```
 
 Cả hai đều hữu ích. Mức mô tả nào cần dùng phụ thuộc câu hỏi.
+
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, cơ chế trong **Phân biệt mô tả với giải thích cơ chế** cần được kiểm chứng bằng dấu vết cụ thể; **Phân tích thang đo trước khi giải** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Ước lượng bậc độ lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân tích thang đo trước khi giải
 
@@ -246,6 +261,8 @@ so sánh quán tính với độ nhớt.
 
 Tư duy theo **tỉ số vô thứ nguyên (dimensionless ratio)** tốt hơn các nhận xét mơ hồ như “vận tốc khá nhỏ” hoặc “vật khá lớn”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Ước lượng bậc độ lớn** tiếp nhận điểm tựa từ **Phân tích thang đo trước khi giải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tích thứ nguyên như một bộ kiểm tra lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ước lượng bậc độ lớn
 
 Trước khi làm phép tính chính xác, nên ước lượng kết quả ở bậc độ lớn (order of magnitude).
@@ -259,6 +276,8 @@ Nếu tính vận tốc của ô tô và nhận được
 thì sai lệch không còn là vấn đề làm tròn số. Hoặc mô hình, hoặc đơn vị, hoặc phép biến đổi đại số đã có vấn đề.
 
 Ước lượng kiểu Fermi chia một câu hỏi khó thành các yếu tố dễ ước lượng hơn. Trong khoa học và kỹ thuật, khả năng nhận ra “kết quả này không thể đúng về mặt quy mô” rất quan trọng.
+
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Phân tích thứ nguyên như một bộ kiểm tra lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Ước lượng bậc độ lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xấp xỉ phải có tham số kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân tích thứ nguyên như một bộ kiểm tra lô-gic (logic / 논리)
 
@@ -287,6 +306,8 @@ T\propto\sqrt{\frac{L}{g}}.
 ```
 
 Hệ số `2\pi` cần mô hình động lực học để xác định.
+
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Xấp xỉ phải có tham số kiểm soát** tiếp nhận điểm tựa từ **Phân tích thứ nguyên như một bộ kiểm tra lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện đầu và điều kiện biên là một phần của mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xấp xỉ phải có tham số kiểm soát
 
@@ -324,6 +345,8 @@ nghiệm cuối có còn nằm trong miền xấp xỉ ban đầu không?
 
 Câu hỏi cuối rất quan trọng. Một phép giải có thể bắt đầu với giả định “góc nhỏ” nhưng cho nghiệm góc lớn; khi đó mô hình tự mâu thuẫn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Điều kiện đầu và điều kiện biên là một phần của mô hình** tiếp nhận điểm tựa từ **Xấp xỉ phải có tham số kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài toán thuận và bài toán ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điều kiện đầu và điều kiện biên là một phần của mô hình
 
 Phương trình chi phối thường chưa đủ để xác định nghiệm.
@@ -354,6 +377,8 @@ phương trình chi phối
 + hình học
 ```
 
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Bài toán thuận và bài toán ngược** tiếp nhận điểm tựa từ **Điều kiện đầu và điều kiện biên là một phần của mô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình phải tạo được dự đoán có thể kiểm tra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bài toán thuận và bài toán ngược
 
 Bài toán thuận (forward problem) đi từ mô hình tới dự đoán:
@@ -378,6 +403,8 @@ Bài toán ngược thường khó hơn vì nhiều mô hình khác nhau có th�
 
 Đây là cầu nối trực tiếp giữa Vật lý, thống kê, khoa học dữ liệu và Machine học tập (learning / 학습).
 
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Mô hình phải tạo được dự đoán có thể kiểm tra** tiếp nhận điểm tựa từ **Bài toán thuận và bài toán ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sai số mô hình khác sai số đo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình phải tạo được dự đoán có thể kiểm tra
 
 Một mô hình khoa học mạnh không chỉ giải thích dữ liệu đã biết; nó cần tạo ra hệ quả mà phép đo có thể kiểm tra.
@@ -395,6 +422,8 @@ model
 Nếu ta thay đổi mô hình mỗi lần có dữ liệu mới mà không để lại khả năng bị bác bỏ, mô hình sẽ mất sức mạnh kiểm chứng.
 
 Điều này liên quan tới tính khả kiểm (falsifiability), nhưng trong thực hành khoa học hiện đại cần tinh tế hơn: dữ liệu không bao giờ hoàn hảo, mô hình thường gần đúng và phép đo có bất định (uncertainty / 불확실성). Vì vậy ta đánh giá mức phù hợp định lượng, không chỉ hỏi “đúng hay sai tuyệt đối”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Sai số mô hình khác sai số đo** tiếp nhận điểm tựa từ **Mô hình phải tạo được dự đoán có thể kiểm tra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Emergence và coarse-graining** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sai số mô hình khác sai số đo
 
@@ -414,6 +443,8 @@ Sai lệch mô hình đến từ việc giả định vật lý chưa đủ, ch�
 
 Tăng độ chính xác của máy đo không tự sửa một mô hình sai.
 
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Emergence và coarse-graining** tiếp nhận điểm tựa từ **Sai số mô hình khác sai số đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Toán học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Emergence và coarse-graining
 
 Vật lý hoạt động ở nhiều cấp mô tả.
@@ -429,6 +460,8 @@ Nhiệt độ không phải thuộc tính đầy đủ của một phân tử đ
 Việc chuyển từ chi tiết vi mô sang các biến tập thể được gọi là **coarse-graining**. Các quy luật hiệu dụng xuất hiện ở thang lớn hơn được gọi là hiện tượng nổi lên (emergence / 창발).
 
 Điều này liên hệ mạnh với Chemistry, Materials Science và Khoa học máy tính (computer science / 컴퓨터 과학): cùng một hệ có thể cần các lớp trừu tượng (abstraction / 추상화) khác nhau ở các thang khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Liên hệ với Toán học** tiếp nhận điểm tựa từ **Emergence và coarse-graining** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Chemistry và Materials Science** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với Toán học
 
@@ -447,6 +480,8 @@ Nhưng một biểu thức toán học chỉ trở thành phát biểu vật lý
 
 Cùng một phương trình vi phân có thể xuất hiện trong nhiều hệ hoàn toàn khác nhau; sự giống nhau nằm ở cấu trúc toán học, không có nghĩa các hệ có cùng bản chất vật lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Liên hệ với Chemistry và Materials Science** tiếp nhận điểm tựa từ **Liên hệ với Toán học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với Chemistry và Materials Science
 
 Hóa học thường bắt đầu ở cấp nguyên tử–phân tử nơi cơ học lượng tử quyết định orbital, liên kết và phổ năng lượng.
@@ -462,6 +497,8 @@ hằng số điện môi
 ```
 
 Vì vậy một tham số xuất hiện trong phương trình vĩ mô thường là kết quả nén của rất nhiều physics ở cấp thấp hơn.
+
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Liên hệ với kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **Liên hệ với Chemistry và Materials Science** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với kỹ thuật (engineering / 엔지니어링)
 
@@ -480,6 +517,8 @@ reliability
 Một mô hình đủ tốt cho nghiên cứu định tính có thể chưa đủ tốt cho thiết kế kỹ thuật nếu sai số nhỏ gây hậu quả lớn.
 
 Do đó kỹ thuật thường yêu cầu thêm an toàn (safety / 안전) factor, tolerance phân tích (analysis / 분석), bất định (uncertainty / 불확실성) propagation và kiểm tra hợp lệ (validation / 검증) với dữ liệu thực.
+
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학)** tiếp nhận điểm tựa từ **Liên hệ với kỹ thuật (engineering / 엔지니어링)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy trình first-principles có thể tái sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학)
 
@@ -501,6 +540,8 @@ Một chương trình chạy thành công chỉ chứng minh rằng máy tính �
 
 Đây là lý do phiên bản (version / 버전) điều khiển (control / 제어), testing, reproducibility và numerical kiểm tra hợp lệ (validation / 검증) cũng là một phần của vật lý tính toán hiện đại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학)** xác định đầu vào; **Quy trình first-principles có thể tái sử dụng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy trình first-principles có thể tái sử dụng
 
 Khi gặp một hiện tượng mới, có thể đi theo chuỗi câu hỏi sau:
@@ -521,6 +562,8 @@ Khi gặp một hiện tượng mới, có thể đi theo chuỗi câu hỏi sau
 
 Đây không phải checklist phải thực hiện máy móc cho mọi bài đơn giản. Nó là khung tư duy để tránh nhảy trực tiếp từ đề bài sang công thức.
 
+> **Chuyển mạch:** Trong **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Quy trình first-principles có thể tái sử dụng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Một cách cô đọng để nhìn toàn bộ Vật lý là
@@ -538,6 +581,8 @@ hiện thực
 ```
 
 Mục tiêu không phải tạo mô hình chứa mọi chi tiết. Mục tiêu là tạo **mô hình đơn giản nhất vẫn giữ đúng cơ chế cần thiết cho câu hỏi hiện tại**, đồng thời biết rõ khi nào mô hình đó hết hiệu lực.
+
+> **Chuyển mạch:** Ở chặng này của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -561,10 +606,12 @@ Không. Nhiều mô hình có thể khớp cùng một tập dữ liệu hữu h
 
 Không. Precision số học khác với accuracy vật lý. Một mô hình sai có thể được tính với mười lăm chữ số.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Liên hệ tiếp:** [Phép đo, đơn vị và độ bất định](01_measurement_units_uncertainty.md), [Ngôn ngữ Toán học](03_mathematical_language.md), [Đối xứng, bảo toàn và thang đo](04_symmetry_conservation_scale.md).
 
 **Đi sâu hơn:** [PDE, điều kiện biên, Green function và tensor](05_pde_boundary_green_tensors.md), [Vật lý thực nghiệm](../12_experimental_computational/00_measurement_experiment.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Suy luận dữ liệu và bài toán ngược](../12_experimental_computational/03_data_inference_inverse_problems.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 measurement units uncertainty](./01_measurement_units_uncertainty.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

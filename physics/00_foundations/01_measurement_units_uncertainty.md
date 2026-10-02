@@ -1,7 +1,6 @@
 # Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường
 
-> **Mạch đọc:** Đọc **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phép đo là cầu nối giữa mô hình và thế giới** sang **Hệ SI và đại lượng dẫn xuất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**. Route đi từ quantity/unit → dimensional analysis → measurement chain → uncertainty propagation → model-data comparison, để con số luôn đi kèm giới hạn tin cậy.
 
 ## Phép đo là cầu nối giữa mô hình và thế giới
 
@@ -16,6 +15,8 @@ Một kết quả đo không chỉ là một con số. Nó phải đi cùng:
 - điều kiện đo khi cần.
 
 Viết `5` gần như không có ý nghĩa vật lý. Viết `5.00 ± 0.03 m` đã mang nhiều thông tin hơn: giá trị ước lượng, đơn vị và mức bất định.
+
+> **Chuyển mạch:** Trong **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Hệ SI và đại lượng dẫn xuất** tiếp nhận điểm tựa từ **Phép đo là cầu nối giữa mô hình và thế giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ nguyên: hệ kiểu của phương trình vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ SI và đại lượng dẫn xuất
 
@@ -41,6 +42,8 @@ Năng lượng có đơn vị
 ```
 
 Viết đơn vị dưới dạng cơ bản giúp kiểm tra công thức và hiểu cấu trúc của đại lượng.
+
+> **Chuyển mạch:** Ở chặng này của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Thứ nguyên: hệ kiểu của phương trình vật lý** tiếp nhận điểm tựa từ **Hệ SI và đại lượng dẫn xuất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc đồng nhất thứ nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ nguyên: hệ kiểu của phương trình vật lý
 
@@ -82,6 +85,8 @@ vế trái có thứ nguyên chiều dài, còn cả hai hạng bên phải có 
 
 Có thể xem phân tích thứ nguyên giống hệ kiểu (type system / 타입 시스템) trong lập trình: nó không chứng minh thuật toán đúng, nhưng loại được cả một lớp lỗi cấu trúc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Nguyên tắc đồng nhất thứ nguyên** tiếp nhận điểm tựa từ **Thứ nguyên: hệ kiểu của phương trình vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tích thứ nguyên có thể dự đoán dạng công thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguyên tắc đồng nhất thứ nguyên
 
 Trong một phương trình vật lý hợp lệ:
@@ -105,6 +110,8 @@ e^{-3t}
 ```
 
 chỉ có ý nghĩa nếu hệ số `3` thực ra mang đơn vị nghịch đảo thời gian.
+
+> **Chuyển mạch:** Trong **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Phân tích thứ nguyên có thể dự đoán dạng công thức** tiếp nhận điểm tựa từ **Nguyên tắc đồng nhất thứ nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Accuracy, precision và resolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân tích thứ nguyên có thể dự đoán dạng công thức
 
@@ -149,6 +156,8 @@ T\propto\sqrt{\frac{L}{g}}.
 
 Phân tích thứ nguyên không tìm được hệ số `2\pi`, nhưng loại bỏ rất nhiều dạng sai và cho cấu trúc scaling trước khi giải chi tiết.
 
+> **Chuyển mạch:** Ở chặng này của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Accuracy, precision và resolution** tiếp nhận điểm tựa từ **Phân tích thứ nguyên có thể dự đoán dạng công thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sai số ngẫu nhiên và sai số hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Accuracy, precision và resolution
 
 Ba khái niệm này khác nhau.
@@ -160,6 +169,8 @@ Ba khái niệm này khác nhau.
 **Độ phân giải (resolution)** là thay đổi nhỏ nhất thiết bị có thể phân biệt hoặc hiển thị.
 
 Một cân có thể hiển thị tới `0.001 kg` nhưng bị lệch chuẩn `0.2 kg`. Khi đó độ phân giải tốt nhưng accuracy kém.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Sai số ngẫu nhiên và sai số hệ thống** tiếp nhận điểm tựa từ **Accuracy, precision và resolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ bất định không phải “sai số đã biết”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sai số ngẫu nhiên và sai số hệ thống
 
@@ -173,6 +184,8 @@ Sai số hệ thống làm kết quả bị lệch theo một hướng, ví dụ
 - phương pháp đo bỏ qua một hiệu ứng vật lý.
 
 Lặp lại cùng một phép đo rất nhiều lần không tự loại bỏ systematic độ lệch (bias / 편향).
+
+> **Chuyển mạch:** Trong **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Độ bất định không phải “sai số đã biết”** tiếp nhận điểm tựa từ **Sai số ngẫu nhiên và sai số hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trung bình và tiêu chuẩn (standard / 표준) lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ bất định không phải “sai số đã biết”
 
@@ -197,6 +210,8 @@ Vì vậy báo bất định (uncertainty / 불확실성) luôn cần nói rõ n
 
 Các khái niệm này không thể thay thế tùy ý cho nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Trung bình và tiêu chuẩn (standard / 표준) lỗi (error / 오류)** tiếp nhận điểm tựa từ **Độ bất định không phải “sai số đã biết”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truyền độ bất định qua một hàm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trung bình và tiêu chuẩn (standard / 표준) lỗi (error / 오류)
 
 Với `N` phép đo độc lập có tiêu chuẩn (standard / 표준) deviation mẫu `s`, độ bất định thống kê của trung bình thường giảm gần
@@ -210,6 +225,8 @@ u_{\bar x}\approx\frac{s}{\sqrt N}.
 Muốn bất định (uncertainty / 불확실성) thống kê giảm 10 lần thường cần khoảng 100 lần số mẫu, nếu các giả định độc lập và phân bố phù hợp còn đúng.
 
 Nếu các mẫu có tương quan theo thời gian, số mẫu hiệu dụng nhỏ hơn `N`; công thức trên không được dùng máy móc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Truyền độ bất định qua một hàm** tiếp nhận điểm tựa từ **Trung bình và tiêu chuẩn (standard / 표준) lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ truyền bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Truyền độ bất định qua một hàm
 
@@ -252,6 +269,8 @@ u_y^2
 
 Đây là lý do covariance quan trọng trong thí nghiệm chính xác và fitting nhiều tham số.
 
+> **Chuyển mạch:** Trong **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Truyền độ bất định qua một hàm** cho ta quy tắc; **Ví dụ truyền bất định (uncertainty / 불확실성)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Chữ số có nghĩa và rounding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ truyền bất định (uncertainty / 불확실성)
 
 Giả sử diện tích hình chữ nhật
@@ -272,6 +291,8 @@ Với `L,W` độc lập,
 
 Nếu cùng một thước bị quy mô (scale / 규모) lỗi (error / 오류) dùng đo cả `L` và `W`, hai sai số có thể tương quan; bỏ covariance sẽ đánh giá bất định (uncertainty / 불확실성) sai.
 
+> **Chuyển mạch:** Ở chặng này của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Ví dụ truyền bất định (uncertainty / 불확실성)** cho ta quy tắc; **Chữ số có nghĩa và rounding** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Calibration: nối tín hiệu cảm biến với đại lượng vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chữ số có nghĩa và rounding
 
 Không nên báo nhiều chữ số hơn mức dữ liệu hỗ trợ.
@@ -287,6 +308,8 @@ thì các chữ số rất sâu sau dấu phẩy không có ý nghĩa thực ngh
 Thông thường bất định (uncertainty / 불확실성) được làm tròn tới một hoặc hai chữ số có nghĩa rồi giá trị estimate được làm tròn tới cùng vị trí thập phân.
 
 Quy tắc cụ thể có thể khác giữa phòng thí nghiệm, nhưng nguyên tắc là không tạo **false precision**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Calibration: nối tín hiệu cảm biến với đại lượng vật lý** tiếp nhận điểm tựa từ **Chữ số có nghĩa và rounding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo lường (measurement / 측정) mô hình (model / 모델) quan trọng ngang thiết bị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Calibration: nối tín hiệu cảm biến với đại lượng vật lý
 
@@ -308,6 +331,8 @@ Ví dụ thermistor tạo điện trở, ADC tạo mã (code / 코드) số, r�
 
 Đây là cầu nối trực tiếp giữa Vật lý, electronics và software/dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인).
 
+> **Chuyển mạch:** Trong **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Calibration: nối tín hiệu cảm biến với đại lượng vật lý** nêu điều cần giải thích; **Đo lường (measurement / 측정) mô hình (model / 모델) quan trọng ngang thiết bị** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Signal-to-noise ratio và averaging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đo lường (measurement / 측정) mô hình (model / 모델) quan trọng ngang thiết bị
 
 Một phép đo luôn dựa trên một mô hình.
@@ -317,6 +342,8 @@ Ví dụ cân đo lực pháp tuyến rồi chuyển thành “khối lượng�
 Một camera đo photon qua optics, sensor phản hồi (response / 응답) và xử lý ảnh (image processing / 이미지 처리); điểm ảnh (pixel / 픽셀) giá trị (value / 값) không phải trực tiếp “độ sáng thật của vật”.
 
 Do đó systematic lỗi (error / 오류) thường không chỉ đến từ phần cứng mà còn từ giả định (assumption / 가정) của đo lường (measurement / 측정) mô hình (model / 모델).
+
+> **Chuyển mạch:** Ở chặng này của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Đo lường (measurement / 측정) mô hình (model / 모델) quan trọng ngang thiết bị** nêu điều cần giải thích; **Signal-to-noise ratio và averaging** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đơn vị trong phần mềm và dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Signal-to-noise ratio và averaging
 
@@ -329,6 +356,8 @@ Một tín hiệu nhỏ có thể không nhìn rõ trong một mẫu nhưng xu�
 Nếu noise có thành phần `1/f`, drift hoặc correlation dài, averaging lâu hơn không nhất thiết tiếp tục cải thiện theo `\sqrt N`.
 
 Đây là lý do cần xem power spectral density và stability theo thời gian chứ không chỉ tiêu chuẩn (standard / 표준) deviation ngắn hạn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Signal-to-noise ratio và averaging** nêu điều cần giải thích; **Đơn vị trong phần mềm và dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đơn vị trong phần mềm và dữ liệu
 
@@ -345,6 +374,8 @@ Các chiến lược kỹ thuật tốt gồm:
 
 Một giá trị floating-point không mang ý nghĩa vật lý đầy đủ nếu thiếu đơn vị và quy ước.
 
+> **Chuyển mạch:** Trong **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, các dấu vết trong **Đơn vị trong phần mềm và dữ liệu** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Một kết quả đo đáng tin cần cả chuỗi:
@@ -360,6 +391,8 @@ physical quantity
 ```
 
 Thứ nguyên kiểm tra lô-gic (logic / 논리) của phương trình; bất định (uncertainty / 불확실성) kiểm tra mức độ dữ liệu thật sự ràng buộc giá trị.
+
+> **Chuyển mạch:** Ở chặng này của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -383,10 +416,12 @@ Không nói chung. Với propagation tuyến tính độc lập, variance thư�
 
 Không. Đơn vị là một phần của cấu trúc mô hình và có thể dùng như kiểm tra lô-gic (logic / 논리) ngay từ đầu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại lượng, đơn vị, thứ nguyên và độ bất định đo lường**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Tư duy Vật lý](00_physical_thinking.md), [Ngôn ngữ Toán học](03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Vật lý thực nghiệm](../12_experimental_computational/00_measurement_experiment.md), [Tín hiệu, nhiễu và lấy mẫu](../12_experimental_computational/01_signals_sampling_noise.md), [Suy luận dữ liệu và bài toán ngược](../12_experimental_computational/03_data_inference_inverse_problems.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 physical thinking](./00_physical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

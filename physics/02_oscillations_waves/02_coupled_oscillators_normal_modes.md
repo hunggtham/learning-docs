@@ -1,7 +1,6 @@
 # Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon
 
-> **Mạch đọc:** Đọc **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ hai vật riêng lẻ đến một hệ ghép** sang **Hai chế độ (mode / 모드) tự nhiên của hệ hai vật**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dao động ghép và normal modes: từ hai lò xo đến phonon**. Route đi từ coupled equations → eigenmodes → normal coordinates → lattice limit → phonon interpretation, để chế độ riêng nối hệ hữu hạn với vật chất liên tục.
 
 Một dao động tử điều hòa đơn chỉ có một bậc tự do và một tần số riêng. Nhưng phần lớn hệ vật lý thực có nhiều bậc tự do tương tác: hai con lắc nối nhau bằng lò xo, các nguyên tử trong phân tử, mạng tinh thể, các phần tử của một cây cầu, mạch LC ghép hoặc các chế độ (mode / 모드) của khoang cộng hưởng. Khi các bậc tự do ghép với nhau, câu hỏi không còn là “tần số riêng của vật này là bao nhiêu?” mà trở thành “toàn hệ có những kiểu chuyển động tự nhiên nào?”.
 
@@ -64,6 +63,8 @@ Muốn có nghiệm khác không, định thức phải bằng không:
 
 Đây là phương trình trị riêng. Trị riêng liên hệ với `\omega^2`, còn vectơ riêng `\mathbf a` cho biết **hình dạng của chế độ (mode / 모드) (mode shape)**.
 
+> **Chuyển mạch:** Trong **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Hai chế độ (mode / 모드) tự nhiên của hệ hai vật** tiếp nhận điểm tựa từ **Từ hai vật riêng lẻ đến một hệ ghép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chế độ (mode / 모드) chuẩn “tách” bài toán?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hai chế độ (mode / 모드) tự nhiên của hệ hai vật
 
 Chế độ (mode / 모드) thứ nhất có dạng
@@ -92,6 +93,8 @@ Hai vật chuyển động ngược hướng. Lò xo ghép bị biến dạng m�
 
 Ta rút ra một nguyên tắc tổng quát: **chế độ (mode / 모드) nào làm biến dạng các liên kết nhiều hơn thường có tần số cao hơn**, vì năng lượng thế tăng nhanh hơn khi biên độ thay đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Vì sao chế độ (mode / 모드) chuẩn “tách” bài toán?** tiếp nhận điểm tựa từ **Hai chế độ (mode / 모드) tự nhiên của hệ hai vật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển động tổng quát là chồng chập các chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao chế độ (mode / 모드) chuẩn “tách” bài toán?
 
 Trong tọa độ ban đầu `x_1,x_2`, các phương trình bị ghép. Nhưng nếu định nghĩa tọa độ chế độ (mode / 모드)
@@ -114,6 +117,8 @@ thì phương trình trở thành hai dao động tử độc lập:
 
 Đây là ý nghĩa sâu của việc chéo hóa (diagonalization): ta đổi từ các tọa độ “gắn với từng vật” sang các tọa độ “gắn với chuyển động tự nhiên của toàn hệ”. Một hệ phức tạp có thể trở nên đơn giản nếu ta chọn đúng cơ sở.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Chuyển động tổng quát là chồng chập các chế độ (mode / 모드)** tiếp nhận điểm tựa từ **Vì sao chế độ (mode / 모드) chuẩn “tách” bài toán?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện tượng nhịp và trao đổi năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển động tổng quát là chồng chập các chế độ (mode / 모드)
 
 Nếu hệ tuyến tính, mọi chuyển động nhỏ có thể viết thành tổng của các chế độ (mode / 모드) chuẩn:
@@ -126,6 +131,8 @@ Nếu hệ tuyến tính, mọi chuyển động nhỏ có thể viết thành t
 
 Các hệ số được xác định từ điều kiện ban đầu. Điều này giải thích vì sao một hệ có thể trông rất phức tạp trong không gian tọa độ ban đầu nhưng lại chỉ là tổng của một vài dao động đơn giản trong không gian chế độ (mode / 모드).
 
+> **Chuyển mạch:** Trong **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Hiện tượng nhịp và trao đổi năng lượng** tiếp nhận điểm tựa từ **Chuyển động tổng quát là chồng chập các chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ nhiều bậc tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiện tượng nhịp và trao đổi năng lượng
 
 Khi hai tần số riêng gần nhau, chồng chập có thể tạo hiện tượng **nhịp (beats)**. Biên độ của một phần hệ tăng rồi giảm chậm theo thời gian, như thể năng lượng chuyển qua lại giữa hai phần.
@@ -137,6 +144,8 @@ Nếu hai dao động có tần số `\omega_1` và `\omega_2` gần nhau, tần
 ```
 
 Trong hai con lắc ghép yếu, ta có thể quan sát một con lắc ban đầu dao động mạnh rồi chậm dần trong khi con kia mạnh lên, sau đó quá trình đảo lại. Tổng năng lượng gần như bảo toàn nhưng phân bố năng lượng giữa các bậc tự do thay đổi theo thời gian.
+
+> **Chuyển mạch:** Ở chặng này của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Hệ nhiều bậc tự do** tiếp nhận điểm tựa từ **Hiện tượng nhịp và trao đổi năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ chuỗi lò xo đến sóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ nhiều bậc tự do
 
@@ -160,11 +169,15 @@ K\mathbf a=\omega^2M\mathbf a.
 
 Mỗi nghiệm cho một tần số riêng và một hình dạng chế độ (mode / 모드). Trong kỹ thuật kết cấu, chính các chế độ (mode / 모드) này quyết định cách tòa nhà, cánh máy bay hoặc cầu phản ứng với động đất, gió và rung động máy móc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Hệ nhiều bậc tự do** xác định đầu vào; **Từ chuỗi lò xo đến sóng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Từ mạng tinh thể đến phonon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ chuỗi lò xo đến sóng
 
 Hãy tưởng tượng `N` khối lượng nối liên tiếp bằng lò xo. Khi `N` lớn, số chế độ (mode / 모드) tăng. Các chế độ (mode / 모드) có bước sóng dài biểu diễn nhiều khối chuyển động gần cùng pha, còn chế độ (mode / 모드) tần số cao có sự đổi dấu nhanh giữa các khối lân cận.
 
 Khi khoảng cách giữa các khối tiến tới rất nhỏ và số phần tử rất lớn, chuỗi rời rạc chuyển dần thành môi trường liên tục và phương trình chế độ (mode / 모드) tiến tới phương trình sóng. Vì vậy **sóng có thể được hiểu như giới hạn liên tục của một hệ rất nhiều dao động tử ghép**.
+
+> **Chuyển mạch:** Trong **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Từ chuỗi lò xo đến sóng** xác định đầu vào; **Từ mạng tinh thể đến phonon** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chế độ (mode / 모드) chuẩn và đối xứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ mạng tinh thể đến phonon
 
@@ -182,11 +195,15 @@ dao động ghép cổ điển
 
 Phonon đóng vai trò quan trọng trong nhiệt dung, độ dẫn nhiệt, tán xạ electron và siêu dẫn thông thường.
 
+> **Chuyển mạch:** Ở chặng này của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Chế độ (mode / 모드) chuẩn và đối xứng** tiếp nhận điểm tựa từ **Từ mạng tinh thể đến phonon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi phương pháp chế độ (mode / 모드) chuẩn không còn đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chế độ (mode / 모드) chuẩn và đối xứng
 
 Đối xứng thường giúp đoán trước dạng chế độ (mode / 모드). Với hai vật giống nhau, hệ bất biến khi đổi chỗ hai vật. Vì vậy hai chế độ (mode / 모드) tự nhiên có thể chọn thành chế độ (mode / 모드) đối xứng `(1,1)` và phản đối xứng `(1,-1)`.
 
 Trong hệ lớn hơn, đối xứng tinh thể hoặc hình học công trình có thể phân loại các chế độ (mode / 모드) thành những họ khác nhau. Đây là một ví dụ về việc đối xứng làm giảm độ phức tạp trước khi ta thực hiện toàn bộ phép tính.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Khi phương pháp chế độ (mode / 모드) chuẩn không còn đủ?** tiếp nhận điểm tựa từ **Chế độ (mode / 모드) chuẩn và đối xứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi phương pháp chế độ (mode / 모드) chuẩn không còn đủ?
 
@@ -194,9 +211,13 @@ Phân tích chế độ (mode / 모드) chuẩn dựa mạnh vào giả thiết 
 
 Ngoài ra, tắt dần mạnh hoặc lực kích thích phi tuyến có thể làm các chế độ (mode / 모드) không còn độc lập. Khi đó cần dùng động lực học phi tuyến, lý thuyết nhiễu loạn hoặc mô phỏng số.
 
+> **Chuyển mạch:** Trong **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khi phương pháp chế độ (mode / 모드) chuẩn không còn đủ?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Chế độ (mode / 모드) chuẩn là “ngôn ngữ tự nhiên” của một hệ tuyến tính nhiều bậc tự do. Tọa độ gắn với từng vật giúp ta hình dung hình học, nhưng tọa độ chế độ (mode / 모드) giúp ta hiểu động lực học. Việc tìm chế độ (mode / 모드) tương đương với tìm một cơ sở trong đó hệ ghép trở thành gần như độc lập.
+
+> **Chuyển mạch:** Ở chặng này của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -204,10 +225,12 @@ Chế độ (mode / 모드) chuẩn là “ngôn ngữ tự nhiên” của mộ
 
 “Mỗi phần tử có một tần số riêng nên hệ `N` phần tử chỉ cần dùng các tần số của từng phần tử” cũng sai. Khi có ghép, tần số riêng thuộc về toàn hệ và phụ thuộc cấu trúc ghép.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dao động ghép và chế độ (mode / 모드) chuẩn: từ hai lò xo đến phonon**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Dao động, tắt dần và cộng hưởng](00_oscillations_resonance.md), [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Sóng và Fourier](01_waves_fourier_sound.md), [Tinh thể và dải năng lượng](../10_condensed_matter_devices/00_crystals_bands.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oscillations resonance](./00_oscillations_resonance.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
