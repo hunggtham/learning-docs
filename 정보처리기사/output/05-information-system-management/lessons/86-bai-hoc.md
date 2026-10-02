@@ -1,18 +1,26 @@
 # 318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy phân biệt tái sử dụng thành phần, mã cũ và dịch vụ để cân bằng lợi ích bảo trì với chi phí tích hợp.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **phần tổng hợp của môn** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 재사용
 
+> **Chuyển mạch:** Ở chặng này của **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **2. 접근 제어 정책 (Access Control Policies)**에서 만든 기준을 이어받아 **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **318. 소프트웨어 재사용 (Softwa
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** và nối nó với **phần tổng hợp của môn**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)
 
@@ -40,3 +48,5 @@ Phần “318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng ph�
   - **생성 중심 (Generation-Based)**: 추상적 명세로 코드 자동 생성 (Tự động sinh code từ bản đặc tả).
 
 Khép lại **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+
+> **Bàn giao:** Sau **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

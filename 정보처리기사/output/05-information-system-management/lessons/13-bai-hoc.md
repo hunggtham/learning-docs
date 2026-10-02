@@ -1,18 +1,26 @@
 # 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy lần theo tín hiệu, kênh truyền, mã hóa và điều chế để thấy dữ liệu được biến đổi trước khi đi qua giao thức.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 데이터, 전송, 방식, 변조
 
+> **Chuyển mạch:** Ở chặng này của **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**에서 만든 기준을 이어받아 **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **2. 데이터 전송 방식 및 변조 
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** và nối nó với **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
@@ -102,3 +110,5 @@ Với **2.4 PCM (Pulse Code Modulation)**, hãy đọc các công thức như m�
 Với **2.4 PCM (Pulse Code Modulation)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Như vậy, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
