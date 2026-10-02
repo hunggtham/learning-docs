@@ -1,6 +1,6 @@
 # Kotlin + Android độ sâu (depth / 깊이) Labs
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android độ sâu (depth / 깊이) Labs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cách dùng cùng môi trường vận hành (production / 운영 환경) Casebook** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của **Kotlin + Android độ sâu (depth / 깊이) Labs**. Giữ thứ tự **architecture invariants → offline sync → coroutine/Flow → Compose runtime → SDK boundary → build/release forensics → version migration**, rồi dùng production casebook để đối chiếu; mỗi lab mở một failure boundary cụ thể và quay lại README khi cần chọn owner.
 
 `depth_labs/` là tầng đọc sâu nằm sau các tệp (file / 파일) chính, `deep_dive/` và môi trường vận hành (production / 운영 환경) Casebook. Mục tiêu của thư mục này không phải mở thêm lĩnh vực (domain / 도메인) Android mới, mà **đào sâu các chủ đề đã có tới mức có thể lập luận (reasoning / 추론) về tính đúng đắn (correctness / 정확성) khi môi trường vận hành (production / 운영 환경) không chạy theo happy đường dẫn (path / 경로)**.
 
