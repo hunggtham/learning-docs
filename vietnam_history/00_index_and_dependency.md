@@ -26,7 +26,7 @@ continuity + rupture in everyday life
 
 Geography không “quyết định” kết quả (outcome / 결과). Nó tạo ràng buộc (constraint / 제약조건)/opportunity; technology, institution và human choice quyết định cách ràng buộc (constraint / 제약조건) được xử lý.
 
-> **Chuyển mạch:** Trong **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Tuyến (route / 경로) 1 — Timeline chính: 01 → 23** tiếp nhận điểm tựa từ **Cách đọc thư viện (library / 라이브러리) này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách đọc thư viện** đặt quy tắc và prerequisite; **Tuyến 1** đi qua timeline chính, sau đó **Tuyến 2** gom các trục xuyên thời gian để so sánh cùng một cơ chế qua nhiều giai đoạn.
 
 ## Tuyến (route / 경로) 1 — Timeline chính: 01 → 23
 
@@ -80,7 +80,7 @@ Geography không “quyết định” kết quả (outcome / 결과). Nó tạo
 
 Timeline là backbone, nhưng chapter 14 chỉ đóng vai trò junction. Các vùng có lịch sử (history / 이력) riêng được mở sâu ở Tuyến (route / 경로) 3 thay vì chỉ xuất hiện lúc central trạng thái (state / 상태) mở rộng tới đó.
 
-> **Chuyển mạch:** Ở chặng này của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 1 — Timeline chính: 01 → 23** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau timeline, **Tuyến 2** cho phép theo dõi liên tục các vấn đề như nhà nước, thương mại và xã hội; **Tuyến 3** mở rộng sang vùng và mạng lưới không thể gói trong một timeline.
 
 ## Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30
 
@@ -111,7 +111,7 @@ Sau timeline, đọc lại lịch sử theo variable thay vì dynasty:
 
 Các tệp (file / 파일) 24–30 không lặp timeline. Mỗi tệp (file / 파일) theo một nhân quả (causal / 인과적) variable qua nhiều thời kỳ để thấy continuity và structural thay đổi (change / 변경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Tuyến 3** kiểm tra sự khác biệt vùng và mạng giao thương; **Tuyến 4** cung cấp lớp tham chiếu, glossary và source map để định danh claim trước khi kết luận.
 
 ## Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37
 
@@ -159,7 +159,7 @@ Recommended phụ thuộc (dependency / 의존성):
 
 Không dùng chronology 31 thay cho explanatory chapter. Không dùng UNESCO/heritage label trong 33 như proof cho mọi legend.
 
-> **Chuyển mạch:** Ở chặng này của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Những anchor thời gian cần nhớ** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những vùng không được ép vào narrative Đại Việt duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Tuyến 4** cung cấp nguồn và thuật ngữ; **Những anchor thời gian cần nhớ** dùng chúng để cố định mốc, rồi **Những vùng không được ép vào narrative Đại Việt duy nhất** mở kiểm tra đối sánh.
 
 ## Những anchor thời gian cần nhớ
 
@@ -186,7 +186,7 @@ Không cần học hàng trăm năm như password. Trước hết giữ các coo
 
 Mỗi anchor phải trả lời: cấu trúc nào thay đổi và cấu trúc nào tiếp tục?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Những vùng không được ép vào narrative Đại Việt duy nhất** tiếp nhận điểm tựa từ **Những anchor thời gian cần nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Di tích như bằng chứng (evidence / 증거) checkpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi khóa mốc mà không ép một narrative duy nhất, **Di tích như bằng chứng checkpoint** kiểm tra claim bằng địa điểm, hiện vật và lớp ký ức cụ thể.
 
 ## Những vùng không được ép vào narrative Đại Việt duy nhất
 
@@ -279,7 +279,7 @@ A traditional narrative can be historically important without being literal veri
 
 31 → quay lại chapter đơn vị sở hữu (owner / 오너); không dừng ở 31.
 
-> **Chuyển mạch:** Trong **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Suggested học tập (learning / 학습) paths** xác định đầu vào; **Bàn giao** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Suggested learning paths** xác định prerequisite và mục tiêu; **Bàn giao** ghi rõ hành động tiếp theo, owner và bằng chứng cần kiểm tra để route không dừng ở danh sách link.
 
 ## Bàn giao
 

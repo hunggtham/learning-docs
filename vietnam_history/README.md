@@ -57,7 +57,7 @@ Sau khi đọc 34–37, nên quay lại chapter 14: frontier lúc đó sẽ hi�
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): thuật ngữ + nguồn (source / 소스)/bằng chứng (evidence / 증거) discipline.
 - [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md): Đền Hùng, Cổ Loa, Hoa Lư, Thăng Long, Vân Đồn, Thành Nhà Hồ, Mỹ Sơn, Hội An, Huế, Mekong, Điện Biên, DMZ, industrial corridors… như học tập (learning / 학습) checkpoints.
 
-> **Chuyển mạch:** Trong **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Cách đọc mỗi thời kỳ** tiếp nhận điểm tựa từ **Cách dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách dùng** chỉ ra cách chọn chapter và route; **Cách đọc mỗi thời kỳ** áp dụng cùng một khung câu hỏi, rồi **Nguyên tắc bằng chứng** quy định claim nào cần nguồn và mốc thời gian.
 
 ## Cách đọc mỗi thời kỳ
 
@@ -93,7 +93,7 @@ date of historical event
 
 Trường dữ liệu (field / 필드) phương thức (method / 메서드) chi tiết nằm ở tệp (file / 파일) 33.
 
-> **Chuyển mạch:** Trong **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Naming và terminology** tiếp nhận điểm tựa từ **Di tích: không đọc như photo caption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Di tích: không đọc như photo caption** đặt giới hạn cho việc suy luận từ hiện vật; **Naming và terminology** chuẩn hóa tên gọi, rồi **Nguồn nền** cung cấp căn cứ để kiểm tra cách gọi đó.
 
 ## Naming và terminology
 
@@ -101,7 +101,7 @@ Tên địa danh dùng historical name theo ngữ cảnh (context / 맥락) rồ
 
 Important scholarly từ khóa (keyword / 키워드) được giữ/ghi chú (note / 노트) bằng English. Korean term chỉ thêm khi liên kết (connection / 연결) thực sự hữu ích với các bộ Korean docs, ví dụ **civil examination / 과거제** hoặc **Classical Chinese / 한문**.
 
-> **Chuyển mạch:** Ở chặng này của **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Naming và terminology** nêu điều cần giải thích; **Nguồn nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi tên gọi và phạm vi đã rõ, **Nguồn nền** là điểm quay về để kiểm tra niên đại, địa danh và diễn giải trước khi nối sang chapter kế tiếp.
 
 ## Nguồn nền
 
