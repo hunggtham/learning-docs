@@ -1,7 +1,6 @@
 # Thư viện kiến thức Linux
 
-> **Mạch đọc:** Đọc **Thư viện kiến thức Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bản đồ đọc và quan hệ phụ thuộc** sang **Cấu trúc thư viện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thư viện kiến thức Linux**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bản đồ đọc và quan hệ phụ thuộc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cấu trúc thư viện** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner, rồi nối các nhánh filesystem, process, memory và network thành một lộ trình Linux có thể tra cứu.
 
 Linux không chỉ là một tập hợp câu lệnh (command) để điều khiển máy chủ (server / 서버). Muốn sử dụng Linux vững trong phát triển phần mềm và môi trường vận hành thực tế (production), cần hiểu mô hình mà các câu lệnh đang tác động lên: hạt nhân (kernel) quản lý tài nguyên; tiến trình (process / 프로세스) làm việc với hệ thống thông qua bộ mô tả tệp (file descriptor); hệ thống tệp (filesystem) ánh xạ tên đường dẫn tới `inode`; bộ nhớ ảo (virtual memory) tách không gian địa chỉ của tiến trình khỏi RAM vật lý; ổ cắm mạng (socket) cung cấp giao diện vào/ra cho truyền thông mạng; còn trình vỏ lệnh (shell) ghép các chương trình nhỏ thành chuỗi xử lý (pipeline / 파이프라인).
 
@@ -110,8 +109,7 @@ graph TD
 
 Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật ngữ người đọc sẽ thường xuyên gặp trong tài liệu Linux. Phần giải thích trong từng chương ưu tiên tiếng Việt và chỉ giữ thuật ngữ gốc trong ngoặc khi nó giúp nhận diện khái niệm.
 
-
-> **Chuyển mạch:** Từ **Bản đồ đọc và quan hệ phụ thuộc**, ta sang **Cấu trúc thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức Linux**, **Cấu trúc thư viện** tiếp nhận điểm tựa từ **Bản đồ đọc và quan hệ phụ thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gợi ý đường đọc theo nhu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc thư viện
 
@@ -217,8 +215,7 @@ Các tài liệu cuối cùng dùng để nối Linux với backend, database, n
 - [`90_connections/linux_system_mental_models.md`](./90_connections/linux_system_mental_models.md) — kết nối các lớp trừu tượng thành mô hình tư duy (mental model) thống nhất về Linux.
 - [`reference/putty_ssh_linux_server_commands.md`](./reference/putty_ssh_linux_server_commands.md) — bảng câu lệnh, tùy chọn, ví dụ và ghi chú thực tế để tra cứu nhanh.
 
-
-> **Chuyển mạch:** Từ **Cấu trúc thư viện**, ta sang **Gợi ý đường đọc theo nhu cầu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Linux**, **Gợi ý đường đọc theo nhu cầu** tiếp nhận điểm tựa từ **Cấu trúc thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách dùng chapter nền tảng và deep dive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gợi ý đường đọc theo nhu cầu
 
@@ -234,8 +231,7 @@ Nếu mục tiêu là **hiểu một HTTP yêu cầu (request / 요청) môi tr�
 
 Nếu mục tiêu là **hiểu độ tin cậy (reliability / 신뢰성) từ chỉ số (metric / 지표) Linux tới trải nghiệm người dùng**, hãy đi theo: RED/USE metrics → tracing → sức chứa (capacity / 용량) planning → triển khai (deployment / 배포)/quay lui (rollback / 롤백) → backup/DR → SLI/SLO/lỗi (error / 오류) ngân sách (budget / 예산) → sự cố (incident / 인시던트) kỹ thuật (engineering / 엔지니어링). Đường đọc này giải thích tại sao một máy chủ (server / 서버) “còn tài nguyên” vẫn có thể vi phạm SLO, và ngược lại tại sao utilization cao không tự động là sự cố (incident / 인시던트).
 
-
-> **Chuyển mạch:** Từ **Gợi ý đường đọc theo nhu cầu**, ta sang **Cách dùng chapter nền tảng và deep dive** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Linux**, **Cách dùng chapter nền tảng và deep dive** tiếp nhận điểm tựa từ **Gợi ý đường đọc theo nhu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy ước ngôn ngữ và liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách dùng chapter nền tảng và deep dive
 
@@ -280,11 +276,12 @@ production_troubleshooting / capacity_planning
 
 Mục tiêu không phải học thuộc mọi chi tiết kernel ngay từ đầu. Mục tiêu là có một đường đi rõ từ **mô hình tổng quan → cơ chế bên dưới → công cụ quan sát → dạng thất bại (failure mode / 실패 모드) môi trường vận hành (production / 운영 환경) → độ tin cậy (reliability / 신뢰성) mục tiêu (objective / 목표)**.
 
-
-> **Chuyển mạch:** Từ **Cách dùng chapter nền tảng và deep dive**, ta sang **Quy ước ngôn ngữ và liên kết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức Linux**, sau nội dung của **Cách dùng chapter nền tảng và deep dive**, **Quy ước ngôn ngữ và liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Quy ước ngôn ngữ và liên kết
 
 Các liên kết chéo dùng đường dẫn Markdown tương đối để hoạt động nhất quán trên GitHub, GitHub Pages và phần lớn trình đọc Markdown. Phần giải thích chính dùng tiếng Việt. Khi một thuật ngữ kỹ thuật quan trọng xuất hiện lần đầu, tài liệu có thể giữ thuật ngữ tiếng Anh trong ngoặc, ví dụ **tiến trình (process / 프로세스)** hoặc **bộ mô tả tệp (file descriptor)**. Thuật ngữ tiếng Hàn (한국어 용어) chỉ được thêm khi nó thực sự hữu ích trong môi trường học tập hoặc làm việc tại Hàn Quốc.
 
 > **Mô hình tư duy trung tâm:** Linux có thể được xem như một hệ thống quản lý **tên, tiến trình, bộ nhớ, I/O, CPU time, quyền truy cập, thời gian, network path, runtime dependency, isolation và các điểm cuối giao tiếp**. Câu lệnh chỉ là giao diện để quan sát hoặc thay đổi những đối tượng đó; kỹ năng Linux thực sự nằm ở khả năng hiểu state, dependency, lifecycle, capacity, evidence và ảnh hưởng cuối cùng tới người dùng.
+
+> **Bàn giao:** Sau **Quy ước ngôn ngữ và liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

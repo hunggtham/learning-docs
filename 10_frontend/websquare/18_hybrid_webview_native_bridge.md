@@ -1,6 +1,6 @@
 # 18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hybrid WebSquare không chỉ là website đặt trong app** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. trình duyệt (browser / 브라우저) năng lực (capability / 역량) và bản địa (native / 네이티브) năng lực (capability / 역량) phải được tách** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hybrid WebSquare không chỉ là website đặt trong app** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. trình duyệt (browser / 브라우저) năng lực (capability / 역량) và bản địa (native / 네이티브) năng lực (capability / 역량) phải được tách** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối WebView với native bridge và capability của từng phía, để thiết kế biên giao tiếp có kiểm soát thay vì coi app như một website.
 
 ## 1. Hybrid WebSquare không chỉ là website đặt trong app
 

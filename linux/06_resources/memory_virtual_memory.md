@@ -1,7 +1,6 @@
 # Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM
 
-> **Mạch đọc:** Đọc **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao cần bộ nhớ ảo?** sang **Trang nhớ (page)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao cần bộ nhớ ảo?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trang nhớ (page)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối virtual memory với page cache, memory pressure và OOM, giúp đọc số liệu `free` theo hành vi thu hồi thay vì chỉ nhìn cột trống.
 
 `free -h` thường làm người mới lo khi cột `free` nhỏ. Linux chủ động dùng phần RAM chưa cần thiết cho ứng dụng làm bộ nhớ đệm để tăng hiệu năng và có thể thu hồi phần bộ nhớ đó khi khối lượng công việc cần. Muốn hiểu **áp lực bộ nhớ (memory pressure)**, cần bỏ mô hình đơn giản "RAM chỉ có đã dùng và còn trống" và chuyển sang cách nhìn gồm **bộ nhớ ảo + trang nhớ + bộ nhớ đệm có thể thu hồi + tập trang đang hoạt động của tiến trình**.
 
@@ -10,6 +9,8 @@
 Nếu mỗi tiến trình trực tiếp dùng địa chỉ RAM vật lý, việc cô lập và phân bổ bộ nhớ sẽ rất khó. **Bộ nhớ ảo (virtual memory / 가상 메모리)** cung cấp cho mỗi tiến trình một không gian địa chỉ ảo riêng. MMU của CPU và bảng trang (page table / 페이지 테이블) do kernel quản lý ánh xạ các trang ảo tới khung trang vật lý hoặc các trạng thái lưu trữ phía sau khác.
 
 Ứng dụng nhìn thấy một không gian địa chỉ tương đối liên tục và riêng biệt, còn kernel chịu trách nhiệm quản lý ánh xạ thật. Cơ chế này tạo ra sự cô lập, chia sẻ có kiểm soát, tệp ánh xạ bộ nhớ (memory-mapped file) và nạp trang theo nhu cầu (demand paging).
+
+> **Chuyển mạch:** Trong **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Trang nhớ (page)** tiếp nhận điểm tựa từ **Tại sao cần bộ nhớ ảo?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **free -h và available** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trang nhớ (page)
 
@@ -20,6 +21,8 @@ getconf PAGESIZE
 ```
 
 Việc dịch địa chỉ qua bảng trang có chi phí, vì vậy CPU có **TLB (Translation Lookaside Buffer)** để lưu tạm kết quả ánh xạ. Đây là mối liên hệ trực tiếp giữa quản lý bộ nhớ của hệ điều hành và kiến trúc máy tính.
+
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Trang nhớ (page)** cho ta quy tắc; **free -h và available** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Page bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `free -h` và `available`
 
@@ -33,6 +36,8 @@ Linux dùng RAM cho page bộ nhớ đệm (cache / 캐시) và nhiều vùng đ
 
 Vì vậy khi đánh giá áp lực bộ nhớ, `available` thường có ý nghĩa hơn việc chỉ nhìn `free`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **free -h và available** cho ta quy tắc; **Page bộ nhớ đệm (cache / 캐시)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **RSS và VSZ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Page bộ nhớ đệm (cache / 캐시)
 
 Dữ liệu tệp đã đọc có thể được giữ trong **bộ nhớ đệm trang (page cache)**. Lần đọc sau có thể tránh I/O tới thiết bị lưu trữ nếu trang vẫn còn trong bộ nhớ đệm (cache / 캐시). Khi ứng dụng cần RAM, kernel có thể thu hồi các trang bộ nhớ đệm (cache / 캐시) sạch.
@@ -40,6 +45,8 @@ Dữ liệu tệp đã đọc có thể được giữ trong **bộ nhớ đệm
 Điều này giải thích vì sao sau khi đọc một tệp lớn, lượng RAM "đã dùng" tăng. bộ nhớ đệm (cache / 캐시) không phải rò rỉ bộ nhớ chỉ vì nó chiếm RAM.
 
 Không nên thường xuyên xóa bộ nhớ đệm (cache / 캐시) trên môi trường vận hành (production / 운영 환경) chỉ để làm con số `free` đẹp hơn; việc đó có thể làm giảm hiệu năng và che khuất cách hệ thống thực sự quản lý bộ nhớ.
+
+> **Chuyển mạch:** Trong **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **RSS và VSZ** tiếp nhận điểm tựa từ **Page bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ của tiến trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## RSS và VSZ
 
@@ -53,11 +60,15 @@ ps -p <PID> -o pid,%mem,rss,vsz,cmd
 
 Một JVM có `VSZ` lớn không đồng nghĩa nó đang chiếm lượng RAM vật lý tương ứng.
 
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Vùng nhớ vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ của tiến trình** tiếp nhận điểm tựa từ **RSS và VSZ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Swap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vùng nhớ vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ của tiến trình
 
 Trong Java, `-Xmx` giới hạn vùng nhớ động (heap / 힙) nhưng tiến trình còn dùng metaspace, mã (code / 코드) bộ nhớ đệm (cache / 캐시), ngăn xếp (stack / 스택) của các luồng thực thi (thread / 스레드), direct buffer, thư viện bản địa (native / 네이티브), cấu trúc nội bộ JVM và các tệp ánh xạ bộ nhớ. Vì vậy giới hạn bộ nhớ của host hoặc bộ chứa (container / 컨테이너) phải tính toàn bộ bộ nhớ tiến trình chứ không chỉ vùng nhớ động (heap / 힙).
 
 Đây là lý do JVM có vùng nhớ động (heap / 힙) 3 GiB trong bộ chứa (container / 컨테이너) giới hạn 4 GiB vẫn có thể gặp OOM với một số khối lượng công việc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Swap** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ của tiến trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp lực bộ nhớ và thu hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Swap
 
@@ -71,6 +82,8 @@ vmstat 1
 
 Trong `vmstat`, `si`/`so` duy trì ở mức đáng kể có thể cho thấy hệ thống đang tích cực đưa trang vào và ra swap. Cần đối chiếu hiện tượng này với độ trễ và khối lượng công việc.
 
+> **Chuyển mạch:** Trong **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Áp lực bộ nhớ và thu hồi** tiếp nhận điểm tựa từ **Swap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OOM trong bộ chứa (container / 컨테이너) và trên host** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Áp lực bộ nhớ và thu hồi
 
 Khi bộ nhớ `free`/`available` giảm, kernel cố thu hồi bộ nhớ đệm (cache / 캐시) và có thể dùng swap tùy chính sách. Nếu không thể đáp ứng yêu cầu cấp phát, Linux có thể kích hoạt **OOM killer (Out Of memory)** để kết thúc một tiến trình nhằm bảo vệ hệ thống.
@@ -83,17 +96,23 @@ journalctl -k | grep -i -E 'oom|out of memory|killed process'
 
 Nếu tiến trình Java biến mất và nhật ký ứng dụng dừng đột ngột, đây là một trong những kiểm tra quan trọng nhất.
 
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **OOM trong bộ chứa (container / 컨테이너) và trên host** tiếp nhận điểm tựa từ **Áp lực bộ nhớ và thu hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rò rỉ bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## OOM trong bộ chứa (container / 컨테이너) và trên host
 
 Giới hạn bộ nhớ của cgroup có thể nhỏ hơn nhiều so với RAM của host. Tiến trình trong bộ chứa (container / 컨테이너) có thể bị OOM do chạm giới hạn cgroup dù `free -h` trên host vẫn cho thấy còn nhiều bộ nhớ. Vì vậy phải biết khối lượng công việc đang chạy trong miền tài nguyên nào.
 
 Xem [Linux và container](../09_production/linux_containers.md) để hiểu mối liên hệ với cgroup.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Rò rỉ bộ nhớ** tiếp nhận điểm tựa từ **OOM trong bộ chứa (container / 컨테이너) và trên host** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **vmstat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rò rỉ bộ nhớ
 
 **Rò rỉ bộ nhớ (memory leak)** là tình huống bộ nhớ đã cấp phát không còn hữu ích nhưng vẫn bị giữ lại hoặc không được giải phóng theo vòng đời mong muốn. Không nên kết luận có leak chỉ từ một ảnh chụp cho thấy bộ nhớ cao. Cần xem xu hướng: bộ nhớ có tăng theo thời gian hoặc tải, có giảm sau vòng đời dự kiến không, và bằng chứng ở vùng nhớ động (heap / 힙)/bản địa (native / 네이티브) cho thấy gì.
 
 Với JVM, có thể cần vùng nhớ động (heap / 힙) dump, histogram đối tượng hoặc metrics GC. `RSS` ở tầng Linux chỉ cho thấy triệu chứng bộ nhớ của tiến trình, không chỉ ra đối tượng Java nào đang giữ bộ nhớ.
+
+> **Chuyển mạch:** Trong **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **vmstat** tiếp nhận điểm tựa từ **Rò rỉ bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NUMA và huge pages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `vmstat`
 
@@ -105,13 +124,19 @@ vmstat 1 10
 
 Công cụ này cung cấp góc nhìn gọn về tác vụ có thể chạy, bộ nhớ, swap, I/O và CPU. Các trường cần được đọc cùng nhau. Ví dụ RAM trống thấp nhưng không có hoạt động swap và `available` vẫn khỏe có thể hoàn toàn bình thường; ngược lại swap vào/ra liên tục cùng độ trễ tăng là bằng chứng mạnh hơn về áp lực bộ nhớ.
 
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **NUMA và huge pages** tiếp nhận điểm tựa từ **vmstat** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## NUMA và huge pages
 
 Trên máy chủ lớn, độ trễ truy cập RAM có thể khác nhau giữa các socket CPU, tạo mô hình **NUMA (Non-Uniform memory Access)**. Huge pages giảm chi phí bảng trang và TLB trong một số khối lượng công việc. Đây là các chủ đề quan trọng với cơ sở dữ liệu, JVM và tối ưu hiệu năng, nhưng không nên bật hoặc tắt theo khuyến nghị chung chung; quyết định phải dựa vào nền tảng và tải công việc (workload / 워크로드) thực tế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **NUMA và huge pages** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Đừng coi RAM là một chiếc hộp chia thành "ứng dụng" và "còn trống". Hãy coi nó là một tập hợp các trang mà kernel liên tục phân bổ giữa vùng làm việc của tiến trình, page bộ nhớ đệm (cache / 캐시) và nhu cầu của kernel. Không gian địa chỉ ảo của tiến trình là góc nhìn lô-gic (logic / 논리); việc trang nào đang thực sự nằm trong RAM vật lý là trạng thái động.
+
+> **Chuyển mạch:** Trong **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -127,6 +152,10 @@ Trên máy chủ lớn, độ trễ truy cập RAM có thể khác nhau giữa c
 
 **"Xóa bộ nhớ đệm (cache / 캐시) giúp máy chủ (server / 서버) nhanh hơn."** Thường ngược lại vì làm mất dữ liệu bộ nhớ đệm (cache / 캐시) hữu ích; chỉ thực hiện khi có lý do cụ thể.
 
+> **Chuyển mạch:** Ở chặng này của **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Bộ nhớ nối với hệ thống tệp thông qua page cache, với CPU thông qua page fault và TLB, và với container thông qua giới hạn cgroup. [CPU, lập lịch và hiệu năng](./cpu_scheduling_performance.md) tiếp tục cách đọc các chỉ số tài nguyên như một hệ thống thống nhất thay vì những con số rời rạc.
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

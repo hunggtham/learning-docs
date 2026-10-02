@@ -1,7 +1,6 @@
 # Hệ thống tệp, đường dẫn, inode và liên kết
 
-> **Mạch đọc:** Đọc **Hệ thống tệp, đường dẫn, inode và liên kết** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ thiết bị lưu trữ khối tới hệ thống tệp** sang **Đường dẫn là cách tìm đối tượng, không phải bản thân dữ liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hệ thống tệp, đường dẫn, inode và liên kết**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ thiết bị lưu trữ khối tới hệ thống tệp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đường dẫn là cách tìm đối tượng, không phải bản thân dữ liệu** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối pathname, inode và liên kết với cách kernel tìm đúng đối tượng, để phân biệt tên gọi với dữ liệu thực sự.
 
 Một trong những lỗi tư duy phổ biến khi học Linux là đồng nhất "tệp" với "tên tệp". Nếu hiểu rằng **đường dẫn (pathname)** chỉ là một tên trong **vùng tên (namespace)** dẫn tới một đối tượng của hệ thống tệp, nhiều hành vi tưởng như kỳ lạ sẽ trở nên hợp lý: một liên kết cứng (hard link) có thể tạo thêm tên cho cùng dữ liệu, đổi tên thường rất nhanh, và một tệp đã `rm` vẫn có thể chiếm dung lượng nếu tiến trình còn mở nó.
 
@@ -10,6 +9,8 @@ Một trong những lỗi tư duy phổ biến khi học Linux là đồng nhấ
 Ổ đĩa hoặc SSD về cơ bản cung cấp khả năng lưu trữ theo các khối (block / 블록). Nếu hệ thống chỉ có số thứ tự khối, ứng dụng phải tự nhớ khối nào thuộc tệp nào, đâu là siêu dữ liệu (metadata / 메타데이터), đâu là vùng trống và làm sao phục hồi sau sự cố. **Hệ thống tệp (filesystem / 파일 시스템)** tạo ra một cấu trúc dữ liệu cao hơn để quản lý vùng tên, siêu dữ liệu (metadata / 메타데이터), phân bổ không gian và tính nhất quán.
 
 Các hệ thống tệp Linux phổ biến gồm ext4 và XFS. Hệ thống tệp không chỉ "chứa tệp"; nó định nghĩa cách các đối tượng, dữ liệu và siêu dữ liệu (metadata / 메타데이터) được tổ chức trên thiết bị lưu trữ.
+
+> **Chuyển mạch:** Trong **Hệ thống tệp, đường dẫn, inode và liên kết**, **Từ thiết bị lưu trữ khối tới hệ thống tệp** nêu điều cần giải thích; **Đường dẫn là cách tìm đối tượng, không phải bản thân dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Inode: danh tính của đối tượng trong hệ thống tệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đường dẫn là cách tìm đối tượng, không phải bản thân dữ liệu
 
@@ -30,6 +31,8 @@ less myapp/app.log
 ```
 
 `myapp/app.log` ở đây phụ thuộc vào thư mục hiện tại. Đây là lý do script dùng trong môi trường vận hành (production / 운영 환경) phải thận trọng với đường dẫn tương đối: cùng một script chạy từ thư mục làm việc khác có thể tác động tới một đối tượng khác.
+
+> **Chuyển mạch:** Ở chặng này của **Hệ thống tệp, đường dẫn, inode và liên kết**, **Đường dẫn là cách tìm đối tượng, không phải bản thân dữ liệu** nêu điều cần giải thích; **Inode: danh tính của đối tượng trong hệ thống tệp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên kết cứng: nhiều tên cùng trỏ tới một inode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Inode: danh tính của đối tượng trong hệ thống tệp
 
@@ -52,6 +55,8 @@ Mô hình tư duy đơn giản:
 
 Mô hình này đã đủ mạnh để suy luận nhiều tình huống thực tế dù chi tiết triển khai của từng hệ thống tệp có thể phức tạp hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tệp, đường dẫn, inode và liên kết**, sau nội dung của **Inode: danh tính của đối tượng trong hệ thống tệp**, **Liên kết cứng: nhiều tên cùng trỏ tới một inode** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết tượng trưng: một đối tượng chứa đường dẫn tới tên khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết cứng: nhiều tên cùng trỏ tới một inode
 
 Tạo liên kết cứng:
@@ -66,6 +71,8 @@ Hai mục thư mục có thể trỏ tới cùng một `inode`. Nếu sửa nộ
 `stat` cho thấy **số lượng liên kết (link count)**. Đối tượng dữ liệu chỉ có thể được thu hồi khi không còn liên kết thư mục thích hợp và không còn tham chiếu đang mở cần giữ đối tượng tồn tại.
 
 Liên kết cứng thông thường không vượt qua ranh giới hệ thống tệp vì số `inode` chỉ có ý nghĩa trong hệ thống tệp tương ứng. Linux cũng thường không cho người dùng tạo hard link tới thư mục để tránh tạo chu trình phức tạp trong cây thư mục.
+
+> **Chuyển mạch:** Trong **Hệ thống tệp, đường dẫn, inode và liên kết**, **Liên kết tượng trưng: một đối tượng chứa đường dẫn tới tên khác** tiếp nhận điểm tựa từ **Liên kết cứng: nhiều tên cùng trỏ tới một inode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao xóa tệp đang mở vẫn có thể chiếm dung lượng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết tượng trưng: một đối tượng chứa đường dẫn tới tên khác
 
@@ -88,6 +95,8 @@ Một mẫu triển khai thường gặp:
 
 Chuyển symlink `current` cho phép đổi bản phát hành nhanh mà không cần sao chép lại toàn bộ thư mục. Đây là ứng dụng trực tiếp của việc tách **tên** khỏi **đối tượng/dữ liệu**.
 
+> **Chuyển mạch:** Ở chặng này của **Hệ thống tệp, đường dẫn, inode và liên kết**, **Tại sao xóa tệp đang mở vẫn có thể chiếm dung lượng?** tiếp nhận điểm tựa từ **Liên kết tượng trưng: một đối tượng chứa đường dẫn tới tên khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **df và du trả lời hai câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tại sao xóa tệp đang mở vẫn có thể chiếm dung lượng?
 
 Giả sử ứng dụng đang ghi vào `app.log`, sau đó quản trị viên chạy:
@@ -106,6 +115,8 @@ sudo lsof +L1
 
 Đây là một tình huống môi trường vận hành (production / 운영 환경) rất quan trọng để hiểu mô hình tham chiếu của `inode`. Khởi động lại tiến trình có thể làm tham chiếu được giải phóng, nhưng trước đó cần xác nhận đúng tiến trình và nguyên nhân khiến nhật ký tăng bất thường.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tệp, đường dẫn, inode và liên kết**, **df và du trả lời hai câu hỏi khác nhau** tiếp nhận điểm tựa từ **Tại sao xóa tệp đang mở vẫn có thể chiếm dung lượng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mount: ghép nhiều hệ thống tệp vào một vùng tên chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `df` và `du` trả lời hai câu hỏi khác nhau
 
 `df` hỏi hệ thống tệp về dung lượng đã phân bổ và còn khả dụng:
@@ -121,6 +132,8 @@ du -xhd1 /var | sort -hr
 ```
 
 Vì hai công cụ đo theo cách khác nhau, kết quả có thể lệch đáng kể, đặc biệt khi có tệp đã xóa nhưng vẫn mở, điểm gắn kết (mount) hoặc tệp thưa (sparse file). Không nên kết luận một công cụ "sai" trước khi hiểu câu hỏi mà nó đang trả lời.
+
+> **Chuyển mạch:** Trong **Hệ thống tệp, đường dẫn, inode và liên kết**, **Mount: ghép nhiều hệ thống tệp vào một vùng tên chung** tiếp nhận điểm tựa từ **df và du trả lời hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc thư mục chuẩn và các quy ước phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mount: ghép nhiều hệ thống tệp vào một vùng tên chung
 
@@ -139,6 +152,8 @@ Ví dụ một hệ thống tệp trên thiết bị khác có thể được g�
 ```bash
 sudo du -xhd1 / | sort -hr
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Hệ thống tệp, đường dẫn, inode và liên kết**, **Cấu trúc thư mục chuẩn và các quy ước phổ biến** tiếp nhận điểm tựa từ **Mount: ghép nhiều hệ thống tệp vào một vùng tên chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền truy cập trong quá trình phân giải đường dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc thư mục chuẩn và các quy ước phổ biến
 
@@ -161,6 +176,8 @@ Không phải mọi bản phân phối giống hoàn toàn, nhưng một số đ
 
 Đây là quy ước chứ không phải luật buộc mọi ứng dụng phải đặt dữ liệu theo đúng một cách duy nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tệp, đường dẫn, inode và liên kết**, **Quyền truy cập trong quá trình phân giải đường dẫn** tiếp nhận điểm tựa từ **Cấu trúc thư mục chuẩn và các quy ước phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các dấu thời gian: mtime, ctime, atime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quyền truy cập trong quá trình phân giải đường dẫn
 
 Để truy cập `/a/b/file`, quyền của riêng `file` chưa phải toàn bộ câu chuyện. Tiến trình phải có khả năng đi xuyên qua các thư mục cha. Bit thực thi `x` trên thư mục mang ý nghĩa **tìm kiếm/đi xuyên (search/traverse)**.
@@ -173,6 +190,8 @@ namei -l /a/b/file
 
 Nó cho phép xem quyền của từng thành phần trong đường dẫn.
 
+> **Chuyển mạch:** Trong **Hệ thống tệp, đường dẫn, inode và liên kết**, **Các dấu thời gian: mtime, ctime, atime** tiếp nhận điểm tựa từ **Quyền truy cập trong quá trình phân giải đường dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cạn kiệt inode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các dấu thời gian: `mtime`, `ctime`, `atime`
 
 `mtime` phản ánh thời điểm nội dung tệp thay đổi. `ctime` trên Unix không có nghĩa đơn giản là "thời gian tạo"; nó phản ánh thời điểm trạng thái/siêu dữ liệu (metadata / 메타데이터) của `inode` thay đổi. `atime` liên quan thời điểm truy cập và có thể được chính sách của hệ thống tệp tối ưu để tránh phát sinh quá nhiều thao tác ghi.
@@ -183,6 +202,8 @@ stat file.txt
 
 Hiểu đúng các dấu thời gian rất quan trọng khi điều tra "tệp bị thay lúc nào". `ctime` thay đổi không nhất thiết có nghĩa nội dung thay đổi; `chmod` hoặc `chown` cũng có thể làm siêu dữ liệu (metadata / 메타데이터) thay đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Hệ thống tệp, đường dẫn, inode và liên kết**, **Cạn kiệt inode** tiếp nhận điểm tựa từ **Các dấu thời gian: mtime, ctime, atime** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cạn kiệt inode
 
 Hệ thống tệp có thể không tạo thêm tệp mới dù vẫn còn nhiều byte trống nếu tài nguyên `inode` đã cạn. Triệu chứng thường là `No space left on device` trong khi `df -h` vẫn cho thấy còn dung lượng.
@@ -192,6 +213,8 @@ df -i
 ```
 
 Một ứng dụng tạo hàng triệu tệp rất nhỏ có thể gây tình huống này. Vì vậy lập kế hoạch dung lượng không chỉ là GB/TB; số lượng đối tượng cũng có thể trở thành giới hạn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tệp, đường dẫn, inode và liên kết**, **Những hiểu lầm phổ biến (Common Misconceptions)** tiếp nhận điểm tựa từ **Cạn kiệt inode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -205,10 +228,12 @@ Một ứng dụng tạo hàng triệu tệp rất nhỏ có thể gây tình hu
 
 **"Quyền của tệp đúng thì chắc chắn đọc được."** Quyền đi xuyên thư mục cha, ACL, SELinux/AppArmor và tùy chọn mount cũng có thể ảnh hưởng.
 
+> **Chuyển mạch:** Trong **Hệ thống tệp, đường dẫn, inode và liên kết**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Chỉ mục cơ sở dữ liệu và cặp thư mục/`inode` của hệ thống tệp không phải cùng một cấu trúc dữ liệu, nhưng có một điểm chung đáng chú ý: cả hai đều tách **khóa tra cứu lô-gic (logic / 논리)** khỏi **vị trí dữ liệu vật lý**. Ứng dụng dùng đường dẫn; hệ thống tệp chịu trách nhiệm phân giải và xác định đối tượng thực tế. Lớp trừu tượng này cho phép bố trí lưu trữ thay đổi mà ứng dụng không cần biết sector cụ thể.
 
 Mô hình hệ thống tệp dẫn trực tiếp tới [Tệp, luồng dữ liệu và bộ mô tả tệp](./files_streams_descriptors.md), nơi câu hỏi chuyển từ "đối tượng nằm ở đâu trong vùng tên?" sang "tiến trình đang giữ và thực hiện I/O với đối tượng bằng cách nào?".
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [files streams descriptors](./files_streams_descriptors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

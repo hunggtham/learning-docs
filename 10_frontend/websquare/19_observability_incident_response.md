@@ -1,6 +1,6 @@
 # 19 — khả năng quan sát (observability / 관측 가능성), Logging & sự cố (incident / 인시던트) phản hồi (response / 응답)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **19 — khả năng quan sát (observability / 관측 가능성), Logging & sự cố (incident / 인시던트) phản hồi (response / 응답)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Debugging và khả năng quan sát (observability / 관측 가능성) không giống nhau** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. WebSquare ứng dụng (application / 애플리케이션) có nhiều lớp bằng chứng (evidence / 증거)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **19 — khả năng quan sát (observability / 관측 가능성), Logging & sự cố (incident / 인시던트) phản hồi (response / 응답)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Debugging và khả năng quan sát (observability / 관측 가능성) không giống nhau** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. WebSquare ứng dụng (application / 애플리케이션) có nhiều lớp bằng chứng (evidence / 증거)** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối observability với debugging, evidence và incident response, để biến dấu hiệu rời rạc thành giả thuyết có thể kiểm tra.
 
 ## 1. Debugging và khả năng quan sát (observability / 관측 가능성) không giống nhau
 
