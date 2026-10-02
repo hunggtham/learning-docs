@@ -1,6 +1,6 @@
 # 08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hệ thống tài chính trong đời sống** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tài khoản ngân hàng (계좌)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**. Route đi từ tài khoản và thanh toán → credit, loan và deposit → identity, fees và remittance → consumer protection, fraud và dispute → nguồn cơ quan tài chính, để giao dịch đời sống nối với quyền và rủi ro.
 
 ## 1. Hệ thống tài chính trong đời sống
 

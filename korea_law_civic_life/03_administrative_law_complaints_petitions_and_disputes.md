@@ -1,6 +1,6 @@
 # 03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Luật hành chính (행정법) là lớp pháp luật của quan hệ với cơ quan công** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. 민원 không đồng nghĩa với “khiếu kiện”** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03. Luật hành chính, 민원, khiếu nại và tranh chấp với cơ quan công**. Route đi từ quan hệ với cơ quan công → 민원, request và complaint → quyết định hành chính, appeal và evidence → dispute/administrative litigation → nguồn, thời hạn và cơ quan, để “khiếu nại” được tách đúng thủ tục.
 
 ## 1. Luật hành chính (행정법) là lớp pháp luật của quan hệ với cơ quan công
 

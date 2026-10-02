@@ -1,7 +1,6 @@
 # Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)
 
-> **Mạch đọc:** Đọc **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc tối thiểu của một tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)** sang **Worked modeling example — portfolio allocation đơn giản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**. Route đi từ decision variables/objective → constraints và feasible set → geometry, convexity và duality → algorithms, sensitivity và numerical limits → portfolio/engineering examples, để mô hình hóa đi trước thuật toán.
 
 Tối ưu hóa (optimization / 최적화) không bắt đầu bằng độ dốc (gradient / 기울기) descent hay Lagrange multiplier. Nó bắt đầu bằng một modeling question:
 
@@ -30,6 +29,8 @@ h_j(x)=0.
 `x` là quyết định (decision / 결정) variable. `f` là mục tiêu (objective / 목표). các ràng buộc (constraints / 제약조건들) xác định feasible set.
 
 Một điểm (point / 지점) có mục tiêu (objective / 목표) rất tốt nhưng violate ràng buộc (constraint / 제약조건) không phải solution.
+
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Cấu trúc tối thiểu của một tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)** cho ta quy tắc; **Worked modeling example — portfolio allocation đơn giản** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cục bộ (local / 로컬) optimum và toàn cục (global / 전역) optimum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Worked modeling example — portfolio allocation đơn giản
 
@@ -68,6 +69,8 @@ subject to ngân sách (budget / 예산)/position các ràng buộc (constraints
 
 Parameter `\lambda` encodes sự đánh đổi (trade-off / 트레이드오프) preference. Mathematics không tự quyết định investor nên chấp nhận rủi ro (risk / 위험) bao nhiêu; mục tiêu (objective / 목표) embeds that choice.
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Worked modeling example — portfolio allocation đơn giản** cho ta quy tắc; **Cục bộ (local / 로컬) optimum và toàn cục (global / 전역) optimum** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Convexity: cấu trúc (structure / 구조) biến cục bộ (local / 로컬) thành toàn cục (global / 전역)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cục bộ (local / 로컬) optimum và toàn cục (global / 전역) optimum
 
 `x^*` là cục bộ (local / 로컬) minimum nếu nó tốt hơn points đủ gần.
@@ -81,6 +84,8 @@ f(x^*)\le f(x)
 cho mọi feasible `x`.
 
 Nonconvex problems có thể có nhiều cục bộ (local / 로컬) minima và saddle points. First-order methods often reason locally; toàn cục (global / 전역) guarantees cần extra cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Convexity: cấu trúc (structure / 구조) biến cục bộ (local / 로컬) thành toàn cục (global / 전역)** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) optimum và toàn cục (global / 전역) optimum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **First-order convexity điều kiện (condition / 조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Convexity: cấu trúc (structure / 구조) biến cục bộ (local / 로컬) thành toàn cục (global / 전역)
 
@@ -106,6 +111,8 @@ Geometrically, chord giữa hai đồ thị (graph / 그래프) points nằm abo
 Nếu feasible set convex và mục tiêu (objective / 목표) convex, every cục bộ (local / 로컬) minimum is toàn cục (global / 전역). Đây là lý do convexity cực kỳ valuable: cục bộ (local / 로컬) conditions trở thành toàn cục (global / 전역) certificates.
 
 Strict convexity còn giúp uniqueness under suitable conditions.
+
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **First-order convexity điều kiện (condition / 조건)** tiếp nhận điểm tựa từ **Convexity: cấu trúc (structure / 구조) biến cục bộ (local / 로컬) thành toàn cục (global / 전역)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Second-order viewpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## First-order convexity điều kiện (condition / 조건)
 
@@ -135,6 +142,8 @@ cho mọi `y`; stationary điểm (point / 지점) là toàn cục (global / 전
 
 Đây là proof idea behind “độ dốc (gradient / 기울기) zero is enough” trong convex unconstrained tối ưu hóa (optimization / 최적화).
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Second-order viewpoint** tiếp nhận điểm tựa từ **First-order convexity điều kiện (condition / 조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) descent được derive từ cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Second-order viewpoint
 
 Nếu twice differentiable, convexity liên hệ Hessian:
@@ -148,6 +157,8 @@ trên convex lĩnh vực (domain / 도메인).
 Positive-semidefinite Hessian nghĩa curvature không downward theo bất kỳ direction nào.
 
 Conditioning của Hessian quyết định tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학). Nếu eigenvalues chênh lớn, mức (level / 수준) sets elongated và vanilla độ dốc (gradient / 기울기) descent có thể zig-zag/chậm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Độ dốc (gradient / 기울기) descent được derive từ cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** tiếp nhận điểm tựa từ **Second-order viewpoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked quadratic example — học tập (learning / 학습) tỷ lệ (rate / 비율) và curvature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ dốc (gradient / 기울기) descent được derive từ cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)
 
@@ -172,6 +183,8 @@ x_{k+1}=x_k-\eta\nabla f(x_k).
 ```
 
 Học tập (learning / 학습) tỷ lệ (rate / 비율) `\eta` không phải cosmetic hyperparameter. Quá lớn có thể overshoot/diverge; quá nhỏ convergence rất chậm.
+
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Độ dốc (gradient / 기울기) descent được derive từ cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** cho ta quy tắc; **Worked quadratic example — học tập (learning / 학습) tỷ lệ (rate / 비율) và curvature** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Các ràng buộc (constraints / 제약조건들) thay đổi hình học (geometry / 기하학) của allowable movement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Worked quadratic example — học tập (learning / 학습) tỷ lệ (rate / 비율) và curvature
 
@@ -209,6 +222,8 @@ suy ra
 
 Curvature `a` giới hạn stable step kích thước (size / 크기). Trong many dimensions, largest Hessian eigenvalue đóng role tương tự.
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Worked quadratic example — học tập (learning / 학습) tỷ lệ (rate / 비율) và curvature** cho ta quy tắc; **Các ràng buộc (constraints / 제약조건들) thay đổi hình học (geometry / 기하학) của allowable movement** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lagrange multipliers: alignment của normals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các ràng buộc (constraints / 제약조건들) thay đổi hình học (geometry / 기하학) của allowable movement
 
 Unconstrained optimum có thể move mọi direction. Constrained optimum chỉ được move trong feasible directions.
@@ -229,6 +244,8 @@ Nếu mục tiêu (objective / 목표) độ dốc (gradient / 기울기) có th
 
 Đó là intuition của Lagrange multipliers.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Lagrange multipliers: alignment của normals** tiếp nhận điểm tựa từ **Các ràng buộc (constraints / 제약조건들) thay đổi hình học (geometry / 기하학) của allowable movement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inequality các ràng buộc (constraints / 제약조건들) và KKT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lagrange multipliers: alignment của normals
 
 Optimize `f(x)` subject to
@@ -248,6 +265,8 @@ At regular constrained optimum:
 Multiplier `\lambda` còn có shadow-price interpretation: under suitable conditions, nó đo sensitivity của optimal mục tiêu (objective / 목표) với small relaxation/tightening ràng buộc (constraint / 제약조건).
 
 Finance, economics và operations research dùng interpretation này để price scarce resources.
+
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Inequality các ràng buộc (constraints / 제약조건들) và KKT** tiếp nhận điểm tựa từ **Lagrange multipliers: alignment của normals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Duality: tối ưu hóa (optimization / 최적화) nhìn từ prices/certificates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Inequality các ràng buộc (constraints / 제약조건들) và KKT
 
@@ -272,6 +291,8 @@ Complementary slackness means inactive ràng buộc (constraint / 제약조건) 
 
 KKT can be necessary under ràng buộc (constraint / 제약조건) qualifications; in convex problems with suitable conditions it often becomes sufficient.
 
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Duality: tối ưu hóa (optimization / 최적화) nhìn từ prices/certificates** tiếp nhận điểm tựa từ **Inequality các ràng buộc (constraints / 제약조건들) và KKT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) programming: extreme-point hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Duality: tối ưu hóa (optimization / 최적화) nhìn từ prices/certificates
 
 Primal bài toán (problem / 문제) chooses decisions. Dual bài toán (problem / 문제) often assigns multipliers/prices to các ràng buộc (constraints / 제약조건들).
@@ -279,6 +300,8 @@ Primal bài toán (problem / 문제) chooses decisions. Dual bài toán (problem
 Weak duality gives bound: dual mục tiêu (objective / 목표) cannot beat primal optimum in wrong direction. Strong duality under suitable convex conditions means bounds meet exactly.
 
 Dual variables help sensitivity phân tích (analysis / 분석) and prove optimality, not only compute answers.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Tuyến tính (linear / 선형) programming: extreme-point hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Duality: tối ưu hóa (optimization / 최적화) nhìn từ prices/certificates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Discrete tối ưu hóa (optimization / 최적화): calculus không còn đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến tính (linear / 선형) programming: extreme-point hình học (geometry / 기하학)
 
@@ -293,6 +316,8 @@ subject to tuyến tính (linear / 선형) các ràng buộc (constraints / 제�
 Feasible region là polyhedron. tuyến tính (linear / 선형) mục tiêu (objective / 목표) contours là parallel hyperplanes. If finite optimum exists, an optimum can be found at an extreme điểm (point / 지점)/face.
 
 Simplex exploits this hình học (geometry / 기하학) by moving across vertices; interior-point methods travel through interior using different computational chiến lược (strategy / 전략).
+
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Discrete tối ưu hóa (optimization / 최적화): calculus không còn đủ** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) programming: extreme-point hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động (dynamic / 동적) programming và Bellman principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Discrete tối ưu hóa (optimization / 최적화): calculus không còn đủ
 
@@ -309,6 +334,8 @@ Examples:
 Derivative may describe continuous relaxation but cannot directly choose discrete combinatorial trạng thái (state / 상태).
 
 Methods include động (dynamic / 동적) programming, branch-and-bound, cutting planes, relaxations, heuristics và approximation algorithms.
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Động (dynamic / 동적) programming và Bellman principle** tiếp nhận điểm tựa từ **Discrete tối ưu hóa (optimization / 최적화): calculus không còn đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-objective tối ưu hóa (optimization / 최적화) và Pareto frontier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động (dynamic / 동적) programming và Bellman principle
 
@@ -329,6 +356,8 @@ Optimal solution has optimal substructure: once first quyết định (decision 
 
 This connects tối ưu hóa (optimization / 최적화) with điều khiển (control / 제어), reinforcement học tập (learning / 학습) and shortest-path algorithms.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Multi-objective tối ưu hóa (optimization / 최적화) và Pareto frontier** tiếp nhận điểm tựa từ **Động (dynamic / 동적) programming và Bellman principle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Robust tối ưu hóa (optimization / 최적화): optimize when parameters are uncertain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Multi-objective tối ưu hóa (optimization / 최적화) và Pareto frontier
 
 Real các hệ thống (systems / 시스템들) rarely optimize only one chỉ số (metric / 지표). chi phí (cost / 비용), độ trễ (latency / 지연 시간), độ tin cậy (reliability / 신뢰성), fairness, return and rủi ro (risk / 위험) may xung đột (conflict / 충돌).
@@ -344,6 +373,8 @@ Weighted-sum mục tiêu (objective / 목표)
 
 encodes preferences but can hide sự đánh đổi (trade-off / 트레이드오프) cấu trúc (structure / 구조). Choosing weights is a chính sách (policy / 정책)/nghiệp vụ (business / 비즈니스) quyết định (decision / 결정), not purely mathematical deduction.
 
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Robust tối ưu hóa (optimization / 최적화): optimize when parameters are uncertain** tiếp nhận điểm tựa từ **Multi-objective tối ưu hóa (optimization / 최적화) và Pareto frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI liên kết (connection / 연결) — huấn luyện (training / 학습) is tối ưu hóa (optimization / 최적화) under mô hình (model / 모델) các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Robust tối ưu hóa (optimization / 최적화): optimize when parameters are uncertain
 
 If mô hình (model / 모델) parameters uncertain, optimizing nominal estimate can produce fragile solution.
@@ -351,6 +382,8 @@ If mô hình (model / 모델) parameters uncertain, optimizing nominal estimate 
 Robust tối ưu hóa (optimization / 최적화) asks for hiệu năng (performance / 성능) across an bất định (uncertainty / 불확실성) set. Stochastic tối ưu hóa (optimization / 최적화) optimizes expected/risk-sensitive mục tiêu (objective / 목표) over distributions.
 
 This is important in portfolio allocation, supply chains, điều khiển (control / 제어) and ML phân phối (distribution / 분포) shift.
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, sau nội dung của **Robust tối ưu hóa (optimization / 최적화): optimize when parameters are uncertain**, **AI liên kết (connection / 연결) — huấn luyện (training / 학습) is tối ưu hóa (optimization / 최적화) under mô hình (model / 모델) các giả định (assumptions / 가정들)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) minimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AI liên kết (connection / 연결) — huấn luyện (training / 학습) is tối ưu hóa (optimization / 최적화) under mô hình (model / 모델) các giả định (assumptions / 가정들)
 
@@ -367,17 +400,23 @@ Regularization, kiểm tra hợp lệ (validation / 검증) and dữ liệu (dat
 
 SGD uses noisy độ dốc (gradient / 기울기) estimates to trade computation per step against variance.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) minimization** tiếp nhận điểm tựa từ **AI liên kết (connection / 연결) — huấn luyện (training / 학습) is tối ưu hóa (optimization / 최적화) under mô hình (model / 모델) các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Finance liên kết (connection / 연결) — return, rủi ro (risk / 위험), các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) minimization
 
 Stable equilibria often minimize potential năng lượng (energy / 에너지). Variational principles formulate vật lý (physical / 물리적) laws as tối ưu hóa (optimization / 최적화) over functions/paths.
 
 This connects calculus of variations, PDEs, mechanics and optimal điều khiển (control / 제어).
 
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Finance liên kết (connection / 연결) — return, rủi ro (risk / 위험), các ràng buộc (constraints / 제약조건들)** tiếp nhận điểm tựa từ **Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) minimization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Optimizer’s curse” và mục tiêu (objective / 목표) misspecification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Finance liên kết (connection / 연결) — return, rủi ro (risk / 위험), các ràng buộc (constraints / 제약조건들)
 
 Portfolio tối ưu hóa (optimization / 최적화) makes trade-offs tường minh (explicit / 명시적) but is highly sensitive to estimates of expected returns/covariance. Optimizer can amplify estimation noise by exploiting uncertain directions.
 
 Thus robust các ràng buộc (constraints / 제약조건들), shrinkage and regularization are not afterthoughts; they respond to mô hình (model / 모델) bất định (uncertainty / 불확실성).
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **“Optimizer’s curse” và mục tiêu (objective / 목표) misspecification** tiếp nhận điểm tựa từ **Finance liên kết (connection / 연결) — return, rủi ro (risk / 위험), các ràng buộc (constraints / 제약조건들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## “Optimizer’s curse” và mục tiêu (objective / 목표) misspecification
 
@@ -387,15 +426,21 @@ Examples include recommendation các hệ thống (systems / 시스템들) maxim
 
 Tối ưu hóa (optimization / 최적화) does exactly what mục tiêu (objective / 목표)/các ràng buộc (constraints / 제약조건들) say, not what author vaguely intended.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **“Optimizer’s curse” và mục tiêu (objective / 목표) misspecification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
 Độ dốc (gradient / 기울기) methods assume differentiability or usable generalized gradients. Convex guarantees require convexity. KKT requires ràng buộc (constraint / 제약조건) qualifications for necessity and stronger cấu trúc (structure / 구조) for sufficiency.
 
 Numerical scaling matters: badly scaled variables/các ràng buộc (constraints / 제약조건들) harm solver hiệu năng (performance / 성능). mô hình (model / 모델) parameters may be uncertain. Discrete problems can be computationally hard despite simple-looking objectives.
 
+> **Chuyển mạch:** Trong **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > tối ưu hóa (optimization / 최적화) is hình học (geometry / 기하학) of choice under các ràng buộc (constraints / 제약조건들). The mục tiêu (objective / 목표) defines what “better” means; feasible set defines where movement is allowed; derivatives describe cục bộ (local / 로컬) improvement; convexity tells when cục bộ (local / 로컬) thông tin (information / 정보) is globally trustworthy; dual variables price các ràng buộc (constraints / 제약조건들); động (dynamic / 동적) programming extends the same idea through thời gian (time / 시간). The optimizer is only as meaningful as the mô hình (model / 모델) it is asked to optimize.
+
+> **Chuyển mạch:** Ở chặng này của **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -409,4 +454,4 @@ Numerical scaling matters: badly scaled variables/các ràng buộc (constraints
 
 **“Best mục tiêu (objective / 목표) giá trị (value / 값) means best real-world quyết định (decision / 결정).”** Only if mục tiêu (objective / 목표) and các ràng buộc (constraints / 제약조건들) correctly encode real goal and bất định (uncertainty / 불확실성).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 gradient descent and convexity](./01_gradient_descent_and_convexity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

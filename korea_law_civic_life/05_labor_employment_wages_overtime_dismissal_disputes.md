@@ -1,6 +1,6 @@
 # 05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bắt đầu từ quan hệ lao động, không chỉ từ tên visa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Hợp đồng lao động (근로계약서)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05. Luật lao động: hợp đồng, lương, overtime, sa thải và tranh chấp**. Route đi từ quan hệ lao động và status → hợp đồng, lương và giờ làm → overtime, nghỉ và chấm dứt → tranh chấp, bằng chứng và cơ quan → kiểm tra luật hiện hành, để người lao động biết quyền gắn với sự kiện nào.
 
 ## 1. Bắt đầu từ quan hệ lao động, không chỉ từ tên visa
 

@@ -1,6 +1,6 @@
 # 00. Phương pháp đọc pháp luật và chính sách nguồn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **00. Phương pháp đọc pháp luật và chính sách nguồn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mục tiêu của tệp (file / 파일) này** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Phân biệt bốn lớp thông tin** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **00. Phương pháp đọc pháp luật và chính sách nguồn**. Route đi từ mục tiêu đọc → phân biệt luật, hướng dẫn, thủ tục và commentary → kiểm tra cơ quan, ngày hiệu lực và status → ghi nhận bằng chứng/đường dẫn → quyết định có thể hành động, để nguồn được đánh giá theo thẩm quyền và thời điểm.
 
 ## 1. Mục tiêu của tệp (file / 파일) này
 

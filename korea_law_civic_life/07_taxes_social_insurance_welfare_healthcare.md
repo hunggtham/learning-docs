@@ -1,6 +1,6 @@
 # 07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao người nước ngoài dễ nhầm các hệ thống này?** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **2. Thuế thu nhập và cơ quan thuế** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế**. Route đi từ tách thuế và bảo hiểm → thuế thu nhập/cơ quan thuế → 4 bảo hiểm, phúc lợi và healthcare → bảng lương, eligibility và hồ sơ → nguồn hiện hành, để các khoản khấu trừ được hiểu theo đúng cơ chế.
 
 ## 1. Vì sao người nước ngoài dễ nhầm các hệ thống này?
 

@@ -1,6 +1,6 @@
 # SOURCES — Nguồn chính thức và chính sách cập nhật
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **SOURCES — Nguồn chính thức và chính sách cập nhật**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Pháp luật và pháp chế** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Cấu trúc nhà nước và civic** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **SOURCES — Nguồn chính thức và chính sách cập nhật**. Route đi từ pháp luật/pháp chế → cấu trúc nhà nước và civic → lao động, visa, thuế, nhà ở và đời sống → kiểm tra ngày, cơ quan và đường dẫn → cập nhật khi policy đổi, để provenance luôn đi cùng nội dung.
 
 **Lần kiểm tra nguồn:** 2026-09-21.
 
