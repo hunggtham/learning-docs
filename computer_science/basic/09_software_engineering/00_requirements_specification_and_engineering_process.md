@@ -1,6 +1,6 @@
 # Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Requirements, specification và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tiến trình (process / 프로세스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài toán (problem / 문제) trước solution** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Functional và non-functional requirements** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Requirements, specification và engineering process**. Route đi từ problem/stakeholder goals → functional/non-functional requirements → specification/use cases → acceptance/traceability → volatility và delivery model, để yêu cầu có thể kiểm chứng và theo dõi tới triển khai.
 
 Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) bắt đầu trước khi mã (code / 코드) xuất hiện. Nếu ta xây đúng thứ đã được mô tả nhưng thứ đó không giải quyết bài toán (problem / 문제) thực, hệ thống (system / 시스템) vẫn thất bại. Vì vậy requirements kỹ thuật (engineering / 엔지니어링) nghiên cứu cách biến nhu cầu mơ hồ của stakeholders thành hành vi (behavior / 동작), các ràng buộc (constraints / 제약조건들) và acceptance criteria đủ rõ để thiết kế (design / 설계), implement và verify.
 

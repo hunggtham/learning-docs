@@ -1,6 +1,6 @@
 # Testing, chất lượng (quality / 품질) và xác minh (verification / 확인) chiến lược (strategy / 전략)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Testing, chất lượng (quality / 품질) và xác minh (verification / 확인) chiến lược (strategy / 전략)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chất lượng (quality / 품질) không chỉ là không crash** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đơn vị (unit / 단위) tests** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Testing, quality và verification strategy**. Route đi từ quality attributes → unit/integration/E2E → contract/property/fuzzing → mutation/static/formal checks → flaky-test control và testability, để coverage phục vụ risk thay vì chỉ tăng số test.
 
 Testing không thể chứng minh program không có bug chỉ bằng chạy vài cases. Nó là sampling/experimentation trên hành vi (behavior / 동작) không gian (space / 공간). chiến lược (strategy / 전략) tốt chọn kiểm thử (test / 테스트) levels và xác minh (verification / 확인) techniques theo rủi ro (risk / 위험), contracts và thất bại (failure / 실패) modes.
 

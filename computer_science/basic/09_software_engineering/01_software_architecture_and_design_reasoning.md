@@ -1,6 +1,6 @@
 # Kiến trúc phần mềm và tư duy thiết kế
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kiến trúc phần mềm và tư duy thiết kế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến trúc là tập hợp các quyết định có hệ quả lớn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thuộc tính chất lượng định hình kiến trúc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Software architecture và design reasoning**. Route đi từ consequential decisions → quality attributes → coupling/cohesion/information hiding → layering/ports-and-adapters → data ownership, dependency inversion và fitness functions, để kiến trúc được đánh giá bằng trade-off có bằng chứng.
 
 Kiến trúc không phải một sơ đồ hộp đẹp mắt. Nó là tập hợp những quyết định khó thay đổi về ranh giới, quyền sở hữu dữ liệu, giao tiếp, triển khai và các thuộc tính chất lượng. Thiết kế tốt bắt đầu từ các lực tác động và ràng buộc thật sự, không bắt đầu từ tên của một mẫu thiết kế.
 
