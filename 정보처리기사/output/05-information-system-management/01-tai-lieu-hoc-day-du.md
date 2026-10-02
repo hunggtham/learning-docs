@@ -1,5 +1,7 @@
 # Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu học tập)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **권장 학습 순서 (Lộ trình đề xuất)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của Information System Management, rồi nối mục tiêu, thứ tự học và bài chuyên sâu.
+
 ## 학습 목표 (Mục tiêu học tập)
 
 Phần này đặt mục tiêu của bài, để người mới biết mình cần giải thích được điều gì trước khi đi vào thuật ngữ và ví dụ.
@@ -9,6 +11,8 @@ Phần này đặt mục tiêu của bài, để người mới biết mình c�
 - 앞에서 배운 개념과 뒤의 심화 개념을 연결하여 문제의 조건을 빠르게 해석한다.
 
 > **Câu hỏi trung tâm:** Khi học môn này, người học không chỉ cần nhận ra thuật ngữ Hàn mà còn phải giải thích khái niệm đang giải quyết vấn đề nào, dựa trên điều kiện nào và được dùng để nối sang phần kiến thức nào tiếp theo.
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **권장 학습 순서 (Lộ trình đề xuất)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu học tập)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 권장 학습 순서 (Lộ trình đề xuất)
 
@@ -27,6 +31,8 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 > **Mạch giảng:** mỗi mục mở bằng vị trí và mục đích học, đi qua phần giải thích của nguồn, rồi chốt bằng một câu bàn giao sang mục kế tiếp. Hãy đọc các câu nối như một phần của bài giảng: chúng cho biết vì sao kiến thức hiện tại cần thiết trước khi chuyển sang kiến thức sau.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** tiếp nhận điểm tựa từ **권장 학습 순서 (Lộ trình đề xuất)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)
 
@@ -112,6 +118,8 @@ Như vậy, **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** tiếp nhận điểm tựa từ **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)
 
 Sau khi đã đặt nền bằng **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, ta chuyển sang **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**. Đây là mắt xích 2/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -147,6 +155,8 @@ Các bullet của **2. 소프트웨어 개발 프레임워크 (Framework)** đan
 Ta có thể khép mục **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** tiếp nhận điểm tựa từ **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 프레임워크 특징 및 SW 신기술 (Framework & SW Tech)
 
@@ -205,6 +215,8 @@ Như vậy, **3. 주요 SW 및 관련 용어** đã hoàn thành vai trò của 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** tiếp nhận điểm tựa từ **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크
 
 Ở bước 4/86, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** xuất hiện như phần tiếp nối của **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -214,6 +226,8 @@ Như vậy, **3. 주요 SW 및 관련 용어** đã hoàn thành vai trò của 
 Như vậy, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** tiếp nhận điểm tựa từ **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 336. 소프트웨어 개발 프레임워크 (Software Development Framework)
 
@@ -247,6 +261,8 @@ Với **자주 혼동하는 판별 포인트**, ta đã đi từ tên gọi và 
 Ta có thể khép mục **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** tiếp nhận điểm tựa từ **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로젝트 일정 관리 (Project Schedule Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
@@ -356,6 +372,8 @@ Như vậy, **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)**
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **프로젝트 일정 관리 (Project Schedule Management)** tiếp nhận điểm tựa từ **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 비용 산정 기법 (Software Cost Estimation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 프로젝트 일정 관리 (Project Schedule Management)
 
 Ở bước 7/86, **프로젝트 일정 관리 (Project Schedule Management)** xuất hiện như phần tiếp nối của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -400,6 +418,8 @@ Như vậy, **3. 간트 차트 (Gantt Chart, 시간선 차트)** đã hoàn thà
 Như vậy, **프로젝트 일정 관리 (Project Schedule Management)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 비용 산정 기법 (Software Cost Estimation)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 비용 산정 기법 (Software Cost Estimation)** tiếp nhận điểm tựa từ **프로젝트 일정 관리 (Project Schedule Management)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 소프트웨어 비용 산정 기법 (Software Cost Estimation)
 
@@ -454,6 +474,8 @@ Ta có thể khép mục **소프트웨어 비용 산정 기법 (Software Cost E
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)** tiếp nhận điểm tựa từ **소프트웨어 비용 산정 기법 (Software Cost Estimation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)
 
 Từ **소프트웨어 비용 산정 기법 (Software Cost Estimation)**, ta đã có điểm tựa để bước vào **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/86 trước khi đi vào chi tiết.
@@ -471,6 +493,8 @@ Phần “323. 수학적 산정 기법 (Mathematical Estimation Techniques / K�
 Điểm chốt của **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)** xác định đầu vào; **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
@@ -537,6 +561,8 @@ Như vậy, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy t
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** xác định đầu vào; **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)
 
 Sau khi đã đặt nền bằng **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, ta chuyển sang **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**. Đây là mắt xích 11/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -585,6 +611,8 @@ Như vậy, **3. SPICE (ISO/IEC 15504)** đã hoàn thành vai trò của mình 
 Ta có thể khép mục **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** nêu điều cần giải thích; **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)
 
@@ -652,6 +680,8 @@ Như vậy, **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** đã hoàn th
 Điểm chốt của **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** nêu điều cần giải thích; **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
@@ -731,6 +761,8 @@ Với **2.4 PCM (Pulse Code Modulation)**, ta đã đi từ tên gọi và dấu
 Như vậy, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** tiếp nhận điểm tựa từ **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)
 
@@ -821,6 +853,8 @@ Với **3.4 HDLC 프로토콜 (High-level Data Link Control)**, ta đã đi từ
 Ta có thể khép mục **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** tiếp nhận điểm tựa từ **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
@@ -938,6 +972,8 @@ Các bullet của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control &
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** nêu điều cần giải thích; **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2. 자원 처리 오류 (Resource Handling Errors)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)
 
 Ở bước 16/86, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** xuất hiện như phần tiếp nối của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -947,6 +983,8 @@ Các bullet của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control &
 Như vậy, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **2. 자원 처리 오류 (Resource Handling Errors)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** nêu điều cần giải thích; **2. 자원 처리 오류 (Resource Handling Errors)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. 자원 처리 오류 (Resource Handling Errors)
 
@@ -963,6 +1001,8 @@ Phần “2. 자원 처리 오류 (Resource Handling Errors)” được nối v
 Ta có thể khép mục **2. 자원 처리 오류 (Resource Handling Errors)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **2. 자원 처리 오류 (Resource Handling Errors)** nêu điều cần giải thích; **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **네트워크 관련 장비 (Network Equipment)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)
 
@@ -1046,6 +1086,8 @@ Như vậy, **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **네트워크 관련 장비 (Network Equipment)** tiếp nhận điểm tựa từ **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **네트워크 구조 및 기술 (Network Structures & Technologies)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 네트워크 관련 장비 (Network Equipment)
 
 Ở bước 19/86, **네트워크 관련 장비 (Network Equipment)** xuất hiện như phần tiếp nối của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1071,6 +1113,8 @@ Phần “네트워크 관련 장비 (Network Equipment)” được nối với
 Như vậy, **네트워크 관련 장비 (Network Equipment)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **네트워크 구조 및 기술 (Network Structures & Technologies)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **네트워크 구조 및 기술 (Network Structures & Technologies)** tiếp nhận điểm tựa từ **네트워크 관련 장비 (Network Equipment)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 네트워크 구조 및 기술 (Network Structures & Technologies)
 
@@ -1136,6 +1180,8 @@ Ta có thể khép mục **네트워크 구조 및 기술 (Network Structures & 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)** tiếp nhận điểm tựa từ **네트워크 구조 및 기술 (Network Structures & Technologies)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **네트워크 보안 기술 (Network Security Tech)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 네트워크 및 정보 침해 공격 (Network & Info Security Attacks)
 
 Từ **네트워크 구조 및 기술 (Network Structures & Technologies)**, ta đã có điểm tựa để bước vào **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/86 trước khi đi vào chi tiết.
@@ -1198,6 +1244,8 @@ Như vậy, **3. 시스템 및 소프트웨어 공격** đã hoàn thành vai tr
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **네트워크 보안 기술 (Network Security Tech)** tiếp nhận điểm tựa từ **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **계층별 주요 프로토콜 (Major Protocols by Layer)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 네트워크 보안 기술 (Network Security Tech)
 
 Ở bước 22/86, **네트워크 보안 기술 (Network Security Tech)** xuất hiện như phần tiếp nối của **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1212,6 +1260,8 @@ Phần “네트워크 보안 기술 (Network Security Tech)” được nối v
 Như vậy, **네트워크 보안 기술 (Network Security Tech)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **계층별 주요 프로토콜 (Major Protocols by Layer)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **계층별 주요 프로토콜 (Major Protocols by Layer)** tiếp nhận điểm tựa từ **네트워크 보안 기술 (Network Security Tech)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 계층별 주요 프로토콜 (Major Protocols by Layer)
 
@@ -1281,6 +1331,8 @@ Ta có thể khép mục **계층별 주요 프로토콜 (Major Protocols by Lay
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **계층별 주요 프로토콜 (Major Protocols by Layer)** nêu điều cần giải thích; **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **데이터베이스 신기술 (DB New Technologies)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)
 
 Từ **계층별 주요 프로토콜 (Major Protocols by Layer)**, ta đã có điểm tựa để bước vào **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/86 trước khi đi vào chi tiết.
@@ -1329,6 +1381,8 @@ Các bullet của **7.2 교착상태 (Deadlock)** đang nén nhiều ý thành c
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** nêu điều cần giải thích; **데이터베이스 신기술 (DB New Technologies)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 데이터베이스 신기술 (DB New Technologies)
 
 Ở bước 25/86, **데이터베이스 신기술 (DB New Technologies)** xuất hiện như phần tiếp nối của **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1355,6 +1409,8 @@ Với **1. 빅데이터 및 분석 기술**, ta đã đi từ tên gọi và d�
 Như vậy, **데이터베이스 신기술 (DB New Technologies)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** tiếp nhận điểm tựa từ **데이터베이스 신기술 (DB New Technologies)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)
 
@@ -1410,6 +1466,8 @@ Các bullet của **8.2 시스템 보안 기술** đang nén nhiều ý thành c
 Ta có thể khép mục **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** tiếp nhận điểm tựa từ **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)
 
@@ -1501,6 +1559,8 @@ Với **10.4 기타 네트워크 공격**, ta đã đi từ tên gọi và dấu
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** tiếp nhận điểm tựa từ **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 보안 (Software Security)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 정보 보안 및 하드웨어 신기술 (Security & HW Tech)
 
 Ở bước 28/86, **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** xuất hiện như phần tiếp nối của **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1542,6 +1602,8 @@ Các bullet của **2. 하드웨어 신기술** đang nén nhiều ý thành cá
 Như vậy, **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 보안 (Software Security)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 보안 (Software Security)** tiếp nhận điểm tựa từ **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **인증 및 보안 체계 (Authentication & Security System)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 소프트웨어 보안 (Software Security)
 
@@ -1603,6 +1665,8 @@ Ta có thể khép mục **소프트웨어 보안 (Software Security)** bằng m
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **인증 및 보안 체계 (Authentication & Security System)** tiếp nhận điểm tựa từ **소프트웨어 보안 (Software Security)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 개발 보안 관련 법규** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 인증 및 보안 체계 (Authentication & Security System)
 
 Từ **소프트웨어 보안 (Software Security)**, ta đã có điểm tựa để bước vào **인증 및 보안 체계 (Authentication & Security System)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/86 trước khi đi vào chi tiết.
@@ -1645,6 +1709,8 @@ Các bullet của **2. 보안 체계 3영역** đang nén nhiều ý thành các
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 개발 보안 관련 법규** tiếp nhận điểm tựa từ **인증 및 보안 체계 (Authentication & Security System)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 소프트웨어 개발 보안 관련 법규
 
 Ở bước 31/86, **소프트웨어 개발 보안 관련 법규** xuất hiện như phần tiếp nối của **인증 및 보안 체계 (Authentication & Security System)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1662,6 +1728,8 @@ Như vậy, **소프트웨어 개발 보안 관련 법규** không chỉ cung c�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** tiếp nhận điểm tựa từ **소프트웨어 개발 보안 관련 법규** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)
 
 Sau khi đã đặt nền bằng **소프트웨어 개발 보안 관련 법규**, ta chuyển sang **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)**. Đây là mắt xích 32/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1671,6 +1739,8 @@ Sau khi đã đặt nền bằng **소프트웨어 개발 보안 관련 법규**
 Ta có thể khép mục **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** tiếp nhận điểm tựa từ **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 암호화 기술 (Công nghệ Mã hóa)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)
 
@@ -1693,6 +1763,8 @@ Phần “4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử l�
 Điểm chốt của **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **9. 암호화 기술 (Công nghệ Mã hóa)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **9. 암호화 기술 (Công nghệ Mã hóa)** tiếp nhận điểm tựa từ **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **암호화 기법 (Encryption Techniques)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. 암호화 기술 (Công nghệ Mã hóa)
 
@@ -1742,6 +1814,8 @@ Các bullet của **9.2 해시 및 기타 암호화 요소** đang nén nhiều 
 Như vậy, **9. 암호화 기술 (Công nghệ Mã hóa)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **암호화 기법 (Encryption Techniques)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **암호화 기법 (Encryption Techniques)** tiếp nhận điểm tựa từ **9. 암호화 기술 (Công nghệ Mã hóa)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 암호화 기본 개념 (Concepts)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 암호화 기법 (Encryption Techniques)
 
@@ -1805,6 +1879,8 @@ Ta có thể khép mục **암호화 기법 (Encryption Techniques)** bằng m�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **1. 암호화 기본 개념 (Concepts)** tiếp nhận điểm tựa từ **암호화 기법 (Encryption Techniques)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. 암호화 기본 개념 (Concepts)
 
 Từ **암호화 기법 (Encryption Techniques)**, ta đã có điểm tựa để bước vào **1. 암호화 기본 개념 (Concepts)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/86 trước khi đi vào chi tiết.
@@ -1821,6 +1897,8 @@ Phần “1. 암호화 기본 개념 (Concepts)” được nối với nội du
 Điểm chốt của **1. 암호화 기본 개념 (Concepts)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** tiếp nhận điểm tựa từ **1. 암호화 기본 개념 (Concepts)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)
 
@@ -1895,6 +1973,8 @@ Như vậy, **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** tiếp nhận điểm tựa từ **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)
 
 Sau khi đã đặt nền bằng **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**, ta chuyển sang **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**. Đây là mắt xích 38/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1965,6 +2045,8 @@ Như vậy, **6.3 시스템 아키텍처 및 프로그래밍 요소** đã hoàn
 Ta có thể khép mục **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** tiếp nhận điểm tựa từ **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 257: 분기/제어 (break, continue)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. 보충 및 심화 내용 (Bổ sung & Nâng cao)
 
@@ -2114,6 +2196,8 @@ Các bullet của **11.5 기타 보안 및 공격 기법 심화** đang nén nhi
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **핵심 257: 분기/제어 (break, continue)** tiếp nhận điểm tựa từ **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 258, 259, 260: 배열 (Array)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 257: 분기/제어 (break, continue)
 
 Ở bước 40/86, **핵심 257: 분기/제어 (break, continue)** xuất hiện như phần tiếp nối của **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2128,6 +2212,8 @@ Phần “핵심 257: 분기/제어 (break, continue)” được nối với n�
 Như vậy, **핵심 257: 분기/제어 (break, continue)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 258, 259, 260: 배열 (Array)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **핵심 258, 259, 260: 배열 (Array)** tiếp nhận điểm tựa từ **핵심 257: 분기/제어 (break, continue)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 261: C언어의 문자열 배열** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 258, 259, 260: 배열 (Array)
 
@@ -2150,6 +2236,8 @@ Ta có thể khép mục **핵심 258, 259, 260: 배열 (Array)** bằng một c
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **핵심 261: C언어의 문자열 배열** tiếp nhận điểm tựa từ **핵심 258, 259, 260: 배열 (Array)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 262: 포인터와 포인터 변수 (Pointer)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 261: C언어의 문자열 배열
 
 Từ **핵심 258, 259, 260: 배열 (Array)**, ta đã có điểm tựa để bước vào **핵심 261: C언어의 문자열 배열**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/86 trước khi đi vào chi tiết.
@@ -2165,6 +2253,8 @@ Phần “핵심 261: C언어의 문자열 배열” được nối với nội 
 Điểm chốt của **핵심 261: C언어의 문자열 배열** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **핵심 262: 포인터와 포인터 변수 (Pointer)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **핵심 262: 포인터와 포인터 변수 (Pointer)** tiếp nhận điểm tựa từ **핵심 261: C언어의 문자열 배열** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **포인터와 배열 (Pointer and Array)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 262: 포인터와 포인터 변수 (Pointer)
 
@@ -2187,6 +2277,8 @@ Phần “핵심 262: 포인터와 포인터 변수 (Pointer)” được nối 
 Như vậy, **핵심 262: 포인터와 포인터 변수 (Pointer)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **포인터와 배열 (Pointer and Array)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **포인터와 배열 (Pointer and Array)** tiếp nhận điểm tựa từ **핵심 262: 포인터와 포인터 변수 (Pointer)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python의 기본 문법 (Python Basic Syntax)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 포인터와 배열 (Pointer and Array)
 
@@ -2220,6 +2312,8 @@ Ta có thể khép mục **포인터와 배열 (Pointer and Array)** bằng mộ
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Python의 기본 문법 (Python Basic Syntax)** tiếp nhận điểm tựa từ **포인터와 배열 (Pointer and Array)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 데이터 입·출력 함수 (Python Input/Output Functions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Python의 기본 문법 (Python Basic Syntax)
 
 Từ **포인터와 배열 (Pointer and Array)**, ta đã có điểm tựa để bước vào **Python의 기본 문법 (Python Basic Syntax)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/86 trước khi đi vào chi tiết.
@@ -2251,6 +2345,8 @@ if x < y:
 Điểm chốt của **Python의 기본 문법 (Python Basic Syntax)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **Python 데이터 입·출력 함수 (Python Input/Output Functions)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Python 데이터 입·출력 함수 (Python Input/Output Functions)** tiếp nhận điểm tựa từ **Python의 기본 문법 (Python Basic Syntax)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **입력 값의 형변환 (Type Casting)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Python 데이터 입·출력 함수 (Python Input/Output Functions)
 
@@ -2301,6 +2397,8 @@ Như vậy, **Python 데이터 입·출력 함수 (Python Input/Output Functions
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **입력 값의 형변환 (Type Casting)** tiếp nhận điểm tựa từ **Python 데이터 입·출력 함수 (Python Input/Output Functions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 입력 값의 형변환 (Type Casting)
 
 Sau khi đã đặt nền bằng **Python 데이터 입·출력 함수 (Python Input/Output Functions)**, ta chuyển sang **입력 값의 형변환 (Type Casting)**. Đây là mắt xích 47/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2329,6 +2427,8 @@ a, b = map(int, input("Nhập 2 số: ").split())
 Ta có thể khép mục **입력 값의 형변환 (Type Casting)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** tiếp nhận điểm tựa từ **입력 값의 형변환 (Type Casting)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **슬라이스 (Slice)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)
 
@@ -2386,6 +2486,8 @@ Với **2. 딕셔너리 (Dictionary / Từ điển)**, hãy đọc các công th
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **슬라이스 (Slice)** tiếp nhận điểm tựa từ **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 제어문 (Control Statements): if문, for문** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 슬라이스 (Slice)
 
 Ở bước 49/86, **슬라이스 (Slice)** xuất hiện như phần tiếp nối của **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2413,6 +2515,8 @@ print(a[::-1])   # Lật ngược list (âm là đi lùi)
 Như vậy, **슬라이스 (Slice)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **Python 제어문 (Control Statements): if문, for문**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Python 제어문 (Control Statements): if문, for문** tiếp nhận điểm tựa từ **슬라이스 (Slice)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 클래스 (Class) - 기초 (Cơ bản)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Python 제어문 (Control Statements): if문, for문
 
@@ -2478,6 +2582,8 @@ Ta có thể khép mục **Python 제어문 (Control Statements): if문, for문*
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Python 클래스 (Class) - 기초 (Cơ bản)** tiếp nhận điểm tựa từ **Python 제어문 (Control Statements): if문, for문** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 클래스와 함수 (Class and Functions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Python 클래스 (Class) - 기초 (Cơ bản)
 
 Từ **Python 제어문 (Control Statements): if문, for문**, ta đã có điểm tựa để bước vào **Python 클래스 (Class) - 기초 (Cơ bản)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/86 trước khi đi vào chi tiết.
@@ -2502,6 +2608,8 @@ Phần “Python 클래스 (Class) - 기초 (Cơ bản)” được nối với 
 Điểm chốt của **Python 클래스 (Class) - 기초 (Cơ bản)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **Python 클래스와 함수 (Class and Functions)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Python 클래스와 함수 (Class and Functions)** tiếp nhận điểm tựa từ **Python 클래스 (Class) - 기초 (Cơ bản)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 제어문: while문 (While Loop)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Python 클래스와 함수 (Class and Functions)
 
@@ -2542,6 +2650,8 @@ Như vậy, **Python 클래스와 함수 (Class and Functions)** không chỉ cu
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Python 제어문: while문 (While Loop)** tiếp nhận điểm tựa từ **Python 클래스와 함수 (Class and Functions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어의 분류 (Classification of Programming Languages)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Python 제어문: while문 (While Loop)
 
 Sau khi đã đặt nền bằng **Python 클래스와 함수 (Class and Functions)**, ta chuyển sang **Python 제어문: while문 (While Loop)**. Đây là mắt xích 53/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2567,6 +2677,8 @@ while i < 5:
 Ta có thể khép mục **Python 제어문: while문 (While Loop)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **프로그래밍 언어의 분류 (Classification of Programming Languages)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **프로그래밍 언어의 분류 (Classification of Programming Languages)** tiếp nhận điểm tựa từ **Python 제어문: while문 (While Loop)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **라이브러리 및 예외 처리 (Libraries and Exception Handling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 프로그래밍 언어의 분류 (Classification of Programming Languages)
 
@@ -2651,6 +2763,8 @@ Với **4. 선언형 프로그래밍 언어 (Declarative)**, ta đã đi từ t�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **라이브러리 및 예외 처리 (Libraries and Exception Handling)** tiếp nhận điểm tựa từ **프로그래밍 언어의 분류 (Classification of Programming Languages)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **운영체제 (OS: Operating System) 기초** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 라이브러리 및 예외 처리 (Libraries and Exception Handling)
 
 Ở bước 55/86, **라이브러리 및 예외 처리 (Libraries and Exception Handling)** xuất hiện như phần tiếp nối của **프로그래밍 언어의 분류 (Classification of Programming Languages)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2697,6 +2811,8 @@ Các ý về **2. 예외 처리 (Exception Handling)** được nối với ví 
 Như vậy, **라이브러리 및 예외 처리 (Libraries and Exception Handling)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **운영체제 (OS: Operating System) 기초**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **운영체제 (OS: Operating System) 기초** tiếp nhận điểm tựa từ **라이브러리 및 예외 처리 (Libraries and Exception Handling)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Windows와 UNIX 운영체제 (Windows & UNIX)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 운영체제 (OS: Operating System) 기초
 
@@ -2749,6 +2865,8 @@ Các bullet của **2. 운영체제의 구성** đang nén nhiều ý thành cá
 Ta có thể khép mục **운영체제 (OS: Operating System) 기초** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **Windows와 UNIX 운영체제 (Windows & UNIX)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **Windows와 UNIX 운영체제 (Windows & UNIX)** tiếp nhận điểm tựa từ **운영체제 (OS: Operating System) 기초** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **UNIX 주요 구성요소 (UNIX Components)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Windows와 UNIX 운영체제 (Windows & UNIX)
 
@@ -2823,6 +2941,8 @@ Với **4. UNIX 시스템 구조: 커널 (Kernel)**, ta đã đi từ tên gọi
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **UNIX 주요 구성요소 (UNIX Components)** tiếp nhận điểm tựa từ **Windows와 UNIX 운영체제 (Windows & UNIX)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **메모리 관리 (Memory Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## UNIX 주요 구성요소 (UNIX Components)
 
 Ở bước 58/86, **UNIX 주요 구성요소 (UNIX Components)** xuất hiện như phần tiếp nối của **Windows와 UNIX 운영체제 (Windows & UNIX)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2865,6 +2985,8 @@ Các bullet của **2. 유틸리티 프로그램 (Utility Program)** đang nén 
 Như vậy, **UNIX 주요 구성요소 (UNIX Components)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **메모리 관리 (Memory Management)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **메모리 관리 (Memory Management)** tiếp nhận điểm tựa từ **UNIX 주요 구성요소 (UNIX Components)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **페이지 교체 알고리즘과 페이지 크기 (Page Replacement & Size)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 메모리 관리 (Memory Management)
 
@@ -2911,6 +3033,8 @@ Ta có thể khép mục **메모리 관리 (Memory Management)** bằng một c
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **페이지 교체 알고리즘과 페이지 크기 (Page Replacement & Size)** tiếp nhận điểm tựa từ **메모리 관리 (Memory Management)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 페이지 교체 알고리즘과 페이지 크기 (Page Replacement & Size)
 
 Từ **메모리 관리 (Memory Management)**, ta đã có điểm tựa để bước vào **페이지 교체 알고리즘과 페이지 크기 (Page Replacement & Size)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 60/86 trước khi đi vào chi tiết.
@@ -2952,6 +3076,8 @@ Các bullet của **2. 페이지 크기 (Page Size)** đang nén nhiều ý thà
 Điểm chốt của **페이지 교체 알고리즘과 페이지 크기 (Page Replacement & Size)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **페이지 교체 알고리즘과 페이지 크기 (Page Replacement & Size)** xác định đầu vào; **프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **프로세스와 스레드 (Process and Thread)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)
 
@@ -3002,6 +3128,8 @@ Như vậy, **3. 스래싱 (Thrashing)** đã hoàn thành vai trò của mình 
 Như vậy, **프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **프로세스와 스레드 (Process and Thread)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)** xác định đầu vào; **프로세스와 스레드 (Process and Thread)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 프로세스와 스레드 (Process and Thread)
 
@@ -3062,6 +3190,8 @@ Ta có thể khép mục **프로세스와 스레드 (Process and Thread)** bằ
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **프로세스와 스레드 (Process and Thread)** xác định đầu vào; **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 주요 스케줄링 알고리즘 (Major Scheduling Algorithms)
 
 Từ **프로세스와 스레드 (Process and Thread)**, ta đã có điểm tựa để bước vào **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 63/86 trước khi đi vào chi tiết.
@@ -3107,6 +3237,8 @@ Như vậy, **3. HRN (Highest Response-ratio Next)** đã hoàn thành vai trò 
 Điểm chốt của **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)** tiếp nhận điểm tựa từ **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IP 주소 및 서브네팅 (IP Address & Subnetting)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)
 
@@ -3156,6 +3288,8 @@ Các bullet của **2. 기본 명령어 (Basic Commands)** đang nén nhiều ý
 Như vậy, **UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **IP 주소 및 서브네팅 (IP Address & Subnetting)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **IP 주소 및 서브네팅 (IP Address & Subnetting)** tiếp nhận điểm tựa từ **UNIX/LINUX 환경 변수 및 기본 명령어 (UNIX Variables & Commands)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OSI 7계층 참조 모델 (OSI 7 Layer Reference Model)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## IP 주소 및 서브네팅 (IP Address & Subnetting)
 
@@ -3221,6 +3355,8 @@ Ta có thể khép mục **IP 주소 및 서브네팅 (IP Address & Subnetting)*
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, sau nội dung của **IP 주소 및 서브네팅 (IP Address & Subnetting)**, **OSI 7계층 참조 모델 (OSI 7 Layer Reference Model)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **5과목 정보시스템 구축 관리 (Information System Construction Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## OSI 7계층 참조 모델 (OSI 7 Layer Reference Model)
 
 Từ **IP 주소 및 서브네팅 (IP Address & Subnetting)**, ta đã có điểm tựa để bước vào **OSI 7계층 참조 모델 (OSI 7 Layer Reference Model)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 66/86 trước khi đi vào chi tiết.
@@ -3242,6 +3378,8 @@ Từ **IP 주소 및 서브네팅 (IP Address & Subnetting)**, ta đã có đi�
 Điểm chốt của **OSI 7계층 참조 모델 (OSI 7 Layer Reference Model)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **5과목 정보시스템 구축 관리 (Information System Construction Management)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **5과목 정보시스템 구축 관리 (Information System Construction Management)** tiếp nhận điểm tựa từ **OSI 7계층 참조 모델 (OSI 7 Layer Reference Model)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5과목 정보시스템 구축 관리 (Information System Construction Management)
 
@@ -3288,6 +3426,8 @@ Như vậy, **5과목 정보시스템 구축 관리 (Information System Construc
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)** tiếp nhận điểm tựa từ **5과목 정보시스템 구축 관리 (Information System Construction Management)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CASE (Computer Aided Software Engineering)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)
 
 Sau khi đã đặt nền bằng **5과목 정보시스템 구축 관리 (Information System Construction Management)**, ta chuyển sang **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)**. Đây là mắt xích 68/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -3328,6 +3468,8 @@ Ta có thể khép mục **소프트웨어 재사용 및 재공학 활동 (Softw
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)** cho ta quy tắc; **CASE (Computer Aided Software Engineering)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## CASE (Computer Aided Software Engineering)
 
 Từ **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)**, ta đã có điểm tựa để bước vào **CASE (Computer Aided Software Engineering)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 69/86 trước khi đi vào chi tiết.
@@ -3342,6 +3484,8 @@ Phần “CASE (Computer Aided Software Engineering)” được nối với n�
 Điểm chốt của **CASE (Computer Aided Software Engineering)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **CASE (Computer Aided Software Engineering)** cho ta quy tắc; **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **교착상태 (Dead Lock)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)
 
@@ -3386,6 +3530,8 @@ Các bullet của **2. 병행 제어 기법 (Concurrency Control)** đang nén n
 Như vậy, **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **교착상태 (Dead Lock)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **교착상태 (Dead Lock)** tiếp nhận điểm tựa từ **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **침입 탐지 시스템 (IDS; Intrusion Detection System)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 교착상태 (Dead Lock)
 
@@ -3434,6 +3580,8 @@ Ta có thể khép mục **교착상태 (Dead Lock)** bằng một câu hỏi b�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **침입 탐지 시스템 (IDS; Intrusion Detection System)** tiếp nhận điểm tựa từ **교착상태 (Dead Lock)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **리눅스의 커널 로그 (Linux Kernel Logs)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 침입 탐지 시스템 (IDS; Intrusion Detection System)
 
 Từ **교착상태 (Dead Lock)**, ta đã có điểm tựa để bước vào **침입 탐지 시스템 (IDS; Intrusion Detection System)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/86 trước khi đi vào chi tiết.
@@ -3451,6 +3599,8 @@ Từ **교착상태 (Dead Lock)**, ta đã có điểm tựa để bước vào 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **리눅스의 커널 로그 (Linux Kernel Logs)** tiếp nhận điểm tựa từ **침입 탐지 시스템 (IDS; Intrusion Detection System)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 생명주기 모델 (SDLC Models)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 리눅스의 커널 로그 (Linux Kernel Logs)
 
 Ở bước 73/86, **리눅스의 커널 로그 (Linux Kernel Logs)** xuất hiện như phần tiếp nối của **침입 탐지 시스템 (IDS; Intrusion Detection System)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -3467,6 +3617,8 @@ Phần “리눅스의 커널 로그 (Linux Kernel Logs)” được nối với
 Như vậy, **리눅스의 커널 로그 (Linux Kernel Logs)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 생명주기 모델 (SDLC Models)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **소프트웨어 생명주기 모델 (SDLC Models)** tiếp nhận điểm tựa từ **리눅스의 커널 로그 (Linux Kernel Logs)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **스토리지 시스템 (Storage Systems)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 소프트웨어 생명주기 모델 (SDLC Models)
 
@@ -3491,6 +3643,8 @@ Ta có thể khép mục **소프트웨어 생명주기 모델 (SDLC Models)** b
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **스토리지 시스템 (Storage Systems)** tiếp nhận điểm tựa từ **소프트웨어 생명주기 모델 (SDLC Models)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 스토리지 시스템 (Storage Systems)
 
 Từ **소프트웨어 생명주기 모델 (SDLC Models)**, ta đã có điểm tựa để bước vào **스토리지 시스템 (Storage Systems)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 75/86 trước khi đi vào chi tiết.
@@ -3510,6 +3664,8 @@ Từ **소프트웨어 생명주기 모델 (SDLC Models)**, ta đã có điểm 
 Điểm chốt của **스토리지 시스템 (Storage Systems)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **스토리지 시스템 (Storage Systems)** xác định đầu vào; **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)
 
@@ -3531,6 +3687,8 @@ Như vậy, **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn b
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)** xác định đầu vào; **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)
 
 Sau khi đã đặt nền bằng **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)**, ta chuyển sang **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)**. Đây là mắt xích 77/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -3549,6 +3707,8 @@ Phần “2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh 
 Ta có thể khép mục **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)** tiếp nhận điểm tựa từ **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)
 
@@ -3570,6 +3730,8 @@ Phần “3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Gi�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, sau nội dung của **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)**, **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)
 
 Ở bước 79/86, **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** xuất hiện như phần tiếp nối của **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -3587,6 +3749,8 @@ Phần “1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ng
 Như vậy, **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** tiếp nhận điểm tựa từ **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)
 
@@ -3608,6 +3772,8 @@ Ta có thể khép mục **3. 취약한 API 사용 (Vulnerable API / API dễ b�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** tiếp nhận điểm tựa từ **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)
 
 Từ **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, ta đã có điểm tựa để bước vào **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 81/86 trước khi đi vào chi tiết.
@@ -3617,6 +3783,8 @@ Từ **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**
 Điểm chốt của **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)** tiếp nhận điểm tựa từ **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)
 
@@ -3659,6 +3827,8 @@ Như vậy, **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)** không 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** tiếp nhận điểm tựa từ **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 인증 기술 (Authentication Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
 
 Sau khi đã đặt nền bằng **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**, ta chuyển sang **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)**. Đây là mắt xích 83/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -3668,6 +3838,8 @@ Sau khi đã đặt nền bằng **2. 대칭 키 vs 비대칭 키 (Symmetric vs 
 Ta có thể khép mục **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **1. 인증 기술 (Authentication Types)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **1. 인증 기술 (Authentication Types)** tiếp nhận điểm tựa từ **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 접근 제어 정책 (Access Control Policies)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 인증 기술 (Authentication Types)
 
@@ -3685,6 +3857,8 @@ Phần “1. 인증 기술 (Authentication Types)” được nối với nội 
 Điểm chốt của **1. 인증 기술 (Authentication Types)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 접근 제어 정책 (Access Control Policies)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **2. 접근 제어 정책 (Access Control Policies)** tiếp nhận điểm tựa từ **1. 인증 기술 (Authentication Types)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. 접근 제어 정책 (Access Control Policies)
 
@@ -3716,6 +3890,8 @@ Như vậy, **2. 접근 제어 정책 (Access Control Policies)** không chỉ c
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)**, **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** tiếp nhận điểm tựa từ **2. 접근 제어 정책 (Access Control Policies)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)
 
 Sau khi đã đặt nền bằng **2. 접근 제어 정책 (Access Control Policies)**, ta chuyển sang **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**. Đây là mắt xích 86/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -3730,3 +3906,5 @@ Phần “318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng ph�
   - **생성 중심 (Generation-Based)**: 추상적 명세로 코드 자동 생성 (Tự động sinh code từ bản đặc tả).
 
 Khép lại **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+
+> **Bàn giao:** Sau **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
