@@ -1,6 +1,6 @@
 # Ngăn xếp
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngăn xếp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ngăn xếp là một lớp trừu tượng (abstraction / 추상화), không phải một hiện thực (implementation / 구현) cụ thể** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Ngăn xếp trong C, Java và JavaScript** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngăn xếp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ngăn xếp là một lớp trừu tượng (abstraction / 추상화), không phải một hiện thực (implementation / 구현) cụ thể** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Ngăn xếp trong C, Java và JavaScript** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối stack với LIFO, call frame và parsing, để cấu trúc đơn giản giải thích cả thuật toán lẫn runtime.
 
 **Ngăn xếp (Stack / 스택)**
 

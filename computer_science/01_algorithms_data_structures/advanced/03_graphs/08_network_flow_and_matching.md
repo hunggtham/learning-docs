@@ -1,6 +1,6 @@
 # Luồng mạng và ghép cặp hai phía
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Luồng mạng và ghép cặp hai phía**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Định nghĩa một luồng (flow / 흐름) hợp lệ** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. Max luồng (flow / 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Luồng mạng và ghép cặp hai phía**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Định nghĩa một luồng (flow / 흐름) hợp lệ** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. Max luồng (flow / 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Mạch này nối network flow với capacity, cut và matching, để bài toán phân bổ được chuyển thành graph có ràng buộc.
 
 **mạng (network / 네트워크) luồng (flow / 흐름) & Bipartite Matching / 네트워크 플로우와 이분 매칭**
 

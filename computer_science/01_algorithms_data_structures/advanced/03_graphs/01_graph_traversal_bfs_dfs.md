@@ -1,6 +1,6 @@
 # BFS và DFS
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **BFS và DFS**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **BFS như shortest-path theo số cạnh** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **BFS tầng cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **BFS và DFS**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **BFS như shortest-path theo số cạnh** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **BFS tầng cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối BFS/DFS với graph traversal, queue/stack và reachability, để chọn thứ tự duyệt theo câu hỏi cần trả lời.
 
 **đồ thị Traversal / 그래프 순회**
 

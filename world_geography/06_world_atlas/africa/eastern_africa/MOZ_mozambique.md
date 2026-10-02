@@ -1,14 +1,12 @@
 # Mozambique
 
-> **Mạch đọc:** Đặt **Mozambique** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một quốc gia ven Ấn Độ Dương có chiều dài lớn** sang **Đồng bằng ven biển và các lưu vực xuyên biên giới**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mozambique**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một quốc gia ven Ấn Độ Dương có chiều dài lớn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đồng bằng ven biển và các lưu vực xuyên biên giới** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Mozambique với bờ biển, sông, tài nguyên và corridor, để không gian giải thích kết nối cùng rủi ro khí hậu.
 
 ## Một quốc gia ven Ấn Độ Dương có chiều dài lớn
 
 Mozambique kéo dài theo bờ Ấn Độ Dương, với hình dạng bắc–nam rất dài. Điều này làm khoảng cách nội bộ lớn và tạo nhiều vùng chức năng thay vì một lõi duy nhất. Maputo ở cực nam, Beira ở miền trung và Nacala/Pemba ở phía bắc tạo các gateway khác nhau.
 
-
-> **Chuyển mạch:** Từ **Một quốc gia ven Ấn Độ Dương có chiều dài lớn**, ta sang **Đồng bằng ven biển và các lưu vực xuyên biên giới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mozambique**, **Đồng bằng ven biển và các lưu vực xuyên biên giới** tiếp nhận điểm tựa từ **Một quốc gia ven Ấn Độ Dương có chiều dài lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu và cyclone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồng bằng ven biển và các lưu vực xuyên biên giới
 
@@ -16,8 +14,7 @@ Nhiều con sông lớn bắt nguồn từ các nước nội lục rồi chảy
 
 Các đồng bằng thấp có đất nông nghiệp và khả năng tiếp cận (accessibility / 접근성) tốt nhưng cũng tăng exposure trước lũ và bão. Đây là sự đánh đổi (trade-off / 트레이드오프) điển hình của coastal lowland.
 
-
-> **Chuyển mạch:** Từ **Đồng bằng ven biển và các lưu vực xuyên biên giới**, ta sang **Khí hậu và cyclone** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mozambique**, **Khí hậu và cyclone** tiếp nhận điểm tựa từ **Đồng bằng ven biển và các lưu vực xuyên biên giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ đô thị và cảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khí hậu và cyclone
 
@@ -25,8 +22,7 @@ Bờ biển dài hướng ra vùng tây nam Ấn Độ Dương khiến Mozambiqu
 
 Miền bắc và trung nhìn chung ẩm hơn miền nam, nhưng biến động mưa vẫn lớn và hạn có thể ảnh hưởng sản xuất.
 
-
-> **Chuyển mạch:** Từ **Khí hậu và cyclone**, ta sang **Hệ đô thị và cảng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mozambique**, **Hệ đô thị và cảng** tiếp nhận điểm tựa từ **Khí hậu và cyclone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ đô thị và cảng
 
@@ -34,22 +30,19 @@ Maputo kết nối mạnh với hành lang kinh tế Nam Phi. Beira là cửa ng
 
 Do đó Mozambique có thể đọc như **một chuỗi cổng (port / 포트)–corridor các hệ thống (systems / 시스템들)** hơn là một mạng đô thị tập trung duy nhất.
 
-
-> **Chuyển mạch:** Từ **Hệ đô thị và cảng**, ta sang **Kinh tế không gian** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mozambique**, **Kinh tế không gian** tiếp nhận điểm tựa từ **Hệ đô thị và cảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro và resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế không gian
 
 Nông nghiệp vẫn quan trọng ở vùng nông thôn, trong khi khai khoáng và khí tự nhiên tạo các cực đầu tư lớn tại một số vùng. Tuy nhiên tài nguyên chỉ tạo spillover rộng nếu được nối với mạng đường, việc làm địa phương, năng lượng và dịch vụ.
 
-
-> **Chuyển mạch:** Từ **Kinh tế không gian**, ta sang **Rủi ro và resilience** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mozambique**, **Rủi ro và resilience** tiếp nhận điểm tựa từ **Kinh tế không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro và resilience
 
 Ngoài cyclone và flood, xói lở bờ biển, hạn và hạ tầng yếu tại một số vùng làm vulnerability tăng. Khi một cây cầu hoặc đoạn đường duy nhất bị hỏng, mạng (network / 네트워크) có thể mất kết nối trên phạm vi lớn vì thiếu tuyến thay thế.
 
-
-> **Chuyển mạch:** Từ **Rủi ro và resilience**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mozambique**, **Mô hình tư duy** gom các mảnh từ **Rủi ro và resilience** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -57,4 +50,4 @@ Ngoài cyclone và flood, xói lở bờ biển, hạn và hạ tầng yếu t�
 
 Xem thêm: [Thiên tai và rủi ro](../../../01_physical_geography/07_natural_hazards_risk.md), [Vận tải và thương mại](../../../02_human_geography/08_transport_trade_globalization.md), [Châu Phi](../../../03_regions/06_africa.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ATF french southern territories](./ATF_french_southern_territories.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

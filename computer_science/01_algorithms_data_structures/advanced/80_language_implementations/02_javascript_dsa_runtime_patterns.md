@@ -1,6 +1,6 @@
 # Các mẫu DSA và môi trường chạy JavaScript
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mẫu DSA và môi trường chạy JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Number và độ chính xác số nguyên** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **BigInt** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mẫu DSA và môi trường chạy JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Number và độ chính xác số nguyên** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **BigInt** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối JavaScript DSA với runtime, object model và event loop, để cấu trúc dữ liệu gắn với chi phí thực thi.
 
 **JavaScript DSA & thời gian chạy (runtime / 런타임) Patterns / JavaScript 자료구조와 런타임 패턴**
 

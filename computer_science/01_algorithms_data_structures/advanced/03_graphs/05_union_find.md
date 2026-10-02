@@ -1,6 +1,6 @@
 # hợp nhất-tìm kiếm / hợp nhất tập rời nhau
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hai thao tác cốt lõi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **hợp nhất-tìm kiếm / hợp nhất tập rời nhau**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hai thao tác cốt lõi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Mạch này nối union-find với components, connectivity và amortized complexity, để thao tác hợp nhất được đọc qua cấu trúc rừng.
 
 **Tập hợp rời nhau (Disjoint Set Union / 서로소 집합)**
 

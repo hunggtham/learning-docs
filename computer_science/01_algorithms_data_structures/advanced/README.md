@@ -1,6 +1,6 @@
 # Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vị trí trong thư viện Khoa học máy tính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cấu trúc đầy đủ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vị trí trong thư viện Khoa học máy tính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cấu trúc đầy đủ** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của advanced DSA, rồi nối foundations, linear structures, graphs và implementations.
 
 Đây là thư viện chuyên sâu về **Cấu trúc dữ liệu và thuật toán (Data Structures & Algorithms — DSA / 자료구조와 알고리즘)** trong nhánh Khoa học máy tính của repository.
 

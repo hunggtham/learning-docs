@@ -1,13 +1,12 @@
 # Madagascar
 
-> **Mạch đọc:** Đặt **Madagascar** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Đảo lục địa biệt lập** sang **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Madagascar**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đảo lục địa biệt lập** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Madagascar với đảo, đa dạng sinh học, cao nguyên và biển, để địa lý giải thích phân bố dân cư và kinh tế.
 
 ## Đảo lục địa biệt lập
 
 Madagascar tách khỏi các khối lục địa lớn từ rất lâu về mặt địa chất, tạo mức **đặc hữu (endemism)** rất cao. Điều này làm đảo vừa là hotspot đa dạng sinh học vừa rất dễ tổn thương trước mất sinh cảnh và loài xâm lấn.
 
-
-> **Chuyển mạch:** Từ **Đảo lục địa biệt lập**, ta sang **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Madagascar**, **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây** tiếp nhận điểm tựa từ **Đảo lục địa biệt lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Antananarivo và mạng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây
 
@@ -15,8 +14,7 @@ Madagascar tách khỏi các khối lục địa lớn từ rất lâu về mặ
 
 Vì thế Madagascar có độ dốc (gradient / 기울기) từ rừng mưa ẩm phía đông tới rừng khô và vùng bán khô phía tây–nam.
 
-
-> **Chuyển mạch:** Từ **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây**, ta sang **Antananarivo và mạng đô thị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Madagascar**, **Antananarivo và mạng đô thị** tiếp nhận điểm tựa từ **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp và đất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Antananarivo và mạng đô thị
 
@@ -24,8 +22,7 @@ Antananarivo nằm trên cao nguyên nội địa, khác với mô hình thủ �
 
 Điều này làm road chất lượng (quality / 품질) và landslide rủi ro (risk / 위험) đặc biệt quan trọng với logistics.
 
-
-> **Chuyển mạch:** Từ **Antananarivo và mạng đô thị**, ta sang **Nông nghiệp và đất** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Madagascar**, **Nông nghiệp và đất** tiếp nhận điểm tựa từ **Antananarivo và mạng đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cyclone và coastal exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nông nghiệp và đất
 
@@ -33,22 +30,19 @@ Ruộng bậc thang, lúa ở cao nguyên và các cây hàng hóa nhiệt đớ
 
 Các lớp đất đỏ lộ ra sau xói mòn tạo hình ảnh nổi bật nhưng không nên nhầm màu đỏ với độ phì cao.
 
-
-> **Chuyển mạch:** Từ **Nông nghiệp và đất**, ta sang **Cyclone và coastal exposure** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Madagascar**, **Cyclone và coastal exposure** tiếp nhận điểm tựa từ **Nông nghiệp và đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biogeography như một phần của địa lý kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cyclone và coastal exposure
 
 Bờ đông và bắc thường chịu ảnh hưởng cyclone từ Ấn Độ Dương. Bão kết hợp với địa hình dốc có thể gây lũ, sạt lở và hỏng đường, khiến vùng bị cô lập sau thiên tai.
 
-
-> **Chuyển mạch:** Từ **Cyclone và coastal exposure**, ta sang **Biogeography như một phần của địa lý kinh tế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Madagascar**, **Biogeography như một phần của địa lý kinh tế** tiếp nhận điểm tựa từ **Cyclone và coastal exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biogeography như một phần của địa lý kinh tế
 
 Lemur và các hệ sinh thái đặc hữu tạo giá trị du lịch và nghiên cứu, nhưng conservation phải cân bằng với sinh kế địa phương. Đây là nơi ecology, land use và poverty geography giao nhau trực tiếp.
 
-
-> **Chuyển mạch:** Từ **Biogeography như một phần của địa lý kinh tế**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Madagascar**, **Mô hình tư duy** gom các mảnh từ **Biogeography như một phần của địa lý kinh tế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -56,4 +50,4 @@ Lemur và các hệ sinh thái đặc hữu tạo giá trị du lịch và nghi�
 
 Xem thêm: [Quần xã sinh vật](../../../01_physical_geography/06_soils_biomes_ecosystems.md), [Địa mạo](../../../01_physical_geography/01_landforms_geomorphology.md), [Châu Phi](../../../03_regions/06_africa.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ATF french southern territories](./ATF_french_southern_territories.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

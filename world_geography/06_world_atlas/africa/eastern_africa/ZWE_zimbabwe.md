@@ -1,13 +1,12 @@
 # Zimbabwe
 
-> **Mạch đọc:** Đặt **Zimbabwe** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cao nguyên giữa Zambezi và Limpopo** sang **Nước và tính mùa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Zimbabwe**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cao nguyên giữa Zambezi và Limpopo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nước và tính mùa** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Zimbabwe với cao nguyên, sông, khoáng sản và nông nghiệp, để đọc năng lực sản xuất trong điều kiện nội lục.
 
 ## Cao nguyên giữa Zambezi và Limpopo
 
 Zimbabwe nằm chủ yếu trên cao nguyên, giữa hai hệ sông lớn Zambezi ở phía bắc và Limpopo ở phía nam. Dải Highveld ở trung tâm có độ cao lớn hơn, khí hậu tương đối mát và là nơi tập trung nhiều đô thị, nông nghiệp và hạ tầng.
 
-
-> **Chuyển mạch:** Từ **Cao nguyên giữa Zambezi và Limpopo**, ta sang **Nước và tính mùa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Zimbabwe**, **Nước và tính mùa** tiếp nhận điểm tựa từ **Cao nguyên giữa Zambezi và Limpopo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Harare và Bulawayo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nước và tính mùa
 
@@ -15,15 +14,13 @@ Mưa tập trung theo mùa hè và biến động mạnh giữa các năm. Hồ 
 
 Hạn kéo dài có thể ảnh hưởng đồng thời electricity supply, irrigation và drinking water, cho thấy nước là một ràng buộc (constraint / 제약조건) liên ngành.
 
-
-> **Chuyển mạch:** Từ **Nước và tính mùa**, ta sang **Harare và Bulawayo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Zimbabwe**, **Harare và Bulawayo** tiếp nhận điểm tựa từ **Nước và tính mùa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khai khoáng và nông nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Harare và Bulawayo
 
 Harare là lõi hành chính–dịch vụ ở phía đông bắc Highveld. Bulawayo ở phía tây nam là nút (node / 노드) công nghiệp và giao thông lịch sử. Hai thành phố nằm trên các hướng corridor khác nhau tới các nước láng giềng.
 
-
-> **Chuyển mạch:** Từ **Harare và Bulawayo**, ta sang **Khai khoáng và nông nghiệp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Zimbabwe**, **Khai khoáng và nông nghiệp** tiếp nhận điểm tựa từ **Harare và Bulawayo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quốc gia không giáp biển và corridor dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khai khoáng và nông nghiệp
 
@@ -31,8 +28,7 @@ Zimbabwe có gold, platinum-group metals, chrome và nhiều tài nguyên khác 
 
 Khoáng sản cần đường bộ/đường sắt tới cảng ngoài lãnh thổ, nên hiệu quả khai thác phụ thuộc mạng (network / 네트워크) xuyên biên giới.
 
-
-> **Chuyển mạch:** Từ **Khai khoáng và nông nghiệp**, ta sang **Quốc gia không giáp biển và corridor dependence** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Zimbabwe**, **Quốc gia không giáp biển và corridor dependence** tiếp nhận điểm tựa từ **Khai khoáng và nông nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quốc gia không giáp biển và corridor dependence
 
@@ -40,15 +36,13 @@ Zimbabwe dựa vào các tuyến qua Mozambique và South Africa để ra biển
 
 Khi border hoặc rail bottleneck tăng, effective distance tới thị trường có thể tăng mạnh dù vị trí địa lý không đổi.
 
-
-> **Chuyển mạch:** Từ **Quốc gia không giáp biển và corridor dependence**, ta sang **Rủi ro** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Zimbabwe**, **Rủi ro** tiếp nhận điểm tựa từ **Quốc gia không giáp biển và corridor dependence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro
 
 Hạn, heat stress, lũ cục bộ và giảm lưu trữ (storage / 저장소) trong reservoir là các rủi ro quan trọng. Urban water bảo mật (security / 보안) đặc biệt nhạy khi population growth vượt sức chứa (capacity / 용량) của hệ thống cấp nước.
 
-
-> **Chuyển mạch:** Từ **Rủi ro**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Zimbabwe**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -56,4 +50,4 @@ Hạn, heat stress, lũ cục bộ và giảm lưu trữ (storage / 저장소) t
 
 Xem thêm: [Thủy văn](../../../01_physical_geography/04_hydrology_rivers_groundwater.md), [Kinh tế không gian](../../../02_human_geography/05_economic_geography.md), [Châu Phi](../../../03_regions/06_africa.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ATF french southern territories](./ATF_french_southern_territories.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

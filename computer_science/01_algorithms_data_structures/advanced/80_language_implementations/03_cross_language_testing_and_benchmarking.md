@@ -1,6 +1,6 @@
 # Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đặc tả trước kiểm thử** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đặc tả trước kiểm thử** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau** để chuyển câu hỏi ấy thành điều kiện phải giữ. Mạch này nối cross-language testing với benchmark, semantics và performance, để so sánh ngôn ngữ bằng workload và phép đo.
 
 **DSA Testing & Benchmarking / 자료구조·알고리즘 테스트와 벤치마킹**
 

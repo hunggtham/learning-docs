@@ -1,6 +1,6 @@
 # Các mẫu triển khai DSA trong C
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mẫu triển khai DSA trong C**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quyền sở hữu là một phần của hợp đồng API** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mảng động** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mẫu triển khai DSA trong C**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quyền sở hữu là một phần của hợp đồng API** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mảng động** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối C DSA patterns với pointer, memory ownership và layout, để thuật toán được hiện thực theo lifetime rõ.
 
 **C DSA hiện thực (implementation / 구현) Patterns / C 자료구조 구현 패턴**
 

@@ -1,6 +1,6 @@
 # Eulerian các đường đi và các chu trình
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Eulerian các đường đi và các chu trình**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. sự trừu tượng (abstraction) từ Königsberg** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trail, đường đi, circuit và terminology** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Eulerian các đường đi và các chu trình**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. sự trừu tượng (abstraction) từ Königsberg** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trail, đường đi, circuit và terminology** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Eulerian paths với degree, connectivity và traversal, để điều kiện tồn tại đường đi được chứng minh từ graph.
 
 **Đường đi Euler và chu trình Euler / Eulerian đường đi & chu trình / 오일러 경로와 회로**
 

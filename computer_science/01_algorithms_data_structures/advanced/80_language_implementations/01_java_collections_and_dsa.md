@@ -1,6 +1,6 @@
 # Java Collections nhìn dưới góc DSA
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Collections nhìn dưới góc DSA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Giao diện (interface / 인터페이스) trước cách triển khai** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Collections nhìn dưới góc DSA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Giao diện (interface / 인터페이스) trước cách triển khai** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **ArrayList là lựa chọn mặc định mạnh cho danh sách (list / 목록)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Java collections với DSA và runtime, để chọn cấu trúc theo semantics, allocation và complexity của JVM.
 
 **Java Collections & cấu trúc dữ liệu (data structure / 자료구조) Selection / Java Collections와 자료구조 선택**
 
