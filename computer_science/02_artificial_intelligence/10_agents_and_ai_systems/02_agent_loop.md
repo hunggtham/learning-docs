@@ -1,6 +1,6 @@
 # Tác nhân (agent / 에이전트) vòng lặp (loop / 루프)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tác nhân (agent / 에이전트) vòng lặp (loop / 루프)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Observe** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Decide** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Agent loop**. Route đi từ observe → decide/plan → tool action → result/state update → stop or retry criteria, để mỗi vòng lặp có tín hiệu vào, hành động và điều kiện kết thúc rõ ràng.
 
 Tác nhân (agent / 에이전트) vòng lặp (loop / 루프) là cơ chế biến một goal lớn thành chuỗi observation–quyết định (decision / 결정)–hành động (action / 동작) lặp lại. Không có vòng lặp (loop / 루프), công cụ (tool / 도구) calling thường chỉ là một lần gọi hàm; có vòng lặp (loop / 루프), hệ thống (system / 시스템) phải quản lý trạng thái (state / 상태), termination, retries, budgets và xác minh (verification / 확인) qua nhiều bước.
 

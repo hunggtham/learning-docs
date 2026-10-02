@@ -1,6 +1,6 @@
 # Planning và tác vụ (task / 작업) Decomposition trong AI tác nhân (agent / 에이전트)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Planning và tác vụ (task / 작업) Decomposition trong AI tác nhân (agent / 에이전트)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao decomposition cần tồn tại?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Planning và task decomposition trong AI agents**. Route đi từ goal → subtasks → dependency graph → ordering/parallelism → replanning under failure, để kế hoạch nối được với hành động thực tế.
 
 Một goal như “chuẩn bị báo cáo thị trường và gửi cho nhóm (team / 팀)” không phải một hành động (action / 동작) đơn. tác nhân (agent / 에이전트) cần biến goal thành chuỗi subgoal có phụ thuộc (dependency / 의존성). Đây là **planning (계획 / lập kế hoạch)** ở mức ứng dụng (application / 애플리케이션).
 

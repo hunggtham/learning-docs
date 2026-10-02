@@ -1,6 +1,6 @@
 # Workflow và tác nhân (agent / 에이전트) khác nhau như thế nào?
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Workflow và tác nhân (agent / 에이전트) khác nhau như thế nào?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Determinism vs Flexibility** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hybrid kiến trúc (architecture / 아키텍처)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Workflow và agent khác nhau thế nào**. Route đi từ deterministic steps → bounded autonomy → hybrid orchestration → approval/retry boundaries → operational cost, để chọn workflow hay agent theo mức biến thiên của nhiệm vụ.
 
 Hai từ này thường bị dùng như synonym nhưng chúng đại diện hai cách phân bổ quyền quyết định khác nhau.
 

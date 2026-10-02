@@ -1,6 +1,6 @@
 # Multi-Agent các hệ thống (systems / 시스템들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multi-Agent các hệ thống (systems / 시스템들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao dùng nhiều tác nhân (agent / 에이전트)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Role Specialization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multi-agent systems**. Route đi từ task partitioning → role specialization → communication/coordination → shared state/conflict handling → aggregate quality, để nhiều agent chỉ có ích khi coordination cost được kiểm soát.
 
 Một **multi-agent hệ thống (system / 시스템)** có nhiều agents tương tác để hoàn thành tác vụ (task / 작업). Ý tưởng hấp dẫn vì có thể chia vai trò hoặc chạy subtasks song song, nhưng thêm tác nhân (agent / 에이전트) cũng thêm communication, coordination và thất bại (failure / 실패) modes.
 

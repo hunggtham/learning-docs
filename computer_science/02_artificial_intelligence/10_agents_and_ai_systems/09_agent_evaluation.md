@@ -1,6 +1,6 @@
 # Tác nhân (agent / 에이전트) Evaluation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tác nhân (agent / 에이전트) Evaluation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **End-to-End tác vụ (task / 작업) Success** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Step-Level Evaluation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Agent evaluation**. Route đi từ end-to-end task success → step/tool correctness → trajectory efficiency → safety/robustness → reproducible eval sets, để điểm số phản ánh cả kết quả lẫn đường đi.
 
 Đánh giá tác nhân (agent / 에이전트) khó hơn đánh giá single mô hình (model / 모델) phản hồi (response / 응답) vì tác nhân (agent / 에이전트) tạo **trajectory** gồm nhiều decisions, công cụ (tool / 도구) calls và trạng thái (state / 상태) transitions. Một final answer đúng có thể đến từ trajectory nguy hiểm; một tác vụ (task / 작업) thất bại (fail / 실패) có thể do công cụ (tool / 도구) outage chứ không phải mô hình (model / 모델) lập luận (reasoning / 추론).
 

@@ -1,6 +1,6 @@
 # Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Working bộ nhớ (memory / 메모리)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Episodic bộ nhớ (memory / 메모리)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Agent memory**. Route đi từ working context → episodic traces → semantic/user memory → retrieval/write policy → forgetting, privacy, and staleness, để memory được thiết kế theo nhu cầu và rủi ro.
 
 Tác nhân (agent / 에이전트) làm tác vụ (task / 작업) dài hoặc quay lại nhiều session cần một cơ chế nhớ có cấu trúc. **bộ nhớ (memory / 메모리)** trong tác nhân (agent / 에이전트) không phải một tính năng (feature / 기능) duy nhất và cũng không đồng nghĩa véc-tơ (vector / 벡터) cơ sở dữ liệu (database / 데이터베이스). Nó là family của lưu trữ (storage / 저장소) + retrieval + cập nhật (update / 업데이트) policies giúp tác nhân (agent / 에이전트) giữ thông tin hữu ích qua thời gian (time / 시간).
 

@@ -1,6 +1,6 @@
 # Tác nhân (agent / 에이전트) trạng thái (state / 상태) và ngữ cảnh (context / 맥락)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tác nhân (agent / 에이전트) trạng thái (state / 상태) và ngữ cảnh (context / 맥락)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Structured trạng thái (state / 상태)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Agent state và context**. Route đi từ structured state → context window → serialization/checkpoint → compaction/summarization → resume and consistency, để trạng thái không bị nhầm với toàn bộ lịch sử hội thoại.
 
 Tác nhân (agent / 에이전트) thường thất bại không phải vì mô hình (model / 모델) “không thông minh”, mà vì **trạng thái (state / 상태)** và **ngữ cảnh (context / 맥락)** bị trộn thành một khối văn bản (text / 텍스트) khó kiểm soát. Hai khái niệm này liên quan nhưng không đồng nghĩa.
 

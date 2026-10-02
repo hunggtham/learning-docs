@@ -1,6 +1,6 @@
 # Tools và hàm (function / 함수) Calling
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tools và hàm (function / 함수) Calling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao structured tools cần tồn tại?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Công cụ (tool / 도구) lược đồ (schema / 스키마) là một Đặc tả API (API contract / API 계약)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tools và function calling**. Route đi từ tool affordance → typed schema/API contract → argument validation → execution/result handling → permission and failure boundaries, để lời gọi công cụ trở thành hành động có kiểm soát.
 
 LLM sinh đơn vị từ (token / 토큰); công cụ (tool / 도구) tạo side tác động (effect / 효과). **hàm (function / 함수) calling / công cụ (tool / 도구) calling (도구 호출)** là giao thức (protocol / 프로토콜) biến intent của mô hình (model / 모델) thành structured yêu cầu (request / 요청) mà thời gian chạy (runtime / 런타임) có thể validate rồi thực thi.
 

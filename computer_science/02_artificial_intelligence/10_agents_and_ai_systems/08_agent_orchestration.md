@@ -1,6 +1,6 @@
 # Tác nhân (agent / 에이전트) Orchestration
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tác nhân (agent / 에이전트) Orchestration**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Orchestrator owns vòng đời (lifecycle / 생명주기)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Queue-Based thực thi (execution / 실행)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Agent orchestration**. Route đi từ lifecycle ownership → queue/scheduler → retries/timeouts → concurrency/idempotency → tracing and human handoff, để orchestration được đọc như reliability infrastructure.
 
 **Orchestration (오케스트레이션 / điều phối)** là tầng (layer / 계층) quản lý thực thi (execution / 실행) của tác nhân (agent / 에이전트)/workflow: scheduling, trạng thái (state / 상태), queues, retries, budgets, tính đồng thời (concurrency / 동시성), approvals, tracing và khôi phục (recovery / 복구). mô hình (model / 모델) lập luận (reasoning / 추론) không thay thế orchestration.
 

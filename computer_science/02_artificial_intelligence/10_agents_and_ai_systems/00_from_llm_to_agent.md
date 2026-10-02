@@ -1,6 +1,6 @@
 # Từ LLM tới AI tác nhân (agent / 에이전트)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ LLM tới AI tác nhân (agent / 에이전트)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tác nhân (agent / 에이전트) như một chính sách (policy / 정책) có bộ nhớ (memory / 메모리) và tools** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình (model / 모델) năng lực (capability / 역량) và tác nhân (agent / 에이전트) năng lực (capability / 역량) khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ LLM tới AI agent**. Route đi từ model capability → policy/state/tools → observe–decide–act loop → environment feedback → autonomy boundaries, để agent được phân biệt với chatbot qua khả năng hành động.
 
 Large ngôn ngữ (language / 언어) mô hình (model / 모델) tự nó chủ yếu là một conditional chuỗi (sequence / 시퀀스) mô hình (model / 모델): nhận ngữ cảnh (context / 맥락) và sinh đầu ra (output / 출력). **AI tác nhân (agent / 에이전트)** xuất hiện khi mô hình (model / 모델) được đặt vào một vòng điều khiển (control loop / 제어 루프) có goal, trạng thái (state / 상태), observations và khả năng chọn hành động (action / 동작) tác động ra bên ngoài mô hình (model / 모델).
 
