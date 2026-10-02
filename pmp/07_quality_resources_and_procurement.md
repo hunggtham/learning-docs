@@ -1,7 +1,6 @@
 # 07 — chất lượng (quality / 품질), resources và procurement
 
-> **Mạch đọc:** Đặt **07 — chất lượng (quality / 품질), resources và procurement** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **chất lượng (quality / 품질) là fitness for purpose** sang **chất lượng (quality / 품질) và grade khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07 — Quality, resources và procurement**. Route đi từ fitness-for-purpose → quality criteria/grade → resource capacity → supplier/contract choice → acceptance and control, để chất lượng nối với nguồn lực và cam kết.
 
 ## Chất lượng (quality / 품질) là fitness for purpose
 
@@ -11,11 +10,15 @@ Quản lý chất lượng (quality / 품질) cần ba lớp lập luận (reaso
 
 Chất lượng (quality / 품질) không phải activity của QA nhóm (team / 팀) ở cuối chuỗi xử lý (pipeline / 파이프라인). Nó là thuộc tính (property / 속성) emergent từ yêu cầu (requirement / 요구사항), thiết kế (design / 설계), tiến trình (process / 프로세스), năng lực (capability / 역량), supplier và vòng phản hồi (feedback loop / 피드백 루프) xuyên vòng đời (lifecycle / 생명주기).
 
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Chất lượng (quality / 품질) và grade khác nhau** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) là fitness for purpose** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng (quality / 품질) yêu cầu (requirement / 요구사항) phải operationalizable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất lượng (quality / 품질) và grade khác nhau
 
 Grade nói category hoặc tính năng (feature / 기능) mức (level / 수준). chất lượng (quality / 품질) nói mức conformance/fitness trong grade đã chọn.
 
 Một economy sản phẩm (product / 제품) có ít tính năng (feature / 기능) nhưng đạt mọi specification có thể chất lượng (quality / 품질) cao. Một premium sản phẩm (product / 제품) nhiều tính năng (feature / 기능) nhưng unreliable có chất lượng (quality / 품질) thấp. Distinction này giúp tránh gold plating: thêm năng lực (capability / 역량) không tự làm chất lượng (quality / 품질) tốt hơn.
+
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Chất lượng (quality / 품질) yêu cầu (requirement / 요구사항) phải operationalizable** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) và grade khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng (quality / 품질) planning, assurance và điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất lượng (quality / 품질) yêu cầu (requirement / 요구사항) phải operationalizable
 
@@ -25,6 +28,8 @@ Ví dụ availability 99.95%, defect severity-1 bằng 0 trước go-live, tác 
 
 Một criterion còn phải gắn đúng ngữ cảnh (context / 맥락) đo. “phản hồi (response / 응답) dưới 300 ms” vô nghĩa nếu tải công việc (workload / 워크로드), percentile, môi trường (environment / 환경) và giao dịch (transaction / 트랜잭션) kiểu (type / 타입) không rõ. chất lượng (quality / 품질) chỉ số (metric / 지표) càng xa usage thực tế càng dễ tạo false confidence.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Chất lượng (quality / 품질) planning, assurance và điều khiển (control / 제어)** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) yêu cầu (requirement / 요구사항) phải operationalizable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiến trình (process / 프로세스) năng lực (capability / 역량) và chất lượng (quality / 품질) at nguồn (source / 소스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất lượng (quality / 품질) planning, assurance và điều khiển (control / 제어)
 
 Chất lượng (quality / 품질) planning xác định tiêu chuẩn (standard / 표준), chỉ số (metric / 지표), acceptance và tiến trình (process / 프로세스). chất lượng (quality / 품질) assurance tập trung vào tiến trình (process / 프로세스) có khả năng tạo đầu ra (output / 출력) đúng không. chất lượng (quality / 품질) điều khiển (control / 제어) inspect/measure deliverable hoặc tiến trình (process / 프로세스) kết quả (result / 결과).
@@ -33,6 +38,8 @@ Ba lớp không thay thế nhau. kiểm thử (test / 테스트) nhiều không 
 
 Một cách nhìn sâu hơn là chất lượng (quality / 품질) management cố tạo một tiến trình (process / 프로세스) có năng lực (capability / 역량) đủ cao để đầu ra (output / 출력) đúng trở thành trạng thái bình thường, thay vì dựa vào heroic inspection ở cuối.
 
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Chất lượng (quality / 품질) planning, assurance và điều khiển (control / 제어)** nêu điều cần giải thích; **Tiến trình (process / 프로세스) năng lực (capability / 역량) và chất lượng (quality / 품질) at nguồn (source / 소스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Prevention tốt hơn inspection khi thất bại (failure / 실패) chi phí (cost / 비용) cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tiến trình (process / 프로세스) năng lực (capability / 역량) và chất lượng (quality / 품질) at nguồn (source / 소스)
 
 Nếu tiến trình (process / 프로세스) thường xuyên tạo defect rồi QA lọc ở cuối, organization có detection năng lực (capability / 역량) nhưng chưa chắc có môi trường vận hành (production / 운영 환경) năng lực (capability / 역량) tốt. chất lượng (quality / 품질) at nguồn (source / 소스) nghĩa người/tiến trình (process / 프로세스) tạo công việc (work / 작업) cũng có cơ chế (mechanism / 메커니즘) phát hiện lỗi sớm tại nơi lỗi sinh ra: peer rà soát (review / 검토), automated kiểm tra hợp lệ (validation / 검증), poka-yoke/error-proofing, checklist trọng yếu (critical / 중요) step hoặc built-in điều khiển (control / 제어) phù hợp lĩnh vực (domain / 도메인).
@@ -40,6 +47,8 @@ Nếu tiến trình (process / 프로세스) thường xuyên tạo defect rồi
 Mục tiêu không phải chuyển trách nhiệm sang cá nhân, mà rút vòng phản hồi (feedback loop / 피드백 루프). Defect được phát hiện một giờ sau khi tạo thường rẻ và dễ hiểu hơn defect được phát hiện ba tháng sau khi ngữ cảnh (context / 맥락) đã mất.
 
 Tiến trình (process / 프로세스) năng lực (capability / 역량) không đồng nghĩa zero variation. Nó nghĩa variation đủ ổn định và nằm trong tolerance phù hợp để downstream có thể tin vào đầu ra (output / 출력) mà không cần kiểm tra lại mọi thứ.
+
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Tiến trình (process / 프로세스) năng lực (capability / 역량) và chất lượng (quality / 품질) at nguồn (source / 소스)** nêu điều cần giải thích; **Prevention tốt hơn inspection khi thất bại (failure / 실패) chi phí (cost / 비용) cao** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chi phí (cost / 비용) of chất lượng (quality / 품질) là economic sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Prevention tốt hơn inspection khi thất bại (failure / 실패) chi phí (cost / 비용) cao
 
@@ -51,6 +60,8 @@ Tuy nhiên “kiểm thử (test / 테스트) nhiều vô hạn” cũng không 
 
 Trong software, xem thêm [Testing, quality và verification strategy](../computer_science/09_software_engineering/02_testing_quality_and_verification_strategy.md) để hiểu sâu kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) và bằng chứng (evidence / 증거) kỹ thuật.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Chi phí (cost / 비용) of chất lượng (quality / 품질) là economic sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Prevention tốt hơn inspection khi thất bại (failure / 실패) chi phí (cost / 비용) cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng (quality / 품질) debt và escaped defect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chi phí (cost / 비용) of chất lượng (quality / 품질) là economic sự đánh đổi (trade-off / 트레이드오프)
 
 Prevention có chi phí (cost / 비용), appraisal có chi phí (cost / 비용) và thất bại (failure / 실패) có chi phí (cost / 비용). Mục tiêu không phải zero spending on thất bại (failure / 실패) bằng mọi giá, mà minimize total expected chi phí (cost / 비용) trong ràng buộc (constraint / 제약조건) và rủi ro (risk / 위험) appetite.
@@ -58,6 +69,8 @@ Prevention có chi phí (cost / 비용), appraisal có chi phí (cost / 비용) 
 Một defect cosmetic hiếm có thể rẻ hơn để accept; một privacy defect low-probability có impact lớn nên prevention mạnh hơn. Economic lập luận (reasoning / 추론) giúp chất lượng (quality / 품질) điều khiển (control / 제어) không trở thành checklist đồng đều.
 
 Chi phí (cost / 비용) of poor chất lượng (quality / 품질) còn gồm những khoản khó thấy: rework làm chậm tính năng (feature / 기능) khác, hỗ trợ (support / 지원) tải (load / 로드), customer churn, warranty, opportunity chi phí (cost / 비용) và management attention. Một defect sửa mất hai giờ có thể gây hệ thống (system / 시스템) chi phí (cost / 비용) lớn hơn nhiều nếu nó làm bản phát hành (release / 릴리스) bị delay hoặc kéo specialist khỏi trọng yếu (critical / 중요) công việc (work / 작업).
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Chất lượng (quality / 품질) debt và escaped defect** tiếp nhận điểm tựa từ **Chi phí (cost / 비용) of chất lượng (quality / 품질) là economic sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên nhân gốc (root cause / 근본 원인) và contributing factors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất lượng (quality / 품질) debt và escaped defect
 
@@ -67,6 +80,8 @@ Escaped defect là defect vượt qua điều khiển (control / 제어) hiện 
 
 Nếu nội bộ (internal / 내부) defect count giảm nhưng escaped defect tăng, kết luận “chất lượng (quality / 품질) tốt hơn” có thể sai. chỉ số (metric / 지표) cần được đọc như một hệ thống (system / 시스템), không tách rời.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Nguyên nhân gốc (root cause / 근본 원인) và contributing factors** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) debt và escaped defect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Corrective, preventive và defect repair** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguyên nhân gốc (root cause / 근본 원인) và contributing factors
 
 Complex thất bại (failure / 실패) hiếm khi có một nguyên nhân gốc (root cause / 근본 원인) duy nhất. Five Whys hoặc fishbone giúp mở investigation nhưng có thể oversimplify nếu nhóm (team / 팀) ép một tuyến tính (linear / 선형) chuỗi (chain / 사슬).
@@ -75,11 +90,15 @@ Một sự cố (incident / 인시던트) môi trường vận hành (production
 
 Nguyên nhân gốc (root cause / 근본 원인) phân tích (analysis / 분석) tốt còn phân biệt cause có thể kiểm soát và điều kiện (condition / 조건) làm thất bại (failure / 실패) dễ xảy ra. “Engineer nhập sai” có thể là immediate cause, nhưng giao diện (interface / 인터페이스) cho phép thao tác nguy hiểm không confirmation hoặc tải công việc (workload / 워크로드) quá cao có thể là contributing hệ thống (system / 시스템) điều kiện (condition / 조건).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Corrective, preventive và defect repair** tiếp nhận điểm tựa từ **Nguyên nhân gốc (root cause / 근본 원인) và contributing factors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Statistical thinking ở mức cần thiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Corrective, preventive và defect repair
 
 Defect repair sửa đầu ra (output / 출력) cụ thể. Corrective hành động (action / 동작) xử lý cause của nonconformity đã xảy ra. Preventive hành động (action / 동작) giảm khả năng future bài toán (problem / 문제) dựa trên identified rủi ro (risk / 위험) hoặc weakness.
 
 Nếu nhóm (team / 팀) fix cùng loại bug mỗi bản phát hành (release / 릴리스) nhưng không đổi tiến trình (process / 프로세스), họ chỉ repair symptom. Nếu thêm lint/kiểm thử (test / 테스트) quy tắc (rule / 규칙) để ngăn lớp (class / 클래스) bug đó, hệ thống (system / 시스템) năng lực (capability / 역량) tăng.
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Statistical thinking ở mức cần thiết** tiếp nhận điểm tựa từ **Corrective, preventive và defect repair** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Continuous improvement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Statistical thinking ở mức cần thiết
 
@@ -89,6 +108,8 @@ PMP learner không cần trở thành statistician, nhưng cần hiểu chất l
 
 Một điểm quan trọng là specification limit và tiến trình (process / 프로세스) hành vi (behavior / 동작) khác nhau. Deliverable có thể vẫn pass specification nhưng tiến trình (process / 프로세스) đang drift dần về ranh giới (boundary / 경계); nếu chỉ nhìn pass/thất bại (fail / 실패) cuối cùng, early tín hiệu (signal / 신호) bị bỏ lỡ.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Continuous improvement** tiếp nhận điểm tựa từ **Statistical thinking ở mức cần thiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) management là năng lực (capability / 역량) + availability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Continuous improvement
 
 Các vòng như Plan-Do-Check-Act (PDCA) hay retrospective đều dựa trên phản hồi (feedback / 피드백). Improvement tốt cần phân biệt symptom và nguyên nhân gốc (root cause / 근본 원인). Nếu defect tăng vì yêu cầu (requirement / 요구사항) ambiguity, tăng số tester có thể chỉ xử lý symptom.
@@ -97,11 +118,15 @@ Improvement cần hypothesis và measure. “Thêm rà soát mã (code review / 
 
 Improvement cũng cần guardrail. Giảm defect bằng cách làm rà soát (review / 검토) chậm gấp ba có thể không tối ưu nếu nghiệp vụ (business / 비즈니스) cần fast phản hồi (feedback / 피드백). chất lượng (quality / 품질) improvement là multi-objective tối ưu hóa (optimization / 최적화), không phải tối đa một chỉ số (metric / 지표).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Continuous improvement** cho ta quy tắc; **Tài nguyên (resource / 자원) management là năng lực (capability / 역량) + availability** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Sức chứa (capacity / 용량) không bằng calendar availability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tài nguyên (resource / 자원) management là năng lực (capability / 역량) + availability
 
 Tài nguyên (resources / 자원) gồm people, equipment, facilities, material và dịch vụ (service / 서비스) sức chứa (capacity / 용량). Với kiến thức (knowledge / 지식) công việc (work / 작업), một người “rảnh 50%” không tương đương mọi người khác “rảnh 50%”; năng lực (capability / 역량), ngữ cảnh (context / 맥락) switching và lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식) matters.
 
 Tài nguyên (resource / 자원) planning cần nhìn role, skill, sức chứa (capacity / 용량), timing và phụ thuộc (dependency / 의존성). tài nguyên (resource / 자원) histogram hoặc sức chứa (capacity / 용량) view chỉ hữu ích nếu phản ánh ràng buộc (constraint / 제약조건) thật.
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Tài nguyên (resource / 자원) management là năng lực (capability / 역량) + availability** cho ta quy tắc; **Sức chứa (capacity / 용량) không bằng calendar availability** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Utilization paradox và hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sức chứa (capacity / 용량) không bằng calendar availability
 
@@ -111,11 +136,15 @@ Planning dựa trên nominal availability thường gây overcommit. Sustainable
 
 Sức chứa (capacity / 용량) nên được nhìn theo effective thông lượng (throughput / 처리량), không chỉ giờ phân bổ. Hai người mỗi người 50% trên hai dự án (project / 프로젝트) có thể tạo ít đầu ra (output / 출력) hơn một người full-time trên một dự án (project / 프로젝트) vì switching chi phí (cost / 비용), meeting duplication và bộ nhớ (memory / 메모리) reload.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Sức chứa (capacity / 용량) không bằng calendar availability** cho ta quy tắc; **Utilization paradox và hàng đợi (queue / 큐)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Skill ma trận (matrix / 행렬) và single điểm (point / 지점) of thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Utilization paradox và hàng đợi (queue / 큐)
 
 Đẩy specialist lên gần 100% utilization thường làm hàng đợi (queue / 큐) tăng mạnh. Khi mọi minute đã được booked, một yêu cầu (request / 요청) bất ngờ không có slack để hấp thụ và chờ đợi lan sang nhiều nhóm (team / 팀).
 
 Vì vậy tài nguyên (resource / 자원) “nhàn một chút” ở bottleneck có thể là sức chứa (capacity / 용량) bảo hiểm cho variability, không phải waste. Đây là cùng lô-gic (logic / 논리) luồng (flow / 흐름) đã được giải thích ở [Schedule & Flow](./05_schedule_estimation_and_flow.md): cục bộ (local / 로컬) utilization cao không đảm bảo hệ thống (system / 시스템) thông lượng (throughput / 처리량) cao.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Skill ma trận (matrix / 행렬) và single điểm (point / 지점) of thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Utilization paradox và hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Học tập (learning / 학습) curve và onboarding chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Skill ma trận (matrix / 행렬) và single điểm (point / 지점) of thất bại (failure / 실패)
 
@@ -125,11 +154,15 @@ Skill ma trận (matrix / 행렬) giúp nhìn năng lực (capability / 역량) 
 
 Skill substitution cũng không tuyến tính. Hai junior không tự động thay một specialist ở quyết định (decision / 결정) trọng yếu (critical / 중요). tài nguyên (resource / 자원) mô hình (model / 모델) phải hiểu minimum năng lực (capability / 역량) threshold và học tập (learning / 학습) curve, không coi mọi FTE là fungible đơn vị (unit / 단위).
 
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Học tập (learning / 학습) curve và onboarding chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Skill ma trận (matrix / 행렬) và single điểm (point / 지점) of thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) leveling và smoothing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Học tập (learning / 학습) curve và onboarding chi phí (cost / 비용)
 
 Tài nguyên (resource / 자원) mới không tạo full sức chứa (capacity / 용량) ngay ngày đầu. Họ cần lĩnh vực (domain / 도메인) ngữ cảnh (context / 맥락), môi trường (environment / 환경) truy cập (access / 접근), working agreement và kiến thức (knowledge / 지식) transfer; đồng thời người cũ phải dành thời gian onboarding.
 
 Vì vậy “thêm người” vào dự án (project / 프로젝트) trễ có thể tạm thời giảm net thông lượng (throughput / 처리량). Càng nhiều coordination phụ thuộc (dependency / 의존성), ramp-up chi phí (cost / 비용) càng lớn. tài nguyên (resource / 자원) quyết định (decision / 결정) phải nhìn time-to-effective-capacity, không chỉ headcount.
+
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Học tập (learning / 학습) curve và onboarding chi phí (cost / 비용)** nêu điều cần giải thích; **Tài nguyên (resource / 자원) leveling và smoothing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dùng chung (shared / 공유) tài nguyên (resource / 자원) và portfolio contention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tài nguyên (resource / 자원) leveling và smoothing
 
@@ -137,11 +170,15 @@ Khi demand vượt availability, tài nguyên (resource / 자원) leveling thay 
 
 Điểm cốt lõi là schedule phải phản ánh sức chứa (capacity / 용량) thật. Một plan giả định cùng người làm ba activity song song không trở nên khả thi chỉ vì Gantt đẹp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Tài nguyên (resource / 자원) leveling và smoothing** nêu điều cần giải thích; **Dùng chung (shared / 공유) tài nguyên (resource / 자원) và portfolio contention** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhóm (team / 팀) acquisition và bản phát hành (release / 릴리스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng chung (shared / 공유) tài nguyên (resource / 자원) và portfolio contention
 
 Dự án (project / 프로젝트) có thể plan đúng nội bộ nhưng vẫn thất bại (fail / 실패) khi nhiều dự án (project / 프로젝트) cùng tranh một dùng chung (shared / 공유) specialist, môi trường (environment / 환경) hoặc approval body. Đây là tài nguyên (resource / 자원) rủi ro (risk / 위험) ở portfolio/hệ thống (system / 시스템) mức (level / 수준).
 
 Nếu tất cả dự án (project / 프로젝트) đều được plan như thể dùng chung (shared / 공유) tài nguyên (resource / 자원) luôn available, tổng portfolio plan là impossible dù từng plan riêng trông feasible. PM cần surface contention và đưa priority quyết định (decision / 결정) tới mức (level / 수준) có authority phân bổ sức chứa (capacity / 용량).
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Dùng chung (shared / 공유) tài nguyên (resource / 자원) và portfolio contention** nêu điều cần giải thích; **Nhóm (team / 팀) acquisition và bản phát hành (release / 릴리스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **RACI và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhóm (team / 팀) acquisition và bản phát hành (release / 릴리스)
 
@@ -151,6 +188,8 @@ Tài nguyên (resource / 자원) bản phát hành (release / 릴리스) cũng c
 
 Bản phát hành (release / 릴리스) quyết định (decision / 결정) nên nhìn remaining bất định (uncertainty / 불확실성) và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성), không chỉ số tác vụ (task / 작업) còn lại. Specialist có thể không còn nhiều công việc (work / 작업) nhưng vẫn là trọng yếu (critical / 중요) fallback trong tích hợp (integration / 통합) cửa sổ (window / 윈도우).
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Nhóm (team / 팀) acquisition và bản phát hành (release / 릴리스)** đã nêu tiêu chí phân biệt, còn **RACI và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Procurement là chuyển một phần delivery qua ranh giới (boundary / 경계) tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## RACI và giới hạn
 
 RACI làm rõ Responsible, Accountable, Consulted, Informed. Nhưng ma trận (matrix / 행렬) không sửa được quản trị (governance / 거버넌스) mơ hồ nếu authority thực tế khác trên giấy.
@@ -159,11 +198,15 @@ Một công việc (work / 작업) item nên có accountability rõ. Nếu ba ng
 
 RACI cũng không mô tả phụ thuộc (dependency / 의존성) timing, quyết định (decision / 결정) threshold hoặc escalation. Nó là role map, không phải operating mô hình (model / 모델) hoàn chỉnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **RACI và giới hạn** đã nêu tiêu chí phân biệt, còn **Procurement là chuyển một phần delivery qua ranh giới (boundary / 경계) tổ chức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제) và thông tin (information / 정보) asymmetry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Procurement là chuyển một phần delivery qua ranh giới (boundary / 경계) tổ chức
 
 Thu mua (procurement / 조달) tạo một giao diện (interface / 인터페이스) giữa buyer và seller. đặc tả hợp đồng (contract / 계약) phân phối phạm vi (scope / 범위), price, schedule và rủi ro (risk / 위험) giữa hai bên. Vì incentive hai bên không hoàn toàn giống nhau, đặc tả hợp đồng (contract / 계약) thiết kế (design / 설계) ảnh hưởng hành vi (behavior / 동작).
 
 Procurement không chỉ là purchasing. Nó gồm make-or-buy, solicitation, selection, contracting, hiệu năng (performance / 성능) điều khiển (control / 제어), thay đổi (change / 변경)/claim và closure.
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Procurement là chuyển một phần delivery qua ranh giới (boundary / 경계) tổ chức** đã nêu tiêu chí phân biệt, còn **Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제) và thông tin (information / 정보) asymmetry** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Make-or-buy và total chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제) và thông tin (information / 정보) asymmetry
 
@@ -172,6 +215,8 @@ Buyer thường không quan sát trực tiếp toàn bộ effort, chất lượn
 Đặc tả hợp đồng (contract / 계약) và quản trị (governance / 거버넌스) cố align hành vi (behavior / 동작) bằng acceptance, milestone, reporting, kiểm tra (audit / 감사) right, incentive và liability. Nhưng không đặc tả hợp đồng (contract / 계약) nào mô tả hết mọi future trạng thái (state / 상태). Vì vậy procurement luôn là combination của formal agreement và relationship/quản trị (governance / 거버넌스) cơ chế (mechanism / 메커니즘).
 
 Nếu buyer chỉ dựa vào trust, material issue có thể bị che. Nếu buyer cố đặc tả hợp đồng (contract / 계약) hóa mọi micro-action, giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và adversarial hành vi (behavior / 동작) tăng. thiết kế (design / 설계) tốt cân bằng chứng (evidence / 증거), autonomy và consequence.
+
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Make-or-buy và total chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제) và thông tin (information / 정보) asymmetry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) allocation: giao rủi ro (risk / 위험) cho bên có khả năng quản lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Make-or-buy và total chi phí (cost / 비용)
 
@@ -183,6 +228,8 @@ Quyết định (decision / 결정) cũng cần strategic năng lực (capabilit
 
 Make-or-buy còn thay đổi future option. Nếu nội bộ (internal / 내부) năng lực (capability / 역량) bị mất sau nhiều năm outsource, switching back không miễn phí. Total chi phí (cost / 비용) phải nhìn cả năng lực (capability / 역량) erosion và phụ thuộc (dependency / 의존성) concentration.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Rủi ro (risk / 위험) allocation: giao rủi ro (risk / 위험) cho bên có khả năng quản lý** tiếp nhận điểm tựa từ **Make-or-buy và total chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đặc tả hợp đồng (contract / 계약) kiểu (type / 타입) là incentive kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rủi ro (risk / 위험) allocation: giao rủi ro (risk / 위험) cho bên có khả năng quản lý
 
 Đặc tả hợp đồng (contract / 계약) không nên chỉ “đẩy càng nhiều rủi ro (risk / 위험) sang seller càng tốt”. Seller sẽ price rủi ro (risk / 위험) họ không kiểm soát được hoặc phản ứng bằng exclusion/thay đổi (change / 변경) claim. rủi ro (risk / 위험) allocation hiệu quả giao exposure cho party có năng lực (capability / 역량) kiểm soát cause tốt nhất và có incentive phù hợp.
@@ -190,6 +237,8 @@ Make-or-buy còn thay đổi future option. Nếu nội bộ (internal / 내부)
 Ví dụ buyer kiểm soát yêu cầu (requirement / 요구사항) approval thì delay do buyer approval khó hợp lý nếu hoàn toàn chuyển sang seller. Seller kiểm soát staffing thì sức chứa (capacity / 용량) thất bại (failure / 실패) nên nằm nhiều hơn ở seller. dùng chung (shared / 공유) rủi ro (risk / 위험) cần giao diện (interface / 인터페이스), trigger và quyết định (decision / 결정) quy tắc (rule / 규칙) rõ.
 
 Poor rủi ro (risk / 위험) allocation tạo rủi ro (risk / 위험) premium, dispute và defensive hành vi (behavior / 동작); nó không làm bất định (uncertainty / 불확실성) biến mất.
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Đặc tả hợp đồng (contract / 계약) kiểu (type / 타입) là incentive kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) allocation: giao rủi ro (risk / 위험) cho bên có khả năng quản lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fixed-price trong high bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đặc tả hợp đồng (contract / 계약) kiểu (type / 타입) là incentive kiến trúc (architecture / 아키텍처)
 
@@ -199,6 +248,8 @@ Không có đặc tả hợp đồng (contract / 계약) kiểu (type / 타입) 
 
 Rủi ro (risk / 위험) không thật sự biến mất khi “transfer” qua đặc tả hợp đồng (contract / 계약). Seller có thể chịu financial penalty nhưng buyer vẫn chịu nghiệp vụ (business / 비즈니스) delay, reputation hoặc tích hợp (integration / 통합) consequence.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Fixed-price trong high bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Đặc tả hợp đồng (contract / 계약) kiểu (type / 타입) là incentive kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Statement of công việc (work / 작업) và acceptance ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Fixed-price trong high bất định (uncertainty / 불확실성)
 
 Fixed-price/fixed-scope ở môi trường (environment / 환경) bất định (uncertainty / 불확실성) cao có thể tạo adversarial hành vi (behavior / 동작). Seller phải price rủi ro (risk / 위험) hoặc kiếm margin qua thay đổi (change / 변경) yêu cầu (request / 요청); buyer cố chứng minh item nằm trong phạm vi (scope / 범위).
@@ -206,6 +257,8 @@ Fixed-price/fixed-scope ở môi trường (environment / 환경) bất định 
 Nếu yêu cầu (requirement / 요구사항) chưa ổn định, đặc tả hợp đồng (contract / 계약) theo increment, sức chứa (capacity / 용량) hoặc kết quả (outcome / 결과) có thể align collaboration tốt hơn tùy procurement rules. Nhưng flexibility cần quản trị (governance / 거버넌스) để không biến thành uncontrolled spend.
 
 Một đặc tả hợp đồng (contract / 계약) “fixed” vẫn cần thay đổi (change / 변경) cơ chế (mechanism / 메커니즘) vì reality thay đổi. Không có cơ chế (mechanism / 메커니즘) không làm thay đổi (change / 변경) biến mất; nó chỉ đẩy negotiation sang informal channel hoặc dispute.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Fixed-price trong high bất định (uncertainty / 불확실성)** đã nêu tiêu chí phân biệt, còn **Statement of công việc (work / 작업) và acceptance ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Seller selection không chỉ nhìn price** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Statement of công việc (work / 작업) và acceptance ranh giới (boundary / 경계)
 
@@ -215,6 +268,8 @@ Ambiguity bị trì hoãn không biến mất; nó thường quay lại thành c
 
 SOW nên nói rõ giao diện (interface / 인터페이스) và buyer-provided phụ thuộc (dependency / 의존성). Nếu seller deliver đúng phần mình nhưng buyer không cung cấp môi trường (environment / 환경)/dữ liệu (data / 데이터) đúng hạn, dự án (project / 프로젝트) vẫn thất bại (fail / 실패) dù đặc tả hợp đồng (contract / 계약) phạm vi (scope / 범위) phía seller có vẻ clear.
 
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Statement of công việc (work / 작업) và acceptance ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Seller selection không chỉ nhìn price** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **SLA, KPI và kết quả (outcome / 결과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Seller selection không chỉ nhìn price
 
 Selection có thể cân năng lực (capability / 역량), technical approach, financial stability, bảo mật (security / 보안), delivery bản ghi (record / 레코드), hỗ trợ (support / 지원) mô hình (model / 모델), total chi phí (cost / 비용) và strategic fit.
@@ -222,6 +277,8 @@ Selection có thể cân năng lực (capability / 역량), technical approach, 
 Weighted scoring giúp cấu trúc (structure / 구조) quyết định (decision / 결정) nhưng weight vẫn là judgment. Một ma trận (matrix / 행렬) đẹp không cứu đầu vào (input / 입력) độ lệch (bias / 편향) hoặc vendor tham chiếu (reference / 참조) không được verify.
 
 Selection còn phải hỏi dạng thất bại (failure mode / 실패 모드): supplier này yếu nhất ở đâu, concentration rủi ro (risk / 위험) nào tồn tại, exit có khả thi không và bằng chứng (evidence / 증거) nào chứng minh claim marketing của vendor.
+
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **SLA, KPI và kết quả (outcome / 결과)** tiếp nhận điểm tựa từ **Seller selection không chỉ nhìn price** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vendor hiệu năng (performance / 성능) và relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## SLA, KPI và kết quả (outcome / 결과)
 
@@ -231,6 +288,8 @@ Vendor đáp SLA 99.9% nhưng outage luôn rơi đúng peak payment cửa sổ (
 
 SLA cũng có thể bị cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화). Seller đạt response-time KPI bằng cách acknowledgement nhanh nhưng resolution chậm; buyer cần chỉ số (metric / 지표) ngữ nghĩa (semantic / 의미적) rõ và counter-metric cho hành vi (behavior / 동작) không mong muốn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Vendor hiệu năng (performance / 성능) và relationship** tiếp nhận điểm tựa từ **SLA, KPI và kết quả (outcome / 결과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Supplier financial/sức chứa (capacity / 용량) health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vendor hiệu năng (performance / 성능) và relationship
 
 Vendor management cần mục tiêu (objective / 목표) metrics, acceptance criteria, rà soát (review / 검토) cadence và escalation đường dẫn (path / 경로). Payment milestone nên liên kết với deliverable/bằng chứng (evidence / 증거) có nghĩa, không chỉ “đã làm x% effort”.
@@ -239,17 +298,23 @@ Relationship tốt không có nghĩa bỏ đặc tả hợp đồng (contract / 
 
 Rà soát (review / 검토) cadence nên khác nhau theo phase và rủi ro (risk / 위험). Weekly deep rà soát (review / 검토) trong stabilization có thể hợp lý nhưng thành overhead trong steady phase. Procurement quản trị (governance / 거버넌스) cũng cần tailoring.
 
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Supplier financial/sức chứa (capacity / 용량) health** tiếp nhận điểm tựa từ **Vendor hiệu năng (performance / 성능) và relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Procurement thay đổi (change / 변경) và claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Supplier financial/sức chứa (capacity / 용량) health
 
 Technical delivery tốt hôm nay không bảo đảm supplier còn sức chứa (capacity / 용량) hoặc financial health sáu tháng sau. trọng yếu (critical / 중요) procurement nên theo dõi tín hiệu (signal / 신호) như key-person turnover, subcontractor phụ thuộc (dependency / 의존성), cash-flow stress, backlog overload hoặc repeated missed commitment.
 
 Mục tiêu không phải quản trị nội bộ vendor thay họ, mà phát hiện early warning trước khi thất bại (failure / 실패) thành delivery issue.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Procurement thay đổi (change / 변경) và claim** tiếp nhận điểm tựa từ **Supplier financial/sức chứa (capacity / 용량) health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Claim anatomy: entitlement, causation và quantum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Procurement thay đổi (change / 변경) và claim
 
 Đặc tả hợp đồng (contract / 계약) thay đổi (change / 변경) cần formal cơ chế (mechanism / 메커니즘). Verbal yêu cầu (request / 요청) có thể tạo disputed phạm vi (scope / 범위). Claim xuất hiện khi party bất đồng về compensation, thời gian (time / 시간) hoặc obligation.
 
 PM nên giữ records, correspondence, approved thay đổi (change / 변경) và acceptance bằng chứng (evidence / 증거) đủ tốt để dispute không phụ thuộc bộ nhớ (memory / 메모리). Legal/procurement specialist cần được involve khi issue vượt authority.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Claim anatomy: entitlement, causation và quantum** tiếp nhận điểm tựa từ **Procurement thay đổi (change / 변경) và claim** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delay phân tích (analysis / 분석) và concurrent cause** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Claim anatomy: entitlement, causation và quantum
 
@@ -259,6 +324,8 @@ Nếu chỉ chứng minh “vendor đã gặp khó” nhưng không nối khó k
 
 Mô hình tư duy (mental model / 사고 모델) này giúp dự án (project / 프로젝트) manager tránh biến claim thành tranh luận cảm tính. đặc tả hợp đồng (contract / 계약) ngôn ngữ (language / 언어), sự kiện (event / 이벤트) chronology, baseline, approved changes, contemporaneous records và impact phân tích (analysis / 분석) phải nối được với nhau.
 
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Delay phân tích (analysis / 분석) và concurrent cause** tiếp nhận điểm tựa từ **Claim anatomy: entitlement, causation và quantum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Negotiation: position khác interest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Delay phân tích (analysis / 분석) và concurrent cause
 
 Delay không phải lúc nào cũng có một nguyên nhân. Buyer có thể chậm dữ liệu (data / 데이터) truy cập (access / 접근) trong khi seller cũng chậm staffing. Nếu hai cause overlap, câu hỏi responsibility phức tạp hơn việc “ai trễ trước”.
@@ -266,6 +333,8 @@ Delay không phải lúc nào cũng có một nguyên nhân. Buyer có thể ch�
 Dự án (project / 프로젝트) manager không nên tự đóng vai legal expert, nhưng cần giữ schedule lô-gic (logic / 논리) và bằng chứng (evidence / 증거) đủ tốt để specialist phân tích. Nếu baseline không đáng tin, actual dates không được ghi, hoặc thay đổi (change / 변경) được thực hiện trước rồi mới document, dispute resolution trở nên đắt hơn nhiều.
 
 Điểm quản lý quan trọng là preserve bằng chứng (evidence / 증거) khi sự kiện (event / 이벤트) xảy ra, không reconstruct bộ nhớ (memory / 메모리) nhiều tháng sau.
+
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Negotiation: position khác interest** tiếp nhận điểm tựa từ **Delay phân tích (analysis / 분석) và concurrent cause** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dispute ladder và escalation proportionality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Negotiation: position khác interest
 
@@ -275,6 +344,8 @@ Nếu chỉ bargaining trên position, negotiation dễ thành chia đôi con s�
 
 Một negotiation tốt cần biết BATNA — phương án tốt nhất nếu không đạt agreement. BATNA yếu làm một bên dễ chấp nhận deal tệ; BATNA mạnh nhưng được đánh giá sai có thể dẫn tới bluff nguy hiểm. dự án (project / 프로젝트) manager nên chuẩn bị mục tiêu (objective / 목표), authority limit, tradeable variables, bằng chứng (evidence / 증거) và walk-away điều kiện (condition / 조건) trước meeting.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Dispute ladder và escalation proportionality** tiếp nhận điểm tựa từ **Negotiation: position khác interest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Incentive gaming và chỉ số (metric / 지표) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dispute ladder và escalation proportionality
 
 Không phải mọi disagreement cần legal escalation ngay. Một dispute ladder có thể đi từ working-level clarification → project-manager negotiation → commercial/procurement rà soát (review / 검토) → executive mediation → formal dispute cơ chế (mechanism / 메커니즘) theo đặc tả hợp đồng (contract / 계약).
@@ -282,6 +353,8 @@ Không phải mọi disagreement cần legal escalation ngay. Một dispute ladd
 Mục tiêu là giải ở mức (level / 수준) thấp nhất có đủ authority và expertise, nhưng không kéo dài informal discussion tới mức mất contractual notice deadline hoặc bằng chứng (evidence / 증거). Collaboration và rights preservation phải song song.
 
 Nếu đặc tả hợp đồng (contract / 계약) yêu cầu notice trong 7 ngày, “giữ quan hệ nên chưa gửi notice” có thể vô tình làm mất quyền. Notice không nhất thiết là hành động thù địch; nó có thể là quản trị (governance / 거버넌스) cơ chế (mechanism / 메커니즘) để hai bên cùng nhìn thấy issue sớm.
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Incentive gaming và chỉ số (metric / 지표) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Dispute ladder và escalation proportionality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Procurement ethics và xung đột (conflict / 충돌) of interest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Incentive gaming và chỉ số (metric / 지표) thiết kế (design / 설계)
 
@@ -291,11 +364,15 @@ Chỉ số (metric / 지표) tốt phải gần kết quả (outcome / 결과), 
 
 Mọi incentive đều tạo tối ưu hóa (optimization / 최적화) pressure; procurement thiết kế (design / 설계) cần hỏi “nếu supplier tối ưu đúng chỉ số (metric / 지표) này, hệ thống (system / 시스템) hành vi (behavior / 동작) tệ nhất có thể là gì?”.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Procurement ethics và xung đột (conflict / 충돌) of interest** tiếp nhận điểm tựa từ **Incentive gaming và chỉ số (metric / 지표) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Procurement rủi ro (risk / 위험) và supply chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Procurement ethics và xung đột (conflict / 충돌) of interest
 
 Vendor selection và negotiation dễ phát sinh xung đột (conflict / 충돌) of interest, gift, confidential thông tin (information / 정보) leak hoặc favoritism. Ethics không phải lớp phụ bên ngoài commercial quyết định (decision / 결정); nó bảo vệ tính legitimacy của quyết định (decision / 결정) và giảm legal/reputational rủi ro (risk / 위험).
 
 Dự án (project / 프로젝트) manager nên disclose xung đột (conflict / 충돌), tách người đánh giá khi cần, giữ scoring bằng chứng (evidence / 증거) và không chia sẻ bid thông tin (information / 정보) không được phép. Một supplier tốt không nên được chọn bằng tiến trình (process / 프로세스) yếu, vì tiến trình (process / 프로세스) yếu làm quyết định (decision / 결정) khó defend khi kiểm tra (audit / 감사) hoặc dispute.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Procurement ethics và xung đột (conflict / 충돌) of interest** xác định đầu vào; **Procurement rủi ro (risk / 위험) và supply chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Exit chiến lược (strategy / 전략) và lock-in** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Procurement rủi ro (risk / 위험) và supply chuỗi (chain / 사슬)
 
@@ -305,6 +382,8 @@ Supply-chain ánh xạ (mapping / 매핑), alternate supplier hoặc buffer có 
 
 Cần phân biệt redundancy thật với redundancy giả. Hai supplier khác tên nhưng cùng dùng một subcontractor hoặc cloud region không tạo independent fallback.
 
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Procurement rủi ro (risk / 위험) và supply chuỗi (chain / 사슬)** xác định đầu vào; **Exit chiến lược (strategy / 전략) và lock-in** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Procurement closure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Exit chiến lược (strategy / 전략) và lock-in
 
 Đặc tả hợp đồng (contract / 계약) nên nghĩ về kết thúc từ đầu: dữ liệu (data / 데이터) export, IP quyền sở hữu (ownership / 소유권), chuyển tiếp (transition / 전이) assistance, documentation, mã nguồn (source code / 소스 코드)/escrow nếu relevant, account/truy cập (access / 접근) revocation và asset return.
@@ -313,11 +392,15 @@ Vendor lock-in không luôn xấu nếu benefit lớn, nhưng phải là quyết
 
 Exit chiến lược (strategy / 전략) tốt phải được kiểm thử (test / 테스트) ở mức phù hợp. “Có quyền export dữ liệu (data / 데이터)” không đủ nếu format proprietary và chưa ai thử restore sang hệ thống (system / 시스템) khác.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Procurement closure** tiếp nhận điểm tựa từ **Exit chiến lược (strategy / 전략) và lock-in** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng (quality / 품질) và procurement nối nhau tại acceptance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Procurement closure
 
 Closure cần verify obligation, final acceptance, payment, claim resolution, asset/IP/dữ liệu (data / 데이터) transfer và bản ghi (record / 레코드) retention.
 
 Closed đặc tả hợp đồng (contract / 계약) không đồng nghĩa vendor kiến thức (knowledge / 지식) đã chuyển. chuyển tiếp (transition / 전이) năng lực (capability / 역량) cần acceptance riêng nếu thao tác (operation / 연산) phụ thuộc nó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — chất lượng (quality / 품질), resources và procurement**, **Chất lượng (quality / 품질) và procurement nối nhau tại acceptance** tiếp nhận điểm tựa từ **Procurement closure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất lượng (quality / 품질) và procurement nối nhau tại acceptance
 
@@ -326,6 +409,8 @@ Outsourced deliverable vẫn phải đáp dự án (project / 프로젝트) ch�
 Nếu buyer chỉ specify schedule/price mà chất lượng (quality / 품질) vague, xung đột (conflict / 충돌) gần như được thiết kế vào đặc tả hợp đồng (contract / 계약). Nếu chất lượng (quality / 품질) yêu cầu (requirement / 요구사항) unrealistic hoặc không testable, seller cũng không thể price rủi ro (risk / 위험) đúng.
 
 Acceptance còn phải phân biệt conditional acceptance và final acceptance. Chấp nhận deliverable với open defect có thể hợp lý nếu rủi ro (risk / 위험) được hiểu và đơn vị sở hữu (owner / 오너) rõ, nhưng nếu exception biến thành default thì buyer tích chất lượng (quality / 품질) debt và mất leverage commercial.
+
+> **Chuyển mạch:** Trong **07 — chất lượng (quality / 품질), resources và procurement**, **Chất lượng (quality / 품질) và procurement nối nhau tại acceptance** cho ta quy tắc; **Ví dụ scenario** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ scenario
 
@@ -337,10 +422,12 @@ Một scenario chất lượng (quality / 품질): UAT phát hiện nhiều defe
 
 Một scenario tài nguyên (resource / 자원): ba dự án (project / 프로젝트) cùng lập plan dùng một bảo mật (security / 보안) architect 50% trong cùng tháng. Mỗi plan riêng đều “đủ tài nguyên (resource / 자원)”, nhưng tổng demand là 150%. dự án (project / 프로젝트) manager không thể giải bằng motivational talk; organization cần portfolio priority, schedule shift hoặc năng lực (capability / 역량) redundancy.
 
+> **Chuyển mạch:** Ở chặng này của **07 — chất lượng (quality / 품질), resources và procurement**, **Ví dụ scenario** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > chất lượng (quality / 품질) bảo vệ fitness for purpose bằng tiến trình (process / 프로세스) năng lực (capability / 역량) và bằng chứng (evidence / 증거); tài nguyên (resource / 자원) management bảo vệ effective sức chứa (capacity / 용량) thay vì headcount danh nghĩa; procurement mở rộng dự án (project / 프로젝트) hệ thống (system / 시스템) qua organizational ranh giới (boundary / 경계) và vì thế phải thiết kế rủi ro (risk / 위험) allocation, incentive, bằng chứng (evidence / 증거), negotiation cơ chế (mechanism / 메커니즘) và exit đường dẫn (path / 경로) rõ ràng.
 
 Tiếp theo: [Risk, uncertainty, issue và decision making](./08_risk_uncertainty_issues_and_decisions.md).
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 foundations value and project system](./00_foundations_value_and_project_system.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

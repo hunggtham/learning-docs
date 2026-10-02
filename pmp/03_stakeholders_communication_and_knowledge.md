@@ -1,7 +1,6 @@
 # 03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer
 
-> **Mạch đọc:** Đặt **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Stakeholder management không phải danh sách người nhận email** sang **Stakeholder hệ thống (system / 시스템) là mạng (network / 네트워크), không phải danh sách độc lập**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03 — Stakeholder, communication và knowledge transfer**. Route đi từ stakeholder network → interests/influence → communication channels → feedback/knowledge transfer → alignment decisions, để quản trị quan hệ nối với thông tin và quyền lực.
 
 ## Stakeholder management không phải danh sách người nhận email
 
@@ -10,6 +9,8 @@ Bên liên quan (stakeholder / 이해관계자) là cá nhân, nhóm hoặc tổ
 Một regulator, sponsor, end người dùng (user / 사용자), operations nhóm (team / 팀) và vendor đều có “success” khác nhau. dự án (project / 프로젝트) manager phải biến các success mô hình (model / 모델) riêng đó thành expectation đủ tương thích với mục tiêu (objective / 목표) chung.
 
 Stakeholder engagement vì vậy là một vòng điều khiển (control loop / 제어 루프) của dự án (project / 프로젝트). dự án (project / 프로젝트) gửi tín hiệu (signal / 신호) về direction và trạng thái hiện tại (current state / 현재 상태); stakeholder gửi phản hồi (feedback / 피드백), ràng buộc (constraint / 제약조건), objection hoặc approval; dự án (project / 프로젝트) cập nhật quyết định (decision / 결정). Nếu vòng lặp (loop / 루프) này chậm hoặc méo, yêu cầu (requirement / 요구사항) và quản trị (governance / 거버넌스) sẽ trễ hơn reality.
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Stakeholder hệ thống (system / 시스템) là mạng (network / 네트워크), không phải danh sách độc lập** tiếp nhận điểm tựa từ **Stakeholder management không phải danh sách người nhận email** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Identification là continuous sensing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stakeholder hệ thống (system / 시스템) là mạng (network / 네트워크), không phải danh sách độc lập
 
@@ -26,17 +27,23 @@ stakeholder → interest / power / dependency / information
 
 Dự án (project / 프로젝트) manager cần hiểu không chỉ “ai có power” mà còn **power đi qua đường nào**.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Identification là continuous sensing** tiếp nhận điểm tựa từ **Stakeholder hệ thống (system / 시스템) là mạng (network / 네트워크), không phải danh sách độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stakeholder vòng đời (lifecycle / 생명주기) khác dự án (project / 프로젝트) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Identification là continuous sensing
 
 Stakeholder register không phải sản phẩm tạo ra (artifact / 산출물) tạo một lần. Stakeholder mới xuất hiện khi phạm vi (scope / 범위), organization hoặc bên ngoài (external / 외부) môi trường (environment / 환경) thay đổi. Một nhóm (team / 팀) vận hành có thể chưa quan tâm ở đầu dự án nhưng trở thành stakeholder trọng yếu (critical / 중요) trước handover. Nếu identification chỉ diễn ra lúc initiation, chuyển tiếp (transition / 전이) thường gặp surprise.
 
 Một trigger tốt để rà lại stakeholder là khi có phạm vi (scope / 범위) thay đổi (change / 변경) lớn, organization restructure, vendor mới, compliance thay đổi (change / 변경), bản phát hành (release / 릴리스) tới người dùng (user / 사용자) group mới hoặc benefit đơn vị sở hữu (owner / 오너) thay đổi. Stakeholder map phải sống cùng dự án (project / 프로젝트) hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Identification là continuous sensing** xác định đầu vào; **Stakeholder vòng đời (lifecycle / 생명주기) khác dự án (project / 프로젝트) vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Stakeholder không chỉ có power và interest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stakeholder vòng đời (lifecycle / 생명주기) khác dự án (project / 프로젝트) vòng đời (lifecycle / 생명주기)
 
 Cùng một stakeholder có thể đổi vai trò theo thời gian. bảo mật (security / 보안) nhóm (team / 팀) có thể chỉ consult trong discovery nhưng trở thành approver trước go-live. Operations từ low-interest trở thành primary đơn vị sở hữu (owner / 오너) ở chuyển tiếp (transition / 전이). Customer hỗ trợ (support / 지원) có thể gần như vắng ở bản dựng (build / 빌드) nhưng trọng yếu (critical / 중요) sau rollout.
 
 Engagement chiến lược (strategy / 전략) nên thay theo **quyết định (decision / 결정) need hiện tại**, không theo classification lúc kickoff.
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Stakeholder vòng đời (lifecycle / 생명주기) khác dự án (project / 프로젝트) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **Stakeholder không chỉ có power và interest** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Salience là động (dynamic / 동적) thuộc tính (property / 속성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stakeholder không chỉ có power và interest
 
@@ -46,11 +53,15 @@ Ngoài power và interest, nên hiểu stance, phụ thuộc (dependency / 의�
 
 Điều quan trọng là chiến lược (strategy / 전략): ai cần co-create, ai cần approve, ai cần consult, ai chỉ cần informed; và bằng chứng nào cho thấy chiến lược (strategy / 전략) cần đổi.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Salience là động (dynamic / 동적) thuộc tính (property / 속성)** tiếp nhận điểm tựa từ **Stakeholder không chỉ có power và interest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stakeholder phụ thuộc (dependency / 의존성) quan trọng ngang stakeholder power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Salience là động (dynamic / 동적) thuộc tính (property / 속성)
 
 Power, legitimacy và urgency thay đổi theo sự kiện (event / 이벤트). Một legal nhóm (team / 팀) bình thường ít tham gia nhưng trở thành trọng yếu (critical / 중요) khi dữ liệu (data / 데이터) breach xuất hiện. Một người dùng (user / 사용자) group nhỏ có thể trở nên urgent nếu defect ảnh hưởng an toàn (safety / 안전).
 
 Stakeholder prioritization vì vậy phải event-sensitive. Nếu dự án (project / 프로젝트) chỉ dùng stakeholder ma trận (matrix / 행렬) static, tín hiệu (signal / 신호) mới có thể không đổi engagement dù rủi ro (risk / 위험) profile đã đổi hoàn toàn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Stakeholder phụ thuộc (dependency / 의존성) quan trọng ngang stakeholder power** tiếp nhận điểm tựa từ **Salience là động (dynamic / 동적) thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) rủi ro (risk / 위험): người lên tiếng không luôn đại diện người chịu tác động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stakeholder phụ thuộc (dependency / 의존성) quan trọng ngang stakeholder power
 
@@ -59,6 +70,8 @@ Power hỏi “họ có thể ảnh hưởng dự án (project / 프로젝트) t
 Một bên ngoài (external / 외부) API nhóm (team / 팀) không có quyền formal với dự án (project / 프로젝트) nhưng nếu không giao giao diện (interface / 인터페이스), dự án (project / 프로젝트) không thể proceed. Đây là high phụ thuộc (dependency / 의존성) stakeholder dù organizational power thấp.
 
 Ngược lại một executive power cao nhưng không nằm trên trọng yếu (critical / 중요) quyết định (decision / 결정) đường dẫn (path / 경로) có thể cần exception-level reporting thay vì daily engagement.
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Biểu diễn (representation / 표현) rủi ro (risk / 위험): người lên tiếng không luôn đại diện người chịu tác động** tiếp nhận điểm tựa từ **Stakeholder phụ thuộc (dependency / 의존성) quan trọng ngang stakeholder power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Engagement trạng thái (state / 상태) khác communication frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biểu diễn (representation / 표현) rủi ro (risk / 위험): người lên tiếng không luôn đại diện người chịu tác động
 
@@ -70,6 +83,8 @@ Cần hỏi ai đang vắng mặt, ai đang được proxy bởi người khác 
 
 Một dấu hiệu nguy hiểm là stakeholder map rất đầy đủ theo org chart nhưng không có người đại diện cho nhóm chịu operational burden sau rollout. Đây là điểm nối stakeholder phân tích (analysis / 분석) với phân phối (distribution / 분포) of giá trị (value / 값)/harm ở chapter Foundations.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Engagement trạng thái (state / 상태) khác communication frequency** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) rủi ro (risk / 위험): người lên tiếng không luôn đại diện người chịu tác động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Resistance không phải luôn là bài toán (problem / 문제) cần “loại bỏ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Engagement trạng thái (state / 상태) khác communication frequency
 
 Gửi nhiều thông tin không đồng nghĩa stakeholder được engage tốt. Một stakeholder có thể nhận daily report nhưng vẫn phản đối dự án (project / 프로젝트) vì success criteria của họ chưa được hiểu.
@@ -77,6 +92,8 @@ Gửi nhiều thông tin không đồng nghĩa stakeholder được engage tốt
 Engagement có thể nhìn như movement giữa unaware, resistant, neutral, supportive và leading, nhưng classification chỉ hữu ích nếu gắn với hành động (action / 동작). Nếu một stakeholder trọng yếu (critical / 중요) vẫn resistant, PM cần hiểu reason: mất mát (loss / 손실) of điều khiển (control / 제어), tải công việc (workload / 워크로드) tăng, compliance concern, trust thấp hay incentive mismatch.
 
 Mục tiêu không phải biến mọi người thành “supportive”. Một regulator đúng vai trò có thể liên tục challenge dự án (project / 프로젝트); engagement tốt ở đây nghĩa concern được surface sớm và bằng chứng (evidence / 증거) được trao đổi đúng cách.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Resistance không phải luôn là bài toán (problem / 문제) cần “loại bỏ”** tiếp nhận điểm tựa từ **Engagement trạng thái (state / 상태) khác communication frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản hồi (feedback / 피드백) sampling độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Resistance không phải luôn là bài toán (problem / 문제) cần “loại bỏ”
 
@@ -86,6 +103,8 @@ Nếu dự án (project / 프로젝트) coi mọi resistance là “change-manag
 
 Câu hỏi đầu tiên nên là: resistance đến từ misinformation, incentive xung đột (conflict / 충돌), legitimate rủi ro (risk / 위험), năng lực (capability / 역량) gap hay mất mát (loss / 손실) of status/điều khiển (control / 제어)? phản hồi (response / 응답) khác nhau theo cause.
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Phản hồi (feedback / 피드백) sampling độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Resistance không phải luôn là bài toán (problem / 문제) cần “loại bỏ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Expectation alignment trước expectation management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phản hồi (feedback / 피드백) sampling độ lệch (bias / 편향)
 
 Vòng phản hồi (feedback loop / 피드백 루프) chỉ tốt khi mẫu (sample / 표본) đủ đại diện cho quyết định (decision / 결정) cần đưa ra. Nếu pilot chỉ gồm power người dùng (user / 사용자) nhiệt tình, adoption tín hiệu (signal / 신호) có thể quá optimistic. Nếu survey chỉ nhận phản hồi (response / 응답) từ người rất hài lòng hoặc rất bất mãn, average không phản ánh silent majority. Nếu UAT chủ yếu do dự án (project / 프로젝트) nhóm (team / 팀) chạy, operational friction có thể bị bỏ qua.
@@ -93,6 +112,8 @@ Vòng phản hồi (feedback loop / 피드백 루프) chỉ tốt khi mẫu (sam
 Vì vậy PM cần phân biệt **phản hồi (feedback / 피드백) volume** với **phản hồi (feedback / 피드백) validity**. Câu hỏi nên là: ai được quan sát, trong ngữ cảnh (context / 맥락) nào, ai không xuất hiện và bằng chứng (evidence / 증거) này có đủ gần môi trường vận hành (production / 운영 환경) reality không?
 
 Sampling độ lệch (bias / 편향) đặc biệt nguy hiểm vì dashboard có thể rất nhiều dữ liệu (data / 데이터) nhưng vẫn sai mô hình (model / 모델). Cách giảm không phải luôn “thu thập nhiều hơn”, mà là chọn segment, scenario và observation cửa sổ (window / 윈도우) phù hợp với bất định (uncertainty / 불확실성) đang cần giảm.
+
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Expectation alignment trước expectation management** tiếp nhận điểm tựa từ **Phản hồi (feedback / 피드백) sampling độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Expectation debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Expectation alignment trước expectation management
 
@@ -102,6 +123,8 @@ Alignment là quá trình làm giả định (assumption / 가정) tường minh
 
 Expectation càng quan trọng càng cần bằng chứng (evidence / 증거) cụ thể. “Nhanh”, “ổn định”, “dễ dùng” hoặc “xong trước cuối quý” đều có thể được hiểu khác nhau nếu không chuyển thành acceptance criterion, milestone hoặc measurable kết quả (outcome / 결과).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Expectation debt** tiếp nhận điểm tựa từ **Expectation alignment trước expectation management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Promise, forecast và aspiration phải tách nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Expectation debt
 
 Nếu dự án (project / 프로젝트) biết expectation đang khác reality nhưng trì hoãn conversation vì sợ xung đột (conflict / 충돌), gap đó tích lại thành **expectation debt**.
@@ -110,11 +133,15 @@ Ví dụ sponsor vẫn tin go-live tháng 10 dù nhóm (team / 팀) đã biết 
 
 Expectation debt giống technical debt ở chỗ short-term silence giảm discomfort nhưng tăng future correction chi phí (cost / 비용).
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Promise, forecast và aspiration phải tách nhau** tiếp nhận điểm tựa từ **Expectation debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Communication là transfer of meaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Promise, forecast và aspiration phải tách nhau
 
 Stakeholder thường nghe một date nhưng không biết đó là commitment, forecast hay mục tiêu (target / 대상). Communication tốt phải làm rõ ngữ nghĩa (semantic / 의미적) mức (level / 수준).
 
 “Chúng tôi mục tiêu (target / 대상) 30/10 với confidence hiện tại 60%” khác hoàn toàn “30/10 là contractual commitment”. Nếu ba loại date bị trộn, trust bị phá dù nhóm (team / 팀) technically “đã nói trước”.
+
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Communication là transfer of meaning** tiếp nhận điểm tựa từ **Promise, forecast và aspiration phải tách nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Closed-loop communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Communication là transfer of meaning
 
@@ -124,6 +151,8 @@ Channel nên match với purpose. Một xung đột (conflict / 충돌) phức t
 
 Communication plan hữu ích khi nó trả lời ai cần thông tin gì, tại sao, khi nào, qua channel nào, format nào, ai chịu trách nhiệm và vòng phản hồi (feedback loop / 피드백 루프) nào xác nhận understanding.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Closed-loop communication** tiếp nhận điểm tựa từ **Communication là transfer of meaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Communication độ tin cậy (reliability / 신뢰성) có thể thiết kế như dịch vụ (service / 서비스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Closed-loop communication
 
 Với thông tin (information / 정보) trọng yếu (critical / 중요), communication nên có acknowledgement và confirmation of meaning. Sender truyền message, receiver xác nhận nhận/hiểu, hành động (action / 동작) hoặc next trạng thái (state / 상태) được ghi rõ.
@@ -132,11 +161,15 @@ Trong sự cố (incident / 인시던트), “đã post Slack” không đủ n�
 
 Closed-loop communication đặc biệt quan trọng khi consequence của misunderstanding cao.
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Communication độ tin cậy (reliability / 신뢰성) có thể thiết kế như dịch vụ (service / 서비스)** tiếp nhận điểm tựa từ **Closed-loop communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thông tin (information / 정보) có half-life** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Communication độ tin cậy (reliability / 신뢰성) có thể thiết kế như dịch vụ (service / 서비스)
 
 Một dự án (project / 프로젝트) lớn có thể coi communication đường dẫn (path / 경로) như dịch vụ (service / 서비스) với expectation rõ: sự cố (incident / 인시던트) severity-1 acknowledgement trong 10 phút, phụ thuộc (dependency / 의존성) yêu cầu (request / 요청) phản hồi trong hai ngày, thay đổi (change / 변경) quyết định (decision / 결정) trong năm ngày.
 
 Đây không phải để biến con người thành SLA máy móc, mà để làm độ trễ (latency / 지연 시간) visible. Nếu dự án (project / 프로젝트) phụ thuộc quyết định (decision / 결정) nhưng không có phản hồi (response / 응답) expectation, hàng đợi (queue / 큐) có thể bị coi là “communication bài toán (problem / 문제)” thay vì quản trị (governance / 거버넌스) bottleneck.
+
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Thông tin (information / 정보) có half-life** tiếp nhận điểm tựa từ **Communication độ tin cậy (reliability / 신뢰성) có thể thiết kế như dịch vụ (service / 서비스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Push, pull và interactive communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thông tin (information / 정보) có half-life
 
@@ -146,11 +179,15 @@ Thông tin (information / 정보) high-volatility cần timestamp, đơn vị s�
 
 Quyết định (decision / 결정) dựa trên stale thông tin (information / 정보) có thể hợp lý tại thời điểm cũ nhưng sai ở hiện tại. Vì vậy sản phẩm tạo ra (artifact / 산출물) quan trọng nên cho người đọc biết effective thời gian (time / 시간), confidence và điều kiện (condition / 조건) làm nó hết hiệu lực. Đây là liên kết (connection / 연결) trực tiếp với freshness SLO và lineage ở chapter Artifacts.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Push, pull và interactive communication** tiếp nhận điểm tựa từ **Thông tin (information / 정보) có half-life** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Communication chế độ (mode / 모드) nên dựa trên chi phí (cost / 비용) of misunderstanding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Push, pull và interactive communication
 
 Push communication đưa thông tin (information / 정보) trực tiếp tới audience, ví dụ email hoặc notification. Pull communication để stakeholder tự truy cập repository, dashboard hoặc portal khi cần. Interactive communication cho phép trao đổi hai chiều như workshop, lời gọi (call / 호출) hoặc negotiation.
 
 Chọn chế độ (mode / 모드) theo bất định (uncertainty / 불확실성). thông tin (information / 정보) ổn định và self-service phù hợp pull. Announcement rõ có thể push. Ambiguous yêu cầu (requirement / 요구사항) hoặc xung đột (conflict / 충돌) cần interactive vì meaning phải được đồng tạo, không chỉ truyền đi.
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Communication chế độ (mode / 모드) nên dựa trên chi phí (cost / 비용) of misunderstanding** tiếp nhận điểm tựa từ **Push, pull và interactive communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Richness của communication channel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Communication chế độ (mode / 모드) nên dựa trên chi phí (cost / 비용) of misunderstanding
 
@@ -158,17 +195,23 @@ Một routine chỉ số (metric / 지표) có thể pull qua dashboard. Một m
 
 Càng khó sửa misunderstanding, càng cần richer channel và confirmation mạnh hơn.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Richness của communication channel** tiếp nhận điểm tựa từ **Communication chế độ (mode / 모드) nên dựa trên chi phí (cost / 비용) of misunderstanding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Synchronous và asynchronous communication là sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Richness của communication channel
 
 Channel có độ giàu thông tin khác nhau. văn bản (text / 텍스트) ngắn tốt cho fact đơn giản nhưng kém cho xung đột (conflict / 충돌) nhiều cảm xúc. Video/lời gọi (call / 호출) hoặc face-to-face cung cấp phản hồi (feedback / 피드백) tức thời và nhiều contextual cue hơn, nhưng khó dấu vết (trace / 추적) nếu không document quyết định (decision / 결정) sau đó.
 
 Một mẫu (pattern / 패턴) tốt là discuss rich, bản ghi (record / 레코드) lean: dùng synchronous channel để giải ambiguity rồi ghi quyết định (decision / 결정)/hành động (action / 동작) trong sản phẩm tạo ra (artifact / 산출물) bền vững.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Synchronous và asynchronous communication là sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Richness của communication channel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transparency không phải thông tin (information / 정보) overload** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Synchronous và asynchronous communication là sự đánh đổi (trade-off / 트레이드오프)
 
 Synchronous communication giảm phản hồi (feedback / 피드백) độ trễ (latency / 지연 시간) nhưng tốn calendar alignment và dễ mất traceability. Asynchronous communication quy mô (scale / 규모) tốt hơn và tạo bản ghi (record / 레코드) nhưng cần ngữ cảnh (context / 맥락) rõ, có thể làm clarification chậm.
 
 Dự án (project / 프로젝트) phân tán (distributed / 분산) nên thiết kế loại quyết định (decision / 결정) nào cần sync, loại nào async và hết thời gian chờ (timeout / 타임아웃) bao lâu trước escalation.
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Transparency không phải thông tin (information / 정보) overload** tiếp nhận điểm tựa từ **Synchronous và asynchronous communication là sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Executive reporting là compression có chủ đích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Transparency không phải thông tin (information / 정보) overload
 
@@ -178,11 +221,15 @@ Nhóm (team / 팀) có thể cần blocker, WIP, defect và phụ thuộc (depen
 
 Thông tin (information / 정보) overload cũng là rủi ro (risk / 위험) vì tín hiệu (signal / 신호) quan trọng bị chìm. PM phải thiết kế thông tin (information / 정보) kiến trúc (architecture / 아키텍처), không chỉ tăng volume.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Executive reporting là compression có chủ đích** tiếp nhận điểm tựa từ **Transparency không phải thông tin (information / 정보) overload** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Communication noise và distortion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Executive reporting là compression có chủ đích
 
 Một executive dashboard luôn mất detail. Vì vậy người thiết kế phải bảo vệ các tín hiệu (signal / 신호) không được phép bị average hóa: an toàn (safety / 안전) breach, legal exposure, trọng yếu (critical / 중요) phụ thuộc (dependency / 의존성), major forecast shift.
 
 Green overall status không được phép che một red non-negotiable ràng buộc (constraint / 제약조건). Aggregation quy tắc (rule / 규칙) phải phản ánh consequence chứ không chỉ arithmetic average.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Communication noise và distortion** tiếp nhận điểm tựa từ **Executive reporting là compression có chủ đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Incentive tạo distortion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Communication noise và distortion
 
@@ -192,11 +239,15 @@ Một dự án (project / 프로젝트) nhiều tầng (layer / 계층) reportin
 
 Điều khiển (control / 제어) tốt gồm source-of-truth, direct escalation đường dẫn (path / 경로) cho material rủi ro (risk / 위험) và traceable quyết định (decision / 결정) yêu cầu (request / 요청).
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Incentive tạo distortion** tiếp nhận điểm tựa từ **Communication noise và distortion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Active listening và diagnostic question** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Incentive tạo distortion
 
 Nếu messenger bị phạt khi mang bad news, tín hiệu (signal / 신호) sẽ bị soften. Nếu department KPI phụ thuộc status xanh, report có độ lệch (bias / 편향) cấu trúc.
 
 Dự án (project / 프로젝트) manager phải hiểu communication độ tin cậy (reliability / 신뢰성) không chỉ là kỹ năng viết; nó phụ thuộc incentive và psychological an toàn (safety / 안전). Đây là điểm nối trực tiếp với chapter People.
+
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Active listening và diagnostic question** tiếp nhận điểm tựa từ **Incentive tạo distortion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Listening phải phân biệt position, interest và ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Active listening và diagnostic question
 
@@ -204,17 +255,23 @@ Stakeholder conversation tốt không chỉ là thuyết phục. Active listenin
 
 Khi stakeholder nói “dự án (project / 프로젝트) chậm”, PM nên tìm statement cụ thể: milestone nào, expectation nào, dữ liệu (data / 데이터) nào? Khi người dùng (user / 사용자) nói “khó dùng”, cần scenario và friction cụ thể. Diagnostic question biến emotion hoặc general statement thành actionable thông tin (information / 정보) mà không dismiss concern.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Active listening và diagnostic question** đặt câu hỏi cần giải quyết; **Listening phải phân biệt position, interest và ràng buộc (constraint / 제약조건)** biến câu hỏi đó thành những điều kiện không được phá vỡ khi đi vào thực hành. Từ đây, **Negotiation là quản lý sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Listening phải phân biệt position, interest và ràng buộc (constraint / 제약조건)
 
 Position là điều stakeholder nói họ muốn. Interest là lý do họ muốn. ràng buộc (constraint / 제약조건) là ranh giới (boundary / 경계) họ không thể thay.
 
 “Phải go-live ngày 1/11” có thể là position. Interest có thể là marketing campaign; ràng buộc (constraint / 제약조건) thực có thể chỉ là regulatory reporting trước cuối năm. Nếu không tách ba lớp, dự án (project / 프로젝트) dễ coi mọi yêu cầu (request / 요청) là hard ràng buộc (constraint / 제약조건).
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Negotiation là quản lý sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Listening phải phân biệt position, interest và ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BATNA và ZOPA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Negotiation là quản lý sự đánh đổi (trade-off / 트레이드오프)
 
 Dự án (project / 프로젝트) thường có nhiều mục tiêu (objective / 목표) không thể tối ưu đồng thời. Negotiation tốt tách interest khỏi position và làm sự đánh đổi (trade-off / 트레이드오프) tường minh (explicit / 명시적).
 
 Ví dụ sponsor yêu cầu thêm phạm vi (scope / 범위) nhưng không đổi deadline. PM không nên chỉ nói “không thể” hoặc âm thầm ép nhóm (team / 팀) overtime. Cần đưa option: bỏ phạm vi (scope / 범위) khác, tăng sức chứa (capacity / 용량) nếu có leverage, chấp nhận rủi ro (risk / 위험), đổi milestone hoặc defer tính năng (feature / 기능). Negotiation làm ràng buộc (constraint / 제약조건) visible để authority chọn.
+
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **BATNA và ZOPA** tiếp nhận điểm tựa từ **Negotiation là quản lý sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Negotiation power đến từ option, thông tin (information / 정보) và timing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## BATNA và ZOPA
 
@@ -224,11 +281,15 @@ Hiểu BATNA giúp negotiation bớt cảm tính. Nếu vendor không giảm gi�
 
 ZOPA không phải lúc nào tồn tại. Nếu customer yêu cầu deadline không thể đạt mà không phá legal/an toàn (safety / 안전) ràng buộc (constraint / 제약조건), “compromise ở giữa” không phải answer hợp lý. Khi đó cần đổi phạm vi (scope / 범위)/tài nguyên (resource / 자원) hoặc escalate quyết định (decision / 결정).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Negotiation power đến từ option, thông tin (information / 정보) và timing** tiếp nhận điểm tựa từ **BATNA và ZOPA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Negotiation tốt đôi khi tạo option mới thay vì chia phần cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Negotiation power đến từ option, thông tin (information / 정보) và timing
 
 Formal authority chỉ là một nguồn power. Có alternative tốt, bằng chứng (evidence / 증거) tốt và thời gian chuẩn bị có thể tăng leverage. Bị khóa vào một vendor ngay trước deadline làm BATNA yếu dù đặc tả hợp đồng (contract / 계약) manager có chức danh cao.
 
 Dự án (project / 프로젝트) chiến lược (strategy / 전략) nên tạo option sớm thay vì đợi negotiation crisis mới tìm leverage.
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Negotiation tốt đôi khi tạo option mới thay vì chia phần cũ** tiếp nhận điểm tựa từ **Negotiation power đến từ option, thông tin (information / 정보) và timing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trust là tài sản của thông tin (information / 정보) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Negotiation tốt đôi khi tạo option mới thay vì chia phần cũ
 
@@ -238,11 +299,15 @@ Ví dụ vendor không thể giảm total price nhưng có thể chấp nhận m
 
 Tuy nhiên option mới chỉ có giá trị nếu obligation và consequence được làm rõ. Một creative deal mơ hồ có thể chỉ chuyển xung đột (conflict / 충돌) sang acceptance/claim ở cuối dự án (project / 프로젝트).
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Trust là tài sản của thông tin (information / 정보) hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Negotiation tốt đôi khi tạo option mới thay vì chia phần cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trust repair cần bằng chứng (evidence / 증거), không chỉ apology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trust là tài sản của thông tin (information / 정보) hệ thống (system / 시스템)
 
 Influence không chỉ đến từ authority. Credibility, consistency, reciprocity và understanding stakeholder interest đều tạo trust. Khi PM liên tục che bad news để “giữ hình ảnh”, short-term xung đột (conflict / 충돌) có thể giảm nhưng thông tin (information / 정보) độ tin cậy (reliability / 신뢰성) bị phá. Khi crisis xảy ra, stakeholder sẽ discount mọi report sau đó.
 
 Trust giúp giảm xác minh (verification / 확인) chi phí (cost / 비용). Khi report đáng tin, stakeholder không phải kiểm lại mọi detail. Nhưng trust không thay bằng chứng (evidence / 증거) ở quyết định (decision / 결정) có compliance hoặc financial impact cao.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Trust là tài sản của thông tin (information / 정보) hệ thống (system / 시스템)** nêu điều cần giải thích; **Trust repair cần bằng chứng (evidence / 증거), không chỉ apology** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Stakeholder rủi ro (risk / 위험) propagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trust repair cần bằng chứng (evidence / 증거), không chỉ apology
 
@@ -250,17 +315,23 @@ Khi trust bị phá bởi missed commitment hoặc hidden issue, nói “sẽ co
 
 Trust được rebuild khi stakeholder thấy prediction/reality dần align và bad news đến sớm hơn.
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Trust repair cần bằng chứng (evidence / 증거), không chỉ apology** nêu điều cần giải thích; **Stakeholder rủi ro (risk / 위험) propagation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Coalition và stakeholder alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stakeholder rủi ro (risk / 위험) propagation
 
 Một stakeholder issue có thể lan thành phạm vi (scope / 범위), schedule, finance hoặc adoption rủi ro (risk / 위험). Operations resistance có thể delay chuyển tiếp (transition / 전이); vendor dispute có thể thành schedule/chi phí (cost / 비용) rủi ro (risk / 위험); regulator concern có thể khối (block / 블록) go-live.
 
 Stakeholder register không nên đứng tách biệt rủi ro (risk / 위험) register. Khi engagement bài toán (problem / 문제) có xác suất (probability / 확률)/impact lên mục tiêu (objective / 목표), nó đã trở thành dự án (project / 프로젝트) rủi ro (risk / 위험) cần đơn vị sở hữu (owner / 오너)/phản hồi (response / 응답).
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Coalition và stakeholder alignment** tiếp nhận điểm tựa từ **Stakeholder rủi ro (risk / 위험) propagation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) transfer và bus factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Coalition và stakeholder alignment
 
 Một dự án (project / 프로젝트) transformation có thể gặp nhiều stakeholder riêng lẻ neutral nhưng khi họ hình thành coalition phản đối, influence tăng mạnh. Ngược lại sponsor có thể tạo coalition hỗ trợ bằng cách align nghiệp vụ (business / 비즈니스) owners quanh dùng chung (shared / 공유) kết quả (outcome / 결과).
 
 PM không nên “chính trị hóa” mọi tương tác (interaction / 상호작용), nhưng phải nhận ra organizational thay đổi (change / 변경) diễn ra qua mạng (network / 네트워크). Engagement chiến lược (strategy / 전략) chỉ theo từng cá nhân có thể bỏ lỡ group dynamics.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Kiến thức (knowledge / 지식) transfer và bus factor** tiếp nhận điểm tựa từ **Coalition và stakeholder alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) decay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiến thức (knowledge / 지식) transfer và bus factor
 
@@ -270,17 +341,23 @@ Một handover document 100 trang không đảm bảo operations có thể vận
 
 Bus factor thấp nghĩa một vài cá nhân là single điểm (point / 지점) of kiến thức (knowledge / 지식) thất bại (failure / 실패). PM nên phát hiện sớm qua phụ thuộc (dependency / 의존성) map, vacation rủi ro (risk / 위험), rà soát (review / 검토) quyền sở hữu (ownership / 소유권) và handover need.
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Kiến thức (knowledge / 지식) decay** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) transfer và bus factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) transfer cần acceptance criterion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiến thức (knowledge / 지식) decay
 
 Kiến thức (knowledge / 지식) không chỉ có nguy cơ mất khi người rời nhóm (team / 팀); nó còn stale khi hệ thống (system / 시스템) thay đổi. Runbook viết đúng sáu tháng trước có thể sai sau kiến trúc (architecture / 아키텍처) thay đổi (change / 변경).
 
 Kiến thức (knowledge / 지식) sản phẩm tạo ra (artifact / 산출물) cần đơn vị sở hữu (owner / 오너), cập nhật (update / 업데이트) trigger và kiểm tra hợp lệ (validation / 검증). Một rehearsal định kỳ có thể phát hiện document stale tốt hơn việc chỉ rà soát (review / 검토) văn bản (text / 텍스트).
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Kiến thức (knowledge / 지식) transfer cần acceptance criterion** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) decay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) transfer là chuyển khả năng tái tạo lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiến thức (knowledge / 지식) transfer cần acceptance criterion
 
 “Đã huấn luyện (training / 학습)” là activity, không phải bằng chứng (evidence / 증거) của transfer. Có thể dùng teach-back, simulation, runbook thực thi (execution / 실행) hoặc hỗ trợ (support / 지원) handoff drill để kiểm chứng.
 
 Ví dụ operations nhóm (team / 팀) chỉ được coi là ready khi họ tự deploy bản kiểm thử (test / 테스트), restore backup và xử lý ba sự cố (incident / 인시던트) scenario mà không phụ thuộc nhà phát triển (developer / 개발자) chính. Điều này biến kiến thức (knowledge / 지식) transfer từ attendance thành năng lực (capability / 역량) bằng chứng (evidence / 증거).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Kiến thức (knowledge / 지식) transfer là chuyển khả năng tái tạo lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) transfer cần acceptance criterion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) quyền sở hữu (ownership / 소유권) sau chuyển tiếp (transition / 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiến thức (knowledge / 지식) transfer là chuyển khả năng tái tạo lập luận (reasoning / 추론)
 
@@ -290,11 +367,15 @@ Ví dụ runbook nói “restart dịch vụ (service / 서비스) B trước d�
 
 Teach-back vì thế mạnh hơn attendance: người nhận giải thích lại mô hình tư duy (mental model / 사고 모델), thực hiện scenario bình thường và xử lý một exception. Nếu chỉ làm được happy đường dẫn (path / 경로) khi người cũ đứng cạnh, năng lực (capability / 역량) chưa thực sự được transfer.
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, sau nội dung của **Kiến thức (knowledge / 지식) transfer là chuyển khả năng tái tạo lập luận (reasoning / 추론)**, **Kiến thức (knowledge / 지식) quyền sở hữu (ownership / 소유권) sau chuyển tiếp (transition / 전이)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cross-cultural và multilingual communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiến thức (knowledge / 지식) quyền sở hữu (ownership / 소유권) sau chuyển tiếp (transition / 전이)
 
 Ai giữ kiến thức (knowledge / 지식) sau dự án (project / 프로젝트) closure phải được xác định. Nếu temporary dự án (project / 프로젝트) nhóm (team / 팀) giải tán nhưng không có đơn vị sở hữu (owner / 오너) cho runbook, kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) hoặc vendor ngữ cảnh (context / 맥락), kiến thức (knowledge / 지식) decay gần như chắc chắn.
 
 Chuyển tiếp (transition / 전이) cần chuyển cả **sản phẩm tạo ra (artifact / 산출물) quyền sở hữu (ownership / 소유권)** và **responsibility to maintain kiến thức (knowledge / 지식)**, không chỉ bản sao (copy / 복사) tệp (file / 파일) sang folder operations.
+
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Cross-cultural và multilingual communication** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) quyền sở hữu (ownership / 소유권) sau chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Translation rủi ro (risk / 위험) là ngữ nghĩa (semantic / 의미적) rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cross-cultural và multilingual communication
 
@@ -304,11 +385,15 @@ PM không nên stereotype theo nationality. Cách thực tế hơn là tường 
 
 Khi translation cần thiết, trọng yếu (critical / 중요) yêu cầu (requirement / 요구사항) hoặc đặc tả hợp đồng (contract / 계약) term phải được verify hai chiều, không dựa hoàn toàn vào machine translation hoặc một cá nhân trung gian.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Translation rủi ro (risk / 위험) là ngữ nghĩa (semantic / 의미적) rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Cross-cultural và multilingual communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stakeholder fatigue** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Translation rủi ro (risk / 위험) là ngữ nghĩa (semantic / 의미적) rủi ro (risk / 위험)
 
 Một từ legal/technical dịch gần đúng có thể thay obligation. trọng yếu (critical / 중요) term nên giữ original wording cùng translation, có glossary hoặc back-translation khi cần.
 
 Nếu một bilingual coordinator trở thành single nguồn (source / 소스) cho mọi meaning, họ cũng trở thành kiến thức (knowledge / 지식) bottleneck. Important quyết định (decision / 결정) cần sản phẩm tạo ra (artifact / 산출물) song ngữ hoặc xác minh (verification / 확인) independent khi consequence cao.
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Stakeholder fatigue** tiếp nhận điểm tựa từ **Translation rủi ro (risk / 위험) là ngữ nghĩa (semantic / 의미적) rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attention là scarce tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stakeholder fatigue
 
@@ -316,11 +401,15 @@ Engagement quá nhiều cũng có chi phí (cost / 비용). Mời stakeholder v�
 
 Engagement cadence nên match quyết định (decision / 결정) need. Executive sponsor có thể cần milestone/exception rà soát (review / 검토); sản phẩm (product / 제품) người dùng (user / 사용자) cần frequent phản hồi (feedback / 피드백) trên increment; compliance cần gate ở những điểm (point / 지점) material. Tailoring communication giúp bảo vệ attention như một tài nguyên (resource / 자원) hữu hạn.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Stakeholder fatigue** nêu điều cần giải thích; **Attention là scarce tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Stakeholder quyết định (decision / 결정) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Attention là scarce tài nguyên (resource / 자원)
 
 Một quyết định (decision / 결정) yêu cầu (request / 요청) gửi cùng 30 informational email dễ bị bỏ qua. Communication thiết kế (design / 설계) nên phân biệt action-needed, approval-needed, rủi ro (risk / 위험) alert và FYI.
 
 Nếu mọi message đều marked urgent, organization mất ability phân biệt urgency. Đây là information-system thất bại (failure / 실패), không chỉ etiquette.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Attention là scarce tài nguyên (resource / 자원)** nêu điều cần giải thích; **Stakeholder quyết định (decision / 결정) debt** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ví dụ scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stakeholder quyết định (decision / 결정) debt
 
@@ -330,6 +419,8 @@ Khi dự án (project / 프로젝트) liên tục trì hoãn những conversatio
 
 Một dashboard tốt không chỉ báo “awaiting sponsor”; nó cho thấy age, blocked giá trị (value / 값), latest-needed date và consequence nếu không quyết. Điều đó biến engagement từ activity mềm thành decision-flow management.
 
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Stakeholder quyết định (decision / 결정) debt** cho ta quy tắc; **Ví dụ scenario** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Stakeholder anti-patterns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ scenario
 
 Sponsor yêu cầu báo cáo mỗi ngày vì “không thấy tiến độ”. Thay vì chỉ tăng tần suất report, PM nên tìm thông tin (information / 정보) gap thực sự. Có thể sponsor không cần danh sách tác vụ (task / 작업) mà cần forecast ngày UAT và phụ thuộc (dependency / 의존성) với vendor. Một dashboard nhỏ có milestone confidence, trọng yếu (critical / 중요) blocker và quyết định (decision / 결정) needed có thể giải quyết bài toán (problem / 문제) tốt hơn 20 trang status.
@@ -338,15 +429,21 @@ Một scenario khác: operations liên tục từ chối nhận handover vì “
 
 Một scenario thứ ba: vendor liên tục trả lời “đang xem xét” nhưng không lần ghi nhận (commit / 커밋) resolution date. PM gửi thêm email mỗi ngày nhưng phụ thuộc (dependency / 의존성) vẫn trễ. bài toán (problem / 문제) không còn là message frequency; communication đường dẫn (path / 경로) thiếu phản hồi (response / 응답) expectation, escalation threshold và commercial leverage. Cần chuyển từ informal follow-up sang phụ thuộc (dependency / 의존성)/quản trị (governance / 거버넌스) cơ chế (mechanism / 메커니즘) phù hợp.
 
+> **Chuyển mạch:** Ở chặng này của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Ví dụ scenario** cho ta quy tắc; **Stakeholder anti-patterns** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kết nối với software requirements** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stakeholder anti-patterns
 
 Broadcast management là giả định gửi nhiều cập nhật (update / 업데이트) sẽ tạo alignment. Executive shielding là che bad news khỏi sponsor để “không làm họ lo”. Stakeholder appeasement là hứa phạm vi (scope / 범위)/date không realistic chỉ để tránh xung đột (conflict / 충돌). Engagement theater là workshop nhiều nhưng quyết định (decision / 결정) right không đổi. Translation bottleneck là để một người giữ toàn bộ ngữ nghĩa (semantic / 의미적) cầu nối (bridge / 브리지). Handover dump là chuyển hàng trăm tệp (file / 파일) nhưng không chuyển năng lực (capability / 역량).
 
 Các anti-pattern này đều có điểm chung: activity communication có vẻ cao nhưng thông tin (information / 정보)/quyết định (decision / 결정) chất lượng (quality / 품질) thấp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Kết nối với software requirements** tiếp nhận điểm tựa từ **Stakeholder anti-patterns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kết nối với software requirements
 
 Stakeholder need là đầu vào quan trọng của yêu cầu (requirement / 요구사항) nhưng không đồng nghĩa yêu cầu (requirement / 요구사항) cuối cùng. Trong software dự án (project / 프로젝트), xem thêm [Requirements Engineering](../computer_science/09_software_engineering/00_requirements_specification_and_engineering_process.md) để hiểu cách intent được biến thành acceptance criteria và traceable hành vi (behavior / 동작).
+
+> **Chuyển mạch:** Trong **03 — Stakeholder, communication và kiến thức (knowledge / 지식) transfer**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Kết nối với software requirements** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -354,4 +451,4 @@ Stakeholder need là đầu vào quan trọng của yêu cầu (requirement / �
 
 Tiếp theo: [Integration, scope, requirements và change](./04_integration_scope_requirements_and_change.md).
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 foundations value and project system](./00_foundations_value_and_project_system.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
