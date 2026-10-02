@@ -1,6 +1,6 @@
 # Natural ngôn ngữ (language / 언어) Processing kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Natural ngôn ngữ (language / 언어) Processing kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Natural ngôn ngữ (language / 언어) Processing kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của NLP, rồi nối tokenization, representation, language modeling và evaluation.
 
 Folder này xây NLP (Natural Language Processing / 자연어 처리 / xử lý ngôn ngữ tự nhiên) từ biểu diễn (representation / 표현) của văn bản (text / 텍스트) tới tìm kiếm (search / 검색)/evaluation. Nó không bắt đầu bằng LLM; mục tiêu là hiểu ngôn ngữ (language / 언어) dữ liệu (data / 데이터), tokenization, ngôn ngữ (language / 언어) modeling, embeddings và thông tin (information / 정보) retrieval trước khi sang `08_large_language_models/`.
 

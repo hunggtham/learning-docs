@@ -1,6 +1,6 @@
 # Agents and AI các hệ thống (systems / 시스템들) — Reading Map
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Agents and AI các hệ thống (systems / 시스템들) — Reading Map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cốt lõi (core / 핵심) distinctions** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Agents and AI các hệ thống (systems / 시스템들) — Reading Map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cốt lõi (core / 핵심) distinctions** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của agents and AI systems, rồi nối planning, tools, memory, reliability và governance.
 
 Folder này giải thích cách từ một Large ngôn ngữ (language / 언어) mô hình (model / 모델) chuyển thành một **hệ tác nhân (agent system / 에이전트 시스템)** có goal, trạng thái (state / 상태), tools, bộ nhớ (memory / 메모리), planning, orchestration, evaluation và độ tin cậy (reliability / 신뢰성) controls.
 

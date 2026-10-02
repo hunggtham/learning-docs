@@ -1,6 +1,6 @@
 # Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Perplexity không đủ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Năng lực (capability / 역량) benchmarks** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Evaluation của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Perplexity không đủ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Năng lực (capability / 역량) benchmarks** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối LLM evaluation với benchmark, task, metric và contamination, để điểm số phản ánh năng lực nào.
 
 LLM evaluation khó hơn traditional software testing vì đầu ra (output / 출력) không gian (space / 공간) rộng, nhiều answers có thể acceptable và hành vi (behavior / 동작) phụ thuộc prompt/ngữ cảnh (context / 맥락). Một evaluation tốt phải trả lời **mô hình (model / 모델)/hệ thống (system / 시스템) tốt cho tác vụ (task / 작업) nào, trên population nào, với chỉ số (metric / 지표) nào và dưới các ràng buộc (constraints / 제약조건들) nào**.
 

@@ -1,6 +1,6 @@
 # Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Reading đồ thị (graph / 그래프)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Reading đồ thị (graph / 그래프)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** để rút ra mô hình chung và giới hạn. Mạch này dùng README làm bản đồ owner của toàn thư viện AI, rồi nối math, ML, language, knowledge, agents và systems.
 
 > **Artificial Intelligence (AI / Trí tuệ nhân tạo / 인공지능)** không chỉ là ChatGPT, Large ngôn ngữ (language / 언어) mô hình (model / 모델) hay Machine học tập (learning / 학습). Đây là lĩnh vực nghiên cứu cách xây dựng những hệ thống có thể **biểu diễn thông tin, suy luận, học từ dữ liệu, dự đoán, lập kế hoạch, ra quyết định và hành động** trong một môi trường để đạt mục tiêu.
 

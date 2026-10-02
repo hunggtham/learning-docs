@@ -1,6 +1,6 @@
 # Mathematical Foundations for Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mathematical Foundations for Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mathematical Foundations for Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của mathematical foundations AI, rồi nối linear algebra, probability, optimization và information.
 
 Folder này không phải một “khóa toán trước khi học AI”. Nó là tập các chapter giải thích những mathematical tools xuất hiện lặp lại trong AI và vì sao chúng cần tồn tại.
 

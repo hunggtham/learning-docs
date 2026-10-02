@@ -1,6 +1,6 @@
 # Kiến thức (knowledge / 지식) Graphs trong Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiến thức (knowledge / 지식) Graphs trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đồ thị (graph / 그래프) mô hình dữ liệu (data model / 데이터 모델)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Thực thể (entity / 엔터티) định danh (identity / 식별자)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiến thức (knowledge / 지식) Graphs trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đồ thị (graph / 그래프) mô hình dữ liệu (data model / 데이터 모델)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Thực thể (entity / 엔터티) định danh (identity / 식별자)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối knowledge graphs với entity, relation, schema và reasoning, để tri thức có cấu trúc và đường suy luận rõ.
 
 **kiến thức (knowledge / 지식) đồ thị (graph / 그래프)** biểu diễn entities và relationships bằng đồ thị (graph / 그래프) có typed ngữ nghĩa (semantics / 의미론). Dạng đơn giản nhất là triple:
 

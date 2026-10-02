@@ -1,6 +1,6 @@
 # Limitations của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Limitations của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức (knowledge / 지식) không có provenance bản địa (native / 네이티브)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến thức (knowledge / 지식) có cutoff và staleness** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Limitations của Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức (knowledge / 지식) không có provenance bản địa (native / 네이티브)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến thức (knowledge / 지식) có cutoff và staleness** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối LLM limitations với uncertainty, hallucination, context và evaluation, để năng lực được đọc cùng biên thất bại.
 
 LLM rất mạnh vì học broad statistical regularities từ lượng dữ liệu (data / 데이터) và compute lớn, nhưng kiến trúc (architecture / 아키텍처)/mục tiêu (objective / 목표) của chúng tạo ra limitations mang tính cấu trúc. Hiểu limitations giúp chọn đúng kiến trúc (architecture / 아키텍처) hệ thống (system / 시스템) thay vì cố “prompt harder” mọi vấn đề.
 

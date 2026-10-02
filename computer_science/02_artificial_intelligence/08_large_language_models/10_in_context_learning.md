@@ -1,6 +1,6 @@
 # In-Context học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **In-Context học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **“học tập (learning / 학습)” nhưng không cập nhật (update / 업데이트) parameters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Zero-shot, one-shot, few-shot** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **In-Context học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **“học tập (learning / 학습)” nhưng không cập nhật (update / 업데이트) parameters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Zero-shot, one-shot, few-shot** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối in-context learning với examples, context window, adaptation và evaluation, để prompt được kiểm tra trên nhiệm vụ thật.
 
 **In-Context học tập (learning / 학습)** là hiện tượng mô hình (model / 모델) thay đổi hành vi (behavior / 동작) dựa trên examples hoặc instructions nằm trong ngữ cảnh (context / 맥락) **mà không cần cập nhật (update / 업데이트) weights**.
 

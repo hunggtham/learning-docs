@@ -1,6 +1,6 @@
 # Reliable tác nhân (agent / 에이전트) thiết kế (design / 설계)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reliable tác nhân (agent / 에이전트) thiết kế (design / 설계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Principle 1: Minimize autonomy where it adds no giá trị (value / 값)** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Principle 2: Narrow the hành động (action / 동작) không gian (space / 공간)** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reliable tác nhân (agent / 에이전트) thiết kế (design / 설계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Principle 1: Minimize autonomy where it adds no giá trị (value / 값)** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Principle 2: Narrow the hành động (action / 동작) không gian (space / 공간)** để chuyển câu hỏi ấy thành điều kiện phải giữ. Mạch này nối reliable agent design với planning, tool use, verification và failure recovery, để agent có hành vi kiểm soát được.
 
 Reliable tác nhân (agent / 에이전트) không đến từ một prompt “hãy cẩn thận”. độ tin cậy (reliability / 신뢰성) xuất hiện khi kiến trúc (architecture / 아키텍처) giới hạn bất định (uncertainty / 불확실성), kiểm soát side effects, verify progress và phục hồi được sau thất bại (failure / 실패).
 

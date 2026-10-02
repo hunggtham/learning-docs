@@ -1,6 +1,6 @@
 # Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) Map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) Map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của large language models, rồi nối foundations, training, prompting, limitations và evaluation.
 
 Folder này xây Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) từ phụ thuộc (dependency / 의존성) đã có ở NLP, Deep học tập (learning / 학습) và Transformer. Mục tiêu không phải học cách gọi API, mà hiểu **LLM được tạo ra như thế nào, hành vi (behavior / 동작) sau post-training đến từ đâu, vì sao prompting/RAG/tác nhân (agent / 에이전트) hoạt động và giới hạn nào vẫn tồn tại**.
 

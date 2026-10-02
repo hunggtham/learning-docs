@@ -1,6 +1,6 @@
 # Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của neural networks, rồi nối representation, optimization, generalization và deployment.
 
 Folder này giải thích Neural Networks (신경망 / mạng nơ-ron) như một **parameterized differentiable computation hệ thống (system / 시스템)**, không như một collection khung phần mềm (framework / 프레임워크) APIs. Nó nối trực tiếp Machine học tập (learning / 학습), tuyến tính (linear / 선형) Algebra, Calculus và tối ưu hóa (optimization / 최적화) với Deep học tập (learning / 학습) architectures phía sau.
 

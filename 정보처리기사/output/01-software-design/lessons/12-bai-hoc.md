@@ -1,18 +1,26 @@
 # 1. 현행 시스템 분석 (Current System Analysis)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **1. 현행 시스템 분석 (Current System Analysis)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối information systems với data, process, boundary và users, để hệ thống được mô hình hóa trước khi triển khai.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **1. 현행 시스템 분석 (Current System Analysis)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **1. 현행 시스템 분석 (Current System Analysis)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **3. 현행 시스템 파악 (Understanding Current System)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **1. 현행 시스템 분석 (Current System Analysis)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 현행, 시스템, 분석
 
+> **Chuyển mạch:** Ở chặng này của **1. 현행 시스템 분석 (Current System Analysis)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**에서 만든 기준을 이어받아 **1. 현행 시스템 분석 (Current System Analysis)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1. 현행 시스템 분석 (Current System Analysis)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 현행 시스템 분석 (Current System Analysis)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **1. 현행 시스템 분석 (Current Sy
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **1. 현행 시스템 분석 (Current System Analysis)** và nối nó với **3. 현행 시스템 파악 (Understanding Current System)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **1. 현행 시스템 분석 (Current System Analysis)**, **1. 현행 시스템 분석 (Current System Analysis)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 1. 현행 시스템 분석 (Current System Analysis)
 
@@ -40,3 +48,5 @@ Phần “1. 현행 시스템 분석 (Current System Analysis)” được nối
   - 신뢰도 (Reliability), 성능 (Performance), 기술 지원 (Tech Support), 주변 기기 (Peripherals), 구축 비용 (Cost), 상호 호환성 (Compatibility).
 
 Điểm chốt của **1. 현행 시스템 분석 (Current System Analysis)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **3. 현행 시스템 파악 (Understanding Current System)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **1. 현행 시스템 분석 (Current System Analysis)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
