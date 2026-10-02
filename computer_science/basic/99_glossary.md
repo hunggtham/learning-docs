@@ -1,6 +1,6 @@
 # Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Glossary — Khoa học máy tính (computer science / 컴퓨터 과학) Việt / English / 한국어** để chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Computer Science glossary Việt/English/한국어**. Route tra cứu đi từ thuật ngữ → domain/chapter owner → connection layer → ví dụ và giới hạn, để glossary hỗ trợ đọc chứ không thay thế nội dung gốc.
 
 Glossary này giúp nhận diện thuật ngữ khi đọc textbook, documentation, 기사 시험 hoặc trao đổi trong công ty Hàn Quốc. Nó không thay chapter giải thích concept; cột cuối dẫn tới ngữ cảnh (context / 맥락) đầy đủ.
 

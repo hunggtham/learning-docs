@@ -1,6 +1,6 @@
 # Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khoa học máy tính nền tảng — Thư viện kiến thức toàn diện**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc thư viện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quan hệ phụ thuộc và lộ trình đọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Computer Science basic foundations**. Route học đi từ computation/information → algorithms/data structures → architecture/OS/languages → data/networks/security → software/AI/HCI/society, để mỗi domain quay về prerequisite và connection layer.
 
 Đây là phần **kiến thức nền tảng (foundation / 기초)** của Thư viện Khoa học máy tính (Computer Science Knowledge Library). Mục tiêu là xây dựng mô hình tư duy (mental model / 사고 모델) xuyên suốt từ thông tin và tính toán đến phần cứng, hệ điều hành, ngôn ngữ lập trình, cơ sở dữ liệu, mạng, hệ thống phân tán, bảo mật, kỹ nghệ phần mềm, trí tuệ nhân tạo, tương tác người–máy, đồ họa và tác động xã hội của công nghệ tính toán.
 

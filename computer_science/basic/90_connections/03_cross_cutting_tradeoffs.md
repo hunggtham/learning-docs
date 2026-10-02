@@ -1,6 +1,6 @@
 # Liên kết kiến thức (knowledge connection / 지식 연결) — sự đánh đổi (trade-off / 트레이드오프) xuyên Khoa học máy tính (computer science / 컴퓨터 과학)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết kiến thức (knowledge connection / 지식 연결) — sự đánh đổi (trade-off / 트레이드오프) xuyên Khoa học máy tính (computer science / 컴퓨터 과학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thời gian (time / 시간) ↔ không gian (space / 공간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ trễ (latency / 지연 시간) ↔ thông lượng (throughput / 처리량)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cross-cutting trade-offs trong Computer Science**. Route đi từ time/space → latency/throughput → consistency/availability → performance/correctness → safety/operability, để mỗi lựa chọn nêu rõ invariant và chi phí phải trả.
 
 Nhiều câu hỏi kỹ thuật không có answer “cái nào tốt nhất” vì resources và guarantees cạnh tranh. Một cách trưởng thành để lập luận (reasoning / 추론) là xác định mục tiêu (objective / 목표), ràng buộc (constraint / 제약조건) và sự đánh đổi (trade-off / 트레이드오프) dimension thay vì học quy tắc (rule / 규칙) tuyệt đối.
 

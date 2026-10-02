@@ -1,6 +1,6 @@
 # Liên kết kiến thức (knowledge connection / 지식 연결) — Từ mã nguồn (source code / 소스 코드) đến CPU
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ mã nguồn (source code / 소스 코드) đến CPU**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tầng mã nguồn (source-level / 소스 수준) ngữ nghĩa (semantics / 의미론)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Parsing và bytecode** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Connection: source code → CPU**. Route đi từ source semantics → parsing/IR/bytecode → compiler/runtime → machine code/ABI → CPU execution/cache, để cùng một hành vi được truy qua từng abstraction.
 
 Một trong những mô hình tư duy (mental models / 사고 모델들) quan trọng nhất của Khoa học máy tính (computer science / 컴퓨터 과학) là nhìn một dòng mã nguồn (source code / 소스 코드) xuyên qua toàn bộ ngăn xếp (stack / 스택). Khi nhà phát triển (developer / 개발자) viết:
 

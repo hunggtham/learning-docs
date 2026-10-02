@@ -1,6 +1,6 @@
 # Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết kiến thức (knowledge connection / 지식 연결) — Từ trình duyệt (browser / 브라우저) yêu cầu (request / 요청) đến cơ sở dữ liệu (database / 데이터베이스) và quay về**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. trình duyệt (browser / 브라우저) biến intent thành HTTP yêu cầu (request / 요청)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Name resolution** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Connection: browser request → database → response**. Route đi từ user intent/HTTP → DNS/TLS/transport → gateway/service → query/transaction → storage/response, để latency, identity và failure được truy theo end-to-end path.
 
 Một click “Đăng nhập” hoặc “Xem đơn hàng” có thể chạm gần như toàn bộ nền tảng Khoa học máy tính (computer science / 컴퓨터 과학). Chapter này nối trình duyệt (browser / 브라우저), DNS, vận chuyển (transport / 전송), TLS, máy chủ (server / 서버) scheduling, thời gian chạy (runtime / 런타임), cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) và phản hồi (response / 응답) thành một chuỗi nhân quả (causal chain / 인과 사슬).
 

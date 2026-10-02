@@ -1,6 +1,6 @@
 # Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Computation & thông tin (information / 정보) — 5 chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Algorithms & dữ liệu (data / 데이터) Structures — 12 chapters** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Coverage audit cho Computer Science basic foundations**. Route kiểm tra đi từ chapter inventory → README ownership/links → connection coverage → audit scripts và warnings, để số liệu coverage phản ánh đúng cấu trúc hiện hành.
 
 Tài liệu này kiểm tra coverage và conceptual boundaries để `computer_science/basic/` không trở thành collection chapter ngẫu nhiên. Sau vòng comprehensive expansion, foundation thư viện (library / 라이브러리) có **100 topic chapters** trong **14 nhóm conceptual**, cộng `README.md`, glossary Việt–Anh–Hàn và kiểm tra (audit / 감사) này.
 
