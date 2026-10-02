@@ -1,6 +1,6 @@
 # Chunking và Document Processing cho RAG
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chunking và Document Processing cho RAG**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao phải chunk?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Fixed-Size Chunking** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chunking và document processing cho RAG**. Route đi từ parsing/layout → semantic boundaries → fixed or recursive chunks → metadata/overlap → indexing and retrieval effects, để chunk size được chọn theo bằng chứng cần truy hồi.
 
 RAG không tìm kiếm (search / 검색) “document” theo nghĩa con người đọc tệp (file / 파일). Nó tìm kiếm (search / 검색) những **retrieval units** đã được tạo trong ingestion chuỗi xử lý (pipeline / 파이프라인). Cách parse và chunk tài liệu quyết định thông tin (information / 정보) nào có thể được retrieve cùng nhau.
 

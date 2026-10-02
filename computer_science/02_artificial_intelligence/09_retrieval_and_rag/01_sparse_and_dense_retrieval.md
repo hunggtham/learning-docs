@@ -1,6 +1,6 @@
 # Sparse Retrieval và Dense Retrieval
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sparse Retrieval và Dense Retrieval**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sparse biểu diễn (representation / 표현)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dense biểu diễn (representation / 표현)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sparse retrieval và dense retrieval**. Route đi từ lexical terms → sparse vectors/BM25 → dense embeddings → hybrid retrieval → recall/latency trade-offs, để chọn representation theo query và corpus thay vì theo nhãn mô hình.
 
 Hiện đại (modern / 현대적) retrieval các hệ thống (systems / 시스템들) thường dùng hai families chính: **sparse retrieval** dựa trên term overlap và **dense retrieval** dựa trên learned véc-tơ (vector / 벡터) representations. Hai approaches không phải generation mới thay generation cũ; chúng encode relevance theo hai các giả định (assumptions / 가정들) khác nhau.
 

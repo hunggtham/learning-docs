@@ -1,6 +1,6 @@
 # Véc-tơ (vector / 벡터) Databases trong RAG
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Véc-tơ (vector / 벡터) Databases trong RAG**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bản ghi (record / 레코드) mô hình (model / 모델)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nguồn chuẩn (source of truth / 정본)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vector databases trong RAG**. Route đi từ document/chunk records → embeddings and metadata → ANN index → filtering/updates → durability, isolation, and observability, để database layer nối được với retrieval contract.
 
 **véc-tơ (vector / 벡터) cơ sở dữ liệu (database / 데이터베이스)** là dữ liệu (data / 데이터) hệ thống (system / 시스템) được thiết kế để lưu, chỉ mục (index / 인덱스) và truy vấn vectors cùng siêu dữ liệu (metadata / 메타데이터) ở quy mô (scale / 규모) môi trường vận hành (production / 운영 환경). Nó không chỉ là một ANN thuật toán (algorithm / 알고리즘). môi trường vận hành (production / 운영 환경) véc-tơ (vector / 벡터) DB thường phải giải đồng thời persistence, filtering, updates, multi-tenancy, replication, kiểm soát truy cập (access control / 접근 제어) và khả năng quan sát (observability / 관측 가능성).
 

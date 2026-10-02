@@ -1,6 +1,6 @@
 # Thông tin (information / 정보) Retrieval Foundations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보) Retrieval Foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Retrieval không phải cơ sở dữ liệu (database / 데이터베이스) Lookup** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Corpus, truy vấn (query / 쿼리), Relevance** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Information retrieval foundations**. Route đi từ corpus/document collection → query representation → inverted or vector index → relevance scoring → ranking metrics, để retrieval được phân biệt với lookup bằng mục tiêu tìm đúng tài liệu.
 
 **thông tin (information / 정보) Retrieval (IR / 정보 검색 / truy xuất thông tin)** nghiên cứu cách tìm những document hoặc item liên quan từ một collection lớn dựa trên một truy vấn (query / 쿼리). RAG hiện đại dựa trực tiếp trên IR, vì trước khi LLM có thể trả lời dựa trên bên ngoài (external / 외부) kiến thức (knowledge / 지식), hệ thống (system / 시스템) phải tìm đúng bằng chứng (evidence / 증거).
 

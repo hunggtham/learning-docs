@@ -1,6 +1,6 @@
 # Embeddings for Retrieval
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Embeddings for Retrieval**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **From văn bản (text / 텍스트) to véc-tơ (vector / 벡터)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **What Does the véc-tơ (vector / 벡터) Represent?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Embeddings for retrieval**. Route đi từ text/query encoding → embedding space → contrastive or dual-encoder training → hard negatives → recall and domain transfer, để vector chỉ có ý nghĩa khi giữ được quan hệ truy hồi.
 
 **Embedding retrieval** biến truy vấn (query / 쿼리) và document thành vectors sao cho hình học (geometry / 기하학) của véc-tơ (vector / 벡터) không gian (space / 공간) phản ánh relevance hữu ích. Điều quan trọng là embedding không có meaning “tự nhiên”; meaning của distance đến từ huấn luyện (training / 학습) mục tiêu (objective / 목표) và dữ liệu (data / 데이터).
 

@@ -1,6 +1,6 @@
 # Retrieval, Ranking và Reranking
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Retrieval, Ranking và Reranking**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Candidate Generation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Reranking** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Retrieval, ranking và reranking**. Route đi từ candidate generation → first-stage scoring → cross-encoder or feature reranking → top-k context → recall/precision/latency, để mỗi tầng tối ưu một phần của relevance budget.
 
 Một retrieval hệ thống (system / 시스템) tốt thường không cố dùng một mô hình (model / 모델) duy nhất để vừa tìm kiếm (search / 검색) toàn corpus vừa đánh giá relevance rất tinh. Thay vào đó, kiến trúc (architecture / 아키텍처) phổ biến là **multi-stage ranking**: first-stage retriever tạo candidate set nhanh, sau đó reranker đắt hơn refine thứ tự (order / 순서).
 

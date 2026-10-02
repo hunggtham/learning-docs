@@ -1,6 +1,6 @@
 # Retrieval-Augmented Generation (RAG) Fundamentals
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Retrieval-Augmented Generation (RAG) Fundamentals**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cốt lõi (core / 핵심) kiến trúc (architecture / 아키텍처)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao RAG tồn tại?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Retrieval-augmented generation (RAG) fundamentals**. Route đi từ query → retrieval → context assembly → generation → citation/grounding limits, để RAG được đọc như một pipeline có điểm lỗi riêng ở từng bước.
 
 **Retrieval-Augmented Generation (RAG / 검색 증강 생성)** là kiến trúc (architecture / 아키텍처) trong đó mô hình (model / 모델) không chỉ dựa vào parameters mà còn nhận **bên ngoài (external / 외부) bằng chứng (evidence / 증거) được retrieve tại suy luận (inference / 추론) thời gian (time / 시간)**. Mục tiêu cốt lõi là làm cho generation được grounded vào kiến thức (knowledge / 지식) có thể cập nhật, kiểm soát và truy vết.
 

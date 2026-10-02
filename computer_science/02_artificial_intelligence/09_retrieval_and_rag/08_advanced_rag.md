@@ -1,6 +1,6 @@
 # Advanced RAG Patterns
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced RAG Patterns**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Truy vấn (query / 쿼리) Rewriting** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Truy vấn (query / 쿼리) Expansion** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced RAG patterns**. Route đi từ query rewriting/expansion → multi-query or decomposition → routing/iterative retrieval → context compression → failure recovery, để pattern nâng cao được gắn với lỗi retrieval cụ thể.
 
 Basic RAG uses one truy vấn (query / 쿼리), one retrieval pass and one generation step. Real workloads often need more cấu trúc (structure / 구조): ambiguous questions, multi-hop bằng chứng (evidence / 증거), heterogeneous dữ liệu (data / 데이터), changing documents and high độ tin cậy (reliability / 신뢰성). **Advanced RAG** is not one thuật toán (algorithm / 알고리즘); it is a collection of architectural patterns for improving retrieval, bằng chứng (evidence / 증거) selection and generation điều khiển (control / 제어).
 

@@ -1,6 +1,6 @@
 # Véc-tơ (vector / 벡터) tìm kiếm (search / 검색): từ Nearest Neighbor tới ANN chỉ mục (index / 인덱스)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Véc-tơ (vector / 벡터) tìm kiếm (search / 검색): từ Nearest Neighbor tới ANN chỉ mục (index / 인덱스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chính xác (exact / 정확한) Nearest Neighbor** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Why Approximation Works** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vector search: từ nearest neighbor tới ANN index**. Route đi từ exact nearest neighbor → distance metrics → approximate indexes (HNSW/IVF/PQ) → filtering/updates → recall-latency-memory trade-offs, để approximation được đánh giá bằng workload thật.
 
 Khi corpus có hàng triệu embedding vectors, naive tìm kiếm (search / 검색) so sánh truy vấn (query / 쿼리) với mọi véc-tơ (vector / 벡터) có chi phí (cost / 비용):
 

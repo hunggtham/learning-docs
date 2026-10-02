@@ -1,6 +1,6 @@
 # RAG Evaluation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **RAG Evaluation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Evaluation Layers** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản dựng (build / 빌드) a truy vấn (query / 쿼리)–bằng chứng (evidence / 증거) kiểm thử (test / 테스트) Set** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **RAG evaluation**. Route đi từ retrieval recall → context relevance/faithfulness → answer correctness → end-to-end query–evidence sets → robustness and cost, để đánh giá tách được lỗi lấy bằng chứng khỏi lỗi sinh câu trả lời.
 
 RAG là multi-stage hệ thống (system / 시스템) nên một final-answer score không đủ để biết thất bại (failure / 실패) nằm ở đâu. Evaluation tốt phải tách **ingestion → retrieval → reranking → ngữ cảnh (context / 맥락) selection → generation → citation**.
 
