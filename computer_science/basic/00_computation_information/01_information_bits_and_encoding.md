@@ -1,6 +1,6 @@
 # Thông tin, bit, mã hóa và biểu diễn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thông tin, bit, mã hóa và biểu diễn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao bit trở thành đơn vị nền tảng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mã hóa là quy ước nối mẫu bit với ý nghĩa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Information, bits, encoding và representation**. Route đi từ bit/state → encoding conventions → text/numeric/media representation → error detection/compression, để dữ liệu được nối với ý nghĩa và chi phí lưu truyền.
 
 Máy tính không nhận trực tiếp “chữ A”, “màu đỏ”, “số tiền 10000 won” hay “ảnh một con mèo”. Nó nhận các **trạng thái vật lý (physical state)** mà phần cứng có thể phân biệt, sau đó phần mềm áp dụng quy ước để các trạng thái đó đại diện cho thông tin (information / 정보). Vì vậy, trước khi học cấu trúc dữ liệu hay gói tin mạng, cần hiểu một nguyên tắc nền tảng: **mọi dữ liệu số đều là một cách biểu diễn (representation / 표현) theo một quy tắc mã hóa (encoding)**.
 

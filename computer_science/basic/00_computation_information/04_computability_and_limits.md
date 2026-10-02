@@ -1,6 +1,6 @@
 # Computability và giới hạn của tính toán
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computability và giới hạn của tính toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một computation mô hình (model / 모델) cần những gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Decidable và undecidable** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computability và limits of computation**. Route đi từ computation model → decidability/undecidability → reductions → complexity/resource bounds → practical approximation, để “không thể tính” được phân biệt với “tính được nhưng quá đắt”.
 
 Khi học programming, ta dễ hình thành cảm giác rằng mọi bài toán chỉ cần “đủ mã (code / 코드) và đủ CPU”. lý thuyết (theory / 이론) of Computation (이론 전산학 / lý thuyết tính toán) cho thấy có ít nhất ba tầng khác nhau: có bài toán **không thể được giải bằng thuật toán (algorithm / 알고리즘) nói chung**; có bài toán computable nhưng quá đắt về tài nguyên (resource / 자원); và có bài toán tractable nếu chọn đúng thuật toán (algorithm / 알고리즘)/mô hình (model / 모델).
 

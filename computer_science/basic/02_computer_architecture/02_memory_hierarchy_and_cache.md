@@ -1,6 +1,6 @@
 # Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân cấp bộ nhớ, bộ nhớ đệm (cache / 캐시) và tính cục bộ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Không có loại bộ nhớ hoàn hảo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dòng bộ nhớ đệm (cache / 캐시)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Memory hierarchy, cache và locality**. Route đi từ latency/capacity trade-off → cache line/locality → mapping/replacement/coherence → virtual memory và performance, để hierarchy được đọc bằng access pattern chứ không chỉ tên tầng.
 
 CPU có thể thực hiện phép tính trong vài chu kỳ, trong khi truy cập DRAM có thể tốn hàng chục tới hàng trăm chu kỳ. Thiết bị lưu trữ và mạng còn chậm hơn nhiều. Nếu mọi thao tác đều phải chờ tầng chậm nhất, CPU sẽ dành phần lớn thời gian để chờ. **Phân cấp bộ nhớ (memory hierarchy)** giải quyết vấn đề này bằng nhiều tầng có dung lượng, độ trễ và chi phí khác nhau.
 

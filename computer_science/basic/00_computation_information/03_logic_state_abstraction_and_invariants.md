@@ -1,6 +1,6 @@
 # Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Boolean lô-gic (logic / 논리) là ngôn ngữ của điều kiện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Logic, state, abstraction và invariants**. Route đi từ Boolean conditions → state transitions → abstraction boundaries → invariants/contracts → refinement, để hệ thống được chứng minh bằng thuộc tính cần giữ.
 
 Rất nhiều vấn đề trong Khoa học máy tính (computer science / 컴퓨터 과학) trở nên dễ lập luận (reasoning / 추론) hơn khi tách bốn ý tưởng: **lô-gic (logic / 논리)** mô tả điều kiện nào đúng; **trạng thái (state / 상태)** mô tả hệ hiện đang ở đâu; **chuyển tiếp (transition / 전이)** mô tả phép biến đổi trạng thái (state / 상태); **bất biến (invariant / 불변식)** mô tả điều phải luôn đúng qua các transitions. lớp trừu tượng (abstraction / 추상화) đặt ranh giới (boundary / 경계) để ta không phải nhìn mọi chi tiết cùng lúc.
 

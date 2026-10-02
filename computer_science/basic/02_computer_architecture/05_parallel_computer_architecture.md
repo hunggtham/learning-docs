@@ -1,6 +1,6 @@
 # Pipelining, multicore, SIMD và GPU
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Pipelining, multicore, SIMD và GPU**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pipelining** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Superscalar và out-of-order** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Pipelining, multicore, SIMD và GPU**. Route đi từ pipeline hazards → superscalar/out-of-order → multicore/cache coherence → SIMD/GPU throughput và synchronization, để parallelism được đánh giá cùng overhead và memory behavior.
 
 Hiệu năng (performance / 성능) không thể tăng mãi chỉ bằng clock frequency vì power/thermal limits và bộ nhớ (memory / 메모리) độ trễ (latency / 지연 시간). hiện đại (modern / 현대적) computers khai thác parallelism ở nhiều levels: overlap stages trong một cốt lõi (core / 핵심), execute multiple instructions, nhiều cores, véc-tơ (vector / 벡터) lanes và thousands of GPU threads.
 

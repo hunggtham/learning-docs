@@ -1,6 +1,6 @@
 # Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Computation là sự biến đổi trạng thái theo quy tắc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thông tin (information / 정보) không đồng nghĩa với ý nghĩa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computer Science nghiên cứu gì**. Route đi từ computation/state transition → information/representation → algorithms/limits → systems/people, để phạm vi ngành được nối với câu hỏi có thể mô hình hóa và kiểm chứng.
 
 Một người mới thường gặp khoa học máy tính (computer science / 컴퓨터 과학) qua programming. Điều này dễ tạo ra một hiểu nhầm: tưởng rằng lĩnh vực này chủ yếu nghiên cứu cú pháp ngôn ngữ và khung phần mềm (framework / 프레임워크). Programming rất quan trọng, nhưng nó giống việc dùng ký hiệu đại số trong Toán: là phương tiện biểu đạt một phần của tư duy chứ không phải toàn bộ đối tượng nghiên cứu.
 
