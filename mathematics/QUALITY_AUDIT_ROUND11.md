@@ -1,7 +1,6 @@
 # Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters
 
-> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiêu chí kiểm tra (audit / 감사)** sang **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tiêu chí kiểm tra (audit / 감사)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối quality audit round với tiêu chí phát hiện, bằng chứng và remediation, để các vòng đánh giá sau đo được tiến bộ thật.
 
 Round 11 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리) vẫn giữ nguyên **87 topic**; không thêm chapter mới chỉ để tăng coverage.
 
@@ -21,8 +20,7 @@ chapter bridge chưa thực sự nối được các domain
 
 Ngược lại, chapter đủ coherent, có các giả định (assumptions / 가정들), mô hình tư duy (mental model / 사고 모델) và downstream connections thì giữ nguyên dù tệp (file / 파일) ngắn hơn chapter khác.
 
-
-> **Chuyển mạch:** Từ **Tiêu chí kiểm tra (audit / 감사)**, ta sang **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters**, **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming** tiếp nhận điểm tựa từ **Tiêu chí kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 2 — 09connections cầu nối (bridge / 브리지) chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming
 
@@ -106,8 +104,7 @@ Các phần tăng sâu:
 - numerical scaling/tolerance caveats;
 - deterministic LP vs bất định (uncertainty / 불확실성)/robust tối ưu hóa (optimization / 최적화).
 
-
-> **Chuyển mạch:** Từ **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming**, ta sang **Batch 2 — 09connections cầu nối (bridge / 브리지) chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters**, **Batch 2 — 09connections cầu nối (bridge / 브리지) chapters** tiếp nhận điểm tựa từ **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Audited but intentionally not rewritten** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 2 — `09_connections` cầu nối (bridge / 브리지) chapters
 
@@ -274,8 +271,7 @@ Các phần tăng sâu:
 - Fourier features and AI;
 - Fourier vs Laplace vs Z-transform mental map.
 
-
-> **Chuyển mạch:** Từ **Batch 2 — 09connections cầu nối (bridge / 브리지) chapters**, ta sang **Audited but intentionally not rewritten** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters**, **Audited but intentionally not rewritten** tiếp nhận điểm tựa từ **Batch 2 — 09connections cầu nối (bridge / 브리지) chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) balance sau Round 11** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Audited but intentionally not rewritten
 
@@ -333,8 +329,7 @@ Giữ nguyên vì đã đủ sâu hơn nhóm liên kết (connection / 연결) c
 
 Giữ nguyên vì chapter đã có transform definitions, derivative/recurrence simplification, transfer functions, poles/zeros, stability, convolution và continuous/discrete các hệ thống (systems / 시스템들) perspective.
 
-
-> **Chuyển mạch:** Từ **Audited but intentionally not rewritten**, ta sang **độ sâu (depth / 깊이) balance sau Round 11** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters**, **Độ sâu (depth / 깊이) balance sau Round 11** tiếp nhận điểm tựa từ **Audited but intentionally not rewritten** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Priority hợp lý cho Round 12** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) balance sau Round 11
 
@@ -350,8 +345,7 @@ AI model math → numerical/statistical production behavior
 trigonometry → Fourier → transforms / PDE / signals
 ```
 
-
-> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) balance sau Round 11**, ta sang **Priority hợp lý cho Round 12** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters**, **Priority hợp lý cho Round 12** tiếp nhận điểm tựa từ **Độ sâu (depth / 깊이) balance sau Round 11** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Priority hợp lý cho Round 12
 
@@ -372,8 +366,7 @@ Không nên tiếp tục theo một fixed danh sách (list / 목록) chỉ dựa
 
 Nếu vẫn cần rewrite content, chỉ chọn chapter bị phát hiện qua consistency kiểm tra (audit / 감사), thay vì tiếp tục “tệp (file / 파일) nhỏ → viết dài”.
 
-
-> **Chuyển mạch:** Từ **Priority hợp lý cho Round 12**, ta sang **Kết luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters**, **Kết luận** gom các mảnh từ **Priority hợp lý cho Round 12** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết luận
 
@@ -383,4 +376,4 @@ Nguyên tắc được siết chặt hơn:
 
 > Độ hoàn thiện không được đo bằng số dòng. Một thư viện (library / 라이브러리) mature cần chuyển từ mở rộng content sang consistency, phụ thuộc (dependency / 의존성), notation, cross-link và editorial coherence.
 
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # WebSquare Glossary & Coverage kiểm tra (audit / 감사)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Glossary cốt lõi** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **2. Identifier/API cần nhận diện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **WebSquare Glossary & Coverage kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Glossary cốt lõi** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **2. Identifier/API cần nhận diện** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối glossary với coverage của WebSquare, để mỗi thuật ngữ trỏ về chapter sở hữu nó và không tạo thêm một nhánh định nghĩa rời.
 
 Tệp (file / 파일) này có hai vai trò. Phần đầu là glossary để nhận diện thuật ngữ Việt–Anh–Hàn và tên API thường xuất hiện trong codebase. Phần sau là coverage kiểm tra (audit / 감사) để kiểm tra bạn đã hiểu thư viện (library / 라이브러리) theo mô hình tư duy (mental model / 사고 모델) hay chỉ mới nhớ cú pháp (syntax / 문법).
 

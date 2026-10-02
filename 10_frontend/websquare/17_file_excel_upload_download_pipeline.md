@@ -1,6 +1,6 @@
 # 17 — tệp (file / 파일), Excel, Upload & Download chuỗi xử lý (pipeline / 파이프라인)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **17 — tệp (file / 파일), Excel, Upload & Download chuỗi xử lý (pipeline / 파이프라인)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao tệp (file / 파일) transfer là một ranh giới (boundary / 경계) riêng?** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **2. Ba loại dữ liệu cần phân biệt** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **17 — tệp (file / 파일), Excel, Upload & Download chuỗi xử lý (pipeline / 파이프라인)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao tệp (file / 파일) transfer là một ranh giới (boundary / 경계) riêng?** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **2. Ba loại dữ liệu cần phân biệt** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối file, Excel và upload/download pipeline, để theo dõi dữ liệu qua validation, serialization, transport và lưu trữ.
 
 ## 1. Vì sao tệp (file / 파일) transfer là một ranh giới (boundary / 경계) riêng?
 

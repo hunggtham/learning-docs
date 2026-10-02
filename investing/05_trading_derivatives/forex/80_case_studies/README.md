@@ -1,5 +1,7 @@
 # Forex Historical Trường hợp (case / 사례) Studies
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Forex Historical Trường hợp (case / 사례) Studies**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cách đọc** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README của case studies làm bản đồ owner, rồi nối từng khủng hoảng FX với cơ chế funding, policy response và bài học quản trị rủi ro.
+
 Các trường hợp (case / 사례) study này không dùng để học thuộc diễn biến lịch sử. Mục tiêu là luyện cách phân tích một cú sốc FX theo chuỗi:
 
 ```text
@@ -28,6 +30,8 @@ Mỗi trường hợp (case / 사례) phải trả lời bốn câu hỏi:
 3. [03_SNB_CHF_FLOOR_REMOVAL_2015.md](./03_SNB_CHF_FLOOR_REMOVAL_2015.md) — central-bank floor, balance-sheet commitment, gap rủi ro (risk / 위험) và broker/counterparty thất bại (failure / 실패).
 4. [04_GLOBAL_USD_FUNDING_STRESS_2020.md](./04_GLOBAL_USD_FUNDING_STRESS_2020.md) — offshore dollar demand, cross-currency funding stress, swap lines và toàn cục (global / 전역) dollar plumbing.
 
+> **Chuyển mạch:** Trong **Forex Historical Trường hợp (case / 사례) Studies**, **Cách đọc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách đọc
 
 Không biến trường hợp (case / 사례) thành câu chuyện kiểu “ai đúng/ai sai”. Hãy tách:
@@ -48,12 +52,14 @@ Exit from the regime
 
 Sau mỗi trường hợp (case / 사례), viết một `mechanism map` và một `risk checklist` có thể áp dụng vào research hiện tại mà không giả định lịch sử sẽ lặp lại nguyên dạng.
 
-## Liên kết
-Phần “Liên kết” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Forex Historical Trường hợp (case / 사례) Studies**, sau nội dung của **Cách đọc**, **Liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Liên kết
 
 - [04 — Macro drivers, rates, carry and sessions](../04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 - [05 — Execution, brokers, costs and risk](../05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
 - [10 — Backtesting and point-in-time FX data](../10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
 - [11 — Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [13 — Advanced FX microstructure and order flow](../13_ADVANCED_FX_MICROSTRUCTURE_AND_ORDER_FLOW.md)
+
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

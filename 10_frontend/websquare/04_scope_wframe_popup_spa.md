@@ -1,6 +1,6 @@
 # 04 — phạm vi (scope / 범위), WFrame, Popup & SPA
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04 — phạm vi (scope / 범위), WFrame, Popup & SPA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao WebSquare cần phạm vi (scope / 범위)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. scwin không phải toàn cục (global / 전역) singleton của toàn app** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04 — phạm vi (scope / 범위), WFrame, Popup & SPA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao WebSquare cần phạm vi (scope / 범위)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. scwin không phải toàn cục (global / 전역) singleton của toàn app** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối scope, WFrame, popup và SPA, để xác định owner của lifecycle, context và state khi nhiều màn hình cùng tồn tại.
 
 ## 1. Vì sao WebSquare cần phạm vi (scope / 범위)?
 

@@ -1,7 +1,6 @@
 # Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bối cảnh trước khủng hoảng** sang **2. Vì sao forward hedge tạo liquidity exposure?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bối cảnh trước khủng hoảng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Vì sao forward hedge tạo liquidity exposure?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối USD funding stress 2008 với bảng cân đối ngân hàng, dollar shortage và policy intervention, để đọc cơ chế thanh khoản thay vì chỉ nhớ mốc.
 
 Trường hợp (case / 사례) này bổ sung một cơ chế (mechanism / 메커니즘) khác với Asian Financial Crisis 1997 và toàn cục (global / 전역) USD funding stress 2020. Trọng tâm là cách **exporter forward hedges, foreign-bank-branch funding, maturity mismatch và toàn cục (global / 전역) dollar liquidity** biến một hedge có vẻ hợp lý thành nhu cầu mua USD spot trong lúc thị trường bị thiếu thanh khoản.
 
@@ -43,8 +42,7 @@ Local assets:   holds KRW asset or loan against the funding structure
 
 Điểm quan trọng: **hedge của exporter không tự động làm hệ thống có thêm USD dài hạn**. Nó có thể tạo một chuỗi trung gian phụ thuộc vào rollover.
 
-
-> **Chuyển mạch:** Từ **1. Bối cảnh trước khủng hoảng**, ta sang **2. Vì sao forward hedge tạo liquidity exposure?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **2. Vì sao forward hedge tạo liquidity exposure?** tiếp nhận điểm tựa từ **1. Bối cảnh trước khủng hoảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Số liệu vulnerability cần đọc đúng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Vì sao forward hedge tạo liquidity exposure?
 
@@ -61,8 +59,7 @@ spot and forward liquidity may diverge
 
 Một bank có thể **đúng về currency direction** nhưng vẫn thiếu USD hôm nay để thanh toán khoản vay ngắn hạn. Đây là funding rủi ro (risk / 위험), không phải chỉ là market-view rủi ro (risk / 위험).
 
-
-> **Chuyển mạch:** Từ **2. Vì sao forward hedge tạo liquidity exposure?**, ta sang **3. Số liệu vulnerability cần đọc đúng cách** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **3. Số liệu vulnerability cần đọc đúng cách** tiếp nhận điểm tựa từ **2. Vì sao forward hedge tạo liquidity exposure?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Crisis transmission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Số liệu vulnerability cần đọc đúng cách
 
@@ -80,8 +77,7 @@ domestic-bank foreign-currency debt
 
 Vulnerability nằm ở **maturity, rollover, collateral và liquidity under stress**, không chỉ ở gross debt headline.
 
-
-> **Chuyển mạch:** Từ **3. Số liệu vulnerability cần đọc đúng cách**, ta sang **4. Crisis transmission** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **4. Crisis transmission** tiếp nhận điểm tựa từ **3. Số liệu vulnerability cần đọc đúng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Forward hedge không đồng nghĩa spot supply ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Crisis transmission
 
@@ -111,8 +107,7 @@ funding stress
 → more USD demand
 ```
 
-
-> **Chuyển mạch:** Từ **4. Crisis transmission**, ta sang **5. Forward hedge không đồng nghĩa spot supply ổn định** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **5. Forward hedge không đồng nghĩa spot supply ổn định** tiếp nhận điểm tựa từ **4. Crisis transmission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Covered interest parity và basis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Forward hedge không đồng nghĩa spot supply ổn định
 
@@ -137,8 +132,7 @@ cash settlement requirement
 
 Không được gọi mọi forward luồng (flow / 흐름) là “speculation”. Nhưng cũng không được coi hedge luồng (flow / 흐름) là liquidity-neutral trong mọi trạng thái.
 
-
-> **Chuyển mạch:** Từ **5. Forward hedge không đồng nghĩa spot supply ổn định**, ta sang **6. Covered interest parity và basis** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **6. Covered interest parity và basis** tiếp nhận điểm tựa từ **5. Forward hedge không đồng nghĩa spot supply ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. chính sách (policy / 정책) phản hồi (response / 응답) và USD swap line** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Covered interest parity và basis
 
@@ -158,8 +152,7 @@ Trong stress, chính các điều kiện cần để arbitrage đóng wedge có 
 
 Vì vậy, basis cần được đọc như một biến của **funding scarcity và balance-sheet sức chứa (capacity / 용량)**, không chỉ như pricing lỗi (error / 오류).
 
-
-> **Chuyển mạch:** Từ **6. Covered interest parity và basis**, ta sang **7. chính sách (policy / 정책) phản hồi (response / 응답) và USD swap line** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **7. chính sách (policy / 정책) phản hồi (response / 응답) và USD swap line** tiếp nhận điểm tựa từ **6. Covered interest parity và basis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Phân biệt 2008 với 1997 và 2020** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. chính sách (policy / 정책) phản hồi (response / 응답) và USD swap line
 
@@ -177,12 +170,9 @@ Fed ↔ BOK swap line
 
 Swap line giải quyết **liquidity backstop**; nó không biến mọi borrower thành solvent, không xóa currency mismatch, và không đảm bảo KRW sẽ lập tức quay về mức cũ.
 
-
-> **Chuyển mạch:** Từ **7. chính sách (policy / 정책) phản hồi (response / 응답) và USD swap line**, ta sang **8. Phân biệt 2008 với 1997 và 2020** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **8. Phân biệt 2008 với 1997 và 2020** tiếp nhận điểm tựa từ **7. chính sách (policy / 정책) phản hồi (response / 응답) và USD swap line** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Balance-sheet trường hợp (case / 사례) exercises** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Phân biệt 2008 với 1997 và 2020
-Phần “8. Phân biệt 2008 với 1997 và 2020” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | trường hợp (case / 사례) | Primary stress | Distinctive cơ chế (mechanism / 메커니즘) | Lesson |
 |---|---|---|---|
@@ -192,8 +182,7 @@ Phần “8. Phân biệt 2008 với 1997 và 2020” nối kiến thức trư�
 
 Không gộp ba trường hợp (case / 사례) thành một bài “USD shortage”. Cùng là dollar stress nhưng nút (node / 노드) gây đứt, chính sách (policy / 정책) công cụ (tool / 도구) và balance-sheet transmission khác nhau.
 
-
-> **Chuyển mạch:** Từ **8. Phân biệt 2008 với 1997 và 2020**, ta sang **9. Balance-sheet trường hợp (case / 사례) exercises** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **8. Phân biệt 2008 với 1997 và 2020** cho ta quy tắc; **9. Balance-sheet trường hợp (case / 사례) exercises** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Research exercise: event-study ledger** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Balance-sheet trường hợp (case / 사례) exercises
 
@@ -270,8 +259,7 @@ possible unintended effect
 observable data
 ```
 
-
-> **Chuyển mạch:** Từ **9. Balance-sheet trường hợp (case / 사례) exercises**, ta sang **10. Research exercise: event-study ledger** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **9. Balance-sheet trường hợp (case / 사례) exercises** cho ta quy tắc; **10. Research exercise: event-study ledger** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. rủi ro (risk / 위험) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Research exercise: event-study ledger
 
@@ -293,12 +281,9 @@ alternative explanation
 
 Nếu dữ liệu (data / 데이터) intraday không tồn tại, ghi rõ frequency và publication lag. Không suy ra chính xác (exact / 정확한) intervention kích thước (size / 크기) từ reserve thay đổi (change / 변경) hoặc từ chart spot.
 
-
-> **Chuyển mạch:** Từ **10. Research exercise: event-study ledger**, ta sang **11. rủi ro (risk / 위험) checklist** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **11. rủi ro (risk / 위험) checklist** tiếp nhận điểm tựa từ **10. Research exercise: event-study ledger** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Sources** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. rủi ro (risk / 위험) checklist
-Phần “11. rủi ro (risk / 위험) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 [ ] Forward hedge có underlying thật và amount/timing chắc chắn không?
@@ -313,12 +298,9 @@ Phần “11. rủi ro (risk / 위험) checklist” nối kiến thức trước
 [ ] Không đồng nhất 2008 Korea với 1997 hoặc 2020
 ```
 
-
-> **Chuyển mạch:** Từ **11. rủi ro (risk / 위험) checklist**, ta sang **12. Sources** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 06 — Korea 2008: USD funding stress, forward hedges và rollover rủi ro (risk / 위험)**, **11. rủi ro (risk / 위험) checklist** nêu điều cần giải thích; **12. Sources** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 12. Sources
-Phần “12. Sources” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [IMF — Republic of Korea 2008 Article IV Consultation, Country Report 08/297](https://www.imf.org/external/pubs/ft/scr/2008/cr08297.pdf)
 - [IMF — Macroprudential Policy, Korea case](https://www.elibrary.imf.org/view/journals/001/2011/238/article-A001-en.xml)
@@ -332,4 +314,4 @@ Phần “12. Sources” nối kiến thức trước với nội dung sắp đ�
 - [05 — Execution, brokers, costs and risk](../05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
 - [11 — Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 
-> **Bàn giao:** Sau **12. Sources**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 ERM 1992 STERLING CRISIS](./01_ERM_1992_STERLING_CRISIS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **12. Sources**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

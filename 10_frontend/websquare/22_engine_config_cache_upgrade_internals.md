@@ -1,6 +1,6 @@
 # 22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. thời gian chạy (runtime / 런타임) không phải một tệp (file / 파일)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. trình duyệt (browser / 브라우저) lời gọi (call / 호출) chuỗi (chain / 사슬)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. thời gian chạy (runtime / 런타임) không phải một tệp (file / 파일)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. trình duyệt (browser / 브라우저) lời gọi (call / 호출) chuỗi (chain / 사슬)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối engine, config, cache và upgrade, để truy nguyên thay đổi runtime từ cấu hình đọc vào đến artifact và trạng thái đã cache.
 
 Một trong những câu khó nhất trong môi trường vận hành (production / 운영 환경) WebSquare là: **trình duyệt (browser / 브라우저) đang chạy chính xác cái gì?**
 

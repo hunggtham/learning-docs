@@ -1,7 +1,6 @@
 # Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges
 
-> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Phạm vi Round 8** sang **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phạm vi Round 8** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối quality audit với coverage, dependency và evidence, để đánh giá chất lượng tài liệu bằng tiêu chí có thể kiểm tra.
 
 Round 8 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리) vẫn giữ nguyên 87 topic; không thêm chapter mới chỉ để tăng coverage.
 
@@ -24,8 +23,7 @@ Round này tập trung tám chapter:
 
 Tiêu chí vẫn theo [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md): intuition trước formalism, formula/theorem có reason và các giả định (assumptions / 가정들), proof idea đủ để hiểu cấu trúc (structure / 구조), examples tạo lập luận (reasoning / 추론) transfer, và connections chỉ thêm khi thật sự cùng mathematical cấu trúc (structure / 구조).
 
-
-> **Chuyển mạch:** Từ **Phạm vi Round 8**, ta sang **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)** tiếp nhận điểm tựa từ **Phạm vi Round 8** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)
 
@@ -93,8 +91,7 @@ Chapter được nâng theo viewpoint:
 
 Các phần variable/lĩnh vực (domain / 도메인), expression vs equation, distributivity, identities, inverse operations, reversible transformations và lĩnh vực (domain / 도메인) restrictions được làm rõ để hỗ trợ các chapter equation/hàm (function / 함수)/calculus phía sau.
 
-
-> **Chuyển mạch:** Từ **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)**, ta sang **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)** đã nêu tiêu chí phân biệt, còn **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws
 
@@ -154,8 +151,7 @@ Nội dung mới gồm:
 - Chebyshev inequality;
 - AI mini-batch and finance-risk connections.
 
-
-> **Chuyển mạch:** Từ **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws**, ta sang **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws** đã nêu tiêu chí phân biệt, còn **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) balance sau Round 8** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)
 
@@ -206,8 +202,7 @@ Proof ideas được thêm cho Euclidean thuật toán (algorithm / 알고리즘
 
 Connections được làm rõ với algorithms, cyclic các hệ thống (systems / 시스템들), hashing, checksums, finite algebra và cryptographic mathematics, đồng thời ghi rõ ranh giới (boundary / 경계) giữa mathematical substrate và practical hệ thống (system / 시스템) guarantees.
 
-
-> **Chuyển mạch:** Từ **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)**, ta sang **độ sâu (depth / 깊이) balance sau Round 8** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Độ sâu (depth / 깊이) balance sau Round 8** tiếp nhận điểm tựa từ **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Remaining độ sâu (depth / 깊이) priorities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) balance sau Round 8
 
@@ -237,8 +232,7 @@ optimization
 Fourier / Laplace / control
 ```
 
-
-> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) balance sau Round 8**, ta sang **Remaining độ sâu (depth / 깊이) priorities** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Remaining độ sâu (depth / 깊이) priorities** tiếp nhận điểm tựa từ **Độ sâu (depth / 깊이) balance sau Round 8** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Editorial conclusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Remaining độ sâu (depth / 깊이) priorities
 
@@ -263,8 +257,7 @@ Round tiếp theo không nên tăng chapter count. Priority hợp lý là các c
 
 Selection cho round sau nên tiếp tục theo **phụ thuộc (dependency / 의존성) centrality + độ sâu (depth / 깊이) gap**, không theo folder thứ tự (order / 순서).
 
-
-> **Chuyển mạch:** Từ **Remaining độ sâu (depth / 깊이) priorities**, ta sang **Editorial conclusion** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Editorial conclusion** tiếp nhận điểm tựa từ **Remaining độ sâu (depth / 깊이) priorities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Editorial conclusion
 
@@ -274,4 +267,4 @@ Mô hình tư duy (mental model / 사고 모델) cho thư viện (library / 라�
 
 > Coverage tạo nodes; độ sâu (depth / 깊이) rewrite làm rõ edges; các giả định (assumptions / 가정들) xác định nơi edge còn hợp lệ. Một thư viện kiến thức (knowledge library / 지식 라이브러리) mạnh không chỉ có nhiều concepts, mà cho người đọc biết vì sao chúng nối với nhau và khi nào liên kết (connection / 연결) đó không còn đúng.
 
-> **Bàn giao:** Sau **Editorial conclusion**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Editorial conclusion**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

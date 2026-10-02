@@ -1,6 +1,6 @@
 # Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Ba lớp cần tách** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Ba lớp cần tách** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của web platform core, rồi nối runtime, rendering, events, framework và performance thành một mô hình thống nhất.
 
 Nền tảng Web (web platform / 웹 플랫폼) không chỉ là tập API của trình duyệt (browser / 브라우저). Nó là hợp đồng giữa tài nguyên (resource / 자원)
 được tải, parser tạo ra cây (tree / 트리), thời gian chạy (runtime / 런타임) thực thi script, renderer tạo ra pixels,

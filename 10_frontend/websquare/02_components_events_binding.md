@@ -1,6 +1,6 @@
 # 02 — Components, Events & dữ liệu (data / 데이터) Binding
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02 — Components, Events & dữ liệu (data / 데이터) Binding**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. thành phần (component / 컴포넌트) API là đặc tả hợp đồng (contract / 계약), DOM chỉ là hiện thực (implementation / 구현) detail** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Giá trị thật và giá trị hiển thị không phải lúc nào cũng giống nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02 — Components, Events & dữ liệu (data / 데이터) Binding**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. thành phần (component / 컴포넌트) API là đặc tả hợp đồng (contract / 계약), DOM chỉ là hiện thực (implementation / 구현) detail** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Giá trị thật và giá trị hiển thị không phải lúc nào cũng giống nhau** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối component, event và binding, để theo dõi dữ liệu đi từ thao tác người dùng qua model đến render và side effect.
 
 ## 1. thành phần (component / 컴포넌트) API là đặc tả hợp đồng (contract / 계약), DOM chỉ là hiện thực (implementation / 구현) detail
 

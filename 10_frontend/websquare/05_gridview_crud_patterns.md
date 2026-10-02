@@ -1,6 +1,6 @@
 # 05 — GridView, CRUD & Enterprise Screen Patterns
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05 — GridView, CRUD & Enterprise Screen Patterns**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía máy khách (client / 클라이언트)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. tìm kiếm (search / 검색) screen điển hình** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05 — GridView, CRUD & Enterprise Screen Patterns**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía máy khách (client / 클라이언트)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. tìm kiếm (search / 검색) screen điển hình** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối GridView với CRUD patterns, identity và validation, để mỗi thao tác thêm/sửa/xóa có trạng thái và lỗi được truy nguyên.
 
 ## 1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía máy khách (client / 클라이언트)
 

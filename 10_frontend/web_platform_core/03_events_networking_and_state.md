@@ -1,6 +1,6 @@
 # Events, networking và quyền sở hữu trạng thái (state ownership / 상태 소유권)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Events, networking và quyền sở hữu trạng thái (state ownership / 상태 소유권)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Yêu cầu (request / 요청) và stale kết quả (result / 결과)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Events, networking và quyền sở hữu trạng thái (state ownership / 상태 소유권)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Yêu cầu (request / 요청) và stale kết quả (result / 결과)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối event, networking và state với event loop, request lifecycle và consistency, để phân biệt tín hiệu đến với trạng thái được chấp nhận.
 
 Frontend hành vi (behavior / 동작) thường là kết quả của hai luồng cùng lúc: người dùng (user / 사용자) intent đi qua
 sự kiện (event / 이벤트) hệ thống (system / 시스템) và tài nguyên (resource / 자원)/phản hồi (response / 응답) đi qua mạng (network / 네트워크). Sai lầm phổ biến là coi
