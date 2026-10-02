@@ -1,6 +1,6 @@
 # 16 — Privacy-preserving analytics
 
-> **Mạch đọc:** Đọc **16 — Privacy-preserving analytics** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Threat mô hình (model / 모델)** sang **2. Differential privacy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **16 — Privacy-preserving analytics**. Route đi từ threat model và inference risk → differential privacy → k-anonymity/aggregation và query budgets → access, governance và retention → privacy/utility trade-offs, để bảo vệ dữ liệu được đánh giá theo thông tin có thể suy ra.
 
 Privacy là giới hạn thông tin có thể suy ra từ đầu ra (output / 출력), không chỉ là kiểm soát truy cập (access control / 접근 제어). Một người dùng (user / 사용자) không đọc raw PII vẫn có thể suy ra cá nhân nếu truy vấn (query / 쿼리) aggregate quá nhỏ hoặc nhiều lần truy vấn (query / 쿼리) được kết hợp.
 
@@ -8,8 +8,7 @@ Privacy là giới hạn thông tin có thể suy ra từ đầu ra (output / �
 
 Trước khi chọn kỹ thuật, xác định adversary, auxiliary dữ liệu (data / 데이터), truy vấn (query / 쿼리) ngân sách (budget / 예산), protected thực thể (entity / 엔터티) và acceptable disclosure. K-anonymity có thể thất bại khi quasi-identifier dễ phép nối (join / 조인) với dataset ngoài; suppression không sửa được attribute disclosure.
 
-
-> **Chuyển mạch:** Từ **1. Threat mô hình (model / 모델)**, ta sang **2. Differential privacy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **16 — Privacy-preserving analytics**, **2. Differential privacy** tiếp nhận điểm tựa từ **1. Threat mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Differential privacy
 
@@ -20,29 +19,25 @@ Differential privacy thêm noise có kiểm soát để đầu ra (output / 출�
 
 Composition quan trọng: nhiều truy vấn (query / 쿼리) cùng dataset cộng dồn privacy mất mát (loss / 손실). Mỗi dashboard không thể tự dùng một ngân sách vô hạn mà không có accountant trung tâm.
 
-
-> **Chuyển mạch:** Từ **2. Differential privacy**, ta sang **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **16 — Privacy-preserving analytics**, **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)** tiếp nhận điểm tựa từ **2. Differential privacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Utility sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)
 
 Chính sách (policy / 정책) nên giới hạn minimum group kích thước (size / 크기), truy vấn (query / 쿼리) overlap, suppression, rounding, noise, tỷ lệ (rate / 비율) limit và retention của đầu ra (output / 출력). Một chỉ số (metric / 지표) hợp lệ riêng lẻ có thể trở thành leak khi người dùng lấy chênh lệch giữa hai filter gần giống nhau.
 
-
-> **Chuyển mạch:** Từ **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)**, ta sang **4. Utility sự đánh đổi (trade-off / 트레이드오프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16 — Privacy-preserving analytics**, **4. Utility sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Utility sự đánh đổi (trade-off / 트레이드오프)
 
 Noise mạnh bảo vệ privacy nhưng làm chỉ số (metric / 지표) nhỏ/rare segment không ổn định. Cần công bố confidence/bất định (uncertainty / 불확실성) và không dùng private estimate cho billing hoặc enforcement nếu chưa có correction mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **4. Utility sự đánh đổi (trade-off / 트레이드오프)**, ta sang **5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **16 — Privacy-preserving analytics**, **4. Utility sự đánh đổi (trade-off / 트레이드오프)** nêu điều cần giải thích; **5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)
 
 Raw, snapshots, backups, logs, caches và notebook extracts đều nằm trong privacy phạm vi (scope / 범위). Redaction phải xử lý cả derived features và huấn luyện (training / 학습) artifacts nếu chúng có thể encode thông tin subject.
 
-
-> **Chuyển mạch:** Từ **5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)**, ta sang **6. bằng chứng (evidence / 증거)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **16 — Privacy-preserving analytics**, cơ chế trong **5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** cần được kiểm chứng bằng dấu vết cụ thể; **6. bằng chứng (evidence / 증거)** đưa dữ liệu và nguồn vào đúng điểm đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 6. bằng chứng (evidence / 증거)
 
@@ -50,4 +45,4 @@ Lưu chính sách (policy / 정책) phiên bản (version / 버전), privacy ng�
 
 Đọc tiếp: [11 — Governance](../11_governance_lineage_security/README.md), [10 — Serving](../10_serving_semantic_layer/README.md), [12 — Cost](../12_cost_performance_capacity/README.md).
 
-> **Bàn giao:** Sau **6. bằng chứng (evidence / 증거)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **6. bằng chứng (evidence / 증거)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

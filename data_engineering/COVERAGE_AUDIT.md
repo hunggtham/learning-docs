@@ -1,7 +1,6 @@
 # Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)
 
-> **Mạch đọc:** Đặt **kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Trạng thái coverage** sang **bất biến (invariant / 불변식) checklist**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)**. Route đi từ coverage status → invariant checklist → foundations, modeling, storage, streaming và orchestration → reliability/governance/privacy/ML → gaps và remediation, để audit kiểm tra toàn bộ chuỗi năng lực.
 
 Cập nhật: 2026-09-23. `main` là nguồn chuẩn (source of truth / 정본) của kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링).
 
@@ -37,8 +36,7 @@ Mỗi ranh giới (boundary / 경계) phải mô tả được cơ chế (mechan
 | 17 đặc tả hợp đồng (contract / 계약) testing | tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬), bên tiêu thụ (consumer / 소비자) contracts, thời gian chạy (runtime / 런타임) enforcement | Strong |
 | 90 trường hợp (case / 사례) studies | end-to-end thất bại (failure / 실패) and bằng chứng (evidence / 증거) lập luận (reasoning / 추론) | Strong |
 
-
-> **Chuyển mạch:** Từ **Trạng thái coverage**, ta sang **bất biến (invariant / 불변식) checklist** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)**, **Bất biến (invariant / 불변식) checklist** tiếp nhận điểm tựa từ **Trạng thái coverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gaps còn lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bất biến (invariant / 불변식) checklist
 
@@ -52,8 +50,7 @@ Mỗi ranh giới (boundary / 경계) phải mô tả được cơ chế (mechan
 - **bảo mật (security / 보안):** raw/mô hình (model / 모델)/serving truy cập (access / 접근), masking, retention và deletion có bằng chứng (evidence / 증거).
 - **Economics:** scan, shuffle, spill, lưu trữ (storage / 저장소), maintenance và tính đồng thời (concurrency / 동시성) có attribution.
 
-
-> **Chuyển mạch:** Từ **bất biến (invariant / 불변식) checklist**, ta sang **Gaps còn lại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)**, **Gaps còn lại** tiếp nhận điểm tựa từ **Bất biến (invariant / 불변식) checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rà soát (review / 검토) giao thức (protocol / 프로토콜)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gaps còn lại
 
@@ -67,8 +64,7 @@ Các ranh giới (boundary / 경계) P2 phía trên đã có chapter chuẩn g�
 
 Không mở chapter chỉ để liệt kê Kafka/Spark/Airflow/dbt. Mỗi gap phải có bất biến (invariant / 불변식)/thất bại (failure / 실패) mô hình (model / 모델) riêng, nhiều downstream phụ thuộc (dependency / 의존성) và bằng chứng (evidence / 증거) có thể kiểm chứng.
 
-
-> **Chuyển mạch:** Từ **Gaps còn lại**, ta sang **rà soát (review / 검토) giao thức (protocol / 프로토콜)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)**, **Rà soát (review / 검토) giao thức (protocol / 프로토콜)** tiếp nhận điểm tựa từ **Gaps còn lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Rà soát (review / 검토) giao thức (protocol / 프로토콜)
 
@@ -80,4 +76,4 @@ Khi sửa một chapter:
 4. kiểm tra link và phụ thuộc (dependency / 의존성) map;
 5. chạy `npm run audit:library` và `npm run build:library` nếu thay đổi ảnh hưởng publishing.
 
-> **Bàn giao:** Sau **rà soát (review / 검토) giao thức (protocol / 프로토콜)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 foundations](./01_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Rà soát (review / 검토) giao thức (protocol / 프로토콜)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

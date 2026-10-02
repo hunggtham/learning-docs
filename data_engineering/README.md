@@ -1,7 +1,6 @@
 # Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)
 
-> **Mạch đọc:** Đọc **thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chuẩn độ sâu của chapter** sang **P1 — Trạng thái triển khai**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**. Route đi từ foundations và lifecycle → modeling/storage/transformation → batch/streaming/orchestration → reliability, governance, privacy và ML features → coverage/audit, để dữ liệu đi từ raw input tới sản phẩm có thể kiểm chứng.
 
 Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) là lĩnh vực xây dựng các hệ thống biến dữ liệu thô, phân tán và thường không đáng tin cậy thành dữ liệu có cấu trúc, có ngữ nghĩa, có thể kiểm chứng và đủ ổn định để phục vụ phân tích, sản phẩm dữ liệu, machine học tập (learning / 학습) và vận hành doanh nghiệp.
 
@@ -26,8 +25,7 @@ problem → mental model → mechanism → invariant
 
 Nếu một phần chỉ mô tả API hoặc tên sản phẩm mà không nói guarantee và hành vi khi thất bại (failure behavior / 실패 동작), nó là hiện thực (implementation / 구현) ghi chú (note / 노트) chứ chưa phải kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) lập luận (reasoning / 추론).
 
-
-> **Chuyển mạch:** Từ **Chuẩn độ sâu của chapter**, ta sang **P1 — Trạng thái triển khai** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, **P1 — Trạng thái triển khai** tiếp nhận điểm tựa từ **Chuẩn độ sâu của chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình chuẩn gốc (canonical / 정본)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## P1 — Trạng thái triển khai
 
@@ -47,8 +45,7 @@ P1 của kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)
 
 Mỗi chapter có mô hình tư duy (mental model / 사고 모델), cơ chế (mechanism / 메커니즘), bất biến (invariant / 불변식), thất bại (failure / 실패)/trường hợp biên (edge case / 경계 사례), bằng chứng (evidence / 증거), sự đánh đổi (trade-off / 트레이드오프) và liên kết phụ thuộc (dependency / 의존성); `COVERAGE_AUDIT.md` là checklist kiểm tra coverage và bất biến (invariant / 불변식) của toàn bộ ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **P1 — Trạng thái triển khai**, ta sang **Lộ trình chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, sau nội dung của **P1 — Trạng thái triển khai**, **Lộ trình chuẩn gốc (canonical / 정본)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lộ trình chuẩn gốc (canonical / 정본)
 
@@ -60,8 +57,7 @@ Sau đó đọc [03 — Storage, file format và analytical layout](03_storage_a
 
 Cuối cùng đọc [04 — Reliability, quality và production reasoning](04_reliability_and_production.md), nơi chuỗi xử lý (pipeline / 파이프라인) được nhìn như một môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템): dữ liệu (data / 데이터) chất lượng (quality / 품질), contracts, lineage, khả năng quan sát (observability / 관측 가능성), thử lại (retry / 재시도), khôi phục (recovery / 복구), bảo mật (security / 보안) và chi phí (cost / 비용).
 
-
-> **Chuyển mạch:** Từ **Lộ trình chuẩn gốc (canonical / 정본)**, ta sang **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, **Lộ trình chuẩn gốc (canonical / 정본)** đã nêu tiêu chí phân biệt, còn **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)
 
@@ -83,8 +79,6 @@ Sau bốn foundation chapters, đi theo các ranh giới (boundary / 경계) sau
 14. [90 — Case studies](90_case_studies/README.md): CDC duplicate, late sự kiện (event / 이벤트), backfill race, compaction race và ngữ nghĩa (semantic / 의미적) fan-out.
 
 ### Phụ thuộc (dependency / 의존성) map
-Phần “Phụ thuộc (dependency / 의존성) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 01 foundations
@@ -103,8 +97,7 @@ Phần “Phụ thuộc (dependency / 의존성) map” nối kiến thức trư
 
 Kafka, Spark, Flink, Airflow, dbt, warehouse và cloud services chỉ nên xuất hiện như hiện thực (implementation / 구현) ánh xạ (mapping / 매핑) sau khi các chapter tương ứng đã giải thích mô hình tư duy (mental model / 사고 모델). Một công cụ (tool / 도구) mới phải trả lời được: nó duy trì bất biến (invariant / 불변식) nào, thất bại (failure / 실패) ranh giới (boundary / 경계) ở đâu, và bằng chứng (evidence / 증거) nào chứng minh guarantee đó trong môi trường vận hành (production / 운영 환경).
 
-
-> **Chuyển mạch:** Từ **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)**, ta sang **ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)
 
@@ -114,8 +107,7 @@ Kiến thức về relational mô hình (model / 모델), truy vấn (query / �
 
 Trong giai đoạn di chuyển (migration / 마이그레이션), `sql/` vẫn là nguồn chuẩn gốc (canonical / 정본) cho nội dung SQL hiện có. Khi di chuyển (migration / 마이그레이션) diễn ra, link cũ phải được kiểm tra trước khi đổi đường dẫn (path / 경로) và raw/nguồn (source / 소스) material không được xóa chỉ vì chuẩn gốc (canonical / 정본) reading material đã chuyển nơi.
 
-
-> **Chuyển mạch:** Từ **ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)**, ta sang **mô hình tư duy (mental model / 사고 모델) xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, các dấu vết trong **Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델) xuyên suốt
 
@@ -123,4 +115,4 @@ Một chuỗi xử lý (pipeline / 파이프라인) tốt không được địn
 
 Vì vậy thư viện (library / 라이브러리) này ưu tiên lập luận (reasoning / 추론) về tính đúng đắn (correctness / 정확성), replayability, khả năng quan sát (observability / 관측 가능성) và quyền sở hữu (ownership / 소유권) trước cú pháp (syntax / 문법) của công cụ. Khi hiểu các bất biến (invariant / 불변식) đó, việc học Spark, Kafka, Airflow, dbt hoặc một cloud dữ liệu (data / 데이터) nền tảng (platform / 플랫폼) trở thành việc ánh xạ một công cụ vào mô hình tư duy (mental model / 사고 모델) đã có thay vì ghi nhớ hàng loạt API.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) xuyên suốt**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 foundations](./01_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) xuyên suốt**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
