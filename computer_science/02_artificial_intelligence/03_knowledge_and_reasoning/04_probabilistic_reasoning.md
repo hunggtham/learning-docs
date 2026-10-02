@@ -1,6 +1,6 @@
 # Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bất định (uncertainty / 불확실성) is not ignorance alone** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bayesian cập nhật (update / 업데이트)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Probabilistic reasoning trong AI**. Route đi từ uncertainty models → Bayesian update → likelihood/priors → decision/calibration → approximate inference, để niềm tin được cập nhật bằng evidence và loss.
 
 Classical lô-gic (logic / 논리) asks whether proposition follows or not. Real AI often cannot công việc (work / 작업) with nhị phân (binary / 이진) certainty. Sensor noisy, diagnosis ambiguous, người dùng (user / 사용자) intent uncertain và kiến thức (knowledge / 지식) incomplete. **Probabilistic lập luận (reasoning / 추론)** extends lập luận (reasoning / 추론) by assigning and updating degrees of belief under a xác suất (probability / 확률) mô hình (model / 모델).
 

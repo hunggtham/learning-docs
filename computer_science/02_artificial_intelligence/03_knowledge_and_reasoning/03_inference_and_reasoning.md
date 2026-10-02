@@ -1,6 +1,6 @@
 # Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Suy luận (inference / 추론) và lập luận (reasoning / 추론) trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Deduction** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Induction** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Inference và reasoning trong AI**. Route đi từ deduction → induction/abduction → forward/backward chaining → soundness/completeness → explanation and uncertainty, để mỗi kiểu suy luận có guarantee và giới hạn rõ.
 
 Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) chỉ hữu ích khi hệ thống (system / 시스템) có thể tạo ra conclusion mới hoặc quyết định dựa trên kiến thức (knowledge / 지식). **suy luận (inference / 추론)** là quá trình derive thông tin (information / 정보) từ premises theo một cơ chế (mechanism / 메커니즘); **lập luận (reasoning / 추론)** rộng hơn, bao gồm chọn các giả định (assumptions / 가정들), combine bằng chứng (evidence / 증거), resolve bất định (uncertainty / 불확실성), tìm kiếm (search / 검색) proof, reason về causes/actions và sometimes revise beliefs.
 

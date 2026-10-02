@@ -1,6 +1,6 @@
 # Bayesian Networks trong Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bayesian Networks trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao cần đồ thị (graph / 그래프)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DAG cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bayesian networks trong AI**. Route đi từ DAG structure → conditional independence → factorization → inference/learning → causal interpretation limits, để đồ thị làm rõ cả tính toán lẫn giả định.
 
 **Bayesian mạng (network / 네트워크)** là một directed acyclic đồ thị (graph / 그래프) (DAG) trong đó mỗi nút (node / 노드) là random variable và mỗi edge biểu diễn phụ thuộc (dependency / 의존성) trực tiếp trong factorization của joint xác suất (probability / 확률). Nó cho phép ta mô hình hóa một phân phối (distribution / 분포) rất lớn bằng các cục bộ (local / 로컬) conditional distributions thay vì viết full joint bảng (table / 테이블).
 

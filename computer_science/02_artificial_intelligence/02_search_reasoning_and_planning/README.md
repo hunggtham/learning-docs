@@ -1,6 +1,6 @@
 # Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Search, Reasoning & Planning Foundations**. Route đi từ state-space → uninformed/heuristic search → adversarial/CSP → planning/uncertainty decisions, để mỗi algorithm quay về representation, cost và guarantee.
 
 Folder này xây phần **classical bài toán (problem / 문제) solving** của Artificial Intelligence. Nó trả lời câu hỏi: khi một tác nhân (agent / 에이전트) có trạng thái (state / 상태), actions và goal, làm thế nào khám phá possibilities, dùng kiến thức (knowledge / 지식) để giảm tìm kiếm (search / 검색), xử lý opponent/các ràng buộc (constraints / 제약조건들), lập plan và cuối cùng ra quyết định khi kết quả (outcome / 결과) không chắc chắn?
 

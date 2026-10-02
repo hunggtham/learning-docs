@@ -1,6 +1,6 @@
 # First-Order lô-gic (logic / 논리) cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **First-Order lô-gic (logic / 논리) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao Propositional lô-gic (logic / 논리) không đủ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vocabulary của FOL** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **First-order logic cho AI**. Route đi từ predicates/variables/quantifiers → FOL vocabulary → unification/substitution → entailment/resolution → knowledge representation limits, để biểu diễn quan hệ vượt qua propositional atoms.
 
 Propositional lô-gic (logic / 논리) có thể biểu diễn `Rain`, `WetRoad`, nhưng không naturally nói “mọi người”, “một người nào đó”, “Alice là parent của Bob”, hay “mọi doctor là professional”. **First-Order lô-gic (logic / 논리)** mở rộng lô-gic (logic / 논리) bằng objects, predicates, functions, variables và quantifiers.
 

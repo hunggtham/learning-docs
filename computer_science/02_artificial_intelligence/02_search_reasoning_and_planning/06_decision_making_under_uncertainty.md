@@ -1,6 +1,6 @@
 # Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Xác suất (probability / 확률) chưa đủ để ra quyết định** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Utility** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Decision making under uncertainty**. Route đi từ beliefs/probability → utility/preferences → expected utility → sequential decisions/MDPs → risk-sensitive policy, để quyết định được phân biệt với dự đoán.
 
 Classical tìm kiếm (search / 검색) và deterministic planning giả định hành động (action / 동작) dẫn tới successor trạng thái (state / 상태) khá rõ ràng. Real world hiếm khi như vậy. Sensor noisy, hành động (action / 동작) có thể thất bại (fail / 실패), người dùng (user / 사용자) hành vi (behavior / 동작) stochastic, future demand unknown, và ta thường không quan sát đầy đủ hidden trạng thái (state / 상태).
 

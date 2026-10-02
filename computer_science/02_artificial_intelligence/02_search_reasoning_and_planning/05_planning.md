@@ -1,6 +1,6 @@
 # Planning trong Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Planning trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Reactive hành vi (behavior / 동작) và planning khác nhau thế nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태) biểu diễn (representation / 표현) trong classical planning** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Planning trong AI**. Route đi từ reactive behavior → state/action/goal representation → classical planning operators → partial order/heuristic planning → execution monitoring, để plan được nối với môi trường và failure.
 
 Tìm kiếm (search / 검색) hỏi “từ trạng thái (state / 상태) này, hành động (action / 동작) nào dẫn tới goal?”. **Planning (계획 / lập kế hoạch)** làm câu hỏi đó tường minh (explicit / 명시적) hơn bằng cách biểu diễn **actions có preconditions và effects**, goal có cấu trúc (structure / 구조), và một plan là chuỗi (sequence / 시퀀스) hoặc partial thứ tự (order / 순서) actions làm goal trở thành true.
 

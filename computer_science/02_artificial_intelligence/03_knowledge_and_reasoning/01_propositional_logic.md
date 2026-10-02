@@ -1,6 +1,6 @@
 # Propositional lô-gic (logic / 논리) cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Propositional lô-gic (logic / 논리) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Proposition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Connectives** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Propositional logic cho AI**. Route đi từ propositions/valuation → connectives → entailment/satisfiability → CNF/resolution → knowledge-base queries, để logic nối trực tiếp với cơ chế suy luận.
 
 **Propositional lô-gic (logic / 논리)** là một formal ngôn ngữ (language / 언어) để biểu diễn statements có truth giá trị (value / 값) và suy luận từ chúng bằng rules chính xác. Nó là hệ lô-gic (logic / 논리) đơn giản hơn First-Order lô-gic (logic / 논리) nhưng cực kỳ quan trọng vì cho ta vocabulary về cú pháp (syntax / 문법), ngữ nghĩa (semantics / 의미론), entailment, proof, satisfiability và mô hình (model / 모델) checking.
 

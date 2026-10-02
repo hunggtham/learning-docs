@@ -1,6 +1,6 @@
 # Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) trong Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dữ liệu (data / 데이터), thông tin (information / 정보) và kiến thức (knowledge / 지식)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Symbol và referent** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Knowledge representation trong AI**. Route đi từ data/information/knowledge → symbols/referents → ontologies/rules → logical/probabilistic representations → inference interface, để biểu diễn được đánh giá theo suy luận nó cho phép.
 
 Một AI hệ thống (system / 시스템) không thể lập luận (reasoning / 추론) về điều mà nó không biểu diễn được. **kiến thức (knowledge / 지식) biểu diễn (representation / 표현)** nghiên cứu cách encode facts, entities, relations, rules, categories, events và bất định (uncertainty / 불확실성) thành structures mà machine có thể truy vấn (query / 쿼리) và infer.
 
