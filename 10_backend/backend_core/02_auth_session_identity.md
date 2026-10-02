@@ -1,6 +1,6 @@
 # 02. Auth, session và định danh (identity / 식별자)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02. Auth, session và định danh (identity / 식별자)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tách ba câu hỏi** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Session và đơn vị từ (token / 토큰)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02. Auth, session và định danh (identity / 식별자)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tách ba câu hỏi** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Session và đơn vị từ (token / 토큰)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối auth, session và identity, để phân biệt người dùng là ai, phiên nào đang hoạt động và quyền nào được cấp.
 
 ## Tách ba câu hỏi
 

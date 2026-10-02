@@ -1,6 +1,6 @@
 # Backend cốt lõi (core / 핵심) — coverage kiểm tra (audit / 감사)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Backend cốt lõi (core / 핵심) — coverage kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Coverage ma trận (matrix / 행렬)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ranh giới (boundary / 경계) cố ý không duplicate** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Backend cốt lõi (core / 핵심) — coverage kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Coverage ma trận (matrix / 행렬)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ranh giới (boundary / 경계) cố ý không duplicate** để soi ranh giới và điểm dễ nhầm. Mạch này nối coverage audit với owner, chapter và bằng chứng của backend core, để khoảng trống kiến thức được xử lý theo phạm vi thật.
 
 Ngày kiểm tra (audit / 감사): 2026-09-23. kiểm tra (audit / 감사) này kiểm tra **coverage của lập luận (reasoning / 추론)**, không đếm
 số từ khóa (keyword / 키워드) hay số dòng. Một chủ đề được coi là covered khi có đặc tả hợp đồng (contract / 계약), bất biến (invariant / 불변식),

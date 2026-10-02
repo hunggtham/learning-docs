@@ -1,6 +1,6 @@
 # 09. Modular monolith và services
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. Modular monolith và services**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ranh giới (boundary / 경계) trước topology** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Khi nào tách dịch vụ (service / 서비스)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. Modular monolith và services**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ranh giới (boundary / 경계) trước topology** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Khi nào tách dịch vụ (service / 서비스)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối modular monolith với module boundary, dependency và migration, để tách service theo ownership thay vì theo cảm giác.
 
 ## Ranh giới (boundary / 경계) trước topology
 

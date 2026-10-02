@@ -1,6 +1,6 @@
 # 06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thử lại (retry / 재시도) có điều kiện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thử lại (retry / 재시도) có điều kiện** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối timeout, retry và idempotency, để một request lỗi có thể được thử lại mà không nhân đôi side effect.
 
 ## Ngân sách thời gian chờ (timeout budget / 타임아웃 예산)
 

@@ -1,6 +1,6 @@
 # 05. Async jobs và messaging
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05. Async jobs và messaging**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chọn message ngữ nghĩa (semantics / 의미론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Job vòng đời (lifecycle / 생명주기)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05. Async jobs và messaging**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chọn message ngữ nghĩa (semantics / 의미론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Job vòng đời (lifecycle / 생명주기)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Mạch này nối async jobs với messaging, delivery semantics và retry, để worker xử lý trùng lặp và mất mát theo hợp đồng rõ ràng.
 
 ## Chọn message ngữ nghĩa (semantics / 의미론)
 

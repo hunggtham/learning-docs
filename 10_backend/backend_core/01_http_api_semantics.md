@@ -1,6 +1,6 @@
 # 01. HTTP API ngữ nghĩa (semantics / 의미론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01. HTTP API ngữ nghĩa (semantics / 의미론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **API là đặc tả hợp đồng (contract / 계약)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Idempotency và tính đồng thời (concurrency / 동시성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01. HTTP API ngữ nghĩa (semantics / 의미론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **API là đặc tả hợp đồng (contract / 계약)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Idempotency và tính đồng thời (concurrency / 동시성)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối HTTP API semantics với resource, method, status và error contract, để client và server cùng hiểu một request như thế nào.
 
 ## API là đặc tả hợp đồng (contract / 계약)
 

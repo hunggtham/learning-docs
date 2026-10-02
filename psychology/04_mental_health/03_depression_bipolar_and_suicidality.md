@@ -1,7 +1,6 @@
 # Depression, bipolar và suicidality — tính tương thích (compatibility / 호환성) map
 
-> **Mạch đọc:** Đọc **Depression, bipolar và suicidality — tính tương thích (compatibility / 호환성) map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **chuẩn gốc (canonical / 정본) chapters** sang **Trầm cảm và anhedonia**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Depression, bipolar và suicidality — tính tương thích (compatibility / 호환성) map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) chapters** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Tại sao phải tách?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối depression, bipolar và suicidality, để theo dõi khí sắc, năng lượng, chu kỳ và rủi ro qua thời gian.
 
 Tệp (file / 파일) này được giữ làm **tính tương thích (compatibility / 호환성)/điều hướng (navigation / 내비게이션) map** vì nội dung cũ đã được tách thành ba conceptual chapter riêng. Không dùng tệp (file / 파일) này làm chuẩn gốc (canonical / 정본) chapter để học sâu.
 
@@ -42,8 +41,7 @@ Tệp (file / 파일) này được giữ làm **tính tương thích (compatibi
 
 Chapter này chỉ dùng prevention-oriented content và không chứa phương thức (method / 메서드) details.
 
-
-> **Chuyển mạch:** Từ **chuẩn gốc (canonical / 정본) chapters**, ta sang **Tại sao phải tách?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Depression, bipolar và suicidality — tính tương thích (compatibility / 호환성) map**, **Tại sao phải tách?** tiếp nhận điểm tựa từ **Chuẩn gốc (canonical / 정본) chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tại sao phải tách?
 
@@ -66,11 +64,10 @@ Gộp chúng vào một chapter dễ tạo ba lỗi:
 2. bỏ sót bipolar course khi chỉ nhìn snapshot depressed mood;
 3. biến rủi ro (risk / 위험) assessment thành một checklist của diagnosis.
 
-
-> **Chuyển mạch:** Từ **Tại sao phải tách?**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Depression, bipolar và suicidality — tính tương thích (compatibility / 호환성) map**, **Kết nối** tiếp nhận điểm tựa từ **Tại sao phải tách?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc thêm [[01_assessment_and_diagnosis]], [[11_sleep_insomnia_and_circadian_disorders]], [[../03_human_development_and_person/02_motivation_and_emotion]] và [[../05_intervention/00_psychotherapy_and_change]].
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

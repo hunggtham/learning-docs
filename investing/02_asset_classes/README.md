@@ -1,7 +1,6 @@
 # 02 — Các nhóm tài sản (Asset Classes)
 
-> **Mạch đọc:** Đọc **02 — Các nhóm tài sản (Asset Classes)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02 — Các nhóm tài sản (Asset Classes)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của asset classes, rồi nối cash, bonds, equities, factors và hedging thành lộ trình so sánh.
 
 Lĩnh vực này giải thích từng nhóm tài sản theo bản chất kinh tế, nguồn lợi suất, rủi ro và cách chúng phản ứng trong các chế độ kinh tế khác nhau. Mục tiêu không phải thuộc tên sản phẩm, mà hiểu mình đang sở hữu quyền vốn chủ, khoản nợ, tài sản thực, công cụ gần tiền mặt, tài sản tư nhân hay cấu trúc có tính chất phái sinh nào; đồng thời hiểu lớp triển khai có thể làm lợi suất thực tế khác với mức phơi nhiễm lý thuyết.
 
@@ -23,8 +22,7 @@ Nếu mục tiêu chính là cổ phiếu, hãy đọc [lộ trình Cổ phiếu
 
 [07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md](./07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md) là lớp học sâu dùng một ngôn ngữ chung để so tài sản: nguồn lợi suất, duration kinh tế, carry/roll-down, phần bù thanh khoản, cấu trúc kỳ hạn, định giá tương đối/tuyệt đối, hành vi theo regime và vai trò trong danh mục.
 
-
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **02 — Các nhóm tài sản (Asset Classes)**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
@@ -32,8 +30,7 @@ Bạn cần có khả năng nhìn một sản phẩm và xác định `quyền l
 
 Với thu nhập cố định, phải tách lợi suất nắm giữ, thay đổi lãi suất, thay đổi chênh lệch tín dụng và vỡ nợ. Với đầu tư nhân tố, phải phân biệt nhãn sản phẩm với cách triển khai thực tế. Với danh mục đa tài sản, phải nhìn đóng góp rủi ro, tiền tệ và nghĩa vụ thay vì chỉ nhìn tỷ trọng vốn. Với sản phẩm phức tạp hoặc tài sản tư nhân, phải nhìn xuyên lợi suất quảng cáo hoặc NAV ít biến động để hiểu quyền lợi pháp lý, đòn bẩy, thời điểm dòng tiền và thanh khoản khi căng thẳng.
 
-
-> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tích hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **02 — Các nhóm tài sản (Asset Classes)**, **Bài tập tích hợp** tiếp nhận điểm tựa từ **Sau lĩnh vực này bạn cần làm được gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bài tập tích hợp
 
@@ -42,3 +39,5 @@ Với thu nhập cố định, phải tách lợi suất nắm giữ, thay đổ
 Sau đó hoàn thành **mô-đun (module / 모듈) 2 — Asset Classes** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu là `asset_comparison_matrix.md`, trong đó mỗi tài sản phải được phân rã theo nguồn lợi suất, duration, tín dụng, FX, thanh khoản, regime thuận lợi/bất lợi và vai trò danh mục.
 
 Sau đó chuyển sang [03 — Phân tích doanh nghiệp](../03_company_analysis/README.md) hoặc [04 — Kinh tế học và vĩ mô](../04_economics/README.md).
+
+> **Bàn giao:** Sau **Bài tập tích hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

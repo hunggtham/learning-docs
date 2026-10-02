@@ -1,6 +1,6 @@
 # 10. môi trường vận hành (production / 운영 환경) backend trường hợp (case / 사례) studies
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **10. môi trường vận hành (production / 운영 환경) backend trường hợp (case / 사례) studies**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례) 1 — Double charge sau hết thời gian chờ (timeout / 타임아웃)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Trường hợp (case / 사례) 2 — người dùng (user / 사용자) thấy dữ liệu tenant khác** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **10. môi trường vận hành (production / 운영 환경) backend trường hợp (case / 사례) studies**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례) 1 — Double charge sau hết thời gian chờ (timeout / 타임아웃)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Trường hợp (case / 사례) 2 — người dùng (user / 사용자) thấy dữ liệu tenant khác** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối production backend case studies với triệu chứng, telemetry, trade-off và remediation, để bài học bắt nguồn từ sự cố thật.
 
 Các trường hợp (case / 사례) dưới đây luyện đường suy luận `symptom → invariant → evidence → design`.
 Chúng không thay thế chapter trước và không gắn với một khung phần mềm (framework / 프레임워크) duy nhất.

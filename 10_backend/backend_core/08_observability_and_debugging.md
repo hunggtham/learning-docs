@@ -1,6 +1,6 @@
 # 08. khả năng quan sát (observability / 관측 가능성) và debugging
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **08. khả năng quan sát (observability / 관측 가능성) và debugging**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba tín hiệu, một câu hỏi** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Debugging vòng lặp (loop / 루프)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **08. khả năng quan sát (observability / 관측 가능성) và debugging**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba tín hiệu, một câu hỏi** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Debugging vòng lặp (loop / 루프)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Mạch này nối observability với debugging, logs, metrics và traces, để giả thuyết sự cố được kiểm tra bằng bằng chứng liên kết.
 
 ## Ba tín hiệu, một câu hỏi
 
