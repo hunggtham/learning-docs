@@ -1,6 +1,6 @@
 # 09. High-Yield Numbers & Institutions — phạm vi chung + 심화
 
-> **Mạch đọc:** Đặt **09. High-Yield Numbers & Institutions — phạm vi chung + 심화** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Con số nên thuộc** sang **Bộ bốn cần phản xạ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Con số nên thuộc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bộ bốn cần phản xạ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 > **시험 범위:** `공통`
 
@@ -22,8 +22,9 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 | hiện hành 예금보호한도 | 1억원 |
 | hiện hành 법정 최고금리 | 연 20% |
 
+`1억원` và `연 20%` là các fact có mốc thời gian; trước kỳ thi hãy mở file corrections và notice hiện hành. Không dùng bảng này để thay thế thông báo pháp lý.
 
-> **Chuyển mạch:** Từ **Con số nên thuộc**, ta sang **Bộ bốn cần phản xạ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** tiếp nhận điểm tựa từ **Con số nên thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ quan dễ nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ bốn cần phản xạ
 
@@ -33,8 +34,7 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 ### 4대 사회보험
 `국민건강보험 · 고용보험 · 국민연금 · 산업재해보상보험`
 
-
-> **Chuyển mạch:** Từ **Bộ bốn cần phản xạ**, ta sang **Cơ quan dễ nhầm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** đã nêu tiêu chí phân biệt, còn **Cơ quan dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cặp dễ nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cơ quan dễ nhầm
 
@@ -54,8 +54,18 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 | 국민권익위원회 | 권익·부패 관련 |
 | 외국인종합안내센터 | 1345 |
 
+### Tình huống cần nối với cơ quan
 
-> **Chuyển mạch:** Từ **Cơ quan dễ nhầm**, ta sang **Cặp dễ nhầm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+| Tình huống | Kênh cần nhớ | Điều cần nói trong đáp án |
+|---|---|---|
+| tội phạm hoặc nguy hiểm đang xảy ra | `112` | báo cảnh sát |
+| cháy, cấp cứu, tai nạn | `119` | cứu hỏa/cấp cứu |
+| bạo lực học đường | `117` | kênh tư vấn và báo cáo chuyên trách |
+| visa, cư trú, thủ tục người nước ngoài | `1345` | tư vấn xuất nhập cảnh, không phải số khẩn cấp |
+| tranh chấp tiêu dùng | `한국소비자원` | hỗ trợ tư vấn và xử lý khiếu nại |
+| cần trợ giúp pháp lý | `대한법률구조공단` | tư vấn/trợ giúp pháp luật |
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cơ quan dễ nhầm** đã nêu tiêu chí phân biệt, còn **Cặp dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **귀화용 심화 — phản xạ thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cặp dễ nhầm
 
@@ -68,8 +78,7 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 `호남 ↔ 영남`  
 `설날 ↔ 추석`
 
-
-> **Chuyển mạch:** Từ **Cặp dễ nhầm**, ta sang **귀화용 심화 — phản xạ thêm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cặp dễ nhầm** đã nêu tiêu chí phân biệt, còn **귀화용 심화 — phản xạ thêm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 귀화용 심화 — phản xạ thêm
 
@@ -82,6 +91,14 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 `국가 ↔ 정부`  
 `광복 → 정부수립 → 한국전쟁 → 민주화`
 
+Khi gặp câu hỏi 심화, hãy thêm một câu nêu **lý do hoặc giới hạn**: quyền cơ bản không đồng nghĩa quyền vô hạn; 영주권 không đồng nghĩa quốc tịch; 사회보험 không đồng nghĩa trợ cấp công.
+
 Nhóm này nên luyện bằng **giải thích**, không chỉ flashcard một từ.
 
-> **Bàn giao:** Sau **귀화용 심화 — phản xạ thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+## Cây quyết định số và cơ quan
+
+Hãy đi từ tình huống đến quyền hạn: nguy hiểm tức thời thì `112` hoặc `119`; bạo lực học đường thì `117`; thủ tục cư trú thì `1345`; tranh chấp tiêu dùng thì `한국소비자원`; cần trợ giúp pháp lý thì `대한법률구조공단`. Với cơ quan nhà nước, phân biệt `국회` (làm luật/giám sát), `행정부` (thực thi) và `법원` (xét xử).
+
+Mỗi đáp án nên có ba phần: **tình huống → hành động → cơ quan**. Như vậy người học không nhầm số hỗ trợ với số khẩn cấp và không gán quyền quyết định cuối cùng cho một cơ quan tư vấn.
+
+> **Bàn giao:** Sau **귀화용 심화 — phản xạ thêm**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

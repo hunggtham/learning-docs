@@ -1,6 +1,6 @@
 # KIIP exam notes — 한국사회 이해
 
-> **Mạch đọc:** Đọc **KIIP exam notes — 한국사회 이해** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc hiện tại** sang **Foundation & phạm vi (scope / 범위)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **KIIP exam notes — 한국사회 이해**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc hiện tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Backbone 50 bài** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Đây là **bộ ghi chú (note / 노트) duy nhất về nội dung thi KIIP trong repository**, nằm trực tiếp trong `korean_culture/`. Nội dung được tổng hợp theo chủ đề để học một mạch; **không chia theo mức (level / 수준), không tạo cây thư mục riêng cho từng loại kỳ thi**.
 
@@ -8,7 +8,7 @@ Các nhãn phạm vi được ghi ngay tại chỗ để người học biết n
 
 - `공통`: phần cơ bản cần học cho **영주용**, đồng thời là nền tảng của **귀화용**.
 - `귀화용 심화`: phần cần học thêm cho mục tiêu 국적/귀화.
-- `현재 확인`: dữ liệu, luật hoặc chính sách (policy / 정책) có thể thay đổi và cần kiểm tra nguồn chính thức.
+- `현재 확인`: dữ liệu, luật hoặc chính sách (policy / 정책) có thể thay đổi và cần kiểm tra thông báo hiện hành.
 
 > `공통` và `귀화용 심화` chỉ là nhãn phạm vi **trong nội dung thi KIIP**, không phải các mức (level / 수준) hay các bộ tài liệu độc lập.
 
@@ -17,7 +17,7 @@ Các nhãn phạm vi được ghi ngay tại chỗ để người học biết n
 ### Foundation & phạm vi (scope / 범위)
 
 1. [`00_exam_scope_and_strategy.md`](00_exam_scope_and_strategy.md) — bản đồ phạm vi, tag và cách học 5 vòng.
-2. [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md) — tách nguồn (source / 소스) cũ với fact hiện hành.
+2. [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md) — tách dữ liệu cũ với fact hiện hành.
 
 ### 8 lĩnh vực (domain / 도메인) / 50 bài
 
@@ -30,23 +30,19 @@ Các nhãn phạm vi được ghi ngay tại chỗ để người học biết n
 9. [`07_역사.md`](07_역사.md) — 역사 38~44.
 10. [`08_지리.md`](08_지리.md) — 지리 45~50.
 
-### Recall & exam practice
+### Writing, speaking & reference
 
 11. [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md) — số, cơ quan, cặp dễ nhầm.
 12. [`10_작문_구술.md`](10_작문_구술.md) — viết và nói, có `공통` + `귀화용 심화`.
-13. [`11_mock_01.md`](11_mock_01.md) — mock tổng hợp 01.
-14. [`13_exam_question_patterns.md`](13_exam_question_patterns.md) — mẫu (pattern / 패턴) câu hỏi, contrast, chuỗi (sequence / 시퀀스), tình huống và trap.
-15. [`14_active_recall_bank.md`](14_active_recall_bank.md) — 80 câu recall theo 8 lĩnh vực (domain / 도메인) + 귀화 심화.
-16. [`15_mock_02.md`](15_mock_02.md) — mock tổng hợp 02.
+13. [`13_exam_question_patterns.md`](13_exam_question_patterns.md) — mẫu (pattern / 패턴) câu hỏi, contrast, chuỗi (sequence / 시퀀스), tình huống và trap.
 
 ### Tham chiếu (reference / 참조) & chất lượng (quality / 품질) điều khiển (control / 제어)
 
-17. [`12_cross_reference_master_books.md`](12_cross_reference_master_books.md) — từ ghi chú (note / 노트) thi sang Korean Culture/Korean lịch sử (history / 이력) chuyên sâu.
-18. [`16_coverage_audit.md`](16_coverage_audit.md) — coverage kiểm tra (audit / 감사) và vùng cần hiện tại (current / 현재) xác minh (verification / 확인).
-19. [`SOURCES.md`](SOURCES.md) — provenance của 8 PDF và nguồn chính thức.
+14. [`12_cross_reference_master_books.md`](12_cross_reference_master_books.md) — từ ghi chú (note / 노트) thi sang Korean Culture/Korean lịch sử (history / 이력) chuyên sâu.
+15. [`16_coverage_audit.md`](16_coverage_audit.md) — coverage kiểm tra (audit / 감사) và vùng cần hiện tại (current / 현재) xác minh (verification / 확인).
+16. [`SOURCES.md`](SOURCES.md) — provenance của 8 PDF và các trang đối chiếu.
 
-
-> **Chuyển mạch:** Từ **Cấu trúc hiện tại**, ta sang **Backbone 50 bài** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **KIIP exam notes — 한국사회 이해**, **Backbone 50 bài** tiếp nhận điểm tựa từ **Cấu trúc hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Workflow học đề xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Backbone 50 bài
 
@@ -54,8 +50,7 @@ Các nhãn phạm vi được ghi ngay tại chỗ để người học biết n
 
 Phần cơ bản được dựng từ 8 PDF người học cung cấp. Nội dung `귀화용 심화` được **gộp vào đúng lĩnh vực (domain / 도메인) liên quan**, ví dụ `국민·복지` trong 사회, `기본권·헌정·민주주의` trong 정치/법/역사, thay vì tạo một cây thư mục riêng.
 
-
-> **Chuyển mạch:** Từ **Backbone 50 bài**, ta sang **Workflow học đề xuất** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **KIIP exam notes — 한국사회 이해**, **Backbone 50 bài** xác định đầu vào; **Workflow học đề xuất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quan hệ với Master kiến thức (knowledge / 지식) Book** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Workflow học đề xuất
 
@@ -66,23 +61,16 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
    ↓
 09 high-yield
    ↓
-14 active recall
-   ↓
 10 작문·구술
    ↓
-11 mock 01
-   ↓
 13 xem lại pattern sai
-   ↓
-15 mock 02
    ↓
 16 coverage audit / current correction
 ```
 
 Nếu một fact khó nhớ vì chưa hiểu nguyên nhân, mở [`12_cross_reference_master_books.md`](12_cross_reference_master_books.md) để đọc chapter sâu rồi quay lại luyện recall.
 
-
-> **Chuyển mạch:** Từ **Workflow học đề xuất**, ta sang **Quan hệ với Master kiến thức (knowledge / 지식) Book** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **KIIP exam notes — 한국사회 이해**, **Workflow học đề xuất** xác định đầu vào; **Quan hệ với Master kiến thức (knowledge / 지식) Book** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Quan hệ với Master kiến thức (knowledge / 지식) Book
 
@@ -91,4 +79,4 @@ Các chapter cha của `korean_culture/` và thư viện `korean_history/` trả
 
 Hai lớp bổ sung cho nhau nhưng không duplicate toàn bộ nội dung.
 
-> **Bàn giao:** Sau **Quan hệ với Master kiến thức (knowledge / 지식) Book**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Quan hệ với Master kiến thức (knowledge / 지식) Book**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

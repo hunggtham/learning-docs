@@ -1,6 +1,6 @@
 # Sources & Provenance — KIIP inside Korean Culture
 
-> **Mạch đọc:** Đặt **Sources & Provenance — KIIP inside Korean Culture** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Uploaded KIIP study summaries** sang **Official / hiện tại (current / 현재) references**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sources & Provenance — KIIP inside Korean Culture**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Uploaded KIIP study summaries** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Official / hiện tại (current / 현재) references** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 ## Uploaded KIIP study summaries
 
@@ -17,8 +17,7 @@ Bộ ghi chú (note / 노트) cơ bản được dựng từ các tệp (file / 
 
 Tệp (file / 파일) DOCX được cung cấp chủ yếu là thông báo/link chia sẻ tài liệu, không chứa syllabus substantive nên không dùng làm nguồn học thuật.
 
-
-> **Chuyển mạch:** Từ **Uploaded KIIP study summaries**, ta sang **Official / hiện tại (current / 현재) references** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Sources & Provenance — KIIP inside Korean Culture**, sau nội dung của **Uploaded KIIP study summaries**, **Official / hiện tại (current / 현재) references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nguồn (source / 소스) hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Official / hiện tại (current / 현재) references
 
@@ -29,14 +28,16 @@ Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nộ
 - KIIP 평가: https://www.kiiptest.org/
 - 법무부 평가 견본/자료: https://moj.go.kr/moj/415/subview.do
 - 심화 콘텐츠 보완 연구: https://www.moj.go.kr/bbs/immigration/43/440567/artclView.do
+- 한국사회 이해 기본 교재 구성: https://www.moj.go.kr/bbs/moj/164/205208/download.do
 - 사회통합프로그램 개편방향 보도자료 (2026-07-12): 법무부 출입국·외국인정책본부
 - 법정 최고금리 20%: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
 - 예금보호한도 1억원: https://www.fsc.go.kr/no010101/85200
+- 출입국관리법(외국인등록 90일): https://law.go.kr/LSW/lsInfoP.do?lsiSeq=271511
+- 2024 인구주택총조사(1인가구 36.1%): https://kostat.go.kr/boardDownload.es?bid=203&list_no=437767&seq=3
 - 중앙선거관리위원회: https://www.nec.go.kr/
 - 대한민국 국회: https://www.assembly.go.kr/
 
-
-> **Chuyển mạch:** Từ **Official / hiện tại (current / 현재) references**, ta sang **nguồn (source / 소스) hierarchy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Sources & Provenance — KIIP inside Korean Culture**, **Official / hiện tại (current / 현재) references** nêu điều cần giải thích; **Nguồn (source / 소스) hierarchy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phiên bản (version / 버전) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) hierarchy
 
@@ -49,8 +50,7 @@ Khi có xung đột (conflict / 충돌), ưu tiên:
 5. ghi chú (note / 노트) tổng hợp này;
 6. tài liệu community/thương mại.
 
-
-> **Chuyển mạch:** Từ **nguồn (source / 소스) hierarchy**, ta sang **phiên bản (version / 버전) chính sách (policy / 정책)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sources & Provenance — KIIP inside Korean Culture**, **Nguồn (source / 소스) hierarchy** nêu điều cần giải thích; **Phiên bản (version / 버전) chính sách (policy / 정책)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phạm vi (scope / 범위) tag chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phiên bản (version / 버전) chính sách (policy / 정책)
 
@@ -63,8 +63,7 @@ Không sửa âm thầm nguồn (source / 소스) cũ. Ví dụ:
 
 Cả hai được giữ để người học hiểu vì sao tài liệu cũ và thông tin hiện tại khác nhau.
 
-
-> **Chuyển mạch:** Từ **phiên bản (version / 버전) chính sách (policy / 정책)**, ta sang **phạm vi (scope / 범위) tag chính sách (policy / 정책)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Sources & Provenance — KIIP inside Korean Culture**, **Phạm vi (scope / 범위) tag chính sách (policy / 정책)** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Phạm vi (scope / 범위) tag chính sách (policy / 정책)
 
@@ -73,6 +72,6 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 - Nội dung lấy từ 8 PDF cơ bản được gắn `공통` vì đó là xương sống của 영주용 và cũng là nền tảng cho 귀화용.
 - Nội dung thêm từ phạm vi 심화/nguồn chính thức được gắn `귀화용 심화`.
 - Dữ liệu pháp luật/statistic mới hơn không được sửa đè nguồn (source / 소스); dùng `현재 확인`.
-- Câu hỏi trong mock/recall bank là **câu tự biên soạn**, không được mô tả như đề thật.
+- Các tình huống luyện tập là **nội dung tự biên soạn**, không được mô tả như đề thật.
 
-> **Bàn giao:** Sau **phạm vi (scope / 범위) tag chính sách (policy / 정책)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Phạm vi (scope / 범위) tag chính sách (policy / 정책)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

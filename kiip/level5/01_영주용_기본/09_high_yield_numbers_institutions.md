@@ -1,6 +1,6 @@
 # 09. High-Yield Numbers & Institutions
 
-File này là bảng ôn nhanh sau khi đã học các chapter chính. Cách dùng đúng không phải học mọi số như một chuỗi độc lập, mà nối mỗi số với **cơ quan, tình huống và chức năng**; khi số có thể thay đổi, ưu tiên bản corrections và nguồn hiện hành.
+File này là bảng ôn nhanh sau khi đã học các chapter chính. Cách dùng đúng không phải học mọi số như một chuỗi độc lập, mà nối mỗi số với **cơ quan, tình huống và chức năng**; khi số có thể thay đổi, ưu tiên bản corrections và thông báo hiện hành.
 
 ## Con số nên thuộc
 
@@ -19,6 +19,8 @@ Hãy đọc bảng theo nhóm: nhiệm kỳ và cấu trúc nhà nước, giáo 
 | 학교폭력 | 117 |
 | hiện hành 예금보호한도 | 1억원 |
 | hiện hành 법정 최고금리 | 연 20% |
+
+`1억원` và `연 20%` là các fact có mốc thời gian; trước kỳ thi hãy mở file corrections và notice hiện hành. Không dùng bảng này để thay thế thông báo pháp lý.
 
 Điểm chốt là các số chỉ có ý nghĩa khi biết câu hỏi chúng trả lời. `1345` không phải số khẩn cấp chung, còn `112` và `119` phục vụ hai loại tình huống khác nhau.
 
@@ -54,6 +56,17 @@ Bảng này nên được đọc như một chuỗi chức năng: lập pháp �
 | 국민권익위원회 | 권익·부패 관련 |
 | 외국인종합안내센터 | 1345 |
 
+### Tình huống cần nối với cơ quan
+
+| Tình huống | Kênh cần nhớ | Điều cần nói trong đáp án |
+|---|---|---|
+| tội phạm hoặc nguy hiểm đang xảy ra | `112` | báo cảnh sát |
+| cháy, cấp cứu, tai nạn | `119` | cứu hỏa/cấp cứu |
+| bạo lực học đường | `117` | kênh tư vấn và báo cáo chuyên trách |
+| visa, cư trú, thủ tục người nước ngoài | `1345` | tư vấn xuất nhập cảnh, không phải số khẩn cấp |
+| tranh chấp tiêu dùng | `한국소비자원` | hỗ trợ tư vấn và xử lý khiếu nại |
+| cần trợ giúp pháp lý | `대한법률구조공단` | tư vấn/trợ giúp pháp luật |
+
 Khi gặp câu hỏi về cơ quan, hãy trả lời bằng **ai làm gì**, không chỉ dịch tên cơ quan. Đây là cách phân biệt `국회` với `정부`, `경찰` với `검찰` và `법원`.
 
 ## Cặp dễ nhầm
@@ -68,3 +81,27 @@ Các cặp dưới đây là điểm giao giữa các chapter. Hãy tự nói m�
 `국회 ↔ 정부`  
 `호남 ↔ 영남`  
 `설날 ↔ 추석`
+
+## Cây quyết định khi gặp câu hỏi số và cơ quan
+
+Đừng bắt đầu bằng việc nhớ số. Bắt đầu bằng **mức độ khẩn cấp → loại vấn đề → quyền hạn của cơ quan**:
+
+1. Có nguy hiểm ngay không? `112` nếu là tội phạm/nguy hiểm; `119` nếu cháy, tai nạn hoặc cấp cứu.
+2. Có phải vấn đề trẻ em trong trường học không? `117`.
+3. Là thủ tục cư trú/người nước ngoài nhưng không khẩn cấp? `1345`.
+4. Là tranh chấp hàng hóa/dịch vụ? `한국소비자원`; là cần trợ giúp pháp lý? `대한법률구조공단`.
+5. Là câu hỏi về quyền lực nhà nước? Phân biệt `국회` (làm luật/giám sát), `행정부` (thực thi), `법원` (xét xử).
+
+## Mini recall theo tình huống
+
+Hãy tự trả lời trước khi nhìn đáp án:
+
+| Tình huống | Đáp án cần nói thêm |
+|---|---|
+| Bạn nhận link yêu cầu chuyển tiền | dừng, xác minh qua kênh chính thức; không dùng `112` nếu chưa có nguy hiểm trực tiếp |
+| Bị đe dọa đang xảy ra | `112`, nêu địa điểm và tình hình |
+| Người thân khó thở đột ngột | `119`, mô tả triệu chứng và vị trí |
+| Không hiểu điều kiện visa | `1345`, chuẩn bị tư cách cư trú và câu hỏi cụ thể |
+| Hợp đồng mua hàng có lỗi | lưu hợp đồng/hóa đơn, yêu cầu `수리·교환·환불`, rồi liên hệ `한국소비자원` nếu cần |
+
+Mục tiêu của bảng là tạo phản xạ **tình huống → hành động → cơ quan**, chứ không biến các số thành câu thần chú tách khỏi đời sống.

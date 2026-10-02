@@ -2,7 +2,7 @@
 
 File này là bài giảng ngắn về cách đọc dữ liệu có thời hạn. Người mới thường gặp một con số trong PDF rồi ghi nhớ như một chân lý cố định, nhưng chính sách, thống kê và hạn mức pháp luật có thể đổi theo ngày ban hành. Vì vậy, mục tiêu ở đây là học **cách phân biệt fact cũ, fact hiện hành và fact ổn định**, chứ không chỉ thay một con số bằng con số khác.
 
-Các PDF người học cung cấp rất hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. File này tách rõ **“nội dung trong PDF”** và **“trạng thái được kiểm tra đến 2026-09-20”**.
+Các PDF người học cung cấp hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. File này tách rõ **“nội dung trong PDF”** và **“trạng thái đã kiểm tra đến 2026-10-01”**.
 
 > Khi thi, ưu tiên giáo trình/공지 chính thức áp dụng cho kỳ thi của bạn. File này nhằm tránh học nhầm những dữ liệu đã thay đổi rõ ràng.
 
@@ -20,7 +20,7 @@ Bản tóm tắt chương 경제 ghi `1인당 최고 5천만원`.
 - Hiện hành: `1억원`
 - Keyword: `예금보호한도`
 
-Nguồn: https://www.fsc.go.kr/no010101/85200
+Đối chiếu: https://www.fsc.go.kr/no010101/85200
 
 Ví dụ này cho thấy khi gặp số liệu tài chính, hãy ghi kèm **đơn vị, đối tượng và ngày hiệu lực**, thay vì chỉ học thuộc phần số.
 
@@ -36,7 +36,7 @@ Bản tóm tắt chương 법 ghi `연 24% 이내`.
 - Hiện hành: `20%`
 - Keyword: `법정 최고금리`
 
-Nguồn Bộ Tư pháp: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
+Đối chiếu Bộ Tư pháp: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
 
 Điểm cần mang vào phòng thi là khái niệm **법정 최고금리** và mốc hiện hành; con số cũ chỉ nên giữ lại để nhận diện bẫy trong tài liệu cũ.
 
@@ -51,13 +51,13 @@ Theo 인구주택총조사 2024, **1인가구 chiếm 36.1%** số hộ gia đì
 - Hãy nhớ xu hướng: `1인 가구 증가`
 - Không nên khóa trí nhớ vào `30%` nếu đề không nói rõ năm.
 
-Nguồn 국가데이터처/통계청: 2024 인구주택총조사, công bố 2025-07-29.
+Đối chiếu 국가데이터처/통계청: 2024 인구주택총조사, công bố 2025-07-29.
 
 Vì vậy, với tỷ lệ hộ một người, hãy ưu tiên xu hướng `1인 가구 증가` và đọc con số như một ảnh chụp của một năm cụ thể.
 
 ## 4. 서울 인구
 
-Ví dụ về dân số Seoul nhắc ta rằng ngay cả một fact quen thuộc cũng cần được đặt trong bối cảnh “dân số nào, thời điểm nào và nguồn nào”. Phần địa lý vẫn có thể dạy vai trò của Seoul ổn định, nhưng số dân tuyệt đối không nên học như một hằng số.
+Ví dụ về dân số Seoul nhắc ta rằng một fact quen thuộc vẫn phải ghi rõ **loại dân số và thời điểm đo**. Phần địa lý vẫn có thể dạy vai trò của Seoul ổn định, nhưng số dân tuyệt đối không nên học như một hằng số.
 
 Bản tóm tắt địa lý dùng con số gần `약 1,000만 명`. Đây là mô tả truyền thống, nhưng dân số đăng ký Seoul hiện thấp hơn.
 
@@ -85,7 +85,7 @@ Biểu đồ trong chương 문화 dùng census **2015**. Hãy đọc nó như m
 
 ## 6. 유학생 수, 대학 진학률 và các statistic khác
 
-Nhóm cuối của các ví dụ biến động nhanh là số du học sinh, tỷ lệ vào đại học và chính sách hỗ trợ. Ở đây, mục tiêu của bài học là tạo thói quen kiểm tra nguồn, không phải cố ghi nhớ mọi con số từng xuất hiện trong một PDF.
+Nhóm cuối của các ví dụ biến động nhanh là số du học sinh, tỷ lệ vào đại học và chính sách hỗ trợ. Ở đây, mục tiêu của bài học là tạo thói quen kiểm tra mốc thời gian và thông báo áp dụng, không phải cố ghi nhớ mọi con số từng xuất hiện trong một PDF.
 
 Các số liệu như số du học sinh năm 2020, tỷ lệ vào đại học hoặc một số chính sách hỗ trợ sinh con có thể đổi nhanh.
 
@@ -114,4 +114,4 @@ Những mục sau có tính cấu trúc cao và vẫn là nền tảng:
 - 국경일·국가상징 cơ bản
 - 역사 chronology lớn
 
-Kết luận của file rất đơn giản: hãy học hệ thống và mối quan hệ trước, ghi con số kèm năm và nguồn sau. Khi ôn lại, đặt mỗi fact vào đúng một trong ba nhãn **cũ / hiện hành / ổn định**, rồi kiểm tra lại thông báo thi trước ngày thi.
+Kết luận của file rất đơn giản: hãy học hệ thống và mối quan hệ trước, ghi con số kèm năm và trạng thái sau. Khi ôn lại, đặt mỗi fact vào đúng một trong ba nhãn **cũ / hiện hành / ổn định**, rồi kiểm tra lại thông báo thi trước ngày thi.
