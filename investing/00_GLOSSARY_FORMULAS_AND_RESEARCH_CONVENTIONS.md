@@ -1,7 +1,6 @@
 # Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu
 
-> **Mạch đọc:** Đặt **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Quy tắc ngôn ngữ của thư viện** sang **2. Dữ kiện, ước tính, giả định, kịch bản và luận điểm đầu tư**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**. Route đi từ language conventions → facts, estimates, assumptions, scenarios và theses → formulas/units và valuation vocabulary → source/date/confidence → research notes, để toàn bộ investing dùng cùng một chuẩn giải thích tiếng Việt.
 
 > tệp (file / 파일) này là lớp chuẩn hóa dùng chung cho toàn bộ `investing/`. Mục tiêu là giúp người đọc dùng cùng một hệ thuật ngữ, cùng quy ước công thức và cùng cách phân biệt dữ kiện, ước tính, giả định và luận điểm đầu tư. Phần giải thích luôn ưu tiên tiếng Việt; thuật ngữ tiếng Anh chỉ được giữ như từ khóa bổ sung để tra cứu tài liệu gốc.
 
@@ -23,6 +22,8 @@ Không viết một câu kiểu `Portfolio risk depends on correlation and liqui
 
 Các tên chuẩn và viết tắt đã phổ biến như ETF, ETN, CPI, GDP, ROIC, FCFF, FCFE, WACC, DV01, VaR, KOSPI hay VN30 có thể giữ nguyên, nhưng ý nghĩa phải được giải thích bằng tiếng Việt ở lần xuất hiện đầu tiên.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **2. Dữ kiện, ước tính, giả định, kịch bản và luận điểm đầu tư** tiếp nhận điểm tựa từ **1. Quy tắc ngôn ngữ của thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Giá trị danh nghĩa và giá trị thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Dữ kiện, ước tính, giả định, kịch bản và luận điểm đầu tư
 
 Một ghi chú nghiên cứu (research note) phải phân biệt rõ năm lớp thông tin.
@@ -42,6 +43,8 @@ Chuỗi tối thiểu nên là:
 ```text
 Dữ kiện → Diễn giải → Giả định → Kịch bản → Định giá / Lợi suất kỳ vọng → Vị thế → Điều kiện vô hiệu hóa
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **3. Giá trị danh nghĩa và giá trị thực** tiếp nhận điểm tựa từ **2. Dữ kiện, ước tính, giả định, kịch bản và luận điểm đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lợi suất số học và lợi suất hình học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Giá trị danh nghĩa và giá trị thực
 
@@ -65,6 +68,8 @@ Không nên so lương, GDP, lợi suất trái phiếu hay kết quả danh m�
 
 Vì vậy, mọi so sánh dài hạn trong các chapter sau phải ghi rõ đang dùng giá trị danh nghĩa hay giá trị thực.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **4. Lợi suất số học và lợi suất hình học** tiếp nhận điểm tựa từ **3. Giá trị danh nghĩa và giá trị thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Độ biến động, phương sai và độ lệch chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Lợi suất số học và lợi suất hình học
 
 Tiếp theo, ta tách mức lợi suất trung bình khỏi tốc độ tăng kép thực tế. Sự khác biệt này giải thích vì sao hai chuỗi có cùng mức trung bình vẫn có thể kết thúc ở giá trị tài sản rất khác nhau.
@@ -83,6 +88,8 @@ Trong quá trình tích lũy tài sản, lợi suất hình học thường quan
 
 Khi đã hiểu compounding, ta cần một thước đo cho mức độ dao động quanh đường đi đó: volatility.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **5. Độ biến động, phương sai và độ lệch chuẩn** tiếp nhận điểm tựa từ **4. Lợi suất số học và lợi suất hình học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Hiệp phương sai và tương quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Độ biến động, phương sai và độ lệch chuẩn
 
 Volatility mô tả độ phân tán của lợi suất, nhưng không đồng nghĩa với mất tiền vĩnh viễn. Phần này đặt công thức đo lường cạnh các giới hạn của nó để người mới không dùng một con số thống kê như toàn bộ khái niệm rủi ro.
@@ -99,6 +106,8 @@ Tuy nhiên lợi suất tài chính thường có hiện tượng cụm biến �
 
 Để chuyển từ rủi ro riêng của từng tài sản sang rủi ro kết hợp, ta cần covariance và correlation.
 
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **6. Hiệp phương sai và tương quan** tiếp nhận điểm tựa từ **5. Độ biến động, phương sai và độ lệch chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phương sai của danh mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Hiệp phương sai và tương quan
 
 Hai tài sản không chỉ được đánh giá riêng lẻ; cách chúng di chuyển cùng nhau quyết định phần lớn lợi ích đa dạng hóa. Phần này giới thiệu ngôn ngữ định lượng cho mối quan hệ đó.
@@ -112,6 +121,8 @@ Correlation(A,B) = Cov(A,B) / (σA × σB)
 Tương quan thấp trong thời kỳ bình thường không đảm bảo đa dạng hóa tốt trong khủng hoảng. Vì vậy nên kết hợp tương quan trung bình với tương quan khi thị trường giảm, mức phơi nhiễm nhân tố (factor exposure) và kiểm thử kịch bản.
 
 Covariance của từng cặp sau đó được đưa vào variance của cả danh mục, thay vì cộng các volatility một cách máy móc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **7. Phương sai của danh mục** tiếp nhận điểm tựa từ **6. Hiệp phương sai và tương quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Beta và Alpha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Phương sai của danh mục
 
@@ -129,6 +140,8 @@ Một tài sản có độ biến động cao vẫn có thể làm giảm rủi 
 
 Sau khi đo rủi ro tổng, ta cần phân biệt phần lợi suất đến từ beta thị trường với phần còn lại được gọi là alpha.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **8. Beta và Alpha** tiếp nhận điểm tựa từ **7. Phương sai của danh mục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Sharpe, Sortino và Information Ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Beta và Alpha
 
 Beta đặt một tài sản trong quan hệ với benchmark; alpha chỉ có ý nghĩa sau khi đã kiểm soát đúng exposure. Mục tiêu của phần này là ngăn việc gọi mọi kết quả vượt trội là kỹ năng.
@@ -142,6 +155,8 @@ Beta = Cov(Rasset, Rbenchmark) / Var(Rbenchmark)
 **Alpha** là phần lợi suất còn lại sau khi đã tính đến chỉ số tham chiếu hoặc mô hình nhân tố phù hợp. Không nên gọi toàn bộ phần vượt trội là alpha nếu nó chỉ đến từ việc nắm nhiều cổ phiếu giá trị, vốn hóa nhỏ hoặc một nhân tố quen thuộc khác.
 
 Các ratio Sharpe, Sortino và Information Ratio tiếp tục đánh giá kết quả theo các mẫu số risk khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **9. Sharpe, Sortino và Information Ratio** tiếp nhận điểm tựa từ **8. Beta và Alpha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Mức suy giảm và toán phục hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Sharpe, Sortino và Information Ratio
 
@@ -162,6 +177,8 @@ IR = Active Return / Tracking Error
 Các tỷ lệ này hữu ích để đánh giá quy trình nhưng không thay thế phân tích mức suy giảm, rủi ro đuôi, tính thanh khoản và đường đi của kết quả.
 
 Để hiểu đường đi xấu nhất của vốn, ta chuyển sang drawdown và toán phục hồi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **10. Mức suy giảm và toán phục hồi** tiếp nhận điểm tựa từ **9. Sharpe, Sortino và Information Ratio** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. VaR và Expected Shortfall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Mức suy giảm và toán phục hồi
 
@@ -185,6 +202,8 @@ Vì vậy quản trị danh mục phải chú trọng khả năng sống sót v�
 
 VaR và Expected Shortfall tiếp tục đo các ngưỡng lỗ, nhưng cần đọc cùng giới hạn mô hình và đứt gãy thanh khoản.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **11. VaR và Expected Shortfall** tiếp nhận điểm tựa từ **10. Mức suy giảm và toán phục hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Giá trị hiện tại và chiết khấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. VaR và Expected Shortfall
 
 Phần này phân biệt ngưỡng tổn thất với mức lỗ trung bình khi đã vượt ngưỡng. Người mới cần nhớ cả hai đều là ước lượng có điều kiện, không phải bảo đảm maximum loss.
@@ -194,6 +213,8 @@ Phần này phân biệt ngưỡng tổn thất với mức lỗ trung bình khi
 Không chỉ số nào là “mức lỗ tối đa”. Chúng đều phụ thuộc mô hình, dữ liệu và giả định phân phối, đồng thời có thể đánh giá thấp các cú nhảy giá hoặc sự đứt gãy thanh khoản.
 
 Sau khi thống nhất ngôn ngữ rủi ro, ta quay về định giá dòng tiền bằng giá trị hiện tại và tỷ lệ chiết khấu.
+
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **12. Giá trị hiện tại và chiết khấu** tiếp nhận điểm tựa từ **11. VaR và Expected Shortfall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Giá trị hiện tại và chiết khấu
 
@@ -205,6 +226,8 @@ PV = Future Cash Flow / (1 + Discount Rate)^t
 
 Giá trị của tài sản là giá trị hiện tại (present value, PV) của các dòng tiền hoặc lợi ích kinh tế phù hợp với quyền lợi pháp lý của người nắm giữ. Tỷ lệ chiết khấu càng cao thì các dòng tiền ở xa càng mất giá mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **13. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** tiếp nhận điểm tựa từ **12. Giá trị hiện tại và chiết khấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Dòng tiền tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
 Một cầu nối đơn giản:
@@ -214,6 +237,8 @@ Enterprise Value = Equity Value + Net Debt + Other Senior Claims - Non-operating
 ```
 
 Giá trị doanh nghiệp (Enterprise value, EV) và giá trị vốn chủ sở hữu (Equity value) không thể dùng thay thế cho nhau. FCFF được chiết khấu bằng WACC để đi tới EV; FCFE được chiết khấu bằng chi phí vốn chủ sở hữu (cost of equity) để đi tới Equity giá trị (value / 값).
+
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **14. Dòng tiền tự do** tiếp nhận điểm tựa từ **13. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. ROIC và tái đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Dòng tiền tự do
 
@@ -228,6 +253,8 @@ FCFF ≈ EBIT × (1 - Tax Rate)
 
 Vốn lưu động ròng (net working capital) phải được hiểu theo mô hình kinh doanh. Ngân hàng và công ty bảo hiểm cần cách tiếp cận khác với doanh nghiệp công nghiệp.
 
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **15. ROIC và tái đầu tư** tiếp nhận điểm tựa từ **14. Dòng tiền tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Giá trái phiếu, duration và DV01** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. ROIC và tái đầu tư
 
 Một trực giác quan trọng:
@@ -237,6 +264,8 @@ Growth ≈ Reinvestment Rate × Return on Incremental Capital
 ```
 
 Nếu doanh nghiệp tái đầu tư nhiều nhưng lợi suất trên vốn tăng thêm thấp hơn chi phí vốn, tăng trưởng có thể phá hủy giá trị cổ đông. Tăng trưởng chất lượng cần cả dư địa phát triển và hiệu quả trên đơn vị kinh tế.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **16. Giá trái phiếu, duration và DV01** tiếp nhận điểm tựa từ **15. ROIC và tái đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Các loại lợi suất của trái phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Giá trái phiếu, duration và DV01
 
@@ -250,11 +279,15 @@ Giá trái phiếu là giá trị hiện tại của coupon và tiền gốc. Đ
 
 Danh mục trái phiếu nên được nhìn qua thời hạn lãi suất, độ nhạy theo từng đoạn đường cong và độ nhạy với chênh lệch tín dụng, không chỉ qua giá trị danh nghĩa.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **17. Các loại lợi suất của trái phiếu** tiếp nhận điểm tựa từ **16. Giá trái phiếu, duration và DV01** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Tổn thất tín dụng kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Các loại lợi suất của trái phiếu
 
 Coupon, lợi suất hiện tại (current yield), lợi suất đến đáo hạn (YTM), lợi suất đến ngày được mua lại sớm (yield to call), lợi suất xấu nhất (yield to worst) và lợi suất phân phối của quỹ là các khái niệm khác nhau.
 
 Trước khi so sánh hai mức lợi suất, cần kiểm tra cách tính dòng tiền, quy ước số ngày, cách ghép lãi, giả định đáo hạn hoặc mua lại sớm, rủi ro tín dụng, tính thanh khoản, quyền chọn và đồng tiền.
+
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **18. Tổn thất tín dụng kỳ vọng** tiếp nhận điểm tựa từ **17. Các loại lợi suất của trái phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Phân rã lợi suất ngoại tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Tổn thất tín dụng kỳ vọng
 
@@ -265,6 +298,8 @@ Expected Loss ≈ PD × LGD × Exposure
 ```
 
 Trong đó PD là xác suất vỡ nợ (probability of default), LGD là tỷ lệ tổn thất khi vỡ nợ (loss given default). Chênh lệch tín dụng (credit spread) còn chứa phần bù rủi ro và phần bù thanh khoản, nên không thể đọc nó như xác suất vỡ nợ thuần túy.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **19. Phân rã lợi suất ngoại tệ** tiếp nhận điểm tựa từ **18. Tổn thất tín dụng kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Giá trị danh nghĩa và ký quỹ của hợp đồng tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Phân rã lợi suất ngoại tệ
 
@@ -285,6 +320,8 @@ Cần phân biệt:
 
 Một ETF niêm yết bằng KRW không có nghĩa rủi ro USD của tài sản cơ sở biến mất.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **20. Giá trị danh nghĩa và ký quỹ của hợp đồng tương lai** tiếp nhận điểm tựa từ **19. Phân rã lợi suất ngoại tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Quyền chọn và các độ nhạy Greek** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Giá trị danh nghĩa và ký quỹ của hợp đồng tương lai
 
 Phần này nối quy mô hợp đồng với collateral. Người mới cần tách “đang kiểm soát bao nhiêu giá trị danh nghĩa?” khỏi “broker đang khóa bao nhiêu tiền?”, vì hai con số đó không cho cùng một câu trả lời về rủi ro.
@@ -296,6 +333,8 @@ Futures Notional = Futures Price × Contract Multiplier
 Ký quỹ (margin) chỉ là tài sản bảo đảm, không phải toàn bộ vốn có thể mất. Quy mô vị thế phải dựa trên giá trị danh nghĩa, độ nhạy, mức lỗ trong kịch bản bất lợi và đường đi của yêu cầu ký quỹ.
 
 Sau khi tách notional và margin, ta có thể dùng cùng risk budget để đánh giá kỳ vọng của một chiến lược.
+
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **21. Quyền chọn và các độ nhạy Greek** tiếp nhận điểm tựa từ **20. Giá trị danh nghĩa và ký quỹ của hợp đồng tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Quy mô vị thế theo ngân sách rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Quyền chọn và các độ nhạy Greek
 
@@ -314,6 +353,8 @@ Delta, Gamma, Theta, Vega và Rho là các độ nhạy cục bộ; chúng khôn
 
 Khi payoff và độ nhạy đã rõ, ta quay về bài toán quy mô vị thế theo mức lỗ cho phép.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **22. Quy mô vị thế theo ngân sách rủi ro** tiếp nhận điểm tựa từ **21. Quyền chọn và các độ nhạy Greek** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Kỳ vọng toán học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Quy mô vị thế theo ngân sách rủi ro
 
 Position sizing là phép dịch từ luận điểm sang số tiền có thể mất. Công thức chỉ có ý nghĩa khi invalidation, thanh khoản, factor overlap và rủi ro nhảy giá đã được nêu trước.
@@ -325,6 +366,8 @@ Position Size ≈ Allowed Loss / Loss Per Unit Under Invalidation
 ```
 
 Mức lỗ cho phép phải được xem cùng tổng rủi ro đang mở của danh mục, mức trùng lặp nhân tố, thanh khoản, rủi ro nhảy giá và đòn bẩy.
+
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **23. Kỳ vọng toán học** tiếp nhận điểm tựa từ **22. Quy mô vị thế theo ngân sách rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Chỉ số tham chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Kỳ vọng toán học
 
@@ -338,6 +381,8 @@ Tỷ lệ thắng cao không đảm bảo kỳ vọng dương. Một chiến lư
 
 Vì vậy, mọi kỳ vọng phải đi kèm điều kiện vô hiệu hóa, chất xúc tác và bằng chứng sẽ làm luận điểm thay đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, sau nội dung của **23. Kỳ vọng toán học**, **24. Chỉ số tham chiếu** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **25. Kỷ luật dữ liệu đúng thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Chỉ số tham chiếu
 
 Chỉ số tham chiếu (benchmark) phải được chọn trước khi đánh giá kết quả và phải phù hợp với tập cơ hội đầu tư.
@@ -345,6 +390,8 @@ Chỉ số tham chiếu (benchmark) phải được chọn trước khi đánh g
 Một benchmark tốt giúp phân biệt kết quả đến từ beta thị trường, nghiêng nhân tố, phân bổ tài sản, lựa chọn chứng khoán, tiền tệ hay chất lượng thực thi lệnh.
 
 Không thay benchmark sau khi chiến lược hoạt động kém chỉ để làm thành tích trông tốt hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **24. Chỉ số tham chiếu** nêu điều cần giải thích; **25. Kỷ luật dữ liệu đúng thời điểm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Thứ bậc nguồn dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Kỷ luật dữ liệu đúng thời điểm
 
@@ -359,6 +406,8 @@ Thời điểm thực thi (Execution Time)
 ```
 
 Không được dùng dữ liệu đã được sửa đổi về sau như thể nhà đầu tư đã biết nó tại thời điểm quyết định. Đây là nguyên tắc chống thiên lệch nhìn trước (look-ahead bias).
+
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **25. Kỷ luật dữ liệu đúng thời điểm** nêu điều cần giải thích; **26. Thứ bậc nguồn dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. Quy tắc thời điểm cho dữ liệu động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Thứ bậc nguồn dữ liệu
 
@@ -376,11 +425,15 @@ Cơ quan quản lý / Sở giao dịch / Ngân hàng trung ương / Cơ quan th�
 
 Nguồn ở tầng cao hơn không phải luôn đúng tuyệt đối, nhưng dữ kiện quan trọng nên được neo bằng nguồn sơ cấp khi có thể.
 
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **26. Thứ bậc nguồn dữ liệu** nêu điều cần giải thích; **27. Quy tắc thời điểm cho dữ liệu động** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. Kịch bản cơ sở, tích cực và tiêu cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Quy tắc thời điểm cho dữ liệu động
 
 Lãi suất chính sách, thuế, chu kỳ thanh toán, thành phần chỉ số, giới hạn sở hữu nước ngoài, quy định tiếp cận thị trường và thông số sản phẩm có thể thay đổi.
 
 Mọi dữ liệu động nên ghi rõ `tính đến YYYY-MM-DD` hoặc kỳ tham chiếu. Nếu không có thời điểm, người đọc rất dễ nhầm dữ liệu lịch sử thành quy định hiện hành.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **27. Quy tắc thời điểm cho dữ liệu động** nêu điều cần giải thích; **28. Kịch bản cơ sở, tích cực và tiêu cực** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. Chất xúc tác và điều kiện vô hiệu hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Kịch bản cơ sở, tích cực và tiêu cực
 
@@ -396,6 +449,8 @@ Tiêu cực: công suất mới tăng nhanh + nhu cầu hụt kỳ vọng → AS
 
 Sau đó mới chuyển các động lực thành doanh thu, biên lợi nhuận, dòng tiền và định giá.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **29. Chất xúc tác và điều kiện vô hiệu hóa** tiếp nhận điểm tựa từ **28. Kịch bản cơ sở, tích cực và tiêu cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Trước quyết định và sau kết quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Chất xúc tác và điều kiện vô hiệu hóa
 
 Sau khi đã mô tả kịch bản, ta cần chỉ rõ điều gì có thể khiến thị trường cập nhật kỳ vọng và điều gì chứng minh luận điểm không còn đúng. Đây là phần chuyển từ câu chuyện sang tiêu chí kiểm tra.
@@ -406,6 +461,8 @@ Luận điểm không được biến thành niềm tin không thể kiểm ch�
 
 Để tránh đánh giá ngược bằng kết quả đã biết, phần tiếp theo tách những gì có thể biết trước hành động khỏi những gì chỉ biết sau đó.
 
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **30. Trước quyết định và sau kết quả** tiếp nhận điểm tựa từ **29. Chất xúc tác và điều kiện vô hiệu hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Phân rã kết quả đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Trước quyết định và sau kết quả
 
 Phân biệt ex-ante và ex-post bảo vệ việc review khỏi hindsight bias. Một quyết định được đánh giá bằng thông tin và quy trình tại thời điểm hành động, không chỉ bằng P/L cuối cùng.
@@ -415,6 +472,8 @@ Phân biệt ex-ante và ex-post bảo vệ việc review khỏi hindsight bias.
 Một quyết định tốt vẫn có thể dẫn đến kết quả xấu do bất định. Một quyết định tệ vẫn có thể kiếm tiền do may mắn. Khi đánh giá, phải tách chất lượng quyết định khỏi thiên lệch theo kết quả.
 
 Khi đã tách được chất lượng quyết định, ta có thể phân rã kết quả để biết phần nào đến từ beta, factor, currency, execution hay may mắn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **31. Phân rã kết quả đầu tư** tiếp nhận điểm tựa từ **30. Trước quyết định và sau kết quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Quy tắc viết ghi chú nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Phân rã kết quả đầu tư
 
@@ -436,6 +495,8 @@ Sai lệch hành vi
 
 Mục tiêu là biết phần nào đến từ kỹ năng, phần nào đến từ rủi ro đã nhận và phần nào chỉ là may mắn.
 
+> **Chuyển mạch:** Trong **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **32. Quy tắc viết ghi chú nghiên cứu** tiếp nhận điểm tựa từ **31. Phân rã kết quả đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Nguyên tắc cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Quy tắc viết ghi chú nghiên cứu
 
 Một ghi chú nghiên cứu tốt cần trả lời theo thứ tự:
@@ -454,6 +515,8 @@ Tôi đang phân tích điều gì?
 
 Viết câu hoàn chỉnh bằng tiếng Việt trước. Chỉ giữ từ tiếng Anh trong ngoặc khi nó là thuật ngữ chuẩn cần tra cứu.
 
+> **Chuyển mạch:** Ở chặng này của **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu**, **33. Nguyên tắc cuối cùng** tiếp nhận điểm tựa từ **32. Quy tắc viết ghi chú nghiên cứu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 33. Nguyên tắc cuối cùng
 
 Mục tiêu của thư viện không phải là nhét càng nhiều thuật ngữ tiếng Anh càng tốt. Mục tiêu là hiểu bản chất bằng tiếng Việt nhưng vẫn nhận ra thuật ngữ gốc khi đọc báo cáo, tài liệu học thuật hoặc dữ liệu quốc tế.
@@ -464,4 +527,4 @@ Quy tắc mặc định:
 Tiếng Việt để hiểu → Tiếng Anh trong ngoặc để tra cứu → Viết tắt để dùng thực tế
 ```
 
-> **Bàn giao:** Sau **33. Nguyên tắc cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ADVANCED DEPTH PATH](./ADVANCED_DEPTH_PATH.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **33. Nguyên tắc cuối cùng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

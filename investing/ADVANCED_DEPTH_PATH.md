@@ -1,7 +1,6 @@
 # Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing
 
-> **Mạch đọc:** Đặt **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách sử dụng** sang **01 — Thiết kế danh mục nâng cao**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**. Route đi từ canonical foundations → portfolio design, macro/regime và derivatives → company/industry/valuation labs → risk, execution và governance → evidence, testing và decision review, để lộ trình nâng độ sâu theo năng lực chứ không theo số thuật ngữ.
 
 > tệp (file / 파일) này là bản đồ dành cho giai đoạn sau khi đã đọc các chapter nền tảng. Mục tiêu không phải học thêm thật nhiều thuật ngữ, mà tăng khả năng **nối kiến thức → xây mô hình → dùng dữ liệu → kiểm thử → nhận diện dạng thất bại (failure mode / 실패 모드) → ra quyết định → đánh giá lại**.
 
@@ -46,6 +45,8 @@ Khái niệm (concept)
 → Đầu ra có thể review
 ```
 
+> **Chuyển mạch:** Trong **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **01 — Thiết kế danh mục nâng cao** tiếp nhận điểm tựa từ **Cách sử dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **02 — Định giá tài sản và vai trò trong danh mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 01 — Thiết kế danh mục nâng cao
 
 [06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md](./01_foundations/06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md)
@@ -69,6 +70,8 @@ Dạng thất bại (failure mode / 실패 모드) cần nhận diện gồm gi�
 
 **Gate hoàn thành:** phải tạo được `IPS + stress matrix + reverse stress test + rebalancing rules`, đồng thời giải thích được danh mục thất bại trong trạng thái nào.
 
+> **Chuyển mạch:** Ở chặng này của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **02 — Định giá tài sản và vai trò trong danh mục** tiếp nhận điểm tựa từ **01 — Thiết kế danh mục nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **03 — Mô hình doanh nghiệp tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 02 — Định giá tài sản và vai trò trong danh mục
 
 [07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md](./02_asset_classes/07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md)
@@ -91,6 +94,8 @@ Dữ liệu tối thiểu phải biết đọc gồm yield curve, real yield, cr
 Dạng thất bại (failure mode / 실패 모드) gồm so tài sản chỉ bằng lợi suất danh nghĩa, nhầm ETF với asset lớp (class / 클래스), nhìn private NAV ít biến động rồi kết luận rủi ro thấp, nhầm carry cao với expected return cao và bỏ qua embedded option/leverage.
 
 **Gate hoàn thành:** phải so được ít nhất bốn asset lớp (class / 클래스) trên cùng một bảng `cash flow → duration → carry → liquidity → regime → failure mode → portfolio role`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **03 — Mô hình doanh nghiệp tích hợp** tiếp nhận điểm tựa từ **02 — Định giá tài sản và vai trò trong danh mục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **04 — Nowcasting và truyền dẫn vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 03 — Mô hình doanh nghiệp tích hợp
 
@@ -117,6 +122,8 @@ Dạng thất bại (failure mode / 실패 모드) gồm dự báo doanh thu b�
 
 **Gate hoàn thành:** thay một driver vận hành phải làm thay đổi hợp lý ba báo cáo, FCF, valuation và thesis; phải có bear/cơ sở (base / 기반)/bull cùng vô hiệu hóa (invalidation / 무효화) cụ thể.
 
+> **Chuyển mạch:** Trong **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **04 — Nowcasting và truyền dẫn vĩ mô** tiếp nhận điểm tựa từ **03 — Mô hình doanh nghiệp tích hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **05 — Thiết kế hệ thống giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 04 — Nowcasting và truyền dẫn vĩ mô
 
 [07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md](./04_economics/07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md)
@@ -140,6 +147,8 @@ Không chỉ đọc CPI/GDP. Phải biết dùng surprise vs consensus, revision
 Dạng thất bại (failure mode / 실패 모드) gồm suy luận `CPI ↑ → cổ phiếu ↓`, nhầm mức (level / 수준) với rate-of-change, bỏ qua điều thị trường đã pricing, không tách demand shock và supply shock, nhầm liquidity hỗ trợ (support / 지원) với solvency repair và dùng một chỉ tiêu để gọi tên regime.
 
 **Gate hoàn thành:** phải xây được một `surprise map + nowcast dashboard + policy reaction map + cross-asset transmission table` và nêu được dữ liệu nào sẽ bác bỏ kịch bản.
+
+> **Chuyển mạch:** Ở chặng này của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **05 — Thiết kế hệ thống giao dịch** tiếp nhận điểm tựa từ **04 — Nowcasting và truyền dẫn vĩ mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **06 — Xây luận điểm thị trường Korea / Vietnam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 05 — Thiết kế hệ thống giao dịch
 
@@ -166,6 +175,8 @@ Dạng thất bại (failure mode / 실패 모드) gồm look-ahead, survivorshi
 
 **Gate hoàn thành:** phải có `strategy specification + bias audit + OOS/walk-forward + cost-aware test + sizing rule + execution plan + kill switch + retirement rule`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **06 — Xây luận điểm thị trường Korea / Vietnam** tiếp nhận điểm tựa từ **05 — Thiết kế hệ thống giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Advanced Practice Workbook — Biến kiến thức thành sản phẩm phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 06 — Xây luận điểm thị trường Korea / Vietnam
 
 [07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md](./06_markets_korea_vietnam/07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md)
@@ -190,6 +201,8 @@ Dữ liệu phải nối được xuất khẩu, trade balance, FX, reserve/liqu
 Dạng thất bại (failure mode / 실패 모드) gồm suy luận “KRW yếu = mọi exporter tốt”, “credit growth = mọi ngân hàng tốt”, nhầm liquidity rally với earnings khôi phục (recovery / 복구), dùng chỉ mục (index / 인덱스) return thay thị trường (market / 시장) breadth và bỏ qua custody/FX/tax/truy cập (access / 접근) trong cross-border return.
 
 **Gate hoàn thành:** phải tạo được `country dashboard + sector map + company driver tree + valuation + liquidity-aware position plan + invalidation` cho ít nhất một trường hợp (case / 사례) Hàn Quốc và một trường hợp (case / 사례) Việt Nam.
+
+> **Chuyển mạch:** Trong **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **Advanced Practice Workbook — Biến kiến thức thành sản phẩm phân tích** tiếp nhận điểm tựa từ **06 — Xây luận điểm thị trường Korea / Vietnam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **07 — trường hợp (case / 사례) studies tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Advanced Practice Workbook — Biến kiến thức thành sản phẩm phân tích
 
@@ -225,6 +238,8 @@ Mỗi mô-đun (module / 모듈) phải có ít nhất một bài **reverse ki�
 
 Một bài chỉ đạt khi có thể chỉ ra **dạng thất bại (failure mode / 실패 모드)** và dữ liệu xác nhận/bác bỏ, không chỉ tính đúng công thức.
 
+> **Chuyển mạch:** Ở chặng này của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **Advanced Practice Workbook — Biến kiến thức thành sản phẩm phân tích** cho ta quy tắc; **07 — trường hợp (case / 사례) studies tích hợp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **08 — Capstone: quy trình đầu tư hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 07 — trường hợp (case / 사례) studies tích hợp
 
 Các tình huống trong [07_integrated_case_studies](./07_integrated_case_studies/README.md) là nơi kiểm tra tích hợp (integration / 통합). Mỗi trường hợp (case / 사례) phải đi đủ chuỗi:
@@ -246,6 +261,8 @@ Macro shock / question
 Nếu một trường hợp (case / 사례) dừng ở “macro tốt/xấu cho ngành”, trường hợp (case / 사례) đó chưa đủ sâu.
 
 Ưu tiên worked trường hợp (case / 사례) có số liệu giả định để buộc người đọc tính duration, refinancing chi phí (cost / 비용), earnings sensitivity, valuation sensitivity và portfolio mất mát (loss / 손실) thay vì chỉ đọc narrative.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **07 — trường hợp (case / 사례) studies tích hợp** cho ta quy tắc; **08 — Capstone: quy trình đầu tư hoàn chỉnh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ma trận kiểm tra (audit / 감사) chiều sâu toàn thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 08 — Capstone: quy trình đầu tư hoàn chỉnh
 
@@ -269,6 +286,8 @@ Câu hỏi
 
 Capstone không được kết thúc bằng mục tiêu (target / 대상) price. Đầu ra cuối phải cho thấy **thesis sai trong điều kiện nào, bảng cân đối có sống sót không, danh mục chịu bao nhiêu mất mát (loss / 손실) trong bear trường hợp (case / 사례) và phần P/L sau đó đến từ thesis hay từ beta/multiple/FX**.
 
+> **Chuyển mạch:** Trong **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **08 — Capstone: quy trình đầu tư hoàn chỉnh** xác định đầu vào; **Ma trận kiểm tra (audit / 감사) chiều sâu toàn thư viện (library / 라이브러리)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuẩn đầu ra sau mỗi Advanced Lab** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ma trận kiểm tra (audit / 감사) chiều sâu toàn thư viện (library / 라이브러리)
 
 Ma trận dưới đây là công cụ kiểm tra độ phủ, không phải tuyên bố rằng mọi domain đã hoàn thiện vĩnh viễn. Đọc mỗi hàng theo chiều ngang để hỏi concept đã có mechanism, data, risk và failure mode hay chưa; sau đó mở case hoặc workbook để kiểm chứng bằng đầu ra.
@@ -284,6 +303,8 @@ Ma trận dưới đây là công cụ kiểm tra độ phủ, không phải tuy
 
 Dấu ✓ không có nghĩa nội dung đã “xong vĩnh viễn”. Nó có nghĩa thư viện (library / 라이브러리) đã có vị trí chuẩn gốc (canonical / 정본) cho lớp kiến thức đó. Nội dung mới chỉ nên được thêm khi làm sâu cơ chế, dữ liệu, dạng thất bại (failure mode / 실패 모드) hoặc trường hợp (case / 사례), không nên tạo chapter mới chỉ vì gặp một thuật ngữ mới.
 
+> **Chuyển mạch:** Ở chặng này của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **Ma trận kiểm tra (audit / 감사) chiều sâu toàn thư viện (library / 라이브러리)** cho ta quy tắc; **Chuẩn đầu ra sau mỗi Advanced Lab** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Quy tắc học sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuẩn đầu ra sau mỗi Advanced Lab
 
 Các đầu ra này biến “đã đọc lab” thành artefact có thể xem lại. Mỗi mũi tên chỉ ra sản phẩm tối thiểu cần tạo trước khi chuyển sang domain tiếp theo.
@@ -298,6 +319,8 @@ Market lab         → country/sector thesis dashboard + company transmission
 Workbook           → bộ bài thực hành có số liệu + self-review
 Capstone           → complete investment dossier + attribution/post-mortem
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **Chuẩn đầu ra sau mỗi Advanced Lab** cho ta quy tắc; **Quy tắc học sâu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy tắc học sâu
 
@@ -327,6 +350,8 @@ Có thể tự đánh giá theo năm mức:
 5. Vận hành một quy trình lặp lại có attribution
 ```
 
+> **Chuyển mạch:** Trong **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing**, **Kết luận** gom các mảnh từ **Quy tắc học sâu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết luận
 
 Ba tầng dưới đây khép lại bản đồ bằng cách nối kiến thức domain với lab và deliberate practice. Hãy dùng chúng để chọn bước tiếp theo, rồi quay lại checkpoint và ghi điều kiện dừng/tiếp tục.
@@ -345,3 +370,5 @@ Workbook → Case Studies → Capstone
 ```
 
 Nếu tầng đầu giúp trả lời **“khái niệm này là gì?”**, tầng Advanced giúp trả lời **“cơ chế hoạt động thế nào và dữ liệu nào chứng minh?”**, còn Workbook/Case/Capstone phải giúp trả lời **“failure mode là gì, tác động tới valuation/danh mục bao nhiêu và làm sao biết mình đang sai?”**.
+
+> **Bàn giao:** Sau **Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

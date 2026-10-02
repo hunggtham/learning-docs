@@ -1,7 +1,6 @@
 # Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiêu chí Round 7** sang **Batch 1 — Algebra cốt lõi (core / 핵심)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**. Route đi từ quality criteria → batch audits theo centrality → mechanism, assumptions, failure modes và evidence → depth balancing/owner links → remediation, để audit đo được chất lượng học chứ không chỉ chapter count.
 
 Round 7 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Không thêm Mathematics thư viện (library / 라이브러리) mới và không tăng số topic chỉ để mở rộng coverage. thư viện (library / 라이브러리) vẫn giữ 87 topic; mục tiêu là làm các chapter nền có phụ thuộc (dependency / 의존성) centrality cao đạt chất lượng gần với các chapter mới hơn như Real phân tích (analysis / 분석), Complex phân tích (analysis / 분석), Bayesian suy luận (inference / 추론), Tensor/ma trận (matrix / 행렬) Calculus và động (dynamic / 동적) Programming.
 
@@ -19,8 +18,7 @@ Các chapter được chọn khi có ít nhất một trong các dấu hiệu:
 
 Round 7 giữ chuẩn chuẩn gốc (canonical / 정본) trong [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md): intuition trước formalism, formula có meaning, theorem/quy tắc (rule / 규칙) có reason/proof idea, examples tạo lập luận (reasoning / 추론) transfer, các giả định (assumptions / 가정들) được nói rõ và connections dựa trên dùng chung (shared / 공유) cấu trúc (structure / 구조).
 
-
-> **Chuyển mạch:** Từ **Tiêu chí Round 7**, ta sang **Batch 1 — Algebra cốt lõi (core / 핵심)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Batch 1 — Algebra cốt lõi (core / 핵심)** tiếp nhận điểm tựa từ **Tiêu chí Round 7** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 1 — Algebra cốt lõi (core / 핵심)
 
@@ -70,8 +68,7 @@ Polynomial được viết như đối tượng (object / 객체) có nhiều re
 
 Bản mới thêm proof idea cho factor/remainder theorem, multiplicity hình học (geometry / 기하학), Fundamental Theorem of Algebra intuition, Vieta, interpolation limitations, Horner evaluation, gốc (root / 루트) conditioning và liên kết (connection / 연결) với eigenvalues/điều khiển (control / 제어).
 
-
-> **Chuyển mạch:** Từ **Batch 1 — Algebra cốt lõi (core / 핵심)**, ta sang **Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors** tiếp nhận điểm tựa từ **Batch 1 — Algebra cốt lõi (core / 핵심)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 3 — Statistics & Regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors
 
@@ -93,8 +90,7 @@ Bản mới đi từ map trên không gian (space / 공간) → rigid/affine tra
 
 Bản mới chuyển từ “arrow/danh sách (list / 목록) of components” sang véc-tơ (vector / 벡터) như đối tượng (object / 객체) trong chosen basis. Nội dung làm sâu norm choices, dot sản phẩm (product / 제품) derivation, projection/residual, cross sản phẩm (product / 제품), basis dependence, matrix-column viewpoint và applications trong Physics, Graphics, AI và Finance.
 
-
-> **Chuyển mạch:** Từ **Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors**, ta sang **Batch 3 — Statistics & Regression** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Batch 3 — Statistics & Regression** tiếp nhận điểm tựa từ **Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 3 — Statistics & Regression
 
@@ -124,8 +120,7 @@ Bản mới nối covariance/correlation với hình học (geometry / 기하학
 
 Nhân quả (causal / 인과적) interpretation được tách rõ khỏi fit/prediction.
 
-
-> **Chuyển mạch:** Từ **Batch 3 — Statistics & Regression**, ta sang **Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus** tiếp nhận điểm tựa từ **Batch 3 — Statistics & Regression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 5 — Recurrence, Induction & Recursive Algorithms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus
 
@@ -167,8 +162,7 @@ Nó chỉ tập trung sâu vào:
 
 Conditioning/gốc (root / 루트) finding/numerical tuyến tính (linear / 선형) algebra/ODE stability vẫn thuộc chuẩn gốc (canonical / 정본) numerical-methods chapter, tránh duplicate nội dung.
 
-
-> **Chuyển mạch:** Từ **Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus**, ta sang **Batch 5 — Recurrence, Induction & Recursive Algorithms** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Batch 5 — Recurrence, Induction & Recursive Algorithms** tiếp nhận điểm tựa từ **Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 5 — Recurrence, Induction & Recursive Algorithms
 
@@ -186,8 +180,7 @@ induction = proof structure
 
 Nội dung làm sâu recursion trees, Master Theorem intuition, substitution proof, memoization vs recurrence ngữ nghĩa (semantics / 의미론), dynamic-programming trạng thái (state / 상태) thiết kế (design / 설계), vòng lặp (loop / 루프) invariants, structural induction, termination/ranking functions, ma trận (matrix / 행렬) recurrence/eigenvalues và Bellman liên kết (connection / 연결).
 
-
-> **Chuyển mạch:** Từ **Batch 5 — Recurrence, Induction & Recursive Algorithms**, ta sang **Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Batch 5 — Recurrence, Induction & Recursive Algorithms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) status sau Round 7** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)
 
@@ -236,8 +229,7 @@ ratio/percentage
 → optimization
 ```
 
-
-> **Chuyển mạch:** Từ **Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)**, ta sang **độ sâu (depth / 깊이) status sau Round 7** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Độ sâu (depth / 깊이) status sau Round 7** tiếp nhận điểm tựa từ **Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Priority hợp lý cho Round tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) status sau Round 7
 
@@ -256,8 +248,7 @@ Các major bottlenecks được xử lý trong Round 5–7 hiện gồm:
 
 Các advanced chapters như Real phân tích (analysis / 분석), Complex phân tích (analysis / 분석), thông tin (information / 정보) lý thuyết (theory / 이론), Bayesian suy luận (inference / 추론), động (dynamic / 동적) Programming, Fourier/Laplace và điều khiển (control / 제어) hiện không phải độ sâu (depth / 깊이) bottleneck tương đối.
 
-
-> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) status sau Round 7**, ta sang **Priority hợp lý cho Round tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Priority hợp lý cho Round tiếp theo** tiếp nhận điểm tựa từ **Độ sâu (depth / 깊이) status sau Round 7** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Priority hợp lý cho Round tiếp theo
 
@@ -274,8 +265,7 @@ Không nên mở rộng research-level topics trước khi polish thêm một s�
 
 Những items này đều là **độ sâu (depth / 깊이) upgrades**, không phải yêu cầu thêm chapter mới.
 
-
-> **Chuyển mạch:** Từ **Priority hợp lý cho Round tiếp theo**, ta sang **Kết luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Kết luận** gom các mảnh từ **Priority hợp lý cho Round tiếp theo** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết luận
 
@@ -283,4 +273,4 @@ Round 7 không thay đổi coverage count. Giá trị chính là giảm variance
 
 > Coverage trả lời “concept có tồn tại trong thư viện (library / 라이브러리) không?”. độ sâu (depth / 깊이) trả lời “người đọc có thể tự lập luận (reasoning / 추론) từ concept đó sang vấn đề mới không?”. Round 7 tiếp tục tối ưu cho câu hỏi thứ hai.
 
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
