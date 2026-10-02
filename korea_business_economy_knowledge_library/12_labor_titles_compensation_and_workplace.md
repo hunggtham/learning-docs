@@ -1,7 +1,6 @@
 # Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)
 
-> **Mạch đọc:** Đặt **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **직무: loại công việc và bản sắc kỹ năng** sang **직급: cấp bậc trong hệ thống nhân sự**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**. Route đi từ job/직무 → grade/직급 and role/직책 → employment type, compensation và organization → promotion, evaluation and labor norms → workplace decision rights.
 
 Doanh nghiệp là một hệ thống phân công con người. Muốn hiểu môi trường làm việc Hàn Quốc từ bên trong, cần tách rõ **công việc chuyên môn (직무)**, **cấp bậc (직급)**, **vai trò trách nhiệm (직책)**, **loại hình lao động (고용형태)**, **đãi ngộ (보상)** và **đơn vị tổ chức (조직)**.
 
@@ -17,6 +16,8 @@ Job hàm (function / 함수) liên quan trực tiếp tới năng lực, lộ tr
 
 Vì vậy khi so sánh nghề nghiệp giữa các công ty, **phạm vi công việc (job scope)** thường quan trọng hơn chức danh trên danh thiếp.
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **직급: cấp bậc trong hệ thống nhân sự** tiếp nhận điểm tựa từ **직무: loại công việc và bản sắc kỹ năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **직책: vai trò trách nhiệm và quyền hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 직급: cấp bậc trong hệ thống nhân sự
 
 Cấu trúc truyền thống có thể gặp:
@@ -30,6 +31,8 @@ Nhưng đây không phải thang bậc áp dụng cho mọi công ty. Nhiều do
 Điểm quan trọng là **đơn giản hóa chức danh không đồng nghĩa xóa cấp bậc nhân sự**. Công ty có thể gọi mọi người là “프로” nhưng vẫn có các bậc lương nội bộ ảnh hưởng mức lương, thưởng, điều kiện thăng tiến và tiến trình nghề nghiệp.
 
 Không nên suy ra thu nhập chỉ từ chức danh hiển thị.
+
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **직책: vai trò trách nhiệm và quyền hạn** tiếp nhận điểm tựa từ **직급: cấp bậc trong hệ thống nhân sự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **조직: doanh nghiệp là đồ thị của trách nhiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 직책: vai trò trách nhiệm và quyền hạn
 
@@ -45,6 +48,8 @@ Cấp\ bậc \neq Vai\ trò\ quản\ lý
 
 Phân biệt này rất quan trọng trong giao tiếp doanh nghiệp Hàn Quốc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **조직: doanh nghiệp là đồ thị của trách nhiệm** tiếp nhận điểm tựa từ **직책: vai trò trách nhiệm và quyền hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chức năng tạo doanh thu và chức năng hỗ trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 조직: doanh nghiệp là đồ thị của trách nhiệm
 
 Tên đơn vị thường gặp gồm `사업부`, `본부`, `실`, `팀`, `파트`, nhưng cấu trúc thực tế khác nhau rất nhiều.
@@ -55,6 +60,8 @@ Một số công ty dùng **cấu trúc ma trận (matrix structure / 매트릭�
 
 Vì vậy sơ đồ tổ chức nên được đọc như **đồ thị quyền quyết định và trách nhiệm**, không phải bộ phân loại cố định.
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Chức năng tạo doanh thu và chức năng hỗ trợ** tiếp nhận điểm tựa từ **조직: doanh nghiệp là đồ thị của trách nhiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Loại hình lao động: bản chất pháp lý quan trọng hơn nhãn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chức năng tạo doanh thu và chức năng hỗ trợ
 
 **Chức năng tuyến đầu (line function)** trực tiếp tạo hoặc bán đầu ra cốt lõi như phát triển, bán hàng, sản xuất hoặc triển khai dự án. **Chức năng hỗ trợ (staff/support function)** như nhân sự, tài chính, pháp chế hoặc tuân thủ hỗ trợ toàn tổ chức.
@@ -63,6 +70,8 @@ Ranh giới này không phản ánh tầm quan trọng, nhưng ảnh hưởng c�
 
 Sự khác biệt này ảnh hưởng cách bố trí nhân sự và đánh giá hiệu quả.
 
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Loại hình lao động: bản chất pháp lý quan trọng hơn nhãn** tiếp nhận điểm tựa từ **Chức năng tạo doanh thu và chức năng hỗ trợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **원청–하청: ranh giới tổ chức có thể đồng thời là ranh giới thương mại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Loại hình lao động: bản chất pháp lý quan trọng hơn nhãn
 
 Một số nhóm thường gặp gồm `정규직` — lao động thường xuyên, `계약직` — hợp đồng có thời hạn, `파견근로` — lao động phái cử, `도급/용역` — thuê ngoài theo hợp đồng dịch vụ và các hình thức bán thời gian khác.
@@ -70,6 +79,8 @@ Một số nhóm thường gặp gồm `정규직` — lao động thường xuy
 Chỉ nhìn nhãn là chưa đủ. Phân loại pháp lý có thể phụ thuộc ai chỉ đạo công việc, quan hệ hợp đồng và bản chất làm việc thực tế.
 
 Trong môi trường dự án SI/SM, khách hàng, nhà thầu chính, nhà thầu phụ, phái cử và thuê ngoài có thể cùng tồn tại. Điều này ảnh hưởng ổn định việc làm, đánh giá, thu nhập và quyền sở hữu nghề nghiệp của người lao động.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **원청–하청: ranh giới tổ chức có thể đồng thời là ranh giới thương mại** tiếp nhận điểm tựa từ **Loại hình lao động: bản chất pháp lý quan trọng hơn nhãn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổng đãi ngộ: không chỉ nhìn lương năm tiêu đề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 원청–하청: ranh giới tổ chức có thể đồng thời là ranh giới thương mại
 
@@ -89,6 +100,8 @@ Mỗi tầng có thể thêm chi phí phối hợp và làm biên lợi nhuận 
 
 Đọc cùng [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Tổng đãi ngộ: không chỉ nhìn lương năm tiêu đề** tiếp nhận điểm tựa từ **원청–하청: ranh giới tổ chức có thể đồng thời là ranh giới thương mại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **성과급 và 상여금** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tổng đãi ngộ: không chỉ nhìn lương năm tiêu đề
 
 **Tổng đãi ngộ (Total Compensation / 총보상)** có thể gồm lương cơ bản, phụ cấp cố định, tiền làm thêm, thưởng định kỳ, thưởng hiệu suất, phúc lợi, cổ phiếu trong một số công ty và quyền lợi nghỉ việc/hưu trí.
@@ -105,6 +118,8 @@ Tiền mặt đảm bảo hằng năm
 
 Gói “50 triệu KRW/năm” có phần thưởng biến động lớn khác đáng kể với 50 triệu KRW lương cố định đảm bảo.
 
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **성과급 và 상여금** tiếp nhận điểm tựa từ **Tổng đãi ngộ: không chỉ nhìn lương năm tiêu đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **퇴직금 và quyền lợi nghỉ việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 성과급 và 상여금
 
 **성과급** thường chỉ thưởng gắn với kết quả. **상여금** có thể là thưởng định kỳ hoặc cơ chế thưởng riêng của công ty.
@@ -113,17 +128,23 @@ Không nên giả định công thức giống nhau giữa các doanh nghiệp. 
 
 Từ vựng đãi ngộ rất phụ thuộc từng công ty.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **퇴직금 và quyền lợi nghỉ việc** tiếp nhận điểm tựa từ **성과급 và 상여금** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lương tối thiểu: mức sàn pháp lý, không phải chuẩn lương chuyên môn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 퇴직금 và quyền lợi nghỉ việc
 
 Quyền lợi nghỉ việc hoặc hưu trí tách biệt với lương tháng thông thường. Với doanh nghiệp, thâm niên tạo nghĩa vụ chi trả trong tương lai. Với người lao động, đây là một phần của tổng đãi ngộ dài hạn.
 
 Khi so mức tăng lương ngắn hạn với độ ổn định công việc hoặc thâm niên, phần này cần được tính đến. Cách tính pháp lý cụ thể phải kiểm tra theo quy định lao động hiện hành.
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Lương tối thiểu: mức sàn pháp lý, không phải chuẩn lương chuyên môn** tiếp nhận điểm tựa từ **퇴직금 và quyền lợi nghỉ việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời giờ làm việc: hợp đồng, thực tế và kỳ vọng ngầm có thể khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lương tối thiểu: mức sàn pháp lý, không phải chuẩn lương chuyên môn
 
 Năm 2026, mức lương tối thiểu của Hàn Quốc là 10.320 KRW/giờ; mức quy đổi tháng thường dùng cho 209 giờ là 2.156.880 KRW.
 
 Đây là **mức sàn pháp lý**, không phải mức tham chiếu cho nghề văn phòng hoặc lập trình viên. Thu nhập thị trường phụ thuộc nghề nghiệp, kinh nghiệm, quy mô công ty, ngành và độ khan hiếm nhân lực.
+
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Thời giờ làm việc: hợp đồng, thực tế và kỳ vọng ngầm có thể khác nhau** tiếp nhận điểm tựa từ **Lương tối thiểu: mức sàn pháp lý, không phải chuẩn lương chuyên môn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế của làm thêm giờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thời giờ làm việc: hợp đồng, thực tế và kỳ vọng ngầm có thể khác nhau
 
@@ -132,6 +153,8 @@ Khi đánh giá nơi làm việc, cần tách thời giờ theo hợp đồng, g
 Một công ty có giờ làm danh nghĩa bình thường nhưng có cao điểm rất nặng. Công ty khác có ca dài nhưng dự đoán được.
 
 Phân tích cân bằng công việc–cuộc sống phải nhìn **phân bố khối lượng công việc theo thời gian**, không chỉ một con số trung bình.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Kinh tế của làm thêm giờ** tiếp nhận điểm tựa từ **Thời giờ làm việc: hợp đồng, thực tế và kỳ vọng ngầm có thể khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lương theo thâm niên và lương theo vai trò/hiệu suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế của làm thêm giờ
 
@@ -151,11 +174,15 @@ Thu\ nhập\ hiệu\ dụng\ mỗi\ giờ
 
 Đây không phải công thức pháp lý mà là công cụ so sánh kinh tế cá nhân.
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Lương theo thâm niên và lương theo vai trò/hiệu suất** tiếp nhận điểm tựa từ **Kinh tế của làm thêm giờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế của thăng tiến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lương theo thâm niên và lương theo vai trò/hiệu suất
 
 Doanh nghiệp Hàn Quốc truyền thống từng sử dụng mạnh **lương theo thâm niên (seniority-based wage / 연공급)**. Mô hình này tạo tiến trình dễ dự đoán và khuyến khích gắn bó, nhưng có thể khiến lương tách khỏi năng suất vai trò và làm chi phí lao động cuối sự nghiệp tăng mạnh.
 
 Các doanh nghiệp hiện đại tăng dần yếu tố vai trò, kỹ năng và hiệu suất. Tuy nhiên giai đoạn chuyển đổi thường tạo hệ thống lai: chức danh bên ngoài được làm phẳng nhưng bậc lương nội bộ vẫn phản ánh thâm niên.
+
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Kinh tế của thăng tiến** tiếp nhận điểm tựa từ **Lương theo thâm niên và lương theo vai trò/hiệu suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá hiệu suất: đo lường tạo ra hành vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế của thăng tiến
 
@@ -164,6 +191,8 @@ Thăng tiến không chỉ đổi tên chức danh. Nó có thể thay đổi b�
 Vì vậy thăng tiến có **giá trị quyền chọn nghề nghiệp (career option value)**. Tuy nhiên với kỹ sư, chuyển sang quản lý không tự động tốt hơn nếu mục tiêu dài hạn là chuyên gia kỹ thuật sâu.
 
 Tổ chức hiện đại thường cần hai con đường: chuyên gia cá nhân và quản lý.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Kinh tế của thăng tiến** nêu điều cần giải thích; **Đánh giá hiệu suất: đo lường tạo ra hành vi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Calibration và chính trị tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đánh giá hiệu suất: đo lường tạo ra hành vi
 
@@ -175,6 +204,8 @@ Bất kỳ chỉ số nào cũng thay đổi hành vi. Nếu lập trình viên 
 
 Vì vậy hệ thống đánh giá cần kết hợp đầu ra đo được với phán đoán chuyên môn.
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Đánh giá hiệu suất: đo lường tạo ra hành vi** nêu điều cần giải thích; **Calibration và chính trị tổ chức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phân mảnh thị trường lao động: “lương trung bình Hàn Quốc” thường không đủ nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Calibration và chính trị tổ chức
 
 Ngay cả hệ thống tốt cũng có thông tin không đầy đủ. Quản lý nhìn thấy một số đóng góp rõ hơn số khác. **Hiệu chỉnh đánh giá (calibration)** giúp làm kết quả giữa các nhóm đồng đều hơn nhưng cũng có thể tạo không gian cho thương lượng và chính trị nội bộ.
@@ -182,6 +213,8 @@ Ngay cả hệ thống tốt cũng có thông tin không đầy đủ. Quản l�
 Người lao động nên tạo **dấu vết bằng chứng về tác động** như tính năng đã giao, lỗi giảm, phản hồi khách hàng, thời gian/chi phí tiết kiệm, sự cố được ngăn chặn và đóng góp liên nhóm.
 
 Điều này đặc biệt quan trọng trong công việc tri thức, nơi đầu ra khó đếm trực tiếp.
+
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Phân mảnh thị trường lao động: “lương trung bình Hàn Quốc” thường không đủ nghĩa** tiếp nhận điểm tựa từ **Calibration và chính trị tổ chức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiếu việc tốt và thiếu lao động có thể tồn tại cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân mảnh thị trường lao động: “lương trung bình Hàn Quốc” thường không đủ nghĩa
 
@@ -203,6 +236,8 @@ Lợi thế năng suất tiếp tục tồn tại
 
 Đây là một cơ chế của tính nhị nguyên kinh tế, xem [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Thiếu việc tốt và thiếu lao động có thể tồn tại cùng lúc** tiếp nhận điểm tựa từ **Phân mảnh thị trường lao động: “lương trung bình Hàn Quốc” thường không đủ nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công đoàn và thương lượng tập thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thiếu việc tốt và thiếu lao động có thể tồn tại cùng lúc
 
 Hàn Quốc có thể đồng thời chứng kiến người trẻ cạnh tranh gay gắt cho việc ở doanh nghiệp lớn trong khi SME báo thiếu lao động.
@@ -210,6 +245,8 @@ Hàn Quốc có thể đồng thời chứng kiến người trẻ cạnh tranh 
 Đây không phải mâu thuẫn. Nó có thể phản ánh chênh lệch về lương, vị trí địa lý, độ ổn định, phát triển nghề nghiệp, điều kiện làm việc và yêu cầu kỹ năng.
 
 Thị trường lao động cân bằng không chỉ qua lương mà qua **chất lượng tổng thể của công việc**.
+
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Công đoàn và thương lượng tập thể** tiếp nhận điểm tựa từ **Thiếu việc tốt và thiếu lao động có thể tồn tại cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khủng hoảng 1997 và thay đổi mô hình việc làm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công đoàn và thương lượng tập thể
 
@@ -219,6 +256,8 @@ Tác động khác nhau theo công ty và ngành. Quyền thương lượng mạ
 
 Phân tích kinh tế nên tránh định kiến và xem thỏa ước thực tế, lịch sử đình công, năng suất và quan hệ quản lý–lao động.
 
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Khủng hoảng 1997 và thay đổi mô hình việc làm** tiếp nhận điểm tựa từ **Công đoàn và thương lượng tập thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng chuyển đổi của vốn nhân lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khủng hoảng 1997 và thay đổi mô hình việc làm
 
 Trước 1997, việc làm tại doanh nghiệp lớn thường gắn với kỳ vọng thâm niên dài hơn. Tái cấu trúc sau khủng hoảng làm chuẩn “việc làm suốt đời” yếu đi và khiến sa thải, thuê ngoài và lao động phi chính thức trở nên rõ hơn.
@@ -226,6 +265,8 @@ Trước 1997, việc làm tại doanh nghiệp lớn thường gắn với kỳ
 Điều này làm **hợp đồng tâm lý (psychological contract)** giữa nhân viên và doanh nghiệp thay đổi.
 
 Môi trường làm việc Hàn Quốc hiện đại vì vậy chứa cả dấu vết của văn hóa thâm niên–trung thành lẫn tính di động nghề nghiệp theo thị trường.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Khả năng chuyển đổi của vốn nhân lực** tiếp nhận điểm tựa từ **Khủng hoảng 1997 và thay đổi mô hình việc làm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Di chuyển nội bộ và bên ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khả năng chuyển đổi của vốn nhân lực
 
@@ -237,6 +278,8 @@ Một công việc trả lương cao nhưng chỉ tích lũy kỹ năng đặc t
 
 Một câu hỏi tốt là: sau 3 năm, kỹ năng nào của bạn sẽ được thị trường bên ngoài trả tiền?
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Di chuyển nội bộ và bên ngoài** tiếp nhận điểm tựa từ **Khả năng chuyển đổi của vốn nhân lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Người lao động nước ngoài và vai trò cầu nối song ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Di chuyển nội bộ và bên ngoài
 
 Tập đoàn lớn có thể cung cấp cơ hội chuyển giữa đơn vị hoặc công ty thành viên, nhưng mức thực tế phụ thuộc chính sách nhân sự.
@@ -245,6 +288,8 @@ Di chuyển bên ngoài là quyền chọn của thị trường lao động. M�
 
 Đó là lý do chất lượng công việc nên được đánh giá bằng tốc độ tích lũy kỹ năng chứ không chỉ lương.
 
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Người lao động nước ngoài và vai trò cầu nối song ngữ** tiếp nhận điểm tựa từ **Di chuyển nội bộ và bên ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đánh giá một đề nghị việc làm hoặc công ty Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Người lao động nước ngoài và vai trò cầu nối song ngữ
 
 Trong nhóm Hàn Quốc–Việt Nam hoặc đa quốc gia, nhân viên song ngữ thường tạo giá trị lớn hơn dịch từng câu chữ. Họ chuyển tải ý định yêu cầu, mức độ khẩn cấp, bối cảnh kinh doanh, mơ hồ kỹ thuật, tiêu chí nghiệm thu và cách escalation.
@@ -252,6 +297,8 @@ Trong nhóm Hàn Quốc–Việt Nam hoặc đa quốc gia, nhân viên song ng�
 Đây là **năng lực điều phối (coordination capital / 조정 역량)**.
 
 Nếu tổ chức không chính thức hóa vai trò cầu nối, một cá nhân có thể trở thành nút thắt vì mọi vấn đề đều đi qua người đó. Thiết kế tốt hơn là phân phối bối cảnh qua tài liệu, quyền sở hữu rõ ràng và nhiều điểm kết nối thay vì phụ thuộc một “người hùng song ngữ”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Cách đánh giá một đề nghị việc làm hoặc công ty Hàn Quốc** tiếp nhận điểm tựa từ **Người lao động nước ngoài và vai trò cầu nối song ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đánh giá một đề nghị việc làm hoặc công ty Hàn Quốc
 
@@ -266,9 +313,13 @@ Nên nhìn qua sáu lớp:
 
 Cách nhìn này giúp tránh đánh giá nơi làm việc chỉ bằng uy tín thương hiệu.
 
+> **Chuyển mạch:** Trong **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Cách đánh giá một đề nghị việc làm hoặc công ty Hàn Quốc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Thiết kế tổ chức chuyển chiến lược thành **vai trò + quyền quyết định + động cơ + trách nhiệm**. Nghề nghiệp của người lao động chuyển trải nghiệm công việc thành **vốn nhân lực + danh tiếng + lựa chọn tương lai**. Chức danh chỉ quan trọng khi nó phản ánh các cơ chế thật này.
+
+> **Chuyển mạch:** Ở chặng này của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -284,8 +335,10 @@ Thăng tiến không phải lúc nào cũng tốt nếu vai trò mới đi xa m�
 
 Điều phối song ngữ không chỉ là “dịch”; đây có thể là công việc tổ chức có giá trị cao nhưng cần ranh giới trách nhiệm rõ ràng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc [`13_business_culture_decision_making_and_communication.md`](./13_business_culture_decision_making_and_communication.md) cho chuẩn giao tiếp–ra quyết định, [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md) cho cấu trúc lao động theo quy mô doanh nghiệp và [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md) cho khoảng cách năng suất–tiền lương.
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)
 
-> **Mạch đọc:** Đặt **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lịch sử: xây dựng là hạ tầng của công nghiệp hóa** sang **Ai là ai trong một dự án phát triển bất động sản?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**. Route đi từ industrialization/infrastructure → developer, contractor, lender và owner roles → project finance, land/housing and leverage → guarantees, presales và refinancing → contagion to banks/securities/local economy.
 
 Xây dựng và bất động sản là nơi bảng cân đối của hộ gia đình, giá đất, lãi suất, vốn ngân hàng–chứng khoán và các nhà thầu lớn gặp nhau. Vì ngành dùng đòn bẩy cao và dự án kéo dài nhiều năm, một vấn đề ở một dự án có thể truyền sang chủ đầu tư, nhà thầu, bên cho vay, công ty chứng khoán, nhà cung cấp và kinh tế địa phương.
 
@@ -16,6 +15,8 @@ Các công ty xây dựng vì vậy không chỉ xây chung cư; họ tích lũy
 Từ thập niên 1970, nhà thầu Hàn Quốc mở rộng sang Trung Đông, tạo nguồn ngoại tệ và học cách thực hiện dự án quy mô lớn. Hyundai là ví dụ nổi bật: năng lực xây dựng và triển khai dự án hình thành trước nhiều mảng công nghiệp sau này gắn với tập đoàn.
 
 Bài học lịch sử là xây dựng vừa là một ngành kinh doanh vừa là **trường đào tạo năng lực tổ chức** cho nhiều tập đoàn Hàn Quốc.
+
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Ai là ai trong một dự án phát triển bất động sản?** tiếp nhận điểm tựa từ **Lịch sử: xây dựng là hạ tầng của công nghiệp hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Thác” phát triển dự án: rủi ro thay đổi theo từng giai đoạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ai là ai trong một dự án phát triển bất động sản?
 
@@ -39,6 +40,8 @@ graph LR
 ```
 
 Tuy nhiên, bảo lãnh hoặc cam kết từ nhà thầu có thể nối rủi ro dự án trở lại bảng cân đối của nhà thầu hoặc sponsor.
+
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **“Thác” phát triển dự án: rủi ro thay đổi theo từng giai đoạn** tiếp nhận điểm tựa từ **Ai là ai trong một dự án phát triển bất động sản?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지) loan: vốn ngắn hạn trước khi dự án được giảm rủi ro đầy đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## “Thác” phát triển dự án: rủi ro thay đổi theo từng giai đoạn
 
@@ -64,6 +67,8 @@ Trả nợ / thoái vốn
 
 Rủi ro cao nhất ở giai đoạn đầu vì quyền sử dụng đất, giấy phép, nguồn vốn chính và nhu cầu chưa chắc chắn. Khi dự án vượt qua từng mốc, rủi ro có thể giảm và chi phí tài trợ cũng có thể thấp hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Cầu nối (bridge / 브리지) loan: vốn ngắn hạn trước khi dự án được giảm rủi ro đầy đủ** tiếp nhận điểm tựa từ **“Thác” phát triển dự án: rủi ro thay đổi theo từng giai đoạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **본PF: tài trợ dự án chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cầu nối (bridge / 브리지) loan: vốn ngắn hạn trước khi dự án được giảm rủi ro đầy đủ
 
 **cầu nối (bridge / 브리지) loan (브릿지론)** tài trợ mua đất hoặc giai đoạn đầu trước khi có đầy đủ giấy phép, presale hoặc PF chính.
@@ -74,6 +79,8 @@ Rủi ro cốt lõi là **rủi ro tái cấp vốn (refinancing risk)**. Dự �
 
 Đây là cùng nguyên tắc chênh lệch kỳ hạn trong tài chính doanh nghiệp.
 
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **본PF: tài trợ dự án chính** tiếp nhận điểm tựa từ **Cầu nối (bridge / 브리지) loan: vốn ngắn hạn trước khi dự án được giảm rủi ro đầy đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트) Finance: nợ dựa vào kinh tế của chính dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 본PF: tài trợ dự án chính
 
 Khi dự án có đủ đất, giấy phép, mức presale hoặc hỗ trợ từ sponsor/nhà thầu, nó có thể chuyển sang **본PF**, tức nguồn tài trợ dài hơn cho giai đoạn xây dựng chính.
@@ -81,6 +88,8 @@ Khi dự án có đủ đất, giấy phép, mức presale hoặc hỗ trợ t�
 Nhưng được phê duyệt 본PF không có nghĩa dự án hết rủi ro. Chi phí xây dựng, giá bán, lãi suất và chậm tiến độ vẫn có thể làm kinh tế thay đổi.
 
 Rủi ro chỉ chuyển hình thức theo từng giai đoạn.
+
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Dự án (project / 프로젝트) Finance: nợ dựa vào kinh tế của chính dự án** tiếp nhận điểm tựa từ **본PF: tài trợ dự án chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LTV, LTC và DSCR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dự án (project / 프로젝트) Finance: nợ dựa vào kinh tế của chính dự án
 
@@ -96,6 +105,8 @@ PV(Dòng\ tiền\ kỳ\ vọng)
 Bên cho vay quan tâm nhất đến kịch bản xấu: nếu giá bán hoặc tiền thuê thấp hơn dự kiến, dự án vẫn trả được nợ không?
 
 Thẩm định PF thường xem giá đất, chi phí xây dựng, giá bán/thuê kỳ vọng, tỷ lệ presale, LTV/LTC, hỗ trợ hoàn thành, vốn chủ sponsor và thứ tự phân phối dòng tiền.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **LTV, LTC và DSCR** tiếp nhận điểm tựa từ **Dự án (project / 프로젝트) Finance: nợ dựa vào kinh tế của chính dự án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đòn bẩy khuếch đại mọi giả định về đất và giá bán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## LTV, LTC và DSCR
 
@@ -119,6 +130,8 @@ DSCR = \frac{Dòng\ tiền\ khả\ dụng\ để\ trả\ nợ}{Gốc + Lãi\ đ�
 
 Dự án phát triển trước hoàn thành thường chưa có dòng tiền hoạt động, nên người cho vay phải dựa nhiều hơn vào presale, tài sản bảo đảm và bảo lãnh.
 
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Đòn bẩy khuếch đại mọi giả định về đất và giá bán** tiếp nhận điểm tựa từ **LTV, LTC và DSCR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ thống 분양: khách hàng cùng tham gia tài trợ xây dựng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đòn bẩy khuếch đại mọi giả định về đất và giá bán
 
 Giả sử đất + chi phí xây dựng = 100, nợ = 80 và vốn chủ = 20. Nếu dự án hoàn thành bán được 120, vốn chủ có lợi suất rất cao. Nhưng nếu giá trị dự án giảm xuống 85, gần như toàn bộ vốn chủ có thể biến mất.
@@ -130,6 +143,8 @@ Thay đổi nhỏ của giá trị tài sản
 
 Đó là lý do chu kỳ tăng bất động sản tạo cảm giác lợi nhuận rất cao và chu kỳ giảm gây đau đớn mạnh.
 
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Hệ thống 분양: khách hàng cùng tham gia tài trợ xây dựng** tiếp nhận điểm tựa từ **Đòn bẩy khuếch đại mọi giả định về đất và giá bán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **미분양: hàng chưa bán vừa là tín hiệu cầu vừa là vấn đề dòng tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hệ thống 분양: khách hàng cùng tham gia tài trợ xây dựng
 
 Chung cư Hàn Quốc thường có **bán trước (presale / 분양)**, nơi người mua cam kết trước khi hoàn công và thanh toán theo nhiều mốc.
@@ -140,6 +155,8 @@ Presale mạnh có thể giảm lượng vốn sponsor phải bỏ. Presale yế
 
 Vì vậy presale vừa là **chỉ số bán hàng** vừa là **chỉ số tài trợ**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **미분양: hàng chưa bán vừa là tín hiệu cầu vừa là vấn đề dòng tiền** tiếp nhận điểm tựa từ **Hệ thống 분양: khách hàng cùng tham gia tài trợ xây dựng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo lãnh của nhà thầu: vì sao không sở hữu dự án vẫn có thể chịu rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 미분양: hàng chưa bán vừa là tín hiệu cầu vừa là vấn đề dòng tiền
 
 **Hàng chưa bán (unsold inventory / 미분양)** cho thấy mức không khớp giữa vị trí, giá, cung và cầu.
@@ -147,6 +164,8 @@ Vì vậy presale vừa là **chỉ số bán hàng** vừa là **chỉ số tà
 Không phải mọi 미분양 đều nghiêm trọng như nhau. Hàng chưa bán trước hoàn công vẫn còn thời gian tiêu thụ; **đã hoàn công nhưng chưa bán (준공 후 미분양)** đáng lo hơn vì chi phí xây dựng đã phát sinh, lãi vẫn tiếp tục chạy nhưng tiền bán chưa về.
 
 Địa điểm đặc biệt quan trọng. Tổng số toàn quốc có thể che giấu khủng hoảng ở một số địa phương.
+
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Bảo lãnh của nhà thầu: vì sao không sở hữu dự án vẫn có thể chịu rủi ro** tiếp nhận điểm tựa từ **미분양: hàng chưa bán vừa là tín hiệu cầu vừa là vấn đề dòng tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Câu chữ bảo lãnh quyết định mức rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo lãnh của nhà thầu: vì sao không sở hữu dự án vẫn có thể chịu rủi ro
 
@@ -158,11 +177,15 @@ Nợ PF có thể không hiện như khoản vay thông thường trên bảng c
 
 Vì vậy khi phân tích nhà thầu phải đọc thuyết minh và bảng bảo lãnh, không chỉ tỷ lệ nợ.
 
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Câu chữ bảo lãnh quyết định mức rủi ro** tiếp nhận điểm tựa từ **Bảo lãnh của nhà thầu: vì sao không sở hữu dự án vẫn có thể chịu rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động cơ của 시행사–시공사–금융기관 có thể xung đột** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Câu chữ bảo lãnh quyết định mức rủi ro
 
 “Bảo lãnh hoàn thành” và “bảo lãnh thanh toán” không phải cùng một nghĩa vụ. Nhà thầu có thể chỉ cam kết hoàn công hoặc có thể phải nhận nợ trong một số điều kiện.
 
 Không nên suy ra mức tiếp xúc pháp lý chỉ từ tiêu đề “công ty bảo lãnh dự án”; phải đọc cấu trúc và điều khoản cụ thể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Động cơ của 시행사–시공사–금융기관 có thể xung đột** tiếp nhận điểm tựa từ **Câu chữ bảo lãnh quyết định mức rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lãi suất tạo áp lực nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động cơ của 시행사–시공사–금융기관 có thể xung đột
 
@@ -172,6 +195,8 @@ Nếu chủ đầu tư bỏ rất ít vốn nhưng nhà thầu cam kết lớn, 
 
 Đây là **chuyển rủi ro (risk transfer)** chứ không phải loại bỏ rủi ro.
 
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Lãi suất tạo áp lực nhiều lớp** tiếp nhận điểm tựa từ **Động cơ của 시행사–시공사–금융기관 có thể xung đột** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cap tỷ lệ (rate / 비율) và bất động sản tạo thu nhập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lãi suất tạo áp lực nhiều lớp
 
 Lãi suất tăng tác động bất động sản qua nhiều kênh cùng lúc.
@@ -179,6 +204,8 @@ Lãi suất tăng tác động bất động sản qua nhiều kênh cùng lúc.
 Khoản trả nợ mua nhà tăng làm sức mua yếu đi; chi phí lãi PF tăng; và tỷ suất vốn hóa của bất động sản cho thuê có thể tăng làm giá tài sản giảm.
 
 Do đó cùng một cú sốc lãi suất có thể đánh đồng thời vào cầu, dòng tiền và giá trị tài sản bảo đảm.
+
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Cap tỷ lệ (rate / 비율) và bất động sản tạo thu nhập** tiếp nhận điểm tựa từ **Lãi suất tạo áp lực nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất động sản phát triển khác bất động sản cho thuê/REIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cap tỷ lệ (rate / 비율) và bất động sản tạo thu nhập
 
@@ -194,6 +221,8 @@ Nếu NOI năm = 4 và cap tỷ lệ (rate / 비율) = 4%, giá trị xấp xỉ
 
 Một thay đổi nhỏ của cap tỷ lệ (rate / 비율) có thể tạo thay đổi giá trị rất lớn. Đó là lý do office/logistics REIT nhạy với lãi suất dù tiền thuê hiện tại tương đối ổn định.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Bất động sản phát triển khác bất động sản cho thuê/REIT** tiếp nhận điểm tựa từ **Cap tỷ lệ (rate / 비율) và bất động sản tạo thu nhập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backlog xây dựng: quy mô chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bất động sản phát triển khác bất động sản cho thuê/REIT
 
 Dự án phát triển kiếm lợi nhuận bằng cách tạo ra và bán tài sản. Bất động sản cho thuê tạo tiền từ tiền thuê định kỳ và giá trị cuối kỳ.
@@ -201,6 +230,8 @@ Dự án phát triển kiếm lợi nhuận bằng cách tạo ra và bán tài 
 Nhà đầu tư REIT quan tâm occupancy, tăng tiền thuê, lịch hết hạn hợp đồng, chi phí vốn, cap tỷ lệ (rate / 비율) và payout.
 
 Không nên dùng lô-gic (logic / 논리) dự án chung cư cho office REIT hoặc ngược lại.
+
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Backlog xây dựng: quy mô chưa đủ** tiếp nhận điểm tựa từ **Bất động sản phát triển khác bất động sản cho thuê/REIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kế toán theo tỷ lệ hoàn thành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Backlog xây dựng: quy mô chưa đủ
 
@@ -210,6 +241,8 @@ Dự án EPC ở nước ngoài có rủi ro địa chính trị, tiền tệ v�
 
 Vì vậy backlog phải được phân khúc.
 
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Kế toán theo tỷ lệ hoàn thành** tiếp nhận điểm tựa từ **Backlog xây dựng: quy mô chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài sản hợp đồng và khoản phải thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kế toán theo tỷ lệ hoàn thành
 
 Dự án dài hạn có thể ghi nhận doanh thu theo tiến độ. Ước tính tổng chi phí quyết định biên dự án kỳ vọng.
@@ -218,6 +251,8 @@ Nếu chi phí xây dựng ước tính tăng, công ty có thể phải ghi **d
 
 Doanh thu có thể trông ổn định nhưng lợi nhuận thay đổi mạnh chỉ vì ước tính chi phí được sửa. Đây là đặc điểm bình thường của kế toán hợp đồng dài hạn nhưng cần đọc kỹ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Tài sản hợp đồng và khoản phải thu** tiếp nhận điểm tựa từ **Kế toán theo tỷ lệ hoàn thành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá đất và lô-gic (logic / 논리) giá trị còn lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tài sản hợp đồng và khoản phải thu
 
 Nếu doanh thu được ghi nhận nhanh hơn thời điểm xuất hóa đơn hoặc thu tiền, tài sản hợp đồng và khoản phải thu tăng.
@@ -225,6 +260,8 @@ Nếu doanh thu được ghi nhận nhanh hơn thời điểm xuất hóa đơn 
 Nếu chúng tăng nhanh hơn doanh thu trong thời gian dài, cần kiểm tra khả năng ghi nhận tiến độ quá tích cực, khách hàng trả chậm, tranh chấp dự án hoặc căng thẳng vốn lưu động.
 
 Dòng tiền chuyển đổi rất quan trọng.
+
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Giá đất và lô-gic (logic / 논리) giá trị còn lại** tiếp nhận điểm tựa từ **Tài sản hợp đồng và khoản phải thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn cung nhà ở có độ trễ dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giá đất và lô-gic (logic / 논리) giá trị còn lại
 
@@ -242,11 +279,15 @@ Giá\ trị\ bán\ kỳ\ vọng
 
 Khi giá căn hộ kỳ vọng tăng hoặc lãi suất giảm, giá trị đất còn lại có thể tăng rất mạnh. Đây là lý do giá đất nhạy cao với kỳ vọng nhà ở.
 
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Giá đất và lô-gic (logic / 논리) giá trị còn lại** nêu điều cần giải thích; **Nguồn cung nhà ở có độ trễ dài** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hàn Quốc không phải một thị trường nhà ở duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguồn cung nhà ở có độ trễ dài
 
 Từ mua đất tới hoàn thành chung cư có thể mất nhiều năm. Vì vậy nguồn cung phản ứng chậm với tín hiệu giá.
 
 Giá cao kích hoạt nhiều dự án, nhưng nguồn cung chỉ đến sau — có thể vào đúng lúc nhu cầu đã đổi. Độ trễ này góp phần tạo chu kỳ bất động sản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Nguồn cung nhà ở có độ trễ dài** nêu điều cần giải thích; **Hàn Quốc không phải một thị trường nhà ở duy nhất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bảng cân đối hộ gia đình tạo vòng phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàn Quốc không phải một thị trường nhà ở duy nhất
 
@@ -255,6 +296,8 @@ Seoul lõi, vùng 수도권, thành phố công nghiệp và địa phương t�
 Giá trung bình toàn quốc có thể che giấu việc một nơi tăng nóng trong khi nơi khác căng thẳng. Danh mục dự án của công ty phải được lập bản đồ theo địa lý.
 
 Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
+
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Bảng cân đối hộ gia đình tạo vòng phản hồi** tiếp nhận điểm tựa từ **Hàn Quốc không phải một thị trường nhà ở duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PF trong các tổ chức tài chính phi ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảng cân đối hộ gia đình tạo vòng phản hồi
 
@@ -274,6 +317,8 @@ Nhu cầu nhà ↓
 
 Chính sách có thể làm vòng này yếu đi nhưng cơ chế vẫn tồn tại.
 
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **PF trong các tổ chức tài chính phi ngân hàng** tiếp nhận điểm tựa từ **Bảng cân đối hộ gia đình tạo vòng phản hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự ưu tiên và waterfall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## PF trong các tổ chức tài chính phi ngân hàng
 
 Công ty chứng khoán, ngân hàng tiết kiệm, bảo hiểm và quỹ có thể nắm khoản vay, chứng khoán hoặc bảo lãnh liên quan PF.
@@ -282,11 +327,15 @@ Cùng một tổng quy mô PF nhưng rủi ro hệ thống có thể khác rất
 
 Vì vậy chỉ nhìn “tổng PF” là chưa đủ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Thứ tự ưu tiên và waterfall** tiếp nhận điểm tựa từ **PF trong các tổ chức tài chính phi ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ổn định chính sách và đánh đổi moral hazard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thứ tự ưu tiên và waterfall
 
 Tiền của dự án được phân phối theo thứ tự. Chủ nợ ưu tiên cao được trả trước mezzanine và vốn chủ; nguồn tài trợ lợi suất cao hơn ở tầng junior hấp thụ lỗ trước.
 
 Hai nhà đầu tư trong cùng một dự án vì vậy có thể chịu mức rủi ro hoàn toàn khác nhau.
+
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Ổn định chính sách và đánh đổi moral hazard** tiếp nhận điểm tựa từ **Thứ tự ưu tiên và waterfall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích một nhà thầu Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ổn định chính sách và đánh đổi moral hazard
 
@@ -296,17 +345,23 @@ Cơ quan quản lý có thể cung cấp thanh khoản hoặc chương trình h�
 
 Thiết kế chính sách phải phân biệt **vấn đề thanh khoản** với **dự án về bản chất không khả thi**. Đây là cùng phân biệt solvency/liquidity trong [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
 
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Cách phân tích một nhà thầu Hàn Quốc** tiếp nhận điểm tựa từ **Ổn định chính sách và đánh đổi moral hazard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích một dự án bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách phân tích một nhà thầu Hàn Quốc
 
 Theo dõi backlog trong nước/nước ngoài, địa lý nhà ở, chất lượng biên đơn hàng, khoản phải thu/tài sản hợp đồng, bảo lãnh PF/nghĩa vụ tiềm tàng, nợ ròng–tiền mặt, chi phí vật liệu–lao động, mức tiếp xúc presale/미분양 và dự phòng EPC nước ngoài.
 
 Tỷ lệ nợ thấp chưa đủ nếu sổ bảo lãnh lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Cách phân tích một dự án bất động sản** tiếp nhận điểm tựa từ **Cách phân tích một nhà thầu Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách phân tích một dự án bất động sản
 
 Hãy hỏi giá đất, tổng chi phí phát triển, tỷ lệ nợ/vốn chủ, kỳ hạn cầu nối (bridge / 브리지), 본PF đã có chưa, giả định presale/cho thuê, giá bán hòa vốn, bên bảo lãnh, địa lý–nhân khẩu học và kế hoạch thoái vốn/tái cấp vốn.
 
 Nếu nhiều câu trả lời cùng phụ thuộc vào một giả định lạc quan, rủi ro đang chồng lên nhau.
+
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** tiếp nhận điểm tựa từ **Cách phân tích một dự án bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
@@ -322,6 +377,8 @@ Lãi suất +150bp
 Sau đó tính lại giá trị còn lại, nhu cầu vốn và khả năng bảo lãnh bị gọi.
 
 PF thường thất bại vì **nhiều sai lệch nhỏ cộng lại**, không nhất thiết vì một biến duy nhất sụp đổ.
+
+> **Chuyển mạch:** Ở chặng này của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -343,6 +400,8 @@ Trả nợ
 
 Ở mỗi mũi tên hãy hỏi: điều gì xảy ra nếu giai đoạn tiếp theo bị chậm?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“Nhà thầu lớn thì dự án không thể vỡ nợ.”** Sai. Điều khoản bảo lãnh và nghĩa vụ sponsor mới quyết định mức bảo vệ.
@@ -357,8 +416,10 @@ Trả nợ
 
 **“Lãi suất thấp hơn sẽ cứu mọi dự án.”** Sai. Giá đất quá cao hoặc cầu yếu về cấu trúc không thể giải quyết chỉ bằng vốn rẻ hơn.
 
+> **Chuyển mạch:** Trong **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

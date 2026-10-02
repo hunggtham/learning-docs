@@ -1,7 +1,6 @@
 # Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)
 
-> **Mạch đọc:** Đặt **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lịch sử nâng cấp năng lực: từ lắp ráp theo giấy phép tới OEM toàn cầu** sang **OEM là nhà tích hợp hệ thống**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**. Route đi từ licensed assembly to global OEM → supplier network and system integration → EV/battery/software transition → finance, logistics and service ecosystem → capex, margins and geopolitical risk.
 
 Ô tô là một trong những ngành tốt nhất để hiểu cách kinh tế Hàn Quốc kết hợp **mạng lưới nhà cung cấp (supplier network), kỷ luật sản xuất, thương hiệu, tài chính và sản xuất toàn cầu** thành lợi thế cạnh tranh. Quá trình chuyển sang xe điện làm ngành này phức tạp hơn vì ranh giới giữa ô tô, pin, điện tử, bán dẫn và phần mềm ngày càng mờ.
 
@@ -35,6 +34,8 @@ Khủng hoảng 1997 là một bước ngoặt khác. Hyundai Motor mua Kia năm
 
 **Tích hợp dọc (vertical integration)** giúp phối hợp nhưng không có nghĩa OEM tự làm mọi thứ. Hàng nghìn nhà cung cấp vẫn là bộ phận thiết yếu của hệ thống.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **OEM là nhà tích hợp hệ thống** tiếp nhận điểm tựa từ **Lịch sử nâng cấp năng lực: từ lắp ráp theo giấy phép tới OEM toàn cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế nền tảng xe: một quyết định ảnh hưởng nhiều năm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## OEM là nhà tích hợp hệ thống
 
 **Nhà sản xuất thiết bị gốc (OEM / 완성차 업체)** như Hyundai Motor hoặc Kia chịu trách nhiệm tích hợp kiến trúc xe, thương hiệu, an toàn–chứng nhận, sản xuất, phân phối, bảo hành và ngày càng nhiều phần mềm.
@@ -43,6 +44,8 @@ Nhà cung cấp có thể làm mô-đun (module / 모듈), linh kiện hoặc v�
 
 Nếu mô-đun (module / 모듈) phanh lỗi, người tiêu dùng không quan tâm nhà cung cấp nào làm ra linh kiện; thương hiệu OEM là bên chịu tổn hại. Vì vậy **tích hợp hệ thống và quản trị chất lượng nhà cung cấp** là năng lực cốt lõi.
 
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Kinh tế nền tảng xe: một quyết định ảnh hưởng nhiều năm** tiếp nhận điểm tựa từ **OEM là nhà tích hợp hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân rã doanh thu: số xe bán ra chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế nền tảng xe: một quyết định ảnh hưởng nhiều năm
 
 **Nền tảng xe (vehicle platform)** thường được dùng cho nhiều mẫu và nhiều năm. Chuẩn hóa nền tảng giúp phân bổ chi phí kỹ thuật, dùng chung linh kiện, tăng quy mô mua sắm và rút ngắn thời gian ra mẫu mới.
@@ -50,6 +53,8 @@ Nếu mô-đun (module / 모듈) phanh lỗi, người tiêu dùng không quan t
 Nhưng dùng chung nền tảng cũng tạo **rủi ro chung (common-mode risk)**: một lỗi thiết kế có thể ảnh hưởng nhiều mẫu và làm chi phí triệu hồi tăng mạnh.
 
 Nhà cung cấp được chọn cho một nền tảng có thể có khả năng nhìn trước doanh thu nhiều năm, nhưng đồng thời phải cam kết công suất, chất lượng và thường chịu áp lực giảm giá theo thời gian.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Phân rã doanh thu: số xe bán ra chưa đủ** tiếp nhận điểm tựa từ **Kinh tế nền tảng xe: một quyết định ảnh hưởng nhiều năm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ưu đãi bán hàng là một hình thức giảm giá ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân rã doanh thu: số xe bán ra chưa đủ
 
@@ -63,6 +68,8 @@ Doanh\ thu\ ô\ tô \approx Số\ xe \times ASP + Dịch\ vụ/Linh\ kiện/Khá
 
 Số xe đi ngang nhưng tỷ trọng xe cao cấp tăng vẫn có thể làm doanh thu và biên lợi nhuận tăng. Ngược lại, doanh thu tăng do quy đổi KRW không tự động có nghĩa quyền định giá tốt hơn.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Ưu đãi bán hàng là một hình thức giảm giá ẩn** tiếp nhận điểm tựa từ **Phân rã doanh thu: số xe bán ra chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đòn bẩy hoạt động và tỷ lệ sử dụng nhà máy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ưu đãi bán hàng là một hình thức giảm giá ẩn
 
 Giá niêm yết có thể không giảm nhưng nhà sản xuất hoặc đại lý vẫn đưa ra giảm tiền mặt, lãi suất vay thấp hoặc chương trình khuyến mại.
@@ -70,6 +77,8 @@ Giá niêm yết có thể không giảm nhưng nhà sản xuất hoặc đại 
 **Ưu đãi bán hàng (sales incentive / 판매 인센티브)** làm giá thực nhận thấp hơn giá niêm yết.
 
 Khi tồn kho đại lý cao, ưu đãi thường tăng để giải phóng hàng. Vì vậy số ngày tồn kho tại đại lý có thể là tín hiệu sớm của áp lực giá.
+
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Đòn bẩy hoạt động và tỷ lệ sử dụng nhà máy** tiếp nhận điểm tựa từ **Ưu đãi bán hàng là một hình thức giảm giá ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự phòng bảo hành: chất lượng kỹ thuật biến thành chi phí kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đòn bẩy hoạt động và tỷ lệ sử dụng nhà máy
 
@@ -87,6 +96,8 @@ Biên lợi nhuận giảm mạnh hơn mức giảm sản lượng
 
 Đây là lý do nhu cầu giảm nhẹ vẫn có thể làm lợi nhuận giảm mạnh hơn tỷ lệ doanh thu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Dự phòng bảo hành: chất lượng kỹ thuật biến thành chi phí kế toán** tiếp nhận điểm tựa từ **Đòn bẩy hoạt động và tỷ lệ sử dụng nhà máy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thương hiệu và giá trị còn lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dự phòng bảo hành: chất lượng kỹ thuật biến thành chi phí kế toán
 
 Nhà sản xuất ô tô phải ước tính nghĩa vụ sửa chữa và triệu hồi trong tương lai rồi ghi **dự phòng bảo hành (warranty provision / 품질보증충당부채)**.
@@ -95,6 +106,8 @@ Chất lượng tốt có giá trị tài chính trực tiếp vì làm chi phí
 
 Một đợt triệu hồi lớn có thể ảnh hưởng cả lợi nhuận và tiền mặt dù doanh số vẫn cao. Vì vậy chất lượng kỹ thuật là một biến tài chính.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Thương hiệu và giá trị còn lại** tiếp nhận điểm tựa từ **Dự phòng bảo hành: chất lượng kỹ thuật biến thành chi phí kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài chính captive: động cơ bán hàng đồng thời là nguồn rủi ro tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thương hiệu và giá trị còn lại
 
 Thương hiệu cao cấp hỗ trợ ASP cao hơn, cần ít ưu đãi hơn và có thể giữ **giá trị còn lại (residual value)** của xe cũ tốt hơn.
@@ -102,6 +115,8 @@ Thương hiệu cao cấp hỗ trợ ASP cao hơn, cần ít ưu đãi hơn và 
 Giá trị còn lại đặc biệt quan trọng với cho thuê xe và công ty tài chính của hãng. Nếu khi hợp đồng thuê kết thúc, xe cũ có giá thấp hơn giả định ban đầu, đơn vị tài chính có thể chịu lỗ.
 
 Chất lượng thương hiệu vì vậy ảnh hưởng cả biên sản xuất và kinh tế tài chính.
+
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Thương hiệu và giá trị còn lại** nêu điều cần giải thích; **Tài chính captive: động cơ bán hàng đồng thời là nguồn rủi ro tín dụng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sản xuất toàn cầu làm kênh tỷ giá phức tạp hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tài chính captive: động cơ bán hàng đồng thời là nguồn rủi ro tín dụng
 
@@ -113,6 +128,8 @@ Doanh nghiệp sản xuất có thể trợ cấp lãi suất thấp để giữ
 
 Vì vậy không thể phân tích hoàn toàn tách biệt kinh doanh xe và công ty tài chính.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Tài chính captive: động cơ bán hàng đồng thời là nguồn rủi ro tín dụng** nêu điều cần giải thích; **Sản xuất toàn cầu làm kênh tỷ giá phức tạp hơn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mạng lưới nhà cung cấp: cơ hội tăng quy mô đi cùng rủi ro phụ thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản xuất toàn cầu làm kênh tỷ giá phức tạp hơn
 
 Nhà sản xuất Hàn Quốc đặt nhà máy tại nhiều khu vực để giảm thuế quan và logistics, bám sát nhu cầu địa phương và tiếp cận ưu đãi chính sách.
@@ -120,6 +137,8 @@ Nhà sản xuất Hàn Quốc đặt nhà máy tại nhiều khu vực để gi�
 Điều này làm mức tiếp xúc tỷ giá thay đổi. Một chiếc Hyundai sản xuất tại Mỹ và bán bằng USD có doanh thu USD nhưng cũng có nhiều chi phí USD. KRW yếu vì vậy tác động khác với trường hợp xe được xuất trực tiếp từ Hàn Quốc.
 
 Khi tỷ trọng sản xuất ở nước ngoài tăng, câu “KRW yếu luôn có lợi cho nhà xuất khẩu ô tô” trở nên quá đơn giản.
+
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Mạng lưới nhà cung cấp: cơ hội tăng quy mô đi cùng rủi ro phụ thuộc** tiếp nhận điểm tựa từ **Sản xuất toàn cầu làm kênh tỷ giá phức tạp hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển sang EV: quỹ lợi nhuận được phân bổ lại trong chuỗi giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạng lưới nhà cung cấp: cơ hội tăng quy mô đi cùng rủi ro phụ thuộc
 
@@ -129,11 +148,15 @@ Chiến lược khỏe hơn là dùng sản lượng của **khách hàng trụ 
 
 Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Mạng lưới nhà cung cấp: cơ hội tăng quy mô đi cùng rủi ro phụ thuộc** xác định đầu vào; **Chuyển sang EV: quỹ lợi nhuận được phân bổ lại trong chuỗi giá trị** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chi phí chuyển đổi: ICE, hybrid và EV có thể cùng tồn tại nhiều năm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển sang EV: quỹ lợi nhuận được phân bổ lại trong chuỗi giá trị
 
 Xe động cơ đốt trong **ICE (Internal Combustion Engine)** cần động cơ, hộp số, hệ thống nhiên liệu và khí thải. Xe điện giảm một phần độ phức tạp cơ khí nhưng tăng vai trò của cell–pack pin, inverter và điện tử công suất, quản lý nhiệt, hệ điện áp cao, điện toán và phần mềm.
 
 Do đó quá trình chuyển đổi tạo người thắng và người thua trong mạng lưới nhà cung cấp. Năng lực của nhà cung cấp ICE truyền thống không tự động chuyển được sang EV.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Chuyển sang EV: quỹ lợi nhuận được phân bổ lại trong chuỗi giá trị** xác định đầu vào; **Chi phí chuyển đổi: ICE, hybrid và EV có thể cùng tồn tại nhiều năm** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mức thâm nhập EV thường theo đường cong chữ S** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí chuyển đổi: ICE, hybrid và EV có thể cùng tồn tại nhiều năm
 
@@ -153,11 +176,15 @@ Nếu EV tăng chậm hơn dự kiến, công suất EV thuần có thể bị s
 
 Hybrid có thể đóng vai trò cầu nối vì tận dụng hạ tầng nhiên liệu hiện có nhưng giảm tiêu thụ và phát thải.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Mức thâm nhập EV thường theo đường cong chữ S** tiếp nhận điểm tựa từ **Chi phí chuyển đổi: ICE, hybrid và EV có thể cùng tồn tại nhiều năm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi giá trị pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mức thâm nhập EV thường theo đường cong chữ S
 
 Tỷ lệ EV dài hạn có thể tăng nhưng tốc độ từng năm biến động theo trợ cấp, lãi suất, hạ tầng sạc, số mẫu xe, chi phí pin, niềm tin người tiêu dùng và giá trị xe EV cũ.
 
 Một năm yếu không chứng minh quá trình EV đã kết thúc; một năm bùng nổ cũng không nên được ngoại suy mãi mãi.
+
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Mức thâm nhập EV thường theo đường cong chữ S** xác định đầu vào; **Chuỗi giá trị pin** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hóa học pin: không có “loại pin tốt nhất” nếu chưa xác định mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi giá trị pin
 
@@ -176,6 +203,8 @@ EV / ESS
 ```
 
 Giá trị và rủi ro tồn tại ở mọi nút. Nhà sản xuất nguyên liệu nhạy hơn với giá hàng hóa; nhà sản xuất cell thêm năng lực quy trình, yield và chứng nhận khách hàng; pack và hệ thống thêm quản lý nhiệt, an toàn và điều khiển.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Chuỗi giá trị pin** xác định đầu vào; **Hóa học pin: không có “loại pin tốt nhất” nếu chưa xác định mục tiêu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Kinh tế cell pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hóa học pin: không có “loại pin tốt nhất” nếu chưa xác định mục tiêu
 
@@ -197,6 +226,8 @@ Thời tiết lạnh?
 
 Lựa chọn công nghệ phụ thuộc mục tiêu.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Kinh tế cell pin** tiếp nhận điểm tựa từ **Hóa học pin: không có “loại pin tốt nhất” nếu chưa xác định mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Yield và quá trình ramp nhà máy gigafactory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế cell pin
 
 Một cấu trúc chi phí đơn giản:
@@ -216,6 +247,8 @@ Giá nguyên liệu giảm có thể làm doanh thu hoặc ASP báo cáo giảm 
 
 Vì vậy chỉ nhìn tăng trưởng doanh thu là thước đo rất yếu cho sức khỏe doanh nghiệp pin.
 
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Yield và quá trình ramp nhà máy gigafactory** tiếp nhận điểm tựa từ **Kinh tế cell pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro utilization: công suất công bố không phải doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Yield và quá trình ramp nhà máy gigafactory
 
 Nhà máy pin mới hiếm khi đạt yield và utilization tối ưu ngay từ đầu. Quá trình ramp gồm tinh chỉnh thiết bị, ổn định quy trình, học của nhân viên, chứng nhận chất lượng và giảm phế phẩm.
@@ -223,6 +256,8 @@ Nhà máy pin mới hiếm khi đạt yield và utilization tối ưu ngay từ 
 Trong giai đoạn này, nhà máy có thể lỗ dù đã có đơn hàng lớn.
 
 Điểm này giống bán dẫn ở lô-gic (logic / 논리) học quy trình, nhưng hóa học, an toàn và chứng nhận ô tô tạo ràng buộc khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Rủi ro utilization: công suất công bố không phải doanh thu** tiếp nhận điểm tựa từ **Yield và quá trình ramp nhà máy gigafactory** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tập trung khách hàng và cấu trúc liên doanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro utilization: công suất công bố không phải doanh thu
 
@@ -238,6 +273,8 @@ Vì vậy công suất GWh công bố chỉ là **năng lực cung tiềm năng*
 
 Cần hỏi bao nhiêu GWh đã lắp đặt, bao nhiêu còn đang xây, phần nào có hợp đồng, utilization thực tế, lịch ra mắt xe của khách hàng và yield hiện tại.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Tập trung khách hàng và cấu trúc liên doanh** tiếp nhận điểm tựa từ **Rủi ro utilization: công suất công bố không phải doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hợp đồng chuyển giá nguyên liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tập trung khách hàng và cấu trúc liên doanh
 
 Nhà máy pin thường được xây gần hoặc cùng OEM lớn qua **liên doanh (Joint Venture / JV)**. Quan hệ dài hạn tăng khả năng dự đoán nhu cầu nhưng cũng tăng mức tập trung khách hàng.
@@ -245,6 +282,8 @@ Nhà máy pin thường được xây gần hoặc cùng OEM lớn qua **liên d
 Nếu OEM trụ cột trì hoãn một nền tảng xe, utilization của nhà máy pin có thể giảm mạnh.
 
 JV còn ảnh hưởng phạm vi hợp nhất và nghĩa vụ góp vốn. “Công suất của tập đoàn” trên tiêu đề chưa chắc bằng phần lợi ích kinh tế thực của tập đoàn trong toàn bộ công suất đó.
+
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Hợp đồng chuyển giá nguyên liệu** tiếp nhận điểm tựa từ **Tập trung khách hàng và cấu trúc liên doanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội địa hóa và chính sách công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hợp đồng chuyển giá nguyên liệu
 
@@ -259,6 +298,8 @@ Tăng sản lượng
 Tác động chuyển giá nguyên liệu
 Biên giá trị gia tăng
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Nội địa hóa và chính sách công nghiệp** tiếp nhận điểm tựa từ **Hợp đồng chuyển giá nguyên liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xe định nghĩa bằng phần mềm (Software-Defined Vehicle / SDV)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nội địa hóa và chính sách công nghiệp
 
@@ -277,6 +318,8 @@ Kinh\ tế\ vận\ hành
 
 Địa chính trị và chính sách công nghiệp đã trở thành một phần của tài chính doanh nghiệp pin.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Xe định nghĩa bằng phần mềm (Software-Defined Vehicle / SDV)** tiếp nhận điểm tựa từ **Nội địa hóa và chính sách công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OTA và doanh thu lặp lại: là quyền chọn, không phải tiền chắc chắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xe định nghĩa bằng phần mềm (Software-Defined Vehicle / SDV)
 
 Xe ngày càng giống một nền tảng phần mềm với infotainment, ADAS, cập nhật OTA, kết nối, điện toán tập trung và dịch vụ dữ liệu.
@@ -285,17 +328,23 @@ Xe ngày càng giống một nền tảng phần mềm với infotainment, ADAS,
 
 Nhịp phát triển phần cứng và phần mềm khác nhau, khiến chuyển đổi SDV khó hơn việc chỉ tuyển thêm lập trình viên.
 
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **OTA và doanh thu lặp lại: là quyền chọn, không phải tiền chắc chắn** tiếp nhận điểm tựa từ **Xe định nghĩa bằng phần mềm (Software-Defined Vehicle / SDV)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **An ninh mạng và an toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## OTA và doanh thu lặp lại: là quyền chọn, không phải tiền chắc chắn
 
 Dịch vụ kết nối và thuê bao ADAS mở khả năng tạo **doanh thu lặp lại (recurring revenue)**, nhưng khách hàng không nhất thiết sẵn sàng trả tiền cho mọi tính năng mà họ cho rằng đáng ra phải có sẵn.
 
 Do đó “doanh thu phần mềm” phải được mô hình hóa qua tỷ lệ khách hàng sử dụng, ARPU, churn và chi phí phát triển–hỗ trợ, không thể suy ra trực tiếp từ số xe đang chạy.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **An ninh mạng và an toàn** tiếp nhận điểm tựa từ **OTA và doanh thu lặp lại: là quyền chọn, không phải tiền chắc chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lái xe tự động: năng lực kỹ thuật khác triển khai thương mại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## An ninh mạng và an toàn
 
 Xe kết nối làm **bề mặt tấn công (attack surface)** rộng hơn. Sự cố an ninh mạng có thể đồng thời trở thành vấn đề an toàn, triệu hồi và quyền riêng tư.
 
 Chất lượng phần mềm vì vậy mang hệ quả pháp lý và trách nhiệm lớn hơn ứng dụng tiêu dùng thông thường. Đây là lý do nhà sản xuất xe không thể sao chép nguyên triết lý “move fast and break things”.
+
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Lái xe tự động: năng lực kỹ thuật khác triển khai thương mại** tiếp nhận điểm tựa từ **An ninh mạng và an toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ mobility: nhà sản xuất xe có thể đi xa hơn việc bán xe?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lái xe tự động: năng lực kỹ thuật khác triển khai thương mại
 
@@ -305,11 +354,15 @@ Một demo có thể chạy tốt nhưng triển khai thương mại còn phụ 
 
 Vì vậy cột mốc R&D không nên được đồng nhất với mốc doanh thu.
 
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Dịch vụ mobility: nhà sản xuất xe có thể đi xa hơn việc bán xe?** tiếp nhận điểm tựa từ **Lái xe tự động: năng lực kỹ thuật khác triển khai thương mại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích nhà sản xuất ô tô Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dịch vụ mobility: nhà sản xuất xe có thể đi xa hơn việc bán xe?
 
 Ride-hailing, robotaxi, đội xe và mô hình thuê bao có thể chuyển giá trị từ sở hữu phương tiện sang **mobility-as-a-service**.
 
 Nhưng kinh tế dịch vụ phụ thuộc utilization, chi phí tài xế hoặc tự động hóa, bảo hiểm và quy định. Nhà sản xuất bước vào mobility phải chứng minh mình vận hành được kinh tế dịch vụ, không chỉ sản xuất xe tốt.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Cách phân tích nhà sản xuất ô tô Hàn Quốc** tiếp nhận điểm tựa từ **Dịch vụ mobility: nhà sản xuất xe có thể đi xa hơn việc bán xe?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích công ty pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách phân tích nhà sản xuất ô tô Hàn Quốc
 
@@ -317,11 +370,15 @@ Nên theo dõi số xe bán buôn/bán lẻ, cơ cấu khu vực, ASP và cơ c�
 
 Cần tách Hyundai Motor, Kia và các công ty thành viên thay vì coi toàn tập đoàn là một báo cáo lãi lỗ duy nhất.
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Cách phân tích công ty pin** tiếp nhận điểm tựa từ **Cách phân tích nhà sản xuất ô tô Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách phân tích công ty pin
 
 Nên theo dõi GWh giao bán, công suất lắp đặt và công suất được sử dụng, ASP/kWh cùng cơ chế chuyển giá vật liệu, cơ cấu hóa học, yield/ramp, tập trung khách hàng, cấu trúc hợp đồng/JV, mức tiếp xúc nguyên liệu, CAPEX–khấu hao, FCF và nợ.
 
 Tăng công suất nhưng utilization và chất lượng FCF yếu vẫn có thể phá hủy giá trị.
+
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** tiếp nhận điểm tựa từ **Cách phân tích công ty pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
@@ -330,6 +387,8 @@ Với hãng xe, có thể kiểm tra kịch bản số xe toàn cầu -10%, ưu 
 Với pin, có thể kiểm tra khách hàng EV trì hoãn mẫu xe, utilization -20 điểm phần trăm, yield ramp chậm, quy định trợ cấp thay đổi, giá lithium giảm mạnh hoặc chi phí tài trợ CAPEX tăng.
 
 Luôn lần theo tác động tới tiền mặt chứ không chỉ doanh thu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -349,6 +408,8 @@ Biên lợi nhuận / dòng tiền
 Đầu tư nền tảng thế hệ tiếp theo
 ```
 
+> **Chuyển mạch:** Trong **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“EV bán tăng thì mọi công ty pin đều có lãi.”** Sai. Utilization, yield, CAPEX và hợp đồng khách hàng đều quan trọng.
@@ -363,8 +424,10 @@ Biên lợi nhuận / dòng tiền
 
 **“Tích hợp dọc nghĩa OEM tự làm mọi thứ.”** Sai. Mạng lưới nhà cung cấp vẫn thiết yếu.
 
+> **Chuyển mạch:** Ở chặng này của **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

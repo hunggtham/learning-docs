@@ -1,7 +1,6 @@
 # Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)
 
-> **Mạch đọc:** Đặt **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kinh tế tập trung: vì sao doanh nghiệp thích ở gần nhau?** sang **Cụm công nghiệp cũng có chi phí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**. Route đi từ agglomeration and location → clusters, labor pools và supplier networks → infrastructure/ports/energy → congestion, housing và regional inequality → resilience and relocation.
 
 Nền kinh tế không tồn tại trên một bảng tính không có địa lý. Nhà máy cần đất, điện, nước và cảng; công ty phần mềm cần nhân lực và mạng lưới khách hàng; biotech cần hệ sinh thái nghiên cứu và nhân sự pháp quy; logistics cần đường cao tốc, sân bay và mật độ kho bãi. Vì vậy **vị trí (location / 입지)** là một biến kinh tế thực sự: nó tác động đến chi phí, thời gian giao hàng, tuyển dụng, khả năng chống chịu, khả năng tiếp cận khách hàng và tốc độ học hỏi.
 
@@ -27,11 +26,15 @@ Thêm doanh nghiệp tiếp tục vào cụm
 
 Đây là một dạng **phụ thuộc đường đi lịch sử (path dependence / 경로의존성)**: lợi thế ban đầu có thể tự củng cố theo thời gian.
 
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Cụm công nghiệp cũng có chi phí** tiếp nhận điểm tựa từ **Kinh tế tập trung: vì sao doanh nghiệp thích ở gần nhau?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **수도권: không chỉ là dịch vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cụm công nghiệp cũng có chi phí
 
 Tập trung quá mạnh không phải lúc nào cũng tốt. Khi cụm phát triển, giá đất và nhà ở tăng, tắc nghẽn giao thông lớn hơn, cạnh tranh lao động đẩy lương lên, công suất điện–nước có thể trở thành nút thắt và một sự cố địa phương có thể ảnh hưởng nhiều doanh nghiệp cùng lúc.
 
 Đây là **chi phí tắc nghẽn (congestion diseconomies / 혼잡비용)**. Quy mô tối ưu của cụm phải cân bằng lợi ích tập trung với chi phí quá tải và rủi ro tập trung.
+
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **수도권: không chỉ là dịch vụ** tiếp nhận điểm tựa từ **Cụm công nghiệp cũng có chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao sự tập trung ở 수도권 tự củng cố?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 수도권: không chỉ là dịch vụ
 
@@ -39,11 +42,15 @@ Khu vực Seoul–Gyeonggi–Incheon tập trung trụ sở, tài chính, dịch
 
 Vì vậy không nên đơn giản hóa `수도권 = dịch vụ` và `ngoài 수도권 = nhà máy`. Trong thực tế, trụ sở có thể ở Seoul, R&D ở Pangyo hoặc Yongin, fab ở Gyeonggi và nhà máy quy mô lớn nằm xa hơn về phía nam.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Vì sao sự tập trung ở 수도권 tự củng cố?** tiếp nhận điểm tựa từ **수도권: không chỉ là dịch vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá nhà là lực đối trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao sự tập trung ở 수도권 tự củng cố?
 
 Người lao động muốn sống ở nơi có nhiều nhà tuyển dụng vì khả năng chuyển việc cao hơn. Doanh nghiệp lại muốn đặt văn phòng ở nơi có nhiều nhân lực giỏi vì tuyển dụng dễ hơn. Đây là **hiệu ứng tập trung hai phía của thị trường lao động**.
 
 Tương tự, nhà đầu tư muốn ở nơi có mật độ startup cao, còn startup muốn ở gần nhà đầu tư và khách hàng doanh nghiệp. Vì vậy việc di chuyển một cơ quan công quyền ra khỏi Seoul không tự động tạo ra một hệ sinh thái mới tương đương.
+
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Giá nhà là lực đối trọng** tiếp nhận điểm tựa từ **Vì sao sự tập trung ở 수도권 tự củng cố?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pangyo: lô-gic (logic / 논리) của cụm phần mềm và công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giá nhà là lực đối trọng
 
@@ -51,11 +58,15 @@ Tập trung kinh tế làm tăng giá nhà và chi phí đi lại. Với ngườ
 
 Vì vậy một số chức năng được tách theo không gian: trụ sở ở Seoul, R&D ở Pangyo/Yongin/Daejeon, sản xuất ở ngoại vi Gyeonggi–Chungcheong và logistics ở khu vực có đất rẻ nhưng giao thông tốt. Đây là **địa lý chức năng**, không phải một công ty chỉ gắn với một thành phố.
 
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Pangyo: lô-gic (logic / 논리) của cụm phần mềm và công nghệ** tiếp nhận điểm tựa từ **Giá nhà là lực đối trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hành lang bán dẫn: fab làm địa lý trở nên rất “dính”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pangyo: lô-gic (logic / 논리) của cụm phần mềm và công nghệ
 
 Cụm phần mềm cần kỹ sư, startup, vốn mạo hiểm, khách hàng doanh nghiệp, đại học và khả năng lan tỏa tri thức nhiều hơn là cảng biển hay thép. Vì vậy chỉ xây khu văn phòng mới không đủ để tái tạo Pangyo nếu không có nguồn nhân lực, khách hàng và mạng lưới đổi mới tương ứng.
 
 Chính sách cụm phải phù hợp với **cơ chế sản xuất của ngành**, không thể sao chép một mô hình vật lý cho mọi lĩnh vực.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Hành lang bán dẫn: fab làm địa lý trở nên rất “dính”** tiếp nhận điểm tựa từ **Pangyo: lô-gic (logic / 논리) của cụm phần mềm và công nghệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện và nước là nút thắt “vô hình”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hành lang bán dẫn: fab làm địa lý trở nên rất “dính”
 
@@ -64,6 +75,8 @@ Cụm bán dẫn ở Gyeonggi và Chungcheong được hình thành quanh fab, n
 Fab là một trong những tài sản khó di dời nhất của nền kinh tế hiện đại vì chi phí xây dựng, chứng nhận quy trình và hệ sinh thái hỗ trợ rất lớn. Khi fab đã đặt ở một nơi, nhà cung cấp thường tiếp tục tập trung quanh đó.
 
 Do đó mọi kế hoạch đầu tư bán dẫn phải được kiểm tra không chỉ bằng ngân sách doanh nghiệp mà còn bằng điện, nước, xử lý nước thải, nhà ở cho kỹ sư, hạ tầng hóa chất–khí và khả năng phản ứng của nhà cung cấp thiết bị.
+
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Điện và nước là nút thắt “vô hình”** tiếp nhận điểm tựa từ **Hành lang bán dẫn: fab làm địa lý trở nên rất “dính”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Daejeon–Daedeok: nghiên cứu mạnh không tự động thành doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện và nước là nút thắt “vô hình”
 
@@ -83,6 +96,8 @@ Nhà máy được xây xong nhưng thiếu các mạng này thì chưa phải l
 
 Xem [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
 
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Daejeon–Daedeok: nghiên cứu mạnh không tự động thành doanh thu** tiếp nhận điểm tựa từ **Điện và nước là nút thắt “vô hình”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chungcheong: vùng lan tỏa sản xuất từ 수도권** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Daejeon–Daedeok: nghiên cứu mạnh không tự động thành doanh thu
 
 Daejeon và Daedeok có nhiều viện nghiên cứu công và nguồn nhân lực khoa học–kỹ thuật. Nhưng tri thức chỉ tạo giá trị doanh nghiệp khi đi qua cầu nối:
@@ -98,15 +113,21 @@ Nghiên cứu
 
 Nếu năng lực thương mại hóa yếu, khu vực có thể có năng lực nghiên cứu cao nhưng số công ty tăng trưởng lớn vẫn ít. Đây là lý do phải phân biệt **năng lực tạo tri thức** và **năng lực thương mại hóa**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Chungcheong: vùng lan tỏa sản xuất từ 수도권** tiếp nhận điểm tựa từ **Daejeon–Daedeok: nghiên cứu mạnh không tự động thành doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ulsan: hình mẫu của thành phố công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chungcheong: vùng lan tỏa sản xuất từ 수도권
 
 Chungcheong hấp dẫn bán dẫn, màn hình, pin và sản xuất nhờ gần 수도권 nhưng có thêm đất công nghiệp, hành lang giao thông, đại học và chi phí đất thấp hơn. Điều này cho thấy hoạt động kinh tế không dừng đột ngột ở ranh giới Seoul mà lan dọc theo hạ tầng và chênh lệch chi phí.
+
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Ulsan: hình mẫu của thành phố công nghiệp** tiếp nhận điểm tựa từ **Chungcheong: vùng lan tỏa sản xuất từ 수도권** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Busan: cảng là hạ tầng mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ulsan: hình mẫu của thành phố công nghiệp
 
 Ulsan kết hợp ô tô, đóng tàu và hóa dầu với cảng biển, mặt bằng lớn, nhà cung cấp chuyên môn và lao động sản xuất lành nghề. Nhưng tập trung cao cũng khiến thành phố nhạy với chu kỳ ngành.
 
 Nếu ô tô, đóng tàu và hóa chất đồng thời suy yếu, việc làm, nhà ở, dịch vụ địa phương và thu ngân sách đều có thể bị ảnh hưởng. Có thể coi kinh tế vùng như một danh mục đầu tư: vùng càng ít đa dạng thì càng nhạy với cú sốc của ngành chủ lực.
+
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Busan: cảng là hạ tầng mạng** tiếp nhận điểm tựa từ **Ulsan: hình mẫu của thành phố công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Geoje: rủi ro của sự phụ thuộc vào một ngành đầu tàu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Busan: cảng là hạ tầng mạng
 
@@ -116,11 +137,15 @@ Cảng không chỉ là một doanh nghiệp địa phương; nó là **hạ t�
 
 Xem [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Geoje: rủi ro của sự phụ thuộc vào một ngành đầu tàu** tiếp nhận điểm tựa từ **Busan: cảng là hạ tầng mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Changwon và Pohang: cụm máy móc và thép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Geoje: rủi ro của sự phụ thuộc vào một ngành đầu tàu
 
 Geoje là ví dụ rõ về mức độ phụ thuộc vào đóng tàu. Khi các xưởng tàu lớn mở rộng, nhà cung cấp, nhà ở và dịch vụ địa phương tăng theo. Khi ngành suy giảm, tác động lan ra ngoài số lao động bị cắt trực tiếp.
 
 Đây là **hệ số nhân vùng (regional multiplier)**: tiền lương của doanh nghiệp đầu tàu trở thành doanh thu của nhà hàng, chủ nhà, bán lẻ và nguồn thu thuế địa phương.
+
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Changwon và Pohang: cụm máy móc và thép** tiếp nhận điểm tựa từ **Geoje: rủi ro của sự phụ thuộc vào một ngành đầu tàu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gwangyang–Yeosu: logistics hàng rời và công nghiệp quy trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Changwon và Pohang: cụm máy móc và thép
 
@@ -128,17 +153,23 @@ Changwon cho thấy lợi ích của cụm máy móc, nơi kỹ thuật viên, n
 
 Pohang lại phản ánh hệ sinh thái thép quanh POSCO. Nhưng chuyển đổi sang thép carbon thấp có thể yêu cầu điện, hydro và hạ tầng mới. Một cụm công nghiệp cũ muốn giữ lợi thế phải nâng cấp hạ tầng song song với thay đổi công nghệ.
 
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Changwon và Pohang: cụm máy móc và thép** xác định đầu vào; **Gwangyang–Yeosu: logistics hàng rời và công nghiệp quy trình** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cụm do chính sách tạo ra: hỗ trợ chỉ là điểm khởi đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Gwangyang–Yeosu: logistics hàng rời và công nghiệp quy trình
 
 Thép và hóa dầu cần cảng nước sâu, bồn chứa, đường ống và mặt bằng lớn. Với nguyên liệu hàng rời, chi phí logistics có thể lớn đến mức một địa điểm có đất rẻ hơn trong nội địa vẫn kém hiệu quả hơn khu vực cảng.
 
 Doanh nghiệp phải tối ưu **tổng chi phí đưa nguyên liệu vào sản xuất (total landed/process cost)**, không chỉ giá đất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Gwangyang–Yeosu: logistics hàng rời và công nghiệp quy trình** xác định đầu vào; **Cụm do chính sách tạo ra: hỗ trợ chỉ là điểm khởi đầu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Đại học địa phương và nguồn nhân lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cụm do chính sách tạo ra: hỗ trợ chỉ là điểm khởi đầu
 
 Các khu công nghiệp mới hoặc dự án quy mô lớn ở ngoài 수도권 có thể hấp dẫn doanh nghiệp bằng đất, quy hoạch và ưu đãi. Nhưng một cụm chỉ trở nên tự duy trì khi có nhà cung cấp, nhân lực, khách hàng và hạ tầng thực sự.
 
 Một dự án “đã công bố” không đồng nghĩa một cụm sản xuất đã hình thành. Khoảng cách giữa thông báo đầu tư và hệ sinh thái hoạt động có thể rất lớn.
+
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Cụm do chính sách tạo ra: hỗ trợ chỉ là điểm khởi đầu** nêu điều cần giải thích; **Đại học địa phương và nguồn nhân lực** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Lao động nước ngoài và địa lý công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đại học địa phương và nguồn nhân lực
 
@@ -148,9 +179,13 @@ Suy giảm dân số vì vậy không chỉ là vấn đề xã hội mà còn l
 
 Xem [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
 
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Đại học địa phương và nguồn nhân lực** nêu điều cần giải thích; **Lao động nước ngoài và địa lý công nghiệp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khoảng cách kinh tế không phải số kilomet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lao động nước ngoài và địa lý công nghiệp
 
 Thiếu lao động tại vùng sản xuất có thể làm tăng nhu cầu lao động nước ngoài. Khi đó doanh nghiệp và địa phương phải bổ sung nhà ở, đào tạo ngôn ngữ–an toàn, giao thông và dịch vụ cộng đồng. Chính sách lao động và chính sách vùng vì vậy liên kết trực tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Khoảng cách kinh tế không phải số kilomet** tiếp nhận điểm tựa từ **Lao động nước ngoài và địa lý công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sân bay và sản xuất tiên tiến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khoảng cách kinh tế không phải số kilomet
 
@@ -164,13 +199,19 @@ Khoảng\ cách\ hiệu\ dụng = f(Thời\ gian, Chi\ phí, Độ\ tin\ cậy, 
 
 Bán dẫn coi trọng sân bay và logistics giá trị cao; thép coi trọng cảng hàng rời; phần mềm coi trọng thời gian đi lại của nhân lực và kết nối dữ liệu. Chỉ số khoảng cách phải phù hợp với đặc tính vật lý của ngành.
 
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Sân bay và sản xuất tiên tiến** tiếp nhận điểm tựa từ **Khoảng cách kinh tế không phải số kilomet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trung tâm dữ liệu tạo ra một loại địa lý công nghiệp mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sân bay và sản xuất tiên tiến
 
 Sản phẩm có giá trị cao nhưng trọng lượng thấp như chip phù hợp vận tải hàng không. Vì vậy Incheon Airport không chỉ phục vụ hành khách mà còn là một phần của hạ tầng sản xuất tiên tiến. Với các linh kiện giá trị cao, thời gian tới khách hàng có thể quan trọng hơn chi phí vận tải đơn thuần.
 
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Sân bay và sản xuất tiên tiến** nêu điều cần giải thích; **Trung tâm dữ liệu tạo ra một loại địa lý công nghiệp mới** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vì sao chính sách “đưa doanh nghiệp ra ngoài Seoul” khó?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trung tâm dữ liệu tạo ra một loại địa lý công nghiệp mới
 
 Cloud và AI không làm kinh tế trở nên “phi địa lý”. Trung tâm dữ liệu phụ thuộc vào điện, thời gian đấu nối, đất, làm mát, cáp quang, độ trễ mạng và rủi ro thiên tai. Kinh tế số vì vậy tạo ra một bản đồ công nghiệp mới xoay quanh điện và mạng dữ liệu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Trung tâm dữ liệu tạo ra một loại địa lý công nghiệp mới** nêu điều cần giải thích; **Vì sao chính sách “đưa doanh nghiệp ra ngoài Seoul” khó?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hiệu quả tập trung và khả năng chống chịu là một đánh đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao chính sách “đưa doanh nghiệp ra ngoài Seoul” khó?
 
@@ -182,11 +223,15 @@ Giá\ trị\ địa\ điểm \approx Lợi\ ích\ năng\ suất + Ưu\ đãi - C
 
 Nếu nhân lực, khách hàng và mạng lưới đối tác vẫn tập trung ở Seoul, ưu đãi nhỏ khó bù được phần chênh lệch. Phát triển vùng bền vững thường cần đồng thời doanh nghiệp đầu tàu, trường đại học, hạ tầng, nhà ở và hệ sinh thái nhà cung cấp.
 
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Hiệu quả tập trung và khả năng chống chịu là một đánh đổi** tiếp nhận điểm tựa từ **Vì sao chính sách “đưa doanh nghiệp ra ngoài Seoul” khó?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cụm công nghiệp và bất động sản địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu quả tập trung và khả năng chống chịu là một đánh đổi
 
 Cụm công nghiệp giúp giảm chi phí vận hành thường ngày nhưng làm tăng **rủi ro cùng nguồn (common-mode risk)**. Nếu mọi nhà cung cấp quan trọng nằm trong cùng một khu vực, mất điện hoặc thiên tai có thể đánh trúng cả mạng lưới.
 
 Biện pháp chống chịu có thể gồm đa nguồn cung ở nhiều vùng, trung tâm dữ liệu dự phòng, tồn kho an toàn, cảng thay thế và kết nối điện dự phòng khi khả thi.
+
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Cụm công nghiệp và bất động sản địa phương** tiếp nhận điểm tựa từ **Hiệu quả tập trung và khả năng chống chịu là một đánh đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích rủi ro địa điểm của doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cụm công nghiệp và bất động sản địa phương
 
@@ -194,22 +239,30 @@ Một fab, nhà máy pin hoặc xưởng tàu lớn có thể làm tăng nhu c�
 
 Vì vậy bất động sản khu vực nên được phân tích từ **cơ sở việc làm (employment base)** thay vì chỉ nhìn xu hướng giá nhà toàn quốc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Cách phân tích rủi ro địa điểm của doanh nghiệp** tiếp nhận điểm tựa từ **Cụm công nghiệp và bất động sản địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách phân tích rủi ro địa điểm của doanh nghiệp
 
 Khi lập bản đồ nhà máy và cơ sở, cần xem mức tập trung sản xuất, độ ổn định của điện–nước, khả năng tiếp cận cảng/sân bay/đường cao tốc, nguồn lao động, mức phụ thuộc nhà cung cấp địa phương, thiên tai, giấy phép môi trường và khả năng mở rộng thêm công suất.
 
 Bản đồ chỉ trở thành công cụ phân tích khi ta chuyển vị trí thành các biến chi phí, thời gian và rủi ro.
 
+> **Chuyển mạch:** Trong **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Cách phân tích rủi ro địa điểm của doanh nghiệp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Một cụm công nghiệp là **hàm sản xuất tại địa phương** gồm doanh nghiệp + lao động + hạ tầng + tri thức + thể chế. Địa lý tạo lợi thế khi các thành phần này củng cố lẫn nhau; chính sự tập trung đó lại trở thành điểm yếu khi một cú sốc đánh trúng toàn mạng lưới.
+
+> **Chuyển mạch:** Ở chặng này của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
 Seoul không chỉ có dịch vụ và ngoài Seoul không chỉ có nhà máy. Đất rẻ không tự động là địa điểm tốt. Trợ cấp vùng không thể thay thế nguồn nhân lực, nhà cung cấp và nhu cầu. Kinh tế số không vô hình về địa lý. Tập trung nhiều hơn cũng không phải lúc nào tốt hơn vì khả năng chống chịu có giá trị kinh tế thật.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md) cho chuỗi giá trị toàn cầu, [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) cho nhân lực–nghiên cứu, [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) cho giới hạn điện và [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md) cho kinh tế mạng logistics.
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

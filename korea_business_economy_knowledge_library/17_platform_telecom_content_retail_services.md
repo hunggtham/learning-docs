@@ -1,7 +1,6 @@
 # Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)
 
-> **Mạch đọc:** Đặt **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Nền tảng không chỉ là ứng dụng; nó là kiến trúc thị trường** sang **Hiệu ứng mạng lưới: thêm người dùng làm hệ thống tốt hơn thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**. Route đi từ service production functions → platform/network effects → telecom/content/retail unit economics → data, brand, stores and distribution density → regulation, productivity and household demand.
 
 Kinh tế Hàn Quốc không chỉ là bán dẫn, ô tô và đóng tàu. Phần lớn việc làm nằm trong khu vực dịch vụ, từ viễn thông, tài chính và phần mềm tới nhà hàng, bán lẻ, y tế, giáo dục và giải trí. Nếu sản xuất giải thích phần lớn sức mạnh xuất khẩu thì **kinh tế dịch vụ giải thích phần lớn việc làm hàng ngày, nhu cầu hộ gia đình và thách thức năng suất**.
 
@@ -23,6 +22,8 @@ Nhà bán hàng ↔ Người dùng thanh toán
 
 Nền tảng tạo giá trị bằng cách giảm **chi phí tìm kiếm, ghép nối và giao dịch**. Một doanh nghiệp có ứng dụng nhưng không kết nối nhiều phía hoặc không tạo hệ sinh thái chưa chắc là nền tảng theo nghĩa kinh tế.
 
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Hiệu ứng mạng lưới: thêm người dùng làm hệ thống tốt hơn thế nào?** tiếp nhận điểm tựa từ **Nền tảng không chỉ là ứng dụng; nó là kiến trúc thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thanh khoản của thị trường nền tảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu ứng mạng lưới: thêm người dùng làm hệ thống tốt hơn thế nào?
 
 **Hiệu ứng mạng lưới (network effect / 네트워크 효과)** tồn tại khi giá trị của mạng tăng khi số người tham gia tăng.
@@ -33,6 +34,8 @@ Nhưng hiệu ứng mạng không phải “hào kinh tế ma thuật”. Nếu 
 
 Cần hỏi người dùng có dùng đối thủ song song không, dữ liệu và danh tính có dễ chuyển không, chi phí chuyển đổi thật nằm ở đâu và mật độ mạng có mang tính địa phương hay toàn quốc.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Thanh khoản của thị trường nền tảng** tiếp nhận điểm tựa từ **Hiệu ứng mạng lưới: thêm người dùng làm hệ thống tốt hơn thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GMV không phải doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thanh khoản của thị trường nền tảng
 
 Marketplace có nhiều người dùng nhưng nếu người mua không tìm được sản phẩm phù hợp hoặc người bán không nhận được đơn thì mạng vẫn kém hiệu quả.
@@ -40,6 +43,8 @@ Marketplace có nhiều người dùng nhưng nếu người mua không tìm đ�
 **Thanh khoản marketplace (marketplace liquidity)** có thể quan sát qua tỷ lệ chuyển đổi, thời gian ghép nối, tỷ lệ lấp đầy hoặc tần suất giao dịch tùy ngành.
 
 Số người dùng chỉ là đầu vào; giao dịch thành công mới là đầu ra kinh tế.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **GMV không phải doanh thu** tiếp nhận điểm tựa từ **Thanh khoản của thị trường nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Take tỷ lệ (rate / 비율): quyền định giá hay “thuế” lên hệ sinh thái?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## GMV không phải doanh thu
 
@@ -57,6 +62,8 @@ Nền tảng xử lý 100 nghìn tỷ KRW GMV với take tỷ lệ (rate / 비�
 
 GMV tăng mạnh nhưng take tỷ lệ (rate / 비율) giảm vẫn có thể làm doanh thu tăng chậm hơn.
 
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Take tỷ lệ (rate / 비율): quyền định giá hay “thuế” lên hệ sinh thái?** tiếp nhận điểm tựa từ **GMV không phải doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CAC, retention và LTV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Take tỷ lệ (rate / 비율): quyền định giá hay “thuế” lên hệ sinh thái?
 
 \[
@@ -66,6 +73,8 @@ Take\ tỷ lệ (rate / 비율) = \frac{Doanh\ thu\ nền\ tảng}{Tổng\ giá\
 Tăng take tỷ lệ (rate / 비율) giúp doanh thu ngắn hạn nhưng có thể khiến người bán rời đi hoặc chuyển chi phí sang người tiêu dùng.
 
 Mức take tỷ lệ (rate / 비율) bền vững phụ thuộc nền tảng tạo bao nhiêu giá trị cho merchant. Nếu nhà bán không thể tiếp cận cùng lượng cầu ở nơi khác, quyền thương lượng của nền tảng mạnh hơn. Nhưng kiếm tiền quá quyết liệt có thể khuyến khích multi-homing, bán trực tiếp hoặc khiến cơ quan quản lý can thiệp.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **CAC, retention và LTV** tiếp nhận điểm tựa từ **Take tỷ lệ (rate / 비율): quyền định giá hay “thuế” lên hệ sinh thái?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biên đóng góp: sau trợ giá còn tạo giá trị không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CAC, retention và LTV
 
@@ -81,11 +90,15 @@ LTV \approx Lợi\ nhuận\ đóng\ góp\ mỗi\ kỳ \times Thời\ gian\ duy\ 
 
 Lượt tải hoặc MAU mà không có dữ liệu retention và khả năng kiếm tiền là chưa đủ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Biên đóng góp: sau trợ giá còn tạo giá trị không?** tiếp nhận điểm tựa từ **CAC, retention và LTV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tập trung nền tảng khác tập trung chaebol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biên đóng góp: sau trợ giá còn tạo giá trị không?
 
 Với giao hàng hoặc thương mại điện tử, cần trừ phí thanh toán, chi phí giao–hoàn tất đơn, khuyến mại, chăm sóc khách hàng, hoàn tiền và gian lận để đi từ doanh thu tới **lợi nhuận đóng góp (contribution profit)**.
 
 Một nền tảng có thể tăng lợi nhuận gộp nhưng vẫn lỗ trên từng đơn tăng thêm nếu trợ giá quá cao. Vì vậy phải kiểm tra **kinh tế đơn vị (unit economics)** trước khi kết luận quy mô mạng tạo lợi nhuận.
+
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Tập trung nền tảng khác tập trung chaebol** tiếp nhận điểm tựa từ **Biên đóng góp: sau trợ giá còn tạo giá trị không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Viễn thông là hạ tầng mạng có doanh thu thuê bao nhưng vẫn có chu kỳ công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tập trung nền tảng khác tập trung chaebol
 
@@ -96,6 +109,8 @@ Do đó câu hỏi cạnh tranh cũng khác: tự ưu tiên dịch vụ của m�
 Xem [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md).
 
 # Phần II — Viễn thông (Telecom / 통신)
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Viễn thông là hạ tầng mạng có doanh thu thuê bao nhưng vẫn có chu kỳ công nghệ** tiếp nhận điểm tựa từ **Tập trung nền tảng khác tập trung chaebol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Churn thấp có giá trị kinh tế lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Viễn thông là hạ tầng mạng có doanh thu thuê bao nhưng vẫn có chu kỳ công nghệ
 
@@ -111,11 +126,15 @@ OPEX mạng + khấu hao + phổ tần + marketing
 
 **ARPU (Average Revenue Per User / 가입자당평균매출)** và **tỷ lệ rời mạng (churn / 해지율)** là các chỉ số trung tâm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Churn thấp có giá trị kinh tế lớn** tiếp nhận điểm tựa từ **Viễn thông là hạ tầng mạng có doanh thu thuê bao nhưng vẫn có chu kỳ công nghệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ tần: tài sản vô hình nhưng có hệ quả vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Churn thấp có giá trị kinh tế lớn
 
 Thay thế một thuê bao đã mất thường cần marketing, trợ giá thiết bị hoặc hoa hồng bán hàng. Vì vậy giảm churn làm LTV tăng ngay cả khi ARPU tháng không đổi.
 
 Trong thị trường đã bão hòa thuê bao, nhà mạng ngày càng cạnh tranh bằng ARPU, gói dịch vụ và khả năng giữ khách hàng thay vì chỉ tăng số thuê bao.
+
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Phổ tần: tài sản vô hình nhưng có hệ quả vật lý** tiếp nhận điểm tựa từ **Churn thấp có giá trị kinh tế lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5G/6G: nâng cấp kỹ thuật không đảm bảo kiếm tiền tốt hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phổ tần: tài sản vô hình nhưng có hệ quả vật lý
 
@@ -123,11 +142,15 @@ Trong thị trường đã bão hòa thuê bao, nhà mạng ngày càng cạnh t
 
 Điều này tạo rào cản gia nhập cao và góp phần giải thích cấu trúc thiểu số nhà cung cấp lớn.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **5G/6G: nâng cấp kỹ thuật không đảm bảo kiếm tiền tốt hơn** tiếp nhận điểm tựa từ **Phổ tần: tài sản vô hình nhưng có hệ quả vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Viễn thông như hạ tầng số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5G/6G: nâng cấp kỹ thuật không đảm bảo kiếm tiền tốt hơn
 
 Nâng cấp mạng tăng tốc độ và công suất nhưng người tiêu dùng không chắc sẵn sàng trả thêm tương ứng.
 
 Giá trị mới có thể đến từ mạng doanh nghiệp, mạng riêng, IoT hoặc dịch vụ mới, nhưng mô hình thương mại phải được chứng minh. Năng lực kỹ thuật và lợi suất tài chính là hai câu hỏi khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Viễn thông như hạ tầng số** tiếp nhận điểm tựa từ **5G/6G: nâng cấp kỹ thuật không đảm bảo kiếm tiền tốt hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội dung có chi phí tạo ban đầu cao nhưng chi phí phân phối biên thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Viễn thông như hạ tầng số
 
@@ -137,6 +160,8 @@ Nhưng đa dạng hóa phải được đánh giá bằng ROIC và dòng tiền 
 
 # Phần III — Nội dung, giải trí và game (콘텐츠·엔터테인먼트·게임)
 
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Nội dung có chi phí tạo ban đầu cao nhưng chi phí phân phối biên thấp** tiếp nhận điểm tựa từ **Viễn thông như hạ tầng số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức nổi tiếng và khả năng giữ lại giá trị là hai chuyện khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nội dung có chi phí tạo ban đầu cao nhưng chi phí phân phối biên thấp
 
 Sản xuất phim, game hoặc dự án âm nhạc cần chi phí sáng tạo–sản xuất đáng kể trước khi phát hành. Sau khi nội dung đã tồn tại, phân phối số tới thêm người xem thường có chi phí biên tương đối thấp.
@@ -144,6 +169,8 @@ Sản xuất phim, game hoặc dự án âm nhạc cần chi phí sáng tạo–
 Điều này tạo **đòn bẩy hoạt động (operating leverage)** rất mạnh khi một sản phẩm thành hit toàn cầu.
 
 Nhưng phân phối kết quả cũng rất lệch: nhiều dự án sinh lợi vừa phải hoặc thấp, trong khi vài hit tạo lợi nhuận cực lớn. Đây là **rủi ro phụ thuộc hit (hit-driven risk)**.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Mức nổi tiếng và khả năng giữ lại giá trị là hai chuyện khác nhau** tiếp nhận điểm tựa từ **Nội dung có chi phí tạo ban đầu cao nhưng chi phí phân phối biên thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Thác” khai thác IP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức nổi tiếng và khả năng giữ lại giá trị là hai chuyện khác nhau
 
@@ -155,11 +182,15 @@ Nếu nhà sản xuất bán toàn bộ IP để nhận phí trước, mức đ�
 
 Vì vậy luôn phải hỏi: **ai sở hữu quyền?**
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **“Thác” khai thác IP** tiếp nhận điểm tựa từ **Mức nổi tiếng và khả năng giữ lại giá trị là hai chuyện khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế công ty K-pop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “Thác” khai thác IP
 
 Một IP có thể kiếm tiền qua phát sóng/streaming, âm nhạc, sự kiện trực tiếp, merchandise, quảng cáo, game, chuyển thể webtoon, cấp phép và thậm chí tác động du lịch.
 
 Sở hữu IP có thể tái sử dụng tạo **giá trị quyền chọn (option value)** vượt xa lần phát hành đầu tiên.
+
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Kinh tế công ty K-pop** tiếp nhận điểm tựa từ **“Thác” khai thác IP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Game: kinh tế dịch vụ trực tiếp kéo dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế công ty K-pop
 
@@ -168,6 +199,8 @@ Doanh thu có thể đến từ album/streaming, concert, merchandise, quảng c
 Rủi ro nhân sự chủ chốt cao nếu một nghệ sĩ hoặc nhóm đóng góp phần lớn doanh thu. Gia hạn hợp đồng nghệ sĩ vì vậy gần giống việc gia hạn quyền kiểm soát một tài sản vô hình quan trọng.
 
 Đa dạng hóa danh mục nghệ sĩ giúp giảm rủi ro tập trung.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Game: kinh tế dịch vụ trực tiếp kéo dài** tiếp nhận điểm tựa từ **Kinh tế công ty K-pop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán lẻ là biên lợi nhuận × tốc độ quay vòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Game: kinh tế dịch vụ trực tiếp kéo dài
 
@@ -178,6 +211,8 @@ Các chỉ số quan trọng gồm người dùng hoạt động, tỷ lệ ngư
 Một đợt ra mắt tăng mạnh rồi churn nhanh rất khác một **nhượng quyền live-service** bền vững.
 
 # Phần IV — Bán lẻ và thương mại (유통·커머스)
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Bán lẻ là biên lợi nhuận × tốc độ quay vòng** tiếp nhận điểm tựa từ **Game: kinh tế dịch vụ trực tiếp kéo dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tồn kho chính là vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bán lẻ là biên lợi nhuận × tốc độ quay vòng
 
@@ -191,17 +226,23 @@ ROIC \sim Biên\ hoạt\ động \times Vòng\ quay\ tài\ sản
 
 Biên thấp không tự động nghĩa doanh nghiệp xấu.
 
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Tồn kho chính là vốn** tiếp nhận điểm tựa từ **Bán lẻ là biên lợi nhuận × tốc độ quay vòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều khoản nhà cung cấp có thể tài trợ nhà bán lẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tồn kho chính là vốn
 
 Nhà bán lẻ thường mua hàng trước khi bán. Tồn kho chậm tạo khóa vốn lưu động, rủi ro markdown, lỗi thời và chi phí kho.
 
 Vì vậy **vòng quay tồn kho (inventory turnover)** có thể quan trọng không kém biên gộp.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Điều khoản nhà cung cấp có thể tài trợ nhà bán lẻ** tiếp nhận điểm tựa từ **Tồn kho chính là vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Marketplace và mô hình tự nắm tồn kho** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điều khoản nhà cung cấp có thể tài trợ nhà bán lẻ
 
 Nếu nhà bán lẻ trả nhà cung cấp sau khi đã bán hàng, `DPO` có thể lớn hơn số ngày tồn kho và vốn lưu động trở nên thuận lợi.
 
 Nhà bán lẻ mạnh có thể nhận tín dụng thương mại từ nhà cung cấp, tức dùng khoản phải trả để tài trợ hoạt động. Đây là quyền thương lượng thể hiện trực tiếp trong dòng tiền.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Marketplace và mô hình tự nắm tồn kho** tiếp nhận điểm tựa từ **Điều khoản nhà cung cấp có thể tài trợ nhà bán lẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ logistics tạo lợi thế quy mô địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Marketplace và mô hình tự nắm tồn kho
 
@@ -212,6 +253,8 @@ Trong **bán lẻ tự nắm tồn kho (inventory-led retail)**, nhà bán lẻ 
 Mô hình **fulfillment lai** có thể không sở hữu sản phẩm nhưng vẫn sở hữu hạ tầng logistics.
 
 Mỗi mô hình có cường độ tài sản khác nhau.
+
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Mật độ logistics tạo lợi thế quy mô địa phương** tiếp nhận điểm tựa từ **Marketplace và mô hình tự nắm tồn kho** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các định dạng cửa hàng có kinh tế khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mật độ logistics tạo lợi thế quy mô địa phương
 
@@ -229,6 +272,8 @@ Mở sang khu vực mới có thể lỗ cho tới khi mật độ đơn vượt
 
 Xem [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md).
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Các định dạng cửa hàng có kinh tế khác nhau** tiếp nhận điểm tựa từ **Mật độ logistics tạo lợi thế quy mô địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ vẫn là sản xuất giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các định dạng cửa hàng có kinh tế khác nhau
 
 Department store, convenience store, siêu thị và duty-free không nên được gộp vào cùng một mô hình.
@@ -239,6 +284,8 @@ Nhãn “bán lẻ” che giấu các động lực cầu rất khác nhau.
 
 # Phần V — Năng suất dịch vụ (Service Productivity / 서비스업 생산성)
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Dịch vụ vẫn là sản xuất giá trị** tiếp nhận điểm tựa từ **Các định dạng cửa hàng có kinh tế khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bệnh chi phí Baumol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dịch vụ vẫn là sản xuất giá trị
 
 Dịch vụ không tạo tồn kho vật lý nhưng tạo tiện ích: điều trị y tế, giáo dục, vận tải, tài chính, phần mềm hoặc sự tiện lợi.
@@ -246,6 +293,8 @@ Dịch vụ không tạo tồn kho vật lý nhưng tạo tiện ích: điều t
 Đo năng suất dịch vụ khó hơn vì chất lượng rất quan trọng. Một y tá phục vụ gấp đôi bệnh nhân không có nghĩa đầu ra hữu ích tăng gấp đôi nếu chất lượng chăm sóc giảm.
 
 Đó là lý do số liệu năng suất dịch vụ phải được diễn giải thận trọng.
+
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Bệnh chi phí Baumol** tiếp nhận điểm tựa từ **Dịch vụ vẫn là sản xuất giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thách thức cấu trúc của Hàn Quốc: việc làm dịch vụ nhưng năng suất sản xuất cao hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bệnh chi phí Baumol
 
@@ -255,6 +304,8 @@ Lương vẫn tăng theo toàn nền kinh tế dù năng suất vật lý của 
 
 Tuy nhiên, dịch vụ số có thể phá một phần giới hạn đó vì cùng phần mềm hoặc IP phục vụ hàng triệu người.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Thách thức cấu trúc của Hàn Quốc: việc làm dịch vụ nhưng năng suất sản xuất cao hơn** tiếp nhận điểm tựa từ **Bệnh chi phí Baumol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số hóa và AI: năng suất không tự xuất hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thách thức cấu trúc của Hàn Quốc: việc làm dịch vụ nhưng năng suất sản xuất cao hơn
 
 Tỷ trọng lớn người lao động Hàn Quốc làm trong dịch vụ, trong khi sản xuất tuyến đầu có năng suất cao hơn nhiều.
@@ -262,6 +313,8 @@ Tỷ trọng lớn người lao động Hàn Quốc làm trong dịch vụ, tron
 Do đó tăng trưởng dài hạn không thể chỉ dựa vào doanh nghiệp xuất khẩu đầu tàu. Việc lan tỏa năng suất sang dịch vụ rất quan trọng cho tiền lương và tăng trưởng quốc gia.
 
 Xem [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Số hóa và AI: năng suất không tự xuất hiện** tiếp nhận điểm tựa từ **Thách thức cấu trúc của Hàn Quốc: việc làm dịch vụ nhưng năng suất sản xuất cao hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nền tảng (platform / 플랫폼)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Số hóa và AI: năng suất không tự xuất hiện
 
@@ -273,17 +326,25 @@ Công nghệ là phần bổ trợ cho tổ chức, không phải chất thay th
 
 # Chỉ số phân tích theo mô hình
 
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Nền tảng (platform / 플랫폼)** tiếp nhận điểm tựa từ **Số hóa và AI: năng suất không tự xuất hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Viễn thông** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nền tảng (platform / 플랫폼)
 
 Theo dõi MAU/tần suất giao dịch, GMV, take tỷ lệ (rate / 비율), CAC, retention/churn, biên đóng góp, mức tập trung nhà bán và khả năng multi-home.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Viễn thông** tiếp nhận điểm tựa từ **Nền tảng (platform / 플랫폼)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội dung / giải trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Viễn thông
 
 Theo dõi số thuê bao, ARPU, churn, CAPEX mạng, khấu hao, chi phí phổ tần và tỷ trọng dịch vụ doanh nghiệp/số.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Nội dung / giải trí** tiếp nhận điểm tựa từ **Viễn thông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán lẻ / thương mại điện tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nội dung / giải trí
 
 Theo dõi sở hữu IP, mức tập trung hit, tập trung nghệ sĩ/người sáng tạo, gia hạn hợp đồng, chuỗi xử lý (pipeline / 파이프라인) nội dung, điều khoản cấp phép và tỷ trọng doanh thu quốc tế.
+
+> **Chuyển mạch:** Trong **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)**, **Bán lẻ / thương mại điện tử** tiếp nhận điểm tựa từ **Nội dung / giải trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bán lẻ / thương mại điện tử
 
@@ -335,4 +396,4 @@ Giá trị vòng đời khách hàng
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md), [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md), [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
 
-> **Bàn giao:** Sau **Bán lẻ / thương mại điện tử**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bán lẻ / thương mại điện tử**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

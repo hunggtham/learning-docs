@@ -1,7 +1,6 @@
 # Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)
 
-> **Mạch đọc:** Đặt **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Hành động doanh nghiệp là gì?** sang **2. M&A: vì sao doanh nghiệp mua doanh nghiệp khác?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**. Route đi từ corporate actions → M&A rationale and consideration → mergers/spin-offs → capital increases, buybacks, tender offers và asset sales → ownership, consolidation, EPS và value distribution.
 
 Khi đọc một doanh nghiệp, nhiều thay đổi lớn không đến từ hoạt động kinh doanh thường ngày mà từ **hành động doanh nghiệp (corporate actions / 기업행위)** như sáp nhập, mua lại, chia tách, tăng vốn, giao dịch cổ phiếu quỹ, chào mua công khai, bán tài sản, hoán đổi cổ phiếu hoặc tái cấu trúc.
 
@@ -25,6 +24,8 @@ Phạm vi mới + quyền đòi mới + cấu trúc kiểm soát mới
 
 Điểm khó là kết quả kế toán, hình thức pháp lý và bản chất kinh tế có thể khác nhau. Một giao dịch được gọi là “sáp nhập” chưa chắc có lô-gic (logic / 논리) kinh tế giống mua lại. Một chia tách có thể giúp tập trung chiến lược nhưng cũng có thể chuyển tài sản chất lượng giữa các pháp nhân.
 
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **2. M&A: vì sao doanh nghiệp mua doanh nghiệp khác?** tiếp nhận điểm tựa từ **1. Hành động doanh nghiệp là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Giá mua và phần chênh trả thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. M&A: vì sao doanh nghiệp mua doanh nghiệp khác?
 
 **Mua bán và sáp nhập (Merger & Acquisition / M&A / 인수합병)** thường được biện minh bằng tăng trưởng, hợp lực, công nghệ, tiếp cận khách hàng, tích hợp dọc, mở rộng địa lý hoặc tái cấu trúc.
@@ -47,6 +48,8 @@ Hợp lực vốn
 
 Nếu không thể chuyển hợp lực thành cơ chế đo được, nó vẫn chỉ là câu chuyện quản lý.
 
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **3. Giá mua và phần chênh trả thêm** tiếp nhận điểm tựa từ **2. M&A: vì sao doanh nghiệp mua doanh nghiệp khác?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Phân bổ giá mua và goodwill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Giá mua và phần chênh trả thêm
 
 Bên mua thường phải trả **phần chênh mua lại (acquisition premium)** so với giá thị trường trước thông tin giao dịch để cổ đông mục tiêu chấp nhận.
@@ -59,6 +62,8 @@ Giao dịch có thể làm doanh nghiệp hợp nhất lớn hơn nhưng vẫn p
 
 Tăng trưởng không đồng nghĩa tạo giá trị.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **4. Phân bổ giá mua và goodwill** tiếp nhận điểm tựa từ **3. Giá mua và phần chênh trả thêm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Suy giảm goodwill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Phân bổ giá mua và goodwill
 
 Sau khi mua lại, kế toán phải phân bổ giá mua vào tài sản và nợ có thể xác định; phần còn lại thường trở thành **lợi thế thương mại (goodwill / 영업권)**.
@@ -68,6 +73,8 @@ Goodwill = Giá\ mua - Giá\ trị\ hợp\ lý\ của\ tài\ sản\ thuần\ xá
 \]
 
 Goodwill lớn không tự động xấu. Nó có thể phản ánh thương hiệu, mạng lưới, nhân lực hoặc hợp lực kỳ vọng không thể ghi nhận riêng. Nhưng goodwill lớn buộc nhà phân tích hỏi liệu bên mua có trả quá cao và rủi ro suy giảm giá trị có lớn không.
+
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **5. Suy giảm goodwill** tiếp nhận điểm tựa từ **4. Phân bổ giá mua và goodwill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tăng/giảm EPS sau giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Suy giảm goodwill
 
@@ -80,6 +87,8 @@ Khi thấy suy giảm goodwill, không nên dừng ở nhãn “một lần”. 
 - kết quả thực tế;
 - trách nhiệm của ban quản lý.
 
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **6. Tăng/giảm EPS sau giao dịch** tiếp nhận điểm tựa từ **5. Suy giảm goodwill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Tài trợ cho thương vụ mua lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Tăng/giảm EPS sau giao dịch
 
 Ban quản lý đôi khi nói giao dịch **làm tăng EPS (EPS accretive)**. Nhưng EPS tăng không đồng nghĩa giao dịch tạo giá trị.
@@ -87,6 +96,8 @@ Ban quản lý đôi khi nói giao dịch **làm tăng EPS (EPS accretive)**. Nh
 Một công ty có P/E cao có thể phát hành cổ phiếu đang được định giá cao để mua công ty P/E thấp và làm EPS tăng về mặt cơ học dù giá trị chiến lược không lớn.
 
 Tạo giá trị phải nhìn ROIC trên vốn bỏ ra so với chi phí vốn, không chỉ EPS.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **7. Tài trợ cho thương vụ mua lại** tiếp nhận điểm tựa từ **6. Tăng/giảm EPS sau giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Sáp nhập (합병)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Tài trợ cho thương vụ mua lại
 
@@ -98,6 +109,8 @@ Câu hỏi đúng là:
 
 > Cấu trúc tài trợ có phù hợp với khả năng tạo dòng tiền và mức rủi ro của tài sản được mua hay không?
 
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **8. Sáp nhập (합병)** tiếp nhận điểm tựa từ **7. Tài trợ cho thương vụ mua lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Sáp nhập giữa các bên liên quan và rủi ro quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Sáp nhập (합병)
 
 Trong **sáp nhập (merger / 합병)**, các pháp nhân được kết hợp theo cấu trúc cụ thể. Cổ đông của pháp nhân bị sáp nhập có thể nhận cổ phiếu của pháp nhân còn lại hoặc pháp nhân mới theo **tỷ lệ sáp nhập (merger ratio / 합병비율)**.
@@ -105,6 +118,8 @@ Trong **sáp nhập (merger / 합병)**, các pháp nhân được kết hợp t
 Tỷ lệ sáp nhập rất nhạy cảm vì nó quyết định quyền sở hữu kinh tế sau giao dịch.
 
 Nếu định giá tương đối giữa các pháp nhân không hợp lý, giá trị có thể chuyển từ nhóm cổ đông này sang nhóm khác.
+
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **9. Sáp nhập giữa các bên liên quan và rủi ro quản trị** tiếp nhận điểm tựa từ **8. Sáp nhập (합병)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Hoán đổi cổ phiếu (주식교환)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Sáp nhập giữa các bên liên quan và rủi ro quản trị
 
@@ -122,6 +137,8 @@ Nếu điều khoản sáp nhập thiên về A, người kiểm soát có thể
 
 Vì vậy giao dịch bên liên quan phải đọc cùng [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **10. Hoán đổi cổ phiếu (주식교환)** tiếp nhận điểm tựa từ **9. Sáp nhập giữa các bên liên quan và rủi ro quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Chia tách công ty (회사분할)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Hoán đổi cổ phiếu (주식교환)
 
 **Hoán đổi cổ phiếu (share swap / 주식교환)** có thể được dùng để biến một công ty thành công ty con sở hữu toàn phần hoặc tái tổ chức quyền sở hữu trong tập đoàn.
@@ -129,6 +146,8 @@ Vì vậy giao dịch bên liên quan phải đọc cùng [`08_corporate_governa
 Cổ đông công ty mục tiêu đổi cổ phiếu mục tiêu lấy cổ phiếu hoặc tiền của công ty mẹ/bên mua theo điều khoản giao dịch.
 
 Cần theo dõi quyền sở hữu sau giao dịch và cách đối xử với cổ đông thiểu số.
+
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **11. Chia tách công ty (회사분할)** tiếp nhận điểm tựa từ **10. Hoán đổi cổ phiếu (주식교환)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Vì sao doanh nghiệp chia tách?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Chia tách công ty (회사분할)
 
@@ -160,11 +179,15 @@ Công ty con mới
 
 Rủi ro quản trị xuất hiện nếu mảng tăng trưởng cao được tách thành công ty con rồi IPO sau đó. Cổ đông công ty mẹ vẫn có phơi nhiễm gián tiếp nhưng kinh tế sở hữu có thể thay đổi khi công ty con phát hành cổ phiếu mới.
 
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **12. Vì sao doanh nghiệp chia tách?** tiếp nhận điểm tựa từ **11. Chia tách công ty (회사분할)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. IPO công ty con sau chia tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Vì sao doanh nghiệp chia tách?
 
 Lý do có thể là tập trung chiến lược, huy động vốn riêng, tìm đối tác, cô lập rủi ro hoặc chuẩn bị bán/IPO.
 
 Nhưng chia tách không tự tạo giá trị. Nó chỉ thay ranh giới pháp lý. Giá trị tăng nếu cấu trúc mới cải thiện động lực, tài trợ, minh bạch hoặc phân bổ vốn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **13. IPO công ty con sau chia tách** tiếp nhận điểm tựa từ **12. Vì sao doanh nghiệp chia tách?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Tăng vốn có thu tiền (유상증자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. IPO công ty con sau chia tách
 
@@ -177,6 +200,8 @@ Khi công ty con IPO, công ty mẹ có thể huy động vốn hoặc bán bớ
 - giá trị của tài sản tăng trưởng có dịch chuyển khỏi cổ đông thiểu số công ty mẹ hay không.
 
 Đây là trường hợp điển hình phải tách giá trị cấp tập đoàn khỏi giá trị của pháp nhân niêm yết cụ thể.
+
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **14. Tăng vốn có thu tiền (유상증자)** tiếp nhận điểm tựa từ **13. IPO công ty con sau chia tách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Phát hành cổ phiếu thưởng (무상증자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Tăng vốn có thu tiền (유상증자)
 
@@ -196,6 +221,8 @@ Tiền dùng vào đâu?
 ROIC kỳ vọng trên vốn mới?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **15. Phát hành cổ phiếu thưởng (무상증자)** tiếp nhận điểm tựa từ **14. Tăng vốn có thu tiền (유상증자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Mua lại cổ phiếu (자사주 매입)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Phát hành cổ phiếu thưởng (무상증자)
 
 **Phát hành cổ phiếu thưởng (bonus issue / 무상증자)** làm tăng số lượng cổ phiếu nhưng không đưa thêm vốn bên ngoài vào doanh nghiệp.
@@ -203,6 +230,8 @@ ROIC kỳ vọng trên vốn mới?
 Nếu “miếng bánh kinh tế” không đổi, chia thành nhiều cổ phiếu hơn không tự làm giá trị nội tại tăng.
 
 Đây là nơi nhà đầu tư cá nhân dễ nhầm “nhiều cổ phiếu hơn = giàu hơn”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **16. Mua lại cổ phiếu (자사주 매입)** tiếp nhận điểm tựa từ **15. Phát hành cổ phiếu thưởng (무상증자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Cổ phiếu quỹ (자기주식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Mua lại cổ phiếu (자사주 매입)
 
@@ -218,6 +247,8 @@ Nếu giá trị nội tại < giá mua lại
 → cổ đông còn lại bị thiệt
 ```
 
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **17. Cổ phiếu quỹ (자기주식)** tiếp nhận điểm tựa từ **16. Mua lại cổ phiếu (자사주 매입)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Cổ tức và cổ tức đặc biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Cổ phiếu quỹ (자기주식)
 
 **Cổ phiếu quỹ (treasury shares / 자기주식)** là cổ phiếu công ty đã mua lại và giữ. Chúng có xử lý kế toán và hệ quả quản trị khác cổ phiếu đang lưu hành thông thường.
@@ -225,6 +256,8 @@ Nếu giá trị nội tại < giá mua lại
 Cần đọc cách xử lý khi công ty hủy, bán lại hoặc dùng chúng trong giao dịch.
 
 **Hủy cổ phiếu quỹ (treasury-share cancellation / 자사주 소각)** làm giảm số cổ phiếu hiệu lực về kinh tế, khác với chỉ giữ cổ phiếu quỹ trên bảng cân đối.
+
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **18. Cổ tức và cổ tức đặc biệt** tiếp nhận điểm tựa từ **17. Cổ phiếu quỹ (자기주식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Chào mua công khai (공개매수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Cổ tức và cổ tức đặc biệt
 
@@ -235,6 +268,8 @@ Cổ tức thường xuyên có thể cho thấy chính sách phân phối ổn 
 Nhưng trả cổ tức cao trong doanh nghiệp có đòn bẩy lớn có thể làm khả năng bảo vệ chủ nợ yếu đi.
 
 Vì vậy chính sách chi trả phải đặt trong bối cảnh phân bổ vốn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **19. Chào mua công khai (공개매수)** tiếp nhận điểm tựa từ **18. Cổ tức và cổ tức đặc biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Hủy niêm yết và chuyển thành công ty tư nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Chào mua công khai (공개매수)
 
@@ -248,11 +283,15 @@ Các biến quan trọng:
 - điều kiện thực hiện;
 - cách xử lý cổ đông không tham gia.
 
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **20. Hủy niêm yết và chuyển thành công ty tư nhân** tiếp nhận điểm tựa từ **19. Chào mua công khai (공개매수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Bán tài sản và carve-out** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Hủy niêm yết và chuyển thành công ty tư nhân
 
 Giao dịch đưa doanh nghiệp ra khỏi thị trường đại chúng có thể giúp giảm chi phí niêm yết và quản lý dài hạn hơn, nhưng cổ đông thiểu số cần đánh giá mức giá thoái vốn và tính công bằng.
 
 Hủy niêm yết không có nghĩa hoạt động kinh doanh xấu; nó có thể xuất phát từ chiến lược sở hữu.
+
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **21. Bán tài sản và carve-out** tiếp nhận điểm tựa từ **20. Hủy niêm yết và chuyển thành công ty tư nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Chuyển đổi sang mô hình công ty mẹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Bán tài sản và carve-out
 
@@ -262,6 +301,8 @@ Doanh nghiệp có thể bán một mảng kinh doanh hoặc tài sản thay vì
 
 Cần hỏi bên bán mất bao nhiêu lợi nhuận và số tiền thu được sẽ dùng vào đâu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **22. Chuyển đổi sang mô hình công ty mẹ** tiếp nhận điểm tựa từ **21. Bán tài sản và carve-out** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Đầu tư chiến lược và cổ phần thiểu số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Chuyển đổi sang mô hình công ty mẹ
 
 Tập đoàn có thể tái cấu trúc theo mô hình công ty mẹ để làm rõ quyền kiểm soát, quyền sở hữu và ranh giới hoạt động.
@@ -269,6 +310,8 @@ Tập đoàn có thể tái cấu trúc theo mô hình công ty mẹ để làm 
 Nhưng sơ đồ đơn giản hơn không bảo đảm kinh tế đơn giản hơn. Cổ phần chéo, cổ tức nội bộ và giao dịch bên liên quan vẫn cần theo dõi.
 
 Xem [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
+
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **23. Đầu tư chiến lược và cổ phần thiểu số** tiếp nhận điểm tựa từ **22. Chuyển đổi sang mô hình công ty mẹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Liên doanh (JV / 합작법인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Đầu tư chiến lược và cổ phần thiểu số
 
@@ -286,6 +329,8 @@ Cổ phần thiểu số chiến lược
 Kiểm soát
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **24. Liên doanh (JV / 합작법인)** tiếp nhận điểm tựa từ **23. Đầu tư chiến lược và cổ phần thiểu số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Rủi ro tích hợp M&A** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Liên doanh (JV / 합작법인)
 
 JV hữu ích khi các bên chia sẻ công nghệ, thị trường hoặc vốn. Nhưng quyền quyết định phải rõ.
@@ -299,6 +344,8 @@ Cần hỏi:
 - nghĩa vụ góp thêm vốn?
 - quyền sở hữu IP?
 - cơ chế thoái vốn?
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **25. Rủi ro tích hợp M&A** tiếp nhận điểm tựa từ **24. Liên doanh (JV / 합작법인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Tích hợp văn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Rủi ro tích hợp M&A
 
@@ -318,11 +365,15 @@ Ngày hoàn tất pháp lý
 
 Nếu ban quản lý tuyên bố phần lớn hợp lực ngay năm đầu trong khi độ phức tạp tích hợp rất cao, giả định có thể quá lạc quan.
 
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **26. Tích hợp văn hóa** tiếp nhận điểm tựa từ **25. Rủi ro tích hợp M&A** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Hệ quả với nhân viên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Tích hợp văn hóa
 
 Văn hóa tập đoàn, hệ thống thứ bậc, đánh giá và giao tiếp đặc trưng ở Hàn Quốc có thể làm M&A xuyên biên giới khó hơn những gì mô hình tài chính thể hiện.
 
 Xem [`13_business_culture_decision_making_and_communication.md`](./13_business_culture_decision_making_and_communication.md).
+
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **27. Hệ quả với nhân viên** tiếp nhận điểm tựa từ **26. Tích hợp văn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Tư duy phân tích sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. Hệ quả với nhân viên
 
@@ -337,6 +388,8 @@ Hãy hỏi:
 - năng lực cốt lõi được giữ ở đâu?
 - trung tâm ra quyết định chuyển về đâu?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **28. Tư duy phân tích sự kiện** tiếp nhận điểm tựa từ **27. Hệ quả với nhân viên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Phân tích pro forma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Tư duy phân tích sự kiện
 
 Khi một hành động doanh nghiệp được công bố, tách ba lớp:
@@ -348,6 +401,8 @@ Khi một hành động doanh nghiệp được công bố, tách ba lớp:
 **Phản ứng thị trường:** biến động giá.
 
 Phản ứng thị trường không tự chứng minh giao dịch tốt hay xấu; nó là kỳ vọng tổng hợp tại một thời điểm.
+
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **29. Phân tích pro forma** tiếp nhận điểm tựa từ **28. Tư duy phân tích sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Phân tích trên mỗi cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Phân tích pro forma
 
@@ -364,11 +419,15 @@ Doanh thu / lợi nhuận / nợ độc lập của A
 
 Sau đó kiểm tra đòn bẩy, số cổ phiếu và khả năng trả lãi.
 
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **30. Phân tích trên mỗi cổ phiếu** tiếp nhận điểm tựa từ **29. Phân tích pro forma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Checklist sự kiện cho DART/KIND** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Phân tích trên mỗi cổ phiếu
 
 Giao dịch có thể làm tổng lợi nhuận tăng nhưng EPS hoặc giá trị nội tại trên mỗi cổ phiếu giảm nếu pha loãng lớn.
 
 Vì vậy luôn chuyển từ giá trị cấp công ty sang **kinh tế trên mỗi cổ phiếu (per-share economics)**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **31. Checklist sự kiện cho DART/KIND** tiếp nhận điểm tựa từ **30. Phân tích trên mỗi cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Dấu hiệu cần kiểm tra sâu hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Checklist sự kiện cho DART/KIND
 
@@ -389,6 +448,8 @@ Khi thấy thông báo hành động doanh nghiệp, đọc theo trình tự:
 12. Tác động bảng cân đối
 ```
 
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **32. Dấu hiệu cần kiểm tra sâu hơn** tiếp nhận điểm tựa từ **31. Checklist sự kiện cho DART/KIND** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Dấu hiệu cần kiểm tra sâu hơn
 
 Một số tín hiệu:
@@ -403,6 +464,8 @@ Một số tín hiệu:
 - mua lại doanh nghiệp bằng nợ ngắn hạn.
 
 Dấu hiệu không chứng minh sai phạm; nó chỉ là lý do để mở thuyết minh và tài liệu giao dịch.
+
+> **Chuyển mạch:** Ở chặng này của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **Mô hình tư duy** gom các mảnh từ **32. Dấu hiệu cần kiểm tra sâu hơn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -421,6 +484,8 @@ Sau đó hỏi ba câu:
 2. Ai chịu thêm rủi ro?
 3. Giá trị trên mỗi cổ phiếu/quyền đòi của từng bên thay đổi thế nào?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“M&A làm doanh thu lớn hơn nên giao dịch tốt.”** Sai. Phần chênh mua lại và cách tài trợ có thể phá hủy giá trị.
@@ -433,6 +498,8 @@ Sau đó hỏi ba câu:
 
 **“Giao dịch bên liên quan trong cùng tập đoàn không quan trọng vì chủ cuối giống nhau.”** Sai với các pháp nhân niêm yết có cổ đông thiểu số khác nhau.
 
+> **Chuyển mạch:** Trong **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết tiếp theo** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết tiếp theo
 
 Các tài liệu liên kết giúp kiểm tra cấu trúc sở hữu, kế toán, định giá và phản ứng thị trường quanh corporate action. Đọc tiếp để nối sự kiện pháp lý với cash flow và quyền cổ đông.
@@ -443,3 +510,5 @@ Các tài liệu liên kết giúp kiểm tra cấu trúc sở hữu, kế toán
 - [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md)
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md)
 - [`36_credit_ratings_bonds_default_and_restructuring.md`](./36_credit_ratings_bonds_default_and_restructuring.md)
+
+> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

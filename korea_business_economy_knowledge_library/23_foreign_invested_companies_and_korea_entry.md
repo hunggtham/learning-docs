@@ -1,7 +1,6 @@
 # Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)
 
-> **Mạch đọc:** Đặt **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Công ty có vốn đầu tư nước ngoài khác chi nhánh nước ngoài** sang **Trách nhiệm hữu hạn và khoanh vùng rủi ro**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**. Route đi từ subsidiary/branch/liaison/JV structures → liability, tax và governance → Korea entry, R&D/production/logistics → transfer pricing và local decision rights → FDI evidence, để “công ty nước ngoài” được tách theo pháp nhân thật.
 
 Kinh tế Hàn Quốc không chỉ gồm doanh nghiệp Hàn Quốc đi ra thế giới. Các tập đoàn đa quốc gia cũng vào Hàn Quốc để bán hàng, đặt trung tâm R&D, sản xuất, logistics, tài chính, phần mềm hoặc hợp tác chiến lược. Tuy nhiên, cụm “công ty nước ngoài tại Hàn Quốc” có thể chỉ nhiều cấu trúc rất khác nhau như **công ty con (subsidiary / 현지법인)**, **chi nhánh (branch / 지점)**, **văn phòng liên lạc (liaison office / 연락사무소)**, **liên doanh (joint venture / 합작회사)**, mua lại doanh nghiệp hoặc đầu tư mới từ đầu.
 
@@ -27,11 +26,15 @@ Văn phòng liên lạc = hiện diện hạn chế, không phải đơn vị ki
 
 Khác biệt này không chỉ là thủ tục hành chính. Nó quyết định cách rủi ro, nghĩa vụ và quyền quản trị được phân bổ.
 
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Trách nhiệm hữu hạn và khoanh vùng rủi ro** tiếp nhận điểm tựa từ **Công ty có vốn đầu tư nước ngoài khác chi nhánh nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiêu chí FDI không đồng nghĩa với vốn tối thiểu của mọi công ty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trách nhiệm hữu hạn và khoanh vùng rủi ro
 
 Một công ty con tại Hàn Quốc thường có vốn chủ sở hữu, hội đồng quản trị, hợp đồng và nghĩa vụ riêng. Nếu công ty con thất bại, mức độ thiệt hại của công ty mẹ phụ thuộc vào phần vốn đã đầu tư, bảo lãnh hoặc cam kết hỗ trợ chứ không mặc định là trách nhiệm vô hạn.
 
 Ngược lại, nghĩa vụ của chi nhánh thường gắn trực tiếp hơn với pháp nhân nước ngoài. Vì vậy lựa chọn hình thức hiện diện cũng chính là lựa chọn **kiến trúc rủi ro (risk architecture)**.
+
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Tiêu chí FDI không đồng nghĩa với vốn tối thiểu của mọi công ty** tiếp nhận điểm tựa từ **Trách nhiệm hữu hạn và khoanh vùng rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu tư Greenfield: xây hoạt động mới từ đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiêu chí FDI không đồng nghĩa với vốn tối thiểu của mọi công ty
 
@@ -44,6 +47,8 @@ Invest KOREA mô tả một số tiêu chí phổ biến của khung đầu tư 
 
 Không nên lấy một ngưỡng FDI rồi hiểu đó là mức vốn tối thiểu bắt buộc cho mọi hoạt động kinh doanh có yếu tố nước ngoài. Khi thực hiện giao dịch thật, phải kiểm tra luật và hướng dẫn hiện hành.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Đầu tư Greenfield: xây hoạt động mới từ đầu** tiếp nhận điểm tựa từ **Tiêu chí FDI không đồng nghĩa với vốn tối thiểu của mọi công ty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mua lại doanh nghiệp: nhanh hơn nhưng phải gánh rủi ro tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đầu tư Greenfield: xây hoạt động mới từ đầu
 
 **Đầu tư mới từ đầu (greenfield investment / 그린필드 투자)** nghĩa là doanh nghiệp tự xây một hoạt động mới thay vì mua lại doanh nghiệp đang tồn tại.
@@ -51,6 +56,8 @@ Không nên lấy một ngưỡng FDI rồi hiểu đó là mức vốn tối th
 Ưu điểm là doanh nghiệp có thể thiết kế công nghệ, quy trình, địa điểm và cấu trúc tổ chức theo chiến lược hiện tại. Nhược điểm là thời gian vào thị trường chậm hơn, phải tự xử lý giấy phép, xây dựng, tuyển người, chứng nhận nhà cung cấp và tạo lòng tin với khách hàng từ con số gần như bằng không.
 
 Mô hình này thường phù hợp với nhà máy, trung tâm R&D, trung tâm dữ liệu hoặc cơ sở phân phối nơi hạ tầng vật lý và thiết kế quy trình rất quan trọng.
+
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Mua lại doanh nghiệp: nhanh hơn nhưng phải gánh rủi ro tích hợp** tiếp nhận điểm tựa từ **Đầu tư Greenfield: xây hoạt động mới từ đầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên doanh (Joint Venture / 합작회사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mua lại doanh nghiệp: nhanh hơn nhưng phải gánh rủi ro tích hợp
 
@@ -60,6 +67,8 @@ Mua một công ty Hàn Quốc đang hoạt động giúp tiếp cận ngay khá
 
 Mua lại chỉ tạo giá trị khi lợi ích hợp lực đủ lớn so với giá mua và chi phí tích hợp. Một thương vụ có thể nhìn rất hợp lý về chiến lược nhưng vẫn phá hủy giá trị nếu trả giá quá cao.
 
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Liên doanh (Joint Venture / 합작회사)** tiếp nhận điểm tựa từ **Mua lại doanh nghiệp: nhanh hơn nhưng phải gánh rủi ro tích hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JV với khách hàng chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên doanh (Joint Venture / 합작회사)
 
 **Liên doanh (joint venture / JV / 합작회사)** là một pháp nhân do hai hay nhiều đối tác cùng sở hữu. JV đặc biệt hữu ích khi các bên có năng lực bổ sung cho nhau, chẳng hạn một bên có công nghệ còn bên kia có khách hàng, đất, vốn, mạng lưới phân phối hoặc năng lực sản xuất.
@@ -67,6 +76,8 @@ Mua lại chỉ tạo giá trị khi lợi ích hợp lực đủ lớn so với
 Tỷ lệ sở hữu không đủ để quyết định chất lượng quản trị. Một JV tốt cần làm rõ thành phần hội đồng quản trị, các vấn đề cần đồng thuận, nghĩa vụ góp thêm vốn, quyền sở hữu IP, nguyên tắc định giá giao dịch nội bộ, cơ chế xử lý bế tắc và quyền thoái vốn.
 
 Một JV 50:50 nhưng không có cơ chế xử lý bất đồng có thể rất dễ rơi vào đình trệ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **JV với khách hàng chiến lược** tiếp nhận điểm tựa từ **Liên doanh (Joint Venture / 합작회사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FDI có nhiều động cơ khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## JV với khách hàng chiến lược
 
@@ -76,6 +87,8 @@ Tuy nhiên, mức độ tập trung khách hàng cũng tăng. Nếu OEM thay đ�
 
 JV vì vậy giảm một loại bất định nhưng đồng thời tạo một dạng phụ thuộc quản trị mới.
 
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **FDI có nhiều động cơ khác nhau** tiếp nhận điểm tựa từ **JV với khách hàng chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng cụm: nhà cung cấp đi theo khách hàng lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## FDI có nhiều động cơ khác nhau
 
 Không phải mọi dự án FDI đều nhằm cùng một mục tiêu.
@@ -83,6 +96,8 @@ Không phải mọi dự án FDI đều nhằm cùng một mục tiêu.
 **FDI tìm kiếm thị trường (market-seeking)** nhằm bán hàng cho khách hàng Hàn Quốc. **FDI tìm kiếm hiệu quả (efficiency-seeking)** dùng Hàn Quốc làm cơ sở sản xuất hoặc logistics khi năng suất của hệ sinh thái đủ bù chi phí. **FDI tìm kiếm tài sản chiến lược (strategic-asset seeking)** nhằm tiếp cận kỹ sư, công nghệ, R&D, nhà cung cấp hoặc khách hàng tiên tiến. Ngoài ra còn có đầu tư theo chuỗi cung ứng, khi nhà cung cấp đặt cơ sở gần Samsung, SK, Hyundai hoặc các cụm bio để đáp ứng yêu cầu kỹ thuật nhanh hơn.
 
 Hiểu mục tiêu đầu tư giúp giải thích tại sao một công ty vẫn chọn Hàn Quốc dù chi phí lương hoặc đất không thấp.
+
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Hiệu ứng cụm: nhà cung cấp đi theo khách hàng lớn** tiếp nhận điểm tựa từ **FDI có nhiều động cơ khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền tự chủ của công ty con: cùng thương hiệu nhưng công việc có thể rất khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu ứng cụm: nhà cung cấp đi theo khách hàng lớn
 
@@ -92,6 +107,8 @@ Nhà cung cấp công nghệ cao có thể đặt hoạt động gần fab bán 
 
 Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Quyền tự chủ của công ty con: cùng thương hiệu nhưng công việc có thể rất khác** tiếp nhận điểm tựa từ **Hiệu ứng cụm: nhà cung cấp đi theo khách hàng lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổ chức ma trận (Matrix Organization / 매트릭스 조직)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quyền tự chủ của công ty con: cùng thương hiệu nhưng công việc có thể rất khác
 
 Hai công ty con tại Hàn Quốc của hai tập đoàn quốc tế có thể có mức quyền hạn hoàn toàn khác nhau. Một nơi chỉ thực hiện bán hàng theo quyết định của APAC HQ; nơi khác lại tự quản P&L, kỹ thuật và sản phẩm.
@@ -100,11 +117,15 @@ Khi phân tích doanh nghiệp hoặc cơ hội nghề nghiệp, nên hỏi ai n
 
 Logo quốc tế không cho biết quyền quyết định thực tế.
 
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Tổ chức ma trận (Matrix Organization / 매트릭스 조직)** tiếp nhận điểm tựa từ **Quyền tự chủ của công ty con: cùng thương hiệu nhưng công việc có thể rất khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định giá chuyển nhượng (Transfer Pricing / 이전가격)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tổ chức ma trận (Matrix Organization / 매트릭스 조직)
 
 Nhân viên trong tập đoàn đa quốc gia có thể báo cáo về vận hành cho quản lý tại Hàn Quốc nhưng đồng thời báo cáo chuyên môn cho lãnh đạo khu vực hoặc toàn cầu.
 
 Mô hình ma trận giúp duy trì tiêu chuẩn toàn cầu, phản ứng với thị trường địa phương và hình thành cộng đồng chuyên môn. Nhưng nó cũng dễ tạo xung đột ưu tiên nếu quyền quyết định không rõ. Khi hai cấp quản lý cùng giao nhiệm vụ nhưng không thống nhất ưu tiên, nhân viên trở thành người phải tự hòa giải giữa hai hệ thống.
+
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Định giá chuyển nhượng (Transfer Pricing / 이전가격)** tiếp nhận điểm tựa từ **Tổ chức ma trận (Matrix Organization / 매트릭스 조직)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoản vay nội bộ và cấu trúc tài trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Định giá chuyển nhượng (Transfer Pricing / 이전가격)
 
@@ -114,11 +135,15 @@ Với nhà phân tích, transfer pricing rất quan trọng vì nó có thể l�
 
 Vì vậy cần hiểu **hồ sơ chức năng (functional profile)** của công ty con: nó chỉ bán hàng, chỉ sản xuất theo đơn đặt hàng, hay sở hữu IP và chịu rủi ro thị trường thực sự?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Khoản vay nội bộ và cấu trúc tài trợ** tiếp nhận điểm tựa từ **Định giá chuyển nhượng (Transfer Pricing / 이전가격)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện diện thường trú và nghĩa vụ thuế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khoản vay nội bộ và cấu trúc tài trợ
 
 Công ty mẹ có thể tài trợ cho công ty con bằng vốn cổ phần, khoản vay nội bộ, bảo lãnh hoặc để công ty con vay tại ngân hàng Hàn Quốc. Mỗi cách có hệ quả khác nhau về thuế, lãi suất, tỷ giá và đòn bẩy.
 
 Nếu công ty con kiếm doanh thu bằng KRW nhưng vay từ công ty mẹ bằng USD, **lệch tiền tệ (currency mismatch / 통화 불일치)** có thể xuất hiện. Cấu trúc vốn nên phù hợp với loại tiền của dòng tiền và mức biến động của doanh nghiệp.
+
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Hiện diện thường trú và nghĩa vụ thuế** tiếp nhận điểm tựa từ **Khoản vay nội bộ và cấu trúc tài trợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển lợi nhuận về công ty mẹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiện diện thường trú và nghĩa vụ thuế
 
@@ -126,11 +151,15 @@ Một công ty nước ngoài có thể phát sinh nghĩa vụ thuế tại Hàn
 
 Văn phòng, đại lý phụ thuộc hoặc một số hoạt động nhất định có thể tạo **cơ sở thường trú (permanent establishment / 고정사업장)**. Đây là lĩnh vực cần tư vấn chuyên môn; điều quan trọng về mặt khái niệm là **hiện diện kinh tế và hiện diện pháp lý–thuế liên quan với nhau nhưng không hoàn toàn giống nhau**.
 
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Chuyển lợi nhuận về công ty mẹ** tiếp nhận điểm tựa từ **Hiện diện thường trú và nghĩa vụ thuế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội địa hóa không chỉ là dịch ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển lợi nhuận về công ty mẹ
 
 Công ty con tại Hàn Quốc có thể chuyển giá trị về công ty mẹ thông qua cổ tức hoặc các giao dịch hợp pháp khác theo quy định thuế và pháp luật. Ngược lại, lợi nhuận giữ lại cũng có thể được tái đầu tư vào Hàn Quốc.
 
 Quyết định của HQ phụ thuộc vào cơ hội tăng trưởng tại địa phương, thuế, tỷ giá, nhu cầu thanh khoản toàn tập đoàn và các hạn chế pháp lý. Vì vậy công ty con có lợi nhuận cao không đồng nghĩa lợi nhuận đó sẽ được tái đầu tư tại Hàn Quốc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Nội địa hóa không chỉ là dịch ngôn ngữ** tiếp nhận điểm tựa từ **Chuyển lợi nhuận về công ty mẹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội địa hóa B2C và B2B khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nội địa hóa không chỉ là dịch ngôn ngữ
 
@@ -140,11 +169,15 @@ Một sản phẩm có giao diện tiếng Hàn hoàn hảo vẫn có thể th�
 
 Vì vậy localization là **thiết kế lại cách tiếp cận thị trường (go-to-market redesign)**, không chỉ là chuyển ngữ.
 
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Nội địa hóa B2C và B2B khác nhau** tiếp nhận điểm tựa từ **Nội địa hóa không chỉ là dịch ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp nước ngoài trong chuỗi cung ứng chaebol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nội địa hóa B2C và B2B khác nhau
 
 Công ty B2C có thể cần thương hiệu, influencer, kênh bán và dịch vụ khách hàng phù hợp người tiêu dùng Hàn Quốc. Công ty B2B công nghiệp hoặc IT lại cần hỗ trợ kỹ thuật tiếng Hàn, khách hàng tham chiếu, chứng nhận bảo mật, đăng ký mua sắm, tích hợp hệ thống và SLA tại địa phương.
 
 Yêu cầu nội địa hóa vì vậy phụ thuộc vào **đơn vị mua hàng (buying unit)** thực tế.
+
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Nội địa hóa B2C và B2B khác nhau** xác định đầu vào; **Doanh nghiệp nước ngoài trong chuỗi cung ứng chaebol** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chính sách ưu đãi chỉ thay đổi NPV, không thay thế năng lực kinh doanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Doanh nghiệp nước ngoài trong chuỗi cung ứng chaebol
 
@@ -152,11 +185,15 @@ Nhà cung cấp cho Samsung, Hyundai hoặc SK thường phải đáp ứng tiê
 
 Một khi đã được chứng nhận, quan hệ có thể khá bền vì chi phí chuyển nhà cung cấp cao. Đây có thể là lợi thế cạnh tranh, nhưng đồng thời tạo rủi ro tập trung khách hàng nếu phần lớn doanh thu địa phương phụ thuộc vào một khách hàng lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Doanh nghiệp nước ngoài trong chuỗi cung ứng chaebol** xác định đầu vào; **Chính sách ưu đãi chỉ thay đổi NPV, không thay thế năng lực kinh doanh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **FDI lớn không đồng nghĩa giá trị gia tăng nội địa lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chính sách ưu đãi chỉ thay đổi NPV, không thay thế năng lực kinh doanh
 
 Nhà đầu tư nước ngoài có thể nhận một số ưu đãi theo loại hình đầu tư, địa điểm và chính sách. Về kinh tế, ưu đãi làm giảm chi phí đầu tư và cải thiện **giá trị hiện tại ròng (NPV)** của dự án.
 
 Nhưng ưu đãi không tạo ra khách hàng, nhân tài, điện năng hay năng lực vận hành. Một địa điểm được chọn chỉ vì trợ cấp vẫn có thể kém hiệu quả nếu thiếu logistics, nhân lực hoặc hạ tầng.
+
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **FDI lớn không đồng nghĩa giá trị gia tăng nội địa lớn** tiếp nhận điểm tựa từ **Chính sách ưu đãi chỉ thay đổi NPV, không thay thế năng lực kinh doanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lan tỏa công nghệ và tri thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## FDI lớn không đồng nghĩa giá trị gia tăng nội địa lớn
 
@@ -166,11 +203,15 @@ Một nhà máy có vốn đầu tư lớn nhưng nhập phần lớn linh kiệ
 
 Tổng vốn FDI chỉ là một chiều của đóng góp kinh tế.
 
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Lan tỏa công nghệ và tri thức** tiếp nhận điểm tựa từ **FDI lớn không đồng nghĩa giá trị gia tăng nội địa lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyển dụng và lương thưởng tại công ty có vốn nước ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lan tỏa công nghệ và tri thức
 
 Doanh nghiệp nước ngoài có thể mang quy trình, chuẩn quản lý và công nghệ mới vào Hàn Quốc. Nhân viên và nhà cung cấp địa phương học từ các chuẩn đó rồi mang kiến thức sang những tổ chức khác. Đây là **hiệu ứng lan tỏa tri thức (knowledge spillover / 지식 파급효과)**.
 
 Tuy nhiên, lan tỏa không tự động xảy ra. Nếu hoạt động tại Hàn Quốc chỉ là lắp ráp đơn giản và ít kỹ thuật nội địa, mức học hỏi có thể thấp. **Năng lực hấp thụ (absorptive capacity)** của lao động và nhà cung cấp quyết định phần kiến thức nào thực sự được giữ lại.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Tuyển dụng và lương thưởng tại công ty có vốn nước ngoài** tiếp nhận điểm tựa từ **Lan tỏa công nghệ và tri thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản lý liên văn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyển dụng và lương thưởng tại công ty có vốn nước ngoài
 
@@ -178,11 +219,15 @@ Công ty có vốn nước ngoài thường kết hợp luật lao động Hàn 
 
 Tuy nhiên chức danh tiếng Anh không đồng nghĩa tổ chức phẳng hoặc có quyền quyết định như HQ. Khi đánh giá nghề nghiệp, nên hỏi vai trò tại Hàn Quốc có sở hữu sản phẩm, khách hàng hoặc P&L hay chủ yếu thực hiện chiến lược được quyết định bên ngoài.
 
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Quản lý liên văn hóa** tiếp nhận điểm tựa từ **Tuyển dụng và lương thưởng tại công ty có vốn nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro từ chiến lược toàn cầu của công ty mẹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quản lý liên văn hóa
 
 HQ có thể ưu tiên quy trình toàn cầu rõ ràng, trong khi khách hàng và đội Hàn Quốc cần phản ứng nhanh và hiểu ngữ cảnh địa phương. Công ty con tốt không chọn một phía hoàn toàn mà thiết kế cầu nối giữa hai hệ thống.
 
 Cách làm hiệu quả thường là giữ chính sách toàn cầu cho các vấn đề rủi ro và kiểm soát, nhưng trao quyền địa phương ở nơi kiến thức thị trường quan trọng; đồng thời làm rõ quyền quyết định, tài liệu song ngữ và đường escalations.
+
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Rủi ro từ chiến lược toàn cầu của công ty mẹ** tiếp nhận điểm tựa từ **Quản lý liên văn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích một công ty nước ngoài tại Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro từ chiến lược toàn cầu của công ty mẹ
 
@@ -190,22 +235,30 @@ Công ty mẹ có thể bán công ty con, đóng chi nhánh, sáp nhập pháp 
 
 Vì vậy khi đánh giá độ ổn định công việc hoặc quan hệ cung ứng, cần xem không chỉ hiệu quả tại Hàn Quốc mà còn mức độ cam kết của tập đoàn mẹ đối với thị trường này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Cách phân tích một công ty nước ngoài tại Hàn Quốc** tiếp nhận điểm tựa từ **Rủi ro từ chiến lược toàn cầu của công ty mẹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách phân tích một công ty nước ngoài tại Hàn Quốc
 
 Hãy xác định pháp nhân chính xác, cấu trúc sở hữu, chức năng tại Hàn Quốc, nguồn doanh thu, quyền quyết định giữa Hàn Quốc–khu vực–HQ, hồ sơ transfer pricing, cấu trúc vốn, rủi ro tỷ giá, hệ sinh thái nhà cung cấp/nhân tài, yêu cầu giấy phép và mức cam kết chiến lược của công ty mẹ.
 
 Nếu mục tiêu là phân tích nghề nghiệp, bổ sung thêm cấu trúc lương, ngôn ngữ báo cáo, đường thăng tiến và mức độ chuyển đổi kỹ năng sang thị trường lao động bên ngoài.
 
+> **Chuyển mạch:** Trong **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Cách phân tích một công ty nước ngoài tại Hàn Quốc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Công ty nước ngoài tại Hàn Quốc là **giao diện giữa kiến trúc doanh nghiệp toàn cầu và môi trường thị trường–thể chế Hàn Quốc**. Hiệu quả phụ thuộc vào việc pháp nhân, quyền quyết định, nội địa hóa và hệ sinh thái địa phương có phù hợp với nhau hay không.
+
+> **Chuyển mạch:** Ở chặng này của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
 Công ty có vốn nước ngoài thành lập tại Hàn Quốc không đơn giản là “một công ty nước ngoài” về mặt pháp lý. Ngưỡng FDI không phải vốn tối thiểu chung cho mọi hoạt động. Thương hiệu toàn cầu mạnh không bảo đảm công ty con Hàn Quốc có quyền tự chủ lớn. Nội địa hóa không đồng nghĩa dịch ngôn ngữ. FDI lớn không bảo đảm giá trị gia tăng nội địa lớn. JV 50:50 cũng không tự động cân bằng quyền lực nếu cơ chế xử lý bế tắc kém.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc [`03_company_forms_and_size_classes.md`](./03_company_forms_and_size_classes.md) để hiểu hình thức pháp nhân, [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md) để hiểu chuỗi giá trị xuyên biên giới, [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md) cho thuế–quy định và [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) cho lô-gic (logic / 논리) địa điểm.
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

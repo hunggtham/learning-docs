@@ -1,7 +1,6 @@
 # Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc
 
-> **Mạch đọc:** Đọc **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy tắc ngôn ngữ của thư viện** sang **Giai đoạn A — Lịch sử tạo ra hệ thống kinh tế hiện tại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**. Route đi từ language/source conventions → lịch sử và mô hình kinh tế → macro, industries, firms và accounting → company case labs, governance và capital allocation → evidence-driven analysis, để người đọc đi từ hệ thống tới doanh nghiệp cụ thể.
 
 Thư viện này là một **hệ thống kiến thức (knowledge system)** để hiểu nền kinh tế và doanh nghiệp Hàn Quốc từ lịch sử hình thành đến cách một doanh nghiệp thực tế tạo doanh thu, lợi nhuận, dòng tiền và rủi ro. Đây không phải tài liệu học thuộc, danh sách các chaebol hay tập hợp sự kiện rời rạc.
 
@@ -51,6 +50,8 @@ Các từ viết tắt, tên công ty, tên sản phẩm, tên hệ thống, mã
 
 Mỗi chương cố gắng trả lời một chuỗi câu hỏi tự nhiên: khái niệm đang nói tới là gì, tại sao nó tồn tại, vấn đề nào tạo ra nó, cơ chế hoạt động ra sao, tiền và quyền quyết định di chuyển như thế nào, giới hạn nằm ở đâu và nó liên hệ với phần còn lại của nền kinh tế như thế nào.
 
+> **Chuyển mạch:** Trong **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Giai đoạn A — Lịch sử tạo ra hệ thống kinh tế hiện tại** tiếp nhận điểm tựa từ **Quy tắc ngôn ngữ của thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giai đoạn B — Kinh tế vĩ mô, thương mại và mô hình kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giai đoạn A — Lịch sử tạo ra hệ thống kinh tế hiện tại
 
 1. [Trước 1945: điều kiện ban đầu, quyền sở hữu và địa lý công nghiệp](./00_history/00_legacy_before_1945.md)
@@ -75,6 +76,8 @@ Mỗi chương cố gắng trả lời một chuỗi câu hỏi tự nhiên: kh�
 → Hạn chế mới
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Giai đoạn B — Kinh tế vĩ mô, thương mại và mô hình kinh tế** tiếp nhận điểm tựa từ **Giai đoạn A — Lịch sử tạo ra hệ thống kinh tế hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giai đoạn C — Doanh nghiệp, sở hữu, kế toán và nguồn vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giai đoạn B — Kinh tế vĩ mô, thương mại và mô hình kinh tế
 
 1. [Từ lịch sử đến mô hình kinh tế Hàn Quốc hiện nay](./00_economic_model_and_history.md)
@@ -82,6 +85,8 @@ Mỗi chương cố gắng trả lời một chuỗi câu hỏi tự nhiên: kh�
 3. [Thương mại, xuất khẩu và chuỗi giá trị toàn cầu](./02_trade_export_and_global_value_chains.md)
 
 Cụm này nối lịch sử với GDP/GDI, lạm phát, lãi suất, đồng won, tín dụng hộ gia đình, chu kỳ xuất khẩu, điều kiện thương mại (terms of trade), FTA, giá trị gia tăng nội địa và khả năng chống chịu của chuỗi cung ứng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Giai đoạn B — Kinh tế vĩ mô, thương mại và mô hình kinh tế** nêu điều cần giải thích; **Giai đoạn C — Doanh nghiệp, sở hữu, kế toán và nguồn vốn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Giai đoạn D — Lao động và cách tổ chức vận hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giai đoạn C — Doanh nghiệp, sở hữu, kế toán và nguồn vốn
 
@@ -112,12 +117,16 @@ Pháp nhân
 → Kết quả đối với cổ đông và chủ nợ
 ```
 
+> **Chuyển mạch:** Trong **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Giai đoạn C — Doanh nghiệp, sở hữu, kế toán và nguồn vốn** nêu điều cần giải thích; **Giai đoạn D — Lao động và cách tổ chức vận hành** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Giai đoạn E — Các động cơ công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giai đoạn D — Lao động và cách tổ chức vận hành
 
 1. [Lao động, chức danh, lương thưởng và nơi làm việc](./12_labor_titles_compensation_and_workplace.md)
 2. [Văn hóa doanh nghiệp, ra quyết định và giao tiếp](./13_business_culture_decision_making_and_communication.md)
 
 Cụm này đi từ `직무`, `직급`, `직책`, loại hợp đồng lao động và lương thưởng đến `보고`, `결재`, hệ thống cấp bậc, báo cáo vấn đề, phối hợp SI/SM và làm việc xuyên văn hóa.
+
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Giai đoạn E — Các động cơ công nghiệp** tiếp nhận điểm tựa từ **Giai đoạn D — Lao động và cách tổ chức vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giai đoạn F — Thể chế và các hạn chế cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giai đoạn E — Các động cơ công nghiệp
 
@@ -134,6 +143,8 @@ Cụm này đi từ `직무`, `직급`, `직책`, loại hợp đồng lao độ
 
 Mỗi ngành có động lực (driver) riêng. Bán dẫn cần nhìn giá bán bình quân (ASP), tỷ lệ thành phẩm đạt chuẩn (yield), tỷ lệ sử dụng công suất và CAPEX. Ô tô cần nhìn sản lượng, cơ cấu sản phẩm, ưu đãi bán hàng, bảo hành và tài chính. Nền tảng số cần nhìn mức độ tương tác, khả năng kiếm tiền và tỷ lệ giữ chân người dùng. SI/SM cần nhìn tỷ lệ sử dụng nhân lực, đơn giá tính phí và rủi ro dự án. Xây dựng/PF cần nhìn đơn hàng tồn đọng, tỷ lệ bán trước, bảo lãnh và khả năng tái cấp vốn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Giai đoạn F — Thể chế và các hạn chế cấu trúc** tiếp nhận điểm tựa từ **Giai đoạn E — Các động cơ công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giai đoạn G — Từ kiến thức đến phân tích doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giai đoạn F — Thể chế và các hạn chế cấu trúc
 
 1. [Thuế, quy định và cạnh tranh](./22_tax_regulation_and_competition.md)
@@ -144,6 +155,8 @@ Mỗi ngành có động lực (driver) riêng. Bán dẫn cần nhìn giá bán
 6. [Dân số, hộ gia đình và tiêu dùng](./27_demographics_households_and_consumption.md)
 7. [Năng suất, dịch vụ và tính hai tầng của nền kinh tế](./28_productivity_services_and_economic_dualism.md)
 8. [Đổi mới, R&D, giáo dục và vốn nhân lực](./29_innovation_rnd_education_and_human_capital.md)
+
+> **Chuyển mạch:** Trong **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Giai đoạn G — Từ kiến thức đến phân tích doanh nghiệp** tiếp nhận điểm tựa từ **Giai đoạn F — Thể chế và các hạn chế cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Muốn hiểu Hàn Quốc từ gốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giai đoạn G — Từ kiến thức đến phân tích doanh nghiệp
 
@@ -195,6 +208,8 @@ Các bài này không đưa ra kết luận mua/bán. Mục tiêu là biến câ
 
 # Một số lộ trình đọc theo mục tiêu
 
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Muốn hiểu Hàn Quốc từ gốc** tiếp nhận điểm tựa từ **Giai đoạn G — Từ kiến thức đến phân tích doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Muốn hiểu chaebol và doanh nghiệp Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Muốn hiểu Hàn Quốc từ gốc
 
 Route này đi từ lịch sử, thể chế và kinh tế vĩ mô tới doanh nghiệp. Hãy dùng nó để dựng bối cảnh trước khi đọc một case công ty riêng lẻ.
@@ -209,6 +224,8 @@ Route này đi từ lịch sử, thể chế và kinh tế vĩ mô tới doanh n
 → 28 năng suất
 → 29 đổi mới
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Muốn hiểu chaebol và doanh nghiệp Hàn Quốc** tiếp nhận điểm tựa từ **Muốn hiểu Hàn Quốc từ gốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Muốn phân tích cổ phiếu hoặc doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Muốn hiểu chaebol và doanh nghiệp Hàn Quốc
 
@@ -226,6 +243,8 @@ Route này tập trung vào sở hữu, công ty con, phân bổ vốn, quản t
 → 19 nghiên cứu tập đoàn
 ```
 
+> **Chuyển mạch:** Trong **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Muốn phân tích cổ phiếu hoặc doanh nghiệp** tiếp nhận điểm tựa từ **Muốn hiểu chaebol và doanh nghiệp Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Muốn hiểu môi trường làm việc tại công ty Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Muốn phân tích cổ phiếu hoặc doanh nghiệp
 
 Route này chuyển từ dữ liệu và driver ngành tới mô hình, định giá, sizing và failure mode. Nó phù hợp khi mục tiêu là biến kiến thức doanh nghiệp thành một thesis có thể kiểm chứng.
@@ -239,6 +258,8 @@ Route này chuyển từ dữ liệu và driver ngành tới mô hình, định 
 → 39 workbook
 → 40 case labs
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Muốn hiểu môi trường làm việc tại công ty Hàn Quốc** tiếp nhận điểm tựa từ **Muốn phân tích cổ phiếu hoặc doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Muốn hiểu môi trường làm việc tại công ty Hàn Quốc
 
@@ -268,8 +289,10 @@ Thư viện phân biệt ba lớp thông tin:
 
 Khi số liệu mới thay đổi, ưu tiên cập nhật số liệu mà không phá vỡ mô hình tư duy nền tảng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc**, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy cuối cùng** gom các mảnh từ **Muốn hiểu môi trường làm việc tại công ty Hàn Quốc** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy cuối cùng
 
 > Nền kinh tế Hàn Quốc không phải tập hợp những cái tên như Samsung, Hyundai hay SK. Nó là một mạng lưới gồm lịch sử, thể chế, hộ gia đình, ngân hàng, tập đoàn, SME, người lao động, công nghệ, năng lượng, chuỗi cung ứng và thị trường toàn cầu. Hiểu một doanh nghiệp Hàn Quốc nghĩa là xác định được doanh nghiệp đó đang đứng ở đâu trong mạng lưới này, nó kiểm soát nguồn lực nào, tiền đi qua nó như thế nào và điều gì có thể làm cơ chế đó thay đổi.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy cuối cùng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
