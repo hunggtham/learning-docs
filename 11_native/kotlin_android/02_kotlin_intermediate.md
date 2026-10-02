@@ -1,6 +1,6 @@
 # Kotlin + Android Master ghi chú (note / 노트) — Intermediate
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục lục** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Kotlin + Android Master ghi chú (note / 노트) — Intermediate**; dùng mục lục để định vị chặng giữa của track. Bắt đầu từ **8.1 phạm vi (scope / 범위) là đơn vị sở hữu (owner / 오너) của thời gian tồn tại (lifetime / 수명)**, rồi nối coroutine/structured concurrency với Flow, ViewModel, repository, Room, networking, DI, WorkManager và testing; mỗi API phải được đặt vào scope, owner và data flow cụ thể trước khi sang Advanced.
 
 > Mục tiêu: chuyển từ “viết được app” sang “xây app có cấu trúc đúng”, hiểu coroutine/luồng (flow / 흐름), ViewModel, nguồn chuẩn (source of truth / 정본), Room/networking, vòng đời (lifecycle / 생명주기), testing, DI, di chuyển (migration / 마이그레이션) và các dạng thất bại (failure mode / 실패 모드) cơ bản trước khi sang cấp cao (senior / 시니어). Ở mức (level / 수준) này, mỗi API phải được đặt vào đúng **đơn vị sở hữu (owner / 오너), thời gian tồn tại (lifetime / 수명) và luồng dữ liệu (data flow / 데이터 흐름)**.
 

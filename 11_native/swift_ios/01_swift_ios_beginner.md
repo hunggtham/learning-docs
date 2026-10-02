@@ -1,6 +1,6 @@
 # Swift & iOS Master ghi chú (note / 노트) — Beginner
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Swift & iOS Master ghi chú (note / 노트) — Beginner**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **0.1 Swift phiên bản (version / 버전), ngôn ngữ (language / 언어) chế độ (mode / 모드), Xcode, SDK và triển khai (deployment / 배포) mục tiêu (target / 대상)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **1.1 Cài và kiểm tra toolchain** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Swift & iOS Master ghi chú (note / 노트) — Beginner**; bắt đầu từ đó để giữ đúng vị trí của mức nhập môn. Từ **0.1 Swift phiên bản (version / 버전), ngôn ngữ (language / 언어) chế độ (mode / 모드), Xcode, SDK và triển khai (deployment / 배포) mục tiêu (target / 대상)** chuyển sang toolchain, value/reference, ownership, UI state, networking và persistence; mỗi phần chuẩn bị ngữ nghĩa cần có trước khi đi tiếp Intermediate.
 
 > Phạm vi: Swift căn bản, tư duy lập trình, cấu trúc một ứng dụng iOS, Xcode, Foundation, SwiftUI, UIKit, trạng thái (state / 상태), networking, persistence và tính đồng thời (concurrency / 동시성) ở mức nhập môn.
 >

@@ -1,6 +1,6 @@
 # Phát triển di động bản địa (native mobile development / 네이티브 모바일 개발) — chỉ mục (index / 인덱스)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phát triển di động bản địa (native mobile development / 네이티브 모바일 개발) — chỉ mục (index / 인덱스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Swift & iOS** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kotlin & Android** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là owner của **Phát triển di động bản địa (native mobile development / 네이티브 모바일 개발) — chỉ mục (index / 인덱스)**; dùng bản đồ gốc để chọn đúng hệ sinh thái và baseline. Đọc **Swift & iOS** và **Kotlin & Android** như hai track song song, sau đó đối chiếu lifecycle, runtime, UI state, networking và release boundary; kết luận chung chỉ được rút ra sau khi từng track đã có owner riêng.
 
 Thư mục `11_native` chứa các bộ tài liệu bản địa (native / 네이티브) mobile theo hệ sinh thái. Mỗi bộ được tổ chức theo lộ trình từ nền tảng đến môi trường vận hành (production / 운영 환경)/master, đồng thời giữ các công nghệ legacy quan trọng để có thể đọc và maintain codebase thực tế.
 

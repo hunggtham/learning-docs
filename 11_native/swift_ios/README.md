@@ -1,6 +1,6 @@
 # Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Baseline phiên bản (version / 버전) — cập nhật 21/09/2026** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**. Chốt **Baseline phiên bản (version / 버전) — cập nhật 21/09/2026** trước, rồi đi theo **Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로)** từ Beginner → Intermediate → Advanced/Senior → Master; sau đó dùng production reference để đối chiếu các giới hạn runtime, migration và phát hành mà bốn mức học lần lượt mở ra.
 
 Bộ tài liệu này là lộ trình chuẩn gốc (canonical / 정본) để học Swift và iOS từ gần như số 0 đến mức có thể quyền sở hữu (ownership / 소유권) một hệ thống môi trường vận hành (production / 운영 환경). Đây không phải cheat sheet. Mỗi mức (level / 수준) cố gắng giải thích theo mạch: khái niệm là gì → vì sao tồn tại → hoạt động thế nào → khi nào dùng → cách dùng → lỗi/trường hợp biên (edge case / 경계 사례) → cách người có kinh nghiệm sử dụng trong môi trường vận hành (production / 운영 환경).
 

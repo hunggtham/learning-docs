@@ -1,6 +1,6 @@
 # Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Baseline — 21/09/2026** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1. Beginner** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**; hãy chốt **Baseline — 21/09/2026** trước khi chọn tài liệu. Từ đó đi theo owner path **1. Beginner → 2. Intermediate → 3. Advanced / Senior → 4. Master**, rồi dùng production reference để kiểm tra các giới hạn xuyên cấp; index này giữ vai trò định tuyến, không thay thế nội dung của từng chặng.
 
 Chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로) của bộ Swift/iOS là:
 

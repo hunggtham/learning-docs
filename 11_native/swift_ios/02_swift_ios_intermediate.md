@@ -1,6 +1,6 @@
 # Swift & iOS Master ghi chú (note / 노트) — Intermediate
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1.1 giá trị (value / 값) ngữ nghĩa (semantics / 의미론), tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) và sao chép khi ghi (copy-on-write / 쓰기 시 복사)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **1.2 Equatable, Hashable, Comparable, Identifiable** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Swift & iOS Master ghi chú (note / 노트) — Intermediate**; dùng README để giữ đúng vị trí sau Beginner và trước Advanced/Senior. Từ **1.1 value/reference semantics và copy-on-write** nối sang protocol identity, generics, structured concurrency, actor/Sendable, SwiftUI state, networking/persistence boundaries và deterministic testing; mục sau chỉ có ý nghĩa khi lifetime, isolation và source of truth của mục trước đã rõ.
 
 > Mục tiêu: chuyển từ “biết viết màn hình và gọi API” sang “xây được tính năng (feature / 기능) có quyền sở hữu (ownership / 소유권) rõ, tính đồng thời (concurrency / 동시성) đúng, trạng thái (state / 상태) luồng (flow / 흐름) giải thích được, kiểm thử (test / 테스트) được và bảo trì được”.
 >
