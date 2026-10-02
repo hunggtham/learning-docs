@@ -10,7 +10,7 @@ Electrical kỹ thuật (engineering / 엔지니어링) được thêm như mộ
 định luật vật lý → topology → signal/power/control → device → firmware/software contract
 ```
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trạng thái hiện tại** tiếp nhận điểm tựa từ **Phạm vi P3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá vòng này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Phạm vi P3** xác định phần cần bao phủ; **Trạng thái hiện tại** ghi bằng chứng đang có, rồi **Đánh giá vòng này** chọn issue có tác động lớn nhất.
 
 ## Trạng thái hiện tại
 
@@ -28,7 +28,7 @@ Electrical kỹ thuật (engineering / 엔지니어링) được thêm như mộ
 
 “cốt lõi (core / 핵심) + độ sâu (depth / 깊이) 1” nghĩa là mỗi nhánh đã có một chapter nền tảng và một chapter thiết kế (design / 설계)/xác minh (verification / 확인) mở rộng; các bài lab, trường hợp (case / 사례) study và specialization vẫn còn mở rộng.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Đánh giá vòng này** tiếp nhận điểm tựa từ **Trạng thái hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn hoàn thiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Đánh giá vòng này** biến trạng thái thành hành động; **Chuẩn hoàn thiện** nêu claim, link, ví dụ và test cần có để đóng issue.
 
 ## Đánh giá vòng này
 
@@ -54,7 +54,7 @@ Các khoảng trống còn lại được phân biệt rõ trong [case study end
 3. Thêm RF, FPGA hoặc an toàn (safety / 안전) certification chỉ khi có nguồn và use trường hợp (case / 사례) đủ rõ.
 4. Giữ độ sâu (depth / 깊이)/xác minh (verification / 확인) ưu tiên trước breadth để tránh shallow coverage.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Chuẩn hoàn thiện** tiếp nhận điểm tựa từ **Đánh giá vòng này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng trống có chủ đích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi chuẩn hoàn thiện rõ, **Khoảng trống có chủ đích** phân biệt thiếu thật với phần được giữ ngoài phạm vi để không ép mọi topic vào một checklist.
 
 ## Chuẩn hoàn thiện
 
@@ -69,7 +69,7 @@ Một nhánh chỉ được đánh dấu strong khi có:
 - cầu nối (bridge / 브리지) tới Physics, Computer kiến trúc (architecture / 아키텍처), Embedded hoặc Software;
 - glossary và links không trỏ tới tệp (file / 파일) tạm.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Khoảng trống có chủ đích** tiếp nhận điểm tựa từ **Chuẩn hoàn thiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra (audit / 감사) checklist trước khi mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Khoảng trống có chủ đích** ghi rõ lý do và owner; **audit checklist trước khi mở rộng** xác nhận gap không phải link hỏng hay claim thiếu nguồn.
 
 ## Khoảng trống có chủ đích
 
@@ -77,7 +77,7 @@ Một nhánh chỉ được đánh dấu strong khi có:
 - Không duplicate CPU/ISA/OS lý thuyết (theory / 이론) đã có trong `computer_science/`.
 - RF/microwave, ASIC vật lý (physical / 물리적) thiết kế (design / 설계), semiconductor fabrication, power grid và an toàn (safety / 안전) certification chỉ mở rộng khi có nhu cầu và nguồn học đủ sâu.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Kiểm tra (audit / 감사) checklist trước khi mở rộng** tiếp nhận điểm tựa từ **Khoảng trống có chủ đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Checklist cuối khép vòng coverage bằng việc kiểm tra owner, link, claim, ví dụ và boundary trước khi mở thêm chapter.
 
 ## Kiểm tra (audit / 감사) checklist trước khi mở rộng
 

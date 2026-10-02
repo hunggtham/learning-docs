@@ -35,7 +35,7 @@ electrical_engineering/
 └── 90_connections/
 ```
 
-> **Chuyển mạch:** Trong **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Phạm vi chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình đọc mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Phạm vi chuẩn gốc** xác định owner và ranh giới; **dependency graph** nối các prerequisite, rồi **Lộ trình đọc mặc định** biến đồ thị thành thứ tự học có thể kiểm tra.
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
@@ -60,7 +60,7 @@ flowchart TD
 
 Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) tuyến (route / 경로), không phải taxonomy cứng. Ví dụ một người làm firmware có thể vào `embedded_systems` trước rồi quay lại `digital_electronics` và `hardware_software_interfaces` khi gặp ranh giới (boundary / 경계) cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Lộ trình đọc mặc định** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới giữa các thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Lộ trình đọc mặc định** sắp xếp tín hiệu, mạch, điều khiển và embedded theo tiền đề; **Ranh giới giữa các thư viện** chỉ lúc nào cần chuyển owner sang domain khác.
 
 ## Lộ trình đọc mặc định
 
@@ -74,7 +74,7 @@ Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) 
 8. **Power electronics** — switches, converters, magnetics, PWM, vòng điều khiển (control loop / 제어 루프), EMI/EMC, batteries, thermal thiết kế (design / 설계) và protection.
 9. **Hardware–software interfaces** — registers, memory-mapped I/O, buses, drivers, boot, firmware contracts, timing, faults, cập nhật (update / 업데이트) và khả năng quan sát (observability / 관측 가능성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới giữa các thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **Lộ trình đọc mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn của một chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi biết biên owner, **Chuẩn của một chapter** nêu bằng chứng, ví dụ và verification tối thiểu để một bài không chỉ có công thức.
 
 ## Ranh giới giữa các thư viện (library / 라이브러리)
 
@@ -86,7 +86,7 @@ Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) 
 | Firmware, board bring-up và peripheral đặc tả hợp đồng (contract / 계약) | `embedded_systems/` và `hardware_software_interfaces/` |
 | Driver/API, tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경) software | [Computer Science](../computer_science/README.md) và các thư viện (library / 라이브러리) software tương ứng |
 
-> **Chuyển mạch:** Trong **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Chuẩn của một chapter** tiếp nhận điểm tựa từ **Ranh giới giữa các thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chuẩn của một chapter** đưa ranh giới thành tiêu chí pass; **Trạng thái** ghi lại mức hoàn thiện và gap cần tiếp tục.
 
 ## Chuẩn của một chapter
 
@@ -106,13 +106,13 @@ physical law / requirement
 
 Không coi một datasheet, waveform hoặc schematic là bằng chứng tự đủ. Cần phân biệt mô hình (model / 모델) lý tưởng với parasitic, tolerance, temperature, noise, timing, loading và an toàn (safety / 안전) margin trong hệ thật.
 
-> **Chuyển mạch:** Ở chặng này của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trạng thái** tiếp nhận điểm tựa từ **Chuẩn của một chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều hướng (navigation / 내비게이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi trạng thái đã được ghi, **Điều hướng** chỉ file kế tiếp, prerequisite và bằng chứng cần mở để đóng gap.
 
 ## Trạng thái
 
 Đây là **chuẩn gốc (canonical / 정본) P3 thư viện (library / 라이브러리)** trên `main`: taxonomy, phụ thuộc (dependency / 의존성) map và các cốt lõi (core / 핵심) chapters cho mỗi nhánh đã có; nội dung chuyên sâu sẽ được mở rộng theo từng nhánh mà không tạo bản sao của Physics hoặc Khoa học máy tính (computer science / 컴퓨터 과학). Tiêu chí hoàn thiện và các khoảng trống hiện tại nằm ở [Coverage Audit](COVERAGE_AUDIT.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Điều hướng (navigation / 내비게이션)** tiếp nhận điểm tựa từ **Trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Điều hướng** khép README bằng vòng lặp owner → route → kiểm chứng → cập nhật trạng thái, để người học không bị bỏ lại ở một danh sách chapter.
 
 ## Điều hướng (navigation / 내비게이션)
 

@@ -10,13 +10,13 @@ Laplace biến differential equation thành algebraic quan hệ (relation / 관�
 
 Transfer hàm (function / 함수) chỉ mô tả zero-state phản hồi (response / 응답). Khi startup, reset hoặc disturbance lớn, trạng thái (state / 상태)/initial điều kiện (condition / 조건) phải được mô hình hóa riêng.
 
-> **Chuyển mạch:** Trong **Transforms and Estimation — Biến đổi và ước lượng**, **2. Matched filtering** tiếp nhận điểm tựa từ **1. Laplace và Z transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. trạng thái (state / 상태) estimation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **1. Laplace và Z transform** cung cấp miền biểu diễn; **2. Matched filtering** dùng đáp ứng đó để tối ưu phát hiện, rồi **3. State estimation** khôi phục biến ẩn.
 
 ## 2. Matched filtering
 
 Nếu biết waveform mẫu trong white Gaussian noise, matched filter tối đa SNR tại thời điểm sampling. Đây là nguyên tắc phía sau pulse detection và nhiều receiver; nó không có nghĩa filter càng hẹp luôn tốt hơn vì timing bất định (uncertainty / 불확실성) và channel distortion vẫn tồn tại.
 
-> **Chuyển mạch:** Ở chặng này của **Transforms and Estimation — Biến đổi và ước lượng**, **3. trạng thái (state / 상태) estimation** tiếp nhận điểm tựa từ **2. Matched filtering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Worked lập luận (reasoning / 추론): sensor fusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi lọc và ước lượng trạng thái, **4. Worked reasoning** kiểm tra sensor fusion khi các phép đo có noise và độ trễ khác nhau.
 
 ## 3. trạng thái (state / 상태) estimation
 
@@ -42,7 +42,7 @@ Accelerometer cho phản hồi (response / 응답) nhanh nhưng drift khi tích 
 - covariance bằng zero giả tạo certainty;
 - interpolation che giấu packet mất mát (loss / 손실) thay vì báo bất định (uncertainty / 불확실성).
 
-> **Chuyển mạch:** Ở chặng này của **Transforms and Estimation — Biến đổi và ước lượng**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Failure modes** cho biết khi biến đổi, lọc hoặc fusion sai; **Cầu nối** ghi điều kiện đo và giới hạn mô hình cho lần thiết kế sau.
 
 ## Cầu nối (bridge / 브리지)
 

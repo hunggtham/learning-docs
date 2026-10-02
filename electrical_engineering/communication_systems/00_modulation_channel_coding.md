@@ -12,7 +12,7 @@ Baseband tín hiệu (signal / 신호) có thể biểu diễn bằng pulse ho�
 
 I/Q giúp tách amplitude/phase nhưng yêu cầu mixer, oscillator, ADC/DAC và calibration có sai số.
 
-> **Chuyển mạch:** Trong **Modulation, Channel and Coding — Điều chế, kênh và mã hóa**, **2. Link ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **1. Baseband và passband** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Noise và SNR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **1. Baseband và passband** xác định dạng tín hiệu; **2. Link budget** tính suy hao và dự trữ, rồi **3. Noise và SNR** kiểm tra chất lượng nhận.
 
 ## 2. Link ngân sách (budget / 예산)
 
@@ -22,19 +22,19 @@ I/Q giúp tách amplitude/phase nhưng yêu cầu mixer, oscillator, ADC/DAC và
 
 Link margin là phần còn lại sau khi trừ receiver sensitivity, hiện thực (implementation / 구현) mất mát (loss / 손실) và fading margin. Một link pass ở lab nhưng thất bại (fail / 실패) ngoài trời thường thiếu margin cho obstruction, multipath hoặc antenna orientation.
 
-> **Chuyển mạch:** Ở chặng này của **Modulation, Channel and Coding — Điều chế, kênh và mã hóa**, **3. Noise và SNR** tiếp nhận điểm tựa từ **2. Link ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Synchronization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ link budget và SNR, **4. Synchronization** xử lý lệch thời gian/tần số để receiver có thể giải điều chế đúng.
 
 ## 3. Noise và SNR
 
 Thermal noise power gần N = kTB. Bandwidth B càng rộng thì noise power càng lớn. Receiver noise figure quy đổi noise thêm vào đầu vào (input / 입력). SNR phải được đo ở điểm tham chiếu rõ ràng; SNR trước detector và sau decoder không cùng nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Modulation, Channel and Coding — Điều chế, kênh và mã hóa**, **4. Synchronization** tiếp nhận điểm tựa từ **3. Noise và SNR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Coding và độ tin cậy (reliability / 신뢰성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Synchronization** khôi phục tham chiếu; **5. Coding và reliability** dùng phần dự trữ còn lại để sửa lỗi và đặt giới hạn xác suất sai.
 
 ## 4. Synchronization
 
 Receiver cần biết symbol ranh giới (boundary / 경계) và carrier phase/frequency. Clock offset nhỏ tích lũy theo thời gian; carrier offset làm constellation quay. Vì vậy preamble, pilot, timing khôi phục (recovery / 복구) và carrier khôi phục (recovery / 복구) là một phần của giao thức (protocol / 프로토콜), không phải chi tiết hiện thực (implementation / 구현).
 
-> **Chuyển mạch:** Trong **Modulation, Channel and Coding — Điều chế, kênh và mã hóa**, **5. Coding và độ tin cậy (reliability / 신뢰성)** tiếp nhận điểm tựa từ **4. Synchronization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Worked lập luận (reasoning / 추론): chọn link margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau coding và reliability, **6. Worked reasoning** cân bằng link margin giữa công suất, băng thông, lỗi và chi phí triển khai.
 
 ## 5. Coding và độ tin cậy (reliability / 신뢰성)
 
@@ -58,7 +58,7 @@ Tăng công suất 3 dB có thể đủ trên giấy, nhưng nếu fading margin
 - kiểm thử (test / 테스트) frequency offset, clock drift, packet mất mát (loss / 손실) burst và khôi phục (recovery / 복구) thời gian (time / 시간).
 - Kiểm tra coexistence/interference, không chỉ link trong channel sạch.
 
-> **Chuyển mạch:** Trong **Modulation, Channel and Coding — Điều chế, kênh và mã hóa**, **Thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **7. Đo kiểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **7. Đo kiểm** tạo bằng chứng cho tín hiệu, SNR và lỗi; **Failure modes** phân loại nguyên nhân, rồi **Cầu nối** chuyển thành hành động sửa.
 
 ## Thất bại (failure / 실패) modes
 
@@ -67,7 +67,7 @@ Tăng công suất 3 dB có thể đủ trên giấy, nhưng nếu fading margin
 - Receiver “thấy carrier” nhưng không khóa (lock / 잠금) timing nên không decode được.
 - Coding/thử lại (retry / 재시도) che giấu channel xấu cho tới khi độ trễ (latency / 지연 시간) vượt SLA.
 
-> **Chuyển mạch:** Ở chặng này của **Modulation, Channel and Coding — Điều chế, kênh và mã hóa**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép bài bằng cách nối failure mode với checklist thiết kế và measurement record cho link kế tiếp.
 
 ## Cầu nối (bridge / 브리지)
 

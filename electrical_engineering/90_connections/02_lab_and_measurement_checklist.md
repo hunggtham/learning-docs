@@ -12,7 +12,7 @@ Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đ
 - Đo peak, RMS, frequency, overshoot và settling bằng cùng thời gian (time / 시간)/voltage quy mô (scale / 규모).
 - Không nối earth-referenced ground clip vào nút (node / 노드) floating hoặc high-side nếu chưa phân tích an toàn (safety / 안전).
 
-> **Chuyển mạch:** Trong **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **2. lô-gic (logic / 논리) analyzer** tiếp nhận điểm tựa từ **1. Oscilloscope** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Power đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **1. Oscilloscope** cho dạng sóng và thời gian; **2. Logic analyzer** đọc trạng thái số, rồi **3. Power measurement** kiểm tra nguồn và nhiễu gây sai cả hai phép đo.
 
 ## 2. lô-gic (logic / 논리) analyzer
 
@@ -66,7 +66,7 @@ Một bản ghi (record / 레코드) tối thiểu có:
 
 Không sửa waveform bằng smoothing rồi coi đó là raw bằng chứng (evidence / 증거). Nếu có post-processing, giữ raw capture và ghi rõ transform.
 
-> **Chuyển mạch:** Ở chặng này của **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** nêu điều cần giải thích; **Cầu nối (bridge / 브리지)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **5. Measurement record** biến phép đo thành bằng chứng có thể lặp; **Cầu nối** chỉ cách bàn giao record, điều kiện và sai số sang lần debug sau.
 
 ## Cầu nối (bridge / 브리지)
 
