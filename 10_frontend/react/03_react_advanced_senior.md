@@ -1,6 +1,6 @@
 # React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. kết xuất (render / 렌더링) kiến trúc (architecture / 아키텍처) và Fiber mô hình tư duy (mental model / 사고 모델)** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **2. kết xuất (render / 렌더링) phase và lần ghi nhận (commit / 커밋) phase** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**. Route đi từ rendering/Fiber mental model → render/commit phases → concurrency, Suspense và server/client boundaries → architecture, performance và security → production failure modes, để invariants nối các quyết định nâng cao.
 
 > React 19.3 là mốc stable hiện hành cho API mới; tệp (file / 파일) này tập trung invariants xuyên phiên bản (version / 버전): reconciliation/định danh (identity / 식별자), tính đồng thời (concurrency / 동시성), Suspense, máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계), kiến trúc (architecture / 아키텍처), hiệu năng (performance / 성능), bảo mật (security / 보안) và môi trường vận hành (production / 운영 환경) practices.
 

@@ -1,6 +1,6 @@
 # React Legacy API tham chiếu (reference / 참조) — React 15 → 18
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Cách dùng tệp (file / 파일) này** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1A. Old pattern → new pattern → reason → migration → khi còn gặp** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**. Route đi từ cách tra cứu legacy file → old pattern và modern replacement → reason, migration và compatibility → khi còn gặp trong codebase → giới hạn/version notes, để tài liệu giúp đọc và nâng cấp mã cũ.
 
 > tệp (file / 파일) này là phần bổ sung cho bốn mức (level / 수준) chính. Không nên đọc trước Beginner. Mục tiêu là tra cứu nhanh nhưng vẫn đủ giải thích khi gặp dự án (project / 프로젝트) cũ.
 

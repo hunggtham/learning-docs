@@ -1,6 +1,6 @@
 # React Master ghi chú (note / 노트) — Beginner
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Beginner**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. React là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. JavaScript nền tảng cần biết** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Beginner**. Route đi từ React rendering model → JavaScript nền tảng → components, props và state → events, lists, forms và Hooks căn bản → data flow và debugging, để người mới hiểu cơ chế trước API.
 
 > React 19.3 là mốc stable hiện hành để đối chiếu API mới, nhưng tệp (file / 파일) này dạy mô hình tư duy (mental model / 사고 모델) xuyên phiên bản (version / 버전). Mục tiêu là hiểu rendering và trạng thái (state / 상태) trước khi học Hooks như một danh sách API.
 

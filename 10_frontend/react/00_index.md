@@ -1,6 +1,6 @@
 # React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Phạm vi phiên bản (version / 버전): học cả React cũ lẫn React hiện đại** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — chỉ mục (index / 인덱스)**. Route đi từ baseline/version scope → JavaScript prerequisites → Beginner, Intermediate, Advanced và Legacy tracks → migration, references và cross-links, để chỉ mục điều phối một lộ trình React xuyên phiên bản.
 
 Baseline của bộ tài liệu: React 19.3 (stable ngày 09/09/2026). Cách viết mặc định là hàm (function / 함수) thành phần (component / 컴포넌트) + Hooks; lớp (class / 클래스) thành phần (component / 컴포넌트) được giữ lại để đọc và migrate mã (code / 코드) cũ thay vì bị xóa khỏi lộ trình.
 

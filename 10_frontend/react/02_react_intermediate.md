@@ -1,6 +1,6 @@
 # React Master ghi chú (note / 노트) — Intermediate
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mô hình hóa trạng thái (state / 상태) trước khi học Hook nâng cao** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1A. Rules of React và Rules of Hooks** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Intermediate**. Route đi từ state modeling → Rules of React/Hooks → effects, refs, reducers và context → custom Hooks, data flow và feature architecture → debugging/performance, để ứng dụng lớn vẫn giữ được invariant dữ liệu.
 
 > Mục tiêu của mức (level / 수준) này là chuyển từ “biết viết thành phần (component / 컴포넌트)” sang “hiểu vòng đời dữ liệu, tác động (effect / 효과), ref, reducer, ngữ cảnh (context / 맥락), custom Hook, luồng dữ liệu (data flow / 데이터 흐름) và kiến trúc tính năng (feature / 기능) ở mức ứng dụng thật”.
 
