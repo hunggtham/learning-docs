@@ -1,14 +1,12 @@
 # Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)
 
-> **Mạch đọc:** Đặt **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thesis không gian** sang **Relief và regional cấu trúc (structure / 구조)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**. Route đi từ North European Plain và Rhine–Main–Danube → regional city network → industrial supplier clusters, rail/road/river → năng lượng, chuyển đổi và liên kết châu Âu, để mật độ mạng giải thích sức mạnh không gian.
 
 ## Thesis không gian
 
 Đức nằm ở trung tâm mạng lục địa châu Âu, nơi **North European Plain, Rhine–Main–Danube corridors, dense city mạng (network / 네트워크) và industrial supplier hệ thống (system / 시스템)** giao nhau. Sức mạnh địa lý không đến từ một siêu đô thị hay một tài nguyên (resource / 자원) duy nhất, mà từ mật độ rất cao của medium/large cities, rail–road–river links và manufacturing clusters.
 
-
-> **Chuyển mạch:** Từ **Thesis không gian**, ta sang **Relief và regional cấu trúc (structure / 구조)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Relief và regional cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **River như hạ tầng kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Relief và regional cấu trúc (structure / 구조)
 
@@ -18,8 +16,7 @@ Rhine valley là corridor rõ vì low relief, waterway và dense settlement. Dan
 
 Relief không chia nước Đức thành isolated basin mạnh như mountain countries, nên land connectivity tương đối thuận lợi.
 
-
-> **Chuyển mạch:** Từ **Relief và regional cấu trúc (structure / 구조)**, ta sang **River như hạ tầng kinh tế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **River như hạ tầng kinh tế** tiếp nhận điểm tựa từ **Relief và regional cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polycentric urban hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## River như hạ tầng kinh tế
 
@@ -29,8 +26,7 @@ Barge phù hợp bulk/industrial cargo; rail/road bổ sung time-sensitive freig
 
 Low water sự kiện (event / 이벤트) trên Rhine có thể tăng vận chuyển (transport / 전송) chi phí (cost / 비용), cho thấy climate/hydrology vẫn ảnh hưởng advanced industrial economy.
 
-
-> **Chuyển mạch:** Từ **River như hạ tầng kinh tế**, ta sang **Polycentric urban hệ thống (system / 시스템)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Polycentric urban hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **River như hạ tầng kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manufacturing cluster** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Polycentric urban hệ thống (system / 시스템)
 
@@ -38,8 +34,7 @@ Berlin là capital lớn nhưng Germany không bị một city thống trị tuy
 
 Polycentricity làm labor/firm mạng (network / 네트워크) phân tán hơn và tạo nhiều specialization cluster.
 
-
-> **Chuyển mạch:** Từ **Polycentric urban hệ thống (system / 시스템)**, ta sang **Manufacturing cluster** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Manufacturing cluster** tiếp nhận điểm tựa từ **Polycentric urban hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rhine–Ruhr transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Manufacturing cluster
 
@@ -49,8 +44,7 @@ Manufacturing success phụ thuộc vocational skill, supplier proximity, logist
 
 Cluster tạo đường dẫn (path / 경로) dependence: khi mạng (network / 네트워크) supplier đã dày, relocation toàn bộ rất tốn chi phí (cost / 비용).
 
-
-> **Chuyển mạch:** Từ **Manufacturing cluster**, ta sang **Rhine–Ruhr transformation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Rhine–Ruhr transformation** tiếp nhận điểm tựa từ **Manufacturing cluster** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rhine–Ruhr transformation
 
@@ -58,8 +52,7 @@ Coal/steel từng là cốt lõi (core / 핵심) của Ruhr. Khi heavy industry 
 
 Brownfield redevelopment cho thấy geography cũ không biến mất; hạ tầng (infrastructure / 인프라) và city mạng (network / 네트워크) được repurpose.
 
-
-> **Chuyển mạch:** Từ **Rhine–Ruhr transformation**, ta sang **năng lượng (energy / 에너지) geography** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Năng lượng (energy / 에너지) geography** tiếp nhận điểm tựa từ **Rhine–Ruhr transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Năng lượng (energy / 에너지) geography
 
@@ -67,8 +60,7 @@ Industrial tải (load / 로드) lớn trong khi renewable wind mạnh hơn ở 
 
 Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) vì thế là geography của **nguồn (source / 소스)–grid–tải (load / 로드)**, không chỉ technology choice.
 
-
-> **Chuyển mạch:** Từ **năng lượng (energy / 에너지) geography**, ta sang **cổng (port / 포트) và bên ngoài (external / 외부) gateway** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Society và regional inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cổng (port / 포트) và bên ngoài (external / 외부) gateway
 
@@ -76,8 +68,7 @@ Hamburg là major seaport; Rhine hệ thống (system / 시스템) kết nối m
 
 Border giảm friction trong integrated thị trường (market / 시장) làm functional hinterland vượt trạng thái (state / 상태) ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **cổng (port / 포트) và bên ngoài (external / 외부) gateway**, ta sang **Society và regional inequality** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Society và regional inequality** tiếp nhận điểm tựa từ **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Society và regional inequality
 
@@ -85,15 +76,13 @@ East–west historical development difference vẫn để lại demographic/econ
 
 Aging và labor shortage có geography khác giữa booming metro và shrinking rural district.
 
-
-> **Chuyển mạch:** Từ **Society và regional inequality**, ta sang **Regional role** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Regional role** tiếp nhận điểm tựa từ **Society và regional inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Regional role
 
 Germany nằm như central manufacturing/logistics nút (node / 노드) của Europe. Role đến từ centrality, industrial độ sâu (depth / 깊이) và cross-border khả năng tiếp cận (accessibility / 접근성).
 
-
-> **Chuyển mạch:** Từ **Regional role**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Regional role** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -101,4 +90,4 @@ Germany = **polycentric cities + Rhine corridor + manufacturing supplier web + c
 
 Xem thêm: [Europe](../../../03_regions/05_europe.md), [Economic geography](../../../02_human_geography/05_economic_geography.md), [Transport](../../../02_human_geography/08_transport_trade_globalization.md).
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [AUT austria](./AUT_austria.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
