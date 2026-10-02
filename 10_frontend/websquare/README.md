@@ -118,7 +118,7 @@ WebSquare chuẩn hóa những việc ứng dụng enterprise phải làm lặp 
 
 Vì vậy câu hỏi “đã tải (load / 로드) chưa?”, “row nào?”, “đã login chưa?”, “API nào?”, “sự kiện (event / 이벤트) nào?”, “đã deploy chưa?” đều phải được thay bằng câu hỏi có định danh (identity / 식별자) và bằng chứng (evidence / 증거) cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **WebSquare JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Cách học bằng dự án (project / 프로젝트) nhỏ** tiếp nhận điểm tựa từ **Nguyên lý nền tảng (first principles / 제일 원리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn chuẩn để kiểm chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Nguyên lý nền tảng** trả lời WebSquare đang mô hình hóa điều gì; **Cách học bằng dự án nhỏ** chuyển mô hình đó thành thao tác trên Page, component và binding, rồi **Nguồn chuẩn để kiểm chứng** đối chiếu hành vi với tài liệu owner.
 
 ## Cách học bằng dự án (project / 프로젝트) nhỏ
 
@@ -150,7 +150,7 @@ page open/close lặp lại làm listener invocation tăng dần
 
 Mỗi trường hợp (case / 사례) phải giải thích được bất biến (invariant / 불변식), đơn vị sở hữu (owner / 오너), định danh (identity / 식별자), thứ tự (ordering / 순서), thử lại (retry / 재시도) an toàn (safety / 안전), vô hiệu hóa (invalidation / 무효화), chi phí (cost / 비용) mô hình (model / 모델), bằng chứng (evidence / 증거) và regression guard.
 
-> **Chuyển mạch:** Trong **WebSquare JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Cách học bằng dự án (project / 프로젝트) nhỏ** nêu điều cần giải thích; **Nguồn chuẩn để kiểm chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi thử flow nhỏ, hãy quay về **Nguồn chuẩn để kiểm chứng** để phân biệt hành vi WebSquare thực tế với suy đoán; đó là điểm khóa trước khi mở các chapter runtime và workflow.
 
 ## Nguồn chuẩn để kiểm chứng
 

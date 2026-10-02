@@ -332,7 +332,7 @@ Sau nghiệp vụ (business / 비즈니스) success, máy khách (client / 클�
 
 ---
 
-> **Chuyển mạch:** Trong **23 — Workflow Orchestration, Advanced dữ liệu (data / 데이터) trạng thái (state / 상태) & Enterprise lỗi (error / 오류) kiến trúc (architecture / 아키텍처)**, **11. lỗi (error / 오류) envelope phải ổn định hơn message văn bản (text / 텍스트)** tiếp nhận điểm tựa từ **10. submitdone không đồng nghĩa nghiệp vụ (business / 비즈니스) success** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. trường dữ liệu (field / 필드) lỗi (error / 오류), row lỗi (error / 오류) và toàn cục (global / 전역) lỗi (error / 오류) là ba coordinate hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** `submitdone` chỉ báo luồng kỹ thuật đã kết thúc; **error envelope** chuẩn hóa phần còn lại để **field/row/global error** có thể định vị và hiển thị nhất quán.
 
 ## 11. lỗi (error / 오류) envelope phải ổn định hơn message văn bản (text / 텍스트)
 
@@ -423,7 +423,7 @@ Do đó mã (code / 코드) môi trường vận hành (production / 운영 환�
 
 ---
 
-> **Chuyển mạch:** Trong **23 — Workflow Orchestration, Advanced dữ liệu (data / 데이터) trạng thái (state / 상태) & Enterprise lỗi (error / 오류) kiến trúc (architecture / 아키텍처)**, **14. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **13. DataList dirty trạng thái (state / 상태) là máy trạng thái (state machine / 상태 머신), không phải boolean** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. kiểu (type / 타입) conversion là đặc tả hợp đồng (contract / 계약), không phải convenience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi `dirty` đã được coi là state machine, **row/cell status** phải tính chi phí lưu và đồng bộ; từ đó **type conversion** trở thành contract bảo vệ dữ liệu qua các trạng thái.
 
 ## 14. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용)
 
@@ -439,7 +439,7 @@ Nếu screen chỉ xem 100.000 row mà không edit, đừng mặc định kiến
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **23 — Workflow Orchestration, Advanced dữ liệu (data / 데이터) trạng thái (state / 상태) & Enterprise lỗi (error / 오류) kiến trúc (architecture / 아키텍처)**, **15. kiểu (type / 타입) conversion là đặc tả hợp đồng (contract / 계약), không phải convenience** tiếp nhận điểm tựa từ **14. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. null, empty string và missing trường dữ liệu (field / 필드) là ba trạng thái khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Contract kiểu dữ liệu chỉ có nghĩa khi phân biệt được `null`, chuỗi rỗng và field bị thiếu; **16** dùng ba trạng thái đó để giải thích merge, validate và hiển thị lỗi.
 
 ## 15. kiểu (type / 타입) conversion là đặc tả hợp đồng (contract / 계약), không phải convenience
 
@@ -815,7 +815,7 @@ Nếu chỉ nhớ `$p.executeSubmission()` hay `$p.workflow.executeSerial()`, ta
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **23 — Workflow Orchestration, Advanced dữ liệu (data / 데이터) trạng thái (state / 상태) & Enterprise lỗi (error / 오류) kiến trúc (architecture / 아키텍처)**, **29. Master synthesis** nêu điều cần giải thích; **30. Nguồn kiểm chứng theo bản dựng (build / 빌드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Master synthesis** gom workflow, state và error contract thành một mô hình; **Nguồn kiểm chứng theo bản dựng** xác nhận mô hình đó bằng artifact/log trước khi áp dụng vào production.
 
 ## 30. Nguồn kiểm chứng theo bản dựng (build / 빌드)
 

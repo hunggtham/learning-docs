@@ -245,7 +245,7 @@ Nếu handler gọi Submission asynchronous, handler không “đứng chờ” 
 
 Đây là cùng một vấn đề async thứ tự (ordering / 순서) được giải thích sâu ở [JavaScript Intermediate](../javascript/javascript_intermediate.md), chỉ khác đối tượng (object / 객체) phát sự kiện (event / 이벤트) là WebSquare thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Trong **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **11. trạng thái (state / 상태) nằm ở đâu?** tiếp nhận điểm tựa từ **10. sự kiện (event / 이벤트) trong WebSquare vẫn dựa trên event-driven programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Binding thay đổi cách lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Event-driven programming giải thích tín hiệu đi vào Page; **11** truy tìm state được giữ ở đâu, rồi **12. Binding** cho thấy dữ liệu đổi lập luận và cập nhật giao diện như thế nào.
 
 ## 11. trạng thái (state / 상태) nằm ở đâu?
 
@@ -263,7 +263,7 @@ Bug thường xuất hiện khi một giá trị tồn tại ở nhiều nơi nh
 
 Nguyên tắc môi trường vận hành (production / 운영 환경): chọn nguồn chuẩn (source of truth / 정본) theo mục đích. Dữ liệu cần submit nên sống trong DataCollection phù hợp. UI thành phần (component / 컴포넌트) nên phản ánh mô hình (model / 모델) qua binding khi có thể. Biến `scwin` phù hợp cho transient orchestration trạng thái (state / 상태), không nên biến thành một cơ sở dữ liệu (database / 데이터베이스) thu nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **12. Binding thay đổi cách lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **11. trạng thái (state / 상태) nằm ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. lỗi (error / 오류) taxonomy: phân loại trước khi sửa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi đã xác định state và binding, **13. Error taxonomy** phân loại lỗi theo lớp dữ liệu, event hay runtime trước khi chọn cách sửa.
 
 ## 12. Binding thay đổi cách lập luận (reasoning / 추론)
 
@@ -280,7 +280,7 @@ Event nào được phát khi binding cập nhật?
 
 Chapter 02 đi sâu vấn đề này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **13. lỗi (error / 오류) taxonomy: phân loại trước khi sửa** tiếp nhận điểm tựa từ **12. Binding thay đổi cách lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) leak là bình thường, nhưng phải biết lúc nào xảy ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Phân loại lỗi làm lộ nơi abstraction của binding bị rò; **14** dùng các điểm rò đó để chọn mức can thiệp phù hợp thay vì vá ngẫu nhiên.
 
 ## 13. lỗi (error / 오류) taxonomy: phân loại trước khi sửa
 
@@ -308,7 +308,7 @@ DataList có data nhưng Grid rỗng
 
 Chẩn đoán tốt là đi theo chuỗi xử lý (pipeline / 파이프라인) và thu bằng chứng (evidence / 증거) ở từng ranh giới (boundary / 경계), không sửa ngẫu nhiên từng API.
 
-> **Chuyển mạch:** Trong **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **14. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) leak là bình thường, nhưng phải biết lúc nào xảy ra** tiếp nhận điểm tựa từ **13. lỗi (error / 오류) taxonomy: phân loại trước khi sửa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Bài tập lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi nhận diện abstraction leak, **15. Bài tập lập luận** buộc người học truy nguyên symptom → state → binding → runtime bằng một case cụ thể.
 
 ## 14. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) leak là bình thường, nhưng phải biết lúc nào xảy ra
 
@@ -326,7 +326,7 @@ JavaScript / browser / HTTP / DOM
 
 Chỉ biết tầng trên thì gỡ lỗi (debug / 디버그) khó. Chỉ biết tầng dưới thì dễ chống lại khung phần mềm (framework / 프레임워크) và tạo mã (code / 코드) fragile. Kỹ năng quan trọng là biết **khi nào nên ở trong công khai (public / 공개) lớp trừu tượng (abstraction / 추상화), khi nào cần quan sát internals, và khi nào tuyệt đối không phụ thuộc internals**.
 
-> **Chuyển mạch:** Ở chặng này của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **15. Bài tập lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **14. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) leak là bình thường, nhưng phải biết lúc nào xảy ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Kết nối sang chapter tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Case đã kiểm tra được mental model; **16. Kết nối sang chapter tiếp theo** bàn giao từ Page runtime sang workflow và orchestration, nơi state chịu thêm điều phối.
 
 ## 15. Bài tập lập luận (reasoning / 추론)
 
@@ -343,7 +343,7 @@ Giả sử một page có `inputName`, `dmUser`, `sbmSaveUser` và nút Save. `i
 
 Bước 6 rất quan trọng. Nếu payload đã đúng mà máy chủ (server / 서버) vẫn lưu sai, lỗi không còn nằm ở WebSquare UI. Nếu payload sai, tiếp tục truy ngược mô hình (model / 모델) và sự kiện (event / 이벤트) thứ tự (ordering / 순서). Đây là cách gỡ lỗi (debug / 디버그) theo bằng chứng (evidence / 증거) thay vì theo cảm giác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**, **16. Kết nối sang chapter tiếp theo** tiếp nhận điểm tựa từ **15. Bài tập lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Chapter này khép ở runtime Page; phần kế tiếp mở rộng cùng mental model sang workflow, data state và error architecture của WebSquare.
 
 ## 16. Kết nối sang chapter tiếp theo
 
