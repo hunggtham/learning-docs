@@ -1,6 +1,6 @@
 # Attention: cho mô hình (model / 모델) truy cập thông tin theo relevance
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Attention: cho mô hình (model / 모델) truy cập thông tin theo relevance**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ fixed ngữ cảnh (context / 맥락) tới động (dynamic / 동적) ngữ cảnh (context / 맥락)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Truy vấn (query / 쿼리), Key, giá trị (value / 값)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Attention**. Route đi từ fixed context → dynamic relevance → query/key/value → masking/complexity → cross/self-attention, để context selection được nối với sequence modeling và cost.
 
 Attention (어텐션 / 주의 메커니즘) giải quyết một limitation quan trọng của early sequence-to-sequence các mô hình (models / 모델들): decoder không nên bị buộc nén toàn bộ nguồn (source / 소스) chuỗi (sequence / 시퀀스) vào một fixed-size véc-tơ (vector / 벡터). Thay vào đó, tại mỗi đầu ra (output / 출력) step, mô hình (model / 모델) có thể **tính relevance giữa truy vấn (query / 쿼리) hiện tại và nhiều bộ nhớ (memory / 메모리) positions**, rồi tổng hợp thông tin (information / 정보) phù hợp.
 

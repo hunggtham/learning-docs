@@ -1,6 +1,6 @@
 # Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Variational Autoencoders: latent không gian (space / 공간) như một probabilistic mô hình (model / 모델)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Generative mô hình (model / 모델)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Suy luận (inference / 추론) bài toán (problem / 문제)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Variational autoencoders**. Route đi từ probabilistic latent model → encoder/decoder → ELBO/reconstruction-KL trade-off → reparameterization → sampling and posterior limits, để generative representation nối với inference.
 
 Variational Autoencoder (VAE / 변분 오토인코더) mở rộng autoencoder từ deterministic compression thành một **latent-variable generative mô hình (model / 모델)**. Encoder không đầu ra (output / 출력) một latent véc-tơ (vector / 벡터) duy nhất; nó approximate phân phối (distribution / 분포) của latent variable `z` conditioned on đầu vào (input / 입력) `x`. Decoder defines likelihood của dữ liệu (data / 데이터) given latent.
 

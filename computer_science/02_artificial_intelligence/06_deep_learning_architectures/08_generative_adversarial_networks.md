@@ -1,6 +1,6 @@
 # Generative Adversarial Networks: học phân phối qua một trò chơi đối kháng
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Generative Adversarial Networks: học phân phối qua một trò chơi đối kháng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hai networks** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Discriminator optimum intuition** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Generative adversarial networks**. Route đi từ generator/discriminator game → discriminator optimum → minimax dynamics → mode collapse/stability → sample quality/evaluation, để adversarial training được đọc bằng equilibrium và failure mode.
 
 Generative Adversarial mạng (network / 네트워크) học generative mô hình (model / 모델) bằng cách đặt **generator** và **discriminator** vào một game đối kháng. Generator tạo fake samples; discriminator cố phân biệt real/fake. Generator cải thiện để discriminator khó nhận ra hơn.
 

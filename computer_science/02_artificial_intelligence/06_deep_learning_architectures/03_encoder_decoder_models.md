@@ -1,6 +1,6 @@
 # Encoder–Decoder các mô hình (models / 모델들): tách hiểu đầu vào (input / 입력) và tạo đầu ra (output / 출력)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Encoder–Decoder các mô hình (models / 모델들): tách hiểu đầu vào (input / 입력) và tạo đầu ra (output / 출력)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sequence-to-Sequence bài toán (problem / 문제)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Early RNN Seq2Seq** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Encoder–decoder models**. Route đi từ sequence-to-sequence → encoder state → decoder generation → teacher forcing/exposure bias → attention bridge, để input understanding nối với output control.
 
 Encoder–Decoder (인코더–디코더) là architectural mẫu (pattern / 패턴) cho tasks nơi đầu vào (input / 입력) và đầu ra (output / 출력) có structures/lengths khác nhau. Encoder biến đầu vào (input / 입력) thành nội bộ (internal / 내부) biểu diễn (representation / 표현); decoder dùng biểu diễn (representation / 표현) đó để tạo đầu ra (output / 출력).
 

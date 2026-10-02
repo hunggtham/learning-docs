@@ -1,6 +1,6 @@
 # Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chuỗi (sequence / 시퀀스) các mô hình (models / 모델들): dữ liệu có thứ tự cần mô hình (model / 모델) khác gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuỗi (sequence / 시퀀스) notation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Markov giả định (assumption / 가정)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sequence models**. Route đi từ ordered data/notation → Markov assumption → recurrent state → long-range dependency → training/serving trade-offs, để thứ tự thời gian được nối với memory và latency.
 
 Chuỗi (sequence / 시퀀스) dữ liệu (data / 데이터) khác fixed unordered tính năng (feature / 기능) véc-tơ (vector / 벡터) vì **thứ tự và ngữ cảnh (context / 맥락)** mang meaning. Câu `dog bites man` khác `man bites dog`; sensor readings cùng values nhưng thứ tự (order / 순서) khác biểu diễn dynamics khác. Vì vậy chuỗi (sequence / 시퀀스) mô hình (model / 모델) phải xử lý variable length, phụ thuộc (dependency / 의존성) qua positions và đôi khi nhân quả (causal / 인과적) direction.
 

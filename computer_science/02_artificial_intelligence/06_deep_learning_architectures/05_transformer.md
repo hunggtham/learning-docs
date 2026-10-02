@@ -1,6 +1,6 @@
 # Transformer: Attention + Residual Computation ở quy mô lớn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer: Attention + Residual Computation ở quy mô lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đầu vào (input / 입력) biểu diễn (representation / 표현)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cốt lõi (core / 핵심) Transformer khối (block / 블록)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformers: attention and residual computation at scale**. Route đi từ input embeddings/positions → self-attention/MLP block → residual/norm → masking/parallelism → scaling and serving, để block design nối với context và compute.
 
 Transformer (트랜스포머) không chỉ là “mô hình (model / 모델) dùng attention”. Nó là một kiến trúc (architecture / 아키텍처) tổ chức computation thành repeated blocks gồm attention, feed-forward transformation, residual connections và normalization, cho phép chuỗi (sequence / 시퀀스) positions xử lý song song trong huấn luyện (training / 학습) và long-range interactions ngắn đường dẫn (path / 경로) hơn RNN.
 

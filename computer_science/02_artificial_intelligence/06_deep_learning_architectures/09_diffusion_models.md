@@ -1,6 +1,6 @@
 # Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Diffusion các mô hình (models / 모델들): tạo dữ liệu bằng quá trình khử nhiễu có điều kiện**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Forward Diffusion tiến trình (process / 프로세스)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Reverse tiến trình (process / 프로세스)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Diffusion models**. Route đi từ forward noising process → reverse denoising process → score/noise prediction → conditioning/sampling schedule → quality/latency trade-offs, để generation được nối với stochastic dynamics.
 
 Diffusion các mô hình (models / 모델들) học generative phân phối (distribution / 분포) bằng một idea khác GAN: thay vì generator một bước phải tạo mẫu (sample / 표본) hoàn chỉnh ngay, ta định nghĩa một **forward tiến trình (process / 프로세스)** dần phá dữ liệu (data / 데이터) thành noise, rồi train mô hình (model / 모델) học **reverse denoising tiến trình (process / 프로세스)** từng bước để quay từ noise về dữ liệu (data / 데이터).
 

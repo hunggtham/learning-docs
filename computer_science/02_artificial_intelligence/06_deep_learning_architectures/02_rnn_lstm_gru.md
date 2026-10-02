@@ -1,6 +1,6 @@
 # RNN, LSTM và GRU: học trạng thái qua thời gian
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **RNN, LSTM và GRU: học trạng thái qua thời gian**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vanilla RNN** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Unrolling through thời gian (time / 시간)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **RNN, LSTM và GRU**. Route đi từ vanilla recurrent state → temporal unrolling/backpropagation → vanishing gradients → gates/memory cells → sequence length and inference cost, để state qua thời gian được đánh giá bằng gradient flow.
 
 Recurrent Neural mạng (network / 네트워크) xử lý chuỗi (sequence / 시퀀스) bằng cách reuse cùng chuyển tiếp (transition / 전이) hàm (function / 함수) qua timesteps. Thay vì mỗi position độc lập, mô hình (model / 모델) duy trì hidden trạng thái (state / 상태) mang thông tin (information / 정보) từ quá khứ.
 

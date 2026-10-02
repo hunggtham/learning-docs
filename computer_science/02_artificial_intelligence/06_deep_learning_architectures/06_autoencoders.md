@@ -1,6 +1,6 @@
 # Autoencoders: học biểu diễn (representation / 표현) bằng reconstruction
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Autoencoders: học biểu diễn (representation / 표현) bằng reconstruction**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Undercomplete Autoencoder** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Reconstruction mất mát (loss / 손실)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Autoencoders**. Route đi từ encoder bottleneck → decoder reconstruction → reconstruction loss → denoising/contractive variants → latent use, để representation quality được phân biệt với mere copying.
 
 Autoencoder (오토인코더) là kiến trúc (architecture / 아키텍처) học ánh xạ (mapping / 매핑):
 

@@ -1,6 +1,6 @@
 # Convolutional Neural Networks: tận dụng cấu trúc không gian
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Convolutional Neural Networks: tận dụng cấu trúc không gian**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao flatten ảnh (image / 이미지) vào MLP là lãng phí?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Convolution thao tác (operation / 연산)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Convolutional neural networks**. Route đi từ spatial locality/weight sharing → convolution/padding/stride → pooling/receptive field → feature hierarchies → transfer and failure modes, để kiến trúc giữ cấu trúc không gian thay vì flatten sớm.
 
 Convolutional Neural mạng (network / 네트워크) được tạo ra vì dense MLP đối xử mọi đầu vào (input / 입력) dimension như độc lập, trong khi ảnh (image / 이미지) có cấu trúc (structure / 구조) rất mạnh: pixels gần nhau tạo cục bộ (local / 로컬) patterns, cùng một edge có thể xuất hiện ở nhiều vị trí, và spatial hierarchy từ edge → texture → part → đối tượng (object / 객체) có tính compositional.
 
