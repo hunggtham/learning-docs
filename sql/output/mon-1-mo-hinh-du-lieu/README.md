@@ -8,7 +8,7 @@ Nên học theo thứ tự từ mô hình hóa cơ bản đến chuẩn hóa và
 
 Mỗi bài mở bằng mục đích và câu hỏi cần giải quyết, đi qua các section nguồn bằng câu nối, rồi chốt quan hệ giữa đầu vào, điều kiện xử lý và kết quả trước khi bàn giao sang bài kế tiếp.
 
-> **Chuyển mạch:** Trong **Môn 1 – 데이터 모델링의 이해**, **Danh sách bài học** tiếp nhận điểm tựa từ **Mạch bài giảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mạch bài giảng** giải thích thứ tự và dependency; **Danh sách bài học** biến chúng thành các file owner cụ thể để người học mở đúng bài mà không nhảy cóc tiền đề.
 
 ## Danh sách bài học
 

@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **TOP-N và Pagination**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ keyword về thứ hạng và trang, **Mạch tư duy** đặt câu hỏi thứ tự được xác định trước hay sau khi cắt; **Mạch nối của bài học** sẽ phân biệt TOP-N với pagination ổn định.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **TOP-N và Pagination**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi đã rõ thứ tự và điểm cắt, **Mạch nối của bài học** kiểm tra tie-breaker, offset và keyset để biết trang kế tiếp có bỏ sót hoặc lặp bản ghi hay không.
 
 ## Mạch nối của bài học
 

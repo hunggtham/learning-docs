@@ -8,7 +8,7 @@ Nên học JOIN trước, sau đó đến Subquery/Group Function và các kỹ 
 
 Mỗi bài mở bằng mục đích và câu hỏi cần giải quyết, đi qua các section nguồn bằng câu nối, rồi chốt quan hệ giữa đầu vào, điều kiện xử lý và kết quả trước khi bàn giao sang bài kế tiếp.
 
-> **Chuyển mạch:** Trong **Môn 2 – SQL 기본 및 활용**, **Danh sách bài học** tiếp nhận điểm tựa từ **Mạch bài giảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mạch bài giảng** đặt thứ tự từ truy vấn đến tối ưu; **Danh sách bài học** chỉ ra file nào chịu trách nhiệm cho từng kỹ năng và đường quay lại README khi cần kiểm tra phạm vi.
 
 ## Danh sách bài học
 

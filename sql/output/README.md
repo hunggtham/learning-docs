@@ -33,7 +33,7 @@ Tài liệu được chia theo hai môn của kỳ thi SQLD. Mỗi file là mộ
 13. PIVOT, UNPIVOT và Regular Expression
 14. SQL Style Guide và SQL dễ đọc cho pipeline AI
 
-> **Chuyển mạch:** Ở chặng này của **SQLD – Tài liệu học đã chuẩn hóa**, **Môn 2 – SQL 기본 및 활용 / SQL cơ bản và ứng dụng** nêu điều cần giải thích; **Phạm vi nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** README này dùng **Phạm vi nguồn** để xác định bằng chứng và owner cho **Môn 2 – SQL cơ bản và ứng dụng**; hãy quay lại mục lục môn đó khi cần nối khái niệm với bài thực hành cụ thể.
 
 ## Phạm vi nguồn
 

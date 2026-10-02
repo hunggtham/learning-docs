@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **SQL Style Guide và SQL dễ đọc cho pipeline AI**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ keyword về style, **Mạch tư duy** hỏi quy ước nào làm query dễ đọc và dễ kiểm tra; **Mạch nối của bài học** đưa câu trả lời vào pipeline AI, review và bảo trì.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **SQL Style Guide và SQL dễ đọc cho pipeline AI**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi thống nhất quy ước, **Mạch nối của bài học** kiểm tra chúng bằng ví dụ query, lỗi thường gặp và tiêu chí review để style phục vụ đúng mục đích.
 
 ## Mạch nối của bài học
 

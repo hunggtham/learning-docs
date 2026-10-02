@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **Set Operators**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ keyword về tập kết quả, **Mạch tư duy** xác định hai truy vấn phải tương thích cột nào; **Mạch nối của bài học** sẽ đối chiếu UNION, INTERSECT và MINUS theo mục tiêu dữ liệu.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Set Operators**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi xác định tính tương thích của hai tập, **Mạch nối của bài học** chỉ ra khi nào toán tử tập thay thế được JOIN và khi nào làm mất thông tin hoặc thứ tự.
 
 ## Mạch nối của bài học
 

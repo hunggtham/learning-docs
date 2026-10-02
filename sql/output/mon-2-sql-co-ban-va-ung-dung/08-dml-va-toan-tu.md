@@ -99,7 +99,7 @@ Hãy đọc câu lệnh theo ba bước: `USING` cho biết dữ liệu mới đ
 
 Đến đây, ta đã đi qua các lệnh làm thay đổi dữ liệu. Nhưng sau mỗi thay đổi, người học vẫn cần đọc kết quả và kiểm tra biểu thức mà không làm thay đổi bảng. Ta quay lại `SELECT`, nền tảng để quan sát dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **DML và toán tử**, **1. DML: nhóm lệnh tác động lên dữ liệu** nêu điều cần giải thích; **2. SELECT và toán tử: đọc, tính và biểu diễn kết quả** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi hiểu DML thay đổi dữ liệu và điều kiện giao dịch, hãy sang **SELECT và toán tử** để đọc, tính và biểu diễn kết quả trên trạng thái vừa thay đổi.
 
 ## 2. SELECT và toán tử: đọc, tính và biểu diễn kết quả
 
