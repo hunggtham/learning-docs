@@ -1,6 +1,6 @@
 # 1945–1950: giải phóng, chia cắt và hình thành hai nhà nước
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **1945–1950: giải phóng, chia cắt và hình thành hai nhà nước**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Liberation không đồng nghĩa immediate sovereignty thống nhất** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cục bộ (local / 로컬) political organization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **1945–1950: giải phóng, chia cắt và hình thành hai nhà nước**; đặt chapter giữa colonial Korea và postwar reconstruction. Từ **Liberation không đồng nghĩa immediate sovereignty thống nhất** nối occupation zones, local organizations, trusteeship debate, 38th parallel, Cold War polarization và state formation, rồi giải thích vì sao liberation mở lựa chọn nhưng không tự tạo một nhà nước thống nhất.
 
 ## Liberation không đồng nghĩa immediate sovereignty thống nhất
 

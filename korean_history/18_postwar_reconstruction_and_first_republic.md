@@ -1,6 +1,6 @@
 # Tái thiết hậu chiến và First Republic
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tái thiết hậu chiến và First Republic**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một economy bị phá huỷ không reset về zero** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Land reform và rural cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Tái thiết hậu chiến và First Republic**; đặt chapter sau chiến tranh và trước công nghiệp hóa Hàn Quốc. Từ **Một economy bị phá huỷ không reset về zero** nối aid, land reform, rural structure, state finance và First Republic politics, rồi dùng các mục sau để giải thích cách phân bổ nguồn lực biến di sản chiến tranh thành thể chế mới.
 
 ## Một economy bị phá huỷ không reset về zero
 

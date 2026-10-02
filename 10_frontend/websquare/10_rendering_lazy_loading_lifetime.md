@@ -1,6 +1,6 @@
 # 10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Một page có nhiều mốc sẵn sàng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. onpageload không có nghĩa toàn nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) đã ready** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **10 — Rendering, Lazy Loading & tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명)**; đặt chapter sau WebSquare lifecycle/debugging và trước các case performance. Từ **1. Một page có nhiều mốc sẵn sàng** nối source/instantiate/render/activate/data-ready/unload với lazy loading, TabControl, preload và resource ownership, rồi dùng timeline lifecycle để tránh race và memory leak.
 
 WebSquare screen có thể “tải (load / 로드) xong” theo nhiều nghĩa khác nhau. nguồn (source / 소스) đã tải chưa? Script đã eval chưa? phạm vi (scope / 범위) đã tạo chưa? DataCollection đã tồn tại chưa? thành phần (component / 컴포넌트) đối tượng (object / 객체) đã được tạo chưa? DOM đã kết xuất (render / 렌더링) chưa? `onpageload` đã chạy chưa? Submission đầu tiên đã hoàn thành chưa?
 

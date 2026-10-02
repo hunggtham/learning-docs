@@ -1,5 +1,7 @@
 # Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam
 
+> **Mạch đọc:** README này là owner của **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**. Bắt đầu ở **Cách dùng**, rồi đi theo **Cách đọc mỗi thời kỳ**, timeline 01→23, các trục xã hội/kinh tế/địa điểm và dependency map; quay lại README khi cần chọn chapter owner hoặc kiểm tra phạm vi giữa Đại Việt, Champa, Khmer, uplands và maritime networks.
+
 Bộ tài liệu này là **thư viện kiến thức (knowledge library / 지식 라이브러리)** về lịch sử Việt Nam, viết chủ yếu bằng tiếng Việt. Nó không phải timeline để học thuộc, tập hợp chiến công hay danh sách triều đại. Mục tiêu là giải thích **vì sao một trật tự lịch sử hình thành, cơ chế (mechanism / 메커니즘) nào giữ nó tồn tại, shock nào làm nó thay đổi và phần nào của quá khứ tiếp tục tác động tới hiện tại**.
 
 Lịch sử được đọc theo First-Principles Thinking: trạng thái (state / 상태) huy động tax/army bằng cách nào; river/settlement ảnh hưởng môi trường vận hành (production / 운영 환경) ra sao; ai kiểm soát land; technology thay đổi productivity/warfare thế nào; writing/religion tạo thông tin (information / 정보)/legitimacy ra sao; household và minority communities trải nghiệm chính sách (policy / 정책) như thế nào; môi trường (environment / 환경) thay đổi ràng buộc (constraint / 제약조건) ra sao.
@@ -15,8 +17,6 @@ Bắt đầu ở [`00_index_and_dependency.md`](00_index_and_dependency.md).
 Thư viện (library / 라이브러리) hiện có bốn tầng (layer / 계층):
 
 ### 1. Timeline nhân quả (causal / 인과적) — 01 đến 23
-Phần “1. Timeline nhân quả (causal / 인과적) — 01 đến 23” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - 01 phương thức (method / 메서드)/bằng chứng (evidence / 증거);
 - 02 historical geography;
@@ -29,8 +29,6 @@ Phần “1. Timeline nhân quả (causal / 인과적) — 01 đến 23” nối
 Mỗi chapter nối timeline với geography, economy, society, technology, institutions và di tích.
 
 ### 2. Structural histories — 24 đến 30
-Phần “2. Structural histories — 24 đến 30” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [`24_economic_history_land_tax_markets_and_reform.md`](24_economic_history_land_tax_markets_and_reform.md)
 - [`25_social_history_household_village_gender_migration_ethnicity.md`](25_social_history_household_village_gender_migration_ethnicity.md)
@@ -54,18 +52,12 @@ Tầng (layer / 계층) này tránh độ lệch (bias / 편향) xem vùng ngoà
 Sau khi đọc 34–37, nên quay lại chapter 14: frontier lúc đó sẽ hiện ra như tương tác (interaction / 상호작용) zone giữa nhiều hệ thống (system / 시스템), không phải một arrow “Nam tiến”.
 
 ### 4. Tham chiếu (reference / 참조) & trường dữ liệu (field / 필드) tầng (layer / 계층) — 31 đến 33
-Phần “4. Tham chiếu (reference / 참조) & trường dữ liệu (field / 필드) tầng (layer / 계층) — 31 đến 33” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md): timeline tra nhanh.
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): thuật ngữ + nguồn (source / 소스)/bằng chứng (evidence / 증거) discipline.
 - [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md): Đền Hùng, Cổ Loa, Hoa Lư, Thăng Long, Vân Đồn, Thành Nhà Hồ, Mỹ Sơn, Hội An, Huế, Mekong, Điện Biên, DMZ, industrial corridors… như học tập (learning / 학습) checkpoints.
 
-### 5. Lớp bối cảnh tích hợp (integrated context / 통합 맥락) — 38
-
-- [`38_period_context_economy_society_places.md`](38_period_context_economy_society_places.md): đọc tám giai đoạn lớn theo cùng một nhịp **mốc thời gian → kinh tế và đời sống → bối cảnh khu vực → địa điểm/di tích**. Tệp này không thay thế các chương niên đại (chronology chapters / 연대기 장); nó giúp người học biết khi nào cần quay lại chương chuyên sâu nào.
-
-Đường đọc ngắn được khuyến nghị là `38 → chương niên đại tương ứng → 24–30 → 33–37`. Nhờ vậy một mốc như **1010**, **1471**, **1858**, **1954** hoặc **1986** không đứng riêng: ta biết nó xảy ra trong nền kinh tế nào, tác động lên ai, nằm trong mạng khu vực nào và có thể quan sát dấu vết ở đâu.
+> **Chuyển mạch:** Trong **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Cách đọc mỗi thời kỳ** tiếp nhận điểm tựa từ **Cách dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đọc mỗi thời kỳ
 
@@ -73,9 +65,9 @@ Mỗi giai đoạn cố gắng giữ đồng thời nhiều tầng (layer / 계�
 
 **Timeline** để không đảo trước–sau. **Geography** để hiểu capital/battlefield/trade tuyến (route / 경로). **Economy** để biết food, land, tax, labor và exchange nuôi thứ tự (order / 순서) thế nào. **Society** để thấy household, village, elite, gender, ethnicity, di chuyển (migration / 마이그레이션). **Technology & hạ tầng (infrastructure / 인프라)** để nối metallurgy, irrigation, road, cổng (port / 포트), printing, rail, electricity và digital mạng (network / 네트워크) với sức chứa (capacity / 용량). **Religion / ideas / education** để hiểu legitimacy/thông tin (information / 정보). **Môi trường (environment / 환경)** để thấy flood, disease, delta và climate ràng buộc (constraint / 제약조건). **Di tích** để kiểm tra cơ chế (mechanism / 메커니즘) bằng landscape.
 
-Nếu một chương niên đại (chronology chapter / 연대기 장) chưa làm rõ đủ bốn câu hỏi “mốc nào, ai sống bằng gì, khu vực nào đang tác động, hôm nay nhìn thấy ở đâu”, hãy dùng `38` làm cầu nối rồi quay lại chương đó; không chèn một đoạn câu mẫu (boilerplate / 상투 문구) giống nhau vào mọi heading.
-
 Regional deep dives thêm một câu hỏi nữa: **đơn vị (unit / 단위) of phân tích (analysis / 분석) đúng là gì?** Một river basin, cổng (port / 포트) mạng (network / 네트워크) hoặc upland corridor có thể hữu ích hơn hiện đại (modern / 현대적) province/national border.
+
+> **Chuyển mạch:** Ở chặng này của **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Cách đọc mỗi thời kỳ** nêu điều cần giải thích; **Nguyên tắc bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Di tích: không đọc như photo caption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên tắc bằng chứng (evidence / 증거)
 
@@ -84,6 +76,8 @@ Các chapter cố ý phân biệt **fact tương đối chắc**, **archaeologic
 Một nguồn sơ cấp không tự động đúng hơn nguồn (source / 소스) thứ cấp: chronicle có court độ lệch (bias / 편향); colonial police bản ghi (record / 레코드) có quản trị (governance / 거버넌스) độ lệch (bias / 편향); memoir có bộ nhớ (memory / 메모리) limitation. Archaeology mạnh về material ngữ cảnh (context / 맥락) nhưng institutional meaning vẫn cần suy luận (inference / 추론).
 
 Với issue còn debate, thư viện (library / 라이브러리) nói rõ bất định (uncertainty / 불확실성) thay vì tạo false precision. Bên ngoài (external / 외부) name như Funan/Lâm Ấp hoặc colonial ethnic label cũng không được coi tự động là self-identification bất biến của cục bộ (local / 로컬) society.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Nguyên tắc bằng chứng (evidence / 증거)** nêu điều cần giải thích; **Di tích: không đọc như photo caption** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Naming và terminology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Di tích: không đọc như photo caption
 
@@ -99,11 +93,15 @@ date of historical event
 
 Trường dữ liệu (field / 필드) phương thức (method / 메서드) chi tiết nằm ở tệp (file / 파일) 33.
 
+> **Chuyển mạch:** Trong **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Naming và terminology** tiếp nhận điểm tựa từ **Di tích: không đọc như photo caption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Naming và terminology
 
 Tên địa danh dùng historical name theo ngữ cảnh (context / 맥락) rồi ghi chú (note / 노트) hiện đại (modern / 현대적) locator khi cần. Ví dụ Thăng Long/Đông Kinh/Hà Nội và Gia Định/Sài Gòn/Thành phố Hồ Chí Minh không được thay lẫn nhau vô điều kiện.
 
 Important scholarly từ khóa (keyword / 키워드) được giữ/ghi chú (note / 노트) bằng English. Korean term chỉ thêm khi liên kết (connection / 연결) thực sự hữu ích với các bộ Korean docs, ví dụ **civil examination / 과거제** hoặc **Classical Chinese / 한문**.
+
+> **Chuyển mạch:** Ở chặng này của **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Naming và terminology** nêu điều cần giải thích; **Nguồn nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguồn nền
 
@@ -114,3 +112,5 @@ Regional deep dives bổ sung scholarship chuyên về Champa/Panduranga, Funan�
 For politically/interpretively contested twentieth-century topics, thư viện (library / 라이브러리) avoids turning one side's terminology into analytical conclusion; it separates documented sự kiện (event / 이벤트), nguồn (source / 소스) position and scholarly interpretation.
 
 > Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một trạng thái (state / 상태) của xã hội chuyển thành trạng thái (state / 상태) khác dưới tác động đồng thời của quyền lực, tài nguyên (resource / 자원), technology, geography, môi trường (environment / 환경), beliefs và lựa chọn của con người.
+
+> **Bàn giao:** Sau **Nguồn nền**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
