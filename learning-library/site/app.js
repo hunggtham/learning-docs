@@ -291,6 +291,7 @@ async function renderReader(path, sectionId = '') {
     if (!response.ok) throw new Error();
     const markdown = await response.text();
     content.className = 'markdown';
+    content.dataset.language = String(doc.language || 'vi').toLowerCase();
     content.innerHTML = markdownToHtml(markdown);
     const headings = [...content.querySelectorAll('h1,h2,h3')];
     const headingById = new Map(headings.map(heading => [heading.id, heading]));
