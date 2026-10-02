@@ -1,6 +1,6 @@
 # Actor-Critic
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Actor-Critic**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần Critic?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Actor mục tiêu (objective / 목표)** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Actor-critic**. Route đi từ actor policy → critic value estimate → advantage/TD error → coupled updates → stability and on/off-policy variants, để critic giảm phương sai cho actor mà vẫn tạo bias cần kiểm soát.
 
 **Actor-Critic (액터-크리틱)** kết hợp hai components:
 

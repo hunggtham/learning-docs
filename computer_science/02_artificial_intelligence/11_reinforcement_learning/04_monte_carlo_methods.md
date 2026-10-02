@@ -1,6 +1,6 @@
 # Monte Carlo Methods trong Reinforcement học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Monte Carlo Methods trong Reinforcement học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao Monte Carlo quan trọng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **First-Visit và Every-Visit** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Monte Carlo methods trong reinforcement learning**. Route đi từ complete episodes → return sampling → first/every visit estimates → Monte Carlo prediction → control and exploration, để không cần transition model nhưng phải chờ episode kết thúc.
 
 **Monte Carlo (MC / 몬테카를로)** methods học giá trị (value / 값) từ **complete sampled returns** thay vì cần known chuyển tiếp (transition / 전이) mô hình (model / 모델). tác nhân (agent / 에이전트) trải nghiệm episode, quan sát reward chuỗi (sequence / 시퀀스), rồi dùng return thực tế như mục tiêu (target / 대상).
 

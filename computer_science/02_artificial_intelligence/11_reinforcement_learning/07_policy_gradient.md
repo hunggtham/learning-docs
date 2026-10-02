@@ -1,6 +1,6 @@
 # Chính sách (policy / 정책) độ dốc (gradient / 기울기)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chính sách (policy / 정책) độ dốc (gradient / 기울기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao optimize chính sách (policy / 정책) trực tiếp?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Log-Derivative Trick** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Policy gradients**. Route đi từ stochastic policy → expected return objective → log-derivative estimator → variance reduction/baselines → continuous-action control, để gradient trực tiếp được đặt cạnh chi phí phương sai.
 
 Value-based methods như Q-learning học hành động (action / 동작) values rồi suy ra chính sách (policy / 정책). **chính sách (policy / 정책) độ dốc (gradient / 기울기)** optimize chính sách (policy / 정책) parameters trực tiếp.
 

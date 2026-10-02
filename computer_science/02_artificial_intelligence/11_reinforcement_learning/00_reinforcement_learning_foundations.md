@@ -1,6 +1,6 @@
 # Reinforcement học tập (learning / 학습) Foundations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reinforcement học tập (learning / 학습) Foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao RL khác supervised học tập (learning / 학습)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Reward và Return** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reinforcement learning foundations**. Route đi từ state/action/environment → reward and return → policy/value → exploration/exploitation → episodic interaction, để RL được đọc như học qua hậu quả của hành động.
 
 **Reinforcement học tập (learning / 학습)** nghiên cứu cách một tác nhân (agent / 에이전트) học cách hành động qua tương tác (interaction / 상호작용) với môi trường (environment / 환경) để tối đa hóa reward tích lũy theo thời gian. Khác supervised học tập (learning / 학습), tác nhân (agent / 에이전트) thường không nhận “đáp án đúng” cho từng hành động (action / 동작); nó nhận consequences và reward, đôi khi delayed nhiều bước.
 

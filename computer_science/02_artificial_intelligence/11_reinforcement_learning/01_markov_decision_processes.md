@@ -1,6 +1,6 @@
 # Markov quyết định (decision / 결정) Processes
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Markov quyết định (decision / 결정) Processes**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Markov thuộc tính (property / 속성)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuyển tiếp (transition / 전이) mô hình (model / 모델)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Markov decision processes**. Route đi từ state sufficiency → transition/reward model → discount horizon → policy/value objective → planning and control, để giả định Markov nối được với bài toán quyết định.
 
 **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)** là mathematical khung phần mềm (framework / 프레임워크) cho sequential quyết định (decision / 결정) making khi trạng thái (state / 상태) hiện tại chứa đủ thông tin (information / 정보) relevant để predict future dynamics dưới hành động (action / 동작).
 

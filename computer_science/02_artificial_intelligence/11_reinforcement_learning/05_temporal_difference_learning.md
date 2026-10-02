@@ -1,6 +1,6 @@
 # Temporal Difference học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Temporal Difference học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao TD cần tồn tại?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sampling + Bootstrapping** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Temporal-difference learning**. Route đi từ one-step transition → bootstrapped target → TD error → prediction/control → eligibility traces, để TD đứng giữa Monte Carlo sampling và dynamic-programming backups.
 
 **Temporal Difference (TD / 시간차 학습)** học tập (learning / 학습) kết hợp hai ý tưởng: học từ sampled experience như Monte Carlo, nhưng cập nhật (update / 업데이트) bằng **bootstrapping** như động (dynamic / 동적) Programming.
 

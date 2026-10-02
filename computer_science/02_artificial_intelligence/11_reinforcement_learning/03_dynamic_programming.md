@@ -1,6 +1,6 @@
 # Động (dynamic / 동적) Programming trong Reinforcement học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Động (dynamic / 동적) Programming trong Reinforcement học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chính sách (policy / 정책) Evaluation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chính sách (policy / 정책) Improvement** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dynamic programming trong reinforcement learning**. Route đi từ known transition model → policy evaluation → policy improvement → policy iteration → value iteration, để DP cho thấy planning khi mô hình môi trường đã biết.
 
 **động (dynamic / 동적) Programming (DP / 동적 계획법)** giải MDP khi chuyển tiếp (transition / 전이) mô hình (model / 모델) và reward mô hình (model / 모델) đã biết. Ý tưởng là exploit Bellman recursion để chia long-horizon quyết định (decision / 결정) bài toán (problem / 문제) thành các subproblems liên kết qua giá trị (value / 값) functions.
 

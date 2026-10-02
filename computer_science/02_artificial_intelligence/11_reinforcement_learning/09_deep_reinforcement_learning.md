@@ -1,6 +1,6 @@
 # Deep Reinforcement học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Deep Reinforcement học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao Deep RL khó hơn supervised deep học tập (learning / 학습)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DQN: Deep Q-Network** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Deep reinforcement learning**. Route đi từ neural value/policy approximation → replay buffer → target networks → DQN extensions → instability/generalization, để deep RL được nối với các kỹ thuật ổn định hóa học từ dữ liệu tương quan.
 
 **Deep Reinforcement học tập (learning / 학습)** kết hợp Reinforcement học tập (learning / 학습) với neural networks để xử lý trạng thái (state / 상태)/hành động (action / 동작) spaces quá lớn cho tabular methods. Neural mạng (network / 네트워크) đóng vai trò hàm (function / 함수) approximator cho giá trị (value / 값), Q-function, chính sách (policy / 정책) hoặc môi trường (environment / 환경) mô hình (model / 모델).
 

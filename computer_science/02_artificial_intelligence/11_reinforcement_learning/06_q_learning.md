@@ -1,6 +1,6 @@
 # Q-Learning
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Q-Learning**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao Q-learning mạnh?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Greedy chính sách (policy / 정책) từ Q** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Q-learning**. Route đi từ off-policy TD target → max over next actions → epsilon-greedy behavior → tabular convergence assumptions → function approximation limits, để Q-learning được nối với exploration và stability.
 
 **Q-learning (Q 러닝)** là model-free, off-policy Temporal Difference điều khiển (control / 제어) thuật toán (algorithm / 알고리즘) học approximation của optimal action-value hàm (function / 함수):
 

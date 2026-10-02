@@ -1,6 +1,6 @@
 # Giá trị (value / 값) Functions và Bellman Equations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Giá trị (value / 값) Functions và Bellman Equations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bellman decomposition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Q-function Bellman equation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Value functions và Bellman equations**. Route đi từ return → state/action value → Bellman expectation/optimality → bootstrapped targets → policy extraction, để phương trình Bellman nối với cách học và cải thiện policy.
 
 Trong Reinforcement học tập (learning / 학습), immediate reward không đủ để đánh giá một trạng thái (state / 상태)/hành động (action / 동작) vì hành động (action / 동작) hiện tại ảnh hưởng cả future. **giá trị (value / 값) hàm (function / 함수)** nén expected long-term return thành một quantity có thể học và optimize.
 
