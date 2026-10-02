@@ -1,6 +1,6 @@
 # 16 — Globalization: tích hợp mạng và phân mảnh rủi ro
 
-> **Mạch đọc:** Đặt **16 — Globalization: tích hợp mạng và phân mảnh rủi ro** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬) và giá trị (value / 값) capture** sang **Resilience không phải tự cung**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **16 — Globalization: tích hợp mạng và phân mảnh rủi ro**. Route đi từ trade/finance networks → global value chains → value capture → labor/region divergence → systemic shocks, để hội nhập nối phụ thuộc với rủi ro.
 
 Từ cuối thế kỷ XX, bộ chứa (container / 컨테이너), jet, telecom, computing, trade agreements, finance và liberalization làm tăng tốc luồng hàng, vốn, dữ liệu và người. Globalization vừa là **tích hợp (integration / 통합)** vừa là phân bổ rủi ro không đều.
 
@@ -31,24 +31,13 @@ stock: factories, ports, data centers, skills, reserves, trust
 flow: components, capital, data, workers, emissions, pathogens
 ```
 
-
-> **Chuyển mạch:** Từ **toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬) và giá trị (value / 값) capture**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Ai có thể đổi supplier và ai bị lock-in?
-2. Một trade gain được phân phối qua wage, tax, quyền sở hữu (ownership / 소유권) và welfare thế nào?
-3. Khi một shock xảy ra, redundancy nằm ở firm, trạng thái (state / 상태), city hay household?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **16 — Globalization: tích hợp mạng và phân mảnh rủi ro**, **Toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬) và giá trị (value / 값) capture** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: globalization và việc phân bổ rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Đầu vào (input / 입력)–đầu ra (output / 출력) bảng (table / 테이블), shipping/AIS dữ liệu (data / 데이터), FDI, wage phân phối (distribution / 분포), di chuyển (migration / 마이그레이션)/remittance, patent/IP và emissions giúp nhìn luồng (flow / 흐름); GDP không cho biết ai chịu precarious công việc (work / 작업) hay ecological mất mát (loss / 손실). Counterfactual: nếu không có bộ chứa (container / 컨테이너) tiêu chuẩn (standard / 표준), trade vẫn tăng qua air/rail/digital services nhưng geography, inventory và cổng (port / 포트) power khác. Cầu nối sang 17 là **interdependence tạo sức chứa (capacity / 용량) lẫn vulnerability trong một trật tự đang tranh chấp**.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: globalization và việc phân bổ rủi ro** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **16 — Globalization: tích hợp mạng và phân mảnh rủi ro**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: globalization và việc phân bổ rủi ro** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: globalization và việc phân bổ rủi ro
 
@@ -68,4 +57,4 @@ Trade-liberal reading nhấn mạnh productivity và bên tiêu thụ (consumer 
 
 GVC, urbanization và di chuyển (migration / 마이그레이션) tạo skill/hạ tầng (infrastructure / 인프라) stock nhưng cũng lock-in supplier dependence và carbon. Resilience là multi-sourcing, buffers, công khai (public / 공개) sức chứa (capacity / 용량) và interoperability, không phải autarky. Counterfactual về deglobalization phải nói rõ tuyến (route / 경로) nào thay thế bộ chứa (container / 컨테이너), ai trả chi phí và nhóm nào mất thị trường (market / 시장) truy cập (access / 접근).
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: globalization và việc phân bổ rủi ro**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

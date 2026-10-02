@@ -1,7 +1,6 @@
 # 10 — Imperialism: năng lực công nghiệp và trật tự bất bình đẳng
 
-> **Mạch đọc:** Đặt **10 — Imperialism: năng lực công nghiệp và trật tự bất bình đẳng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Đế quốc như một portfolio** sang **hạ tầng (infrastructure / 인프라) hai mặt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **10 — Imperialism: năng lực công nghiệp và trật tự bất bình đẳng**. Route đi từ industrial capacity → finance/force → colonial portfolio → labor/resources → resistance and unequal order, để đế quốc nối năng lực với thể chế.
 
 Imperialism cuối thế kỷ XIX–đầu XX ghép **industrial sức chứa (capacity / 용량), finance, steam, quinine, firearms, ánh xạ (mapping / 매핑) và bureaucracy** với cạnh tranh quốc gia và các ý thức hệ phân cấp. Nhưng đế quốc không toàn năng: chi phí, resistance, disease, distance và rivalry luôn tạo giới hạn.
 
@@ -32,24 +31,13 @@ stock: land title, mines, ports, administrative files, military capacity
 flow: taxes, exports, labor, settlers, troops, credit, information
 ```
 
-
-> **Chuyển mạch:** Từ **Đế quốc như một portfolio**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. hạ tầng (infrastructure / 인프라) phục vụ extraction hay tạo công khai (public / 공개) sức chứa (capacity / 용량); bằng chứng nào phân biệt?
-2. Một border thuộc địa trở thành xung đột (conflict / 충돌) trap qua population, commodity và administration nào?
-3. Vì sao cùng chính sách indirect quy tắc (rule / 규칙) tạo kết quả khác ở các vùng khác nhau?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **10 — Imperialism: năng lực công nghiệp và trật tự bất bình đẳng**, **Đế quốc như một portfolio** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: empire như một kiến trúc (architecture / 아키텍처) của extraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Census, cadastral map, company archive và military report cho thấy trạng thái (state / 상태) gaze; court petitions, labor records, landscape thay đổi (change / 변경) và oral lịch sử (history / 이력) kiểm tra sự khác biệt giữa quy tắc (rule / 규칙) trên giấy và đời sống. Counterfactual: nếu railway nối nội địa thay vì chỉ nối mỏ với cảng, trạng thái (state / 상태) sức chứa (capacity / 용량) và hậu thuộc địa có thể khác, nhưng cũng có thể tăng tốc quân sự hóa. Cầu nối sang 11 là **imperial rivalry, alliance và tài nguyên (resource / 자원) bảo mật (security / 보안) làm biên giới thành hệ thống dễ leo thang**.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: empire như một kiến trúc (architecture / 아키텍처) của extraction** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **10 — Imperialism: năng lực công nghiệp và trật tự bất bình đẳng**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: empire như một kiến trúc (architecture / 아키텍처) của extraction** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: empire như một kiến trúc (architecture / 아키텍처) của extraction
 
@@ -69,4 +57,4 @@ Một narrative nhấn mạnh trạng thái (state / 상태) competition và b�
 
 Colonial budgets thường mạnh ở customs và export nhưng yếu ở universal services; border và administrative ngôn ngữ (language / 언어) tiếp tục định hình hậu thuộc địa. hạ tầng (infrastructure / 인프라) tạo năng lực (capability / 역량) nhưng cũng khóa geography vào mine–cổng (port / 포트) corridor. Counterfactual về “đầu tư phát triển” phải hỏi ai sở hữu, ai trả nợ và ai có quyền quyết định land use.
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: empire như một kiến trúc (architecture / 아키텍처) của extraction**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

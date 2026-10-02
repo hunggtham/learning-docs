@@ -1,6 +1,6 @@
 # 13 — World War II: chiến tranh tổng lực và trật tự mới
 
-> **Mạch đọc:** Đặt **13 — World War II: chiến tranh tổng lực và trật tự mới** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Chiến tranh tổng lực và các chiến tranh khác nhau** sang **môi trường vận hành (production / 운영 환경) và logistics**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **13 — World War II: chiến tranh tổng lực và trật tự mới**. Route đi từ revisionist aims → total mobilization/genocide → multi-theater war → Allied coordination → postwar institutions, để chiến tranh nối hủy diệt với trật tự mới.
 
 World War II nối châu Âu, châu Phi, châu Á–Thái Bình Dương qua các đế quốc, tài nguyên, chủng tộc, ideology và industrial logistics. Holocaust, các cuộc diệt chủng, bombing, occupation, famine và forced labor phải được đọc như chính sách và trải nghiệm con người, không làm mờ bằng biểu đồ quân sự.
 
@@ -32,24 +32,13 @@ failure: blockade/occupation → famine → mortality/resistance/black market
 
 Nuremberg, Tokyo, refugee regimes và UN human-rights ngôn ngữ (language / 언어) tạo institution mới nhưng justice vẫn chọn lọc. Women, colonial soldiers, forced laborers, Roma, disabled people, Indigenous communities và civilian survivors thường bị làm mờ trong national victory narrative.
 
-
-> **Chuyển mạch:** Từ **Chiến tranh tổng lực và các chiến tranh khác nhau**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Một chiến thắng quân sự cần môi trường vận hành (production / 운영 환경), alliance và legitimacy hỗ trợ ra sao?
-2. Vì sao cùng occupation tạo collaboration ở nơi này và resistance ở nơi khác?
-3. Trật tự 1945 kế thừa biên giới và bureaucracy nào từ wartime empire?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **13 — World War II: chiến tranh tổng lực và trật tự mới**, **Chiến tranh tổng lực và các chiến tranh khác nhau** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Operational records, survivor testimony, demographic reconstruction, satellite/industrial bằng chứng (evidence / 증거) và tribunal documents có độ gần sự kiện khác nhau; national archives thường im lặng về người bị chiếm đóng. Counterfactual: nếu không có total war, decolonization vẫn có động lực nhưng tốc độ, superpower legitimacy và human-rights institution có thể khác. Cầu nối sang 14–15 là **power vacuum, nuclear monopoly, refugee luồng (flow / 흐름) và anti-colonial claim**.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **13 — World War II: chiến tranh tổng lực và trật tự mới**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics
 
@@ -69,4 +58,4 @@ Một narrative đặt châu Âu làm trung tâm; narrative toàn cục (global 
 
 Wartime planning, borders, intelligence agencies, nuclear science và xã hội (social / 사회적) citizenship đi vào trật tự 1945. Displacement và partition tạo diaspora và xung đột (conflict / 충돌) bộ nhớ (memory / 메모리) dài hạn. Counterfactual “không có Holocaust” không được dùng để làm nhẹ ideology: racial trạng thái (state / 상태), occupation và forced labor vẫn có thể gây mass violence theo đường khác.
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

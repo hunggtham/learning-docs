@@ -1,6 +1,6 @@
 # 14 — Cold War: cạnh tranh hệ thống và chiến tranh ủy nhiệm
 
-> **Mạch đọc:** Đặt **14 — Cold War: cạnh tranh hệ thống và chiến tranh ủy nhiệm** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cạnh tranh trên ba tầng** sang **Nuclear rủi ro (risk / 위험) và development**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **14 — Cold War: cạnh tranh hệ thống và chiến tranh ủy nhiệm**. Route đi từ bipolar institutions → nuclear deterrence → proxy conflicts → development blocs → détente and systemic change, để cạnh tranh được đọc trên nhiều tầng.
 
 Cold War là một hệ thống cạnh tranh giữa hai siêu cường, nhưng không nên kể như một ván cờ chỉ có Washington và Moscow. China, non-aligned states, liberation movements, corporations và populations có agency riêng.
 
@@ -28,8 +28,6 @@ Một coup hoặc civil war có thể bắt đầu từ tầng trạng thái (st
 Nuclear weapons tạo “stability” giữa một số siêu cường bằng mutual vulnerability nhưng đẩy rủi ro (risk / 위험) sang proxy battlefield và civilian populations. Development aid xây đập, trường, factory, health hệ thống (system / 시스템) và military; nó mở sức chứa (capacity / 용량) nhưng cũng tạo nợ, displacement, surveillance và commodity dependence.
 
 ### Stock/luồng (flow / 흐름) và kết thúc
-Phần “Stock/luồng (flow / 흐름) và kết thúc” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 stock: arsenals, alliance credibility, industrial capacity, ideological trust
@@ -39,24 +37,13 @@ feedback: arms burden → fiscal stress → reform/repression → legitimacy cha
 
 1989–91 cần đọc cùng economic stagnation, reform choices, nationalist claims, civil society, China’s separate trajectory và giá dầu; không quy về một “victory” duy nhất.
 
-
-> **Chuyển mạch:** Từ **Cạnh tranh trên ba tầng**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Non-alignment là neutrality hay một chiến lược bargaining?
-2. Aid biến thành trạng thái (state / 상태) sức chứa (capacity / 용량) khi institution nào hấp thụ được nó?
-3. Một proxy war kết thúc khi battlefield, sponsor hay domestic coalition đổi?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **14 — Cold War: cạnh tranh hệ thống và chiến tranh ủy nhiệm**, **Cạnh tranh trên ba tầng** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Declassified cables, aid records, arms transfers, oral lịch sử (history / 이력), development indicators và cục bộ (local / 로컬) newspapers cần được ghép với nhau; superpower archive dễ biến actor địa phương thành quân cờ. Counterfactual: nếu non-aligned states kiểm soát nhiều hơn aid conditions, development mô hình (model / 모델) và institutional autonomy có thể khác mà không loại bỏ rivalry. Cầu nối sang 15–16 là **sovereignty, debt, telecom, trade quy tắc (rule / 규칙) và development mạng (network / 네트워크)**.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **14 — Cold War: cạnh tranh hệ thống và chiến tranh ủy nhiệm**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng
 
@@ -76,4 +63,4 @@ Aid, arms và intelligence tạo sponsor–máy khách (client / 클라이언트
 
 Telecom, aid bureaucracy, military–civilian relations và debt regime tiếp tục định hình globalization sau 1991. Developmental trạng thái (state / 상태) sức chứa (capacity / 용량) có thể tồn tại cùng authoritarian quy tắc (rule / 규칙); liberalization không tự giải phóng institutional lock-in. Counterfactual về non-alignment chỉ có giá trị khi giữ asymmetric finance, commodity prices và domestic lớp (class / 클래스) xung đột (conflict / 충돌).
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

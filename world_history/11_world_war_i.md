@@ -1,6 +1,6 @@
 # 11 — World War I: tổng động viên và đứt gãy đế quốc
 
-> **Mạch đọc:** Đặt **11 — World War I: tổng động viên và đứt gãy đế quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao chiến tranh kéo dài?** sang **Home front và empire**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **11 — World War I: tổng động viên và đứt gãy đế quốc**. Route đi từ alliance/security dilemma → mobilization → industrial attrition → imperial fracture → postwar settlement, để chiến tranh kéo dài được giải thích bằng năng lực huy động.
 
 Chiến tranh thế giới thứ nhất không chỉ do một vụ ám sát. Liên minh, militarization, nationalism, imperial rivalry và khủng hoảng Balkan tạo một hệ thống dễ leo thang; rail, telegraph, industry và credit biến khủng hoảng khu vực thành chiến tranh công nghiệp.
 
@@ -24,8 +24,6 @@ Mobilization plans giả định chiến thắng nhanh, nhưng trench, machine g
 Total war kéo phụ nữ vào factory, farm, nursing và administration; nó mở quyền thương lượng nhưng cũng tăng surveillance và rationing. Blockade và requisition biến civilian food thành strategic mục tiêu (target / 대상). Colonial troops và labor cho thấy “European war” thực ra là toàn cục (global / 전역) war, dù quyền chính trị và ký ức sau chiến tranh bị phân phối bất bình đẳng.
 
 ### Stock/luồng (flow / 흐름) và hậu quả
-Phần “Stock/luồng (flow / 흐름) và hậu quả” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 stock: shells, rail, ships, debt capacity, trained officers, food reserves
@@ -35,24 +33,13 @@ feedback: casualties → morale loss → coercion/propaganda → legitimacy cris
 
 New borders và mandates không giải quyết hết minority, land, debt và trade questions. Revolution ở Nga, collapse của Ottoman/Austro-Hungarian/German empires và anti-colonial mobilization cho thấy peace settlement tạo nhiều trạng thái (state / 상태) mới nhưng không đồng đều sovereignty.
 
-
-> **Chuyển mạch:** Từ **Vì sao chiến tranh kéo dài?**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. “Nationalism” biến alliance crisis thành total war qua institution nào?
-2. Ai trả debt và ai nhận quyền sau mobilization?
-3. Một treaty thất bại vì ý tưởng, sức chứa (capacity / 용량) hay phân phối (distribution / 분포)?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **11 — World War I: tổng động viên và đứt gãy đế quốc**, **Vì sao chiến tranh kéo dài?** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: WWI từ bảo mật (security / 보안) dilemma đến đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Mobilization tables, casualty rolls, ration dữ liệu (data / 데이터), soldier letters, refugee registers, newspapers và price series cho thấy war effort nhưng không tự đo trauma hay silence. Counterfactual: nếu chiến tranh kết thúc sớm, debt và empire vẫn gây khủng hoảng nhưng revolution, border và pandemic đường dẫn (path / 경로) có thể khác. Cầu nối sang 12 là **unresolved debt, minority, demobilization và mass politics**.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: WWI từ bảo mật (security / 보안) dilemma đến đường dẫn (path / 경로) dependence** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **11 — World War I: tổng động viên và đứt gãy đế quốc**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: WWI từ bảo mật (security / 보안) dilemma đến đường dẫn (path / 경로) dependence** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: WWI từ bảo mật (security / 보안) dilemma đến đường dẫn (path / 경로) dependence
 
@@ -72,4 +59,4 @@ Một trường phái nhấn mạnh diplomatic miscalculation; trường phái k
 
 Mass army, passport, welfare, veterans’ claims và emergency bureaucracy trở thành năng lực nhà nước mới. Border drawing và mandate tạo minority problems; debt và reparations khóa chính sách (policy / 정책) không gian (space / 공간). Counterfactual về peace conference phải giữ mobilized publics và empire: treaty tốt hơn giảm một số grievances nhưng không xóa decolonization và lớp (class / 클래스) xung đột (conflict / 충돌).
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: WWI từ bảo mật (security / 보안) dilemma đến đường dẫn (path / 경로) dependence**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

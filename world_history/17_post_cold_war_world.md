@@ -1,6 +1,6 @@
 # 17 — Post-Cold-War world: trật tự phân mảnh và cạnh tranh mạng
 
-> **Mạch đọc:** Đặt **17 — Post-Cold-War world: trật tự phân mảnh và cạnh tranh mạng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Unipolarity, multipolarity và mạng (network / 네트워크) power** sang **Các vòng lặp (loop / 루프) sau 1991**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **17 — Post-Cold-War world: trật tự phân mảnh và cạnh tranh mạng**. Route đi từ unipolar moment → regional powers → network/economic power → security fragmentation → contested order, để trật tự mới nối quyền lực cứng với mạng lưới.
 
 Thế giới sau 1991 không phải “kết thúc lịch sử”. Có một giai đoạn unipolar và mở rộng thương mại, nhưng sau đó là chiến tranh khu vực, khủng bố, khủng hoảng tài chính, cạnh tranh công nghệ, khí hậu và tái phân bố quyền lực.
 
@@ -19,8 +19,6 @@ Soviet collapse + US primacy
 Quyền lực hiện đại không chỉ là số quân hoặc GDP. Một actor có thể mạnh trong reserve currency, another trong manufacturing sức chứa (capacity / 용량), nền tảng (platform / 플랫폼)/dữ liệu (data / 데이터), năng lượng (energy / 에너지), demographic quy mô (scale / 규모) hoặc norm-setting. Institutional power nằm ở khả năng đặt tiêu chuẩn (standard / 표준), sanction, payment quy tắc (rule / 규칙), giao thức (protocol / 프로토콜) và truy cập (access / 접근) điều kiện (condition / 조건).
 
 ### Các vòng lặp (loop / 루프) sau 1991
-Phần “Các vòng lặp (loop / 루프) sau 1991” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 market integration → growth/urbanization → inequality/exposure
@@ -34,24 +32,13 @@ Digital platforms làm giảm chi phí phối hợp nhưng tập trung dữ li�
 
 “Democracy backsliding”, “globalization” hay “multipolarity” cần operational definition: chỉ số nào, thời gian (time / 시간) cửa sổ (window / 윈도우) nào, actor nào. Một cuộc khủng hoảng truyền thông không đại diện cho toàn xã hội; GDP không đo resilience, unpaid care, ecological mất mát (loss / 손실) hay coercion.
 
-
-> **Chuyển mạch:** Từ **Unipolarity, multipolarity và mạng (network / 네트워크) power**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Một actor tạo mạng (network / 네트워크) dependence bằng tiêu chuẩn (standard / 표준), capital, dữ liệu (data / 데이터) hay chokepoint nào?
-2. Khi sovereignty va vào climate/finance/digital luồng (flow / 흐름), institution nào phân xử?
-3. Sau một shock, điều gì có thể trở thành lock-in mới?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **17 — Post-Cold-War world: trật tự phân mảnh và cạnh tranh mạng**, **Unipolarity, multipolarity và mạng (network / 네트워크) power** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Trade/finance networks, xung đột (conflict / 충돌) dữ liệu (data / 데이터), nền tảng (platform / 플랫폼) transparency, climate observations, demographic projections và chính sách (policy / 정책) documents cần được đặt cạnh survey/ethnography; proxy measures như GDP hoặc social-media trend dễ phóng đại một phần xã hội. Counterfactual: nếu một nền tảng (platform / 플랫폼)/tuyến (route / 경로)/chips supplier không trở thành chokepoint, rủi ro (risk / 위험) có thể phân tán nhưng competition sẽ tìm nút (node / 노드) khác. Cầu nối mở sang vòng nghiên cứu mới là **climate, AI, năng lượng (energy / 에너지) chuyển tiếp (transition / 전이), demographic aging và institutional redesign**.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **17 — Post-Cold-War world: trật tự phân mảnh và cạnh tranh mạng**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power
 
@@ -71,4 +58,4 @@ Thị trường (market / 시장) tích hợp (integration / 통합) và interve
 
 Nền tảng (platform / 플랫폼) concentration, sanctions, debt, urban housing và aging tạo sunk costs khiến institutional redesign khó. Mặt khác, open standards, regional organizations, renewable grids và public-interest dữ liệu (data / 데이터) có thể tạo đường dẫn (path / 경로) mới. Counterfactual về một chokepoint cần xét substitution thời gian (time / 시간), stockpile, skills và political coalition; thay nút (node / 노드) không tự xóa phụ thuộc (dependency / 의존성).
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

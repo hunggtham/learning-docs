@@ -1,6 +1,6 @@
 # 19 — Glossary và tham chiếu (reference / 참조) map
 
-> **Mạch đọc:** Đặt **19 — Glossary và tham chiếu (reference / 참조) map** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Quy ước tên và niên đại** sang **Bản đồ nguồn nên tra cứu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **19 — Glossary và reference map**. Route đi từ naming/date conventions → key concepts → source types → cross-chapter pointers → verification limits, để glossary phục vụ định vị và kiểm chứng.
 
 | Thuật ngữ | Nghĩa làm việc trong thư viện (library / 라이브러리) |
 | --- | --- |
@@ -17,11 +17,10 @@
 
 Tên người, nơi chốn và triều đại giữ dạng quen dùng quốc tế hoặc tiếng Việt ổn định; lần đầu có thể thêm tên bản địa. Dùng `BCE/CE` hoặc `TCN/SCN` nhất quán trong từng chapter và tránh giả định lịch Gregorian là lịch duy nhất của quá khứ.
 
-
-> **Chuyển mạch:** Từ **Quy ước tên và niên đại**, ta sang **Bản đồ nguồn nên tra cứu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **19 — Glossary và tham chiếu (reference / 참조) map**, **Quy ước tên và niên đại** nêu điều cần giải thích; **Bản đồ nguồn nên tra cứu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bản đồ nguồn nên tra cứu
 
 Khi cần mở rộng chapter, ưu tiên: hiện vật và dữ liệu khảo cổ; văn bản sơ cấp có provenance; dataset dân số/khí hậu/giá cả; công trình sử học chuyên ngành; và nguồn bản địa/tiếng địa phương. Luôn ghi thời điểm, phạm vi, cách đo và tranh luận học thuật thay vì biến một con số thành “sự thật của cả thời đại”.
 
-> **Bàn giao:** Sau **Bản đồ nguồn nên tra cứu**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bản đồ nguồn nên tra cứu**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

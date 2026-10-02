@@ -1,7 +1,6 @@
 # 18 — Phương pháp, connections và mô hình tư duy (mental models / 사고 모델들)
 
-> **Mạch đọc:** Đặt **18 — Phương pháp, connections và mô hình tư duy (mental models / 사고 모델들)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bảy câu hỏi cho mọi chapter** sang **mô hình tư duy (mental models / 사고 모델들) hữu ích**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **18 — Phương pháp, connections và mental models**. Route đi từ chronology/causality → actors/institutions → evidence/scale → comparison/limits → reusable models, để phương pháp hỗ trợ đọc và chuyển thành lập luận có thể kiểm chứng.
 
 ## Bảy câu hỏi cho mọi chapter
 
@@ -13,12 +12,9 @@
 6. **bằng chứng (evidence / 증거):** claim dựa trên vật liệu khảo cổ, văn bản, định lượng, ký ức hay so sánh; độ lệch (bias / 편향) nằm đâu?
 7. **Counterfactual:** nếu một ràng buộc (constraint / 제약조건) thay đổi, cơ chế nào có thể khác; điều gì vẫn tiếp tục?
 
-
-> **Chuyển mạch:** Từ **Bảy câu hỏi cho mọi chapter**, ta sang **mô hình tư duy (mental models / 사고 모델들) hữu ích** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **18 — Phương pháp, connections và mô hình tư duy (mental models / 사고 모델들)**, **Mô hình tư duy (mental models / 사고 모델들) hữu ích** gom các mảnh từ **Bảy câu hỏi cho mọi chapter** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các mối nối trong repo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental models / 사고 모델들) hữu ích
-Phần “Mô hình tư duy (mental models / 사고 모델들) hữu ích” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **Năng lượng hữu dụng:** food/fuel → labor → môi trường vận hành (production / 운영 환경) → institution → warfare.
 - **Chi phí phối hợp:** writing, money, road, law, media và digital mạng (network / 네트워크) mở rộng nhóm có thể hành động cùng nhau.
@@ -27,12 +23,9 @@ Phần “Mô hình tư duy (mental models / 사고 모델들) hữu ích” n�
 - **Shock–adaptation–lock-in:** dịch bệnh, chiến tranh, climate và technology tạo shock; chính sách ứng phó có thể thành đường dẫn (path / 경로) phụ thuộc (dependency / 의존성).
 - **tích hợp (integration / 통합)–inequality pair:** mọi mạng mở rộng đều có điều kiện gia nhập, tầng trung gian và chi phí bị đẩy ra ngoài.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental models / 사고 모델들) hữu ích**, ta sang **Các mối nối trong repo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **18 — Phương pháp, connections và mô hình tư duy (mental models / 사고 모델들)**, **Các mối nối trong repo** gom các mảnh từ **Mô hình tư duy (mental models / 사고 모델들) hữu ích** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Các mối nối trong repo
-Phần “Các mối nối trong repo” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - vật lý (physical / 물리적) ràng buộc (constraint / 제약조건) và spatial quy mô (scale / 규모): [`world_geography/`](../world_geography/).
 - Historical đường dẫn (path / 경로) của bán đảo Triều Tiên: [`korean_history/`](../korean_history/).
@@ -41,4 +34,4 @@ Phần “Các mối nối trong repo” nối kiến thức trước với nộ
 
 Để chuyển mô hình tư duy (mental model / 사고 모델) thành kiểm tra thực tế, dùng [comparative case studies](20_comparative_case_studies.md), [transition matrix](21_transition_matrix.md) và [source workbench](22_source_workbench.md). Các sách nền tảng và tranh luận học thuật được gom trong [annotated bibliography](23_annotated_bibliography.md).
 
-> **Bàn giao:** Sau **Các mối nối trong repo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Các mối nối trong repo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
