@@ -1,6 +1,6 @@
 # 10. Cổng chính thức và workflow tự tra cứu
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **10. Cổng chính thức và workflow tự tra cứu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mục tiêu** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Pháp luật** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **10. Cổng chính thức và workflow tự tra cứu**. Route đi từ mục tiêu tra cứu → pháp luật, thuế, visa và lao động → cổng chính thức theo vấn đề → xác minh cơ quan, ngày hiệu lực và hồ sơ → lưu bằng chứng, để người đọc đi thẳng tới nguồn có thẩm quyền.
 
 ## 1. Mục tiêu
 

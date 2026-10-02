@@ -1,7 +1,6 @@
 # Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices
 
-> **Mạch đọc:** Đọc **tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Modeling trước tối ưu hóa (optimization / 최적화)** sang **2. hình học (geometry / 기하학) của feasible region**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**. Route đi từ LP modeling → feasible region và geometry → simplex/pivot → duality, shadow prices và certificates → sensitivity, để bài toán tài nguyên nối với diễn giải kinh tế.
 
 **Quy hoạch tuyến tính (linear programming, LP / 선형계획법)** giải bài toán tối ưu khi mục tiêu (objective / 목표) và các ràng buộc (constraints / 제약조건들) đều tuyến tính.
 
@@ -69,6 +68,8 @@ x_1,x_2\ge0.
 
 Nếu đơn vị (unit / 단위) chi phí (cost / 비용) thay đổi theo volume, sức chứa (capacity / 용량) có startup threshold hoặc quyết định (decision / 결정) phải integer, pure LP chỉ là approximation/relaxation.
 
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **2. hình học (geometry / 기하학) của feasible region** tiếp nhận điểm tựa từ **1. Modeling trước tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Vì sao optimum thường nằm ở extreme điểm (point / 지점)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. hình học (geometry / 기하학) của feasible region
 
 Mỗi inequality tuyến tính:
@@ -98,6 +99,8 @@ cũng feasible.
 
 Không có “hole” hoặc disconnected feasible islands như trong nhiều nonconvex problems.
 
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **3. Vì sao optimum thường nằm ở extreme điểm (point / 지점)?** tiếp nhận điểm tựa từ **2. hình học (geometry / 기하학) của feasible region** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Feasible, infeasible và unbounded là ba trạng thái khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Vì sao optimum thường nằm ở extreme điểm (point / 지점)?
 
 Mục tiêu (objective / 목표) tuyến tính:
@@ -115,6 +118,8 @@ Nếu finite optimum tồn tại, ít nhất một optimum nằm ở một **ext
 Proof intuition: nếu optimum nằm strictly bên trong line segment giữa hai feasible points khác nhau, linearity làm mục tiêu (objective / 목표) tại midpoint bằng weighted average objectives. Khi đó ít nhất một endpoint không tệ hơn.
 
 Điều này không nói optimum luôn unique. Một whole edge/face có thể optimal.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **4. Feasible, infeasible và unbounded là ba trạng thái khác nhau** tiếp nhận điểm tựa từ **3. Vì sao optimum thường nằm ở extreme điểm (point / 지점)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Slack variables và unused tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Feasible, infeasible và unbounded là ba trạng thái khác nhau
 
@@ -138,6 +143,8 @@ Trong môi trường vận hành (production / 운영 환경) modeling, phân bi
 infeasible → business constraints conflict
 unbounded → model thiếu limiting constraint hoặc objective có structural issue
 ```
+
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **4. Feasible, infeasible và unbounded là ba trạng thái khác nhau** nêu điều cần giải thích; **5. Slack variables và unused tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Basic solution: algebra phía sau vertex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Slack variables và unused tài nguyên (resource / 자원)
 
@@ -167,6 +174,8 @@ Nếu `s>0`, tài nguyên (resource / 자원) còn dư.
 
 Khái niệm này nối trực tiếp sang complementary slackness và KKT.
 
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **5. Slack variables và unused tài nguyên (resource / 자원)** nêu điều cần giải thích; **6. Basic solution: algebra phía sau vertex** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Simplex phương thức (method / 메서드): cục bộ (local / 로컬) moves nhưng toàn cục (global / 전역) guarantee trong LP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Basic solution: algebra phía sau vertex
 
 Trong tiêu chuẩn (standard / 표준) form:
@@ -189,6 +198,8 @@ algebra → basis of columns
 geometry → vertex of polyhedron
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **7. Simplex phương thức (method / 메서드): cục bộ (local / 로컬) moves nhưng toàn cục (global / 전역) guarantee trong LP** tiếp nhận điểm tựa từ **6. Basic solution: algebra phía sau vertex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Pivot không chỉ là row thao tác (operation / 연산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Simplex phương thức (method / 메서드): cục bộ (local / 로컬) moves nhưng toàn cục (global / 전역) guarantee trong LP
 
 Simplex bắt đầu từ basic feasible solution và thay basis để đi tới adjacent vertex có mục tiêu (objective / 목표) tốt hơn.
@@ -207,6 +218,8 @@ current basis
 
 Đây là contrast với nonconvex tối ưu hóa (optimization / 최적화), nơi cục bộ (local / 로컬) stationarity không đủ.
 
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **8. Pivot không chỉ là row thao tác (operation / 연산)** tiếp nhận điểm tựa từ **7. Simplex phương thức (method / 메서드): cục bộ (local / 로컬) moves nhưng toàn cục (global / 전역) guarantee trong LP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Degeneracy và cycling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Pivot không chỉ là row thao tác (operation / 연산)
 
 Pivot trong simplex thay đổi biểu diễn (representation / 표현) của solution theo một basis mới.
@@ -221,6 +234,8 @@ Môi trường vận hành (production / 운영 환경) solvers không rebuild m
 
 Vì vậy numerical tuyến tính (linear / 선형) algebra là engine bên dưới simplex.
 
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **9. Degeneracy và cycling** tiếp nhận điểm tựa từ **8. Pivot không chỉ là row thao tác (operation / 연산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Dual bài toán (problem / 문제): các ràng buộc (constraints / 제약조건들) trở thành prices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Degeneracy và cycling
 
 Một vertex có thể tương ứng nhiều different bases. Khi một basic variable bằng zero, solution **degenerate / 퇴화**.
@@ -230,6 +245,8 @@ Simplex pivot có thể đổi basis mà mục tiêu (objective / 목표) không
 Trong pathological cases, naive pivot rules có thể cycle. Rules như Bland's quy tắc (rule / 규칙) tránh cycling theoretically.
 
 Lesson: “đi qua vertices” là mô hình tư duy (mental model / 사고 모델) tốt, nhưng hiện thực (implementation / 구현) cần handle algebraic degeneracy.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **10. Dual bài toán (problem / 문제): các ràng buộc (constraints / 제약조건들) trở thành prices** tiếp nhận điểm tựa từ **9. Degeneracy và cycling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Weak duality: certificate bằng một inequality chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Dual bài toán (problem / 문제): các ràng buộc (constraints / 제약조건들) trở thành prices
 
@@ -262,6 +279,8 @@ A^Ty\ge c,
 `y_i` có thể interpret như **shadow price (giá bóng / 잠재가격)** của tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건) `i`.
 
 Dual không chỉ là “bài toán phụ”. Nó cung cấp một cách định giá resources đủ cao để chứng minh rằng không feasible môi trường vận hành (production / 운영 환경) plan nào tạo profit vượt upper bound `b^Ty`.
+
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **10. Dual bài toán (problem / 문제): các ràng buộc (constraints / 제약조건들) trở thành prices** xác định đầu vào; **11. Weak duality: certificate bằng một inequality chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Strong duality: optimal giá trị (value / 값) có hai cách nhìn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Weak duality: certificate bằng một inequality chuỗi (chain / 사슬)
 
@@ -309,6 +328,8 @@ c^Tx\le b^Ty.
 
 Mọi dual feasible solution là upper bound cho primal maximization.
 
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **11. Weak duality: certificate bằng một inequality chuỗi (chain / 사슬)** xác định đầu vào; **12. Strong duality: optimal giá trị (value / 값) có hai cách nhìn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Complementary slackness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Strong duality: optimal giá trị (value / 값) có hai cách nhìn
 
 Dưới tiêu chuẩn (standard / 표준) LP conditions, nếu finite optimum tồn tại thì:
@@ -330,6 +351,8 @@ best valid resource-price certificate
 Tối ưu hóa (optimization / 최적화) và proof of optimality gặp nhau.
 
 Nếu tìm primal feasible `x` và dual feasible `y` có same mục tiêu (objective / 목표), ta có certificate rằng cả hai optimal mà không cần enumerate alternatives.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **13. Complementary slackness** tiếp nhận điểm tựa từ **12. Strong duality: optimal giá trị (value / 값) có hai cách nhìn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Worked example: môi trường vận hành (production / 운영 환경) và shadow prices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Complementary slackness
 
@@ -355,6 +378,8 @@ shadow price positive → resource fully used
 Tương tự, positive primal variable liên hệ với binding dual ràng buộc (constraint / 제약조건).
 
 Đây là LP-specialized phiên bản (version / 버전) của KKT complementary slackness.
+
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **13. Complementary slackness** cho ta quy tắc; **14. Worked example: môi trường vận hành (production / 운영 환경) và shadow prices** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **15. Sensitivity phân tích (analysis / 분석) và allowable phạm vi (range / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Worked example: môi trường vận hành (production / 운영 환경) và shadow prices
 
@@ -408,6 +433,8 @@ Nếu tài nguyên (resource / 자원) của first ràng buộc (constraint / �
 
 Đây là sensitivity interpretation, không phải toàn cục (global / 전역) law cho mọi mức perturbation.
 
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **14. Worked example: môi trường vận hành (production / 운영 환경) và shadow prices** cho ta quy tắc; **15. Sensitivity phân tích (analysis / 분석) và allowable phạm vi (range / 범위)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Duality và KKT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Sensitivity phân tích (analysis / 분석) và allowable phạm vi (range / 범위)
 
 Shadow price thường chỉ valid trong một phạm vi (range / 범위) nơi optimal basis không đổi.
@@ -421,6 +448,8 @@ shadow price = 5
 ```
 
 không nên đọc là “mỗi tài nguyên (resource / 자원) đơn vị (unit / 단위) mãi mãi worth 5”. Nó là cục bộ (local / 로컬) sensitivity kết quả (result / 결과) theo hiện tại (current / 현재) LP regime.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **16. Duality và KKT** tiếp nhận điểm tựa từ **15. Sensitivity phân tích (analysis / 분석) và allowable phạm vi (range / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Interior-point methods: không cần đi theo edges** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Duality và KKT
 
@@ -439,6 +468,8 @@ Trong LP, these conditions align rất cleanly với primal/dual optimality.
 
 Hiểu LP trước giúp KKT bớt abstract; hiểu KKT sau giúp thấy LP chỉ là một member đặc biệt của broader convex duality.
 
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **17. Interior-point methods: không cần đi theo edges** tiếp nhận điểm tựa từ **16. Duality và KKT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Integer programming: discreteness phá convex simplicity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Interior-point methods: không cần đi theo edges
 
 Simplex đi vertex-to-vertex. **Interior-point methods / 내부점법** đi xuyên interior của feasible region bằng barrier ideas.
@@ -456,6 +487,8 @@ numerical conditioning
 ```
 
 Không có quy tắc (rule / 규칙) “simplex luôn tốt hơn” hoặc “interior-point luôn mới hơn nên tốt hơn”.
+
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **18. Integer programming: discreteness phá convex simplicity** tiếp nhận điểm tựa từ **17. Interior-point methods: không cần đi theo edges** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Integrality gap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Integer programming: discreteness phá convex simplicity
 
@@ -486,6 +519,8 @@ integer feasible set
 
 Branch-and-bound dùng bound này để prune tìm kiếm (search / 검색) cây (tree / 트리).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **19. Integrality gap** tiếp nhận điểm tựa từ **18. Integer programming: discreteness phá convex simplicity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Total unimodularity: khi LP tự cho integer solution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Integrality gap
 
 Difference giữa integer optimum và LP relaxation optimum gọi broadly là **integrality gap**.
@@ -494,6 +529,8 @@ Nếu gap nhỏ, LP relaxation rất informative.
 Nếu gap lớn, rounding naive có thể tệ.
 
 Đây là reason relaxation chất lượng (quality / 품질) quan trọng trong combinatorial tối ưu hóa (optimization / 최적화).
+
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **20. Total unimodularity: khi LP tự cho integer solution** tiếp nhận điểm tựa từ **19. Integrality gap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. mạng (network / 네트워크) luồng (flow / 흐름) như structured LP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Total unimodularity: khi LP tự cho integer solution
 
@@ -504,6 +541,8 @@ Với integer right-hand side phù hợp, LP vertices tự integer.
 Điều này giải thích vì sao một số đồ thị (graph / 그래프) problems có polynomial LP formulations dù nhìn giống discrete tối ưu hóa (optimization / 최적화).
 
 Cấu trúc (structure / 구조) ma trận (matrix / 행렬) có thể biến “integer-looking bài toán (problem / 문제)” thành pure LP tractable bài toán (problem / 문제).
+
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **20. Total unimodularity: khi LP tự cho integer solution** xác định đầu vào; **21. mạng (network / 네트워크) luồng (flow / 흐름) như structured LP** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. LP trong Finance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. mạng (network / 네트워크) luồng (flow / 흐름) như structured LP
 
@@ -526,6 +565,8 @@ Mục tiêu (objective / 목표) maximize total source-to-sink luồng (flow / �
 Đồ thị (graph / 그래프) cấu trúc (structure / 구조) cho specialized algorithms nhanh hơn generic LP.
 
 Max-flow/min-cut theorem cũng là một duality statement: max primal luồng (flow / 흐름) giá trị (value / 값) bằng min cut sức chứa (capacity / 용량).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **21. mạng (network / 네트워크) luồng (flow / 흐름) như structured LP** xác định đầu vào; **22. LP trong Finance** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. LP trong Software/Operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. LP trong Finance
 
@@ -550,6 +591,8 @@ là quadratic, nên bài toán (problem / 문제) trở thành quadratic program
 
 Mô hình (model / 모델) lớp (class / 클래스) phải follow actual cấu trúc (structure / 구조), không ép mọi tối ưu hóa (optimization / 최적화) thành LP.
 
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **23. LP trong Software/Operations** tiếp nhận điểm tựa từ **22. LP trong Finance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Numerical considerations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. LP trong Software/Operations
 
 LP/MILP xuất hiện trong:
@@ -568,6 +611,8 @@ Một hệ thống (system / 시스템) thiết kế (design / 설계) lesson qu
 
 > Solver chỉ optimize mô hình (model / 모델) đã viết; mô hình (model / 모델) sai thì optimum có thể rất chính xác nhưng operationally vô nghĩa.
 
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **24. Numerical considerations** tiếp nhận điểm tựa từ **23. LP trong Software/Operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. dùng chung (common / 공통) thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Numerical considerations
 
 LP lý thuyết (theory / 이론) dùng chính xác (exact / 정확한) real arithmetic, nhưng solver dùng floating điểm (point / 지점).
@@ -585,6 +630,8 @@ Ràng buộc (constraint / 제약조건):
 có severe quy mô (scale / 규모) imbalance.
 
 Tối ưu hóa (optimization / 최적화) status như “feasible within tolerance” không phải chính xác (exact / 정확한) symbolic proof trong floating-point hiện thực (implementation / 구현).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **25. dùng chung (common / 공통) thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **24. Numerical considerations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
@@ -608,6 +655,8 @@ Dual sensitivity thường cục bộ (local / 로컬) theo hiện tại (curren
 
 Deterministic LP với uncertain demand có thể produce brittle plan. Robust/stochastic tối ưu hóa (optimization / 최적화) thêm bất định (uncertainty / 불확실성) explicitly.
 
+> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tiếp nhận điểm tựa từ **25. dùng chung (common / 공통) thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 LP nằm tại giao điểm:
@@ -622,12 +671,16 @@ combinatorics → integer programming
 numerical analysis → sparse factorization / conditioning
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > LP là hình học (geometry / 기하학) của decisions dưới tuyến tính (linear / 선형) các ràng buộc (constraints / 제약조건들). Simplex nhìn feasible polyhedron qua các bases/vertices. Duality biến các ràng buộc (constraints / 제약조건들) thành prices và tạo certificate của optimality. Khi thêm integrality, hình học (geometry / 기하학) continuous không còn đủ và tìm kiếm (search / 검색)/combinatorics quay trở lại.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) programming, duality và simplex: hình học (geometry / 기하학), certificates và tài nguyên (resource / 자원) prices**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
 “Programming” trong tuyến tính (linear / 선형) programming nghĩa planning, không phải coding. LP optimum không nhất thiết unique. Vertex theorem không có nghĩa phải brute-force mọi corners. Simplex worst-case exponential không đồng nghĩa unusable trong practice. LP relaxation không phải integer solution. Dual variable là sensitivity quantity dưới các giả định (assumptions / 가정들), không phải universal economic truth.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 optimization](./00_optimization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

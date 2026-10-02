@@ -1,7 +1,6 @@
 # 03 — Phân tích doanh nghiệp (Company Analysis)
 
-> **Mạch đọc:** Đọc **03 — Phân tích doanh nghiệp (Company Analysis)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **03 — Phân tích doanh nghiệp (Company Analysis)**. Route đi từ financial statements → business quality/value chain → industry analysis → valuation, earnings quality và integrated thesis lab → governance/capital allocation, để người đọc chuyển từ báo cáo sang hệ thống kinh tế của doanh nghiệp.
 
 Lĩnh vực này chuyển từ việc “biết đọc báo cáo” sang khả năng phân tích một doanh nghiệp như một hệ thống kinh tế. Bạn sẽ đi từ báo cáo tài chính tới chuỗi giá trị, kinh tế đơn vị, lợi thế cạnh tranh bền vững, cấu trúc ngành, định giá, chất lượng lợi nhuận, mô hình tài chính, phân tích điều tra kế toán, khung phân tích theo ngành và cuối cùng là quản trị cùng phân bổ vốn.
 
@@ -21,15 +20,13 @@ Lĩnh vực này chuyển từ việc “biết đọc báo cáo” sang khả n
 
 [07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md](./07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md) là lớp học sâu nối toàn bộ lĩnh vực (domain / 도메인) thành một quy trình: cây động lực doanh thu, cầu nối biên lợi nhuận, vốn lưu động, lịch nợ, mô hình ba báo cáo, ROIC tăng thêm, dư địa tái đầu tư, bằng chứng moat, reverse DCF, kịch bản theo driver và quản trị luận điểm đầu tư.
 
-
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **03 — Phân tích doanh nghiệp (Company Analysis)**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng đọc ba báo cáo tài chính liên kết với nhau, phân biệt kết quả kế toán và kết quả kinh tế, kiểm tra lợi nhuận có chuyển thành tiền mặt bền vững hay chỉ được hỗ trợ bởi khoản dồn tích, vốn lưu động hoặc thay đổi ước tính; lập bản đồ chuỗi giá trị và bể lợi nhuận; xác định lợi thế cạnh tranh bằng bằng chứng; chọn đúng KPI theo mô hình kinh doanh; phân biệt tăng trưởng cấu trúc với tăng trưởng chu kỳ; xây mô hình ba báo cáo theo động lực cho kịch bản cơ sở/tích cực/tiêu cực; đọc định giá dưới góc kỳ vọng ngầm và đánh giá liệu ban lãnh đạo có biến chất lượng doanh nghiệp thành giá trị trên mỗi cổ phiếu hay không.
 
-
-> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tích hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **03 — Phân tích doanh nghiệp (Company Analysis)**, **Bài tập tích hợp** tiếp nhận điểm tựa từ **Sau lĩnh vực này bạn cần làm được gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bài tập tích hợp
 
@@ -39,4 +36,4 @@ Sau đó hoàn thành **mô-đun (module / 모듈) 3 — Company phân tích (an
 
 Sau đó chuyển sang [04 — Kinh tế học và vĩ mô](../04_economics/README.md).
 
-> **Bàn giao:** Sau **Bài tập tích hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bài tập tích hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

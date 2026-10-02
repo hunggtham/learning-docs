@@ -1,6 +1,6 @@
 # Dùng chung (shared / 공유) học tập (learning / 학습) Progress lược đồ (schema / 스키마)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dùng chung (shared / 공유) học tập (learning / 학습) Progress lược đồ (schema / 스키마)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Định danh (identity / 식별자)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Columns and forward tính tương thích (compatibility / 호환성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dùng chung (shared / 공유) học tập (learning / 학습) Progress lược đồ (schema / 스키마)**. Route đi từ identity và ownership → common columns → state/metadata và forward compatibility → app integrations, để progress schema dùng chung mà không kéo logic riêng của từng ứng dụng vào lõi.
 
 `learning_progress` is the dùng chung (shared / 공유) progress bảng (table / 테이블) for `study-library`, `languages-docs`, and future học tập (learning / 학습) applications. It is intentionally application-neutral: app-specific dữ liệu (data / 데이터) belongs in `state`, while the dùng chung (common / 공통) columns remain stable across products.
 

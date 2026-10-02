@@ -321,7 +321,7 @@ supporting:
 
 # Repository catalog
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Repository catalog**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cây domain** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Metadata contract** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Repository catalog**. Route đi từ cây domain → canonical owners, metadata và prerequisites → related links, source-of-truth và review policy → audit coverage, để catalog điều phối cấu trúc repository thay vì chỉ liệt kê file.
 
 `main` là source of truth hiện tại. Các branch feature chỉ là lịch sử phát triển; không dùng tên branch để mô tả trạng thái canonical của library.
 
