@@ -1,7 +1,6 @@
 # Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính
 
-> **Mạch đọc:** Đọc **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vấn đề với phép biến đổi Galilei** sang **Hai tiên đề**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thuyết tương đối hẹp: không-thời gian, Lorentz và động lực học tương đối tính**. Route đi từ invariance of c → Lorentz transformation → time/length relativity → four-vectors → relativistic energy-momentum, để hình học dẫn tới động lực học.
 
 Thuyết tương đối hẹp (special relativity / 특수상대성이론) không phải một bộ công thức bổ sung vào cơ học Newton. Nó thay đổi cấu trúc nền của không gian và thời gian để các định luật vật lý, đặc biệt điện từ học, có cùng dạng trong mọi hệ quy chiếu quán tính.
 
@@ -33,6 +32,8 @@ c=\frac1{\sqrt{\mu_0\varepsilon_0}}.
 
 Nếu áp dụng phép cộng vận tốc Galilei cho ánh sáng, các quan sát viên chuyển động khác nhau phải đo tốc độ ánh sáng khác nhau. Thực nghiệm không ủng hộ cấu trúc đó.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Hai tiên đề** tiếp nhận điểm tựa từ **Vấn đề với phép biến đổi Galilei** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng hồ ánh sáng và giãn thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hai tiên đề
 
 Thuyết tương đối hẹp được xây trên hai nguyên lý:
@@ -41,6 +42,8 @@ Thuyết tương đối hẹp được xây trên hai nguyên lý:
 2. Tốc độ ánh sáng trong chân không có cùng giá trị `c` đối với mọi quan sát viên quán tính.
 
 Hai tiên đề này buộc ta từ bỏ thời gian tuyệt đối chứ không phải “sửa” tốc độ ánh sáng.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Đồng hồ ánh sáng và giãn thời gian** tiếp nhận điểm tựa từ **Hai tiên đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao giãn thời gian không phải lỗi đồng hồ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồng hồ ánh sáng và giãn thời gian
 
@@ -95,11 +98,15 @@ với
 
 `\Delta\tau` gọi là **thời gian riêng (proper time)**: thời gian đo bởi một đồng hồ đi cùng hai sự kiện.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Vì sao giãn thời gian không phải lỗi đồng hồ?** tiếp nhận điểm tựa từ **Đồng hồ ánh sáng và giãn thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự đồng thời là tương đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao giãn thời gian không phải lỗi đồng hồ?
 
 Mọi quá trình vật lý trên hệ chuyển động đều tuân cùng cấu trúc không-thời gian: dao động nguyên tử, phân rã hạt, phản ứng hóa học hay quá trình sinh học.
 
 Muon sinh ra trong khí quyển là ví dụ kinh điển. Trong hệ Trái Đất, tuổi thọ muon bị giãn nên nhiều muon sống đủ lâu để tới mặt đất. Trong hệ muon, thời gian riêng không đổi nhưng độ dày khí quyển bị co. Hai cách mô tả cho cùng dự đoán số lượng muon tới detector.
+
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Sự đồng thời là tương đối** tiếp nhận điểm tựa từ **Vì sao giãn thời gian không phải lỗi đồng hồ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi Lorentz** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sự đồng thời là tương đối
 
@@ -125,6 +132,8 @@ biến đổi Lorentz cho
 Nếu `\Delta x\neq0`, nói chung `\Delta t'\neq0`.
 
 Sự không đồng thời này không phải do tín hiệu tới mắt chậm khác nhau. Ngay cả sau khi hiệu chỉnh thời gian truyền ánh sáng, hai hệ quy chiếu vẫn gán thời gian tọa độ khác nhau cho các sự kiện xa nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Biến đổi Lorentz** tiếp nhận điểm tựa từ **Sự đồng thời là tương đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng không-thời gian bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biến đổi Lorentz
 
@@ -163,6 +172,8 @@ thì
 
 và hạng `vx/c^2` rất nhỏ, nên biến đổi Lorentz tiến về biến đổi Galilei.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Khoảng không-thời gian bất biến** tiếp nhận điểm tựa từ **Biến đổi Lorentz** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Timelike, lightlike và spacelike** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khoảng không-thời gian bất biến
 
 Giữa hai sự kiện,
@@ -188,6 +199,8 @@ x^2+y^2
 không đổi.
 
 Không-thời gian Minkowski có chỉ số (metric / 지표) khác hình học Euclid, nhưng ý tưởng bất biến giúp tổ chức toàn bộ lý thuyết.
+
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Timelike, lightlike và spacelike** tiếp nhận điểm tựa từ **Khoảng không-thời gian bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nón ánh sáng và nhân quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Timelike, lightlike và spacelike
 
@@ -217,11 +230,15 @@ chúng cách nhau kiểu không gian (spacelike); không tín hiệu nhân quả
 
 Phân loại này là bất biến giữa các hệ quy chiếu.
 
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Nón ánh sáng và nhân quả** tiếp nhận điểm tựa từ **Timelike, lightlike và spacelike** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian riêng từ chỉ số (metric / 지표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nón ánh sáng và nhân quả
 
 Tập các đường ánh sáng đi qua một sự kiện tạo nón ánh sáng (light cone). Phần bên trong nón tương lai chứa các sự kiện mà sự kiện hiện tại có thể ảnh hưởng nhân quả. Phần bên ngoài là spacelike và không thể nhận tín hiệu dưới hoặc bằng `c` từ sự kiện gốc.
 
 Đây là lý do giới hạn tốc độ không chỉ là “giới hạn kỹ thuật của động cơ”; nó là cấu trúc nhân quả của không-thời gian.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Thời gian riêng từ chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **Nón ánh sáng và nhân quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Co độ dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thời gian riêng từ chỉ số (metric / 지표)
 
@@ -252,6 +269,8 @@ Tích phân dọc worldline cho
 
 Công thức này rất quan trọng vì nó xử lý cả vận tốc thay đổi theo thời gian. Nó cũng là cầu nối tự nhiên sang cơ học relativistic bằng nguyên lý tác dụng dừng.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Co độ dài** tiếp nhận điểm tựa từ **Thời gian riêng từ chỉ số (metric / 지표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghịch lý song sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Co độ dài
 
 Giả sử một thanh có chiều dài riêng `L_0` trong hệ nghỉ của nó. Người quan sát thấy thanh chuyển động phải đo hai đầu **cùng lúc trong hệ của mình**.
@@ -263,6 +282,8 @@ L=\frac{L_0}{\gamma}.
 ```
 
 Điểm cốt lõi nằm ở điều kiện “cùng lúc”. Co độ dài không độc lập với tính tương đối của sự đồng thời.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Nghịch lý song sinh** tiếp nhận điểm tựa từ **Co độ dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng vận tốc tương đối tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nghịch lý song sinh
 
@@ -277,6 +298,8 @@ Một người ở Trái Đất, người kia đi xa rồi quay lại. Khi gặp
 Người ở Trái Đất và người du hành không có lịch sử chuyển động đối xứng; người du hành đổi hệ quán tính khi quay đầu.
 
 Cách nhìn bằng thời gian riêng tổng quát hơn việc chỉ nói “ai thấy đồng hồ kia chậm”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Cộng vận tốc tương đối tính** tiếp nhận điểm tựa từ **Nghịch lý song sinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rapidity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cộng vận tốc tương đối tính
 
@@ -296,6 +319,8 @@ u'=c.
 
 Khi `u,v\ll c`, mẫu số gần 1 và công thức trở về Galilei.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Rapidity** tiếp nhận điểm tựa từ **Cộng vận tốc tương đối tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bốn-vectơ vận tốc và động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rapidity
 
 Ta có thể đặt
@@ -313,6 +338,8 @@ Ta có thể đặt
 Điều này cho thấy biến đổi Lorentz có cấu trúc giống phép quay hyperbolic trong không-thời gian.
 
 Rapidity đặc biệt hữu ích trong vật lý hạt vì nó tổ chức động học collider gọn hơn vận tốc thông thường.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Bốn-vectơ vận tốc và động lượng** tiếp nhận điểm tựa từ **Rapidity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng không cần “tăng theo vận tốc”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bốn-vectơ vận tốc và động lượng
 
@@ -362,6 +389,8 @@ Suy ra
 E^2=p^2c^2+m^2c^4.
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Khối lượng không cần “tăng theo vận tốc”** tiếp nhận điểm tựa từ **Bốn-vectơ vận tốc và động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Photon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khối lượng không cần “tăng theo vận tốc”
 
 Trong cách trình bày hiện đại, khối lượng bất biến `m` giữ nguyên. Năng lượng và động lượng tăng theo `\gamma`.
@@ -379,6 +408,8 @@ mc^2+
 Hạng đầu là năng lượng nghỉ; hạng thứ hai chính là động năng Newton.
 
 Như vậy cơ học cổ điển xuất hiện như khai triển bậc thấp của động lực học relativistic.
+
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Photon** tiếp nhận điểm tựa từ **Khối lượng không cần “tăng theo vận tốc”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất biến khối lượng của một hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Photon
 
@@ -408,6 +439,8 @@ p=\frac h\lambda.
 
 Photon có động lượng dù không có khối lượng nghỉ.
 
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Bất biến khối lượng của một hệ** tiếp nhận điểm tựa từ **Photon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Doppler tương đối tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bất biến khối lượng của một hệ
 
 Với một hệ nhiều hạt, tổng bốn-động lượng
@@ -432,6 +465,8 @@ E_{CM}=Mc^2.
 
 Đây là lý do collider được phân tích bằng năng lượng tâm khối lượng thay vì chỉ nhìn năng lượng từng chùm trong phòng thí nghiệm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Hiệu ứng Doppler tương đối tính** tiếp nhận điểm tựa từ **Bất biến khối lượng của một hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **E=mc^2 nên hiểu thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu ứng Doppler tương đối tính
 
 Với nguồn và người quan sát chuyển động dọc cùng phương, tần số biến đổi theo
@@ -447,6 +482,8 @@ cho trường hợp nguồn rời xa theo quy ước thích hợp.
 
 Doppler tương đối tính kết hợp cả hiệu ứng chuyển động lẫn giãn thời gian, khác công thức Doppler âm thanh vốn dựa trên môi trường truyền sóng.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **E=mc^2 nên hiểu thế nào?** tiếp nhận điểm tựa từ **Hiệu ứng Doppler tương đối tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `E=mc^2` nên hiểu thế nào?
 
 `E=mc^2` là năng lượng nghỉ của một hệ có khối lượng bất biến `m`.
@@ -454,6 +491,8 @@ Doppler tương đối tính kết hợp cả hiệu ứng chuyển động lẫ
 Khối lượng của một vật hợp thành bao gồm năng lượng nội tại của toàn hệ: động năng tương đối giữa các thành phần, năng lượng trường và năng lượng liên kết. Vì vậy khối lượng của hệ không luôn bằng tổng khối lượng nghỉ của các thành phần tách rời.
 
 Trong phản ứng hạt nhân, chênh lệch khối lượng nghỉ giữa trạng thái đầu và cuối xuất hiện dưới dạng năng lượng động học hoặc bức xạ.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Những ngộ nhận thường gặp (Common Misconceptions)** tiếp nhận điểm tựa từ **E=mc^2 nên hiểu thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -473,6 +512,8 @@ Không. So sánh đồng hồ ở xa phụ thuộc tính tương đối của s�
 
 Không. Khi `v\rightarrow c`, `\gamma\rightarrow\infty`, nên năng lượng cần thiết tăng không giới hạn trong lý thuyết.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những ngộ nhận thường gặp (Common Misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Thuyết tương đối hẹp thay “không gian + thời gian tuyệt đối” bằng một không-thời gian bốn chiều có cấu trúc Minkowski. Các quan sát viên chia không-thời gian thành phần không gian và phần thời gian khác nhau, nhưng đồng ý về các bất biến và quan hệ nhân quả.
@@ -483,10 +524,12 @@ Một cách học hiệu quả là chuyển từ câu hỏi “đồng hồ nào
 2. Worldline của từng vật là gì?
 3. Đại lượng bất biến nào có thể tính mà không phụ thuộc hệ tọa độ?
 
+> **Chuyển mạch:** Trong **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Hệ quy chiếu và vectơ](../00_foundations/02_space_time_vectors_frames.md), [Phương trình Maxwell](../05_electromagnetism/04_maxwell_em_waves.md).
 
 **Liên hệ tiếp:** [Thuyết tương đối rộng](01_general_relativity.md), [Vật lý hạt](../09_atomic_nuclear_particle/03_particle_standard_model.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 general relativity](./01_general_relativity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

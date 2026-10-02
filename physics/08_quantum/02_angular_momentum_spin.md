@@ -1,7 +1,6 @@
 # Mômen động lượng lượng tử, spin và phép cộng mômen động lượng
 
-> **Mạch đọc:** Đọc **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ mômen động lượng cổ điển đến toán tử lượng tử** sang **Trị riêng của L^2 và Lz**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**. Route đi từ rotation generators → commutators/eigenvalues → orbital angular momentum → spin-1/2 → angular-momentum addition, để đối xứng quay nối toán tử với quan sát.
 
 Mômen động lượng trong cơ học lượng tử không chỉ là phiên bản lượng tử của đại lượng cổ điển `\mathbf L=\mathbf r\times\mathbf p`. Nó là một ví dụ điển hình cho cách **đối xứng quay (rotational symmetry)** được mã hóa thành cấu trúc toán tử, trị riêng và quy tắc ghép trạng thái.
 
@@ -40,6 +39,8 @@ Tuy nhiên,
 ```
 
 nên ta có thể chọn trạng thái riêng chung của `L^2` và `L_z`.
+
+> **Chuyển mạch:** Trong **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Trị riêng của L^2 và Lz** tiếp nhận điểm tựa từ **Từ mômen động lượng cổ điển đến toán tử lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chỉ đo được một thành phần cùng với L^2?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trị riêng của `L^2` và `L_z`
 
@@ -83,6 +84,8 @@ mà là
 
 Đây là khác biệt quan trọng giữa trực giác cổ điển và cấu trúc lượng tử.
 
+> **Chuyển mạch:** Ở chặng này của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Vì sao chỉ đo được một thành phần cùng với L^2?** tiếp nhận điểm tựa từ **Trị riêng của L^2 và Lz** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toán tử nâng và hạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao chỉ đo được một thành phần cùng với `L^2`?
 
 Nếu `L_x`, `L_y`, `L_z` cùng xác định chính xác, commutator giữa chúng phải không gây bất định (uncertainty / 불확실성) bắt buộc. Nhưng quan hệ giao hoán cho thấy các thành phần ngang không thể đồng thời có phân bố tùy ý hẹp.
@@ -90,6 +93,8 @@ Nếu `L_x`, `L_y`, `L_z` cùng xác định chính xác, commutator giữa chú
 Ta thường chọn trục `z` chỉ vì một hệ tọa độ cần một trục tham chiếu. Nếu hệ không có trường ngoài phá đối xứng, không có hướng `z` nào “cơ bản hơn” các hướng khác.
 
 Khi đặt từ trường ngoài, trục của từ trường trở thành hướng vật lý đặc biệt và `m` có thể liên hệ trực tiếp với năng lượng (energy / 에너지) splitting.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Toán tử nâng và hạ** tiếp nhận điểm tựa từ **Vì sao chỉ đo được một thành phần cùng với L^2?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen động lượng quỹ đạo và spherical harmonics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Toán tử nâng và hạ
 
@@ -144,6 +149,8 @@ Từ algebra này xuất hiện cấu trúc lượng tử hóa của `m` và tr�
 
 Điểm quan trọng là lượng tử hóa không được gắn bằng tay; nó xuất hiện từ symmetry algebra và điều kiện trạng thái vật lý.
 
+> **Chuyển mạch:** Trong **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Mômen động lượng quỹ đạo và spherical harmonics** tiếp nhận điểm tựa từ **Toán tử nâng và hạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spin là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mômen động lượng quỹ đạo và spherical harmonics
 
 Trong bài toán có đối xứng cầu, phần góc của hàm sóng được mô tả bằng spherical harmonics
@@ -168,6 +175,8 @@ L_zY_\ell^m
 
 Spherical harmonics không phải “hình dạng orbital” theo nghĩa vật chất đặc. Chúng mô tả cấu trúc góc của biên độ xác suất.
 
+> **Chuyển mạch:** Ở chặng này của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Spin là gì?** tiếp nhận điểm tựa từ **Mômen động lượng quỹ đạo và spherical harmonics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spin-1/2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Spin là gì?
 
 Spin (spin / 스핀) là **mômen động lượng nội tại (intrinsic angular momentum)**.
@@ -181,6 +190,8 @@ s=\frac12.
 Nhưng không nên hình dung electron như một quả cầu nhỏ quay quanh trục. Nếu cố ép mô hình đó thành vật thể cổ điển, ta gặp nhiều mâu thuẫn và không tái tạo được cấu trúc spinor.
 
 Spin là một degree of freedom lượng tử được xác định bởi cách trạng thái biến đổi dưới phép quay.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Spin-1/2** tiếp nhận điểm tựa từ **Spin là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận Pauli** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Spin-1/2
 
@@ -213,6 +224,8 @@ với
 ```
 
 Đây là hệ lượng tử hai mức đơn giản nhất và là prototype của qubit.
+
+> **Chuyển mạch:** Trong **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Ma trận Pauli** tiếp nhận điểm tựa từ **Spin-1/2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bloch sphere** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ma trận Pauli
 
@@ -257,6 +270,8 @@ Các ma trận này thỏa
 
 Chúng là biểu diễn `2×2` cơ bản của algebra spin-1/2.
 
+> **Chuyển mạch:** Ở chặng này của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Bloch sphere** tiếp nhận điểm tựa từ **Ma trận Pauli** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép quay và nhóm SU(2)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bloch sphere
 
 Một trạng thái spin-1/2 thuần có thể viết, bỏ qua toàn cục (global / 전역) phase,
@@ -274,6 +289,8 @@ Cặp góc `\theta,\phi` biểu diễn một điểm trên Bloch sphere.
 Bloch sphere không có nghĩa spin là một véc-tơ (vector / 벡터) cổ điển thực sự nằm trên mặt cầu. Nó là hình học của không gian trạng thái hai mức sau khi bỏ toàn cục (global / 전역) phase.
 
 Đây là cầu nối trực tiếp giữa quantum mechanics, NMR/MRI và quantum computing.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Phép quay và nhóm SU(2)** tiếp nhận điểm tựa từ **Bloch sphere** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thí nghiệm Stern–Gerlach** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phép quay và nhóm `SU(2)`
 
@@ -300,6 +317,8 @@ Toàn cục (global / 전역) phase `-1` không quan sát được đối với 
 
 Đây là dấu hiệu sâu của quan hệ giữa nhóm quay không gian `SO(3)` và nhóm phủ đôi `SU(2)`.
 
+> **Chuyển mạch:** Trong **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Thí nghiệm Stern–Gerlach** tiếp nhận điểm tựa từ **Phép quay và nhóm SU(2)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen từ và hiệu ứng Zeeman** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thí nghiệm Stern–Gerlach
 
 Trong Stern–Gerlach, chùm nguyên tử đi qua từ trường không đồng đều và tách thành các nhánh rời rạc theo projection của magnetic moment.
@@ -309,6 +328,8 @@ Trong Stern–Gerlach, chùm nguyên tử đi qua từ trường không đồng 
 Thí nghiệm này cho thấy projection của mômen động lượng lượng tử có phổ rời rạc.
 
 Nó cũng minh họa một điểm quan trọng: đo spin theo trục `z`, rồi theo `x`, rồi lại theo `z` không tương đương việc chỉ đọc một thuộc tính cổ điển đã tồn tại cố định. Các phép đo theo các trục khác nhau liên quan các toán tử không giao hoán.
+
+> **Chuyển mạch:** Ở chặng này của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Mômen từ và hiệu ứng Zeeman** tiếp nhận điểm tựa từ **Thí nghiệm Stern–Gerlach** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Larmor precession** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mômen từ và hiệu ứng Zeeman
 
@@ -347,6 +368,8 @@ quantum sensing
 
 Chi tiết hệ số và moment khác nhau giữa electron, nucleus và atom, nhưng lô-gic (logic / 논리) coupling với trường ngoài là chung.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Larmor precession** tiếp nhận điểm tựa từ **Mômen từ và hiệu ứng Zeeman** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép cộng hai mômen động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Larmor precession
 
 Một spin hoặc magnetic moment trong từ trường có thể precess quanh hướng trường.
@@ -360,6 +383,8 @@ Tần số góc có dạng
 với `\gamma` là gyromagnetic ratio.
 
 Đây là cầu nối giữa phương trình lượng tử của spin và tín hiệu precession đo được trong NMR/MRI.
+
+> **Chuyển mạch:** Trong **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Phép cộng hai mômen động lượng** tiếp nhận điểm tựa từ **Larmor precession** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triplet và singlet của hai spin-1/2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phép cộng hai mômen động lượng
 
@@ -394,6 +419,8 @@ Ví dụ, hai spin `1/2` cho
 ```
 
 Tức là một sector triplet `j=1` và một sector singlet `j=0`.
+
+> **Chuyển mạch:** Ở chặng này của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Triplet và singlet của hai spin-1/2** tiếp nhận điểm tựa từ **Phép cộng hai mômen động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Clebsch–Gordan coefficients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Triplet và singlet của hai spin-1/2
 
@@ -431,6 +458,8 @@ Trạng thái singlet là
 
 Singlet là trạng thái rối lượng tử. Tổng mômen động lượng bằng zero, nhưng điều đó không có nghĩa mỗi spin riêng lẻ có một véc-tơ (vector / 벡터) cổ điển xác định và đối nhau trước phép đo.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Clebsch–Gordan coefficients** tiếp nhận điểm tựa từ **Triplet và singlet của hai spin-1/2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spin–orbit coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Clebsch–Gordan coefficients
 
 Có hai basis tự nhiên:
@@ -460,6 +489,8 @@ particle decay channels
 ```
 
 Vì vậy chúng không chỉ là bảng hệ số đại số; chúng mã hóa cách các biểu diễn (representation / 표현) của rotational symmetry kết hợp.
+
+> **Chuyển mạch:** Trong **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Spin–orbit coupling** tiếp nhận điểm tựa từ **Clebsch–Gordan coefficients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Selection rules và symmetry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Spin–orbit coupling
 
@@ -497,6 +528,8 @@ Nhờ đó năng lượng spin–orbit có thể được biểu diễn bằng c
 
 Đây là ví dụ rõ về việc symmetry algebra biến một tương tác véc-tơ (vector / 벡터) phức tạp thành bài toán trị riêng gọn hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Selection rules và symmetry** tiếp nhận điểm tựa từ **Spin–orbit coupling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các giả định (assumptions / 가정들) và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Selection rules và symmetry
 
 Mômen động lượng còn quyết định những chuyển tiếp (transition / 전이) nào được phép hoặc bị suppressed.
@@ -517,6 +550,8 @@ với các điều kiện khác tùy hệ.
 
 Các selection rules không phải quy ước ghi nhớ tùy ý. Chúng phản ánh symmetry, parity và ma trận (matrix / 행렬) element của tương tác (interaction / 상호작용) operator.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Selection rules và symmetry** đã nêu tiêu chí phân biệt, còn **Các giả định (assumptions / 가정들) và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các giả định (assumptions / 가정들) và giới hạn
 
 ### Spin không phải rotation của vật thể có kích thước
@@ -531,6 +566,8 @@ Giá trị `m` luôn được định nghĩa so với một trục chọn trư�
 
 Quy tắc cộng `j` áp dụng cho angular-momentum representations. Nó không có nghĩa mọi véc-tơ (vector / 벡터) lượng tử đều cộng như véc-tơ (vector / 벡터) cổ điển với góc xác định trước.
 
+> **Chuyển mạch:** Trong **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Các giả định (assumptions / 가정들) và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Mômen động lượng lượng tử nên được hiểu như **generator của phép quay**.
@@ -544,6 +581,8 @@ rotational symmetry
 ```
 
 Spin là biểu diễn (representation / 표현) nội tại của cùng symmetry, không phải miniature mechanical rotation.
+
+> **Chuyển mạch:** Ở chặng này của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -563,10 +602,12 @@ Không. toàn cục (global / 전역) phase không quan sát trực tiếp cho t
 
 Không. Singlet là trạng thái rối có correlation lượng tử không thể mô tả đầy đủ bằng cặp véc-tơ (vector / 벡터) cổ điển cố định.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Chuyển động quay cổ điển](../01_mechanics/05_rotation_rigid_body.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Phép đo và rối lượng tử](03_measurement_entanglement_decoherence.md), [Vật lý nguyên tử](../09_atomic_nuclear_particle/00_atomic_physics.md), [Mô hình Chuẩn](../09_atomic_nuclear_particle/03_particle_standard_model.md), [Đối xứng và path integral](07_symmetry_operator_path_integral.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

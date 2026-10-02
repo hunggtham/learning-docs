@@ -1,13 +1,14 @@
 # Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn
 
-> **Mạch đọc:** Đọc **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Pha là gì?** sang **Vai trò của thế nhiệt động lực học**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển pha và truyền nhiệt**. Route đi từ phase/state variables → thermodynamic potentials → latent heat → conduction/convection/radiation → critical behavior, để nhiệt động nối cân bằng với dòng năng lượng.
 
 ## Pha là gì?
 
 Pha (phase / 상) là một trạng thái vĩ mô có cấu trúc và tính chất đồng nhất theo những tham số trật tự (order parameters) thích hợp. Rắn, lỏng và khí là các ví dụ quen thuộc, nhưng từ tính sắt từ, siêu dẫn, siêu chảy và nhiều pha lượng tử cho thấy khái niệm “pha” rộng hơn nhiều so với ba trạng thái vật chất cổ điển.
 
 Một chuyển pha xảy ra khi trạng thái cân bằng tối ưu của hệ thay đổi khi nhiệt độ, áp suất, trường ngoài hoặc một tham số điều khiển khác đi qua một miền nhất định.
+
+> **Chuyển mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Vai trò của thế nhiệt động lực học** tiếp nhận điểm tựa từ **Pha là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vai trò của thế nhiệt động lực học
 
@@ -24,6 +25,8 @@ Hai pha có thể cùng tồn tại khi thế hóa học của chúng bằng nha
 ```
 
 Vì `\mu` chính là năng lượng tự do Gibbs trên mỗi hạt trong một hệ một thành phần, đường đồng tồn tại pha trên giản đồ `P-T` là nơi hai pha có cùng “chi phí nhiệt động lực học”.
+
+> **Chuyển mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Nhiệt ẩn** tiếp nhận điểm tựa từ **Vai trò của thế nhiệt động lực học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Clausius–Clapeyron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhiệt ẩn
 
@@ -42,6 +45,8 @@ L=T\Delta S.
 ```
 
 Do đó nhiệt ẩn liên hệ trực tiếp với bước nhảy entropy giữa hai pha.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Phương trình Clausius–Clapeyron** tiếp nhận điểm tựa từ **Nhiệt ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao nồi áp suất làm thức ăn chín nhanh hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương trình Clausius–Clapeyron
 
@@ -66,11 +71,15 @@ Tích phân khi `L` gần hằng số cho
 
 Quan hệ này giải thích vì sao áp suất hơi bão hòa tăng rất nhanh theo nhiệt độ.
 
+> **Chuyển mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Vì sao nồi áp suất làm thức ăn chín nhanh hơn?** tiếp nhận điểm tựa từ **Phương trình Clausius–Clapeyron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điểm ba và điểm tới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao nồi áp suất làm thức ăn chín nhanh hơn?
 
 Nước sôi khi áp suất hơi bão hòa bằng áp suất môi trường. Tăng áp suất bên ngoài làm nhiệt độ sôi tăng. Nước trong nồi áp suất có thể đạt nhiệt độ cao hơn `100°C`, tăng tốc nhiều quá trình truyền nhiệt và phản ứng hóa học trong thực phẩm.
 
 Ở vùng núi cao, áp suất khí quyển thấp hơn nên nước sôi ở nhiệt độ thấp hơn và thời gian nấu có thể dài hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Điểm ba và điểm tới hạn** tiếp nhận điểm tựa từ **Vì sao nồi áp suất làm thức ăn chín nhanh hơn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển pha bậc nhất và chuyển pha liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điểm ba và điểm tới hạn
 
@@ -80,6 +89,8 @@ Nước sôi khi áp suất hơi bão hòa bằng áp suất môi trường. Tă
 
 Khái niệm điểm tới hạn quan trọng vì nó cho thấy chuyển pha không phải lúc nào cũng là một “bước nhảy sắc nét” kiểu nóng chảy.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Chuyển pha bậc nhất và chuyển pha liên tục** tiếp nhận điểm tựa từ **Điểm ba và điểm tới hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tham số trật tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển pha bậc nhất và chuyển pha liên tục
 
 Trong chuyển pha bậc nhất, một đạo hàm bậc nhất của thế nhiệt động như entropy hoặc thể tích có bước nhảy. Nhiệt ẩn khác không.
@@ -87,6 +98,8 @@ Trong chuyển pha bậc nhất, một đạo hàm bậc nhất của thế nhi�
 Trong chuyển pha liên tục, tham số trật tự thay đổi liên tục nhưng độ nhạy của hệ có thể tăng mạnh hoặc phân kỳ trong giới hạn nhiệt động.
 
 Ví dụ điển hình là chuyển pha sắt từ tại nhiệt độ Curie.
+
+> **Chuyển mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Tham số trật tự** tiếp nhận điểm tựa từ **Chuyển pha bậc nhất và chuyển pha liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dài tương quan và hành vi tới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tham số trật tự
 
@@ -106,6 +119,8 @@ Khi `T>T_c`, hệ số của `M^2` dương và cực tiểu nằm tại `M=0`. K
 
 Mô hình này minh họa cách phá vỡ đối xứng tự phát (spontaneous symmetry breaking) có thể tạo pha mới.
 
+> **Chuyển mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Độ dài tương quan và hành vi tới hạn** tiếp nhận điểm tựa từ **Tham số trật tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mầm pha và năng lượng bề mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ dài tương quan và hành vi tới hạn
 
 Gần điểm tới hạn, thăng giáng ở những vùng rất xa nhau có thể trở nên tương quan. Độ dài tương quan `\xi` tăng mạnh và có thể tuân dạng
@@ -117,6 +132,8 @@ Gần điểm tới hạn, thăng giáng ở những vùng rất xa nhau có th�
 Nhiều đại lượng tuân các luật lũy thừa với số mũ tới hạn (critical exponents).
 
 Điều đặc biệt là các hệ vi mô rất khác nhau có thể chia sẻ cùng số mũ tới hạn. Đây là hiện tượng phổ quát (universality), một trong những ý tưởng sâu của vật lý thống kê.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Mầm pha và năng lượng bề mặt** tiếp nhận điểm tựa từ **Độ dài tương quan và hành vi tới hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dẫn nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mầm pha và năng lượng bề mặt
 
@@ -137,6 +154,8 @@ r_c=\frac{2\gamma}{\Delta g}.
 Mầm nhỏ hơn `r_c` thường co lại; lớn hơn `r_c` có thể tiếp tục phát triển.
 
 Điều này giải thích hiện tượng quá lạnh, quá nhiệt và vì sao bụi hay khuyết tật bề mặt có thể hỗ trợ tạo mầm.
+
+> **Chuyển mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Dẫn nhiệt** tiếp nhận điểm tựa từ **Mầm pha và năng lượng bề mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện trở nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dẫn nhiệt
 
@@ -170,6 +189,8 @@ t_{diff}\sim\frac{L^2}{\alpha}.
 
 Vì phụ thuộc `L^2`, làm lạnh một vật dày gấp đôi có thể mất thời gian lớn hơn nhiều chứ không chỉ gấp đôi.
 
+> **Chuyển mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Điện trở nhiệt** tiếp nhận điểm tựa từ **Dẫn nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối lưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện trở nhiệt
 
 Với tấm phẳng dày `L`, diện tích `A`, dẫn nhiệt ổn định một chiều:
@@ -192,6 +213,8 @@ Dòng nhiệt khi đó gần
 
 Cấu trúc toán học giống mạch điện trở vì cả hai là bài toán dòng tuyến tính do chênh thế điều khiển.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Đối lưu** tiếp nhận điểm tựa từ **Điện trở nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các số vô thứ nguyên trong truyền nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đối lưu
 
 Đối lưu kết hợp chuyển động chất lưu với truyền năng lượng. Trong kỹ thuật thường dùng
@@ -203,6 +226,8 @@ Cấu trúc toán học giống mạch điện trở vì cả hai là bài toán
 `h` không phải hằng số vật liệu cơ bản. Nó phụ thuộc vận tốc dòng, hình học, tính chất chất lưu và trạng thái lớp biên.
 
 Đối lưu cưỡng bức dùng quạt hoặc bơm. Đối lưu tự nhiên xuất hiện do chênh lệch mật độ trong trường hấp dẫn.
+
+> **Chuyển mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Các số vô thứ nguyên trong truyền nhiệt** tiếp nhận điểm tựa từ **Đối lưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bức xạ nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các số vô thứ nguyên trong truyền nhiệt
 
@@ -226,6 +251,8 @@ Số Rayleigh kết hợp độ nổi và khuếch tán để đánh giá khả 
 
 Các số này cho phép phân loại chế độ truyền nhiệt mà không phụ thuộc hệ đơn vị.
 
+> **Chuyển mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Bức xạ nhiệt** tiếp nhận điểm tựa từ **Các số vô thứ nguyên trong truyền nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Kirchhoff về bức xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bức xạ nhiệt
 
 Một vật đen lý tưởng phát thông lượng năng lượng
@@ -242,11 +269,15 @@ P=\varepsilon\sigma A(T^4-T_{env}^4).
 
 Bức xạ không cần môi trường vật chất, vì vậy trong chân không nó trở thành cơ chế trao đổi nhiệt quan trọng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Định luật Kirchhoff về bức xạ** tiếp nhận điểm tựa từ **Bức xạ nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ vật đen và sự ra đời của lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Định luật Kirchhoff về bức xạ
 
 Ở cân bằng nhiệt, khả năng hấp thụ và phát xạ tại cùng bước sóng và góc liên hệ với nhau. Một vật hấp thụ tốt ở một dải phổ cũng có xu hướng phát tốt ở dải đó khi ở cân bằng.
 
 Điều này nối nhiệt động lực học với điện từ học và tính chất quang học của vật liệu.
+
+> **Chuyển mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Phổ vật đen và sự ra đời của lượng tử** tiếp nhận điểm tựa từ **Định luật Kirchhoff về bức xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ trao đổi nhiệt và hiệu suất thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phổ vật đen và sự ra đời của lượng tử
 
@@ -259,6 +290,8 @@ E=nh\nu.
 ```
 
 Từ đó thu được phổ phù hợp thực nghiệm. Đây là một trong những bước mở đầu của cơ học lượng tử.
+
+> **Chuyển mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Bộ trao đổi nhiệt và hiệu suất thực tế** tiếp nhận điểm tựa từ **Phổ vật đen và sự ra đời của lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thermal runaway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ trao đổi nhiệt và hiệu suất thực tế
 
@@ -275,6 +308,8 @@ junction chip
 
 Mỗi bước có điện trở nhiệt riêng. Tối ưu một thành phần không đảm bảo toàn chuỗi tốt nếu nút thắt nằm ở giao diện khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Thermal runaway** tiếp nhận điểm tựa từ **Bộ trao đổi nhiệt và hiệu suất thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thermal runaway
 
 Nếu một thiết bị tiêu tán nhiều công suất hơn khi nhiệt độ tăng, ta có phản hồi dương:
@@ -288,11 +323,15 @@ nhiệt độ tăng
 
 Nếu khả năng tản nhiệt không đủ, hệ có thể chạy vào trạng thái mất ổn định nhiệt. Khái niệm này xuất hiện trong transistor, pin và nhiều hệ phản ứng hóa học.
 
+> **Chuyển mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thermal runaway** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Chuyển pha là sự thay đổi cấu trúc cân bằng của toàn hệ, còn truyền nhiệt là cách năng lượng di chuyển giữa các vùng. Nhiệt độ không phải thước đo duy nhất của năng lượng: trong chuyển pha, năng lượng có thể thay đổi cấu hình vi mô mà không làm nhiệt độ đổi đáng kể.
 
 Gần điểm tới hạn, chi tiết vi mô có thể trở nên ít quan trọng hơn cấu trúc thang lớn và tính đối xứng, dẫn tới phổ quát.
+
+> **Chuyển mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -312,10 +351,12 @@ Màu nhìn thấy không đủ để kết luận toàn bộ tính chất bức 
 
 Không. Chuyển pha liên tục có thể không có nhiệt ẩn nhưng có thăng giáng và độ nhạy rất mạnh gần điểm tới hạn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nhiệt động lực học](00_thermodynamics.md), [Entropy và cơ học thống kê](01_entropy_statistical_mechanics.md), [Vận chuyển và khuếch tán](../03_continuum/02_transport_diffusion_heat.md).
 
 **Liên hệ tiếp:** [Ensemble và hàm phân hoạch](03_ensembles_partition_functions.md), [Vật chất ngưng tụ và siêu dẫn](../10_condensed_matter_devices/02_transport_magnetism_superconductivity.md), [Quang học và vật đen](../06_optics/02_photons_lasers_coherence.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 thermodynamics](./00_thermodynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
