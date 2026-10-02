@@ -1,18 +1,26 @@
 # 178. 관계해석 (Relational Calculus)
 
+> **Mạch đọc:** [README](../README.md) là owner của **178. 관계해석 (Relational Calculus)**; đặt bài trong tuyến relational language trước functional dependencies/normalization. Từ **학습 목표 (Mục tiêu)** qua **핵심 키워드 (Từ khóa)**, nối tuple/domain calculus với predicate, quantifier và declarative query semantics, rồi dùng **선행·연결 개념 (Kiến thức liên kết)** để giải thích dependency và schema constraints.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **178. 관계해석 (Relational Calculus)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **178. 관계해석 (Relational Calculus)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **178. 관계해석 (Relational Calculus)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 관계해석
 
+> **Chuyển mạch:** Ở chặng này của **178. 관계해석 (Relational Calculus)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **108. 도메인 (Domain)**에서 만든 기준을 이어받아 **178. 관계해석 (Relational Calculus)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **178. 관계해석 (Relational Calculus)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **178. 관계해석 (Relational Calculus)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **178. 관계해석 (Relational Calculus
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **178. 관계해석 (Relational Calculus)** và nối nó với **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **178. 관계해석 (Relational Calculus)**, **178. 관계해석 (Relational Calculus)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 178. 관계해석 (Relational Calculus)
 
@@ -41,3 +49,5 @@ Phần “178. 관계해석 (Relational Calculus)” được nối với nội 
   - Có sức mạnh tính toán tương đương đại số quan hệ.
 
 Điểm chốt của **178. 관계해석 (Relational Calculus)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **178. 관계해석 (Relational Calculus)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

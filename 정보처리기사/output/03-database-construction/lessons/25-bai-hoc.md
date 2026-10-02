@@ -1,18 +1,26 @@
 # 10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)
 
+> **Mạch đọc:** [README](../README.md) là owner của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**; đặt bài trong tuyến transaction trước SQL categories và concurrency details. Từ **학습 목표 (Mục tiêu)** qua **핵심 키워드 (Từ khóa)**, nối transaction boundaries với lock/isolation, commit/rollback, recovery và control techniques, rồi dùng **선행·연결 개념 (Kiến thức liên kết)** để phân biệt TCL/DDL/DML trong một workflow có trạng thái.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **143-145. SQL 분류 (SQL Categories)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 트랜잭션, 관리, 기법, 제어
 
+> **Chuyển mạch:** Ở chặng này của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **9. 인덱스와 트랜잭션 (Index và Giao dịch)**에서 만든 기준을 이어받아 **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **10. 트랜잭션 관리 기법 및 제
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** và nối nó với **143-145. SQL 분류 (SQL Categories)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)
 
@@ -84,3 +92,5 @@ Các bullet của **데이터 사전 (Data Dictionary / System Catalog / Metadat
 Như vậy, **데이터 사전 (Data Dictionary / System Catalog / Metadata)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
 Như vậy, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **143-145. SQL 분류 (SQL Categories)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

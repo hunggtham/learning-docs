@@ -1,18 +1,26 @@
 # 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
 
+> **Mạch đọc:** [README](../README.md) là owner của **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**; giữ bài ở cuối tuyến database construction như phần gom các khái niệm còn lại. Từ **학습 목표 (Mục tiêu)** sang **핵심 키워드 (Từ khóa)**, nối từng khái niệm với dependency/giới hạn cụ thể, rồi quay về phần tổng hợp của môn để đặt chúng cạnh schema, truy vấn, transaction và vận hành.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **phần tổng hợp của môn** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 기타, 주요, 개념
 
+> **Chuyển mạch:** Ở chặng này của **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**에서 만든 기준을 이어받아 **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **22. 기타 주요 개념 (Các khái n
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** và nối nó với **phần tổng hợp của môn**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
 
@@ -91,3 +99,5 @@ Với **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**, h�
 Với **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Khép lại **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+
+> **Bàn giao:** Sau **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
