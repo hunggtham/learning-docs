@@ -1,6 +1,6 @@
 # Columnar lưu trữ (storage / 저장소), encoding, pruning và vectorized scans
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Columnar lưu trữ (storage / 저장소), encoding, pruning và vectorized scans**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Row store tối ưu locality theo bản ghi (record / 레코드); column store tối ưu locality theo attribute** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Row group tạo compromise giữa locality và parallelism** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Columnar storage, encoding, pruning và vectorized scans**. Route đi từ row/column layout → row groups/encoding → zone maps/Bloom/predicate pushdown → vectorized scan/late materialization → spill và distributed skew, để bandwidth và CPU locality dẫn dắt thiết kế.
 
 Đọc trước [NoSQL, distributed và analytical databases](../../basic/05_data_databases/07_nosql_distributed_and_analytical_databases.md) để có khái niệm OLTP/OLAP, và [join algorithms, vectorized execution, late materialization](./06_join_algorithms_vectorized_execution_and_late_materialization.md) để nối lưu trữ (storage / 저장소) đường dẫn (path / 경로) với thực thi (execution / 실행) engine.
 

@@ -1,6 +1,6 @@
 # MVCC, visibility, WAL và khôi phục (recovery / 복구) internals
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: tính đồng thời (concurrency / 동시성) không được phá một lịch sử hợp lệ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. MVCC biến một logical row thành phiên bản (version / 버전) lịch sử (history / 이력)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **MVCC, visibility, WAL và recovery internals**. Route đi từ version chain/snapshot visibility → commit ordering → WAL/LSN → REDO/UNDO/checkpoint → crash recovery và replica, để lịch sử logic nối được với durability vật lý.
 
 Ở mức foundation, ACID và MVCC thường được mô tả như cơ chế giúp nhiều transactions chạy đồng thời mà ít khối (block / 블록) nhau. Ở mức advanced, cần tách ba câu hỏi nhưng vẫn nối chúng thành một vòng đời (lifecycle / 생명주기):
 

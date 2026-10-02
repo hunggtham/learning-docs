@@ -1,6 +1,6 @@
 # Buffer pool, replacement và dirty-page management
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Buffer pool, replacement và dirty-page management**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: RAM nhỏ hơn cơ sở dữ liệu (database / 데이터베이스), nhưng độ trễ (latency / 지연 시간) lưu trữ (storage / 저장소) đắt** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Bảng trang (page table / 페이지 테이블) nối logical page id với vật lý (physical / 물리적) frame** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Buffer pool, replacement và dirty-page management**. Route đi từ page residency/pinning → replacement policy → dirty-page/WAL ordering → checkpoint/flush → scan pollution và memory pressure, để cache behavior được nối với recovery và query plan.
 
 Cơ sở dữ liệu (database / 데이터베이스) không thể giả định toàn bộ dữ liệu (data / 데이터) nằm trong RAM. **Buffer pool** là page bộ nhớ đệm (cache / 캐시) do cơ sở dữ liệu (database / 데이터베이스) quản lý để giữ working set gần CPU, bảo vệ page thời gian tồn tại (lifetime / 수명) khi operators đang dùng, phối hợp dirty dữ liệu (data / 데이터) với WAL, và kiểm soát khi foreground tải công việc (workload / 워크로드) phải trả I/O chi phí (cost / 비용).
 

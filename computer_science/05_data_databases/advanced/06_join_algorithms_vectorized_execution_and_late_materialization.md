@@ -1,6 +1,6 @@
 # Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thuật toán phép nối (join / 조인), thực thi véc-tơ (vector / 벡터) hóa và vật chất hóa muộn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. phép nối (join / 조인) thực chất là bài toán tìm quan hệ giữa hai tập bản ghi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. bản dựng (build / 빌드) side và probe side không phải chi tiết nhỏ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Join algorithms, vectorized execution và late materialization**. Route đi từ join relation/build-probe → hash/merge/nested-loop trade-offs → vectorized batches → late materialization và spill, để operator choice nối với memory locality và cardinality.
 
 Một hệ quản trị cơ sở dữ liệu không dừng ở việc chọn một kế hoạch truy vấn. Sau khi bộ tối ưu (optimizer) quyết định thứ tự bảng, chỉ mục (index / 인덱스) và phép toán, **bộ máy thực thi truy vấn (query execution engine / 질의 실행 엔진)** phải biến kế hoạch đó thành công việc CPU, truy cập bộ nhớ và I/O cụ thể. Hai kế hoạch có cùng độ phức tạp Big-O vẫn có thể khác nhau hàng chục lần vì locality, số lần gọi hàm, branch prediction, kích thước dữ liệu trung gian và cách dữ liệu đi qua bộ nhớ đệm (cache / 캐시) CPU.
 

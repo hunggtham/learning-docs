@@ -1,6 +1,6 @@
 # Giao dịch phân tán: 2PC, consensus, saga và transactional outbox
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Giao dịch phân tán: 2PC, consensus, saga và transactional outbox**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) không tự mở rộng thành phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Two-Phase lần ghi nhận (commit / 커밋)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Distributed transactions: 2PC, consensus, saga và transactional outbox**. Route đi từ local atomicity → 2PC prepare/commit → in-doubt/failure → consensus boundary → saga/outbox/idempotency, để durability xuyên service được đánh giá theo failure matrix.
 
 Một giao dịch trên một cơ sở dữ liệu (database / 데이터베이스) nút (node / 노드) có thể dựa vào WAL, khóa (lock / 잠금)/MVCC và khôi phục (recovery / 복구) để tạo atomicity. Khi một nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) chạm nhiều cơ sở dữ liệu (database / 데이터베이스) hoặc dịch vụ (service / 서비스), vấn đề thay đổi: không còn một tiến trình (process / 프로세스) hay một log duy nhất có quyền quyết định toàn bộ trạng thái.
 

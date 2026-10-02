@@ -1,6 +1,6 @@
 # Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Adaptive truy vấn (query / 쿼리) thực thi (execution / 실행), thời gian chạy (runtime / 런타임) filters, skew và re-optimization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao optimizer không thể biết mọi thứ trước thực thi (execution / 실행)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Adaptation ranh giới (boundary / 경계)** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Adaptive query execution, runtime filters, skew và re-optimization**. Route đi từ compile-time estimate → runtime cardinality/filter arrival → join adaptation/skew handling → memory/spill → re-optimization boundary, để thay đổi plan vẫn giữ logical semantics.
 
 Cost-based optimizer phải chọn plan **trước khi** truy vấn (query / 쿼리) thực sự chạy, trong khi nhiều thông tin quan trọng chỉ xuất hiện **sau khi thực thi (execution / 실행) bắt đầu**: cardinality thực, skew thực, selectivity của predicate, bộ nhớ (memory / 메모리) pressure, partition kích thước (size / 크기) và mạng (network / 네트워크) transfer. Nếu estimate sai lớn, một plan hợp lý trên giấy có thể trở thành bottleneck môi trường vận hành (production / 운영 환경).
 

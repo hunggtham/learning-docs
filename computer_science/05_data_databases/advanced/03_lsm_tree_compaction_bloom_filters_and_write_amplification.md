@@ -1,6 +1,6 @@
 # LSM cây (tree / 트리), compaction, Bloom filters và ghi (write / 쓰기) amplification
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **LSM cây (tree / 트리), compaction, Bloom filters và ghi (write / 쓰기) amplification**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu và bất biến (invariant / 불변식) của LSM** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. ghi (write / 쓰기) đường dẫn (path / 경로): foreground nhanh vì chưa tổ chức xong dữ liệu** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **LSM Tree, compaction, Bloom filters và write amplification**. Route đi từ memtable/immutable files → read path/Bloom filter → compaction policy → read/write/space amplification và tombstone, để tốc độ ghi được cân với debt I/O phía sau.
 
 B+cây (tree / 트리) tối ưu cho cập nhật theo page và truy vấn có thứ tự, nhưng tải công việc (workload / 워크로드) ghi ngẫu nhiên với tốc độ cao có thể buộc lưu trữ (storage / 저장소) engine sửa nhiều page nhỏ ở nhiều vị trí. **Cây hợp nhất có cấu trúc log (Log-Structured Merge Tree, LSM Tree / 로그 구조 병합 트리)** đổi bài toán: ghi mới trước vào cấu trúc dễ append, sau đó dùng công việc nền để hợp nhất dữ liệu thành các run đã sắp thứ tự.
 

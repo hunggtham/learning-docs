@@ -1,6 +1,6 @@
 # Bộ tối ưu dựa trên chi phí, ước lượng số dòng và thống kê
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ tối ưu dựa trên chi phí, ước lượng số dòng và thống kê**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Không gian kế hoạch tăng rất nhanh** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Số lượng bản ghi là biến trung tâm** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cost-based optimizer, cardinality estimation và statistics**. Route đi từ plan search space → cardinality/selectivity → histograms/correlation → cost model và join order → actual-plan evidence, để giả định optimizer được kiểm tra bằng runtime.
 
 SQL mô tả **cần lấy kết quả gì**, không bắt buộc hệ quản trị phải thực hiện **bằng cách nào**. Cùng một truy vấn có thể nối bảng theo nhiều thứ tự, dùng quét chỉ mục hoặc quét tuần tự, dùng băm (hash / 해시) phép nối (join / 조인) hoặc nested-loop phép nối (join / 조인). **Bộ tối ưu dựa trên chi phí (Cost-Based Optimizer — CBO / 비용 기반 옵티마이저)** tìm kế hoạch có chi phí ước lượng thấp dựa trên thống kê và mô hình chi phí.
 

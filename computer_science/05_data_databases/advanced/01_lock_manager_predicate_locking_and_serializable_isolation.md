@@ -1,6 +1,6 @@
 # Khóa (lock / 잠금) manager, predicate locking và serializable isolation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khóa (lock / 잠금) manager, predicate locking và serializable isolation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khóa (lock / 잠금) manager là một subsystem riêng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dùng chung (shared / 공유) và exclusive chỉ là khởi đầu** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lock manager, predicate locking và serializable isolation**. Route đi từ lock modes/compatibility → lock table và deadlock → predicate/range protection → serializable validation và observability, để isolation guarantee được nối với contention thực tế.
 
 MVCC giúp nhiều giao dịch (transaction / 트랜잭션) đọc/ghi đồng thời, nhưng isolation mạnh vẫn cần cơ chế phát hiện hoặc ngăn các thực thi (execution / 실행) tương đương sai. Advanced cơ sở dữ liệu (database / 데이터베이스) tính đồng thời (concurrency / 동시성) không chỉ là “row khóa (lock / 잠금)”. Ta cần hiểu **khóa (lock / 잠금) manager, khóa (lock / 잠금) tính tương thích (compatibility / 호환성), deadlock, predicate/phạm vi (range / 범위) protection và serializability**.
 

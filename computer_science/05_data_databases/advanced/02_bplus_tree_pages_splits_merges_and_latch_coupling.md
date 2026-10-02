@@ -1,6 +1,6 @@
 # B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao cơ sở dữ liệu (database / 데이터베이스) không dùng tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리) thông thường?** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. nội bộ (internal / 내부) page và leaf page có vai trò khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **B+Tree page layout, splits/merges và latch coupling**. Route đi từ internal/leaf pages → buffer-pool traversal → insert split/delete merge → latch coupling và concurrent failure, để cấu trúc cây được đọc cùng chi phí I/O và contention.
 
 B+cây (tree / 트리) thường được giới thiệu như “balanced cây (tree / 트리) có O(log n)”. Điều đó đúng nhưng chưa đủ để giải thích cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스) môi trường vận hành (production / 운영 환경). B+cây (tree / 트리) tồn tại vì nó giữ một bất biến (invariant / 불변식) rất thực tế: **mỗi traversal phải đi qua một cấu trúc page-oriented luôn hợp lệ dưới concurrent read/ghi (write / 쓰기), trong khi cây (tree / 트리) vẫn đủ nông để giảm I/O và trượt bộ nhớ đệm (cache miss / 캐시 미스).**
 
