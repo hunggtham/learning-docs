@@ -1,11 +1,12 @@
 # Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** README của Psychology là owner của bản đồ khái niệm. File này không đặt ra thứ tự học cứng; nó cho thấy mỗi nhánh dựa trên giả định nào và khi nào nên quay về nguồn upstream trước khi đọc một chủ đề downstream.
-
+> **Mạch đọc:** [README](./README.md) là owner của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**; dùng file này như bản đồ prerequisite chứ không phải thứ tự học cứng. Từ **1. Trục khoa học nền** nối psychology as science, methods, measurement, brain/mind, cognition, development, intervention và cross-domain connections, rồi quay về dependency graph để chọn chapter owner và giới hạn suy luận.
 
 Tệp (file / 파일) này mô tả **phụ thuộc (dependency / 의존성) về khái niệm**, không phải thứ tự học cứng. Mục tiêu là tránh đọc một concept downstream mà bỏ qua các giả định (assumptions / 가정들) ở upstream.
 
 ## 1. Trục khoa học nền
+
+Trục này dựng nền từ psychology as science, measurement và inference. Hãy đọc nó trước để mọi domain sau đều có cùng cách phân biệt observation, mechanism, evidence và limitation.
 
 ```mermaid
 graph TD
@@ -24,10 +25,11 @@ graph TD
 
 Ý nghĩa của đồ thị (graph / 그래프) này: trước khi kết luận một tác động (effect / 효과) “real”, cần biết construct được đo ra sao, phân tích (analysis / 분석) dựa các giả định (assumptions / 가정들) nào, nhân quả (causal / 인과적) question có hợp lệ không và kết quả (result / 결과) có đứng vững qua replication/synthesis không.
 
-
-> **Chuyển mạch:** Sau khi xác định cách Psychology tạo và đánh giá bằng chứng, phần Brain & Mind đưa những nguyên tắc đó xuống mức hệ thần kinh, cảm giác và chú ý.
+> **Chuyển mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **2. Brain & Mind** tiếp nhận điểm tựa từ **1. Trục khoa học nền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. học tập (learning / 학습) & Cognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Brain & Mind
+
+Nhóm Brain & Mind nối neural systems, perception, attention và consciousness. Mục tiêu là đi từ substrate tới trải nghiệm mà không rút gọn hiện tượng tâm lý thành một tín hiệu đơn lẻ.
 
 ```mermaid
 graph TD
@@ -46,10 +48,11 @@ graph TD
 
 Neuroscience là một mức (level / 수준) of phân tích (analysis / 분석), không phải “final explanation” cho mọi psychological construct.
 
-
-> **Chuyển mạch:** Não và các quá trình nền giải thích điều kiện của hành vi; phần Learning & Cognition theo dõi cách ký ức, suy luận và ngôn ngữ biến điều kiện đó thành năng lực nhận thức.
+> **Chuyển mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. học tập (learning / 학습) & Cognition** tiếp nhận điểm tựa từ **2. Brain & Mind** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Development, self và xã hội (social / 사회적) world** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. học tập (learning / 학습) & Cognition
+
+Nhóm này giải thích cách hệ thống tiếp nhận, lưu, biến đổi và sử dụng thông tin. Các chapter nối memory, language, decision và expertise với điều kiện môi trường và giới hạn tài nguyên.
 
 ```mermaid
 graph TD
@@ -78,12 +81,11 @@ Durable learning ngày mai
 
 Vì vậy applied education phải dựa vào bộ nhớ (memory / 메모리)/transfer bằng chứng (evidence / 증거), không chỉ cảm giác học “trôi chảy”.
 
-Khi chuyển từ câu hỏi mô tả tâm lý — con người thường suy nghĩ, sai lệch hoặc phản ứng thế nào — sang câu hỏi thực hành “tôi nên xử lý uncertainty và ra quyết định thế nào?”, dùng [Thinking Toolkit](../thinking/README.md) làm lớp tích hợp. Cầu nối chính là [Cognitive Bias](../thinking/cognitive-bias/README.md) → [Probability](../thinking/probability/README.md) → [Decision Making](../thinking/decision-making/README.md); [calibration/Bayesian practice](../thinking/practice/01_calibration_and_bayesian_updating.md) và [decision journal/postmortem](../thinking/practice/04_decision_journal_and_postmortem.md) biến các concept này thành feedback loop. Psychology vẫn là canonical owner của cơ chế tâm lý và evidence; `thinking/` không dùng bias label như bằng chứng rằng một kết luận sai.
-
-
-> **Chuyển mạch:** Các cơ chế nhận thức không tồn tại tách khỏi thời gian sống và quan hệ xã hội. Phần Development, Self & Social World đặt chúng vào vòng đời, bản sắc và nhóm.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Development, self và xã hội (social / 사회적) world** tiếp nhận điểm tựa từ **3. học tập (learning / 학습) & Cognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Stress, emotion và regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Development, self và xã hội (social / 사회적) world
+
+Trục phát triển đặt cá nhân trong thời gian, quan hệ và bối cảnh xã hội. Hãy theo dõi feedback giữa biology, learning, attachment, identity và institution thay vì xem development như một đường thẳng cố định.
 
 ```mermaid
 graph TD
@@ -105,10 +107,11 @@ graph TD
 
 Attachment không nên dùng như internet personality label. định danh (identity / 식별자), culture và family ngữ cảnh (context / 맥락) có bidirectional influence; không có một nhân quả (causal / 인과적) arrow duy nhất giải thích development.
 
-
-> **Chuyển mạch:** Khi bối cảnh xã hội và phát triển tạo ra yêu cầu, stress và emotion mô tả cách hệ thống huy động rồi điều chỉnh nguồn lực để đáp ứng yêu cầu đó.
+> **Chuyển mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Stress, emotion và regulation** tiếp nhận điểm tựa từ **4. Development, self và xã hội (social / 사회적) world** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Mental Health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Stress, emotion và regulation
+
+Nhóm này nối threat, emotion, allostasis và coping với hành vi quan sát được. Câu hỏi trung tâm là khi nào một đáp ứng ngắn hạn trở thành pattern duy trì hoặc gây chi phí.
 
 ```mermaid
 graph TD
@@ -129,10 +132,11 @@ Applied regulation content phải giữ ranh giới (boundary / 경계) giữa:
 - clinical treatment;
 - self-help claim chưa có bằng chứng (evidence / 증거).
 
-
-> **Chuyển mạch:** Regulation cho biết một người thích nghi với áp lực ra sao; Mental Health dùng khung đó để phân biệt distress, impairment và các mức hỗ trợ mà không biến một triệu chứng thành chẩn đoán.
+> **Chuyển mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. Mental Health** tiếp nhận điểm tựa từ **5. Stress, emotion và regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Historical Schools** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Mental Health
+
+Mental health được đọc qua symptom, impairment, context, risk và protective factors. Phần này giữ ranh giới giữa mô tả lâm sàng, chẩn đoán và hỗ trợ đời sống.
 
 ```mermaid
 graph TD
@@ -151,10 +155,11 @@ graph TD
 
 Diagnosis là classification/suy luận (inference / 추론) công cụ (tool / 도구), không phải định danh (identity / 식별자) sentence. Treatment bằng chứng (evidence / 증거) phải được tách khỏi theoretical truth của trường phái.
 
-
-> **Chuyển mạch:** Các khái niệm sức khỏe tâm thần hiện nay có lịch sử hình thành. Historical Schools giúp đọc các trường phái như những mô hình cạnh tranh, mỗi mô hình có giả định và giới hạn riêng.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **7. Historical Schools** tiếp nhận điểm tựa từ **6. Mental Health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Applied Psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Historical Schools
+
+Các trường phái lịch sử được đặt trong bối cảnh ra đời và giới hạn bằng chứng của chúng. Mục tiêu là học cách một theory tạo câu hỏi, đồng thời biết phần nào đã được thay thế hoặc kiểm tra lại.
 
 ```mermaid
 graph TD
@@ -178,10 +183,11 @@ Modern scientific validation
 
 Freud, Adler và Jung phải được đọc qua [[EVIDENCE_STATUS_GUIDE]] và [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-
-> **Chuyển mạch:** Khi đã thấy mỗi trường phái chọn một cách mô tả vấn đề, Applied Psychology chuyển câu hỏi sang việc dùng bằng chứng đó trong giáo dục, công việc, sức khỏe và đời sống.
+> **Chuyển mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Applied Psychology** tiếp nhận điểm tựa từ **7. Historical Schools** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Applied Psychology
+
+Ứng dụng chuyển mental model thành quyết định trong work, health, education, relationship và technology. Hãy kiểm tra external validity và trade-off trước khi biến một finding thành lời khuyên chung.
 
 ```mermaid
 graph TD
@@ -198,10 +204,7 @@ graph TD
 
 Ứng dụng chỉ nên mạnh bằng upstream bằng chứng (evidence / 증거) của nó. Một practical recommendation không được nâng status chỉ vì nghe hợp lý hoặc dễ nhớ.
 
-Với negotiation và joint decision, có thể nối tiếp sang case [Negotiation, Bargaining & Conflict](../thinking/90_connections/06_negotiation_bargaining_and_conflict.md) để ghép psychological behavior với incentives, game theory, information asymmetry, BATNA/opportunity cost và update rule. Case này là integration layer; nó không thay thế evidence về cognition, emotion hay social behavior ở Psychology.
-
-
-> **Chuyển mạch:** Ứng dụng chỉ đáng tin khi biết mình đang dựa vào loại bằng chứng nào. Phần Five-level Evidence Dependency đặt các quyết định ứng dụng lên một thang kiểm chứng rõ hơn.
+> **Chuyển mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Applied Psychology** nêu điều cần giải thích; **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. quy tắc (rule / 규칙) khi tạo chapter mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)
 
@@ -217,18 +220,14 @@ Historical theory
 
 Một chapter có thể chứa nhiều mức đồng thời. Status phải gắn vào **claim**, không gắn cứng vào toàn bộ topic.
 
+Phần điều hướng này bàn giao dependency giữa các domain và chỉ ra các đường đọc thay thế. Chọn route theo câu hỏi hiện tại, rồi quay lại foundation khi một thuật ngữ hoặc bằng chứng chưa rõ.
 
-> **Chuyển mạch:** Thang bằng chứng cho biết độ chắc của một kết luận; phần Core Navigation biến nhận định đó thành cách chọn đường đọc và tránh nhảy cóc prerequisite.
-
-## 10. cốt lõi (core / 핵심) điều hướng (navigation / 내비게이션)
-
-- Scientific lập luận (reasoning / 추론): [[00_foundations/00_psychology_as_science]] → [[00_foundations/02_research_methods]] → [[00_foundations/03_measurement_statistics]] → [[00_foundations/05_psychometrics_and_test_interpretation]] → [[00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
+- Scientific reasoning: [[00_foundations/00_psychology_as_science]] → [[00_foundations/02_research_methods]] → [[00_foundations/03_measurement_statistics]] → [[00_foundations/05_psychometrics_and_test_interpretation]] → [[00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
 - Brain/mind: [[01_brain_and_mind/00_nervous_system_and_brain]] → [[01_brain_and_mind/01_sensation_and_perception]] → [[01_brain_and_mind/07_attention_consciousness_and_awareness]] → [[01_brain_and_mind/09_consciousness_theories_and_evidence]].
 - học tập (learning / 학습)/cognition: [[02_learning_and_cognition/00_learning_and_conditioning]] → [[02_learning_and_cognition/01_memory]] → [[02_learning_and_cognition/02_thinking_language_and_decision]] → [[02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
 - Historical ngữ cảnh (context / 맥락): [[00_foundations/01_history_and_major_perspectives]] → [[90_connections/05_adler_individual_psychology_in_context]] / [[90_connections/00_freud_jung_and_depth_psychology_in_context]] → [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-
-> **Chuyển mạch:** Sau khi biết cách điều hướng các owner hiện có, mục cuối đặt ra tiêu chí để thêm chapter mới mà không tạo duplicate hoặc phá dependency graph.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** nêu điều cần giải thích; **11. quy tắc (rule / 규칙) khi tạo chapter mới** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 11. quy tắc (rule / 규칙) khi tạo chapter mới
 
@@ -242,4 +241,4 @@ Chỉ tạo chapter mới khi ít nhất một điều đúng:
 
 Không tách tệp (file / 파일) chỉ vì muốn tăng số lượng chapter.
 
-> **Bàn giao:** Sau **11. quy tắc (rule / 규칙) khi tạo chapter mới**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **11. quy tắc (rule / 규칙) khi tạo chapter mới**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

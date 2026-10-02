@@ -1,7 +1,6 @@
 # Human–AI collaboration, trust và giảm tải nhận thức
 
-> **Mạch đọc:** Đọc **Human–AI collaboration, trust và giảm tải nhận thức** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Trust, trustworthiness và reliance là ba construct khác nhau** sang **2. Appropriate reliance**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là owner của **Human–AI collaboration, trust và giảm tải nhận thức**; đặt connection sau cognition/decision và trước moral/value connections. Từ **1. Trust, trustworthiness và reliance là ba construct khác nhau** nối appropriate reliance, cognitive offloading, verification, interface, incentives và task/user moderators, rồi đánh giá hệ thống theo hành vi sử dụng chứ không chỉ accuracy.
 
 AI ngày càng tham gia coding, writing, tìm kiếm (search / 검색), diagnosis hỗ trợ (support / 지원), customer dịch vụ (service / 서비스) và quyết định (decision / 결정) hỗ trợ (support / 지원). Câu hỏi vì vậy không còn chỉ là “mô hình (model / 모델) chính xác bao nhiêu?”, mà là **con người sẽ dùng đầu ra (output / 출력) đó như thế nào trong một workflow cụ thể**.
 
@@ -17,6 +16,8 @@ Một người có thể nói “tôi không tin AI lắm” nhưng vẫn bản 
 
 Rà soát (review / 검토) 2025–2026 về trust in AI nhấn mạnh rằng nếu trộn ba construct này, nghiên cứu dễ kết luận sai rằng “trust cao = sử dụng đúng”.
 
+> **Chuyển mạch:** Trong **Human–AI collaboration, trust và giảm tải nhận thức**, **2. Appropriate reliance** tiếp nhận điểm tựa từ **1. Trust, trustworthiness và reliance là ba construct khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Calibration phải theo tác vụ (task / 작업), không theo “AI nói chung”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Appropriate reliance
 
 **Sự phụ thuộc phù hợp (appropriate reliance)** nghĩa là dựa vào AI khi nó đáng dựa và giữ/reclaim human judgment khi mô hình (model / 모델) không đáng dựa.
@@ -30,11 +31,15 @@ AI đúng + user reject   → under-reliance
 
 Điểm này quan trọng hơn average trust score.
 
+> **Chuyển mạch:** Ở chặng này của **Human–AI collaboration, trust và giảm tải nhận thức**, **3. Calibration phải theo tác vụ (task / 작업), không theo “AI nói chung”** tiếp nhận điểm tựa từ **2. Appropriate reliance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Automation độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Calibration phải theo tác vụ (task / 작업), không theo “AI nói chung”
 
 Một mã (code / 코드) assistant có thể tốt ở boilerplate nhưng yếu với undocumented nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙). Một mô hình (model / 모델) có thể mạnh ở summarization nhưng kém ở source-grounded factual xác minh (verification / 확인).
 
 Người dùng cần **năng lực (capability / 역량) profile theo tác vụ (task / 작업)**, không phải một niềm tin toàn cục kiểu “AI tốt” hoặc “AI không đáng tin”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human–AI collaboration, trust và giảm tải nhận thức**, **4. Automation độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **3. Calibration phải theo tác vụ (task / 작업), không theo “AI nói chung”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. thuật toán (algorithm / 알고리즘) aversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Automation độ lệch (bias / 편향)
 
@@ -44,11 +49,15 @@ Cơ chế có thể gồm perceived authority, giảm vigilance khi automation t
 
 Trong enterprise hệ thống (system / 시스템), trường dữ liệu (field / 필드) được prefill có thể ít bị kiểm tra chỉ vì “hệ thống (system / 시스템) đã điền”.
 
+> **Chuyển mạch:** Trong **Human–AI collaboration, trust và giảm tải nhận thức**, **5. thuật toán (algorithm / 알고리즘) aversion** tiếp nhận điểm tựa từ **4. Automation độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Explainability không đồng nghĩa trust đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. thuật toán (algorithm / 알고리즘) aversion
 
 Ngược lại, **thuật toán (algorithm / 알고리즘) aversion** mô tả việc người dùng từ chối thuật toán (algorithm / 알고리즘) sau khi quan sát lỗi, đôi khi khắt khe hơn với lỗi máy so với lỗi của human expert.
 
 Hai hiện tượng không mâu thuẫn. Cả hai cho thấy reliance phụ thuộc perceived điều khiển (control / 제어), consequence, previous experience và xã hội (social / 사회적) framing chứ không chỉ mục tiêu (objective / 목표) accuracy.
+
+> **Chuyển mạch:** Ở chặng này của **Human–AI collaboration, trust và giảm tải nhận thức**, **6. Explainability không đồng nghĩa trust đúng** tiếp nhận điểm tựa từ **5. thuật toán (algorithm / 알고리즘) aversion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. bất định (uncertainty / 불확실성) communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Explainability không đồng nghĩa trust đúng
 
@@ -64,6 +73,8 @@ user hiểu được limitation không?
 explanation có giúp detect error không?
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human–AI collaboration, trust và giảm tải nhận thức**, **7. bất định (uncertainty / 불확실성) communication** tiếp nhận điểm tựa từ **6. Explainability không đồng nghĩa trust đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cognitive offloading** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. bất định (uncertainty / 불확실성) communication
 
 AI thường trả lời bằng câu hoàn chỉnh ngay cả khi bằng chứng (evidence / 증거) yếu, tạo **ảo giác chắc chắn (illusion of certainty)**.
@@ -74,6 +85,8 @@ Nhưng thêm quá nhiều bất định (uncertainty / 불확실성) tín hiệu
 
 Xem [[03_risk_uncertainty_and_science_communication]].
 
+> **Chuyển mạch:** Trong **Human–AI collaboration, trust và giảm tải nhận thức**, **8. Cognitive offloading** tiếp nhận điểm tựa từ **7. bất định (uncertainty / 불확실성) communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Cognitive offloading
 
 **Giảm tải nhận thức (cognitive offloading)** là chuyển một phần công việc nhận thức sang bên ngoài (external / 외부) công cụ (tool / 도구). ghi chú (note / 노트), calculator, GPS và IDE autocomplete đều là offloading; AI mở rộng nó sang synthesis, drafting, planning và reasoning-like đầu ra (output / 출력).
@@ -81,6 +94,8 @@ Xem [[03_risk_uncertainty_and_science_communication]].
 Offloading không mặc định xấu. Câu hỏi là **mục tiêu hiện tại là hiệu năng (performance / 성능) hay học tập (learning / 학습)**, và skill nào vẫn cần giữ nội bộ.
 
 Xem [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]].
+
+> **Chuyển mạch:** Ở chặng này của **Human–AI collaboration, trust và giảm tải nhận thức**, **9. hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal** tiếp nhận điểm tựa từ **8. Cognitive offloading** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Deskilling là nhiều hiện tượng khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal
 
@@ -98,11 +113,15 @@ tự làm trước
 
 Đây là học tập (learning / 학습) thiết kế (design / 설계) heuristic, không phải universal law.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human–AI collaboration, trust và giảm tải nhận thức**, **10. Deskilling là nhiều hiện tượng khác nhau** tiếp nhận điểm tựa từ **9. hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. xác minh (verification / 확인) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Deskilling là nhiều hiện tượng khác nhau
 
 **Suy giảm kỹ năng (deskilling)** có thể gồm giảm declarative kiến thức (knowledge / 지식), procedural fluency, lỗi (error / 오류) detection, situation awareness hoặc calibration.
 
 Không có bằng chứng (evidence / 증거) để nói “dùng AI chắc chắn làm con người kém thông minh”. kết quả (outcome / 결과) phụ thuộc tác vụ (task / 작업) allocation, huấn luyện (training / 학습) thiết kế (design / 설계), frequency of independent practice và cách rà soát (review / 검토).
+
+> **Chuyển mạch:** Trong **Human–AI collaboration, trust và giảm tải nhận thức**, **11. xác minh (verification / 확인) debt** tiếp nhận điểm tựa từ **10. Deskilling là nhiều hiện tượng khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Fluency heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. xác minh (verification / 확인) debt
 
@@ -111,6 +130,8 @@ AI có thể tạo sản phẩm tạo ra (artifact / 산출물) nhanh hơn con n
 Rủi ro (risk / 위험) tăng khi đầu ra (output / 출력) dài, lỗi khó phát hiện, nguồn (source / 소스) không visible, reviewer bị thời gian (time / 시간) pressure và wording rất fluent.
 
 Trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학), generate 20 tệp (file / 파일) nhanh nhưng không hiểu giả định (assumption / 가정) có thể tăng maintenance chi phí (cost / 비용) dù short-term velocity trông cao.
+
+> **Chuyển mạch:** Ở chặng này của **Human–AI collaboration, trust và giảm tải nhận thức**, **12. Fluency heuristic** tiếp nhận điểm tựa từ **11. xác minh (verification / 확인) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Anthropomorphism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Fluency heuristic
 
@@ -126,17 +147,23 @@ chi tiết nhiều ≠ factual accuracy
 
 Xem [[../06_applied/17_misinformation_belief_revision_and_inoculation]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human–AI collaboration, trust và giảm tải nhận thức**, **13. Anthropomorphism** tiếp nhận điểm tựa từ **12. Fluency heuristic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Human-in-the-loop phải là oversight thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Anthropomorphism
 
 Chat giao diện (interface / 인터페이스) kích hoạt xã hội (social / 사회적) cognition. Người dùng có thể gán intention, empathy hoặc understanding cho hệ thống (system / 시스템).
 
 Anthropomorphism có thể giúp tương tác (interaction / 상호작용) tự nhiên nhưng cũng làm ranh giới (boundary / 경계) mờ và tăng disclosure. rà soát (review / 검토) 2026 về trust in AI nhấn mạnh trust là socially embedded và agent-specific; vì vậy “AI trust” không thể chỉ đo như reaction với một công cụ vô danh.
 
+> **Chuyển mạch:** Trong **Human–AI collaboration, trust và giảm tải nhận thức**, **14. Human-in-the-loop phải là oversight thật** tiếp nhận điểm tựa từ **13. Anthropomorphism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. nhóm (team / 팀) cognition với AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Human-in-the-loop phải là oversight thật
 
 Human checkpoint chỉ có ý nghĩa nếu reviewer có thời gian, competence, ngữ cảnh (context / 맥락), authority và tín hiệu (signal / 신호) để phát hiện lỗi.
 
 Nếu một người phải approve hàng trăm recommendation với accuracy rất cao, họ dễ thành rubber stamp. “Có human rà soát (review / 검토)” không tự động là an toàn (safety / 안전) cơ chế (mechanism / 메커니즘).
+
+> **Chuyển mạch:** Ở chặng này của **Human–AI collaboration, trust và giảm tải nhận thức**, **15. nhóm (team / 팀) cognition với AI** tiếp nhận điểm tựa từ **14. Human-in-the-loop phải là oversight thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. AI trong quyết định (decision / 결정) hỗ trợ (support / 지원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. nhóm (team / 팀) cognition với AI
 
@@ -151,6 +178,8 @@ Khi AI trở thành thành phần của workflow, nhóm (team / 팀) cần dùng
 
 Nếu mỗi người tự xây trust mô hình (model / 모델) riêng, consistency và auditability giảm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human–AI collaboration, trust và giảm tải nhận thức**, **16. AI trong quyết định (decision / 결정) hỗ trợ (support / 지원)** tiếp nhận điểm tựa từ **15. nhóm (team / 팀) cognition với AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. AI và everyday self-regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. AI trong quyết định (decision / 결정) hỗ trợ (support / 지원)
 
 Một khung phần mềm (framework / 프레임워크) thực dụng:
@@ -164,11 +193,15 @@ hậu quả khó đảo ngược        → tăng friction trước action
 
 Friction đôi khi là an toàn (safety / 안전) tính năng (feature / 기능), không phải UX thất bại (failure / 실패).
 
+> **Chuyển mạch:** Trong **Human–AI collaboration, trust và giảm tải nhận thức**, **17. AI và everyday self-regulation** tiếp nhận điểm tựa từ **16. AI trong quyết định (decision / 결정) hỗ trợ (support / 지원)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Ranh giới bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. AI và everyday self-regulation
 
 AI có thể hỗ trợ planning, reminder, reflection và journaling prompt. Nhưng nếu mọi quyết định (decision / 결정) nhỏ đều outsource, người dùng có thể giảm practice tự quan sát và tự quyết định.
 
 Một cách dùng thận trọng là AI đóng vai **giàn giáo (scaffold)**: hỗ trợ cấu trúc (structure / 구조) bài toán (problem / 문제), để người dùng (user / 사용자) chọn hành động (action / 동작), theo dõi kết quả (outcome / 결과) rồi giảm hỗ trợ (support / 지원) khi skill tăng.
+
+> **Chuyển mạch:** Ở chặng này của **Human–AI collaboration, trust và giảm tải nhận thức**, **17. AI và everyday self-regulation** nêu điều cần giải thích; **18. Ranh giới bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Ranh giới bằng chứng
 
@@ -180,6 +213,8 @@ Một cách dùng thận trọng là AI đóng vai **giàn giáo (scaffold)**: h
 
 **Không được nói:** trust càng cao càng tốt, explainability tự động làm AI an toàn, dùng AI chắc chắn deskill, hoặc human rà soát (review / 검토) luôn đủ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Human–AI collaboration, trust và giảm tải nhận thức**, các dấu vết trong **18. Ranh giới bằng chứng** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 \[
@@ -188,8 +223,10 @@ kết quả (outcome / 결과) = f(model, user, interface, Workflow, Incentive, 
 
 > Human–AI hệ thống (system / 시스템) nên được đánh giá như **một hệ thống nhận thức chung (joint cognitive system)**, không chỉ bằng benchmark accuracy của mô hình (model / 모델).
 
+> **Chuyển mạch:** Trong **Human–AI collaboration, trust và giảm tải nhận thức**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Xem [[../06_applied/02_hci_ai_and_human_decision_support]], [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]], [[01_psychology_biology_statistics_and_ai]], [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]], [[03_risk_uncertainty_and_science_communication]] và [[../06_applied/17_misinformation_belief_revision_and_inoculation]].
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 freud jung and depth psychology in context](./00_freud_jung_and_depth_psychology_in_context.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

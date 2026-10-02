@@ -1,7 +1,6 @@
 # Điều trị sinh học, phục hồi và chăm sóc cộng đồng
 
-> **Mạch đọc:** Đọc **Điều trị sinh học, phục hồi và chăm sóc cộng đồng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. kết quả (outcome / 결과) bằng chứng (evidence / 증거) khác cơ chế (mechanism / 메커니즘) bằng chứng (evidence / 증거)** sang **2. Comparative bằng chứng (evidence / 증거) quan trọng hơn câu hỏi “thuốc hay therapy?”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là owner của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**; đặt chapter sau psychotherapy foundations và cạnh mental-health assessment. Từ **1. kết quả (outcome / 결과) bằng chứng (evidence / 증거) khác cơ chế (mechanism / 메커니즘) bằng chứng (evidence / 증거)** nối medication, psychotherapy, sleep, housing, family, community access và comparative evidence, rồi cân nhắc severity, harms, preference và formulation.
 
 Mental health treatment thường bị mô tả bằng hai cực giả: “vấn đề nằm trong não nên chỉ cần thuốc” hoặc “vấn đề tâm lý nên chỉ cần psychotherapy”. Cả hai đều quá đơn giản. Con người là một hệ sinh học đang học tập và sống trong môi trường xã hội; thuốc, psychotherapy, sleep, housing, family, công việc (work / 작업) và community hỗ trợ (support / 지원) có thể cùng tác động lên kết quả (outcome / 결과).
 
@@ -27,11 +26,15 @@ Mechanism nào thực sự gây change?
 
 Câu hỏi thứ ba thường khó hơn câu hỏi thứ nhất.
 
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **1. kết quả (outcome / 결과) bằng chứng (evidence / 증거) khác cơ chế (mechanism / 메커니즘) bằng chứng (evidence / 증거)** nêu điều cần giải thích; **2. Comparative bằng chứng (evidence / 증거) quan trọng hơn câu hỏi “thuốc hay therapy?”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Psychopharmacology không phải “bổ sung chất thiếu”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Comparative bằng chứng (evidence / 증거) quan trọng hơn câu hỏi “thuốc hay therapy?”
 
 Treatment choice hiếm khi chỉ là biological versus psychological. Có thể so sánh medication, psychotherapy, combination treatment, neuromodulation, community intervention hoặc stepped-care chuỗi (sequence / 시퀀스).
 
 Một intervention có thể có efficacy cao nhưng burden lớn; một intervention khác tác động (effect / 효과) nhỏ hơn nhưng dễ tiếp cận, ít side tác động (effect / 효과) hoặc phù hợp preference hơn. Vì vậy **expected benefit** phải được đọc cùng harm, chi phí (cost / 비용), truy cập (access / 접근) và patient giá trị (value / 값).
+
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **2. Comparative bằng chứng (evidence / 증거) quan trọng hơn câu hỏi “thuốc hay therapy?”** nêu điều cần giải thích; **3. Psychopharmacology không phải “bổ sung chất thiếu”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Dược lực học và dược động học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Psychopharmacology không phải “bổ sung chất thiếu”
 
@@ -41,11 +44,15 @@ Cách giải thích `neurotransmitter X thấp → disorder Y → thêm X là ch
 
 Clinical improvement cũng có thể xuất hiện chậm hơn pharmacological binding ban đầu, cho thấy cơ chế (mechanism / 메커니즘) điều trị không thể rút gọn thành một synapse đơn lẻ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **4. Dược lực học và dược động học** tiếp nhận điểm tựa từ **3. Psychopharmacology không phải “bổ sung chất thiếu”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Antidepressants** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Dược lực học và dược động học
 
 **Dược lực học (pharmacodynamics)** hỏi thuốc làm gì với cơ thể. **Dược động học (pharmacokinetics)** hỏi cơ thể hấp thu, phân bố, chuyển hóa và thải thuốc ra sao.
 
 Age, liver/kidney hàm (function / 함수), genetics, interacting medication, smoking, pregnancy status và adherence có thể thay exposure hoặc rủi ro (risk / 위험). Vì vậy cùng dose không có nghĩa cùng biological tác động (effect / 효과).
+
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **5. Antidepressants** tiếp nhận điểm tựa từ **4. Dược lực học và dược động học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Antipsychotics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Antidepressants
 
@@ -54,6 +61,8 @@ Antidepressants gồm nhiều lớp (class / 클래스) và được dùng cho d
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** average benefit tồn tại trong nhiều indication, nhưng phản hồi (response / 응답) phân bố rộng giữa cá nhân và phụ thuộc severity, diagnosis, duration, prior treatment và study thiết kế (design / 설계). Không nên trình bày antidepressant như “works for everyone” hoặc “never works”.
 
 Side effects và discontinuation symptoms là real considerations. Việc bắt đầu, đổi hoặc ngừng medication cần được trao đổi với prescriber thay vì tự suy từ một chapter giáo dục.
+
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **6. Antipsychotics** tiếp nhận điểm tựa từ **5. Antidepressants** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Bipolar-spectrum treatment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Antipsychotics
 
@@ -65,6 +74,8 @@ Một phản hồi (response / 응답) tốt với antipsychotic không “chứ
 
 Xem [[../04_mental_health/04_psychosis_and_schizophrenia_spectrum]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **7. Bipolar-spectrum treatment** tiếp nhận điểm tựa từ **6. Antipsychotics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. ADHD medication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Bipolar-spectrum treatment
 
 Trong bipolar disorder, treatment planning cần tính cả acute episode và prevention of recurrence. Việc chỉ “nâng mood” không đủ vì activation/manic rủi ro (risk / 위험) làm thời gian (time / 시간) course quan trọng hơn một snapshot symptom.
@@ -72,6 +83,8 @@ Trong bipolar disorder, treatment planning cần tính cả acute episode và pr
 Đây là ví dụ rõ cho lý do diagnosis và longitudinal lịch sử (history / 이력) phải đi trước treatment suy luận (inference / 추론).
 
 Xem [[../04_mental_health/03_depression_bipolar_and_suicidality]].
+
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **8. ADHD medication** tiếp nhận điểm tựa từ **7. Bipolar-spectrum treatment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ECT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. ADHD medication
 
@@ -81,6 +94,8 @@ Stimulant và non-stimulant medication có thể cải thiện attention regulat
 
 Medication cũng không thay sleep, tác vụ (task / 작업) cấu trúc (structure / 구조), education hỗ trợ (support / 지원) và accommodation.
 
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **9. ECT** tiếp nhận điểm tựa từ **8. ADHD medication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. TMS và các dạng neuromodulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. ECT
 
 **Liệu pháp điện co giật (electroconvulsive therapy, ECT)** là treatment có bằng chứng (evidence / 증거) mạnh trong một số severe depression, catatonia và tình huống cần phản hồi (response / 응답) nhanh.
@@ -89,17 +104,23 @@ Practice hiện đại dùng anesthesia và monitoring. Memory-related adverse e
 
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** ECT efficacy trong indication phù hợp không có nghĩa nó là first-line cho mọi depression. Severity, urgency, prior phản hồi (response / 응답), rủi ro (risk / 위험) và patient preference đều quan trọng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **10. TMS và các dạng neuromodulation** tiếp nhận điểm tựa từ **9. ECT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Ketamine/esketamine và rapid-acting treatment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. TMS và các dạng neuromodulation
 
 **Kích thích từ xuyên sọ (transcranial magnetic stimulation, TMS)** điều biến cortical activity bằng từ trường. Nó ít xâm lấn hơn ECT nhưng treatment burden, giao thức (protocol / 프로토콜), indication và phản hồi (response / 응답) profile khác.
 
 Các dạng neuromodulation mới hơn tiếp tục được nghiên cứu. Với intervention mới, cần phân biệt regulatory approval, efficacy trial, comparative effectiveness và marketing claim.
 
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **11. Ketamine/esketamine và rapid-acting treatment** tiếp nhận điểm tựa từ **10. TMS và các dạng neuromodulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Placebo, expectation và ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Ketamine/esketamine và rapid-acting treatment
 
 Rapid-acting antidepressant research cho thấy một số intervention có thể làm symptom thay đổi nhanh hơn conventional antidepressant ở selected populations.
 
 > **hiện tại (current / 현재) bằng chứng (evidence / 증거):** có bằng chứng (evidence / 증거) clinical quan trọng cho ketamine/esketamine trong một số treatment-resistant depression contexts, nhưng durability, adverse effects, truy cập (access / 접근) và maintenance chiến lược (strategy / 전략) vẫn cần quản lý chuyên môn. Đây không phải self-medication lĩnh vực (domain / 도메인).
+
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **12. Placebo, expectation và ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **11. Ketamine/esketamine và rapid-acting treatment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Measurement-based care** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Placebo, expectation và ngữ cảnh (context / 맥락)
 
@@ -111,6 +132,8 @@ Ngược lại, nocebo làm negative expectation tăng symptom hoặc side-effec
 
 Xem [[../06_applied/13_placebo_nocebo_expectation_and_context]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **12. Placebo, expectation và ngữ cảnh (context / 맥락)** nêu điều cần giải thích; **13. Measurement-based care** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Clinical khôi phục (recovery / 복구) và personal khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Measurement-based care
 
 Treatment tốt cần phản hồi (feedback / 피드백). **Chăm sóc dựa trên đo lường (measurement-based care)** dùng symptom/hàm (function / 함수) measure lặp lại để xem trajectory thay vì chỉ dựa impression.
@@ -119,17 +142,23 @@ Nhưng score không thay clinical judgment. sai số đo lường (measurement e
 
 Xem [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **13. Measurement-based care** nêu điều cần giải thích; **14. Clinical khôi phục (recovery / 복구) và personal khôi phục (recovery / 복구)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Community mental health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Clinical khôi phục (recovery / 복구) và personal khôi phục (recovery / 복구)
 
 **Clinical khôi phục (recovery / 복구)** thường nhấn symptom và hàm (function / 함수). **Personal khôi phục (recovery / 복구)** nhấn autonomy, định danh (identity / 식별자), hope, meaning và khả năng xây dựng đời sống đáng sống dù vulnerability chưa biến mất hoàn toàn.
 
 Hai nghĩa này bổ sung nhau. Một người symptom giảm nhưng vẫn không có housing, job hoặc xã hội (social / 사회적) liên kết (connection / 연결) chưa chắc đã có good long-term kết quả (outcome / 결과).
 
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **15. Community mental health** tiếp nhận điểm tựa từ **14. Clinical khôi phục (recovery / 복구) và personal khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Supported employment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Community mental health
 
 Community care có thể gồm trường hợp (case / 사례) management, family psychoeducation, crisis dịch vụ (service / 서비스), peer hỗ trợ (support / 지원), supported housing, substance-use dịch vụ (service / 서비스), rehabilitation, supported employment và education hỗ trợ (support / 지원).
 
 Điểm cốt lõi là treatment không kết thúc ở clinic. xã hội (social / 사회적) determinant và daily môi trường (environment / 환경) có thể duy trì hoặc phá khôi phục (recovery / 복구).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **16. Supported employment** tiếp nhận điểm tựa từ **15. Community mental health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Family intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Supported employment
 
@@ -139,11 +168,15 @@ Các mô hình supported employment, đặc biệt **Individual Placement and h�
 
 Công việc (work / 작업) kết quả (outcome / 결과) cũng không nên được dùng như sole measure của human worth hoặc khôi phục (recovery / 복구).
 
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **17. Family intervention** tiếp nhận điểm tựa từ **16. Supported employment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Prevention có nhiều tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Family intervention
 
 Family psychoeducation và hỗ trợ (support / 지원) có thể giảm stress, tăng understanding và hỗ trợ relapse prevention trong một số conditions.
 
 Nhưng family involvement cần respect autonomy và privacy của người nhận care. “Family hỗ trợ (support / 지원)” không đồng nghĩa family luôn đúng hoặc nên kiểm soát mọi quyết định (decision / 결정).
+
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **18. Prevention có nhiều tầng** tiếp nhận điểm tựa từ **17. Family intervention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. dùng chung (shared / 공유) decision-making** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Prevention có nhiều tầng
 
@@ -153,6 +186,8 @@ Prevention có thể diễn ra qua school climate, anti-bullying, substance chí
 
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** population intervention thường có tác động (effect / 효과) nhỏ hơn intervention clinical cá nhân nhưng có thể tạo impact lớn khi reach rộng. Tuy nhiên hiện thực (implementation / 구현) và unintended consequence phải được đánh giá.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **19. dùng chung (shared / 공유) decision-making** tiếp nhận điểm tựa từ **18. Prevention có nhiều tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Harms, dropout và burden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. dùng chung (shared / 공유) decision-making
 
 **Ra quyết định chung (shared decision-making)** kết hợp best bằng chứng (evidence / 증거), clinician expertise và preference/giá trị (value / 값) của người nhận treatment.
@@ -161,17 +196,23 @@ Prevention có thể diễn ra qua school climate, anti-bullying, substance chí
 
 Dùng chung (shared / 공유) decision-making không có nghĩa “mọi lựa chọn đều tốt như nhau”; bằng chứng (evidence / 증거) chất lượng (quality / 품질) vẫn quan trọng.
 
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **20. Harms, dropout và burden** tiếp nhận điểm tựa từ **19. dùng chung (shared / 공유) decision-making** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Combination treatment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Harms, dropout và burden
 
 Treatment research dễ tập trung efficacy mà bỏ qua burden. Một intervention có thể có benefit nhưng cũng có side tác động (effect / 효과), thời gian (time / 시간) chi phí (cost / 비용), stigma, financial chi phí (cost / 비용) hoặc dropout rủi ro (risk / 위험).
 
 Kết quả (outcome / 결과) evaluation vì vậy cần hỏi không chỉ “symptom giảm bao nhiêu?” mà còn “bao nhiêu người discontinue?”, “harm nào xảy ra?”, “hàm (function / 함수) và chất lượng (quality / 품질) of life thay đổi ra sao?”.
 
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **21. Combination treatment** tiếp nhận điểm tựa từ **20. Harms, dropout và burden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Biological mức (level / 수준) không phủ định psychological mức (level / 수준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Combination treatment
 
 Trong một số điều kiện (condition / 조건), medication + psychotherapy có benefit hơn một modality đơn lẻ; ở điều kiện (condition / 조건) khác difference nhỏ hoặc không rõ.
 
 Không có universal quy tắc (rule / 규칙) “combination luôn tốt hơn”. Sequencing, severity, previous phản hồi (response / 응답) và patient preference matter.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **22. Biological mức (level / 수준) không phủ định psychological mức (level / 수준)** tiếp nhận điểm tựa từ **21. Combination treatment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Biological mức (level / 수준) không phủ định psychological mức (level / 수준)
 
@@ -189,6 +230,8 @@ behavior
 family / work / community
 ```
 
+> **Chuyển mạch:** Trong **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **23. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **22. Biological mức (level / 수준) không phủ định psychological mức (level / 수준)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Những hiểu lầm phổ biến
 
 **“Dùng thuốc nghĩa là yếu.”** Đây là moralization của medical quyết định (decision / 결정).
@@ -202,6 +245,8 @@ family / work / community
 **“Treatment phản hồi (response / 응답) chứng minh diagnosis.”** Không. phản hồi (response / 응답) có limited diagnostic specificity.
 
 **“Một treatment có efficacy nghĩa cơ chế (mechanism / 메커니즘) của nó đã được chứng minh.”** Không. kết quả (outcome / 결과) bằng chứng (evidence / 증거) và cơ chế (mechanism / 메커니즘) bằng chứng (evidence / 증거) phải tách riêng.
+
+> **Chuyển mạch:** Ở chặng này của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **24. Mô hình tư duy** gom các mảnh từ **23. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Mô hình tư duy
 
@@ -223,6 +268,10 @@ Adjust treatment / environment
 
 Treatment tốt là quá trình cập nhật (update / 업데이트) dựa trên bằng chứng (evidence / 증거) và trajectory, không phải chọn một “trường phái đúng tuyệt đối”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều trị sinh học, phục hồi và chăm sóc cộng đồng**, **Kết nối kiến thức** gom các mảnh từ **24. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [[00_psychotherapy_and_change]], [[01_cbt_behavioral_and_third_wave]], [[03_psychodynamic_humanistic_and_systemic_therapy]], [[../04_mental_health/01_assessment_and_diagnosis]], [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]], [[../06_applied/13_placebo_nocebo_expectation_and_context]] và [[../06_applied/22_career_vocational_psychology_and_person_environment_fit]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

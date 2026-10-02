@@ -1,7 +1,6 @@
 # Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)
 
-> **Mạch đọc:** Đọc **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đọc phả hệ trên bốn trục** sang **Samsung: thương mại → sản xuất → điện tử → bán dẫn → công nghệ tiên tiến**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là owner của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**; đặt chapter trong tuyến history–ownership–case studies của Korea business library. Từ **Đọc phả hệ trên bốn trục** nối capital, technology, sector entry/exit và control lineage, rồi dùng Samsung/Hyundai/SK/LG examples để giải thích tái phân bổ năng lực và quyền kiểm soát theo thời gian.
 
 Tên một tập đoàn hiện tại dễ tạo ảo giác rằng ngành cốt lõi của nó đã tồn tại ngay từ đầu. Thực tế, phần lớn tập đoàn lớn Hàn Quốc trải qua nhiều lần **gia nhập ngành, rút khỏi ngành, mua lại, chia tách, sáp nhập, tái cơ cấu và chuyển đổi công nghệ**. Samsung không bắt đầu bằng bán dẫn; Hyundai không bắt đầu bằng ô tô; SK không bắt đầu bằng viễn thông hay chip nhớ; LG không bắt đầu bằng pin.
 
@@ -21,6 +20,8 @@ Khi theo dõi một tập đoàn qua nhiều thập niên, không nên chỉ li�
 
 > **mô hình tư duy (mental model / 사고 모델):** lịch sử doanh nghiệp có giá trị khi nó giải thích vì sao doanh nghiệp hiện tại có tài sản, thói quen, nhà cung cấp, cấu trúc quản trị và hồ sơ rủi ro như hôm nay.
 
+> **Chuyển mạch:** Trong **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Samsung: thương mại → sản xuất → điện tử → bán dẫn → công nghệ tiên tiến** tiếp nhận điểm tựa từ **Đọc phả hệ trên bốn trục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hyundai: xây dựng → thực thi dự án nặng → đóng tàu → ô tô → các dòng tập đoàn tách biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Samsung: thương mại → sản xuất → điện tử → bán dẫn → công nghệ tiên tiến
 
 Samsung bắt đầu năm 1938 với hoạt động thương mại. Thương mại giúp tích lũy năng lực tìm nguồn hàng, phân phối, quản lý vốn lưu động và xây quan hệ kinh doanh. Sau chiến tranh, tập đoàn mở rộng sang sản xuất, tài chính và bảo hiểm; Samsung Electronics được thành lập năm 1969.
@@ -32,6 +33,8 @@ Không nên hiểu bước chuyển này là “thương mại tự nhiên dẫn
 Bán dẫn trở thành cỗ máy kinh tế quan trọng vì năng lực quy trình có tính tích lũy. Mỗi thế hệ công nghệ tạo kinh nghiệm, hệ sinh thái nhà cung cấp và đội ngũ kỹ sư cho thế hệ sau. Đây là **năng lực công nghệ tích lũy (cumulative technological capability)**.
 
 Phả hệ Samsung cũng nhắc một điều quan trọng: “Samsung” không phải một pháp nhân duy nhất. Samsung Electronics, Samsung C&T, Samsung Life, Samsung Biologics và các công ty khác có bảng cân đối riêng. Lịch sử tập đoàn luôn phải được chuyển thành **bản đồ pháp nhân (entity map)** trước khi phân tích tài chính.
+
+> **Chuyển mạch:** Ở chặng này của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Hyundai: xây dựng → thực thi dự án nặng → đóng tàu → ô tô → các dòng tập đoàn tách biệt** tiếp nhận điểm tựa từ **Samsung: thương mại → sản xuất → điện tử → bán dẫn → công nghệ tiên tiến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LG: hóa chất → hàng tiêu dùng → điện tử → vật liệu và pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hyundai: xây dựng → thực thi dự án nặng → đóng tàu → ô tô → các dòng tập đoàn tách biệt
 
@@ -51,6 +54,8 @@ Công nghệ nước ngoài
 
 Điểm quan trọng là “Hyundai” lịch sử sau này tách thành nhiều nhóm độc lập. Hyundai Motor Group, HD Hyundai và Hyundai Department Store Group không nên bị coi như một pháp nhân hoặc một tập đoàn kiểm soát thống nhất chỉ vì cùng có tên Hyundai.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **LG: hóa chất → hàng tiêu dùng → điện tử → vật liệu và pin** tiếp nhận điểm tựa từ **Hyundai: xây dựng → thực thi dự án nặng → đóng tàu → ô tô → các dòng tập đoàn tách biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SK: dệt may → năng lượng → viễn thông → bán dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## LG: hóa chất → hàng tiêu dùng → điện tử → vật liệu và pin
 
 LG có nguồn gốc từ Lucky Chemical thành lập năm 1947. Hóa chất và hàng tiêu dùng tạo nền về sản xuất, thương hiệu và phân phối. GoldStar—tiền thân của LG Electronics—mở rộng sang điện tử.
@@ -67,6 +72,8 @@ Hóa chất cơ bản
 
 Việc tách LG Chem và LG năng lượng (energy / 에너지) Solution cũng cho thấy phả hệ kinh doanh phải đi cùng phả hệ pháp nhân. Một ngành có thể tiếp tục phát triển nhưng quyền sở hữu tài sản và dòng tiền đã chuyển sang pháp nhân khác.
 
+> **Chuyển mạch:** Trong **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **SK: dệt may → năng lượng → viễn thông → bán dẫn** tiếp nhận điểm tựa từ **LG: hóa chất → hàng tiêu dùng → điện tử → vật liệu và pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lotte: thương mại, thực phẩm, bán lẻ và dịch vụ tiêu dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## SK: dệt may → năng lượng → viễn thông → bán dẫn
 
 SK có nguồn gốc từ Sunkyong Textiles trong thập niên 1950. Sau đó tập đoàn mở rộng sang năng lượng và hóa chất, rồi viễn thông và bán dẫn.
@@ -75,11 +82,15 @@ SK có nguồn gốc từ Sunkyong Textiles trong thập niên 1950. Sau đó t�
 
 Việc SK bước vào viễn thông và sau đó sở hữu SK hynix cho thấy **M&A có thể thay đổi DNA ngành của tập đoàn nhanh hơn tăng trưởng hữu cơ**. Nhưng mua tài sản chỉ là bước đầu; giá trị dài hạn phụ thuộc khả năng đầu tư tiếp, giữ nhân tài và tích hợp chiến lược.
 
+> **Chuyển mạch:** Ở chặng này của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Lotte: thương mại, thực phẩm, bán lẻ và dịch vụ tiêu dùng** tiếp nhận điểm tựa từ **SK: dệt may → năng lượng → viễn thông → bán dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CJ: từ đường và thực phẩm sang logistics, truyền thông và nội dung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lotte: thương mại, thực phẩm, bán lẻ và dịch vụ tiêu dùng
 
 Lotte phát triển mạnh quanh thực phẩm, bán lẻ, khách sạn và các hoạt động tiêu dùng. Phả hệ này khác nhóm công nghiệp nặng vì cỗ máy giá trị nằm nhiều hơn ở thương hiệu, địa điểm, lưu lượng khách, mạng lưới phân phối và quản lý danh mục sản phẩm.
 
 Điều này nhắc rằng chaebol không đồng nghĩa với công nghiệp nặng. Một tập đoàn lớn có thể tích lũy quyền lực kinh tế qua mạng lưới tiêu dùng và bất động sản thương mại thay vì nhà máy thép hoặc bán dẫn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **CJ: từ đường và thực phẩm sang logistics, truyền thông và nội dung** tiếp nhận điểm tựa từ **Lotte: thương mại, thực phẩm, bán lẻ và dịch vụ tiêu dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **POSCO: từ doanh nghiệp thép chiến lược đến tập đoàn vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CJ: từ đường và thực phẩm sang logistics, truyền thông và nội dung
 
@@ -89,11 +100,15 @@ Phả hệ CJ cho thấy một tập đoàn có thể chuyển từ sản phẩm
 
 Logistics và nội dung tưởng rất khác nhau nhưng đều có thể hưởng lợi từ năng lực quản lý mạng lưới, quy mô và dữ liệu nhu cầu.
 
+> **Chuyển mạch:** Trong **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **POSCO: từ doanh nghiệp thép chiến lược đến tập đoàn vật liệu** tiếp nhận điểm tựa từ **CJ: từ đường và thực phẩm sang logistics, truyền thông và nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hanwha: vật liệu công nghiệp → hóa chất → tài chính → quốc phòng và hàng không vũ trụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## POSCO: từ doanh nghiệp thép chiến lược đến tập đoàn vật liệu
 
 POSCO khác nhiều chaebol gia đình vì nguồn gốc gắn với dự án công nghiệp quốc gia và thép thượng nguồn. Năng lực cốt lõi ban đầu là vận hành nhà máy thép tích hợp quy mô lớn với hiệu quả cao.
 
 Khi nền kinh tế chuyển sang pin và vật liệu tiên tiến, POSCO mở rộng sâu hơn vào vật liệu pin và tài nguyên liên quan. Đây là ví dụ về **mở rộng liền kề (adjacent diversification)**: ngành mới sử dụng một phần năng lực hiện có về vật liệu, quy trình công nghiệp, mua nguyên liệu và dự án quy mô lớn.
+
+> **Chuyển mạch:** Ở chặng này của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Hanwha: vật liệu công nghiệp → hóa chất → tài chính → quốc phòng và hàng không vũ trụ** tiếp nhận điểm tựa từ **POSCO: từ doanh nghiệp thép chiến lược đến tập đoàn vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NAVER và Kakao: phả hệ của thời đại số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hanwha: vật liệu công nghiệp → hóa chất → tài chính → quốc phòng và hàng không vũ trụ
 
@@ -102,6 +117,8 @@ Hanwha có lịch sử gắn với vật liệu công nghiệp và hóa chất, 
 Trong ngành quốc phòng, quan hệ với chính phủ, quy định xuất khẩu, chứng nhận, năng lực sản xuất và hỗ trợ vòng đời quan trọng không kém công nghệ sản phẩm.
 
 Phả hệ Hanwha cho thấy một năng lực cũ có thể được định giá lại khi môi trường địa chính trị thay đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **NAVER và Kakao: phả hệ của thời đại số** tiếp nhận điểm tựa từ **Hanwha: vật liệu công nghiệp → hóa chất → tài chính → quốc phòng và hàng không vũ trụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coupang: thương mại điện tử → logistics tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## NAVER và Kakao: phả hệ của thời đại số
 
@@ -121,6 +138,8 @@ Vốn vật chất vẫn quan trọng khi mở rộng trung tâm dữ liệu ho�
 
 Điều này cho thấy Hàn Quốc có thể tạo doanh nghiệp quy mô lớn ngoài cấu trúc chaebol công nghiệp truyền thống.
 
+> **Chuyển mạch:** Trong **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Coupang: thương mại điện tử → logistics tích hợp** tiếp nhận điểm tựa từ **NAVER và Kakao: phả hệ của thời đại số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao tập đoàn tách ra?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Coupang: thương mại điện tử → logistics tích hợp
 
 Coupang bắt đầu như doanh nghiệp thương mại điện tử nhưng dần xây mạng lưới kho và giao hàng vật lý rất lớn. Đây là phả hệ ngược với quan niệm “doanh nghiệp Internet luôn nhẹ tài sản”.
@@ -128,6 +147,8 @@ Coupang bắt đầu như doanh nghiệp thương mại điện tử nhưng dầ
 Năng lực cốt lõi trở thành sự kết hợp giữa phần mềm, dữ liệu nhu cầu, kho hàng, tuyến giao nhận và mật độ đơn hàng.
 
 Coupang cho thấy công ty số có thể tiến hóa thành doanh nghiệp có CAPEX lớn nếu trải nghiệm khách hàng phụ thuộc vào hạ tầng vật lý.
+
+> **Chuyển mạch:** Ở chặng này của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Tại sao tập đoàn tách ra?** tiếp nhận điểm tựa từ **Coupang: thương mại điện tử → logistics tích hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **M&A và chia tách thay đổi cách đọc chuỗi thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tại sao tập đoàn tách ra?
 
@@ -142,6 +163,8 @@ Ai là cổ đông kiểm soát hôm nay?
 ```
 
 Đây là lý do không thể dùng lịch sử thay cho sơ đồ sở hữu hiện tại.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Tại sao tập đoàn tách ra?** xác định đầu vào; **M&A và chia tách thay đổi cách đọc chuỗi thời gian** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Phả hệ vốn và bài toán phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## M&A và chia tách thay đổi cách đọc chuỗi thời gian
 
@@ -158,6 +181,8 @@ Do đó khi đọc lịch sử tài chính cần đánh dấu:
 
 Nếu không, người đọc có thể nhầm thay đổi kế toán/pháp nhân với thay đổi kinh tế thật.
 
+> **Chuyển mạch:** Trong **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **M&A và chia tách thay đổi cách đọc chuỗi thời gian** xác định đầu vào; **Phả hệ vốn và bài toán phân bổ vốn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — Đọc tập đoàn như một sinh vật tiến hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phả hệ vốn và bài toán phân bổ vốn
 
 Một câu hỏi rất mạnh là: **dòng tiền từ ngành nào đã tài trợ cho ngành nào?**
@@ -165,6 +190,8 @@ Một câu hỏi rất mạnh là: **dòng tiền từ ngành nào đã tài tr�
 Nếu một mảng trưởng thành tạo tiền và tập đoàn dùng tiền đó để xây ngành mới có ROIC cao, thị trường vốn nội bộ tạo giá trị. Nếu tiền liên tục được chuyển sang dự án có lợi nhuận thấp vì lý do kiểm soát hoặc tham vọng quy mô, cùng cơ chế có thể phá hủy giá trị.
 
 Phả hệ vì vậy nối trực tiếp với [quản trị doanh nghiệp](../08_corporate_governance_ownership_and_control.md) và [phân bổ vốn](../20_how_to_analyze_a_korean_company.md).
+
+> **Chuyển mạch:** Ở chặng này của **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)**, **Mô hình tư duy (mental model / 사고 모델) — Đọc tập đoàn như một sinh vật tiến hóa** gom các mảnh từ **Phả hệ vốn và bài toán phân bổ vốn** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델) — Đọc tập đoàn như một sinh vật tiến hóa
 
@@ -184,4 +211,4 @@ Tiền ban đầu đến từ đâu?
 
 Trả lời được chuỗi này giúp hiểu vì sao hai tập đoàn cùng lớn nhưng có hồ sơ rủi ro, văn hóa đầu tư và khả năng cạnh tranh hoàn toàn khác nhau.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Đọc tập đoàn như một sinh vật tiến hóa**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) — Đọc tập đoàn như một sinh vật tiến hóa**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
