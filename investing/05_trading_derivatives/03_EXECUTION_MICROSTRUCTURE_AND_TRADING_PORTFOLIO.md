@@ -1,7 +1,6 @@
 # Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch
 
-> **Mạch đọc:** Đặt **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tín hiệu, quy mô rủi ro và thực thi** sang **2. Giá quyết định và giá thực thi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**. Route đi từ signal/position sizing → order book và price formation → execution costs/slippage → portfolio, liquidity và risk limits → transaction-cost analysis, để tín hiệu chuyển thành lợi thế sau chi phí.
 
 > Tín hiệu tốt chưa đủ. Một chiến lược chỉ tạo được lợi thế thật khi lệnh được thực thi với chi phí hợp lý, quy mô vị thế đúng, trạng thái tài khoản chính xác và rủi ro được quản lý ở cấp toàn danh mục. Chương này giải thích bằng tiếng Việt toàn bộ chuỗi từ sổ lệnh tới phân tích chi phí giao dịch; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn khi cần tra cứu.
 
@@ -20,6 +19,8 @@ Tạo tín hiệu (signal generation)
 Nếu kỳ vọng lợi nhuận trước chi phí là `+0,12R` nhưng tổng chênh lệch mua–bán, phí và trượt giá là `0,10R`, phần lớn lợi thế đã biến mất.
 
 Vì vậy thực thi lệnh không phải hậu cần; nó là một phần của kinh tế chiến lược.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **2. Giá quyết định và giá thực thi** tiếp nhận điểm tựa từ **1. Tín hiệu, quy mô rủi ro và thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Sổ lệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Giá quyết định và giá thực thi
 
@@ -42,6 +43,8 @@ Khoảng cách giữa hai mức có thể đến từ:
 
 # Phần II — Sổ lệnh giới hạn
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **3. Sổ lệnh** tiếp nhận điểm tựa từ **2. Giá quyết định và giá thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Ưu tiên giá–thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Sổ lệnh
 
 Order book cho thấy thanh khoản đang chờ ở từng mức giá, nhưng không bảo đảm các lệnh đó còn tồn tại khi lệnh của bạn tới. Hãy đọc độ sâu, sự thay đổi hàng chờ và khả năng rút lệnh cùng nhau.
@@ -56,6 +59,8 @@ Chênh lệch = best ask - best bid
 
 **độ sâu (depth / 깊이)** cho biết khối lượng có sẵn ở nhiều mức giá. Chênh lệch hẹp nhưng độ sâu rất mỏng vẫn có thể gây trượt giá lớn cho lệnh lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **4. Ưu tiên giá–thời gian** tiếp nhận điểm tựa từ **3. Sổ lệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Vị trí trong hàng chờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Ưu tiên giá–thời gian
 
 Nhiều sở giao dịch dùng nguyên tắc gần với **ưu tiên giá–thời gian (price-time priority)**:
@@ -66,6 +71,8 @@ Giá tốt hơn được ưu tiên trước
 ```
 
 Do đó kiểm thử giả định “giá chạm lệnh giới hạn = chắc chắn khớp” thường quá lạc quan.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **5. Vị trí trong hàng chờ** tiếp nhận điểm tựa từ **4. Ưu tiên giá–thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Bên cung cấp và bên lấy thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Vị trí trong hàng chờ
 
@@ -80,6 +87,8 @@ Queue position quyết định xác suất một lệnh limit được khớp tr
 - thời gian chờ.
 
 Với chiến lược rất ngắn hạn, mô hình hàng chờ có thể quan trọng gần ngang chất lượng tín hiệu.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **6. Bên cung cấp và bên lấy thanh khoản** tiếp nhận điểm tựa từ **5. Vị trí trong hàng chờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Lệnh thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Bên cung cấp và bên lấy thanh khoản
 
@@ -97,6 +106,8 @@ Bên lấy thanh khoản có khả năng khớp nhanh hơn nhưng trả chênh l
 
 # Phần III — Các loại lệnh
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **7. Lệnh thị trường** tiếp nhận điểm tựa từ **6. Bên cung cấp và bên lấy thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Lệnh giới hạn có thể khớp ngay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Lệnh thị trường
 
 Market order ưu tiên certainty of execution hơn certainty of price. Nó phù hợp khi không khớp còn tệ hơn giá xấu, nhưng cần stress spread, depth và gap trước khi dùng.
@@ -104,6 +115,8 @@ Market order ưu tiên certainty of execution hơn certainty of price. Nó phù 
 **Lệnh thị trường (market order)** ưu tiên khả năng được khớp, không bảo đảm mức giá chính xác.
 
 Trong thị trường mỏng hoặc khi có tin lớn, giá khớp có thể xa mức nhìn thấy trước khi gửi lệnh.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **7. Lệnh thị trường** đã nêu tiêu chí phân biệt, còn **8. Lệnh giới hạn có thể khớp ngay** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Lệnh giới hạn thụ động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Lệnh giới hạn có thể khớp ngay
 
@@ -113,6 +126,8 @@ Marketable limit order cố giữ trần giá trong khi vẫn muốn khớp ngay
 
 Nó giảm nguy cơ khớp cực xấu nhưng có thể chỉ khớp một phần trong thị trường chạy nhanh.
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **8. Lệnh giới hạn có thể khớp ngay** đã nêu tiêu chí phân biệt, còn **9. Lệnh giới hạn thụ động** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Lệnh dừng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Lệnh giới hạn thụ động
 
 Passive limit order tiết kiệm spread nhưng đổi lại chịu rủi ro không khớp và bị chọn bất lợi. Nó phù hợp hơn khi tín hiệu có độ bền và nhà giao dịch chấp nhận chờ.
@@ -121,17 +136,23 @@ Passive limit order tiết kiệm spread nhưng đổi lại chịu rủi ro kh�
 
 Một vấn đề quan trọng là **lựa chọn bất lợi (adverse selection)**: lệnh có thể được khớp nhiều nhất đúng lúc giá sắp tiếp tục đi ngược vị thế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **9. Lệnh giới hạn thụ động** đã nêu tiêu chí phân biệt, còn **10. Lệnh dừng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Lệnh dừng–giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Lệnh dừng
 
 Lệnh dừng (stop order) chỉ kích hoạt sau khi đạt điều kiện. Giá kích hoạt không phải giá khớp được bảo đảm.
 
 Khoảng nhảy giá có thể biến kế hoạch `-1R` thành tổn thất lớn hơn đáng kể.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **10. Lệnh dừng** đã nêu tiêu chí phân biệt, còn **11. Lệnh dừng–giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Thời hạn hiệu lực của lệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Lệnh dừng–giới hạn
 
 Lệnh dừng–giới hạn (stop-limit) kiểm soát mức giá tệ nhất nhưng có nguy cơ không thoát được nếu thị trường chạy qua vùng giới hạn quá nhanh.
 
 Vì vậy nó không tự động an toàn hơn lệnh dừng thị trường.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **11. Lệnh dừng–giới hạn** đã nêu tiêu chí phân biệt, còn **12. Thời hạn hiệu lực của lệnh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Khớp một phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Thời hạn hiệu lực của lệnh
 
@@ -143,6 +164,8 @@ Một số quy ước phổ biến:
 - FOK.
 
 **Thời hạn hiệu lực (time-in-force)** là một phần của lô-gic (logic / 논리) thực thi, không chỉ là tùy chọn giao diện.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **13. Khớp một phần** tiếp nhận điểm tựa từ **12. Thời hạn hiệu lực của lệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Giao dịch nhiều chân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Khớp một phần
 
@@ -159,6 +182,8 @@ Vị thế thực tế
 
 trước khi gửi lệnh thay thế.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **14. Giao dịch nhiều chân** tiếp nhận điểm tựa từ **13. Khớp một phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Vì sao chênh lệch tồn tại?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Giao dịch nhiều chân
 
 Spread quyền chọn hoặc cấu trúc phòng vệ nhiều chân có thể giao dịch dưới dạng gói hoặc từng chân.
@@ -166,6 +191,8 @@ Spread quyền chọn hoặc cấu trúc phòng vệ nhiều chân có thể gia
 Thực thi từng chân tạo **rủi ro lệch chân (legging risk)**: chân đầu đã khớp nhưng chân sau di chuyển khỏi mức giá dự kiến.
 
 # Phần IV — Chênh lệch mua–bán và thanh khoản
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **15. Vì sao chênh lệch tồn tại?** tiếp nhận điểm tựa từ **14. Giao dịch nhiều chân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Chênh lệch niêm yết và chênh lệch hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Vì sao chênh lệch tồn tại?
 
@@ -179,6 +206,8 @@ Chênh lệch mua–bán bù cho nhà cung cấp thanh khoản các rủi ro nh�
 
 Khi bất định tăng, chênh lệch thường rộng hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **16. Chênh lệch niêm yết và chênh lệch hiệu dụng** tiếp nhận điểm tựa từ **15. Vì sao chênh lệch tồn tại?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Chênh lệch thực giữ được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Chênh lệch niêm yết và chênh lệch hiệu dụng
 
 Quoted spread là chi phí nhìn thấy; realized spread và execution outcome mới cho biết chi phí thực sự sau khớp, adverse selection và biến động tiếp theo.
@@ -188,6 +217,8 @@ Quoted spread là chi phí nhìn thấy; realized spread và execution outcome m
 **Chênh lệch hiệu dụng (effective spread)** đo chi phí khớp thực tế so với điểm giữa hoặc mức tham chiếu.
 
 Khớp được giá tốt hơn có thể làm chi phí thấp hơn chênh lệch niêm yết; thị trường biến động nhanh có thể làm chi phí cao hơn.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **17. Chênh lệch thực giữ được** tiếp nhận điểm tựa từ **16. Chênh lệch niêm yết và chênh lệch hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Thanh khoản là khái niệm nhiều chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Chênh lệch thực giữ được
 
@@ -200,6 +231,8 @@ Thu nhập từ chênh lệch
 và
 Tổn thất do lựa chọn bất lợi
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **18. Thanh khoản là khái niệm nhiều chiều** tiếp nhận điểm tựa từ **17. Chênh lệch thực giữ được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Thanh khoản ẩn và lệnh iceberg** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Thanh khoản là khái niệm nhiều chiều
 
@@ -214,17 +247,23 @@ Cần nhìn cùng:
 
 Khối lượng cao không bảo đảm một lệnh lớn có thể thoát với chi phí thấp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **19. Thanh khoản ẩn và lệnh iceberg** tiếp nhận điểm tựa từ **18. Thanh khoản là khái niệm nhiều chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Nơi giao dịch không hiển thị trước lệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Thanh khoản ẩn và lệnh iceberg
 
 Một số lệnh chỉ hiển thị một phần khối lượng. Vì vậy độ sâu nhìn thấy có thể thấp hơn thanh khoản thật.
 
 Ngược lại, thanh khoản đang hiển thị cũng có thể biến mất nhanh; ảnh chụp sổ lệnh không phải cam kết.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **20. Nơi giao dịch không hiển thị trước lệnh** tiếp nhận điểm tựa từ **19. Thanh khoản ẩn và lệnh iceberg** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Thị trường phân mảnh theo nhiều nơi giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Nơi giao dịch không hiển thị trước lệnh
 
 Dark pool và venue ngoài sở có thể giảm information leakage cho lệnh lớn, nhưng làm price discovery, routing và đánh giá benchmark phức tạp hơn. Lợi ích execution phải được so với độ minh bạch bị mất.
 
 **Dark pool** hoặc nơi giao dịch ngoài sở có thể giảm khả năng lệnh lớn tự tiết lộ ý định trước giao dịch, nhưng làm quá trình khám phá giá và đánh giá chất lượng thực thi phức tạp hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **21. Thị trường phân mảnh theo nhiều nơi giao dịch** tiếp nhận điểm tựa từ **20. Nơi giao dịch không hiển thị trước lệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Khám phá giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Thị trường phân mảnh theo nhiều nơi giao dịch
 
@@ -242,6 +281,8 @@ Giá hiển thị tốt nhất chưa chắc tạo kết quả thực tế tốt 
 
 # Phần V — Khám phá giá và phiên đấu giá
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **22. Khám phá giá** tiếp nhận điểm tựa từ **21. Thị trường phân mảnh theo nhiều nơi giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Đấu giá mở cửa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Khám phá giá
 
 Price discovery là quá trình thông tin, lệnh và thanh khoản cùng cập nhật giá. Một lệnh lớn có thể vừa phản ánh thông tin vừa tự tạo market impact, nên cần tách alpha khỏi dấu chân thực thi.
@@ -252,9 +293,13 @@ Tùy thị trường, thông tin có thể xuất hiện trước ở hợp đ�
 
 Không nên dùng giá tham chiếu đã cũ như thể đó là giá trị hợp lý hiện tại.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **23. Đấu giá mở cửa** tiếp nhận điểm tựa từ **22. Khám phá giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Đấu giá đóng cửa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Đấu giá mở cửa
 
 Đấu giá mở cửa gom thông tin qua đêm và lệnh chờ. Kiểm thử “mua tại giá mở cửa” phải mô hình hóa khoảng nhảy giá và cơ chế đấu giá thực tế.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **24. Đấu giá đóng cửa** tiếp nhận điểm tựa từ **23. Đấu giá mở cửa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Mẫu hình trong ngày** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Đấu giá đóng cửa
 
@@ -267,6 +312,8 @@ Không nên dùng giá tham chiếu đã cũ như thể đó là giá trị hợ
 
 Giá đóng cửa chính thức không có nghĩa mọi nhà giao dịch đều có thể khớp đúng mức đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **25. Mẫu hình trong ngày** tiếp nhận điểm tựa từ **24. Đấu giá đóng cửa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Trượt giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Mẫu hình trong ngày
 
 Khối lượng và biến động thường có mẫu hình theo thời gian trong ngày. Cổ phiếu thường sôi động hơn đầu/cuối phiên; FX chịu ảnh hưởng các phiên châu Á, London và New York.
@@ -274,6 +321,8 @@ Khối lượng và biến động thường có mẫu hình theo thời gian tr
 Mô hình chi phí nên phản ánh thời điểm giao dịch.
 
 # Phần VI — Trượt giá và tác động thị trường
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **26. Trượt giá** tiếp nhận điểm tựa từ **25. Mẫu hình trong ngày** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Mức thiếu hụt do thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Trượt giá
 
@@ -292,6 +341,8 @@ Nó phụ thuộc:
 
 Không nên dùng một con số trượt giá cố định cho mọi chế độ thị trường.
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **27. Mức thiếu hụt do thực thi** tiếp nhận điểm tựa từ **26. Trượt giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Chi phí cơ hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Mức thiếu hụt do thực thi
 
 Implementation shortfall đặt toàn bộ chi phí cơ hội và chi phí thực thi cạnh nhau: không giao dịch, trì hoãn, giá khớp, fees và market impact. Nó phù hợp để đánh giá quyết định thực thi ở cấp chiến lược.
@@ -308,11 +359,15 @@ Phí
 + chi phí cơ hội
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **28. Chi phí cơ hội** tiếp nhận điểm tựa từ **27. Mức thiếu hụt do thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Tác động thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Chi phí cơ hội
 
 Một lệnh thụ động không khớp có thể không mất phí nhưng vẫn tạo chi phí nếu bỏ lỡ một biến động có lợi.
 
 “Không giao dịch được” cũng là một dạng chi phí thực thi.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **29. Tác động thị trường** tiếp nhận điểm tựa từ **28. Chi phí cơ hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Tác động tạm thời và tác động lâu dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Tác động thị trường
 
@@ -325,11 +380,15 @@ Chính lệnh của bạn có thể làm giá di chuyển. Tác động thườn
 
 **Công suất chiến lược (strategy capacity)** bị giới hạn bởi tác động thị trường, không chỉ bởi số dư tài khoản.
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **30. Tác động tạm thời và tác động lâu dài** tiếp nhận điểm tựa từ **29. Tác động thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Tỷ lệ tham gia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Tác động tạm thời và tác động lâu dài
 
 Tác động tạm thời có thể hồi lại sau khi lệnh hoàn tất. Tác động lâu dài phản ánh thông tin hoặc tín hiệu từ lệnh đã được thị trường hấp thụ.
 
 Thực thi tốt cố giảm phần tác động không cần thiết.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **31. Tỷ lệ tham gia** tiếp nhận điểm tựa từ **30. Tác động tạm thời và tác động lâu dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Công suất chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Tỷ lệ tham gia
 
@@ -342,6 +401,8 @@ Tỷ lệ tham gia
 
 Tỷ lệ cao giúp hoàn tất nhanh hơn nhưng thường làm tăng tác động giá và rủi ro tiết lộ ý định.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **32. Công suất chiến lược** tiếp nhận điểm tựa từ **31. Tỷ lệ tham gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. TWAP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Công suất chiến lược
 
 Công suất trả lời câu hỏi:
@@ -352,19 +413,27 @@ Cần xem vòng quay, giá trị giao dịch trung bình, thời gian nắm gi�
 
 # Phần VII — Thuật toán thực thi
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **33. TWAP** tiếp nhận điểm tựa từ **32. Công suất chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. VWAP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. TWAP
 
 TWAP chia lệnh tương đối đều theo thời gian. Cách này đơn giản nhưng không thích nghi tốt khi thanh khoản trong ngày thay đổi mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **34. VWAP** tiếp nhận điểm tựa từ **33. TWAP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. POV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. VWAP
 
 VWAP phân bổ lệnh theo hồ sơ khối lượng dự kiến hoặc thực tế. Đánh bại VWAP chỉ cho biết chất lượng thực thi so với chuẩn đó, không chứng minh quyết định đầu tư ban đầu là đúng.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **35. POV** tiếp nhận điểm tựa từ **34. VWAP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Thuật toán tối ưu mức thiếu hụt do thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. POV
 
 POV duy trì tỷ lệ giao dịch gần cố định so với volume quan sát được. Hãy kiểm tra volume đó có bị phình do event hoặc toxic flow hay không trước khi coi POV là kiểm soát impact.
 
 **Tỷ lệ theo khối lượng (Percentage-of-Volume, POV)** duy trì một tỷ lệ giao dịch gần cố định so với khối lượng thị trường. Nó thích nghi với mức độ hoạt động nhưng có thể giao dịch nhiều hơn đúng lúc biến động tăng.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **36. Thuật toán tối ưu mức thiếu hụt do thực thi** tiếp nhận điểm tựa từ **35. POV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Giá tại thời điểm bắt đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 36. Thuật toán tối ưu mức thiếu hụt do thực thi
 
@@ -378,6 +447,8 @@ Rủi ro giá nếu chờ lâu
 
 Mức khẩn cấp cao thường dẫn tới thực thi nhiều hơn ở đầu khoảng thời gian.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **37. Giá tại thời điểm bắt đầu** tiếp nhận điểm tựa từ **36. Thuật toán tối ưu mức thiếu hụt do thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Định tuyến lệnh thông minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 37. Giá tại thời điểm bắt đầu
 
 Arrival price là benchmark cho quyết định bắt đầu thực thi. Nó phù hợp với tín hiệu mất giá nhanh, nhưng cần ghi rõ khi nào benchmark thay đổi vì delay là một phần của chiến lược.
@@ -385,6 +456,8 @@ Arrival price là benchmark cho quyết định bắt đầu thực thi. Nó ph�
 **Giá lúc bắt đầu thực thi (arrival price)** là mức giá khi quá trình thực thi được khởi động và thường phù hợp với chiến lược có tín hiệu mất giá trị nhanh.
 
 Chuẩn so sánh phải được chọn trước khi nhìn kết quả.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **38. Định tuyến lệnh thông minh** tiếp nhận điểm tựa từ **37. Giá tại thời điểm bắt đầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Lựa chọn bất lợi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 38. Định tuyến lệnh thông minh
 
@@ -396,17 +469,23 @@ Mục tiêu là chất lượng khớp thực tế tốt hơn, không chỉ giá
 
 # Phần VIII — Lựa chọn bất lợi và chất lượng dòng lệnh
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **39. Lựa chọn bất lợi** tiếp nhận điểm tựa từ **38. Định tuyến lệnh thông minh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Dòng lệnh bất lợi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 39. Lựa chọn bất lợi
 
 Một lệnh thụ động có thể chỉ được khớp khi phía đối diện có lợi thế thông tin hoặc khi giá sắp di chuyển ngược vị thế.
 
 Do đó “kiếm chênh lệch” chưa chắc tạo lợi nhuận thực.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **40. Dòng lệnh bất lợi** tiếp nhận điểm tựa từ **39. Lựa chọn bất lợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Quét thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 40. Dòng lệnh bất lợi
 
 Nhà cung cấp thanh khoản đôi khi gọi **dòng lệnh độc (toxic flow)** là dòng lệnh thường xuất hiện ngay trước biến động giá bất lợi cho họ.
 
 Đây là vấn đề thông tin và thời điểm, không nên mặc định diễn giải thành thao túng.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **41. Quét thanh khoản** tiếp nhận điểm tựa từ **40. Dòng lệnh bất lợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Giao dịch quanh sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 41. Quét thanh khoản
 
@@ -423,6 +502,8 @@ Cơ chế này giải thích nhiều hành vi thường bị gắn nhãn “săn
 
 # Phần IX — Tin tức, khoảng nhảy giá và cơ chế kiểm soát thị trường
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **42. Giao dịch quanh sự kiện** tiếp nhận điểm tựa từ **41. Quét thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Rủi ro nhảy giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 42. Giao dịch quanh sự kiện
 
 CPI, NFP, FOMC, báo cáo lợi nhuận hoặc địa chính trị có thể làm:
@@ -435,6 +516,8 @@ CPI, NFP, FOMC, báo cáo lợi nhuận hoặc địa chính trị có thể là
 
 Chiến lược không được thiết kế cho điều kiện sự kiện nên có quy tắc giảm quy mô hoặc tránh giao dịch.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **43. Rủi ro nhảy giá** tiếp nhận điểm tựa từ **42. Giao dịch quanh sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Ngắt giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 43. Rủi ro nhảy giá
 
 Gap risk phá vỡ giả định rằng giá đi qua mọi mức trung gian. Stop, margin và hedge cần được stress bằng kịch bản không có fill tại trigger.
@@ -443,9 +526,13 @@ Gap risk phá vỡ giả định rằng giá đi qua mọi mức trung gian. Sto
 
 Mô hình rủi ro phải tính những bước nhảy này thay vì giả định đường giá liên tục.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **44. Ngắt giao dịch** tiếp nhận điểm tựa từ **43. Rủi ro nhảy giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Biên độ giá hằng ngày** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 44. Ngắt giao dịch
 
 Cơ chế ngắt giao dịch (circuit breaker) hoặc tạm dừng chỉ ngăn giao dịch trong thời gian nhất định; nó không xóa rủi ro. Khi mở lại, giá vẫn có thể nhảy tiếp.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **45. Biên độ giá hằng ngày** tiếp nhận điểm tựa từ **44. Ngắt giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Độ trễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 45. Biên độ giá hằng ngày
 
@@ -453,13 +540,19 @@ Cơ chế ngắt giao dịch (circuit breaker) hoặc tạm dừng chỉ ngăn g
 
 # Phần X — Hệ thống và độ an toàn vận hành
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **46. Độ trễ** tiếp nhận điểm tựa từ **45. Biên độ giá hằng ngày** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Đồng bộ thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 46. Độ trễ
 
 Độ trễ chỉ quan trọng so với thời hạn của chiến lược. Với giao dịch theo ngày hoặc tuần, vài trăm mili giây thường không quyết định; với chênh lệch giá dưới giây, nó có thể là yếu tố sống còn.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **47. Đồng bộ thời gian** tiếp nhận điểm tựa từ **46. Độ trễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Chất lượng dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 47. Đồng bộ thời gian
 
 Dữ liệu thị trường, tín hiệu, lệnh và khớp lệnh cần cùng chuẩn thời gian. Nếu đồng hồ sai, việc so sánh mô phỏng với giao dịch thật trở nên thiếu tin cậy.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **47. Đồng bộ thời gian** nêu điều cần giải thích; **48. Chất lượng dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **49. Trạng thái tại nhà môi giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 48. Chất lượng dữ liệu
 
@@ -467,9 +560,13 @@ Giá cũ, dữ liệu mất, điểm dữ liệu lỗi hoặc điều chỉnh h�
 
 Hệ thống thực tế cần kiểm tra đầu vào và có hành vi an toàn khi dữ liệu bất thường.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **48. Chất lượng dữ liệu** nêu điều cần giải thích; **49. Trạng thái tại nhà môi giới** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **50. Tính không lặp tác dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 49. Trạng thái tại nhà môi giới
 
 Thông báo “đã gửi lệnh” không có nghĩa lệnh đã khớp. Nếu kết nối mất, hệ thống phải hỏi lại trạng thái thật trước khi gửi lại.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **50. Tính không lặp tác dụng** tiếp nhận điểm tựa từ **49. Trạng thái tại nhà môi giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Đối soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 50. Tính không lặp tác dụng
 
@@ -477,11 +574,15 @@ Idempotency bảo đảm retry sau lỗi mạng không tạo lệnh trùng hoặ
 
 **Tính bất biến khi gửi lại (idempotency)** giúp tránh tạo lệnh trùng khi hệ thống thử lại sau lỗi mạng. Mã định danh lệnh phía khách hàng là công cụ quan trọng.
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **51. Đối soát** tiếp nhận điểm tựa từ **50. Tính không lặp tác dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Công tắc dừng khẩn cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 51. Đối soát
 
 Vị thế, tiền mặt và lệnh đang mở trong hệ thống nội bộ phải được đối soát với nhà môi giới sau mất kết nối hoặc khởi động lại.
 
 Trạng thái tại nhà môi giới hoặc sở giao dịch mới là nguồn sự thật của mức phơi nhiễm thật.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **52. Công tắc dừng khẩn cấp** tiếp nhận điểm tựa từ **51. Đối soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Tổng rủi ro dự kiến của các vị thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 52. Công tắc dừng khẩn cấp
 
@@ -498,17 +599,23 @@ Cần định nghĩa trước điều kiện dừng giao dịch, ví dụ:
 
 # Phần XI — Danh mục giao dịch
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **53. Tổng rủi ro dự kiến của các vị thế** tiếp nhận điểm tựa từ **52. Công tắc dừng khẩn cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Phơi nhiễm ròng và tổng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 53. Tổng rủi ro dự kiến của các vị thế
 
 Tổng các mức lỗ dừng dự kiến không thể chỉ cộng cơ học nếu nhiều vị thế cùng phụ thuộc một nhân tố.
 
 Năm giao dịch đều cược USD giảm có thể cùng thất bại dù mỗi giao dịch chỉ chiếm 0,5% rủi ro danh nghĩa.
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **54. Phơi nhiễm ròng và tổng** tiếp nhận điểm tựa từ **53. Tổng rủi ro dự kiến của các vị thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Phơi nhiễm nhân tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 54. Phơi nhiễm ròng và tổng
 
 Danh mục long–short có beta ròng gần 0 nhưng vẫn có đòn bẩy tổng rất lớn.
 
 Phơi nhiễm tổng quyết định nhu cầu nguồn vốn, vòng quay, thanh khoản và rủi ro nhảy giá. Cần theo dõi cả ròng lẫn tổng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **55. Phơi nhiễm nhân tố** tiếp nhận điểm tựa từ **54. Phơi nhiễm ròng và tổng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Phơi nhiễm tương đương Delta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 55. Phơi nhiễm nhân tố
 
@@ -525,13 +632,19 @@ Nên ánh xạ vị thế sang các nhân tố như:
 
 Cách này phát hiện tập trung ẩn tốt hơn chỉ nhìn tương quan từng cặp.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **56. Phơi nhiễm tương đương Delta** tiếp nhận điểm tựa từ **55. Phơi nhiễm nhân tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. DV01 và rủi ro lãi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 56. Phơi nhiễm tương đương Delta
 
 Danh mục quyền chọn cần quy đổi theo Delta và theo dõi thêm Gamma, Vega. Phí quyền chọn nhỏ không có nghĩa mức phơi nhiễm kinh tế nhỏ.
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **57. DV01 và rủi ro lãi suất** tiếp nhận điểm tựa từ **56. Phơi nhiễm tương đương Delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. Rủi ro biến động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 57. DV01 và rủi ro lãi suất
 
 Với trái phiếu và lãi suất, nên cộng gộp DV01 và DV01 theo điểm kỳ hạn. Bù trừ giá trị danh nghĩa có thể che một cược đường cong lớn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **58. Rủi ro biến động** tiếp nhận điểm tựa từ **57. DV01 và rủi ro lãi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. Rủi ro thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 58. Rủi ro biến động
 
@@ -539,15 +652,21 @@ Bán quyền chọn, chiến lược carry và một số chiến lược hồi 
 
 Biến động nên được xem như một nhóm rủi ro riêng.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **59. Rủi ro thanh khoản** tiếp nhận điểm tựa từ **58. Rủi ro biến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. Tương quan không ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 59. Rủi ro thanh khoản
 
 Cổ phiếu nhỏ, tín dụng lợi suất cao, tài sản số ít thanh khoản và hợp đồng tương lai đông người cùng vị thế có thể cùng mất thanh khoản khi nguồn vốn căng.
 
 Tương quan thanh khoản thường tăng trong khủng hoảng.
 
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **60. Tương quan không ổn định** tiếp nhận điểm tựa từ **59. Rủi ro thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **61. Nhắm mục tiêu độ biến động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 60. Tương quan không ổn định
 
 Tương quan lịch sử có thể thay đổi mạnh theo chế độ và thường tăng khi hệ thống giảm đòn bẩy. Cần dùng thêm kịch bản căng thẳng thay vì chỉ ma trận tương quan quá khứ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **61. Nhắm mục tiêu độ biến động** tiếp nhận điểm tựa từ **60. Tương quan không ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **62. Phân bổ ngang bằng rủi ro giữa giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 61. Nhắm mục tiêu độ biến động
 
@@ -555,9 +674,13 @@ Nhắm mục tiêu độ biến động điều chỉnh quy mô vị thế để
 
 Điểm yếu là tính thuận chu kỳ: biến động thấp khuyến khích tăng vị thế trước cú sốc; biến động cao buộc giảm vị thế sau khi giá đã giảm.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **62. Phân bổ ngang bằng rủi ro giữa giao dịch** tiếp nhận điểm tựa từ **61. Nhắm mục tiêu độ biến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **63. VaR và Expected Shortfall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 62. Phân bổ ngang bằng rủi ro giữa giao dịch
 
 Cân bằng đóng góp độ biến động giúp tránh một thị trường thống trị toàn bộ danh mục, nhưng “cùng độ biến động” không có nghĩa cùng rủi ro đuôi. Cần điều chỉnh thêm cho nhảy giá, thanh khoản và tính phi tuyến.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **63. VaR và Expected Shortfall** tiếp nhận điểm tựa từ **62. Phân bổ ngang bằng rủi ro giữa giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. Kiểm soát mức suy giảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 63. VaR và Expected Shortfall
 
@@ -565,15 +688,21 @@ VaR ước lượng ngưỡng tổn thất ở mức tin cậy nhất định. E
 
 Cả hai vẫn phụ thuộc dữ liệu và mô hình; kiểm thử kịch bản không thể bỏ qua.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **64. Kiểm soát mức suy giảm** tiếp nhận điểm tựa từ **63. VaR và Expected Shortfall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **65. MAE và MFE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 64. Kiểm soát mức suy giảm
 
 Quy tắc giảm rủi ro khi mức suy giảm tăng phải được định nghĩa trước, dựa trên phân phối của chiến lược và khả năng mô hình bị hỏng, không dựa trên cảm xúc trong thời điểm thua lỗ.
 
 # Phần XII — Phân tích chi phí giao dịch và vòng học
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **65. MAE và MFE** tiếp nhận điểm tựa từ **64. Kiểm soát mức suy giảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **66. Phân rã chất lượng thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 65. MAE và MFE
 
 MAE/MFE giúp nghiên cứu đường đi của giao dịch trong thời gian nắm giữ. Chúng hữu ích cho chẩn đoán nhưng không nên được dùng để tối ưu lệnh dừng trên cùng một mẫu dữ liệu rồi coi kết quả là chắc chắn.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **66. Phân rã chất lượng thực thi** tiếp nhận điểm tựa từ **65. MAE và MFE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **67. Phân tích chi phí giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 66. Phân rã chất lượng thực thi
 
@@ -592,6 +721,8 @@ Can thiệp thủ công
 
 Phải sửa đúng lớp gây rò rỉ lợi thế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **67. Phân tích chi phí giao dịch** tiếp nhận điểm tựa từ **66. Phân rã chất lượng thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **68. Chi phí kỳ vọng và chi phí thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 67. Phân tích chi phí giao dịch
 
 TCA là bước tổng kết execution: gom lệnh theo strategy, venue, thời điểm, loại lệnh và market state để biết chi phí đến từ spread, impact, delay hay routing. Kết quả phải quay lại điều chỉnh model cost và rule thực thi.
@@ -608,11 +739,15 @@ TCA là bước tổng kết execution: gom lệnh theo strategy, venue, thời 
 
 Mục tiêu là phát hiện có hệ thống nơi chiến lược đang mất lợi thế.
 
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **68. Chi phí kỳ vọng và chi phí thực tế** tiếp nhận điểm tựa từ **67. Phân tích chi phí giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **69. Xác suất khớp và lựa chọn bất lợi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 68. Chi phí kỳ vọng và chi phí thực tế
 
 Mô hình nên dự báo chi phí chênh lệch, trượt giá và tác động. Phân phối chi phí thực tế phải được so lại thường xuyên.
 
 Chi phí xấu đi kéo dài có thể báo hiệu chiến lược bị đông người dùng, vượt công suất hoặc cấu trúc thị trường đã thay đổi.
+
+> **Chuyển mạch:** Ở chặng này của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **69. Xác suất khớp và lựa chọn bất lợi** tiếp nhận điểm tựa từ **68. Chi phí kỳ vọng và chi phí thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **70. Theo dõi công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 69. Xác suất khớp và lựa chọn bất lợi
 
@@ -627,6 +762,8 @@ Biến động sau khớp
 Chi phí cơ hội
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **70. Theo dõi công suất** tiếp nhận điểm tựa từ **69. Xác suất khớp và lựa chọn bất lợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **71. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 70. Theo dõi công suất
 
 Khi quy mô vốn tăng, hãy theo dõi:
@@ -638,6 +775,8 @@ Khi quy mô vốn tăng, hãy theo dõi:
 - chi phí trên mỗi đơn vị lợi thế.
 
 Nếu chi phí tăng nhanh hơn lợi nhuận gộp, chiến lược đã gần hoặc vượt công suất.
+
+> **Chuyển mạch:** Trong **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch**, **71. Kết luận** gom các mảnh từ **70. Theo dõi công suất** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 71. Kết luận
 
@@ -656,3 +795,5 @@ Tín hiệu
 ```
 
 Lợi thế không nằm riêng ở tín hiệu. Nó nằm ở khả năng bảo toàn giá trị của tín hiệu sau chi phí, thanh khoản, thực thi và các giới hạn vận hành.
+
+> **Bàn giao:** Sau **71. Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
