@@ -1,6 +1,6 @@
 # Hỗ trợ (support / 지원) véc-tơ (vector / 벡터) Machines: margin, hình học (geometry / 기하학) và kernel
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hỗ trợ (support / 지원) véc-tơ (vector / 벡터) Machines: margin, hình học (geometry / 기하학) và kernel**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ separating hyperplane tới margin** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tại sao margin có ý nghĩa?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hỗ trợ (support / 지원) véc-tơ (vector / 벡터) Machines: margin, hình học (geometry / 기하학) và kernel**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ separating hyperplane tới margin** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tại sao margin có ý nghĩa?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối support vector machines với margin, kernel và optimization, để boundary phân loại được gắn với hình học và regularization.
 
 Hỗ trợ (support / 지원) véc-tơ (vector / 벡터) Machine (SVM / 서포트 벡터 머신) xây classifier từ một geometric principle: không chỉ tìm hyperplane phân tách classes, mà tìm hyperplane có **margin** lớn. Margin là khoảng cách an toàn giữa quyết định (decision / 결정) ranh giới (boundary / 경계) và những huấn luyện (training / 학습) points gần ranh giới (boundary / 경계) nhất.
 

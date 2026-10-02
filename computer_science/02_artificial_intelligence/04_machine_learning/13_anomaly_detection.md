@@ -1,6 +1,6 @@
 # Anomaly Detection: khi điều quan trọng là những gì hiếm hoặc khác thường
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Anomaly Detection: khi điều quan trọng là những gì hiếm hoặc khác thường**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Anomaly không đồng nghĩa outlier thống kê** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Statistical anomaly detection** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Anomaly Detection: khi điều quan trọng là những gì hiếm hoặc khác thường**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Anomaly không đồng nghĩa outlier thống kê** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Statistical anomaly detection** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối anomaly detection với baseline, rarity và false positive, để bất thường được định nghĩa theo bối cảnh vận hành.
 
 Anomaly Detection (이상 탐지 / phát hiện bất thường) tìm observations khác đáng kể so với hành vi (behavior / 동작) được xem là bình thường. Fraud giao dịch (transaction / 트랜잭션), mạng (network / 네트워크) intrusion, defective sensor, unusual login và manufacturing defect đều có thể được phrased như anomaly problems.
 

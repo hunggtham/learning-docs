@@ -1,6 +1,6 @@
 # Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Origin là ranh giới (boundary / 경계) cơ bản** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **CORS** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Origin là ranh giới (boundary / 경계) cơ bản** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **CORS** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối browser isolation với CSP, SameSite và cross-origin trust, để biên trình duyệt được đánh giá qua dữ liệu, cookie và script.
 
 Trình duyệt (browser / 브라우저) chạy mã (code / 코드) từ nhiều origins trên cùng máy và cùng lúc giữ cookies, credentials, camera/microphone permissions. bảo mật (security / 보안) mô hình (model / 모델) của web vì thế xoay quanh việc ngăn một origin tùy ý đọc/điều khiển authority của origin khác.
 

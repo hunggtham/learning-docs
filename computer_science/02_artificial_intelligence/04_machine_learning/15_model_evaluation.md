@@ -1,6 +1,6 @@
 # Mô hình (model / 모델) Evaluation: đo đúng thứ mà hệ thống thực sự cần
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mô hình (model / 모델) Evaluation: đo đúng thứ mà hệ thống thực sự cần**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ triển khai (deployment / 배포) question** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Confusion ma trận (matrix / 행렬)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mô hình (model / 모델) Evaluation: đo đúng thứ mà hệ thống thực sự cần**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ triển khai (deployment / 배포) question** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Confusion ma trận (matrix / 행렬)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối model evaluation với metric, split, calibration và deployment, để điểm số phản ánh mục tiêu sử dụng chứ không chỉ leaderboard.
 
 Mô hình (model / 모델) Evaluation (모델 평가 / đánh giá mô hình) không phải bước cuối để “in một con số accuracy”. Nó là quá trình thiết kế bằng chứng (evidence / 증거) để trả lời: mô hình (model / 모델) có hoạt động đủ tốt trên population, subgroup, operating điều kiện (condition / 조건) và nghiệp vụ (business / 비즈니스) mục tiêu (objective / 목표) mà hệ thống (system / 시스템) sẽ gặp hay không?
 

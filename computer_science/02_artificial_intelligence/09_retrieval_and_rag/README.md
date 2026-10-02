@@ -1,6 +1,6 @@
 # Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) Map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) Map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chapters** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của retrieval và RAG, rồi nối indexing, retrieval, grounding và generation thành pipeline có thể kiểm tra.
 
 Folder này giải thích Retrieval-Augmented Generation từ nền thông tin (information / 정보) Retrieval tới kiến trúc vận hành (production architecture / 운영 아키텍처). RAG không được coi như recipe `embed → vector DB → LLM`; nó là một **bằng chứng (evidence / 증거) hệ thống (system / 시스템)** gồm ingestion, tìm kiếm (search / 검색), ranking, ngữ cảnh (context / 맥락) construction, provenance, evaluation và bảo mật (security / 보안).
 

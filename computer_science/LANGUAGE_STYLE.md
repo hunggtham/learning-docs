@@ -1,6 +1,6 @@
 # Quy ước ngôn ngữ cho Thư viện kiến thức khoa học máy tính (computer science knowledge library / 컴퓨터 과학 지식 라이브러리)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quy ước ngôn ngữ cho Thư viện kiến thức khoa học máy tính (computer science knowledge library / 컴퓨터 과학 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy tắc chính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Những thứ không dịch máy móc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quy ước ngôn ngữ cho Thư viện kiến thức khoa học máy tính (computer science knowledge library / 컴퓨터 과학 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy tắc chính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Những thứ không dịch máy móc** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng LANGUAGE_STYLE làm owner của cách viết, để thuật ngữ, giọng giải thích và câu nối nhất quán giữa các nhánh computer science.
 
 Thư viện này viết **chủ yếu bằng tiếng Việt**. Thuật ngữ tiếng Anh được giữ lại để người đọc nhận diện đúng từ khóa khi đọc giáo trình, tài liệu kỹ thuật, API hoặc trao đổi trong công việc, nhưng không được dùng tiếng Anh thay cho phần giải thích tiếng Việt khi đã có cách diễn đạt tự nhiên và chính xác.
 

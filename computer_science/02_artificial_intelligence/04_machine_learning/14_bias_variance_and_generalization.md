@@ -1,6 +1,6 @@
 # Độ lệch (bias / 편향), Variance và Generalization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ lệch (bias / 편향), Variance và Generalization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Huấn luyện (training / 학습) lỗi (error / 오류) không phải mục tiêu cuối** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Độ lệch (bias / 편향) trong độ lệch (bias / 편향)–variance decomposition** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ lệch (bias / 편향), Variance và Generalization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Huấn luyện (training / 학습) lỗi (error / 오류) không phải mục tiêu cuối** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Độ lệch (bias / 편향) trong độ lệch (bias / 편향)–variance decomposition** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối bias-variance với generalization, noise và model complexity, để chọn độ phức tạp theo sai số ngoài mẫu.
 
 Machine học tập (learning / 학습) không được đánh giá bằng khả năng nhớ dữ liệu huấn luyện (training data / 학습 데이터), mà bằng khả năng **generalize (일반화 / khái quát hóa)** sang những examples chưa thấy nhưng đến từ môi trường (environment / 환경) mục tiêu. Đây là điểm phân biệt học tập (learning / 학습) với memorization.
 

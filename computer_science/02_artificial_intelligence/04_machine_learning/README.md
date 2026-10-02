@@ -1,6 +1,6 @@
 # Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các chapter** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phụ thuộc (dependency / 의존성) map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các chapter** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của machine learning, rồi nối data, models, evaluation, reliability và deployment.
 
 Folder này xây Machine học tập (learning / 학습) từ học tập (learning / 학습) bài toán (problem / 문제) tới mô hình (model / 모델) evaluation. Mục tiêu không phải liệt kê algorithms, mà hiểu mỗi thuật toán (algorithm / 알고리즘) đang đưa **inductive độ lệch (bias / 편향)** nào vào bài toán, nó tối ưu mục tiêu (objective / 목표) gì, biểu diễn (representation / 표현) nào làm nó hoạt động tốt và dạng thất bại (failure mode / 실패 모드) nào xuất hiện khi các giả định (assumptions / 가정들) bị phá vỡ.
 

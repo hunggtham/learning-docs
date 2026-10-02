@@ -1,6 +1,6 @@
 # Bộ nhớ (memory / 메모리) an toàn (safety / 안전), mitigations và sandbox boundaries
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) an toàn (safety / 안전), mitigations và sandbox boundaries**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Spatial và temporal an toàn (safety / 안전)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Từ bug tới exploitability** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) an toàn (safety / 안전), mitigations và sandbox boundaries**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Spatial và temporal an toàn (safety / 안전)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Từ bug tới exploitability** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối memory safety với mitigations và sandbox boundaries, để phân biệt lỗi khai thác, giảm tác động và cô lập.
 
 Bộ nhớ (memory / 메모리) corruption xảy ra khi chương trình đọc/ghi ngoài thời gian tồn tại (lifetime / 수명) hoặc bounds được phép. Chapter này tập trung defensive lập luận (reasoning / 추론): vì sao bug cấp thấp có thể vượt lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계) và các lớp mitigation giảm exploitability như thế nào.
 

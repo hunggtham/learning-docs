@@ -1,6 +1,6 @@
 # Secret, KMS, HSM, rotation và envelope encryption
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Secret, KMS, HSM, rotation và envelope encryption**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Secret vòng đời (lifecycle / 생명주기)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. Không nên nhúng secret vào mã nguồn (source code / 소스 코드)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Secret, KMS, HSM, rotation và envelope encryption**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Secret vòng đời (lifecycle / 생명주기)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. Không nên nhúng secret vào mã nguồn (source code / 소스 코드)** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối secrets với KMS, HSM, rotation và envelope encryption, để khóa có vòng đời, boundary và đường khôi phục rõ ràng.
 
 Bảo mật ứng dụng không dừng ở việc chọn thuật toán mã hóa đúng. Sau khi một hệ thống quyết định dùng khóa bí mật, câu hỏi thực tế trở thành: khóa được tạo ở đâu, ai được dùng, lưu ở đâu, xoay vòng thế nào, kiểm tra (audit / 감사) ra sao và chuyện gì xảy ra nếu một bản sao bị lộ.
 

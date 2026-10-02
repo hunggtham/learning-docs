@@ -1,6 +1,6 @@
 # OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các vai trò trong OAuth** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Authorization mã (code / 코드) và PKCE** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **OAuth, OIDC, vòng đời đơn vị từ (token / 토큰) và rủi ro liên kết danh tính**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các vai trò trong OAuth** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Authorization mã (code / 코드) và PKCE** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối OAuth/OIDC với token lifecycle, federation và threats, để identity flow được kiểm soát từ cấp token đến thu hồi.
 
 OAuth 2.x và OpenID Connect thường bị gom thành “đăng nhập bằng đơn vị từ (token / 토큰)”, nhưng chúng giải quyết các bài toán khác nhau. OAuth chủ yếu cung cấp **ủy quyền được ủy nhiệm (delegated authorization)**; OIDC bổ sung lớp danh tính để ứng dụng khách biết người dùng đã được xác thực là ai.
 

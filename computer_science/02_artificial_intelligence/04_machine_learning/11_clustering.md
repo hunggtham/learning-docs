@@ -1,6 +1,6 @@
 # Clustering: tìm cấu trúc (structure / 구조) khi không có labels
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Clustering: tìm cấu trúc (structure / 구조) khi không có labels**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Clustering không “khám phá sự thật tự nhiên” một cách trung lập** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **k-Means** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Clustering: tìm cấu trúc (structure / 구조) khi không có labels**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Clustering không “khám phá sự thật tự nhiên” một cách trung lập** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **k-Means** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối clustering với khoảng cách, objective và cấu trúc nhóm, để kết quả phân cụm được giải thích theo dữ liệu.
 
 Clustering (군집화 / phân cụm) là family của unsupervised học tập (learning / 학습) nơi ta muốn nhóm observations thành những clusters có nội bộ (internal / 내부) similarity cao và khác nhau đủ rõ. Nghe đơn giản, nhưng ngay lập tức xuất hiện câu hỏi khó: **“giống nhau” theo nghĩa nào, và bao nhiêu cluster thực sự tồn tại?**
 
