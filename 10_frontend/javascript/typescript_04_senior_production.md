@@ -1,6 +1,6 @@
 # TypeScript 04 — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript 04 — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Trust ranh giới (boundary / 경계): mọi dữ liệu bên ngoài tiến trình (process / 프로세스) đều bắt đầu như unknown** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. DTO và lĩnh vực (domain / 도메인) mô hình (model / 모델) không nên bị đồng nhất tự động** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là owner của **TypeScript 04 — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)**; dùng README để giữ chapter sau tooling/modules và trước migration. Từ **1. Trust ranh giới (boundary / 경계)** nối qua DTO/domain, validation, error modeling, observability, performance, security và incident evidence; static model chỉ có giá trị khi được kiểm chứng ở từng production boundary.
 
 > Prerequisite: [Compiler, Modules & Tooling](typescript_03_tooling_modules_runtime.md). Mục tiêu của chapter này là nối static mô hình (model / 모델) với bằng chứng (evidence / 증거) môi trường vận hành (production / 운영 환경) thay vì dừng ở type-level elegance.
 

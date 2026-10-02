@@ -1,6 +1,6 @@
 # 06 — Debugging, hiệu năng (performance / 성능), bảo mật (security / 보안) & môi trường vận hành (production / 운영 환경)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06 — Debugging, hiệu năng (performance / 성능), bảo mật (security / 보안) & môi trường vận hành (production / 운영 환경)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론) bắt đầu bằng bằng chứng (evidence / 증거)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. DevTools là công cụ chính, không phải last resort** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là owner của **06 — Debugging, hiệu năng (performance / 성능), bảo mật (security / 보안) & môi trường vận hành (production / 운영 환경)**; đặt chapter sau WebSquare fundamentals và trước case vận hành. Từ **1. môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론) bắt đầu bằng bằng chứng (evidence / 증거)** chuyển sang DevTools, performance profiling, security checks và incident recovery; mỗi bước phải truy được từ user action đến server evidence.
 
 ## 1. môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론) bắt đầu bằng bằng chứng (evidence / 증거)
 

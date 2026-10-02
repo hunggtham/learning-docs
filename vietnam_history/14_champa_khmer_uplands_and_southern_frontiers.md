@@ -1,12 +1,16 @@
-# Champa, Khmer, vùng cao và biên giới phía Nam: không có “đất trống” trên bản đồ
+# Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ
+
+> **Mạch đọc:** [README](./README.md) là owner của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**; dùng README để đặt chapter cạnh Đàng Trong và các chương địa lý–biên giới. Từ **Điểm tựa và câu hỏi trung tâm** nối shorthand “Nam tiến” với Champa, Khmer, uplands, migration, trade, warfare, taxation và incorporation, rồi kiểm tra hệ quả theo từng xã hội đã tồn tại thay vì một mũi tên lãnh thổ.
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`13_trinh_nguyen_trade_and_two_realms.md`](13_trinh_nguyen_trade_and_two_realms.md) đã cho thấy Đàng Trong sống bằng một combination khác Đàng Ngoài: coastal settlement, cổng (port / 포트) trade, military frontier và exchange với uplands. Vì vậy khi Nguyễn power mở rộng về phía nam, ta không thể dùng một arrow trên bản đồ rồi gọi toàn bộ tiến trình (process / 프로세스) là “Nam tiến”.
 
-Câu hỏi trung tâm của chương là: **mở rộng lãnh thổ thực tế diễn ra qua những cơ chế (mechanism / 메커니즘) nào, và chuyện gì xảy ra với các xã hội vốn đã tồn tại trong những vùng đó?** Hãy nối mốc Champa **1471**, quá trình hình thành vùng biên thế kỷ XVII–XVIII và việc sáp nhập Nam Bộ thế kỷ XIX với các điểm Mỹ Sơn, Hội An, Châu Đốc và mạng sông Mekong; phần sau sẽ dùng các địa điểm ấy để kiểm tra xem bản đồ chính trị thay đổi ra sao trong đời sống cụ thể.
+Câu hỏi trung tâm của chapter là: **territorial expansion thực tế diễn ra qua những cơ chế (mechanism / 메커니즘) nào, và chuyện gì xảy ra với các xã hội vốn đã tồn tại trong những vùng đó?**
 
 Ta cần giữ cùng lúc warfare, treaty, di chuyển (migration / 마이그레이션), intermarriage, settlement, taxation, trade, religious institution và administrative incorporation. Một ranh giới (boundary / 경계) chính trị có thể đổi nhanh hơn ngôn ngữ (language / 언어), landholding mẫu (pattern / 패턴) hay cục bộ (local / 로컬) định danh (identity / 식별자).
+
+> **Chuyển mạch:** Trong **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **“Nam tiến” hữu ích như shorthand nhưng nguy hiểm như explanatory mô hình (model / 모델)** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Champa không biến mất trong một năm 1471** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## “Nam tiến” hữu ích như shorthand nhưng nguy hiểm như explanatory mô hình (model / 모델)
 
@@ -20,6 +24,8 @@ Thứ ba, nó khiến kết quả (outcome / 결과) hiện đại có vẻ inev
 
 Vì vậy chapter này dùng **frontier formation (hình thành vùng biên)** như mô hình tư duy (mental model / 사고 모델) tốt hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Champa không biến mất trong một năm 1471** tiếp nhận điểm tựa từ **“Nam tiến” hữu ích như shorthand nhưng nguy hiểm như explanatory mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao Nguyễn expansion tăng tốc từ miền Trung?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Champa không biến mất trong một năm 1471
 
 Chapter 11 đã gặp campaign Đại Việt năm **1471**, một turning điểm (point / 지점) rất lớn đối với Champa. Nhưng nói “Champa bị xóa sổ năm 1471” là quá thô.
@@ -28,11 +34,13 @@ Sau thất bại của Vijaya, các Cham political centres và communities vẫn
 
 Điểm quan trọng là phân biệt **collapse of one political centre** với **disappearance of a people/culture**. Cham communities, religious traditions, ngôn ngữ (language / 언어) và cục bộ (local / 로컬) elite không biến mất khi một capital thất thủ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Vì sao Nguyễn expansion tăng tốc từ miền Trung?** tiếp nhận điểm tựa từ **Champa không biến mất trong một năm 1471** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phú Yên, Khánh Hòa và Panduranga: frontier dịch chuyển theo từng bước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao Nguyễn expansion tăng tốc từ miền Trung?
 
-Đàng Trong cần đất, dân số và nguồn thu, nhưng địa lý tạo ràng buộc mạnh: đồng bằng nhỏ, núi sát biển. Mở rộng về phía nam có thể mở thêm vùng nông nghiệp, bến cảng và chiều sâu chiến lược.
+Đàng Trong cần land, population và revenue, nhưng geography tạo ràng buộc (constraint / 제약조건) mạnh: đồng bằng nhỏ, núi sát biển. Expansion southward có thể mở thêm agricultural zone, harbour và strategic độ sâu (depth / 깊이).
 
-Đồng thời, di cư không chỉ do mệnh lệnh nhà nước. Hộ nông dân, binh lính–khẩn hoang, thương nhân, cộng đồng tôn giáo và người tị nạn có động lực riêng. Một vùng biên thường hình thành qua tương tác giữa **quản trị từ trên xuống (top-down administration / 하향식 행정)** và **sự dịch chuyển từ dưới lên (bottom-up mobility / 상향식 이동)**.
+Cùng lúc, di chuyển (migration / 마이그레이션) không chỉ do trạng thái (state / 상태) command. Peasant household, soldier-settler, merchant, religious community và refugee có incentive riêng. Một frontier thường hình thành qua tương tác (interaction / 상호작용) giữa **top-down administration** và **bottom-up mobility**.
 
 ```text
 state security + revenue goals
@@ -44,13 +52,17 @@ household land demand + merchant opportunity
 
 Khi hai dòng incentive gặp nhau, settlement có thể tăng nhanh hơn sức chứa (capacity / 용량) của centre để kiểm soát chi tiết cục bộ (local / 로컬) society.
 
+> **Chuyển mạch:** Trong **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Phú Yên, Khánh Hòa và Panduranga: frontier dịch chuyển theo từng bước** tiếp nhận điểm tựa từ **Vì sao Nguyễn expansion tăng tốc từ miền Trung?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cham communities: nhìn gì ngoài battlefield?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phú Yên, Khánh Hòa và Panduranga: frontier dịch chuyển theo từng bước
 
-Trong thế kỷ XVII, chính quyền Nguyễn mở rộng dần xuống vùng Phú Yên và Khánh Hòa. Những chuyển dịch này không phải một chiến dịch duy nhất. Chiến tranh, đồn điền quân sự và phân loại hành chính lại diễn ra theo thời gian.
+Trong thế kỷ XVII, Nguyễn authority mở rộng dần xuống vùng Phú Yên và Khánh Hòa. Những shifts này không phải một campaign duy nhất. Warfare, military settlement và administrative reclassification diễn ra theo thời gian.
 
-Cuối thế kỷ XVII, Panduranga chịu sức ép mạnh hơn và dần bị đặt vào quan hệ lệ thuộc chặt với chính quyền Nguyễn, nhưng các cấu trúc địa phương Chăm vẫn có mức tự chủ đáng kể trong những giai đoạn nhất định.
+Cuối thế kỷ XVII, Panduranga chịu pressure mạnh hơn và eventually bị đặt vào một relationship lệ thuộc chặt với Nguyễn authority, nhưng Cham cục bộ (local / 로컬) structures vẫn có mức autonomy đáng kể trong những giai đoạn nhất định.
 
 Đây là ranh giới (boundary / 경계) quan trọng: **annexation trên document không bằng instantaneous homogenization ngoài xã hội**.
+
+> **Chuyển mạch:** Ở chặng này của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Cham communities: nhìn gì ngoài battlefield?** tiếp nhận điểm tựa từ **Phú Yên, Khánh Hòa và Panduranga: frontier dịch chuyển theo từng bước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Uplands không phải “phía sau” của lịch sử đồng bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cham communities: nhìn gì ngoài battlefield?
 
@@ -59,6 +71,8 @@ Muốn hiểu Cham lịch sử (history / 이력), không thể chỉ đọc cam
 Các cụm tháp Chăm còn tồn tại ở miền Trung là checkpoint material quan trọng, nhưng cần đọc theo chronology riêng. Một tháp có thể thuộc centuries trước Nguyễn expansion; community ritual quanh nó có thể thay đổi về sau. Site vì vậy chứa nhiều temporal tầng (layer / 계층).
 
 Khi đi Mỹ Sơn, Po Nagar, Po Klong Garai hay các site khác, câu hỏi không chỉ là “ai xây?”. Hãy hỏi temple economy kết nối settlement nào, tuyến (route / 경로) nào dẫn tới coast/highland, deity/ritual tạo authority ra sao, và site tiếp tục được community sử dụng thế nào sau political thay đổi (change / 변경).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Uplands không phải “phía sau” của lịch sử đồng bằng** tiếp nhận điểm tựa từ **Cham communities: nhìn gì ngoài battlefield?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mekong Delta: water frontier thay vì empty swamp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Uplands không phải “phía sau” của lịch sử đồng bằng
 
@@ -78,6 +92,8 @@ overseas market
 
 Mạng (network / 네트워크) này giúp giải thích vì sao Hội An prosperity không thể hiểu chỉ bằng merchant ở phố cảng.
 
+> **Chuyển mạch:** Trong **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Mekong Delta: water frontier thay vì empty swamp** tiếp nhận điểm tựa từ **Uplands không phải “phía sau” của lịch sử đồng bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prey Nokor / Gia Định: từ cổng (port / 포트) zone đến administrative nút (node / 노드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mekong Delta: water frontier thay vì empty swamp
 
 Xa hơn về phía nam, Mekong Delta là một ecological hệ thống (system / 시스템) rất khác Red River delta. Waterway dày đặc, seasonal flood, mangrove, coastal zone và river branch khiến movement bằng thuyền cực kỳ quan trọng.
@@ -85,6 +101,8 @@ Xa hơn về phía nam, Mekong Delta là một ecological hệ thống (system /
 Trước khi Nguyễn administrative mạng (network / 네트워크) phủ mạnh lên vùng này, Khmer settlements và political-cultural connections đã tồn tại lâu dài. Vì vậy sự xuất hiện ngày càng nhiều của Vietnamese settlers và Chinese merchant/refugee communities tạo ra **multi-ethnic frontier**, không phải replacement tức thời.
 
 Waterway vừa là transportation hạ tầng (infrastructure / 인프라) vừa là settlement lô-gic (logic / 논리). Ai kiểm soát river junction và cổng (port / 포트) có advantage về trade, military movement và tax collection.
+
+> **Chuyển mạch:** Ở chặng này của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Prey Nokor / Gia Định: từ cổng (port / 포트) zone đến administrative nút (node / 노드)** tiếp nhận điểm tựa từ **Mekong Delta: water frontier thay vì empty swamp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chinese diaspora và Hà Tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Prey Nokor / Gia Định: từ cổng (port / 포트) zone đến administrative nút (node / 노드)
 
@@ -108,6 +126,8 @@ more migration and infrastructure
 
 Nhân quả (causal / 인과적) arrows chạy cả hai chiều: trạng thái (state / 상태) follows settlement, rồi trạng thái (state / 상태) presence lại thúc đẩy settlement mới.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Chinese diaspora và Hà Tiên** tiếp nhận điểm tựa từ **Prey Nokor / Gia Định: từ cổng (port / 포트) zone đến administrative nút (node / 노드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rice frontier và population growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chinese diaspora và Hà Tiên
 
 Biến động Ming–Qing tạo refugee và merchant mobility xuống Southeast Asia. Một số Chinese communities đóng vai trò lớn trong southern commercial networks.
@@ -115,6 +135,8 @@ Biến động Ming–Qing tạo refugee và merchant mobility xuống Southeast
 **Hà Tiên** là trường hợp (case / 사례) đặc biệt hữu ích. Mạc Cửu và mạng (network / 네트워크) của ông cho thấy frontier power có thể hình thành từ merchant-military brokerage giữa Khmer authority, Nguyễn rulers và regional commerce. Hà Tiên không khớp gọn vào mô hình (model / 모델) “centre ra lệnh, province nghe theo”; nó giống một semi-autonomous nút (node / 노드) được gradually integrated.
 
 Hãy nhìn location của Hà Tiên trên Gulf of Thailand để hiểu vì sao nó kết nối Cambodia, Siam, Malay world và Mekong hơn là chỉ nhìn đường thẳng tới Huế.
+
+> **Chuyển mạch:** Trong **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Rice frontier và population growth** tiếp nhận điểm tựa từ **Chinese diaspora và Hà Tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xung đột (conflict / 충돌) và violence không được làm sạch khỏi narrative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rice frontier và population growth
 
@@ -124,6 +146,8 @@ Di chuyển (migration / 마이그레이션) đem labor; river vận chuyển (t
 
 Đây là foundation để hiểu vì sao southern rice supply trở thành strategic tài nguyên (resource / 자원) trong crisis thế kỷ XVIII.
 
+> **Chuyển mạch:** Ở chặng này của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Xung đột (conflict / 충돌) và violence không được làm sạch khỏi narrative** tiếp nhận điểm tựa từ **Rice frontier và population growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Việt hóa” cũng không phải switch on/off** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xung đột (conflict / 충돌) và violence không được làm sạch khỏi narrative
 
 Frontier formation tạo opportunity nhưng cũng có dispossession, warfare, enslavement, forced di chuyển (migration / 마이그레이션) và unequal incorporation. Nếu chỉ dùng ngôn ngữ (language / 언어) “khai phá” hay “mở cõi”, ta dễ biến kết quả (outcome / 결과) của victor thành toàn bộ lịch sử (history / 이력).
@@ -132,17 +156,23 @@ Ngược lại, nếu chỉ dùng một moral label, ta cũng mất cơ chế (m
 
 Đây là nơi historical empathy phải đi cùng bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **“Việt hóa” cũng không phải switch on/off** tiếp nhận điểm tựa từ **Xung đột (conflict / 충돌) và violence không được làm sạch khỏi narrative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những địa điểm giúp nhìn frontier bằng mắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “Việt hóa” cũng không phải switch on/off
 
 Cultural thay đổi (change / 변경) có thể diễn ra qua ngôn ngữ (language / 언어) use, intermarriage, education, ritual, administrative category và thị trường (market / 시장) tích hợp (integration / 통합). Một community có thể dùng Vietnamese trong giao dịch (transaction / 트랜잭션) nhưng giữ Cham hoặc Khmer religious practice; một cục bộ (local / 로컬) elite có thể nhận title từ Nguyễn ruler nhưng vẫn operate trong kinship mạng (network / 네트워크) riêng.
 
 Vì vậy assimilation nên được đọc như **multi-dimensional tiến trình (process / 프로세스)**, không phải nhị phân (binary / 이진).
 
+> **Chuyển mạch:** Trong **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Những địa điểm giúp nhìn frontier bằng mắt** tiếp nhận điểm tựa từ **“Việt hóa” cũng không phải switch on/off** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những địa điểm giúp nhìn frontier bằng mắt
 
 **Hội An–Thu Bồn** cho thấy coast–upland–overseas mạng (network / 네트워크). **Mỹ Sơn** cho thấy độ sâu (depth / 깊이) của Cham religious-political landscape trước Nguyễn expansion. **Nha Trang/Po Nagar** và **Phan Rang/Po Klong Garai** giữ material layers của Cham continuity. **Gia Định–Sài Gòn** cần đọc như river-port nút (node / 노드) hơn là chỉ hiện đại (modern / 현대적) metropolis. **Hà Tiên** cho thấy Gulf of Thailand mạng (network / 네트워크) và frontier brokerage.
 
 Nếu đi thực địa, hãy luôn đặt site lên water map trước khi đặt lên road map hiện đại.
+
+> **Chuyển mạch:** Ở chặng này của **Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Những địa điểm giúp nhìn frontier bằng mắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Recap và bàn giao
 
@@ -155,3 +185,5 @@ Những tension này góp phần tạo nền cho khủng hoảng thế kỷ XVII
 ### Nguồn nền
 
 Tana Li, các nghiên cứu về Nguyễn Cochinchina, Mekong water frontier và maritime Vietnam; K. W. Taylor, nghiên cứu về early hiện đại (modern / 현대적) Vietnam; scholarship về Champa/Panduranga, Khmer–Vietnamese frontier và Chinese diaspora; UNESCO World Heritage Centre và các hồ sơ di sản liên quan đến Mỹ Sơn, Hội An và các di tích Chăm.
+
+> **Bàn giao:** Sau **Recap và bàn giao**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

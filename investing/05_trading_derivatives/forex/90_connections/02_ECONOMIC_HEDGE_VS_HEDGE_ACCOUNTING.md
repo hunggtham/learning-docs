@@ -1,6 +1,6 @@
 # Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)
 
-> **Mạch đọc:** Chapter này nối exposure và economic hedge với accounting eligibility, designation và disclosure. Hãy mang rủi ro (risk / 위험) mục tiêu (objective / 목표) từ các chapter FX/hedging trước, rồi dùng phần `Đọc cùng` để tách rủi ro (risk / 위험) management khỏi chuẩn mực và chính sách (policy / 정책) hiện thực (implementation / 구현).
+> **Mạch đọc:** [README](../README.md) là owner của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**; giữ chapter này trong tuyến FX risk/settlement connections. Từ **1. Economic hedge và accounting hedge là hai câu hỏi khác nhau** nối qua risk objective, hedge design, eligibility, designation, effectiveness và disclosure; kết luận kinh tế phải được phân biệt với bằng chứng kế toán ở từng boundary.
 
 Chapter cầu nối (bridge / 브리지) này giải thích vì sao một hedge tốt về mặt kinh tế chưa chắc đủ điều kiện để áp dụng hedge accounting, và ngược lại vì sao đạt một accounting designation không tự động chứng minh rằng hedge chính sách (policy / 정책) đang quản trị rủi ro (risk / 위험) tốt.
 
@@ -47,6 +47,8 @@ qualifying designation
 
 Một derivative không được designate vẫn có fair-value/accounting consequences theo applicable standards. Không được gọi nó là “không có accounting impact”.
 
+> **Chuyển mạch:** Trong **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **2. mục tiêu (objective / 목표) của hedge accounting** tiếp nhận điểm tựa từ **1. Economic hedge và accounting hedge là hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Ba loại hedging relationship ở mức khái niệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. mục tiêu (objective / 목표) của hedge accounting
 
 IFRS 9 mô tả mục tiêu (objective / 목표) ở mức khái quát là phản ánh trong financial statements ảnh hưởng của risk-management activities khi thực thể (entity / 엔터티) dùng financial instruments để quản trị exposures có thể tác động tới profit or mất mát (loss / 손실), hoặc trong một số trường hợp other comprehensive income.
@@ -59,6 +61,8 @@ Accounting designation defines how a qualifying relationship is represented.
 ```
 
 Accounting không nên là lý do duy nhất để tạo một hedge không phù hợp với nghiệp vụ (business / 비즈니스) exposure. Ngược lại, treasury không nên bỏ qua accounting volatility, documentation sức chứa (capacity / 용량) hoặc disclosure consequence khi chọn instrument.
+
+> **Chuyển mạch:** Ở chặng này của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **3. Ba loại hedging relationship ở mức khái niệm** tiếp nhận điểm tựa từ **2. mục tiêu (objective / 목표) của hedge accounting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Qualifying gate trước khi nói tới effectiveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Ba loại hedging relationship ở mức khái niệm
 
@@ -89,6 +93,8 @@ time horizon
 presentation currency and functional currency context
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **4. Qualifying gate trước khi nói tới effectiveness** tiếp nhận điểm tựa từ **3. Ba loại hedging relationship ở mức khái niệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Documentation at inception** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Qualifying gate trước khi nói tới effectiveness
 
 Một workflow học tập nên kiểm tra theo thứ tự:
@@ -104,6 +110,8 @@ Một workflow học tập nên kiểm tra theo thứ tự:
 ```
 
 Nếu thất bại (fail / 실패) ở eligibility hoặc documentation, một regression đẹp giữa item và instrument không tự tạo ra qualifying relationship.
+
+> **Chuyển mạch:** Trong **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **5. Documentation at inception** tiếp nhận điểm tựa từ **4. Qualifying gate trước khi nói tới effectiveness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Hedged item phải cụ thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Documentation at inception
 
@@ -134,6 +142,8 @@ effectiveness review
 accounting close package
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **6. Hedged item phải cụ thể** tiếp nhận điểm tựa từ **5. Documentation at inception** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Forecast giao dịch (transaction / 트랜잭션) và xác suất (probability / 확률) discipline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Hedged item phải cụ thể
 
 Những mô tả quá rộng dễ che giấu mismatch:
@@ -157,6 +167,8 @@ business unit or portfolio
 ```
 
 Economic exposure có thể rộng hơn accounting-eligible hedged item. Ví dụ long-run competitive exposure thường khó map giống một booked payable hoặc highly probable forecast giao dịch (transaction / 트랜잭션).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **7. Forecast giao dịch (transaction / 트랜잭션) và xác suất (probability / 확률) discipline** tiếp nhận điểm tựa từ **6. Hedged item phải cụ thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Economic relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Forecast giao dịch (transaction / 트랜잭션) và xác suất (probability / 확률) discipline
 
@@ -182,6 +194,8 @@ hedge notional may exceed qualifying exposure
 
 Forecast-quality lịch sử (history / 이력) vì thế là đầu vào (input / 입력) cho cả treasury chính sách (policy / 정책) và accounting judgment.
 
+> **Chuyển mạch:** Trong **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **8. Economic relationship** tiếp nhận điểm tựa từ **7. Forecast giao dịch (transaction / 트랜잭션) và xác suất (probability / 확률) discipline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Credit rủi ro (risk / 위험) must not dominate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Economic relationship
 
 Economic relationship nghĩa là hedged item và hedging instrument có values thường dịch chuyển theo cách phản ánh cùng underlying rủi ro (risk / 위험) hoặc economically related rủi ro (risk / 위험).
@@ -206,6 +220,8 @@ market structure
 
 Correlation có thể mạnh trong mẫu (sample / 표본) bình thường nhưng gãy trong stress vì basis, liquidity, fixing hoặc counterparty effects.
 
+> **Chuyển mạch:** Ở chặng này của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **9. Credit rủi ro (risk / 위험) must not dominate** tiếp nhận điểm tựa từ **8. Economic relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Hedge ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Credit rủi ro (risk / 위험) must not dominate
 
 Nếu credit deterioration chi phối changes in giá trị (value / 값), relationship có thể không còn phản ánh hedge economics mong muốn.
@@ -220,6 +236,8 @@ but counterparty credit spread widens sharply
 
 Do đó counterparty monitoring không chỉ là legal/credit side issue; nó có thể ảnh hưởng effectiveness assessment và replacement chiến lược (strategy / 전략).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **10. Hedge ratio** tiếp nhận điểm tựa từ **9. Credit rủi ro (risk / 위험) must not dominate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Sources of ineffectiveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Hedge ratio
 
 Designated hedge ratio phải phản ánh quantity của hedged item mà thực thể (entity / 엔터티) thực sự hedge và quantity của hedging instrument thực sự dùng, đồng thời không được tạo imbalance nhằm đạt accounting kết quả (outcome / 결과) không phù hợp với purpose của hedge accounting.
@@ -233,6 +251,8 @@ accounting-designated hedge ratio
 ```
 
 Ba ratios có thể khác, nhưng mọi difference cần đơn vị sở hữu (owner / 오너), rationale và attribution rõ ràng.
+
+> **Chuyển mạch:** Trong **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **10. Hedge ratio** nêu điều cần giải thích; **11. Sources of ineffectiveness** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Rebalancing không phải che giấu forecast lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Sources of ineffectiveness
 
@@ -252,6 +272,8 @@ proxy or cross hedge
 ```
 
 Một report chỉ ghi “hedge effective” mà không dự báo nguồn (source / 소스) of ineffectiveness là chưa đủ cho quản trị (governance / 거버넌스).
+
+> **Chuyển mạch:** Ở chặng này của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **11. Sources of ineffectiveness** nêu điều cần giải thích; **12. Rebalancing không phải che giấu forecast lỗi (error / 오류)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Discontinuation ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Rebalancing không phải che giấu forecast lỗi (error / 오류)
 
@@ -276,6 +298,8 @@ new designation
 trade termination / replacement
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **12. Rebalancing không phải che giấu forecast lỗi (error / 오류)** đã nêu tiêu chí phân biệt, còn **13. Discontinuation ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Forward elements và option thời gian (time / 시간) giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Discontinuation ranh giới (boundary / 경계)
 
 Relationship có thể cần discontinue toàn bộ hoặc một phần khi qualifying criteria không còn đáp ứng hoặc risk-management mục tiêu (objective / 목표) thay đổi.
@@ -293,6 +317,8 @@ Is a new designation appropriate?
 
 Accounting discontinuation không tự động yêu cầu close derivative; trade quyết định (decision / 결정) và accounting designation là hai điều khiển (control / 제어) paths liên quan nhưng khác nhau.
 
+> **Chuyển mạch:** Trong **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **13. Discontinuation ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **14. Forward elements và option thời gian (time / 시간) giá trị (value / 값)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. ánh xạ (mapping / 매핑) vào bốn institutional cases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Forward elements và option thời gian (time / 시간) giá trị (value / 값)
 
 Economic hedge chi phí (cost / 비용) có thể gồm:
@@ -307,11 +333,11 @@ collateral funding
 
 Accounting treatment của spot thành phần (component / 컴포넌트), forward element hoặc option thời gian (time / 시간) giá trị (value / 값) phụ thuộc designation và applicable requirements. Chapter này không cung cấp journal entries; mục tiêu là buộc workflow lưu component-level valuation và không gọi toàn bộ carry/premium là “hedge thất bại (failure / 실패)”.
 
+> **Chuyển mạch:** Ở chặng này của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **14. Forward elements và option thời gian (time / 시간) giá trị (value / 값)** cho ta quy tắc; **15. ánh xạ (mapping / 매핑) vào bốn institutional cases** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Minimum documentation pack** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. ánh xạ (mapping / 매핑) vào bốn institutional cases
 
 ### Korean exporter
-Phần “Korean exporter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 Forecast USD receivable
@@ -321,8 +347,6 @@ Forecast USD receivable
 ```
 
 ### Korean importer
-Phần “Korean importer” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 USD payable or forecast purchase
@@ -332,8 +356,6 @@ USD payable or forecast purchase
 ```
 
 ### Toàn cục (global / 전역) asset manager
-Phần “Toàn cục (global / 전역) asset manager” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 foreign asset / benchmark exposure
@@ -343,8 +365,6 @@ foreign asset / benchmark exposure
 ```
 
 ### Cross-currency funding
-Phần “Cross-currency funding” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 debt and economic funding currency
@@ -352,6 +372,8 @@ debt and economic funding currency
 → basis, collateral and credit effects
 → fair-value/cash-flow classification requires entity-specific analysis
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **15. ánh xạ (mapping / 매핑) vào bốn institutional cases** cho ta quy tắc; **16. Minimum documentation pack** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Minimum documentation pack
 
@@ -384,9 +406,9 @@ known ineffectiveness sources
 exception / escalation status
 ```
 
-## 17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)
-Phần “17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **16. Minimum documentation pack** xác định đầu vào; **17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. bằng chứng (evidence / 증거) hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)
 
 ```text
 Exposure register reconciliation
@@ -402,9 +424,9 @@ Exposure register reconciliation
 
 Treasury, accounting, rủi ro (risk / 위험) and kiểm tra (audit / 감사) may own different steps. A spreadsheet owned by one trader without thay đổi (change / 변경) log, kiểm soát truy cập (access control / 접근 제어) or rà soát (review / 검토) is a quản trị (governance / 거버넌스) weakness even if calculations are correct.
 
-## 18. bằng chứng (evidence / 증거) hierarchy
-Phần “18. bằng chứng (evidence / 증거) hierarchy” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, cơ chế trong **17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)** cần được kiểm chứng bằng dấu vết cụ thể; **18. bằng chứng (evidence / 증거) hierarchy** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **19. Red flags** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 18. bằng chứng (evidence / 증거) hierarchy
 
 ```text
 Executed contract / legal confirmation
@@ -418,9 +440,9 @@ Management assertion
 
 Assertions do not replace giao dịch (transaction / 트랜잭션) and forecast bằng chứng (evidence / 증거).
 
-## 19. Red flags
-Phần “19. Red flags” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **18. bằng chứng (evidence / 증거) hierarchy** nêu điều cần giải thích; **19. Red flags** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. rà soát (review / 검토) questions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 19. Red flags
 
 ```text
 designation created after seeing period-end P/L
@@ -432,6 +454,8 @@ economic hedge ratio changed but designation was not reviewed
 derivative P/L reported without underlying exposure attribution
 local K-IFRS / tax / legal conclusion copied from generic IFRS summary
 ```
+
+> **Chuyển mạch:** Trong **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **20. rà soát (review / 검토) questions** tiếp nhận điểm tựa từ **19. Red flags** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Sources and cập nhật (update / 업데이트) watch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. rà soát (review / 검토) questions
 
@@ -446,9 +470,9 @@ local K-IFRS / tax / legal conclusion copied from generic IFRS summary
 9. Derivative còn outstanding sau accounting discontinuation thì ai quản trị?
 10. tiêu chuẩn (standard / 표준)/adoption/local-policy nào phải verify trước khi áp dụng?
 
-## 21. Sources and cập nhật (update / 업데이트) watch
-Phần “21. Sources and cập nhật (update / 업데이트) watch” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Economic Hedge vs Hedge Accounting — rủi ro (risk / 위험) management, designation và documentation ranh giới (boundary / 경계)**, **20. rà soát (review / 검토) questions** nêu điều cần giải thích; **21. Sources and cập nhật (update / 업데이트) watch** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## 21. Sources and cập nhật (update / 업데이트) watch
 
 - [IFRS Foundation — IFRS 9 Financial Instruments](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/)
 - [IFRS Foundation — IFRS 9 project summary](https://www.ifrs.org/content/dam/ifrs/project/fi-hedge-accounting/ifrs-standard/project-summary.pdf)
@@ -466,4 +490,4 @@ IASB đang thực hiện post-implementation rà soát (review / 검토) về he
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [Systematic risk and attribution project](../70_systematic_project/README.md)
 
-> **Bàn giao:** Sau khi phân biệt economic kết quả (outcome / 결과) với accounting treatment, quay lại institutional trường hợp (case / 사례) hoặc portfolio-risk đơn vị sở hữu (owner / 오너) để kiểm tra hedge effectiveness và residual rủi ro (risk / 위험); không suy ngược từ accounting designation thành bằng chứng hedge đã tối ưu.
+> **Bàn giao:** Sau **21. Sources and cập nhật (update / 업데이트) watch**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
