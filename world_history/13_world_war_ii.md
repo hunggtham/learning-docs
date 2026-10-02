@@ -38,7 +38,7 @@ Nuremberg, Tokyo, refugee regimes và UN human-rights ngôn ngữ (language / �
 
 Operational records, survivor testimony, demographic reconstruction, satellite/industrial bằng chứng (evidence / 증거) và tribunal documents có độ gần sự kiện khác nhau; national archives thường im lặng về người bị chiếm đóng. Counterfactual: nếu không có total war, decolonization vẫn có động lực nhưng tốc độ, superpower legitimacy và human-rights institution có thể khác. Cầu nối sang 14–15 là **power vacuum, nuclear monopoly, refugee luồng (flow / 흐름) và anti-colonial claim**.
 
-> **Chuyển mạch:** Ở chặng này của **13 — World War II: chiến tranh tổng lực và trật tự mới**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** tách các mặt trận và nhóm dân cư bằng logistics, sản xuất và chiếm đóng; phần **Độ sâu pass** kiểm tra cách những cuộc chiến đó nối thành trật tự mới.
 
 ## Độ sâu (depth / 깊이) pass: WWII như nhiều cuộc chiến nối bằng logistics
 

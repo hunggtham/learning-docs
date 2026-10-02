@@ -37,7 +37,7 @@ flow: taxes, exports, labor, settlers, troops, credit, information
 
 Census, cadastral map, company archive và military report cho thấy trạng thái (state / 상태) gaze; court petitions, labor records, landscape thay đổi (change / 변경) và oral lịch sử (history / 이력) kiểm tra sự khác biệt giữa quy tắc (rule / 규칙) trên giấy và đời sống. Counterfactual: nếu railway nối nội địa thay vì chỉ nối mỏ với cảng, trạng thái (state / 상태) sức chứa (capacity / 용량) và hậu thuộc địa có thể khác, nhưng cũng có thể tăng tốc quân sự hóa. Cầu nối sang 11 là **imperial rivalry, alliance và tài nguyên (resource / 자원) bảo mật (security / 보안) làm biên giới thành hệ thống dễ leo thang**.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Imperialism: năng lực công nghiệp và trật tự bất bình đẳng**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: empire như một kiến trúc (architecture / 아키텍처) của extraction** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** xác định dòng tài nguyên, lao động và cưỡng chế; phần **Độ sâu pass** kiểm tra empire như kiến trúc extraction thay vì chỉ là mở rộng lãnh thổ.
 
 ## Độ sâu (depth / 깊이) pass: empire như một kiến trúc (architecture / 아키텍처) của extraction
 

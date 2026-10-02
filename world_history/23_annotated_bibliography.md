@@ -20,7 +20,7 @@
 - **Ian Morris — *Why the West Rules—For Now*.** Có mô hình tư duy (mental model / 사고 모델) năng lượng–xã hội quy mô lớn; dùng như một hypothesis có thể kiểm tra, không phải verdict chung cuộc.
 - **Norman Yoffee (ed.) — *The Cambridge World lịch sử (history / 이력), Vol. 2: A World with Agriculture, 12,000 BCE–500 CE*.** Cung cấp nhiều trường hợp (case / 사례) về nông nghiệp, đô thị và nhà nước ngoài một basin duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **23 — Annotated Bibliography: nền đọc để nâng cấp chapter**, **Classical, medieval và các mạng trao đổi** tiếp nhận điểm tựa từ **Origins, agriculture và early states** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại dương, colonialism và industrialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Origins, agriculture và early states** đặt nền về vật chất và thể chế; nhóm **Classical, medieval và các mạng trao đổi** mở rộng sang quy mô liên vùng trước khi chuyển tới đại dương và công nghiệp.
 
 ## Classical, medieval và các mạng trao đổi
 
@@ -29,7 +29,7 @@
 - **Sanjay Subrahmanyam — *Explorations in Connected lịch sử (history / 이력)*.** Mô hình “connected histories” giúp tránh kể các khu vực như những hộp kín.
 - **Chris Wickham — *The Inheritance of Rome* và *Framing the Early Middle Ages*.** Mạnh về trạng thái (state / 상태) sức chứa (capacity / 용량), land, labor và transformation sau Rome; nên đặt cạnh các world vùng châu Phi và châu Á.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **23 — Annotated Bibliography: nền đọc để nâng cấp chapter**, **Đại dương, colonialism và industrialization** tiếp nhận điểm tựa từ **Classical, medieval và các mạng trao đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **World wars, Cold War và decolonization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Đại dương, colonialism và industrialization** nối mạng trao đổi với cưỡng chế và năng lượng; nhóm **World wars, Cold War và decolonization** kiểm tra hệ quả chính trị của cấu trúc đó.
 
 ## Đại dương, colonialism và industrialization
 
@@ -39,7 +39,7 @@
 - **Frederick Cooper — *Colonialism in Question*.** Kỷ luật hóa cách dùng các khái niệm colony, empire, globalization và agency.
 - **John Darwin — *After Tamerlane*.** Theo dõi empire, trạng thái (state / 상태) và toàn cục (global / 전역) power sau 1400 mà không đặt châu Âu làm actor duy nhất.
 
-> **Chuyển mạch:** Trong **23 — Annotated Bibliography: nền đọc để nâng cấp chapter**, **World wars, Cold War và decolonization** tiếp nhận điểm tựa từ **Đại dương, colonialism và industrialization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Globalization, môi trường (environment / 환경) và phương pháp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **World wars, Cold War và decolonization** cho thấy chiến tranh và chủ quyền tái cấu trúc mạng cũ; **Globalization, môi trường và phương pháp** đưa các di sản đó vào phân tích rủi ro và bằng chứng.
 
 ## World wars, Cold War và decolonization
 
@@ -49,7 +49,7 @@
 - **Odd Arne Westad — *The toàn cục (global / 전역) Cold War*.** Đặt proxy war và development ideology trong bối cảnh Third World agency, không chỉ US–USSR.
 - **Frederick Cooper — *Africa Since 1940*.** Giúp đọc decolonization, citizenship, labor và development qua xã hội/chính trị châu Phi.
 
-> **Chuyển mạch:** Ở chặng này của **23 — Annotated Bibliography: nền đọc để nâng cấp chapter**, **Globalization, môi trường (environment / 환경) và phương pháp** tiếp nhận điểm tựa từ **World wars, Cold War và decolonization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc sử dụng bibliography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Globalization, môi trường và phương pháp** tổng hợp các mạng, giới hạn sinh thái và cách đọc nguồn; **Quy tắc sử dụng bibliography** biến tổng hợp đó thành thao tác nâng cấp chapter.
 
 ## Globalization, môi trường (environment / 환경) và phương pháp
 
@@ -59,7 +59,7 @@
 - **Lauren Benton — *A tìm kiếm (search / 검색) for Sovereignty*.** Hữu ích để hiểu legal pluralism, jurisdiction và empire trước mô hình nation-state.
 - **Sanjay Subrahmanyam, Natalie Zemon Davis và các tác giả connected/microhistory.** Dùng để kiểm tra xem narrative vĩ mô có còn đúng khi xuống household, cổng (port / 포트) hoặc một nhóm cụ thể không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **23 — Annotated Bibliography: nền đọc để nâng cấp chapter**, **Quy tắc sử dụng bibliography** tiếp nhận điểm tựa từ **Globalization, môi trường (environment / 환경) và phương pháp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Quy tắc sử dụng bibliography** khép vòng bằng cách gắn mỗi claim với loại nguồn, phạm vi và câu hỏi cần kiểm chứng; không dùng danh mục tài liệu như một kết luận tự thân.
 
 ## Quy tắc sử dụng bibliography
 

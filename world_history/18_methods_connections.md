@@ -23,7 +23,7 @@
 - **Shock–adaptation–lock-in:** dịch bệnh, chiến tranh, climate và technology tạo shock; chính sách ứng phó có thể thành đường dẫn (path / 경로) phụ thuộc (dependency / 의존성).
 - **tích hợp (integration / 통합)–inequality pair:** mọi mạng mở rộng đều có điều kiện gia nhập, tầng trung gian và chi phí bị đẩy ra ngoài.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Phương pháp, connections và mô hình tư duy (mental models / 사고 모델들)**, **Các mối nối trong repo** gom các mảnh từ **Mô hình tư duy (mental models / 사고 모델들) hữu ích** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mô hình tư duy hữu ích** cung cấp cách nhìn; **Các mối nối trong repo** chỉ nơi áp dụng, giới hạn và đường quay về owner để người đọc không biến mental model thành kết luận chung chung.
 
 ## Các mối nối trong repo
 

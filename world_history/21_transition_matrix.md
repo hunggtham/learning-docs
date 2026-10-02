@@ -28,7 +28,7 @@ Bảng này dùng để kiểm tra **điều gì đã đổi giữa hai giai đo
 - **Institution chịu áp lực** không nhất thiết biến mất; nó có thể tái cấu trúc, đổi tên hoặc bị tầng (layer / 계층) bởi institution mới.
 - **Continuity** ngăn periodization biến thành câu chuyện “cũ chết, mới sinh”.
 
-> **Chuyển mạch:** Trong **21 — chuyển tiếp (transition / 전이) ma trận (matrix / 행렬): các bước ngoặt không phải đường thẳng**, **Ba kiểu chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **Cách đọc bảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cách đọc bảng** xác định cột điều kiện, tác nhân và hệ quả; **Ba kiểu chuyển tiếp** dùng cùng khung đó để phân biệt thay đổi dần, đứt gãy và tái cấu trúc.
 
 ## Ba kiểu chuyển tiếp (transition / 전이)
 

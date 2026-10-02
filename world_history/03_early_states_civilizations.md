@@ -22,13 +22,13 @@ surplus + chokepoint nước/đất
 - **Demography:** urbanization tăng phân công nhưng dễ tạo epidemic và phụ thuộc vào vùng cung lương.
 - **Ideas:** kingship thiêng, trật tự vũ trụ và luật công khai tạo legitimacy, không xóa được thương lượng xã hội.
 
-> **Chuyển mạch:** Trong **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **Cách đọc “sụp đổ”** tiếp nhận điểm tựa từ **Luận đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà nước làm được gì và phải trả giá gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Luận đề** nêu cơ chế hình thành nhà nước; **Cách đọc “sụp đổ”** kiểm tra khi thuế, ghi chép và quy mô không còn đủ để duy trì phối hợp, rồi chuyển sang chi phí của năng lực đó.
 
 ## Cách đọc “sụp đổ”
 
 Collapse hiếm khi là một ngày tận thế. Hãy tách mất trung tâm, giảm dân số, đứt trade, đổi elite và continuity ở làng/khu vực; thường có tái cấu trúc thay vì biến mất hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **Nhà nước làm được gì và phải trả giá gì?** tiếp nhận điểm tựa từ **Cách đọc “sụp đổ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **So sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi xem giới hạn của sụp đổ, **Nhà nước làm được gì và phải trả giá gì?** cân bằng năng lực huy động với cưỡng chế; **So sánh** kiểm tra cân bằng đó giữa các nền văn minh.
 
 ## Nhà nước làm được gì và phải trả giá gì?
 
@@ -54,7 +54,7 @@ Một trung tâm có thể giàu nhưng dễ gãy nếu luồng (flow / 흐름) 
 
 Mesopotamia cho thấy quản trị thành bang và cạnh tranh basin; Ai Cập cho thấy chu kỳ lũ và thung lũng dài; Indus nhấn mạnh đô thị quy hoạch nhưng bằng chứng về monarchy còn hạn chế; Shang/Zhou ghép kinship, ritual và bronze; Andes phát triển labor tax và vertical ecology mà không cần chữ viết alphabet. So sánh phải dựa trên chức năng, không dựa trên việc “có vua hay không”.
 
-> **Chuyển mạch:** Trong **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **So sánh** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **So sánh** đặt các trường hợp cạnh cùng tiêu chí; **Bằng chứng, giới hạn và cầu nối** ghi rõ dữ liệu nào ủng hộ cơ chế và nơi không thể khái quát.
 
 ## Bằng chứng, giới hạn và cầu nối
 

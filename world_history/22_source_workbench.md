@@ -35,7 +35,7 @@ Ví dụ claim “đường sắt củng cố nhà nước” cần hỏi: đư�
 - **Elite gender/lớp (class / 클래스) độ lệch (bias / 편향):** người có quyền ký tên thường không đại diện toàn population.
 - **Digital độ lệch (bias / 편향):** dữ liệu nền tảng đo hành vi online tốt hơn người offline hoặc bị kiểm duyệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **4. Bộ câu hỏi khi dùng số liệu** tiếp nhận điểm tựa từ **3. Archive độ lệch (bias / 편향) thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. tham chiếu (reference / 참조) map theo nhu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi nhận diện bias trong archive, **Bộ câu hỏi khi dùng số liệu** buộc người đọc kiểm tra mẫu, đơn vị và mốc thời gian; **reference map** ghi lại nguồn cần quay về cho từng claim.
 
 ## 4. Bộ câu hỏi khi dùng số liệu
 
@@ -45,7 +45,7 @@ Ví dụ claim “đường sắt củng cố nhà nước” cần hỏi: đư�
 4. Missing dữ liệu (data / 데이터) đến từ phá hủy archive, không ghi nhận hay định nghĩa thay đổi?
 5. nhân quả (causal / 인과적) direction có thể đảo ngược không?
 
-> **Chuyển mạch:** Trong **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **5. tham chiếu (reference / 참조) map theo nhu cầu** tiếp nhận điểm tựa từ **4. Bộ câu hỏi khi dùng số liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Quy tắc trích dẫn trong các vòng sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Reference map** biến các câu hỏi kiểm chứng thành đường tra cứu; **Quy tắc trích dẫn** quy định cách ghi lại nguồn, phiên bản và giới hạn để vòng audit sau có thể lặp lại.
 
 ## 5. tham chiếu (reference / 참조) map theo nhu cầu
 
@@ -57,7 +57,7 @@ Ví dụ claim “đường sắt củng cố nhà nước” cần hỏi: đư�
 - **World wars/Cold War:** mobilization, casualty, refugee, aid, intelligence, oral lịch sử (history / 이력), declassified tệp (file / 파일).
 - **Globalization/post-Cold War:** đầu vào (input / 입력)–đầu ra (output / 출력), trade/FDI, shipping, di chuyển (migration / 마이그레이션), nền tảng (platform / 플랫폼) transparency, climate and demographic datasets.
 
-> **Chuyển mạch:** Ở chặng này của **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **6. Quy tắc trích dẫn trong các vòng sau** tiếp nhận điểm tựa từ **5. tham chiếu (reference / 참조) map theo nhu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi reference map và quy tắc trích dẫn đã rõ, mỗi claim phải quay được về nguồn, mốc thời gian và mức chắc chắn; thiếu một điểm thì chưa thể nâng cấp narrative.
 
 ## 6. Quy tắc trích dẫn trong các vòng sau
 
