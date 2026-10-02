@@ -69,7 +69,7 @@ Một địa điểm khảo cổ thường chỉ giữ lại phần stock bền 
 
 Ven biển, thảo nguyên, rừng nhiệt đới và vùng băng tạo các gói kỹ năng khác nhau. Người già, trẻ em, phụ nữ, người khuyết tật và người di cư có thể đóng góp vào gathering, chăm sóc và truyền tri thức; không nên dùng mô hình “nam săn–nữ hái” như quy luật phổ quát. Agency nằm trong lựa chọn mùa vụ, kết bạn, rời nhóm và đổi vật liệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Human origins: hợp tác, di chuyển và sinh thái**, **So sánh và phân phối** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **So sánh và phân phối** đặt các nhóm người và sinh thái cạnh nhau; **Bằng chứng, giới hạn và cầu nối** kiểm tra khảo cổ học, di truyền và môi trường trước khi nối mô hình sang chương nông nghiệp.
 
 ## Bằng chứng, giới hạn và cầu nối
 

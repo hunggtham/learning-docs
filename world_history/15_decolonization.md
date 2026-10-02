@@ -40,7 +40,7 @@ Biên giới mới có thể nối các nhóm hoặc chia một mạng cũ. Refu
 
 Constitution, parliamentary debate, census, commodity price, refugee dữ liệu (data / 데이터), memoir và cục bộ (local / 로컬) oral lịch sử (history / 이력) giúp phân biệt elite narrative với trạng thái (state / 상태) formation thực tế. Counterfactual: nếu biên giới được đàm phán lại theo economic/ecological mạng (network / 네트워크), xung đột (conflict / 충돌) chưa chắc biến mất vì citizenship và land vẫn cần institution; nhưng refugee đường dẫn (path / 경로) và fiscal cơ sở (base / 기반) có thể khác. Cầu nối sang 16 là **trạng thái (state / 상태), firm và household cùng bước vào toàn cục (global / 전역) giá trị (value / 값)/finance/di chuyển (migration / 마이그레이션) mạng (network / 네트워크)**.
 
-> **Chuyển mạch:** Ở chặng này của **15 — Decolonization: chủ quyền, nhà nước và những di sản không biến mất**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: độc lập chính trị và giới hạn của sovereignty** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** nối tuyên bố độc lập với năng lực nhà nước, biên giới và kinh tế; phần **Độ sâu pass** kiểm tra giới hạn của sovereignty sau khi quyền cai trị đổi chủ.
 
 ## Độ sâu (depth / 깊이) pass: độc lập chính trị và giới hạn của sovereignty
 

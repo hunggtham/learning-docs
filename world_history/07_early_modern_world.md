@@ -40,7 +40,7 @@ In ấn giảm chi phí bản sao (copy / 복사) nhưng không đảm bảo tru
 
 Customs ledgers, ship logs, price series, court records, maps và material culture giúp nối court với cổng (port / 포트) nhưng thường bỏ qua informal trade và coerced labor. Counterfactual: nếu credit không mở rộng, gunpowder trạng thái (state / 상태) vẫn có thể chiến thắng địa phương nhưng khó duy trì navy và payroll dài hạn. Cầu nối sang 08 là **cổng (port / 포트)/plantation/silver luồng (flow / 흐름) vượt basin và biến unequal exchange thành hệ thống toàn cầu**.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Early hiện đại (modern / 현대적) world: thuốc súng, đại dương và nhà nước tài chính**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: trạng thái (state / 상태) formation dưới áp lực chiến tranh và đại dương** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối** sang **Độ sâu pass**, hãy kiểm tra bằng chứng về thuốc súng, thương mại biển và thuế trước khi kết luận rằng chiến tranh tự nó tạo ra nhà nước tài chính.
 
 ## Độ sâu (depth / 깊이) pass: trạng thái (state / 상태) formation dưới áp lực chiến tranh và đại dương
 

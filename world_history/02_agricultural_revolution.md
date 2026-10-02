@@ -73,7 +73,7 @@ Surplus có thể nuôi chuyên gia và cứu trợ, nhưng ai kiểm soát kho 
 
 Hạt giống, phytolith, pollen, xương, isotope, dấu răng và cấu trúc kho giúp tái dựng diet/labor, nhưng khó đo quyền sở hữu và cảm nhận của hộ. Counterfactual: nếu một cộng đồng giữ mobility và đa dạng thức ăn cao hơn, liệu density thấp hơn có đổi bargaining power không? Cầu nối sang 03 là lúc **surplus trở thành claim có thể ghi, thu và cưỡng chế**.
 
-> **Chuyển mạch:** Trong **02 — Agricultural Revolution: thặng dư, định cư và chi phí mới**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: từ điều kiện sinh thái đến đường dẫn (path / 경로) dependence** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** nối thặng dư, định cư và phân tầng với dấu vết vật chất; phần **Độ sâu pass** kiểm tra điều kiện sinh thái nào thực sự tạo đường dẫn dài hạn.
 
 ## Độ sâu (depth / 깊이) pass: từ điều kiện sinh thái đến đường dẫn (path / 경로) dependence
 

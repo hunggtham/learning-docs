@@ -113,7 +113,7 @@ So sánh theo bốn câu hỏi:
 3. Labor mobility và coercion phân phối chi phí thế nào?
 4. thị trường (market / 시장) truy cập (access / 접근) thuộc về domestic bên tiêu thụ (consumer / 소비자) hay imperial mạng (network / 네트워크)?
 
-> **Chuyển mạch:** Ở chặng này của **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 8 — Industrialization ngoài Britain** cho ta quy tắc; **Cách dùng trường hợp (case / 사례) study** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau **Trường hợp 8 — Industrialization ngoài Britain**, **Cách dùng case study** biến so sánh thành phép kiểm tra: giữ nguyên tiêu chí, đổi bối cảnh và ghi rõ điểm mô hình không còn áp dụng.
 
 ## Cách dùng trường hợp (case / 사례) study
 

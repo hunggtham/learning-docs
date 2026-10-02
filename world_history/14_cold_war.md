@@ -43,7 +43,7 @@ feedback: arms burden → fiscal stress → reform/repression → legitimacy cha
 
 Declassified cables, aid records, arms transfers, oral lịch sử (history / 이력), development indicators và cục bộ (local / 로컬) newspapers cần được ghép với nhau; superpower archive dễ biến actor địa phương thành quân cờ. Counterfactual: nếu non-aligned states kiểm soát nhiều hơn aid conditions, development mô hình (model / 모델) và institutional autonomy có thể khác mà không loại bỏ rivalry. Cầu nối sang 15–16 là **sovereignty, debt, telecom, trade quy tắc (rule / 규칙) và development mạng (network / 네트워크)**.
 
-> **Chuyển mạch:** Ở chặng này của **14 — Cold War: cạnh tranh hệ thống và chiến tranh ủy nhiệm**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối** sang **Độ sâu pass**, hãy tách cạnh tranh hạt nhân, viện trợ, liên minh và chiến tranh ủy nhiệm để tránh giải thích mọi biến động bằng một trục Mỹ–Xô.
 
 ## Độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng
 

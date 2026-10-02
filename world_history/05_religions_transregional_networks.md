@@ -44,7 +44,7 @@ flow: pilgrims, donations, translations, letters, relics, ideas, disease
 
 Indian Ocean làm nổi bật merchant diaspora và cổng (port / 포트) cosmopolitanism; Silk Roads làm nổi bật caravan/translation; steppe làm nổi bật mobile court và conquest; các mạng ở châu Phi và châu Mỹ cho thấy diffusion không chỉ chạy Đông–Tây. “World religion” là một category hữu ích nhưng có thể che khuất ancestor practice, cục bộ (local / 로컬) ecology và các tradition không tập trung.
 
-> **Chuyển mạch:** Ở chặng này của **05 — Religions and transregional networks: ý tưởng đi cùng người và hàng**, **So sánh và giới hạn** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Từ **So sánh và giới hạn** sang **Bằng chứng, giới hạn và cầu nối**, hãy kiểm tra xem cùng một mạng tôn giáo được duy trì bằng văn bản, thiết chế và thực hành địa phương thế nào; phần sau dùng các dấu vết đó để giới hạn kết luận về lan truyền.
 
 ## Bằng chứng, giới hạn và cầu nối
 

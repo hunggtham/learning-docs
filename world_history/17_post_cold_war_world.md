@@ -38,7 +38,7 @@ Digital platforms làm giảm chi phí phối hợp nhưng tập trung dữ li�
 
 Trade/finance networks, xung đột (conflict / 충돌) dữ liệu (data / 데이터), nền tảng (platform / 플랫폼) transparency, climate observations, demographic projections và chính sách (policy / 정책) documents cần được đặt cạnh survey/ethnography; proxy measures như GDP hoặc social-media trend dễ phóng đại một phần xã hội. Counterfactual: nếu một nền tảng (platform / 플랫폼)/tuyến (route / 경로)/chips supplier không trở thành chokepoint, rủi ro (risk / 위험) có thể phân tán nhưng competition sẽ tìm nút (node / 노드) khác. Cầu nối mở sang vòng nghiên cứu mới là **climate, AI, năng lượng (energy / 에너지) chuyển tiếp (transition / 전이), demographic aging và institutional redesign**.
 
-> **Chuyển mạch:** Ở chặng này của **17 — Post-Cold-War world: trật tự phân mảnh và cạnh tranh mạng**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối** sang **Độ sâu pass**, hãy đối chiếu thể chế, công nghệ và mạng quyền lực sau 1991 để thấy vì sao phân mảnh có thể cùng tồn tại với hội nhập.
 
 ## Độ sâu (depth / 깊이) pass: post-1991 và đường dẫn (path / 경로) dependence của mạng (network / 네트워크) power
 

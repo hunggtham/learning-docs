@@ -45,7 +45,7 @@ shock: crash, drought, tariff, coup, border conflict
 
 Unemployment, election, price, trade và fiscal dữ liệu (data / 데이터) cần đọc cùng party membership, radio reach, memoir, police tệp (file / 파일) và colonial archive; dữ liệu quốc gia có thể che giấu gender/lớp (class / 클래스) difference. Counterfactual: nếu collective bảo mật (security / 보안) có enforcement và debt restructuring sớm, authoritarianism có thể mất một số openings nhưng không biến mất mọi racial/imperial xung đột (conflict / 충돌). Cầu nối sang 13 là **rearmament, occupation, genocide chính sách (policy / 정책) và tài nguyên (resource / 자원) war**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12 — Interwar period: khủng hoảng dân chủ, đế quốc và kinh tế**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: interwar như phản hồi (feedback / 피드백) giữa kinh tế và legitimacy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Hãy dùng **Bằng chứng, giới hạn và cầu nối** để nối khủng hoảng kinh tế với thay đổi legitimacy, rồi kiểm tra trong phần **Độ sâu pass** khi phản hồi chính trị làm suy yếu hoặc củng cố dân chủ.
 
 ## Độ sâu (depth / 깊이) pass: interwar như phản hồi (feedback / 피드백) giữa kinh tế và legitimacy
 

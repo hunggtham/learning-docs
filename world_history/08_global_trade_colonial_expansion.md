@@ -37,7 +37,7 @@ Archive của company/crown thường ghi đầu ra (output / 출력), thuế v�
 
 Shipping/customs records, plantation accounts, slave voyages, Indigenous archaeology, pollen, disease lịch sử (history / 이력) và oral tradition phải được đọc cùng nhau; đầu ra (output / 출력) của công ty không đại diện cho wellbeing. Counterfactual: nếu disease shock nhỏ hơn, conquest vẫn cần labor, alliance và logistics nhưng cán cân dân số–quân sự có thể khác. Cầu nối sang 09 là **commodity, slavery và empire cung cấp vốn/nguyên liệu/thị trường cho tri thức và công nghiệp**, dù không phải nguyên nhân duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **08 — toàn cục (global / 전역) trade and colonial expansion: mạng toàn cầu và cưỡng chế**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** xác định dòng hàng, lao động và cưỡng chế; phần **Độ sâu pass** dùng chúng để kiểm tra thuộc địa hóa đã tái phân phối năng lực giữa những tác nhân nào.
 
 ## Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực
 
