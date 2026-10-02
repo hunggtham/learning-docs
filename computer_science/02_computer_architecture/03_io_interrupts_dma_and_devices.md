@@ -1,6 +1,6 @@
 # I/O, interrupt, DMA và devices
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **I/O, interrupt, DMA và devices**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thiết bị (device / 장치) registers và controllers** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Polling vs interrupt** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **I/O, interrupt, DMA và devices**. Route đi từ device/controller registers → polling/interrupt → DMA và buffering → driver/OS boundary, để chi phí I/O được nối với latency, throughput và ownership bộ nhớ.
 
 CPU không hữu ích nếu không giao tiếp lưu trữ (storage / 저장소), keyboard, display, NIC, sensors hay accelerators. đầu vào (input / 입력)/đầu ra (output / 출력) — I/O (입출력) là ranh giới (boundary / 경계) giữa computation cốt lõi (core / 핵심) và bên ngoài (external / 외부) devices, nơi speed mismatch rất lớn và asynchronous hành vi (behavior / 동작) xuất hiện.
 

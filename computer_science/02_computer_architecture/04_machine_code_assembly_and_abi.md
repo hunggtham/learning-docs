@@ -1,6 +1,6 @@
 # Mã máy (machine code / 기계어), assembly, ABI và calling convention
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mã máy (machine code / 기계어) và assembly** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Calling convention** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mã máy (machine code / 기계어), assembly, ABI và calling convention**. Route đi từ instruction encoding → assembly/registers → stack/calling convention → ABI/linking/debugging, để ranh giới compiler–runtime–hardware được truy ra qua dữ liệu thực.
 
 High-level hàm (function / 함수) lời gọi (call / 호출) như `sum(a,b)` cuối cùng phải trở thành instructions, register usage, ngăn xếp (stack / 스택) bố cục (layout / 레이아웃) và nhị phân (binary / 이진) interfaces mà CPU/OS hiểu. mã máy (machine code / 기계어) là encoded bytes của ISA instructions; assembly là human-readable symbolic notation cho chúng. ABI định nghĩa conventions để independently compiled pieces phối hợp.
 

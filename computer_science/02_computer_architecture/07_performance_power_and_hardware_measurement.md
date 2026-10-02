@@ -1,6 +1,6 @@
 # Hiệu năng (performance / 성능), power và đo lường hardware
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hiệu năng (performance / 성능), power và đo lường hardware**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CPU thời gian (time / 시간) và ba thành phần cơ bản** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hiệu năng (performance / 성능), power và đo lường hardware**. Route đi từ execution time và latency/throughput → counters/benchmark design → power, thermal và DVFS → sustained performance, để số đo phần cứng luôn gắn với workload và điều kiện đo.
 
 Một CPU “3.5 GHz” không thể tự nói nó nhanh hơn CPU “3.0 GHz”. hiệu năng (performance / 성능) xuất hiện từ tương tác (interaction / 상호작용) giữa instruction count, cycles per instruction, bộ nhớ (memory / 메모리) stalls, parallelism, branch hành vi (behavior / 동작), trình biên dịch (compiler / 컴파일러) và tải công việc (workload / 워크로드). Vì vậy kiến trúc (architecture / 아키텍처) cần một chi phí (cost / 비용) mô hình (model / 모델) định lượng thay vì suy luận từ một specification riêng lẻ.
 

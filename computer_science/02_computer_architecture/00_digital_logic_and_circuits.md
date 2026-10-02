@@ -1,6 +1,6 @@
 # Digital lô-gic (logic / 논리), gates và sequential circuits
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Digital lô-gic (logic / 논리), gates và sequential circuits**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ transistor đến lô-gic (logic / 논리) gate** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Combinational lô-gic (logic / 논리)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Digital lô-gic (logic / 논리), gates và sequential circuits**. Route đi từ transistor/gate → Boolean và combinational logic → clock, state và sequential circuits → datapath/control, để mạch số được nối với hành vi và trạng thái theo thời gian.
 
 Một CPU không “hiểu” `if`, đối tượng (object / 객체) hay SQL. Ở tầng thấp, hardware tạo và đo các trạng thái điện rồi tổ chức chúng thành digital lô-gic (logic / 논리). Digital lớp trừu tượng (abstraction / 추상화) biến một continuum voltage thành các mức lô-gic (logic / 논리) 0/1 đủ ổn định để ta lập luận (reasoning / 추론) bằng Boolean algebra thay vì semiconductor physics.
 

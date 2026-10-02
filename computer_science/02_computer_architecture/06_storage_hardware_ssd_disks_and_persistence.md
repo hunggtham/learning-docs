@@ -1,6 +1,6 @@
 # Lưu trữ (storage / 저장소) hardware: SSD, disks và persistence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lưu trữ (storage / 저장소) hardware: SSD, disks và persistence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Persistence là một thuộc tính (property / 속성) vật lý rồi mới thành software đặc tả hợp đồng (contract / 계약)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **HDD: cơ học tạo ra độ trễ (latency / 지연 시간) cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lưu trữ (storage / 저장소) hardware: SSD, disks và persistence**. Route đi từ media/latency → HDD/SSD và endurance → persistence, flush và failure modes → filesystem/database guarantees, để “đã ghi” được phân biệt với “sống sót sau mất điện”.
 
 Phần mềm thường nhìn lưu trữ (storage / 저장소) qua tệp (file / 파일), page hoặc khối (block / 블록). Nhưng những abstractions này đứng trên thiết bị vật lý có hình học (geometry / 기하학), độ trễ (latency / 지연 시간) và thất bại (failure / 실패) modes riêng. Hiểu lưu trữ (storage / 저장소) hardware giúp giải thích tại sao sequential I/O khác random I/O, vì sao SSD cần wear leveling, tại sao `fsync` tồn tại và vì sao cơ sở dữ liệu (database / 데이터베이스) không thể coi “đã ghi (write / 쓰기)()” là “đã bền vững”.
 

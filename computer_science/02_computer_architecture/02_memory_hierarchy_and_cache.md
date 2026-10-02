@@ -1,6 +1,6 @@
 # Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Không có bộ nhớ (memory / 메모리) hoàn hảo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bộ nhớ đệm (cache / 캐시) line** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality**. Route đi từ latency/capacity trade-off → cache line và locality → mapping, replacement/coherence → virtual memory và performance, để hierarchy được đọc bằng access pattern chứ không chỉ tên tầng.
 
 CPU có thể thực hiện arithmetic trong vài cycles, nhưng DRAM truy cập (access / 접근) có thể tốn hàng chục tới hàng trăm cycles. lưu trữ (storage / 저장소) và mạng (network / 네트워크) còn chậm hơn nhiều. Nếu mỗi thao tác (operation / 연산) phải chờ tầng chậm nhất, CPU sẽ phần lớn idle. bộ nhớ (memory / 메모리) hierarchy giải quyết bằng nhiều tầng sức chứa (capacity / 용량)/độ trễ (latency / 지연 시간)/chi phí (cost / 비용) khác nhau.
 

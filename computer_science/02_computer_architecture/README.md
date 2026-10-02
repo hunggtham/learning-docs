@@ -1,6 +1,6 @@
 # Computer kiến trúc (architecture / 아키텍처) — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Computer kiến trúc (architecture / 아키텍처) — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Computer kiến trúc (architecture / 아키텍처) — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Computer kiến trúc (architecture / 아키텍처) — lĩnh vực (domain / 도메인) Hub**. Route học đi từ digital logic/CPU/ISA → memory/I/O/storage → parallelism/performance/power → advanced coherence/virtualization, để phần mềm luôn quay về các ràng buộc phần cứng cụ thể.
 
 Foundation nằm tại [`../basic/02_computer_architecture/`](../basic/02_computer_architecture/), bao gồm digital lô-gic (logic / 논리), CPU/ISA, bộ nhớ đệm (cache / 캐시), I/O, ABI, multicore/GPU, lưu trữ (storage / 저장소) hardware và hiệu năng (performance / 성능) fundamentals.
 

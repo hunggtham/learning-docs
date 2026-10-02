@@ -1,6 +1,6 @@
 # CPU, ISA và instruction cycle
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CPU, ISA và instruction cycle**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **ISA như ranh giới (boundary / 경계) giữa software và hardware** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Registers** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CPU, ISA và instruction cycle**. Route đi từ ISA/binary interface → registers và fetch/decode/execute → datapath, control và exceptions → performance/compatibility, để phần mềm được nối với trạng thái mà phần cứng thực sự duy trì.
 
 CPU (Central Processing Unit / 중앙 처리 장치) là engine thực thi instructions. Để hiểu nó, cần tách hai tầng: **ISA** là đặc tả hợp đồng (contract / 계약) software-visible; **microarchitecture** là cách chip cụ thể hiện thực đặc tả hợp đồng (contract / 계약) đó.
 
