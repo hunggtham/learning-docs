@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Part 1: Beginner — Rewritten Detailed
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Part 1: Beginner — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Học Java từ số 0 theo cách hiểu bản chất, không học thuộc cú pháp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cách đọc bộ Java chuẩn gốc (canonical / 정본)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là owner của **Java cốt lõi (core / 핵심) — Part 1: Beginner — Rewritten Detailed**; dùng README để giữ Part 1 ở nền tảng trước Intermediate. Từ **Học Java từ số 0 theo cách hiểu bản chất, không học thuộc cú pháp** nối qua execution/object model, types, control flow, OOP, collections, exceptions và I/O, rồi quay về canonical path để xác định API/spec owner của từng câu hỏi.
 
 ## Học Java từ số 0 theo cách hiểu bản chất, không học thuộc cú pháp
 

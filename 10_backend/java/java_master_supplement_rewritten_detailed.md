@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vị trí của Master Supplement trong mạch học (learning flow / 학습 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là owner của **Java cốt lõi (core / 핵심) — Master Supplement — Rewritten Detailed**; dùng README để đặt supplement sau Beginner → Intermediate → Senior. Từ **Low-level runtime, library engineering và JDK hiện đại** nối qua master learning flow, Java 8→25/26 evolution, concurrency primitives, class-file/runtime machinery, native interop, tooling và compatibility; mỗi chủ đề phải quay về một giới hạn production cụ thể.
 
 ## Low-level thời gian chạy (runtime / 런타임), thư viện (library / 라이브러리) kỹ thuật (engineering / 엔지니어링), hiện đại (modern / 현대적) JDK và những phần còn thiếu để tiến tới “Master Java”
 

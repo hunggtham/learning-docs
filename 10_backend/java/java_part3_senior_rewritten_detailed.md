@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vị trí của Part 3 trong mạch học (learning flow / 학습 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là owner của **Java cốt lõi (core / 핵심) — Part 3: cấp cao (senior / 시니어) — Rewritten Detailed**; dùng README để đặt Part 3 giữa Intermediate và Master Supplement. Từ **Java dưới góc nhìn runtime, concurrency, performance, API design và production engineering** nối qua learning flow, profiling, JVM evidence, DB/HTTP resources và failure modes, rồi chuẩn bị các câu hỏi low-level của Master.
 
 ## Java dưới góc nhìn thời gian chạy (runtime / 런타임), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), API thiết kế (design / 설계) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)
 

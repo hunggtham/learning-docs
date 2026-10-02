@@ -1,6 +1,6 @@
 # Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là owner của **Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed**; dùng README để nối Part 2 sau Beginner và trước Senior. Từ **Từ “biết viết Java” sang hiểu contract, concurrency, runtime và boundary** đi qua object ownership, exceptions, collections, I/O, threads, JMM, async và persistence, rồi chuyển mỗi API thành một contract/failure mode có thể kiểm chứng.
 
 ## Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”
 

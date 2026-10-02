@@ -1,7 +1,6 @@
 # Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch
 
-> **Mạch đọc:** Đặt **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. ranh giới (boundary / 경계), tham chiếu (reference / 참조) và sign convention** sang **2. KCL và KVL**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là owner của **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**; dùng nó để định vị chapter nền tảng trước network theorems. Từ **1. ranh giới (boundary / 경계), tham chiếu (reference / 참조) và sign convention** chuyển sang KCL/KVL, equivalent circuits, transient response và measurement uncertainty; mỗi phương trình phải gắn với boundary và cách kiểm chứng bằng dụng cụ.
 
 Mạch điện (circuit) là một mô hình thu gọn của hệ điện thật. Ta thay dây dẫn, nguồn, linh kiện và tải bằng các phần tử có terminal, rồi hỏi: với topology và excitation này, voltage/hiện tại (current / 현재)/power thay đổi thế nào? Mục tiêu kỹ thuật (engineering / 엔지니어링) không chỉ là giải ra một con số, mà còn phải biết con số đó nhạy với giả định nào và đo nó ra sao.
 
@@ -15,8 +14,7 @@ Với passive sign convention, dòng đi vào cực dương của phần tử th
 
 Nếu p < 0, phần tử đang cung cấp năng lượng cho phần còn lại. Quy ước nhất quán quan trọng hơn việc chọn hướng nào.
 
-
-> **Chuyển mạch:** Từ **1. ranh giới (boundary / 경계), tham chiếu (reference / 참조) và sign convention**, ta sang **2. KCL và KVL** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, **1. ranh giới (boundary / 경계), tham chiếu (reference / 참조) và sign convention** đã nêu tiêu chí phân biệt, còn **2. KCL và KVL** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Voltage divider và loading** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. KCL và KVL
 
@@ -30,8 +28,7 @@ Kirchhoff Voltage Law (KVL) là tổng biến thiên thế năng quanh một vò
 
 KCL/KVL không phải hai công thức độc lập với Physics. KCL dựa trên continuity của charge; KVL là xấp xỉ phù hợp khi kích thước mạch nhỏ so với bước sóng và hiệu ứng phân tán (distributed / 분산)/transmission-line chưa chi phối.
 
-
-> **Chuyển mạch:** Từ **2. KCL và KVL**, ta sang **3. Voltage divider và loading** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, **3. Voltage divider và loading** tiếp nhận điểm tựa từ **2. KCL và KVL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Linearization và transient** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Voltage divider và loading
 
@@ -46,8 +43,7 @@ Nếu tải RL nối vào đầu ra (output / 출력), điện trở dưới tr�
 
 Một divider không phải nguồn áp lý tưởng; đầu ra (output / 출력) sẽ sụt khi RL không lớn hơn đáng kể Rth. Vì vậy “đúng điện áp khi không tải” chưa chứng minh mạch hoạt động đúng.
 
-
-> **Chuyển mạch:** Từ **3. Voltage divider và loading**, ta sang **4. Linearization và transient** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, **4. Linearization và transient** tiếp nhận điểm tựa từ **3. Voltage divider và loading** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. AC, impedance và power factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Linearization và transient
 
@@ -62,8 +58,7 @@ Năng lượng lưu trữ là EC = 1/2 C V² và EL = 1/2 L I². Mạch RC có t
 
 Sau khoảng 5τ, sai số còn xấp xỉ dưới 1%. Kết luận này giả định linh kiện tuyến tính, nguồn lý tưởng và không có loading/parasitic đáng kể.
 
-
-> **Chuyển mạch:** Từ **4. Linearization và transient**, ta sang **5. AC, impedance và power factor** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, **5. AC, impedance và power factor** tiếp nhận điểm tựa từ **4. Linearization và transient** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Đo đúng một mạch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. AC, impedance và power factor
 
@@ -75,8 +70,7 @@ Trong steady trạng thái (state / 상태) hình sin, trở kháng biểu diễ
 
 RMS voltage/hiện tại (current / 현재) cho công suất thực P = Vrms Irms cos φ. Với tải switching, còn distortion power factor; chỉ nhìn phase shift là chưa đủ.
 
-
-> **Chuyển mạch:** Từ **5. AC, impedance và power factor**, ta sang **6. Đo đúng một mạch** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, **6. Đo đúng một mạch** tiếp nhận điểm tựa từ **5. AC, impedance và power factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Worked lập luận (reasoning / 추론): divider cho ADC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Đo đúng một mạch
 
@@ -94,8 +88,7 @@ Quy trình an toàn:
     → đo resistance trước → power on ở giới hạn thấp
     → kiểm tra DC operating điểm (point / 지점) → mới xem transient/AC
 
-
-> **Chuyển mạch:** Từ **6. Đo đúng một mạch**, ta sang **7. Worked lập luận (reasoning / 추론): divider cho ADC** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, **6. Đo đúng một mạch** cho ta quy tắc; **7. Worked lập luận (reasoning / 추론): divider cho ADC** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. thất bại (failure / 실패) modes và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Worked lập luận (reasoning / 추론): divider cho ADC
 
@@ -103,12 +96,9 @@ Giả sử cần đưa 0–12 V về ADC 0–3.3 V. Tỉ lệ lý tưởng là 3
 
 Nhưng ADC có sampling capacitor. Nếu Rth = R1 || R2 ≈ 7.3 kΩ quá lớn so với acquisition thời gian (time / 시간), capacitor chưa kịp settle và mã (code / 코드) ADC thấp. Có thể giảm cả hai điện trở, thêm buffer op-amp, hoặc tăng acquisition thời gian (time / 시간). Đây là điểm circuit phân tích (analysis / 분석) nối trực tiếp sang analog front-end và embedded ADC.
 
-
-> **Chuyển mạch:** Từ **7. Worked lập luận (reasoning / 추론): divider cho ADC**, ta sang **8. thất bại (failure / 실패) modes và giới hạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, trường hợp ở **7. Worked lập luận (reasoning / 추론): divider cho ADC** cho thấy quy tắc hoạt động; **8. thất bại (failure / 실패) modes và giới hạn** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. thất bại (failure / 실패) modes và giới hạn
-Phần “8. thất bại (failure / 실패) modes và giới hạn” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - Ground tham chiếu (reference / 참조) sai làm mọi điện áp “đúng tương đối” nhưng sai so với hệ thống (system / 시스템).
 - Tụ phân cực ngược có thể hỏng trước khi waveform nhìn thấy bất thường.
@@ -116,11 +106,10 @@ Phần “8. thất bại (failure / 실패) modes và giới hạn” nối ki�
 - Khi kích thước dây đủ lớn hoặc tần số đủ cao, lumped KVL thất bại (fail / 실패); cần transmission-line mô hình (model / 모델).
 - Khi mạch có semiconductor, topology có thể đổi theo operating region; giải tuyến tính một lần là chưa đủ.
 
-
-> **Chuyển mạch:** Từ **8. thất bại (failure / 실패) modes và giới hạn**, ta sang **cầu nối (bridge / 브리지)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Circuit phân tích (analysis / 분석) and đo lường (measurement / 측정) — Phân tích và đo mạch**, **8. thất bại (failure / 실패) modes và giới hạn** đã nêu tiêu chí phân biệt, còn **Cầu nối (bridge / 브리지)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cầu nối (bridge / 브리지)
 
 Tiếp theo: [Analog electronics — device biasing và feedback](../analog_electronics/00_device_biasing_feedback.md), hoặc [Signals and systems — LTI, sampling và filtering](../signals_and_systems/00_lti_sampling_filtering.md). Nền Physics tương ứng: [mạch DC](../../physics/05_electromagnetism/01_dc_circuits.md), [mạch AC/RLC](../../physics/05_electromagnetism/02_ac_rlc_circuits.md) và [transmission lines](../../physics/05_electromagnetism/05_transmission_lines_waveguides.md).
 
-> **Bàn giao:** Sau **cầu nối (bridge / 브리지)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 network theorems frequency response](./01_network_theorems_frequency_response.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cầu nối (bridge / 브리지)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
