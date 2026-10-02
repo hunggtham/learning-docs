@@ -6,7 +6,7 @@
 
 Tệp (file / 파일) này không phải dictionary độc lập. Nó chuẩn hóa các concept lặp lại trong thư viện (library / 라이브러리) và chỉ ra **kiểu ở mã nguồn (source type / 소스 타입) nào phù hợp với loại câu hỏi nào**.
 
-> **Chuyển mạch:** Trong **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Cốt lõi (core / 핵심) analytical terms** tiếp nhận điểm tựa từ **Cách dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn (source / 소스) hierarchy: không có một hierarchy duy nhất cho mọi câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách dùng** chỉ ra lúc nào cần glossary; **Cốt lõi analytical terms** định nghĩa các từ dùng xuyên chapter, rồi **Nguồn hierarchy** chọn loại bằng chứng phù hợp với từng câu hỏi.
 
 ## Cốt lõi (core / 핵심) analytical terms
 
@@ -196,7 +196,7 @@ Vietnamese term comes first when natural. Important scholarly từ khóa (keywor
 
 Do not force Korean translation into every line; liên kết (connection / 연결) must be educationally useful.
 
-> **Chuyển mạch:** Ở chặng này của **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Names and changing place names** tiếp nhận điểm tựa từ **Từ khóa (keyword / 키워드) conventions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng chứng (evidence / 증거) labels used in this thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Từ khóa conventions** thống nhất cách viết; **Names and changing place names** xử lý biến đổi địa danh, rồi **Evidence labels** cho biết mức chắc chắn của từng cách gọi.
 
 ## Names and changing place names
 
@@ -234,7 +234,7 @@ When extending files:
 4. avoid long quotation—paraphrase and cite;
 5. cập nhật (update / 업데이트) nội bộ (internal / 내부) links when a concept gains đơn vị sở hữu chuẩn gốc (canonical owner / 정본 소유자).
 
-> **Chuyển mạch:** Ở chặng này của **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Bàn giao** tiếp nhận điểm tựa từ **Citation discipline for future updates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Citation discipline for future updates** quy định cách ghi nguồn và ngày đối chiếu; **Bàn giao** chỉ rõ chapter/owner tiếp theo để cập nhật không làm mất provenance.
 
 ## Bàn giao
 
