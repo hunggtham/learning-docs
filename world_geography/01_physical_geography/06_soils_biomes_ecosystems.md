@@ -1,7 +1,6 @@
 # Đất, quần xã sinh vật và hệ sinh thái theo không gian
 
-> **Mạch đọc:** Đọc **Đất, quần xã sinh vật và hệ sinh thái theo không gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đất là một hệ động ở ranh giới giữa đá, nước, khí quyển và sự sống** sang **Phẫu diện đất là dấu vết của các dòng vật chất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đất, biomes và hệ sinh thái theo không gian**. Route đi từ soil formation → profiles/nutrient flows → climate/biome patterns → ecosystem interactions → land-use and resilience, để sinh thái nối vật chất với không gian.
 
 ## Đất là một hệ động ở ranh giới giữa đá, nước, khí quyển và sự sống
 
@@ -11,11 +10,15 @@ Một cách kinh điển để nghĩ về quá trình hình thành đất là m�
 
 Cùng một loại đá có thể tạo đất rất khác nếu khí hậu và sinh vật khác nhau. Ngược lại, hai vật liệu mẹ khác nhau có thể dần tạo đất có một số tính chất giống nhau nếu trải qua thời gian dài dưới môi trường tương tự.
 
+> **Chuyển mạch:** Trong **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Phẫu diện đất là dấu vết của các dòng vật chất** tiếp nhận điểm tựa từ **Đất là một hệ động ở ranh giới giữa đá, nước, khí quyển và sự sống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết cấu, cấu trúc và vì sao đất giữ nước khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phẫu diện đất là dấu vết của các dòng vật chất
 
 **Phẫu diện đất (soil profile)** thường có các tầng khác nhau do vật chất được thêm vào, mất đi, biến đổi và chuyển từ tầng này sang tầng khác. Lá rụng bổ sung chất hữu cơ ở mặt đất; nước thấm có thể hòa tan và kéo ion xuống sâu; sét và oxit có thể tích tụ ở một tầng khác.
 
 Vì vậy tầng đất không nên được học như ký hiệu A–B–C tách rời. Chúng là dấu vết của quá trình vận chuyển vật chất theo phương thẳng đứng và quá trình sinh học ở bề mặt.
+
+> **Chuyển mạch:** Ở chặng này của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Kết cấu, cấu trúc và vì sao đất giữ nước khác nhau** tiếp nhận điểm tựa từ **Phẫu diện đất là dấu vết của các dòng vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất hữu cơ và chu trình dinh dưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kết cấu, cấu trúc và vì sao đất giữ nước khác nhau
 
@@ -25,6 +28,8 @@ Tuy nhiên “đất sét giữ nhiều nước” không đồng nghĩa cây lu
 
 **Cấu trúc đất (soil structure)** — cách hạt kết thành viên — cũng quan trọng. Đất có cùng thành phần hạt nhưng cấu trúc khác nhau có thể có độ thấm, thông khí và khả năng chống xói mòn rất khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Chất hữu cơ và chu trình dinh dưỡng** tiếp nhận điểm tựa từ **Kết cấu, cấu trúc và vì sao đất giữ nước khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng trao đổi ion và độ phì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất hữu cơ và chu trình dinh dưỡng
 
 Chất hữu cơ cải thiện cấu trúc, giữ nước và cung cấp chất dinh dưỡng khi phân hủy. Vi sinh vật đất phân giải vật liệu hữu cơ, chuyển một phần chất dinh dưỡng thành dạng cây có thể hấp thụ.
@@ -33,11 +38,15 @@ Tốc độ phân hủy phụ thuộc nhiệt độ, ẩm, oxy và chất lượ
 
 Đây là lý do “rừng xanh tốt = đất cực kỳ màu mỡ” là một suy luận sai. Trong nhiều rừng mưa nhiệt đới, chu trình dinh dưỡng diễn ra nhanh và lượng lớn dinh dưỡng nằm trong sinh khối sống.
 
+> **Chuyển mạch:** Trong **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Khả năng trao đổi ion và độ phì** tiếp nhận điểm tựa từ **Chất hữu cơ và chu trình dinh dưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **pH và tính khả dụng của dinh dưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khả năng trao đổi ion và độ phì
 
 Các hạt sét và chất hữu cơ có bề mặt mang điện, có thể giữ những ion dinh dưỡng như calcium, potassium hoặc magnesium. **Khả năng trao đổi cation (cation exchange capacity, CEC)** mô tả phần nào khả năng đất giữ và trao đổi các cation này.
 
 CEC cao không tự động nghĩa đất màu mỡ, vì cần biết loại ion đang chiếm các vị trí trao đổi và pH của đất. Độ phì là kết quả tổng hợp của dinh dưỡng, nước, cấu trúc, pH, sinh học đất và điều kiện thoát nước.
+
+> **Chuyển mạch:** Ở chặng này của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **pH và tính khả dụng của dinh dưỡng** tiếp nhận điểm tựa từ **Khả năng trao đổi ion và độ phì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quần xã sinh vật lớn là kết quả của khí hậu nhưng không chỉ của khí hậu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## pH và tính khả dụng của dinh dưỡng
 
@@ -45,11 +54,15 @@ pH ảnh hưởng độ hòa tan và khả năng cây hấp thụ nhiều nguyê
 
 Vì vậy bón thêm phân không luôn giải quyết vấn đề thiếu dinh dưỡng. Nếu pH không phù hợp hoặc rễ thiếu oxy do úng, cây có thể không sử dụng hiệu quả lượng phân bổ sung.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Quần xã sinh vật lớn là kết quả của khí hậu nhưng không chỉ của khí hậu** tiếp nhận điểm tựa từ **pH và tính khả dụng của dinh dưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rừng mưa nhiệt đới: năng suất cao nhưng chu trình rất nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quần xã sinh vật lớn là kết quả của khí hậu nhưng không chỉ của khí hậu
 
 **Quần xã sinh vật lớn (biome / 생물군계)** là vùng sinh thái rộng được nhận diện qua kiểu thảm thực vật, khí hậu và các đặc trưng sinh thái. Ở quy mô toàn cầu, nhiệt độ và nước là hai trục giải thích mạnh: nóng–ẩm thuận lợi cho rừng mưa; rất khô tạo hoang mạc; lạnh kéo dài giới hạn chiều cao và mùa sinh trưởng của cây.
 
 Nhưng nếu chỉ dùng nhiệt độ và mưa, ta bỏ qua đất, cháy, động vật ăn cỏ, bão, lịch sử tiến hóa và tác động con người. Hai nơi có khí hậu tương tự vẫn có thể có hệ sinh thái khác do lịch sử địa sinh học và chế độ nhiễu động khác nhau.
+
+> **Chuyển mạch:** Trong **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Rừng mưa nhiệt đới: năng suất cao nhưng chu trình rất nhanh** tiếp nhận điểm tựa từ **Quần xã sinh vật lớn là kết quả của khí hậu nhưng không chỉ của khí hậu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xavan, đồng cỏ và vai trò của cháy–động vật ăn cỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rừng mưa nhiệt đới: năng suất cao nhưng chu trình rất nhanh
 
@@ -57,11 +70,15 @@ Rừng mưa có nhiệt và nước dồi dào, hỗ trợ **năng suất sơ c�
 
 Khi rừng bị loại bỏ, một phần hệ tái chế dinh dưỡng này biến mất. Nếu đất trống bị mưa xói hoặc canh tác không phù hợp, năng suất có thể giảm nhanh hơn trực giác “đất nhiệt đới phải màu mỡ” gợi ý.
 
+> **Chuyển mạch:** Ở chặng này của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Xavan, đồng cỏ và vai trò của cháy–động vật ăn cỏ** tiếp nhận điểm tựa từ **Rừng mưa nhiệt đới: năng suất cao nhưng chu trình rất nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rừng phương bắc và đài nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xavan, đồng cỏ và vai trò của cháy–động vật ăn cỏ
 
 **Xavan (savanna)** và nhiều đồng cỏ không chỉ tồn tại vì lượng mưa “không đủ cho rừng”. Cháy định kỳ, mùa khô và động vật ăn cỏ có thể duy trì cấu trúc mở bằng cách hạn chế cây gỗ.
 
 Nếu chế độ cháy thay đổi hoặc động vật ăn cỏ giảm mạnh, ranh giới giữa đồng cỏ và cây bụi có thể dịch chuyển. Điều này cho thấy biome có thể là trạng thái động được duy trì bởi nhiều quá trình, không chỉ bởi khí hậu trung bình.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Rừng phương bắc và đài nguyên** tiếp nhận điểm tựa từ **Xavan, đồng cỏ và vai trò của cháy–động vật ăn cỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoang mạc được xác định bởi thiếu nước, không phải bởi nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rừng phương bắc và đài nguyên
 
@@ -69,11 +86,15 @@ Nếu chế độ cháy thay đổi hoặc động vật ăn cỏ giảm mạnh,
 
 Băng vĩnh cửu ảnh hưởng thoát nước và cấu trúc đất. Khi khí hậu ấm lên, thay đổi độ sâu lớp đất tan theo mùa có thể ảnh hưởng hệ sinh thái và hạ tầng.
 
+> **Chuyển mạch:** Trong **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Hoang mạc được xác định bởi thiếu nước, không phải bởi nhiệt** tiếp nhận điểm tựa từ **Rừng phương bắc và đài nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng chuyển tiếp sinh thái và tại sao ranh giới thường mờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hoang mạc được xác định bởi thiếu nước, không phải bởi nhiệt
 
 Hoang mạc có thể nóng hoặc lạnh. Yếu tố chung là lượng nước khả dụng thấp so với nhu cầu bốc hơi. Thực vật hoang mạc thích nghi bằng rễ sâu hoặc rộng, lá nhỏ, mô dự trữ nước và chiến lược vòng đời tận dụng mưa ngắn.
 
 Ở vùng khô, lớp phủ thực vật thưa làm đất dễ bị xói mòn khi bề mặt bị phá vỡ. Tưới tiêu không đúng cách còn có thể gây **mặn hóa (salinization)** vì nước bốc hơi để lại muối.
+
+> **Chuyển mạch:** Ở chặng này của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Vùng chuyển tiếp sinh thái và tại sao ranh giới thường mờ** tiếp nhận điểm tựa từ **Hoang mạc được xác định bởi thiếu nước, không phải bởi nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cạnh sinh cảnh và phân mảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vùng chuyển tiếp sinh thái và tại sao ranh giới thường mờ
 
@@ -81,11 +102,15 @@ Hoang mạc có thể nóng hoặc lạnh. Yếu tố chung là lượng nước
 
 Do đó khi khí hậu dịch chuyển, biome không đơn giản trượt nguyên khối về phía cực. Đường sá, đô thị, nông nghiệp và núi có thể cản sự di chuyển của loài, tạo **phân mảnh sinh cảnh (habitat fragmentation)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Cạnh sinh cảnh và phân mảnh** tiếp nhận điểm tựa từ **Vùng chuyển tiếp sinh thái và tại sao ranh giới thường mờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiễu động không phải lúc nào cũng là phá hủy bất thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cạnh sinh cảnh và phân mảnh
 
 Khi một khu rừng lớn bị chia thành nhiều mảnh nhỏ, tổng diện tích có thể chưa giảm quá mạnh nhưng tỷ lệ khu vực nằm gần mép tăng lên. Gần mép, ánh sáng, gió, nhiệt và hoạt động con người khác phần lõi. Đây là **hiệu ứng cạnh (edge effect)**.
 
 Hai cảnh quan có cùng diện tích rừng nhưng cấu trúc mảnh khác nhau vì thế có giá trị sinh thái khác nhau. Địa lý cảnh quan quan tâm không chỉ “bao nhiêu diện tích còn lại” mà còn “các mảnh nằm ở đâu và kết nối với nhau thế nào”.
+
+> **Chuyển mạch:** Trong **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Nhiễu động không phải lúc nào cũng là phá hủy bất thường** tiếp nhận điểm tựa từ **Cạnh sinh cảnh và phân mảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diễn thế sinh thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhiễu động không phải lúc nào cũng là phá hủy bất thường
 
@@ -93,9 +118,13 @@ Bão, lũ, cháy, côn trùng và hoạt động của động vật có thể l
 
 Ví dụ, dập mọi đám cháy trong hệ vốn thường xuyên có cháy nhẹ có thể làm nhiên liệu tích lũy, từ đó tăng khả năng xảy ra cháy cực lớn. “Giảm số vụ cháy” và “giảm rủi ro cháy nghiêm trọng” vì thế không phải lúc nào cùng một mục tiêu.
 
+> **Chuyển mạch:** Ở chặng này của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Diễn thế sinh thái** tiếp nhận điểm tựa từ **Nhiễu động không phải lúc nào cũng là phá hủy bất thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đa dạng sinh học, tính đặc hữu và địa lý đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Diễn thế sinh thái
 
 Sau nhiễu động, thành phần loài có thể thay đổi theo thời gian qua **diễn thế sinh thái (ecological succession)**. Tuy nhiên không nên hình dung diễn thế luôn tiến tới một “đỉnh cuối cùng” duy nhất. Hệ có thể đi theo nhiều quỹ đạo tùy nhiễu động, nguồn hạt giống, đất và khí hậu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Đa dạng sinh học, tính đặc hữu và địa lý đảo** tiếp nhận điểm tựa từ **Diễn thế sinh thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp là biến đổi hệ sinh thái có chủ đích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đa dạng sinh học, tính đặc hữu và địa lý đảo
 
@@ -103,11 +132,15 @@ Sau nhiễu động, thành phần loài có thể thay đổi theo thời gian 
 
 Địa lý đảo cũng minh họa quan hệ giữa diện tích, khoảng cách và số loài: đảo lớn thường chứa nhiều sinh cảnh và quần thể hơn, còn đảo gần nguồn nhập cư dễ nhận loài mới hơn. Đây là nền tảng của **địa sinh học đảo (island biogeography)**.
 
+> **Chuyển mạch:** Trong **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Nông nghiệp là biến đổi hệ sinh thái có chủ đích** tiếp nhận điểm tựa từ **Đa dạng sinh học, tính đặc hữu và địa lý đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đất, hệ sinh thái và GIS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nông nghiệp là biến đổi hệ sinh thái có chủ đích
 
 Nông nghiệp thay hệ tự nhiên bằng hệ sản xuất được quản lý. Con người cố tăng dòng năng lượng vào sản phẩm mong muốn qua giống, tưới, phân bón và kiểm soát sâu bệnh. Năng suất tăng nhưng hệ thường trở nên phụ thuộc hơn vào đầu vào bên ngoài.
 
 Xói mòn đất là một ví dụ quan trọng. Nếu tốc độ mất lớp đất mặt vượt tốc độ hình thành đất trong thời gian dài, ta đang tiêu dùng một **lượng tích lũy tự nhiên (natural stock)** nhanh hơn nó tái tạo.
+
+> **Chuyển mạch:** Ở chặng này của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Đất, hệ sinh thái và GIS** tiếp nhận điểm tựa từ **Nông nghiệp là biến đổi hệ sinh thái có chủ đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đất, hệ sinh thái và GIS
 
@@ -115,11 +148,15 @@ Viễn thám có thể theo dõi màu xanh thực vật, nhiệt độ bề mặ
 
 Nhưng raster vệ tinh không “đo trực tiếp hệ sinh thái”. Các chỉ số như NDVI là biến thay thế và cần kiểm chứng thực địa. Cùng giá trị NDVI có thể mang ý nghĩa khác nhau giữa rừng, đồng cỏ và nông nghiệp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Đất, hệ sinh thái và GIS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 “Đất đen luôn màu mỡ” không đúng nếu chỉ nhìn màu mà bỏ qua pH, mặn, cấu trúc và dinh dưỡng. “Biome có ranh giới cố định” cũng sai vì chúng là các vùng chuyển tiếp và thay đổi theo khí hậu–nhiễu động. “Cháy luôn có hại cho tự nhiên” bỏ qua những hệ đã tiến hóa cùng cháy định kỳ.
 
 Một hiểu lầm khác là phục hồi sinh thái chỉ cần trồng thật nhiều cây. Nếu chọn sai loài, sai chế độ nước hoặc bỏ qua lịch sử nhiễu động, trồng cây có thể không tái tạo được chức năng của hệ sinh thái bản địa.
+
+> **Chuyển mạch:** Trong **Đất, quần xã sinh vật và hệ sinh thái theo không gian**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -127,4 +164,4 @@ Một hiểu lầm khác là phục hồi sinh thái chỉ cần trồng thật 
 
 Xem tiếp: [Nông nghiệp và hệ thống lương thực](../02_human_geography/06_agriculture_food_systems.md), [Hệ khí hậu](./03_global_climate_system.md), [Thủy văn](./04_hydrology_rivers_groundwater.md), [Phát triển bền vững](../04_global_systems/04_environment_sustainability.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 plate tectonics geologic time](./00_plate_tectonics_geologic_time.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
