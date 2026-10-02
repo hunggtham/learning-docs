@@ -1,7 +1,6 @@
 # Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro
 
-> **Mạch đọc:** Đọc **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hiểm họa tự nhiên không tự động trở thành thảm họa** sang **Từ hiểm họa đơn đến chuỗi rủi ro**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thiên tai, hazard, exposure và risk**. Route đi từ hazard process → exposure/vulnerability → cascading risk → preparedness/response → resilience and inequality, để thảm họa nối tự nhiên với xã hội.
 
 ## Hiểm họa tự nhiên không tự động trở thành thảm họa
 
@@ -15,11 +14,15 @@ rủi ro (risk / 위험) \approx f(Hazard, Exposure, Vulnerability)
 
 Khác biệt này rất quan trọng vì xã hội không thể ngăn mọi hiểm họa tự nhiên xảy ra, nhưng có thể thay đổi mức phơi lộ và tính dễ tổn thương.
 
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Hiểm họa tự nhiên không tự động trở thành thảm họa** xác định đầu vào; **Từ hiểm họa đơn đến chuỗi rủi ro** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tần suất, độ lớn và đường cong vượt ngưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ hiểm họa đơn đến chuỗi rủi ro
 
 Thảm họa thực tế thường không đến từ một hiện tượng đơn lẻ. Động đất có thể gây cháy, sập cầu và gián đoạn nước; bão có thể đồng thời tạo gió, nước dâng và mưa cực đoan; hạn kéo dài có thể làm thảm thực vật khô rồi tăng nguy cơ cháy.
 
 Đây gọi là **rủi ro dây chuyền (cascading risk)** khi một sự cố làm phát sinh hoặc khuếch đại sự cố khác. Khi nhiều hiểm họa cùng xảy ra hoặc tương tác, ta nói tới **hiểm họa kết hợp (compound hazard)**. Hệ thống điện, nước, giao thông và viễn thông có thể làm các chuỗi này lan từ không gian vật lý sang kinh tế–xã hội.
+
+> **Chuyển mạch:** Ở chặng này của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Từ hiểm họa đơn đến chuỗi rủi ro** xác định đầu vào; **Tần suất, độ lớn và đường cong vượt ngưỡng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tổn thất kỳ vọng và phần đuôi của phân bố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tần suất, độ lớn và đường cong vượt ngưỡng
 
@@ -33,11 +36,15 @@ P(\ge1)=1-(1-0.01)^{30}\approx 26\%
 
 Điểm quan trọng là xác suất theo năm có thể thay đổi nếu khí hậu, sử dụng đất hoặc hệ thống sông thay đổi. Khi đó giả định **tính dừng (stationarity)** của dữ liệu lịch sử không còn phù hợp. Một “lũ 100 năm” được ước tính từ quá khứ không nhất thiết còn có đúng xác suất đó trong tương lai.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Tổn thất kỳ vọng và phần đuôi của phân bố** tiếp nhận điểm tựa từ **Tần suất, độ lớn và đường cong vượt ngưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động đất: từ nguồn phát đến thiệt hại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tổn thất kỳ vọng và phần đuôi của phân bố
 
 Quản lý rủi ro không chỉ hỏi “sự kiện thường xảy ra nhất là gì?”. Một sự kiện hiếm nhưng tổn thất cực lớn có thể chi phối **tổn thất kỳ vọng (expected loss)** và yêu cầu vốn dự phòng. Vì vậy kỹ thuật (engineering / 엔지니어링), insurance và disaster planning thường quan tâm cả **đường cong vượt tổn thất (loss exceedance curve)**: xác suất tổn thất vượt một mức nhất định.
 
 Đây là cầu nối (bridge / 브리지) quan trọng giữa vật lý (physical / 물리적) geography và finance. Hazard mô hình (model / 모델) mô tả vật lý (physical / 물리적) intensity; exposure mô hình (model / 모델) mô tả tài sản/người; vulnerability curve chuyển intensity thành damage; financial tầng (layer / 계층) chuyển damage thành mất mát (loss / 손실).
+
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Tổn thất kỳ vọng và phần đuôi của phân bố** nêu điều cần giải thích; **Động đất: từ nguồn phát đến thiệt hại** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sóng thần: hiểm họa của sự dịch chuyển khối nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động đất: từ nguồn phát đến thiệt hại
 
@@ -47,11 +54,15 @@ Quản lý rủi ro không chỉ hỏi “sự kiện thường xảy ra nhất 
 
 Rủi ro còn phụ thuộc “tuổi” và tiêu chuẩn công trình. Một thành phố có cùng mức rung nhưng áp dụng quy chuẩn chống động đất tốt sẽ có đường tổn thất khác một thành phố có nhiều công trình yếu.
 
+> **Chuyển mạch:** Ở chặng này của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Động đất: từ nguồn phát đến thiệt hại** nêu điều cần giải thích; **Sóng thần: hiểm họa của sự dịch chuyển khối nước** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Núi lửa: nhiều hiểm họa trên nhiều thang không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sóng thần: hiểm họa của sự dịch chuyển khối nước
 
 Sóng thần thường hình thành khi một khối nước lớn bị dịch chuyển nhanh do động đất đáy biển, sạt lở hoặc hoạt động núi lửa. Ở biển sâu, sóng có thể thấp nhưng di chuyển nhanh; khi tiến vào vùng nước nông, tốc độ giảm và chiều cao tăng.
 
 Địa hình bờ biển, hình dạng vịnh và cao độ địa phương quyết định mức ngập. Vì thế không thể chỉ dùng khoảng cách tới tâm động đất để suy ra rủi ro sóng thần.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Núi lửa: nhiều hiểm họa trên nhiều thang không gian** tiếp nhận điểm tựa từ **Sóng thần: hiểm họa của sự dịch chuyển khối nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lũ: cùng là nước nhưng cơ chế khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Núi lửa: nhiều hiểm họa trên nhiều thang không gian
 
@@ -59,11 +70,15 @@ Núi lửa tạo dung nham, tro, **dòng mạt vụn núi lửa (pyroclastic flo
 
 Dung nham có thể di chuyển tương đối chậm nhưng phá hủy trực tiếp. Dòng mạt vụn có thể rất nhanh và nóng. Tro có thể ảnh hưởng hàng không, nước và nông nghiệp cách xa núi lửa hàng trăm kilomet. Vì vậy bản đồ nguy hiểm không thể chỉ vẽ một vòng tròn đồng tâm.
 
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Núi lửa: nhiều hiểm họa trên nhiều thang không gian** xác định đầu vào; **Lũ: cùng là nước nhưng cơ chế khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Xoáy thuận nhiệt đới: gió không phải toàn bộ rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lũ: cùng là nước nhưng cơ chế khác nhau
 
 Lũ sông, lũ quét, ngập đô thị và nước dâng ven biển là các cơ chế khác nhau. Lũ sông phụ thuộc lưu vực và thời gian truyền dòng; lũ quét phản ứng nhanh ở lưu vực nhỏ, dốc; ngập đô thị có thể xảy ra khi mưa vượt năng lực thoát nước ngay cả khi sông chưa tràn.
 
 Đô thị hóa thường làm bề mặt không thấm tăng, thời gian tập trung dòng ngắn lại và đỉnh dòng chảy cao hơn. Vì vậy bản đồ mưa không đủ để dự báo thiệt hại nếu bỏ qua hệ thống thoát nước và cao độ vi mô.
+
+> **Chuyển mạch:** Ở chặng này của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Lũ: cùng là nước nhưng cơ chế khác nhau** xác định đầu vào; **Xoáy thuận nhiệt đới: gió không phải toàn bộ rủi ro** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trượt lở: khi độ bền sườn dốc bị vượt qua** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xoáy thuận nhiệt đới: gió không phải toàn bộ rủi ro
 
@@ -71,11 +86,15 @@ Thiệt hại do xoáy thuận đến từ gió, nước dâng do bão và mưa 
 
 **Nước dâng do bão (storm surge)** phụ thuộc gió đẩy nước vào bờ, áp suất khí quyển, hình dạng bờ và độ sâu thềm lục địa. Một bờ biển nông, dạng phễu có thể khuếch đại mực nước nhiều hơn một bờ dốc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Trượt lở: khi độ bền sườn dốc bị vượt qua** tiếp nhận điểm tựa từ **Xoáy thuận nhiệt đới: gió không phải toàn bộ rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nắng nóng cực đoan: hiểm họa “im lặng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trượt lở: khi độ bền sườn dốc bị vượt qua
 
 Sườn dốc ổn định khi lực chống trượt đủ lớn so với lực gây trượt. Mưa làm tăng trọng lượng và áp lực nước lỗ rỗng, có thể làm giảm ứng suất hữu hiệu. Cắt chân dốc, phá rừng hoặc xây dựng cũng thay đổi cân bằng này.
 
 Trượt lở thường có **ngưỡng (threshold)**. Sườn có thể ổn định qua nhiều trận mưa nhỏ nhưng mất ổn định sau một chuỗi mưa kéo dài. Do đó chỉ nhìn cường độ mưa tại một thời điểm có thể bỏ qua độ ẩm tích lũy trước đó.
+
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Nắng nóng cực đoan: hiểm họa “im lặng”** tiếp nhận điểm tựa từ **Trượt lở: khi độ bền sườn dốc bị vượt qua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cháy rừng: nhiên liệu, thời tiết và nguồn gây cháy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nắng nóng cực đoan: hiểm họa “im lặng”
 
@@ -83,17 +102,23 @@ Nắng nóng thường không phá hủy công trình rõ như động đất, n
 
 Đảo nhiệt đô thị làm trung tâm thành phố nóng hơn vùng xung quanh, đặc biệt ban đêm. Vì vậy trồng cây, vật liệu phản xạ, thông gió đô thị và thiết kế nhà ở đều là công cụ giảm rủi ro chứ không chỉ biện pháp thẩm mỹ.
 
+> **Chuyển mạch:** Ở chặng này của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Nắng nóng cực đoan: hiểm họa “im lặng”** nêu điều cần giải thích; **Cháy rừng: nhiên liệu, thời tiết và nguồn gây cháy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vulnerability là biến động, không phải thuộc tính cố định của “nhóm yếu thế”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cháy rừng: nhiên liệu, thời tiết và nguồn gây cháy
 
 Cháy cần nhiên liệu, điều kiện khô và nguồn bắt lửa. Nhiều hệ sinh thái có chế độ cháy tự nhiên, nhưng tích tụ nhiên liệu do quản lý không phù hợp có thể làm sự kiện hiếm trở nên nghiêm trọng hơn.
 
 Rủi ro cháy vùng giáp ranh đô thị–rừng phụ thuộc cả vật liệu nhà, khoảng cách cây cối, đường sơ tán và khả năng chữa cháy. Đây là ví dụ điển hình của tương tác giữa quá trình sinh thái và cấu trúc định cư.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Cháy rừng: nhiên liệu, thời tiết và nguồn gây cháy** nêu điều cần giải thích; **Vulnerability là biến động, không phải thuộc tính cố định của “nhóm yếu thế”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hạ tầng quan trọng và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vulnerability là biến động, không phải thuộc tính cố định của “nhóm yếu thế”
 
 Tính dễ tổn thương thay đổi theo income, housing chất lượng (quality / 품질), mobility, health, insurance, xã hội (social / 사회적) mạng (network / 네트워크), ngôn ngữ (language / 언어) truy cập (access / 접근) và timing. Cùng một hộ có thể ít vulnerable trước earthquake nhưng rất vulnerable trước heat wave nếu nhà ở nóng và không có cooling.
 
 Vulnerability cũng có tính địa lý. Một cộng đồng thu nhập thấp ở gần job nhưng nằm trong floodplain có sự đánh đổi (trade-off / 트레이드오프) khác cộng đồng ở xa hazard nhưng thiếu vận chuyển (transport / 전송). Vì vậy rủi ro (risk / 위험) reduction cần tránh đơn giản hóa vulnerability thành một chỉ số duy nhất.
+
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Hạ tầng quan trọng và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Vulnerability là biến động, không phải thuộc tính cố định của “nhóm yếu thế”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảnh báo sớm: từ dự báo đến hành động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hạ tầng quan trọng và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
@@ -103,11 +128,15 @@ Có thể mô hình hóa hạ tầng như **đồ thị phụ thuộc (dependenc
 
 Đây là nơi vật lý (physical / 물리적) geography nối trực tiếp với urban planning, logistics và IT resilience.
 
+> **Chuyển mạch:** Ở chặng này của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Cảnh báo sớm: từ dự báo đến hành động** tiếp nhận điểm tựa từ **Hạ tầng quan trọng và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biện pháp công trình và phi công trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cảnh báo sớm: từ dự báo đến hành động
 
 Cảnh báo sớm chỉ hiệu quả khi đủ bốn mắt xích: phát hiện, truyền thông, hiểu thông điệp và có khả năng hành động. Một hệ thống cảm biến chính xác nhưng người dân không nhận được cảnh báo hoặc không biết phải đi đâu vẫn có thể thất bại.
 
 Vì vậy **hệ thống cảnh báo sớm (early warning system)** là hệ kỹ thuật–xã hội. Nó cần dữ liệu, hạ tầng truyền tin, niềm tin, diễn tập và kế hoạch sơ tán.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Biện pháp công trình và phi công trình** tiếp nhận điểm tựa từ **Cảnh báo sớm: từ dự báo đến hành động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tránh rủi ro, bảo vệ tại chỗ và managed retreat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biện pháp công trình và phi công trình
 
@@ -115,17 +144,23 @@ Giảm rủi ro có thể dùng công trình như đê, tường chắn, gia c�
 
 Công trình bảo vệ có thể tạo **nghịch lý đê (levee effect)**: khi cảm giác an toàn tăng, phát triển tập trung mạnh hơn sau đê, khiến thiệt hại tiềm năng tăng nếu công trình thất bại. Do đó quản lý rủi ro không nên chỉ hỏi “có công trình bảo vệ hay chưa?” mà còn hỏi nó thay đổi hành vi sử dụng đất thế nào.
 
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Tránh rủi ro, bảo vệ tại chỗ và managed retreat** tiếp nhận điểm tựa từ **Biện pháp công trình và phi công trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo hiểm và truyền giá rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tránh rủi ro, bảo vệ tại chỗ và managed retreat
 
 Có ba lô-gic (logic / 논리) lớn trong adaptation không gian. **Avoidance** hạn chế xây mới ở nơi rủi ro cao. **Protection** giữ settlement tại chỗ bằng levee, seawall, slope stabilization hay cooling hạ tầng (infrastructure / 인프라). **Accommodation** chấp nhận hazard nhưng giảm damage bằng elevated building, floodable không gian (space / 공간) hoặc operating quy tắc (rule / 규칙).
 
 Khi long-term protection quá đắt hoặc thất bại (failure / 실패) consequence quá lớn, một số nơi còn cân nhắc **rút lui có quản lý (managed retreat)**. Đây không phải giải pháp kỹ thuật thuần túy vì liên quan thuộc tính (property / 속성) rights, compensation, livelihood, heritage và political legitimacy.
 
+> **Chuyển mạch:** Ở chặng này của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Bảo hiểm và truyền giá rủi ro** tiếp nhận điểm tựa từ **Tránh rủi ro, bảo vệ tại chỗ và managed retreat** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng chống chịu và phục hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bảo hiểm và truyền giá rủi ro
 
 Bảo hiểm chuyển một phần tổn thất tài chính từ cá nhân sang quỹ chung, nhưng giá bảo hiểm chỉ hoạt động tốt nếu rủi ro được đo hợp lý. Nếu phí quá thấp so với rủi ro thật, nó có thể khuyến khích phát triển ở vùng nguy hiểm; nếu quá cao, người thu nhập thấp có thể không tiếp cận được bảo vệ.
 
 Đây là ví dụ địa lý đi vào tài chính: bản đồ hiểm họa, chất lượng công trình và vị trí tài sản đều ảnh hưởng định giá.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Khả năng chống chịu và phục hồi** tiếp nhận điểm tựa từ **Bảo hiểm và truyền giá rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GIS và bản đồ rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khả năng chống chịu và phục hồi
 
@@ -135,11 +170,15 @@ Khái niệm **xây dựng lại tốt hơn (build back better)** nhấn mạnh 
 
 Resilience cũng cần phân biệt **robustness** — chịu shock mà ít suy giảm — với **redundancy** — có tuyến/năng lực thay thế — và **rapidity** — phục hồi nhanh. Một city có seawall mạnh nhưng chỉ một tuyến điện vào vẫn có systemic vulnerability cao.
 
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **GIS và bản đồ rủi ro** tiếp nhận điểm tựa từ **Khả năng chống chịu và phục hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea và Vietnam như hai cấu hình rủi ro (risk / 위험) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## GIS và bản đồ rủi ro
 
 Bản đồ rủi ro thường chồng lớp hiểm họa với dân số, tài sản, hạ tầng và chỉ số dễ tổn thương. Nhưng mỗi lớp có độ phân giải và độ bất định khác nhau. Một bản đồ màu đỏ không phải dự báo chắc chắn rằng nơi đó sẽ bị thiệt hại; nó là kết quả của mô hình và giả định.
 
 Đặc biệt, việc tổng hợp dữ liệu theo quận có thể che các điểm nóng ở cấp khu phố. Vì vậy quy mô phân tích phải phù hợp quyết định cần hỗ trợ.
+
+> **Chuyển mạch:** Ở chặng này của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Korea và Vietnam như hai cấu hình rủi ro (risk / 위험) khác nhau** tiếp nhận điểm tựa từ **GIS và bản đồ rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Korea và Vietnam như hai cấu hình rủi ro (risk / 위험) khác nhau
 
@@ -148,6 +187,8 @@ Korea có urban concentration và hạ tầng (infrastructure / 인프라) densi
 Vietnam có exposure lớn ở delta, long coastline và monsoon/typhoon hệ thống (system / 시스템); flood, storm surge, river sediment, subsidence và urbanization tương tác mạnh. Đồng bằng tạo agriculture–industry–settlement advantage nhưng cùng lúc tạo concentration of exposure.
 
 Hai trường hợp (case / 사례) cho thấy không có “hazard ranking” đơn giản. rủi ro (risk / 위험) đến từ **vật lý (physical / 물리적) tiến trình (process / 프로세스) × settlement mẫu (pattern / 패턴) × hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) × adaptive sức chứa (capacity / 용량)**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Korea và Vietnam như hai cấu hình rủi ro (risk / 위험) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -159,10 +200,12 @@ Hai trường hợp (case / 사례) cho thấy không có “hazard ranking” �
 
 **“Xây công trình bảo vệ là đã giải quyết rủi ro (risk / 위험).”** Sai; protection có thể đổi hành vi (behavior / 동작), tạo residual rủi ro (risk / 위험) và làm consequence lớn hơn nếu protection thất bại (fail / 실패).
 
+> **Chuyển mạch:** Trong **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Thảm họa xuất hiện khi **quá trình vật lý gặp hệ thống xã hội có phơi lộ, dễ tổn thương và phụ thuộc (dependency / 의존성)**. Hãy lần theo chuỗi: nguồn hiểm họa → đường truyền → nơi phơi lộ → điểm yếu → trọng yếu (critical / 중요) mạng (network / 네트워크) → khả năng ứng phó → phục hồi. Quản lý rủi ro tốt là phá chuỗi ở nhiều mắt xích, không chỉ cố ngăn hiện tượng tự nhiên.
 
 Xem tiếp: [Earth system](../00_foundations/01_earth_as_system.md), [Urbanization](../02_human_geography/02_settlement_urbanization.md), [Địa lý chính trị](../02_human_geography/04_political_geography_borders.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md), [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 plate tectonics geologic time](./00_plate_tectonics_geologic_time.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

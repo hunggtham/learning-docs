@@ -1,13 +1,14 @@
 # Địa mạo: từ uplift đến landscape evolution
 
-> **Mạch đọc:** Đọc **Địa mạo: từ uplift đến landscape evolution** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Landscape là trạng thái tạm thời của một hệ động** sang **Relief được tạo bởi tectonics và tiêu hao bởi denudation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Địa mạo: từ uplift đến landscape evolution**. Route đi từ tectonic uplift → weathering/erosion → transport/deposition → relief forms → landscape timescales, để địa hình được đọc như quá trình động.
 
 ## Landscape là trạng thái tạm thời của một hệ động
 
 **Địa mạo học (geomorphology / 지형학)** nghiên cứu landform và tiến trình (process / 프로세스) tạo–biến đổi chúng. Một mountain, valley hay delta không phải “vật thể hoàn tất” mà là snapshot của competition giữa uplift, weathering, erosion, vận chuyển (transport / 전송) và deposition.
 
 Một mô hình tư duy (mental model / 사고 모델) hữu ích là **nguồn (source / 소스)–transfer–sink**. Mountain belt là nguồn (source / 소스) của sediment; river chuyển vật liệu; floodplain, delta và deep ocean basin là sink. Nhưng sink có thể trở thành nguồn (source / 소스) mới nếu uplift hoặc sea-level thay đổi (change / 변경) xảy ra.
+
+> **Chuyển mạch:** Trong **Địa mạo: từ uplift đến landscape evolution**, **Relief được tạo bởi tectonics và tiêu hao bởi denudation** tiếp nhận điểm tựa từ **Landscape là trạng thái tạm thời của một hệ động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weathering không phải erosion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Relief được tạo bởi tectonics và tiêu hao bởi denudation
 
@@ -17,6 +18,8 @@ Tectonic uplift và volcanic construction tạo potential năng lượng (energy
 
 Điều quan trọng là tránh câu “núi cao vì tectonics” như lời giải đầy đủ. Hai vùng có uplift tương tự vẫn có relief khác nếu erosion efficiency khác.
 
+> **Chuyển mạch:** Ở chặng này của **Địa mạo: từ uplift đến landscape evolution**, **Weathering không phải erosion** tiếp nhận điểm tựa từ **Relief được tạo bởi tectonics và tiêu hao bởi denudation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regolith và soil là giao diện (interface / 인터페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Weathering không phải erosion
 
 **Phong hóa (weathering)** phá vỡ hoặc biến đổi rock tại chỗ. **Xói mòn (erosion)** lấy material đi khỏi vị trí. **vận chuyển (transport / 전송)** di chuyển sediment, còn **deposition** xảy ra khi vận chuyển (transport / 전송) sức chứa (capacity / 용량) giảm.
@@ -25,11 +28,15 @@ Weathering vật lý gồm freeze–thaw, thermal stress, salt crystallization h
 
 Khí hậu ấm–ẩm thường tăng chemical reaction, nhưng rock mineralogy, fracture và water residence cũng quan trọng. Không nên biến climate thành nguyên nhân duy nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa mạo: từ uplift đến landscape evolution**, **Regolith và soil là giao diện (interface / 인터페이스)** tiếp nhận điểm tựa từ **Weathering không phải erosion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Slope tiến trình (process / 프로세스) và ngưỡng ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Regolith và soil là giao diện (interface / 인터페이스)
 
 Lớp material phong hóa phía trên bedrock gọi chung là **regolith**. Soil phát triển trong phần regolith tương tác mạnh với sinh vật và organic matter.
 
 Độ dày regolith ảnh hưởng infiltration, gốc (root / 루트), slope stability và weathering phản hồi (feedback / 피드백). Một slope có bedrock lộ thiên phản ứng với mưa rất khác slope phủ colluvium dày.
+
+> **Chuyển mạch:** Trong **Địa mạo: từ uplift đến landscape evolution**, **Regolith và soil là giao diện (interface / 인터페이스)** xác định đầu vào; **Slope tiến trình (process / 프로세스) và ngưỡng ổn định** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mass movement có nhiều chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Slope tiến trình (process / 프로세스) và ngưỡng ổn định
 
@@ -39,6 +46,8 @@ Water tăng pore pressure, giảm **effective stress** và có thể làm materi
 
 Vegetation có thể tăng gốc (root / 루트) reinforcement nhưng cũng thêm weight và truyền water vào soil. Tác động phụ thuộc species, độ sâu (depth / 깊이) và slope material.
 
+> **Chuyển mạch:** Ở chặng này của **Địa mạo: từ uplift đến landscape evolution**, **Slope tiến trình (process / 프로세스) và ngưỡng ổn định** xác định đầu vào; **Mass movement có nhiều chế độ (mode / 모드)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Fluvial geomorphology: river điều chỉnh năng lượng và sediment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mass movement có nhiều chế độ (mode / 모드)
 
 Rockfall, debris luồng (flow / 흐름), slump, translational slide và creep có mechanics khác nhau. Gom tất cả thành “sạt lở” dễ làm sai mitigation.
@@ -46,6 +55,8 @@ Rockfall, debris luồng (flow / 흐름), slump, translational slide và creep c
 Debris luồng (flow / 흐름) có thể di chuyển như mixture nước–sediment rất nhanh theo channel; rockfall phụ thuộc joint và cliff; slow creep có thể làm road/building biến dạng trong nhiều năm.
 
 Hazard map cần map tiến trình (process / 프로세스), không chỉ map “độ dốc lớn”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa mạo: từ uplift đến landscape evolution**, **Fluvial geomorphology: river điều chỉnh năng lượng và sediment** tiếp nhận điểm tựa từ **Mass movement có nhiều chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Channel mẫu (pattern / 패턴) không ngẫu nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fluvial geomorphology: river điều chỉnh năng lượng và sediment
 
@@ -59,6 +70,8 @@ Một biểu thức đơn giản cho stream power theo đơn vị chiều dài:
 
 với \(Q\) là discharge và \(S\) là slope. Đây không phải mô hình (model / 모델) đầy đủ của erosion nhưng cho thấy vì sao high discharge + steep độ dốc (gradient / 기울기) tạo năng lực làm việc lớn.
 
+> **Chuyển mạch:** Trong **Địa mạo: từ uplift đến landscape evolution**, **Channel mẫu (pattern / 패턴) không ngẫu nhiên** tiếp nhận điểm tựa từ **Fluvial geomorphology: river điều chỉnh năng lượng và sediment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Floodplain là bộ nhớ của river** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Channel mẫu (pattern / 패턴) không ngẫu nhiên
 
 Straight, meandering, braided và anabranching channel phản ánh combination của slope, sediment tải (load / 로드), bank strength, discharge variability và vegetation.
@@ -67,6 +80,8 @@ Meander có erosion mạnh ở outer bend và deposition ở inner bend, làm ch
 
 Braided river thường liên quan sediment supply cao, bank yếu và discharge biến động. Không nên coi mọi river “tự nhiên” là meandering.
 
+> **Chuyển mạch:** Ở chặng này của **Địa mạo: từ uplift đến landscape evolution**, **Floodplain là bộ nhớ của river** tiếp nhận điểm tựa từ **Channel mẫu (pattern / 패턴) không ngẫu nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sediment ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Floodplain là bộ nhớ của river
 
 Floodplain được xây bằng overbank deposition, channel di chuyển (migration / 마이그레이션) và avulsion. Nó là một phần của river hệ thống (system / 시스템), không phải đất “ngoài sông”.
@@ -74,6 +89,8 @@ Floodplain được xây bằng overbank deposition, channel di chuyển (migrat
 Khi con người xây dày đặc trên floodplain rồi dùng levee để cố định river, exposure tăng. Nếu levee thất bại (fail / 실패), consequence có thể rất lớn.
 
 Geomorphology vì thế là nền cho rủi ro (risk / 위험) planning.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa mạo: từ uplift đến landscape evolution**, **Sediment ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Floodplain là bộ nhớ của river** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delta: nơi river, ocean và subsidence gặp nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sediment ngân sách (budget / 예산)
 
@@ -87,6 +104,8 @@ Nếu sediment đầu vào (input / 입력) giảm do dam giữ lại, downstrea
 
 Không thể hiểu delta chỉ từ water discharge; cần cả sediment flux.
 
+> **Chuyển mạch:** Trong **Địa mạo: từ uplift đến landscape evolution**, **Delta: nơi river, ocean và subsidence gặp nhau** tiếp nhận điểm tựa từ **Sediment ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coastal geomorphology và littoral cell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Delta: nơi river, ocean và subsidence gặp nhau
 
 Delta tồn tại khi sediment supply đủ để bù subsidence, wave/tide removal và relative sea-level rise.
@@ -94,6 +113,8 @@ Delta tồn tại khi sediment supply đủ để bù subsidence, wave/tide remo
 Dam upstream có thể giảm sediment; groundwater extraction có thể tăng subsidence; sea-level rise tăng accommodation không gian (space / 공간). Vì vậy delta vulnerability là kết quả của nhiều tiến trình (process / 프로세스) nối xa nhau.
 
 Mekong Delta là trường hợp (case / 사례) quan trọng cho Vietnam: hydrology thượng nguồn, sand mining, subsidence, salinity và coast cùng tạo một hệ thống (system / 시스템), không thể tách từng vấn đề.
+
+> **Chuyển mạch:** Ở chặng này của **Địa mạo: từ uplift đến landscape evolution**, **Coastal geomorphology và littoral cell** tiếp nhận điểm tựa từ **Delta: nơi river, ocean và subsidence gặp nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Karst: drainage có thể nằm dưới đất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Coastal geomorphology và littoral cell
 
@@ -103,11 +124,15 @@ Groin hoặc breakwater giữ sand một nơi có thể làm nơi down-drift thi
 
 Sea wall bảo vệ asset phía sau nhưng có thể làm beach narrowing nếu shoreline không còn chỗ retreat.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa mạo: từ uplift đến landscape evolution**, **Karst: drainage có thể nằm dưới đất** tiếp nhận điểm tựa từ **Coastal geomorphology và littoral cell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Glacial geomorphology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Karst: drainage có thể nằm dưới đất
 
 Limestone hòa tan trong water hơi acid tạo cave, sinkhole và conduit. Trong karst, groundwater có thể chảy nhanh theo channel ngầm, nên pollution travel khác porous aquifer.
 
 Surface watershed và groundwater catchment có thể không trùng. Đây là warning cho việc chỉ dùng DEM để suy mọi luồng (flow / 흐름).
+
+> **Chuyển mạch:** Trong **Địa mạo: từ uplift đến landscape evolution**, **Glacial geomorphology** tiếp nhận điểm tựa từ **Karst: drainage có thể nằm dưới đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Periglacial và permafrost** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Glacial geomorphology
 
@@ -115,17 +140,23 @@ Glacier chảy dưới gravity, erosion bằng abrasion/plucking và vận chuy�
 
 Sau deglaciation, landscape còn tiếp tục adjust: lake hình thành, slope mất hỗ trợ (support / 지원), isostatic rebound xảy ra. Vì vậy “glacial landscape” có legacy rất dài sau khi ice biến mất.
 
+> **Chuyển mạch:** Ở chặng này của **Địa mạo: từ uplift đến landscape evolution**, **Periglacial và permafrost** tiếp nhận điểm tựa từ **Glacial geomorphology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aeolian geomorphology và dryland** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Periglacial và permafrost
 
 Ở vùng lạnh, freeze–thaw và permafrost tạo patterned ground, solifluction và thermokarst. Khi permafrost thaw, ground ice mất thể tích có thể làm surface collapse.
 
 Đây là coupling giữa climate thay đổi (change / 변경), geomorphology và hạ tầng (infrastructure / 인프라) rủi ro (risk / 위험) ở Arctic.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa mạo: từ uplift đến landscape evolution**, **Aeolian geomorphology và dryland** tiếp nhận điểm tựa từ **Periglacial và permafrost** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Landscape evolution và cơ sở (base / 기반) mức (level / 수준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Aeolian geomorphology và dryland
 
 Wind vận chuyển dust và sand khi surface dry, fine material available và vegetation thưa. Dune form phụ thuộc wind regime và sand supply.
 
 Nhưng dryland landscape không chỉ do wind. Ephemeral flood có thể có geomorphic công việc (work / 작업) cực lớn trong thời gian ngắn.
+
+> **Chuyển mạch:** Trong **Địa mạo: từ uplift đến landscape evolution**, **Landscape evolution và cơ sở (base / 기반) mức (level / 수준)** tiếp nhận điểm tựa từ **Aeolian geomorphology và dryland** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drainage divide và river capture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Landscape evolution và cơ sở (base / 기반) mức (level / 수준)
 
@@ -135,17 +166,23 @@ Tectonic uplift, dam, sea-level thay đổi (change / 변경) hoặc capture đ�
 
 Landscape vì thế chứa “wave” điều chỉnh sau perturbation.
 
+> **Chuyển mạch:** Ở chặng này của **Địa mạo: từ uplift đến landscape evolution**, **Drainage divide và river capture** tiếp nhận điểm tựa từ **Landscape evolution và cơ sở (base / 기반) mức (level / 수준)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DEM và geomorphometry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drainage divide và river capture
 
 Watershed divide không bất biến. Một basin erosion nhanh hơn có thể mở rộng headward và capture stream của basin bên cạnh.
 
 River capture làm drainage mạng (network / 네트워크) đổi đột ngột trên timescale địa chất, ảnh hưởng sediment, ecosystem và settlement corridor.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa mạo: từ uplift đến landscape evolution**, **DEM và geomorphometry** tiếp nhận điểm tựa từ **Drainage divide và river capture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Landscape, hạ tầng (infrastructure / 인프라) và economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## DEM và geomorphometry
 
 GIS dùng DEM để tính slope, aspect, curvature, luồng (flow / 흐름) direction, contributing area và visibility. Nhưng DEM có resolution và lỗi (error / 오류).
 
 Một culvert nhỏ có thể không tồn tại trong DEM 30 m; forest canopy có thể làm surface mô hình (model / 모델) khác ground mô hình (model / 모델). Vì vậy automated drainage extraction cần dữ liệu (data / 데이터) phù hợp.
+
+> **Chuyển mạch:** Trong **Địa mạo: từ uplift đến landscape evolution**, **Landscape, hạ tầng (infrastructure / 인프라) và economy** tiếp nhận điểm tựa từ **DEM và geomorphometry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Landscape, hạ tầng (infrastructure / 인프라) và economy
 
@@ -157,10 +194,12 @@ Chuỗi (chain / 사슬) quan trọng:
 
 **tectonic/climate lịch sử (history / 이력) → relief & sediment → settlement corridor → hạ tầng (infrastructure / 인프라) chi phí (cost / 비용) → economic connectivity → rủi ro (risk / 위험)**.
 
+> **Chuyển mạch:** Ở chặng này của **Địa mạo: từ uplift đến landscape evolution**, **Mô hình tư duy** gom các mảnh từ **Landscape, hạ tầng (infrastructure / 인프라) và economy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Mỗi landform là dấu vết của **năng lượng (energy / 에너지) + material + resistance + thời gian (time / 시간)**. Khi nhìn một valley, delta hay coast, hãy hỏi nguồn (source / 소스) năng lượng (energy / 에너지) là gì, material từ đâu, resistance nào giới hạn tiến trình (process / 프로세스), sediment đi đâu và hệ thống (system / 시스템) đang ở steady trạng thái (state / 상태) hay đang điều chỉnh sau disturbance.
 
 Xem tiếp: [Hydrology](./04_hydrology_rivers_groundwater.md), [Oceans & coasts](./05_oceans_coasts.md), [Natural hazards](./07_natural_hazards_risk.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 plate tectonics geologic time](./00_plate_tectonics_geologic_time.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
