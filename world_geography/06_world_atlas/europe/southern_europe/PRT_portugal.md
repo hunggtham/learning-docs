@@ -1,37 +1,33 @@
 # Portugal
 
-> **Mạch đọc:** Đặt **Portugal** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mặt hướng Atlantic** sang **Sông xuyên biên giới**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Portugal**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mặt hướng Atlantic** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sông xuyên biên giới** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Portugal với bờ Đại Tây Dương, cảng, di cư và kinh tế biển, để đọc vị trí qua luồng người và hàng hóa.
 
 ## Mặt hướng Atlantic
 
 Portugal nằm ở rìa tây Iberian Peninsula với bờ Atlantic dài. Phía bắc và trung tâm địa hình gồ ghề hơn; phía nam nhìn chung thấp và khô hơn.
 
-
-> **Chuyển mạch:** Từ **Mặt hướng Atlantic**, ta sang **Sông xuyên biên giới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Portugal**, **Sông xuyên biên giới** tiếp nhận điểm tựa từ **Mặt hướng Atlantic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lisbon và Porto** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sông xuyên biên giới
 
 Douro, Tagus và Guadiana đều bắt nguồn phần lớn ở Spain trước khi chảy qua hoặc dọc Portugal. Vì vậy water management có tính xuyên biên giới cấu trúc.
 
-
-> **Chuyển mạch:** Từ **Sông xuyên biên giới**, ta sang **Lisbon và Porto** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Portugal**, **Lisbon và Porto** tiếp nhận điểm tựa từ **Sông xuyên biên giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atlantic islands** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lisbon và Porto
 
 Lisbon nằm tại cửa Tagus rộng, Porto ở hạ lưu Douro. Cả hai phát triển tại điểm nơi lưu vực nội địa gặp vận tải biển.
 
-
-> **Chuyển mạch:** Từ **Lisbon và Porto**, ta sang **Atlantic islands** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Portugal**, **Atlantic islands** tiếp nhận điểm tựa từ **Lisbon và Porto** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Atlantic islands
 
 Azores và Madeira mở rộng không gian đại dương của Portugal và có địa lý núi lửa–hải dương riêng, khác rõ mainland.
 
-
-> **Chuyển mạch:** Từ **Atlantic islands**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Portugal**, **Mô hình tư duy** gom các mảnh từ **Atlantic islands** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
 > Portugal là **Atlantic-facing Iberia + transboundary rivers + estuary cities + oceanic archipelagos**.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ALB albania](./ALB_albania.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
