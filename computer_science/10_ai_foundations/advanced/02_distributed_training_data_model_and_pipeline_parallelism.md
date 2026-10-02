@@ -1,6 +1,6 @@
 # Huấn luyện phân tán: song song dữ liệu, mô hình và đường ống
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Huấn luyện phân tán: song song dữ liệu, mô hình và đường ống**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: một thiết bị (device / 장치) không đủ sức chứa (capacity / 용량) hoặc thông lượng (throughput / 처리량)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. bất biến (invariant / 불변식) huấn luyện (training / 학습) step: workers phải agree trạng thái (state / 상태) theo thuật toán (algorithm / 알고리즘) đặc tả hợp đồng (contract / 계약)** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Distributed training: data, model và pipeline parallelism**. Route đi từ device capacity/throughput → data/model/pipeline partitioning → worker-step invariant → communication/synchronization → fault recovery, để scale training không phá convergence.
 
 Mô hình hiện đại có thể quá lớn hoặc quá chậm để huấn luyện trên một accelerator. **Huấn luyện phân tán (distributed training)** chia computation, parameters, gradients, optimizer trạng thái (state / 상태) và activations qua nhiều devices/nodes. Nhưng thêm GPU chỉ hữu ích khi communication, synchronization, bộ nhớ (memory / 메모리) và đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인) không trở thành bottleneck mới.
 

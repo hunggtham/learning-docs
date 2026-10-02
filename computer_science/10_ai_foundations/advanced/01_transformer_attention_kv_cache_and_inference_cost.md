@@ -1,6 +1,6 @@
 # Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: mô hình (model / 모델) math không tự nói serving hành vi (behavior / 동작)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer internals, attention, KV cache và inference cost**. Route đi từ transformer block/attention → token-state flow → KV-cache memory → batching/latency → cost-quality trade-offs, để math được nối với serving behavior.
 
 Transformer quan trọng không chỉ vì mô hình (model / 모델) chất lượng (quality / 품질) mà vì computation đồ thị (graph / 그래프) ánh xạ tốt lên parallel hardware trong huấn luyện (training / 학습). Autoregressive suy luận (inference / 추론) lại có chi phí (cost / 비용) profile rất khác: prompt được xử lý theo batch lớn hơn, còn decode phải sinh đơn vị từ (token / 토큰) nối tiếp và liên tục đọc mô hình (model / 모델) trạng thái (state / 상태)/KV trạng thái (state / 상태).
 
