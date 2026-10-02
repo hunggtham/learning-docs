@@ -1,5 +1,7 @@
 # Môn 1 — 소프트웨어 설계: Deep Dive 2026
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 1 — 소프트웨어 설계: Deep Dive 2026**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. 요구사항 확인 — Requirements confirmation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. 화면 설계 — UI thiết kế (design / 설계)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng software design depth làm owner, rồi nối requirements, UI, architecture, testing và quality.
+
 > Mục tiêu của tệp (file / 파일) này là biến Môn 1 từ một danh sách thuật ngữ thành một chuỗi suy luận có thể dùng để giải câu hỏi. Khi gặp một lựa chọn lạ, hãy xác định nó đang nói về **yêu cầu (requirement / 요구사항), mô hình (model / 모델), kiến trúc (architecture / 아키텍처), mô-đun (module / 모듈), đối tượng (object / 객체) hay giao diện (interface / 인터페이스)** rồi mới so sánh đáp án.
 
 ## 1. 요구사항 확인 — Requirements confirmation
@@ -67,6 +69,8 @@ Scrum cần phân biệt sản phẩm (product / 제품) Backlog, Sprint Backlog
 
 XP thường gắn với pair programming, test-first/TDD, continuous tích hợp (integration / 통합), refactoring, small releases và collective quyền sở hữu (ownership / 소유권). Nếu câu hỏi nhấn vào kỹ thuật (engineering / 엔지니어링) practice, XP thường hợp lý hơn Scrum.
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계: Deep Dive 2026**, **2. 화면 설계 — UI thiết kế (design / 설계)** tiếp nhận điểm tựa từ **1. 요구사항 확인 — Requirements confirmation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 화면 설계 — UI thiết kế (design / 설계)
 
 ### 2.1 UI không chỉ là đẹp
@@ -84,6 +88,8 @@ Wireframe mô tả skeleton/bố cục (layout / 레이아웃). Mockup nhấn h�
 ### 2.3 UI 유형
 
 CLI dùng command văn bản (text / 텍스트). GUI dùng visual elements. NUI dùng tương tác (interaction / 상호작용) tự nhiên như voice, gesture, touch. OUI trong phân loại giáo trình truyền thống nói tới giao diện (interface / 인터페이스) gắn với bề mặt/vật thể có hình thức linh hoạt.
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계: Deep Dive 2026**, **3. 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **2. 화면 설계 — UI thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)
 
@@ -145,6 +151,8 @@ Nhóm thường dễ nhầm:
 
 Reuse có thể ở mức hàm (function / 함수)/mô-đun (module / 모듈), thành phần (component / 컴포넌트), khung phần mềm (framework / 프레임워크), dịch vụ (service / 서비스) hoặc sản phẩm (product / 제품) line. Reuse cao không tự động tốt nếu lớp trừu tượng (abstraction / 추상화) sai; mục tiêu là giảm duplication mà vẫn giữ cohesion/coupling tốt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계: Deep Dive 2026**, **4. 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **3. 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Bảng phân biệt phải thuộc bằng cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)
 
 ### 4.1 giao diện (interface / 인터페이스) yêu cầu (requirement / 요구사항)
@@ -171,9 +179,9 @@ XML biểu diễn dữ liệu (data / 데이터) có tag và lược đồ (sche
 
 Giao diện (interface / 인터페이스) cần kiểm soát confidentiality, integrity, authentication và authorization. băm (hash / 해시)/checksum có thể kiểm tra integrity nhưng không tự cung cấp confidentiality. Encryption bảo vệ confidentiality nhưng nếu không có authentication/integrity cơ chế (mechanism / 메커니즘) thì vẫn có thể bị tamper theo nhiều cách.
 
-## 5. Bảng phân biệt phải thuộc bằng cơ chế
-Phần “5. Bảng phân biệt phải thuộc bằng cơ chế” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계: Deep Dive 2026**, **4. 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** xác định đầu vào; **5. Bảng phân biệt phải thuộc bằng cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Procedural drills — phải tự trả lời trước khi xem ghi chú** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 5. Bảng phân biệt phải thuộc bằng cơ chế
 
 | Cặp dễ nhầm | Điểm tách |
 |---|---|
@@ -187,6 +195,8 @@ Phần “5. Bảng phân biệt phải thuộc bằng cơ chế” nối kiến
 | Adapter vs Facade | đổi giao diện (interface / 인터페이스) để tương thích vs đơn giản hóa subsystem |
 | chiến lược (strategy / 전략) vs trạng thái (state / 상태) | máy khách (client / 클라이언트) chọn thuật toán (algorithm / 알고리즘) vs hành vi (behavior / 동작) đổi theo trạng thái (state / 상태) |
 | Wireframe vs Prototype | cấu trúc (structure / 구조) tĩnh vs thử nghiệm tương tác (interaction / 상호작용) |
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계: Deep Dive 2026**, **5. Bảng phân biệt phải thuộc bằng cơ chế** xác định đầu vào; **6. Procedural drills — phải tự trả lời trước khi xem ghi chú** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. 과락 방지 checklist — Môn 1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Procedural drills — phải tự trả lời trước khi xem ghi chú
 
@@ -214,6 +224,8 @@ Một đối tượng (object / 객체) thứ tự (order / 순서) chứa Order
 
 Đề yêu cầu “xem actor nào kích hoạt chức năng nào” nhưng không quan tâm thứ tự message. Use trường hợp (case / 사례) hay chuỗi (sequence / 시퀀스)?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계: Deep Dive 2026**, **7. 과락 방지 checklist — Môn 1** tiếp nhận điểm tựa từ **6. Procedural drills — phải tự trả lời trước khi xem ghi chú** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 7. 과락 방지 checklist — Môn 1
 
 Trước khi xem Môn 1 đã an toàn, phải tự làm được các việc sau mà không nhìn tài liệu:
@@ -233,3 +245,5 @@ Trước khi xem Môn 1 đã an toàn, phải tự làm được các việc sau
 - giải thích XML, JSON, AJAX mà không trộn category.
 
 Nếu một dòng trên chưa làm được, đó là **coverage hole**, không phải “chi tiết phụ”.
+
+> **Bàn giao:** Sau **7. 과락 방지 checklist — Môn 1**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

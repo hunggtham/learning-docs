@@ -1,5 +1,7 @@
 # 정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **요구사항 — yêu cầu (requirement / 요구사항)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **구조적 분석 — Structured phân tích (analysis / 분석)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Korean terms với requirements và structured analysis, để thuật ngữ Hàn–Việt đi cùng khái niệm sở hữu.
+
 > Mục tiêu: khi gặp thuật ngữ tiếng Hàn trong đề, phải map ngay được sang **English concept → nghĩa Việt → cơ chế (mechanism / 메커니즘)**, không dừng ở dịch từ. tệp (file / 파일) này chỉ giữ các thuật ngữ có giá trị phân biệt cao hoặc dễ gây nhầm.
 
 ---
@@ -24,9 +26,9 @@
 
 ---
 
-## 구조적 분석 — Structured phân tích (analysis / 분석)
-Phần “구조적 분석 — Structured phân tích (analysis / 분석)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **구조적 분석 — Structured phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **요구사항 — yêu cầu (requirement / 요구사항)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **UML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 구조적 분석 — Structured phân tích (analysis / 분석)
 
 - **자료 흐름도** → luồng dữ liệu (data flow / 데이터 흐름) Diagram, DFD → sơ đồ luồng dữ liệu.
 - **자료 사전** → dữ liệu (data / 데이터) Dictionary → từ điển dữ liệu.
@@ -37,9 +39,9 @@ Phần “구조적 분석 — Structured phân tích (analysis / 분석)” n�
 
 ---
 
-## UML
-Phần “UML” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **UML** tiếp nhận điểm tựa từ **구조적 분석 — Structured phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô-đun (module / 모듈) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## UML
 
 - **유스케이스 다이어그램** → Use trường hợp (case / 사례) Diagram.
 - **클래스 다이어그램** → lớp (class / 클래스) Diagram.
@@ -66,9 +68,9 @@ Phần “UML” nối kiến thức trước với nội dung sắp đọc, gi�
 
 ---
 
-## Mô-đun (module / 모듈) thiết kế (design / 설계)
-Phần “Mô-đun (module / 모듈) thiết kế (design / 설계)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Mô-đun (module / 모듈) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **UML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OOP / mẫu thiết kế (design pattern / 디자인 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Mô-đun (module / 모듈) thiết kế (design / 설계)
 
 - **응집도** → Cohesion → mức gắn kết bên trong mô-đun (module / 모듈).
 - **결합도** → Coupling → mức phụ thuộc giữa modules.
@@ -97,9 +99,9 @@ Coupling: càng dữ liệu (data / 데이터) càng yếu/tốt trong bộ clas
 
 ---
 
-## OOP / mẫu thiết kế (design pattern / 디자인 패턴)
-Phần “OOP / mẫu thiết kế (design pattern / 디자인 패턴)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **OOP / mẫu thiết kế (design pattern / 디자인 패턴)** tiếp nhận điểm tựa từ **Mô-đun (module / 모듈) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## OOP / mẫu thiết kế (design pattern / 디자인 패턴)
 
 - **캡슐화** → Encapsulation → đóng gói/kiểm soát trạng thái (state / 상태).
 - **상속** → Inheritance → kế thừa.
@@ -130,9 +132,9 @@ Mẫu (pattern / 패턴) terms:
 
 # 2. 소프트웨어 개발 — Software Development
 
-## Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)
-Phần “Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **OOP / mẫu thiết kế (design pattern / 디자인 패턴)** nêu điều cần giải thích; **Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)
 
 - **자료구조** → cấu trúc dữ liệu (data structure / 자료구조).
 - **스택** → ngăn xếp (stack / 스택) → LIFO.
@@ -152,9 +154,9 @@ Phần “Cấu trúc dữ liệu (data structure / 자료구조) / thuật toá
 
 ---
 
-## Testing
-Phần “Testing” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)** nêu điều cần giải thích; **Testing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cấu hình (configuration / 구성) / Packaging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Testing
 
 - **단위 테스트** → đơn vị (unit / 단위) kiểm thử (test / 테스트).
 - **통합 테스트** → kiểm thử tích hợp (integration test / 통합 테스트).
@@ -183,9 +185,9 @@ Phần “Testing” nối kiến thức trước với nội dung sắp đọc,
 
 ---
 
-## Cấu hình (configuration / 구성) / Packaging
-Phần “Cấu hình (configuration / 구성) / Packaging” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Cấu hình (configuration / 구성) / Packaging** tiếp nhận điểm tựa từ **Testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relational mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Cấu hình (configuration / 구성) / Packaging
 
 - **형상관리** → cấu hình (configuration / 구성) Management.
 - **버전 관리** → phiên bản (version / 버전) điều khiển (control / 제어).
@@ -200,9 +202,9 @@ Phần “Cấu hình (configuration / 구성) / Packaging” nối kiến thứ
 
 # 3. 데이터베이스 구축 — cơ sở dữ liệu (database / 데이터베이스) Construction
 
-## Relational mô hình (model / 모델)
-Phần “Relational mô hình (model / 모델)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Relational mô hình (model / 모델)** tiếp nhận điểm tựa từ **Cấu hình (configuration / 구성) / Packaging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relational Algebra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Relational mô hình (model / 모델)
 
 - **릴레이션** → quan hệ (relation / 관계).
 - **튜플** → Tuple → row.
@@ -219,9 +221,9 @@ Phần “Relational mô hình (model / 모델)” nối kiến thức trước 
 
 ---
 
-## Relational Algebra
-Phần “Relational Algebra” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Relational Algebra** tiếp nhận điểm tựa từ **Relational mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성) / Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Relational Algebra
 
 - **셀렉션/선택** → Selection → chọn row.
 - **프로젝션/투영** → Projection → chọn column.
@@ -233,9 +235,9 @@ Phần “Relational Algebra” nối kiến thức trước với nội dung s�
 
 ---
 
-## Phụ thuộc (dependency / 의존성) / Normalization
-Phần “Phụ thuộc (dependency / 의존성) / Normalization” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Phụ thuộc (dependency / 의존성) / Normalization** tiếp nhận điểm tựa từ **Relational Algebra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Phụ thuộc (dependency / 의존성) / Normalization
 
 - **함수 종속** → Functional phụ thuộc (dependency / 의존성).
 - **완전 함수 종속** → Full Functional phụ thuộc (dependency / 의존성).
@@ -253,9 +255,9 @@ Phần “Phụ thuộc (dependency / 의존성) / Normalization” nối kiến
 
 ---
 
-## Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)
-Phần “Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) / Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)
 
 - **인덱스** → chỉ mục (index / 인덱스).
 - **선택도** → Selectivity.
@@ -268,9 +270,9 @@ Phần “Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)�
 
 ---
 
-## Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)
-Phần “Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)** tiếp nhận điểm tựa từ **Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)
 
 - **트랜잭션** → giao dịch (transaction / 트랜잭션).
 - **원자성** → Atomicity.
@@ -295,9 +297,9 @@ Phần “Giao dịch (transaction / 트랜잭션) / tính đồng thời (concu
 
 # 4. 프로그래밍 언어 활용 — Programming ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)
 
-## OS
-Phần “OS” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **OS** tiếp nhận điểm tựa từ **Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## OS
 
 - **프로세스** → tiến trình (process / 프로세스).
 - **스레드** → luồng thực thi (thread / 스레드).
@@ -332,9 +334,9 @@ Metrics:
 
 ---
 
-## Bộ nhớ (memory / 메모리)
-Phần “Bộ nhớ (memory / 메모리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **OS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Bộ nhớ (memory / 메모리)
 
 - **페이징** → Paging.
 - **세그먼테이션** → Segmentation.
@@ -357,9 +359,9 @@ Replacement:
 
 ---
 
-## Mạng (network / 네트워크)
-Phần “Mạng (network / 네트워크)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngôn ngữ (language / 언어) Terms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Mạng (network / 네트워크)
 
 - **물리 계층** → vật lý (physical / 물리적) tầng (layer / 계층).
 - **데이터 링크 계층** → dữ liệu (data / 데이터) Link tầng (layer / 계층).
@@ -383,6 +385,8 @@ Phần “Mạng (network / 네트워크)” nối kiến thức trước với 
 - **주소 결정 프로토콜** → ARP.
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Ngôn ngữ (language / 언어) Terms** tiếp nhận điểm tựa từ **Mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Methodology / dự án (project / 프로젝트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngôn ngữ (language / 언어) Terms
 
@@ -415,9 +419,9 @@ Python:
 
 # 5. 정보시스템 구축 관리 — thông tin (information / 정보) hệ thống (system / 시스템) Construction Management
 
-## Methodology / dự án (project / 프로젝트)
-Phần “Methodology / dự án (project / 프로젝트)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Methodology / dự án (project / 프로젝트)** tiếp nhận điểm tựa từ **Ngôn ngữ (language / 언어) Terms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạ tầng (infrastructure / 인프라) / Availability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Methodology / dự án (project / 프로젝트)
 
 - **폭포수 모델** → Waterfall mô hình (model / 모델).
 - **애자일** → Agile.
@@ -432,9 +436,9 @@ Phần “Methodology / dự án (project / 프로젝트)” nối kiến thức
 
 ---
 
-## Hạ tầng (infrastructure / 인프라) / Availability
-Phần “Hạ tầng (infrastructure / 인프라) / Availability” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Methodology / dự án (project / 프로젝트)** cho ta quy tắc; **Hạ tầng (infrastructure / 인프라) / Availability** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Hạ tầng (infrastructure / 인프라) / Availability
 
 - **가용성** → Availability.
 - **고가용성** → High Availability, HA.
@@ -467,9 +471,9 @@ Cloud:
 
 ---
 
-## Bảo mật (security / 보안)
-Phần “Bảo mật (security / 보안)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **Hạ tầng (infrastructure / 인프라) / Availability** cho ta quy tắc; **Bảo mật (security / 보안)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **“가장 적절한 것”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Bảo mật (security / 보안)
 
 - **인증** → Authentication.
 - **인가/권한 부여** → Authorization.
@@ -506,33 +510,49 @@ Attack/điều khiển (control / 제어):
 
 # 6. Korean wording patterns trong câu hỏi
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“가장 적절한 것”** tiếp nhận điểm tựa từ **Bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“옳지 않은 것”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “가장 적절한 것”
 
 → “cái phù hợp nhất”. Có thể nhiều đáp án đúng một phần; chọn đáp án khớp **phạm vi (scope / 범위) + wording** nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“옳지 않은 것”** tiếp nhận điểm tựa từ **“가장 적절한 것”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“해당하지 않는 것”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## “옳지 않은 것”
 
 → chọn câu **không đúng**. Đây là nguồn careless lỗi (error / 오류) lớn; đánh dấu NOT trước khi đọc options.
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“해당하지 않는 것”** tiếp nhận điểm tựa từ **“옳지 않은 것”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“주된 목적”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “해당하지 않는 것”
 
 → “không thuộc nhóm/không áp dụng”. Trước hết xác định category đang hỏi.
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“주된 목적”** tiếp nhận điểm tựa từ **“해당하지 않는 것”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“가장 직접적인”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## “주된 목적”
 
 → hỏi **primary purpose**, không phải side tác động (effect / 효과).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“가장 직접적인”** tiếp nhận điểm tựa từ **“주된 목적”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“보장하는”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “가장 직접적인”
 
 → ưu tiên điều khiển (control / 제어)/cơ chế (mechanism / 메커니즘) xử lý nguyên nhân gốc (root cause / 근본 원인) trực tiếp hơn defense phụ.
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“보장하는”** tiếp nhận điểm tựa từ **“가장 직접적인”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“일반적으로”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## “보장하는”
 
 → từ mạnh. Một cơ chế (mechanism / 메커니즘) chỉ “giúp” không nhất thiết “guarantee”. Cẩn thận các option tuyệt đối như 항상, 반드시, 완전히.
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“일반적으로”** tiếp nhận điểm tựa từ **“보장하는”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“에 대한 설명으로 옳은 것”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “일반적으로”
 
 → hỏi hành vi (behavior / 동작)/convention thường gặp, không phải exception hiếm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Korean Term cầu nối (bridge / 브리지)**, **“에 대한 설명으로 옳은 것”** tiếp nhận điểm tựa từ **“일반적으로”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## “~에 대한 설명으로 옳은 것”
 
@@ -586,3 +606,5 @@ Korean term → English concept → mechanism/ranh giới
 Ví dụ không đủ: `스래싱 = thrashing`.
 
 Ví dụ đạt: `스래싱 = thrashing = hệ thống dành quá nhiều thời gian paging vì working set/frame pressure, khiến useful CPU work giảm mạnh`.
+
+> **Bàn giao:** Sau **“에 대한 설명으로 옳은 것”**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

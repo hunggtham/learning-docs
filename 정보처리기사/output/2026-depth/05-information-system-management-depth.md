@@ -1,5 +1,7 @@
 # Môn 5 — 정보시스템 구축 관리: Deep Dive 2026
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. 소프트웨어 개발 방법론 활용 — Software Development Methodology** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. chất lượng (quality / 품질) và tiến trình (process / 프로세스) Maturity** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Mạch này dùng deep dive information systems làm owner, rồi nối methodology, quality, security, infrastructure và governance.
+
 > Môn 5 có breadth rất lớn: methodology, estimation/dự án (project / 프로젝트) management, mạng (network / 네트워크)/SW/HW/DB construction, hạ tầng (infrastructure / 인프라), availability, secure software và hệ thống (system / 시스템) bảo mật (security / 보안). Đây là môn dễ 과락 nếu chỉ học bảo mật (security / 보안) hoặc chỉ học dự án (project / 프로젝트) management.
 
 ## 1. 소프트웨어 개발 방법론 활용 — Software Development Methodology
@@ -60,6 +62,8 @@ Threat phản hồi (response / 응답) thường gồm avoid, mitigate, transfe
 
 Issue khác rủi ro (risk / 위험): issue đã xảy ra; rủi ro (risk / 위험) chưa chắc xảy ra.
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **1. 소프트웨어 개발 방법론 활용 — Software Development Methodology** xác định đầu vào; **2. chất lượng (quality / 품질) và tiến trình (process / 프로세스) Maturity** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. IT 프로젝트 정보시스템 구축 관리 — IT dự án (project / 프로젝트) / thông tin (information / 정보) hệ thống (system / 시스템) Construction Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. chất lượng (quality / 품질) và tiến trình (process / 프로세스) Maturity
 
 ### 2.1 Software chất lượng (quality / 품질)
@@ -84,7 +88,11 @@ Mục đích là tiến trình (process / 프로세스) maturity, không phải 
 
 SPICE đánh giá tiến trình (process / 프로세스) năng lực (capability / 역량) theo mức (level / 수준). Đề có thể hỏi năng lực (capability / 역량)/tiến trình (process / 프로세스) assessment; đừng nhầm với sản phẩm (product / 제품) chất lượng (quality / 품질) mô hình (model / 모델).
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **2. chất lượng (quality / 품질) và tiến trình (process / 프로세스) Maturity** xác định đầu vào; **3. IT 프로젝트 정보시스템 구축 관리 — IT dự án (project / 프로젝트) / thông tin (information / 정보) hệ thống (system / 시스템) Construction Management** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3.1 mạng (network / 네트워크) Construction Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. IT 프로젝트 정보시스템 구축 관리 — IT dự án (project / 프로젝트) / thông tin (information / 정보) hệ thống (system / 시스템) Construction Management
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **3.1 mạng (network / 네트워크) Construction Management** tiếp nhận điểm tựa từ **3. IT 프로젝트 정보시스템 구축 관리 — IT dự án (project / 프로젝트) / thông tin (information / 정보) hệ thống (system / 시스템) Construction Management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.2 Software Construction Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3.1 mạng (network / 네트워크) Construction Management
 
@@ -106,6 +114,8 @@ VLAN chia broadcast lĩnh vực (domain / 도메인) lô-gic (logic / 논리) tr
 
 Chất lượng (quality / 품질) of dịch vụ (service / 서비스) ưu tiên/điều tiết traffic theo yêu cầu (requirement / 요구사항) như độ trễ (latency / 지연 시간), jitter, bandwidth, mất mát (loss / 손실). Voice/video thường nhạy độ trễ (latency / 지연 시간)/jitter hơn tệp (file / 파일) transfer.
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **3.2 Software Construction Management** tiếp nhận điểm tựa từ **3.1 mạng (network / 네트워크) Construction Management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.3 Hardware Construction Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3.2 Software Construction Management
 
 Cần quản lý yêu cầu (requirement / 요구사항), kiến trúc (architecture / 아키텍처), phụ thuộc (dependency / 의존성), phiên bản (version / 버전), bản dựng (build / 빌드), kiểm thử (test / 테스트), bản phát hành (release / 릴리스), cấu hình (configuration / 구성) và triển khai (deployment / 배포).
@@ -117,6 +127,8 @@ COTS — Commercial Off-The-Shelf — mua sản phẩm có sẵn; giảm develop
 Middleware nằm giữa ứng dụng (application / 애플리케이션)/thành phần (component / 컴포넌트) để cung cấp communication/tích hợp (integration / 통합) dịch vụ (service / 서비스). Category có RPC, message-oriented middleware, giao dịch (transaction / 트랜잭션) monitor, đối tượng (object / 객체) broker, web/ứng dụng (application / 애플리케이션) máy chủ (server / 서버) và tích hợp (integration / 통합) middleware.
 
 Middleware khác OS và khác nghiệp vụ (business / 비즈니스) ứng dụng (application / 애플리케이션).
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **3.3 Hardware Construction Management** tiếp nhận điểm tựa từ **3.2 Software Construction Management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.4 cơ sở dữ liệu (database / 데이터베이스) Construction Management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3.3 Hardware Construction Management
 
@@ -138,11 +150,15 @@ RAID không thay backup. RAID bảo vệ availability khi disk thất bại (fai
 
 SAN cung cấp khối (block / 블록) lưu trữ (storage / 저장소) qua lưu trữ (storage / 저장소) mạng (network / 네트워크). NAS cung cấp tệp (file / 파일) dịch vụ (service / 서비스) qua mạng (network / 네트워크). Đây là lớp trừu tượng (abstraction / 추상화) khác nhau: khối (block / 블록) vs tệp (file / 파일).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **3.3 Hardware Construction Management** nêu điều cần giải thích; **3.4 cơ sở dữ liệu (database / 데이터베이스) Construction Management** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3.5 Virtualization và Cloud** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3.4 cơ sở dữ liệu (database / 데이터베이스) Construction Management
 
 Cơ sở dữ liệu (database / 데이터베이스) construction management ở Môn 5 thiên về sức chứa (capacity / 용량), HA, backup/khôi phục (recovery / 복구), hiệu năng (performance / 성능), bảo mật (security / 보안) và thao tác (operation / 연산) hơn normalization chi tiết của Môn 3.
 
 Phải xem liên kết (connection / 연결) tải (load / 로드), giao dịch (transaction / 트랜잭션) thông lượng (throughput / 처리량), lưu trữ (storage / 저장소) growth, chỉ mục (index / 인덱스), backup cửa sổ (window / 윈도우), replication, failover, RPO/RTO và monitoring.
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **3.4 cơ sở dữ liệu (database / 데이터베이스) Construction Management** nêu điều cần giải thích; **3.5 Virtualization và Cloud** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Availability, DR, Backup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3.5 Virtualization và Cloud
 
@@ -161,6 +177,8 @@ Công khai (public / 공개) dùng provider dùng chung (shared / 공유) hạ t
 ### Quy mô (scale / 규모) Up vs quy mô (scale / 규모) Out
 
 Quy mô (scale / 규모) Up tăng tài nguyên (resource / 자원) của một nút (node / 노드). quy mô (scale / 규모) Out thêm nút (node / 노드). quy mô (scale / 규모) out thường cần ứng dụng (application / 애플리케이션)/dữ liệu (data / 데이터) thiết kế (design / 설계) hỗ trợ phân phối (distribution / 분포).
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **3.5 Virtualization và Cloud** cho ta quy tắc; **4. Availability, DR, Backup** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. 소프트웨어 개발 보안 구축 — Secure Software Development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Availability, DR, Backup
 
@@ -186,7 +204,11 @@ Full Backup sao chép toàn bộ selected dữ liệu (data / 데이터). Increm
 
 Cold Site có facility nhưng ít equipment/dữ liệu (data / 데이터) ready; khôi phục (recovery / 복구) chậm, chi phí (cost / 비용) thấp hơn. Warm Site có một phần hệ thống (system / 시스템)/dữ liệu (data / 데이터) ready. Hot Site gần môi trường vận hành (production / 운영 환경) replica và khôi phục (recovery / 복구) nhanh hơn nhưng chi phí (cost / 비용) cao.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **4. Availability, DR, Backup** cho ta quy tắc; **5. 소프트웨어 개발 보안 구축 — Secure Software Development** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5.1 bảo mật (security / 보안) Goals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 소프트웨어 개발 보안 구축 — Secure Software Development
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **5.1 bảo mật (security / 보안) Goals** tiếp nhận điểm tựa từ **5. 소프트웨어 개발 보안 구축 — Secure Software Development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5.1 bảo mật (security / 보안) Goals
 
@@ -242,7 +264,11 @@ Không lộ dấu vết ngăn xếp (stack trace / 스택 트레이스), SQL det
 
 Session ID phải unpredictable, rotate sau login/privilege thay đổi (change / 변경), expire hợp lý, cookie dùng Secure/HttpOnly/SameSite theo yêu cầu (requirement / 요구사항). Logout phải invalidate session phía máy chủ (server / 서버) khi kiến trúc (architecture / 아키텍처) yêu cầu.
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6. 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안)** tiếp nhận điểm tựa từ **5.1 bảo mật (security / 보안) Goals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.1 Threat, Vulnerability, rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안)
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.1 Threat, Vulnerability, rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **6. 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.2 Malware** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.1 Threat, Vulnerability, rủi ro (risk / 위험)
 
@@ -250,11 +276,15 @@ Asset là thứ có giá trị. Threat là nguồn/sự kiện có khả năng g
 
 Điều khiển (control / 제어) giảm likelihood/impact hoặc hỗ trợ detect/recover.
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.2 Malware** tiếp nhận điểm tựa từ **6.1 Threat, Vulnerability, rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.3 kiểm soát truy cập (access control / 접근 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6.2 Malware
 
 Virus cần host/tệp (file / 파일) và thường lây khi host chạy. Worm tự lan qua mạng (network / 네트워크). Trojan giả dạng hữu ích nhưng chứa hành vi độc hại. Ransomware mã hóa/khóa dữ liệu (data / 데이터) để tống tiền. Spyware thu thập thông tin. Rootkit che giấu/duy trì quyền sâu.
 
 Botnet là tập compromised hosts bị điều khiển (control / 제어); DDoS có thể dùng botnet nhưng botnet không đồng nghĩa DDoS.
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.3 kiểm soát truy cập (access control / 접근 제어)** tiếp nhận điểm tựa từ **6.2 Malware** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.4 Authentication Factors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.3 kiểm soát truy cập (access control / 접근 제어)
 
@@ -262,11 +292,15 @@ DAC — Discretionary kiểm soát truy cập (access control / 접근 제어) �
 
 Least Privilege: chỉ cấp quyền tối thiểu cần thiết. Separation of Duties: chia trách nhiệm nhạy cảm giữa nhiều actor. Need-to-Know: chỉ truy cập thông tin cần cho nhiệm vụ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.4 Authentication Factors** tiếp nhận điểm tựa từ **6.3 kiểm soát truy cập (access control / 접근 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.5 Cryptography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6.4 Authentication Factors
 
 Something you know: password/PIN. Something you have: đơn vị từ (token / 토큰)/card/thiết bị (device / 장치). Something you are: biometric. Somewhere you are / something you do đôi khi được dùng thêm trong taxonomy.
 
 Multi-factor cần ít nhất hai factor **khác loại**. Hai password không phải 2FA.
+
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.5 Cryptography** tiếp nhận điểm tựa từ **6.4 Authentication Factors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.6 PKI và Certificate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.5 Cryptography
 
@@ -288,9 +322,13 @@ Signature dùng private key của signer để tạo signature trên dữ liệu
 
 Encryption bằng công khai (public / 공개) key của receiver và signature bằng private key của sender phục vụ mục tiêu khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.6 PKI và Certificate** tiếp nhận điểm tựa từ **6.5 Cryptography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.7 mạng (network / 네트워크) bảo mật (security / 보안) Devices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6.6 PKI và Certificate
 
 PKI quản công khai (public / 공개) key/certificate/trust. CA ký certificate binding định danh (identity / 식별자)/lĩnh vực (domain / 도메인) với công khai (public / 공개) key. Certificate kiểm tra hợp lệ (validation / 검증) cần chuỗi (chain / 사슬) of trust, validity, hostname/chính sách (policy / 정책) và revocation/status theo hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.7 mạng (network / 네트워크) bảo mật (security / 보안) Devices** tiếp nhận điểm tựa từ **6.6 PKI và Certificate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.8 bảo mật (security / 보안) Protocols** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.7 mạng (network / 네트워크) bảo mật (security / 보안) Devices
 
@@ -302,11 +340,15 @@ VPN tạo protected tunnel qua untrusted mạng (network / 네트워크) bằng 
 
 Signature-based tốt với mẫu (pattern / 패턴) đã biết nhưng yếu với attack mới/biến thể. Anomaly-based phát hiện lệch baseline nhưng dễ false positive và cần tuning.
 
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.8 bảo mật (security / 보안) Protocols** tiếp nhận điểm tựa từ **6.7 mạng (network / 네트워크) bảo mật (security / 보안) Devices** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.9 AAA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6.8 bảo mật (security / 보안) Protocols
 
 TLS bảo vệ vận chuyển (transport / 전송) session của nhiều ứng dụng (application / 애플리케이션) giao thức (protocol / 프로토콜); HTTPS là HTTP over TLS. SSH cung cấp secure remote login/tunneling. IPsec bảo vệ ở mạng (network / 네트워크) tầng (layer / 계층) concept, với AH/ESP trong taxonomy truyền thống. S/MIME/PGP liên quan email/content bảo mật (security / 보안).
 
 Đừng học “giao thức (protocol / 프로토콜) nào an toàn” theo tên; hiểu tầng (layer / 계층) và mục tiêu bảo vệ.
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.9 AAA** tiếp nhận điểm tựa từ **6.8 bảo mật (security / 보안) Protocols** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6.10 Logging, Monitoring, sự cố (incident / 인시던트) phản hồi (response / 응답)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6.9 AAA
 
@@ -314,15 +356,17 @@ Authentication: bạn là ai? Authorization: bạn được làm gì? Accounting
 
 RADIUS/TACACS+ có thể xuất hiện trong ngữ cảnh (context / 맥락) AAA truy cập mạng (network access / 네트워크 접근)/admin. Không cần nhớ mọi chi tiết vendor-specific trước khi phân biệt ba chữ A.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.10 Logging, Monitoring, sự cố (incident / 인시던트) phản hồi (response / 응답)** tiếp nhận điểm tựa từ **6.9 AAA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Cặp dễ nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6.10 Logging, Monitoring, sự cố (incident / 인시던트) phản hồi (response / 응답)
 
 Bảo mật (security / 보안) log cần timestamp đồng bộ, định danh (identity / 식별자), sự kiện (event / 이벤트), nguồn (source / 소스), kết quả (result / 결과) và ngữ cảnh (context / 맥락) cần thiết. Centralized logging/SIEM giúp correlation nhưng chất lượng phụ thuộc log nguồn (source / 소스) và quy tắc (rule / 규칙).
 
 Sự cố (incident / 인시던트) phản hồi (response / 응답) luồng (flow / 흐름) thường gồm preparation, detection/phân tích (analysis / 분석), containment, eradication, khôi phục (recovery / 복구), lessons learned theo khung phần mềm (framework / 프레임워크) cụ thể. Thứ tự tên có thể khác giữa khung phần mềm (framework / 프레임워크) nhưng lô-gic (logic / 논리) là chuẩn bị → phát hiện → khống chế → loại bỏ → phục hồi → cải tiến.
 
-## 7. Cặp dễ nhầm
-Phần “7. Cặp dễ nhầm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **6.10 Logging, Monitoring, sự cố (incident / 인시던트) phản hồi (response / 응답)** đã nêu tiêu chí phân biệt, còn **7. Cặp dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Procedural drills** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 7. Cặp dễ nhầm
 
 | Cặp | Điểm tách |
 |---|---|
@@ -342,6 +386,8 @@ Phần “7. Cặp dễ nhầm” nối kiến thức trước với nội dung 
 | băm (hash / 해시) vs Encryption | one-way digest vs reversible confidentiality |
 | Symmetric vs Asymmetric | dùng chung (shared / 공유) secret nhanh vs key pair |
 | Digital Signature vs Encryption | authenticity/integrity vs confidentiality |
+
+> **Chuyển mạch:** Ở chặng này của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **7. Cặp dễ nhầm** đã nêu tiêu chí phân biệt, còn **8. Procedural drills** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. 과락 방지 checklist — Môn 5** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Procedural drills
 
@@ -385,6 +431,8 @@ Muốn gửi tệp (file / 파일) lớn bảo mật và xác minh người gử
 
 Hệ thống (system / 시스템) có MTBF=999 giờ, MTTR=1 giờ. Tính availability gần đúng và giải thích cách MTTR ảnh hưởng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 5 — 정보시스템 구축 관리: Deep Dive 2026**, **9. 과락 방지 checklist — Môn 5** tiếp nhận điểm tựa từ **8. Procedural drills** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 9. 과락 방지 checklist — Môn 5
 
 Phải tự làm được:
@@ -408,3 +456,5 @@ Phải tự làm được:
 - nhận diện malware category và sự cố (incident / 인시던트) phản hồi (response / 응답) luồng (flow / 흐름).
 
 Môn 5 chỉ an toàn khi có thể chuyển nhanh giữa dự án (project / 프로젝트), hạ tầng (infrastructure / 인프라) và bảo mật (security / 보안) mà không bị mất ngữ cảnh (context / 맥락).
+
+> **Bàn giao:** Sau **9. 과락 방지 checklist — Môn 5**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
