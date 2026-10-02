@@ -1,20 +1,26 @@
 # Group Functions
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Group functions**. Route đi từ row-level values → GROUP BY grain → aggregate semantics → HAVING/filter order → NULL and precision behavior, để tổng hợp giữ đúng cấp độ dữ liệu.
+
 > **Mục tiêu:** Aggregate, GROUP BY, ROLLUP, CUBE, GROUPING và GROUPING SETS.
 
 ## Từ khóa cần nhớ (Keyword)
 
-Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần nguồn. Khi ghi chú, dùng mẫu `용어 (English) (Tiếng Việt)` để nối tên gọi trong đề với ý nghĩa thực tế.
+Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
+
+> **Chuyển mạch:** Trong **Group Functions**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch tư duy (Logic học)
 
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제3절 그룹 함수 — Group Function** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch nối của bài học
 
-Bài này không đứng riêng: hãy nối **Group Functions** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+Bài này không đứng riêng: hãy nối **Group Functions** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
+> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
@@ -129,6 +135,8 @@ Vậy ta đã có tiêu chí để đọc **⭐ Cạm bẫy cực hay thi**. Bâ
 
 Ta bắt đầu **제3절 그룹 함수 — Group Function** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **제3절 그룹 함수 — Group Function** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 집계 함수 — Aggregate Function** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 제3절 그룹 함수 — Group Function
 
 Khi gom phần **제3절 그룹 함수 — Group Function** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -144,9 +152,9 @@ Ta bắt đầu **1. Ba nhóm hàm phân tích dữ liệu trong SQL** bằng c�
 
 | Loại               | Korean | Ý nghĩa                                                               |
 | ------------------ | ------ | --------------------------------------------------------------------- |
-| Aggregate hàm (function / 함수) | 집계 함수  | Tổng hợp nhiều row thành một giá trị: `COUNT`, `SUM`, `AVG`, `MAX`... |
-| Group hàm (function / 함수)     | 그룹 함수  | Tạo nhiều cấp độ nhóm/tổng phụ: `ROLLUP`, `CUBE`, `GROUPING SETS`     |
-| hàm cửa sổ (window function / 윈도우 함수)    | 윈도우 함수 | Tính toán trên một "cửa sổ" row nhưng **không gom mất row**           |
+| Aggregate Function | 집계 함수  | Tổng hợp nhiều row thành một giá trị: `COUNT`, `SUM`, `AVG`, `MAX`... |
+| Group Function     | 그룹 함수  | Tạo nhiều cấp độ nhóm/tổng phụ: `ROLLUP`, `CUBE`, `GROUPING SETS`     |
+| Window Function    | 윈도우 함수 | Tính toán trên một "cửa sổ" row nhưng **không gom mất row**           |
 
 Ví dụ quan trọng:
 
@@ -158,7 +166,7 @@ GROUP BY DEPTNO;
 
 10 nhân viên có thể bị gom thành chỉ 3 dòng phòng ban.
 
-Trong khi hàm cửa sổ (window function / 윈도우 함수):
+Trong khi Window Function:
 
 ```sql
 SELECT EMPNO,
@@ -178,12 +186,14 @@ Vậy ta đã có tiêu chí để đọc **1. Ba nhóm hàm phân tích dữ li
 
 Ta bắt đầu **2. 집계 함수 — Aggregate Function** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Group Functions**, **2. 집계 함수 — Aggregate Function** tiếp nhận điểm tựa từ **제3절 그룹 함수 — Group Function** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. SUM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 집계 함수 — Aggregate Function
 
 Điểm quan trọng nhất của phần này:
 
 > **집계 함수는 일반적으로 NULL을 제외한다.**
-> Các Aggregate hàm (function / 함수) **thường bỏ qua NULL**.
+> Các Aggregate Function **thường bỏ qua NULL**.
 
 Đây là kiến thức rất dễ xuất hiện trong SQLD.
 
@@ -284,6 +294,8 @@ Vậy ta đã có tiêu chí để đọc **Mẹo SQLD**. Bây giờ chuyển sa
 
 Ta bắt đầu **3. SUM** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **3. SUM** tiếp nhận điểm tựa từ **2. 집계 함수 — Aggregate Function** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. AVG — phần rất dễ ra đề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. SUM
 
 **KR:** `SUM`은 숫자 데이터의 합계를 계산한다.
@@ -321,6 +333,8 @@ Khi gom phần **3. SUM** lại, ta không cần nhớ các dòng như những m
 Vậy ta đã có tiêu chí để đọc **3. SUM**. Bây giờ chuyển sang **4. AVG — phần rất dễ ra đề**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **4. AVG — phần rất dễ ra đề** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **4. AVG — phần rất dễ ra đề** tiếp nhận điểm tựa từ **3. SUM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. MIN / MAX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. AVG — phần rất dễ ra đề
 
@@ -458,6 +472,8 @@ Vậy ta đã có tiêu chí để đọc **Một quan hệ rất đáng nhớ**
 
 Ta bắt đầu **5. MIN / MAX** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Group Functions**, **5. MIN / MAX** tiếp nhận điểm tựa từ **4. AVG — phần rất dễ ra đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. VARIANCE / STDDEV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. MIN / MAX
 
 **KR:** `MIN`, `MAX`는 각각 최솟값과 최댓값을 반환한다.
@@ -493,6 +509,8 @@ Vậy ta đã có tiêu chí để đọc **5. MIN / MAX**. Bây giờ chuyển 
 
 Ta bắt đầu **6. VARIANCE / STDDEV** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **6. VARIANCE / STDDEV** tiếp nhận điểm tựa từ **5. MIN / MAX** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. GROUP BY cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. VARIANCE / STDDEV
 
 **KR:** `VARIANCE`는 분산을, `STDDEV`는 표준편차를 계산한다.
@@ -513,6 +531,8 @@ Khi gom phần **6. VARIANCE / STDDEV** lại, ta không cần nhớ các dòng 
 Vậy ta đã có tiêu chí để đọc **6. VARIANCE / STDDEV**. Bây giờ chuyển sang **7. GROUP BY cơ bản**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **7. GROUP BY cơ bản** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **7. GROUP BY cơ bản** tiếp nhận điểm tựa từ **6. VARIANCE / STDDEV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. GROUP BY không tự ORDER BY** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. GROUP BY cơ bản
 
@@ -565,6 +585,8 @@ Vậy ta đã có tiêu chí để đọc **7. GROUP BY cơ bản**. Bây giờ 
 
 Ta bắt đầu **8. GROUP BY không tự ORDER BY** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Group Functions**, **8. GROUP BY không tự ORDER BY** tiếp nhận điểm tựa từ **7. GROUP BY cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ROLLUP ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. GROUP BY không tự ORDER BY
 
 **KR:** GROUP BY를 사용한다고 해서 결과가 자동으로 정렬되는 것은 아니다.
@@ -579,7 +601,7 @@ ORDER BY DNAME, JOB
 Phải nhớ:
 
 > **GROUP BY = grouping**
-> **thứ tự (order / 순서) BY = sorting**
+> **ORDER BY = sorting**
 
 Không được coi chúng là một.
 
@@ -590,6 +612,8 @@ Khi gom phần **8. GROUP BY không tự ORDER BY** lại, ta không cần nhớ
 Vậy ta đã có tiêu chí để đọc **8. GROUP BY không tự ORDER BY**. Bây giờ chuyển sang **9. ROLLUP ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **9. ROLLUP ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **9. ROLLUP ⭐⭐⭐** tiếp nhận điểm tựa từ **8. GROUP BY không tự ORDER BY** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Tại sao ROLLUP(A,B) có N+1 level?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. ROLLUP ⭐⭐⭐
 
@@ -679,9 +703,11 @@ Vậy ta đã có tiêu chí để đọc **9.1 ROLLUP(A,B)**. Bây giờ chuy�
 
 Ta bắt đầu **10. Tại sao ROLLUP(A,B) có N+1 level?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **10. Tại sao ROLLUP(A,B) có N+1 level?** tiếp nhận điểm tựa từ **9. ROLLUP ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Tại sao ROLLUP(A,B) có N+1 level?
 
-**KR:** ROLLUP에서 그룹핑 컬럼의 수가 N개이면 N+1개의 집계 mức (level / 수준)이 생성된다.
+**KR:** ROLLUP에서 그룹핑 컬럼의 수가 N개이면 N+1개의 집계 Level이 생성된다.
 **VI:** Nếu `ROLLUP` có N column thì sẽ tạo **N+1 cấp aggregation**.
 
 Ví dụ:
@@ -697,7 +723,7 @@ ROLLUP(A)
 ()
 ```
 
-2 mức (level / 수준).
+2 level.
 
 ```sql
 ROLLUP(A,B)
@@ -711,7 +737,7 @@ ROLLUP(A,B)
 ()
 ```
 
-3 mức (level / 수준).
+3 level.
 
 ```sql
 ROLLUP(A,B,C)
@@ -726,7 +752,7 @@ ROLLUP(A,B,C)
 ()
 ```
 
-4 mức (level / 수준).
+4 level.
 
 Khi gom phần **10. Tại sao ROLLUP(A,B) có N+1 level?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -759,6 +785,8 @@ Khi gom phần **Công thức nhớ** lại, ta không cần nhớ các dòng nh
 Vậy ta đã có tiêu chí để đọc **Công thức nhớ**. Bây giờ chuyển sang **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Group Functions**, **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐** tiếp nhận điểm tựa từ **10. Tại sao ROLLUP(A,B) có N+1 level?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. ROLLUP với composite column** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐
 
@@ -819,6 +847,8 @@ Khi gom phần **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐** lại
 Vậy ta đã có tiêu chí để đọc **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐**. Bây giờ chuyển sang **12. ROLLUP với composite column**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **12. ROLLUP với composite column** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **12. ROLLUP với composite column** tiếp nhận điểm tựa từ **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. GROUPING() ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. ROLLUP với composite column
 
@@ -924,7 +954,7 @@ ROLLUP(DNAME, (JOB,MGR))
 ()
 ```
 
-`JOB + MGR` được coi như **một gói (package / 패키지)**.
+`JOB + MGR` được coi như **một package**.
 
 ---
 
@@ -933,6 +963,8 @@ Khi gom phần **Có composite column** lại, ta không cần nhớ các dòng 
 Vậy ta đã có tiêu chí để đọc **Có composite column**. Bây giờ chuyển sang **13. GROUPING() ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **13. GROUPING() ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **13. GROUPING() ⭐⭐⭐** tiếp nhận điểm tựa từ **12. ROLLUP với composite column** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Dùng GROUPING thay NVL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. GROUPING() ⭐⭐⭐
 
@@ -972,7 +1004,7 @@ Ngược lại:
 GROUPING(column) = 0
 ```
 
-→ column đang tham gia grouping ở mức (level / 수준) đó; một NULL dữ liệu thật cũng không bị đánh dấu là subtotal.
+→ column đang tham gia grouping ở level đó; một NULL dữ liệu thật cũng không bị đánh dấu là subtotal.
 
 Tóm lại để đi thi:
 
@@ -991,6 +1023,8 @@ Khi gom phần **Quy tắc** lại, ta không cần nhớ các dòng như nhữn
 Vậy ta đã có tiêu chí để đọc **Quy tắc**. Bây giờ chuyển sang **14. Dùng GROUPING thay NVL**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **14. Dùng GROUPING thay NVL** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Group Functions**, **14. Dùng GROUPING thay NVL** tiếp nhận điểm tựa từ **13. GROUPING() ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. CASE và DECODE đều dùng được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Dùng GROUPING thay NVL
 
@@ -1048,6 +1082,8 @@ Vậy ta đã có tiêu chí để đọc **14. Dùng GROUPING thay NVL**. Bây 
 
 Ta bắt đầu **15. CASE và DECODE đều dùng được** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **14. Dùng GROUPING thay NVL** cho ta quy tắc; **15. CASE và DECODE đều dùng được** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. CUBE ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. CASE và DECODE đều dùng được
 
 Ảnh cho hai cách.
@@ -1100,6 +1136,8 @@ Vậy ta đã có tiêu chí để đọc **Oracle DECODE**. Bây giờ chuyển
 
 Ta bắt đầu **16. CUBE ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **15. CASE và DECODE đều dùng được** cho ta quy tắc; **16. CUBE ⭐⭐⭐** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. ROLLUP vs CUBE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. CUBE ⭐⭐⭐
 
 Nếu ROLLUP là **phân cấp**, CUBE là **mọi tổ hợp grouping có thể có**.
@@ -1133,6 +1171,8 @@ Khi gom phần **16. CUBE ⭐⭐⭐** lại, ta không cần nhớ các dòng nh
 Vậy ta đã có tiêu chí để đọc **16. CUBE ⭐⭐⭐**. Bây giờ chuyển sang **17. ROLLUP vs CUBE**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **17. ROLLUP vs CUBE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Group Functions**, **17. ROLLUP vs CUBE** tiếp nhận điểm tựa từ **16. CUBE ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Thứ tự CUBE khác ROLLUP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. ROLLUP vs CUBE
 
@@ -1247,6 +1287,8 @@ Vậy ta đã có tiêu chí để đọc **Ví dụ từ ảnh**. Bây giờ ch
 
 Ta bắt đầu **18. Thứ tự CUBE khác ROLLUP** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **18. Thứ tự CUBE khác ROLLUP** tiếp nhận điểm tựa từ **17. ROLLUP vs CUBE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Tại sao CUBE nặng hơn ROLLUP?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Thứ tự CUBE khác ROLLUP
 
 Đây là câu dễ thi.
@@ -1317,7 +1359,7 @@ ROLLUP → hierarchy → ORDER MATTERS
 CUBE   → combinations → ORDER DOESN'T MATTER
 ```
 
-Lưu ý: "thứ tự (order / 순서) doesn't matter" ở đây nói về **các grouping set được sinh ra**, không có nghĩa SQL đảm bảo thứ tự hiển thị row. Muốn sort vẫn phải dùng `ORDER BY`.
+Lưu ý: "order doesn't matter" ở đây nói về **các grouping set được sinh ra**, không có nghĩa SQL đảm bảo thứ tự hiển thị row. Muốn sort vẫn phải dùng `ORDER BY`.
 
 ---
 
@@ -1326,6 +1368,8 @@ Khi gom phần **Nhớ** lại, ta không cần nhớ các dòng như những m�
 Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **19. Tại sao CUBE nặng hơn ROLLUP?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **19. Tại sao CUBE nặng hơn ROLLUP?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **19. Tại sao CUBE nặng hơn ROLLUP?** tiếp nhận điểm tựa từ **18. Thứ tự CUBE khác ROLLUP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. GROUPING SETS ⭐⭐⭐** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Tại sao CUBE nặng hơn ROLLUP?
 
@@ -1410,6 +1454,8 @@ Vậy ta đã có tiêu chí để đọc **CUBE**. Bây giờ chuyển sang **2
 
 Ta bắt đầu **20. GROUPING SETS ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Group Functions**, **20. GROUPING SETS ⭐⭐⭐** tiếp nhận điểm tựa từ **19. Tại sao CUBE nặng hơn ROLLUP?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. GROUPING SETS không tự sinh Grand Total** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. GROUPING SETS ⭐⭐⭐
 
 Đây là cách linh hoạt nhất.
@@ -1484,6 +1530,8 @@ Vậy ta đã có tiêu chí để đọc **Đây là chỗ rất dễ nhầm**.
 
 Ta bắt đầu **21. GROUPING SETS không tự sinh Grand Total** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **21. GROUPING SETS không tự sinh Grand Total** tiếp nhận điểm tựa từ **20. GROUPING SETS ⭐⭐⭐** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. GROUPING SETS tương đương UNION ALL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. GROUPING SETS không tự sinh Grand Total
 
 **KR:** GROUPING SETS는 ROLLUP이나 CUBE와 달리 자동으로 총계를 생성하지 않는다.
@@ -1526,6 +1574,8 @@ Vậy ta đã có tiêu chí để đọc **21. GROUPING SETS không tự sinh G
 
 Ta bắt đầu **22. GROUPING SETS tương đương UNION ALL** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **22. GROUPING SETS tương đương UNION ALL** tiếp nhận điểm tựa từ **21. GROUPING SETS không tự sinh Grand Total** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. GROUPING SETS không phụ thuộc thứ tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. GROUPING SETS tương đương UNION ALL
 
 Ví dụ:
@@ -1534,7 +1584,7 @@ Ví dụ:
 GROUP BY GROUPING SETS(DNAME, JOB)
 ```
 
-về lô-gic (logic / 논리) tương đương:
+về logic tương đương:
 
 ```sql
 SELECT DNAME, NULL AS JOB, ...
@@ -1557,6 +1607,8 @@ Khi gom phần **22. GROUPING SETS tương đương UNION ALL** lại, ta không
 Vậy ta đã có tiêu chí để đọc **22. GROUPING SETS tương đương UNION ALL**. Bây giờ chuyển sang **23. GROUPING SETS không phụ thuộc thứ tự**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **23. GROUPING SETS không phụ thuộc thứ tự** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Group Functions**, **23. GROUPING SETS không phụ thuộc thứ tự** tiếp nhận điểm tựa từ **22. GROUPING SETS tương đương UNION ALL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. GROUPING SETS không phụ thuộc thứ tự
 
@@ -1588,6 +1640,8 @@ Khi gom phần **23. GROUPING SETS không phụ thuộc thứ tự** lại, ta k
 Vậy ta đã có tiêu chí để đọc **23. GROUPING SETS không phụ thuộc thứ tự**. Bây giờ chuyển sang **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS** tiếp nhận điểm tựa từ **23. GROUPING SETS không phụ thuộc thứ tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Biểu diễn CUBE bằng GROUPING SETS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Có thể biểu diễn ROLLUP bằng GROUPING SETS
 
@@ -1629,6 +1683,8 @@ Vậy ta đã có tiêu chí để đọc **24. Có thể biểu diễn ROLLUP b
 
 Ta bắt đầu **25. Biểu diễn CUBE bằng GROUPING SETS** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **25. Biểu diễn CUBE bằng GROUPING SETS** tiếp nhận điểm tựa từ **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Bảng so sánh phải thuộc trước khi thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Biểu diễn CUBE bằng GROUPING SETS
 
 Phần này nối mạch SQL với “25. Biểu diễn CUBE bằng GROUPING SETS”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
@@ -1667,6 +1723,8 @@ Vậy ta đã có tiêu chí để đọc **25. Biểu diễn CUBE bằng GROUPI
 
 Ta bắt đầu **26. Bảng so sánh phải thuộc trước khi thi** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Group Functions**, **25. Biểu diễn CUBE bằng GROUPING SETS** đã nêu tiêu chí phân biệt, còn **26. Bảng so sánh phải thuộc trước khi thi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **27. Cách suy luận nhanh khi gặp đề SQLD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Bảng so sánh phải thuộc trước khi thi
 
 Phần này nối mạch SQL với “26. Bảng so sánh phải thuộc trước khi thi”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
@@ -1688,9 +1746,11 @@ Vậy ta đã có tiêu chí để đọc **26. Bảng so sánh phải thuộc t
 
 Ta bắt đầu **27. Cách suy luận nhanh khi gặp đề SQLD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **26. Bảng so sánh phải thuộc trước khi thi** đã nêu tiêu chí phân biệt, còn **27. Cách suy luận nhanh khi gặp đề SQLD** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **28. Một bẫy đặc biệt: NULL trong kết quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Cách suy luận nhanh khi gặp đề SQLD
 
-Đừng cố nhớ đầu ra (output / 출력) bằng hình. Hãy **bung grouping set ra**.
+Đừng cố nhớ output bằng hình. Hãy **bung grouping set ra**.
 
 Ví dụ đề hỏi:
 
@@ -1746,6 +1806,8 @@ Vậy ta đã có tiêu chí để đọc **27. Cách suy luận nhanh khi gặp
 
 Ta bắt đầu **28. Một bẫy đặc biệt: NULL trong kết quả** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Group Functions**, **27. Cách suy luận nhanh khi gặp đề SQLD** đã nêu tiêu chí phân biệt, còn **28. Một bẫy đặc biệt: NULL trong kết quả** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **29. Sơ đồ tổng hợp cực dễ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Một bẫy đặc biệt: NULL trong kết quả
 
 Giả sử:
@@ -1793,6 +1855,8 @@ Khi gom phần **28. Một bẫy đặc biệt: NULL trong kết quả** lại, 
 Vậy ta đã có tiêu chí để đọc **28. Một bẫy đặc biệt: NULL trong kết quả**. Bây giờ chuyển sang **29. Sơ đồ tổng hợp cực dễ nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **29. Sơ đồ tổng hợp cực dễ nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Group Functions**, **28. Một bẫy đặc biệt: NULL trong kết quả** đã nêu tiêu chí phân biệt, còn **29. Sơ đồ tổng hợp cực dễ nhớ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Sơ đồ tổng hợp cực dễ nhớ
 
@@ -1885,10 +1949,12 @@ Vậy ta đã có tiêu chí để đọc **GROUPING SETS**. Bây giờ chuyển
 
 Ta bắt đầu **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Group Functions**, **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** gom các mảnh từ **29. Sơ đồ tổng hợp cực dễ nhớ** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ
 
 1. **집계 함수는 일반적으로 NULL을 제외한다.**
-   Aggregate hàm (function / 함수) thường bỏ qua NULL.
+   Aggregate Function thường bỏ qua NULL.
 
 2. `COUNT(*)` → đếm row; `COUNT(column)` → bỏ NULL của column.
 
@@ -1924,9 +1990,9 @@ Ta bắt đầu **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** b�
 
 11. GROUPING SETS không tự tạo Grand Total; muốn total thêm `()`.
 
-12. `GROUPING(column)=1` → column bị loại khỏi grouping ở subtotal/total mức (level / 수준) do group hàm (function / 함수) tạo ra.
+12. `GROUPING(column)=1` → column bị loại khỏi grouping ở subtotal/total level do group function tạo ra.
 
-13. `ROLLUP(A,(B,C))` coi `(B,C)` là **một composite grouping đơn vị (unit / 단위)**.
+13. `ROLLUP(A,(B,C))` coi `(B,C)` là **một composite grouping unit**.
 
 14. Cả `ROLLUP` và `CUBE` đều có thể biểu diễn bằng `GROUPING SETS`.
 
@@ -1960,3 +2026,5 @@ Và câu quyết định:
 Khi gom phần **Công thức nhớ 10 giây trước khi vào thi** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
 Như vậy, **Công thức nhớ 10 giây trước khi vào thi** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+
+> **Bàn giao:** Sau **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

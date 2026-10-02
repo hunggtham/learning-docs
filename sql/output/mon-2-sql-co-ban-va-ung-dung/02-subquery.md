@@ -1,20 +1,26 @@
 # Subquery
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Subquery**. Route đi từ correlated/un correlated scope → scalar/EXISTS/IN semantics → NULL and duplicate behavior → rewrite to joins/CTEs → optimizer consequences, để truy vấn lồng được hiểu qua quan hệ và kế hoạch.
+
 > **Mục tiêu:** Single/multi-row, correlated, scalar, inline view, EXISTS và các bẫy thường gặp.
 
 ## Từ khóa cần nhớ (Keyword)
 
-Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần nguồn. Khi ghi chú, dùng mẫu `용어 (English) (Tiếng Việt)` để nối tên gọi trong đề với ý nghĩa thực tế.
+Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
+
+> **Chuyển mạch:** Trong **Subquery**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch tư duy (Logic học)
 
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Subquery**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mạch nối của bài học
 
-Bài này không đứng riêng: hãy nối **Subquery** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+Bài này không đứng riêng: hãy nối **Subquery** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
+> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
@@ -115,7 +121,7 @@ Main Query
 p.artist_id
 ```
 
-đến từ **main truy vấn (query / 쿼리)**, còn:
+đến từ **main query**, còn:
 
 ```sql
 a.id
@@ -217,7 +223,7 @@ Ta bắt đầu **3. 서브쿼리가 위치할 수 있는 곳 — Subquery có t
 
 Theo ảnh:
 
-**서브쿼리는 SELECT, FROM, WHERE, HAVING, thứ tự (order / 순서) BY 절 등에 위치할 수 있다.**
+**서브쿼리는 SELECT, FROM, WHERE, HAVING, ORDER BY 절 등에 위치할 수 있다.**
 → Subquery có thể xuất hiện trong `SELECT`, `FROM`, `WHERE`, `HAVING`, `ORDER BY`...
 
 Ngoài ra còn có thể xuất hiện trong DML:
@@ -253,7 +259,7 @@ Ta bắt đầu **4. 연관 서브쿼리 vs 비연관 서브쿼리** bằng câu
 
 ## 4. 연관 서브쿼리 vs 비연관 서브쿼리
 
-Đây là một cách phân loại **theo quan hệ với main truy vấn (query / 쿼리)**.
+Đây là một cách phân loại **theo quan hệ với main query**.
 
 Khi gom phần **4. 연관 서브쿼리 vs 비연관 서브쿼리** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -264,7 +270,7 @@ Ta bắt đầu **4.1 연관 서브쿼리 — Correlated Subquery** bằng câu 
 ### 4.1 연관 서브쿼리 — Correlated Subquery
 
 **연관 서브쿼리는 서브쿼리가 메인쿼리의 컬럼을 참조하는 서브쿼리이다.**
-→ Correlated Subquery là subquery **tham chiếu cột của main truy vấn (query / 쿼리)**.
+→ Correlated Subquery là subquery **tham chiếu cột của main query**.
 
 Ví dụ:
 
@@ -285,13 +291,13 @@ FROM paintings p;
 p.artist_id
 ```
 
-Subquery đang sử dụng dữ liệu từ `p`, mà `p` được khai báo ở main truy vấn (query / 쿼리):
+Subquery đang sử dụng dữ liệu từ `p`, mà `p` được khai báo ở main query:
 
 ```sql
 FROM paintings p
 ```
 
-Do đó subquery **phụ thuộc main truy vấn (query / 쿼리)**.
+Do đó subquery **phụ thuộc main query**.
 
 Ta có thể tư duy:
 
@@ -314,7 +320,7 @@ trả artist_name
 ...
 ```
 
-> Đây là mô hình lô-gic (logic / 논리) để hiểu correlated subquery; optimizer của DBMS có thể biến đổi cách thực thi thực tế.
+> Đây là mô hình logic để hiểu correlated subquery; optimizer của DBMS có thể biến đổi cách thực thi thực tế.
 
 ---
 
@@ -327,7 +333,7 @@ Ta bắt đầu **4.2 비연관 서브쿼리 — Uncorrelated Subquery** bằng 
 ### 4.2 비연관 서브쿼리 — Uncorrelated Subquery
 
 **비연관 서브쿼리는 메인쿼리의 컬럼을 참조하지 않는다.**
-→ Uncorrelated Subquery không phụ thuộc cột của main truy vấn (query / 쿼리).
+→ Uncorrelated Subquery không phụ thuộc cột của main query.
 
 Ví dụ:
 
@@ -355,7 +361,7 @@ Ví dụ:
 AVG(SAL) = 3500
 ```
 
-Sau đó về lô-gic (logic / 논리) main truy vấn (query / 쿼리) trở thành:
+Sau đó về logic main query trở thành:
 
 ```sql
 SELECT *
@@ -437,7 +443,7 @@ trả:
 3000
 ```
 
-thì main truy vấn (query / 쿼리) tương đương:
+thì main query tương đương:
 
 ```sql
 WHERE SAL > 3000
@@ -724,7 +730,7 @@ DEPTNO | MAX(SAL)
 30     | 3500
 ```
 
-Main truy vấn (query / 쿼리) kiểm tra theo **cặp giá trị**:
+Main query kiểm tra theo **cặp giá trị**:
 
 ```text
 (DEPTNO, SAL)
@@ -888,7 +894,7 @@ WHERE a.id = 10
 
 không tìm thấy row.
 
-Trong scalar ngữ cảnh (context / 맥락), kết quả biểu diễn thành:
+Trong scalar context, kết quả biểu diễn thành:
 
 ```text
 NULL
@@ -906,7 +912,7 @@ Do đó painting `108` vẫn tồn tại:
 LEFT JOIN
 ```
 
-vì LEFT phép nối (join / 조인) vẫn giữ row bên trái.
+vì LEFT JOIN vẫn giữ row bên trái.
 
 ⚠️ Nhưng không nên học thành quy tắc "`Scalar Subquery = LEFT JOIN` trong mọi trường hợp". Hai cách chỉ tương đương khi điều kiện và tính duy nhất của kết quả phù hợp.
 
@@ -1014,7 +1020,7 @@ EMPNO ENAME DEPTNO SAL  TOTAL_SAL
 
 `TOTAL_SAL` được lặp trên từng row.
 
-Đây chính là lý do aggregate hàm (function / 함수) rất hay được dùng với scalar subquery:
+Đây chính là lý do aggregate function rất hay được dùng với scalar subquery:
 
 ```text
 SUM()
@@ -1086,7 +1092,7 @@ FROM paintings
 GROUP BY artist_id;
 ```
 
-trước tiên tạo lô-gic (logic / 논리):
+trước tiên tạo logic:
 
 ```text
 artist_id | avg_price
@@ -1130,7 +1136,7 @@ Ta bắt đầu **18. Tại sao Inline View được gọi là Dynamic View?** b
 ## 18. Tại sao Inline View được gọi là Dynamic View?
 
 **인라인 뷰는 동적 뷰(Dynamic View)라고도 한다.**
-→ Inline View còn được gọi là động (dynamic / 동적) View.
+→ Inline View còn được gọi là Dynamic View.
 
 Vì kết quả:
 
@@ -1140,9 +1146,9 @@ Vì kết quả:
 )
 ```
 
-được tạo ra trong lúc truy vấn (query / 쿼리) chạy.
+được tạo ra trong lúc query chạy.
 
-Nó **không phải bảng (table / 테이블) vật lý được lưu cố định trong cơ sở dữ liệu (database / 데이터베이스)**.
+Nó **không phải table vật lý được lưu cố định trong database**.
 
 Có thể hình dung:
 
@@ -1178,9 +1184,9 @@ FROM paintings p,
 WHERE p.artist_id = p2.artist_id
 ```
 
-Đây là kiểu phép nối (join / 조인) cũ.
+Đây là kiểu join cũ.
 
-Có thể viết rõ hơn bằng ANSI phép nối (join / 조인):
+Có thể viết rõ hơn bằng ANSI JOIN:
 
 ```sql
 SELECT p.artist_id,
@@ -1204,7 +1210,7 @@ Hai phần cần phân biệt:
 ON p.artist_id = p2.artist_id
 ```
 
-→ điều kiện phép nối (join / 조인).
+→ điều kiện JOIN.
 
 ```sql
 WHERE p.price > p2.avg_price
@@ -1226,8 +1232,8 @@ Ta bắt đầu **20. Cartesian Product khi quên JOIN condition** bằng câu h
 
 Ảnh nhấn mạnh:
 
-**두 테이블 사이에 명확한 phép nối (join / 조인) 조건이 없으면 Cartesian sản phẩm (product / 제품)가 발생할 수 있다.**
-→ Nếu kết hợp hai bảng mà không có điều kiện nối thích hợp, có thể sinh Cartesian sản phẩm (product / 제품).
+**두 테이블 사이에 명확한 JOIN 조건이 없으면 Cartesian Product가 발생할 수 있다.**
+→ Nếu kết hợp hai bảng mà không có điều kiện nối thích hợp, có thể sinh Cartesian Product.
 
 Ví dụ:
 
@@ -1383,7 +1389,7 @@ FROM EMP
 
 trả một giá trị.
 
-Main truy vấn (query / 쿼리):
+Main query:
 
 ```sql
 SAL > giá_trị_đó
@@ -1426,7 +1432,7 @@ DEPTNO = 10
 SAL = 5000
 ```
 
-Subquery trở thành về mặt lô-gic (logic / 논리):
+Subquery trở thành về mặt logic:
 
 ```sql
 SELECT AVG(SAL)
@@ -1444,7 +1450,7 @@ Sau đó:
 
 Nếu đúng → KING được chọn.
 
-Tiếp theo main truy vấn (query / 쿼리) xét nhân viên phòng 20.
+Tiếp theo main query xét nhân viên phòng 20.
 
 Subquery lúc đó tính:
 
@@ -1452,7 +1458,7 @@ Subquery lúc đó tính:
 AVG(phòng 20)
 ```
 
-Vì thế correlated subquery phụ thuộc **row hiện tại của main truy vấn (query / 쿼리)**.
+Vì thế correlated subquery phụ thuộc **row hiện tại của main query**.
 
 ---
 
@@ -1464,7 +1470,7 @@ Ta bắt đầu **24. 상호 연관 서브쿼리의 논리적 순서** bằng c�
 
 ## 24. 상호 연관 서브쿼리의 논리적 순서
 
-Ảnh mô tả lô-gic (logic / 논리):
+Ảnh mô tả logic:
 
 ```text
 ① Main Query table READ
@@ -1488,7 +1494,7 @@ Ví dụ:
 WHERE E1.DEPTNO = E2.DEPTNO
 ```
 
-`E1.DEPTNO` được truyền từ row đang xét của main truy vấn (query / 쿼리).
+`E1.DEPTNO` được truyền từ row đang xét của main query.
 
 ---
 
@@ -1545,7 +1551,7 @@ SET DEPTNO = (
 );
 ```
 
-Nếu subquery không tìm được row thì scalar kết quả (result / 결과) có thể trở thành:
+Nếu subquery không tìm được row thì scalar result có thể trở thành:
 
 ```text
 NULL
@@ -1669,3 +1675,5 @@ giữ:
 Khi gom phần **28. NOT EXISTS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
 Như vậy, **28. NOT EXISTS** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+
+> **Bàn giao:** Sau **Mạch nối của bài học**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,20 +1,26 @@
-# Phép nối (join / 조인)
+# JOIN
 
-> **Mục tiêu:** INNER/OUTER/CROSS/SELF phép nối (join / 조인), NATURAL/USING, ANSI phép nối (join / 조인) và các bẫy điều kiện.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **JOIN**. Route đi từ relationship/key matching → inner/outer/semi joins → cardinality and NULL behavior → duplicate control → join plans, để phép nối nối đúng ngữ nghĩa với chi phí thực thi.
+
+> **Mục tiêu:** INNER/OUTER/CROSS/SELF JOIN, NATURAL/USING, ANSI join và các bẫy điều kiện.
 
 ## Từ khóa cần nhớ (Keyword)
 
-Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần nguồn. Khi ghi chú, dùng mẫu `용어 (English) (Tiếng Việt)` để nối tên gọi trong đề với ý nghĩa thực tế.
+Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
+
+> **Chuyển mạch:** Trong **JOIN**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch tư duy (Logic học)
 
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. Tại sao cần JOIN?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch nối của bài học
 
-Bài này không đứng riêng: hãy nối **phép nối (join / 조인)** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+Bài này không đứng riêng: hãy nối **JOIN** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
+> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
@@ -22,17 +28,19 @@ Bài này không đứng riêng: hãy nối **phép nối (join / 조인)** vớ
 
 Để JOIN **thực sự dễ nhớ**, đừng bắt đầu bằng cú pháp. Hãy nhớ một ý duy nhất:
 
-> **phép nối (join / 조인) = ghép các dòng của nhiều bảng dựa trên một điều kiện liên quan.**
+> **JOIN = ghép các dòng của nhiều bảng dựa trên một điều kiện liên quan.**
 
-Trong SQLD/Oracle, phần dễ nhầm nhất là: **INNER phép nối (join / 조인), LEFT/RIGHT/FULL OUTER phép nối (join / 조인), CROSS phép nối (join / 조인), SELF phép nối (join / 조인), NATURAL phép nối (join / 조인)**, và **EQUI/NON-EQUI phép nối (join / 조인)**. Mình sẽ đi từ bản chất → ví dụ → kết quả → cách phân biệt.
+Trong SQLD/Oracle, phần dễ nhầm nhất là: **INNER JOIN, LEFT/RIGHT/FULL OUTER JOIN, CROSS JOIN, SELF JOIN, NATURAL JOIN**, và **EQUI/NON-EQUI JOIN**. Mình sẽ đi từ bản chất → ví dụ → kết quả → cách phân biệt.
 
 ---
 
 Ta bắt đầu **1. Tại sao cần JOIN?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **1. Tại sao cần JOIN?** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. INNER JOIN — chỉ lấy những dòng "match"** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. Tại sao cần JOIN?
 
-Giả sử cơ sở dữ liệu (database / 데이터베이스) có 2 bảng.
+Giả sử database có 2 bảng.
 
 Khi gom phần **1. Tại sao cần JOIN?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -101,7 +109,7 @@ Nhưng vấn đề quan trọng là:
 
 > Nếu không tìm được đối tượng tương ứng thì có giữ dòng đó lại không?
 
-**Câu hỏi này chính là thứ tạo ra INNER / LEFT / RIGHT / FULL phép nối (join / 조인).**
+**Câu hỏi này chính là thứ tạo ra INNER / LEFT / RIGHT / FULL JOIN.**
 
 ---
 
@@ -110,6 +118,8 @@ Khi gom phần **DEPARTMENTS** lại, ta không cần nhớ các dòng như nh�
 Vậy ta đã có tiêu chí để đọc **DEPARTMENTS**. Bây giờ chuyển sang **2. INNER JOIN — chỉ lấy những dòng "match"**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **2. INNER JOIN — chỉ lấy những dòng "match"** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **JOIN**, **2. INNER JOIN — chỉ lấy những dòng "match"** tiếp nhận điểm tựa từ **1. Tại sao cần JOIN?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. JOIN và INNER JOIN có khác nhau không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. INNER JOIN — chỉ lấy những dòng "match"
 
@@ -121,9 +131,9 @@ Vậy ta đã có tiêu chí để đọc **2. INNER JOIN — chỉ lấy nhữn
 
 ### 핵심
 
-**INNER phép nối (join / 조인) = 양쪽 테이블에서 조인 조건을 만족하는 행만 반환한다.**
+**INNER JOIN = 양쪽 테이블에서 조인 조건을 만족하는 행만 반환한다.**
 
-**INNER phép nối (join / 조인) = Chỉ lấy những dòng tìm được cặp tương ứng ở cả hai bảng.**
+**INNER JOIN = Chỉ lấy những dòng tìm được cặp tương ứng ở cả hai bảng.**
 
 Ví dụ:
 
@@ -199,6 +209,8 @@ Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển s
 
 Ta bắt đầu **3. JOIN và INNER JOIN có khác nhau không?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **3. JOIN và INNER JOIN có khác nhau không?** tiếp nhận điểm tựa từ **2. INNER JOIN — chỉ lấy những dòng "match"** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. JOIN và INNER JOIN có khác nhau không?
 
 Thông thường:
@@ -239,9 +251,11 @@ Vậy ta đã có tiêu chí để đọc **3. JOIN và INNER JOIN có khác nha
 
 Ta bắt đầu **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái** tiếp nhận điểm tựa từ **3. JOIN và INNER JOIN có khác nhau không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái
 
-Đây là phép nối (join / 조인) cực kỳ quan trọng.
+Đây là JOIN cực kỳ quan trọng.
 
 Khi gom phần **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -251,9 +265,9 @@ Vậy ta đã có tiêu chí để đọc **4. LEFT OUTER JOIN — giữ toàn b
 
 ### 핵심
 
-**LEFT OUTER phép nối (join / 조인)은 왼쪽 테이블의 모든 행을 유지한다.**
+**LEFT OUTER JOIN은 왼쪽 테이블의 모든 행을 유지한다.**
 
-**LEFT phép nối (join / 조인) giữ toàn bộ dòng của bảng bên trái, kể cả khi không tìm được dữ liệu tương ứng bên phải.**
+**LEFT JOIN giữ toàn bộ dòng của bảng bên trái, kể cả khi không tìm được dữ liệu tương ứng bên phải.**
 
 ```sql
 SELECT e.emp_id,
@@ -300,7 +314,7 @@ Cường vẫn tồn tại
 Dũng vẫn tồn tại
 ```
 
-Đây chính là khác biệt lớn với INNER phép nối (join / 조인).
+Đây chính là khác biệt lớn với INNER JOIN.
 
 Khi gom phần **핵심** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -320,7 +334,7 @@ KEEP LEFT
 
 Hay:
 
-> **LEFT phép nối (join / 조인) = bên trái là VIP → không được phép mất dòng.**
+> **LEFT JOIN = bên trái là VIP → không được phép mất dòng.**
 
 ---
 
@@ -329,6 +343,8 @@ Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như nh�
 Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **JOIN**, **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải** tiếp nhận điểm tựa từ **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải
 
@@ -350,7 +366,7 @@ employees   = LEFT
 departments = RIGHT
 ```
 
-RIGHT phép nối (join / 조인) nghĩa là:
+RIGHT JOIN nghĩa là:
 
 > Giữ toàn bộ `departments`.
 
@@ -390,6 +406,8 @@ Vậy ta đã có tiêu chí để đọc **5. RIGHT OUTER JOIN — giữ toàn 
 
 Ta bắt đầu **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau** tiếp nhận điểm tựa từ **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. FULL OUTER JOIN — không bỏ ai cả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau
 
 Ví dụ:
@@ -410,14 +428,14 @@ ON e.dept_id = d.dept_id
 
 Ý nghĩa tương đương.
 
-Vì vậy trong mã (code / 코드) thực tế, nhiều nhà phát triển (developer / 개발자) chủ yếu dùng:
+Vì vậy trong code thực tế, nhiều developer chủ yếu dùng:
 
 ```sql
 INNER JOIN
 LEFT JOIN
 ```
 
-và ít dùng RIGHT phép nối (join / 조인), vì có thể đảo thứ tự bảng để đọc dễ hơn.
+và ít dùng RIGHT JOIN, vì có thể đảo thứ tự bảng để đọc dễ hơn.
 
 ---
 
@@ -426,6 +444,8 @@ Khi gom phần **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho 
 Vậy ta đã có tiêu chí để đọc **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau**. Bây giờ chuyển sang **7. FULL OUTER JOIN — không bỏ ai cả**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **7. FULL OUTER JOIN — không bỏ ai cả** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **7. FULL OUTER JOIN — không bỏ ai cả** tiếp nhận điểm tựa từ **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. So sánh 4 loại JOIN quan trọng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. FULL OUTER JOIN — không bỏ ai cả
 
@@ -437,9 +457,9 @@ Vậy ta đã có tiêu chí để đọc **7. FULL OUTER JOIN — không bỏ a
 
 ### 핵심
 
-**FULL OUTER phép nối (join / 조인)은 양쪽 테이블의 모든 행을 유지한다.**
+**FULL OUTER JOIN은 양쪽 테이블의 모든 행을 유지한다.**
 
-**FULL OUTER phép nối (join / 조인) giữ tất cả dòng của cả hai bảng.**
+**FULL OUTER JOIN giữ tất cả dòng của cả hai bảng.**
 
 ```sql
 SELECT e.name,
@@ -500,6 +520,8 @@ Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển s
 
 Ta bắt đầu **8. So sánh 4 loại JOIN quan trọng nhất** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **JOIN**, **7. FULL OUTER JOIN — không bỏ ai cả** đã nêu tiêu chí phân biệt, còn **8. So sánh 4 loại JOIN quan trọng nhất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. CROSS JOIN — tất cả kết hợp với tất cả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. So sánh 4 loại JOIN quan trọng nhất
 
 Với:
@@ -509,14 +531,14 @@ A = bảng bên trái
 B = bảng bên phải
 ```
 
-| phép nối (join / 조인)            | Dòng match | A không match | B không match |
+| JOIN            | Dòng match | A không match | B không match |
 | --------------- | :--------: | :-----------: | :-----------: |
-| INNER phép nối (join / 조인)      |      ✅     |       ❌       |       ❌       |
-| LEFT phép nối (join / 조인)       |      ✅     |       ✅       |       ❌       |
-| RIGHT phép nối (join / 조인)      |      ✅     |       ❌       |       ✅       |
-| FULL OUTER phép nối (join / 조인) |      ✅     |       ✅       |       ✅       |
+| INNER JOIN      |      ✅     |       ❌       |       ❌       |
+| LEFT JOIN       |      ✅     |       ✅       |       ❌       |
+| RIGHT JOIN      |      ✅     |       ❌       |       ✅       |
+| FULL OUTER JOIN |      ✅     |       ✅       |       ✅       |
 
-Chỉ cần nhớ bảng này là xử lý được phần lớn câu hỏi phép nối (join / 조인).
+Chỉ cần nhớ bảng này là xử lý được phần lớn câu hỏi JOIN.
 
 ---
 
@@ -526,9 +548,11 @@ Vậy ta đã có tiêu chí để đọc **8. So sánh 4 loại JOIN quan trọ
 
 Ta bắt đầu **9. CROSS JOIN — tất cả kết hợp với tất cả** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **8. So sánh 4 loại JOIN quan trọng nhất** đã nêu tiêu chí phân biệt, còn **9. CROSS JOIN — tất cả kết hợp với tất cả** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. CROSS JOIN — tất cả kết hợp với tất cả
 
-CROSS phép nối (join / 조인) hoàn toàn khác.
+CROSS JOIN hoàn toàn khác.
 
 ```sql
 SELECT *
@@ -567,7 +591,7 @@ IT
 HR
 ```
 
-CROSS phép nối (join / 조인):
+CROSS JOIN:
 
 ```text
 An     IT
@@ -619,7 +643,7 @@ Vậy ta đã có tiêu chí để đọc **9. CROSS JOIN — tất cả kết h
 
 #### Cách nhớ
 
-> **CROSS phép nối (join / 조인) = A × B**
+> **CROSS JOIN = A × B**
 
 ---
 
@@ -628,6 +652,8 @@ Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như nh�
 Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN** tiếp nhận điểm tựa từ **9. CROSS JOIN — tất cả kết hợp với tất cả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. SELF JOIN — bảng JOIN với chính nó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN
 
@@ -644,7 +670,7 @@ mà không có:
 WHERE e.dept_id = d.dept_id
 ```
 
-thì sẽ tạo Cartesian sản phẩm (product / 제품).
+thì sẽ tạo Cartesian Product.
 
 Ví dụ:
 
@@ -665,13 +691,15 @@ Vậy ta đã có tiêu chí để đọc **10. CROSS JOIN rất quan trọng đ
 
 Ta bắt đầu **11. SELF JOIN — bảng JOIN với chính nó** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **JOIN**, **11. SELF JOIN — bảng JOIN với chính nó** tiếp nhận điểm tựa từ **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. SELF JOIN — bảng JOIN với chính nó
 
-SELF phép nối (join / 조인) không phải một thuật toán phép nối (join / 조인) hoàn toàn mới.
+SELF JOIN không phải một thuật toán JOIN hoàn toàn mới.
 
 Nó có nghĩa:
 
-> **Một bảng đóng hai vai trò khác nhau rồi phép nối (join / 조인) với chính nó.**
+> **Một bảng đóng hai vai trò khác nhau rồi JOIN với chính nó.**
 
 Ví dụ bảng:
 
@@ -740,7 +768,7 @@ employees m
 manager
 ```
 
-Tưởng tượng như tạo hai bản sao lô-gic (logic / 논리):
+Tưởng tượng như tạo hai bản sao logic:
 
 ```text
 EMPLOYEES e                 EMPLOYEES m
@@ -770,8 +798,8 @@ Ta bắt đầu **Keyword** bằng câu hỏi: **khái niệm này giải quyế
 **셀프 조인 (Self Join)**
 = 동일한 테이블을 자기 자신과 조인하는 방식.
 
-**Self phép nối (join / 조인)**
-= phép nối (join / 조인) một bảng với chính nó.
+**Self Join**
+= JOIN một bảng với chính nó.
 
 ---
 
@@ -781,13 +809,15 @@ Vậy ta đã có tiêu chí để đọc **Keyword**. Bây giờ chuyển sang 
 
 Ta bắt đầu **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN** tiếp nhận điểm tựa từ **11. SELF JOIN — bảng JOIN với chính nó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. EQUI JOIN — điều kiện JOIN dùng dấu =** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. SELF JOIN vẫn có thể là INNER/LEFT JOIN
 
 Đây là điểm dễ hiểu sai.
 
 `SELF JOIN` mô tả:
 
-> **phép nối (join / 조인) bảng nào?**
+> **JOIN bảng nào?**
 
 Còn `INNER/LEFT/RIGHT` mô tả:
 
@@ -809,7 +839,7 @@ LEFT JOIN employees m
     ON ...
 ```
 
-Cả hai đều là SELF phép nối (join / 조인).
+Cả hai đều là SELF JOIN.
 
 Ví dụ Kim không có manager:
 
@@ -817,7 +847,7 @@ Ví dụ Kim không có manager:
 Kim.manager_id = NULL
 ```
 
-Nếu INNER phép nối (join / 조인):
+Nếu INNER JOIN:
 
 ```sql
 INNER JOIN employees m
@@ -826,7 +856,7 @@ ON e.manager_id = m.emp_id
 
 Kim biến mất.
 
-Nếu LEFT phép nối (join / 조인):
+Nếu LEFT JOIN:
 
 ```sql
 LEFT JOIN employees m
@@ -847,9 +877,11 @@ Vậy ta đã có tiêu chí để đọc **12. SELF JOIN vẫn có thể là IN
 
 Ta bắt đầu **13. EQUI JOIN — điều kiện JOIN dùng dấu `=`** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **13. EQUI JOIN — điều kiện JOIN dùng dấu =** tiếp nhận điểm tựa từ **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. NON-EQUI JOIN — không JOIN bằng =** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. EQUI JOIN — điều kiện JOIN dùng dấu `=`
 
-**등가 조인 (Equi Join)** nghĩa là điều kiện phép nối (join / 조인) sử dụng phép bằng:
+**등가 조인 (Equi Join)** nghĩa là điều kiện JOIN sử dụng phép bằng:
 
 ```sql
 =
@@ -872,9 +904,9 @@ e.dept_id = d.dept_id
           =
 ```
 
-→ EQUI phép nối (join / 조인).
+→ EQUI JOIN.
 
-Phần lớn phép nối (join / 조인) khóa ngoại/khóa chính mà bạn gặp là EQUI phép nối (join / 조인).
+Phần lớn JOIN khóa ngoại/khóa chính mà bạn gặp là EQUI JOIN.
 
 Ví dụ:
 
@@ -886,7 +918,7 @@ DEPARTMENTS.department_id
         ↑ PK
 ```
 
-Phép nối (join / 조인):
+JOIN:
 
 ```sql
 ON e.department_id = d.department_id
@@ -900,11 +932,13 @@ Vậy ta đã có tiêu chí để đọc **13. EQUI JOIN — điều kiện JOI
 
 Ta bắt đầu **14. NON-EQUI JOIN — không JOIN bằng `=`** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **JOIN**, **14. NON-EQUI JOIN — không JOIN bằng =** tiếp nhận điểm tựa từ **13. EQUI JOIN — điều kiện JOIN dùng dấu =** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. NATURAL JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. NON-EQUI JOIN — không JOIN bằng `=`
 
 **비등가 조인 (Non-Equi Join)**
 
-là phép nối (join / 조인) bằng:
+là JOIN bằng:
 
 ```text
 >
@@ -943,7 +977,7 @@ Phần này nối mạch SQL với “SALARY_GRADE”, giải thích dữ liệu
 |     2 |    3000 |    4999 |
 |     3 |    5000 |    7999 |
 
-Không thể phép nối (join / 조인):
+Không thể JOIN:
 
 ```sql
 salary = min_sal
@@ -1027,9 +1061,11 @@ Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **
 
 Ta bắt đầu **15. NATURAL JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **15. NATURAL JOIN** tiếp nhận điểm tựa từ **14. NON-EQUI JOIN — không JOIN bằng =** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Tại sao NATURAL JOIN nguy hiểm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. NATURAL JOIN
 
-NATURAL phép nối (join / 조인) là loại rất dễ xuất hiện trong lý thuyết SQLD.
+NATURAL JOIN là loại rất dễ xuất hiện trong lý thuyết SQLD.
 
 Ví dụ:
 
@@ -1066,7 +1102,7 @@ SQL tự tìm các column có:
 cùng tên
 ```
 
-và dùng chúng để phép nối (join / 조인).
+và dùng chúng để JOIN.
 
 Trong trường hợp này tương đương gần như:
 
@@ -1085,6 +1121,8 @@ Vậy ta đã có tiêu chí để đọc **15. NATURAL JOIN**. Bây giờ chuy�
 
 Ta bắt đầu **16. Tại sao NATURAL JOIN nguy hiểm?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **16. Tại sao NATURAL JOIN nguy hiểm?** tiếp nhận điểm tựa từ **15. NATURAL JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. USING — khi hai bảng JOIN bằng column cùng tên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Tại sao NATURAL JOIN nguy hiểm?
 
 Giả sử ban đầu:
@@ -1100,13 +1138,13 @@ DEPT_ID
 DEPT_NAME
 ```
 
-NATURAL phép nối (join / 조인) dựa trên:
+NATURAL JOIN dựa trên:
 
 ```text
 DEPT_ID
 ```
 
-Sau này nhà phát triển (developer / 개발자) thêm column:
+Sau này developer thêm column:
 
 ```text
 EMPLOYEES
@@ -1123,9 +1161,9 @@ DEPT_NAME
 LOCATION_ID
 ```
 
-Bây giờ NATURAL phép nối (join / 조인) có thể tự phép nối (join / 조인) dựa trên **cả các cột cùng tên thích hợp**, khiến ý nghĩa truy vấn (query / 쿼리) thay đổi ngoài dự kiến.
+Bây giờ NATURAL JOIN có thể tự JOIN dựa trên **cả các cột cùng tên thích hợp**, khiến ý nghĩa query thay đổi ngoài dự kiến.
 
-Vì thế trong mã (code / 코드) môi trường vận hành (production / 운영 환경), thường nên viết điều kiện phép nối (join / 조인) rõ ràng hơn.
+Vì thế trong code production, thường nên viết điều kiện JOIN rõ ràng hơn.
 
 ---
 
@@ -1134,6 +1172,8 @@ Khi gom phần **16. Tại sao NATURAL JOIN nguy hiểm?** lại, ta không cầ
 Vậy ta đã có tiêu chí để đọc **16. Tại sao NATURAL JOIN nguy hiểm?**. Bây giờ chuyển sang **17. USING — khi hai bảng JOIN bằng column cùng tên**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **17. USING — khi hai bảng JOIN bằng column cùng tên** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **JOIN**, **17. USING — khi hai bảng JOIN bằng column cùng tên** tiếp nhận điểm tựa từ **16. Tại sao NATURAL JOIN nguy hiểm?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. ANSI JOIN và Oracle Old-Style JOIN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. USING — khi hai bảng JOIN bằng column cùng tên
 
@@ -1197,6 +1237,8 @@ Vậy ta đã có tiêu chí để đọc **17. USING — khi hai bảng JOIN b�
 
 Ta bắt đầu **18. ANSI JOIN và Oracle Old-Style JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **18. ANSI JOIN và Oracle Old-Style JOIN** tiếp nhận điểm tựa từ **17. USING — khi hai bảng JOIN bằng column cùng tên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Oracle (+) Outer Join** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. ANSI JOIN và Oracle Old-Style JOIN
 
 Đây là phần rất quan trọng khi học Oracle/SQLD.
@@ -1241,7 +1283,7 @@ FROM employees e,
 WHERE e.department_id = d.department_id;
 ```
 
-Hai câu trên về lô-gic (logic / 논리) là INNER phép nối (join / 조인) tương đương.
+Hai câu trên về logic là INNER JOIN tương đương.
 
 ```text
 ANSI
@@ -1268,9 +1310,11 @@ Vậy ta đã có tiêu chí để đọc **Oracle old-style**. Bây giờ chuy�
 
 Ta bắt đầu **19. Oracle `(+)` Outer Join** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **19. Oracle (+) Outer Join** tiếp nhận điểm tựa từ **18. ANSI JOIN và Oracle Old-Style JOIN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Oracle `(+)` Outer Join
 
-Trong cú pháp Oracle cũ, outer phép nối (join / 조인) dùng:
+Trong cú pháp Oracle cũ, outer join dùng:
 
 ```sql
 (+)
@@ -1285,7 +1329,7 @@ LEFT JOIN departments d
     ON e.department_id = d.department_id;
 ```
 
-Oracle old cú pháp (syntax / 문법):
+Oracle old syntax:
 
 ```sql
 SELECT *
@@ -1311,7 +1355,7 @@ employees phải giữ
 departments có thể không có
 ```
 
-→ LEFT phép nối (join / 조인).
+→ LEFT JOIN.
 
 Khi gom phần **19. Oracle `(+)` Outer Join** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1369,6 +1413,8 @@ Vậy ta đã có tiêu chí để đọc **Mẹo nhớ `(+)`**. Bây giờ chuy
 
 Ta bắt đầu **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **JOIN**, **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE** tiếp nhận điểm tựa từ **19. Oracle (+) Outer Join** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. ON và WHERE khác nhau thế nào trong OUTER JOIN?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE
 
 Giả sử:
@@ -1414,9 +1460,9 @@ không TRUE.
 
 → bị loại.
 
-Vì vậy `WHERE` có thể khiến kết quả LEFT phép nối (join / 조인) trông giống INNER phép nối (join / 조인).
+Vì vậy `WHERE` có thể khiến kết quả LEFT JOIN trông giống INNER JOIN.
 
-Đây là một trong những bẫy phép nối (join / 조인) quan trọng nhất.
+Đây là một trong những bẫy JOIN quan trọng nhất.
 
 ---
 
@@ -1425,6 +1471,8 @@ Khi gom phần **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE** l�
 Vậy ta đã có tiêu chí để đọc **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE**. Bây giờ chuyển sang **21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **21. ON và WHERE khác nhau thế nào trong OUTER JOIN?** tiếp nhận điểm tựa từ **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?
 
@@ -1470,14 +1518,14 @@ WHERE d.dept_name = 'IT';
 
 Không giống nhau.
 
-Truy vấn (query / 쿼리) A:
+Query A:
 
 ```text
 JOIN với department IT
 nhưng vẫn bảo toàn employees
 ```
 
-Truy vấn (query / 쿼리) B:
+Query B:
 
 ```text
 JOIN trước
@@ -1496,6 +1544,8 @@ Khi gom phần **Query B** lại, ta không cần nhớ các dòng như những 
 Vậy ta đã có tiêu chí để đọc **Query B**. Bây giờ chuyển sang **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **21. ON và WHERE khác nhau thế nào trong OUTER JOIN?** đã nêu tiêu chí phân biệt, còn **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **23. Sơ đồ tổng hợp để nhớ khi thi SQLD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại
 
@@ -1586,7 +1636,7 @@ CROSS JOIN
 → Cartesian Product
 ```
 
-Vì vậy một phép nối (join / 조인) hoàn toàn có thể đồng thời là:
+Vì vậy một JOIN hoàn toàn có thể đồng thời là:
 
 ```text
 SELF JOIN
@@ -1619,7 +1669,7 @@ EQUI JOIN
     vì điều kiện sử dụng =
 ```
 
-Đây là cách hiểu chính xác hơn thay vì học thuộc từng phép nối (join / 조인) riêng biệt.
+Đây là cách hiểu chính xác hơn thay vì học thuộc từng JOIN riêng biệt.
 
 ---
 
@@ -1628,6 +1678,8 @@ Khi gom phần **Không dùng điều kiện match** lại, ta không cần nh�
 Vậy ta đã có tiêu chí để đọc **Không dùng điều kiện match**. Bây giờ chuyển sang **23. Sơ đồ tổng hợp để nhớ khi thi SQLD**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **23. Sơ đồ tổng hợp để nhớ khi thi SQLD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **JOIN**, **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại** đã nêu tiêu chí phân biệt, còn **23. Sơ đồ tổng hợp để nhớ khi thi SQLD** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **24. Cách chọn JOIN khi gặp bài thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Sơ đồ tổng hợp để nhớ khi thi SQLD
 
@@ -1692,11 +1744,13 @@ Vậy ta đã có tiêu chí để đọc **23. Sơ đồ tổng hợp để nh�
 
 Ta bắt đầu **24. Cách chọn JOIN khi gặp bài thực tế** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **JOIN**, **24. Cách chọn JOIN khi gặp bài thực tế** gom các mảnh từ **23. Sơ đồ tổng hợp để nhớ khi thi SQLD** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **25. Bảng tổng kết cuối bài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Cách chọn JOIN khi gặp bài thực tế
 
 Đừng hỏi:
 
-> "Câu này dùng phép nối (join / 조인) nào?"
+> "Câu này dùng JOIN nào?"
 
 Hãy hỏi:
 
@@ -1729,7 +1783,7 @@ Ta bắt đầu **"Lấy TẤT CẢ employee và thông tin department nếu có
 
 #### "Lấy TẤT CẢ employee và thông tin department nếu có"
 
-Từ khóa (keyword / 키워드):
+Keyword:
 
 ```text
 TẤT CẢ EMPLOYEE
@@ -1814,22 +1868,24 @@ Vậy ta đã có tiêu chí để đọc **"Tìm manager của employee trong c
 
 Ta bắt đầu **25. Bảng tổng kết cuối bài** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JOIN**, **25. Bảng tổng kết cuối bài** tiếp nhận điểm tựa từ **24. Cách chọn JOIN khi gặp bài thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 25. Bảng tổng kết cuối bài
 
 Phần này nối mạch SQL với “25. Bảng tổng kết cuối bài”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Loại                | Ý nghĩa dễ nhớ                       | Không match           |
 | ------------------- | ------------------------------------ | --------------------- |
-| **INNER phép nối (join / 조인)**      | Chỉ lấy cặp match                    | bỏ                    |
-| **LEFT phép nối (join / 조인)**       | Giữ toàn bộ LEFT                     | RIGHT → NULL          |
-| **RIGHT phép nối (join / 조인)**      | Giữ toàn bộ RIGHT                    | LEFT → NULL           |
-| **FULL OUTER phép nối (join / 조인)** | Giữ cả hai bên                       | bên thiếu → NULL      |
-| **CROSS phép nối (join / 조인)**      | Mọi tổ hợp A × B                     | không cần match       |
-| **SELF phép nối (join / 조인)**       | bảng (table / 테이블) phép nối (join / 조인) chính nó                  | phụ thuộc INNER/OUTER |
-| **EQUI phép nối (join / 조인)**       | phép nối (join / 조인) bằng `=`                        | phụ thuộc loại phép nối (join / 조인)   |
-| **NON-EQUI phép nối (join / 조인)**   | phép nối (join / 조인) bằng `< > BETWEEN...`           | phụ thuộc loại phép nối (join / 조인)   |
-| **NATURAL phép nối (join / 조인)**    | tự phép nối (join / 조인) cột cùng tên                 | SQL tự xác định       |
-| **USING**           | phép nối (join / 조인) bằng cột cùng tên được chỉ định | tường minh (explicit / 명시적) hơn NATURAL  |
+| **INNER JOIN**      | Chỉ lấy cặp match                    | bỏ                    |
+| **LEFT JOIN**       | Giữ toàn bộ LEFT                     | RIGHT → NULL          |
+| **RIGHT JOIN**      | Giữ toàn bộ RIGHT                    | LEFT → NULL           |
+| **FULL OUTER JOIN** | Giữ cả hai bên                       | bên thiếu → NULL      |
+| **CROSS JOIN**      | Mọi tổ hợp A × B                     | không cần match       |
+| **SELF JOIN**       | Table JOIN chính nó                  | phụ thuộc INNER/OUTER |
+| **EQUI JOIN**       | JOIN bằng `=`                        | phụ thuộc loại JOIN   |
+| **NON-EQUI JOIN**   | JOIN bằng `< > BETWEEN...`           | phụ thuộc loại JOIN   |
+| **NATURAL JOIN**    | tự JOIN cột cùng tên                 | SQL tự xác định       |
+| **USING**           | JOIN bằng cột cùng tên được chỉ định | explicit hơn NATURAL  |
 
 Khi gom phần **25. Bảng tổng kết cuối bài** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1870,7 +1926,7 @@ A.id = B.id(+)
 => A LEFT JOIN B
 ```
 
-Điểm quan trọng nhất để giải đề là **đừng học hình Venn một cách máy móc**. Khi gặp phép nối (join / 조인), xác định theo thứ tự:
+Điểm quan trọng nhất để giải đề là **đừng học hình Venn một cách máy móc**. Khi gặp JOIN, xác định theo thứ tự:
 
 ```text
 1. Bảng nào đang JOIN với bảng nào?
@@ -1885,3 +1941,5 @@ Nếu trả lời được 5 câu này thì INNER/OUTER JOIN gần như không c
 Khi gom phần **🧠 NOTE NHỚ NHANH SQLD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
 Như vậy, **🧠 NOTE NHỚ NHANH SQLD** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+
+> **Bàn giao:** Sau **25. Bảng tổng kết cuối bài**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

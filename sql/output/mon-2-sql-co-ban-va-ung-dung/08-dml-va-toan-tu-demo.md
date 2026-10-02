@@ -1,5 +1,7 @@
 # DML và toán tử
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **DML và toán tử**. Route đi từ business mutation → INSERT/UPDATE/DELETE → predicates/operators → affected-row validation → transaction/rollback, để lệnh sửa dữ liệu nối với điều kiện an toàn.
+
 > **Mục tiêu:** Hiểu cách thêm, sửa, xóa, đồng bộ và truy vấn dữ liệu; đồng thời biết toán tử làm thay đổi biểu thức như thế nào.
 
 ## Bắt đầu từ câu hỏi nghiệp vụ
@@ -9,6 +11,8 @@
 Ta sẽ đi từ nhóm lệnh DML, lần lượt qua `INSERT`, `UPDATE`, `DELETE`, `MERGE`, rồi quay lại `SELECT` và các toán tử. Trình tự này có chủ ý: trước hết hiểu cách tác động lên hàng dữ liệu, sau đó học cách kiểm tra và tạo biểu thức từ chính dữ liệu đó. Phần kiểm soát việc lưu hay hoàn tác sẽ được bàn giao cho bài **TCL và Transaction**.
 
 > **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 85–86.
+
+> **Chuyển mạch:** Trong **DML và toán tử**, **Bắt đầu từ câu hỏi nghiệp vụ** nêu điều cần giải thích; **1. DML: nhóm lệnh tác động lên dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2. SELECT và toán tử: đọc, tính và biểu diễn kết quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. DML: nhóm lệnh tác động lên dữ liệu
 
@@ -94,6 +98,8 @@ Hãy đọc câu lệnh theo ba bước: `USING` cho biết dữ liệu mới đ
 
 Đến đây, ta đã đi qua các lệnh làm thay đổi dữ liệu. Nhưng sau mỗi thay đổi, người học vẫn cần đọc kết quả và kiểm tra biểu thức mà không làm thay đổi bảng. Ta quay lại `SELECT`, nền tảng để quan sát dữ liệu.
 
+> **Chuyển mạch:** Ở chặng này của **DML và toán tử**, **1. DML: nhóm lệnh tác động lên dữ liệu** nêu điều cần giải thích; **2. SELECT và toán tử: đọc, tính và biểu diễn kết quả** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 2. SELECT và toán tử: đọc, tính và biểu diễn kết quả
 
 Phần này nối DML với kỹ năng truy vấn đã học trước đó. `SELECT` không sửa dữ liệu; nó tạo ra một tập kết quả từ bảng, rồi các toán tử giúp tính toán hoặc ghép các giá trị trong từng dòng. Tách rõ hai vai trò này giúp tránh nhầm giữa **biểu thức hiển thị** và **thay đổi được lưu vào bảng**.
@@ -138,3 +144,5 @@ SELECT CONCAT('Hello, ', 'World!') AS greeting;
 Trong SQL Server, cần phân biệt `+` dùng để cộng số với `+` dùng để nối chuỗi: kiểu dữ liệu của biểu thức quyết định ý nghĩa. Kết quả nối chỉ là một biểu thức trong tập `SELECT`, không tự ghi ngược vào bảng; muốn lưu nó, ta phải chủ động dùng `INSERT` hoặc `UPDATE` và chịu các ràng buộc transaction tương ứng.
 
 Như vậy, toàn bộ bài đi theo một vòng khép kín: `INSERT`/`UPDATE`/`DELETE`/`MERGE` tác động lên dữ liệu, `SELECT` kiểm tra kết quả, còn toán tử biến dữ liệu thành giá trị tính toán hoặc biểu diễn. Ranh giới cuối cùng cần nhớ là **biểu thức hiển thị không đồng nghĩa với thay đổi đã lưu**. Sang bài **TCL và Transaction**, ta sẽ học chính xác khi nào các thay đổi DML được `COMMIT`, khi nào còn có thể `ROLLBACK`, và vì sao thứ tự đó quyết định tính an toàn của giao dịch.
+
+> **Bàn giao:** Sau **2. SELECT và toán tử: đọc, tính và biểu diễn kết quả**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

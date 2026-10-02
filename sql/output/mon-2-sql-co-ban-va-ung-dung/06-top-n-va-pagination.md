@@ -1,20 +1,26 @@
 # TOP-N và Pagination
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **TOP-N và pagination**. Route đi từ deterministic ordering → top-k/window ranking → offset versus keyset pagination → concurrent inserts → index/latency trade-offs, để kết quả ổn định khi dữ liệu đổi.
+
 > **Mục tiêu:** ROWNUM, ROW_NUMBER/RANK/DENSE_RANK, FETCH/OFFSET, TOP và WITH TIES.
 
 ## Từ khóa cần nhớ (Keyword)
 
-Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần nguồn. Khi ghi chú, dùng mẫu `용어 (English) (Tiếng Việt)` để nối tên gọi trong đề với ý nghĩa thực tế.
+Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
+
+> **Chuyển mạch:** Trong **TOP-N và Pagination**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch tư duy (Logic học)
 
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **TOP-N và Pagination**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mạch nối của bài học
 
-Bài này không đứng riêng: hãy nối **TOP-N và Pagination** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+Bài này không đứng riêng: hãy nối **TOP-N và Pagination** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
+> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
@@ -83,7 +89,7 @@ Ta bắt đầu **1. TOP-N Query là gì?** bằng câu hỏi: **ta chọn đún
 ## 1. TOP-N Query là gì?
 
 **KR:** TOP-N 쿼리는 전체 결과에서 상위 N개의 행을 추출하는 쿼리이다.
-**VI:** TOP-N truy vấn (query / 쿼리) dùng để lấy **N dòng đứng đầu** từ toàn bộ tập kết quả.
+**VI:** TOP-N Query dùng để lấy **N dòng đứng đầu** từ toàn bộ tập kết quả.
 
 Ví dụ:
 
@@ -192,13 +198,13 @@ Ví dụ cùng một row `KING` có thể hôm nay nhận:
 ROWNUM = 5
 ```
 
-nhưng truy vấn (query / 쿼리) khác lại nhận:
+nhưng query khác lại nhận:
 
 ```text
 ROWNUM = 1
 ```
 
-vì `ROWNUM` phụ thuộc vào **thứ tự row được truy vấn (query / 쿼리) xử lý**.
+vì `ROWNUM` phụ thuộc vào **thứ tự row được query xử lý**.
 
 Nó khác với:
 
@@ -233,7 +239,7 @@ ORDER BY SAL DESC;
 
 Nhìn có vẻ đúng.
 
-Nhưng lô-gic (logic / 논리) thực tế là:
+Nhưng logic thực tế là:
 
 ```text
 1. lấy 3 row trước
@@ -263,7 +269,7 @@ Ta bắt đầu **6. Vì sao?** bằng câu hỏi: **khái niệm này giải qu
 
 ## 6. Vì sao?
 
-Theo lô-gic (logic / 논리) liên quan đến truy vấn (query / 쿼리) này:
+Theo logic liên quan đến query này:
 
 ```text
 FROM
@@ -283,11 +289,11 @@ Cho nên:
 WHERE ROWNUM <= 3
 ```
 
-đã giới hạn row **trước khi final thứ tự (order / 순서) BY thực hiện**.
+đã giới hạn row **trước khi final ORDER BY thực hiện**.
 
 Ảnh nhấn mạnh:
 
-**KR:** WHERE 절이 thứ tự (order / 순서) BY 절보다 먼저 수행된다.
+**KR:** WHERE 절이 ORDER BY 절보다 먼저 수행된다.
 **VI:** `WHERE` được xử lý trước `ORDER BY`.
 
 ---
@@ -364,7 +370,7 @@ Subquery nằm trong `FROM` gọi là:
 Inline View
 ```
 
-Ở đây Inline View đóng vai trò như một bảng tạm lô-gic (logic / 논리):
+Ở đây Inline View đóng vai trò như một bảng tạm logic:
 
 ```sql
 SELECT ENAME, SAL
@@ -372,7 +378,7 @@ FROM EMP
 ORDER BY SAL DESC
 ```
 
-Sau khi dữ liệu đã được sắp xếp, outer truy vấn (query / 쿼리) mới lấy:
+Sau khi dữ liệu đã được sắp xếp, outer query mới lấy:
 
 ```sql
 ROWNUM <= 3
@@ -568,9 +574,9 @@ FROM (
 WHERE RN >= 4;
 ```
 
-Đây là mẫu (pattern / 패턴) cổ điển Oracle paging.
+Đây là pattern cổ điển Oracle paging.
 
-Lô-gic (logic / 논리):
+Logic:
 
 ```text
 Bước 1:
@@ -615,15 +621,15 @@ Trong:
 SELECT ROWNUM AS RN, A.*
 ```
 
-`RN` trở thành đầu ra (output / 출력) column của inline view.
+`RN` trở thành output column của inline view.
 
-Outer truy vấn (query / 쿼리) nhìn nó như một giá trị dữ liệu bình thường:
+Outer query nhìn nó như một giá trị dữ liệu bình thường:
 
 ```sql
 WHERE RN BETWEEN 4 AND 6
 ```
 
-Lúc này không còn đang filter trực tiếp pseudocolumn `ROWNUM` trong cùng mức (level / 수준) nữa.
+Lúc này không còn đang filter trực tiếp pseudocolumn `ROWNUM` trong cùng level nữa.
 
 Đây là điểm bản chất.
 
@@ -652,8 +658,8 @@ ROWNUM
 ```
 
 * không cần `OVER`
-* được gán trong quá trình truy vấn (query / 쿼리)
-* phụ thuộc truy vấn (query / 쿼리) thực thi (execution / 실행)
+* được gán trong quá trình query
+* phụ thuộc query execution
 * thường dùng legacy TOP-N/paging
 
 Khi gom phần **ROWNUM** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -664,13 +670,13 @@ Ta bắt đầu **ROW_NUMBER()** bằng câu hỏi: **khái niệm này giải q
 
 ### ROW_NUMBER()
 
-Hàm cửa sổ (window function / 윈도우 함수):
+Window Function:
 
 ```sql
 ROW_NUMBER() OVER(ORDER BY SAL DESC)
 ```
 
-* là analytic/hàm cửa sổ (window function / 윈도우 함수)
+* là analytic/window function
 * có `ORDER BY` rõ ràng
 * tạo số thứ tự theo ranking criteria
 
@@ -758,7 +764,7 @@ WHERE RN BETWEEN 4 AND 6;
 
 Điểm hay hơn `ROWNUM`:
 
-`RN` ở đây là ranking lô-gic (logic / 논리) theo `SAL`, không phải vị trí row tùy thời điểm.
+`RN` ở đây là ranking logic theo `SAL`, không phải vị trí row tùy thời điểm.
 
 ---
 
@@ -1024,7 +1030,7 @@ OFFSET 3 ROWS
 FETCH FIRST 3 ROWS ONLY;
 ```
 
-Lô-gic (logic / 논리):
+Logic:
 
 ```text
 ORDER BY SAL DESC
@@ -1121,7 +1127,7 @@ Ta bắt đầu **26. Pagination bằng OFFSET/FETCH** bằng câu hỏi: **ta c
 
 ## 26. Pagination bằng OFFSET/FETCH
 
-Ví dụ page kích thước (size / 크기) = 10.
+Ví dụ page size = 10.
 
 Khi gom phần **26. Pagination bằng OFFSET/FETCH** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1180,7 +1186,7 @@ Công thức:
 OFFSET = (page - 1) × page_size
 ```
 
-Ví dụ page 4, kích thước (size / 크기) 20:
+Ví dụ page 4, size 20:
 
 ```text
 OFFSET
@@ -1210,13 +1216,13 @@ FROM EMP
 FETCH FIRST 5 ROWS ONLY;
 ```
 
-DB có thể trả 5 row đầu theo cách thực thi (execution / 실행) hiện tại.
+DB có thể trả 5 row đầu theo cách execution hiện tại.
 
 Nhưng nếu yêu cầu:
 
 > top 5 lương cao nhất
 
-thì bắt buộc lô-gic (logic / 논리):
+thì bắt buộc logic:
 
 ```sql
 ORDER BY SAL DESC
@@ -1233,7 +1239,7 @@ Ta bắt đầu **28. SQL Server TOP N** bằng câu hỏi: **ta chọn đúng �
 
 ## 28. SQL Server TOP N
 
-Trong SQL máy chủ (server / 서버):
+Trong SQL Server:
 
 ```sql
 SELECT TOP 2
@@ -1262,7 +1268,7 @@ Ta bắt đầu **29. TOP đặt ở đâu?** bằng câu hỏi: **ta chọn đ�
 
 ## 29. TOP đặt ở đâu?
 
-SQL máy chủ (server / 서버) cú pháp (syntax / 문법):
+SQL Server syntax:
 
 ```sql
 SELECT TOP N column1, column2
@@ -1353,7 +1359,7 @@ FORD   3000
 
 Tức:
 
-> **WITH TIES giữ thêm các row đồng hạng với ranh giới (boundary / 경계) row.**
+> **WITH TIES giữ thêm các row đồng hạng với boundary row.**
 
 ---
 
@@ -1429,9 +1435,9 @@ Phần này nối mạch SQL với “33. So sánh 4 phương pháp”, giải t
 | Phương pháp    | DB/đặc điểm                     |                Tie |            Paging |
 | -------------- | ------------------------------- | -----------------: | ----------------: |
 | `ROWNUM`       | Oracle legacy                   |     không tự xử lý | có nhưng phức tạp |
-| `RANK()`       | hàm cửa sổ (window function / 윈도우 함수)                 |      giữ cùng rank |            có thể |
+| `RANK()`       | Window Function                 |      giữ cùng rank |            có thể |
 | `FETCH/OFFSET` | Oracle 12c+, SQL chuẩn hiện đại |  mặc định theo row |          rất tiện |
-| `TOP N`        | SQL máy chủ (server / 서버)                      | `WITH TIES` hỗ trợ |       chủ yếu top |
+| `TOP N`        | SQL Server                      | `WITH TIES` hỗ trợ |       chủ yếu top |
 
 ---
 
@@ -1617,7 +1623,7 @@ Vì vậy thực tế nên:
 ORDER BY SAL DESC, EMPNO
 ```
 
-để tạo total thứ tự (ordering / 순서).
+để tạo total ordering.
 
 Khi gom phần **36. Vì sao pagination cần ORDER BY ổn định?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1801,7 +1807,7 @@ FROM (
 WHERE RN <= 3;
 ```
 
-Cả 4 đều nhằm mục đích lấy 3 row theo thứ tự, nhưng cơ chế (mechanism / 메커니즘) khác nhau.
+Cả 4 đều nhằm mục đích lấy 3 row theo thứ tự, nhưng mechanism khác nhau.
 
 Khi gom phần **Window Function** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1927,7 +1933,7 @@ Ta bắt đầu **⑥ Paging với ROWNUM** bằng câu hỏi: **khái niệm n�
 
 ### ⑥ Paging với ROWNUM
 
-Phải dùng nested truy vấn (query / 쿼리):
+Phải dùng nested query:
 
 ```text
 ORDER BY
@@ -1973,3 +1979,5 @@ Phần này nối mạch SQL với “⑧ FETCH”, giải thích dữ liệu đ
 Khi gom phần **⑧ FETCH** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
 Như vậy, **⑧ FETCH** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+
+> **Bàn giao:** Sau **Mạch nối của bài học**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
