@@ -1,6 +1,6 @@
 # Multimodal Agents
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimodal Agents**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Screen/GUI Agents** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DOM/cây khả năng tiếp cận (accessibility tree / 접근성 트리) vs Screenshot** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimodal agents**. Route đi từ perception streams → structured UI/accessibility state → grounded actions → tool/GUI feedback → safety and recovery, để agent xử lý nhiều modality mà vẫn có trạng thái kiểm tra được.
 
 **Multimodal tác nhân (agent / 에이전트)** không chỉ nhận văn bản (text / 텍스트). Nó có thể observe screenshots, camera frames, speech, audio, documents hoặc sensor streams rồi chọn actions trong môi trường (environment / 환경).
 

@@ -1,6 +1,6 @@
 # Speech, Audio and Multimodal AI — Reading Map
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Speech, Audio and Multimodal AI — Reading Map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cốt lõi (core / 핵심) distinctions** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** Đây là README owner của **Speech, Audio and Multimodal AI**. Route đọc đi từ audio/speech signals → recognition/synthesis → multimodal representations → vision-language models → multimodal agents; mỗi chương nối một loại tín hiệu với model, task và giới hạn đánh giá tương ứng.
 
 Folder này nối perception ngoài văn bản (text / 텍스트) vào AI hệ thống (system / 시스템): waveform/audio biểu diễn (representation / 표현) → ASR/TTS → multimodal alignment → Vision-Language các mô hình (models / 모델들) → multimodal Transformer → multimodal agents.
 

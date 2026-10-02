@@ -1,6 +1,6 @@
 # Multimodal biểu diễn (representation / 표현)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimodal biểu diễn (representation / 표현)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao multimodal khó?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Alignment** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimodal representation**. Route đi từ modality-specific encoders → shared/paired spaces → alignment objectives → fusion and missing modalities → cross-modal transfer, để các tín hiệu khác nhau gặp nhau mà không mất cấu trúc riêng.
 
 **Multimodal AI (멀티모달 AI)** xử lý và liên kết nhiều modality như văn bản (text / 텍스트), ảnh (image / 이미지), audio, video, sensor dữ liệu (data / 데이터). Thách thức không chỉ là có nhiều đầu vào (input / 입력); mô hình (model / 모델) phải học **biểu diễn (representation / 표현) tương thích** để biết thông tin nào tương ứng, bổ sung hay mâu thuẫn giữa modalities.
 

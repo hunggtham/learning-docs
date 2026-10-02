@@ -1,6 +1,6 @@
 # Multimodal Transformers
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimodal Transformers**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mẫu (pattern / 패턴) 1: Separate Encoders + Late Fusion** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mẫu (pattern / 패턴) 2: Cross-Attention** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimodal transformers**. Route đi từ separate encoders/late fusion → token interleaving → cross-attention → unified sequence objectives → compute and modality-balancing limits, để kiến trúc được chọn theo cách các modality tương tác.
 
 Transformer kiến trúc (architecture / 아키텍처) phù hợp multimodal AI vì attention cho phép tokens từ nhiều sources tương tác trong cùng computation đồ thị (graph / 그래프). Tuy nhiên “multimodal Transformer” không phải một kiến trúc (architecture / 아키텍처) duy nhất; có nhiều patterns tùy cách encode và fuse modalities.
 

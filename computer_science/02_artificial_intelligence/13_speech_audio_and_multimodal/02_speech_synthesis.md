@@ -1,6 +1,6 @@
 # Speech Synthesis và Text-to-Speech
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Speech Synthesis và Text-to-Speech**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Classical TTS** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Văn bản (text / 텍스트) Normalization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Speech synthesis và text-to-speech**. Route đi từ text normalization → linguistic/prosody representation → acoustic model → vocoder/waveform → intelligibility, naturalness, and speaker control, để TTS nối văn bản với tín hiệu nghe được.
 
 **Text-to-Speech (TTS / 음성 합성)** biến văn bản (text / 텍스트) thành waveform có thể nghe được. Đây không chỉ là đọc đúng chữ; hệ thống (system / 시스템) phải tạo pronunciation, timing, prosody, speaker characteristics và acoustic detail.
 

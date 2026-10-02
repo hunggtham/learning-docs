@@ -1,6 +1,6 @@
 # Vision-Language các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vision-Language các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **VLM không chỉ là ảnh (image / 이미지) captioning** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Frozen Encoder + LLM** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vision-language models**. Route đi từ vision encoder → projection/adapter → language-model conditioning → instruction tuning → grounding and hallucination limits, để VLM được phân biệt với captioning đơn giản.
 
 **Vision-Language mô hình (model / 모델)** kết hợp visual biểu diễn (representation / 표현) với ngôn ngữ (language / 언어) biểu diễn (representation / 표현) để xử lý tasks như ảnh (image / 이미지) captioning, visual question answering, OCR-aware lập luận (reasoning / 추론), grounded dialogue và image-text retrieval.
 

@@ -1,6 +1,6 @@
 # Automatic Speech Recognition
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Automatic Speech Recognition**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Classical ASR chuỗi xử lý (pipeline / 파이프라인)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Alignment bài toán (problem / 문제)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Automatic speech recognition**. Route đi từ audio features → acoustic/sequence modeling → alignment/decoding → language constraints → WER and accent robustness, để ASR được đọc như bài toán chuỗi có nhiễu.
 
 **Automatic Speech Recognition (ASR / 음성 인식)** biến acoustic tín hiệu (signal / 신호) thành văn bản (text / 텍스트)/đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스).
 

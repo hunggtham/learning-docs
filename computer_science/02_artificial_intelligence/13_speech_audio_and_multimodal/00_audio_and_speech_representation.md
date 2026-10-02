@@ -1,6 +1,6 @@
 # Audio và Speech biểu diễn (representation / 표현)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Audio và Speech biểu diễn (representation / 표현)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sampling tỷ lệ (rate / 비율)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bit độ sâu (depth / 깊이)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Audio và speech representation**. Route đi từ waveform → sampling/quantization → spectrogram/features → temporal structure → encoder-ready representations, để tín hiệu âm thanh nối được với giới hạn đo lường và model.
 
 Âm thanh là **time-varying pressure tín hiệu (signal / 신호)** được microphone biến thành electrical tín hiệu (signal / 신호) rồi mẫu (sample / 표본) thành numbers. Máy không trực tiếp nghe “giọng nói” hay “âm nhạc”; nó nhận discrete waveform.
 
