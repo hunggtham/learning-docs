@@ -1,6 +1,6 @@
 # Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vùng nhớ vùng nhớ động (heap / 힙) tính chất và thứ tự bộ phận** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vùng nhớ vùng nhớ động (heap / 힙) và hàng đợi ưu tiên**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vùng nhớ vùng nhớ động (heap / 힙) tính chất và thứ tự bộ phận** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy** để rút ra mô hình chung và giới hạn. Mạch này nối heap với priority queue, invariant và extraction, để thứ tự ưu tiên được giữ qua cập nhật.
 
 **Đống và hàng đợi ưu tiên (Heap & Priority Queue / 힙과 우선순위 큐)**
 

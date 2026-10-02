@@ -1,6 +1,6 @@
 # Trie và các cấu trúc chỉ mục tiền tố
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trie và các cấu trúc chỉ mục tiền tố**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Khi nào Trie đáng dùng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. tìm kiếm (search / 검색) và Insert** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trie và các cấu trúc chỉ mục tiền tố**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Khi nào Trie đáng dùng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. tìm kiếm (search / 검색) và Insert** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Trie với prefix, search và insert, để chỉ mục chuỗi được chọn theo pattern truy vấn.
 
 **Trie / Prefix cây (tree / 트리) / 트라이·접두사 트리**
 

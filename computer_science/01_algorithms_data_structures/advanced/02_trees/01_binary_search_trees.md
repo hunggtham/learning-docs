@@ -1,6 +1,6 @@
 # cây tìm kiếm nhị phân
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **cây tìm kiếm nhị phân**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ tìm kiếm nhị phân trên mảng tới BST** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm (search / 검색) như một chứng minh bằng loại trừ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **cây tìm kiếm nhị phân**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ tìm kiếm nhị phân trên mảng tới BST** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm (search / 검색) như một chứng minh bằng loại trừ** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối BST với ordering, invariant và search path, để mỗi nhánh loại trừ một phần miền tìm.
 
 **Cây tìm kiếm nhị phân (Binary Search Tree, BST / 이진 탐색 트리)**
 

@@ -1,18 +1,26 @@
 # 22. 정적 분석 도구 (Static Analysis Tools)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **22. 정적 분석 도구 (Static Analysis Tools)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối static analysis với rule, AST, defect và CI, để lỗi được phát hiện trước runtime.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **22. 정적 분석 도구 (Static Analysis Tools)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **22. 정적 분석 도구 (Static Analysis Tools)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **23. EAI 구축 유형 (Enterprise Application Integration Types)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **22. 정적 분석 도구 (Static Analysis Tools)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 정적, 분석, 도구
 
+> **Chuyển mạch:** Ở chặng này của **22. 정적 분석 도구 (Static Analysis Tools)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **21. 외계인 코드 (Alien Code)**에서 만든 기준을 이어받아 **22. 정적 분석 도구 (Static Analysis Tools)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22. 정적 분석 도구 (Static Analysis Tools)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. 정적 분석 도구 (Static Analysis Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **22. 정적 분석 도구 (Static Analy
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **22. 정적 분석 도구 (Static Analysis Tools)** và nối nó với **23. EAI 구축 유형 (Enterprise Application Integration Types)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **22. 정적 분석 도구 (Static Analysis Tools)**, **22. 정적 분석 도구 (Static Analysis Tools)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 22. 정적 분석 도구 (Static Analysis Tools)
 
@@ -40,3 +48,5 @@ Phần “22. 정적 분석 도구 (Static Analysis Tools)” được nối v�
 * **Example**: 코딩 표준을 잘 지켰는지 검사하는 Checkstyle.
 
 Như vậy, **22. 정적 분석 도구 (Static Analysis Tools)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **23. EAI 구축 유형 (Enterprise Application Integration Types)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **22. 정적 분석 도구 (Static Analysis Tools)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

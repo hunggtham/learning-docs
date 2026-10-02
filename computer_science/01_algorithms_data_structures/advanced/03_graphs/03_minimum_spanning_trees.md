@@ -1,6 +1,6 @@
 # cây khung nhỏ nhất
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **cây khung nhỏ nhất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao lời giải tối ưu phải là cây?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. MST khác đường đi ngắn nhất cây** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **cây khung nhỏ nhất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao lời giải tối ưu phải là cây?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. MST khác đường đi ngắn nhất cây** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối MST với cut, cycle và connectivity, để tối ưu kết nối khác với tối ưu đường đi.
 
 **Cây khung nhỏ nhất / cây khung nhỏ nhất (MST) / 최소 신장 트리**
 

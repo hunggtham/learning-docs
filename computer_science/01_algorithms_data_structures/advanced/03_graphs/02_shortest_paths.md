@@ -1,6 +1,6 @@
 # các đường đi ngắn nhất
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **các đường đi ngắn nhất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **đồ thị không trọng số: BFS là shortest-path thuật toán** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **các đường đi ngắn nhất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **đồ thị không trọng số: BFS là shortest-path thuật toán** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Mạch này nối shortest paths với BFS, Dijkstra, Bellman-Ford và heuristic, để chọn thuật toán theo trọng số và ràng buộc.
 
 **Đường đi ngắn nhất (Shortest Path / 최단 경로)**
 

@@ -1,6 +1,6 @@
 # đồ thị: mô hình hóa và biểu diễn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **đồ thị: mô hình hóa và biểu diễn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Directed, undirected và weighted** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **đơn giản đồ thị, multigraph và self-loop** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **đồ thị: mô hình hóa và biểu diễn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Directed, undirected và weighted** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **đơn giản đồ thị, multigraph và self-loop** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối graph modeling với directed, undirected, weighted và representation, để mô hình quyết định thuật toán.
 
 **Đồ thị (Graph / 그래프)**
 

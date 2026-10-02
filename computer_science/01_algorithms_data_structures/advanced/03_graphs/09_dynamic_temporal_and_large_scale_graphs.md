@@ -1,6 +1,6 @@
 # Đồ thị động, đồ thị thời gian và đồ thị quy mô lớn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đồ thị động, đồ thị thời gian và đồ thị quy mô lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tĩnh, tăng dần, giảm dần và fully động (dynamic / 동적)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tại sao xóa khó hơn thêm?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đồ thị động, đồ thị thời gian và đồ thị quy mô lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tĩnh, tăng dần, giảm dần và fully động (dynamic / 동적)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tại sao xóa khó hơn thêm?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối dynamic/temporal/large-scale graphs với update, time window và scalability, để thuật toán chịu được đồ thị thay đổi.
 
 **động (dynamic / 동적), Temporal & Large-Scale Graphs / 동적·시간·대규모 그래프**
 
