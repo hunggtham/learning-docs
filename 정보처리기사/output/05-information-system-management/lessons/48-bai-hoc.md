@@ -1,18 +1,26 @@
 # Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Python lists/dictionaries với indexing, hashing, mutability và iteration, để cấu trúc gắn với thao tác.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **슬라이스 (Slice)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 Python, 자료구조
 
+> **Chuyển mạch:** Ở chặng này của **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **입력 값의 형변환 (Type Casting)**에서 만든 기준을 이어받아 **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Python, 자료구조
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** và nối nó với **슬라이스 (Slice)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**, **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)
 
@@ -79,3 +87,5 @@ Với **2. 딕셔너리 (Dictionary / Từ điển)**, hãy đọc các công th
 Điểm chốt của **2. 딕셔너리 (Dictionary / Từ điển)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
 Điểm chốt của **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **슬라이스 (Slice)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

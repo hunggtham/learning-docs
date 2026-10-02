@@ -1,18 +1,26 @@
 # 2. 자원 처리 오류 (Resource Handling Errors)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **2. 자원 처리 오류 (Resource Handling Errors)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối resource errors với allocation, ownership, cleanup và failure handling, để tài nguyên không bị rò.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **2. 자원 처리 오류 (Resource Handling Errors)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **2. 자원 처리 오류 (Resource Handling Errors)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **2. 자원 처리 오류 (Resource Handling Errors)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 자원, 처리, 오류
 
+> **Chuyển mạch:** Ở chặng này của **2. 자원 처리 오류 (Resource Handling Errors)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**에서 만든 기준을 이어받아 **2. 자원 처리 오류 (Resource Handling Errors)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2. 자원 처리 오류 (Resource Handling Errors)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 자원 처리 오류 (Resource Handling Errors)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **2. 자원 처리 오류 (Resource Hand
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **2. 자원 처리 오류 (Resource Handling Errors)** và nối nó với **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **2. 자원 처리 오류 (Resource Handling Errors)**, **읽는 방법 (Cách đọc)** nêu điều cần giải thích; **2. 자원 처리 오류 (Resource Handling Errors)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 2. 자원 처리 오류 (Resource Handling Errors)
 
@@ -39,3 +47,5 @@ Phần “2. 자원 처리 오류 (Resource Handling Errors)” được nối v
 - **초기화되지 않은 변수 사용 (Uninitialized Variable)**: 변수 선언 후 값을 넣지 않고 사용하여 이전 쓰레기 값이 노출됨. (Dùng biến chưa khởi tạo giá trị).
 
 Ta có thể khép mục **2. 자원 처리 오류 (Resource Handling Errors)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+> **Bàn giao:** Sau **2. 자원 처리 오류 (Resource Handling Errors)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,18 +1,26 @@
 # CASE (Computer Aided Software Engineering)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **CASE (Computer Aided Software Engineering)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối CASE với requirements, modeling, code generation và maintenance, để công cụ hỗ trợ vòng đời.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **CASE (Computer Aided Software Engineering)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **CASE (Computer Aided Software Engineering)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **CASE (Computer Aided Software Engineering)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 CASE
 
+> **Chuyển mạch:** Ở chặng này của **CASE (Computer Aided Software Engineering)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)**에서 만든 기준을 이어받아 **CASE (Computer Aided Software Engineering)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CASE (Computer Aided Software Engineering)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CASE (Computer Aided Software Engineering)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ CASE
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **CASE (Computer Aided Software Engineering)** và nối nó với **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **CASE (Computer Aided Software Engineering)**, **읽는 방법 (Cách đọc)** cho ta quy tắc; **CASE (Computer Aided Software Engineering)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## CASE (Computer Aided Software Engineering)
 
@@ -38,3 +46,5 @@ Phần “CASE (Computer Aided Software Engineering)” được nối với n�
 - 개발의 표준화를 지향하며 생산성 및 품질을 향상시킵니다.
 
 Điểm chốt của **CASE (Computer Aided Software Engineering)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **CASE (Computer Aided Software Engineering)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

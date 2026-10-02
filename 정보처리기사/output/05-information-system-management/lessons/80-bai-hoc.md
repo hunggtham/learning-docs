@@ -1,18 +1,26 @@
 # 3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối vulnerable API với input, boundary, validation và least privilege, để lỗi dùng API trở thành rủi ro cụ thể.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 취약한, API, 사용
 
+> **Chuyển mạch:** Ở chặng này của **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)**에서 만든 기준을 이어받아 **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **3. 취약한 API 사용 (Vulnerable AP
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** và nối nó với **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)
 
@@ -43,3 +51,5 @@ Phần “3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương
 ---
 
 Ta có thể khép mục **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+> **Bàn giao:** Sau **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

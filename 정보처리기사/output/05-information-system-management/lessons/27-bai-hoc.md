@@ -1,18 +1,26 @@
 # 10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối hacking/threats với attack surface, vulnerability, exploit và defense, để mối đe dọa gắn với đường tấn công.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 해킹, 보안, 위협
 
+> **Chuyển mạch:** Ở chặng này của **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**에서 만든 기준을 이어받아 **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **10. 해킹 및 보안 위협 (Các hì
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** và nối nó với **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)
 
@@ -113,3 +121,5 @@ Với **10.4 기타 네트워크 공격**, hãy đọc các công thức như m�
 Với **10.4 기타 네트워크 공격**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Điểm chốt của **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

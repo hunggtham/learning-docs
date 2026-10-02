@@ -1,18 +1,26 @@
 # 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối project management với scope, schedule, cost, risk và estimation, để kế hoạch có giả định và giới hạn.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **프로젝트 일정 관리 (Project Schedule Management)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 프로젝트, 관리, 비용, 산정
 
+> **Chuyển mạch:** Ở chặng này của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**에서 만든 기준을 이어받아 **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **3. 프로젝트 관리 및 비용 산�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** và nối nó với **프로젝트 일정 관리 (Project Schedule Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
@@ -131,3 +139,5 @@ Các bullet của **3.4 위험 관리 및 테일러링 (Risk Management & Tailor
 Như vậy, **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
 Điểm chốt của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **프로젝트 일정 관리 (Project Schedule Management)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
