@@ -1,6 +1,6 @@
 # Heuristic tìm kiếm (search / 검색): Greedy Best-First và A*
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Heuristic tìm kiếm (search / 검색): Greedy Best-First và A**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Heuristic hàm (function / 함수)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Greedy Best-First tìm kiếm (search / 검색)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Heuristic search: Greedy Best-First và A***. Route đi từ heuristic estimate → greedy evaluation → A* f=g+h → admissibility/consistency → heuristic quality, để speedup không đánh đổi guarantee âm thầm.
 
 Uninformed tìm kiếm (search / 검색) biết trạng thái hiện tại, actions và chi phí (cost / 비용) đã đi, nhưng không biết hướng nào có vẻ gần goal hơn. Khi trạng thái (state / 상태) không gian (space / 공간) lớn, điều đó quá đắt. **Heuristic tìm kiếm (search / 검색)** thêm một estimate `h(n)` nhằm trả lời:
 

@@ -1,6 +1,6 @@
 # Ràng buộc (constraint / 제약조건) Satisfaction Problems trong AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ràng buộc (constraint / 제약조건) Satisfaction Problems trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CSP gồm những gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ví dụ map coloring** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Constraint Satisfaction Problems**. Route đi từ variables/domains/constraints → propagation/consistency → backtracking heuristics → map-coloring/scheduling examples → optimization extensions, để CSP được đọc bằng invariant và search reduction.
 
 Một số bài toán không cần tìm một đường dẫn (path / 경로) cụ thể; ta chỉ cần tìm **một assignment thỏa tất cả các ràng buộc (constraints / 제약조건들)**. Scheduling, Sudoku, map coloring, tài nguyên (resource / 자원) allocation, cấu hình (configuration / 구성) và nhiều planning subproblems có cấu trúc này.
 

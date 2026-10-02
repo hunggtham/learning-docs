@@ -1,6 +1,6 @@
 # Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보) lý thuyết (theory / 이론) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Self-information: sự kiện (event / 이벤트) càng hiếm càng informative** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Entropy: expected surprise** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Information theory for AI**. Route đi từ self-information → entropy → cross-entropy/KL divergence → mutual information → coding/compression and learning objectives, để “information” nối với loss và representation.
 
 Thông tin (information / 정보) lý thuyết (theory / 이론) cung cấp một ngôn ngữ (language / 언어) để định lượng **bất định (uncertainty / 불확실성), surprise và thông tin (information / 정보)**. Trong AI, nó giải thích vì sao log-probability xuất hiện trong mất mát (loss / 손실) functions, vì sao cross-entropy là mục tiêu (objective / 목표) tự nhiên cho classification và ngôn ngữ (language / 언어) modeling, vì sao KL divergence đo discrepancy giữa distributions, và vì sao compression có relationship sâu với học tập (learning / 학습).
 

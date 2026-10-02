@@ -1,6 +1,6 @@
 # Adversarial tìm kiếm (search / 검색) và Game Playing
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Adversarial tìm kiếm (search / 검색) và Game Playing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ đường dẫn (path / 경로) tìm kiếm (search / 검색) tới game cây (tree / 트리)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Zero-sum games** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Adversarial search và game playing**. Route đi từ game tree/actions → utility/zero-sum → minimax → alpha-beta pruning → imperfect information/rollout, để decision quality được nối với opponent model và search budget.
 
 Nhiều tìm kiếm (search / 검색) bài toán (problem / 문제) giả định môi trường (environment / 환경) thụ động: ta chọn hành động (action / 동작), chuyển tiếp (transition / 전이) xảy ra theo rules, goal không chống lại ta. Trong games và adversarial settings, một actor khác chủ động chọn hành động (action / 동작) làm kết quả (outcome / 결과) của ta xấu đi. Khi đó “tìm đường dẫn (path / 경로) tốt” trở thành “chọn chiến lược (strategy / 전략) tốt khi đối thủ cũng tối ưu”.
 

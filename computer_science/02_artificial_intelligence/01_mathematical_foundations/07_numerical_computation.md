@@ -1,6 +1,6 @@
 # Numerical Computation cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Numerical Computation cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Floating-point numbers không phải real numbers** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Precision formats trong AI** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Numerical computation for AI**. Route đi từ floating-point/rounding → precision formats → stability/conditioning → vectorized kernels → mixed precision and error budgets, để số học được nối với training/serving reliability.
 
 Mathematics trên giấy giả định real numbers có precision vô hạn. Computer thì không. AI chạy trên finite bộ nhớ (memory / 메모리), finite precision và hardware kernels cụ thể. Vì vậy một công thức mathematically correct vẫn có thể overflow, underflow, lose precision hoặc produce NaN khi hiện thực (implementation / 구현).
 

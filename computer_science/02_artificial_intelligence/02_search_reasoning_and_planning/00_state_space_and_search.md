@@ -1,6 +1,6 @@
 # Trạng thái (state / 상태) không gian (space / 공간) và tìm kiếm (search / 검색) trong Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trạng thái (state / 상태) không gian (space / 공간) và tìm kiếm (search / 검색) trong Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ thế giới thật tới trạng thái (state / 상태) không gian (space / 공간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태) không nhất thiết là observation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **State space và search trong AI**. Route đi từ real-world goal → state/action/transition model → observation-versus-state → path cost/goal test → search frontier, để thuật toán tìm kiếm không lẫn với mô hình hóa bài toán.
 
 Tìm kiếm (search / 검색) là một trong những idea lâu đời và bền vững nhất của Artificial Intelligence. Trước khi Machine học tập (learning / 학습) thống trị AI hiện đại, rất nhiều bài toán intelligence đã được nhìn như: **ta đang ở một trạng thái (state / 상태), có một tập actions, mỗi hành động (action / 동작) dẫn sang trạng thái (state / 상태) khác; làm thế nào tìm được chuỗi (sequence / 시퀀스) actions đưa ta tới goal?**
 

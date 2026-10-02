@@ -1,6 +1,6 @@
 # Calculus cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Calculus cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hàm (function / 함수) là điểm xuất phát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Limit và derivative** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Calculus for AI**. Route đi từ functions/limits → derivatives/gradients → chain rule → integration/expectation → optimization updates, để đạo hàm được nối với bước học model.
 
 Calculus (미적분학 / giải tích) là ngôn ngữ để mô tả **thay đổi (change / 변경)**. Trong AI, câu hỏi quan trọng không chỉ là “mất mát (loss / 손실) hiện tại bằng bao nhiêu?” mà còn là: nếu thay một parameter rất nhỏ, mất mát (loss / 손실) sẽ thay đổi theo hướng nào và nhanh đến mức nào? Derivative, partial derivative và độ dốc (gradient / 기울기) biến câu hỏi đó thành quantities có thể tính được.
 

@@ -1,6 +1,6 @@
 # Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một lớp trừu tượng (abstraction / 추상화) chung** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Breadth-First tìm kiếm (search / 검색)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Uninformed search: BFS, DFS, UCS**. Route đi từ frontier abstraction → BFS completeness/optimality → DFS memory/depth → UCS path cost → strategy selection, để guarantee được đọc cùng resource cost.
 
 **Uninformed tìm kiếm (search / 검색)** giải bài toán chỉ bằng bài toán (problem / 문제) definition: initial trạng thái (state / 상태), actions, chuyển tiếp (transition / 전이), goal và đường dẫn (path / 경로) chi phí (cost / 비용). thuật toán (algorithm / 알고리즘) không có domain-specific estimate cho biết trạng thái (state / 상태) nào “gần goal hơn”.
 

@@ -1,6 +1,6 @@
 # Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tối ưu hóa (optimization / 최적화) cho Artificial Intelligence**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu (objective / 목표) hàm (function / 함수)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Mất mát (loss / 손실), mục tiêu (objective / 목표) và chỉ số (metric / 지표) khác nhau** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Optimization for AI**. Route đi từ objective/loss → gradients/constraints → SGD/momentum/adaptive methods → regularization/conditioning → metric-versus-objective, để cập nhật model gắn với mục tiêu và giới hạn.
 
 Tối ưu hóa (optimization / 최적화) là quá trình tìm giá trị của variables để một mục tiêu (objective / 목표) trở nên tốt hơn. Trong Machine học tập (learning / 학습), kiến trúc (architecture / 아키텍처) xác định lớp (class / 클래스) of functions mô hình (model / 모델) có thể biểu diễn, dữ liệu (data / 데이터) cung cấp examples, hàm mất mát (loss function / 손실 함수) định nghĩa hành vi (behavior / 동작) nào được coi là tốt, còn optimizer tìm parameters phù hợp mục tiêu (objective / 목표) đó.
 
