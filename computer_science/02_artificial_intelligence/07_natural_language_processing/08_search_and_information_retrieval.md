@@ -1,6 +1,6 @@
 # Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tìm kiếm (search / 검색) và thông tin (information / 정보) Retrieval trong NLP**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Inverted chỉ mục (index / 인덱스)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Boolean Retrieval** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Search và information retrieval trong NLP**. Route đi từ inverted index → Boolean retrieval → TF-IDF/BM25 → dense retrieval/reranking → relevance and latency evaluation, để truy hồi được đọc cùng representation và query intent.
 
 Thông tin (information / 정보) Retrieval (IR / 정보 검색 / truy xuất thông tin) trả lời câu hỏi: với một truy vấn (query / 쿼리), trong một collection lớn, documents/passages nào relevant nhất? Đây là nền trực tiếp của tìm kiếm (search / 검색) engine và RAG.
 

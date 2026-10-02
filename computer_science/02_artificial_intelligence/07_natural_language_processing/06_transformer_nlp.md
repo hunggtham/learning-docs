@@ -1,6 +1,6 @@
 # Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Encoder-Only NLP** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Decoder-Only NLP** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer NLP: encoder, decoder và task adaptation**. Route đi từ encoder-only understanding → decoder-only generation → encoder-decoder transformation → pretraining/objectives → fine-tuning and inference cost, để kiến trúc được chọn theo task.
 
 Transformer kiến trúc (architecture / 아키텍처) là general cơ chế (mechanism / 메커니즘); NLP biến cơ chế (mechanism / 메커니즘) đó thành các mô hình (model / 모델) families khác nhau bằng **masking, pretraining mục tiêu (objective / 목표), pooling/head và fine-tuning chiến lược (strategy / 전략)**. BERT, GPT và T5 không chỉ khác tên — chúng encode thông tin (information / 정보) luồng (flow / 흐름) khác nhau.
 

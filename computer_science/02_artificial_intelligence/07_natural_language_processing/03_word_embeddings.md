@@ -1,6 +1,6 @@
 # Word Embeddings: từ discrete words tới continuous ngữ nghĩa (semantic / 의미적) hình học (geometry / 기하학)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Word Embeddings: từ discrete words tới continuous ngữ nghĩa (semantic / 의미적) hình học (geometry / 기하학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **One-Hot Limitation** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Distributional Hypothesis** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Word embeddings**. Route đi từ one-hot limitations → distributional hypothesis → embedding geometry → skip-gram/CBOW-style objectives → similarity/analogy limits, để vector representation được đọc cùng dữ liệu ngữ cảnh.
 
 Word Embedding (단어 임베딩 / nhúng từ) maps discrete lexical units thành dense vectors. Trước embeddings, one-hot biểu diễn (representation / 표현) coi mọi words equally unrelated. Embeddings cho mô hình (model / 모델) học hình học (geometry / 기하학) nơi words xuất hiện trong similar contexts có vectors liên quan.
 

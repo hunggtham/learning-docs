@@ -1,6 +1,6 @@
 # NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Classification / NER** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Macro vs Micro F1** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **NLP evaluation**. Route đi từ classification/NER exact labels → macro/micro F1 → ranking/generation metrics → human/LLM-assisted evaluation → robustness and task validity, để điểm số không bị tách khỏi mục tiêu sử dụng.
 
 NLP Evaluation (자연어 처리 평가) khó vì ngôn ngữ (language / 언어) cho phép nhiều outputs khác nhau cùng đúng. Classification có label rõ; translation/summarization/generation có vô số acceptable phrasings. Vì vậy evaluation cần chọn chỉ số (metric / 지표) phù hợp tác vụ (task / 작업), tách automatic score khỏi human utility và luôn inspect thất bại (failure / 실패) categories.
 

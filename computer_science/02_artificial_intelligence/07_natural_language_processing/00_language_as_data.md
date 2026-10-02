@@ -1,6 +1,6 @@
 # Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ngôn ngữ (language / 언어) as dữ liệu (data / 데이터): làm sao biến ngôn ngữ thành đối tượng tính toán?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Văn bản (text / 텍스트) không phải meaning** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các mức (level / 수준) của linguistic cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Language as data: biến ngôn ngữ thành đối tượng tính toán**. Route đi từ text/token/structure → syntax/semantics/pragmatics → feature/representation → task/evaluation, để dữ liệu ngôn ngữ được nối với loại tín hiệu model cần.
 
 Natural ngôn ngữ (language / 언어) Processing (NLP / 자연어 처리 / xử lý ngôn ngữ tự nhiên) bắt đầu với một tension: ngôn ngữ (language / 언어) là symbolic, contextual, ambiguous và socially grounded, trong khi computer cần discrete codes/numbers/tensors. Bước đầu tiên không phải chọn Transformer; nó là quyết định **ta đang coi ngôn ngữ (language / 언어) là loại dữ liệu gì và giữ/mất cấu trúc (structure / 구조) nào khi biểu diễn**.
 

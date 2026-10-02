@@ -1,6 +1,6 @@
 # Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sequence-to-Sequence NLP: từ Translation tới Text-to-Text học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Conditional ngôn ngữ (language / 언어) Modeling** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Neural Machine Translation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sequence-to-sequence NLP**. Route đi từ conditional language modeling → encoder/decoder → teacher forcing/decoding → neural machine translation → exposure bias and evaluation, để input–output mapping nối với generation control.
 
 Sequence-to-Sequence (Seq2Seq / 시퀀스-투-시퀀스) NLP xử lý tasks nơi đầu vào (input / 입력) là một chuỗi (sequence / 시퀀스) và đầu ra (output / 출력) là một chuỗi (sequence / 시퀀스) khác có thể khác length/alignment. Translation, summarization, grammatical correction, question generation và many structured-to-text tasks thuộc family này.
 

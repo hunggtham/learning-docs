@@ -1,6 +1,6 @@
 # Văn bản (text / 텍스트) Normalization và Tokenization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Văn bản (text / 텍스트) Normalization và Tokenization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Unicode trước khi nói tokenization** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trường hợp (case / 사례) Folding** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Text normalization và tokenization**. Route đi từ Unicode/code points → normalization/case folding → token boundaries/subwords → vocabulary/sequence length, để preprocessing không làm mất tín hiệu ngôn ngữ cần cho model.
 
 Văn bản (text / 텍스트) mô hình (model / 모델) không nhận trực tiếp “câu”. Nó nhận một chuỗi (sequence / 시퀀스) discrete IDs. **Normalization (정규화)** quyết định chuẩn gốc (canonical / 정본) form của raw văn bản (text / 텍스트); **tokenization (토큰화)** quyết định cách chia văn bản (text / 텍스트) thành units và map chúng vào vocabulary.
 

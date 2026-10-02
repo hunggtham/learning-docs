@@ -1,6 +1,6 @@
 # Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ngôn ngữ (language / 언어) các mô hình (models / 모델들): học xác suất của chuỗi ngôn ngữ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Joint xác suất (probability / 확률) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **n-gram ngôn ngữ (language / 언어) các mô hình (models / 모델들)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Language models**. Route đi từ sequence probability/chain rule → n-gram limits → neural next-token modeling → perplexity/context → generation and calibration, để xác suất chuỗi nối với hành vi sinh văn bản.
 
 Ngôn ngữ (language / 언어) mô hình (model / 모델) gán xác suất (probability / 확률) cho chuỗi (sequence / 시퀀스) hoặc dự đoán đơn vị từ (token / 토큰) dựa trên ngữ cảnh (context / 맥락). Đây là cốt lõi (core / 핵심) lớp trừu tượng (abstraction / 추상화) đứng sau autocomplete, speech decoding, machine translation và Large ngôn ngữ (language / 언어) các mô hình (models / 모델들).
 

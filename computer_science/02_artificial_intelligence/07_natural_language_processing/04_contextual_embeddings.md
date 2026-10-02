@@ -1,6 +1,6 @@
 # Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Static vs Contextual** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **ELMo: contextualization bằng bidirectional LM** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Contextual embeddings**. Route đi từ static/contextual distinction → bidirectional context → ELMo-style representations → transformer contextual states → polysemy/transfer limits, để meaning được nối với vị trí trong sequence.
 
 Static word embedding gán một véc-tơ (vector / 벡터) duy nhất cho mỗi word/đơn vị từ (token / 토큰) kiểu (type / 타입). Nhưng ngôn ngữ (language / 언어) có polysemy và contextual meaning: `bank` trong `river bank` khác `bank loan`. **Contextual Embedding (문맥 임베딩)** tính biểu diễn (representation / 표현) của đơn vị từ (token / 토큰) như hàm (function / 함수) của cả ngữ cảnh (context / 맥락).
 

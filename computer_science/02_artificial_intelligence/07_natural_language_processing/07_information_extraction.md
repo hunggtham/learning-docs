@@ -1,6 +1,6 @@
 # Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보) Extraction: biến văn bản (text / 텍스트) tự do thành cấu trúc (structure / 구조) có thể dùng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Named thực thể (entity / 엔터티) Recognition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thực thể (entity / 엔터티) Types phụ thuộc lĩnh vực (domain / 도메인)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Information extraction**. Route đi từ text spans → named entities/types → relations/events → structured outputs → domain schema/evaluation, để NLP biến văn bản tự do thành dữ liệu có thể kiểm tra.
 
 Thông tin (information / 정보) Extraction (IE / 정보 추출 / trích xuất thông tin) chuyển unstructured văn bản (text / 텍스트) thành structured facts/spans/relations/events. Đây là cầu nối giữa NLP và cơ sở dữ liệu (database / 데이터베이스)/kiến thức (knowledge / 지식) đồ thị (graph / 그래프)/nghiệp vụ (business / 비즈니스) workflow.
 
