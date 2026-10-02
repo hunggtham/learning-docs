@@ -1,6 +1,6 @@
 # 05 — Econometrics
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **05 — Econometrics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **05 — Econometrics**. Route học đi từ probability/statistics → regression và inference → causal identification → panel/time series/measurement → robustness, để mỗi kết luận nêu rõ dữ liệu, giả định và uncertainty.
 
 Econometrics nối economic questions với dữ liệu (data / 데이터) bằng đo lường (measurement / 측정), xác suất (probability / 확률), statistical suy luận (inference / 추론) và nhân quả (causal / 인과적) identification. Mô-đun (module / 모듈) này không coi regression là điểm bắt đầu. Thứ tự chuẩn gốc (canonical / 정본) là: xác định **dữ liệu (data / 데이터) + estimand + counterfactual** trước, sau đó mới chọn estimator phù hợp với nguồn (source / 소스) of variation và dependence cấu trúc (structure / 구조).
 

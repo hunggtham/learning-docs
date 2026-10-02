@@ -1,6 +1,6 @@
 # Regression, Prediction & Suy luận (inference / 추론) — OLS là projection trước khi là nhân quả (causal / 인과적) tác động (effect / 효과)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Regression, Prediction & Suy luận (inference / 추론) — OLS là projection trước khi là nhân quả (causal / 인과적) tác động (effect / 효과)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Conditional expectation là điểm bắt đầu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Population tuyến tính (linear / 선형) projection** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Regression, Prediction & Suy luận (inference / 추론) — OLS là projection trước khi là nhân quả (causal / 인과적) tác động (effect / 효과)**. Route đi từ conditional expectation/projection → OLS và assumptions → prediction, uncertainty và specification → inference, để không nhầm fit dự báo với tác động nhân quả.
 
 Tuyến tính (linear / 선형) regression là một trong những công cụ quan trọng nhất của econometrics, nhưng coefficient không tự động có nghĩa nhân quả (causal / 인과적). Trước hết, regression mô tả conditional relationship hoặc best tuyến tính (linear / 선형) prediction giữa variables. Nhân quả (causal / 인과적) interpretation chỉ xuất hiện khi thiết kế (design / 설계) và các giả định (assumptions / 가정들) bổ sung đủ mạnh.
 

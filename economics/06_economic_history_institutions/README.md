@@ -1,6 +1,6 @@
 # 06 — Economic Lịch sử (history / 이력) & Institutions
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06 — Economic Lịch sử (history / 이력) & Institutions**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **06 — Economic Lịch sử (history / 이력) & Institutions**. Route học đi từ tăng trưởng và phân phối trong thời gian → luật, property rights và nhà nước → chiến tranh, thuộc địa và thương mại → path dependence, để thể chế được giải thích cùng bằng chứng lịch sử.
 
 Economic Lịch sử (history / 이력) & Institutions là lớp cuối của Economics cốt lõi (core / 핵심). Mô-đun (module / 모듈) này không lặp chronology của World Lịch sử (history / 이력)/Korean Lịch sử (history / 이력); nó dùng lịch sử như laboratory để kiểm tra mechanisms về institutions, trạng thái (state / 상태) sức chứa (capacity / 용량), finance, technology, globalization, crises và đường dẫn (path / 경로) dependence.
 

@@ -1,6 +1,6 @@
 # Nhân quả (causal / 인과적) Suy luận (inference / 추론) & Experiments — Counterfactual, randomization và selection
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nhân quả (causal / 인과적) Suy luận (inference / 추론) & Experiments — Counterfactual, randomization và selection**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Fundamental bài toán (problem / 문제) of nhân quả (causal / 인과적) suy luận (inference / 추론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Selection độ lệch (bias / 편향) decomposition** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nhân quả (causal / 인과적) Suy luận (inference / 추론) & Experiments — Counterfactual, randomization và selection**. Route đi từ counterfactual/potential outcomes → randomization và identification → selection/confounding → experiments, quasi-experiments và sensitivity, để claim nhân quả luôn đi kèm giả định nhận diện.
 
 Nhân quả (causal / 인과적) suy luận (inference / 추론) hỏi một câu rất cụ thể: **kết quả (outcome / 결과) sẽ khác thế nào nếu treatment thay đổi, trong khi counterfactual relevant được xây dựng đáng tin?** Randomized experiment là benchmark vì assignment cơ chế (mechanism / 메커니즘) có thể làm treatment independent of potential outcomes. Observational methods cố tái tạo một phần lô-gic (logic / 논리) đó bằng các giả định (assumptions / 가정들) và institutional variation.
 

@@ -1,6 +1,6 @@
 # Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trạng thái hiện tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Học tập (learning / 학습) tuyến (route / 경로)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**. Route học đi từ reasoning và microeconomics → market structure/game theory → macroeconomics → applied economics, econometrics và economic history; mỗi nhánh phải quay về owner, prerequisite và giới hạn bằng chứng của nó.
 
 `economics/` là thư viện Economics độc lập của repository. Mục tiêu là giải thích cách cá nhân, doanh nghiệp, thị trường, nhà nước và các nền kinh tế lựa chọn và phối hợp dưới điều kiện khan hiếm, thông tin không hoàn hảo và ràng buộc thể chế. Economics ở đây là lĩnh vực (domain / 도메인) nền tảng; phần ứng dụng vào tài sản, doanh nghiệp và danh mục vẫn nằm ở [Investing](../investing/README.md).
 

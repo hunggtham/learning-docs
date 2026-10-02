@@ -1,6 +1,6 @@
 # 04 — Applied Economics
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04 — Applied Economics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Applied spine** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **04 — Applied Economics**. Route học đi từ ngành, tổ chức và chính sách → labor/health/environment/IO → dữ liệu và identification → đánh giá trade-off, để ứng dụng luôn quay về mô hình kinh tế và giới hạn bằng chứng.
 
 Applied Economics dùng lý thuyết (theory / 이론) từ Microeconomics, Thị trường (market / 시장) Cấu trúc (structure / 구조)/Game Lý thuyết (theory / 이론) và Macroeconomics cùng identification discipline từ Econometrics để phân tích labor, taxation/công khai (public / 공개) chính sách (policy / 정책), trade, development và industries cụ thể. Mô-đun (module / 모듈) này không phải tập hợp trường hợp (case / 사례) studies. Mỗi chapter phải trả lời đồng thời: **cơ chế (mechanism / 메커니즘) nào đang hoạt động, estimand nào cần đo, variation nào identify tác động (effect / 효과), ai chịu incidence, và kết quả (result / 결과) có generalize/quy mô (scale / 규모) được không?**
 
