@@ -1,7 +1,6 @@
 # Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학
 
-> **Mạch đọc:** Đọc **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **xã hội (social / 사회적) cognition: ta không quan sát xã hội một cách trung lập** sang **Attribution: ta giải thích nguyên nhân hành vi như thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Xã hội (social / 사회적) cognition: ta không quan sát xã hội một cách trung lập** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Attribution: ta giải thích nguyên nhân hành vi như thế nào?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối phát triển xã hội-văn hóa với bối cảnh, chuẩn mực và tương tác, để giải thích hành vi trong môi trường thay vì tách khỏi cộng đồng.
 
 Tâm lý học xã hội (social psychology / 사회심리학) nghiên cứu cách suy nghĩ, cảm xúc và hành vi của con người bị ảnh hưởng bởi sự hiện diện thực, tưởng tượng hoặc hàm ý của người khác. Tâm lý học văn hóa (cultural psychology / 문화심리학) hỏi sâu hơn: những cách suy nghĩ nào tưởng như “tự nhiên” thực ra được hình thành trong các hệ chuẩn mực, ngôn ngữ, thể chế và lịch sử cụ thể?
 
@@ -17,6 +16,8 @@ Nếu đồng nghiệp không trả lời tin nhắn, nhiều giải thích kh�
 
 Tâm lý học xã hội vì thế quan tâm không chỉ “người khác đã làm gì” mà cả cách người quan sát xây dựng meaning từ hành vi đó.
 
+> **Chuyển mạch:** Trong **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Attribution: ta giải thích nguyên nhân hành vi như thế nào?** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) cognition: ta không quan sát xã hội một cách trung lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Actor–observer và self-serving mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Attribution: ta giải thích nguyên nhân hành vi như thế nào?
 
 **Quy kết nguyên nhân (attribution)** là quá trình suy luận tại sao một hành vi xảy ra. Một distinction cổ điển là nguyên nhân bên trong — trait, intention, ability — và nguyên nhân tình huống.
@@ -27,19 +28,23 @@ Ví dụ, một nhân viên giao hàng tới muộn có thể bị gắn nhãn �
 
 Trong software sự cố (incident / 인시던트) rà soát (review / 검토), attribution lỗi (error / 오류) tương tự xuất hiện khi nhóm (team / 팀) quy lỗi cho “nhà phát triển (developer / 개발자) bất cẩn” mà không nhìn deploy tiến trình (process / 프로세스), monitoring, rà soát (review / 검토) thiết kế (design / 설계) và incentive.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Actor–observer và self-serving mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Attribution: ta giải thích nguyên nhân hành vi như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attitude không phải lúc nào cũng dự đoán hành vi (behavior / 동작) mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Actor–observer và self-serving mẫu (pattern / 패턴)
 
 Khi đánh giá hành vi của chính mình, ta thường có nhiều thông tin tình huống hơn. Khi đánh giá người khác, ta dễ nhìn thấy hành vi nổi bật hơn ngữ cảnh (context / 맥락).
 
 Ngoài ra, con người đôi khi giải thích success bằng ability/effort nhưng thất bại (failure / 실패) bằng hoàn cảnh. **Self-serving độ lệch (bias / 편향)** có thể bảo vệ self-esteem, nhưng magnitude thay đổi theo culture, lĩnh vực (domain / 도메인) và threat.
 
-Mục tiêu không phải học một danh sách độ lệch (bias / 편향) để “bắt lỗi người khác”, mà dùng chúng như câu hỏi kiểm tra mô hình (model / 모델):
+Mục tiêu không phải học một danh sách độ lệch (bias / 편향) để “bắt lỗi người khác”, mà dùng chúng như câu hỏi kiểm chứng mô hình (model / 모델):
 
 ```text
 Mình đang thấy toàn bộ context chưa?
 Có alternative explanation nào?
 Nếu chính mình làm hành vi này, mình sẽ giải thích khác không?
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Attitude không phải lúc nào cũng dự đoán hành vi (behavior / 동작) mạnh** tiếp nhận điểm tựa từ **Actor–observer và self-serving mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cognitive dissonance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Attitude không phải lúc nào cũng dự đoán hành vi (behavior / 동작) mạnh
 
@@ -49,11 +54,15 @@ Hành vi (behavior / 동작) còn phụ thuộc norm, điều khiển (control /
 
 Xem [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]].
 
+> **Chuyển mạch:** Trong **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Cognitive dissonance** tiếp nhận điểm tựa từ **Attitude không phải lúc nào cũng dự đoán hành vi (behavior / 동작) mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conformity: vì sao người ta đi theo nhóm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cognitive dissonance
 
 **Bất hòa nhận thức (cognitive dissonance)** mô tả discomfort khi hành vi, belief hoặc self-image mâu thuẫn nhau. Con người có thể giảm dissonance bằng cách thay hành vi (behavior / 동작), thay belief hoặc tạo justification.
 
 Ví dụ, người bỏ nhiều tiền cho một khóa học kém có thể tăng đánh giá tích cực để bảo vệ quyết định trước đó. Nhưng không nên dùng dissonance như explanation vạn năng; ta cần bằng chứng (evidence / 증거) về xung đột (conflict / 충돌) và ngữ cảnh (context / 맥락).
+
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Conformity: vì sao người ta đi theo nhóm?** tiếp nhận điểm tựa từ **Cognitive dissonance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Obedience và authority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Conformity: vì sao người ta đi theo nhóm?
 
@@ -67,11 +76,15 @@ Conformity có ít nhất hai nguồn lớn.
 
 Đây là nền của thông tin (information / 정보) cascade và groupthink.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Obedience và authority** tiếp nhận điểm tựa từ **Conformity: vì sao người ta đi theo nhóm?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Norm: luật vô hình của nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Obedience và authority
 
 Nghiên cứu về obedience cho thấy authority, role và institutional framing có thể ảnh hưởng mạnh hành vi. Tuy nhiên, các study cổ điển cần được đọc cùng giới hạn phương pháp, ethics và replication/interpretation hiện đại.
 
 Insight quan trọng hơn “con người mù quáng nghe lệnh” là: responsibility có thể bị phân tán qua hierarchy, procedure và role. Trong organization, thiết kế escalation đường dẫn (path / 경로) và quyền từ chối unsafe yêu cầu (request / 요청) quan trọng hơn việc chỉ yêu cầu cá nhân “có đạo đức”.
+
+> **Chuyển mạch:** Trong **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Norm: luật vô hình của nhóm** tiếp nhận điểm tựa từ **Obedience và authority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xã hội (social / 사회적) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Norm: luật vô hình của nhóm
 
@@ -83,6 +96,8 @@ Insight quan trọng hơn “con người mù quáng nghe lệnh” là: respons
 
 Nếu thông báo “rất nhiều người đang gian lận”, mục đích là cảnh báo nhưng nó có thể vô tình truyền descriptive norm rằng gian lận phổ biến. Communication hiệu quả cần cân nhắc cả hai loại norm.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Xã hội (social / 사회적) định danh (identity / 식별자)** tiếp nhận điểm tựa từ **Norm: luật vô hình của nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stereotype, prejudice và discrimination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xã hội (social / 사회적) định danh (identity / 식별자)
 
 **Lý thuyết bản sắc xã hội (Social identity Theory)** nhấn mạnh rằng self-concept một phần đến từ group membership. Khi category `us` và `them` trở nên nổi bật, perception và evaluation có thể thay đổi.
@@ -90,6 +105,8 @@ Nếu thông báo “rất nhiều người đang gian lận”, mục đích l�
 In-group favoritism không luôn đồng nghĩa out-group hatred. Chỉ việc ưu tiên người “cùng nhóm” cũng có thể tạo inequality tích lũy.
 
 Trong công ty đa quốc gia, category như `Korea team`, `Vietnam team`, `backend`, `frontend`, `vendor`, `HQ` có thể ảnh hưởng attribution. Bug từ nhóm mình dễ được giải thích bằng ràng buộc (constraint / 제약조건); bug từ nhóm khác dễ bị giải thích bằng competence.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Stereotype, prejudice và discrimination** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Implicit độ lệch (bias / 편향): hữu ích nhưng dễ bị overclaim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Stereotype, prejudice và discrimination
 
@@ -101,11 +118,15 @@ Ba khái niệm nên phân biệt:
 
 Chúng liên quan nhưng không đồng nhất. Một người có thể cố kiểm soát hành vi (behavior / 동작) dù biết mình có stereotype tự động; ngược lại, một chính sách (policy / 정책) có thể tạo discriminatory kết quả (outcome / 결과) dù người thực thi không biểu hiện prejudice rõ ràng.
 
+> **Chuyển mạch:** Trong **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Implicit độ lệch (bias / 편향): hữu ích nhưng dễ bị overclaim** tiếp nhận điểm tựa từ **Stereotype, prejudice và discrimination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Group polarization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Implicit độ lệch (bias / 편향): hữu ích nhưng dễ bị overclaim
 
 Các phép đo implicit association cố đo liên kết tương đối tự động. Chúng hữu ích cho research ở cấp mẫu (pattern / 패턴), nhưng độ ổn định và khả năng dự đoán hành vi cá nhân có giới hạn.
 
 Không nên dùng một implicit kiểm thử (test / 테스트) đơn lẻ để tuyên bố “bạn là người phân biệt đối xử”. Vấn đề thực tiễn thường tốt hơn khi tập trung vào tiến trình (process / 프로세스): structured criteria, blind rà soát (review / 검토) khi phù hợp, kiểm tra (audit / 감사) kết quả (outcome / 결과) và accountability.
+
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Group polarization** tiếp nhận điểm tựa từ **Implicit độ lệch (bias / 편향): hữu ích nhưng dễ bị overclaim** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Groupthink** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Group polarization
 
@@ -114,6 +135,8 @@ Sau thảo luận, group đôi khi đi tới position cực đoan hơn xu hướ
 Online community có thể khuếch đại tác động (effect / 효과) nếu thuật toán (algorithm / 알고리즘) và self-selection liên tục đưa người tương tự vào cùng thông tin (information / 정보) môi trường (environment / 환경).
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Groupthink** tiếp nhận điểm tựa từ **Group polarization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Culture không chỉ là nationality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Groupthink
 
@@ -125,11 +148,15 @@ Biện pháp phòng ngừa có thể gồm pre-mortem, independent estimate trư
 
 Xem [[10_group_dynamics_collective_behavior_and_cooperation]] và [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
 
+> **Chuyển mạch:** Trong **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Culture không chỉ là nationality** tiếp nhận điểm tựa từ **Groupthink** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Individualism–collectivism: dimension hữu ích nhưng thô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Culture không chỉ là nationality
 
 Văn hóa không nên bị giản lược thành “người Hàn thế này, người Việt thế kia”. Một người đồng thời nằm trong nhiều cultural các hệ thống (systems / 시스템들): quốc gia, thế hệ, nghề nghiệp, công ty, ngành kỹ thuật, gia đình, giới, cộng đồng online.
 
 Culture cung cấp script, norm và meaning, nhưng không biến mọi member thành bản sao của nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Individualism–collectivism: dimension hữu ích nhưng thô** tiếp nhận điểm tựa từ **Culture không chỉ là nationality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Independent và interdependent self** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Individualism–collectivism: dimension hữu ích nhưng thô
 
@@ -139,11 +166,15 @@ Ngay trong một quốc gia có variation lớn theo tuổi, vùng, lớp (class
 
 Do đó, dimension văn hóa nên dùng như hypothesis về ngữ cảnh (context / 맥락), không phải shortcut để đọc một cá nhân.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Independent và interdependent self** tiếp nhận điểm tựa từ **Individualism–collectivism: dimension hữu ích nhưng thô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **WEIRD bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Independent và interdependent self
 
 Một số nghiên cứu văn hóa phân biệt **self độc lập (independent self-construal)**, nhấn mạnh thuộc tính và lựa chọn cá nhân, với **self phụ thuộc lẫn nhau (interdependent self-construal)**, nhấn mạnh role và relationship.
 
 Điều này có thể ảnh hưởng cách người ta mô tả mình, giải thích success, xin help hoặc xử lý xung đột (conflict / 충돌). Nhưng đây cũng là dimension liên tục và context-sensitive.
+
+> **Chuyển mạch:** Trong **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **WEIRD bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Independent và interdependent self** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Acculturation và bicultural định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## WEIRD bài toán (problem / 문제)
 
@@ -153,6 +184,8 @@ Bên ngoài (external / 외부) validity đòi hỏi kiểm tra nhiều populati
 
 Xem [[../00_foundations/02_research_methods]] và [[../00_foundations/06_open_science_and_evidence_evaluation]].
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Acculturation và bicultural định danh (identity / 식별자)** tiếp nhận điểm tựa từ **WEIRD bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Power distance và hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Acculturation và bicultural định danh (identity / 식별자)
 
 Người sống giữa nhiều nền văn hóa không đơn giản “chọn một”. Họ có thể tích hợp, chuyển đổi frame theo ngữ cảnh (context / 맥락), giữ một số practice và thay đổi một số định danh (identity / 식별자) element.
@@ -161,6 +194,8 @@ Stress khi di cư có thể đến từ ngôn ngữ (language / 언어) demand, 
 
 Xem [[16_acculturation_migration_and_bicultural_identity]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Power distance và hierarchy** tiếp nhận điểm tựa từ **Acculturation và bicultural định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Power distance và hierarchy
 
 Culture ảnh hưởng cách người ta phản ứng với authority. Trong môi trường power distance cao, junior có thể ít challenge cấp cao (senior / 시니어) trực tiếp, ngay cả khi có technical concern.
@@ -168,6 +203,8 @@ Culture ảnh hưởng cách người ta phản ứng với authority. Trong mô
 Điều này có consequence trong software, aviation, healthcare và safety-critical công việc (work / 작업). Nếu hệ thống (system / 시스템) chỉ nói “hãy speak up” nhưng xã hội (social / 사회적) chi phí (cost / 비용) vẫn cao, hành vi (behavior / 동작) khó thay đổi.
 
 Xem [[15_power_status_hierarchy_and_inequality]].
+
+> **Chuyển mạch:** Trong **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Mô hình tư duy** gom các mảnh từ **Power distance và hierarchy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -183,6 +220,8 @@ cá nhân + tình huống + nhóm + chuẩn mực + quyền lực + văn hóa
 
 Xã hội (social / 사회적) môi trường (environment / 환경) không chỉ ảnh hưởng từng cá nhân; hành vi của cá nhân lại tái tạo hoặc thay đổi xã hội (social / 사회적) môi trường (environment / 환경).
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 **“Nếu biết độ lệch (bias / 편향) thì sẽ hết độ lệch (bias / 편향).”** Awareness hữu ích nhưng tiến trình (process / 프로세스) thiết kế (design / 설계) thường cần thiết.
@@ -193,6 +232,10 @@ Xã hội (social / 사회적) môi trường (environment / 환경) không ch�
 
 **“Group quyết định (decision / 결정) luôn tốt hơn individual.”** Group có thể pool kiến thức (knowledge / 지식) nhưng cũng có coordination mất mát (loss / 손실), status tác động (effect / 효과) và thông tin (information / 정보) cascade.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học xã hội và văn hóa — xã hội (social / 사회적) & Cultural Psychology / 사회·문화심리학**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Xem [[03_personality]], [[08_moral_psychology_and_prosocial_behavior]], [[10_group_dynamics_collective_behavior_and_cooperation]], [[15_power_status_hierarchy_and_inequality]], [[16_acculturation_migration_and_bicultural_identity]], [[../06_applied/05_digital_psychology_social_media_and_online_behavior]] và [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Bệnh lý nhân cách — Personality Pathology / 성격 병리
 
-> **Mạch đọc:** Đọc **Bệnh lý nhân cách — Personality Pathology / 성격 병리** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ category sang dimension** sang **Các miền chức năng cốt lõi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ category sang dimension** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các miền chức năng cốt lõi** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối personality pathology với traits, impairment và context, để lập formulation theo mức độ và quan hệ thay vì chỉ gắn nhãn.
 
 Bệnh lý nhân cách (personality pathology) không nên được hiểu đơn giản là “có tính cách xấu” hay “khó gần”. Tâm lý học lâm sàng quan tâm đến những mô thức tương đối bền vững trong cách một người cảm nhận bản thân, hiểu người khác, điều chỉnh cảm xúc và hành xử trong quan hệ, khi các mô thức đó gây suy giảm đáng kể hoặc lặp đi lặp lại tạo ra tổn hại.
 
@@ -12,6 +11,8 @@ Bệnh lý nhân cách (personality pathology) không nên được hiểu đơn
 Các hệ thống chẩn đoán hiện đại ngày càng chú ý đến cách nhìn theo **mức độ (dimensional)** thay vì chỉ hỏi “có hay không”. ICD-11 nhấn mạnh trước hết mức độ nặng của rối loạn nhân cách, sau đó mô tả các miền đặc điểm (trait domains) nổi bật.
 
 Cách nhìn này có lợi vì hai người cùng một nhãn cũ có thể khác nhau đáng kể về cơ chế và nhu cầu điều trị. Ngược lại, hai nhãn khác nhau có thể cùng chia sẻ các vấn đề nền như bất ổn cảm xúc, thiếu linh hoạt, khó tin người hoặc kiểm soát xung động kém.
+
+> **Chuyển mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Các miền chức năng cốt lõi** tiếp nhận điểm tựa từ **Từ category sang dimension** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trait lĩnh vực (domain / 도메인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các miền chức năng cốt lõi
 
@@ -38,6 +39,8 @@ Bao gồm:
 
 Một người có thể rất thành công về nghề nghiệp nhưng vẫn có suy giảm nghiêm trọng trong relationship, hoặc ngược lại.
 
+> **Chuyển mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Trait lĩnh vực (domain / 도메인)** tiếp nhận điểm tựa từ **Các miền chức năng cốt lõi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Borderline mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trait lĩnh vực (domain / 도메인)
 
 Một số lĩnh vực (domain / 도메인) thường được dùng để mô tả mẫu (pattern / 패턴):
@@ -49,6 +52,8 @@ Một số lĩnh vực (domain / 도메인) thường được dùng để mô t
 - **Anankastia**: cứng nhắc, cầu toàn, kiểm soát và tuân thủ quá mức.
 
 Đây là dimension mô tả, không phải “kiểu người” cố định.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Borderline mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Trait lĩnh vực (domain / 도메인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Narcissistic mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Borderline mẫu (pattern / 패턴)
 
@@ -70,6 +75,8 @@ niềm tin "mình sẽ bị bỏ" được củng cố
 
 Điều trị không chỉ nhắm giảm symptom mà còn tăng emotion regulation, mentalization, interpersonal effectiveness và khả năng giữ nhiều perspective cùng lúc.
 
+> **Chuyển mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Narcissistic mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Borderline mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Avoidant mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Narcissistic mẫu (pattern / 패턴)
 
 Narcissistic pathology không chỉ là “tự tin quá mức”. Nó có thể bao gồm grandiosity, entitlement, nhu cầu được công nhận và đồng thời self-esteem rất dễ tổn thương.
@@ -78,17 +85,23 @@ Một số người biểu hiện kiểu overt, rõ sự vượt trội; ngườ
 
 Điểm cốt lõi là self-worth phụ thuộc quá mạnh vào status, admiration hoặc comparison.
 
+> **Chuyển mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Avoidant mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Narcissistic mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dependent mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Avoidant mẫu (pattern / 패턴)
 
 Avoidant pathology thường liên quan đến mong muốn liên kết (connection / 연결) nhưng đồng thời kỳ vọng rejection cao. Người ta có thể tránh tương tác (interaction / 상호작용) không phải vì không cần relationship mà vì chi phí (cost / 비용) dự đoán quá lớn.
 
 Điều này khác detachment thuần túy. Một người avoidant có thể rất muốn intimacy nhưng bị threat prediction giữ lại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Dependent mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Avoidant mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Obsessive-compulsive personality và OCD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dependent mẫu (pattern / 패턴)
 
 Dependent mẫu (pattern / 패턴) liên quan khó tự quyết, sợ mất hỗ trợ (support / 지원) và có xu hướng giao quá nhiều quyền quyết định cho người khác.
 
 Vấn đề không phải “cần người khác” — con người vốn phụ thuộc lẫn nhau — mà là autonomy bị thu hẹp và relationship dễ trở thành nơi duy trì fear.
+
+> **Chuyển mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Obsessive-compulsive personality và OCD** tiếp nhận điểm tựa từ **Dependent mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dissocial và psychopathy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Obsessive-compulsive personality và OCD
 
@@ -98,11 +111,15 @@ OCD thường có obsession và compulsion nhằm giảm distress. Personality m
 
 Hai điều kiện (condition / 조건) có thể cùng tồn tại nhưng không đồng nghĩa.
 
+> **Chuyển mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Obsessive-compulsive personality và OCD** xác định đầu vào; **Dissocial và psychopathy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Developmental perspective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dissocial và psychopathy
 
 Dissocial traits có thể gồm callousness, exploitation và disregard for others. **Psychopathy** là construct nghiên cứu phức tạp, không nên dùng như insult hoặc synonym cho criminality.
 
 Không phải mọi người có dissocial trait đều phạm tội; không phải mọi người phạm tội đều có personality disorder.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Dissocial và psychopathy** xác định đầu vào; **Developmental perspective** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Comorbidity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Developmental perspective
 
@@ -112,11 +129,15 @@ Một principle quan trọng là **equifinality**: nhiều pathway khác nhau c�
 
 Xem [[./12_developmental_psychopathology_risk_and_resilience]].
 
+> **Chuyển mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Comorbidity** tiếp nhận điểm tựa từ **Developmental perspective** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formulation quan trọng hơn stereotype** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Comorbidity
 
 Personality pathology thường đồng tồn tại với depression, anxiety, trauma-related symptoms, substance use và eating disorders.
 
 Nếu chỉ điều trị symptom hiện tại mà bỏ qua interpersonal mẫu (pattern / 패턴) duy trì nó, relapse có thể dễ xảy ra. Nhưng ngược lại, không nên quy mọi khó khăn của một người về “personality”.
+
+> **Chuyển mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Formulation quan trọng hơn stereotype** tiếp nhận điểm tựa từ **Comorbidity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Formulation quan trọng hơn stereotype
 
@@ -133,6 +154,8 @@ trigger nào?
 → loop nào được duy trì?
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Điều trị** tiếp nhận điểm tựa từ **Formulation quan trọng hơn stereotype** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điều trị
 
 Nhiều psychotherapy có bằng chứng (evidence / 증거) cho personality pathology, đặc biệt các approach có cấu trúc và tập trung relationship/emotion regulation.
@@ -147,6 +170,8 @@ Một số mô hình (model / 모델) thường gặp:
 
 Không nên hiểu rằng “personality disorder không chữa được”. Personality có tính ổn định tương đối nhưng vẫn có khả năng thay đổi đáng kể theo thời gian và treatment.
 
+> **Chuyển mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Điều trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng chung (common / 공통) misconceptions
 
 **“Personality disorder = người độc hại.”** Đây là nhãn đạo đức hóa, không phải formulation lâm sàng.
@@ -157,12 +182,16 @@ Không nên hiểu rằng “personality disorder không chữa được”. Per
 
 **“Personality không thay đổi.”** Trait tương đối ổn định nhưng hàm (function / 함수), coping và relationship mẫu (pattern / 패턴) có thể thay đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Personality pathology không phải một “loại người”; nó là một hệ mẫu (pattern / 패턴) cứng nhắc giữa self, emotion và relationship làm giảm khả năng thích nghi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối kiến thức
 
 Xem [[01_assessment_and_diagnosis]], [[03_depression_bipolar_and_suicidality]], [[02_anxiety_ocd_and_trauma]], [[../03_human_development_and_person/03_personality]], [[../03_human_development_and_person/01_attachment_and_relationships]], [[../05_intervention/01_cbt_behavioral_and_third_wave]] và [[../05_intervention/03_psychodynamic_humanistic_and_systemic_therapy]].
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

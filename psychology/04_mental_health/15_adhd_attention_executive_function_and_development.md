@@ -1,7 +1,6 @@
 # ADHD, chú ý, chức năng điều hành và phát triển
 
-> **Mạch đọc:** Đọc **ADHD, chú ý, chức năng điều hành và phát triển** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Chú ý không phải một “bình xăng tập trung”** sang **2. Chức năng điều hành**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **ADHD, chú ý, chức năng điều hành và phát triển**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Chú ý không phải một “bình xăng tập trung”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Chức năng điều hành** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối ADHD với attention, executive function và phát triển, để phân biệt triệu chứng theo bối cảnh với một nhãn giải thích quá rộng.
 
 ADHD là một **rối loạn phát triển thần kinh (neurodevelopmental disorder)** liên quan đến mẫu kéo dài của khó khăn trong điều chỉnh chú ý, tính bốc đồng và/hoặc tăng hoạt động, xuất hiện từ giai đoạn phát triển và gây suy giảm chức năng có ý nghĩa trong đời sống thực.
 
@@ -13,6 +12,8 @@ Một người ADHD có thể tập trung rất lâu vào nhiệm vụ mới l�
 
 Vấn đề phù hợp hơn là **điều chỉnh chú ý (attention regulation)**: khi nào chú ý được duy trì, chuyển đổi hoặc ưu tiên đúng với mục tiêu.
 
+> **Chuyển mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **2. Chức năng điều hành** tiếp nhận điểm tựa từ **1. Chú ý không phải một “bình xăng tập trung”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Phần thưởng, trì hoãn và động lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Chức năng điều hành
 
 Khó khăn có thể xuất hiện ở việc giữ mục tiêu trong trí nhớ làm việc, bắt đầu nhiệm vụ, ức chế phản ứng, chuyển đổi giữa nhiệm vụ, lập kế hoạch, ước lượng thời gian, nhớ việc cần làm trong tương lai và phân bổ nỗ lực.
@@ -20,6 +21,8 @@ Khó khăn có thể xuất hiện ở việc giữ mục tiêu trong trí nhớ
 Không phải mọi người ADHD đều có cùng hồ sơ nhận thức. Bài kiểm thử (test / 테스트) chức năng điều hành trong phòng thí nghiệm cũng không phản ánh hoàn hảo suy giảm chức năng ngoài đời.
 
 Xem [[../02_learning_and_cognition/01_memory]] và [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]].
+
+> **Chuyển mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **3. Phần thưởng, trì hoãn và động lực** tiếp nhận điểm tựa từ **2. Chức năng điều hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lịch sử phát triển là phần bắt buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Phần thưởng, trì hoãn và động lực
 
@@ -29,11 +32,15 @@ Một số mô hình hiện đại chú ý tới độ nhạy với trì hoãn v
 
 Vì vậy câu “nếu thực sự muốn thì sẽ tập trung” là quá đơn giản. Động lực ảnh hưởng hiệu suất nhưng không xóa đi khó khăn điều chỉnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **4. Lịch sử phát triển là phần bắt buộc** tiếp nhận điểm tựa từ **3. Phần thưởng, trì hoãn và động lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Chẩn đoán phân biệt và đồng mắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Lịch sử phát triển là phần bắt buộc
 
 ADHD không nên được suy ra chỉ từ triệu chứng hiện tại ở người trưởng thành. Đánh giá cần lịch sử phát triển, biểu hiện ở nhiều bối cảnh và ảnh hưởng lên học tập, công việc hoặc quan hệ.
 
 Một người có thể được nhận diện muộn nếu tuổi nhỏ được hỗ trợ rất nhiều, môi trường có cấu trúc chặt hoặc yêu cầu chức năng điều hành chưa cao. Việc “chẩn đoán muộn” không đồng nghĩa rối loạn mới xuất hiện muộn.
+
+> **Chuyển mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **5. Chẩn đoán phân biệt và đồng mắc** tiếp nhận điểm tựa từ **4. Lịch sử phát triển là phần bắt buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. “thời gian (time / 시간) blindness” nên hiểu thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Chẩn đoán phân biệt và đồng mắc
 
@@ -46,11 +53,15 @@ Có nguyên nhân nào khác giải thích tốt hơn không?
 Và có tình trạng nào đang cùng tồn tại không?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **6. “thời gian (time / 시간) blindness” nên hiểu thế nào?** tiếp nhận điểm tựa từ **5. Chẩn đoán phân biệt và đồng mắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Thuốc và hỗ trợ không dùng thuốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. “thời gian (time / 시간) blindness” nên hiểu thế nào?
 
 `Time blindness` là cách nói phổ biến, không phải một cơ chế chẩn đoán chính thức duy nhất. Nó có thể phản ánh kết hợp của trí nhớ tương lai, ước lượng thời gian, chiết khấu trì hoãn và khó giữ mục tiêu tương lai ở trạng thái hoạt động.
 
 Xem [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]].
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **7. Thuốc và hỗ trợ không dùng thuốc** tiếp nhận điểm tựa từ **6. “thời gian (time / 시간) blindness” nên hiểu thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Học tập và công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Thuốc và hỗ trợ không dùng thuốc
 
@@ -59,6 +70,8 @@ Thuốc có bằng chứng hỗ trợ điều trị ADHD ở nhiều người nh
 Hỗ trợ không dùng thuốc có thể gồm lời nhắc bên ngoài, chia nhỏ nhiệm vụ, cấu trúc bằng văn bản, thay đổi môi trường, chiến lược CBT cho chức năng điều hành, coaching hoặc hỗ trợ học tập/công việc.
 
 Điểm quan trọng là không xem hỗ trợ môi trường như “che giấu điểm yếu”. Đây là cách thiết kế hệ thống để giảm gánh nặng điều hành không cần thiết.
+
+> **Chuyển mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **8. Học tập và công việc** tiếp nhận điểm tựa từ **7. Thuốc và hỗ trợ không dùng thuốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Áp lực xấu hổ thường không phải giải pháp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Học tập và công việc
 
@@ -78,9 +91,13 @@ phản hồi sớm
 
 Xem [[../06_applied/01_education_learning_and_habit_design]] và [[../06_applied/00_work_organization_and_leadership]].
 
+> **Chuyển mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **9. Áp lực xấu hổ thường không phải giải pháp** tiếp nhận điểm tựa từ **8. Học tập và công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Neurodiversity và suy giảm chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Áp lực xấu hổ thường không phải giải pháp
 
 Áp lực kiểu “chỉ cần kỷ luật hơn” có thể làm tăng stress, né tránh và thất bại trong khởi động nhiệm vụ. Điều này không có nghĩa mọi kỳ vọng đều nên hạ thấp; mục tiêu là thiết kế yêu cầu sao cho phản ánh kỹ năng thật thay vì đo khả năng tự xoay xở với hỗn loạn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **10. Neurodiversity và suy giảm chức năng** tiếp nhận điểm tựa từ **9. Áp lực xấu hổ thường không phải giải pháp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Ranh giới bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Neurodiversity và suy giảm chức năng
 
@@ -94,6 +111,8 @@ và
 ADHD có thể gây suy giảm chức năng đáng kể cần hỗ trợ
 ```
 
+> **Chuyển mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **10. Neurodiversity và suy giảm chức năng** nêu điều cần giải thích; **11. Ranh giới bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Ranh giới bằng chứng
 
 **Bằng chứng tương đối vững:** khởi phát trong phát triển, suy giảm chức năng ở nhiều bối cảnh, đóng góp di truyền/gia đình và lợi ích của một số điều trị đã được nghiên cứu tốt.
@@ -104,6 +123,8 @@ ADHD có thể gây suy giảm chức năng đáng kể cần hỗ trợ
 
 **Không được nói:** ADHD = dùng điện thoại nhiều, ADHD = thiếu kỷ luật, hoặc tập trung cao vào một sở thích loại trừ chẩn đoán.
 
+> **Chuyển mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **11. Ranh giới bằng chứng** nêu điều cần giải thích; **12. Những hiểu lầm phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Những hiểu lầm phổ biến
 
 **“Chơi game tập trung được thì không ADHD.”** Sai.
@@ -111,6 +132,8 @@ ADHD có thể gây suy giảm chức năng đáng kể cần hỗ trợ
 **“ADHD ở người lớn xuất hiện đột ngột ở tuổi 30.”** Không phù hợp với bản chất phát triển; chẩn đoán ở tuổi trưởng thành vẫn cần bằng chứng về lịch sử phát triển.
 
 **“Thuốc sẽ giải quyết mọi vấn đề.”** Sai. Chức năng còn phụ thuộc môi trường, kỹ năng, giấc ngủ và tình trạng đồng mắc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **Mô hình tư duy** gom các mảnh từ **12. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -125,6 +148,10 @@ hồ sơ phát triển
 chức năng ngoài đời
 ```
 
+> **Chuyển mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [[01_assessment_and_diagnosis]], [[05_neurodevelopmental_adhd_autism]], [[16_autism_social_communication_sensory_and_support]], [[../02_learning_and_cognition/01_memory]], [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]], [[../06_applied/01_education_learning_and_habit_design]] và [[../06_applied/00_work_organization_and_leadership]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
