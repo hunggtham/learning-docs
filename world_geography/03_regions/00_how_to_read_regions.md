@@ -1,7 +1,6 @@
 # Cách đọc một vùng địa lý
 
-> **Mạch đọc:** Đọc **Cách đọc một vùng địa lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vùng không phải chiếc hộp có sẵn trong tự nhiên** sang **Ba cách tạo ranh giới vùng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cách đọc một vùng địa lý**. Route đi từ region như mô hình phân tích → ranh giới formal/functional/perceptual → scale, core–periphery và chuyển tiếp → so sánh vùng → giới hạn của việc tự nhiên hóa ranh giới, để mỗi vùng được đọc theo câu hỏi mà nó phục vụ.
 
 ## Vùng không phải chiếc hộp có sẵn trong tự nhiên
 
@@ -11,11 +10,15 @@ Một **vùng (region)** là mô hình phân tích dùng để gom những nơi 
 
 > **Mô hình tư duy:** vùng là một lớp phân tích, không phải một vật thể tuyệt đối. Trước khi hỏi “vùng này có đặc điểm gì?”, hãy hỏi “ta đang dùng tiêu chí nào để gọi nó là một vùng?”.
 
+> **Chuyển mạch:** Trong **Cách đọc một vùng địa lý**, **Ba cách tạo ranh giới vùng** tiếp nhận điểm tựa từ **Vùng không phải chiếc hộp có sẵn trong tự nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc vùng theo quan hệ nhân quả thay vì danh sách dữ kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ba cách tạo ranh giới vùng
 
 Trong thực tế, ranh giới vùng thường xuất hiện theo ba lô-gic (logic / 논리) lớn. **Vùng hình thức (formal region)** gom các nơi có đặc tính tương đối giống nhau, chẳng hạn vùng khí hậu khô hoặc khu vực nói cùng một ngôn ngữ chiếm ưu thế. **Vùng chức năng (functional region)** được tổ chức bởi một nút và các dòng xung quanh, như vùng đi làm của một thành phố, vùng phục vụ của cảng hoặc lưu vực điện. **Vùng nhận thức (perceptual region)** hình thành từ lịch sử, bản sắc hoặc cách con người tưởng tượng không gian, như “Bắc Âu” hay “Trung Đông”.
 
 Một lỗi phổ biến là dùng ranh giới của một loại vùng để giải thích hiện tượng thuộc loại khác. Ví dụ, dùng biên giới tỉnh để phân tích lũ có thể không phù hợp vì nước tuân theo lưu vực; dùng ranh giới thành phố để phân tích thị trường lao động có thể bỏ sót hàng trăm nghìn người đi làm từ đô thị vệ tinh.
+
+> **Chuyển mạch:** Ở chặng này của **Cách đọc một vùng địa lý**, **Đọc vùng theo quan hệ nhân quả thay vì danh sách dữ kiện** tiếp nhận điểm tựa từ **Ba cách tạo ranh giới vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương pháp năm lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đọc vùng theo quan hệ nhân quả thay vì danh sách dữ kiện
 
@@ -24,6 +27,8 @@ Một vùng nên được đọc như hệ thống gồm nhiều lớp tác đ�
 Điều này không có nghĩa môi trường “quyết định” xã hội. Hai nơi có khí hậu gần nhau có thể phát triển rất khác vì thể chế, công nghệ và vị trí trong mạng thương mại khác nhau. Cách đọc tốt là xem tự nhiên tạo **ràng buộc (constraint / 제약조건)** và **cơ hội (opportunity)**, còn lịch sử và xã hội quyết định cách con người phản ứng với chúng.
 
 Ví dụ, đồng bằng ven biển thường thuận lợi cho nông nghiệp, đô thị và cảng, nhưng mức phát triển không chỉ đến từ đất bằng. Nó còn phụ thuộc khả năng kiểm soát lũ, kết nối hậu phương, vốn đầu tư, năng lực quản trị và vị trí trong mạng thương mại.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách đọc một vùng địa lý**, **Phương pháp năm lớp** tiếp nhận điểm tựa từ **Đọc vùng theo quan hệ nhân quả thay vì danh sách dữ kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy mô có thể đảo ngược kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương pháp năm lớp
 
@@ -37,6 +42,8 @@ Khi bắt đầu một vùng mới, có thể đọc theo năm lớp sau. Đây 
 
 Năm lớp này không độc lập. Một cảng lớn có thể xuất hiện vì địa hình bờ biển thuận lợi, nhưng phát triển thành trung tâm toàn cầu nhờ hạ tầng, thể chế và mạng thương mại. Một vùng nông nghiệp màu mỡ có thể suy giảm nếu thiếu nước hoặc nếu giá hàng hóa thế giới thay đổi.
 
+> **Chuyển mạch:** Trong **Cách đọc một vùng địa lý**, **Quy mô có thể đảo ngược kết luận** gom các mảnh từ **Phương pháp năm lớp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Khoảng cách hình học và khoảng cách hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy mô có thể đảo ngược kết luận
 
 **quy mô (scale / 규모)** là một trong những nguồn gây hiểu sai lớn nhất. Ở quy mô lục địa, Đông Á có thể được xem là vùng công nghiệp hóa cao. Ở quy mô quốc gia, chênh lệch giữa vùng thủ đô và vùng ngoại vi rất rõ. Ở quy mô đô thị, chỉ vài kilomet có thể tách khu tài chính khỏi khu dân cư thu nhập thấp.
@@ -45,11 +52,15 @@ Một nhận định đúng ở quy mô lớn không tự động đúng ở quy
 
 Trong phân tích dữ liệu, hiện tượng này liên quan **ngụy biện sinh thái (ecological fallacy)** và **vấn đề đơn vị không gian có thể thay đổi (MAUP)**: kết luận từ dữ liệu tổng hợp theo quốc gia có thể không đúng ở cấp hộ gia đình hoặc quận.
 
+> **Chuyển mạch:** Ở chặng này của **Cách đọc một vùng địa lý**, **Khoảng cách hình học và khoảng cách hiệu dụng** gom các mảnh từ **Quy mô có thể đảo ngược kết luận** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc dòng lưu chuyển thay vì chỉ đọc diện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khoảng cách hình học và khoảng cách hiệu dụng
 
 Hai nơi cách nhau 300 km trên bản đồ chưa chắc “gần” nhau về kinh tế. Núi, biên giới, hạ tầng, thời gian di chuyển, chi phí visa, chất lượng cảng và mạng đường có thể làm **khoảng cách hiệu dụng (effective distance)** lớn hơn hoặc nhỏ hơn khoảng cách hình học.
 
 Đây là lý do một thành phố ven biển có thể gắn kết mạnh với thành phố ở quốc gia khác hơn với vùng nội địa của chính nước mình. Tương tự trong công nghệ thông tin, khoảng cách máy chủ không chỉ là số kilomet mà còn phụ thuộc tuyến cáp, định tuyến và điểm kết nối mạng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách đọc một vùng địa lý**, **Đọc dòng lưu chuyển thay vì chỉ đọc diện tích** tiếp nhận điểm tựa từ **Khoảng cách hình học và khoảng cách hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc lịch sử như nguyên nhân của địa lý hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đọc dòng lưu chuyển thay vì chỉ đọc diện tích
 
@@ -57,11 +68,15 @@ Bản đồ chính trị thường làm mắt tập trung vào diện tích lãn
 
 Khi đọc một vùng, hãy tìm các dòng chính: nước chảy về đâu, người di cư theo hướng nào, hàng hóa đi qua cảng nào, điện được truyền từ đâu tới đâu, dữ liệu đi qua cáp nào và vốn tập trung ở những nút nào.
 
+> **Chuyển mạch:** Trong **Cách đọc một vùng địa lý**, **Đọc lịch sử như nguyên nhân của địa lý hiện tại** tiếp nhận điểm tựa từ **Đọc dòng lưu chuyển thay vì chỉ đọc diện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **So sánh vùng theo cơ chế, không theo nhãn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đọc lịch sử như nguyên nhân của địa lý hiện tại
 
 Địa lý hiện tại thường chứa **phụ thuộc đường đi (path dependence)**. Đường sắt thời thuộc địa, vị trí thủ đô cũ, khu công nghiệp đầu tiên hoặc cảng lịch sử có thể tiếp tục ảnh hưởng mạng hiện đại dù điều kiện ban đầu đã thay đổi. Khi hạ tầng và cụm doanh nghiệp đã hình thành, chi phí di dời lớn khiến cấu trúc cũ có quán tính.
 
 Vì vậy câu hỏi “tại sao ở đây?” thường cần hai lớp trả lời: vì sao vị trí này thuận lợi về địa lý, và vì sao lịch sử đã khóa một phần hoạt động vào vị trí đó.
+
+> **Chuyển mạch:** Ở chặng này của **Cách đọc một vùng địa lý**, **Đọc lịch sử như nguyên nhân của địa lý hiện tại** đã nêu tiêu chí phân biệt, còn **So sánh vùng theo cơ chế, không theo nhãn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dữ liệu vùng và những bẫy thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## So sánh vùng theo cơ chế, không theo nhãn
 
@@ -69,11 +84,15 @@ So sánh có giá trị nhất khi hỏi cùng một cơ chế hoạt động kh
 
 So sánh như vậy giúp tránh kiểu học “vùng A có X, vùng B có Y” mà không hiểu lý do.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách đọc một vùng địa lý**, cơ chế trong **So sánh vùng theo cơ chế, không theo nhãn** cần được kiểm chứng bằng dấu vết cụ thể; **Dữ liệu vùng và những bẫy thường gặp** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Một ví dụ suy luận: tại sao nhiều siêu đô thị nằm ở châu thổ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dữ liệu vùng và những bẫy thường gặp
 
 Số liệu theo quốc gia dễ sử dụng nhưng không phải lúc nào phản ánh vùng chức năng. GDP quốc gia có thể che các cực tăng trưởng; lượng mưa trung bình che sự khác biệt giữa sườn đón gió và khuất gió; mật độ dân số trung bình che sự tập trung ven sông hoặc ven biển.
 
 Khi dùng số liệu, cần kiểm tra ít nhất ba điều: năm tham chiếu, định nghĩa chỉ tiêu và đơn vị không gian. Cùng một từ “đô thị” có thể được định nghĩa khác nhau giữa các quốc gia; cùng một chỉ tiêu nghèo có thể dùng chuẩn giá khác nhau.
+
+> **Chuyển mạch:** Trong **Cách đọc một vùng địa lý**, **Dữ liệu vùng và những bẫy thường gặp** cho ta quy tắc; **Một ví dụ suy luận: tại sao nhiều siêu đô thị nằm ở châu thổ?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một ví dụ suy luận: tại sao nhiều siêu đô thị nằm ở châu thổ?
 
@@ -83,9 +102,13 @@ Nhưng chính cấu trúc đó tạo rủi ro: đất thấp dễ ngập, trầm
 
 Đây là cách đọc vùng theo **cơ chế nối tiếp**, thay vì ghi nhớ rằng “nhiều thành phố lớn nằm ở châu thổ”.
 
+> **Chuyển mạch:** Ở chặng này của **Cách đọc một vùng địa lý**, **Một ví dụ suy luận: tại sao nhiều siêu đô thị nằm ở châu thổ?** cho ta quy tắc; **Những hiểu lầm phổ biến** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 “Vùng” không đồng nghĩa “đồng nhất”. Một lục địa có thể chứa nhiều chế độ khí hậu, hệ thống kinh tế và lịch sử khác nhau. “Vùng giàu tài nguyên” cũng không đồng nghĩa phát triển cao, vì giá trị tài nguyên phụ thuộc khả năng khai thác, hạ tầng, thể chế và vị trí trong chuỗi giá trị. Cuối cùng, vị trí địa lý không phải định mệnh: công nghệ và thể chế có thể làm giảm hoặc chuyển đổi nhiều ràng buộc, dù hiếm khi xóa chúng hoàn toàn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách đọc một vùng địa lý**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -93,4 +116,4 @@ Nhưng chính cấu trúc đó tạo rủi ro: đất thấp dễ ngập, trầm
 
 Xem thêm: [Tư duy địa lý](../00_foundations/00_geographical_thinking.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md), [Giao thông và toàn cầu hóa](../02_human_geography/08_transport_trade_globalization.md), [GIS và dữ liệu không gian](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 east asia](./01_east_asia.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,13 +1,12 @@
 # Mali
 
-> **Mạch đọc:** Đặt **Mali** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một lãnh thổ khô rộng nhưng dân cư tập trung theo nước** sang **Niger River và Inner Niger Delta**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mali**. Route đi từ Sahara–Sahel–xavan và gradient mưa → Niger River/Inner Niger Delta → dân cư, nông nghiệp và đô thị → hành lang thương mại, tài nguyên và an ninh → thích ứng khô hạn, để nước giải thích vì sao lãnh thổ rộng không đồng nghĩa phân bố đều.
 
 ## Một lãnh thổ khô rộng nhưng dân cư tập trung theo nước
 
 Mali trải từ Sahara ở phía bắc qua Sahel tới vùng xavan tương đối ẩm hơn ở phía nam. Phần lớn dân cư tập trung ở nửa nam và dọc Niger, cho thấy nước và rainfall độ dốc (gradient / 기울기) quan trọng hơn diện tích hành chính.
 
-
-> **Chuyển mạch:** Từ **Một lãnh thổ khô rộng nhưng dân cư tập trung theo nước**, ta sang **Niger River và Inner Niger Delta** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mali**, **Niger River và Inner Niger Delta** tiếp nhận điểm tựa từ **Một lãnh thổ khô rộng nhưng dân cư tập trung theo nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bamako và các nút (node / 노드) sông** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Niger River và Inner Niger Delta
 
@@ -15,8 +14,7 @@ Sông Niger đi vào Mali, uốn qua nội địa rồi tiếp tục về phía 
 
 Flood pulse hỗ trợ nông nghiệp, chăn thả, đánh bắt và wetland ecology. Vì vậy lượng nước không chỉ quan trọng ở tổng volume mà còn ở timing.
 
-
-> **Chuyển mạch:** Từ **Niger River và Inner Niger Delta**, ta sang **Bamako và các nút (node / 노드) sông** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mali**, **Bamako và các nút (node / 노드) sông** tiếp nhận điểm tựa từ **Niger River và Inner Niger Delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sinh kế theo độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bamako và các nút (node / 노드) sông
 
@@ -24,8 +22,7 @@ Bamako nằm trên Niger ở phía nam và là metropolitan cốt lõi (core / �
 
 Trong môi trường rộng, khô và mật độ thấp, nút (node / 노드) river/road quan trọng hơn mạng đô thị phân bố đều.
 
-
-> **Chuyển mạch:** Từ **Bamako và các nút (node / 노드) sông**, ta sang **Sinh kế theo độ dốc (gradient / 기울기)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mali**, **Sinh kế theo độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Bamako và các nút (node / 노드) sông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Landlocked corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sinh kế theo độ dốc (gradient / 기울기)
 
@@ -33,8 +30,7 @@ Phía nam phù hợp hơn với agriculture mưa và cotton; Sahel có chăn nu�
 
 Mobility của pastoral các hệ thống (systems / 시스템들) là adaptation đối với biến động nước và cỏ. Nếu chỉ nhìn land quyền sở hữu (ownership / 소유권) tĩnh, dễ hiểu sai lô-gic (logic / 논리) không gian của hệ này.
 
-
-> **Chuyển mạch:** Từ **Sinh kế theo độ dốc (gradient / 기울기)**, ta sang **Landlocked corridor** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mali**, **Landlocked corridor** tiếp nhận điểm tựa từ **Sinh kế theo độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Landlocked corridor
 
@@ -42,15 +38,13 @@ Mali không giáp biển và phụ thuộc các corridor dài tới Dakar, Abidj
 
 Đây là ví dụ điển hình của **effective remoteness**: khoảng cách tới biển không chỉ đo bằng kilomet.
 
-
-> **Chuyển mạch:** Từ **Landlocked corridor**, ta sang **Rủi ro** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mali**, **Rủi ro** tiếp nhận điểm tựa từ **Landlocked corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro
 
 Hạn, desertification cục bộ, flood trong Niger basin và biến động rainfall đều quan trọng. Một sai lầm thường gặp là xem lũ và hạn là hai vấn đề đối lập; ở Sahel, chúng có thể xảy ra trong cùng một năm ở các nơi khác nhau.
 
-
-> **Chuyển mạch:** Từ **Rủi ro**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mali**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -58,4 +52,4 @@ Hạn, desertification cục bộ, flood trong Niger basin và biến động ra
 
 Xem thêm: [Thủy văn](../../../01_physical_geography/04_hydrology_rivers_groundwater.md), [Di cư và mobility](../../../02_human_geography/01_migration.md), [Châu Phi](../../../03_regions/06_africa.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [BEN benin](./BEN_benin.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
