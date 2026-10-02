@@ -1,6 +1,6 @@
 # Chỉ số (metric / 지표), Benchmark và kiểm thử (test / 테스트) thiết kế (design / 설계)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chỉ số (metric / 지표), Benchmark và kiểm thử (test / 테스트) thiết kế (design / 설계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phân rã chỉ số (metric / 지표)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chỉ số (metric / 지표) cho Classification** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Metrics, benchmarks và test design**. Route đi từ task contract → metric decomposition → benchmark validity → slices/thresholds → regression tests, để metric đo đúng hành vi cần bảo vệ.
 
 Chỉ số (metric / 지표) biến hành vi (behavior / 동작) thành số, nhưng con số chỉ có ý nghĩa khi **thiết kế phép đo (measurement design)** đúng. AI evaluation thường thất bại không phải vì thiếu chỉ số (metric / 지표) mà vì chỉ số (metric / 지표) đo sai population, benchmark bị contamination hoặc trường hợp kiểm thử (test case / 테스트 케이스) không phản ánh đặc tả hợp đồng (contract / 계약) thật.
 

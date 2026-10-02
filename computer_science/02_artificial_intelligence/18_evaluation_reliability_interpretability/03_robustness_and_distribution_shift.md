@@ -1,6 +1,6 @@
 # Robustness và phân phối (distribution / 분포) Shift
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Robustness và phân phối (distribution / 분포) Shift**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Clean hiệu năng (performance / 성능) không đủ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phân phối (distribution / 분포) Shift** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Robustness và distribution shift**. Route đi từ clean-set performance → perturbations/shift types → subgroup and temporal slices → stress tests → mitigation and monitoring, để độ bền được đo ngoài dữ liệu thuận lợi.
 
 **Robustness (강건성 / tính bền vững)** hỏi hệ thống (system / 시스템) còn hoạt động tốt khi đầu vào (input / 입력), môi trường (environment / 환경) hoặc các giả định (assumptions / 가정들) thay đổi trong phạm vi nào. Một mô hình (model / 모델) đạt benchmark cao trên clean dữ liệu (data / 데이터) nhưng sụp khi có typo, sensor noise, unseen ngôn ngữ (language / 언어) hoặc phân phối (distribution / 분포) shift chưa phải robust hệ thống (system / 시스템).
 

@@ -1,6 +1,6 @@
 # Độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) cho hệ thống AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) cho hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức tiên quyết** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Độ tin cậy (reliability / 신뢰성) khác Accuracy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reliability engineering cho hệ thống AI**. Route đi từ availability/correctness SLOs → failure modes → redundancy/timeouts/fallbacks → observability → recovery and change safety, để reliability vượt ra ngoài accuracy đơn lẻ.
 
 **Kỹ thuật độ tin cậy (reliability engineering / 신뢰성 공학)** là quá trình thiết kế hệ thống để nó cung cấp hành vi đúng hợp đồng trong thời gian dài, chịu được lỗi, suy giảm có kiểm soát và phục hồi được. Với AI, độ tin cậy không chỉ là dịch vụ (service / 서비스) còn chạy; nó còn bao gồm chất lượng quyết định, tính nhất quán của trạng thái (state / 상태), mức an toàn của side tác động (effect / 효과) và khả năng phát hiện lỗi âm thầm.
 

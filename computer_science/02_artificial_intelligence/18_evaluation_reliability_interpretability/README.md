@@ -1,6 +1,6 @@
 # Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Reading thứ tự (order / 순서)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** Đây là README owner của **Evaluation, reliability và interpretability**. Route đọc đi từ evaluation foundations → metrics/uncertainty → robustness/explainability → behavioral/adversarial testing → reliability engineering, để bằng chứng chất lượng nối với quyết định vận hành.
 
 Folder này trả lời câu hỏi: **làm sao biết một AI hệ thống (system / 시스템) thực sự tốt, ổn định, có thể giải thích và đáng tin trong use trường hợp (case / 사례) cụ thể?** Nội dung đi từ evaluation thiết kế (design / 설계) tới calibration, robustness, interpretability, behavioral testing, red teaming và độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
 

@@ -1,6 +1,6 @@
 # Explainability và Interpretability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Explainability và Interpretability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Toàn cục (global / 전역) vs cục bộ (local / 로컬) Explanation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Explainability và interpretability**. Route đi từ explanation purpose → global versus local views → feature/gradient/prototype methods → faithfulness and stability → user decision limits, để explanation không bị nhầm với causal proof.
 
 AI mô hình (model / 모델) có thể đạt hiệu năng (performance / 성능) cao nhưng vẫn khó hiểu vì sao nó đưa ra prediction. **Explainability (설명 가능성)** và **interpretability (해석 가능성)** nghiên cứu cách con người hiểu mô hình (model / 모델) hành vi (behavior / 동작), nội bộ (internal / 내부) mechanisms hoặc reason behind outputs.
 

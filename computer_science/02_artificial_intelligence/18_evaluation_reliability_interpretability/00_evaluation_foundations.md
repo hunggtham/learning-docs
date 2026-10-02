@@ -1,6 +1,6 @@
 # Nền tảng đánh giá hệ thống AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng đánh giá hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức tiên quyết** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bắt đầu từ quyết định, không bắt đầu từ chỉ số (metric / 지표)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Evaluation foundations cho hệ thống AI**. Route đi từ decision/use case → target behavior → test data → metrics and thresholds → deployment feedback, để đánh giá bắt đầu từ điều cần quyết định chứ không từ một con số rời rạc.
 
 **Đánh giá (evaluation / 평가)** là quá trình thu thập bằng chứng để xác định một mô hình hoặc hệ thống AI có đáp ứng đúng mục tiêu trên một nhóm người dùng, phân phối dữ liệu và điều kiện vận hành cụ thể hay không. Đánh giá không phải chỉ chạy một benchmark rồi đọc một con số. Nó phải nối yêu cầu sản phẩm với dữ liệu kiểm thử, thước đo, độ bất định, các lát dữ liệu quan trọng, lỗi hệ thống và quyết định triển khai.
 

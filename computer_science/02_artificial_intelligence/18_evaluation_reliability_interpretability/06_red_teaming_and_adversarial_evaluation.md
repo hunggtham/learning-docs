@@ -1,6 +1,6 @@
 # Red Teaming và Adversarial Evaluation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Red Teaming và Adversarial Evaluation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Threat mô hình (model / 모델) trước Attack danh sách (list / 목록)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Attack Surfaces** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Red teaming và adversarial evaluation**. Route đi từ threat model → attack surface → misuse/robustness probes → severity and exploitability → remediation/retest, để red team tạo bằng chứng hành động được.
 
 **Red teaming (레드팀 평가)** là quá trình chủ động tìm cách làm AI hệ thống (system / 시스템) thất bại, vi phạm chính sách (policy / 정책) hoặc hành xử nguy hiểm trước khi attacker/người dùng (user / 사용자)/môi trường (environment / 환경) vô tình tìm ra. Khác robustness testing thông thường, red teaming thường giả định đầu vào (input / 입력) hoặc chiến lược (strategy / 전략) có tính đối kháng và thích nghi với hệ thống (system / 시스템).
 

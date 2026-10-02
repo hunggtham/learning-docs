@@ -1,6 +1,6 @@
 # AI Testing và Behavioral Evaluation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI Testing và Behavioral Evaluation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pyramid mở rộng cho AI** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đơn vị (unit / 단위) Tests vẫn cần** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI testing và behavioral evaluation**. Route đi từ unit/data checks → component/model tests → scenario and adversarial suites → end-to-end behavior → regression gates, để testing phủ cả cơ chế lẫn hành vi.
 
 Traditional software testing kiểm tra deterministic contracts tương đối rõ. AI hệ thống (system / 시스템) lại có stochastic đầu ra (output / 출력), fuzzy tính đúng đắn (correctness / 정확성), learned hành vi (behavior / 동작) và distribution-dependent thất bại (failure / 실패). Vì vậy **AI testing** cần kết hợp đơn vị (unit / 단위)/tích hợp (integration / 통합) tests truyền thống với behavioral evaluation trên representative tasks.
 

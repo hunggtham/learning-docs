@@ -1,6 +1,6 @@
 # Bất định (uncertainty / 불확실성) và Calibration trong AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bất định (uncertainty / 불확실성) và Calibration trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Xác suất (probability / 확률) đầu ra (output / 출력) không tự động là Confidence thật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Discrimination và Calibration** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Uncertainty và calibration trong AI**. Route đi từ predictive scores → aleatoric/epistemic uncertainty → discrimination versus calibration → reliability diagrams → threshold and decision risk, để confidence được kiểm tra bằng kết quả thực tế.
 
 Một mô hình không chỉ cần dự đoán đúng mà còn cần biểu diễn **mức độ chắc chắn** một cách đáng tin. **bất định (uncertainty / 불확실성)** và **hiệu chỉnh xác suất (calibration / 보정)** giúp biến score thành thông tin hữu ích cho decision-making.
 
