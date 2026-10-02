@@ -1,6 +1,6 @@
 # 1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Asian Financial Crisis như kiểm thử sức chịu tải (stress test / 스트레스 테스트)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Corporate restructuring và labor thị trường (market / 시장)** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**. Route đi từ 1997 crisis như stress test → corporate restructuring và labor market → digitalization, platforms và households → Hallyu, cultural export và branding → di sản thể chế tới 2010s.
 
 ## Asian Financial Crisis như kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 

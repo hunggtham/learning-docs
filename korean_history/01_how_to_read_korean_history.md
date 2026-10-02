@@ -1,6 +1,6 @@
 # Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lịch sử không phải cơ sở dữ liệu (database / 데이터베이스) của sự kiện** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**. Route đi từ source và chronology → myth/memory và narrative → causation, mechanism và counterfactual → comparison, uncertainty và evidence → viết kết luận có phạm vi, để lịch sử không bị biến thành danh sách sự kiện.
 
 ## Lịch sử không phải cơ sở dữ liệu (database / 데이터베이스) của sự kiện
 

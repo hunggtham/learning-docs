@@ -1,6 +1,6 @@
 # Tiền sử và các nhà nước sớm: từ settlement đến political organization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ công cụ đá đến xã hội định cư** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bronze Age và quyền lực vật chất** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**. Route đi từ công cụ đá và mobility → Neolithic settlement, agriculture và storage → Bronze Age, metallurgy và hierarchy → early states, property và power → giới hạn của cách đọc tiến hóa tuyến tính.
 
 ## Từ công cụ đá đến xã hội định cư
 

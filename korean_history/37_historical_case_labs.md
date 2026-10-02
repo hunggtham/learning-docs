@@ -1,6 +1,6 @@
 # Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cách dùng xưởng đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lab 1 — Gyeongju, thế kỷ VII–VIII: một kinh đô được nuôi bằng mạng lưới** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**. Route đi từ cách dùng case lab → Gyeongju và mạng kinh đô → land reform/commerce, crisis, technology và migration → Việt Nam cùng thời và di tích hôm nay → nối mốc với người chịu tác động, để lịch sử đi từ timeline tới đời sống.
 
 ## Cách dùng xưởng đọc
 

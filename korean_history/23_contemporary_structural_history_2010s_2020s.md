@@ -1,6 +1,6 @@
 # 2010s–2020s: lịch sử của những chuyển đổi cấu trúc
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao một giai đoạn rất gần vẫn có thể học như lịch sử?** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Demographic chuyển tiếp (transition / 전이)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**. Route đi từ cách đọc recent history → demography, housing và labor → platform economy, geopolitics và cultural export → COVID/structural shocks → phân biệt dữ kiện gần và ý nghĩa dài hạn.
 
 ## Vì sao một giai đoạn rất gần vẫn có thể học như lịch sử?
 

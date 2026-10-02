@@ -1,6 +1,6 @@
 # Quy ước tên riêng Việt–Hàn–Anh
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quy ước tên riêng Việt–Hàn–Anh**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bảng tra nhanh** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tên địa điểm và thiết chế trong các companion mới** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quy ước tên riêng Việt–Hàn–Anh**. Route đi từ quick lookup → tên người, địa điểm, triều đại và thiết chế → nguyên tắc dịch Việt/Hàn/Anh → companion chapter và consistency checks → xử lý tên có nhiều cách phiên âm, để thuật ngữ hỗ trợ việc đọc chứ không tạo nhầm lẫn.
 
 Tên người, địa điểm, triều đại, sự kiện, văn bản, công trình và thiết chế quan trọng được ghi lần đầu theo mẫu:
 

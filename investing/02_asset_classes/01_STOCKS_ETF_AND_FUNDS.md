@@ -1,7 +1,6 @@
 # Cổ phiếu, ETF và quỹ đầu tư
 
-> **Mạch đọc:** Đặt **Cổ phiếu, ETF và quỹ đầu tư** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Cổ phiếu phổ thông là quyền lợi còn lại** sang **2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cổ phiếu, ETF và quỹ đầu tư**. Route đi từ total return và three-layer stock example → common stock/residual claim → ETFs, index mechanics và funds → liquidity, fees, tax và tracking risk → chọn công cụ theo quyền lợi kinh tế.
 
 > Chương này giải thích cổ phiếu và quỹ từ bản chất quyền sở hữu tới cách triển khai qua ETF. Mục tiêu là nhìn xuyên tên sản phẩm để hiểu tài sản cơ sở, quyền lợi của cổ đông, cơ chế chỉ số, thanh khoản, chi phí và rủi ro thực tế.
 
@@ -40,11 +39,15 @@ Tổng lợi suất ≈ tăng trưởng lợi nhuận trên mỗi cổ phiếu
 
 Ví dụ này chỉ minh họa cơ chế; không dùng một P/E đơn lẻ để định giá mọi doanh nghiệp.
 
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **0. Ví dụ đọc lợi nhuận cổ phiếu bằng ba lớp** cho ta quy tắc; **1. Cổ phiếu phổ thông là quyền lợi còn lại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. Cổ phiếu phổ thông là quyền lợi còn lại
 
 Người sở hữu cổ phiếu phổ thông là chủ sở hữu phần còn lại (residual owner). Sau khi doanh nghiệp trả lương, nhà cung cấp, thuế, lãi vay và nghĩa vụ với chủ nợ, phần giá trị còn lại thuộc cổ đông.
 
 Điều này tạo tiềm năng tăng trưởng lớn nhưng cũng khiến cổ đông chịu tổn thất đầu tiên khi doanh nghiệp thất bại.
+
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** tiếp nhận điểm tựa từ **1. Cổ phiếu phổ thông là quyền lợi còn lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Vốn hóa thị trường và free float** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
@@ -58,6 +61,8 @@ EV ≈ Equity Value + Net Debt + Other Senior Claims - Non-operating Assets
 
 Không thể so P/E và EV/EBITDA như thể chúng đo cùng một lớp giá trị.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **3. Vốn hóa thị trường và free float** tiếp nhận điểm tựa từ **2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Basic và diluted shares** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Vốn hóa thị trường và free float
 
 Vốn hóa thị trường:
@@ -70,11 +75,15 @@ Vốn hóa theo free float chỉ tính phần cổ phiếu thực sự có thể
 
 Doanh nghiệp có thị trường (market / 시장) cap lớn nhưng phần lớn cổ phiếu do cổ đông kiểm soát nắm giữ có thể có free float nhỏ hơn nhiều.
 
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **4. Basic và diluted shares** tiếp nhận điểm tựa từ **3. Vốn hóa thị trường và free float** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. EPS và tăng trưởng trên mỗi cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Basic và diluted shares
 
 Số cổ phiếu cơ bản chỉ tính cổ phiếu hiện tại. Số cổ phiếu pha loãng (diluted shares) xem thêm quyền chọn nhân viên, RSU, trái phiếu chuyển đổi và các công cụ có thể tạo cổ phiếu mới.
 
 Định giá trên mỗi cổ phiếu nên nhìn số pha loãng khi khả năng chuyển đổi có ý nghĩa.
+
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **5. EPS và tăng trưởng trên mỗi cổ phiếu** tiếp nhận điểm tựa từ **4. Basic và diluted shares** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cổ tức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. EPS và tăng trưởng trên mỗi cổ phiếu
 
@@ -88,11 +97,15 @@ Doanh thu và lợi nhuận tổng có thể tăng trong khi EPS tăng chậm n�
 
 Nhà đầu tư sở hữu **một phần trên mỗi cổ phiếu**, không sở hữu con số lợi nhuận tổng của công ty.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **6. Cổ tức** tiếp nhận điểm tựa từ **5. EPS và tăng trưởng trên mỗi cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Mua lại cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Cổ tức
 
 Cổ tức là tiền mặt được phân phối từ doanh nghiệp sang cổ đông. Giá thường điều chỉnh quanh ngày không hưởng quyền, nên cổ tức không phải tiền miễn phí.
 
 Một doanh nghiệp trả cổ tức cao nhưng không còn khả năng tái đầu tư hiệu quả có kinh tế khác doanh nghiệp trả cổ tức thấp nhưng tái đầu tư ở ROIC rất cao.
+
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **7. Mua lại cổ phiếu** tiếp nhận điểm tựa từ **6. Cổ tức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Pha loãng và phát hành thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Mua lại cổ phiếu
 
@@ -107,11 +120,15 @@ Giá mua hợp lý
 
 Mua lại chỉ để bù lượng cổ phiếu phát hành qua SBC không tạo cùng mức lợi ích cho cổ đông cũ.
 
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **8. Pha loãng và phát hành thêm** tiếp nhận điểm tựa từ **7. Mua lại cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Chia tách cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Pha loãng và phát hành thêm
 
 Phát hành thêm có thể cần thiết để tài trợ tăng trưởng hoặc củng cố vốn, nhưng làm giảm tỷ lệ sở hữu của cổ đông hiện hữu nếu giá trị tạo thêm không đủ lớn.
 
 Phát hành quyền mua, cổ phiếu ưu đãi chuyển đổi, option và warrant đều cần được đưa vào phân tích pha loãng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **9. Chia tách cổ phiếu** tiếp nhận điểm tựa từ **8. Pha loãng và phát hành thêm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Hành động doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Chia tách cổ phiếu
 
@@ -119,11 +136,15 @@ Chia tách làm tăng số lượng cổ phiếu và giảm giá trên mỗi c�
 
 Tâm lý hoặc khả năng tiếp cận của nhà đầu tư cá nhân có thể thay đổi, nhưng bản chất kinh tế không đổi tại thời điểm chia tách.
 
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **10. Hành động doanh nghiệp** tiếp nhận điểm tựa từ **9. Chia tách cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Quyền biểu quyết và quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Hành động doanh nghiệp
 
 Ngoài chia tách và cổ tức, còn có sáp nhập, tách doanh nghiệp, phát hành quyền mua, cổ tức đặc biệt, hủy cổ phiếu quỹ và thay đổi cấu trúc vốn.
 
 Mỗi hành động có thể ảnh hưởng số cổ phiếu, quyền biểu quyết, cơ sở thuế, chỉ số và hợp đồng phái sinh.
+
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **11. Quyền biểu quyết và quản trị** tiếp nhận điểm tựa từ **10. Hành động doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Stewardship và bỏ phiếu ủy quyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Quyền biểu quyết và quản trị
 
@@ -131,11 +152,15 @@ Cổ đông không chỉ nhận dòng tiền mà còn có quyền biểu quyết
 
 Nhà đầu tư cần kiểm tra quyền của cổ đông thiểu số, cơ chế bầu hội đồng quản trị và quyền lực của cổ đông kiểm soát.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **12. Stewardship và bỏ phiếu ủy quyền** tiếp nhận điểm tựa từ **11. Quyền biểu quyết và quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Chỉ số là tập hợp quy tắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Stewardship và bỏ phiếu ủy quyền
 
 Quỹ lớn có thể thực hiện vai trò quản trị chủ sở hữu (stewardship) thông qua bỏ phiếu ủy quyền, đối thoại với ban lãnh đạo và chính sách quản trị.
 
 Quỹ thụ động vẫn có quyền cổ đông dù không chủ động chọn từng cổ phiếu.
+
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **13. Chỉ số là tập hợp quy tắc** tiếp nhận điểm tựa từ **12. Stewardship và bỏ phiếu ủy quyền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Chỉ số theo vốn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Chỉ số là tập hợp quy tắc
 
@@ -151,17 +176,23 @@ Dữ liệu nào dùng để thêm / loại cổ phiếu?
 
 Tên “thị trường”, “AI”, “tăng trưởng” hay “giá trị” không đủ để hiểu exposure.
 
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **14. Chỉ số theo vốn hóa** tiếp nhận điểm tựa từ **13. Chỉ số là tập hợp quy tắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Chỉ số tỷ trọng bằng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Chỉ số theo vốn hóa
 
 Chỉ số theo vốn hóa thị trường đặt tỷ trọng lớn hơn vào doanh nghiệp có thị trường (market / 시장) cap lớn hơn. Ưu điểm là chi phí giao dịch thấp và tự điều chỉnh theo quy mô thị trường.
 
 Nhược điểm là có thể trở nên tập trung khi một số doanh nghiệp tăng giá rất mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **15. Chỉ số tỷ trọng bằng nhau** tiếp nhận điểm tựa từ **14. Chỉ số theo vốn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Rủi ro tập trung chỉ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Chỉ số tỷ trọng bằng nhau
 
 Chỉ số tỷ trọng bằng nhau (equal weight) giảm tập trung ở công ty lớn nhưng cần tái cân bằng thường xuyên hơn, tạo turnover và nghiêng về doanh nghiệp nhỏ hơn.
 
 Nó không đơn giản là “phiên bản tốt hơn” của chỉ số vốn hóa; đó là exposure khác.
+
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **16. Rủi ro tập trung chỉ số** tiếp nhận điểm tựa từ **15. Chỉ số tỷ trọng bằng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. ETF là cấu trúc quỹ giao dịch trên sở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Rủi ro tập trung chỉ số
 
@@ -179,11 +210,15 @@ Contribution to index return
 
 KOSPI hoặc S&P 500 tăng không đồng nghĩa cổ phiếu trung vị cũng tăng tương ứng.
 
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **17. ETF là cấu trúc quỹ giao dịch trên sở** tiếp nhận điểm tựa từ **16. Rủi ro tập trung chỉ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. NAV và iNAV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. ETF là cấu trúc quỹ giao dịch trên sở
 
 ETF cho phép mua bán chứng chỉ quỹ trong phiên như cổ phiếu. ETF có thể theo chỉ số hoặc chiến lược chủ động.
 
 Điều quan trọng là tài sản cơ sở và phương pháp quản lý, không phải chữ ETF.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **18. NAV và iNAV** tiếp nhận điểm tựa từ **17. ETF là cấu trúc quỹ giao dịch trên sở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Cơ chế tạo và mua lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. NAV và iNAV
 
@@ -191,11 +226,15 @@ Giá trị tài sản ròng (NAV) là giá trị tài sản trừ nghĩa vụ tr
 
 Nếu tài sản cơ sở đóng cửa hoặc ít giao dịch, iNAV có thể cũ.
 
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **18. NAV và iNAV** xác định đầu vào; **19. Cơ chế tạo và mua lại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. Thanh khoản ETF có hai lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Cơ chế tạo và mua lại
 
 Thành viên tạo lập (Authorized Participant, AP) có thể tạo hoặc mua lại lô ETF bằng rổ tài sản hoặc tiền mặt theo quy tắc.
 
 Cơ chế này giúp nhà tạo lập chênh lệch giá và giữ giá ETF gần giá trị tài sản cơ sở trong điều kiện bình thường.
+
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **19. Cơ chế tạo và mua lại** xác định đầu vào; **20. Thanh khoản ETF có hai lớp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. Premium và discount** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Thanh khoản ETF có hai lớp
 
@@ -210,11 +249,15 @@ Khối lượng giao dịch ETF thấp không luôn đồng nghĩa ETF không th
 
 Ngược lại ETF có khối lượng cao nhưng tài sản cơ sở kém thanh khoản vẫn có thể gặp spread lớn trong căng thẳng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **21. Premium và discount** tiếp nhận điểm tựa từ **20. Thanh khoản ETF có hai lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Tracking Difference và Tracking lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Premium và discount
 
 Giá ETF có thể cao hơn NAV (premium) hoặc thấp hơn NAV (discount).
 
 Khi thị trường cơ sở đóng cửa, chênh lệch có thể phản ánh quá trình khám phá giá nhanh hơn NAV cũ thay vì cơ hội chênh lệch giá chắc chắn.
+
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **22. Tracking Difference và Tracking lỗi (error / 오류)** tiếp nhận điểm tựa từ **21. Premium và discount** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Sao chép vật lý và tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Tracking Difference và Tracking lỗi (error / 오류)
 
@@ -226,11 +269,15 @@ Khi đã hiểu NAV, premium/discount và cơ chế tạo–mua lại, ta cần 
 
 Nguyên nhân gồm phí, thuế, tiền mặt, tối ưu hóa rổ, cho vay chứng khoán, chi phí tái cân bằng và FX hedge.
 
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **23. Sao chép vật lý và tổng hợp** gom các mảnh từ **22. Tracking Difference và Tracking lỗi (error / 오류)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **24. Cho vay chứng khoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Sao chép vật lý và tổng hợp
 
 ETF vật lý nắm toàn bộ hoặc mẫu tài sản cơ sở. ETF tổng hợp (synthetic ETF) dùng hợp đồng phái sinh để nhận lợi suất chỉ số.
 
 Cấu trúc tổng hợp có thể giảm lỗi bám trong một số thị trường nhưng thêm rủi ro đối tác và tài sản bảo đảm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **24. Cho vay chứng khoán** gom các mảnh từ **23. Sao chép vật lý và tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **25. ETF có phòng vệ và không phòng vệ FX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Cho vay chứng khoán
 
@@ -238,11 +285,15 @@ Quỹ có thể cho vay cổ phiếu để kiếm phí. Thu nhập này có th�
 
 Cần kiểm tra tỷ lệ chia thu nhập, chất lượng tài sản thế chấp và giới hạn người vay.
 
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **25. ETF có phòng vệ và không phòng vệ FX** tiếp nhận điểm tựa từ **24. Cho vay chứng khoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. ETF đòn bẩy và nghịch đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. ETF có phòng vệ và không phòng vệ FX
 
 ETF niêm yết KRW nhưng nắm tài sản USD không phòng vệ vẫn có exposure USD.
 
 ETF phòng vệ dùng forward/swap để giảm biến động FX, đổi lại có chi phí carry, basis, giao dịch và sai lệch phòng vệ.
+
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **26. ETF đòn bẩy và nghịch đảo** tiếp nhận điểm tựa từ **25. ETF có phòng vệ và không phòng vệ FX** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Quỹ mở truyền thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. ETF đòn bẩy và nghịch đảo
 
@@ -255,11 +306,15 @@ Biến động cao + qua lại nhiều
 
 Không nên kỳ vọng lợi suất một tháng luôn bằng “2 × lợi suất chỉ số tháng”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **27. Quỹ mở truyền thống** tiếp nhận điểm tựa từ **26. ETF đòn bẩy và nghịch đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Quỹ chủ động và quỹ thụ động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Quỹ mở truyền thống
 
 Quỹ mở được mua/bán theo NAV sau thời điểm chốt trong ngày thay vì giao dịch liên tục trên sở.
 
 Ưu điểm và nhược điểm khác ETF về spread, thuế, khả năng giao dịch và mức minh bạch trong phiên.
+
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **28. Quỹ chủ động và quỹ thụ động** tiếp nhận điểm tựa từ **27. Quỹ mở truyền thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Active Share** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Quỹ chủ động và quỹ thụ động
 
@@ -267,11 +322,15 @@ Quỹ thụ động tuân theo quy tắc chỉ số. Quỹ chủ động cho nh�
 
 Quỹ chủ động chỉ đáng trả phí cao hơn nếu lợi thế sau phí và thuế đủ bền vững.
 
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **29. Active Share** tiếp nhận điểm tựa từ **28. Quỹ chủ động và quỹ thụ động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Direct Indexing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Active Share
 
 Active Share đo mức danh mục chủ động khác benchmark về tỷ trọng. Nó không đo trực tiếp chất lượng.
 
 Một quỹ có Active Share thấp nhưng phí cao có thể là “closet chỉ mục (index / 인덱스)”. Một quỹ Active Share cao có thể rất khác benchmark nhưng vẫn hoạt động kém.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **30. Direct Indexing** tiếp nhận điểm tựa từ **29. Active Share** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Quỹ của quỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Direct Indexing
 
@@ -279,11 +338,15 @@ Một quỹ có Active Share thấp nhưng phí cao có thể là “closet ch�
 
 Đổi lại, cần công nghệ, vốn, nhiều giao dịch và quản trị hành động doanh nghiệp.
 
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **31. Quỹ của quỹ** tiếp nhận điểm tựa từ **30. Direct Indexing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. ETF theo chủ đề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Quỹ của quỹ
 
 Fund-of-funds nắm các quỹ khác. Nó đơn giản hóa phân bổ nhưng có thể tạo lớp phí, trùng lặp holdings và khó nhìn xuyên factor exposure.
 
 Cần tính tổng chi phí tới tài sản cơ sở.
+
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **32. ETF theo chủ đề** tiếp nhận điểm tựa từ **31. Quỹ của quỹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Trùng lặp ẩn giữa các ETF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 32. ETF theo chủ đề
 
@@ -299,11 +362,15 @@ Turnover cao
 
 Nhãn marketing không phải định nghĩa kinh tế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **33. Trùng lặp ẩn giữa các ETF** tiếp nhận điểm tựa từ **32. ETF theo chủ đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Tổng chi phí sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. Trùng lặp ẩn giữa các ETF
 
 Hai ETF tên khác nhau có thể cùng nắm nhiều cổ phiếu lớn hoặc cùng mang beta công nghệ/tăng trưởng.
 
 Nên phân tích holdings và factor exposure thay vì chỉ nhìn tên quỹ.
+
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **34. Tổng chi phí sở hữu** tiếp nhận điểm tựa từ **33. Trùng lặp ẩn giữa các ETF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Checklist phân tích ETF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 34. Tổng chi phí sở hữu
 
@@ -321,6 +388,8 @@ Chi phí cơ hội
 ```
 
 Quỹ có phí quản lý thấp hơn chưa chắc cho lợi suất ròng tốt hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Cổ phiếu, ETF và quỹ đầu tư**, **35. Checklist phân tích ETF** tiếp nhận điểm tựa từ **34. Tổng chi phí sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. Checklist phân tích ETF
 
@@ -343,6 +412,8 @@ Lending
 Hành vi trong giai đoạn căng thẳng
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cổ phiếu, ETF và quỹ đầu tư**, **36. Mô hình tư duy cuối cùng** gom các mảnh từ **35. Checklist phân tích ETF** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đi tiếp theo một đường duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. Mô hình tư duy cuối cùng
 
 Sơ đồ cuối cùng bóc ETF thành từng lớp kinh tế: quyền sở hữu, quy tắc chỉ số, cấu trúc quỹ, cơ chế giao dịch và kết quả ròng sau chi phí. Hãy dùng nó để giải thích một ETF cụ thể bằng câu hoàn chỉnh trước khi chuyển sang chapter doanh nghiệp hoặc danh mục.
@@ -356,6 +427,8 @@ Kết quả thực → Tài sản cơ sở + FX + Chi phí + Thuế + Thực thi
 ```
 
 Mục tiêu là nhìn xuyên lớp bao bì để hiểu chính xác mình đang sở hữu exposure nào và đang trả chi phí gì để sở hữu nó.
+
+> **Chuyển mạch:** Trong **Cổ phiếu, ETF và quỹ đầu tư**, **Đi tiếp theo một đường duy nhất** gom các mảnh từ **36. Mô hình tư duy cuối cùng** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Đi tiếp theo một đường duy nhất
 
@@ -374,3 +447,5 @@ ETF / danh mục
 ```
 
 Nếu muốn xem bản đơn giản trước khi tự làm, dùng [Hồ sơ mẫu đã điền — Cổ phiếu xuất khẩu và Forex](../STOCK_FOREX_WORKED_EXAMPLE.md). Nếu muốn đi sâu, dùng [Advanced Practice Workbook — Module 3](../ADVANCED_PRACTICE_WORKBOOK.md).
+
+> **Bàn giao:** Sau **Đi tiếp theo một đường duy nhất**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

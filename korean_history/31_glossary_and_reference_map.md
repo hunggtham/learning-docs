@@ -1,6 +1,6 @@
 # Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thuật ngữ lịch sử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nguồn nền khuyến nghị** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**. Route đi từ thuật ngữ và tên gọi → ngữ cảnh chapter → source nền khuyến nghị → cross-reference và ví dụ dùng → kiểm tra cách dịch, để glossary phục vụ đọc hiểu thay vì thay thế nội dung.
 
 ## Thuật ngữ lịch sử
 

@@ -1,6 +1,6 @@
 # Timeline và các mốc chính của lịch sử Hàn Quốc
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Timeline và các mốc chính của lịch sử Hàn Quốc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Cách dùng timeline với bốn neo** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Timeline và các mốc chính của lịch sử Hàn Quốc**. Route đi từ timeline như coordinate → four anchors và periodization → event, cause và structural change → quay về chapter gốc khi cần giải thích → dùng mốc để định vị thay vì thay thế lịch sử.
 
 Timeline này là coordinate để tra cứu, không phải bản thân lời giải thích lịch sử. Khi một mốc chưa rõ “vì sao”, quay về chapter tương ứng.
 
