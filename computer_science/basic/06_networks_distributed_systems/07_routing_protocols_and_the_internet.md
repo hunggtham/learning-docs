@@ -1,6 +1,6 @@
 # Routing protocols và Internet
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Routing protocols và Internet**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Forwarding khác routing** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Longest Prefix Match** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Routing protocols và Internet**. Route đi từ forwarding/longest-prefix match → distance-vector/link-state → autonomous systems/BGP → convergence/anycast → route security và traceroute, để control plane được phân biệt với data plane.
 
 Biết subnetting chưa đủ để hiểu Internet. Router cần học **đường nào dẫn tới prefix nào**, và ở quy mô toàn cầu không một controller duy nhất biết/tin mọi thứ. Routing protocols chia bài toán thành routing nội bộ một administrative lĩnh vực (domain / 도메인) và routing giữa các autonomous các hệ thống (systems / 시스템들).
 

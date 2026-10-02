@@ -1,6 +1,6 @@
 # DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc của URL** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DNS** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DNS, HTTP, TLS và một web request end-to-end**. Route đi từ URL/DNS → transport connection → TLS identity/keys → HTTP semantics → cache/proxy/load balancer, để một request được truy nguyên từ tên miền tới response.
 
 Gõ một URL trông như một thao tác đơn giản, nhưng trình duyệt (browser / 브라우저) phải phân giải tên miền, tìm đường mạng, thiết lập kết nối truyền tải và ngữ cảnh bảo mật, trao đổi HTTP, nhận dữ liệu rồi phân tích và hiển thị nội dung. Chương này dùng một yêu cầu web để nối nhiều tầng của hệ thống mạng.
 

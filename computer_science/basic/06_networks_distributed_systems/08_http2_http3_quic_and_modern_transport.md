@@ -1,6 +1,6 @@
 # HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **HTTP/2, HTTP/3, QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. HTTP/1.1 và giới hạn của connection-level parallelism** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **2. HTTP/2: nhị phân (binary / 이진) framing và nhiều stream trên một TCP liên kết (connection / 연결)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **HTTP/2, HTTP/3, QUIC và modern transport**. Route đi từ HTTP/1.1 connection limits → HTTP/2 framing/multiplexed streams → QUIC over UDP → TLS handshake/loss recovery → congestion/pacing và observability, để protocol version được nối với latency và failure.
 
 HTTP/1.1 over TCP/TLS vẫn là nền lịch sử quan trọng, nhưng web hiện đại phát triển để giảm liên kết (connection / 연결) overhead, multiplex requests tốt hơn và cải thiện hành vi (behavior / 동작) khi packet mất mát (loss / 손실) xảy ra. Muốn hiểu HTTP/2 và HTTP/3, cần tách ba lớp thường bị trộn lẫn: **HTTP ngữ nghĩa (semantics / 의미론)**, **stream multiplexing**, và **vận chuyển (transport / 전송) delivery/congestion hành vi (behavior / 동작)**.
 

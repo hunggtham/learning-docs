@@ -1,6 +1,6 @@
 # Testing, xác minh (verification / 확인) và debugging
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Testing, xác minh (verification / 확인) và debugging**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiểm thử (test / 테스트) là mẫu (sample / 표본), specification là thuộc tính (property / 속성)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Testing, verification và debugging**. Route đi từ specification/property → unit/integration/system tests → determinism/static/formal checks → hypothesis-driven debugging → logs/traces và reproduction, để bằng chứng xác minh dẫn tới sửa lỗi.
 
 Software tính đúng đắn (correctness / 정확성) không thể dựa vào cảm giác “mã (code / 코드) nhìn đúng”. Ta cần nhiều techniques với strengths khác nhau: kiểu (type / 타입) checking, static phân tích (analysis / 분석), đơn vị (unit / 단위)/thuộc tính (property / 속성)/tích hợp (integration / 통합) tests, formal xác minh (verification / 확인), thời gian chạy (runtime / 런타임) assertions, khả năng quan sát (observability / 관측 가능성) và systematic debugging.
 

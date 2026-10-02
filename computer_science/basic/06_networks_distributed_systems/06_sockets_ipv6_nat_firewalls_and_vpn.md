@@ -1,6 +1,6 @@
 # Sockets, IPv6, NAT, firewalls và VPN
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sockets, IPv6, NAT, firewalls và VPN**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Socket là giao diện (interface / 인터페이스) giữa ứng dụng (application / 애플리케이션) và mạng (network / 네트워크) ngăn xếp (stack / 스택)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sockets, IPv6, NAT, firewalls và VPN**. Route đi từ socket/API và port → IPv6 addressing → NAT state → firewall policy → VPN overlay → MTU/buffer backpressure, để boundary ứng dụng–mạng được truy theo state thực.
 
 IP/TCP mô tả mạng (network / 네트워크) protocols, nhưng applications cần một programming lớp trừu tượng (abstraction / 추상화) để dùng chúng. Socket (소켓) là endpoint lớp trừu tượng (abstraction / 추상화) nối tiến trình (process / 프로세스) với vận chuyển (transport / 전송)/mạng (network / 네트워크) ngăn xếp (stack / 스택). Từ đó, các mechanisms như NAT, firewall và VPN thay đổi đường đi hoặc trust ranh giới (boundary / 경계) của packets.
 

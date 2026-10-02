@@ -1,6 +1,6 @@
 # Replication, partitioning và consensus
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Replication, partitioning và consensus**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Replication goals** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Quorum intuition** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Replication, partitioning và consensus**. Route đi từ replication goals/quorum → partitioning/rebalancing → consensus/Raft → leader election/reconfiguration → replication-versus-backup, để authority và availability được phân biệt rõ.
 
 Scaling and độ tin cậy (reliability / 신뢰성) often require dữ liệu (data / 데이터) across multiple nodes. Two orthogonal moves are **replication** — multiple copies of same logical dữ liệu (data / 데이터) — and **partitioning/sharding** — split different dữ liệu (data / 데이터) across nodes. Once multiple replicas may accept/observe changes, thứ tự (ordering / 순서) and agreement become central.
 

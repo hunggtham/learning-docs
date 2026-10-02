@@ -1,6 +1,6 @@
 # Mô hình đe dọa và các nguyên tắc bảo mật
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình đe dọa và các nguyên tắc bảo mật**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các thuộc tính bảo mật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình đe dọa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Threat models và security principles**. Route đi từ security properties → assets/actors/trust boundary → least privilege/defense in depth → secure defaults và attack surface, để biện pháp bảo vệ xuất phát từ mối đe dọa cụ thể.
 
 Bảo mật (security / 보안) không bắt đầu từ mã hóa. Nó bắt đầu bằng câu hỏi: **ta đang bảo vệ tài sản nào, khỏi tác nhân nào, qua bề mặt tấn công nào và thuộc tính nào phải được giữ vững?** Nếu không có **mô hình đe dọa (threat model)**, từ “an toàn” quá mơ hồ để kiểm chứng.
 

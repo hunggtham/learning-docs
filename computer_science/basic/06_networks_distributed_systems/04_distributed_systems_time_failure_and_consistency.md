@@ -1,6 +1,6 @@
 # Thời gian, lỗi và tính nhất quán trong hệ thống phân tán
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lỗi một phần** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Không có thời gian toàn cục đơn giản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Time, failure và consistency trong distributed systems**. Route đi từ partial failure → clock/causality → consistency models → CAP → safety/liveness và failure detectors, để mọi guarantee được đặt trong giới hạn quan sát và thời gian.
 
 **hệ thống phân tán (distributed system / 분산 시스템)** gồm nhiều thành phần chạy trên các máy hoặc tiến trình khác nhau và giao tiếp qua mạng. Điều làm nó khó không chỉ là “có nhiều máy”, mà là **không có bộ nhớ chia sẻ hoàn hảo, không có đồng hồ toàn cục hoàn hảo, độ trễ thông điệp không có giới hạn chắc chắn và lỗi có thể chỉ xảy ra ở một phần hệ thống**.
 

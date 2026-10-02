@@ -1,6 +1,6 @@
 # Bộ nhớ (memory / 메모리), web và injection vulnerabilities
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bộ nhớ (memory / 메모리) corruption** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Memory, web và injection vulnerabilities**. Route đi từ memory corruption → injection/XSS/CSRF/SSRF → path/deserialization/race → dependency/supply-chain → input validation, để mỗi lỗi được nối với trust boundary và exploit path.
 
 Software vulnerability (취약점 / lỗ hổng) xuất hiện khi attacker-controlled đầu vào (input / 입력)/trạng thái (state / 상태) vượt qua giả định (assumption / 가정) của program và đạt tác động (effect / 효과) không được phép. Học từng CVE không đủ; cần nhận ra recurring structures: bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) violations, mã (code / 코드)/dữ liệu (data / 데이터) confusion, trust-boundary kiểm tra hợp lệ (validation / 검증) failures và authorization gaps.
 

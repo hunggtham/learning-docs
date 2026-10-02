@@ -1,6 +1,6 @@
 # Danh tính, xác thực và phân quyền
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Danh tính, xác thực và phân quyền**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Danh tính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Xác thực** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Identity, authentication và authorization**. Route đi từ identity claims → authentication factors → authorization policy/scope → sessions/cookies → OAuth/OIDC và service identity, để “ai là ai” được tách khỏi “được làm gì”.
 
 Hệ thống danh tính cần trả lời ba câu hỏi khác nhau: **đây là ai hoặc thực thể nào, họ chứng minh danh tính bằng gì, và họ được phép làm gì?** Nhầm lẫn giữa **xác thực (authentication)** và **phân quyền (authorization)** là nguyên nhân phổ biến của lỗi bảo mật.
 

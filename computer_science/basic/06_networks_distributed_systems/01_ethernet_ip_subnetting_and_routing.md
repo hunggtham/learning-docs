@@ -1,6 +1,6 @@
 # Ethernet, IP, subnetting và routing
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ethernet, IP, subnetting và routing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ethernet và cục bộ (local / 로컬) link** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **ARP và Neighbor Discovery** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ethernet, IP, subnetting và routing**. Route đi từ local link/ARP-ND → IP prefix/subnet → routing table/longest-prefix match → TTL, NAT và ICMP, để forwarding được nối với boundary của từng mạng.
 
 Để packet đi từ một host tới host khác, hệ thống (system / 시스템) phải giải hai bài toán: delivery trong cục bộ (local / 로컬) link và forwarding qua nhiều networks. Ethernet/Wi‑Fi và IP giải ở scopes khác nhau.
 
