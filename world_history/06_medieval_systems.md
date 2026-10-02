@@ -1,7 +1,6 @@
 # 06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối
 
-> **Mạch đọc:** Đặt **06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cơ chế phân tầng quyền lực** sang **Thương mại và tín dụng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06 — Medieval political/economic systems: phân mảnh, trung gian và kết nối**. Route đi từ layered authority → land/labor relations → religious and merchant intermediaries → cities/trade → regional comparison, để phân mảnh vẫn tạo ra kết nối.
 
 “Trung cổ” không phải một khoảng trống giữa Rome và hiện đại. Ở nhiều vùng, sovereignty phân tầng: village, city, lord, dynasty, caliphate, church, lineage, merchant guild và nomadic confederation cùng chia quyền.
 
@@ -36,31 +35,19 @@ stock: land rights, herds, fortifications, religious endowments, skills
 flow: rent, tribute, pilgrims, grain, silver, enslaved people, messages
 ```
 
-
-> **Chuyển mạch:** Từ **Cơ chế phân tầng quyền lực**, ta sang **trường hợp (case / 사례) comparison** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối**, sau khi thấy quy trình trong **Cơ chế phân tầng quyền lực**, **Trường hợp (case / 사례) comparison** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) comparison
 
 Mongol networks cho thấy conquest có thể mở corridor nhưng cũng gây phá huỷ; các caliphate/kingdom vùng Ấn Độ cho thấy legal pluralism; các đô thị châu Âu, Tây Phi và Đông Nam Á cho thấy merchant power và cổng (port / 포트) ecology tạo hình thái chính trị khác nhau. Không nên dùng “trung cổ” để biến các thế giới này thành một thời đại đồng nhất.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) comparison**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Ai có quyền xử lý tranh chấp và ở cấp nào?
-2. Một corridor mở rộng trade nhưng chuyển rủi ro disease/war ra sao?
-3. Sau plague, nhóm nào có bargaining power tăng và nhóm nào bị cưỡng chế mạnh hơn?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối**, **Trường hợp (case / 사례) comparison** cho ta quy tắc; **Bằng chứng, giới hạn và cầu nối** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Charter, waqf/temple bản ghi (record / 레코드), merchant letters, tax lists, cemetery bằng chứng (evidence / 증거) và climate proxies phải được đối chiếu vì mỗi archive có độ lệch (bias / 편향) địa lý và giai cấp. Counterfactual: nếu corridor có nhiều nút (node / 노드) thay thế, plague/war shock có thể giảm centrality của một thành phố thay vì làm sụp toàn mạng. Cầu nối sang 07 là **credit, gunpowder, cổng (port / 포트) và centralization** tăng khả năng huy động vượt qua jurisdiction địa phương.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission
 
@@ -80,4 +67,4 @@ Mongol conquest vừa phá hủy vừa nối corridor; plague đi theo chính m�
 
 Religious law, waqf/temple endowment và guild practice tạo institutional bộ nhớ (memory / 메모리); súng, giấy và kỹ thuật hàng hải về sau được hấp thụ trên nền đó. Nơi có nhiều nút (node / 노드) thay thế sẽ phục hồi nhanh hơn sau chiến tranh; nơi một cổng (port / 포트) độc quyền, shock tạo lock-in nợ và cưỡng chế. Counterfactual về “nếu không có plague” chỉ có ý nghĩa khi nêu rõ labor, rent và health cơ chế (mechanism / 메커니즘).
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

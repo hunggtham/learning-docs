@@ -1,7 +1,6 @@
 # 03 — Early states and civilizations: ghi chép, thuế và quy mô
 
-> **Mạch đọc:** Đặt **03 — Early states and civilizations: ghi chép, thuế và quy mô** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Luận đề** sang **Cách đọc “sụp đổ”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03 — Early states and civilizations: ghi chép, thuế và quy mô**. Route đi từ surplus/urbanization → writing/taxation → coercion and administration → trade/war → collapse as reconfiguration, để nhà nước nối với năng lực tổ chức.
 
 ## Luận đề
 
@@ -23,15 +22,13 @@ surplus + chokepoint nước/đất
 - **Demography:** urbanization tăng phân công nhưng dễ tạo epidemic và phụ thuộc vào vùng cung lương.
 - **Ideas:** kingship thiêng, trật tự vũ trụ và luật công khai tạo legitimacy, không xóa được thương lượng xã hội.
 
-
-> **Chuyển mạch:** Từ **Luận đề**, ta sang **Cách đọc “sụp đổ”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **Cách đọc “sụp đổ”** tiếp nhận điểm tựa từ **Luận đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà nước làm được gì và phải trả giá gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đọc “sụp đổ”
 
 Collapse hiếm khi là một ngày tận thế. Hãy tách mất trung tâm, giảm dân số, đứt trade, đổi elite và continuity ở làng/khu vực; thường có tái cấu trúc thay vì biến mất hoàn toàn.
 
-
-> **Chuyển mạch:** Từ **Cách đọc “sụp đổ”**, ta sang **Nhà nước làm được gì và phải trả giá gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **Nhà nước làm được gì và phải trả giá gì?** tiếp nhận điểm tựa từ **Cách đọc “sụp đổ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **So sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhà nước làm được gì và phải trả giá gì?
 
@@ -42,8 +39,6 @@ Nhà nước có thể chuẩn hoá đo lường, bảo vệ tuyến vận chuy�
 Chữ viết, con dấu, lịch và đơn vị đo làm giảm chi phí ghi nhận nhưng không làm dữ liệu trung tính. Sổ thuế phản ánh thứ nhà nước muốn nhìn thấy; phụ nữ, lao động không chính thức, người lệ thuộc và vùng ngoài sổ thường bị mờ. Archive survival vì vậy là một selection cơ chế (mechanism / 메커니즘).
 
 ### Stock/luồng (flow / 흐름) và thất bại (failure / 실패) modes
-Phần “Stock/luồng (flow / 흐름) và thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 stock: granary, canals, walls, trained scribes, legitimacy
@@ -53,27 +48,16 @@ failure: drought → shortfall → debt/coercion → flight/rebellion
 
 Một trung tâm có thể giàu nhưng dễ gãy nếu luồng (flow / 흐름) lương thực phụ thuộc một corridor. Ngược lại, mạng nhiều trung tâm nhỏ có thể kém hoành tráng nhưng resilient hơn nhờ redundancy.
 
-
-> **Chuyển mạch:** Từ **Nhà nước làm được gì và phải trả giá gì?**, ta sang **So sánh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **Nhà nước làm được gì và phải trả giá gì?** đã nêu tiêu chí phân biệt, còn **So sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## So sánh
 
 Mesopotamia cho thấy quản trị thành bang và cạnh tranh basin; Ai Cập cho thấy chu kỳ lũ và thung lũng dài; Indus nhấn mạnh đô thị quy hoạch nhưng bằng chứng về monarchy còn hạn chế; Shang/Zhou ghép kinship, ritual và bronze; Andes phát triển labor tax và vertical ecology mà không cần chữ viết alphabet. So sánh phải dựa trên chức năng, không dựa trên việc “có vua hay không”.
 
-
-> **Chuyển mạch:** Từ **So sánh**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Khi nào chữ viết là công cụ của merchant/temple thay vì triều đình?
-2. Collapse làm mất luồng (flow / 흐름) nào trước: food, tax, trust hay military payroll?
-3. Có continuity nào ở hộ gia đình hoặc làng mà narrative triều đại bỏ qua?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **So sánh** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Administrative tablets, inscriptions, settlement layers, canals và bioarchaeology thường ưu tiên urban/elite visibility; household economy và vùng ngoài trung tâm phải suy luận thận trọng. Counterfactual: nếu kho trung tâm được thay bằng nhiều kho nhỏ, nhà nước có thể thu kém hơn nhưng chống shock tốt hơn. Cầu nối sang 04 là các nhà nước tìm cách chuyển **cục bộ (local / 로컬) extraction thành đế chế và trật tự công dân**.
 
-> **Bàn giao:** Sau **Bằng chứng, giới hạn và cầu nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bằng chứng, giới hạn và cầu nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

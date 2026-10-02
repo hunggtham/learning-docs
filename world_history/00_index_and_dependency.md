@@ -1,11 +1,8 @@
 # Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)
 
-> **Mạch đọc:** Đặt **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** sang **Câu hỏi xuyên suốt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Index và dependency map của World History**. Route đi từ period/region map → causal dependencies → recurring questions → chapter sequence → comparative cases, để người đọc biết mỗi giai đoạn nối vào cấu trúc nào.
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
-Phần “Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```mermaid
 graph TD
@@ -29,12 +26,9 @@ graph TD
   P --> Q[Post-Cold-War world]
 ```
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, ta sang **Câu hỏi xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Câu hỏi xuyên suốt** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Câu hỏi xuyên suốt
-Phần “Câu hỏi xuyên suốt” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Trục | Câu hỏi cơ chế |
 | --- | --- |
@@ -46,12 +40,9 @@ Phần “Câu hỏi xuyên suốt” nối kiến thức trước với nội d
 | Demography | Dân số, di cư, đô thị, dịch bệnh và cơ cấu tuổi biến đổi quyền lực ra sao? |
 | Ideas | Tôn giáo, khoa học, dân tộc, chủ quyền, giai cấp và nhân quyền làm hợp thức hoá hành động nào? |
 
-
-> **Chuyển mạch:** Từ **Câu hỏi xuyên suốt**, ta sang **Lộ trình đọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Lộ trình đọc** tiếp nhận điểm tựa từ **Câu hỏi xuyên suốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chapter map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lộ trình đọc
-Phần “Lộ trình đọc” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **Nền tảng vật chất:** 01 → 02 → 03.
 - **Đế chế và mạng ý tưởng:** 04 → 05 → 06.
@@ -62,12 +53,9 @@ Phần “Lộ trình đọc” nối kiến thức trước với nội dung s�
 
 Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, không khẳng định mọi xã hội trải qua cùng thứ tự hay cùng kết quả.
 
-
-> **Chuyển mạch:** Từ **Lộ trình đọc**, ta sang **Chapter map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Chapter map** tiếp nhận điểm tựa từ **Lộ trình đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài liệu điều hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chapter map
-Phần “Chapter map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | # | Giai đoạn | Chapter |
 | --- | --- | --- |
@@ -95,14 +83,11 @@ Phần “Chapter map” nối kiến thức trước với nội dung sắp đ�
 | 22 | nguồn (source / 소스) workbench | [Source workbench](22_source_workbench.md) |
 | 23 | Annotated bibliography | [Annotated bibliography](23_annotated_bibliography.md) |
 
-
-> **Chuyển mạch:** Từ **Chapter map**, ta sang **Tài liệu điều hướng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Tài liệu điều hướng** tiếp nhận điểm tựa từ **Chapter map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Tài liệu điều hướng
-Phần “Tài liệu điều hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [Learning Route](LEARNING_ROUTE.md): các đường đọc theo mục tiêu và cách ôn lại.
 - [Coverage Audit](COVERAGE_AUDIT.md): trạng thái breadth/độ sâu (depth / 깊이), ranh giới và ưu tiên vòng tiếp theo.
 
-> **Bàn giao:** Sau **Tài liệu điều hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 human origins](./01_human_origins.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Tài liệu điều hướng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

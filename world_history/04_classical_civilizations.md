@@ -1,7 +1,6 @@
 # 04 — Classical civilizations: đế chế, thị trường và công dân
 
-> **Mạch đọc:** Đặt **04 — Classical civilizations: đế chế, thị trường và công dân** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cơ chế đế chế** sang **cốt lõi (core / 핵심)–frontier exchange**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04 — Classical civilizations: đế chế, thị trường và công dân**. Route đi từ imperial administration → markets/roads → citizenship and law → frontier integration → decline/continuity, để “cổ điển” nối chính trị với kinh tế và xã hội.
 
 Các thế giới Han, Maurya/Gupta, Achaemenid, Hy Lạp–La Mã, các polities châu Phi và châu Mỹ cho thấy nhiều cách ghép **tax trạng thái (state / 상태), city, road, coin, army và legal thứ tự (order / 순서)**. “Classical” là nhãn so sánh hiện đại, không phải một chuẩn văn minh duy nhất.
 
@@ -29,8 +28,6 @@ Technology và resources gồm sắt, thủy lợi, ngựa, tàu, đường và 
 “Công dân” thường là quyền có điều kiện, không phải bình đẳng phổ quát. Slavery, debt bondage, caste/status, gender và ethnicity phân phối truy cập (access / 접근) vào đất, luật, quân đội và giáo dục. Một đế chế ổn định không nhất thiết công bằng; nó có thể bền nhờ phân biệt được luật cho các nhóm.
 
 ### Stock/luồng (flow / 흐름)
-Phần “Stock/luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 stock: roads, canals, coins, archives, forts, cultivated land
@@ -39,31 +36,19 @@ flow: grain, taxes, soldiers, messages, migrants, luxury goods
 
 Roads tăng tốc quân đội và thương mại cùng lúc; coinage giúp thanh toán nhưng không thay thế thuế hiện vật. Khi frontier chi phí (cost / 비용), succession crisis hoặc epidemic làm luồng (flow / 흐름) giảm, chính quyền có thể debase currency, tăng thuế, thuê lính hoặc nhượng quyền địa phương.
 
-
-> **Chuyển mạch:** Từ **Cơ chế đế chế**, ta sang **Giới hạn của “classical decline”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **04 — Classical civilizations: đế chế, thị trường và công dân**, **Cơ chế đế chế** đã nêu tiêu chí phân biệt, còn **Giới hạn của “classical decline”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giới hạn của “classical decline”
 
 Phân rã một đế chế có thể là decentralization, chuyển ngôn ngữ elite, đổi tôn giáo, tái sử dụng hạ tầng (infrastructure / 인프라) hoặc hình thành nhà nước mới. Dân thường không trải nghiệm “fall” giống nhau; thương nhân có thể mất tuyến, nông dân đổi chủ, còn village ritual vẫn tiếp tục.
 
-
-> **Chuyển mạch:** Từ **Giới hạn của “classical decline”**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Đế chế đang tích hợp bằng law, thị trường (market / 시장), army hay định danh (identity / 식별자)?
-2. Nhóm nào được miễn thuế nhưng phải cung cấp quân đội hoặc legitimacy?
-3. Một frontier shock làm đổi succession và cục bộ (local / 로컬) institutions qua đường nào?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **04 — Classical civilizations: đế chế, thị trường và công dân**, **Giới hạn của “classical decline”** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Luật, tiền, bia ký và văn chương cho thấy official ideals; khảo cổ đô thị, đồng ruộng, nghĩa trang và papyri giúp kiểm tra khoảng cách với practice. Counterfactual: nếu frontier có trade corridor ổn định hơn chi phí quân sự, đế chế có thể decentralize mà vẫn giữ revenue. Cầu nối sang 05 là **law/road/empire tạo contact zones** để văn bản (text / 텍스트), ritual và người di chuyển.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **04 — Classical civilizations: đế chế, thị trường và công dân**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp
 
@@ -83,4 +68,4 @@ Một frontier shock có thể dẫn tới emergency levy, currency debasement, 
 
 Luật, road và archive để lại hạ tầng mà nhà nước kế tiếp tái sử dụng, kể cả sau khi dynasty sụp. Ngược lại, slavery, caste/status và unequal citizenship tạo lock-in: nhóm bị loại khỏi law khó tích lũy đất, literacy hay office. Counterfactual: corridor thương mại rẻ hơn có thể giúp decentralization, nhưng vẫn không tự tạo bình đẳng.
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

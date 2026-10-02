@@ -1,17 +1,14 @@
 # 01 — Human origins: hợp tác, di chuyển và sinh thái
 
-> **Mạch đọc:** Đặt **01 — Human origins: hợp tác, di chuyển và sinh thái** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Luận đề** sang **Chuỗi nhân quả**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01 — Human origins: hợp tác, di chuyển và sinh thái**. Route đi từ ecology/mobility → cooperation and exchange → settlement pressures → institutions and inequality, để nguồn gốc xã hội nối với điều kiện vật chất.
 
 ## Luận đề
 
 Homo sapiens mở rộng không chỉ nhờ “thông minh hơn” mà nhờ ngôn ngữ, học xã hội, mạng trao đổi và khả năng phối hợp giữa những người không cùng họ hàng. Biến động khí hậu, năng lượng kiếm ăn và cạnh tranh với loài khác tạo ràng buộc (constraint / 제약조건); công cụ, lửa, quần áo, thuyền và ký ức tập thể mở rộng niche.
 
-
-> **Chuyển mạch:** Từ **Luận đề**, ta sang **Chuỗi nhân quả** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **01 — Human origins: hợp tác, di chuyển và sinh thái**, **Luận đề** xác định đầu vào; **Chuỗi nhân quả** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuyển tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi nhân quả
-Phần “Chuỗi nhân quả” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 biến thiên môi trường
@@ -23,8 +20,6 @@ biến thiên môi trường
 ```
 
 ### Bảy trục cần theo dõi
-Phần “Bảy trục cần theo dõi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **Technology:** đá ghè, composite tools, lửa, trang phục và hàng hải làm đổi năng lượng hữu dụng.
 - **Resources:** săn bắt–hái lượm là dòng thu nhập biến động; quyền tiếp cận phụ thuộc mùa và lãnh thổ.
@@ -34,22 +29,19 @@ Phần “Bảy trục cần theo dõi” nối kiến thức trước với n�
 - **Demography:** fertility, mortality, di chuyển (migration / 마이그레이션) và bottleneck di truyền quan trọng hơn “dân số tĩnh”.
 - **Ideas:** biểu tượng, chôn cất và nghệ thuật là bằng chứng về thế giới chung, nhưng không tự động chứng minh một tôn giáo cụ thể.
 
-
-> **Chuyển mạch:** Từ **Chuỗi nhân quả**, ta sang **Chuyển tiếp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **01 — Human origins: hợp tác, di chuyển và sinh thái**, **Chuỗi nhân quả** xác định đầu vào; **Chuyển tiếp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bẫy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuyển tiếp
 
 Khi một số loài cây/con vật có thể quản lý theo mùa và khí hậu ổn định hơn ở vài vùng, thử nghiệm định cư và trồng trọt trở nên đáng giá. Đó là **nhiều quá trình địa phương**, không phải một “phát minh duy nhất” lan khắp thế giới.
 
-
-> **Chuyển mạch:** Từ **Chuyển tiếp**, ta sang **Bẫy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Human origins: hợp tác, di chuyển và sinh thái**, **Chuyển tiếp** đã nêu tiêu chí phân biệt, còn **Bẫy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cơ chế sâu hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bẫy
 
 Không nên xếp hunter-gatherer là “sơ khai” hay nông nghiệp là tiến bộ thuần túy: nông nghiệp thường tăng sản lượng trên đất nhưng cũng tăng bệnh, lao động, bất bình đẳng và rủi ro mất mùa.
 
-
-> **Chuyển mạch:** Từ **Bẫy**, ta sang **Cơ chế sâu hơn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **01 — Human origins: hợp tác, di chuyển và sinh thái**, **Bẫy** đã nêu tiêu chí phân biệt, còn **Cơ chế sâu hơn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **So sánh và phân phối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cơ chế sâu hơn
 
@@ -62,8 +54,6 @@ Một nhóm không tối ưu “sản lượng tối đa” mà tối ưu **dòn
 Ngôn ngữ, bắt chước có chọn lọc và kể chuyện cho phép truyền kỹ năng vượt quá một đời người. Reciprocity hoạt động khi nhóm có lặp lại tương tác; nghi lễ và taboo làm cho cam kết trở nên dễ nhận biết trước người lạ. Đây là **institution mềm**, không phải bằng chứng rằng xã hội không có xung đột.
 
 ### Stock/luồng (flow / 흐름) cần vẽ
-Phần “Stock/luồng (flow / 흐름) cần vẽ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 stock: knowledge, social trust, tools, fire sites, kin ties
@@ -73,27 +63,16 @@ shock: drought, cold pulse, prey collapse, volcanic event, contact
 
 Một địa điểm khảo cổ thường chỉ giữ lại phần stock bền (đá, xương, than, vỏ sò); luồng (flow / 흐름) như lời nói, cây cỏ và quan hệ chăm sóc dễ biến mất. Vì vậy absence of bằng chứng (evidence / 증거) không đồng nghĩa absence of practice.
 
-
-> **Chuyển mạch:** Từ **Cơ chế sâu hơn**, ta sang **So sánh và phân phối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **01 — Human origins: hợp tác, di chuyển và sinh thái**, **Cơ chế sâu hơn** đã nêu tiêu chí phân biệt, còn **So sánh và phân phối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## So sánh và phân phối
 
 Ven biển, thảo nguyên, rừng nhiệt đới và vùng băng tạo các gói kỹ năng khác nhau. Người già, trẻ em, phụ nữ, người khuyết tật và người di cư có thể đóng góp vào gathering, chăm sóc và truyền tri thức; không nên dùng mô hình “nam săn–nữ hái” như quy luật phổ quát. Agency nằm trong lựa chọn mùa vụ, kết bạn, rời nhóm và đổi vật liệu.
 
-
-> **Chuyển mạch:** Từ **So sánh và phân phối**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Bằng chứng nào phân biệt cư trú dài hạn với một điểm dừng theo mùa?
-2. Một thay đổi khí hậu làm đổi tài nguyên (resource / 자원) luồng (flow / 흐름) trước hay làm đổi institution trước?
-3. Nếu không có nông nghiệp, những hình thức lưu trữ và bất bình đẳng nào vẫn có thể xuất hiện?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Human origins: hợp tác, di chuyển và sinh thái**, **So sánh và phân phối** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Đọc khảo cổ học, zooarchaeology, paleoenvironment, genetics và ethnography cùng nhau; mỗi loại chỉ quan sát một phần. Genetic continuity không chứng minh continuity văn hóa, còn hiện vật không tự nói ai sử dụng nó. Counterfactual hữu ích là hỏi: nếu khí hậu tương tự nhưng không có mạng chia sẻ kỹ năng, nhóm có mở rộng được không? Cầu nối sang 02 là **lưu trữ và quản lý loài**, không phải một bước tiến đạo đức.
 
-> **Bàn giao:** Sau **Bằng chứng, giới hạn và cầu nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bằng chứng, giới hạn và cầu nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

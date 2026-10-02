@@ -1,7 +1,6 @@
 # 08 — toàn cục (global / 전역) trade and colonial expansion: mạng toàn cầu và cưỡng chế
 
-> **Mạch đọc:** Đặt **08 — toàn cục (global / 전역) trade and colonial expansion: mạng toàn cầu và cưỡng chế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bốn dòng luồng (flow / 흐름) phải theo dõi** sang **cổng (port / 포트)–hinterland cơ chế (mechanism / 메커니즘)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **08 — Global trade and colonial expansion: mạng toàn cầu và cưỡng chế**. Route đi từ commodities/labor → shipping and finance → colonial institutions → extraction/resistance → unequal global integration, để thương mại luôn đi cùng quyền lực.
 
 Kết nối đại dương sau 1492 tạo **Columbian exchange**: cây trồng, động vật, kim loại, người, mầm bệnh và bạo lực đi qua các basin. “Globalization” ở đây không đồng nghĩa bình đẳng; nó mở rộng thị trường (market / 시장) bằng conquest, slavery, tribute và unequal law.
 
@@ -32,24 +31,13 @@ Cổng (port / 포트) không tự đại diện cho cả thuộc địa. Cần 
 
 Archive của company/crown thường ghi đầu ra (output / 출력), thuế và rebellion, không ghi đầy đủ công việc (work / 작업), gender, oral bộ nhớ (memory / 메모리) hay ecological mất mát (loss / 손실). Đọc cùng khảo cổ, ngôn ngữ, dữ liệu dân số, lời kể bản địa và lịch sử môi trường. “Resistance” gồm cả chiến tranh, trốn chạy, kiện tụng, đình công, giữ giống và tái nghĩa hóa tôn giáo.
 
-
-> **Chuyển mạch:** Từ **Bốn dòng luồng (flow / 흐름) phải theo dõi**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Một commodity chuỗi (chain / 사슬) tạo giá trị (value / 값) ở bước nào và đẩy rủi ro (risk / 위험) sang ai?
-2. Racial law biến labor quan hệ (relation / 관계) thành status bền vững bằng cơ chế nào?
-3. Nếu không có một đế quốc biển, mạng trao đổi nào vẫn có thể nối các basin?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **08 — toàn cục (global / 전역) trade and colonial expansion: mạng toàn cầu và cưỡng chế**, cơ chế trong **Bốn dòng luồng (flow / 흐름) phải theo dõi** cần được kiểm chứng bằng dấu vết cụ thể; **Bằng chứng, giới hạn và cầu nối** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Shipping/customs records, plantation accounts, slave voyages, Indigenous archaeology, pollen, disease lịch sử (history / 이력) và oral tradition phải được đọc cùng nhau; đầu ra (output / 출력) của công ty không đại diện cho wellbeing. Counterfactual: nếu disease shock nhỏ hơn, conquest vẫn cần labor, alliance và logistics nhưng cán cân dân số–quân sự có thể khác. Cầu nối sang 09 là **commodity, slavery và empire cung cấp vốn/nguyên liệu/thị trường cho tri thức và công nghiệp**, dù không phải nguyên nhân duy nhất.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **08 — toàn cục (global / 전역) trade and colonial expansion: mạng toàn cầu và cưỡng chế**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực
 
@@ -69,4 +57,4 @@ Một narrative nhấn mạnh exchange và hybridization; một narrative khác 
 
 Export corridor, racial classification và unequal citizenship thường tồn tại sau independence dưới dạng debt, ngôn ngữ (language / 언어), land concentration và border. Commodity specialization tạo revenue nhanh nhưng làm vulnerability với giá và climate. Counterfactual về disease phải giữ các biến khác: không có mortality shock vẫn còn military technology, alliance và labor demand; chỉ có phân phối (distribution / 분포) quyền lực là khác.
 
-> **Bàn giao:** Sau **Hệ quả và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: thuộc địa hóa như một cơ chế tái phân phối năng lực**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

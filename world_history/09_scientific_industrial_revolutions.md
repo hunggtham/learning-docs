@@ -1,7 +1,6 @@
 # 09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất
 
-> **Mạch đọc:** Đặt **09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Scientific practice không tách khỏi xã hội** sang **Industrialization như hệ thống năng lượng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất**. Route đi từ scientific institutions → energy technologies → factories/labor → urbanization and capital → global diffusion and externalities, để tri thức nối với sản xuất.
 
 Scientific Revolution là thay đổi trong thực hành bằng chứng, thiết chế và circulation; Industrial Revolution là chuyển từ dòng năng lượng hữu cơ sang than, hơi nước và máy móc ở một số ngành/vùng trước khi lan rộng.
 
@@ -22,12 +21,9 @@ Không gộp mọi phát minh vào một “cách mạng” đồng thời: chro
 
 Đo lường (measurement / 측정), experiment, instrument, print, correspondence, university, navy và commercial patronage tạo một ecology của tri thức. “Khoa học” có thể tăng khả năng dự báo và kiểm soát, nhưng taxonomy, race science và colonial survey cũng được dùng để quản trị và phân cấp con người. Cần phân biệt claim về tự nhiên với institution quyết định ai được công nhận là knower.
 
-
-> **Chuyển mạch:** Từ **Scientific practice không tách khỏi xã hội**, ta sang **Industrialization như hệ thống năng lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất**, **Industrialization như hệ thống năng lượng** tiếp nhận điểm tựa từ **Scientific practice không tách khỏi xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các trajectory khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Industrialization như hệ thống năng lượng
-Phần “Industrialization như hệ thống năng lượng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 coal seam + mine labor
@@ -43,31 +39,19 @@ Factory chỉ là nút (node / 노드) cuối: mỏ, cảng, machine tools, cott
 
 Productivity tăng không tự động thành wage tăng. Chủ sở hữu máy, merchant và trạng thái (state / 상태) có bargaining power khác workers, children, migrants và women làm việc tại nhà. Union, strike, factory law, công khai (public / 공개) health và education là các institution phản ứng với externality, không phải quà tặng tự nhiên của tăng trưởng.
 
-
-> **Chuyển mạch:** Từ **Industrialization như hệ thống năng lượng**, ta sang **Các trajectory khác nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất**, **Các trajectory khác nhau** tiếp nhận điểm tựa từ **Industrialization như hệ thống năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các trajectory khác nhau
 
 Britain có coal/ports/finance và textile đường dẫn (path / 경로); Germany dùng chemistry, rail và bank–industry; Japan kết hợp state-led industrialization; nhiều thuộc địa cung cấp raw material nhưng bị hạn chế machine năng lực (capability / 역량). So sánh phải hỏi ai kiểm soát năng lượng (energy / 에너지), capital, skill và thị trường (market / 시장).
 
-
-> **Chuyển mạch:** Từ **Các trajectory khác nhau**, ta sang **Câu hỏi kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Câu hỏi kiểm tra
-
-1. Một productivity gain đi qua wage, profit hay price reduction bằng thể chế nào?
-2. Pollution là “chi phí ngoài” của ai và được chuyển qua ranh giới nào?
-3. Có thể công nghiệp hóa mà không lặp đúng đường dẫn (path / 경로) của Britain không?
-
-
-> **Chuyển mạch:** Từ **Câu hỏi kiểm tra**, ta sang **Bằng chứng, giới hạn và cầu nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất**, **Các trajectory khác nhau** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: từ kiến thức (knowledge / 지식) practice đến fossil lock-in** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Wage/price series, mine đầu ra (output / 출력), factory inspection, patent, correspondence, năng lượng (energy / 에너지) statistics và pollution proxies cho phép kiểm tra productivity nhưng coverage theo giới và thuộc địa không đều. Counterfactual: nếu coal rẻ nhưng patent/finance yếu, invention có thể không đạt quy mô (scale / 규모); nếu labor law sớm hơn, health chi phí (cost / 비용) có thể phân phối khác. Cầu nối sang 10 là **industrial sức chứa (capacity / 용량) biến raw material, thị trường (market / 시장) và strategic cơ sở (base / 기반) thành động lực đế quốc**.
 
-
-> **Chuyển mạch:** Từ **Bằng chứng, giới hạn và cầu nối**, ta sang **độ sâu (depth / 깊이) pass: từ kiến thức (knowledge / 지식) practice đến fossil lock-in** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: từ kiến thức (knowledge / 지식) practice đến fossil lock-in** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: từ kiến thức (knowledge / 지식) practice đến fossil lock-in
 
@@ -87,4 +71,4 @@ Một interpretation coi institutions và thuộc tính (property / 속성) righ
 
 Railway, grid, factory town và skill hệ thống (system / 시스템) tạo sunk chi phí (cost / 비용) khiến các nền kinh tế tiếp tục dùng fossil fuel dù biết externality. Labor organization, sanitation và compulsory education là institutional responses, không phải tự động của technology. Counterfactual: renewable năng lượng (energy / 에너지) sớm có thể giảm carbon nhưng vẫn cần finance, materials và quyền sở hữu để đạt quy mô (scale / 규모).
 
-> **Bàn giao:** Sau **Consequences và đường dẫn (path / 경로) dependence**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Độ sâu (depth / 깊이) pass: từ kiến thức (knowledge / 지식) practice đến fossil lock-in**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
