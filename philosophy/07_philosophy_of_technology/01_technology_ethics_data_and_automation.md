@@ -1,6 +1,6 @@
 # Technology Ethics: dữ liệu (data / 데이터), Automation và Infrastructures
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Technology Ethics: dữ liệu (data / 데이터), Automation và Infrastructures**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dữ liệu (data / 데이터) không tự nói** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Automation và responsibility gap** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Technology Ethics: dữ liệu (data / 데이터), Automation và Infrastructures**. Route đi từ data collection/representation → model và automation → responsibility gap, bias và privacy → governance/audit, để trách nhiệm được gắn với cả pipeline lẫn quyết định cuối.
 
 ## Dữ liệu (data / 데이터) không tự nói
 

@@ -1,6 +1,6 @@
 # Thông tin (information / 정보), thiết kế (design / 설계) và nền tảng (platform / 플랫폼) Power
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thông tin (information / 정보), thiết kế (design / 설계) và nền tảng (platform / 플랫폼) Power**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thiết kế (design / 설계) như quản trị (governance / 거버넌스)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến thức (knowledge / 지식) và opacity** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thông tin (information / 정보), thiết kế (design / 설계) và nền tảng (platform / 플랫폼) Power**. Route đi từ interface/architecture → visibility và opacity → ranking, moderation và data flows → platform power, để thiết kế thông tin được đánh giá qua những lựa chọn và lợi ích mà nó phân phối.
 
 Thông tin (information / 정보) các hệ thống (systems / 시스템들) không chỉ lưu trữ sự thật; chúng chọn lược đồ (schema / 스키마), ranking, visibility và khả năng truy cập. Một nền tảng (platform / 플랫폼) có thể là hạ tầng public-like nhưng được điều khiển bởi private mục tiêu (objective / 목표), moderation chính sách (policy / 정책) và advertising incentive.
 

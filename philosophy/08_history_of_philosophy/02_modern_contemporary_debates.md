@@ -1,6 +1,6 @@
 # Hiện đại (modern / 현대적) và Contemporary Debates
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hiện đại (modern / 현대적) và Contemporary Debates**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Hiện đại (modern / 현대적) và Contemporary Debates** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hiện đại (modern / 현대적) và Contemporary Debates**. Route đi từ chủ thể, lý tính và khoa học → lịch sử, ngôn ngữ và quyền lực → hiện sinh, phân tích và phê phán → các tranh luận đương đại, để các trường phái được so sánh bằng vấn đề và phương pháp.
 
 Nineteenth–twentieth-century philosophy mở rộng câu hỏi về lịch sử (history / 이력), labor, ngôn ngữ (language / 언어), existence, embodiment, power và formal lô-gic (logic / 논리). Marx phân tích lớp (class / 클래스) và material reproduction; Nietzsche genealogy của giá trị (value / 값); phenomenology quay về cấu trúc experience; existentialism nhấn mạnh freedom, finitude và meaning; analytic philosophy phát triển lô-gic (logic / 논리), ngôn ngữ (language / 언어) và argument precision; pragmatism kiểm tra meaning qua practice và consequence; trọng yếu (critical / 중요) lý thuyết (theory / 이론) hỏi ideology, domination và emancipation.
 

@@ -1,6 +1,6 @@
 # Ancient, Medieval và Early hiện đại (modern / 현대적): từ Cosmos đến Subject
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ancient, Medieval và Early hiện đại (modern / 현대적): từ Cosmos đến Subject**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ancient** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Medieval** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ancient, Medieval và Early hiện đại (modern / 현대적): từ Cosmos đến Subject**. Route đi từ cosmos/nature và virtue → theology, creation và political order → scientific revolution, subject và method → modernity, để chuyển dịch khung câu hỏi được đọc cùng bối cảnh lịch sử.
 
 ## Ancient
 

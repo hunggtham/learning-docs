@@ -1,6 +1,6 @@
 # Technology, thiết kế (design / 설계) và Human Agency
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Technology, thiết kế (design / 설계) và Human Agency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례): recommendation hệ thống (system / 시스템)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Agency dưới automation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Technology, thiết kế (design / 설계) và Human Agency**. Route đi từ artifact và hạ tầng → affordance/thiết kế → automation và phân bổ quyền quyết định → agency, trách nhiệm và khả năng chống lệ thuộc, để công nghệ được đọc như cấu trúc hành động chứ không chỉ công cụ.
 
 Technology không chỉ là vật thể trung tính nằm ngoài xã hội. Thiết kế quyết định affordance, default, visibility, chi phí (cost / 비용) of hành động (action / 동작) và ai có quyền sửa hệ thống. Tuy vậy, nói “technology tự quyết định mọi thứ” cũng sai: institutions, users, incentives và regulation cùng định hình kết quả (outcome / 결과).
 

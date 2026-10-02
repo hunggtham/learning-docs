@@ -1,6 +1,6 @@
 # Indian, Chinese và toàn cục (global / 전역) Philosophies
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Indian, Chinese và toàn cục (global / 전역) Philosophies**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Indian traditions** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chinese traditions** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Indian, Chinese và toàn cục (global / 전역) Philosophies**. Route đi từ Indian traditions và self/liberation → Chinese traditions, harmony và order → Islamic/African/Latin American/global perspectives → so sánh cách đặt vấn đề, để tránh lấy lịch sử châu Âu làm thước đo duy nhất.
 
 ## Indian traditions
 

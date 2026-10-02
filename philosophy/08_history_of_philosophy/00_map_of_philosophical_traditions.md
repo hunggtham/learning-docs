@@ -1,6 +1,6 @@
 # Bản đồ lịch sử các truyền thống triết học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bản đồ lịch sử các truyền thống triết học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các tuyến lớn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cách đọc một văn bản lịch sử** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bản đồ lịch sử các truyền thống triết học**. Route đi từ câu hỏi/khái niệm → truyền thống và bối cảnh → văn bản, tranh luận và ảnh hưởng → nối sang các chủ đề hiện đại, để lịch sử triết học là bản đồ vấn đề chứ không phải danh sách tên.
 
 Lịch sử triết học là lịch sử của câu hỏi, khái niệm và cách sống trong các bối cảnh cụ thể — không phải bảng xếp hạng “ai đúng nhất”. Khi đọc một tác giả, hãy ghi bối cảnh, vấn đề họ đang giải quyết, premise, đối thủ và ảnh hưởng về sau.
 
