@@ -3,6 +3,8 @@
 
 > **Mục tiêu:** Kiểu dữ liệu, CREATE/CTAS/ALTER/DROP/TRUNCATE.
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **DDL và định nghĩa bảng**. Route đi từ data types → CREATE/CTAS → ALTER/DROP/TRUNCATE → dependency/metadata → migration safety, để thay đổi schema nối với vòng đời dữ liệu.
+
 Để học **DDL và định nghĩa bảng** như một mạch suy luận, trước hết hãy giữ câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Mục đích của bài là biến kiểu dữ liệu, create/ctas/alter/drop/truncate. thành cách đọc có thể áp dụng.
 
 > **Mục tiêu:** Kiểu dữ liệu, CREATE/CTAS/ALTER/DROP/TRUNCATE.

@@ -3,6 +3,8 @@
 
 > **Mục tiêu:** Chuyển đổi cấu trúc dữ liệu và regex Oracle.
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **PIVOT, UNPIVOT và regular expression**. Route đi từ row/column shape → PIVOT/UNPIVOT transformation → pattern matching → NULL/aggregation behavior → portable query limits, để biến đổi vẫn giữ nghĩa dữ liệu.
+
 Để học **PIVOT, UNPIVOT và Regular Expression** như một mạch suy luận, trước hết hãy giữ câu hỏi: **dữ liệu được biến đổi hình dạng hoặc nhận diện theo mẫu nào, và kết quả mới còn giữ quan hệ gì với dữ liệu đầu vào?** Mục đích của bài là biến chuyển đổi cấu trúc dữ liệu và regex oracle. thành cách đọc có thể áp dụng.
 
 > **Mục tiêu:** Chuyển đổi cấu trúc dữ liệu và regex Oracle.

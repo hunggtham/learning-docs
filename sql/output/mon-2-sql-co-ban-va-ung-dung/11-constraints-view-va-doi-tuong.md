@@ -3,6 +3,8 @@
 
 > **Mục tiêu:** PK/FK/UNIQUE/CHECK, VIEW, SEQUENCE và SYNONYM.
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Constraints, view và các đối tượng hỗ trợ**. Route đi từ integrity rules → PK/FK/UNIQUE/CHECK → views → sequences/synonyms → dependency and write behavior, để cấu trúc bảo vệ dữ liệu xuyên câu lệnh.
+
 Để học **Constraints, View và các đối tượng hỗ trợ** như một mạch suy luận, trước hết hãy giữ câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Mục đích của bài là biến pk/fk/unique/check, view, sequence và synonym. thành cách đọc có thể áp dụng.
 
 > **Mục tiêu:** PK/FK/UNIQUE/CHECK, VIEW, SEQUENCE và SYNONYM.

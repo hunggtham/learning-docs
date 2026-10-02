@@ -3,6 +3,8 @@
 
 > **Mục tiêu:** GRANT, REVOKE, ROLE, WITH GRANT OPTION và WITH ADMIN OPTION.
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **DCL, quyền và role**. Route đi từ principal/resource → GRANT/REVOKE → role inheritance → grant/admin option → least privilege and audit, để quyền nối với bề mặt truy cập.
+
 Để học **DCL, quyền và Role** như một mạch suy luận, trước hết hãy giữ câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Mục đích của bài là biến grant, revoke, role, with grant option và with admin option. thành cách đọc có thể áp dụng.
 
 > **Mục tiêu:** GRANT, REVOKE, ROLE, WITH GRANT OPTION và WITH ADMIN OPTION.

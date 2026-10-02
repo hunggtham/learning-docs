@@ -3,6 +3,8 @@
 
 > **Mục tiêu:** ACID, COMMIT, ROLLBACK, SAVEPOINT và khác biệt Oracle/SQL Server.
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **TCL và transaction**. Route đi từ DML mutation → transaction boundary → ACID/isolation → COMMIT/ROLLBACK/SAVEPOINT → engine-specific behavior, để tính nguyên tử nối với trạng thái thực tế.
+
 Để học **TCL và Transaction** như một mạch suy luận, trước hết hãy giữ câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Mục đích của bài là biến acid, commit, rollback, savepoint và khác biệt oracle/sql server. thành cách đọc có thể áp dụng.
 
 > **Mục tiêu:** ACID, COMMIT, ROLLBACK, SAVEPOINT và khác biệt Oracle/SQL Server.
