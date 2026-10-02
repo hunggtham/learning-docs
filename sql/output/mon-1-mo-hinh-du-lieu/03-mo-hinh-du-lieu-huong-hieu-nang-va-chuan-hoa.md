@@ -1,20 +1,26 @@
 # Mô hình dữ liệu hướng hiệu năng và chuẩn hóa
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**. Route đi từ functional dependencies → normal forms → redundancy/anomalies → denormalization → index/query workload, để chuẩn hóa được cân bằng với cách truy cập.
+
 > **Mục tiêu:** Quy trình tối ưu mô hình, phụ thuộc hàm, 1NF–5NF, BCNF và phi chuẩn hóa.
 
 ## Từ khóa cần nhớ (Keyword)
 
-Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần nguồn. Khi ghi chú, dùng mẫu `용어 (English) (Tiếng Việt)` để nối tên gọi trong đề với ý nghĩa thực tế.
+Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
+
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch tư duy (Logic học)
 
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **데이터 모델과 SQL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch nối của bài học
 
-Bài này không đứng riêng: hãy nối **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+Bài này không đứng riêng: hãy nối **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
+> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
@@ -24,6 +30,8 @@ Bài này không đứng riêng: hãy nối **Mô hình dữ liệu hướng hi�
 
 Ta bắt đầu **데이터 모델과 SQL** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **데이터 모델과 SQL** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình dữ liệu và SQL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 데이터 모델과 SQL
 
 Khi gom phần **데이터 모델과 SQL** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -31,6 +39,8 @@ Khi gom phần **데이터 모델과 SQL** lại, ta không cần nhớ các dò
 Vậy ta đã có tiêu chí để đọc **데이터 모델과 SQL**. Bây giờ chuyển sang **Mô hình dữ liệu và SQL**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **Mô hình dữ liệu và SQL** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **데이터 모델과 SQL** nêu điều cần giải thích; **Mô hình dữ liệu và SQL** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. 정규화** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình dữ liệu và SQL
 
@@ -59,9 +69,9 @@ Ta bắt đầu **1. Khái quát về mô hình hóa dữ liệu hướng hiệu
 - 정규화 — Normalization — Chuẩn hóa.
 - 반정규화 — Denormalization — Phi chuẩn hóa.
 - 테이블 통합 및 분할 — Gộp và tách bảng.
-- 조인 구조 — Cấu trúc phép nối (join / 조인).
+- 조인 구조 — Cấu trúc JOIN.
 - PK/FK 설정 — Thiết lập PK/FK.
-- 인덱스 — chỉ mục (index / 인덱스) — Chỉ mục.
+- 인덱스 — Index — Chỉ mục.
 
 Khi gom phần **1. Khái quát về mô hình hóa dữ liệu hướng hiệu năng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -86,7 +96,7 @@ Phân tích/thiết kế → Triển khai → Kiểm thử → Vận hành
 
 **Càng phát hiện vấn đề của mô hình dữ liệu muộn thì chi phí sửa càng tăng.**
 
-Nếu sửa ở giai đoạn `분석/설계`, chỉ cần sửa mô hình và thiết kế liên quan. Nếu sửa ở giai đoạn `운영`, có thể phải sửa dữ liệu, SQL, chương trình, chỉ mục (index / 인덱스) và quy trình vận hành.
+Nếu sửa ở giai đoạn `분석/설계`, chỉ cần sửa mô hình và thiết kế liên quan. Nếu sửa ở giai đoạn `운영`, có thể phải sửa dữ liệu, SQL, chương trình, Index và quy trình vận hành.
 
 ---
 
@@ -128,7 +138,7 @@ Ta bắt đầu **2) DB 용량을 산정한다** bằng câu hỏi: **khái ni�
 
 **각 엔터티에 어느 정도의 데이터와 트랜잭션이 들어오는지 파악하기 위해 DB 용량을 산정한다.**
 
-**Cần ước tính dung lượng DB để biết mỗi thực thể (entity / 엔터티) sẽ chứa bao nhiêu dữ liệu và tiếp nhận bao nhiêu giao dịch.**
+**Cần ước tính dung lượng DB để biết mỗi Entity sẽ chứa bao nhiêu dữ liệu và tiếp nhận bao nhiêu giao dịch.**
 
 `용량 산정` có nghĩa là dự đoán:
 
@@ -154,7 +164,7 @@ Ta bắt đầu **3) 트랜잭션 유형을 파악한다** bằng câu hỏi: **
 | --- | --- | --- |
 | C | Create | Tạo mới |
 | R | Read | Đọc, truy vấn |
-| U | cập nhật (update / 업데이트) | Cập nhật |
+| U | Update | Cập nhật |
 | D | Delete | Xóa |
 
 Ví dụ, nghiệp vụ `수강신청` có thể:
@@ -174,7 +184,7 @@ Ta bắt đầu **4) 반정규화를 수행한다** bằng câu hỏi: **khái n
 
 **Sau khi phân tích dung lượng và loại giao dịch, nếu cần thì thực hiện phi chuẩn hóa.**
 
-Chuẩn hóa làm giảm trùng lặp nhưng có thể làm tăng số bảng và số lần phép nối (join / 조인). Nếu việc đó làm truy vấn chậm, có thể cân nhắc phi chuẩn hóa.
+Chuẩn hóa làm giảm trùng lặp nhưng có thể làm tăng số bảng và số lần JOIN. Nếu việc đó làm truy vấn chậm, có thể cân nhắc phi chuẩn hóa.
 
 Khi gom phần **4) 반정규화를 수행한다** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -186,12 +196,12 @@ Ta bắt đầu **5) 이력 모델과 인덱스를 조정한다** bằng câu h�
 
 **이력 모델, 인덱스, PK/FK 순서, 슈퍼타입·서브타입 구조를 성능 관점에서 조정한다.**
 
-**Điều chỉnh mô hình lịch sử, chỉ mục (index / 인덱스), thứ tự PK/FK và cấu trúc Supertype/Subtype theo góc nhìn hiệu năng.**
+**Điều chỉnh mô hình lịch sử, Index, thứ tự PK/FK và cấu trúc Supertype/Subtype theo góc nhìn hiệu năng.**
 
 - `이력 모델`: Mô hình lưu lại lịch sử thay đổi.
 - `인덱스`: Cấu trúc giúp tìm kiếm nhanh.
-- `슈퍼타입`: thực thể (entity / 엔터티) cha chứa thuộc tính chung.
-- `서브타입`: thực thể (entity / 엔터티) con chứa thuộc tính riêng.
+- `슈퍼타입`: Entity cha chứa thuộc tính chung.
+- `서브타입`: Entity con chứa thuộc tính riêng.
 
 Khi gom phần **5) 이력 모델과 인덱스를 조정한다** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -205,7 +215,7 @@ Ta bắt đầu **6) 성능을 검증한다** bằng câu hỏi: **khái niệm 
 
 **Cuối cùng phải kiểm tra mô hình dữ liệu từ góc nhìn hiệu năng.**
 
-Cần kiểm tra thời gian chạy SQL, số lần phép nối (join / 조인), dung lượng dữ liệu và hiệu quả của chỉ mục (index / 인덱스).
+Cần kiểm tra thời gian chạy SQL, số lần JOIN, dung lượng dữ liệu và hiệu quả của Index.
 
 ---
 
@@ -215,6 +225,8 @@ Vậy ta đã có tiêu chí để đọc **6) 성능을 검증한다**. Bây gi
 
 Ta bắt đầu **3. 정규화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **Mô hình dữ liệu và SQL** nêu điều cần giải thích; **3. 정규화** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. 정규화
 
 Khi gom phần **3. 정규화** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -222,6 +234,8 @@ Khi gom phần **3. 정규화** lại, ta không cần nhớ các dòng như nh�
 Vậy ta đã có tiêu chí để đọc **3. 정규화**. Bây giờ chuyển sang **3. Chuẩn hóa**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **3. Chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **3. Chuẩn hóa** tiếp nhận điểm tựa từ **3. 정규화** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 함수적 종속성** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Chuẩn hóa
 
@@ -315,6 +329,8 @@ Vậy ta đã có tiêu chí để đọc **갱신 이상**. Bây giờ chuyển
 
 Ta bắt đầu **4. 함수적 종속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **4. 함수적 종속성** tiếp nhận điểm tựa từ **3. Chuẩn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Phụ thuộc hàm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. 함수적 종속성
 
 Khi gom phần **4. 함수적 종속성** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -322,6 +338,8 @@ Khi gom phần **4. 함수적 종속성** lại, ta không cần nhớ các dòn
 Vậy ta đã có tiêu chí để đọc **4. 함수적 종속성**. Bây giờ chuyển sang **4. Phụ thuộc hàm**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **4. Phụ thuộc hàm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **4. Phụ thuộc hàm** tiếp nhận điểm tựa từ **4. 함수적 종속성** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 정규화 절차** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Phụ thuộc hàm
 
@@ -393,6 +411,8 @@ Vậy ta đã có tiêu chí để đọc **4.2 Ví dụ 학번 và 혈액형**.
 
 Ta bắt đầu **5. 정규화 절차** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **5. 정규화 절차** tiếp nhận điểm tựa từ **4. Phụ thuộc hàm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Quy trình chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 정규화 절차
 
 Khi gom phần **5. 정규화 절차** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -400,6 +420,8 @@ Khi gom phần **5. 정규화 절차** lại, ta không cần nhớ các dòng n
 Vậy ta đã có tiêu chí để đọc **5. 정규화 절차**. Bây giờ chuyển sang **5. Quy trình chuẩn hóa**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **5. Quy trình chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **5. 정규화 절차** xác định đầu vào; **5. Quy trình chuẩn hóa** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. 제1정규형 — 1NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Quy trình chuẩn hóa
 
@@ -422,7 +444,7 @@ Cách nhớ:
 | 이 | 이행 함수 종속 제거 — Loại bỏ phụ thuộc bắc cầu |
 | 결 | 결정자는 후보키 — Determinant phải là Candidate Key |
 | 다 | 다치 종속 제거 — Loại bỏ phụ thuộc đa trị |
-| 조 | 조인 종속 제거 — Loại bỏ phụ thuộc phép nối (join / 조인) |
+| 조 | 조인 종속 제거 — Loại bỏ phụ thuộc JOIN |
 
 **이전 정규형을 만족해야 다음 정규형으로 진행할 수 있다.**
 
@@ -436,6 +458,8 @@ Vậy ta đã có tiêu chí để đọc **5. Quy trình chuẩn hóa**. Bây g
 
 Ta bắt đầu **6. 제1정규형 — 1NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **5. Quy trình chuẩn hóa** xác định đầu vào; **6. 제1정규형 — 1NF** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Dạng chuẩn 1 — 1NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. 제1정규형 — 1NF
 
 Khi gom phần **6. 제1정규형 — 1NF** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -443,6 +467,8 @@ Khi gom phần **6. 제1정규형 — 1NF** lại, ta không cần nhớ các d�
 Vậy ta đã có tiêu chí để đọc **6. 제1정규형 — 1NF**. Bây giờ chuyển sang **6. Dạng chuẩn 1 — 1NF**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **6. Dạng chuẩn 1 — 1NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **6. Dạng chuẩn 1 — 1NF** tiếp nhận điểm tựa từ **6. 제1정규형 — 1NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 제2정규형 — 2NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Dạng chuẩn 1 — 1NF
 
@@ -472,6 +498,8 @@ Vậy ta đã có tiêu chí để đọc **6. Dạng chuẩn 1 — 1NF**. Bây 
 
 Ta bắt đầu **7. 제2정규형 — 2NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **7. 제2정규형 — 2NF** tiếp nhận điểm tựa từ **6. Dạng chuẩn 1 — 1NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Dạng chuẩn 2 — 2NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. 제2정규형 — 2NF
 
 Khi gom phần **7. 제2정규형 — 2NF** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -479,6 +507,8 @@ Khi gom phần **7. 제2정규형 — 2NF** lại, ta không cần nhớ các d�
 Vậy ta đã có tiêu chí để đọc **7. 제2정규형 — 2NF**. Bây giờ chuyển sang **7. Dạng chuẩn 2 — 2NF**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **7. Dạng chuẩn 2 — 2NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **7. Dạng chuẩn 2 — 2NF** tiếp nhận điểm tựa từ **7. 제2정규형 — 2NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 제3정규형 — 3NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Dạng chuẩn 2 — 2NF
 
@@ -532,6 +562,8 @@ Vậy ta đã có tiêu chí để đọc **7. Dạng chuẩn 2 — 2NF**. Bây 
 
 Ta bắt đầu **8. 제3정규형 — 3NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **8. 제3정규형 — 3NF** tiếp nhận điểm tựa từ **7. Dạng chuẩn 2 — 2NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Dạng chuẩn 3 — 3NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. 제3정규형 — 3NF
 
 Khi gom phần **8. 제3정규형 — 3NF** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -539,6 +571,8 @@ Khi gom phần **8. 제3정규형 — 3NF** lại, ta không cần nhớ các d�
 Vậy ta đã có tiêu chí để đọc **8. 제3정규형 — 3NF**. Bây giờ chuyển sang **8. Dạng chuẩn 3 — 3NF**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **8. Dạng chuẩn 3 — 3NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **8. Dạng chuẩn 3 — 3NF** tiếp nhận điểm tựa từ **8. 제3정규형 — 3NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 정규화의 성능** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Dạng chuẩn 3 — 3NF
 
@@ -575,6 +609,8 @@ Vậy ta đã có tiêu chí để đọc **8. Dạng chuẩn 3 — 3NF**. Bây 
 
 Ta bắt đầu **9. 정규화의 성능** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **9. 정규화의 성능** tiếp nhận điểm tựa từ **8. Dạng chuẩn 3 — 3NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Hiệu năng của chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. 정규화의 성능
 
 Khi gom phần **9. 정규화의 성능** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -582,6 +618,8 @@ Khi gom phần **9. 정규화의 성능** lại, ta không cần nhớ các dòn
 Vậy ta đã có tiêu chí để đọc **9. 정규화의 성능**. Bây giờ chuyển sang **9. Hiệu năng của chuẩn hóa**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **9. Hiệu năng của chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **9. Hiệu năng của chuẩn hóa** tiếp nhận điểm tựa từ **9. 정규화의 성능** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. BCNF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Hiệu năng của chuẩn hóa
 
@@ -595,9 +633,9 @@ Ta bắt đầu **9. Hiệu năng của chuẩn hóa** bằng câu hỏi: **khá
 
 Tuy nhiên:
 
-**조회에서는 여러 테이블을 phép nối (join / 조인)해야 하므로 성능이 저하될 수 있다.**
+**조회에서는 여러 테이블을 JOIN해야 하므로 성능이 저하될 수 있다.**
 
-**Khi truy vấn, hiệu năng có thể giảm vì phải phép nối (join / 조인) nhiều bảng.**
+**Khi truy vấn, hiệu năng có thể giảm vì phải JOIN nhiều bảng.**
 
 Ảnh đưa ra ví dụ:
 
@@ -612,7 +650,7 @@ Khi đổi năm học của một sinh viên:
 Khi truy vấn `학번, 학생명, 과목명, 평점`:
 
 - Trước chuẩn hóa: truy vấn trong một bảng.
-- Sau chuẩn hóa: cần phép nối (join / 조인), có thể giảm hiệu năng một phần.
+- Sau chuẩn hóa: cần JOIN, có thể giảm hiệu năng một phần.
 
 ---
 
@@ -622,6 +660,8 @@ Vậy ta đã có tiêu chí để đọc **9. Hiệu năng của chuẩn hóa**
 
 Ta bắt đầu **10. BCNF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **10. BCNF** tiếp nhận điểm tựa từ **9. Hiệu năng của chuẩn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Dạng chuẩn BCNF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. BCNF
 
 Khi gom phần **10. BCNF** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -629,6 +669,8 @@ Khi gom phần **10. BCNF** lại, ta không cần nhớ các dòng như những
 Vậy ta đã có tiêu chí để đọc **10. BCNF**. Bây giờ chuyển sang **10. Dạng chuẩn BCNF**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **10. Dạng chuẩn BCNF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **10. Dạng chuẩn BCNF** tiếp nhận điểm tựa từ **10. BCNF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 제4정규형 — 4NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Dạng chuẩn BCNF
 
@@ -677,6 +719,8 @@ Vậy ta đã có tiêu chí để đọc **10. Dạng chuẩn BCNF**. Bây gi�
 
 Ta bắt đầu **11. 제4정규형 — 4NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **11. 제4정규형 — 4NF** tiếp nhận điểm tựa từ **10. Dạng chuẩn BCNF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Dạng chuẩn 4 — 4NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. 제4정규형 — 4NF
 
 Khi gom phần **11. 제4정규형 — 4NF** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -684,6 +728,8 @@ Khi gom phần **11. 제4정규형 — 4NF** lại, ta không cần nhớ các d
 Vậy ta đã có tiêu chí để đọc **11. 제4정규형 — 4NF**. Bây giờ chuyển sang **11. Dạng chuẩn 4 — 4NF**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **11. Dạng chuẩn 4 — 4NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **11. Dạng chuẩn 4 — 4NF** tiếp nhận điểm tựa từ **11. 제4정규형 — 4NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 제5정규형 — 5NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Dạng chuẩn 4 — 4NF
 
@@ -738,6 +784,8 @@ Vậy ta đã có tiêu chí để đọc **11. Dạng chuẩn 4 — 4NF**. Bây
 
 Ta bắt đầu **12. 제5정규형 — 5NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **12. 제5정규형 — 5NF** tiếp nhận điểm tựa từ **11. Dạng chuẩn 4 — 4NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dạng chuẩn 5 — 5NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. 제5정규형 — 5NF
 
 Khi gom phần **12. 제5정규형 — 5NF** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -746,15 +794,17 @@ Vậy ta đã có tiêu chí để đọc **12. 제5정규형 — 5NF**. Bây gi
 
 Ta bắt đầu **12. Dạng chuẩn 5 — 5NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **12. Dạng chuẩn 5 — 5NF** tiếp nhận điểm tựa từ **12. 제5정규형 — 5NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 반정규화** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Dạng chuẩn 5 — 5NF
 
 **제5정규형은 4NF를 만족하고 조인 종속을 제거한 상태이다.**
 
-**5NF là trạng thái đạt 4NF và loại bỏ phụ thuộc phép nối (join / 조인).**
+**5NF là trạng thái đạt 4NF và loại bỏ phụ thuộc JOIN.**
 
-**5NF는 dự án (project / 프로젝트) phép nối (join / 조인) Normal Form 또는 PJ/NF라고 한다.**
+**5NF는 Project Join Normal Form 또는 PJ/NF라고 한다.**
 
-**5NF còn được gọi là dự án (project / 프로젝트) phép nối (join / 조인) Normal Form hoặc PJ/NF.**
+**5NF còn được gọi là Project Join Normal Form hoặc PJ/NF.**
 
 Ảnh mô tả:
 
@@ -772,9 +822,9 @@ B JOIN với C
 Khôi phục lại A
 ```
 
-**분해한 테이블을 다시 phép nối (join / 조인)했을 때 원래 관계가 정확하게 복원되어야 한다.**
+**분해한 테이블을 다시 JOIN했을 때 원래 관계가 정확하게 복원되어야 한다.**
 
-**Khi phép nối (join / 조인) lại các bảng đã tách, quan hệ ban đầu phải được khôi phục chính xác.**
+**Khi JOIN lại các bảng đã tách, quan hệ ban đầu phải được khôi phục chính xác.**
 
 5NF hiếm khi được áp dụng trong thiết kế DB thông thường.
 
@@ -786,6 +836,8 @@ Vậy ta đã có tiêu chí để đọc **12. Dạng chuẩn 5 — 5NF**. Bây
 
 Ta bắt đầu **13. 반정규화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **13. 반정규화** tiếp nhận điểm tựa từ **12. Dạng chuẩn 5 — 5NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Phi chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. 반정규화
 
 Khi gom phần **13. 반정규화** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -794,11 +846,13 @@ Vậy ta đã có tiêu chí để đọc **13. 반정규화**. Bây giờ chuy�
 
 Ta bắt đầu **13. Phi chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **13. Phi chuẩn hóa** tiếp nhận điểm tựa từ **13. 반정규화** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KẾT LUẬN GHI NHỚ CUỐI BÀI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Phi chuẩn hóa
 
-**반정규화는 성능 향상을 위해 데이터 중복을 허용하고 phép nối (join / 조인)을 줄이는 방법이다.**
+**반정규화는 성능 향상을 위해 데이터 중복을 허용하고 JOIN을 줄이는 방법이다.**
 
-**Phi chuẩn hóa là phương pháp cho phép trùng lặp dữ liệu và giảm phép nối (join / 조인) để cải thiện hiệu năng.**
+**Phi chuẩn hóa là phương pháp cho phép trùng lặp dữ liệu và giảm JOIN để cải thiện hiệu năng.**
 
 **반정규화는 비정규화와 같지 않고 정규화된 모델을 성능 목적에 맞게 조정하는 것이다.**
 
@@ -812,9 +866,9 @@ Ta bắt đầu **Khi thực hiện** bằng câu hỏi: **khái niệm này gi�
 
 ### Khi thực hiện
 
-**정규화로 엔터티와 관계가 많아져 phép nối (join / 조인) 성능 저하가 예상될 때 반정규화를 수행할 수 있다.**
+**정규화로 엔터티와 관계가 많아져 JOIN 성능 저하가 예상될 때 반정규화를 수행할 수 있다.**
 
-**Có thể phi chuẩn hóa khi việc chuẩn hóa làm tăng thực thể (entity / 엔터티) và quan hệ, dẫn đến dự đoán hiệu năng phép nối (join / 조인) giảm.**
+**Có thể phi chuẩn hóa khi việc chuẩn hóa làm tăng Entity và quan hệ, dẫn đến dự đoán hiệu năng JOIN giảm.**
 
 **대량의 범위를 자주 처리하거나 특정 범위의 데이터만 자주 처리할 때 반정규화를 고려할 수 있다.**
 
@@ -848,6 +902,8 @@ Vậy ta đã có tiêu chí để đọc **Nhược điểm**. Bây giờ chuy�
 
 Ta bắt đầu **KẾT LUẬN GHI NHỚ CUỐI BÀI** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **KẾT LUẬN GHI NHỚ CUỐI BÀI** gom các mảnh từ **13. Phi chuẩn hóa** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## KẾT LUẬN GHI NHỚ CUỐI BÀI
 
 Khi gom phần **KẾT LUẬN GHI NHỚ CUỐI BÀI** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -866,7 +922,7 @@ Phần này nối mạch SQL với “Chuỗi ghi nhớ”, giải thích dữ l
 
 **원자값 → 부분 함수 종속 제거 → 이행 함수 종속 제거 → 결정자는 후보키 → 다치 종속 제거 → 조인 종속 제거**
 
-**Giá trị nguyên tử → loại bỏ phụ thuộc bộ phận → loại bỏ phụ thuộc bắc cầu → Determinant là Candidate Key → loại bỏ phụ thuộc đa trị → loại bỏ phụ thuộc phép nối (join / 조인).**
+**Giá trị nguyên tử → loại bỏ phụ thuộc bộ phận → loại bỏ phụ thuộc bắc cầu → Determinant là Candidate Key → loại bỏ phụ thuộc đa trị → loại bỏ phụ thuộc JOIN.**
 
 Khi gom phần **Chuỗi ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -895,10 +951,12 @@ Ta bắt đầu **Câu tổng kết tiếng Hàn** bằng câu hỏi: **khái ni
 
 ### Câu tổng kết tiếng Hàn
 
-**정규화는 데이터 중복과 입력·수정·삭제 이상을 줄이기 위해 함수적 종속성을 기준으로 테이블을 분리하는 과정이며, 반정규화는 정규화 이후 phép nối (join / 조인) 증가로 성능 문제가 발생할 때 제한적으로 수행한다.**
+**정규화는 데이터 중복과 입력·수정·삭제 이상을 줄이기 위해 함수적 종속성을 기준으로 테이블을 분리하는 과정이며, 반정규화는 정규화 이후 JOIN 증가로 성능 문제가 발생할 때 제한적으로 수행한다.**
 
-**Chuẩn hóa là quá trình tách bảng dựa trên phụ thuộc hàm để giảm trùng lặp và các lỗi chèn, cập nhật, xóa; phi chuẩn hóa chỉ được thực hiện có giới hạn khi phép nối (join / 조인) tăng sau chuẩn hóa gây ra vấn đề hiệu năng.**
+**Chuẩn hóa là quá trình tách bảng dựa trên phụ thuộc hàm để giảm trùng lặp và các lỗi chèn, cập nhật, xóa; phi chuẩn hóa chỉ được thực hiện có giới hạn khi JOIN tăng sau chuẩn hóa gây ra vấn đề hiệu năng.**
 
 Khi gom phần **Câu tổng kết tiếng Hàn** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
 Như vậy, **Câu tổng kết tiếng Hàn** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+
+> **Bàn giao:** Sau **KẾT LUẬN GHI NHỚ CUỐI BÀI**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

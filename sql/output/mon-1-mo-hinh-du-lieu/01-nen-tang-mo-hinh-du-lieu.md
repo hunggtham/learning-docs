@@ -1,26 +1,34 @@
 # Nền tảng mô hình hóa dữ liệu
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng mô hình hóa dữ liệu**. Route đi từ business rule → entity/relationship → logical schema → physical choices → integrity and query consequences, để mô hình nối yêu cầu nghiệp vụ với dữ liệu chạy thật.
+
 > **Mục tiêu:** Khái niệm, mục tiêu, đặc điểm, góc nhìn, ba cấp độ và tính độc lập dữ liệu.
 
 ## Từ khóa cần nhớ (Keyword)
 
-Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần nguồn. Khi ghi chú, dùng mẫu `용어 (English) (Tiếng Việt)` để nối tên gọi trong đề với ý nghĩa thực tế.
+Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
+
+> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch tư duy (Logic học)
 
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **I. 데이터 모델링의 이해** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạch nối của bài học
 
-Bài này không đứng riêng: hãy nối **Nền tảng mô hình hóa dữ liệu** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+Bài này không đứng riêng: hãy nối **Nền tảng mô hình hóa dữ liệu** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
+> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
 Để học **Nền tảng mô hình hóa dữ liệu** như một mạch suy luận, trước hết hãy giữ câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Mục đích của bài là biến **Khái niệm, mục tiêu, đặc điểm, góc nhìn, ba cấp độ và tính độc lập dữ liệu** thành cách đọc có thể áp dụng.
 
 Ta bắt đầu **I. 데이터 모델링의 이해** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **I. 데이터 모델링의 이해** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 데이터 모델링이란 무엇인가?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## I. 데이터 모델링의 이해
 
@@ -29,6 +37,8 @@ Khi gom phần **I. 데이터 모델링의 이해** lại, ta không cần nhớ
 Vậy ta đã có tiêu chí để đọc **I. 데이터 모델링의 이해**. Bây giờ chuyển sang **1. 데이터 모델링이란 무엇인가?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **1. 데이터 모델링이란 무엇인가?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **1. 데이터 모델링이란 무엇인가?** tiếp nhận điểm tựa từ **I. 데이터 모델링의 이해** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Mục đích của 데이터 모델링** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 데이터 모델링이란 무엇인가?
 
@@ -101,7 +111,7 @@ Ta bắt đầu **Keyword: 현실 세계** bằng câu hỏi: **khái niệm nà
 
 **현실 세계에는 정보가 많고 서로 복잡하게 연결되어 있기 때문에 데이터베이스에 그대로 저장하기 어렵다.**
 
-Vì thế giới thực có rất nhiều thông tin và các thông tin liên kết phức tạp với nhau nên không thể lưu nguyên trạng vào cơ sở dữ liệu (database / 데이터베이스).
+Vì thế giới thực có rất nhiều thông tin và các thông tin liên kết phức tạp với nhau nên không thể lưu nguyên trạng vào database.
 
 Ví dụ một cửa hàng có:
 
@@ -200,7 +210,7 @@ Ta bắt đầu **Keyword: 단순화** bằng câu hỏi: **khái niệm này gi
 
 **단순화는 복잡한 업무를 엔터티, 속성, 관계와 같은 일정한 구조로 정리하는 것이다.**
 
-Đơn giản hóa là sắp xếp nghiệp vụ phức tạp thành các cấu trúc nhất định như thực thể (entity / 엔터티), Attribute và Relationship.
+Đơn giản hóa là sắp xếp nghiệp vụ phức tạp thành các cấu trúc nhất định như Entity, Attribute và Relationship.
 
 Ví dụ câu nghiệp vụ dài:
 
@@ -310,6 +320,8 @@ Vậy ta đã có tiêu chí để đọc **Cách hiểu dễ nhớ**. Bây gi�
 
 Ta bắt đầu **2. Mục đích của 데이터 모델링** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **2. Mục đích của 데이터 모델링** tiếp nhận điểm tựa từ **1. 데이터 모델링이란 무엇인가?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Đặc điểm của mô hình hóa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Mục đích của 데이터 모델링
 
 **데이터 모델링은 데이터베이스를 구축하기 위한 분석과 설계의 과정이다.**
@@ -338,7 +350,7 @@ Ta bắt đầu **Keyword: 설계 - Thiết kế** bằng câu hỏi: **khái ni
 
 **설계는 분석한 결과를 바탕으로 엔터티, 속성, 관계, 키와 같은 데이터베이스 구조를 결정하는 과정이다.**
 
-Thiết kế là quá trình quyết định cấu trúc cơ sở dữ liệu (database / 데이터베이스) như thực thể (entity / 엔터티), Attribute, Relationship và Key dựa trên kết quả phân tích.
+Thiết kế là quá trình quyết định cấu trúc database như Entity, Attribute, Relationship và Key dựa trên kết quả phân tích.
 
 Quy trình tổng quát:
 
@@ -360,6 +372,8 @@ Khi gom phần **Keyword: 설계 - Thiết kế** lại, ta không cần nhớ c
 Vậy ta đã có tiêu chí để đọc **Keyword: 설계 - Thiết kế**. Bây giờ chuyển sang **3. Đặc điểm của mô hình hóa dữ liệu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **3. Đặc điểm của mô hình hóa dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **2. Mục đích của 데이터 모델링** nêu điều cần giải thích; **3. Đặc điểm của mô hình hóa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Các góc nhìn của mô hình hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Đặc điểm của mô hình hóa dữ liệu
 
@@ -419,7 +433,7 @@ Ta bắt đầu **Giải thích lại keyword** bằng câu hỏi: **khái niệ
 
 **단순화는 복잡한 업무를 테이블, 컬럼, 키와 같은 데이터베이스 구성 요소로 변환하는 것이다.**
 
-Đơn giản hóa là chuyển nghiệp vụ phức tạp thành các thành phần cơ sở dữ liệu (database / 데이터베이스) như bảng, cột và khóa.
+Đơn giản hóa là chuyển nghiệp vụ phức tạp thành các thành phần database như bảng, cột và khóa.
 
 ---
 
@@ -454,6 +468,8 @@ Khi gom phần **Giải thích lại keyword** lại, ta không cần nhớ các
 Vậy ta đã có tiêu chí để đọc **Giải thích lại keyword**. Bây giờ chuyển sang **4. Các góc nhìn của mô hình hóa**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **4. Các góc nhìn của mô hình hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **3. Đặc điểm của mô hình hóa dữ liệu** nêu điều cần giải thích; **4. Các góc nhìn của mô hình hóa** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Tầm quan trọng của mô hình hóa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Các góc nhìn của mô hình hóa
 
@@ -493,7 +509,7 @@ Ta bắt đầu **Keyword: 데이터 관점** bằng câu hỏi: **khái niệm 
 
 **데이터 관점은 시스템에서 관리해야 할 엔터티, 속성, 관계를 파악하는 관점이다.**
 
-Góc nhìn dữ liệu là góc nhìn xác định các thực thể (entity / 엔터티), Attribute và Relationship cần được quản lý trong hệ thống.
+Góc nhìn dữ liệu là góc nhìn xác định các Entity, Attribute và Relationship cần được quản lý trong hệ thống.
 
 Ví dụ:
 
@@ -587,8 +603,8 @@ Ví dụ:
 | Tạo đơn hàng | INSERT vào `ORDERS` |
 | Thêm sản phẩm | INSERT vào `ORDER_ITEM` |
 | Thanh toán | INSERT vào `PAYMENT` |
-| Giao hàng | cập nhật (update / 업데이트) trạng thái đơn |
-| Hủy đơn | cập nhật (update / 업데이트) trạng thái, hoàn kho |
+| Giao hàng | UPDATE trạng thái đơn |
+| Hủy đơn | UPDATE trạng thái, hoàn kho |
 
 Khi gom phần **Keyword: 상호작용** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -613,6 +629,8 @@ Khi gom phần **Cách ghi nhớ** lại, ta không cần nhớ các dòng như 
 Vậy ta đã có tiêu chí để đọc **Cách ghi nhớ**. Bây giờ chuyển sang **5. Tầm quan trọng của mô hình hóa dữ liệu**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **5. Tầm quan trọng của mô hình hóa dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **4. Các góc nhìn của mô hình hóa** nêu điều cần giải thích; **5. Tầm quan trọng của mô hình hóa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Ba vấn đề cần tránh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Tầm quan trọng của mô hình hóa dữ liệu
 
@@ -666,7 +684,7 @@ Ta bắt đầu **5.2. 간결한 표현 - Biểu diễn ngắn gọn** bằng c�
 
 **데이터 모델링은 복잡한 업무를 엔터티와 관계로 표현하여 이해하기 쉽게 만든다.**
 
-Mô hình hóa dữ liệu biểu diễn nghiệp vụ phức tạp bằng thực thể (entity / 엔터티) và Relationship, từ đó làm cho nó dễ hiểu hơn.
+Mô hình hóa dữ liệu biểu diễn nghiệp vụ phức tạp bằng Entity và Relationship, từ đó làm cho nó dễ hiểu hơn.
 
 Khi gom phần **5.2. 간결한 표현 - Biểu diễn ngắn gọn** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -724,6 +742,8 @@ Khi gom phần **Keyword: 데이터 품질** lại, ta không cần nhớ các d
 Vậy ta đã có tiêu chí để đọc **Keyword: 데이터 품질**. Bây giờ chuyển sang **6. Ba vấn đề cần tránh**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **6. Ba vấn đề cần tránh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **5. Tầm quan trọng của mô hình hóa dữ liệu** nêu điều cần giải thích; **6. Ba vấn đề cần tránh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Ba giai đoạn mô hình hóa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Ba vấn đề cần tránh
 
@@ -879,11 +899,13 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 비일관성**. Bây giờ 
 
 Ta bắt đầu **7. Ba giai đoạn mô hình hóa dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **6. Ba vấn đề cần tránh** nêu điều cần giải thích; **7. Ba giai đoạn mô hình hóa dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. So sánh ba cấp độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Ba giai đoạn mô hình hóa dữ liệu
 
 **데이터 모델링은 개념적 모델링, 논리적 모델링, 물리적 모델링의 3단계로 진행된다.**
 
-Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: mô hình hóa khái niệm, lô-gic (logic / 논리) và vật lý.
+Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: mô hình hóa khái niệm, logic và vật lý.
 
 ```
 개념적 모델링
@@ -903,7 +925,7 @@ Ta bắt đầu **7.1. 개념적 모델링 - Mô hình hóa khái niệm** bằn
 
 **개념적 모델링은 업무 중심적이고 포괄적인 수준에서 핵심 엔터티와 관계를 도출하는 단계이다.**
 
-Mô hình hóa khái niệm là giai đoạn trích xuất các thực thể (entity / 엔터티) và Relationship cốt lõi ở mức độ bao quát, tập trung vào nghiệp vụ.
+Mô hình hóa khái niệm là giai đoạn trích xuất các Entity và Relationship cốt lõi ở mức độ bao quát, tập trung vào nghiệp vụ.
 
 **개념적 모델링은 세 단계 중 추상화 수준이 가장 높다.**
 
@@ -963,11 +985,11 @@ Ta bắt đầu **7.2. 논리적 모델링 - Mô hình hóa logic** bằng câu 
 
 **논리적 모델링은 엔터티를 테이블로 변환하고 키, 속성, 관계를 정의하는 단계이다.**
 
-Mô hình hóa lô-gic (logic / 논리) là giai đoạn chuyển thực thể (entity / 엔터티) thành bảng và xác định Key, Attribute, Relationship.
+Mô hình hóa logic là giai đoạn chuyển Entity thành bảng và xác định Key, Attribute, Relationship.
 
 **논리적 모델링에서는 정규화를 적용하여 데이터의 중복과 불일치를 줄인다.**
 
-Trong mô hình hóa lô-gic (logic / 논리), ta áp dụng chuẩn hóa để giảm trùng lặp và không nhất quán dữ liệu.
+Trong mô hình hóa logic, ta áp dụng chuẩn hóa để giảm trùng lặp và không nhất quán dữ liệu.
 
 Khi gom phần **7.2. 논리적 모델링 - Mô hình hóa logic** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -979,7 +1001,7 @@ Ta bắt đầu **Keyword: 논리적 모델링** bằng câu hỏi: **khái ni�
 
 **논리적 모델링은 업무 개념을 관계형 데이터베이스가 이해할 수 있는 논리적 구조로 변환하는 과정이다.**
 
-Mô hình hóa lô-gic (logic / 논리) là quá trình chuyển khái niệm nghiệp vụ thành cấu trúc lô-gic (logic / 논리) mà cơ sở dữ liệu quan hệ có thể hiểu.
+Mô hình hóa logic là quá trình chuyển khái niệm nghiệp vụ thành cấu trúc logic mà cơ sở dữ liệu quan hệ có thể hiểu.
 
 Ví dụ:
 
@@ -1021,11 +1043,11 @@ Ta bắt đầu **7.3. 물리적 모델링 - Mô hình hóa vật lý** bằng c
 
 **물리적 모델링은 특정 DBMS의 특성에 맞게 인덱스와 저장 방식 등을 설계하는 단계이다.**
 
-Mô hình hóa vật lý là giai đoạn thiết kế chỉ mục (index / 인덱스), phương thức lưu trữ và các yếu tố khác phù hợp với đặc điểm của DBMS cụ thể.
+Mô hình hóa vật lý là giai đoạn thiết kế Index, phương thức lưu trữ và các yếu tố khác phù hợp với đặc điểm của DBMS cụ thể.
 
 **물리적 모델링에서는 데이터 타입, 인덱스, 파티션, 테이블스페이스와 같은 실제 구현 요소를 고려한다.**
 
-Trong mô hình hóa vật lý, ta xem xét các yếu tố triển khai thực tế như kiểu dữ liệu, chỉ mục (index / 인덱스), Partition và Tablespace.
+Trong mô hình hóa vật lý, ta xem xét các yếu tố triển khai thực tế như kiểu dữ liệu, Index, Partition và Tablespace.
 
 Khi gom phần **7.3. 물리적 모델링 - Mô hình hóa vật lý** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1037,7 +1059,7 @@ Ta bắt đầu **Keyword: 물리적 모델링** bằng câu hỏi: **khái ni�
 
 **물리적 모델링은 논리적 모델을 실제 DBMS에서 성능과 저장 효율을 고려하여 구현하는 과정이다.**
 
-Mô hình hóa vật lý là quá trình triển khai mô hình lô-gic (logic / 논리) trong DBMS thực tế, có cân nhắc đến hiệu năng và hiệu quả lưu trữ.
+Mô hình hóa vật lý là quá trình triển khai mô hình logic trong DBMS thực tế, có cân nhắc đến hiệu năng và hiệu quả lưu trữ.
 
 Ví dụ Oracle:
 
@@ -1073,29 +1095,31 @@ Vậy ta đã có tiêu chí để đọc **Đặc điểm ghi nhớ**. Bây gi�
 
 Ta bắt đầu **8. So sánh ba cấp độ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **7. Ba giai đoạn mô hình hóa dữ liệu** đã nêu tiêu chí phân biệt, còn **8. So sánh ba cấp độ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Tính độc lập của dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. So sánh ba cấp độ
 
 Phần này nối mạch SQL với “8. So sánh ba cấp độ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | 한국어 | Tiếng Việt | Keyword chính |
 | --- | --- | --- |
-| 개념적 모델링 | Mô hình khái niệm | 업무, thực thể (entity / 엔터티), ERD |
-| 논리적 모델링 | Mô hình lô-gic (logic / 논리) | bảng (table / 테이블), Key, Attribute, Relationship, Normalization |
-| 물리적 모델링 | Mô hình vật lý | DBMS, dữ liệu (data / 데이터) kiểu (type / 타입), chỉ mục (index / 인덱스), lưu trữ (storage / 저장소) |
+| 개념적 모델링 | Mô hình khái niệm | 업무, Entity, ERD |
+| 논리적 모델링 | Mô hình logic | Table, Key, Attribute, Relationship, Normalization |
+| 물리적 모델링 | Mô hình vật lý | DBMS, Data Type, Index, Storage |
 
 Câu ghi nhớ:
 
 **개념적 모델링은 업무와 엔터티를 중심으로 한다.**
 
-Mô hình hóa khái niệm tập trung vào nghiệp vụ và thực thể (entity / 엔터티).
+Mô hình hóa khái niệm tập trung vào nghiệp vụ và Entity.
 
 **논리적 모델링은 테이블과 정규화를 중심으로 한다.**
 
-Mô hình hóa lô-gic (logic / 논리) tập trung vào bảng và chuẩn hóa.
+Mô hình hóa logic tập trung vào bảng và chuẩn hóa.
 
 **물리적 모델링은 인덱스와 저장 방식을 중심으로 한다.**
 
-Mô hình hóa vật lý tập trung vào chỉ mục (index / 인덱스) và phương thức lưu trữ.
+Mô hình hóa vật lý tập trung vào Index và phương thức lưu trữ.
 
 ---
 
@@ -1104,6 +1128,8 @@ Khi gom phần **8. So sánh ba cấp độ** lại, ta không cần nhớ các 
 Vậy ta đã có tiêu chí để đọc **8. So sánh ba cấp độ**. Bây giờ chuyển sang **9. Tính độc lập của dữ liệu**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
 
 Ta bắt đầu **9. Tính độc lập của dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **8. So sánh ba cấp độ** đã nêu tiêu chí phân biệt, còn **9. Tính độc lập của dữ liệu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Nếu không duy trì tính độc lập dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Tính độc lập của dữ liệu
 
@@ -1121,7 +1147,7 @@ Ta bắt đầu **Keyword: 데이터 독립성** bằng câu hỏi: **khái ni�
 
 **데이터 독립성은 데이터베이스의 한 계층이 변경되어도 다른 계층에 미치는 영향을 최소화하는 개념이다.**
 
-Tính độc lập dữ liệu là khái niệm giảm thiểu ảnh hưởng giữa các tầng khi một tầng của cơ sở dữ liệu (database / 데이터베이스) thay đổi.
+Tính độc lập dữ liệu là khái niệm giảm thiểu ảnh hưởng giữa các tầng khi một tầng của database thay đổi.
 
 ---
 
@@ -1135,12 +1161,12 @@ Ta bắt đầu **9.1. 물리적 독립성 - Độc lập dữ liệu vật lý*
 
 **물리적 독립성은 저장 구조나 접근 방법이 변경되어도 논리적 스키마와 응용 프로그램이 영향을 받지 않는 것이다.**
 
-Độc lập dữ liệu vật lý là khi cấu trúc lưu trữ hoặc phương thức truy cập thay đổi nhưng lược đồ (schema / 스키마) lô-gic (logic / 논리) và chương trình ứng dụng không bị ảnh hưởng.
+Độc lập dữ liệu vật lý là khi cấu trúc lưu trữ hoặc phương thức truy cập thay đổi nhưng schema logic và chương trình ứng dụng không bị ảnh hưởng.
 
 Ví dụ:
 
-- Thêm chỉ mục (index / 인덱스).
-- Thay đổi chỉ mục (index / 인덱스).
+- Thêm Index.
+- Thay đổi Index.
 - Di chuyển Tablespace.
 - Partition bảng.
 - Thay đổi vị trí lưu trữ.
@@ -1179,7 +1205,7 @@ Ta bắt đầu **9.2. 논리적 독립성 - Độc lập dữ liệu logic** b�
 
 **논리적 독립성은 논리적 스키마가 변경되어도 외부 스키마와 응용 프로그램에 미치는 영향을 최소화하는 것이다.**
 
-Độc lập dữ liệu lô-gic (logic / 논리) là giảm thiểu ảnh hưởng đến lược đồ (schema / 스키마) bên ngoài và chương trình ứng dụng khi lược đồ (schema / 스키마) lô-gic (logic / 논리) thay đổi.
+Độc lập dữ liệu logic là giảm thiểu ảnh hưởng đến schema bên ngoài và chương trình ứng dụng khi schema logic thay đổi.
 
 Ví dụ thêm một cột:
 
@@ -1237,6 +1263,8 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 논리적 독립성**. Bây
 
 Ta bắt đầu **10. Nếu không duy trì tính độc lập dữ liệu** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **9. Tính độc lập của dữ liệu** nêu điều cần giải thích; **10. Nếu không duy trì tính độc lập dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Tóm tắt toàn bộ hai trang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Nếu không duy trì tính độc lập dữ liệu
 
 **데이터 독립성이 유지되지 않으면 데이터의 중복성과 복잡성이 증가한다.**
@@ -1278,11 +1306,13 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 유지보수 비용**. Bây
 
 Ta bắt đầu **11. Tóm tắt toàn bộ hai trang** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
+> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **10. Nếu không duy trì tính độc lập dữ liệu** nêu điều cần giải thích; **11. Tóm tắt toàn bộ hai trang** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 11. Tóm tắt toàn bộ hai trang
 
 **데이터 모델링은 현실 세계의 업무를 데이터베이스 구조로 변환하는 과정이다.**
 
-Mô hình hóa dữ liệu là quá trình chuyển nghiệp vụ trong thế giới thực thành cấu trúc cơ sở dữ liệu (database / 데이터베이스).
+Mô hình hóa dữ liệu là quá trình chuyển nghiệp vụ trong thế giới thực thành cấu trúc database.
 
 **이를 위해 현실 세계를 추상화하고 단순화하며 명확하게 표현한다.**
 
@@ -1294,7 +1324,7 @@ Mô hình hóa dữ liệu có thể được phân tích theo ba góc nhìn: d�
 
 **데이터 모델링은 개념적, 논리적, 물리적 모델링의 3단계로 진행된다.**
 
-Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: khái niệm, lô-gic (logic / 논리) và vật lý.
+Mô hình hóa dữ liệu được tiến hành qua ba giai đoạn: khái niệm, logic và vật lý.
 
 **좋은 데이터 모델은 중복, 비유연성, 비일관성을 줄이고 데이터 품질과 데이터 독립성을 유지한다.**
 
@@ -1303,3 +1333,5 @@ Một mô hình dữ liệu tốt làm giảm trùng lặp, không linh hoạt v
 Khi gom phần **11. Tóm tắt toàn bộ hai trang** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
 Như vậy, **11. Tóm tắt toàn bộ hai trang** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.
+
+> **Bàn giao:** Sau **11. Tóm tắt toàn bộ hai trang**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
