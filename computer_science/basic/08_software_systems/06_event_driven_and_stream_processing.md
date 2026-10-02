@@ -1,6 +1,6 @@
 # Event-driven các hệ thống (systems / 시스템들) và stream processing
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Event-driven các hệ thống (systems / 시스템들) và stream processing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sự kiện (event / 이벤트), command và message** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hàng đợi (queue / 큐) và log** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Event-driven systems và stream processing**. Route đi từ event/command/message → queue/log → delivery semantics → ordering/time windows → backpressure/dead-letter → event sourcing, để processing guarantee gắn với replay và failure.
 
 Yêu cầu (request / 요청)/phản hồi (response / 응답) phù hợp khi caller cần kết quả ngay. Nhưng nhiều workflows cần decouple producers và consumers, xử lý dữ liệu liên tục, fan-out hoặc chịu spikes. Event-driven kiến trúc (architecture / 아키텍처) dùng events/messages làm ranh giới (boundary / 경계), nhưng đổi call-stack trực tiếp lấy delivery/thứ tự (order / 순서)/trạng thái (state / 상태) độ phức tạp (complexity / 복잡도).
 

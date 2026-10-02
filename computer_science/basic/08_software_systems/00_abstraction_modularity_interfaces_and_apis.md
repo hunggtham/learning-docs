@@ -1,6 +1,6 @@
 # Lớp trừu tượng (abstraction / 추상화), modularity, giao diện (interface / 인터페이스) và API contracts
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lớp trừu tượng (abstraction / 추상화), modularity, giao diện (interface / 인터페이스) và API contracts**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô-đun (module / 모듈) là đơn vị (unit / 단위) của responsibility và thay đổi (change / 변경)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thông tin (information / 정보) hiding** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Abstraction, modularity, interfaces và API contracts**. Route đi từ module responsibility/change → information hiding → interface/implementation → dependency inversion/versioning → local-remote contract, để boundary được đánh giá bằng thay đổi và compatibility.
 
 Software lớn không thể được hiểu toàn bộ cùng lúc. Modularity (모듈성 / tính mô-đun) chia hệ thống (system / 시스템) thành boundaries để mỗi phần có thể lập luận (reasoning / 추론), thay đổi và kiểm thử (test / 테스트) tương đối độc lập. Nhưng ranh giới (boundary / 경계) chỉ hữu ích khi giao diện (interface / 인터페이스) đặc tả hợp đồng (contract / 계약) rõ và thông tin (information / 정보) hiding đúng.
 

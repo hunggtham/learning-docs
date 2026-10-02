@@ -1,6 +1,6 @@
 # Caching, tải (load / 로드) balancing và CDNs
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Caching, tải (load / 로드) balancing và CDNs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bộ nhớ đệm (cache / 캐시) là bản sao có điều kiện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cache-aside** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Caching, load balancing và CDNs**. Route đi từ cache copy/consistency → cache-aside/TTL/eviction → stampede control → L4/L7 balancing/consistent hashing → CDN locality, để freshness và capacity được cân cùng nhau.
 
 Khi hệ thống (system / 시스템) lớn lên, hai câu hỏi lặp lại: làm sao tránh lặp lại công việc (work / 작업)/dữ liệu (data / 데이터) transfer đắt, và làm sao phân phối công việc (work / 작업) qua nhiều resources? Caching trả lời câu đầu; tải (load / 로드) balancing trả lời câu hai; CDN kết hợp cả hai theo geography/mạng (network / 네트워크) topology.
 

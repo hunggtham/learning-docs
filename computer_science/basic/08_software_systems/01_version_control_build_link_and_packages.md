@@ -1,6 +1,6 @@
 # Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phiên bản (version / 버전) điều khiển (control / 제어), bản dựng (build / 빌드), linking và gói (package / 패키지) phụ thuộc (dependency / 의존성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phiên bản (version / 버전) điều khiển (control / 제어) as lịch sử (history / 이력) đồ thị (graph / 그래프)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Content addressing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Version control, build, linking và package dependencies**. Route đi từ history/content addressing → build graph → compilation/linking → package resolution → semantic/binary compatibility → reproducible CI/CD, để artifact truy nguyên được tới source và dependency.
 
 Mã nguồn (source code / 소스 코드) không trực tiếp trở thành deployable hệ thống (system / 시스템). Reproducible development cần lịch sử (history / 이력), phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), compilation/transformation, linking, packaging và sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자). Git, bản dựng (build / 빌드) tools và gói (package / 패키지) managers giải các parts khác nhau của chuỗi xử lý (pipeline / 파이프라인).
 

@@ -1,6 +1,6 @@
 # Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao cần hàng đợi?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hàng đợi có giới hạn và không giới hạn** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **State, queues, backpressure và system boundaries**. Route đi từ queue purpose/boundedness → backpressure/rate limiting → messaging semantics/ordering → state placement/event log → retry storms, để flow control được nối với failure boundary.
 
 Nhiều hệ thống thực tế có thể được hiểu bằng ba thành phần: bên tạo công việc, hàng đợi hoặc bộ đệm, và bên xử lý công việc. Dữ liệu hoặc sự kiện di chuyển giữa các thành phần qua những ranh giới rõ ràng. **hàng đợi (queue / 큐)** giúp hấp thụ tải tăng đột biến và tách tốc độ của bên gửi khỏi bên nhận, nhưng nó không tự tạo thêm năng lực xử lý. Nếu không có **áp lực ngược (backpressure)** hoặc cơ chế giảm tải, tình trạng quá tải chỉ bị chuyển thành độ trễ và lượng dữ liệu chờ ngày càng lớn.
 
