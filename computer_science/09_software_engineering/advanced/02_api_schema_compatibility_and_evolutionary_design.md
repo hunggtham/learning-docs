@@ -1,6 +1,6 @@
 # API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính tương thích (compatibility / 호환성) có hướng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **API/schema compatibility và evolutionary design**. Route đi từ compatibility direction → additive/destructive changes → reader-writer matrix → versioning/deprecation → contract testing, để API evolution không phá consumer cũ.
 
 Một API môi trường vận hành (production / 운영 환경) hiếm khi có thời điểm tất cả producers và consumers upgrade cùng lúc. Trong rolling triển khai (deployment / 배포), mobile app, bên ngoài (external / 외부) tích hợp (integration / 통합) hoặc sự kiện (event / 이벤트) stream, nhiều versions phải cùng tồn tại. Vì vậy tính tương thích (compatibility / 호환성) không phải polish; nó là điều kiện để hệ thống **evolve without coordinated stop-the-world upgrade**.
 

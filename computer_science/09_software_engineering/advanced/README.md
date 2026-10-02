@@ -1,6 +1,6 @@
 # Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) chapters** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Mô hình tư duy (mental models / 사고 모델들) cần đạt** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Advanced Software Engineering**. Route đi từ architecture decisions → modular boundaries/API evolution → large-scale refactoring → test architecture → deployment safety → technical-debt economics, để thay đổi lớn vẫn giữ invariant và feedback.
 
 Nhánh học (track / 트랙) này tập trung vào cách thay đổi môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) dưới bất định (uncertainty / 불확실성) mà không cần big-bang coordination. Không thêm chapter chỉ để bao phủ methodology hoặc chỉ số (metric / 지표) mới; ưu tiên quyết định (decision / 결정) ranh giới (boundary / 경계), tính tương thích (compatibility / 호환성), di chuyển (migration / 마이그레이션), xác minh (verification / 확인), bằng chứng (evidence / 증거) và economics của changeability.
 

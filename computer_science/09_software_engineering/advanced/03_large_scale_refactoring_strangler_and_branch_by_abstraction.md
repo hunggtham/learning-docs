@@ -1,6 +1,6 @@
 # Large-scale refactoring, strangler di chuyển (migration / 마이그레이션) và branch-by-abstraction
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Large-scale refactoring, strangler di chuyển (migration / 마이그레이션) và branch-by-abstraction**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: môi trường vận hành (production / 운영 환경) không dừng để kiến trúc (architecture / 아키텍처) được thay** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. bất biến (invariant / 불변식) trước roadmap** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Large-scale refactoring, strangler migration và branch-by-abstraction**. Route đi từ production constraints/invariants → seam creation → dual path/branch by abstraction → strangler cutover → rollback và observability, để refactor tiến dần mà không yêu cầu dừng hệ thống.
 
 Refactoring nhỏ có thể hoàn thành trong một lần ghi nhận (commit / 커밋). di chuyển (migration / 마이그레이션) lớn kéo dài tuần/tháng phải coexist với môi trường vận hành (production / 운영 환경) traffic, nhiều nhị phân (binary / 이진) versions, nhiều teams và trạng thái (state / 상태) đã tồn tại. Vấn đề chính chuyển từ “mã (code / 코드) mới đẹp hơn” sang **làm sao đi từ trạng thái (state / 상태) A tới trạng thái (state / 상태) B qua một chuỗi trạng thái trung gian luôn deployable, observable và recoverable**.
 

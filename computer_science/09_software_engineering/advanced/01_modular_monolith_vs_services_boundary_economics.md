@@ -1,6 +1,6 @@
 # Modular monolith vs services: ranh giới (boundary / 경계) economics và di chuyển (migration / 마이그레이션)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Modular monolith vs services: ranh giới (boundary / 경계) economics và di chuyển (migration / 마이그레이션)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Monolith không đồng nghĩa spaghetti** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dịch vụ (service / 서비스) ranh giới (boundary / 경계) có chi phí cố định** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Modular monolith vs services: boundary economics và migration**. Route đi từ module cohesion → service fixed costs/remote failure → ownership/data boundaries → extraction seams → migration evidence, để tách dịch vụ theo coupling thật thay vì theo khẩu hiệu.
 
 “Monolith hay microservices?” thường bị biến thành câu hỏi công nghệ, trong khi vấn đề thật là **ranh giới (boundary / 경계) economics**: ranh giới (boundary / 경계) nào cần enforce, nhóm (team / 팀) nào sở hữu trạng thái (state / 상태), thay đổi (change / 변경) nào thường đi cùng nhau, thất bại (failure / 실패) nào cần cô lập và organization có đủ năng lực vận hành hệ thống phân tán (distributed system / 분산 시스템) hay không.
 
