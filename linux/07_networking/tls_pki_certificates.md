@@ -1,7 +1,6 @@
 # TLS, PKI và vòng đời chứng chỉ
 
-> **Mạch đọc:** Đọc **TLS, PKI và vòng đời chứng chỉ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **TLS giải quyết những gì?** sang **Vì sao chỉ mã hóa là chưa đủ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TLS, PKI và vòng đời chứng chỉ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **TLS giải quyết những gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao chỉ mã hóa là chưa đủ?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối TLS với PKI, certificate chain và handshake, để kiểm tra danh tính máy chủ trước khi đánh giá mã hóa đường truyền.
 
 Khi một ứng dụng truy cập `https://service.example.com`, việc “dùng HTTPS” thực tế là kết quả của nhiều cơ chế phối hợp: phân giải DNS, kết nối TCP, bắt tay TLS, kiểm tra chứng chỉ, thương lượng thuật toán mật mã, thiết lập khóa phiên rồi mới truyền HTTP đã mã hóa.
 
@@ -17,11 +16,15 @@ TLS chủ yếu cung cấp ba thuộc tính:
 
 TLS không tự bảo đảm ứng dụng (application / 애플리케이션) đúng, máy chủ (server / 서버) không bị xâm nhập hay dữ liệu lưu trữ an toàn. Nó bảo vệ một phần đường truyền và danh tính endpoint theo trust mô hình (model / 모델) của PKI.
 
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **Vì sao chỉ mã hóa là chưa đủ?** tiếp nhận điểm tựa từ **TLS giải quyết những gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chứng chỉ X.509** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao chỉ mã hóa là chưa đủ?
 
 Nếu máy khách (client / 클라이언트) mã hóa dữ liệu cho một attacker mà tưởng đó là máy chủ (server / 서버) thật, confidentiality không giúp nhiều. Vì vậy máy khách (client / 클라이언트) cần biết công khai (public / 공개) key đang dùng thực sự thuộc endpoint nào.
 
 PKI giải bài toán này bằng chuỗi tin cậy (chain of trust).
+
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Chứng chỉ X.509** tiếp nhận điểm tựa từ **Vì sao chỉ mã hóa là chưa đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Private key và certificate khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chứng chỉ X.509
 
@@ -47,6 +50,8 @@ Xem ngày hiệu lực:
 openssl x509 -in server.crt -noout -dates
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **Private key và certificate khác nhau** tiếp nhận điểm tựa từ **Chứng chỉ X.509** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CA là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Private key và certificate khác nhau
 
 Chứng chỉ có thể được phân phối công khai; private key phải được bảo vệ.
@@ -62,6 +67,8 @@ certificate
 ```
 
 Nếu private key bị lộ, attacker có thể giả mạo endpoint trong nhiều tình huống phù hợp. Thay certificate nhưng giữ private key đã bị lộ không giải quyết được sự cố.
+
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **CA là gì?** tiếp nhận điểm tựa từ **Private key và certificate khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao cần intermediate CA?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CA là gì?
 
@@ -79,11 +86,15 @@ Server certificate
 
 Máy khách (client / 클라이언트) xác minh từng chữ ký trong chuỗi (chain / 사슬) cho tới một trust anchor nó đã tin.
 
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Tại sao cần intermediate CA?** tiếp nhận điểm tựa từ **CA là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy chủ (server / 서버) phải gửi chuỗi (chain / 사슬) nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tại sao cần intermediate CA?
 
 Gốc (root / 루트) private key có giá trị cực lớn và nên được bảo vệ rất chặt. Thay vì dùng gốc (root / 루트) trực tiếp hàng ngày, tổ chức dùng intermediate CA để phát hành certificate.
 
 Nếu intermediate có vấn đề, có thể thu hồi hoặc thay intermediate mà không nhất thiết thay gốc (root / 루트) trust anchor trên toàn bộ máy khách (client / 클라이언트).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **Tại sao cần intermediate CA?** xác định đầu vào; **Máy chủ (server / 서버) phải gửi chuỗi (chain / 사슬) nào?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hostname xác minh (verification / 확인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Máy chủ (server / 서버) phải gửi chuỗi (chain / 사슬) nào?
 
@@ -107,6 +118,8 @@ openssl s_client -connect service.example.com:443 -servername service.example.co
 
 `-servername` gửi SNI, rất quan trọng khi nhiều hostname dùng chung IP.
 
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **Máy chủ (server / 서버) phải gửi chuỗi (chain / 사슬) nào?** xác định đầu vào; **Hostname xác minh (verification / 확인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Wildcard certificate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hostname xác minh (verification / 확인)
 
 Máy khách (client / 클라이언트) không chỉ kiểm tra certificate do CA tin cậy ký; nó còn phải kiểm tra hostname đang truy cập có nằm trong certificate không.
@@ -121,6 +134,8 @@ DNS:*.internal.example.com
 ```
 
 thì truy cập hostname khác có thể thất bại (fail / 실패) dù certificate chưa hết hạn và CA hợp lệ.
+
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Wildcard certificate** tiếp nhận điểm tựa từ **Hostname xác minh (verification / 확인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SNI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Wildcard certificate
 
@@ -139,6 +154,8 @@ a.b.example.com
 
 Không nên coi wildcard là “mọi hostname phía dưới”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **SNI** tiếp nhận điểm tựa từ **Wildcard certificate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLS handshake ở mức khái niệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## SNI
 
 **máy chủ (server / 서버) Name Indication (SNI)** cho phép máy khách (client / 클라이언트) gửi hostname trong TLS handshake để reverse proxy/bộ cân bằng tải (load balancer / 로드 밸런서) chọn certificate phù hợp trước khi HTTP Host header được đọc.
@@ -150,6 +167,8 @@ server -> chọn certificate cho api.example.com
 ```
 
 Nếu máy khách (client / 클라이언트) không gửi SNI hoặc gửi hostname sai, máy chủ (server / 서버) có thể trả certificate mặc định không match.
+
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **TLS handshake ở mức khái niệm** tiếp nhận điểm tựa từ **SNI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLS 1.2 và TLS 1.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## TLS handshake ở mức khái niệm
 
@@ -177,6 +196,8 @@ encrypted application data
 
 Chi tiết thực tế phức tạp hơn, nhưng mô hình tư duy (mental model / 사고 모델) này đủ để phân lớp lỗi.
 
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **TLS 1.2 và TLS 1.3** tiếp nhận điểm tựa từ **TLS handshake ở mức khái niệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cipher suite** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## TLS 1.2 và TLS 1.3
 
 TLS 1.3 loại bỏ nhiều thuật toán cũ, đơn giản hóa handshake và giảm round trip trong nhiều trường hợp. Một số cấu hình legacy chỉ hỗ trợ TLS 1.0/1.1 hoặc cipher cũ có thể không tương thích với máy khách (client / 클라이언트) hiện đại.
@@ -190,6 +211,8 @@ openssl s_client -connect host:443 -servername host -tls1_3
 
 Tùy phiên bản OpenSSL và máy chủ (server / 서버).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **Cipher suite** tiếp nhận điểm tựa từ **TLS 1.2 và TLS 1.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward secrecy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cipher suite
 
 Cipher suite mô tả tập thuật toán dùng cho các phần của TLS. Trong TLS 1.3, cấu trúc tên đơn giản hơn so với TLS 1.2.
@@ -202,11 +225,15 @@ Không nên chọn cipher chỉ vì “mạnh nhất” theo cảm giác. Cần 
 - compliance;
 - giao thức (protocol / 프로토콜) phiên bản (version / 버전).
 
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **Forward secrecy** tiếp nhận điểm tựa từ **Cipher suite** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Certificate expiration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Forward secrecy
 
 Các cơ chế trao đổi khóa tạm thời như ECDHE giúp đạt **bí mật chuyển tiếp (forward secrecy)**: nếu long-term private key bị lộ trong tương lai, attacker không dễ giải mã lại các session cũ đã capture trước đó.
 
 Đây là lý do hiện đại (modern / 현대적) TLS ưu tiên ephemeral key exchange.
+
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Certificate expiration** tiếp nhận điểm tựa từ **Forward secrecy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Renewal và automation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Certificate expiration
 
@@ -218,6 +245,8 @@ openssl s_client -connect host:443 -servername host </dev/null 2>/dev/null \
 ```
 
 Nếu clock hệ thống sai, certificate hợp lệ vẫn có thể bị xem là “chưa hiệu lực” hoặc “đã hết hạn”. Vì vậy TLS liên hệ trực tiếp với [Time, clock và NTP](../05_system/time_clock_ntp.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **Renewal và automation** tiếp nhận điểm tựa từ **Certificate expiration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reload certificate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Renewal và automation
 
@@ -237,6 +266,8 @@ Let's Encrypt/ACME giúp tự động hóa certificate công khai (public / 공�
 
 Một hệ thống tốt phải kiểm tra cả việc renewal đã tạo certificate mới **và** dịch vụ (service / 서비스) đã thực sự dùng certificate mới.
 
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **Reload certificate** tiếp nhận điểm tựa từ **Renewal và automation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java trust store và key store** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reload certificate
 
 Nhiều reverse proxy có thể reload certificate mà không downtime lớn:
@@ -246,6 +277,8 @@ nginx -t && systemctl reload nginx
 ```
 
 Nhưng ngữ nghĩa (semantics / 의미론) phụ thuộc ứng dụng. Một Java dịch vụ (service / 서비스) có thể cần restart nếu keystore chỉ được đọc lúc startup.
+
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Java trust store và key store** tiếp nhận điểm tựa từ **Reload certificate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không tắt TLS xác minh (verification / 확인) để “fix” môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Java trust store và key store
 
@@ -275,11 +308,15 @@ PKIX path building failed
 
 thường cần kiểm tra trust chuỗi (chain / 사슬)/trust store thay vì disable certificate xác minh (verification / 확인).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **Không tắt TLS xác minh (verification / 확인) để “fix” môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **Java trust store và key store** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **mTLS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Không tắt TLS xác minh (verification / 확인) để “fix” môi trường vận hành (production / 운영 환경)
 
 Các lựa chọn như `curl -k`, trust-all `X509TrustManager` hoặc tắt hostname xác minh (verification / 확인) chỉ nên dùng trong chẩn đoán có kiểm soát.
 
 Nếu đưa vào môi trường vận hành (production / 운영 환경), bạn đã loại bỏ phần authentication quan trọng của TLS và mở đường cho man-in-the-middle.
+
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **mTLS** tiếp nhận điểm tựa từ **Không tắt TLS xác minh (verification / 확인) để “fix” môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Certificate revocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## mTLS
 
@@ -295,6 +332,8 @@ mTLS cung cấp định danh (identity / 식별자) ở tầng vận chuyển (t
 
 Nhưng mTLS không tự mô hình hóa authorization nghiệp vụ. Một máy khách (client / 클라이언트) có certificate hợp lệ chưa chắc được phép gọi mọi API.
 
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Certificate revocation** tiếp nhận điểm tựa từ **mTLS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OCSP stapling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Certificate revocation
 
 Nếu private key bị compromise trước khi certificate hết hạn, cần cơ chế thu hồi.
@@ -306,11 +345,15 @@ Hai khái niệm truyền thống:
 
 Trong thực tế, hành vi (behavior / 동작) kiểm tra revocation phụ thuộc máy khách (client / 클라이언트)/nền tảng (platform / 플랫폼) và chính sách (policy / 정책). Không nên giả định mọi máy khách (client / 클라이언트) luôn kiểm tra OCSP giống nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **OCSP stapling** tiếp nhận điểm tựa từ **Certificate revocation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLS termination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## OCSP stapling
 
 Máy chủ (server / 서버) có thể lấy OCSP phản hồi (response / 응답) rồi “đính kèm” vào handshake để máy khách (client / 클라이언트) không cần tự truy vấn (query / 쿼리) CA responder cho mỗi liên kết (connection / 연결).
 
 Điều này có thể giảm độ trễ (latency / 지연 시간) và cải thiện privacy/độ tin cậy (reliability / 신뢰성).
+
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **TLS termination** tiếp nhận điểm tựa từ **OCSP stapling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **End-to-end TLS không luôn nghĩa một session** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## TLS termination
 
@@ -328,6 +371,8 @@ TLS có thể terminate ở bộ cân bằng tải (load balancer / 로드 밸�
 
 Nếu compliance hoặc threat mô hình (model / 모델) yêu cầu, backend hop có thể dùng TLS/mTLS riêng.
 
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **End-to-end TLS không luôn nghĩa một session** tiếp nhận điểm tựa từ **TLS termination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ALPN và HTTP/2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## End-to-end TLS không luôn nghĩa một session
 
 Một yêu cầu (request / 요청) có thể đi qua nhiều TLS session:
@@ -339,6 +384,8 @@ proxy  --TLS C--> backend
 ```
 
 Mỗi hop có certificate/trust store và dạng thất bại (failure mode / 실패 모드) riêng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **ALPN và HTTP/2** tiếp nhận điểm tựa từ **End-to-end TLS không luôn nghĩa một session** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Session resumption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## ALPN và HTTP/2
 
@@ -352,17 +399,23 @@ openssl s_client -connect host:443 -servername host -alpn h2,http/1.1
 
 Nếu HTTP/2 không được thương lượng, nguyên nhân có thể nằm ở TLS/ALPN cấu hình (config / 설정) chứ không phải HTTP ứng dụng (application / 애플리케이션) mã (code / 코드).
 
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **Session resumption** tiếp nhận điểm tựa từ **ALPN và HTTP/2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Handshake CPU chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Session resumption
 
 TLS session resumption giảm chi phí handshake cho liên kết (connection / 연결) mới bằng cách tái sử dụng thông tin phiên trước qua session ticket/PSK tùy giao thức (protocol / 프로토콜).
 
 Điều này giảm CPU và độ trễ (latency / 지연 시간) trong hệ thống liên kết (connection / 연결) churn cao.
 
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Handshake CPU chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Session resumption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLS thất bại (failure / 실패) theo tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Handshake CPU chi phí (cost / 비용)
 
 Public-key cryptography trong handshake tốn CPU hơn symmetric encryption sau khi session key đã được thiết lập. Nếu máy chủ (server / 서버) tạo lượng lớn liên kết (connection / 연결) TLS mới mỗi giây, handshake có thể trở thành bottleneck CPU.
 
 Liên kết (connection / 연결) reuse, TLS session resumption và hardware acceleration có thể ảnh hưởng sức chứa (capacity / 용량).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **TLS thất bại (failure / 실패) theo tầng** tiếp nhận điểm tựa từ **Handshake CPU chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proxy có thể thay certificate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## TLS thất bại (failure / 실패) theo tầng
 
@@ -397,6 +450,8 @@ openssl s_client -connect host:443 -servername host -showcerts
 curl -v https://host/
 ```
 
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **Proxy có thể thay certificate** tiếp nhận điểm tựa từ **TLS thất bại (failure / 실패) theo tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Certificate pinning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Proxy có thể thay certificate
 
 Corporate proxy hoặc bảo mật (security / 보안) appliance đôi khi giải mã TLS bằng cách phát certificate từ private enterprise CA. Máy công ty trust CA này nên trình duyệt (browser / 브라우저) hoạt động, nhưng JVM/bộ chứa (container / 컨테이너) không có CA đó có thể thất bại (fail / 실패).
@@ -405,9 +460,13 @@ Corporate proxy hoặc bảo mật (security / 보안) appliance đôi khi giả
 
 Giải pháp đúng là hiểu trust chuỗi (chain / 사슬) và cài CA phù hợp theo chính sách (policy / 정책), không phải tắt xác minh (verification / 확인).
 
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Certificate pinning** tiếp nhận điểm tựa từ **Proxy có thể thay certificate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Secrets và tệp (file / 파일) permission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Certificate pinning
 
 Một số máy khách (client / 클라이언트) pin công khai (public / 공개) key/certificate cụ thể để giảm phụ thuộc trust store rộng. Pinning tăng bảo mật (security / 보안) trong một threat mô hình (model / 모델) nhưng làm rotation phức tạp; cấu hình sai có thể tự gây outage khi certificate/key đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **Secrets và tệp (file / 파일) permission** tiếp nhận điểm tựa từ **Certificate pinning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Secrets và tệp (file / 파일) permission
 
@@ -420,6 +479,8 @@ chown root:service server.key
 
 Quyền chính xác phụ thuộc dịch vụ (service / 서비스) mô hình (model / 모델). Không nên để private key world-readable.
 
+> **Chuyển mạch:** Trong **TLS, PKI và vòng đời chứng chỉ**, **Mô hình tư duy** gom các mảnh từ **Secrets và tệp (file / 파일) permission** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 TLS có thể xem là hai bài toán lồng nhau:
@@ -430,6 +491,8 @@ TLS có thể xem là hai bài toán lồng nhau:
 ```
 
 Nếu chỉ nhìn “cổng (port / 포트) 443 mở” thì ta mới xác minh tầng TCP, chưa chứng minh TLS trust đã hoạt động.
+
+> **Chuyển mạch:** Ở chặng này của **TLS, PKI và vòng đời chứng chỉ**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -445,8 +508,10 @@ Nếu chỉ nhìn “cổng (port / 포트) 443 mở” thì ta mới xác minh 
 
 **“TLS termination ở bộ cân bằng tải (load balancer / 로드 밸런서) nghĩa backend cũng đang dùng TLS.”** Hai hop là hai liên kết (connection / 연결) khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TLS, PKI và vòng đời chứng chỉ**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [TCP/HTTP/TLS](./tcp_http_tls.md), [reverse proxy/load balancing](./reverse_proxy_load_balancing.md), [DNS internals](./dns_resolution_internals.md), [time/NTP](../05_system/time_clock_ntp.md) và [Java backend incident playbook](../09_production/java_backend_incident_playbook.md). TLS là điểm giao giữa networking, bảo mật (security / 보안), thời gian chạy (runtime / 런타임) cấu hình (configuration / 구성) và vòng đời (lifecycle / 생명주기) automation.
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [dns resolution internals](./dns_resolution_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

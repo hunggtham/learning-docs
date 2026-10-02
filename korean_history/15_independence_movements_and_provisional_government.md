@@ -1,6 +1,6 @@
 # Phong trào độc lập và Korean Provisional Government
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phong trào độc lập và Korean Provisional Government**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Independence movement không phải một organization duy nhất** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phong trào 1 tháng 3 (3·1운동 / March First Movement) 1919** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phong trào độc lập và Korean Provisional Government**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Independence movement không phải một organization duy nhất** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phong trào 1 tháng 3 (3·1운동 / March First Movement) 1919** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối phong trào độc lập với chính quyền lâm thời và tính chính danh, để theo dõi cách mục tiêu dân tộc chuyển thành tổ chức chính trị.
 
 ## Independence movement không phải một organization duy nhất
 

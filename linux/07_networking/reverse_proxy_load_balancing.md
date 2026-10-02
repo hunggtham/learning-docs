@@ -1,7 +1,6 @@
 # Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)
 
-> **Mạch đọc:** Đọc **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Proxy là gì?** sang **Vì sao cần reverse proxy?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Proxy là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao cần reverse proxy?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối reverse proxy với load balancing, health check và backpressure, để truy nguyên request bị định tuyến hoặc dồn tải sai.
 
 Một backend môi trường vận hành (production / 운영 환경) hiếm khi để máy khách (client / 클라이언트) kết nối trực tiếp tới Java tiến trình (process / 프로세스). yêu cầu (request / 요청) thường đi qua nhiều lớp:
 
@@ -36,6 +35,8 @@ Reverse proxy như Nginx, HAProxy, Envoy hoặc cloud bộ cân bằng tải (lo
 
 Máy khách (client / 클라이언트) nhìn thấy proxy như endpoint chính, còn proxy biết backend thật.
 
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Vì sao cần reverse proxy?** tiếp nhận điểm tựa từ **Proxy là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reverse proxy không phải “chỉ forward packet”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao cần reverse proxy?
 
 Một Java ứng dụng (application / 애플리케이션) có thể tự terminate TLS và serve HTTP trực tiếp. Nhưng reverse proxy cho phép tách nhiều trách nhiệm:
@@ -52,6 +53,8 @@ Một Java ứng dụng (application / 애플리케이션) có thể tự termin
 - yêu cầu (request / 요청)/phản hồi (response / 응답) header normalization.
 
 Việc tách này giúp ứng dụng (application / 애플리케이션) tập trung lô-gic nghiệp vụ (business logic / 비즈니스 로직), nhưng kiến trúc (architecture / 아키텍처) trở thành multi-hop.
+
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Reverse proxy không phải “chỉ forward packet”** tiếp nhận điểm tựa từ **Vì sao cần reverse proxy?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7 tải (load / 로드) balancing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reverse proxy không phải “chỉ forward packet”
 
@@ -71,6 +74,8 @@ Hai liên kết (connection / 연결) này độc lập về hết thời gian c
 
 Do đó máy khách (client / 클라이언트) hết thời gian chờ (timeout / 타임아웃) 30 giây không nhất thiết bằng backend hết thời gian chờ (timeout / 타임아웃) 30 giây.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7 tải (load / 로드) balancing** tiếp nhận điểm tựa từ **Reverse proxy không phải “chỉ forward packet”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tải (load / 로드) balancing giải quyết vấn đề gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tầng (layer / 계층) 4 và tầng (layer / 계층) 7 tải (load / 로드) balancing
 
 **tầng (layer / 계층) 4 bộ cân bằng tải (load balancer / 로드 밸런서)** thường cân bằng theo TCP/UDP liên kết (connection / 연결) mà không cần hiểu HTTP ngữ nghĩa (semantics / 의미론) sâu.
@@ -83,6 +88,8 @@ Do đó máy khách (client / 클라이언트) hết thời gian chờ (timeout 
 ```
 
 Tầng (layer / 계층) 7 cho flexibility cao hơn nhưng cần nhiều processing và giao thức (protocol / 프로토콜) awareness hơn.
+
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Tải (load / 로드) balancing giải quyết vấn đề gì?** tiếp nhận điểm tựa từ **Tầng (layer / 계층) 4 và tầng (layer / 계층) 7 tải (load / 로드) balancing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Round robin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tải (load / 로드) balancing giải quyết vấn đề gì?
 
@@ -97,6 +104,8 @@ client → LB ─┼─ app-2
 ```
 
 Nhưng “chia đều” không phải lúc nào cũng tối ưu. yêu cầu (request / 요청) chi phí (cost / 비용) có thể khác nhau, liên kết (connection / 연결) có thể sống lâu và instance sức chứa (capacity / 용량) có thể không đồng nhất.
+
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Round robin** tiếp nhận điểm tựa từ **Tải (load / 로드) balancing giải quyết vấn đề gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Least connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Round robin
 
@@ -113,11 +122,15 @@ Round robin hoạt động tốt khi yêu cầu (request / 요청) chi phí (cos
 
 Nhưng nếu một yêu cầu (request / 요청) chạy 30 giây còn yêu cầu (request / 요청) khác 10 ms, số yêu cầu (request / 요청) không phản ánh hiện tại (current / 현재) tải (load / 로드).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Least connections** tiếp nhận điểm tựa từ **Round robin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weighted balancing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Least connections
 
 **Least connections** chọn backend đang có ít active connections hơn.
 
 Cách này có thể phù hợp với long-lived connections hơn round robin, nhưng liên kết (connection / 연결) count vẫn không nói đầy đủ CPU/bộ nhớ (memory / 메모리)/nghiệp vụ (business / 비즈니스) chi phí (cost / 비용).
+
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Weighted balancing** tiếp nhận điểm tựa từ **Least connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Consistent hashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Weighted balancing
 
@@ -132,6 +145,8 @@ A nhận tỷ lệ traffic cao hơn.
 
 Weight là mô hình (model / 모델) sức chứa (capacity / 용량) gần đúng, không phải guarantee hiệu năng (performance / 성능).
 
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Consistent hashing** tiếp nhận điểm tựa từ **Weighted balancing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Session affinity và vấn đề stateful ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Consistent hashing
 
 Một số hệ thống muốn cùng key/máy khách (client / 클라이언트) thường đi tới cùng backend để tăng bộ nhớ đệm (cache / 캐시) locality hoặc session affinity.
@@ -139,6 +154,8 @@ Một số hệ thống muốn cùng key/máy khách (client / 클라이언트) 
 Consistent hashing giảm số keys bị remap khi backend thay đổi so với modulo hashing đơn giản.
 
 Nhưng sticky routing tạo sự đánh đổi (trade-off / 트레이드오프): phân phối (distribution / 분포) có thể kém đều và thất bại (failure / 실패) khôi phục (recovery / 복구) phức tạp hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Session affinity và vấn đề stateful ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **Consistent hashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Health check** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Session affinity và vấn đề stateful ứng dụng (application / 애플리케이션)
 
@@ -152,6 +169,8 @@ request 2 → app-B → session missing
 Bộ cân bằng tải (load balancer / 로드 밸런서) có thể dùng sticky session, nhưng solution tốt hơn trong nhiều hệ thống là đưa session/trạng thái (state / 상태) ra dùng chung (shared / 공유) store hoặc dùng stateless đơn vị từ (token / 토큰) khi phù hợp.
 
 Tải (load / 로드) balancing hoạt động tốt nhất khi ứng dụng (application / 애플리케이션) instance có thể thay thế lẫn nhau.
+
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Health check** tiếp nhận điểm tựa từ **Session affinity và vấn đề stateful ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Passive health và active health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Health check
 
@@ -175,6 +194,8 @@ Cần phân biệt:
 
 Không nên gộp tất cả vào một boolean đơn giản.
 
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Passive health và active health** tiếp nhận điểm tựa từ **Health check** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **502 Bad Gateway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Passive health và active health
 
 **Active health check** gửi yêu cầu (request / 요청) định kỳ tới backend.
@@ -182,6 +203,8 @@ Không nên gộp tất cả vào một boolean đơn giản.
 **Passive health check** quan sát thất bại (failure / 실패) từ traffic thật, ví dụ consecutive liên kết (connection / 연결) errors.
 
 Kết hợp hai cách có thể phản ánh trạng thái (state / 상태) tốt hơn, nhưng cần tránh flap khi backend chỉ có transient độ trễ (latency / 지연 시간).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **502 Bad Gateway** tiếp nhận điểm tựa từ **Passive health và active health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **504 Gateway hết thời gian chờ (timeout / 타임아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 502 Bad Gateway
 
@@ -198,6 +221,8 @@ Các nguyên nhân có thể gồm:
 
 `502` chỉ là symptom ở proxy tầng (layer / 계층). Cần xem proxy log và backend trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **504 Gateway hết thời gian chờ (timeout / 타임아웃)** tiếp nhận điểm tựa từ **502 Bad Gateway** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hết thời gian chờ (timeout / 타임아웃) phải được thiết kế theo chuỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 504 Gateway hết thời gian chờ (timeout / 타임아웃)
 
 `504 Gateway Timeout` thường nghĩa proxy đã chờ upstream vượt hết thời gian chờ (timeout / 타임아웃).
@@ -212,6 +237,8 @@ Backend có thể:
 - hết thời gian chờ (timeout / 타임아웃) chuỗi (chain / 사슬) cấu hình không hợp lý.
 
 Không nên chỉ tăng proxy hết thời gian chờ (timeout / 타임아웃). Nếu nguyên nhân gốc (root cause / 근본 원인) là phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간), tăng hết thời gian chờ (timeout / 타임아웃) có thể làm connections tích tụ lâu hơn và tạo tài nguyên (resource / 자원) exhaustion.
+
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **504 Gateway hết thời gian chờ (timeout / 타임아웃)** xác định đầu vào; **Hết thời gian chờ (timeout / 타임아웃) phải được thiết kế theo chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Thử lại (retry / 재시도) có thể khuếch đại sự cố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hết thời gian chờ (timeout / 타임아웃) phải được thiết kế theo chuỗi
 
@@ -242,6 +269,8 @@ dependency budget
 
 Hết thời gian chờ (timeout / 타임아웃) nên phản ánh end-to-end độ trễ (latency / 지연 시간) mục tiêu (objective / 목표), không phải các con số độc lập.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Hết thời gian chờ (timeout / 타임아웃) phải được thiết kế theo chuỗi** xác định đầu vào; **Thử lại (retry / 재시도) có thể khuếch đại sự cố** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Idempotency và thử lại (retry / 재시도) POST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thử lại (retry / 재시도) có thể khuếch đại sự cố
 
 Nếu proxy thử lại (retry / 재시도) yêu cầu (request / 요청) thất bại (fail / 실패) sang backend khác, độ tin cậy (reliability / 신뢰성) có thể tăng với transient thất bại (failure / 실패).
@@ -266,6 +295,8 @@ Thử lại (retry / 재시도) cần:
 - jitter;
 - chỉ thử lại (retry / 재시도) idempotent operations nếu không có deduplication ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Idempotency và thử lại (retry / 재시도) POST** tiếp nhận điểm tựa từ **Thử lại (retry / 재시도) có thể khuếch đại sự cố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Keep-alive và liên kết (connection / 연결) pooling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Idempotency và thử lại (retry / 재시도) POST
 
 Thử lại (retry / 재시도) `GET` thường ít nguy hiểm hơn thử lại (retry / 재시도) một thao tác (operation / 연산) tạo payment/thứ tự (order / 순서).
@@ -288,6 +319,8 @@ Backend lưu kết quả và nhận diện thử lại (retry / 재시도) cùng
 
 Đây là liên kết (connection / 연결) giữa networking độ tin cậy (reliability / 신뢰성) và nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성).
 
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, sau nội dung của **Idempotency và thử lại (retry / 재시도) POST**, **Keep-alive và liên kết (connection / 연결) pooling** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hàng đợi (queue / 큐) tại proxy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Keep-alive và liên kết (connection / 연결) pooling
 
 Proxy thường giữ persistent liên kết (connection / 연결) tới backend để giảm TCP/TLS handshake overhead.
@@ -302,6 +335,8 @@ Các metrics cần nhìn:
 - TIME_WAIT;
 - upstream độ trễ (latency / 지연 시간).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Hàng đợi (queue / 큐) tại proxy** tiếp nhận điểm tựa từ **Keep-alive và liên kết (connection / 연결) pooling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàng đợi (queue / 큐) tại proxy
 
 Khi upstream sức chứa (capacity / 용량) đầy, proxy có thể có pending requests/connections.
@@ -311,6 +346,8 @@ Hàng đợi (queue / 큐) không tự động xấu. Một hàng đợi (queue 
 Đây là ứng dụng (application / 애플리케이션) của queueing lý thuyết (theory / 이론).
 
 Xem thêm: [Capacity planning](../09_production/capacity_planning_server_sizing.md).
+
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Backpressure** tiếp nhận điểm tựa từ **Hàng đợi (queue / 큐) tại proxy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ lệ (rate / 비율) limiting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Backpressure
 
@@ -322,6 +359,8 @@ Better hành vi (behavior / 동작) có thể là reject sớm bằng `429`/`503
 
 Thất bại (fail / 실패) fast đôi khi bảo vệ hệ thống (system / 시스템) tốt hơn “cố xử lý tất cả”.
 
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Backpressure** đã nêu tiêu chí phân biệt, còn **Tỷ lệ (rate / 비율) limiting** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **TLS termination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tỷ lệ (rate / 비율) limiting
 
 Proxy có thể giới hạn yêu cầu (request / 요청) tỷ lệ (rate / 비율) theo IP, người dùng (user / 사용자)/đơn vị từ (token / 토큰) hoặc endpoint.
@@ -329,6 +368,8 @@ Proxy có thể giới hạn yêu cầu (request / 요청) tỷ lệ (rate / 비
 Tỷ lệ (rate / 비율) limiting giúp chống abuse và bảo vệ backend, nhưng threshold phải dựa traffic mô hình (model / 모델).
 
 Một endpoint login và một endpoint tệp (file / 파일) download có chi phí (cost / 비용) khác nhau; chỉ dùng requests/second không phản ánh mọi tài nguyên (resource / 자원) chi phí (cost / 비용).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Tỷ lệ (rate / 비율) limiting** đã nêu tiêu chí phân biệt, còn **TLS termination** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **X-Forwarded- headers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## TLS termination
 
@@ -346,6 +387,8 @@ Nếu proxy→backend dùng HTTP, traffic nội bộ không được TLS bảo v
 
 Một số môi trường (environment / 환경) dùng TLS ở cả hai đoạn hoặc mTLS.
 
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **X-Forwarded- headers** tiếp nhận điểm tựa từ **TLS termination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy khách (client / 클라이언트) IP và nhiều proxy hops** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## X-Forwarded-* headers
 
 Khi proxy tạo liên kết (connection / 연결) mới tới backend, backend nhìn nguồn (source / 소스) IP của proxy thay vì máy khách (client / 클라이언트) thật.
@@ -362,6 +405,8 @@ hoặc tiêu chuẩn (standard / 표준) `Forwarded` header.
 
 Ứng dụng (application / 애플리케이션) chỉ nên tin các headers này từ proxy đáng tin cậy. Nếu máy khách (client / 클라이언트) internet có thể tự set header và app tin vô điều kiện, kiểm tra (audit / 감사)/bảo mật (security / 보안) lô-gic (logic / 논리) có thể bị giả mạo.
 
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Máy khách (client / 클라이언트) IP và nhiều proxy hops** tiếp nhận điểm tựa từ **X-Forwarded- headers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reverse proxy và WebSocket** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Máy khách (client / 클라이언트) IP và nhiều proxy hops
 
 `X-Forwarded-For` có thể là danh sách (list / 목록):
@@ -374,6 +419,8 @@ Muốn lấy máy khách (client / 클라이언트) IP đúng cần biết số 
 
 Không nên đơn giản chọn giá trị đầu/cuối mà không hiểu topology.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Reverse proxy và WebSocket** tiếp nhận điểm tựa từ **Máy khách (client / 클라이언트) IP và nhiều proxy hops** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HTTP/2 multiplexing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reverse proxy và WebSocket
 
 WebSocket bắt đầu bằng HTTP upgrade rồi chuyển sang long-lived bidirectional liên kết (connection / 연결).
@@ -382,6 +429,8 @@ Proxy phải hỗ trợ upgrade headers và hết thời gian chờ (timeout / �
 
 Long-lived connections cũng làm tải (load / 로드) balancing theo yêu cầu (request / 요청) count kém meaningful hơn.
 
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **HTTP/2 multiplexing** tiếp nhận điểm tựa từ **Reverse proxy và WebSocket** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nginx upstream example** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## HTTP/2 multiplexing
 
 Một HTTP/2 liên kết (connection / 연결) có thể mang nhiều concurrent streams.
@@ -389,6 +438,8 @@ Một HTTP/2 liên kết (connection / 연결) có thể mang nhiều concurrent
 Do đó liên kết (connection / 연결) count máy khách (client / 클라이언트)→proxy không trực tiếp tương đương yêu cầu (request / 요청) tính đồng thời (concurrency / 동시성).
 
 Nếu proxy dùng HTTP/1.1 tới backend, một HTTP/2 máy khách (client / 클라이언트) liên kết (connection / 연결) có thể fan out thành nhiều upstream connections/requests.
+
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **HTTP/2 multiplexing** cho ta quy tắc; **Nginx upstream example** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Proxy buffering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nginx upstream example
 
@@ -414,6 +465,8 @@ server {
 
 Đây chỉ là skeleton. môi trường vận hành (production / 운영 환경) cần hết thời gian chờ (timeout / 타임아웃), TLS, health hành vi (behavior / 동작), logging, buffering và bảo mật (security / 보안) settings phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Nginx upstream example** cho ta quy tắc; **Proxy buffering** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Bộ cân bằng tải (load balancer / 로드 밸런서) ở cloud** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Proxy buffering
 
 Một reverse proxy có thể buffer yêu cầu (request / 요청)/phản hồi (response / 응답) thay vì stream ngay.
@@ -421,6 +474,8 @@ Một reverse proxy có thể buffer yêu cầu (request / 요청)/phản hồi 
 Buffering có lợi vì backend có thể trả nhanh rồi proxy gửi chậm cho máy khách (client / 클라이언트). Nhưng với streaming/SSE/large upload, buffering có thể gây độ trễ (latency / 지연 시간) hoặc bộ nhớ (memory / 메모리)/disk use không mong muốn.
 
 Hành vi (behavior / 동작) cần align tải công việc (workload / 워크로드).
+
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Bộ cân bằng tải (load balancer / 로드 밸런서) ở cloud** tiếp nhận điểm tựa từ **Proxy buffering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kubernetes dịch vụ (service / 서비스) và Ingress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ cân bằng tải (load balancer / 로드 밸런서) ở cloud
 
@@ -436,6 +491,8 @@ AWS ALB/NLB, GCP bộ cân bằng tải (load balancer / 로드 밸런서), Azur
 
 Không nên học từng vendor như hệ thống hoàn toàn riêng. Hãy map chúng về mạng (network / 네트워크)/proxy mô hình tư duy (mental model / 사고 모델).
 
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Kubernetes dịch vụ (service / 서비스) và Ingress** tiếp nhận điểm tựa từ **Bộ cân bằng tải (load balancer / 로드 밸런서) ở cloud** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gỡ lỗi (debug / 디버그) 502/504 theo tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kubernetes dịch vụ (service / 서비스) và Ingress
 
 Kubernetes `Service` cung cấp stable virtual endpoint cho pods. Ingress/Gateway xử lý tầng (layer / 계층) 7 routing tùy hiện thực (implementation / 구현).
@@ -450,6 +507,8 @@ external LB
 ```
 
 Mỗi tầng (layer / 계층) có logs/metrics/trạng thái (state / 상태) riêng. `curl podIP` thành công không chứng minh bên ngoài (external / 외부) ingress đường dẫn (path / 경로) đúng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Gỡ lỗi (debug / 디버그) 502/504 theo tầng (layer / 계층)** tiếp nhận điểm tựa từ **Kubernetes dịch vụ (service / 서비스) và Ingress** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy cập (access / 접근) log như structured bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gỡ lỗi (debug / 디버그) 502/504 theo tầng (layer / 계층)
 
@@ -477,6 +536,8 @@ hoặc truy cập (access / 접근)/lỗi (error / 오류) logs.
 
 Sau đó correlate timestamp với backend logs.
 
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Gỡ lỗi (debug / 디버그) 502/504 theo tầng (layer / 계층)** nêu điều cần giải thích; **Truy cập (access / 접근) log như structured bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Yêu cầu (request / 요청) ID propagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Truy cập (access / 접근) log như structured bằng chứng (evidence / 증거)
 
 Một proxy truy cập (access / 접근) log tốt nên có:
@@ -493,6 +554,8 @@ Một proxy truy cập (access / 접근) log tốt nên có:
 Ví dụ nếu total thời gian (time / 시간) 10s nhưng upstream thời gian (time / 시간) 9.9s, proxy overhead ít khả năng là bottleneck chính.
 
 Nếu connect thời gian (time / 시간) cao, liên kết (connection / 연결) establishment/mạng (network / 네트워크)/upstream accept đường dẫn (path / 경로) đáng điều tra.
+
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Truy cập (access / 접근) log như structured bằng chứng (evidence / 증거)** nêu điều cần giải thích; **Yêu cầu (request / 요청) ID propagation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Yêu cầu (request / 요청) ID propagation
 
@@ -511,6 +574,8 @@ proxy access log
 ```
 
 Đây là nền tảng phân tán (distributed / 분산) tracing đơn giản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Yêu cầu (request / 요청) ID propagation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -536,6 +601,8 @@ response path
 
 Mỗi mũi tên có hết thời gian chờ (timeout / 타임아웃), hàng đợi (queue / 큐) và dạng thất bại (failure mode / 실패 모드) riêng.
 
+> **Chuyển mạch:** Trong **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Xem thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 **“502 nghĩa backend mã (code / 코드) trả 502.”** Thường 502 được proxy tạo vì upstream communication thất bại (failure / 실패).
@@ -550,6 +617,8 @@ Mỗi mũi tên có hết thời gian chờ (timeout / 타임아웃), hàng đ�
 
 **“Proxy không ảnh hưởng hiệu năng (performance / 성능).”** Proxy có liên kết (connection / 연결) pools, buffers, TLS chi phí (cost / 비용), queues và tài nguyên (resource / 자원) limits riêng.
 
+> **Chuyển mạch:** Ở chặng này của **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)**, **Xem thêm** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Xem thêm
 
 Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
@@ -560,4 +629,4 @@ Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở
 - [Java backend incident playbook](../09_production/java_backend_incident_playbook.md)
 - [Capacity planning và server sizing](../09_production/capacity_planning_server_sizing.md)
 
-> **Bàn giao:** Sau **Xem thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [dns resolution internals](./dns_resolution_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Xem thêm**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

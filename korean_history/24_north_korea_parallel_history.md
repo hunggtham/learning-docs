@@ -1,6 +1,6 @@
 # Bắc Triều Tiên: một lịch sử song song sau 1945
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bắc Triều Tiên: một lịch sử song song sau 1945**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần học song song?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태) building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bắc Triều Tiên: một lịch sử song song sau 1945**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần học song song?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái (state / 상태) building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối lịch sử song song Bắc–Nam với phân chia, thể chế và ký ức chiến tranh, để đọc continuity cùng các điểm đứt gãy.
 
 ## Vì sao cần học song song?
 
