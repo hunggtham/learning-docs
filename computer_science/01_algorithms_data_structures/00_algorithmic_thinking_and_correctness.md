@@ -1,6 +1,6 @@
 # Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ bài toán (problem / 문제) statement tới specification** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Partial tính đúng đắn (correctness / 정확성) và termination** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)**. Route đi từ problem/specification → invariant và termination → proof/complexity → kiểm thử và triển khai, để thuật toán được đánh giá bằng hành vi đảm bảo chứ không chỉ bằng ví dụ chạy được.
 
 Thuật toán (algorithm / 알고리즘) không phải một đoạn mã (code / 코드) có vẻ chạy được. Nó là một procedure hữu hạn, rõ nghĩa, biến đầu vào (input / 입력) thành đầu ra (output / 출력) theo một specification. Tư duy thuật toán bắt đầu trước mã (code / 코드): xác định trạng thái (state / 상태) nào quan trọng, thao tác (operation / 연산) nào được phép, bất biến (invariant / 불변식) nào phải giữ, và bằng chứng nào cho thấy procedure thực sự giải đúng bài toán.
 

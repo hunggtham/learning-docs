@@ -1,6 +1,6 @@
 # Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Spatial và temporal locality** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**. Route đi từ address/pointer và memory model → layout/cache → spatial/temporal locality → allocator, vectorization và hiệu năng, để cấu trúc dữ liệu được đọc cùng chi phí phần cứng.
 
 Cấu trúc dữ liệu (data structure / 자료구조) không tồn tại trong khoảng không trừu tượng. Nó cuối cùng phải chiếm bytes trong bộ nhớ (memory / 메모리). Cùng độ phức tạp (complexity / 복잡도) lớp (class / 클래스), hai representations có thể khác hiệu năng (performance / 성능) rất lớn vì cách CPU bộ nhớ đệm (cache / 캐시), allocator và pointer chasing hoạt động.
 

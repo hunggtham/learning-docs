@@ -1,6 +1,6 @@
 # Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cây (tree / 트리) vocabulary từ cấu trúc (structure / 구조)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cây (tree / 트리), vùng nhớ động (heap / 힙) và ordered tìm kiếm (search / 검색) structures**. Route đi từ tree vocabulary/shape → BST và ordered search → heap/priority queue → balancing, updates và complexity, để cấu trúc thứ bậc được nối với invariant và thao tác.
 
 Cây (tree / 트리) biểu diễn hierarchy và recursive decomposition. Filesystem directories, DOM, AST, cơ sở dữ liệu (database / 데이터베이스) indexes và organizational structures đều có tree-like shape. Nhưng không phải mọi cây (tree / 트리) phục vụ cùng thao tác (operation / 연산); shape và bất biến (invariant / 불변식) quyết định hiệu năng (performance / 성능).
 

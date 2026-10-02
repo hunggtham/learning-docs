@@ -1,6 +1,6 @@
 # Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Recursion: định nghĩa bài toán (problem / 문제) bằng phiên bản nhỏ hơn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Divide-and-conquer** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**. Route đi từ recurrence/subproblem → divide-and-conquer → greedy/exchange argument → backtracking và dynamic programming, để chiến lược được chọn theo cấu trúc bài toán và proof of optimality.
 
 Thay vì nhớ hàng trăm algorithms riêng, hữu ích hơn là nhận ra vài **problem-solving structures** lặp đi lặp lại. Recursion mô tả self-similarity; divide-and-conquer tách subproblems độc lập; greedy lần ghi nhận (commit / 커밋) cục bộ (local / 로컬) choice; backtracking khám phá tìm kiếm (search / 검색) không gian (space / 공간) có pruning; động (dynamic / 동적) programming tái sử dụng overlapping subproblems.
 

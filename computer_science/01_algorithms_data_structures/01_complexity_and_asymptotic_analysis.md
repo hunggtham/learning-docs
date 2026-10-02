@@ -1,6 +1,6 @@
 # Thời gian (time / 시간)/không gian (space / 공간) độ phức tạp (complexity / 복잡도) và asymptotic phân tích (analysis / 분석)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thời gian (time / 시간)/không gian (space / 공간) độ phức tạp (complexity / 복잡도) và asymptotic phân tích (analysis / 분석)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đầu vào (input / 입력) kích thước (size / 크기) là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chi phí (cost / 비용) mô hình (model / 모델)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thời gian (time / 시간)/không gian (space / 공간) độ phức tạp (complexity / 복잡도) và asymptotic phân tích (analysis / 분석)**. Route đi từ input size và cost model → Big-O/Theta/Omega → amortized/average/worst case → trade-off thời gian–bộ nhớ, để so sánh thuật toán trong đúng mô hình tài nguyên.
 
 Nếu hai algorithms đều đúng, ta cần biết chúng quy mô (scale / 규모) thế nào khi đầu vào (input / 입력) lớn. Computational độ phức tạp (complexity / 복잡도) xây một mô hình (model / 모델) đủ đơn giản để bỏ qua chi tiết máy cụ thể nhưng vẫn giữ được tốc độ tăng chi phí theo đầu vào (input / 입력) kích thước (size / 크기).
 

@@ -1,6 +1,6 @@
 # Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Array: indexing đổi flexibility lấy locality** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Array, linked danh sách (list / 목록), ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque**. Route đi từ layout/indexing → linked references → stack/queue semantics → deque và lựa chọn cấu trúc theo thao tác, để API và hiệu năng được cân bằng cùng locality.
 
 Tuyến tính (linear / 선형) dữ liệu (data / 데이터) structures tổ chức elements theo một chiều logical thứ tự (order / 순서). Chúng đơn giản nhưng là building blocks cho parsers, schedulers, buffers, đồ thị (graph / 그래프) traversal, caches và runtimes.
 

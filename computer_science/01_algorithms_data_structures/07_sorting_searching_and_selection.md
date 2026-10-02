@@ -1,6 +1,6 @@
 # Sorting, searching và selection
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sorting, searching và selection**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tuyến tính (linear / 선형) tìm kiếm (search / 검색) và tìm kiếm nhị phân (binary search / 이진 탐색)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Stable sort** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sorting, searching và selection**. Route đi từ search assumptions → sorting invariants/stability → comparison and non-comparison sorts → selection/order statistics, để chọn thuật toán theo dữ liệu, bộ nhớ và yêu cầu output.
 
 Sorting (정렬 / sắp xếp) tưởng như bài tập cơ bản nhưng nó phơi bày nhiều idea: comparison mô hình (model / 모델), divide-and-conquer, stability, locality, lower bound và sự đánh đổi (trade-off / 트레이드오프) giữa CPU với bộ nhớ (memory / 메모리). Searching và selection tiếp tục cùng câu hỏi: ta khai thác cấu trúc (structure / 구조) nào của dữ liệu (data / 데이터) để tránh công việc (work / 작업) không cần thiết?
 
