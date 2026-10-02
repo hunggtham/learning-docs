@@ -1,6 +1,6 @@
 # Virtual bộ nhớ (memory / 메모리) và address spaces
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Virtual bộ nhớ (memory / 메모리) và address spaces**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Address không gian (space / 공간) như private coordinate hệ thống (system / 시스템)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Pages và page tables** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Virtual bộ nhớ (memory / 메모리) và address spaces**. Route đi từ virtual address/process isolation → pages/page tables/TLB → page faults/replacement → sharing, protection và memory pressure, để không nhầm địa chỉ logic với vị trí vật lý.
 
 Nếu programs dùng vật lý (physical / 물리적) addresses trực tiếp, chúng có thể đè bộ nhớ (memory / 메모리) nhau, relocation khó và mỗi tiến trình (process / 프로세스) phải biết bố cục (layout / 레이아웃) RAM thật. Virtual bộ nhớ (memory / 메모리) thêm một translation tầng (layer / 계층): program dùng virtual addresses, MMU + page tables map chúng tới vật lý (physical / 물리적) frames hoặc trạng thái chưa resident.
 

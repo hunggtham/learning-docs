@@ -1,6 +1,6 @@
 # Operating các hệ thống (systems / 시스템들) — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Operating các hệ thống (systems / 시스템들) — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Operating các hệ thống (systems / 시스템들) — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Operating các hệ thống (systems / 시스템들) — lĩnh vực (domain / 도메인) Hub**. Route học đi từ kernel/syscalls → processes/concurrency → virtual memory/filesystems/IPC → privilege, drivers và advanced systems, để mỗi chapter quay về abstraction, invariant và failure mode của OS.
 
 Foundation nằm tại [`../basic/03_operating_systems/`](../basic/03_operating_systems/): kernel/syscall, tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드), scheduling, synchronization, virtual bộ nhớ (memory / 메모리), filesystem, isolation, IPC và thiết bị (device / 장치) I/O.
 

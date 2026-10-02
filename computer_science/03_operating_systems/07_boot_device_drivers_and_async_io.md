@@ -1,6 +1,6 @@
 # Boot, thiết bị (device / 장치) drivers và asynchronous I/O
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ power-on đến người dùng (user / 사용자) không gian (space / 공간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**. Route đi từ power-on/bootloader → kernel/device discovery → driver boundary → async I/O, queues và completion, để đường đi từ phần cứng tới user space có thể truy nguyên khi lỗi.
 
 Một program gọi `read()` và nhận bytes, nhưng để bytes đi từ SSD/NIC/keyboard tới người dùng (user / 사용자) không gian (space / 공간) cần firmware, kernel, drivers, interrupts, DMA, queues và scheduler. Chapter này nối lớp trừu tượng (abstraction / 추상화) “thiết bị (device / 장치)/tệp (file / 파일)/socket” với cơ chế OS phía dưới.
 

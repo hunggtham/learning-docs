@@ -1,6 +1,6 @@
 # Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kernel là phần có quyền đặc biệt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lời gọi hệ thống (system call / 시스템 호출)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kernel, lời gọi hệ thống (system call / 시스템 호출) và OS abstractions**. Route đi từ kernel privilege và protection → system calls/ABI → process, memory và I/O abstractions → isolation và observability, để “OS abstraction” luôn quay về cơ chế kernel thực thi.
 
 Operating hệ thống (system / 시스템) — OS (운영체제 / hệ điều hành) giải quyết một mâu thuẫn cơ bản: nhiều programs muốn dùng cùng CPU, bộ nhớ (memory / 메모리), lưu trữ (storage / 저장소) và devices, nhưng nếu mỗi program điều khiển hardware trực tiếp thì isolation, portability và sharing gần như không thể quản lý. OS đặt một privileged kernel giữa applications và hardware, rồi cung cấp abstractions ổn định như tiến trình (process / 프로세스), virtual bộ nhớ (memory / 메모리), tệp (file / 파일) và socket.
 

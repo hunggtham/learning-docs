@@ -1,6 +1,6 @@
 # Privilege, isolation, containers và virtualization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Privilege, isolation, containers và virtualization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Protection rings và privilege** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Người dùng (user / 사용자), group và capabilities** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Privilege, isolation, containers và virtualization**. Route đi từ protection rings/capabilities → user/group/namespace → container boundary → hypervisor/VM và threat model, để “isolation” được đánh giá bằng quyền có thể vượt qua.
 
 Chạy nhiều workloads an toàn cần giới hạn “ai có thể làm gì” và “tài nguyên (resource / 자원) nào họ nhìn thấy”. CPU privilege, tiến trình (process / 프로세스) address spaces, OS permissions, namespaces, cgroups và virtual machines là các layers khác nhau của isolation.
 

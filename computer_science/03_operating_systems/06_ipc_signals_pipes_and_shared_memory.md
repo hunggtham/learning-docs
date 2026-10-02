@@ -1,6 +1,6 @@
 # IPC: signals, pipes, sockets và dùng chung (shared / 공유) bộ nhớ (memory / 메모리)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **IPC: signals, pipes, sockets và dùng chung (shared / 공유) bộ nhớ (memory / 메모리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Isolation tạo ra nhu cầu IPC** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Signals: notification với payload nhỏ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **IPC: signals, pipes, sockets và dùng chung (shared / 공유) bộ nhớ (memory / 메모리)**. Route đi từ process isolation → signal/pipe/socket semantics → shared memory/synchronization → backpressure, failure và observability, để kênh IPC được chọn theo payload, ordering và lifetime.
 
 Processes được isolation để một tiến trình (process / 프로세스) không tùy tiện đọc/ghi bộ nhớ (memory / 메모리) của tiến trình (process / 프로세스) khác. Nhưng software hữu ích lại cần cooperation. Inter-process communication (IPC / 프로세스 간 통신) là tập mechanisms cho phép isolated processes trao đổi dữ liệu (data / 데이터) hoặc synchronization signals mà vẫn giữ điều khiển (control / 제어) ranh giới (boundary / 경계) của OS.
 

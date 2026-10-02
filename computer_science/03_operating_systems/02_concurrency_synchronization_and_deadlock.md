@@ -1,6 +1,6 @@
 # Tính đồng thời (concurrency / 동시성), synchronization và deadlock
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tính đồng thời (concurrency / 동시성), synchronization và deadlock**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Trọng yếu (critical / 중요) section và mutual exclusion** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tính đồng thời (concurrency / 동시성), synchronization và deadlock**. Route đi từ interleaving/race → atomicity và mutual exclusion → ordering/condition variables → deadlock/livelock/starvation, để correctness và progress được kiểm tra cùng nhau.
 
 Tính đồng thời (concurrency / 동시성) bugs khó vì hành vi (behavior / 동작) phụ thuộc timing/interleaving mà mã nguồn (source code / 소스 코드) tuyến tính không thể hiện rõ. Hai threads cùng đúng khi chạy riêng có thể sai khi share mutable trạng thái (state / 상태).
 

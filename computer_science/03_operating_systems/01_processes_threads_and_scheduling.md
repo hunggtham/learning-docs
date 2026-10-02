@@ -1,6 +1,6 @@
 # Tiến trình (process / 프로세스), luồng thực thi (thread / 스레드) và scheduling
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tiến trình (process / 프로세스), luồng thực thi (thread / 스레드) và scheduling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tiến trình (process / 프로세스)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Luồng thực thi (thread / 스레드)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tiến trình (process / 프로세스), luồng thực thi (thread / 스레드) và scheduling**. Route đi từ address space/process → thread/context switch → scheduling/queues → latency, fairness và throughput, để hành vi ứng dụng được nối với cách CPU phân phối thời gian.
 
 Một máy có thể chạy trình duyệt (browser / 브라우저), cơ sở dữ liệu (database / 데이터베이스), IDE và hàng trăm services dù số CPU cores hữu hạn. OS tạo illusion bằng cách multiplex thực thi (execution / 실행). Để lập luận (reasoning / 추론) đúng, cần tách tiến trình (process / 프로세스) — isolation/tài nguyên (resource / 자원) bộ chứa (container / 컨테이너) — khỏi luồng thực thi (thread / 스레드) — thực thi (execution / 실행) stream có thể được scheduled.
 
