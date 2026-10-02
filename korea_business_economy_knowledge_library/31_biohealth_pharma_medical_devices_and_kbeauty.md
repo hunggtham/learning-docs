@@ -1,7 +1,6 @@
 # Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)
 
-> **Mạch đọc:** Đặt **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Ba cổng của kinh tế biohealth** sang **Phát triển thuốc là một chuỗi xác suất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**. Route đi từ pharma/medical devices/K-beauty value pools → drug development và xác suất → biosimilar, CDMO, diagnostics và regulation → IP, reimbursement và manufacturing → rủi ro clinical/commercial, để “bio” được tách theo mô hình kinh doanh thật.
 
 Biohealth là một trong những lĩnh vực cho thấy Hàn Quốc đang chuyển từ tăng trưởng thiên về sản xuất sang mô hình kết hợp **khoa học + quy định + IP + sản xuất giá trị cao**. Nhưng “bio” là nhãn rất rộng. Phát triển thuốc mới, biosimilar, CDMO, chẩn đoán, thiết bị y tế và mỹ phẩm có mô hình kinh doanh, yêu cầu vốn và dạng thất bại hoàn toàn khác nhau.
 
@@ -24,6 +23,8 @@ Thất bại ở bất kỳ cổng nào đều có thể làm giá trị kỳ v�
 Đây là điểm khác lớn với sản xuất thông thường. Một nhà máy thường có thể bán sản phẩm khi sản phẩm hoạt động và đạt tiêu chuẩn; thuốc hoặc thiết bị y tế còn phải đi qua nhiều năm thử nghiệm, phê duyệt và chấp nhận của bên thanh toán.
 
 # Phần I — Phát triển thuốc mới (Innovative Pharma / 신약개발)
+
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Ba cổng của kinh tế biohealth** xác định đầu vào; **Phát triển thuốc là một chuỗi xác suất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **rNPV: lô-gic (logic / 논리) định giá đã điều chỉnh rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phát triển thuốc là một chuỗi xác suất
 
@@ -50,6 +51,8 @@ P(thành\ công) \approx \prod_i p_i
 
 Đây là lý do một tài sản đang ở Phase 1 không thể được định giá chỉ bằng doanh số đỉnh tương lai rồi chiết khấu theo thời gian. Nó cần **giá trị đã điều chỉnh xác suất**.
 
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Phát triển thuốc là một chuỗi xác suất** xác định đầu vào; **rNPV: lô-gic (logic / 논리) định giá đã điều chỉnh rủi ro** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tiêu chí đánh giá thử nghiệm và thiết kế nghiên cứu là biến kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## rNPV: lô-gic (logic / 논리) định giá đã điều chỉnh rủi ro
 
 Một rNPV đơn giản:
@@ -62,6 +65,8 @@ rNPV = \sum_t \frac{P_t \times Dòng\ tiền\ kỳ\ vọng_t}{(1+r)^t} - Chi\ ph
 
 rNPV rất nhạy với giả định. Nó là khung tư duy, không phải “sự thật định giá”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Tiêu chí đánh giá thử nghiệm và thiết kế nghiên cứu là biến kinh tế** tiếp nhận điểm tựa từ **rNPV: lô-gic (logic / 논리) định giá đã điều chỉnh rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Runway tiền mặt: biotech có thể hết tiền trước khi khoa học cho câu trả lời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tiêu chí đánh giá thử nghiệm và thiết kế nghiên cứu là biến kinh tế
 
 Kết quả thử nghiệm không chỉ phụ thuộc “thuốc có tác dụng hay không”. Nó còn phụ thuộc **tiêu chí đánh giá (clinical endpoint)**, thuốc đối chứng, quần thể bệnh nhân và thiết kế thống kê.
@@ -69,6 +74,8 @@ Kết quả thử nghiệm không chỉ phụ thuộc “thuốc có tác dụng
 Một thuốc có thể có tác dụng sinh học nhưng vẫn không đạt ngưỡng cơ quan quản lý hoặc ngưỡng thương mại cần thiết.
 
 Vì vậy người phân tích cần hiểu “thành công” trong giao thức (protocol / 프로토콜) thực sự nghĩa là gì.
+
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Runway tiền mặt: biotech có thể hết tiền trước khi khoa học cho câu trả lời** tiếp nhận điểm tựa từ **Tiêu chí đánh giá thử nghiệm và thiết kế nghiên cứu là biến kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hợp đồng cấp phép: giá trị headline thường không phải tiền chắc chắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Runway tiền mặt: biotech có thể hết tiền trước khi khoa học cho câu trả lời
 
@@ -81,6 +88,8 @@ Runway \approx \frac{Tiền\ mặt}{Mức\ đốt\ tiền\ mỗi\ quý}
 Nếu runway kết thúc trước mốc dữ liệu lâm sàng quan trọng tiếp theo, rủi ro pha loãng và huy động vốn trở thành trung tâm.
 
 Một phân tử rất tốt nhưng tài chính yếu vẫn có thể phá hủy giá trị cổ đông qua nhiều vòng phát hành cổ phiếu giá thấp.
+
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Hợp đồng cấp phép: giá trị headline thường không phải tiền chắc chắn** tiếp nhận điểm tựa từ **Runway tiền mặt: biotech có thể hết tiền trước khi khoa học cho câu trả lời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng sáng chế và “vách bằng sáng chế”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hợp đồng cấp phép: giá trị headline thường không phải tiền chắc chắn
 
@@ -104,6 +113,8 @@ so với
 Tiền tương lai phụ thuộc xác suất
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Bằng sáng chế và “vách bằng sáng chế”** tiếp nhận điểm tựa từ **Hợp đồng cấp phép: giá trị headline thường không phải tiền chắc chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biosimilar không đơn giản là “generic của thuốc sinh học”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bằng sáng chế và “vách bằng sáng chế”
 
 Giá trị dược phẩm phụ thuộc thời gian độc quyền.
@@ -115,6 +126,8 @@ Khi độc quyền suy yếu, thuốc generic hoặc biosimilar có thể làm g
 Vì vậy dòng tiền thương mại phải có giả định hữu hạn về thời gian độc quyền.
 
 # Phần II — Biosimilar (바이오시밀러)
+
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Biosimilar không đơn giản là “generic của thuốc sinh học”** tiếp nhận điểm tựa từ **Bằng sáng chế và “vách bằng sáng chế”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hết bằng sáng chế tạo cơ hội, không bảo đảm thị phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biosimilar không đơn giản là “generic của thuốc sinh học”
 
@@ -130,6 +143,8 @@ Rào cản gồm:
 - quy mô sản xuất;
 - đối tác thương mại toàn cầu.
 
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Hết bằng sáng chế tạo cơ hội, không bảo đảm thị phần** tiếp nhận điểm tựa từ **Biosimilar không đơn giản là “generic của thuốc sinh học”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá giảm dần và chiến lược danh mục sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hết bằng sáng chế tạo cơ hội, không bảo đảm thị phần
 
 Khi độc quyền của thuốc gốc hết, thị trường mở ra nhưng thị phần còn phụ thuộc:
@@ -143,6 +158,8 @@ Khi độc quyền của thuốc gốc hết, thị trường mở ra nhưng th�
 
 Kinh tế biosimilar vì vậy là sự kết hợp giữa khoa học, quy định và chiến lược tiếp cận thị trường.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Giá giảm dần và chiến lược danh mục sản phẩm** tiếp nhận điểm tựa từ **Hết bằng sáng chế tạo cơ hội, không bảo đảm thị phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CDMO bán năng lực phát triển và sản xuất dưới dạng dịch vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giá giảm dần và chiến lược danh mục sản phẩm
 
 Doanh nghiệp vào sớm có thể giành thị phần hấp dẫn, nhưng khi nhiều đối thủ tham gia, giá thường chịu áp lực giảm.
@@ -152,6 +169,8 @@ Vì vậy doanh nghiệp cần chuỗi xử lý (pipeline / 파이프라인) g�
 Thời điểm ra mắt từng sản phẩm trong danh mục trở thành biến quan trọng.
 
 # Phần III — CDMO (위탁개발생산)
+
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **CDMO bán năng lực phát triển và sản xuất dưới dạng dịch vụ** tiếp nhận điểm tựa từ **Giá giảm dần và chiến lược danh mục sản phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí cố định cao tạo đòn bẩy hoạt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CDMO bán năng lực phát triển và sản xuất dưới dạng dịch vụ
 
@@ -170,6 +189,8 @@ Mức tập trung khách hàng
 CAPEX / khấu hao
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Chi phí cố định cao tạo đòn bẩy hoạt động** tiếp nhận điểm tựa từ **CDMO bán năng lực phát triển và sản xuất dưới dạng dịch vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chứng nhận và GMP tạo chi phí chuyển đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chi phí cố định cao tạo đòn bẩy hoạt động
 
 Bioreactor và nhà máy cần cơ sở vật chất đắt đỏ, hệ thống vô trùng và quy trình thẩm định nghiêm ngặt.
@@ -177,6 +198,8 @@ Bioreactor và nhà máy cần cơ sở vật chất đắt đỏ, hệ thống 
 Khi tỷ lệ sử dụng thấp, khấu hao và lao động cố định trên mỗi mẻ cao. Khi tỷ lệ sử dụng tăng, chi phí đơn vị giảm.
 
 Lô-gic (logic / 논리) giống fab bán dẫn, nhưng quy định và yêu cầu chất lượng làm việc chuyển nhà sản xuất khó hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Chứng nhận và GMP tạo chi phí chuyển đổi** tiếp nhận điểm tựa từ **Chi phí cố định cao tạo đòn bẩy hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro mở rộng công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chứng nhận và GMP tạo chi phí chuyển đổi
 
@@ -188,6 +211,8 @@ Lịch sử chất lượng trở thành **tài sản vô hình**.
 
 Một sự cố nhiễm bẩn hoặc sai lệch quy trình có thể dừng sản xuất, kích hoạt thanh tra và phá niềm tin nhiều hơn rất nhiều so với giá trị của một mẻ bị mất.
 
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Rủi ro mở rộng công suất** tiếp nhận điểm tựa từ **Chứng nhận và GMP tạo chi phí chuyển đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết bị y tế nằm giữa điện tử và quy định y tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rủi ro mở rộng công suất
 
 Nhu cầu cao có thể khiến toàn ngành đồng thời mở rộng CAPEX.
@@ -197,6 +222,8 @@ Nếu quá nhiều công suất đi vào vận hành trước nhu cầu thực, 
 Vì vậy công suất bioreactor công bố không phải bảo đảm doanh thu tương lai.
 
 # Phần IV — Thiết bị y tế và chẩn đoán (Medical Devices & Diagnostics / 의료기기·진단)
+
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Thiết bị y tế nằm giữa điện tử và quy định y tế** tiếp nhận điểm tựa từ **Rủi ro mở rộng công suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế của nền thiết bị đã lắp đặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thiết bị y tế nằm giữa điện tử và quy định y tế
 
@@ -212,6 +239,8 @@ Thành công thương mại cần:
 
 Ưu thế kỹ thuật một mình có thể không vượt được sự trì trệ trong mua sắm và thay đổi quy trình bệnh viện.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Kinh tế của nền thiết bị đã lắp đặt** tiếp nhận điểm tựa từ **Thiết bị y tế nằm giữa điện tử và quy định y tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chẩn đoán: số xét nghiệm × mức hoàn trả × biên vật tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế của nền thiết bị đã lắp đặt
 
 Nhà cung cấp có thể bán hoặc đặt thiết bị rồi tạo doanh thu định kỳ từ:
@@ -225,6 +254,8 @@ Mô hình này gần với lô-gic (logic / 논리) “máy in–mực in”: th
 
 Nền thiết bị đã lắp đặt có thể tạo chi phí chuyển đổi vì nhân viên đã được đào tạo và workflow đã tích hợp.
 
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Chẩn đoán: số xét nghiệm × mức hoàn trả × biên vật tư** tiếp nhận điểm tựa từ **Kinh tế của nền thiết bị đã lắp đặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhu cầu bệnh nhân không bằng quy mô thị trường thương mại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chẩn đoán: số xét nghiệm × mức hoàn trả × biên vật tư
 
 Kinh tế của hệ thống chẩn đoán thường phụ thuộc nhiều vào số xét nghiệm thực hiện trên nền thiết bị đã lắp hơn là số thiết bị bán mới.
@@ -234,6 +265,8 @@ Vì vậy thiết bị có thể đóng vai trò “kênh thu hút” cho doanh 
 Cần tách doanh thu bán máy với doanh thu vật tư phía sau.
 
 # Phần V — Hoàn trả chi phí và kinh tế bên thanh toán (Reimbursement & Payer Economics / 보험·약가)
+
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Nhu cầu bệnh nhân không bằng quy mô thị trường thương mại** tiếp nhận điểm tựa từ **Chẩn đoán: số xét nghiệm × mức hoàn trả × biên vật tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Già hóa làm tăng nhu cầu nhưng không tạo quyền định giá vô hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhu cầu bệnh nhân không bằng quy mô thị trường thương mại
 
@@ -253,6 +286,8 @@ Cần điều chỉnh theo:
 
 Hệ thống bảo hiểm y tế quốc gia làm bên thanh toán có quyền thương lượng đáng kể.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Già hóa làm tăng nhu cầu nhưng không tạo quyền định giá vô hạn** tiếp nhận điểm tựa từ **Nhu cầu bệnh nhân không bằng quy mô thị trường thương mại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mỹ phẩm là kinh tế thương hiệu tiêu dùng, không phải kinh tế dược phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Già hóa làm tăng nhu cầu nhưng không tạo quyền định giá vô hạn
 
 Dân số già làm nhu cầu bệnh mạn tính, chẩn đoán và chăm sóc tăng.
@@ -263,6 +298,8 @@ Vì vậy **gió thuận nhân khẩu học không đồng nghĩa biên lợi nh
 
 # Phần VI — K-Beauty (K뷰티)
 
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Mỹ phẩm là kinh tế thương hiệu tiêu dùng, không phải kinh tế dược phẩm** tiếp nhận điểm tựa từ **Già hóa làm tăng nhu cầu nhưng không tạo quyền định giá vô hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ sinh thái ODM/OEM làm giảm rào cản nhà máy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mỹ phẩm là kinh tế thương hiệu tiêu dùng, không phải kinh tế dược phẩm
 
 K-Beauty thường xuất hiện trong thống kê xuất khẩu biohealth, nhưng mô hình kinh doanh gần hàng tiêu dùng hơn dược phẩm.
@@ -270,6 +307,8 @@ K-Beauty thường xuất hiện trong thống kê xuất khẩu biohealth, như
 Rào cản gia nhập thấp hơn thuốc mới. Chu kỳ sản phẩm nhanh hơn, còn thương hiệu, mạng xã hội và phân phối quan trọng hơn.
 
 Một thương hiệu mỹ phẩm có thể tung sản phẩm rất nhanh, nhưng đối thủ cũng vậy.
+
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Hệ sinh thái ODM/OEM làm giảm rào cản nhà máy** tiếp nhận điểm tựa từ **Mỹ phẩm là kinh tế thương hiệu tiêu dùng, không phải kinh tế dược phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tăng trưởng viral khác thương hiệu bền vững** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ sinh thái ODM/OEM làm giảm rào cản nhà máy
 
@@ -283,6 +322,8 @@ Chuỗi giá trị mô-đun này làm nhu cầu vốn thấp hơn nhưng chuyể
 - kênh bán;
 - tốc độ;
 - mua lặp lại.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Tăng trưởng viral khác thương hiệu bền vững** tiếp nhận điểm tựa từ **Hệ sinh thái ODM/OEM làm giảm rào cản nhà máy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sell-in và sell-through** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tăng trưởng viral khác thương hiệu bền vững
 
@@ -298,6 +339,8 @@ Nhưng tính bền vững cần:
 
 Vì vậy tăng follower hoặc độ nóng trên mạng xã hội nên được nối với dữ liệu bán thực tế nếu có thể.
 
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Sell-in và sell-through** tiếp nhận điểm tựa từ **Tăng trưởng viral khác thương hiệu bền vững** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế từng kênh phân phối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sell-in và sell-through
 
 **Sell-in:** thương hiệu giao hàng cho nhà phân phối hoặc nhà bán lẻ.
@@ -307,6 +350,8 @@ Vì vậy tăng follower hoặc độ nóng trên mạng xã hội nên được
 Sell-in mạnh nhưng sell-through yếu có thể tạo tồn kho trong kênh và sau đó dẫn tới hoàn trả hoặc giảm giá.
 
 Nên kiểm tra khoản phải thu, tồn kho và dữ liệu nhà phân phối, không chỉ doanh thu.
+
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Kinh tế từng kênh phân phối** tiếp nhận điểm tựa từ **Sell-in và sell-through** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tồn kho và hạn sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế từng kênh phân phối
 
@@ -321,6 +366,8 @@ Mỗi kênh có khác biệt về:
 - chi phí thu hút khách hàng.
 
 D2C có thể có biên gộp cao hơn nhưng CAC, logistics và đổi trả cũng cao. Marketplace giúp mở rộng quốc tế nhanh nhưng phụ thuộc phí nền tảng và thuật toán xếp hạng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Tồn kho và hạn sử dụng** tiếp nhận điểm tựa từ **Kinh tế từng kênh phân phối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh chụp xuất khẩu năm 2025** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tồn kho và hạn sử dụng
 
@@ -340,6 +387,8 @@ Mỗi khu vực có thể yêu cầu phê duyệt, nhãn, hồ sơ và chiến l
 
 Mở rộng toàn cầu vì vậy cần năng lực tổ chức pháp quy, không chỉ dịch ngôn ngữ và marketing.
 
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Ảnh chụp xuất khẩu năm 2025** tiếp nhận điểm tựa từ **Tồn kho và hạn sử dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biotech phát triển thuốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ảnh chụp xuất khẩu năm 2025
 
 KHIDI công bố xuất khẩu biohealth Hàn Quốc năm 2025 khoảng **27,87 tỷ USD**, gồm dược phẩm, thiết bị y tế và mỹ phẩm. Đây là ảnh chụp có mốc thời gian, được công bố năm 2026; phân tích hiện tại phải dùng dữ liệu chính thức mới nhất.
@@ -347,6 +396,8 @@ KHIDI công bố xuất khẩu biohealth Hàn Quốc năm 2025 khoảng **27,87 
 Thông điệp cấu trúc rộng hơn là biohealth và K-Beauty đang trở thành động cơ xuất khẩu đáng kể bên cạnh công nghiệp nặng truyền thống.
 
 # Các kiểu doanh nghiệp: không so sánh những mô hình không cùng loại
+
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Biotech phát triển thuốc** tiếp nhận điểm tựa từ **Ảnh chụp xuất khẩu năm 2025** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biosimilar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biotech phát triển thuốc
 
@@ -361,6 +412,8 @@ Licensing / upfront
 Rủi ro pha loãng
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Biosimilar** tiếp nhận điểm tựa từ **Biotech phát triển thuốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CDMO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biosimilar
 
 Biosimilar cần được đọc qua ba lớp: bằng chứng tương đương, quy định phê duyệt và economics hoàn trả. Doanh thu tiềm năng chỉ trở thành lợi nhuận khi sản xuất, bác sĩ và payer cùng chấp nhận.
@@ -373,6 +426,8 @@ Mức giảm giá
 Chi phí sản xuất
 Đối tác thương mại
 ```
+
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **CDMO** tiếp nhận điểm tựa từ **Biosimilar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết bị / chẩn đoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CDMO
 
@@ -387,6 +442,8 @@ CAPEX / khấu hao
 Lịch sử chất lượng / thanh tra
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Thiết bị / chẩn đoán** tiếp nhận điểm tựa từ **CDMO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thương hiệu mỹ phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thiết bị / chẩn đoán
 
 Thiết bị và chẩn đoán có chu kỳ mua sắm, validation và reimbursement khác dược phẩm. Phân tích cần nối công nghệ với workflow bệnh viện và khả năng thanh toán.
@@ -398,6 +455,8 @@ Phê duyệt / hoàn trả
 Kênh bệnh viện
 Biên dịch vụ
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **Thương hiệu mỹ phẩm** tiếp nhận điểm tựa từ **Thiết bị / chẩn đoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ODM mỹ phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thương hiệu mỹ phẩm
 
@@ -411,6 +470,8 @@ Hiệu quả marketing
 Tồn kho / phải thu
 Sell-through
 ```
+
+> **Chuyển mạch:** Trong **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)**, **ODM mỹ phẩm** tiếp nhận điểm tựa từ **Thương hiệu mỹ phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## ODM mỹ phẩm
 
@@ -531,3 +592,5 @@ Nguồn nền giúp kiểm tra quy định, dữ liệu ngành và thuật ngữ
 - Korea Health Industry Development Institute (KHIDI), kết quả xuất khẩu Biohealth 2025 công bố năm 2026: https://www.khidi.or.kr/board/view?linkId=48940966&menuId=MENU00100
 - Tài liệu triển vọng ngành/xuất khẩu của KHIDI.
 - Công bố của cơ quan quản lý Hàn Quốc/quốc tế và hồ sơ doanh nghiệp cho phân tích từng sản phẩm.
+
+> **Bàn giao:** Sau **ODM mỹ phẩm**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

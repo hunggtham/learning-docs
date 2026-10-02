@@ -1,6 +1,6 @@
 # LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX
 
-> **Mạch đọc:** Đặt **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Công ty pin thực sự bán gì?** sang **2. Nhu cầu xe điện không truyền thẳng 1:1 vào lượng pin giao hàng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**. Route đi từ product/customer và chemistry → EV demand, contracts và delivery lag → utilization, input costs và CAPEX → margin, cash flow và ROIC → subsidy, localization và cycle risk.
 
 Trường hợp (case / 사례) này dùng LG năng lượng (energy / 에너지) Solution như một bài thực hành để hiểu một trong những ngành sản xuất chiến lược quan trọng của Hàn Quốc: **pin thứ cấp (secondary battery / 이차전지)**. Nhìn bề ngoài, ngành pin có vẻ đơn giản: xe điện tăng thì nhu cầu pin tăng. Nhưng thực tế phức tạp hơn nhiều vì tăng trưởng nhu cầu, hóa học pin, hợp đồng khách hàng, giá nguyên liệu, tỷ lệ sử dụng nhà máy, trợ cấp, nội địa hóa sản xuất và CAPEX tương tác với nhau.
 
@@ -30,6 +30,8 @@ Tỷ giá?
 Lịch sản xuất của khách hàng?
 ```
 
+> **Chuyển mạch:** Trong **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **2. Nhu cầu xe điện không truyền thẳng 1:1 vào lượng pin giao hàng** tiếp nhận điểm tựa từ **1. Công ty pin thực sự bán gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Công suất GWh không đồng nghĩa sản lượng kinh tế GWh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Nhu cầu xe điện không truyền thẳng 1:1 vào lượng pin giao hàng
 
 Chuỗi nhân quả thực tế dài hơn:
@@ -49,6 +51,8 @@ Nếu nhu cầu bán lẻ EV tăng 10% nhưng OEM đang giảm tồn kho, lượ
 Ngược lại, lượng pin giao có thể tăng trước doanh số xe nếu OEM tích trữ hàng hoặc tăng sản lượng cho mẫu xe mới.
 
 > **Mô hình tư duy:** nhu cầu pin là nhu cầu phái sinh (derived demand). Muốn hiểu nhà sản xuất cell, phải đi ngược tới nền tảng xe và lịch sản xuất của khách hàng.
+
+> **Chuyển mạch:** Ở chặng này của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **3. Công suất GWh không đồng nghĩa sản lượng kinh tế GWh** tiếp nhận điểm tựa từ **2. Nhu cầu xe điện không truyền thẳng 1:1 vào lượng pin giao hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Chi phí cố định lớn và đòn bẩy hoạt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Công suất GWh không đồng nghĩa sản lượng kinh tế GWh
 
@@ -74,6 +78,8 @@ Cần tách rõ hai biến:
 
 Nhà máy chạy nhiều nhưng yield thấp vẫn có thể tiêu tốn nguyên liệu và lao động mà không tạo đủ sản lượng bán được.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **4. Chi phí cố định lớn và đòn bẩy hoạt động** tiếp nhận điểm tựa từ **3. Công suất GWh không đồng nghĩa sản lượng kinh tế GWh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Chuyển giá nguyên liệu: doanh thu giảm chưa chắc kinh tế xấu tương ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Chi phí cố định lớn và đòn bẩy hoạt động
 
 Sản xuất pin cần nhà máy, thiết bị phủ điện cực, thiết bị formation, phòng khô, hệ thống chất lượng và khấu hao lớn. Khi tỷ lệ sử dụng công suất thấp, chi phí cố định được phân bổ trên ít sản lượng hơn.
@@ -85,6 +91,8 @@ Chi\ phí\ đơn\ vị = Chi\ phí\ biến\ đổi + \frac{Chi\ phí\ sản\ xu�
 Nếu chi phí cố định là 1.000 và sản lượng là 100 đơn vị, chi phí cố định mỗi đơn vị là 10. Nếu sản lượng giảm còn 60, con số tăng lên khoảng 16,7 dù tổng chi phí cố định không đổi.
 
 Đây là lý do tỷ lệ sử dụng công suất có thể khiến biên lợi nhuận biến động mạnh hơn cả sản lượng giao hàng.
+
+> **Chuyển mạch:** Trong **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **5. Chuyển giá nguyên liệu: doanh thu giảm chưa chắc kinh tế xấu tương ứng** tiếp nhận điểm tựa từ **4. Chi phí cố định lớn và đòn bẩy hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Hóa học pin là bài toán kinh tế, không chỉ là khoa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Chuyển giá nguyên liệu: doanh thu giảm chưa chắc kinh tế xấu tương ứng
 
@@ -103,6 +111,8 @@ Tăng\ trưởng\ doanh\ thu \approx Ảnh\ hưởng\ sản\ lượng + Ảnh\ h
 \]
 
 và phần giá phải tách tiếp giữa cơ chế chuyển giá hàng hóa với quyền định giá thực sự.
+
+> **Chuyển mạch:** Ở chặng này của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **6. Hóa học pin là bài toán kinh tế, không chỉ là khoa học** tiếp nhận điểm tựa từ **5. Chuyển giá nguyên liệu: doanh thu giảm chưa chắc kinh tế xấu tương ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Mức tập trung khách hàng và rủi ro nền tảng xe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Hóa học pin là bài toán kinh tế, không chỉ là khoa học
 
@@ -123,6 +133,8 @@ Yêu cầu của khách hàng
 
 Lợi thế công nghệ chỉ tạo giá trị khi chuyển được thành chứng nhận, sản lượng và mức sinh lời trên vốn đủ cao.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **7. Mức tập trung khách hàng và rủi ro nền tảng xe** tiếp nhận điểm tựa từ **6. Hóa học pin là bài toán kinh tế, không chỉ là khoa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Liên doanh: chia sẻ CAPEX nhưng tăng độ phức tạp quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Mức tập trung khách hàng và rủi ro nền tảng xe
 
 Nhà cung cấp pin thường phụ thuộc một số OEM và nền tảng xe lớn. Hợp đồng dài hạn có thể tăng khả năng dự báo nhưng không loại bỏ rủi ro.
@@ -137,6 +149,8 @@ Cần hỏi:
 - nếu nhu cầu của khách hàng yếu, công suất có chuyển sang khách hàng khác được không?
 
 Nhà máy chuyên biệt có giá trị chiến lược khi khách hàng mạnh, nhưng tạo **rủi ro công suất mắc kẹt (stranded-capacity risk)** nếu nền tảng xe thất bại.
+
+> **Chuyển mạch:** Trong **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **8. Liên doanh: chia sẻ CAPEX nhưng tăng độ phức tạp quản trị** tiếp nhận điểm tựa từ **7. Mức tập trung khách hàng và rủi ro nền tảng xe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Nội địa hóa: địa chính trị trở thành kinh tế nhà máy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Liên doanh: chia sẻ CAPEX nhưng tăng độ phức tạp quản trị
 
@@ -157,6 +171,8 @@ Không nên thấy thông báo “đầu tư nhà máy X nghìn tỷ won” rồ
 
 Hãy quay lại [09_disclosure_accounting_dart_kind](../09_disclosure_accounting_dart_kind.md) để xác định phạm vi báo cáo.
 
+> **Chuyển mạch:** Ở chặng này của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **9. Nội địa hóa: địa chính trị trở thành kinh tế nhà máy** tiếp nhận điểm tựa từ **8. Liên doanh: chia sẻ CAPEX nhưng tăng độ phức tạp quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Chu kỳ CAPEX: tăng trưởng có thể làm dòng tiền xấu trước khi tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Nội địa hóa: địa chính trị trở thành kinh tế nhà máy
 
 Ngành pin chịu tác động mạnh của chính sách công nghiệp, quy tắc hàm lượng nội địa, thuế quan, trợ cấp và yêu cầu an ninh chuỗi cung ứng.
@@ -176,6 +192,8 @@ Nhà máy ở Bắc Mỹ có thể được xây không chỉ vì chi phí vận
 
 Trợ cấp không nên được coi là “lợi nhuận miễn phí”. Nếu trợ cấp chỉ bù cho chi phí sản xuất địa phương cao hơn về cơ cấu, năng lực cạnh tranh nền tảng vẫn phải đánh giá riêng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **10. Chu kỳ CAPEX: tăng trưởng có thể làm dòng tiền xấu trước khi tốt** tiếp nhận điểm tựa từ **9. Nội địa hóa: địa chính trị trở thành kinh tế nhà máy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Độ trễ khấu hao và ảo giác biên lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Chu kỳ CAPEX: tăng trưởng có thể làm dòng tiền xấu trước khi tốt
 
 Nhà sản xuất pin có thể báo cáo doanh thu và lợi nhuận kế toán tăng nhưng FCF âm vì mở rộng công suất mạnh.
@@ -194,6 +212,8 @@ Nếu toàn ngành xây quá nhiều công suất, tỷ lệ sử dụng tương
 
 > Ngành tăng trưởng không bảo đảm mọi khoản đầu tư tăng trưởng đều tạo giá trị.
 
+> **Chuyển mạch:** Trong **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **11. Độ trễ khấu hao và ảo giác biên lợi nhuận** tiếp nhận điểm tựa từ **10. Chu kỳ CAPEX: tăng trưởng có thể làm dòng tiền xấu trước khi tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Vốn lưu động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Độ trễ khấu hao và ảo giác biên lợi nhuận
 
 CAPEX hôm nay không đi hết vào báo cáo kết quả kinh doanh ngay hôm nay. Nó được vốn hóa rồi khấu hao theo thời gian.
@@ -210,6 +230,8 @@ CAPEX đã chi
 
 Vì vậy đỉnh CAPEX có thể xuất hiện trước đỉnh khấu hao. Phải theo dõi cả thời điểm dòng tiền và thời điểm kế toán.
 
+> **Chuyển mạch:** Ở chặng này của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **12. Vốn lưu động** tiếp nhận điểm tựa từ **11. Độ trễ khấu hao và ảo giác biên lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Bảo hành, chất lượng và rủi ro đuôi dài từ thu hồi sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Vốn lưu động
 
 Sản xuất pin cần nguyên liệu, sản phẩm dở dang, thành phẩm và khoản phải thu. Tăng trưởng có thể hút tiền qua tồn kho và phải thu.
@@ -224,6 +246,8 @@ Tồn kho +40%
 ```
 
 Nếu CFO không tăng theo lợi nhuận, cần hỏi đây là quá trình tăng công suất bình thường hay dấu hiệu bán hàng/thu tiền yếu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **13. Bảo hành, chất lượng và rủi ro đuôi dài từ thu hồi sản phẩm** tiếp nhận điểm tựa từ **12. Vốn lưu động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Mô hình kịch bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Bảo hành, chất lượng và rủi ro đuôi dài từ thu hồi sản phẩm
 
@@ -242,6 +266,8 @@ Sự cố đã biết
 Nếu nguyên nhân kỹ thuật chưa chắc chắn, mức độ bất định của dự phòng cao.
 
 Rủi ro chất lượng còn ảnh hưởng danh tiếng, chứng nhận khách hàng tương lai và chi phí bảo hiểm/pháp lý, chứ không chỉ một khoản phí kế toán một lần.
+
+> **Chuyển mạch:** Trong **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **14. Mô hình kịch bản** tiếp nhận điểm tựa từ **13. Bảo hành, chất lượng và rủi ro đuôi dài từ thu hồi sản phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Định giá: tránh dùng một bội số mà không có bối cảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Mô hình kịch bản
 
@@ -288,6 +314,8 @@ Mẫu xe mới của khách hàng thành công
 
 Mục tiêu không phải dự đoán chính xác mà là biết **biến nào chi phối kinh tế doanh nghiệp**.
 
+> **Chuyển mạch:** Ở chặng này của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **15. Định giá: tránh dùng một bội số mà không có bối cảnh** tiếp nhận điểm tựa từ **14. Mô hình kịch bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Định giá: tránh dùng một bội số mà không có bối cảnh
 
 Doanh nghiệp pin tăng trưởng cao có thể được định giá bằng EV/EBITDA, P/E hoặc DCF tùy giai đoạn, nhưng mẫu số cần được chuẩn hóa.
@@ -299,6 +327,8 @@ Nếu EBITDA cao trước khi khấu hao phản ánh đầy đủ các nhà máy
 > Giá trị doanh nghiệp hiện tại đang ngầm giả định tỷ lệ sử dụng công suất, biên lợi nhuận và ROIC dài hạn ở mức nào?
 
 Sau đó kiểm tra các giả định đó có phù hợp với công suất toàn ngành và nhu cầu khách hàng hay không.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **15. Định giá: tránh dùng một bội số mà không có bối cảnh** đã nêu tiêu chí phân biệt, còn **16. Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Bài tập nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Những nhầm lẫn thường gặp
 
@@ -317,6 +347,8 @@ Sai vì thời điểm khối lượng, công thức giá và thành công của
 ### “Trợ cấp là lợi ích thuần”
 
 Sai nếu trợ cấp chỉ bù cho chi phí nội địa cao hơn hoặc đòi hỏi CAPEX lớn để đủ điều kiện.
+
+> **Chuyển mạch:** Trong **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **16. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **17. Bài tập nghiên cứu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Bài tập nghiên cứu
 
@@ -337,8 +369,12 @@ Khi cập nhật báo cáo mới, dựng bảng:
 
 Sau đó ghi chú các nhà máy mới, JV, nền tảng xe lớn, sự cố thu hồi và thay đổi chính sách.
 
+> **Chuyển mạch:** Ở chặng này của **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX**, **Mô hình tư duy cuối** gom các mảnh từ **17. Bài tập nghiên cứu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy cuối
 
 > Nhà sản xuất pin là một **doanh nghiệp phân bổ công suất dưới ràng buộc công nghệ và chính sách**. Nhu cầu EV tạo cơ hội, nhưng giá trị cho cổ đông chỉ xuất hiện khi doanh nghiệp biến CAPEX thành công suất được chứng nhận, biến công suất thành sản lượng đạt chuẩn, biến sản lượng thành giao hàng cho khách hàng và cuối cùng biến giao hàng thành tiền với ROIC đủ cao.
 
 Đọc tiếp [08_hanwha_aerospace_defense_backlog_case](./08_hanwha_aerospace_defense_backlog_case.md) để so sánh ngành pin — nơi chu kỳ nhu cầu và công suất rất quan trọng — với quốc phòng, nơi backlog, mua sắm công và lịch giao hàng đóng vai trò trung tâm.
+
+> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

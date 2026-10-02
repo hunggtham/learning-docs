@@ -1,7 +1,6 @@
 # Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)
 
-> **Mạch đọc:** Đặt **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hình thức pháp lý không chỉ là thủ tục giấy tờ** sang **Năm loại hình công ty chính theo luật thương mại Hàn Quốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**. Route đi từ legal entity → company forms theo luật thương mại → size classes và business groups → DART, hợp đồng và policy eligibility → cách đọc đúng pháp nhân, để nhãn “công ty” không che cấu trúc kinh tế.
 
 Trong đời sống hàng ngày, người ta thường gọi mọi tổ chức kinh doanh là “công ty”. Tuy nhiên, khi đọc hợp đồng, DART, tin tuyển dụng hoặc chính sách hỗ trợ, cần phân biệt ít nhất ba tầng: **pháp nhân (legal entity / 법인)** nào đang tồn tại, pháp nhân đó thuộc **nhóm quy mô (size class / 기업 규모)** nào, và nó có nằm trong một **tập đoàn doanh nghiệp (business group / 기업집단)** hay không.
 
@@ -13,11 +12,15 @@ Ba câu hỏi này giúp tránh những nhầm lẫn phổ biến như “Samsun
 
 Đây là một phần của hạ tầng pháp lý của nền kinh tế thị trường. Cùng một ý tưởng kinh doanh nhưng hai hình thức pháp lý khác nhau có thể phân bổ quyền kiểm soát và rủi ro rất khác nhau.
 
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Năm loại hình công ty chính theo luật thương mại Hàn Quốc** tiếp nhận điểm tựa từ **Hình thức pháp lý không chỉ là thủ tục giấy tờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **합명회사: công ty hợp danh với trách nhiệm rất rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năm loại hình công ty chính theo luật thương mại Hàn Quốc
 
 Luật thương mại Hàn Quốc có các hình thức chính gồm **công ty hợp danh vô hạn (Unlimited Partnership / 합명회사)**, **công ty hợp danh hữu hạn (Limited Partnership / 합자회사)**, **công ty trách nhiệm hữu hạn linh hoạt (Limited Liability Company / 유한책임회사)**, **công ty hữu hạn (Limited Company / 유한회사)** và **công ty cổ phần (Stock Company / 주식회사)**.
 
 Không cần học chúng như một danh sách từ vựng. Điều quan trọng là hiểu một phổ cấu trúc từ mô hình gần với hợp danh, nơi thành viên trực tiếp gắn với hoạt động và trách nhiệm, tới công ty cổ phần, nơi quyền sở hữu được chia thành cổ phần và có thể huy động lượng vốn lớn hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **합명회사: công ty hợp danh với trách nhiệm rất rộng** tiếp nhận điểm tựa từ **Năm loại hình công ty chính theo luật thương mại Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **합자회사: kết hợp thành viên vô hạn và hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 합명회사: công ty hợp danh với trách nhiệm rất rộng
 
@@ -25,17 +28,25 @@ Trong `합명회사`, các thành viên thường tham gia trực tiếp hơn v�
 
 Đổi lại, mức kiểm soát và tham gia trực tiếp của chủ sở hữu cao hơn đi cùng với mức rủi ro tài sản cá nhân lớn hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **합자회사: kết hợp thành viên vô hạn và hữu hạn** tiếp nhận điểm tựa từ **합명회사: công ty hợp danh với trách nhiệm rất rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **유한책임회사: trách nhiệm hữu hạn với cấu trúc linh hoạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 합자회사: kết hợp thành viên vô hạn và hữu hạn
 
 `합자회사` kết hợp thành viên chịu trách nhiệm vô hạn với thành viên chịu trách nhiệm hữu hạn. lô-gic (logic / 논리) kinh tế của nó là tách tương đối giữa người trực tiếp điều hành và người chủ yếu cung cấp vốn. Tuy nhiên, các tập đoàn hiện đại quy mô lớn thường không sử dụng hình thức này làm cấu trúc mặc định.
+
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **유한책임회사: trách nhiệm hữu hạn với cấu trúc linh hoạt** tiếp nhận điểm tựa từ **합자회사: kết hợp thành viên vô hạn và hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **유한회사: công ty hữu hạn có sở hữu tập trung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 유한책임회사: trách nhiệm hữu hạn với cấu trúc linh hoạt
 
 `유한책임회사` cung cấp **trách nhiệm hữu hạn (limited liability / 유한책임)** đồng thời cho phép cấu trúc tổ chức và thỏa thuận giữa các thành viên linh hoạt hơn công ty cổ phần trong một số trường hợp. Nó có thể phù hợp với doanh nghiệp có nhóm chủ sở hữu tương đối khép kín hoặc tổ chức chuyên môn không cần cổ phần được giao dịch rộng rãi.
 
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **유한회사: công ty hữu hạn có sở hữu tập trung** tiếp nhận điểm tựa từ **유한책임회사: trách nhiệm hữu hạn với cấu trúc linh hoạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **주식회사: hình thức công ty cổ phần phổ biến nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 유한회사: công ty hữu hạn có sở hữu tập trung
 
 `유한회사` cũng giới hạn trách nhiệm của thành viên nhưng cơ chế chuyển nhượng phần sở hữu và quản trị phù hợp hơn với cấu trúc sở hữu tập trung. Một số công ty con của tập đoàn nước ngoài tại Hàn Quốc chọn hình thức này vì không cần cơ sở cổ đông rộng hoặc cấu trúc niêm yết công khai.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **주식회사: hình thức công ty cổ phần phổ biến nhất** tiếp nhận điểm tựa từ **유한회사: công ty hữu hạn có sở hữu tập trung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trách nhiệm hữu hạn là một đổi mới kinh tế quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 주식회사: hình thức công ty cổ phần phổ biến nhất
 
@@ -45,6 +56,8 @@ Về bản chất, công ty là một pháp nhân tách biệt; cổ đông sở
 
 Việc chia quyền sở hữu thành cổ phần giúp vốn có thể được phân nhỏ và chuyển nhượng. Nhờ đó, nhiều nhà đầu tư có thể cùng tài trợ cho những dự án công nghiệp lớn mà không phải trực tiếp quản lý doanh nghiệp.
 
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Trách nhiệm hữu hạn là một đổi mới kinh tế quan trọng** tiếp nhận điểm tựa từ **주식회사: hình thức công ty cổ phần phổ biến nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các cơ quan quản trị: chủ sở hữu ≠ người quản lý ≠ người đại diện pháp luật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trách nhiệm hữu hạn là một đổi mới kinh tế quan trọng
 
 **Trách nhiệm hữu hạn (limited liability / 유한책임)** có nghĩa là khoản lỗ tối đa của nhà đầu tư thông thường được giới hạn trong phần vốn đã đầu tư. Cơ chế này khuyến khích đa dạng hóa đầu tư và giúp tài trợ các dự án quy mô lớn.
@@ -52,6 +65,8 @@ Việc chia quyền sở hữu thành cổ phần giúp vốn có thể được
 Tuy nhiên, nó cũng tạo ra **vấn đề đại diện và chủ nợ (agency and creditor problem)**: chủ sở hữu có thể hưởng phần tăng giá trị trong khi một phần thiệt hại khi doanh nghiệp thất bại có thể chuyển sang chủ nợ và các bên liên quan. Vì vậy công ty hiện đại phải đi cùng quy định về công bố thông tin, bảo vệ chủ nợ, quản trị và vốn.
 
 Một cấu trúc pháp lý giải quyết một vấn đề thường đồng thời tạo ra một vấn đề quản trị mới.
+
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Các cơ quan quản trị: chủ sở hữu ≠ người quản lý ≠ người đại diện pháp luật** tiếp nhận điểm tựa từ **Trách nhiệm hữu hạn là một đổi mới kinh tế quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổ đông kiểm soát và giám đốc đại diện là hai khái niệm khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các cơ quan quản trị: chủ sở hữu ≠ người quản lý ≠ người đại diện pháp luật
 
@@ -61,15 +76,21 @@ Cổ đông sở hữu quyền lợi vốn chủ sở hữu. Đại hội đồn
 
 `대표이사` không tự động có nghĩa là “chủ công ty”. Người này có thể là một nhà quản lý chuyên nghiệp. Tương tự, chức danh kinh doanh `CEO` bằng tiếng Anh không phải lúc nào cũng cho biết chính xác người đó có phải người đại diện đã đăng ký pháp lý hay không.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Cổ đông kiểm soát và giám đốc đại diện là hai khái niệm khác nhau** tiếp nhận điểm tựa từ **Các cơ quan quản trị: chủ sở hữu ≠ người quản lý ≠ người đại diện pháp luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều lệ công ty (Articles of Incorporation / 정관)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cổ đông kiểm soát và giám đốc đại diện là hai khái niệm khác nhau
 
 Một cá nhân hoặc gia đình có thể kiểm soát quyền biểu quyết nhưng không trực tiếp làm CEO hàng ngày. Ngược lại, một CEO chuyên nghiệp có thể điều hành doanh nghiệp trong khi cổ đông kiểm soát vẫn tác động tới hội đồng quản trị và các quyết định của cổ đông. Phân biệt này đặc biệt quan trọng khi nghiên cứu quản trị chaebol.
 
 Xem [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md).
 
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Điều lệ công ty (Articles of Incorporation / 정관)** tiếp nhận điểm tựa từ **Cổ đông kiểm soát và giám đốc đại diện là hai khái niệm khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đăng ký pháp nhân (Corporate Registration / 법인등기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điều lệ công ty (Articles of Incorporation / 정관)
 
 `정관` quy định các nguyên tắc nền tảng như mục đích kinh doanh, loại và cách phát hành cổ phần, thủ tục quản trị, quy tắc của cổ đông–hội đồng quản trị và năm tài chính. Có thể hiểu đây là “hiến pháp vận hành” ở cấp pháp lý của doanh nghiệp.
+
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Đăng ký pháp nhân (Corporate Registration / 법인등기)** tiếp nhận điểm tựa từ **Điều lệ công ty (Articles of Incorporation / 정관)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn đăng ký (자본금) không phải giá trị doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đăng ký pháp nhân (Corporate Registration / 법인등기)
 
@@ -77,11 +98,15 @@ Hệ thống đăng ký pháp nhân ghi nhận các sự kiện pháp lý như t
 
 DART lại phục vụ nhiều hơn cho việc đọc công bố thông tin và tình hình tài chính. Hai nguồn giải quyết hai nhóm câu hỏi khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Vốn đăng ký (자본금) không phải giá trị doanh nghiệp** tiếp nhận điểm tựa từ **Đăng ký pháp nhân (Corporate Registration / 법인등기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty tư nhân và công ty niêm yết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vốn đăng ký (자본금) không phải giá trị doanh nghiệp
 
 Một lỗi phổ biến của người mới là thấy `자본금` rồi hiểu đó là “giá trị của công ty”. Thực tế, **vốn đăng ký (registered capital / 자본금)** là khái niệm pháp lý–kế toán liên quan tới cổ phần đã phát hành và mệnh giá.
 
 Đối với công ty niêm yết, **vốn hóa thị trường (market capitalization)** được tính gần đúng bằng giá cổ phiếu nhân số cổ phiếu đang lưu hành. **Giá trị doanh nghiệp (enterprise value / EV)** còn điều chỉnh thêm nợ, tiền mặt và một số quyền lợi tài chính khác. Vì vậy `자본금 10억` không có nghĩa doanh nghiệp “chỉ đáng giá 1 tỷ KRW”.
+
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Công ty tư nhân và công ty niêm yết** tiếp nhận điểm tựa từ **Vốn đăng ký (자본금) không phải giá trị doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp vừa và nhỏ (SME / 중소기업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công ty tư nhân và công ty niêm yết
 
@@ -107,11 +132,15 @@ Xem [`23_foreign_invested_companies_and_korea_entry.md`](./23_foreign_invested_c
 
 Quy mô doanh nghiệp ảnh hưởng tới chính sách, thuế, tài chính và các chương trình hỗ trợ. Tuy nhiên, **doanh nghiệp vừa và nhỏ (SME / 중소기업)** không đơn giản là “dưới 300 nhân viên”. Tiêu chí thay đổi theo ngành và còn bao gồm điều kiện về tính độc lập, quyền kiểm soát và quy mô doanh thu.
 
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Doanh nghiệp vừa và nhỏ (SME / 중소기업)** tiếp nhận điểm tựa từ **Công ty tư nhân và công ty niêm yết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp nhỏ (Small Enterprise / 소기업) và hộ kinh doanh nhỏ (소상공인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Doanh nghiệp vừa và nhỏ (SME / 중소기업)
 
 Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc áp dụng các tiêu chí luật định, trong đó có ngưỡng doanh thu theo ngành và **tiêu chí độc lập (independence criteria / 독립성 기준)**. Tiêu chí thứ hai giúp ngăn trường hợp một công ty con có quy mô bề ngoài nhỏ nhưng thuộc tập đoàn lớn tự động nhận hỗ trợ dành cho SME.
 
 Ngưỡng khác nhau theo ngành vì bán lẻ, sản xuất và phần mềm có cấu trúc quy mô kinh tế khác nhau. Sử dụng số liệu trung bình nhiều năm cũng giúp tránh việc phân loại thay đổi chỉ vì một năm bất thường.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Doanh nghiệp nhỏ (Small Enterprise / 소기업) và hộ kinh doanh nhỏ (소상공인)** tiếp nhận điểm tựa từ **Doanh nghiệp vừa và nhỏ (SME / 중소기업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp quy mô trung bình (Mid-sized Enterprise / 중견기업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Doanh nghiệp nhỏ (Small Enterprise / 소기업) và hộ kinh doanh nhỏ (소상공인)
 
@@ -119,11 +148,15 @@ Ngưỡng khác nhau theo ngành vì bán lẻ, sản xuất và phần mềm c�
 
 `소상공인` thường chỉ các cơ sở kinh doanh hoặc doanh nghiệp siêu nhỏ đáp ứng tiêu chí về lao động và ngành nghề, đồng thời có hệ thống chính sách hỗ trợ riêng. Không nên dịch đơn giản thành “SME” vì phạm vi hẹp hơn đáng kể.
 
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Doanh nghiệp quy mô trung bình (Mid-sized Enterprise / 중견기업)** tiếp nhận điểm tựa từ **Doanh nghiệp nhỏ (Small Enterprise / 소기업) và hộ kinh doanh nhỏ (소상공인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vấn đề “tốt nghiệp” khỏi SME (Graduation Problem / 졸업 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Doanh nghiệp quy mô trung bình (Mid-sized Enterprise / 중견기업)
 
 `중견기업` nằm giữa SME và doanh nghiệp lớn. Nhóm này đặc biệt quan trọng vì nhiều doanh nghiệp công nghiệp chuyên môn hóa đã vượt quy mô SME nhưng vẫn nhỏ hơn rất nhiều so với các công ty chủ lực của chaebol.
 
 Chính sách tăng trưởng doanh nghiệp thường quan tâm tới việc tránh **khoảng trống doanh nghiệp trung gian (missing middle)**, tức nền kinh tế có rất nhiều doanh nghiệp nhỏ và một số tập đoàn lớn nhưng thiếu doanh nghiệp trung bình đủ mạnh để tiếp tục mở rộng toàn cầu.
+
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Vấn đề “tốt nghiệp” khỏi SME (Graduation Problem / 졸업 문제)** tiếp nhận điểm tựa từ **Doanh nghiệp quy mô trung bình (Mid-sized Enterprise / 중견기업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp lớn (Large Enterprise / 대기업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vấn đề “tốt nghiệp” khỏi SME (Graduation Problem / 졸업 문제)
 
@@ -131,11 +164,15 @@ Khi doanh nghiệp tăng trưởng vượt ngưỡng SME, nó có thể mất b�
 
 Chính sách thiết kế kém có thể vô tình tạo động lực để doanh nghiệp duy trì quy mô nhỏ. Một lộ trình tốt hơn là giúp doanh nghiệp đi từ SME → mở rộng quy mô → doanh nghiệp trung bình → doanh nghiệp chuyên môn hóa toàn cầu hoặc doanh nghiệp lớn, thay vì phụ thuộc lâu dài vào hỗ trợ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Doanh nghiệp lớn (Large Enterprise / 대기업)** tiếp nhận điểm tựa từ **Vấn đề “tốt nghiệp” khỏi SME (Graduation Problem / 졸업 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tập đoàn doanh nghiệp (Business Group / 기업집단)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Doanh nghiệp lớn (Large Enterprise / 대기업)
 
 Trong giao tiếp hàng ngày ở Hàn Quốc, `대기업` thường chỉ công ty lớn, đặc biệt là các công ty nổi tiếng thuộc tập đoàn. Nhưng định nghĩa pháp lý phụ thuộc vào từng luật và chương trình, nên không tồn tại một ngưỡng duy nhất áp dụng cho mọi trường hợp.
 
 `대기업` cũng không đồng nghĩa với `재벌`. Một công ty có thể rất lớn nhưng hoạt động độc lập và không có cấu trúc tập đoàn gia đình kiểu chaebol.
+
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Tập đoàn doanh nghiệp (Business Group / 기업집단)** tiếp nhận điểm tựa từ **Doanh nghiệp lớn (Large Enterprise / 대기업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao phải xác định đúng pháp nhân khi nghiên cứu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tập đoàn doanh nghiệp (Business Group / 기업집단)
 
@@ -143,11 +180,15 @@ Một **tập đoàn doanh nghiệp (business group / 기업집단)** gồm nhi�
 
 Vì vậy cần nhớ: **quy mô của pháp nhân không đồng nghĩa với quy mô của tập đoàn**. Samsung Electronics và Samsung Life là hai công ty riêng dù trong giao tiếp người ta thường gọi chung là “Samsung”.
 
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Vì sao phải xác định đúng pháp nhân khi nghiên cứu?** tiếp nhận điểm tựa từ **Tập đoàn doanh nghiệp (Business Group / 기업집단)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Báo cáo riêng và báo cáo hợp nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao phải xác định đúng pháp nhân khi nghiên cứu?
 
 Một thương hiệu Hàn Quốc có thể có tên thương mại, tên pháp lý tiếng Hàn, tên pháp lý tiếng Anh, nhiều công ty con có tên gần giống nhau và mã chứng khoán chỉ thuộc về một pháp nhân cụ thể.
 
 Trước khi phân tích, cần xác định tên tiếng Hàn chính xác, mã đăng ký khi cần, tình trạng niêm yết và mã cổ phiếu, tập đoàn mẹ, các công ty con chính và phạm vi báo cáo tài chính. Nếu xác định sai pháp nhân, các tỷ số tài chính có thể được tính hoàn toàn đúng nhưng lại áp dụng cho sai doanh nghiệp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Báo cáo riêng và báo cáo hợp nhất** tiếp nhận điểm tựa từ **Vì sao phải xác định đúng pháp nhân khi nghiên cứu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân loại quy mô có thể tác động ngược lại hành vi doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Báo cáo riêng và báo cáo hợp nhất
 
@@ -157,19 +198,27 @@ Phạm vi hợp nhất này không đồng nghĩa với toàn bộ chaebol. Nó 
 
 Xem [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Phân loại quy mô có thể tác động ngược lại hành vi doanh nghiệp** tiếp nhận điểm tựa từ **Báo cáo riêng và báo cáo hợp nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một ảnh chụp thống kê SME năm 2024** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân loại quy mô có thể tác động ngược lại hành vi doanh nghiệp
 
 Khi doanh nghiệp vượt một ngưỡng pháp lý, điều kiện hỗ trợ, tài chính, thuế và tuân thủ có thể thay đổi. Vì vậy bản thân hệ thống phân loại cũng có khả năng ảnh hưởng tới quyết định tổ chức và tốc độ mở rộng của doanh nghiệp.
 
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Một ảnh chụp thống kê SME năm 2024** tiếp nhận điểm tựa từ **Phân loại quy mô có thể tác động ngược lại hành vi doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diễn giải dưới góc độ nghề nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Một ảnh chụp thống kê SME năm 2024
 
 Thống kê cơ bản về SME năm 2024 được công bố năm 2026 cho thấy SME chiếm khoảng 99,9% số doanh nghiệp, 80,4% người lao động và 43,7% doanh thu doanh nghiệp. Đây là số liệu có mốc thời gian và cần được cập nhật trong các phiên bản tương lai, nhưng thông điệp cấu trúc tương đối bền: việc làm và số lượng doanh nghiệp Hàn Quốc tập trung rất lớn ở khu vực SME dù sự chú ý của công chúng thường hướng về chaebol.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Diễn giải dưới góc độ nghề nghiệp** tiếp nhận điểm tựa từ **Một ảnh chụp thống kê SME năm 2024** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Diễn giải dưới góc độ nghề nghiệp
 
 Nhãn quy mô chỉ cung cấp một số dấu hiệu ban đầu chứ không quyết định chất lượng công việc. Doanh nghiệp lớn thường có thương hiệu mạnh hơn, chế độ lương–phúc lợi tốt hơn, quy trình chính thức hơn và mức chuyên môn hóa cao hơn. SME hoặc doanh nghiệp trung bình có thể cho phạm vi công việc rộng hơn, tiếp xúc gần hơn với khách hàng–sản phẩm và cơ hội quan sát quyết định nhanh hơn.
 
 Chất lượng thực tế phụ thuộc vào đội nhóm, đơn vị kinh doanh và vai trò cụ thể, không chỉ vào phân loại pháp lý của công ty.
+
+> **Chuyển mạch:** Trong **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Diễn giải dưới góc độ nghề nghiệp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -185,6 +234,8 @@ SME / doanh nghiệp trung bình / doanh nghiệp lớn
 Công ty mẹ / tập đoàn / công ty con
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nguồn và liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“주식회사 = công ty niêm yết.”** Sai. Đây chỉ là hình thức pháp lý công ty cổ phần.
@@ -199,6 +250,8 @@ Công ty mẹ / tập đoàn / công ty con
 
 **“대기업 = 재벌.”** Hai khái niệm không đồng nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Nguồn và liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Nguồn và liên kết
 
 Nguồn cuối bài dùng để xác minh định nghĩa pháp lý, tiêu chí phân loại và chương trình hỗ trợ doanh nghiệp. Hãy đối chiếu ngày hiệu lực trước khi so sánh các công ty.
@@ -209,4 +262,4 @@ Nguồn cuối bài dùng để xác minh định nghĩa pháp lý, tiêu chí p
 
 Đọc tiếp [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md) và [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md).
 
-> **Bàn giao:** Sau **Nguồn và liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn và liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)
 
-> **Mạch đọc:** Đặt **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Chuyển đổi dân số: từ lợi tức dân số sang ràng buộc dân số** sang **Mức sinh thấp tác động theo nhiều khoảng thời gian**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**. Route đi từ demographic transition → fertility, aging và households → labor, housing, debt và income → consumption sectors và regional demand → pensions/healthcare, để dân số nối với bảng cân đối và lựa chọn doanh nghiệp.
 
 Khi nhìn Hàn Quốc qua Samsung, Hyundai hay SK, rất dễ quên rằng phần lớn nhu cầu nội địa cuối cùng vẫn quay về **hộ gia đình (household / 가계)**. Con người đi làm, vay tiền, thuê hoặc mua nhà, nuôi con, tích lũy tài sản, nghỉ hưu và tiêu dùng. Dân số vì vậy không phải một thống kê nền; nó định hình cung lao động, nhu cầu nhà ở, giáo dục, lương hưu, y tế, kinh tế vùng và chiến lược doanh nghiệp.
 
@@ -23,6 +22,8 @@ Nếu số người làm việc giảm, nền kinh tế phải bù bằng tỷ l
 
 Các dự báo dân số dài hạn của Statistics Korea cho thấy lực lượng 15–64 tuổi có xu hướng giảm mạnh trong khi tỷ trọng dân số 65+ tăng đáng kể. Đây là dự báo chứ không phải kết quả chắc chắn, nhưng hướng áp lực là rất rõ.
 
+> **Chuyển mạch:** Trong **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Mức sinh thấp tác động theo nhiều khoảng thời gian** tiếp nhận điểm tựa từ **Chuyển đổi dân số: từ lợi tức dân số sang ràng buộc dân số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số hộ gia đình quan trọng không kém tổng dân số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mức sinh thấp tác động theo nhiều khoảng thời gian
 
 Mức sinh thấp không chỉ có nghĩa “ít trẻ em hơn”. Tác động xuất hiện theo từng lớp thời gian.
@@ -33,6 +34,8 @@ Tác động vùng thường xuất hiện sớm hơn tác động toàn quốc.
 
 Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
 
+> **Chuyển mạch:** Ở chặng này của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Số hộ gia đình quan trọng không kém tổng dân số** tiếp nhận điểm tựa từ **Mức sinh thấp tác động theo nhiều khoảng thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng cân đối hộ gia đình: thu nhập chỉ là một phần sức mua** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Số hộ gia đình quan trọng không kém tổng dân số
 
 Tổng dân số có thể đi ngang trong khi số hộ vẫn tăng nếu quy mô hộ giảm. **Hộ một người (single-person household / 1인가구)** tạo mẫu tiêu dùng rất khác hộ gia đình truyền thống.
@@ -40,6 +43,8 @@ Tổng dân số có thể đi ngang trong khi số hộ vẫn tăng nếu quy m
 Người trẻ sống một mình có thể chi nhiều hơn cho giao đồ ăn, cửa hàng tiện lợi, thuê bao số, thiết bị nhỏ và tiền thuê nhà. Người cao tuổi sống một mình lại cần y tế, hỗ trợ di chuyển và nhà ở dễ tiếp cận hơn.
 
 Vì vậy doanh nghiệp không nên chỉ hỏi “dân số tăng hay giảm” mà cần nhìn thêm số hộ, quy mô hộ, cơ cấu tuổi, thu nhập, tài sản–nợ và vị trí địa lý.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Bảng cân đối hộ gia đình: thu nhập chỉ là một phần sức mua** tiếp nhận điểm tựa từ **Số hộ gia đình quan trọng không kém tổng dân số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài sản thực chiếm tỷ trọng lớn: nhà ở trở thành kênh truyền dẫn vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảng cân đối hộ gia đình: thu nhập chỉ là một phần sức mua
 
@@ -55,6 +60,8 @@ Khảo sát tài chính và phúc lợi hộ gia đình năm 2025 cho thấy tà
 
 Điều này nhắc rằng “hộ gia đình Hàn Quốc trung bình” gần như không tồn tại như một tác nhân kinh tế thật. Nhóm sở hữu nhà, nhóm đi thuê, người trẻ mới đi làm, gia đình có con và người nghỉ hưu phản ứng với lãi suất và giá nhà rất khác nhau.
 
+> **Chuyển mạch:** Trong **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Tài sản thực chiếm tỷ trọng lớn: nhà ở trở thành kênh truyền dẫn vĩ mô** tiếp nhận điểm tựa từ **Bảng cân đối hộ gia đình: thu nhập chỉ là một phần sức mua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng tài sản và hiệu ứng tài sản thế chấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tài sản thực chiếm tỷ trọng lớn: nhà ở trở thành kênh truyền dẫn vĩ mô
 
 Bất động sản chiếm tỷ trọng lớn trong tài sản hộ gia đình. Vì vậy giá nhà tác động mạnh tới cảm nhận giàu–nghèo và khả năng vay.
@@ -62,6 +69,8 @@ Bất động sản chiếm tỷ trọng lớn trong tài sản hộ gia đình.
 Nhưng giá nhà tăng không làm mọi hộ giàu lên như nhau. Chủ nhà có giá trị tài sản chưa thực hiện tăng; người thuê hoặc người mua nhà lần đầu lại phải đối mặt với chi phí gia nhập cao hơn. Người trẻ có thể phải dành nhiều tiền hơn cho tiền đặt cọc hoặc trả trước và giảm tiêu dùng khác.
 
 Do đó một đợt tăng giá nhà tạo **tác động phân phối (distributional effect)** ngay cả khi tài sản ròng toàn khu vực hộ gia đình tăng.
+
+> **Chuyển mạch:** Ở chặng này của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Hiệu ứng tài sản và hiệu ứng tài sản thế chấp** tiếp nhận điểm tựa từ **Tài sản thực chiếm tỷ trọng lớn: nhà ở trở thành kênh truyền dẫn vĩ mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Jeonse: vừa là hợp đồng nhà ở vừa là công cụ tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu ứng tài sản và hiệu ứng tài sản thế chấp
 
@@ -73,6 +82,8 @@ Giá nhà tăng có ít nhất hai kênh.
 
 Khi giá nhà giảm, hai kênh này đảo chiều. Hộ gia đình đòn bẩy cao có thể cắt tiêu dùng để sửa bảng cân đối. Đây là lý do nhà ở và nợ hộ gia đình có thể khuếch đại chu kỳ kinh doanh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Jeonse: vừa là hợp đồng nhà ở vừa là công cụ tài chính** tiếp nhận điểm tựa từ **Hiệu ứng tài sản và hiệu ứng tài sản thế chấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nợ hộ gia đình và truyền dẫn chính sách tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Jeonse: vừa là hợp đồng nhà ở vừa là công cụ tài chính
 
 **Jeonse (전세)** là một đặc điểm nổi bật của thị trường nhà ở Hàn Quốc. Người thuê đặt một khoản tiền rất lớn cho chủ nhà và thường trả ít hoặc không trả tiền thuê hàng tháng.
@@ -82,6 +93,8 @@ Về kinh tế, người thuê đang cung cấp nguồn vốn cho chủ nhà. Ng
 Vì vậy jeonse gần với **hợp đồng tài chính nhà ở (housing-finance contract)** hơn là chỉ “trả tiền thuê trước”. Khi lãi suất, giá nhà hoặc đòn bẩy của chủ nhà thay đổi, mức hấp dẫn tương đối giữa jeonse và `월세` cũng thay đổi.
 
 Nếu giá trị bất động sản giảm xuống dưới tổng nghĩa vụ, rủi ro hoàn trả tiền đặt cọc tăng. Hệ thống thuê nhà vì vậy nối trực tiếp bảng cân đối người thuê với đòn bẩy của chủ nhà.
+
+> **Chuyển mạch:** Trong **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Nợ hộ gia đình và truyền dẫn chính sách tiền tệ** tiếp nhận điểm tựa từ **Jeonse: vừa là hợp đồng nhà ở vừa là công cụ tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách an toàn vĩ mô: vì sao lãi suất không phải công cụ duy nhất?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nợ hộ gia đình và truyền dẫn chính sách tiền tệ
 
@@ -94,6 +107,8 @@ Nghĩa\ vụ\ trả\ nợ = Gốc\ phải\ trả + Lãi\ phải\ trả
 Khi tiền lãi tăng, chi tiêu tùy ý thường bị cắt trước. Tuy nhiên tốc độ truyền dẫn phụ thuộc loại lãi suất, kỳ hạn, thu nhập người vay và tài sản thế chấp.
 
 Đây là lý do cơ quan tiền tệ và giám sát không chỉ nhìn tổng nợ mà còn nhìn cấu trúc nợ.
+
+> **Chuyển mạch:** Ở chặng này của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Chính sách an toàn vĩ mô: vì sao lãi suất không phải công cụ duy nhất?** tiếp nhận điểm tựa từ **Nợ hộ gia đình và truyền dẫn chính sách tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Già hóa thay đổi cơ cấu tiêu dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách an toàn vĩ mô: vì sao lãi suất không phải công cụ duy nhất?
 
@@ -110,6 +125,8 @@ Chính sách an toàn vĩ mô → ai có thể vay bao nhiêu và theo điều k
 
 Hai nhóm chính sách tương tác với nhau. Lãi suất thấp nhưng quy định cho vay chặt có kết quả rất khác lãi suất thấp và quy định lỏng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Già hóa thay đổi cơ cấu tiêu dùng** tiếp nhận điểm tựa từ **Chính sách an toàn vĩ mô: vì sao lãi suất không phải công cụ duy nhất?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lương hưu và tiết kiệm: tiêu dùng hôm nay phụ thuộc kỳ vọng tuổi già** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Già hóa thay đổi cơ cấu tiêu dùng
 
 Dân số già hơn không chỉ làm tổng cầu chậm lại. Cơ cấu cầu cũng chuyển dịch.
@@ -120,6 +137,8 @@ Dân số vì vậy tạo **luân chuyển ngành theo nhân khẩu (sector rota
 
 Xem [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
 
+> **Chuyển mạch:** Trong **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Lương hưu và tiết kiệm: tiêu dùng hôm nay phụ thuộc kỳ vọng tuổi già** tiếp nhận điểm tựa từ **Già hóa thay đổi cơ cấu tiêu dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lao động cao tuổi: kéo dài thời gian làm việc không tự động nâng năng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lương hưu và tiết kiệm: tiêu dùng hôm nay phụ thuộc kỳ vọng tuổi già
 
 Hộ gia đình quyết định tiết kiệm dựa trên kỳ vọng thu nhập tương lai. Nếu lo lương hưu không đủ hoặc thời gian nghỉ hưu dài, họ có động lực tiết kiệm nhiều hơn ngay hôm nay.
@@ -128,17 +147,23 @@ Hộ gia đình quyết định tiết kiệm dựa trên kỳ vọng thu nhập
 
 Xã hội già hóa khiến lương hưu và thu nhập nghỉ hưu trở thành biến vĩ mô vì chúng tác động mức tiết kiệm quốc gia và tiêu dùng.
 
+> **Chuyển mạch:** Ở chặng này của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Lao động cao tuổi: kéo dài thời gian làm việc không tự động nâng năng suất** tiếp nhận điểm tựa từ **Lương hưu và tiết kiệm: tiêu dùng hôm nay phụ thuộc kỳ vọng tuổi già** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ lệ tham gia lao động của phụ nữ và ràng buộc chăm sóc trẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lao động cao tuổi: kéo dài thời gian làm việc không tự động nâng năng suất
 
 Dân số trong độ tuổi lao động giảm không đồng nghĩa tổng cung lao động giảm cùng tỷ lệ nếu người cao tuổi tiếp tục làm việc lâu hơn. Nhưng chất lượng việc làm quan trọng.
 
 Nếu người lao động lớn tuổi rời công việc năng suất cao rồi chuyển sang việc tạm thời lương thấp, số người có việc làm vẫn cao nhưng năng suất chung tăng ít. Tuổi nghỉ hưu, hệ thống lương theo thâm niên và thiết kế lại công việc vì vậy liên kết chặt với dân số.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Tỷ lệ tham gia lao động của phụ nữ và ràng buộc chăm sóc trẻ** tiếp nhận điểm tựa từ **Lao động cao tuổi: kéo dài thời gian làm việc không tự động nâng năng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhập cư: bổ sung lao động nhưng không phải giải pháp “cắm là chạy”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tỷ lệ tham gia lao động của phụ nữ và ràng buộc chăm sóc trẻ
 
 Tăng tỷ lệ phụ nữ tham gia lao động có thể bù một phần lực lượng lao động giảm. Nhưng chi phí chăm trẻ, gián đoạn nghề nghiệp và độ linh hoạt nơi làm việc ảnh hưởng mạnh quyết định tham gia.
 
 Đây là vấn đề hệ thống: chính sách lao động, giá nhà, cạnh tranh giáo dục và quyết định sinh con tương tác với nhau. Nếu một phụ nữ chuyên môn cao kỳ vọng mất nhiều cơ hội nghề nghiệp khi có con, quyết định sinh con và cung lao động có thể cùng bị ảnh hưởng.
+
+> **Chuyển mạch:** Trong **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Nhập cư: bổ sung lao động nhưng không phải giải pháp “cắm là chạy”** tiếp nhận điểm tựa từ **Tỷ lệ tham gia lao động của phụ nữ và ràng buộc chăm sóc trẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí giáo dục và vòng phản hồi với mức sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhập cư: bổ sung lao động nhưng không phải giải pháp “cắm là chạy”
 
@@ -147,6 +172,8 @@ Nhập cư ròng có thể bù một phần dân số giảm, nhưng kỹ năng,
 Lao động nhập cư kỹ năng thấp giúp ngành thiếu nhân lực nhưng không tự động làm năng suất tăng. Nhân lực kỹ năng cao có thể bổ sung R&D và IT nhưng cạnh tranh quốc tế về nhân tài rất mạnh.
 
 Vì vậy chính sách nhập cư là một phần của **chiến lược vốn con người (human-capital strategy)**, không chỉ là chính sách tăng đầu người.
+
+> **Chuyển mạch:** Ở chặng này của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Chi phí giáo dục và vòng phản hồi với mức sinh** tiếp nhận điểm tựa từ **Nhập cư: bổ sung lao động nhưng không phải giải pháp “cắm là chạy”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy giảm dân số vùng và chi phí cố định của dịch vụ công** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí giáo dục và vòng phản hồi với mức sinh
 
@@ -170,11 +197,15 @@ Cạnh tranh nhân tài tăng
 
 Đây không phải một lời giải thích đơn nguyên cho mức sinh thấp, mà là một trong nhiều cơ chế liên kết hộ gia đình với thị trường lao động.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Suy giảm dân số vùng và chi phí cố định của dịch vụ công** tiếp nhận điểm tựa từ **Chi phí giáo dục và vòng phản hồi với mức sinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đưa hộ gia đình vào phân tích doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Suy giảm dân số vùng và chi phí cố định của dịch vụ công
 
 Trường học, bệnh viện, xe buýt, cấp nước và dịch vụ chính quyền đều có chi phí cố định. Khi dân số giảm, chi phí trên mỗi người tăng. Nếu chất lượng dịch vụ giảm, thanh niên lại có thêm động lực rời đi, tạo vòng phản hồi âm.
 
 Vì vậy suy giảm dân số vùng không chỉ làm bán lẻ yếu mà còn làm kinh tế của hạ tầng công xấu đi.
+
+> **Chuyển mạch:** Trong **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Cách đưa hộ gia đình vào phân tích doanh nghiệp** tiếp nhận điểm tựa từ **Suy giảm dân số vùng và chi phí cố định của dịch vụ công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cùng một xu hướng dân số có thể tạo người thắng và người thua khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đưa hộ gia đình vào phân tích doanh nghiệp
 
@@ -182,11 +213,15 @@ Với bán lẻ, ngân hàng, thẻ tín dụng, viễn thông, thực phẩm ho
 
 Không phải doanh nghiệp nào cũng cần mọi chỉ số. Nhưng doanh thu chủ yếu từ Hàn Quốc mà bỏ qua bảng cân đối hộ gia đình thì phân tích thiếu một lớp rất quan trọng.
 
+> **Chuyển mạch:** Ở chặng này của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Cùng một xu hướng dân số có thể tạo người thắng và người thua khác nhau** tiếp nhận điểm tựa từ **Cách đưa hộ gia đình vào phân tích doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cùng một xu hướng dân số có thể tạo người thắng và người thua khác nhau
 
 Giả sử dân số giảm nhưng số hộ vẫn tăng do quy mô hộ nhỏ lại. Nhu cầu căn hộ nhỏ, giao đồ ăn hoặc thuê bao có thể giữ tốt, trong khi nhu cầu trường học giảm.
 
 Vì vậy `dân số ↓` không thể trực tiếp suy ra `doanh thu ↓` cho mọi công ty. Doanh nghiệp phải được nối với **nhóm khách hàng (customer cohort)** cụ thể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Cùng một xu hướng dân số có thể tạo người thắng và người thua khác nhau** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -204,12 +239,16 @@ Tiêu dùng + tiết kiệm
 Doanh thu doanh nghiệp nội địa
 ```
 
+> **Chuyển mạch:** Trong **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 Dân số giảm không có nghĩa mọi thị trường giảm. Giá nhà tăng không làm mọi hộ giàu lên như nhau. Nợ hộ gia đình bình quân không đủ để đo rủi ro nếu không biết phân phối, loại lãi suất, thu nhập và tài sản thế chấp. Già hóa không chỉ là vấn đề lương hưu; nó còn tác động cung lao động, nhà ở, y tế, kinh tế vùng và cơ cấu tiêu dùng. Nhập cư cũng không giải thiếu lao động nếu kỹ năng và địa điểm không phù hợp.
+
+> **Chuyển mạch:** Ở chặng này của **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md) và [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

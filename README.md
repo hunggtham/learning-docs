@@ -1,6 +1,6 @@
 # Học tập (learning / 학습) Docs
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Học tập (learning / 학습) Docs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bộ tài liệu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quy ước biên soạn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của **Học tập (learning / 학습) Docs**. Route đi từ quy ước biên soạn và CATALOG → domain owners/canonical files → nguồn, generator và output → prerequisite, related links và audit, để repository được đọc như một hệ học tập có cấu trúc.
 
 Kho tài liệu học được tổ chức theo từng chủ đề. Mỗi bộ có nguồn gốc (`raw`/`raw_md`), script generate và thư mục `output` đã chuẩn hóa để học.
 

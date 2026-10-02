@@ -1,7 +1,6 @@
 # Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)
 
-> **Mạch đọc:** Đặt **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Nền kinh tế hiện tại là kết quả nén của lịch sử** sang **Từ thiếu năng lực sản xuất đến nền kinh tế có năng lực sâu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**. Route đi từ lịch sử và năng lực sản xuất → catch-up, nhà nước và chaebol → công nghiệp hóa, xuất khẩu và domestic demand → innovation, demographics và finance → mô hình kinh tế hiện tại, để cơ chế lịch sử nối với phân tích doanh nghiệp hôm nay.
 
 Chương này là cây cầu giữa cụm lịch sử `00_history/` và phần phân tích kinh tế–doanh nghiệp hiện tại. Nếu chưa đọc chuỗi lịch sử, nên đi từ [giai đoạn trước 1945](./00_history/00_legacy_before_1945.md) đến [phả hệ doanh nghiệp](./00_history/08_company_genealogies.md) trước.
 
@@ -30,6 +29,8 @@ Mỗi giai đoạn không xóa giai đoạn trước. Bán dẫn Hàn Quốc hô
 
 Vì vậy cấu trúc hiện tại có thể hiểu là **lịch sử được nén vào thể chế và năng lực**.
 
+> **Chuyển mạch:** Trong **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Từ thiếu năng lực sản xuất đến nền kinh tế có năng lực sâu** tiếp nhận điểm tựa từ **Nền kinh tế hiện tại là kết quả nén của lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao xuất khẩu trở thành động cơ tăng trưởng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ thiếu năng lực sản xuất đến nền kinh tế có năng lực sâu
 
 Sau chiến tranh, Hàn Quốc không chỉ thiếu tiền. Nước này thiếu cả một mạng lưới bổ trợ gồm điện, cảng, đường, máy móc, nhà máy, kỹ sư, hệ thống quản lý, tài chính và kênh xuất khẩu.
@@ -48,6 +49,8 @@ năng lực sản xuất
 ```
 
 Đây là lý do không thể sao chép sự phát triển của Hàn Quốc chỉ bằng cách trợ cấp một nhà máy riêng lẻ.
+
+> **Chuyển mạch:** Ở chặng này của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Vì sao xuất khẩu trở thành động cơ tăng trưởng?** tiếp nhận điểm tựa từ **Từ thiếu năng lực sản xuất đến nền kinh tế có năng lực sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lợi thế so sánh của Hàn Quốc được xây dựng chứ không chỉ “có sẵn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao xuất khẩu trở thành động cơ tăng trưởng?
 
@@ -68,6 +71,8 @@ Hỗ trợ chính sách
 
 Xuất khẩu vì thế vừa là chiến lược nhu cầu vừa là cơ chế học tập.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Vì sao xuất khẩu trở thành động cơ tăng trưởng?** đã nêu tiêu chí phân biệt, còn **Lợi thế so sánh của Hàn Quốc được xây dựng chứ không chỉ “có sẵn”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Vì sao chaebol trở thành trung tâm của công nghiệp hóa?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lợi thế so sánh của Hàn Quốc được xây dựng chứ không chỉ “có sẵn”
 
 Trong giáo trình kinh tế, lợi thế so sánh thường được trình bày như kết quả của nguồn lực sẵn có. Lịch sử Hàn Quốc cho thấy lợi thế có thể được **xây dựng qua thời gian**.
@@ -75,6 +80,8 @@ Trong giáo trình kinh tế, lợi thế so sánh thường được trình bà
 Hàn Quốc ban đầu không có lợi thế tự nhiên rõ ràng trong đóng tàu, ô tô, bán dẫn hay pin. Lợi thế được tạo bằng đầu tư vốn, nhập công nghệ, học bằng làm, mạng lưới nhà cung cấp và vốn nhân lực.
 
 Đây là **lợi thế so sánh động (dynamic comparative advantage / 동태적 비교우위)**. Chính sách công nghiệp có thể giúp tạo loại lợi thế này, nhưng luôn đi kèm rủi ro chọn sai ngành hoặc đầu tư quá mức.
+
+> **Chuyển mạch:** Trong **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Lợi thế so sánh của Hàn Quốc được xây dựng chứ không chỉ “có sẵn”** đã nêu tiêu chí phân biệt, còn **Vì sao chaebol trở thành trung tâm của công nghiệp hóa?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **SME không phải “nền kinh tế nhỏ” tách khỏi tập đoàn lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao chaebol trở thành trung tâm của công nghiệp hóa?
 
@@ -85,6 +92,8 @@ Doanh nghiệp thực hiện dự án thành công có hồ sơ tốt hơn, ti�
 Quy mô tạo lợi thế về CAPEX lớn, danh mục R&D, phân phối toàn cầu, đa dạng hóa rủi ro và thị trường vốn/nhân tài nội bộ. Nhưng cùng quy mô đó tạo rủi ro về khoảng cách giữa quyền kiểm soát và quyền sở hữu, xung đột với cổ đông thiểu số, giao dịch bên liên quan, bất cân xứng với nhà cung cấp và tập trung nguồn lực.
 
 Vì vậy Hàn Quốc hiện đại vừa dựa vào các doanh nghiệp vô địch toàn cầu vừa phải điều tiết hành vi của tập đoàn lớn. Xem [chaebol](./04_chaebol_and_large_business_groups.md) và [cấu trúc tập đoàn](./05_group_structure_affiliates_holding_companies.md).
+
+> **Chuyển mạch:** Ở chặng này của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **SME không phải “nền kinh tế nhỏ” tách khỏi tập đoàn lớn** tiếp nhận điểm tựa từ **Vì sao chaebol trở thành trung tâm của công nghiệp hóa?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khủng hoảng 1997 thay đổi luật chơi của doanh nghiệp Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## SME không phải “nền kinh tế nhỏ” tách khỏi tập đoàn lớn
 
@@ -104,6 +113,8 @@ Phụ thuộc khách hàng lớn
 
 Nếu chuỗi dừng ở “phụ thuộc”, cấu trúc hai tầng kéo dài. Xem [SME và thầu phụ](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Khủng hoảng 1997 thay đổi luật chơi của doanh nghiệp Hàn Quốc** tiếp nhận điểm tựa từ **SME không phải “nền kinh tế nhỏ” tách khỏi tập đoàn lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế thị trường không có nghĩa nhà nước biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khủng hoảng 1997 thay đổi luật chơi của doanh nghiệp Hàn Quốc
 
 Khủng hoảng tài chính châu Á cho thấy quy mô không thay thế được kỷ luật bảng cân đối. Trước khủng hoảng, nhiều doanh nghiệp có đòn bẩy cao, chênh lệch kỳ hạn/tiền tệ và giám sát yếu. Khi khả năng gia hạn vốn nước ngoài dừng lại, khủng hoảng thanh khoản truyền sang tỷ giá, ngân hàng và doanh nghiệp.
@@ -122,6 +133,8 @@ Logic thị trường sau 1997
 
 Nếu chỉ biết lịch sử chaebol, ta dễ bỏ qua rủi ro bảng cân đối. Nếu chỉ đọc tỷ số tài chính, ta lại không hiểu vì sao sơ đồ sở hữu tồn tại.
 
+> **Chuyển mạch:** Trong **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Kinh tế thị trường không có nghĩa nhà nước biến mất** tiếp nhận điểm tựa từ **Khủng hoảng 1997 thay đổi luật chơi của doanh nghiệp Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc Hàn Quốc qua năm bảng cân đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế thị trường không có nghĩa nhà nước biến mất
 
 Hàn Quốc hiện nay là **nền kinh tế thị trường (market economy / 시장경제)**: doanh nghiệp tư nhân, hợp đồng, giá và thị trường vốn quyết định phần lớn việc phân bổ nguồn lực.
@@ -131,6 +144,8 @@ Nhưng thị trường không tồn tại ngoài thể chế. Chính phủ ảnh
 Vai trò nhà nước hiện nay khác thập niên 1970. Tín dụng chỉ đạo trực tiếp ít trung tâm hơn; chính sách thường tác động bằng cách thay đổi **chi phí tương đối, tỷ suất sinh lợi và rủi ro**.
 
 Vì vậy chính sách bán dẫn hoặc pin hiện đại không phải bản sao đơn giản của HCI.
+
+> **Chuyển mạch:** Ở chặng này của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Đọc Hàn Quốc qua năm bảng cân đối** tiếp nhận điểm tựa từ **Kinh tế thị trường không có nghĩa nhà nước biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản xuất toàn cầu và dịch vụ nội địa: hai chu kỳ chồng lên nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đọc Hàn Quốc qua năm bảng cân đối
 
@@ -148,6 +163,8 @@ Một mô hình rất hữu ích là nhìn nền kinh tế qua năm hệ thống
 
 Cú sốc thường truyền từ bảng cân đối này sang bảng cân đối khác. Giá nhà giảm có thể ảnh hưởng tài sản thế chấp của hộ, tín dụng ngân hàng và dòng tiền xây dựng. Bùng nổ bán dẫn có thể nâng xuất khẩu, lợi nhuận doanh nghiệp, thu ngân sách và đầu tư.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Sản xuất toàn cầu và dịch vụ nội địa: hai chu kỳ chồng lên nhau** tiếp nhận điểm tựa từ **Đọc Hàn Quốc qua năm bảng cân đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản xuất mạnh nhưng năng suất dịch vụ là nút thắt cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản xuất toàn cầu và dịch vụ nội địa: hai chu kỳ chồng lên nhau
 
 Có thể tách một lớp sản xuất hướng toàn cầu khỏi một lớp dịch vụ phụ thuộc nhu cầu nội địa.
@@ -158,6 +175,8 @@ Lớp nội địa gồm bán lẻ, nhà hàng, nhà ở, y tế, giáo dục, t
 
 Hai chu kỳ có thể đi ngược nhau. Xuất khẩu HBM có thể bùng nổ trong lúc nhà hàng và bán lẻ yếu. Nhà ở có thể hồi phục khi giá bộ nhớ vẫn thấp. Vì vậy GDP tổng thể không đủ để hiểu một doanh nghiệp cụ thể.
 
+> **Chuyển mạch:** Trong **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Sản xuất mạnh nhưng năng suất dịch vụ là nút thắt cấu trúc** tiếp nhận điểm tựa từ **Sản xuất toàn cầu và dịch vụ nội địa: hai chu kỳ chồng lên nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển đổi nhân khẩu học thay đổi giới hạn của nền kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sản xuất mạnh nhưng năng suất dịch vụ là nút thắt cấu trúc
 
 Hàn Quốc giữ năng lực sản xuất rất cao so với nhiều nền kinh tế phát triển. Sản xuất tạo xuất khẩu, lan tỏa R&D và việc làm năng suất cao.
@@ -166,6 +185,8 @@ Nhưng phần lớn lao động nằm trong dịch vụ và SME có năng suất
 
 Đó là lý do cải cách dịch vụ, số hóa, AI, chất lượng quản lý và tái phân bổ nguồn lực trở thành vấn đề trung tâm. Xem [năng suất và tính hai tầng](./28_productivity_services_and_economic_dualism.md).
 
+> **Chuyển mạch:** Ở chặng này của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Sản xuất mạnh nhưng năng suất dịch vụ là nút thắt cấu trúc** đã nêu tiêu chí phân biệt, còn **Chuyển đổi nhân khẩu học thay đổi giới hạn của nền kinh tế** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nợ hộ gia đình và nhà ở tạo một bài toán tiền tệ riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển đổi nhân khẩu học thay đổi giới hạn của nền kinh tế
 
 Hàn Quốc thời tăng trưởng cao từng có lực lượng lao động trẻ và đô thị hóa nhanh. Hiện nay nước này đối mặt già hóa nhanh và dân số trong độ tuổi lao động giảm.
@@ -173,6 +194,8 @@ Hàn Quốc thời tăng trưởng cao từng có lực lượng lao động tr�
 Nếu số lao động giảm, tăng trưởng phải bù bằng tỷ lệ tham gia lao động, nhập cư và năng suất. Dân số cũng thay đổi cơ cấu tiêu dùng: y tế và dịch vụ người cao tuổi tăng tương đối; thị trường liên quan trẻ em có thể co lại; suy giảm dân số địa phương làm kinh tế hạ tầng khó hơn.
 
 Nhân khẩu học vì thế đi thẳng vào chiến lược nhân sự, vị trí cửa hàng, nhà ở và sản phẩm. Xem [dân số và hộ gia đình](./27_demographics_households_and_consumption.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Chuyển đổi nhân khẩu học thay đổi giới hạn của nền kinh tế** đã nêu tiêu chí phân biệt, còn **Nợ hộ gia đình và nhà ở tạo một bài toán tiền tệ riêng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chuỗi giá trị toàn cầu: quốc tịch doanh nghiệp không còn trùng với nơi sản xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nợ hộ gia đình và nhà ở tạo một bài toán tiền tệ riêng
 
@@ -187,6 +210,8 @@ Lãi suất ↑
 
 Nhưng nếu lãi suất giảm quá mạnh, giá nhà và đòn bẩy có thể tăng. Vì vậy BOK và cơ quan giám sát phải cân bằng mục tiêu giá cả/tăng trưởng với ổn định tài chính.
 
+> **Chuyển mạch:** Trong **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Nợ hộ gia đình và nhà ở tạo một bài toán tiền tệ riêng** xác định đầu vào; **Chuỗi giá trị toàn cầu: quốc tịch doanh nghiệp không còn trùng với nơi sản xuất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Địa chính trị trở thành đầu vào của tài chính doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuỗi giá trị toàn cầu: quốc tịch doanh nghiệp không còn trùng với nơi sản xuất
 
 Doanh nghiệp Hàn Quốc ngày càng là hệ thống sản xuất đa quốc gia. Hyundai có thể bán xe sản xuất ở nước ngoài; nhà máy pin có thể nằm tại Mỹ hoặc châu Âu; điện tử được lắp ráp khắp châu Á; nội dung được phân phối trên nền tảng toàn cầu.
@@ -194,6 +219,8 @@ Doanh nghiệp Hàn Quốc ngày càng là hệ thống sản xuất đa quốc 
 “Made in Korea” vì vậy không phải ranh giới của giá trị doanh nghiệp Hàn Quốc. Cần hỏi công ty kiểm soát phần nào của chuỗi: công nghệ, thiết kế, thương hiệu, quy trình sản xuất, phân phối, IP hay quan hệ khách hàng.
 
 Dữ liệu xuất khẩu chỉ đo hàng qua biên giới, không đo toàn bộ giá trị mà doanh nghiệp Hàn Quốc nắm giữ.
+
+> **Chuyển mạch:** Ở chặng này của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Chuỗi giá trị toàn cầu: quốc tịch doanh nghiệp không còn trùng với nơi sản xuất** xác định đầu vào; **Địa chính trị trở thành đầu vào của tài chính doanh nghiệp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Năng lượng là giới hạn ẩn của công nghiệp tiên tiến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Địa chính trị trở thành đầu vào của tài chính doanh nghiệp
 
@@ -212,11 +239,15 @@ Chi phí + chất lượng + logistics
 
 Bán dẫn, pin, quốc phòng và vật liệu quan trọng chịu tác động rõ nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Địa chính trị trở thành đầu vào của tài chính doanh nghiệp** đã nêu tiêu chí phân biệt, còn **Năng lượng là giới hạn ẩn của công nghiệp tiên tiến** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — Cách nén toàn bộ hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năng lượng là giới hạn ẩn của công nghiệp tiên tiến
 
 Fab bán dẫn, thép, hóa chất, pin và trung tâm dữ liệu AI đều cần nguồn điện lớn và ổn định. Hàn Quốc phụ thuộc nhiều vào năng lượng nhập khẩu và có hệ thống điện gần như một “đảo” về địa lý.
 
 Do đó giá điện, điện hạt nhân, LNG, năng lượng tái tạo và lưới truyền tải không phải chủ đề tách khỏi doanh nghiệp. Chúng ảnh hưởng trực tiếp chi phí và khả năng mở rộng công suất. Xem [năng lượng](./30_energy_security_power_market_and_transition.md).
+
+> **Chuyển mạch:** Trong **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)**, **Năng lượng là giới hạn ẩn của công nghiệp tiên tiến** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델) — Cách nén toàn bộ hệ thống** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델) — Cách nén toàn bộ hệ thống
 
@@ -236,4 +267,4 @@ Lịch sử / thể chế
 
 Sau đó lần theo dòng tiền và quyền quyết định. Đây là cách biến “kinh tế Hàn Quốc” từ một tập hợp sự kiện thành một hệ thống có thể suy luận.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Cách nén toàn bộ hệ thống**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 macro economy and business cycle](./01_macro_economy_and_business_cycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) — Cách nén toàn bộ hệ thống**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

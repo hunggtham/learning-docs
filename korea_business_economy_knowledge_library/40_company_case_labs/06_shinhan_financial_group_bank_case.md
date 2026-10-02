@@ -1,7 +1,6 @@
 # Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn
 
-> **Mạch đọc:** Đặt **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Xác định đúng pháp nhân: Shinhan Financial Group không đồng nghĩa Shinhan Bank** sang **2. Ngân hàng thực sự kiếm tiền như thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**. Route đi từ pháp nhân/holding structure → bank income và balance sheet → credit cycle, provisioning và capital → subsidiaries, governance và regulation → ROE, liquidity và stress, để mô hình ngân hàng không bị đọc như doanh nghiệp sản xuất.
 
 Trường hợp (case / 사례) này dùng Shinhan Financial Group như một bài thực hành để hiểu **công ty mẹ tài chính (financial holding company / 금융지주회사)** tại Hàn Quốc. Mục tiêu không phải đánh giá Shinhan tốt hay xấu, mà học cách đọc một tập đoàn tài chính có cấu trúc kinh tế rất khác doanh nghiệp sản xuất.
 
@@ -18,6 +17,8 @@ Mỗi công ty con có mô hình kinh tế và quy định riêng. Ngân hàng p
 Do đó câu “lợi nhuận Shinhan tăng” mới chỉ là quan sát ban đầu. Cần hỏi **công ty con nào tạo ra thay đổi, bằng động lực nào và phải sử dụng bao nhiêu vốn để tạo ra mức sinh lời đó**.
 
 > **Mô hình tư duy:** tập đoàn tài chính là một danh mục gồm nhiều hoạt động dựa trên bảng cân đối kế toán. Lợi nhuận hợp nhất chỉ là kết quả cuối; phân tích phải quay lại chất lượng tài sản, nguồn vốn, biên lãi, phí và vốn pháp định của từng động cơ kinh doanh.
+
+> **Chuyển mạch:** Trong **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **2. Ngân hàng thực sự kiếm tiền như thế nào?** tiếp nhận điểm tựa từ **1. Xác định đúng pháp nhân: Shinhan Financial Group không đồng nghĩa Shinhan Bank** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Nền tảng tiền gửi là một loại lợi thế cạnh tranh riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Ngân hàng thực sự kiếm tiền như thế nào?
 
@@ -53,6 +54,8 @@ NIM không đơn giản là `lãi suất cho vay - lãi suất tiền gửi`. C�
 
 Nếu lãi suất chính sách tăng, lợi suất cho vay có thể điều chỉnh trước chi phí tiền gửi, khiến NIM ban đầu tăng. Nhưng sau đó cạnh tranh tiền gửi làm chi phí vốn tăng, người vay chịu áp lực lớn hơn khiến chi phí tín dụng tăng và nhu cầu vay yếu đi. Vì vậy câu “lãi suất tăng thì ngân hàng được lợi” chỉ đúng trong một số giai đoạn của cơ chế truyền dẫn.
 
+> **Chuyển mạch:** Ở chặng này của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **3. Nền tảng tiền gửi là một loại lợi thế cạnh tranh riêng** tiếp nhận điểm tựa từ **2. Ngân hàng thực sự kiếm tiền như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Tăng trưởng cho vay không đồng nghĩa tạo giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Nền tảng tiền gửi là một loại lợi thế cạnh tranh riêng
 
 Trong sản xuất, lợi thế có thể đến từ công nghệ, quy mô hoặc thương hiệu. Với ngân hàng, lợi thế có thể nằm ở **nền tảng tiền gửi (deposit franchise / 예금 기반)**: khả năng huy động nguồn vốn tương đối ổn định với chi phí hợp lý.
@@ -62,6 +65,8 @@ Ngân hàng có tỷ trọng lớn tiền gửi giao dịch chi phí thấp có 
 **Hệ số phản ứng của lãi suất tiền gửi (deposit beta)** cho biết lãi suất tiền gửi tăng bao nhiêu so với lãi suất thị trường/chính sách. Nếu lãi suất chính sách tăng 100 điểm cơ bản (bp) nhưng chi phí tiền gửi bình quân tăng 60 bp, hệ số phản ứng xấp xỉ 60%.
 
 Đây là cầu nối trực tiếp giữa chính sách tiền tệ và khả năng sinh lợi của ngân hàng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **4. Tăng trưởng cho vay không đồng nghĩa tạo giá trị** tiếp nhận điểm tựa từ **3. Nền tảng tiền gửi là một loại lợi thế cạnh tranh riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Chu kỳ tín dụng: nợ xấu thường xuất hiện sau giai đoạn tăng trưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Tăng trưởng cho vay không đồng nghĩa tạo giá trị
 
@@ -78,6 +83,8 @@ Chi phí nguồn vốn
 Nếu ngân hàng giành thị phần bằng cách định giá rủi ro quá thấp, lợi nhuận kế toán có thể đẹp trước khi tổn thất xuất hiện.
 
 Do đó phân tích ngân hàng phải luôn ghép **tăng trưởng với chất lượng thẩm định tín dụng (underwriting quality)**.
+
+> **Chuyển mạch:** Trong **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **5. Chu kỳ tín dụng: nợ xấu thường xuất hiện sau giai đoạn tăng trưởng** tiếp nhận điểm tựa từ **4. Tăng trưởng cho vay không đồng nghĩa tạo giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Nợ hộ gia đình và nhà ở là kênh truyền dẫn đặc biệt quan trọng tại Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Chu kỳ tín dụng: nợ xấu thường xuất hiện sau giai đoạn tăng trưởng
 
@@ -98,6 +105,8 @@ Do độ trễ này, ngân hàng có thể báo cáo lợi nhuận hiện tại 
 
 Khi đọc DART, không chỉ xem tổng dư nợ. Cần tách các nhóm như hộ gia đình, thế chấp, tín chấp tiêu dùng, SME, doanh nghiệp lớn, bất động sản/PF và hoạt động ở nước ngoài nếu có dữ liệu.
 
+> **Chuyển mạch:** Ở chặng này của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **6. Nợ hộ gia đình và nhà ở là kênh truyền dẫn đặc biệt quan trọng tại Hàn Quốc** tiếp nhận điểm tựa từ **5. Chu kỳ tín dụng: nợ xấu thường xuất hiện sau giai đoạn tăng trưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Cho vay SME và doanh nghiệp: nhìn nền kinh tế thực phía sau bảng cân đối ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Nợ hộ gia đình và nhà ở là kênh truyền dẫn đặc biệt quan trọng tại Hàn Quốc
 
 Tín dụng nhà ở phụ thuộc không chỉ giá bất động sản mà còn thu nhập người vay, LTV, DSR, gánh nặng lãi và việc làm.
@@ -107,6 +116,8 @@ Nếu giá nhà giảm nhưng người vay vẫn có dòng tiền tốt và LTV 
 > Tài sản bảo đảm là nguồn trả nợ thứ hai; thu nhập và dòng tiền là nguồn trả nợ thứ nhất.
 
 Các quy định như LTV/DSR tác động đồng thời tới tăng trưởng tín dụng, nhu cầu hộ gia đình và ổn định tài chính. Đây là cầu nối giữa [22_tax_regulation_and_competition](../22_tax_regulation_and_competition.md), [27_demographics_households_and_consumption](../27_demographics_households_and_consumption.md) và lợi nhuận ngân hàng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **7. Cho vay SME và doanh nghiệp: nhìn nền kinh tế thực phía sau bảng cân đối ngân hàng** tiếp nhận điểm tựa từ **6. Nợ hộ gia đình và nhà ở là kênh truyền dẫn đặc biệt quan trọng tại Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Thu nhập ngoài lãi không phải một nhóm đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Cho vay SME và doanh nghiệp: nhìn nền kinh tế thực phía sau bảng cân đối ngân hàng
 
@@ -120,6 +131,8 @@ Ngân hàng siết/nới tín dụng → vốn của doanh nghiệp → đầu t
 ```
 
 Ngân hàng vừa nhận cú sốc từ nền kinh tế vừa truyền cú sốc trở lại nền kinh tế.
+
+> **Chuyển mạch:** Trong **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **8. Thu nhập ngoài lãi không phải một nhóm đồng nhất** tiếp nhận điểm tựa từ **7. Cho vay SME và doanh nghiệp: nhìn nền kinh tế thực phía sau bảng cân đối ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Tỷ lệ chi phí trên thu nhập và đòn bẩy hoạt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Thu nhập ngoài lãi không phải một nhóm đồng nhất
 
@@ -137,11 +150,15 @@ Kết quả dịch vụ bảo hiểm?
 
 Một tập đoàn có nhiều công ty con có thể giảm phụ thuộc vào NIM, nhưng đa dạng hóa đồng thời làm tăng độ phức tạp và bài toán phân bổ vốn pháp định.
 
+> **Chuyển mạch:** Ở chặng này của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **9. Tỷ lệ chi phí trên thu nhập và đòn bẩy hoạt động** tiếp nhận điểm tựa từ **8. Thu nhập ngoài lãi không phải một nhóm đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. An toàn vốn: lợi nhuận phải được đặt cạnh lượng vốn đã sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Tỷ lệ chi phí trên thu nhập và đòn bẩy hoạt động
 
 Ngân hàng phải duy trì mạng lưới chi nhánh, hệ thống CNTT, an ninh mạng, tuân thủ, nhân sự và hạ tầng số. **Tỷ lệ chi phí trên thu nhập (cost-to-income ratio / 영업효율성 지표)** cho biết bao nhiêu phần thu nhập hoạt động bị sử dụng cho chi phí vận hành.
 
 Số hóa có thể giảm chi phí giao dịch nhưng đồng thời làm tăng đầu tư công nghệ. Vì vậy đóng chi nhánh không tự động tạo lợi thế chi phí bền vững; cần xem khả năng thu hút khách hàng, mức sử dụng kênh số, chi phí gian lận/an ninh mạng và gánh nặng hệ thống cũ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **10. An toàn vốn: lợi nhuận phải được đặt cạnh lượng vốn đã sử dụng** tiếp nhận điểm tựa từ **9. Tỷ lệ chi phí trên thu nhập và đòn bẩy hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Phân bổ vốn tại công ty mẹ tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. An toàn vốn: lợi nhuận phải được đặt cạnh lượng vốn đã sử dụng
 
@@ -156,6 +173,8 @@ CET1\ Ratio = \frac{Vốn\ CET1}{Tài\ sản\ có\ trọng\ số\ rủi\ ro}
 Mẫu số không phải tổng tài sản mà là **tài sản có trọng số rủi ro (Risk-Weighted Assets / RWA / 위험가중자산)**. Hai tài sản cùng trị giá 100 won có thể cần lượng vốn pháp định rất khác nhau tùy mức rủi ro.
 
 Do đó ROE cao có thể đến từ lợi thế kinh doanh thực sự, nhưng cũng có thể đến từ đòn bẩy cao hoặc bộ đệm vốn thấp. Phải đọc **mức sinh lời và khả năng chống chịu cùng lúc**.
+
+> **Chuyển mạch:** Trong **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **11. Phân bổ vốn tại công ty mẹ tài chính** tiếp nhận điểm tựa từ **10. An toàn vốn: lợi nhuận phải được đặt cạnh lượng vốn đã sử dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Kiểm tra sức chịu đựng của tập đoàn tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Phân bổ vốn tại công ty mẹ tài chính
 
@@ -178,6 +197,8 @@ Giá\ trị\ kinh\ tế\ tạo\ ra \approx Lợi\ suất\ trên\ vốn - Chi\ ph
 \]
 
 và phải xét thêm ràng buộc vốn pháp định riêng của từng ngành tài chính.
+
+> **Chuyển mạch:** Ở chặng này của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **12. Kiểm tra sức chịu đựng của tập đoàn tài chính** tiếp nhận điểm tựa từ **11. Phân bổ vốn tại công ty mẹ tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. ROE và P/B: vì sao ngân hàng thường được đọc cùng giá trị sổ sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Kiểm tra sức chịu đựng của tập đoàn tài chính
 
@@ -209,6 +230,8 @@ Tỷ lệ vốn → khả năng tăng trưởng / trả cổ tức
 
 Đây mới là kiểm tra sức chịu đựng có chuỗi nhân quả hợp lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **13. ROE và P/B: vì sao ngân hàng thường được đọc cùng giá trị sổ sách** tiếp nhận điểm tựa từ **12. Kiểm tra sức chịu đựng của tập đoàn tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Thứ tự đọc DART cho ngân hàng và tập đoàn tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. ROE và P/B: vì sao ngân hàng thường được đọc cùng giá trị sổ sách
 
 Giá trị sổ sách có ý nghĩa đặc biệt với công ty tài chính vì phần lớn tài sản và nợ là tài sản tài chính, đồng thời vốn pháp định liên hệ trực tiếp với vốn chủ sở hữu.
@@ -222,6 +245,8 @@ ROE bền vững cao hơn so với chi phí vốn chủ sở hữu
 ```
 
 Nhưng không nên dùng P/B như quy tắc máy móc. Nếu giá trị sổ sách chứa vấn đề chất lượng tài sản chưa được phản ánh hoặc ROE được đẩy lên bởi giai đoạn tín dụng thuận lợi bất thường, P/B thấp có thể là **bẫy giá trị (value trap)**.
+
+> **Chuyển mạch:** Trong **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **14. Thứ tự đọc DART cho ngân hàng và tập đoàn tài chính** tiếp nhận điểm tựa từ **13. ROE và P/B: vì sao ngân hàng thường được đọc cùng giá trị sổ sách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Thứ tự đọc DART cho ngân hàng và tập đoàn tài chính
 
@@ -242,6 +267,8 @@ Nên đọc theo trình tự:
 
 Nếu chỉ đọc báo cáo kết quả kinh doanh, bạn thấy đầu ra nhưng không thấy “hàng tồn kho rủi ro” nằm trong bảng cân đối kế toán.
 
+> **Chuyển mạch:** Ở chặng này của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **14. Thứ tự đọc DART cho ngân hàng và tập đoàn tài chính** đã nêu tiêu chí phân biệt, còn **15. Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Bài tập nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Những nhầm lẫn thường gặp
 
 ### “Lãi suất tăng thì ngân hàng chắc chắn được lợi”
@@ -259,6 +286,8 @@ Thanh khoản chỉ là một chiều. Khả năng thanh toán dài hạn còn p
 ### “Tập đoàn tài chính đa dạng hóa thì ít rủi ro hơn”
 
 Đa dạng hóa có thể giảm tập trung nhưng đồng thời tạo thêm rủi ro thị trường, bảo hiểm, vận hành và quản trị.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **15. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **16. Bài tập nghiên cứu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Bài tập nghiên cứu
 
@@ -278,10 +307,12 @@ Khi tự cập nhật trường hợp (case / 사례) bằng báo cáo mới, h�
 
 Sau đó giải thích **cơ chế (mechanism / 메커니즘)** của từng điểm chuyển hướng thay vì chỉ mô tả tăng/giảm.
 
+> **Chuyển mạch:** Trong **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn**, **Mô hình tư duy cuối** gom các mảnh từ **16. Bài tập nghiên cứu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy cuối
 
 > Một tập đoàn tài chính Hàn Quốc là cỗ máy biến **nguồn vốn + vốn pháp định → tài sản và dịch vụ tài chính có điều chỉnh theo rủi ro**. Lợi nhuận chỉ là dòng chảy của một năm; chất lượng thật nằm ở nền tảng tiền gửi, thẩm định tín dụng, chất lượng tài sản, bộ đệm vốn và khả năng phân bổ vốn giữa các công ty con.
 
 Trường hợp (case / 사례) tiếp theo nên đọc cùng [07_lg_energy_solution_battery_case](./07_lg_energy_solution_battery_case.md) để thấy sự khác biệt giữa **tài chính dựa trên bảng cân đối kế toán (balance-sheet-intensive finance)** và **sản xuất thâm dụng vốn (CAPEX-intensive manufacturing)**.
 
-> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

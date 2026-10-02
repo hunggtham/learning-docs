@@ -1,7 +1,6 @@
 # Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt
 
-> **Mạch đọc:** Đặt **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vị trí kinh tế trong chuỗi giá trị** sang **2. Động lực doanh thu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**. Route đi từ vị trí trong value chain → revenue/customer concentration → pricing power và payment terms → working capital, capex và cash conversion → bargaining, diversification và failure modes.
 
 Trường hợp (case / 사례) này dùng một **doanh nghiệp giả lập** để mô phỏng cấu trúc thường gặp trong chuỗi cung ứng sản xuất tại Hàn Quốc. Dùng công ty giả lập giúp ta tập trung vào cơ chế kinh tế mà không biến bài học thành nhận xét về một SME cụ thể.
 
@@ -24,6 +23,8 @@ Mỗi lớp có thể truyền cú sốc xuống nhà cung cấp. Nếu OEM gi�
 
 Nhà cung cấp còn chịu bất cân xứng quyền thương lượng: khách hàng lớn thường có nhiều lựa chọn nguồn cung hơn số lựa chọn khách hàng mà nhà cung cấp có.
 
+> **Chuyển mạch:** Trong **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **1. Vị trí kinh tế trong chuỗi giá trị** xác định đầu vào; **2. Động lực doanh thu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Giảm giá hàng năm và cuộc đua năng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Động lực doanh thu
 
 Một mô hình đơn giản:
@@ -43,6 +44,8 @@ thắng khách hàng hoặc chương trình mới
 Giá bán đơn vị thường không phải động lực tăng trưởng mạnh vì khách hàng có thể đàm phán giảm giá định kỳ hàng năm.
 
 Nếu doanh thu tăng chỉ vì một khách hàng mở nhà máy mới, **rủi ro tập trung khách hàng (customer concentration risk)** có thể tăng cùng lúc với tăng trưởng.
+
+> **Chuyển mạch:** Ở chặng này của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **3. Giảm giá hàng năm và cuộc đua năng suất** tiếp nhận điểm tựa từ **2. Động lực doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Tập trung khách hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Giảm giá hàng năm và cuộc đua năng suất
 
@@ -72,6 +75,8 @@ Doanh thu có thể vẫn tăng nhờ sản lượng, trong khi giá trị kinh 
 
 Vì vậy phân tích nhà cung cấp phải tách **tăng sản lượng (volume growth)** khỏi **giá trị kinh tế trên mỗi đơn vị**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **4. Tập trung khách hàng** tiếp nhận điểm tựa từ **3. Giảm giá hàng năm và cuộc đua năng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Vốn lưu động: nơi tăng trưởng hút tiền mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Tập trung khách hàng
 
 Giả định cơ cấu doanh thu:
@@ -97,6 +102,8 @@ tập trung công nghệ / thông số kỹ thuật
 ```
 
 Một nhà cung cấp có 10 khách hàng nhưng 70% doanh thu vẫn đến từ một nền tảng hoặc một mẫu sản phẩm thì mức đa dạng hóa thực tế vẫn thấp.
+
+> **Chuyển mạch:** Trong **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **5. Vốn lưu động: nơi tăng trưởng hút tiền mặt** tiếp nhận điểm tựa từ **4. Tập trung khách hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Ví dụ tăng trưởng nhưng thiếu tiền mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Vốn lưu động: nơi tăng trưởng hút tiền mặt
 
@@ -129,6 +136,8 @@ CCC = 45 + 90 - 40 = 95\ days
 \]
 
 Công ty phải tài trợ gần ba tháng chu kỳ hoạt động trước khi thu được tiền.
+
+> **Chuyển mạch:** Ở chặng này của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **5. Vốn lưu động: nơi tăng trưởng hút tiền mặt** cho ta quy tắc; **6. Ví dụ tăng trưởng nhưng thiếu tiền mặt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. Tooling và CAPEX dành riêng cho khách hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Ví dụ tăng trưởng nhưng thiếu tiền mặt
 
@@ -166,6 +175,8 @@ Công ty chỉ tạo thêm 110 lợi nhuận hoạt động nhưng cần thêm k
 
 Đây là lý do một công ty tăng trưởng nhanh có thể đồng thời tăng đòn bẩy tài chính.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **6. Ví dụ tăng trưởng nhưng thiếu tiền mặt** cho ta quy tắc; **7. Tooling và CAPEX dành riêng cho khách hàng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. Cơ chế chuyển giá nguyên liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Tooling và CAPEX dành riêng cho khách hàng
 
 Nhà cung cấp thường mua khuôn, die, jig, máy móc hoặc thiết bị kiểm tra cho một chương trình cụ thể. Câu hỏi quan trọng là ai sở hữu các tài sản tooling đó và chi phí được thu hồi bằng cách nào.
@@ -181,6 +192,8 @@ chi phí được hoàn lại khi đạt mốc dự án
 
 Nếu nhà cung cấp bỏ CAPEX nhưng sản lượng thực tế thấp hơn dự báo, khấu hao vẫn tồn tại. Dự án có thể nhìn có lợi nhuận trên báo giá nhưng kém hiệu quả khi sản lượng thực tế không đạt kế hoạch.
 
+> **Chuyển mạch:** Trong **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **7. Tooling và CAPEX dành riêng cho khách hàng** xác định đầu vào; **8. Cơ chế chuyển giá nguyên liệu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Lỗi chất lượng và rủi ro đuôi khó nhìn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Cơ chế chuyển giá nguyên liệu
 
 Nếu giá kim loại hoặc nhựa tăng, nhà cung cấp có thể hoặc không thể chuyển phần tăng đó sang khách hàng.
@@ -194,6 +207,8 @@ không chuyển được → nhà cung cấp tự hấp thụ cú sốc
 ```
 
 Điều khoản hợp đồng và quyền thương lượng quyết định kết quả kinh tế. Vì vậy mức phơi nhiễm với giá hàng hóa không thể suy ra chỉ từ loại nguyên liệu sử dụng.
+
+> **Chuyển mạch:** Ở chặng này của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **8. Cơ chế chuyển giá nguyên liệu** xác định đầu vào; **9. Lỗi chất lượng và rủi ro đuôi khó nhìn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Lao động và thầu phụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Lỗi chất lượng và rủi ro đuôi khó nhìn
 
@@ -214,6 +229,8 @@ Một lỗi nhỏ về số lượng linh kiện vẫn có thể gây tổn th�
 
 Vì vậy chỉ số chất lượng là một **chỉ báo sớm (leading indicator)** của kết quả tài chính.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **10. Lao động và thầu phụ** tiếp nhận điểm tựa từ **9. Lỗi chất lượng và rủi ro đuôi khó nhìn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Khách hàng chuyển nhà máy và mở rộng ra nước ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Lao động và thầu phụ
 
 SME sản xuất thường chịu ràng buộc lao động mạnh hơn chaebol. Lạm phát tiền lương, làm thêm giờ, khả năng tuyển lao động nước ngoài và sử dụng thầu phụ đều tác động chi phí trên mỗi đơn vị.
@@ -221,6 +238,8 @@ SME sản xuất thường chịu ràng buộc lao động mạnh hơn chaebol. 
 Nếu doanh nghiệp tăng tỷ lệ thuê ngoài để đáp ứng nhu cầu đỉnh, độ linh hoạt chi phí biến đổi có thể tăng nhưng chất lượng, khả năng kiểm soát và chi phí đơn vị cũng có thể xấu đi.
 
 Khi đọc chi phí bán hàng–quản lý và chi phí sản xuất, nên cố hiểu số lao động, mức làm thêm, quy trình thuê ngoài và đầu tư tự động hóa.
+
+> **Chuyển mạch:** Trong **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **11. Khách hàng chuyển nhà máy và mở rộng ra nước ngoài** tiếp nhận điểm tựa từ **10. Lao động và thầu phụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Khả năng chịu nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Khách hàng chuyển nhà máy và mở rộng ra nước ngoài
 
@@ -238,6 +257,8 @@ FDI của nhà cung cấp vì vậy không chỉ là cơ hội tăng trưởng; 
 
 Đây là liên kết trực tiếp giữa [23_foreign_invested_companies_and_korea_entry](../23_foreign_invested_companies_and_korea_entry.md) và kinh tế SME.
 
+> **Chuyển mạch:** Ở chặng này của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **12. Khả năng chịu nợ** tiếp nhận điểm tựa từ **11. Khách hàng chuyển nhà máy và mở rộng ra nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Kịch bản mất khách hàng lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Khả năng chịu nợ
 
 Ngân hàng có thể tài trợ vốn lưu động và thiết bị, nhưng dòng tiền của nhà cung cấp biến động theo đơn hàng của khách hàng.
@@ -245,6 +266,8 @@ Ngân hàng có thể tài trợ vốn lưu động và thiết bị, nhưng dò
 Cần theo dõi các khoản vay ngắn hạn, khả năng trả lãi, tài trợ dựa trên khoản phải thu, mức tập trung đáo hạn, mức tập trung khách hàng và tài sản bảo đảm.
 
 Một công ty có tỷ lệ nợ thấp tại ngày cuối năm nhưng dùng lượng vay mùa vụ lớn trong năm vẫn có rủi ro thanh khoản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **13. Kịch bản mất khách hàng lớn** tiếp nhận điểm tựa từ **12. Khả năng chịu nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Kịch bản tăng trưởng quá nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Kịch bản mất khách hàng lớn
 
@@ -263,6 +286,8 @@ cú sốc doanh thu
 
 Nếu thiết bị dành riêng cho khách hàng không thể dùng cho khách hàng khác, còn có thể xuất hiện **tổn thất suy giảm tài sản (asset impairment)**.
 
+> **Chuyển mạch:** Trong **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **14. Kịch bản tăng trưởng quá nhanh** tiếp nhận điểm tựa từ **13. Kịch bản mất khách hàng lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Lợi thế cạnh tranh của nhà cung cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Kịch bản tăng trưởng quá nhanh
 
 Giả định chương trình EV mới làm doanh thu tăng 50% nhưng thời hạn thanh toán của khách hàng là 120 ngày.
@@ -280,6 +305,8 @@ chi phí lãi vay ↑
 Nếu chương trình tăng sản lượng chậm hơn kế hoạch, doanh nghiệp có thể cùng lúc có tồn kho dư và nợ cao.
 
 Vì vậy kiểm tra sức chịu đựng khi tăng trưởng cũng quan trọng không kém kiểm tra khi suy giảm.
+
+> **Chuyển mạch:** Ở chặng này của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **15. Lợi thế cạnh tranh của nhà cung cấp** tiếp nhận điểm tựa từ **14. Kịch bản tăng trưởng quá nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Kiểm tra điều tra tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Lợi thế cạnh tranh của nhà cung cấp
 
@@ -300,6 +327,8 @@ Nhưng quan hệ lâu năm không tự động là lợi thế bền vững nế
 
 Câu hỏi quan trọng là: **khách hàng mất gì nếu đổi nhà cung cấp?** Nếu câu trả lời gần bằng không, quyền thương lượng của nhà cung cấp vẫn yếu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **16. Kiểm tra điều tra tài chính** tiếp nhận điểm tựa từ **15. Lợi thế cạnh tranh của nhà cung cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. lô-gic (logic / 논리) định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Kiểm tra điều tra tài chính
 
 Các dấu hiệu cần xem sâu hơn gồm:
@@ -316,6 +345,8 @@ khách hàng trả trước giảm trong khi backlog được mô tả là mạn
 
 Một dấu hiệu cảnh báo không chứng minh gian lận. Nó chỉ cho biết khu vực cần điều tra kỹ hơn.
 
+> **Chuyển mạch:** Trong **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **17. lô-gic (logic / 논리) định giá** tiếp nhận điểm tựa từ **16. Kiểm tra điều tra tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Bài tập cuối trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. lô-gic (logic / 논리) định giá
 
 SME supplier không nên được định giá chỉ bằng tốc độ tăng trưởng. **Chất lượng doanh thu** quan trọng hơn:
@@ -330,6 +361,8 @@ sức chịu đựng bảng cân đối
 ```
 
 Doanh thu tăng 30% nhưng FCF âm và mức tập trung khách hàng tăng có thể kém chất lượng hơn doanh thu tăng 8% với dòng tiền mạnh và khách hàng đa dạng.
+
+> **Chuyển mạch:** Ở chặng này của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **17. lô-gic (logic / 논리) định giá** cho ta quy tắc; **18. Bài tập cuối trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Bài tập cuối trường hợp (case / 사례)
 
@@ -346,8 +379,10 @@ Tạo một bảng đánh giá nhà cung cấp nhưng không cần tổng hợp 
 
 Mục tiêu không phải xếp hạng nhà cung cấp mà là biết **rủi ro nằm ở đâu và truyền vào tiền mặt như thế nào**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt**, **18. Bài tập cuối trường hợp (case / 사례)** cho ta quy tắc; **Liên kết** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [06_sme_mid_sized_and_subcontracting_ecosystem](../06_sme_mid_sized_and_subcontracting_ecosystem.md), [02_trade_export_and_global_value_chains](../02_trade_export_and_global_value_chains.md), [23_foreign_invested_companies_and_korea_entry](../23_foreign_invested_companies_and_korea_entry.md) và [36_credit_ratings_bonds_default_and_restructuring](../36_credit_ratings_bonds_default_and_restructuring.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
