@@ -1,7 +1,6 @@
 # Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định
 
-> **Mạch đọc:** Đặt **thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. độ lệch (bias / 편향) trước, gain sau** sang **2. Gain không miễn phí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**. Route đi từ DC bias và operating region → small-signal gain → feedback, bandwidth và noise → power, load và stability → đo/thiết kế dưới non-idealities, để transistor được đọc như một hệ có giới hạn.
 
 Một transistor không “khuếch đại” chỉ vì nó là transistor. Nó cần độ lệch (bias / 편향) điểm (point / 지점) đúng operating region, một small-signal đường dẫn (path / 경로) để tín hiệu (signal / 신호) đi qua và một tải (load / 로드) phù hợp. Analog thiết kế (design / 설계) là bài toán đồng thời của DC operating điểm (point / 지점), AC gain, bandwidth, noise, power và stability.
 
@@ -15,8 +14,7 @@ Trong đó gm = ∂ID/∂VGS là transconductance và go biểu diễn đầu ra
 
 Độ lệch (bias / 편향) mạng (network / 네트워크) phải chịu được tiến trình (process / 프로세스) variation, temperature drift, supply variation, thiết bị (device / 장치) mismatch và tải (load / 로드)/phản hồi (feedback / 피드백) làm dịch operating điểm (point / 지점).
 
-
-> **Chuyển mạch:** Từ **1. độ lệch (bias / 편향) trước, gain sau**, ta sang **2. Gain không miễn phí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **2. Gain không miễn phí** tiếp nhận điểm tựa từ **1. độ lệch (bias / 편향) trước, gain sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Negative phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Gain không miễn phí
 
@@ -28,8 +26,7 @@ Tăng RD hoặc gm làm gain lớn hơn, nhưng đầu ra (output / 출력) swin
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) cốt lõi: voltage gain, bandwidth, noise, linearity và power không thể đồng thời cực đại.
 
-
-> **Chuyển mạch:** Từ **2. Gain không miễn phí**, ta sang **3. Negative phản hồi (feedback / 피드백)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **3. Negative phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **2. Gain không miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Stability và phase margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Negative phản hồi (feedback / 피드백)
 
@@ -41,8 +38,7 @@ Khi |Aβ| lớn, gain gần 1/β và ít nhạy với thiết bị (device / 장
 
 Phản hồi (feedback / 피드백) thường cải thiện distortion, đầu ra (output / 출력) resistance hoặc bandwidth trong một vùng, nhưng đổi lại cần headroom, vòng lặp (loop / 루프) bandwidth và phase margin.
 
-
-> **Chuyển mạch:** Từ **3. Negative phản hồi (feedback / 피드백)**, ta sang **4. Stability và phase margin** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **4. Stability và phase margin** tiếp nhận điểm tựa từ **3. Negative phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Noise và động (dynamic / 동적) phạm vi (range / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Stability và phase margin
 
@@ -50,8 +46,7 @@ Tại tần số vòng lặp (loop / 루프) gain có magnitude bằng 1, nếu 
 
 Không được kết luận “op-amp ổn định” chỉ từ datasheet ở một gain. Cần kiểm tra vòng lặp (loop / 루프) gain, crossover frequency, phase margin, tải (load / 로드) variation và temperature/tiến trình (process / 프로세스) corners.
 
-
-> **Chuyển mạch:** Từ **4. Stability và phase margin**, ta sang **5. Noise và động (dynamic / 동적) phạm vi (range / 범위)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **5. Noise và động (dynamic / 동적) phạm vi (range / 범위)** tiếp nhận điểm tựa từ **4. Stability và phase margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Worked lập luận (reasoning / 추론): sensor cầu nối (bridge / 브리지) vào ADC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Noise và động (dynamic / 동적) phạm vi (range / 범위)
 
@@ -63,8 +58,7 @@ RMS noise lấy căn tích phân trên bandwidth. 1/f noise chi phối ở tần
 
 Động (dynamic / 동적) phạm vi (range / 범위) là khoảng giữa tín hiệu nhỏ nhất còn phân biệt được và tín hiệu lớn nhất chưa méo/saturate. Một chuỗi (chain / 사슬) có gain cao nhưng ADC clipping vẫn là thiết kế kém.
 
-
-> **Chuyển mạch:** Từ **5. Noise và động (dynamic / 동적) phạm vi (range / 범위)**, ta sang **6. Worked lập luận (reasoning / 추론): sensor cầu nối (bridge / 브리지) vào ADC** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **5. Noise và động (dynamic / 동적) phạm vi (range / 범위)** cho ta quy tắc; **6. Worked lập luận (reasoning / 추론): sensor cầu nối (bridge / 브리지) vào ADC** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. Đo kiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Worked lập luận (reasoning / 추론): sensor cầu nối (bridge / 브리지) vào ADC
 
@@ -72,12 +66,9 @@ Giả sử sensor tạo 10 mV full-scale, ADC 3.3 V, cần gain khoảng 330. M�
 
 Giải pháp thường là instrumentation amplifier hoặc hai tầng gain, lọc trước gain lớn, rồi kiểm tra offset/noise ngân sách (budget / 예산) theo từng stage.
 
-
-> **Chuyển mạch:** Từ **6. Worked lập luận (reasoning / 추론): sensor cầu nối (bridge / 브리지) vào ADC**, ta sang **7. Đo kiểm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **6. Worked lập luận (reasoning / 추론): sensor cầu nối (bridge / 브리지) vào ADC** cho ta quy tắc; **7. Đo kiểm** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Đo kiểm
-Phần “7. Đo kiểm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - Đo DC độ lệch (bias / 편향) trước khi đưa tín hiệu (signal / 신호).
 - Dùng tín hiệu (signal / 신호) nhỏ để kiểm tra gain tuyến tính.
@@ -85,12 +76,9 @@ Phần “7. Đo kiểm” nối kiến thức trước với nội dung sắp �
 - Thay đổi tải (load / 로드) capacitor và dây nối để tìm stability margin thật.
 - Tách noise của nguồn, sensor và amplifier bằng short-input/known-source kiểm thử (test / 테스트).
 
-
-> **Chuyển mạch:** Từ **7. Đo kiểm**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **Thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **7. Đo kiểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thất bại (failure / 실패) modes
-Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - độ lệch (bias / 편향) sai làm transistor saturation/cutoff, khiến small-signal equation vô hiệu.
 - phản hồi (feedback / 피드백) polarity nhầm biến negative phản hồi (feedback / 피드백) thành positive phản hồi (feedback / 피드백).
@@ -98,11 +86,10 @@ Phần “Thất bại (failure / 실패) modes” nối kiến thức trước 
 - Compensation đẹp trên simulation nhưng thất bại (fail / 실패) với parasitic PCB.
 - Gain đúng ở room temperature nhưng drift vượt sensor tolerance.
 
-
-> **Chuyển mạch:** Từ **thất bại (failure / 실패) modes**, ta sang **cầu nối (bridge / 브리지)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thiết bị (device / 장치) Biasing and phản hồi (feedback / 피드백) — độ lệch (bias / 편향), gain và ổn định**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cầu nối (bridge / 브리지)
 
 Đi tiếp sang [digital electronics](../digital_electronics/00_logic_timing_state.md) tại comparator/ADC ranh giới (boundary / 경계), hoặc [signals and systems](../signals_and_systems/00_lti_sampling_filtering.md) để định lượng bandwidth và filtering. Semiconductor thiết bị (device / 장치) physics nằm ở [Physics](../../physics/10_condensed_matter_devices/01_semiconductors_devices.md).
 
-> **Bàn giao:** Sau **cầu nối (bridge / 브리지)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 data converters noise budget](./01_data_converters_noise_budget.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cầu nối (bridge / 브리지)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

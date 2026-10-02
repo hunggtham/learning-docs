@@ -1,6 +1,6 @@
 # SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy ước thuật ngữ Việt–Anh** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy (mental model / 사고 모델) quan trọng** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **SCSS — Beginner → cấp cao (senior / 시니어) Handbook (Modern Dart Sass, 2026)**. Route đi từ compile-time CSS authoring và syntax → variables, nesting, selectors và modules → mixins/functions/control flow → architecture, responsive systems và debugging → modern Sass migration, để lộ trình tăng độ sâu theo cơ chế.
 
 > **Mục tiêu:** học SCSS như một **thời điểm biên dịch (compile-time) ngôn ngữ (language / 언어) để author CSS**, không dùng Sass để che việc chưa hiểu CSS.
 >

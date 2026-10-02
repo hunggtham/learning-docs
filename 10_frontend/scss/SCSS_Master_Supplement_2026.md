@@ -1,6 +1,6 @@
 # SCSS Master Supplement — Dart Sass Deep Dive (2026)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy ước thuật ngữ Việt–Anh** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Master quy tắc (rule / 규칙)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **SCSS Master Supplement — Dart Sass Deep Dive (2026)**. Route đi từ thuật ngữ và quy tắc Sass → module, function, mixin và flow control → compilation, CSS output và debugging → modern Dart Sass migration → patterns nâng cao, để supplement mở rộng handbook bằng cơ chế thật.
 
 > Đọc sau:
 >
