@@ -42,13 +42,13 @@ Viện trợ nước ngoài đem vào lương thực, phân bón, nhiên liệu 
 
 Even under poverty, schooling expanded rapidly. Household willingness to invest in education built human capital before high-income jobs existed at quy mô (scale / 규모). Later industrialization could recruit literate workers/technicians partly because education chuyển tiếp (transition / 전이) began early.
 
-> **Chuyển mạch:** Trong **Tái thiết hậu chiến và First Republic**, **Urban refugees and informal economy** tiếp nhận điểm tựa từ **Education expansion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Viện trợ, trường học và nền móng xã hội của tăng trưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Education expansion** tạo kỹ năng và kỳ vọng; **Urban refugees and informal economy** cho thấy dân cư thích nghi dưới giới hạn việc làm, rồi **Viện trợ** đặt các biến đó vào nền móng tăng trưởng.
 
 ## Urban refugees and informal economy
 
 Seoul and other cities absorbed war-displaced populations. Housing shortage produced informal settlements, street commerce and precarious công việc (work / 작업). “Miracle on the Han River” imagery can obscure this low-income urban foundation.
 
-> **Chuyển mạch:** Ở chặng này của **Tái thiết hậu chiến và First Republic**, **Viện trợ, trường học và nền móng xã hội của tăng trưởng** tiếp nhận điểm tựa từ **Urban refugees and informal economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Việt Nam cùng thời: tái thiết trong hai chiến tranh khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ thị trường phi chính thức và người di cư đô thị, **Viện trợ, trường học và nền móng xã hội** giải thích năng lực dài hạn; **Việt Nam cùng thời** mở đối sánh với một quỹ đạo chiến tranh khác.
 
 ## Viện trợ, trường học và nền móng xã hội của tăng trưởng
 
@@ -56,19 +56,19 @@ Viện trợ Hoa Kỳ giúp nhập lương thực, phân bón, nhiên liệu và
 
 Trong lúc đó, tỷ lệ đi học tăng nhanh dù thu nhập thấp. Một gia đình có thể coi học phí, sách vở và thời gian học của trẻ là khoản đầu tư dài hạn trong khi trước mắt vẫn thiếu nhà ở và việc làm. Nguồn nhân lực có học vấn này trở thành đầu vào cho công nghiệp hóa sau **1961**, nhưng không nên kể ngược rằng mọi thành quả giáo dục đã được thiết kế sẵn cho “kỳ tích”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái thiết hậu chiến và First Republic**, **Việt Nam cùng thời: tái thiết trong hai chiến tranh khác nhau** tiếp nhận điểm tựa từ **Viện trợ, trường học và nền móng xã hội của tăng trưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa điểm của đời sống tái thiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** So sánh Việt Nam cùng thời làm rõ điều kiện không thể sao chép; **Địa điểm của đời sống tái thiết** đưa khác biệt đó về khu phố, trường học và không gian lao động cụ thể.
 
 ## Việt Nam cùng thời: tái thiết trong hai chiến tranh khác nhau
 
 Từ **1954**, miền Bắc Việt Nam xây dựng kinh tế kế hoạch hóa trong khi miền Nam tiếp tục chiến tranh và nhận hỗ trợ lớn từ Hoa Kỳ; đến **1975**, cả nước mới bước vào một chu kỳ tái thiết khác. South Korea nhận viện trợ và bảo trợ an ninh trong một nhà nước chống cộng thống nhất ở miền Nam. So sánh này hữu ích khi hỏi viện trợ đi vào lương thực, giáo dục, quân sự hay công nghiệp bằng cơ chế nào; nó không chứng minh một mô hình có thể sao chép nguyên trạng.
 
-> **Chuyển mạch:** Trong **Tái thiết hậu chiến và First Republic**, **Địa điểm của đời sống tái thiết** tiếp nhận điểm tựa từ **Việt Nam cùng thời: tái thiết trong hai chiến tranh khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối sang nhà nước phát triển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Địa điểm của đời sống tái thiết** cho thấy chính sách chạm vào đời thường ra sao; **Cầu nối sang nhà nước phát triển** theo dõi khi các thực hành đó được thể chế hóa.
 
 ## Địa điểm của đời sống tái thiết
 
 **Cheonggyecheon và các khu dân cư cũ ở Seoul** cho thấy quá trình dọn dẹp, di dời và chính thức hóa một đô thị từng đầy nhà tạm; **War Memorial of Korea** cho thấy câu chuyện lịch sử của nhà nước (narrative / 역사 서사) về chiến tranh, còn chợ truyền thống và khu nhà tạm được bảo tồn cho thấy người dân kiếm sống thế nào. Nên xem các địa điểm chính thức cùng với ký ức của người di cư để tránh đồng nhất tái thiết với phá bỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Tái thiết hậu chiến và First Republic**, **Cầu nối sang nhà nước phát triển** tiếp nhận điểm tựa từ **Địa điểm của đời sống tái thiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối sang nhà nước phát triển** khép chương bằng chuỗi đời sống → chính sách → năng lực nhà nước, đồng thời giữ rõ giới hạn của việc suy từ một địa điểm ra toàn xã hội.
 
 ## Cầu nối sang nhà nước phát triển
 

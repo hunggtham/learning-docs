@@ -48,25 +48,25 @@ Military and nuclear năng lực (capability / 역량) trở thành central surv
 
 North Korea initially prioritized heavy industry and collective agriculture. With inherited northern industrial cơ sở (base / 기반) and socialist aid, some indicators compared favorably with South during early postwar decades. Divergence later shows starting industrial stock alone does not determine long-run kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Planning thông tin (information / 정보) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Postwar industrial chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Songbun and xã hội (social / 사회적) classification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Postwar industrial strategy** đặt mục tiêu và nguồn lực; **Planning information problem** cho thấy nhà nước cần phân loại, đo lường và truyền lệnh thế nào, trước khi chuyển sang Songbun.
 
 ## Planning thông tin (information / 정보) bài toán (problem / 문제)
 
 Central planning must decide đầu ra (output / 출력)/inputs across many goods. Without price signals or honest cục bộ (local / 로컬) reporting, center can face thông tin (information / 정보) bottleneck. This is not proof all planning fails identically, but it explains why shortage, chất lượng (quality / 품질) and allocation problems can emerge when dữ liệu (data / 데이터)/incentives misalign.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Songbun and xã hội (social / 사회적) classification** tiếp nhận điểm tựa từ **Planning thông tin (information / 정보) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Famine and thị trường (market / 시장) adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi thông tin được tổ chức để phân loại dân cư, **Songbun and social classification** giải thích quyền tiếp cận; **Famine and market adaptation** kiểm tra hệ thống phản ứng khi phân phối chính thức đứt gãy.
 
 ## Songbun and xã hội (social / 사회적) classification
 
 North Korean xã hội (social / 사회적) classification is often discussed under songbun (성분). chính xác (exact / 정확한) thao tác (operation / 연산) changes and outside thông tin (information / 정보) is incomplete, but family/political background historically affected opportunity. This illustrates how trạng thái (state / 상태) can turn political trust into administratively relevant siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Trong **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Famine and thị trường (market / 시장) adaptation** tiếp nhận điểm tựa từ **Songbun and xã hội (social / 사회적) classification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một hộ gia đình sống giữa hai hệ thống phân phối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Famine and market adaptation** cho thấy hộ gia đình tìm đường sống ngoài kênh chính thức; **Một hộ gia đình sống giữa hai hệ thống phân phối** biến cơ chế đó thành một case có thể theo dõi.
 
 ## Famine and thị trường (market / 시장) adaptation
 
 When trạng thái (state / 상태) phân phối (distribution / 분포) failed during 1990s crisis, households relied more on thị trường (market / 시장) exchange. Bottom-up marketization can persist because once people bản dựng (build / 빌드) supply mạng (network / 네트워크) and price kiến thức (knowledge / 지식), suppressing it imposes high welfare and enforcement chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Một hộ gia đình sống giữa hai hệ thống phân phối** tiếp nhận điểm tựa từ **Famine and thị trường (market / 시장) adaptation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Việt Nam cùng thời: kế hoạch hóa, Đổi Mới và cách so sánh có giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Case hộ gia đình nối chính sách với hành vi thường ngày; **Việt Nam cùng thời** cho phép so sánh kế hoạch hóa và Đổi Mới nhưng phải giữ khác biệt về chiến tranh, thể chế và nguồn dữ liệu.
 
 ## Một hộ gia đình sống giữa hai hệ thống phân phối
 
@@ -88,7 +88,7 @@ Người học ở Hàn Quốc khó tiếp cận phần lớn di tích trong lã
 
 Khi đọc ảnh tuyên truyền, bản đồ hoặc dữ liệu nhân khẩu, hãy hỏi ai tạo ra, để phục vụ quyết định nào và phần nào bị che khuất. Với một nhà nước đóng kín, **sự vắng mặt của dữ liệu (missingness / 결측)** là một thuộc tính của nguồn chứ không phải khoảng trống có thể tùy ý lấp bằng suy đoán.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Địa điểm và giới hạn của việc “đi xem” Bắc Triều Tiên** đã nêu tiêu chí phân biệt, còn **Cầu nối sang quan hệ liên Triều** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Địa điểm và giới hạn của việc “đi xem” Bắc Triều Tiên** nhắc người đọc về bias quan sát; **Cầu nối sang quan hệ liên Triều** chỉ dùng claim có thể kiểm chứng để tránh suy luận từ một chuyến đi.
 
 ## Cầu nối sang quan hệ liên Triều
 

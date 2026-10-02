@@ -82,7 +82,7 @@ Trong khi Cổ Triều Tiên và các nhà nước sớm phát triển ở phía
 
 **Amsa-dong Prehistoric Settlement** ở Seoul gợi đời sống định cư thời đồ đá mới; các cụm **mộ đá Gochang, Hwasun và Ganghwa** cho thấy quy mô lao động và nghi lễ thời đồ đồng. Khi đến nơi, hãy quan sát vị trí nguồn nước, vật liệu đá, kích thước công trình và cách bảo tàng nói về điều chưa chắc chắn. Di tích không cho ta tên người lãnh đạo; nó cho ta dấu vết của phối hợp, bất bình đẳng và kỹ thuật.
 
-> **Chuyển mạch:** Trong **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Đi đâu để nhìn thấy tiền sử bằng chứng cứ vật chất?** nêu điều cần giải thích; **Cầu nối sang Tam Quốc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Đi đâu để nhìn thấy tiền sử bằng chứng cứ vật chất?** xác định dấu vết cần đọc; **Cầu nối sang Tam Quốc** kiểm tra khi settlement, công nghệ và tổ chức quyền lực chuyển sang dạng nhà nước rõ hơn.
 
 ## Cầu nối sang Tam Quốc
 
