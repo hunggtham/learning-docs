@@ -1,6 +1,6 @@
 # Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Huấn luyện (training / 학습) vòng lặp (loop / 루프)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mất mát (loss / 손실) curve nói gì và không nói gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Deep-learning training dynamics**. Route đi từ training loop → loss/metric curves → gradient/activation diagnostics → optimization phases → generalization and checkpoints, để quá trình học được đọc bằng evidence chứ không chỉ final score.
 
 Huấn luyện (training / 학습) neural mạng (network / 네트워크) không chỉ là lặp `forward → backward → optimizer.step()`. Một mô hình (model / 모델) có thể giảm mất mát (loss / 손실) nhưng học biểu diễn (representation / 표현) kém, diverge sau vài nghìn steps, overfit, collapse, hoặc đạt cùng final mất mát (loss / 손실) bằng trajectories rất khác nhau. **huấn luyện (training / 학습) dynamics (학습 동역학 / động lực học huấn luyện)** nghiên cứu hành vi (behavior / 동작) của tối ưu hóa (optimization / 최적화) tiến trình (process / 프로세스) theo thời gian (time / 시간).
 

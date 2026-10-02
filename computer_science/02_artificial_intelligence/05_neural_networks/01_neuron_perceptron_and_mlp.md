@@ -1,6 +1,6 @@
 # Neuron, Perceptron và Multi-Layer Perceptron
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Neuron, Perceptron và Multi-Layer Perceptron**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Artificial neuron** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Perceptron lịch sử** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Neuron, perceptron và MLP**. Route đi từ affine neuron → perceptron decision boundary → multilayer composition → parameter/loss interface, để đơn vị cơ bản được nối với khả năng biểu diễn của mạng.
 
 Artificial neuron là building khối (block / 블록) đơn giản: nhận véc-tơ (vector / 벡터) đầu vào (input / 입력), tính weighted sum, thêm độ lệch (bias / 편향) rồi qua activation. Nhưng để hiểu vì sao neural mạng (network / 네트워크) hoạt động, cần phân biệt rõ **perceptron**, **neuron hiện đại**, **single-layer mạng (network / 네트워크)** và **Multi-Layer Perceptron (MLP / 다층 퍼셉트론)**.
 

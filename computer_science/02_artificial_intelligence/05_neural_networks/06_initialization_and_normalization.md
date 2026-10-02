@@ -1,6 +1,6 @@
 # Initialization và Normalization: giữ tín hiệu (signal / 신호) và độ dốc (gradient / 기울기) ở quy mô (scale / 규모) Trainable
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Initialization và Normalization: giữ tín hiệu (signal / 신호) và độ dốc (gradient / 기울기) ở quy mô (scale / 규모) Trainable**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao không initialize mọi weight bằng zero?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Variance propagation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Initialization và normalization cho trainable signal/gradient scale**. Route đi từ symmetry/zero-init failure → variance propagation → Xavier/He initialization → batch/layer normalization → train/inference mode, để tín hiệu không sập qua depth.
 
 Deep mạng (network / 네트워크) có thể có kiến trúc (architecture / 아키텍처) đúng nhưng huấn luyện (training / 학습) thất bại (fail / 실패) ngay từ đầu nếu activations hoặc gradients explode/vanish qua layers. **Initialization (초기화 / khởi tạo)** chọn starting phân phối (distribution / 분포) của parameters; **Normalization (정규화 / chuẩn hóa)** kiểm soát statistics của intermediate representations trong huấn luyện (training / 학습).
 

@@ -1,6 +1,6 @@
 # Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ tuyến tính (linear / 선형) các mô hình (models / 모델들) tới Neural Networks**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một tuyến tính (linear / 선형) tầng (layer / 계층) thực sự làm gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **XOR: vì sao một ranh giới (boundary / 경계) tuyến tính không đủ?** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **From linear models to neural networks**. Route đi từ linear layer → XOR/nonlinear boundary → multilayer composition → expressive capacity, để network architecture được nối với bài toán biểu diễn.
 
 Neural mạng (network / 네트워크) không xuất hiện vì tuyến tính (linear / 선형)/logistic regression “sai”, mà vì nhiều relationship trong thế giới không thể biểu diễn tốt bằng một toàn cục (global / 전역) tuyến tính (linear / 선형) ranh giới (boundary / 경계) trên raw features. Ý tưởng cốt lõi của neural mạng (network / 네트워크) là **compose nhiều transformations và học biểu diễn (representation / 표현) trung gian**, thay vì yêu cầu con người hand-engineer toàn bộ nonlinear features.
 

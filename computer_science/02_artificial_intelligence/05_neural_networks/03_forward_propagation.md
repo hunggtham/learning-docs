@@ -1,6 +1,6 @@
 # Forward Propagation và Computational đồ thị (graph / 그래프)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Forward Propagation và Computational đồ thị (graph / 그래프)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Forward pass của một MLP** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Computational đồ thị (graph / 그래프)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Forward propagation và computational graphs**. Route đi từ layer forward pass → tensor shapes → graph dependencies → loss/output → backward interface, để mỗi giá trị trung gian có vai trò trong train.
 
 Forward Propagation (순전파 / lan truyền xuôi) là quá trình đưa đầu vào (input / 입력) qua computation đồ thị (graph / 그래프) để tạo prediction và mất mát (loss / 손실). Nghe có vẻ trivial — “chạy mô hình (model / 모델)” — nhưng hiểu forward pass ở mức tensor shapes, intermediate values và đồ thị (graph / 그래프) dependencies là prerequisite để hiểu backpropagation, bộ nhớ (memory / 메모리) chi phí (cost / 비용) và debugging neural networks.
 

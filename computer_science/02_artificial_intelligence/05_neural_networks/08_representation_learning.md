@@ -1,6 +1,6 @@
 # Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Biểu diễn (representation / 표현) là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Representation learning**. Route đi từ latent representation → invariance/disentanglement → linear probes → transfer/fine-tuning → feature geometry, để biểu diễn được đánh giá bằng nhiệm vụ downstream.
 
 Biểu diễn (representation / 표현) học tập (learning / 학습) là một trong những ý tưởng trung tâm nhất của Deep học tập (learning / 학습). Thay vì chỉ học ánh xạ (mapping / 매핑) trực tiếp `input → output`, mạng (network / 네트워크) học intermediate spaces trong đó những factors relevant cho tác vụ (task / 작업) được sắp xếp theo hình học (geometry / 기하학) dễ xử lý hơn.
 

@@ -1,6 +1,6 @@
 # Regularization trong Neural Networks
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Regularization trong Neural Networks**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **L2 Penalty và Weight Decay** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **L1 Regularization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Regularization trong neural networks**. Route đi từ L2/weight decay → L1 sparsity → dropout/noise → early stopping/data augmentation → calibration/generalization, để giảm overfit mà không che mất failure mode.
 
 Regularization (규제 / 정규화라는 표현도 쓰이지만 normalization과 구분 필요 / điều chuẩn) là các mechanisms độ lệch (bias / 편향) huấn luyện (training / 학습) về những solutions có khả năng generalize tốt hơn, thay vì chỉ minimize huấn luyện (training / 학습) mất mát (loss / 손실). Trong neural networks, regularization không phải một “mẹo chống overfitting” riêng lẻ; nó xuất hiện qua mục tiêu (objective / 목표), kiến trúc (architecture / 아키텍처), dữ liệu (data / 데이터), stochasticity và tối ưu hóa (optimization / 최적화).
 

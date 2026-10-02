@@ -1,6 +1,6 @@
 # Activation Functions: tại sao Neural mạng (network / 네트워크) cần Nonlinearity?
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Activation Functions: tại sao Neural mạng (network / 네트워크) cần Nonlinearity?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Định danh (identity / 식별자) activation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sigmoid** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Activation functions và nonlinearity**. Route đi từ identity/linear → sigmoid/tanh → ReLU variants → saturation/gradient flow → output activation choice, để hàm kích hoạt được chọn theo optimization và target semantics.
 
 Activation hàm (function / 함수) thường được giới thiệu như một danh sách `sigmoid`, `tanh`, `ReLU`, `GELU`. Cách học đó dễ biến thành thuộc lòng. Bản chất sâu hơn là: activation quyết định **hình dạng transformation**, **độ dốc (gradient / 기울기) luồng (flow / 흐름)** và **statistical hành vi (behavior / 동작)** của hidden representations.
 

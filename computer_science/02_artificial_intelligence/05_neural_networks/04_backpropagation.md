@@ -1,6 +1,6 @@
 # Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ chuỗi (chain / 사슬) quy tắc (rule / 규칙)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Một scalar example** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Backpropagation trên computational graphs**. Route đi từ chain rule → local derivatives → reverse-mode accumulation → scalar/tensor example → gradient checks, để gradient được truy theo dependency thay vì xem như phép màu.
 
 Backpropagation (역전파 / lan truyền ngược) thường bị mô tả như “thuật toán giúp neural mạng (network / 네트워크) học”. Chính xác hơn, backpropagation là một **efficient thuật toán (algorithm / 알고리즘) để tính gradients của một scalar đầu ra (output / 출력), thường là mất mát (loss / 손실), đối với rất nhiều intermediate values và parameters trong computational đồ thị (graph / 그래프)**.
 

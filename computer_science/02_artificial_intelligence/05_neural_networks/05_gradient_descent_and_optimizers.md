@@ -1,6 +1,6 @@
 # Độ dốc (gradient / 기울기) Descent và Optimizers trong Deep học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ dốc (gradient / 기울기) Descent và Optimizers trong Deep học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ dốc (gradient / 기울기) Descent** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Full Batch, Stochastic và Mini-Batch** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Gradient descent và optimizers trong deep learning**. Route đi từ gradient update → batch/stochastic/mini-batch → momentum/adaptive methods → schedules/stability → convergence diagnostics, để optimizer được đánh giá bằng dynamics chứ không chỉ tên.
 
 Sau khi backpropagation tính độ dốc (gradient / 기울기), optimizer quyết định **parameters sẽ thay đổi như thế nào**. Đây là distinction quan trọng: độ dốc (gradient / 기울기) chỉ là cục bộ (local / 로컬) thông tin (information / 정보) về slope; optimizer là chính sách (policy / 정책) sử dụng thông tin (information / 정보) đó qua thời gian (time / 시간).
 
