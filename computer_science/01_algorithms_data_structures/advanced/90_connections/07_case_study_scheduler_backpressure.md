@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. FIFO là baseline** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Priority hàng đợi (queue / 큐)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. FIFO là baseline** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Priority hàng đợi (queue / 큐)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối scheduler với queue, priority và backpressure, để hệ thống không nhận việc nhanh hơn khả năng xử lý.
 
 **Scheduling & Backpressure trường hợp (case / 사례) Study / 스케줄링과 백프레셔 사례**
 

@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) Study: Autocomplete và tìm kiếm (search / 검색) Suggestions
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Autocomplete và tìm kiếm (search / 검색) Suggestions**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Định nghĩa tải công việc (workload / 워크로드)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trie cho prefix retrieval** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Autocomplete và tìm kiếm (search / 검색) Suggestions**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Định nghĩa tải công việc (workload / 워크로드)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trie cho prefix retrieval** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối autocomplete với prefix index, ranking và latency, để trải nghiệm tìm kiếm được đọc qua dữ liệu và ngân sách thời gian.
 
 **Autocomplete & tìm kiếm (search / 검색) Suggestion thiết kế (design / 설계) / 자동완성과 검색 제안 설계**
 

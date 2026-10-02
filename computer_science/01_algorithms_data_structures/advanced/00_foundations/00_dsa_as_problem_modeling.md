@@ -1,6 +1,6 @@
 # DSA như một bài toán mô hình hóa
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DSA như một bài toán mô hình hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ câu hỏi cần trả lời** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DSA như một bài toán mô hình hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ câu hỏi cần trả lời** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng foundations DSA làm owner của problem modeling, rồi nối abstraction, invariant, complexity và implementation.
 
 **Cấu trúc dữ liệu và thuật toán (Data Structures & Algorithms / 자료구조와 알고리즘)**
 

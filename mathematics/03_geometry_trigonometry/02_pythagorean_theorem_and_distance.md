@@ -1,7 +1,6 @@
 # Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm
 
-> **Mạch đọc:** Đọc **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao bình phương xuất hiện?** sang **Converse: quan hệ (relation / 관계) cũng detect right angle**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao bình phương xuất hiện?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Converse: quan hệ (relation / 관계) cũng detect right angle** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Pythagorean theorem với distance và coordinate geometry, để độ dài được suy ra từ cấu trúc vuông góc.
 
 Định lý Pythagoras (Pythagorean theorem / 피타고라스 정리) thường được nhớ bằng
 
@@ -50,6 +49,8 @@ a^2+b^2=c^2.
 
 Squares xuất hiện trực tiếp từ area. Ở mức (level / 수준) sâu hơn, inner-product hình học (geometry / 기하학) làm squared norm additive cho orthogonal components.
 
+> **Chuyển mạch:** Trong **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Converse: quan hệ (relation / 관계) cũng detect right angle** tiếp nhận điểm tựa từ **Vì sao bình phương xuất hiện?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coordinate distance được derive như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Converse: quan hệ (relation / 관계) cũng detect right angle
 
 Nếu positive side lengths thỏa
@@ -63,6 +64,8 @@ thì angle opposite `c` là 90°.
 Vì vậy theorem không chỉ nói “right triangle implies equation”; converse nói equation characterizes rightness.
 
 Điều này useful trong hình học (geometry / 기하학), surveying và computational checks.
+
+> **Chuyển mạch:** Ở chặng này của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Coordinate distance được derive như thế nào?** tiếp nhận điểm tựa từ **Converse: quan hệ (relation / 관계) cũng detect right angle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Véc-tơ (vector / 벡터) norm và inner sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Coordinate distance được derive như thế nào?
 
@@ -116,6 +119,8 @@ Trong `n` dimensions:
 
 Euclidean distance chỉ là repeated Pythagoras across orthogonal coordinate axes.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Véc-tơ (vector / 벡터) norm và inner sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **Coordinate distance được derive như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Projection: tách tín hiệu (signal / 신호) thành perpendicular components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Véc-tơ (vector / 벡터) norm và inner sản phẩm (product / 제품)
 
 L2 norm:
@@ -149,6 +154,8 @@ thì
 ```
 
 Đây là generalized Pythagorean theorem. Formula triangle là special trường hợp (case / 사례) của inner-product không gian (space / 공간).
+
+> **Chuyển mạch:** Trong **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Projection: tách tín hiệu (signal / 신호) thành perpendicular components** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터) norm và inner sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example — nearest điểm (point / 지점) trên một line** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Projection: tách tín hiệu (signal / 신호) thành perpendicular components
 
@@ -186,6 +193,8 @@ và hai components orthogonal, nên
 
 Đây là proof idea của least squares hình học (geometry / 기하학).
 
+> **Chuyển mạch:** Ở chặng này của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Projection: tách tín hiệu (signal / 신호) thành perpendicular components** cho ta quy tắc; **Worked example — nearest điểm (point / 지점) trên một line** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Law of cosines: khi components không orthogonal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Worked example — nearest điểm (point / 지점) trên một line
 
 Tìm điểm (point / 지점) trên x-axis gần điểm (point / 지점) `(3,4)` nhất.
@@ -207,6 +216,8 @@ d^2=(x-3)^2+16\ge16.
 Minimum tại `x=3`.
 
 Pythagoras cho cả hình học (geometry / 기하학) lẫn tối ưu hóa (optimization / 최적화) argument.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Worked example — nearest điểm (point / 지점) trên một line** cho ta quy tắc; **Law of cosines: khi components không orthogonal** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Distance không phải một khái niệm duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Law of cosines: khi components không orthogonal
 
@@ -240,6 +251,8 @@ law of cosines xuất hiện tự nhiên.
 
 Pythagoras là zero-cross-term trường hợp (case / 사례).
 
+> **Chuyển mạch:** Trong **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Distance không phải một khái niệm duy nhất** tiếp nhận điểm tựa từ **Law of cosines: khi components không orthogonal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Why tính năng (feature / 기능) scaling matters in ML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Distance không phải một khái niệm duy nhất
 
 Euclidean distance phù hợp khi hình học (geometry / 기하학) isotropic và coordinate scales meaningful. Nhưng other metrics may better match bài toán (problem / 문제).
@@ -270,6 +283,8 @@ d_M(x,y)
 
 Choosing chỉ số (metric / 지표) is a modeling quyết định (decision / 결정).
 
+> **Chuyển mạch:** Ở chặng này của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Why tính năng (feature / 기능) scaling matters in ML** tiếp nhận điểm tựa từ **Distance không phải một khái niệm duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pythagoras và variance decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Why tính năng (feature / 기능) scaling matters in ML
 
 Suppose tính năng (feature / 기능) véc-tơ (vector / 벡터) is
@@ -284,6 +299,8 @@ If hình học (geometry / 기하학) should treat both features comparably, nor
 
 Distance thuật toán (algorithm / 알고리즘) can be mathematically correct but semantically wrong if biểu diễn (representation / 표현) quy mô (scale / 규모) is wrong.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Pythagoras và variance decomposition** tiếp nhận điểm tựa từ **Why tính năng (feature / 기능) scaling matters in ML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) in orthogonal modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pythagoras và variance decomposition
 
 A similar orthogonal-sum cấu trúc (structure / 구조) appears in statistics.
@@ -294,11 +311,15 @@ ANOVA and projection-based statistics repeatedly reuse “total squared magnitud
 
 This is not accidental; tuyến tính (linear / 선형) regression lives in Euclidean véc-tơ (vector / 벡터) hình học (geometry / 기하학).
 
+> **Chuyển mạch:** Trong **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, sau nội dung của **Pythagoras và variance decomposition**, **Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) in orthogonal modes** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Computer graphics liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) in orthogonal modes
 
 If a vật lý (physical / 물리적) trạng thái (state / 상태) decomposes into orthogonal modes, squared amplitudes often add. Wave/tín hiệu (signal / 신호) năng lượng (energy / 에너지), quantum-state amplitudes under orthogonal basis and Fourier coefficients all use related Hilbert-space hình học (geometry / 기하학).
 
 Parseval-type identities generalize Pythagorean năng lượng (energy / 에너지) decomposition to hàm (function / 함수) spaces.
+
+> **Chuyển mạch:** Ở chặng này của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Computer graphics liên kết (connection / 연결)** tiếp nhận điểm tựa từ **Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) in orthogonal modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Geodesic distance: Euclidean formula can thất bại (fail / 실패) on curved spaces** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Computer graphics liên kết (connection / 연결)
 
@@ -312,6 +333,8 @@ No square gốc (root / 루트) needed because square gốc (root / 루트) is m
 
 This is a simple example where understanding formula cấu trúc (structure / 구조) yields computational improvement.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Geodesic distance: Euclidean formula can thất bại (fail / 실패) on curved spaces** tiếp nhận điểm tựa từ **Computer graphics liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **High-dimensional hình học (geometry / 기하학) surprises** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Geodesic distance: Euclidean formula can thất bại (fail / 실패) on curved spaces
 
 On Earth's surface, straight-line distance through 3D không gian (space / 공간) is not road/geodesic distance along surface. Latitude/longitude differences cannot be fed naively into flat Pythagorean formula over large distances.
@@ -320,11 +343,15 @@ On curved manifolds, shortest đường dẫn (path / 경로) follows hình họ
 
 Thus Euclidean distance is a mô hình (model / 모델) giả định (assumption / 가정) about không gian (space / 공간).
 
+> **Chuyển mạch:** Trong **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **High-dimensional hình học (geometry / 기하학) surprises** tiếp nhận điểm tựa từ **Geodesic distance: Euclidean formula can thất bại (fail / 실패) on curved spaces** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## High-dimensional hình học (geometry / 기하학) surprises
 
 In high dimensions, distances can concentrate: nearest and farthest points become relatively less distinguishable under some distributions. This weakens intuitive nearest-neighbor lập luận (reasoning / 추론) and contributes to curse-of-dimensionality phenomena.
 
 Pythagorean formula still holds, but hình học (geometry / 기하학)'s practical meaning changes with dimension.
+
+> **Chuyển mạch:** Ở chặng này của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **High-dimensional hình học (geometry / 기하학) surprises** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
@@ -334,9 +361,13 @@ Coordinate distance assumes coordinates share meaningful chỉ số (metric / �
 
 Squared distance exaggerates outliers because deviations are squared.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Pythagoras is not mainly about triangles; it is the quy tắc (rule / 규칙) of orthogonal decomposition. When two components do not interfere through an inner sản phẩm (product / 제품), their squared magnitudes add. Distance, projection, least squares and năng lượng (energy / 에너지) decompositions are all descendants of this same hình học (geometry / 기하학).
+
+> **Chuyển mạch:** Trong **Định lý Pythagoras và ý tưởng khoảng cách: từ tam giác vuông đến véc-tơ (vector / 벡터) norm**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -350,4 +381,4 @@ Squared distance exaggerates outliers because deviations are squared.
 
 **“Pythagoras is only 2D hình học (geometry / 기하학).”** It generalizes to inner-product spaces and orthogonal projections in arbitrary dimensions.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 euclidean geometry](./00_euclidean_geometry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

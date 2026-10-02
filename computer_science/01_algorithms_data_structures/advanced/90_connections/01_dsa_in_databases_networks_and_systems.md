@@ -1,6 +1,6 @@
 # DSA trong cơ sở dữ liệu, mạng và hệ thống
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DSA trong cơ sở dữ liệu, mạng và hệ thống**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. B+cây (tree / 트리) trong cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Clustered và Secondary chỉ mục (index / 인덱스)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DSA trong cơ sở dữ liệu, mạng và hệ thống**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. B+cây (tree / 트리) trong cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Clustered và Secondary chỉ mục (index / 인덱스)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối DSA với databases, networks và systems, để cấu trúc dữ liệu được chọn theo boundary vận hành chứ không chỉ theo bài tập.
 
 **dữ liệu (data / 데이터) Structures & Algorithms in Real các hệ thống (systems / 시스템들) / 실무 시스템 속의 자료구조와 알고리즘**
 

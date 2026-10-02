@@ -1,6 +1,6 @@
 # Mô hình bộ nhớ trong C, Java và JavaScript
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình bộ nhớ trong C, Java và JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ngăn xếp và vùng nhớ động (heap / 힙): mô hình tư duy thực dụng** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **2. C: con trỏ và địa chỉ bộ nhớ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình bộ nhớ trong C, Java và JavaScript**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ngăn xếp và vùng nhớ động (heap / 힙): mô hình tư duy thực dụng** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **2. C: con trỏ và địa chỉ bộ nhớ** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối memory models của C, Java và JavaScript với allocation, reference và lifetime, để hiểu cùng một thao tác qua runtime khác nhau.
 
 **bộ nhớ (memory / 메모리) mô hình (model / 모델), tham chiếu (reference / 참조) & quyền sở hữu (ownership / 소유권) / 메모리 모델, 참조와 소유권**
 

@@ -1,6 +1,6 @@
 # Chọn cấu trúc dữ liệu phù hợp
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chọn cấu trúc dữ liệu phù hợp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bắt đầu từ thao tác** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. chính xác (exact / 정확한) Lookup hay Ordered truy vấn (query / 쿼리)?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chọn cấu trúc dữ liệu phù hợp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bắt đầu từ thao tác** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. chính xác (exact / 정확한) Lookup hay Ordered truy vấn (query / 쿼리)?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối chọn data structure với access pattern, invariants và cost model, để lựa chọn bắt đầu từ thao tác cần tối ưu.
 
 **cấu trúc dữ liệu (data structure / 자료구조) Selection / 자료구조 선택**
 

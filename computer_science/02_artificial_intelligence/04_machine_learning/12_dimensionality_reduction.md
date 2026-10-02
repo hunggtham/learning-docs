@@ -1,6 +1,6 @@
 # Dimensionality Reduction: giữ cấu trúc (structure / 구조) quan trọng trong không gian nhỏ hơn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dimensionality Reduction: giữ cấu trúc (structure / 구조) quan trọng trong không gian nhỏ hơn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao dimension cao gây khó?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **PCA từ variance perspective** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dimensionality Reduction: giữ cấu trúc (structure / 구조) quan trọng trong không gian nhỏ hơn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao dimension cao gây khó?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **PCA từ variance perspective** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối dimensionality reduction với projection, variance và representation, để giảm chiều giữ lại thông tin nào.
 
 Dimensionality Reduction (차원 축소 / giảm chiều) tìm một biểu diễn (representation / 표현) có ít dimensions hơn nhưng vẫn giữ phần cấu trúc (structure / 구조) quan trọng của dữ liệu (data / 데이터). “Quan trọng” có thể nghĩa giữ variance, khoảng cách cục bộ (local / 로컬), neighborhood, separability hoặc thông tin (information / 정보) phục vụ downstream tác vụ (task / 작업).
 

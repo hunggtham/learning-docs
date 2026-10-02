@@ -1,6 +1,6 @@
 # Quy trình giải bài DSA và thiết kế thuật toán
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quy trình giải bài DSA và thiết kế thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đọc đề như một specification** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Viết lại bài toán bằng một câu** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quy trình giải bài DSA và thiết kế thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đọc đề như một specification** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Viết lại bài toán bằng một câu** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối problem-solving workflow với decomposition, invariant, complexity và validation, để giải pháp đi từ mô hình đến bằng chứng.
 
 **Problem-Solving Workflow / 문제 해결 흐름**
 

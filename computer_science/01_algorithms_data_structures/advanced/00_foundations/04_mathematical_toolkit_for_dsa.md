@@ -1,6 +1,6 @@
 # Công cụ toán học cho cấu trúc dữ liệu và thuật toán
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Logarithm: số lần thu nhỏ theo tỷ lệ cố định** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lũy thừa của hai và biểu diễn nhị phân** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Công cụ toán học cho cấu trúc dữ liệu và thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Logarithm: số lần thu nhỏ theo tỷ lệ cố định** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lũy thừa của hai và biểu diễn nhị phân** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối mathematical toolkit với algebra, counting, probability và proof, để DSA có nền tảng suy luận nhất quán.
 
 **Mathematical Toolkit for DSA / 알고리즘을 위한 수학 도구**
 

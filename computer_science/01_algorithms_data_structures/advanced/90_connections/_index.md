@@ -1,6 +1,6 @@
 # 90_connections
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **90connections**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các chương tổng hợp** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Trường hợp (case / 사례) study xuyên nhiều chapter** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **90connections**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các chương tổng hợp** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Trường hợp (case / 사례) study xuyên nhiều chapter** để đem mô hình vào tình huống cụ thể. Mạch này dùng index của advanced connections làm bản đồ owner, rồi nối từng case với cấu trúc, thuật toán và hệ thống sử dụng nó.
 
 Nhóm này nối các khái niệm DSA riêng lẻ thành quyết định thiết kế và hệ thống hoàn chỉnh. Nên đọc sau khi đã có nền tảng về cấu trúc tuyến tính, cây, đồ thị và các mô hình thuật toán chính.
 

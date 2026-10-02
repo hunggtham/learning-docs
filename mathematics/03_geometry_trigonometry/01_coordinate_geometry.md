@@ -1,7 +1,6 @@
 # Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số
 
-> **Mạch đọc:** Đọc **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Vì sao coordinates hữu ích?** sang **2. Cartesian coordinates là một choice, không phải truth tuyệt đối**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao coordinates hữu ích?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Cartesian coordinates là một choice, không phải truth tuyệt đối** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối coordinate geometry với axes, transformations và equations, để hình học được biểu diễn bằng quan hệ có thể tính.
 
 Hình học tọa độ (analytic geometry / 해석기하학) không đơn giản là “hình học có công thức”. Ý tưởng cốt lõi là chọn một hệ tọa độ để **mã hóa vị trí bằng numbers**, rồi dùng algebra xử lý những câu hỏi vốn mang tính geometric.
 
@@ -29,6 +28,8 @@ x^2+y^2=25.
 
 Hình học (geometry / 기하학) được chuyển thành algebra mà không mất meaning hình học.
 
+> **Chuyển mạch:** Trong **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **2. Cartesian coordinates là một choice, không phải truth tuyệt đối** tiếp nhận điểm tựa từ **1. Vì sao coordinates hữu ích?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. điểm (point / 지점) và véc-tơ (vector / 벡터): cùng numbers, khác concept** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Cartesian coordinates là một choice, không phải truth tuyệt đối
 
 Trong 2D, Cartesian hệ thống (system / 시스템) dùng hai perpendicular axes. Một điểm (point / 지점) được represent bởi ordered pair
@@ -54,6 +55,8 @@ Trong `n` dimensions:
 Ta không cần visualize `n=1000`; algebra của coordinates vẫn hoạt động.
 
 Điều này mở đường từ hình học (geometry / 기하학) sang vectors, tính năng (feature / 기능) spaces và trạng thái (state / 상태) spaces.
+
+> **Chuyển mạch:** Ở chặng này của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **3. điểm (point / 지점) và véc-tơ (vector / 벡터): cùng numbers, khác concept** tiếp nhận điểm tựa từ **2. Cartesian coordinates là một choice, không phải truth tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Distance formula đến từ orthogonal decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. điểm (point / 지점) và véc-tơ (vector / 벡터): cùng numbers, khác concept
 
@@ -86,6 +89,8 @@ P+v=Q.
 ```
 
 Nhưng “cộng hai points” không luôn có geometric meaning độc lập với chosen origin. Phân biệt điểm (point / 지점)/véc-tơ (vector / 벡터) trở nên quan trọng trong affine hình học (geometry / 기하학), graphics và robotics.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **4. Distance formula đến từ orthogonal decomposition** tiếp nhận điểm tựa từ **3. điểm (point / 지점) và véc-tơ (vector / 벡터): cùng numbers, khác concept** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Midpoint và affine combinations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Distance formula đến từ orthogonal decomposition
 
@@ -133,6 +138,8 @@ d(x,y)=\sqrt{\sum_{i=1}^{n}(x_i-y_i)^2}.
 
 Formula trên assume coordinate axes là orthonormal trong Euclidean hình học (geometry / 기하학). Nếu coordinates không orthogonal, hoặc hình học (geometry / 기하학) không Euclidean, chỉ số (metric / 지표) formula thay đổi.
 
+> **Chuyển mạch:** Trong **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **5. Midpoint và affine combinations** tiếp nhận điểm tựa từ **4. Distance formula đến từ orthogonal decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Slope là ratio của directional thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Midpoint và affine combinations
 
 Midpoint giữa `P` và `Q` là
@@ -167,6 +174,8 @@ Expression
 
 là affine combination. Đây là nền của interpolation trong graphics, animation và hình học (geometry / 기하학) processing.
 
+> **Chuyển mạch:** Ở chặng này của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **6. Slope là ratio của directional thay đổi (change / 변경)** tiếp nhận điểm tựa từ **5. Midpoint và affine combinations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Equation của line từ hai viewpoints** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Slope là ratio của directional thay đổi (change / 변경)
 
 Với hai points,
@@ -197,6 +206,8 @@ Vertical line có `a=0`; slope biểu diễn (representation / 표현) `b/a` und
 
 Điều này cho thấy véc-tơ (vector / 벡터) biểu diễn (representation / 표현) tổng quát hơn slope.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **7. Equation của line từ hai viewpoints** tiếp nhận điểm tựa từ **6. Slope là ratio của directional thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Distance từ điểm (point / 지점) tới line là projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Equation của line từ hai viewpoints
 
 ### Direction viewpoint
@@ -226,6 +237,8 @@ Ax+By+C=0.
 General form mạnh vì vertical lines không cần special trường hợp (case / 사례).
 
 Direction form và normal form là hai representations của cùng line.
+
+> **Chuyển mạch:** Trong **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **8. Distance từ điểm (point / 지점) tới line là projection** tiếp nhận điểm tựa từ **7. Equation của line từ hai viewpoints** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Circle là locus từ distance ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Distance từ điểm (point / 지점) tới line là projection
 
@@ -258,6 +271,8 @@ d=
 
 Nó nối coordinate hình học (geometry / 기하학) trực tiếp với dot sản phẩm (product / 제품) và projection trong tuyến tính (linear / 선형) algebra.
 
+> **Chuyển mạch:** Ở chặng này của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **9. Circle là locus từ distance ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **8. Distance từ điểm (point / 지점) tới line là projection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Conics là distance relationships** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Circle là locus từ distance ràng buộc (constraint / 제약조건)
 
 Circle center `C=(h,k)` radius `r` được định nghĩa là set points `P=(x,y)` sao cho
@@ -274,6 +289,8 @@ Square hai phía:
 
 Equation đến trực tiếp từ geometric definition. Nếu nhớ definition, không cần học thuộc formula như một đối tượng (object / 객체) riêng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **10. Conics là distance relationships** tiếp nhận điểm tựa từ **9. Circle là locus từ distance ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Rotation và thay đổi (change / 변경) of coordinates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Conics là distance relationships
 
 Coordinate equations của conics có meaning hình học.
@@ -287,6 +304,8 @@ Coordinate equations của conics có meaning hình học.
 Các tiêu chuẩn (standard / 표준) equations xuất hiện sau khi chọn coordinates phù hợp với symmetry của đối tượng (object / 객체).
 
 Đây là lesson quan trọng: chọn coordinate hệ thống (system / 시스템) tốt có thể làm equation đơn giản mạnh.
+
+> **Chuyển mạch:** Trong **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **11. Rotation và thay đổi (change / 변경) of coordinates** tiếp nhận điểm tựa từ **10. Conics là distance relationships** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Worked example: intersection của line và circle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Rotation và thay đổi (change / 변경) of coordinates
 
@@ -305,6 +324,8 @@ R(\theta)=
 có thể dùng để rotate véc-tơ (vector / 벡터) hoặc đổi biểu diễn (representation / 표현) tùy convention active/passive.
 
 Hai operations dùng same ma trận (matrix / 행렬) cấu trúc (structure / 구조) nhưng interpretation khác. Vì vậy trong graphics/robotics cần luôn rõ: ta đang move đối tượng (object / 객체) hay đổi frame?
+
+> **Chuyển mạch:** Ở chặng này của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **11. Rotation và thay đổi (change / 변경) of coordinates** cho ta quy tắc; **12. Worked example: intersection của line và circle** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Coordinate hình học (geometry / 기하학) trong Computer Graphics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Worked example: intersection của line và circle
 
@@ -344,6 +365,8 @@ Intersection points:
 
 Algebra giải hệ thống (system / 시스템); hình học (geometry / 기하학) nói line cắt circle tại hai points. Discriminant của resulting quadratic encode số intersections.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **12. Worked example: intersection của line và circle** cho ta quy tắc; **13. Coordinate hình học (geometry / 기하학) trong Computer Graphics** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **14. Robotics và localization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Coordinate hình học (geometry / 기하학) trong Computer Graphics
 
 Graphics thường có nhiều coordinate các hệ thống (systems / 시스템들):
@@ -361,6 +384,8 @@ Một vertex vật lý được transform qua chuỗi xử lý (pipeline / 파�
 
 Coordinate hình học (geometry / 기하학) vì vậy là prerequisite thực tế của 2D/3D graphics.
 
+> **Chuyển mạch:** Trong **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **14. Robotics và localization** tiếp nhận điểm tựa từ **13. Coordinate hình học (geometry / 기하학) trong Computer Graphics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. AI/dữ liệu (data / 데이터): coordinates không tự động có chỉ số (metric / 지표) meaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Robotics và localization
 
 Robot có thể cần biết:
@@ -372,6 +397,8 @@ Robot có thể cần biết:
 Transformation giữa frames thường dùng rotation + translation.
 
 Cùng một obstacle có coordinates khác nhau trong mỗi frame. Điều quan trọng là relationship giữa frames, không phải một coordinate tuple duy nhất.
+
+> **Chuyển mạch:** Ở chặng này của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **14. Robotics và localization** nêu điều cần giải thích; **15. AI/dữ liệu (data / 데이터): coordinates không tự động có chỉ số (metric / 지표) meaning** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Geographic coordinates: counterexample quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. AI/dữ liệu (data / 데이터): coordinates không tự động có chỉ số (metric / 지표) meaning
 
@@ -389,6 +416,8 @@ Do đó chỉ số (metric / 지표) meaningful phụ thuộc:
 
 Có coordinates không có nghĩa Euclidean hình học (geometry / 기하학) là mô hình (model / 모델) đúng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **15. AI/dữ liệu (data / 데이터): coordinates không tự động có chỉ số (metric / 지표) meaning** cho ta quy tắc; **16. Geographic coordinates: counterexample quan trọng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Finance: trạng thái (state / 상태) spaces và coordinate choice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Geographic coordinates: counterexample quan trọng
 
 Latitude/longitude là coordinates trên curved Earth surface. Nếu lấy degree differences rồi dùng flat Euclidean distance cho points xa nhau, mô hình (model / 모델) hình học (geometry / 기하학) sai.
@@ -399,15 +428,21 @@ Ta cần spherical/ellipsoidal distance hoặc suitable projection.
 
 > biểu diễn (representation / 표현) bằng numbers không quyết định hình học (geometry / 기하학); chỉ số (metric / 지표) các giả định (assumptions / 가정들) mới quyết định distance.
 
+> **Chuyển mạch:** Trong **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **16. Geographic coordinates: counterexample quan trọng** cho ta quy tắc; **17. Finance: trạng thái (state / 상태) spaces và coordinate choice** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Finance: trạng thái (state / 상태) spaces và coordinate choice
 
 Một portfolio có thể được represent bằng holdings véc-tơ (vector / 벡터), factor exposures hoặc principal components. Cùng economic position có nhiều coordinate các hệ thống (systems / 시스템들).
 
 Trong rủi ro (risk / 위험) modeling, đổi từ asset coordinates sang factor coordinates có thể làm covariance cấu trúc (structure / 구조) dễ hiểu hơn — tương tự đổi basis trong tuyến tính (linear / 선형) algebra.
 
+> **Chuyển mạch:** Ở chặng này của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **17. Finance: trạng thái (state / 상태) spaces và coordinate choice** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Coordinate hình học (geometry / 기하학) là nghệ thuật chọn một numerical biểu diễn (representation / 표현) cho không gian (space / 공간). điểm (point / 지점), line, circle và distance không sinh ra từ coordinates; coordinates chỉ làm các relationships đó trở thành equations. Đổi coordinate hệ thống (system / 시스템) có thể đổi numbers mạnh nhưng không đổi geometric đối tượng (object / 객체).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hình học tọa độ: từ không gian hình học đến biểu diễn (representation / 표현) bằng số**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -419,4 +454,4 @@ Trong rủi ro (risk / 위험) modeling, đổi từ asset coordinates sang fact
 
 **Rotation ma trận (matrix / 행렬) luôn nghĩa rotate đối tượng (object / 객체).** Cùng ma trận (matrix / 행렬) cấu trúc (structure / 구조) còn có thể represent thay đổi (change / 변경) of coordinates; convention cần được nói rõ.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 euclidean geometry](./00_euclidean_geometry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

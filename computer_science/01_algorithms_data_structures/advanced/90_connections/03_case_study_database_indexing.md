@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) Study: Thiết kế chỉ mục cơ sở dữ liệu từ góc nhìn DSA
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Thiết kế chỉ mục cơ sở dữ liệu từ góc nhìn DSA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bắt đầu từ tải công việc (workload / 워크로드), không bắt đầu từ chỉ mục (index / 인덱스)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. băm (hash / 해시) chỉ mục (index / 인덱스) cho equality lookup** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Thiết kế chỉ mục cơ sở dữ liệu từ góc nhìn DSA**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bắt đầu từ tải công việc (workload / 워크로드), không bắt đầu từ chỉ mục (index / 인덱스)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. băm (hash / 해시) chỉ mục (index / 인덱스) cho equality lookup** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối database indexing với B-tree, locality và query workload, để index được đánh giá qua truy vấn thật và chi phí cập nhật.
 
 **cơ sở dữ liệu (database / 데이터베이스) Indexing trường hợp (case / 사례) Study / 데이터베이스 인덱스 설계 사례**
 

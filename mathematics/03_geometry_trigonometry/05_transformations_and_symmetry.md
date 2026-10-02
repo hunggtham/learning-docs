@@ -1,7 +1,6 @@
 # Phép biến hình và đối xứng: transformations, invariants và symmetry
 
-> **Mạch đọc:** Đọc **Phép biến hình và đối xứng: transformations, invariants và symmetry** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Transformation là một hàm (function / 함수) trên không gian (space / 공간)** sang **2. Translation: move mà không đổi shape**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phép biến hình và đối xứng: transformations, invariants và symmetry**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Transformation là một hàm (function / 함수) trên không gian (space / 공간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Translation: move mà không đổi shape** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối transformations với symmetry, invariants và geometry, để biến đổi được đọc qua đại lượng không đổi.
 
 Phép biến hình (geometric transformation / 기하변환) là một ánh xạ (mapping / 매핑) biến points thành points. Thay vì chỉ hỏi “shape này trông như thế nào?”, transformation viewpoint hỏi câu sâu hơn:
 
@@ -27,6 +26,8 @@ Một transformation có thể đại diện cho nhiều ý nghĩa:
 - trạng thái (state / 상태) của hệ thống (system / 시스템) chuyển sang trạng thái (state / 상태) mới.
 
 Do đó trước khi thao tác formula cần rõ interpretation của transformation.
+
+> **Chuyển mạch:** Trong **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **2. Translation: move mà không đổi shape** tiếp nhận điểm tựa từ **1. Transformation là một hàm (function / 함수) trên không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Rotation: preserve inner-product hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Translation: move mà không đổi shape
 
@@ -57,6 +58,8 @@ T(0)=t\ne0.
 ```
 
 Nó là affine transformation.
+
+> **Chuyển mạch:** Ở chặng này của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **3. Rotation: preserve inner-product hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **2. Translation: move mà không đổi shape** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Composition của rotations giải thích angle addition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Rotation: preserve inner-product hình học (geometry / 기하학)
 
@@ -96,6 +99,8 @@ Do đó
 
 Rotation không chỉ “trông như quay”; algebraically nó preserve dot products và vì thế preserve lengths/angles.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **4. Composition của rotations giải thích angle addition** tiếp nhận điểm tựa từ **3. Rotation: preserve inner-product hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Reflection: preserve distance nhưng flip orientation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Composition của rotations giải thích angle addition
 
 Nếu rotate `\alpha`, sau đó rotate `\beta`:
@@ -115,6 +120,8 @@ Vì thế identities như
 ```
 
 không phải công thức tách rời; chúng encode composition của rotations.
+
+> **Chuyển mạch:** Trong **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **5. Reflection: preserve distance nhưng flip orientation** tiếp nhận điểm tựa từ **4. Composition của rotations giải thích angle addition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Scaling: uniform và non-uniform khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Reflection: preserve distance nhưng flip orientation
 
@@ -138,6 +145,8 @@ Reflection preserve length/angle nhưng determinant bằng `-1`, biểu thị or
 Rotation ma trận (matrix / 행렬) 2D có determinant `+1`.
 
 Determinant vì vậy không chỉ đo volume scaling; sign còn encode orientation thay đổi (change / 변경).
+
+> **Chuyển mạch:** Ở chặng này của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **6. Scaling: uniform và non-uniform khác nhau** tiếp nhận điểm tựa từ **5. Reflection: preserve distance nhưng flip orientation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Shear: shape thay đổi (change / 변경) mà area có thể giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Scaling: uniform và non-uniform khác nhau
 
@@ -163,6 +172,8 @@ thì circle thường thành ellipse nếu `a\ne b`.
 
 Non-uniform scaling không preserve angles nói chung. Do đó “quy mô (scale / 규모)” không phải một lớp (class / 클래스) invariance duy nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **7. Shear: shape thay đổi (change / 변경) mà area có thể giữ** tiếp nhận điểm tựa từ **6. Scaling: uniform và non-uniform khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Affine transformations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Shear: shape thay đổi (change / 변경) mà area có thể giữ
 
 Shear ma trận (matrix / 행렬):
@@ -178,6 +189,8 @@ H=
 Nó nghiêng shape mà determinant vẫn bằng 1, nên area preserved dù angles không preserved.
 
 Đây là example quan trọng: same determinant không nghĩa same hình học (geometry / 기하학). Determinant chỉ capture volume scaling, không capture mọi distortion.
+
+> **Chuyển mạch:** Trong **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **8. Affine transformations** tiếp nhận điểm tựa từ **7. Shear: shape thay đổi (change / 변경) mà area có thể giữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Homogeneous coordinates: biến affine composition thành phép nhân ma trận (matrix multiplication / 행렬 곱셈)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Affine transformations
 
@@ -199,6 +212,8 @@ Affine transformations preserve:
 Nhưng chúng không nhất thiết preserve lengths hay angles.
 
 Computer graphics và computer vision dùng affine các mô hình (models / 모델들) rất nhiều vì chúng đủ flexible nhưng vẫn algebraically manageable.
+
+> **Chuyển mạch:** Ở chặng này của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **9. Homogeneous coordinates: biến affine composition thành phép nhân ma trận (matrix multiplication / 행렬 곱셈)** tiếp nhận điểm tựa từ **8. Affine transformations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. thứ tự (order / 순서) matters vì composition thường không commutative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Homogeneous coordinates: biến affine composition thành phép nhân ma trận (matrix multiplication / 행렬 곱셈)
 
@@ -228,6 +243,8 @@ Giờ translation, rotation, quy mô (scale / 규모), shear có thể compose b
 
 Trong 3D, graphics thường dùng `4×4` homogeneous matrices.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **10. thứ tự (order / 순서) matters vì composition thường không commutative** tiếp nhận điểm tựa từ **9. Homogeneous coordinates: biến affine composition thành phép nhân ma trận (matrix multiplication / 행렬 곱셈)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Symmetry là transformation làm đối tượng (object / 객체) bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. thứ tự (order / 순서) matters vì composition thường không commutative
 
 Nói chung
@@ -254,6 +271,8 @@ Nếu translate trước:
 
 Kết quả khác nhau.
 
+> **Chuyển mạch:** Trong **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **11. Symmetry là transformation làm đối tượng (object / 객체) bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **10. thứ tự (order / 순서) matters vì composition thường không commutative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Symmetries tạo group cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Symmetry là transformation làm đối tượng (object / 객체) bất biến (invariant / 불변식)
 
 Đối tượng (object / 객체) có symmetry nếu tồn tại transformation `T` sao cho
@@ -270,6 +289,8 @@ Square bất biến (invariant / 불변식) dưới rotations multiples 90° và
 
 Symmetry không chỉ là aesthetic thuộc tính (property / 속성); nó nói đối tượng (object / 객체) có redundant descriptions dưới certain transformations.
 
+> **Chuyển mạch:** Ở chặng này của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **12. Symmetries tạo group cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **11. Symmetry là transformation làm đối tượng (object / 객체) bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Invariance và equivariance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Symmetries tạo group cấu trúc (structure / 구조)
 
 Các symmetries của một đối tượng (object / 객체) có thể compose. Chúng có:
@@ -282,6 +303,8 @@ Các symmetries của một đối tượng (object / 객체) có thể compose.
 Đó chính là group cấu trúc (structure / 구조).
 
 Vì vậy group lý thuyết (theory / 이론) xuất hiện tự nhiên từ hình học (geometry / 기하학): nó formalize algebra của transformations giữ đối tượng (object / 객체) unchanged.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **13. Invariance và equivariance** tiếp nhận điểm tựa từ **12. Symmetries tạo group cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Physics: symmetry và conservation laws** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Invariance và equivariance
 
@@ -305,6 +328,8 @@ Ví dụ segmentation mask nên shift cùng ảnh (image / 이미지) đầu và
 
 Bất biến (invariant / 불변식) đầu ra (output / 출력) bỏ transformation tác động (effect / 효과); equivariant đầu ra (output / 출력) transform có cấu trúc cùng đầu vào (input / 입력).
 
+> **Chuyển mạch:** Trong **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **14. Physics: symmetry và conservation laws** tiếp nhận điểm tựa từ **13. Invariance và equivariance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Computer Graphics: transformation chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Physics: symmetry và conservation laws
 
 Trong physics, symmetry của laws liên hệ sâu với conserved quantities qua Noether's theorem.
@@ -316,6 +341,8 @@ Ví dụ:
 - rotation symmetry ↔ angular momentum conservation.
 
 Ý tưởng cốt lõi: nếu description vật lý không thay đổi dưới một continuous transformation, có cấu trúc (structure / 구조) được bảo toàn.
+
+> **Chuyển mạch:** Ở chặng này của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **14. Physics: symmetry và conservation laws** xác định đầu vào; **15. Computer Graphics: transformation chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Robotics: frames và rigid-body transforms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Computer Graphics: transformation chuỗi xử lý (pipeline / 파이프라인)
 
@@ -340,6 +367,8 @@ Một ma trận (matrix / 행렬) numerically correct vẫn có thể dùng sai 
 
 Hình học (geometry / 기하학) + ngữ nghĩa (semantics / 의미론) quan trọng hơn cú pháp (syntax / 문법) ma trận (matrix / 행렬).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **15. Computer Graphics: transformation chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **16. Robotics: frames và rigid-body transforms** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. AI: dữ liệu (data / 데이터) augmentation và symmetry các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Robotics: frames và rigid-body transforms
 
 Rigid transformation trong 3D combine rotation `R` và translation `t`:
@@ -361,6 +390,8 @@ Composition dùng ma trận (matrix / 행렬) products. Inverse cho phép chuy�
 
 Đây là practical ứng dụng (application / 애플리케이션) của affine transformations và group-like cấu trúc (structure / 구조).
 
+> **Chuyển mạch:** Trong **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **16. Robotics: frames và rigid-body transforms** nêu điều cần giải thích; **17. AI: dữ liệu (data / 데이터) augmentation và symmetry các giả định (assumptions / 가정들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Finance: transformations của coordinate biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. AI: dữ liệu (data / 데이터) augmentation và symmetry các giả định (assumptions / 가정들)
 
 Khi augment ảnh (image / 이미지) bằng crop/rotate/flip, ta đang encode belief rằng mục tiêu (target / 대상) hành vi (behavior / 동작) nên bất biến (invariant / 불변식)/equivariant dưới transformations đó.
@@ -369,6 +400,8 @@ Nếu giả định (assumption / 가정) sai, augmentation có thể harmful. V
 
 Do đó symmetry trong ML không chỉ là trick; nó là prior về cấu trúc (structure / 구조) của tác vụ (task / 작업).
 
+> **Chuyển mạch:** Ở chặng này của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **17. AI: dữ liệu (data / 데이터) augmentation và symmetry các giả định (assumptions / 가정들)** nêu điều cần giải thích; **18. Finance: transformations của coordinate biểu diễn (representation / 표현)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Active vs passive transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Finance: transformations của coordinate biểu diễn (representation / 표현)
 
 Portfolio returns có thể chuyển từ asset basis sang factor basis. rủi ro (risk / 위험) biểu diễn (representation / 표현) thay đổi nhưng underlying economic exposure có thể được giữ dưới invertible coordinate thay đổi (change / 변경).
@@ -376,6 +409,8 @@ Portfolio returns có thể chuyển từ asset basis sang factor basis. rủi r
 PCA cũng tìm rotation-like orthogonal basis nơi covariance trở nên diagonal.
 
 Đây là cùng principle: chọn transformation để làm cấu trúc (structure / 구조) dễ đọc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **19. Active vs passive transformation** tiếp nhận điểm tựa từ **18. Finance: transformations của coordinate biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Active vs passive transformation
 
@@ -389,9 +424,13 @@ Hai viewpoints có formulas closely related nhưng inverse/convention khác nhau
 
 Nhiều nhầm lẫn trong mechanics, graphics và tensor calculus đến từ không nói rõ viewpoint.
 
+> **Chuyển mạch:** Trong **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **19. Active vs passive transformation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Transformation là một hành động (action / 동작) lên không gian (space / 공간); symmetry là hành động (action / 동작) mà đối tượng (object / 객체) không thay đổi; invariants là properties transformation giữ lại. hình học (geometry / 기하학) trở nên sâu khi ta ngừng nhìn chỉ vào shapes và bắt đầu nhìn vào transformations giữa representations.
+
+> **Chuyển mạch:** Ở chặng này của **Phép biến hình và đối xứng: transformations, invariants và symmetry**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -403,4 +442,4 @@ Nhiều nhầm lẫn trong mechanics, graphics và tensor calculus đến từ k
 
 **dữ liệu (data / 데이터) augmentation luôn tốt.** Chỉ khi chosen transformation thực sự preserve/equivariantly transform mục tiêu (target / 대상) ngữ nghĩa (semantics / 의미론).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 euclidean geometry](./00_euclidean_geometry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

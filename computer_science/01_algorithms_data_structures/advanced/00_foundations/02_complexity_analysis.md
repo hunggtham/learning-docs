@@ -1,6 +1,6 @@
 # Phân tích độ phức tạp
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích độ phức tạp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao không chỉ đo thời gian thực thi?** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích độ phức tạp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao không chỉ đo thời gian thực thi?** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối complexity analysis với growth rate, input size và resource bound, để so sánh thuật toán theo quy mô.
 
 **phân tích độ phức tạp (complexity analysis / 복잡도 분석) / 복잡도 분석**
 

@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Những truy vấn điển hình** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. chính xác (exact / 정확한) trạng thái (state / 상태) bằng băm (hash / 해시) Map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Những truy vấn điển hình** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. chính xác (exact / 정확한) trạng thái (state / 상태) bằng băm (hash / 해시) Map** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối streaming analytics với window, state và throughput, để xử lý dữ liệu liên tục theo độ trễ và bộ nhớ.
 
 **Streaming Analytics trường hợp (case / 사례) Study / 스트리밍 분석 사례**
 

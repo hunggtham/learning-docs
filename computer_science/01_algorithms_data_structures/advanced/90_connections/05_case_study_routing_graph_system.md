@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mô hình đồ thị** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Adjacency danh sách (list / 목록) hay ma trận (matrix / 행렬)?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường hợp (case / 사례) Study: Hệ thống định tuyến từ góc nhìn đồ thị**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mô hình đồ thị** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Adjacency danh sách (list / 목록) hay ma trận (matrix / 행렬)?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối routing graph system với graph model, shortest path và failure, để quyết định tuyến gắn với topology thực tế.
 
 **Routing hệ thống (system / 시스템) trường hợp (case / 사례) Study / 라우팅 시스템 설계 사례**
 

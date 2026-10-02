@@ -1,6 +1,6 @@
 # Tính đúng đắn và bất biến của thuật toán
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tính đúng đắn và bất biến của thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trước khi chứng minh phải có specification** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Điều kiện trước và điều kiện sau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tính đúng đắn và bất biến của thuật toán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trước khi chứng minh phải có specification** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Điều kiện trước và điều kiện sau** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối algorithm correctness với invariants, induction và termination, để kết quả đúng được chứng minh qua trạng thái trung gian.
 
 **thuật toán (algorithm / 알고리즘) tính đúng đắn (correctness / 정확성) & Invariants / 알고리즘 정확성과 불변식**
 
