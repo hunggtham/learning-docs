@@ -1,6 +1,6 @@
 # Bảo mật mô hình và chuỗi cung ứng AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bảo mật mô hình và chuỗi cung ứng AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuỗi cung ứng AI gồm những gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Model và AI supply-chain security**. Route đi từ data/code/model artifacts → dependency and provenance → signing/scanning → compromised component scenarios → incident containment and update trust, để chuỗi cung ứng trở thành phần của security boundary.
 
 Hệ thống AI kế thừa rủi ro của chuỗi cung ứng phần mềm và bổ sung thêm các sản phẩm tạo ra (artifact / 산출물) đặc thù như dataset, checkpoint, tokenizer, adapter, prompt bundle và evaluation assets. **Bảo mật chuỗi cung ứng (supply-chain security)** bảo vệ tính toàn vẹn và khả năng truy vết từ nguồn (source / 소스) → bản dựng (build / 빌드)/train → sản phẩm tạo ra (artifact / 산출물) → registry → triển khai (deployment / 배포).
 

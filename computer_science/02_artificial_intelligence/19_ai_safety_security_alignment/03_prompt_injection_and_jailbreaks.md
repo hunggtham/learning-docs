@@ -1,6 +1,6 @@
 # Prompt Injection và Jailbreak trong hệ thống LLM
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Prompt Injection và Jailbreak trong hệ thống LLM**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức tiên quyết** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vấn đề cốt lõi: dữ liệu và chỉ dẫn cùng đi qua đơn vị từ (token / 토큰)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Prompt injection và jailbreak trong hệ thống LLM**. Route đi từ instruction/data boundary → direct/indirect injection → tool and retrieval surfaces → privilege separation → detection, refusal, and recovery, để phòng thủ gắn với đường dữ liệu thực tế.
 
 Ứng dụng LLM thường nhận văn bản từ nhiều nguồn có mức độ tin cậy khác nhau: hệ thống (system / 시스템)/nhà phát triển (developer / 개발자) instruction, yêu cầu người dùng, tài liệu RAG, email, website, kết quả công cụ (tool / 도구) và bộ nhớ dài hạn. **Prompt injection (프롬프트 인젝션 / tiêm chỉ dẫn)** xảy ra khi nội dung không đáng tin cố biến mình từ “dữ liệu cần xử lý” thành “chỉ dẫn có quyền điều khiển”, khiến mô hình đề xuất hành vi trái với điều khiển (control / 제어) luồng (flow / 흐름) dự kiến.
 

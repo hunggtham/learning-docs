@@ -1,6 +1,6 @@
 # Đầu độc dữ liệu, cửa hậu và tấn công mô hình
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Đầu độc dữ liệu, cửa hậu và tấn công mô hình**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bề mặt tấn công của quá trình huấn luyện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data poisoning, backdoors và model attacks**. Route đi từ training data provenance → poisoning/backdoor mechanism → trigger and target behavior → detection/sanitization → recovery and supply-chain controls, để rủi ro nối với điểm can thiệp cụ thể.
 
 Bảo mật AI không chỉ bắt đầu ở thời điểm suy luận. Nếu attacker can thiệp vào dữ liệu huấn luyện, nhãn, checkpoint, adapter hoặc chuỗi xử lý (pipeline / 파이프라인) bản dựng (build / 빌드), hệ thống có thể bị compromise từ trước khi triển khai. **Đầu độc dữ liệu (data poisoning / 데이터 포이즈닝)** làm quá trình học hấp thụ hành vi sai hoặc có chủ đích. **Cửa hậu (backdoor / trojan)** tạo một điều kiện kích hoạt đặc biệt khiến mô hình hành xử khác thường trong một số trường hợp hiếm.
 

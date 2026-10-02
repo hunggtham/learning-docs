@@ -1,6 +1,6 @@
 # Căn chỉnh AI và đặc tả mục tiêu
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Căn chỉnh AI và đặc tả mục tiêu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Khoảng cách giữa ý định và mục tiêu tối ưu hóa** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI alignment và objective specification**. Route đi từ human intent → formal objective/reward → proxy gap → specification uncertainty → feedback and oversight, để alignment được nối với cách mục tiêu được viết và kiểm tra.
 
 **Căn chỉnh AI (AI alignment / AI 정렬)** nghiên cứu và kỹ nghệ cách làm cho hành vi của hệ thống AI phù hợp với mục tiêu, ý định, ràng buộc và quyền hạn mà con người thực sự mong muốn. Vấn đề cốt lõi là mục tiêu thật thường giàu ngữ cảnh, khó đo trực tiếp và thay đổi theo tình huống, trong khi hệ thống chỉ tối ưu những tín hiệu có thể biểu diễn bằng dữ liệu, hàm mất mát, phần thưởng, lời nhắc hoặc bộ đánh giá.
 

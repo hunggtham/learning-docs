@@ -1,6 +1,6 @@
 # Thiết kế hệ thống AI an toàn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thiết kế hệ thống AI an toàn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức tiên quyết** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bắt đầu bằng threat mô hình (model / 모델)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Secure AI system design**. Route đi từ threat model → trust boundaries → least privilege/data isolation → validation and monitoring → safe failure and response, để security controls bám vào kiến trúc chứ không thêm sau cùng.
 
 **Thiết kế hệ thống AI an toàn (secure AI system design / 안전한 AI 시스템 설계)** đặt thành phần học máy hoặc LLM bên trong một kiến trúc bảo mật có authentication, authorization, isolation, kiểm tra hợp lệ (validation / 검증), auditing và khôi phục (recovery / 복구) rõ ràng. Nguyên tắc nền tảng là:
 

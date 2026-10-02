@@ -1,6 +1,6 @@
 # An toàn, Bảo mật và Căn chỉnh AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **An toàn, Bảo mật và Căn chỉnh AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thứ tự đọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** Đây là README owner của **AI safety, security và alignment**. Route đọc đi từ safety foundations/objectives → reward and prompt threats → adversarial/privacy/supply-chain security → secure design → alignment and oversight, để rủi ro được nối với biện pháp kiểm soát tương ứng.
 
 Tầng (layer / 계층) này nối ba bài toán thường bị trộn lẫn: **an toàn (safety / 안전)**, **bảo mật (security / 보안)** và **căn chỉnh (alignment)**. An toàn hỏi hệ thống có thể gây hậu quả nguy hiểm bằng cách nào; bảo mật hỏi attacker có thể khai thác hệ thống bằng cách nào; căn chỉnh hỏi mục tiêu và hành vi có phù hợp ý định, ràng buộc và quyền hạn mong muốn hay không.
 

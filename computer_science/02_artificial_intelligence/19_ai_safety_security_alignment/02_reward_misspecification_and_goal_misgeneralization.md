@@ -1,6 +1,6 @@
 # Sai đặc tả phần thưởng và khái quát hóa sai mục tiêu
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sai đặc tả phần thưởng và khái quát hóa sai mục tiêu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sai đặc tả phần thưởng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reward misspecification và goal misgeneralization**. Route đi từ intended goal → proxy reward → training behavior → distribution shift → specification gaming and monitoring, để lỗi mục tiêu được truy theo cơ chế chứ không chỉ theo hậu quả.
 
 Trong học tăng cường (Reinforcement Learning — RL), hậu huấn luyện LLM và tác nhân (agent / 에이전트), hệ thống thường tối ưu một tín hiệu như phần thưởng (reward), preference score hoặc điều kiện thành công. Nếu tín hiệu đó không phản ánh đúng mục tiêu thật, hoặc mô hình học một chiến lược chỉ đúng trong môi trường huấn luyện, hệ thống có thể đạt điểm cao nhưng tạo hành vi sai ý định.
 

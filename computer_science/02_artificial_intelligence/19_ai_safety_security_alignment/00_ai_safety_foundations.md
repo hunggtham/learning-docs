@@ -1,6 +1,6 @@
 # Nền tảng an toàn AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng an toàn AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phân biệt an toàn (safety / 안전), bảo mật (security / 보안), Alignment và quản trị (governance / 거버넌스)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI safety foundations**. Route đi từ harm/threat model → safety versus security/alignment/governance → failure modes → controls and oversight → residual risk, để các khái niệm không bị gộp thành một nhãn “an toàn”.
 
 **An toàn AI (AI Safety / AI 안전)** nghiên cứu và kỹ nghệ cách xây dựng hệ thống AI sao cho hành vi vẫn nằm trong phạm vi được chấp nhận, có thể giám sát, có thể giới hạn hậu quả và có thể phục hồi khi thất bại. An toàn không đồng nghĩa với bảo mật, căn chỉnh hay quản trị, dù các lĩnh vực này liên kết chặt chẽ.
 

@@ -1,6 +1,6 @@
 # Bảo mật quyền riêng tư và bảo vệ dữ liệu trong AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bảo mật quyền riêng tư và bảo vệ dữ liệu trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bề mặt rủi ro quyền riêng tư** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Privacy attacks và data protection trong AI**. Route đi từ data lifecycle → membership/inversion/extraction risks → minimization/access controls → differential privacy or redaction → utility and residual risk, để bảo vệ dữ liệu không tách khỏi chất lượng model.
 
 Hệ thống AI có thể xử lý hoặc học từ dữ liệu nhạy cảm trong nhiều giai đoạn: thu thập, huấn luyện, suy luận, truy xuất, logging và lưu trữ lâu dài. Vì vậy **bảo mật quyền riêng tư (privacy engineering / 프라이버시 엔지니어링)** không chỉ là “ẩn tên trong cơ sở dữ liệu (database / 데이터베이스)”, mà là kiểm soát dòng chảy thông tin xuyên suốt toàn bộ vòng đời của hệ thống.
 

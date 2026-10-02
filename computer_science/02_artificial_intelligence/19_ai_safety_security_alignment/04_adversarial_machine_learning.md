@@ -1,6 +1,6 @@
 # Học máy đối kháng (Adversarial Machine Learning)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Học máy đối kháng (Adversarial Machine Learning)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình đe dọa là điểm bắt đầu** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Adversarial machine learning**. Route đi từ threat model → evasion/poisoning/extraction attacks → perturbation budget → robustness evaluation → defenses and residual exposure, để tấn công luôn được đọc trong bối cảnh tài sản và attacker.
 
 **Học máy đối kháng (Adversarial Machine Learning / 적대적 머신러닝)** nghiên cứu cách một hệ thống học máy phản ứng khi có một đối tượng chủ động tìm cách làm mô hình sai, vượt qua bộ phát hiện hoặc làm giảm chất lượng hệ thống. Điểm khác với nhiễu ngẫu nhiên là kẻ tấn công có mục tiêu và có thể điều chỉnh chiến lược dựa trên phản hồi của hệ thống.
 

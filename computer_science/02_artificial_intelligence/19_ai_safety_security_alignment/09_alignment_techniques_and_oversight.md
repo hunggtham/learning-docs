@@ -1,6 +1,6 @@
 # Kỹ thuật căn chỉnh và cơ chế giám sát
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kỹ thuật căn chỉnh và cơ chế giám sát**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức cần có trước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao pretraining chưa đủ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Alignment techniques và oversight**. Route đi từ pretraining behavior → instruction/preference optimization → constitutional or process supervision → monitoring/red teaming → human escalation and limits, để alignment luôn đi kèm cơ chế giám sát.
 
 Không có một thuật toán duy nhất giải quyết toàn bộ bài toán căn chỉnh. Hệ thống môi trường vận hành (production / 운영 환경) thường kết hợp **hậu huấn luyện (post-training)**, dữ liệu preference, chính sách (policy / 정책)/quy tắc (rule / 규칙), verifier, phân quyền, human approval và đánh giá liên tục. Mục tiêu của chapter này là đặt các kỹ thuật đó vào một kiến trúc chung, để phân biệt rõ thứ gì định hình hành vi mô hình và thứ gì thực sự kiểm soát authority của hệ thống.
 
