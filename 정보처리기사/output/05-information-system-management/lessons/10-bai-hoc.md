@@ -1,18 +1,26 @@
 # 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối process quality standards với maturity, measurement, audit và improvement, để quy trình được đánh giá qua bằng chứng.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 프로세스, 품질, 표준
 
+> **Chuyển mạch:** Ở chặng này của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**에서 만든 기준을 이어받아 **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **4. 프로세스 품질 표준 (Tiêu c
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** và nối nó với **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, **읽는 방법 (Cách đọc)** xác định đầu vào; **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
@@ -88,3 +96,5 @@ Các bullet của **4.3 SPICE (ISO/IEC 15504)** đang nén nhiều ý thành cá
 Như vậy, **4.3 SPICE (ISO/IEC 15504)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
 Như vậy, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
