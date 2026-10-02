@@ -1,6 +1,6 @@
 # Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sự kiện (event / 이벤트) streams: partitions, watermarks, replay và stateful processing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Partition là đơn vị thứ tự (ordering / 순서)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bên tiêu thụ (consumer / 소비자) group** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Event streams, partitions, watermarks, replay và stateful processing**. Route đi từ partition/order → consumer groups → event time/watermarks → replay/state snapshots → late data và backpressure, để processing semantics được kiểm chứng qua recovery.
 
 Sự kiện (event / 이벤트) stream không chỉ là hàng đợi (queue / 큐) dài. Nó là ordered lịch sử (history / 이력) được chia partition, có retention và có thể replay. Điều này cho phép nhiều consumers xây trạng thái (state / 상태) riêng từ cùng sự kiện (event / 이벤트) log, nhưng cũng đưa thứ tự (ordering / 순서), thời gian (time / 시간) và khôi phục (recovery / 복구) thành vấn đề kiến trúc.
 

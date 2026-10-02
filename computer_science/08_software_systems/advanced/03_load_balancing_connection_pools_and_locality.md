@@ -1,6 +1,6 @@
 # Thuật toán cân bằng tải, nhóm kết nối và tính cục bộ
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thuật toán cân bằng tải, nhóm kết nối và tính cục bộ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Round robin và round robin có trọng số** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ít kết nối nhất và ít yêu cầu đang xử lý nhất** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Load balancing, connection pools và locality**. Route đi từ round-robin/weighted routing → least-connections/in-flight load → pool limits/queueing → locality/consistent hashing → health, retry và failure, để phân phối tải không tạo hotspot mới.
 
 Bộ cân bằng tải (load balancer / 로드 밸런서) không đơn giản là “chia đều số yêu cầu”. Mục tiêu thực tế là phân phối công việc sao cho tài nguyên không tạo điểm nóng, giữ độ trễ ổn định và tận dụng tính cục bộ mà không tạo mức phụ thuộc quá chặt.
 

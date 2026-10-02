@@ -1,6 +1,6 @@
 # Advanced Software các hệ thống (systems / 시스템들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced Software các hệ thống (systems / 시스템들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) chapters** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Mô hình tư duy (mental models / 사고 모델들) cần đạt** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Advanced Software systems**. Route đi từ queueing/tail latency → capacity/admission → caching/load balancing → event streams/idempotency → schema contracts và fleet efficiency, để mọi tối ưu đều quay về overload, consistency và evidence.
 
 Phần này tập trung vào hành vi (behavior / 동작) của hệ thống khi có hàng đợi (queue / 큐), trạng thái (state / 상태), bộ nhớ đệm (cache / 캐시), thất bại (failure / 실패), phiên bản (version / 버전) skew, tài nguyên (resource / 자원) pressure và fleet-level tài nguyên (resource / 자원) economics. Không thêm chapter chỉ để liệt kê mẫu (pattern / 패턴) hoặc hạ tầng (infrastructure / 인프라) sản phẩm (product / 제품) mới.
 

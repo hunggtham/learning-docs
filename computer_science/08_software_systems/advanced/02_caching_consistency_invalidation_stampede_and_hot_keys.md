@@ -1,6 +1,6 @@
 # Caching consistency, vô hiệu hóa (invalidation / 무효화), stampede và hot keys
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Caching consistency, vô hiệu hóa (invalidation / 무효화), stampede và hot keys**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. bất biến (invariant / 불변식) đầu tiên: phải biết authoritative trạng thái (state / 상태) nằm ở đâu** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. Cache-aside đơn giản nhưng có race thứ tự (ordering / 순서)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Caching consistency, invalidation, stampede và hot keys**. Route đi từ authoritative state → cache-aside/read-write ordering → invalidation/versioning → stampede protection → hot-key locality, để freshness và load reduction không phá correctness.
 
 Bộ nhớ đệm (cache / 캐시) giảm độ trễ (latency / 지연 시간) và tải (load / 로드) bằng cách giữ bản sao trạng thái (state / 상태) gần bên tiêu thụ (consumer / 소비자) hơn. Nhưng ngay khi có thêm một bản sao, hệ thống phải trả lời: **nguồn chuẩn (source of truth / 정본) ở đâu, stale bao lâu được chấp nhận, cập nhật (update / 업데이트)/vô hiệu hóa (invalidation / 무효화) được thứ tự (ordering / 순서) thế nào, và backend sống sót ra sao khi bộ nhớ đệm (cache / 캐시) đồng loạt miss hoặc biến mất.**
 

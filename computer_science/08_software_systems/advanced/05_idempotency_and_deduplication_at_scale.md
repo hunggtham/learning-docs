@@ -1,6 +1,6 @@
 # Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Idempotency kiến trúc (architecture / 아키텍처) và deduplication at quy mô (scale / 규모)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thử lại (retry / 재시도) tạo ambiguity** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Idempotency key** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Idempotency architecture và deduplication at scale**. Route đi từ retry ambiguity → idempotency key/operation identity → dedup store/retention → side-effect ordering → partitioning and failure, để “effectively once” có boundary đo được.
 
 Phân tán (distributed / 분산) yêu cầu (request / 요청) có thể hết thời gian chờ (timeout / 타임아웃) dù máy chủ (server / 서버) đã thực hiện side tác động (effect / 효과). máy khách (client / 클라이언트) không biết nên thử lại (retry / 재시도) hay không. **Idempotency** giải quyết ambiguity bằng cách làm nhiều lần cùng logical thao tác (operation / 연산) có observable kết quả (result / 결과) tương đương một lần.
 

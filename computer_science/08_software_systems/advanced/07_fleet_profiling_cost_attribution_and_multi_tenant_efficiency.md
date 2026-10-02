@@ -1,6 +1,6 @@
 # Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Fleet profiling, chi phí (cost / 비용) attribution và multi-tenant efficiency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Trung bình fleet có thể che thất bại (failure / 실패) cục bộ (local / 로컬)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **2. Fleet heterogeneity làm benchmark đơn lẻ mất đại diện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Fleet profiling, cost attribution và multi-tenant efficiency**. Route đi từ fleet heterogeneity → per-tenant profiling → resource/cost attribution → noisy-neighbor fairness → efficiency evidence, để average metrics không che local failure.
 
 Đọc trước [Capacity planning, utilization knee và admission control](./01_capacity_planning_utilization_knee_and_admission_control.md) và [Queueing, tail latency, backpressure](./00_queueing_tail_latency_and_backpressure.md). Chapter này mở rộng từ một dịch vụ (service / 서비스) instance sang một **fleet**: hàng trăm hoặc hàng nghìn processes/VMs/containers/accelerators chạy nhiều versions, regions, hardware types và tenants.
 

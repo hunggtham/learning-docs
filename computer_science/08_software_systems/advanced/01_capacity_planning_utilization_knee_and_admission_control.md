@@ -1,6 +1,6 @@
 # Sức chứa (capacity / 용량) planning, utilization knee và admission điều khiển (control / 제어)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sức chứa (capacity / 용량) planning, utilization knee và admission điều khiển (control / 제어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. sức chứa (capacity / 용량) là một safe operating envelope** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Utilization knee quan trọng hơn maximum thông lượng (throughput / 처리량)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Capacity planning, utilization knee và admission control**. Route đi từ safe operating envelope → utilization/queueing knee → demand forecast/headroom → admission limits/load shedding → capacity evidence, để giới hạn được đặt trước khi overload.
 
 Sức chứa (capacity / 용량) planning không phải lấy peak traffic rồi cộng 20%. Một dịch vụ (service / 서비스) có thể vẫn còn thông lượng (throughput / 처리량) sức chứa (capacity / 용량) nhưng tail độ trễ (latency / 지연 시간) đã tăng mạnh vì queueing và contention. Ở mức advanced, cần giữ một bất biến (invariant / 불변식) vận hành: **accepted công việc (work / 작업) phải nằm trong vùng mà hệ thống (system / 시스템) còn đủ tài nguyên (resource / 자원) để hoàn thành trước deadline với xác suất/SLO đã công bố.**
 

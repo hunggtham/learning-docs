@@ -1,6 +1,6 @@
 # Queueing, tail độ trễ (latency / 지연 시간) và backpressure
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: thông lượng (throughput / 처리량) ổn định không có nghĩa độ trễ (latency / 지연 시간) ổn định** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Queueing delay và dịch vụ (service / 서비스) thời gian (time / 시간) phải đo riêng** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Queueing, tail latency và backpressure**. Route đi từ arrival/service rate → queueing delay → percentile/tail amplification → bounded queues/admission → backpressure và overload recovery, để throughput không che giấu latency failure.
 
 Một hệ thống (system / 시스템) có thể còn CPU trung bình nhưng vẫn hết thời gian chờ (timeout / 타임아웃) vì requests đến bursty, dịch vụ (service / 서비스) thời gian (time / 시간) biến động và queues tích tụ. Advanced hiệu năng (performance / 성능) lập luận (reasoning / 추론) vì vậy không dừng ở average độ trễ (latency / 지연 시간) hay utilization; nó theo dõi **arrival tỷ lệ (rate / 비율), dịch vụ (service / 서비스) sức chứa (capacity / 용량), tính đồng thời (concurrency / 동시성), hàng đợi (queue / 큐) debt, percentile độ trễ (latency / 지연 시간) và phản hồi (feedback / 피드백) loops**.
 
