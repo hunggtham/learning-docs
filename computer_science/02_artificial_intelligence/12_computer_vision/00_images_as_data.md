@@ -1,6 +1,6 @@
 # Images as dữ liệu (data / 데이터)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Images as dữ liệu (data / 데이터)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ scene thật tới pixels** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Coordinate hệ thống (system / 시스템)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Images as data**. Route đi từ scene/camera → pixels and channels → coordinate systems → sampling/quantization → visual signal limits, để ảnh được hiểu như dữ liệu đo được chứ không chỉ là bề mặt hiển thị.
 
 Computer Vision bắt đầu từ một fact đơn giản: máy không “nhìn thấy vật thể” như con người; nó nhận **numbers arranged on a grid**. Một ảnh RGB thường được biểu diễn thành tensor:
 

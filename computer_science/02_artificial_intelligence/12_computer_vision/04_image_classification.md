@@ -1,6 +1,6 @@
 # Ảnh (image / 이미지) Classification
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ảnh (image / 이미지) Classification**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Single-Label Classification** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Multi-Label Classification** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Image classification**. Route đi từ image/label contract → single-label logits → multi-label independence → class imbalance/calibration → error analysis, để mục tiêu nhãn quyết định cách huấn luyện và đánh giá.
 
 **ảnh (image / 이미지) classification (이미지 분류)** gán một hoặc nhiều labels cho toàn ảnh (image / 이미지). Đây là tác vụ (task / 작업) đơn giản hơn detection/segmentation vì đầu ra (output / 출력) không cần vị trí chính xác của đối tượng (object / 객체).
 

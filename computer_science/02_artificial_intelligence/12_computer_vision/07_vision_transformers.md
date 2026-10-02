@@ -1,6 +1,6 @@
 # Vision Transformers
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vision Transformers**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Patch Tokenization** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao cần Positional thông tin (information / 정보)?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vision transformers**. Route đi từ patch tokenization → positional information → self-attention over patches → pretraining/augmentation → transfer and resolution limits, để ViT nối hình ảnh với pipeline biểu diễn kiểu transformer.
 
 **Vision Transformer (ViT / 비전 트랜스포머)** áp dụng Transformer lên images bằng cách biến ảnh (image / 이미지) thành chuỗi (sequence / 시퀀스) của patch tokens. Ý tưởng cốt lõi là thay inductive độ lệch (bias / 편향) convolution mạnh bằng self-attention có khả năng mô hình (model / 모델) interactions toàn cục.
 

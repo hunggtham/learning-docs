@@ -1,6 +1,6 @@
 # Ảnh (image / 이미지) Segmentation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ảnh (image / 이미지) Segmentation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ngữ nghĩa (semantic / 의미적) Segmentation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Encoder–Decoder kiến trúc (architecture / 아키텍처)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Image segmentation**. Route đi từ pixel labels → semantic vs instance masks → encoder–decoder features → upsampling/boundaries → IoU/Dice and deployment cost, để output dense giữ được hình dạng đối tượng.
 
 **ảnh (image / 이미지) Segmentation (이미지 분할)** gán label ở mức điểm ảnh (pixel / 픽셀) hoặc region. Nó trả lời không chỉ “có đối tượng (object / 객체) gì?” và “ở đâu?”, mà còn **điểm ảnh (pixel / 픽셀) nào thuộc đối tượng (object / 객체) nào**.
 

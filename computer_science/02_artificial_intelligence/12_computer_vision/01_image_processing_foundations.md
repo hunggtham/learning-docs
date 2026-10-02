@@ -1,6 +1,6 @@
 # Xử lý ảnh (image processing / 이미지 처리) Foundations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Xử lý ảnh (image processing / 이미지 처리) Foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Convolution như cục bộ (local / 로컬) filtering** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Padding và ranh giới (boundary / 경계)** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Image processing foundations**. Route đi từ pixel transforms → local convolution/filtering → padding/boundaries → denoising/edges → preprocessing for models, để thao tác ảnh được nối với tín hiệu cần giữ lại.
 
 Trước Deep học tập (learning / 학습), Computer Vision dựa nhiều vào **xử lý ảnh (image processing / 이미지 처리)**: biến đổi tín hiệu ảnh để làm nổi bật cấu trúc (structure / 구조) hữu ích. Dù hiện đại (modern / 현대적) các mô hình (models / 모델들) học features tự động, các nguyên lý filtering, edges, morphology và frequency vẫn giúp hiểu dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) và thất bại (failure / 실패) modes.
 

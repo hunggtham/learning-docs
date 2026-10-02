@@ -1,6 +1,6 @@
 # Convolutional Neural Networks cho Vision
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Convolutional Neural Networks cho Vision**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Convolution tầng (layer / 계층)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Weight Sharing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Convolutional neural networks cho vision**. Route đi từ receptive fields → convolution/weight sharing → pooling/stride → hierarchical features → classification/detection heads, để CNN giải thích được cả inductive bias lẫn chi phí tính toán.
 
 **Convolutional Neural mạng (network / 네트워크)** đưa một inductive độ lệch (bias / 편향) rất phù hợp với ảnh (image / 이미지): cục bộ (local / 로컬) patterns quan trọng và mẫu (pattern / 패턴) tương tự có thể xuất hiện ở nhiều vị trí.
 

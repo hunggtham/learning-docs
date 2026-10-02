@@ -1,6 +1,6 @@
 # Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tính năng (feature / 기능) biểu diễn (representation / 표현) trong Computer Vision**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao raw pixels khó?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cục bộ (local / 로컬) Features** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Feature representation trong computer vision**. Route đi từ raw pixels → local edges/corners → invariant descriptors → learned features → transfer/task heads, để representation nối với biến thiên hình học và mục tiêu nhận dạng.
 
 Trước khi deep neural networks trở thành default, Computer Vision thường tách chuỗi xử lý (pipeline / 파이프라인) thành hai phần:
 

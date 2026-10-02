@@ -1,6 +1,6 @@
 # Hiện đại (modern / 현대적) Visual biểu diễn (representation / 표현)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hiện đại (modern / 현대적) Visual biểu diễn (representation / 표현)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Self-Supervised học tập (learning / 학습)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Contrastive học tập (learning / 학습)** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Modern visual representation**. Route đi từ unlabeled augmentations → self-supervised objectives → contrastive/distillation learning → multimodal alignment → transfer and collapse risks, để representation học được tín hiệu dùng lại qua nhiều task.
 
 Hiện đại (modern / 현대적) Computer Vision ngày càng ít xoay quanh một tác vụ (task / 작업) head riêng lẻ và ngày càng tập trung vào **general-purpose visual representations** có thể transfer sang classification, retrieval, detection, segmentation và multimodal lập luận (reasoning / 추론).
 

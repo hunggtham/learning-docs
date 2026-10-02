@@ -1,6 +1,6 @@
 # Đối tượng (object / 객체) Detection
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Đối tượng (object / 객체) Detection**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao detection khó hơn classification?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bounding Boxes** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Object detection**. Route đi từ object instances → bounding boxes → anchor/proposal or set prediction → IoU/NMS → precision–recall at multiple thresholds, để detection gắn classification với localization.
 
 **đối tượng (object / 객체) Detection (객체 탐지)** vừa phải nhận biết đối tượng (object / 객체) lớp (class / 클래스), vừa phải localize nhiều instances trong cùng ảnh (image / 이미지). đầu ra (output / 출력) thường là set:
 
