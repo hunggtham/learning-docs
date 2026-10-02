@@ -1,7 +1,6 @@
 # Quy ước tên riêng Việt–Hàn–Anh
 
-> **Mạch đọc:** Đặt **Quy ước tên riêng Việt–Hàn–Anh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khi nào dịch sang Hán–Việt** sang **Khi nào không nên dịch cưỡng ép**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quy ước tên riêng Việt–Hàn–Anh**. Route đi từ source spelling → pronunciation/transliteration → Hán–Việt versus descriptive translation → context consistency → reader-facing choice, để dịch tên giữ được căn cứ và khả năng tra cứu.
 
 Tên người, địa điểm, triều đại, sự kiện, công trình, văn bản và thiết chế quan trọng được ghi lần đầu theo mẫu:
 
@@ -39,8 +38,7 @@ Nếu tên lịch sử có Hán tự và cách đọc Hán–Việt giúp ngư�
 | Huấn Dân Chính Âm | 훈민정음 | Hunminjeongeum |
 | Chiến tranh Nhâm Thìn | 임진왜란 | Imjin War |
 
-
-> **Chuyển mạch:** Từ **Khi nào dịch sang Hán–Việt**, ta sang **Khi nào không nên dịch cưỡng ép** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Quy ước tên riêng Việt–Hàn–Anh**, **Khi nào không nên dịch cưỡng ép** tiếp nhận điểm tựa từ **Khi nào dịch sang Hán–Việt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi nào không nên dịch cưỡng ép
 
@@ -48,11 +46,10 @@ Tên hiện đại mà cách Hán–Việt ít được người Việt sử d�
 
 Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn hơn nếu bối cảnh đã rõ. Tên tệp (file / 파일) vẫn giữ tiếng Anh hoặc dạng Latin hoá để đường dẫn, Git và liên kết chéo ổn định.
 
-
-> **Chuyển mạch:** Từ **Khi nào không nên dịch cưỡng ép**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Quy ước tên riêng Việt–Hàn–Anh**, **Mô hình tư duy** gom các mảnh từ **Khi nào không nên dịch cưỡng ép** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
 Ba dạng tên có thể xem như ba khoá trỏ tới cùng một nút trong đồ thị kiến thức (knowledge graph). Tên tiếng Việt giúp hiểu nghĩa và ghi nhớ; Hangul giúp nhận diện trong môi trường Hàn Quốc; tiếng Anh hoặc dạng Latin hoá giúp tra cứu sách, bài nghiên cứu, cơ sở dữ liệu bảo tàng và tài liệu quốc tế.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
