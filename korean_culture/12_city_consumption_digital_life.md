@@ -1,7 +1,6 @@
 # Đô thị, tiêu dùng và đời sống số
 
-> **Mạch đọc:** Đặt **Đô thị, tiêu dùng và đời sống số** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thành phố không chỉ là nơi ở đông người** sang **수도권 집중: Seoul là trung tâm nhưng không phải toàn bộ Hàn Quốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Đô thị, tiêu dùng và đời sống số**. Route đi từ urbanization/region → consumption spaces → digital platforms → 수도권 concentration → inequality and everyday change, để thành phố nối hạ tầng với hành vi.
 
 ## Thành phố không chỉ là nơi ở đông người
 
@@ -22,6 +21,8 @@ mật độ đô thị
 
 Khi một mức tiện lợi lặp đủ lâu, nó thôi được cảm nhận như “dịch vụ cao cấp” và trở thành chuẩn mặc định.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **수도권 집중: Seoul là trung tâm nhưng không phải toàn bộ Hàn Quốc** tiếp nhận điểm tựa từ **Thành phố không chỉ là nơi ở đông người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **지하철: tàu điện ngầm như một hệ thống phối hợp phân tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 수도권 집중: Seoul là trung tâm nhưng không phải toàn bộ Hàn Quốc
 
 **Tập trung vùng thủ đô (수도권 집중 / capital-region concentration)** là một cấu trúc kinh tế–xã hội lớn. Seoul, Incheon và Gyeonggi tập trung nhiều việc làm, đại học, bệnh viện, trụ sở công ty, cơ sở văn hoá và giao thông.
@@ -34,6 +35,8 @@ Không nên lấy Seoul làm mẫu rồi suy ra mức trung bình toàn quốc.
 
 # Giao thông: thành phố được trải nghiệm qua một chuỗi di chuyển
 
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **지하철: tàu điện ngầm như một hệ thống phối hợp phân tán** tiếp nhận điểm tựa từ **수도권 집중: Seoul là trung tâm nhưng không phải toàn bộ Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **교통카드: một giao diện chung làm hành trình nhiều phương tiện trở nên tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 지하철: tàu điện ngầm như một hệ thống phối hợp phân tán
 
 **Tàu điện ngầm (지하철 / subway)** không chỉ là phương tiện. Nó là môi trường nơi hàng triệu người xa lạ phải phối hợp: xếp hàng, nhường cửa, giữ luồng lên–xuống, dùng `교통카드`, chuyển tuyến và giữ âm lượng phù hợp.
@@ -42,17 +45,23 @@ Thông lượng của hệ thống phụ thuộc vào từng hành vi nhỏ. N�
 
 Ứng dụng điều hướng giảm bất định bằng giờ đến, tuyến chuyển, số cửa ra, thời gian đi bộ và đôi khi cả thông tin đông đúc. Điều này thay đổi hành vi: người dùng có thể lên kế hoạch sát hơn vì trạng thái hệ thống dễ quan sát hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **교통카드: một giao diện chung làm hành trình nhiều phương tiện trở nên tự nhiên** tiếp nhận điểm tựa từ **지하철: tàu điện ngầm như một hệ thống phối hợp phân tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **버스, 택시 và chặng đầu–cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 교통카드: một giao diện chung làm hành trình nhiều phương tiện trở nên tự nhiên
 
 `교통카드` như T-money không chỉ thay tiền mặt. Nó tạo trạng thái tính cước tích hợp và giúp hành trình xe buýt–tàu điện hoạt động như một chuỗi thống nhất hơn.
 
 Khi ma sát của việc chuyển phương tiện giảm, người dùng sẵn sàng kết hợp nhiều loại giao thông. Hệ quả văn hoá là “đi bằng giao thông công cộng” trở thành giả định mặc định trong nhiều kế hoạch đô thị.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **버스, 택시 và chặng đầu–cuối** tiếp nhận điểm tựa từ **교통카드: một giao diện chung làm hành trình nhiều phương tiện trở nên tự nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **교통약자: “có tàu điện” chưa có nghĩa mọi người đều di chuyển dễ như nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 버스, 택시 và chặng đầu–cuối
 
 Xe buýt lấp vùng đường sắt không phủ; taxi và ứng dụng di chuyển xử lý chặng đầu–cuối hoặc khoảng trống về đêm. Ứng dụng điều phối biến việc đứng đường tìm xe thành bài toán ghép cung với cầu.
 
 Nhưng lớp số không xoá ràng buộc vật lý. Nhu cầu giờ cao điểm, thời tiết, sự kiện hoặc thiếu tài xế vẫn có thể làm thời gian chờ tăng. Phần mềm chỉ tối ưu tài nguyên hiện có; nó không tự tạo thêm đường hoặc phương tiện.
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **교통약자: “có tàu điện” chưa có nghĩa mọi người đều di chuyển dễ như nhau** tiếp nhận điểm tựa từ **버스, 택시 và chặng đầu–cuối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **엘리베이터, 저상버스 và đường vòng vô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 교통약자: “có tàu điện” chưa có nghĩa mọi người đều di chuyển dễ như nhau
 
@@ -75,6 +84,8 @@ Nếu chỉ một mắt xích không tiếp cận được, “mạng giao thôn
 
 Đây là lý do khả năng tiếp cận (accessibility / 접근성) phải được đánh giá theo **hành trình**, không chỉ theo việc một cơ sở có gắn biểu tượng xe lăn hay không.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **엘리베이터, 저상버스 và đường vòng vô hình** tiếp nhận điểm tựa từ **교통약자: “có tàu điện” chưa có nghĩa mọi người đều di chuyển dễ như nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **편의점: cửa hàng tiện lợi như hạ tầng vi mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 엘리베이터, 저상버스 và đường vòng vô hình
 
 Thang máy trong ga, xe buýt sàn thấp, đường dốc, lát dẫn hướng và thông báo âm thanh là những thành phần có thể giảm rào cản. Nhưng ngay cả khi hạ tầng tồn tại, vị trí và độ tin cậy của nó vẫn quan trọng.
@@ -96,11 +107,15 @@ Thiết kế tốt cố giảm tổng chi phí này cho nhiều nhóm người d
 
 # Dịch vụ đô thị và khả năng tự phục vụ
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **편의점: cửa hàng tiện lợi như hạ tầng vi mô** tiếp nhận điểm tựa từ **엘리베이터, 저상버스 và đường vòng vô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **무인매장 và 키오스크: tự động hoá chuyển một phần công việc sang khách hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 편의점: cửa hàng tiện lợi như hạ tầng vi mô
 
 **Cửa hàng tiện lợi (편의점 / convenience store)** ở Hàn Quốc hoạt động như một nút dịch vụ khu dân cư hơn là chỉ nơi bán đồ ăn vặt. Tuỳ cửa hàng, người dùng có thể mua suất ăn sẵn, gửi/nhận bưu kiện, nạp tiền và mua đồ dùng khẩn cấp.
 
 Với hộ một người và lịch làm việc dài, cửa hàng tiện lợi đóng vai trò như **bếp bên ngoài hộ gia đình** và kho dự phòng. Gói nhỏ, `도시락`, `삼각김밥`, `컵라면` hay sản phẩm chỉ cần hâm nóng phản ánh thay đổi quy mô hộ và ngân sách thời gian.
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **무인매장 và 키오스크: tự động hoá chuyển một phần công việc sang khách hàng** tiếp nhận điểm tựa từ **편의점: cửa hàng tiện lợi như hạ tầng vi mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **디지털 접근성: khả năng tiếp cận số không chỉ là cỡ chữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 무인매장 và 키오스크: tự động hoá chuyển một phần công việc sang khách hàng
 
@@ -118,6 +133,8 @@ Vì vậy:
 tự động dễ dùng hơn cho mọi người
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **디지털 접근성: khả năng tiếp cận số không chỉ là cỡ chữ** tiếp nhận điểm tựa từ **무인매장 và 키오스크: tự động hoá chuyển một phần công việc sang khách hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **외국인 사용자: ngôn ngữ cũng là một lớp khả năng tiếp cận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 디지털 접근성: khả năng tiếp cận số không chỉ là cỡ chữ
 
 Một dịch vụ số dễ tiếp cận cần nhiều thứ hơn chữ lớn. Các câu hỏi quan trọng gồm:
@@ -133,6 +150,8 @@ Một dịch vụ số dễ tiếp cận cần nhiều thứ hơn chữ lớn. C
 
 Khả năng phục hồi sau lỗi đặc biệt quan trọng. Một giao diện rất nhanh khi đi đúng luồng nhưng gần như bế tắc khi người dùng bấm nhầm chưa chắc là giao diện tốt.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **외국인 사용자: ngôn ngữ cũng là một lớp khả năng tiếp cận** tiếp nhận điểm tựa từ **디지털 접근성: khả năng tiếp cận số không chỉ là cỡ chữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **카페: đồ uống, không gian thứ ba và “thuê thời gian”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 외국인 사용자: ngôn ngữ cũng là một lớp khả năng tiếp cận
 
 Đối với người nước ngoài, tiếng Hàn, cách viết địa chỉ, xác thực danh tính và phương thức thanh toán có thể tạo rào cản ngay cả khi họ không có khó khăn thể chất.
@@ -141,6 +160,8 @@ Bản dịch đa ngôn ngữ giúp ích, nhưng dịch máy hoặc giao diện d
 
 # Không gian thứ ba và dịch vụ thuê chức năng
 
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **카페: đồ uống, không gian thứ ba và “thuê thời gian”** tiếp nhận điểm tựa từ **외국인 사용자: ngôn ngữ cũng là một lớp khả năng tiếp cận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **노래방, PC방, 찜질방: thuê chức năng thay vì sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 카페: đồ uống, không gian thứ ba và “thuê thời gian”
 
 Quán cà phê đô thị Hàn vừa bán đồ uống vừa bán quyền tiếp cận không gian, Wi‑Fi, điện, điều hoà và mức riêng tư xã hội tương đối. Nó hoạt động như **không gian thứ ba (제3의 공간 / third place)** giữa nhà và nơi làm việc.
@@ -148,6 +169,8 @@ Quán cà phê đô thị Hàn vừa bán đồ uống vừa bán quyền tiếp
 `카공족` — người học/làm việc lâu trong quán — xuất hiện vì căn hộ nhỏ, áp lực học tập và công việc bằng máy tính. Khi khách dùng bàn rất lâu nhưng chi tiêu ít, quán phải cân giữa doanh thu theo chỗ ngồi và giá trị khách hàng trung thành.
 
 `스터디카페` là phản ứng thị trường: nếu nhu cầu thực là bàn + yên tĩnh + ổ điện + thời gian, dịch vụ có thể được tách khỏi việc mua cà phê.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **노래방, PC방, 찜질방: thuê chức năng thay vì sở hữu** tiếp nhận điểm tựa từ **카페: đồ uống, không gian thứ ba và “thuê thời gian”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PC방: lịch sử băng rộng trở thành thiết chế giải trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 노래방, PC방, 찜질방: thuê chức năng thay vì sở hữu
 
@@ -162,6 +185,8 @@ Nhiều dịch vụ đô thị bán quyền truy cập tạm thời vào chức 
 
 Mô hình là **không gian/chức năng như một dịch vụ (space/function as a service)**. Hộ đô thị không cần nhà đủ lớn cho mọi hoạt động; thị trường gom nhu cầu và cung cấp theo giờ.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **PC방: lịch sử băng rộng trở thành thiết chế giải trí** tiếp nhận điểm tựa từ **노래방, PC방, 찜질방: thuê chức năng thay vì sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **배달: phần mềm trở thành một phần của bữa ăn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## PC방: lịch sử băng rộng trở thành thiết chế giải trí
 
 PC bang từng làm giảm rào cản phần cứng và mạng cho trò chơi trực tuyến. Địa điểm tập trung còn cho phép bạn bè chơi cùng, theo dõi người khác và hình thành cộng đồng cạnh tranh.
@@ -175,6 +200,8 @@ Latency \approx propagation + transmission + queueing + processing
 Trong trò chơi cạnh tranh, vài chục mili giây có thể ảnh hưởng trải nghiệm. Văn hoá thể thao điện tử vì vậy có gốc vật chất rất rõ: phần cứng, chất lượng mạng, mật độ địa điểm và hệ thống giải đấu.
 
 # Logistics, giao hàng và nền kinh tế tiện lợi
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **배달: phần mềm trở thành một phần của bữa ăn** tiếp nhận điểm tựa từ **PC방: lịch sử băng rộng trở thành thiết chế giải trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **새벽배송 và thương mại giao nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 배달: phần mềm trở thành một phần của bữa ăn
 
@@ -191,6 +218,8 @@ thời gian giao dự kiến
 
 Nền tảng cố giảm tổng độ trễ bằng dự đoán và phối hợp, nhưng chi phí không biến mất; nó được phân phối giữa nhà hàng, người giao hàng, nền tảng và khách hàng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **새벽배송 và thương mại giao nhanh** tiếp nhận điểm tựa từ **배달: phần mềm trở thành một phần của bữa ăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **택배 và căn hộ như mạng hậu cần mật độ cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 새벽배송 và thương mại giao nhanh
 
 `새벽배송` — giao hàng sáng sớm — và các hình thức **thương mại giao nhanh (quick commerce)** tạo kỳ vọng rằng thực phẩm có thể đặt tối và nhận trước sáng hôm sau ở khu vực được hỗ trợ.
@@ -199,6 +228,8 @@ Dịch vụ này cần kho gần cụm nhu cầu, chuỗi lạnh, lao động ba
 
 Văn hoá tiện lợi luôn có **tác động ngoại biên (externality)**.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **택배 và căn hộ như mạng hậu cần mật độ cao** tiếp nhận điểm tựa từ **새벽배송 và thương mại giao nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **지도, 예약, 웨이팅: tìm kiếm chuyển thành quy trình hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 택배 và căn hộ như mạng hậu cần mật độ cao
 
 Giao bưu kiện gắn chặt với văn hoá căn hộ. `경비실`, tủ nhận hàng, quyền vào toà nhà và địa chỉ chuẩn hoá giúp một người giao nhiều đơn trong khoảng cách ngắn.
@@ -206,6 +237,8 @@ Giao bưu kiện gắn chặt với văn hoá căn hộ. `경비실`, tủ nhậ
 Chương [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md) đi sâu vào bưu kiện, phân loại rác, văn phòng quản lý và hạ tầng dùng chung.
 
 # Bản đồ, đặt chỗ, đánh giá và thanh toán
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **택배 và căn hộ như mạng hậu cần mật độ cao** xác định đầu vào; **지도, 예약, 웨이팅: tìm kiếm chuyển thành quy trình hoàn chỉnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **리뷰: bằng chứng xã hội nhưng không phải sự thật tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 지도, 예약, 웨이팅: tìm kiếm chuyển thành quy trình hoàn chỉnh
 
@@ -222,6 +255,8 @@ tìm kiếm
 
 Khi toàn bộ hành trình khách hàng được số hoá, doanh nghiệp địa phương có một “hồ sơ công cộng” tồn tại lâu hơn lời truyền miệng: điểm, ảnh, thời gian chờ và bình luận.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, cơ chế trong **지도, 예약, 웨이팅: tìm kiếm chuyển thành quy trình hoàn chỉnh** cần được kiểm chứng bằng dấu vết cụ thể; **리뷰: bằng chứng xã hội nhưng không phải sự thật tuyệt đối** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **카드, 간편결제: thanh toán ít ma sát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 리뷰: bằng chứng xã hội nhưng không phải sự thật tuyệt đối
 
 Đánh giá giúp giảm **bất cân xứng thông tin (정보 비대칭 / information asymmetry)**, nhưng điểm số không trung lập. Người cực hài lòng hoặc cực tức giận có thể đánh giá nhiều hơn; ưu đãi tạo động lực; điểm sớm tạo phụ thuộc đường đi; thuật toán quyết định đánh giá nào được nhìn thấy.
@@ -237,11 +272,15 @@ Khi toàn bộ hành trình khách hàng được số hoá, doanh nghiệp đ�
 
 Đây là vòng phản hồi (feedback loop / 피드백 루프). Độ phổ biến vừa là nguyên nhân vừa là kết quả của khả năng được nhìn thấy.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **리뷰: bằng chứng xã hội nhưng không phải sự thật tuyệt đối** nêu điều cần giải thích; **카드, 간편결제: thanh toán ít ma sát** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **본인인증: danh tính số vừa tạo tiện lợi vừa tạo điểm nghẽn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 카드, 간편결제: thanh toán ít ma sát
 
 Thẻ, ví di động và thanh toán đơn giản làm giảm ma sát giao dịch. Với tiền mặt, người dùng cảm nhận tiền rời tay vật lý; với thanh toán số, hành động có thể chỉ là chạm hoặc xác nhận sinh trắc học.
 
 Kinh tế học hành vi gọi một phần hiện tượng này là **cảm giác đau khi trả tiền (pain of paying)**. Giao diện càng ít ma sát, chi phí có thể càng ít nổi bật trong cảm nhận. Điều này không có nghĩa thanh toán số tự động làm mọi người tiêu hoang; nó chỉ thay cách chi phí được cảm nhận.
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **본인인증: danh tính số vừa tạo tiện lợi vừa tạo điểm nghẽn** tiếp nhận điểm tựa từ **카드, 간편결제: thanh toán ít ma sát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KakaoTalk: trình nhắn tin như lớp vận hành xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 본인인증: danh tính số vừa tạo tiện lợi vừa tạo điểm nghẽn
 
@@ -255,6 +294,8 @@ Xác thực quá yếu tăng gian lận; quá nặng làm người dùng bỏ qu
 
 # Nhắn tin, an ninh và đời sống về đêm
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **KakaoTalk: trình nhắn tin như lớp vận hành xã hội** tiếp nhận điểm tựa từ **본인인증: danh tính số vừa tạo tiện lợi vừa tạo điểm nghẽn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CCTV, intercom và cảm giác an toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KakaoTalk: trình nhắn tin như lớp vận hành xã hội
 
 KakaoTalk không chỉ là ứng dụng chat. Gia đình, văn phòng, phụ huynh trường học, câu lạc bộ và thông báo dịch vụ đều có thể chạy qua trình nhắn tin.
@@ -263,11 +304,15 @@ Khi một kênh trở thành mặc định, chuẩn mực xã hội phát triể
 
 Chương [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) đi sâu vào `읽씹`, `단톡방`, tiếng lóng và chuẩn mực trực tuyến.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **CCTV, intercom và cảm giác an toàn** tiếp nhận điểm tựa từ **KakaoTalk: trình nhắn tin như lớp vận hành xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thành phố về đêm và kỳ vọng 24 giờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## CCTV, intercom và cảm giác an toàn
 
 Camera, intercom và khoá số làm an ninh trở thành một lớp môi trường. Nhưng hệ thống quan sát không đồng nghĩa tội phạm biến mất; nó thay khả năng răn đe, điều tra và nhận thức rủi ro.
 
 Càng nhiều dữ liệu quan sát, càng cần quản trị rõ về thời gian lưu, quyền truy cập và mục đích sử dụng. Tiện lợi an ninh và quyền riêng tư là một đánh đổi phải được quản trị chứ không có lời giải tuyệt đối.
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **Thành phố về đêm và kỳ vọng 24 giờ** tiếp nhận điểm tựa từ **CCTV, intercom và cảm giác an toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **단일 장애점: điểm lỗi duy nhất trong đời sống đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thành phố về đêm và kỳ vọng 24 giờ
 
@@ -291,6 +336,8 @@ hiệu suất bình thường
 
 **độ tin cậy (reliability / 신뢰성)** hỏi hệ thống có hoạt động ổn định không. **Khả năng phục hồi (resilience)** hỏi khi đã hỏng, hệ thống có hấp thụ cú sốc và khôi phục được không.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **단일 장애점: điểm lỗi duy nhất trong đời sống đô thị** tiếp nhận điểm tựa từ **Thành phố về đêm và kỳ vọng 24 giờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **중복성: dự phòng nhìn có vẻ lãng phí cho tới khi cần dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 단일 장애점: điểm lỗi duy nhất trong đời sống đô thị
 
 Một **điểm lỗi duy nhất (single point of failure)** là thành phần mà nếu hỏng thì toàn hành trình dừng.
@@ -313,6 +360,8 @@ chỉ một phương thức xác thực
 
 Một thành phố thuận tiện có thể vô tình tạo phụ thuộc rất sâu vào một vài nền tảng hoặc thiết bị. Vì vậy thiết kế tốt cần nhận diện điểm lỗi duy nhất trước khi xảy ra sự cố.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **중복성: dự phòng nhìn có vẻ lãng phí cho tới khi cần dùng** tiếp nhận điểm tựa từ **단일 장애점: điểm lỗi duy nhất trong đời sống đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **점진적 성능 저하: thất bại tốt là thất bại có kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 중복성: dự phòng nhìn có vẻ lãng phí cho tới khi cần dùng
 
 **Dự phòng (redundancy)** nghĩa có thêm một tuyến, một thiết bị, một nguồn điện hoặc một kênh phục vụ để hệ thống tiếp tục hoạt động khi thành phần chính lỗi.
@@ -329,6 +378,8 @@ nhưng
 
 Đây là đánh đổi nền tảng giữa **hiệu quả** và **khả năng chống chịu**.
 
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **점진적 성능 저하: thất bại tốt là thất bại có kiểm soát** tiếp nhận điểm tựa từ **중복성: dự phòng nhìn có vẻ lãng phí cho tới khi cần dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정전·통신장애: sự cố hạ tầng có thể lan theo chuỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 점진적 성능 저하: thất bại tốt là thất bại có kiểm soát
 
 Không phải hệ thống chỉ có hai trạng thái “hoạt động hoàn hảo” và “tắt hoàn toàn”. Thiết kế tốt có thể cho phép **suy giảm chức năng có kiểm soát (graceful degradation)**.
@@ -343,6 +394,8 @@ hệ chính lỗi
 ```
 
 Đây là lý do xoá mọi kênh “cũ” không phải lúc nào cũng là hiện đại hoá tốt.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **점진적 성능 저하: thất bại tốt là thất bại có kiểm soát** xác định đầu vào; **정전·통신장애: sự cố hạ tầng có thể lan theo chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **대체 경로: đường vòng là một phần của thiết kế, không phải phương án sau cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 정전·통신장애: sự cố hạ tầng có thể lan theo chuỗi
 
@@ -359,6 +412,8 @@ Hệ thống càng tích hợp số, lợi ích bình thường càng lớn như
 
 Vì vậy khả năng phục hồi đô thị cần nhìn cả nguồn điện dự phòng, kênh thông báo, ưu tiên khôi phục và cách người dùng hành động khi ứng dụng quen thuộc không dùng được.
 
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **정전·통신장애: sự cố hạ tầng có thể lan theo chuỗi** xác định đầu vào; **대체 경로: đường vòng là một phần của thiết kế, không phải phương án sau cùng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **재난문자 và giao tiếp khẩn cấp: thông tin phải đến đúng lúc, đúng người** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 대체 경로: đường vòng là một phần của thiết kế, không phải phương án sau cùng
 
 Trong giao thông, **đường thay thế (fallback route)** có thể là tuyến tàu khác, xe buýt, taxi hoặc đi bộ. Trong dịch vụ số, nó có thể là quầy người thật, gọi điện hoặc giấy tờ thay thế.
@@ -372,6 +427,8 @@ phải tồn tại
 ```
 
 Một số hệ thống có “phương án dự phòng” trên giấy nhưng người dùng không tìm thấy khi cần. Vì vậy khả năng quan sát và hướng dẫn trong lúc lỗi cũng là một phần của thiết kế.
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **재난문자 và giao tiếp khẩn cấp: thông tin phải đến đúng lúc, đúng người** tiếp nhận điểm tựa từ **대체 경로: đường vòng là một phần của thiết kế, không phải phương án sau cùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **오프라인 대안: khả năng tiếp cận số cần cả phương án không số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 재난문자 và giao tiếp khẩn cấp: thông tin phải đến đúng lúc, đúng người
 
@@ -389,6 +446,8 @@ hành động khuyến nghị là gì?
 
 Thông tin tốt phải giúp người dùng chuyển từ biết rủi ro sang biết phải làm gì.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **오프라인 대안: khả năng tiếp cận số cần cả phương án không số** tiếp nhận điểm tựa từ **재난문자 và giao tiếp khẩn cấp: thông tin phải đến đúng lúc, đúng người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: đô thị như một chuỗi hệ thống phụ thuộc nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 오프라인 대안: khả năng tiếp cận số cần cả phương án không số
 
 Số hoá giúp giảm chi phí cho đa số người dùng, nhưng một hệ thống công cộng hoàn toàn phụ thuộc ứng dụng có thể loại trừ người không có điện thoại, tài khoản, phương thức xác thực hoặc kỹ năng số.
@@ -398,6 +457,8 @@ Vì vậy một câu hỏi quan trọng là:
 > Nếu điện thoại hết pin, mạng lỗi hoặc người dùng không thể xác thực, họ còn hoàn thành dịch vụ thiết yếu bằng cách nào?
 
 Đối với dịch vụ không thiết yếu, phương án thay thế có thể ít quan trọng hơn. Với giao thông, y tế, thanh toán hoặc dịch vụ công, đường lui có giá trị lớn hơn nhiều.
+
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **오프라인 대안: khả năng tiếp cận số cần cả phương án không số** xác định đầu vào; **Liên hệ kiến thức: đô thị như một chuỗi hệ thống phụ thuộc nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình hành trình: khả năng tiếp cận là tính chất của toàn chuỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ kiến thức: đô thị như một chuỗi hệ thống phụ thuộc nhau
 
@@ -413,6 +474,8 @@ xã hội: đánh giá, phép lịch sự, kỳ vọng
 ```
 
 Trải nghiệm ở lớp trên phụ thuộc độ tin cậy của lớp dưới. Một ứng dụng tuyệt vời không giải quyết được lối vào có bậc thang; thang máy tốt không giúp nếu kiosk cuối hành trình không dùng được; giao thông nhanh không có nhiều ý nghĩa nếu điểm đến không tiếp cận được.
+
+> **Chuyển mạch:** Ở chặng này của **Đô thị, tiêu dùng và đời sống số**, **Liên hệ kiến thức: đô thị như một chuỗi hệ thống phụ thuộc nhau** xác định đầu vào; **Mô hình hành trình: khả năng tiếp cận là tính chất của toàn chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình hành trình: khả năng tiếp cận là tính chất của toàn chuỗi
 
@@ -430,9 +493,13 @@ nhà
 
 Một mắt xích thất bại có thể làm toàn bộ hành trình thất bại. Đây là lý do thiết kế phổ quát (universal design) và khả năng tiếp cận không nên được xử lý như một mục phụ ở cuối dự án.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đô thị, tiêu dùng và đời sống số**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Mô hình hành trình: khả năng tiếp cận là tính chất của toàn chuỗi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Đời sống đô thị Hàn Quốc là một **hệ thống xã hội–kỹ thuật có độ trễ thấp (low-latency socio-technical system)**. Mật độ giúp đầu tư hạ tầng có hiệu quả; hạ tầng giúp nền tảng mở rộng; nền tảng làm dịch vụ nhanh; dịch vụ nhanh nâng kỳ vọng. Nhưng một đô thị mạnh không chỉ nhanh trong trạng thái bình thường. Nó còn phải có dự phòng, đường thay thế, khả năng suy giảm có kiểm soát và kênh thông tin để người có tuổi, khả năng cơ thể, ngôn ngữ và kỹ năng số khác nhau vẫn hoàn thành hành trình khi một phần hệ thống gặp lỗi.
+
+> **Chuyển mạch:** Trong **Đô thị, tiêu dùng và đời sống số**, **Hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -453,3 +520,5 @@ Một mắt xích thất bại có thể làm toàn bộ hành trình thất b�
 “Hệ thống nhanh thì chắc chắn đáng tin” là sai; tốc độ bình thường và khả năng chịu sự cố là hai thuộc tính khác nhau.
 
 “Có phương án dự phòng trên giấy nghĩa là hệ thống có khả năng phục hồi” là sai nếu người dùng không biết đường thay thế hoặc đường đó cũng phụ thuộc cùng điểm lỗi.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Hallyu, công nghiệp nội dung và văn hoá nền tảng
 
-> **Mạch đọc:** Đặt **Hallyu, công nghiệp nội dung và văn hoá nền tảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **한류: không phải một thể loại mà là một quá trình lưu thông** sang **Từ nội dung đến hệ thống lưu thông**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hallyu, công nghiệp nội dung và văn hóa nền tảng**. Route đi từ content production → agencies/platforms → circulation and fandom → localization → cultural/economic feedback, để Hallyu được đọc như một hệ thống lưu thông.
 
 ## 한류: không phải một thể loại mà là một quá trình lưu thông
 
@@ -10,6 +9,8 @@
 MCST công bố khảo sát Overseas Hallyu Survey 2025 dựa trên dữ liệu cuối năm 2024 với 26.400 người đã từng trải nghiệm nội dung văn hoá Hàn Quốc ở 28 khu vực. Khi được hỏi điều đầu tiên nghĩ tới khi nghe “Korea”, K-pop đứng đầu với 17,8%, sau đó là ẩm thực Hàn Quốc 11,8% và phim truyền hình 8,7%. Không nên diễn giải con số này thành “toàn thế giới nghĩ như vậy”, vì mẫu khảo sát chỉ gồm những người đã từng tiếp xúc với nội dung Hàn Quốc; định nghĩa quần thể khảo sát cần được giữ rõ.
 
 Một báo cáo MCST công bố tháng 2/2026 về xu hướng Hallyu năm 2025 phân tích lượng lớn bài báo và nội dung mạng xã hội tại nhiều quốc gia, cho thấy thảo luận ngày càng mở rộng sang văn học, điện ảnh, du lịch và tiêu dùng. Điều quan trọng hơn con số riêng lẻ là cơ chế: **Hallyu vận hành như một hệ sinh thái (ecosystem), không phải một nhóm sản phẩm duy nhất**.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Từ nội dung đến hệ thống lưu thông** tiếp nhận điểm tựa từ **한류: không phải một thể loại mà là một quá trình lưu thông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K-pop: âm nhạc + đào tạo + hình ảnh + hạ tầng fandom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ nội dung đến hệ thống lưu thông
 
@@ -28,6 +29,8 @@ người sáng tạo
 Nếu nội dung tốt nhưng ma sát phân phối (distribution friction) lớn, khả năng tiếp cận toàn cầu vẫn thấp. Ngược lại, nền tảng có độ phủ lớn nhưng nội dung không giữ được sự chú ý thì làn sóng cũng không bền.
 
 Vì vậy Hallyu cần được hiểu như tương tác giữa **sáng tạo, sản xuất, phân phối, khám phá nội dung, cộng đồng và thương mại**.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **K-pop: âm nhạc + đào tạo + hình ảnh + hạ tầng fandom** tiếp nhận điểm tựa từ **Từ nội dung đến hệ thống lưu thông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **기획사: công ty giải trí là một đơn vị phối hợp nhiều nghề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## K-pop: âm nhạc + đào tạo + hình ảnh + hạ tầng fandom
 
@@ -48,6 +51,8 @@ teaser
 
 Công ty giải trí có thể xem nhóm thần tượng như một kiến trúc sản phẩm (product architecture) gồm bản sắc thành viên, phong cách âm thanh, concept hình ảnh, tên fandom, light stick, nhịp phát hành và kênh cộng đồng. Cách nhìn này không phủ nhận nghệ thuật; nó giúp giải thích mức độ phối hợp công nghiệp bao quanh quá trình sáng tạo.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **기획사: công ty giải trí là một đơn vị phối hợp nhiều nghề** tiếp nhận điểm tựa từ **K-pop: âm nhạc + đào tạo + hình ảnh + hạ tầng fandom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **연습생: đào tạo, sàng lọc và thị trường lao động kiểu giải đấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 기획사: công ty giải trí là một đơn vị phối hợp nhiều nghề
 
 `기획사` có thể tham gia tuyển chọn, đào tạo, A&R, sản xuất, vũ đạo, tạo hình, tiếp thị, giao tiếp với fan, sắp lịch và cấp phép tài sản trí tuệ.
@@ -56,11 +61,15 @@ Nó gần với một **đơn vị tích hợp hệ thống (systems integrator)
 
 Khi sản phẩm cuối nhìn rất liền mạch, phía sau thường là một chuỗi lao động có độ phụ thuộc cao. Một nhóm trễ quay hình có thể làm lịch dựng, phát hành, quảng bá và biểu diễn đều bị đẩy theo.
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **연습생: đào tạo, sàng lọc và thị trường lao động kiểu giải đấu** tiếp nhận điểm tựa từ **기획사: công ty giải trí là một đơn vị phối hợp nhiều nghề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **데뷔와 컴백: phát hành trở thành một sự kiện xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 연습생: đào tạo, sàng lọc và thị trường lao động kiểu giải đấu
 
 Hệ thống **thực tập sinh (trainee / 연습생)** đào tạo hát, nhảy, ngoại ngữ, biểu diễn và kỹ năng trước camera. Nhiều người được đào tạo nhưng chỉ một phần ra mắt. Đây gần với **thị trường lao động kiểu giải đấu (tournament labour market)**, nơi phần thưởng tập trung mạnh ở nhóm đạt kết quả đầu.
 
 Áp lực sàng lọc có thể tạo kỹ năng cao nhưng cũng tạo chi phí thể chất, tâm lý và thời gian. Vì vậy khi phân tích hệ thống thần tượng, không nên chỉ nhìn người đã thành công; cần nhớ **thiên lệch sống sót (survivorship bias)** khiến những người rời hệ thống ít được nhìn thấy hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **데뷔와 컴백: phát hành trở thành một sự kiện xã hội** tiếp nhận điểm tựa từ **연습생: đào tạo, sàng lọc và thị trường lao động kiểu giải đấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **앨범·포토카드: vật mang âm nhạc trở thành đồ sưu tầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 데뷔와 컴백: phát hành trở thành một sự kiện xã hội
 
@@ -78,6 +87,8 @@ thông báo
 
 Chu kỳ này biến phát hành thành một thời điểm phối hợp giữa công ty, nghệ sĩ, nền tảng và fandom. Nó gần với **nhịp phát hành (release cadence)** của sản phẩm số: kỳ vọng được tạo trước, sản phẩm phát hành, chỉ số được theo dõi và vòng tiếp theo bắt đầu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **앨범·포토카드: vật mang âm nhạc trở thành đồ sưu tầm** tiếp nhận điểm tựa từ **데뷔와 컴백: phát hành trở thành một sự kiện xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **응원봉 và concert: khán giả trở thành một phần của hệ thống biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 앨범·포토카드: vật mang âm nhạc trở thành đồ sưu tầm
 
 Trong thời đại streaming, album vật lý không còn cần thiết để nghe nhạc. Tuy vậy album K-pop vẫn có giá trị vì thường đi kèm photobook, photocard ngẫu nhiên, nhiều phiên bản concept và vật phẩm sưu tầm.
@@ -90,6 +101,8 @@ chức năng mới: sưu tầm + trưng bày + ủng hộ + tham gia sự kiện
 
 Photocard tạo một nền kinh tế nhỏ gồm mở hộp, xác suất, trao đổi, bán lại và hoàn thành bộ. Giá trị không chỉ nằm ở vật liệu mà ở **độ khan hiếm + ý nghĩa fandom + nhu cầu mạng lưới**.
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **응원봉 và concert: khán giả trở thành một phần của hệ thống biểu diễn** tiếp nhận điểm tựa từ **앨범·포토카드: vật mang âm nhạc trở thành đồ sưu tầm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **팬덤: fandom như một tổ chức phân tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 응원봉 và concert: khán giả trở thành một phần của hệ thống biểu diễn
 
 `응원봉` — light stick — là biểu tượng thị giác của fandom. Khi hàng nghìn người đồng bộ màu và nhịp trong concert, khán giả trở thành một phần của thiết kế sân khấu.
@@ -97,6 +110,8 @@ Photocard tạo một nền kinh tế nhỏ gồm mở hộp, xác suất, trao 
 Có thể xem đây là **hệ thống hiển thị phân tán (distributed display system)**: mỗi người là một nút, toàn bộ địa điểm tạo thành một mẫu lớn. Công nghệ điều khiển có thể biến đám đông thành bề mặt hiển thị phối hợp.
 
 Điều này cho thấy người hâm mộ không chỉ “tiêu thụ” màn diễn; trong nhiều tình huống họ đồng tạo trải nghiệm tập thể.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **팬덤: fandom như một tổ chức phân tán** tiếp nhận điểm tựa từ **응원봉 và concert: khán giả trở thành một phần của hệ thống biểu diễn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **팬싸인회 và quan hệ cận xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 팬덤: fandom như một tổ chức phân tán
 
@@ -113,6 +128,8 @@ Một số từ cho thấy fandom có “trạng thái” riêng:
 
 Khi cộng đồng đặt tên cho trạng thái, người tham gia dễ mô tả trải nghiệm và phối hợp hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **팬싸인회 và quan hệ cận xã hội** tiếp nhận điểm tựa từ **팬덤: fandom như một tổ chức phân tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **팬 플랫폼: cộng đồng được nền tảng hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 팬싸인회 và quan hệ cận xã hội
 
 `팬사인회`, fan meeting, livestream và tin nhắn trả phí giảm khoảng cách cảm nhận giữa nghệ sĩ và fan. Tuy nhiên tương tác này luôn có cấu trúc: thời lượng, hàng chờ, an ninh, quy tắc và giới hạn truy cập.
@@ -127,11 +144,15 @@ quan hệ cá nhân tương hỗ đầy đủ
 
 Hiểu khác biệt này giúp tránh hai cực: coi cảm xúc fandom là giả, hoặc coi mọi tín hiệu từ người nổi tiếng như quan hệ riêng tư cá nhân.
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **팬 플랫폼: cộng đồng được nền tảng hoá** tiếp nhận điểm tựa từ **팬싸인회 và quan hệ cận xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **알고리즘과 바이럴: khả năng hiển thị là tài nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 팬 플랫폼: cộng đồng được nền tảng hoá
 
 Nền tảng fan có thể tập trung bài viết, livestream, membership, hàng lưu niệm và tương tác trả phí. Khi cộng đồng chuyển vào hạ tầng do doanh nghiệp sở hữu, nền tảng quyết định mức độ hiển thị, kiểm duyệt, kiếm tiền, tầng quyền truy cập và thu thập dữ liệu.
 
 Fandom vì vậy vừa là cộng đồng xã hội vừa nằm trong **nền kinh tế nền tảng (platform economy)**.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **알고리즘과 바이럴: khả năng hiển thị là tài nguyên** tiếp nhận điểm tựa từ **팬 플랫폼: cộng đồng được nền tảng hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Video ngắn làm thay đổi hình thức sáng tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 알고리즘과 바이럴: khả năng hiển thị là tài nguyên
 
@@ -147,11 +168,15 @@ tiếp xúc ban đầu
 
 Đây là vòng phản hồi (feedback loop / 피드백 루프). Tuy nhiên hiện tượng lan truyền không thể được thiết kế hoàn toàn. Thuật toán là độc quyền, khán giả không đồng nhất và thời điểm khó dự đoán. Vì vậy “chỉ cần tiếp thị là tạo được hit” là cách giải thích quá đơn giản.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Video ngắn làm thay đổi hình thức sáng tạo** tiếp nhận điểm tựa từ **알고리즘과 바이럴: khả năng hiển thị là tài nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng xếp hạng và vấn đề khi chỉ số trở thành mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Video ngắn làm thay đổi hình thức sáng tạo
 
 Khi thử thách nhảy và video ngắn trở thành kênh khám phá nội dung, một số vũ đạo có thể chứa đoạn dễ nhận diện trong vài giây. Điều này không có nghĩa mọi vũ đạo được tạo “cho TikTok”, nhưng **ràng buộc nền tảng (platform constraint)** có thể ảnh hưởng quyết định sáng tạo.
 
 Môi trường truyền thông định hình hình thức. Tương tự thiết kế web đáp ứng, nội dung có thể được tối ưu theo kích thước màn hình, thời lượng chú ý và cách thuật toán phân phối.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Bảng xếp hạng và vấn đề khi chỉ số trở thành mục tiêu** tiếp nhận điểm tựa từ **Video ngắn làm thay đổi hình thức sáng tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K-drama và OTT: phân phối phản hồi ngược vào sản xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảng xếp hạng và vấn đề khi chỉ số trở thành mục tiêu
 
@@ -166,6 +191,8 @@ chỉ số đo độ phổ biến
 
 Đây là hiệu ứng gần Luật Goodhart. Nó không làm bảng xếp hạng vô nghĩa; nó nhắc rằng phải hiểu **quá trình tạo dữ liệu** trước khi diễn giải dữ liệu.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **K-drama và OTT: phân phối phản hồi ngược vào sản xuất** tiếp nhận điểm tựa từ **Bảng xếp hạng và vấn đề khi chỉ số trở thành mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **편성에서 온디맨드까지: từ lịch phát sóng đến xem theo yêu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## K-drama và OTT: phân phối phản hồi ngược vào sản xuất
 
 **Phim truyền hình Hàn Quốc (K-drama / 한국 드라마)** từng phát triển mạnh qua truyền hình mặt đất và cáp, sau đó streaming làm thay đổi phân phối và tài chính sản xuất.
@@ -173,6 +200,8 @@ chỉ số đo độ phổ biến
 Nền tảng toàn cầu giảm ma sát địa lý bằng phụ đề, lồng tiếng, phát hành gần đồng thời và hệ thống đề xuất. Dữ liệu về tỷ lệ xem hết, nhu cầu theo vùng và sở thích thể loại có thể phản hồi ngược vào quyết định đầu tư.
 
 `OTT` trong thảo luận truyền thông Hàn Quốc thường chỉ nền tảng video trực tuyến. Khi nhà sản xuất thiết kế dự án cho khán giả toàn cầu ngay từ đầu, bản địa hoá không còn là bước làm sau cùng; nó có thể trở thành một phần của kiến trúc phát hành.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **편성에서 온디맨드까지: từ lịch phát sóng đến xem theo yêu cầu** tiếp nhận điểm tựa từ **K-drama và OTT: phân phối phản hồi ngược vào sản xuất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **영화 và 예능: nội dung không chỉ là sản phẩm cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 편성에서 온디맨드까지: từ lịch phát sóng đến xem theo yêu cầu
 
@@ -188,6 +217,8 @@ xem theo yêu cầu
 
 Xem liên tục nhiều tập (binge watching) vì vậy là một hành vi được tạo điều kiện bởi kiến trúc phân phối mới, không chỉ là thay đổi “tính kiên nhẫn” của người xem.
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **영화 và 예능: nội dung không chỉ là sản phẩm cuối** tiếp nhận điểm tựa từ **편성에서 온디맨드까지: từ lịch phát sóng đến xem theo yêu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **웹툰: hình thức sinh ra từ giao diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 영화 và 예능: nội dung không chỉ là sản phẩm cuối
 
 Điện ảnh Hàn Quốc có lịch sử riêng, được định hình bởi tài chính, mạng lưới rạp, liên hoan phim, chính sách, đạo diễn và khán giả. Thành công quốc tế của một số tác phẩm không nên khiến ta nhìn toàn bộ điện ảnh Hàn Quốc như một sản phẩm Hallyu đồng nhất.
@@ -196,6 +227,8 @@ Xem liên tục nhiều tập (binge watching) vì vậy là một hành vi đư
 
 Phụ đề trên màn hình `자막`, hiệu ứng âm thanh và cảnh phát lại cũng là một lớp ngữ pháp sáng tạo: giao diện thêm siêu dữ liệu giúp khán giả biết chỗ nào đáng chú ý, hài hước hoặc cần giải thích.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **웹툰: hình thức sinh ra từ giao diện** tiếp nhận điểm tựa từ **영화 và 예능: nội dung không chỉ là sản phẩm cuối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **웹소설: nội dung chi phí thấp hơn làm tín hiệu cho đầu tư lớn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 웹툰: hình thức sinh ra từ giao diện
 
 **Webtoon (웹툰)** không chỉ là truyện tranh giấy đưa lên mạng. Cuộn dọc, màn hình điện thoại, phát hành theo tập và bình luận nền tảng cùng định hình cách kể chuyện.
@@ -203,6 +236,8 @@ Phụ đề trên màn hình `자막`, hiệu ứng âm thanh và cảnh phát l
 Hình thức đi theo giao diện. Khi màn hình theo chiều dọc, cách chuyển cảnh, độ dài khoảng trắng và nhịp đọc cũng đổi.
 
 Webtoon có thể được chuyển thành phim truyền hình, điện ảnh hoặc trò chơi. Vì vậy nền tảng không chỉ phân phối nội dung; nó còn là một **hệ thống phát hiện tài sản trí tuệ**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **웹소설: nội dung chi phí thấp hơn làm tín hiệu cho đầu tư lớn hơn** tiếp nhận điểm tựa từ **웹툰: hình thức sinh ra từ giao diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **게임 và 게임방송: ranh giới giữa người chơi, khán giả và người sáng tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 웹소설: nội dung chi phí thấp hơn làm tín hiệu cho đầu tư lớn hơn
 
@@ -217,6 +252,8 @@ tiểu thuyết web
 
 Đây là **giá trị quyền chọn (option value)** của tài sản trí tuệ: thành công ở phương tiện ít tốn kém tạo tín hiệu trước khi đầu tư vào phương tiện đắt hơn.
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **게임 và 게임방송: ranh giới giữa người chơi, khán giả và người sáng tạo** tiếp nhận điểm tựa từ **웹소설: nội dung chi phí thấp hơn làm tín hiệu cho đầu tư lớn hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **크레딧 뒤의 사람들: một tác phẩm thành công là kết quả của nhiều nghề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 게임 và 게임방송: ranh giới giữa người chơi, khán giả và người sáng tạo
 
 Hàn Quốc có hệ sinh thái trò chơi trực tuyến và thể thao điện tử phát triển với PC bang, giải đấu, phát sóng và cộng đồng cạnh tranh.
@@ -226,6 +263,8 @@ Phát trực tiếp trò chơi tạo một đường mới giữa người chơi
 Vì vậy ranh giới giữa “người chơi”, “người xem” và “người sáng tạo” trở nên mờ hơn. Người dùng không chỉ ở cuối chuỗi; họ có thể tạo nội dung ở tầng sau.
 
 # Lao động sáng tạo: phần thường bị ẩn sau màn hình
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **크레딧 뒤의 사람들: một tác phẩm thành công là kết quả của nhiều nghề** tiếp nhận điểm tựa từ **게임 và 게임방송: ranh giới giữa người chơi, khán giả và người sáng tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로젝트 노동: công nghiệp nội dung vận hành mạnh theo dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 크레딧 뒤의 사람들: một tác phẩm thành công là kết quả của nhiều nghề
 
@@ -241,6 +280,8 @@ mức đóng góp cao hơn tuyệt đối
 
 Vì vậy phân tích Hallyu chỉ qua người nổi tiếng sẽ bỏ qua cấu trúc lao động làm sản phẩm có thể tồn tại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **프로젝트 노동: công nghiệp nội dung vận hành mạnh theo dự án** tiếp nhận điểm tựa từ **크레딧 뒤의 사람들: một tác phẩm thành công là kết quả của nhiều nghề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **작가·어시스턴트: tốc độ xuất bản có thể chuyển thành áp lực sản xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 프로젝트 노동: công nghiệp nội dung vận hành mạnh theo dự án
 
 Nhiều nghề sáng tạo không làm việc trong một dây chuyền cố định quanh năm. Họ có thể ký theo tác phẩm, mùa, tập, buổi diễn hoặc gói công việc. Điều này tạo **lao động theo dự án (project-based labour)**.
@@ -248,6 +289,8 @@ Nhiều nghề sáng tạo không làm việc trong một dây chuyền cố đ�
 Ưu điểm là đội ngũ có thể được lắp theo nhu cầu của từng tác phẩm. Mặt trái là thu nhập và lịch làm có thể biến động, việc tìm dự án tiếp theo trở thành một phần của công việc và thời gian nghỉ giữa hai dự án không phải lúc nào cũng là “nghỉ có lương”.
 
 Điều này nối trực tiếp với chương công sở [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md): văn hoá lao động sáng tạo không thể được hiểu hoàn toàn bằng mô hình nhân viên văn phòng chính thức.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **작가·어시스턴트: tốc độ xuất bản có thể chuyển thành áp lực sản xuất** tiếp nhận điểm tựa từ **프로젝트 노동: công nghiệp nội dung vận hành mạnh theo dự án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **댄서·안무가: người tạo ngôn ngữ biểu diễn không phải lúc nào cũng sở hữu thương hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 작가·어시스턴트: tốc độ xuất bản có thể chuyển thành áp lực sản xuất
 
@@ -264,6 +307,8 @@ lịch phát hành cố định
 ```
 
 Một hệ thống có năng suất cao không nhất thiết là hệ thống có điều kiện lao động tốt. Cần tách **thông lượng sản xuất (throughput)** khỏi **tính bền vững của lao động**.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **댄서·안무가: người tạo ngôn ngữ biểu diễn không phải lúc nào cũng sở hữu thương hiệu** tiếp nhận điểm tựa từ **작가·어시스턴트: tốc độ xuất bản có thể chuyển thành áp lực sản xuất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **번역·자막 노동: toàn cầu hoá phụ thuộc lao động ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 댄서·안무가: người tạo ngôn ngữ biểu diễn không phải lúc nào cũng sở hữu thương hiệu
 
@@ -282,6 +327,8 @@ ai nhận doanh thu?
 
 Bốn câu trả lời có thể không phải cùng một người.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **번역·자막 노동: toàn cầu hoá phụ thuộc lao động ngôn ngữ** tiếp nhận điểm tựa từ **댄서·안무가: người tạo ngôn ngữ biểu diễn không phải lúc nào cũng sở hữu thương hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **저작권: “người tạo ra” và “người khai thác” không luôn là một** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 번역·자막 노동: toàn cầu hoá phụ thuộc lao động ngôn ngữ
 
 Phụ đề và bản địa hoá giảm rào cản tiếp cận nhưng là lao động cần kiến thức ngôn ngữ, văn hoá và bối cảnh. Dịch kính ngữ, chơi chữ, tiếng lóng hoặc quan hệ thân tộc không phải thao tác thay từ đơn giản.
@@ -292,6 +339,8 @@ Toàn cầu hoá nội dung có một hạ tầng vô hình: **lao động ngôn
 
 # Sở hữu trí tuệ: ai sở hữu, ai được ghi công, ai nhận tiền?
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **저작권: “người tạo ra” và “người khai thác” không luôn là một** tiếp nhận điểm tựa từ **번역·자막 노동: toàn cầu hoá phụ thuộc lao động ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **크레딧 ≠ 소유권 ≠ 수익** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 저작권: “người tạo ra” và “người khai thác” không luôn là một
 
 **Quyền tác giả (저작권 / copyright)** là một nhóm quyền liên quan việc sử dụng tác phẩm. Trong thực tế công nghiệp, hợp đồng có thể phân chia quyền giữa tác giả, công ty, nhà xuất bản, hãng ghi âm, nền tảng hoặc nhà sản xuất theo nhiều cách khác nhau.
@@ -301,6 +350,8 @@ Không nên học bằng công thức “người sáng tạo luôn sở hữu m
 > **quyền cụ thể phụ thuộc loại tác phẩm, vai trò, hợp đồng và luật áp dụng.**
 
 Khi cần tư vấn pháp lý thực tế phải đọc hợp đồng và quy định hiện hành; chương này chỉ xây mô hình khái niệm.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **크레딧 ≠ 소유권 ≠ 수익** tiếp nhận điểm tựa từ **저작권: “người tạo ra” và “người khai thác” không luôn là một** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2차적저작물 và chuyển thể: một câu chuyện có thể tạo nhiều dòng giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 크레딧 ≠ 소유권 ≠ 수익
 
@@ -316,6 +367,8 @@ Một người có thể được ghi tên nhưng nhận thù lao cố định m
 
 Tách ba lớp này giúp hiểu vì sao “tác phẩm rất thành công” không tự động nghĩa mọi người tham gia đều trở nên giàu có.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **2차적저작물 và chuyển thể: một câu chuyện có thể tạo nhiều dòng giá trị** tiếp nhận điểm tựa từ **크레딧 ≠ 소유권 ≠ 수익** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **플랫폼과 협상력: nền tảng không chỉ phân phối mà còn đặt điều kiện tiếp cận thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2차적저작물 và chuyển thể: một câu chuyện có thể tạo nhiều dòng giá trị
 
 Khi tiểu thuyết web trở thành webtoon rồi thành phim, giá trị không chỉ nằm ở bản gốc mà còn ở **quyền chuyển thể (adaptation rights)** và các quyền khai thác tiếp theo.
@@ -330,6 +383,8 @@ câu chuyện gốc
 ```
 
 Một tài sản trí tuệ mạnh có thể tạo nhiều dòng doanh thu, nhưng mỗi tầng có thể có chủ thể và hợp đồng khác nhau. Vì vậy **đồ thị IP (IP graph)** hữu ích hơn cách nghĩ “một sản phẩm = một quyền”.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **플랫폼과 협상력: nền tảng không chỉ phân phối mà còn đặt điều kiện tiếp cận thị trường** tiếp nhận điểm tựa từ **2차적저작물 và chuyển thể: một câu chuyện có thể tạo nhiều dòng giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **데이터 비대칭: nền tảng có thể biết nhiều hơn người sáng tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 플랫폼과 협상력: nền tảng không chỉ phân phối mà còn đặt điều kiện tiếp cận thị trường
 
@@ -348,6 +403,8 @@ quy mô khán giả của nền tảng
 
 Vì vậy “nền tảng giúp người sáng tạo” và “nền tảng bóc lột người sáng tạo” đều quá thô nếu không xem hợp đồng, lựa chọn thay thế và cấu trúc doanh thu cụ thể.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **데이터 비대칭: nền tảng có thể biết nhiều hơn người sáng tạo** tiếp nhận điểm tựa từ **플랫폼과 협상력: nền tảng không chỉ phân phối mà còn đặt điều kiện tiếp cận thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프리랜서와 포트폴리오: danh tiếng trở thành vốn nghề nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 데이터 비대칭: nền tảng có thể biết nhiều hơn người sáng tạo
 
 Nền tảng thường nhìn thấy dữ liệu hành vi ở quy mô lớn: tỷ lệ xem hết, thời gian đọc, chuyển đổi trả phí, khu vực tăng trưởng, tỷ lệ rời bỏ. Người sáng tạo có thể chỉ nhìn thấy một phần.
@@ -356,11 +413,15 @@ Nền tảng thường nhìn thấy dữ liệu hành vi ở quy mô lớn: tỷ
 
 Minh bạch dữ liệu vì vậy không chỉ là câu hỏi kỹ thuật; nó có thể ảnh hưởng quyền thương lượng kinh tế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **프리랜서와 포트폴리오: danh tiếng trở thành vốn nghề nghiệp** tiếp nhận điểm tựa từ **데이터 비대칭: nền tảng có thể biết nhiều hơn người sáng tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **성공 작품과 분배 문제: tổng giá trị tăng không nói được cách giá trị được chia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 프리랜서와 포트폴리오: danh tiếng trở thành vốn nghề nghiệp
 
 Trong công việc sáng tạo theo dự án, portfolio và credit của dự án trước giúp người lao động tìm dự án sau. Danh tiếng vì vậy là một dạng **vốn nghề nghiệp (career capital)**.
 
 Nhưng nếu người làm hậu trường không được ghi công rõ hoặc bị ràng buộc không thể công khai sản phẩm, khả năng biến kinh nghiệm thành cơ hội tiếp theo giảm. Ghi công vì vậy có giá trị kinh tế ngoài giá trị danh dự.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **성공 작품과 분배 문제: tổng giá trị tăng không nói được cách giá trị được chia** tiếp nhận điểm tựa từ **프리랜서와 포트폴리오: danh tiếng trở thành vốn nghề nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI, giọng nói và hình ảnh tổng hợp: khả năng sao chép mới làm ranh giới quyền phức tạp hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 성공 작품과 분배 문제: tổng giá trị tăng không nói được cách giá trị được chia
 
@@ -379,6 +440,8 @@ Không thể suy thu nhập cá nhân từ doanh thu đầu bảng nếu không 
 
 Đây là liên hệ với [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md): **tạo ra giá trị** và **phân phối giá trị** là hai câu hỏi khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **AI, giọng nói và hình ảnh tổng hợp: khả năng sao chép mới làm ranh giới quyền phức tạp hơn** gom các mảnh từ **성공 작품과 분배 문제: tổng giá trị tăng không nói được cách giá trị được chia** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **한식, K-beauty, du lịch và học tiếng Hàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## AI, giọng nói và hình ảnh tổng hợp: khả năng sao chép mới làm ranh giới quyền phức tạp hơn
 
 Công nghệ tạo sinh có thể mô phỏng giọng, khuôn mặt, phong cách hoặc tạo biến thể nội dung với chi phí thấp hơn trước. Điều này đặt ra câu hỏi về đồng ý, quyền hình ảnh, dữ liệu huấn luyện, ghi công và cách phân biệt sản phẩm chính thức với nội dung giả mạo.
@@ -394,6 +457,8 @@ chi phí sao chép / biến đổi giảm
 Đây là vấn đề hạ tầng niềm tin, không chỉ vấn đề “AI tốt hay xấu”.
 
 # Hallyu và các ngành lân cận
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **한식, K-beauty, du lịch và học tiếng Hàn** gom các mảnh từ **AI, giọng nói và hình ảnh tổng hợp: khả năng sao chép mới làm ranh giới quyền phức tạp hơn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bản địa hoá và dịch văn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 한식, K-beauty, du lịch và học tiếng Hàn
 
@@ -412,6 +477,8 @@ Một địa điểm quay phim cũng có thể trở thành điểm đến nhờ
 
 Sự tăng khách có thể tạo lợi ích kinh tế nhưng cũng gây tác động ngoại biên lên cư dân, giao thông và cơ cấu kinh doanh địa phương.
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Bản địa hoá và dịch văn hoá** tiếp nhận điểm tựa từ **한식, K-beauty, du lịch và học tiếng Hàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức mạnh mềm và giới hạn của khái niệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bản địa hoá và dịch văn hoá
 
 Khi nội dung đi quốc tế, phụ đề phải xử lý kính ngữ, tên món ăn, trò đùa và từ thân tộc. Dịch `오빠` thành “brother” thường sai trong bối cảnh tình cảm hoặc fandom; giữ nguyên tiếng Hàn lại đòi khán giả học thêm bối cảnh.
@@ -419,6 +486,8 @@ Khi nội dung đi quốc tế, phụ đề phải xử lý kính ngữ, tên m�
 Dịch gần với **nén có mất mát (lossy compression)**: không thể giữ mọi đặc điểm ngữ nghĩa với cùng độ dài, nên người dịch phải chọn yếu tố quan trọng nhất cho cảnh.
 
 Trước khi phụ đề chính thức mở rộng, fansub từng là hạ tầng tình nguyện quan trọng với một số cộng đồng. Tuy nhiên đóng góp cộng đồng không tự động thay thế bản địa hoá chuyên nghiệp về độ ổn định, bản quyền và kiểm soát chất lượng.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Bản địa hoá và dịch văn hoá** đã nêu tiêu chí phân biệt, còn **Sức mạnh mềm và giới hạn của khái niệm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Hallyu không tăng mãi theo đường thẳng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sức mạnh mềm và giới hạn của khái niệm
 
@@ -428,6 +497,8 @@ Hình ảnh quốc gia, thành công thương mại và giá trị nghệ thuậ
 
 Chính phủ, doanh nghiệp, người sáng tạo, fan và nền tảng cũng có động lực khác nhau. Hệ sinh thái vận hành vì các động lực đôi lúc cùng hướng, không phải vì một bộ điều khiển trung tâm thiết kế toàn bộ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Sức mạnh mềm và giới hạn của khái niệm** đã nêu tiêu chí phân biệt, còn **Hallyu không tăng mãi theo đường thẳng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Từ bật đèn xanh đến kho nội dung lâu dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hallyu không tăng mãi theo đường thẳng
 
 Khán giả có thể mệt với công thức lặp lại, ngành nội dung địa phương có thể phản ứng, biến động địa chính trị có thể làm phân phối khó hơn hoặc nền tảng thay thuật toán.
@@ -435,6 +506,8 @@ Khán giả có thể mệt với công thức lặp lại, ngành nội dung đ
 Vì vậy Hallyu nên được mô hình hoá như hệ thống động có tăng trưởng, bão hoà, phản ứng ngược và thích nghi.
 
 # Kinh tế vòng đời nội dung: một hit không kết thúc ở ngày phát hành
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Từ bật đèn xanh đến kho nội dung lâu dài** tiếp nhận điểm tựa từ **Hallyu không tăng mãi theo đường thẳng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Danh mục dự án: công ty không thể đặt cược mọi thứ vào một hit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ bật đèn xanh đến kho nội dung lâu dài
 
@@ -455,6 +528,8 @@ phát triển ý tưởng
 
 Vì vậy **vòng đời nội dung (content lifecycle)** dài hơn thời điểm nội dung đang thịnh hành.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Danh mục dự án: công ty không thể đặt cược mọi thứ vào một hit** tiếp nhận điểm tựa từ **Từ bật đèn xanh đến kho nội dung lâu dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cửa sổ phát hành: cùng một nội dung có thể được khai thác theo thời gian khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Danh mục dự án: công ty không thể đặt cược mọi thứ vào một hit
 
 Công nghiệp nội dung có độ bất định cao. Một tác phẩm được đầu tư lớn vẫn có thể thất bại; một tác phẩm nhỏ có thể bất ngờ lan rộng. Vì vậy công ty thường quản lý nhiều dự án như một **danh mục (portfolio)**.
@@ -468,11 +543,15 @@ nhiều dự án
 
 Điều này giải thích tại sao hệ sinh thái cần cả dự án thử nghiệm, nội dung đại chúng, nghệ sĩ mới và tài sản trí tuệ đã chứng minh nhu cầu. Tối ưu từng dự án riêng lẻ không giống tối ưu toàn bộ danh mục.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Cửa sổ phát hành: cùng một nội dung có thể được khai thác theo thời gian khác nhau** tiếp nhận điểm tựa từ **Danh mục dự án: công ty không thể đặt cược mọi thứ vào một hit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kho nội dung cũ: giá trị không chỉ đến từ sản phẩm mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cửa sổ phát hành: cùng một nội dung có thể được khai thác theo thời gian khác nhau
 
 Nội dung có thể đi qua nhiều **cửa sổ phát hành (release windows)**: rạp, truyền hình, nền tảng đăng ký, mua lẻ, thị trường quốc tế hoặc phát hành lại. Thứ tự và thời gian giữa các cửa sổ ảnh hưởng doanh thu, khả năng tiếp cận và nguy cơ người xem chuyển sang kênh khác.
 
 Streaming làm một số cửa sổ ngắn lại hoặc biến mất, nhưng nguyên lý vẫn còn: **quyền truy cập vào cùng nội dung có thể được định giá khác theo thời điểm, khu vực và kênh**.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Kho nội dung cũ: giá trị không chỉ đến từ sản phẩm mới** tiếp nhận điểm tựa từ **Cửa sổ phát hành: cùng một nội dung có thể được khai thác theo thời gian khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giữ chân người dùng: nền tảng cần nhiều hơn một tác phẩm nổi tiếng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kho nội dung cũ: giá trị không chỉ đến từ sản phẩm mới
 
@@ -489,6 +568,8 @@ nội dung cũ
 
 Một “hit cũ” vì vậy có thể trở thành tài sản dài hạn.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Giữ chân người dùng: nền tảng cần nhiều hơn một tác phẩm nổi tiếng** tiếp nhận điểm tựa từ **Kho nội dung cũ: giá trị không chỉ đến từ sản phẩm mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu có thể tối ưu phân phối nhưng không thay được phán đoán sáng tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giữ chân người dùng: nền tảng cần nhiều hơn một tác phẩm nổi tiếng
 
 Một phim nổi tiếng có thể kéo người dùng đến, nhưng nền tảng muốn họ tiếp tục ở lại sau khi xem xong. Vì vậy cần phân biệt:
@@ -498,6 +579,8 @@ Một phim nổi tiếng có thể kéo người dùng đến, nhưng nền tả
 - **rời bỏ (churn)**: khi nào người dùng ngừng trả tiền hoặc ngừng dùng.
 
 Một tác phẩm có thể rất mạnh ở thu hút nhưng yếu ở giữ chân nếu sau đó không có nội dung phù hợp tiếp theo. Vì vậy chiến lược nền tảng thường phụ thuộc cả danh mục, lịch phát hành và khả năng đề xuất nội dung kế tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Giữ chân người dùng: nền tảng cần nhiều hơn một tác phẩm nổi tiếng** nêu điều cần giải thích; **Dữ liệu có thể tối ưu phân phối nhưng không thay được phán đoán sáng tạo** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thành công toàn cầu và bài toán bản địa hoá nhiều tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dữ liệu có thể tối ưu phân phối nhưng không thay được phán đoán sáng tạo
 
@@ -513,6 +596,8 @@ nhưng
 ```
 
 Đây là đánh đổi giữa **khai thác cái đã biết (exploitation)** và **khám phá cái mới (exploration)**.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Dữ liệu có thể tối ưu phân phối nhưng không thay được phán đoán sáng tạo** nêu điều cần giải thích; **Thành công toàn cầu và bài toán bản địa hoá nhiều tầng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tính xác thực và tính dễ tiếp cận toàn cầu không phải hai cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thành công toàn cầu và bài toán bản địa hoá nhiều tầng
 
@@ -530,6 +615,8 @@ ngôn ngữ
 
 Một tác phẩm có thể thành công ở nước này nhưng không ở nước khác vì các tầng ma sát khác nhau. “Nội dung phổ quát” hiếm khi hoàn toàn không cần hạ tầng địa phương.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Tính xác thực và tính dễ tiếp cận toàn cầu không phải hai cực** tiếp nhận điểm tựa từ **Thành công toàn cầu và bài toán bản địa hoá nhiều tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cạnh tranh chú ý và bão hoà: nhiều nội dung hơn có thể làm mỗi nội dung khó được nhìn thấy hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính xác thực và tính dễ tiếp cận toàn cầu không phải hai cực
 
 Khi nội dung được xuất khẩu, người sản xuất có thể đứng trước câu hỏi: giữ chi tiết địa phương đến mức nào, giải thích bao nhiêu, thay đổi bao nhiêu để khán giả mới hiểu?
@@ -537,6 +624,8 @@ Khi nội dung được xuất khẩu, người sản xuất có thể đứng t
 Nếu giản lược quá mạnh, tác phẩm có thể mất đặc trưng; nếu giữ mọi tham chiếu mà không tạo lối vào, chi phí hiểu tăng. Đây là bài toán **bản địa đặc thù ↔ khả năng tiếp cận quốc tế**.
 
 Phụ đề, chú thích ngữ cảnh, chiến dịch truyền thông và cộng đồng fan có thể đóng vai trò lớp cầu nối thay vì buộc bản thân tác phẩm phải xoá mọi đặc trưng địa phương.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Cạnh tranh chú ý và bão hoà: nhiều nội dung hơn có thể làm mỗi nội dung khó được nhìn thấy hơn** tiếp nhận điểm tựa từ **Tính xác thực và tính dễ tiếp cận toàn cầu không phải hai cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền sở hữu IP và quyền thương lượng tích luỹ theo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cạnh tranh chú ý và bão hoà: nhiều nội dung hơn có thể làm mỗi nội dung khó được nhìn thấy hơn
 
@@ -549,6 +638,8 @@ nguồn cung nội dung tăng nhanh
 ```
 
 Khi đó chi phí tiếp thị, thương hiệu nghệ sĩ, fandom có sẵn và vị trí trên nền tảng trở nên quan trọng hơn. Đây là lý do thành công của ngành không tự động đồng nghĩa cơ hội của mọi người sáng tạo đều tăng như nhau.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Quyền sở hữu IP và quyền thương lượng tích luỹ theo thời gian** tiếp nhận điểm tựa từ **Cạnh tranh chú ý và bão hoà: nhiều nội dung hơn có thể làm mỗi nội dung khó được nhìn thấy hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lưu trữ, phiên bản và “bản chính thức” trong thời đại số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quyền sở hữu IP và quyền thương lượng tích luỹ theo thời gian
 
@@ -565,6 +656,8 @@ IP thành công
 ```
 
 Cơ chế này giúp giải thích vì sao thị trường sáng tạo có thể đồng thời rất năng động và rất tập trung.
+
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Lưu trữ, phiên bản và “bản chính thức” trong thời đại số** tiếp nhận điểm tựa từ **Quyền sở hữu IP và quyền thương lượng tích luỹ theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hallyu như một vòng phản hồi giữa nội dung, dữ liệu và vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lưu trữ, phiên bản và “bản chính thức” trong thời đại số
 
@@ -583,6 +676,8 @@ phiên bản
 
 Khi nền tảng đóng hoặc quyền phân phối hết hạn, nội dung có thể biến mất khỏi nơi người dùng quen truy cập dù dữ liệu vật lý vẫn tồn tại. Vì vậy bảo tồn văn hoá số liên quan cả lưu trữ lẫn quyền truy cập.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Lưu trữ, phiên bản và “bản chính thức” trong thời đại số** nêu điều cần giải thích; **Hallyu như một vòng phản hồi giữa nội dung, dữ liệu và vốn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên hệ kiến thức: Hallyu như một chồng giao thức và chuỗi giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hallyu như một vòng phản hồi giữa nội dung, dữ liệu và vốn
 
 Có thể mô hình hoá sâu hơn:
@@ -597,6 +692,8 @@ nội dung
 ```
 
 Nếu vòng phản hồi quá tập trung vào chỉ số ngắn hạn, hệ thống có thể ưu tiên công thức dễ đo. Nếu không dùng dữ liệu, nhà đầu tư lại bỏ qua tín hiệu nhu cầu có giá trị. Bài toán không phải “dùng dữ liệu hay không”, mà là **dùng dữ liệu cho câu hỏi nào và giữ bao nhiêu không gian cho thử nghiệm sáng tạo**.
+
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Hallyu như một vòng phản hồi giữa nội dung, dữ liệu và vốn** nêu điều cần giải thích; **Liên hệ kiến thức: Hallyu như một chồng giao thức và chuỗi giá trị** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ kiến thức: Hallyu như một chồng giao thức và chuỗi giá trị
 
@@ -616,9 +713,13 @@ lớp vòng đời: danh mục / phát hành lại / lưu trữ / tái khám ph�
 
 Lỗi hoặc bất cân xứng ở một lớp có thể làm thay đổi giá trị của lớp khác. Nội dung xuất sắc nhưng không được phân phối sẽ khó tiếp cận; người sáng tạo có tác phẩm nổi tiếng nhưng hợp đồng yếu có thể nhận ít giá trị kinh tế; nền tảng lớn nhưng mất lòng tin của người dùng có thể giảm sức mạnh mạng lưới.
 
+> **Chuyển mạch:** Ở chặng này của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: Hallyu như một chồng giao thức và chuỗi giá trị** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Hallyu là **mạng lưới giữa sáng tạo, lao động, quyền sở hữu trí tuệ, nền tảng, fandom, dữ liệu và vòng đời khai thác nội dung**. Người nổi tiếng là phần dễ thấy nhất, nhưng không phải toàn bộ hệ thống. Muốn hiểu một “làn sóng”, phải hỏi đồng thời: ai tạo ra nội dung, ai tài trợ, ai giữ quyền, ai phân phối, ai làm nội dung được nhìn thấy, giá trị được chia như thế nào và tài sản đó còn được khai thác ra sao sau thời điểm phát hành đầu tiên.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn tham khảo cập nhật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -642,6 +743,8 @@ Lỗi hoặc bất cân xứng ở một lớp có thể làm thay đổi giá t
 
 “Dữ liệu sẽ cho biết chính xác nên sáng tạo gì” là sai; dữ liệu giảm một phần bất định nhưng không thay được thử nghiệm, phán đoán nghệ thuật và khả năng tạo nhu cầu mới.
 
+> **Chuyển mạch:** Trong **Hallyu, công nghiệp nội dung và văn hoá nền tảng**, **Những hiểu lầm phổ biến** nêu điều cần giải thích; **Nguồn tham khảo cập nhật** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Nguồn tham khảo cập nhật
 
 Các nguồn này dùng để kiểm tra số liệu nền tảng, chính sách bản quyền và xu hướng thị trường theo thời điểm. Hãy ghi ngày truy cập vì dữ liệu Hallyu thay đổi nhanh.
@@ -649,3 +752,5 @@ Các nguồn này dùng để kiểm tra số liệu nền tảng, chính sách 
 - Ministry of Culture, Sports and Tourism, 2025 Overseas Hallyu Survey, công bố 8/4/2025.
 - Ministry of Culture, Sports and Tourism, 2025 Global Hallyu Trend Analysis Report, công bố 25/2/2026.
 - Khi nghiên cứu hợp đồng hoặc quyền sở hữu trí tuệ cụ thể, cần dùng luật hiện hành, hợp đồng thực tế và nguồn chuyên môn; chương này chỉ cung cấp khung phân tích văn hoá–kinh tế.
+
+> **Bàn giao:** Sau **Nguồn tham khảo cập nhật**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,13 +1,14 @@
 # Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh
 
-> **Mạch đọc:** Đặt **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục đích của chương này** sang **Liên hệ 1: Quan hệ ↔ ngôn ngữ ↔ quyền lực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Liên hệ kiến thức, mental models và những hiểu lầm cần tránh**. Route đi từ relations/language/power → family/workplace → food/ritual/space → media/urban change → misconception boundaries, để connection giải thích cơ chế thay vì gắn nhãn.
 
 ## Mục đích của chương này
 
 Các chương trước đã giải thích từng hệ thống con. Chương này không tóm tắt theo kiểu cheat sheet mà xây một **đồ thị kiến thức (knowledge graph)**: những ý tưởng nào thực chất là cùng một cơ chế nhưng xuất hiện trong gia đình, ngôn ngữ, công ty, ẩm thực và công nghệ.
 
 Nếu sau khi đọc bạn chỉ nhớ danh sách `정`, `눈치`, `한`, `빨리빨리`, bộ sách chưa đạt mục tiêu. Điều cần đạt là khi gặp tình huống mới — một cuộc họp, đám cưới, bữa nhậu, bình luận trong KakaoTalk hay một bộ phim — bạn có thể phân rã nó thành quan hệ, động lực, tín hiệu, môi trường và lớp lịch sử.
+
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 1: Quan hệ ↔ ngôn ngữ ↔ quyền lực** tiếp nhận điểm tựa từ **Mục đích của chương này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 2: 눈치 ↔ giao tiếp ngữ cảnh cao ↔ API không có tài liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 1: Quan hệ ↔ ngôn ngữ ↔ quyền lực
 
@@ -23,6 +24,8 @@ D --> A
 
 Nếu công ty đổi chức danh nhưng giữ nguyên quyền đánh giá, vòng lặp chỉ bị sửa ở lớp ngôn ngữ. Vì vậy bề mặt giao tiếp có thể thay trước cấu trúc quyền lực thực.
 
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 2: 눈치 ↔ giao tiếp ngữ cảnh cao ↔ API không có tài liệu** tiếp nhận điểm tựa từ **Liên hệ 1: Quan hệ ↔ ngôn ngữ ↔ quyền lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 3: 정 ↔ tính có đi có lại ↔ trò chơi lặp lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 2: 눈치 ↔ giao tiếp ngữ cảnh cao ↔ API không có tài liệu
 
 `눈치` hoạt động hiệu quả khi mọi người chia sẻ đủ bối cảnh. Một nhóm làm việc lâu năm có thể truyền nhiều ý nghĩa bằng rất ít từ. Có thể xem đây là **nén thông tin (compression)**: nền tảng chung đóng vai trò như từ điển.
@@ -33,6 +36,8 @@ Nhưng cơ chế nén này dễ thất bại khi có người mới hoặc nhóm
 
 > Giao tiếp ngữ cảnh cao (high-context communication) hiệu quả khi mạng lưới có lịch sử chung; giao tiếp rõ ràng, tường minh hiệu quả hơn khi mạng lưới không đồng nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 3: 정 ↔ tính có đi có lại ↔ trò chơi lặp lại** tiếp nhận điểm tựa từ **Liên hệ 2: 눈치 ↔ giao tiếp ngữ cảnh cao ↔ API không có tài liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 4: 체면 ↔ giữ thể diện ↔ xử lý lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 3: 정 ↔ tính có đi có lại ↔ trò chơi lặp lại
 
 Trong lý thuyết trò chơi, **trò chơi lặp lại (repeated game / 반복 게임)** khác trò chơi một lần vì người chơi biết họ sẽ còn gặp lại nhau. Hợp tác có thể bền hơn khi danh tiếng và tương tác tương lai quan trọng.
@@ -41,6 +46,8 @@ Trong lý thuyết trò chơi, **trò chơi lặp lại (repeated game / 반복 
 
 Văn hoá ở đây là cơ chế làm tương tác trong tương lai trở nên nổi bật trong quyết định hiện tại.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 4: 체면 ↔ giữ thể diện ↔ xử lý lỗi** tiếp nhận điểm tựa từ **Liên hệ 3: 정 ↔ tính có đi có lại ↔ trò chơi lặp lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 5: 빨리빨리 ↔ logistics ↔ vòng phản hồi kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 4: 체면 ↔ giữ thể diện ↔ xử lý lỗi
 
 Trong kỹ thuật, thông báo lỗi tốt phải cung cấp đủ thông tin để sửa nhưng không làm người dùng mất niềm tin. Trong tương tác xã hội, phê bình cũng là một dạng xử lý lỗi.
@@ -48,6 +55,8 @@ Trong kỹ thuật, thông báo lỗi tốt phải cung cấp đủ thông tin �
 Nếu phản hồi công khai và mang tính buộc tội, người nhận phải đồng thời sửa vấn đề và bảo vệ hình ảnh xã hội của mình. Năng lực chú ý bị chia đôi. Phản hồi riêng, dựa trên bằng chứng thường giảm tải thứ cấp này.
 
 Giữ thể diện không đồng nghĩa che giấu lỗi. Giao thức tốt là bảo vệ phẩm giá trong khi vẫn làm vấn đề được nhìn thấy rõ.
+
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 5: 빨리빨리 ↔ logistics ↔ vòng phản hồi kỳ vọng** tiếp nhận điểm tựa từ **Liên hệ 4: 체면 ↔ giữ thể diện ↔ xử lý lỗi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 6: 교육열 ↔ tín hiệu ↔ cuộc đua vị thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 5: 빨리빨리 ↔ logistics ↔ vòng phản hồi kỳ vọng
 
@@ -63,11 +72,15 @@ hạ tầng tốt hơn
 
 Cùng lô-gic (logic / 논리) xuất hiện trong tốc độ Internet, thanh toán di động và phản hồi khách hàng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 6: 교육열 ↔ tín hiệu ↔ cuộc đua vị thế** tiếp nhận điểm tựa từ **Liên hệ 5: 빨리빨리 ↔ logistics ↔ vòng phản hồi kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 7: 김장 ↔ lao động phân tán ↔ công nghệ bảo quản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 6: 교육열 ↔ tín hiệu ↔ cuộc đua vị thế
 
 Nếu bằng cấp là tín hiệu hiếm, nó phân biệt ứng viên tốt. Khi quá nhiều người có cùng bằng, thị trường tìm tín hiệu mới: trường tốt hơn, chứng chỉ, thực tập, điểm ngoại ngữ. Người học đầu tư thêm để giữ vị trí tương đối.
 
 Đây là **cạnh tranh vị thế (positional competition / 지위 경쟁)**. Chi phí cá nhân có thể hợp lý với từng người nhưng tổng chi phí xã hội tăng. Cơ chế tương tự xuất hiện ở thương hiệu xa xỉ, khu nhà có trường tốt và bằng cấp nghề nghiệp.
+
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 7: 김장 ↔ lao động phân tán ↔ công nghệ bảo quản** tiếp nhận điểm tựa từ **Liên hệ 6: 교육열 ↔ tín hiệu ↔ cuộc đua vị thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 8: 온돌 ↔ văn hoá cơ thể ↔ khả năng hành động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 7: 김장 ↔ lao động phân tán ↔ công nghệ bảo quản
 
@@ -75,11 +88,15 @@ Kimjang giải một bài toán vật chất: bảo quản rau qua mùa đông. 
 
 Khi tủ lạnh và siêu thị giảm nhu cầu phải tự bảo quản, lao động hợp tác giảm; ý nghĩa tụ họp vẫn có thể còn. Công nghệ thay chức năng nhưng không xoá ý nghĩa ngay lập tức.
 
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 8: 온돌 ↔ văn hoá cơ thể ↔ khả năng hành động** tiếp nhận điểm tựa từ **Liên hệ 7: 김장 ↔ lao động phân tán ↔ công nghệ bảo quản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 9: 아파트 ↔ hộ gia đình ↔ tài chính ↔ giáo dục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 8: 온돌 ↔ văn hoá cơ thể ↔ khả năng hành động
 
 Sàn ấm làm việc ngồi sàn thoải mái; ngồi sàn làm độ sạch của sàn quan trọng hơn; nhu cầu giữ sàn sạch làm ranh giới tháo giày mạnh hơn. Một hệ kỹ thuật kéo theo quy ước xã hội.
 
 Đây là khái niệm **khả năng hành động (affordance)**: môi trường làm một hành vi trở nên dễ hoặc tự nhiên hơn. Nhiều tập quán trông hoàn toàn biểu tượng thực ra có nền tảng vật chất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 9: 아파트 ↔ hộ gia đình ↔ tài chính ↔ giáo dục** tiếp nhận điểm tựa từ **Liên hệ 8: 온돌 ↔ văn hoá cơ thể ↔ khả năng hành động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 10: Hallyu ↔ nền tảng ↔ hiệu ứng mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 9: 아파트 ↔ hộ gia đình ↔ tài chính ↔ giáo dục
 
@@ -89,11 +106,15 @@ Vị trí căn hộ ảnh hưởng thời gian đi lại và tiếp cận trư�
 
 Không thể hiểu vấn đề xã hội nếu chia mỗi lĩnh vực thành một ngăn độc lập.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 10: Hallyu ↔ nền tảng ↔ hiệu ứng mạng** tiếp nhận điểm tựa từ **Liên hệ 9: 아파트 ↔ hộ gia đình ↔ tài chính ↔ giáo dục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 11: Truyền thống ↔ hiện đại không phải hai cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 10: Hallyu ↔ nền tảng ↔ hiệu ứng mạng
 
 Hallyu toàn cầu không chỉ nhờ chất lượng nội dung. Nền tảng giảm chi phí phân phối; phụ đề giảm rào cản ngôn ngữ; fandom khuếch đại miễn phí; thuật toán tăng khả năng được khám phá; thành công lại hút thêm đầu tư.
 
 Đây là hệ sinh thái có phản hồi dương. Tuy nhiên phản hồi dương cũng có thể tạo tập trung: một số ít sản phẩm nổi bật nhận lượng chú ý vượt trội.
+
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 11: Truyền thống ↔ hiện đại không phải hai cực** tiếp nhận điểm tựa từ **Liên hệ 10: Hallyu ↔ nền tảng ↔ hiệu ứng mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 12: Văn hoá ↔ xác suất, không phải quy tắc tất định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 11: Truyền thống ↔ hiện đại không phải hai cực
 
@@ -103,6 +124,8 @@ Nếu định nghĩa truyền thống là “không công nghệ”, ta sẽ li�
 
 Khái niệm hữu ích hơn là **tính liên tục về chức năng (functional continuity)**: chức năng hoặc ý nghĩa nào được giữ, lớp nào được thay.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 12: Văn hoá ↔ xác suất, không phải quy tắc tất định** tiếp nhận điểm tựa từ **Liên hệ 11: Truyền thống ↔ hiện đại không phải hai cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 13: Tuổi ↔ ngôn ngữ ↔ chi phí phối hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 12: Văn hoá ↔ xác suất, không phải quy tắc tất định
 
 Đây là liên hệ quan trọng nhất. Mẫu hình nhóm không cho phép dự đoán chắc chắn từng cá nhân.
@@ -111,11 +134,15 @@ Giả sử 70% nhóm A thích X và 40% nhóm B thích X. Việc biết một ng
 
 Vì vậy câu “người Hàn là…” thường yếu hơn về tri thức so với câu “trong bối cảnh X, chuẩn Y tương đối phổ biến vì cơ chế Z”.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 13: Tuổi ↔ ngôn ngữ ↔ chi phí phối hợp** tiếp nhận điểm tựa từ **Liên hệ 12: Văn hoá ↔ xác suất, không phải quy tắc tất định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 14: Nghĩa vụ quân sự ↔ dòng thời gian ↔ thâm niên nơi làm việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 13: Tuổi ↔ ngôn ngữ ↔ chi phí phối hợp
 
 Tuổi trong đời sống Hàn Quốc không chỉ là biến dân số. Trong tương tác mới, năm sinh có thể giảm bất định về cách xưng hô và cấp độ lời nói. Vì vậy `몇 년생이에요?` đôi khi hoạt động như một giao thức bắt tay (handshake protocol).
 
 Khi cách tính tuổi pháp lý chuyển sang `만 나이`, lớp hành chính thay nhanh hơn thói quen hội thoại. Đây là ví dụ rõ về việc luật và văn hoá cập nhật với tốc độ khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 14: Nghĩa vụ quân sự ↔ dòng thời gian ↔ thâm niên nơi làm việc** tiếp nhận điểm tựa từ **Liên hệ 13: Tuổi ↔ ngôn ngữ ↔ chi phí phối hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 15: Nhà ở ↔ giáo dục ↔ tài sản ↔ địa lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 14: Nghĩa vụ quân sự ↔ dòng thời gian ↔ thâm niên nơi làm việc
 
@@ -123,11 +150,15 @@ Nghĩa vụ quân sự tạo một khoảng gián đoạn có cấu trúc trong 
 
 Trải nghiệm quân đội chung có thể củng cố từ vựng về thâm niên, nhưng không nên dùng văn hoá quân đội như nguyên nhân duy nhất của thứ bậc công sở.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 15: Nhà ở ↔ giáo dục ↔ tài sản ↔ địa lý** tiếp nhận điểm tựa từ **Liên hệ 14: Nghĩa vụ quân sự ↔ dòng thời gian ↔ thâm niên nơi làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 16: Không gian công cộng ↔ nền tảng ↔ thiên lệch mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 15: Nhà ở ↔ giáo dục ↔ tài sản ↔ địa lý
 
 Căn hộ không chỉ là một toà nhà. Khi khu trường học, giao thông, tiếp cận việc làm và kỳ vọng tăng giá tài sản cùng được phản ánh vào vị trí, nhà ở trở thành nút nối nhiều hệ thống.
 
 Biến động giá nhà có thể ảnh hưởng thời điểm kết hôn, quyết định sinh con, thời gian đi lại và chi tiêu giáo dục. Đây là lý do chính sách nhà ở có thể tạo hiệu ứng văn hoá vượt xa thị trường bất động sản.
+
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 16: Không gian công cộng ↔ nền tảng ↔ thiên lệch mẫu** tiếp nhận điểm tựa từ **Liên hệ 15: Nhà ở ↔ giáo dục ↔ tài sản ↔ địa lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 17: Giao diện messenger ↔ kỳ vọng quan hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 16: Không gian công cộng ↔ nền tảng ↔ thiên lệch mẫu
 
@@ -135,17 +166,23 @@ Portal, YouTube và cộng đồng trực tuyến giúp ý kiến lưu thông nh
 
 Mô hình này cần được giữ khi đọc mọi tranh luận trực tuyến về giới, thế hệ, vùng miền hoặc chính trị.
 
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 17: Giao diện messenger ↔ kỳ vọng quan hệ** tiếp nhận điểm tựa từ **Liên hệ 16: Không gian công cộng ↔ nền tảng ↔ thiên lệch mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 18: Hành vi sức khoẻ ↔ khả năng tiếp cận ↔ thiết chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 17: Giao diện messenger ↔ kỳ vọng quan hệ
 
 Thông báo đã đọc là một tính năng nhỏ nhưng làm trạng thái `đã xem` trở nên quan sát được. Khi trạng thái được lộ ra, xã hội tạo chuẩn mới như `읽씹`.
 
 Đây là liên hệ trực tiếp giữa tương tác người–máy (HCI) và văn hoá: thiết kế giao diện thay lượng thông tin người dùng nhìn thấy, từ đó thay kỳ vọng và cảm xúc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 18: Hành vi sức khoẻ ↔ khả năng tiếp cận ↔ thiết chế** tiếp nhận điểm tựa từ **Liên hệ 17: Giao diện messenger ↔ kỳ vọng quan hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 19: Nuôi con ↔ công việc ↔ sinh suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 18: Hành vi sức khoẻ ↔ khả năng tiếp cận ↔ thiết chế
 
 Tần suất đi phòng khám, khám sàng lọc hay dùng sản phẩm sức khoẻ không thể chỉ giải thích bằng “người Hàn quan tâm sức khoẻ”. Bảo hiểm, mật độ phòng khám, khám sức khoẻ qua nơi làm việc và thị trường tiêu dùng làm chi phí giao dịch khác đi.
 
 Khi cấu trúc chi phí thay đổi, hành vi có thể thay đổi một cách hợp lý theo điều kiện mới.
+
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 19: Nuôi con ↔ công việc ↔ sinh suất** tiếp nhận điểm tựa từ **Liên hệ 18: Hành vi sức khoẻ ↔ khả năng tiếp cận ↔ thiết chế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 20: Campus ↔ quân đội ↔ bước vào công sở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 19: Nuôi con ↔ công việc ↔ sinh suất
 
@@ -161,11 +198,15 @@ chuẩn nuôi con cao
 
 Vòng lặp này không phải lời giải duy nhất cho sinh suất thấp, nhưng cho thấy văn hoá, lao động và dân số không thể tách thành ba ngăn riêng.
 
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 20: Campus ↔ quân đội ↔ bước vào công sở** tiếp nhận điểm tựa từ **Liên hệ 19: Nuôi con ↔ công việc ↔ sinh suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 21: Căn hộ ↔ hạ tầng chung ↔ tác động ngoại biên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 20: Campus ↔ quân đội ↔ bước vào công sở
 
 `학번`, `선배–후배`, `동아리`, `MT`, `군휴학`, `복학` và `취준생` cùng tạo một lớp chuyển tiếp giữa trường và nơi làm việc. Một người có thể học cách đọc thâm niên, tham gia group chat, nhận bàn giao, tổ chức sự kiện và xây mạng lưới trước khi có công việc toàn thời gian.
 
 Campus vì vậy có thể giống một môi trường thử (staging environment) của đời sống tổ chức. Nhưng hướng tác động không chỉ một chiều: ngôn ngữ công sở quay lại campus qua thực tập, tuyển dụng và mạng cựu sinh viên.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 21: Căn hộ ↔ hạ tầng chung ↔ tác động ngoại biên** tiếp nhận điểm tựa từ **Liên hệ 20: Campus ↔ quân đội ↔ bước vào công sở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 22: Mùa ↔ thực phẩm ↔ kiến trúc ↔ lịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 21: Căn hộ ↔ hạ tầng chung ↔ tác động ngoại biên
 
@@ -180,6 +221,8 @@ hành động riêng
 
 Đây là **tác động ngoại biên (externality)**. Nó giải thích vì sao một hành vi nhỏ dễ trở thành vấn đề đạo đức: khi chi phí bị người khác hấp thụ, tranh luận nhanh chuyển từ “sở thích cá nhân” sang “ý thức cộng đồng”.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 22: Mùa ↔ thực phẩm ↔ kiến trúc ↔ lịch** tiếp nhận điểm tựa từ **Liên hệ 21: Căn hộ ↔ hạ tầng chung ↔ tác động ngoại biên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 23: Tiện lợi ↔ lao động ↔ chi phí ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 22: Mùa ↔ thực phẩm ↔ kiến trúc ↔ lịch
 
 `김장`, `복날`, `단풍`, `벚꽃`, `온돌`, `장마` và `여름휴가` có vẻ là các chủ đề khác nhau nhưng đều được đồng bộ bởi tính mùa vụ.
@@ -187,6 +230,8 @@ hành động riêng
 Mùa hoạt động như một đồng hồ bên ngoài. Khí hậu kích hoạt thay đổi quần áo và thực phẩm; thiết chế kích hoạt lịch trường học và nghỉ lễ; thị trường kích hoạt du lịch và sản phẩm.
 
 Khi nền khí hậu thay đổi, sự kiện văn hoá không biến mất ngay nhưng thời điểm, ý nghĩa và logistics có thể phải điều chỉnh.
+
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 23: Tiện lợi ↔ lao động ↔ chi phí ẩn** tiếp nhận điểm tựa từ **Liên hệ 22: Mùa ↔ thực phẩm ↔ kiến trúc ↔ lịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 24: 평생교육 ↔ kỹ năng mất giá ↔ thị trường lao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 23: Tiện lợi ↔ lao động ↔ chi phí ẩn
 
@@ -201,6 +246,8 @@ chi phí toàn hệ thống bằng 0
 Chi phí có thể thực sự giảm nhờ tự động hoá và mật độ cao, nhưng cũng có thể chỉ được chuyển sang nhân viên kho, người giao hàng, người chăm sóc, tổng đài viên hoặc văn phòng quản lý.
 
 Điều này giúp phân tích `빨리빨리` mà không biến nó thành tính cách dân tộc. Tốc độ là kết quả của **vốn + hạ tầng + lao động + kỳ vọng**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 24: 평생교육 ↔ kỹ năng mất giá ↔ thị trường lao động** tiếp nhận điểm tựa từ **Liên hệ 23: Tiện lợi ↔ lao động ↔ chi phí ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 25: Tên ↔ định danh số ↔ quyền riêng tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 24: 평생교육 ↔ kỹ năng mất giá ↔ thị trường lao động
 
@@ -217,6 +264,8 @@ Khi lớp công cụ đổi, người lao động không nhất thiết phải �
 
 Văn hoá chứng chỉ chỉ là một phần. Thị trường còn cần bằng chứng rằng tri thức có thể chuyển thành đầu ra.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 25: Tên ↔ định danh số ↔ quyền riêng tư** tiếp nhận điểm tựa từ **Liên hệ 24: 평생교육 ↔ kỹ năng mất giá ↔ thị trường lao động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 26: Trẻ ốm ↔ độ bền của gia đình ↔ độ bền của tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 25: Tên ↔ định danh số ↔ quyền riêng tư
 
 Tên, tuổi, chức danh và năm sinh giúp phối hợp xã hội, nhưng khi đi vào cơ sở dữ liệu chúng trở thành tài sản thông tin. Một dữ liệu hữu ích trong hội thoại không tự động là dữ liệu cần thu thập trong mọi ứng dụng.
@@ -230,6 +279,8 @@ nhưng
 
 Đây là điểm giao giữa văn hoá quan hệ và **tối thiểu hoá dữ liệu (data minimization)**. Hệ thống hiện đại phải phân biệt tên pháp lý, tên hiển thị, danh xưng và danh tính số thay vì ép chúng thành một trường duy nhất.
 
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 26: Trẻ ốm ↔ độ bền của gia đình ↔ độ bền của tổ chức** tiếp nhận điểm tựa từ **Liên hệ 25: Tên ↔ định danh số ↔ quyền riêng tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 27: Campus ↔ ghép nối ↔ địa lý nhà ở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 26: Trẻ ốm ↔ độ bền của gia đình ↔ độ bền của tổ chức
 
 Ngày bình thường, lịch chăm trẻ có thể vận hành tốt; trẻ ốm mới cho thấy hệ thống có dự phòng hay không. Cùng một cú sốc lan từ gia đình sang công ty:
@@ -242,6 +293,8 @@ trẻ ốm
 ```
 
 Vì vậy chính sách gia đình và thiết kế tổ chức có cùng một khái niệm: **khả năng chống chịu (resilience)**. Hệ thống bền không phải hệ thống không bao giờ gián đoạn, mà là hệ thống chuyển trạng thái mà không sụp đổ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 27: Campus ↔ ghép nối ↔ địa lý nhà ở** tiếp nhận điểm tựa từ **Liên hệ 26: Trẻ ốm ↔ độ bền của gia đình ↔ độ bền của tổ chức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 28: Già hoá ↔ hợp đồng thế hệ ↔ di cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 27: Campus ↔ ghép nối ↔ địa lý nhà ở
 
@@ -257,6 +310,8 @@ nhà ở xa
 
 Đây là ví dụ **địa lý tác động tới vốn xã hội**. Hai sinh viên cùng trường không nhất thiết nhận cùng “giá trị mạng lưới” từ trường.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 28: Già hoá ↔ hợp đồng thế hệ ↔ di cư** tiếp nhận điểm tựa từ **Liên hệ 27: Campus ↔ ghép nối ↔ địa lý nhà ở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 29: Chỉ số ↔ chính sách ↔ chuỗi nhân quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 28: Già hoá ↔ hợp đồng thế hệ ↔ di cư
 
 Già hoá làm nhu cầu chăm sóc tăng trong khi số người ở độ tuổi lao động tương đối giảm. Xã hội có thể phản ứng bằng tăng năng suất, kéo dài thời gian làm việc, tái thiết kế chăm sóc, dùng công nghệ hoặc thu hút lao động di cư.
@@ -264,6 +319,8 @@ Già hoá làm nhu cầu chăm sóc tăng trong khi số người ở độ tu�
 Không giải pháp nào đứng riêng. Di cư bổ sung lao động nhưng cũng cần nhà ở, ngôn ngữ và hội nhập; công nghệ giảm một số việc nhưng không thay toàn bộ lao động cảm xúc; gia đình có thể chăm nhưng bị giới hạn bởi thời gian.
 
 Đây là bài toán phân bổ rủi ro trong **hợp đồng giữa các thế hệ (intergenerational contract)**.
+
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 28: Già hoá ↔ hợp đồng thế hệ ↔ di cư** xác định đầu vào; **Liên hệ 29: Chỉ số ↔ chính sách ↔ chuỗi nhân quả** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Liên hệ 30: Tải quản lý vô hình ↔ 업무분장 ↔ kinh tế chăm sóc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 29: Chỉ số ↔ chính sách ↔ chuỗi nhân quả
 
@@ -278,6 +335,8 @@ chính sách
 ```
 
 Đây là **chuỗi nhân quả chính sách (policy causal chain)**. Tư duy này giúp tránh hai lỗi: thấy chỉ số chưa đổi rồi kết luận chính sách vô dụng; hoặc thấy chỉ số đổi rồi mặc định chính sách là nguyên nhân duy nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 29: Chỉ số ↔ chính sách ↔ chuỗi nhân quả** xác định đầu vào; **Liên hệ 30: Tải quản lý vô hình ↔ 업무분장 ↔ kinh tế chăm sóc** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Liên hệ 31: Quyền lực ↔ thông tin ↔ trách nhiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 30: Tải quản lý vô hình ↔ 업무분장 ↔ kinh tế chăm sóc
 
@@ -295,6 +354,8 @@ thao tác nhìn thấy
 
 Nếu chỉ đo thao tác nhìn thấy, ta đánh giá thấp người giữ trạng thái hệ thống. Liên hệ này giúp giải thích vì sao phân chia “mỗi người làm một nửa việc nhà” vẫn có thể bất bình đẳng nếu một người giữ toàn bộ tải quản lý.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 31: Quyền lực ↔ thông tin ↔ trách nhiệm** tiếp nhận điểm tựa từ **Liên hệ 30: Tải quản lý vô hình ↔ 업무분장 ↔ kinh tế chăm sóc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 32: Bus factor ↔ chăm sóc gia đình ↔ khả năng chống chịu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 31: Quyền lực ↔ thông tin ↔ trách nhiệm
 
 Một người có quyền quyết định nhưng không có thông tin thực địa dễ đưa ra quyết định yếu. Ngược lại, người có thông tin nhưng không có kênh lên tiếng dễ trở thành nút bị nghẽn.
@@ -308,6 +369,8 @@ quyền quyết định
 
 Khi ba yếu tố tách quá xa nhau, tổ chức có thể xuất hiện hiện tượng “người quyết định không biết, người biết không được quyết định, người chịu hậu quả không có tiếng nói”. Đây là liên hệ giữa `02` và `06`.
 
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 32: Bus factor ↔ chăm sóc gia đình ↔ khả năng chống chịu** tiếp nhận điểm tựa từ **Liên hệ 31: Quyền lực ↔ thông tin ↔ trách nhiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 33: Độ tin cậy đô thị ↔ phục hồi dịch vụ ↔ đường thay thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 32: Bus factor ↔ chăm sóc gia đình ↔ khả năng chống chịu
 
 Trong công sở, một hệ thống phụ thuộc duy nhất vào người lâu năm có `bus factor` thấp. Trong gia đình, nếu toàn bộ lịch khám, trường học và giấy tờ chỉ một người nắm, hệ chăm sóc cũng có cùng rủi ro.
@@ -319,6 +382,8 @@ tri thức tập trung ở một người
 ```
 
 Tài liệu hoá, bàn giao và phân chia trạng thái giúp cả tổ chức lẫn gia đình tăng khả năng chống chịu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 33: Độ tin cậy đô thị ↔ phục hồi dịch vụ ↔ đường thay thế** tiếp nhận điểm tựa từ **Liên hệ 32: Bus factor ↔ chăm sóc gia đình ↔ khả năng chống chịu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 34: Fandom ↔ hàng đợi ↔ tài nguyên khan hiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 33: Độ tin cậy đô thị ↔ phục hồi dịch vụ ↔ đường thay thế
 
@@ -334,6 +399,8 @@ Một thành phố và một dịch vụ khách hàng có chung lô-gic (logic /
 
 Tàu điện, thanh toán số, kiosk, tổng đài và giao hàng đều cần **đường thay thế (fallback)**. Một hệ thống nhanh nhưng không có fallback có thể rất mong manh.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 34: Fandom ↔ hàng đợi ↔ tài nguyên khan hiếm** tiếp nhận điểm tựa từ **Liên hệ 33: Độ tin cậy đô thị ↔ phục hồi dịch vụ ↔ đường thay thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 35: Health literacy ↔ bất cân xứng thông tin ↔ đồng thuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 34: Fandom ↔ hàng đợi ↔ tài nguyên khan hiếm
 
 Vé concert, sự kiện thể thao, fan-sign và pop-up đều có cầu có thể vượt cung. Khi đó văn hoá người hâm mộ gặp trực tiếp lý thuyết hàng đợi và cơ chế phân bổ.
@@ -346,6 +413,8 @@ nhu cầu > công suất
 ```
 
 Do đó trải nghiệm fandom không chỉ nằm ở cảm xúc; nó còn phụ thuộc kiến trúc phân bổ tài nguyên.
+
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 35: Health literacy ↔ bất cân xứng thông tin ↔ đồng thuận** tiếp nhận điểm tựa từ **Liên hệ 34: Fandom ↔ hàng đợi ↔ tài nguyên khan hiếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ 36: IP ↔ dữ liệu ↔ vốn ↔ lợi thế tích luỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ 35: Health literacy ↔ bất cân xứng thông tin ↔ đồng thuận
 
@@ -362,6 +431,8 @@ thông tin chuyên môn
 
 Đây là cơ chế biến thông tin thành **đồng thuận có hiểu biết (informed consent)** thay vì chỉ ký vào biểu mẫu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Liên hệ 35: Health literacy ↔ bất cân xứng thông tin ↔ đồng thuận** nêu điều cần giải thích; **Liên hệ 36: IP ↔ dữ liệu ↔ vốn ↔ lợi thế tích luỹ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tổng hợp: 7 lớp để đọc một hiện tượng văn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ 36: IP ↔ dữ liệu ↔ vốn ↔ lợi thế tích luỹ
 
 Một tài sản trí tuệ thành công có thể tạo doanh thu, dữ liệu người dùng và danh tiếng. Các nguồn lực này lại giúp chủ sở hữu tài trợ dự án mới hoặc đàm phán điều kiện tốt hơn.
@@ -375,6 +446,8 @@ IP thành công
 ```
 
 Đây là **lợi thế tích luỹ (cumulative advantage)**. Hallyu vì vậy không chỉ là vòng lan truyền văn hoá mà còn là vòng tích luỹ quyền lực kinh tế.
+
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, các dấu vết trong **Liên hệ 36: IP ↔ dữ liệu ↔ vốn ↔ lợi thế tích luỹ** được đọc cùng nhau ở **Mô hình tổng hợp: 7 lớp để đọc một hiện tượng văn hoá** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những hiểu lầm tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tổng hợp: 7 lớp để đọc một hiện tượng văn hoá
 
@@ -417,6 +490,8 @@ chỉ số đo trực tiếp hay dùng biến đại diện?
 Câu hỏi phản thực tế giúp phân biệt nguyên nhân với thứ chỉ đi kèm. Nếu thay đổi hạ tầng, luật, giá hoặc quyền lực mà hành vi không đổi, lời giải thích ban đầu có thể chưa đúng.
 
 Một lời giải thích mạnh thường dùng ít nhất hai hoặc ba lớp, thay vì dừng ở câu “vì truyền thống”.
+
+> **Chuyển mạch:** Ở chặng này của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Những hiểu lầm tổng hợp** gom các mảnh từ **Mô hình tổng hợp: 7 lớp để đọc một hiện tượng văn hoá** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Một phương pháp quan sát thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm tổng hợp
 
@@ -468,6 +543,8 @@ Không đúng. Quyền hành chính, chuyên môn, thông tin, ngân sách và k
 
 Không đúng. Độ tin cậy còn phụ thuộc cách hệ thống xử lý lỗi, dự phòng và phục hồi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Một phương pháp quan sát thực tế** gom các mảnh từ **Những hiểu lầm tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Một phương pháp quan sát thực tế
 
 Khi sống hoặc làm việc ở Hàn Quốc, thay vì ghi “họ làm thế này”, hãy ghi theo cấu trúc:
@@ -514,10 +591,12 @@ Phản thực tế: nếu chuyển sang địa phương khác, quy tắc có gi�
 
 Cách ghi này biến việc học văn hoá từ gán nhãn thành **kiểm định giả thuyết (hypothesis testing)**.
 
+> **Chuyển mạch:** Trong **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh**, **Mô hình tư duy cuối cùng** gom các mảnh từ **Một phương pháp quan sát thực tế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy cuối cùng
 
 > Văn hoá không phải câu trả lời cho câu hỏi “người Hàn là người như thế nào?”. Văn hoá là một phần của câu trả lời cho câu hỏi “trong hoàn cảnh này, những ý nghĩa, ràng buộc và kỳ vọng nào đang làm một số hành vi trở nên dễ hiểu hơn những hành vi khác?”.
 
 Khi tư duy như vậy, người học không cần thuộc lòng một danh sách phép lịch sự. Họ xây một mô hình có thể cập nhật. Gặp dữ liệu mới thì sửa mô hình, giống cách khoa học và kỹ thuật hoạt động.
 
-> **Bàn giao:** Sau **Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy cuối cùng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

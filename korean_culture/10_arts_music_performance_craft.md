@@ -1,7 +1,6 @@
 # Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản
 
-> **Mạch đọc:** Đặt **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Di sản không phải một bảo tàng đóng băng** sang **국악: “âm nhạc truyền thống Hàn” là một hệ sinh thái, không phải một thể loại duy nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**. Route đi từ craft/material practice → performance/music forms → transmission institutions → heritage selection → contemporary reinterpretation, để di sản được đọc như thực hành sống.
 
 ## Di sản không phải một bảo tàng đóng băng
 
@@ -21,6 +20,8 @@ vật thể / màn biểu diễn
 
 Nếu chỉ còn vật thể nhưng kỹ năng biến mất, ta mới bảo tồn bề mặt chứ chưa chắc bảo tồn được hệ thống.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **국악: “âm nhạc truyền thống Hàn” là một hệ sinh thái, không phải một thể loại duy nhất** tiếp nhận điểm tựa từ **Di sản không phải một bảo tàng đóng băng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **판소리: một người kể chuyện, một người đánh trống, cả thế giới sân khấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 국악: “âm nhạc truyền thống Hàn” là một hệ sinh thái, không phải một thể loại duy nhất
 
 **Quốc nhạc Hàn Quốc (국악 / gugak)** thường được dịch là âm nhạc truyền thống Hàn Quốc. Nhưng bên trong có nhạc cung đình, nhạc nghi lễ, dân ca, độc tấu nhạc cụ, hát kể chuyện và các nhóm gõ.
@@ -28,6 +29,8 @@ Nếu chỉ còn vật thể nhưng kỹ năng biến mất, ta mới bảo tồ
 Một số nhóm thường gặp gồm `정악`, `민속악`, `판소리`, `산조`, `농악`. Ranh giới giữa chúng có lịch sử và bối cảnh thiết chế riêng.
 
 Điểm quan trọng là đừng nghe một bản gayageum rồi kết luận “đây là âm thanh của toàn bộ nhạc Hàn truyền thống”. Cũng như cổ điển, jazz và dân gian không thể gom thành một âm thanh duy nhất, `국악` là thuật ngữ bao trùm.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **판소리: một người kể chuyện, một người đánh trống, cả thế giới sân khấu** tiếp nhận điểm tựa từ **국악: “âm nhạc truyền thống Hàn” là một hệ sinh thái, không phải một thể loại duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **다섯 마당: truyền thống cũng bị “lọc” qua lịch sử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 판소리: một người kể chuyện, một người đánh trống, cả thế giới sân khấu
 
@@ -39,6 +42,8 @@ Trong xử lý tín hiệu, âm sắc phụ thuộc phổ hài và đường bao
 
 Phản hồi của khán giả `추임새` như `얼씨구`, `좋다` làm màn diễn có tính tương tác. Người nghe không thụ động. Đây gần với **vòng phản hồi trực tiếp (live feedback loop)**: người biểu diễn điều chỉnh năng lượng theo khán giả.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **다섯 마당: truyền thống cũng bị “lọc” qua lịch sử** tiếp nhận điểm tựa từ **판소리: một người kể chuyện, một người đánh trống, cả thế giới sân khấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **아리랑: một motif, nhiều cộng đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 다섯 마당: truyền thống cũng bị “lọc” qua lịch sử
 
 Pansori hiện thường nhắc tới năm chu kỳ truyện còn được truyền mạnh như `춘향가`, `심청가`, `흥보가`, `수궁가`, `적벽가`. Việc một số tiết mục sống sót còn tiết mục khác mờ đi cho thấy di sản luôn có quá trình chọn lọc.
@@ -46,6 +51,8 @@ Pansori hiện thường nhắc tới năm chu kỳ truyện còn được truy�
 Sự tồn tại không chỉ phụ thuộc “giá trị nghệ thuật nguyên thuỷ” mà còn vào người bảo trợ, dòng truyền nghề, nhu cầu khán giả, ghi âm, chương trình học và sự công nhận của thiết chế.
 
 Đây là **sai lệch lưu trữ (archive bias)** trong nghệ thuật biểu diễn: những gì còn lại hôm nay không nhất thiết đại diện đầy đủ cảnh quan nghệ thuật trong quá khứ.
+
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **아리랑: một motif, nhiều cộng đồng** tiếp nhận điểm tựa từ **다섯 마당: truyền thống cũng bị “lọc” qua lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **민요: dân ca và địa lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 아리랑: một motif, nhiều cộng đồng
 
@@ -55,11 +62,15 @@ Chính sự đa dạng này quan trọng với bản sắc văn hoá. Một bi�
 
 Trong lý thuyết thông tin, có thể hình dung motif `아리랑` như tín hiệu bất biến truyền qua kênh lịch sử nhiều nhiễu. Lời, nhịp và phong cách vùng thay đổi nhưng mẫu dễ nhận vẫn giữ tính liên tục.
 
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **민요: dân ca và địa lý** tiếp nhận điểm tựa từ **아리랑: một motif, nhiều cộng đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **농악 và 사물놀이: có quan hệ nhưng không đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 민요: dân ca và địa lý
 
 `민요` là dân ca, nhưng giai điệu, cách hát và nhịp thay đổi theo vùng. Một bài vùng Gangwon không cần giống một bài vùng Jeolla để cùng thuộc truyền thống dân gian.
 
 Điều này nối trực tiếp với chương bản sắc vùng miền: phương ngữ và âm nhạc đều mã hoá địa lý. Khi dân số di chuyển và truyền thông chuẩn hoá âm thanh, phong cách địa phương có thể yếu đi hoặc được phục hưng như dấu hiệu bản sắc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **농악 và 사물놀이: có quan hệ nhưng không đồng nhất** tiếp nhận điểm tựa từ **민요: dân ca và địa lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **장단: nhịp như ngữ pháp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 농악 và 사물놀이: có quan hệ nhưng không đồng nhất
 
@@ -71,11 +82,15 @@ Nongak có thể bao gồm chuyển động, diễu hành ngoài trời và nhó
 
 Kinh nghiệm đa nhịp cho thấy tính toán chu kỳ. Nếu hai mẫu có chu kỳ khác nhau, chúng gặp lại tại bội chung nhỏ nhất. Người diễn không cần tính công thức; cơ thể học tỷ lệ và lặp lại qua thực hành.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **장단: nhịp như ngữ pháp** tiếp nhận điểm tựa từ **농악 và 사물놀이: có quan hệ nhưng không đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **탈춤: mặt nạ và quyền nói khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 장단: nhịp như ngữ pháp
 
 Trong âm nhạc truyền thống Hàn, `장단` là chu kỳ nhịp. Nó không chỉ là BPM; nó gồm mẫu nhấn và thời lượng lặp lại, tạo khung cho giai điệu và ứng tác.
 
 Có thể xem `장단` như **ngữ pháp thời gian**: người biểu diễn có tự do trong câu nhạc nhưng phải biết mình đang ở đâu trong chu kỳ. Điều này giống khung giao thức trong truyền dữ liệu; tự do tồn tại bên trong ranh giới chung.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **탈춤: mặt nạ và quyền nói khác** tiếp nhận điểm tựa từ **장단: nhịp như ngữ pháp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정악 và thẩm mỹ cung đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 탈춤: mặt nạ và quyền nói khác
 
@@ -83,11 +98,15 @@ Có thể xem `장단` như **ngữ pháp thời gian**: người biểu diễn 
 
 Trong lý thuyết giao tiếp, ẩn danh làm thay đổi động lực. Bút danh Internet cũng có hiệu ứng tương tự: giảm chi phí xã hội của phát ngôn, có thể giải phóng phê bình nhưng cũng giảm trách nhiệm. Talchum cho thấy “công nghệ ẩn danh” không bắt đầu từ thời số.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **정악 và thẩm mỹ cung đình** tiếp nhận điểm tựa từ **탈춤: mặt nạ và quyền nói khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **종묘제례악: âm nhạc như hạ tầng nghi lễ nhà nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 정악 và thẩm mỹ cung đình
 
 Một số âm nhạc truyền thống gắn với cung đình hoặc văn nhân có nhịp chậm, cấu trúc và thẩm mỹ khác biểu diễn dân gian. Điều này quan trọng vì “nghệ thuật truyền thống Hàn” chứa nhiều bối cảnh tầng lớp.
 
 Nghệ thuật cung đình, văn nhân, chùa và làng quê không cùng người sản xuất, khán giả hay chức năng. Nếu bỏ vị trí xã hội, ta biến di sản thành một hỗn hợp thẩm mỹ không có lịch sử.
+
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **종묘제례악: âm nhạc như hạ tầng nghi lễ nhà nước** tiếp nhận điểm tựa từ **정악 và thẩm mỹ cung đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **산조: độc tấu và ứng tác có kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 종묘제례악: âm nhạc như hạ tầng nghi lễ nhà nước
 
@@ -95,11 +114,15 @@ Nghệ thuật cung đình, văn nhân, chùa và làng quê không cùng ngư�
 
 Điều này giúp hiểu **âm nhạc chức năng**: âm nhạc có thể là hạ tầng của nghi thức, tương tự một đồng hồ giao thức giúp đồng bộ các bước trong quá trình phân tán.
 
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **산조: độc tấu và ứng tác có kiểm soát** tiếp nhận điểm tựa từ **종묘제례악: âm nhạc như hạ tầng nghi lễ nhà nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **도자기: thanh từ Goryeo và bạch sứ Joseon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 산조: độc tấu và ứng tác có kiểm soát
 
 `산조` là truyền thống độc tấu nhạc cụ thường đi với trống đệm. Người diễn đi qua các phần nhịp/giai điệu và có không gian cho cách thể hiện riêng.
 
 Điểm đáng học là căng thẳng giữa hình thức chuẩn và phong cách cá nhân. Nghệ thuật truyền thống không nhất thiết là “chơi đúng bản nhạc bất biến”; nhiều truyền thống sống nhờ truyền nghề thầy–trò và biến thể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **도자기: thanh từ Goryeo và bạch sứ Joseon** tiếp nhận điểm tựa từ **산조: độc tấu và ứng tác có kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **분청사기: giai đoạn chuyển tiếp cũng có thẩm mỹ riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 도자기: thanh từ Goryeo và bạch sứ Joseon
 
@@ -109,17 +132,23 @@ Màu men là hoá học. Thành phần khoáng, hàm lượng sắt, môi trư�
 
 Nung lò là quá trình phi tuyến: vài độ, luồng khí hoặc thành phần khác có thể đổi kết quả. Nghệ nhân giữ mô hình ngầm dựa trên quan sát. Đây giống việc tinh chỉnh một hệ thống khi cảm biến chưa hoàn hảo.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **분청사기: giai đoạn chuyển tiếp cũng có thẩm mỹ riêng** tiếp nhận điểm tựa từ **도자기: thanh từ Goryeo và bạch sứ Joseon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **한지: giấy như kỹ thuật vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 분청사기: giai đoạn chuyển tiếp cũng có thẩm mỹ riêng
 
 Giữa thanh từ Goryeo và bạch sứ Joseon còn có **gốm Buncheong (분청사기 / buncheong ware)**, dùng lớp phủ trắng và trang trí tạo ngôn ngữ thị giác riêng.
 
 Điều này quan trọng vì tài liệu tổng quan hay kể lịch sử như chuỗi sạch `celadon → white porcelain`, khiến giai đoạn lai biến mất. Nhưng thay đổi văn hoá thường có pha lai; phong cách mới không thay phong cách cũ trong một khoảnh khắc.
 
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **한지: giấy như kỹ thuật vật liệu** tiếp nhận điểm tựa từ **분청사기: giai đoạn chuyển tiếp cũng có thẩm mỹ riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **서예: chữ viết như biểu diễn của cơ thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 한지: giấy như kỹ thuật vật liệu
 
 **Hanji (한지)** là giấy truyền thống thường làm từ lớp vỏ trong của cây dâu giấy `닥나무`. Sợi dài và quy trình chế tạo tạo độ bền đặc trưng. Hanji dùng cho viết, cửa sổ, thủ công và phục chế.
 
 Giấy không chỉ là vật mang văn bản; tính chất vật liệu ảnh hưởng tuổi thọ thông tin. Trong máy tính, phương tiện lưu trữ quyết định độ bền và kiểu lỗi. Hanji nhắc rằng truyền tri thức luôn phụ thuộc chất nền vật lý.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **서예: chữ viết như biểu diễn của cơ thể** tiếp nhận điểm tựa từ **한지: giấy như kỹ thuật vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **매듭, 나전칠기 và thủ công chính xác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 서예: chữ viết như biểu diễn của cơ thể
 
@@ -129,11 +158,15 @@ Một chữ có nội dung ngữ nghĩa nhưng thư pháp thêm lớp cơ thể.
 
 Nhìn từ tương tác người–máy, viết tay là kiểu đầu vào mà cử chỉ và đầu ra gần như xảy ra cùng một sự kiện; khác bàn phím, thông tin chuyển động chưa bị trừu tượng hoá hoàn toàn.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **매듭, 나전칠기 và thủ công chính xác** tiếp nhận điểm tựa từ **서예: chữ viết như biểu diễn của cơ thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **옻칠: sơn mài như hoá học + thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 매듭, 나전칠기 và thủ công chính xác
 
 **Nghệ thuật thắt nút (매듭 / decorative knotting)**, **sơn mài khảm xà cừ (나전칠기 / mother-of-pearl lacquerware)** và nghề gỗ là ví dụ nơi mẫu lặp, hành vi vật liệu và motif biểu tượng kết hợp.
 
 Najeon lacquerware cần cắt vỏ sò mỏng và khảm lên bề mặt sơn. Ánh óng đến từ vi cấu trúc của xà cừ tương tác với ánh sáng, một hiện tượng giao thoa quang học. Thứ từng được cảm nhận bằng trực giác nghề thủ công có thể được giải thích thêm bằng vật lý mà không làm giảm giá trị nghệ thuật.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **옻칠: sơn mài như hoá học + thời gian** tiếp nhận điểm tựa từ **매듭, 나전칠기 và thủ công chính xác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **민화: tranh dân gian và từ vựng biểu tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 옻칠: sơn mài như hoá học + thời gian
 
@@ -141,17 +174,23 @@ Najeon lacquerware cần cắt vỏ sò mỏng và khảm lên bề mặt sơn. 
 
 Nghề này là việc kiểm soát quy trình qua nhiều bước. Lỗi ở lớp đầu có thể chỉ lộ sau nhiều lớp, giống dây chuyền sản xuất nơi đảm bảo chất lượng phải diễn ra xuyên suốt chứ không chỉ ở kiểm tra cuối.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **민화: tranh dân gian và từ vựng biểu tượng** tiếp nhận điểm tựa từ **옻칠: sơn mài như hoá học + thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **단청: kiến trúc cũng là mặt vẽ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 민화: tranh dân gian và từ vựng biểu tượng
 
 **Minhwa (민화)** thường dùng motif như hổ, chim ác là, mẫu đơn, sách và đồ vật với ý nghĩa biểu tượng. `책가도` — tranh giá sách/sách — phản ánh uy tín của học vấn và vật dụng học thuật.
 
 Một hình ảnh có thể hoạt động như **nén ngữ nghĩa (semantic compression)**: thay vì viết “mong phú quý, học vấn, trường thọ”, nghệ sĩ dùng motif mà cộng đồng biết giải mã. Điều này giống biểu tượng giao diện: ký hiệu tiết kiệm chữ khi quy ước chung đủ mạnh.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **단청: kiến trúc cũng là mặt vẽ** tiếp nhận điểm tựa từ **민화: tranh dân gian và từ vựng biểu tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **무형문화재 전승: ai giữ cho kỹ năng không chết?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 단청: kiến trúc cũng là mặt vẽ
 
 `단청` là hệ thống sơn trên kiến trúc gỗ truyền thống, vừa trang trí vừa bảo vệ vật liệu. Hoạ tiết, màu và vị trí không hoàn toàn ngẫu nhiên.
 
 Nếu nhìn như **ngữ pháp sinh (generative grammar)**, dancheong có từ vựng motif và quy tắc đặt. Nghệ nhân không chỉ “tô màu đẹp”; họ vận hành trong ngôn ngữ thiết kế được truyền qua đào tạo.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **무형문화재 전승: ai giữ cho kỹ năng không chết?** tiếp nhận điểm tựa từ **단청: kiến trúc cũng là mặt vẽ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kế thừa và thương mại hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 무형문화재 전승: ai giữ cho kỹ năng không chết?
 
@@ -161,11 +200,15 @@ Di sản phi vật thể tồn tại nhờ người biết làm. Vì vậy Hàn 
 
 Chính sách di sản vì vậy phải giải **kinh tế lao động của truyền nghề**, không chỉ bảo quản hiện vật.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Kế thừa và thương mại hoá** tiếp nhận điểm tựa từ **무형문화재 전승: ai giữ cho kỹ năng không chết?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **퓨전국악 và tái diễn giải hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kế thừa và thương mại hoá
 
 Khi nghệ thuật truyền thống đi vào du lịch, hàng lưu niệm hoặc mạng xã hội, câu hỏi về tính xác thực thường xuất hiện. Nhưng thương mại hoá không tự động làm di sản “giả”; vấn đề là động lực thị trường có làm mất tri thức cốt lõi hay không.
 
 Một nghề có thể sống nhờ thị trường mới. Ngược lại, nếu chỉ sản xuất bản bắt chước thị giác rẻ tiền mà không truyền kỹ năng, bề mặt còn nhưng đồ thị tri thức biến mất.
+
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **퓨전국악 và tái diễn giải hiện đại** tiếp nhận điểm tựa từ **Kế thừa và thương mại hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **미술관·박물관: nghệ thuật hiện đại cần thiết chế để được nhìn thấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 퓨전국악 và tái diễn giải hiện đại
 
@@ -174,6 +217,8 @@ Nghệ sĩ hiện đại có thể kết hợp `가야금`, bộ gõ hoặc kỹ
 Câu hỏi tốt hơn “có còn truyền thống không?” là: **lớp nào được giữ và lớp nào thay?** Nhạc cụ? ngữ pháp nhịp? tiết mục? cách đào tạo? khán giả? địa điểm?
 
 Đây là **tính liên tục chức năng (functional continuity)**. Truyền thống sống không phải bằng bất biến tuyệt đối mà bằng sự liên tục được thương lượng.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **미술관·박물관: nghệ thuật hiện đại cần thiết chế để được nhìn thấy** tiếp nhận điểm tựa từ **퓨전국악 và tái diễn giải hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **큐레이터: giám tuyển không chỉ treo tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 미술관·박물관: nghệ thuật hiện đại cần thiết chế để được nhìn thấy
 
@@ -193,6 +238,8 @@ nghệ sĩ
 
 Chuỗi này không trung lập hoàn toàn. Tác phẩm nào được chọn, ai có ngân sách triển lãm, không gian nào nằm ở Seoul hay địa phương và ai có thời gian tới xem đều ảnh hưởng cái gì trở thành “nghệ thuật được nhìn thấy”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **큐레이터: giám tuyển không chỉ treo tranh** tiếp nhận điểm tựa từ **미술관·박물관: nghệ thuật hiện đại cần thiết chế để được nhìn thấy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **비엔날레와 아트페어: hai lô-gic (logic / 논리) khác nhau của thế giới nghệ thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 큐레이터: giám tuyển không chỉ treo tranh
 
 **Giám tuyển (큐레이터 / curator)** xây ngữ cảnh để người xem hiểu các tác phẩm có quan hệ gì với nhau. Họ lựa chọn, sắp xếp, viết văn bản, phối hợp mượn tác phẩm, ánh sáng, bảo quản và chương trình giáo dục.
@@ -200,6 +247,8 @@ Chuỗi này không trung lập hoàn toàn. Tác phẩm nào được chọn, a
 Vì vậy triển lãm là một dạng **thiết kế thông tin (information design)**. Cùng một tác phẩm đặt cạnh các tác phẩm khác, trong một tiêu đề khác hoặc với chú giải khác có thể làm người xem xây cách hiểu khác.
 
 Điều này không có nghĩa giám tuyển “quyết định ý nghĩa duy nhất”; nó cho thấy trải nghiệm nghệ thuật được trung gian bởi thiết chế và giao diện trưng bày.
+
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **비엔날레와 아트페어: hai lô-gic (logic / 논리) khác nhau của thế giới nghệ thuật** tiếp nhận điểm tựa từ **큐레이터: giám tuyển không chỉ treo tranh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **서울 중심성과 지역 문화공간: nghệ thuật cũng có địa lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 비엔날레와 아트페어: hai lô-gic (logic / 논리) khác nhau của thế giới nghệ thuật
 
@@ -214,11 +263,15 @@ art fair → thị trường / quan hệ gallery–collector / giá
 
 Ranh giới không tuyệt đối. Nghệ sĩ cần cả uy tín chuyên môn và khả năng duy trì thu nhập; phòng trưng bày cần doanh thu nhưng cũng xây chương trình nghệ thuật dài hạn.
 
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **서울 중심성과 지역 문화공간: nghệ thuật cũng có địa lý** tiếp nhận điểm tựa từ **비엔날레와 아트페어: hai lô-gic (logic / 논리) khác nhau của thế giới nghệ thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **독립공간: không gian độc lập và thử nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 서울 중심성과 지역 문화공간: nghệ thuật cũng có địa lý
 
 Seoul tập trung nhiều bảo tàng, phòng trưng bày, trường nghệ thuật, nhà sưu tập và truyền thông, tạo hiệu ứng tập tụ. Nhưng Gwangju, Busan, Daegu, Jeju và nhiều địa phương có biennale, bảo tàng, liên hoan và không gian độc lập riêng.
 
 Nếu chỉ nhìn nghệ thuật Hàn Quốc qua vài khu ở Seoul, ta dễ nhầm **trung tâm thị trường** với **toàn bộ hệ sinh thái sáng tạo**. Địa phương có thể cung cấp chủ đề, cộng đồng và lịch sử khác; ngược lại, nghệ sĩ địa phương vẫn phải kết nối mạng lưới quốc gia hoặc quốc tế để có nguồn lực và khả năng hiển thị.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **독립공간: không gian độc lập và thử nghiệm** tiếp nhận điểm tựa từ **서울 중심성과 지역 문화공간: nghệ thuật cũng có địa lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **디지털 전시 và nghệ thuật trong môi trường số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 독립공간: không gian độc lập và thử nghiệm
 
@@ -228,6 +281,8 @@ Nhưng tính độc lập không đồng nghĩa không có ràng buộc. Tiền 
 
 Đây là bài toán quen thuộc của văn hoá: **tự do sáng tạo cần hạ tầng vật chất**. Không gian, thời gian và thu nhập quyết định ai có thể tiếp tục làm nghệ thuật đủ lâu để phát triển nghề.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **디지털 전시 và nghệ thuật trong môi trường số** tiếp nhận điểm tựa từ **독립공간: không gian độc lập và thử nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghệ thuật như một chuỗi lao động, không chỉ một tên nghệ sĩ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 디지털 전시 và nghệ thuật trong môi trường số
 
 Triển lãm trực tuyến, tác phẩm video, nghệ thuật tương tác và lưu trữ số làm ranh giới giữa “tác phẩm”, “bản sao” và “giao diện xem” phức tạp hơn. Một tệp (file / 파일) có thể được sao chép gần như không tốn chi phí, nhưng trải nghiệm trong không gian, thiết bị hoặc phiên bản được chứng thực vẫn tạo khác biệt.
@@ -235,6 +290,8 @@ Triển lãm trực tuyến, tác phẩm video, nghệ thuật tương tác và 
 Khi nghệ thuật đi vào nền tảng số, khả năng tiếp cận tăng nhưng cũng xuất hiện vấn đề bảo quản định dạng, quyền tác giả và phụ thuộc nền tảng. Một tác phẩm dùng phần mềm cũ có thể khó chạy sau nhiều năm dù tệp (file / 파일) vẫn tồn tại.
 
 Bảo tồn nghệ thuật số vì vậy không chỉ lưu tệp; có khi phải lưu môi trường chạy, phần cứng, tài liệu và hướng dẫn tái tạo.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **디지털 전시 và nghệ thuật trong môi trường số** xác định đầu vào; **Nghệ thuật như một chuỗi lao động, không chỉ một tên nghệ sĩ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Nguồn thu nghệ thuật: danh tiếng và tiền không đi cùng một đường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nghệ thuật như một chuỗi lao động, không chỉ một tên nghệ sĩ
 
@@ -254,6 +311,8 @@ Tên nghệ sĩ thường là tín hiệu dễ thấy nhất, nhưng **lao độ
 
 Mỗi bước có kỹ năng riêng. Vì vậy “nghệ sĩ sáng tạo, còn bảo tàng chỉ trưng bày” là mô hình quá đơn giản.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Nghệ thuật như một chuỗi lao động, không chỉ một tên nghệ sĩ** nêu điều cần giải thích; **Nguồn thu nghệ thuật: danh tiếng và tiền không đi cùng một đường** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tài trợ và chọn lọc: ai được nhìn thấy phụ thuộc cả chất lượng lẫn hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguồn thu nghệ thuật: danh tiếng và tiền không đi cùng một đường
 
 Nghệ sĩ có thể nhận thu nhập từ bán tác phẩm, biểu diễn, giảng dạy, tiền đặt hàng, tài trợ, bản quyền, công việc phụ hoặc hợp đồng dự án. Uy tín chuyên môn cao không tự động tạo dòng tiền ổn định.
@@ -269,6 +328,8 @@ uy tín chuyên môn
 ≠ thu nhập ròng
 ```
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Nguồn thu nghệ thuật: danh tiếng và tiền không đi cùng một đường** nêu điều cần giải thích; **Tài trợ và chọn lọc: ai được nhìn thấy phụ thuộc cả chất lượng lẫn hạ tầng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quyền sở hữu vật thể không đồng nghĩa sở hữu mọi quyền đối với tác phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tài trợ và chọn lọc: ai được nhìn thấy phụ thuộc cả chất lượng lẫn hạ tầng
 
 Quỹ công, quỹ tư nhân, phòng trưng bày, doanh nghiệp và bảo tàng đều có thể tài trợ nghệ thuật. Mỗi nguồn có tiêu chí, mục tiêu và mức tự chủ khác nhau.
@@ -276,6 +337,8 @@ Quỹ công, quỹ tư nhân, phòng trưng bày, doanh nghiệp và bảo tàng
 Khi nguồn lực khan hiếm, quy trình chọn dự án tạo **hiệu ứng cổng vào (gatekeeping)**. Điều này không nhất thiết là xấu; mọi hệ thống phải lựa chọn khi số đề xuất lớn hơn ngân sách. Nhưng cách đặt tiêu chí quyết định loại nghệ thuật nào dễ được sản xuất.
 
 Ví dụ một chương trình ưu tiên sản phẩm có thể đo lượng khách rõ sẽ tạo động lực khác chương trình ưu tiên thử nghiệm dài hạn. Chính sách tài trợ vì vậy định hình hệ sinh thái gián tiếp qua **cấu trúc phần thưởng**.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Quyền sở hữu vật thể không đồng nghĩa sở hữu mọi quyền đối với tác phẩm** tiếp nhận điểm tựa từ **Tài trợ và chọn lọc: ai được nhìn thấy phụ thuộc cả chất lượng lẫn hạ tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo quản phòng ngừa: di sản hỏng dần ngay cả khi không ai chạm vào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quyền sở hữu vật thể không đồng nghĩa sở hữu mọi quyền đối với tác phẩm
 
@@ -291,6 +354,8 @@ Mua một bức tranh vật lý không tự động có nghĩa người mua đư
 
 Chi tiết pháp lý phụ thuộc luật và hợp đồng hiện hành; điều quan trọng ở tầng văn hoá là hiểu **tác phẩm vừa là vật thể vừa là tập quyền**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Bảo quản phòng ngừa: di sản hỏng dần ngay cả khi không ai chạm vào** tiếp nhận điểm tựa từ **Quyền sở hữu vật thể không đồng nghĩa sở hữu mọi quyền đối với tác phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính xác thực trong thủ công: vật liệu cũ, kỹ thuật cũ hay chức năng cũ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bảo quản phòng ngừa: di sản hỏng dần ngay cả khi không ai chạm vào
 
 Ánh sáng, độ ẩm, nhiệt độ, côn trùng, bụi, ô nhiễm và ứng suất cơ học đều làm vật liệu già đi. Vì vậy bảo tồn không chỉ là “sửa khi hỏng”; phần quan trọng hơn là **bảo quản phòng ngừa (preventive conservation)**.
@@ -305,6 +370,8 @@ kiểm soát môi trường
 
 Một hiện vật gỗ, giấy, vải và kim loại phản ứng khác nhau với độ ẩm. Vì vậy bảo tàng phải quản lý vi môi trường chứ không thể dùng một công thức cho mọi vật.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Tính xác thực trong thủ công: vật liệu cũ, kỹ thuật cũ hay chức năng cũ?** tiếp nhận điểm tựa từ **Bảo quản phòng ngừa: di sản hỏng dần ngay cả khi không ai chạm vào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo tồn số: lưu tệp (file / 파일) không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính xác thực trong thủ công: vật liệu cũ, kỹ thuật cũ hay chức năng cũ?
 
 Khi phục dựng một nghề hoặc hiện vật, “giữ nguyên” có nhiều nghĩa. Ta có thể giữ nguyên vật liệu, công cụ, quy trình, hình dáng, chức năng hoặc ý nghĩa nghi lễ — nhưng đôi khi không thể giữ tất cả.
@@ -312,6 +379,8 @@ Khi phục dựng một nghề hoặc hiện vật, “giữ nguyên” có nhi�
 Ví dụ vật liệu cũ có thể khan hiếm hoặc gây hại môi trường; công cụ mới có thể tăng an toàn; công trình phải đáp ứng tiêu chuẩn hiện đại. Khi đó cộng đồng phải thương lượng **lớp nào là cốt lõi**.
 
 Đây là lý do tính xác thực không chỉ là “cũ hơn = thật hơn”. Nó là câu hỏi về tính liên tục của tri thức và ý nghĩa.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Bảo tồn số: lưu tệp (file / 파일) không đủ** tiếp nhận điểm tựa từ **Tính xác thực trong thủ công: vật liệu cũ, kỹ thuật cũ hay chức năng cũ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản gốc trong môi trường số: khi sao chép hoàn hảo trở nên dễ dàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo tồn số: lưu tệp (file / 파일) không đủ
 
@@ -330,6 +399,8 @@ lưu file gốc
 
 **Checksum** giúp biết tệp (file / 파일) có thay đổi ngoài ý muốn. **Di chuyển định dạng (format migration)** đổi sang định dạng mới nhưng có nguy cơ thay hành vi. **Mô phỏng (emulation)** cố chạy môi trường cũ trên hệ mới. Mỗi cách có đánh đổi giữa độ trung thực và khả năng duy trì.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Bản gốc trong môi trường số: khi sao chép hoàn hảo trở nên dễ dàng** tiếp nhận điểm tựa từ **Bảo tồn số: lưu tệp (file / 파일) không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo lường tác động nghệ thuật: lượng khách không bằng toàn bộ giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bản gốc trong môi trường số: khi sao chép hoàn hảo trở nên dễ dàng
 
 Với tranh vật lý, bản gốc và bản sao thường có khác biệt vật chất. Với tệp số, hai bản sao bit-for-bit có thể giống hệt nhau.
@@ -337,6 +408,8 @@ Với tranh vật lý, bản gốc và bản sao thường có khác biệt vậ
 Do đó giá trị “bản gốc” có thể chuyển từ vật chất sang **nguồn gốc và chứng thực (provenance and authentication)**: ai tạo, phiên bản nào, quyền nào gắn với tệp và lịch sử lưu trữ ra sao.
 
 Đây là cùng bài toán xuất hiện trong ảnh số, âm nhạc và dữ liệu: khi nội dung có thể sao chép gần như không mất chất lượng, thông tin về nguồn gốc trở thành phần cốt lõi của giá trị.
+
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Bản gốc trong môi trường số: khi sao chép hoàn hảo trở nên dễ dàng** nêu điều cần giải thích; **Đo lường tác động nghệ thuật: lượng khách không bằng toàn bộ giá trị** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khả năng tiếp cận nghệ thuật: không chỉ có vé vào cửa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đo lường tác động nghệ thuật: lượng khách không bằng toàn bộ giá trị
 
@@ -350,6 +423,8 @@ lượt khách cao
 ```
 
 Một chương trình nhỏ có thể đào tạo nghệ nhân mới hoặc lưu tri thức hiếm; một triển lãm đông khách có thể chủ yếu nhờ thương hiệu lớn. Vì vậy đánh giá văn hoá cần **nhiều chỉ số**, không một bảng xếp hạng duy nhất.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Đo lường tác động nghệ thuật: lượng khách không bằng toàn bộ giá trị** nêu điều cần giải thích; **Khả năng tiếp cận nghệ thuật: không chỉ có vé vào cửa** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên hệ kiến thức: nghệ thuật như hệ lưu trữ đa phương thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khả năng tiếp cận nghệ thuật: không chỉ có vé vào cửa
 
@@ -366,6 +441,8 @@ vật lý
 ```
 
 Nếu người mới cảm thấy bảo tàng “không dành cho mình”, rào cản có thể là văn hoá chứ không chỉ giá vé. Thiết kế giáo dục công chúng và chú giải giúp giảm rào cản đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Liên hệ kiến thức: nghệ thuật như hệ lưu trữ đa phương thức** tiếp nhận điểm tựa từ **Khả năng tiếp cận nghệ thuật: không chỉ có vé vào cửa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ kiến thức: nghệ thuật như hệ lưu trữ đa phương thức
 
@@ -384,9 +461,13 @@ tri thức số → file, mã, môi trường chạy, metadata
 
 Một hệ nghệ thuật khoẻ cần nhiều lớp lưu trữ cùng tồn tại.
 
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: nghệ thuật như hệ lưu trữ đa phương thức** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Nghệ thuật Hàn Quốc không chỉ là “truyền thống” hoặc “K-pop”. Nó là một chuỗi gồm người thực hành, vật liệu, không gian, thiết chế, tài trợ, thị trường, quyền, công nghệ bảo tồn và khán giả. Muốn hiểu vì sao một thực hành sống được, cần hỏi không chỉ “nó đẹp hay quan trọng?” mà còn “ai có thời gian học, ai trả chi phí, ai lưu trữ, ai được nhìn thấy và hệ thống có thể tái tạo nó sau 30 năm hay không?”.
+
+> **Chuyển mạch:** Ở chặng này của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -408,9 +489,13 @@ Kỹ năng thủ công không phải “bí quyết cảm tính” đối lập 
 
 “Nhiều khách hơn luôn nghĩa là chương trình văn hoá tốt hơn” bỏ qua chất lượng học tập, truyền nghề, đại diện cộng đồng và tác động dài hạn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn tham khảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đọc tiếp
 
 Đọc cùng [`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md), [`14_regions_jeju_local_identity_peninsula.md`](14_regions_jeju_local_identity_peninsula.md), [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+
+> **Chuyển mạch:** Trong **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản**, **Đọc tiếp** nêu điều cần giải thích; **Nguồn tham khảo** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguồn tham khảo
 
@@ -420,3 +505,5 @@ Nguồn tham khảo giúp đối chiếu thuật ngữ, niên đại, chất li�
 - UNESCO: Pansori epic chant; Arirang; Nongak; Talchum; nghi lễ tổ tiên hoàng gia Jongmyo và âm nhạc.
 - `국가유산청` / Korea Heritage Service và `국가유산진흥원`: di sản, bảo tồn và truyền thừa.
 - Với quyền tác giả, quyền khai thác và hợp đồng cụ thể, phải dùng luật và thoả thuận hiện hành thay vì suy từ phân tích văn hoá.
+
+> **Bàn giao:** Sau **Nguồn tham khảo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
