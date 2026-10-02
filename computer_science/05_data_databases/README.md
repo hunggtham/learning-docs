@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) & Databases — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) & Databases — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Dữ liệu (data / 데이터) & Databases — lĩnh vực (domain / 도메인) Hub** để gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Dữ liệu (data / 데이터) & Databases — lĩnh vực (domain / 도메인) Hub**. Route học đi từ data models/schema → relational theory/normalization → transactions/indexes/query execution → recovery, NoSQL và analytics, để mỗi chapter nối semantics dữ liệu với trade-off vận hành.
 
 Foundation nằm tại [`../basic/05_data_databases/`](../basic/05_data_databases/): dữ liệu (data / 데이터) các mô hình (models / 모델들), relational lý thuyết (theory / 이론), normalization, ACID, indexes, truy vấn (query / 쿼리) thực thi (execution / 실행), WAL/khôi phục (recovery / 복구), SQL ngữ nghĩa (semantics / 의미론) và NoSQL/analytical các hệ thống (systems / 시스템들).
 

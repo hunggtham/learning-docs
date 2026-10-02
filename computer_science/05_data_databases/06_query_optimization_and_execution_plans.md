@@ -1,6 +1,6 @@
 # Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ truy vấn (query / 쿼리) văn bản (text / 텍스트) đến vật lý (physical / 물리적) plan** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cardinality estimation là trái tim của chi phí (cost / 비용) mô hình (model / 모델)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Query optimization và execution plans**. Route đi từ logical query → cardinality/statistics → join order/operators → SARGability/index-only scan → EXPLAIN và parameter sensitivity, để plan được kiểm chứng bằng chi phí thực tế.
 
 Hai SQL queries có thể trả cùng kết quả nhưng thời gian chạy (runtime / 런타임) chênh hàng nghìn lần. cơ sở dữ liệu (database / 데이터베이스) optimizer (옵티마이저) giải bài toán tìm vật lý (physical / 물리적) plan có estimated chi phí (cost / 비용) thấp trong không gian plans rất lớn. Đây là nơi algorithms, statistics, lưu trữ (storage / 저장소), CPU bộ nhớ đệm (cache / 캐시) và relational algebra gặp nhau.
 

@@ -1,6 +1,6 @@
 # Lưu trữ (storage / 저장소) engine, WAL, khôi phục (recovery / 복구) và durability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lưu trữ (storage / 저장소) engine, WAL, khôi phục (recovery / 복구) và durability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pages là đơn vị quản lý** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Buffer pool** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Storage engine, WAL, recovery và durability**. Route đi từ pages/buffer pool → WAL ordering → REDO/UNDO/checkpoint → torn-write protection → backup/replication boundary, để dữ liệu sau crash được giải thích bằng log và persistence.
 
 Một giao dịch (transaction / 트랜잭션) lần ghi nhận (commit / 커밋) cần biến logical thay đổi (change / 변경) thành bytes trên lưu trữ (storage / 저장소) sao cho crash ở bất kỳ thời điểm nào vẫn recover được trạng thái (state / 상태) hợp lệ. lưu trữ (storage / 저장소) engine giải vấn đề bằng pages, buffers, logs, checksums và khôi phục (recovery / 복구) protocols.
 

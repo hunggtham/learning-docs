@@ -1,6 +1,6 @@
 # Relational algebra và SQL ngữ nghĩa (semantics / 의미론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Relational algebra và SQL ngữ nghĩa (semantics / 의미론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quan hệ (relation / 관계) không chỉ là bảng giao diện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cốt lõi (core / 핵심) relational operations** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Relational algebra và SQL semantics**. Route đi từ relation/operators → joins và NULL three-valued logic → logical query order → aggregation/window/set semantics, để câu lệnh SQL được hiểu như biến đổi trên tập dữ liệu.
 
 SQL thường được học bằng cú pháp (syntax / 문법): `SELECT`, `JOIN`, `GROUP BY`. Nhưng cơ sở dữ liệu (database / 데이터베이스) không “chạy từng dòng câu SQL từ trái sang phải”. Để hiểu đúng truy vấn (query / 쿼리), cần nhìn relational mô hình (model / 모델) và relational algebra (관계 대수) phía dưới: một truy vấn (query / 쿼리) mô tả **quan hệ kết quả mong muốn**, còn optimizer có quyền chọn nhiều thực thi (execution / 실행) plans miễn chúng giữ ngữ nghĩa (semantics / 의미론) tương đương.
 

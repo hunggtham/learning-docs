@@ -1,6 +1,6 @@
 # Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **B+ cây (tree / 트리) chỉ mục (index / 인덱스)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Băm (hash / 해시) chỉ mục (index / 인덱스)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Indexes, B-tree, hashing và query execution**. Route đi từ B+/hash index → selectivity/cardinality → execution operators → cost/statistics → maintenance, để index được đánh giá theo workload thay vì chỉ theo cấu trúc.
 
 Không chỉ mục (index / 인덱스), truy vấn (query / 쿼리) `WHERE user_id = ?` trên bảng (table / 테이블) lớn có thể scan nhiều pages. chỉ mục (index / 인덱스) tạo auxiliary cấu trúc (structure / 구조) để đổi thêm lưu trữ (storage / 저장소)/ghi (write / 쓰기) chi phí (cost / 비용) lấy read truy cập (access / 접근) nhanh hơn. Nhưng chỉ mục (index / 인덱스) chỉ hữu ích khi cấu trúc (structure / 구조) và truy vấn (query / 쿼리) predicate/thứ tự (order / 순서) match.
 
