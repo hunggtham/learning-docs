@@ -91,7 +91,7 @@ Các chuẩn gốc (canonical / 정본) cross-domain docs được tái sử d�
 
 Finance sâu hơn về valuation, markets và portfolio investing thuộc `../investing/`; PMP chỉ giữ mức financial lập luận (reasoning / 추론) cần cho dự án (project / 프로젝트)/investment quyết định (decision / 결정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — References**, **Nguồn (source / 소스) nội bộ repository** nêu điều cần giải thích; **Nguyên tắc sử dụng nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Nguồn nội bộ repository** chỉ ra tài liệu nào thuộc owner; **Nguyên tắc sử dụng nguồn** quy định cách kiểm tra phiên bản, phạm vi và mức bằng chứng trước khi đưa claim vào bài học.
 
 ## Nguyên tắc sử dụng nguồn
 

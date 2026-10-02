@@ -16,7 +16,7 @@ Từ kỳ thi cập nhật tháng 7/2026, PMP có ba exam lĩnh vực (domain / 
 
 Exam 2026 cũng dùng item format gần dự án (project / 프로젝트) công việc (work / 작업) hơn, gồm scenario/trường hợp (case / 사례), multiple-response, drag-and-drop và practicum dựa trên tools, dữ liệu (data / 데이터), dashboard hoặc dự án (project / 프로젝트) sản phẩm tạo ra (artifact / 산출물). Vì vậy tầng (layer / 계층) consolidation của thư viện (library / 라이브러리) không chỉ luyện “đọc câu hỏi chữ”, mà còn luyện cách giữ trạng thái (state / 상태) mô hình (model / 모델), đọc bằng chứng (evidence / 증거) và ra quyết định (decision / 결정) xuyên nhiều sản phẩm tạo ra (artifact / 산출물).
 
-> **Chuyển mạch:** Trong **PMP thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Học tập (learning / 학습) phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Bản chất của PMP trong thư viện này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reading routes theo mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bản chất của PMP trong thư viện này** xác định mental model và owner; **Học tập phụ thuộc** biến chúng thành prerequisite, rồi **Reading routes theo mục tiêu** chọn đường học phù hợp.
 
 ## Học tập (learning / 학습) phụ thuộc (dependency / 의존성)
 
@@ -68,7 +68,7 @@ Có thể đọc liên tục theo thứ tự dưới đây. Mỗi chapter vẫn 
 
 Các chapter 00–12 xây mô hình tư duy (mental model / 사고 모델) theo phụ thuộc (dependency / 의존성). Chapter 13–16 là lớp consolidation: lập luận (reasoning / 추론) với scenario/sản phẩm tạo ra (artifact / 산출물), nhìn dự án (project / 프로젝트) thông tin (information / 정보) như một hệ thống (system / 시스템), luyện quantitative lập luận (reasoning / 추론) cùng giả định (assumption / 가정) và nối nhiều lĩnh vực (domain / 도메인) trong các trường hợp (case / 사례) hoàn chỉnh.
 
-> **Chuyển mạch:** Ở chặng này của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading routes theo mục tiêu** tiếp nhận điểm tựa từ **Học tập (learning / 학습) phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối với thư viện kiến thức (knowledge library / 지식 라이브러리) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Reading routes theo mục tiêu** sắp xếp nội dung theo nhu cầu người học; **Kết nối với thư viện khác** mở rộng bối cảnh nhưng vẫn giữ owner và ranh giới của PMP.
 
 ## Reading routes theo mục tiêu
 
@@ -102,7 +102,7 @@ Nếu lỗi (error / 오류) log cho thấy cùng một lớp (class / 클래스
 
 Khi gặp thuật ngữ chưa quen, xem [Glossary](./GLOSSARY.md). Coverage đối với PMP 2026, PMBOK 8 và các ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) khác được theo dõi ở [Coverage & Depth Audit](./COVERAGE_AUDIT.md). Nguồn chuẩn và thời điểm kiểm chứng nằm ở [References](./REFERENCES.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Kết nối với thư viện kiến thức (knowledge library / 지식 라이브러리) khác** tiếp nhận điểm tựa từ **Reading routes theo mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách sử dụng khi học PMP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi biết các route và thư viện liên quan, **Cách sử dụng khi học PMP** chỉ cách chọn file, ghi lại bằng chứng và quay về route khi phát hiện gap.
 
 ## Kết nối với thư viện kiến thức (knowledge library / 지식 라이브러리) khác
 
@@ -110,7 +110,7 @@ PMP nhìn requirements, chất lượng (quality / 품질), delivery và thay đ
 
 PMP chỉ dùng finance ở mức dự án (project / 프로젝트)/business-case quyết định (decision / 결정). Nếu cần đi sâu hơn vào financial hệ thống (system / 시스템), asset pricing, company phân tích (analysis / 분석), portfolio hoặc macroeconomics, chuyển sang [Investing Knowledge Library](../investing/README.md) thay vì kéo các chapter PMP vượt conceptual ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **PMP thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Cách sử dụng khi học PMP** tiếp nhận điểm tựa từ **Kết nối với thư viện kiến thức (knowledge library / 지식 라이브러리) khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cách sử dụng khi học PMP** khép phần README bằng một vòng lặp: chọn owner → học theo prerequisite → kiểm tra case → cập nhật gap, không học như danh sách thuật ngữ.
 
 ## Cách sử dụng khi học PMP
 

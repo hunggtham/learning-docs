@@ -38,7 +38,7 @@ Full-depth pass đầu tiên tập trung `00`, `07–12` và `16`. Follow-up ref
 
 `Deepened+` chỉ có nghĩa chapter đã có đủ cơ chế (mechanism / 메커니즘)/hệ thống (system / 시스템) tầng (layer / 계층) cho kiểm tra (audit / 감사) hiện tại; đây không phải ranking chất lượng giữa chapter.
 
-> **Chuyển mạch:** Ở chặng này của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Ánh xạ (mapping / 매핑) với PMP 2026** tiếp nhận điểm tựa từ **Chuẩn gốc (canonical / 정본) độ sâu (depth / 깊이) status** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ánh xạ (mapping / 매핑) với PMBOK Eighth Edition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chuẩn gốc depth status** cho biết nội dung đã có bằng chứng nào; **Ánh xạ với PMP 2026** đặt nó vào outline hiện hành, rồi **Ánh xạ với PMBOK Eighth Edition** kiểm tra độ bao phủ theo chuẩn.
 
 ## Ánh xạ (mapping / 매핑) với PMP 2026
 
@@ -66,7 +66,7 @@ Full-depth pass đầu tiên tập trung `00`, `07–12` và `16`. Follow-up ref
 | Predictive, adaptive/agile, hybrid across domains | [01 Lifecycle](./01_lifecycle_delivery_approaches_and_tailoring.md), [10 Adaptive & Hybrid](./10_agile_hybrid_and_adaptive_delivery.md), [16 Cases](./16_end_to_end_case_studies.md) |
 | Scenario/practicum/ứng dụng (application / 애플리케이션) | [13 Scenario Reasoning](./13_pmp_scenario_reasoning_and_exam_strategy.md), [14 Artifacts](./14_artifacts_information_and_traceability.md), [16 Cases](./16_end_to_end_case_studies.md) |
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Ánh xạ (mapping / 매핑) với PMBOK Eighth Edition** tiếp nhận điểm tựa từ **Ánh xạ (mapping / 매핑) với PMP 2026** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formula và worked-example kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi đối chiếu hai khung chuẩn, **Formula và worked-example audit** kiểm tra năng lực áp dụng; coverage chỉ đạt khi người học giải thích được cơ chế chứ không chỉ thấy heading.
 
 ## Ánh xạ (mapping / 매핑) với PMBOK Eighth Edition
 
@@ -102,7 +102,7 @@ Mỗi phần ưu tiên bài toán (problem / 문제) → cơ chế (mechanism / 
 
 Độ sâu (depth / 깊이) pass kiểm tra (audit / 감사) mọi chapter nhưng không rewrite chapter đã đủ sâu chỉ để đổi wording. Đây là tiêu chí bảo vệ signal-to-noise của thư viện (library / 라이브러리).
 
-> **Chuyển mạch:** Trong **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **Readability kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Internal-link kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Readability audit** xác nhận prose có thể học; **Dependency audit** kiểm tra prerequisite, rồi **Internal-link audit** xác nhận người đọc quay được về đúng owner.
 
 ## Phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)
 
@@ -128,7 +128,7 @@ Deepening không làm thay conceptual tuyến (route / 경로). Nó chỉ làm m
 
 README hiện có full conceptual tuyến (route / 경로), scenario tuyến (route / 경로), software-project tuyến (route / 경로), leadership/quản trị (governance / 거버넌스) tuyến (route / 경로) và last-mile exam consolidation. Không cần thêm competing tuyến (route / 경로).
 
-> **Chuyển mạch:** Ở chặng này của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Internal-link kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn (source / 소스)/provenance kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi dependency và link đã đúng, **Nguồn/provenance audit** kiểm tra claim có thể truy nguyên về tài liệu chính thức, phiên bản và ngày đối chiếu.
 
 ## Internal-link kiểm tra (audit / 감사)
 
@@ -188,7 +188,7 @@ AI và sustainability deepening chỉ mở rộng conceptual quản trị (gover
 
 Các chapter `05–06`, `13–14` vẫn được giữ ở trạng thái hiện tại vì kiểm tra (audit / 감사) chưa tìm thấy missing cơ chế (mechanism / 메커니즘) đủ lớn để biện minh cho thêm prose. Đây là quyết định giữ signal-to-noise, không phải bỏ qua chúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Tiêu chí cho vòng tiếp theo** tiếp nhận điểm tựa từ **Gap rà soát (review / 검토) sau các độ sâu (depth / 깊이) pass** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Gap review sau depth pass** gom các issue còn mở; **Tiêu chí cho vòng tiếp theo** biến chúng thành bằng chứng và hành động cụ thể cho lần audit kế tiếp.
 
 ## Tiêu chí cho vòng tiếp theo
 

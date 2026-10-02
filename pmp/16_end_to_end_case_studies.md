@@ -440,7 +440,7 @@ AI hiện thực (implementation / 구현) detail không được duplicate tron
 
 Finance chuyên sâu như corporate valuation/portfolio lý thuyết (theory / 이론) tiếp tục thuộc [Investing Knowledge Library](../investing/README.md); PMP chỉ lấy phần cần cho dự án (project / 프로젝트)/portfolio quyết định (decision / 결정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cross-domain liên kết (connection / 연결)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cross-domain liên kết** gom các ràng buộc và trade-off của từng miền; **Mô hình tư duy** biến chúng thành tiêu chí chọn predictive, adaptive hoặc hybrid trong case end-to-end.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
