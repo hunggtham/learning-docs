@@ -1,6 +1,6 @@
 # Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Không gian địa chỉ là một hợp đồng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bảng trang nhiều cấp** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Không gian địa chỉ là một hợp đồng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bảng trang nhiều cấp** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối virtual memory với page tables, TLB shootdown và huge pages, để đọc chi phí dịch địa chỉ theo cả phần cứng và kernel.
 
 Ở mức API, một tiến trình nhìn thấy dải địa chỉ ảo gần như riêng tư. Ở mức nhân hệ điều hành (kernel), lớp trừu tượng này phải được duy trì bằng bảng trang, bit quyền truy cập, xử lý lỗi trang và phối hợp với TLB của CPU. Vì vậy bộ nhớ ảo (virtual memory) không chỉ là “dùng đĩa thay RAM”; nó là cơ chế cốt lõi cho cô lập, di chuyển địa chỉ và cấp phát theo nhu cầu.
 

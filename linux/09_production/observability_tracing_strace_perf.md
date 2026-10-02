@@ -1,7 +1,6 @@
 # Quan sát sâu hệ thống: strace, perf và tracing
 
-> **Mạch đọc:** Đọc **Quan sát sâu hệ thống: strace, perf và tracing** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tracing khác logging như thế nào?** sang **strace: quan sát lời gọi hệ thống**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quan sát sâu hệ thống: strace, perf và tracing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tracing khác logging như thế nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **strace: quan sát lời gọi hệ thống** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối observability với tracing, strace và perf, để ghép dấu vết ứng dụng với hành vi syscall và chi phí kernel.
 
 Khi log ứng dụng không đủ, bước tiếp theo không nhất thiết là thêm `DEBUG` rồi restart. Linux cung cấp nhiều cơ chế để quan sát một tiến trình đang làm gì ở ranh giới kernel, đang tiêu CPU ở đâu và đang chờ loại tài nguyên nào.
 
@@ -25,6 +24,8 @@ Nhưng tracing có thể giúp phân biệt:
 - liên tục `stat()` hàng nghìn tệp (file / 파일);
 - `read()` từ socket trả chậm;
 - CPU đang bị consume trong một hàm (function / 함수) cụ thể.
+
+> **Chuyển mạch:** Trong **Quan sát sâu hệ thống: strace, perf và tracing**, **strace: quan sát lời gọi hệ thống** tiếp nhận điểm tựa từ **Tracing khác logging như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attach vào tiến trình đang chạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `strace`: quan sát lời gọi hệ thống
 
@@ -64,6 +65,8 @@ strace -e trace=network curl -s https://example.com >/dev/null
 
 Có thể thấy `socket()`, `connect()`, `sendto()`, `recvfrom()` hoặc calls liên quan.
 
+> **Chuyển mạch:** Ở chặng này của **Quan sát sâu hệ thống: strace, perf và tracing**, **Attach vào tiến trình đang chạy** tiếp nhận điểm tựa từ **strace: quan sát lời gọi hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **-f và multi-thread/tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Attach vào tiến trình đang chạy
 
 Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
@@ -91,6 +94,8 @@ sudo timeout 10s strace -tt -T -p 1234 -e trace=network -o /tmp/strace-net.txt
 
 `-tt` thêm timestamp chi tiết. `-T` cho thời gian syscall. `timeout` giới hạn tracing 10 giây.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan sát sâu hệ thống: strace, perf và tracing**, **Attach vào tiến trình đang chạy** xác định đầu vào; **-f và multi-thread/tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Đọc lỗi syscall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `-f` và multi-thread/tiến trình (process / 프로세스)
 
 Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
@@ -102,6 +107,8 @@ strace -f command
 `-f` theo child processes/threads phù hợp theo hiện thực (implementation / 구현).
 
 Với Java, đầu ra (output / 출력) có thể rất lớn vì JVM có nhiều threads. Chỉ dùng khi thực sự cần và nên filter mạnh.
+
+> **Chuyển mạch:** Trong **Quan sát sâu hệ thống: strace, perf và tracing**, **-f và multi-thread/tiến trình (process / 프로세스)** xác định đầu vào; **Đọc lỗi syscall** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Khi strace cho thấy futex() rất nhiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đọc lỗi syscall
 
@@ -124,6 +131,8 @@ Các errno thường gặp:
 - `EMFILE` — tiến trình (process / 프로세스) hết tệp (file / 파일) descriptor limit;
 - `ENOSPC` — không còn không gian (space / 공간)/tài nguyên (resource / 자원) tương ứng.
 
+> **Chuyển mạch:** Ở chặng này của **Quan sát sâu hệ thống: strace, perf và tracing**, **Khi strace cho thấy futex() rất nhiều** tiếp nhận điểm tựa từ **Đọc lỗi syscall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **perf: quan sát CPU thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khi strace cho thấy `futex()` rất nhiều
 
 `futex` là thành phần nguyên thủy (primitive / 기본 요소) kernel thường được thời gian chạy (runtime / 런타임) sử dụng để xây mutex/điều kiện (condition / 조건) synchronization.
@@ -139,6 +148,8 @@ jcmd <PID> Thread.print
 Hệ điều hành cho thấy “đang chờ synchronization”; JVM cho biết Java monitor/ngăn xếp (stack / 스택) nào liên quan.
 
 Đây là ví dụ kết hợp hai tầng khả năng quan sát (observability / 관측 가능성).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan sát sâu hệ thống: strace, perf và tracing**, **perf: quan sát CPU thực thi (execution / 실행)** tiếp nhận điểm tựa từ **Khi strace cho thấy futex() rất nhiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sampling thay vì dấu vết (trace / 추적) mọi sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `perf`: quan sát CPU thực thi (execution / 실행)
 
@@ -167,6 +178,8 @@ sudo perf report
 
 `-F 99` sampling khoảng 99 Hz. `-g` cố thu lời gọi (call / 호출) đồ thị (graph / 그래프).
 
+> **Chuyển mạch:** Trong **Quan sát sâu hệ thống: strace, perf và tracing**, **Sampling thay vì dấu vết (trace / 추적) mọi sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **perf: quan sát CPU thực thi (execution / 실행)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Java và perf** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sampling thay vì dấu vết (trace / 추적) mọi sự kiện (event / 이벤트)
 
 `strace` có thể observe gần như từng syscall, còn `perf` thường sampling CPU instruction thực thi (execution / 실행).
@@ -174,6 +187,8 @@ sudo perf report
 Sampling chấp nhận không thấy mọi sự kiện (event / 이벤트) để đổi lấy overhead thấp hơn và profile thống kê.
 
 Đây là cùng tư duy với statistics: không cần đo mọi instruction để biết phần lớn CPU thời gian (time / 시간) tập trung ở đâu.
+
+> **Chuyển mạch:** Ở chặng này của **Quan sát sâu hệ thống: strace, perf và tracing**, **Java và perf** tiếp nhận điểm tựa từ **Sampling thay vì dấu vết (trace / 추적) mọi sự kiện (event / 이벤트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **pidstat: cầu nối (bridge / 브리지) giữa metrics và tracing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Java và perf
 
@@ -193,6 +208,8 @@ perf nếu cần OS/native-level evidence
 
 Không nên bắt đầu bằng công cụ (tool / 도구) phức tạp nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan sát sâu hệ thống: strace, perf và tracing**, **pidstat: cầu nối (bridge / 브리지) giữa metrics và tracing** tiếp nhận điểm tựa từ **Java và perf** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **lsof: đối tượng (object / 객체) relationship tracing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `pidstat`: cầu nối (bridge / 브리지) giữa metrics và tracing
 
 Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
@@ -207,6 +224,8 @@ pidstat -w -p 1234 1
 Tùy phiên bản (version / 버전), các option cho CPU, luồng thực thi (thread / 스레드), I/O và context-switch view.
 
 `pidstat` có overhead thấp và rất phù hợp làm bước đầu trước `strace`/`perf`.
+
+> **Chuyển mạch:** Trong **Quan sát sâu hệ thống: strace, perf và tracing**, **lsof: đối tượng (object / 객체) relationship tracing** tiếp nhận điểm tựa từ **pidstat: cầu nối (bridge / 브리지) giữa metrics và tracing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ss: trạng thái socket** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `lsof`: đối tượng (object / 객체) relationship tracing
 
@@ -227,6 +246,8 @@ Có thể thấy:
 
 Đây là cách nối tiến trình (process / 프로세스) mô hình (model / 모델) với filesystem/mạng (network / 네트워크) mô hình (model / 모델).
 
+> **Chuyển mạch:** Ở chặng này của **Quan sát sâu hệ thống: strace, perf và tracing**, **ss: trạng thái socket** tiếp nhận điểm tựa từ **lsof: đối tượng (object / 객체) relationship tracing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc/<PID>/stack và kernel ngăn xếp (stack / 스택)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `ss`: trạng thái socket
 
 Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
@@ -238,6 +259,8 @@ sudo ss -antp
 Cho thấy TCP states và tiến trình (process / 프로세스) association khi đủ quyền.
 
 Khi ứng dụng (application / 애플리케이션) báo liên kết (connection / 연결) pool exhaustion, nhìn số `ESTAB`, `CLOSE-WAIT`, `SYN-SENT` có thể tạo thêm hypothesis.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan sát sâu hệ thống: strace, perf và tracing**, **/proc/<PID>/stack và kernel ngăn xếp (stack / 스택)** tiếp nhận điểm tựa từ **ss: trạng thái socket** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **eBPF là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `/proc/<PID>/stack` và kernel ngăn xếp (stack / 스택)
 
@@ -252,6 +275,8 @@ có thể cho kernel ngăn xếp (stack / 스택) của tác vụ (task / 작업
 Nếu tiến trình (process / 프로세스) ở `D` trạng thái (state / 상태), kernel ngăn xếp (stack / 스택) đôi khi cho thấy nó đang chờ khối (block / 블록) I/O, NFS hoặc driver đường dẫn (path / 경로) nào.
 
 Đây là diagnostic nâng cao, cần hiểu symbol/kernel ngữ cảnh (context / 맥락) trước khi kết luận.
+
+> **Chuyển mạch:** Trong **Quan sát sâu hệ thống: strace, perf và tracing**, **eBPF là gì?** tiếp nhận điểm tựa từ **/proc/<PID>/stack và kernel ngăn xếp (stack / 스택)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao eBPF mạnh nhưng không nên dùng mù quáng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## eBPF là gì?
 
@@ -274,6 +299,8 @@ sudo bpftrace -e 'tracepoint:syscalls:sys_enter_openat { @[comm] = count(); }'
 
 Nhưng availability phụ thuộc kernel, permissions và gói (package / 패키지).
 
+> **Chuyển mạch:** Ở chặng này của **Quan sát sâu hệ thống: strace, perf và tracing**, **Vì sao eBPF mạnh nhưng không nên dùng mù quáng?** tiếp nhận điểm tựa từ **eBPF là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Off-CPU phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao eBPF mạnh nhưng không nên dùng mù quáng?
 
 Nó cho visibility sâu, nhưng:
@@ -285,6 +312,8 @@ Nó cho visibility sâu, nhưng:
 
 Cấp cao (senior / 시니어) không phải người luôn dùng eBPF; cấp cao (senior / 시니어) chọn **công cụ ít phức tạp nhất đủ để phân biệt giả thuyết**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan sát sâu hệ thống: strace, perf và tracing**, **Off-CPU phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Vì sao eBPF mạnh nhưng không nên dùng mù quáng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flame đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Off-CPU phân tích (analysis / 분석)
 
 CPU profiling chỉ cho nơi tiến trình (process / 프로세스) chạy. Nhưng độ trễ (latency / 지연 시간) có thể đến từ nơi tiến trình (process / 프로세스) **không chạy** vì đang chờ khóa (lock / 잠금), disk, mạng (network / 네트워크) hoặc scheduler.
@@ -295,6 +324,8 @@ Off-CPU phân tích (analysis / 분석) quan sát thời gian luồng thực thi
 
 Một hệ thống có thể dành 95% thời gian chờ cơ sở dữ liệu (database / 데이터베이스) và chỉ 5% CPU.
 
+> **Chuyển mạch:** Trong **Quan sát sâu hệ thống: strace, perf và tracing**, **Flame đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Off-CPU phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tracing trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Flame đồ thị (graph / 그래프)
 
 Flame đồ thị (graph / 그래프) là cách trực quan hóa ngăn xếp (stack / 스택) samples.
@@ -302,6 +333,8 @@ Flame đồ thị (graph / 그래프) là cách trực quan hóa ngăn xếp (st
 Chiều ngang biểu diễn tỷ lệ samples; chiều dọc là ngăn xếp lời gọi (call stack / 호출 스택) độ sâu (depth / 깊이). Một vùng rộng nghĩa hàm (function / 함수)/đường dẫn (path / 경로) xuất hiện trong nhiều samples.
 
 Không nên đọc chiều ngang như timeline. Flame đồ thị (graph / 그래프) truyền thống là phân phối (distribution / 분포), không phải trình tự thời gian.
+
+> **Chuyển mạch:** Ở chặng này của **Quan sát sâu hệ thống: strace, perf và tracing**, **Tracing trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **Flame đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Methodology: từ rẻ đến sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tracing trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
@@ -314,6 +347,8 @@ Distributed trace: request chậm ở service B
                      ↓
 Host tracing: service B chậm vì network connect / disk / CPU / lock
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan sát sâu hệ thống: strace, perf và tracing**, **Methodology: từ rẻ đến sâu** tiếp nhận điểm tựa từ **Tracing trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: Java dịch vụ (service / 서비스) độ trễ (latency / 지연 시간) cao nhưng CPU thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Methodology: từ rẻ đến sâu
 
@@ -335,6 +370,8 @@ eBPF / kernel-level deep tracing
 
 Không phải sự cố (incident / 인시던트) nào cũng cần xuống cuối.
 
+> **Chuyển mạch:** Trong **Quan sát sâu hệ thống: strace, perf và tracing**, **Methodology: từ rẻ đến sâu** cho ta quy tắc; **Ví dụ: Java dịch vụ (service / 서비스) độ trễ (latency / 지연 시간) cao nhưng CPU thấp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ: Java dịch vụ (service / 서비스) độ trễ (latency / 지연 시간) cao nhưng CPU thấp
 
 Bắt đầu:
@@ -353,6 +390,8 @@ sudo timeout 5s strace -tt -T -f -p <PID> -e trace=network -o /tmp/net.trace
 
 Nếu bằng chứng (evidence / 증거) cho thấy `connect()` hoặc `recvfrom()` delay, chuyển investigation sang phụ thuộc (dependency / 의존성)/mạng (network / 네트워크) đường dẫn (path / 경로) thay vì tăng JVM CPU.
 
+> **Chuyển mạch:** Ở chặng này của **Quan sát sâu hệ thống: strace, perf và tracing**, **Ví dụ: Java dịch vụ (service / 서비스) độ trễ (latency / 지연 시간) cao nhưng CPU thấp** cho ta quy tắc; **Những hiểu lầm phổ biến** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 **“strace không thấy ứng dụng (application / 애플리케이션) hàm (function / 함수) nên vô dụng.”** Nó nhìn syscall ranh giới (boundary / 경계), rất mạnh để phân biệt filesystem/mạng (network / 네트워크)/permission/tài nguyên (resource / 자원) issues.
@@ -364,6 +403,8 @@ Nếu bằng chứng (evidence / 증거) cho thấy `connect()` hoặc `recvfrom
 **“CPU profile giải thích mọi độ trễ (latency / 지연 시간).”** Không. Off-CPU waiting có thể chiếm phần lớn thời gian.
 
 **“eBPF là công cụ phải dùng nếu muốn được coi là cấp cao (senior / 시니어).”** Sai. công cụ (tool / 도구) choice phải dựa trên câu hỏi và thông tin (information / 정보) gain.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan sát sâu hệ thống: strace, perf và tracing**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -381,3 +422,5 @@ eBPF/kernel tracing     → event path sâu trong kernel/runtime
 Chọn tầng (layer / 계층) đủ để trả lời câu hỏi hiện tại, không chọn công cụ (tool / 도구) vì nó “nâng cao”.
 
 Xem thêm: [Production troubleshooting](./production_troubleshooting.md), [Java backend incident playbook](./java_backend_incident_playbook.md), [`/proc` và `/sys`](../00_foundations/proc_sysfs_kernel_interfaces.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # 03 — DataCollection & Submission
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03 — DataCollection & Submission**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tách dữ liệu khỏi thành phần (component / 컴포넌트)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. DataMap: bản ghi (record / 레코드) có lược đồ (schema / 스키마)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03 — DataCollection & Submission**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tách dữ liệu khỏi thành phần (component / 컴포넌트)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. DataMap: bản ghi (record / 레코드) có lược đồ (schema / 스키마)** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối DataCollection với Submission, binding và request lifecycle, để phân biệt model dữ liệu phía client với giao dịch phía server.
 
 ## 1. Tách dữ liệu khỏi thành phần (component / 컴포넌트)
 

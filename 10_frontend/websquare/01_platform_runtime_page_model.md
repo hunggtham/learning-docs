@@ -1,6 +1,6 @@
 # 01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. WebSquare không phải là “JavaScript có thêm vài API”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Từ nguồn (source / 소스) đến thời gian chạy (runtime / 런타임): XML → W-Pack → Engine → trình duyệt (browser / 브라우저)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01 — nền tảng (platform / 플랫폼), thời gian chạy (runtime / 런타임) & Page mô hình (model / 모델)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. WebSquare không phải là “JavaScript có thêm vài API”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Từ nguồn (source / 소스) đến thời gian chạy (runtime / 런타임): XML → W-Pack → Engine → trình duyệt (browser / 브라우저)** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối platform runtime với page model và lifecycle, để xác định screen được tạo, giữ state và hủy ở đâu.
 
 ## 1. WebSquare không phải là “JavaScript có thêm vài API”
 

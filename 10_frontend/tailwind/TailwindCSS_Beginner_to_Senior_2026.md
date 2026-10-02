@@ -1,6 +1,6 @@
 # Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hiện đại (modern / 현대적) Tailwind CSS v4.3 — học từ nền tảng đến kiến trúc vận hành (production architecture / 운영 아키텍처)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quy ước thuật ngữ Việt–Anh** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hiện đại (modern / 현대적) Tailwind CSS v4.3 — học từ nền tảng đến kiến trúc vận hành (production architecture / 운영 아키텍처)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quy ước thuật ngữ Việt–Anh** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Tailwind từ utility, responsive và component đến architecture, để hệ thống style giữ nhất quán khi quy mô tăng.
 
 ## Hiện đại (modern / 현대적) Tailwind CSS v4.3 — học từ nền tảng đến kiến trúc vận hành (production architecture / 운영 아키텍처)
 
