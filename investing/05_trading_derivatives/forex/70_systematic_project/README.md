@@ -1,5 +1,7 @@
 # Systematic FX Hiện thực (implementation / 구현) Dự án (project / 프로젝트)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Systematic FX Hiện thực (implementation / 구현) Dự án (project / 프로젝트)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến trúc tổng quát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các mô-đun (module / 모듈)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của systematic trading project, rồi nối dữ liệu, backtest, risk, execution và monitoring thành một vòng lặp.
+
 Dự án (project / 프로젝트) này biến phần Forex từ tài liệu phân tích thành một research hệ thống (system / 시스템) có thể kiểm tra (audit / 감사). Mục tiêu không phải tạo bot giao dịch “tự kiếm tiền”, mà là buộc toàn bộ chuỗi **dữ liệu (data / 데이터) → tính năng (feature / 기능) → tín hiệu (signal / 신호) → sizing → thực thi (execution / 실행) giả định (assumption / 가정) → portfolio → rà soát (review / 검토)** phải tường minh (explicit / 명시적) và reproducible.
 
 Dự án (project / 프로젝트) nên được làm sau khi đã đọc ít nhất:
@@ -15,8 +17,6 @@ Dự án (project / 프로젝트) nên được làm sau khi đã đọc ít nh�
 ```
 
 ## Kiến trúc tổng quát
-Phần “Kiến trúc tổng quát” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 Raw Data
@@ -37,12 +37,16 @@ Raw Data
 
 Nếu không thể dấu vết (trace / 추적) một P/L observation ngược lại raw dữ liệu (data / 데이터), timestamp, quy tắc (rule / 규칙) và thực thi (execution / 실행) giả định (assumption / 가정), research chưa đủ auditability.
 
+> **Chuyển mạch:** Trong **Systematic FX Hiện thực (implementation / 구현) Dự án (project / 프로젝트)**, **Các mô-đun (module / 모듈)** tiếp nhận điểm tựa từ **Kiến trúc tổng quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deliverables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các mô-đun (module / 모듈)
 
 1. [01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md](./01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md) — dữ liệu (data / 데이터) lược đồ (schema / 스키마), bid/ask, timezone, DST, macro vintage, chất lượng (quality / 품질) checks và reproducibility.
 2. [02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md](./02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md) — deterministic vòng lặp sự kiện (event loop / 이벤트 루프), tín hiệu (signal / 신호) timing, fills, spread/slippage, financing, margin và portfolio accounting.
 3. [03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md](./03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md) — currency-leg aggregation, leverage, rủi ro (risk / 위험) limits, stress tests, factor attribution và trade-level decomposition.
 4. [04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md](./04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md) — paper/small-live progression, reconciliation, drift monitoring, operational controls và retirement rules.
+
+> **Chuyển mạch:** Ở chặng này của **Systematic FX Hiện thực (implementation / 구현) Dự án (project / 프로젝트)**, **Deliverables** tiếp nhận điểm tựa từ **Các mô-đun (module / 모듈)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc thiết kế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Deliverables
 
@@ -65,6 +69,8 @@ retirement_rule.md
 
 Có thể implement bằng Python, Java, SQL hoặc ngăn xếp (stack / 스택) khác. Ngôn ngữ không quan trọng bằng ngữ nghĩa (semantics / 의미론). Hai hiện thực (implementation / 구현) khác nhau đọc cùng specification phải cho kết quả giống nhau trong tolerance định trước.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Systematic FX Hiện thực (implementation / 구현) Dự án (project / 프로젝트)**, **Nguyên tắc thiết kế** tiếp nhận điểm tựa từ **Deliverables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phạm vi (scope / 범위) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguyên tắc thiết kế
 
 Research hệ thống (system / 시스템) không được “sửa kết quả” bằng cách chỉnh dữ liệu (data / 데이터)/parameter sau khi nhìn equity curve mà không ghi lại experiment lịch sử (history / 이력).
@@ -86,8 +92,12 @@ result_summary
 
 Nếu một kết quả (result / 결과) không thể reproduce từ các siêu dữ liệu (metadata / 메타데이터) trên, không dùng nó làm bằng chứng cho edge.
 
+> **Chuyển mạch:** Trong **Systematic FX Hiện thực (implementation / 구현) Dự án (project / 프로젝트)**, **Nguyên tắc thiết kế** đã nêu tiêu chí phân biệt, còn **Phạm vi (scope / 범위) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Phạm vi (scope / 범위) ranh giới (boundary / 경계)
 
 Folder này không duplicate kiến thức kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tổng quát. Nó chỉ giải thích **FX-specific research ngữ nghĩa (semantics / 의미론)**: timezone/session, bid/ask, rollover, macro vintage, currency conversion, margin, portfolio factor exposure và thực thi (execution / 실행) modeling.
 
 Hiện thực (implementation / 구현) sâu về cơ sở dữ liệu (database / 데이터베이스), phân tán (distributed / 분산) processing, CI/CD hay cloud hạ tầng (infrastructure / 인프라) nên tham chiếu các lĩnh vực (domain / 도메인) computing tương ứng trong repository thay vì nhét toàn bộ vào Forex.
+
+> **Bàn giao:** Sau **Phạm vi (scope / 범위) ranh giới (boundary / 경계)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

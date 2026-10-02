@@ -1,5 +1,7 @@
 # Bản đồ tổng quan Trading, Forex và quản trị rủi ro
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **0. Ví dụ đọc một giao dịch bằng tiền** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **1. Mô hình tư duy (mental model / 사고 모델) cốt lõi** để rút ra mô hình chung và giới hạn. Mạch này dùng README làm bản đồ owner của trading/forex risk, rồi nối macro, market structure, execution, hedging và review.
+
 > Tệp (file / 파일) này là bản đồ học tập cho toàn bộ `05_trading_derivatives/`. Mục tiêu không phải thay thế các chapter chuyên sâu, mà giúp người đọc hiểu trading là một hệ thống gồm **tín hiệu → quy mô vị thế → thực thi → chi phí → quản trị danh mục → rà soát (review / 검토)**.
 
 > **Cách đọc dễ hơn:** đừng bắt đầu từ pattern. Hãy bắt đầu bằng một cặp tiền, tính một giao dịch bằng tiền thật, rồi mới thêm regime, backtest và vi cấu trúc. Lộ trình ví dụ số nằm ở [Bắt đầu từ đây — Cổ phiếu và Forex](../START_HERE_STOCKS_AND_FOREX.md).
@@ -33,6 +35,8 @@ Giá trị pip thực tế thay đổi theo cặp tiền, quy mô, tỷ giá và
 
 Trading không phải tập hợp các pattern vào lệnh. Một chiến lược chỉ có ý nghĩa khi lợi thế kỳ vọng còn tồn tại sau spread, slippage, financing, drawdown và lỗi vận hành.
 
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **0. Ví dụ đọc một giao dịch bằng tiền** cho ta quy tắc; **1. Mô hình tư duy (mental model / 사고 모델) cốt lõi** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **2. Chart chỉ là biểu diễn dữ liệu giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. Mô hình tư duy (mental model / 사고 모델) cốt lõi
 
 Trước khi đi vào từng công cụ, hãy giữ một chuỗi vận hành duy nhất: giả thuyết tạo tín hiệu, tín hiệu dẫn tới rule vào/ra, rule quyết định size, execution tạo chi phí, rồi kết quả được review ở cấp danh mục. Chuỗi này là khung để đặt mọi phần sau vào đúng vị trí.
@@ -51,6 +55,8 @@ Hypothesis
 
 Nếu thiếu một mắt xích, hệ thống chưa hoàn chỉnh.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **1. Mô hình tư duy (mental model / 사고 모델) cốt lõi** nêu điều cần giải thích; **2. Chart chỉ là biểu diễn dữ liệu giá** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Timeframe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Chart chỉ là biểu diễn dữ liệu giá
 
 Trước khi nói về setup, cần thống nhất chart đang cho ta biết điều gì và không cho ta biết điều gì. Phần này giải quyết câu hỏi: dữ liệu giá được nén thành những trường nào, và vì sao việc nhìn thấy một hình dạng chưa đủ để kết luận có lợi thế giao dịch?
@@ -67,6 +73,8 @@ Chart không tự tạo edge. Edge phải đến từ một quan hệ có khả 
 
 Vì vậy, chart là đầu vào để đặt giả thuyết chứ không phải bằng chứng cuối cùng. Khi đã phân biệt được hai vai trò này, ta mới có thể chọn độ phân giải thời gian phù hợp ở phần tiếp theo.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **2. Chart chỉ là biểu diễn dữ liệu giá** nêu điều cần giải thích; **3. Timeframe** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Trend, range và regime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Timeframe
 
 Sau khi biết chart chỉ là dữ liệu, ta cần quyết định quan sát dữ liệu ở khoảng thời gian nào. Timeframe thay đổi lượng nhiễu, chi phí và tốc độ ra quyết định, nên đây là lựa chọn về thiết kế hệ thống chứ không phải sở thích nhìn biểu đồ.
@@ -81,6 +89,8 @@ Timeframe càng nhỏ:
 Không có timeframe “tốt nhất”; nó phải phù hợp chiến lược (strategy / 전략), chi phí (cost / 비용) và thời gian của trader.
 
 Điểm chốt là timeframe phải phục vụ rule và ngân sách chi phí. Từ đây, ta có thể hỏi thị trường đang ở trạng thái nào để biết cùng một timeframe có nên được diễn giải như nhau hay không.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **4. Trend, range và regime** tiếp nhận điểm tựa từ **3. Timeframe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Market structure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Trend, range và regime
 
@@ -100,6 +110,8 @@ Một setup tốt trong trend có thể hoạt động kém trong phạm vi (ran
 
 Mental model cần giữ là **setup luôn có điều kiện môi trường**. Sau khi nhận diện regime, ta chuyển sang market structure để mô tả dữ liệu cụ thể hơn thay vì gắn nhãn cảm tính.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **5. Market structure** tiếp nhận điểm tựa từ **4. Trend, range và regime** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Support và resistance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Market structure
 
 Market structure là cách biến diễn biến giá thành một chuỗi quan sát có thứ tự. Mục tiêu của phần này là trả lời: giá đang tạo các đỉnh–đáy và phản ứng quanh vùng thanh khoản như thế nào, trước khi ta gọi đó là breakout hay pullback.
@@ -109,6 +121,8 @@ Market structure thường mô tả chuỗi swing high, swing low và cách giá
 Các thuật ngữ như break of cấu trúc (structure / 구조) hoặc thay đổi (change / 변경) of character chỉ nên dùng như cách mô tả dữ liệu, không phải quy luật tất định.
 
 Do đó, structure cung cấp ngôn ngữ để ghi rule và invalidation, chứ không bảo đảm kết quả. Bước kế tiếp là xem những vùng giá nào thường được dùng làm mốc quan sát hành vi đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **6. Support và resistance** tiếp nhận điểm tựa từ **5. Market structure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Breakout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Support và resistance
 
@@ -120,6 +134,8 @@ Nên nghĩ theo vùng xác suất, không phải một đường chính xác tuy
 
 Vùng chỉ trở nên hữu ích khi gắn với điều kiện phản ứng và mức vô hiệu hóa. Từ nền đó, breakout sẽ được đọc như một giả thuyết vượt vùng cần kiểm chứng, không phải tín hiệu tự động.
 
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **7. Breakout** tiếp nhận điểm tựa từ **6. Support và resistance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Pullback** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Breakout
 
 Breakout đặt câu hỏi liệu việc giá vượt vùng có tạo ra phân phối kết quả tốt hơn sau chi phí hay không. Vì vậy, ta phải đọc nó cùng false break, spread và slippage thay vì chỉ nhìn một cây nến vượt đỉnh.
@@ -127,6 +143,8 @@ Breakout đặt câu hỏi liệu việc giá vượt vùng có tạo ra phân p
 Breakout chỉ có edge nếu sau chi phí, false break và slippage, outcome phân phối vẫn có expectancy dương.
 
 Kết luận là “vượt vùng” mới chỉ là điều kiện quan sát; expectancy sau chi phí mới là tiêu chí quyết định. Nếu giá không tiếp diễn mà quay lại vùng, ta chuyển sang cách đọc pullback.
+
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **8. Pullback** tiếp nhận điểm tựa từ **7. Breakout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Mean reversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Pullback
 
@@ -138,6 +156,8 @@ Pullback strategy thường đánh cược rằng trend chính còn tiếp tục
 
 Nếu không định nghĩa được ba điều này trước khi vào lệnh, “pullback” chỉ là tên gọi sau sự kiện. Khi trend không còn là giả định hợp lý, mean reversion là mô hình đối chiếu cần được kiểm tra.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **9. Mean reversion** tiếp nhận điểm tựa từ **8. Pullback** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Volume và liquidity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Mean reversion
 
 Mean reversion bắt đầu từ một giả định khác với pullback: thay vì tiếp diễn, giá có thể quay về một mốc tham chiếu sau khi lệch quá xa. Vì vậy, điều kiện quan trọng nhất là biết khi nào thị trường còn trong range và khi nào đã chuyển sang trend.
@@ -147,6 +167,8 @@ Mean reversion giả định giá có xu hướng quay về một mức tham chi
 Nó có thể thất bại nặng khi thị trường chuyển từ phạm vi (range / 범위) sang trend.
 
 Ranh giới của mô hình nằm ở regime shift; mean reversion không được xem là quy luật tự nhiên của mọi thị trường. Để đánh giá khả năng quay về, ta cần quan sát chất lượng khớp lệnh và thanh khoản, bắt đầu từ volume và liquidity.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **10. Volume và liquidity** tiếp nhận điểm tựa từ **9. Mean reversion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Volatility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Volume và liquidity
 
@@ -160,6 +182,8 @@ Volume cao không luôn đồng nghĩa liquidity tốt. Cần nhìn thêm:
 - thời điểm trong ngày.
 
 Khi hiểu thanh khoản theo nhiều lớp, ta mới ước lượng được chi phí và độ trượt trong các trạng thái khác nhau. Đây là tiền đề để đọc volatility, vì biến động quyết định cả khoảng stop lẫn quy mô vị thế.
+
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **11. Volatility** tiếp nhận điểm tựa từ **10. Volume và liquidity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Indicator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Volatility
 
@@ -177,6 +201,8 @@ Cùng một chiến lược (strategy / 전략) không nên dùng kích thước
 
 Vì vậy, volatility là cầu nối từ quan sát thị trường sang risk sizing. Các indicator ở phần sau chỉ nên được giữ lại khi chúng giúp đo hoặc diễn đạt rule này một cách kiểm chứng được.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **12. Indicator** tiếp nhận điểm tựa từ **11. Volatility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. SMC / ICT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Indicator
 
 Indicator là phép biến đổi từ price hoặc volume, nên mục tiêu không phải sưu tầm thật nhiều công cụ mà là hiểu mỗi công cụ đang đo tín hiệu nào. Phần này giúp người mới phân biệt biến mô tả với rule tạo quyết định.
@@ -186,6 +212,8 @@ MA, RSI, MACD, ATR hay Bollinger Bands đều là biến đổi của price/volu
 Indicator hữu ích khi nó phục vụ quy tắc (rule / 규칙) rõ ràng, không phải vì thêm nhiều indicator làm hệ thống “chắc chắn” hơn.
 
 Điểm chốt là một indicator chỉ có ý nghĩa trong giả thuyết và điều kiện cụ thể. Các thuật ngữ SMC/ICT tiếp theo cũng cần được xử lý theo nguyên tắc tương tự: chuyển ngôn ngữ mô tả thành rule có thể kiểm tra.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **13. SMC / ICT** tiếp nhận điểm tựa từ **12. Indicator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Multi-timeframe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. SMC / ICT
 
@@ -197,6 +225,8 @@ Nhưng phải chuyển chúng thành quy tắc (rule / 규칙) kiểm chứng đ
 
 Như vậy, tên gọi không tự tạo lợi thế; khả năng kiểm chứng mới quyết định giá trị. Khi rule đã rõ, multi-timeframe có thể được dùng để phân vai context và timing mà không biến thành câu chuyện hindsight.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **14. Multi-timeframe** tiếp nhận điểm tựa từ **13. SMC / ICT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Forex là thị trường tương đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Multi-timeframe
 
 Multi-timeframe nối hai nhu cầu thường bị trộn lẫn: timeframe lớn để đặt bối cảnh và timeframe nhỏ để chọn thời điểm. Mục tiêu là phân vai rõ từng khung, không dùng nhiều khung để tìm một câu chuyện phù hợp sau khi giá đã chạy.
@@ -206,6 +236,8 @@ Timeframe lớn có thể cung cấp context; timeframe nhỏ dùng cho timing.
 Tuy nhiên thêm quá nhiều timeframe dễ tạo hindsight narrative.
 
 Điểm chốt của phần nền tảng là mọi cách đọc chart đều phải quay về rule, chi phí và điều kiện thị trường. Từ đây, ta chuyển sang Forex như một thị trường tương đối, nơi giá luôn là quan hệ giữa hai nền kinh tế.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **15. Forex là thị trường tương đối** tiếp nhận điểm tựa từ **14. Multi-timeframe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Pip và lot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Forex là thị trường tương đối
 
@@ -221,6 +253,8 @@ EUR/USD
 Phân tích cần nhìn relative rates, relative growth, rủi ro (risk / 위험) sentiment và luồng (flow / 흐름).
 
 Điểm chốt là không thể phân tích EUR/USD chỉ bằng một biểu đồ EUR hoặc USD riêng lẻ. Khi đã hiểu đối tượng đang được so sánh, ta mới tính được đơn vị biến động và quy mô hợp đồng ở phần pip và lot.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **16. Pip và lot** tiếp nhận điểm tựa từ **15. Forex là thị trường tương đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Leverage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Pip và lot
 
@@ -239,6 +273,8 @@ Account Currency
 
 Nếu chưa biết contract size, pip value và đồng tiền tài khoản, mọi phép tính position size phía sau đều có thể sai. Vì vậy, leverage được học sau phần này như một cơ chế khuếch đại notional, không phải điểm bắt đầu.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **17. Leverage** tiếp nhận điểm tựa từ **16. Pip và lot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Leverage
 
 Đòn bẩy giải thích vì sao một lượng vốn nhỏ có thể kiểm soát notional lớn. Phần này cần được đọc cùng pip value và stop distance để thấy leverage thay đổi yêu cầu vốn như thế nào nhưng không làm cho tín hiệu trở nên tốt hơn.
@@ -256,6 +292,8 @@ Risk of Ruin
 
 Leverage vì thế là một bộ khuếch đại của phân phối kết quả: cùng một edge, đòn bẩy cao làm drawdown và nguy cơ cháy tài khoản lớn hơn. Phần margin tiếp theo tách yêu cầu collateral khỏi mức lỗ tối đa để tránh nhầm lẫn phổ biến.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **18. Margin** tiếp nhận điểm tựa từ **17. Leverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Equity, free margin và margin level** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Margin
 
 Margin là số tài sản broker khóa để duy trì vị thế, không phải số tiền mà thị trường cho phép bạn mất. Hiểu ranh giới này giúp người mới không dùng “margin thấp” như lý do để tăng size.
@@ -270,6 +308,8 @@ Required Margin
 Margin không phải maximum mất mát (loss / 손실).
 
 Khi margin chỉ là điều kiện duy trì position, ta cần theo dõi equity và free margin để biết vị thế còn chịu được biến động hay đã tiến gần stop-out.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **19. Equity, free margin và margin level** tiếp nhận điểm tựa từ **18. Margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Position sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Equity, free margin và margin level
 
@@ -288,6 +328,8 @@ Nếu equity giảm quá mức, broker có thể margin lời gọi (call / 호�
 
 Do broker có quy tắc riêng và có thể trượt giá khi thị trường căng thẳng, margin level không thay thế stop-loss hay stress test. Bước kế tiếp là đảo ngược phép tính: bắt đầu từ mức lỗ chấp nhận được để tìm position size.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **20. Position sizing** tiếp nhận điểm tựa từ **19. Equity, free margin và margin level** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Stop-loss** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Position sizing
 
 Position sizing là nơi giả thuyết giao dịch gặp giới hạn vốn thật. Thay vì hỏi “broker cho phép bao nhiêu?”, ta hỏi “nếu invalidation xảy ra, tôi chấp nhận mất bao nhiêu và cần bao nhiêu đơn vị để đúng mức đó?”.
@@ -303,6 +345,8 @@ Không nên bắt đầu từ “broker cho leverage bao nhiêu”.
 
 Kết quả của phần này là một quy mô được tính từ risk budget, stop và pip value. Khi size đã rõ, stop-loss mới có thể được đánh giá như một lệnh thực thi với rủi ro trượt giá riêng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **21. Stop-loss** tiếp nhận điểm tựa từ **20. Position sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. R-multiple** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Stop-loss
 
 Stop-loss là điều kiện gửi lệnh thoát khi luận điểm bị vô hiệu, chứ không phải lời hứa rằng giá sẽ khớp đúng tại mức kích hoạt. Phần này nối risk sizing với thực tế thị trường có gap, spread mở rộng và thanh khoản thay đổi.
@@ -312,6 +356,8 @@ Stop là một execution instruction, không phải guarantee giá thoát.
 Trong gap hoặc sự kiện (event / 이벤트) lớn, fill có thể xa trigger.
 
 Vì stop là lệnh thực thi có thể bị trượt, mức risk phải được tính với kịch bản fill xấu chứ không chỉ với giá trigger trên chart. Để so sánh các trade sau đó, ta quy đổi rủi ro ban đầu thành đơn vị R.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **22. R-multiple** tiếp nhận điểm tựa từ **21. Stop-loss** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Expectancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. R-multiple
 
@@ -330,6 +376,8 @@ R giúp so trade khác nhau bằng cùng đơn vị rủi ro.
 
 Khi đã có đơn vị chung, ta có thể hỏi một hệ thống thắng–thua có tạo kỳ vọng dương sau khi tính cả kích thước thắng và thua hay không. Đó là câu hỏi của expectancy.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **23. Expectancy** tiếp nhận điểm tựa từ **22. R-multiple** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Risk of ruin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Expectancy
 
 Expectancy không dự đoán trade kế tiếp; nó kiểm tra phân phối kết quả trong một mẫu đủ lớn. Công thức dưới đây nối win rate với quy mô lãi/lỗ để tránh kết luận sai rằng thắng nhiều lần luôn có nghĩa là có edge.
@@ -343,6 +391,8 @@ Expectancy
 Win tỷ lệ (rate / 비율) cao không bảo đảm có edge.
 
 Vì vậy, trước khi tăng size, cần kiểm tra expectancy có còn dương sau cost và ở các regime khác nhau. Nếu edge mỏng hoặc trade tương quan cao, nguy cơ không sống sót sẽ được mô tả bằng risk of ruin.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **24. Risk of ruin** tiếp nhận điểm tựa từ **23. Expectancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Sessions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Risk of ruin
 
@@ -359,6 +409,8 @@ Survival quan trọng hơn tối đa hóa short-term return.
 
 Điểm chốt là một hệ thống phải sống đủ lâu để edge có cơ hội xuất hiện. Điều kiện thanh khoản và biến động trong từng phiên sẽ làm phân phối đó khác nhau, nên ta tiếp tục với sessions.
 
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **25. Sessions** tiếp nhận điểm tựa từ **24. Risk of ruin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. News event** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Sessions
 
 Các phiên Asia, London và New York không chỉ là nhãn thời gian; chúng đại diện cho khác biệt về thanh khoản, overlap và thời điểm dữ liệu kinh tế được công bố. Mục tiêu là biết khi nào cost và volatility có thể đổi trước khi áp dụng cùng một rule.
@@ -368,6 +420,8 @@ Forex có đặc điểm khác nhau theo Asia, London và New York session.
 Liquidity và volatility thường thay đổi quanh overlap và dữ liệu (data / 데이터) bản phát hành (release / 릴리스).
 
 Do đó, một backtest cần giữ timestamp và điều kiện phiên, nếu không kết quả có thể trộn các môi trường không giống nhau. News event là trường hợp mà sự thay đổi đó diễn ra rất nhanh.
+
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **26. News event** tiếp nhận điểm tựa từ **25. Sessions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. XAUUSD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. News event
 
@@ -383,6 +437,8 @@ CPI, NFP, central-bank decision hoặc geopolitical shock có thể làm:
 Sự kiện (event / 이벤트) trading đòi hỏi thực thi (execution / 실행) plan trước bản phát hành (release / 릴리스).
 
 Kết luận là không nên dùng cùng một giả định fill và size cho ngày bình thường với ngày có event lớn. XAUUSD là ví dụ tiếp theo cho tài sản có nhiều driver cùng lúc và không thể rút gọn thành một quy tắc đơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **27. XAUUSD** tiếp nhận điểm tựa từ **26. News event** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Futures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. XAUUSD
 
@@ -400,6 +456,8 @@ Gold chịu ảnh hưởng của:
 Không dùng quy tắc đơn giản “inflation tăng → gold tăng”.
 
 Vì vậy, khi giao dịch XAUUSD hãy ghi rõ driver nào đang chi phối và điều kiện nào làm luận điểm sai. Nếu chuyển sang futures, ta thêm lớp hợp đồng chuẩn hóa, expiry và settlement vào phân tích.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **28. Futures** tiếp nhận điểm tựa từ **27. XAUUSD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Options** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Futures
 
@@ -419,6 +477,8 @@ Cần hiểu:
 
 Các tham số này quyết định P/L, collateral và chi phí chuyển kỳ; bỏ qua một tham số có thể làm sai cả position sizing. Options tiếp tục cùng câu chuyện nhưng payoff phi tuyến và nhạy với nhiều biến hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **29. Options** tiếp nhận điểm tựa từ **28. Futures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. CFD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Options
 
 Options không chỉ là “mua call hoặc put”; chúng là hợp đồng có payoff phi tuyến, trong đó giá còn phụ thuộc thời gian, biến động, lãi suất và các Greek. Bắt đầu bằng payoff khi đáo hạn giúp ta hiểu sau đó vì sao giá trước đáo hạn không chỉ đi theo hướng của tài sản cơ sở.
@@ -433,6 +493,8 @@ Put  = max(K-S, 0)
 Trước expiry, giá option còn phụ thuộc volatility, thời gian (time / 시간), rates và Greeks.
 
 Điểm chốt là cùng một hướng giá có thể tạo P/L khác nhau tùy IV, theta và cấu trúc vị thế. CFD là trường hợp đối chiếu về cấu trúc pháp lý và đối tác, nơi điều khoản broker cần được đọc trước payoff.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **30. CFD** tiếp nhận điểm tựa từ **29. Options** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Backtest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. CFD
 
@@ -451,6 +513,8 @@ Cần kiểm tra:
 
 Trước khi so CFD với futures hoặc spot, hãy ghi rõ quyền và nghĩa vụ hợp đồng, cách tính funding và điều kiện đóng cưỡng bức. Sau lớp sản phẩm, ta chuyển sang kiểm thử xem một rule có còn hoạt động khi tái tạo dữ liệu và execution quá khứ hay không.
 
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **31. Backtest** tiếp nhận điểm tựa từ **30. CFD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Forward test** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Backtest
 
 Backtest là thí nghiệm lịch sử có kỷ luật: chỉ dùng thông tin mà trader thật sự có thể biết tại từng thời điểm và mô phỏng chi phí đủ thực tế. Nó không phải giấy chứng nhận rằng chiến lược sẽ thắng trong tương lai.
@@ -467,6 +531,8 @@ Sai lầm phổ biến:
 
 Nếu bỏ một trong các bias hoặc cost trên, expectancy và drawdown có thể bị thổi phồng. Vì vậy, sau backtest cần một giai đoạn ngoài mẫu hoặc forward test trước khi đưa vốn đáng kể vào hệ thống.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **32. Forward test** tiếp nhận điểm tựa từ **31. Backtest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Trading journal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Forward test
 
 Forward test kiểm tra rule trong dữ liệu mới hoặc môi trường mô phỏng gần thực tế sau khi logic đã được khóa. Mục đích là phát hiện drift, lỗi thực thi và kỳ vọng không còn đúng, không phải tiếp tục chỉnh rule cho vừa kết quả.
@@ -474,6 +540,8 @@ Forward test kiểm tra rule trong dữ liệu mới hoặc môi trường mô p
 Sau backtest nên có out-of-sample hoặc forward test trước khi dùng capital đáng kể.
 
 Hãy ghi lại điều kiện, phiên bản rule và cost trong giai đoạn này; nếu thay đổi giữa chừng, đó là thí nghiệm mới. Trading journal là nơi lưu chuỗi bằng chứng đó.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **33. Trading journal** tiếp nhận điểm tựa từ **32. Forward test** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Trading journal
 
@@ -495,6 +563,8 @@ Lesson
 
 Sau một chuỗi đủ dài, journal cho biết MAE/MFE, cost và lỗi lặp lại ở đâu. Khi nhiều trade cùng phơi nhiễm một factor, review phải nâng lên cấp danh mục thay vì chỉ xem từng lệnh.
 
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **34. Psychology** tiếp nhận điểm tựa từ **33. Trading journal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Portfolio heat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Psychology
 
 Tâm lý là lớp thực thi của một hệ thống có edge. Nó không thể biến một rule không có kỳ vọng dương thành strategy tốt, nhưng có thể phá hỏng strategy tốt nếu hành vi thực tế khác với giả định khi nghiên cứu.
@@ -511,6 +581,8 @@ Nhưng một chiến lược (strategy / 전략) có edge vẫn có thể thất
 
 Vì vậy, journal và giới hạn risk phải được thiết kế để nhận diện hành vi trước khi drawdown trở thành khủng hoảng. Portfolio heat tiếp tục câu hỏi đó ở cấp tổng exposure.
 
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **35. Portfolio heat** tiếp nhận điểm tựa từ **34. Psychology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Kelly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 35. Portfolio heat
 
 Portfolio heat đo tổng rủi ro có thể cùng phát sinh nếu nhiều trade thực chất là một factor ẩn. Nhìn từng risk/trade riêng lẻ có thể bỏ qua việc các vị thế cùng nhạy với USD, lãi suất hoặc thanh khoản.
@@ -522,6 +594,8 @@ Ví dụ long EUR/USD, long GBP/USD và long gold có thể cùng là short-USD 
 Cần nhìn tổng rủi ro (risk / 위험), không chỉ rủi ro (risk / 위험)/trade.
 
 Điểm chốt là sizing phải xét cả tương quan và stress chung, không chỉ công thức của từng lệnh. Kelly là một khung lý thuyết để nói về sizing theo growth, nhưng phải được thu nhỏ khi edge ước lượng không chắc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **36. Kelly** tiếp nhận điểm tựa từ **35. Portfolio heat** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Monte Carlo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 36. Kelly
 
@@ -537,6 +611,8 @@ Thực tế thường dùng fractional Kelly vì:
 
 Fractional Kelly tạo khoảng đệm cho sai số ước lượng và fat tail. Monte Carlo tiếp theo giúp nhìn nhiều thứ tự trade và phân phối drawdown, nhưng không thể cứu dữ liệu nguồn kém.
 
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **37. Monte Carlo** tiếp nhận điểm tựa từ **36. Kelly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. MAE và MFE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 37. Monte Carlo
 
 Monte Carlo không dự đoán thứ tự trade sẽ xảy ra; nó mô phỏng nhiều thứ tự hợp lý để cho thấy cùng một expectancy có thể tạo các đường vốn và drawdown rất khác nhau. Đây là công cụ kiểm tra độ bền của giả định, không phải máy tạo edge.
@@ -546,6 +622,8 @@ Monte Carlo giúp kiểm tra nhiều thứ tự trade khác nhau để thấy dr
 Nó không sửa được mẫu (sample / 표본) kém chất lượng.
 
 Sau khi biết phân phối rủi ro, ta quay về dữ liệu từng trade để xem giá đã đi ngược hoặc đi thuận bao xa trước khi đóng: đó là vai trò của MAE và MFE.
+
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **38. MAE và MFE** tiếp nhận điểm tựa từ **37. Monte Carlo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Profit factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 38. MAE và MFE
 
@@ -558,6 +636,8 @@ MAE và MFE biến đường đi trong trade thành dữ liệu để sửa stop
 Hai chỉ số (metric / 지표) giúp cải thiện stop và exit quy tắc (rule / 규칙).
 
 Hãy dùng chúng để kiểm tra stop có quá chặt hay exit có bỏ lỡ phần lợi nhuận hợp lý, rồi đối chiếu với profit factor và drawdown thay vì tối ưu một metric riêng lẻ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **39. Profit factor** tiếp nhận điểm tựa từ **38. MAE và MFE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Sharpe / Sortino / Calmar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 39. Profit factor
 
@@ -572,6 +652,8 @@ Cần đọc cùng cỡ mẫu (sample size / 표본 크기), drawdown và chi ph
 
 Nếu profit factor chỉ đẹp trước phí hoặc dựa trên ít trade, nó không đủ làm bằng chứng. Các ratio Sharpe/Sortino/Calmar tiếp tục bổ sung góc nhìn về return trên risk nhưng cũng có giới hạn riêng.
 
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **40. Sharpe / Sortino / Calmar** tiếp nhận điểm tựa từ **39. Profit factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Regime dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 40. Sharpe / Sortino / Calmar
 
 Ba ratio này nén mối quan hệ giữa return và một cách đo risk khác nhau: biến động tổng, downside hoặc drawdown. Chúng giúp so sánh có điều kiện, không thay thế việc đọc tail risk, thanh khoản và leverage của hệ thống.
@@ -584,6 +666,8 @@ Các ratio này mô tả return so với risk theo góc khác nhau nhưng không
 - operational rủi ro (risk / 위험).
 
 Do đó, không chọn strategy chỉ vì một ratio cao. Cần hỏi ratio đó được tạo trong regime nào và có còn đúng khi điều kiện thị trường đổi hay không.
+
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **41. Regime dependence** tiếp nhận điểm tựa từ **40. Sharpe / Sortino / Calmar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Broker safety** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 41. Regime dependence
 
@@ -601,6 +685,8 @@ Cần biết edge phụ thuộc:
 
 Điểm chốt là cần ghi rõ phạm vi áp dụng và điều kiện vô hiệu hóa, thay vì quảng bá một kết quả trung bình cho mọi thời kỳ. Trước khi chạy bất kỳ rule nào, còn một lớp rủi ro nền tảng là broker và khả năng giữ tài sản.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **42. Broker safety** tiếp nhận điểm tựa từ **41. Regime dependence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Từ master map tới chapter chuyên sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 42. Broker safety
 
 Broker safety đặt câu hỏi liệu kết quả trên giấy có thể chuyển thành tiền rút được hay không. Hãy kiểm tra pháp nhân, quy tắc custody/margin, cơ chế stop-out, phí và khả năng rút tiền trước khi tối ưu setup.
@@ -608,6 +694,8 @@ Broker safety đặt câu hỏi liệu kết quả trên giấy có thể chuy�
 Trước khi quan tâm setup, cần hiểu broker legal entity, custody/margin rules và khả năng rút tiền.
 
 Một strategy tốt không bù được rủi ro đối tác hoặc vận hành không được hiểu rõ. Sau khi hoàn tất lớp nền này, bản đồ dưới đây chỉ rõ chapter chuyên sâu nào nên được mở tiếp theo.
+
+> **Chuyển mạch:** Trong **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **43. Từ master map tới chapter chuyên sâu** tiếp nhận điểm tựa từ **42. Broker safety** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 43. Từ master map tới chapter chuyên sâu
 
@@ -622,6 +710,8 @@ Phần này là điểm bàn giao, không phải một danh sách link độc l�
 - [05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md](./05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md): options và volatility.
 
 Hãy chọn đúng chapter theo lỗ hổng hiện tại, giữ lại mental model ở các phần trước và quay về master map sau mỗi vòng học để cập nhật câu hỏi còn thiếu.
+
+> **Chuyển mạch:** Ở chặng này của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **Kết luận** gom các mảnh từ **43. Từ master map tới chapter chuyên sâu** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đi tiếp theo một đường duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kết luận
 
@@ -641,6 +731,8 @@ Leverage không tạo lợi thế. Pattern không thay thế expectancy. Và m�
 
 Nếu chưa thể giải thích trade theo chuỗi trên bằng số liệu và điều kiện cụ thể, hãy quay lại phần còn thiếu thay vì tăng leverage hoặc thêm pattern.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bản đồ tổng quan Trading, Forex và quản trị rủi ro**, **Đi tiếp theo một đường duy nhất** gom các mảnh từ **Kết luận** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Đi tiếp theo một đường duy nhất
 
 Đường đi dưới đây là chu trình triển khai một ý tưởng Forex từ giả thuyết đến review. Mỗi bước có owner rõ ràng; không nên bỏ qua nghiên cứu, thực thi hoặc template chỉ vì một backtest ban đầu trông đẹp.
@@ -659,3 +751,5 @@ Hypothesis
 Dùng [Quy trình dữ liệu và nghiên cứu — Cổ phiếu / Forex](../STOCK_FOREX_DATA_RESEARCH_WORKFLOW.md) trước khi lấy dữ liệu; dùng [Sổ tay quản trị rủi ro — Cổ phiếu và Forex](../STOCK_FOREX_RISK_PLAYBOOK.md) trước khi mô phỏng sizing. Các pattern chỉ là cách mô tả tín hiệu, không phải điểm bắt đầu của lộ trình.
 
 Khi hoàn thành chu trình, quay lại master map và ghi rõ điều kiện tiếp tục, điều kiện dừng và dữ liệu cần cập nhật. Đó là điểm kết thúc của một vòng học và cũng là điểm bắt đầu của vòng review tiếp theo.
+
+> **Bàn giao:** Sau **Đi tiếp theo một đường duy nhất**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

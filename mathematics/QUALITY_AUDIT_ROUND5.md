@@ -1,7 +1,6 @@
 # Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn
 
-> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục tiêu** sang **Các chapter đã rewrite**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Các chapter đã rewrite** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối quality audit round với tiêu chí review, liên kết và nội dung, để sửa đúng nguyên nhân thay vì chỉ làm xanh báo cáo.
 
 Round 5 chuyển trọng tâm từ **mở rộng số lượng topic** sang **nâng độ hoàn thiện và chất lượng viết** của những chapter đã tồn tại.
 
@@ -13,8 +12,7 @@ Round này đặt ra chuẩn mới: một chapter chỉ được xem là mạnh 
 
 Chuẩn đó được ghi thành tệp (file / 파일) [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md) để dùng cho các vòng rewrite sau.
 
-
-> **Chuyển mạch:** Từ **Mục tiêu**, ta sang **Các chapter đã rewrite** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Các chapter đã rewrite** tiếp nhận điểm tựa từ **Mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn viết mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các chapter đã rewrite
 
@@ -60,8 +58,7 @@ Bản mới tách rõ mô hình (model / 모델) lỗi (error / 오류), sai s�
 
 Chapter được viết để tạo kỹ thuật (engineering / 엔지니어링) judgment thay vì collection numerical methods.
 
-
-> **Chuyển mạch:** Từ **Các chapter đã rewrite**, ta sang **Chuẩn viết mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Chuẩn viết mới** tiếp nhận điểm tựa từ **Các chapter đã rewrite** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm ưu tiên cho round tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuẩn viết mới
 
@@ -79,8 +76,7 @@ Từ round này trở đi, các chapter được kiểm tra (audit / 감사) the
 
 Chi tiết nằm trong [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md).
 
-
-> **Chuyển mạch:** Từ **Chuẩn viết mới**, ta sang **Nhóm ưu tiên cho round tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Nhóm ưu tiên cho round tiếp theo** tiếp nhận điểm tựa từ **Chuẩn viết mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhóm ưu tiên cho round tiếp theo
 
@@ -102,11 +98,10 @@ Các tệp (file / 파일) còn ngắn so với vai trò phụ thuộc (dependen
 
 Round sau nên tiếp tục ưu tiên phụ thuộc (dependency / 의존성) centrality trước tệp (file / 파일) count: rewrite những concept nhiều chapter khác dựa vào trước khi mở rộng thêm research-level topics.
 
-
-> **Chuyển mạch:** Từ **Nhóm ưu tiên cho round tiếp theo**, ta sang **mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn** gom các mảnh từ **Nhóm ưu tiên cho round tiếp theo** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn
 
 > Coverage xây các nút (node / 노드) của kiến thức (knowledge / 지식) đồ thị (graph / 그래프); chất lượng (quality / 품질) rewrite làm rõ các edge giữa chúng. Một thư viện (library / 라이브러리) có nhiều tệp (file / 파일) nhưng các edge mờ vẫn khiến người đọc phải tự nối kiến thức. Mục tiêu tiếp theo là làm cho lập luận (reasoning / 추론) đường dẫn (path / 경로) trở nên nhìn thấy được ngay trong từng chapter.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

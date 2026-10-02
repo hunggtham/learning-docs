@@ -1,5 +1,7 @@
 # 01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bắt đầu bằng dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Sự kiện (event / 이벤트) thời gian (time / 시간) và receive thời gian (time / 시간)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối data pipeline với time normalization, để timestamp, session và event order không làm sai tín hiệu hoặc kết quả backtest.
+
 Một backtest FX có thể sai ngay từ tầng dữ liệu dù chiến lược (strategy / 전략) mã (code / 코드) hoàn toàn đúng. Các lỗi phổ biến nhất không nằm ở machine học tập (learning / 학습) hay indicator, mà ở những chi tiết rất “nhàm chán”: candle được cắt theo timezone nào, timestamp là sự kiện (event / 이벤트) thời gian (time / 시간) hay receive thời gian (time / 시간), bid/ask có bị trộn với mid không, DST có dịch session hay không, macro giá trị (value / 값) là bản công bố ban đầu hay bản revised nhiều tháng sau.
 
 Mục tiêu của mô-đun (module / 모듈) này là biến dữ liệu (data / 데이터) thành một **point-in-time research dataset** có thể kiểm tra (audit / 감사).
@@ -38,6 +40,8 @@ source
 
 Nếu chỉ có mid OHLC, phải ghi rõ limitation.
 
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **1. Bắt đầu bằng dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **2. Sự kiện (event / 이벤트) thời gian (time / 시간) và receive thời gian (time / 시간)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. UTC làm chuẩn gốc (canonical / 정본) timeline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Sự kiện (event / 이벤트) thời gian (time / 시간) và receive thời gian (time / 시간)
 
 **Sự kiện (event / 이벤트) thời gian (time / 시간)** là lúc thị trường/dữ liệu (data / 데이터) nguồn (source / 소스) nói sự kiện (event / 이벤트) xảy ra.
@@ -56,6 +60,8 @@ market event happens
 Nếu backtest dùng sự kiện (event / 이벤트) thời gian (time / 시간) nhưng live hệ thống (system / 시스템) chỉ có dữ liệu (data / 데이터) sau độ trễ (latency / 지연 시간), kết quả (result / 결과) có thể optimistic.
 
 Với low-frequency daily chiến lược (strategy / 전략), độ trễ (latency / 지연 시간) vài giây có thể không đáng kể. Với event-driven chiến lược (strategy / 전략), nó có thể quyết định toàn bộ edge.
+
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, sau nội dung của **2. Sự kiện (event / 이벤트) thời gian (time / 시간) và receive thời gian (time / 시간)**, **3. UTC làm chuẩn gốc (canonical / 정본) timeline** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **4. DST là lỗi research thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. UTC làm chuẩn gốc (canonical / 정본) timeline
 
@@ -80,6 +86,8 @@ Không lưu cục bộ (local / 로컬) datetime không timezone như:
 
 vì DST có thể làm thời điểm đó không tồn tại hoặc xuất hiện hai lần tùy jurisdiction.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **4. DST là lỗi research thật** tiếp nhận điểm tựa từ **3. UTC làm chuẩn gốc (canonical / 정본) timeline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Nghiệp vụ (business / 비즈니스) calendar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. DST là lỗi research thật
 
 Một quy tắc (rule / 규칙) như:
@@ -102,6 +110,8 @@ Derive session label from timezone-aware calendar
 
 Không hard-code session bằng một constant UTC hour nếu chiến lược (strategy / 전략) tồn tại nhiều năm.
 
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **5. Nghiệp vụ (business / 비즈니스) calendar** tiếp nhận điểm tựa từ **4. DST là lỗi research thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Instrument master** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Nghiệp vụ (business / 비즈니스) calendar
 
 FX gần như 24/5 nhưng không có nghĩa mỗi giờ giống nhau.
@@ -118,6 +128,8 @@ value-date holidays
 ```
 
 Nếu mô hình (model / 모델) roll/financing, holiday calendar còn ảnh hưởng number of days charged.
+
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **6. Instrument master** tiếp nhận điểm tựa từ **5. Nghiệp vụ (business / 비즈니스) calendar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Symbol normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Instrument master
 
@@ -141,6 +153,8 @@ valid_to
 ```
 
 `valid_from`/`valid_to` quan trọng vì specification có thể thay đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **7. Symbol normalization** tiếp nhận điểm tựa từ **6. Instrument master** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Bid/ask trước mid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Symbol normalization
 
@@ -172,6 +186,8 @@ FX_EUR_USD_SPOT
 
 và ánh xạ (mapping / 매핑) bảng (table / 테이블) versioned theo nguồn (source / 소스).
 
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **8. Bid/ask trước mid** tiếp nhận điểm tựa từ **7. Symbol normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Spread sanity checks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Bid/ask trước mid
 
 Nếu có bid/ask, lưu cả hai.
@@ -196,6 +212,8 @@ liquidity stress proxy
 
 Do đó raw tầng (layer / 계층) nên giữ highest-fidelity dữ liệu (data / 데이터) available.
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **9. Spread sanity checks** tiếp nhận điểm tựa từ **8. Bid/ask trước mid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Duplicate events** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Spread sanity checks
 
 Kiểm tra hợp lệ (validation / 검증) rules:
@@ -217,6 +235,8 @@ quality_flag = OUTLIER_SPREAD
 
 rồi rà soát (review / 검토) nguồn (source / 소스)/sự kiện (event / 이벤트) ngữ cảnh (context / 맥락).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **10. Duplicate events** tiếp nhận điểm tựa từ **9. Spread sanity checks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Missing intervals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Duplicate events
 
 Dữ liệu (data / 데이터) vendor có thể gửi duplicate tick.
@@ -232,6 +252,8 @@ source_sequence_id
 Nếu không có chuỗi (sequence / 시퀀스) ID, timestamp+price dedup có thể accidentally remove legitimate repeated quotes.
 
 Phải hiểu vendor ngữ nghĩa (semantics / 의미론) trước khi dedup.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **11. Missing intervals** tiếp nhận điểm tựa từ **10. Duplicate events** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Bar construction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Missing intervals
 
@@ -258,6 +280,8 @@ UNKNOWN
 
 Nếu fill-forward cần cho mô hình (model / 모델), retain flag để tính năng (feature / 기능) biết giá trị (value / 값) không phải observed trade.
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **12. Bar construction** tiếp nhận điểm tựa từ **11. Missing intervals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Tick volume không phải toàn cục (global / 전역) FX volume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Bar construction
 
 Nếu bản dựng (build / 빌드) candles từ ticks, định nghĩa:
@@ -274,6 +298,8 @@ Ví dụ 1-minute bar `[10:00:00, 10:01:00)` khác bar `(10:00:00, 10:01:00]` �
 
 Hai backtest khác nhau có thể diverge từ detail này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **13. Tick volume không phải toàn cục (global / 전역) FX volume** tiếp nhận điểm tựa từ **12. Bar construction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Futures dữ liệu (data / 데이터) vs OTC spot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Tick volume không phải toàn cục (global / 전역) FX volume
 
 Retail vendor tick count hoặc broker volume chỉ reflect nguồn (source / 소스) đó.
@@ -289,6 +315,8 @@ exchange_futures_volume
 ```
 
 Mỗi loại có thông tin (information / 정보) content khác nhau.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **13. Tick volume không phải toàn cục (global / 전역) FX volume** nêu điều cần giải thích; **14. Futures dữ liệu (data / 데이터) vs OTC spot** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Macro bản phát hành (release / 릴리스) dataset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Futures dữ liệu (data / 데이터) vs OTC spot
 
@@ -309,6 +337,8 @@ phải tường minh (explicit / 명시적).
 
 Không phép nối (join / 조인) futures price vào spot chiến lược (strategy / 전략) mà bỏ basis/maturity differences.
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **14. Futures dữ liệu (data / 데이터) vs OTC spot** nêu điều cần giải thích; **15. Macro bản phát hành (release / 릴리스) dataset** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Revised dữ liệu (data / 데이터) leakage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Macro bản phát hành (release / 릴리스) dataset
 
 Một macro bảng (table / 테이블) nên có nhiều timestamps:
@@ -327,6 +357,8 @@ source
 
 Điều quan trọng là `value_first_release` và `previous_value_as_known_then`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **15. Macro bản phát hành (release / 릴리스) dataset** nêu điều cần giải thích; **16. Revised dữ liệu (data / 데이터) leakage** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Consensus is also timestamped dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Revised dữ liệu (data / 데이터) leakage
 
 Nếu backtest 2018 CPI chiến lược (strategy / 전략) dùng 2026 cơ sở dữ liệu (database / 데이터베이스) export với historical series đã revised, mô hình (model / 모델) có thể thấy thông tin (information / 정보) chưa tồn tại lúc đó.
@@ -339,6 +371,8 @@ at timestamp T?
 ```
 
 Point-in-time truy vấn (query / 쿼리) phải answer được câu đó.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **16. Revised dữ liệu (data / 데이터) leakage** nêu điều cần giải thích; **17. Consensus is also timestamped dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Central-bank quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Consensus is also timestamped dữ liệu (data / 데이터)
 
@@ -360,6 +394,8 @@ latest available before release?
 
 Không dùng final consensus compiled after sự kiện (event / 이벤트).
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **17. Consensus is also timestamped dữ liệu (data / 데이터)** nêu điều cần giải thích; **18. Central-bank quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. News văn bản (text / 텍스트) and point-in-time availability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Central-bank quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터)
 
 Một chính sách (policy / 정책) sự kiện (event / 이벤트) bảng (table / 테이블) có thể lưu:
@@ -376,6 +412,8 @@ press_conference_timestamp
 
 Nếu chiến lược (strategy / 전략) reacts to statement vs press conference, timestamps phải tách riêng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **18. Central-bank quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터)** cho ta quy tắc; **19. News văn bản (text / 텍스트) and point-in-time availability** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **20. Dữ liệu (data / 데이터) lineage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. News văn bản (text / 텍스트) and point-in-time availability
 
 Nếu dùng NLP/news:
@@ -389,6 +427,8 @@ version
 ```
 
 Không dùng updated article văn bản (text / 텍스트) như thể phiên bản (version / 버전) đó tồn tại ngay khi headline đầu tiên phát hành.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **19. News văn bản (text / 텍스트) and point-in-time availability** cho ta quy tắc; **20. Dữ liệu (data / 데이터) lineage** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **21. Raw / clean / tính năng (feature / 기능) layers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Dữ liệu (data / 데이터) lineage
 
@@ -404,6 +444,8 @@ fx_1m_features_v3
 ```
 
 Lineage giúp gỡ lỗi (debug / 디버그) khi kết quả (result / 결과) thay đổi sau dữ liệu (data / 데이터) cập nhật (update / 업데이트).
+
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **20. Dữ liệu (data / 데이터) lineage** nêu điều cần giải thích; **21. Raw / clean / tính năng (feature / 기능) layers** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Never silently overwrite historical dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Raw / clean / tính năng (feature / 기능) layers
 
@@ -424,6 +466,8 @@ research_snapshots/
 
 `research_snapshots` freeze chính xác (exact / 정확한) inputs used in a published experiment.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **21. Raw / clean / tính năng (feature / 기능) layers** nêu điều cần giải thích; **22. Never silently overwrite historical dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. Hashing and versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Never silently overwrite historical dữ liệu (data / 데이터)
 
 Nếu vendor correction arrives:
@@ -433,6 +477,8 @@ create new dataset version
 ```
 
 Không silently replace old tệp (file / 파일) rồi để old backtest trở nên unreproducible.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **22. Never silently overwrite historical dữ liệu (data / 데이터)** nêu điều cần giải thích; **23. Hashing and versioning** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. Currency conversion dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Hashing and versioning
 
@@ -449,6 +495,8 @@ Nếu raw dataset rất lớn, băm (hash / 해시) manifest thay vì mỗi row.
 
 Mục tiêu là detect đầu vào (input / 입력) changes.
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **23. Hashing and versioning** nêu điều cần giải thích; **24. Currency conversion dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. Triangular consistency checks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Currency conversion dữ liệu (data / 데이터)
 
 P/L reporting cần FX conversion.
@@ -461,6 +509,8 @@ P/L initially in GBP
 ```
 
 Backtest phải dùng conversion tỷ lệ (rate / 비율) available at that timestamp, không hiện tại (current / 현재) tỷ lệ (rate / 비율).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **24. Currency conversion dữ liệu (data / 데이터)** nêu điều cần giải thích; **25. Triangular consistency checks** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Corporate actions analogy does not apply directly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Triangular consistency checks
 
@@ -480,6 +530,8 @@ wrong timestamp alignment
 
 Nhưng bid/ask và độ trễ (latency / 지연 시간) làm chính xác (exact / 정확한) equality không expected.
 
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **26. Corporate actions analogy does not apply directly** tiếp nhận điểm tựa từ **25. Triangular consistency checks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Price sanity by return** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Corporate actions analogy does not apply directly
 
 FX spot không có stock split/dividend adjustment giống equity.
@@ -495,6 +547,8 @@ contract specification change
 
 Chuỗi xử lý (pipeline / 파이프라인) vẫn cần historical siêu dữ liệu (metadata / 메타데이터).
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **27. Price sanity by return** tiếp nhận điểm tựa từ **26. Corporate actions analogy does not apply directly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Cross-source comparison** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Price sanity by return
 
 Compute log return:
@@ -509,6 +563,8 @@ Nhưng không auto-remove 2015 CHF-like jump chỉ vì z-score huge.
 
 Extreme return may be most important observation in rủi ro (risk / 위험) research.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **27. Price sanity by return** nêu điều cần giải thích; **28. Cross-source comparison** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. Dữ liệu (data / 데이터) chất lượng (quality / 품질) report** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Cross-source comparison
 
 Nếu có hai vendors:
@@ -522,6 +578,8 @@ compare timestamps
 Persistent divergence can reveal ánh xạ (mapping / 매핑)/timezone bài toán (problem / 문제).
 
 Occasional micro-difference may be normal OTC fragmentation.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **28. Cross-source comparison** nêu điều cần giải thích; **29. Dữ liệu (data / 데이터) chất lượng (quality / 품질) report** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. Lược đồ (schema / 스키마) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Dữ liệu (data / 데이터) chất lượng (quality / 품질) report
 
@@ -541,6 +599,8 @@ timezone anomalies
 
 Chất lượng (quality / 품질) report should be stored with dataset phiên bản (version / 버전).
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **29. Dữ liệu (data / 데이터) chất lượng (quality / 품질) report** nêu điều cần giải thích; **30. Lược đồ (schema / 스키마) evolution** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **31. Tính năng (feature / 기능) causality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Lược đồ (schema / 스키마) evolution
 
 Nếu thêm trường dữ liệu (field / 필드) mới:
@@ -552,6 +612,8 @@ schema_version++
 Downstream mã (code / 코드) must know whether trường dữ liệu (field / 필드) exists historically.
 
 Do not infer missing trường dữ liệu (field / 필드) ngữ nghĩa (semantics / 의미론) silently.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **31. Tính năng (feature / 기능) causality** tiếp nhận điểm tựa từ **30. Lược đồ (schema / 스키마) evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Session features** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Tính năng (feature / 기능) causality
 
@@ -573,6 +635,8 @@ because it uses future observations.
 
 Use trailing cửa sổ (window / 윈도우) unless chiến lược (strategy / 전략) genuinely has future dữ liệu (data / 데이터)—which it cannot.
 
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **32. Session features** tiếp nhận điểm tựa từ **31. Tính năng (feature / 기능) causality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Event-distance features** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Session features
 
 Examples:
@@ -585,6 +649,8 @@ minutes_since_session_open
 ```
 
 Derive from timezone-aware calendar, not fixed UTC across years.
+
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **33. Event-distance features** tiếp nhận điểm tựa từ **32. Session features** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Dữ liệu (data / 데이터) split must preserve thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Event-distance features
 
@@ -599,6 +665,8 @@ Future scheduled calendar is known, but **future kết quả (outcome / 결과)*
 
 Distinguish known schedule from unknown kết quả (result / 결과).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **33. Event-distance features** nêu điều cần giải thích; **34. Dữ liệu (data / 데이터) split must preserve thời gian (time / 시간)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **35. Snapshot before experiment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Dữ liệu (data / 데이터) split must preserve thời gian (time / 시간)
 
 Do not random-shuffle thời gian (time / 시간) series observations before train/kiểm thử (test / 테스트) split if dependence matters.
@@ -610,6 +678,8 @@ train < validation < test chronologically
 ```
 
 Advanced methodology may use purging/embargo around overlapping labels.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **34. Dữ liệu (data / 데이터) split must preserve thời gian (time / 시간)** nêu điều cần giải thích; **35. Snapshot before experiment** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **36. Minimal dữ liệu (data / 데이터) manifest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. Snapshot before experiment
 
@@ -625,6 +695,8 @@ freeze split dates
 Then run.
 
 Do not keep mutating dataset until kết quả (result / 결과) becomes attractive.
+
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **35. Snapshot before experiment** nêu điều cần giải thích; **36. Minimal dữ liệu (data / 데이터) manifest** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **37. Example relational lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 36. Minimal dữ liệu (data / 데이터) manifest
 
@@ -644,9 +716,9 @@ Version/hash
 Used by which strategy
 ```
 
-## 37. Example relational lược đồ (schema / 스키마)
-Phần “37. Example relational lược đồ (schema / 스키마)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **36. Minimal dữ liệu (data / 데이터) manifest** cho ta quy tắc; **37. Example relational lược đồ (schema / 스키마)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **38. SQL-style point-in-time phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 37. Example relational lược đồ (schema / 스키마)
 
 ```text
 instrument_master
@@ -660,6 +732,8 @@ experiment_run
 ```
 
 Keys should prefer stable IDs over vendor labels.
+
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **37. Example relational lược đồ (schema / 스키마)** cho ta quy tắc; **38. SQL-style point-in-time phép nối (join / 조인)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **39. Reproducibility kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 38. SQL-style point-in-time phép nối (join / 조인)
 
@@ -678,6 +752,8 @@ join on reference_month
 and accidentally pull revised future value
 ```
 
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **39. Reproducibility kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **38. SQL-style point-in-time phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Thất bại (failure / 실패) injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 39. Reproducibility kiểm thử (test / 테스트)
 
 A successful chuỗi xử lý (pipeline / 파이프라인) passes:
@@ -690,6 +766,8 @@ same code version
 ```
 
 If đầu ra (output / 출력) changes nondeterministically, fix before interpreting backtest.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **40. Thất bại (failure / 실패) injection** tiếp nhận điểm tựa từ **39. Reproducibility kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Dữ liệu (data / 데이터) chất lượng (quality / 품질) vs chiến lược (strategy / 전략) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 40. Thất bại (failure / 실패) injection
 
@@ -707,11 +785,15 @@ symbol rename
 
 Hệ thống (system / 시스템) should thất bại (fail / 실패) loudly or flag degraded dữ liệu (data / 데이터), not silently continue.
 
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **40. Thất bại (failure / 실패) injection** nêu điều cần giải thích; **41. Dữ liệu (data / 데이터) chất lượng (quality / 품질) vs chiến lược (strategy / 전략) chất lượng (quality / 품질)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **42. Deliverables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 41. Dữ liệu (data / 데이터) chất lượng (quality / 품질) vs chiến lược (strategy / 전략) chất lượng (quality / 품질)
 
 If chiến lược (strategy / 전략) stops working after correcting a timezone bug, chiến lược (strategy / 전략) was not robust bằng chứng (evidence / 증거).
 
 Never preserve wrong dữ liệu (data / 데이터) hành vi (behavior / 동작) just because equity curve looked better.
+
+> **Chuyển mạch:** Ở chặng này của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **41. Dữ liệu (data / 데이터) chất lượng (quality / 품질) vs chiến lược (strategy / 전략) chất lượng (quality / 품질)** nêu điều cần giải thích; **42. Deliverables** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **43. Completion criteria** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 42. Deliverables
 
@@ -727,6 +809,8 @@ data_quality_report.md
 point_in_time_join_spec.md
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **43. Completion criteria** tiếp nhận điểm tựa từ **42. Deliverables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 43. Completion criteria
 
 Mô-đun (module / 모듈) complete when a reviewer can answer:
@@ -741,6 +825,8 @@ Can the exact dataset be reconstructed?
 
 Nếu một câu trả lời vẫn là “probably”, chuỗi xử lý (pipeline / 파이프라인) chưa đủ chuẩn cho serious research.
 
+> **Chuyển mạch:** Trong **01 — Dữ liệu (data / 데이터) Chuỗi xử lý (pipeline / 파이프라인) và Thời gian (time / 시간) Normalization cho Systematic FX**, **Đọc tiếp** tiếp nhận điểm tựa từ **43. Completion criteria** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Đọc tiếp
 
 → [02 — Backtest Engine và Execution Model](./02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md)
@@ -749,3 +835,5 @@ Liên quan:
 
 - [10 — Backtesting and point-in-time FX data](../10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
 - [05 — Execution, brokers, costs and risk](../05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

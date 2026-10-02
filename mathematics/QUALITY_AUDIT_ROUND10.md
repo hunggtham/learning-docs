@@ -1,7 +1,6 @@
 # Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)
 
-> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiêu chí chọn chapter** sang **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tiêu chí chọn chapter** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối quality audit round với coverage, lỗi lặp và remediation, để đánh giá tài liệu có bằng chứng tiến bộ qua từng vòng.
 
 Round 10 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리) vẫn giữ nguyên **87 topic**; không thêm chapter mới chỉ để tăng coverage.
 
@@ -33,8 +32,7 @@ intuition
 → mental model
 ```
 
-
-> **Chuyển mạch:** Từ **Tiêu chí chọn chapter**, ta sang **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus** tiếp nhận điểm tựa từ **Tiêu chí chọn chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus
 
@@ -134,8 +132,7 @@ Các phần tăng sâu:
 - Maxwell/fluid/AI connections;
 - singularity/lĩnh vực (domain / 도메인) caveat trong flux theorem.
 
-
-> **Chuyển mạch:** Từ **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus**, ta sang **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)** tiếp nhận điểm tựa từ **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)
 
@@ -232,8 +229,7 @@ Các connections mới:
 - likelihood/mất mát (loss / 손실) choices trong AI;
 - Gaussian-tail limitations trong Finance.
 
-
-> **Chuyển mạch:** Từ **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)**, ta sang **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)** tiếp nhận điểm tựa từ **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)
 
@@ -302,8 +298,7 @@ Các phần tăng sâu:
 - tuyến tính (linear / 선형) codes over `GF(2)`;
 - tính năng (feature / 기능) selection/thông tin (information / 정보) bottleneck/perplexity caveats.
 
-
-> **Chuyển mạch:** Từ **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)**, ta sang **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers** tiếp nhận điểm tựa từ **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) balance sau Round 10** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers
 
@@ -379,8 +374,7 @@ Các phần tăng sâu:
 - preconditioning;
 - numerical eigenvalue methods.
 
-
-> **Chuyển mạch:** Từ **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers**, ta sang **độ sâu (depth / 깊이) balance sau Round 10** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Độ sâu (depth / 깊이) balance sau Round 10** tiếp nhận điểm tựa từ **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Priority hợp lý cho Round 11** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) balance sau Round 10
 
@@ -396,8 +390,7 @@ Optimization → Constraints/KKT → Numerical computation
 
 Coverage không có major gap mới. Vì vậy các round tiếp theo vẫn nên **rewrite/chỉnh phụ thuộc (dependency / 의존성)**, không nên tăng topic count một cách cơ học.
 
-
-> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) balance sau Round 10**, ta sang **Priority hợp lý cho Round 11** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Priority hợp lý cho Round 11** tiếp nhận điểm tựa từ **Độ sâu (depth / 깊이) balance sau Round 10** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Priority hợp lý cho Round 11
 
@@ -416,8 +409,7 @@ Các chapter tiếp theo đáng kiểm tra (audit / 감사) theo độ sâu (dep
 
 Nhưng trước khi rewrite cần kiểm tra (audit / 감사) content thực tế: tệp (file / 파일) kích thước (size / 크기) không phải criterion duy nhất. Một chapter ngắn nhưng conceptually complete không cần kéo dài chỉ để đồng đều số dòng.
 
-
-> **Chuyển mạch:** Từ **Priority hợp lý cho Round 11**, ta sang **Kết luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Kết luận** gom các mảnh từ **Priority hợp lý cho Round 11** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết luận
 
@@ -427,4 +419,4 @@ Nguyên tắc tiếp tục giữ nguyên:
 
 > Không tối ưu thư viện (library / 라이브러리) theo số tệp (file / 파일) hoặc số dòng. Tối ưu theo khả năng người đọc hiểu bản chất, các giả định (assumptions / 가정들), derivations, thất bại (failure / 실패) modes và connections mà không phải ghép kiến thức rời rạc từ nơi khác.
 
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

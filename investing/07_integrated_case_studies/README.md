@@ -1,7 +1,6 @@
 # 07 — Bài tập tích hợp (Integrated case Studies)
 
-> **Mạch đọc:** Đọc **07 — Bài tập tích hợp (Integrated case Studies)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Coverage map của trường hợp (case / 사례) study**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07 — Bài tập tích hợp (Integrated case Studies)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cách sử dụng tình huống** để đem mô hình vào tình huống cụ thể. Mạch này dùng README làm bản đồ owner của integrated case studies, rồi nối macro, credit, sectors, process và portfolio thành các tình huống hoàn chỉnh.
 
 Đây là phần tổng hợp cuối (capstone) của toàn bộ thư viện đầu tư. Các phần trước dạy từng lớp riêng như hệ thống tài chính, nhóm tài sản, phân tích doanh nghiệp, kinh tế học, giao dịch và thị trường Hàn Quốc/Việt Nam. Ở đây, mục tiêu là nối tất cả thành một quy trình nghiên cứu hoàn chỉnh.
 
@@ -42,7 +41,6 @@ Trước khi làm capstone cuối, hoàn thành ít nhất một vòng trong [Ad
 
 [05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md](./05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md) là capstone cuối cùng. tệp (file / 파일) này nối câu hỏi nghiên cứu → nguồn dữ liệu → giả định → macro/sector/company mô hình (model / 모델) → định giá → phân phối lợi suất kỳ vọng → quy mô vị thế → thực thi → theo dõi → phân rã kết quả → post-mortem. Đây là bài kiểm tra xem người đọc đã có thể vận hành toàn bộ thư viện như một hệ thống nghiên cứu hay chưa.
 
-
 Bảng coverage dưới đây cho biết mỗi case đã đi qua những tầng nào của hệ thống nghiên cứu. Hãy đọc nó như bản đồ điều hướng: dấu ✓ chỉ có giá trị khi bên trong case có cơ chế, dữ liệu, cách diễn giải và failure mode tương ứng.
 
 | Case | Macro | Rates | Liquidity/Credit | Industry | Company | Valuation | Portfolio | Korea/Vietnam |
@@ -57,8 +55,7 @@ Bảng coverage dưới đây cho biết mỗi case đã đi qua những tầng 
 
 Bảng này dùng để kiểm tra (audit / 감사) coverage, không phải checklist hình thức. Mỗi dấu ✓ phải có **cơ chế, dữ liệu, interpretation và dạng thất bại (failure mode / 실패 모드)** tương ứng trong trường hợp (case / 사례).
 
-
-> **Chuyển mạch:** Từ **Coverage map của trường hợp (case / 사례) study**, ta sang **Cách sử dụng tình huống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **07 — Bài tập tích hợp (Integrated case Studies)**, **Thứ tự đọc** cho ta quy tắc; **Cách sử dụng tình huống** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ghi chú nên tạo sau mỗi tình huống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách sử dụng tình huống
 
@@ -72,8 +69,7 @@ Không đọc như một câu chuyện để ghi nhớ hướng giá. Hãy dừn
 
 Sau đó mới đọc phần tiếp theo.
 
-
-> **Chuyển mạch:** Từ **Cách sử dụng tình huống**, ta sang **Ghi chú nên tạo sau mỗi tình huống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **07 — Bài tập tích hợp (Integrated case Studies)**, **Cách sử dụng tình huống** cho ta quy tắc; **Ghi chú nên tạo sau mỗi tình huống** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết với các lĩnh vực trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ghi chú nên tạo sau mỗi tình huống
 
@@ -97,8 +93,7 @@ Bài học rút ra
 
 Với capstone cuối, mở rộng thành một hồ sơ đầu tư hoàn chỉnh gồm cả nguồn dữ liệu, mô hình, định giá, sizing, thực thi (execution / 실행), monitoring và post-mortem template.
 
-
-> **Chuyển mạch:** Từ **Ghi chú nên tạo sau mỗi tình huống**, ta sang **Liên kết với các lĩnh vực trước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Bài tập tích hợp (Integrated case Studies)**, **Ghi chú nên tạo sau mỗi tình huống** cho ta quy tắc; **Liên kết với các lĩnh vực trước** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tiêu chuẩn hoàn thành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết với các lĩnh vực trước
 
@@ -113,8 +108,7 @@ Nếu tình huống có giao dịch hoặc phòng vệ, xem thêm [05 — Giao d
 
 Nếu muốn học theo lớp nâng cao thay vì theo lĩnh vực (domain / 도메인), sử dụng [Advanced Depth Path](../ADVANCED_DEPTH_PATH.md).
 
-
-> **Chuyển mạch:** Từ **Liên kết với các lĩnh vực trước**, ta sang **Tiêu chuẩn hoàn thành** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **07 — Bài tập tích hợp (Integrated case Studies)**, **Tiêu chuẩn hoàn thành** tiếp nhận điểm tựa từ **Liên kết với các lĩnh vực trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiêu chuẩn hoàn thành
 
@@ -136,8 +130,7 @@ Một attribution / post-mortem template
 
 Với worked trường hợp (case / 사례) 06 và 07, phải tự thay ít nhất ba giả định và tính lại kết quả. Nếu chỉ đọc số có sẵn, bài chưa đạt.
 
-
-> **Chuyển mạch:** Từ **Tiêu chuẩn hoàn thành**, ta sang **Mục tiêu cuối cùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **07 — Bài tập tích hợp (Integrated case Studies)**, **Mục tiêu cuối cùng** tiếp nhận điểm tựa từ **Tiêu chuẩn hoàn thành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mục tiêu cuối cùng
 
@@ -156,3 +149,5 @@ Sau phần này, khi nhìn một tin mới, người đọc không nên hỏi ng
 ```
 
 Đó là bước chuyển từ “biết kiến thức đầu tư” sang có một hệ thống vận hành nghiên cứu (research operating system).
+
+> **Bàn giao:** Sau **Mục tiêu cuối cùng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
