@@ -50,7 +50,7 @@ Post-crisis reform made firms more able to restructure workforce. cốt lõi (co
 
 Chính phủ thúc đẩy startup CNTT và băng thông rộng; chaebol cũng đầu tư mạnh. Làn sóng bùng nổ kiểu dot-com có thất bại, nhưng thất bại vẫn có thể xây dựng đội ngũ kỹ sư và tri thức khởi nghiệp. Hệ sinh thái học tập còn lại ngay cả khi từng doanh nghiệp biến mất.
 
-> **Chuyển mạch:** Ở chặng này của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Online gaming and virtual economies** tiếp nhận điểm tựa từ **Venture boom and trạng thái (state / 상태) chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cultural môi trường vận hành (production / 운영 환경) as industrial tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Venture boom và state policy** tạo vốn và hạ tầng; **online gaming và virtual economies** cho thấy mô hình kinh doanh mới, rồi **cultural production** nối công nghệ với công nghiệp nội dung.
 
 ## Online gaming and virtual economies
 
@@ -70,19 +70,19 @@ Sau **1997**, mất việc và việc làm không ổn định làm thay đổi 
 
 Hallyu cũng cần được nhìn như **chuỗi giá trị văn hóa (cultural value chain / 문화 가치사슬)**: đào tạo nghệ sĩ, sản xuất âm thanh–hình ảnh, phụ đề, nền tảng phân phối, quảng cáo, du lịch và lao động người hâm mộ. Nhà nước có thể hỗ trợ hạ tầng hoặc xuất khẩu, nhưng không thể một mình quyết định bài hát nào được yêu thích. Cách đọc này giữ được cả năng lực sáng tạo và điều kiện kinh tế.
 
-> **Chuyển mạch:** Ở chặng này của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Việt Nam cùng thời: Internet, khủng hoảng và sản xuất xuất khẩu** tiếp nhận điểm tựa từ **Khủng hoảng đi qua bàn ăn, mạng băng rộng đi qua căn hộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa điểm của số hóa và ký ức đại chúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Khủng hoảng đi qua bàn ăn, mạng băng rộng đi qua căn hộ** mô tả thay đổi trong gia đình và hạ tầng; **Việt Nam cùng thời** đối chiếu đường đi khác, rồi **Địa điểm của số hóa** kiểm tra ký ức đại chúng bằng không gian cụ thể.
 
 ## Việt Nam cùng thời: Internet, khủng hoảng và sản xuất xuất khẩu
 
 Việt Nam ký Hiệp định Thương mại Việt–Mỹ năm **2000**, gia nhập WTO năm **2007** và phổ cập Internet trong thập niên 2000. Cả hai xã hội đều chứng kiến điện thoại, quán mạng và sản xuất hướng xuất khẩu mở rộng, nhưng quy mô tập đoàn, chính sách truyền thông và đường đi chính trị khác nhau. So sánh hữu ích nhất là hỏi công nghệ làm giảm chi phí phối hợp nào và nhóm nào vẫn bị loại khỏi cơ hội đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Địa điểm của số hóa và ký ức đại chúng** tiếp nhận điểm tựa từ **Việt Nam cùng thời: Internet, khủng hoảng và sản xuất xuất khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối sang những năm 2010–2020** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Địa điểm của số hóa và ký ức đại chúng** cho thấy nền tảng phân phối trải nghiệm và ký ức thế nào; **Cầu nối sang 2010–2020** theo dõi khi logic đó mở rộng thành nền kinh tế nền tảng.
 
 ## Địa điểm của số hóa và ký ức đại chúng
 
 Khu **Yongsan Electronics Market**, các quán PC bang còn lại và những sân vận động của World Cup **2002** cho thấy công nghệ, giải trí và không gian công cộng đã liên kết ra sao. Các không gian triển lãm về Hallyu hoặc K-pop nên được đọc cùng hồ sơ lao động hậu khủng hoảng để không biến xuất khẩu văn hóa thành câu chuyện thành công không có chi phí.
 
-> **Chuyển mạch:** Trong **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Cầu nối sang những năm 2010–2020** tiếp nhận điểm tựa từ **Địa điểm của số hóa và ký ức đại chúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối sang 2010–2020** khép chuỗi từ khủng hoảng đến số hóa và Hallyu, đồng thời giữ rõ ranh giới giữa dữ liệu kinh tế, thay đổi văn hóa và diễn giải nhân quả.
 
 ## Cầu nối sang những năm 2010–2020
 

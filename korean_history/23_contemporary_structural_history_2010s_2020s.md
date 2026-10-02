@@ -78,25 +78,25 @@ Lịch sử gần đây còn có kho lưu trữ chưa được giải quyết v�
 
 Một người trẻ trả tiền thuê `wolse` hoặc đặt đồ ăn qua ứng dụng đang sống trong kết quả của nhiều lớp trước đó: tập trung việc làm quanh Seoul, đô thị hóa công nghiệp, khủng hoảng IMF, phổ cập băng rộng và tài chính hóa nhà ở. Nhìn chuỗi này giúp tránh hai cực đoan: coi vấn đề hiện tại là “tâm lý thế hệ” thuần túy hoặc quy mọi thứ về một chính sách duy nhất.
 
-> **Chuyển mạch:** Trong **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Việt Nam cùng thời: hội nhập số và bài toán dân số** tiếp nhận điểm tựa từ **Một ngày đương đại vẫn có lịch sử ở phía sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa điểm để nhìn cấu trúc hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Một ngày đương đại vẫn có lịch sử ở phía sau** đặt câu hỏi về path dependence; **Việt Nam cùng thời** đối chiếu hội nhập số và dân số, rồi **Địa điểm để nhìn cấu trúc hiện tại** đưa các biến đó về đời sống cụ thể.
 
 ## Việt Nam cùng thời: hội nhập số và bài toán dân số
 
 Việt Nam từ thập niên 2010 cũng mở rộng thương mại điện tử, sản xuất điện tử, nền tảng giao hàng và đô thị hóa; đồng thời đối diện khác biệt vùng miền, chi phí nhà ở và thay đổi tỷ lệ sinh. Hai xã hội có thể gặp cùng một công nghệ nhưng chịu ràng buộc khác nhau về doanh nghiệp, phúc lợi, dân số và quản trị dữ liệu. So sánh nên ghi rõ mốc và chỉ báo, thay vì nói “Hàn Quốc đi trước Việt Nam” như một định mệnh tuyến tính.
 
-> **Chuyển mạch:** Ở chặng này của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Địa điểm để nhìn cấu trúc hiện tại** tiếp nhận điểm tựa từ **Việt Nam cùng thời: hội nhập số và bài toán dân số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bàn giao cho người học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Địa điểm để nhìn cấu trúc hiện tại** kiểm tra claim bằng hạ tầng, lao động và không gian; **Bàn giao cho người học** ghi lại câu hỏi còn mở và đường đọc tiếp.
 
 ## Địa điểm để nhìn cấu trúc hiện tại
 
 Các khu căn hộ và tuyến tàu điện vùng thủ đô cho thấy mật độ, giá đất và thời gian đi làm; **Songdo** cho thấy thử nghiệm thành phố thông minh; **Gwanghwamun** và **Quảng trường Seoul** cho thấy không gian công cộng vẫn là nơi công dân thương lượng ý nghĩa của khủng hoảng và trách nhiệm. Những nơi này không tự giải thích nguyên nhân, nhưng giúp kiểm tra xem một khái niệm như “tập trung vùng thủ đô” đã biến thành hạ tầng và lịch trình sống ra sao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Bàn giao cho người học** tiếp nhận điểm tựa từ **Địa điểm để nhìn cấu trúc hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối sang lịch sử đang hình thành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi neo cấu trúc vào địa điểm, **Bàn giao cho người học** chỉ rõ giới hạn của snapshot; **Cầu nối sang lịch sử đang hình thành** mở rộng sang biến đổi chưa có kết luận ổn định.
 
 ## Bàn giao cho người học
 
 Với lịch sử rất gần, mục tiêu không phải tiên đoán kết cục cuối cùng mà là giữ **sổ theo dõi biến số (variable ledger / 변수 기록)**: dân số, nhà ở, việc làm, nền tảng, giới, quan hệ liên Triều và khí hậu. Khi có dữ liệu mới, ta cập nhật mô hình thay vì sửa quá khứ để khớp một khẩu hiệu. Từ đây có thể quay lại [`29_collective_memory_historiography_public_history.md`](29_collective_memory_historiography_public_history.md) để hỏi ai được quyền đặt tên cho “hiện tại” và bằng chứng nào sẽ còn lại.
 
-> **Chuyển mạch:** Trong **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Cầu nối sang lịch sử đang hình thành** tiếp nhận điểm tựa từ **Bàn giao cho người học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối sang lịch sử đang hình thành** khép chương bằng cách phân biệt dữ liệu hiện có với diễn giải tạm thời, để người học cập nhật mà không biến hiện tại thành lịch sử đã định hình.
 
 ## Cầu nối sang lịch sử đang hình thành
 

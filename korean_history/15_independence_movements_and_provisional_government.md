@@ -42,19 +42,19 @@ Korean Liberation Army (한국광복군) thuộc Provisional Government được
 
 Actors không chỉ hỏi “độc lập hay không”. Họ còn hỏi trạng thái (state / 상태) tương lai là republic hay monarchy, economic thứ tự (order / 순서) ra sao, chiến lược (strategy / 전략) là diplomacy, education, armed struggle hay socialist revolution. Different answer tạo organization khác nhau. Fragmentation không nhất thiết chứng minh movement yếu về mục tiêu; nó phản ánh bất định (uncertainty / 불확실성) của postcolonial future.
 
-> **Chuyển mạch:** Trong **Phong trào độc lập và Korean Provisional Government**, **Diaspora như hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Tại sao movement phân hoá?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Culture as resistance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Tại sao movement phân hóa?** chỉ ra khác biệt mục tiêu và nguồn lực; **Diaspora như hạ tầng** theo dõi nơi mạng người, tiền và thông tin nối các nhóm, rồi **Culture as resistance** mở sang biểu tượng.
 
 ## Diaspora như hạ tầng (infrastructure / 인프라)
 
 Các nhà hoạt động độc lập cần nơi trú ẩn, nguồn tài chính, cơ sở in ấn, trường học và vũ khí. Cộng đồng người Hàn ở Trung Quốc, Mãn Châu, Nga và Hoa Kỳ/Hawaii cung cấp mạng lưới (network / 네트워크). Vì vậy, cộng đồng hải ngoại không đứng bên lề; đó là hạ tầng hậu cần (logistical infrastructure) của chính trị xuyên quốc gia.
 
-> **Chuyển mạch:** Ở chặng này của **Phong trào độc lập và Korean Provisional Government**, **Culture as resistance** tiếp nhận điểm tựa từ **Diaspora như hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liberation và credit bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Culture as resistance** biến mạng diaspora thành ngôn ngữ và nghi lễ có thể huy động; **Liberation và credit problem** kiểm tra ai được ghi nhận và ai bị bỏ khỏi câu chuyện.
 
 ## Culture as resistance
 
 Ngôn ngữ (language / 언어) study, lịch sử (history / 이력) writing, education và newspaper có thể là resistance khi colonial power controls định danh (identity / 식별자) institution. Maintaining Korean ngôn ngữ (language / 언어)/lịch sử (history / 이력) kiến thức (knowledge / 지식) giữ collective self-definition. Tuy nhiên cultural nationalism cũng có nội bộ (internal / 내부) lớp (class / 클래스)/gender limits và không phải all Koreans tham gia theo same way.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phong trào độc lập và Korean Provisional Government**, **Liberation và credit bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Culture as resistance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độc lập được trả giá bằng nguồn lực hằng ngày** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi xét credit và ký ức, **Độc lập được trả giá bằng nguồn lực hằng ngày** đưa phong trào về logistics, đóng góp và tổ chức đời sống.
 
 ## Liberation và credit bài toán (problem / 문제)
 
@@ -74,13 +74,13 @@ Trong bán đảo, đình công, tẩy chay, lớp học lịch sử và việc 
 
 Trong thập niên 1920–1940, Việt Nam cũng có các hội kín, báo chí, trường học, tổ chức thanh niên và hoạt động ở Trung Quốc, Pháp hoặc Xiêm. Hai phong trào đều dùng in ấn và cộng đồng hải ngoại để vượt qua kiểm duyệt, nhưng mục tiêu tổ chức, hệ tư tưởng và quan hệ với các cường quốc khác nhau. So sánh nên tập trung vào một cơ chế cụ thể — chẳng hạn cách gây quỹ hoặc truyền tin — thay vì gom mọi phong trào chống thuộc địa vào một khuôn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phong trào độc lập và Korean Provisional Government**, **Địa điểm để đọc mạng lưới, không chỉ đọc anh hùng** tiếp nhận điểm tựa từ **Việt Nam cùng thời: độc lập, giáo dục và mạng lưới hải ngoại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối sang 1945–1950** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Việt Nam cùng thời** mở đối sánh về giáo dục và hải ngoại; **Địa điểm để đọc mạng lưới** kiểm tra agency ngoài các nhân vật nổi tiếng, rồi **Cầu nối sang 1945–1950** theo dõi hệ quả sau giải phóng.
 
 ## Địa điểm để đọc mạng lưới, không chỉ đọc anh hùng
 
 Khu **Tô giới Pháp ở Thượng Hải (Shanghai French Concession / 上海法租界)** và dấu tích trụ sở lâm thời ở Thượng Hải giúp hình dung chính trị lưu vong hoạt động trong một đô thị quốc tế; **Đài Tưởng niệm Độc lập Hàn Quốc (독립기념관 / Independence Hall of Korea)** ở Cheonan cho thấy cách nhà nước hiện nay sắp xếp nhiều dòng kháng chiến vào một câu chuyện lịch sử (narrative / 역사 서사) chung. Khi xem hiện vật, hãy hỏi ai tạo ra nó, được lưu giữ sau thời điểm nào và ký ức nào vẫn bị bỏ trống.
 
-> **Chuyển mạch:** Trong **Phong trào độc lập và Korean Provisional Government**, **Cầu nối sang 1945–1950** tiếp nhận điểm tựa từ **Địa điểm để đọc mạng lưới, không chỉ đọc anh hùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối sang 1945–1950** khép chương bằng cách nối mạng độc lập với nhà nước mới, đồng thời giữ rõ khoảng cách giữa mục tiêu phong trào và kết quả chính trị.
 
 ## Cầu nối sang 1945–1950
 
