@@ -48,7 +48,7 @@ Phân rã một đế chế có thể là decentralization, chuyển ngôn ngữ
 
 Luật, tiền, bia ký và văn chương cho thấy official ideals; khảo cổ đô thị, đồng ruộng, nghĩa trang và papyri giúp kiểm tra khoảng cách với practice. Counterfactual: nếu frontier có trade corridor ổn định hơn chi phí quân sự, đế chế có thể decentralize mà vẫn giữ revenue. Cầu nối sang 05 là **law/road/empire tạo contact zones** để văn bản (text / 텍스트), ritual và người di chuyển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **04 — Classical civilizations: đế chế, thị trường và công dân**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** nối đế chế, thị trường và công dân với năng lực phối hợp; phần **Độ sâu pass** kiểm tra xem mô hình nhà nước cổ điển giải thích được gì và bỏ sót nhóm nào.
 
 ## Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp
 

@@ -27,7 +27,7 @@
 | Cross-links | Mạnh | chỉ mục (index / 인덱스), methods và link sang Geography/Korea đã có |
 | Study usability | Mạnh | README, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), học tập (learning / 학습) tuyến (route / 경로), kiểm tra (audit / 감사), glossary, trường hợp (case / 사례) studies và chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) đã có |
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Ranh giới cần giữ** tiếp nhận điểm tựa từ **Ma trận chất lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ưu tiên nâng cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Ma trận chất lượng** cho biết tiêu chí nào đang thiếu; **Ranh giới cần giữ** khóa phạm vi audit, rồi **Ưu tiên nâng cấp** chọn lỗ hổng có tác động lớn nhất thay vì sửa dàn trải.
 
 ## Ranh giới cần giữ
 
@@ -41,7 +41,7 @@ investing/economics = market, finance, risk và allocation tools
 
 Khi một chapter mới cần mô tả địa hình, không duplicate toàn bộ Geography; khi cần niên đại Hàn Quốc, link sang Korean lịch sử (history / 이력); khi cần mô hình kinh tế, giữ phần lịch sử ở đây và trỏ sang Economics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Ưu tiên nâng cấp** tiếp nhận điểm tựa từ **Ranh giới cần giữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Definition of done cho một độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi ranh giới đã rõ, **Ưu tiên nâng cấp** biến issue thành thứ tự hành động; **Definition of done** nêu bằng chứng tối thiểu để xác nhận một depth pass thật sự hoàn tất.
 
 ## Ưu tiên nâng cấp
 
@@ -63,7 +63,7 @@ Khi một chapter mới cần mô tả địa hình, không duplicate toàn bộ
 - Tạo timeline tra cứu nhanh chỉ sau khi nhân quả (causal / 인과적) chapters đủ sâu.
 - Bổ sung bibliography có chú thích ngắn: nguồn sơ cấp, textbook, monograph và dataset.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Definition of done cho một độ sâu (depth / 깊이) pass** tiếp nhận điểm tựa từ **Ưu tiên nâng cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Definition of done** khép vòng audit bằng claim, nguồn, reasoning và link có thể kiểm tra; thiếu một trong các bằng chứng đó thì issue vẫn mở.
 
 ## Definition of done cho một độ sâu (depth / 깊이) pass
 

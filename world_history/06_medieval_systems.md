@@ -47,7 +47,7 @@ Mongol networks cho thấy conquest có thể mở corridor nhưng cũng gây ph
 
 Charter, waqf/temple bản ghi (record / 레코드), merchant letters, tax lists, cemetery bằng chứng (evidence / 증거) và climate proxies phải được đối chiếu vì mỗi archive có độ lệch (bias / 편향) địa lý và giai cấp. Counterfactual: nếu corridor có nhiều nút (node / 노드) thay thế, plague/war shock có thể giảm centrality của một thành phố thay vì làm sụp toàn mạng. Cầu nối sang 07 là **credit, gunpowder, cổng (port / 포트) và centralization** tăng khả năng huy động vượt qua jurisdiction địa phương.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối**, **Bằng chứng, giới hạn và cầu nối** đã nêu tiêu chí phân biệt, còn **Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** xác định vai trò của trade, brokers và các trung gian; phần **Độ sâu pass** kiểm tra cách shock truyền qua những hệ thống phân mảnh đó.
 
 ## Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission
 

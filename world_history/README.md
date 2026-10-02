@@ -39,7 +39,7 @@ Các chương không tuyên bố rằng lịch sử đi theo một đường th�
 
 Vòng độ sâu (depth / 깊이) pass hiện tại giữ nguyên tuyến và chuẩn gốc (canonical / 정본) files, nhưng làm dày 14 nút (node / 노드) từ Agricultural Revolution đến post-1991. Khi đọc các nút (node / 노드) này, theo chuỗi: `initial conditions → actors → institutions/material constraints → mechanism → event sequence → competing interpretations → consequences → path dependence`. Đây là tài liệu học độc lập ở mức advanced foundation, không phải chuyên khảo thay thế nguồn (source / 소스) workbench.
 
-> **Chuyển mạch:** Trong **World lịch sử (history / 이력) — Master kiến thức (knowledge / 지식) Book**, **Phạm vi và ranh giới** tiếp nhận điểm tựa từ **Bắt đầu từ đâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc đọc một giai đoạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bắt đầu từ đâu** chọn tuyến và dependency; **Phạm vi và ranh giới** xác định điều gì thuộc world history và điều gì phải trả về owner khác trước khi dùng **Quy tắc đọc một giai đoạn**.
 
 ## Phạm vi và ranh giới
 
@@ -49,7 +49,7 @@ Vòng độ sâu (depth / 깊이) pass hiện tại giữ nguyên tuyến và ch
 - Nhà nước, luật, quyền công dân, thuộc địa và chủ quyền được đặt cạnh [`korea_law_civic_life/`](../korea_law_civic_life/) khi cần một trường hợp (case / 사례) hiện đại.
 - Tôn giáo, gia đình, giới, lao động, ký ức và đời sống thường ngày được đọc như institutions và xã hội (social / 사회적) practices; không giản lược chúng thành “văn hoá” bất biến.
 
-> **Chuyển mạch:** Ở chặng này của **World lịch sử (history / 이력) — Master kiến thức (knowledge / 지식) Book**, **Quy tắc đọc một giai đoạn** tiếp nhận điểm tựa từ **Phạm vi và ranh giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng và bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi biết phạm vi, **Quy tắc đọc một giai đoạn** đặt cùng một khung scale–stock/flow–shock lên từng chapter; **Chất lượng và bằng chứng** kiểm tra khung đó bằng nguồn và counterfactual.
 
 ## Quy tắc đọc một giai đoạn
 
@@ -59,7 +59,7 @@ Vòng độ sâu (depth / 깊이) pass hiện tại giữ nguyên tuyến và ch
 4. Kiểm tra **winners, losers, coercion và agency**; tăng trưởng của một mạng thường dựa trên chi phí bị đẩy sang nhóm khác.
 5. So sánh ít nhất hai vùng và ghi rõ nơi mô hình không áp dụng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **World lịch sử (history / 이력) — Master kiến thức (knowledge / 지식) Book**, **Quy tắc đọc một giai đoạn** nêu điều cần giải thích; **Chất lượng và bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Chất lượng và bằng chứng** là bước kiểm tra cuối: mỗi claim phải chỉ ra cơ chế, quy mô, độ bất định và nguồn đủ mạnh trước khi được mang sang chapter kế tiếp.
 
 ## Chất lượng và bằng chứng
 

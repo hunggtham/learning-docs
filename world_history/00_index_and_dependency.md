@@ -26,7 +26,7 @@ graph TD
   P --> Q[Post-Cold-War world]
 ```
 
-> **Chuyển mạch:** Trong **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Câu hỏi xuyên suốt** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Phụ thuộc đồ thị** cho biết chapter nào cần đọc trước; **Câu hỏi xuyên suốt** chuyển đồ thị đó thành các câu hỏi về cơ chế và bằng chứng, rồi **Lộ trình đọc** biến chúng thành thứ tự học có thể kiểm tra.
 
 ## Câu hỏi xuyên suốt
 
@@ -40,7 +40,7 @@ graph TD
 | Demography | Dân số, di cư, đô thị, dịch bệnh và cơ cấu tuổi biến đổi quyền lực ra sao? |
 | Ideas | Tôn giáo, khoa học, dân tộc, chủ quyền, giai cấp và nhân quyền làm hợp thức hoá hành động nào? |
 
-> **Chuyển mạch:** Ở chặng này của **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Lộ trình đọc** tiếp nhận điểm tựa từ **Câu hỏi xuyên suốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chapter map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi xác định câu hỏi xuyên suốt, **Lộ trình đọc** xếp các chapter theo tiền đề–hệ quả; **Chapter map** tiếp tục gắn từng điểm dừng với chủ đề và owner cụ thể.
 
 ## Lộ trình đọc
 
@@ -53,7 +53,7 @@ graph TD
 
 Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, không khẳng định mọi xã hội trải qua cùng thứ tự hay cùng kết quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Chapter map** tiếp nhận điểm tựa từ **Lộ trình đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài liệu điều hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chapter map** cho biết mỗi chapter đóng góp cơ chế nào vào tuyến học; **Tài liệu điều hướng** dùng mapping đó để đưa người đọc tới nguồn, case và audit tương ứng.
 
 ## Chapter map
 
@@ -83,7 +83,7 @@ Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, k
 | 22 | nguồn (source / 소스) workbench | [Source workbench](22_source_workbench.md) |
 | 23 | Annotated bibliography | [Annotated bibliography](23_annotated_bibliography.md) |
 
-> **Chuyển mạch:** Trong **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — World lịch sử (history / 이력)**, **Tài liệu điều hướng** tiếp nhận điểm tựa từ **Chapter map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi chapter map đã chỉ rõ quan hệ phụ thuộc, **Tài liệu điều hướng** là điểm tra cứu để chọn tuyến đọc, nguồn đối chiếu và bước quay lại audit mà không lạc owner.
 
 ## Tài liệu điều hướng
 
