@@ -1,6 +1,6 @@
 # Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. lớp (class / 클래스) không chỉ là nơi chứa trường dữ liệu (field / 필드)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. mô hình dữ liệu (data model / 데이터 모델) và dunder methods** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Part 2 — Intermediate: mô hình dữ liệu (data model / 데이터 모델), lớp trừu tượng (abstraction / 추상화) và standard-library kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. lớp (class / 클래스) không chỉ là nơi chứa trường dữ liệu (field / 필드)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. mô hình dữ liệu (data model / 데이터 모델) và dunder methods** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối Python intermediate với module, exception, testing và data model, để chuyển từ cú pháp sang thiết kế chương trình có cấu trúc.
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 

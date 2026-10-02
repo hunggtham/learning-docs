@@ -1,6 +1,6 @@
 # Python Glossary — Việt / English / 한국어
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Glossary — Việt / English / 한국어**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thực thi (execution / 실행), đối tượng (object / 객체) và dữ liệu (data / 데이터)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Glossary — Việt / English / 한국어**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thực thi (execution / 실행), đối tượng (object / 객체) và dữ liệu (data / 데이터)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Mạch này nối glossary với thuật ngữ Python và backend, để mỗi từ khóa dẫn về khái niệm sở hữu thay vì trùng lặp định nghĩa.
 
 Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên suốt Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리). Mục đích là giúp nhận diện cùng một concept khi đọc tài liệu Việt, documentation tiếng Anh hoặc tài liệu kỹ thuật Hàn Quốc. Đây không phải danh sách để học thuộc; phần giải thích đầy đủ vẫn nằm trong các chapter chuẩn gốc (canonical / 정본).
 

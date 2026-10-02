@@ -1,6 +1,6 @@
 # Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ mã nguồn (source code / 소스 코드) đến thực thi (execution / 실행)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Biến không phải hộp: name binding và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ mã nguồn (source code / 소스 코드) đến thực thi (execution / 실행)** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Biến không phải hộp: name binding và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** để xác định owner và đường quay lại nguồn chuẩn. Mạch này nối Python beginner với dữ liệu, control flow và hàm, để người học hình thành mô hình thực thi trước khi dùng abstraction lớn.
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 

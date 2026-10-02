@@ -1,6 +1,6 @@
 # Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례) 1 — “Tôi chỉ gán sang biến khác, tại sao dữ liệu cũ cũng đổi?”** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Trường hợp (case / 사례) 2 — Import làm dịch vụ (service / 서비스) khởi động chậm hoặc thất bại trước khi nhận yêu cầu (request / 요청)** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Python kỹ thuật (engineering / 엔지니어링) trường hợp (case / 사례) Studies**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례) 1 — “Tôi chỉ gán sang biến khác, tại sao dữ liệu cũ cũng đổi?”** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Trường hợp (case / 사례) 2 — Import làm dịch vụ (service / 서비스) khởi động chậm hoặc thất bại trước khi nhận yêu cầu (request / 요청)** để đem mô hình vào tình huống cụ thể. Mạch này nối case study engineering với triệu chứng, giả thuyết, trade-off và outcome, để bài học đi từ sự cố thật đến quyết định có thể lặp lại.
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 

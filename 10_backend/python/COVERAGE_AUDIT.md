@@ -1,6 +1,6 @@
 # Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리) — Coverage & Final kiểm tra (audit / 감사)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리) — Coverage & Final kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vị trí conceptual trong repository** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. phụ thuộc (dependency / 의존성) và readability kiểm tra (audit / 감사)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리) — Coverage & Final kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vị trí conceptual trong repository** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. phụ thuộc (dependency / 의존성) và readability kiểm tra (audit / 감사)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối coverage audit với owner, chapter và bằng chứng của Python, để khoảng trống nội dung được nhìn thấy trước khi mở rộng.
 
 Kiểm tra (audit / 감사) date: 2026-09-22. Baseline: Python 3.14.7. Deepening passes: 2026-09-22.
 

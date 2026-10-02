@@ -1,6 +1,6 @@
 # 00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Bất biến (invariant / 불변식) cần giữ** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **00. Backend vòng đời yêu cầu (request lifecycle / 요청 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Bất biến (invariant / 불변식) cần giữ** để chuyển câu hỏi ấy thành điều kiện phải giữ. Mạch này nối request lifecycle của backend với routing, middleware, transaction và response, để truy nguyên một request qua từng boundary.
 
 ## Mục tiêu
 

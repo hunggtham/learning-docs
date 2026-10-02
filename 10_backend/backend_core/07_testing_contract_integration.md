@@ -1,6 +1,6 @@
 # 07. Testing, đặc tả hợp đồng (contract / 계약) và tích hợp (integration / 통합)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07. Testing, đặc tả hợp đồng (contract / 계약) và tích hợp (integration / 통합)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Hermeticity và dữ liệu** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07. Testing, đặc tả hợp đồng (contract / 계약) và tích hợp (integration / 통합)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Hermeticity và dữ liệu** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối testing với contract và integration, để kiểm tra boundary giữa service, dependency và dữ liệu thay vì chỉ chạy unit test.
 
 ## Kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)
 

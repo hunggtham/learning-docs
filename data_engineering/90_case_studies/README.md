@@ -1,6 +1,6 @@
 # 90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end
 
-> **Mạch đọc:** Đọc **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)** sang **trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)** để đem mô hình vào tình huống cụ thể. Mạch này dùng README làm bản đồ owner của data-engineering case studies, rồi nối từng tình huống với pipeline, SLA, cost và failure mode.
 
 Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (mental model / 사고 모델) bằng thất bại (failure / 실패) thật, không phải nơi liệt kê sản phẩm.
 
@@ -14,8 +14,7 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** duplicate count, xung đột (conflict / 충돌) count, source-to-sink reconciliation và replay kiểm thử (test / 테스트) trên một khoảng offset.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)**, ta sang **trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)** cho ta quy tắc; **Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)
 
@@ -27,8 +26,7 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** watermark lag phân phối (distribution / 분포), late-event tỷ lệ (rate / 비율), correction reconciliation và số chỉ số (metric / 지표) đã publish lại.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)**, ta sang **trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)** cho ta quy tắc; **Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 4 — Small files và compaction race** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại
 
@@ -40,8 +38,7 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** đầu vào (input / 입력)/mã (code / 코드) phiên bản (version / 버전), mục tiêu (target / 대상) phạm vi (range / 범위), diff metrics, quay lui (rollback / 롤백) marker và bên tiêu thụ (consumer / 소비자) cutover thời gian (time / 시간).
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại**, ta sang **trường hợp (case / 사례) 4 — Small files và compaction race** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** cho ta quy tắc; **Trường hợp (case / 사례) 4 — Small files và compaction race** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 4 — Small files và compaction race
 
@@ -53,8 +50,7 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** snapshot lineage, tệp (file / 파일) count/kích thước (size / 크기) phân phối (distribution / 분포), reader lỗi (error / 오류) tỷ lệ (rate / 비율), compaction ghi (write / 쓰기) amplification và restore kiểm thử (test / 테스트).
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 4 — Small files và compaction race**, ta sang **trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 4 — Small files và compaction race** cho ta quy tắc; **Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cách viết trường hợp (case / 사례) study mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out
 
@@ -66,19 +62,15 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** reconciliation với ledger, cardinality check, golden queries và chỉ số (metric / 지표) phiên bản (version / 버전) diff.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out**, ta sang **Cách viết trường hợp (case / 사례) study mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** cho ta quy tắc; **Cách viết trường hợp (case / 사례) study mới** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ma trận đối chiếu trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách viết trường hợp (case / 사례) study mới
 
 Mỗi trường hợp (case / 사례) phải có `context → invariant → failure boundary → design → evidence → trade-off`. Không biến trường hợp (case / 사례) study thành tutorial API; mục tiêu là chứng minh lập luận (reasoning / 추론) có thể chuyển giữa các công cụ (tool / 도구) và nền tảng (platform / 플랫폼).
 
-
-> **Chuyển mạch:** Từ **Cách viết trường hợp (case / 사례) study mới**, ta sang **Ma trận đối chiếu trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Cách viết trường hợp (case / 사례) study mới** cho ta quy tắc; **Ma trận đối chiếu trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ma trận đối chiếu trường hợp (case / 사례)
-Phần “Ma trận đối chiếu trường hợp (case / 사례)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | trường hợp (case / 사례) | Primary thời gian (time / 시간) | trạng thái (state / 상태) | khôi phục (recovery / 복구) đơn vị (unit / 단위) | bằng chứng (evidence / 증거) |
 |---|---|---|---|---|
@@ -88,8 +80,7 @@ Phần “Ma trận đối chiếu trường hợp (case / 사례)” nối ki�
 | compaction race | snapshot lần ghi nhận (commit / 커밋) thời gian (time / 시간) | siêu dữ liệu (metadata / 메타데이터) snapshot | snapshot id | tệp (file / 파일)/snapshot kiểm tra hợp lệ (validation / 검증) |
 | ngữ nghĩa (semantic / 의미적) fan-out | chỉ số (metric / 지표) thời gian (time / 시간) | aggregate trạng thái (state / 상태) | mô hình (model / 모델) phiên bản (version / 버전) | grain/cardinality check |
 
-
-> **Chuyển mạch:** Từ **Ma trận đối chiếu trường hợp (case / 사례)**, ta sang **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Ma trận đối chiếu trường hợp (case / 사례)** cho ta quy tắc; **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)
 
@@ -101,4 +92,4 @@ Phần “Ma trận đối chiếu trường hợp (case / 사례)” nối ki�
 
 Trường hợp (case / 사례) study chỉ hoàn thành khi trả lời được cả tính đúng đắn (correctness / 정확성) và operability. Một sơ đồ đẹp nhưng không có thất bại (failure / 실패) timeline, quay lui (rollback / 롤백) bằng chứng (evidence / 증거) và đơn vị sở hữu (owner / 오너) không phải môi trường vận hành (production / 운영 환경) thiết kế (design / 설계).
 
-> **Bàn giao:** Sau **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

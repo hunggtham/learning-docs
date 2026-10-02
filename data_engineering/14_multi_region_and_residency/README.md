@@ -1,6 +1,6 @@
 # 14 — Multi-region, replication và dữ liệu (data / 데이터) residency
 
-> **Mạch đọc:** Đọc **14 — Multi-region, replication và dữ liệu (data / 데이터) residency** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Topology và authority** sang **2. Replication lag**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Topology và authority** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Replication lag** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối multi-region với residency, replication và failover, để cân bằng độ trễ, pháp lý và khả năng phục hồi.
 
 Multi-region không chỉ là bản sao (copy / 복사) bảng (table / 테이블) sang hai nơi. Nó là bài toán về độ trễ (latency / 지연 시간), authority, replication lag, xung đột (conflict / 충돌), failover, khôi phục (recovery / 복구) điểm (point / 지점) và nơi dữ liệu được phép tồn tại.
 
@@ -15,8 +15,7 @@ multi writer  → conflict resolution → converge/compensate
 
 Giải quyết xung đột (conflict resolution / 충돌 해결) có thể là last-write-wins, phiên bản (version / 버전) véc-tơ (vector / 벡터), field-level merge hoặc lĩnh vực (domain / 도메인) command. Clock wall-time không đủ đáng tin nếu clock skew có thể đảo thứ tự sự kiện (event / 이벤트).
 
-
-> **Chuyển mạch:** Từ **1. Topology và authority**, ta sang **2. Replication lag** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**, **2. Replication lag** tiếp nhận điểm tựa từ **1. Topology và authority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. RPO/RTO và failover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Replication lag
 
@@ -24,8 +23,7 @@ Lag có thể đo theo nguồn (source / 소스) position, sự kiện (event / 
 
 SLO nên tách p50/p99 lag, maximum staleness và khôi phục (recovery / 복구) catch-up thời gian (time / 시간). Average lag che giấu một partition/tenant bị kẹt.
 
-
-> **Chuyển mạch:** Từ **2. Replication lag**, ta sang **3. RPO/RTO và failover** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**, **3. RPO/RTO và failover** tiếp nhận điểm tựa từ **2. Replication lag** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Residency và purpose limitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. RPO/RTO và failover
 
@@ -33,8 +31,7 @@ RPO trả lời mất tối đa bao nhiêu dữ liệu; RTO trả lời phục h
 
 Runbook cần fencing primary cũ để tránh split-brain. Sau failover, ghi tiếp vào đâu, replay khoảng nào, và merge/correction đầu ra (output / 출력) thế nào phải được định nghĩa trước.
 
-
-> **Chuyển mạch:** Từ **3. RPO/RTO và failover**, ta sang **4. Residency và purpose limitation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**, **3. RPO/RTO và failover** đã nêu tiêu chí phân biệt, còn **4. Residency và purpose limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Residency và purpose limitation
 
@@ -42,15 +39,13 @@ Dữ liệu (data / 데이터) residency có thể yêu cầu raw PII ở một 
 
 Siêu dữ liệu (metadata / 메타데이터), logs, backups, caches và hỗ trợ (support / 지원) exports cũng có thể chứa dữ liệu nhạy cảm. “Không replicate bảng (table / 테이블)” chưa đủ nếu CDC log hoặc khả năng quan sát (observability / 관측 가능성) payload vẫn vượt region ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **4. Residency và purpose limitation**, ta sang **5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**, **4. Residency và purpose limitation** đã nêu tiêu chí phân biệt, còn **5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)
 
 Bằng chứng (evidence / 증거) gồm replication position, lag histogram, failover timestamp, fenced writer, đầu ra (output / 출력) reconciliation và residency kiểm tra (audit / 감사). kiểm thử (test / 테스트) định kỳ phải mô phỏng region mất mạng, stale replica, duplicate replay và clock skew.
 
-
-> **Chuyển mạch:** Từ **5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)**, ta sang **6. sự đánh đổi (trade-off / 트레이드오프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**, **5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)** nêu điều cần giải thích; **6. sự đánh đổi (trade-off / 트레이드오프)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 6. sự đánh đổi (trade-off / 트레이드오프)
 
@@ -58,4 +53,4 @@ Strong consistency across regions tăng độ trễ (latency / 지연 시간) v�
 
 Đọc tiếp: [07 — Streaming](../07_streaming_systems/README.md), [09 — Lakehouse](../09_warehouse_lake_lakehouse/README.md), [11 — Governance](../11_governance_lineage_security/README.md).
 
-> **Bàn giao:** Sau **6. sự đánh đổi (trade-off / 트레이드오프)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **6. sự đánh đổi (trade-off / 트레이드오프)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

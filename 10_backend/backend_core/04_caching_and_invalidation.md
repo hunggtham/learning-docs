@@ -1,6 +1,6 @@
 # 04. Caching và vô hiệu hóa (invalidation / 무효화)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04. Caching và vô hiệu hóa (invalidation / 무효화)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mẫu (pattern / 패턴)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Stampede và consistency** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04. Caching và vô hiệu hóa (invalidation / 무효화)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mẫu (pattern / 패턴)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Stampede và consistency** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối caching với invalidation, consistency và latency, để chọn TTL hoặc purge theo nguồn sự thật và mức chấp nhận stale.
 
 Bộ nhớ đệm (cache / 캐시) là một bản sao có thời hạn, không phải nguồn chuẩn (source of truth / 정본). Thiết kế bộ nhớ đệm (cache / 캐시) bắt
 đầu bằng câu hỏi: dữ liệu nào được phép stale, trong bao lâu, ai sở hữu key, và

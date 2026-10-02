@@ -1,6 +1,6 @@
 # 03. Persistence, giao dịch (transaction / 트랜잭션) và ORM
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03. Persistence, giao dịch (transaction / 트랜잭션) và ORM**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ use trường hợp (case / 사례) đến chuyển tiếp trạng thái (state transition / 상태 전이)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **ORM ranh giới (boundary / 경계)** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03. Persistence, giao dịch (transaction / 트랜잭션) và ORM**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ use trường hợp (case / 사례) đến chuyển tiếp trạng thái (state transition / 상태 전이)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **ORM ranh giới (boundary / 경계)** để soi ranh giới và điểm dễ nhầm. Mạch này nối persistence với transaction và ORM, để phân biệt identity map, isolation, locking và hành vi SQL thực tế.
 
 ## Từ use trường hợp (case / 사례) đến chuyển tiếp trạng thái (state transition / 상태 전이)
 

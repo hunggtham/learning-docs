@@ -1,5 +1,7 @@
 # Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của research methods, rồi nối câu hỏi, thiết kế, bằng chứng và giới hạn suy luận thành quy trình nghiên cứu.
+
 `research_methods/` là lĩnh vực (domain / 도메인) chuẩn gốc (canonical / 정본) về cách biến một câu hỏi thành nghiên cứu có thể kiểm tra, đo lường, thu thập bằng chứng (evidence / 증거), phân tích và báo cáo minh bạch. Nó nằm giữa Philosophy of Science, Statistics/Econometrics và các lĩnh vực (domain / 도메인) applied: không thay thế các công cụ (tool / 도구) thống kê chuyên sâu, mà xác định **question–thiết kế (design / 설계)–đo lường (measurement / 측정)–bằng chứng (evidence / 증거)–claim alignment**.
 
 ## Thứ tự học chuẩn gốc (canonical / 정본)
@@ -10,9 +12,9 @@
 4. [Systematic Reviews & Evidence Synthesis](./03_systematic_reviews_and_evidence_synthesis.md) — protocols, tìm kiếm (search / 검색)/screening, rủi ro (risk / 위험) of độ lệch (bias / 편향), meta-analysis, heterogeneity, publication độ lệch (bias / 편향), qualitative synthesis và bằng chứng (evidence / 증거) certainty.
 5. [Mixed Methods, Ethics, Reproducibility & Open Science](./04_mixed_methods_ethics_reproducibility_and_open_science.md) — tích hợp (integration / 통합) designs, consent/privacy, preregistration, reproducible pipelines, replication, dữ liệu (data / 데이터)/mã (code / 코드) sharing, reporting và AI-assisted research boundaries.
 
-## Trục học (learning spine / 학습 축)
-Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trục học (learning spine / 학습 축)** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với Econometrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Trục học (learning spine / 학습 축)
 
 ```text
 Research problem
@@ -29,6 +31,8 @@ Research problem
 
 Phương thức (method / 메서드) choice comes after question. A survey, RCT, interview, trường hợp (case / 사례) study or meta-analysis is not inherently “stronger” independent of what is being asked.
 
+> **Chuyển mạch:** Ở chặng này của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trục học (learning spine / 학습 축)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Econometrics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Philosophy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ranh giới (boundary / 경계) với Econometrics
 
 [Econometrics](../economics/05_econometrics/README.md) owns quantitative estimators and statistical/nhân quả (causal / 인과적) identification in độ sâu (depth / 깊이): OLS, experiments, IV, RDD, DiD, panel, thời gian (time / 시간) series, suy luận (inference / 추론) and robustness.
@@ -37,19 +41,21 @@ Research Methods owns broader thiết kế (design / 설계) lô-gic (logic / �
 
 Cross-link instead of duplicating equations/estimator derivations.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Econometrics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Philosophy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ranh giới (boundary / 경계) với Philosophy
 
 [Philosophy](../philosophy/README.md) handles epistemology, philosophy of science, explanation, causation and normative questions at a foundational mức (level / 수준). Research Methods turns those questions into operational research decisions.
 
-## Ranh giới (boundary / 경계) với Thinking Toolkit
-
-[Thinking Toolkit](../thinking/README.md) là lớp dùng nhanh trước và sau formal research: framing câu hỏi, đọc claim, base rate, causal reasoning, model selection, cognitive bias, forecasting và decision-making. Research Methods vẫn là canonical owner khi câu hỏi chuyển thành study design, sampling, measurement, evidence synthesis, ethics hoặc reproducibility. Hai phần cross-link để tránh biến một checklist suy nghĩ thành methodology nghiên cứu hoàn chỉnh.
+> **Chuyển mạch:** Trong **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Philosophy** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng (evidence / 증거) categories** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied
 
 Psychology, Sociology, Economics, Lịch sử (history / 이력), Education, Nghiệp vụ (business / 비즈니스) or Kỹ thuật (engineering / 엔지니어링) research should reuse this lĩnh vực (domain / 도메인) for dùng chung (common / 공통) methodology and keep domain-specific đo lường (measurement / 측정)/thiết kế (design / 설계) examples in their own libraries.
 
 A lĩnh vực (domain / 도메인) chapter should not re-explain generic sampling, interview coding or systematic-review mechanics unless a special lĩnh vực (domain / 도메인) ràng buộc (constraint / 제약조건) changes them.
+
+> **Chuyển mạch:** Ở chặng này của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied** đã nêu tiêu chí phân biệt, còn **Bằng chứng (evidence / 증거) categories** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng (evidence / 증거) categories
 
@@ -65,6 +71,8 @@ Synthesized / literature-level
 ```
 
 Do not upgrade category during writing. A participant explanation is not automatically nhân quả (causal / 인과적) bằng chứng (evidence / 증거); a predictive mô hình (model / 모델) is not automatically explanatory; a statistically significant association is not automatically nhân quả (causal / 인과적).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Bằng chứng (evidence / 증거) categories** nêu điều cần giải thích; **Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)
 
@@ -84,11 +92,10 @@ uncertainty and limits
 reproducibility materials
 ```
 
+> **Chuyển mạch:** Trong **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Connections** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Connections
-Phần “Connections” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
-- [Thinking Toolkit](../thinking/README.md): practical reasoning, claim evaluation, causal questions, uncertainty, forecasting and decision workflows before/after formal study design.
 - [Mathematics](../mathematics/README.md): xác suất (probability / 확률)/statistics foundation.
 - [Economics / Econometrics](../economics/05_econometrics/README.md): nhân quả (causal / 인과적)/statistical estimators.
 - [Philosophy](../philosophy/README.md): epistemology, causation and explanation.
@@ -96,6 +103,10 @@ Phần “Connections” nối kiến thức trước với nội dung sắp đ�
 - [World History](../world_history/README.md): archival/historical bằng chứng (evidence / 증거) and nguồn (source / 소스) criticism.
 - [Computer Science](../computer_science/README.md): dữ liệu (data / 데이터) pipelines, computation, reproducibility and AI-assisted workflows.
 
+> **Chuyển mạch:** Ở chặng này của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mục tiêu cuối** tiếp nhận điểm tựa từ **Connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mục tiêu cuối
 
 Người học không chỉ biết tên methods. Họ phải có thể nhìn một research claim và hỏi đúng thứ tự: câu hỏi là gì, construct có đo đúng không, mẫu (sample / 표본)/trường hợp (case / 사례) đến từ đâu, thiết kế (design / 설계) phân biệt competing explanations thế nào, phân tích (analysis / 분석) phù hợp data-generating tiến trình (process / 프로세스) không, ethics/reproducibility ra sao, và conclusion có đi xa hơn bằng chứng (evidence / 증거) cho phép hay không.
+
+> **Bàn giao:** Sau **Mục tiêu cuối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
