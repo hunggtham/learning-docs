@@ -1,6 +1,6 @@
 # Augmented các cây, thứ tự (order / 순서) thống kê và Interval các cây
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Augmented các cây, thứ tự (order / 순서) thống kê và Interval các cây**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Augmentation là thêm bất biến (invariant / 불변식) thứ hai** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **siêu dữ liệu phải có tính local-composability** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Augmented các cây, thứ tự (order / 순서) thống kê và Interval các cây**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Augmentation là thêm bất biến (invariant / 불변식) thứ hai** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **siêu dữ liệu phải có tính local-composability** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối augmented trees với order statistics, metadata và rotations, để truy vấn thứ tự đi cùng cân bằng.
 
 **증강 트리, 순서 통계 트리, 구간 트리**
 

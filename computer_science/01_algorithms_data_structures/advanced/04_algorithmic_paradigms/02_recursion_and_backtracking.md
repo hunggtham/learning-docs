@@ -1,6 +1,6 @@
 # Recursion và quay lui (backtracking)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Recursion và quay lui (backtracking)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **hợp đồng đệ quy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Recursion và quay lui (backtracking)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **hợp đồng đệ quy** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối recursion với backtracking, state và pruning, để lời giải được xây qua không gian trạng thái.
 
 **Đệ quy và quay lui (Recursion & Backtracking / 재귀와 백트래킹)**
 

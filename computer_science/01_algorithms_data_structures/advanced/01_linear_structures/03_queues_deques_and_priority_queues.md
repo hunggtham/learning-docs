@@ -1,6 +1,6 @@
 # Hàng đợi (queue / 큐), Deque và hàng đợi ưu tiên
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hàng đợi (queue / 큐), Deque và hàng đợi ưu tiên**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hàng đợi (queue / 큐) và nguyên tắc FIFO** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Vì sao BFS cần FIFO?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hàng đợi (queue / 큐), Deque và hàng đợi ưu tiên**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hàng đợi (queue / 큐) và nguyên tắc FIFO** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Vì sao BFS cần FIFO?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối queue, deque và priority queue với FIFO, hai đầu và ordering, để chọn cấu trúc theo chính sách lấy phần tử.
 
 **hàng đợi (queue / 큐), Deque & Priority hàng đợi (queue / 큐) / 큐, 덱, 우선순위 큐**
 

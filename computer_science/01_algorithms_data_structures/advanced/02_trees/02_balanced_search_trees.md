@@ -1,6 +1,6 @@
 # Cây tìm kiếm cân bằng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cây tìm kiếm cân bằng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hai lớp bất biến khác nhau** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. Rotation bảo toàn thứ tự thế nào?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cây tìm kiếm cân bằng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hai lớp bất biến khác nhau** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. Rotation bảo toàn thứ tự thế nào?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối balanced search trees với rotations, height và ordered operations, để giữ tìm kiếm nhanh sau cập nhật.
 
 **Balanced tìm kiếm (search / 검색) Trees / 균형 탐색 트리**
 

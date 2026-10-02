@@ -1,6 +1,6 @@
 # Thuật toán khoảng và đường quét
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thuật toán khoảng và đường quét**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ngữ nghĩa khoảng phải được chốt trước thuật toán** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Chuẩn hóa dữ liệu trước khi suy luận** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thuật toán khoảng và đường quét**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ngữ nghĩa khoảng phải được chốt trước thuật toán** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Chuẩn hóa dữ liệu trước khi suy luận** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối intervals với sweep line, events và overlap, để bài toán hình học/đoạn chuyển thành thứ tự sự kiện.
 
 **Intervals & Sweep Line / 구간 알고리즘과 스위프 라인**
 

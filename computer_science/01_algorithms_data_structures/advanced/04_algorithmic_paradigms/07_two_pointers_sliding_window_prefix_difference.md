@@ -1,6 +1,6 @@
 # Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hai con trỏ trên dữ liệu đã sắp xếp** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. bất biến (invariant / 불변식) của Two Pointers** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hai con trỏ trên dữ liệu đã sắp xếp** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. bất biến (invariant / 불변식) của Two Pointers** để chuyển câu hỏi ấy thành điều kiện phải giữ. Mạch này nối two pointers/sliding window với prefix difference, để bài toán đoạn liên tiếp được giải bằng invariant và cập nhật biên.
 
 **Two Pointers, Sliding cửa sổ (window / 윈도우), Prefix & Difference / 투 포인터, 슬라이딩 윈도우, 누적합, 차분**
 

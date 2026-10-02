@@ -1,6 +1,6 @@
 # Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Polynomial và exponential khác nhau về bản chất tăng trưởng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đầu vào (input / 입력) length và giá trị số** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Polynomial và exponential khác nhau về bản chất tăng trưởng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đầu vào (input / 입력) length và giá trị số** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối hard problems với reductions, approximation và complexity, để biết khi nào giải chính xác không còn thực tế.
 
 **Reductions, NP-Completeness & Approximation / 환원, NP-완전, 근사 알고리즘**
 

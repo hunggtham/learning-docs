@@ -1,6 +1,6 @@
 # Vùng nhớ vùng nhớ động (heap / 힙) nâng cao và kỹ thuật hàng đợi ưu tiên
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vùng nhớ vùng nhớ động (heap / 힙) nâng cao và kỹ thuật hàng đợi ưu tiên**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hàng đợi ưu tiên là ADT, vùng nhớ động (heap / 힙) chỉ là một họ triển khai** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Indexed vùng nhớ động (heap / 힙): khi phần tử có định danh ổn định** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vùng nhớ vùng nhớ động (heap / 힙) nâng cao và kỹ thuật hàng đợi ưu tiên**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hàng đợi ưu tiên là ADT, vùng nhớ động (heap / 힙) chỉ là một họ triển khai** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Indexed vùng nhớ động (heap / 힙): khi phần tử có định danh ổn định** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối advanced heaps với priority queue engineering, invariant và cache, để hàng đợi ưu tiên chạy ổn định.
 
 **Advanced Heaps & Priority hàng đợi (queue / 큐) kỹ thuật (engineering / 엔지니어링) / 고급 힙과 우선순위 큐 설계**
 

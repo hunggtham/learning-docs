@@ -1,6 +1,6 @@
 # Tìm kiếm ràng buộc, Branch-and-Bound và chiến lược cắt tỉa
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tìm kiếm ràng buộc, Branch-and-Bound và chiến lược cắt tỉa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. tìm kiếm (search / 검색) cây (tree / 트리) chỉ là biểu diễn của không gian nghiệm** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. ràng buộc (constraint / 제약조건) Satisfaction bài toán (problem / 문제)** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tìm kiếm ràng buộc, Branch-and-Bound và chiến lược cắt tỉa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. tìm kiếm (search / 검색) cây (tree / 트리) chỉ là biểu diễn của không gian nghiệm** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. ràng buộc (constraint / 제약조건) Satisfaction bài toán (problem / 문제)** để chuyển câu hỏi ấy thành điều kiện phải giữ. Mạch này nối constraint search với branch-and-bound, pruning và feasibility, để không gian nghiệm được thu hẹp bằng ràng buộc.
 
 **ràng buộc (constraint / 제약조건) tìm kiếm (search / 검색) & Branch-and-Bound / 제약 탐색과 분기 한정법**
 

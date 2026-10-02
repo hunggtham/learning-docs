@@ -1,6 +1,6 @@
 # Nền tảng về cây
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nền tảng về cây**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cây có gốc và bất biến n − 1 cạnh** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Cây là một đối tượng đệ quy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nền tảng về cây**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cây có gốc và bất biến n − 1 cạnh** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Cây là một đối tượng đệ quy** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối tree foundations với node, edge, root, depth và traversal, để mọi biến thể cây dùng cùng từ vựng nền.
 
 **cây (tree / 트리) / 트리**
 

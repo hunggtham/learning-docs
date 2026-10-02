@@ -1,6 +1,6 @@
 # B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cây nhị phân không lý tưởng cho disk/page lưu trữ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **nút như một page-sized tìm kiếm (search / 검색) cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cây nhị phân không lý tưởng cho disk/page lưu trữ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **nút như một page-sized tìm kiếm (search / 검색) cấu trúc (structure / 구조)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối B-trees với external memory, block, fanout và I/O, để cấu trúc cây phù hợp storage lớn.
 
 **B-Tree / B+cây (tree / 트리) / B 트리와 외부 메모리 자료구조**
 

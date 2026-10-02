@@ -1,6 +1,6 @@
 # Skip danh sách (list / 목록)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Skip danh sách (list / 목록)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ sorted danh sách liên kết tới express lanes** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **nút cách biểu diễn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Skip danh sách (list / 목록)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ sorted danh sách liên kết tới express lanes** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **nút cách biểu diễn** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối skip lists với probabilistic levels, search và update, để đạt tốc độ cây bằng cấu trúc xác suất.
 
 **스킵 리스트 / Skip danh sách (list / 목록)**
 

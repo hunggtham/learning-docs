@@ -1,6 +1,6 @@
 # quy hoạch động (dynamic programming)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **quy hoạch động (dynamic programming)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ recursion tới DP** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Optimal substructure và overlapping subproblems** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **quy hoạch động (dynamic programming)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ recursion tới DP** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Optimal substructure và overlapping subproblems** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối dynamic programming với state, transition, memoization và optimal substructure, để tránh tính lặp.
 
 **Quy hoạch động (Dynamic Programming, DP / 동적 계획법)**
 

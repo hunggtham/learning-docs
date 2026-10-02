@@ -1,6 +1,6 @@
 # chia để trị
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **chia để trị**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ba câu hỏi trước khi dùng chia để trị** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. công thức truy hồi là ngôn ngữ tự nhiên của decomposition** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **chia để trị**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ba câu hỏi trước khi dùng chia để trị** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. công thức truy hồi là ngôn ngữ tự nhiên của decomposition** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối divide-and-conquer với recurrence, split và combine, để độ phức tạp được suy ra từ cấu trúc phân rã.
 
 **Chia để trị / chia để trị / 분할 정복**
 

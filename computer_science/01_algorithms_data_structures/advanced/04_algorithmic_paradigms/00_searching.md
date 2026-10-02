@@ -1,6 +1,6 @@
 # Searching
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Searching**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **tìm kiếm tuyến tính và cận dưới trực giác** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **tìm kiếm nhị phân cần monotonic thông tin** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Searching**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **tìm kiếm tuyến tính và cận dưới trực giác** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **tìm kiếm nhị phân cần monotonic thông tin** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối searching với ordering, index, traversal và query cost, để chọn đường tìm theo cấu trúc dữ liệu.
 
 **Tìm kiếm (Searching / 탐색)**
 

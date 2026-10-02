@@ -1,6 +1,6 @@
 # Bảng băm
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bảng băm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hàm băm và ánh xạ vào bảng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Collision là điều chắc chắn có thể xảy ra** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bảng băm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hàm băm và ánh xạ vào bảng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Collision là điều chắc chắn có thể xảy ra** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối hash tables với bucket, collision, load factor và lookup, để cấu trúc ánh xạ được đánh giá theo workload.
 
 **bảng băm (hash table / 해시 테이블) / 해시 테이블**
 
