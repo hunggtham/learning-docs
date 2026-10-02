@@ -1,6 +1,6 @@
 # thao tác bit và Bitsets
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **thao tác bit và Bitsets**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Các phép cơ bản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **thao tác bit và Bitsets**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **Các phép cơ bản** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối bit manipulation với bitsets, mask và word operation, để biểu diễn tập hợp được tối ưu bằng mức bit.
 
 **Thao tác bit và tập bit (Bit Manipulation & Bitsets / 비트 연산과 비트셋)**
 

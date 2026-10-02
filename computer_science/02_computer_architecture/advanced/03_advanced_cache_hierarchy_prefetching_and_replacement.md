@@ -1,6 +1,6 @@
 # Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính cục bộ là giả định, không phải định luật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính cục bộ là giả định, không phải định luật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối cache hierarchy với prefetching và replacement, để latency được đọc qua locality, bandwidth và pollution.
 
 Bộ nhớ đệm (cache / 캐시) tồn tại vì bộ xử lý (processor) và bộ nhớ chính có tốc độ rất khác nhau. Khi đi sâu hơn các tầng L1/L2/L3, câu hỏi không còn chỉ là “bộ nhớ đệm (cache / 캐시) nhanh hơn RAM”, mà là cách một hệ thống phân cấp hữu hạn dự đoán dữ liệu nào đáng giữ gần lõi xử lý (core), dữ liệu nào nên chuyển xuống tầng thấp hơn và khi nào nên chủ động đưa dữ liệu về trước khi chương trình yêu cầu.
 

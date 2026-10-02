@@ -1,6 +1,6 @@
 # các truy vấn khoảng (range queries): tổng tiền tố, cây Fenwick (Fenwick Tree) và cây đoạn (Segment Tree)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **các truy vấn khoảng (range queries): tổng tiền tố, cây Fenwick (Fenwick Tree) và cây đoạn (Segment Tree)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **tổng tiền tố: tĩnh tiền xử lý** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **các truy vấn khoảng (range queries): tổng tiền tố, cây Fenwick (Fenwick Tree) và cây đoạn (Segment Tree)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **tổng tiền tố: tĩnh tiền xử lý** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối range queries với Fenwick và segment tree, để cập nhật và truy vấn được cân bằng theo complexity.
 
 **Truy vấn đoạn, tổng tiền tố, cây Fenwick và cây đoạn / 구간 쿼리, 누적합, 펜윅 트리, 세그먼트 트리**
 

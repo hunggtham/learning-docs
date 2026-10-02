@@ -1,6 +1,6 @@
 # Cấu trúc dữ liệu xác suất cho dữ liệu lớn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khi nào approximation đáng giá?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ba loại guarantee cần phân biệt** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu trúc dữ liệu xác suất cho dữ liệu lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khi nào approximation đáng giá?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ba loại guarantee cần phân biệt** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối probabilistic data structures với sketch, hash và error bound, để tiết kiệm bộ nhớ mà vẫn định lượng sai số.
 
 **Probabilistic dữ liệu (data / 데이터) Structures / 확률적 자료구조**
 

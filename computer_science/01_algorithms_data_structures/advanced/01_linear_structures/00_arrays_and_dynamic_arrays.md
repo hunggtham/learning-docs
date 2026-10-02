@@ -1,6 +1,6 @@
 # Mảng và mảng động
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mảng và mảng động**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. mảng cố định và mảng động khác nhau ở đâu?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Vì sao append có thể amortized O(1)?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mảng và mảng động**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. mảng cố định và mảng động khác nhau ở đâu?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Vì sao append có thể amortized O(1)?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối arrays với dynamic arrays, contiguous memory và resize, để truy cập nhanh đi cùng chi phí mở rộng.
 
 **mảng & mảng động / 배열과 동적 배열**
 

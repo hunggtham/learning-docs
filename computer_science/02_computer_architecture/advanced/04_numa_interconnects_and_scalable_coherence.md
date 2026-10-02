@@ -1,6 +1,6 @@
 # NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao mô hình truy cập đồng nhất không thể mở rộng mãi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chính sách chạm đầu tiên và vị trí dữ liệu** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **NUMA, liên kết phần cứng và khả năng mở rộng của cơ chế nhất quán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao mô hình truy cập đồng nhất không thể mở rộng mãi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chính sách chạm đầu tiên và vị trí dữ liệu** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối NUMA với interconnect và scalable coherence, để locality của bộ nhớ đi vào topology nhiều socket.
 
 Khi một máy có nhiều lõi xử lý và nhiều bộ điều khiển bộ nhớ, giả định “RAM có cùng độ trễ ở mọi nơi” không còn đúng. **Truy cập bộ nhớ không đồng nhất (Non-Uniform Memory Access — NUMA / 비균일 메모리 접근)** mô tả hệ thống trong đó truy cập bộ nhớ gần lõi hiện tại rẻ hơn truy cập phải đi qua đường liên kết (interconnect) tới nút hoặc socket khác.
 

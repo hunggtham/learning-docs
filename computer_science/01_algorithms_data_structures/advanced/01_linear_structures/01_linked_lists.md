@@ -1,6 +1,6 @@
 # Danh sách liên kết
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Danh sách liên kết**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. danh sách liên kết đơn** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **2. Insert O(1) chỉ đúng khi đã biết vị trí cục bộ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Danh sách liên kết**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. danh sách liên kết đơn** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **2. Insert O(1) chỉ đúng khi đã biết vị trí cục bộ** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối linked lists với pointer, node và locality, để thao tác chèn/xóa được đặt cạnh chi phí cache.
 
 **danh sách liên kết / 연결 리스트**
 

@@ -1,6 +1,6 @@
 # Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and lập luận (reasoning / 추론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and lập luận (reasoning / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and lập luận (reasoning / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) map** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của knowledge/reasoning AI, rồi nối symbolic, probabilistic, retrieval và neural methods.
 
 Folder này xây lớp **kiến thức (knowledge / 지식) + suy luận (inference / 추론)** nằm giữa bài toán (problem / 문제) solving cổ điển và learning-based AI. Mục tiêu là hiểu cách một hệ thống (system / 시스템) biểu diễn facts/relations/rules, suy luận bằng lô-gic (logic / 논리) hoặc xác suất (probability / 확률), tổ chức tri thức bằng đồ thị (graph / 그래프), và kết hợp symbolic mechanisms với neural các mô hình (models / 모델들).
 

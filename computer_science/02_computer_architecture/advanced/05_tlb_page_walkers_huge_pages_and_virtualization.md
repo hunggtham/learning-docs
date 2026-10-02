@@ -1,6 +1,6 @@
 # TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dịch địa chỉ nằm trên đường thực thi quan trọng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phạm vi bao phủ của TLB** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **TLB, quá trình duyệt bảng trang, trang lớn và hỗ trợ ảo hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dịch địa chỉ nằm trên đường thực thi quan trọng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phạm vi bao phủ của TLB** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối TLB, page walkers, huge pages và virtualization, để dịch địa chỉ được đọc qua cả phần cứng lẫn hypervisor.
 
 Bộ nhớ ảo (virtual memory) cho mỗi tiến trình một không gian địa chỉ riêng, nhưng CPU cuối cùng vẫn phải truy cập bộ nhớ vật lý. Nếu mỗi thao tác đọc hoặc ghi đều phải đọc nhiều mục bảng trang từ RAM trước khi lấy dữ liệu thật, chi phí sẽ rất lớn. **Bộ đệm dịch địa chỉ (Translation Lookaside Buffer — TLB / 변환 색인 버퍼)** tồn tại để lưu tạm kết quả ánh xạ từ trang ảo sang khung trang vật lý.
 

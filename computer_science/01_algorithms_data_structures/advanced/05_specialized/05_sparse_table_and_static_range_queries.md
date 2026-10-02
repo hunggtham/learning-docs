@@ -1,6 +1,6 @@
 # bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Power-of-two decomposition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tại sao các lũy thừa của hai?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Power-of-two decomposition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tại sao các lũy thừa của hai?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối sparse table với static range queries, preprocessing và idempotent operation, để truy vấn nhanh dựa trên dữ liệu bất biến.
 
 **스파스 테이블과 정적 구간 질의**
 

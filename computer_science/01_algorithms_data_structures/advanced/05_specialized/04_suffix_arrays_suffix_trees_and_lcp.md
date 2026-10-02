@@ -1,6 +1,6 @@
 # Mảng hậu tố, cây hậu tố và LCP
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mảng hậu tố, cây hậu tố và LCP**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Suffix là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Suffix Array** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mảng hậu tố, cây hậu tố và LCP**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Suffix là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Suffix Array** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối suffix arrays, suffix trees và LCP, để text indexing được tối ưu theo cấu trúc hậu tố và truy vấn.
 
 **Suffix Array, Suffix cây (tree / 트리) & Longest dùng chung (common / 공통) Prefix / 접미사 배열, 접미사 트리, LCP**
 

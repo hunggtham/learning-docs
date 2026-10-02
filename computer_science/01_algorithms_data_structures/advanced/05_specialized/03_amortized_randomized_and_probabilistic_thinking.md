@@ -1,6 +1,6 @@
 # Phân tích khấu hao, ngẫu nhiên hóa và tư duy xác suất
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích khấu hao, ngẫu nhiên hóa và tư duy xác suất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Amortized không phải average trường hợp (case / 사례)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **2. Phương pháp tổng hợp** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân tích khấu hao, ngẫu nhiên hóa và tư duy xác suất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Amortized không phải average trường hợp (case / 사례)** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **2. Phương pháp tổng hợp** để rút ra mô hình chung và giới hạn. Mạch này nối amortized, randomized và probabilistic thinking, để đánh giá chi phí theo kỳ vọng, phân phối và chuỗi thao tác.
 
 **Amortized phân tích (analysis / 분석), Randomization & Probabilistic lập luận (reasoning / 추론) / 상환 분석, 무작위화, 확률적 사고**
 

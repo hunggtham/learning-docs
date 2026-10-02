@@ -1,6 +1,6 @@
 # Advanced DSA tệp (file / 파일) Manifest
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced DSA tệp (file / 파일) Manifest**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ phủ hiện tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái các pass nội dung** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced DSA tệp (file / 파일) Manifest**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ phủ hiện tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái các pass nội dung** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng MANIFEST làm bản đồ owner của advanced DSA, rồi nối module, dependency và case theo cấu trúc thư viện.
 
 Manifest này theo dõi thư viện `computer_science/01_algorithms_data_structures/advanced/`. Số từ chỉ là **ước lượng để kiểm tra độ phủ**, không phải tiêu chí chất lượng duy nhất.
 

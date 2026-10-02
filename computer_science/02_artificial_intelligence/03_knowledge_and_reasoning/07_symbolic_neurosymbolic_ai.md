@@ -1,6 +1,6 @@
 # Symbolic AI và Neuro-Symbolic AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Symbolic AI và Neuro-Symbolic AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Symbolic AI bắt đầu từ đâu?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Strength của symbolic các hệ thống (systems / 시스템들)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Symbolic AI và Neuro-Symbolic AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Symbolic AI bắt đầu từ đâu?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Strength của symbolic các hệ thống (systems / 시스템들)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối symbolic và neurosymbolic AI với knowledge, reasoning và learning, để kết hợp quy tắc với biểu diễn neural.
 
 Artificial Intelligence thường được kể như một cuộc chuyển giao: **Symbolic AI thất bại → Machine học tập (learning / 학습) thắng → Deep học tập (learning / 학습) thay thế mọi thứ cũ**. Câu chuyện này quá đơn giản. Symbolic và neural approaches có strengths khác nhau; nhiều reliable các hệ thống (systems / 시스템들) hiện đại kết hợp learned perception/ngôn ngữ (language / 언어) với tường minh (explicit / 명시적) tools, các ràng buộc (constraints / 제약조건들), tìm kiếm (search / 검색), databases và formal xác minh (verification / 확인).
 
