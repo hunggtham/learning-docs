@@ -1,7 +1,6 @@
 # Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation
 
-> **Mạch đọc:** Đọc **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Polynomial là gì và vì sao nó đặc biệt?** sang **2. Leading term và large-scale hành vi (behavior / 동작)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Polynomial là gì và vì sao nó đặc biệt?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Leading term và large-scale hành vi (behavior / 동작)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối polynomials với roots và factorization, để chuyển bài toán nghiệm thành cấu trúc nhân tử có thể kiểm tra.
 
 Đa thức (polynomial / 다항식) thường được gặp đầu tiên như biểu thức
 
@@ -38,6 +37,8 @@ Polynomial đặc biệt vì nhiều operations giữ ta ở cùng family:
 
 Closure này làm polynomial trở thành “working ngôn ngữ (language / 언어)” tự nhiên của algebra và calculus.
 
+> **Chuyển mạch:** Trong **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **2. Leading term và large-scale hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **1. Polynomial là gì và vì sao nó đặc biệt?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Roots là nơi polynomial mất đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Leading term và large-scale hành vi (behavior / 동작)
 
 Với
@@ -53,6 +54,8 @@ Do đó end hành vi (behavior / 동작) phụ thuộc mạnh vào degree parity
 Nếu `n` chẵn, hai ends đi cùng direction. Nếu `n` lẻ, hai ends đi opposite directions.
 
 Đây là first asymptotic lập luận (reasoning / 추론): không cần biết mọi coefficient để biết large-scale shape.
+
+> **Chuyển mạch:** Ở chặng này của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **3. Roots là nơi polynomial mất đầu ra (output / 출력)** tiếp nhận điểm tựa từ **2. Leading term và large-scale hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Zero-product thuộc tính (property / 속성) biến factors thành roots** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Roots là nơi polynomial mất đầu ra (output / 출력)
 
@@ -90,6 +93,8 @@ Vì thế `P(r)=0` khi và chỉ khi remainder bằng 0, tức `(x-r)` là chín
 
 Factor theorem không phải mẹo; nó là special trường hợp (case / 사례) của polynomial division.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **4. Zero-product thuộc tính (property / 속성) biến factors thành roots** tiếp nhận điểm tựa từ **3. Roots là nơi polynomial mất đầu ra (output / 출력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Multiplicity nói gì về cục bộ (local / 로컬) hình học (geometry / 기하학)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Zero-product thuộc tính (property / 속성) biến factors thành roots
 
 Nếu
@@ -118,6 +123,8 @@ x=2\quad\text{hoặc}\quad x=3.
 
 Factorization là powerful vì nó đổi một toàn cục (global / 전역) expression thành cục bộ (local / 로컬) conditions trên factors.
 
+> **Chuyển mạch:** Trong **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **5. Multiplicity nói gì về cục bộ (local / 로컬) hình học (geometry / 기하학)?** tiếp nhận điểm tựa từ **4. Zero-product thuộc tính (property / 속성) biến factors thành roots** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cùng polynomial, nhiều representations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Multiplicity nói gì về cục bộ (local / 로컬) hình học (geometry / 기하학)?
 
 Nếu
@@ -141,6 +148,8 @@ P(x)=(x-1)^2(x+2).
 Gốc (root / 루트) `x=1` multiplicity 2, gốc (root / 루트) `x=-2` multiplicity 1.
 
 Calculus giải thích sâu hơn: high multiplicity đồng nghĩa nhiều derivatives đầu tiên cũng vanish tại gốc (root / 루트).
+
+> **Chuyển mạch:** Ở chặng này của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **6. Cùng polynomial, nhiều representations** tiếp nhận điểm tựa từ **5. Multiplicity nói gì về cục bộ (local / 로컬) hình học (geometry / 기하학)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Completing the square là biểu diễn (representation / 표현) thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Cùng polynomial, nhiều representations
 
@@ -178,6 +187,8 @@ làm extremum và hình học (geometry / 기하학) rõ.
 
 Cùng một đối tượng (object / 객체) nhưng mỗi form trả lời một loại câu hỏi khác nhau. Đây là mẫu (pattern / 패턴) lặp lại trong tuyến tính (linear / 선형) algebra, Fourier phân tích (analysis / 분석) và numerical computing: đổi basis/biểu diễn (representation / 표현) để làm cấu trúc (structure / 구조) trở nên nhìn thấy được.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **7. Completing the square là biểu diễn (representation / 표현) thay đổi (change / 변경)** tiếp nhận điểm tựa từ **6. Cùng polynomial, nhiều representations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Polynomial division và remainder theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Completing the square là biểu diễn (representation / 표현) thay đổi (change / 변경)
 
 Với quadratic
@@ -200,6 +211,8 @@ Expanded form giúp đọc coefficients; vertex form ngay lập tức cho vertex
 
 Thao tác (operation / 연산) này cũng là nền của quadratic formula và Gaussian expressions trong xác suất (probability / 확률).
 
+> **Chuyển mạch:** Trong **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **8. Polynomial division và remainder theorem** tiếp nhận điểm tựa từ **7. Completing the square là biểu diễn (representation / 표현) thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Fundamental Theorem of Algebra: vì sao complex numbers đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Polynomial division và remainder theorem
 
 Giống integer division,
@@ -220,6 +233,8 @@ Khi `D(x)=x-r`, remainder là constant và bằng `P(r)`.
 
 Trong computer algebra, polynomial division là thành phần nguyên thủy (primitive / 기본 요소) thao tác (operation / 연산) phía sau gcd algorithms, symbolic simplification và factorization methods.
 
+> **Chuyển mạch:** Ở chặng này của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **9. Fundamental Theorem of Algebra: vì sao complex numbers đủ?** tiếp nhận điểm tựa từ **8. Polynomial division và remainder theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Vieta relations: roots và coefficients nói cùng một story** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Fundamental Theorem of Algebra: vì sao complex numbers đủ?
 
 Fundamental Theorem of Algebra nói rằng mọi nonconstant polynomial degree `n` với complex coefficients có exactly `n` complex roots counting multiplicity.
@@ -239,6 +254,8 @@ x=\pm i.
 ```
 
 Vì vậy complex numbers không phải appendage kỳ lạ; chúng hoàn thiện algebra của polynomial roots.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **10. Vieta relations: roots và coefficients nói cùng một story** tiếp nhận điểm tựa từ **9. Fundamental Theorem of Algebra: vì sao complex numbers đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Worked example: chọn biểu diễn (representation / 표현) đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Vieta relations: roots và coefficients nói cùng một story
 
@@ -265,6 +282,8 @@ r_1r_2=\frac ca.
 ```
 
 Vieta's formulas cho thấy coefficients và roots chỉ là hai coordinate các hệ thống (systems / 시스템들) khác nhau của cùng polynomial cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Trong **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **10. Vieta relations: roots và coefficients nói cùng một story** cho ta quy tắc; **11. Worked example: chọn biểu diễn (representation / 표현) đúng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Polynomial interpolation: fit dữ liệu (data / 데이터) bằng polynomial có giới hạn gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Worked example: chọn biểu diễn (representation / 표현) đúng
 
@@ -294,6 +313,8 @@ Muốn evaluate tại many `x`, expanded/Horner biểu diễn (representation / 
 
 Không có form “tốt nhất” tuyệt đối; form tốt phụ thuộc question.
 
+> **Chuyển mạch:** Ở chặng này của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **11. Worked example: chọn biểu diễn (representation / 표현) đúng** cho ta quy tắc; **12. Polynomial interpolation: fit dữ liệu (data / 데이터) bằng polynomial có giới hạn gì?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Taylor polynomial: polynomial như cục bộ (local / 로컬) ngôn ngữ (language / 언어) của smooth functions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Polynomial interpolation: fit dữ liệu (data / 데이터) bằng polynomial có giới hạn gì?
 
 Qua `n+1` points có distinct x-values, tồn tại unique polynomial degree at most `n` đi qua tất cả points.
@@ -303,6 +324,8 @@ Qua `n+1` points có distinct x-values, tồn tại unique polynomial degree at 
 High-degree toàn cục (global / 전역) polynomial có thể oscillate mạnh giữa mẫu (sample / 표본) points — Runge phenomenon. dữ liệu (data / 데이터) noise cũng có thể khiến chính xác (exact / 정확한) fit overfit.
 
 Vì vậy numerical công việc (work / 작업) thường dùng splines, low-degree cục bộ (local / 로컬) approximation hoặc regularized fitting thay vì “degree càng cao càng tốt”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **12. Polynomial interpolation: fit dữ liệu (data / 데이터) bằng polynomial có giới hạn gì?** đã nêu tiêu chí phân biệt, còn **13. Taylor polynomial: polynomial như cục bộ (local / 로컬) ngôn ngữ (language / 언어) của smooth functions** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Horner's phương thức (method / 메서드): algebraic form trở thành thuật toán (algorithm / 알고리즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Taylor polynomial: polynomial như cục bộ (local / 로컬) ngôn ngữ (language / 언어) của smooth functions
 
@@ -323,6 +346,8 @@ Ví dụ quanh `0`:
 ```math
 \sin x\approx x-\frac{x^3}{3!}+\frac{x^5}{5!}.
 ```
+
+> **Chuyển mạch:** Trong **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **14. Horner's phương thức (method / 메서드): algebraic form trở thành thuật toán (algorithm / 알고리즘)** tiếp nhận điểm tựa từ **13. Taylor polynomial: polynomial như cục bộ (local / 로컬) ngôn ngữ (language / 언어) của smooth functions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Numerical conditioning của roots** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Horner's phương thức (method / 메서드): algebraic form trở thành thuật toán (algorithm / 알고리즘)
 
@@ -354,6 +379,8 @@ thành
 
 Đây là một liên kết (connection / 연결) trực tiếp giữa symbolic biểu diễn (representation / 표현) và computational efficiency.
 
+> **Chuyển mạch:** Ở chặng này của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **15. Numerical conditioning của roots** tiếp nhận điểm tựa từ **14. Horner's phương thức (method / 메서드): algebraic form trở thành thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Polynomials trong signals, điều khiển (control / 제어) và approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Numerical conditioning của roots
 
 Không phải mọi gốc (root / 루트) đều numerically stable. Small perturbations coefficients có thể gây large changes roots, đặc biệt với multiple hoặc clustered roots.
@@ -361,6 +388,8 @@ Không phải mọi gốc (root / 루트) đều numerically stable. Small pertu
 Điều này quan trọng vì symbolic định danh (identity / 식별자) và numerical computation là hai tầng khác nhau. Một chính xác (exact / 정확한) polynomial theorem không guarantee floating-point root-finding sẽ easy.
 
 Companion matrices còn cho phép chuyển polynomial-root bài toán (problem / 문제) thành eigenvalue bài toán (problem / 문제), nối algebra với tuyến tính (linear / 선형) algebra.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **16. Polynomials trong signals, điều khiển (control / 제어) và approximation** tiếp nhận điểm tựa từ **15. Numerical conditioning của roots** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. thất bại (failure / 실패) modes khi factorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Polynomials trong signals, điều khiển (control / 제어) và approximation
 
@@ -373,6 +402,8 @@ Characteristic polynomial
 ```
 
 có roots là eigenvalues. Vì vậy polynomial factorization kết nối trực tiếp với dynamics, điều khiển (control / 제어) và tuyến tính (linear / 선형) algebra.
+
+> **Chuyển mạch:** Trong **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **17. thất bại (failure / 실패) modes khi factorization** tiếp nhận điểm tựa từ **16. Polynomials trong signals, điều khiển (control / 제어) và approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Applications và connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. thất bại (failure / 실패) modes khi factorization
 
@@ -398,6 +429,8 @@ Even multiplicity roots có thể touch axis mà không đổi sign.
 
 Trong high degree hoặc floating coefficients, “factor” có thể nhạy với noise và tolerance.
 
+> **Chuyển mạch:** Ở chặng này của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **Applications và connections** tiếp nhận điểm tựa từ **17. thất bại (failure / 실패) modes khi factorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Applications và connections
 
 **Khoa học máy tính (computer science / 컴퓨터 과학):** Horner evaluation, symbolic algebra, polynomial hashing và coding lý thuyết (theory / 이론).
@@ -408,9 +441,13 @@ Trong high degree hoặc floating coefficients, “factor” có thể nhạy v�
 
 **Finance:** cục bộ (local / 로컬) approximations của pricing/rủi ro (risk / 위험) functions và polynomial regression, nhưng high-degree fits cần cảnh giác overfitting.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Applications và connections** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Polynomial là một đối tượng (object / 객체) có nhiều representations. Expanded coefficients, factors, roots, vertex form và Taylor form không phải các chủ đề riêng; chúng là những “camera angles” khác nhau. Algebra mạnh lên khi ta biết đổi biểu diễn (representation / 표현) để cấu trúc (structure / 구조) cần thiết trở nên nhìn thấy được.
+
+> **Chuyển mạch:** Trong **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -422,4 +459,4 @@ Trong high degree hoặc floating coefficients, “factor” có thể nhạy v�
 
 **Polynomial evaluation chỉ là thay số.** Trong computation, biểu diễn (representation / 표현) như Horner form ảnh hưởng chi phí (cost / 비용) và numerical hành vi (behavior / 동작).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algebraic language](./00_algebraic_language.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

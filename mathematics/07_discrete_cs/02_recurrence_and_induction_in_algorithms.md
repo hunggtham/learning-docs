@@ -1,7 +1,6 @@
 # Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)
 
-> **Mạch đọc:** Đọc **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Recursion cần một well-founded descent** sang **2. Vì sao recursive lời gọi (call / 호출) phải tiến về cơ sở (base / 기반) trường hợp (case / 사례)?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Recursion cần một well-founded descent** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Vì sao recursive lời gọi (call / 호출) phải tiến về cơ sở (base / 기반) trường hợp (case / 사례)?** để đem mô hình vào tình huống cụ thể. Mạch này nối recurrence với induction và algorithms, để chứng minh đúng không chỉ cho một input mà cho cả họ bài toán.
 
 Đệ quy (recursion / 재귀), quan hệ truy hồi (recurrence / 점화식) và quy nạp (induction / 수학적 귀납법) thường được học ở ba nơi khác nhau: programming, discrete mathematics và proof. Nhưng chúng là ba mặt của cùng một idea:
 
@@ -44,6 +43,8 @@ factorial(n):
 
 Cơ sở (base / 기반) trường hợp (case / 사례) không chỉ để tránh ngăn xếp (stack / 스택) overflow. Nó neo cả definition và tính đúng đắn (correctness / 정확성) proof vào một trạng thái (state / 상태) đã biết.
 
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **1. Recursion cần một well-founded descent** cho ta quy tắc; **2. Vì sao recursive lời gọi (call / 호출) phải tiến về cơ sở (base / 기반) trường hợp (case / 사례)?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Mathematical induction mirror recursive construction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Vì sao recursive lời gọi (call / 호출) phải tiến về cơ sở (base / 기반) trường hợp (case / 사례)?
 
 Ta cần một measure `m(state)` giảm theo một well-founded thứ tự (order / 순서).
@@ -59,6 +60,8 @@ Mỗi lời gọi (call / 호출) giảm `n` một đơn vị và natural number
 Đây là termination proof.
 
 Nếu recursive hàm (function / 함수) gọi chính nó với cùng hoặc larger measure, termination không được guarantee.
+
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **2. Vì sao recursive lời gọi (call / 호출) phải tiến về cơ sở (base / 기반) trường hợp (case / 사례)?** cho ta quy tắc; **3. Mathematical induction mirror recursive construction** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. Strong induction cho divide-and-conquer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Mathematical induction mirror recursive construction
 
@@ -86,6 +89,8 @@ Lô-gic (logic / 논리) là: nếu thuộc tính (property / 속성) được t
 
 Induction vì vậy không phải một proof trick kỳ lạ; nó là proof form matching recursive cấu trúc (structure / 구조) của natural numbers.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **4. Strong induction cho divide-and-conquer** tiếp nhận điểm tựa từ **3. Mathematical induction mirror recursive construction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Recurrence mô tả chi phí (cost / 비용), count hoặc trạng thái (state / 상태) quan hệ (relation / 관계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Strong induction cho divide-and-conquer
 
 Strong induction assume thuộc tính (property / 속성) đúng cho **mọi** smaller sizes:
@@ -99,6 +104,8 @@ P(0),P(1),\ldots,P(n-1)
 Điều này natural khi thuật toán (algorithm / 알고리즘) chia đầu vào (input / 입력) kích thước (size / 크기) `n` thành subproblems như `n/2`, `n/3`, hoặc varying sizes.
 
 Ví dụ merge sort tính đúng đắn (correctness / 정확성) có thể assume recursive calls sort correctly mọi smaller arrays, rồi prove merge step tạo sorted kết quả (result / 결과) kích thước (size / 크기) `n`.
+
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **5. Recurrence mô tả chi phí (cost / 비용), count hoặc trạng thái (state / 상태) quan hệ (relation / 관계)** tiếp nhận điểm tựa từ **4. Strong induction cho divide-and-conquer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Solve recurrence bằng unrolling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Recurrence mô tả chi phí (cost / 비용), count hoặc trạng thái (state / 상태) quan hệ (relation / 관계)
 
@@ -123,6 +130,8 @@ F_n=F_{n-1}+F_{n-2}.
 ```
 
 Cùng notation “hiện tại (current / 현재) quantity từ smaller quantities”, nhưng ngữ nghĩa (semantics / 의미론) khác nhau: thời gian chạy (runtime / 런타임), chuỗi (sequence / 시퀀스) giá trị (value / 값) hoặc number of configurations.
+
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **6. Solve recurrence bằng unrolling** tiếp nhận điểm tựa từ **5. Recurrence mô tả chi phí (cost / 비용), count hoặc trạng thái (state / 상태) quan hệ (relation / 관계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Recursion cây (tree / 트리) cho merge sort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Solve recurrence bằng unrolling
 
@@ -168,6 +177,8 @@ T(n)=O(\log n).
 
 Logarithm xuất hiện từ recursion độ sâu (depth / 깊이) của repeated halving.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **7. Recursion cây (tree / 트리) cho merge sort** tiếp nhận điểm tựa từ **6. Solve recurrence bằng unrolling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Master Theorem là compressed mẫu (pattern / 패턴) recognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Recursion cây (tree / 트리) cho merge sort
 
 Merge sort:
@@ -198,6 +209,8 @@ T(n)=O(n\log n).
 
 Recursion cây (tree / 트리) là geometric visualization của recurrence.
 
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **8. Master Theorem là compressed mẫu (pattern / 패턴) recognition** tiếp nhận điểm tựa từ **7. Recursion cây (tree / 트리) cho merge sort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Substitution phương thức (method / 메서드): guess rồi prove bằng induction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Master Theorem là compressed mẫu (pattern / 패턴) recognition
 
 Recurrences dạng
@@ -222,6 +235,8 @@ mô tả total leaf-growth quy mô (scale / 규모) của recursion cây (tree /
 
 Master Theorem chỉ đóng gói comparison giữa recursive expansion và per-level combine công việc (work / 작업). Học recursion cây (tree / 트리) trước giúp theorem không trở thành bảng cases phải thuộc.
 
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **9. Substitution phương thức (method / 메서드): guess rồi prove bằng induction** tiếp nhận điểm tựa từ **8. Master Theorem là compressed mẫu (pattern / 패턴) recognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Naive Fibonacci và overlapping subproblems** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Substitution phương thức (method / 메서드): guess rồi prove bằng induction
 
 Giả sử recurrence
@@ -245,6 +260,8 @@ T(n/2)\le c\frac n2\log(n/2)
 rồi substitute để bound `T(n)`.
 
 Đây là liên kết (connection / 연결) trực tiếp recurrence ↔ induction: solve asymptotic recurrence bằng proof trên đầu vào (input / 입력) kích thước (size / 크기).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **10. Naive Fibonacci và overlapping subproblems** tiếp nhận điểm tựa từ **9. Substitution phương thức (method / 메서드): guess rồi prove bằng induction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. động (dynamic / 동적) programming = recurrence + trạng thái (state / 상태) thiết kế (design / 설계) + reuse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Naive Fibonacci và overlapping subproblems
 
@@ -272,6 +289,8 @@ Then number states `O(n)`, so thời gian (time / 시간) can become `O(n)`.
 
 Same mathematical recurrence, radically different algorithmic thực thi (execution / 실행).
 
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **11. động (dynamic / 동적) programming = recurrence + trạng thái (state / 상태) thiết kế (design / 설계) + reuse** tiếp nhận điểm tựa từ **10. Naive Fibonacci và overlapping subproblems** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. trạng thái (state / 상태) definition quyết định độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. động (dynamic / 동적) programming = recurrence + trạng thái (state / 상태) thiết kế (design / 설계) + reuse
 
 Động (dynamic / 동적) programming không chỉ là “recursion có bộ nhớ đệm (cache / 캐시)”. Nó cần:
@@ -290,6 +309,8 @@ D(v)=\min_{u\to v}[D(u)+w(u,v)].
 
 Recurrence expresses Bellman optimality: best solution to trạng thái (state / 상태) uses best solutions to predecessor states.
 
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **12. trạng thái (state / 상태) definition quyết định độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **11. động (dynamic / 동적) programming = recurrence + trạng thái (state / 상태) thiết kế (design / 설계) + reuse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. vòng lặp (loop / 루프) invariants là induction trên thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. trạng thái (state / 상태) definition quyết định độ phức tạp (complexity / 복잡도)
 
 Một DP có thể chậm không phải vì recurrence sai mà vì trạng thái (state / 상태) không gian (space / 공간) quá lớn.
@@ -303,6 +324,8 @@ O(nmk).
 If a dimension is redundant and can be removed, độ phức tạp (complexity / 복잡도) drops dramatically.
 
 Mathematics of recurrence và modeling of trạng thái (state / 상태) must be analyzed together.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **13. vòng lặp (loop / 루프) invariants là induction trên thời gian (time / 시간)** tiếp nhận điểm tựa từ **12. trạng thái (state / 상태) definition quyết định độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Worked proof: tìm kiếm nhị phân (binary search / 이진 탐색) tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. vòng lặp (loop / 루프) invariants là induction trên thời gian (time / 시간)
 
@@ -328,6 +351,8 @@ Bất biến (invariant / 불변식) + vòng lặp (loop / 루프) exit điều 
 
 This is induction on iteration count disguised as program proof.
 
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **13. vòng lặp (loop / 루프) invariants là induction trên thời gian (time / 시간)** cho ta quy tắc; **14. Worked proof: tìm kiếm nhị phân (binary search / 이진 탐색) tính đúng đắn (correctness / 정확성)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **15. Structural induction cho recursive dữ liệu (data / 데이터) structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Worked proof: tìm kiếm nhị phân (binary search / 이진 탐색) tính đúng đắn (correctness / 정확성)
 
 Bất biến (invariant / 불변식):
@@ -350,6 +375,8 @@ Termination: if `low>high`, interval empty. bất biến (invariant / 불변식)
 
 Thời gian chạy (runtime / 런타임) `O(log n)` proof và tính đúng đắn (correctness / 정확성) proof are different arguments.
 
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **14. Worked proof: tìm kiếm nhị phân (binary search / 이진 탐색) tính đúng đắn (correctness / 정확성)** cho ta quy tắc; **15. Structural induction cho recursive dữ liệu (data / 데이터) structures** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Induction trên đồ thị (graph / 그래프) DAG thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Structural induction cho recursive dữ liệu (data / 데이터) structures
 
 Trees are not naturally indexed only by integer kích thước (size / 크기). Structural induction mirrors constructors.
@@ -367,6 +394,8 @@ Use cases:
 - expression simplification;
 - recursive kiểu (type / 타입) tính đúng đắn (correctness / 정확성).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **15. Structural induction cho recursive dữ liệu (data / 데이터) structures** nêu điều cần giải thích; **16. Induction trên đồ thị (graph / 그래프) DAG thứ tự (order / 순서)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Termination via ranking functions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Induction trên đồ thị (graph / 그래프) DAG thứ tự (order / 순서)
 
 DAG permits topological thứ tự (order / 순서). Many proofs/algorithms can proceed according to that thứ tự (order / 순서):
@@ -379,6 +408,8 @@ all predecessors solved
 This is generalized induction over a partial thứ tự (order / 순서) rather than simple integer chuỗi (sequence / 시퀀스).
 
 Động (dynamic / 동적) programming on DAGs follows exactly this cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **17. Termination via ranking functions** tiếp nhận điểm tựa từ **16. Induction trên đồ thị (graph / 그래프) DAG thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Mutual recursion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Termination via ranking functions
 
@@ -400,6 +431,8 @@ Second argument strictly decreases among nonnegative integers, so thuật toán 
 
 Termination is a mathematical thuộc tính (property / 속성), not just “seems to get smaller”.
 
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **18. Mutual recursion** tiếp nhận điểm tựa từ **17. Termination via ranking functions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Tail recursion và ngăn xếp (stack / 스택) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Mutual recursion
 
 Functions can recurse through each other:
@@ -414,6 +447,8 @@ Parsers for grammar nonterminals often use mutual recursion.
 
 This illustrates why lời gọi (call / 호출) đồ thị (graph / 그래프) cấu trúc (structure / 구조) matters beyond single-function view.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **19. Tail recursion và ngăn xếp (stack / 스택) ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **18. Mutual recursion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Recurrence quan hệ (relation / 관계) as tuyến tính (linear / 선형) dynamical hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Tail recursion và ngăn xếp (stack / 스택) ngữ nghĩa (semantics / 의미론)
 
 Tail-recursive lời gọi (call / 호출) is final thao tác (operation / 연산) of hàm (function / 함수). Languages/runtimes with tail-call tối ưu hóa (optimization / 최적화) can reuse ngăn xếp (stack / 스택) frame.
@@ -421,6 +456,8 @@ Tail-recursive lời gọi (call / 호출) is final thao tác (operation / 연�
 But not every thời gian chạy (runtime / 런타임) guarantees tối ưu hóa (optimization / 최적화).
 
 Therefore algorithmic không gian (space / 공간) phân tích (analysis / 분석) should consider actual ngôn ngữ (language / 언어) hiện thực (implementation / 구현), not mathematical recurrence alone.
+
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **20. Recurrence quan hệ (relation / 관계) as tuyến tính (linear / 선형) dynamical hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **19. Tail recursion và ngăn xếp (stack / 스택) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Generating-function viewpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Recurrence quan hệ (relation / 관계) as tuyến tính (linear / 선형) dynamical hệ thống (system / 시스템)
 
@@ -451,6 +488,8 @@ Eigenvalues explain growth tỷ lệ (rate / 비율); fast exponentiation comput
 
 This connects discrete recurrence to tuyến tính (linear / 선형) algebra and động (dynamic / 동적) các hệ thống (systems / 시스템들).
 
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **21. Generating-function viewpoint** tiếp nhận điểm tựa từ **20. Recurrence quan hệ (relation / 관계) as tuyến tính (linear / 선형) dynamical hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Physics liên kết (connection / 연결): discrete thời gian (time / 시간) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Generating-function viewpoint
 
 Chuỗi (sequence / 시퀀스) recurrence can be encoded into power series
@@ -464,6 +503,8 @@ Recurrence relations become algebraic equations on `G(x)`.
 This transforms a discrete recursive quan hệ (relation / 관계) into hàm (function / 함수) algebra — another example of changing biểu diễn (representation / 표현) to solve cấu trúc (structure / 구조).
 
 Full generating-function lý thuyết (theory / 이론) is optional in hiện tại (current / 현재) phạm vi (scope / 범위), but the liên kết (connection / 연결) explains why recurrence phân tích (analysis / 분석) touches algebra and complex phân tích (analysis / 분석).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, sau nội dung của **21. Generating-function viewpoint**, **22. Physics liên kết (connection / 연결): discrete thời gian (time / 시간) evolution** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **23. Finance liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Physics liên kết (connection / 연결): discrete thời gian (time / 시간) evolution
 
@@ -485,6 +526,8 @@ for modes that decay.
 
 Numerical ODE solvers also create recurrences from continuous equations. Thus recursion/recurrence is not only CS; it is a ngôn ngữ (language / 언어) for discrete dynamics.
 
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **23. Finance liên kết (connection / 연결)** tiếp nhận điểm tựa từ **22. Physics liên kết (connection / 연결): discrete thời gian (time / 시간) evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. dùng chung (common / 공통) thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. Finance liên kết (connection / 연결)
 
 Compound growth:
@@ -498,6 +541,8 @@ is recurrence.
 Loan amortization, portfolio wealth updates and động (dynamic / 동적) programming for investment decisions all use trạng thái (state / 상태) transitions over thời gian (time / 시간).
 
 Bellman equations generalize recurrence to optimal sequential decision-making.
+
+> **Chuyển mạch:** Ở chặng này của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **24. dùng chung (common / 공통) thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **23. Finance liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
@@ -521,9 +566,13 @@ Thời gian chạy (runtime / 런타임) phân tích (analysis / 분석) does no
 
 Động (dynamic / 동적) programming can still be infeasible due to curse of dimensionality.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **24. dùng chung (common / 공통) thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Recursion decomposes computation, recurrence records the phụ thuộc (dependency / 의존성) between sizes/states, and induction proves that phụ thuộc (dependency / 의존성) is valid everywhere. động (dynamic / 동적) programming adds one more idea: if many paths reach the same trạng thái (state / 상태), solve that trạng thái (state / 상태) once and reuse it.
+
+> **Chuyển mạch:** Trong **Recurrence, induction và recursion: một cấu trúc (structure / 구조) chung của algorithmic lập luận (reasoning / 추론)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -535,4 +584,4 @@ Thời gian chạy (runtime / 런타임) phân tích (analysis / 분석) does no
 
 **Finding a recurrence automatically gives độ phức tạp (complexity / 복잡도).** No; recurrence still needs solution/bounds and actual chi phí (cost / 비용) mô hình (model / 모델).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph theory](./00_graph_theory.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

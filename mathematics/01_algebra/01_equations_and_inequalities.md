@@ -1,7 +1,6 @@
 # Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm
 
-> **Mạch đọc:** Đọc **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Solution set luôn phụ thuộc lĩnh vực (domain / 도메인)** sang **2. Equivalence transformations: vì sao các phép biến đổi hợp lệ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Solution set luôn phụ thuộc lĩnh vực (domain / 도메인)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Equivalence transformations: vì sao các phép biến đổi hợp lệ?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối equations với inequalities, solution set và biến đổi tương đương, để phân biệt thao tác giữ nghiệm với thao tác làm đổi miền nghiệm.
 
 Phương trình (equation / 방정식) và bất phương trình (inequality / 부등식) đều là cách biểu diễn **ràng buộc** lên những giá trị có thể xảy ra. Khi viết
 
@@ -52,6 +51,8 @@ x=\pm i.
 ```
 
 Điều này nối trực tiếp equations với number các hệ thống (systems / 시스템들): mở rộng tập số thường xuất hiện vì một lớp (class / 클래스) equations trước đó chưa “đóng” dưới phép giải.
+
+> **Chuyển mạch:** Trong **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **2. Equivalence transformations: vì sao các phép biến đổi hợp lệ?** tiếp nhận điểm tựa từ **1. Solution set luôn phụ thuộc lĩnh vực (domain / 도메인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. tuyến tính (linear / 선형) equations: solving là undo một affine transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Equivalence transformations: vì sao các phép biến đổi hợp lệ?
 
@@ -104,6 +105,8 @@ A=B \Rightarrow A^2=B^2
 nhưng chiều ngược lại không luôn đúng.
 
 Đây là lý do equations có square gốc (root / 루트), absolute giá trị (value / 값), rational expressions hoặc trigonometric transformations thường cần **substitute back** vào original ràng buộc (constraint / 제약조건).
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **3. tuyến tính (linear / 선형) equations: solving là undo một affine transformation** tiếp nhận điểm tựa từ **2. Equivalence transformations: vì sao các phép biến đổi hợp lệ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Hệ phương trình: intersection của các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. tuyến tính (linear / 선형) equations: solving là undo một affine transformation
 
@@ -163,6 +166,8 @@ x=3.
 
 Mỗi bước đều equivalence-preserving.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **4. Hệ phương trình: intersection của các ràng buộc (constraints / 제약조건들)** tiếp nhận điểm tựa từ **3. tuyến tính (linear / 선형) equations: solving là undo một affine transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Quadratic equations: vì sao có nhiều representations?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Hệ phương trình: intersection của các ràng buộc (constraints / 제약조건들)
 
 Hệ thống (system / 시스템)
@@ -207,6 +212,8 @@ Ax=b.
 ```
 
 Rank, column không gian (space / 공간) và null không gian (space / 공간) sau này chỉ là ngôn ngữ có hệ thống hơn để mô tả consistency và degrees of freedom.
+
+> **Chuyển mạch:** Trong **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **5. Quadratic equations: vì sao có nhiều representations?** tiếp nhận điểm tựa từ **4. Hệ phương trình: intersection của các ràng buộc (constraints / 제약조건들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Discriminant là thông tin hình học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Quadratic equations: vì sao có nhiều representations?
 
@@ -294,6 +301,8 @@ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
 
 Quadratic formula không phải quy tắc (rule / 규칙) rơi từ trên xuống; nó là completing-the-square được đóng gói.
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **6. Discriminant là thông tin hình học** tiếp nhận điểm tựa từ **5. Quadratic equations: vì sao có nhiều representations?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Absolute giá trị (value / 값): distance trước trường hợp (case / 사례) splitting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Discriminant là thông tin hình học
 
 Discriminant không chỉ quyết định phương trình bậc hai có bao nhiêu nghiệm thực. Nó còn nói đường cong cắt trục như thế nào, nên nối đại số với hình học và giúp kiểm tra nghiệm trước khi tính tiếp.
@@ -311,6 +320,8 @@ quyết định số real intersections giữa parabola và x-axis.
 Trong complex numbers, vẫn có hai roots tính theo multiplicity.
 
 Discriminant vì vậy nối algebra với hình học (geometry / 기하학) và complex number các hệ thống (systems / 시스템들).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **6. Discriminant là thông tin hình học** cho ta quy tắc; **7. Absolute giá trị (value / 값): distance trước trường hợp (case / 사례) splitting** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. Rational equations và lĩnh vực (domain / 도메인) restrictions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Absolute giá trị (value / 값): distance trước trường hợp (case / 사례) splitting
 
@@ -354,6 +365,8 @@ nghĩa nằm bên ngoài interval đó.
 
 Cách hiểu distance làm absolute-value inequalities trở nên tự nhiên hơn việc học thuộc cases.
 
+> **Chuyển mạch:** Trong **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **7. Absolute giá trị (value / 값): distance trước trường hợp (case / 사례) splitting** cho ta quy tắc; **8. Rational equations và lĩnh vực (domain / 도메인) restrictions** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. Inequalities: thứ tự (order / 순서) cấu trúc (structure / 구조) khác equality ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Rational equations và lĩnh vực (domain / 도메인) restrictions
 
 Ví dụ
@@ -381,6 +394,8 @@ x=\frac32.
 Candidate này hợp lệ vì không vi phạm restriction.
 
 Trong rational equations, lĩnh vực (domain / 도메인) restriction không phải ghi chú phụ; nó là part of the bài toán (problem / 문제) definition.
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **9. Inequalities: thứ tự (order / 순서) cấu trúc (structure / 구조) khác equality ở đâu?** tiếp nhận điểm tựa từ **8. Rational equations và lĩnh vực (domain / 도메인) restrictions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Polynomial inequalities: sign chart đến từ factors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Inequalities: thứ tự (order / 순서) cấu trúc (structure / 구조) khác equality ở đâu?
 
@@ -430,6 +445,8 @@ Solution set:
 [-3,\infty).
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **10. Polynomial inequalities: sign chart đến từ factors** tiếp nhận điểm tựa từ **9. Inequalities: thứ tự (order / 순서) cấu trúc (structure / 구조) khác equality ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. các ràng buộc (constraints / 제약조건들) trong tối ưu hóa (optimization / 최적화), physics và software** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Polynomial inequalities: sign chart đến từ factors
 
 Giải
@@ -451,6 +468,8 @@ Sản phẩm (product / 제품) positive khi hai factors cùng sign. Do đó sol
 ```
 
 Sign chart không phải trick riêng; nó là lập luận (reasoning / 추론) từ multiplicative signs và roots.
+
+> **Chuyển mạch:** Trong **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **11. các ràng buộc (constraints / 제약조건들) trong tối ưu hóa (optimization / 최적화), physics và software** tiếp nhận điểm tựa từ **10. Polynomial inequalities: sign chart đến từ factors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Proof idea: vì sao solution-preserving transformations quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. các ràng buộc (constraints / 제약조건들) trong tối ưu hóa (optimization / 최적화), physics và software
 
@@ -474,6 +493,8 @@ Trong physics, các ràng buộc (constraints / 제약조건들) có thể đế
 
 Điểm chung là: equations/inequalities không chỉ là bài solve `x`; chúng là ngôn ngữ mô tả **trạng thái (state / 상태) nào được phép tồn tại**.
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **12. Proof idea: vì sao solution-preserving transformations quan trọng?** tiếp nhận điểm tựa từ **11. các ràng buộc (constraints / 제약조건들) trong tối ưu hóa (optimization / 최적화), physics và software** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Applications và connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Proof idea: vì sao solution-preserving transformations quan trọng?
 
 Khi solving, ta muốn xây chuỗi (chain / 사슬)
@@ -494,6 +515,8 @@ thì `E_{i+1}` có thể có extra solutions. Khi đó final answers chỉ là c
 
 Đây là proof-theoretic viewpoint của algebraic manipulation: mỗi step cần biết logical strength của transformation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **Applications và connections** tiếp nhận điểm tựa từ **12. Proof idea: vì sao solution-preserving transformations quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Applications và connections
 
 **Khoa học máy tính (computer science / 컴퓨터 과학):** ràng buộc (constraint / 제약조건) solvers, kiểu (type / 타입) các ràng buộc (constraints / 제약조건들), SAT/SMT lập luận (reasoning / 추론) và kiểm tra hợp lệ (validation / 검증) các hệ thống (systems / 시스템들) đều mở rộng idea “tìm assignments làm predicates đúng”.
@@ -504,9 +527,13 @@ thì `E_{i+1}` có thể có extra solutions. Khi đó final answers chỉ là c
 
 **Finance:** ngân sách (budget / 예산), leverage, regulatory capital và no-arbitrage relationships đều được viết dưới dạng equations/inequalities.
 
+> **Chuyển mạch:** Trong **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Applications và connections** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Equation và inequality là descriptions của feasible states. Solving là thay biểu diễn (representation / 표현) của ràng buộc (constraint / 제약조건) bằng representations dễ đọc hơn trong khi theo dõi chính xác solution set. Algebra tốt không phải thao tác ký hiệu nhanh; nó là logic-preserving transformation.
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình và bất phương trình: ràng buộc (constraint / 제약조건), equivalence và miền nghiệm**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -518,4 +545,4 @@ thì `E_{i+1}` có thể có extra solutions. Khi đó final answers chỉ là c
 
 **`f'(x)=0` hay `\Delta=0` tự nó là một mẹo riêng.** Những conditions này đều encode hình học (geometry / 기하학)/cấu trúc (structure / 구조) cụ thể; hiểu cấu trúc (structure / 구조) giúp tránh học thuộc rời rạc.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algebraic language](./00_algebraic_language.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

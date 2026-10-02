@@ -1,7 +1,6 @@
 # Likelihood, MLE, MAP và chọn mô hình từ dữ liệu
 
-> **Mạch đọc:** Đọc **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ví dụ Bernoulli: từ coin flips tới estimate xác suất** sang **Maximum Likelihood Estimation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ví dụ Bernoulli: từ coin flips tới estimate xác suất** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Maximum Likelihood Estimation** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối likelihood, MLE, MAP và model selection, để phân biệt khớp dữ liệu với lựa chọn mô hình có phạt độ phức tạp.
 
 Xác suất (probability / 확률) thường được giới thiệu theo hướng: biết mô hình (model / 모델), tính xác suất dữ liệu (data / 데이터). Statistics thường đi chiều ngược lại: đã quan sát dữ liệu (data / 데이터), ta muốn suy ra parameters hoặc so sánh các mô hình (models / 모델들). cầu nối (bridge / 브리지) giữa hai hướng nhìn là **likelihood / 우도**.
 
@@ -61,8 +60,7 @@ suy ra
 
 Mẫu (sample / 표본) proportion không phải một formula rơi từ trời xuống; nó là **maximum likelihood estimator** cho Bernoulli xác suất (probability / 확률) dưới independence giả định (assumption / 가정).
 
-
-> **Chuyển mạch:** Từ **Ví dụ Bernoulli: từ coin flips tới estimate xác suất**, ta sang **Maximum Likelihood Estimation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Ví dụ Bernoulli: từ coin flips tới estimate xác suất** cho ta quy tắc; **Maximum Likelihood Estimation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Negative log-likelihood và hàm mất mát (loss function / 손실 함수) trong machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Maximum Likelihood Estimation
 
@@ -86,8 +84,7 @@ MLE rất phổ biến vì general, nối trực tiếp với tối ưu hóa (op
 
 Nếu mô hình (model / 모델) family sai, MLE vẫn trả về một answer — chỉ là answer tốt nhất trong family sai đó.
 
-
-> **Chuyển mạch:** Từ **Maximum Likelihood Estimation**, ta sang **Negative log-likelihood và hàm mất mát (loss function / 손실 함수) trong machine học tập (learning / 학습)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Negative log-likelihood và hàm mất mát (loss function / 손실 함수) trong machine học tập (learning / 학습)** tiếp nhận điểm tựa từ **Maximum Likelihood Estimation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bayesian cập nhật (update / 업데이트) và MAP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Negative log-likelihood và hàm mất mát (loss function / 손실 함수) trong machine học tập (learning / 학습)
 
@@ -131,8 +128,7 @@ thì maximizing Gaussian likelihood tương đương minimizing
 
 Mean squared lỗi (error / 오류) do đó không chỉ là convenient chỉ số (metric / 지표); nó tương ứng một noise mô hình (model / 모델) cụ thể.
 
-
-> **Chuyển mạch:** Từ **Negative log-likelihood và hàm mất mát (loss function / 손실 함수) trong machine học tập (learning / 학습)**, ta sang **Bayesian cập nhật (update / 업데이트) và MAP** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Bayesian cập nhật (update / 업데이트) và MAP** tiếp nhận điểm tựa từ **Negative log-likelihood và hàm mất mát (loss function / 손실 함수) trong machine học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regularization như prior** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bayesian cập nhật (update / 업데이트) và MAP
 
@@ -167,8 +163,7 @@ Dùng log:
 
 So với MLE, MAP thêm prior. Nếu dữ liệu (data / 데이터) rất nhiều và likelihood dominate, MLE và MAP có thể gần nhau. Khi dữ liệu (data / 데이터) ít, prior có ảnh hưởng mạnh hơn.
 
-
-> **Chuyển mạch:** Từ **Bayesian cập nhật (update / 업데이트) và MAP**, ta sang **Regularization như prior** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Regularization như prior** tiếp nhận điểm tựa từ **Bayesian cập nhật (update / 업데이트) và MAP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ lệch (bias / 편향)–variance và overfitting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Regularization như prior
 
@@ -190,8 +185,7 @@ negative log posterior chứa term
 
 Nếu prior Laplace, ta nhận L1-like penalty. Vì vậy regularization không chỉ là trick chống overfitting; nó có thể được hiểu là preference về parameter cấu trúc (structure / 구조).
 
-
-> **Chuyển mạch:** Từ **Regularization như prior**, ta sang **độ lệch (bias / 편향)–variance và overfitting** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Độ lệch (bias / 편향)–variance và overfitting** tiếp nhận điểm tựa từ **Regularization như prior** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ lệch (bias / 편향)–variance và overfitting
 
@@ -201,8 +195,7 @@ Generalization lỗi (error / 오류) thường được conceptualize qua **đ�
 
 Đây không phải law nói “mô hình (model / 모델) độ phức tạp (complexity / 복잡도) luôn có một sweet spot đơn giản”. hiện đại (modern / 현대적) high-dimensional các mô hình (models / 모델들) có hành vi (behavior / 동작) phức tạp hơn classical picture. Nhưng mô hình tư duy (mental model / 사고 모델) vẫn hữu ích: fit dữ liệu huấn luyện (training data / 학습 데이터) tốt chưa đủ; ta quan tâm hiệu năng (performance / 성능) trên unseen dữ liệu (data / 데이터).
 
-
-> **Chuyển mạch:** Từ **độ lệch (bias / 편향)–variance và overfitting**, ta sang **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **Độ lệch (bias / 편향)–variance và overfitting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thông tin (information / 정보) criteria: fit tốt nhưng trả giá cho độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)
 
@@ -212,8 +205,7 @@ Dữ liệu huấn luyện (training data / 학습 데이터) dùng để estima
 
 **Cross-validation / 교차검증** chia dữ liệu (data / 데이터) thành folds và luân phiên train/validate để estimate out-of-sample hiệu năng (performance / 성능) ổn định hơn, đặc biệt khi dataset không lớn.
 
-
-> **Chuyển mạch:** Từ **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)**, ta sang **thông tin (information / 정보) criteria: fit tốt nhưng trả giá cho độ phức tạp (complexity / 복잡도)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Thông tin (information / 정보) criteria: fit tốt nhưng trả giá cho độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **Train, kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Identifiability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thông tin (information / 정보) criteria: fit tốt nhưng trả giá cho độ phức tạp (complexity / 복잡도)
 
@@ -233,8 +225,7 @@ BIC=k\log n-2\log\hat L.
 
 Không nên dùng AIC/BIC như universal score cho mọi bài toán (problem / 문제); các giả định (assumptions / 가정들) và modeling goal quan trọng. Nhưng chúng minh họa principle: higher in-sample likelihood không free — độ phức tạp (complexity / 복잡도) cần được account.
 
-
-> **Chuyển mạch:** Từ **thông tin (information / 정보) criteria: fit tốt nhưng trả giá cho độ phức tạp (complexity / 복잡도)**, ta sang **Identifiability** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Identifiability** tiếp nhận điểm tựa từ **Thông tin (information / 정보) criteria: fit tốt nhưng trả giá cho độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Identifiability
 
@@ -242,8 +233,7 @@ Một parameter **identifiable / 식별가능** nếu different parameter values
 
 Trong neural networks, parameter symmetries khiến many weight configurations represent same hàm (function / 함수). Trong mixture các mô hình (models / 모델들), label switching là một dạng non-identifiability. Đây là reminder rằng “tối ưu được một parameter véc-tơ (vector / 벡터)” không có nghĩa parameter đó có unique interpretation.
 
-
-> **Chuyển mạch:** Từ **Identifiability**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, sau nội dung của **Identifiability**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -251,15 +241,13 @@ Likelihood nối xác suất (probability / 확률) với tối ưu hóa (optimi
 
 Thông tin (information / 정보) lý thuyết (theory / 이론) cũng gặp likelihood qua coding: mô hình (model / 모델) gán high xác suất (probability / 확률) cho observed dữ liệu (data / 데이터) tương ứng shorter ideal mã (code / 코드) length `-\log p(x)`. Vì vậy minimizing negative log-likelihood đồng thời có thể hiểu là minimizing description length dưới mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **liên kết kiến thức (knowledge connection / 지식 연결)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > xác suất (probability / 확률) hỏi “nếu parameter là thế này, dữ liệu (data / 데이터) có thể trông như thế nào?”. Likelihood quay cùng biểu thức lại và hỏi “dữ liệu (data / 데이터) đã trông như thế này, parameter nào giải thích nó tốt nhất trong mô hình (model / 모델) family?”. MLE chọn theo dữ liệu (data / 데이터); MAP thêm prior; mô hình (model / 모델) selection hỏi liệu phần fit thêm có thực sự generalize hay chỉ đang mua bằng độ phức tạp (complexity / 복잡도).
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Likelihood, MLE, MAP và chọn mô hình từ dữ liệu**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -269,4 +257,4 @@ MLE cũng không tự động unbiased, robust hay unique. Properties phụ thu�
 
 Cross-validation không chữa được dữ liệu (data / 데이터) leakage. Nếu preprocessing sử dụng toàn dataset trước khi split — ví dụ standardization bằng toàn cục (global / 전역) mean hoặc tính năng (feature / 기능) selection nhìn labels của kiểm thử (test / 테스트) fold — kiểm tra hợp lệ (validation / 검증) estimate vẫn bị nhiễm thông tin (information / 정보).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 counting and combinatorics](./00_counting_and_combinatorics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,5 +1,7 @@
 # Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. sản phẩm tạo ra (artifact / 산출물) đặc tả hợp đồng (contract / 계약)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. trường hợp (case / 사례) A — Korean exporter forecast receivable** để đem mô hình vào tình huống cụ thể. Mạch này nối hedge accounting với documentation boundary, exposure và effectiveness, để phân biệt phòng hộ kinh tế với cách ghi nhận kế toán.
+
 Lab này operationalize [Economic Hedge vs Hedge Accounting](../90_connections/02_ECONOMIC_HEDGE_VS_HEDGE_ACCOUNTING.md). Mục tiêu là xây documentation/điều khiển (control / 제어) workflow cho một FX hedge mà không nhảy thẳng từ “derivative offset exposure” sang kết luận accounting.
 
 ```text
@@ -42,6 +44,8 @@ exception status
 
 Không chấp nhận một spreadsheet không có đơn vị sở hữu (owner / 오너), timestamp hoặc thay đổi (change / 변경) lịch sử (history / 이력) như nguồn chuẩn (source of truth / 정본).
 
+> **Chuyển mạch:** Trong **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **1. sản phẩm tạo ra (artifact / 산출물) đặc tả hợp đồng (contract / 계약)** cho ta quy tắc; **2. trường hợp (case / 사례) A — Korean exporter forecast receivable** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Exposure register** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. trường hợp (case / 사례) A — Korean exporter forecast receivable
 
 Giả sử:
@@ -76,6 +80,8 @@ possible over-hedge under downside forecast
 
 Không mặc định toàn bộ `USD 12m` là eligible hedged item chỉ vì sales nhóm (team / 팀) có forecast.
 
+> **Chuyển mạch:** Ở chặng này của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **2. trường hợp (case / 사례) A — Korean exporter forecast receivable** cho ta quy tắc; **3. Exposure register** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. Economic mục tiêu (objective / 목표) memo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Exposure register
 
 Tạo một row cho mỗi exposure tầng (layer / 계층):
@@ -94,6 +100,8 @@ Tạo một row cho mỗi exposure tầng (layer / 계층):
 | nguồn (source / 소스) | ERP, CRM, đặc tả hợp đồng (contract / 계약) repository hay manual đầu vào (input / 입력)? |
 
 Reconcile total register với nghiệp vụ (business / 비즈니스) forecast và treasury position. Difference phải có đơn vị sở hữu (owner / 오너) và explanation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **4. Economic mục tiêu (objective / 목표) memo** tiếp nhận điểm tựa từ **3. Exposure register** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Designation memo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Economic mục tiêu (objective / 목표) memo
 
@@ -120,6 +128,8 @@ Mục tiêu (objective / 목표) chưa đạt nếu viết:
 ```
 
 Phải nêu measurable exposure và rủi ro (risk / 위험) phân phối (distribution / 분포) cần thay đổi.
+
+> **Chuyển mạch:** Trong **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **5. Designation memo** tiếp nhận điểm tựa từ **4. Economic mục tiêu (objective / 목표) memo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Eligibility gate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Designation memo
 
@@ -150,6 +160,8 @@ approval timestamp
 
 Không backdate documentation sau khi đã biết period-end kết quả (outcome / 결과).
 
+> **Chuyển mạch:** Ở chặng này của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **6. Eligibility gate** tiếp nhận điểm tựa từ **5. Designation memo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Qualifying-effectiveness assessment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Eligibility gate
 
 Trả lời `yes / no / needs specialist review`:
@@ -166,13 +178,13 @@ Trả lời `yes / no / needs specialist review`:
 
 Nếu một gate chưa đủ bằng chứng (evidence / 증거), ghi `unresolved`; không dùng giả định (assumption / 가정) để tự nâng thành `yes`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **7. Qualifying-effectiveness assessment** tiếp nhận điểm tựa từ **6. Eligibility gate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Sources-of-ineffectiveness bảng (table / 테이블)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Qualifying-effectiveness assessment
 
 Đánh giá ba lớp riêng:
 
 ### Economic relationship
-Phần “Economic relationship” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 same USD/KRW underlying?
@@ -183,8 +195,6 @@ same quantity layer?
 ```
 
 ### Credit-risk dominance
-Phần “Credit-risk dominance” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 counterparty credit condition
@@ -194,8 +204,6 @@ replacement availability
 ```
 
 ### Hedge ratio
-Phần “Hedge ratio” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 actual quantity hedged
@@ -206,6 +214,8 @@ imbalance risk
 ```
 
 Không dùng một correlation statistic để thay cả ba lớp.
+
+> **Chuyển mạch:** Trong **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **7. Qualifying-effectiveness assessment** nêu điều cần giải thích; **8. Sources-of-ineffectiveness bảng (table / 테이블)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Month-one scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Sources-of-ineffectiveness bảng (table / 테이블)
 
@@ -221,6 +231,8 @@ Lập bảng:
 | Basis | proxy/cross hedge divergence | basis series | thị trường (market / 시장) rủi ro (risk / 위험) | mô hình (model / 모델) threshold |
 
 Threshold là simulation đầu vào (input / 입력); không bản sao (copy / 복사) thành chính sách (policy / 정책) thực tế.
+
+> **Chuyển mạch:** Ở chặng này của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **8. Sources-of-ineffectiveness bảng (table / 테이블)** nêu điều cần giải thích; **9. Month-one scenario** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Rebalancing cây quyết định (decision tree / 의사결정 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Month-one scenario
 
@@ -257,6 +269,8 @@ no action but enhanced monitoring
 
 Không gộp năm hành động (action / 동작) thành một nút “rebalance”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **10. Rebalancing cây quyết định (decision tree / 의사결정 트리)** tiếp nhận điểm tựa từ **9. Month-one scenario** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Discontinuation log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Rebalancing cây quyết định (decision tree / 의사결정 트리)
 
 Đi theo thứ tự:
@@ -274,6 +288,8 @@ Risk-management objective unchanged?
 ```
 
 Đây là học tập (learning / 학습) cây quyết định (decision tree / 의사결정 트리), không thay thế wording đầy đủ của tiêu chuẩn (standard / 표준) hoặc auditor judgment.
+
+> **Chuyển mạch:** Trong **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **11. Discontinuation log** tiếp nhận điểm tựa từ **10. Rebalancing cây quyết định (decision tree / 의사결정 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. trường hợp (case / 사례) B — uncertain importer payable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Discontinuation log
 
@@ -293,6 +309,8 @@ reviewer sign-off
 ```
 
 Accounting discontinuation và derivative termination phải là hai fields riêng.
+
+> **Chuyển mạch:** Ở chặng này của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **11. Discontinuation log** cho ta quy tắc; **12. trường hợp (case / 사례) B — uncertain importer payable** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. trường hợp (case / 사례) C — option hedge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. trường hợp (case / 사례) B — uncertain importer payable
 
@@ -325,6 +343,8 @@ who owns the resulting derivative exposure?
 
 Không gọi option-to-purchase hoặc management mục tiêu (target / 대상) là firm exposure.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **12. trường hợp (case / 사례) B — uncertain importer payable** cho ta quy tắc; **13. trường hợp (case / 사례) C — option hedge** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **14. trường hợp (case / 사례) D — cross-currency funding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. trường hợp (case / 사례) C — option hedge
 
 Một importer mua USD lời gọi (call / 호출). Tách valuation thành:
@@ -347,6 +367,8 @@ how premium and execution cost are attributed?
 
 Lab không yêu cầu journal entries; nó yêu cầu component-level bằng chứng (evidence / 증거) để specialist có thể áp dụng chính sách (policy / 정책) đúng.
 
+> **Chuyển mạch:** Trong **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **13. trường hợp (case / 사례) C — option hedge** cho ta quy tắc; **14. trường hợp (case / 사례) D — cross-currency funding** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **15. Close-control checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. trường hợp (case / 사례) D — cross-currency funding
 
 Một company phát hành KRW debt và dùng CCS để tạo synthetic USD funding. Tách:
@@ -362,9 +384,9 @@ credit valuation effects
 
 Không kết luận relationship kiểu (type / 타입) chỉ từ tên instrument. Ghi `specialist review required` cho classification, designation và đo lường (measurement / 측정) questions phụ thuộc facts.
 
-## 15. Close-control checklist
-Phần “15. Close-control checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **14. trường hợp (case / 사례) D — cross-currency funding** cho ta quy tắc; **15. Close-control checklist** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Segregation of duties** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 15. Close-control checklist
 
 ```text
 [ ] Exposure register reconciled to source systems
@@ -380,6 +402,8 @@ Phần “15. Close-control checklist” nối kiến thức trước với nộ
 [ ] Outstanding derivatives after discontinuation assigned an owner
 [ ] Exceptions escalated and signed off
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **16. Segregation of duties** tiếp nhận điểm tựa từ **15. Close-control checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Scoring rubric** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Segregation of duties
 
@@ -398,9 +422,9 @@ Internal audit
 
 Người execute trade không nên là người duy nhất phê duyệt forecast, valuation và accounting conclusion.
 
-## 17. Scoring rubric
-Phần “17. Scoring rubric” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **17. Scoring rubric** tiếp nhận điểm tựa từ **16. Segregation of duties** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 17. Scoring rubric
 
 | Criterion | Weight | thất bại (failure / 실패) example |
 |---|---:|---|
@@ -413,12 +437,14 @@ Phần “17. Scoring rubric” nối kiến thức trước với nội dung s�
 
 Điểm đạt tối thiểu `80/100`; point-in-time documentation hoặc qualifying-gate lập luận (reasoning / 추론) không được thất bại (fail / 실패).
 
-## 18. Đọc tiếp
-Phần “18. Đọc tiếp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Lab 08 — Hedge Accounting Documentation ranh giới (boundary / 경계)**, **18. Đọc tiếp** tiếp nhận điểm tựa từ **17. Scoring rubric** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## 18. Đọc tiếp
 
 - [Economic Hedge vs Hedge Accounting](../90_connections/02_ECONOMIC_HEDGE_VS_HEDGE_ACCOUNTING.md)
 - [Institutional FX Hedging Case Studies](../60_institutional_hedging_cases/README.md)
 - [Case 01 — Korean exporter](../60_institutional_hedging_cases/01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md)
 - [Case 02 — Korean importer](../60_institutional_hedging_cases/02_KOREAN_IMPORTER_USD_PAYABLE_HEDGE.md)
 - [Case 04 — Cross-currency funding](../60_institutional_hedging_cases/04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md)
+
+> **Bàn giao:** Sau **18. Đọc tiếp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
