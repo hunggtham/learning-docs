@@ -1,7 +1,6 @@
 # Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web
 
-> **Mạch đọc:** Đọc **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hấp dẫn có một đặc tính đặc biệt: overdensity có thể tự khuếch đại** sang **Phân tích Jeans: nhiễu loạn một môi trường gần đồng nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bất ổn hấp dẫn và hình thành cấu trúc**. Route đi từ density perturbation → Jeans criterion → gravitational growth → collapse/fragmentation → stars/galaxies/cosmic web, để cấu trúc lớn nối với nhiễu loạn nhỏ.
 
 ## Hấp dẫn có một đặc tính đặc biệt: overdensity có thể tự khuếch đại
 
@@ -10,6 +9,8 @@ Trong chất khí thông thường, áp suất có xu hướng san bằng chênh
 Cạnh tranh giữa **áp suất hoặc cơ chế nâng đỡ** và **tự hấp dẫn (self-gravity)** quyết định một đám mây sẽ ổn định, dao động hay sụp đổ.
 
 Bất ổn hấp dẫn (gravitational instability / 중력 불안정성) vì vậy là cầu nối tự nhiên giữa cơ học chất lưu, nhiệt động lực học và vật lý thiên văn.
+
+> **Chuyển mạch:** Trong **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Phân tích Jeans: nhiễu loạn một môi trường gần đồng nhất** tiếp nhận điểm tựa từ **Hấp dẫn có một đặc tính đặc biệt: overdensity có thể tự khuếch đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ tán sắc Jeans** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân tích Jeans: nhiễu loạn một môi trường gần đồng nhất
 
@@ -58,6 +59,8 @@ ta có
 \delta P=c_s^2\delta\rho.
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Quan hệ tán sắc Jeans** tiếp nhận điểm tựa từ **Phân tích Jeans: nhiễu loạn một môi trường gần đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chiều dài Jeans** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quan hệ tán sắc Jeans
 
 Thử nghiệm nhiễu loạn sóng phẳng
@@ -92,6 +95,8 @@ c_s^2k^2<4\pi G\rho_0,
 
 thì `\omega^2<0`: `\omega` trở thành số ảo và một nghiệm tăng theo hàm mũ xuất hiện. Đây là dấu hiệu bắt đầu sụp đổ hấp dẫn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Chiều dài Jeans** tiếp nhận điểm tựa từ **Quan hệ tán sắc Jeans** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng Jeans** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chiều dài Jeans
 
 Số sóng tới hạn là
@@ -114,6 +119,8 @@ Dưới các giả định lý tưởng:
 - cấu trúc nhỏ hơn có thể được áp suất nâng đỡ.
 
 Khí nóng có `c_s` lớn nên chiều dài Jeans lớn hơn. Khí đậm đặc hơn có thời gian hấp dẫn ngắn hơn và chiều dài Jeans nhỏ hơn.
+
+> **Chuyển mạch:** Trong **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Khối lượng Jeans** tiếp nhận điểm tựa từ **Chiều dài Jeans** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian rơi tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khối lượng Jeans
 
@@ -142,6 +149,8 @@ Làm lạnh khí giảm áp suất nhiệt và giảm `M_J`, cho phép đám mâ
 
 Do đó hóa học làm lạnh, bụi, phân tử và bức xạ đều có ảnh hưởng trực tiếp tới hình thành sao.
 
+> **Chuyển mạch:** Ở chặng này của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Thời gian rơi tự do** tiếp nhận điểm tựa từ **Khối lượng Jeans** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý virial và vì sao co lại có thể làm khí nóng hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thời gian rơi tự do
 
 Tự hấp dẫn tạo một thang thời gian tự nhiên
@@ -160,6 +169,8 @@ Vùng mật độ cao có thời gian rơi tự do ngắn hơn. Để hiểu ti�
 - thời gian quay;
 - thời gian phản hồi (feedback / 피드백) từ sao.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Định lý virial và vì sao co lại có thể làm khí nóng hơn** tiếp nhận điểm tựa từ **Thời gian rơi tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen động lượng và sự hình thành đĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Định lý virial và vì sao co lại có thể làm khí nóng hơn
 
 Với hệ tự hấp dẫn gần cân bằng,
@@ -175,6 +186,8 @@ Nếu hệ bức xạ năng lượng ra ngoài, tổng năng lượng trở nên
 Đây là trực giác của **nhiệt dung âm** trong một số hệ tự hấp dẫn: mất năng lượng có thể làm nhiệt độ bên trong tăng.
 
 Do đó sụp đổ không đồng nghĩa với khí phải lạnh đi. Làm lạnh bức xạ cho phép hệ tiếp tục co, nhưng quá trình co có thể đồng thời sinh nhiệt.
+
+> **Chuyển mạch:** Trong **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Mômen động lượng và sự hình thành đĩa** tiếp nhận điểm tựa từ **Định lý virial và vì sao co lại có thể làm khí nóng hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ trường trong đám mây phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mômen động lượng và sự hình thành đĩa
 
@@ -192,6 +205,8 @@ Nếu bán kính giảm mà mômen động lượng gần bảo toàn, tốc đ�
 
 Đây là lý do hình thành sao và accretion disk không thể được hiểu chỉ bằng “gravity kéo mọi thứ vào tâm”.
 
+> **Chuyển mạch:** Ở chặng này của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Từ trường trong đám mây phân tử** tiếp nhận điểm tựa từ **Mômen động lượng và sự hình thành đĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dòng rối vừa chống sụp đổ vừa tạo vùng sụp đổ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ trường trong đám mây phân tử
 
 Ngay cả một phần ion hóa nhỏ cũng có thể ghép khí với từ trường.
@@ -201,6 +216,8 @@ Ngay cả một phần ion hóa nhỏ cũng có thể ghép khí với từ trư
 Trong khí ion hóa một phần, ambipolar diffusion cho phép hạt trung hòa trôi tương đối so với ion và đường sức từ.
 
 Vì vậy tiêu chuẩn Jeans chỉ là baseline. Lý thuyết hình thành sao thực cần thêm từ trường, turbulence, hóa học và radiation phản hồi (feedback / 피드백).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Dòng rối vừa chống sụp đổ vừa tạo vùng sụp đổ** tiếp nhận điểm tựa từ **Từ trường trong đám mây phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ nhiễu loạn nguyên thủy tới cấu trúc vũ trụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dòng rối vừa chống sụp đổ vừa tạo vùng sụp đổ
 
@@ -214,6 +231,8 @@ Do đó hai câu:
 - “turbulence kích hoạt hình thành sao”
 
 không mâu thuẫn. Tác dụng phụ thuộc thang đo và cấu trúc dòng cục bộ.
+
+> **Chuyển mạch:** Trong **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Từ nhiễu loạn nguyên thủy tới cấu trúc vũ trụ** tiếp nhận điểm tựa từ **Dòng rối vừa chống sụp đổ vừa tạo vùng sụp đổ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật chất tối và hình thành cấu trúc phân cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ nhiễu loạn nguyên thủy tới cấu trúc vũ trụ
 
@@ -248,6 +267,8 @@ Trong Vũ trụ Einstein–de Sitter lý tưởng, chế độ (mode / 모드) t
 \delta\propto a(t).
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Vật chất tối và hình thành cấu trúc phân cấp** tiếp nhận điểm tựa từ **Từ nhiễu loạn nguyên thủy tới cấu trúc vũ trụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vật chất tối và hình thành cấu trúc phân cấp
 
 Cold dark matter có áp suất hiệu dụng rất nhỏ trên các thang liên quan nên có thể kết tụ hấp dẫn sớm.
@@ -257,6 +278,8 @@ Halo vật chất tối tạo giếng thế; khí baryon rơi vào, shock, làm 
 Trong mô hình phân cấp, các halo nhỏ hình thành trước rồi hợp nhất thành hệ lớn hơn.
 
 Cosmic web gồm sheet, filament, nút (node / 노드) và void xuất hiện từ sự sụp đổ hấp dẫn không đẳng hướng của trường nhiễu loạn ban đầu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Phổ công suất** tiếp nhận điểm tựa từ **Vật chất tối và hình thành cấu trúc phân cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Baryon Acoustic Oscillations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phổ công suất
 
@@ -277,6 +300,8 @@ Phổ nguyên thủy được biến đổi bởi vật lý bức xạ–vật c
 
 Quan sát clustering thiên hà, weak lensing và CMB dùng `P(k)` hoặc các đại lượng liên hệ để ràng buộc mô hình.
 
+> **Chuyển mạch:** Trong **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Baryon Acoustic Oscillations** tiếp nhận điểm tựa từ **Phổ công suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi lý thuyết tuyến tính thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Baryon Acoustic Oscillations
 
 Trước recombination, baryon và photon tạo plasma ghép có sóng âm.
@@ -293,6 +318,8 @@ sóng âm plasma sơ khai
 → phân bố vật chất
 → clustering thiên hà thời kỳ muộn
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Khi lý thuyết tuyến tính thất bại** tiếp nhận điểm tựa từ **Baryon Acoustic Oscillations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô phỏng N-body** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi lý thuyết tuyến tính thất bại
 
@@ -312,6 +339,8 @@ Khi `\delta` tiến tới bậc 1, các chế độ (mode / 모드) bắt đầu
 - hydrodynamic cosmological simulation.
 
 Một halo virial hóa không tiếp tục co vô hạn vì chuyển động ngẫu nhiên của hạt, mômen động lượng và cấu trúc động lực tạo hỗ trợ hiệu dụng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Mô phỏng N-body** tiếp nhận điểm tựa từ **Khi lý thuyết tuyến tính thất bại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ định lượng: vì sao khí lạnh và đậm đặc dễ sụp đổ hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô phỏng N-body
 
@@ -334,6 +363,8 @@ Mô phỏng phải cân bằng:
 - kích thước hộp.
 
 Một cosmic web nhìn đẹp không tự động chứng minh mô phỏng đã hội tụ hoặc mô hình vật lý đúng.
+
+> **Chuyển mạch:** Trong **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Mô phỏng N-body** cho ta quy tắc; **Ví dụ định lượng: vì sao khí lạnh và đậm đặc dễ sụp đổ hơn?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **“Jeans swindle” và giới hạn của derivation đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ định lượng: vì sao khí lạnh và đậm đặc dễ sụp đổ hơn?
 
@@ -360,6 +391,8 @@ Tổng hợp hai hiệu ứng, khối lượng Jeans giảm khoảng 80 lần.
 
 Làm lạnh và nén vì vậy có thể tạo runaway fragmentation rất hiệu quả.
 
+> **Chuyển mạch:** Ở chặng này của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, trường hợp ở **Ví dụ định lượng: vì sao khí lạnh và đậm đặc dễ sụp đổ hơn?** cho thấy quy tắc hoạt động; **“Jeans swindle” và giới hạn của derivation đơn giản** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “Jeans swindle” và giới hạn của derivation đơn giản
 
 Một môi trường tự hấp dẫn đồng nhất vô hạn có thế hấp dẫn nền không xác định tốt. Phân tích Jeans giáo khoa thực chất bỏ qua trường nền rồi chỉ xét nhiễu loạn.
@@ -377,6 +410,8 @@ Trong cosmology, perturbation lý thuyết (theory / 이론) trên nền FLRW x�
 
 Vì vậy Jeans criterion là **diagnostic về thang**, không phải quy tắc yes/no tuyệt đối cho mọi đám mây.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **“Jeans swindle” và giới hạn của derivation đơn giản** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Gravity tạo phản hồi (feedback / 피드백) dương cho overdensity. Áp suất, velocity dispersion, mômen động lượng, từ trường và cosmic expansion tạo các cơ chế chống hoặc làm chậm collapse.
@@ -390,6 +425,8 @@ sound / cooling / rotation / magnetic support / Hubble expansion
 ```
 
 Jeans length là biểu thức đơn giản nhất của cuộc cạnh tranh này.
+
+> **Chuyển mạch:** Trong **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -409,10 +446,12 @@ Không. Nó là sự tăng trưởng hấp dẫn của nhiễu loạn ban đầu
 
 Không. Nó đến từ mô hình lý tưởng và chỉ là thang tham khảo khi nhiều cơ chế khác cùng tồn tại.
 
+> **Chuyển mạch:** Ở chặng này của **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học chất lưu](../03_continuum/00_fluids.md), [Hấp dẫn](../01_mechanics/06_gravitation_orbits.md), [Ensemble và thăng giáng](../04_thermal_statistical/03_ensembles_partition_functions.md), [Vũ trụ học](01_galaxies_cosmology.md).
 
 **Liên hệ tiếp:** [Sao và thiên thể đặc](00_stars_compact_objects.md), [Vũ trụ sơ khai](03_early_universe_dark_components.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Suy luận dữ liệu](../12_experimental_computational/03_data_inference_inverse_problems.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 stars compact objects](./00_stars_compact_objects.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

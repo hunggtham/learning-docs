@@ -1,7 +1,6 @@
 # Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)
 
-> **Mạch đọc:** Đọc **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Hai electron giống nhau” có nghĩa sâu hơn giống hai viên bi giống nhau** sang **Pauli exclusion nguyên lý (principle) xuất hiện từ antisymmetry**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hạt đồng nhất và thống kê lượng tử**. Route đi từ exchange symmetry → boson/fermion states → Pauli exclusion → occupation statistics → many-body consequences, để “giống nhau” nối với cấu trúc Hilbert space.
 
 ## “Hai electron giống nhau” có nghĩa sâu hơn giống hai viên bi giống nhau
 
@@ -31,6 +30,8 @@ các hạt với half-integer spin là **fermions (Fermion / 페르미온)** và
 
 liên hệ (connection) giữa spin và thống kê (statistics) là spin–thống kê theorem của tương đối tính (relativistic) lượng tử (quantum) trường (field) lý thuyết (theory / 이론); nonrelativistic cơ học lượng tử thường lấy quy tắc (rule / 규칙) này làm đầu vào (input / 입력).
 
+> **Chuyển mạch:** Trong **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Pauli exclusion nguyên lý (principle) xuất hiện từ antisymmetry** tiếp nhận điểm tựa từ **“Hai electron giống nhau” có nghĩa sâu hơn giống hai viên bi giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spin giúp nhiều electron ở cùng không gian (spatial) orbital như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Pauli exclusion nguyên lý (principle) xuất hiện từ antisymmetry
 
 Nếu hai identical fermions cố ở cùng single-hạt trạng thái `\phi`, antisymmetric combination là
@@ -44,11 +45,15 @@ hàm sóng bằng không (zero) nghĩa cấu hình (configuration / 구성) đó
 
 Pauli nguyên lý không phải một lực đẩy mới giữa electron. Nó là ràng buộc (constraint / 제약조건) về cấu trúc (structure / 구조) của allowed many-fermion các trạng thái. Hệ quả vĩ mô (macroscopic) của ràng buộc này lại cực lớn: electron shell cấu trúc của nguyên tử (atom), tuần hoàn (periodic) bảng (table / 테이블), độ ổn định (stability) và kích thước của vật chất (matter), electron suy biến (degeneracy) áp suất (pressure) trong white dwarf, và Fermi bề mặt (surface) của các kim loại (metals).
 
+> **Chuyển mạch:** Ở chặng này của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Spin giúp nhiều electron ở cùng không gian (spatial) orbital như thế nào?** tiếp nhận điểm tựa từ **Pauli exclusion nguyên lý (principle) xuất hiện từ antisymmetry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Slater determinant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Spin giúp nhiều electron ở cùng không gian (spatial) orbital như thế nào?
 
 Một electron trạng thái gồm cả không gian part và spin part. Hai electron trong cùng atomic không gian orbital có thể tồn tại nếu spin trạng thái tổng thể khiến full hàm sóng antisymmetric. Ground trạng thái của heli (helium), chẳng hạn, có không gian part symmetric và spin singlet antisymmetric.
 
 Điều này giải thích vì sao nói “một orbital chứa tối đa hai electron có opposite spin” chỉ là simplified quy tắc (rule / 규칙) của cấu trúc nguyên tử (atomic structure). quy tắc (rule / 규칙) sâu hơn là tổng (total) fermionic trạng thái phải antisymmetric khi trao đổi bất kỳ hai electron.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Slater determinant** tiếp nhận điểm tựa từ **Spin giúp nhiều electron ở cùng không gian (spatial) orbital như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fermions ở hữu hạn (finite) nhiệt độ (temperature): Fermi–Dirac phân bố (distribution)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Slater determinant
 
@@ -66,6 +71,8 @@ Một electron trạng thái gồm cả không gian part và spin part. Hai elec
 
 Nếu hai single-hạt các trạng thái giống nhau, hai columns giống nhau và determinant bằng không — Pauli nguyên lý xuất hiện tự động. Hartree–Fock và nhiều phương pháp điện tử (electronic)-cấu trúc bắt đầu từ cấu trúc này rồi thêm các tương quan (correlations) vượt beyond một determinant duy nhất.
 
+> **Chuyển mạch:** Trong **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Fermions ở hữu hạn (finite) nhiệt độ (temperature): Fermi–Dirac phân bố (distribution)** tiếp nhận điểm tựa từ **Slater determinant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bosons: nhiều hạt có thể cùng chiếm một trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Fermions ở hữu hạn (finite) nhiệt độ (temperature): Fermi–Dirac phân bố (distribution)
 
 Ở cân bằng nhiệt (thermal equilibrium), trung bình (average) occupation của single-hạt năng lượng (energy / 에너지) mức (level / 수준) `E` cho noninteracting fermions là
@@ -80,6 +87,8 @@ Dấu `+1` ở denominator phản ánh exclusion: occupation của một lượn
 
 Đây là lý do mô hình (model / 모델) “tất cả electron dẫn (conduction) cùng nhận nhiệt (thermal) năng lượng `k_BT` như cổ điển (classical) chất khí (gas)” thất bại.
 
+> **Chuyển mạch:** Ở chặng này của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Bosons: nhiều hạt có thể cùng chiếm một trạng thái** tiếp nhận điểm tựa từ **Fermions ở hữu hạn (finite) nhiệt độ (temperature): Fermi–Dirac phân bố (distribution)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **giới hạn cổ điển (Classical limit): tại sao đôi khi Maxwell–Boltzmann vẫn đúng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bosons: nhiều hạt có thể cùng chiếm một trạng thái
 
 Với bosons, symmetric hàm sóng không cấm nhiều các hạt cùng single-hạt trạng thái. Bose–Einstein occupation là
@@ -91,6 +100,8 @@ n(E)=\frac{1}{e^{(E-\mu)/(k_B T)}-1}.
 Dấu `-1` làm occupation có thể rất lớn khi denominator nhỏ. Điều này mở đường cho tập thể (collective) occupation như Bose–Einstein condensation (BEC / 보스-아인슈타인 응축) trong một số hệ bosonic ở low nhiệt độ.
 
 Photon cũng là boson. Vì photon number không được bảo toàn trong cân bằng nhiệt theo cách hạt number của nguyên tử được bảo toàn, hóa học thế của photon chất khí bằng không. Planck blackbody phổ (spectrum) là direct consequence của quantized điện từ (electromagnetic) các chế độ (mode / 모드) (modes) + Bose thống kê.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Bosons: nhiều hạt có thể cùng chiếm một trạng thái** đã nêu tiêu chí phân biệt, còn **giới hạn cổ điển (Classical limit): tại sao đôi khi Maxwell–Boltzmann vẫn đúng?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **suy biến áp suất: áp suất không cần chuyển động nhiệt (thermal motion)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## giới hạn cổ điển (Classical limit): tại sao đôi khi Maxwell–Boltzmann vẫn đúng?
 
@@ -104,25 +115,35 @@ nhiệt de Broglie bước sóng cho khối lượng `m` có thang (scale)
 
 Khi `n\lambda_{th}^3\ll1`, chất khí thường gần cổ điển. Khi quantity này approach hoặc vượt thứ tự (order / 순서) one, wavefunctions overlap đáng kể và thống kê lượng tử trở thành thiết yếu.
 
+> **Chuyển mạch:** Trong **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **giới hạn cổ điển (Classical limit): tại sao đôi khi Maxwell–Boltzmann vẫn đúng?** đã nêu tiêu chí phân biệt, còn **suy biến áp suất: áp suất không cần chuyển động nhiệt (thermal motion)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **trao đổi tương tác (interaction / 상호작용) và từ tính (magnetism)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## suy biến áp suất: áp suất không cần chuyển động nhiệt (thermal motion)
 
 Fermion chất khí ở `T=0` vẫn có nonzero động lượng (momentum) phân bố vì Pauli nguyên lý buộc các hạt lấp nhiều các trạng thái đến Fermi động lượng. Vì vậy có **suy biến áp suất (축퇴압)** ngay cả không có nhiệt áp suất cổ điển.
 
 Trong white dwarf, electron suy biến áp suất chống hấp dẫn (gravity). Trong sao neutron (neutron star), neutron suy biến và các tương tác hạt nhân (nuclear interactions) đóng vai trò. Khi relativity trở nên quan trọng, phương trình (equation) of trạng thái thay đổi; đây là liên hệ trực tiếp giữa thống kê lượng tử, thuyết tương đối hẹp (special relativity) và vật lý thiên văn (astrophysics).
 
+> **Chuyển mạch:** Ở chặng này của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **trao đổi tương tác (interaction / 상호작용) và từ tính (magnetism)** tiếp nhận điểm tựa từ **suy biến áp suất: áp suất không cần chuyển động nhiệt (thermal motion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **rối lượng tử (Entanglement) vì các hạt đồng nhất cần đọc cẩn thận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## trao đổi tương tác (interaction / 상호작용) và từ tính (magnetism)
 
 Antisymmetry cũng làm không gian tương quan (correlation) phụ thuộc spin cấu hình. Khi Coulomb tương tác có mặt, trao đổi cấu trúc ảnh hưởng năng lượng dù không có một “trao đổi lực (force)” cổ điển riêng. Trong các nguyên tử (atoms) nó góp vào Hund's rules; trong các chất rắn (solids) nó là phần nền của ferromagnetic/antiferromagnetic thứ tự (ordering / 순서) và many-body các mô hình (models / 모델들).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **rối lượng tử (Entanglement) vì các hạt đồng nhất cần đọc cẩn thận** tiếp nhận điểm tựa từ **trao đổi tương tác (interaction / 상호작용) và từ tính (magnetism)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## rối lượng tử (Entanglement) vì các hạt đồng nhất cần đọc cẩn thận
 
 Symmetrization/antisymmetrization tạo các tương quan do indistinguishability, nhưng không phải mọi trao đổi tương quan đều tương đương operational rối lượng tử dùng trong lượng tử thông tin (information / 정보). Khi nói rối lượng tử giữa các hạt đồng nhất, cần chỉ rõ các chế độ (mode / 모드), accessible các đại lượng quan sát (observables) và partition của hệ (system).
+
+> **Chuyển mạch:** Trong **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **rối lượng tử (Entanglement) vì các hạt đồng nhất cần đọc cẩn thận** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > thống kê lượng tử không phải là cách “đếm hạt” được thêm sau cơ học lượng tử. Nó là ràng buộc trực tiếp lên hình học (geometry / 기하학) của many-hạt Hilbert không gian (space / 공간). Bosons và fermions có allowed không gian trạng thái (state space) khác nhau, nên từ cùng những lực cơ bản có thể sinh ra vĩ mô vật chất rất khác.
 
 Pauli nguyên lý giải thích vì sao vật chất không sụp đổ (collapse) thành một orbital duy nhất; Bose thống kê giải thích vì sao nhiều quanta có thể hành xử collectively trong cùng chế độ (mode / 모드) (mode). Đây là một trong những cầu nối mạnh nhất từ vi mô (microscopic) lượng tử rules đến properties của vật chất hàng ngày.
+
+> **Chuyển mạch:** Ở chặng này của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -138,10 +159,12 @@ Không tuyệt đối. quy tắc (rule / 규칙) cấm cùng complete one-hạt 
 
 Sai. Boson/fermion classification nói về trao đổi đối xứng, không nói tương tác bằng không. Bosons có thể tương tác mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt đồng nhất và thống kê lượng tử: fermion, boson, Pauli và many-body các trạng thái (states)**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Quantum foundations](00_quantum_foundations.md), [Angular momentum & spin](02_angular_momentum_spin.md), [Statistical mechanics](../04_thermal_statistical/01_entropy_statistical_mechanics.md).
 
 **Liên hệ tiếp:** [Atomic Physics](../09_atomic_nuclear_particle/00_atomic_physics.md), [Crystals & bands](../10_condensed_matter_devices/00_crystals_bands.md), [Magnetism & superconductivity](../10_condensed_matter_devices/02_transport_magnetism_superconductivity.md), [Stars & compact objects](../11_astrophysics_cosmology/00_stars_compact_objects.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

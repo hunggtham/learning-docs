@@ -1,7 +1,6 @@
 # Sức căng bề mặt, thấm ướt và mao dẫn
 
-> **Mạch đọc:** Đọc **Sức căng bề mặt, thấm ướt và mao dẫn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao tạo bề mặt cần năng lượng?** sang **Vì sao giọt nhỏ gần hình cầu?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sức căng bề mặt, thấm ướt và mao dẫn**. Route đi từ interfacial energy → curvature/pressure → wetting/contact angle → capillary rise → droplets and biological/material effects, để bề mặt nối năng lượng với hình học.
 
 Bề mặt của chất lỏng có hành vi khác phần vật chất nằm sâu bên trong vì môi trường quanh các phân tử ở mặt phân cách không đối xứng. Từ sự bất đối xứng vi mô đó xuất hiện các hiện tượng vĩ mô như giọt nước gần hình cầu, côn trùng đứng trên mặt nước, chất lỏng leo lên ống nhỏ, mực bám giấy và sự hình thành bọt.
 
@@ -25,6 +24,8 @@ nếu `\gamma` gần như không đổi. Cách nhìn lực nói rằng mặt ph�
 
 Hai cách nhìn là cùng một vật lý, vì `1\,J=1\,N\cdot m`.
 
+> **Chuyển mạch:** Trong **Sức căng bề mặt, thấm ướt và mao dẫn**, **Vì sao giọt nhỏ gần hình cầu?** tiếp nhận điểm tựa từ **Vì sao tạo bề mặt cần năng lượng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ cong và chênh lệch áp suất: phương trình Young–Laplace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao giọt nhỏ gần hình cầu?
 
 Với thể tích cố định, hình cầu có diện tích bề mặt nhỏ nhất. Nếu năng lượng bề mặt xấp xỉ
@@ -44,6 +45,8 @@ Bo=\frac{\Delta\rho\,gL^2}{\gamma}.
 ```
 
 Khi `Bo\ll1`, sức căng bề mặt chi phối hình dạng. Khi `Bo\gg1`, trọng lực quan trọng hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Độ cong và chênh lệch áp suất: phương trình Young–Laplace** tiếp nhận điểm tựa từ **Vì sao giọt nhỏ gần hình cầu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy ra Young–Laplace cho giọt cầu bằng cân bằng lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ cong và chênh lệch áp suất: phương trình Young–Laplace
 
@@ -75,6 +78,8 @@ Với bong bóng xà phòng mỏng có hai mặt phân cách gần giống nhau,
 
 Kết quả cho thấy bong bóng nhỏ có áp suất bên trong lớn hơn bong bóng lớn. Nếu hai bong bóng nối với nhau, khí có xu hướng đi từ bong bóng nhỏ sang bong bóng lớn, khiến bong bóng nhỏ co lại thêm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Suy ra Young–Laplace cho giọt cầu bằng cân bằng lực** tiếp nhận điểm tựa từ **Độ cong và chênh lệch áp suất: phương trình Young–Laplace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thấm ướt và góc tiếp xúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Suy ra Young–Laplace cho giọt cầu bằng cân bằng lực
 
 Cắt tưởng tượng giọt cầu thành hai nửa. Chênh lệch áp suất tạo lực trên mặt cắt tròn:
@@ -103,6 +108,8 @@ suy ra
 
 Suy dẫn này cho thấy chênh lệch áp suất xuất hiện vì lực bề mặt tác dụng trên chu vi phải cân bằng lực áp suất tác dụng trên diện tích.
 
+> **Chuyển mạch:** Trong **Sức căng bề mặt, thấm ướt và mao dẫn**, **Thấm ướt và góc tiếp xúc** tiếp nhận điểm tựa từ **Suy ra Young–Laplace cho giọt cầu bằng cân bằng lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bề mặt kỵ nước và siêu kỵ nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thấm ướt và góc tiếp xúc
 
 Khi chất lỏng tiếp xúc với chất rắn và khí, có ba năng lượng mặt phân cách cạnh tranh:
@@ -121,11 +128,15 @@ Nếu `\theta` nhỏ, chất lỏng thấm ướt bề mặt tốt. Nếu `\thet
 
 Cách nói “nước thích kính” chỉ là ẩn dụ. Về vật lý, góc tiếp xúc là kết quả của sự cân bằng năng lượng bề mặt giữa các mặt phân cách.
 
+> **Chuyển mạch:** Ở chặng này của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Bề mặt kỵ nước và siêu kỵ nước** tiếp nhận điểm tựa từ **Thấm ướt và góc tiếp xúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mao dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bề mặt kỵ nước và siêu kỵ nước
 
 Trên bề mặt nhám, góc tiếp xúc biểu kiến có thể khác đáng kể bề mặt phẳng. Nếu chất lỏng điền đầy cấu trúc nhám, mô hình Wenzel có thể phù hợp. Nếu giọt nằm trên đỉnh cấu trúc và giữ túi khí bên dưới, trạng thái Cassie–Baxter có thể xuất hiện.
 
 Đây là cơ sở của lá sen, lớp phủ chống bám nước và nhiều bề mặt chức năng. Điều quan trọng là tính thấm ướt không chỉ phụ thuộc “vật liệu là gì” mà còn phụ thuộc cấu trúc bề mặt ở thang vi mô.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Mao dẫn** tiếp nhận điểm tựa từ **Bề mặt kỵ nước và siêu kỵ nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao hiệu ứng bề mặt mạnh ở vi mô?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mao dẫn
 
@@ -158,6 +169,8 @@ h=\frac{2\gamma\cos\theta}{\rho gr}.
 
 Nếu `\cos\theta<0`, chất lỏng bị hạ xuống thay vì dâng lên. Vì vậy mao dẫn phụ thuộc cả sức căng bề mặt và khả năng thấm ướt.
 
+> **Chuyển mạch:** Trong **Sức căng bề mặt, thấm ướt và mao dẫn**, **Vì sao hiệu ứng bề mặt mạnh ở vi mô?** tiếp nhận điểm tựa từ **Mao dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số capillary và cạnh tranh với độ nhớt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao hiệu ứng bề mặt mạnh ở vi mô?
 
 Diện tích tỉ lệ gần với `L^2`, còn thể tích và khối lượng tỉ lệ với `L^3`. Khi giảm kích thước đặc trưng `L`, tỉ số diện tích trên thể tích tăng như
@@ -167,6 +180,8 @@ Diện tích tỉ lệ gần với `L^2`, còn thể tích và khối lượng t
 ```
 
 Do đó ở thang micromet, lực bề mặt có thể áp đảo trọng lực. Đây là lý do trực giác từ dòng nước quy mô lớn không còn phù hợp hoàn toàn trong vi lưu (microfluidics).
+
+> **Chuyển mạch:** Ở chặng này của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Số capillary và cạnh tranh với độ nhớt** tiếp nhận điểm tựa từ **Vì sao hiệu ứng bề mặt mạnh ở vi mô?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp suất mao dẫn trong lỗ rỗng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Số capillary và cạnh tranh với độ nhớt
 
@@ -180,11 +195,15 @@ Ca=\frac{\mu v}{\gamma}.
 
 Trong vi lưu, `Bo` và `Ca` giúp quyết định liệu hình học chịu chi phối bởi trọng lực, độ nhớt hay bề mặt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Áp suất mao dẫn trong lỗ rỗng** tiếp nhận điểm tựa từ **Số capillary và cạnh tranh với độ nhớt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động lực học thấm vào ống nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Áp suất mao dẫn trong lỗ rỗng
 
 Trong vật liệu xốp, bán kính cong của mặt phân cách trong các lỗ nhỏ tạo áp suất mao dẫn. Cơ chế này tham gia vào việc nước di chuyển trong đất, giấy, vải, bê tông và mô sinh học.
 
 Tuy nhiên không nên đơn giản hóa toàn bộ việc nước đi lên trong cây thành “chỉ nhờ mao dẫn”. Trong cây cao, sức căng trong cột nước, bốc hơi ở lá và cơ chế cohesion–tension đóng vai trò thiết yếu.
+
+> **Chuyển mạch:** Trong **Sức căng bề mặt, thấm ướt và mao dẫn**, **Động lực học thấm vào ống nhỏ** tiếp nhận điểm tựa từ **Áp suất mao dẫn trong lỗ rỗng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Surfactant và sự thay đổi sức căng bề mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động lực học thấm vào ống nhỏ
 
@@ -196,6 +215,8 @@ L^2\propto t.
 
 Điều này xuất hiện vì áp suất mao dẫn kéo chất lỏng vào, còn ma sát nhớt tăng khi cột chất lỏng dài hơn. Kết quả là quãng đường thấm tăng theo căn thời gian thay vì tuyến tính theo thời gian.
 
+> **Chuyển mạch:** Ở chặng này của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Surfactant và sự thay đổi sức căng bề mặt** tiếp nhận điểm tựa từ **Động lực học thấm vào ống nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Surfactant và sự thay đổi sức căng bề mặt
 
 Chất hoạt động bề mặt (surfactant) tập trung ở mặt phân cách và có thể làm giảm `\gamma`. Xà phòng vì vậy giúp nước dễ lan trên bề mặt và ổn định bọt.
@@ -204,9 +225,13 @@ Nếu nồng độ surfactant không đều, độ dốc (gradient / 기울기) 
 
 Hiệu ứng này xuất hiện trong sấy màng mỏng, hàn, giọt bay hơi và “nước mắt rượu vang”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức căng bề mặt, thấm ướt và mao dẫn**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Surfactant và sự thay đổi sức căng bề mặt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Mặt phân cách không phải một lớp trang trí không có động lực học. Nó mang năng lượng, tạo lực và ghép hình học độ cong với áp suất. Ở thang nhỏ, nơi tỉ số diện tích/thể tích lớn, vật lý bề mặt có thể trở thành cơ chế chi phối toàn hệ.
+
+> **Chuyển mạch:** Trong **Sức căng bề mặt, thấm ướt và mao dẫn**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -222,10 +247,12 @@ Không. Dấu của `\cos\theta` quyết định chất lỏng dâng hay hạ so
 
 Chỉ khi sức căng bề mặt chi phối. Trọng lực, dòng chảy, điện trường hoặc tiếp xúc với bề mặt rắn có thể làm giọt biến dạng mạnh.
 
+> **Chuyển mạch:** Ở chặng này của **Sức căng bề mặt, thấm ướt và mao dẫn**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học chất lưu](00_fluids.md), [Công và năng lượng](../01_mechanics/03_work_energy_power.md).
 
 **Liên hệ tiếp:** [Hiện tượng vận chuyển](02_transport_diffusion_heat.md), [Dòng rối, lưu biến và vật chất mềm](03_turbulence_rheology_soft_matter.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 fluids](./00_fluids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
