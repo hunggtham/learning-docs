@@ -1,6 +1,6 @@
 # Advanced Computation & thông tin (information / 정보)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced Computation & thông tin (information / 정보)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) chapters** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Lập luận (reasoning / 추론) đường dẫn (path / 경로)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Advanced Computation & thông tin (information / 정보)**. Route học đi từ formal models/computability → automata, information theory và randomness → complexity/proofs → boundaries, để mỗi chapter nêu rõ mô hình, tài nguyên và giới hạn được kế thừa.
 
 Thư viện (library / 라이브러리) này mở rộng từ [foundation Computation & Information](../../basic/00_computation_information/00_what_computer_science_studies.md). Các chapter tập trung vào formal lập luận (reasoning / 추론): computer có thể biểu diễn gì, tính được gì, kiểm chứng được gì, tài nguyên (resource / 자원) nào giới hạn computation, bất định (uncertainty / 불확실성) được đo thế nào và tương tác (interaction / 상호작용)/randomness thay đổi xác minh (verification / 확인) power ra sao.
 

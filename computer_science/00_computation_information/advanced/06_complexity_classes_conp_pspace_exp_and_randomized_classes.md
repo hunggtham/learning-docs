@@ -1,6 +1,6 @@
 # Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. độ phức tạp (complexity / 복잡도) là asymptotic tài nguyên (resource / 자원) của bài toán (problem / 문제) family** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes**. Route đi từ resource/asymptotic scaling → P/NP/co-NP → PSPACE/EXP → randomized classes và reductions, để so sánh lớp bằng tài nguyên và phép biến đổi chứ không bằng ví dụ đơn lẻ.
 
 Khi nói một bài toán “khó”, ta cần hỏi **khó theo tài nguyên (resource / 자원) nào** và **đầu vào (input / 입력) tăng thì tài nguyên (resource / 자원) tăng theo hàm nào**. Một bài toán có thể cần rất nhiều thời gian (time / 시간) nhưng ít bộ nhớ (memory / 메모리); một bài khác có thể giải nhanh nếu chấp nhận xác suất lỗi rất nhỏ; một bài toán (problem / 문제) có certificate kiểm tra nhanh nhưng chưa biết cách tìm solution nhanh.
 

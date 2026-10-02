@@ -1,6 +1,6 @@
 # Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ “dữ liệu dài” tới “mô tả ngắn”** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **2. Tại sao phải cố định universal machine** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**. Route đi từ string/mô tả → chương trình ngắn nhất và universal machine → compression/incompressibility → giới hạn tính toán và ứng dụng, để độ phức tạp mô tả được tách khỏi kích thước dữ liệu thô.
 
 Có những chuỗi dữ liệu nhìn rất dài nhưng thực ra chứa rất ít thông tin mới. Chuỗi `010101...` lặp lại một triệu lần có thể được mô tả bằng một chương trình rất ngắn: “in `01` năm trăm nghìn lần”. Ngược lại, một chuỗi bit được chọn ngẫu nhiên đủ dài thường không có mô tả nào ngắn hơn đáng kể so với chính nó.
 

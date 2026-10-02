@@ -1,6 +1,6 @@
 # Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. thông tin (information / 정보) bắt đầu từ surprise** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels**. Route đi từ surprise/entropy → mutual information và channel capacity → source/channel coding bounds → noisy transmission và decoding, để giới hạn lý thuyết quay về thiết kế truyền tin cụ thể.
 
 Một communication hệ thống (system / 시스템) phải trả lời hai câu hỏi khác nhau nhưng liên quan chặt chẽ: **có thể biểu diễn nguồn dữ liệu ngắn tới mức nào mà vẫn khôi phục được**, và **có thể truyền dữ liệu đáng tin cậy qua một kênh có nhiễu với tốc độ tới đâu**.
 

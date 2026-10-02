@@ -1,6 +1,6 @@
 # Randomness, entropy sources và computational unpredictability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Randomness, entropy sources và computational unpredictability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Deterministic computation không tự tạo entropy** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Randomness, entropy sources và computational unpredictability**. Route đi từ deterministic/pseudorandom → entropy source và extraction → unpredictability/conditioning → cryptographic randomness và failure modes, để API sinh số ngẫu nhiên luôn được đánh giá bằng nguồn và mô hình đe dọa.
 
 Hệ thống cần randomness cho session đơn vị từ (token / 토큰), cryptographic key, nonce, randomized thuật toán (algorithm / 알고리즘), sampling, tải (load / 로드) balancing, simulation và testing. Nhưng từ “random” thường che giấu nhiều đặc tả hợp đồng (contract / 계약) khác nhau.
 

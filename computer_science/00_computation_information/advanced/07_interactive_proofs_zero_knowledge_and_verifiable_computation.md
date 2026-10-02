@@ -1,6 +1,6 @@
 # Interactive proofs, zero-knowledge và verifiable computation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Interactive proofs, zero-knowledge và verifiable computation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Prover mạnh, verifier rẻ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Completeness và soundness** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Interactive proofs, zero-knowledge và verifiable computation**. Route đi từ prover/verifier → completeness và soundness → zero-knowledge → delegation/verifiable computation, để chứng minh tương tác được đọc cùng chi phí, riêng tư và khả năng kiểm tra.
 
 Trong NP-style xác minh (verification / 확인), prover đưa một certificate và verifier kiểm tra. Nhưng tương tác (interaction / 상호작용) tạo thêm khả năng: verifier có thể gửi challenge ngẫu nhiên, prover trả lời, rồi verifier dùng nhiều vòng để kiểm tra một claim mà không tự làm toàn bộ computation.
 
