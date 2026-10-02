@@ -1,7 +1,6 @@
 # Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)
 
-> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Phạm vi Round 9** sang **Batch 1 — đo lường (measurement / 측정) + hàm (function / 함수) các mô hình (models / 모델들)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phạm vi Round 9** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Batch 1 — đo lường (measurement / 측정) + hàm (function / 함수) các mô hình (models / 모델들)** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối quality audit round với coverage, semantic review và evidence, để vòng kiểm tra đo được lỗi còn lại thay vì chỉ đếm file.
 
 Round 9 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리) vẫn giữ **87 topic**; không thêm chapter mới chỉ để tăng coverage.
 
@@ -26,8 +25,7 @@ Round này kiểm tra (audit / 감사) các priority đã đánh dấu từ Roun
 
 Sau kiểm tra (audit / 감사), `05_mathematical_modeling_dimensional_analysis_and_scaling.md` **không được rewrite** vì nội dung đã đủ sâu và tương đối cân bằng với editorial tiêu chuẩn (standard / 표준). Round 9 chỉ sửa những tệp (file / 파일) thực sự có độ sâu (depth / 깊이) gap.
 
-
-> **Chuyển mạch:** Từ **Phạm vi Round 9**, ta sang **Batch 1 — đo lường (measurement / 측정) + hàm (function / 함수) các mô hình (models / 모델들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Phạm vi Round 9** nêu điều cần giải thích; **Batch 1 — đo lường (measurement / 측정) + hàm (function / 함수) các mô hình (models / 모델들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Batch 2 — tuyến tính (linear / 선형) Algebra hình học (geometry / 기하학) and thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 1 — đo lường (measurement / 측정) + hàm (function / 함수) các mô hình (models / 모델들)
 
@@ -114,8 +112,7 @@ series = accumulated state
 - generating-function intuition;
 - discrete điều khiển (control / 제어)/numerical iteration connections.
 
-
-> **Chuyển mạch:** Từ **Batch 1 — đo lường (measurement / 측정) + hàm (function / 함수) các mô hình (models / 모델들)**, ta sang **Batch 2 — tuyến tính (linear / 선형) Algebra hình học (geometry / 기하학) and thông tin (information / 정보)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Batch 1 — đo lường (measurement / 측정) + hàm (function / 함수) các mô hình (models / 모델들)** nêu điều cần giải thích; **Batch 2 — tuyến tính (linear / 선형) Algebra hình học (geometry / 기하학) and thông tin (information / 정보)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Batch 3 — Infinite Series + Taylor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 2 — tuyến tính (linear / 선형) Algebra hình học (geometry / 기하학) and thông tin (information / 정보)
 
@@ -173,8 +170,7 @@ conditioning→ reliability of recovery
 - PCA/low-rank compression;
 - null-space parameterization of các ràng buộc (constraints / 제약조건들).
 
-
-> **Chuyển mạch:** Từ **Batch 2 — tuyến tính (linear / 선형) Algebra hình học (geometry / 기하학) and thông tin (information / 정보)**, ta sang **Batch 3 — Infinite Series + Taylor** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Batch 3 — Infinite Series + Taylor** tiếp nhận điểm tựa từ **Batch 2 — tuyến tính (linear / 선형) Algebra hình học (geometry / 기하학) and thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch 4 — Conditional xác suất (probability / 확률) + Statistical suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 3 — Infinite Series + Taylor
 
@@ -229,8 +225,7 @@ Bản mới biến Taylor thành khung phần mềm (framework / 프레임워크
 - phạm vi (range / 범위) reduction và numerical evaluation;
 - complex singularity intuition cho radius of convergence.
 
-
-> **Chuyển mạch:** Từ **Batch 3 — Infinite Series + Taylor**, ta sang **Batch 4 — Conditional xác suất (probability / 확률) + Statistical suy luận (inference / 추론)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Batch 4 — Conditional xác suất (probability / 확률) + Statistical suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Batch 3 — Infinite Series + Taylor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) kết quả (result / 결과) after Round 9** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch 4 — Conditional xác suất (probability / 확률) + Statistical suy luận (inference / 추론)
 
@@ -292,8 +287,7 @@ Bản mới làm rõ suy luận (inference / 추론) là **bất định (uncert
 - confidence chuỗi (sequence / 시퀀스);
 - A/B testing, AI evaluation và Finance backtest connections.
 
-
-> **Chuyển mạch:** Từ **Batch 4 — Conditional xác suất (probability / 확률) + Statistical suy luận (inference / 추론)**, ta sang **độ sâu (depth / 깊이) kết quả (result / 결과) after Round 9** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Độ sâu (depth / 깊이) kết quả (result / 결과) after Round 9** tiếp nhận điểm tựa từ **Batch 4 — Conditional xác suất (probability / 확률) + Statistical suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chapters not rewritten in Round 9** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ sâu (depth / 깊이) kết quả (result / 결과) after Round 9
 
@@ -336,8 +330,7 @@ Probability
 → Bayesian / Frequentist Inference
 ```
 
-
-> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) kết quả (result / 결과) after Round 9**, ta sang **Chapters not rewritten in Round 9** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Chapters not rewritten in Round 9** tiếp nhận điểm tựa từ **Độ sâu (depth / 깊이) kết quả (result / 결과) after Round 9** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Priority cho Round 10** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chapters not rewritten in Round 9
 
@@ -350,8 +343,7 @@ Probability
 
 Đây là một nguyên tắc quan trọng của continuing kiểm tra (audit / 감사): **không sửa chapter chỉ vì nó nằm trong checklist**.
 
-
-> **Chuyển mạch:** Từ **Chapters not rewritten in Round 9**, ta sang **Priority cho Round 10** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Priority cho Round 10** tiếp nhận điểm tựa từ **Chapters not rewritten in Round 9** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Priority cho Round 10
 
@@ -376,8 +368,7 @@ Sau Round 9, các độ sâu (depth / 깊이) gaps đáng ưu tiên tiếp theo 
 
 Priority này không có nghĩa các chapter trên thiếu coverage. Chúng là các files còn ngắn hơn rõ rệt so với neighboring chapters hoặc đóng vai trò cầu nối (bridge / 브리지) quan trọng chưa đạt cùng editorial độ sâu (depth / 깊이).
 
-
-> **Chuyển mạch:** Từ **Priority cho Round 10**, ta sang **Kết luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 9: strengthen quantitative bridges and convergence lập luận (reasoning / 추론)**, **Kết luận** gom các mảnh từ **Priority cho Round 10** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết luận
 
@@ -385,4 +376,4 @@ Round 9 không thay đổi topology của thư viện (library / 라이브러리
 
 Mục tiêu tiếp tục không phải biến thư viện (library / 라이브러리) thành encyclopedia vô hạn, mà làm cho người đọc có thể đi từ intuition tới formalism rồi sang ứng dụng (application / 애플리케이션) mà không gặp black box lớn ở các chapter trung tâm.
 
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

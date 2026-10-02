@@ -1,7 +1,6 @@
 # Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature
 
-> **Mạch đọc:** Đọc **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. mô hình tuyến tính (linear model / 선형 모델) bắt đầu từ constant tỷ lệ (rate / 비율) of thay đổi (change / 변경)** sang **2. Vì sao constant slope tạo đường thẳng?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. mô hình tuyến tính (linear model / 선형 모델) bắt đầu từ constant tỷ lệ (rate / 비율) of thay đổi (change / 변경)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Vì sao constant slope tạo đường thẳng?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối linear/quadratic models với slope, curvature và roots, để mô hình hàm phản ánh quan hệ quan sát được.
 
 Tuyến tính (linear / 선형) và quadratic functions là hai families đầu tiên nên học thật sâu vì chúng tạo mô hình tư duy (mental model / 사고 모델) cho phần lớn calculus sau này.
 
@@ -45,6 +44,8 @@ m unit = KRW/GB
 
 Slope vì vậy là tỷ lệ (rate / 비율), không chỉ là “độ nghiêng của line”.
 
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **2. Vì sao constant slope tạo đường thẳng?** tiếp nhận điểm tựa từ **1. mô hình tuyến tính (linear model / 선형 모델) bắt đầu từ constant tỷ lệ (rate / 비율) of thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Intercept là baseline, nhưng chỉ khi baseline có meaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Vì sao constant slope tạo đường thẳng?
 
 Nếu mọi increment `\Delta x` tạo cùng đầu ra (output / 출력) increment
@@ -69,6 +70,8 @@ y=mx+b.
 
 Vì vậy line equation không phải arbitrary cú pháp (syntax / 문법). Nó là consequence của giả định (assumption / 가정) **constant tỷ lệ (rate / 비율) of thay đổi (change / 변경)**.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **3. Intercept là baseline, nhưng chỉ khi baseline có meaning** tiếp nhận điểm tựa từ **2. Vì sao constant slope tạo đường thẳng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Worked example: fixed chi phí (cost / 비용) + variable chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Intercept là baseline, nhưng chỉ khi baseline có meaning
 
 Trong
@@ -88,6 +91,8 @@ Do đó khi đọc parameter:
 ```text
 coefficient meaning = formula + domain + model assumptions
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **3. Intercept là baseline, nhưng chỉ khi baseline có meaning** cho ta quy tắc; **4. Worked example: fixed chi phí (cost / 비용) + variable chi phí (cost / 비용)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. Proportionality là special trường hợp (case / 사례) của tuyến tính (linear / 선형)/affine hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Worked example: fixed chi phí (cost / 비용) + variable chi phí (cost / 비용)
 
@@ -122,6 +127,8 @@ là baseline tại zero usage nếu pricing quy tắc (rule / 규칙) thực s�
 
 Nếu pricing có tiers, hàm (function / 함수) trở thành piecewise tuyến tính (linear / 선형) chứ không còn một line duy nhất.
 
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **4. Worked example: fixed chi phí (cost / 비용) + variable chi phí (cost / 비용)** cho ta quy tắc; **5. Proportionality là special trường hợp (case / 사례) của tuyến tính (linear / 선형)/affine hành vi (behavior / 동작)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **6. Interpolation và extrapolation khác nhau về giả định (assumption / 가정) rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Proportionality là special trường hợp (case / 사례) của tuyến tính (linear / 선형)/affine hành vi (behavior / 동작)
 
 Direct proportionality:
@@ -138,6 +145,8 @@ Ví dụ chi phí (cost / 비용) proportional với quantity chỉ hợp lý n�
 
 Rất nhiều lỗi modeling đến từ việc dùng proportionality khi thực tế có baseline.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **5. Proportionality là special trường hợp (case / 사례) của tuyến tính (linear / 선형)/affine hành vi (behavior / 동작)** cho ta quy tắc; **6. Interpolation và extrapolation khác nhau về giả định (assumption / 가정) rủi ro (risk / 위험)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. Residual cho biết mô hình (model / 모델) bỏ sót cấu trúc (structure / 구조) nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Interpolation và extrapolation khác nhau về giả định (assumption / 가정) rủi ro (risk / 위험)
 
 Interpolation dự đoán trong observed phạm vi (range / 범위).
@@ -149,6 +158,8 @@ Nếu dữ liệu (data / 데이터) từ `x=10` đến `x=20`, prediction tại
 Một line có thể fit tốt trong narrow region của một nonlinear tiến trình (process / 프로세스).
 
 Đây là cầu nối (bridge / 브리지) sang Taylor approximation: nonlinear functions thường gần tuyến tính (linear / 선형) locally dù toàn cục (global / 전역) hành vi (behavior / 동작) khác hẳn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **7. Residual cho biết mô hình (model / 모델) bỏ sót cấu trúc (structure / 구조) nào** tiếp nhận điểm tựa từ **6. Interpolation và extrapolation khác nhau về giả định (assumption / 가정) rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Quadratic mô hình (model / 모델) xuất hiện khi first-order tỷ lệ (rate / 비율) không constant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Residual cho biết mô hình (model / 모델) bỏ sót cấu trúc (structure / 구조) nào
 
@@ -169,6 +180,8 @@ positive → negative → positive
 đó là dấu hiệu mô hình tuyến tính (linear model / 선형 모델) đang bỏ sót curvature.
 
 Residual không chỉ là “lỗi (error / 오류) cần nhỏ”; mẫu (pattern / 패턴) của residual là diagnostic tín hiệu (signal / 신호).
+
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **8. Quadratic mô hình (model / 모델) xuất hiện khi first-order tỷ lệ (rate / 비율) không constant** tiếp nhận điểm tựa từ **7. Residual cho biết mô hình (model / 모델) bỏ sót cấu trúc (structure / 구조) nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Physics derivation: constant acceleration tạo quadratic position** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Quadratic mô hình (model / 모델) xuất hiện khi first-order tỷ lệ (rate / 비율) không constant
 
@@ -204,6 +217,8 @@ quadratic function    → constant second derivative
 
 Đây là lý do quadratic xuất hiện trong constant acceleration, cục bộ (local / 로컬) curvature và second-order tối ưu hóa (optimization / 최적화).
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **9. Physics derivation: constant acceleration tạo quadratic position** tiếp nhận điểm tựa từ **8. Quadratic mô hình (model / 모델) xuất hiện khi first-order tỷ lệ (rate / 비율) không constant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Ba representations của quadratic trả lời ba câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Physics derivation: constant acceleration tạo quadratic position
 
 Nếu acceleration constant `a`:
@@ -225,6 +240,8 @@ x(t)=x_0+v_0t+\frac12at^2.
 ```
 
 Quadratic không xuất hiện vì “projectile formula phải nhớ”. Nó xuất hiện vì tích phân của tuyến tính (linear / 선형) velocity là quadratic position.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **10. Ba representations của quadratic trả lời ba câu hỏi khác nhau** tiếp nhận điểm tựa từ **9. Physics derivation: constant acceleration tạo quadratic position** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Completing the square là đổi biểu diễn (representation / 표현), không phải trick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Ba representations của quadratic trả lời ba câu hỏi khác nhau
 
@@ -253,6 +270,8 @@ f(x)=a(x-h)^2+k
 làm extremum và symmetry rõ.
 
 Không có biểu diễn (representation / 표현) “tốt nhất” universal. Good algebra thường là chọn biểu diễn (representation / 표현) phù hợp question.
+
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **11. Completing the square là đổi biểu diễn (representation / 표현), không phải trick** tiếp nhận điểm tựa từ **10. Ba representations của quadratic trả lời ba câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Discriminant encode gốc (root / 루트) hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Completing the square là đổi biểu diễn (representation / 표현), không phải trick
 
@@ -301,6 +320,8 @@ h=-\frac{b}{2a}.
 
 Algebra và calculus đang nói cùng một cấu trúc (structure / 구조) bằng hai ngôn ngữ.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **12. Discriminant encode gốc (root / 루트) hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **11. Completing the square là đổi biểu diễn (representation / 표현), không phải trick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Quadratic as cục bộ (local / 로컬) approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Discriminant encode gốc (root / 루트) hình học (geometry / 기하학)
 
 Quadratic equation:
@@ -323,6 +344,8 @@ Nếu `\Delta<0`: no real roots, nhưng có complex conjugate roots.
 
 Discriminant vì vậy không chỉ là symbol trong formula; nó tóm tắt intersection hình học (geometry / 기하학) của parabola với x-axis.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **13. Quadratic as cục bộ (local / 로컬) approximation** tiếp nhận điểm tựa từ **12. Discriminant encode gốc (root / 루트) hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Multivariable quadratic form** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Quadratic as cục bộ (local / 로컬) approximation
 
 Gần `x_0`, smooth hàm (function / 함수) có Taylor approximation:
@@ -341,6 +364,8 @@ Tối ưu hóa (optimization / 최적화) methods như Newton's phương thức 
 
 Một quadratic mô hình (model / 모델) không chỉ là school hàm (function / 함수) family; nó là universal cục bộ (local / 로컬) mô hình (model / 모델) cấp hai cho smooth functions.
 
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **14. Multivariable quadratic form** tiếp nhận điểm tựa từ **13. Quadratic as cục bộ (local / 로컬) approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. tuyến tính (linear / 선형) regression vs chính xác (exact / 정확한) line through points** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Multivariable quadratic form
 
 Trong nhiều dimensions, quadratic cấu trúc (structure / 구조) viết:
@@ -354,6 +379,8 @@ Ma trận (matrix / 행렬) `A` encode curvature.
 Nếu `A` positive definite, bowl shape có unique minimum.
 
 Đây là cầu nối (bridge / 브리지) sang Hessian, least squares, tối ưu hóa (optimization / 최적화) và Gaussian các mô hình (models / 모델들).
+
+> **Chuyển mạch:** Ở chặng này của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **15. tuyến tính (linear / 선형) regression vs chính xác (exact / 정확한) line through points** tiếp nhận điểm tựa từ **14. Multivariable quadratic form** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Quadratic fitting và overfitting intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. tuyến tính (linear / 선형) regression vs chính xác (exact / 정확한) line through points
 
@@ -376,6 +403,8 @@ interpolation → pass through selected data exactly
 regression → estimate underlying relationship under noise
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **16. Quadratic fitting và overfitting intuition** tiếp nhận điểm tựa từ **15. tuyến tính (linear / 선형) regression vs chính xác (exact / 정확한) line through points** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Worked example: braking distance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Quadratic fitting và overfitting intuition
 
 Thêm degree cho polynomial làm mô hình (model / 모델) flexible hơn. huấn luyện (training / 학습) residual có thể giảm, nhưng generalization không chắc tốt hơn.
@@ -389,6 +418,8 @@ structure + data + validation
 ```
 
 không chỉ “higher degree fits better”.
+
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **16. Quadratic fitting và overfitting intuition** cho ta quy tắc; **17. Worked example: braking distance** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. Finance liên kết (connection / 연결): cục bộ (local / 로컬) tuyến tính (linear / 선형) vs convex exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Worked example: braking distance
 
@@ -414,6 +445,8 @@ Doubling speed không chỉ double stopping distance vì quadratic term tăng fa
 
 Đây là example tốt cho việc hiểu mô hình (model / 모델) terms bằng scaling.
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **17. Worked example: braking distance** cho ta quy tắc; **18. Finance liên kết (connection / 연결): cục bộ (local / 로컬) tuyến tính (linear / 선형) vs convex exposure** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. AI liên kết (connection / 연결): tuyến tính (linear / 선형) tầng (layer / 계층) nhưng nonlinear mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Finance liên kết (connection / 연결): cục bộ (local / 로컬) tuyến tính (linear / 선형) vs convex exposure
 
 Một portfolio giá trị (value / 값) có thể cục bộ (local / 로컬) approximate theo price thay đổi (change / 변경):
@@ -438,6 +471,8 @@ cho curvature exposure.
 
 Không cần học option pricing ở chapter này; important liên kết (connection / 연결) là tuyến tính (linear / 선형) + quadratic terms tạo cục bộ (local / 로컬) sensitivity mô hình (model / 모델).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **19. AI liên kết (connection / 연결): tuyến tính (linear / 선형) tầng (layer / 계층) nhưng nonlinear mô hình (model / 모델)** tiếp nhận điểm tựa từ **18. Finance liên kết (connection / 연결): cục bộ (local / 로컬) tuyến tính (linear / 선형) vs convex exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. các giả định (assumptions / 가정들) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. AI liên kết (connection / 연결): tuyến tính (linear / 선형) tầng (layer / 계층) nhưng nonlinear mô hình (model / 모델)
 
 Một tầng (layer / 계층) thường viết:
@@ -453,6 +488,8 @@ Nếu chỉ compose affine layers mà không activation nonlinear, toàn mạng 
 Nonlinearity là thứ tạo richer hàm (function / 함수) family.
 
 Điều này cho thấy mô hình tuyến tính (linear model / 선형 모델) là building khối (block / 블록) nhưng không đủ cho arbitrary nonlinear cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **20. các giả định (assumptions / 가정들) checklist** tiếp nhận điểm tựa từ **19. AI liên kết (connection / 연결): tuyến tính (linear / 선형) tầng (layer / 계층) nhưng nonlinear mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. các giả định (assumptions / 가정들) checklist
 
@@ -474,6 +511,8 @@ quadratic behavior là global hay chỉ local?
 vertex/root có nằm trong domain meaningful không?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, sau nội dung của **20. các giả định (assumptions / 가정들) checklist**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Tuyến tính (linear / 선형)/quadratic các mô hình (models / 모델들) nối:
@@ -490,12 +529,16 @@ ratio/rate
 → Finance sensitivity
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > mô hình tuyến tính (linear model / 선형 모델) là **constant first-order thay đổi (change / 변경)**. Quadratic mô hình (model / 모델) là **constant second-order thay đổi (change / 변경)** hoặc **first-order tỷ lệ (rate / 비율) thay đổi tuyến tính**. Đừng bắt đầu từ đồ thị (graph / 그래프) shape; bắt đầu từ cấu trúc (structure / 구조) của thay đổi (change / 변경) mà mô hình (model / 모델) đang giả định.
+
+> **Chuyển mạch:** Trong **Mô hình tuyến tính và bậc hai: từ constant tỷ lệ (rate / 비율) đến curvature**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
 `y=mx+b` không phải tuyến tính (linear / 선형) map theo definition tuyến tính (linear / 선형) algebra nếu `b\ne0`. High `R^2` không chứng minh relationship truly tuyến tính (linear / 선형) hoặc nhân quả (causal / 인과적). Vertex formula không phải mẹo; nó là nơi first derivative bằng zero. Quadratic fit tốt trong mẫu (sample / 표본) không có nghĩa tiến trình (process / 프로세스) thật sự quadratic ngoài phạm vi (range / 범위). Một đồ thị (graph / 그래프) nhìn thẳng trên narrow interval có thể chỉ là cục bộ (local / 로컬) linearization của nonlinear hàm (function / 함수).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 function concept](./00_function_concept.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

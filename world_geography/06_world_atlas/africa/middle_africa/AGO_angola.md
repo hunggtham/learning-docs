@@ -1,7 +1,6 @@
 # Angola
 
-> **Mạch đọc:** Đặt **Angola** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khung không gian** sang **Cao nguyên và hệ thống sông**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Angola**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khung không gian** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cao nguyên và hệ thống sông** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Angola với dầu khí, bờ biển, cao nguyên và đô thị, để phân biệt tài nguyên với năng lực phát triển bao trùm.
 
 ## Khung không gian
 
@@ -9,8 +8,7 @@ Angola có mặt tiền Đại Tây Dương dài, một dải đồng bằng ven
 
 Cabinda là một phần lãnh thổ tách rời về không gian khỏi phần chính của Angola, làm geography of quản trị (governance / 거버넌스) và logistics phức tạp hơn.
 
-
-> **Chuyển mạch:** Từ **Khung không gian**, ta sang **Cao nguyên và hệ thống sông** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Angola**, **Cao nguyên và hệ thống sông** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luanda và sự tập trung ven biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cao nguyên và hệ thống sông
 
@@ -18,8 +16,7 @@ Cao nguyên trung tâm là vùng nguồn của nhiều con sông lớn chảy v�
 
 Dòng chảy từ cao nguyên phụ thuộc mùa mưa nhiệt đới, trong khi vùng ven biển phía nam khô hơn do ảnh hưởng dòng biển lạnh Benguela và hoàn lưu khí quyển.
 
-
-> **Chuyển mạch:** Từ **Cao nguyên và hệ thống sông**, ta sang **Luanda và sự tập trung ven biển** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Angola**, **Luanda và sự tập trung ven biển** tiếp nhận điểm tựa từ **Cao nguyên và hệ thống sông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dầu khí và không gian offshore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Luanda và sự tập trung ven biển
 
@@ -27,8 +24,7 @@ Luanda là siêu đô thị, cảng và trung tâm kinh tế lớn, tập trung 
 
 Các cảng Lobito và Namibe tạo thêm cửa ngõ, làm mạng ven biển có nhiều nút (node / 노드) thay vì phụ thuộc tuyệt đối vào Luanda.
 
-
-> **Chuyển mạch:** Từ **Luanda và sự tập trung ven biển**, ta sang **Dầu khí và không gian offshore** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Angola**, **Dầu khí và không gian offshore** tiếp nhận điểm tựa từ **Luanda và sự tập trung ven biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lobito Corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dầu khí và không gian offshore
 
@@ -36,8 +32,7 @@ Dầu khí tập trung mạnh ở thềm lục địa và offshore, đặc biệ
 
 Chuỗi dầu khí gồm mỏ biển, chuỗi xử lý (pipeline / 파이프라인), terminal, cảng dịch vụ và cơ sở chế biến. Vì vậy các nút (node / 노드) ven biển có giá trị mạng rất cao.
 
-
-> **Chuyển mạch:** Từ **Dầu khí và không gian offshore**, ta sang **Lobito Corridor** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Angola**, **Lobito Corridor** tiếp nhận điểm tựa từ **Dầu khí và không gian offshore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp và chênh lệch vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lobito Corridor
 
@@ -45,22 +40,19 @@ Chuỗi dầu khí gồm mỏ biển, chuỗi xử lý (pipeline / 파이프라�
 
 Một tuyến đường sắt không chỉ phục vụ khai khoáng; nếu đủ tin cậy, nó có thể kích thích đô thị, logistics và sản xuất dọc tuyến.
 
-
-> **Chuyển mạch:** Từ **Lobito Corridor**, ta sang **Nông nghiệp và chênh lệch vùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Angola**, **Nông nghiệp và chênh lệch vùng** tiếp nhận điểm tựa từ **Lobito Corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nông nghiệp và chênh lệch vùng
 
 Cao nguyên có điều kiện nông nghiệp khác vùng duyên hải khô hơn. Tuy nhiên tiềm năng đất đai không tự động chuyển thành sản lượng nếu thiếu đường, lưu trữ, thị trường và dịch vụ nông nghiệp.
 
-
-> **Chuyển mạch:** Từ **Nông nghiệp và chênh lệch vùng**, ta sang **Rủi ro** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Angola**, **Rủi ro** tiếp nhận điểm tựa từ **Nông nghiệp và chênh lệch vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro
 
 Hạn ở phía nam, lũ tại một số lưu vực, xói mòn và áp lực đô thị là các rủi ro quan trọng. Angola cũng minh họa **tài nguyên (resource / 자원) corridor phụ thuộc (dependency / 의존성)**: nền kinh tế có thể mạnh ở một vài nút (node / 노드) nhưng liên kết nội địa vẫn không đồng đều.
 
-
-> **Chuyển mạch:** Từ **Rủi ro**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Angola**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -68,4 +60,4 @@ Hạn ở phía nam, lũ tại một số lưu vực, xói mòn và áp lực đ
 
 Xem thêm: [Địa lý kinh tế](../../../02_human_geography/05_economic_geography.md), [Vận tải](../../../02_human_geography/08_transport_trade_globalization.md), [Châu Phi](../../../03_regions/06_africa.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CAF central african republic](./CAF_central_african_republic.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

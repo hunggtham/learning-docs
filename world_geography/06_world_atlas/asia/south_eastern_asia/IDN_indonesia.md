@@ -1,7 +1,6 @@
 # Indonesia — Indonesia (IDN)
 
-> **Mạch đọc:** Đặt **Indonesia — Indonesia (IDN)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thesis không gian** sang **Archipelago: sea là connector chứ không chỉ ranh giới (boundary / 경계)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Indonesia — Indonesia (IDN)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thesis không gian** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Archipelago: sea là connector chứ không chỉ ranh giới (boundary / 경계)** để soi ranh giới và điểm dễ nhầm. Mạch này nối Indonesia với quần đảo, núi lửa, tài nguyên và kết nối biển, để đọc kinh tế qua phân tán địa lý.
 
 ## Thesis không gian
 
@@ -11,17 +10,23 @@ Chuỗi nhân quả (causal / 인과적):
 
 **subduction + tropical climate → volcanic soil/resources/hazards → highly uneven settlement → island môi trường vận hành (production / 운영 환경) specialization → cổng (port / 포트)/ferry/air mạng (network / 네트워크) → maritime trade role and logistics challenge**.
 
+> **Chuyển mạch:** Trong **Indonesia — Indonesia (IDN)**, **Thesis không gian** đã nêu tiêu chí phân biệt, còn **Archipelago: sea là connector chứ không chỉ ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tectonics: hazard và tài nguyên (resource / 자원) cùng một hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Archipelago: sea là connector chứ không chỉ ranh giới (boundary / 경계)
 
 Nếu nhìn Indonesia như “land area bị biển chia cắt”, ta bỏ mất lô-gic (logic / 논리) chính. Sea lane, ferry, cổng (port / 포트) và coastal city là hạ tầng (infrastructure / 인프라) nối territory.
 
 Geometric distance giữa hai đảo không nói đủ chi phí (cost / 비용). Frequency tàu, cổng (port / 포트) sức chứa (capacity / 용량), weather, transshipment và road liên kết (connection / 연결) trên từng đảo quyết định **effective distance**.
 
+> **Chuyển mạch:** Ở chặng này của **Indonesia — Indonesia (IDN)**, **Archipelago: sea là connector chứ không chỉ ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Tectonics: hazard và tài nguyên (resource / 자원) cùng một hệ thống (system / 시스템)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Java: tại sao dân cư và economy tập trung mạnh?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tectonics: hazard và tài nguyên (resource / 자원) cùng một hệ thống (system / 시스템)
 
 Nhiều island arcs hình thành gần subduction zone, tạo volcano, earthquake và tsunami. Cùng tectonic setting hỗ trợ geothermal tài nguyên (resource / 자원) và volcanic soil màu mỡ ở nhiều nơi.
 
 Vì vậy high population ở volcanic landscape không phải “phi lý”. Fertile land, water, long agricultural lịch sử (history / 이력) và city mạng (network / 네트워크) tạo benefit đủ lớn để society chấp nhận/manage hazard.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Indonesia — Indonesia (IDN)**, **Tectonics: hazard và tài nguyên (resource / 자원) cùng một hệ thống (system / 시스템)** nêu điều cần giải thích; **Java: tại sao dân cư và economy tập trung mạnh?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sumatra, Kalimantan, Sulawesi, Papua: một quốc gia, nhiều geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Java: tại sao dân cư và economy tập trung mạnh?
 
@@ -31,11 +36,15 @@ Java có fertile volcanic soils, rainfall, historical irrigation/agriculture, de
 
 Do đó Java concentration không thể giải bằng một factor “đất tốt” hoặc “capital city”. Nó là **vật lý (physical / 물리적) advantage + lịch sử (history / 이력) + agglomeration**.
 
+> **Chuyển mạch:** Trong **Indonesia — Indonesia (IDN)**, **Sumatra, Kalimantan, Sulawesi, Papua: một quốc gia, nhiều geography** tiếp nhận điểm tựa từ **Java: tại sao dân cư và economy tập trung mạnh?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tropical climate và monsoon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sumatra, Kalimantan, Sulawesi, Papua: một quốc gia, nhiều geography
 
 Các major islands có geology, tài nguyên (resource / 자원), forest, settlement và vận chuyển (transport / 전송) mẫu (pattern / 패턴) khác nhau. Sumatra có plantation/tài nguyên (resource / 자원) và Malacca-facing corridor; Kalimantan có forest/tài nguyên (resource / 자원) interior và river/coastal networks; Sulawesi có complex peninsula geography; Papua có mountain/forest và khả năng tiếp cận (accessibility / 접근성) thấp hơn nhiều vùng western Indonesia.
 
 National average che huge nội bộ (internal / 내부) heterogeneity.
+
+> **Chuyển mạch:** Ở chặng này của **Indonesia — Indonesia (IDN)**, **Tropical climate và monsoon** tiếp nhận điểm tựa từ **Sumatra, Kalimantan, Sulawesi, Papua: một quốc gia, nhiều geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Peatland fire và haze: cục bộ (local / 로컬) land use thành regional externality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tropical climate và monsoon
 
@@ -43,11 +52,15 @@ Nhiệt độ cao quanh năm nhưng rainfall khác theo island, monsoon exposure
 
 ENSO làm dry season mạnh hơn ở một số năm, tăng drought/fire pressure. Vì vậy “equatorial = luôn mưa đều” là sai.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Indonesia — Indonesia (IDN)**, **Peatland fire và haze: cục bộ (local / 로컬) land use thành regional externality** tiếp nhận điểm tựa từ **Tropical climate và monsoon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Soil, agriculture và plantation geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Peatland fire và haze: cục bộ (local / 로컬) land use thành regional externality
 
 Peat/forest drainage làm organic material khô và dễ cháy. Fire tạo smoke/haze lan xuyên border theo wind.
 
 Đây là trường hợp (case / 사례) điển hình của **environmental externality có geography**: land management cục bộ (local / 로컬) tạo health/economic chi phí (cost / 비용) ở region khác.
+
+> **Chuyển mạch:** Trong **Indonesia — Indonesia (IDN)**, **Soil, agriculture và plantation geography** tiếp nhận điểm tựa từ **Peatland fire và haze: cục bộ (local / 로컬) land use thành regional externality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Soil, agriculture và plantation geography
 
@@ -57,6 +70,8 @@ Commercial crop location phụ thuộc climate/soil nhưng còn road, mill/proce
 
 Một crop frontier mở rộng khi truy cập (access / 접근) road làm vận chuyển (transport / 전송) chi phí (cost / 비용) giảm — hạ tầng (infrastructure / 인프라) và land-use phản hồi (feedback / 피드백) xuất hiện rõ.
 
+> **Chuyển mạch:** Ở chặng này của **Indonesia — Indonesia (IDN)**, **Soil, agriculture và plantation geography** nêu điều cần giải thích; **Tài nguyên (resource / 자원) geography** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Năng lượng (energy / 에너지) hệ thống (system / 시스템) của archipelago** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tài nguyên (resource / 자원) geography
 
 Indonesia có hydrocarbon, coal, nickel và other minerals phân bố không đều. tài nguyên (resource / 자원) nút (node / 노드) thường cần road/rail/cổng (port / 포트), power và processing.
@@ -65,11 +80,15 @@ Economic giá trị (value / 값) không chỉ nằm tại mine. Chính processi
 
 Critical-mineral geography vì thế nối Indonesia trực tiếp với battery/industrial networks ở East Asia.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Indonesia — Indonesia (IDN)**, **Tài nguyên (resource / 자원) geography** nêu điều cần giải thích; **Năng lượng (energy / 에너지) hệ thống (system / 시스템) của archipelago** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Urban hệ thống (system / 시스템): Jakarta/Java concentration và secondary cities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năng lượng (energy / 에너지) hệ thống (system / 시스템) của archipelago
 
 Nhu cầu electricity phân tán trên nhiều island, nên national grid tích hợp (integration / 통합) khó hơn continental trạng thái (state / 상태). Một số island có cục bộ (local / 로컬) grid; fuel logistics và generation mix khác nhau.
 
 Geothermal potential gắn volcanic zones; coal/gas và renewables có geography khác. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) vì thế phải giải island-by-island mạng (network / 네트워크) ràng buộc (constraint / 제약조건) chứ không chỉ national generation mục tiêu (target / 대상).
+
+> **Chuyển mạch:** Trong **Indonesia — Indonesia (IDN)**, **Urban hệ thống (system / 시스템): Jakarta/Java concentration và secondary cities** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) hệ thống (system / 시스템) của archipelago** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subsidence và urban flood** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Urban hệ thống (system / 시스템): Jakarta/Java concentration và secondary cities
 
@@ -79,11 +98,15 @@ Archipelago tạo **multi-level urban hierarchy**: national command center, Java
 
 Urban geography phải đọc cùng shipping/aviation because inter-island nghiệp vụ (business / 비즈니스) often depends gateway cities.
 
+> **Chuyển mạch:** Ở chặng này của **Indonesia — Indonesia (IDN)**, **Subsidence và urban flood** tiếp nhận điểm tựa từ **Urban hệ thống (system / 시스템): Jakarta/Java concentration và secondary cities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Maritime chokepoints và toàn cục (global / 전역) tuyến (route / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Subsidence và urban flood
 
 Một số low-lying urban/coastal areas đối mặt flood từ rainfall, river, coastal water và land subsidence. Pumping groundwater, soft sediment và heavy urban tải (load / 로드) có thể làm relative sea-level rủi ro (risk / 위험) lớn hơn toàn cục (global / 전역) sea-level thay đổi (change / 변경) riêng lẻ.
 
 Đây là cầu nối (bridge / 브리지) giữa hydrology, geodesy và urbanization.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Indonesia — Indonesia (IDN)**, **Maritime chokepoints và toàn cục (global / 전역) tuyến (route / 경로)** tiếp nhận điểm tựa từ **Subsidence và urban flood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Domestic logistics: cohesion là mạng (network / 네트워크) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Maritime chokepoints và toàn cục (global / 전역) tuyến (route / 경로)
 
@@ -91,11 +114,15 @@ Indonesia nằm quanh Sunda, Lombok và các passages nối Indian–Pacific h�
 
 Nhưng strategic location không tự động chuyển thành revenue/development. cổng (port / 포트) chất lượng (quality / 품질), shipping mẫu (pattern / 패턴) và domestic connectivity quyết định mức country giữ giá trị (value / 값) từ luồng (flow / 흐름).
 
+> **Chuyển mạch:** Trong **Indonesia — Indonesia (IDN)**, **Domestic logistics: cohesion là mạng (network / 네트워크) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Maritime chokepoints và toàn cục (global / 전역) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fisheries và marine economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Domestic logistics: cohesion là mạng (network / 네트워크) bài toán (problem / 문제)
 
 Ferry, coastal shipping, aviation và cổng (port / 포트) là essential công khai (public / 공개)/economic hạ tầng (infrastructure / 인프라). Một island remote có vận chuyển (transport / 전송) chi phí (cost / 비용) cao làm price và dịch vụ (service / 서비스) truy cập (access / 접근) khác Java.
 
 National tích hợp (integration / 통합) vì thế là bài toán **mạng (network / 네트워크) density + frequency + độ tin cậy (reliability / 신뢰성)**, không chỉ xây một tuyến road.
+
+> **Chuyển mạch:** Ở chặng này của **Indonesia — Indonesia (IDN)**, **Fisheries và marine economy** tiếp nhận điểm tựa từ **Domestic logistics: cohesion là mạng (network / 네트워크) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trade và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) với East Asia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fisheries và marine economy
 
@@ -103,11 +130,15 @@ Archipelagic waters tạo large fisheries potential nhưng management phức t�
 
 Fishing cổng (port / 포트), cold chuỗi (chain / 사슬), processing và thị trường (market / 시장) truy cập (access / 접근) quyết định giá trị (value / 값) retained. Marine tài nguyên (resource / 자원) cũng chịu climate/ocean variability.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Indonesia — Indonesia (IDN)**, **Trade và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) với East Asia** tiếp nhận điểm tựa từ **Fisheries và marine economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tourism và island specialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trade và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) với East Asia
 
 Raw material, processed mineral, năng lượng (energy / 에너지), manufactured goods và food nối Indonesia với China, Japan, Korea và ASEAN.
 
 Korea/Japan/China demand, technology và capital có thể gắn với Indonesian tài nguyên (resource / 자원)/processing nodes. Đây là classic trường hợp (case / 사례) của **tài nguyên (resource / 자원) origin ↔ industrial demand center**.
+
+> **Chuyển mạch:** Trong **Indonesia — Indonesia (IDN)**, **Tourism và island specialization** tiếp nhận điểm tựa từ **Trade và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) với East Asia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hazards: multi-hazard archipelago** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tourism và island specialization
 
@@ -115,19 +146,27 @@ Một số islands phát triển mạnh tourism dựa beach, culture và air con
 
 Không nên dùng Bali để đại diện toàn Indonesia; nó là specialized island economy trong much larger archipelago.
 
+> **Chuyển mạch:** Ở chặng này của **Indonesia — Indonesia (IDN)**, **Hazards: multi-hazard archipelago** tiếp nhận điểm tựa từ **Tourism và island specialization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Indonesia trong Southeast Asia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hazards: multi-hazard archipelago
 
 Earthquake, tsunami, volcano, flood, landslide, fire/haze và coastal rủi ro (risk / 위험) phân bố theo island khác nhau. Emergency logistics khó vì sea distance và uneven hạ tầng (infrastructure / 인프라).
 
 Rủi ro (risk / 위험) management cần decentralized sức chứa (capacity / 용량) và redundant communication/vận chuyển (transport / 전송).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Indonesia — Indonesia (IDN)**, **Indonesia trong Southeast Asia** tiếp nhận điểm tựa từ **Hazards: multi-hazard archipelago** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Indonesia trong Southeast Asia
 
 Indonesia vừa là large domestic thị trường (market / 시장), tài nguyên (resource / 자원) cơ sở (base / 기반), archipelagic vận chuyển (transport / 전송) không gian (space / 공간) và maritime cầu nối (bridge / 브리지) giữa Indian–Pacific. Regional role không đến từ một single chokepoint mà từ **quy mô (scale / 규모) + tài nguyên (resource / 자원) + sea geography + population/thị trường (market / 시장)**.
 
+> **Chuyển mạch:** Trong **Indonesia — Indonesia (IDN)**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Indonesia trong Southeast Asia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng chung (common / 공통) misconceptions
 
 “Indonesia = Java/Bali” sai. “Volcano chỉ là hazard” bỏ soil/geothermal. “Archipelago nghĩa disconnected” bỏ maritime mạng (network / 네트워크). “Có nickel/tài nguyên (resource / 자원) = tự động giữ high giá trị (value / 값)” bỏ processing/capital/technology. “Equatorial = rainfall giống nhau quanh năm” sai vì monsoon/relief/ENSO.
+
+> **Chuyển mạch:** Ở chặng này của **Indonesia — Indonesia (IDN)**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -135,4 +174,4 @@ Indonesia vừa là large domestic thị trường (market / 시장), tài nguy�
 
 Xem tiếp: [Southeast Asia](../../../03_regions/02_southeast_asia.md), [Plate Tectonics](../../../01_physical_geography/00_plate_tectonics_geologic_time.md), [Global Trade Networks](../../../04_global_systems/05_global_trade_networks.md), [Industry, Energy & Resources](../../../02_human_geography/07_industry_energy_resources.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [BRN brunei](./BRN_brunei.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
