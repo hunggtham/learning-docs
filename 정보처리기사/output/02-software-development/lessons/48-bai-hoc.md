@@ -1,18 +1,26 @@
 # 41. 빌드 자동화 도구 심화: Jenkins vs Gradle
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Jenkins với Gradle, pipeline, artifact và dependency, để automation bao phủ cả build lẫn delivery.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 빌드, 자동화, 도구, 심화, Jenkins, Gradle
 
+> **Chuyển mạch:** Ở chặng này của **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**에서 만든 기준을 이어받아 **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **41. 빌드 자동화 도구 심화: Je
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** và nối nó với **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**, **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 41. 빌드 자동화 도구 심화: Jenkins vs Gradle
 
@@ -40,3 +48,5 @@ Phần “41. 빌드 자동화 도구 심화: Jenkins vs Gradle” được nố
 * 💡 **Mẹo ghi nhớ**: Jenkins = Java, Gradle = Groovy (Android).
 
 Điểm chốt của **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

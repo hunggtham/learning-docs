@@ -1,18 +1,26 @@
 # 37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối packaging considerations với artifact, dependency, environment và release sequence, để bàn giao tái lập được.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **39. DRM 패키징 과정 상세 (DRM Packaging Process)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 패키징, 고려사항, 추가
 
+> **Chuyển mạch:** Ở chặng này của **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**에서 만든 기준을 이어받아 **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **37. 소프트웨어 패키징 고려�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** và nối nó với **39. DRM 패키징 과정 상세 (DRM Packaging Process)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**, **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)
 
@@ -41,3 +49,5 @@ Phần “37. 소프트웨어 패키징 고려사항 추가 (Packaging Considera
 * **VI (Vietnamese) (Tiếng Việt):** Các lưu ý khi đóng gói phần mềm: Yêu cầu hệ thống tối thiểu, Giao diện (UI) khớp với hướng dẫn, Quản lý dịch vụ, Mã hóa/DRM.
 
 Điểm chốt của **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **39. DRM 패키징 과정 상세 (DRM Packaging Process)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
