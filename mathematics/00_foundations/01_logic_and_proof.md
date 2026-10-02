@@ -1,7 +1,6 @@
 # Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng
 
-> **Mạch đọc:** Đọc **lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Mệnh đề: đơn vị cơ bản của lập luận (reasoning / 추론)** sang **2. AND, OR, XOR và cách conditions tạo cấu trúc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mệnh đề: đơn vị cơ bản của lập luận (reasoning / 추론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. AND, OR, XOR và cách conditions tạo cấu trúc** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối mệnh đề với suy luận và chứng minh, để xác định giả thiết nào thực sự nâng đỡ kết luận.
 
 Lô-gic (logic / 논리) không nói một tiền đề có đúng ngoài đời hay không. Nó trả lời câu hỏi khác: **nếu chấp nhận các tiền đề hiện có, kết luận nào thực sự theo sau?** Đây là lý do lô-gic (logic / 논리) đứng trước proof, discrete mathematics, algorithms, xác suất (probability / 확률), cơ sở dữ liệu (database / 데이터베이스) predicates và formal xác minh (verification / 확인).
 
@@ -39,6 +38,8 @@ không phải chỉ `x<5`, vì phủ định phải bao phủ **mọi trường 
 
 Đây là một mẫu (pattern / 패턴) quan trọng: khi negate một claim, ta không đoán câu “nghe đối lập”; ta lấy complement lô-gic (logic / 논리) của toàn bộ điều kiện (condition / 조건).
 
+> **Chuyển mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **2. AND, OR, XOR và cách conditions tạo cấu trúc** tiếp nhận điểm tựa từ **1. Mệnh đề: đơn vị cơ bản của lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Implication: statement về việc counterexample không được phép tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. AND, OR, XOR và cách conditions tạo cấu trúc
 
 Phép hội (conjunction / 논리곱)
@@ -60,6 +61,8 @@ trong toán học thường là inclusive OR: ít nhất một proposition đún
 XOR (exclusive OR / 배타적 논리합) chỉ đúng khi chính xác một trong hai đúng.
 
 Điểm đáng học không phải bảng truth bảng (table / 테이블) riêng lẻ mà là việc **compound điều kiện (condition / 조건) có thể được xem như một đối tượng (object / 객체) toán học**. Điều này nối trực tiếp sang Boolean algebra, circuit thiết kế (design / 설계), SQL predicates và program guards.
+
+> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **2. AND, OR, XOR và cách conditions tạo cấu trúc** cho ta quy tắc; **3. Implication: statement về việc counterexample không được phép tồn tại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. Converse, inverse, contrapositive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Implication: statement về việc counterexample không được phép tồn tại
 
@@ -89,6 +92,8 @@ Ví dụ:
 Muốn bác bỏ, cần tìm một số chia hết cho 4 nhưng không chẵn. Không tìm được chỉ bằng vài examples chưa phải proof, nhưng nó cho ta biết **dạng counterexample cần tìm**.
 
 Trong software requirements, “nếu người dùng (user / 사용자) là admin thì có quyền X” không nói rằng chỉ admin mới có quyền X. Suy ngược thành “có quyền X ⇒ admin” là đổi implication thành converse mà không có cơ sở.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **3. Implication: statement về việc counterexample không được phép tồn tại** cho ta quy tắc; **4. Converse, inverse, contrapositive** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. Necessary và sufficient conditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Converse, inverse, contrapositive
 
@@ -140,6 +145,8 @@ Converse:
 
 sai vì `6` là counterexample.
 
+> **Chuyển mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **5. Necessary và sufficient conditions** tiếp nhận điểm tựa từ **4. Converse, inverse, contrapositive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Quantifiers: nơi rất nhiều proof sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Necessary và sufficient conditions
 
 Nếu
@@ -168,6 +175,8 @@ q → p
 ```
 
 Đây là mẫu (pattern / 패턴) thường xuyên trong set equality, invertibility, characterization theorems và equivalence of thuật toán (algorithm / 알고리즘) conditions.
+
+> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **6. Quantifiers: nơi rất nhiều proof sai** tiếp nhận điểm tựa từ **5. Necessary và sufficient conditions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. De Morgan: lô-gic (logic / 논리) của complement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Quantifiers: nơi rất nhiều proof sai
 
@@ -223,6 +232,8 @@ thường rất khác nhau. Statement đầu cho phép chọn `y` khác nhau cho
 
 Đây là nguồn (source / 소스) của nhiều nhầm lẫn trong phân tích (analysis / 분석), algorithms và tối ưu hóa (optimization / 최적화) guarantees.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **7. De Morgan: lô-gic (logic / 논리) của complement** tiếp nhận điểm tựa từ **6. Quantifiers: nơi rất nhiều proof sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Proof không phải một format duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. De Morgan: lô-gic (logic / 논리) của complement
 
 De Morgan cho propositions:
@@ -262,6 +273,8 @@ logic-equivalent với
 ```
 
 nhưng hành vi thời gian chạy (runtime behavior / 런타임 동작) có thể khác nếu expressions có side effects hoặc short-circuit ngữ nghĩa (semantics / 의미론) phức tạp. Đây là ví dụ cho distinction giữa **logical equivalence** và **operational equivalence**.
+
+> **Chuyển mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **8. Proof không phải một format duy nhất** tiếp nhận điểm tựa từ **7. De Morgan: lô-gic (logic / 논리) của complement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Proof không phải một format duy nhất
 
@@ -335,6 +348,8 @@ Non-constructive proof chứng minh đối tượng (object / 객체) phải t�
 
 Mathematics chấp nhận cả hai; khoa học máy tính (computer science / 컴퓨터 과학) thường quan tâm thêm câu hỏi computational: “tồn tại” có đi kèm cách tìm hiệu quả không?
 
+> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **8. Proof không phải một format duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Invariants: proof bằng điều không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)
 
 Quy nạp toán học (mathematical induction / 수학적 귀납법) có hai phần:
@@ -372,6 +387,8 @@ Strong induction cho phép giả sử statement đúng cho mọi values nhỏ h�
 
 Structural induction áp cùng idea cho trees, cú pháp (syntax / 문법) trees, recursive dữ liệu (data / 데이터) structures và formal languages.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **10. Invariants: proof bằng điều không đổi** tiếp nhận điểm tựa từ **9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Counterexample: công cụ mạnh nhất để phá universal claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Invariants: proof bằng điều không đổi
 
 Bất biến (invariant / 불변식) là thuộc tính (property / 속성) được giữ qua mỗi transformation hoặc iteration.
@@ -389,6 +406,8 @@ initialization
 Trong algorithms, chọn đúng bất biến (invariant / 불변식) thường khó hơn algebra sau đó. Ví dụ tìm kiếm nhị phân (binary search / 이진 탐색) giữ bất biến (invariant / 불변식) rằng nếu mục tiêu (target / 대상) tồn tại thì nó vẫn nằm trong hiện tại (current / 현재) interval.
 
 Trong physics, conservation laws đóng vai trò tương tự ở mức (level / 수준) mô hình (model / 모델): một quantity không đổi dưới dynamics nhất định.
+
+> **Chuyển mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **10. Invariants: proof bằng điều không đổi** cho ta quy tắc; **11. Counterexample: công cụ mạnh nhất để phá universal claim** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Proof idea và formal proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Counterexample: công cụ mạnh nhất để phá universal claim
 
@@ -416,6 +435,8 @@ conjecture
 
 Nó giống debugging specification trong software.
 
+> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **11. Counterexample: công cụ mạnh nhất để phá universal claim** cho ta quy tắc; **12. Proof idea và formal proof** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Proof, testing và formal xác minh (verification / 확인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Proof idea và formal proof
 
 Một proof tốt thường có hai layers.
@@ -428,6 +449,8 @@ Nếu chỉ có formal symbols mà không có proof idea, người học khó tr
 
 Tài liệu này ưu tiên intuition trước, nhưng formalism xuất hiện sau đó để khóa lập luận (reasoning / 추론) lại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **13. Proof, testing và formal xác minh (verification / 확인)** tiếp nhận điểm tựa từ **12. Proof idea và formal proof** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Proof, testing và formal xác minh (verification / 확인)
 
 Testing kiểm tra finite examples. Một bộ kiểm thử (test suite / 테스트 스위트) tốt có thể tăng confidence rất nhiều nhưng không chứng minh universal thuộc tính (property / 속성) trên infinite đầu vào (input / 입력) lĩnh vực (domain / 도메인).
@@ -435,6 +458,8 @@ Testing kiểm tra finite examples. Một bộ kiểm thử (test suite / 테스
 Proof có thể chứng minh thuộc tính (property / 속성) của một mô hình (model / 모델) hoặc thuật toán (algorithm / 알고리즘), nhưng không bảo đảm hiện thực (implementation / 구현) thực tế đúng nếu mô hình (model / 모델)/specification không match mã (code / 코드).
 
 Formal xác minh (verification / 확인) cố đưa specification, program ngữ nghĩa (semantics / 의미론) và proof vào một hệ thống (system / 시스템) machine-checkable. Tuy nhiên xác minh (verification / 확인) vẫn phụ thuộc vào tính đúng đắn (correctness / 정확성) của specification và lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계).
+
+> **Chuyển mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics** tiếp nhận điểm tựa từ **13. Proof, testing và formal xác minh (verification / 확인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics
 
@@ -446,12 +471,16 @@ P(A\cap B),\qquad P(A\cup B),\qquad P(A^c).
 
 Bayes lập luận (reasoning / 추론) cũng phụ thuộc vào việc điều kiện (condition / 조건)/sự kiện (event / 이벤트) được định nghĩa chính xác. Nếu events mơ hồ, công thức đúng vẫn cho answer không meaningful.
 
+> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > lô-gic (logic / 논리) quản lý **đường đi hợp lệ từ các giả định (assumptions / 가정들) đến conclusions**. Proof là một chương trình lập luận (reasoning / 추론): definition tạo objects, suy luận (inference / 추론) rules là operations, bất biến (invariant / 불변식)/contradiction/induction là điều khiển (control / 제어) structures, và theorem là đầu ra (output / 출력). Một proof tốt không chỉ đúng; nó làm lộ cơ chế (mechanism / 메커니즘) khiến statement buộc phải đúng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
 `p→q` không cho phép suy `q→p`. Không tìm được proof của `p` không đồng nghĩa `¬p`. Nhiều examples phù hợp không thay proof cho universal claim, nhưng một counterexample hợp lệ đủ để phá claim đó. Inductive hypothesis không phải circular lập luận (reasoning / 추론); nó là giả định (assumption / 가정) trong proof của implication `P(k)→P(k+1)`. Formal proof không tự đảm bảo mô hình (model / 모델) ban đầu mô tả đúng reality.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematical thinking](./00_mathematical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

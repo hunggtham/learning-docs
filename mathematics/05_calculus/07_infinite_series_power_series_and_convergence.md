@@ -1,7 +1,6 @@
 # Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn
 
-> **Mạch đọc:** Đọc **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. chuỗi (sequence / 시퀀스) và series khác nhau ở đối tượng (object / 객체) đang hội tụ** sang **2. Geometric series là prototype của convergence**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. chuỗi (sequence / 시퀀스) và series khác nhau ở đối tượng (object / 객체) đang hội tụ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Geometric series là prototype của convergence** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối chuỗi vô hạn với hội tụ, chuỗi lũy thừa và bán kính hội tụ, để biết khi nào phép biến đổi vô hạn còn giữ ý nghĩa.
 
 Một chuỗi vô hạn (infinite series / 무한급수) không phải “cộng xong vô hạn số”. Nó là một statement về **limit của các tổng hữu hạn**.
 
@@ -61,6 +60,8 @@ chỉ là necessary, không sufficient.
 
 Terms nhỏ dần không guarantee cumulative sum bounded.
 
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **1. chuỗi (sequence / 시퀀스) và series khác nhau ở đối tượng (object / 객체) đang hội tụ** xác định đầu vào; **2. Geometric series là prototype của convergence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Infinite series là approximation + lỗi (error / 오류) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Geometric series là prototype của convergence
 
 Cho
@@ -104,6 +105,8 @@ Nếu `|r|\ge1`, terms không decay phù hợp và series không converge theo o
 
 Geometric series là benchmark vì nhiều convergence tests hỏi: tail có behave giống geometric decay không?
 
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **3. Infinite series là approximation + lỗi (error / 오류) ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **2. Geometric series là prototype của convergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Vì sao an → 0 chưa đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Infinite series là approximation + lỗi (error / 오류) ngân sách (budget / 예산)
 
 Trong computation ta chỉ dùng finite `N`:
@@ -135,6 +138,8 @@ Với geometric series:
 ```
 
 Convergence vì vậy nối pure phân tích (analysis / 분석) với numerical lỗi (error / 오류) điều khiển (control / 제어).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **4. Vì sao an → 0 chưa đủ?** tiếp nhận điểm tựa từ **3. Infinite series là approximation + lỗi (error / 오류) ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. p-series cho benchmark polynomial decay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Vì sao a_n → 0 chưa đủ?
 
@@ -168,6 +173,8 @@ Key lesson:
 
 > cục bộ (local / 로컬) smallness của term không quyết định toàn cục (global / 전역) accumulation.
 
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **5. p-series cho benchmark polynomial decay** tiếp nhận điểm tựa từ **4. Vì sao an → 0 chưa đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Integral kiểm thử (test / 테스트) nối discrete sum với continuous area** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. p-series cho benchmark polynomial decay
 
 Series
@@ -189,6 +196,8 @@ Nếu `p>1`, decay đủ nhanh.
 Nếu `p<1`, decay còn chậm hơn harmonic.
 
 p-series là benchmark cho algebraic/polynomial tail, giống geometric series là benchmark cho exponential tail.
+
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **6. Integral kiểm thử (test / 테스트) nối discrete sum với continuous area** tiếp nhận điểm tựa từ **5. p-series cho benchmark polynomial decay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Comparison kiểm thử (test / 테스트) là asymptotic domination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Integral kiểm thử (test / 테스트) nối discrete sum với continuous area
 
@@ -226,6 +235,8 @@ integral converges iff `p>1`, cho p-series criterion.
 discrete accumulation ↔ continuous accumulation
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **7. Comparison kiểm thử (test / 테스트) là asymptotic domination** tiếp nhận điểm tựa từ **6. Integral kiểm thử (test / 테스트) nối discrete sum với continuous area** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Limit comparison tập trung vào asymptotic ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Comparison kiểm thử (test / 테스트) là asymptotic domination
 
 Nếu eventually
@@ -258,6 +269,8 @@ và `\sum b_n` diverges, thì `\sum a_n` diverges.
 
 Comparison không cần chính xác (exact / 정확한) sum. Nó chỉ cần relative tail kích thước (size / 크기).
 
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **7. Comparison kiểm thử (test / 테스트) là asymptotic domination** đã nêu tiêu chí phân biệt, còn **8. Limit comparison tập trung vào asymptotic ratio** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Ratio kiểm thử (test / 테스트) nhìn geometric shrink tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Limit comparison tập trung vào asymptotic ratio
 
 Nếu
@@ -272,6 +285,8 @@ với positive terms, thì hai series có cùng convergence hành vi (behavior /
 Reason: eventually chúng chỉ khác nhau bởi constant factors.
 
 Đây là series phiên bản (version / 버전) của asymptotic equivalence.
+
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **8. Limit comparison tập trung vào asymptotic ratio** đã nêu tiêu chí phân biệt, còn **9. Ratio kiểm thử (test / 테스트) nhìn geometric shrink tỷ lệ (rate / 비율)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. gốc (root / 루트) kiểm thử (test / 테스트) nhìn exponential quy mô (scale / 규모) trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Ratio kiểm thử (test / 테스트) nhìn geometric shrink tỷ lệ (rate / 비율)
 
@@ -293,6 +308,8 @@ Nếu `L=1`, kiểm thử (test / 테스트) inconclusive.
 
 Ratio kiểm thử (test / 테스트) đặc biệt mạnh khi factorial/exponential terms xuất hiện.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **10. gốc (root / 루트) kiểm thử (test / 테스트) nhìn exponential quy mô (scale / 규모) trực tiếp** tiếp nhận điểm tựa từ **9. Ratio kiểm thử (test / 테스트) nhìn geometric shrink tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Alternating series và cancellation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. gốc (root / 루트) kiểm thử (test / 테스트) nhìn exponential quy mô (scale / 규모) trực tiếp
 
 Cho
@@ -311,6 +328,8 @@ Gốc (root / 루트) kiểm thử (test / 테스트) hữu ích khi term có c�
 Ratio và gốc (root / 루트) tests đều hỏi cùng một deep question:
 
 > asymptotic multiplicative decay có factor dưới 1 không?
+
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **11. Alternating series và cancellation** tiếp nhận điểm tựa từ **10. gốc (root / 루트) kiểm thử (test / 테스트) nhìn exponential quy mô (scale / 규모) trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Absolute vs conditional convergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Alternating series và cancellation
 
@@ -332,6 +351,8 @@ Remainder bound:
 ```
 
 Đây là một trong những lỗi (error / 오류) bounds rất practical.
+
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **12. Absolute vs conditional convergence** tiếp nhận điểm tựa từ **11. Alternating series và cancellation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Rearrangement cho thấy infinite sums khác finite sums** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Absolute vs conditional convergence
 
@@ -355,6 +376,8 @@ là example.
 
 Absolute convergence mạnh hơn vì rearrangement hành vi (behavior / 동작) ổn định hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **13. Rearrangement cho thấy infinite sums khác finite sums** tiếp nhận điểm tựa từ **12. Absolute vs conditional convergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Cauchy criterion nhìn tail thay vì unknown limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Rearrangement cho thấy infinite sums khác finite sums
 
 Finite addition commutative/associative không gây vấn đề.
@@ -362,6 +385,8 @@ Finite addition commutative/associative không gây vấn đề.
 Nhưng với conditionally convergent series, rearranging terms có thể đổi sum hoặc làm diverge (Riemann rearrangement phenomenon).
 
 Điều này không “phá” arithmetic; nó cho thấy limit tiến trình (process / 프로세스) thêm các giả định (assumptions / 가정들) vào phép cộng vô hạn.
+
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **13. Rearrangement cho thấy infinite sums khác finite sums** đã nêu tiêu chí phân biệt, còn **14. Cauchy criterion nhìn tail thay vì unknown limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Power series là polynomial với infinitely many degrees** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Cauchy criterion nhìn tail thay vì unknown limit
 
@@ -386,6 +411,8 @@ Interpretation:
 
 Cauchy criterion rất quan trọng vì không cần biết limit `S` trước.
 
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **14. Cauchy criterion nhìn tail thay vì unknown limit** đã nêu tiêu chí phân biệt, còn **15. Power series là polynomial với infinitely many degrees** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Radius of convergence đến từ coefficient growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Power series là polynomial với infinitely many degrees
 
 Power series quanh center `a`:
@@ -403,6 +430,8 @@ Thường tồn tại radius `R` sao cho:
 |x-a| > R  → divergence
 |x-a| = R  → phải xét riêng
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **16. Radius of convergence đến từ coefficient growth** tiếp nhận điểm tựa từ **15. Power series là polynomial với infinitely many degrees** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Endpoint hành vi (behavior / 동작) cần check riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Radius of convergence đến từ coefficient growth
 
@@ -428,6 +457,8 @@ nếu limit phù hợp tồn tại.
 
 Radius encode competition giữa coefficient growth và power `(x-a)^n`.
 
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **17. Endpoint hành vi (behavior / 동작) cần check riêng** tiếp nhận điểm tựa từ **16. Radius of convergence đến từ coefficient growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Term-by-term differentiation/tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Endpoint hành vi (behavior / 동작) cần check riêng
 
 Ví dụ power series có `R=1`.
@@ -439,6 +470,8 @@ Tại `x=-1`, có thể diverge hoặc converge conditionally.
 Radius chỉ quyết định inside/outside; ranh giới (boundary / 경계) thường cần kiểm thử (test / 테스트) riêng.
 
 Đây là dùng chung (common / 공통) exam trap nhưng sâu hơn là ranh giới (boundary / 경계) thường có qualitatively different cancellation.
+
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **18. Term-by-term differentiation/tích hợp (integration / 통합)** tiếp nhận điểm tựa từ **17. Endpoint hành vi (behavior / 동작) cần check riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Geometric series như generator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Term-by-term differentiation/tích hợp (integration / 통합)
 
@@ -470,6 +503,8 @@ C+
 
 Radius remains the same, though endpoints may thay đổi (change / 변경) hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **19. Geometric series như generator** tiếp nhận điểm tựa từ **18. Term-by-term differentiation/tích hợp (integration / 통합)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Series solution của differential equations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Geometric series như generator
 
 Định danh (identity / 식별자):
@@ -499,6 +534,8 @@ x+\frac{x^2}{2}+\frac{x^3}{3}+\cdots.
 
 Một simple series định danh (identity / 식별자) có thể generate cả family identities.
 
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **20. Series solution của differential equations** tiếp nhận điểm tựa từ **19. Geometric series như generator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Series trong numerical computing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Series solution của differential equations
 
 Nếu closed-form solution khó, assume
@@ -519,6 +556,8 @@ differential equation
 
 Special functions thường xuất hiện theo cách này.
 
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **21. Series trong numerical computing** tiếp nhận điểm tựa từ **20. Series solution của differential equations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Slow convergence vs acceleration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Series trong numerical computing
 
 Máy tính luôn truncate:
@@ -537,6 +576,8 @@ Practical accuracy phụ thuộc:
 
 Một mathematically convergent series có thể là numerically poor thuật toán (algorithm / 알고리즘) nếu convergence quá chậm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **22. Slow convergence vs acceleration** tiếp nhận điểm tựa từ **21. Series trong numerical computing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. xác suất (probability / 확률) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Slow convergence vs acceleration
 
 Harmonic-like tails hoặc `r` gần 1 làm convergence rất chậm.
@@ -546,6 +587,8 @@ Nếu geometric ratio `r=0.999`, cần rất nhiều terms.
 Môi trường vận hành (production / 운영 환경) numerical methods thường dùng transformed approximations, rational approximants hoặc convergence acceleration thay vì raw summation.
 
 Mathematical convergence không đồng nghĩa computational efficiency.
+
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, sau nội dung của **22. Slow convergence vs acceleration**, **23. xác suất (probability / 확률) liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **24. Finance liên kết (connection / 연결): present giá trị (value / 값) as geometric-like series** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. xác suất (probability / 확률) liên kết (connection / 연결)
 
@@ -558,6 +601,8 @@ E[X]=\sum_x xP(X=x).
 Interchanging sums/limits/expectations cần convergence conditions.
 
 Absolute convergence/integrability giúp justify manipulations mà finite sums cho phép tự do hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **24. Finance liên kết (connection / 연결): present giá trị (value / 값) as geometric-like series** tiếp nhận điểm tựa từ **23. xác suất (probability / 확률) liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. CS liên kết (connection / 연결): geometric công việc (work / 작업) bounds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Finance liên kết (connection / 연결): present giá trị (value / 값) as geometric-like series
 
@@ -584,6 +629,8 @@ PV=\frac Cr.
 
 Formula finance nổi tiếng chỉ là geometric-series convergence dưới các giả định (assumptions / 가정들) constant payment/tỷ lệ (rate / 비율).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **25. CS liên kết (connection / 연결): geometric công việc (work / 작업) bounds** tiếp nhận điểm tựa từ **24. Finance liên kết (connection / 연결): present giá trị (value / 값) as geometric-like series** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Worked example: lỗi (error / 오류) mục tiêu (target / 대상)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. CS liên kết (connection / 연결): geometric công việc (work / 작업) bounds
 
 Động (dynamic / 동적) array doubling costs:
@@ -603,6 +650,8 @@ n + n/2 + n/4 + ...
 cũng bounded bởi `2n`.
 
 Geometric series là foundation của many amortized/divide-and-conquer arguments.
+
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **25. CS liên kết (connection / 연결): geometric công việc (work / 작업) bounds** cho ta quy tắc; **26. Worked example: lỗi (error / 오류) mục tiêu (target / 대상)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Worked example: lỗi (error / 오류) mục tiêu (target / 대상)
 
@@ -632,6 +681,8 @@ Taking logs cho minimum `N`.
 
 Series convergence biến thành kỹ thuật (engineering / 엔지니어링) question: bao nhiêu terms đủ?
 
+> **Chuyển mạch:** Ở chặng này của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **26. Worked example: lỗi (error / 오류) mục tiêu (target / 대상)** cho ta quy tắc; **Liên kết kiến thức (knowledge connection / 지식 연결)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Phần kết nối đặt hội tụ và power series cạnh approximation, probability, differential equations và numerical computation. Hãy xem điều kiện hội tụ như ranh giới an toàn của phép biến đổi.
@@ -650,10 +701,16 @@ sequence limits
 → algorithmic geometric bounds
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Infinite series là một **accumulation tiến trình (process / 프로세스) controlled by a limit**. Convergence không hỏi từng term có nhỏ không; nó hỏi **remaining tail có thể làm arbitrarily small không**. Power series thêm một variable vào tiến trình (process / 프로세스) này, biến convergence thành một thuộc tính (property / 속성) của region quanh center.
 
+> **Chuyển mạch:** Trong **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Dùng chung (common / 공통) Misconceptions
 
 `a_n\to0` không đủ cho series convergence. “Convergent” không nghĩa fast enough for computation. Absolute và conditional convergence không interchangeable. Power series không automatically valid cho mọi `x`. Endpoints phải được check riêng. Rearrangement của conditionally convergent series có thể đổi result. Một theorem cho convergence mà không có useful error bound đôi khi chưa đủ cho numerical use.
+
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

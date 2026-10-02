@@ -1,7 +1,6 @@
 # Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation
 
-> **Mạch đọc:** Đọc **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Boolean giá trị (value / 값) là một mô hình (model / 모델) của quyết định (decision / 결정) trạng thái (state / 상태)** sang **2. Basic operations**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Boolean giá trị (value / 값) là một mô hình (model / 모델) của quyết định (decision / 결정) trạng thái (state / 상태)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Basic operations** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Boolean algebra với digital logic và mạch, để chuyển phép biến đổi đại số thành hành vi cổng logic.
 
 Boolean algebra (불 대수 / Boolean algebra) là một algebra của hai trạng thái, thường biểu diễn bằng `false/true` hoặc `0/1`. Nó nằm ở giao điểm của lô-gic (logic / 논리), discrete mathematics, programming và digital hardware.
 
@@ -33,6 +32,8 @@ isAuthenticated?
 hasPermission?
 featureEnabled?
 ```
+
+> **Chuyển mạch:** Trong **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **2. Basic operations** tiếp nhận điểm tựa từ **1. Boolean giá trị (value / 값) là một mô hình (model / 모델) của quyết định (decision / 결정) trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Truth bảng (table / 테이블) là exhaustive finite proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Basic operations
 
@@ -68,6 +69,8 @@ P\oplus Q
 
 đúng khi chính xác một trong hai đúng.
 
+> **Chuyển mạch:** Ở chặng này của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **3. Truth bảng (table / 테이블) là exhaustive finite proof** tiếp nhận điểm tựa từ **2. Basic operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. De Morgan's laws từ viewpoint complement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Truth bảng (table / 테이블) là exhaustive finite proof
 
 Với `n` Boolean inputs có
@@ -83,6 +86,8 @@ Truth bảng (table / 테이블) liệt kê đầu ra (output / 출력) trên t�
 Đây là một dạng brute-force proof.
 
 Nhưng chi phí (cost / 비용) tăng exponential theo `n`, nên truth tables không quy mô (scale / 규모) cho lô-gic (logic / 논리) lớn. Điều này dẫn tới symbolic simplification, SAT solving và formal methods.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **4. De Morgan's laws từ viewpoint complement** tiếp nhận điểm tựa từ **3. Truth bảng (table / 테이블) là exhaustive finite proof** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Boolean algebra identities không phải danh sách (list / 목록) rời rạc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. De Morgan's laws từ viewpoint complement
 
@@ -113,6 +118,8 @@ Cùng cấu trúc (structure / 구조) xuất hiện trong set lý thuyết (the
 
 Đây không phải coincidence: set membership là Boolean predicate.
 
+> **Chuyển mạch:** Trong **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **5. Boolean algebra identities không phải danh sách (list / 목록) rời rạc** tiếp nhận điểm tựa từ **4. De Morgan's laws từ viewpoint complement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Algebraic biểu diễn (representation / 표현) với 0/1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Boolean algebra identities không phải danh sách (list / 목록) rời rạc
 
 Một số identities:
@@ -134,6 +141,8 @@ P\land(P\lor Q)=P.
 ```
 
 Absorption có intuition rõ: nếu `P` đã true, thêm trường hợp (case / 사례) “P và Q” không mở rộng truth set của `P`.
+
+> **Chuyển mạch:** Ở chặng này của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **6. Algebraic biểu diễn (representation / 표현) với 0/1** tiếp nhận điểm tựa từ **5. Boolean algebra identities không phải danh sách (list / 목록) rời rạc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. XOR và arithmetic modulo 2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Algebraic biểu diễn (representation / 표현) với 0/1
 
@@ -158,6 +167,8 @@ P\lor Q=P+Q-PQ
 trên values `0,1`.
 
 Điều này cho thấy Boolean lô-gic (logic / 논리) có thể được study algebraically.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **7. XOR và arithmetic modulo 2** tiếp nhận điểm tựa từ **6. Algebraic biểu diễn (representation / 표현) với 0/1** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Functionally complete gate sets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. XOR và arithmetic modulo 2
 
@@ -185,6 +196,8 @@ x\oplus y\oplus x=y.
 
 Liên kết (connection / 연결) này rất quan trọng trong coding lý thuyết (theory / 이론), parity checks, tuyến tính (linear / 선형) phản hồi (feedback / 피드백) các hệ thống (systems / 시스템들) và nhị phân (binary / 이진) tuyến tính (linear / 선형) algebra.
 
+> **Chuyển mạch:** Trong **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **8. Functionally complete gate sets** tiếp nhận điểm tựa từ **7. XOR và arithmetic modulo 2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Sum-of-products và product-of-sums** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Functionally complete gate sets
 
 NAND:
@@ -211,6 +224,8 @@ Sau đó dùng NAND của các NAND để reconstruct AND/OR.
 
 Ý nghĩa kỹ thuật (engineering / 엔지니어링): hardware kiến trúc (architecture / 아키텍처) có thể chuẩn hóa thành phần nguyên thủy (primitive / 기본 요소) gate rồi synthesize lô-gic (logic / 논리) phức tạp.
 
+> **Chuyển mạch:** Ở chặng này của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **9. Sum-of-products và product-of-sums** tiếp nhận điểm tựa từ **8. Functionally complete gate sets** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. CNF và SAT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Sum-of-products và product-of-sums
 
 Mọi Boolean hàm (function / 함수) hữu hạn có thể viết bằng chuẩn gốc (canonical / 정본) forms.
@@ -220,6 +235,8 @@ Sum-of-products (SOP) lấy OR của các AND terms corresponding các truth-tab
 Product-of-sums (POS) dùng AND của OR clauses corresponding rows đầu ra (output / 출력) 0.
 
 Đây là cầu nối (bridge / 브리지) từ truth bảng (table / 테이블) sang circuit synthesis và SAT/CNF lập luận (reasoning / 추론).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **10. CNF và SAT** tiếp nhận điểm tựa từ **9. Sum-of-products và product-of-sums** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Short-circuit ngữ nghĩa (semantics / 의미론): logical equivalence không luôn là operational equivalence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. CNF và SAT
 
@@ -236,6 +253,8 @@ SAT bài toán (problem / 문제) hỏi có assignment nào làm toàn formula t
 SAT là một trong những central problems của theoretical CS. Dù worst-case exponential theo known độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론), hiện đại (modern / 현대적) SAT solvers cực mạnh trên nhiều practical instances nhờ propagation, xung đột (conflict / 충돌) học tập (learning / 학습) và heuristics.
 
 Boolean algebra vì vậy nối trực tiếp sang độ phức tạp (complexity / 복잡도) và xác minh (verification / 확인).
+
+> **Chuyển mạch:** Trong **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **11. Short-circuit ngữ nghĩa (semantics / 의미론): logical equivalence không luôn là operational equivalence** tiếp nhận điểm tựa từ **10. CNF và SAT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Three-valued lô-gic (logic / 논리) và NULL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Short-circuit ngữ nghĩa (semantics / 의미론): logical equivalence không luôn là operational equivalence
 
@@ -263,6 +282,8 @@ vs
 execution semantics
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **12. Three-valued lô-gic (logic / 논리) và NULL** tiếp nhận điểm tựa từ **11. Short-circuit ngữ nghĩa (semantics / 의미론): logical equivalence không luôn là operational equivalence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Bitwise operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Three-valued lô-gic (logic / 논리) và NULL
 
 SQL không dùng Boolean hai-valued đơn giản khi có `NULL`; nó dùng three-valued lô-gic (logic / 논리) với `UNKNOWN`.
@@ -280,6 +301,8 @@ Vì vậy transformation Boolean textbook có thể cần caution trong SQL pred
 `NOT UNKNOWN` vẫn `UNKNOWN`.
 
 Đây là ví dụ lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론) mở rộng Boolean mô hình (model / 모델).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **13. Bitwise operations** tiếp nhận điểm tựa từ **12. Three-valued lô-gic (logic / 논리) và NULL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Logical operator khác bitwise operator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Bitwise operations
 
@@ -307,6 +330,8 @@ mask & WRITE != 0
 
 Bit mask là cách đóng gói nhiều Boolean flags vào integer.
 
+> **Chuyển mạch:** Trong **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **14. Logical operator khác bitwise operator** tiếp nhận điểm tựa từ **13. Bitwise operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Boolean minimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Logical operator khác bitwise operator
 
 Trong nhiều languages:
@@ -325,6 +350,8 @@ có thể là bitwise hoặc non-short-circuit Boolean tùy ngôn ngữ (languag
 
 Không được swap operators chỉ vì truth bảng (table / 테이블) trên pure booleans trông giống nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **15. Boolean minimization** tiếp nhận điểm tựa từ **14. Logical operator khác bitwise operator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Worked Example: simplify nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Boolean minimization
 
 Simplification có hai goals khác nhau:
@@ -339,6 +366,8 @@ Karnaugh maps giúp visualize adjacent minterms khác một bit để combine.
 Algorithmic synthesis dùng Quine–McCluskey hoặc hiện đại (modern / 현대적) lô-gic (logic / 논리) synthesis methods.
 
 Nhưng minimal gate expression không nhất thiết là readable nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **15. Boolean minimization** cho ta quy tắc; **16. Worked Example: simplify nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Worked Example: parity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Worked Example: simplify nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙)
 
@@ -368,6 +397,8 @@ NOT admin AND (NOT active OR NOT owner)
 
 Lô-gic (logic / 논리) đúng, nhưng môi trường vận hành (production / 운영 환경) mã (code / 코드) còn phải xét role hierarchy, nullable trạng thái (state / 상태) và side-effect permission checks.
 
+> **Chuyển mạch:** Trong **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **16. Worked Example: simplify nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙)** cho ta quy tắc; **17. Worked Example: parity** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. Boolean ma trận (matrix / 행렬) và đồ thị (graph / 그래프) reachability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Worked Example: parity
 
 Parity của bits:
@@ -384,6 +415,8 @@ Nhưng hai bit flips có thể giữ parity, nên parity check không detect m�
 
 Đây là lesson chung: algebraic bất biến (invariant / 불변식) có detection power cụ thể, không phải guarantee universal.
 
+> **Chuyển mạch:** Ở chặng này của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **17. Worked Example: parity** cho ta quy tắc; **18. Boolean ma trận (matrix / 행렬) và đồ thị (graph / 그래프) reachability** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. liên kết (connection / 연결) với AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Boolean ma trận (matrix / 행렬) và đồ thị (graph / 그래프) reachability
 
 Adjacency ma trận (matrix / 행렬) `A` của đồ thị (graph / 그래프) có thể được interpreted trên Boolean semiring:
@@ -397,6 +430,8 @@ Khi đó powers của adjacency ma trận (matrix / 행렬) encode existence c�
 
 Điều này cho thấy cùng ma trận (matrix / 행렬) cú pháp (syntax / 문법) có thể chạy trên algebra khác nhau và meaning thay đổi theo operations nền.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, sau nội dung của **18. Boolean ma trận (matrix / 행렬) và đồ thị (graph / 그래프) reachability**, **19. liên kết (connection / 연결) với AI** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **20. liên kết (connection / 연결) với hardware** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. liên kết (connection / 연결) với AI
 
 Quyết định (decision / 결정) trees, nhị phân (binary / 이진) masks, attention masks và thresholded predicates đều dùng Boolean cấu trúc (structure / 구조).
@@ -405,15 +440,21 @@ Nhưng neural networks chủ yếu dùng continuous differentiable computation; 
 
 Một hard Boolean threshold mất độ dốc (gradient / 기울기), nên huấn luyện (training / 학습) differentiable các hệ thống (systems / 시스템들) thường dùng soft approximations như sigmoid/softmax trước khi discretize.
 
+> **Chuyển mạch:** Trong **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **20. liên kết (connection / 연결) với hardware** tiếp nhận điểm tựa từ **19. liên kết (connection / 연결) với AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. liên kết (connection / 연결) với hardware
 
 Transistor networks implement switching hành vi (behavior / 동작). lô-gic (logic / 논리) gates abstract vật lý (physical / 물리적) voltage ranges thành discrete states.
 
 Boolean mô hình (model / 모델) bỏ qua analog effects như propagation delay, noise margin và metastability. Digital lô-gic (logic / 논리) tính đúng đắn (correctness / 정확성) vẫn cần timing/electrical các giả định (assumptions / 가정들).
 
+> **Chuyển mạch:** Ở chặng này của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **20. liên kết (connection / 연결) với hardware** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Boolean algebra là algebra của predicates và decisions. Truth bảng (table / 테이블) cho ngữ nghĩa (semantics / 의미론); algebraic identities cho transformation; gates/bit operations cho hiện thực (implementation / 구현). Cùng expression có ba mặt: nó nghĩa gì, nó được simplify thế nào, và máy thực thi nó ra sao.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -427,4 +468,4 @@ Boolean mô hình (model / 모델) bỏ qua analog effects như propagation dela
 
 **“Parity detect mọi corruption.”** Không; detection năng lực (capability / 역량) phụ thuộc lỗi (error / 오류) mẫu (pattern / 패턴).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph theory](./00_graph_theory.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory
 
-> **Mạch đọc:** Đọc **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ordinary differential equation** sang **Initial giá trị (value / 값) bài toán (problem / 문제)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ordinary differential equation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Initial giá trị (value / 값) bài toán (problem / 문제)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối phương trình vi phân với điều kiện đầu, nghiệm và ổn định, để phân biệt công thức nghiệm với hành vi của hệ động lực.
 
 Nhiều mô hình khoa học không nói trực tiếp “trạng thái (state / 상태) sẽ bằng bao nhiêu tại thời gian (time / 시간) `t`”. Chúng mô tả **quy luật thay đổi cục bộ**: velocity phụ thuộc position ra sao, population tăng theo kích thước (size / 크기) thế nào, hiện tại (current / 현재) phụ thuộc voltage như thế nào, hay concentration thay đổi theo reaction tỷ lệ (rate / 비율) ra sao.
 
@@ -30,6 +29,8 @@ Second-order ODE có thể có dạng
 ```
 
 Thứ tự (order / 순서) của ODE là thứ tự (order / 순서) cao nhất của derivative xuất hiện.
+
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Initial giá trị (value / 값) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Ordinary differential equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Existence và uniqueness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Initial giá trị (value / 값) bài toán (problem / 문제)
 
@@ -61,6 +62,8 @@ y(t)=3e^{2t}.
 
 Pair của differential equation và initial điều kiện (condition / 조건) gọi là **initial giá trị (value / 값) bài toán (problem / 문제) — IVP**.
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Existence và uniqueness** tiếp nhận điểm tựa từ **Initial giá trị (value / 값) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Separable equations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Existence và uniqueness
 
 Không phải every differential equation với initial điều kiện (condition / 조건) đều có unique solution.
@@ -74,6 +77,8 @@ y'=f(t,y),\qquad y(t_0)=y_0
 có cục bộ (local / 로컬) unique solution.
 
 Điểm thực dụng là: trước khi “giải” equation, cần biết bài toán (problem / 문제) có well-defined solution hay không.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Separable equations** tiếp nhận điểm tựa từ **Existence và uniqueness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exponential growth và decay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Separable equations
 
@@ -115,6 +120,8 @@ và
 y=Ce^{kt}.
 ```
 
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Exponential growth và decay** tiếp nhận điểm tựa từ **Separable equations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **First-order tuyến tính (linear / 선형) ODE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Exponential growth và decay
 
 Equation
@@ -147,6 +154,8 @@ T_{1/2}=\frac{\ln2}{\lambda}.
 
 Exponential không phải arbitrary curve; nó là unique shape có relative tỷ lệ (rate / 비율) constant.
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **First-order tuyến tính (linear / 선형) ODE** tiếp nhận điểm tựa từ **Exponential growth và decay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Equilibrium points** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## First-order tuyến tính (linear / 선형) ODE
 
 General form:
@@ -175,6 +184,8 @@ Do đó
 
 Phương thức (method / 메서드) này xuất hiện trong RC circuits, mixing các mô hình (models / 모델들) và tuyến tính (linear / 선형) phản hồi (response / 응답) các hệ thống (systems / 시스템들).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Equilibrium points** tiếp nhận điểm tựa từ **First-order tuyến tính (linear / 선형) ODE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phase line** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Equilibrium points
 
 Với autonomous equation
@@ -193,6 +204,8 @@ Nếu hệ thống (system / 시스템) bắt đầu đúng tại equilibrium, d
 
 Nhưng quan trọng hơn là **stability**: nếu perturb nhẹ khỏi equilibrium, trajectory quay lại hay đi xa?
 
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Phase line** tiếp nhận điểm tựa từ **Equilibrium points** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logistic growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phase line
 
 Trong one-dimensional autonomous hệ thống (system / 시스템), sign của `f(y)` cho direction motion.
@@ -202,6 +215,8 @@ Nếu `f(y)>0`, trạng thái (state / 상태) tăng. Nếu `f(y)<0`, trạng th
 Plot signs trên number line giúp classify equilibria mà không cần closed-form solution.
 
 Stable equilibrium hút nearby trajectories; unstable equilibrium đẩy chúng ra xa.
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Logistic growth** tiếp nhận điểm tựa từ **Phase line** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Second-order equations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Logistic growth
 
@@ -222,6 +237,8 @@ Khi `0<P<K`, growth positive. Khi `P>K`, derivative negative.
 `K` là carrying sức chứa (capacity / 용량) và là stable equilibrium cho positive initial populations trong idealized mô hình (model / 모델).
 
 Logistic mô hình (model / 모델) giải thích vì sao exponential growth thường chỉ là cục bộ (local / 로컬) approximation ở giai đoạn đầu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Second-order equations** tiếp nhận điểm tựa từ **Logistic growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Characteristic equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Second-order equations
 
@@ -265,6 +282,8 @@ x(t)=A\cos(\omega t)+B\sin(\omega t).
 
 Oscillation xuất hiện vì acceleration luôn kéo trạng thái (state / 상태) về equilibrium.
 
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Characteristic equation** tiếp nhận điểm tựa từ **Second-order equations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Damped oscillator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Characteristic equation
 
 Tuyến tính (linear / 선형) constant-coefficient ODE
@@ -301,6 +320,8 @@ cho oscillation với envelope `e^{\alpha t}`.
 
 Đây là liên kết (connection / 연결) trực tiếp giữa algebraic roots và động (dynamic / 동적) hành vi (behavior / 동작).
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Damped oscillator** tiếp nhận điểm tựa từ **Characteristic equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forced các hệ thống (systems / 시스템들) và resonance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Damped oscillator
 
 Mô hình (model / 모델)
@@ -329,6 +350,8 @@ Nếu zero, trọng yếu (critical / 중요) damping: return nhanh mà không o
 
 Nếu positive, overdamped: two real decay modes.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Forced các hệ thống (systems / 시스템들) và resonance** tiếp nhận điểm tựa từ **Damped oscillator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hệ thống (systems / 시스템들) of ODEs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Forced các hệ thống (systems / 시스템들) và resonance
 
 Nếu có bên ngoài (external / 외부) đầu vào (input / 입력):
@@ -342,6 +365,8 @@ Solution thường gồm transient thành phần (component / 컴포넌트) và 
 Nếu forcing frequency gần natural frequency và damping nhỏ, phản hồi (response / 응답) amplitude có thể lớn: **resonance**.
 
 Resonance là động (dynamic / 동적) consequence của frequency matching, không chỉ là “rung mạnh”.
+
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Các hệ thống (systems / 시스템들) of ODEs** tiếp nhận điểm tựa từ **Forced các hệ thống (systems / 시스템들) và resonance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stability và eigenvalues** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các hệ thống (systems / 시스템들) of ODEs
 
@@ -377,6 +402,8 @@ e^{At}=Pe^{Dt}P^{-1}.
 
 Mỗi eigenvalue tạo một động (dynamic / 동적) chế độ (mode / 모드) `e^{\lambda t}`.
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Stability và eigenvalues** tiếp nhận điểm tựa từ **Các hệ thống (systems / 시스템들) of ODEs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nonlinear các hệ thống (systems / 시스템들) và linearization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stability và eigenvalues
 
 Với continuous hệ tuyến tính (linear system / 선형 시스템)
@@ -392,6 +419,8 @@ Nếu có eigenvalue với positive real part, có direction grow exponentially 
 Imaginary parts tạo oscillation; real parts tạo growth/decay envelope.
 
 Đây là lý do eigenvalues là ngôn ngữ (language / 언어) trung tâm của điều khiển (control / 제어) lý thuyết (theory / 이론).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Nonlinear các hệ thống (systems / 시스템들) và linearization** tiếp nhận điểm tựa từ **Stability và eigenvalues** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phase plane** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nonlinear các hệ thống (systems / 시스템들) và linearization
 
@@ -417,6 +446,8 @@ Eigenvalues của Jacobian giúp classify cục bộ (local / 로컬) stability 
 
 Điều này nối nonlinear differential equations với ma trận (matrix / 행렬) calculus và eigenanalysis.
 
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Phase plane** tiếp nhận điểm tựa từ **Nonlinear các hệ thống (systems / 시스템들) và linearization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conservation laws** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phase plane
 
 Với two-dimensional hệ thống (system / 시스템), thay vì plot variables theo thời gian (time / 시간), ta plot trajectory trong trạng thái (state / 상태) không gian (space / 공간) `(x,y)`.
@@ -424,6 +455,8 @@ Với two-dimensional hệ thống (system / 시스템), thay vì plot variables
 Phase portrait cho thấy equilibria, closed orbits, separatrices và luồng (flow / 흐름) hình học (geometry / 기하학).
 
 Hai trajectories của deterministic ODE với unique solutions không thể cross tại cùng trạng thái (state / 상태)/time-independent véc-tơ (vector / 벡터) trường dữ liệu (field / 필드), vì crossing sẽ imply hai futures từ cùng trạng thái (state / 상태).
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Conservation laws** tiếp nhận điểm tựa từ **Phase plane** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) giá trị (value / 값) problems** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Conservation laws
 
@@ -436,6 +469,8 @@ Một differential equation có thể preserve quantity `E(x)` dọc trajectory:
 Trong undamped mechanical hệ thống (system / 시스템), total năng lượng (energy / 에너지) thường conserved.
 
 Conserved quantities constrain trajectories vào mức (level / 수준) sets và có thể simplify phân tích (analysis / 분석) mạnh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Conservation laws** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) giá trị (value / 값) problems** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Numerical solution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) giá trị (value / 값) problems
 
@@ -457,6 +492,8 @@ là ranh giới (boundary / 경계) giá trị (value / 값) bài toán (problem
 
 Chỉ một số values của `λ` cho nontrivial solutions. Đây là origin của eigenvalue problems trong PDE và quantum mechanics.
 
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Ranh giới (boundary / 경계) giá trị (value / 값) problems** đã nêu tiêu chí phân biệt, còn **Numerical solution** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Runge–Kutta intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Numerical solution
 
 Nhiều ODE không có elementary closed form hoặc hệ thống (system / 시스템) quá phức tạp để giải symbolic.
@@ -468,6 +505,8 @@ x_{n+1}=x_n+h f(t_n,x_n).
 ```
 
 Nó là first-order phương thức (method / 메서드): toàn cục (global / 전역) lỗi (error / 오류) thường proportional `h` dưới suitable các giả định (assumptions / 가정들).
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Runge–Kutta intuition** tiếp nhận điểm tựa từ **Numerical solution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cục bộ (local / 로컬) lỗi (error / 오류) và toàn cục (global / 전역) lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Runge–Kutta intuition
 
@@ -499,6 +538,8 @@ x_{n+1}=x_n+\frac h6(k_1+2k_2+2k_3+k_4).
 
 RK4 có high accuracy cho many smooth nonstiff problems.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Cục bộ (local / 로컬) lỗi (error / 오류) và toàn cục (global / 전역) lỗi (error / 오류)** tiếp nhận điểm tựa từ **Runge–Kutta intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stiff equations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cục bộ (local / 로컬) lỗi (error / 오류) và toàn cục (global / 전역) lỗi (error / 오류)
 
 Cục bộ (local / 로컬) truncation lỗi (error / 오류) đo lỗi (error / 오류) tạo trong một step nếu starting giá trị (value / 값) chính xác (exact / 정확한).
@@ -507,6 +548,8 @@ Toàn cục (global / 전역) lỗi (error / 오류) là accumulated lỗi (erro
 
 Một phương thức (method / 메서드) cục bộ (local / 로컬) rất chính xác vẫn cần stability để lỗi (error / 오류) không amplify qua repeated steps.
 
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Stiff equations** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) lỗi (error / 오류) và toàn cục (global / 전역) lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backward Euler** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stiff equations
 
 Một ODE gọi là **stiff** khi có nhiều thời gian (time / 시간) scales rất khác nhau làm tường minh (explicit / 명시적) methods cần extremely small step để remain stable, dù solution itself có thể smooth.
@@ -514,6 +557,8 @@ Một ODE gọi là **stiff** khi có nhiều thời gian (time / 시간) scales
 Ví dụ chemical kinetics có fast reactions và slow processes cùng tồn tại.
 
 Implicit methods như backward Euler thường stable hơn cho stiff problems.
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Backward Euler** tiếp nhận điểm tựa từ **Stiff equations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adaptive step kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Backward Euler
 
@@ -527,6 +572,8 @@ Unknown `x_{n+1}` xuất hiện cả hai vế, nên mỗi step có thể cần s
 
 Đổi lại, phương thức (method / 메서드) có stronger stability properties.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Adaptive step kích thước (size / 크기)** tiếp nhận điểm tựa từ **Backward Euler** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự kiện (event / 이벤트) detection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Adaptive step kích thước (size / 크기)
 
 Fixed step `h` có thể waste computation ở smooth regions và thiếu accuracy ở rapidly changing regions.
@@ -535,11 +582,15 @@ Adaptive solvers estimate cục bộ (local / 로컬) lỗi (error / 오류) r�
 
 Hiện đại (modern / 현대적) ODE solvers thường ưu tiên tolerance hơn việc người dùng chọn một `h` cứng.
 
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Sự kiện (event / 이벤트) detection** tiếp nhận điểm tựa từ **Adaptive step kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dimensionless variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sự kiện (event / 이벤트) detection
 
 Trong simulation, ta đôi khi quan tâm thời điểm solution cross threshold, va chạm hoặc switch regime.
 
 Solver cần locate sự kiện (event / 이벤트) thời gian (time / 시간) giữa numerical steps, thường bằng interpolation/gốc (root / 루트) finding, thay vì chỉ kiểm tra discrete sampled times.
+
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Dimensionless variables** tiếp nhận điểm tựa từ **Sự kiện (event / 이벤트) detection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differential equations và Laplace transform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dimensionless variables
 
@@ -555,6 +606,8 @@ có thể biến constants thành ratios thể hiện relative thời gian (time
 
 Non-dimensionalization giúp so sánh các hệ thống (systems / 시스템들) khác units và nhận ra dominant mechanisms.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Differential equations và Laplace transform** tiếp nhận điểm tựa từ **Dimensionless variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differential equations và xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Differential equations và Laplace transform
 
 Tuyến tính (linear / 선형) ODE với initial conditions có thể transform thành algebraic equation trong `s` lĩnh vực (domain / 도메인).
@@ -562,6 +615,8 @@ Tuyến tính (linear / 선형) ODE với initial conditions có thể transform
 Ví dụ differentiation trở thành multiplication by `s` cộng initial-condition terms.
 
 Điều này hữu ích cho tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들) và điều khiển (control / 제어), đặc biệt khi đầu vào (input / 입력) có steps/impulses.
+
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Differential equations và xác suất (probability / 확률)** tiếp nhận điểm tựa từ **Differential equations và Laplace transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differential equations và machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Differential equations và xác suất (probability / 확률)
 
@@ -575,6 +630,8 @@ Ordinary calculus không đủ vì Brownian paths không differentiable theo cla
 
 Đây là cầu nối (bridge / 브리지) từ deterministic dynamics sang stochastic processes.
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Differential equations và machine học tập (learning / 학습)** tiếp nhận điểm tựa từ **Differential equations và xác suất (probability / 확률)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Differential equations và machine học tập (learning / 학습)
 
 Continuous-depth neural networks như Neural ODEs xem hidden trạng thái (state / 상태) evolution là
@@ -587,11 +644,15 @@ Huấn luyện (training / 학습) cần differentiate through numerical ODE sol
 
 Dù hiện thực (implementation / 구현) hiện đại, underlying mathematics vẫn là hệ động (dynamic system / 동적 시스템), numerical tích hợp (integration / 통합) và sensitivity phân tích (analysis / 분석).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Differential equations và machine học tập (learning / 학습)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Differential equation là một **generator của trajectories**. Nó chỉ cục bộ (local / 로컬) velocity của trạng thái (state / 상태) tại mỗi điểm (point / 지점). Initial điều kiện (condition / 조건) đặt hệ thống (system / 시스템) vào một điểm (point / 지점); véc-tơ (vector / 벡터) trường dữ liệu (field / 필드) nói nó phải đi direction nào; tích hợp (integration / 통합) qua thời gian (time / 시간) tạo toàn cục (global / 전역) trajectory.
 
 Tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) có thể tách thành eigenmodes. Nonlinear các hệ thống (systems / 시스템들) thường được hiểu cục bộ (local / 로컬) bằng linearization, toàn cục (global / 전역) bằng phase hình học (geometry / 기하학), invariants và numerical simulation.
+
+> **Chuyển mạch:** Trong **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -603,8 +664,10 @@ Giảm step kích thước (size / 크기) không luôn chữa mọi vấn đề
 
 Eigenvalue stability criteria của linearization là cục bộ (local / 로컬) statements cho nonlinear các hệ thống (systems / 시스템들) và có edge cases khi eigenvalues nằm trên imaginary axis.
 
+> **Chuyển mạch:** Ở chặng này của **Phương trình vi phân và hệ động lực: từ cục bộ (local / 로컬) law đến toàn cục (global / 전역) trajectory**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Chapter này nối [Integrals](./03_integrals_and_accumulation.md), [Eigenvalues](../04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md), [Taylor approximation](./08_taylor_series_and_local_approximation.md), [PDE](./10_partial_differential_equations_and_fields_intro.md), [Laplace/Z-transform](../09_connections/06_laplace_z_transform_and_dynamic_systems.md), [Stochastic processes](../06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md) và [Dynamic programming/optimal control](../08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md).
 
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 limits and continuity](./00_limits_and_continuity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

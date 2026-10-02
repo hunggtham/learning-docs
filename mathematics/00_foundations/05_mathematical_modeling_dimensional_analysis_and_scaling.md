@@ -1,7 +1,6 @@
 # Mô hình toán học, phân tích thứ nguyên và scaling
 
-> **Mạch đọc:** Đọc **Mô hình toán học, phân tích thứ nguyên và scaling** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ hiện tượng đến biến số** sang **Đơn vị là một phần của toán học, không phải nhãn trang trí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình toán học, phân tích thứ nguyên và scaling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ hiện tượng đến biến số** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đơn vị là một phần của toán học, không phải nhãn trang trí** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối mô hình toán với thứ nguyên, tỷ lệ và xấp xỉ, để biết khi nào một mô hình có thể mở rộng sang quy mô khác.
 
 Toán học trở nên hữu ích khi ta biến một vấn đề trong thế giới thật thành một cấu trúc có thể suy luận. Quá trình đó gọi là **mô hình hóa toán học (Mathematical Modeling / 수학적 모델링)**. Một mô hình không phải bản sao hoàn hảo của thực tế. Nó là một lựa chọn có chủ đích: giữ lại những đại lượng và quan hệ quan trọng cho câu hỏi đang hỏi, đồng thời bỏ qua những chi tiết chưa cần thiết.
 
@@ -19,8 +18,7 @@ d=vt.
 
 Nếu `v` được xem là tốc độ trung bình đã biết, `t` là unknown cần tìm và `d` là dữ liệu đầu vào, thì `v` đang đóng vai trò parameter. Nhưng trong mô hình khác, `v(t)` lại là một hàm (function / 함수) thay đổi theo thời gian. Cùng một ký hiệu không quyết định vai trò; câu hỏi và mô hình quyết định.
 
-
-> **Chuyển mạch:** Từ **Từ hiện tượng đến biến số**, ta sang **Đơn vị là một phần của toán học, không phải nhãn trang trí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình toán học, phân tích thứ nguyên và scaling**, **Đơn vị là một phần của toán học, không phải nhãn trang trí** tiếp nhận điểm tựa từ **Từ hiện tượng đến biến số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dimensionless quantity và vì sao ratio mạnh đến vậy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đơn vị là một phần của toán học, không phải nhãn trang trí
 
@@ -56,8 +54,7 @@ khớp với distance. Nếu ai đó viết `d=v+t`, biểu thức đó đã đ�
 
 Trong programming, mô hình tư duy (mental model / 사고 모델) này gần với kiểu (type / 타입) các hệ thống (systems / 시스템들). Cộng `LocalDate` với `BigDecimal` vô nghĩa không phải vì trình biên dịch (compiler / 컴파일러) “khó tính”, mà vì hai đối tượng (object / 객체) biểu diễn hai loại quantity khác nhau. Các thư viện units-of-measure cố đưa chính tư tưởng dimensional consistency vào mã (code / 코드).
 
-
-> **Chuyển mạch:** Từ **Đơn vị là một phần của toán học, không phải nhãn trang trí**, ta sang **Dimensionless quantity và vì sao ratio mạnh đến vậy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mô hình toán học, phân tích thứ nguyên và scaling**, **Dimensionless quantity và vì sao ratio mạnh đến vậy** tiếp nhận điểm tựa từ **Đơn vị là một phần của toán học, không phải nhãn trang trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scaling: nếu kích thước tăng gấp đôi thì điều gì thực sự thay đổi?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dimensionless quantity và vì sao ratio mạnh đến vậy
 
@@ -65,8 +62,7 @@ Một đại lượng **không thứ nguyên (Dimensionless Quantity / 무차원
 
 Dimensionless quantities đặc biệt quan trọng vì chúng dễ so sánh giữa các hệ thống (systems / 시스템들) có quy mô (scale / 규모) khác nhau. Một chiếc mô hình dài 10 cm và một cây cầu dài 100 m có thể chia sẻ một số dimensionless ratios dù kích thước tuyệt đối khác nhau. kỹ thuật (engineering / 엔지니어링) thường dùng các dimensionless numbers để xác định khi hai hệ thống có hành vi (behavior / 동작) tương tự.
 
-
-> **Chuyển mạch:** Từ **Dimensionless quantity và vì sao ratio mạnh đến vậy**, ta sang **Scaling: nếu kích thước tăng gấp đôi thì điều gì thực sự thay đổi?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình toán học, phân tích thứ nguyên và scaling**, **Scaling: nếu kích thước tăng gấp đôi thì điều gì thực sự thay đổi?** tiếp nhận điểm tựa từ **Dimensionless quantity và vì sao ratio mạnh đến vậy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự (order / 순서) of magnitude và ước lượng Fermi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Scaling: nếu kích thước tăng gấp đôi thì điều gì thực sự thay đổi?
 
@@ -82,8 +78,7 @@ Nếu cạnh tăng gấp 2, perimeter tăng gấp 2 nhưng area tăng gấp 4. V
 
 Điều này giải thích nhiều hiện tượng đời sống. Một animal lớn hơn không chỉ là animal nhỏ “phóng to”. Surface area và volume tăng theo powers khác nhau, nên heat mất mát (loss / 손실), structural stress và metabolic các ràng buộc (constraints / 제약조건들) thay đổi. Trong software, scaling cũng xuất hiện theo cách tương tự: nếu một thuật toán (algorithm / 알고리즘) so sánh mọi pair trong `n` records, công việc (work / 작업) quy mô (scale / 규모) gần `n^2`; doubling đầu vào (input / 입력) có thể làm công việc (work / 작업) tăng khoảng bốn lần.
 
-
-> **Chuyển mạch:** Từ **Scaling: nếu kích thước tăng gấp đôi thì điều gì thực sự thay đổi?**, ta sang **thứ tự (order / 순서) of magnitude và ước lượng Fermi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình toán học, phân tích thứ nguyên và scaling**, **Thứ tự (order / 순서) of magnitude và ước lượng Fermi** tiếp nhận điểm tựa từ **Scaling: nếu kích thước tăng gấp đôi thì điều gì thực sự thay đổi?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sensitivity: kết quả nhạy đến giả định (assumption / 가정) nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự (order / 순서) of magnitude và ước lượng Fermi
 
@@ -110,8 +105,7 @@ Mỗi factor có bất định (uncertainty / 불확실성), nhưng sản phẩm
 
 Peak traffic có thể cao hơn nhiều, nhưng phép tính thô giúp ta biết mình đang nói về vài trăm, vài nghìn hay vài triệu requests/s.
 
-
-> **Chuyển mạch:** Từ **thứ tự (order / 순서) of magnitude và ước lượng Fermi**, ta sang **Sensitivity: kết quả nhạy đến giả định (assumption / 가정) nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mô hình toán học, phân tích thứ nguyên và scaling**, **Sensitivity: kết quả nhạy đến giả định (assumption / 가정) nào?** tiếp nhận điểm tựa từ **Thứ tự (order / 순서) of magnitude và ước lượng Fermi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình (model / 모델) kiểm tra hợp lệ (validation / 검증) và residual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sensitivity: kết quả nhạy đến giả định (assumption / 가정) nào?
 
@@ -141,8 +135,7 @@ Sensitivity nối trực tiếp với derivatives: derivative chính là cục b
 
 cho biết đầu ra (output / 출력) phản ứng cục bộ (local / 로컬) mạnh đến mức nào trước thay đổi đầu vào (input / 입력).
 
-
-> **Chuyển mạch:** Từ **Sensitivity: kết quả nhạy đến giả định (assumption / 가정) nào?**, ta sang **mô hình (model / 모델) kiểm tra hợp lệ (validation / 검증) và residual** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình toán học, phân tích thứ nguyên và scaling**, **Mô hình (model / 모델) kiểm tra hợp lệ (validation / 검증) và residual** tiếp nhận điểm tựa từ **Sensitivity: kết quả nhạy đến giả định (assumption / 가정) nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giả định (assumption / 가정), approximation và lĩnh vực (domain / 도메인) of validity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình (model / 모델) kiểm tra hợp lệ (validation / 검증) và residual
 
@@ -154,8 +147,7 @@ r_i=y_i-\hat y_i.
 
 Residual không chỉ là “lỗi (error / 오류) cần giảm”. mẫu (pattern / 패턴) trong residual có thể cho thấy giả định (assumption / 가정) sai. Nếu residual tăng dần theo thời gian (time / 시간), mô hình (model / 모델) có thể đang thiếu trend. Nếu variance của residual tăng cùng magnitude, noise có thể không homoscedastic. Statistics và machine học tập (learning / 학습) phát triển phần lớn từ chính câu hỏi: làm sao đánh giá mô hình (model / 모델) khi dữ liệu (data / 데이터) chứa bất định (uncertainty / 불확실성)?
 
-
-> **Chuyển mạch:** Từ **mô hình (model / 모델) kiểm tra hợp lệ (validation / 검증) và residual**, ta sang **giả định (assumption / 가정), approximation và lĩnh vực (domain / 도메인) of validity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình toán học, phân tích thứ nguyên và scaling**, **Giả định (assumption / 가정), approximation và lĩnh vực (domain / 도메인) of validity** tiếp nhận điểm tựa từ **Mô hình (model / 모델) kiểm tra hợp lệ (validation / 검증) và residual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giả định (assumption / 가정), approximation và lĩnh vực (domain / 도메인) of validity
 
@@ -169,8 +161,7 @@ khi `x` đo bằng radian. Đây là cục bộ (local / 로컬) approximation x
 
 Khi đọc bất kỳ mô hình (model / 모델) nào, nên hỏi ba câu: what is being ignored, what quy mô (scale / 규모) are we operating at, and which variables are treated as independent even though reality may couple them?
 
-
-> **Chuyển mạch:** Từ **giả định (assumption / 가정), approximation và lĩnh vực (domain / 도메인) of validity**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Mô hình toán học, phân tích thứ nguyên và scaling**, sau nội dung của **Giả định (assumption / 가정), approximation và lĩnh vực (domain / 도메인) of validity**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -178,15 +169,13 @@ Modeling là nơi nhiều nhánh Toán gặp nhau. Algebra biểu diễn relatio
 
 Trong machine học tập (learning / 학습), một neural mạng (network / 네트워크) là một parameterized hàm (function / 함수) family. huấn luyện (training / 학습) là tối ưu hóa (optimization / 최적화); mất mát (loss / 손실) là mục tiêu (objective / 목표); regularization là ràng buộc (constraint / 제약조건)/penalty; kiểm tra hợp lệ (validation / 검증) kiểm tra khả năng generalize. Trong finance, discounted cash-flow mô hình (model / 모델) biến các giả định (assumptions / 가정들) về future cash luồng (flow / 흐름) và discount tỷ lệ (rate / 비율) thành present giá trị (value / 값). Trong physics, differential equations mô hình (model / 모델) laws of thay đổi (change / 변경). Những trường hợp này khác lĩnh vực (domain / 도메인) nhưng cùng một mental cấu trúc (structure / 구조).
 
-
-> **Chuyển mạch:** Từ **liên kết kiến thức (knowledge connection / 지식 연결)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình toán học, phân tích thứ nguyên và scaling**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Một mathematical mô hình (model / 모델) là một “máy suy luận có điều kiện”: nếu các các giả định (assumptions / 가정들) và relationships ta chọn đủ phù hợp với câu hỏi, mô hình (model / 모델) cho phép biến dữ liệu đầu vào thành prediction hoặc quyết định (decision / 결정). Dimensional phân tích (analysis / 분석) kiểm tra mô hình (model / 모델) có nói đúng loại quantity; scaling cho biết điều gì xảy ra khi kích thước thay đổi; sensitivity cho biết giả định (assumption / 가정) nào thực sự chi phối kết quả.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Mô hình toán học, phân tích thứ nguyên và scaling**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -196,4 +185,4 @@ Dimensional consistency cũng không chứng minh công thức đúng. `d=vt` v�
 
 Cuối cùng, precision không đồng nghĩa accuracy. Viết `12.384729%` từ những các giả định (assumptions / 가정들) chỉ chính xác khoảng 10% là false precision. Số chữ số phải phản ánh bất định (uncertainty / 불확실성) của mô hình (model / 모델), không phải khả năng máy tính in nhiều decimal places.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematical thinking](./00_mathematical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

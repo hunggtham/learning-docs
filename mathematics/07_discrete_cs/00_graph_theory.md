@@ -1,7 +1,6 @@
 # Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng
 
-> **Mạch đọc:** Đọc **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **đồ thị (graph / 그래프) bắt đầu từ lớp trừu tượng (abstraction / 추상화) nào?** sang **Simple đồ thị (graph / 그래프), multigraph và self-loop**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đồ thị (graph / 그래프) bắt đầu từ lớp trừu tượng (abstraction / 추상화) nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Simple đồ thị (graph / 그래프), multigraph và self-loop** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối graph với đỉnh, cạnh và đường đi, để chọn mô hình và thuật toán theo quan hệ thực sự cần biểu diễn.
 
 Lý thuyết đồ thị (Graph Theory / 그래프 이론) nghiên cứu những các hệ thống (systems / 시스템들) mà điều quan trọng không phải tọa độ tuyệt đối của objects, mà là **objects nào được nối với objects nào**. Khi ta quan tâm đến phụ thuộc (dependency / 의존성), reachability, tuyến (route / 경로), hierarchy, cycle, neighborhood hoặc connectivity, đồ thị (graph / 그래프) thường là lớp trừu tượng (abstraction / 추상화) tự nhiên nhất.
 
@@ -25,6 +24,8 @@ Nếu đồ thị (graph / 그래프) có hướng (Directed Graph / 방향 그�
 
 Đồ thị (graph / 그래프) mô hình (model / 모델) không tự nói nút (node / 노드) hoặc edge “thật sự là gì”. Ta quyết định ngữ nghĩa (semantics / 의미론) theo bài toán (problem / 문제). Đây là sức mạnh của lớp trừu tượng (abstraction / 추상화) nhưng cũng là nguồn rủi ro: nếu edge definition không đúng nghiệp vụ (business / 비즈니스)/vật lý (physical / 물리적) meaning, thuật toán (algorithm / 알고리즘) đúng trên đồ thị (graph / 그래프) vẫn có thể trả lời sai question thực tế.
 
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Simple đồ thị (graph / 그래프), multigraph và self-loop** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) bắt đầu từ lớp trừu tượng (abstraction / 추상화) nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Degree: cục bộ (local / 로컬) connectivity của một nút (node / 노드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Simple đồ thị (graph / 그래프), multigraph và self-loop
 
 Trong simple undirected đồ thị (graph / 그래프), thường không có multiple edges giữa cùng pair và không có self-loop. Nhưng nhiều các hệ thống (systems / 시스템들) cần richer mô hình (model / 모델).
@@ -32,6 +33,8 @@ Trong simple undirected đồ thị (graph / 그래프), thường không có mu
 Một airline mạng (network / 네트워크) có thể có nhiều flights giữa cùng hai airports, nên multigraph hợp lý. máy trạng thái (state machine / 상태 머신) có thể có self-loop khi trạng thái (state / 상태) chuyển về chính nó. mạng (network / 네트워크) luồng (flow / 흐름) có directed edges với capacities.
 
 Trước khi dùng theorem hoặc thuật toán (algorithm / 알고리즘), cần biết đồ thị (graph / 그래프) mô hình (model / 모델) cho phép gì. Một thuộc tính (property / 속성) đúng cho simple đồ thị (graph / 그래프) có thể không translate nguyên xi sang multigraph.
+
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Degree: cục bộ (local / 로컬) connectivity của một nút (node / 노드)** tiếp nhận điểm tựa từ **Simple đồ thị (graph / 그래프), multigraph và self-loop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Walk, trail, đường dẫn (path / 경로) và cycle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Degree: cục bộ (local / 로컬) connectivity của một nút (node / 노드)
 
@@ -53,6 +56,8 @@ Trong directed đồ thị (graph / 그래프), ta phân biệt in-degree và ou
 \sum_v \deg^-(v)=\sum_v\deg^+(v)=|E|.
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Degree: cục bộ (local / 로컬) connectivity của một nút (node / 노드)** xác định đầu vào; **Walk, trail, đường dẫn (path / 경로) và cycle** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Connectivity: có đi tới được không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Walk, trail, đường dẫn (path / 경로) và cycle
 
 Trong informal discussion, mọi chuỗi (sequence / 시퀀스) nodes connected bởi edges thường được gọi “đường dẫn (path / 경로)”, nhưng đồ thị (graph / 그래프) lý thuyết (theory / 이론) phân biệt kỹ hơn.
@@ -60,6 +65,8 @@ Trong informal discussion, mọi chuỗi (sequence / 시퀀스) nodes connected 
 Một walk có thể lặp vertices và edges. Trail không lặp edges. Simple đường dẫn (path / 경로) không lặp vertices. Cycle là closed đường dẫn (path / 경로) trở về điểm bắt đầu mà không lặp intermediate vertices theo tiêu chuẩn (standard / 표준) simple definition.
 
 Distinctions này quan trọng khi nói về Euler đường dẫn (path / 경로), Hamiltonian đường dẫn (path / 경로), shortest đường dẫn (path / 경로) hoặc cycle detection.
+
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Walk, trail, đường dẫn (path / 경로) và cycle** xác định đầu vào; **Connectivity: có đi tới được không?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trees: connectivity tối thiểu không có cycle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Connectivity: có đi tới được không?
 
@@ -71,6 +78,8 @@ Trong directed đồ thị (graph / 그래프), có hai notions quan trọng:
 - weakly connected: nếu bỏ direction, underlying undirected đồ thị (graph / 그래프) connected.
 
 Trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들) hoặc microservice phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), “có đường dẫn (path / 경로)” không đồng nghĩa “yêu cầu (request / 요청) chắc chắn thành công”. đồ thị (graph / 그래프) connectivity chỉ nói cấu trúc (structure / 구조) cho phép tuyến (route / 경로) tồn tại trong mô hình (model / 모델); độ trễ (latency / 지연 시간), sức chứa (capacity / 용량), authorization và failures là properties khác.
+
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Trees: connectivity tối thiểu không có cycle** tiếp nhận điểm tựa từ **Connectivity: có đi tới được không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spanning cây (tree / 트리): giữ connectivity, bỏ redundancy cycles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trees: connectivity tối thiểu không có cycle
 
@@ -88,6 +97,8 @@ Có nhiều cách hiểu thuộc tính (property / 속성) này. Một cây (tre
 
 Tệp (file / 파일) các hệ thống (systems / 시스템들), DOM, cú pháp (syntax / 문법) trees và many indexes dùng cây (tree / 트리). Nhưng Git lần ghi nhận (commit / 커밋) lịch sử (history / 이력) nói chung là DAG chứ không strict cây (tree / 트리) vì merge lần ghi nhận (commit / 커밋) có thể có nhiều parents.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Spanning cây (tree / 트리): giữ connectivity, bỏ redundancy cycles** tiếp nhận điểm tựa từ **Trees: connectivity tối thiểu không có cycle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Minimum spanning cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Spanning cây (tree / 트리): giữ connectivity, bỏ redundancy cycles
 
 Cho connected đồ thị (graph / 그래프) `G`, spanning cây (tree / 트리) chứa tất cả vertices nhưng chỉ giữ subset edges đủ để đồ thị (graph / 그래프) vẫn connected và acyclic.
@@ -95,6 +106,8 @@ Cho connected đồ thị (graph / 그래프) `G`, spanning cây (tree / 트리)
 Mọi spanning cây (tree / 트리) với `n` vertices có `n-1` edges.
 
 Trong mạng (network / 네트워크) thiết kế (design / 설계), nếu goal chỉ là maintain connectivity với minimum number edges, spanning cây (tree / 트리) là natural đối tượng (object / 객체). Nhưng nếu edges có costs, ta cần minimum spanning cây (tree / 트리).
+
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Minimum spanning cây (tree / 트리)** tiếp nhận điểm tựa từ **Spanning cây (tree / 트리): giữ connectivity, bỏ redundancy cycles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Directed acyclic đồ thị (graph / 그래프) và phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Minimum spanning cây (tree / 트리)
 
@@ -105,6 +118,8 @@ Kruskal's thuật toán (algorithm / 알고리즘) sort edges theo weight và th
 Điểm cốt lõi là **cut thuộc tính (property / 속성)**: với một cut của vertices thành hai groups, lightest edge crossing cut có thể là safe choice dưới conditions chuẩn. Đây là structural reason greedy algorithms đúng, không chỉ là “chọn edge nhỏ nhất vì nghe hợp lý”.
 
 MST không giải shortest paths giữa một nguồn (source / 소스) và mọi nodes. Hai problems khác nhau: MST minimize total cây (tree / 트리) chi phí (cost / 비용); shortest-path cây (tree / 트리) minimize source-to-node distances.
+
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Directed acyclic đồ thị (graph / 그래프) và phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Minimum spanning cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị (graph / 그래프) biểu diễn (representation / 표현): adjacency danh sách (list / 목록) và adjacency ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Directed acyclic đồ thị (graph / 그래프) và phụ thuộc (dependency / 의존성)
 
@@ -123,6 +138,8 @@ u\to v
 Topological thứ tự (order / 순서) tồn tại **iff** directed đồ thị (graph / 그래프) là DAG.
 
 Bản dựng (build / 빌드) các hệ thống (systems / 시스템들), gói (package / 패키지) resolution, course prerequisites và workflow scheduling đều dùng idea này. Nhiều valid topological orders có thể tồn tại; thuật toán (algorithm / 알고리즘) không nhất thiết trả unique thứ tự (ordering / 순서).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Đồ thị (graph / 그래프) biểu diễn (representation / 표현): adjacency danh sách (list / 목록) và adjacency ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **Directed acyclic đồ thị (graph / 그래프) và phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BFS: shortest number of edges bằng tầng (layer / 계층) expansion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồ thị (graph / 그래프) biểu diễn (representation / 표현): adjacency danh sách (list / 목록) và adjacency ma trận (matrix / 행렬)
 
@@ -148,6 +165,8 @@ Choice phụ thuộc đồ thị (graph / 그래프) density và operations. Den
 
 Biểu diễn (representation / 표현) là kỹ thuật (engineering / 엔지니어링) quyết định (decision / 결정), không phải graph-theory definition.
 
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **BFS: shortest number of edges bằng tầng (layer / 계층) expansion** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) biểu diễn (representation / 표현): adjacency danh sách (list / 목록) và adjacency ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DFS: đi sâu để lộ cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## BFS: shortest number of edges bằng tầng (layer / 계층) expansion
 
 Breadth-First tìm kiếm (search / 검색) bắt đầu từ nguồn (source / 소스) và khám phá đồ thị (graph / 그래프) theo layers.
@@ -168,6 +187,8 @@ vì mỗi vertex được visited bounded number times và adjacency entries đ�
 
 BFS coi mọi edge có same chi phí (cost / 비용). Nếu một direct edge chi phí (cost / 비용) 100 nhưng tuyến (route / 경로) qua ba edges chi phí (cost / 비용) 1+1+1=3, “fewer edges” không còn đồng nghĩa “shorter chi phí (cost / 비용)”. Khi weights khác nhau, cần thuật toán (algorithm / 알고리즘) phù hợp như Dijkstra hoặc Bellman–Ford.
 
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **DFS: đi sâu để lộ cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **BFS: shortest number of edges bằng tầng (layer / 계층) expansion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dijkstra: shortest đường dẫn (path / 경로) khi weights nonnegative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## DFS: đi sâu để lộ cấu trúc (structure / 구조)
 
 Depth-First tìm kiếm (search / 검색) đi sâu theo một branch cho tới khi không còn unvisited neighbor rồi backtrack.
@@ -181,6 +202,8 @@ DFS tạo discovery/finish cấu trúc (structure / 구조) hữu ích cho:
 - strongly connected thành phần (component / 컴포넌트) algorithms.
 
 Recursive hiện thực (implementation / 구현) tự nhiên nhưng deep đồ thị (graph / 그래프) có thể vượt call-stack limit. tường minh (explicit / 명시적) ngăn xếp (stack / 스택) thường an toàn hơn trong môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **DFS: đi sâu để lộ cấu trúc (structure / 구조)** xác định đầu vào; **Dijkstra: shortest đường dẫn (path / 경로) khi weights nonnegative** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Floyd–Warshall và all-pairs shortest paths** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dijkstra: shortest đường dẫn (path / 경로) khi weights nonnegative
 
@@ -210,6 +233,8 @@ Bellman–Ford relax mọi edges repeatedly và xử lý negative weights, đồ
 
 Negative cycle nghĩa shortest đường dẫn (path / 경로) có thể không finite: đi vòng cycle mỗi lần làm chi phí (cost / 비용) giảm thêm.
 
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Dijkstra: shortest đường dẫn (path / 경로) khi weights nonnegative** xác định đầu vào; **Floyd–Warshall và all-pairs shortest paths** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Strongly connected components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Floyd–Warshall và all-pairs shortest paths
 
 Nếu cần shortest đường dẫn (path / 경로) giữa mọi pair vertices trong dense đồ thị (graph / 그래프) nhỏ/vừa, Floyd–Warshall dùng động (dynamic / 동적) programming:
@@ -229,6 +254,8 @@ O(|V|^3)
 
 không phù hợp huge sparse graphs nhưng rất elegant cho dense all-pairs problems.
 
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Floyd–Warshall và all-pairs shortest paths** xác định đầu vào; **Strongly connected components** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bipartite đồ thị (graph / 그래프) và matching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Strongly connected components
 
 Trong directed đồ thị (graph / 그래프), strongly connected thành phần (component / 컴포넌트) (SCC) là maximal set vertices mà mọi pair reach each other.
@@ -236,6 +263,8 @@ Trong directed đồ thị (graph / 그래프), strongly connected thành phần
 Nếu collapse mỗi SCC thành một super-node, condensation đồ thị (graph / 그래프) luôn là DAG. Đây là deep structural fact: mọi directed đồ thị (graph / 그래프) có thể được nhìn như DAG của strongly connected regions.
 
 Trình biên dịch (compiler / 컴파일러) phân tích (analysis / 분석), phụ thuộc (dependency / 의존성) diagnostics và state-transition các hệ thống (systems / 시스템들) dùng SCC để tìm mutually recursive/dependent groups.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Bipartite đồ thị (graph / 그래프) và matching** tiếp nhận điểm tựa từ **Strongly connected components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị (graph / 그래프) coloring: xung đột (conflict / 충돌) dưới dạng adjacency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bipartite đồ thị (graph / 그래프) và matching
 
@@ -249,6 +278,8 @@ Maximum matching tìm largest set edges không share endpoints. Weighted version
 
 Đây là ví dụ đồ thị (graph / 그래프) lý thuyết (theory / 이론) chuyển trực tiếp thành operations research.
 
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Đồ thị (graph / 그래프) coloring: xung đột (conflict / 충돌) dưới dạng adjacency** tiếp nhận điểm tựa từ **Bipartite đồ thị (graph / 그래프) và matching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Euler và Hamilton: hai loại “đi qua tất cả” rất khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đồ thị (graph / 그래프) coloring: xung đột (conflict / 충돌) dưới dạng adjacency
 
 Vertex coloring gán colors sao cho adjacent vertices khác color.
@@ -259,6 +290,8 @@ Minimum number colors cần gọi chromatic number. General coloring bài toán 
 
 Đồ thị (graph / 그래프) lý thuyết (theory / 이론) vì thế không chỉ nói “có đường dẫn (path / 경로) không”, mà còn mô hình (model / 모델) các ràng buộc (constraints / 제약조건들).
 
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Euler và Hamilton: hai loại “đi qua tất cả” rất khác** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) coloring: xung đột (conflict / 충돌) dưới dạng adjacency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị (graph / 그래프) matrices và tuyến tính (linear / 선형) algebra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Euler và Hamilton: hai loại “đi qua tất cả” rất khác
 
 Euler đường dẫn (path / 경로)/trail quan tâm đi qua every edge exactly once. Hamiltonian đường dẫn (path / 경로) quan tâm visit every vertex exactly once.
@@ -268,6 +301,8 @@ Euler đường dẫn (path / 경로) có characterization cục bộ (local / �
 Hamiltonian đường dẫn (path / 경로) không có criterion đơn giản tương tự và liên quan computationally difficult problems.
 
 Hai concepts trông giống nhưng cấu trúc (structure / 구조) khác hẳn — một warning tốt rằng wording gần nhau không có nghĩa algorithmic difficulty gần nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Đồ thị (graph / 그래프) matrices và tuyến tính (linear / 선형) algebra** tiếp nhận điểm tựa từ **Euler và Hamilton: hai loại “đi qua tất cả” rất khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Random walks và Markov chains trên đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồ thị (graph / 그래프) matrices và tuyến tính (linear / 선형) algebra
 
@@ -289,6 +324,8 @@ trong đó `D` là degree ma trận (matrix / 행렬).
 
 Eigenvalues/eigenvectors của Laplacian encode connectivity và smooth variation trên đồ thị (graph / 그래프). Spectral clustering, đồ thị (graph / 그래프) tín hiệu (signal / 신호) processing và many mạng (network / 네트워크) methods dựa trên cầu nối (bridge / 브리지) đồ thị (graph / 그래프) lý thuyết (theory / 이론) ↔ tuyến tính (linear / 선형) algebra.
 
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Random walks và Markov chains trên đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) matrices và tuyến tính (linear / 선형) algebra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng (network / 네트워크) luồng (flow / 흐름): sức chứa (capacity / 용량) thay đổi question** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Random walks và Markov chains trên đồ thị (graph / 그래프)
 
 Nếu từ nút (node / 노드) hiện tại ta chọn next nút (node / 노드) theo chuyển tiếp (transition / 전이) probabilities trên outgoing edges, ta có random walk trên đồ thị (graph / 그래프).
@@ -296,6 +333,8 @@ Nếu từ nút (node / 노드) hiện tại ta chọn next nút (node / 노드)
 Chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) tạo Markov chuỗi (chain / 사슬). Long-run hành vi (behavior / 동작) liên quan eigenvectors/eigenvalues và stationary distributions.
 
 PageRank có thể nhìn như random walk với teleportation/damping. liên kết (connection / 연결) này cho thấy tìm kiếm (search / 검색) ranking không phải “đồ thị (graph / 그래프) heuristic thuần túy”; nó dựa trên xác suất (probability / 확률) + tuyến tính (linear / 선형) algebra trên đồ thị (graph / 그래프).
+
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Random walks và Markov chains trên đồ thị (graph / 그래프)** xác định đầu vào; **Mạng (network / 네트워크) luồng (flow / 흐름): sức chứa (capacity / 용량) thay đổi question** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Đồ thị (graph / 그래프) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạng (network / 네트워크) luồng (flow / 흐름): sức chứa (capacity / 용량) thay đổi question
 
@@ -306,6 +345,8 @@ Max-flow bài toán (problem / 문제) hỏi maximum amount có thể gửi từ
 Max-flow min-cut theorem nói maximum luồng (flow / 흐름) giá trị (value / 값) bằng sức chứa (capacity / 용량) của minimum `s-t` cut.
 
 Đây là một theorem mạnh vì nối tối ưu hóa (optimization / 최적화) toàn cục với một structural bottleneck: thông lượng (throughput / 처리량) tối đa bị quyết định bởi weakest separating cut.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Mạng (network / 네트워크) luồng (flow / 흐름): sức chứa (capacity / 용량) thay đổi question** xác định đầu vào; **Đồ thị (graph / 그래프) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Modeling matters hơn thuật toán (algorithm / 알고리즘) name** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đồ thị (graph / 그래프) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
@@ -327,6 +368,8 @@ Git lần ghi nhận (commit / 커밋) đồ thị (graph / 그래프): commits 
 
 Cùng algorithms về reachability, cycle detection, topological thứ tự (ordering / 순서), components hoặc shortest paths có thể reuse vì underlying cấu trúc (structure / 구조) giống nhau.
 
+> **Chuyển mạch:** Trong **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Modeling matters hơn thuật toán (algorithm / 알고리즘) name** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Modeling matters hơn thuật toán (algorithm / 알고리즘) name
 
 Giả sử tìm “đường tốt nhất” trên road mạng (network / 네트워크). Nếu edge weight là distance, shortest đường dẫn (path / 경로) trả tuyến (route / 경로) ngắn nhất về km. Nếu weight là expected travel thời gian (time / 시간), kết quả (result / 결과) khác. Nếu congestion phụ thuộc thời gian, static weight đồ thị (graph / 그래프) có thể không đủ. Nếu toll + thời gian (time / 시간) là multi-objective, một scalar weight đơn giản có thể che sự đánh đổi (trade-off / 트레이드오프).
@@ -337,9 +380,13 @@ Thuật toán (algorithm / 알고리즘) chỉ optimize quantity mà mô hình (
 
 Đây là first-principles lesson quan trọng khi chuyển đồ thị (graph / 그래프) lý thuyết (theory / 이론) sang kỹ thuật (engineering / 엔지니어링).
 
+> **Chuyển mạch:** Ở chặng này của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Modeling matters hơn thuật toán (algorithm / 알고리즘) name** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > đồ thị (graph / 그래프) là toán học của **quan hệ và khả năng đi qua quan hệ**. Vertices là states/entities; edges là allowed relationships/transitions. Paths nói reachability, cycles nói phản hồi (feedback / 피드백)/phụ thuộc (dependency / 의존성) vòng lặp (loop / 루프), components nói regions tách rời, weights/capacities thêm chi phí (cost / 비용) và tài nguyên (resource / 자원) các ràng buộc (constraints / 제약조건들). Trước khi chọn BFS, Dijkstra hay luồng (flow / 흐름) thuật toán (algorithm / 알고리즘), hãy hỏi edge thật sự đại diện điều gì.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết đồ thị: toán học của quan hệ, đường đi và cấu trúc mạng**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -357,4 +404,4 @@ Thuật toán (algorithm / 알고리즘) chỉ optimize quantity mà mô hình (
 
 **“Thêm càng nhiều edges càng tốt.”** Extra edges tăng redundancy nhưng cũng có thể tạo cycles, coupling, attack surface hoặc routing độ phức tạp (complexity / 복잡도). đồ thị (graph / 그래프) thiết kế (design / 설계) luôn có sự đánh đổi (trade-off / 트레이드오프).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 algorithms complexity and logarithms](./01_algorithms_complexity_and_logarithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

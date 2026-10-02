@@ -1,6 +1,6 @@
 # 07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao di chuyển (migration / 마이그레이션) kiến thức (knowledge / 지식) quan trọng với WebSquare** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Đừng migrate cú pháp (syntax / 문법) trước mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao di chuyển (migration / 마이그레이션) kiến thức (knowledge / 지식) quan trọng với WebSquare** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Đừng migrate cú pháp (syntax / 문법) trước mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình chung và giới hạn. Mạch này nối legacy với hiện đại hóa và migration, để kiểm soát tương thích, dữ liệu và rollback trong từng bước chuyển đổi.
 
 ## 1. Vì sao di chuyển (migration / 마이그레이션) kiến thức (knowledge / 지식) quan trọng với WebSquare
 

@@ -1,7 +1,6 @@
 # Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn
 
-> **Mạch đọc:** Đọc **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mặt phẳng phức** sang **Complex derivative**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mặt phẳng phức** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Complex derivative** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối hàm giải tích với khả vi phức và tích phân đường, để thấy điều kiện địa phương tạo ra cấu trúc toàn cục mạnh đến đâu.
 
 Số phức ban đầu thường xuất hiện như cách mở rộng hệ số để phương trình như `x²+1=0` có nghiệm. Nhưng khi đưa calculus vào mặt phẳng phức, ta nhận được một lý thuyết (theory / 이론) mạnh hơn rất nhiều calculus thực. **Complex phân tích (analysis / 분석)** nghiên cứu functions
 
@@ -52,6 +51,8 @@ r_1e^{i\theta_1}r_2e^{i\theta_2}
 
 Đây là lý do số phức tự nhiên trong rotation, oscillation, Fourier phân tích (analysis / 분석) và tín hiệu (signal / 신호) processing.
 
+> **Chuyển mạch:** Trong **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Complex derivative** tiếp nhận điểm tựa từ **Mặt phẳng phức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cauchy–Riemann equations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Complex derivative
 
 Derivative tại `z_0` được định nghĩa
@@ -63,6 +64,8 @@ f'(z_0)=\lim_{h\to0}\frac{f(z_0+h)-f(z_0)}{h}.
 Nhìn giống real derivative, nhưng `h` bây giờ có thể tiến về 0 từ vô số directions trên plane.
 
 Để limit tồn tại, quotient phải hội tụ về cùng giá trị (value / 값) bất kể direction. Đây là ràng buộc (constraint / 제약조건) rất mạnh.
+
+> **Chuyển mạch:** Ở chặng này của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Cauchy–Riemann equations** tiếp nhận điểm tựa từ **Complex derivative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao complex differentiability mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cauchy–Riemann equations
 
@@ -106,6 +109,8 @@ u_y=-2y=-v_x.
 
 Do đó hàm (function / 함수) thỏa cấu trúc (structure / 구조) cần thiết của complex differentiability.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Vì sao complex differentiability mạnh** tiếp nhận điểm tựa từ **Cauchy–Riemann equations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Analytic functions và power series** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao complex differentiability mạnh
 
 Trong `R²`, một differentiable hàm (function / 함수) có Jacobian ma trận (matrix / 행렬) tổng quát. Với holomorphic hàm (function / 함수), Jacobian phải có form
@@ -117,6 +122,8 @@ a&-b\\b&a
 ```
 
 Ma trận (matrix / 행렬) dạng này chính là cục bộ (local / 로컬) scaling cộng rotation. Vì vậy holomorphic mappings cục bộ (local / 로컬) bảo toàn angles khi derivative khác 0; thuộc tính (property / 속성) này gọi là **conformal**.
+
+> **Chuyển mạch:** Trong **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Analytic functions và power series** tiếp nhận điểm tựa từ **Vì sao complex differentiability mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contour và complex integral** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Analytic functions và power series
 
@@ -136,6 +143,8 @@ e^z,\quad \sin z,\quad \cos z
 
 đều được định nghĩa tự nhiên bằng power series và giữ nhiều identities quen thuộc.
 
+> **Chuyển mạch:** Ở chặng này của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Contour và complex integral** tiếp nhận điểm tựa từ **Analytic functions và power series** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cauchy's theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Contour và complex integral
 
 Thay vì integrate trên real interval, complex phân tích (analysis / 분석) integrate dọc một curve `γ(t)` trong plane:
@@ -147,6 +156,8 @@ Thay vì integrate trên real interval, complex phân tích (analysis / 분석) 
 
 Integral phụ thuộc cả hàm (function / 함수) và đường dẫn (path / 경로). Nhưng với holomorphic functions trên suitable regions, đường dẫn (path / 경로) dependence có thể biến mất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Cauchy's theorem** tiếp nhận điểm tựa từ **Contour và complex integral** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cauchy integral formula** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cauchy's theorem
 
 Một central kết quả (result / 결과) nói rằng nếu `f` holomorphic trên simply connected region, thì integral quanh closed contour bằng 0:
@@ -156,6 +167,8 @@ Một central kết quả (result / 결과) nói rằng nếu `f` holomorphic tr
 ```
 
 Điều này có hệ quả lớn: integral giữa hai điểm không phụ thuộc đường dẫn (path / 경로) và hàm (function / 함수) có antiderivative trên region đó.
+
+> **Chuyển mạch:** Trong **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Cauchy integral formula** tiếp nhận điểm tựa từ **Cauchy's theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Singularities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cauchy integral formula
 
@@ -177,6 +190,8 @@ f^{(n)}(z_0)=\frac{n!}{2\pi i}\oint_\gamma
 
 Đây là lý do holomorphic hàm (function / 함수) cực kỳ rigid.
 
+> **Chuyển mạch:** Ở chặng này của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Singularities** tiếp nhận điểm tựa từ **Cauchy integral formula** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Laurent series** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Singularities
 
 Không phải complex hàm (function / 함수) nào holomorphic ở mọi điểm. Một điểm (point / 지점) nơi hàm (function / 함수) không analytic được gọi là singularity.
@@ -197,6 +212,8 @@ Pole bậc `m` có hành vi (behavior / 동작) gần `z_0` kiểu
 f(z)\approx\frac{a_{-m}}{(z-z_0)^m}.
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Laurent series** tiếp nhận điểm tựa từ **Singularities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Residue theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Laurent series
 
 Quanh singularity, power series thông thường không đủ. Ta dùng Laurent series:
@@ -208,6 +225,8 @@ f(z)=\sum_{n=-\infty}^{\infty}a_n(z-z_0)^n.
 Các terms negative powers tạo principal part và chứa thông tin (information / 정보) về singularity.
 
 Coefficient `a_{-1}` đặc biệt quan trọng; nó là **residue**.
+
+> **Chuyển mạch:** Trong **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Residue theorem** tiếp nhận điểm tựa từ **Laurent series** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ residue đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Residue theorem
 
@@ -221,6 +240,8 @@ Nếu contour bao quanh các isolated singularities `z_k`, thì
 Theorem này biến complex contour integral thành bài toán algebraic tính residues.
 
 Nó còn giúp evaluate một số real integrals khó, inverse transforms và integrals trong physics.
+
+> **Chuyển mạch:** Ở chặng này của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Residue theorem** cho ta quy tắc; **Ví dụ residue đơn giản** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Harmonic functions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ residue đơn giản
 
@@ -248,6 +269,8 @@ Do đó residue bằng 1 và integral quanh contour bao `0` là
 2\pi i.
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Ví dụ residue đơn giản** cho ta quy tắc; **Harmonic functions** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Conformal ánh xạ (mapping / 매핑)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Harmonic functions
 
 Nếu `f=u+iv` holomorphic, real và imaginary parts thỏa Laplace equation:
@@ -264,6 +287,8 @@ Functions thỏa Laplace equation gọi là harmonic. Chúng xuất hiện trong
 
 Vì vậy complex phân tích (analysis / 분석) nối trực tiếp với PDE và physics 2D.
 
+> **Chuyển mạch:** Trong **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Conformal ánh xạ (mapping / 매핑)** tiếp nhận điểm tựa từ **Harmonic functions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Complex exponential và oscillation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Conformal ánh xạ (mapping / 매핑)
 
 Holomorphic functions với nonzero derivative cục bộ (local / 로컬) bảo toàn góc. Điều này cho phép map một hình học (geometry / 기하학) phức tạp sang hình học (geometry / 기하학) đơn giản hơn để giải boundary-value problems.
@@ -275,6 +300,8 @@ f(z)=\frac{az+b}{cz+d}
 ```
 
 map generalized circles thành generalized circles và đóng vai trò quan trọng trong hình học (geometry / 기하학), điều khiển (control / 제어) và tín hiệu (signal / 신호) lý thuyết (theory / 이론).
+
+> **Chuyển mạch:** Ở chặng này của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Complex exponential và oscillation** tiếp nhận điểm tựa từ **Conformal ánh xạ (mapping / 매핑)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Poles và hệ thống (system / 시스템) hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Complex exponential và oscillation
 
@@ -298,15 +325,21 @@ Differentiation trở nên đơn giản:
 
 Do đó sinusoidal phân tích (analysis / 분석), Fourier transform, Laplace transform và tuyến tính (linear / 선형) differential equations đều hưởng lợi từ complex biểu diễn (representation / 표현).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Poles và hệ thống (system / 시스템) hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Complex exponential và oscillation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Poles và hệ thống (system / 시스템) hành vi (behavior / 동작)
 
 Trong điều khiển (control / 제어) và tín hiệu (signal / 신호) processing, transfer hàm (function / 함수) thường là rational hàm (function / 함수) của complex variable `s` hoặc `z`.
 
 Locations của poles quyết định stability và transient hành vi (behavior / 동작). Đây không phải coincidence; exponential modes của tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) được encoded bằng complex roots của characteristic equations.
 
+> **Chuyển mạch:** Trong **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Poles và hệ thống (system / 시스템) hành vi (behavior / 동작)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Complex phân tích (analysis / 분석) xem complex hàm (function / 함수) như một ánh xạ (mapping / 매핑) vừa biến đổi magnitude vừa rotation trên plane. Yêu cầu differentiability từ mọi direction khiến ánh xạ (mapping / 매핑) cực kỳ structured. Nhờ đó cục bộ (local / 로컬) derivative dẫn tới toàn cục (global / 전역) theorems mạnh như Cauchy formula và residue theorem.
+
+> **Chuyển mạch:** Ở chặng này của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -314,8 +347,10 @@ Số phức không chỉ là “số giả”. Chúng là biểu diễn (represe
 
 Một misconception khác là nghĩ complex phân tích (analysis / 분석) chỉ phục vụ pure mathematics. Trong kỹ thuật (engineering / 엔지니어링), chính nó nằm sau frequency phản hồi (response / 응답), poles/zeros, Fourier/Laplace transforms, electromagnetics và nhiều numerical methods.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Complex phân tích (analysis / 분석): analytic functions, hình học (geometry / 기하학) và vì sao số phức làm calculus mạnh hơn**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Nên đọc sau [Complex numbers](../01_algebra/05_complex_numbers.md), [Infinite series](./07_infinite_series_power_series_and_convergence.md), [Vector calculus](./09_vector_calculus.md) và [PDE](./10_partial_differential_equations_and_fields_intro.md). Sau đó chapter [Fourier](../09_connections/05_fourier_signals_and_frequency.md) và [Laplace/Z-transform](../09_connections/06_laplace_z_transform_and_dynamic_systems.md) sẽ trở nên tự nhiên hơn nhiều.
 
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 limits and continuity](./00_limits_and_continuity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge
 
-> **Mạch đọc:** Đọc **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. cây (tree / 트리): connected + acyclic** sang **Proof idea**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. cây (tree / 트리): connected + acyclic** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Các characterization tương đương của cây (tree / 트리)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối cây, poset và lattice, để đọc quan hệ thứ tự qua cấu trúc phân cấp và phép hợp/giao.
 
 Discrete mathematics không chỉ nghiên cứu “các số rời rạc”. Một phần rất quan trọng là nghiên cứu **cấu trúc (structure / 구조)**: đối tượng (object / 객체) nào phụ thuộc đối tượng (object / 객체) nào, hierarchy được tổ chức ra sao, states có thể so sánh hay merge như thế nào.
 
@@ -43,6 +42,8 @@ Nếu ≥2 new edges tới existing cây (tree / 트리) → tạo cycle.
 
 Thêm `n-1` vertices cần `n-1` edges.
 
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **2. Các characterization tương đương của cây (tree / 트리)** tiếp nhận điểm tựa từ **1. cây (tree / 트리): connected + acyclic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Rooted cây (tree / 트리): hierarchy xuất hiện khi chọn gốc (root / 루트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Các characterization tương đương của cây (tree / 트리)
 
 Với finite undirected đồ thị (graph / 그래프), các statements sau equivalent:
@@ -55,6 +56,8 @@ between every pair of vertices có unique simple path
 ```
 
 Unique-path viewpoint cực hữu ích: hierarchy cây (tree / 트리) đảm bảo giữa hai nodes chỉ có một tuyến (route / 경로) đơn giản.
+
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **3. Rooted cây (tree / 트리): hierarchy xuất hiện khi chọn gốc (root / 루트)** tiếp nhận điểm tựa từ **2. Các characterization tương đương của cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Traversal: DFS và BFS trên cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Rooted cây (tree / 트리): hierarchy xuất hiện khi chọn gốc (root / 루트)
 
@@ -77,6 +80,8 @@ Tệp (file / 파일) hệ thống (system / 시스템) directory cây (tree / �
 
 Nhưng Git lần ghi nhận (commit / 커밋) lịch sử (history / 이력) không phải cây (tree / 트리) nói chung vì merge lần ghi nhận (commit / 커밋) có thể có multiple parents; nó là DAG.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **4. Traversal: DFS và BFS trên cây (tree / 트리)** tiếp nhận điểm tựa từ **3. Rooted cây (tree / 트리): hierarchy xuất hiện khi chọn gốc (root / 루트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. nhị phân (binary / 이진) cây (tree / 트리) không đồng nghĩa tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Traversal: DFS và BFS trên cây (tree / 트리)
 
 Cây (tree / 트리) traversal không chỉ là hiện thực (implementation / 구현) detail.
@@ -92,6 +97,8 @@ postorder
 Breadth-first tìm kiếm (search / 검색) đi theo levels, useful cho shortest-depth questions trong unweighted trees.
 
 Traversal thứ tự (order / 순서) quyết định ngữ nghĩa (semantics / 의미론) trong compilers, UI trees và serialization.
+
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **5. nhị phân (binary / 이진) cây (tree / 트리) không đồng nghĩa tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** tiếp nhận điểm tựa từ **4. Traversal: DFS và BFS trên cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Why balanced trees give logarithmic độ sâu (depth / 깊이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. nhị phân (binary / 이진) cây (tree / 트리) không đồng nghĩa tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)
 
@@ -120,6 +127,8 @@ h=O(n).
 
 Do đó “nhị phân (binary / 이진)” không tự tạo `O(log n)`.
 
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **6. Why balanced trees give logarithmic độ sâu (depth / 깊이)** tiếp nhận điểm tựa từ **5. nhị phân (binary / 이진) cây (tree / 트리) không đồng nghĩa tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. vùng nhớ động (heap / 힙): cây (tree / 트리) cho priority, không cho sorted traversal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Why balanced trees give logarithmic độ sâu (depth / 깊이)
 
 Nếu mỗi mức (level / 수준) có thể roughly double nodes, total nodes tới height `h` quy mô (scale / 규모) như:
@@ -136,6 +145,8 @@ h\approx\log_2n.
 
 Logarithmic lookup đến từ exponential growth of sức chứa (capacity / 용량) by độ sâu (depth / 깊이).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **7. vùng nhớ động (heap / 힙): cây (tree / 트리) cho priority, không cho sorted traversal** tiếp nhận điểm tựa từ **6. Why balanced trees give logarithmic độ sâu (depth / 깊이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Spanning cây (tree / 트리): remove cycles nhưng giữ connectivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. vùng nhớ động (heap / 힙): cây (tree / 트리) cho priority, không cho sorted traversal
 
 Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) là complete nhị phân (binary / 이진) cây (tree / 트리) với vùng nhớ động (heap / 힙) thuộc tính (property / 속성):
@@ -148,6 +159,8 @@ max-heap: parent ≥ children
 Vùng nhớ vùng nhớ động (heap / 힙) hỗ trợ (support / 지원) efficient min/max extraction nhưng không guarantee left subtree < right subtree như BST.
 
 Different invariants serve different operations.
+
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **8. Spanning cây (tree / 트리): remove cycles nhưng giữ connectivity** tiếp nhận điểm tựa từ **7. vùng nhớ động (heap / 힙): cây (tree / 트리) cho priority, không cho sorted traversal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Cut thuộc tính (property / 속성) intuition của MST** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Spanning cây (tree / 트리): remove cycles nhưng giữ connectivity
 
@@ -172,6 +185,8 @@ road/cable layout
 approximation algorithms
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **9. Cut thuộc tính (property / 속성) intuition của MST** tiếp nhận điểm tựa từ **8. Spanning cây (tree / 트리): remove cycles nhưng giữ connectivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Partial thứ tự (order / 순서): thứ tự (order / 순서) không bắt buộc mọi pair comparable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Cut thuộc tính (property / 속성) intuition của MST
 
 Chia vertices thành hai groups. Edge nhẹ nhất crossing một cut, dưới suitable tie lập luận (reasoning / 추론), có thể thuộc một MST.
@@ -179,6 +194,8 @@ Chia vertices thành hai groups. Edge nhẹ nhất crossing một cut, dưới s
 Kruskal/Prim algorithms exploit cục bộ (local / 로컬) an toàn (safety / 안전) properties để tránh enumerate all spanning trees.
 
 Đây là example của proof-guided greedy thuật toán (algorithm / 알고리즘).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **10. Partial thứ tự (order / 순서): thứ tự (order / 순서) không bắt buộc mọi pair comparable** tiếp nhận điểm tựa từ **9. Cut thuộc tính (property / 속성) intuition của MST** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Ví dụ partial orders** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Partial thứ tự (order / 순서): thứ tự (order / 순서) không bắt buộc mọi pair comparable
 
@@ -200,6 +217,8 @@ a\preceq b\text{ và }b\preceq a
 Partial nghĩa có thể tồn tại `a,b` incomparable.
 
 Đây không phải thiếu thông tin (information / 정보); incomparability là cấu trúc (structure / 구조) thật.
+
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **10. Partial thứ tự (order / 순서): thứ tự (order / 순서) không bắt buộc mọi pair comparable** cho ta quy tắc; **11. Ví dụ partial orders** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Hasse diagram** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Ví dụ partial orders
 
@@ -225,6 +244,8 @@ Phiên bản (version / 버전) ancestry trong DAG.
 
 Hai independent tasks có thể incomparable.
 
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **11. Ví dụ partial orders** cho ta quy tắc; **12. Hasse diagram** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Minimal/maximal khác minimum/maximum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Hasse diagram
 
 Finite poset có thể visualize bằng Hasse diagram.
@@ -242,6 +263,8 @@ Nếu `a<b` nhưng không có `c` với `a<c<b`, `b` covers `a`.
 
 Hasse diagram làm structural hierarchy rõ hơn full quan hệ (relation / 관계) đồ thị (graph / 그래프).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **13. Minimal/maximal khác minimum/maximum** tiếp nhận điểm tựa từ **12. Hasse diagram** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Chains và antichains** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Minimal/maximal khác minimum/maximum
 
 Trong poset:
@@ -257,6 +280,8 @@ Tương tự maximal vs maximum.
 
 Đây là distinction thường gây nhầm.
 
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **14. Chains và antichains** tiếp nhận điểm tựa từ **13. Minimal/maximal khác minimum/maximum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Topological sorting: tuyến tính (linear / 선형) extension của partial thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Chains và antichains
 
 Chuỗi (chain / 사슬) là subset mà mọi pair comparable.
@@ -267,6 +292,8 @@ Chuỗi (chain / 사슬) represent fully ordered subset; antichain represent max
 
 Trong scheduling, antichain kích thước (size / 크기) liên hệ degree of potential tính đồng thời (concurrency / 동시성).
 
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **15. Topological sorting: tuyến tính (linear / 선형) extension của partial thứ tự (order / 순서)** tiếp nhận điểm tựa từ **14. Chains và antichains** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Cycle nghĩa precedence inconsistent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Topological sorting: tuyến tính (linear / 선형) extension của partial thứ tự (order / 순서)
 
 DAG encodes precedence các ràng buộc (constraints / 제약조건들).
@@ -276,6 +303,8 @@ Topological sort tạo total thứ tự (order / 순서) compatible với all di
 Nếu nhiều independent nodes, topological thứ tự (order / 순서) không unique.
 
 Bản dựng (build / 빌드) các hệ thống (systems / 시스템들), gói (package / 패키지) installation, course prerequisites và workflow engines dùng idea này.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **16. Cycle nghĩa precedence inconsistent** tiếp nhận điểm tựa từ **15. Topological sorting: tuyến tính (linear / 선형) extension của partial thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Lattice: mọi pair có meet và phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Cycle nghĩa precedence inconsistent
 
@@ -291,6 +320,8 @@ không có topological thứ tự (order / 순서).
 
 Cycle detection vì vậy không chỉ là đồ thị (graph / 그래프) bài toán (problem / 문제); nó phát hiện inconsistent thứ tự (ordering / 순서) các ràng buộc (constraints / 제약조건들).
 
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **17. Lattice: mọi pair có meet và phép nối (join / 조인)** tiếp nhận điểm tựa từ **16. Cycle nghĩa precedence inconsistent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Power-set lattice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Lattice: mọi pair có meet và phép nối (join / 조인)
 
 Một lattice là poset trong đó mỗi pair `a,b` có:
@@ -304,6 +335,8 @@ Meet là dùng chung (common / 공통) thông tin (information / 정보)/trạng
 phép nối (join / 조인) là smallest trạng thái (state / 상태) chứa/bao cả hai.
 
 Meaning cụ thể phụ thuộc poset.
+
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **18. Power-set lattice** tiếp nhận điểm tựa từ **17. Lattice: mọi pair có meet và phép nối (join / 조인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Boolean algebra như distributive complemented lattice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Power-set lattice
 
@@ -337,6 +370,8 @@ U.
 
 Đây là chuẩn gốc (canonical / 정본) lattice example.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **19. Boolean algebra như distributive complemented lattice** tiếp nhận điểm tựa từ **18. Power-set lattice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Lattice trong kiểu (type / 타입) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Boolean algebra như distributive complemented lattice
 
 Power-set lattice có complement:
@@ -349,6 +384,8 @@ và distributive laws.
 
 Boolean lô-gic (logic / 논리) vì vậy có deep order-theoretic cấu trúc (structure / 구조); AND/OR tương ứng meet/phép nối (join / 조인).
 
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **20. Lattice trong kiểu (type / 타입) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **19. Boolean algebra như distributive complemented lattice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Dataflow phân tích (analysis / 분석) trong trình biên dịch (compiler / 컴파일러)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Lattice trong kiểu (type / 타입) các hệ thống (systems / 시스템들)
 
 Subtype quan hệ (relation / 관계) có thể tạo partial thứ tự (order / 순서).
@@ -356,6 +393,8 @@ Subtype quan hệ (relation / 관계) có thể tạo partial thứ tự (order 
 Phép nối (join / 조인) của two types có thể represent least dùng chung (common / 공통) supertype; meet có thể represent greatest dùng chung (common / 공통) subtype nếu tồn tại.
 
 Kiểu (type / 타입) suy luận (inference / 추론) và luồng (flow / 흐름) phân tích (analysis / 분석) thường cần operations giống lattice phép nối (join / 조인) để merge thông tin (information / 정보) từ control-flow branches.
+
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **20. Lattice trong kiểu (type / 타입) các hệ thống (systems / 시스템들)** xác định đầu vào; **21. Dataflow phân tích (analysis / 분석) trong trình biên dịch (compiler / 컴파일러)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. Fixed points trên lattices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Dataflow phân tích (analysis / 분석) trong trình biên dịch (compiler / 컴파일러)
 
@@ -375,6 +414,8 @@ Lattice cung cấp mathematically well-defined merge.
 
 Monotonicity + finite-height/appropriate completeness giúp iterative fixpoint algorithms converge.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **21. Dataflow phân tích (analysis / 분석) trong trình biên dịch (compiler / 컴파일러)** xác định đầu vào; **22. Fixed points trên lattices** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và join-semilattice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Fixed points trên lattices
 
 Nếu hàm (function / 함수) `F` monotone trên suitable complete lattice, fixed-point theorems cho conditions existence của least/greatest fixed points.
@@ -392,6 +433,8 @@ F(F(x0))
 
 có thể tiến tới stable abstract trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **23. phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và join-semilattice** tiếp nhận điểm tựa từ **22. Fixed points trên lattices** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Trees vs DAGs vs posets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và join-semilattice
 
 CRDTs thường dùng join-semilattice cấu trúc (structure / 구조) để merge replicas.
@@ -408,6 +451,8 @@ thì repeated/out-of-order merging có thể converge under mô hình (model / �
 
 Đây là một ứng dụng (application / 애플리케이션) rất concrete của thứ tự (order / 순서)/lattice lý thuyết (theory / 이론).
 
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **24. Trees vs DAGs vs posets** tiếp nhận điểm tựa từ **23. phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và join-semilattice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Worked example: bản dựng (build / 빌드) dependencies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Trees vs DAGs vs posets
 
 Một cây (tree / 트리) imposes unique-parent/đường dẫn (path / 경로) cấu trúc (structure / 구조).
@@ -417,6 +462,8 @@ A DAG permits multiple parents.
 A poset là abstract quan hệ (relation / 관계); DAG/Hasse diagram có thể represent finite poset.
 
 Không nên đồng nhất three concepts dù chúng liên quan.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **24. Trees vs DAGs vs posets** cho ta quy tắc; **25. Worked example: bản dựng (build / 빌드) dependencies** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **26. Worked example: set lattice merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Worked example: bản dựng (build / 빌드) dependencies
 
@@ -439,6 +486,8 @@ B,A,E,C,D
 miễn các ràng buộc (constraints / 제약조건들) giữ.
 
 Scheduler có thể parallelize `A` và `B`.
+
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **25. Worked example: bản dựng (build / 빌드) dependencies** cho ta quy tắc; **26. Worked example: set lattice merge** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Worked example: set lattice merge
 
@@ -470,6 +519,8 @@ Nếu muốn “possibly initialized on some đường dẫn (path / 경로)”,
 
 Cùng sets nhưng thứ tự (order / 순서)/phân tích (analysis / 분석) ngữ nghĩa (semantics / 의미론) quyết định meet/phép nối (join / 조인) nào relevant.
 
+> **Chuyển mạch:** Ở chặng này của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **26. Worked example: set lattice merge** cho ta quy tắc; **Liên kết kiến thức (knowledge connection / 지식 연결)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Phần kết nối đặt tree, poset và lattice cạnh algorithms, scheduling, type systems và information order. Cấu trúc quan hệ quyết định phép duyệt và phép suy luận nào hợp lệ.
@@ -486,12 +537,16 @@ graph theory
 
 Trees connect to recursion and thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡도). Posets connect to scheduling and phụ thuộc (dependency / 의존성) management. Lattices connect lô-gic (logic / 논리)/set lý thuyết (theory / 이론) với static phân tích (analysis / 분석) và ngữ nghĩa (semantics / 의미론).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > cây (tree / 트리) trả lời “mỗi nút (node / 노드) nằm trong hierarchy nào?”. Poset trả lời “những các ràng buộc (constraints / 제약조건들) trước/sau nào tồn tại?”. Lattice thêm năng lực (capability / 역량) “merge/refine hai states theo cách có thứ tự (order / 순서) meaning”.
+
+> **Chuyển mạch:** Trong **Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, phụ thuộc (dependency / 의존성) và merge**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
 Mọi hierarchy không phải cây (tree / 트리); multiple inheritance/merge tạo DAG. DAG không nhất thiết connected. Partial thứ tự (order / 순서) không cần compare mọi pair. Minimal không đồng nghĩa minimum. Topological thứ tự (order / 순서) thường không unique. Lattice phép nối (join / 조인) không luôn là numeric max; meaning phụ thuộc partial thứ tự (order / 순서).
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph theory](./00_graph_theory.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
