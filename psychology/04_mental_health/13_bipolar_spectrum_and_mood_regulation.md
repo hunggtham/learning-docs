@@ -1,7 +1,6 @@
 # Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc
 
-> **Mạch đọc:** Đọc **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Mania và hypomania là thay đổi hệ thống, không chỉ “mood cao”** sang **2. Bipolar depression dễ bị nhầm với unipolar depression**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Mania và hypomania là thay đổi hệ thống, không chỉ “mood cao”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Bipolar depression dễ bị nhầm với unipolar depression** để soi ranh giới và điểm dễ nhầm. Mạch này nối bipolar spectrum với mood regulation, episode và treatment response, để theo dõi chu kỳ khí sắc cùng ảnh hưởng đến chức năng.
 
 Rối loạn lưỡng cực (bipolar disorder) không phải “sáng vui chiều buồn”. Điểm cốt lõi là sự xuất hiện của các **episode khí sắc và hoạt hóa** có mẫu (pattern / 패턴) đặc trưng, đặc biệt là **hưng cảm (mania)** hoặc **hưng cảm nhẹ (hypomania)**, đi kèm thay đổi rõ so với baseline của chính người đó.
 
@@ -24,6 +23,8 @@ Một episode hưng cảm có thể bao gồm:
 
 Hypomania có mức severity thấp hơn mania và không gây cùng mức marked impairment, nhưng vẫn cần được đánh giá trong ngữ cảnh (context / 맥락) của whole illness course.
 
+> **Chuyển mạch:** Trong **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **1. Mania và hypomania là thay đổi hệ thống, không chỉ “mood cao”** đã nêu tiêu chí phân biệt, còn **2. Bipolar depression dễ bị nhầm với unipolar depression** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Sleep và circadian rhythm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Bipolar depression dễ bị nhầm với unipolar depression
 
 Nhiều người tìm đến care trong depressive episode chứ không phải mania/hypomania. Vì vậy assessment phải hỏi lịch sử (history / 이력) của những period trước đây có:
@@ -40,6 +41,8 @@ Nhiều người tìm đến care trong depressive episode chứ không phải m
 
 Xem [[12_depressive_disorders_and_anhedonia]] và [[01_assessment_and_diagnosis]].
 
+> **Chuyển mạch:** Ở chặng này của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **2. Bipolar depression dễ bị nhầm với unipolar depression** đã nêu tiêu chí phân biệt, còn **3. Sleep và circadian rhythm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Reward và goal pursuit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Sleep và circadian rhythm
 
 Sleep disturbance có quan hệ hai chiều với bipolar mood regulation. Reduced sleep có thể xuất hiện như symptom và ở một số người còn góp phần destabilize mood.
@@ -50,11 +53,15 @@ Regularity của sleep–wake schedule, light exposure, xã hội (social / 사�
 
 Xem [[11_sleep_insomnia_and_circadian_disorders]] và [[../01_brain_and_mind/08_sleep_circadian_and_recovery]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **4. Reward và goal pursuit** tiếp nhận điểm tựa từ **3. Sleep và circadian rhythm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Genetics và family rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Reward và goal pursuit
 
 Một số hiện tại (current / 현재) các mô hình (models / 모델들) chú ý tới reward sensitivity và goal pursuit. Khi reward hệ thống (system / 시스템) quá reactive, success hoặc opportunity có thể thúc đẩy activity mạnh hơn bình thường; khi mood giảm, reward expectation có thể collapse.
 
 > **Lý thuyết hiện đại:** reward-sensitivity các mô hình (models / 모델들) có empirical hỗ trợ (support / 지원) nhưng không giải thích mọi presentation và không phải diagnostic kiểm thử (test / 테스트).
+
+> **Chuyển mạch:** Trong **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **5. Genetics và family rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **4. Reward và goal pursuit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Stress và episode triggering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Genetics và family rủi ro (risk / 위험)
 
@@ -66,6 +73,8 @@ Bipolar disorder có substantial familial/genetic contribution. Tuy nhiên:
 - family lịch sử (history / 이력) tăng prior xác suất (probability / 확률) nhưng không xác định diagnosis.
 
 Xem [[../01_brain_and_mind/03_evolution_genetics_and_behavior]].
+
+> **Chuyển mạch:** Ở chặng này của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **6. Stress và episode triggering** tiếp nhận điểm tựa từ **5. Genetics và family rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Mixed features và presentation phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Stress và episode triggering
 
@@ -82,11 +91,15 @@ vulnerability
 
 thay vì tìm một “nguyên nhân gốc” duy nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **7. Mixed features và presentation phức tạp** tiếp nhận điểm tựa từ **6. Stress và episode triggering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Differential diagnosis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Mixed features và presentation phức tạp
 
 Mood episode không phải lúc nào cũng “purely depressed” hoặc “purely manic”. Một số presentation có depressive symptoms cùng activation, agitation hoặc racing thoughts.
 
 Những trạng thái mixed có thể đi kèm distress và rủi ro (risk / 위험) cao, vì vậy không nên dùng cartoon mô hình (model / 모델) hai cực “buồn vs vui”.
+
+> **Chuyển mạch:** Trong **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **8. Differential diagnosis** tiếp nhận điểm tựa từ **7. Mixed features và presentation phức tạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Treatment là longitudinal management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Differential diagnosis
 
@@ -101,6 +114,8 @@ Assessment phải phân biệt với hoặc xem comorbidity của:
 - trauma-related dysregulation.
 
 NICE nhấn mạnh differential diagnosis và không khuyến nghị dựa vào một questionnaire đơn lẻ để identify bipolar disorder trong primary care.
+
+> **Chuyển mạch:** Ở chặng này của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **9. Treatment là longitudinal management** tiếp nhận điểm tựa từ **8. Differential diagnosis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Không ra quyết định lớn trong acute mania** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Treatment là longitudinal management
 
@@ -118,6 +133,8 @@ Care có thể bao gồm:
 
 Medication choice và monitoring cần clinician vì benefit/rủi ro (risk / 위험) khác nhau giữa acute mania, bipolar depression và maintenance.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **10. Không ra quyết định lớn trong acute mania** tiếp nhận điểm tựa từ **9. Treatment là longitudinal management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Functioning giữa các episode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Không ra quyết định lớn trong acute mania
 
 Trong mania/hypomania, judgment về rủi ro (risk / 위험), spending, relationship hoặc công việc (work / 작업) có thể thay đổi mạnh. Clinical guidance thường khuyến nghị giảm stimulation và trì hoãn major decisions nếu có thể cho đến khi episode ổn định.
@@ -125,6 +142,8 @@ Trong mania/hypomania, judgment về rủi ro (risk / 위험), spending, relatio
 Điểm này nối psychology với everyday quyết định (decision / 결정) making: subjective confidence có thể tăng trong khi calibration giảm.
 
 Xem [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]] và [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]].
+
+> **Chuyển mạch:** Trong **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **11. Functioning giữa các episode** tiếp nhận điểm tựa từ **10. Không ra quyết định lớn trong acute mania** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Relapse signature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Functioning giữa các episode
 
@@ -139,17 +158,23 @@ Clinical goal vì vậy không chỉ là symptom điều khiển (control / 제�
 - khôi phục (recovery / 복구) goal;
 - stigma reduction.
 
+> **Chuyển mạch:** Ở chặng này của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **12. Relapse signature** tiếp nhận điểm tựa từ **11. Functioning giữa các episode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Suicide rủi ro (risk / 위험) trong bipolar disorder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Relapse signature
 
 Early warning signs có tính cá nhân. Một người có thể bắt đầu ngủ ít hơn; người khác tăng dự án (project / 프로젝트), xã hội (social / 사회적) activity hoặc spending; người khác xuất hiện irritability trước.
 
 Tracking hữu ích khi nó hỗ trợ self-awareness và care plan, nhưng không nên biến mọi fluctuation thành “episode incoming”. Over-monitoring cũng có thể tăng anxiety.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **13. Suicide rủi ro (risk / 위험) trong bipolar disorder** tiếp nhận điểm tựa từ **12. Relapse signature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Suicide rủi ro (risk / 위험) trong bipolar disorder
 
 Bipolar disorder có thể liên quan elevated suicide rủi ro (risk / 위험), đặc biệt trong depressive hoặc mixed states. rủi ro (risk / 위험) management phải được đánh giá riêng, không suy ra từ diagnosis alone.
 
 Xem chapter prevention-only [[14_suicide_self_harm_risk_and_prevention]].
+
+> **Chuyển mạch:** Trong **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **13. Suicide rủi ro (risk / 위험) trong bipolar disorder** đã nêu tiêu chí phân biệt, còn **14. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)
 
@@ -161,6 +186,8 @@ Xem chapter prevention-only [[14_suicide_self_harm_risk_and_prevention]].
 
 **Không được nói:** bipolar = “mood swing”, bipolar = “hai personality”, hoặc một questionnaire/self-test có thể tự xác nhận diagnosis.
 
+> **Chuyển mạch:** Ở chặng này của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **14. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **15. Những hiểu lầm phổ biến** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Những hiểu lầm phổ biến
 
 **“Bipolar là thay đổi mood trong ngày.”** Sai. Diagnosis dựa episode mẫu (pattern / 패턴), duration, activation và impairment.
@@ -170,6 +197,8 @@ Xem chapter prevention-only [[14_suicide_self_harm_risk_and_prevention]].
 **“Ngủ ít nhưng vẫn làm việc được nghĩa là hypomania.”** Không đủ. Phải xem full syndrome và deviation from baseline.
 
 **“Nếu đang depressed thì chắc là unipolar depression.”** Không. Bipolar lịch sử (history / 이력) phải được assessment.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **16. Mô hình tư duy** gom các mảnh từ **15. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Mô hình tư duy
 
@@ -190,8 +219,10 @@ longitudinal treatment + relapse prevention
 
 > Bipolar disorder nên được hiểu theo **course over thời gian (time / 시간)**, không chỉ snapshot của mood tại một ngày.
 
+> **Chuyển mạch:** Trong **Rối loạn lưỡng cực, hưng cảm và điều hòa khí sắc**, **Kết nối kiến thức** gom các mảnh từ **16. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [[12_depressive_disorders_and_anhedonia]], [[14_suicide_self_harm_risk_and_prevention]], [[11_sleep_insomnia_and_circadian_disorders]], [[../01_brain_and_mind/08_sleep_circadian_and_recovery]], [[../03_human_development_and_person/02_motivation_and_emotion]], [[../05_intervention/00_psychotherapy_and_change]] và [[../06_applied/18_financial_psychology_and_personal_decision_making]].
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

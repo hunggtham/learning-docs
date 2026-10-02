@@ -1,7 +1,6 @@
 # Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi
 
-> **Mạch đọc:** Đọc **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Conditional xác suất (probability / 확률) là renormalization của mẫu (sample / 표본) không gian (space / 공간)** sang **2. sản phẩm (product / 제품) quy tắc (rule / 규칙) đến trực tiếp từ definition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Conditional xác suất (probability / 확률) là renormalization của mẫu (sample / 표본) không gian (space / 공간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. sản phẩm (product / 제품) quy tắc (rule / 규칙) đến trực tiếp từ definition** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối conditional probability với Bayes, base rate và evidence, để cập nhật niềm tin theo thông tin mới mà không nhầm xác suất đảo chiều.
 
 Xác suất có điều kiện (conditional probability / 조건부 확률) formalize một việc rất tự nhiên: **xác suất (probability / 확률) phụ thuộc vào thông tin (information / 정보) đang có**.
 
@@ -41,6 +40,8 @@ A|B: phần của B cũng nằm trong A
 
 Do đó denominator `P(B)` không phải trick; nó rescale xác suất (probability / 확률) mass trên restricted universe.
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **2. sản phẩm (product / 제품) quy tắc (rule / 규칙) đến trực tiếp từ definition** tiếp nhận điểm tựa từ **1. Conditional xác suất (probability / 확률) là renormalization của mẫu (sample / 표본) không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. chuỗi (chain / 사슬) quy tắc (rule / 규칙) cho nhiều events** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. sản phẩm (product / 제품) quy tắc (rule / 규칙) đến trực tiếp từ definition
 
 Từ definition:
@@ -74,6 +75,8 @@ probability của context
 × probability của event bên trong context
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **2. sản phẩm (product / 제품) quy tắc (rule / 규칙) đến trực tiếp từ definition** xác định đầu vào; **3. chuỗi (chain / 사슬) quy tắc (rule / 규칙) cho nhiều events** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Independence là statement về thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. chuỗi (chain / 사슬) quy tắc (rule / 규칙) cho nhiều events
 
 Với `A_1,\ldots,A_n`:
@@ -100,6 +103,8 @@ P(w_i\mid w_{<i}).
 
 Hiện đại (modern / 현대적) autoregressive AI dùng đúng xác suất (probability / 확률) chuỗi (chain / 사슬) quy tắc (rule / 규칙) ở quy mô (scale / 규모) lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **3. chuỗi (chain / 사슬) quy tắc (rule / 규칙) cho nhiều events** xác định đầu vào; **4. Independence là statement về thông tin (information / 정보)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Mutual exclusivity khác independence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Independence là statement về thông tin (information / 정보)
 
 Events `A` và `B` independent nếu
@@ -120,6 +125,8 @@ Meaning:
 
 Independence không nghĩa events “không liên quan về mặt câu chuyện”; nó là mathematical thuộc tính (property / 속성) của joint phân phối (distribution / 분포).
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **5. Mutual exclusivity khác independence** tiếp nhận điểm tựa từ **4. Independence là statement về thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Conditional independence: concept quan trọng hơn ordinary independence trong các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Mutual exclusivity khác independence
 
 Nếu `A` và `B` mutually exclusive:
@@ -135,6 +142,8 @@ Nếu cả hai có positive xác suất (probability / 확률), chúng **không 
 ```text
 cannot happen together ≠ independent
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **6. Conditional independence: concept quan trọng hơn ordinary independence trong các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **5. Mutual exclusivity khác independence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Law of total xác suất (probability / 확률): average qua hidden cases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Conditional independence: concept quan trọng hơn ordinary independence trong các mô hình (models / 모델들)
 
@@ -158,6 +167,8 @@ Umbrella use và wet streets correlate. Nhưng nếu điều kiện (condition /
 
 Graphical các mô hình (models / 모델들), Naive Bayes và lập luận nhân quả (causal reasoning / 인과적 추론) dùng conditional independence liên tục.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **6. Conditional independence: concept quan trọng hơn ordinary independence trong các mô hình (models / 모델들)** cho ta quy tắc; **7. Law of total xác suất (probability / 확률): average qua hidden cases** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. Bayes theorem derive bằng symmetry của joint xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Law of total xác suất (probability / 확률): average qua hidden cases
 
 Nếu `B_1,\ldots,B_k` partition mẫu (sample / 표본) không gian (space / 공간):
@@ -179,6 +190,8 @@ overall probability
 Weights chính là cơ sở (base / 기반) rates `P(B_i)`.
 
 Đây thường là denominator trong Bayes theorem.
+
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **7. Law of total xác suất (probability / 확률): average qua hidden cases** cho ta quy tắc; **8. Bayes theorem derive bằng symmetry của joint xác suất (probability / 확률)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. Prior, likelihood, bằng chứng (evidence / 증거), posterior** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Bayes theorem derive bằng symmetry của joint xác suất (probability / 확률)
 
@@ -205,6 +218,8 @@ P(A\mid B)
 ```
 
 Bayes không tạo xác suất (probability / 확률) từ nothing. Nó reorganize joint xác suất (probability / 확률) để reverse conditioning direction.
+
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **8. Bayes theorem derive bằng symmetry của joint xác suất (probability / 확률)** nêu điều cần giải thích; **9. Prior, likelihood, bằng chứng (evidence / 증거), posterior** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Likelihood không phải posterior** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Prior, likelihood, bằng chứng (evidence / 증거), posterior
 
@@ -233,6 +248,8 @@ posterior ∝ likelihood × prior
 
 Posterior là prior sau khi reweight bởi mức độ mỗi hypothesis giải thích bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **9. Prior, likelihood, bằng chứng (evidence / 증거), posterior** nêu điều cần giải thích; **10. Likelihood không phải posterior** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Medical-test example: cơ sở (base / 기반) tỷ lệ (rate / 비율) controls posterior** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Likelihood không phải posterior
 
 Likelihood:
@@ -248,6 +265,8 @@ Nó không cần integrate/sum thành 1 over `\theta`.
 Posterior mới là xác suất (probability / 확률) phân phối (distribution / 분포) trên parameter/hypothesis khi prior được đưa vào và normalize.
 
 Confusing likelihood with posterior dẫn tới nhiều lỗi khi đọc statistics/ML.
+
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **10. Likelihood không phải posterior** cho ta quy tắc; **11. Medical-test example: cơ sở (base / 기반) tỷ lệ (rate / 비율) controls posterior** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Natural-frequency biểu diễn (representation / 표현) thường dễ hiểu hơn percentages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Medical-test example: cơ sở (base / 기반) tỷ lệ (rate / 비율) controls posterior
 
@@ -302,6 +321,8 @@ P(disease | test+)
 
 Hai quantities đảo conditioning direction.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **11. Medical-test example: cơ sở (base / 기반) tỷ lệ (rate / 비율) controls posterior** cho ta quy tắc; **12. Natural-frequency biểu diễn (representation / 표현) thường dễ hiểu hơn percentages** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Likelihood ratio là bằng chứng (evidence / 증거) multiplier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Natural-frequency biểu diễn (representation / 표현) thường dễ hiểu hơn percentages
 
 Giả sử 10,000 people.
@@ -333,6 +354,8 @@ Among positives:
 
 Frequency cây (tree / 트리) làm denominator trực quan hơn và giảm base-rate neglect.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **12. Natural-frequency biểu diễn (representation / 표현) thường dễ hiểu hơn percentages** nêu điều cần giải thích; **13. Likelihood ratio là bằng chứng (evidence / 증거) multiplier** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Log-odds biến multiplicative bằng chứng (evidence / 증거) thành additive bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Likelihood ratio là bằng chứng (evidence / 증거) multiplier
 
 Positive likelihood ratio:
@@ -356,6 +379,8 @@ Bayes odds form:
 
 Bằng chứng (evidence / 증거) cập nhật (update / 업데이트) trở thành multiplication.
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **13. Likelihood ratio là bằng chứng (evidence / 증거) multiplier** nêu điều cần giải thích; **14. Log-odds biến multiplicative bằng chứng (evidence / 증거) thành additive bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Sequential Bayesian updating** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Log-odds biến multiplicative bằng chứng (evidence / 증거) thành additive bằng chứng (evidence / 증거)
 
 Odds:
@@ -375,6 +400,8 @@ Take log:
 ```
 
 Đây là lý do log-odds/log-likelihood xuất hiện rộng trong statistics, logistic regression và bằng chứng (evidence / 증거) accumulation.
+
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **14. Log-odds biến multiplicative bằng chứng (evidence / 증거) thành additive bằng chứng (evidence / 증거)** nêu điều cần giải thích; **15. Sequential Bayesian updating** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Naive Bayes: intentionally strong conditional independence giả định (assumption / 가정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Sequential Bayesian updating
 
@@ -401,6 +428,8 @@ Log-likelihoods add.
 
 Nhưng nếu bằng chứng (evidence / 증거) correlated, multiplying as independent **double-counts thông tin (information / 정보)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **16. Naive Bayes: intentionally strong conditional independence giả định (assumption / 가정)** tiếp nhận điểm tựa từ **15. Sequential Bayesian updating** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Bayes denominator là mô hình (model / 모델) bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Naive Bayes: intentionally strong conditional independence giả định (assumption / 가정)
 
 Naive Bayes assumes features conditionally independent given lớp (class / 클래스):
@@ -421,6 +450,8 @@ useful model ≠ literally true model
 
 Hiệu năng (performance / 성능) và calibration cần empirical kiểm tra hợp lệ (validation / 검증).
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **16. Naive Bayes: intentionally strong conditional independence giả định (assumption / 가정)** nêu điều cần giải thích; **17. Bayes denominator là mô hình (model / 모델) bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Continuous Bayes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Bayes denominator là mô hình (model / 모델) bằng chứng (evidence / 증거)
 
 For hypotheses `H_i`:
@@ -434,6 +465,8 @@ P(E)
 Denominator đảm bảo posterior probabilities sum to 1.
 
 Trong mô hình (model / 모델) comparison, marginal likelihood còn penalize parameter không gian (space / 공간) regions dự đoán dữ liệu (data / 데이터) kém, tạo Occam-like tác động (effect / 효과) under priors.
+
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **17. Bayes denominator là mô hình (model / 모델) bằng chứng (evidence / 증거)** nêu điều cần giải thích; **18. Continuous Bayes** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Conjugate example: Beta–Bernoulli intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Continuous Bayes
 
@@ -449,6 +482,8 @@ p(\theta\mid D)
 Denominator có thể khó compute, dẫn tới MCMC, variational suy luận (inference / 추론) và other approximate methods.
 
 Concept Bayes simple; computation có thể hard.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **18. Continuous Bayes** cho ta quy tắc; **19. Conjugate example: Beta–Bernoulli intuition** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **20. Posterior predictive asks about future observations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Conjugate example: Beta–Bernoulli intuition
 
@@ -474,6 +509,8 @@ Prior parameters behave like pseudo-counts.
 
 This is a clean example of updating bất định (uncertainty / 불확실성), not just điểm (point / 지점) estimate.
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **19. Conjugate example: Beta–Bernoulli intuition** cho ta quy tắc; **20. Posterior predictive asks about future observations** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **21. Calibration vs discrimination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Posterior predictive asks about future observations
 
 Instead of only estimate parameter:
@@ -498,6 +535,8 @@ parameter uncertainty
 
 Predictive phân phối (distribution / 분포) combines both.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **21. Calibration vs discrimination** tiếp nhận điểm tựa từ **20. Posterior predictive asks about future observations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Selection effects thay đổi (change / 변경) conditional probabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Calibration vs discrimination
 
 A mô hình (model / 모델) can rank high-risk cases well but đầu ra (output / 출력) probabilities that are miscalibrated.
@@ -505,6 +544,8 @@ A mô hình (model / 모델) can rank high-risk cases well but đầu ra (output
 If among all cases predicted `0.8`, roughly 80% actually occur over repeated comparable cases, mô hình (model / 모델) is calibrated at that mức (level / 수준).
 
 Bayesian/probabilistic lập luận (reasoning / 추론) cares about xác suất (probability / 확률) chất lượng (quality / 품질), not only classification accuracy.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **22. Selection effects thay đổi (change / 변경) conditional probabilities** tiếp nhận điểm tựa từ **21. Calibration vs discrimination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Simpson's paradox as conditioning warning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Selection effects thay đổi (change / 변경) conditional probabilities
 
@@ -519,6 +560,8 @@ A → C ← B
 Even if `A` and `B` independent marginally, conditioning on `C` can make them dependent.
 
 This is important in hiring/admission/medical samples: selecting only observed cases can create misleading correlations.
+
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **23. Simpson's paradox as conditioning warning** tiếp nhận điểm tựa từ **22. Selection effects thay đổi (change / 변경) conditional probabilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. nhân quả (causal / 인과적) interpretation requires more than Bayes theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Simpson's paradox as conditioning warning
 
@@ -535,6 +578,8 @@ P(A|B) across subgroups
 cannot always be understood from aggregate `P(A|B)` alone.
 
 Conditional xác suất (probability / 확률) is not just computational; it changes which population question is being asked.
+
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **24. nhân quả (causal / 인과적) interpretation requires more than Bayes theorem** tiếp nhận điểm tựa từ **23. Simpson's paradox as conditioning warning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Fraud detection example** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. nhân quả (causal / 인과적) interpretation requires more than Bayes theorem
 
@@ -561,6 +606,8 @@ P(Y\mid do(X=x)).
 Confounding can make them differ.
 
 Bayesian suy luận (inference / 추론) and nhân quả (causal / 인과적) suy luận (inference / 추론) can combine, but Bayes theorem alone does not establish causality.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **24. nhân quả (causal / 인과적) interpretation requires more than Bayes theorem** cho ta quy tắc; **25. Fraud detection example** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **26. Finance liên kết (connection / 연결): bằng chứng (evidence / 증거) updates, regime probabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Fraud detection example
 
@@ -600,6 +647,8 @@ Even a strong detector yields many false alerts under extreme lớp (class / 클
 
 Operations teams need posterior precision, not only sensitivity.
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **25. Fraud detection example** cho ta quy tắc; **26. Finance liên kết (connection / 연결): bằng chứng (evidence / 증거) updates, regime probabilities** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **27. AI liên kết (connection / 연결): softmax and posterior-like normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Finance liên kết (connection / 연결): bằng chứng (evidence / 증거) updates, regime probabilities
 
 Suppose hypotheses represent thị trường (market / 시장) regimes:
@@ -621,6 +670,8 @@ Real các mô hình (models / 모델들) require continuous variables, thời gi
 
 Do not confuse posterior xác suất (probability / 확률) with guaranteed forecast.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **26. Finance liên kết (connection / 연결): bằng chứng (evidence / 증거) updates, regime probabilities** nêu điều cần giải thích; **27. AI liên kết (connection / 연결): softmax and posterior-like normalization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. thông tin (information / 정보) lý thuyết (theory / 이론) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. AI liên kết (connection / 연결): softmax and posterior-like normalization
 
 Classifier logits `z_k` often converted:
@@ -636,6 +687,8 @@ This creates normalized lớp (class / 클래스) probabilities under mô hình 
 But softmax đầu ra (output / 출력) is not automatically calibrated posterior xác suất (probability / 확률); huấn luyện (training / 학습) mục tiêu (objective / 목표)/dữ liệu (data / 데이터) shift/mô hình (model / 모델) misspecification matter.
 
 Probabilistic notation does not guarantee probabilistic độ tin cậy (reliability / 신뢰성).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **28. thông tin (information / 정보) lý thuyết (theory / 이론) liên kết (connection / 연결)** tiếp nhận điểm tựa từ **27. AI liên kết (connection / 연결): softmax and posterior-like normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Worked example: two tests are not automatically independent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. thông tin (information / 정보) lý thuyết (theory / 이론) liên kết (connection / 연결)
 
@@ -661,6 +714,8 @@ and log-likelihood ratios measure bằng chứng (evidence / 증거) on additive
 
 Bayes, log-loss and thông tin (information / 정보) lý thuyết (theory / 이론) share log-probability cấu trúc (structure / 구조).
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **28. thông tin (information / 정보) lý thuyết (theory / 이론) liên kết (connection / 연결)** cho ta quy tắc; **29. Worked example: two tests are not automatically independent** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **30. Practical Bayes checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Worked example: two tests are not automatically independent
 
 Suppose two medical tests use similar biomarkers.
@@ -684,6 +739,8 @@ independent conditional on hypothesis?
 or not independent at all?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **29. Worked example: two tests are not automatically independent** cho ta quy tắc; **30. Practical Bayes checklist** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. Practical Bayes checklist
 
 When reading a xác suất (probability / 확률) cập nhật (update / 업데이트), identify:
@@ -700,6 +757,8 @@ Selection mechanism?
 Calibration evidence?
 Causal or only associational claim?
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, sau nội dung của **30. Practical Bayes checklist**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -721,10 +780,16 @@ conditional probability
 → causal-conditioning distinction
 ```
 
+> **Chuyển mạch:** Trong **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Conditional xác suất (probability / 확률) changes the universe you are lập luận (reasoning / 추론) inside. Bayes theorem then **reweights competing hypotheses by how well they predict the bằng chứng (evidence / 증거)**, while preserving cơ sở (base / 기반) rates. bằng chứng (evidence / 증거) is strong only relative to alternatives, and multiple pieces of bằng chứng (evidence / 증거) can be multiplied safely only when the phụ thuộc (dependency / 의존성) các giả định (assumptions / 가정들) justify it.
 
+> **Chuyển mạch:** Ở chặng này của **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Dùng chung (common / 공통) Misconceptions
 
 `P(A|B)` is not `P(B|A)`. Sensitivity is not positive predictive value. High classifier accuracy under class imbalance may say little about posterior precision. Likelihood is not posterior. Bayesian updating cannot rescue a bad likelihood model or unjustified prior. Conditional independence must be modeled, not assumed because features “look different”. Conditioning can create correlations through selection. Bayes theorem updates association under a model; it does not by itself prove causal effects.
+
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

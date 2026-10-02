@@ -1,7 +1,6 @@
 # Developmental psychopathology, rủi ro (risk / 위험) và resilience
 
-> **Mạch đọc:** Đọc **Developmental psychopathology, rủi ro (risk / 위험) và resilience** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Typical và atypical development phải được học cùng nhau** sang **2. Development là trajectory, không phải snapshot**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Typical và atypical development phải được học cùng nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Development là trajectory, không phải snapshot** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối developmental psychopathology với risk, resilience và context, để giải thích vì sao cùng một phơi nhiễm tạo quỹ đạo khác nhau.
 
 **Developmental psychopathology** nghiên cứu cách các trajectory phát triển đi tới adaptive hoặc maladaptive outcomes theo thời gian. Trọng tâm của trường dữ liệu (field / 필드) không phải tìm một “nguyên nhân gốc” duy nhất cho disorder, mà giải thích cách biology, temperament, học tập (learning / 학습), family, peer, school, culture và structural ngữ cảnh (context / 맥락) tương tác qua nhiều developmental stages.
 
@@ -16,6 +15,8 @@ Một principle nền của developmental psychopathology là typical developmen
 Ví dụ, nghiên cứu ngôn ngữ (language / 언어)/xã hội (social / 사회적) cognition ở autistic và non-autistic development giúp phân biệt pathway khác nhau thay vì dùng một single “normal template”.
 
 Trường dữ liệu (field / 필드) vì vậy không xem disorder chỉ như một trạng thái (state / 상태) bất thường xuất hiện đột ngột ở adulthood; nhiều mẫu (pattern / 패턴) có developmental lịch sử (history / 이력) dài và thay meaning theo age.
+
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **2. Development là trajectory, không phải snapshot** tiếp nhận điểm tựa từ **1. Typical và atypical development phải được học cùng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Equifinality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Development là trajectory, không phải snapshot
 
@@ -37,6 +38,8 @@ context và trajectory trước đó?
 
 Snapshot diagnosis bỏ qua trajectory có thể misinterpret developmentally normal variation hoặc bỏ lỡ persistent mẫu (pattern / 패턴).
 
+> **Chuyển mạch:** Ở chặng này của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **3. Equifinality** tiếp nhận điểm tựa từ **2. Development là trajectory, không phải snapshot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Multifinality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Equifinality
 
 **Đồng quy nhiều đường (equifinality)** nghĩa nhiều pathway khác nhau có thể đi tới một kết quả (outcome / 결과) tương tự.
@@ -47,6 +50,8 @@ Ví dụ, antisocial hành vi (behavior / 동작) có thể liên quan harsh/coe
 
 Rà soát (review / 검토) 2024 tiếp tục nhấn mạnh equifinality như lý do cần tiered/prevention các mô hình (models / 모델들) thay vì “one intervention fits all” (PMID: 38415663).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **4. Multifinality** tiếp nhận điểm tựa từ **3. Equifinality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. rủi ro (risk / 위험) factor không phải cause duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Multifinality
 
 **Phân kỳ nhiều kết quả (multifinality)** nghĩa cùng một exposure có thể dẫn tới kết quả (outcome / 결과) rất khác.
@@ -56,6 +61,8 @@ Hai trẻ cùng trải qua family xung đột (conflict / 충돌) có thể dive
 Difference có thể liên quan timing, temperament, hỗ trợ (support / 지원), peer, school, cumulative adversity và chance.
 
 Do đó exposure lịch sử (history / 이력) không phải destiny.
+
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **5. rủi ro (risk / 위험) factor không phải cause duy nhất** tiếp nhận điểm tựa từ **4. Multifinality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Protective và promotive factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. rủi ro (risk / 위험) factor không phải cause duy nhất
 
@@ -75,6 +82,8 @@ Rủi ro (risk / 위험) factor có thể là:
 
 Nhân quả (causal / 인과적) status khác nhau giữa factors; một association không tự trở thành cơ chế (mechanism / 메커니즘).
 
+> **Chuyển mạch:** Ở chặng này của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **6. Protective và promotive factor** tiếp nhận điểm tựa từ **5. rủi ro (risk / 위험) factor không phải cause duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Resilience là tiến trình (process / 프로세스)/kết quả (outcome / 결과), không phải trait anh hùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Protective và promotive factor
 
 **Protective factor** thường nói về yếu tố làm giảm impact của rủi ro (risk / 위험) trong ngữ cảnh (context / 맥락) adversity. **Promotive factor** có thể hỗ trợ positive kết quả (outcome / 결과) nói chung bất kể rủi ro (risk / 위험) mức (level / 수준).
@@ -82,6 +91,8 @@ Nhân quả (causal / 인과적) status khác nhau giữa factors; một associa
 Supportive adult relationship, stable routine, school belonging, economic hỗ trợ (support / 지원) hoặc treatment truy cập (access / 접근) có thể hàm (function / 함수) khác nhau tùy ngữ cảnh (context / 맥락).
 
 Không nên nói một protective factor “xóa” trauma hay adversity. Nó thay xác suất (probability / 확률)/trajectory chứ không undo historical exposure.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **6. Protective và promotive factor** xác định đầu vào; **7. Resilience là tiến trình (process / 프로세스)/kết quả (outcome / 결과), không phải trait anh hùng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Cumulative rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Resilience là tiến trình (process / 프로세스)/kết quả (outcome / 결과), không phải trait anh hùng
 
@@ -91,11 +102,15 @@ Không nên nói một protective factor “xóa” trauma hay adversity. Nó th
 
 Developmental resilience science nhấn mạnh multisystem tương tác (interaction / 상호작용), timing và cultural definition of adaptation.
 
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **7. Resilience là tiến trình (process / 프로세스)/kết quả (outcome / 결과), không phải trait anh hùng** xác định đầu vào; **8. Cumulative rủi ro (risk / 위험)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Developmental cascade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Cumulative rủi ro (risk / 위험)
 
 Nhiều moderate risks cùng xuất hiện có thể quan trọng hơn một rủi ro (risk / 위험) isolated. Housing instability + caregiver depression + school chuyển tiếp (transition / 전이) + bullying có thể tạo cumulative tải (load / 로드).
 
 Nhưng simple rủi ro (risk / 위험) count cũng mất thông tin (information / 정보) về severity, timing và tương tác (interaction / 상호작용). Hai người có “3 risks” không nhất thiết có same rủi ro (risk / 위험) kiến trúc (architecture / 아키텍처).
+
+> **Chuyển mạch:** Ở chặng này của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **9. Developmental cascade** tiếp nhận điểm tựa từ **8. Cumulative rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Transactional phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Developmental cascade
 
@@ -105,6 +120,8 @@ Một early difficulty có thể lan sang lĩnh vực (domain / 도메인) khác
 
 Cascade lô-gic (logic / 논리) tạo intervention opportunity: sửa một link trung gian có thể thay trajectory dù early rủi ro (risk / 위험) không thể thay đổi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **10. Transactional phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **9. Developmental cascade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Developmental timing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Transactional phản hồi (feedback / 피드백)
 
 Child và môi trường (environment / 환경) influence nhau. Một child externalizing có thể evoke harsher phản hồi (response / 응답); harsh phản hồi (response / 응답) lại reinforce externalizing; peer rejection sau đó thêm another vòng lặp (loop / 루프).
@@ -112,6 +129,8 @@ Child và môi trường (environment / 환경) influence nhau. Một child exte
 > **ranh giới (boundary / 경계):** evocative/transactional tác động (effect / 효과) không chuyển moral responsibility sang child. Nó chỉ mô tả nhân quả (causal / 인과적) phản hồi (feedback / 피드백) cần được account khi thiết kế intervention.
 
 Xem [[../03_human_development_and_person/14_parenting_caregiving_and_family_development]].
+
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **11. Developmental timing** tiếp nhận điểm tựa từ **10. Transactional phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Person × môi trường (environment / 환경) tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Developmental timing
 
@@ -121,11 +140,15 @@ Cùng exposure có thể có tác động (effect / 효과) khác theo timing v�
 
 Xem [[../01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]].
 
+> **Chuyển mạch:** Ở chặng này của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **12. Person × môi trường (environment / 환경) tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **11. Developmental timing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Gene–môi trường (environment / 환경) correlation và tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Person × môi trường (environment / 환경) tương tác (interaction / 상호작용)
 
 Diathesis–stress mô hình (model / 모델) hỏi vulnerability có làm negative môi trường (environment / 환경) harmful hơn không. **Differential susceptibility** và related các mô hình (models / 모델들) hỏi một số người có thể nhạy hơn với cả supportive lẫn adverse môi trường (environment / 환경) hay không.
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론)/bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** environmental sensitivity varies, nhưng marker cụ thể không universal và tương tác (interaction / 상호작용) tác động (effect / 효과) thường nhỏ/measurement-sensitive. Không nên label một child là “orchid/dandelion” như diagnosis.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **13. Gene–môi trường (environment / 환경) correlation và tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **12. Person × môi trường (environment / 환경) tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Neuroscience: marker không phải destiny** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Gene–môi trường (environment / 환경) correlation và tương tác (interaction / 상호작용)
 
@@ -137,6 +160,8 @@ Gene–môi trường (environment / 환경) tương tác (interaction / 상호�
 
 Xem [[../01_brain_and_mind/03_evolution_genetics_and_behavior]].
 
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **14. Neuroscience: marker không phải destiny** tiếp nhận điểm tựa từ **13. Gene–môi trường (environment / 환경) correlation và tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Internalizing, externalizing và transdiagnostic cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Neuroscience: marker không phải destiny
 
 Developmental neuroscience nghiên cứu brain cấu trúc (structure / 구조)/hàm (function / 함수) liên quan rủi ro (risk / 위험), adaptation và psychopathology.
@@ -147,6 +172,8 @@ Nhưng group-level neural difference hiếm khi đủ để predict individual d
 
 Neural correlate là một mức (level / 수준) của cơ chế (mechanism / 메커니즘), không thay xã hội (social / 사회적)/developmental mô hình (model / 모델).
 
+> **Chuyển mạch:** Ở chặng này của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **15. Internalizing, externalizing và transdiagnostic cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **14. Neuroscience: marker không phải destiny** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Culture và developmental norm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Internalizing, externalizing và transdiagnostic cấu trúc (structure / 구조)
 
 Developmental symptoms thường được group broad thành **internalizing** (anxiety/depression-like) và **externalizing** (aggression/disinhibition-like), nhưng comorbidity cao.
@@ -154,6 +181,8 @@ Developmental symptoms thường được group broad thành **internalizing** (
 Hierarchical các mô hình (models / 모델들) như general psychopathology **p factor** cố mô tả covariance across symptoms.
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론):** p-factor cấu trúc (structure / 구조) có empirical hỗ trợ (support / 지원) nhưng interpretation còn debated — liability chung, severity/general impairment, phản hồi (response / 응답) style hay combination? Không nên coi p factor như một “gene bệnh tâm thần chung”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **16. Culture và developmental norm** tiếp nhận điểm tựa từ **15. Internalizing, externalizing và transdiagnostic cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Structural ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Culture và developmental norm
 
@@ -165,11 +194,15 @@ At the same thời gian (time / 시간), cultural explanation không được d�
 
 Xem [[../03_human_development_and_person/04_social_and_cultural_psychology]] và [[../03_human_development_and_person/16_acculturation_migration_and_bicultural_identity]].
 
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **17. Structural ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **16. Culture và developmental norm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Prevention theo tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Structural ngữ cảnh (context / 맥락)
 
 Poverty, discrimination, legal status, neighborhood an toàn (safety / 안전), school chất lượng (quality / 품질) và healthcare truy cập (access / 접근) có thể ảnh hưởng child qua multiple pathway, bao gồm caregiver stress, exposure opportunity, sleep và peer môi trường (environment / 환경).
 
 Nếu research chỉ đo parenting mà bỏ structural driver, chính sách (policy / 정책) implication có thể sai: burden bị chuyển sang family thay vì upstream điều kiện (condition / 조건).
+
+> **Chuyển mạch:** Ở chặng này của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **18. Prevention theo tầng** tiếp nhận điểm tựa từ **17. Structural ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Prediction ở individual mức (level / 수준) vẫn khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Prevention theo tầng
 
@@ -183,6 +216,8 @@ Một prevention program không cần đợi disorder full threshold nếu rủi
 
 Nhưng screening chỉ hữu ích nếu downstream hỗ trợ (support / 지원) thực sự tồn tại và false positive/labeling chi phí (cost / 비용) được quản lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **19. Prediction ở individual mức (level / 수준) vẫn khó** tiếp nhận điểm tựa từ **18. Prevention theo tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. trường hợp (case / 사례) formulation theo developmental pathway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Prediction ở individual mức (level / 수준) vẫn khó
 
 Nhiều developmental rủi ro (risk / 위험) factors có tác động (effect / 효과) trung bình small-to-moderate. Cumulative mô hình (model / 모델) có thể cải thiện prediction nhưng bất định (uncertainty / 불확실성) vẫn cao.
@@ -192,6 +227,8 @@ Nhiều developmental rủi ro (risk / 위험) factors có tác động (effect 
 Đây là nơi calibration và communication ethics rất quan trọng.
 
 Xem [[../90_connections/03_risk_uncertainty_and_science_communication]].
+
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **19. Prediction ở individual mức (level / 수준) vẫn khó** cho ta quy tắc; **20. trường hợp (case / 사례) formulation theo developmental pathway** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **21. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. trường hợp (case / 사례) formulation theo developmental pathway
 
@@ -213,6 +250,8 @@ Diagnosis hữu ích cho communication/dịch vụ (service / 서비스); formul
 
 Xem [[01_assessment_and_diagnosis]].
 
+> **Chuyển mạch:** Ở chặng này của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **20. trường hợp (case / 사례) formulation theo developmental pathway** cho ta quy tắc; **21. Những hiểu lầm phổ biến** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **22. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Những hiểu lầm phổ biến
 
 **“Childhood determines adulthood.”** Sai. Early experience ảnh hưởng xác suất (probability / 확률) nhưng trajectory tiếp tục thay đổi.
@@ -226,6 +265,8 @@ Xem [[01_assessment_and_diagnosis]].
 **“Brain marker cho biết child tương lai sẽ ra sao.”** Hiện chưa có cơ sở cho deterministic claim kiểu này trong đa số điều kiện (condition / 조건).
 
 **“Parenting là nguyên nhân của mọi child psychopathology.”** Không. Parenting là một mức (level / 수준) trong multi-level transactional hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **22. Mô hình tư duy** gom các mảnh từ **21. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Mô hình tư duy
 
@@ -249,6 +290,10 @@ multiple possible outcomes
 
 Developmental psychopathology thay câu hỏi “nguyên nhân là gì?” bằng câu hỏi chính xác hơn: **pathway nào, ở giai đoạn nào, trong ngữ cảnh (context / 맥락) nào, với moderator/protective factor nào?**
 
+> **Chuyển mạch:** Trong **Developmental psychopathology, rủi ro (risk / 위험) và resilience**, **Kết nối kiến thức** gom các mảnh từ **22. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [[00_mental_health_and_psychopathology]], [[01_assessment_and_diagnosis]], [[05_neurodevelopmental_adhd_autism]], [[../03_human_development_and_person/00_lifespan_development]], [[../03_human_development_and_person/14_parenting_caregiving_and_family_development]], [[../01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]] và [[../05_intervention/02_biological_and_community_treatment]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

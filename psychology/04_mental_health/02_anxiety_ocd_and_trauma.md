@@ -1,7 +1,6 @@
 # Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)
 
-> **Mạch đọc:** Đọc **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Anxiety và fear-related disorders** sang **2. OCD và related disorders**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Anxiety và fear-related disorders** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. OCD và related disorders** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối anxiety, OCD và trauma với threat learning, avoidance và intrusive experience, để đặt các vòng lặp triệu chứng vào đúng cơ chế.
 
 Tệp (file / 파일) này được giữ để bảo toàn các link cũ và cung cấp bản đồ transdiagnostic. Nội dung chuẩn gốc (canonical / 정본) đã được tách vì **anxiety/fear disorders**, **OCD-related disorders** và **trauma/stressor-related disorders** có overlap về học tập (learning / 학습)/avoidance nhưng khác phenomenology, maintenance cơ chế (mechanism / 메커니즘) và treatment mục tiêu (target / 대상).
 
@@ -23,8 +22,7 @@ threat prediction
 
 Chapter riêng đi sâu panic/interoception, agoraphobia, xã hội (social / 사회적) anxiety, GAD, intolerance of bất định (uncertainty / 불확실성), exposure và treatment ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **1. Anxiety và fear-related disorders**, ta sang **2. OCD và related disorders** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)**, **2. OCD và related disorders** tiếp nhận điểm tựa từ **1. Anxiety và fear-related disorders** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Trauma và stressor-related disorders** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. OCD và related disorders
 
@@ -43,8 +41,7 @@ intrusive event
 
 Chapter riêng phân biệt obsession với normal intrusive thought, mental compulsion, ERP, BDD, hoarding-related phenomena và habit-focused conditions.
 
-
-> **Chuyển mạch:** Từ **2. OCD và related disorders**, ta sang **3. Trauma và stressor-related disorders** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)**, **3. Trauma và stressor-related disorders** tiếp nhận điểm tựa từ **2. OCD và related disorders** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Vì sao ba lĩnh vực (domain / 도메인) dễ bị nhầm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Trauma và stressor-related disorders
 
@@ -61,8 +58,7 @@ traumatic exposure
 
 Chapter riêng phân biệt trauma exposure với PTSD, acute phản hồi (response / 응답), Complex PTSD, dissociation, trauma bộ nhớ (memory / 메모리), recovered-memory ranh giới (boundary / 경계) và evidence-based trauma-focused treatment.
 
-
-> **Chuyển mạch:** Từ **3. Trauma và stressor-related disorders**, ta sang **4. Vì sao ba lĩnh vực (domain / 도메인) dễ bị nhầm?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)**, **3. Trauma và stressor-related disorders** đã nêu tiêu chí phân biệt, còn **4. Vì sao ba lĩnh vực (domain / 도메인) dễ bị nhầm?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. dùng chung (shared / 공유) mechanisms nhưng không phải một disorder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Vì sao ba lĩnh vực (domain / 도메인) dễ bị nhầm?
 
@@ -70,8 +66,7 @@ Cả ba có thể chứa anxiety, avoidance, checking, bodily arousal và intrus
 
 Ví dụ checking có thể nhằm kiểm tra danger trong panic/health anxiety, neutralize obsession trong OCD, hoặc scan ongoing threat sau trauma. Formulation phải hỏi **hành vi (behavior / 동작) đang giải quyết prediction nào**.
 
-
-> **Chuyển mạch:** Từ **4. Vì sao ba lĩnh vực (domain / 도메인) dễ bị nhầm?**, ta sang **5. dùng chung (shared / 공유) mechanisms nhưng không phải một disorder** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)**, **4. Vì sao ba lĩnh vực (domain / 도메인) dễ bị nhầm?** đã nêu tiêu chí phân biệt, còn **5. dùng chung (shared / 공유) mechanisms nhưng không phải một disorder** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Clinical ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. dùng chung (shared / 공유) mechanisms nhưng không phải một disorder
 
@@ -87,18 +82,16 @@ Các dùng chung (shared / 공유) mechanisms quan trọng gồm:
 
 Dùng chung (shared / 공유) cơ chế (mechanism / 메커니즘) giải thích comorbidity và treatment overlap nhưng không xóa diagnostic/phenomenological differences.
 
-
-> **Chuyển mạch:** Từ **5. dùng chung (shared / 공유) mechanisms nhưng không phải một disorder**, ta sang **6. Clinical ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)**, **5. dùng chung (shared / 공유) mechanisms nhưng không phải một disorder** đã nêu tiêu chí phân biệt, còn **6. Clinical ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Clinical ranh giới (boundary / 경계)
 
 Các chapter này mang tính giáo dục. Severe avoidance, recurrent panic, disabling compulsion, trauma-related dissociation, suicidality hoặc major functional impairment cần professional assessment thay vì tự xây exposure giao thức (protocol / 프로토콜) từ tài liệu học.
 
-
-> **Chuyển mạch:** Từ **6. Clinical ranh giới (boundary / 경계)**, ta sang **Kết nối kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Anxiety, OCD và trauma — điều hướng (navigation / 내비게이션) cầu nối (bridge / 브리지)**, **6. Clinical ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Kết nối kiến thức** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối kiến thức
 
 Đọc cùng [[01_assessment_and_diagnosis]], [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]] và [[../05_intervention/01_cbt_behavioral_and_third_wave]].
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

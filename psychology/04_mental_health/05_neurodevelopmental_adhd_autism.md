@@ -1,7 +1,6 @@
 # Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map
 
-> **Mạch đọc:** Đọc **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **ADHD** sang **Autism**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **ADHD** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Autism** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối neurodevelopmental ADHD/autism với attention, executive function và phát triển, để phân biệt biểu hiện theo tuổi và bối cảnh.
 
 Tệp (file / 파일) này được giữ làm **tính tương thích (compatibility / 호환성)/điều hướng (navigation / 내비게이션) map** sau khi ADHD và autism đã được tách thành chuẩn gốc (canonical / 정본) chapter riêng. Không dùng tệp (file / 파일) này làm chapter học sâu.
 
@@ -17,8 +16,7 @@ Tệp (file / 파일) này được giữ làm **tính tương thích (compatibi
 - medication/non-pharmacological hỗ trợ (support / 지원);
 - education/workplace accommodation.
 
-
-> **Chuyển mạch:** Từ **ADHD**, ta sang **Autism** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Autism** tiếp nhận điểm tựa từ **ADHD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao tách?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Autism
 
@@ -32,15 +30,13 @@ Tệp (file / 파일) này được giữ làm **tính tương thích (compatibi
 - neurodiversity và hỗ trợ (support / 지원) needs;
 - education/workplace adaptations.
 
-
-> **Chuyển mạch:** Từ **Autism**, ta sang **Vì sao tách?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Vì sao tách?** tiếp nhận điểm tựa từ **Autism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (shared / 공유) principles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao tách?
 
 ADHD và autism có thể co-occur và cùng thuộc neurodevelopmental lĩnh vực (domain / 도메인), nhưng cơ chế (mechanism / 메커니즘), assessment lô-gic (logic / 논리) và hỗ trợ (support / 지원) need không đồng nhất. Gộp quá sâu vào một tệp (file / 파일) dễ biến `neurodevelopmental` thành một category quá rộng và làm mất conceptual ranh giới (boundary / 경계).
 
-
-> **Chuyển mạch:** Từ **Vì sao tách?**, ta sang **dùng chung (shared / 공유) principles** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Dùng chung (shared / 공유) principles** tiếp nhận điểm tựa từ **Vì sao tách?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (shared / 공유) principles
 
@@ -56,11 +52,10 @@ developmental history
 
 Không chẩn đoán chỉ bằng online checklist hoặc một kiểm thử (test / 테스트) đơn lẻ.
 
-
-> **Chuyển mạch:** Từ **dùng chung (shared / 공유) principles**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Neurodevelopmental conditions — tính tương thích (compatibility / 호환성) map**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (shared / 공유) principles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc thêm [[01_assessment_and_diagnosis]], [[12_developmental_psychopathology_risk_and_resilience]], [[../03_human_development_and_person/00_lifespan_development]] và [[../06_applied/00_work_organization_and_leadership]].
 
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
