@@ -1,6 +1,6 @@
 # Thời gian, đồng hồ, thứ tự và quan hệ nhân quả trong hệ thống phân tán
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thời gian, đồng hồ, thứ tự và quan hệ nhân quả trong hệ thống phân tán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đồng hồ vật lý không hoàn hảo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Wall clock và monotonic clock** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thời gian, đồng hồ, thứ tự và quan hệ nhân quả trong hệ thống phân tán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đồng hồ vật lý không hoàn hảo** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Wall clock và monotonic clock** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối time, clocks, ordering và causality, để hệ phân tán biết sự kiện nào có thể được so sánh và suy ra.
 
 Trong một chương trình chạy trên một máy, lập trình viên thường có trực giác rằng “A xảy ra trước B” nếu A xuất hiện trước trong luồng lệnh hoặc đồng hồ hệ thống cho số nhỏ hơn. Trong hệ thống phân tán, trực giác đó trở nên nguy hiểm. Hai máy có đồng hồ vật lý khác nhau, message có thể trễ hoặc đi đường khác nhau, và không tồn tại một quan sát viên trung tâm luôn biết chính xác thứ tự toàn cục của mọi sự kiện.
 

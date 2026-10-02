@@ -1,6 +1,6 @@
 # CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính đồng thời (concurrency / 동시성) không chỉ là “cùng timestamp”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Happens-before và logical clocks** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CRDTs, nhân quả (causal / 인과적) consistency và giải quyết xung đột (conflict resolution / 충돌 해결)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính đồng thời (concurrency / 동시성) không chỉ là “cùng timestamp”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Happens-before và logical clocks** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối CRDTs với causal consistency và conflict resolution, để cập nhật đồng thời hội tụ theo invariant.
 
 Strong consensus không phải lựa chọn duy nhất. Với collaborative editing, counters, sets hoặc geo-distributed applications, hệ thống đôi khi ưu tiên cục bộ (local / 로컬) availability và chấp nhận replicas tạm thời khác nhau. Khi đó câu hỏi là làm sao merge concurrent updates mà không phụ thuộc một coordinator toàn cục.
 
