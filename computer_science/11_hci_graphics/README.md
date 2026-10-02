@@ -1,6 +1,6 @@
 # HCI & Computer Graphics — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **HCI & Computer Graphics — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **HCI & Computer Graphics — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **HCI & Computer Graphics — lĩnh vực (domain / 도메인) Hub**. Route học đi từ human factors/usability → accessibility/interface design → graphics geometry/pipeline → images/color/rendering → multimedia/interactive systems, để trải nghiệm nối với giới hạn perceptual và runtime.
 
 Foundation nằm tại [`../basic/11_hci_graphics/`](../basic/11_hci_graphics/): human factors, usability/khả năng tiếp cận (accessibility / 접근성), graphics hình học (geometry / 기하학) chuỗi xử lý (pipeline / 파이프라인), images/color/rendering và multimedia/interactive các hệ thống (systems / 시스템들).
 

@@ -1,6 +1,6 @@
 # Multimedia, animation và interactive các hệ thống (systems / 시스템들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimedia, animation và interactive các hệ thống (systems / 시스템들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Frame tỷ lệ (rate / 비율) và frame thời gian (time / 시간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Game/kết xuất (render / 렌더링) vòng lặp (loop / 루프)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Multimedia, animation và interactive systems**. Route đi từ frame rate/timing → render loop/double buffering → input latency/animation → audio sampling/sync → video compression và real-time constraints, để cảm nhận tương tác gắn với deadline.
 
 Interactive media kết hợp rendering, audio/video, đầu vào (input / 입력), timing và tính đồng thời (concurrency / 동시성). Khác batch computation, một frame đúng nhưng đến muộn vẫn tạo trải nghiệm sai. Vì vậy real-time các hệ thống (systems / 시스템들) cần lập luận (reasoning / 추론) về deadlines, buffering và synchronization.
 

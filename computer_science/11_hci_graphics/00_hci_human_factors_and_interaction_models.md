@@ -1,6 +1,6 @@
 # Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Human-Computer tương tác (interaction / 상호작용), human factors và tương tác (interaction / 상호작용) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Người dùng (user / 사용자) là một phần của hệ thống (system / 시스템)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Human-computer interaction, human factors và interaction models**. Route đi từ user-in-system → mental models/affordance → feedback/gulf of execution → attention/Fitts/Hick → slips, mistakes và direct manipulation, để thiết kế bám vào hành vi thật.
 
 Human-Computer tương tác (interaction / 상호작용) nghiên cứu cách con người hiểu, điều khiển và hình thành mô hình tư duy (mental model / 사고 모델) về computer các hệ thống (systems / 시스템들). Một giao diện (interface / 인터페이스) technically correct vẫn có thể gây lỗi nếu người dùng (user / 사용자) không biết hệ thống (system / 시스템) trạng thái (state / 상태), hành động (action / 동작) consequences hoặc khôi phục (recovery / 복구) đường dẫn (path / 경로).
 

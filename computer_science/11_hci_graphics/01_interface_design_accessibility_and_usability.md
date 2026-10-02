@@ -1,6 +1,6 @@
 # Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Giao diện (interface / 인터페이스) thiết kế (design / 설계), khả năng tiếp cận (accessibility / 접근성) và usability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Usability theo tác vụ (task / 작업) và người dùng (user / 사용자)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thông tin (information / 정보) kiến trúc (architecture / 아키텍처)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Interface design, accessibility và usability**. Route đi từ task/user goals → information architecture/form design → accessibility semantics → keyboard/focus/color/responsive → user testing/A-B/dark patterns, để UX quality được kiểm tra thay vì đoán.
 
 Usability không phải cảm giác chủ quan hoàn toàn. Ta có thể quan sát tác vụ (task / 작업) completion, lỗi (error / 오류) tỷ lệ (rate / 비율), thời gian (time / 시간), learnability và satisfaction. khả năng tiếp cận (accessibility / 접근성) mở rộng câu hỏi: giao diện (interface / 인터페이스) có usable với người có năng lực giác quan, vận động, nhận thức và thiết bị khác nhau hay không?
 
