@@ -1,6 +1,6 @@
 # Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Metabolism là mạng lưới (network), không phải một “đường phản ứng”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Dị hóa (catabolism) và đồng hóa (anabolism) cần được nối bằng ghép năng lượng (energy coupling)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)**. Route đi từ mạng phản ứng và redox → ghép năng lượng/ATP → hô hấp tế bào và gradient proton → quang hợp, carbon fixation và flux regulation, để năng lượng tế bào được đọc như dòng electron có điều khiển.
 
 Chapter trước cho thấy cell phải tiêu năng lượng liên tục để giữ chênh lệch ion (ion gradient), vận chuyển cargo, sửa cấu trúc và tổng hợp molecule. Vì vậy câu hỏi tự nhiên tiếp theo là: **ATP được tái tạo bằng cách nào, và năng lượng đi vào mạng lưới sống từ đâu?**
 

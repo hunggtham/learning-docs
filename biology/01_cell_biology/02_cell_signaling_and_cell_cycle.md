@@ -1,6 +1,6 @@
 # Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao cell cần signaling?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. tín hiệu (signal / 신호), receptor và đáp ứng (response)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)**. Route đi từ signal/receptor → transduction và feedback → gene expression/response → checkpoints, growth và division, để quyết định của tế bào được nối với thông tin, thời gian và rủi ro sai lệch.
 
 Ở chapter trước, tế bào (cell) đã có năng lượng (energy / 에너지) và mạng lưới chuyển hóa (metabolic network). Nhưng một hệ sống không thể chỉ có bộ máy (machinery); nó cần **điều khiển (control / 제어)**. Cell phải biết khi nào chất dinh dưỡng (nutrient) đủ, khi nào DNA bị hỏng, khi nào tế bào lân cận (neighboring cell) gửi tín hiệu (signal / 신호), khi nào cần tăng trưởng, khi nào nên divide và khi nào nên dừng.
 

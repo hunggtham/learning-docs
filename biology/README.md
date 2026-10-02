@@ -1,6 +1,6 @@
 # Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09** gom các mảnh thành mental model có thể mang sang nhánh khác; sau đó sang **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**. Route học đi từ foundations/cell → genetics, evolution và organismal biology → ecology → biotechnology/computation → connections, để mỗi chapter nối cơ chế, scale, bằng chứng và giới hạn trước khi bàn giao.
 
 Sinh học (Biology / 생물학) trong thư viện này được viết như một **hệ thống kiến thức liên tục**, không phải tập hợp ghi chú (tập hợp ghi chú (collection note)) hay cheat sheet. Người đọc được giả định có thể đã quên phần lớn Sinh học phổ thông, vì vậy mỗi chapter phải tự dựng nền cần thiết, giải thích vì sao concept xuất hiện, cơ chế (mechanism / 메커니즘) hoạt động ra sao, mô hình (model / 모델) nào giúp suy luận và khái niệm (concept) đó dẫn tự nhiên sang chapter nào tiếp theo.
 

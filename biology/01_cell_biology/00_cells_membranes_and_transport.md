@@ -1,6 +1,6 @@
 # Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao cell thường nhỏ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Prokaryote và eukaryote: hai kiến trúc (architecture / 아키텍처) khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tế bào, màng và vận chuyển — Cells, Membranes and vận chuyển (transport / 전송)**. Route đi từ kích thước/kiến trúc tế bào → màng và gradient → khuếch tán, vận chuyển chủ động → ngăn tế bào và trao đổi với môi trường, để cấu trúc tế bào luôn gắn với giới hạn vật chất.
 
 Foundation chapters đã cho ta vật liệu và luật chơi: water tạo môi trường, lipid tự tổ chức thành bilayer, protein có thể làm machine, ATP cung cấp coupling, ion tạo độ dốc (gradient / 기울기) và axit nucleic (nucleic acid) mang thông tin (information / 정보). Bây giờ ta hỏi câu tiếp theo: **làm thế nào những molecule đó được tổ chức thành một đơn vị (unit / 단위) có thể tự duy trì?**
 
