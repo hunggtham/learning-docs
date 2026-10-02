@@ -14,7 +14,7 @@ Controllability hỏi đầu vào (input / 입력) có thể đưa trạng thái
 
 Plant continuous được mẫu (sample / 표본) với period Ts. Zero-order hold, computational delay và jitter tạo discrete dynamics khác mô hình continuous đơn giản. Ts phải được chọn từ dominant pole, bandwidth và worst-case thực thi (execution / 실행) thời gian (time / 시간).
 
-> **Chuyển mạch:** Ở chặng này của **State-Space and Discrete điều khiển (control / 제어) — State-space và điều khiển số**, **3. Discrete PID** tiếp nhận điểm tựa từ **2. Discretization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Worked lập luận (reasoning / 추론): actuator deadline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **2. Discretization** biến mô hình liên tục thành bước thời gian; **3. Discrete PID** dùng mô hình đó để điều khiển, rồi **4. Worked reasoning** kiểm tra deadline actuator.
 
 ## 3. Discrete PID
 
@@ -36,7 +36,7 @@ Nếu vòng điều khiển (control loop / 제어 루프) chạy mỗi 1 ms nh�
 - HIL với timestamp thật;
 - kiểm tra bất biến (invariant / 불변식) an toàn trước khi tối ưu phản hồi (response / 응답).
 
-> **Chuyển mạch:** Ở chặng này của **State-Space and Discrete điều khiển (control / 제어) — State-space và điều khiển số**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **5. xác minh (verification / 확인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **5. Verification** xác nhận mô phỏng và giới hạn số; **Cầu nối** ghi lại điều kiện bàn giao sang hệ thống chạy thật.
 
 ## Cầu nối (bridge / 브리지)
 

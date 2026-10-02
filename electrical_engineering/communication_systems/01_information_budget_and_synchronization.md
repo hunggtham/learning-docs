@@ -12,13 +12,13 @@ Kênh bandwidth B không nhiễu có giới hạn symbol tỷ lệ (rate / 비�
 
 Sức chứa (capacity / 용량) là upper bound dưới các giả định (assumptions / 가정들), không phải tốc độ ứng dụng luôn đạt. Roll-off, pilot, guard interval, giao thức (protocol / 프로토콜) header và retransmission làm net thông lượng (throughput / 처리량) thấp hơn.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보) ngân sách (budget / 예산) and Synchronization — Dung lượng và đồng bộ**, **2. Constellation và EVM** tiếp nhận điểm tựa từ **1. Nyquist và Shannon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Synchronization vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **1. Nyquist và Shannon** đặt giới hạn tốc độ; **2. Constellation và EVM** chuyển giới hạn đó thành khoảng cách điểm và sai số, trước khi **3. Synchronization loop** xử lý lệch thời gian/tần số.
 
 ## 2. Constellation và EVM
 
 QPSK, QAM và các constellation khác đổi symbol năng lượng (energy / 에너지) thành bits/symbol. Khoảng cách điểm quyết định noise tolerance. lỗi (error / 오류) véc-tơ (vector / 벡터) magnitude (EVM) đo khoảng cách véc-tơ (vector / 벡터) giữa điểm nhận và điểm lý tưởng; EVM giúp thấy phase noise, IQ imbalance, compression và multipath.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) ngân sách (budget / 예산) and Synchronization — Dung lượng và đồng bộ**, **3. Synchronization vòng lặp (loop / 루프)** tiếp nhận điểm tựa từ **2. Constellation và EVM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Worked lập luận (reasoning / 추론): thông lượng (throughput / 처리량) thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ EVM và constellation, **3. Synchronization loop** khôi phục tham chiếu cần thiết; **4. Worked reasoning** tính throughput thực sau khi trừ overhead và lỗi.
 
 ## 3. Synchronization vòng lặp (loop / 루프)
 
@@ -39,7 +39,7 @@ Một link 10 Msymbol/s, 16-QAM có 4 bit/symbol, nên raw tỷ lệ (rate / 비
 - pilot quá ít làm carrier drift thành burst lỗi (error / 오류);
 - FEC sửa được bit nhưng độ trễ (latency / 지연 시간)/thử lại (retry / 재시도) vẫn vượt deadline.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin (information / 정보) ngân sách (budget / 예산) and Synchronization — Dung lượng và đồng bộ**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Failure modes** chỉ ra khi budget và đồng bộ hỏng; **Cầu nối** biến các dấu hiệu đó thành checklist thiết kế và đo kiểm cho hệ thống tiếp theo.
 
 ## Cầu nối (bridge / 브리지)
 

@@ -10,14 +10,14 @@
 plant/sensor/actuator → transfer function → stability → PID → state-space → observer → digital/safety control
 ```
 
-> **Chuyển mạch:** Trong **Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cốt lõi tuyến** đi từ mô hình động lực đến feedback, stability và PID; **Cốt lõi chapter** giải thích cơ chế, còn **Cần nắm** ghi lại điều kiện ổn định cần kiểm tra.
 
 ## Cốt lõi (core / 핵심) chapter
 
 - [Feedback, stability and PID](00_feedback_stability_pid.md) — closed-loop sensitivity, poles, phase margin, saturation, anti-windup và digital điều khiển (control / 제어).
 - [State-space and discrete control](01_state_space_discrete_control.md) — controllability, khả năng quan sát (observability / 관측 가능성), discretization, deadline và HIL xác minh (verification / 확인).
 
-> **Chuyển mạch:** Ở chặng này của **Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi hiểu mô hình và stability, **Cầu nối** đưa chúng vào tuning, actuator, deadline và verification của hệ điều khiển thật.
 
 ## Cần nắm
 
@@ -27,7 +27,7 @@ plant/sensor/actuator → transfer function → stability → PID → state-spac
 - controllability/khả năng quan sát (observability / 관측 가능성), trạng thái (state / 상태) estimator và sensor fusion;
 - sampling, discretization, độ trễ (latency / 지연 시간), fail-safe trạng thái (state / 상태) và xác minh (verification / 확인).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép README bằng trade-off giữa đáp ứng, ổn định và chi phí triển khai; đó là tiêu chí chọn chapter tiếp theo.
 
 ## Cầu nối (bridge / 브리지)
 

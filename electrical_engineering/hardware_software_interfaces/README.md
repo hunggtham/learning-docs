@@ -10,14 +10,14 @@ Nhánh này mô tả đặc tả hợp đồng (contract / 계약) nơi register
 register map → bus protocol → driver contract → interrupt/DMA → boot/update → observability/fault recovery
 ```
 
-> **Chuyển mạch:** Trong **Hardware–Software Interfaces — Giao diện phần cứng–phần mềm**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cốt lõi tuyến** đi từ register, bus và protocol đến driver lifecycle; **Cốt lõi chapter** giải thích hợp đồng, còn **Cần nắm** ghi điều kiện đồng bộ và lỗi.
 
 ## Cốt lõi (core / 핵심) chapter
 
 - [Register, bus and driver contracts](00_register_bus_driver_contracts.md) — register ngữ nghĩa (semantics / 의미론), thứ tự (ordering / 순서), DMA quyền sở hữu (ownership / 소유권), errors, boot/cập nhật (update / 업데이트) và tính tương thích (compatibility / 호환성).
 - [Protocols and driver lifecycle](01_protocols_driver_lifecycle.md) — bus thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), máy trạng thái (state machine / 상태 머신), tính tương thích (compatibility / 호환성), khôi phục (recovery / 복구) và khả năng quan sát (observability / 관측 가능성).
 
-> **Chuyển mạch:** Ở chặng này của **Hardware–Software Interfaces — Giao diện phần cứng–phần mềm**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi hiểu hợp đồng register/bus và driver, **Cầu nối** đưa chúng vào protocol, timeout, recovery và kiểm thử tích hợp.
 
 ## Cần nắm
 
@@ -27,7 +27,7 @@ register map → bus protocol → driver contract → interrupt/DMA → boot/upd
 - reset/power sequencing, bootloader, firmware versioning và quay lui (rollback / 롤백);
 - hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도), idempotency, degraded chế độ (mode / 모드) và diagnostic bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hardware–Software Interfaces — Giao diện phần cứng–phần mềm**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép README bằng tiêu chí bàn giao giữa phần cứng và phần mềm: trạng thái, lỗi, thời hạn và owner phải truy được.
 
 ## Cầu nối (bridge / 브리지)
 

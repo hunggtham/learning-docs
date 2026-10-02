@@ -10,14 +10,14 @@ Analog electronics biến tín hiệu (signal / 신호) liên tục thành gain,
 diode → BJT/MOSFET stages → biasing → op-amp/feedback → filters → ADC/DAC front-end
 ```
 
-> **Chuyển mạch:** Trong **Analog Electronics — Điện tử tương tự**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cốt lõi tuyến** đi từ bias, small-signal và feedback đến noise và data converter; **Cốt lõi chapter** giải thích cơ chế, còn **Cần nắm** nêu thông số cần đo.
 
 ## Cốt lõi (core / 핵심) chapter
 
 - [Device biasing and feedback](00_device_biasing_feedback.md) — operating điểm (point / 지점), small-signal gain, phản hồi (feedback / 피드백), stability, noise và sensor front-end.
 - [Data converters and noise budget](01_data_converters_noise_budget.md) — ADC/DAC, ENOB, tham chiếu (reference / 참조), settling và lỗi (error / 오류) allocation.
 
-> **Chuyển mạch:** Ở chặng này của **Analog Electronics — Điện tử tương tự**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi nắm bias, gain và noise, **Cầu nối** đưa chúng vào thiết kế mạch và giới hạn linh kiện thực.
 
 ## Cần nắm
 
@@ -27,7 +27,7 @@ diode → BJT/MOSFET stages → biasing → op-amp/feedback → filters → ADC/
 - thermal noise, shot noise, offset, drift và động (dynamic / 동적) phạm vi (range / 범위);
 - anti-alias filter, sample-and-hold, tham chiếu (reference / 참조) và converter errors.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Analog Electronics — Điện tử tương tự**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép README bằng cách nối mô hình tương tự với phép đo, layout và giới hạn nhiễu khi mở bài chuyên sâu.
 
 ## Cầu nối (bridge / 브리지)
 

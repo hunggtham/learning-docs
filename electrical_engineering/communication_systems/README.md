@@ -10,14 +10,14 @@ Communication các hệ thống (systems / 시스템들) thiết kế đường 
 baseband → modulation → channel/noise → synchronization → coding → link budget → protocol boundary
 ```
 
-> **Chuyển mạch:** Trong **Communication các hệ thống (systems / 시스템들) — Hệ thống thông tin**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cốt lõi tuyến** cho biết thứ tự từ tín hiệu đến kênh và mã hóa; **Cốt lõi chapter** giải thích từng cơ chế, còn **Cần nắm** chốt các đại lượng phải kiểm tra.
 
 ## Cốt lõi (core / 핵심) chapter
 
 - [Modulation, channel and coding](00_modulation_channel_coding.md) — I/Q, link ngân sách (budget / 예산), noise, synchronization, BER/FER và độ tin cậy (reliability / 신뢰성) sự đánh đổi (trade-off / 트레이드오프).
 - [Information budget and synchronization](01_information_budget_and_synchronization.md) — Shannon/Nyquist, QAM, EVM, coding overhead và goodput.
 
-> **Chuyển mạch:** Ở chặng này của **Communication các hệ thống (systems / 시스템들) — Hệ thống thông tin**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi nắm cơ chế và đại lượng, **Cầu nối** đưa chúng vào bài toán budget, đồng bộ và failure mode của một đường truyền thực.
 
 ## Cần nắm
 
@@ -27,7 +27,7 @@ baseband → modulation → channel/noise → synchronization → coding → lin
 - nguồn (source / 소스)/channel coding, BER/FER, interleaving và retransmission;
 - antenna/link ngân sách (budget / 예산) ở mức hệ thống, không lặp lại electromagnetic derivation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Communication các hệ thống (systems / 시스템들) — Hệ thống thông tin**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép README bằng cách gắn khái niệm với trade-off thông lượng, nhiễu, latency và độ tin cậy; đó là điểm quay lại khi mở chapter chi tiết.
 
 ## Cầu nối (bridge / 브리지)
 
