@@ -1,6 +1,6 @@
 # CSS Master Supplement 2026
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **CSS Master Supplement 2026**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Những phần chuyên sâu sau CSSBeginnertoSenior2026.md** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quy ước thuật ngữ Việt–Anh** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **CSS Master Supplement 2026**. Route đi từ handbook prerequisite → terminology and modern Dart/CSS conventions → browser layout/paint/compositing → cascade layers, container queries, nesting và performance → migration/accessibility, để supplement đào sâu browser behavior mà không lặp canonical track.
 
 ## Những phần chuyên sâu sau `CSS_Beginner_to_Senior_2026.md`
 
