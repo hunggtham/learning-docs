@@ -1,6 +1,6 @@
 # Độ phức tạp thời gian, không gian và phân tích tiệm cận
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Độ phức tạp thời gian, không gian và phân tích tiệm cận**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kích thước đầu vào là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình chi phí** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Time/space complexity và asymptotic analysis**. Route đi từ input size/model → operation counting → Big-O/Theta/Omega → amortized/aggregate cost → memory/cache effects, để độ phức tạp gắn với mô hình máy và workload.
 
 Nếu hai thuật toán đều đúng, câu hỏi tiếp theo là chi phí của chúng tăng như thế nào khi đầu vào lớn dần. **Độ phức tạp tính toán (computational complexity / 계산 복잡도)** xây một mô hình đủ đơn giản để bỏ qua chi tiết của từng máy cụ thể nhưng vẫn giữ được tốc độ tăng chi phí theo kích thước đầu vào.
 

@@ -1,6 +1,6 @@
 # String algorithms và văn bản (text / 텍스트) indexing
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **String algorithms và văn bản (text / 텍스트) indexing**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Biểu diễn (representation / 표현) đến trước thuật toán (algorithm / 알고리즘)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Naive substring tìm kiếm (search / 검색) và thông tin bị lãng phí** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **String algorithms và text indexing**. Route đi từ representation/alphabet → substring search → prefix/failure functions → suffix/index structures → streaming/text workloads, để pattern matching được nối với bộ nhớ và throughput.
 
 String (chuỗi / 문자열) trông giống một array ký tự, nhưng nhiều bài toán trên văn bản (text / 텍스트) không thể giải thích tốt chỉ bằng array operations. Ta thường cần tìm một mẫu (pattern / 패턴) trong văn bản lớn, so sánh prefixes, phát hiện lặp, autocomplete, xử lý DNA chuỗi (sequence / 시퀀스), tokenize mã nguồn (source code / 소스 코드) hoặc tìm hàng triệu documents. Điểm cốt lõi là **cấu trúc thứ tự trong chuỗi tạo ra thông tin có thể tái sử dụng**, nếu ta không bắt đầu so sánh lại từ đầu mỗi lần.
 

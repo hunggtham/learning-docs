@@ -1,6 +1,6 @@
 # Độ phức tạp (complexity / 복잡도), reductions và NP
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Độ phức tạp (complexity / 복잡도), reductions và NP**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài toán (problem / 문제) khác thuật toán (algorithm / 알고리즘)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Complexity, reductions và NP**. Route đi từ problem-vs-algorithm → decision problems → polynomial verification → reductions → NP-hard/NP-complete boundaries, để độ khó được lập luận bằng biến đổi bảo toàn.
 
 Big-O trả lời “thời gian chạy (runtime / 런타임) tăng thế nào với đầu vào (input / 입력) kích thước (size / 크기)”, nhưng độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) hỏi sâu hơn: **một bài toán (problem / 문제) về bản chất cần bao nhiêu tài nguyên để giải, và các problems liên hệ với nhau qua khả năng chuyển đổi như thế nào?** Đây là nơi xuất hiện P, NP, NP-hard, reductions và lower bounds.
 

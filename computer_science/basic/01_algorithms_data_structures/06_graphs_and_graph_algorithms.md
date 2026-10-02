@@ -1,6 +1,6 @@
 # Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đồ thị (graph / 그래프) và đồ thị (graph / 그래프) algorithms**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đồ thị (graph / 그래프) mô hình (model / 모델)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Graphs và graph algorithms**. Route đi từ graph model/representation → BFS/DFS traversal → shortest paths → spanning/connectivity → DAG/topological reasoning, để thuật toán được chọn theo trọng số, hướng và mật độ.
 
 Khi relationships không còn hierarchy đơn giản, đồ thị (graph / 그래프) trở thành mô hình (model / 모델) tự nhiên. xã hội (social / 사회적) mạng (network / 네트워크), road map, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), mạng (network / 네트워크) topology, hệ thống dựng (build system / 빌드 시스템), lời gọi (call / 호출) đồ thị (graph / 그래프) và cơ sở dữ liệu (database / 데이터베이스) foreign-key relationships đều có thể mô hình (model / 모델) bằng vertices và edges.
 

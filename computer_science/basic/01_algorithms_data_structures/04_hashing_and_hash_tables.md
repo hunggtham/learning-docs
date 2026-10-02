@@ -1,6 +1,6 @@
 # Hashing và bảng băm (hash table / 해시 테이블)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hashing và bảng băm (hash table / 해시 테이블)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Băm (hash / 해시) hàm (function / 함수) đang làm gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Separate chaining và open addressing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hashing và hash tables**. Route đi từ hash function/distribution → chaining/open addressing → load factor/resize → collision/adversarial behavior → iteration and deletion semantics, để lookup cost gắn với invariant bảng.
 
 Ta muốn map key như `userId` sang giá trị (value / 값) mà không scan toàn bộ collection. Nếu key nằm trong universe lớn, direct-address bảng (table / 테이블) quá tốn bộ nhớ (memory / 메모리). Hashing giải quyết bằng cách dùng một hàm (function / 함수) nén key thành một integer/bucket chỉ mục (index / 인덱스) nhỏ hơn.
 

@@ -1,6 +1,6 @@
 # Tư duy thuật toán, đặc tả và tính đúng đắn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tư duy thuật toán, đặc tả và tính đúng đắn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ mô tả bài toán tới đặc tả** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tính đúng đắn từng phần và khả năng kết thúc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Algorithmic thinking, specification và correctness**. Route đi từ problem statement → pre/postconditions → invariants/termination → proof strategy → complexity trade-offs, để thuật toán được đánh giá bằng điều phải giữ và điều phải kết thúc.
 
 **thuật toán (algorithm / 알고리즘)** không đơn thuần là một đoạn mã có vẻ chạy được. Nó là một thủ tục hữu hạn và rõ nghĩa, biến đầu vào thành đầu ra theo một **đặc tả (specification / 명세)**. Tư duy thuật toán bắt đầu trước khi viết mã: cần xác định trạng thái nào quan trọng, thao tác nào được phép, bất biến nào phải được giữ và bằng chứng nào cho thấy thủ tục thực sự giải đúng bài toán.
 
