@@ -1,7 +1,6 @@
 # Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đặt **cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục đích** sang **Foundations**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Core coverage audit — World Geography library**. Route đi từ inventory/owner → foundation and regional coverage → link/depth checks → language/source quality → remediation, để audit dẫn tới phần cần sửa.
 
 ## Mục đích
 
@@ -13,8 +12,7 @@ Trạng thái dùng ở đây:
 - **độ sâu (depth / 깊이) pass**: vừa được nâng đáng kể; ưu tiên QA/cross-link hơn rewrite toàn bộ.
 - **Solid**: đúng và khá sâu nhưng còn một số cầu nối (bridge / 브리지) quan trọng cần bổ sung.
 
-
-> **Chuyển mạch:** Từ **Mục đích**, ta sang **Foundations** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Foundations** tiếp nhận điểm tựa từ **Mục đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật lý (physical / 물리적) Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Foundations
 
@@ -28,8 +26,7 @@ Bảng Foundations trả lời câu hỏi: người học đã có đủ công c
 | GIS / geospatial dữ liệu (data / 데이터) / remote sensing | **Deep** | véc-tơ (vector / 벡터)/raster, topology, spatial predicates/chỉ mục (index / 인덱스), geodesic/mạng (network / 네트워크) distance, observation chuỗi xử lý (pipeline / 파이프라인), kiểm tra hợp lệ (validation / 검증), bất định (uncertainty / 불확실성)/privacy. |
 | Earth các hệ thống (systems / 시스템들) | **độ sâu (depth / 깊이) pass** | hệ thống (system / 시스템) ranh giới (boundary / 경계), stock–luồng (flow / 흐름), residence thời gian (time / 시간), coupled các hệ thống (systems / 시스템들), threshold, cross-scale phản hồi (feedback / 피드백), trọng yếu (critical / 중요) zone và coupled human–natural các hệ thống (systems / 시스템들). |
 
-
-> **Chuyển mạch:** Từ **Foundations**, ta sang **vật lý (physical / 물리적) Geography** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Vật lý (physical / 물리적) Geography** tiếp nhận điểm tựa từ **Foundations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Human Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vật lý (physical / 물리적) Geography
 
@@ -58,8 +55,7 @@ Các chapter riêng lẻ đã sâu; khoảng trống tiếp theo nằm ở **c�
 
 Mục tiêu của pass sau không phải tăng độ dài từng tệp (file / 파일) mà làm prerequisite/ứng dụng (application / 애플리케이션) links rõ hơn.
 
-
-> **Chuyển mạch:** Từ **vật lý (physical / 물리적) Geography**, ta sang **Human Geography** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Human Geography** tiếp nhận điểm tựa từ **Vật lý (physical / 물리적) Geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Human Geography
 
@@ -86,8 +82,7 @@ Agriculture, năng lượng (energy / 에너지)/resources và development khôn
 
 Pass tiếp theo nên kiểm tra trùng lặp, thêm quantitative examples khi thật sự giúp lập luận (reasoning / 추론) và giữ cross-links hai chiều.
 
-
-> **Chuyển mạch:** Từ **Human Geography**, ta sang **Regional Geography** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Regional Geography** tiếp nhận điểm tựa từ **Human Geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Earth / toàn cục (global / 전역) Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Regional Geography
 
@@ -113,7 +108,6 @@ Regional chapters hiện đều phải dùng cùng chuỗi (chain / 사슬):
 
 Không dùng regional chapter như country encyclopedia.
 
-
 Global Systems vượt qua biên giới từng quốc gia để theo dõi dòng vật chất, năng lượng, vốn, khí hậu và mạng lưới đô thị. Vì vậy trạng thái ở đây được đánh giá theo khả năng giải thích quan hệ liên vùng và feedback hệ thống.
 
 | System | Trạng thái | Ghi chú |
@@ -125,15 +119,13 @@ Global Systems vượt qua biên giới từng quốc gia để theo dõi dòng 
 | Sustainability | **Deep** | Stock–luồng (flow / 흐름), hệ thống (system / 시스템) ranh giới (boundary / 경계), externalities, LCA, circularity limits, rebound, resilience/quản trị (governance / 거버넌스). |
 | toàn cục (global / 전역) trade networks | **Deep** | môi trường vận hành (production / 운영 환경) tiers, ports/hinterlands, inventory, finance, tài nguyên (resource / 자원) conversion, city networks, systemic rủi ro (risk / 위험) và Korea–Vietnam ứng dụng (application / 애플리케이션). |
 
-
-> **Chuyển mạch:** Từ **toàn cục (global / 전역) các hệ thống (systems / 시스템들)**, ta sang **Earth / toàn cục (global / 전역) Geography** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Earth / toàn cục (global / 전역) Geography** tiếp nhận điểm tựa từ **Regional Geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **World Atlas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Earth / toàn cục (global / 전역) Geography
 
 Geodesy, rotation/orbit/seasons, continental–ocean cấu trúc (structure / 구조), toàn cục (global / 전역) relief, planetary circulation, gravity/geoid/magnetic trường dữ liệu (field / 필드), tham chiếu (reference / 참조) các hệ thống (systems / 시스템들) và human footprint đều có chuẩn gốc (canonical / 정본) chapters. Recent độ sâu (depth / 깊이) pass đã cân bằng `continents/ocean basins`, `global relief` và `global circulation` với phần cốt lõi (core / 핵심) khác.
 
-
-> **Chuyển mạch:** Từ **Earth / toàn cục (global / 전역) Geography**, ta sang **World Atlas** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **World Atlas** tiếp nhận điểm tựa từ **Earth / toàn cục (global / 전역) Geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng trống tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## World Atlas
 
@@ -152,8 +144,7 @@ Australia, Brazil và Malaysia vừa được promote từ compact tham chiếu 
 
 Thailand và Philippines vẫn là **Planned/tham chiếu (reference / 참조)** cho tới khi có thể viết full học tập (learning / 학습) profile; không nâng bằng skeleton.
 
-
-> **Chuyển mạch:** Từ **World Atlas**, ta sang **Khoảng trống tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Cốt lõi (core / 핵심) Coverage kiểm tra (audit / 감사) — World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Khoảng trống tiếp theo** tiếp nhận điểm tựa từ **World Atlas** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Khoảng trống tiếp theo
 
@@ -163,3 +154,5 @@ Thailand và Philippines vẫn là **Planned/tham chiếu (reference / 참조)**
 4. **Selective Atlas**: Thailand/Philippines chỉ promote nếu đạt full profile; long tail giữ Reference/Inventory.
 5. **Atlas cleanup**: classify legacy short files thành `reference / merge / remove`; không dùng file count làm metric.
 6. **Internal-link validation** sau depth passes lớn, ưu tiên broken relative links và duplicate concept.
+
+> **Bàn giao:** Sau **Khoảng trống tiếp theo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới
 
-> **Mạch đọc:** Đọc **thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cách dùng thư viện (library / 라이브러리)** sang **Kiến trúc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** Đây là README owner của **Thư viện kiến thức — Địa lý thế giới**. Route đọc đi từ geographic thinking/foundations → physical/human geography → regions/atlas → global systems → connections and methods, để mỗi phần nối không gian với dòng chảy và thể chế.
 
 Bộ tài liệu này được tổ chức theo **khái niệm (concept) → cơ chế (mechanism / 메커니즘) → phụ thuộc (dependency / 의존성) → relationship → ứng dụng (application / 애플리케이션)**. Mục tiêu không phải nhớ country danh sách (list / 목록) mà hiểu **vì sao địa hình, khí hậu, tài nguyên, dân cư, thành phố, hạ tầng, thương mại và regional role tạo ra mẫu (pattern / 패턴) hiện nay**.
 
@@ -13,8 +12,7 @@ Nếu học từ đầu, bắt đầu ở [Learning Route](./LEARNING_ROUTE.md).
 
 World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer / 계층)**, không phải tiêu chí completion. Một tệp (file / 파일) country ngắn không được tính là chapter hoàn chỉnh chỉ vì nó tồn tại.
 
-
-> **Chuyển mạch:** Từ **Cách dùng thư viện (library / 라이브러리)**, ta sang **Kiến trúc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Kiến trúc** tiếp nhận điểm tựa từ **Cách dùng thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiến trúc
 
@@ -36,8 +34,7 @@ World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer 
 
 Để hiểu vì sao các mẫu (pattern / 패턴) không gian hình thành theo thời gian, đọc song song [World History](../world_history/README.md). Geography cung cấp vật lý (physical / 물리적) ràng buộc (constraint / 제약조건), tài nguyên (resource / 자원) cơ sở (base / 기반) và mạng (network / 네트워크) location; lịch sử (history / 이력) bổ sung institutions, technology, warfare, demography và ideas đã biến đổi chúng. Không dùng địa lý như lời giải định mệnh cho lịch sử.
 
-
-> **Chuyển mạch:** Từ **Kiến trúc**, ta sang **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Kiến trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
@@ -67,8 +64,7 @@ graph TD
   T --> Q[Selective World Atlas]
 ```
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, ta sang **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** xác định đầu vào; **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng
 
@@ -78,8 +74,7 @@ Khi viết region hoặc country profile, ưu tiên chuỗi:
 
 Đây không phải tuyến tính (linear / 선형) determinism. Institution, technology và lịch sử (history / 이력) có thể thay đổi hoặc đảo chiều từng arrow.
 
-
-> **Chuyển mạch:** Từ **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng**, ta sang **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng** xác định đầu vào; **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quy tắc chất lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất
 
@@ -123,8 +118,7 @@ Batch mới đã nâng:
 
 Chúng được chọn vì có học tập (learning / 학습) giá trị (value / 값) về resources, commodity/industrial networks, ports, urban các hệ thống (systems / 시스템들) và liên hệ East/Southeast Asia.
 
-
-> **Chuyển mạch:** Từ **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất**, ta sang **Quy tắc chất lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Quy tắc chất lượng** tiếp nhận điểm tựa từ **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy tắc chất lượng
 
@@ -132,8 +126,7 @@ Một chapter tốt phải trả lời: khái niệm là gì; cơ chế (mechani
 
 Số tệp (file / 파일), số heading và số dòng không phải chỉ số (metric / 지표) chất lượng.
 
-
-> **Chuyển mạch:** Từ **Quy tắc chất lượng**, ta sang **Quy tắc ngôn ngữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Quy tắc ngôn ngữ** tiếp nhận điểm tựa từ **Quy tắc chất lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Roadmap tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy tắc ngôn ngữ
 
@@ -141,8 +134,7 @@ Giải thích chính bằng tiếng Việt tự nhiên. English từ khóa (keyw
 
 Mã (code / 코드), formula, acronym, proper noun và chuẩn gốc (canonical / 정본) technical name giữ nguyên nếu dịch làm mất chính xác.
 
-
-> **Chuyển mạch:** Từ **Quy tắc ngôn ngữ**, ta sang **Roadmap tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Roadmap tiếp theo** tiếp nhận điểm tựa từ **Quy tắc ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Roadmap tiếp theo
 
@@ -151,3 +143,5 @@ Mã (code / 코드), formula, acronym, proper noun và chuẩn gốc (canonical 
 **vật lý (physical / 물리적) cross-link QA → population/urban/development nhân quả (causal / 인과적) examples → regional prerequisite/ứng dụng (application / 애플리케이션) links → selective Thailand/Philippines profiles nếu đủ chiều sâu → Atlas tham chiếu (reference / 참조) cleanup → internal-link kiểm tra hợp lệ (validation / 검증)**.
 
 Không quay lại chiến lược sinh hàng trăm country skeleton.
+
+> **Bàn giao:** Sau **Roadmap tiếp theo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

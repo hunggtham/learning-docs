@@ -1,7 +1,6 @@
 # Phương pháp, tên gọi và phạm vi của World Atlas
 
-> **Mạch đọc:** Đặt **Phương pháp, tên gọi và phạm vi của World Atlas** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Inventory và học tập (learning / 학습) profile là hai bài toán khác nhau** sang **Cấu trúc tệp (file / 파일) không phải tuyên bố chủ quyền**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phương pháp, tên gọi và phạm vi của World Atlas**. Route đi từ inventory/schema → naming and boundary rules → country/region entries → physical/human indicators → comparison limits, để atlas nhất quán mà không giả định đồng nhất.
 
 ## Inventory và học tập (learning / 학습) profile là hai bài toán khác nhau
 
@@ -9,8 +8,7 @@ Cụm “mọi quốc gia và vùng lãnh thổ” có nhiều lớp thống kê
 
 Việc một entry nằm trong inventory không buộc phải có một chapter riêng. Inventory giải quyết **completeness của danh sách**; học tập (learning / 학습) profile giải quyết **giá trị giáo dục**.
 
-
-> **Chuyển mạch:** Từ **Inventory và học tập (learning / 학습) profile là hai bài toán khác nhau**, ta sang **Cấu trúc tệp (file / 파일) không phải tuyên bố chủ quyền** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phương pháp, tên gọi và phạm vi của World Atlas**, **Cấu trúc tệp (file / 파일) không phải tuyên bố chủ quyền** tiếp nhận điểm tựa từ **Inventory và học tập (learning / 학습) profile là hai bài toán khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không tạo stub để chạy coverage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc tệp (file / 파일) không phải tuyên bố chủ quyền
 
@@ -18,8 +16,7 @@ Nếu một không gian được phân tích riêng, điều đó chỉ có ngh�
 
 Với khu vực có cách phân loại khác nhau giữa hệ thống quốc tế, profile phải ghi provenance và tách: hệ phân loại thống kê, tình trạng/quan điểm theo nguồn và cấu trúc địa lý đang phân tích. Không suy ý định chính trị từ bản đồ.
 
-
-> **Chuyển mạch:** Từ **Cấu trúc tệp (file / 파일) không phải tuyên bố chủ quyền**, ta sang **Không tạo stub để chạy coverage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phương pháp, tên gọi và phạm vi của World Atlas**, **Không tạo stub để chạy coverage** tiếp nhận điểm tựa từ **Cấu trúc tệp (file / 파일) không phải tuyên bố chủ quyền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bốn trạng thái nội dung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Không tạo stub để chạy coverage
 
@@ -33,8 +30,7 @@ Một template có vài câu không phải profile. Từ kiểm tra (audit / 감
 
 Các stub legacy từ batch trước chỉ là transitional tham chiếu (reference / 참조) và sẽ được promote/merge/remove khi Atlas được cleanup.
 
-
-> **Chuyển mạch:** Từ **Không tạo stub để chạy coverage**, ta sang **Bốn trạng thái nội dung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương pháp, tên gọi và phạm vi của World Atlas**, **Bốn trạng thái nội dung** tiếp nhận điểm tựa từ **Không tạo stub để chạy coverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Profile phải có thesis, không chỉ template** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bốn trạng thái nội dung
 
@@ -48,8 +44,7 @@ Các stub legacy từ batch trước chỉ là transitional tham chiếu (refere
 
 Chỉ hai trạng thái cuối được tính vào educational coverage.
 
-
-> **Chuyển mạch:** Từ **Bốn trạng thái nội dung**, ta sang **Profile phải có thesis, không chỉ template** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phương pháp, tên gọi và phạm vi của World Atlas**, **Profile phải có thesis, không chỉ template** tiếp nhận điểm tựa từ **Bốn trạng thái nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội dung bền vững và dữ liệu theo thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Profile phải có thesis, không chỉ template
 
@@ -57,8 +52,7 @@ Mỗi profile nên trả lời một câu thesis, ví dụ: “địa lý của 
 
 Các section sau phải chứng minh thesis. Nếu heading đầy đủ nhưng nội dung chỉ lặp fact, profile vẫn chưa đạt.
 
-
-> **Chuyển mạch:** Từ **Profile phải có thesis, không chỉ template**, ta sang **Nội dung bền vững và dữ liệu theo thời điểm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phương pháp, tên gọi và phạm vi của World Atlas**, **Profile phải có thesis, không chỉ template** nêu điều cần giải thích; **Nội dung bền vững và dữ liệu theo thời điểm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Political geography và ranh giới (boundary / 경계) provenance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nội dung bền vững và dữ liệu theo thời điểm
 
@@ -66,8 +60,7 @@ Các section sau phải chứng minh thesis. Nếu heading đầy đủ nhưng n
 
 Population/GDP/trade share, hiện tại (current / 현재) government, ranking và sự kiện (event / 이벤트) thay đổi nhanh chỉ thêm khi phục vụ một luận điểm, phải ghi năm và nguồn (source / 소스). Không biến profile thành snapshot dễ lỗi thời.
 
-
-> **Chuyển mạch:** Từ **Nội dung bền vững và dữ liệu theo thời điểm**, ta sang **Political geography và ranh giới (boundary / 경계) provenance** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương pháp, tên gọi và phạm vi của World Atlas**, **Nội dung bền vững và dữ liệu theo thời điểm** đã nêu tiêu chí phân biệt, còn **Political geography và ranh giới (boundary / 경계) provenance** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tên tệp (file / 파일) và mã** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Political geography và ranh giới (boundary / 경계) provenance
 
@@ -75,15 +68,13 @@ M49 là hệ thống thống kê; việc dùng M49 không đồng nghĩa Atlas t
 
 Bản đồ ranh giới (boundary / 경계) cũng là dữ liệu (data / 데이터) sản phẩm (product / 제품): cần biết nguồn (source / 소스), phiên bản (version / 버전) và quy tắc (rule / 규칙) biểu diễn.
 
-
-> **Chuyển mạch:** Từ **Political geography và ranh giới (boundary / 경계) provenance**, ta sang **Tên tệp (file / 파일) và mã** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Phương pháp, tên gọi và phạm vi của World Atlas**, **Political geography và ranh giới (boundary / 경계) provenance** đã nêu tiêu chí phân biệt, còn **Tên tệp (file / 파일) và mã** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Profile priority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tên tệp (file / 파일) và mã
 
 Nếu có ISO alpha-3, tệp (file / 파일) có thể dùng dạng `KOR_republic_of_korea.md`, `VNM_viet_nam.md`. Mã giúp link ổn định hơn tên hiển thị, nhưng mã không phải bản chất địa lý của territory.
 
-
-> **Chuyển mạch:** Từ **Tên tệp (file / 파일) và mã**, ta sang **Profile priority** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Phương pháp, tên gọi và phạm vi của World Atlas**, **Profile priority** tiếp nhận điểm tựa từ **Tên tệp (file / 파일) và mã** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Definition of Done** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Profile priority
 
@@ -91,8 +82,7 @@ Thứ tự ưu tiên không dựa trên diện tích hoặc “quan trọng hơn
 
 Nhóm đầu gồm East Asia, Southeast Asia, major toàn cục (global / 전역) economies, chokepoint/corridor cases, megadeltas, landlocked states, city-states, archipelagos và resource-system cases.
 
-
-> **Chuyển mạch:** Từ **Profile priority**, ta sang **Definition of Done** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương pháp, tên gọi và phạm vi của World Atlas**, **Definition of Done** tiếp nhận điểm tựa từ **Profile priority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Definition of Done
 
@@ -109,4 +99,4 @@ Một profile chỉ được gắn `Learning profile` khi người đọc có th
 
 Nếu chưa trả lời được, nó vẫn là tham chiếu (reference / 참조), không phải completed content.
 
-> **Bàn giao:** Sau **Definition of Done**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 global inventory](./01_global_inventory.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Definition of Done**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
