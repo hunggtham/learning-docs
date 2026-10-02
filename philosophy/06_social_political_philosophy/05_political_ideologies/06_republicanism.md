@@ -1,6 +1,6 @@
 # Republicanism — freedom as non-domination, civic power và institutional checks
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Republicanism — freedom as non-domination, civic power và institutional checks**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Non-interference và non-domination** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Arbitrary power là gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Republicanism — freedom as non-domination, civic power và institutional checks**. Route đi từ non-interference/non-domination → arbitrary power → civic participation và contestation → institutional checks, để tự do được đo bằng khả năng không bị lệ thuộc tùy tiện.
 
 **Republicanism (chủ nghĩa cộng hòa theo nghĩa political theory, 공화주의)** không nên bị hiểu đơn giản là “ủng hộ một republic thay vì monarchy” hay bị đồng nhất với tên của một political party hiện đại. Trong political philosophy, republican tradition tập trung vào civic freedom, quy tắc (rule / 규칙) of law, mixed/checked institutions, corruption và đặc biệt trong neo-republican lý thuyết (theory / 이론) là **freedom as non-domination**.
 

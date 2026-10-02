@@ -1,6 +1,6 @@
 # Anarchism — authority, hierarchy, voluntary association và decentralization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Anarchism — authority, hierarchy, voluntary association và decentralization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Authority phải được justified, không được presupposed** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trạng thái (state / 상태) critique: monopoly of coercion và permanent hierarchy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Anarchism — authority, hierarchy, voluntary association và decentralization**. Route đi từ justification của authority → critique nhà nước/hierarchy → voluntary association và mutual aid → decentralization, coordination và vấn đề bảo đảm tập thể.
 
 Nếu socialism hỏi economic power nên được socialized/democratized thế nào, **anarchism (chủ nghĩa vô chính phủ, 아나키즘)** đẩy câu hỏi authority sâu hơn: khi nào một hierarchy có justification, và society có thể coordination mà không cần một centralized sovereign trạng thái (state / 상태) tới mức nào?
 

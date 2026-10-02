@@ -1,6 +1,6 @@
 # Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Một label không xác định một institutional gói (package / 패키지) duy nhất** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **2. Freedom: ít nhất bốn concept khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Comparative synthesis — từ ideology label về institutional thiết kế (design / 설계)**. Route đi từ label và core commitments → liberty, equality, authority và nation → thể chế, policy và quyền lực thực tế → so sánh outcome/trade-off, để ideology được đánh giá bằng thiết kế và tác động chứ không chỉ tên gọi.
 
 Sau khi đọc liberalism, conservatism, socialism/xã hội (social / 사회적) democracy, anarchism, libertarianism, republicanism, nationalism và fascism, mục tiêu không phải nhớ một bảng “left/right” đơn giản. Mục tiêu là có một grammar đủ ổn định để đọc một chính sách (policy / 정책), constitution, movement hoặc institution và phân tích nó bằng các dimensions cụ thể.
 

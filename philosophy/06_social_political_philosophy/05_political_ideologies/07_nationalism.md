@@ -1,6 +1,6 @@
 # Nationalism — nation, self-determination, solidarity và exclusion risks
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nationalism — nation, self-determination, solidarity và exclusion risks**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Nation không đồng nghĩa trạng thái (state / 상태)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. National định danh (identity / 식별자) được tạo bởi gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nationalism — nation, self-determination, solidarity và exclusion risks**. Route đi từ nation và state → identity, solidarity và self-determination → citizenship/borders → exclusion, hierarchy và conflict, để phân tích sức huy động cùng rủi ro loại trừ.
 
 **Nationalism (chủ nghĩa dân tộc, 민족주의/국가주의 tùy ngữ cảnh)** là một family of beliefs/movements xoay quanh national định danh (identity / 식별자), special obligations giữa compatriots và claims về political self-determination. Nó có thể kết hợp với liberalism, conservatism, socialism hoặc religion; vì vậy nationalism không map cleanly lên một vị trí duy nhất trên left–right spectrum.
 

@@ -1,6 +1,6 @@
 # Conservatism — tradition, thứ tự (order / 순서), authority và skepticism toward abstract redesign
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Conservatism — tradition, thứ tự (order / 순서), authority và skepticism toward abstract redesign**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ reaction tới một political philosophy hiện đại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tradition như accumulated kiến thức (knowledge / 지식) — nhưng không phải proof of justice** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Conservatism — tradition, thứ tự (order / 순서), authority và skepticism toward abstract redesign**. Route đi từ phản ứng với cách mạng/thiết kế trừu tượng → truyền thống và tri thức tích lũy → authority, gradual change và institutions → kiểm tra giới hạn, để bảo thủ không bị đồng nhất với từ chối mọi cải cách.
 
 Conservatism khó đóng thành một doctrine thống nhất hơn liberalism hoặc socialism. Một cốt lõi (core / 핵심) strand không bắt đầu từ blueprint của ideal society mà từ câu hỏi: **những institutions đang tồn tại chứa kiến thức (knowledge / 지식), practice và xã hội (social / 사회적) coordination nào mà abstract lý thuyết (theory / 이론) dễ bỏ sót?** Vì vậy conservatism thường nhấn mạnh tradition, continuity, authority, prudence và unintended consequences.
 

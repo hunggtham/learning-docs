@@ -1,6 +1,6 @@
 # Fascism — ultranationalism, authoritarianism và anti-pluralism
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Fascism — ultranationalism, authoritarianism và anti-pluralism**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Cốt lõi (core / 핵심) mẫu (pattern / 패턴): nation above plural individuals** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. National decline → rebirth narrative** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Fascism — ultranationalism, authoritarianism và anti-pluralism**. Route đi từ ultranationalism và anti-pluralism → decline/rebirth narrative → lãnh tụ, huy động và bạo lực → nhà nước độc tài, để phân biệt cơ chế phát xít với mọi dạng authoritarianism hoặc patriotism.
 
 **Fascism (chủ nghĩa phát xít, 파시즘)** là một historically specific family of far-right authoritarian mass movements nổi lên mạnh ở châu Âu đầu thế kỷ XX. Chapter này dùng fascism như một analytical category gắn với historical movements và institutions, không dùng từ này như insult chung cho mọi politics mà người nói không thích.
 

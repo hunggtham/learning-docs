@@ -1,6 +1,6 @@
 # Liberalism — liberty, rights, pluralism và justified authority
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Liberalism — liberty, rights, pluralism và justified authority**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Liberty như starting điểm (point / 지점)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Rights và constitutional limits** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Liberalism — liberty, rights, pluralism và justified authority**. Route đi từ liberty và self-direction → rights/constitutional limits → pluralism, consent và authority → thiết kế thể chế bảo vệ tự do, để phân biệt tự do khỏi việc chỉ thiếu can thiệp trước mắt.
 
 Liberalism không phải một doctrine đơn nhất. Điểm chung mạnh nhất là **presumption in favor of liberty** và yêu cầu rằng coercive political authority phải được justified. Từ đây liberal traditions phân nhánh mạnh về thuộc tính (property / 속성), redistribution, democracy, welfare và conception of freedom.
 
