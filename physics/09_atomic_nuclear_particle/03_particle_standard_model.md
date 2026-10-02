@@ -1,7 +1,6 @@
 # Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử
 
-> **Mạch đọc:** Đọc **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình Chuẩn mô tả những gì?** sang **Đối xứng chuẩn (gauge symmetry)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**. Route đi từ họ fermion/boson → tương tác cơ bản → gauge symmetry → Higgs và khối lượng → kiểm chứng/thí nghiệm, để bảng hạt nối với cấu trúc lý thuyết.
 
 ## Mô hình Chuẩn mô tả những gì?
 
@@ -10,6 +9,8 @@ Mô hình Chuẩn (Standard Model / 표준 모형) mô tả ba tương tác cơ 
 Các fermion vật chất được chia thành quark và lepton, sắp thành ba thế hệ. Sáu quark là `up, down, charm, strange, top, bottom`. Sáu lepton gồm electron, muon, tau và ba neutrino tương ứng.
 
 Các boson chuẩn (gauge boson) liên hệ với tương tác: photon cho điện từ, gluon cho tương tác mạnh, còn `W^\pm` và `Z` cho tương tác yếu. Boson Higgs liên hệ với trường Higgs và cơ chế tạo khối lượng trong lý thuyết điện yếu.
+
+> **Chuyển mạch:** Trong **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Đối xứng chuẩn (gauge symmetry)** tiếp nhận điểm tựa từ **Mô hình Chuẩn mô tả những gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ chế Higgs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đối xứng chuẩn (gauge symmetry)
 
@@ -25,11 +26,15 @@ Theo cách này, tương tác giữa trường vật chất và boson chuẩn xu
 
 `SU(3)_C` là đối xứng của sắc động lực học lượng tử (Quantum Chromodynamics, QCD). `SU(2)_L\times U(1)_Y` tạo phần điện yếu. Sau phá vỡ đối xứng điện yếu, các tổ hợp trường vật lý tương ứng với photon, `W` và `Z`.
 
+> **Chuyển mạch:** Ở chặng này của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Đối xứng chuẩn (gauge symmetry)** xác định đầu vào; **Cơ chế Higgs** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **QCD, điện tích màu và tự do tiệm cận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cơ chế Higgs
 
 Trường Higgs có giá trị kỳ vọng chân không khác không. Khi đối xứng điện yếu bị phá vỡ tự phát, tương tác của trường Higgs với các trường chuẩn làm `W` và `Z` có khối lượng trong khi photon vẫn không khối lượng. Khối lượng fermion xuất hiện thông qua tương tác Yukawa với Higgs.
 
 Tuy nhiên phần lớn khối lượng proton không đến trực tiếp từ khối lượng nghỉ của các quark hóa trị. Năng lượng động lực học QCD, trường gluon và tương tác giam hãm đóng góp phần lớn khối lượng–năng lượng của proton. Đây là ví dụ quan trọng cho việc khối lượng của vật thể composite không đơn giản bằng tổng khối lượng các thành phần cơ bản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Cơ chế Higgs** xác định đầu vào; **QCD, điện tích màu và tự do tiệm cận** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tương tác yếu, tính thuận tay và phân rã beta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## QCD, điện tích màu và tự do tiệm cận
 
@@ -39,11 +44,15 @@ Quark mang điện tích màu (color charge), còn gluon cũng mang màu nên gl
 
 Tán xạ không đàn hồi sâu cho thấy proton có cấu trúc parton. Trong va chạm năng lượng cao, quá trình cứng có thể tính bằng QCD nhiễu loạn, sau đó shower và hadron hóa biến parton mang màu thành các hadron trung hòa màu quan sát được trong detector.
 
+> **Chuyển mạch:** Trong **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Tương tác yếu, tính thuận tay và phân rã beta** tiếp nhận điểm tựa từ **QCD, điện tích màu và tự do tiệm cận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dao động neutrino** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tương tác yếu, tính thuận tay và phân rã beta
 
 Tương tác yếu phân biệt thành phần thuận tay trái và phải của fermion, dẫn đến vi phạm đối xứng chẵn lẻ (parity violation).
 
 Ở mức quark, một phân rã beta có thể được mô tả bằng việc quark loại down chuyển thành quark loại up thông qua boson `W`, sau đó `W` tạo lepton và neutrino hoặc phản neutrino phù hợp với các định luật bảo toàn.
+
+> **Chuyển mạch:** Ở chặng này của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Dao động neutrino** tiếp nhận điểm tựa từ **Tương tác yếu, tính thuận tay và phân rã beta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sơ đồ Feynman không phải video quỹ đạo hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dao động neutrino
 
@@ -51,11 +60,15 @@ Trạng thái flavor của neutrino không trùng hoàn toàn với trạng thá
 
 Dao động neutrino nhạy với chênh lệch bình phương khối lượng `\Delta m^2`, năng lượng, khoảng cách và các góc trộn. Nó cho thấy neutrino có khối lượng khác không, vượt ra ngoài phiên bản tối giản ban đầu của Mô hình Chuẩn với neutrino không khối lượng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Sơ đồ Feynman không phải video quỹ đạo hạt** tiếp nhận điểm tựa từ **Dao động neutrino** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiết diện, độ sáng va chạm và số sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sơ đồ Feynman không phải video quỹ đạo hạt
 
 Sơ đồ Feynman (Feynman diagram) là công cụ tổ chức các số hạng trong khai triển nhiễu loạn của biên độ lượng tử. Các đường ngoài biểu diễn trạng thái vào và ra có thể quan sát, còn đường trong biểu diễn propagator trong phép tính.
 
 Không nên đọc sơ đồ như một đoạn phim cho biết “hạt ảo thật sự bay theo đúng đường đó”. Xác suất vật lý được tính từ tổng kết hợp các biên độ rồi lấy bình phương độ lớn, bao gồm cả giao thoa giữa nhiều sơ đồ.
+
+> **Chuyển mạch:** Trong **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Tiết diện, độ sáng va chạm và số sự kiện** tiếp nhận điểm tựa từ **Sơ đồ Feynman không phải video quỹ đạo hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường lượng tử: hạt là kích thích của trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiết diện, độ sáng va chạm và số sự kiện
 
@@ -71,11 +84,15 @@ trong đó `\mathcal L_{int}` là độ sáng tích phân và `\epsilon` là hi�
 
 Đây là nơi vật lý hạt nối trực tiếp với thống kê và khoa học dữ liệu: đáp ứng detector, nền sự kiện, hàm hợp lý (likelihood) và sai số hệ thống quyết định cách suy tham số vật lý từ dữ liệu va chạm.
 
+> **Chuyển mạch:** Ở chặng này của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Trường lượng tử: hạt là kích thích của trường** tiếp nhận điểm tựa từ **Tiết diện, độ sáng va chạm và số sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quark và hadron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trường lượng tử: hạt là kích thích của trường
 
 Trong lý thuyết trường lượng tử (Quantum Field Theory, QFT / 양자장론), trường là đối tượng cơ bản. Hạt được hiểu là lượng tử kích thích của trường tương ứng. Photon là kích thích của trường điện từ; electron là kích thích của trường electron.
 
 Khái niệm “hạt ảo” trong lý thuyết nhiễu loạn không nên được mô tả ngây thơ như hạt thật liên tục “xuất hiện rồi biến mất bằng cách mượn năng lượng”. Chúng là thành phần nội tại của phép tính và không phải hạt on-shell có thể quan sát trực tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Quark và hadron** tiếp nhận điểm tựa từ **Trường lượng tử: hạt là kích thích của trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản vật chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quark và hadron
 
@@ -83,11 +100,15 @@ Proton và neutron không phải hạt cơ bản. Proton có nội dung quark h�
 
 Baryon chứa ba quark hóa trị, còn meson chứa một quark và một phản quark theo phân loại đơn giản. Do giam hãm màu, ta không tách được một quark tự do ở năng lượng thấp; va chạm năng lượng cao tạo jet và quá trình hadron hóa thay vì giải phóng quark cô lập.
 
+> **Chuyển mạch:** Trong **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Phản vật chất** tiếp nhận điểm tựa từ **Quark và hadron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những gì Mô hình Chuẩn chưa giải thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phản vật chất
 
 Mỗi hạt cơ bản có phản hạt tương ứng với cùng khối lượng nhưng các số lượng tử thích hợp đổi dấu, ví dụ điện tích điện. Khi vật chất và phản vật chất hủy nhau, năng lượng được chuyển thành các hạt khác sao cho các định luật bảo toàn vẫn được thỏa mãn.
 
 Phản vật chất không có “khối lượng âm” trong vật lý chuẩn.
+
+> **Chuyển mạch:** Ở chặng này của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Những gì Mô hình Chuẩn chưa giải thích** tiếp nhận điểm tựa từ **Phản vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những gì Mô hình Chuẩn chưa giải thích
 
@@ -95,9 +116,13 @@ Mô hình Chuẩn cực kỳ thành công nhưng không phải lý thuyết củ
 
 Những giới hạn này không làm Mô hình Chuẩn “sai”. Chúng xác định miền mà mô hình đã được kiểm nghiệm rất tốt và những câu hỏi nơi cần vật lý mới.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những gì Mô hình Chuẩn chưa giải thích** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Danh sách hạt chỉ là bề mặt của Mô hình Chuẩn. Cấu trúc sâu hơn nằm ở các trường lượng tử, đối xứng, cách đối xứng bị phá vỡ và những tương tác được phép giữa các trường.
+
+> **Chuyển mạch:** Trong **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -105,4 +130,4 @@ Danh sách hạt chỉ là bề mặt của Mô hình Chuẩn. Cấu trúc sâu 
 
 **Liên hệ tiếp:** [Thiên hà và vũ trụ học](../11_astrophysics_cosmology/01_galaxies_cosmology.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic physics](./00_atomic_physics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
