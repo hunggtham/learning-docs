@@ -1,7 +1,6 @@
 # Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성
 
-> **Mạch đọc:** Đọc **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ thay đổi synapse đến thay đổi cả mạng lưới** sang **Học nhanh và học chậm không phải cùng một quá trình**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ thay đổi synapse đến thay đổi cả mạng lưới** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Học nhanh và học chậm không phải cùng một quá trình** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối neuroplasticity với brain change và learning, để trải nghiệm thay đổi mạch thần kinh qua thời gian và điều kiện.
 
 Não không phải một cấu trúc được “đấu dây” một lần rồi giữ nguyên suốt đời. Đồng thời, não cũng không phải khối vật chất có thể được tái lập trình vô hạn chỉ bằng ý chí. **Tính dẻo thần kinh (neuroplasticity / 신경가소성)** nằm giữa hai cực đoan đó: hệ thần kinh có khả năng thay đổi cấu trúc và chức năng theo trải nghiệm, học tập, phát triển, tổn thương và môi trường, nhưng sự thay đổi luôn chịu giới hạn sinh học, thời gian, mức độ luyện tập và trạng thái cơ thể.
 
@@ -15,8 +14,7 @@ Câu “các nơron cùng hoạt động sẽ nối với nhau” thường đư
 
 Ở mức lớn hơn, tính dẻo có thể liên quan đến thay đổi gai dendrite, hình thái synapse, phân bố receptor, kết nối chức năng giữa các vùng, chiến lược huy động mạng và thậm chí đặc tính của chất trắng. Myelin từng được xem gần như lớp cách điện tương đối cố định, nhưng nghiên cứu hiện đại cho thấy myelin trưởng thành vẫn có khả năng thay đổi theo hoạt động và trải nghiệm. Điều này không có nghĩa vài ngày luyện tập sẽ “tái xây não” theo cách dễ nhìn thấy; nó cho thấy hệ thần kinh có nhiều tầng thích nghi hơn mô hình cũ.
 
-
-> **Chuyển mạch:** Từ **Từ thay đổi synapse đến thay đổi cả mạng lưới**, ta sang **Học nhanh và học chậm không phải cùng một quá trình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Học nhanh và học chậm không phải cùng một quá trình** tiếp nhận điểm tựa từ **Từ thay đổi synapse đến thay đổi cả mạng lưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Consolidation: tại sao nghỉ và ngủ là một phần của học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Học nhanh và học chậm không phải cùng một quá trình
 
@@ -26,8 +24,7 @@ Một người mới lái xe phải chủ động theo dõi gương, chân ga, t
 
 Các rà soát (review / 검토) gần đây về prefrontal cortex nhấn mạnh rằng hành vi hướng mục tiêu ở thang vài giây và kiến thức được tích lũy trong nhiều tháng hoặc nhiều năm liên tục tương tác. Quá khứ định hình cách PFC xử lý nhiệm vụ hiện tại, còn việc lặp lại nhiệm vụ lại tiếp tục điều chỉnh hệ thống. Vì vậy, đường ranh giữa “working bộ nhớ (memory / 메모리)” và “long-term học tập (learning / 학습)” không cứng như cách trình bày đơn giản trong sách nhập môn.
 
-
-> **Chuyển mạch:** Từ **Học nhanh và học chậm không phải cùng một quá trình**, ta sang **Consolidation: tại sao nghỉ và ngủ là một phần của học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Consolidation: tại sao nghỉ và ngủ là một phần của học** tiếp nhận điểm tựa từ **Học nhanh và học chậm không phải cùng một quá trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sensitive period, trọng yếu (critical / 중요) period và giới hạn của plasticity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Consolidation: tại sao nghỉ và ngủ là một phần của học
 
@@ -37,8 +34,7 @@ Học không kết thúc khi ta dừng luyện. Sau khi trải nghiệm được
 
 Xem thêm [[02_consciousness_sleep_and_attention]] và [[../02_learning_and_cognition/09_learning_transfer_forgetting_and_durable_knowledge]].
 
-
-> **Chuyển mạch:** Từ **Consolidation: tại sao nghỉ và ngủ là một phần của học**, ta sang **Sensitive period, trọng yếu (critical / 중요) period và giới hạn của plasticity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Consolidation: tại sao nghỉ và ngủ là một phần của học** đã nêu tiêu chí phân biệt, còn **Sensitive period, trọng yếu (critical / 중요) period và giới hạn của plasticity** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Plasticity sau tổn thương: phục hồi không phải quay về trạng thái cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sensitive period, trọng yếu (critical / 중요) period và giới hạn của plasticity
 
@@ -46,8 +42,7 @@ Khả năng thay đổi không giống nhau ở mọi tuổi và mọi hệ th�
 
 Ở người trưởng thành, plasticity vẫn tồn tại. Người lớn có thể học ngoại ngữ, kỹ năng vận động, lập trình, nhạc cụ hoặc cách điều chỉnh cảm xúc mới. Điểm khác là chi phí học có thể cao hơn, kiến thức cũ có thể cạnh tranh với mẫu (pattern / 패턴) mới và một số cửa sổ phát triển đã qua. Vì vậy, thông điệp chính xác hơn không phải “não trẻ em mềm, não người lớn cứng”, mà là **cơ chế và điều kiện plasticity thay đổi theo tuổi**.
 
-
-> **Chuyển mạch:** Từ **Sensitive period, trọng yếu (critical / 중요) period và giới hạn của plasticity**, ta sang **Plasticity sau tổn thương: phục hồi không phải quay về trạng thái cũ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Sensitive period, trọng yếu (critical / 중요) period và giới hạn của plasticity** đã nêu tiêu chí phân biệt, còn **Plasticity sau tổn thương: phục hồi không phải quay về trạng thái cũ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Plasticity thích nghi và plasticity không thích nghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Plasticity sau tổn thương: phục hồi không phải quay về trạng thái cũ
 
@@ -55,8 +50,7 @@ Sau đột quỵ hoặc chấn thương não, phục hồi có thể liên quan 
 
 Nhưng “não tự chữa lành” là mô tả quá lạc quan nếu hiểu như tổ chức bị mất sẽ luôn mọc lại và chức năng trở về như trước. Có những tổn thương không thể đảo ngược hoàn toàn. **Phục hồi chức năng (functional recovery)** có thể đến từ tái tổ chức và bù trừ, chứ không nhất thiết từ phục hồi cấu trúc nguyên bản.
 
-
-> **Chuyển mạch:** Từ **Plasticity sau tổn thương: phục hồi không phải quay về trạng thái cũ**, ta sang **Plasticity thích nghi và plasticity không thích nghi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Plasticity thích nghi và plasticity không thích nghi** tiếp nhận điểm tựa từ **Plasticity sau tổn thương: phục hồi không phải quay về trạng thái cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao “21 ngày để tái lập trình não” là một mô hình tư duy (mental model / 사고 모델) kém** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Plasticity thích nghi và plasticity không thích nghi
 
@@ -66,8 +60,7 @@ Thay đổi không tự động đồng nghĩa với cải thiện. Não học t
 
 Xem thêm [[../04_mental_health/02_anxiety_ocd_and_trauma]], [[../05_intervention/01_cbt_behavioral_and_third_wave]] và [[04_interoception_pain_and_embodied_mind]].
 
-
-> **Chuyển mạch:** Từ **Plasticity thích nghi và plasticity không thích nghi**, ta sang **Tại sao “21 ngày để tái lập trình não” là một mô hình tư duy (mental model / 사고 모델) kém** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Tại sao “21 ngày để tái lập trình não” là một mô hình tư duy (mental model / 사고 모델) kém** gom các mảnh từ **Plasticity thích nghi và plasticity không thích nghi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Neuroplasticity và psychotherapy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tại sao “21 ngày để tái lập trình não” là một mô hình tư duy (mental model / 사고 모델) kém
 
@@ -75,8 +68,7 @@ Không có một con số ngày duy nhất cho mọi loại thay đổi. Học t
 
 Một habit đơn giản có thể trở nên dễ thực hiện hơn sau vài tuần hoặc vài tháng; một kỹ năng chuyên môn có thể cần nhiều năm. Câu hỏi tốt hơn “mất bao nhiêu ngày?” là: **hành vi (behavior / 동작) nào đang được luyện, cue nào kích hoạt nó, phản hồi (feedback / 피드백) nào củng cố nó, và mẫu (pattern / 패턴) mới có được thực hành trong nhiều ngữ cảnh (context / 맥락) hay chưa?**
 
-
-> **Chuyển mạch:** Từ **Tại sao “21 ngày để tái lập trình não” là một mô hình tư duy (mental model / 사고 모델) kém**, ta sang **Neuroplasticity và psychotherapy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Neuroplasticity và psychotherapy** gom các mảnh từ **Tại sao “21 ngày để tái lập trình não” là một mô hình tư duy (mental model / 사고 모델) kém** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Neuroplasticity, kỹ năng và công việc tri thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Neuroplasticity và psychotherapy
 
@@ -84,8 +76,7 @@ Nếu trải nghiệm có thể thay đổi hệ thần kinh, psychotherapy về
 
 Giá trị của psychotherapy nằm ở kết quả (outcome / 결과) lâm sàng và cơ chế tâm lý được kiểm chứng, không cần marketing bằng hình ảnh não. Neural bằng chứng (evidence / 증거) có thể giúp hiểu cơ chế (mechanism / 메커니즘), nhưng không thay thế randomized trial, assessment chức năng và trải nghiệm của người bệnh.
 
-
-> **Chuyển mạch:** Từ **Neuroplasticity và psychotherapy**, ta sang **Neuroplasticity, kỹ năng và công việc tri thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Neuroplasticity, kỹ năng và công việc tri thức** tiếp nhận điểm tựa từ **Neuroplasticity và psychotherapy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Neuroplasticity, kỹ năng và công việc tri thức
 
@@ -93,8 +84,7 @@ Trong lập trình, ngoại ngữ hoặc toán học, người học ban đầu 
 
 Điều này giải thích tại sao đọc tutorial không thay thế được practice. kiến thức (knowledge / 지식) declarative cho biết “cách làm”; proceduralization hình thành khi người học repeatedly thực hiện, nhận phản hồi (feedback / 피드백) và sửa lỗi. Công cụ AI có thể giảm tải nhận thức, nhưng nếu luôn để AI thực hiện phần tạo biểu diễn (representation / 표현) và kiểm tra lỗi, người học có thể nhận hiệu năng (performance / 성능) ngay nhưng giảm cơ hội xây nội bộ (internal / 내부) mô hình (model / 모델). Xem [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-
-> **Chuyển mạch:** Từ **Neuroplasticity, kỹ năng và công việc tri thức**, ta sang **dùng chung (common / 공통) misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Neuroplasticity, kỹ năng và công việc tri thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -106,8 +96,7 @@ Trong lập trình, ngoại ngữ hoặc toán học, người học ban đầu 
 
 **“Một scan trước/sau chứng minh intervention đã rewired não.”** Sự khác biệt hình ảnh cần thiết kế nghiên cứu, điều khiển (control / 제어) group, độ tin cậy (reliability / 신뢰성) và lập luận nhân quả (causal reasoning / 인과적 추론). Không thể suy luận cơ chế chỉ từ hình ảnh trước–sau.
 
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn và hướng đọc thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -127,8 +116,7 @@ context mới kiểm tra xem learning có generalize hay không
 
 Điểm quan trọng là vòng lặp. Một thay đổi chỉ bền khi mẫu (pattern / 패턴) mới được củng cố đủ mạnh, được truy xuất lại và tồn tại ngoài ngữ cảnh (context / 맥락) luyện ban đầu.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Nguồn và hướng đọc thêm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Tính dẻo thần kinh, thay đổi não và học tập — Neuroplasticity / 신경가소성**, **Mô hình tư duy (mental model / 사고 모델)** nêu điều cần giải thích; **Nguồn và hướng đọc thêm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguồn và hướng đọc thêm
 
@@ -141,4 +129,4 @@ Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đ�
 
 Xem thêm [[00_nervous_system_and_brain]], [[../02_learning_and_cognition/00_learning_and_conditioning]] và [[../02_learning_and_cognition/01_memory]].
 
-> **Bàn giao:** Sau **Nguồn và hướng đọc thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 nervous system and brain](./00_nervous_system_and_brain.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguồn và hướng đọc thêm**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
