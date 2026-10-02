@@ -1,18 +1,26 @@
 # 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối programming language types với paradigm, syntax, runtime và abstraction, để đặc điểm gắn với cách thực thi.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 프로그래밍, 언어, 종류, 특징
 
+> **Chuyển mạch:** Ở chặng này của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **소프트웨어 공학 및 실무 (Software Engineering & Practice)**에서 만든 기준을 이어받아 **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **프로그래밍 언어 종류 및 특�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** và nối nó với **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
 
@@ -51,3 +59,5 @@ Các bullet của **275. 절차적 프로그래밍 언어의 종류 (Procedural 
 Với **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Ta có thể khép mục **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+> **Bàn giao:** Sau **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

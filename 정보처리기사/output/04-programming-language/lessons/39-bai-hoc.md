@@ -1,18 +1,26 @@
 # 085. 프로세스 및 스레드 (Process & Thread)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **085. 프로세스 및 스레드 (Process & Thread)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối process/thread với address space, scheduling, synchronization và lifecycle, để concurrency có boundary.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **085. 프로세스 및 스레드 (Process & Thread)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **085. 프로세스 및 스레드 (Process & Thread)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **086. 프로세스 스케줄링 (Process Scheduling)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **085. 프로세스 및 스레드 (Process & Thread)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 프로세스, 스레드
 
+> **Chuyển mạch:** Ở chặng này của **085. 프로세스 및 스레드 (Process & Thread)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**에서 만든 기준을 이어받아 **085. 프로세스 및 스레드 (Process & Thread)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **085. 프로세스 및 스레드 (Process & Thread)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **085. 프로세스 및 스레드 (Process & Thread)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **085. 프로세스 및 스레드 (Proce
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **085. 프로세스 및 스레드 (Process & Thread)** và nối nó với **086. 프로세스 스케줄링 (Process Scheduling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **085. 프로세스 및 스레드 (Process & Thread)**, **읽는 방법 (Cách đọc)** xác định đầu vào; **085. 프로세스 및 스레드 (Process & Thread)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 085. 프로세스 및 스레드 (Process & Thread)
 
@@ -54,3 +62,5 @@ Khi Process A đang chạy, hết thời gian (Timeout), OS sẽ cất trạng t
 ---
 
 Điểm chốt của **085. 프로세스 및 스레드 (Process & Thread)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **086. 프로세스 스케줄링 (Process Scheduling)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **085. 프로세스 및 스레드 (Process & Thread)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

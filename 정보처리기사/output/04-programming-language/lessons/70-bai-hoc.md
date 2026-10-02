@@ -1,18 +1,26 @@
 # 071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối vulnerability identification với asset, threat, weakness và evidence, để phát hiện có tiêu chí.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 보안, 취약성, 식별
 
+> **Chuyển mạch:** Ở chặng này của **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **070. 서버개발 프레임워크 (Server Development Framework)**에서 만든 기준을 이어받아 **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **071. 보안 취약성 식별 (Security
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** và nối nó với **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)
 
@@ -49,3 +57,5 @@ Phần “071. 보안 취약성 식별 (Security Vulnerability Identification / 
 ---
 
 Như vậy, **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
