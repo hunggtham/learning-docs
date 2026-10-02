@@ -1,7 +1,6 @@
 # Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm
 
-> **Mạch đọc:** Đọc **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hạt trong giếng thế vô hạn** sang **Vì sao năng lượng bị lượng tử hóa?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**. Route đi từ boundary conditions → discrete spectra → harmonic oscillator → tunneling → measurement/approximation limits, để lượng tử hóa nối phương trình với xác suất quan sát.
 
 Các hệ mẫu trong cơ học lượng tử không chỉ là bài tập kỹ thuật. Chúng đóng vai trò giống như “mẫu thiết kế” của lý thuyết: cùng một cấu trúc toán học xuất hiện lặp lại trong nguyên tử, phân tử, chất rắn, quang học lượng tử và vật lý hạt.
 
@@ -96,6 +95,8 @@ Sau khi chuẩn hóa,
 \sin\left(\frac{n\pi x}{L}\right).
 ```
 
+> **Chuyển mạch:** Trong **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Vì sao năng lượng bị lượng tử hóa?** tiếp nhận điểm tựa từ **Hạt trong giếng thế vô hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao không có trạng thái n=0?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao năng lượng bị lượng tử hóa?
 
 Các giá trị năng lượng rời rạc không được gắn vào bằng tay. Chúng xuất hiện vì phương trình vi phân và điều kiện biên chỉ cho phép một số chế độ (mode / 모드) không gian nhất định.
@@ -118,6 +119,8 @@ Schrödinger equation
 
 Đây là cầu nối trực tiếp giữa Fourier, bài toán trị riêng và lượng tử hóa.
 
+> **Chuyển mạch:** Ở chặng này của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Vì sao không có trạng thái n=0?** tiếp nhận điểm tựa từ **Vì sao năng lượng bị lượng tử hóa?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ý nghĩa của quy mô (scale / 규모) 1/L^2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao không có trạng thái `n=0`?
 
 Nếu chọn `n=0`, ta có
@@ -136,6 +139,8 @@ E_1=\frac{\pi^2\hbar^2}{2mL^2}>0.
 
 Ngay cả ở trạng thái năng lượng thấp nhất, hạt vẫn không thể đồng thời bị giam trong hộp và có động lượng bằng chính xác zero. Điều này phù hợp với nguyên lý bất định.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Ý nghĩa của quy mô (scale / 규모) 1/L^2** tiếp nhận điểm tựa từ **Vì sao không có trạng thái n=0?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất và giá trị kỳ vọng trong hộp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ý nghĩa của quy mô (scale / 규모) `1/L^2`
 
 Năng lượng trong giếng thế tỉ lệ
@@ -147,6 +152,8 @@ E_n\propto\frac{1}{L^2}.
 Khi hộp nhỏ hơn, độ dốc (gradient / 기울기) không gian của hàm sóng phải lớn hơn để vẫn thỏa điều kiện biên. độ dốc (gradient / 기울기) lớn tương ứng động lượng lớn hơn và do đó động năng lớn hơn.
 
 Đây là lý do confinement ở nanoscale có thể tạo năng lượng (energy / 에너지) spacing đáng kể, trong khi ở quy mô (scale / 규모) vĩ mô các mức nằm rất sát nhau và gần như liên tục.
+
+> **Chuyển mạch:** Trong **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Xác suất và giá trị kỳ vọng trong hộp** tiếp nhận điểm tựa từ **Ý nghĩa của quy mô (scale / 규모) 1/L^2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giếng thế hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xác suất và giá trị kỳ vọng trong hộp
 
@@ -175,6 +182,8 @@ cho mọi eigenstate năng lượng.
 
 Nhưng điều này không nghĩa mỗi phép đo vị trí luôn cho `L/2`; đó chỉ là trung bình thống kê của nhiều phép đo trên cùng trạng thái chuẩn bị.
 
+> **Chuyển mạch:** Ở chặng này của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Giếng thế hữu hạn** tiếp nhận điểm tựa từ **Xác suất và giá trị kỳ vọng trong hộp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dao động tử điều hòa lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giếng thế hữu hạn
 
 Giếng vô hạn là lý tưởng hóa. Với giếng hữu hạn, hàm sóng không dừng đột ngột ở biên mà xuyên một đoạn vào vùng có thế cao hơn.
@@ -187,6 +196,8 @@ nhưng wavefunction có tail ngoài vùng “giữ hạt” chính
 ```
 
 Tail này là tiền đề tự nhiên cho hiện tượng xuyên hầm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Dao động tử điều hòa lượng tử** tiếp nhận điểm tựa từ **Giếng thế hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng điểm không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dao động tử điều hòa lượng tử
 
@@ -224,6 +235,8 @@ Khoảng cách giữa hai mức liên tiếp luôn bằng
 E_{n+1}-E_n=\hbar\omega.
 ```
 
+> **Chuyển mạch:** Trong **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Năng lượng điểm không** tiếp nhận điểm tựa từ **Dao động tử điều hòa lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương pháp toán tử nâng–hạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năng lượng điểm không
 
 Trạng thái cơ bản có
@@ -253,6 +266,8 @@ chính xác vì như vậy
 sẽ vi phạm nguyên lý bất định.
 
 Năng lượng điểm không vì thế không chỉ là một số hạng được thêm vào công thức; nó phản ánh cấu trúc không thể triệt tiêu hoàn toàn cả biến thiên vị trí lẫn động lượng.
+
+> **Chuyển mạch:** Ở chặng này của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Phương pháp toán tử nâng–hạ** tiếp nhận điểm tựa từ **Năng lượng điểm không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xuyên hầm lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương pháp toán tử nâng–hạ
 
@@ -298,6 +313,8 @@ Mỗi lần nâng trạng thái, năng lượng tăng đúng
 
 Đại số này trở thành ngôn ngữ cốt lõi của quang học lượng tử và lý thuyết trường: photon, phonon và nhiều quasiparticle chế độ (mode / 모드) được mô tả như các kích thích lượng tử của những chế độ (mode / 모드) dao động.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Xuyên hầm lượng tử** tiếp nhận điểm tựa từ **Phương pháp toán tử nâng–hạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ý nghĩa của phụ thuộc hàm mũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xuyên hầm lượng tử
 
 Xét một rào thế cao `V_0` có chiều rộng `a`, trong khi năng lượng hạt thỏa
@@ -337,6 +354,8 @@ T\sim e^{-2\kappa a}.
 
 Đây là xác suất truyền qua gần đúng.
 
+> **Chuyển mạch:** Trong **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Ý nghĩa của phụ thuộc hàm mũ** tiếp nhận điểm tựa từ **Xuyên hầm lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xuyên hầm không phải “mượn năng lượng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ý nghĩa của phụ thuộc hàm mũ
 
 Vì
@@ -349,6 +368,8 @@ một thay đổi rất nhỏ của chiều rộng `a` có thể tạo thay đ�
 
 Đó là cơ sở vật lý của kính hiển vi xuyên hầm quét (Scanning Tunneling Microscope, STM). Khoảng cách đầu dò–bề mặt thay đổi ở quy mô (scale / 규모) nguyên tử làm tunneling hiện tại (current / 현재) thay đổi mạnh, từ đó có thể suy ra topography và electronic cấu trúc (structure / 구조).
 
+> **Chuyển mạch:** Ở chặng này của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Xuyên hầm không phải “mượn năng lượng”** tiếp nhận điểm tựa từ **Ý nghĩa của phụ thuộc hàm mũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng dụng của tunneling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xuyên hầm không phải “mượn năng lượng”
 
 Một cách giải thích phổ biến nhưng sai là hạt “mượn năng lượng trong thời gian ngắn” để vượt barrier.
@@ -356,6 +377,8 @@ Một cách giải thích phổ biến nhưng sai là hạt “mượn năng lư
 Trong bài stationary tunneling, năng lượng toàn phần `E` của trạng thái vẫn được bảo toàn. Điều thay đổi là cấu trúc nghiệm của phương trình Schrödinger trong vùng mà động năng cổ điển sẽ âm.
 
 Do đó không cần vi phạm conservation of năng lượng (energy / 에너지) để có tunneling.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Ứng dụng của tunneling** tiếp nhận điểm tựa từ **Xuyên hầm không phải “mượn năng lượng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dòng xác suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ứng dụng của tunneling
 
@@ -371,6 +394,8 @@ field emission
 ```
 
 Các ví dụ này có chi tiết khác nhau, nhưng cùng chia sẻ cấu trúc: một amplitude lượng tử suy giảm qua vùng classically forbidden nhưng không bằng zero tuyệt đối.
+
+> **Chuyển mạch:** Trong **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Dòng xác suất** tiếp nhận điểm tựa từ **Ứng dụng của tunneling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với giới hạn cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dòng xác suất
 
@@ -395,6 +420,8 @@ Nó liên hệ với phương trình liên tục
 
 Trong bài scattering/tunneling, hệ số phản xạ và truyền qua được xác định từ tỉ số các xác suất (probability / 확률) hiện tại (current / 현재), chứ không chỉ từ biên độ wavefunction một cách tùy ý.
 
+> **Chuyển mạch:** Ở chặng này của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Dòng xác suất** đã nêu tiêu chí phân biệt, còn **Liên hệ với giới hạn cổ điển** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Các giả định (assumptions / 가정들) và giới hạn mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với giới hạn cổ điển
 
 Định lý Ehrenfest cho
@@ -416,6 +443,8 @@ thì tâm wavepacket gần tuân phương trình Newton.
 
 Nhưng classical limit không chỉ đến từ `\hbar` nhỏ theo nghĩa tuyệt đối. Nó còn phụ thuộc quy mô (scale / 규모) của hành động (action / 동작), decoherence và độ phân giải quan sát.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Liên hệ với giới hạn cổ điển** đã nêu tiêu chí phân biệt, còn **Các giả định (assumptions / 가정들) và giới hạn mô hình** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các giả định (assumptions / 가정들) và giới hạn mô hình
 
 ### Giếng thế vô hạn
@@ -436,6 +465,8 @@ T\sim e^{-2\kappa a}
 
 chỉ là xấp xỉ trong một số regime. Barrier profile thực, matching conditions và resonance có thể làm transmission phức tạp hơn.
 
+> **Chuyển mạch:** Trong **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Các giả định (assumptions / 가정들) và giới hạn mô hình** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Ba hệ mẫu này cho ba bài học nền tảng:
@@ -452,6 +483,8 @@ wavefunction tail
 ```
 
 Điểm chung là trạng thái lượng tử được xác định không chỉ bởi năng lượng mà bởi phương trình, hình học, potential và điều kiện biên.
+
+> **Chuyển mạch:** Ở chặng này của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -471,10 +504,12 @@ Không. Stationary trạng thái (state / 상태) giữ nguyên tổng năng lư
 
 Không. Nó là trung bình thống kê của phân bố kết quả trên nhiều lần chuẩn bị giống nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Sóng và Fourier](../02_oscillations_waves/01_waves_fourier_sound.md).
 
 **Liên hệ tiếp:** [Xấp xỉ lượng tử](04_approximation_perturbation.md), [Vật lý nguyên tử](../09_atomic_nuclear_particle/00_atomic_physics.md), [Bán dẫn và thiết bị](../10_condensed_matter_devices/01_semiconductors_devices.md), [BEC và chất lưu lượng tử](../10_condensed_matter_devices/05_bec_superfluid_quantum_fluids.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
