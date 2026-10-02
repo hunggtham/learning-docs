@@ -1,6 +1,6 @@
 # 21 — chuyển tiếp (transition / 전이) ma trận (matrix / 행렬): các bước ngoặt không phải đường thẳng
 
-> **Mạch đọc:** Đặt **21 — chuyển tiếp (transition / 전이) ma trận (matrix / 행렬): các bước ngoặt không phải đường thẳng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách đọc bảng** sang **Ba kiểu chuyển tiếp (transition / 전이)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **21 — Transition matrix: các bước ngoặt không phải đường thẳng**. Route đi từ baseline conditions → trigger/shock → institutional response → path dependence → new equilibrium, để chuyển tiếp được đọc như chuỗi cơ chế và lựa chọn.
 
 Bảng này dùng để kiểm tra **điều gì đã đổi giữa hai giai đoạn**, không dùng để tuyên bố mọi nơi chuyển tiếp cùng ngày.
 
@@ -23,15 +23,12 @@ Bảng này dùng để kiểm tra **điều gì đã đổi giữa hai giai đo
 | Globalization → Post-Cold War | digital nền tảng (platform / 플랫폼), climate/financial interdependence | sovereignty, multilateral quản trị (governance / 거버넌스) | power asymmetry, demographic thay đổi (change / 변경) |
 
 ## Cách đọc bảng
-Phần “Cách đọc bảng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **Năng lực mới nổi** không có nghĩa lần đầu xuất hiện; nó có nghĩa đạt quy mô (scale / 규모) hoặc đổi phân phối (distribution / 분포).
 - **Institution chịu áp lực** không nhất thiết biến mất; nó có thể tái cấu trúc, đổi tên hoặc bị tầng (layer / 계층) bởi institution mới.
 - **Continuity** ngăn periodization biến thành câu chuyện “cũ chết, mới sinh”.
 
-
-> **Chuyển mạch:** Từ **Cách đọc bảng**, ta sang **Ba kiểu chuyển tiếp (transition / 전이)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **21 — chuyển tiếp (transition / 전이) ma trận (matrix / 행렬): các bước ngoặt không phải đường thẳng**, **Ba kiểu chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **Cách đọc bảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Ba kiểu chuyển tiếp (transition / 전이)
 
@@ -41,4 +38,4 @@ Phần “Cách đọc bảng” nối kiến thức trước với nội dung s
 
 Một chuyển tiếp (transition / 전이) tốt phải chỉ ra **actor, luồng (flow / 흐름), thời gian (time / 시간) lag và phân phối (distribution / 분포)**, không chỉ ghi mốc năm.
 
-> **Bàn giao:** Sau **Ba kiểu chuyển tiếp (transition / 전이)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Ba kiểu chuyển tiếp (transition / 전이)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

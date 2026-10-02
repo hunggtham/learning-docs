@@ -1,12 +1,10 @@
 # 22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative
 
-> **Mạch đọc:** Đặt **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bốn lớp bằng chứng** sang **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **22 — Source workbench: đọc bằng chứng và kiểm soát narrative**. Route đi từ source layers → claim/evidence matching → causal-claim checks → counterevidence and uncertainty → writing boundaries, để narrative luôn quay về bằng chứng.
 
 ## 1. Bốn lớp bằng chứng
-Phần “1. Bốn lớp bằng chứng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
-| Lớp | Ví dụ | Câu hỏi kiểm tra |
+| Lớp | Ví dụ | Tiêu chí kiểm chứng |
 | --- | --- | --- |
 | Material | settlement, công cụ (tool / 도구), coin, skeleton, pollen, landscape | vật này chứng minh practice nào; niên đại và ngữ cảnh (context / 맥락) chắc đến đâu? |
 | Documentary | law, tax danh sách (list / 목록), letter, court tệp (file / 파일), treaty, newspaper | ai viết, cho ai, nhằm mục đích gì; ai bị loại khỏi archive? |
@@ -15,12 +13,9 @@ Phần “1. Bốn lớp bằng chứng” nối kiến thức trước với n�
 
 Không xếp một lớp “cao hơn” tuyệt đối. Số liệu có thể chính xác nhưng đo sai khái niệm; oral lịch sử (history / 이력) có thể hồi tưởng lệch nhưng giữ experience mà sổ thuế không thấy.
 
-
-> **Chuyển mạch:** Từ **1. Bốn lớp bằng chứng**, ta sang **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **1. Bốn lớp bằng chứng** nêu điều cần giải thích; **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Archive độ lệch (bias / 편향) thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim
-Phần “2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 claim → actor/scale → mechanism → expected evidence
@@ -29,12 +24,9 @@ claim → actor/scale → mechanism → expected evidence
 
 Ví dụ claim “đường sắt củng cố nhà nước” cần hỏi: đường sắt nối mỏ với cảng hay nối dân cư với dịch vụ; ai trả chi phí; quân đội hay hàng hoá đi trước; tax collection có tăng không; rebellion có đổi không?
 
-
-> **Chuyển mạch:** Từ **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim**, ta sang **3. Archive độ lệch (bias / 편향) thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim** xác định đầu vào; **3. Archive độ lệch (bias / 편향) thường gặp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Bộ câu hỏi khi dùng số liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Archive độ lệch (bias / 편향) thường gặp
-Phần “3. Archive độ lệch (bias / 편향) thường gặp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **trạng thái (state / 상태) độ lệch (bias / 편향):** archive thấy thuế, luật và chiến tranh nhưng không thấy unpaid care.
 - **Urban độ lệch (bias / 편향):** thành phố có chữ viết và vật liệu bền; nông thôn/di động bị thiếu.
@@ -43,8 +35,7 @@ Phần “3. Archive độ lệch (bias / 편향) thường gặp” nối kiế
 - **Elite gender/lớp (class / 클래스) độ lệch (bias / 편향):** người có quyền ký tên thường không đại diện toàn population.
 - **Digital độ lệch (bias / 편향):** dữ liệu nền tảng đo hành vi online tốt hơn người offline hoặc bị kiểm duyệt.
 
-
-> **Chuyển mạch:** Từ **3. Archive độ lệch (bias / 편향) thường gặp**, ta sang **4. Bộ câu hỏi khi dùng số liệu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **4. Bộ câu hỏi khi dùng số liệu** tiếp nhận điểm tựa từ **3. Archive độ lệch (bias / 편향) thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. tham chiếu (reference / 참조) map theo nhu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Bộ câu hỏi khi dùng số liệu
 
@@ -54,12 +45,9 @@ Phần “3. Archive độ lệch (bias / 편향) thường gặp” nối kiế
 4. Missing dữ liệu (data / 데이터) đến từ phá hủy archive, không ghi nhận hay định nghĩa thay đổi?
 5. nhân quả (causal / 인과적) direction có thể đảo ngược không?
 
-
-> **Chuyển mạch:** Từ **4. Bộ câu hỏi khi dùng số liệu**, ta sang **5. tham chiếu (reference / 참조) map theo nhu cầu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **5. tham chiếu (reference / 참조) map theo nhu cầu** tiếp nhận điểm tựa từ **4. Bộ câu hỏi khi dùng số liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Quy tắc trích dẫn trong các vòng sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. tham chiếu (reference / 참조) map theo nhu cầu
-Phần “5. tham chiếu (reference / 참조) map theo nhu cầu” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - **Origins/agriculture:** khảo cổ, paleoecology, genetics, zooarchaeology, isotope.
 - **Early/classical states:** inscription, administrative tablet, law mã (code / 코드), settlement survey, coin/ceramic phân phối (distribution / 분포).
@@ -69,11 +57,10 @@ Phần “5. tham chiếu (reference / 참조) map theo nhu cầu” nối kiế
 - **World wars/Cold War:** mobilization, casualty, refugee, aid, intelligence, oral lịch sử (history / 이력), declassified tệp (file / 파일).
 - **Globalization/post-Cold War:** đầu vào (input / 입력)–đầu ra (output / 출력), trade/FDI, shipping, di chuyển (migration / 마이그레이션), nền tảng (platform / 플랫폼) transparency, climate and demographic datasets.
 
-
-> **Chuyển mạch:** Từ **5. tham chiếu (reference / 참조) map theo nhu cầu**, ta sang **6. Quy tắc trích dẫn trong các vòng sau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative**, **6. Quy tắc trích dẫn trong các vòng sau** tiếp nhận điểm tựa từ **5. tham chiếu (reference / 참조) map theo nhu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 6. Quy tắc trích dẫn trong các vòng sau
 
 Khi thêm claim định lượng hoặc tranh luận còn mở, ghi tối thiểu: **nguồn, năm dữ liệu, geography, đơn vị (unit / 단위), limitation**. Không gắn một con số hiện đại vào toàn bộ quá khứ. Nếu chưa kiểm tra được nguồn, viết dưới dạng hypothesis và đánh dấu cần xác minh thay vì trình bày như fact.
 
-> **Bàn giao:** Sau **6. Quy tắc trích dẫn trong các vòng sau**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **6. Quy tắc trích dẫn trong các vòng sau**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

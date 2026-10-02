@@ -1,7 +1,6 @@
 # Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)
 
-> **Mạch đọc:** Đặt **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kết luận hiện tại** sang **Ma trận chất lượng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Coverage audit — World History**. Route đi từ chapter inventory → dependency/owner checks → evidence and link coverage → quality matrix → remediation priorities, để audit dẫn tới hành động cụ thể.
 
 ## Kết luận hiện tại
 
@@ -9,8 +8,7 @@
 
 Đây là baseline đủ chắc để chuyển từ “lấp khoảng trống” sang **độ sâu (depth / 깊이) có chọn lọc**. Vòng đánh giá này đã bổ sung trường hợp (case / 사례) studies liên vùng, chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) và nguồn (source / 소스) workbench; ưu tiên kế tiếp là gắn các trường hợp (case / 사례) đó vào bibliography cụ thể và các chapter chuyên đề, không sinh thêm hàng loạt tệp (file / 파일) timeline.
 
-
-> **Chuyển mạch:** Từ **Kết luận hiện tại**, ta sang **Ma trận chất lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Ma trận chất lượng** gom các mảnh từ **Kết luận hiện tại** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Ranh giới cần giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ma trận chất lượng
 
@@ -29,8 +27,7 @@
 | Cross-links | Mạnh | chỉ mục (index / 인덱스), methods và link sang Geography/Korea đã có |
 | Study usability | Mạnh | README, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), học tập (learning / 학습) tuyến (route / 경로), kiểm tra (audit / 감사), glossary, trường hợp (case / 사례) studies và chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) đã có |
 
-
-> **Chuyển mạch:** Từ **Ma trận chất lượng**, ta sang **Ranh giới cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Ranh giới cần giữ** tiếp nhận điểm tựa từ **Ma trận chất lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ưu tiên nâng cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới cần giữ
 
@@ -44,8 +41,7 @@ investing/economics = market, finance, risk và allocation tools
 
 Khi một chapter mới cần mô tả địa hình, không duplicate toàn bộ Geography; khi cần niên đại Hàn Quốc, link sang Korean lịch sử (history / 이력); khi cần mô hình kinh tế, giữ phần lịch sử ở đây và trỏ sang Economics.
 
-
-> **Chuyển mạch:** Từ **Ranh giới cần giữ**, ta sang **Ưu tiên nâng cấp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Ưu tiên nâng cấp** tiếp nhận điểm tựa từ **Ranh giới cần giữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Definition of done cho một độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ưu tiên nâng cấp
 
@@ -67,8 +63,7 @@ Khi một chapter mới cần mô tả địa hình, không duplicate toàn bộ
 - Tạo timeline tra cứu nhanh chỉ sau khi nhân quả (causal / 인과적) chapters đủ sâu.
 - Bổ sung bibliography có chú thích ngắn: nguồn sơ cấp, textbook, monograph và dataset.
 
-
-> **Chuyển mạch:** Từ **Ưu tiên nâng cấp**, ta sang **Definition of done cho một độ sâu (depth / 깊이) pass** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Definition of done cho một độ sâu (depth / 깊이) pass** tiếp nhận điểm tựa từ **Ưu tiên nâng cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Definition of done cho một độ sâu (depth / 깊이) pass
 
@@ -90,4 +85,4 @@ initial conditions → actors → institutions/material constraints
 → consequences → long-run path dependence
 ```
 
-> **Bàn giao:** Sau **Definition of done cho một độ sâu (depth / 깊이) pass**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Definition of done cho một độ sâu (depth / 깊이) pass**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

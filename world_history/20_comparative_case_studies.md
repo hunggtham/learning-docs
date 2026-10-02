@@ -1,7 +1,6 @@
 # 20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể
 
-> **Mạch đọc:** Đặt **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **trường hợp (case / 사례) 1 — Ba basin nông nghiệp: Nile, Mesopotamia và Indus** sang **Câu hỏi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **20 — Comparative case studies: đọc lịch sử qua các hệ thống cụ thể**. Route đi từ basin/agriculture cases → trade-network cases → empire/institution cases → industrial/global cases → comparison limits, để so sánh làm rõ cơ chế chứ không xoá khác biệt.
 
 Các chapter 01–17 cung cấp period frame. tệp (file / 파일) này là **ứng dụng (application / 애플리케이션) tầng (layer / 계층)**: cùng một nhân quả (causal / 인과적) question được đặt vào nhiều vùng để kiểm tra mô hình có thực sự chuyển giao được hay không.
 
@@ -12,8 +11,6 @@ Các chapter 01–17 cung cấp period frame. tệp (file / 파일) này là **�
 Vì sao cùng dựa vào sông nhưng hình thái nhà nước, đô thị và bằng chứng quyền lực khác nhau?
 
 ### Nhân quả (causal / 인과적) comparison
-Phần “Nhân quả (causal / 인과적) comparison” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Basin | ràng buộc (constraint / 제약조건) chính | Hệ thống phối hợp | Rủi ro/giới hạn |
 | --- | --- | --- | --- |
@@ -23,8 +20,7 @@ Phần “Nhân quả (causal / 인과적) comparison” nối kiến thức tr�
 
 **Bài học:** “hydraulic trạng thái (state / 상태)” có thể giải thích một số investment vào nước, nhưng không đủ để suy ra cùng một bureaucracy. Cần đọc water cùng land tenure, trade, craft specialization, disease và legitimacy.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 1 — Ba basin nông nghiệp: Nile, Mesopotamia và Indus**, ta sang **trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 1 — Ba basin nông nghiệp: Nile, Mesopotamia và Indus** cho ta quy tắc; **Trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 3 — Atlantic, plantation và slavery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean
 
@@ -36,8 +32,7 @@ port/monsoon → seasonal window → merchant partnership → maritime risk
 ```
 Trong cả hai mạng, broker địa phương và trust institution quan trọng hơn một “trung tâm toàn cầu” duy nhất. Một đế chế có thể bảo vệ corridor nhưng cũng tăng toll và militarize nút (node / 노드). Khi chiến tranh hoặc plague làm đứt một tuyến (route / 경로), luồng (flow / 흐름) thường chuyển sang tuyến (route / 경로) khác thay vì biến mất.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean**, ta sang **trường hợp (case / 사례) 3 — Atlantic, plantation và slavery** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean** cho ta quy tắc; **Trường hợp (case / 사례) 3 — Atlantic, plantation và slavery** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 3 — Atlantic, plantation và slavery
 
@@ -51,8 +46,7 @@ land seizure → coerced labor → commodity export
 
 Người bị bắt, Indigenous communities, women, sailors và workers là actors chứ không chỉ là “labor đầu vào (input / 입력)”. Abolition thay đổi law nhưng không tự xóa debt, racial hierarchy, land concentration hay coercive labor mới.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 3 — Atlantic, plantation và slavery**, ta sang **trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 3 — Atlantic, plantation và slavery** cho ta quy tắc; **Trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị
 
@@ -68,8 +62,7 @@ ecological gradient (Sahara–Sahel–savanna–forest)
 
 Islamization có thể đi qua scholar/merchant mà không xoá ngay practice bản địa. Đô thị như Timbuktu hoặc các cổng (port / 포트) không chỉ là “trung tâm thương mại”; chúng là nơi luật, học thuật, credit và định danh (identity / 식별자) được thương lượng.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị**, ta sang **trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị** cho ta quy tắc; **Trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity
 
@@ -85,8 +78,7 @@ monsoon window → rice/forest/maritime production
 
 Không áp dụng mô hình “làng lúa → bureaucracy” cho toàn khu vực. Cần phân biệt delta density, archipelago mobility, upland autonomy, caste/status và cổng (port / 포트) cosmopolitanism.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity**, ta sang **trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity** cho ta quy tắc; **Trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển
 
@@ -94,8 +86,7 @@ China, Korea, Japan và các cộng đồng vùng biển/biên giới chia sẻ 
 
 Korea hữu ích như trường hợp (case / 사례) về một bán đảo nằm giữa continental empire, maritime Japan và cục bộ (local / 로컬) agrarian trạng thái (state / 상태); Nhật Bản cho thấy island geography không ngăn selective borrowing; Trung Hoa cho thấy quy mô nội địa lớn có thể vừa giảm vừa tăng phụ thuộc vào biển. Xem [Korean History](../korean_history/README.md) để đi sâu chronology và institutions.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển**, ta sang **trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển** cho ta quy tắc; **Trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 8 — Industrialization ngoài Britain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology
 
@@ -109,8 +100,7 @@ ecological complementarity → labor/tribute → storage/road
 
 Conquest châu Âu dựa trên Indigenous alliances, disease, steel, horses, siege và political fracture cùng lúc. “Spanish victory” không phải bằng chứng rằng một công nghệ đơn lẻ quyết định toàn bộ.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology**, ta sang **trường hợp (case / 사례) 8 — Industrialization ngoài Britain** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology** cho ta quy tắc; **Trường hợp (case / 사례) 8 — Industrialization ngoài Britain** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cách dùng trường hợp (case / 사례) study** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 8 — Industrialization ngoài Britain
 
@@ -123,8 +113,7 @@ So sánh theo bốn câu hỏi:
 3. Labor mobility và coercion phân phối chi phí thế nào?
 4. thị trường (market / 시장) truy cập (access / 접근) thuộc về domestic bên tiêu thụ (consumer / 소비자) hay imperial mạng (network / 네트워크)?
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) 8 — Industrialization ngoài Britain**, ta sang **Cách dùng trường hợp (case / 사례) study** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể**, **Trường hợp (case / 사례) 8 — Industrialization ngoài Britain** cho ta quy tắc; **Cách dùng trường hợp (case / 사례) study** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cách dùng trường hợp (case / 사례) study
 
@@ -137,4 +126,4 @@ ai bị ẩn trong narrative?
 flow nào nối case với thế giới rộng hơn?
 ```
 
-> **Bàn giao:** Sau **Cách dùng trường hợp (case / 사례) study**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cách dùng trường hợp (case / 사례) study**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

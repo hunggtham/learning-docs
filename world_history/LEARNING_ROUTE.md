@@ -1,7 +1,6 @@
 # Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)
 
-> **Mạch đọc:** Đặt **học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Nguyên tắc** sang **tuyến (route / 경로) 1 — nền tảng từ vật chất đến nhà nước**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Learning route — World History**. Route đi từ material/ecological foundations → states/empires → networks/industrialization → war/decolonization/globalization → methods and cases, để lộ trình giữ được quan hệ tiên quyết.
 
 ## Nguyên tắc
 
@@ -13,8 +12,7 @@ Không học bằng cách thuộc toàn bộ ngày tháng. Mỗi vòng đọc ph
 → điều gì tiếp tục sang giai đoạn sau
 ```
 
-
-> **Chuyển mạch:** Từ **Nguyên tắc**, ta sang **tuyến (route / 경로) 1 — nền tảng từ vật chất đến nhà nước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 1 — nền tảng từ vật chất đến nhà nước** tiếp nhận điểm tựa từ **Nguyên tắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 2 — đế chế, ý tưởng và mạng liên vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến (route / 경로) 1 — nền tảng từ vật chất đến nhà nước
 
@@ -28,8 +26,7 @@ Sau tuyến (route / 경로) này, người học phải phân biệt được:
 - chữ viết như biểu tượng với chữ viết như hạ tầng kế toán;
 - collapse của trung tâm với biến mất của xã hội.
 
-
-> **Chuyển mạch:** Từ **tuyến (route / 경로) 1 — nền tảng từ vật chất đến nhà nước**, ta sang **tuyến (route / 경로) 2 — đế chế, ý tưởng và mạng liên vùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 2 — đế chế, ý tưởng và mạng liên vùng** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 1 — nền tảng từ vật chất đến nhà nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 3 — đại dương, vốn và công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến (route / 경로) 2 — đế chế, ý tưởng và mạng liên vùng
 
@@ -37,8 +34,7 @@ Sau tuyến (route / 경로) này, người học phải phân biệt được:
 
 Bài tập: chọn một mạng (Silk Roads, Indian Ocean, Sahara hoặc steppe), vẽ nút (node / 노드)/luồng (flow / 흐름)/chokepoint, rồi ghi technology, trust institution, disease và coercion đi cùng hàng hoá.
 
-
-> **Chuyển mạch:** Từ **tuyến (route / 경로) 2 — đế chế, ý tưởng và mạng liên vùng**, ta sang **tuyến (route / 경로) 3 — đại dương, vốn và công nghiệp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 3 — đại dương, vốn và công nghiệp** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 2 — đế chế, ý tưởng và mạng liên vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 4 — thế kỷ chiến tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến (route / 경로) 3 — đại dương, vốn và công nghiệp
 
@@ -46,8 +42,7 @@ Bài tập: chọn một mạng (Silk Roads, Indian Ocean, Sahara hoặc steppe)
 
 Đừng hỏi “vì sao châu Âu thắng” như một nguyên nhân duy nhất. Hãy tách: địa lý cảng và gió; tài chính và bảo hiểm; súng và logistics; bạc, nô lệ, đất và bệnh; nhà nước; tri thức; phản kháng địa phương.
 
-
-> **Chuyển mạch:** Từ **tuyến (route / 경로) 3 — đại dương, vốn và công nghiệp**, ta sang **tuyến (route / 경로) 4 — thế kỷ chiến tranh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 4 — thế kỷ chiến tranh** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 3 — đại dương, vốn và công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến (route / 경로) 4 — thế kỷ chiến tranh
 
@@ -60,8 +55,7 @@ state trước → shock/escalation → capacity được huy động
 → tổn thất và phân phối lại → institution/border mới
 ```
 
-
-> **Chuyển mạch:** Từ **tuyến (route / 경로) 4 — thế kỷ chiến tranh**, ta sang **tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 4 — thế kỷ chiến tranh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại
 
@@ -69,8 +63,7 @@ state trước → shock/escalation → capacity được huy động
 
 Đọc song song [World Geography](../world_geography/README.md) để nối tài nguyên (resource / 자원) cơ sở (base / 기반), corridor, cổng (port / 포트), climate và settlement với lịch sử thể chế.
 
-
-> **Chuyển mạch:** Từ **tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại**, ta sang **tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại** cho ta quy tắc; **Tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Vòng ôn tập 30 phút** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á
 
@@ -78,8 +71,7 @@ state trước → shock/escalation → capacity được huy động
 
 Mục tiêu không phải ép lịch sử Hàn Quốc vào timeline toàn cầu, mà kiểm tra một xã hội cụ thể đã **tiếp nhận, chọn lọc, chống lại và biến đổi** các lực xuyên vùng như thế nào.
 
-
-> **Chuyển mạch:** Từ **tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á**, ta sang **Vòng ôn tập 30 phút** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á** cho ta quy tắc; **Vòng ôn tập 30 phút** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vòng ôn tập 30 phút
 
@@ -89,8 +81,7 @@ Mục tiêu không phải ép lịch sử Hàn Quốc vào timeline toàn cầu,
 4. Kiểm tra một claim bằng ít nhất hai loại bằng chứng (evidence / 증거) khác nhau.
 5. Nối giai đoạn đó với chapter trước và sau bằng một luồng (flow / 흐름) cụ thể.
 
-
-> **Chuyển mạch:** Từ **Vòng ôn tập 30 phút**, ta sang **tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình** tiếp nhận điểm tựa từ **Vòng ôn tập 30 phút** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình
 
@@ -98,4 +89,4 @@ Sau khi hoàn tất tuyến 01–17, đọc [Comparative Case Studies](20_compar
 
 Nếu một mô hình chỉ giải thích tốt một trường hợp (case / 사례) nhưng thất bại ở trường hợp (case / 사례) khác, không vội bỏ trường hợp (case / 사례) “ngoại lệ”. Hãy ghi rõ ranh giới (boundary / 경계) điều kiện (condition / 조건): ecology, quy mô (scale / 규모), thuộc tính (property / 속성) regime, technology, disease, bên ngoài (external / 외부) intervention hay archive độ lệch (bias / 편향) nào làm kết quả đổi.
 
-> **Bàn giao:** Sau **tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
