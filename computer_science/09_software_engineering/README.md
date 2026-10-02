@@ -1,6 +1,6 @@
 # Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Software engineering — lĩnh vực (domain / 도메인) Hub**. Route học đi từ requirements/specification → architecture/design reasoning → testing/verification → delivery/operations → maintenance/evolution, để quyết định kỹ thuật nối với rủi ro và vòng đời.
 
 Foundation nằm tại [`../basic/09_software_engineering/`](../basic/09_software_engineering/): requirements, kiến trúc (architecture / 아키텍처)/thiết kế (design / 설계) lập luận (reasoning / 추론), testing chiến lược (strategy / 전략), delivery/operations và maintenance/technical debt.
 

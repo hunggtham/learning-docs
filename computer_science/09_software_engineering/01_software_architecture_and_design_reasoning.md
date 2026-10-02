@@ -1,6 +1,6 @@
 # Software kiến trúc (architecture / 아키텍처) và thiết kế (design / 설계) lập luận (reasoning / 추론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Software kiến trúc (architecture / 아키텍처) và thiết kế (design / 설계) lập luận (reasoning / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến trúc (architecture / 아키텍처) như set of consequential decisions** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chất lượng (quality / 품질) attributes tạo kiến trúc (architecture / 아키텍처)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Software architecture và design reasoning**. Route đi từ consequential decisions → quality attributes → coupling/cohesion/information hiding → layering/ports-and-adapters → data ownership, dependency inversion và fitness functions, để kiến trúc được đánh giá bằng trade-off có bằng chứng.
 
 Kiến trúc (architecture / 아키텍처) không phải sơ đồ boxes đẹp; nó là tập decisions khó thay đổi về boundaries, dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권), communication, triển khai (deployment / 배포) và chất lượng (quality / 품질) attributes. thiết kế (design / 설계) tốt bắt đầu từ forces/các ràng buộc (constraints / 제약조건들) chứ không từ mẫu (pattern / 패턴) names.
 

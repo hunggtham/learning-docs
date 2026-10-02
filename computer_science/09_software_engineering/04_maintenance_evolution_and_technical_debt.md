@@ -1,6 +1,6 @@
 # Maintenance, evolution và technical debt
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Maintenance, evolution và technical debt**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Software không hao mòn vật lý nhưng môi trường thay đổi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Corrective, adaptive, perfective, preventive maintenance** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Maintenance, evolution và technical debt**. Route đi từ môi trường thay đổi → corrective/adaptive/perfective/preventive maintenance → debt/change amplification → refactoring/legacy → dependency/data migration → sunsetting, để chi phí vòng đời được quản trị trước khi thành khủng hoảng.
 
 Phần lớn chi phí software xảy ra sau lần bản phát hành (release / 릴리스) đầu. Requirements thay đổi, dependencies cập nhật (update / 업데이트), teams đổi, dữ liệu (data / 데이터) lớn lên và các giả định (assumptions / 가정들) cũ hết đúng. Maintainability không phải “mã (code / 코드) đẹp”; nó là khả năng thay đổi hệ thống (system / 시스템) với rủi ro (risk / 위험)/chi phí (cost / 비용) kiểm soát được.
 

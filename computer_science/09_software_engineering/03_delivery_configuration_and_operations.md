@@ -1,6 +1,6 @@
 # Delivery, cấu hình (configuration / 구성) và operations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Delivery, cấu hình (configuration / 구성) và operations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bản dựng (build / 빌드) once, promote same sản phẩm tạo ra (artifact / 산출물)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cấu hình (configuration / 구성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Delivery, configuration và operations**. Route đi từ immutable artifact → configuration/feature flags → CI/CD → deployment strategies/database migration → IaC/runbook → rollback hoặc roll-forward, để thay đổi production có đường kiểm soát và phục hồi.
 
 Mã (code / 코드) chỉ tạo giá trị (value / 값) khi sản phẩm tạo ra (artifact / 산출물) đúng được đưa vào đúng môi trường (environment / 환경) với cấu hình (configuration / 구성) đúng và có thể vận hành/recover. Software delivery nối nguồn (source / 소스) điều khiển (control / 제어), bản dựng (build / 빌드), tests, sản phẩm tạo ra (artifact / 산출물), triển khai (deployment / 배포), thời gian chạy (runtime / 런타임) cấu hình (config / 설정), khả năng quan sát (observability / 관측 가능성) và quay lui (rollback / 롤백) thành một chuỗi (chain / 사슬).
 
