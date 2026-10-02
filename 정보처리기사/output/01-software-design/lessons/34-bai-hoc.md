@@ -1,18 +1,26 @@
 # 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối ISO/IEC 9126 với quality attributes, measurement và trade-off, để chất lượng được đánh giá theo thuộc tính cụ thể.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **8. 디자인 패턴 (Design Patterns)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 소프트웨어, 품질, 특성
 
+> **Chuyển mạch:** Ở chặng này của **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **9. 효과적인 모듈 설계 방안 (Effective Module Design)**에서 만든 기준을 이어받아 **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **9. 소프트웨어 품질 특성 (ISO/
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** và nối nó với **8. 디자인 패턴 (Design Patterns)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
 
@@ -43,3 +51,5 @@ Phần “9. 소프트웨어 품질 특성 (ISO/IEC 9126)” được nối vớ
   6. **이식성 (Portability - Khả năng thay thế/di chuyển)**: Cài đặt dễ, Tương thích, Thay thế.
 
 Như vậy, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **8. 디자인 패턴 (Design Patterns)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

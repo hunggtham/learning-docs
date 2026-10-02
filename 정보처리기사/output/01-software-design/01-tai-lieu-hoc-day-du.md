@@ -1,5 +1,7 @@
 # Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu học tập)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **권장 학습 순서 (Lộ trình đề xuất)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của toàn môn Software Design, rồi nối mục tiêu, lộ trình và các bài theo dependency.
+
 ## 학습 목표 (Mục tiêu học tập)
 
 Phần này đặt mục tiêu của bài, để người mới biết mình cần giải thích được điều gì trước khi đi vào thuật ngữ và ví dụ.
@@ -9,6 +11,8 @@ Phần này đặt mục tiêu của bài, để người mới biết mình c�
 - 앞에서 배운 개념과 뒤의 심화 개념을 연결하여 문제의 조건을 빠르게 해석한다.
 
 > **Câu hỏi trung tâm:** Khi học môn này, người học không chỉ cần nhận ra thuật ngữ Hàn mà còn phải giải thích khái niệm đang giải quyết vấn đề nào, dựa trên điều kiện nào và được dùng để nối sang phần kiến thức nào tiếp theo.
+
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **권장 학습 순서 (Lộ trình đề xuất)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu học tập)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 권장 학습 순서 (Lộ trình đề xuất)
 
@@ -28,6 +32,8 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** tiếp nhận điểm tựa từ **권장 학습 순서 (Lộ trình đề xuất)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
 
 Chúng ta bắt đầu mạch học bằng **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/69 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
@@ -37,6 +43,8 @@ Chúng ta bắt đầu mạch học bằng **소프트웨어 생명 주기 및 �
 Như vậy, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** tiếp nhận điểm tựa từ **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
 
@@ -62,6 +70,8 @@ Phần “1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cyc
 Ta có thể khép mục **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** tiếp nhận điểm tựa từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 요구사항 개발 (Phát triển Yêu cầu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)
 
@@ -180,6 +190,8 @@ Như vậy, **006. XP의 핵심 가치 (Giá trị cốt lõi của XP - eXtreme
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 개발 (Phát triển Yêu cầu)** tiếp nhận điểm tựa từ **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 요구사항 개발 (Phát triển Yêu cầu)
 
 Ở bước 4/69, **2. 요구사항 개발 (Phát triển Yêu cầu)** xuất hiện như phần tiếp nối của **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -294,6 +306,8 @@ Như vậy, **012. HIPO (Hierarchy plus Input-Process-Output)** đã hoàn thàn
 Như vậy, **2. 요구사항 개발 (Phát triển Yêu cầu)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** tiếp nhận điểm tựa từ **2. 요구사항 개발 (Phát triển Yêu cầu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 요구사항 심화 (Yêu cầu chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)
 
@@ -421,6 +435,8 @@ Ta có thể khép mục **9. 요구사항 및 시스템 파악 (Yêu cầu & Ph
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 요구사항 심화 (Yêu cầu chuyên sâu)** tiếp nhận điểm tựa từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 요구사항 정의 (Requirements Definition)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. 요구사항 심화 (Yêu cầu chuyên sâu)
 
 Từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**, ta đã có điểm tựa để bước vào **10. 요구사항 심화 (Yêu cầu chuyên sâu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/69 trước khi đi vào chi tiết.
@@ -491,6 +507,8 @@ Với **요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 정의 (Requirements Definition)** tiếp nhận điểm tựa từ **10. 요구사항 심화 (Yêu cầu chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 요구사항 정의 (Requirements Definition)
 
 Ở bước 7/69, **2. 요구사항 정의 (Requirements Definition)** xuất hiện như phần tiếp nối của **10. 요구사항 심화 (Yêu cầu chuyên sâu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -511,6 +529,8 @@ Phần “2. 요구사항 정의 (Requirements Definition)” được nối v�
 Như vậy, **2. 요구사항 정의 (Requirements Definition)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 정의 (Requirements Definition)** cho ta quy tắc; **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)
 
@@ -536,6 +556,8 @@ Ta có thể khép mục **3. 요구사항 분석기법 및 자동화 도구 (An
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** cho ta quy tắc; **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. 요구사항 (Requirements)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. 요구사항 개발 기법 (Requirements Elicitation Techniques)
 
 Từ **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)**, ta đã có điểm tựa để bước vào **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/69 trước khi đi vào chi tiết.
@@ -553,6 +575,8 @@ Phần “1. 요구사항 개발 기법 (Requirements Elicitation Techniques)”
 Điểm chốt của **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **12. 요구사항 (Requirements)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. 요구사항 (Requirements)** tiếp nhận điểm tựa từ **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. 요구사항 (Requirements)
 
@@ -613,6 +637,8 @@ Như vậy, **요구사항 품질 기준 7개 (7 Tiêu chí chất lượng)** �
 Như vậy, **12. 요구사항 (Requirements)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** tiếp nhận điểm tựa từ **12. 요구사항 (Requirements)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 현행 시스템 분석 (Current System Analysis)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## A+ Deep Dive: 개발 모형 선택과 요구사항 검증
 
@@ -675,6 +701,8 @@ Ta có thể khép mục **A+ Deep Dive: 개발 모형 선택과 요구사항 �
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 현행 시스템 분석 (Current System Analysis)** tiếp nhận điểm tựa từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 현행 시스템 파악 (Understanding Current System)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. 현행 시스템 분석 (Current System Analysis)
 
 Từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, ta đã có điểm tựa để bước vào **1. 현행 시스템 분석 (Current System Analysis)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/69 trước khi đi vào chi tiết.
@@ -692,6 +720,8 @@ Phần “1. 현행 시스템 분석 (Current System Analysis)” được nối
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 현행 시스템 파악 (Understanding Current System)** tiếp nhận điểm tựa từ **1. 현행 시스템 분석 (Current System Analysis)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 모델링 및 UML (Mô hình hóa và UML)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. 현행 시스템 파악 (Understanding Current System)
 
 Ở bước 13/69, **3. 현행 시스템 파악 (Understanding Current System)** xuất hiện như phần tiếp nối của **1. 현행 시스템 분석 (Current System Analysis)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -707,6 +737,8 @@ Phần “3. 현행 시스템 파악 (Understanding Current System)” được 
 Như vậy, **3. 현행 시스템 파악 (Understanding Current System)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 모델링 및 UML (Mô hình hóa và UML)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 모델링 및 UML (Mô hình hóa và UML)** tiếp nhận điểm tựa từ **3. 현행 시스템 파악 (Understanding Current System)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 모델링 및 UML (Mô hình hóa và UML)
 
@@ -841,6 +873,8 @@ Ta có thể khép mục **3. 모델링 및 UML (Mô hình hóa và UML)** bằn
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** tiếp nhận điểm tựa từ **3. 모델링 및 UML (Mô hình hóa và UML)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. UML (Unified Modeling Language)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)
 
 Từ **3. 모델링 및 UML (Mô hình hóa và UML)**, ta đã có điểm tựa để bước vào **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/69 trước khi đi vào chi tiết.
@@ -958,6 +992,8 @@ Với **사용자 인터페이스(UI) 특성 (Đặc tính của UI)**, ta đã 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. UML (Unified Modeling Language)** tiếp nhận điểm tựa từ **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. UML 구성요소 상세 (UML Components Detail)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. UML (Unified Modeling Language)
 
 Ở bước 16/69, **4. UML (Unified Modeling Language)** xuất hiện như phần tiếp nối của **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -981,6 +1017,8 @@ Như vậy, **4. UML (Unified Modeling Language)** không chỉ cung cấp các 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. UML 구성요소 상세 (UML Components Detail)** tiếp nhận điểm tựa từ **4. UML (Unified Modeling Language)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. UML 심화 (Advanced UML)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. UML 구성요소 상세 (UML Components Detail)
 
 Sau khi đã đặt nền bằng **4. UML (Unified Modeling Language)**, ta chuyển sang **5. UML 구성요소 상세 (UML Components Detail)**. Đây là mắt xích 17/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1000,6 +1038,8 @@ Ta có thể khép mục **5. UML 구성요소 상세 (UML Components Detail)** 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. UML 심화 (Advanced UML)** tiếp nhận điểm tựa từ **5. UML 구성요소 상세 (UML Components Detail)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. UML 심화 (Advanced UML)
 
 Từ **5. UML 구성요소 상세 (UML Components Detail)**, ta đã có điểm tựa để bước vào **7. UML 심화 (Advanced UML)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/69 trước khi đi vào chi tiết.
@@ -1017,6 +1057,8 @@ Phần “7. UML 심화 (Advanced UML)” được nối với nội dung kế t
 Điểm chốt của **7. UML 심화 (Advanced UML)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **4. 사용자 인터페이스 (Giao diện người dùng - UI)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** tiếp nhận điểm tựa từ **7. UML 심화 (Advanced UML)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 사용자 인터페이스 (User Interface - UI)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. 사용자 인터페이스 (Giao diện người dùng - UI)
 
@@ -1092,6 +1134,8 @@ Như vậy, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** k
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 사용자 인터페이스 (User Interface - UI)** tiếp nhận điểm tựa từ **4. 사용자 인터페이스 (Giao diện người dùng - UI)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. 사용자 인터페이스 (User Interface - UI)
 
 Sau khi đã đặt nền bằng **4. 사용자 인터페이스 (Giao diện người dùng - UI)**, ta chuyển sang **1. 사용자 인터페이스 (User Interface - UI)**. Đây là mắt xích 20/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1120,6 +1164,8 @@ Phần “1. 사용자 인터페이스 (User Interface - UI)” được nối v
 Ta có thể khép mục **1. 사용자 인터페이스 (User Interface - UI)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** tiếp nhận điểm tựa từ **1. 사용자 인터페이스 (User Interface - UI)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 요구공학 (Requirements Engineering)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)
 
@@ -1185,6 +1231,8 @@ Như vậy, **UI 설계 도구 심화 (Công cụ thiết kế UI chi tiết)** 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 요구공학 (Requirements Engineering)** tiếp nhận điểm tựa từ **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. UI 및 UX, HCI (UI, UX, HCI)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 요구공학 (Requirements Engineering)
 
 Ở bước 22/69, **5. 요구공학 (Requirements Engineering)** xuất hiện như phần tiếp nối của **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1206,6 +1254,8 @@ Như vậy, **5. 요구공학 (Requirements Engineering)** không chỉ cung c�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. UI 및 UX, HCI (UI, UX, HCI)** tiếp nhận điểm tựa từ **5. 요구공학 (Requirements Engineering)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. UI 및 UX, HCI (UI, UX, HCI)
 
 Sau khi đã đặt nền bằng **5. 요구공학 (Requirements Engineering)**, ta chuyển sang **8. UI 및 UX, HCI (UI, UX, HCI)**. Đây là mắt xích 23/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1226,6 +1276,8 @@ Phần “8. UI 및 UX, HCI (UI, UX, HCI)” được nối với nội dung k�
 Ta có thể khép mục **8. UI 및 UX, HCI (UI, UX, HCI)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** tiếp nhận điểm tựa từ **8. UI 및 UX, HCI (UI, UX, HCI)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 아키텍처 (Software Architecture)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)
 
@@ -1419,6 +1471,8 @@ Các bullet của **044. 팬인(Fan-In) / 팬아웃(Fan-Out)** đang nén nhiề
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 아키텍처 (Software Architecture)** tiếp nhận điểm tựa từ **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 객체지향 (Hướng Đối Tượng - OOP)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. 소프트웨어 아키텍처 (Software Architecture)
 
 Ở bước 25/69, **1. 소프트웨어 아키텍처 (Software Architecture)** xuất hiện như phần tiếp nối của **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1440,6 +1494,8 @@ Phần “1. 소프트웨어 아키텍처 (Software Architecture)” được n�
 Như vậy, **1. 소프트웨어 아키텍처 (Software Architecture)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. 객체지향 (Hướng Đối Tượng - OOP)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 객체지향 (Hướng Đối Tượng - OOP)** tiếp nhận điểm tựa từ **1. 소프트웨어 아키텍처 (Software Architecture)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 객체지향 (OOP - Object Oriented Programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. 객체지향 (Hướng Đối Tượng - OOP)
 
@@ -1574,6 +1630,8 @@ Ta có thể khép mục **6. 객체지향 (Hướng Đối Tượng - OOP)** b�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 객체지향 (OOP - Object Oriented Programming)** tiếp nhận điểm tựa từ **6. 객체지향 (Hướng Đối Tượng - OOP)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 객체지향 설계 5대 원칙 (SOLID)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 객체지향 (OOP - Object Oriented Programming)
 
 Từ **6. 객체지향 (Hướng Đối Tượng - OOP)**, ta đã có điểm tựa để bước vào **2. 객체지향 (OOP - Object Oriented Programming)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/69 trước khi đi vào chi tiết.
@@ -1600,6 +1658,8 @@ Phần “2. 객체지향 (OOP - Object Oriented Programming)” được nối 
 Điểm chốt của **2. 객체지향 (OOP - Object Oriented Programming)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **1. 객체지향 설계 5대 원칙 (SOLID)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 객체지향 설계 5대 원칙 (SOLID)** tiếp nhận điểm tựa từ **2. 객체지향 (OOP - Object Oriented Programming)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 객체지향 설계 5대 원칙 (SOLID)
 
@@ -1647,6 +1707,8 @@ Phần “2. 객체지향 (OOP - Object Oriented Programming)” được nối 
 Như vậy, **1. 객체지향 설계 5대 원칙 (SOLID)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** tiếp nhận điểm tựa từ **1. 객체지향 설계 5대 원칙 (SOLID)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 모듈 (Module)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)
 
@@ -1723,6 +1785,8 @@ Ta có thể khép mục **7. 설계 도구 및 모듈화 심화 (Công cụ thi
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 모듈 (Module)** tiếp nhận điểm tựa từ **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 모듈 (Module) & 독립성 (Independence)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. 모듈 (Module)
 
 Từ **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**, ta đã có điểm tựa để bước vào **3. 모듈 (Module)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/69 trước khi đi vào chi tiết.
@@ -1745,6 +1809,8 @@ Phần “3. 모듈 (Module)” được nối với nội dung kế tiếp đ�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 모듈 (Module) & 독립성 (Independence)** tiếp nhận điểm tựa từ **3. 모듈 (Module)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 공통 모듈 (Common Module)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 모듈 (Module) & 독립성 (Independence)
 
 Ở bước 31/69, **2. 모듈 (Module) & 독립성 (Independence)** xuất hiện như phần tiếp nối của **3. 모듈 (Module)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1765,6 +1831,8 @@ Phần “3. 모듈 (Module)” được nối với nội dung kế tiếp đ�
 Như vậy, **2. 모듈 (Module) & 독립성 (Independence)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **7. 공통 모듈 (Common Module)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 공통 모듈 (Common Module)** tiếp nhận điểm tựa từ **2. 모듈 (Module) & 독립성 (Independence)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 효과적인 모듈 설계 방안 (Effective Module Design)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. 공통 모듈 (Common Module)
 
@@ -1788,6 +1856,8 @@ Ta có thể khép mục **7. 공통 모듈 (Common Module)** bằng một câu 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 효과적인 모듈 설계 방안 (Effective Module Design)** tiếp nhận điểm tựa từ **7. 공통 모듈 (Common Module)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. 효과적인 모듈 설계 방안 (Effective Module Design)
 
 Từ **7. 공통 모듈 (Common Module)**, ta đã có điểm tựa để bước vào **9. 효과적인 모듈 설계 방안 (Effective Module Design)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/69 trước khi đi vào chi tiết.
@@ -1805,6 +1875,8 @@ Phần “9. 효과적인 모듈 설계 방안 (Effective Module Design)” đư
 Điểm chốt của **9. 효과적인 모듈 설계 방안 (Effective Module Design)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** tiếp nhận điểm tựa từ **9. 효과적인 모듈 설계 방안 (Effective Module Design)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 디자인 패턴 (Design Patterns)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
 
@@ -1825,6 +1897,8 @@ Phần “9. 소프트웨어 품질 특성 (ISO/IEC 9126)” được nối vớ
 Như vậy, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **8. 디자인 패턴 (Design Patterns)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 디자인 패턴 (Design Patterns)** tiếp nhận điểm tựa từ **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 디자인 패턴 (Design Patterns - GoF)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. 디자인 패턴 (Design Patterns)
 
@@ -1915,6 +1989,8 @@ Ta có thể khép mục **8. 디자인 패턴 (Design Patterns)** bằng một 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 디자인 패턴 (Design Patterns - GoF)** tiếp nhận điểm tựa từ **8. 디자인 패턴 (Design Patterns)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 디자인 패턴 (Design Pattern)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. 디자인 패턴 (Design Patterns - GoF)
 
 Từ **8. 디자인 패턴 (Design Patterns)**, ta đã có điểm tựa để bước vào **4. 디자인 패턴 (Design Patterns - GoF)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/69 trước khi đi vào chi tiết.
@@ -1932,6 +2008,8 @@ Phần “4. 디자인 패턴 (Design Patterns - GoF)” được nối với n�
 Điểm chốt của **4. 디자인 패턴 (Design Patterns - GoF)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **11. 디자인 패턴 (Design Pattern)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 디자인 패턴 (Design Pattern)** tiếp nhận điểm tựa từ **4. 디자인 패턴 (Design Patterns - GoF)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. 디자인 패턴 (Design Pattern)
 
@@ -2009,6 +2087,8 @@ Như vậy, **11. 디자인 패턴 (Design Pattern)** không chỉ cung cấp c�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** tiếp nhận điểm tựa từ **11. 디자인 패턴 (Design Pattern)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)
 
 Sau khi đã đặt nền bằng **11. 디자인 패턴 (Design Pattern)**, ta chuyển sang **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**. Đây là mắt xích 38/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2035,6 +2115,8 @@ Phần “2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)�
 Ta có thể khép mục **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** tiếp nhận điểm tựa từ **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. 미들웨어 (Middleware)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
 
@@ -2098,6 +2180,8 @@ Như vậy, **13.3 명세화 (Specification)** đã hoàn thành vai trò của 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **14. 미들웨어 (Middleware)** tiếp nhận điểm tựa từ **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. 미들웨어 (Middleware)
 
 Ở bước 40/69, **14. 미들웨어 (Middleware)** xuất hiện như phần tiếp nối của **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2120,6 +2204,8 @@ Như vậy, **13.3 명세화 (Specification)** đã hoàn thành vai trò của 
 Như vậy, **14. 미들웨어 (Middleware)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** tiếp nhận điểm tựa từ **14. 미들웨어 (Middleware)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)
 
@@ -2199,6 +2285,8 @@ Ta có thể khép mục **4. 관계형 데이터베이스 구조 (Cấu trúc C
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** tiếp nhận điểm tựa từ **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)
 
 Từ **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)**, ta đã có điểm tựa để bước vào **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/69 trước khi đi vào chi tiết.
@@ -2275,6 +2363,8 @@ Với **정규화(Normalization) 과정과 암기법 (Quy trình chuẩn hóa)**
 Điểm chốt của **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** tiếp nhận điểm tựa từ **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 회복 (Recovery)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)
 
@@ -2382,6 +2472,8 @@ Như vậy, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transacti
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 회복 (Recovery)** tiếp nhận điểm tựa từ **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Commit & Rollback 연산** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 1. 회복 (Recovery)
 
 Sau khi đã đặt nền bằng **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**, ta chuyển sang **1. 회복 (Recovery)**. Đây là mắt xích 44/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2403,6 +2495,8 @@ Ta có thể khép mục **1. 회복 (Recovery)** bằng một câu hỏi bàn g
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. Commit & Rollback 연산** tiếp nhận điểm tựa từ **1. 회복 (Recovery)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 트랜잭션의 상태 (Transaction States)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Commit & Rollback 연산
 
 Từ **1. 회복 (Recovery)**, ta đã có điểm tựa để bước vào **2. Commit & Rollback 연산**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/69 trước khi đi vào chi tiết.
@@ -2417,6 +2511,8 @@ Phần “2. Commit & Rollback 연산” được nối với nội dung kế ti
 Điểm chốt của **2. Commit & Rollback 연산** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **3. 트랜잭션의 상태 (Transaction States)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 트랜잭션의 상태 (Transaction States)** tiếp nhận điểm tựa từ **2. Commit & Rollback 연산** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 병행 제어 (Concurrency Control)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 트랜잭션의 상태 (Transaction States)
 
@@ -2436,6 +2532,8 @@ Phần “3. 트랜잭션의 상태 (Transaction States)” được nối với
 Như vậy, **3. 트랜잭션의 상태 (Transaction States)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **4. 병행 제어 (Concurrency Control)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 병행 제어 (Concurrency Control)** tiếp nhận điểm tựa từ **3. 트랜잭션의 상태 (Transaction States)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 보안 및 암호화 (Security & Encryption)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. 병행 제어 (Concurrency Control)
 
@@ -2462,6 +2560,8 @@ Ta có thể khép mục **4. 병행 제어 (Concurrency Control)** bằng một
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 보안 및 암호화 (Security & Encryption)** tiếp nhận điểm tựa từ **4. 병행 제어 (Concurrency Control)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 분산 데이터베이스 (Distributed Database)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 보안 및 암호화 (Security & Encryption)
 
 Từ **4. 병행 제어 (Concurrency Control)**, ta đã có điểm tựa để bước vào **5. 보안 및 암호화 (Security & Encryption)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/69 trước khi đi vào chi tiết.
@@ -2477,6 +2577,8 @@ Phần “5. 보안 및 암호화 (Security & Encryption)” được nối vớ
 Điểm chốt của **5. 보안 및 암호화 (Security & Encryption)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **6. 분산 데이터베이스 (Distributed Database)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 분산 데이터베이스 (Distributed Database)** tiếp nhận điểm tựa từ **5. 보안 및 암호화 (Security & Encryption)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 자료 구조 (Data Structures)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. 분산 데이터베이스 (Distributed Database)
 
@@ -2497,6 +2599,8 @@ Như vậy, **6. 분산 데이터베이스 (Distributed Database)** không chỉ
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 자료 구조 (Data Structures)** tiếp nhận điểm tựa từ **6. 분산 데이터베이스 (Distributed Database)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. 자료 구조 (Data Structures)
 
 Sau khi đã đặt nền bằng **6. 분산 데이터베이스 (Distributed Database)**, ta chuyển sang **7. 자료 구조 (Data Structures)**. Đây là mắt xích 50/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2512,6 +2616,8 @@ Phần “7. 자료 구조 (Data Structures)” được nối với nội dung 
 Ta có thể khép mục **7. 자료 구조 (Data Structures)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** tiếp nhận điểm tựa từ **7. 자료 구조 (Data Structures)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 트리 (Tree) 용어** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)
 
@@ -2530,6 +2636,8 @@ Phần “8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)” đ�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 트리 (Tree) 용어** tiếp nhận điểm tựa từ **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 이진 트리의 운행법 (Binary Tree Traversal)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. 트리 (Tree) 용어
 
 Ở bước 52/69, **9. 트리 (Tree) 용어** xuất hiện như phần tiếp nối của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2543,6 +2651,8 @@ Phần “9. 트리 (Tree) 용어” được nối với nội dung kế tiếp
 Như vậy, **9. 트리 (Tree) 용어** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **10. 이진 트리의 운행법 (Binary Tree Traversal)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 이진 트리의 운행법 (Binary Tree Traversal)** tiếp nhận điểm tựa từ **9. 트리 (Tree) 용어** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 수식의 표기법 (Expression Notation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. 이진 트리의 운행법 (Binary Tree Traversal)
 
@@ -2560,6 +2670,8 @@ Ta có thể khép mục **10. 이진 트리의 운행법 (Binary Tree Traversal
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 수식의 표기법 (Expression Notation)** tiếp nhận điểm tựa từ **10. 이진 트리의 운행법 (Binary Tree Traversal)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. 수식의 표기법 (Expression Notation)
 
 Từ **10. 이진 트리의 운행법 (Binary Tree Traversal)**, ta đã có điểm tựa để bước vào **11. 수식의 표기법 (Expression Notation)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/69 trước khi đi vào chi tiết.
@@ -2574,6 +2686,8 @@ Phần “11. 수식의 표기법 (Expression Notation)” được nối với 
 Điểm chốt của **11. 수식의 표기법 (Expression Notation)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** tiếp nhận điểm tựa từ **11. 수식의 표기법 (Expression Notation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 검색 및 해싱 (Search & Hashing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)
 
@@ -2595,6 +2709,8 @@ Phần “12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Alg
 Như vậy, **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **13. 검색 및 해싱 (Search & Hashing)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **13. 검색 및 해싱 (Search & Hashing)** tiếp nhận điểm tựa từ **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. 파일 편성 방식 (File Organization)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. 검색 및 해싱 (Search & Hashing)
 
@@ -2623,6 +2739,8 @@ Ta có thể khép mục **13. 검색 및 해싱 (Search & Hashing)** bằng m�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **14. 파일 편성 방식 (File Organization)** tiếp nhận điểm tựa từ **13. 검색 및 해싱 (Search & Hashing)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 애자일 방법론 (Agile Methodology)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. 파일 편성 방식 (File Organization)
 
 Từ **13. 검색 및 해싱 (Search & Hashing)**, ta đã có điểm tựa để bước vào **14. 파일 편성 방식 (File Organization)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 57/69 trước khi đi vào chi tiết.
@@ -2645,6 +2763,8 @@ Phần “14. 파일 편성 방식 (File Organization)” được nối với n
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 애자일 방법론 (Agile Methodology)** tiếp nhận điểm tựa từ **14. 파일 편성 방식 (File Organization)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. 애자일 방법론 (Agile Methodology)
 
 Ở bước 58/69, **6. 애자일 방법론 (Agile Methodology)** xuất hiện như phần tiếp nối của **14. 파일 편성 방식 (File Organization)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2663,6 +2783,8 @@ Phần “6. 애자일 방법론 (Agile Methodology)” được nối với n�
 Như vậy, **6. 애자일 방법론 (Agile Methodology)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** tiếp nhận điểm tựa từ **6. 애자일 방법론 (Agile Methodology)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
 
@@ -2686,6 +2808,8 @@ Ta có thể khép mục **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** b�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** tiếp nhận điểm tựa từ **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
 
 Từ **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**, ta đã có điểm tựa để bước vào **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 60/69 trước khi đi vào chi tiết.
@@ -2707,6 +2831,8 @@ Phần “2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)” được n�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** tiếp nhận điểm tựa từ **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 구조적 분석 도구 (Structured Analysis Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
 
 Ở bước 61/69, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** xuất hiện như phần tiếp nối của **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2724,6 +2850,8 @@ Phần “4. 운영 환경 구축 고려사항 (Operation Environment Considerat
 Như vậy, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. 구조적 분석 도구 (Structured Analysis Tools)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 구조적 분석 도구 (Structured Analysis Tools)** tiếp nhận điểm tựa từ **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 소프트웨어 설계 원리 (Software Design Principles)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. 구조적 분석 도구 (Structured Analysis Tools)
 
@@ -2748,6 +2876,8 @@ Ta có thể khép mục **6. 구조적 분석 도구 (Structured Analysis Tools
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 소프트웨어 설계 원리 (Software Design Principles)** tiếp nhận điểm tựa từ **6. 구조적 분석 도구 (Structured Analysis Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 결합도 (Coupling - Độ phụ thuộc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. 소프트웨어 설계 원리 (Software Design Principles)
 
 Từ **6. 구조적 분석 도구 (Structured Analysis Tools)**, ta đã có điểm tựa để bước vào **10. 소프트웨어 설계 원리 (Software Design Principles)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 63/69 trước khi đi vào chi tiết.
@@ -2771,6 +2901,8 @@ Phần “10. 소프트웨어 설계 원리 (Software Design Principles)” đư
 Điểm chốt của **10. 소프트웨어 설계 원리 (Software Design Principles)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **3. 결합도 (Coupling - Độ phụ thuộc)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 결합도 (Coupling - Độ phụ thuộc)** tiếp nhận điểm tựa từ **10. 소프트웨어 설계 원리 (Software Design Principles)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 응집도 (Cohesion - Độ gắn kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 결합도 (Coupling - Độ phụ thuộc)
 
@@ -2814,6 +2946,8 @@ Như vậy, **3. 결합도 (Coupling - Độ phụ thuộc)** không chỉ cung 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 응집도 (Cohesion - Độ gắn kết)** tiếp nhận điểm tựa từ **3. 결합도 (Coupling - Độ phụ thuộc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Fan-In / Fan-Out (팬인 / 팬아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. 응집도 (Cohesion - Độ gắn kết)
 
 Sau khi đã đặt nền bằng **3. 결합도 (Coupling - Độ phụ thuộc)**, ta chuyển sang **4. 응집도 (Cohesion - Độ gắn kết)**. Đây là mắt xích 65/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2853,6 +2987,8 @@ Ta có thể khép mục **4. 응집도 (Cohesion - Độ gắn kết)** bằng 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. Fan-In / Fan-Out (팬인 / 팬아웃)** tiếp nhận điểm tựa từ **4. 응집도 (Cohesion - Độ gắn kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. N-S 차트 (Nassi-Schneiderman Chart)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Fan-In / Fan-Out (팬인 / 팬아웃)
 
 Từ **4. 응집도 (Cohesion - Độ gắn kết)**, ta đã có điểm tựa để bước vào **5. Fan-In / Fan-Out (팬인 / 팬아웃)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 66/69 trước khi đi vào chi tiết.
@@ -2876,6 +3012,8 @@ Từ **4. 응집도 (Cohesion - Độ gắn kết)**, ta đã có điểm tựa 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. N-S 차트 (Nassi-Schneiderman Chart)** tiếp nhận điểm tựa từ **5. Fan-In / Fan-Out (팬인 / 팬아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 재사용 (Reuse)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. N-S 차트 (Nassi-Schneiderman Chart)
 
 Ở bước 67/69, **6. N-S 차트 (Nassi-Schneiderman Chart)** xuất hiện như phần tiếp nối của **5. Fan-In / Fan-Out (팬인 / 팬아웃)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2892,6 +3030,8 @@ Từ **4. 응집도 (Cohesion - Độ gắn kết)**, ta đã có điểm tựa 
 Như vậy, **6. N-S 차트 (Nassi-Schneiderman Chart)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **8. 재사용 (Reuse)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 재사용 (Reuse)** tiếp nhận điểm tựa từ **6. N-S 차트 (Nassi-Schneiderman Chart)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 코드 (Code) 개요 & 종류** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. 재사용 (Reuse)
 
@@ -2913,6 +3053,8 @@ Sau khi đã đặt nền bằng **6. N-S 차트 (Nassi-Schneiderman Chart)**, t
 Ta có thể khép mục **8. 재사용 (Reuse)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **10. 코드 (Code) 개요 & 종류**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 코드 (Code) 개요 & 종류** tiếp nhận điểm tựa từ **8. 재사용 (Reuse)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10. 코드 (Code) 개요 & 종류
 
@@ -2940,3 +3082,5 @@ Từ **8. 재사용 (Reuse)**, ta đã có điểm tựa để bước vào **10
 ---
 
 Khép lại **10. 코드 (Code) 개요 & 종류**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+
+> **Bàn giao:** Sau **10. 코드 (Code) 개요 & 종류**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

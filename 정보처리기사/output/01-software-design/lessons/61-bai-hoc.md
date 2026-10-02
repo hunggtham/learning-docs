@@ -1,18 +1,26 @@
 # 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối operation environment với deployment, monitoring, security và recovery, để phần mềm sống được sau khi bàn giao.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **6. 구조적 분석 도구 (Structured Analysis Tools)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 운영, 환경, 구축, 고려사항
 
+> **Chuyển mạch:** Ở chặng này của **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**에서 만든 기준을 이어받아 **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **4. 운영 환경 구축 고려사항 (
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** và nối nó với **6. 구조적 분석 도구 (Structured Analysis Tools)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
 
@@ -41,3 +49,5 @@ Phần “4. 운영 환경 구축 고려사항 (Operation Environment Considerat
 - **오픈 소스 (Open Source)**: Cần chú ý 라이선스 (Bản quyền), 사용자 수 (Số lượng người dùng), 기술의 지속 가능성 (Khả năng duy trì công nghệ).
 
 Như vậy, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. 구조적 분석 도구 (Structured Analysis Tools)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
