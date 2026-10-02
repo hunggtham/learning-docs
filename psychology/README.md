@@ -1,7 +1,6 @@
 # Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đọc **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy ước bắt buộc** sang **Ngôn ngữ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy ước bắt buộc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cấu trúc** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của psychology, rồi nối các domain theo dependency thay vì danh sách môn rời.
 
 Thư viện này tổ chức Psychology theo **concept → phụ thuộc (dependency / 의존성) → cơ chế (mechanism / 메커니즘) → bằng chứng (evidence / 증거) → limitation → liên kết (connection / 연결)**, không chia Beginner/Intermediate/Advanced và không coi số lượng tệp (file / 파일) là mục tiêu.
 
@@ -51,6 +50,8 @@ bối cảnh
 
 Xem [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
+> **Chuyển mạch:** Trong **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Cấu trúc** tiếp nhận điểm tựa từ **Quy ước bắt buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấu trúc
 
 Cấu trúc này đi từ scientific foundations và brain/mind tới cognition, development, social context, mental health và ứng dụng. Mỗi tuyến chỉ là một cách đi qua cùng hệ thống; phần giải thích của chapter phải chỉ rõ concept trước đó được dùng ở đâu.
@@ -71,6 +72,8 @@ psychology/
 └── README.md
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **Cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reading đường dẫn (path / 경로) 1 — Scientific foundations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)
 
 Ba file này giữ cho việc học không bị tách thành các chapter rời: dependency cho biết học gì trước, coverage audit cho biết còn gap nào, còn evidence guide cho biết nên tin claim ở mức nào. Hãy dùng chúng để điều hướng và kiểm tra sau mỗi reading path.
@@ -78,6 +81,8 @@ Ba file này giữ cho việc học không bị tách thành các chapter rời:
 - [[CONCEPTUAL_DEPENDENCIES]]: prerequisite và connection giữa các domain.
 - [[COVERAGE_AUDIT]]: coverage, depth, language, evidence-status và conceptual gap.
 - [[EVIDENCE_STATUS_GUIDE]]: rule phân loại claim theo mức bằng chứng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)** xác định đầu vào; **Reading đường dẫn (path / 경로) 1 — Scientific foundations** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 2 — Brain, perception, attention và consciousness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reading đường dẫn (path / 경로) 1 — Scientific foundations
 
@@ -91,6 +96,8 @@ Ba file này giữ cho việc học không bị tách thành các chapter rời:
 
 Mục tiêu: phân biệt construct với score, association với causation, statistical significance với tác động (effect / 효과) magnitude, và một paper với cumulative bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Trong **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 1 — Scientific foundations** xác định đầu vào; **Reading đường dẫn (path / 경로) 2 — Brain, perception, attention và consciousness** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 3 — học tập (learning / 학습), bộ nhớ (memory / 메모리) và cognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 2 — Brain, perception, attention và consciousness
 
 1. [[01_brain_and_mind/00_nervous_system_and_brain]]
@@ -103,6 +110,8 @@ Mục tiêu: phân biệt construct với score, association với causation, st
 8. [[01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]]
 
 Không dùng neural correlate như nhân quả (causal / 인과적) proof. Các lý thuyết (theory / 이론) consciousness được giữ ở mức hiện tại (current / 현재)/debated lý thuyết (theory / 이론) nếu bằng chứng (evidence / 증거) chưa phân biệt rõ.
+
+> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 2 — Brain, perception, attention và consciousness** xác định đầu vào; **Reading đường dẫn (path / 경로) 3 — học tập (learning / 학습), bộ nhớ (memory / 메모리) và cognition** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 4 — Development, personality và định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reading đường dẫn (path / 경로) 3 — học tập (learning / 학습), bộ nhớ (memory / 메모리) và cognition
 
@@ -120,6 +129,8 @@ Không dùng neural correlate như nhân quả (causal / 인과적) proof. Các 
 12. [[02_learning_and_cognition/11_emotion_memory_and_affective_cognition]]
 13. [[02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 3 — học tập (learning / 학습), bộ nhớ (memory / 메모리) và cognition** xác định đầu vào; **Reading đường dẫn (path / 경로) 4 — Development, personality và định danh (identity / 식별자)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 5 — xã hội (social / 사회적), culture và di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 4 — Development, personality và định danh (identity / 식별자)
 
 1. [[03_human_development_and_person/00_lifespan_development]]
@@ -130,6 +141,8 @@ Không dùng neural correlate như nhân quả (causal / 인과적) proof. Các 
 6. [[03_human_development_and_person/14_parenting_caregiving_and_family_development]]
 7. [[03_human_development_and_person/11_aging_cognitive_health_and_late_life]]
 
+> **Chuyển mạch:** Trong **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 4 — Development, personality và định danh (identity / 식별자)** xác định đầu vào; **Reading đường dẫn (path / 경로) 5 — xã hội (social / 사회적), culture và di chuyển (migration / 마이그레이션)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 6 — Relationships và family** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 5 — xã hội (social / 사회적), culture và di chuyển (migration / 마이그레이션)
 
 1. [[03_human_development_and_person/04_social_and_cultural_psychology]]
@@ -139,6 +152,8 @@ Không dùng neural correlate như nhân quả (causal / 인과적) proof. Các 
 5. [[03_human_development_and_person/12_loneliness_social_connection_and_belonging]]
 6. [[03_human_development_and_person/08_moral_psychology_and_prosocial_behavior]]
 
+> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 5 — xã hội (social / 사회적), culture và di chuyển (migration / 마이그레이션)** xác định đầu vào; **Reading đường dẫn (path / 경로) 6 — Relationships và family** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 7 — Stress, coping và everyday self-regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 6 — Relationships và family
 
 1. [[03_human_development_and_person/01_attachment_and_relationships]]
@@ -147,6 +162,8 @@ Không dùng neural correlate như nhân quả (causal / 인과적) proof. Các 
 4. [[03_human_development_and_person/14_parenting_caregiving_and_family_development]]
 5. [[06_applied/03_interpersonal_communication_and_conflict]]
 6. [[06_applied/20_negotiation_conflict_and_joint_decision_making]]
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 6 — Relationships và family** xác định đầu vào; **Reading đường dẫn (path / 경로) 7 — Stress, coping và everyday self-regulation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 8 — Mental health, psychopathology và intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reading đường dẫn (path / 경로) 7 — Stress, coping và everyday self-regulation
 
@@ -158,6 +175,8 @@ Không dùng neural correlate như nhân quả (causal / 인과적) proof. Các 
 6. [[06_applied/14_work_stress_burnout_and_recovery]]
 
 Applied content ở đường dẫn (path / 경로) này phải giải thích cơ chế (mechanism / 메커니즘) và bằng chứng (evidence / 증거) strength; không dùng motivational slogan như psychological law.
+
+> **Chuyển mạch:** Trong **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 7 — Stress, coping và everyday self-regulation** xác định đầu vào; **Reading đường dẫn (path / 경로) 8 — Mental health, psychopathology và intervention** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 9 — Freud, Adler, Jung và historical schools** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reading đường dẫn (path / 경로) 8 — Mental health, psychopathology và intervention
 
@@ -185,6 +204,8 @@ Applied content ở đường dẫn (path / 경로) này phải giải thích c�
 
 Các tệp (file / 파일) `02_anxiety_ocd_and_trauma.md`, `03_depression_bipolar_and_suicidality.md` và `05_neurodevelopmental_adhd_autism.md` được giữ làm tính tương thích (compatibility / 호환성) cầu nối (bridge / 브리지); lộ trình học (learning path / 학습 경로) mới đi thẳng vào chuẩn gốc (canonical / 정본) chapter. Đây là lộ trình học (learning path / 학습 경로), không phải công cụ tự chẩn đoán.
 
+> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 8 — Mental health, psychopathology và intervention** xác định đầu vào; **Reading đường dẫn (path / 경로) 9 — Freud, Adler, Jung và historical schools** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 10 — công việc (work / 작업), leadership và nhóm (team / 팀)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 9 — Freud, Adler, Jung và historical schools
 
 1. [[00_foundations/01_history_and_major_perspectives]]
@@ -198,6 +219,8 @@ Các tệp (file / 파일) `02_anxiety_ocd_and_trauma.md`, `03_depression_bipola
 
 Mục tiêu là hiểu **historical influence**, không “chứng minh” historical các hệ thống (systems / 시스템들) bằng construct hiện đại có tên tương tự.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 9 — Freud, Adler, Jung và historical schools** xác định đầu vào; **Reading đường dẫn (path / 경로) 10 — công việc (work / 작업), leadership và nhóm (team / 팀)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 11 — quyết định (decision / 결정), finance và negotiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 10 — công việc (work / 작업), leadership và nhóm (team / 팀)
 
 1. [[06_applied/00_work_organization_and_leadership]]
@@ -208,6 +231,8 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 6. [[06_applied/14_work_stress_burnout_and_recovery]]
 7. [[06_applied/22_career_vocational_psychology_and_person_environment_fit]]
 
+> **Chuyển mạch:** Trong **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 10 — công việc (work / 작업), leadership và nhóm (team / 팀)** xác định đầu vào; **Reading đường dẫn (path / 경로) 11 — quyết định (decision / 결정), finance và negotiation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 12 — HCI, digital psychology và AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 11 — quyết định (decision / 결정), finance và negotiation
 
 1. [[02_learning_and_cognition/02_thinking_language_and_decision]]
@@ -215,6 +240,8 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 3. [[02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]]
 4. [[06_applied/18_financial_psychology_and_personal_decision_making]]
 5. [[06_applied/20_negotiation_conflict_and_joint_decision_making]]
+
+> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 11 — quyết định (decision / 결정), finance và negotiation** xác định đầu vào; **Reading đường dẫn (path / 경로) 12 — HCI, digital psychology và AI** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Reading đường dẫn (path / 경로) 13 — Health, body và ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reading đường dẫn (path / 경로) 12 — HCI, digital psychology và AI
 
@@ -226,6 +253,8 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 6. [[90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]]
 7. [[90_connections/03_risk_uncertainty_and_science_communication]]
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 12 — HCI, digital psychology và AI** xác định đầu vào; **Reading đường dẫn (path / 경로) 13 — Health, body và ngữ cảnh (context / 맥락)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Nguyên tắc viết chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Reading đường dẫn (path / 경로) 13 — Health, body và ngữ cảnh (context / 맥락)
 
 1. [[01_brain_and_mind/04_interoception_pain_and_embodied_mind]]
@@ -235,6 +264,8 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 5. [[06_applied/13_placebo_nocebo_expectation_and_context]]
 
 Đường dẫn (path / 경로) này tránh false dichotomy “biological hoặc psychological”.
+
+> **Chuyển mạch:** Trong **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Reading đường dẫn (path / 경로) 13 — Health, body và ngữ cảnh (context / 맥락)** xác định đầu vào; **Nguyên tắc viết chapter** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên tắc viết chapter
 
@@ -251,10 +282,12 @@ Một chapter tốt cần trả lời tự nhiên:
 
 Không dùng bullet thay lập luận (reasoning / 추론) nếu phần đó cần explanatory prose.
 
+> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Nguyên tắc viết chapter** nêu điều cần giải thích; **Chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)
 
 Psychology đã được hợp nhất vào `main`. Các branch `feat/psychology-*` chỉ là snapshot lịch sử và không còn là nguồn chuẩn (source of truth / 정본).
 
 Mọi thay đổi mới phải cập nhật trực tiếp chuẩn gốc (canonical / 정본) content trên `main` và ghi nhận chất lượng (quality / 품질) gap, bằng chứng (evidence / 증거) refresh hoặc điều hướng (navigation / 내비게이션) thay đổi (change / 변경) trong [[COVERAGE_AUDIT]].
 
-> **Bàn giao:** Sau **chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CONCEPTUAL DEPENDENCIES](./CONCEPTUAL_DEPENDENCIES.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

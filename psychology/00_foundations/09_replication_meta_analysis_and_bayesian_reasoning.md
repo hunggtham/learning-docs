@@ -1,7 +1,6 @@
 # Tái lập, phân tích tổng hợp và suy luận Bayes
 
-> **Mạch đọc:** Đọc **Tái lập, phân tích tổng hợp và suy luận Bayes** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Tái lập là gì?** sang **2. Replication thất bại (failure / 실패) có nhiều nguyên nhân**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tái lập, phân tích tổng hợp và suy luận Bayes**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tái lập là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Replication thất bại (failure / 실패) có nhiều nguyên nhân** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Mạch này nối replication, meta-analysis và Bayesian reasoning, để bằng chứng được tổng hợp qua variation, prior và effect size.
 
 Một nghiên cứu đơn lẻ hiếm khi đủ để xác lập một psychological claim. Khoa học tích lũy cần biết kết quả có tái xuất hiện không, tác động (effect / 효과) lớn đến đâu, đo lường (measurement / 측정) có ổn không, literature có publication độ lệch (bias / 편향) không và bất định (uncertainty / 불확실성) thay đổi thế nào khi có dữ liệu mới.
 
@@ -17,6 +16,8 @@ Xem [[../EVIDENCE_STATUS_GUIDE]].
 
 Replication không phải nhị phân (binary / 이진) pass/thất bại (fail / 실패). Cần so tác động (effect / 효과) estimate, bất định (uncertainty / 불확실성), thiết kế (design / 설계) fidelity, mẫu (sample / 표본), đo lường (measurement / 측정) và ranh giới (boundary / 경계) conditions.
 
+> **Chuyển mạch:** Trong **Tái lập, phân tích tổng hợp và suy luận Bayes**, **2. Replication thất bại (failure / 실패) có nhiều nguyên nhân** tiếp nhận điểm tựa từ **1. Tái lập là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Kích thước hiệu ứng và độ chính xác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Replication thất bại (failure / 실패) có nhiều nguyên nhân
 
 Khi replication không tái tạo original tác động (effect / 효과), các possibility gồm:
@@ -30,11 +31,15 @@ Khi replication không tái tạo original tác động (effect / 효과), các 
 
 Vì vậy “không replicate” không tự động nghĩa fraud hoặc lý thuyết (theory / 이론) sai hoàn toàn.
 
+> **Chuyển mạch:** Ở chặng này của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **3. Kích thước hiệu ứng và độ chính xác** tiếp nhận điểm tựa từ **2. Replication thất bại (failure / 실패) có nhiều nguyên nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Giá trị p không phải bằng chứng (evidence / 증거) quy mô (scale / 규모) hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Kích thước hiệu ứng và độ chính xác
 
 **Kích thước hiệu ứng (effect size)** trả lời “difference/association lớn bao nhiêu?”, còn confidence interval hoặc posterior phân phối (distribution / 분포) phản ánh bất định (uncertainty / 불확실성) quanh estimate.
 
 Một tác động (effect / 효과) nhỏ nhưng precise có thể đáng tin hơn tác động (effect / 효과) lớn nhưng interval rất rộng. Practical significance còn phụ thuộc kết quả (outcome / 결과), chi phí (cost / 비용), prevalence và hiện thực (implementation / 구현).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **3. Kích thước hiệu ứng và độ chính xác** nêu điều cần giải thích; **4. Giá trị p không phải bằng chứng (evidence / 증거) quy mô (scale / 규모) hoàn chỉnh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Statistical power và winner's curse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Giá trị p không phải bằng chứng (evidence / 증거) quy mô (scale / 규모) hoàn chỉnh
 
@@ -42,11 +47,15 @@ Giá trị p có thể useful trong một testing khung phần mềm (framework 
 
 Dichotomizing `p < .05` thành “real” và `p ≥ .05` thành “no tác động (effect / 효과)” làm mất thông tin. Khoa học tích lũy nên đọc estimate, bất định (uncertainty / 불확실성), thiết kế (design / 설계) và prior bằng chứng (evidence / 증거) cùng nhau.
 
+> **Chuyển mạch:** Trong **Tái lập, phân tích tổng hợp và suy luận Bayes**, **4. Giá trị p không phải bằng chứng (evidence / 증거) quy mô (scale / 규모) hoàn chỉnh** nêu điều cần giải thích; **5. Statistical power và winner's curse** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Multiple testing và researcher degrees of freedom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Statistical power và winner's curse
 
 Study có low power thường tạo two problems. Thứ nhất, true tác động (effect / 효과) dễ bị bỏ sót. Thứ hai, những kết quả (result / 결과) tình cờ vượt significance threshold thường là estimate lớn hơn true tác động (effect / 효과) — một dạng **winner's curse**.
 
 Điều này góp phần giải thích vì sao original small studies có thể báo tác động (effect / 효과) lớn hơn later replications.
+
+> **Chuyển mạch:** Ở chặng này của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **6. Multiple testing và researcher degrees of freedom** tiếp nhận điểm tựa từ **5. Statistical power và winner's curse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Meta-analysis không đơn giản là “lấy trung bình paper”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Multiple testing và researcher degrees of freedom
 
@@ -55,6 +64,8 @@ Nếu researcher thử nhiều outcomes, exclusions, covariates và phân tích 
 Các giải pháp gồm preregistration, registered reports, transparent multiverse/sensitivity phân tích (analysis / 분석) và reporting toàn bộ phân tích (analysis / 분석) không gian (space / 공간) có ý nghĩa.
 
 Xem [[06_open_science_and_evidence_evaluation]].
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **7. Meta-analysis không đơn giản là “lấy trung bình paper”** tiếp nhận điểm tựa từ **6. Multiple testing và researcher degrees of freedom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Heterogeneity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Meta-analysis không đơn giản là “lấy trung bình paper”
 
@@ -66,11 +77,15 @@ Fixed-effect mô hình (model / 모델) giả định studies share một dùng 
 
 Trong psychology, population, đo lường (measurement / 측정) và ngữ cảnh (context / 맥락) thường khác nhau, nên heterogeneity hiếm khi chỉ là nuisance. Nó có thể là scientific tín hiệu (signal / 신호) cho ranh giới (boundary / 경계) điều kiện (condition / 조건).
 
+> **Chuyển mạch:** Trong **Tái lập, phân tích tổng hợp và suy luận Bayes**, **8. Heterogeneity** tiếp nhận điểm tựa từ **7. Meta-analysis không đơn giản là “lấy trung bình paper”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Publication độ lệch (bias / 편향) và small-study effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Heterogeneity
 
 Statistics như `I²` thường được dùng để mô tả proportion variation beyond sampling lỗi (error / 오류), nhưng không nên đọc máy móc. I² phụ thuộc precision và study set; prediction interval có thể hữu ích hơn khi hỏi future study tác động (effect / 효과) có thể nằm trong phạm vi (range / 범위) nào.
 
 Nếu average tác động (effect / 효과) dương nhưng prediction interval rộng qua zero, conclusion thực tế khác nhiều so với “meta-analysis significant”.
+
+> **Chuyển mạch:** Ở chặng này của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **9. Publication độ lệch (bias / 편향) và small-study effects** tiếp nhận điểm tựa từ **8. Heterogeneity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Dependence giữa tác động (effect / 효과) sizes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Publication độ lệch (bias / 편향) và small-study effects
 
@@ -78,17 +93,23 @@ Literature chỉ chứa published studies có thể overrepresent surprising/pos
 
 Do đó độ lệch (bias / 편향) phân tích (analysis / 분석) nên được xem là **sensitivity lập luận (reasoning / 추론)**, không phải nút bấm “sửa publication độ lệch (bias / 편향)”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **10. Dependence giữa tác động (effect / 효과) sizes** tiếp nhận điểm tựa từ **9. Publication độ lệch (bias / 편향) và small-study effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Meta-analysis của đo lường (measurement / 측정) kém vẫn có thể cho answer kém** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Dependence giữa tác động (effect / 효과) sizes
 
 Một paper có thể báo nhiều outcomes, nhiều thời gian (time / 시간) points hoặc nhiều subgroup effects. Nếu meta-analysis coi mọi estimate là independent, tiêu chuẩn (standard / 표준) errors có thể sai.
 
 Multilevel meta-analysis, robust variance estimation hoặc pre-specified tác động (effect / 효과) selection giúp xử lý dependence phù hợp hơn.
 
+> **Chuyển mạch:** Trong **Tái lập, phân tích tổng hợp và suy luận Bayes**, **10. Dependence giữa tác động (effect / 효과) sizes** nêu điều cần giải thích; **11. Meta-analysis của đo lường (measurement / 측정) kém vẫn có thể cho answer kém** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Bayesian lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Meta-analysis của đo lường (measurement / 측정) kém vẫn có thể cho answer kém
 
 Nếu studies dùng instruments không comparable, độ tin cậy (reliability / 신뢰성) thấp hoặc construct definition khác nhau, pooled tác động (effect / 효과) có thể khó interpret dù mẫu (sample / 표본) tổng rất lớn.
 
 Đây là lý do [[05_psychometrics_and_test_interpretation]] và meta-analysis phải được đọc cùng nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **11. Meta-analysis của đo lường (measurement / 측정) kém vẫn có thể cho answer kém** nêu điều cần giải thích; **12. Bayesian lập luận (reasoning / 추론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Bayes factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Bayesian lập luận (reasoning / 추론)
 
@@ -102,11 +123,15 @@ Trong đó `p(θ)` là prior, `p(D|θ)` là likelihood và `p(θ|D)` là posteri
 
 Bayesian lập luận (reasoning / 추론) cho phép hỏi trực tiếp về xác suất (probability / 확률) phân phối (distribution / 분포) của parameter dưới mô hình (model / 모델). Nhưng kết quả (result / 결과) không “khách quan tự động”; prior, likelihood và mô hình (model / 모델) các giả định (assumptions / 가정들) phải được công khai và kiểm tra sensitivity.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **13. Bayes factor** tiếp nhận điểm tựa từ **12. Bayesian lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Prior không phải “độ lệch (bias / 편향) xấu” theo mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Bayes factor
 
 **Bayes factor** so relative predictive bằng chứng (evidence / 증거) của hai các mô hình (models / 모델들)/hypotheses. Nó có thể cung cấp bằng chứng (evidence / 증거) cho null so với alternative, điều mà nonsignificant p-value không tự làm được.
 
 Tuy nhiên Bayes factor có thể rất sensitive với prior specification. “BF = 10” không nên đọc như universal truth threshold mà không xem các mô hình (models / 모델들) đã được định nghĩa thế nào.
+
+> **Chuyển mạch:** Trong **Tái lập, phân tích tổng hợp và suy luận Bayes**, **14. Prior không phải “độ lệch (bias / 편향) xấu” theo mặc định** tiếp nhận điểm tựa từ **13. Bayes factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Registered Reports và cải cách incentive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Prior không phải “độ lệch (bias / 편향) xấu” theo mặc định
 
@@ -114,17 +139,23 @@ Prior có thể weakly informative, skeptical hoặc được xây từ previous
 
 Một prior được chọn sau khi nhìn dữ liệu (data / 데이터) để tạo desired kết quả (result / 결과) phá vỡ lô-gic (logic / 논리) pre-data của Bayesian mô hình (model / 모델) tương tự như researcher flexibility ở frequentist phân tích (analysis / 분석).
 
+> **Chuyển mạch:** Ở chặng này của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **15. Registered Reports và cải cách incentive** tiếp nhận điểm tựa từ **14. Prior không phải “độ lệch (bias / 편향) xấu” theo mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Replication và đo lường (measurement / 측정) reporting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Registered Reports và cải cách incentive
 
 **Registered Report** peer-reviews question và phương thức (method / 메서드) trước khi kết quả (outcome / 결과) được biết. Publication quyết định (decision / 결정) được tách phần lớn khỏi direction của kết quả (result / 결과), giảm incentive chỉ publish positive findings.
 
 Preregistration và Registered Reports không đảm bảo study tốt; bad thiết kế (design / 설계) có thể preregister. Nhưng chúng làm distinction giữa confirmatory và exploratory phân tích (analysis / 분석) rõ hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **15. Registered Reports và cải cách incentive** nêu điều cần giải thích; **16. Replication và đo lường (measurement / 측정) reporting** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Meta-analysis không tự động nâng claim thành established bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Replication và đo lường (measurement / 측정) reporting
 
 Một điểm ngày càng được chú ý là replication không thể được đánh giá đầy đủ nếu measure không được mô tả rõ. độ tin cậy (reliability / 신뢰성), scoring, item content, validity bằng chứng (evidence / 증거) và invariance có thể thay đổi giữa labs.
 
 Nếu same label được dùng cho instrument hoạt động khác nhau ở các samples, “tác động (effect / 효과) không replicate” có thể partly là đo lường (measurement / 측정) non-equivalence.
+
+> **Chuyển mạch:** Trong **Tái lập, phân tích tổng hợp và suy luận Bayes**, **16. Replication và đo lường (measurement / 측정) reporting** nêu điều cần giải thích; **17. Meta-analysis không tự động nâng claim thành established bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Năm mức trạng thái bằng chứng (evidence / 증거) trong thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Meta-analysis không tự động nâng claim thành established bằng chứng (evidence / 증거)
 
@@ -138,6 +169,8 @@ Một meta-analysis lớn vẫn có thể dựa vào:
 - outdated samples.
 
 Bằng chứng (evidence / 증거) status phải dựa vào **toàn bộ suy luận (inference / 추론) chuỗi (chain / 사슬)**, không chỉ vị trí cao của phương thức (method / 메서드) trong một hierarchy.
+
+> **Chuyển mạch:** Ở chặng này của **Tái lập, phân tích tổng hợp và suy luận Bayes**, **17. Meta-analysis không tự động nâng claim thành established bằng chứng (evidence / 증거)** nêu điều cần giải thích; **18. Năm mức trạng thái bằng chứng (evidence / 증거) trong thư viện (library / 라이브러리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Năm mức trạng thái bằng chứng (evidence / 증거) trong thư viện (library / 라이브러리)
 
@@ -161,6 +194,8 @@ Dùng khi literature hoặc cơ chế (mechanism / 메커니즘) interpretation 
 
 Dùng cho các hệ thống (systems / 시스템들) như classical Freud, Adler, Jung khi mô tả historical khung phần mềm (framework / 프레임워크), không phải hiện tại (current / 현재) scientific consensus.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tái lập, phân tích tổng hợp và suy luận Bayes**, các dấu vết trong **18. Năm mức trạng thái bằng chứng (evidence / 증거) trong thư viện (library / 라이브러리)** được đọc cùng nhau ở **19. mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
@@ -177,6 +212,8 @@ Cumulative evidence
 Update confidence, không phải binary proof
 ```
 
+> **Chuyển mạch:** Trong **Tái lập, phân tích tổng hợp và suy luận Bayes**, **Kết nối kiến thức** gom các mảnh từ **19. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [[03_measurement_statistics]], [[05_psychometrics_and_test_interpretation]], [[06_open_science_and_evidence_evaluation]], [[08_causal_inference_and_psychological_evidence]] và [[02_research_methods]].
@@ -189,4 +226,4 @@ Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đ�
 - Literature về Bayesian re-analysis của replication nhấn mạnh effect-size overestimation, weak bằng chứng (evidence / 증거) và publication độ lệch (bias / 편향) có thể quan trọng hơn nhị phân (binary / 이진) replicated/not-replicated framing.
 - Measurement-focused replication công việc (work / 작업) gần đây cho thấy reporting về độ tin cậy (reliability / 신뢰성), validity và invariance vẫn chưa đồng đều, vì vậy reproducibility cần bao gồm reproducibility của đo lường (measurement / 측정).
 
-> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

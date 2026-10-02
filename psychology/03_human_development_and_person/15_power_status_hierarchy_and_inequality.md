@@ -1,7 +1,6 @@
 # Quyền lực, địa vị, thứ bậc và bất bình đẳng
 
-> **Mạch đọc:** Đọc **Quyền lực, địa vị, thứ bậc và bất bình đẳng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Quyền lực thay đổi mức phụ thuộc và attention** sang **2. Approach–inhibition các mô hình (models / 모델들)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Quyền lực thay đổi mức phụ thuộc và attention** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Approach–inhibition các mô hình (models / 모델들)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối power, status, hierarchy và inequality, để nguồn lực xã hội đi vào hành vi, cơ hội và kết quả.
 
 Con người sống trong các hệ thống có **quyền lực (power)**, **địa vị (status)**, **uy tín (prestige)** và **thứ bậc (hierarchy)**. Các khái niệm này liên quan nhưng không đồng nhất.
 
@@ -21,6 +20,8 @@ constraint nào đã biến mất?
 accountability còn đủ không?
 ```
 
+> **Chuyển mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **2. Approach–inhibition các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **1. Quyền lực thay đổi mức phụ thuộc và attention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Status tín hiệu (signal / 신호) và confidence–competence gap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Approach–inhibition các mô hình (models / 모델들)
 
 Một số mô hình hiện đại đề xuất rằng quyền lực cao có thể tăng xu hướng **tiếp cận (approach)** như chủ động, focus reward và risk-taking, trong khi quyền lực thấp tăng vigilance với threat và hậu quả xã hội.
@@ -29,11 +30,15 @@ Một số mô hình hiện đại đề xuất rằng quyền lực cao có th�
 
 Một junior theo dõi phản ứng của cấp cao (senior / 시니어) rất kỹ có thể đang phản ứng hợp lý với chi phí (cost / 비용) sai lệch cao hơn. Im lặng trong meeting vì vậy không tự động nghĩa là đồng ý.
 
+> **Chuyển mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **3. Status tín hiệu (signal / 신호) và confidence–competence gap** tiếp nhận điểm tựa từ **2. Approach–inhibition các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Prestige và dominance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Status tín hiệu (signal / 신호) và confidence–competence gap
 
 Con người suy luận status từ chức danh, expertise, mạng (network / 네트워크), cách nói hoặc mức được người khác chú ý.
 
 Tín hiệu (signal / 신호) có thể hữu ích nhưng cũng tạo độ lệch (bias / 편향): sự tự tin dễ bị nhầm với năng lực. Structured quyết định (decision / 결정) tiến trình (process / 프로세스), independent estimate và bằng chứng (evidence / 증거) rà soát (review / 검토) giúp giảm việc status bề mặt chi phối nội dung.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **4. Prestige và dominance** tiếp nhận điểm tựa từ **3. Status tín hiệu (signal / 신호) và confidence–competence gap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Hierarchy có chức năng phối hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Prestige và dominance
 
@@ -43,6 +48,8 @@ Hai con đường tạo ảnh hưởng thường được phân biệt:
 - **thống trị (dominance)**: influence dựa trên threat, fear hoặc coercion.
 
 Cả hai có thể tạo compliance nhưng climate rất khác. Prestige thường phù hợp hơn với môi trường học hỏi và kiến thức (knowledge / 지식) sharing.
+
+> **Chuyển mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **5. Hierarchy có chức năng phối hợp** tiếp nhận điểm tựa từ **4. Prestige và dominance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Power distance và văn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Hierarchy có chức năng phối hợp
 
@@ -54,6 +61,8 @@ Flat organization vẫn thường hình thành informal hierarchy. Vấn đề q
 - thông tin xấu có đi ngược chiều lên được không;
 - người có authority có accountability không.
 
+> **Chuyển mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **6. Power distance và văn hóa** tiếp nhận điểm tựa từ **5. Hierarchy có chức năng phối hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Authority độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Power distance và văn hóa
 
 **Khoảng cách quyền lực (power distance)** mô tả mức một culture hoặc organization chấp nhận hierarchy bất bình đẳng.
@@ -61,6 +70,8 @@ Flat organization vẫn thường hình thành informal hierarchy. Vấn đề q
 Trong môi trường (environment / 환경) power distance cao, challenge cấp cao (senior / 시니어) trực tiếp có thể mang xã hội (social / 사회적) chi phí (cost / 비용) lớn. Nói “mọi người cứ speak up” không đủ nếu appraisal, promotion hoặc face mất mát (loss / 손실) vẫn trừng phạt dissent.
 
 Xem [[16_acculturation_migration_and_bicultural_identity]] và [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **7. Authority độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **6. Power distance và văn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Obedience và responsibility diffusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Authority độ lệch (bias / 편향)
 
@@ -75,6 +86,8 @@ authority này có expertise đúng domain không?
 evidence nào độc lập với status?
 ```
 
+> **Chuyển mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **8. Obedience và responsibility diffusion** tiếp nhận điểm tựa từ **7. Authority độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Inequality, scarcity và cognitive bandwidth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Obedience và responsibility diffusion
 
 Nghiên cứu về obedience cho thấy role, legitimacy của institution và diffusion of responsibility có thể ảnh hưởng hành vi.
@@ -82,6 +95,8 @@ Nghiên cứu về obedience cho thấy role, legitimacy của institution và d
 Trong hierarchy dài, mỗi người có thể cảm thấy mình chỉ làm một phần tiến trình (process / 프로세스) nên trách nhiệm đạo đức bị “pha loãng”. kiểm tra (audit / 감사) trail, escalation đường dẫn (path / 경로) và accountability rõ giúp chống ethical fading.
 
 Xem [[08_moral_psychology_and_prosocial_behavior]].
+
+> **Chuyển mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **9. Inequality, scarcity và cognitive bandwidth** tiếp nhận điểm tựa từ **8. Obedience và responsibility diffusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Status anxiety và xã hội (social / 사회적) comparison** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Inequality, scarcity và cognitive bandwidth
 
@@ -93,6 +108,8 @@ Không nên diễn giải scarcity thành “người nghèo irrational hơn”.
 
 Xem [[../06_applied/18_financial_psychology_and_personal_decision_making]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **10. Status anxiety và xã hội (social / 사회적) comparison** tiếp nhận điểm tựa từ **9. Inequality, scarcity và cognitive bandwidth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Gender, di chuyển (migration / 마이그레이션) và role power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Status anxiety và xã hội (social / 사회적) comparison
 
 Khi rank xã hội trở thành threat, comparison và vigilance tăng. Status anxiety có thể thúc đẩy overwork, consumption hoặc impression management.
@@ -100,6 +117,8 @@ Khi rank xã hội trở thành threat, comparison và vigilance tăng. Status a
 Mạng xã hội làm comparison hiển thị và lặp lại hơn, nhưng tác động (effect / 효과) phụ thuộc cách dùng và cá nhân. Không nên nói xã hội (social / 사회적) media tự động gây status anxiety.
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
+
+> **Chuyển mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **11. Gender, di chuyển (migration / 마이그레이션) và role power** tiếp nhận điểm tựa từ **10. Status anxiety và xã hội (social / 사회적) comparison** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Workplace politics và allocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Gender, di chuyển (migration / 마이그레이션) và role power
 
@@ -109,11 +128,15 @@ Tương tự, người di cư có thể mất occupational status vì ngôn ng�
 
 Xem [[05_sex_gender_and_identity]] và [[16_acculturation_migration_and_bicultural_identity]].
 
+> **Chuyển mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **12. Workplace politics và allocation** tiếp nhận điểm tựa từ **11. Gender, di chuyển (migration / 마이그레이션) và role power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Workplace politics và allocation
 
 Organization luôn có tài nguyên (resource / 자원) khan hiếm như promotion, headcount và visibility. Politics xuất hiện khi formal quy tắc (rule / 규칙) không đủ quyết định allocation.
 
 Political skill không đồng nghĩa manipulation; nó có thể là hiểu stakeholder, timing và influence theo cách có đạo đức. Tuy nhiên tiến trình (process / 프로세스) mơ hồ làm rumor và distrust tăng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực** tiếp nhận điểm tựa từ **12. Workplace politics và allocation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Upward phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực
 
@@ -123,6 +146,8 @@ Nếu nói `quality first` nhưng chỉ celebrate deadline, nhóm (team / 팀) h
 
 Xem [[../06_applied/00_work_organization_and_leadership]].
 
+> **Chuyển mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **14. Upward phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Expert power và kiến thức (knowledge / 지식) concentration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Upward phản hồi (feedback / 피드백)
 
 Phản hồi (feedback / 피드백) đi lên khó vì evaluation rủi ro (risk / 위험).
@@ -131,11 +156,15 @@ Anonymous survey có thể tăng candor nhưng không tạo trust nếu không c
 
 Đây là lý do psychological an toàn (safety / 안전) phải được nhìn như thuộc tính (property / 속성) của tương tác (interaction / 상호작용) hệ thống (system / 시스템), không chỉ personality của employee.
 
+> **Chuyển mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **15. Expert power và kiến thức (knowledge / 지식) concentration** tiếp nhận điểm tựa từ **14. Upward phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. mạng (network / 네트워크) power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Expert power và kiến thức (knowledge / 지식) concentration
 
 Expertise tạo power ngay cả khi không có title. Trong technical nhóm (team / 팀), người duy nhất hiểu legacy hệ thống (system / 시스템) có **phụ thuộc (dependency / 의존성) power** lớn.
 
 Bus factor thấp là một vấn đề quyền lực tổ chức: kiến thức (knowledge / 지식) concentration làm nhóm (team / 팀) phụ thuộc một cá nhân. Documentation, pair công việc (work / 작업) và cross-training giảm phụ thuộc (dependency / 의존성) mà không làm mất expertise.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **16. mạng (network / 네트워크) power** tiếp nhận điểm tựa từ **15. Expert power và kiến thức (knowledge / 지식) concentration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Accountability không đồng nghĩa punishment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. mạng (network / 네트워크) power
 
@@ -143,11 +172,15 @@ Người kết nối nhiều nhóm có truy cập (access / 접근) thông tin (
 
 Hệ thống (system / 시스템) tốt cần tận dụng cầu nối (bridge / 브리지) role nhưng tránh tạo single bottleneck.
 
+> **Chuyển mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **17. Accountability không đồng nghĩa punishment** tiếp nhận điểm tựa từ **16. mạng (network / 네트워크) power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Ranh giới bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Accountability không đồng nghĩa punishment
 
 Power ít ràng buộc (constraint / 제약조건) có thể tăng rủi ro (risk / 위험) self-serving hành vi (behavior / 동작) ở một số ngữ cảnh (context / 맥락), nhưng accountability phù hợp có thể counteract.
 
 Accountability gồm transparency, rà soát (review / 검토), traceability và yêu cầu (requirement / 요구사항) giải thích quyết định (decision / 결정), không chỉ punishment sau lỗi.
+
+> **Chuyển mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **17. Accountability không đồng nghĩa punishment** nêu điều cần giải thích; **18. Ranh giới bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Ranh giới bằng chứng
 
@@ -159,6 +192,8 @@ Accountability gồm transparency, rà soát (review / 검토), traceability và
 
 **Không được nói:** power luôn làm người ta xấu, flat organization không có hierarchy, hoặc confidence chứng minh competence.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **18. Ranh giới bằng chứng** nêu điều cần giải thích; **19. Những hiểu lầm phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Những hiểu lầm phổ biến
 
 **“Power luôn corrupt.”** Quá thô.
@@ -168,6 +203,8 @@ Accountability gồm transparency, rà soát (review / 검토), traceability và
 **“Flat nhóm (team / 팀) không có status.”** Informal hierarchy vẫn xuất hiện.
 
 **“Người có title cao nhất luôn có expertise cao nhất.”** Authority và expertise là hai construct khác nhau.
+
+> **Chuyển mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **Mô hình tư duy** gom các mảnh từ **19. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -187,6 +224,10 @@ reinforcement của hierarchy
 
 > Quyền lực không phải một “tính cách”; nó là quan hệ giữa người, tài nguyên (resource / 자원), role và ràng buộc (constraint / 제약조건).
 
+> **Chuyển mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [[10_group_dynamics_collective_behavior_and_cooperation]], [[08_moral_psychology_and_prosocial_behavior]], [[16_acculturation_migration_and_bicultural_identity]], [[../06_applied/00_work_organization_and_leadership]], [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]], [[../06_applied/18_financial_psychology_and_personal_decision_making]] và [[../06_applied/20_negotiation_conflict_and_joint_decision_making]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

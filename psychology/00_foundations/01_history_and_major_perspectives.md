@@ -1,7 +1,6 @@
 # Lịch sử và các cách tiếp cận lớn trong tâm lý học
 
-> **Mạch đọc:** Đọc **Lịch sử và các cách tiếp cận lớn trong tâm lý học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Từ triết học sang khoa học thực nghiệm** sang **2. Structuralism và giới hạn của introspection**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ triết học sang khoa học thực nghiệm** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Structuralism và giới hạn của introspection** để soi ranh giới và điểm dễ nhầm. Mạch này nối history với major perspectives, để lý thuyết được đọc trong bối cảnh hình thành và giới hạn bằng chứng.
 
 Lịch sử tâm lý học không phải chuỗi trường phái cũ lần lượt bị thay thế bởi trường phái mới. Nó giống lịch sử của các mô hình khoa học: mỗi cách tiếp cận làm nổi bật một loại câu hỏi, một loại bằng chứng và một mức phân tích khác nhau. Một số khái niệm lịch sử bị bác bỏ hoặc sửa mạnh; một số câu hỏi của chúng vẫn tồn tại dưới hình thức mới trong khoa học thần kinh, khoa học nhận thức, khoa học hành vi và psychotherapy hiện đại.
 
@@ -15,11 +14,15 @@ Trước thế kỷ XIX, các câu hỏi về perception, bộ nhớ (memory / �
 
 Phòng thí nghiệm của Wilhelm Wundt tại Leipzig năm 1879 thường được xem là mốc biểu tượng của psychology như một discipline độc lập. Ý nghĩa lớn hơn của giai đoạn này là sự chuyển dịch từ suy đoán tổng quát sang tác vụ (task / 작업) có thể lặp lại, đo thời gian phản ứng, sai số và điều kiện kiểm soát.
 
+> **Chuyển mạch:** Trong **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **1. Từ triết học sang khoa học thực nghiệm** đã nêu tiêu chí phân biệt, còn **2. Structuralism và giới hạn của introspection** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Functionalism và câu hỏi “tiến trình (process / 프로세스) này để làm gì?”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Structuralism và giới hạn của introspection
 
 **Structuralism** cố phân tích trải nghiệm có ý thức thành các thành phần thông qua introspection được huấn luyện. Chương trình này có giá trị lịch sử vì đặt câu hỏi về cấu trúc của experience, nhưng introspective report khó chuẩn hóa và khó kiểm chứng độc lập.
 
 Hạn chế này góp phần thúc đẩy psychology tìm các chỉ số hành vi khách quan hơn. Tuy vậy, câu hỏi về cấu trúc của conscious experience không biến mất; nó trở lại trong perception science và consciousness science với đo lường (measurement / 측정) tinh vi hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **2. Structuralism và giới hạn của introspection** đã nêu tiêu chí phân biệt, còn **3. Functionalism và câu hỏi “tiến trình (process / 프로세스) này để làm gì?”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Gestalt: toàn thể không chỉ là tổng các phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Functionalism và câu hỏi “tiến trình (process / 프로세스) này để làm gì?”
 
@@ -27,11 +30,15 @@ Hạn chế này góp phần thúc đẩy psychology tìm các chỉ số hành 
 
 Cách đặt câu hỏi theo chức năng vẫn tồn tại mạnh trong psychology hiện đại, nhưng một explanation chức năng chưa đủ để chứng minh cơ chế (mechanism / 메커니즘). Nói một hành vi (behavior / 동작) “có lợi cho adaptation” không tự động chứng minh nó là evolutionary adaptation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **3. Functionalism và câu hỏi “tiến trình (process / 프로세스) này để làm gì?”** xác định đầu vào; **4. Gestalt: toàn thể không chỉ là tổng các phần** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Chủ nghĩa hành vi và sức mạnh của đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Gestalt: toàn thể không chỉ là tổng các phần
 
 Gestalt psychology chỉ ra rằng perception tổ chức đầu vào (input / 입력) thành mẫu (pattern / 패턴) có cấu trúc. Các nguyên tắc như figure–ground, proximity và closure cho thấy experience không được tạo ra bằng cách cộng cơ học từng sensation riêng lẻ.
 
 Ảnh hưởng của Gestalt còn thấy trong HCI, perception và cách hiện đại (modern / 현대적) cognitive science nghiên cứu organization. Tuy nhiên các Gestalt principles là mô tả mẫu (pattern / 패턴) perceptual; không nên biến chúng thành một grand lý thuyết (theory / 이론) giải thích mọi cognition.
+
+> **Chuyển mạch:** Trong **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **4. Gestalt: toàn thể không chỉ là tổng các phần** nêu điều cần giải thích; **5. Chủ nghĩa hành vi và sức mạnh của đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Freud và phân tâm học: ảnh hưởng lịch sử lớn, status khoa học cần tách claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Chủ nghĩa hành vi và sức mạnh của đo lường (measurement / 측정)
 
@@ -42,6 +49,8 @@ Conditioning research tạo ra các nguyên lý có độ bền cao về học t
 Hạn chế xuất hiện khi ngôn ngữ (language / 언어), planning, biểu diễn (representation / 표현) và flexible lập luận (reasoning / 추론) khó giải thích chỉ bằng chuỗi stimulus–phản hồi (response / 응답) đơn giản. Cognitive revolution không xóa behaviorism; nó mở rộng mức (level / 수준) of phân tích (analysis / 분석) bằng cách cho phép suy luận các quá trình bên trong nếu chúng tạo prediction có thể kiểm tra.
 
 Xem [[../02_learning_and_cognition/00_learning_and_conditioning]].
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **5. Chủ nghĩa hành vi và sức mạnh của đo lường (measurement / 측정)** nêu điều cần giải thích; **6. Freud và phân tâm học: ảnh hưởng lịch sử lớn, status khoa học cần tách claim** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Adler: goal, belonging và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Freud và phân tâm học: ảnh hưởng lịch sử lớn, status khoa học cần tách claim
 
@@ -55,6 +64,8 @@ Psychology hiện đại có bằng chứng tương đối vững rằng nhiều
 
 Xem [[../90_connections/00_freud_jung_and_depth_psychology_in_context]] và [[../90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **7. Adler: goal, belonging và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **6. Freud và phân tâm học: ảnh hưởng lịch sử lớn, status khoa học cần tách claim** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Jung và Analytical Psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Adler: goal, belonging và xã hội (social / 사회적) ngữ cảnh (context / 맥락)
 
 Alfred Adler tách khỏi vòng psychoanalytic của Freud và phát triển **Tâm lý học cá nhân (Individual Psychology)**. Adler nhấn mạnh feeling of inferiority, compensation, goal, xã hội (social / 사회적) interest và family ngữ cảnh (context / 맥락).
@@ -64,6 +75,8 @@ Alfred Adler tách khỏi vòng psychoanalytic của Freud và phát triển **T
 Hiện đại (modern / 현대적) motivation science, self-efficacy, belonging và family research có những câu hỏi tương tự ở một số điểm, nhưng similarity không phải kiểm tra hợp lệ (validation / 검증). Birth-order claims đặc biệt cần được đọc thận trọng vì popular interpretation thường mạnh hơn bằng chứng (evidence / 증거).
 
 Xem [[../90_connections/05_adler_individual_psychology_in_context]].
+
+> **Chuyển mạch:** Trong **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **8. Jung và Analytical Psychology** tiếp nhận điểm tựa từ **7. Adler: goal, belonging và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Humanistic psychology: agency, meaning và therapeutic relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Jung và Analytical Psychology
 
@@ -75,11 +88,15 @@ Recurring motifs giữa các nền văn hóa có thể được giải thích b�
 
 Xem [[../90_connections/00_freud_jung_and_depth_psychology_in_context]].
 
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **9. Humanistic psychology: agency, meaning và therapeutic relationship** tiếp nhận điểm tựa từ **8. Jung và Analytical Psychology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Cognitive revolution: quay lại tâm trí bằng mô hình (model / 모델) có thể kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Humanistic psychology: agency, meaning và therapeutic relationship
 
 **Tâm lý học nhân văn (humanistic psychology)**, gắn với Carl Rogers và Abraham Maslow, phản ứng với cả tính cơ học của behaviorism và tính quyết định luận của một số psychoanalytic traditions. Nó nhấn mạnh subjective experience, agency, meaning, growth và therapeutic relationship.
 
 Đóng góp quan trọng nhất không phải một “pyramid nhu cầu” cứng. hiện đại (modern / 현대적) psychology vẫn nghiên cứu autonomy, belonging, meaning và therapeutic alliance, nhưng hierarchy of needs không nên được trình bày như luật phổ quát bắt buộc mọi người phải đi qua từng tầng theo thứ tự.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **10. Cognitive revolution: quay lại tâm trí bằng mô hình (model / 모델) có thể kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **9. Humanistic psychology: agency, meaning và therapeutic relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Neuroscience: từ vị trí não tới mạng lưới và cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Cognitive revolution: quay lại tâm trí bằng mô hình (model / 모델) có thể kiểm thử (test / 테스트)
 
@@ -89,6 +106,8 @@ Giữa thế kỷ XX, linguistics, khoa học máy tính (computer science / 컴
 
 Xem [[../02_learning_and_cognition/02_thinking_language_and_decision]].
 
+> **Chuyển mạch:** Trong **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **10. Cognitive revolution: quay lại tâm trí bằng mô hình (model / 모델) có thể kiểm thử (test / 테스트)** xác định đầu vào; **11. Neuroscience: từ vị trí não tới mạng lưới và cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. xã hội (social / 사회적), cultural và feminist psychology: ai được coi là “con người điển hình”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Neuroscience: từ vị trí não tới mạng lưới và cơ chế (mechanism / 메커니즘)
 
 Lesion studies, electrophysiology, neuroimaging và molecular methods giúp nối psychological constructs với biological hiện thực (implementation / 구현). Nhưng neuroscience cũng từng tạo overclaim, chẳng hạn biến một activation map thành “vùng của love” hoặc “vùng của morality”.
@@ -96,6 +115,8 @@ Lesion studies, electrophysiology, neuroimaging và molecular methods giúp nố
 Hiện đại (modern / 현대적) neuroscience mạnh hơn khi dùng converging bằng chứng (evidence / 증거), network-level phân tích (analysis / 분석) và nhân quả (causal / 인과적) methods thay vì reverse suy luận (inference / 추론) từ một tín hiệu não duy nhất.
 
 Xem [[../01_brain_and_mind/00_nervous_system_and_brain]].
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **11. Neuroscience: từ vị trí não tới mạng lưới và cơ chế (mechanism / 메커니즘)** xác định đầu vào; **12. xã hội (social / 사회적), cultural và feminist psychology: ai được coi là “con người điển hình”?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Trait psychology và sự thay đổi trong nghiên cứu personality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. xã hội (social / 사회적), cultural và feminist psychology: ai được coi là “con người điển hình”?
 
@@ -105,6 +126,8 @@ Cultural psychology, feminist psychology và cross-cultural research giúp chỉ
 
 Xem [[../03_human_development_and_person/04_social_and_cultural_psychology]] và [[../03_human_development_and_person/16_acculturation_migration_and_bicultural_identity]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **13. Trait psychology và sự thay đổi trong nghiên cứu personality** tiếp nhận điểm tựa từ **12. xã hội (social / 사회적), cultural và feminist psychology: ai được coi là “con người điển hình”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Clinical psychology hiện đại không đồng nhất với một school** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Trait psychology và sự thay đổi trong nghiên cứu personality
 
 Historical typologies thường chia người thành các kiểu (type / 타입) cứng. hiện đại (modern / 현대적) personality research phần lớn dùng **dimension liên tục**, ví dụ Big Five, vì trait phân phối (distribution / 분포) và predictive quan hệ (relation / 관계) thường phù hợp hơn với continuum.
@@ -112,6 +135,8 @@ Historical typologies thường chia người thành các kiểu (type / 타입)
 Jungian kiểu (type / 타입) các hệ thống (systems / 시스템들) có giá trị lịch sử và cultural influence, nhưng hiện đại (modern / 현대적) psychometrics không mặc định rằng con người rơi vào các nhị phân (binary / 이진) kiểu (type / 타입) ổn định.
 
 Xem [[../03_human_development_and_person/03_personality]] và [[05_psychometrics_and_test_interpretation]].
+
+> **Chuyển mạch:** Trong **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **14. Clinical psychology hiện đại không đồng nhất với một school** tiếp nhận điểm tựa từ **13. Trait psychology và sự thay đổi trong nghiên cứu personality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Psychology hiện đại là mạng lưới nhiều subfield** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Clinical psychology hiện đại không đồng nhất với một school
 
@@ -129,11 +154,15 @@ Tương tự, effectiveness của CBT không có nghĩa mọi cognition luôn l�
 
 Xem [[../05_intervention/00_psychotherapy_and_change]] và [[../05_intervention/03_psychodynamic_humanistic_and_systemic_therapy]].
 
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **15. Psychology hiện đại là mạng lưới nhiều subfield** tiếp nhận điểm tựa từ **14. Clinical psychology hiện đại không đồng nhất với một school** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Cách đọc một lý thuyết (theory / 이론) lịch sử bằng tiêu chuẩn hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Psychology hiện đại là mạng lưới nhiều subfield
 
 Ngày nay psychology gồm cognitive, developmental, xã hội (social / 사회적), clinical, biological, quantitative, cultural, health, educational và industrial–organizational psychology. Một phenomenon như procrastination có thể được phân tích đồng thời qua reinforcement, executive điều khiển (control / 제어), emotion regulation, personality, xã hội (social / 사회적) norm và tác vụ (task / 작업) thiết kế (design / 설계).
 
 Sự đa dạng này không nhất thiết là fragmentation. Complex các hệ thống (systems / 시스템들) thường cần nhiều mức (level / 수준) of phân tích (analysis / 분석). Vấn đề chỉ xuất hiện khi một subfield biến mức (level / 수준) của mình thành explanation duy nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **16. Cách đọc một lý thuyết (theory / 이론) lịch sử bằng tiêu chuẩn hiện đại** tiếp nhận điểm tựa từ **15. Psychology hiện đại là mạng lưới nhiều subfield** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Cách đọc một lý thuyết (theory / 이론) lịch sử bằng tiêu chuẩn hiện đại
 
@@ -148,6 +177,8 @@ Khi gặp Freud, Adler, Jung hoặc bất kỳ grand lý thuyết (theory / 이�
 
 Đây là cách giữ giá trị lịch sử mà không đánh đổi tiêu chuẩn khoa học.
 
+> **Chuyển mạch:** Trong **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **17. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **16. Cách đọc một lý thuyết (theory / 이론) lịch sử bằng tiêu chuẩn hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Những hiểu lầm phổ biến
 
 **“Trường phái mới xuất hiện thì trường phái cũ hoàn toàn vô giá trị.”** Sai. lịch sử (history / 이력) có thể giữ câu hỏi, vocabulary và influence dù nhiều claim không còn đứng vững.
@@ -157,6 +188,8 @@ Khi gặp Freud, Adler, Jung hoặc bất kỳ grand lý thuyết (theory / 이�
 **“Psychology hiện đại có một grand lý thuyết (theory / 이론) thống nhất.”** Không. trường dữ liệu (field / 필드) hoạt động bằng nhiều mô hình (model / 모델) ở nhiều mức (level / 수준).
 
 **“Nếu một therapy hiệu quả thì lý thuyết (theory / 이론) gốc của nó chắc đúng.”** Sai. kết quả (outcome / 결과) bằng chứng (evidence / 증거) và theoretical truth là hai câu hỏi khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **18. Mô hình tư duy** gom các mảnh từ **17. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Mô hình tư duy
 
@@ -176,8 +209,10 @@ claim được giữ / sửa / bác bỏ / tái diễn giải
 
 > Lịch sử psychology hữu ích nhất khi được đọc như lịch sử của câu hỏi và mô hình (model / 모델), không phải danh sách “nhà tư tưởng nào đúng”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử và các cách tiếp cận lớn trong tâm lý học**, **Kết nối kiến thức** gom các mảnh từ **18. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Xem [[00_psychology_as_science]], [[02_research_methods]], [[06_open_science_and_evidence_evaluation]], [[../01_brain_and_mind/00_nervous_system_and_brain]], [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../03_human_development_and_person/03_personality]], [[../05_intervention/03_psychodynamic_humanistic_and_systemic_therapy]], [[../90_connections/00_freud_jung_and_depth_psychology_in_context]], [[../90_connections/05_adler_individual_psychology_in_context]] và [[../90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

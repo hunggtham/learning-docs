@@ -1,7 +1,6 @@
 # Tâm lý học như một khoa học
 
-> **Mạch đọc:** Đọc **Tâm lý học như một khoa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Từ dùng chung (common / 공통) sense sang scientific question** sang **2. Construct và observable indicator**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tâm lý học như một khoa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Từ dùng chung (common / 공통) sense sang scientific question** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Construct và observable indicator** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của psychology, rồi nối foundations, brain, development, mental health, applied và connections.
 
 Tâm lý học nghiên cứu hành vi và quá trình tâm trí, nhưng phần lớn đối tượng quan tâm — trí nhớ, chú ý, động lực, cảm xúc, niềm tin, self-control — không thể quan sát trực tiếp như một vật thể. Vì vậy, câu hỏi trung tâm của psychology science không chỉ là “con người làm gì?”, mà là **làm sao suy luận đáng tin từ observation sang construct và cơ chế (mechanism / 메커니즘)**.
 
@@ -22,6 +21,8 @@ Science bắt đầu khi ta hỏi:
 
 Dùng chung (common / 공통) sense thường giải thích tốt **sau** khi kết quả (outcome / 결과) xảy ra. Science đòi prediction hoặc suy luận (inference / 추론) quy tắc (rule / 규칙) đủ rõ **trước** khi biết answer.
 
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **2. Construct và observable indicator** tiếp nhận điểm tựa từ **1. Từ dùng chung (common / 공통) sense sang scientific question** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Operationalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Construct và observable indicator
 
 **Cấu trúc tâm lý (construct)** là concept lý thuyết như anxiety, intelligence, trust hoặc motivation.
@@ -39,6 +40,8 @@ Choice pattern
 
 Một indicator không phải chính construct. Đây là lý do [[03_measurement_statistics]] và [[05_psychometrics_and_test_interpretation]] nằm ở cốt lõi (core / 핵심) của thư viện (library / 라이브러리).
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **3. Operationalization** tiếp nhận điểm tựa từ **2. Construct và observable indicator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Description, prediction, explanation và intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Operationalization
 
 **Thao tác hóa (operationalization)** biến concept thành procedure measurable.
@@ -46,6 +49,8 @@ Một indicator không phải chính construct. Đây là lý do [[03_measuremen
 Attention có thể đo bằng reaction thời gian (time / 시간), eye movement, accuracy under distraction hoặc neural tín hiệu (signal / 신호). Các operationalizations có thể capture different aspects.
 
 Nếu conclusion chỉ xuất hiện với một operationalization, cần hỏi tác động (effect / 효과) thuộc construct hay tác vụ (task / 작업) sản phẩm tạo ra (artifact / 산출물).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **4. Description, prediction, explanation và intervention** tiếp nhận điểm tựa từ **3. Operationalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Correlation không phải causation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Description, prediction, explanation và intervention
 
@@ -69,6 +74,8 @@ Nếu ta chủ động thay X, Y có đổi không?
 
 Correlation có thể hỗ trợ (support / 지원) prediction mà chưa hỗ trợ (support / 지원) intervention. Đây là lỗi phổ biến khi chuyển observational finding thành self-help recommendation.
 
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **5. Correlation không phải causation** tiếp nhận điểm tựa từ **4. Description, prediction, explanation và intervention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Multiple levels of phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Correlation không phải causation
 
 Nếu poor sleep correlate with low mood:
@@ -84,6 +91,8 @@ selection effect
 đều có thể plausible.
 
 Nhân quả (causal / 인과적) suy luận (inference / 추론) cần thiết kế (design / 설계) và các giả định (assumptions / 가정들). Xem [[08_causal_inference_and_psychological_evidence]].
+
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **6. Multiple levels of phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **5. Correlation không phải causation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Reductionism và explanatory mức (level / 수준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Multiple levels of phân tích (analysis / 분석)
 
@@ -103,6 +112,8 @@ Interview anxiety có thể liên quan autonomic arousal, catastrophic predictio
 
 Tìm neural correlate không làm xã hội (social / 사회적) explanation disappear; xã hội (social / 사회적) ngữ cảnh (context / 맥락) cũng không phủ nhận biology.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **7. Reductionism và explanatory mức (level / 수준)** tiếp nhận điểm tựa từ **6. Multiple levels of phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Experimental phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Reductionism và explanatory mức (level / 수준)
 
 Reductionism useful khi cần cơ chế (mechanism / 메커니즘) nhỏ hơn. Nhưng “amygdala activated” không giải thích toàn bộ fear. Neural sự kiện (event / 이벤트) itself needs ngữ cảnh (context / 맥락), computation and hành vi (behavior / 동작) interpretation.
@@ -110,6 +121,8 @@ Reductionism useful khi cần cơ chế (mechanism / 메커니즘) nhỏ hơn. N
 Ngược lại, vague explanation như “do society” cũng insufficient nếu không specify pathway.
 
 Strong psychology connects levels instead of declaring one mức (level / 수준) “realer” than others.
+
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **8. Experimental phương thức (method / 메서드)** tiếp nhận điểm tựa từ **7. Reductionism và explanatory mức (level / 수준)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Observational research** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Experimental phương thức (method / 메서드)
 
@@ -127,17 +140,23 @@ But experiment can still thất bại (fail / 실패) because:
 
 Experiment is not automatic truth machine.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **9. Observational research** tiếp nhận điểm tựa từ **8. Experimental phương thức (method / 메서드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. nội bộ (internal / 내부) và bên ngoài (external / 외부) validity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Observational research
 
 Many important questions cannot be randomized: poverty, trauma, di chuyển (migration / 마이그레이션), personality development, long-term disease.
 
 Observational research can be powerful with longitudinal designs, natural experiments, quasi-experiments, matching, instrumental variables or nhân quả (causal / 인과적) các mô hình (models / 모델들) — but các giả định (assumptions / 가정들) must be tường minh (explicit / 명시적).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **10. nội bộ (internal / 내부) và bên ngoài (external / 외부) validity** tiếp nhận điểm tựa từ **9. Observational research** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Triangulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. nội bộ (internal / 내부) và bên ngoài (external / 외부) validity
 
 **nội bộ (internal / 내부) validity** asks whether suy luận (inference / 추론) inside study is credible. **bên ngoài (external / 외부) validity** asks whether finding generalizes to other people, settings, tasks and times.
 
 Perfect lab điều khiển (control / 제어) may reduce ecological realism; real-world study may increase confounding. Good science uses triangulation rather than treating one thiết kế (design / 설계) as universal best.
+
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **11. Triangulation** tiếp nhận điểm tựa từ **10. nội bộ (internal / 내부) và bên ngoài (external / 외부) validity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Replication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Triangulation
 
@@ -153,6 +172,8 @@ Experiment
 
 If all methods share same đo lường (measurement / 측정) độ lệch (bias / 편향), apparent convergence may still mislead.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **12. Replication** tiếp nhận điểm tựa từ **11. Triangulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Open science** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Replication
 
 One study is bằng chứng (evidence / 증거), not verdict.
@@ -161,6 +182,8 @@ Replication asks whether mẫu (pattern / 패턴) reappears under similar or the
 
 Xem [[09_replication_meta_analysis_and_bayesian_reasoning]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **13. Open science** tiếp nhận điểm tựa từ **12. Replication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Statistical significance is not importance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Open science
 
 Preregistration, registered reports, open materials, dữ liệu (data / 데이터)/mã (code / 코드) sharing when ethical, and transparent phân tích (analysis / 분석) help reduce hidden researcher flexibility.
@@ -168,6 +191,8 @@ Preregistration, registered reports, open materials, dữ liệu (data / 데이�
 These practices do not guarantee good science. A bad study can be preregistered. Their giá trị (value / 값) is making suy luận (inference / 추론) tiến trình (process / 프로세스) more auditable.
 
 Xem [[06_open_science_and_evidence_evaluation]].
+
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **14. Statistical significance is not importance** tiếp nhận điểm tựa từ **13. Open science** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Null kết quả (result / 결과) is informative only under conditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Statistical significance is not importance
 
@@ -185,6 +210,8 @@ effect size
 
 not p-value alone.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **15. Null kết quả (result / 결과) is informative only under conditions** tiếp nhận điểm tựa từ **14. Statistical significance is not importance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. lý thuyết (theory / 이론) vs hypothesis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Null kết quả (result / 결과) is informative only under conditions
 
 “Non-significant” does not automatically mean no tác động (effect / 효과). Study may be low power or measure poorly.
@@ -192,6 +219,8 @@ not p-value alone.
 But repeatedly precise estimates near zero can meaningfully constrain lý thuyết (theory / 이론).
 
 Bayesian and equivalence approaches can formalize bằng chứng (evidence / 증거) about small/null effects under tường minh (explicit / 명시적) các giả định (assumptions / 가정들).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **16. lý thuyết (theory / 이론) vs hypothesis** tiếp nhận điểm tựa từ **15. Null kết quả (result / 결과) is informative only under conditions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Falsifiability is useful but not sufficient** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. lý thuyết (theory / 이론) vs hypothesis
 
@@ -201,17 +230,23 @@ Popular discourse sometimes calls speculation “lý thuyết (theory / 이론)�
 
 See five-level taxonomy in [[../EVIDENCE_STATUS_GUIDE]].
 
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **17. Falsifiability is useful but not sufficient** tiếp nhận điểm tựa từ **16. lý thuyết (theory / 이론) vs hypothesis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. đo lường (measurement / 측정) is theory-laden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Falsifiability is useful but not sufficient
 
 A scientific claim should expose itself to possible thất bại (failure / 실패). But falsifiability alone does not make lý thuyết (theory / 이론) good; vague auxiliary các giả định (assumptions / 가정들) can rescue almost any mô hình (model / 모델) after thất bại (failure / 실패).
 
 Useful lý thuyết (theory / 이론) also needs precision, explanatory phạm vi (scope / 범위), predictive success and parsimony relative to alternatives.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **17. Falsifiability is useful but not sufficient** nêu điều cần giải thích; **18. đo lường (measurement / 측정) is theory-laden** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Population matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. đo lường (measurement / 측정) is theory-laden
 
 If we define depression by a questionnaire, instrument choices shape what dữ liệu (data / 데이터) can say. If item asks sleep difficulty, sleep changes can move depression score even if other symptoms stable.
 
 Đo lường (measurement / 측정) is not neutral chuỗi xử lý (pipeline / 파이프라인) after lý thuyết (theory / 이론); it partly constructs empirical mục tiêu (target / 대상).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **18. đo lường (measurement / 측정) is theory-laden** nêu điều cần giải thích; **19. Population matters** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. WEIRD bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Population matters
 
@@ -221,17 +256,23 @@ Culture, ngôn ngữ (language / 언어), socioeconomic ngữ cảnh (context / 
 
 Xem [[../03_human_development_and_person/04_social_and_cultural_psychology]] và [[05_psychometrics_and_test_interpretation]].
 
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **20. WEIRD bài toán (problem / 문제)** tiếp nhận điểm tựa từ **19. Population matters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Individual difference vs group average** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. WEIRD bài toán (problem / 문제)
 
 WEIRD = Western, Educated, Industrialized, Rich, Democratic.
 
 The điểm (point / 지점) is not that Western samples are invalid; it is that **sampling frame limits suy luận (inference / 추론)**. Cross-cultural replication can kiểm thử (test / 테스트) whether lý thuyết (theory / 이론) generalizes or needs ranh giới (boundary / 경계) conditions.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **21. Individual difference vs group average** tiếp nhận điểm tựa từ **20. WEIRD bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Science of individual people** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Individual difference vs group average
 
 An average tác động (effect / 효과) does not tell every person's phản hồi (response / 응답).
 
 If intervention improves score by 0.3 SD on average, some improve more, some less, some worsen. Personalized prediction requires reliable moderators and out-of-sample kiểm tra hợp lệ (validation / 검증), not post-hoc storytelling.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **22. Science of individual people** tiếp nhận điểm tựa từ **21. Individual difference vs group average** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Psychology and self-help** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Science of individual people
 
@@ -240,6 +281,8 @@ Group research is useful, but everyday ứng dụng (application / 애플리케�
 But self-tracking also suffers confounding, expectation and regression to mean.
 
 Xem [[07_ecological_momentary_assessment_and_real_world_measurement]].
+
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **23. Psychology and self-help** tiếp nhận điểm tựa từ **22. Science of individual people** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. bằng chứng (evidence / 증거) hierarchy is not a ladder that solves everything** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Psychology and self-help
 
@@ -259,6 +302,8 @@ Scientific psychology asks:
 
 A useful tip can công việc (work / 작업) despite wrong lý thuyết (theory / 이론); a statistically real average tác động (effect / 효과) may be too small to matter individually.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **23. Psychology and self-help** nêu điều cần giải thích; **24. bằng chứng (evidence / 증거) hierarchy is not a ladder that solves everything** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. Historical theories** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. bằng chứng (evidence / 증거) hierarchy is not a ladder that solves everything
 
 RCTs, meta-analyses and systematic reviews are powerful, but chất lượng (quality / 품질) varies. Meta-analysis of biased studies can give precise biased answer.
@@ -266,6 +311,8 @@ RCTs, meta-analyses and systematic reviews are powerful, but chất lượng (qu
 Cơ chế (mechanism / 메커니즘) question may need experiment; prevalence question may need representative survey; lived-experience question may need qualitative phương thức (method / 메서드).
 
 Best phương thức (method / 메서드) depends question.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **24. bằng chứng (evidence / 증거) hierarchy is not a ladder that solves everything** nêu điều cần giải thích; **25. Historical theories** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Psychology and neuroscience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Historical theories
 
@@ -283,11 +330,15 @@ Historical theory
 
 Xem [[../90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, **26. Psychology and neuroscience** tiếp nhận điểm tựa từ **25. Historical theories** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Psychology and AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Psychology and neuroscience
 
 Psychological construct and neural hiện thực (implementation / 구현) are different levels.
 
 A construct can be scientifically useful without one-to-one brain region. Conversely, brain activity only gains psychological meaning through tác vụ (task / 작업)/mô hình (model / 모델) interpretation.
+
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **27. Psychology and AI** tiếp nhận điểm tựa từ **26. Psychology and neuroscience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Five bằng chứng (evidence / 증거) statuses** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. Psychology and AI
 
@@ -296,6 +347,8 @@ AI creates a useful analogy: a mô hình (model / 모델) can predict accurately
 Psychology shares same problems: đo lường (measurement / 측정), generalization, confounding and interpretability.
 
 Xem [[../90_connections/01_psychology_biology_statistics_and_ai]].
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học như một khoa học**, **27. Psychology and AI** nêu điều cần giải thích; **28. Five bằng chứng (evidence / 증거) statuses** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Five bằng chứng (evidence / 증거) statuses
 
@@ -308,6 +361,8 @@ Every claim should be readable as one of:
 5. lý thuyết lịch sử.
 
 This avoids ngôn ngữ (language / 언어) like “scientists proved” when bằng chứng (evidence / 증거) only supports a mô hình (model / 모델) under các giả định (assumptions / 가정들).
+
+> **Chuyển mạch:** Trong **Tâm lý học như một khoa học**, các dấu vết trong **28. Five bằng chứng (evidence / 증거) statuses** được đọc cùng nhau ở **29. mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. mô hình tư duy (mental model / 사고 모델)
 
@@ -335,8 +390,10 @@ Careful application
 
 Every arrow can thất bại (fail / 실패). Scientific maturity is not certainty; it is tường minh (explicit / 명시적) error-correction.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học như một khoa học**, **Kết nối kiến thức** gom các mảnh từ **29. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc tiếp [[02_research_methods]], [[03_measurement_statistics]], [[05_psychometrics_and_test_interpretation]], [[06_open_science_and_evidence_evaluation]], [[08_causal_inference_and_psychological_evidence]], [[09_replication_meta_analysis_and_bayesian_reasoning]] và [[../CONCEPTUAL_DEPENDENCIES]].
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 history and major perspectives](./01_history_and_major_perspectives.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

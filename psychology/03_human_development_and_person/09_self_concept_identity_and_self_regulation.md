@@ -1,7 +1,6 @@
 # Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절
 
-> **Mạch đọc:** Đọc **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Self-concept** sang **định danh (identity / 식별자)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Self-concept** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Định danh (identity / 식별자)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối self-concept với identity và self-regulation, để cảm nhận về bản thân gắn với mục tiêu và hành vi.
 
 Con người không chỉ phản ứng với thế giới; ta còn phản ứng với **mô hình về chính mình**. “Tôi là người chăm chỉ”, “tôi không giỏi ngoại ngữ”, “tôi là nhà phát triển (developer / 개발자)”, “tôi là người phải đáng tin” — những câu như vậy tạo prediction, goal và ràng buộc (constraint / 제약조건) cho hành vi (behavior / 동작).
 
@@ -23,6 +22,8 @@ Self-concept không phải mirror chính xác. Nó được xây từ:
 
 Vì vậy, self-concept vừa ảnh hưởng hành vi (behavior / 동작) vừa được hành vi (behavior / 동작) cập nhật.
 
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Định danh (identity / 식별자)** tiếp nhận điểm tựa từ **Self-concept** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-schema** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Định danh (identity / 식별자)
 
 **Bản sắc (identity / 정체성)** thường nhấn mạnh phần self-concept có ý nghĩa mạnh với câu hỏi “mình là ai?” và “mình thuộc về đâu?”.
@@ -30,6 +31,8 @@ Vì vậy, self-concept vừa ảnh hưởng hành vi (behavior / 동작) vừa 
 Định danh (identity / 식별자) có thể liên quan nghề nghiệp, gia đình, quốc gia, ngôn ngữ, giới, tôn giáo, giá trị (value / 값) hoặc community.
 
 Một người có nhiều định danh (identity / 식별자) cùng tồn tại. ngữ cảnh (context / 맥락) làm một định danh (identity / 식별자) trở nên salient hơn. Ở công ty, định danh (identity / 식별자) `developer` nổi bật; khi về Việt Nam, định danh (identity / 식별자) `người sống ở Hàn Quốc` có thể nổi bật hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-schema** tiếp nhận điểm tựa từ **Định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-esteem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self-schema
 
@@ -51,6 +54,8 @@ outcome được chọn lọc
 self-belief mạnh hơn
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-esteem** tiếp nhận điểm tựa từ **Self-schema** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-efficacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Self-esteem
 
 **Lòng tự trọng (self-esteem)** là evaluation tương đối tổng quát về self-worth.
@@ -58,6 +63,8 @@ self-belief mạnh hơn
 Self-esteem cao không tự động tạo hiệu năng (performance / 성능) tốt. Cố tăng self-esteem bằng affirmation không gắn bằng chứng (evidence / 증거) có thể ít hiệu quả hoặc phản tác dụng với một số người.
 
 Trong thực tế, self-efficacy cụ thể theo tác vụ (task / 작업) thường hữu ích hơn toàn cục (global / 전역) statement kiểu `mình giỏi`.
+
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-efficacy** tiếp nhận điểm tựa từ **Self-esteem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-efficacy cần calibration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self-efficacy
 
@@ -71,6 +78,8 @@ Self-efficacy được xây mạnh từ:
 - interpretation trạng thái cơ thể.
 
 Nếu muốn tăng confidence học SQL, cách mạnh hơn positive affirmation là tạo chuỗi (sequence / 시퀀스) tác vụ (task / 작업) có difficulty tăng dần và ghi lại bằng chứng (evidence / 증거) tiến bộ.
+
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-efficacy cần calibration** tiếp nhận điểm tựa từ **Self-efficacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Identity-based hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self-efficacy cần calibration
 
@@ -87,6 +96,8 @@ so sánh prediction với reality
 cập nhật model
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Identity-based hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Self-efficacy cần calibration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Possible selves** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Identity-based hành vi (behavior / 동작)
 
 Hành vi (behavior / 동작) lặp lại có thể trở thành bằng chứng (evidence / 증거) cho định danh (identity / 식별자).
@@ -101,6 +112,8 @@ Do đó, định danh (identity / 식별자) hữu ích nhất khi flexible:
 
 `Tôi là người thường quay lại tập sau khi bị gián đoạn`, thay vì `tôi là người không bao giờ bỏ buổi`.
 
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Possible selves** tiếp nhận điểm tựa từ **Identity-based hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-discrepancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Possible selves
 
 **Những phiên bản bản thân có thể trở thành (possible selves)** là hình ảnh về self tương lai: mong muốn hoặc sợ hãi.
@@ -108,6 +121,8 @@ Do đó, định danh (identity / 식별자) hữu ích nhất khi flexible:
 Future self có thể tạo motivation nếu đủ cụ thể và có cầu nối (bridge / 브리지) với hành động (action / 동작) hiện tại. Chỉ tưởng tượng thành công mà không nhìn obstacle có thể tạo satisfaction sớm nhưng ít planning.
 
 Mental contrasting kết hợp desired future với obstacle hiện tại để tăng hành động (action / 동작) planning.
+
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-discrepancy** tiếp nhận điểm tựa từ **Possible selves** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xã hội (social / 사회적) comparison** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self-discrepancy
 
@@ -121,6 +136,8 @@ Khoảng cách giữa các biểu diễn (representation / 표현) có thể li�
 
 Nếu `ought self` quá mạnh từ xã hội (social / 사회적) pressure, motivation có thể trở nên controlled và tạo guilt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Xã hội (social / 사회적) comparison** tiếp nhận điểm tựa từ **Self-discrepancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-serving độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xã hội (social / 사회적) comparison
 
 Con người đánh giá mình bằng comparison với người khác.
@@ -133,6 +150,8 @@ Xã hội (social / 사회적) media làm comparison pool rộng và được cu
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
 
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-serving độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) comparison** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-handicapping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Self-serving độ lệch (bias / 편향)
 
 Khi success, ta có thể attribution về ability/effort; khi thất bại (failure / 실패), ta đổ cho ngữ cảnh (context / 맥락). mẫu (pattern / 패턴) này bảo vệ self-image nhưng làm học tập (learning / 학습) kém nếu quá mạnh.
@@ -143,6 +162,8 @@ Healthy calibration cần attribution đủ cụ thể để hành động (acti
 
 `Mình fail vì không luyện listening dạng map` hữu ích hơn `mình dốt tiếng Anh`.
 
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-handicapping** tiếp nhận điểm tựa từ **Self-serving độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Self-handicapping
 
 **Tự gây trở ngại (self-handicapping)** là tạo hoặc giữ obstacle trước hiệu năng (performance / 성능) để có explanation bảo vệ self-esteem nếu thất bại (fail / 실패).
@@ -150,6 +171,8 @@ Healthy calibration cần attribution đủ cụ thể để hành động (acti
 Ví dụ, trì hoãn học để sau này có thể nói `do thiếu thời gian` thay vì kiểm tra belief `mình có đủ khả năng không`.
 
 Hành vi (behavior / 동작) này giảm threat ngắn hạn nhưng cản mastery.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-regulation** tiếp nhận điểm tựa từ **Self-handicapping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-control không chỉ là inhibition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self-regulation
 
@@ -171,6 +194,8 @@ feedback
 
 Thất bại (failure / 실패) có thể xảy ra ở bất kỳ điểm nào: goal mơ hồ, monitoring kém, hành động (action / 동작) chi phí (cost / 비용) cao, phản hồi (feedback / 피드백) chậm hoặc competing goal mạnh.
 
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-control không chỉ là inhibition** tiếp nhận điểm tựa từ **Self-regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện thực (implementation / 구현) intention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Self-control không chỉ là inhibition
 
 Cách nhìn cũ hay coi self-control là khả năng nói `không` ở giây cuối. Research hiện đại nhấn mạnh **proactive chiến lược (strategy / 전략)**:
@@ -186,6 +211,8 @@ Nếu điện thoại nằm cạnh bàn, mỗi notification tạo một quyết 
 
 Xem [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Hiện thực (implementation / 구현) intention** tiếp nhận điểm tựa từ **Self-control không chỉ là inhibition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Precommitment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiện thực (implementation / 구현) intention
 
 **Ý định thực thi (implementation intention)** biến goal thành quy tắc (rule / 규칙) có cue:
@@ -200,6 +227,8 @@ Ví dụ:
 
 Quy tắc (rule / 규칙) này giảm nhu cầu quyết định lại từ đầu trong trạng thái (state / 상태) mệt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Precommitment** tiếp nhận điểm tựa từ **Hiện thực (implementation / 구현) intention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ego depletion: một bài học về replication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Precommitment
 
 Precommitment dùng quyết định hiện tại để giới hạn lựa chọn của future self.
@@ -213,17 +242,23 @@ Ví dụ:
 
 Đây không phải weakness. Nó là recognition rằng preference thay đổi theo trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Ego depletion: một bài học về replication** tiếp nhận điểm tựa từ **Precommitment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-compassion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ego depletion: một bài học về replication
 
 Ý tưởng rằng self-control dùng một “nguồn năng lượng chung” từng rất nổi tiếng. Replication và meta-analysis sau đó cho thấy picture phức tạp hơn nhiều; tác động (effect / 효과) kích thước (size / 크기) và cơ chế (mechanism / 메커니즘) bị tranh luận.
 
 Bài học tốt hơn là fatigue, motivation và ngữ cảnh (context / 맥락) có thể ảnh hưởng self-control, nhưng không nên hình dung một “bình ý chí” đơn giản bị cạn.
 
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self-compassion** tiếp nhận điểm tựa từ **Ego depletion: một bài học về replication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Perfectionism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Self-compassion
 
 **Tự cảm thông (self-compassion)** không phải excuse. Nó gồm cách đối xử với thất bại (failure / 실패) bớt harsh, nhận ra imperfection là phần phổ biến của human experience và giữ awareness cân bằng.
 
 Sau lapse, self-attack đôi khi làm avoidance mạnh hơn. phản hồi (response / 응답) kiểu `mình sai ở đâu và bước quay lại là gì?` có thể hỗ trợ khôi phục (recovery / 복구) tốt hơn `mình vô dụng`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Perfectionism** tiếp nhận điểm tựa từ **Self-compassion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Narrative định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Perfectionism
 
@@ -233,6 +268,8 @@ High tiêu chuẩn (standard / 표준) có thể adaptive nếu flexible. Perfec
 
 Một cách sửa là đổi success criterion từ `không có lỗi` sang `feedback loop đủ nhanh`.
 
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Narrative định danh (identity / 식별자)** tiếp nhận điểm tựa từ **Perfectionism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self và culture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Narrative định danh (identity / 식별자)
 
 Con người tổ chức bộ nhớ (memory / 메모리) thành câu chuyện về self. Narrative giúp tạo continuity nhưng cũng selective.
@@ -240,6 +277,8 @@ Con người tổ chức bộ nhớ (memory / 메모리) thành câu chuyện v�
 Nếu narrative là `mình luôn bỏ cuộc`, người ta có thể bỏ qua nhiều episode đã kiên trì.
 
 Re-authoring không có nghĩa bịa positive story; nó là xây narrative chính xác hơn với cả ràng buộc (constraint / 제약조건) và bằng chứng (evidence / 증거) thay đổi.
+
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Self và culture** tiếp nhận điểm tựa từ **Narrative định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Self và culture
 
@@ -249,9 +288,13 @@ Không nên coi một cách là “mature hơn”. Chúng phản ánh xã hội 
 
 Xem [[04_social_and_cultural_psychology]] và [[16_acculturation_migration_and_bicultural_identity]].
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Mô hình tư duy** gom các mảnh từ **Self và culture** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Self không phải một “vật” cố định. Nó là mô hình được hệ thống dùng để dự đoán mình sẽ làm gì, thuộc về đâu và điều gì có ý nghĩa. Mô hình này vừa ảnh hưởng hành vi (behavior / 동작) vừa được hành vi (behavior / 동작) cập nhật.
+
+> **Chuyển mạch:** Trong **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -263,8 +306,10 @@ Xem [[04_social_and_cultural_psychology]] và [[16_acculturation_migration_and_b
 
 **“Self-compassion làm người ta lười.”** Compassion không loại bỏ accountability; nó thay cách xử lý thất bại (failure / 실패).
 
+> **Chuyển mạch:** Ở chặng này của **Khái niệm bản thân, bản sắc và tự điều chỉnh — Self-Concept, định danh (identity / 식별자) & Self-Regulation / 자아개념·정체성·자기조절**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Xem [[02_motivation_and_emotion]], [[03_personality]], [[06_stress_coping_and_emotion_regulation]], [[16_acculturation_migration_and_bicultural_identity]], [[../06_applied/12_psychology_in_daily_life_and_self_regulation]], [[../06_applied/12_psychology_in_daily_life_and_self_regulation]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

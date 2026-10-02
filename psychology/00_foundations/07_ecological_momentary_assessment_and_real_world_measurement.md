@@ -1,7 +1,6 @@
 # Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)
 
-> **Mạch đọc:** Đọc **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Tại sao “bạn thường cảm thấy thế nào?” là một câu hỏi khó hơn ta tưởng** sang **2. Ba dạng sampling chính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao “bạn thường cảm thấy thế nào?” là một câu hỏi khó hơn ta tưởng** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Ba dạng sampling chính** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối ecological momentary assessment với real-world measurement, để dữ liệu trải nghiệm theo thời gian giữ được context và timing.
 
 Phần lớn tâm lý học cổ điển được xây dựng trong hai bối cảnh thuận tiện cho nhà nghiên cứu: phòng thí nghiệm và bảng hỏi hồi cứu. Hai bối cảnh này tạo ra dữ liệu có cấu trúc, nhưng chúng cũng làm nảy sinh một câu hỏi nền tảng: **thứ ta đo trong một buổi kiểm thử (test / 테스트) có thật sự đại diện cho cách một người suy nghĩ, cảm nhận và hành động trong cả ngày hay không?**
 
@@ -35,8 +34,7 @@ Sau một tuần, ta không chỉ có average lo âu mà còn có mẫu (pattern
 
 ---
 
-
-> **Chuyển mạch:** Từ **1. Tại sao “bạn thường cảm thấy thế nào?” là một câu hỏi khó hơn ta tưởng**, ta sang **2. Ba dạng sampling chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **2. Ba dạng sampling chính** tiếp nhận điểm tựa từ **1. Tại sao “bạn thường cảm thấy thế nào?” là một câu hỏi khó hơn ta tưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. trạng thái (state / 상태), trait và person-specific dynamics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Ba dạng sampling chính
 
@@ -50,8 +48,7 @@ Không có sampling thiết kế (design / 설계) tốt nhất cho mọi câu h
 
 ---
 
-
-> **Chuyển mạch:** Từ **2. Ba dạng sampling chính**, ta sang **3. trạng thái (state / 상태), trait và person-specific dynamics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **3. trạng thái (state / 상태), trait và person-specific dynamics** tiếp nhận điểm tựa từ **2. Ba dạng sampling chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. trạng thái (state / 상태), trait và person-specific dynamics
 
@@ -71,8 +68,7 @@ Câu hỏi đó khác với:
 
 ---
 
-
-> **Chuyển mạch:** Từ **3. trạng thái (state / 상태), trait và person-specific dynamics**, ta sang **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **3. trạng thái (state / 상태), trait và person-specific dynamics** nêu điều cần giải thích; **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo
 
@@ -84,8 +80,7 @@ Một nguyên tắc thực dụng là chỉ đo variable nếu dữ liệu có k
 
 ---
 
-
-> **Chuyển mạch:** Từ **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo**, ta sang **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo** nêu điều cần giải thích; **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)
 
@@ -99,8 +94,7 @@ Ví dụ smartphone screen-on events có thể đo thiết bị (device / 장치
 
 ---
 
-
-> **Chuyển mạch:** Từ **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)**, ta sang **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)** tiếp nhận điểm tựa từ **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Missingness không ngẫu nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)
 
@@ -112,8 +106,7 @@ Một lỗi (error / 오류) phổ biến là nhảy từ correlation sang suy l
 
 ---
 
-
-> **Chuyển mạch:** Từ **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)**, ta sang **7. Missingness không ngẫu nhiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **7. Missingness không ngẫu nhiên** tiếp nhận điểm tựa từ **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Missingness không ngẫu nhiên
 
@@ -125,8 +118,7 @@ Trong self-tracking, missed day cũng là dữ liệu (data / 데이터). Thay v
 
 ---
 
-
-> **Chuyển mạch:** Từ **7. Missingness không ngẫu nhiên**, ta sang **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **7. Missingness không ngẫu nhiên** nêu điều cần giải thích; **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Privacy và ethics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình
 
@@ -154,8 +146,7 @@ Xem thêm: [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 ---
 
-
-> **Chuyển mạch:** Từ **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình**, ta sang **9. Privacy và ethics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình** nêu điều cần giải thích; **9. Privacy và ethics** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. những hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Privacy và ethics
 
@@ -167,8 +158,7 @@ Các nguyên tắc nên gồm dữ liệu (data / 데이터) minimization, infor
 
 ---
 
-
-> **Chuyển mạch:** Từ **9. Privacy và ethics**, ta sang **10. những hiểu lầm phổ biến (common misconceptions)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **10. những hiểu lầm phổ biến (common misconceptions)** tiếp nhận điểm tựa từ **9. Privacy và ethics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. những hiểu lầm phổ biến (common misconceptions)
 
@@ -182,8 +172,7 @@ Các nguyên tắc nên gồm dữ liệu (data / 데이터) minimization, infor
 
 ---
 
-
-> **Chuyển mạch:** Từ **10. những hiểu lầm phổ biến (common misconceptions)**, ta sang **11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **10. những hiểu lầm phổ biến (common misconceptions)** nêu điều cần giải thích; **11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI
 
@@ -203,4 +192,4 @@ Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đ�
 
 Các nguồn này hỗ trợ phương thức (method / 메서드) và limitation; EMA không nên được coi là replacement tuyệt đối cho interview, validated quy mô (scale / 규모) hoặc nhiệm vụ trong phòng thí nghiệm (laboratory task).
 
-> **Bàn giao:** Sau **Nguồn nghiên cứu định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

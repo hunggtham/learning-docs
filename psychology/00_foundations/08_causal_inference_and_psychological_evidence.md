@@ -1,7 +1,6 @@
 # suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học
 
-> **Mạch đọc:** Đọc **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. nhân quả (causal / 인과적) question khác prediction question như thế nào?** sang **2. Potential outcomes: tác động (effect / 효과) là một contrast, không phải thuộc tính (property / 속성) cố định**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. nhân quả (causal / 인과적) question khác prediction question như thế nào?** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Potential outcomes: tác động (effect / 효과) là một contrast, không phải thuộc tính (property / 속성) cố định** để soi ranh giới và điểm dễ nhầm. Mạch này nối causal inference với psychological evidence, để phân biệt association, mechanism và intervention effect.
 
 Trong tâm lý học, câu hỏi khó nhất thường không phải “hai biến có liên quan không?” mà là **“nếu ta thay đổi X, điều gì sẽ xảy ra với Y?”**. Đó là câu hỏi về **suy luận nhân quả (suy luận nhân quả / 인과추론)**. Một correlation có thể hữu ích để dự đoán, nhưng nếu mục tiêu là can thiệp — thay đổi cách học, giảm stress, thiết kế workplace, điều trị triệu chứng hay đánh giá tác động của mạng xã hội (social media) — thì association đơn thuần chưa đủ.
 
@@ -27,6 +26,8 @@ suy luận nhân quả hỏi:
 
 ---
 
+> **Chuyển mạch:** Trong **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **1. nhân quả (causal / 인과적) question khác prediction question như thế nào?** đã nêu tiêu chí phân biệt, còn **2. Potential outcomes: tác động (effect / 효과) là một contrast, không phải thuộc tính (property / 속성) cố định** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Randomization giải quyết điều gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Potential outcomes: tác động (effect / 효과) là một contrast, không phải thuộc tính (property / 속성) cố định
 
 Giả sử `Y(1)` là kết quả (outcome / 결과) nếu một người nhận intervention, còn `Y(0)` là kết quả (outcome / 결과) nếu người đó không nhận. Individual nhân quả (causal / 인과적) tác động (effect / 효과) về lý thuyết là:
@@ -45,6 +46,8 @@ ATE = E[Y(1)-Y(0)]
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **2. Potential outcomes: tác động (effect / 효과) là một contrast, không phải thuộc tính (property / 속성) cố định** đã nêu tiêu chí phân biệt, còn **3. Randomization giải quyết điều gì?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. DAG: biến một câu chuyện nhân quả thành sơ đồ có thể kiểm tra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Randomization giải quyết điều gì?
 
 Trong một **thử nghiệm đối chứng ngẫu nhiên (randomized controlled trial) (RCT / 무작위 대조시험)**, assignment ngẫu nhiên làm cho treatment group và điều khiển (control / 제어) group, về kỳ vọng, cân bằng ở cả measured và unmeasured pre-treatment causes. Nhờ đó difference sau intervention có thể được gán cho treatment với ít giả định (assumption / 가정) hơn observational thiết kế (design / 설계).
@@ -54,6 +57,8 @@ Randomization không tự giải quyết mọi vấn đề. Attrition, nonadhere
 Vì vậy “RCT > mọi loại bằng chứng (evidence / 증거)” là mô hình tư duy (mental model / 사고 모델) quá thô. Cần hỏi RCT đang trả lời nhân quả (causal / 인과적) contrast nào, population nào và kết quả (outcome / 결과) nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **4. DAG: biến một câu chuyện nhân quả thành sơ đồ có thể kiểm tra** tiếp nhận điểm tựa từ **3. Randomization giải quyết điều gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. yếu tố gây nhiễu, biến trung gian và biến va chạm (collider) không thể phân biệt chỉ bằng correlation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. DAG: biến một câu chuyện nhân quả thành sơ đồ có thể kiểm tra
 
@@ -73,6 +78,8 @@ Nếu muốn estimate tác động (effect / 효과) của sleep mất mát (los
 DAG không “khám phá sự thật” chỉ bằng việc vẽ. Nó là một **bản khai các giả định (assumptions / 가정들)**. Hai researchers có thể vẽ hai DAG khác nhau; disagreement trở nên hữu ích vì giả định (assumption / 가정) được lộ ra thay vì ẩn trong regression mô hình (model / 모델).
 
 ---
+
+> **Chuyển mạch:** Trong **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **5. yếu tố gây nhiễu, biến trung gian và biến va chạm (collider) không thể phân biệt chỉ bằng correlation** tiếp nhận điểm tựa từ **4. DAG: biến một câu chuyện nhân quả thành sơ đồ có thể kiểm tra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. biến va chạm độ lệch (bias / 편향) trong đời sống: ví dụ tuyển chọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. yếu tố gây nhiễu, biến trung gian và biến va chạm (collider) không thể phân biệt chỉ bằng correlation
 
@@ -113,6 +120,8 @@ biến va chạm là dùng chung (common / 공통) consequence. Khi không đi�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **5. yếu tố gây nhiễu, biến trung gian và biến va chạm (collider) không thể phân biệt chỉ bằng correlation** cho ta quy tắc; **6. biến va chạm độ lệch (bias / 편향) trong đời sống: ví dụ tuyển chọn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. nhân quả ngược (reverse causation): thời gian không chỉ là chi tiết kỹ thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. biến va chạm độ lệch (bias / 편향) trong đời sống: ví dụ tuyển chọn
 
 Giả sử hiệu năng (performance / 성능) trong một chương trình tuyển dụng phụ thuộc cả cognitive skill lẫn networking skill. Nếu chỉ quan sát những người đã được tuyển, ta đã điều kiện (condition / 조건) lên một biến va chạm: selection. Trong selected mẫu (sample / 표본), người có cognitive skill thấp có thể chỉ vào được vì networking skill rất cao và ngược lại. Điều này có thể tạo correlation âm giữa hai skill dù trong population hai skill không đối nghịch.
@@ -120,6 +129,8 @@ Giả sử hiệu năng (performance / 성능) trong một chương trình tuy�
 Tương tự, clinical samples, elite schools, online communities và “chỉ những người còn dùng app sau 6 tháng” đều là selection mechanisms có thể tạo association không tồn tại trong population gốc.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **6. biến va chạm độ lệch (bias / 편향) trong đời sống: ví dụ tuyển chọn** cho ta quy tắc; **7. nhân quả ngược (reverse causation): thời gian không chỉ là chi tiết kỹ thuật** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. Mediation: “cơ chế” là một nhân quả (causal / 인과적) claim mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. nhân quả ngược (reverse causation): thời gian không chỉ là chi tiết kỹ thuật
 
@@ -137,6 +148,8 @@ Trong tâm lý học (psychology), rất nhiều constructs tương tác theo v�
 
 ---
 
+> **Chuyển mạch:** Trong **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **7. nhân quả ngược (reverse causation): thời gian không chỉ là chi tiết kỹ thuật** xác định đầu vào; **8. Mediation: “cơ chế” là một nhân quả (causal / 인과적) claim mạnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Moderation không giống mediation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Mediation: “cơ chế” là một nhân quả (causal / 인과적) claim mạnh
 
 Research thường viết rằng niềm tin vào năng lực bản thân (self-efficacy) “mediates” tác động (effect / 효과) của intervention lên hiệu năng (performance / 성능). Nhưng một regression mediation `X → M → Y` không tự chứng minh cơ chế (mechanism / 메커니즘). Nếu có unmeasured causes của M và Y, mediation estimate có thể độ lệch (bias / 편향).
@@ -150,6 +163,8 @@ Vì vậy cách diễn đạt thận trọng hơn là phân biệt:
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **8. Mediation: “cơ chế” là một nhân quả (causal / 인과적) claim mạnh** xác định đầu vào; **9. Moderation không giống mediation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Natural experiments và quasi-experiments** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Moderation không giống mediation
 
 **Moderator (biến điều tiết / 조절변수)** trả lời “tác động (effect / 효과) khác nhau ở ai hoặc trong ngữ cảnh (context / 맥락) nào?”. Ví dụ intervention có thể hiệu quả hơn khi baseline severity cao. **biến trung gian (매개변수)** hỏi “tác động (effect / 효과) đi qua cơ chế nào?”.
@@ -157,6 +172,8 @@ Vì vậy cách diễn đạt thận trọng hơn là phân biệt:
 Một variable có thể là moderator trong một question và biến trung gian trong question khác. Labels không phải bản chất cố định của variable; chúng phụ thuộc nhân quả (causal / 인과적) question.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **10. Natural experiments và quasi-experiments** tiếp nhận điểm tựa từ **9. Moderation không giống mediation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. sai số đo lường (measurement error / 측정 오차) cũng là nhân quả (causal / 인과적) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Natural experiments và quasi-experiments
 
@@ -168,6 +185,8 @@ Không có magic phương thức (method / 메서드) “biến observational d�
 
 ---
 
+> **Chuyển mạch:** Trong **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **10. Natural experiments và quasi-experiments** nêu điều cần giải thích; **11. sai số đo lường (measurement error / 측정 오차) cũng là nhân quả (causal / 인과적) bài toán (problem / 문제)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Prediction mô hình (model / 모델) có thể dùng biến “sai nhân quả” nhưng nhân quả (causal / 인과적) mô hình (model / 모델) thì không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. sai số đo lường (measurement error / 측정 오차) cũng là nhân quả (causal / 인과적) bài toán (problem / 문제)
 
 Nếu stress được đo bằng questionnaire kém độ tin cậy (reliability / 신뢰성) hoặc sleep được đo bằng self-report rất thô, nhân quả (causal / 인과적) estimate có thể attenuation hoặc độ lệch (bias / 편향) theo hướng khó dự đoán. Nếu sai số đo lường (measurement error / 측정 오차) khác nhau giữa groups, độ lệch (bias / 편향) còn phức tạp hơn.
@@ -178,6 +197,8 @@ Xem thêm: [[05_psychometrics_and_test_interpretation]], [[07_ecological_momenta
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **11. sai số đo lường (measurement error / 측정 오차) cũng là nhân quả (causal / 인과적) bài toán (problem / 문제)** nêu điều cần giải thích; **12. Prediction mô hình (model / 모델) có thể dùng biến “sai nhân quả” nhưng nhân quả (causal / 인과적) mô hình (model / 모델) thì không** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Một workflow thực tế cho lập luận nhân quả (causal reasoning / 인과적 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Prediction mô hình (model / 모델) có thể dùng biến “sai nhân quả” nhưng nhân quả (causal / 인과적) mô hình (model / 모델) thì không
 
 Một machine-learning mô hình (model / 모델) dự đoán tái diễn kéo dài (relapse) có thể dùng bất kỳ tính năng (feature / 기능) nào cải thiện out-of-sample prediction, kể cả variable là hậu quả của tái diễn kéo dài rủi ro (risk / 위험). Nhưng nếu muốn can thiệp vào tính năng (feature / 기능) đó để giảm tái diễn kéo dài, ta cần biết tính năng (feature / 기능) có nhân quả (causal / 인과적) leverage hay chỉ là marker.
@@ -187,6 +208,8 @@ Ví dụ số lần mở mental-health app có thể dự đoán symptom severit
 Đây là distinction quan trọng khi AI/ML được dùng trong behavioral science: **predictive importance ≠ nhân quả (causal / 인과적) importance**.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **12. Prediction mô hình (model / 모델) có thể dùng biến “sai nhân quả” nhưng nhân quả (causal / 인과적) mô hình (model / 모델) thì không** xác định đầu vào; **13. Một workflow thực tế cho lập luận nhân quả (causal reasoning / 인과적 추론)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Ví dụ: “dùng điện thoại trước ngủ làm ngủ kém”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Một workflow thực tế cho lập luận nhân quả (causal reasoning / 인과적 추론)
 
@@ -207,6 +230,8 @@ Workflow này quan trọng hơn việc thuộc tên một phương pháp statist
 
 ---
 
+> **Chuyển mạch:** Trong **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, sau khi thấy quy trình trong **13. Một workflow thực tế cho lập luận nhân quả (causal reasoning / 인과적 추론)**, **14. Ví dụ: “dùng điện thoại trước ngủ làm ngủ kém”** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **mô hình tư duy: association là dấu vết, causation là mô hình về can thiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Ví dụ: “dùng điện thoại trước ngủ làm ngủ kém”
 
 Một phân tích (analysis / 분석) đơn giản có thể thấy screen use trước ngủ liên quan short sleep. Nhưng nhân quả (causal / 인과적) mô hình (model / 모델) cần hỏi thêm:
@@ -221,11 +246,15 @@ Nếu intervention là “không dùng phone 60 phút trước ngủ”, nhân q
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **14. Ví dụ: “dùng điện thoại trước ngủ làm ngủ kém”** cho ta quy tắc; **mô hình tư duy: association là dấu vết, causation là mô hình về can thiệp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **những hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## mô hình tư duy: association là dấu vết, causation là mô hình về can thiệp
 
 Hãy coi correlation như một **dấu vết** cho thấy hai phần của hệ thống (system / 시스템) đi cùng nhau. suy luận nhân quả hỏi: **nếu ta chạm vào một phần của hệ thống (system / 시스템), phần khác sẽ đổi thế nào?**. Để trả lời, cần biết cấu trúc (structure / 구조) của hệ thống (system / 시스템), không chỉ mẫu (pattern / 패턴) trong dataset.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **những hiểu lầm phổ biến (common misconceptions)** gom các mảnh từ **mô hình tư duy: association là dấu vết, causation là mô hình về can thiệp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Research anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## những hiểu lầm phổ biến (common misconceptions)
 
@@ -241,6 +270,8 @@ Hãy coi correlation như một **dấu vết** cho thấy hai phần của hệ
 
 ---
 
+> **Chuyển mạch:** Trong **suy luận nhân quả (causal inference) và cách đọc bằng chứng tâm lý học**, **Research anchors** tiếp nhận điểm tựa từ **những hiểu lầm phổ biến (common misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Research anchors
 
 Các research anchors dưới đây giúp kiểm tra cách dựng DAG, thiết kế nghiên cứu và diễn giải effect. Hãy dùng chúng để nối causal claim với giả định và evidence cụ thể.
@@ -252,4 +283,4 @@ Các research anchors dưới đây giúp kiểm tra cách dựng DAG, thiết k
 
 Các khung phần mềm (framework / 프레임워크) này không thay lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식). Chúng buộc researcher nói rõ giả định (assumption / 가정) nào đang biến association thành nhân quả (causal / 인과적) interpretation.
 
-> **Bàn giao:** Sau **Research anchors**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Research anchors**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
