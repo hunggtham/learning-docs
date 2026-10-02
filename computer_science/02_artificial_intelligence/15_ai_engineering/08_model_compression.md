@@ -1,6 +1,6 @@
 # Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mô hình (model / 모델) Compression: nhìn toàn bộ bài toán giảm chi phí mô hình**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu của Compression** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Low-Rank Factorization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Model compression**. Route đi từ deployment bottleneck → quantization/pruning/distillation → low-rank factorization → memory/throughput measurements → accuracy and rollback gates, để “nhỏ hơn” chỉ có giá trị khi chạy nhanh/rẻ hơn.
 
 **Nén mô hình (model compression / 모델 압축)** là khái niệm bao trùm các kỹ thuật giảm bộ nhớ (memory / 메모리), compute, bandwidth hoặc độ trễ (latency / 지연 시간) trong khi vẫn giữ chất lượng đủ tốt cho triển khai (deployment / 배포) mục tiêu (target / 대상). Quantization, pruning và distillation là ba nhóm lớn, nhưng compression còn bao gồm low-rank factorization, parameter sharing, đơn giản hóa kiến trúc và tối ưu theo thời gian chạy (runtime / 런타임) cụ thể.
 

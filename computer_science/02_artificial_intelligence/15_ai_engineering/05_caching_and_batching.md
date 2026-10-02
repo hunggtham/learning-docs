@@ -1,6 +1,6 @@
 # Caching và Batching trong hệ thống AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Caching và Batching trong hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Caching ở nhiều lớp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bộ nhớ đệm (cache / 캐시) Key** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Caching và batching trong hệ thống AI**. Route đi từ repeated work → cache keys/TTL → request batching → queue/backpressure → freshness, invalidation, and tail latency, để tối ưu không phá semantics.
 
 Caching và batching đều là kỹ thuật giúp giảm chi phí hoặc độ trễ, nhưng chúng giải quyết hai vấn đề khác nhau. **Bộ nhớ đệm (caching / 캐싱)** tái sử dụng kết quả tính toán đã có. **Gom lô (batching / 배칭)** gom nhiều phép tính mới để phần cứng xử lý hiệu quả hơn.
 

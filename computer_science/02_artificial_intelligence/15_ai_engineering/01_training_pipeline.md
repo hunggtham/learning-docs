@@ -1,6 +1,6 @@
 # Huấn luyện (training / 학습) chuỗi xử lý (pipeline / 파이프라인)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Huấn luyện (training / 학습) chuỗi xử lý (pipeline / 파이프라인)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đầu vào (input / 입력) phải bất biến** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Cấu hình** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Training pipeline**. Route đi từ immutable inputs → configuration/data snapshot → preprocessing → training/evaluation artifacts → reproducible promotion, để pipeline nối dữ liệu với checkpoint có thể kiểm chứng.
 
 Để huấn luyện mô hình có khả năng tái lập, chỉ gọi `model.fit()` là chưa đủ. **chuỗi xử lý (pipeline / 파이프라인) huấn luyện (training pipeline / 학습 파이프라인)** điều phối snapshot dữ liệu, tiền xử lý, cấu hình, phân tán (distributed / 분산) job, checkpoint, đánh giá và đăng ký sản phẩm tạo ra (artifact / 산출물).
 

@@ -1,6 +1,6 @@
 # Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Suy luận (inference / 추론) chuỗi xử lý (pipeline / 파이프라인)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính nhất quán giữa huấn luyện (training / 학습) và Serving** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiểm tra yêu cầu (request / 요청)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Inference pipeline**. Route đi từ training/serving parity → request validation → preprocessing/model execution → postprocessing → observability and fallback, để đường đi của request giữ cùng semantics với lúc train.
 
 **chuỗi xử lý (pipeline / 파이프라인) suy luận (inference pipeline / 추론 파이프라인)** biến một yêu cầu môi trường vận hành (production / 운영 환경) thành đầu vào (input / 입력) phù hợp với mô hình, thực thi mô hình, sau đó biến raw đầu ra (output / 출력) thành quyết định hoặc phản hồi có thể sử dụng. Độ đúng phụ thuộc toàn bộ đường đi, không chỉ forward pass.
 

@@ -1,6 +1,6 @@
 # Quantization trong AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quantization trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ số thực tới các mức rời rạc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Symmetric và Asymmetric Quantization** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quantization trong AI**. Route đi từ floating-point values → scale/zero-point mapping → symmetric/asymmetric schemes → calibration/quantization-aware training → accuracy–memory–latency trade-offs, để giảm bit vẫn giữ task quality.
 
 **Lượng tử hóa (quantization / 양자화)** làm giảm độ chính xác số dùng để biểu diễn weights, activations hoặc KV bộ nhớ đệm (cache / 캐시). Mục tiêu là giảm bộ nhớ (memory / 메모리), bandwidth, độ trễ (latency / 지연 시간) và chi phí (cost / 비용) trong khi vẫn giữ chất lượng ở mức chấp nhận được.
 

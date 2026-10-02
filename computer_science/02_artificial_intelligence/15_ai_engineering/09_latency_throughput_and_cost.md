@@ -1,6 +1,6 @@
 # Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ trễ (latency / 지연 시간)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tail độ trễ (latency / 지연 시간)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Latency, throughput và cost trong hệ thống AI**. Route đi từ request path → p50/p95/p99 latency → concurrency/throughput → accelerator and token cost → capacity planning, để con số vận hành gắn với trải nghiệm và ngân sách.
 
 Môi trường vận hành (production / 운영 환경) AI không chỉ hỏi “mô hình có chính xác không?” mà còn phải hỏi **mất bao lâu, phục vụ được bao nhiêu yêu cầu (request / 요청) và tốn bao nhiêu tiền**. Ba đại lượng `latency`, `throughput` và `cost` liên hệ chặt chẽ nhưng không cùng hướng tối ưu.
 

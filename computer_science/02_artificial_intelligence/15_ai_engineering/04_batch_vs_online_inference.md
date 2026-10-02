@@ -1,6 +1,6 @@
 # Batch suy luận (inference / 추론) và Online suy luận (inference / 추론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Batch suy luận (inference / 추론) và Online suy luận (inference / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Batch suy luận (inference / 추론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Online suy luận (inference / 추론)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Batch và online inference**. Route đi từ freshness requirement → batch scheduling → online request path → hybrid feature/model serving → cost, latency, and consistency trade-offs, để mode chạy xuất phát từ use case.
 
 Một hệ thống AI có thể chạy cùng một mô hình theo hai chế độ thực thi rất khác nhau: **suy luận theo lô (batch inference / 배치 추론)** và **suy luận trực tuyến (online inference / 온라인 추론)**. Sự khác nhau không nằm ở mô hình mà ở hợp đồng thời gian (timing contract) giữa hệ thống và bên tiêu thụ (consumer / 소비자).
 

@@ -1,6 +1,6 @@
 # Pruning và kiến thức (knowledge / 지식) Distillation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Pruning và kiến thức (knowledge / 지식) Distillation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pruning** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sparsity** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Pruning và knowledge distillation**. Route đi từ redundant parameters → structured/unstructured pruning → teacher logits/features → student training → hardware sparsity and quality checks, để compression nối model change với runtime gain.
 
 **Cắt tỉa (pruning / 가지치기)** và **chưng cất tri thức (knowledge distillation / 지식 증류)** đều nhằm tạo mô hình hiệu quả hơn, nhưng cơ chế khác nhau. Pruning loại bỏ một phần cấu trúc (structure / 구조) hoặc weights của mô hình hiện có. Distillation huấn luyện một **mô hình học viên (student)** học hành vi từ **mô hình giáo viên (teacher)**.
 

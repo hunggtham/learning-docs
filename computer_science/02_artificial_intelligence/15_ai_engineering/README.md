@@ -1,6 +1,6 @@
 # AI kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phụ thuộc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** Đây là README owner của **AI engineering**. Route đọc đi từ training pipeline → inference/serving → performance/compression → system design; các chương nối model artifact với request path, SLO, chi phí và độ tin cậy.
 
 **Kỹ thuật AI (AI Engineering)** là tầng (layer / 계층) biến mô hình (model / 모델), dữ liệu (data / 데이터), retrieval và tác nhân (agent / 에이전트) thành năng lực môi trường vận hành (production / 운영 환경) có hiệu năng (performance / 성능), độ tin cậy (reliability / 신뢰성) và chi phí (cost / 비용) dễ dự đoán hơn. Folder này không tập trung vào một khung phần mềm (framework / 프레임워크) cụ thể mà ưu tiên các cơ chế, sự đánh đổi (trade-off / 트레이드오프) và hệ thống (system / 시스템) đặc tả hợp đồng (contract / 계약) có giá trị lâu dài.
 

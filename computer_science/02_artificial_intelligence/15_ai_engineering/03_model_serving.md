@@ -1,6 +1,6 @@
 # Mô hình (model / 모델) Serving trong AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mô hình (model / 모델) Serving trong AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đường đi của Serving** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Stateless và Stateful Serving** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Model serving trong AI**. Route đi từ model artifact → request routing → stateless/stateful execution → scaling/version rollout → health, latency, and rollback, để serving được thiết kế quanh SLO và vòng đời model.
 
 **Phục vụ mô hình (model serving / 모델 서빙)** là lớp biến một mô hình đã được huấn luyện thành một khả năng mà ứng dụng (application / 애플리케이션) có thể gọi ổn định qua API, RPC, batch job hoặc embedded thời gian chạy (runtime / 런타임). huấn luyện (training / 학습) tạo ra parameter; serving chịu trách nhiệm nạp mô hình, nhận yêu cầu (request / 요청), chuẩn hóa đầu vào (input / 입력), chạy suy luận (inference / 추론), kiểm soát tài nguyên, trả đầu ra (output / 출력) và quan sát hành vi trong môi trường vận hành (production / 운영 환경).
 

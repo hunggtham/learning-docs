@@ -1,6 +1,6 @@
 # Thiết kế hệ thống AI: từ mô hình tới sản phẩm đáng tin cậy
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thiết kế hệ thống AI: từ mô hình tới sản phẩm đáng tin cậy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức tiên quyết** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bắt đầu từ tác vụ (task / 작업) đặc tả hợp đồng (contract / 계약)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thiết kế hệ thống AI: từ mô hình tới sản phẩm đáng tin cậy**. Route đi từ task contract → data/model boundary → serving/reliability design → monitoring/feedback → safety, cost, and change management, để hệ thống được thiết kế từ yêu cầu dùng thật.
 
 **Thiết kế hệ thống AI (AI system design / AI 시스템 설계)** là quá trình tổ chức mô hình, dữ liệu, truy xuất, công cụ, trạng thái (state / 상태), lưu trữ (storage / 저장소), thời gian chạy (runtime / 런타임), quan sát hệ thống và chính sách (policy / 정책) thành một sản phẩm có thể vận hành lâu dài. Một kiến trúc tốt không cố nhét toàn bộ “trí thông minh” vào một mô hình (model / 모델) duy nhất; nó phân tách trách nhiệm để mỗi thành phần có đặc tả hợp đồng (contract / 계약) rõ, có thể kiểm thử và có thể thay thế độc lập.
 

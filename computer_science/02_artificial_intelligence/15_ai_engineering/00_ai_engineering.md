@@ -1,6 +1,6 @@
 # AI kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình không đồng nghĩa sản phẩm** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Huấn luyện Offline và phục vụ Online** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI engineering**. Route đi từ model capability → data/training pipeline → inference/serving → product contract → reliability and cost, để mô hình được đọc trong hệ thống thật chứ không tách khỏi sản phẩm.
 
 **Kỹ thuật AI (AI Engineering / AI 엔지니어링)** là lĩnh vực biến mô hình (model / 모델), dữ liệu và các thành phần AI thành một hệ thống có thể vận hành ổn định, nhanh, có chi phí kiểm soát được, quan sát được (observable) và bảo trì được trong môi trường vận hành (production / 운영 환경). Chất lượng mô hình chỉ là một thành phần; trải nghiệm người dùng và độ tin cậy của hệ thống còn phụ thuộc toàn bộ chuỗi xử lý (pipeline / 파이프라인) xung quanh.
 
