@@ -1,6 +1,6 @@
 # Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. gốc (root / 루트) và đối tượng (object / 객체) đồ thị (graph / 그래프)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Mark–sweep: mô hình cơ bản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Garbage collection: generational, concurrent, compacting và write barriers**. Route đi từ roots/object graph → mark-sweep baseline → generational/concurrent phases → compaction/barriers, để pause time, mutator interaction và memory reclamation được cân bằng.
 
 **Bộ gom rác (garbage collector, GC / 가비지 컬렉터)** là cơ chế thời gian chạy (runtime / 런타임) tự động tìm những đối tượng (object / 객체) không còn có thể được chương trình sử dụng và thu hồi vùng nhớ của chúng. Để hiểu GC sâu, trước hết phải tách ba khái niệm thường bị trộn lẫn: **cấp phát bộ nhớ (allocation)** là tạo vùng nhớ mới; **khả năng truy cập (reachability)** là đối tượng (object / 객체) còn được đi tới từ các gốc (root / 루트) hay không; **thu hồi (reclamation)** là trả vùng nhớ của đối tượng (object / 객체) không còn reachable về cho allocator.
 

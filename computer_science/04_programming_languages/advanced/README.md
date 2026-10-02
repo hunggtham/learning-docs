@@ -1,6 +1,6 @@
 # Ngôn ngữ lập trình & thời gian chạy (runtime / 런타임) nâng cao
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ngôn ngữ lập trình & thời gian chạy (runtime / 런타임) nâng cao**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) chapters** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Độ sâu (depth / 깊이) priorities** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Ngôn ngữ lập trình & thời gian chạy (runtime / 런타임) nâng cao**. Route đi từ type/effect contracts → algebraic types và ownership → compiler IR/JIT/GC → coroutine và structured concurrency, để mỗi chapter chỉ rõ invariant, phép tối ưu và failure boundary.
 
 Bắt đầu từ [Programming Languages foundation](../../basic/04_programming_languages/00_language_semantics_and_execution_models.md).
 

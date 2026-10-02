@@ -1,6 +1,6 @@
 # Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tác động (effect / 효과) các hệ thống (systems / 시스템들), capabilities và controlled side effects**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Side tác động (effect / 효과) là thay đổi observable ngữ cảnh (context / 맥락)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Pure cốt lõi (core / 핵심) và effectful shell** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Effect systems, capabilities và controlled side effects**. Route đi từ observable effect → pure core/effectful shell → capability/authority → effect tracking và enforcement, để quyền thực thi được kiểm soát thay vì chỉ mô tả.
 
 Hệ kiểu (type system / 타입 시스템) thường trả lời một expression tạo ra loại giá trị (value / 값) nào. Nhưng hai functions cùng trả `String` có thể rất khác: một hàm (function / 함수) thuần chỉ format dữ liệu; hàm (function / 함수) khác đọc mạng (network / 네트워크), ghi cơ sở dữ liệu (database / 데이터베이스) hoặc throw exception. **tác động (effect / 효과) hệ thống (system / 시스템)** mở rộng static lập luận (reasoning / 추론) để mô tả computation có thể làm gì ngoài việc trả giá trị (value / 값).
 

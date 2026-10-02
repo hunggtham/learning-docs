@@ -1,6 +1,6 @@
 # Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Coroutine, continuation, async thời gian chạy (runtime / 런타임) và structured tính đồng thời (concurrency / 동시성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. luồng thực thi (thread / 스레드) và coroutine khác nhau ở tầng nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Continuation là gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Coroutines, continuations, async runtimes và structured concurrency**. Route đi từ thread/coroutine boundary → continuation/state machine → async scheduler → cancellation, lifetime và structured concurrency, để control flow không bị tách khỏi resource ownership.
 
 Một chương trình đồng thời (concurrent program) có thể phải xử lý hàng nghìn công việc chờ mạng (network / 네트워크) hoặc lưu trữ (storage / 저장소) nhưng chỉ có vài CPU cốt lõi (core / 핵심). Nếu ánh xạ mỗi công việc thành một OS luồng thực thi (thread / 스레드), chi phí ngăn xếp (stack / 스택), scheduling và ngữ cảnh (context / 맥락) switch có thể tăng nhanh. Coroutine và async thời gian chạy (runtime / 런타임) tồn tại để tách **đơn vị công việc lô-gic (logic / 논리)** khỏi **đơn vị thực thi của hệ điều hành**.
 

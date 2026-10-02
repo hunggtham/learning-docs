@@ -1,6 +1,6 @@
 # Trình biên dịch (compiler / 컴파일러) IR, SSA, data-flow phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình biên dịch (compiler / 컴파일러) IR, SSA, data-flow phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần IR** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Control-flow đồ thị (graph / 그래프)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Compiler IR, SSA, data-flow analysis và optimization**. Route đi từ source semantics → IR/control-flow graph → SSA/data-flow facts → transformation và proof of safety, để tối ưu vẫn giữ nguyên semantics.
 
 Trình biên dịch (compiler / 컴파일러) không tối ưu trực tiếp mã nguồn (source code / 소스 코드) như con người nhìn thấy và cũng không muốn phụ thuộc ngay vào machine instructions. Nó thường chuyển chương trình qua một hoặc nhiều **Intermediate Representations (IR / 중간 표현)** để biến ngữ nghĩa (semantics / 의미론) thành cấu trúc thuận lợi cho phân tích (analysis / 분석) và transformation.
 

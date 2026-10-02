@@ -1,6 +1,6 @@
 # JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **JIT profiling, speculative tối ưu hóa (optimization / 최적화) và deoptimization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bài toán ban đầu: tối ưu mạnh cần biết hành vi (behavior / 동작) thật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tiered compilation là tài nguyên (resource / 자원) scheduler cho trình biên dịch (compiler / 컴파일러)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **JIT profiling, speculative optimization và deoptimization**. Route đi từ runtime profile → tiered compilation → guarded speculation → invalidation/deoptimization, để lợi ích tốc độ luôn đi cùng điều kiện hoàn tác.
 
 Ahead-of-time trình biên dịch (compiler / 컴파일러) phải tối ưu khi chưa biết tải công việc (workload / 워크로드) thời gian chạy (runtime / 런타임) cụ thể. **JIT — Just-In-Time compilation (적시 컴파일)** có lợi thế quan sát chương trình đang chạy: kiểu (type / 타입) nào xuất hiện, branch nào thường đi, lời gọi (call / 호출) site nào monomorphic, allocation nào escape và phương thức (method / 메서드)/vòng lặp (loop / 루프) nào thật sự hot.
 

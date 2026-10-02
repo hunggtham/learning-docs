@@ -1,6 +1,6 @@
 # Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), effects và thời gian chạy (runtime / 런타임) contracts**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiểu (type / 타입) judgment như một statement có điều kiện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Soundness và progress/preservation intuition** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Type systems, effects và runtime contracts**. Route đi từ typing judgment → effects trong type → soundness/progress-preservation → runtime contract và violation, để static guarantee được nối với hành vi khi chạy.
 
 Hệ kiểu (type system / 타입 시스템) không chỉ phân loại `int`, `string` hay `User`. Ở mức advanced, nó là một static lập luận (reasoning / 추론) khung phần mềm (framework / 프레임워크) dùng để loại bỏ một tập program states trước thời gian chạy (runtime / 런타임). Điều quan trọng là hiểu **thuộc tính (property / 속성) nào được encode**, thuộc tính (property / 속성) nào vẫn nằm ngoài hệ kiểu (type system / 타입 시스템), và chi phí (cost / 비용) ergonomics/expressiveness của mỗi lựa chọn.
 

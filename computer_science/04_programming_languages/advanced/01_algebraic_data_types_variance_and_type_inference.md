@@ -1,6 +1,6 @@
 # Algebraic dữ liệu (data / 데이터) types, variance và kiểu (type / 타입) suy luận (inference / 추론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Algebraic dữ liệu (data / 데이터) types, variance và kiểu (type / 타입) suy luận (inference / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sản phẩm (product / 제품) kiểu (type / 타입): nhiều phần cùng tồn tại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sum kiểu (type / 타입): một trong nhiều trường hợp (case / 사례)** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Algebraic data types, variance và type inference**. Route đi từ product/sum types → pattern matching và exhaustiveness → variance/subtyping → constraint solving/inference, để cấu trúc dữ liệu và tính đúng của type checker đi cùng nhau.
 
 Hệ kiểu (type system / 타입 시스템) không chỉ gắn nhãn `int`, `String` hay `User`. Ở mức advanced, kiểu (type / 타입) trở thành một ngôn ngữ mô tả **shape của trạng thái (state / 상태) hợp lệ**, cách các shape kết hợp và quan hệ substitutability giữa chúng. Algebraic dữ liệu (data / 데이터) Types, variance và suy luận (inference / 추론) là ba mảnh giúp xây API vừa biểu đạt mạnh vừa giảm invalid states.
 
