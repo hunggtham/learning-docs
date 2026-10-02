@@ -1,7 +1,6 @@
 # Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)
 
-> **Mạch đọc:** Đặt **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Rủi ro tín dụng là gì?** sang **2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Rủi ro tín dụng là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối credit ratings với bonds, default và restructuring, để đọc chi phí vốn như tín hiệu về khả năng trả nợ và quyền thương lượng.
 
 Một doanh nghiệp có thể vẫn báo lợi nhuận hoạt động nhưng rơi vào khủng hoảng nếu nợ đáo hạn trước khi tiền mặt về. Vì vậy khi phân tích doanh nghiệp, đặc biệt là xây dựng, công nghiệp nặng, hàng không, bán lẻ, công ty mẹ có đòn bẩy cao hoặc doanh nghiệp dự án, phải tách **rủi ro lợi nhuận** khỏi **rủi ro tín dụng (credit risk / 신용위험)**.
 
@@ -27,6 +26,8 @@ Tổn\ thất\ tín\ dụng\ kỳ\ vọng \approx PD \times LGD \times EAD
 
 Nhà phân tích tín dụng không chỉ quan tâm vỡ nợ có xảy ra hay không mà còn quan tâm giá trị thu hồi nếu nó xảy ra.
 
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?** tiếp nhận điểm tựa từ **1. Rủi ro tín dụng là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Trái phiếu doanh nghiệp hoạt động thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?
 
 Cổ đông hưởng phần tăng giá trị sau khi mọi nghĩa vụ cố định được trả. Chủ nợ thường chỉ nhận gốc và lãi theo hợp đồng; phần tăng giá trị bị giới hạn nhưng lại chịu tổn thất nếu doanh nghiệp không trả được nợ.
@@ -34,6 +35,8 @@ Cổ đông hưởng phần tăng giá trị sau khi mọi nghĩa vụ cố đ�
 Vì vậy cổ đông có thể thích mở rộng mạnh nếu kỳ vọng tăng trưởng lớn. Chủ nợ thường quan tâm nhiều hơn tới sự ổn định dòng tiền, tài sản bảo đảm, điều khoản nợ và khả năng bảo vệ trong kịch bản xấu.
 
 Một dự án có NPV dương nhưng biến động rất cao có thể hấp dẫn cổ đông nhưng không hấp dẫn chủ nợ nếu làm đòn bẩy tăng quá mạnh.
+
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **3. Trái phiếu doanh nghiệp hoạt động thế nào?** tiếp nhận điểm tựa từ **2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Chênh lệch tín dụng là tín hiệu thị trường, không phải chẩn đoán hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Trái phiếu doanh nghiệp hoạt động thế nào?
 
@@ -49,6 +52,8 @@ Lợi\ suất\ trái\ phiếu\ doanh\ nghiệp \approx Lợi\ suất\ chuẩn\ c
 
 **Chênh lệch tín dụng (credit spread)** phản ánh phần bù mà nhà đầu tư yêu cầu cho rủi ro riêng của tổ chức phát hành, rủi ro vỡ nợ và bất định.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **4. Chênh lệch tín dụng là tín hiệu thị trường, không phải chẩn đoán hoàn chỉnh** tiếp nhận điểm tựa từ **3. Trái phiếu doanh nghiệp hoạt động thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Xếp hạng tín nhiệm là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Chênh lệch tín dụng là tín hiệu thị trường, không phải chẩn đoán hoàn chỉnh
 
 Nếu chênh lệch tín dụng tăng nhanh, thị trường đang yêu cầu phần bù cao hơn. Nhưng vẫn phải hỏi nguyên nhân:
@@ -63,6 +68,8 @@ Toàn thị trường chuyển sang né rủi ro?
 ```
 
 Spread có thể phản ứng trước xếp hạng tín nhiệm, nhưng cũng có thể tăng quá mức trong giai đoạn hoảng loạn.
+
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **5. Xếp hạng tín nhiệm là gì?** tiếp nhận điểm tựa từ **4. Chênh lệch tín dụng là tín hiệu thị trường, không phải chẩn đoán hoàn chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Hạng đầu tư và hạng đầu cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Xếp hạng tín nhiệm là gì?
 
@@ -84,6 +91,8 @@ Kinh doanh yếu → giảm nợ → khả năng trả nợ tốt hơn → có t
 
 Hướng thay đổi đôi khi quan trọng hơn mức xếp hạng tại một thời điểm.
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **6. Hạng đầu tư và hạng đầu cơ** tiếp nhận điểm tựa từ **5. Xếp hạng tín nhiệm là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Khả năng trả lãi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Hạng đầu tư và hạng đầu cơ
 
 Thị trường thường chia rộng giữa **hạng đầu tư (investment grade)** và **hạng đầu cơ/lợi suất cao (speculative grade / high yield)**. Ranh giới cụ thể phụ thuộc thang điểm và phương pháp xếp hạng.
@@ -91,6 +100,8 @@ Thị trường thường chia rộng giữa **hạng đầu tư (investment gra
 Khi tổ chức phát hành bị hạ qua một ngưỡng quan trọng, tập nhà đầu tư có thể thay đổi. Một số quỹ hoặc tổ chức chỉ được nắm chứng khoán từ mức xếp hạng nhất định trở lên. Vì vậy hạ bậc có thể làm spread tăng mạnh hơn mức thay đổi cơ bản của doanh nghiệp.
 
 Đây là **hiệu ứng bán bắt buộc (forced-seller effect)**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **7. Khả năng trả lãi** tiếp nhận điểm tựa từ **6. Hạng đầu tư và hạng đầu cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Nợ ròng và đòn bẩy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Khả năng trả lãi
 
@@ -106,6 +117,8 @@ Nhưng 3 lần không phải ngưỡng an toàn chung cho mọi ngành. Doanh ng
 
 Vì vậy phải xem thêm CFO, vốn lưu động và CAPEX.
 
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **8. Nợ ròng và đòn bẩy** tiếp nhận điểm tựa từ **7. Khả năng trả lãi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Lịch đáo hạn nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Nợ ròng và đòn bẩy
 
 \[
@@ -119,6 +132,8 @@ Nợ\ ròng/EBITDA
 Các chỉ số này hữu ích nhưng có bẫy. Tiền mặt có thể bị hạn chế sử dụng. EBITDA có thể đang ở đỉnh chu kỳ. Nợ thuê hoặc bảo lãnh có thể chưa phản ánh đầy đủ.
 
 Do đó tỷ lệ nợ ròng chỉ là điểm bắt đầu.
+
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **9. Lịch đáo hạn nợ** tiếp nhận điểm tựa từ **8. Nợ ròng và đòn bẩy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Rủi ro tái cấp vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Lịch đáo hạn nợ
 
@@ -136,6 +151,8 @@ Năm 4+: 2,0 nghìn tỷ KRW
 Tổng nợ là 3,9 nghìn tỷ nhưng áp lực tái cấp vốn ngay lập tức tập trung chủ yếu ở năm 1.
 
 Hai doanh nghiệp có cùng đòn bẩy nhưng kỳ hạn tập trung khác nhau sẽ có rủi ro thanh khoản rất khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **10. Rủi ro tái cấp vốn** tiếp nhận điểm tựa từ **9. Lịch đáo hạn nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Nguồn thanh khoản và nhu cầu thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Rủi ro tái cấp vốn
 
@@ -155,6 +172,8 @@ Lợi nhuận yếu
 
 Đây là vòng xoáy tín dụng tự củng cố.
 
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **10. Rủi ro tái cấp vốn** nêu điều cần giải thích; **11. Nguồn thanh khoản và nhu cầu thanh khoản** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Hạn mức cam kết và không cam kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Nguồn thanh khoản và nhu cầu thanh khoản
 
 Một cách thực tế là dựng bảng 12–24 tháng.
@@ -169,6 +188,8 @@ Bộ\ đệm\ thanh\ khoản = Nguồn\ khả\ dụng - Nhu\ cầu\ ngắn\ hạ
 
 Nếu bộ đệm chỉ dương trong kịch bản cơ sở nhưng âm khi doanh thu giảm 10%, doanh nghiệp có cấu trúc thanh khoản mong manh.
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **11. Nguồn thanh khoản và nhu cầu thanh khoản** nêu điều cần giải thích; **12. Hạn mức cam kết và không cam kết** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Covenant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Hạn mức cam kết và không cam kết
 
 Không nên coi mọi hạn mức tín dụng chưa sử dụng như tiền mặt.
@@ -176,6 +197,8 @@ Không nên coi mọi hạn mức tín dụng chưa sử dụng như tiền mặ
 **Hạn mức cam kết (committed line)** thường chắc chắn hơn nhưng vẫn có điều kiện. **Hạn mức không cam kết (uncommitted line)** có thể bị ngân hàng giảm hoặc hủy dễ hơn.
 
 Trong khủng hoảng, chất lượng nguồn thanh khoản quan trọng hơn con số tiêu đề.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **13. Covenant** tiếp nhận điểm tựa từ **12. Hạn mức cam kết và không cam kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Nợ có bảo đảm và không bảo đảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Covenant
 
@@ -194,6 +217,8 @@ Nếu vi phạm, kết quả có thể từ miễn trừ tạm thời tới tăn
 
 Vi phạm covenant không đồng nghĩa phá sản nhưng có thể làm quyền thương lượng chuyển sang chủ nợ.
 
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **14. Nợ có bảo đảm và không bảo đảm** tiếp nhận điểm tựa từ **13. Covenant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Nợ ưu tiên, nợ thứ cấp và mezzanine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Nợ có bảo đảm và không bảo đảm
 
 **Nợ có bảo đảm (secured debt / 담보부채무)** có quyền đối với tài sản cụ thể. **Nợ không bảo đảm (unsecured debt / 무담보채무)** dựa nhiều hơn vào năng lực tín dụng chung của doanh nghiệp.
@@ -201,6 +226,8 @@ Vi phạm covenant không đồng nghĩa phá sản nhưng có thể làm quyề
 Khi vỡ nợ, mức thu hồi phụ thuộc thứ tự pháp lý, giá trị tài sản bảo đảm và điều khoản tái cấu trúc.
 
 Vì vậy phải đọc số nợ cùng **thứ tự ưu tiên (seniority / 변제순위)**.
+
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **15. Nợ ưu tiên, nợ thứ cấp và mezzanine** tiếp nhận điểm tựa từ **14. Nợ có bảo đảm và không bảo đảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Trái phiếu chuyển đổi và trái phiếu kèm quyền mua cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Nợ ưu tiên, nợ thứ cấp và mezzanine
 
@@ -218,6 +245,8 @@ Cổ phần phổ thông
 
 Càng xuống dưới, cơ hội tăng giá có thể lớn hơn nhưng mức bảo vệ khi doanh nghiệp gặp khó khăn yếu hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **16. Trái phiếu chuyển đổi và trái phiếu kèm quyền mua cổ phiếu** tiếp nhận điểm tựa từ **15. Nợ ưu tiên, nợ thứ cấp và mezzanine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Bảo lãnh và nghĩa vụ tiềm tàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Trái phiếu chuyển đổi và trái phiếu kèm quyền mua cổ phiếu
 
 **Trái phiếu chuyển đổi (Convertible Bond / CB / 전환사채)** cho người nắm giữ quyền chuyển trái phiếu thành cổ phiếu theo điều kiện nhất định. **Trái phiếu kèm quyền mua cổ phiếu (Bond with Warrants / BW / 신주인수권부사채)** gắn quyền mua cổ phiếu mới.
@@ -225,6 +254,8 @@ Càng xuống dưới, cơ hội tăng giá có thể lớn hơn nhưng mức b�
 Đây là chứng khoán lai: vừa có quyền đòi nợ vừa có quyền chọn tăng giá của cổ phiếu.
 
 Doanh nghiệp có thể dùng chúng vì lãi suất coupon thấp hơn nợ thông thường hoặc vì nhà đầu tư muốn thêm cơ hội tăng giá. Nhưng cổ đông hiện hữu cần theo dõi khả năng pha loãng.
+
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **17. Bảo lãnh và nghĩa vụ tiềm tàng** tiếp nhận điểm tựa từ **16. Trái phiếu chuyển đổi và trái phiếu kèm quyền mua cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Cross-default và yêu cầu trả nợ trước hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Bảo lãnh và nghĩa vụ tiềm tàng
 
@@ -243,6 +274,8 @@ Vì vậy phải đọc thuyết minh về:
 
 Xem [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md).
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **18. Cross-default và yêu cầu trả nợ trước hạn** tiếp nhận điểm tựa từ **17. Bảo lãnh và nghĩa vụ tiềm tàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Vỡ nợ kỹ thuật và vỡ nợ thanh toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Cross-default và yêu cầu trả nợ trước hạn
 
 Hợp đồng nợ có thể chứa **điều khoản vỡ nợ chéo (cross-default)**: vi phạm ở một nghĩa vụ có thể kích hoạt vi phạm ở nghĩa vụ khác.
@@ -251,6 +284,8 @@ Hợp đồng nợ có thể chứa **điều khoản vỡ nợ chéo (cross-def
 
 Điều này khiến một vi phạm nhỏ đôi khi lan thành khủng hoảng thanh khoản lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **19. Vỡ nợ kỹ thuật và vỡ nợ thanh toán** tiếp nhận điểm tựa từ **18. Cross-default và yêu cầu trả nợ trước hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Khó khăn tài chính không đồng nghĩa phá sản ngay lập tức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Vỡ nợ kỹ thuật và vỡ nợ thanh toán
 
 Doanh nghiệp có thể vi phạm covenant dù vẫn trả lãi đúng hạn. Đây là **vỡ nợ kỹ thuật (technical default)**.
@@ -258,6 +293,8 @@ Doanh nghiệp có thể vi phạm covenant dù vẫn trả lãi đúng hạn. �
 **Vỡ nợ thanh toán (payment default)** là không trả gốc hoặc lãi đúng hợp đồng.
 
 Vỡ nợ kỹ thuật vẫn nghiêm trọng vì bên cho vay có thể yêu cầu đàm phán lại hoặc bổ sung bảo vệ.
+
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **20. Khó khăn tài chính không đồng nghĩa phá sản ngay lập tức** tiếp nhận điểm tựa từ **19. Vỡ nợ kỹ thuật và vỡ nợ thanh toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Workout (워크아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Khó khăn tài chính không đồng nghĩa phá sản ngay lập tức
 
@@ -277,6 +314,8 @@ Thanh lý
 
 Từ “khó khăn” tới “phá sản” có nhiều trạng thái trung gian.
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **21. Workout (워크아웃)** tiếp nhận điểm tựa từ **20. Khó khăn tài chính không đồng nghĩa phá sản ngay lập tức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Phục hồi theo tòa án (회생절차)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Workout (워크아웃)
 
 **Workout** thường là tái cấu trúc được phối hợp với chủ nợ ngoài quy trình thanh lý đầy đủ. Mục tiêu là giữ giá trị của doanh nghiệp đang hoạt động nếu hoạt động cốt lõi vẫn khả thi nhưng cấu trúc vốn quá nặng.
@@ -285,11 +324,15 @@ Chủ nợ có thể gia hạn kỳ hạn, giảm lãi suất, cấp thêm thanh
 
 > Nếu giá trị doanh nghiệp đang hoạt động lớn hơn giá trị thanh lý, tái cấu trúc có thể tốt hơn phá sản ngay.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **22. Phục hồi theo tòa án (회생절차)** tiếp nhận điểm tựa từ **21. Workout (워크아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Đổi nợ thành cổ phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Phục hồi theo tòa án (회생절차)
 
 Quy trình phục hồi dưới sự giám sát của tòa giúp đóng băng hoặc phối hợp các yêu cầu của chủ nợ và xây kế hoạch để doanh nghiệp tiếp tục hoạt động trong khi nợ được tái cấu trúc.
 
 Câu hỏi cốt lõi là **khả năng tồn tại (viability)**. Nếu hoạt động cốt lõi tạo tiền nhưng gánh nợ quá lớn, phục hồi có lý do kinh tế. Nếu mô hình kinh doanh đã mất khả năng tồn tại, tái cấu trúc chỉ trì hoãn thanh lý.
+
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **23. Đổi nợ thành cổ phần** tiếp nhận điểm tựa từ **22. Phục hồi theo tòa án (회생절차)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Bán tài sản và giảm đòn bẩy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Đổi nợ thành cổ phần
 
@@ -304,6 +347,8 @@ Pha loãng cổ đông cũ tăng
 
 Doanh nghiệp có thể khỏe hơn sau tái cấu trúc nhưng cổ đông cũ không nhất thiết được hưởng lợi tương ứng.
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **24. Bán tài sản và giảm đòn bẩy** tiếp nhận điểm tựa từ **23. Đổi nợ thành cổ phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Tăng vốn khi doanh nghiệp gặp khó khăn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Bán tài sản và giảm đòn bẩy
 
 Bán tài sản không cốt lõi tạo tiền để trả nợ. Đây là công cụ tái cấu trúc đơn giản nhưng có đánh đổi.
@@ -312,6 +357,8 @@ Nếu phải bán tài sản chất lượng cao ở giá thấp trong khủng h
 
 Vì vậy giảm đòn bẩy phải xét **chất lượng tài sản đã bán**, không chỉ số nợ giảm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **25. Tăng vốn khi doanh nghiệp gặp khó khăn** tiếp nhận điểm tựa từ **24. Bán tài sản và giảm đòn bẩy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Phân tích mức thu hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Tăng vốn khi doanh nghiệp gặp khó khăn
 
 Phát hành thêm cổ phiếu có thể cứu khả năng thanh toán hoặc thanh khoản nhưng gây pha loãng lớn nếu giá phát hành thấp.
@@ -319,6 +366,8 @@ Phát hành thêm cổ phiếu có thể cứu khả năng thanh toán hoặc th
 Doanh nghiệp có thể sống sót trong khi giá trị của cổ đông cũ bị suy giảm mạnh.
 
 Đây là lý do mức thu hồi của chủ nợ và lợi suất của cổ đông không giống nhau.
+
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **26. Phân tích mức thu hồi** tiếp nhận điểm tựa từ **25. Tăng vốn khi doanh nghiệp gặp khó khăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Bẫy EBITDA ở đỉnh chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Phân tích mức thu hồi
 
@@ -345,6 +394,8 @@ Giá trị doanh nghiệp khi khó khăn
 
 Cổ phần phổ thông chỉ nhận phần còn lại sau các quyền đòi ưu tiên.
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **26. Phân tích mức thu hồi** đã nêu tiêu chí phân biệt, còn **27. Bẫy EBITDA ở đỉnh chu kỳ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **28. Cú sốc vốn lưu động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Bẫy EBITDA ở đỉnh chu kỳ
 
 Nếu tính đòn bẩy bằng nợ chia EBITDA đang ở đỉnh chu kỳ, tỷ lệ có thể trông rất thấp đúng lúc điều kiện tốt nhất.
@@ -352,6 +403,8 @@ Nếu tính đòn bẩy bằng nợ chia EBITDA đang ở đỉnh chu kỳ, tỷ
 Ví dụ nợ = 4T, EBITDA đỉnh = 2T → 2 lần. Nếu EBITDA chuẩn hóa = 1T → 4 lần.
 
 Nhà phân tích tín dụng phải chuẩn hóa chu kỳ, đặc biệt với bán dẫn, hóa chất, vận tải biển, thép, xây dựng và hàng hóa cơ bản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **27. Bẫy EBITDA ở đỉnh chu kỳ** đã nêu tiêu chí phân biệt, còn **28. Cú sốc vốn lưu động** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **29. Ngưỡng xếp hạng và yêu cầu bổ sung tài sản bảo đảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Cú sốc vốn lưu động
 
@@ -369,11 +422,15 @@ DPO giảm
 
 Doanh nghiệp có thể vẫn báo lãi nhưng hết tiền.
 
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **29. Ngưỡng xếp hạng và yêu cầu bổ sung tài sản bảo đảm** tiếp nhận điểm tựa từ **28. Cú sốc vốn lưu động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Hỗ trợ từ tập đoàn: có thể có nhưng không được mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Ngưỡng xếp hạng và yêu cầu bổ sung tài sản bảo đảm
 
 Một số hợp đồng thay đổi điều khoản khi xếp hạng giảm: phải bổ sung tài sản bảo đảm, tăng ký quỹ phái sinh hoặc mất khả năng tiếp cận một số nguồn vốn.
 
 Do đó hạ bậc có thể tạo **nhu cầu tiền mặt phi tuyến (nonlinear cash need)**.
+
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **30. Hỗ trợ từ tập đoàn: có thể có nhưng không được mặc định** tiếp nhận điểm tựa từ **29. Ngưỡng xếp hạng và yêu cầu bổ sung tài sản bảo đảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Doanh nghiệp công và cảm nhận gần giống rủi ro quốc gia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Hỗ trợ từ tập đoàn: có thể có nhưng không được mặc định
 
@@ -387,6 +444,8 @@ Công ty con thuộc chaebol lớn có thể hưởng hỗ trợ ngầm hoặc c
 
 Tên thương hiệu lớn không đồng nghĩa có bảo lãnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **31. Doanh nghiệp công và cảm nhận gần giống rủi ro quốc gia** tiếp nhận điểm tựa từ **30. Hỗ trợ từ tập đoàn: có thể có nhưng không được mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Kiểm tra sức chịu đựng tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Doanh nghiệp công và cảm nhận gần giống rủi ro quốc gia
 
 Một số cơ quan công có mức kỳ vọng hỗ trợ cao hơn doanh nghiệp tư nhân, nhưng vẫn phải đọc khung pháp lý và cơ chế hỗ trợ thực tế.
@@ -394,6 +453,8 @@ Một số cơ quan công có mức kỳ vọng hỗ trợ cao hơn doanh nghi�
 Không nên tự động coi mọi tổ chức liên quan nhà nước là rủi ro quốc gia.
 
 Xem [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md).
+
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **32. Kiểm tra sức chịu đựng tín dụng** tiếp nhận điểm tựa từ **31. Doanh nghiệp công và cảm nhận gần giống rủi ro quốc gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Quy trình phân tích tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 32. Kiểm tra sức chịu đựng tín dụng
 
@@ -420,6 +481,8 @@ Sau đó tính:
 
 Mục tiêu không phải dự đoán chính xác khủng hoảng mà tìm ngưỡng nơi cấu trúc vốn bắt đầu thất bại.
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **32. Kiểm tra sức chịu đựng tín dụng** xác định đầu vào; **33. Quy trình phân tích tín dụng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. Quy trình phân tích tín dụng
 
 Phân tích tín dụng bắt đầu từ khả năng tạo tiền và lịch nghĩa vụ, rồi mới dùng rating và tài sản bảo đảm để kiểm tra. Workflow sau nối business risk với liquidity, covenant và recovery value.
@@ -438,6 +501,8 @@ Phân tích tín dụng bắt đầu từ khả năng tạo tiền và lịch ng
 11. Mức thu hồi nếu vỡ nợ
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **Mô hình tư duy** gom các mảnh từ **33. Quy trình phân tích tín dụng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Phân tích cổ phiếu hỏi **phần tăng giá còn bao nhiêu**. Phân tích tín dụng hỏi **mức giảm tới đâu trước khi chủ nợ bắt đầu mất tiền**.
@@ -455,6 +520,8 @@ Biến động kinh doanh
 
 Một doanh nghiệp kinh doanh tốt nhưng cấu trúc vốn xấu vẫn có thể vỡ nợ. Một doanh nghiệp trung bình nhưng nợ thấp và thanh khoản mạnh có thể tồn tại rất lâu.
 
+> **Chuyển mạch:** Trong **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“Có lãi thì không vỡ nợ.”** Sai. Vỡ nợ là vấn đề tiền mặt và thời điểm.
@@ -467,6 +534,8 @@ Một doanh nghiệp kinh doanh tốt nhưng cấu trúc vốn xấu vẫn có t
 
 **“Tập đoàn mẹ lớn sẽ luôn cứu công ty con.”** Không thể mặc định nếu không có động lực pháp lý hoặc kinh tế rõ ràng.
 
+> **Chuyển mạch:** Ở chặng này của **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết tiếp theo** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết tiếp theo
 
 Các liên kết sau mở rộng từng lớp của quy trình: công bố, bảng cân đối, thị trường trái phiếu và tái cấu trúc. Chọn tài liệu theo điểm rủi ro còn chưa rõ trong case.
@@ -476,3 +545,5 @@ Các liên kết sau mở rộng từng lớp của quy trình: công bố, bả
 - [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — cấu trúc tài trợ.
 - [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — rủi ro PF.
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) — khung phân tích doanh nghiệp.
+
+> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)
 
-> **Mạch đọc:** Đọc **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Toàn cầu hóa thay đổi luật chơi** sang **Khả năng thanh toán và thanh khoản: bài học cốt lõi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Toàn cầu hóa thay đổi luật chơi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Khả năng thanh toán và thanh khoản: bài học cốt lõi** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối globalization thập niên 1990 với khủng hoảng 1997, để thấy mở cửa vốn làm thay đổi bảng cân đối và năng lực chống sốc.
 
 Thập niên 1990 là điểm chuyển giữa hai mô hình tăng trưởng của Hàn Quốc. Một bên là hệ thống đã tạo ra công nghiệp hóa rất nhanh: tài chính dựa vào ngân hàng, đầu tư cao, chaebol mở rộng và sự phối hợp mạnh giữa nhà nước–ngân hàng–doanh nghiệp. Bên kia là nền kinh tế ngày càng mở, nơi vốn quốc tế có thể vào ra nhanh hơn, nhà đầu tư đòi hỏi minh bạch cao hơn và doanh nghiệp phải chịu kỷ luật thị trường mạnh hơn.
 
@@ -19,6 +18,8 @@ Trong thập niên 1980 và đầu 1990, Hàn Quốc tiếp tục tự do hóa t
 
 Nếu chủ nợ luôn đồng ý gia hạn và tỷ giá ổn định, cấu trúc này có vẻ rẻ. Nhưng khi niềm tin biến mất, cả hai chênh lệch có thể cùng bùng nổ.
 
+> **Chuyển mạch:** Trong **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Khả năng thanh toán và thanh khoản: bài học cốt lõi** tiếp nhận điểm tựa từ **Toàn cầu hóa thay đổi luật chơi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chaebol và tăng trưởng tài trợ bằng nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khả năng thanh toán và thanh khoản: bài học cốt lõi
 
 Một tài sản có thể vẫn có giá trị dài hạn nhưng công ty hoặc ngân hàng không đủ tiền để trả khoản nợ đáo hạn trong tuần này.
@@ -35,6 +36,8 @@ Nếu nợ phải gia hạn mỗi ba tháng nhưng tài sản chỉ tạo tiền
 
 Khủng hoảng 1997 cho thấy **phụ thuộc tái cấp vốn (refinancing dependence)** tự nó đã là một loại rủi ro, không chỉ lãi suất cao hay thấp.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Chaebol và tăng trưởng tài trợ bằng nợ** tiếp nhận điểm tựa từ **Khả năng thanh toán và thanh khoản: bài học cốt lõi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mở rộng đa ngành và vấn đề phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chaebol và tăng trưởng tài trợ bằng nợ
 
 Nhiều chaebol đầu–giữa thập niên 1990 mở rộng sang nhiều ngành cùng lúc. Nợ cho phép tập đoàn tăng tài sản nhanh mà gia đình kiểm soát không phải pha loãng quyền sở hữu quá mạnh.
@@ -47,6 +50,8 @@ ROE \approx ROA + (ROA-r)\times\frac{Nợ}{Vốn\ chủ}
 
 Nhưng khi `ROA < r`, cùng một đòn bẩy sẽ khuếch đại thua lỗ. Nguy hiểm không chỉ nằm ở tỷ lệ nợ cao mà ở việc **khả năng sinh lời giảm đồng thời đòn bẩy tăng**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Mở rộng đa ngành và vấn đề phân bổ vốn** tiếp nhận điểm tựa từ **Chaebol và tăng trưởng tài trợ bằng nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự do hóa tài chính nhưng giám sát chưa trưởng thành cùng tốc độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mở rộng đa ngành và vấn đề phân bổ vốn
 
 Trong một tập đoàn lớn, công ty tạo tiền có thể hỗ trợ công ty đang mở rộng. Thị trường vốn nội bộ này hữu ích khi thị trường bên ngoài chưa hoàn thiện, nhưng nó có thể che chất lượng dự án.
@@ -55,6 +60,8 @@ Nếu một ngành yếu vẫn nhận vốn vì quan hệ trong tập đoàn tha
 
 Đây là lý do khủng hoảng tài chính thường biến vấn đề phân bổ vốn vốn âm thầm thành vấn đề thanh khoản công khai.
 
+> **Chuyển mạch:** Trong **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Tự do hóa tài chính nhưng giám sát chưa trưởng thành cùng tốc độ** tiếp nhận điểm tựa từ **Mở rộng đa ngành và vấn đề phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao nợ ngoại tệ đặc biệt nguy hiểm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tự do hóa tài chính nhưng giám sát chưa trưởng thành cùng tốc độ
 
 Mở cửa tài chính làm các ngân hàng và tổ chức tài chính có thêm nguồn vốn, nhưng quản trị rủi ro, giám sát và cơ chế xử lý phá sản chưa phát triển đồng đều.
@@ -62,6 +69,8 @@ Mở cửa tài chính làm các ngân hàng và tổ chức tài chính có th�
 Một hệ thống có thể có “nhiều thị trường hơn” nhưng chưa chắc có “nhiều kỷ luật hơn”. Kỷ luật thị trường chỉ hoạt động khi người cho vay tin rằng họ có thể mất tiền, thông tin đủ minh bạch và doanh nghiệp yếu có thể được tái cơ cấu hoặc phá sản thay vì luôn được cứu.
 
 Nếu kỳ vọng hỗ trợ ngầm vẫn còn, chủ nợ có thể đánh giá thấp rủi ro và tiếp tục cho vay.
+
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Vì sao nợ ngoại tệ đặc biệt nguy hiểm?** tiếp nhận điểm tựa từ **Tự do hóa tài chính nhưng giám sát chưa trưởng thành cùng tốc độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ cú sốc khu vực đến khủng hoảng ngoại hối Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao nợ ngoại tệ đặc biệt nguy hiểm?
 
@@ -81,11 +90,15 @@ KRW mất giá
 
 Nếu nhiều doanh nghiệp và ngân hàng cùng có cấu trúc tương tự, vấn đề của từng công ty trở thành vấn đề hệ thống.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Từ cú sốc khu vực đến khủng hoảng ngoại hối Hàn Quốc** tiếp nhận điểm tựa từ **Vì sao nợ ngoại tệ đặc biệt nguy hiểm?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IMF và chương trình ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ cú sốc khu vực đến khủng hoảng ngoại hối Hàn Quốc
 
 Khủng hoảng tài chính châu Á năm 1997 làm nhà đầu tư quốc tế đánh giá lại rủi ro trong khu vực. Khi niềm tin giảm, khả năng vay và gia hạn nợ ngắn hạn của các tổ chức Hàn Quốc suy yếu nhanh.
 
 Hàn Quốc có nền công nghiệp thực và nhiều doanh nghiệp có khả năng cạnh tranh, nhưng hệ thống tài chính lại thiếu ngoại tệ thanh khoản để đáp ứng nghĩa vụ ngắn hạn. Đây là ví dụ điển hình cho việc **nền kinh tế có tài sản tốt vẫn có thể rơi vào khủng hoảng nếu cấu trúc tài trợ sai kỳ hạn và sai tiền tệ**.
+
+> **Chuyển mạch:** Trong **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **IMF và chương trình ổn định** tiếp nhận điểm tựa từ **Từ cú sốc khu vực đến khủng hoảng ngoại hối Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tái cơ cấu ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## IMF và chương trình ổn định
 
@@ -95,11 +108,15 @@ Không nên hiểu giai đoạn này chỉ như “IMF áp đặt chính sách�
 
 Trong ký ức xã hội Hàn Quốc, `IMF` trở thành cách gọi cả thời kỳ khủng hoảng, thất nghiệp và tái cơ cấu chứ không chỉ tên một tổ chức quốc tế.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Tái cơ cấu ngân hàng** tiếp nhận điểm tựa từ **IMF và chương trình ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tái cơ cấu doanh nghiệp: từ tăng quy mô sang khả năng sinh lời và dòng tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tái cơ cấu ngân hàng
 
 Một ngân hàng yếu không chỉ là vấn đề của cổ đông ngân hàng. Nếu ngân hàng không thể cho vay hoặc thanh toán, doanh nghiệp lành mạnh cũng mất vốn lưu động và nền kinh tế thực bị ảnh hưởng.
 
 Do đó tái cơ cấu tài chính bao gồm xử lý nợ xấu, đóng hoặc hợp nhất tổ chức yếu, tăng vốn và cải thiện giám sát. Mục tiêu là khôi phục khả năng phân bổ tín dụng nhưng với tiêu chuẩn rủi ro chặt hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Tái cơ cấu doanh nghiệp: từ tăng quy mô sang khả năng sinh lời và dòng tiền** tiếp nhận điểm tựa từ **Tái cơ cấu ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Daewoo: quy mô không thay thế được kỷ luật bảng cân đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tái cơ cấu doanh nghiệp: từ tăng quy mô sang khả năng sinh lời và dòng tiền
 
@@ -117,6 +134,8 @@ Lợi nhuận hoạt động thấp
 
 Điều này góp phần thay đổi cách doanh nghiệp Hàn Quốc được quản lý và đánh giá.
 
+> **Chuyển mạch:** Trong **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Daewoo: quy mô không thay thế được kỷ luật bảng cân đối** tiếp nhận điểm tựa từ **Tái cơ cấu doanh nghiệp: từ tăng quy mô sang khả năng sinh lời và dòng tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị doanh nghiệp trở thành vấn đề trung tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Daewoo: quy mô không thay thế được kỷ luật bảng cân đối
 
 Daewoo là một trong những ví dụ nổi bật nhất của mở rộng nhanh bằng nợ. Tập đoàn phát triển trên nhiều ngành và thị trường nhưng cuối cùng không thể duy trì cấu trúc tài chính khi điều kiện vốn thay đổi.
@@ -131,11 +150,15 @@ Tăng giá trị kinh tế nhanh
 
 Nếu tài sản mới tạo ROIC thấp hơn chi phí vốn, mở rộng quy mô có thể phá hủy giá trị.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Quản trị doanh nghiệp trở thành vấn đề trung tâm** tiếp nhận điểm tựa từ **Daewoo: quy mô không thay thế được kỷ luật bảng cân đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường lao động cũng bị tái cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quản trị doanh nghiệp trở thành vấn đề trung tâm
 
 Khủng hoảng làm lộ rõ các vấn đề về sở hữu chéo, bảo lãnh nội bộ, giao dịch bên liên quan và khoảng cách giữa quyền kiểm soát với quyền sở hữu kinh tế.
 
 Sau khủng hoảng, Hàn Quốc tăng yêu cầu về công bố thông tin, quản trị, kiểm toán, cấu trúc nợ và trách nhiệm của doanh nghiệp niêm yết. Đây là nền lịch sử để hiểu tại sao ngày nay DART, báo cáo hợp nhất, bên liên quan và bảo vệ cổ đông thiểu số lại quan trọng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Thị trường lao động cũng bị tái cấu trúc** tiếp nhận điểm tựa từ **Quản trị doanh nghiệp trở thành vấn đề trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn nước ngoài và M&A** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thị trường lao động cũng bị tái cấu trúc
 
@@ -143,17 +166,23 @@ Khủng hoảng không chỉ xảy ra trên bảng cân đối. Tái cơ cấu d
 
 Một phần cấu trúc **lao động hai tầng (labor-market dualism)** của Hàn Quốc hiện đại—khác biệt giữa lao động ổn định tại doanh nghiệp lớn và lao động không thường xuyên/SME—có liên hệ với các thay đổi sau khủng hoảng.
 
+> **Chuyển mạch:** Trong **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Vốn nước ngoài và M&A** tiếp nhận điểm tựa từ **Thị trường lao động cũng bị tái cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ “quá lớn để thất bại” đến câu hỏi về kỷ luật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vốn nước ngoài và M&A
 
 Sau 1997, Hàn Quốc mở hơn với đầu tư trực tiếp nước ngoài và mua bán doanh nghiệp. Vốn quốc tế không chỉ đến dưới dạng khoản vay mà còn dưới dạng vốn chủ sở hữu, mua cổ phần và đầu tư chiến lược.
 
 Điều này giúp tái cấp vốn cho một số doanh nghiệp, tăng cạnh tranh và đưa thêm phương pháp quản trị quốc tế vào thị trường. Đồng thời nó làm doanh nghiệp Hàn Quốc phải quan tâm hơn đến lợi ích cổ đông và định giá thị trường.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Từ “quá lớn để thất bại” đến câu hỏi về kỷ luật** tiếp nhận điểm tựa từ **Vốn nước ngoài và M&A** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài học về bảng cân đối quốc gia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Từ “quá lớn để thất bại” đến câu hỏi về kỷ luật
 
 Một trong những vấn đề khó nhất của tập đoàn lớn là kỳ vọng rằng chính phủ sẽ không để họ phá sản vì tác động việc làm và hệ thống. Kỳ vọng đó tạo **rủi ro đạo đức (moral hazard / 도덕적 해이)**: người cho vay và doanh nghiệp có thể chấp nhận rủi ro cao hơn nếu tin rằng tổn thất cuối cùng sẽ được xã hội hóa.
 
 Khủng hoảng 1997 buộc Hàn Quốc chứng minh rằng quy mô không bảo đảm được cứu trợ vô điều kiện. Việc một số tập đoàn lớn sụp đổ làm kỷ luật này trở nên đáng tin hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, **Bài học về bảng cân đối quốc gia** tiếp nhận điểm tựa từ **Từ “quá lớn để thất bại” đến câu hỏi về kỷ luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) — Hàn Quốc sau 1997 khác trước 1997 như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bài học về bảng cân đối quốc gia
 
@@ -168,6 +197,8 @@ Doanh nghiệp vay
 
 Nếu mắt xích cuối rút vốn, áp lực truyền ngược qua ngân hàng tới doanh nghiệp. Vì vậy dự trữ ngoại hối, cấu trúc nợ nước ngoài và thanh khoản hệ thống trở thành vấn đề an ninh kinh tế.
 
+> **Chuyển mạch:** Trong **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)**, sau nội dung của **Bài học về bảng cân đối quốc gia**, **Liên kết (connection / 연결) — Hàn Quốc sau 1997 khác trước 1997 như thế nào?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết (connection / 연결) — Hàn Quốc sau 1997 khác trước 1997 như thế nào?
 
 Sau khủng hoảng, Hàn Quốc vẫn giữ các tập đoàn lớn và nền sản xuất xuất khẩu, nhưng môi trường tài chính thay đổi rõ rệt hơn: minh bạch cao hơn, đòn bẩy doanh nghiệp giảm ở nhiều nhóm, thị trường vốn quan trọng hơn, nhà đầu tư nước ngoài có vai trò lớn hơn và khả năng sinh lời/dòng tiền được chú ý hơn.
@@ -176,4 +207,4 @@ Chương tiếp theo, [thập niên 2000: tái cơ cấu, CNTT và doanh nghiệ
 
 > **mô hình tư duy (mental model / 사고 모델) cuối:** 1997 là thời điểm Hàn Quốc học rằng năng lực công nghiệp mạnh không thể bù cho cấu trúc tài trợ yếu. Sau khủng hoảng, câu hỏi của doanh nghiệp chuyển từ “có thể tăng quy mô nhanh đến đâu?” sang “tăng trưởng này có tạo dòng tiền, chịu được nợ và bảo vệ được các bên cung cấp vốn hay không?”.
 
-> **Bàn giao:** Sau **liên kết (connection / 연결) — Hàn Quốc sau 1997 khác trước 1997 như thế nào?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết (connection / 연결) — Hàn Quốc sau 1997 khác trước 1997 như thế nào?**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

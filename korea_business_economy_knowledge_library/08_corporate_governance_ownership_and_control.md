@@ -1,7 +1,6 @@
 # Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)
 
-> **Mạch đọc:** Đặt **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hai loại vấn đề đại diện cần phân biệt** sang **Quyền sở hữu khác quyền kiểm soát**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hai loại vấn đề đại diện cần phân biệt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quyền sở hữu khác quyền kiểm soát** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối corporate governance với ownership và control, để phân biệt quyền sở hữu trên giấy với quyền quyết định và giám sát thực tế.
 
 **Quản trị doanh nghiệp (corporate governance / 기업지배구조)** tồn tại vì người cung cấp vốn, người có quyền kiểm soát và người điều hành không phải lúc nào cũng là cùng một người. Khi quyền quyết định tách khỏi quyền hưởng lợi kinh tế, động cơ của các bên có thể lệch nhau. Quản trị doanh nghiệp là tập hợp cơ chế nhằm trả lời: ai có quyền quyết định, ai giám sát, ai hưởng phần tăng giá trị, ai chịu phần thiệt hại và ai có khả năng phản đối một quyết định gây xung đột lợi ích.
 
@@ -17,6 +16,8 @@ Cổ đông kiểm soát có thể tối ưu lợi ích của gia đình hoặc 
 
 Vì vậy khi phân tích quản trị, luôn phải tách **lợi ích cấp tập đoàn** và **lợi ích cổ đông tại từng pháp nhân**.
 
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Quyền sở hữu khác quyền kiểm soát** tiếp nhận điểm tựa từ **Hai loại vấn đề đại diện cần phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sơ đồ sở hữu quan trọng hơn bảng cổ đông của một công ty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quyền sở hữu khác quyền kiểm soát
 
 **Quyền sở hữu (ownership / 소유)** trả lời ai có quyền lợi kinh tế. **Quyền kiểm soát (control / 지배)** trả lời ai thực sự có quyền lực đối với các quyết định chiến lược.
@@ -30,6 +31,8 @@ Giả sử gia đình sở hữu 30% công ty A, A sở hữu 40% B và B sở h
 Nhưng ảnh hưởng kiểm soát có thể lớn hơn nhiều nếu mỗi tỷ lệ sở hữu trung gian đủ để kiểm soát pháp nhân tiếp theo và các cổ đông còn lại bị phân tán.
 
 Đây là **đòn bẩy kiểm soát (control leverage / 지배력 레버리지)**. Bản thân nó không tự động xấu. Rủi ro xuất hiện khi người kiểm soát hưởng lợi ích riêng trong khi phần thiệt hại được chia cho cổ đông thiểu số.
+
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Sơ đồ sở hữu quan trọng hơn bảng cổ đông của một công ty** tiếp nhận điểm tựa từ **Quyền sở hữu khác quyền kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hội đồng quản trị: không thể đánh giá chỉ bằng số giám đốc bên ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sơ đồ sở hữu quan trọng hơn bảng cổ đông của một công ty
 
@@ -51,6 +54,8 @@ Sơ đồ cho thấy quyền kiểm soát di chuyển như thế nào và nơi n
 
 Đọc cùng [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Hội đồng quản trị: không thể đánh giá chỉ bằng số giám đốc bên ngoài** tiếp nhận điểm tựa từ **Sơ đồ sở hữu quan trọng hơn bảng cổ đông của một công ty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **대표이사, CEO và quyền lực thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hội đồng quản trị: không thể đánh giá chỉ bằng số giám đốc bên ngoài
 
 **Hội đồng quản trị (Board of Directors / 이사회)** phê duyệt các quyết định chiến lược–tài chính quan trọng và giám sát ban điều hành theo luật và điều lệ.
@@ -61,6 +66,8 @@ Khi đánh giá hội đồng, nên xem ai đề cử thành viên, chuyên môn
 
 Chức danh không tự động chứng minh chất lượng giám sát.
 
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **대표이사, CEO và quyền lực thực tế** tiếp nhận điểm tựa từ **Hội đồng quản trị: không thể đánh giá chỉ bằng số giám đốc bên ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ủy ban kiểm toán và kiểm soát nội bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `대표이사`, CEO và quyền lực thực tế
 
 `대표이사` là **giám đốc đại diện theo pháp luật (representative director)**. Chức danh CEO bằng tiếng Anh không phải lúc nào cũng trùng hoàn toàn với tư cách đại diện pháp lý.
@@ -68,6 +75,8 @@ Chức danh không tự động chứng minh chất lượng giám sát.
 Chủ tịch, phó chủ tịch, CEO và giám đốc đại diện có thể nắm mức quyền lực chính thức và phi chính thức khác nhau. Vì vậy phân tích quản trị phải kết hợp bốn lớp: chức danh pháp lý, ghế hội đồng quản trị, quyền sở hữu–kiểm soát và ảnh hưởng chiến lược thực tế.
 
 Sơ đồ tổ chức chính thức không phải lúc nào cũng là bản đồ quyền lực đầy đủ.
+
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Ủy ban kiểm toán và kiểm soát nội bộ** tiếp nhận điểm tựa từ **대표이사, CEO và quyền lực thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao dịch bên liên quan: nội bộ không đồng nghĩa xấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ủy ban kiểm toán và kiểm soát nội bộ
 
@@ -77,6 +86,8 @@ Báo cáo tài chính tồn tại **bất cân xứng thông tin (information as
 
 Đây là lý do quản trị liên kết trực tiếp với [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Giao dịch bên liên quan: nội bộ không đồng nghĩa xấu** tiếp nhận điểm tựa từ **Ủy ban kiểm toán và kiểm soát nội bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tunneling: phải nhìn cơ chế chuyển giá trị, không chỉ gắn nhãn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giao dịch bên liên quan: nội bộ không đồng nghĩa xấu
 
 Tập đoàn tự nhiên có các giao dịch nội bộ như dịch vụ CNTT, logistics, thuê bất động sản, khoản vay, bảo lãnh, mua sắm và các dịch vụ hỗ trợ.
@@ -84,6 +95,8 @@ Tập đoàn tự nhiên có các giao dịch nội bộ như dịch vụ CNTT, 
 **Giao dịch bên liên quan (related-party transaction / 특수관계자 거래)** có thể hiệu quả nếu giảm chi phí giao dịch hoặc tận dụng năng lực chuyên môn trong tập đoàn. Vấn đề xuất hiện khi điều khoản khác đáng kể so với giao dịch độc lập và làm dịch chuyển giá trị về phía người kiểm soát hoặc một pháp nhân được ưu ái.
 
 Cần hỏi: giao dịch có cần thiết không; phương án thị trường có tốt hơn không; giá có gần điều kiện độc lập không; quá trình phê duyệt có độc lập không; thông tin có được công bố đủ không; ai hưởng lợi và ai chịu rủi ro.
+
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Giao dịch bên liên quan: nội bộ không đồng nghĩa xấu** xác định đầu vào; **Tunneling: phải nhìn cơ chế chuyển giá trị, không chỉ gắn nhãn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuyển cơ hội kinh doanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tunneling: phải nhìn cơ chế chuyển giá trị, không chỉ gắn nhãn
 
@@ -93,11 +106,15 @@ Không thể kết luận có tunneling chỉ vì hai công ty cùng tập đoà
 
 Phân tích nghiêm túc cần so sánh điều kiện giao dịch với phương án thị trường và xác định bên hưởng lợi cuối cùng.
 
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Tunneling: phải nhìn cơ chế chuyển giá trị, không chỉ gắn nhãn** xác định đầu vào; **Chuyển cơ hội kinh doanh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Phân bổ vốn: quản trị cuối cùng thể hiện trong con số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuyển cơ hội kinh doanh
 
 Một rủi ro tinh vi xảy ra khi cơ hội đáng ra thuộc về công ty A lại được chuyển sang công ty tư nhân hoặc công ty B dưới cùng người kiểm soát.
 
 Tiền mặt có thể không rời A ngay lập tức nhưng giá trị tương lai của cổ đông A vẫn bị chuyển đi. Vì vậy quy tắc về cơ hội doanh nghiệp và công bố giao dịch liên quan đặc biệt quan trọng trong tập đoàn gia đình.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Phân bổ vốn: quản trị cuối cùng thể hiện trong con số** tiếp nhận điểm tựa từ **Chuyển cơ hội kinh doanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty nhiều tiền mặt vẫn có thể có vấn đề quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân bổ vốn: quản trị cuối cùng thể hiện trong con số
 
@@ -129,11 +146,15 @@ Nếu doanh nghiệp liên tục tái đầu tư với ROIC thấp hơn chi phí
 
 Chất lượng hội đồng quản trị cuối cùng sẽ phản ánh qua các quyết định này.
 
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Công ty nhiều tiền mặt vẫn có thể có vấn đề quản trị** tiếp nhận điểm tựa từ **Phân bổ vốn: quản trị cuối cùng thể hiện trong con số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổ tức và mua lại cổ phiếu: cơ chế sử dụng vốn quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công ty nhiều tiền mặt vẫn có thể có vấn đề quản trị
 
 Tiền mặt lớn không tự động có nghĩa thân thiện với cổ đông. Cần hỏi tiền được giữ để làm gì, có phải dự phòng hoạt động hợp lý hay vốn nhàn rỗi, tiền có bị khóa tại công ty con hay không, ban điều hành có kế hoạch M&A lợi suất thấp không và chính sách hoàn vốn cho cổ đông có hợp lý không.
 
 Quản trị vì vậy phải nối số dư tiền với cách sử dụng tiền trong tương lai, không chỉ với độ an toàn thanh khoản.
+
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Công ty nhiều tiền mặt vẫn có thể có vấn đề quản trị** xác định đầu vào; **Cổ tức và mua lại cổ phiếu: cơ chế sử dụng vốn quan trọng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cổ phiếu quỹ (Treasury Shares / 자기주식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cổ tức và mua lại cổ phiếu: cơ chế sử dụng vốn quan trọng
 
@@ -145,11 +166,15 @@ Nếu công ty mua cổ phiếu dưới giá trị nội tại và hủy chúng,
 
 Không nên gắn nhãn mọi chương trình mua lại là “hoàn vốn cho cổ đông” nếu chưa đọc mục đích và cách xử lý sau đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Cổ tức và mua lại cổ phiếu: cơ chế sử dụng vốn quan trọng** xác định đầu vào; **Cổ phiếu quỹ (Treasury Shares / 자기주식)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Kế nhiệm: nơi quản trị, thuế và thị trường vốn gặp nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cổ phiếu quỹ (Treasury Shares / 자기주식)
 
 Cổ phiếu quỹ là cổ phiếu do chính công ty mua lại. Việc nắm giữ, hủy, bán hoặc sử dụng chúng trong giao dịch doanh nghiệp có thể ảnh hưởng tới tỷ lệ sở hữu và động lực kiểm soát.
 
 Khi phân tích cần kiểm tra lượng cổ phiếu mua lại, kế hoạch hủy, đối tượng nhận khi bán lại, mục đích trả thưởng và cách sử dụng trong M&A hoặc tái cấu trúc.
+
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Kế nhiệm: nơi quản trị, thuế và thị trường vốn gặp nhau** tiếp nhận điểm tựa từ **Cổ phiếu quỹ (Treasury Shares / 자기주식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chia tách: 인적분할 và 물적분할** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kế nhiệm: nơi quản trị, thuế và thị trường vốn gặp nhau
 
@@ -158,6 +183,8 @@ Kế nhiệm gia đình có thể kéo theo quy hoạch thuế thừa kế–t�
 Kế nhiệm không chỉ là sự kiện gia đình. Nó có thể làm thay đổi sơ đồ sở hữu và cách phân phối giá trị giữa các công ty niêm yết.
 
 Khi tái cấu trúc được công bố, cần vẽ sơ đồ sở hữu trước–sau và hỏi: quyền biểu quyết của người kiểm soát thay đổi thế nào; phần lợi ích kinh tế có thay đổi không; pháp nhân niêm yết nào chuyển giao hoặc nhận tài sản; tỷ lệ định giá–hoán đổi nào được dùng; cổ đông thiểu số có được đối xử cân xứng không.
+
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Chia tách: 인적분할 và 물적분할** tiếp nhận điểm tựa từ **Kế nhiệm: nơi quản trị, thuế và thị trường vốn gặp nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sáp nhập và tỷ lệ hoán đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chia tách: `인적분할` và `물적분할`
 
@@ -169,6 +196,8 @@ Hệ quả quản trị có thể rất khác nếu mảng tăng trưởng đư�
 
 Do đó phân tích chia tách không nên dừng ở câu “tập trung vào ngành cốt lõi”; cần hỏi **ai sẽ sở hữu tài sản tăng trưởng tương lai sau giao dịch**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Sáp nhập và tỷ lệ hoán đổi** tiếp nhận điểm tựa từ **Chia tách: 인적분할 và 물적분할** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà đầu tư tổ chức và stewardship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sáp nhập và tỷ lệ hoán đổi
 
 Một sáp nhập có thể có lô-gic (logic / 논리) công nghiệp hợp lý nhưng vẫn phân phối lại giá trị tùy **tỷ lệ hoán đổi (exchange ratio)**.
@@ -177,11 +206,15 @@ Cần tách ba câu hỏi: giao dịch có lô-gic (logic / 논리) chiến lư�
 
 Ba câu hỏi này không giống nhau. Hiệp lực có thể tồn tại nhưng cổ đông của một bên vẫn bị thiệt nếu tỷ lệ định giá bất lợi.
 
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Nhà đầu tư tổ chức và stewardship** tiếp nhận điểm tựa từ **Sáp nhập và tỷ lệ hoán đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoạt động cổ đông chủ động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhà đầu tư tổ chức và stewardship
 
 Quỹ hưu trí, công ty quản lý tài sản và nhà đầu tư nước ngoài có thể tác động tới quản trị thông qua bỏ phiếu và đối thoại với doanh nghiệp.
 
 Sở hữu tổ chức làm tăng khả năng giám sát, nhưng nắm giữ thụ động không tự động đồng nghĩa với quản trị chủ động. Phải xem hành vi bỏ phiếu, chính sách tham gia quản trị và mức độ tập trung sở hữu thực tế.
+
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Hoạt động cổ đông chủ động** tiếp nhận điểm tựa từ **Nhà đầu tư tổ chức và stewardship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị và “Korea discount”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hoạt động cổ đông chủ động
 
@@ -191,6 +224,8 @@ Hoạt động này có thể tăng kỷ luật vốn nhưng không phải mọi
 
 Đánh giá đề xuất phải dựa trên kinh tế của phương án, không dựa trên danh tính người đề xuất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Quản trị và “Korea discount”** tiếp nhận điểm tựa từ **Hoạt động cổ đông chủ động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao bối cảnh sở hữu quyết định loại vấn đề đại diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quản trị và “Korea discount”
 
 Thảo luận về định giá cổ phiếu Hàn Quốc thường nhắc tới quản trị, cổ đông kiểm soát, phân bổ vốn và hoàn vốn cho cổ đông như một phần nguyên nhân của **Korea discount**.
@@ -199,11 +234,15 @@ Tuy nhiên, mức chiết khấu định giá không có một nguyên nhân duy
 
 Vì vậy quản trị là một thành phần của lợi suất yêu cầu và kỳ vọng phân phối dòng tiền, chứ không phải lời giải thích duy nhất cho mọi cổ phiếu P/E thấp.
 
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Vì sao bối cảnh sở hữu quyết định loại vấn đề đại diện** tiếp nhận điểm tựa từ **Quản trị và “Korea discount”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy trình thẩm định quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao bối cảnh sở hữu quyết định loại vấn đề đại diện
 
 Trong công ty sở hữu phân tán, rủi ro chính có thể là ban quản lý mở rộng đế chế. Trong công ty có cổ đông kiểm soát mạnh, ban quản lý có thể được kỷ luật tốt hơn nhưng cổ đông thiểu số lại đối mặt rủi ro người kiểm soát thu lợi ích riêng.
 
 Giải pháp quản trị phải phù hợp với loại vấn đề đại diện. Áp dụng nguyên mẫu quản trị của một quốc gia mà bỏ qua cấu trúc sở hữu của quốc gia khác rất dễ dẫn đến kết luận sai.
+
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Vì sao bối cảnh sở hữu quyết định loại vấn đề đại diện** xác định đầu vào; **Quy trình thẩm định quản trị** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy trình thẩm định quản trị
 
@@ -218,9 +257,13 @@ Giải pháp quản trị phải phù hợp với loại vấn đề đại di�
 9. So sánh ROIC với tốc độ tái đầu tư.
 10. Kiểm tra động cơ của người kiểm soát có phù hợp với cổ đông của pháp nhân hay không.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Quy trình thẩm định quản trị** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Quản trị doanh nghiệp là **hệ điều hành của quyền lực trong công ty**. Báo cáo tài chính cho biết điều gì đã xảy ra; quản trị giúp giải thích ai có quyền và động cơ để đưa ra những quyết định đó. Trong tập đoàn Hàn Quốc, luôn hỏi cả **ai sở hữu** và **ai kiểm soát thông qua mạng lưới**.
+
+> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -236,8 +279,10 @@ Giải pháp quản trị phải phù hợp với loại vấn đề đại di�
 
 **“Hiệp lực cấp tập đoàn cho phép chuyển giá trị khỏi cổ đông thiểu số.”** Sai. Hiệp lực tổng thể và công bằng tại từng pháp nhân là hai câu hỏi riêng.
 
+> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md) trước để hiểu sơ đồ sở hữu, sau đó đọc [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) để tìm bằng chứng trong hồ sơ công bố và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) để áp dụng toàn bộ quy trình.
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

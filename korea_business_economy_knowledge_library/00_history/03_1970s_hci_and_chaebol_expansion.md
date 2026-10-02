@@ -1,7 +1,6 @@
 # Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)
 
-> **Mạch đọc:** Đọc **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao công nghiệp nhẹ không thể là điểm dừng?** sang **HCI: chính sách công nghiệp ở quy mô lớn hơn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao công nghiệp nhẹ không thể là điểm dừng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **HCI: chính sách công nghiệp ở quy mô lớn hơn** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối HCI thập niên 1970 với chaebol expansion, để đọc công nghiệp nặng qua phối hợp nhà nước, tín dụng và năng lực doanh nghiệp.
 
 Nếu thập niên 1960 chứng minh Hàn Quốc có thể xuất khẩu hàng công nghiệp, thì thập niên 1970 đặt ra bài toán khó hơn: **làm sao rời khỏi lợi thế lương thấp và xây các ngành có chi phí cố định, độ phức tạp kỹ thuật và yêu cầu công nghệ lớn hơn nhiều?**
 
@@ -14,6 +13,8 @@ Dệt may, giày dép và lắp ráp đơn giản phù hợp với nền kinh t�
 Muốn tiếp tục tăng thu nhập trên mỗi lao động, nền kinh tế cần tăng cường độ vốn, hàm lượng kỹ thuật, khả năng hấp thụ công nghệ, giá trị gia tăng trên mỗi lao động và năng lực ngành thượng nguồn trong nước.
 
 Đây là lý do mang tính cấu trúc—không chỉ chính trị—đằng sau việc chuyển sang thép, máy móc, đóng tàu, hóa dầu, ô tô và điện tử.
+
+> **Chuyển mạch:** Trong **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **HCI: chính sách công nghiệp ở quy mô lớn hơn** tiếp nhận điểm tựa từ **Vì sao công nghiệp nhẹ không thể là điểm dừng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao phối hợp của nhà nước quan trọng hơn trong công nghiệp nặng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## HCI: chính sách công nghiệp ở quy mô lớn hơn
 
@@ -29,6 +30,8 @@ Giá\ trị\ dự\ án\ kỳ\ vọng = PV(Dòng\ tiền\ tương\ lai) - Đầu\
 
 Nếu dự báo nhu cầu sai hoặc chi phí vốn tăng mạnh, tài sản quy mô lớn có thể trở thành gánh nặng thay vì lợi thế.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Vì sao phối hợp của nhà nước quan trọng hơn trong công nghiệp nặng?** tiếp nhận điểm tựa từ **HCI: chính sách công nghiệp ở quy mô lớn hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **POSCO: thép thượng nguồn như một nền tảng công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao phối hợp của nhà nước quan trọng hơn trong công nghiệp nặng?
 
 Các dự án HCI cần nhiều khoản đầu tư bổ trợ xuất hiện cùng lúc. Xưởng đóng tàu cần thép, cảng, thợ hàn lành nghề, động cơ hàng hải, tài trợ xuất khẩu và khách hàng. Nhà máy ô tô cần mạng lưới linh kiện, đường, thép, máy công cụ và phân phối.
@@ -38,6 +41,8 @@ Một doanh nghiệp tư nhân có thể không dám đầu tư nếu không tin
 Kế hoạch do nhà nước dẫn dắt có thể giảm vấn đề này bằng cách đồng bộ hạ tầng, tài chính và công suất công nghiệp. Nhưng chính quyền lực phối hợp tập trung cũng tạo rủi ro đầu tư quá mức nếu giả định ban đầu sai.
 
 > **mô hình tư duy (mental model / 사고 모델):** chính sách công nghiệp giải quyết vấn đề phối hợp bằng cách tập trung quyết định; chính sự tập trung đó lại tạo rủi ro chọn sai ngành và phân bổ vốn sai.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Vì sao phối hợp của nhà nước quan trọng hơn trong công nghiệp nặng?** nêu điều cần giải thích; **POSCO: thép thượng nguồn như một nền tảng công nghiệp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đóng tàu: dự án lớn, tài trợ lớn và học kỹ thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## POSCO: thép thượng nguồn như một nền tảng công nghiệp
 
@@ -57,6 +62,8 @@ Thép trong nước
 
 Đây là ví dụ về **liên kết xuôi–ngược (forward/backward linkage)** trong công nghiệp hóa.
 
+> **Chuyển mạch:** Trong **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **POSCO: thép thượng nguồn như một nền tảng công nghiệp** nêu điều cần giải thích; **Đóng tàu: dự án lớn, tài trợ lớn và học kỹ thuật** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hóa dầu: biến đầu vào nhập khẩu thành nền vật liệu trong nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đóng tàu: dự án lớn, tài trợ lớn và học kỹ thuật
 
 Đóng tàu đòi hỏi đất ven biển, ụ tàu, thép, kỹ sư, thợ hàn, quản lý dự án và tài trợ trước khi bàn giao. Doanh nghiệp phải chi tiền trong thời gian dài trước khi thu đủ tiền từ khách hàng.
@@ -65,11 +72,15 @@ Vì vậy đóng tàu không chỉ là bài toán công nghệ mà còn là bài
 
 Hyundai là ví dụ điển hình cho việc mang năng lực thực thi dự án từ xây dựng sang đóng tàu, sau đó tiếp tục mở rộng sang ô tô và các ngành khác.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Hóa dầu: biến đầu vào nhập khẩu thành nền vật liệu trong nước** tiếp nhận điểm tựa từ **Đóng tàu: dự án lớn, tài trợ lớn và học kỹ thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ô tô: từ lắp ráp sang xây hệ sinh thái nhà cung cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hóa dầu: biến đầu vào nhập khẩu thành nền vật liệu trong nước
 
 Hóa dầu tạo nguyên liệu cho nhựa, sợi tổng hợp, bao bì, linh kiện và nhiều sản phẩm công nghiệp. Hàn Quốc vẫn phải nhập dầu thô, nhưng thay vì nhập toàn bộ sản phẩm hóa chất cuối cùng, năng lực lọc–hóa dầu trong nước cho phép tạo thêm giá trị và cung cấp đầu vào cho ngành chế tạo.
 
 Điều này cho thấy “tự chủ công nghiệp” không đồng nghĩa phải có mọi tài nguyên tự nhiên. Một nền kinh tế thiếu dầu vẫn có thể xây năng lực xử lý, hóa học, logistics và sản xuất để giữ phần giá trị gia tăng cao hơn trong nước.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Ô tô: từ lắp ráp sang xây hệ sinh thái nhà cung cấp** tiếp nhận điểm tựa từ **Hóa dầu: biến đầu vào nhập khẩu thành nền vật liệu trong nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích hợp dọc và sự hình thành cấu trúc tập đoàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ô tô: từ lắp ráp sang xây hệ sinh thái nhà cung cấp
 
@@ -88,6 +99,8 @@ Sản lượng OEM tăng
 
 Nhưng quan hệ này cũng tạo bất cân xứng quyền thương lượng giữa doanh nghiệp lớn và SME, một vấn đề còn tồn tại trong kinh tế Hàn Quốc hiện đại.
 
+> **Chuyển mạch:** Trong **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Tích hợp dọc và sự hình thành cấu trúc tập đoàn** tiếp nhận điểm tựa từ **Ô tô: từ lắp ráp sang xây hệ sinh thái nhà cung cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chaebol mở rộng nhanh trong giai đoạn này?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tích hợp dọc và sự hình thành cấu trúc tập đoàn
 
 Khi thị trường nhà cung cấp còn chưa phát triển, doanh nghiệp lớn có động lực tự xây nhiều mắt xích bên trong tập đoàn. Đây là **tích hợp dọc (vertical integration / 수직계열화)**.
@@ -95,6 +108,8 @@ Khi thị trường nhà cung cấp còn chưa phát triển, doanh nghiệp l�
 Một tập đoàn có thể sở hữu công ty nguyên liệu, sản xuất, logistics, thương mại và tài chính. Điều này giảm phụ thuộc vào thị trường bên ngoài và giúp phối hợp dự án nhanh hơn.
 
 Tuy nhiên, tích hợp dọc cũng làm cấu trúc tập đoàn phức tạp, tăng giao dịch nội bộ và có thể làm mờ ranh giới giữa lợi ích của từng pháp nhân với lợi ích của toàn nhóm.
+
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Vì sao chaebol mở rộng nhanh trong giai đoạn này?** tiếp nhận điểm tựa từ **Tích hợp dọc và sự hình thành cấu trúc tập đoàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường vốn nội bộ trong tập đoàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao chaebol mở rộng nhanh trong giai đoạn này?
 
@@ -113,6 +128,8 @@ Quy mô lớn hơn
 
 Đây là một trong các cơ chế làm chaebol trở thành trung tâm của công nghiệp hóa.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Thị trường vốn nội bộ trong tập đoàn** tiếp nhận điểm tựa từ **Vì sao chaebol mở rộng nhanh trong giai đoạn này?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nợ là công cụ tăng tốc nhưng cũng khuếch đại rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thị trường vốn nội bộ trong tập đoàn
 
 Khi thị trường tài chính bên ngoài còn chưa phát triển, tập đoàn có thể chuyển nguồn lực giữa các công ty liên kết. Một mảng tạo tiền có thể hỗ trợ mảng đang đầu tư mạnh.
@@ -120,6 +137,8 @@ Khi thị trường tài chính bên ngoài còn chưa phát triển, tập đo�
 Đây là **thị trường vốn nội bộ (internal capital market / 내부자본시장)**. Nó có thể hữu ích khi ngân hàng hoặc thị trường chứng khoán chưa đủ khả năng đánh giá các dự án mới. Nhưng nó cũng tạo rủi ro: dự án yếu có thể được duy trì quá lâu, và cổ đông thiểu số của một công ty có thể không muốn tài sản của công ty đó phục vụ mục tiêu của toàn tập đoàn.
 
 Cơ chế này trở thành một chủ đề quan trọng của quản trị doanh nghiệp Hàn Quốc về sau.
+
+> **Chuyển mạch:** Trong **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Nợ là công cụ tăng tốc nhưng cũng khuếch đại rủi ro** tiếp nhận điểm tựa từ **Thị trường vốn nội bộ trong tập đoàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cú sốc dầu và giới hạn của chiến lược công nghiệp nặng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nợ là công cụ tăng tốc nhưng cũng khuếch đại rủi ro
 
@@ -135,17 +154,23 @@ Nếu ROA cao hơn chi phí nợ, đòn bẩy hỗ trợ ROE. Nếu ROA giảm x
 
 Đây là hạt giống của vấn đề đòn bẩy doanh nghiệp sẽ trở nên rõ hơn trong các thập niên sau và đặc biệt trong khủng hoảng 1997.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Nợ là công cụ tăng tốc nhưng cũng khuếch đại rủi ro** đã nêu tiêu chí phân biệt, còn **Cú sốc dầu và giới hạn của chiến lược công nghiệp nặng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Năng suất, lương và chuyển dịch cơ cấu lao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cú sốc dầu và giới hạn của chiến lược công nghiệp nặng
 
 Thập niên 1970 cũng có các cú sốc dầu toàn cầu. Với một quốc gia phụ thuộc nhập khẩu năng lượng như Hàn Quốc, giá dầu tăng làm chi phí sản xuất, vận tải và ngoại tệ tăng mạnh.
 
 Các ngành HCI tiêu thụ nhiều năng lượng và vốn nên đặc biệt nhạy với chi phí đầu vào và lãi suất. Điều này cho thấy xây năng lực công nghiệp mới không loại bỏ sự phụ thuộc bên ngoài; nó chỉ thay đổi loại phụ thuộc từ hàng công nghiệp nhập khẩu sang năng lượng, nguyên liệu và công nghệ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Cú sốc dầu và giới hạn của chiến lược công nghiệp nặng** đã nêu tiêu chí phân biệt, còn **Năng suất, lương và chuyển dịch cơ cấu lao động** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thành công và chi phí cùng xuất hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năng suất, lương và chuyển dịch cơ cấu lao động
 
 Khi lao động chuyển từ nông nghiệp và công nghiệp nhẹ sang các ngành có vốn và kỹ thuật cao hơn, năng suất trung bình có thể tăng. Nhưng quá trình này cần đào tạo kỹ thuật, giáo dục và thời gian học tại nơi làm việc.
 
 Công nghiệp hóa vì vậy không chỉ là câu chuyện của vốn vật chất. Nó là quá trình kết hợp **vốn vật chất + vốn nhân lực + tổ chức**.
+
+> **Chuyển mạch:** Trong **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, **Thành công và chi phí cùng xuất hiện** tiếp nhận điểm tựa từ **Năng suất, lương và chuyển dịch cơ cấu lao động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) — Tại sao thập niên 1980 cần ổn định và tự do hóa?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thành công và chi phí cùng xuất hiện
 
@@ -155,6 +180,8 @@ Không nên đánh giá giai đoạn này chỉ bằng hai nhãn “thành công
 
 > Những năng lực nào được tạo ra, chi phí nào phát sinh và cơ chế nào phải được sửa ở giai đoạn sau?
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)**, sau nội dung của **Thành công và chi phí cùng xuất hiện**, **Liên kết (connection / 연결) — Tại sao thập niên 1980 cần ổn định và tự do hóa?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết (connection / 연결) — Tại sao thập niên 1980 cần ổn định và tự do hóa?
 
 Sau một giai đoạn đầu tư lớn, nền kinh tế bước vào thập niên 1980 với cơ sở công nghiệp sâu hơn nhưng cũng có lạm phát, nợ, công suất và mức tập trung kinh tế cao hơn.
@@ -163,4 +190,4 @@ Chương tiếp theo, [thập niên 1980: ổn định, tự do hóa và dân ch
 
 > **mô hình tư duy (mental model / 사고 모델) cuối:** HCI là quá trình dùng vốn, tín dụng và phối hợp để xây những năng lực thượng nguồn mà thị trường non trẻ khó tự hình thành nhanh. Nó tạo nền công nghiệp hiện đại của Hàn Quốc, đồng thời làm chaebol lớn hơn, đòn bẩy cao hơn và đặt ra các vấn đề quản trị–phân bổ vốn cho giai đoạn sau.
 
-> **Bàn giao:** Sau **liên kết (connection / 연결) — Tại sao thập niên 1980 cần ổn định và tự do hóa?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết (connection / 연결) — Tại sao thập niên 1980 cần ổn định và tự do hóa?**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

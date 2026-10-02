@@ -1,7 +1,6 @@
 # Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)
 
-> **Mạch đọc:** Đặt **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cân bằng năng lượng bắt đầu từ nhập khẩu** sang **An ninh năng lượng không đồng nghĩa tự cung 100%**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cân bằng năng lượng bắt đầu từ nhập khẩu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **An ninh năng lượng không đồng nghĩa tự cung 100%** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối energy security với power market và transition, để cân bằng độ tin cậy, chi phí, phát thải và phụ thuộc nhập khẩu.
 
 Hàn Quốc là một nền kinh tế công nghiệp có cường độ sử dụng năng lượng cao nhưng ít tài nguyên hóa thạch trong nước và lưới điện gần như không kết nối với các nước láng giềng. Vì vậy năng lượng đồng thời là **vấn đề phụ thuộc nhập khẩu, chi phí công nghiệp, an ninh quốc gia và chuyển đổi carbon**.
 
@@ -35,6 +34,8 @@ Lạm phát / phản ứng chính sách
 
 Vì vậy năng lượng, vĩ mô và tỷ giá không thể phân tích tách rời.
 
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **An ninh năng lượng không đồng nghĩa tự cung 100%** tiếp nhận điểm tựa từ **Cân bằng năng lượng bắt đầu từ nhập khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện khác dầu: cân bằng gần như theo thời gian thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## An ninh năng lượng không đồng nghĩa tự cung 100%
 
 **An ninh năng lượng (energy security / 에너지안보)** nên được hiểu là khả năng duy trì nguồn cung với chi phí chấp nhận được khi xảy ra cú sốc.
@@ -42,6 +43,8 @@ Vì vậy năng lượng, vĩ mô và tỷ giá không thể phân tích tách r
 Công cụ có thể gồm đa dạng hóa nguồn nhập, hợp đồng dài hạn, dự trữ chiến lược, điện hạt nhân, năng lượng tái tạo trong nước, tăng độ bền của lưới, điều chỉnh nhu cầu, lưu trữ và tiết kiệm năng lượng.
 
 Tự cung tuyệt đối có thể quá đắt. Cách tiếp cận hợp lý hơn là thiết kế **danh mục chống chịu (resilience portfolio)**.
+
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Điện khác dầu: cân bằng gần như theo thời gian thực** tiếp nhận điểm tựa từ **An ninh năng lượng không đồng nghĩa tự cung 100%** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tin cậy có giá trị kinh tế lớn hơn hóa đơn điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện khác dầu: cân bằng gần như theo thời gian thực
 
@@ -54,6 +57,8 @@ Phát\ điện = Nhu\ cầu + Tổn\ thất
 \]
 
 Nếu cung không đủ, tần số và điện áp có thể mất ổn định. Vì vậy hệ thống cần **biên dự phòng (reserve margin / 예비율)** và nguồn điện có khả năng điều chỉnh linh hoạt.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Độ tin cậy có giá trị kinh tế lớn hơn hóa đơn điện** tiếp nhận điểm tựa từ **Điện khác dầu: cân bằng gần như theo thời gian thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến trúc thị trường điện Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ tin cậy có giá trị kinh tế lớn hơn hóa đơn điện
 
@@ -68,6 +73,8 @@ Giá điện
 + chất lượng điện
 ```
 
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Kiến trúc thị trường điện Hàn Quốc** tiếp nhận điểm tựa từ **Độ tin cậy có giá trị kinh tế lớn hơn hóa đơn điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SMP và lô-gic (logic / 논리) chi phí cận biên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiến trúc thị trường điện Hàn Quốc
 
 KEPCO (한국전력공사) vẫn giữ vai trò trung tâm trong truyền tải, phân phối và cấu trúc bán lẻ, trong khi phát điện đến từ các công ty phát điện công và nhà sản xuất điện độc lập.
@@ -78,17 +85,23 @@ Giá bán buôn được hình thành qua cơ chế thị trường, còn giá b
 
 Xem [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md).
 
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **SMP và lô-gic (logic / 논리) chi phí cận biên** tiếp nhận điểm tựa từ **Kiến trúc thị trường điện Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu giá bán lẻ vừa là giá vừa là công cụ chính sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## SMP và lô-gic (logic / 논리) chi phí cận biên
 
 Thị trường bán buôn sử dụng khái niệm **hệ thống (system / 시스템) Marginal Price (SMP / 계통한계가격)**. Mô hình tư duy đơn giản là nguồn có chi phí cận biên thấp được huy động trước, sau đó bổ sung nguồn đắt hơn khi nhu cầu tăng; nhà máy cận biên ảnh hưởng giá thanh toán.
 
 Do đó giá gas và nhiên liệu có thể tác động giá điện bán buôn ngay cả khi điện hạt nhân hoặc tái tạo có chi phí nhiên liệu thấp hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Biểu giá bán lẻ vừa là giá vừa là công cụ chính sách** tiếp nhận điểm tựa từ **SMP và lô-gic (logic / 논리) chi phí cận biên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện hạt nhân: vốn ban đầu rất lớn, độ nhạy nhiên liệu thấp hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biểu giá bán lẻ vừa là giá vừa là công cụ chính sách
 
 Điện ảnh hưởng hộ gia đình, lạm phát và sức cạnh tranh công nghiệp. Nếu giá bán lẻ phản ánh ngay mọi biến động nhiên liệu, người dùng phải chịu biến động lớn. Nếu điều chỉnh bị trì hoãn, doanh nghiệp điện lực hấp thụ tổn thất trong thời gian đó.
 
 Chính sách vì vậy quyết định **ai chịu chi phí và chịu vào lúc nào**, chứ không thể làm chi phí vật lý biến mất.
+
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Điện hạt nhân: vốn ban đầu rất lớn, độ nhạy nhiên liệu thấp hơn** tiếp nhận điểm tựa từ **Biểu giá bán lẻ vừa là giá vừa là công cụ chính sách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trễ tiến độ làm chi phí tài chính tăng mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện hạt nhân: vốn ban đầu rất lớn, độ nhạy nhiên liệu thấp hơn
 
@@ -98,11 +111,15 @@ Phân tích vòng đời cần bao gồm xây dựng, chi phí tài chính trong
 
 Đây là lý do chỉ so chi phí nhiên liệu sẽ đánh giá thiếu rủi ro vốn và thời gian.
 
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Trễ tiến độ làm chi phí tài chính tăng mạnh** tiếp nhận điểm tựa từ **Điện hạt nhân: vốn ban đầu rất lớn, độ nhạy nhiên liệu thấp hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LNG: linh hoạt đổi lấy rủi ro nhập khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trễ tiến độ làm chi phí tài chính tăng mạnh
 
 Dự án hạt nhân kéo dài nhiều năm nên **lãi trong thời gian xây dựng (interest during construction)** là biến kinh tế lớn. Mỗi năm chậm không chỉ dời doanh thu mà còn làm chi phí vốn tích lũy thêm.
 
 Vì vậy năng lực thực hiện dự án đúng tiến độ có giá trị tài chính trực tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **LNG: linh hoạt đổi lấy rủi ro nhập khẩu** tiếp nhận điểm tựa từ **Trễ tiến độ làm chi phí tài chính tăng mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Than: tài sản cũ và áp lực chuyển đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## LNG: linh hoạt đổi lấy rủi ro nhập khẩu
 
@@ -110,11 +127,15 @@ Nhà máy gas có khả năng tăng giảm công suất linh hoạt hơn nhiều
 
 LNG có thể có **giá trị hệ thống (system value)** lớn dù chi phí mỗi kWh không phải thấp nhất, bởi khả năng điều chỉnh giúp duy trì ổn định lưới.
 
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Than: tài sản cũ và áp lực chuyển đổi** tiếp nhận điểm tựa từ **LNG: linh hoạt đổi lấy rủi ro nhập khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng tái tạo: nhiên liệu bằng 0 không có nghĩa chi phí hệ thống bằng 0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Than: tài sản cũ và áp lực chuyển đổi
 
 Than từng cung cấp nguồn điện ổn định quy mô lớn nhưng phát thải carbon cao. Khi tỷ trọng than giảm, nhà máy cũ có thể bị sử dụng thấp hơn và trở thành **tài sản mắc kẹt (stranded asset / 좌초자산)** trước khi hết tuổi thọ vật lý.
 
 Chuyển đổi phải vừa giảm phát thải vừa bảo đảm đủ công suất hệ thống.
+
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Năng lượng tái tạo: nhiên liệu bằng 0 không có nghĩa chi phí hệ thống bằng 0** tiếp nhận điểm tựa từ **Than: tài sản cũ và áp lực chuyển đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện gió ngoài khơi: tiềm năng lớn nhưng thực hiện phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Năng lượng tái tạo: nhiên liệu bằng 0 không có nghĩa chi phí hệ thống bằng 0
 
@@ -124,11 +145,15 @@ Vì vậy **LCOE** của riêng nhà máy không mô tả toàn bộ kinh tế h
 
 Hàn Quốc còn có hạn chế riêng về mật độ dân số, đất, địa hình và lưới.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Điện gió ngoài khơi: tiềm năng lớn nhưng thực hiện phức tạp** tiếp nhận điểm tựa từ **Năng lượng tái tạo: nhiên liệu bằng 0 không có nghĩa chi phí hệ thống bằng 0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công suất năng lượng và công suất khả dụng là hai khái niệm khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện gió ngoài khơi: tiềm năng lớn nhưng thực hiện phức tạp
 
 Điện gió ngoài khơi cần quyền sử dụng khu vực biển, giấy phép, turbine, móng, cáp ngầm, cảng, tàu chuyên dụng, đấu nối lưới và chấp thuận địa phương.
 
 Về thực thi, nó giống một dự án hạ tầng–đóng tàu phức tạp hơn là “chỉ lắp turbine”. Năng lực công nghiệp nặng của Hàn Quốc có thể tạo cơ hội chuỗi cung ứng, nhưng hiệu quả vẫn phụ thuộc tài chính và triển khai.
+
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Công suất năng lượng và công suất khả dụng là hai khái niệm khác nhau** tiếp nhận điểm tựa từ **Điện gió ngoài khơi: tiềm năng lớn nhưng thực hiện phức tạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nút thắt lưới: có nguồn phát mà không truyền được thì vẫn là công suất bị kẹt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công suất năng lượng và công suất khả dụng là hai khái niệm khác nhau
 
@@ -143,17 +168,23 @@ Tại giờ cao điểm có bao nhiêu công suất đáng tin cậy?
 
 Đây là lý do lưu trữ, hạt nhân, gas và điều chỉnh nhu cầu có giá trị ngoài tỷ trọng sản lượng năm.
 
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Công suất năng lượng và công suất khả dụng là hai khái niệm khác nhau** nêu điều cần giải thích; **Nút thắt lưới: có nguồn phát mà không truyền được thì vẫn là công suất bị kẹt** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bán dẫn và AI làm nhu cầu điện tập trung hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nút thắt lưới: có nguồn phát mà không truyền được thì vẫn là công suất bị kẹt
 
 Dự án có thể đủ giấy phép và vốn nhưng vẫn không tạo giá trị nếu đấu nối lưới chậm. Truyền tải thường mất nhiều năm vì quy hoạch tuyến, đất và chấp thuận cộng đồng.
 
 Ở phía nhu cầu, một cụm fab hoặc trung tâm dữ liệu cũng không thể mở rộng chỉ bằng việc công bố CAPEX nếu chưa bảo đảm điện và nước.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Nút thắt lưới: có nguồn phát mà không truyền được thì vẫn là công suất bị kẹt** nêu điều cần giải thích; **Bán dẫn và AI làm nhu cầu điện tập trung hơn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ nhạy của ngành với giá điện rất khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bán dẫn và AI làm nhu cầu điện tập trung hơn
 
 Fab cần điện liên tục với chất lượng cao. Trung tâm dữ liệu AI tạo tải rất lớn và mật độ công suất cao. Vì vậy chiến lược AI và bán dẫn nối trực tiếp với quy hoạch lưới điện.
 
 Không khu vực nào có thể thu hút vô hạn dữ liệu (data / 데이터) center hoặc fab chỉ bằng ưu đãi thuế nếu hạ tầng điện không theo kịp.
+
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Độ nhạy của ngành với giá điện rất khác nhau** tiếp nhận điểm tựa từ **Bán dẫn và AI làm nhu cầu điện tập trung hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mua điện tái tạo và RE100** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ nhạy của ngành với giá điện rất khác nhau
 
@@ -162,6 +193,8 @@ Nếu điện chiếm 5% tổng chi phí sản xuất, tăng giá điện 20% c�
 Với ngành biên lợi nhuận mỏng, thay đổi đó có thể tác động EBIT đáng kể.
 
 Trung tâm dữ liệu có tải liên tục; lò điện rất thâm dụng điện; bán dẫn cần cả điện, nước và độ tin cậy; hóa chất có cấu trúc phức tạp giữa năng lượng và nguyên liệu đầu vào.
+
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Mua điện tái tạo và RE100** tiếp nhận điểm tựa từ **Độ nhạy của ngành với giá điện rất khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **K-ETS: biến phát thải thành chi phí tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mua điện tái tạo và RE100
 
@@ -176,6 +209,8 @@ Yêu cầu ESG của khách hàng
 → khả năng cạnh tranh hợp đồng
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **K-ETS: biến phát thải thành chi phí tài chính** tiếp nhận điểm tựa từ **Mua điện tái tạo và RE100** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Carbon ở biên giới biến phát thải trong nước thành biến xuất khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## K-ETS: biến phát thải thành chi phí tài chính
 
 **Hệ thống giao dịch phát thải Hàn Quốc (K-ETS / 배출권거래제)** tạo giá cho carbon đối với các doanh nghiệp thuộc diện áp dụng.
@@ -186,11 +221,15 @@ Chi\ phí\ carbon = Phát\ thải\ ròng\ cần\ mua\ quyền \times Giá\ quy�
 
 Thép, hóa chất, xi măng và điện đặc biệt nhạy. Phân bổ miễn phí có thể giảm gánh nặng ngắn hạn nhưng không loại bỏ áp lực khử carbon dài hạn.
 
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Carbon ở biên giới biến phát thải trong nước thành biến xuất khẩu** tiếp nhận điểm tựa từ **K-ETS: biến phát thải thành chi phí tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thép và hóa chất là các ngành khó giảm phát thải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Carbon ở biên giới biến phát thải trong nước thành biến xuất khẩu
 
 Nếu thị trường nhập khẩu yêu cầu báo cáo hoặc tính chi phí carbon trong sản phẩm, phát thải của nhà máy Hàn Quốc ảnh hưởng trực tiếp khả năng tiếp cận và giá bán ở nước ngoài.
 
 Doanh nghiệp xuất khẩu vì vậy phải quản lý cường độ carbon, khả năng truy xuất và yêu cầu của khách hàng, không chỉ tuân thủ quy định nội địa.
+
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Thép và hóa chất là các ngành khó giảm phát thải** tiếp nhận điểm tựa từ **Carbon ở biên giới biến phát thải trong nước thành biến xuất khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydro là chất mang năng lượng, không phải nguồn năng lượng miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thép và hóa chất là các ngành khó giảm phát thải
 
@@ -198,11 +237,15 @@ Giảm carbon trong lò cao hoặc feedstock hóa dầu khó hơn nhiều so v�
 
 Các công nghệ này thường cần CAPEX lớn trong khi giá carbon và mức sẵn sàng trả thêm của khách hàng chưa chắc chắn. Vì vậy kinh tế chuyển đổi chứa đồng thời rủi ro công nghệ, chính sách và nhu cầu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Thép và hóa chất là các ngành khó giảm phát thải** nêu điều cần giải thích; **Hydro là chất mang năng lượng, không phải nguồn năng lượng miễn phí** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ammonia là một phương tiện vận chuyển hydro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hydro là chất mang năng lượng, không phải nguồn năng lượng miễn phí
 
 Hydro phải được sản xuất bằng năng lượng khác. Hiệu quả kinh tế phụ thuộc phương pháp sản xuất, giá điện/gas, cường độ carbon, lưu trữ, vận chuyển, tổn thất chuyển đổi và giá trị sử dụng cuối.
 
 Không nên đánh giá “kinh tế hydro” chỉ từ chi phí sản xuất tại nhà máy mà phải nhìn cả chuỗi.
+
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Hydro là chất mang năng lượng, không phải nguồn năng lượng miễn phí** nêu điều cần giải thích; **Ammonia là một phương tiện vận chuyển hydro** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **ESS: giá trị không chỉ là mua điện rẻ rồi bán điện đắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ammonia là một phương tiện vận chuyển hydro
 
@@ -210,11 +253,15 @@ Ammonia có thể dễ vận chuyển hơn hydro trong một số trường hợ
 
 Đây là bài toán tối ưu hệ thống, không phải câu hỏi “chất mang nào rẻ hơn” đơn giản.
 
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **ESS: giá trị không chỉ là mua điện rẻ rồi bán điện đắt** tiếp nhận điểm tựa từ **Ammonia là một phương tiện vận chuyển hydro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều chỉnh nhu cầu: đôi khi công suất rẻ nhất là “không dùng điện lúc này”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ESS: giá trị không chỉ là mua điện rẻ rồi bán điện đắt
 
 **Hệ thống lưu trữ năng lượng (Energy Storage System / ESS)** có thể cung cấp chênh lệch giá điện, điều tần, dự phòng, làm mượt tái tạo và giảm tắc nghẽn lưới.
 
 Giá trị kinh tế phụ thuộc thiết kế thị trường: hệ thống có được trả tiền cho các dịch vụ đó hay không.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Điều chỉnh nhu cầu: đôi khi công suất rẻ nhất là “không dùng điện lúc này”** tiếp nhận điểm tựa từ **ESS: giá trị không chỉ là mua điện rẻ rồi bán điện đắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu quả năng lượng là “nguồn cung ảo”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điều chỉnh nhu cầu: đôi khi công suất rẻ nhất là “không dùng điện lúc này”
 
@@ -222,11 +269,15 @@ Giá trị kinh tế phụ thuộc thiết kế thị trường: hệ thống c�
 
 Khả năng tham gia khác nhau theo ngành; fab liên tục có ít linh hoạt hơn một số tải thương mại hoặc dữ liệu (data / 데이터) center có hệ thống dự phòng.
 
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Điều chỉnh nhu cầu: đôi khi công suất rẻ nhất là “không dùng điện lúc này”** nêu điều cần giải thích; **Hiệu quả năng lượng là “nguồn cung ảo”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chuyển đổi năng lượng là bài toán phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu quả năng lượng là “nguồn cung ảo”
 
 Tiết kiệm 1 MWh có thể tương đương tạo thêm 1 MWh nếu chi phí đầu tư tiết kiệm thấp hơn chi phí xây nguồn mới. Hiệu quả năng lượng đồng thời giảm phụ thuộc nhập khẩu và giảm tải lưới.
 
 Trong nền kinh tế trưởng thành, tối ưu quy trình và tòa nhà có thể rẻ hơn việc bổ sung phát điện cho mọi mức tăng nhu cầu.
+
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Hiệu quả năng lượng là “nguồn cung ảo”** nêu điều cần giải thích; **Chuyển đổi năng lượng là bài toán phân bổ vốn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kế hoạch điện là quỹ đạo chính sách, không phải kết quả chắc chắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuyển đổi năng lượng là bài toán phân bổ vốn
 
@@ -234,11 +285,15 @@ Doanh nghiệp điện lực và công nghiệp phải quyết định vừa duy
 
 Đầu tư quá ít tạo rủi ro thiếu công suất; đầu tư quá nhiều tạo tài sản sử dụng thấp hoặc mắc kẹt. Vì vậy cần tư duy danh mục thay vì đặt cược toàn bộ vào một công nghệ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Kế hoạch điện là quỹ đạo chính sách, không phải kết quả chắc chắn** tiếp nhận điểm tựa từ **Chuyển đổi năng lượng là bài toán phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xuất khẩu hạt nhân là một ngành công nghiệp phức hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kế hoạch điện là quỹ đạo chính sách, không phải kết quả chắc chắn
 
 Các kế hoạch cung–cầu điện dài hạn cho biết hướng mong muốn về nuclear, renewables, coal và LNG. Nhưng kế hoạch chỉ trở thành sản lượng thực khi giấy phép, xây dựng, lưới, nhu cầu và chi phí được thực hiện thành công.
 
 Nhà phân tích nên dùng kế hoạch làm kịch bản nền rồi theo dõi tiến độ thực tế.
+
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Xuất khẩu hạt nhân là một ngành công nghiệp phức hợp** tiếp nhận điểm tựa từ **Kế hoạch điện là quỹ đạo chính sách, không phải kết quả chắc chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích doanh nghiệp điện lực và doanh nghiệp thâm dụng điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xuất khẩu hạt nhân là một ngành công nghiệp phức hợp
 
@@ -246,17 +301,23 @@ Năng lực hạt nhân của Hàn Quốc gồm kỹ thuật, EPC, linh kiện, 
 
 Vì vậy kinh tế xuất khẩu hạt nhân gần với hạ tầng nặng và quốc phòng hơn là kinh doanh hàng hóa năng lượng thông thường.
 
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Cách phân tích doanh nghiệp điện lực và doanh nghiệp thâm dụng điện** tiếp nhận điểm tựa từ **Xuất khẩu hạt nhân là một ngành công nghiệp phức hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách phân tích doanh nghiệp điện lực và doanh nghiệp thâm dụng điện
 
 Với doanh nghiệp điện lực, theo dõi giá nhiên liệu, chi phí mua điện, điều chỉnh biểu giá, cơ cấu phát điện, tỷ giá, chi phí lãi vay, nợ, CAPEX lưới và tăng trưởng nhu cầu.
 
 Với doanh nghiệp thâm dụng điện, cần hỏi tỷ trọng điện trong chi phí, loại biểu giá, hồ sơ phụ tải, độ nhạy mất điện, nghĩa vụ điện tái tạo, khả năng chuyển giá và công suất đấu nối đã được bảo đảm hay chưa.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** tiếp nhận điểm tựa từ **Cách phân tích doanh nghiệp điện lực và doanh nghiệp thâm dụng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Các kịch bản hữu ích gồm LNG +30%, KRW yếu 10%, giá điện công nghiệp +15%, đấu nối lưới chậm 2 năm, giá carbon tăng gấp đôi hoặc nhu cầu AI tăng nhanh hơn hạ tầng lưới.
 
 Quan trọng là đưa cú sốc xuống dòng tiền doanh nghiệp và bảng cân đối utility, không dừng ở tiêu đề năng lượng.
+
+> **Chuyển mạch:** Trong **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -274,12 +335,16 @@ Hộ gia đình / doanh nghiệp
 Lạm phát + sức cạnh tranh + đầu tư
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 Điện tái tạo có nhiên liệu bằng 0 nhưng hệ thống vẫn cần lưới và lưu trữ. Nuclear có chi phí nhiên liệu thấp nhưng dự án vẫn có rủi ro vốn và tiến độ. Giá điện thấp không chứng minh chi phí phát điện thấp. An ninh năng lượng không có nghĩa phải tự sản xuất mọi thứ. Có thêm nguồn phát không giải được thiếu điện nếu truyền tải bị nghẽn. Hydro nên được hiểu là chất mang năng lượng được sản xuất từ nguồn khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

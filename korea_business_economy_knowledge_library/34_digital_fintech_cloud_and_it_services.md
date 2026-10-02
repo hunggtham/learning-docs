@@ -1,7 +1,6 @@
 # Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)
 
-> **Mạch đọc:** Đặt **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hạ tầng số là công nghệ có mục đích sử dụng chung** sang **Kinh tế nền tảng: nhiều phía thị trường cùng tồn tại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hạ tầng số là công nghệ có mục đích sử dụng chung** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kinh tế nền tảng: nhiều phía thị trường cùng tồn tại** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối digital, fintech, cloud và IT services với nền tảng, dữ liệu và mô hình doanh thu mới của kinh tế Hàn Quốc.
 
 Hàn Quốc phát triển băng rộng, hạ tầng di động và chính phủ điện tử tương đối sớm, đồng thời có khu vực doanh nghiệp lớn với nhu cầu rất cao về ERP, cốt lõi (core / 핵심) banking, CNTT sản xuất và hệ thống dùng chung toàn tập đoàn. Vì vậy kinh tế số Hàn Quốc có hai thế giới cùng tồn tại: **nền tảng số/fintech cho người tiêu dùng** và **CNTT doanh nghiệp/SI/SM**.
 
@@ -22,6 +21,8 @@ Một mạng nhanh nhưng quy trình kinh doanh vẫn dùng giấy sẽ tạo í
 ```text
 Công nghệ × Quy trình × Tổ chức
 ```
+
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Kinh tế nền tảng: nhiều phía thị trường cùng tồn tại** tiếp nhận điểm tựa từ **Hạ tầng số là công nghệ có mục đích sử dụng chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fintech không chỉ là ứng dụng có giao diện đẹp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế nền tảng: nhiều phía thị trường cùng tồn tại
 
@@ -45,6 +46,8 @@ Nhưng hiệu ứng mạng không đồng nghĩa lợi thế tuyệt đối. Kh�
 
 Xem [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md).
 
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Fintech không chỉ là ứng dụng có giao diện đẹp** tiếp nhận điểm tựa từ **Kinh tế nền tảng: nhiều phía thị trường cùng tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế thanh toán: khối lượng cực lớn nhưng tỷ lệ thu phí rất nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Fintech không chỉ là ứng dụng có giao diện đẹp
 
 **Fintech (핀테크)** dùng phần mềm để giảm ma sát trong thanh toán, cho vay, đầu tư, bảo hiểm hoặc sử dụng dữ liệu tài chính.
@@ -62,6 +65,8 @@ Một ứng dụng cho vay vẫn phải giải quyết:
 
 UX tốt giúp thu hút người dùng, nhưng thẩm định tín dụng kém có thể phá hủy mô hình kinh doanh vài năm sau khi tăng trưởng nhìn rất đẹp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Kinh tế thanh toán: khối lượng cực lớn nhưng tỷ lệ thu phí rất nhỏ** tiếp nhận điểm tựa từ **Fintech không chỉ là ứng dụng có giao diện đẹp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Open banking và kinh tế API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế thanh toán: khối lượng cực lớn nhưng tỷ lệ thu phí rất nhỏ
 
 Công ty thanh toán có thể xử lý hàng chục nghìn tỷ KRW giao dịch nhưng chỉ giữ một phần nhỏ làm doanh thu.
@@ -76,6 +81,8 @@ Vì vậy **tổng giá trị thanh toán (Gross Payment Volume)** giống GMV: 
 
 Một doanh nghiệp thanh toán có thể tăng khối lượng 30% nhưng biên lợi nhuận đóng góp không tăng nếu khuyến mãi hoặc tổn thất gian lận tăng nhanh hơn.
 
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Open banking và kinh tế API** tiếp nhận điểm tựa từ **Kinh tế thanh toán: khối lượng cực lớn nhưng tỷ lệ thu phí rất nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngân hàng Internet: lợi thế phân phối nhưng vẫn là ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Open banking và kinh tế API
 
 Open banking tạo khả năng truy cập được chuẩn hóa giữa tài khoản ngân hàng và dịch vụ bên thứ ba. Tác động kinh tế lớn nhất của chuẩn API là giảm **ma sát tích hợp (integration friction)**.
@@ -83,6 +90,8 @@ Open banking tạo khả năng truy cập được chuẩn hóa giữa tài kho�
 Trong phần mềm, API là hợp đồng giữa các mô-đun. Trong tài chính, API chuẩn cho phép ứng dụng mới xây trên hạ tầng có sẵn mà không phải xây lại toàn bộ hệ thống ngân hàng.
 
 Điều này hạ rào cản gia nhập ở lớp giao diện nhưng không xóa quy định. Cạnh tranh chuyển từ “ai sở hữu toàn bộ hệ thống” sang “ai có phân phối, thiết kế sản phẩm, mô hình rủi ro và niềm tin tốt hơn”.
+
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Ngân hàng Internet: lợi thế phân phối nhưng vẫn là ngân hàng** tiếp nhận điểm tựa từ **Open banking và kinh tế API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cloud: từ sở hữu tài nguyên tính toán sang tiêu thụ theo nhu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngân hàng Internet: lợi thế phân phối nhưng vẫn là ngân hàng
 
@@ -97,6 +106,8 @@ NIM \approx \frac{Thu\ nhập\ lãi - Chi\ phí\ lãi}{Tài\ sản\ sinh\ lãi}
 Tăng trưởng cho vay nhanh giúp doanh thu nhưng chi phí tín dụng có thể xuất hiện sau. Vì vậy tăng trưởng phải đọc cùng nợ quá hạn, dự phòng, cơ cấu tiền gửi và an toàn vốn.
 
 Phân phối số thay đổi cấu trúc chi phí; nó không làm rủi ro tín dụng biến mất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Cloud: từ sở hữu tài nguyên tính toán sang tiêu thụ theo nhu cầu** tiếp nhận điểm tựa từ **Ngân hàng Internet: lợi thế phân phối nhưng vẫn là ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cloud đang chuyển từ công nghệ hỗ trợ thành hạ tầng cho AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cloud: từ sở hữu tài nguyên tính toán sang tiêu thụ theo nhu cầu
 
@@ -116,6 +127,8 @@ Chi phí ban đầu thấp → co giãn tốt → trả theo mức sử dụng
 
 Kiến trúc hybrid tồn tại vì nhiều doanh nghiệp cần cả hai mô hình.
 
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Cloud đang chuyển từ công nghệ hỗ trợ thành hạ tầng cho AI** tiếp nhận điểm tựa từ **Cloud: từ sở hữu tài nguyên tính toán sang tiêu thụ theo nhu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế trung tâm dữ liệu: phần mềm cuối cùng vẫn cần đất và điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cloud đang chuyển từ công nghệ hỗ trợ thành hạ tầng cho AI
 
 Chiến lược cloud của Hàn Quốc giai đoạn 2025–2027 đặt cloud vào vị trí hạ tầng trung tâm cho AI. Chính sách không chỉ khuyến khích SaaS mà còn nhấn mạnh hạ tầng tính toán AI, bán dẫn AI nội địa, hệ sinh thái SaaS và năng lực trung tâm dữ liệu.
@@ -125,6 +138,8 @@ Chiến lược cloud của Hàn Quốc giai đoạn 2025–2027 đặt cloud v�
 Khi khối lượng AI tăng, nút thắt không chỉ là phần mềm mà còn là **GPU, điện, làm mát và kết nối mạng**.
 
 Vì vậy kinh tế số nối trực tiếp với [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
+
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Cloud đang chuyển từ công nghệ hỗ trợ thành hạ tầng cho AI** nêu điều cần giải thích; **Kinh tế trung tâm dữ liệu: phần mềm cuối cùng vẫn cần đất và điện** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sovereign cloud, vị trí dữ liệu và chứng nhận an ninh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế trung tâm dữ liệu: phần mềm cuối cùng vẫn cần đất và điện
 
@@ -144,6 +159,8 @@ Khối lượng AI làm mật độ điện tăng mạnh nên địa điểm tru
 
 Một khu vực có đất rẻ nhưng đấu nối điện yếu có thể không phù hợp. Gần Seoul giúp giảm độ trễ nhưng đất và điện đắt hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Kinh tế trung tâm dữ liệu: phần mềm cuối cùng vẫn cần đất và điện** nêu điều cần giải thích; **Sovereign cloud, vị trí dữ liệu và chứng nhận an ninh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cloud trong tài chính: từ hạn chế toàn diện sang sử dụng dựa trên rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sovereign cloud, vị trí dữ liệu và chứng nhận an ninh
 
 Chính phủ, tài chính và các ngành trọng yếu có yêu cầu đặc biệt về vị trí dữ liệu, kiểm soát truy cập và đảm bảo an ninh.
@@ -154,6 +171,8 @@ Nhà cung cấp cloud nội địa có lợi thế hiểu quy định và tích 
 
 Cạnh tranh vì vậy không đơn giản là “công nghệ tốt hơn sẽ thắng”.
 
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Sovereign cloud, vị trí dữ liệu và chứng nhận an ninh** nêu điều cần giải thích; **Cloud trong tài chính: từ hạn chế toàn diện sang sử dụng dựa trên rủi ro** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **CNTT doanh nghiệp tại Hàn Quốc: SI và SM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cloud trong tài chính: từ hạn chế toàn diện sang sử dụng dựa trên rủi ro
 
 Ngành tài chính Hàn Quốc trước đây áp dụng khá nghiêm **tách mạng (network separation / 망분리)**. Năm 2026, FSC mở rộng khả năng sử dụng nhiều SaaS trên mạng nội bộ theo cơ chế ngoại lệ kèm điều kiện an ninh, giúp công cụ tài liệu, cộng tác và hỗ trợ dễ được áp dụng hơn.
@@ -161,6 +180,8 @@ Ngành tài chính Hàn Quốc trước đây áp dụng khá nghiêm **tách m�
 Điểm quan trọng về kinh tế là quy định có thể thay đổi năng suất mà không cần công nghệ mới. Cùng một SaaS đã tồn tại từ trước nhưng khi quy tắc thay đổi, chi phí giao dịch của việc triển khai giảm.
 
 Đây là ví dụ rõ về [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md): quy định là biến kinh doanh chứ không chỉ là chú thích pháp lý.
+
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **CNTT doanh nghiệp tại Hàn Quốc: SI và SM** tiếp nhận điểm tựa từ **Cloud trong tài chính: từ hạn chế toàn diện sang sử dụng dựa trên rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế dự án SI: man-month không đồng nghĩa giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CNTT doanh nghiệp tại Hàn Quốc: SI và SM
 
@@ -171,6 +192,8 @@ Các tập đoàn lớn Hàn Quốc thường có công ty dịch vụ CNTT nộ
 Điều này tạo nhu cầu nội bộ tương đối ổn định nhưng phải tách nó khỏi năng lực cạnh tranh với khách hàng bên ngoài.
 
 Một công ty CNTT có 70% doanh thu từ nội bộ tập đoàn có thể rất ổn định; câu hỏi khác là năng lực đó có bán được ra thị trường bên ngoài hay không.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Kinh tế dự án SI: man-month không đồng nghĩa giá trị** tiếp nhận điểm tựa từ **CNTT doanh nghiệp tại Hàn Quốc: SI và SM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi (change / 변경) yêu cầu (request / 요청) và nghiệm thu là cơ chế dòng tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế dự án SI: man-month không đồng nghĩa giá trị
 
@@ -186,6 +209,8 @@ Vì vậy chất lượng yêu cầu là một **biến kinh tế**. Yêu cầu 
 
 Phát triển offshore hoặc tại Việt Nam có thể giảm chi phí, nhưng tiết kiệm chỉ có thật nếu giao tiếp, đặc tả và QA đủ tốt. Nếu lỗi và làm lại tăng, lợi thế chênh lệch chi phí lao động có thể biến mất.
 
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Kinh tế dự án SI: man-month không đồng nghĩa giá trị** xác định đầu vào; **Thay đổi (change / 변경) yêu cầu (request / 요청) và nghiệm thu là cơ chế dòng tiền** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **SM và bảo trì: doanh thu định kỳ nhưng không phải SaaS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thay đổi (change / 변경) yêu cầu (request / 요청) và nghiệm thu là cơ chế dòng tiền
 
 Trong SI, **yêu cầu thay đổi (Change Request / CR / 변경요청)** quyết định phạm vi mới có được trả thêm hay không.
@@ -196,6 +221,8 @@ Chậm nghiệm thu cũng làm thu tiền chậm. Doanh thu có thể được g
 
 Vì vậy phân tích công ty CNTT cần xem khoản phải thu và tài sản/nợ hợp đồng chứ không chỉ doanh thu.
 
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Thay đổi (change / 변경) yêu cầu (request / 요청) và nghiệm thu là cơ chế dòng tiền** xác định đầu vào; **SM và bảo trì: doanh thu định kỳ nhưng không phải SaaS** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **ERP: chi phí chuyển đổi và nợ kỹ thuật xuất hiện cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## SM và bảo trì: doanh thu định kỳ nhưng không phải SaaS
 
 Bảo trì tạo doanh thu lặp lại và chi phí chuyển đổi vì nhà cung cấp hiểu hệ thống sâu. Nhưng SM vẫn có thể thâm dụng lao động.
@@ -203,6 +230,8 @@ Bảo trì tạo doanh thu lặp lại và chi phí chuyển đổi vì nhà cun
 Nếu giá hợp đồng cố định theo nhân lực hoặc SLA, lợi ích tự động hóa thuộc nhà cung cấp hay khách hàng còn tùy điều khoản.
 
 DevOps, khả năng quan sát và kiểm thử tự động giúp giảm lao động xử lý sự cố, nhưng doanh nghiệp chỉ giữ được giá trị đó nếu mô hình giá cho phép giữ một phần phần tiết kiệm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **ERP: chi phí chuyển đổi và nợ kỹ thuật xuất hiện cùng lúc** tiếp nhận điểm tựa từ **SM và bảo trì: doanh thu định kỳ nhưng không phải SaaS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện đại hóa hệ thống cũ: viết lại toàn bộ không phải lúc nào cũng tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## ERP: chi phí chuyển đổi và nợ kỹ thuật xuất hiện cùng lúc
 
@@ -215,6 +244,8 @@ Chi phí chuyển đổi là lợi thế cho nhà cung cấp nhưng có thể tr
 Tùy biến quá nhiều làm nâng cấp khó và khiến công ty mắc kẹt ở phiên bản cũ.
 
 Kiến trúc doanh nghiệp luôn có đánh đổi giữa phù hợp nghiệp vụ và khả năng bảo trì.
+
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Hiện đại hóa hệ thống cũ: viết lại toàn bộ không phải lúc nào cũng tốt** tiếp nhận điểm tựa từ **ERP: chi phí chuyển đổi và nợ kỹ thuật xuất hiện cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SaaS: từ doanh thu dự án sang kinh tế sản phẩm định kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiện đại hóa hệ thống cũ: viết lại toàn bộ không phải lúc nào cũng tốt
 
@@ -232,6 +263,8 @@ Chi phí bảo trì + sự cố + mất linh hoạt trong tương lai
 
 Kiến trúc kỹ thuật vì vậy là quyết định tài chính chứ không chỉ là sở thích kỹ thuật.
 
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **SaaS: từ doanh thu dự án sang kinh tế sản phẩm định kỳ** tiếp nhận điểm tựa từ **Hiện đại hóa hệ thống cũ: viết lại toàn bộ không phải lúc nào cũng tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI tác nhân (agent / 에이전트): từ bản demo tới hệ thống sản xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## SaaS: từ doanh thu dự án sang kinh tế sản phẩm định kỳ
 
 SI truyền thống bán dự án; **SaaS (Software as a Service / 서비스형 소프트웨어)** bán quyền sử dụng định kỳ.
@@ -247,6 +280,8 @@ trong đó `LTV` là giá trị vòng đời khách hàng và `CAC` là chi phí
 Ngoài ra phải xem tỷ lệ rời bỏ (churn), doanh thu mở rộng từ khách hàng cũ, biên lợi nhuận gộp và thời gian hoàn vốn CAC.
 
 Chuyển từ SI sang SaaS không đơn giản là “đưa phần mềm lên cloud”. Sản phẩm phải được tiêu chuẩn hóa đủ để nhiều khách hàng dùng chung phần lõi của mã nguồn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **AI tác nhân (agent / 에이전트): từ bản demo tới hệ thống sản xuất** tiếp nhận điểm tựa từ **SaaS: từ doanh thu dự án sang kinh tế sản phẩm định kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI hỗ trợ lập trình và kinh tế của lập trình viên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AI tác nhân (agent / 에이전트): từ bản demo tới hệ thống sản xuất
 
@@ -272,6 +307,8 @@ Giá\ trị\ AI = Số\ lượng\ tác\ vụ \times Thời\ gian\ tiết\ kiệm
 
 Nếu số tác vụ thấp hoặc chi phí sai lỗi cao, demo rất ấn tượng vẫn có ROI thấp.
 
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **AI hỗ trợ lập trình và kinh tế của lập trình viên** tiếp nhận điểm tựa từ **AI tác nhân (agent / 에이전트): từ bản demo tới hệ thống sản xuất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **An ninh mạng là bài toán tổn thất kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## AI hỗ trợ lập trình và kinh tế của lập trình viên
 
 AI làm phần triển khai lặp lại nhanh hơn nhưng không có nghĩa giá trị của lập trình viên giảm đồng đều.
@@ -281,6 +318,8 @@ Khi tạo mã rẻ hơn, nút thắt chuyển sang chất lượng yêu cầu, k
 Kỹ sư có hiểu biết lĩnh vực (domain / 도메인) tốt có thể tận dụng AI nhiều hơn người chỉ biết cú pháp.
 
 Vì vậy AI có thể tăng **tính bổ trợ kỹ năng (skill complementarity)** chứ không chỉ thay thế lao động.
+
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **An ninh mạng là bài toán tổn thất kỳ vọng** tiếp nhận điểm tựa từ **AI hỗ trợ lập trình và kinh tế của lập trình viên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính phủ số và mua sắm công** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## An ninh mạng là bài toán tổn thất kỳ vọng
 
@@ -296,6 +335,8 @@ Tuy nhiên xác suất khó ước tính chính xác nên phân tích kịch b�
 
 An ninh chuỗi cung ứng đặc biệt quan trọng khi nhiều doanh nghiệp cùng phụ thuộc cloud, nhà cung cấp dịch vụ quản lý hoặc thư viện chung. Tập trung giúp hiệu quả nhưng tạo **rủi ro cùng nguồn (common-mode risk)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Chính phủ số và mua sắm công** tiếp nhận điểm tựa từ **An ninh mạng là bài toán tổn thất kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường lao động CNTT: khả năng chuyển ngữ cảnh là vốn con người** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chính phủ số và mua sắm công
 
 Hàn Quốc có hệ thống chính phủ điện tử phát triển, tạo nhu cầu lớn cho SI, cloud, an ninh mạng và dịch vụ dữ liệu.
@@ -304,6 +345,8 @@ Mua sắm công ảnh hưởng cấu trúc thị trường vì yêu cầu chứn
 
 Một thay đổi quy định có thể mở thị trường cho nhà cung cấp SaaS hoặc ngược lại duy trì lợi thế của nhà cung cấp SI hiện hữu.
 
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Thị trường lao động CNTT: khả năng chuyển ngữ cảnh là vốn con người** tiếp nhận điểm tựa từ **Chính phủ số và mua sắm công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích một công ty CNTT Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thị trường lao động CNTT: khả năng chuyển ngữ cảnh là vốn con người
 
 Giá trị của lập trình viên không chỉ nằm ở ngăn xếp (stack / 스택) kỹ thuật. Trong doanh nghiệp Hàn Quốc, người có thể chuyển đổi giữa yêu cầu nghiệp vụ, giao tiếp tiếng Hàn, kiến trúc và triển khai thường có giá trị cao.
@@ -311,6 +354,8 @@ Giá trị của lập trình viên không chỉ nằm ở ngăn xếp (stack / 
 Đặc biệt trong mô hình Hàn Quốc–Việt Nam, kỹ sư song ngữ có thể là **cầu nối ngữ cảnh (context bridge)** chứ không chỉ là người phiên dịch. Họ giảm chi phí phối hợp, hiểu nhầm và làm lại.
 
 Đây là loại vốn con người khó đo bằng chức danh như 사원/대리/과장.
+
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Cách phân tích một công ty CNTT Hàn Quốc** tiếp nhận điểm tựa từ **Thị trường lao động CNTT: khả năng chuyển ngữ cảnh là vốn con người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách phân tích một công ty CNTT Hàn Quốc
 
@@ -323,6 +368,8 @@ Với fintech, cần thêm nguồn vốn, tổn thất tín dụng, take tỷ l�
 Với nền tảng số, cần lập bản đồ hiệu ứng mạng, khả năng dùng nhiều nền tảng, tỷ lệ thu phí, tải quảng cáo, quy định và kinh tế đơn vị ở từng phía.
 
 Nói cách khác, “công ty CNTT” không phải một mô hình kinh doanh duy nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Mô hình tư duy** gom các mảnh từ **Cách phân tích một công ty CNTT Hàn Quốc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -346,6 +393,8 @@ Chi phí phối hợp thấp hơn
 Năng suất
 ```
 
+> **Chuyển mạch:** Trong **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“Cloud nghĩa là máy chủ không còn tồn tại.”** Sai. Máy chủ chỉ chuyển sang nhà cung cấp khác vận hành.
@@ -360,6 +409,8 @@ Năng suất
 
 **“Số hóa tự động làm năng suất tăng.”** Sai. Số hóa một quy trình tệ có thể chỉ làm quy trình tệ chạy nhanh hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`13_business_culture_decision_making_and_communication.md`](./13_business_culture_decision_making_and_communication.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
@@ -371,3 +422,5 @@ Nguồn nền giúp kiểm tra quy định dữ liệu, cloud, fintech và cấp
 - Ministry of Science and ICT, *Cloud Strategy for the AI Era — 4th Basic Plan for Cloud Computing 2025–2027*: https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1039&sCode=eng
 - Ministry of Science and ICT, các kế hoạch về hạ tầng tính toán AI và chuyển đổi AI: https://www.msit.go.kr/eng/
 - Financial Services Commission, cải cách năm 2026 cho phép mở rộng sử dụng SaaS trên mạng nội bộ của công ty tài chính theo các điều kiện an ninh: https://www.fsc.go.kr/no010101/86745
+
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

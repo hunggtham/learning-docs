@@ -1,7 +1,6 @@
 # Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)
 
-> **Mạch đọc:** Đặt **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Văn hóa không phải “tính cách dân tộc”** sang **Thứ bậc: cơ chế giải quyết vấn đề phối hợp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Văn hóa không phải “tính cách dân tộc”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thứ bậc: cơ chế giải quyết vấn đề phối hợp** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Mạch này nối business culture với decision making và communication, để giải thích hành vi tổ chức qua hierarchy, trust và cách truyền đạt.
 
 “Văn hóa công ty Hàn Quốc” không phải một bộ quy tắc đồng nhất. Một bộ phận sản xuất trong chaebol, startup 30 người, tổ chức công, ngân hàng, công ty SI và studio game có thể rất khác nhau. Cách hữu ích hơn là coi văn hóa là **trạng thái cân bằng của động cơ, thứ bậc, trách nhiệm, luồng thông tin và lịch sử tổ chức**.
 
@@ -28,6 +27,8 @@ Quyền ra quyết định
 
 Muốn thay đổi văn hóa phải thay đổi hệ thống, không chỉ khẩu hiệu.
 
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa không phải “tính cách dân tộc”** xác định đầu vào; **Thứ bậc: cơ chế giải quyết vấn đề phối hợp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quyền ra quyết định và tư duy RACI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thứ bậc: cơ chế giải quyết vấn đề phối hợp
 
 **Thứ bậc (hierarchy / 계층)** trả lời câu hỏi: khi mọi người bất đồng, ai có quyền quyết định?
@@ -39,6 +40,8 @@ Nhưng thứ bậc cũng có chi phí: thông tin bị bóp méo khi đi lên, p
 Câu hỏi đúng không phải “thứ bậc tốt hay xấu?”, mà là **quyết định nào cần tập trung và quyết định nào nên giao quyền tại chỗ**.
 
 Tổ chức tốt ghép mức quyền hạn với loại quyết định.
+
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Thứ bậc: cơ chế giải quyết vấn đề phối hợp** xác định đầu vào; **Quyền ra quyết định và tư duy RACI** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **보고: báo cáo là nén thông tin cho người ra quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quyền ra quyết định và tư duy RACI
 
@@ -54,6 +57,8 @@ Một khung hữu ích là RACI:
 Tổ chức Hàn Quốc có thể dùng thuật ngữ khác nhưng lô-gic (logic / 논리) tương tự `담당`, `책임자`, `결재자`, `참조`.
 
 Khi ai cũng “tham gia” nhưng không ai chịu trách nhiệm cuối, số cuộc họp tăng còn tốc độ thực thi giảm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **보고: báo cáo là nén thông tin cho người ra quyết định** tiếp nhận điểm tựa từ **Quyền ra quyết định và tư duy RACI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **결재: phê duyệt như hạ tầng kiểm soát rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 보고: báo cáo là nén thông tin cho người ra quyết định
 
@@ -75,6 +80,8 @@ Báo cáo kém chỉ đổ dữ liệu. Báo cáo tốt giảm tải nhận th�
 
 Với lập trình viên, đây chính là kỹ năng biến 10.000 dòng log thành `nguyên nhân gốc + ảnh hưởng + bằng chứng + hành động`.
 
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **결재: phê duyệt như hạ tầng kiểm soát rủi ro** tiếp nhận điểm tựa từ **보고: báo cáo là nén thông tin cho người ra quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ trễ phê duyệt là một chi phí tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 결재: phê duyệt như hạ tầng kiểm soát rủi ro
 
 `결재` là quy trình **phê duyệt chính thức (approval)**. Nó có thể áp dụng cho ngân sách, hợp đồng, tuyển dụng, mua sắm, giao tiếp bên ngoài, triển khai hệ thống hoặc ngoại lệ chính sách.
@@ -85,6 +92,8 @@ Nhưng mỗi tầng phê duyệt làm tăng độ trễ. Số tầng tối ưu p
 
 Một khoản thanh toán rủi ro cao có thể cần nhiều lớp kiểm tra; đổi màu trong A/B kiểm thử (test / 테스트) thì không.
 
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Độ trễ phê duyệt là một chi phí tổ chức** tiếp nhận điểm tựa từ **결재: phê duyệt như hạ tầng kiểm soát rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **회의: cuộc họp có thể để khám phá, tranh luận hoặc quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ trễ phê duyệt là một chi phí tổ chức
 
 Giả sử một quyết định cần 5 cấp phê duyệt và mỗi cấp chờ trung bình 1 ngày. Dù thời gian đọc thực tế chỉ 10 phút, chu kỳ có thể kéo dài gần một tuần.
@@ -92,6 +101,8 @@ Giả sử một quyết định cần 5 cấp phê duyệt và mỗi cấp ch�
 Đây là **chi phí xếp hàng (queueing cost)** chứ không phải chi phí giờ lao động.
 
 Hệ thống phê duyệt điện tử giúp tăng khả năng quan sát nhưng không giải quyết được quá nhiều tầng nếu thiết kế quyền hạn không thay đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **회의: cuộc họp có thể để khám phá, tranh luận hoặc quyết định** tiếp nhận điểm tựa từ **Độ trễ phê duyệt là một chi phí tổ chức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사전조율: căn chỉnh trước cuộc họp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 회의: cuộc họp có thể để khám phá, tranh luận hoặc quyết định
 
@@ -101,6 +112,8 @@ Xung đột dễ xảy ra khi người tham dự hiểu mục đích khác nhau.
 
 Cuộc họp tốt cần nói rõ **trạng thái quyết định** ngay từ đầu.
 
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **사전조율: căn chỉnh trước cuộc họp** tiếp nhận điểm tựa từ **회의: cuộc họp có thể để khám phá, tranh luận hoặc quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao tiếp theo ngữ cảnh cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 사전조율: căn chỉnh trước cuộc họp
 
 Trong nhiều tổ chức lớn và có mức giao tiếp theo ngữ cảnh cao, các bên quan trọng thường trao đổi trước khi vào cuộc họp chính thức. **Căn chỉnh trước (pre-alignment / 사전조율)** giúp giảm bất ngờ và xử lý phản đối riêng trước khi quyết định được đưa ra công khai.
@@ -108,6 +121,8 @@ Trong nhiều tổ chức lớn và có mức giao tiếp theo ngữ cảnh cao,
 Nhưng nếu quá mức, nó tạo hai vấn đề: cuộc họp chính thức trở thành nghi thức và người mới không biết quyết định thật sự được đưa ra ở đâu.
 
 Cách chuyên nghiệp không phải “chơi chính trị”, mà là xác định stakeholder sớm và làm quy trình quyết định minh bạch nhất có thể.
+
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Giao tiếp theo ngữ cảnh cao** tiếp nhận điểm tựa từ **사전조율: căn chỉnh trước cuộc họp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Giao diện rõ ràng” là thuốc giải cho mơ hồ liên văn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giao tiếp theo ngữ cảnh cao
 
@@ -118,6 +133,8 @@ Môi trường Hàn Quốc thường có nhiều **giao tiếp theo ngữ cảnh
 Một câu như `검토해보겠습니다` có thể mang mức cam kết khác nhau tùy bối cảnh.
 
 Người nước ngoài nên tránh hai cực đoan: hiểu mọi câu hoàn toàn theo nghĩa đen hoặc nghi ngờ mọi câu đều có ẩn ý. Cách tốt nhất là xác nhận các phần có thể hành động bằng văn bản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **“Giao diện rõ ràng” là thuốc giải cho mơ hồ liên văn hóa** tiếp nhận điểm tựa từ **Giao tiếp theo ngữ cảnh cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **눈치: khả năng đọc bối cảnh xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## “Giao diện rõ ràng” là thuốc giải cho mơ hồ liên văn hóa
 
@@ -138,6 +155,8 @@ Cách này giống thiết kế API: cách triển khai bên trong có thể kh�
 
 Hợp tác Hàn Quốc–Việt Nam tốt hơn rất nhiều khi chuyển từ câu hỏi “đã hiểu chưa?” sang các đầu ra có thể kiểm chứng.
 
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **눈치: khả năng đọc bối cảnh xã hội** tiếp nhận điểm tựa từ **“Giao diện rõ ràng” là thuốc giải cho mơ hồ liên văn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **빨리빨리: tốc độ có thể là lợi thế nhưng cũng tạo làm lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 눈치: khả năng đọc bối cảnh xã hội
 
 `눈치` có thể hiểu là khả năng cảm nhận bối cảnh xã hội rồi điều chỉnh hành vi. Nó giúp giảm ma sát vì nhân viên nhận ra lo ngại trước khi người khác nói rõ.
@@ -145,6 +164,8 @@ Hợp tác Hàn Quốc–Việt Nam tốt hơn rất nhiều khi chuyển từ c
 Nhưng phụ thuộc quá nhiều vào 눈치 tạo mơ hồ: mọi người cố đoán ý cấp trên thay vì đưa sự thật ra bàn.
 
 Trong công việc kỹ thuật rủi ro cao, bằng chứng phải quan trọng hơn đoán ý. Văn hóa chuyên nghiệp tốt kết hợp nhạy cảm xã hội với dữ liệu rõ ràng.
+
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **빨리빨리: tốc độ có thể là lợi thế nhưng cũng tạo làm lại** tiếp nhận điểm tựa từ **눈치: khả năng đọc bối cảnh xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa escalation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 빨리빨리: tốc độ có thể là lợi thế nhưng cũng tạo làm lại
 
@@ -166,6 +187,8 @@ Nhóm làm trong 1 ngày rồi mất 4 ngày sửa hiểu lầm thực tế ch�
 
 Tốc độ trưởng thành nghĩa là **vòng học ngắn**, không phải hoảng loạn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa escalation** tiếp nhận điểm tựa từ **빨리빨리: tốc độ có thể là lợi thế nhưng cũng tạo làm lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa thất bại và an toàn tâm lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Văn hóa escalation
 
 Trong dự án phức tạp, vấn đề không phải lúc nào cũng giải quyết được ở cấp thực thi. **Escalation** là cơ chế đưa vấn đề lên nơi có quyền hạn hoặc nguồn lực phù hợp.
@@ -175,6 +198,8 @@ Một escalation tốt phải nói rõ điều gì đang bị chặn, đã thử
 Tổ chức không lành mạnh coi escalation là hành vi đổ lỗi, khiến nhân viên giấu vấn đề tới khi quá muộn.
 
 Một bài kiểm tra văn hóa hữu ích là: **tin xấu có thể đi lên sớm tới mức nào?**
+
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa thất bại và an toàn tâm lý** tiếp nhận điểm tựa từ **Văn hóa escalation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền lực không chỉ đến từ chức danh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Văn hóa thất bại và an toàn tâm lý
 
@@ -186,6 +211,8 @@ Hệ thống có độ tin cậy cao cần lỗi được báo sớm. Nếu báo
 
 Văn hóa tốt phải phân biệt lỗi trung thực, hành vi cẩu thả và che giấu có chủ ý; mức trách nhiệm phải tương xứng.
 
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Quyền lực không chỉ đến từ chức danh** tiếp nhận điểm tựa từ **Văn hóa thất bại và an toàn tâm lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thâm niên và 연공서열** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quyền lực không chỉ đến từ chức danh
 
 Chức danh chính thức là một nguồn quyền lực. Các nguồn khác gồm chuyên môn, quan hệ khách hàng, quyền sở hữu hệ thống quan trọng, khả năng tiếp cận thông tin, quyền ngân sách và mạng lưới xã hội.
@@ -194,11 +221,15 @@ Một kỹ sư trẻ là người duy nhất hiểu hệ thống môi trường 
 
 Vì vậy **sơ đồ tổ chức không bằng bản đồ ảnh hưởng thực tế**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Thâm niên và 연공서열** tiếp nhận điểm tựa từ **Quyền lực không chỉ đến từ chức danh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa hiệu suất và văn hóa học hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thâm niên và `연공서열`
 
 Doanh nghiệp truyền thống thường gắn quyền hạn và lương với thâm niên. Điều này giúp thứ bậc dễ dự đoán và giảm mơ hồ địa vị, nhưng trong ngành tri thức có thể tạo vấn đề khi chuyên gia trẻ phải phản biện người lớn tuổi hơn nhưng ít chuyên môn kỹ thuật hơn.
 
 Nhiều doanh nghiệp Hàn Quốc làm phẳng chức danh hoặc tạo lộ trình chuyên gia để giảm xung đột này. Tuy nhiên thâm niên ngầm vẫn có thể tồn tại trong lương và thăng tiến dù tên gọi bên ngoài đã đổi thành `프로` hoặc `매니저`.
+
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa hiệu suất và văn hóa học hỏi** tiếp nhận điểm tựa từ **Thâm niên và 연공서열** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa tài liệu hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Văn hóa hiệu suất và văn hóa học hỏi
 
@@ -208,6 +239,8 @@ Tổ chức tốt phân biệt quyết định dễ đảo ngược và khó đ�
 
 Đây là quản lý rủi ro hợp lý hơn khẩu hiệu “hãy sáng tạo”.
 
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa tài liệu hóa** tiếp nhận điểm tựa từ **Văn hóa hiệu suất và văn hóa học hỏi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa SI/SM: khách hàng, dự án và vendor tạo thêm nhiều tầng thứ bậc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Văn hóa tài liệu hóa
 
 Tài liệu viết giúp giảm phụ thuộc vào trí nhớ và quan hệ phi chính thức.
@@ -215,6 +248,8 @@ Tài liệu viết giúp giảm phụ thuộc vào trí nhớ và quan hệ phi 
 Các đầu ra hữu ích gồm nhật ký quyết định cuộc họp, đặc tả yêu cầu, thay đổi (change / 변경) yêu cầu (request / 요청), postmortem sự cố, kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드), issue tracker và ma trận người phụ trách–deadline.
 
 Tài liệu cũng có chi phí. Viết quá nhiều làm công việc chậm. Nguyên tắc là chỉ tài liệu hóa những thông tin có giá trị phối hợp tương lai lớn hơn chi phí viết.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa SI/SM: khách hàng, dự án và vendor tạo thêm nhiều tầng thứ bậc** tiếp nhận điểm tựa từ **Văn hóa tài liệu hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa sản xuất: chất lượng và chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Văn hóa SI/SM: khách hàng, dự án và vendor tạo thêm nhiều tầng thứ bậc
 
@@ -236,6 +271,8 @@ Một yêu cầu đi qua nhiều ranh giới tổ chức và mỗi tầng có th
 
 Thứ bậc giữa các công ty đôi khi còn mạnh hơn chức danh trong nội bộ một công ty.
 
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa sản xuất: chất lượng và chuẩn hóa** tiếp nhận điểm tựa từ **Văn hóa SI/SM: khách hàng, dự án và vendor tạo thêm nhiều tầng thứ bậc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa startup: chức danh phẳng nhưng quyền lực có thể tập trung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Văn hóa sản xuất: chất lượng và chuẩn hóa
 
 Tổ chức sản xuất thường nhấn mạnh SOP, ngăn lỗi, kỷ luật quy trình và escalation vì một biến động nhỏ có thể gây lỗi hàng nghìn sản phẩm.
@@ -244,11 +281,15 @@ Tổ chức sản xuất thường nhấn mạnh SOP, ngăn lỗi, kỷ luật q
 
 Văn hóa phải được đánh giá theo **chi phí sai sót và mức lặp lại của quy trình**.
 
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa startup: chức danh phẳng nhưng quyền lực có thể tập trung** tiếp nhận điểm tựa từ **Văn hóa sản xuất: chất lượng và chuẩn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **회식: vốn quan hệ với chuẩn mực đang thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Văn hóa startup: chức danh phẳng nhưng quyền lực có thể tập trung
 
 Startup có thể dùng chức danh rất phẳng nhưng người sáng lập vẫn kiểm soát gần như toàn bộ roadmap, tuyển dụng và ngân sách.
 
 Vì vậy giao tiếp thân mật không đồng nghĩa quyền quyết định phi tập trung. Khi đánh giá “văn hóa phẳng”, hãy hỏi ai thật sự quyết định nguồn lực và ưu tiên.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **회식: vốn quan hệ với chuẩn mực đang thay đổi** tiếp nhận điểm tựa từ **Văn hóa startup: chức danh phẳng nhưng quyền lực có thể tập trung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kính ngữ và độ chính xác trong phản biện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 회식: vốn quan hệ với chuẩn mực đang thay đổi
 
@@ -259,6 +300,8 @@ Nhưng ép uống, tần suất quá cao hoặc áp lực ngoài giờ có thể
 Chuẩn mực đã thay đổi nhiều theo thế hệ, ngành và chính sách công ty. 회식 hiện đại có thể chỉ là bữa ăn hoặc sự kiện tùy chọn.
 
 Chức năng kinh tế cần hiểu là **vốn quan hệ (relationship capital)** chứ không phải rượu.
+
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Kính ngữ và độ chính xác trong phản biện** tiếp nhận điểm tựa từ **회식: vốn quan hệ với chuẩn mực đang thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vai trò cầu nối Hàn Quốc–Việt Nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kính ngữ và độ chính xác trong phản biện
 
@@ -273,6 +316,8 @@ Có thể phản biện theo hướng tập trung vào vấn đề:
 
 Mục tiêu không phải “nói thẳng bằng mọi giá”, mà là **làm bất đồng trở nên rõ mà không tạo xung đột địa vị không cần thiết**.
 
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Vai trò cầu nối Hàn Quốc–Việt Nam** tiếp nhận điểm tựa từ **Kính ngữ và độ chính xác trong phản biện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao tiếp từ xa và hybrid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vai trò cầu nối Hàn Quốc–Việt Nam
 
 Nhân viên song ngữ tạo giá trị lớn hơn dịch từ vựng. Họ thường chuyển tải ý định yêu cầu, mức khẩn cấp, thứ bậc stakeholder, giả định lĩnh vực (domain / 도메인), bằng chứng kiểm thử, kỳ vọng escalation và định nghĩa thực tế của “done”.
@@ -280,6 +325,8 @@ Nhân viên song ngữ tạo giá trị lớn hơn dịch từ vựng. Họ thư
 Đây là **dịch bối cảnh tổ chức (context translation)**.
 
 Nhưng phụ thuộc quá nhiều vào một người tạo nút thắt và kiệt sức. Nhóm trưởng thành chuyển kiến thức cầu nối thành tài liệu chung, template và kênh giao tiếp trực tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Giao tiếp từ xa và hybrid** tiếp nhận điểm tựa từ **Vai trò cầu nối Hàn Quốc–Việt Nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đánh giá văn hóa trước khi gia nhập công ty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giao tiếp từ xa và hybrid
 
@@ -298,6 +345,8 @@ Việc tiếp theo
 
 Cách này giảm tình trạng “tôi tưởng chúng ta đã thống nhất điều khác”.
 
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Cách đánh giá văn hóa trước khi gia nhập công ty** tiếp nhận điểm tựa từ **Giao tiếp từ xa và hybrid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hóa là biến kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách đánh giá văn hóa trước khi gia nhập công ty
 
 Đừng chỉ hỏi “văn hóa có tốt không?”. Hãy hỏi cơ chế hành vi cụ thể.
@@ -312,6 +361,8 @@ Cách này giảm tình trạng “tôi tưởng chúng ta đã thống nhất �
 
 Câu hỏi về cơ chế cho thông tin tốt hơn một điểm số văn hóa chung chung.
 
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Văn hóa là biến kinh tế** tiếp nhận điểm tựa từ **Cách đánh giá văn hóa trước khi gia nhập công ty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Văn hóa là biến kinh tế
 
 Văn hóa ảnh hưởng kết quả tài chính thông qua tốc độ quyết định, mức lỗi và làm lại, tỷ lệ nghỉ việc, tốc độ đổi mới, phản hồi khách hàng, sự cố tuân thủ và chuyển giao tri thức.
@@ -320,9 +371,13 @@ Vì vậy văn hóa không “mềm” theo nghĩa kinh tế. Nó là một tài
 
 Tỷ lệ nghỉ việc cao làm mất kiến thức ngầm; phê duyệt chậm trì hoãn doanh thu; escalation yếu biến sự cố nhỏ thành tổn thất lớn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Văn hóa là biến kinh tế** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Văn hóa doanh nghiệp là **lớp hành vi của thiết kế tổ chức**. Thứ bậc phân bổ quyền; báo cáo chuyển thông tin; phê duyệt kiểm soát rủi ro; động cơ định hình hành vi; quan hệ phi chính thức lấp khoảng trống. Hãy đánh giá văn hóa qua cách các cơ chế này hoạt động dưới áp lực, không qua khẩu hiệu hay nội thất văn phòng.
+
+> **Chuyển mạch:** Trong **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -340,8 +395,10 @@ Tỷ lệ nghỉ việc cao làm mất kiến thức ngầm; phê duyệt chậm
 
 **Vấn đề giao tiếp xuyên văn hóa không giải quyết chỉ bằng dịch thuật.** Giao diện công việc và quyền sở hữu phải rõ.
 
+> **Chuyển mạch:** Ở chặng này của **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md) cho cấu trúc HR chính thức, [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho thẩm định doanh nghiệp và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md) cho bối cảnh SI/SM và quy trình doanh nghiệp.
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

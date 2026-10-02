@@ -1,7 +1,6 @@
 # Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)
 
-> **Mạch đọc:** Đặt **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khung cơ bản: một cú sốc phải đi qua nhiều tầng** sang **Bước 1 — Xác định loại cú sốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khung cơ bản: một cú sốc phải đi qua nhiều tầng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bước 1 — Xác định loại cú sốc** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối economy với company transmission, để truy nguyên cách lãi suất, tỷ giá, cầu và chính sách đi vào doanh thu, chi phí và định giá.
 
 Một trong những kỹ năng quan trọng nhất khi đọc kinh tế là không dừng ở tiêu đề. “Lãi suất tăng”, “KRW yếu”, “Trung Quốc giảm tốc” hay “CAPEX AI tăng” chỉ trở thành hiểu biết hữu ích khi ta mô tả được **cú sốc đi qua giá, sản lượng, chi phí, bảng cân đối và hành vi doanh nghiệp như thế nào**.
 
@@ -22,6 +21,8 @@ graph LR
 ```
 
 Mỗi mũi tên cần có giải thích nhân quả. Nếu không giải thích được một mũi tên, kết luận vẫn chỉ là câu chuyện.
+
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Bước 1 — Xác định loại cú sốc** tiếp nhận điểm tựa từ **Khung cơ bản: một cú sốc phải đi qua nhiều tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 2 — Xác định mức tiếp xúc của doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 1 — Xác định loại cú sốc
 
@@ -46,11 +47,15 @@ Cú sốc nguồn cung
 
 Phân loại giúp tìm đúng kênh truyền dẫn.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Bước 2 — Xác định mức tiếp xúc của doanh nghiệp** tiếp nhận điểm tựa từ **Bước 1 — Xác định loại cú sốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ 1 — KRW mất giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 2 — Xác định mức tiếp xúc của doanh nghiệp
 
 Một cú sốc chỉ quan trọng khi doanh nghiệp thật sự tiếp xúc với nó. Mức tiếp xúc có thể nằm ở doanh thu, chi phí đầu vào, nợ, tài sản, khách hàng, nhà cung cấp, quy định hoặc tỷ lệ chiết khấu khi định giá.
 
 Ví dụ KRW/USD chỉ thực sự quan trọng khi công ty có **mức tiếp xúc ngoại tệ ròng (net FX exposure)** đáng kể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Bước 2 — Xác định mức tiếp xúc của doanh nghiệp** cho ta quy tắc; **Ví dụ 1 — KRW mất giá** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tác động quy đổi khác tác động kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ 1 — KRW mất giá
 
@@ -81,6 +86,8 @@ Doanh\ thu\ ngoại\ tệ
 
 Đây không phải công thức kế toán chính thức; mục tiêu là buộc người phân tích lập bản đồ mức tiếp xúc.
 
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 1 — KRW mất giá** cho ta quy tắc; **Tác động quy đổi khác tác động kinh tế** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ 2 — BOK tăng lãi suất chính sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tác động quy đổi khác tác động kinh tế
 
 Lợi nhuận của công ty con ở nước ngoài khi đổi về KRW có thể tăng chỉ vì tỷ giá; đó là **tác động quy đổi (translation effect)**.
@@ -88,6 +95,8 @@ Lợi nhuận của công ty con ở nước ngoài khi đổi về KRW có th�
 Nếu KRW yếu làm hàng sản xuất tại Hàn Quốc rẻ hơn tương đối so với đối thủ, thị phần hoặc giá bán có thể thay đổi; đó là **tác động kinh tế (economic effect)**.
 
 Hai tác động này không nên bị trộn với nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Tác động quy đổi khác tác động kinh tế** cho ta quy tắc; **Ví dụ 2 — BOK tăng lãi suất chính sách** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ trễ điều chỉnh lãi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ 2 — BOK tăng lãi suất chính sách
 
@@ -109,6 +118,8 @@ Nhưng tác động khác nhau theo ngành.
 
 Cùng một cú sốc nhưng dấu tác động có thể khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 2 — BOK tăng lãi suất chính sách** cho ta quy tắc; **Độ trễ điều chỉnh lãi suất** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ 3 — Bùng nổ CAPEX AI toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ trễ điều chỉnh lãi suất
 
 Khoản vay thả nổi có thể điều chỉnh sau 3 tháng; trái phiếu lãi cố định giữ coupon tới đáo hạn.
@@ -116,6 +127,8 @@ Khoản vay thả nổi có thể điều chỉnh sau 3 tháng; trái phiếu l�
 Vì vậy phải lập **lịch điều chỉnh lãi suất (repricing schedule)**. Công ty có 80% nợ cố định 5 năm chịu cú sốc lãi suất chậm hơn công ty có nợ ngân hàng thả nổi.
 
 Thời điểm là một phần của quan hệ nhân quả.
+
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Độ trễ điều chỉnh lãi suất** cho ta quy tắc; **Ví dụ 3 — Bùng nổ CAPEX AI toàn cầu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ 4 — Giá dầu tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ 3 — Bùng nổ CAPEX AI toàn cầu
 
@@ -135,11 +148,15 @@ Không phải mọi nút hưởng lợi cùng lúc. Nhà sản xuất bộ nhớ
 
 Đây là **cấu trúc độ trễ (lag structure)** của chuỗi giá trị.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 3 — Bùng nổ CAPEX AI toàn cầu** cho ta quy tắc; **Ví dụ 4 — Giá dầu tăng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ 5 — Trung Quốc giảm tốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ 4 — Giá dầu tăng
 
 Với hàng không, nhiên liệu tăng làm biên giảm nếu không chuyển được giá vé. Với hóa dầu, phải nhìn chênh lệch giá sản phẩm–nguyên liệu. Với lọc dầu, giá dầu thô riêng lẻ chưa đủ; crack spread và hiệu ứng tồn kho quan trọng. Với đóng tàu, lo ngại an ninh năng lượng hoặc LNG có thể ảnh hưởng nhu cầu tàu ở chân trời dài hơn.
 
 Cùng một cú sốc hàng hóa, vị trí trong chuỗi giá trị quyết định dấu tác động.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 4 — Giá dầu tăng** cho ta quy tắc; **Ví dụ 5 — Trung Quốc giảm tốc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ 6 — Tiền lương tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ 5 — Trung Quốc giảm tốc
 
@@ -148,6 +165,8 @@ Các kênh tiêu cực có thể gồm xuất khẩu trực tiếp giảm, doanh
 Các kênh tích cực có thể gồm một số giá đầu vào giảm, cước vận tải thấp hơn hoặc doanh nghiệp Hàn Quốc mua nguyên liệu rẻ hơn.
 
 Ngoài ra, **nhu cầu Trung Quốc yếu** và **cạnh tranh xuất khẩu từ Trung Quốc tăng** không phải cùng một khái niệm. Nhu cầu tại Trung Quốc có thể yếu trong khi doanh nghiệp Trung Quốc vẫn xuất khẩu mạnh hơn ra thế giới.
+
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 5 — Trung Quốc giảm tốc** cho ta quy tắc; **Ví dụ 6 — Tiền lương tăng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ 7 — Giá nhà giảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ 6 — Tiền lương tăng
 
@@ -169,6 +188,8 @@ Doanh nghiệp có quyền định giá có thể chuyển một phần chi phí
 
 Một biến vĩ mô vì vậy có thể đồng thời là **cú sốc chi phí** và **hỗ trợ nhu cầu**.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 6 — Tiền lương tăng** cho ta quy tắc; **Ví dụ 7 — Giá nhà giảm** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ 8 — Tăng ưu đãi thuế cho CAPEX chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ 7 — Giá nhà giảm
 
 Các kênh có thể gồm:
@@ -188,6 +209,8 @@ Chất lượng tài sản bảo đảm ↓
 ```
 
 Người thuê hoặc người mua tương lai có thể hưởng lợi từ khả năng chi trả tốt hơn nếu thu nhập và tín dụng vẫn ổn. Phân phối lợi ích và thiệt hại rất quan trọng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 7 — Giá nhà giảm** cho ta quy tắc; **Ví dụ 8 — Tăng ưu đãi thuế cho CAPEX chiến lược** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Stock và luồng (flow / 흐름): đừng trộn hai loại dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ 8 — Tăng ưu đãi thuế cho CAPEX chiến lược
 
@@ -212,6 +235,8 @@ CAPEX tăng
 
 Lợi ích chính sách hôm nay có thể tạo rủi ro dư cung vài năm sau. Đây là lý do cần tư duy bậc hai.
 
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ví dụ 8 — Tăng ưu đãi thuế cho CAPEX chiến lược** cho ta quy tắc; **Stock và luồng (flow / 흐름): đừng trộn hai loại dữ liệu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Động lực backlog** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stock và luồng (flow / 흐름): đừng trộn hai loại dữ liệu
 
 **Stock** đo tại một thời điểm: nợ, tồn kho, tiền mặt, backlog, công suất lắp đặt.
@@ -221,6 +246,8 @@ Lợi ích chính sách hôm nay có thể tạo rủi ro dư cung vài năm sau
 Bán hàng yếu là cú sốc luồng (flow / 흐름); qua nhiều quý nó có thể làm stock tồn kho tăng. Đơn hàng mới là luồng (flow / 흐름) đi vào backlog; doanh thu ghi nhận là luồng (flow / 흐름) đi ra backlog.
 
 Rất nhiều lỗi phân tích đến từ trộn stock và luồng (flow / 흐름).
+
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Stock và luồng (flow / 흐름): đừng trộn hai loại dữ liệu** nêu điều cần giải thích; **Động lực backlog** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tác động bậc một, bậc hai và phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động lực backlog
 
@@ -236,6 +263,8 @@ Backlog\ đầu\ kỳ
 
 Backlog lớn chưa đủ; biên lợi nhuận nằm trong backlog và tốc độ chuyển backlog thành doanh thu mới quan trọng. Đơn hàng biên cao hôm nay có thể chỉ đi vào lợi nhuận vài năm sau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Tác động bậc một, bậc hai và phản hồi** tiếp nhận điểm tựa từ **Động lực backlog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ co giãn: tác động thường không tuyến tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tác động bậc một, bậc hai và phản hồi
 
 Sau tác động trực tiếp, doanh nghiệp và thị trường có thể tạo ra tác động vòng hai hoặc phản hồi ngược. Phân biệt các bậc giúp tránh kết luận tuyến tính khi một cú sốc làm thay đổi hành vi của khách hàng, nhà cung cấp hoặc ngân hàng.
@@ -247,6 +276,8 @@ Sau tác động trực tiếp, doanh nghiệp và thị trường có thể t�
 Phân tích chuyên nghiệp cần tư duy bậc hai nhưng không nên kéo chuỗi quá dài khi thiếu bằng chứng.
 
 Một nguyên tắc thực dụng: **mỗi mũi tên thêm vào cần một lý do kinh tế hoặc bằng chứng kinh doanh rõ ràng**.
+
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Độ co giãn: tác động thường không tuyến tính** tiếp nhận điểm tựa từ **Tác động bậc một, bậc hai và phản hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ lệ sử dụng công suất là ngưỡng quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ co giãn: tác động thường không tuyến tính
 
@@ -262,11 +293,15 @@ khi hoạt động quanh vùng hòa vốn.
 
 Fab bán dẫn, hãng hàng không, nhà máy thép và hạ tầng nền tảng đều có các ngưỡng phi tuyến. Ngược lại, dịch vụ nhẹ tài sản với lao động linh hoạt có thể hấp thụ cú sốc cầu tốt hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Tỷ lệ sử dụng công suất là ngưỡng quan trọng** tiếp nhận điểm tựa từ **Độ co giãn: tác động thường không tuyến tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cùng cú sốc có thể đổi dấu theo chân trời thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tỷ lệ sử dụng công suất là ngưỡng quan trọng
 
 Kinh tế nhà máy thường thay đổi mạnh theo **utilization**. Ở mức thấp, khấu hao và chi phí cố định trên đơn vị rất cao. Khi utilization vượt vùng hòa vốn, sản lượng tăng thêm có biên đóng góp lớn.
 
 Vì vậy nhu cầu phục hồi 10% có thể làm lợi nhuận tăng hơn 10%. Đó là lý do mô hình kịch bản cần kinh tế đơn vị chứ không chỉ tăng/giảm doanh thu tuyến tính.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Cùng cú sốc có thể đổi dấu theo chân trời thời gian** tiếp nhận điểm tựa từ **Tỷ lệ sử dụng công suất là ngưỡng quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kỳ vọng: giá thị trường có thể phản ứng trước số kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cùng cú sốc có thể đổi dấu theo chân trời thời gian
 
@@ -275,6 +310,8 @@ KRW yếu trong 0–3 tháng chủ yếu thể hiện qua quy đổi và phòng 
 Tăng lãi suất có thể tác động định giá ngay, khoản vay điều chỉnh sau vài tháng, còn CAPEX và nguồn cung nhà ở phản ứng chậm hơn.
 
 Khi nói “tác động tích cực/tiêu cực”, luôn cần ghi rõ **chân trời thời gian (time horizon)**.
+
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Kỳ vọng: giá thị trường có thể phản ứng trước số kế toán** tiếp nhận điểm tựa từ **Cùng cú sốc có thể đổi dấu theo chân trời thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng chính sách: cú sốc vĩ mô không xảy ra trong chân không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kỳ vọng: giá thị trường có thể phản ứng trước số kế toán
 
@@ -290,6 +327,8 @@ lợi suất đầu tư tốt một cách tự động
 
 Phải so kết quả thật với **kỳ vọng đã được phản ánh trong giá**.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Phản ứng chính sách: cú sốc vĩ mô không xảy ra trong chân không** tiếp nhận điểm tựa từ **Kỳ vọng: giá thị trường có thể phản ứng trước số kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng của doanh nghiệp cũng quay lại vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phản ứng chính sách: cú sốc vĩ mô không xảy ra trong chân không
 
 Lạm phát có thể dẫn tới tăng lãi suất; suy thoái có thể dẫn tới hỗ trợ tài khóa; căng thẳng nhà ở có thể dẫn tới chương trình ổn định PF; rủi ro chuỗi cung ứng có thể dẫn tới trợ cấp.
@@ -297,6 +336,8 @@ Lạm phát có thể dẫn tới tăng lãi suất; suy thoái có thể dẫn 
 Phân tích doanh nghiệp không nên giữ chính sách cố định. Nhưng cũng không nên mặc định sẽ có cứu trợ. Hỗ trợ chính sách phải được nối với công cụ thật, điều kiện đủ và quy mô cụ thể.
 
 Xem [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Phản ứng của doanh nghiệp cũng quay lại vĩ mô** tiếp nhận điểm tựa từ **Phản ứng chính sách: cú sốc vĩ mô không xảy ra trong chân không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận kịch bản thay vì một dự báo duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phản ứng của doanh nghiệp cũng quay lại vĩ mô
 
@@ -312,6 +353,8 @@ Suy giảm nhà ở
 
 Khi nhiều doanh nghiệp cùng phản ứng một hướng, hành vi vi mô cộng lại thành chu kỳ vĩ mô. Nền kinh tế là hệ thống phản hồi, không phải mũi tên một chiều.
 
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ma trận kịch bản thay vì một dự báo duy nhất** tiếp nhận điểm tựa từ **Phản ứng của doanh nghiệp cũng quay lại vĩ mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận độ nhạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ma trận kịch bản thay vì một dự báo duy nhất
 
 Ví dụ công ty bán dẫn:
@@ -325,6 +368,8 @@ Ví dụ công ty bán dẫn:
 
 Mục tiêu không phải gán xác suất giả chính xác, mà là biết **biến nào làm luận điểm đổi hướng**.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Ma trận độ nhạy** tiếp nhận điểm tựa từ **Ma trận kịch bản thay vì một dự báo duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xây cây truyền dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ma trận độ nhạy
 
 Ma trận dưới đây biến transmission map thành công cụ so sánh doanh nghiệp. Hãy đọc theo hàng để thấy doanh thu, chi phí, vốn và định giá phản ứng khác nhau với cùng một cú sốc.
@@ -337,6 +382,8 @@ Ma trận dưới đây biến transmission map thành công cụ so sánh doanh
 | Trung Quốc giảm tốc | xuất khẩu ↓ | một số đầu vào ↓ | rủi ro tồn kho | phần bù rủi ro có thể ↑ |
 
 Dấu tác động không phổ quát. Bảng tồn tại để buộc người phân tích giải thích ngoại lệ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Xây cây truyền dẫn** tiếp nhận điểm tựa từ **Ma trận độ nhạy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối, không chỉ EPS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xây cây truyền dẫn
 
@@ -370,6 +417,8 @@ Nhà thầu trì hoãn CAPEX / tăng dự trữ thanh khoản
 
 Cây càng dài thì bất định tích lũy càng nhanh.
 
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối, không chỉ EPS** tiếp nhận điểm tựa từ **Xây cây truyền dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản đồ truyền dẫn theo mô hình doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối, không chỉ EPS
 
 Cú sốc vĩ mô thường nguy hiểm nhất khi đánh đồng thời vào lợi nhuận và tài trợ.
@@ -390,6 +439,8 @@ Mô hình EPS có thể đánh giá thấp rủi ro nếu không mô hình thanh
 
 Đây là lý do phải đọc [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) cùng với vĩ mô.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Bản đồ truyền dẫn theo mô hình doanh nghiệp** tiếp nhận điểm tựa từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối, không chỉ EPS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bản đồ truyền dẫn theo mô hình doanh nghiệp
 
 Các mô hình doanh nghiệp khác nhau nhận cùng một cú sốc qua các kênh khác nhau. Phần này đối chiếu exporter, nền tảng, ngân hàng và công ty tài sản để chỉ ra biến nào cần ưu tiên theo dõi.
@@ -403,6 +454,8 @@ Các mô hình doanh nghiệp khác nhau nhận cùng một cú sốc qua các k
 
 Loại doanh nghiệp giúp chọn biến vĩ mô cần theo dõi; không cần theo dõi mọi chỉ số.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Bản đồ truyền dẫn theo mô hình doanh nghiệp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Tin kinh tế chỉ trở thành hiểu biết về doanh nghiệp khi viết được chuỗi **cú sốc → giá/sản lượng/chi phí → dòng tiền/bảng cân đối → phản ứng quản lý → công suất tương lai/định giá**.
@@ -412,6 +465,8 @@ Một nguyên tắc ngắn:
 ```text
 Không có cơ chế → không có kết luận.
 ```
+
+> **Chuyển mạch:** Trong **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -425,8 +480,10 @@ Không có cơ chế → không có kết luận.
 
 **“Tư duy bậc hai nghĩa chuỗi càng dài càng tốt.”** Sai. Bất định tăng theo từng mắt xích.
 
+> **Chuyển mạch:** Ở chặng này của **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết cuối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết cuối
 
 Dùng [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) để biến khung truyền dẫn thành mô hình theo từng công ty. Quay lại [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) và [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md) khi cần nền sâu hơn.
 
-> **Bàn giao:** Sau **Liên kết cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết cuối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

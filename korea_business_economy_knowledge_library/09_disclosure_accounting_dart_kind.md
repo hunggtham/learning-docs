@@ -1,7 +1,6 @@
 # Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)
 
-> **Mạch đọc:** Đặt **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Công bố thông tin tồn tại vì bất cân xứng thông tin** sang **DART và KIND giải quyết những câu hỏi khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Công bố thông tin tồn tại vì bất cân xứng thông tin** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DART và KIND giải quyết những câu hỏi khác nhau** để mở câu hỏi trung tâm cho phần kế tiếp. Mạch này nối disclosure, accounting, DART và KIND, để biến báo cáo công ty thành dữ liệu có thể kiểm tra về ownership, kết quả và rủi ro.
 
 Muốn đi từ “nghe nói công ty này tốt” sang một phân tích có thể kiểm chứng, phải biết **doanh nghiệp bắt buộc hoặc tự nguyện công bố điều gì, ở đâu, theo phạm vi kế toán nào và bằng ngôn ngữ pháp lý nào**.
 
@@ -19,6 +18,8 @@ Tuy nhiên công bố thông tin không loại bỏ hoàn toàn gian lận hay p
 
 > mô hình tư duy (mental model / 사고 모델): hồ sơ công bố không phải “máy phát chân lý”; nó là một tuyên bố có cấu trúc được đặt dưới trách nhiệm pháp lý và kế toán.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **DART và KIND giải quyết những câu hỏi khác nhau** tiếp nhận điểm tựa từ **Công bố thông tin tồn tại vì bất cân xứng thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mỗi loại hồ sơ trả lời câu hỏi nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## DART và KIND giải quyết những câu hỏi khác nhau
 
 **DART** là kho công bố doanh nghiệp rộng, đặc biệt hữu ích cho báo cáo kinh doanh, báo cáo tài chính, thay đổi sở hữu, huy động vốn, M&A, sự kiện trọng yếu và lịch sử hồ sơ.
@@ -26,6 +27,8 @@ Tuy nhiên công bố thông tin không loại bỏ hoàn toàn gian lận hay p
 **KIND** là kênh công bố của KRX, tập trung nhiều hơn vào công ty niêm yết, thông tin niêm yết, sự kiện giao dịch và bối cảnh thị trường.
 
 Đối với công ty niêm yết, quy trình tốt không phải “DART hay KIND” mà là **DART + KIND + IR của công ty**. DART cho chiều sâu pháp lý–tài chính, KIND cho dòng sự kiện trên sàn, còn IR cho cách ban điều hành diễn giải hoạt động.
+
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Mỗi loại hồ sơ trả lời câu hỏi nào?** tiếp nhận điểm tựa từ **DART và KIND giải quyết những câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc đầu tiên: xác định đúng phạm vi kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mỗi loại hồ sơ trả lời câu hỏi nào?
 
@@ -49,6 +52,8 @@ Nếu câu chuyện doanh nghiệp thay đổi đột ngột, hãy tìm công b�
 
 Thay đổi sở hữu của cổ đông lớn hoặc lãnh đạo có thể cho thấy chuyển quyền kiểm soát, bước đi kế nhiệm hoặc giao dịch nội bộ. Đây là nguồn đặc biệt quan trọng khi phân tích chaebol.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Mỗi loại hồ sơ trả lời câu hỏi nào?** đặt câu hỏi cần giải quyết; **Nguyên tắc đầu tiên: xác định đúng phạm vi kế toán** biến câu hỏi đó thành những điều kiện không được phá vỡ khi đi vào thực hành. Từ đây, **Báo cáo riêng và báo cáo hợp nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nguyên tắc đầu tiên: xác định đúng phạm vi kế toán
 
 Trước khi đọc bất kỳ con số nào, phải hỏi: **đây là pháp nhân nào và phạm vi báo cáo nào?**
@@ -56,6 +61,8 @@ Trước khi đọc bất kỳ con số nào, phải hỏi: **đây là pháp nh
 Một tập đoàn có thể có báo cáo riêng, báo cáo hợp nhất, công ty con, công ty liên kết theo phương pháp vốn chủ sở hữu và liên doanh.
 
 Cùng một thương hiệu có thể xuất hiện nhiều con số doanh thu–lợi nhuận hợp lệ khác nhau tùy phạm vi. Đây không phải mâu thuẫn kế toán; đó là các câu hỏi khác nhau.
+
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Báo cáo riêng và báo cáo hợp nhất** tiếp nhận điểm tựa từ **Nguyên tắc đầu tiên: xác định đúng phạm vi kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hợp nhất không có nghĩa công ty mẹ sở hữu 100%** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Báo cáo riêng và báo cáo hợp nhất
 
@@ -65,6 +72,8 @@ Giả sử công ty mẹ bán linh kiện trị giá 100 cho công ty con, rồi
 
 Đó là lý do kế toán hợp nhất tồn tại.
 
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Hợp nhất không có nghĩa công ty mẹ sở hữu 100%** tiếp nhận điểm tựa từ **Báo cáo riêng và báo cáo hợp nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng cân đối kế toán: nguồn lực và nghĩa vụ tại một thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hợp nhất không có nghĩa công ty mẹ sở hữu 100%
 
 Nếu công ty mẹ sở hữu 70% công ty con nhưng vẫn kiểm soát nó, báo cáo hợp nhất có thể ghi 100% tài sản và doanh thu của công ty con. Phần quyền lợi thuộc cổ đông bên ngoài được trình bày dưới dạng **lợi ích cổ đông không kiểm soát (Non-Controlling Interest / NCI / 비지배지분)**.
@@ -72,6 +81,8 @@ Nếu công ty mẹ sở hữu 70% công ty con nhưng vẫn kiểm soát nó, b
 Vì vậy cần phân biệt lợi nhuận ròng hợp nhất, lợi nhuận thuộc cổ đông công ty mẹ và lợi nhuận thuộc NCI.
 
 Nếu dùng 100% EBITDA của công ty con nhưng bỏ qua phần sở hữu của cổ đông thiểu số, định giá cho cổ đông công ty mẹ có thể bị phóng đại.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Hợp nhất không có nghĩa công ty mẹ sở hữu 100%** nêu điều cần giải thích; **Bảng cân đối kế toán: nguồn lực và nghĩa vụ tại một thời điểm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Báo cáo kết quả kinh doanh: dòng hiệu quả trong một kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảng cân đối kế toán: nguồn lực và nghĩa vụ tại một thời điểm
 
@@ -113,6 +124,8 @@ Tồn kho phải được đọc theo ngành.
 
 M&A có thể tạo **lợi thế thương mại (goodwill)**. Goodwill không tự động xấu, nhưng suy giảm giá trị sau này có thể cho thấy giả định mua lại ban đầu quá lạc quan.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Bảng cân đối kế toán: nguồn lực và nghĩa vụ tại một thời điểm** nêu điều cần giải thích; **Báo cáo kết quả kinh doanh: dòng hiệu quả trong một kỳ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phân rã tăng trưởng doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Báo cáo kết quả kinh doanh: dòng hiệu quả trong một kỳ
 
 Một cầu nối đơn giản:
@@ -131,6 +144,8 @@ Doanh thu
 
 Chi tiết trình bày khác nhau theo ngành nhưng lô-gic (logic / 논리) cơ bản không đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Phân rã tăng trưởng doanh thu** tiếp nhận điểm tựa từ **Báo cáo kết quả kinh doanh: dòng hiệu quả trong một kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lợi nhuận hoạt động và lợi nhuận ròng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân rã tăng trưởng doanh thu
 
 Doanh thu có thể tăng do sản lượng, giá hoặc cơ cấu sản phẩm:
@@ -141,6 +156,8 @@ Doanh\ thu \approx Sản\ lượng \times Giá \times Hiệu\ ứng\ cơ\ cấu
 
 Với nền tảng, “sản lượng” có thể là giao dịch hoặc người dùng; với ngân hàng lô-gic (logic / 논리) doanh thu khác; với xây dựng, ghi nhận phụ thuộc tiến độ dự án. Vì vậy phải tìm cơ chế đứng sau con số tăng trưởng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Lợi nhuận hoạt động và lợi nhuận ròng** tiếp nhận điểm tựa từ **Phân rã tăng trưởng doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kế toán dồn tích: lợi nhuận không phải tiền mặt theo thiết kế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lợi nhuận hoạt động và lợi nhuận ròng
 
 **Lợi nhuận hoạt động (operating profit / 영업이익)** tập trung nhiều hơn vào hoạt động cốt lõi. **Lợi nhuận ròng (net income / 당기순이익)** còn bao gồm chi phí tài chính, thuế và nhiều khoản ngoài hoạt động.
@@ -149,6 +166,8 @@ Một công ty có thể báo lợi nhuận ròng cao nhờ bán tài sản tron
 
 Phải nối hai con số thay vì chọn con số nào trông đẹp hơn.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Kế toán dồn tích: lợi nhuận không phải tiền mặt theo thiết kế** tiếp nhận điểm tựa từ **Lợi nhuận hoạt động và lợi nhuận ròng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Báo cáo lưu chuyển tiền tệ: nơi thực tế thanh khoản xuất hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kế toán dồn tích: lợi nhuận không phải tiền mặt theo thiết kế
 
 **Kế toán dồn tích (accrual accounting / 발생주의 회계)** ghi nhận hoạt động kinh tế khi doanh thu được tạo ra hoặc chi phí phát sinh theo nguyên tắc kế toán, không chỉ khi tiền mặt di chuyển.
@@ -156,6 +175,8 @@ Phải nối hai con số thay vì chọn con số nào trông đẹp hơn.
 Nếu hàng được giao hôm nay nhưng khách trả sau 60 ngày, doanh thu có thể được ghi nhận trước tiền mặt và tạo khoản phải thu.
 
 Kế toán dồn tích cần thiết để đo hiệu quả từng kỳ, nhưng nó cũng tạo không gian cho phán đoán về thời điểm và ước tính.
+
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Báo cáo lưu chuyển tiền tệ: nơi thực tế thanh khoản xuất hiện** tiếp nhận điểm tựa từ **Kế toán dồn tích: lợi nhuận không phải tiền mặt theo thiết kế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn lưu động: tăng trưởng có thể hút tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Báo cáo lưu chuyển tiền tệ: nơi thực tế thanh khoản xuất hiện
 
@@ -175,6 +196,8 @@ Lợi nhuận ròng
 
 Nếu lợi nhuận tăng nhiều năm nhưng CFO liên tục thấp hơn mà không có lý do rõ ràng, cần điều tra sâu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Vốn lưu động: tăng trưởng có thể hút tiền** tiếp nhận điểm tựa từ **Báo cáo lưu chuyển tiền tệ: nơi thực tế thanh khoản xuất hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CAPEX và dòng tiền tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vốn lưu động: tăng trưởng có thể hút tiền
 
 Doanh nghiệp tăng nhanh thường phải tăng tồn kho và khoản phải thu trước khi thu được tiền khách hàng.
@@ -186,6 +209,8 @@ CCC = DIO + DSO - DPO
 \]
 
 Một công ty có thể có lợi nhuận nhưng vẫn khát tiền nếu CCC kéo dài. Đây là vấn đề đặc biệt quan trọng với nhà xuất khẩu, nhà bán lẻ, nhà sản xuất và doanh nghiệp dự án.
+
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **CAPEX và dòng tiền tự do** tiếp nhận điểm tựa từ **Vốn lưu động: tăng trưởng có thể hút tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khấu hao: không dùng tiền mặt hôm nay nhưng không phải “miễn phí”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CAPEX và dòng tiền tự do
 
@@ -199,11 +224,15 @@ FCF không phải khoản mục kế toán bắt buộc và cách tính có th�
 
 FCF âm vì đầu tư tăng trưởng có thể hợp lý nếu ROIC tương lai cao. FCF âm vì hoạt động yếu là một vấn đề hoàn toàn khác.
 
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Khấu hao: không dùng tiền mặt hôm nay nhưng không phải “miễn phí”** tiếp nhận điểm tựa từ **CAPEX và dòng tiền tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Báo cáo theo phân khúc: tổng hợp có thể che giấu động cơ lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khấu hao: không dùng tiền mặt hôm nay nhưng không phải “miễn phí”
 
 Khấu hao không dùng tiền mặt trong kỳ hiện tại vì tiền đã được chi khi mua tài sản. Tuy nhiên, bỏ qua khấu hao hoàn toàn là sai vì nó phản ánh việc tài sản sản xuất bị tiêu hao qua thời gian.
 
 Doanh nghiệp thâm dụng vốn có thể tạm thời tạo nhiều tiền mặt nếu trì hoãn thay thế thiết bị, nhưng cơ sở sản xuất sẽ già đi. Vì vậy EBITDA có thể gây hiểu lầm trong bán dẫn, viễn thông, điện lực hoặc công nghiệp nặng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Báo cáo theo phân khúc: tổng hợp có thể che giấu động cơ lợi nhuận** gom các mảnh từ **Khấu hao: không dùng tiền mặt hôm nay nhưng không phải “miễn phí”** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Công ty liên kết theo phương pháp vốn chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Báo cáo theo phân khúc: tổng hợp có thể che giấu động cơ lợi nhuận
 
@@ -211,17 +240,23 @@ Tập đoàn lớn thường có nhiều phân khúc với biên lợi nhuận v
 
 Nếu 30% doanh thu tạo 70% lợi nhuận, phân khúc đó mới là động cơ kinh tế chính. Số trung bình toàn tập đoàn có thể che cả mảng tăng trưởng lẫn mảng phá hủy giá trị.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Công ty liên kết theo phương pháp vốn chủ sở hữu** gom các mảnh từ **Báo cáo theo phân khúc: tổng hợp có thể che giấu động cơ lợi nhuận** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thuyết minh: nơi nhiều rủi ro kinh tế thật sự nằm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công ty liên kết theo phương pháp vốn chủ sở hữu
 
 Nếu nhà đầu tư có ảnh hưởng đáng kể nhưng không kiểm soát, khoản đầu tư có thể được hạch toán theo **phương pháp vốn chủ sở hữu (equity method / 지분법)** thay vì hợp nhất toàn bộ.
 
 Nhà đầu tư có thể ghi nhận phần lợi nhuận tương ứng mà không đưa toàn bộ doanh thu của công ty liên kết vào báo cáo hợp nhất. Vì vậy một doanh nghiệp có thể có phần kinh tế quan trọng không thể nhìn thấy chỉ qua doanh thu hợp nhất.
 
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Thuyết minh: nơi nhiều rủi ro kinh tế thật sự nằm** tiếp nhận điểm tựa từ **Công ty liên kết theo phương pháp vốn chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghĩa vụ tiềm tàng: rủi ro trước khi trở thành nợ kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thuyết minh: nơi nhiều rủi ro kinh tế thật sự nằm
 
 Thuyết minh có thể cho biết lịch đáo hạn nợ, bảo lãnh, phái sinh, số dư với bên liên quan, nghĩa vụ hưu trí, kiện tụng, nợ thuê, cam kết, tiếp xúc PF, ước tính kế toán và chính sách ghi nhận doanh thu.
 
 Bảng cân đối nhìn đơn giản nhưng thuyết minh có thể chứa nghĩa vụ tiềm tàng lớn. Với xây dựng, bảo lãnh có thể quan trọng hơn nợ đã ghi nhận; với nhà xuất khẩu, hợp đồng phòng hộ có thể thay đổi độ nhạy tỷ giá.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Nghĩa vụ tiềm tàng: rủi ro trước khi trở thành nợ kế toán** tiếp nhận điểm tựa từ **Thuyết minh: nơi nhiều rủi ro kinh tế thật sự nằm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghi nhận doanh thu trong dự án dài hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nghĩa vụ tiềm tàng: rủi ro trước khi trở thành nợ kế toán
 
@@ -235,6 +270,8 @@ Mức tiếp xúc kinh tế tối đa khi căng thẳng
 
 Phân tích rủi ro phải kiểm tra cả hai.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Ghi nhận doanh thu trong dự án dài hạn** tiếp nhận điểm tựa từ **Nghĩa vụ tiềm tàng: rủi ro trước khi trở thành nợ kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp tài chính cần một mô hình kế toán khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ghi nhận doanh thu trong dự án dài hạn
 
 Xây dựng, đóng tàu và một số dự án SI có thể ghi nhận doanh thu theo tiến độ khi đáp ứng điều kiện kế toán.
@@ -242,6 +279,8 @@ Xây dựng, đóng tàu và một số dự án SI có thể ghi nhận doanh t
 Lợi nhuận phụ thuộc ước tính tổng chi phí và mức hoàn thành. Nếu chi phí dự kiến của dự án tăng, biên lợi nhuận có thể phải điều chỉnh trước khi giao hàng hoàn tất.
 
 Vì vậy tài sản/nợ hợp đồng và thay đổi ước tính là những mục cần chú ý.
+
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Doanh nghiệp tài chính cần một mô hình kế toán khác** tiếp nhận điểm tựa từ **Ghi nhận doanh thu trong dự án dài hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ý kiến kiểm toán nói gì và không nói gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Doanh nghiệp tài chính cần một mô hình kế toán khác
 
@@ -251,6 +290,8 @@ Với ngân hàng, khoản cho vay là tài sản sinh lãi và tiền gửi là
 
 Phải dùng lô-gic (logic / 논리) kế toán theo ngành.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Ý kiến kiểm toán nói gì và không nói gì?** tiếp nhận điểm tựa từ **Doanh nghiệp tài chính cần một mô hình kế toán khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công bố sửa đổi (Restatement / 정정공시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ý kiến kiểm toán nói gì và không nói gì?
 
 Kiểm toán độc lập đánh giá liệu báo cáo tài chính có được trình bày hợp lý trên các khía cạnh trọng yếu theo chuẩn áp dụng hay không.
@@ -259,6 +300,8 @@ Các tín hiệu nghiêm trọng gồm ý kiến ngoại trừ, ý kiến trái 
 
 Kiểm toán mang lại mức đảm bảo hợp lý chứ không phải toàn tri. Khi có, nên đọc thêm **các vấn đề kiểm toán trọng yếu (Key Audit Matters)** để biết khu vực nào đòi hỏi nhiều phán đoán.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Công bố sửa đổi (Restatement / 정정공시)** tiếp nhận điểm tựa từ **Ý kiến kiểm toán nói gì và không nói gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DART như một cơ sở dữ liệu: bắt đầu bằng câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công bố sửa đổi (Restatement / 정정공시)
 
 Doanh nghiệp có thể nộp hồ sơ sửa đổi. Không nên chỉ đọc con số mới nhất rồi bỏ qua lịch sử thay đổi.
@@ -266,6 +309,8 @@ Doanh nghiệp có thể nộp hồ sơ sửa đổi. Không nên chỉ đọc c
 Cần hỏi điều gì được sửa, vì sao, mức ảnh hưởng có trọng yếu không, xu hướng hoặc covenant có thay đổi không, và đây là lỗi hành chính, thay đổi ước tính hay thất bại kiểm soát.
 
 Việc phải sửa báo cáo tự nó cũng là dữ liệu về chất lượng báo cáo.
+
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Công bố sửa đổi (Restatement / 정정공시)** nêu điều cần giải thích; **DART như một cơ sở dữ liệu: bắt đầu bằng câu hỏi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **OPEN DART và XBRL: nơi kế toán gặp lập trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## DART như một cơ sở dữ liệu: bắt đầu bằng câu hỏi
 
@@ -278,6 +323,8 @@ Việc phải sửa báo cáo tự nó cũng là dữ liệu về chất lượn
 
 Nghiên cứu nhanh hơn khi lựa chọn tài liệu dựa trên câu hỏi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **DART như một cơ sở dữ liệu: bắt đầu bằng câu hỏi** nêu điều cần giải thích; **OPEN DART và XBRL: nơi kế toán gặp lập trình** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hồ sơ tiếng Hàn và tiếng Anh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## OPEN DART và XBRL: nơi kế toán gặp lập trình
 
 **XBRL (eXtensible Business Reporting Language / 확장성 경영보고언어)** gắn thẻ các khái niệm tài chính để phần mềm có thể phân tích dữ liệu có cấu trúc.
@@ -286,11 +333,15 @@ Nghiên cứu nhanh hơn khi lựa chọn tài liệu dựa trên câu hỏi.
 
 Tuy nhiên khả năng so sánh thẻ không hoàn hảo; doanh nghiệp có thể dùng thẻ mở rộng và chính sách kế toán khác nhau. Dữ liệu lấy bằng chương trình vẫn cần đối chiếu với hồ sơ gốc.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Hồ sơ tiếng Hàn và tiếng Anh** tiếp nhận điểm tựa từ **OPEN DART và XBRL: nơi kế toán gặp lập trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dòng thời gian sự kiện và dòng thời gian báo cáo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hồ sơ tiếng Hàn và tiếng Anh
 
 Bản tiếng Anh hữu ích để tiếp cận nhanh, nhưng khi cần độ chính xác pháp lý hoặc sắc thái kỹ thuật nên ưu tiên hồ sơ tiếng Hàn. Bản dịch có thể rút gọn hoặc chỉ được cung cấp tự nguyện.
 
 Vì vậy tài liệu này giữ từ khóa (keyword / 키워드) tiếng Hàn và tiếng Anh ở những khái niệm quan trọng nhưng phần giải thích chính bằng tiếng Việt.
+
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Dòng thời gian sự kiện và dòng thời gian báo cáo** tiếp nhận điểm tựa từ **Hồ sơ tiếng Hàn và tiếng Anh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy trình thực hành cho một công ty Hàn Quốc mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dòng thời gian sự kiện và dòng thời gian báo cáo
 
@@ -310,6 +361,8 @@ Thu tiền
 
 Không được coi công bố ký hợp đồng đồng nghĩa với lợi nhuận hoặc tiền mặt đã phát sinh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Dòng thời gian sự kiện và dòng thời gian báo cáo** xác định đầu vào; **Quy trình thực hành cho một công ty Hàn Quốc mới** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Các dấu hiệu cần điều tra sâu hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy trình thực hành cho một công ty Hàn Quốc mới
 
 1. Xác định đúng tên pháp lý tiếng Hàn, mã cổ phiếu, mã công ty, tập đoàn và phạm vi hợp nhất.
@@ -321,15 +374,21 @@ Không được coi công bố ký hợp đồng đồng nghĩa với lợi nhu�
 7. Dùng KIND để kiểm tra bối cảnh niêm yết, giao dịch và hành động doanh nghiệp.
 8. So sánh câu chuyện IR với bằng chứng trong hồ sơ.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Quy trình thực hành cho một công ty Hàn Quốc mới** xác định đầu vào; **Các dấu hiệu cần điều tra sâu hơn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các dấu hiệu cần điều tra sâu hơn
 
 Khoản phải thu tăng nhanh hơn doanh thu, CFO liên tục thấp hơn lợi nhuận, số dư bên liên quan lớn, tăng vốn nhiều lần dù công ty tuyên bố có lãi, sửa báo cáo thường xuyên, bảo lãnh khó hiểu, thay đổi chính sách kế toán đột ngột, tồn kho tăng không có giải thích nhu cầu, lợi nhuận lớn từ khoản một lần hoặc goodwill cao sau M&A đều là tín hiệu cần đọc sâu hơn.
 
 Không dấu hiệu nào tự động chứng minh gian lận.
 
+> **Chuyển mạch:** Ở chặng này của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Các dấu hiệu cần điều tra sâu hơn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Công bố thông tin là **API công khai của doanh nghiệp**. Báo cáo tài chính là đầu ra có cấu trúc; thuyết minh là siêu dữ liệu (metadata / 메타데이터); công bố trọng yếu là nhật ký sự kiện; kiểm toán là một lớp xác nhận; DART/KIND là hạ tầng truy xuất. Phân tích tốt là quá trình đối chiếu dữ liệu giữa tất cả các lớp, không phải đọc một tỷ số tiêu đề.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết và nguồn thực hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -347,10 +406,12 @@ Không dấu hiệu nào tự động chứng minh gian lận.
 
 DART là nguồn bằng chứng chính, nhưng kế toán vẫn chứa ước tính và phán đoán.
 
+> **Chuyển mạch:** Trong **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết và nguồn thực hành** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết và nguồn thực hành
 
 Đọc [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho câu hỏi sở hữu–quản trị, [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) cho cách thị trường phản ánh thông tin và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình đầu cuối.
 
 Nguồn thực hành chính: DART, English DART và KIND.
 
-> **Bàn giao:** Sau **Liên kết và nguồn thực hành**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết và nguồn thực hành**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

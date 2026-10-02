@@ -1,7 +1,6 @@
 # Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)
 
-> **Mạch đọc:** Đặt **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thương hiệu tập đoàn khác với pháp nhân** sang **Parent, subsidiary, affiliate và associate khác nhau thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thương hiệu tập đoàn khác với pháp nhân** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Parent, subsidiary, affiliate và associate khác nhau thế nào?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối group structure với affiliates và holding companies, để theo dõi dòng kiểm soát, vốn và rủi ro xuyên qua tập đoàn.
 
 Khi nhìn sơ đồ một tập đoàn Hàn Quốc, người mới thường thấy hàng chục pháp nhân rồi cố ghi nhớ tên từng công ty. Cách hiệu quả hơn là coi cả tập đoàn như một **đồ thị (graph / 그래프)**: mỗi nút là một pháp nhân, còn mỗi cạnh thể hiện quan hệ sở hữu, kiểm soát, giao dịch, khoản vay hoặc bảo lãnh.
 
@@ -13,6 +12,8 @@ Mục tiêu không phải nhớ mọi công ty con. Mục tiêu là hiểu **quy
 
 Mỗi pháp nhân có hội đồng quản trị, cổ đông, tài sản–nợ phải trả, hợp đồng, nghĩa vụ thuế, chủ nợ và báo cáo tài chính riêng. Vì vậy câu chuyện ở cấp tập đoàn không thể thay thế phân tích ở cấp pháp nhân.
 
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Parent, subsidiary, affiliate và associate khác nhau thế nào?** tiếp nhận điểm tựa từ **Thương hiệu tập đoàn khác với pháp nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ lệ sở hữu và quyền kiểm soát không phải cùng một biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Parent, subsidiary, affiliate và associate khác nhau thế nào?
 
 **Công ty mẹ (parent / 모회사)** là pháp nhân kiểm soát một công ty khác. **Công ty con (subsidiary / 자회사)** là pháp nhân bị công ty mẹ kiểm soát.
@@ -20,6 +21,8 @@ Mỗi pháp nhân có hội đồng quản trị, cổ đông, tài sản–nợ
 Trong bối cảnh chaebol hoặc tập đoàn doanh nghiệp, **công ty thành viên (affiliate / 계열회사)** thường chỉ các công ty cùng nằm trong một nhóm kiểm soát. Nhưng trong kế toán, **công ty liên kết (associate / 관계기업)** thường mang nghĩa kỹ thuật: nhà đầu tư có ảnh hưởng đáng kể nhưng không kiểm soát.
 
 Vì vậy một từ tiếng Anh như `affiliate` có thể mang nghĩa khác tùy ngữ cảnh; không nên dịch máy móc.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Tỷ lệ sở hữu và quyền kiểm soát không phải cùng một biến** tiếp nhận điểm tựa từ **Parent, subsidiary, affiliate và associate khác nhau thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền kiểm soát trong kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tỷ lệ sở hữu và quyền kiểm soát không phải cùng một biến
 
@@ -29,11 +32,15 @@ Giả sử A sở hữu 40% B, trong khi 60% còn lại được chia cho nhiề
 
 Vì vậy không được suy ra quyền kiểm soát chỉ bằng cách nhân các tỷ lệ sở hữu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Quyền kiểm soát trong kế toán** tiếp nhận điểm tựa từ **Tỷ lệ sở hữu và quyền kiểm soát không phải cùng một biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Báo cáo riêng và báo cáo hợp nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quyền kiểm soát trong kế toán
 
 Khi xác định có phải hợp nhất một công ty hay không, kế toán thường xem nhà đầu tư có: quyền lực đối với các hoạt động quan trọng, quyền hưởng hoặc chịu biến động lợi ích kinh tế, và khả năng dùng quyền lực đó để ảnh hưởng tới lợi ích hay không.
 
 Sở hữu trên 50% quyền biểu quyết là dấu hiệu phổ biến nhưng không phải tiêu chí duy nhất. Khi ranh giới kiểm soát không rõ, phải đọc chính sách kế toán và thuyết minh báo cáo tài chính.
+
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Báo cáo riêng và báo cáo hợp nhất** tiếp nhận điểm tựa từ **Quyền kiểm soát trong kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm hợp nhất không đồng nghĩa với toàn bộ chaebol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Báo cáo riêng và báo cáo hợp nhất
 
@@ -43,11 +50,15 @@ Các giao dịch nội bộ giữa các đơn vị trong phạm vi hợp nhất 
 
 Đây là một trong những khái niệm quan trọng nhất khi đọc tập đoàn.
 
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Nhóm hợp nhất không đồng nghĩa với toàn bộ chaebol** tiếp nhận điểm tựa từ **Báo cáo riêng và báo cáo hợp nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lợi ích cổ đông không kiểm soát (NCI / 비지배지분)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhóm hợp nhất không đồng nghĩa với toàn bộ chaebol
 
 Một tập đoàn doanh nghiệp có thể chứa nhiều công ty không nằm dưới quyền kiểm soát của cùng một công ty mẹ niêm yết. Báo cáo hợp nhất của một công ty thành viên chỉ bao gồm các công ty con do chính pháp nhân đó kiểm soát, không bao gồm mọi công ty mang cùng thương hiệu tập đoàn.
 
 Vì vậy không thể lấy báo cáo hợp nhất của Samsung Electronics rồi coi đó là “doanh thu của toàn Samsung Group”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Lợi ích cổ đông không kiểm soát (NCI / 비지배지분)** tiếp nhận điểm tựa từ **Nhóm hợp nhất không đồng nghĩa với toàn bộ chaebol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bẫy NCI khi định giá bằng EBITDA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lợi ích cổ đông không kiểm soát (NCI / 비지배지분)
 
@@ -55,11 +66,15 @@ Công ty mẹ có thể kiểm soát một công ty con mà không sở hữu 10
 
 Vì thế cần phân biệt **lợi nhuận ròng hợp nhất** với **lợi nhuận thuộc về cổ đông của công ty mẹ**.
 
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Lợi ích cổ đông không kiểm soát (NCI / 비지배지분)** đã nêu tiêu chí phân biệt, còn **Bẫy NCI khi định giá bằng EBITDA** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Công ty nắm giữ (Holding Company / 지주회사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bẫy NCI khi định giá bằng EBITDA
 
 Nếu nhà phân tích dùng 100% **EBITDA hợp nhất** nhưng lại định giá như thể toàn bộ giá trị đó thuộc cổ đông công ty mẹ, kết quả có thể bị phóng đại. Khi NCI đáng kể, phần quyền lợi của cổ đông thiểu số phải được xử lý nhất quán trong giá trị doanh nghiệp.
 
 Nguyên tắc tương tự áp dụng khi tập đoàn sở hữu các công ty con đã niêm yết riêng.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Bẫy NCI khi định giá bằng EBITDA** đã nêu tiêu chí phân biệt, còn **Công ty nắm giữ (Holding Company / 지주회사)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chiết khấu công ty nắm giữ (Holding Company Discount)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công ty nắm giữ (Holding Company / 지주회사)
 
@@ -76,6 +91,8 @@ graph TD
 Tầng công ty nắm giữ tập trung vào sở hữu và phân bổ vốn; các công ty hoạt động trực tiếp bán hàng hóa hoặc dịch vụ.
 
 **Công ty nắm giữ thuần túy (pure holding company)** chủ yếu nắm cổ phần đầu tư. **Công ty nắm giữ có hoạt động (operating holding company)** vừa sở hữu công ty con vừa có hoạt động kinh doanh riêng đáng kể. Phân biệt này quan trọng vì nguồn doanh thu và tiền mặt ở công ty mẹ sẽ khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Chiết khấu công ty nắm giữ (Holding Company Discount)** tiếp nhận điểm tựa từ **Công ty nắm giữ (Holding Company / 지주회사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vị trí của tiền mặt quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chiết khấu công ty nắm giữ (Holding Company Discount)
 
@@ -94,11 +111,15 @@ Tổng\ giá\ trị\ các\ khoản\ sở\ hữu
 
 Thị trường sau đó có thể áp dụng mức chiết khấu hoặc phần bù dựa trên chất lượng kiểm soát và phân bổ vốn. Không nên mặc định chiết khấu này là “cơ hội chênh lệch giá miễn phí”; nó có thể phản ánh những ma sát kinh tế thật.
 
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Vị trí của tiền mặt quan trọng** tiếp nhận điểm tựa từ **Chiết khấu công ty nắm giữ (Holding Company Discount)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vị trí của nợ cũng quan trọng không kém** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vị trí của tiền mặt quan trọng
 
 Con số “tiền mặt của tập đoàn” có thể gây hiểu lầm. Tiền có thể nằm tại công ty tài chính chịu giới hạn vốn pháp định, công ty ở nước ngoài, liên doanh hoặc công ty con niêm yết có cổ đông thiểu số.
 
 Công ty mẹ không nhất thiết được sử dụng toàn bộ số tiền đó tự do. Khi phân tích thanh khoản, luôn hỏi: **tiền đang nằm ở pháp nhân nào?**
+
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Vị trí của nợ cũng quan trọng không kém** tiếp nhận điểm tựa từ **Vị trí của tiền mặt quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dòng cổ tức từ công ty con lên công ty mẹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vị trí của nợ cũng quan trọng không kém
 
@@ -108,17 +129,23 @@ Do đó cần phân biệt **đòn bẩy hợp nhất**, **đòn bẩy riêng c�
 
 Một công ty nắm giữ có ít dòng tiền hoạt động nhưng nhiều nợ ở chính công ty mẹ có thể rất mong manh dù các công ty con đang có lãi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Dòng cổ tức từ công ty con lên công ty mẹ** tiếp nhận điểm tựa từ **Vị trí của nợ cũng quan trọng không kém** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường vốn nội bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dòng cổ tức từ công ty con lên công ty mẹ
 
 Công ty mẹ hoặc công ty nắm giữ thường nhận tiền thông qua cổ tức, phí quản lý–dịch vụ, bán tài sản hoặc các khoản vay nội bộ khi pháp luật cho phép.
 
 Nếu công ty con đang cần đầu tư vốn lớn, khả năng trả cổ tức có thể giảm. Vì vậy giá trị của công ty mẹ không chỉ phụ thuộc lợi nhuận kế toán của công ty con mà còn phụ thuộc **khả năng chuyển tiền mặt lên trên (cash upstreamability)**.
 
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Thị trường vốn nội bộ** tiếp nhận điểm tựa từ **Dòng cổ tức từ công ty con lên công ty mẹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao dịch với bên liên quan (Related-Party Transactions / 특수관계자 거래)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thị trường vốn nội bộ
 
 Tập đoàn có thể phân bổ tiền giữa các công ty thành viên thông qua đầu tư vốn, cổ tức, khoản vay và giao dịch nội bộ. Cơ chế này giúp giảm ma sát tài chính bên ngoài và tài trợ nhanh cho ngành mới.
 
 Nhưng nó cũng tạo **rủi ro đại diện (agency risk)** nếu tiền từ một công ty niêm yết có lợi suất cao bị chuyển sang dự án lợi suất thấp của tập đoàn trái với lợi ích của cổ đông thiểu số. Thị trường vốn nội bộ không tự thân tốt hay xấu; chất lượng phân bổ vốn mới là vấn đề cốt lõi.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Giao dịch với bên liên quan (Related-Party Transactions / 특수관계자 거래)** tiếp nhận điểm tựa từ **Thị trường vốn nội bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh doanh nội bộ tập đoàn: ổn định nhu cầu nhưng chưa chắc chứng minh sức cạnh tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giao dịch với bên liên quan (Related-Party Transactions / 특수관계자 거래)
 
@@ -128,17 +155,23 @@ Khi đọc giao dịch bên liên quan, cần hỏi: giao dịch có thực sự
 
 DART là nguồn đặc biệt quan trọng để kiểm tra các quan hệ này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Kinh doanh nội bộ tập đoàn: ổn định nhu cầu nhưng chưa chắc chứng minh sức cạnh tranh** tiếp nhận điểm tựa từ **Giao dịch với bên liên quan (Related-Party Transactions / 특수관계자 거래)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc sở hữu hình tháp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh doanh nội bộ tập đoàn: ổn định nhu cầu nhưng chưa chắc chứng minh sức cạnh tranh
 
 Một công ty IT, logistics hoặc quảng cáo thuộc tập đoàn có thể nhận phần lớn doanh thu từ các công ty chị em. **Nhu cầu nội bộ (captive demand)** giúp doanh nghiệp có quy mô và doanh thu ổn định.
 
 Tuy nhiên, nhà phân tích phải tách phần doanh thu dựa vào quan hệ tập đoàn khỏi phần doanh thu thắng được trên thị trường bên ngoài. Nếu tỷ trọng khách hàng ngoài tập đoàn tăng cùng với biên lợi nhuận tốt, đó là dấu hiệu năng lực cạnh tranh bên ngoài đang mạnh lên. Nếu gần như toàn bộ doanh thu đến từ nội bộ, tăng trưởng sẽ phụ thuộc nhiều vào quyết định phân bổ đơn hàng của tập đoàn.
 
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Cấu trúc sở hữu hình tháp** tiếp nhận điểm tựa từ **Kinh doanh nội bộ tập đoàn: ổn định nhu cầu nhưng chưa chắc chứng minh sức cạnh tranh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sở hữu chéo và sở hữu vòng tròn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấu trúc sở hữu hình tháp
 
 Trong **sở hữu hình tháp (pyramidal ownership)**, A kiểm soát B, B kiểm soát C và C kiểm soát D. Người kiểm soát ở tầng trên có thể tác động tới tài sản ở tầng dưới với phần sở hữu kinh tế trực tiếp tương đối nhỏ. Đây là một dạng **đòn bẩy kiểm soát (control leverage)**.
 
 Cấu trúc càng sâu, xung đột giữa người kiểm soát và cổ đông thiểu số càng cần được chú ý.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Sở hữu chéo và sở hữu vòng tròn** tiếp nhận điểm tựa từ **Cấu trúc sở hữu hình tháp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổ phiếu quỹ và quyền kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sở hữu chéo và sở hữu vòng tròn
 
@@ -152,9 +185,13 @@ Sở hữu vòng tròn có thể củng cố quyền kiểm soát và khiến vi
 
 Bài học chính: quan hệ giữa các nút quan trọng hơn sơ đồ hộp tổ chức.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Cổ phiếu quỹ và quyền kiểm soát** tiếp nhận điểm tựa từ **Sở hữu chéo và sở hữu vòng tròn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chia tách công ty: 인적분할 và 물적분할** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cổ phiếu quỹ và quyền kiểm soát
 
 **Cổ phiếu quỹ (treasury shares)** thường không có quyền biểu quyết khi được chính công ty nắm giữ. Tuy nhiên, việc hủy, bán hoặc sử dụng chúng trong tái cấu trúc có thể thay đổi tỷ lệ sở hữu và động lực kiểm soát. Vì vậy lượng cổ phiếu quỹ lớn là một biến quan trọng trong phân tích quản trị.
+
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Chia tách công ty: 인적분할 và 물적분할** tiếp nhận điểm tựa từ **Cổ phiếu quỹ và quyền kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế của sáp nhập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chia tách công ty: `인적분할` và `물적분할`
 
@@ -168,11 +205,15 @@ Nếu công ty con tăng trưởng sau đó IPO, cổ đông công ty mẹ có t
 
 Các lý do hợp lý để chia tách gồm tách rủi ro, thu hút nhà đầu tư chiến lược, huy động vốn, làm rõ trọng tâm kinh doanh, chuẩn bị IPO/M&A hoặc tái tổ chức quyền kiểm soát. Một thông cáo chỉ nói “tăng tập trung” hoặc “tạo hiệp lực” là chưa đủ; phải lập sơ đồ sở hữu và dòng tiền trước–sau giao dịch.
 
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Kinh tế của sáp nhập** tiếp nhận điểm tựa từ **Chia tách công ty: 인적분할 và 물적분할** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên doanh (Joint Venture / 합작회사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế của sáp nhập
 
 Sáp nhập có thể tạo hiệu quả vận hành nhưng **tỷ lệ hoán đổi (exchange ratio)** quyết định cách giá trị được chia giữa các nhóm cổ đông.
 
 Cần tách hai câu hỏi: giao dịch có tạo thêm tổng giá trị hay không; và tổng giá trị đó có được phân phối công bằng giữa các cổ đông hay không. Một thương vụ có thể tạo hiệp lực tích cực nhưng vẫn gây tranh cãi về tỷ lệ hoán đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Liên doanh (Joint Venture / 합작회사)** tiếp nhận điểm tựa từ **Kinh tế của sáp nhập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty liên kết và phương pháp vốn chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên doanh (Joint Venture / 합작회사)
 
@@ -180,11 +221,15 @@ Cần tách hai câu hỏi: giao dịch có tạo thêm tổng giá trị hay kh
 
 Liên doanh có thể không được hợp nhất toàn bộ nếu quyền kiểm soát được chia sẻ. Ngành pin sử dụng JV rất nhiều, nên mức tiếp xúc kinh tế thực và con số “công suất” trên truyền thông có thể khác với phạm vi kế toán hợp nhất.
 
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, sau nội dung của **Liên doanh (Joint Venture / 합작회사)**, **Công ty liên kết và phương pháp vốn chủ sở hữu** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Bảo lãnh làm yếu sự tách biệt giữa các pháp nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công ty liên kết và phương pháp vốn chủ sở hữu
 
 Khi nhà đầu tư có ảnh hưởng đáng kể nhưng không kiểm soát, khoản đầu tư có thể được hạch toán theo **phương pháp vốn chủ sở hữu (equity method / 지분법)**. Nhà đầu tư ghi nhận phần lợi nhuận tương ứng của công ty liên kết thay vì hợp nhất 100% doanh thu và tài sản.
 
 Vì vậy một doanh nghiệp có thể ghi nhận lợi nhuận đáng kể từ công ty liên kết nhưng không có mức doanh thu hợp nhất tương ứng.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Bảo lãnh làm yếu sự tách biệt giữa các pháp nhân** tiếp nhận điểm tựa từ **Công ty liên kết và phương pháp vốn chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty tài chính cần được đọc riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo lãnh làm yếu sự tách biệt giữa các pháp nhân
 
@@ -201,17 +246,23 @@ Cạnh mua/bán hàng hóa dịch vụ
 Cạnh nhân sự/quản lý
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Công ty tài chính cần được đọc riêng** tiếp nhận điểm tựa từ **Bảo lãnh làm yếu sự tách biệt giữa các pháp nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ROIC cấp tập đoàn và ROIC cấp pháp nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công ty tài chính cần được đọc riêng
 
 Ngân hàng, bảo hiểm và công ty chứng khoán chịu yêu cầu vốn pháp định và nhiều hạn chế riêng. Tiền mặt hoặc vốn chủ sở hữu của chúng không thể được chuyển tự do như ở công ty công nghiệp thông thường.
 
 Nếu trộn công ty tài chính và công ty công nghiệp trong một con số cấp tập đoàn, mức đòn bẩy có thể bị hiểu sai.
 
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **ROIC cấp tập đoàn và ROIC cấp pháp nhân** tiếp nhận điểm tựa từ **Công ty tài chính cần được đọc riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy trình đọc sơ đồ tập đoàn trong thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ROIC cấp tập đoàn và ROIC cấp pháp nhân
 
 Một tập đoàn có thể có một công ty tạo tiền mặt rất mạnh nhưng đồng thời sở hữu nhiều dự án có lợi suất thấp. Con số hợp nhất cho thấy kết quả tổng thể, nhưng cổ đông thiểu số của công ty tạo tiền mặt quan tâm tới cách nguồn lực tại chính pháp nhân đó được sử dụng.
 
 Vì vậy cần phân tích đồng thời **phân bổ vốn cấp tập đoàn** và **kinh tế của cổ đông tại từng pháp nhân**.
+
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **ROIC cấp tập đoàn và ROIC cấp pháp nhân** xác định đầu vào; **Quy trình đọc sơ đồ tập đoàn trong thực tế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy trình đọc sơ đồ tập đoàn trong thực tế
 
@@ -228,6 +279,8 @@ Vì vậy cần phân tích đồng thời **phân bổ vốn cấp tập đoàn
 
 Quy trình này biến một sơ đồ phức tạp thành một hệ thống có thể phân tích.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Quy trình đọc sơ đồ tập đoàn trong thực tế** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Hãy đọc tập đoàn Hàn Quốc như một đồ thị trong khoa học máy tính: **nút = pháp nhân; cạnh = sở hữu / kiểm soát / tiền / bảo lãnh / giao dịch**. Thực tế kinh tế nằm trong quan hệ giữa các nút chứ không nằm ở tên thương hiệu.
@@ -239,6 +292,8 @@ Nợ nằm ở đâu?
 Ai nắm quyền lợi thiểu số?
 Giá trị di chuyển giữa các pháp nhân thế nào?
 ```
+
+> **Chuyển mạch:** Trong **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -254,8 +309,10 @@ Giá trị di chuyển giữa các pháp nhân thế nào?
 
 **“Cùng tập đoàn nghĩa là nợ luôn được bảo lãnh.”** Sai. Phải đọc cam kết pháp lý cụ thể.
 
+> **Chuyển mạch:** Ở chặng này của **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [`03_company_forms_and_size_classes.md`](./03_company_forms_and_size_classes.md), [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md), [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) và [`19_major_groups_case_studies.md`](./19_major_groups_case_studies.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

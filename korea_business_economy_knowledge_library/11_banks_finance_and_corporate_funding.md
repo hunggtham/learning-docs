@@ -1,7 +1,6 @@
 # Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)
 
-> **Mạch đọc:** Đặt **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Ba nguồn vốn cơ bản** sang **Ghép kỳ hạn nguồn vốn với vòng đời tài sản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba nguồn vốn cơ bản** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Ghép kỳ hạn nguồn vốn với vòng đời tài sản** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Mạch này nối banks, finance và corporate funding, để theo dõi vốn đi từ hệ thống tài chính vào đầu tư, nợ và tái cấu trúc doanh nghiệp.
 
 Một doanh nghiệp có thể **có lợi nhuận trên báo cáo nhưng vẫn phá sản nếu tiền mặt đến sai thời điểm**. Vì vậy tài chính doanh nghiệp không chỉ hỏi “hoạt động kinh doanh có lời không?”, mà còn hỏi doanh nghiệp được tài trợ bằng nguồn nào, kỳ hạn ra sao, lãi suất thế nào, bằng đồng tiền nào và tiền mặt có về trước khi nghĩa vụ đáo hạn hay không.
 
@@ -17,6 +16,8 @@ Vốn chủ sở hữu không có nghĩa vụ hoàn trả gốc bắt buộc nh�
 
 Một **cấu trúc vốn (capital structure)** hợp lý không phải cấu trúc có ít nợ nhất, mà là cấu trúc phù hợp với độ biến động, vòng đời tài sản, khả năng dự đoán dòng tiền và cơ hội tăng trưởng của doanh nghiệp.
 
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Ba nguồn vốn cơ bản** nêu điều cần giải thích; **Ghép kỳ hạn nguồn vốn với vòng đời tài sản** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vay ngân hàng và quan hệ tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ghép kỳ hạn nguồn vốn với vòng đời tài sản
 
 Một nguyên tắc quan trọng là **phù hợp kỳ hạn (maturity matching / 만기 대응)**.
@@ -31,6 +32,8 @@ Tài sản dài hạn  → nguồn vốn dài hạn thường an toàn hơn
 ```
 
 Sai lệch giữa vòng đời tài sản và kỳ hạn nghĩa vụ là một cơ chế quan trọng từng làm nhiều cuộc khủng hoảng tài chính trở nên nghiêm trọng hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Ghép kỳ hạn nguồn vốn với vòng đời tài sản** nêu điều cần giải thích; **Vay ngân hàng và quan hệ tín dụng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nợ lãi cố định và lãi thả nổi: cùng số nợ nhưng độ nhạy khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vay ngân hàng và quan hệ tín dụng
 
@@ -48,6 +51,8 @@ Lãi suất tham chiếu phản ánh điều kiện thị trường và tiền t
 
 Nếu doanh nghiệp có 1 nghìn tỷ KRW nợ và lãi suất hiệu dụng tăng 1 điểm phần trăm, chi phí lãi hằng năm tăng xấp xỉ 10 tỷ KRW trước tác động phòng hộ và trả nợ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Nợ lãi cố định và lãi thả nổi: cùng số nợ nhưng độ nhạy khác nhau** tiếp nhận điểm tựa từ **Vay ngân hàng và quan hệ tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trái phiếu doanh nghiệp và biên tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nợ lãi cố định và lãi thả nổi: cùng số nợ nhưng độ nhạy khác nhau
 
 Hai công ty cùng có 1 nghìn tỷ KRW nợ nhưng rủi ro có thể rất khác. Công ty A có 80% trái phiếu lãi cố định 5 năm; công ty B có 80% khoản vay thả nổi điều chỉnh mỗi 3 tháng.
@@ -57,6 +62,8 @@ Khi lãi suất chính sách tăng, B chịu áp lực gần như ngay lập t�
 Vì vậy tác động của chính sách tiền tệ lên lợi nhuận doanh nghiệp phụ thuộc **lịch điều chỉnh lãi suất (repricing schedule)** chứ không chỉ tổng số nợ.
 
 Xem [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md).
+
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Trái phiếu doanh nghiệp và biên tín dụng** tiếp nhận điểm tựa từ **Nợ lãi cố định và lãi thả nổi: cùng số nợ nhưng độ nhạy khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Bức tường đáo hạn” và rủi ro tái cấp vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trái phiếu doanh nghiệp và biên tín dụng
 
@@ -88,6 +95,8 @@ Lợi nhuận thấp hơn / khó tái cấp vốn
 Áp lực xếp hạng lớn hơn
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **“Bức tường đáo hạn” và rủi ro tái cấp vốn** tiếp nhận điểm tựa từ **Trái phiếu doanh nghiệp và biên tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn lưu động: lợi nhuận không đồng nghĩa với tiền mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “Bức tường đáo hạn” và rủi ro tái cấp vốn
 
 Một công ty có nợ ròng vừa phải nhưng 70% nợ đáo hạn trong 12 tháng có thể rủi ro hơn công ty nợ lớn hơn nhưng kỳ hạn trải đều trong 7 năm.
@@ -97,6 +106,8 @@ Vì vậy phải đọc **cấu trúc đáo hạn (maturity ladder / 만기구�
 Rủi ro tái cấp vốn tăng khi thanh khoản thị trường giảm, xếp hạng tín nhiệm bị hạ, giá trị tài sản bảo đảm giảm, chu kỳ kinh doanh xấu đi, thị trường ngoại hối căng thẳng hoặc khẩu vị rủi ro của nhà đầu tư giảm.
 
 Phân tích thanh khoản luôn cần một lịch thời gian, không chỉ một ảnh chụp bảng cân đối.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Vốn lưu động: lợi nhuận không đồng nghĩa với tiền mặt** tiếp nhận điểm tựa từ **“Bức tường đáo hạn” và rủi ro tái cấp vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn lưu động và quyền thương lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vốn lưu động: lợi nhuận không đồng nghĩa với tiền mặt
 
@@ -126,6 +137,8 @@ CCC dài hơn nghĩa là tiền bị khóa lâu hơn. Tăng trưởng nhanh có 
 
 Đó là lý do một nhà cung cấp tăng trưởng nhanh vẫn có thể phải vay nhiều hơn dù lợi nhuận tăng.
 
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Vốn lưu động và quyền thương lượng** tiếp nhận điểm tựa từ **Vốn lưu động: lợi nhuận không đồng nghĩa với tiền mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài trợ khoản phải thu, bảo lãnh và tài chính chính sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vốn lưu động và quyền thương lượng
 
 Kỳ hạn thanh toán không chỉ là chi tiết kế toán; nó phản ánh **quyền thương lượng (bargaining power)**.
@@ -136,6 +149,8 @@ Nói cách khác, người mua mạnh có thể dùng bảng cân đối của n
 
 Đây là liên kết trực tiếp với [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Tài trợ khoản phải thu, bảo lãnh và tài chính chính sách** tiếp nhận điểm tựa từ **Vốn lưu động và quyền thương lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đòn bẩy: khuếch đại cả lợi nhuận lẫn thua lỗ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tài trợ khoản phải thu, bảo lãnh và tài chính chính sách
 
 SME có thể dùng khoản phải thu làm cơ sở tài trợ hoặc nhận bảo lãnh tín dụng và vốn chính sách để giảm hạn chế tài sản thế chấp.
@@ -143,6 +158,8 @@ SME có thể dùng khoản phải thu làm cơ sở tài trợ hoặc nhận b�
 Bảo lãnh không xóa rủi ro; nó chuyển rủi ro sang bên bảo lãnh nếu người vay vỡ nợ. Vì vậy bảo lãnh chính sách nên được hiểu là **cơ chế chia sẻ rủi ro (risk-sharing mechanism)**, không phải vốn miễn phí.
 
 Ngân hàng chính sách và tổ chức bảo lãnh có lý do tồn tại khi người cho vay tư nhân tài trợ thiếu do bất cân xứng thông tin, ngoại tác chiến lược hoặc kỳ hạn quá dài. Nhưng nếu lựa chọn dự án yếu, vốn có thể bị giữ trong doanh nghiệp năng suất thấp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Đòn bẩy: khuếch đại cả lợi nhuận lẫn thua lỗ** tiếp nhận điểm tựa từ **Tài trợ khoản phải thu, bảo lãnh và tài chính chính sách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Covenant: hợp đồng nợ có thể giới hạn ban quản lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đòn bẩy: khuếch đại cả lợi nhuận lẫn thua lỗ
 
@@ -164,6 +181,8 @@ Nợ\ ròng/EBITDA
 
 Không chỉ số nào đủ khi đứng riêng. EBITDA không phải tiền mặt; tiền có thể bị hạn chế sử dụng; EBIT có thể ở đỉnh chu kỳ.
 
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Đòn bẩy: khuếch đại cả lợi nhuận lẫn thua lỗ** đã nêu tiêu chí phân biệt, còn **Covenant: hợp đồng nợ có thể giới hạn ban quản lý** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nợ ngoại tệ và chênh lệch tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Covenant: hợp đồng nợ có thể giới hạn ban quản lý
 
 Khoản vay hoặc trái phiếu có thể chứa **điều khoản ràng buộc (covenant / 재무약정)** như trần đòn bẩy, mức bao phủ lãi tối thiểu hoặc hạn chế bán tài sản và trả cổ tức.
@@ -171,6 +190,8 @@ Khoản vay hoặc trái phiếu có thể chứa **điều khoản ràng buộc
 Vi phạm covenant không tự động nghĩa doanh nghiệp phá sản, nhưng có thể kích hoạt đàm phán lại, tăng lãi suất hoặc quyền yêu cầu trả nợ sớm.
 
 Vì vậy cần đọc thuyết minh covenant chứ không chỉ số nợ tiêu đề.
+
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Covenant: hợp đồng nợ có thể giới hạn ban quản lý** đã nêu tiêu chí phân biệt, còn **Nợ ngoại tệ và chênh lệch tiền tệ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phòng hộ không xóa rủi ro miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nợ ngoại tệ và chênh lệch tiền tệ
 
@@ -180,6 +201,8 @@ Ngược lại, nhà xuất khẩu có doanh thu USD có thể tự tạo **phò
 
 Một nguyên tắc đơn giản là đồng tiền của khoản nợ nên tương đối gần đồng tiền của dòng tiền tạo ra. Nếu không, doanh nghiệp phải dùng phái sinh hoặc có đủ quyền định giá để hấp thụ biến động tỷ giá.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Phòng hộ không xóa rủi ro miễn phí** tiếp nhận điểm tựa từ **Nợ ngoại tệ và chênh lệch tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phát hành vốn chủ sở hữu và pha loãng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phòng hộ không xóa rủi ro miễn phí
 
 Hợp đồng kỳ hạn, hoán đổi và quyền chọn có thể giảm biến động lãi suất hoặc tỷ giá nhưng đều có chi phí.
@@ -188,6 +211,8 @@ Doanh nghiệp có thể phòng hộ 70% mức tiếp xúc USD và để 30% m�
 
 Một tài sản phái sinh trên bảng cân đối không tự động là lợi nhuận “chất lượng cao”; nó có thể chỉ bù cho khoản lỗ ở mức tiếp xúc cơ sở.
 
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Phát hành vốn chủ sở hữu và pha loãng** tiếp nhận điểm tựa từ **Phòng hộ không xóa rủi ro miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí vốn và tỷ suất tối thiểu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phát hành vốn chủ sở hữu và pha loãng
 
 Huy động bằng cổ phần không tạo nghĩa vụ trả gốc cố định nhưng làm cổ đông hiện tại bị pha loãng.
@@ -195,6 +220,8 @@ Huy động bằng cổ phần không tạo nghĩa vụ trả gốc cố định
 Nếu công ty phát hành cổ phiếu mới ở giá thấp để cứu thanh khoản, doanh nghiệp có thể sống sót nhưng cổ đông cũ chịu chuyển giao giá trị. Ngược lại, phát hành cổ phiếu ở mức định giá cao để tài trợ dự án ROIC cao có thể tạo thêm giá trị.
 
 Do đó câu “nợ xấu, vốn chủ tốt” là quá đơn giản. Câu hỏi thật sự là **chi phí vốn bao nhiêu và khoản vốn mới sẽ tạo lợi suất gì**.
+
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Chi phí vốn và tỷ suất tối thiểu** tiếp nhận điểm tựa từ **Phát hành vốn chủ sở hữu và pha loãng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트) Finance (PF)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí vốn và tỷ suất tối thiểu
 
@@ -210,6 +237,8 @@ Trong đó `w_e`, `w_d` là tỷ trọng vốn chủ và nợ; `r_e`, `r_d` là 
 
 Ban điều hành dùng **tỷ suất tối thiểu (hurdle rate)** để đánh giá CAPEX, M&A hoặc R&D. Khi chi phí vốn tăng nhưng lợi suất kỳ vọng của dự án không đổi, NPV giảm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Dự án (project / 프로젝트) Finance (PF)** tiếp nhận điểm tựa từ **Chi phí vốn và tỷ suất tối thiểu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty chứng khoán và tài chính phi ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dự án (project / 프로젝트) Finance (PF)
 
 **Tài trợ dự án (Project Finance / 프로젝트 파이낸싱)** thường tách dự án vào một pháp nhân dự án và dựa nhiều vào dòng tiền tương lai của chính dự án hơn bảng cân đối của nhà tài trợ.
@@ -217,6 +246,8 @@ Ban điều hành dùng **tỷ suất tối thiểu (hurdle rate)** để đánh
 PF phù hợp với hạ tầng hoặc bất động sản có dòng tiền riêng, nhưng cấu trúc hợp đồng rất phức tạp. Người cho vay phải nhìn rủi ro hoàn thành, nhu cầu, tài sản bảo đảm, bảo lãnh và thứ tự phân phối tiền.
 
 Bất động sản Hàn Quốc còn có cầu nối (bridge / 브리지) financing, presale và hỗ trợ tín dụng từ nhà thầu. Xem [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
+
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Công ty chứng khoán và tài chính phi ngân hàng** tiếp nhận điểm tựa từ **Dự án (project / 프로젝트) Finance (PF)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chứng khoán hóa: biến dòng tiền thành chứng khoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công ty chứng khoán và tài chính phi ngân hàng
 
@@ -226,11 +257,15 @@ Tài chính phi ngân hàng giúp đa dạng hóa nguồn vốn nhưng có kiể
 
 Khi thị trường đóng, người vay phụ thuộc chứng khoán có thể mất kênh tái cấp vốn rất nhanh.
 
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Chứng khoán hóa: biến dòng tiền thành chứng khoán** tiếp nhận điểm tựa từ **Công ty chứng khoán và tài chính phi ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty tài chính captive trong tập đoàn công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chứng khoán hóa: biến dòng tiền thành chứng khoán
 
 Khoản phải thu, thế chấp hoặc nhóm khoản vay có thể được **chứng khoán hóa (securitization)**. Ý tưởng là tách dòng tiền khỏi bên khởi tạo rồi bán quyền nhận dòng tiền cho nhà đầu tư.
 
 Chứng khoán hóa giúp huy động vốn và chuyển rủi ro nhưng cấu trúc phức tạp có thể che rủi ro. Chất lượng tài sản cơ sở và thứ tự phân phối dòng tiền quan trọng hơn nhãn xếp hạng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Công ty tài chính captive trong tập đoàn công nghiệp** tiếp nhận điểm tựa từ **Chứng khoán hóa: biến dòng tiền thành chứng khoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiền mặt không phải lúc nào cũng chuyển tự do được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công ty tài chính captive trong tập đoàn công nghiệp
 
@@ -240,6 +275,8 @@ Khi bán xe tốt, công ty tài chính hỗ trợ sản lượng. Khi giá xe c
 
 Vì vậy cần đọc doanh nghiệp công nghiệp và công ty tài chính trong cùng bức tranh.
 
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Tiền mặt không phải lúc nào cũng chuyển tự do được** tiếp nhận điểm tựa từ **Công ty tài chính captive trong tập đoàn công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân bổ vốn: huy động vốn chỉ là nửa đầu câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tiền mặt không phải lúc nào cũng chuyển tự do được
 
 Một tập đoàn có 20 nghìn tỷ KRW tiền mặt không có nghĩa công ty mẹ sử dụng được toàn bộ. Tiền có thể nằm tại công ty con ở nước ngoài, công ty tài chính chịu quy định hoặc liên doanh; việc chuyển cổ tức còn chịu thuế và hạn chế pháp lý.
@@ -248,11 +285,15 @@ Vì vậy luôn phải hỏi **tiền nằm ở pháp nhân nào**.
 
 Xem [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Phân bổ vốn: huy động vốn chỉ là nửa đầu câu chuyện** tiếp nhận điểm tựa từ **Tiền mặt không phải lúc nào cũng chuyển tự do được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) tài trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân bổ vốn: huy động vốn chỉ là nửa đầu câu chuyện
 
 Sau khi có vốn, ban điều hành phải phân bổ giữa CAPEX duy trì, CAPEX tăng trưởng, R&D, M&A, trả nợ, cổ tức, mua lại cổ phiếu và dự trữ tiền mặt.
 
 Giá trị được tạo ra hay phá hủy phụ thuộc vào lợi suất của những quyết định này, không phụ thuộc việc doanh nghiệp “có nhiều tiền”. Một bảng cân đối mạnh vẫn có thể phá hủy giá trị nếu liên tục mua tài sản lợi suất thấp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) tài trợ** tiếp nhận điểm tựa từ **Phân bổ vốn: huy động vốn chỉ là nửa đầu câu chuyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm thử sức chịu tải (stress test / 스트레스 테스트) tài trợ
 
@@ -270,6 +311,8 @@ Thị trường trái phiếu khó tái cấp vốn
 Sau đó hỏi tiền mặt còn dương không, covenant có bị vi phạm không và khoản nợ đáo hạn nào trở thành điểm nguy hiểm.
 
 Kiểm thử sức chịu tải (stress test / 스트레스 테스트) hữu ích hơn một tỷ số duy nhất vì rủi ro tài trợ thường xuất hiện khi nhiều cú sốc xảy ra cùng lúc.
+
+> **Chuyển mạch:** Trong **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) tài trợ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -291,6 +334,8 @@ Phân bổ vốn
 Giá trị dài hạn
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“Nợ thấp luôn tốt.”** Sai. Doanh nghiệp ổn định có thể dùng mức nợ vừa phải hiệu quả.
@@ -305,8 +350,10 @@ Giá trị dài hạn
 
 **“Bảo lãnh chính sách loại bỏ thua lỗ.”** Sai. Thua lỗ chỉ được chuyển sang bên khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) và [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)
 
-> **Mạch đọc:** Đặt **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Năng suất thực sự là gì?** sang **Vì sao năng suất sản xuất thường cao hơn nhiều dịch vụ truyền thống?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Năng suất thực sự là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao năng suất sản xuất thường cao hơn nhiều dịch vụ truyền thống?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối productivity với services và economic dualism, để giải thích vì sao tăng trưởng ngành không tự động nâng năng suất toàn nền kinh tế.
 
 Kinh tế Hàn Quốc thường được nhìn qua fab bán dẫn, xưởng đóng tàu, nhà máy ô tô và pin. Hình ảnh đó đúng nhưng chưa đủ. Phần lớn việc làm lại nằm trong dịch vụ và SME. Vì vậy Hàn Quốc có một nghịch lý quan trọng: **một nền kinh tế có những “đảo xuất sắc” với năng suất rất cao vẫn có năng suất tổng thể thấp hơn tiềm năng vì phần còn lại vận hành ở mức thấp hơn nhiều**.
 
@@ -27,6 +26,8 @@ Y = A K^{\alpha}L^{1-\alpha}
 
 Trong đó `Y` là sản lượng, `K` là vốn, `L` là lao động và `A` là **năng suất nhân tố tổng hợp (Total Factor Productivity / TFP / 총요소생산성)**. `A` không phải một vật thể riêng; nó đại diện cho hiệu quả đến từ công nghệ, bí quyết, quản lý, logistics, thể chế và cách nguồn lực được tổ chức.
 
+> **Chuyển mạch:** Trong **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Vì sao năng suất sản xuất thường cao hơn nhiều dịch vụ truyền thống?** tiếp nhận điểm tựa từ **Năng suất thực sự là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng cách năng suất dịch vụ–sản xuất tại Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao năng suất sản xuất thường cao hơn nhiều dịch vụ truyền thống?
 
 Sản xuất thường dễ tiêu chuẩn hóa và tự động hóa hơn. Một máy hoặc dây chuyền có thể tạo hàng nghìn đơn vị giống nhau, trong khi chi phí cố định được chia trên sản lượng lớn.
@@ -47,11 +48,15 @@ Dịch vụ có thể giao dịch và mở rộng
 → mở rộng bằng IP, dữ liệu và phân phối
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Khoảng cách năng suất dịch vụ–sản xuất tại Hàn Quốc** tiếp nhận điểm tựa từ **Vì sao năng suất sản xuất thường cao hơn nhiều dịch vụ truyền thống?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dualism theo quy mô doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khoảng cách năng suất dịch vụ–sản xuất tại Hàn Quốc
 
 Bank of Korea từng chỉ ra rằng dịch vụ tư nhân chiếm tỷ trọng rất lớn trong việc làm nhưng năng suất trên mỗi lao động thấp hơn đáng kể so với sản xuất. Không nên diễn giải rằng “một nhân viên dịch vụ chỉ làm được X% một công nhân nhà máy”, vì số liệu tổng hợp chịu ảnh hưởng của cơ cấu ngành, cường độ vốn, giá cả và cách đo.
 
 Điểm quan trọng hơn là: **rất nhiều lao động đang nằm trong các ngành tạo giá trị gia tăng thấp hơn trên mỗi người**. Nếu việc làm mới tiếp tục tập trung vào dịch vụ năng suất thấp trong khi sản xuất tiên tiến không tăng lao động nhiều, năng suất tổng thể có thể chậm lại dù các nhà xuất khẩu hàng đầu vẫn rất mạnh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Dualism theo quy mô doanh nghiệp** tiếp nhận điểm tựa từ **Khoảng cách năng suất dịch vụ–sản xuất tại Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng suất còn là vấn đề phân bổ nguồn lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dualism theo quy mô doanh nghiệp
 
@@ -75,6 +80,8 @@ Năng suất tiếp tục thấp
 
 Vì vậy chỉ tăng lương tối thiểu, chỉ trợ cấp máy móc hoặc chỉ đào tạo nhân viên không thể tự động giải quyết dualism.
 
+> **Chuyển mạch:** Trong **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Dualism theo quy mô doanh nghiệp** nêu điều cần giải thích; **Năng suất còn là vấn đề phân bổ nguồn lực** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phá hủy sáng tạo và vai trò của doanh nghiệp rời thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năng suất còn là vấn đề phân bổ nguồn lực
 
 Giả sử doanh nghiệp A có năng suất cao nhưng khó vay vốn để mở rộng, trong khi doanh nghiệp B năng suất thấp vẫn giữ nhiều vốn nhờ tài sản thế chấp, quan hệ tập đoàn hoặc hỗ trợ chính sách. Năng suất toàn nền kinh tế sẽ thấp hơn dù công nghệ của từng doanh nghiệp không đổi.
@@ -82,6 +89,8 @@ Giả sử doanh nghiệp A có năng suất cao nhưng khó vay vốn để m�
 Đây là **hiệu quả phân bổ (allocative efficiency / 자원배분 효율성)**: vốn và lao động có đi tới nơi tạo giá trị cao nhất hay không.
 
 Một nền kinh tế có thể đầu tư rất nhiều nhưng năng suất vẫn yếu nếu **đồng vốn cận biên** được đưa vào dự án lợi suất thấp.
+
+> **Chuyển mạch:** Ở chặng này của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Năng suất còn là vấn đề phân bổ nguồn lực** nêu điều cần giải thích; **Phá hủy sáng tạo và vai trò của doanh nghiệp rời thị trường** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tự doanh và phân mảnh thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phá hủy sáng tạo và vai trò của doanh nghiệp rời thị trường
 
@@ -93,6 +102,8 @@ Tuy nhiên để doanh nghiệp yếu rời thị trường cũng có chi phí c
 
 Bảo vệ người lao động để họ chuyển việc tốt hơn khác với giữ mọi doanh nghiệp yếu tồn tại mãi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Tự doanh và phân mảnh thị trường** tiếp nhận điểm tựa từ **Phá hủy sáng tạo và vai trò của doanh nghiệp rời thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nút thắt scale-up** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tự doanh và phân mảnh thị trường
 
 Hàn Quốc có lịch sử tỷ trọng tự doanh tương đối cao. Khi nhiều người rời công ty rồi mở nhà hàng, café hoặc cửa hàng nhỏ, rào cản gia nhập thấp có thể khiến quá nhiều cơ sở cạnh tranh cùng một lượng nhu cầu.
@@ -101,6 +112,8 @@ Nếu người dân không uống nhiều cà phê hơn nhưng số café tăng 
 
 Vì vậy số lượng người “khởi nghiệp” cao không tự động nghĩa năng suất cao. Cần phân biệt **khởi nghiệp tăng trưởng cao** với **tự doanh vì thiếu lựa chọn việc làm (necessity self-employment)**.
 
+> **Chuyển mạch:** Trong **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Nút thắt scale-up** tiếp nhận điểm tựa từ **Tự doanh và phân mảnh thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng quản lý là một dạng công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nút thắt scale-up
 
 Mở rộng quy mô không chỉ cần sản phẩm tốt. Doanh nghiệp còn phải xây quản lý, tài chính, nhân tài, dữ liệu, thương hiệu và thị trường.
@@ -108,6 +121,8 @@ Mở rộng quy mô không chỉ cần sản phẩm tốt. Doanh nghiệp còn p
 Một nhà cung cấp sản xuất có thể cần tự động hóa và chứng nhận xuất khẩu. Một doanh nghiệp dịch vụ có thể cần thương hiệu, thiết kế và kênh bán lặp lại được. Một công ty phần mềm có thể cần **sản phẩm hóa (productization)** để thoát mô hình dự án tính phí theo đầu người.
 
 Chính sách năng suất vì vậy nên xử lý đúng nút thắt của từng loại doanh nghiệp thay vì dùng một gói trợ cấp giống nhau cho tất cả.
+
+> **Chuyển mạch:** Ở chặng này của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Chất lượng quản lý là một dạng công nghệ** tiếp nhận điểm tựa từ **Nút thắt scale-up** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng suất và lương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chất lượng quản lý là một dạng công nghệ
 
@@ -118,6 +133,8 @@ Thực hành quản lý vì vậy là một loại **vốn vô hình (intangible
 Một dashboard MES hiển thị tỷ lệ lỗi sẽ không giúp nhiều nếu quản đốc không có quyền dừng dây chuyền hoặc tổ chức không có quy trình tìm nguyên nhân gốc.
 
 Đây là điểm giao trực tiếp với Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): phần mềm doanh nghiệp không chỉ “hỗ trợ nghiệp vụ”; nó định hình luồng thông tin và độ trễ ra quyết định của tổ chức.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Năng suất và lương** tiếp nhận điểm tựa từ **Chất lượng quản lý là một dạng công nghệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Già hóa khiến năng suất trở nên cấp thiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Năng suất và lương
 
@@ -133,6 +150,8 @@ Tăng\ năng\ suất \neq Tăng\ lương\ tự\ động
 
 Năng suất quyết định “chiếc bánh” có thể lớn nhanh đến đâu; thể chế lao động và quyền thương lượng quyết định chiếc bánh được chia như thế nào.
 
+> **Chuyển mạch:** Trong **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Già hóa khiến năng suất trở nên cấp thiết** tiếp nhận điểm tựa từ **Năng suất và lương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dualism theo vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Già hóa khiến năng suất trở nên cấp thiết
 
 Có thể viết:
@@ -145,6 +164,8 @@ Khi số người làm việc giảm, tăng trưởng phải dựa nhiều hơn 
 
 Xem [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
 
+> **Chuyển mạch:** Ở chặng này của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Dualism theo vùng** tiếp nhận điểm tựa từ **Già hóa khiến năng suất trở nên cấp thiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ có thể giao dịch là một con đường nâng năng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dualism theo vùng
 
 Khoảng cách năng suất còn tồn tại giữa 수도권 và nhiều khu vực khác. Trụ sở, công việc kỹ năng cao, đại học, vốn mạo hiểm và doanh nghiệp lớn tập trung tạo **lợi ích tập trung (agglomeration effect)**.
@@ -153,11 +174,15 @@ Khi nhân tài rời vùng, doanh nghiệp địa phương khó tuyển người
 
 Vì vậy chính sách vùng không thể chỉ xây khu công nghiệp. Nó cần nhu cầu, đại học, giao thông, nhà ở, công việc chất lượng và hệ sinh thái doanh nghiệp đồng thời.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Dịch vụ có thể giao dịch là một con đường nâng năng suất** tiếp nhận điểm tựa từ **Dualism theo vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI: công cụ năng suất hay chỉ là chi phí mới?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dịch vụ có thể giao dịch là một con đường nâng năng suất
 
 Sản xuất Hàn Quốc đã tận dụng nhu cầu toàn cầu rất tốt. Dịch vụ có thể làm điều tương tự nếu trở thành hàng hóa có thể xuất khẩu.
 
 Game, K-content, phần mềm, dịch vụ kỹ thuật, tài chính, y tế và cấp phép IP cho phép doanh nghiệp mở rộng vượt quy mô dân số nội địa. Khi xuất khẩu dịch vụ tăng, năng suất dịch vụ không còn bị khóa hoàn toàn vào nhu cầu địa phương.
+
+> **Chuyển mạch:** Trong **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **AI: công cụ năng suất hay chỉ là chi phí mới?** tiếp nhận điểm tựa từ **Dịch vụ có thể giao dịch là một con đường nâng năng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo năng suất có giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AI: công cụ năng suất hay chỉ là chi phí mới?
 
@@ -175,11 +200,15 @@ Giá trị AI
 
 Nếu một thành phần gần bằng 0, giá trị cuối cùng cũng rất thấp.
 
+> **Chuyển mạch:** Ở chặng này của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **AI: công cụ năng suất hay chỉ là chi phí mới?** đã nêu tiêu chí phân biệt, còn **Đo năng suất có giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Không có một chính sách năng suất duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đo năng suất có giới hạn
 
 Dịch vụ số tạo thách thức đo lường. Một công cụ tìm kiếm miễn phí, ứng dụng nhắn tin hoặc phần mềm mã nguồn mở có thể tạo giá trị lớn cho người dùng nhưng GDP chỉ ghi nhận phần giao dịch tiền tệ. Tương tự, trong y tế hoặc dịch vụ công, phục vụ nhiều người hơn không đồng nghĩa phúc lợi tăng nếu chất lượng giảm.
 
 Vì vậy số liệu năng suất cần được diễn giải theo ngành, không nên dùng như một “điểm số tuyệt đối” cho mọi hoạt động.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Đo năng suất có giới hạn** đã nêu tiêu chí phân biệt, còn **Không có một chính sách năng suất duy nhất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Không có một chính sách năng suất duy nhất
 
@@ -199,16 +228,22 @@ Gia nhập
 
 Nếu chỉ khuyến khích thành lập doanh nghiệp mà không tạo đường scale-up và exit, nền kinh tế có thể có rất nhiều doanh nghiệp nhỏ nhưng năng suất thấp kéo dài.
 
+> **Chuyển mạch:** Trong **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Không có một chính sách năng suất duy nhất** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Năng suất không chỉ là “làm nhanh hơn”. Nó là **khả năng biến lao động, vốn và tri thức thành giá trị cao hơn**. Dualism xuất hiện khi công nghệ, vốn, quản lý và nhân tài tập trung ở một phần nhỏ của nền kinh tế trong khi phần lớn lao động nằm ở khu vực không tích lũy được các lợi thế đó.
+
+> **Chuyển mạch:** Ở chặng này của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
 Năng suất thấp không có nghĩa người lao động lười. Dịch vụ không phải mặc định năng suất thấp. SME không phải mặc định kém công nghệ. Trợ cấp vốn không tự tạo năng suất. AI không tự tạo ROI nếu quy trình không đổi. Đóng doanh nghiệp yếu và bảo vệ người lao động là hai câu hỏi chính sách khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) và [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)
 
-> **Mạch đọc:** Đọc **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hạn chế ràng buộc: thiếu ngoại tệ** sang **Kỷ luật xuất khẩu: thị trường thế giới trở thành người chấm điểm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hạn chế ràng buộc: thiếu ngoại tệ** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Kỷ luật xuất khẩu: thị trường thế giới trở thành người chấm điểm** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối công nghiệp hóa xuất khẩu thập niên 1960 với formation của business groups, chính sách tín dụng và năng lực sản xuất.
 
 Thập niên 1960 là điểm chuyển khi Hàn Quốc đi từ nền kinh tế hậu chiến phụ thuộc nhiều vào viện trợ sang một hệ thống đặt **sản xuất công nghiệp + xuất khẩu + đầu tư** làm động cơ tăng trưởng. Điều quan trọng không chỉ là xuất khẩu tăng. Quan hệ giữa nhà nước, ngân hàng, doanh nghiệp, ngoại tệ và nhu cầu thế giới được tổ chức lại để biến nguồn lực trong nước còn khan hiếm thành năng lực sản xuất có thể bán trên thị trường quốc tế.
 
@@ -21,6 +20,8 @@ Trong thập niên 1950, viện trợ bù phần lớn khoảng thiếu hụt. K
 
 Vì vậy **công nghiệp hóa hướng xuất khẩu (export-oriented industrialization / 수출주도 산업화)** không chỉ là “bán hàng để tăng GDP”. Nó còn là một cơ chế tài trợ cho công nghiệp hóa.
 
+> **Chuyển mạch:** Trong **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Kỷ luật xuất khẩu: thị trường thế giới trở thành người chấm điểm** tiếp nhận điểm tựa từ **Hạn chế ràng buộc: thiếu ngoại tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bùng nổ xuất khẩu không bắt đầu từ một quyết định duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kỷ luật xuất khẩu: thị trường thế giới trở thành người chấm điểm
 
 Một thị trường nội địa được bảo hộ có thể cho phép doanh nghiệp kém hiệu quả tồn tại lâu. Người mua nước ngoài thì không có nghĩa vụ mua hàng Hàn Quốc. Nhà xuất khẩu phải cạnh tranh về giá, chất lượng, thời gian giao hàng và độ tin cậy.
@@ -30,6 +31,8 @@ Một thị trường nội địa được bảo hộ có thể cho phép doanh
 Cơ chế này giải thích vì sao chính sách công nghiệp Hàn Quốc không thể hiểu đơn giản là trợ cấp. Kết quả trên thị trường quốc tế tạo một tín hiệu tương đối khách quan về việc năng lực sản xuất có thật sự cạnh tranh hay không.
 
 > **mô hình tư duy (mental model / 사고 모델):** nhà nước có thể giúp doanh nghiệp chạy nhanh hơn, nhưng khách hàng xuất khẩu quyết định doanh nghiệp có đang chạy đúng hướng hay không.
+
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Bùng nổ xuất khẩu không bắt đầu từ một quyết định duy nhất** tiếp nhận điểm tựa từ **Kỷ luật xuất khẩu: thị trường thế giới trở thành người chấm điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kế hoạch 5 năm: phối hợp chứ không phải kinh tế chỉ huy toàn diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bùng nổ xuất khẩu không bắt đầu từ một quyết định duy nhất
 
@@ -51,6 +54,8 @@ Năng lực xuất khẩu lớn hơn
 
 Chính sách và phản ứng của khu vực tư nhân cùng phát triển, thay vì một bên hoàn toàn quyết định bên còn lại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Kế hoạch 5 năm: phối hợp chứ không phải kinh tế chỉ huy toàn diện** tiếp nhận điểm tựa từ **Bùng nổ xuất khẩu không bắt đầu từ một quyết định duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tín dụng định hướng và ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kế hoạch 5 năm: phối hợp chứ không phải kinh tế chỉ huy toàn diện
 
 Từ năm 1962, **Kế hoạch phát triển kinh tế 5 năm (Economic Development Five-Year Plans / 경제개발 5개년계획)** cung cấp khung cho hạ tầng, ưu tiên đầu tư, vay nước ngoài và mục tiêu công nghiệp.
@@ -58,6 +63,8 @@ Từ năm 1962, **Kế hoạch phát triển kinh tế 5 năm (Economic Developm
 Hàn Quốc vẫn dựa mạnh vào doanh nghiệp tư nhân và thị trường. Nhà nước không trực tiếp ra lệnh sản lượng của từng nhà máy như một nền kinh tế kế hoạch hóa tập trung. Vai trò quan trọng hơn là **phối hợp (coordination / 조정)**: nếu điện, cảng, đường, tín dụng và đầu tư nhà máy phải xuất hiện gần cùng thời điểm, một bộ máy kế hoạch có thể giảm thất bại phối hợp.
 
 Ví dụ, xây nhà máy xuất khẩu nhưng cảng yếu sẽ làm chi phí logistics cao. Xây cảng mà không có sản xuất lại khiến tài sản hạ tầng bị sử dụng thấp. Công nghiệp hóa vì thế cần nhiều khoản đầu tư bổ trợ diễn ra cùng nhau.
+
+> **Chuyển mạch:** Trong **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Tín dụng định hướng và ngân hàng** tiếp nhận điểm tựa từ **Kế hoạch 5 năm: phối hợp chứ không phải kinh tế chỉ huy toàn diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ giá và động lực xuất khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tín dụng định hướng và ngân hàng
 
@@ -78,6 +85,8 @@ Tín dụng ưu tiên
 
 Nếu xuất khẩu thất bại, chuỗi này có thể biến thành nợ xấu. Vì vậy tăng trưởng dựa vào tín dụng luôn đi cùng rủi ro phân bổ vốn sai.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Tỷ giá và động lực xuất khẩu** tiếp nhận điểm tựa từ **Tín dụng định hướng và ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ hàng nhẹ đến tích lũy năng lực sản xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tỷ giá và động lực xuất khẩu
 
 Tỷ giá quyết định bao nhiêu KRW doanh nghiệp nhận được từ một USD doanh thu xuất khẩu và bao nhiêu KRW phải trả cho nguyên liệu nhập khẩu. Điều chỉnh tỷ giá và hệ thống ngoại hối trong thập niên 1960 góp phần làm động lực xuất khẩu rõ hơn.
@@ -85,6 +94,8 @@ Tỷ giá quyết định bao nhiêu KRW doanh nghiệp nhận được từ m�
 Không nên hiểu đồng tiền yếu đơn giản là “luôn tốt cho xuất khẩu”. Một doanh nghiệp nhập phần lớn nguyên liệu có thể chịu chi phí cao hơn khi KRW yếu. Tác động ròng phụ thuộc tỷ trọng doanh thu ngoại tệ, chi phí nhập khẩu và khả năng chuyển giá.
 
 Điểm quan trọng là hệ thống tỷ giá phải giúp phản ánh đúng hơn độ khan hiếm ngoại tệ và không làm xuất khẩu bị mất động lực một cách nhân tạo.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Từ hàng nhẹ đến tích lũy năng lực sản xuất** tiếp nhận điểm tựa từ **Tỷ giá và động lực xuất khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Học bằng làm và hấp thụ công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ hàng nhẹ đến tích lũy năng lực sản xuất
 
@@ -104,6 +115,8 @@ Mua nguyên liệu
 
 Những kỹ năng này tạo **năng lực tổ chức (organizational capability / 조직역량)** có thể chuyển sang ngành phức tạp hơn sau này.
 
+> **Chuyển mạch:** Trong **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Học bằng làm và hấp thụ công nghệ** tiếp nhận điểm tựa từ **Từ hàng nhẹ đến tích lũy năng lực sản xuất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp lớn bắt đầu tích lũy lợi thế quy mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Học bằng làm và hấp thụ công nghệ
 
 Hàn Quốc không phát minh từ đầu mọi công nghệ cần cho công nghiệp hóa. Doanh nghiệp nhập máy móc, mua giấy phép, hợp tác với công ty nước ngoài và học thông qua vận hành thực tế.
@@ -111,6 +124,8 @@ Hàn Quốc không phát minh từ đầu mọi công nghệ cần cho công ngh
 Đây là **học bằng làm (learning by doing / 실행을 통한 학습)** và **hấp thụ công nghệ (technology absorption / 기술흡수)**. Giá trị của máy móc không chỉ nằm ở sản lượng hiện tại mà còn ở việc kỹ sư và công nhân hiểu dần cách vận hành, sửa chữa, cải tiến và nội địa hóa.
 
 Quá trình này tạo một dạng lợi thế động. Một quốc gia ban đầu không có lợi thế tự nhiên trong điện tử hay ô tô vẫn có thể xây **lợi thế so sánh động (dynamic comparative advantage / 동태적 비교우위)** thông qua đầu tư và học tập.
+
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Doanh nghiệp lớn bắt đầu tích lũy lợi thế quy mô** tiếp nhận điểm tựa từ **Học bằng làm và hấp thụ công nghệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà nước và doanh nghiệp: quan hệ vừa hợp tác vừa kỷ luật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Doanh nghiệp lớn bắt đầu tích lũy lợi thế quy mô
 
@@ -129,6 +144,8 @@ Dự án thành công
 
 Cơ chế này góp phần giải thích vì sao một số nhóm doanh nghiệp lớn nhanh hơn phần còn lại và sau đó trở thành chaebol.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Nhà nước và doanh nghiệp: quan hệ vừa hợp tác vừa kỷ luật** tiếp nhận điểm tựa từ **Doanh nghiệp lớn bắt đầu tích lũy lợi thế quy mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lao động, đô thị hóa và lợi thế chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhà nước và doanh nghiệp: quan hệ vừa hợp tác vừa kỷ luật
 
 Chính phủ cần doanh nghiệp tư nhân để thực hiện đầu tư, còn doanh nghiệp cần tín dụng, ngoại tệ, hạ tầng và quyền tiếp cận thị trường. Hai bên vì vậy phụ thuộc lẫn nhau.
@@ -137,17 +154,23 @@ Nhưng quan hệ này không nên hiểu là chính phủ chỉ “cho tiền”
 
 Đây là một trong những khác biệt quan trọng giữa **chính sách công nghiệp tạo năng lực** và **trợ cấp bảo vệ doanh nghiệp yếu**.
 
+> **Chuyển mạch:** Trong **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Lao động, đô thị hóa và lợi thế chi phí** tiếp nhận điểm tựa từ **Nhà nước và doanh nghiệp: quan hệ vừa hợp tác vừa kỷ luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xuất khẩu tạo dữ liệu cho chính sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lao động, đô thị hóa và lợi thế chi phí
 
 Trong giai đoạn đầu, lực lượng lao động trẻ, di cư từ nông thôn ra thành phố và mức lương còn thấp tạo lợi thế cho ngành thâm dụng lao động. Nhưng lợi thế lương thấp không thể kéo dài mãi.
 
 Khi thu nhập tăng, doanh nghiệp phải chuyển từ cạnh tranh bằng chi phí lao động sang năng suất, chất lượng, công nghệ và thương hiệu. Chính áp lực này góp phần đẩy Hàn Quốc sang các ngành vốn và công nghệ cao hơn trong thập niên 1970–1980.
 
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Lao động, đô thị hóa và lợi thế chi phí** nêu điều cần giải thích; **Xuất khẩu tạo dữ liệu cho chính sách** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Từ công nghiệp nhẹ tới câu hỏi về ngành thượng nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xuất khẩu tạo dữ liệu cho chính sách
 
 Một lợi ích ít được chú ý của chiến lược xuất khẩu là tạo ra dữ liệu thực tế. Nếu doanh nghiệp liên tục mất đơn hàng, chất lượng hoặc chi phí có vấn đề. Nếu doanh nghiệp tăng xuất khẩu nhanh, có thể đã tích lũy một năng lực cạnh tranh đáng kể.
 
 Do đó thị trường quốc tế không chỉ cung cấp ngoại tệ mà còn cung cấp **tín hiệu hiệu suất (performance signal)** cho cả doanh nghiệp và nhà hoạch định chính sách.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Xuất khẩu tạo dữ liệu cho chính sách** nêu điều cần giải thích; **Từ công nghiệp nhẹ tới câu hỏi về ngành thượng nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những rủi ro đã hình thành ngay trong giai đoạn tăng trưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ công nghiệp nhẹ tới câu hỏi về ngành thượng nguồn
 
@@ -159,11 +182,15 @@ Khi xuất khẩu hàng chế tạo tăng, Hàn Quốc lại gặp một hạn c
 
 Câu hỏi đó dẫn trực tiếp tới chiến lược **công nghiệp nặng và hóa chất (Heavy and Chemical Industries, HCI / 중화학공업)** trong thập niên 1970.
 
+> **Chuyển mạch:** Trong **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Từ công nghiệp nhẹ tới câu hỏi về ngành thượng nguồn** nêu điều cần giải thích; **Những rủi ro đã hình thành ngay trong giai đoạn tăng trưởng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên kết (connection / 연결) — Tại sao thập niên 1970 khác thập niên 1960** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những rủi ro đã hình thành ngay trong giai đoạn tăng trưởng
 
 Cơ chế tăng trưởng nhanh cũng gieo hạt cho các vấn đề sau này. Tín dụng tập trung vào một số doanh nghiệp có thể làm quyền lực kinh tế tập trung. Doanh nghiệp quen với tăng trưởng bằng nợ có thể mang đòn bẩy cao. Quan hệ gần giữa nhà nước, ngân hàng và tập đoàn có thể tạo rủi ro đạo đức nếu doanh nghiệp tin rằng mình sẽ luôn được cứu.
 
 Vì vậy không nên đọc thập niên 1960 như câu chuyện thành công không có chi phí. Chính những cơ chế giúp tăng trưởng nhanh sau này cũng trở thành đối tượng cải cách.
+
+> **Chuyển mạch:** Ở chặng này của **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)**, **Liên kết (connection / 연결) — Tại sao thập niên 1970 khác thập niên 1960** tiếp nhận điểm tựa từ **Những rủi ro đã hình thành ngay trong giai đoạn tăng trưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết (connection / 연결) — Tại sao thập niên 1970 khác thập niên 1960
 
@@ -173,4 +200,4 @@ Chương tiếp theo, [thập niên 1970: HCI và mở rộng chaebol](./03_1970
 
 > **mô hình tư duy (mental model / 사고 모델) cuối:** thập niên 1960 không chỉ là “xuất khẩu tăng”. Đó là quá trình xây một vòng phản hồi giữa ngoại tệ, tín dụng, đầu tư, học công nghệ và kỷ luật thị trường quốc tế. Vòng phản hồi này tạo ra năng lực sản xuất và đồng thời làm một số doanh nghiệp tích lũy quy mô nhanh hơn, đặt nền cho cấu trúc tập đoàn của Hàn Quốc sau này.
 
-> **Bàn giao:** Sau **liên kết (connection / 연결) — Tại sao thập niên 1970 khác thập niên 1960**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết (connection / 연결) — Tại sao thập niên 1970 khác thập niên 1960**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

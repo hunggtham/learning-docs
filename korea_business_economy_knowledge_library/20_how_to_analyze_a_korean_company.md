@@ -1,7 +1,6 @@
 # Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)
 
-> **Mạch đọc:** Đặt **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bước 0 — Đặt doanh nghiệp vào lịch sử và hệ sinh thái** sang **Bước 1 — Xác định đúng pháp nhân**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bước 0 — Đặt doanh nghiệp vào lịch sử và hệ sinh thái** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bước 1 — Xác định đúng pháp nhân** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối phân tích một công ty Hàn Quốc với ownership, governance, segment, cash flow và risk, để tránh kết luận từ một chỉ số đơn lẻ.
 
 Đây là chương thực hành trung tâm của toàn bộ thư viện. Khi gặp một doanh nghiệp mới—dù là nơi định ứng tuyển, nhà cung cấp, đối tác dự án hay một công ty niêm yết—không nên bắt đầu từ biểu đồ giá cổ phiếu hoặc danh tiếng thương hiệu. Hãy đi theo chuỗi **pháp nhân → mô hình kinh doanh → ngành và chuỗi giá trị → bộ máy tài chính → quản trị → phân bổ vốn → rủi ro và định giá**.
 
@@ -12,6 +11,8 @@ Mục tiêu không phải tạo một danh sách kiểm tra máy móc. Mục ti�
 Trước hết hãy hỏi doanh nghiệp hình thành trong giai đoạn nào của kinh tế Hàn Quốc. Một tập đoàn xây dựng hoặc công nghiệp hình thành trong thời kỳ tái thiết và phát triển công nghiệp nặng thường có nền tài sản, thói quen sử dụng nợ và mạng lưới nhà cung cấp rất khác một nền tảng số sinh ra trong thời kỳ Internet băng rộng. Một công ty dịch vụ CNTT thuộc chaebol có nhu cầu nội bộ ổn định (captive demand) khác một startup SaaS phải tự tìm từng khách hàng.
 
 Nguồn gốc lịch sử không quyết định tương lai, nhưng thường giải thích được “DNA tổ chức” của doanh nghiệp. Nếu công ty thuộc một tập đoàn lớn, nên đọc [phả hệ doanh nghiệp](./00_history/08_company_genealogies.md) và [chaebol](./04_chaebol_and_large_business_groups.md).
+
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 1 — Xác định đúng pháp nhân** tiếp nhận điểm tựa từ **Bước 0 — Đặt doanh nghiệp vào lịch sử và hệ sinh thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 2 — Xác định động cơ doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 1 — Xác định đúng pháp nhân
 
@@ -29,6 +30,8 @@ Các công ty con quan trọng
 
 Câu hỏi cốt lõi là: **pháp nhân nào thực sự ký hợp đồng, vay nợ, sở hữu tài sản và tạo lợi nhuận?**
 
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 2 — Xác định động cơ doanh thu** tiếp nhận điểm tựa từ **Bước 1 — Xác định đúng pháp nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 3 — Vẽ chuỗi giá trị và quyền thương lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 2 — Xác định động cơ doanh thu
 
 Doanh thu (revenue / 매출액) nên được tách theo phân khúc, khu vực, nhóm khách hàng và sản phẩm nếu doanh nghiệp công bố đủ dữ liệu.
@@ -42,6 +45,8 @@ Doanh\ thu = Sản\ lượng \times Giá
 Nhưng “sản lượng” có nghĩa khác nhau giữa các ngành. Với nền tảng số, đó có thể là người dùng hoặc giao dịch. Với ngân hàng, đơn vị kinh tế có thể là dư nợ, tài sản sinh lãi, tiền gửi hoặc phí. Với xây dựng, doanh thu liên quan đến tiến độ dự án và đơn hàng tồn đọng. Với SaaS, có thể nhìn số thuê bao và doanh thu định kỳ hằng năm (ARR).
 
 Sau đó cần hỏi: sản lượng tăng do thị trường tăng hay doanh nghiệp giành thêm thị phần? Giá tăng do quyền định giá hay chỉ do lạm phát? Cơ cấu sản phẩm (mix) có làm biên lợi nhuận thay đổi không? Doanh thu có tính lặp lại hay chỉ xuất hiện một lần? Mức độ tập trung khách hàng có cao không?
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 2 — Xác định động cơ doanh thu** xác định đầu vào; **Bước 3 — Vẽ chuỗi giá trị và quyền thương lượng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bước 4 — Tìm đơn vị kinh tế tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 3 — Vẽ chuỗi giá trị và quyền thương lượng
 
@@ -58,6 +63,8 @@ Trên sơ đồ đó, đánh dấu mức độ tập trung của nhà cung cấp
 
 Biên lợi nhuận gộp thường chỉ có ý nghĩa khi biết doanh nghiệp đang đứng ở đâu trong chuỗi. Một nhà cung cấp linh kiện có công nghệ tốt nhưng phụ thuộc một khách hàng duy nhất vẫn có thể có quyền thương lượng yếu nếu người mua dễ thay nhà cung cấp.
 
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 3 — Vẽ chuỗi giá trị và quyền thương lượng** xác định đầu vào; **Bước 4 — Tìm đơn vị kinh tế tự nhiên** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bước 5 — Lợi thế cạnh tranh phải có cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 4 — Tìm đơn vị kinh tế tự nhiên
 
 Doanh thu và lợi nhuận toàn công ty có thể che mất cơ chế kinh tế của từng đơn vị. Hãy tìm **đơn vị kinh tế (economic unit)** phù hợp với ngành.
@@ -65,6 +72,8 @@ Doanh thu và lợi nhuận toàn công ty có thể che mất cơ chế kinh t�
 Bán dẫn có thể nhìn wafer, bit, yield và ASP. Hàng không có thể nhìn hành khách-km, hệ số tải và doanh thu trên đơn vị vận chuyển. Nền tảng số có thể nhìn người dùng, giao dịch và tỷ lệ thu phí (take rate). SaaS có thể nhìn khách hàng, ARR và tỷ lệ rời bỏ (churn). Ngân hàng cần nhìn khoản vay, NIM và chi phí tín dụng. Xây dựng cần nhìn biên lợi nhuận dự án và mức phơi nhiễm PF.
 
 Nếu chưa xác định được đơn vị kinh tế, phân tích thường vẫn đang ở mức quá tổng hợp.
+
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 4 — Tìm đơn vị kinh tế tự nhiên** xác định đầu vào; **Bước 5 — Lợi thế cạnh tranh phải có cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bước 6 — Đọc ba báo cáo tài chính cùng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 5 — Lợi thế cạnh tranh phải có cơ chế
 
@@ -84,6 +93,8 @@ Lợi thế có xuất hiện trong biên lợi nhuận, thị phần hoặc t�
 
 Một năng lực kỹ thuật không chuyển thành giá trị kinh tế có thể chỉ là sự xuất sắc về kỹ thuật, chưa chắc là lợi thế cạnh tranh có thể kiếm tiền.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 5 — Lợi thế cạnh tranh phải có cơ chế** xác định đầu vào; **Bước 6 — Đọc ba báo cáo tài chính cùng nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bước 7 — Đối chiếu lợi nhuận với tiền mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 6 — Đọc ba báo cáo tài chính cùng nhau
 
 Báo cáo kết quả kinh doanh cho biết khả năng tạo lợi nhuận. Bảng cân đối kế toán cho biết doanh nghiệp sở hữu nguồn lực gì và ai có quyền đòi hỏi trên các nguồn lực đó. Báo cáo lưu chuyển tiền tệ cho biết tiền thật sự di chuyển như thế nào.
@@ -91,6 +102,8 @@ Báo cáo kết quả kinh doanh cho biết khả năng tạo lợi nhuận. B�
 Tối thiểu cần theo dõi tăng trưởng doanh thu, biên lợi nhuận gộp và hoạt động, khoản phải thu, tồn kho, dòng tiền hoạt động so với lợi nhuận ròng, CAPEX, nợ và lịch đáo hạn, chi phí lãi vay, số lượng cổ phiếu, cổ tức và mua lại cổ phiếu.
 
 Ba báo cáo phải giải thích được lẫn nhau. Lợi nhuận tăng liên tục nhưng tiền mặt giảm liên tục là tín hiệu cần tìm nguyên nhân.
+
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 6 — Đọc ba báo cáo tài chính cùng nhau** đã nêu tiêu chí phân biệt, còn **Bước 7 — Đối chiếu lợi nhuận với tiền mặt** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bước 8 — Xây cầu nối tài chính nhiều năm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 7 — Đối chiếu lợi nhuận với tiền mặt
 
@@ -103,6 +116,8 @@ Dòng\ tiền\ tự\ do\ (FCF) \approx CFO - CAPEX
 \]
 
 Tuy nhiên không nên áp dụng máy móc cho ngân hàng hoặc bảo hiểm vì cấu trúc bảng cân đối và khái niệm vốn hoạt động của các ngành tài chính khác doanh nghiệp công nghiệp.
+
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 7 — Đối chiếu lợi nhuận với tiền mặt** đã nêu tiêu chí phân biệt, còn **Bước 8 — Xây cầu nối tài chính nhiều năm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bước 9 — Phân biệt chu kỳ và thay đổi cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 8 — Xây cầu nối tài chính nhiều năm
 
@@ -122,17 +137,23 @@ Doanh thu
 
 Đánh dấu các sự kiện lớn như mua lại doanh nghiệp, chia tách, mở nhà máy, đỉnh/đáy chu kỳ, thay đổi chuẩn kế toán hoặc thay đổi quy định. Mục tiêu là phân biệt **thay đổi cấu trúc (structural change)** với **nhiễu tạm thời (temporary noise)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 9 — Phân biệt chu kỳ và thay đổi cấu trúc** tiếp nhận điểm tựa từ **Bước 8 — Xây cầu nối tài chính nhiều năm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 10 — Đọc bảng cân đối và đòn bẩy ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 9 — Phân biệt chu kỳ và thay đổi cấu trúc
 
 Nhiều ngành lớn của Hàn Quốc có tính chu kỳ mạnh: bán dẫn, hóa chất, thép, đóng tàu, xây dựng và pin. Lợi nhuận ở đỉnh chu kỳ có thể làm P/E trông rất thấp ngay trước khi lợi nhuận giảm.
 
 Thay vì kéo dài lợi nhuận một năm sang tương lai, hãy ước lượng **lợi nhuận chuẩn hóa (normalized earnings / 정상화 이익)** và hỏi lợi nhuận tăng do chu kỳ, tỷ giá, chi phí đầu vào, thị phần, công nghệ, công suất hay quyền định giá. Mỗi động lực có độ bền khác nhau.
 
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 10 — Đọc bảng cân đối và đòn bẩy ẩn** tiếp nhận điểm tựa từ **Bước 9 — Phân biệt chu kỳ và thay đổi cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 11 — Phân tích quản trị doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 10 — Đọc bảng cân đối và đòn bẩy ẩn
 
 Nợ vay trên trang đầu báo cáo chưa chắc bằng tổng đòn bẩy kinh tế. Phần thuyết minh có thể chứa hợp đồng thuê, bảo lãnh, cam kết PF, factoring, phái sinh, công ty liên kết chưa hợp nhất, nghĩa vụ hưu trí và khoản phải thu với bên liên quan.
 
 Một doanh nghiệp có nợ vay thấp nhưng bảo lãnh lớn vẫn có rủi ro đuôi (tail risk) đáng kể. Xem thêm [ngân hàng và tài trợ doanh nghiệp](./11_banks_finance_and_corporate_funding.md).
+
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 11 — Phân tích quản trị doanh nghiệp** tiếp nhận điểm tựa từ **Bước 10 — Đọc bảng cân đối và đòn bẩy ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 12 — Theo dõi phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 11 — Phân tích quản trị doanh nghiệp
 
@@ -143,6 +164,8 @@ Với công ty thuộc chaebol, câu hỏi quan trọng là:
 > Quyết định này tối ưu lợi ích của chính pháp nhân đang phân tích hay chủ yếu phục vụ kiến trúc kiểm soát của toàn tập đoàn?
 
 Không nên mặc định có xung đột. Mục tiêu là tách rõ hai cấp độ lợi ích.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 12 — Theo dõi phân bổ vốn** tiếp nhận điểm tựa từ **Bước 11 — Phân tích quản trị doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 13 — Chuyển câu chuyện của ban lãnh đạo thành biến đo được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 12 — Theo dõi phân bổ vốn
 
@@ -158,11 +181,15 @@ ROIIC \approx \frac{\Delta NOPAT}{\Delta Vốn\ đầu\ tư}
 
 Nếu doanh nghiệp tái đầu tư rất lớn nhưng NOPAT tăng thêm thấp, doanh thu tăng vẫn có thể phá hủy giá trị.
 
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 13 — Chuyển câu chuyện của ban lãnh đạo thành biến đo được** tiếp nhận điểm tựa từ **Bước 12 — Theo dõi phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 14 — Tách sự thật, tuyên bố của quản lý và suy luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 13 — Chuyển câu chuyện của ban lãnh đạo thành biến đo được
 
 Các cụm từ như “AI”, “EV”, “xanh” hay “toàn cầu” trong tài liệu IR mới chỉ là câu chuyện. Hãy chuyển chúng thành các biến cụ thể: CAPEX bao nhiêu, công suất bao nhiêu, khi nào tăng sản lượng, khách hàng là ai, giả định tỷ lệ sử dụng công suất thế nào, ASP và biên lợi nhuận bao nhiêu, ROIC cần đạt mức nào.
 
 Nếu một câu chuyện không thể nối với doanh thu, chi phí, tài sản hoặc dòng tiền, hãy coi nó là **giả thuyết (hypothesis)** chứ chưa phải sự thật.
+
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 14 — Tách sự thật, tuyên bố của quản lý và suy luận** tiếp nhận điểm tựa từ **Bước 13 — Chuyển câu chuyện của ban lãnh đạo thành biến đo được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 15 — Chọn doanh nghiệp so sánh đúng tầng chuỗi giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 14 — Tách sự thật, tuyên bố của quản lý và suy luận
 
@@ -176,17 +203,23 @@ Một ghi chú nghiên cứu nên phân biệt rõ:
 
 Trộn ba tầng này là một nguồn lớn của thiên kiến xác nhận (confirmation bias).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 14 — Tách sự thật, tuyên bố của quản lý và suy luận** đã nêu tiêu chí phân biệt, còn **Bước 15 — Chọn doanh nghiệp so sánh đúng tầng chuỗi giá trị** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bước 16 — Lập ma trận phơi nhiễm kinh tế vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 15 — Chọn doanh nghiệp so sánh đúng tầng chuỗi giá trị
 
 Không nên so sánh toàn bộ Samsung Electronics với TSMC chỉ vì cả hai đều liên quan đến bán dẫn. Hãy so bộ nhớ với bộ nhớ, foundry với foundry, nhà sản xuất cathode với nhà sản xuất cathode, nhà sản xuất cell pin với nhà sản xuất cell, công ty SI với công ty SI và ngân hàng Internet với nhóm ngân hàng/fintech có cơ chế kinh tế tương đồng.
 
 So sánh ngang hàng (peer comparison) chỉ có ý nghĩa khi các doanh nghiệp kiếm tiền theo cơ chế đủ giống nhau.
 
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 15 — Chọn doanh nghiệp so sánh đúng tầng chuỗi giá trị** đã nêu tiêu chí phân biệt, còn **Bước 16 — Lập ma trận phơi nhiễm kinh tế vĩ mô** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bước 17 — Chỉ định giá sau khi hiểu cơ chế kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 16 — Lập ma trận phơi nhiễm kinh tế vĩ mô
 
 Xác định những biến thực sự có liên hệ nhân quả với doanh nghiệp: KRW/USD, lãi suất BOK, dầu hoặc hàng hóa, nhu cầu Trung Quốc/Mỹ, nợ hộ gia đình, nhà ở, chu kỳ bán dẫn và quy định. Không cần đưa mọi biến vào mô hình. Chỉ giữ những biến có đường truyền tác động rõ.
 
 Xem [cơ chế truyền dẫn từ nền kinh tế đến doanh nghiệp](./21_economy_to_company_transmission.md).
+
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 16 — Lập ma trận phơi nhiễm kinh tế vĩ mô** xác định đầu vào; **Bước 17 — Chỉ định giá sau khi hiểu cơ chế kinh tế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bước 18 — Định giá ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 17 — Chỉ định giá sau khi hiểu cơ chế kinh tế
 
@@ -198,6 +231,8 @@ EV = \sum_{t=1}^{n}\frac{FCF_t}{(1+WACC)^t} + \frac{Giá\ trị\ cuối\ kỳ}{(
 
 DCF không tạo ra sự chắc chắn. Giá trị lớn nhất của nó là buộc các giả định phải lộ ra. Bảng độ nhạy thường hữu ích hơn một giá mục tiêu duy nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 17 — Chỉ định giá sau khi hiểu cơ chế kinh tế** xác định đầu vào; **Bước 18 — Định giá ngược** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bước 19 — Kiểm tra sức chịu đựng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 18 — Định giá ngược
 
 Thay vì chỉ hỏi “giá hợp lý là bao nhiêu?”, có thể hỏi:
@@ -206,11 +241,15 @@ Thay vì chỉ hỏi “giá hợp lý là bao nhiêu?”, có thể hỏi:
 
 Đây là **DCF ngược (reverse DCF / 역산 DCF)**. Nếu giá hiện tại chỉ hợp lý khi biên lợi nhuận tăng lên mức doanh nghiệp chưa từng đạt, giả thuyết cần bằng chứng rất mạnh.
 
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 19 — Kiểm tra sức chịu đựng** tiếp nhận điểm tựa từ **Bước 18 — Định giá ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 20 — Xác định điều kiện làm giả thuyết sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 19 — Kiểm tra sức chịu đựng
 
 Tạo các cú sốc phù hợp với ngành, chẳng hạn nhu cầu giảm 10%, ASP giảm 15%, chi phí đầu vào tăng 20%, lãi suất tăng 150 điểm cơ bản, KRW biến động 10%, mất khách hàng lớn, nhà máy tăng sản lượng chậm hoặc bảo lãnh PF trở thành nghĩa vụ thực tế.
 
 Sau đó lần theo tác động đến doanh thu, biên lợi nhuận, tiền mặt, điều khoản nợ và nhu cầu huy động vốn. Kiểm tra sức chịu đựng (stress test) nên tập trung vào biến có thể làm giả thuyết đổi bản chất, không chỉ làm EPS giảm vài phần trăm.
+
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 20 — Xác định điều kiện làm giả thuyết sai** tiếp nhận điểm tựa từ **Bước 19 — Kiểm tra sức chịu đựng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 21 — Thực hiện pre-mortem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bước 20 — Xác định điều kiện làm giả thuyết sai
 
@@ -218,17 +257,23 @@ Mỗi phân tích nên ghi rõ 2–5 **điều kiện bác bỏ giả thuyết (
 
 Việc ghi trước các điều kiện này giúp chống thiên kiến xác nhận và tâm lý tiếc công đã bỏ ra.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 21 — Thực hiện pre-mortem** tiếp nhận điểm tựa từ **Bước 20 — Xác định điều kiện làm giả thuyết sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 22 — Nếu mục tiêu là nghề nghiệp, thêm lớp phân tích việc làm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 21 — Thực hiện pre-mortem
 
 Giả sử hai năm sau phân tích sai hoàn toàn. Hãy hỏi nguyên nhân hợp lý có thể là gì: chu kỳ đảo chiều, công nghệ bị thay thế, mất khách hàng, phân bổ vốn sai, vấn đề quản trị, thay đổi quy định, khủng hoảng nguồn vốn hay chậm thực thi.
 
 **Pre-mortem** là cách tìm rủi ro lớn trước khi chúng trở thành tiêu đề tin tức.
 
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 22 — Nếu mục tiêu là nghề nghiệp, thêm lớp phân tích việc làm** tiếp nhận điểm tựa từ **Bước 21 — Thực hiện pre-mortem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự ưu tiên nguồn nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bước 22 — Nếu mục tiêu là nghề nghiệp, thêm lớp phân tích việc làm
 
 Nếu công ty là nơi định ứng tuyển, cần xem độ ổn định của đơn vị kinh doanh, xu hướng nhân sự, tỷ lệ nghỉ việc, cấu trúc lương thưởng, hệ thống thăng tiến, tỷ lệ thuê ngoài, nguồn dự án, khả năng chuyển đổi kỹ năng, chất lượng quản lý và độ rộng/sâu của vai trò.
 
 Một công ty tài chính mạnh chưa chắc cung cấp vai trò tốt cho sự nghiệp; một công ty nhỏ cũng chưa chắc có môi trường học tập kém. Xem [lao động và chức danh](./12_labor_titles_compensation_and_workplace.md) cùng [văn hóa doanh nghiệp](./13_business_culture_decision_making_and_communication.md).
+
+> **Chuyển mạch:** Ở chặng này của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Bước 22 — Nếu mục tiêu là nghề nghiệp, thêm lớp phân tích việc làm** nêu điều cần giải thích; **Thứ tự ưu tiên nguồn nghiên cứu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mẫu nghiên cứu có thể tái sử dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự ưu tiên nguồn nghiên cứu
 
@@ -251,6 +296,8 @@ Cộng đồng / đánh giá người dùng hoặc nhân viên
 ```
 
 Nguồn ở tầng thấp không vô dụng. Đánh giá nhân viên có thể hữu ích để hiểu văn hóa; báo chí có thể cung cấp bối cảnh. Tuy nhiên số liệu tài chính nên quay về nguồn sơ cấp bất cứ khi nào có thể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Thứ tự ưu tiên nguồn nghiên cứu** nêu điều cần giải thích; **Mẫu nghiên cứu có thể tái sử dụng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu nghiên cứu có thể tái sử dụng
 
@@ -280,6 +327,8 @@ Mẫu này gom business, ngành, tài chính, định giá, quản trị và fai
 Các nguồn cuối bài là điểm bắt đầu để kiểm tra lại số liệu và sự kiện trong hồ sơ công ty. Hãy ghi ngày truy cập và phân biệt nguồn pháp lý, nguồn doanh nghiệp và nguồn diễn giải.
 ```
 
+> **Chuyển mạch:** Trong **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)**, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy** gom các mảnh từ **Mẫu nghiên cứu có thể tái sử dụng** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Phân tích doanh nghiệp là quá trình chuyển từ **thương hiệu → pháp nhân → cỗ máy kinh tế → cỗ máy tài chính → quản trị → kỳ vọng thị trường**.
@@ -301,4 +350,4 @@ Ai kiểm soát doanh nghiệp?
 
 Khi trả lời được chuỗi này bằng bằng chứng thay vì cảm giác, ta đã chuyển từ “biết tên công ty” sang thực sự hiểu doanh nghiệp.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
