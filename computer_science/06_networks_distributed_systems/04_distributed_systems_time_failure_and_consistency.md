@@ -1,6 +1,6 @@
 # Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thời gian (time / 시간), thất bại (failure / 실패) và consistency trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Partial thất bại (failure / 실패)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Không có toàn cục (global / 전역) thời gian (time / 시간) đơn giản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Time, failure và consistency trong distributed systems**. Route đi từ partial failure → clock/causality → consistency models → CAP → safety/liveness và failure detectors, để mọi guarantee được đặt trong giới hạn quan sát và thời gian.
 
 Hệ thống phân tán (distributed system / 분산 시스템) gồm components trên nhiều machines/processes giao tiếp qua mạng (network / 네트워크). Điều làm nó khó không chỉ “nhiều máy” mà là **không có dùng chung (shared / 공유) bộ nhớ (memory / 메모리) hoàn hảo, không có toàn cục (global / 전역) clock hoàn hảo, message delay không bounded chắc chắn, và thất bại (failure / 실패) có thể partial**.
 

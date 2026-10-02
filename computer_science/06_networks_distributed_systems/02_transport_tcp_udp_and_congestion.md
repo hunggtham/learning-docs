@@ -1,6 +1,6 @@
 # TCP, UDP, luồng (flow / 흐름) điều khiển (control / 제어) và congestion điều khiển (control / 제어)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **TCP, UDP, luồng (flow / 흐름) điều khiển (control / 제어) và congestion điều khiển (control / 제어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **UDP** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **TCP lớp trừu tượng (abstraction / 추상화)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **TCP, UDP, flow control và congestion control**. Route đi từ datagram/UDP → TCP reliability/sequence/ACK → flow control → congestion window, RTT và retransmission, để throughput luôn được đọc cùng backpressure.
 
 IP best-effort chuyển datagrams nhưng không guarantee delivery, thứ tự (order / 순서) hay duplicate-free. tầng vận chuyển (transport layer / 전송 계층) thêm communication lớp trừu tượng (abstraction / 추상화) giữa ứng dụng (application / 애플리케이션) endpoints qua ports.
 

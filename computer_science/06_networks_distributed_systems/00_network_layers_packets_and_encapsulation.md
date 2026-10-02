@@ -1,6 +1,6 @@
 # Mạng (network / 네트워크) layers, packets và encapsulation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mạng (network / 네트워크) layers, packets và encapsulation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Giao thức (protocol / 프로토콜) là đặc tả hợp đồng (contract / 계약) giữa peers** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Layering** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Network layers, packets và encapsulation**. Route đi từ peer protocol/contract → layering → encapsulation/addressing → MTU, loss và queues, để một packet được truy theo từng lớp tới latency và failure.
 
 Mạng (network / 네트워크) cho phép computers trao đổi dữ liệu qua links không hoàn hảo, heterogeneous hardware và nhiều administrative domains. Để hệ thống không phải giải mọi vấn đề cùng lúc, networking chia responsibilities thành layers và protocols.
 

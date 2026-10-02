@@ -1,6 +1,6 @@
 # DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **URL decomposition** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DNS** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **DNS, HTTP, TLS và một web request end-to-end**. Route đi từ URL/DNS → transport connection → TLS identity/keys → HTTP semantics → cache/proxy/load balancer, để một request được truy nguyên từ tên miền tới response.
 
 Gõ một URL nhìn như một hành động (action / 동작) đơn giản, nhưng trình duyệt (browser / 브라우저) phải resolve name, establish tuyến (route / 경로)/vận chuyển (transport / 전송)/bảo mật (security / 보안) ngữ cảnh (context / 맥락), speak HTTP, receive dữ liệu (data / 데이터) và execute/kết xuất (render / 렌더링). Chapter này dùng web yêu cầu (request / 요청) để nối nhiều layers.
 
