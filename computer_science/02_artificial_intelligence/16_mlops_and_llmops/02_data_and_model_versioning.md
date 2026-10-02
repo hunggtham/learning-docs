@@ -1,6 +1,6 @@
 # Phiên bản (version / 버전) hóa Dữ liệu và Mô hình
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phiên bản (version / 버전) hóa Dữ liệu và Mô hình**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phiên bản dữ liệu là gì?** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Dữ liệu có thể thay đổi nguy hiểm ở đâu?** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data và model versioning**. Route đi từ immutable dataset snapshot → schema/label changes → model artifact lineage → compatibility and rollback → reproducible release, để phiên bản hóa bảo toàn quan hệ giữa dữ liệu, code và model.
 
 Một hệ thống ML chỉ có thể tái lập tốt khi **dữ liệu, mã nguồn và sản phẩm tạo ra (artifact / 산출물) mô hình đều có danh tính rõ ràng**. Git quản lý mã nguồn rất tốt, nhưng tập dữ liệu lớn, bảng có thể thay đổi và đặc trưng được sinh tự động cần cơ chế versioning và lineage riêng.
 

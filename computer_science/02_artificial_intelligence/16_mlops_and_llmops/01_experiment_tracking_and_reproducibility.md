@@ -1,6 +1,6 @@
 # Theo dõi Thí nghiệm và Khả năng Tái lập
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Theo dõi Thí nghiệm và Khả năng Tái lập**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một thí nghiệm cần lưu gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Khả năng tái lập không đồng nghĩa tính xác định từng bit** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Experiment tracking và reproducibility**. Route đi từ code/data/config snapshot → metrics/artifacts → run lineage → deterministic versus statistical repeatability → promotion evidence, để kết quả có thể được truy nguyên và tái kiểm.
 
 Quá trình phát triển Machine học tập (learning / 학습) là quá trình thử nhiều giả thuyết: họ mô hình (model family), đặc trưng (feature), tốc độ học (learning rate), snapshot dữ liệu, augmentation, prompt, chunking, retriever hoặc chính sách đánh giá. Nếu thí nghiệm không được theo dõi có cấu trúc, nhóm rất nhanh rơi vào tình trạng “mô hình tốt nhất là tệp (file / 파일) nào?” hoặc “vì sao chỉ số tháng trước cao hơn?”.
 

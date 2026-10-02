@@ -1,6 +1,6 @@
 # Ứng phó Sự cố và Vòng đời môi trường vận hành (production / 운영 환경) AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ứng phó Sự cố và Vòng đời môi trường vận hành (production / 운영 환경) AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sự cố không chỉ là dịch vụ (service / 서비스) Down** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mức độ nghiêm trọng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Incident response và AI production lifecycle**. Route đi từ model/data/service symptom → severity and blast radius → containment/rollback → root-cause evidence → post-incident lifecycle fixes, để sự cố dẫn tới cải thiện hệ thống.
 
 Hệ thống AI cuối cùng vẫn là hệ thống môi trường vận hành (production / 운영 환경) và sẽ có sự cố: độ trễ tăng đột biến, sai phiên bản mô hình, dữ liệu xấu, bùng phát hallucination, retrieval outage, hành động công cụ (tool / 도구) không an toàn, rò rỉ dữ liệu hoặc chi phí tăng mất kiểm soát. **Ứng phó sự cố (incident response / 사고 대응)** biến những thất bại (failure / 실패) này thành một quy trình có containment, chẩn đoán, phục hồi và học hỏi.
 

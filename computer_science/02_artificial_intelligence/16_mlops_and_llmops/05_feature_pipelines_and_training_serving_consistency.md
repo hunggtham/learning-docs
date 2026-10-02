@@ -1,6 +1,6 @@
 # Chuỗi xử lý (pipeline / 파이프라인) Đặc trưng và Tính nhất quán giữa Huấn luyện–Phục vụ
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chuỗi xử lý (pipeline / 파이프라인) Đặc trưng và Tính nhất quán giữa Huấn luyện–Phục vụ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuỗi xử lý (pipeline / 파이프라인) đặc trưng là gì?** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Tính đúng theo thời điểm** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Feature pipelines và training–serving consistency**. Route đi từ feature definition → offline/online materialization → point-in-time correctness → freshness/latency → parity tests, để feature không đổi nghĩa giữa train và serve.
 
 Một mô hình ML có thể chạy đúng trong notebook nhưng sai trong môi trường vận hành (production / 운영 환경) nếu đặc trưng được tính khác nhau giữa huấn luyện và phục vụ. **Sai lệch huấn luyện–phục vụ (training–serving skew / 학습-서빙 불일치)** xảy ra khi biểu diễn lúc huấn luyện không khớp biểu diễn lúc suy luận.
 

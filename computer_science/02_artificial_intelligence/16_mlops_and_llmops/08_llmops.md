@@ -1,6 +1,6 @@
 # LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiến thức tiên quyết** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hành vi (behavior / 동작) Bundle** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **LLMOps: vận hành ứng dụng LLM**. Route đi từ prompt/model bundle → evaluation and tracing → retrieval/tool dependencies → cost/latency controls → safety, privacy, and release management, để ứng dụng LLM có vòng đời quan sát được.
 
 **LLMOps** mở rộng MLOps sang các hệ thống dựa trên mô hình ngôn ngữ lớn (Large Language model — LLM). Điểm khác quan trọng là hành vi của ứng dụng thường không nằm trong một sản phẩm tạo ra (artifact / 산출물) mô hình duy nhất. Nó là kết quả của mô hình (model / 모델), prompt, retrieval, công cụ (tool / 도구), bộ nhớ (memory / 메모리), chính sách (policy / 정책), orchestration và evaluator cùng hoạt động.
 

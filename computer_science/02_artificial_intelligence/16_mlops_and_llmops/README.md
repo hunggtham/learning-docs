@@ -1,6 +1,6 @@
 # MLOps & LLMOps
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **MLOps & LLMOps**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phụ thuộc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** Đây là README owner của **MLOps & LLMOps**. Route đọc đi từ experiment/versioning → registry/CI-CD → feature consistency → monitoring/drift → LLMOps/incident response, để vòng đời AI nối được với bằng chứng release và vận hành.
 
 Folder này giải thích cách quản lý **toàn bộ vòng đời của learned hành vi (behavior / 동작)**: experiment, dữ liệu (data / 데이터)/mô hình (model / 모델) lineage, registry, CI/CD/CT, tính năng (feature / 기능) consistency, monitoring, drift, versioning của ứng dụng LLM và sự cố (incident / 인시던트) phản hồi (response / 응답).
 

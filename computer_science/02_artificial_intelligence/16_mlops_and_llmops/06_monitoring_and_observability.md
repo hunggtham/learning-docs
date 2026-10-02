@@ -1,6 +1,6 @@
 # Giám sát và Khả năng Quan sát cho Hệ thống AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Giám sát và Khả năng Quan sát cho Hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Giám sát và Khả năng quan sát khác nhau thế nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bốn nhóm tín hiệu chính** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Monitoring và observability cho hệ thống AI**. Route đi từ service/quality/feature signals → traces and logs → dashboards/alerts → slice and cohort analysis → actionable response, để quan sát nối tín hiệu với quyết định vận hành.
 
 AI môi trường vận hành (production / 운영 환경) cần quan sát đồng thời **hành vi hệ thống (system behavior)** và **hành vi mô hình (model behavior)**. Dịch vụ có thể trả HTTP 200 rất nhanh nhưng chất lượng dự đoán đã hỏng; ngược lại chất lượng mô hình có thể tốt nhưng độ trễ p99 không đạt SLO. Vì vậy giám sát AI phải nối kỹ thuật độ tin cậy với giám sát thống kê.
 

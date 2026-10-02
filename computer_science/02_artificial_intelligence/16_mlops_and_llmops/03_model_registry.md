@@ -1,6 +1,6 @@
 # Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Sản phẩm tạo ra (artifact / 산출물) và Bản ghi Registry** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái vòng đời** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Model registry và artifact promotion**. Route đi từ immutable artifact → metadata/lineage → validation gates → lifecycle stages → deployment/rollback, để registry là điểm kiểm soát release chứ không chỉ là kho file.
 
 **Sổ đăng ký mô hình (Model Registry / 모델 레지스트리)** là nơi quản lý sản phẩm tạo ra (artifact / 산출물) mô hình cùng siêu dữ liệu (metadata / 메타데이터) và trạng thái vòng đời. Registry không chỉ là nơi lưu trữ. Nó trả lời mô hình nào là ứng viên, mô hình nào đã được kiểm định, mô hình nào đang chạy môi trường vận hành (production / 운영 환경) và vì sao một sản phẩm tạo ra (artifact / 산출물) được thăng cấp.
 

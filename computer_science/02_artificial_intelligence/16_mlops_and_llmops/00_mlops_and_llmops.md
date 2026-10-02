@@ -1,6 +1,6 @@
 # MLOps và LLMOps là gì?
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **MLOps và LLMOps là gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao DevOps chưa đủ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vòng đời ML** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **MLOps và LLMOps**. Route đi từ model lifecycle → data/experiment lineage → deployment/monitoring → drift/retraining → incident response, để vận hành AI được phân biệt với DevOps bằng tính biến động của dữ liệu và model.
 
 **Vận hành học máy (Machine Learning Operations — MLOps / 머신러닝 운영)** là tập hợp thực hành, kiến trúc và quy trình giúp hệ thống học máy (Machine Learning) có thể được phát triển, triển khai, quan sát, tái lập và cải tiến một cách có kiểm soát trong môi trường vận hành (production / 운영 환경). **LLMOps** mở rộng cùng bài toán quản lý vòng đời (lifecycle / 생명주기) sang mô hình ngôn ngữ lớn (Large Language model — LLM), RAG, prompt, tác nhân (agent / 에이전트) và chuỗi xử lý (pipeline / 파이프라인) đánh giá.
 

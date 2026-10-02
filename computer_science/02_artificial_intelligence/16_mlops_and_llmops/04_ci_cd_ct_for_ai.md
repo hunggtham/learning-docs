@@ -1,6 +1,6 @@
 # CI/CD/CT cho Hệ thống AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CI/CD/CT cho Hệ thống AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tích hợp liên tục** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiểm tra dữ liệu** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **CI/CD/CT cho hệ thống AI**. Route đi từ code/data checks → training validation → model packaging → continuous deployment/testing → production guardrails, để automation kiểm tra cả phần mềm lẫn hành vi model.
 
 Trong phần mềm truyền thống, **CI/CD** chủ yếu kiểm tra mã nguồn và triển khai ứng dụng. Hệ thống AI cần thêm kiểm tra cho dữ liệu, sản phẩm tạo ra (artifact / 산출물) mô hình và hành vi. Vì vậy MLOps thường nói tới **CI/CD/CT**: tích hợp liên tục (Continuous Integration), phân phối/triển khai liên tục (Continuous Delivery/Deployment) và huấn luyện liên tục (Continuous Training).
 

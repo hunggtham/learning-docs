@@ -1,6 +1,6 @@
 # Drift, Thay đổi Phân phối và Huấn luyện lại
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Drift, Thay đổi Phân phối và Huấn luyện lại**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dữ liệu (data / 데이터) Drift** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Label Shift hoặc Prior Shift** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Drift, distribution change và retraining**. Route đi từ covariate/label/concept drift → detection windows → impact on metrics → retraining trigger → validation and rollback, để cập nhật model dựa trên tác động chứ không chỉ biến động thống kê.
 
 Một mô hình được huấn luyện trên phân phối lịch sử nhưng thế giới môi trường vận hành (production / 운영 환경) luôn thay đổi. **Độ trôi (drift / 드리프트)** mô tả sự thay đổi của quá trình tạo dữ liệu hoặc mối quan hệ giữa đầu vào và mục tiêu theo thời gian. Drift quan trọng vì chất lượng mô hình phụ thuộc vào các giả định về phân phối.
 
