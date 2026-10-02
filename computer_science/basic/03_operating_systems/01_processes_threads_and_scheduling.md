@@ -1,6 +1,6 @@
 # Tiến trình, luồng và lập lịch
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tiến trình, luồng và lập lịch**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tiến trình** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Luồng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Processes, threads và scheduling**. Route đi từ address space/process → thread/context switch → scheduling/queues → latency, fairness và throughput, để hành vi ứng dụng được nối với cách CPU phân phối thời gian.
 
 Một máy có thể đồng thời chạy trình duyệt, cơ sở dữ liệu, IDE và hàng trăm dịch vụ dù số lõi CPU hữu hạn. Hệ điều hành tạo cảm giác mọi thứ cùng chạy bằng cách chia sẻ thời gian thực thi giữa nhiều công việc. Để suy luận đúng, cần tách **tiến trình (process / 프로세스)** — ranh giới cô lập và chứa tài nguyên — khỏi **luồng (thread)** — dòng thực thi có thể được bộ lập lịch phân CPU.
 

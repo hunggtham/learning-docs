@@ -1,6 +1,6 @@
 # Nhân hệ điều hành, lời gọi hệ thống và các lớp trừu tượng OS
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhân hệ điều hành, lời gọi hệ thống và các lớp trừu tượng OS**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nhân hệ điều hành là phần có quyền đặc biệt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lời gọi hệ thống** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kernel, system calls và OS abstractions**. Route đi từ kernel privilege/protection → system calls/ABI → process, memory và I/O abstractions → isolation và observability, để “OS abstraction” luôn quay về cơ chế kernel thực thi.
 
 **Hệ điều hành (Operating System — OS / 운영체제)** giải quyết một mâu thuẫn cơ bản: nhiều chương trình muốn dùng chung CPU, bộ nhớ, lưu trữ và thiết bị, nhưng nếu mỗi chương trình điều khiển phần cứng trực tiếp thì việc cô lập, chia sẻ và hỗ trợ nhiều loại phần cứng gần như không thể quản lý. Hệ điều hành đặt một **nhân có đặc quyền (privileged kernel)** giữa ứng dụng và phần cứng, sau đó cung cấp các lớp trừu tượng ổn định như tiến trình, bộ nhớ ảo, tệp và socket.
 

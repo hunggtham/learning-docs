@@ -1,6 +1,6 @@
 # Filesystem, lưu trữ (storage / 저장소) và buffered I/O
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Filesystem, lưu trữ (storage / 저장소) và buffered I/O**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tệp (file / 파일) là lớp trừu tượng (abstraction / 추상화), không phải vùng bytes đơn giản** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Blocks, extents và allocation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Filesystem, storage và buffered I/O**. Route đi từ file abstraction → blocks/extents/inodes → buffering/cache/flush → crash consistency và persistence, để API file được nối với layout đĩa và failure mode.
 
 Lưu trữ (storage / 저장소) thiết bị (device / 장치) expose blocks/pages/sectors và thất bại (failure / 실패) characteristics, nhưng applications muốn named files, directories, permissions và durable byte streams. Filesystem (파일 시스템 / hệ thống tệp) tạo lớp trừu tượng (abstraction / 추상화) này, đồng thời phải giữ siêu dữ liệu (metadata / 메타데이터) nhất quán khi crash có thể xảy ra giữa bất kỳ writes nào.
 
