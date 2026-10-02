@@ -1,7 +1,6 @@
 # Quá trình khởi động, systemd và dịch vụ
 
-> **Mạch đọc:** Đọc **Quá trình khởi động, systemd và dịch vụ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ firmware tới không gian người dùng** sang **Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quá trình khởi động, systemd và dịch vụ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ firmware tới không gian người dùng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối systemd boot với service dependencies, target và recovery, để biết máy chủ đạt trạng thái sẵn sàng qua những bước nào.
 
 Một máy chủ cần chuyển từ trạng thái "máy vừa bật" sang trạng thái mà mạng đã sẵn sàng, hệ thống tệp đã được gắn, ứng dụng chạy đúng danh tính, nhật ký có nơi thu thập và các phụ thuộc được quản lý. Nếu chỉ dùng một chuỗi script shell không có mô hình phụ thuộc, việc khởi động và phục hồi dịch vụ sẽ nhanh chóng trở nên khó kiểm soát. Trên nhiều bản phân phối Linux hiện đại, **systemd** đảm nhiệm vai trò trình quản lý hệ thống và dịch vụ.
 
@@ -21,6 +20,8 @@ ps -p 1 -o pid,comm,args
 
 `PID 1` có quy tắc đặc biệt liên quan tới vòng đời hệ thống và việc thu nhận trạng thái của tiến trình con.
 
+> **Chuyển mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?** tiếp nhận điểm tựa từ **Từ firmware tới không gian người dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị (unit / 단위) là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?
 
 Cơ sở dữ liệu có thể cần hệ thống tệp và mạng trước khi khởi động. Ứng dụng có thể cần cơ sở dữ liệu nhưng không nên giải quyết bằng cách cố định `sleep 30`. Systemd mô tả các **đơn vị (unit / 단위)** và quan hệ giữa chúng theo thứ tự và phụ thuộc thay vì chỉ dựa vào thời gian chờ giả định.
@@ -28,6 +29,8 @@ Cơ sở dữ liệu có thể cần hệ thống tệp và mạng trước khi 
 Điểm quan trọng là **thứ tự (ordering / 순서)** và **yêu cầu phụ thuộc (requirement)** là hai khái niệm khác nhau. `After=` chỉ định thứ tự khi các đơn vị (unit / 단위) cùng được đưa vào quá trình khởi động; nó không tự động kéo đơn vị (unit / 단위) kia vào. `Requires=` và `Wants=` mô tả các mức quan hệ phụ thuộc khác nhau.
 
 Vì vậy sao chép một đơn vị (unit / 단위) tệp (file / 파일) mà không hiểu các chỉ thị có thể tạo ra lỗi tranh chấp trong quá trình khởi động (boot race).
+
+> **Chuyển mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Đơn vị (unit / 단위) là gì?** tiếp nhận điểm tựa từ **Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vòng đời dịch vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đơn vị (unit / 단위) là gì?
 
@@ -46,6 +49,8 @@ systemctl show app.service -p MainPID -p User -p Group -p ExecStart
 ```
 
 `systemctl cat` đặc biệt hữu ích vì nó hiển thị đơn vị (unit / 단위) cùng các cấu hình bổ sung (drop-in) thực tế, tốt hơn việc đoán tệp nằm trong `/etc/systemd/system` hay `/usr/lib/systemd/system`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Vòng đời dịch vụ** tiếp nhận điểm tựa từ **Đơn vị (unit / 단위) là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **reload khác restart** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vòng đời dịch vụ
 
@@ -68,6 +73,8 @@ systemctl show app -p MainPID -p ExecMainStatus
 
 Sau khi khởi động lại, trạng thái gây lỗi ban đầu có thể biến mất.
 
+> **Chuyển mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **reload khác restart** tiếp nhận điểm tựa từ **Vòng đời dịch vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **enable khác start** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `reload` khác `restart`
 
 Nếu daemon hỗ trợ nạp lại cấu hình, `reload` yêu cầu tiến trình đang chạy đọc cấu hình mới mà không dừng rồi khởi động lại toàn bộ:
@@ -79,6 +86,8 @@ sudo nginx -t && sudo systemctl reload nginx
 Ở đây `nginx -t` kiểm tra cấu hình trước; `&&` bảo đảm chỉ reload khi bước kiểm tra thành công.
 
 Không phải dịch vụ nào cũng hỗ trợ reload. `systemctl reload app` không tự tạo ra khả năng này nếu bản thân ứng dụng không triển khai cơ chế nạp lại.
+
+> **Chuyển mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **enable khác start** tiếp nhận điểm tựa từ **reload khác restart** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `enable` khác `start`
 
@@ -96,6 +105,8 @@ sudo systemctl enable --now app
 ```
 
 thường vừa bật tự khởi động vừa khởi động ngay dịch vụ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi** tiếp nhận điểm tựa từ **enable khác start** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **daemon-reload** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi
 
@@ -122,6 +133,8 @@ WantedBy=multi-user.target
 
 Nên dùng đường dẫn tuyệt đối và khai báo rõ các biến môi trường thật sự cần thiết.
 
+> **Chuyển mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **daemon-reload** tiếp nhận điểm tựa từ **Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách khởi động lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `daemon-reload`
 
 Sau khi thay đổi đơn vị (unit / 단위) tệp (file / 파일) hoặc cấu hình drop-in:
@@ -131,6 +144,8 @@ sudo systemctl daemon-reload
 ```
 
 systemd sẽ nạp lại định nghĩa các đơn vị (unit / 단위). Lệnh này **không tự khởi động lại ứng dụng**. Nếu tiến trình đang chạy cần dùng cấu hình mới, hành động tiếp theo phụ thuộc vào loại thay đổi.
+
+> **Chuyển mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Chính sách khởi động lại** tiếp nhận điểm tựa từ **daemon-reload** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dừng dịch vụ có kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách khởi động lại
 
@@ -142,11 +157,15 @@ sudo systemctl reset-failed app
 
 Không nên coi `reset-failed` là cách sửa lỗi; nó chỉ đặt lại trạng thái thất bại và bộ đếm liên quan trong trình quản lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Dừng dịch vụ có kiểm soát** tiếp nhận điểm tựa từ **Chính sách khởi động lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu (target / 대상)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dừng dịch vụ có kiểm soát
 
 Khi dừng dịch vụ, systemd gửi tín hiệu (signal / 신호) theo cấu hình, thường bắt đầu bằng `SIGTERM`. Ứng dụng cần xử lý quá trình dừng đúng cách để ngừng nhận lưu lượng mới, hoàn tất hoặc hủy công việc an toàn, ghi nốt trạng thái cần thiết và đóng tài nguyên.
 
 Nếu ứng dụng không dừng trong khoảng thời gian cho phép, trình quản lý có thể chuyển sang biện pháp mạnh hơn. Xem thêm [Tiến trình, luồng, tín hiệu và tác vụ](../04_process/processes_threads_signals_jobs.md).
+
+> **Chuyển mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **Mục tiêu (target / 대상)** tiếp nhận điểm tựa từ **Dừng dịch vụ có kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kích hoạt bằng socket và bộ hẹn giờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mục tiêu (target / 대상)
 
@@ -157,11 +176,15 @@ systemctl get-default
 systemctl list-dependencies multi-user.target
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Kích hoạt bằng socket và bộ hẹn giờ** tiếp nhận điểm tựa từ **Mục tiêu (target / 대상)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xử lý khi dịch vụ không khởi động được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kích hoạt bằng socket và bộ hẹn giờ
 
 Systemd có thể quản lý socket đơn vị (unit / 단위) và chỉ khởi động dịch vụ khi lưu lượng tới, hoặc dùng timer đơn vị (unit / 단위) thay cho `cron` trong nhiều tình huống. Điều này cho thấy systemd không chỉ là công cụ để "restart dịch vụ (service / 서비스)", mà là trình quản lý vòng đời và quan hệ phụ thuộc của hệ thống.
 
 Bộ hẹn giờ được trình bày thêm tại [Lập lịch và tự động hóa](../08_operations/scheduling_automation.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Xử lý khi dịch vụ không khởi động được** tiếp nhận điểm tựa từ **Kích hoạt bằng socket và bộ hẹn giờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xử lý khi dịch vụ không khởi động được
 
@@ -178,9 +201,13 @@ Sau đó kiểm tra đường dẫn, quyền, môi trường, chương trình th
 
 Nếu Java không được tìm thấy khi chạy dưới systemd nhưng lại chạy được trong SSH shell, hãy kiểm tra `ExecStart` và đường dẫn tuyệt đối thay vì thêm `PATH` ngẫu nhiên.
 
+> **Chuyển mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Xử lý khi dịch vụ không khởi động được** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc và trình quản lý trạng thái hệ thống**. đơn vị (unit / 단위) tệp (file / 파일) là mô tả khai báo về cách tài nguyên hoặc dịch vụ tham gia vào đồ thị hệ thống; `systemctl` là công cụ khách để yêu cầu systemd thay đổi hoặc báo cáo trạng thái.
+
+> **Chuyển mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -194,6 +221,10 @@ Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc
 
 **"`systemctl status` chứa toàn bộ nhật ký."** Nó chỉ hiển thị một phần ngữ cảnh gần đây; dùng `journalctl` để truy vấn sâu hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Systemd tạo ra ranh giới vòng đời cho dịch vụ. [Nhật ký và khả năng quan sát](./logging_journal_observability.md) giải thích cách journal gắn sự kiện với unit. Các giới hạn tài nguyên và chỉ thị bảo mật của systemd cũng liên kết trực tiếp với các chương về bộ nhớ, tiến trình và gia cố hệ thống.
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # 06 — Thị trường Hàn Quốc và Việt Nam
 
-> **Mạch đọc:** Đọc **06 — Thị trường Hàn Quốc và Việt Nam** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06 — Thị trường Hàn Quốc và Việt Nam**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của Korea–Vietnam markets, rồi nối playbook, research, shocks, sectors và cross-border execution.
 
 Lĩnh vực này áp dụng toàn bộ kiến thức từ Nền tảng → Các nhóm tài sản → Phân tích doanh nghiệp → Kinh tế học → Giao dịch vào hai thị trường cụ thể. Mục tiêu không chỉ là biết KOSPI, VN-Index, BOK hay SBV, mà có thể tự xây quy trình nghiên cứu cho một chứng khoán thật, hiểu cú sốc toàn cầu truyền tới ngành/doanh nghiệp ra sao và quản lý thêm các lớp tiền tệ, cấu trúc sản phẩm, lưu ký, thanh toán, thuế, thanh khoản và tiếp cận thị trường.
 
@@ -23,8 +22,7 @@ Lĩnh vực này áp dụng toàn bộ kiến thức từ Nền tảng → Các 
 
 [07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md](./07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md) là lớp học sâu nối chế độ toàn cầu với bảng cân đối quốc gia, ràng buộc chính sách, FX/tín dụng/thanh khoản, ngành, earnings revisions, định giá, thị trường (market / 시장) truy cập (access / 접근) và quy mô vị thế. Lab yêu cầu xây scenario ma trận (matrix / 행렬) thay vì giải thích thị trường bằng một headline.
 
-
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **06 — Thị trường Hàn Quốc và Việt Nam**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
@@ -32,8 +30,7 @@ Bạn cần có khả năng mở một cổ phiếu Hàn Quốc hoặc Việt Na
 
 Với vị thế xuyên biên giới, cần thêm lớp `kinh tế của tài sản → quốc gia/nhân tố → tiền tệ → cấu trúc sản phẩm/nơi thành lập/quyền lợi pháp lý → lưu ký/tiếp cận/thanh toán → thuế/chi phí → chuyển tiền/thanh khoản → khớp nghĩa vụ`.
 
-
-> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tổng hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **06 — Thị trường Hàn Quốc và Việt Nam**, **Bài tập tổng hợp** gom các mảnh từ **Sau lĩnh vực này bạn cần làm được gì?** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bài tập tổng hợp
 
@@ -43,4 +40,4 @@ Sau đó hoàn thành **mô-đun (module / 모듈) 6 — Korea & Vietnam** trong
 
 Sau khi hoàn thành, bước tiếp theo không phải đọc thêm vô hạn mà là xây sổ nghiên cứu cho 5–10 chứng khoán/ngành thật, duy trì bảng theo dõi quốc gia/tiền tệ/thanh khoản và cập nhật luận điểm theo chu kỳ phù hợp.
 
-> **Bàn giao:** Sau **Bài tập tổng hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bài tập tổng hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

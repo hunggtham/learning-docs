@@ -1,5 +1,7 @@
 # Institutional FX Hedging Trường hợp (case / 사례) Studies
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Institutional FX Hedging Trường hợp (case / 사례) Studies**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례) studies** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Không dùng hedge P/L riêng để đánh giá hedge** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README của institutional hedging cases làm bản đồ owner, rồi nối từng case với exposure, instrument, accounting và outcome.
+
 Folder này chuyển Forex từ góc nhìn `trade direction` sang **balance-sheet rủi ro (risk / 위험) management**. Mục tiêu là hiểu doanh nghiệp, asset manager hoặc treasury desk không nhất thiết giao dịch FX để kiếm alpha; họ dùng spot/forward/NDF/swap/options để thay đổi phân phối (distribution / 분포) của cash luồng (flow / 흐름), funding chi phí (cost / 비용) và portfolio return.
 
 Mô hình tư duy (mental model / 사고 모델) chung:
@@ -26,6 +28,8 @@ Một hedge tốt không được đánh giá bằng việc derivative có lãi 
 3. [03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md](./03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md) — portfolio foreign assets; tách local-asset return khỏi FX return, hedge ratio, hedge carry, rebalance và benchmark mismatch.
 4. [04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md](./04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md) — company/financial institution huy động một currency nhưng cần economic funding ở currency khác; nối debt, FX swap/cross-currency swap, basis, collateral và refinancing rủi ro (risk / 위험).
 
+> **Chuyển mạch:** Trong **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) studies** cho ta quy tắc; **Không dùng hedge P/L riêng để đánh giá hedge** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Các loại rủi ro (risk / 위험) phải tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Không dùng hedge P/L riêng để đánh giá hedge
 
 Ví dụ exporter long economic USD receivable và short USD forward:
@@ -48,9 +52,9 @@ KRW weakens
 
 Derivative mất mát (loss / 손실) không tự động là thất bại (failure / 실패).
 
-## Các loại rủi ro (risk / 위험) phải tách
-Phần “Các loại rủi ro (risk / 위험) phải tách” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Các loại rủi ro (risk / 위험) phải tách** tiếp nhận điểm tựa từ **Không dùng hedge P/L riêng để đánh giá hedge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hedge chính sách (policy / 정책) trước hedge trade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Các loại rủi ro (risk / 위험) phải tách
 
 ```text
 Transaction exposure
@@ -66,6 +70,8 @@ Funding / rollover risk
 ```
 
 Không một hedge instrument nào xóa tất cả.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Hedge chính sách (policy / 정책) trước hedge trade** tiếp nhận điểm tựa từ **Các loại rủi ro (risk / 위험) phải tách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối với các phần khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hedge chính sách (policy / 정책) trước hedge trade
 
@@ -83,9 +89,9 @@ What is the treatment of over-hedge / under-hedge?
 How is hedge effectiveness measured?
 ```
 
-## Kết nối với các phần khác
-Phần “Kết nối với các phần khác” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Kết nối với các phần khác** tiếp nhận điểm tựa từ **Hedge chính sách (policy / 정책) trước hedge trade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Kết nối với các phần khác
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [Intervention, reserves, REER and valuation](../90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md)
@@ -93,9 +99,9 @@ Phần “Kết nối với các phần khác” nối kiến thức trước v�
 - [FX options and hedging](../14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 - [Systematic risk/attribution project](../70_systematic_project/README.md)
 
-## Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)
-Phần “Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Kết nối với các phần khác** cho ta quy tắc; **Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)
 
 ```text
 Exposure map
@@ -113,3 +119,5 @@ Decision review
 ```
 
 Các trường hợp (case / 사례) là học tập (learning / 학습) artifacts, không phải khuyến nghị hedge ratio hoặc sản phẩm cho một doanh nghiệp cụ thể.
+
+> **Bàn giao:** Sau **Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
