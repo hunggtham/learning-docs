@@ -1,7 +1,6 @@
 # Xử lý văn bản trên Linux
 
-> **Mạch đọc:** Đọc **Xử lý văn bản trên Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ câu hỏi, không bắt đầu từ câu lệnh** sang **grep: chọn dòng theo mẫu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Xử lý văn bản trên Linux**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ câu hỏi, không bắt đầu từ câu lệnh** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **grep: chọn dòng theo mẫu** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối text processing với stream, pattern matching và pipeline, để biến dữ liệu văn bản thành câu trả lời quan sát được.
 
 Máy chủ Linux tạo ra rất nhiều dữ liệu dạng văn bản: nhật ký, tệp cấu hình, danh sách tiến trình, đầu ra câu lệnh, dữ liệu gần giống CSV và các ảnh chụp chẩn đoán. Sức mạnh của shell không nằm ở từng tiện ích riêng lẻ mà ở khả năng đưa **luồng văn bản (text stream)** qua nhiều phép biến đổi nhỏ để trả lời một câu hỏi cụ thể.
 
@@ -14,6 +13,8 @@ Một luồng xử lý văn bản tốt thường có dạng:
 ```text
 dữ liệu thô -> chọn nguồn -> lọc -> biến đổi -> tổng hợp -> sắp xếp -> kiểm tra
 ```
+
+> **Chuyển mạch:** Trong **Xử lý văn bản trên Linux**, **grep: chọn dòng theo mẫu** tiếp nhận điểm tựa từ **Bắt đầu từ câu hỏi, không bắt đầu từ câu lệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regex không phải glob** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `grep`: chọn dòng theo mẫu
 
@@ -49,6 +50,8 @@ Khi mẫu phải được hiểu đúng như chuỗi ký tự thông thường, 
 grep -F 'a[b]' file.txt
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Xử lý văn bản trên Linux**, **Regex không phải glob** tiếp nhận điểm tựa từ **grep: chọn dòng theo mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **find: truy vấn cây hệ thống tệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Regex không phải glob
 
 `*.log` là mẫu glob phổ biến của shell. Biểu thức chính quy diễn đạt ý tưởng tương tự thường gần với `.*\.log`. Nhầm hai ngôn ngữ mẫu này dễ tạo ra lỗi khó nhận ra.
@@ -60,6 +63,8 @@ grep -E '^ERROR|^WARN' app.log
 ```
 
 `^` neo vào đầu dòng, còn `|` biểu thị lựa chọn giữa các mẫu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý văn bản trên Linux**, **find: truy vấn cây hệ thống tệp** tiếp nhận điểm tựa từ **Regex không phải glob** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **sort và uniq: từ sự kiện thành tần suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `find`: truy vấn cây hệ thống tệp
 
@@ -91,6 +96,8 @@ find /backup -type f -mtime +30 -print
 
 Chỉ sau khi kiểm tra mới cân nhắc thêm `-delete`. Tách **quan sát** khỏi **thay đổi trạng thái** giúp giảm rủi ro môi trường vận hành (production / 운영 환경).
 
+> **Chuyển mạch:** Trong **Xử lý văn bản trên Linux**, **sort và uniq: từ sự kiện thành tần suất** tiếp nhận điểm tựa từ **find: truy vấn cây hệ thống tệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **awk: xử lý bản ghi và trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `sort` và `uniq`: từ sự kiện thành tần suất
 
 Nhật ký thường là một chuỗi sự kiện. Để tìm giá trị xuất hiện nhiều nhất, mô hình kinh điển là: lấy trường cần quan tâm → sắp xếp → đếm → sắp xếp theo số lần.
@@ -113,6 +120,8 @@ LIMIT 20
 ```
 
 Chuỗi xử lý (pipeline / 파이프라인) của shell và SQL khác cú pháp nhưng cùng chia sẻ một cách suy luận dữ liệu: **chọn trường → nhóm → tổng hợp → sắp xếp**.
+
+> **Chuyển mạch:** Ở chặng này của **Xử lý văn bản trên Linux**, **awk: xử lý bản ghi và trường** tiếp nhận điểm tựa từ **sort và uniq: từ sự kiện thành tần suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **sed: chỉnh sửa luồng văn bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `awk`: xử lý bản ghi và trường
 
@@ -142,6 +151,8 @@ awk '{count[$9]++} END {for (s in count) print s, count[s]}' access.log
 
 Tuy nhiên nhật ký thực tế có thể chứa trường trong dấu nháy, JSON hoặc dấu vết ngăn xếp (stack trace / 스택 트레이스) nhiều dòng. Không nên giả định mọi dữ liệu đều tách được bằng khoảng trắng. Với nhật ký JSON, `jq` thường phù hợp hơn nếu có sẵn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý văn bản trên Linux**, **sed: chỉnh sửa luồng văn bản** tiếp nhận điểm tựa từ **awk: xử lý bản ghi và trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cut, tr và paste** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `sed`: chỉnh sửa luồng văn bản
 
 `sed` phù hợp với các phép biến đổi theo dòng:
@@ -164,6 +175,8 @@ sed -i.bak 's/old/new/g' app.conf
 
 Sao lưu trước thay thế tự động đặc biệt quan trọng với cấu hình môi trường vận hành (production / 운영 환경).
 
+> **Chuyển mạch:** Trong **Xử lý văn bản trên Linux**, **cut, tr và paste** tiếp nhận điểm tựa từ **sed: chỉnh sửa luồng văn bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **head, tail, less: lấy mẫu và điều hướng dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `cut`, `tr` và `paste`
 
 Với định dạng có dấu phân cách đơn giản:
@@ -184,6 +197,8 @@ biến `PATH` thành từng dòng để dễ đọc.
 
 Các công cụ này phù hợp với định dạng đơn giản. Với CSV thật sự có dấu phẩy trong trường được đặt dấu nháy, trường nhiều dòng hoặc quy tắc escape, nên dùng trình phân tích CSV đúng chuẩn thay vì ép `cut` xử lý một ngữ pháp mà nó không hiểu.
 
+> **Chuyển mạch:** Ở chặng này của **Xử lý văn bản trên Linux**, **cut, tr và paste** nêu điều cần giải thích; **head, tail, less: lấy mẫu và điều hướng dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhật ký đã nén** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `head`, `tail`, `less`: lấy mẫu và điều hướng dữ liệu
 
 Không phải lúc nào cũng cần xử lý toàn bộ dữ liệu. Trước hết nên xem hình dạng của dữ liệu:
@@ -196,6 +211,8 @@ less -N access.log
 
 Một thói quen tốt ở mức vận hành nâng cao là xem mẫu trước để xác nhận định dạng rồi mới viết `awk '$9...'`. Nếu giả định về cấu trúc sai, chuỗi xử lý (pipeline / 파이프라인) vẫn có thể chạy đúng cú pháp nhưng trả về kết quả sai về ý nghĩa.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý văn bản trên Linux**, **head, tail, less: lấy mẫu và điều hướng dữ liệu** nêu điều cần giải thích; **Nhật ký đã nén** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **tee: vừa quan sát vừa lưu bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhật ký đã nén
 
 Cơ chế xoay vòng nhật ký thường tạo tệp `.gz`. Không cần giải nén chỉ để tìm kiếm:
@@ -207,6 +224,8 @@ zless app.log.2.gz
 
 Cách này giảm thao tác không cần thiết và giữ thư mục làm việc sạch hơn.
 
+> **Chuyển mạch:** Trong **Xử lý văn bản trên Linux**, **Nhật ký đã nén** nêu điều cần giải thích; **tee: vừa quan sát vừa lưu bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dữ liệu phân cách bằng NUL và tên tệp an toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `tee`: vừa quan sát vừa lưu bằng chứng
 
 Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
@@ -217,6 +236,8 @@ curl -v https://service.example 2>&1 | tee curl-debug.txt
 
 Đầu ra vẫn xuất hiện trên terminal đồng thời được ghi vào tệp. Khi xử lý sự cố, việc lưu bằng chứng trước và sau thay đổi giúp so sánh trạng thái có cơ sở hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Xử lý văn bản trên Linux**, **tee: vừa quan sát vừa lưu bằng chứng** nêu điều cần giải thích; **Dữ liệu phân cách bằng NUL và tên tệp an toàn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hiệu năng: lọc sớm và thu hẹp phạm vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dữ liệu phân cách bằng NUL và tên tệp an toàn
 
 Tên tệp trên Unix có thể chứa khoảng trắng và thậm chí ký tự xuống dòng. chuỗi xử lý (pipeline / 파이프라인) dựa hoàn toàn vào newline có thể sai với các tên bất thường. `find` và `xargs` hỗ trợ ký tự NUL làm dấu phân cách:
@@ -226,6 +247,8 @@ find . -type f -name '*.log' -print0 | xargs -0 grep -n 'ERROR'
 ```
 
 Đây là kiến thức nâng cao không phải vì cú pháp phức tạp, mà vì nó tôn trọng mô hình dữ liệu thật thay vì giả định tên tệp luôn "đẹp".
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý văn bản trên Linux**, **Dữ liệu phân cách bằng NUL và tên tệp an toàn** nêu điều cần giải thích; **Hiệu năng: lọc sớm và thu hẹp phạm vi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu năng: lọc sớm và thu hẹp phạm vi
 
@@ -245,9 +268,13 @@ journalctl -u app --since '16:00' --until '16:15' | grep -E 'ERROR|Exception'
 
 Phạm vi tốt không chỉ làm câu lệnh chạy nhanh hơn mà còn giảm lượng bằng chứng không liên quan, từ đó làm quá trình suy luận chính xác hơn.
 
+> **Chuyển mạch:** Trong **Xử lý văn bản trên Linux**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Hiệu năng: lọc sớm và thu hẹp phạm vi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Có thể xem xử lý văn bản trên dòng lệnh như một **bộ máy truy vấn (query engine)** được tách thành nhiều toán tử nhỏ. Mỗi bước nên có trách nhiệm rõ: chọn nguồn, lọc, biến đổi, tổng hợp hoặc trình bày. Khi kết quả sai, hãy kiểm tra từng bước thay vì nhìn toàn chuỗi xử lý (pipeline / 파이프라인) như một câu thần chú.
+
+> **Chuyển mạch:** Ở chặng này của **Xử lý văn bản trên Linux**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -261,6 +288,10 @@ Có thể xem xử lý văn bản trên dòng lệnh như một **bộ máy truy
 
 **"Đầu ra câu lệnh luôn là dữ liệu có cấu trúc ổn định."** Đầu ra dành cho con người có thể thay đổi theo phiên bản hoặc locale. Script môi trường vận hành (production / 운영 환경) nên ưu tiên giao diện đọc bằng máy khi công cụ có hỗ trợ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý văn bản trên Linux**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Xử lý văn bản là cầu nối giữa shell và khả năng quan sát hệ thống (observability). Khi chuyển sang [Nhật ký và khả năng quan sát](../05_system/logging_journal_observability.md), các mẫu lọc và tổng hợp này sẽ được dùng để xây dựng giả thuyết từ dữ liệu thay vì chỉ "tail rồi nhìn".
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

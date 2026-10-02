@@ -1,18 +1,26 @@
 # 2. UNIX의 주요 명령어 (Các lệnh UNIX chính)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối UNIX commands với filesystem, process, text stream và exit status, để chọn lệnh theo đối tượng cần thao tác.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 주요, 명령어
 
+> **Chuyển mạch:** Ở chặng này của **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)**에서 만든 기준을 이어받아 **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **2. UNIX의 주요 명령어 (Các lệ
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** và nối nó với **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**, **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 2. UNIX의 주요 명령어 (Các lệnh UNIX chính)
 
@@ -59,3 +67,5 @@ Phần “2. UNIX의 주요 명령어 (Các lệnh UNIX chính)” được nố
 # CHAPTER 01 SQL 응용 (Ứng dụng SQL)
 
 Như vậy, **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

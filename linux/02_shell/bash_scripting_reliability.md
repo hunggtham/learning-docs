@@ -1,7 +1,6 @@
 # Bash Scripting đáng tin cậy trên Linux
 
-> **Mạch đọc:** Đọc **Bash Scripting đáng tin cậy trên Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Script được thực thi như thế nào?** sang **Exit status là hợp đồng của script**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bash Scripting đáng tin cậy trên Linux**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Script được thực thi như thế nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Exit status là hợp đồng của script** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối Bash scripting với input, exit status, concurrency và recovery, để script production có hợp đồng lỗi và đường lui rõ ràng.
 
 Bash script thường bắt đầu rất nhỏ: vài câu lệnh để bản sao (copy / 복사) tệp (file / 파일), restart dịch vụ (service / 서비스) hoặc chạy backup. Nhưng ngay khi script được dùng trong môi trường vận hành (production / 운영 환경), chạy tự động bằng cron/systemd hoặc thao tác dữ liệu quan trọng, nó không còn là “một chuỗi command” nữa. Nó trở thành một chương trình cần quản lý đầu vào (input / 입력), lỗi (error / 오류), trạng thái trung gian, tính đồng thời (concurrency / 동시성) và khả năng phục hồi.
 
@@ -38,6 +37,8 @@ sh deploy.sh
 
 thì script có thể được chạy bằng shell khác, làm các cú pháp riêng của Bash như arrays hoặc `[[ ... ]]` hoạt động khác hoặc lỗi. Vì vậy hãy phân biệt rõ script được viết cho POSIX `sh` hay cho Bash.
 
+> **Chuyển mạch:** Trong **Bash Scripting đáng tin cậy trên Linux**, **Exit status là hợp đồng của script** tiếp nhận điểm tựa từ **Script được thực thi như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **set -euo pipefail: hữu ích nhưng không phải phép thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Exit status là hợp đồng của script
 
 Trong Unix, `0` thường biểu thị thành công, còn giá trị khác `0` biểu thị lỗi hoặc trạng thái đặc biệt.
@@ -59,6 +60,8 @@ fi
 
 Không nên kết thúc script với `exit 0` một cách máy móc nếu các bước trước có thể đã thất bại mà chưa được kiểm tra.
 
+> **Chuyển mạch:** Ở chặng này của **Bash Scripting đáng tin cậy trên Linux**, **set -euo pipefail: hữu ích nhưng không phải phép thuật** tiếp nhận điểm tựa từ **Exit status là hợp đồng của script** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quote biến gần như luôn là mặc định đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `set -euo pipefail`: hữu ích nhưng không phải phép thuật
 
 Một mẫu thường gặp là:
@@ -77,6 +80,8 @@ if ! rsync -a --delete "$src/" "$dst/"; then
   exit 1
 fi
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bash Scripting đáng tin cậy trên Linux**, **Quote biến gần như luôn là mặc định đúng** tiếp nhận điểm tựa từ **set -euo pipefail: hữu ích nhưng không phải phép thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Validate đầu vào (input / 입력) trước khi thao tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quote biến gần như luôn là mặc định đúng
 
@@ -108,6 +113,8 @@ rm -rf "$TARGET_DIR"
 
 Điều này đặc biệt quan trọng với destructive command. Tuy nhiên quote không thay thế việc validate biến.
 
+> **Chuyển mạch:** Trong **Bash Scripting đáng tin cậy trên Linux**, **Validate đầu vào (input / 입력) trước khi thao tác** tiếp nhận điểm tựa từ **Quote biến gần như luôn là mặc định đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameter và giá trị mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Validate đầu vào (input / 입력) trước khi thao tác
 
 Một script cleanup nguy hiểm:
@@ -131,6 +138,8 @@ fi
 ```
 
 Với script môi trường vận hành (production / 운영 환경), validate đường dẫn (path / 경로), tệp (file / 파일) tồn tại, quyền sở hữu (ownership / 소유권), disk không gian (space / 공간), dịch vụ (service / 서비스) trạng thái (state / 상태) và các điều kiện nghiệp vụ trước khi mutation.
+
+> **Chuyển mạch:** Ở chặng này của **Bash Scripting đáng tin cậy trên Linux**, **Parameter và giá trị mặc định** tiếp nhận điểm tựa từ **Validate đầu vào (input / 입력) trước khi thao tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm và phạm vi biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Parameter và giá trị mặc định
 
@@ -162,6 +171,8 @@ port="${2:-8080}"
 
 Cú pháp này rất hữu ích để thất bại (fail / 실패) sớm thay vì chạy nửa chừng rồi mới phát hiện cấu hình thiếu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bash Scripting đáng tin cậy trên Linux**, **Hàm và phạm vi biến** tiếp nhận điểm tựa từ **Parameter và giá trị mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Arrays khi danh sách không nên được biểu diễn bằng chuỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàm và phạm vi biến
 
 Bash hỗ trợ functions:
@@ -183,6 +194,8 @@ check_port() {
 
 Một hàm (function / 함수) tốt nên có trách nhiệm nhỏ, đầu vào (input / 입력) rõ ràng và exit status có ý nghĩa.
 
+> **Chuyển mạch:** Trong **Bash Scripting đáng tin cậy trên Linux**, **Hàm và phạm vi biến** xác định đầu vào; **Arrays khi danh sách không nên được biểu diễn bằng chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Temporary tệp (file / 파일) và mktemp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Arrays khi danh sách không nên được biểu diễn bằng chuỗi
 
 Sai lầm phổ biến là nhét danh sách đường dẫn (path / 경로) vào một string:
@@ -202,6 +215,8 @@ done
 ```
 
 Điểm quan trọng là `"${files[@]}"` giữ từng phần tử thành argument riêng.
+
+> **Chuyển mạch:** Ở chặng này của **Bash Scripting đáng tin cậy trên Linux**, **Arrays khi danh sách không nên được biểu diễn bằng chuỗi** xác định đầu vào; **Temporary tệp (file / 파일) và mktemp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **trap và xử lý tín hiệu (signal / 신호)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Temporary tệp (file / 파일) và `mktemp`
 
@@ -235,6 +250,8 @@ trap cleanup EXIT
 
 `trap` là một trong những công cụ quan trọng nhất để bảo đảm tài nguyên trung gian được dọn kể cả khi script lỗi giữa chừng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bash Scripting đáng tin cậy trên Linux**, **trap và xử lý tín hiệu (signal / 신호)** tiếp nhận điểm tựa từ **Temporary tệp (file / 파일) và mktemp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logging của script** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `trap` và xử lý tín hiệu (signal / 신호)
 
 Có thể bắt một số tín hiệu (signal / 신호) để cleanup hoặc ghi log:
@@ -245,6 +262,8 @@ trap 'echo "Nhận TERM" >&2; exit 143' TERM
 ```
 
 Nhưng không thể catch `SIGKILL`. Script cũng không nên cố “nuốt” mọi tín hiệu (signal / 신호) nếu điều đó làm systemd hoặc operator không thể dừng nó đúng cách.
+
+> **Chuyển mạch:** Trong **Bash Scripting đáng tin cậy trên Linux**, **Logging của script** tiếp nhận điểm tựa từ **trap và xử lý tín hiệu (signal / 신호)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Logging của script
 
@@ -262,6 +281,8 @@ log ERROR "Health check thất bại" >&2
 Nếu script chạy dưới systemd, stdout/stderr có thể được journald thu thập. Nếu chạy qua cron, hãy redirect hoặc thiết lập monitoring phù hợp.
 
 Không log secret, đơn vị từ (token / 토큰), password hoặc toàn bộ môi trường (environment / 환경) khi không cần thiết.
+
+> **Chuyển mạch:** Ở chặng này của **Bash Scripting đáng tin cậy trên Linux**, **Idempotency** tiếp nhận điểm tựa từ **Logging của script** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đồng thời (concurrency / 동시성) và flock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Idempotency
 
@@ -281,6 +302,8 @@ sha256sum app.jar
 
 Một di chuyển (migration / 마이그레이션) hoặc nghiệp vụ (business / 비즈니스) command có side tác động (effect / 효과) không phải lúc nào cũng idempotent; khi đó cần marker, giao dịch (transaction / 트랜잭션) hoặc cơ chế cấp ứng dụng phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bash Scripting đáng tin cậy trên Linux**, **Tính đồng thời (concurrency / 동시성) và flock** tiếp nhận điểm tựa từ **Idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atomic cập nhật (update / 업데이트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính đồng thời (concurrency / 동시성) và `flock`
 
 Nếu cron chạy job mỗi 5 phút nhưng job có lúc mất 8 phút, hai instance có thể overlap.
@@ -290,6 +313,8 @@ flock -n /run/app-maintenance.lock /opt/scripts/maintenance.sh
 ```
 
 `-n` không chờ nếu khóa (lock / 잠금) đang được giữ. Đây là giải pháp phù hợp cho single-host automation. Với nhiều host, cần phân tán (distributed / 분산) coordination khác.
+
+> **Chuyển mạch:** Trong **Bash Scripting đáng tin cậy trên Linux**, **Atomic cập nhật (update / 업데이트)** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성) và flock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **shellcheck** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Atomic cập nhật (update / 업데이트)
 
@@ -304,6 +329,8 @@ mv "$tmp" /opt/app/application.yml
 
 Rename trong cùng filesystem thường atomic ở không gian tên (namespace / 네임스페이스) mức (level / 수준). mẫu (pattern / 패턴) này giảm thời gian hệ thống nhìn thấy trạng thái trung gian.
 
+> **Chuyển mạch:** Ở chặng này của **Bash Scripting đáng tin cậy trên Linux**, **shellcheck** tiếp nhận điểm tựa từ **Atomic cập nhật (update / 업데이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gỡ lỗi (debug / 디버그) script** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `shellcheck`
 
 `ShellCheck` là static analyzer cho shell script. Nó phát hiện nhiều lỗi về quoting, unused variables, word splitting và portability.
@@ -313,6 +340,8 @@ shellcheck deploy.sh
 ```
 
 Không nên coi đầu ra (output / 출력) của công cụ (tool / 도구) là luật tuyệt đối, nhưng nó giúp bắt các lỗi shell rất phổ biến trước môi trường vận hành (production / 운영 환경).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bash Scripting đáng tin cậy trên Linux**, **Gỡ lỗi (debug / 디버그) script** tiếp nhận điểm tựa từ **shellcheck** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào nên bỏ Bash?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gỡ lỗi (debug / 디버그) script
 
@@ -336,11 +365,15 @@ Có thể thay `PS4` để dấu vết (trace / 추적) có timestamp/line numbe
 export PS4='+ ${BASH_SOURCE}:${LINENO}: '
 ```
 
+> **Chuyển mạch:** Trong **Bash Scripting đáng tin cậy trên Linux**, **Khi nào nên bỏ Bash?** tiếp nhận điểm tựa từ **Gỡ lỗi (debug / 디버그) script** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khi nào nên bỏ Bash?
 
 Nếu script cần parse JSON phức tạp, quản lý cấu trúc dữ liệu lớn, thử lại (retry / 재시도) chính sách (policy / 정책) nhiều nhánh, HTTP workflow lớn, tính đồng thời (concurrency / 동시성) hoặc bộ kiểm thử (test suite / 테스트 스위트) sâu, Bash thường bắt đầu trở nên khó kiểm soát.
 
 Một dấu hiệu quan trọng là khi phần lớn mã (code / 코드) không còn là gọi hệ thống (system / 시스템) tools mà trở thành lô-gic (logic / 논리) ứng dụng. Khi đó Python/Go/Java có kiểu (type / 타입)/cấu trúc dữ liệu (data structure / 자료구조)/testing tốt hơn, còn Bash chỉ nên giữ vai trò điểm vào (entrypoint / 진입점) hoặc glue mã (code / 코드).
+
+> **Chuyển mạch:** Ở chặng này của **Bash Scripting đáng tin cậy trên Linux**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khi nào nên bỏ Bash?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -360,6 +393,8 @@ return meaningful exit status
 
 Script tốt không chỉ “chạy command”. Nó chứng minh rằng điều kiện trước đúng, thay đổi trạng thái (state / 상태) có chủ đích, và kiểm tra rằng desired trạng thái (state / 상태) thực sự đạt được.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bash Scripting đáng tin cậy trên Linux**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 **“Có `set -e` là mọi lỗi đều được xử lý.”** Không. Bash có nhiều ngữ cảnh khiến `-e` không hoạt động như người mới dự đoán.
@@ -370,8 +405,10 @@ Script tốt không chỉ “chạy command”. Nó chứng minh rằng điều 
 
 **“Bash viết được thì nên dùng Bash.”** Khả năng viết được không đồng nghĩa Bash là công cụ có maintainability tốt nhất.
 
+> **Chuyển mạch:** Trong **Bash Scripting đáng tin cậy trên Linux**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Chương này nối trực tiếp với [Shell, Bash, Pipes và Redirection](./shell_bash_pipes_redirection.md), [Scheduling và Automation](../08_operations/scheduling_automation.md), [systemd và Services](../05_system/systemd_boot_services.md), và [Production Troubleshooting](../09_production/production_troubleshooting.md).
 
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [shell bash pipes redirection](./shell_bash_pipes_redirection.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

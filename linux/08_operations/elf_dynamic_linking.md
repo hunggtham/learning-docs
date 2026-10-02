@@ -1,7 +1,6 @@
 # ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình
 
-> **Mạch đọc:** Đọc **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Executable không chỉ là một tệp (file / 파일) có quyền x** sang **ELF chứa những gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Executable không chỉ là một tệp (file / 파일) có quyền x** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **ELF chứa những gì?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối ELF với dynamic linking, loader và process startup, để theo dõi executable từ file trên disk đến mã đang chạy.
 
 Khi gõ một lệnh như:
 
@@ -50,6 +49,8 @@ Mỗi phần đều mang ý nghĩa:
 
 Nếu bản sao (copy / 복사) một nhị phân (binary / 이진) ARM sang máy chủ (server / 서버) x86-64 rồi chạy, kernel có thể báo `Exec format error`. Vấn đề không nằm ở permission mà nằm ở kiến trúc CPU không tương thích.
 
+> **Chuyển mạch:** Trong **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **ELF chứa những gì?** tiếp nhận điểm tựa từ **Executable không chỉ là một tệp (file / 파일) có quyền x** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **execve() không tạo tiến trình (process / 프로세스) mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ELF chứa những gì?
 
 ELF không chỉ chứa mã máy (machine code / 기계어). Nó mô tả cách một chương trình hoặc thư viện nên được tổ chức và ánh xạ vào bộ nhớ.
@@ -87,6 +88,8 @@ readelf -S /usr/bin/curl
 
 Mục tiêu không phải ghi nhớ đầu ra (output / 출력), mà hiểu rằng executable là một cấu trúc dữ liệu có siêu dữ liệu (metadata / 메타데이터) đủ để kernel và loader tạo tiến trình (process / 프로세스) ảnh (image / 이미지).
 
+> **Chuyển mạch:** Ở chặng này của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **ELF chứa những gì?** xác định đầu vào; **execve() không tạo tiến trình (process / 프로세스) mới** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Shebang: script được chạy bằng trình thông dịch (interpreter / 인터프리터) như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `execve()` không tạo tiến trình (process / 프로세스) mới
 
 Một hiểu lầm phổ biến là `exec` tạo tiến trình (process / 프로세스). Thực tế, trong mô hình Unix, `execve()` thay thế program ảnh (image / 이미지) của tiến trình (process / 프로세스) hiện tại.
@@ -105,6 +108,8 @@ Sau `execve()`, PID có thể giữ nguyên nhưng mã (code / 코드), bộ nh�
 Đây là lý do phân biệt **tiến trình (process / 프로세스)** với **program** rất quan trọng.
 
 Xem thêm: [Process, Thread, Signal và Job](../04_process/processes_threads_signals_jobs.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **execve() không tạo tiến trình (process / 프로세스) mới** xác định đầu vào; **Shebang: script được chạy bằng trình thông dịch (interpreter / 인터프리터) như thế nào?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Động (dynamic / 동적) linking giải quyết vấn đề gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Shebang: script được chạy bằng trình thông dịch (interpreter / 인터프리터) như thế nào?
 
@@ -133,6 +138,8 @@ trở thành gần giống:
 Nếu trình thông dịch (interpreter / 인터프리터) trong shebang không tồn tại, shell có thể báo lỗi dù script tệp (file / 파일) rõ ràng đang tồn tại.
 
 Đây là một nguyên nhân khiến thông báo `No such file or directory` gây hiểu nhầm: tệp (file / 파일) script có thể tồn tại, nhưng trình thông dịch (interpreter / 인터프리터) mà shebang trỏ tới lại không tồn tại.
+
+> **Chuyển mạch:** Trong **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Động (dynamic / 동적) linking giải quyết vấn đề gì?** tiếp nhận điểm tựa từ **Shebang: script được chạy bằng trình thông dịch (interpreter / 인터프리터) như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động (dynamic / 동적) linker là chương trình nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động (dynamic / 동적) linking giải quyết vấn đề gì?
 
@@ -163,6 +170,8 @@ libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6
 
 Đây là phụ thuộc (dependency / 의존성) ở **thời gian chạy (runtime / 런타임) bản địa (native / 네이티브) tầng (layer / 계층)**, khác với phụ thuộc (dependency / 의존성) Maven/Gradle ở Java bản dựng (build / 빌드) tầng (layer / 계층).
 
+> **Chuyển mạch:** Ở chặng này của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Động (dynamic / 동적) linker là chương trình nào?** tiếp nhận điểm tựa từ **Động (dynamic / 동적) linking giải quyết vấn đề gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm dùng chung (shared / 공유) thư viện (library / 라이브러리) ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Động (dynamic / 동적) linker là chương trình nào?
 
 ELF nhị phân (binary / 이진) động thường chỉ định một trình thông dịch (interpreter / 인터프리터) ELF như:
@@ -180,6 +189,8 @@ Ví dụ có thể thấy:
 Động (dynamic / 동적) linker này chạy rất sớm để tải (load / 로드) libraries và resolve symbols trước khi `main()` được gọi.
 
 Đó là lý do một nhị phân (binary / 이진) có thể tồn tại, có quyền execute, đúng kiến trúc (architecture / 아키텍처) nhưng vẫn không chạy vì động (dynamic / 동적) linker hoặc dùng chung (shared / 공유) thư viện (library / 라이브러리) thiếu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Tìm dùng chung (shared / 공유) thư viện (library / 라이브러리) ở đâu?** tiếp nhận điểm tựa từ **Động (dynamic / 동적) linker là chương trình nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ldd không phải phép thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tìm dùng chung (shared / 공유) thư viện (library / 라이브러리) ở đâu?
 
@@ -210,6 +221,8 @@ export LD_LIBRARY_PATH=/opt/app/lib
 
 thì cần hiểu đây là thay đổi cơ chế resolution, không phải “fix chung”. Trong môi trường vận hành (production / 운영 환경), phụ thuộc mạnh vào `LD_LIBRARY_PATH` có thể tạo khác biệt giữa interactive shell và systemd dịch vụ (service / 서비스).
 
+> **Chuyển mạch:** Trong **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **ldd không phải phép thuật** tiếp nhận điểm tựa từ **Tìm dùng chung (shared / 공유) thư viện (library / 라이브러리) ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symbol là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `ldd` không phải phép thuật
 
 `ldd` giúp thấy shared-library dependencies, nhưng không nên dùng một cách vô thức với nhị phân (binary / 이진) không tin cậy trên mọi hệ thống. Một số hiện thực (implementation / 구현) lịch sử có thể thực thi hoặc tương tác với nhị phân (binary / 이진) theo cách không phù hợp bảo mật (security / 보안) phân tích (analysis / 분석).
@@ -220,6 +233,8 @@ Với nhị phân (binary / 이진) đáng tin cậy trên máy chủ (server / 
 readelf -d ./binary
 objdump -p ./binary
 ```
+
+> **Chuyển mạch:** Ở chặng này của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Symbol là gì?** tiếp nhận điểm tựa từ **ldd không phải phép thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ABI quan trọng hơn API ở thời gian chạy (runtime / 런타임) bản địa (native / 네이티브)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Symbol là gì?
 
@@ -253,6 +268,8 @@ undefined symbol: XYZ
 
 Đây thường là phiên bản (version / 버전)/ABI mismatch chứ không phải đơn giản “thư viện (library / 라이브러리) không tồn tại”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **ABI quan trọng hơn API ở thời gian chạy (runtime / 런타임) bản địa (native / 네이티브)** tiếp nhận điểm tựa từ **Symbol là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Static linking và động (dynamic / 동적) linking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ABI quan trọng hơn API ở thời gian chạy (runtime / 런타임) bản địa (native / 네이티브)
 
 **API** nói cách mã nguồn (source code / 소스 코드) gọi hàm (function / 함수). **ABI — ứng dụng (application / 애플리케이션) nhị phân (binary / 이진) giao diện (interface / 인터페이스)** nói binary-level đặc tả hợp đồng (contract / 계약): calling convention, symbol naming, kiểu (type / 타입) bố cục (layout / 레이아웃), nhị phân (binary / 이진) tính tương thích (compatibility / 호환성).
@@ -260,6 +277,8 @@ undefined symbol: XYZ
 Hai thư viện (library / 라이브러리) versions có thể có API gần giống nhưng ABI không tương thích. Khi đó nhị phân (binary / 이진) bản dựng (build / 빌드) với phiên bản (version / 버전) A có thể thất bại (fail / 실패) khi chạy cùng phiên bản (version / 버전) B.
 
 Đây là lý do trình quản lý gói (package manager / 패키지 관리자) và distro cố quản lý bản địa (native / 네이티브) thư viện (library / 라이브러리) versions cẩn thận.
+
+> **Chuyển mạch:** Trong **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Static linking và động (dynamic / 동적) linking** tiếp nhận điểm tựa từ **ABI quan trọng hơn API ở thời gian chạy (runtime / 런타임) bản địa (native / 네이티브)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PIE, ASLR và bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Static linking và động (dynamic / 동적) linking
 
@@ -270,6 +289,8 @@ Static nhị phân (binary / 이진) có lợi ở portability trong một số 
 Động (dynamic / 동적) linking tiết kiệm không gian (space / 공간) và cho phép cập nhật (update / 업데이트) dùng chung (shared / 공유) libraries, nhưng làm thời gian chạy (runtime / 런타임) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) phức tạp hơn.
 
 Không có lựa chọn tốt tuyệt đối cho mọi tải công việc (workload / 워크로드).
+
+> **Chuyển mạch:** Ở chặng này của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **PIE, ASLR và bảo mật (security / 보안)** tiếp nhận điểm tựa từ **Static linking và động (dynamic / 동적) linking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diagnosing một nhị phân (binary / 이진) không chạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## PIE, ASLR và bảo mật (security / 보안)
 
@@ -282,6 +303,8 @@ cat /proc/sys/kernel/randomize_va_space
 ```
 
 Đây là ví dụ bảo mật (security / 보안) được xây từ trình biên dịch (compiler / 컴파일러)/linker + kernel bộ nhớ (memory / 메모리) management chứ không chỉ firewall hoặc permission.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Diagnosing một nhị phân (binary / 이진) không chạy** tiếp nhận điểm tựa từ **PIE, ASLR và bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường hợp (case / 사례): chạy tay được nhưng systemd thất bại (fail / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Diagnosing một nhị phân (binary / 이진) không chạy
 
@@ -319,6 +342,8 @@ Quan sát tệp (file / 파일) open/lời gọi hệ thống (system call / 시
 
 Nếu dịch vụ (service / 서비스) chạy bằng systemd, phải thực hiện diagnosis trong đúng môi trường (environment / 환경)/định danh (identity / 식별자) của dịch vụ (service / 서비스) thay vì chỉ shell hiện tại.
 
+> **Chuyển mạch:** Trong **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Diagnosing một nhị phân (binary / 이진) không chạy** cho ta quy tắc; **Trường hợp (case / 사례): chạy tay được nhưng systemd thất bại (fail / 실패)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례): bản sao (copy / 복사) nhị phân (binary / 이진) từ máy chủ (server / 서버) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trường hợp (case / 사례): chạy tay được nhưng systemd thất bại (fail / 실패)
 
 Giả sử nhị phân (binary / 이진) phụ thuộc:
@@ -343,6 +368,8 @@ Vấn đề thực sự là thời gian chạy (runtime / 런타임) phụ thu�
 
 Cách đúng là khai báo phụ thuộc (dependency / 의존성)/môi trường (environment / 환경) rõ trong đơn vị (unit / 단위) hoặc packaging thay vì dựa vào shell profile.
 
+> **Chuyển mạch:** Ở chặng này của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Trường hợp (case / 사례): chạy tay được nhưng systemd thất bại (fail / 실패)** cho ta quy tắc; **Trường hợp (case / 사례): bản sao (copy / 복사) nhị phân (binary / 이진) từ máy chủ (server / 서버) khác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết (connection / 연결) với Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trường hợp (case / 사례): bản sao (copy / 복사) nhị phân (binary / 이진) từ máy chủ (server / 서버) khác
 
 Bản sao (copy / 복사) một executable đơn lẻ sang máy chủ (server / 서버) mới thường thất bại vì:
@@ -354,6 +381,8 @@ Bản sao (copy / 복사) một executable đơn lẻ sang máy chủ (server / 
 - cấu hình (configuration / 구성)/dữ liệu (data / 데이터) paths không tồn tại.
 
 Đây là lý do “nhị phân (binary / 이진) chạy ở máy A” không chứng minh “nhị phân (binary / 이진) tự chứa mọi thứ”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Trường hợp (case / 사례): bản sao (copy / 복사) nhị phân (binary / 이진) từ máy chủ (server / 서버) khác** cho ta quy tắc; **Liên kết (connection / 연결) với Java** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết (connection / 연결) với bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết (connection / 연결) với Java
 
@@ -369,6 +398,8 @@ có thể liên quan bản địa (native / 네이티브) thư viện (library /
 
 Vì vậy backend Java vẫn không hoàn toàn tách khỏi ELF/bản địa (native / 네이티브) thời gian chạy (runtime / 런타임).
 
+> **Chuyển mạch:** Trong **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Liên kết (connection / 연결) với bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **Liên kết (connection / 연결) với Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết (connection / 연결) với bộ chứa (container / 컨테이너)
 
 Ảnh bộ chứa (container image / 컨테이너 이미지) đóng gói user-space libraries, giúp ứng dụng (application / 애플리케이션) có thời gian chạy (runtime / 런타임) phụ thuộc (dependency / 의존성) tương đối ổn định. Nhưng nhị phân (binary / 이진) trong bộ chứa (container / 컨테이너) vẫn phải tương thích CPU kiến trúc (architecture / 아키텍처) và host kernel.
@@ -376,6 +407,8 @@ Vì vậy backend Java vẫn không hoàn toàn tách khỏi ELF/bản địa (n
 Một ảnh (image / 이미지) `linux/amd64` không tự nhiên chạy bản địa (native / 네이티브) trên ARM host nếu không có emulation phù hợp.
 
 Bộ chứa (container / 컨테이너) giảm một phần phụ thuộc (dependency / 의존성) drift, không xoá khái niệm ABI.
+
+> **Chuyển mạch:** Ở chặng này của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết (connection / 연결) với bộ chứa (container / 컨테이너)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -405,6 +438,8 @@ program entry point
 
 Một lỗi “không chạy được” phải được đặt vào đúng tầng của chuỗi này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Xem thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 **“Có quyền `x` thì chắc chắn chạy được.”** Không. Kernel còn phải hiểu format, kiến trúc (architecture / 아키텍처) và trình thông dịch (interpreter / 인터프리터).
@@ -417,6 +452,8 @@ Một lỗi “không chạy được” phải được đặt vào đúng tầ
 
 **“bộ chứa (container / 컨테이너) giải quyết mọi phụ thuộc (dependency / 의존성).”** bộ chứa (container / 컨테이너) đóng gói người dùng (user / 사용자) không gian (space / 공간) nhưng vẫn phụ thuộc CPU kiến trúc (architecture / 아키텍처) và host kernel giao diện (interface / 인터페이스).
 
+> **Chuyển mạch:** Trong **ELF, động (dynamic / 동적) Linking và cách Linux chạy một chương trình**, **Xem thêm** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Xem thêm
 
 Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
@@ -427,4 +464,4 @@ Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở
 - [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md)
 - [Tracing với strace và perf](../09_production/observability_tracing_strace_perf.md)
 
-> **Bàn giao:** Sau **Xem thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [backup restore disaster recovery](./backup_restore_disaster_recovery.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Xem thêm**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

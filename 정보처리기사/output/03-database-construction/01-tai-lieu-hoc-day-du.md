@@ -1,5 +1,7 @@
 # Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu học tập)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **권장 학습 순서 (Lộ trình đề xuất)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của toàn môn, rồi nối mục tiêu, lộ trình và từng bài học thành chuỗi khái niệm có thể kiểm chứng.
+
 ## 학습 목표 (Mục tiêu học tập)
 
 Phần này đặt mục tiêu của bài, để người mới biết mình cần giải thích được điều gì trước khi đi vào thuật ngữ và ví dụ.
@@ -9,6 +11,8 @@ Phần này đặt mục tiêu của bài, để người mới biết mình c�
 - 앞에서 배운 개념과 뒤의 심화 개념을 연결하여 문제의 조건을 빠르게 해석한다.
 
 > **Câu hỏi trung tâm:** Khi học môn này, người học không chỉ cần nhận ra thuật ngữ Hàn mà còn phải giải thích khái niệm đang giải quyết vấn đề nào, dựa trên điều kiện nào và được dùng để nối sang phần kiến thức nào tiếp theo.
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **권장 학습 순서 (Lộ trình đề xuất)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu học tập)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **101. 개념적 설계 (Conceptual Design)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 권장 학습 순서 (Lộ trình đề xuất)
 
@@ -28,6 +32,8 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **101. 개념적 설계 (Conceptual Design)** tiếp nhận điểm tựa từ **권장 학습 순서 (Lộ trình đề xuất)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **102. 논리적 설계 (Logical Design / Data Modeling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 101. 개념적 설계 (Conceptual Design)
 
 Chúng ta bắt đầu mạch học bằng **101. 개념적 설계 (Conceptual Design)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/54 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
@@ -46,6 +52,8 @@ Như vậy, **101. 개념적 설계 (Conceptual Design)** không chỉ cung cấ
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **102. 논리적 설계 (Logical Design / Data Modeling)** tiếp nhận điểm tựa từ **101. 개념적 설계 (Conceptual Design)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **103. 물리적 설계 (Physical Design)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 102. 논리적 설계 (Logical Design / Data Modeling)
 
 Sau khi đã đặt nền bằng **101. 개념적 설계 (Conceptual Design)**, ta chuyển sang **102. 논리적 설계 (Logical Design / Data Modeling)**. Đây là mắt xích 2/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -62,6 +70,8 @@ Phần “102. 논리적 설계 (Logical Design / Data Modeling)” được n�
 Ta có thể khép mục **102. 논리적 설계 (Logical Design / Data Modeling)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **103. 물리적 설계 (Physical Design)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **103. 물리적 설계 (Physical Design)** tiếp nhận điểm tựa từ **102. 논리적 설계 (Logical Design / Data Modeling)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **163-167. 데이터베이스 설계 순서 (Database Design Process)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 103. 물리적 설계 (Physical Design)
 
@@ -80,6 +90,8 @@ Phần “103. 물리적 설계 (Physical Design)” được nối với nội 
 Điểm chốt của **103. 물리적 설계 (Physical Design)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **163-167. 데이터베이스 설계 순서 (Database Design Process)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **103. 물리적 설계 (Physical Design)** xác định đầu vào; **163-167. 데이터베이스 설계 순서 (Database Design Process)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 163-167. 데이터베이스 설계 순서 (Database Design Process)
 
@@ -101,6 +113,8 @@ Phần “163-167. 데이터베이스 설계 순서 (Database Design Process)”
 Như vậy, **163-167. 데이터베이스 설계 순서 (Database Design Process)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, cơ chế trong **163-167. 데이터베이스 설계 순서 (Database Design Process)** cần được kiểm chứng bằng dấu vết cụ thể; **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **104. 데이터 모델에 표시할 요소 (Elements of Data Model)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)
 
@@ -126,6 +140,8 @@ Ta có thể khép mục **11. 데이터베이스 설계 (Thiết kế cơ sở 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)** nêu điều cần giải thích; **104. 데이터 모델에 표시할 요소 (Elements of Data Model)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 104. 데이터 모델에 표시할 요소 (Elements of Data Model)
 
 Từ **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**, ta đã có điểm tựa để bước vào **104. 데이터 모델에 표시할 요소 (Elements of Data Model)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/54 trước khi đi vào chi tiết.
@@ -147,6 +163,8 @@ Phần “104. 데이터 모델에 표시할 요소 (Elements of Data Model)” 
 Điểm chốt của **104. 데이터 모델에 표시할 요소 (Elements of Data Model)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** tiếp nhận điểm tựa từ **104. 데이터 모델에 표시할 요소 (Elements of Data Model)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)
 
@@ -170,6 +188,8 @@ Phần “168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational 
 Như vậy, **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** nêu điều cần giải thích; **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)
 
@@ -220,6 +240,8 @@ Ta có thể khép mục **12. 관계형 데이터 모델과 릴레이션 (Mô h
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)** nêu điều cần giải thích; **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **105. E-R 다이어그램 (E-R Diagram)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)
 
 Từ **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**, ta đã có điểm tựa để bước vào **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/54 trước khi đi vào chi tiết.
@@ -269,6 +291,8 @@ Bảng trong **E-R 다이어그램 기호 (Ký hiệu biểu đồ E-R - Peter C
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)** nêu điều cần giải thích; **105. E-R 다이어그램 (E-R Diagram)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **110-114. 키 (Keys)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 105. E-R 다이어그램 (E-R Diagram)
 
 Ở bước 10/54, **105. E-R 다이어그램 (E-R Diagram)** xuất hiện như phần tiếp nối của **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -288,6 +312,8 @@ Phần “105. E-R 다이어그램 (E-R Diagram)” được nối với nội d
 Như vậy, **105. E-R 다이어그램 (E-R Diagram)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **110-114. 키 (Keys)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **110-114. 키 (Keys)** tiếp nhận điểm tựa từ **105. E-R 다이어그램 (E-R Diagram)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 110-114. 키 (Keys)
 
@@ -312,6 +338,8 @@ Phần “110-114. 키 (Keys)” được nối với nội dung kế tiếp đ�
 Ta có thể khép mục **110-114. 키 (Keys)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)** tiếp nhận điểm tựa từ **110-114. 키 (Keys)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 스키마 (Schema - Lược đồ)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)
 
@@ -339,6 +367,8 @@ Phần “173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relat
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **5. 스키마 (Schema - Lược đồ)** tiếp nhận điểm tựa từ **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 스키마 (Schema - Lược đồ)
 
 Ở bước 13/54, **5. 스키마 (Schema - Lược đồ)** xuất hiện như phần tiếp nối của **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -358,6 +388,8 @@ Phần “5. 스키마 (Schema - Lược đồ)” được nối với nội du
 Như vậy, **5. 스키마 (Schema - Lược đồ)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)** tiếp nhận điểm tựa từ **5. 스키마 (Schema - Lược đồ)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **115. 무결성 (Integrity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)
 
@@ -407,6 +439,8 @@ Ta có thể khép mục **14. 키(Key)의 종류와 데이터베이스 무결�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **115. 무결성 (Integrity)** tiếp nhận điểm tựa từ **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **116-121. 관계대수 (Relational Algebra)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 115. 무결성 (Integrity)
 
 Từ **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)**, ta đã có điểm tựa để bước vào **115. 무결성 (Integrity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/54 trước khi đi vào chi tiết.
@@ -424,6 +458,8 @@ Phần “115. 무결성 (Integrity)” được nối với nội dung kế ti�
 Điểm chốt của **115. 무결성 (Integrity)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **116-121. 관계대수 (Relational Algebra)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **116-121. 관계대수 (Relational Algebra)** tiếp nhận điểm tựa từ **115. 무결성 (Integrity)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **123-125. 정규화 (Normalization)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 116-121. 관계대수 (Relational Algebra)
 
@@ -449,6 +485,8 @@ Như vậy, **116-121. 관계대수 (Relational Algebra)** không chỉ cung c�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **123-125. 정규화 (Normalization)** tiếp nhận điểm tựa từ **116-121. 관계대수 (Relational Algebra)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 123-125. 정규화 (Normalization)
 
 Sau khi đã đặt nền bằng **116-121. 관계대수 (Relational Algebra)**, ta chuyển sang **123-125. 정규화 (Normalization)**. Đây là mắt xích 17/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -470,6 +508,8 @@ Phần “123-125. 정규화 (Normalization)” được nối với nội dung 
 Ta có thể khép mục **123-125. 정규화 (Normalization)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** tiếp nhận điểm tựa từ **123-125. 정규화 (Normalization)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **184-185. 반정규화 (Denormalization)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)
 
@@ -494,6 +534,8 @@ Phần “179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Di
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **184-185. 반정규화 (Denormalization)** tiếp nhận điểm tựa từ **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. 정규화(Normalization)와 이상 현상(Anomaly)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 184-185. 반정규화 (Denormalization)
 
 Ở bước 19/54, **184-185. 반정규화 (Denormalization)** xuất hiện như phần tiếp nối của **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -512,6 +554,8 @@ Phần “184-185. 반정규화 (Denormalization)” được nối với nội 
 Như vậy, **184-185. 반정규화 (Denormalization)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **16. 정규화(Normalization)와 이상 현상(Anomaly)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **16. 정규화(Normalization)와 이상 현상(Anomaly)** tiếp nhận điểm tựa từ **184-185. 반정규화 (Denormalization)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. 정규화(Normalization)와 이상 현상(Anomaly)
 
@@ -565,6 +609,8 @@ Ta có thể khép mục **16. 정규화(Normalization)와 이상 현상(Anomaly
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)** tiếp nhận điểm tựa từ **16. 정규화(Normalization)와 이상 현상(Anomaly)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **130-132. 트랜잭션 (Transaction)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)
 
 Từ **16. 정규화(Normalization)와 이상 현상(Anomaly)**, ta đã có điểm tựa để bước vào **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/54 trước khi đi vào chi tiết.
@@ -607,6 +653,8 @@ Các bullet của **반정규화 (Denormalization - Phi chuẩn hóa)** đang n�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **130-132. 트랜잭션 (Transaction)** tiếp nhận điểm tựa từ **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 130-132. 트랜잭션 (Transaction)
 
 Ở bước 22/54, **130-132. 트랜잭션 (Transaction)** xuất hiện như phần tiếp nối của **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -631,6 +679,8 @@ Như vậy, **130-132. 트랜잭션 (Transaction)** không chỉ cung cấp các
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** tiếp nhận điểm tựa từ **130-132. 트랜잭션 (Transaction)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 인덱스와 트랜잭션 (Index và Giao dịch)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)
 
 Sau khi đã đặt nền bằng **130-132. 트랜잭션 (Transaction)**, ta chuyển sang **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**. Đây là mắt xích 23/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -647,6 +697,8 @@ Phần “187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)�
 Ta có thể khép mục **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **9. 인덱스와 트랜잭션 (Index và Giao dịch)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **9. 인덱스와 트랜잭션 (Index và Giao dịch)** tiếp nhận điểm tựa từ **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. 인덱스와 트랜잭션 (Index và Giao dịch)
 
@@ -695,6 +747,8 @@ Bảng trong **트랜잭션 (Transaction - Giao dịch) - ACID** không phải d
 Điểm chốt của **9. 인덱스와 트랜잭션 (Index và Giao dịch)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** tiếp nhận điểm tựa từ **9. 인덱스와 트랜잭션 (Index và Giao dịch)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **143-145. SQL 분류 (SQL Categories)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)
 
@@ -757,6 +811,8 @@ Như vậy, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **143-145. SQL 분류 (SQL Categories)** tiếp nhận điểm tựa từ **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 143-145. SQL 분류 (SQL Categories)
 
 Sau khi đã đặt nền bằng **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, ta chuyển sang **143-145. SQL 분류 (SQL Categories)**. Đây là mắt xích 26/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -779,6 +835,8 @@ Ta có thể khép mục **143-145. SQL 분류 (SQL Categories)** bằng một c
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **143-145. SQL 분류 (SQL Categories)** nêu điều cần giải thích; **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. SQL 문법의 종류 (Các loại cú pháp SQL)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)
 
 Từ **143-145. SQL 분류 (SQL Categories)**, ta đã có điểm tựa để bước vào **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/54 trước khi đi vào chi tiết.
@@ -798,6 +856,8 @@ Phần “3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL t
 Điểm chốt của **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **4. SQL 문법의 종류 (Các loại cú pháp SQL)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** nêu điều cần giải thích; **4. SQL 문법의 종류 (Các loại cú pháp SQL)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. SQL 문법의 종류 (Các loại cú pháp SQL)
 
@@ -824,6 +884,8 @@ Phần “4. SQL 문법의 종류 (Các loại cú pháp SQL)” được nối 
 Như vậy, **4. SQL 문법의 종류 (Các loại cú pháp SQL)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** tiếp nhận điểm tựa từ **4. SQL 문법의 종류 (Các loại cú pháp SQL)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## A+ Deep Dive: SQL 결과를 행 단위로 추적하기
 
@@ -900,6 +962,8 @@ Ta có thể khép mục **A+ Deep Dive: SQL 결과를 행 단위로 추적하�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** tiếp nhận điểm tựa từ **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **193. 뷰 (View)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 150-155. 데이터 조작어 (DML) 확장 및 조건 연산자
 
 Từ **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, ta đã có điểm tựa để bước vào **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/54 trước khi đi vào chi tiết.
@@ -928,6 +992,8 @@ Phần “150-155. 데이터 조작어 (DML) 확장 및 조건 연산자” đư
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **193. 뷰 (View)** tiếp nhận điểm tựa từ **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 서브쿼리와 뷰 (Truy vấn con và View)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 193. 뷰 (View)
 
 Ở bước 31/54, **193. 뷰 (View)** xuất hiện như phần tiếp nối của **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -943,6 +1009,8 @@ Phần “193. 뷰 (View)” được nối với nội dung kế tiếp để n
 Như vậy, **193. 뷰 (View)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **8. 서브쿼리와 뷰 (Truy vấn con và View)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **8. 서브쿼리와 뷰 (Truy vấn con và View)** tiếp nhận điểm tựa từ **193. 뷰 (View)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **191-192. 인덱스 (Index)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. 서브쿼리와 뷰 (Truy vấn con và View)
 
@@ -988,6 +1056,8 @@ Ta có thể khép mục **8. 서브쿼리와 뷰 (Truy vấn con và View)** b�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **191-192. 인덱스 (Index)** tiếp nhận điểm tựa từ **8. 서브쿼리와 뷰 (Truy vấn con và View)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **136-137. 분산 데이터베이스 (Distributed DB)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 191-192. 인덱스 (Index)
 
 Từ **8. 서브쿼리와 뷰 (Truy vấn con và View)**, ta đã có điểm tựa để bước vào **191-192. 인덱스 (Index)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/54 trước khi đi vào chi tiết.
@@ -1002,6 +1072,8 @@ Phần “191-192. 인덱스 (Index)” được nối với nội dung kế ti�
 Điểm chốt của **191-192. 인덱스 (Index)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **136-137. 분산 데이터베이스 (Distributed DB)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **136-137. 분산 데이터베이스 (Distributed DB)** tiếp nhận điểm tựa từ **191-192. 인덱스 (Index)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 136-137. 분산 데이터베이스 (Distributed DB)
 
@@ -1019,6 +1091,8 @@ Như vậy, **136-137. 분산 데이터베이스 (Distributed DB)** không chỉ
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** tiếp nhận điểm tựa từ **136-137. 분산 데이터베이스 (Distributed DB)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 195-196. 분산 데이터베이스 목표 (Distributed DB Goals)
 
 Sau khi đã đặt nền bằng **136-137. 분산 데이터베이스 (Distributed DB)**, ta chuyển sang **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**. Đây là mắt xích 35/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1033,6 +1107,8 @@ Phần “195-196. 분산 데이터베이스 목표 (Distributed DB Goals)” đ
 Ta có thể khép mục **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** tiếp nhận điểm tựa từ **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
 
@@ -1064,6 +1140,8 @@ Phần “197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
 Điểm chốt của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** tiếp nhận điểm tựa từ **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)
 
@@ -1113,6 +1191,8 @@ Như vậy, **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** tiếp nhận điểm tựa từ **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)
 
 Sau khi đã đặt nền bằng **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**, ta chuyển sang **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**. Đây là mắt xích 38/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1155,6 +1235,8 @@ Các bullet của **데이터베이스 암호화 (Mã hóa CSDL)** đang nén nh
 Ta có thể khép mục **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** tiếp nhận điểm tựa từ **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **106-107. 튜플(Tuple)과 속성(Attribute)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)
 
@@ -1220,6 +1302,8 @@ Như vậy, **MAC 보안 모델 (Các mô hình bảo mật của MAC)** đã ho
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **106-107. 튜플(Tuple)과 속성(Attribute)** tiếp nhận điểm tựa từ **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **108. 도메인 (Domain)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 106-107. 튜플(Tuple)과 속성(Attribute)
 
 Ở bước 40/54, **106-107. 튜플(Tuple)과 속성(Attribute)** xuất hiện như phần tiếp nối của **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1240,6 +1324,8 @@ Như vậy, **106-107. 튜플(Tuple)과 속성(Attribute)** không chỉ cung c�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **108. 도메인 (Domain)** tiếp nhận điểm tựa từ **106-107. 튜플(Tuple)과 속성(Attribute)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **178. 관계해석 (Relational Calculus)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 108. 도메인 (Domain)
 
 Sau khi đã đặt nền bằng **106-107. 튜플(Tuple)과 속성(Attribute)**, ta chuyển sang **108. 도메인 (Domain)**. Đây là mắt xích 41/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1255,6 +1341,8 @@ Phần “108. 도메인 (Domain)” được nối với nội dung kế tiếp
 Ta có thể khép mục **108. 도메인 (Domain)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **178. 관계해석 (Relational Calculus)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **178. 관계해석 (Relational Calculus)** tiếp nhận điểm tựa từ **108. 도메인 (Domain)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 178. 관계해석 (Relational Calculus)
 
@@ -1274,6 +1362,8 @@ Phần “178. 관계해석 (Relational Calculus)” được nối với nội 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** tiếp nhận điểm tựa từ **178. 관계해석 (Relational Calculus)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **186. 시스템 카탈로그 (System Catalog)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)
 
 Ở bước 43/54, **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** xuất hiện như phần tiếp nối của **178. 관계해석 (Relational Calculus)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1289,6 +1379,8 @@ Phần “183. 함수적 종속과 이행적 종속 (Functional & Transitive Dep
 Như vậy, **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **186. 시스템 카탈로그 (System Catalog)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **186. 시스템 카탈로그 (System Catalog)** tiếp nhận điểm tựa từ **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **190. CRUD 분석** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 186. 시스템 카탈로그 (System Catalog)
 
@@ -1308,6 +1400,8 @@ Ta có thể khép mục **186. 시스템 카탈로그 (System Catalog)** bằng
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **190. CRUD 분석** tiếp nhận điểm tựa từ **186. 시스템 카탈로그 (System Catalog)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **194. 파티션 (Partition)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 190. CRUD 분석
 
 Từ **186. 시스템 카탈로그 (System Catalog)**, ta đã có điểm tựa để bước vào **190. CRUD 분석**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/54 trước khi đi vào chi tiết.
@@ -1322,6 +1416,8 @@ Phần “190. CRUD 분석” được nối với nội dung kế tiếp để 
 Điểm chốt của **190. CRUD 분석** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **194. 파티션 (Partition)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **194. 파티션 (Partition)** tiếp nhận điểm tựa từ **190. CRUD 분석** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **148-154. 파일 시스템과 디렉터리, 보안 (File System & Security)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 194. 파티션 (Partition)
 
@@ -1338,6 +1434,8 @@ Phần “194. 파티션 (Partition)” được nối với nội dung kế ti�
 Như vậy, **194. 파티션 (Partition)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **148-154. 파일 시스템과 디렉터리, 보안 (File System & Security)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **148-154. 파일 시스템과 디렉터리, 보안 (File System & Security)** tiếp nhận điểm tựa từ **194. 파티션 (Partition)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 148-154. 파일 시스템과 디렉터리, 보안 (File System & Security)
 
@@ -1364,6 +1462,8 @@ Phần “148-154. 파일 시스템과 디렉터리, 보안 (File System & Secur
 Ta có thể khép mục **148-154. 파일 시스템과 디렉터리, 보안 (File System & Security)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)** tiếp nhận điểm tựa từ **148-154. 파일 시스템과 디렉터리, 보안 (File System & Security)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)
 
@@ -1402,6 +1502,8 @@ Phần “1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNI
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** tiếp nhận điểm tựa từ **1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. UNIX의 주요 명령어 (Các lệnh UNIX chính)
 
 Ở bước 49/54, **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** xuất hiện như phần tiếp nối của **1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1437,6 +1539,8 @@ Phần “2. UNIX의 주요 명령어 (Các lệnh UNIX chính)” được nố
 Như vậy, **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** tiếp nhận điểm tựa từ **2. UNIX의 주요 명령어 (Các lệnh UNIX chính)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
 
@@ -1522,6 +1626,8 @@ Ta có thể khép mục **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** tiếp nhận điểm tựa từ **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
 
 Từ **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**, ta đã có điểm tựa để bước vào **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/54 trước khi đi vào chi tiết.
@@ -1567,6 +1673,8 @@ Với **조인 (JOIN)**, hãy đọc các công thức như một chuỗi lập 
 Điểm chốt của **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** nêu điều cần giải thích; **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)
 
@@ -1617,6 +1725,8 @@ Như vậy, **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - �
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** nêu điều cần giải thích; **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)
 
 Sau khi đã đặt nền bằng **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**, ta chuyển sang **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**. Đây là mắt xích 53/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1660,6 +1770,8 @@ Các bullet của **오류 데이터 정제 (Error Data Cleansing)** đang nén 
 Ta có thể khép mục **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** nêu điều cần giải thích; **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
 
@@ -1726,3 +1838,5 @@ Với **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**, h�
 Với **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Khép lại **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+
+> **Bàn giao:** Sau **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
