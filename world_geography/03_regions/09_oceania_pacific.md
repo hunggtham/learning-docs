@@ -1,7 +1,6 @@
 # Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới
 
-> **Mạch đọc:** Đọc **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thesis không gian** sang **Đại dương là mạng lưới chứ không phải khoảng trống**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**. Route đi từ Australia, New Zealand và các đảo Pacific → oceanic network, khoảng cách và mobility → khí hậu, biển và tài nguyên → đô thị, diaspora và governance → sea-level/cyclone risk, để đại dương được đọc như hạ tầng kết nối.
 
 ## Thesis không gian
 
@@ -13,6 +12,8 @@ Chuỗi nguyên nhân hữu ích nhất là:
 
 Điểm quan trọng là đại dương không chỉ “ngăn cách” các đảo. Nó đồng thời là không gian giao thông, sinh thái, tài nguyên, cáp dữ liệu và quan hệ kinh tế.
 
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Đại dương là mạng lưới chứ không phải khoảng trống** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Australia: lục địa cổ, nội địa khô và đô thị ven biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đại dương là mạng lưới chứ không phải khoảng trống
 
 Bản đồ lấy đất liền làm trung tâm khiến nhiều đảo Thái Bình Dương trông như các điểm cô lập. Nhưng đối với hàng hải, đánh bắt cá, hàng không, cáp biển và lịch sử di cư, biển là **môi trường kết nối (connective medium)**.
@@ -20,6 +21,8 @@ Bản đồ lấy đất liền làm trung tâm khiến nhiều đảo Thái Bì
 Khoảng cách vì thế phải được đọc theo **khoảng cách hiệu dụng (effective distance)**. Hai đảo cách nhau ít kilomet nhưng không có tuyến tàu hoặc chuyến bay thường xuyên có thể “xa” nhau hơn hai nơi cách hàng nghìn kilomet nhưng nằm trên một mạng vận tải ổn định.
 
 Một quốc đảo có diện tích đất nhỏ nhưng vùng biển quản lý rộng có thể sở hữu lợi ích lớn từ nghề cá và dịch vụ biển. Vì vậy diện tích đất không phải thước đo đầy đủ của không gian kinh tế.
+
+> **Chuyển mạch:** Ở chặng này của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Australia: lục địa cổ, nội địa khô và đô thị ven biển** tiếp nhận điểm tựa từ **Đại dương là mạng lưới chứ không phải khoảng trống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước Australia: khí hậu biến động gặp nhu cầu cạnh tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Australia: lục địa cổ, nội địa khô và đô thị ven biển
 
@@ -29,6 +32,8 @@ Dân cư tập trung mạnh quanh bờ đông, đông nam và tây nam không ch
 
 Cấu trúc đó tạo một bài học quan trọng: **diện tích quốc gia lớn không đồng nghĩa không gian định cư hữu dụng lớn**. Phần đất có nước, hạ tầng và khả năng tiếp cận thị trường mới quyết định nơi dân cư và kinh tế tập trung.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Nước Australia: khí hậu biến động gặp nhu cầu cạnh tranh** tiếp nhận điểm tựa từ **Australia: lục địa cổ, nội địa khô và đô thị ven biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên Australia và hành lang xuất khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nước Australia: khí hậu biến động gặp nhu cầu cạnh tranh
 
 Lưu vực Murray–Darling hỗ trợ nông nghiệp tưới, đô thị và hệ sinh thái, nhưng lượng nước không cố định. Hạn, biến động khí hậu giữa các năm, hồ chứa, nước ngầm và nhu cầu tưới cùng tác động lên cân bằng lưu vực.
@@ -36,6 +41,8 @@ Lưu vực Murray–Darling hỗ trợ nông nghiệp tưới, đô thị và h�
 Một hecta đất có thể rất màu mỡ nhưng giá trị kinh tế thấp nếu nguồn nước không đáng tin cậy. Ngược lại, hạ tầng tưới có thể nâng năng suất nhưng cũng tạo phụ thuộc vào phân bổ nước và năng lượng bơm.
 
 Đây là liên hệ trực tiếp giữa [thủy văn](../01_physical_geography/04_hydrology_rivers_groundwater.md), [nông nghiệp](../02_human_geography/06_agriculture_food_systems.md) và [Water–Food–Energy Nexus](../04_global_systems/01_water_food_energy_nexus.md).
+
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Tài nguyên Australia và hành lang xuất khẩu** tiếp nhận điểm tựa từ **Nước Australia: khí hậu biến động gặp nhu cầu cạnh tranh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng đô thị Australia và tính tập trung chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tài nguyên Australia và hành lang xuất khẩu
 
@@ -47,6 +54,8 @@ Quặng sắt, than, khí tự nhiên và nhiều khoáng sản khác thường 
 
 Nếu tinh luyện, sản xuất vật liệu hoặc chế tạo diễn ra ở nơi khác, phần giá trị gia tăng cũng phân bố theo nơi khác. Phân tích tài nguyên vì thế phải đi từ geology tới processing và trade mạng (network / 네트워크).
 
+> **Chuyển mạch:** Ở chặng này của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Mạng đô thị Australia và tính tập trung chức năng** tiếp nhận điểm tựa từ **Tài nguyên Australia và hành lang xuất khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **New Zealand: ranh giới mảng, núi và kinh tế hướng biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mạng đô thị Australia và tính tập trung chức năng
 
 Các đô thị lớn của Australia tập trung nhiều chức năng dịch vụ, tài chính, giáo dục, công nghệ và logistics. Điều này tạo **kinh tế tập tụ (agglomeration economies)** nhưng cũng làm nhà ở, giao thông và hạ tầng trở thành ràng buộc (constraint / 제약조건).
@@ -54,6 +63,8 @@ Các đô thị lớn của Australia tập trung nhiều chức năng dịch v�
 Một mỏ có thể ở xa thành phố nhưng hoạt động quản trị, tài chính, kỹ thuật và dịch vụ chuyên môn vẫn tập trung trong đô thị lớn. Do đó bản đồ kinh tế không trùng với bản đồ nơi khai thác vật chất.
 
 Ta cần phân biệt **nơi tạo dòng vật chất** với **nơi điều phối dòng vốn, kỹ năng và quyết định**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **New Zealand: ranh giới mảng, núi và kinh tế hướng biển** tiếp nhận điểm tựa từ **Mạng đô thị Australia và tính tập trung chức năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đảo núi lửa cao và đảo san hô thấp là hai hệ khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## New Zealand: ranh giới mảng, núi và kinh tế hướng biển
 
@@ -63,6 +74,8 @@ New Zealand nằm gần ranh giới giữa các mảng Pacific và Australian, t
 
 Một sản phẩm nông nghiệp không chỉ cần trang trại. Nó cần chế biến, kiểm định, chuỗi lạnh, cảng và kết nối thị trường. Đây là lý do nông nghiệp hiện đại phải được đọc như **food hệ thống (system / 시스템)**, không chỉ land use.
 
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Đảo núi lửa cao và đảo san hô thấp là hai hệ khác nhau** tiếp nhận điểm tựa từ **New Zealand: ranh giới mảng, núi và kinh tế hướng biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **San hô là hệ sinh thái và hạ tầng tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đảo núi lửa cao và đảo san hô thấp là hai hệ khác nhau
 
 Đảo núi lửa cao thường có địa hình dốc, suối, vùng hứng mưa và đôi khi có đất núi lửa tương đối màu mỡ. Đảo san hô vòng thấp (atoll) lại có cao độ rất thấp, ít dòng nước mặt và phụ thuộc mạnh vào **thấu kính nước ngọt (freshwater lens)**.
@@ -71,11 +84,15 @@ Trên atoll, khai thác nước ngầm quá mạnh hoặc nước biển xâm nh
 
 Không nên dùng một nhãn “Pacific island” rồi giả định mọi đảo có cùng ràng buộc (constraint / 제약조건).
 
+> **Chuyển mạch:** Ở chặng này của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **San hô là hệ sinh thái và hạ tầng tự nhiên** tiếp nhận điểm tựa từ **Đảo núi lửa cao và đảo san hô thấp là hai hệ khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư và đô thị ở các quốc đảo nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## San hô là hệ sinh thái và hạ tầng tự nhiên
 
 Rạn san hô cung cấp sinh cảnh, hỗ trợ nghề cá và làm giảm một phần năng lượng sóng trước khi tới bờ. Khi reef suy thoái, tổn thất không chỉ là đa dạng sinh học mà còn có thể là mất **dịch vụ hệ sinh thái (ecosystem services)** và tăng exposure ven biển.
 
 Tuy nhiên reef chịu cả áp lực toàn cầu và địa phương: nhiệt độ nước, acidification, chất lượng nước, khai thác và phát triển bờ biển. Vì vậy adaptation phải kết hợp giảm stress địa phương với quản lý rủi ro khí hậu rộng hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Dân cư và đô thị ở các quốc đảo nhỏ** tiếp nhận điểm tựa từ **San hô là hệ sinh thái và hạ tầng tự nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy mô nhỏ và chi phí cung cấp dịch vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dân cư và đô thị ở các quốc đảo nhỏ
 
@@ -85,6 +102,8 @@ Tập trung giúp cung cấp bệnh viện, đại học, hành chính và logis
 
 Vì vậy resilience của một đảo nhỏ không thể đánh giá chỉ bằng tổng GDP; cần map trọng yếu (critical / 중요) nodes và khả năng thay thế.
 
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Quy mô nhỏ và chi phí cung cấp dịch vụ** tiếp nhận điểm tựa từ **Dân cư và đô thị ở các quốc đảo nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logistics: tần suất quan trọng gần như khoảng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quy mô nhỏ và chi phí cung cấp dịch vụ
 
 Một bệnh viện, sân bay, nhà máy điện hoặc hệ thống nước đều có **chi phí cố định (fixed cost)**. Khi dân số nhỏ và phân tán trên nhiều đảo, chi phí bình quân mỗi người có thể cao dù tổng quy mô đầu tư không lớn.
@@ -92,6 +111,8 @@ Một bệnh viện, sân bay, nhà máy điện hoặc hệ thống nước đ�
 Đây là vấn đề **bất lợi quy mô (diseconomies of small scale)**. Nó giải thích vì sao geography ảnh hưởng trực tiếp tới tài chính công: cùng một tiêu chuẩn dịch vụ nhưng phải phục vụ nhiều đảo xa nhau sẽ tốn kém hơn một đô thị tập trung.
 
 Tuy nhiên quy mô nhỏ không chỉ là bất lợi. Một số nơi có thể chuyên môn hóa vào du lịch, dịch vụ hàng hải, fisheries hoặc niche services. Kết quả phụ thuộc connectivity và institution chứ không chỉ population kích thước (size / 크기).
+
+> **Chuyển mạch:** Ở chặng này của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Logistics: tần suất quan trọng gần như khoảng cách** tiếp nhận điểm tựa từ **Quy mô nhỏ và chi phí cung cấp dịch vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng không, du lịch và nền kinh tế cửa ngõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Logistics: tần suất quan trọng gần như khoảng cách
 
@@ -105,6 +126,8 @@ Do đó chi phí (cost / 비용) thực của remoteness gồm:
 
 Đây là ứng dụng trực tiếp của [Global Trade Networks](../04_global_systems/05_global_trade_networks.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Hàng không, du lịch và nền kinh tế cửa ngõ** tiếp nhận điểm tựa từ **Logistics: tần suất quan trọng gần như khoảng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thực phẩm và năng lượng nhập khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàng không, du lịch và nền kinh tế cửa ngõ
 
 Nhiều đảo phụ thuộc mạnh vào hàng không đối với khách du lịch, lao động kỹ năng, y tế chuyên sâu và hàng hóa giá trị cao. Sân bay vì thế không chỉ là hạ tầng (infrastructure / 인프라) sector mà là **gateway hệ thống (system / 시스템)**.
@@ -112,6 +135,8 @@ Nhiều đảo phụ thuộc mạnh vào hàng không đối với khách du l�
 Du lịch có thể tạo ngoại tệ và việc làm nhưng cũng tập trung rủi ro nếu nền kinh tế quá phụ thuộc một nguồn khách hoặc một vài tuyến bay. Chuyên môn hóa tăng hiệu quả trong trạng thái bình thường nhưng có thể giảm resilience khi gateway bị gián đoạn.
 
 Bài học tổng quát là: **specialization + few gateways → high mạng (network / 네트워크) sensitivity**.
+
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Thực phẩm và năng lượng nhập khẩu** tiếp nhận điểm tựa từ **Hàng không, du lịch và nền kinh tế cửa ngõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cáp biển và địa lý số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thực phẩm và năng lượng nhập khẩu
 
@@ -121,11 +146,15 @@ Các đảo có đất nông nghiệp nhỏ, thiếu nhiên liệu hóa thạch 
 
 Năng lượng tái tạo có thể giảm một phần phụ thuộc nhiên liệu nhập khẩu, nhưng vẫn cần thiết bị, lưu trữ, grid và kỹ năng bảo trì. “Có nhiều nắng/gió” chưa đồng nghĩa tự chủ năng lượng.
 
+> **Chuyển mạch:** Ở chặng này của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Cáp biển và địa lý số** tiếp nhận điểm tựa từ **Thực phẩm và năng lượng nhập khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fisheries và vùng biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cáp biển và địa lý số
 
 Dịch vụ số có thể vượt đại dương gần như tức thời, nhưng chúng vẫn cần cáp quang vật lý, trạm cập bờ, điện và dữ liệu (data / 데이터) hạ tầng (infrastructure / 인프라). Một quốc đảo chỉ có một tuyến cáp có thể rất connected khi hệ thống hoạt động nhưng rất mong manh nếu tuyến đó lỗi.
 
 Vì vậy cần phân biệt **connectivity** và **redundancy**. Một mạng có bandwidth cao nhưng không có đường thay thế vẫn có systemic rủi ro (risk / 위험) lớn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Fisheries và vùng biển** tiếp nhận điểm tựa từ **Cáp biển và địa lý số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cyclone và vì sao mất mát (loss / 손실) phải đo theo quy mô nền kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Fisheries và vùng biển
 
@@ -133,11 +162,15 @@ Nhiều nguồn cá di cư qua vùng biển rộng và không tôn trọng đư�
 
 Giám sát, dữ liệu sinh học, thỏa thuận tiếp cận và khả năng thực thi đều quan trọng. Diện tích vùng biển lớn chỉ tạo tiềm năng; quản trị (governance / 거버넌스) quyết định bao nhiêu giá trị được giữ lại.
 
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Cyclone và vì sao mất mát (loss / 손실) phải đo theo quy mô nền kinh tế** tiếp nhận điểm tựa từ **Fisheries và vùng biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mực nước biển và adaptation không có một công thức chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cyclone và vì sao mất mát (loss / 손실) phải đo theo quy mô nền kinh tế
 
 Một cyclone có thể phá hủy nhiều cơ sở hạ tầng trong một quốc đảo nhỏ vì tài sản tập trung hẹp ven bờ. Thiệt hại tuyệt đối có thể thấp hơn ở một nước lớn nhưng tỷ lệ so với GDP, ngân sách hoặc housing stock lại rất cao.
 
 Vì vậy cần phân biệt **absolute mất mát (loss / 손실)** với **relative mất mát (loss / 손실)**. Khả năng phục hồi còn phụ thuộc dự phòng tài chính, khả năng nhập vật liệu, tốc độ mở lại cảng và mạng xã hội hỗ trợ.
+
+> **Chuyển mạch:** Ở chặng này của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Mực nước biển và adaptation không có một công thức chung** tiếp nhận điểm tựa từ **Cyclone và vì sao mất mát (loss / 손실) phải đo theo quy mô nền kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tri thức hàng hải bản địa và lịch sử định cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mực nước biển và adaptation không có một công thức chung
 
@@ -145,11 +178,15 @@ Rủi ro ven biển phụ thuộc mực nước biển tương đối, sóng, st
 
 Các lựa chọn gồm bảo vệ bờ, nâng công trình, quản lý nước, phục hồi ecosystem, điều chỉnh land use và trong một số trường hợp tái định cư. Không có lựa chọn “tối ưu” độc lập với văn hóa, chi phí và nơi sinh kế tập trung.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Tri thức hàng hải bản địa và lịch sử định cư** tiếp nhận điểm tựa từ **Mực nước biển và adaptation không có một công thức chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Australia, New Zealand và mạng Indo-Pacific** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tri thức hàng hải bản địa và lịch sử định cư
 
 Lịch sử định cư Thái Bình Dương cho thấy các hệ tri thức hàng hải phát triển khả năng đọc sao, sóng, gió và sinh thái để định hướng trên đại dương rộng. Điều này nhắc rằng bản đồ phương Tây chỉ là một trong nhiều cách mã hóa không gian.
 
 Tri thức địa phương đặc biệt có giá trị khi kết hợp với khoa học hiện đại về thời tiết, đại dương và rủi ro (risk / 위험) management; không nên bị giảm thành “cultural anecdote”.
+
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Australia, New Zealand và mạng Indo-Pacific** tiếp nhận điểm tựa từ **Tri thức hàng hải bản địa và lịch sử định cư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vai trò khu vực: ba geography chồng lên nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Australia, New Zealand và mạng Indo-Pacific
 
@@ -159,11 +196,15 @@ Với Korea và Vietnam, điều cần học không phải một bảng bilatera
 
 Cấu trúc này nối Oceania trực tiếp với [Đông Á](./01_east_asia.md), [Đông Nam Á](./02_southeast_asia.md) và [mạng thương mại toàn cầu](../04_global_systems/05_global_trade_networks.md).
 
+> **Chuyển mạch:** Ở chặng này của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Vai trò khu vực: ba geography chồng lên nhau** tiếp nhận điểm tựa từ **Australia, New Zealand và mạng Indo-Pacific** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vai trò khu vực: ba geography chồng lên nhau
 
 Oceania có thể đọc thành ba hệ đồng thời. Australia–New Zealand là các nền kinh tế đô thị lớn hơn với mạng toàn cầu; Melanesia có địa hình đảo cao, tài nguyên và nhiều vùng khó tiếp cận; Micronesia–Polynesia thường có land area nhỏ hơn nhưng ocean không gian (space / 공간) và gateway dependence lớn.
 
 Điểm chung không phải “đều là đảo”, mà là tầm quan trọng của **maritime mạng (network / 네트워크)**. Vị trí một nơi trong mạng tàu, hàng không, cáp, di chuyển (migration / 마이그레이션) và fisheries quyết định regional role nhiều hơn diện tích đất đơn thuần.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Vai trò khu vực: ba geography chồng lên nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -171,10 +212,12 @@ Oceania có thể đọc thành ba hệ đồng thời. Australia–New Zealand 
 
 “Có vùng biển rộng = giàu tài nguyên” bỏ qua monitoring, processing, thị trường (market / 시장) truy cập (access / 접근) và quản trị (governance / 거버넌스). “Năng lượng tái tạo = hết phụ thuộc nhập khẩu” bỏ qua equipment, lưu trữ (storage / 저장소) và grid. “Climate thay đổi (change / 변경) tác động giống nhau lên mọi đảo” bỏ qua geology, elevation, reef, water và hạ tầng (infrastructure / 인프라).
 
+> **Chuyển mạch:** Trong **Châu Đại Dương và Thái Bình Dương: đại dương như một mạng lưới**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Oceania là **mạng đại dương (ocean network)** nơi geology và water xác định không gian định cư; quy mô nhỏ và khoảng cách làm gateway trở nên quan trọng; tài nguyên, đô thị và dịch vụ tập trung tại ít nút (node / 노드); thương mại nối các nút (node / 노드) đó với East/Southeast Asia và thế giới. Vì vậy hãy đọc vùng theo chuỗi **island kiểu (type / 타입) → water/resources → settlement → gateway → economy → trade phụ thuộc (dependency / 의존성) → resilience**.
 
 Xem tiếp: [Oceans & coasts](../01_physical_geography/05_oceans_coasts.md), [Natural hazards](../01_physical_geography/07_natural_hazards_risk.md), [Transport & trade](../02_human_geography/08_transport_trade_globalization.md), [Global Trade Networks](../04_global_systems/05_global_trade_networks.md), [Climate change](../04_global_systems/00_climate_change.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 how to read regions](./00_how_to_read_regions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

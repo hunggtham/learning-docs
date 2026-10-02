@@ -1,7 +1,6 @@
 # Trung Á và Tây Á — trang chuyển tiếp
 
-> **Mạch đọc:** Đọc **Trung Á và Tây Á — trang chuyển tiếp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cần tách?** sang **cầu nối (bridge / 브리지) giữa hai vùng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trung Á và Tây Á — trang chuyển tiếp**. Route đi từ lý do tách hai vùng → bridge qua núi, sa mạc, biển kín và corridor → nước, năng lượng và thương mại → biên giới, đô thị và địa chính trị, để trang chuyển tiếp giữ đúng vai trò nối hai cơ chế địa lý khác nhau.
 
 Tệp (file / 파일) này được giữ để bảo toàn các liên kết cũ trong thư viện kiến thức (knowledge library / 지식 라이브러리). Hai không gian trước đây được gộp chung nhưng cơ chế địa lý đủ khác để cần chapter riêng.
 
@@ -16,8 +15,7 @@ Trung Á được tổ chức mạnh bởi **landlocked continentality, mountain
 
 Cả hai cùng có dryland rộng và long-distance trade lịch sử (history / 이력), nhưng nếu gộp thành một chapter, người học dễ biến “dry climate” thành lời giải cho mọi thứ và bỏ qua sự khác nhau giữa inland corridor với maritime-energy hệ thống (system / 시스템).
 
-
-> **Chuyển mạch:** Từ **Vì sao cần tách?**, ta sang **cầu nối (bridge / 브리지) giữa hai vùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Trung Á và Tây Á — trang chuyển tiếp**, **Cầu nối (bridge / 브리지) giữa hai vùng** tiếp nhận điểm tựa từ **Vì sao cần tách?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cầu nối (bridge / 브리지) giữa hai vùng
 
@@ -25,4 +23,4 @@ Caspian basin, Caucasus, Iranian plateau và các corridor nối east–west t�
 
 Mô hình tư duy (mental model / 사고 모델): **region là tầng (layer / 계층) phân tích; khi cơ chế (mechanism / 메커니즘) thay đổi, ranh giới (boundary / 경계) phân tích cũng nên thay đổi.**
 
-> **Bàn giao:** Sau **cầu nối (bridge / 브리지) giữa hai vùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 how to read regions](./00_how_to_read_regions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cầu nối (bridge / 브리지) giữa hai vùng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
