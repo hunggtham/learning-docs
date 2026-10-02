@@ -1,6 +1,6 @@
 # React Master ghi chú (note / 노트) — Master
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Master**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. phiên bản (version / 버전) map React 15 → 19.3 và cách đọc phiên bản (version / 버전) đúng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1A. Timeline chi tiết React 15 → 19 để định vị API** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **React Master ghi chú (note / 노트) — Master**. Route đi từ version map React 15–19.3 → runtime/compiler/server-client boundaries → library design, migration và observability → performance/security → production decision records, để master track tập trung vào invariant xuyên phiên bản.
 
 > Mục tiêu của mức (level / 수준) Master không phải “thuộc mọi API”, mà là hiểu sâu invariants của React, trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계), máy chủ (server / 서버) kiến trúc (architecture / 아키텍처), thư viện (library / 라이브러리) thiết kế (design / 설계), di chuyển (migration / 마이그레이션), khả năng quan sát (observability / 관측 가능성), bảo mật (security / 보안) và cách ra quyết định khi ecosystem tiếp tục thay đổi.
 

@@ -1,6 +1,6 @@
 # TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. tsc thực sự làm những việc gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. tsconfig.json là dự án (project / 프로젝트) mô hình (model / 모델), không chỉ là danh sách flags** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**. Route đi từ tsc pipeline → tsconfig project model → modules/emit/resolution → runtime environment và build tooling → diagnostics, để type-correct code không bị tách khỏi cách chạy thật.
 
 > Prerequisite: [Type System Internals](typescript_02_type_system.md). Chapter này giải thích vì sao mã (code / 코드) type-correct vẫn có thể thất bại (fail / 실패) ở bản dựng (build / 빌드)/thời gian chạy (runtime / 런타임) nếu mô-đun (module / 모듈), emit hoặc môi trường (environment / 환경) mô hình (model / 모델) sai.
 

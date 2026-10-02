@@ -1,6 +1,6 @@
 # HTML — Beginner → cấp cao (senior / 시니어)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **HTML — Beginner → cấp cao (senior / 시니어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tài liệu học HTML từ số 0 đến mức có thể thiết kế và rà soát (review / 검토) markup môi trường vận hành (production / 운영 환경)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1. HTML không phải ngôn ngữ lập trình** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **HTML — Beginner → cấp cao (senior / 시니어)**. Route đi từ document structure và semantics → elements, links, forms, media và browser behavior → accessibility/SEO → performance/security → production markup review, để người học đi từ nền tảng tới quyết định thiết kế.
 
 ## Tài liệu học HTML từ số 0 đến mức có thể thiết kế và rà soát (review / 검토) markup môi trường vận hành (production / 운영 환경)
 

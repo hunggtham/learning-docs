@@ -1,6 +1,6 @@
 # TypeScript 01 — Foundations & thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript 01 — Foundations & thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. TypeScript giải quyết vấn đề nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Compile-time và thời gian chạy (runtime / 런타임) là hai thế giới nối nhau bằng đặc tả hợp đồng (contract / 계약)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript 01 — Foundations & thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계)**. Route đi từ TypeScript problem và foundations → compile-time/runtime contract → inference, narrowing và modules → JavaScript output, browser/Node behavior → production boundaries, để kiểu được nối với môi trường chạy.
 
 > chuẩn gốc (canonical / 정본) điều hướng (navigation / 내비게이션): [TypeScript Index](typescript_00_index.md) → Foundations → [Type System Internals](typescript_02_type_system.md) → [Compiler & Tooling](typescript_03_tooling_modules_runtime.md) → [Senior Production](typescript_04_senior_production.md).
 

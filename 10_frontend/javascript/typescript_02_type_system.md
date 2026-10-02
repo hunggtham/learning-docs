@@ -1,6 +1,6 @@
 # TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Structural typing: compatible vì shape, không phải vì tên** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Assignability là câu hỏi trung tâm của checker** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**. Route đi từ structural typing → assignability/checker → generics, variance và inference → narrowing, conditional/mapped types → modeling APIs, để type system được đọc như cơ chế lập luận.
 
 > Prerequisite: [Foundations & Runtime Boundary](typescript_01_foundations.md). Chapter này tập trung vào cách checker lập luận (reasoning / 추론), không phải sưu tầm kiểu (type / 타입) trick.
 

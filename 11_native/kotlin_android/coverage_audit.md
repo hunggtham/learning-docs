@@ -1,6 +1,6 @@
 # Kotlin + Android — Coverage kiểm tra (audit / 감사)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android — Coverage kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Kotlin language foundations** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Coroutine và Flow** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android — Coverage kiểm tra (audit / 감사)**. Route đi từ Kotlin foundations → coroutines/Flow → Android lifecycle, architecture và persistence → networking, testing và release → depth gaps, để audit chỉ ra năng lực đã đủ và phần cần bổ sung.
 
 ## 1. Kotlin language foundations
 Phần này nối mạch Android vừa học với “1. Kotlin language foundations”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.

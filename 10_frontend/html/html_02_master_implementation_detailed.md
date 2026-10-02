@@ -1,6 +1,6 @@
 # HTML — Master hiện thực (implementation / 구현)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **HTML — Master hiện thực (implementation / 구현)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trình duyệt (browser / 브라우저) parsing, form internals, khả năng tiếp cận (accessibility / 접근성) API, bảo mật (security / 보안), legacy di chuyển (migration / 마이그레이션) và hiện đại (modern / 현대적) declarative HTML** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1. <search>** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **HTML — Master hiện thực (implementation / 구현)**. Route đi từ browser parser và DOM → forms, accessibility tree và security → custom elements/Shadow DOM → modern declarative features và legacy migration → performance/debugging, để markup được hiểu như browser platform.
 
 ## Trình duyệt (browser / 브라우저) parsing, form internals, khả năng tiếp cận (accessibility / 접근성) API, bảo mật (security / 보안), legacy di chuyển (migration / 마이그레이션) và hiện đại (modern / 현대적) declarative HTML
 
