@@ -1,7 +1,6 @@
 # Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đọc **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phạm vi chuẩn gốc (canonical / 정본)** sang **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**. Route đi từ mô hình vật lý → circuits, electronics, signals và control → embedded/hardware interfaces → communication, power và measurement → reliability/safety, để mỗi nhánh thiết kế quay lại cơ chế nền và giới hạn vận hành.
 
 Thư viện Kỹ thuật Điện (Electrical Engineering / 전기공학) mở rộng thư viện kiến thức (knowledge library / 지식 라이브러리) từ **mô hình vật lý** sang **thiết kế, đo lường và vận hành hệ thống điện–điện tử**. Physics trả lời “tự nhiên hoạt động thế nào”; Electrical kỹ thuật (engineering / 엔지니어링) thêm các câu hỏi “chọn topology nào, đặt giới hạn nào, đo ra sao, bảo vệ thế nào và hệ thống thất bại (fail / 실패) như thế nào”.
 
@@ -19,8 +18,6 @@ Physics
 Physics hiện đã có Maxwell, circuits, transmission line, semiconductor, MOSFET và tín hiệu (signal / 신호)/noise. Thư viện này không lặp lại các chapter đó; nó dùng chúng làm prerequisite rồi đi tiếp vào kỹ thuật (engineering / 엔지니어링) abstractions, sự đánh đổi (trade-off / 트레이드오프) và giao diện (interface / 인터페이스).
 
 ## Phạm vi chuẩn gốc (canonical / 정본)
-Phần “Phạm vi chuẩn gốc (canonical / 정본)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 electrical_engineering/
@@ -38,12 +35,9 @@ electrical_engineering/
 └── 90_connections/
 ```
 
-
-> **Chuyển mạch:** Từ **Phạm vi chuẩn gốc (canonical / 정본)**, ta sang **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Phạm vi chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình đọc mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
-Phần “Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```mermaid
 flowchart TD
@@ -66,8 +60,7 @@ flowchart TD
 
 Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) tuyến (route / 경로), không phải taxonomy cứng. Ví dụ một người làm firmware có thể vào `embedded_systems` trước rồi quay lại `digital_electronics` và `hardware_software_interfaces` khi gặp ranh giới (boundary / 경계) cụ thể.
 
-
-> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, ta sang **Lộ trình đọc mặc định** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Lộ trình đọc mặc định** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới giữa các thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lộ trình đọc mặc định
 
@@ -81,12 +74,9 @@ Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) 
 8. **Power electronics** — switches, converters, magnetics, PWM, vòng điều khiển (control loop / 제어 루프), EMI/EMC, batteries, thermal thiết kế (design / 설계) và protection.
 9. **Hardware–software interfaces** — registers, memory-mapped I/O, buses, drivers, boot, firmware contracts, timing, faults, cập nhật (update / 업데이트) và khả năng quan sát (observability / 관측 가능성).
 
-
-> **Chuyển mạch:** Từ **Lộ trình đọc mặc định**, ta sang **Ranh giới giữa các thư viện (library / 라이브러리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới giữa các thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **Lộ trình đọc mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn của một chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới giữa các thư viện (library / 라이브러리)
-Phần “Ranh giới giữa các thư viện (library / 라이브러리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Câu hỏi | Nơi đặt chính |
 |---|---|
@@ -96,8 +86,7 @@ Phần “Ranh giới giữa các thư viện (library / 라이브러리)” n�
 | Firmware, board bring-up và peripheral đặc tả hợp đồng (contract / 계약) | `embedded_systems/` và `hardware_software_interfaces/` |
 | Driver/API, tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경) software | [Computer Science](../computer_science/README.md) và các thư viện (library / 라이브러리) software tương ứng |
 
-
-> **Chuyển mạch:** Từ **Ranh giới giữa các thư viện (library / 라이브러리)**, ta sang **Chuẩn của một chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Chuẩn của một chapter** tiếp nhận điểm tựa từ **Ranh giới giữa các thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuẩn của một chapter
 
@@ -117,19 +106,15 @@ physical law / requirement
 
 Không coi một datasheet, waveform hoặc schematic là bằng chứng tự đủ. Cần phân biệt mô hình (model / 모델) lý tưởng với parasitic, tolerance, temperature, noise, timing, loading và an toàn (safety / 안전) margin trong hệ thật.
 
-
-> **Chuyển mạch:** Từ **Chuẩn của một chapter**, ta sang **Trạng thái** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trạng thái** tiếp nhận điểm tựa từ **Chuẩn của một chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều hướng (navigation / 내비게이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trạng thái
 
 Đây là **chuẩn gốc (canonical / 정본) P3 thư viện (library / 라이브러리)** trên `main`: taxonomy, phụ thuộc (dependency / 의존성) map và các cốt lõi (core / 핵심) chapters cho mỗi nhánh đã có; nội dung chuyên sâu sẽ được mở rộng theo từng nhánh mà không tạo bản sao của Physics hoặc Khoa học máy tính (computer science / 컴퓨터 과학). Tiêu chí hoàn thiện và các khoảng trống hiện tại nằm ở [Coverage Audit](COVERAGE_AUDIT.md).
 
-
-> **Chuyển mạch:** Từ **Trạng thái**, ta sang **điều hướng (navigation / 내비게이션)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Electrical kỹ thuật (engineering / 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Điều hướng (navigation / 내비게이션)** tiếp nhận điểm tựa từ **Trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Điều hướng (navigation / 내비게이션)
-Phần “Điều hướng (navigation / 내비게이션)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [Circuits](circuits/README.md)
 - [Analog electronics](analog_electronics/README.md)
@@ -145,4 +130,4 @@ Phần “Điều hướng (navigation / 내비게이션)” nối kiến thức
 - [Lab and measurement checklist](90_connections/02_lab_and_measurement_checklist.md)
 - [Coverage Audit](COVERAGE_AUDIT.md)
 
-> **Bàn giao:** Sau **điều hướng (navigation / 내비게이션)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Điều hướng (navigation / 내비게이션)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

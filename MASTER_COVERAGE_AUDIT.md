@@ -1,6 +1,6 @@
 # Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trạng thái kiểm tra (audit / 감사)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kết luận điều hành** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**. Route đi từ trạng thái audit và coverage theo domain → owner/canonical files → khoảng trống, liên kết và ưu tiên → kết luận điều hành, để bản đồ repository dẫn trực tiếp tới thứ tự cập nhật có bằng chứng.
 
 > Bản đồ cấp repository để nối các thư viện chuẩn gốc (canonical / 정본), xác định đơn vị sở hữu (owner / 오너) của từng khái niệm và chọn đợt mở rộng tiếp theo. tệp (file / 파일) này không thay thế `COVERAGE_AUDIT.md` của từng lĩnh vực (domain / 도메인); nó trả lời câu hỏi **toàn bộ học tập (learning / 학습) hệ thống (system / 시스템) đang thiếu gì, nội dung nào đã đủ, và nên nối các lĩnh vực (domain / 도메인) theo thứ tự nào**.
 

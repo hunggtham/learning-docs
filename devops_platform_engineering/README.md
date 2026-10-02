@@ -1,7 +1,6 @@
 # DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đọc **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cách đọc** sang **Bản đồ thư viện (library / 라이브러리)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**. Route đi từ software delivery system → build/test/artifact → infrastructure, deployment và observability → platform self-service, guardrail và reliability → failure/recovery, để công cụ luôn nằm trong chuỗi vận hành có kiểm soát.
 
 Thư viện này học DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) như một **hệ thống cung cấp và vận hành phần mềm**, không phải danh sách công cụ. Câu hỏi trung tâm không phải “biết Docker, Kubernetes hay Terraform chưa?” mà là: làm thế nào một thay đổi từ máy của lập trình viên đi qua bản dựng (build / 빌드), kiểm thử, sản phẩm tạo ra (artifact / 산출물), hạ tầng, triển khai, quan sát và vận hành mà vẫn giữ được tốc độ, khả năng lặp lại, an toàn và khả năng phục hồi.
 
@@ -43,12 +42,9 @@ production troubleshooting across layers
 
 Không cần học thuộc công cụ theo thứ tự này. phụ thuộc (dependency / 의존성) quan trọng hơn sản phẩm (product / 제품). Nếu đang dùng Docker/Kubernetes mỗi ngày nhưng chưa rõ tiến trình (process / 프로세스), filesystem, DNS hoặc tài nguyên (resource / 자원) limit, hãy quay lại thời gian chạy (runtime / 런타임) foundations. Nếu đã triển khai được tải công việc (workload / 워크로드) nhưng quay lui (rollback / 롤백) và sự cố (incident / 인시던트) vẫn dựa vào trực giác, hãy ưu tiên CI/CD, khả năng quan sát (observability / 관측 가능성) và SRE trước khi học thêm nền tảng (platform / 플랫폼) tính năng (feature / 기능).
 
-
-> **Chuyển mạch:** Từ **Cách đọc**, ta sang **Bản đồ thư viện (library / 라이브러리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Bản đồ thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **Cách đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trình tự đọc chi tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bản đồ thư viện (library / 라이브러리)
-Phần “Bản đồ thư viện (library / 라이브러리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Phần | Mục tiêu |
 |---|---|
@@ -65,8 +61,7 @@ Phần “Bản đồ thư viện (library / 라이브러리)” nối kiến th
 | [`10_production_practice`](./10_production_practice/00_production_troubleshooting_and_change_failure_patterns.md) | Troubleshooting xuyên tầng và các thất bại (failure / 실패) mẫu (pattern / 패턴) của thay đổi môi trường vận hành (production / 운영 환경) |
 | [`90_connections`](./90_connections/00_devops_platform_cross_domain_map.md) | Bản đồ nối DevOps/nền tảng (platform / 플랫폼) với Khoa học máy tính (computer science / 컴퓨터 과학) và các chuẩn gốc (canonical / 정본) docs khác |
 
-
-> **Chuyển mạch:** Từ **Bản đồ thư viện (library / 라이브러리)**, ta sang **Trình tự đọc chi tiết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trình tự đọc chi tiết** tiếp nhận điểm tựa từ **Bản đồ thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trình tự đọc chi tiết
 
@@ -92,8 +87,7 @@ Phần “Bản đồ thư viện (library / 라이브러리)” nối kiến th
 
 [`GLOSSARY.md`](./GLOSSARY.md) là tài liệu tra thuật ngữ. [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) ghi rõ ranh giới (boundary / 경계), phần đã bao phủ, phần cố ý cross-link và các điểm cần kiểm tra (audit / 감사) khi mở rộng.
 
-
-> **Chuyển mạch:** Từ **Trình tự đọc chi tiết**, ta sang **Nguyên tắc học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Nguyên tắc học** tiếp nhận điểm tựa từ **Trình tự đọc chi tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn gốc (canonical / 정본) prerequisites thay vì duplicate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên tắc học
 
@@ -101,8 +95,7 @@ Một nền tảng (platform / 플랫폼) tốt không được đánh giá bằ
 
 Khi gặp YAML, CLI hoặc API, hãy đọc chúng như một giao diện điều khiển trạng thái (state / 상태) chứ không phải thứ cần học thuộc. Cấu hình chỉ có ý nghĩa khi biết controller, thời gian chạy (runtime / 런타임) hoặc dịch vụ (service / 서비스) nào đọc nó, trạng thái (state / 상태) nào được tạo ra, ai là đơn vị sở hữu (owner / 오너) của trạng thái (state / 상태) đó và thất bại (failure / 실패) nào xuất hiện khi desired trạng thái (state / 상태) khác actual trạng thái (state / 상태).
 
-
-> **Chuyển mạch:** Từ **Nguyên tắc học**, ta sang **chuẩn gốc (canonical / 정본) prerequisites thay vì duplicate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Chuẩn gốc (canonical / 정본) prerequisites thay vì duplicate** tiếp nhận điểm tựa từ **Nguyên tắc học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đích đến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuẩn gốc (canonical / 정본) prerequisites thay vì duplicate
 
@@ -112,11 +105,10 @@ Các vấn đề phân tán (distributed / 분산) thất bại (failure / 실�
 
 DevOps thư viện (library / 라이브러리) sử dụng những nền đó để trả lời câu hỏi áp dụng: “thiết kế delivery/nền tảng (platform / 플랫폼) ra sao để nhiều nhóm (team / 팀) thay đổi môi trường vận hành (production / 운영 환경) an toàn và tự chủ?”.
 
-
-> **Chuyển mạch:** Từ **chuẩn gốc (canonical / 정본) prerequisites thay vì duplicate**, ta sang **Đích đến** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Đích đến** tiếp nhận điểm tựa từ **Chuẩn gốc (canonical / 정본) prerequisites thay vì duplicate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Đích đến
 
 Sau khi đi hết thư viện (library / 라이브러리), người đọc cần có khả năng nhìn một hệ thống môi trường vận hành (production / 운영 환경) như một chuỗi vòng điều khiển (control loop / 제어 루프) và đặc tả hợp đồng (contract / 계약). Có thể lần từ lần ghi nhận (commit / 커밋) đến sản phẩm tạo ra (artifact / 산출물), từ sản phẩm tạo ra (artifact / 산출물) đến tải công việc (workload / 워크로드), từ tải công việc (workload / 워크로드) đến mạng (network / 네트워크)/lưu trữ (storage / 저장소) phụ thuộc (dependency / 의존성), từ telemetry về symptom, và từ sự cố (incident / 인시던트) quay lại cải thiện nền tảng (platform / 플랫폼). Mục tiêu không phải trở thành người thuộc nhiều lệnh, mà là người có thể suy luận về hệ thống khi công cụ (tool / 도구), cloud provider hoặc tổ chức thay đổi.
 
-> **Bàn giao:** Sau **Đích đến**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Đích đến**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

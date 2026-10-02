@@ -1,7 +1,6 @@
 # Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)
 
-> **Mạch đọc:** Đặt **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ điện tử tiêu dùng tới năng lực bán dẫn** sang **Chuỗi giá trị bán dẫn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**. Route đi từ điện tử tiêu dùng và device demand → semiconductor value chain → memory, foundry, fabless, equipment và display → capex, supplier ecosystem và chu kỳ → export/geopolitics, để năng lực ngành nối với mô hình kinh doanh cụ thể.
 
 Bán dẫn là một trong những ngành quan trọng nhất để hiểu kinh tế Hàn Quốc hiện đại vì nó kết hợp hầu hết các chủ đề lớn của thư viện: **cường độ vốn cao, R&D, học qua thực hành, phụ thuộc xuất khẩu, quy mô chaebol, hệ sinh thái nhà cung cấp, tính chu kỳ và địa chính trị**.
 
@@ -31,6 +30,8 @@ R&D tuyến đầu + tiêu chuẩn + hệ sinh thái
 
 Bán dẫn là bước nhảy khó hơn lắp ráp điện tử vì fab cần lượng vốn rất lớn và thế hệ công nghệ thay đổi liên tục.
 
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Từ điện tử tiêu dùng tới năng lực bán dẫn** xác định đầu vào; **Chuỗi giá trị bán dẫn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bộ nhớ: sản phẩm chuẩn hóa và chu kỳ cung–cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuỗi giá trị bán dẫn
 
 Một chuỗi đơn giản:
@@ -52,6 +53,8 @@ Song song là hệ sinh thái thiết bị và vật liệu: quang khắc, khắ
 **IDM (Integrated Device Manufacturer / 종합반도체기업)** thực hiện nhiều công đoạn. **Fabless (팹리스)** tập trung thiết kế. **Foundry (파운드리)** sản xuất theo thiết kế của khách hàng. **OSAT** tập trung lắp ráp và kiểm thử.
 
 Trước khi chọn chỉ số tài chính, phải xác định công ty đang đứng ở nút nào của chuỗi giá trị.
+
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Chuỗi giá trị bán dẫn** xác định đầu vào; **Bộ nhớ: sản phẩm chuẩn hóa và chu kỳ cung–cầu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **HBM: kinh tế của bộ nhớ trở nên khác biệt hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ nhớ: sản phẩm chuẩn hóa và chu kỳ cung–cầu
 
@@ -79,6 +82,8 @@ Phục hồi
 
 Đây là chu kỳ điển hình của ngành thâm dụng vốn và có nét giống hàng hóa. Tuy nhiên “giống hàng hóa” không có nghĩa sản phẩm hoàn toàn đồng nhất; nút (node / 노드) công nghệ, hiệu quả điện năng, độ tin cậy và cơ cấu sản phẩm vẫn tạo khác biệt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **HBM: kinh tế của bộ nhớ trở nên khác biệt hơn** tiếp nhận điểm tựa từ **Bộ nhớ: sản phẩm chuẩn hóa và chu kỳ cung–cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Yield: kỹ thuật chuyển thành biên lợi nhuận như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## HBM: kinh tế của bộ nhớ trở nên khác biệt hơn
 
 **HBM (High Bandwidth Memory / 고대역폭메모리)** xếp chồng nhiều die DRAM để cung cấp băng thông rất cao cho bộ tăng tốc AI.
@@ -88,6 +93,8 @@ HBM đòi hỏi die chất lượng cao, quy trình xếp chồng và TSV, đón
 Nếu một ngăn xếp (stack / 스택) có nhiều die, lỗi tại một lớp có thể làm cả cụm không sử dụng được. Vì vậy bài toán **tỷ lệ đạt (yield / 수율)** phức tạp hơn DRAM đơn lẻ.
 
 Sự bùng nổ AI không chỉ tăng lượng bit; nó còn làm tăng giá trị của **năng lực đóng gói + yield + chứng nhận khách hàng**.
+
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Yield: kỹ thuật chuyển thành biên lợi nhuận như thế nào?** tiếp nhận điểm tựa từ **HBM: kinh tế của bộ nhớ trở nên khác biệt hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cường độ vốn: fab là cỗ máy chi phí cố định rất lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Yield: kỹ thuật chuyển thành biên lợi nhuận như thế nào?
 
@@ -105,6 +112,8 @@ Yield tăng từ 70% lên 90% không chỉ làm số sản phẩm bán được 
 
 Với quy mô fab hiện đại, vài điểm phần trăm yield có thể tạo ảnh hưởng tài chính rất lớn. Đây là ví dụ rõ của việc kỹ thuật biến thành kế toán.
 
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Cường độ vốn: fab là cỗ máy chi phí cố định rất lớn** tiếp nhận điểm tựa từ **Yield: kỹ thuật chuyển thành biên lợi nhuận như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ trễ công suất tạo ra chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cường độ vốn: fab là cỗ máy chi phí cố định rất lớn
 
 Fab cần phòng sạch, quang khắc, thiết bị khắc–lắng đọng, điện nước và đội ngũ kỹ sư. Khấu hao là một khoản chi phí lớn.
@@ -121,6 +130,8 @@ Khi **tỷ lệ sử dụng công suất (utilization / 가동률)** thấp, chi
 
 Vì vậy cùng một ASP vẫn có thể tạo biên lợi nhuận rất khác tùy utilization và yield.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Độ trễ công suất tạo ra chu kỳ** tiếp nhận điểm tựa từ **Cường độ vốn: fab là cỗ máy chi phí cố định rất lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CAPEX lớn không tự động là tín hiệu tích cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ trễ công suất tạo ra chu kỳ
 
 Fab không thể tăng công suất trong vài tuần. Xây fab, lắp thiết bị, chứng nhận quy trình và tăng yield cần nhiều thời gian.
@@ -130,6 +141,8 @@ Fab không thể tăng công suất trong vài tuần. Xây fab, lắp thiết b
 Khi nhu cầu mạnh, giá tăng trước khi công suất mới đi vào hoạt động. Doanh nghiệp nhìn thấy lợi nhuận cao và đầu tư; nhưng tới khi công suất mới xuất hiện, nhu cầu có thể đã chậm lại.
 
 Cường độ vốn lớn + độ trễ dài là nguồn gốc cấu trúc của tính chu kỳ.
+
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **CAPEX lớn không tự động là tín hiệu tích cực** tiếp nhận điểm tựa từ **Độ trễ công suất tạo ra chu kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời điểm khấu hao và lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CAPEX lớn không tự động là tín hiệu tích cực
 
@@ -142,6 +155,8 @@ Lợi\ suất\ công\ suất\ mới > Chi\ phí\ vốn
 \]
 
 Không thể suy luận `CAPEX tăng = giá trị tăng`.
+
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Thời điểm khấu hao và lợi nhuận** tiếp nhận điểm tựa từ **CAPEX lớn không tự động là tín hiệu tích cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế foundry: dịch vụ sản xuất nhưng hào cạnh tranh rất sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thời điểm khấu hao và lợi nhuận
 
@@ -157,6 +172,8 @@ Khấu hao ↑
 
 Đây là lý do thời điểm dòng tiền và lợi nhuận kế toán khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Kinh tế foundry: dịch vụ sản xuất nhưng hào cạnh tranh rất sâu** tiếp nhận điểm tựa từ **Thời điểm khấu hao và lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế fabless: nhẹ tài sản hơn nhưng phụ thuộc kiểu khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế foundry: dịch vụ sản xuất nhưng hào cạnh tranh rất sâu
 
 Foundry sản xuất chip theo thiết kế của khách hàng. Các biến cốt lõi gồm khả năng cạnh tranh của nút (node / 노드) công nghệ, yield, utilization, lòng tin của khách hàng, hệ sinh thái thiết kế, đóng gói và tốc độ đưa sản phẩm vào sản lượng lớn.
@@ -166,6 +183,8 @@ Khách hàng không chỉ mua mật độ transistor. Họ cần **PDK (process 
 Chuyển foundry có chi phí lớn vì thiết kế phải được điều chỉnh và chứng nhận lại. Đây tạo **chi phí chuyển đổi (switching cost)**.
 
 Nút (node / 노드) nhỏ hơn không tự động tốt hơn; chi phí, điện năng, hiệu năng và yield phải phù hợp use trường hợp (case / 사례).
+
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Kinh tế fabless: nhẹ tài sản hơn nhưng phụ thuộc kiểu khác** tiếp nhận điểm tựa từ **Kinh tế foundry: dịch vụ sản xuất nhưng hào cạnh tranh rất sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đóng gói tiên tiến làm mờ ranh giới front-end và back-end** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế fabless: nhẹ tài sản hơn nhưng phụ thuộc kiểu khác
 
@@ -177,6 +196,8 @@ Một thiết kế (design / 설계) win lớn có thể tạo biên lợi nhu�
 
 Vì vậy năng lực R&D và quan hệ hệ sinh thái quan trọng hơn utilization vật lý.
 
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Đóng gói tiên tiến làm mờ ranh giới front-end và back-end** tiếp nhận điểm tựa từ **Kinh tế fabless: nhẹ tài sản hơn nhưng phụ thuộc kiểu khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết bị bán dẫn: “bán cuốc xẻng” nhưng vẫn có chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đóng gói tiên tiến làm mờ ranh giới front-end và back-end
 
 Trong lịch sử, đóng gói và kiểm thử thường bị coi là khâu giá trị thấp hơn. AI, HBM và chiplet làm **đóng gói tiên tiến (advanced packaging)** trở thành một nút thắt hiệu năng.
@@ -184,6 +205,8 @@ Trong lịch sử, đóng gói và kiểm thử thường bị coi là khâu gi�
 Khi nhiều die phải giao tiếp ở băng thông cao, interposer, substrate và thiết kế nhiệt ảnh hưởng trực tiếp tới hiệu năng hệ thống.
 
 Điều này làm giá trị dịch chuyển trong chuỗi cung ứng. Một nút từng bị coi là “giá trị thấp” có thể trở thành nút chiến lược khi kiến trúc công nghệ thay đổi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Thiết bị bán dẫn: “bán cuốc xẻng” nhưng vẫn có chu kỳ** tiếp nhận điểm tựa từ **Đóng gói tiên tiến làm mờ ranh giới front-end và back-end** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật liệu và hóa chất: nhu cầu lặp lại nhưng hào chứng nhận cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thiết bị bán dẫn: “bán cuốc xẻng” nhưng vẫn có chu kỳ
 
@@ -193,6 +216,8 @@ Doanh thu thiết bị phụ thuộc lịch CAPEX của fab nhiều hơn ASP chi
 
 Mô hình “picks-and-shovels” không có nghĩa miễn nhiễm chu kỳ. Nếu fab cắt CAPEX, đơn hàng thiết bị mới có thể giảm mạnh.
 
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Vật liệu và hóa chất: nhu cầu lặp lại nhưng hào chứng nhận cao** tiếp nhận điểm tựa từ **Thiết bị bán dẫn: “bán cuốc xẻng” nhưng vẫn có chu kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tồn kho: phải nhìn cả nhà sản xuất và khách hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vật liệu và hóa chất: nhu cầu lặp lại nhưng hào chứng nhận cao
 
 Khí, photoresist, wafer và hóa chất đặc biệt được tiêu thụ liên tục. So với thiết bị, doanh thu có thể lặp lại hơn khi fab vận hành.
@@ -200,6 +225,8 @@ Khí, photoresist, wafer và hóa chất đặc biệt được tiêu thụ liê
 Tuy nhiên chứng nhận rất nghiêm ngặt vì một lượng tạp chất nhỏ cũng có thể làm yield giảm. Hào cạnh tranh có thể đến từ độ tinh khiết, độ ổn định, logistics và quá trình chứng nhận của khách hàng, không chỉ bằng sáng chế.
 
 Tập trung khách hàng vẫn là rủi ro vì chỉ vài fab lớn đã chiếm phần lớn nhu cầu.
+
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Tồn kho: phải nhìn cả nhà sản xuất và khách hàng** tiếp nhận điểm tựa từ **Vật liệu và hóa chất: nhu cầu lặp lại nhưng hào chứng nhận cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tăng bit, ASP và cơ cấu sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tồn kho: phải nhìn cả nhà sản xuất và khách hàng
 
@@ -216,6 +243,8 @@ Tồn kho kênh phân phối
 
 Nếu khách hàng tái tích trữ sau khi tồn kho xuống rất thấp, đơn hàng có thể tạm thời tăng nhanh hơn tiêu dùng cuối. Ngoại suy giai đoạn này thành tăng trưởng cấu trúc rất dễ gây sai lầm chu kỳ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Tăng bit, ASP và cơ cấu sản phẩm** tiếp nhận điểm tựa từ **Tồn kho: phải nhìn cả nhà sản xuất và khách hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tập trung khách hàng: AI tạo tăng trưởng nhưng cũng tạo phụ thuộc mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tăng bit, ASP và cơ cấu sản phẩm
 
 Doanh thu bộ nhớ có thể phân rã gần đúng:
@@ -228,11 +257,15 @@ Nhưng HBM và cơ cấu sản phẩm cao cấp làm ASP bình quân phức tạ
 
 Doanh thu có thể tăng do số bit tăng, giá thị trường tăng, tỷ trọng HBM cao hơn hoặc tỷ giá. Tác động tới biên lợi nhuận khác nhau theo từng nguyên nhân.
 
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Tập trung khách hàng: AI tạo tăng trưởng nhưng cũng tạo phụ thuộc mới** tiếp nhận điểm tựa từ **Tăng bit, ASP và cơ cấu sản phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa chính trị chuỗi cung ứng: bán dẫn là hạ tầng chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tập trung khách hàng: AI tạo tăng trưởng nhưng cũng tạo phụ thuộc mới
 
 Khách hàng HBM cao cấp ít hơn người mua bộ nhớ phổ thông. Thắng khách hàng hyperscaler hoặc hãng accelerator lớn tạo tăng trưởng rất nhanh nhưng cũng làm mức tập trung khách hàng và yêu cầu chứng nhận cao hơn.
 
 Quyền lực khách hàng có thể ảnh hưởng giá, lịch CAPEX và roadmap công nghệ. Tăng trưởng cấu trúc của AI không xóa rủi ro thương lượng.
+
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Tập trung khách hàng: AI tạo tăng trưởng nhưng cũng tạo phụ thuộc mới** xác định đầu vào; **Địa chính trị chuỗi cung ứng: bán dẫn là hạ tầng chiến lược** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Kinh tế vị trí: vì sao fab tập trung theo cụm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Địa chính trị chuỗi cung ứng: bán dẫn là hạ tầng chiến lược
 
@@ -244,6 +277,8 @@ Kiểm soát xuất khẩu và hạn chế công nghệ có thể tác động q
 
 Địa chính trị vì vậy đã trở thành biến dòng tiền doanh nghiệp, không chỉ là bối cảnh chính sách đối ngoại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Địa chính trị chuỗi cung ứng: bán dẫn là hạ tầng chiến lược** xác định đầu vào; **Kinh tế vị trí: vì sao fab tập trung theo cụm?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Điện tử thành phẩm có kinh tế khác chip** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế vị trí: vì sao fab tập trung theo cụm?
 
 Fab cần điện ổn định, nước siêu tinh khiết, nhà cung cấp, nhân lực kỹ thuật và logistics. Cụm công nghiệp giảm thời gian phối hợp và tăng mật độ nhân lực–nhà cung cấp.
@@ -254,6 +289,8 @@ Nhưng tập trung cũng tạo **rủi ro chung (common-mode risk)**: sự cố 
 
 Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
 
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Điện tử thành phẩm có kinh tế khác chip** tiếp nhận điểm tựa từ **Kinh tế vị trí: vì sao fab tập trung theo cụm?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Màn hình: vị trí dẫn đầu công nghệ có thể dịch chuyển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện tử thành phẩm có kinh tế khác chip
 
 Smartphone, TV và thiết bị gia dụng phụ thuộc BOM, tồn kho kênh, marketing, chu kỳ sản phẩm và sức mạnh thương hiệu.
@@ -261,6 +298,8 @@ Smartphone, TV và thiết bị gia dụng phụ thuộc BOM, tồn kho kênh, m
 Thương hiệu cao cấp tạo quyền định giá nhưng chu kỳ thay thế sản phẩm có thể giới hạn tăng trưởng số lượng. Biên phần cứng có thể vừa phải trong khi dịch vụ và phụ kiện làm giá trị vòng đời khách hàng cao hơn.
 
 Vì vậy Samsung Electronics không thể được phân tích như “một công ty bán dẫn” duy nhất; cơ cấu phân khúc rất quan trọng.
+
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Màn hình: vị trí dẫn đầu công nghệ có thể dịch chuyển** tiếp nhận điểm tựa từ **Điện tử thành phẩm có kinh tế khác chip** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OLED: khác biệt hóa đi cùng rủi ro công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Màn hình: vị trí dẫn đầu công nghệ có thể dịch chuyển
 
@@ -270,11 +309,15 @@ Ngành màn hình có nhiều đặc điểm giống bán dẫn: CAPEX cao, họ
 
 Một công nghệ có thể vượt trội về kỹ thuật nhưng thất bại về kinh tế nếu yield, chi phí hoặc mức chấp nhận của khách hàng thấp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **OLED: khác biệt hóa đi cùng rủi ro công suất** tiếp nhận điểm tựa từ **Màn hình: vị trí dẫn đầu công nghệ có thể dịch chuyển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ sinh thái nhà cung cấp: năng lực lan ra ngoài Samsung/SK/LG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## OLED: khác biệt hóa đi cùng rủi ro công suất
 
 OLED có thể tạo rào cản cao hơn nhờ vật liệu, quy trình và nhu cầu thiết bị cao cấp. Nhưng dây chuyền thế hệ mới vẫn cần đạt utilization đủ cao.
 
 Nếu chu kỳ sản phẩm khách hàng yếu, dây chuyền đắt tiền có thể bị sử dụng thấp. Dẫn đầu công nghệ không xóa kinh tế công suất.
+
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Hệ sinh thái nhà cung cấp: năng lực lan ra ngoài Samsung/SK/LG** tiếp nhận điểm tựa từ **OLED: khác biệt hóa đi cùng rủi ro công suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **R&D và nhân tài: tri thức quy trình mang tính tích lũy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hệ sinh thái nhà cung cấp: năng lực lan ra ngoài Samsung/SK/LG
 
@@ -286,6 +329,8 @@ Vì vậy thành công bán dẫn có thể lan tỏa năng suất hoặc làm n
 
 Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Hệ sinh thái nhà cung cấp: năng lực lan ra ngoài Samsung/SK/LG** xác định đầu vào; **R&D và nhân tài: tri thức quy trình mang tính tích lũy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bảng chỉ số khi phân tích công ty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## R&D và nhân tài: tri thức quy trình mang tính tích lũy
 
 Biên công nghệ bán dẫn di chuyển liên tục nên R&D không chỉ là chi tiêu tăng trưởng; phần lớn còn là **đầu tư để tồn tại (survival investment)**.
@@ -295,6 +340,8 @@ Nhiều kỹ năng là kiến thức ngầm. Kỹ sư quy trình lâu năm có t
 Vì vậy giữ nhân lực và chiều sâu cụm công nghiệp là tài sản chiến lược.
 
 Xem [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **R&D và nhân tài: tri thức quy trình mang tính tích lũy** xác định đầu vào; **Bảng chỉ số khi phân tích công ty** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuẩn hóa chu kỳ khi định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảng chỉ số khi phân tích công ty
 
@@ -306,6 +353,8 @@ Với doanh nghiệp thiết bị/vật liệu, nên theo dõi tập trung khác
 
 Không chỉ số nào nên được đọc một mình.
 
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Chuẩn hóa chu kỳ khi định giá** tiếp nhận điểm tựa từ **Bảng chỉ số khi phân tích công ty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chuẩn hóa chu kỳ khi định giá
 
 Ở đỉnh giá bộ nhớ, P/E quá khứ có thể rất thấp. Ở đáy chu kỳ, P/E có thể rất cao hoặc vô nghĩa.
@@ -316,11 +365,15 @@ Nên hỏi ASP giữa chu kỳ là bao nhiêu, utilization bền vững ở mứ
 
 Cách này hữu ích hơn so sánh cơ học P/E một năm.
 
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** tiếp nhận điểm tựa từ **Chuẩn hóa chu kỳ khi định giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Các cú sốc hữu ích gồm ASP bộ nhớ -20%, chậm chứng nhận HBM, utilization -10 điểm phần trăm, fab mới bắt đầu khấu hao trước khi nhu cầu đến, hạn chế xuất khẩu, khách hàng lớn mất thị phần, biến động KRW và giá điện tăng.
 
 Sau đó theo dõi tác động tới biên lợi nhuận hoạt động, FCF và phản ứng CAPEX.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -342,6 +395,8 @@ CAPEX thế hệ tiếp theo
 Vòng học lặp lại
 ```
 
+> **Chuyển mạch:** Trong **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“AI boom làm bộ nhớ hết chu kỳ.”** Sai. Nhu cầu cấu trúc tăng nhưng phản ứng cung và CAPEX vẫn tạo chu kỳ.
@@ -356,8 +411,10 @@ Vòng học lặp lại
 
 **“Doanh thu tăng nghĩa vị trí công nghệ dẫn đầu hơn.”** Không; ASP, FX và chu kỳ có thể giải thích tăng trưởng.
 
+> **Chuyển mạch:** Ở chặng này của **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

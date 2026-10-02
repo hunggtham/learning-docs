@@ -1,7 +1,6 @@
 # PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — References
 
-> **Mạch đọc:** Đặt **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — References** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Phạm vi và thời điểm kiểm chứng** sang **Nguồn chuẩn chính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — References**. Route đi từ phạm vi và ngày kiểm chứng → nguồn chuẩn PMI → exam facts có thể thay đổi → mental models bền hơn → cách trích dẫn và cập nhật, để provenance được tách khỏi nội dung học.
 
 ## Phạm vi và thời điểm kiểm chứng
 
@@ -9,8 +8,7 @@ Các thông tin certification/exam có thể thay đổi. Những chi tiết hi�
 
 Thư viện (library / 라이브러리) cố ý tách `exam fact` khỏi `project-management mental model`. Những thứ như weighting, thời lượng hay eligibility có thể thay đổi theo chính sách (policy / 정책); các mô hình tư duy (mental model / 사고 모델) như giá trị (value / 값), bất định (uncertainty / 불확실성), quản trị (governance / 거버넌스), phản hồi (feedback / 피드백) hay quyết định (decision / 결정) rights bền hơn và không nên bị học như siêu dữ liệu (metadata / 메타데이터) của một exam phiên bản (version / 버전).
 
-
-> **Chuyển mạch:** Từ **Phạm vi và thời điểm kiểm chứng**, ta sang **Nguồn chuẩn chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — References**, **Phạm vi và thời điểm kiểm chứng** nêu điều cần giải thích; **Nguồn chuẩn chính** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguồn (source / 소스) nội bộ repository** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn chuẩn chính
 
@@ -78,8 +76,7 @@ https://www.pmi.org/certifications/project-management-pmp/pmp-exam-prep
 
 PMI lưu ý PMP exam không được xây từ một cuốn sách duy nhất; tham chiếu (reference / 참조) danh sách (list / 목록) là các nguồn được question writers trích dẫn thường xuyên. Điều này là lý do thư viện kiến thức (knowledge library / 지식 라이브러리) tổ chức theo conceptual phụ thuộc (dependency / 의존성) và ECO thay vì cố “chép PMBOK thành syllabus”.
 
-
-> **Chuyển mạch:** Từ **Nguồn chuẩn chính**, ta sang **nguồn (source / 소스) nội bộ repository** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — References**, **Nguồn chuẩn chính** nêu điều cần giải thích; **Nguồn (source / 소스) nội bộ repository** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguyên tắc sử dụng nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) nội bộ repository
 
@@ -94,8 +91,7 @@ Các chuẩn gốc (canonical / 정본) cross-domain docs được tái sử d�
 
 Finance sâu hơn về valuation, markets và portfolio investing thuộc `../investing/`; PMP chỉ giữ mức financial lập luận (reasoning / 추론) cần cho dự án (project / 프로젝트)/investment quyết định (decision / 결정).
 
-
-> **Chuyển mạch:** Từ **nguồn (source / 소스) nội bộ repository**, ta sang **Nguyên tắc sử dụng nguồn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — References**, **Nguồn (source / 소스) nội bộ repository** nêu điều cần giải thích; **Nguyên tắc sử dụng nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguyên tắc sử dụng nguồn
 
@@ -105,4 +101,4 @@ Khi cần exam-specific fact, xem ECO/certification page hiện hành. Khi cần
 
 Mọi nguồn (source / 소스) có phiên bản (version / 버전)/date nên được đọc như một snapshot. Một link vẫn tồn tại không chứng minh chi tiết trong ghi chú (note / 노트) còn hiện tại (current / 현재); vì vậy future kiểm tra (audit / 감사) phải kiểm tra cả publication date, effective date và content hiện hành.
 
-> **Bàn giao:** Sau **Nguyên tắc sử dụng nguồn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 foundations value and project system](./00_foundations_value_and_project_system.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguyên tắc sử dụng nguồn**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

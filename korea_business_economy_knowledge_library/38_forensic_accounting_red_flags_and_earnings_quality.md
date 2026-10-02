@@ -1,7 +1,6 @@
 # Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)
 
-> **Mạch đọc:** Đặt **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Lợi nhuận không bằng tiền mặt** sang **2. Chất lượng lợi nhuận là gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**. Route đi từ lợi nhuận và cash conversion → chất lượng lợi nhuận → accruals, working capital và khoản một lần → red flags, kiểm tra chéo và chu kỳ, để đọc báo cáo như một hệ đo lường có giả định.
 
 Báo cáo tài chính không phải lời nói dối mặc định, nhưng cũng không phải “sự thật kinh tế” hoàn hảo. Kế toán là hệ thống đo lường dựa trên quy tắc, ước tính và giả định về thời điểm. Vì vậy cùng một mức lợi nhuận báo cáo có thể có chất lượng rất khác nhau.
 
@@ -27,6 +26,8 @@ CFO \approx Lợi\ nhuận\ ròng + Chi\ phí\ không\ tiền\ mặt - Đầu\ t
 
 Nếu lợi nhuận ròng tăng nhiều năm nhưng CFO không đi cùng, cần tìm nguyên nhân.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **2. Chất lượng lợi nhuận là gì?** tiếp nhận điểm tựa từ **1. Lợi nhuận không bằng tiền mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dồn tích (accruals)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Chất lượng lợi nhuận là gì?
 
 Lợi nhuận chất lượng cao thường có các đặc điểm:
@@ -39,6 +40,8 @@ Lợi nhuận chất lượng cao thường có các đặc điểm:
 - không được tạo chủ yếu bằng cắt giảm đầu tư cần thiết cho tương lai.
 
 Lợi nhuận chất lượng thấp không nhất thiết bất hợp pháp. Nó có thể hoàn toàn tuân thủ chuẩn mực nhưng ít giá trị dự báo hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **3. Dồn tích (accruals)** tiếp nhận điểm tựa từ **2. Chất lượng lợi nhuận là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Khoản phải thu tăng nhanh hơn doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Dồn tích (accruals)
 
@@ -53,6 +56,8 @@ Dồn\ tích\ tổng \approx Lợi\ nhuận\ ròng - CFO
 Nếu phần dồn tích cao kéo dài, hãy hỏi doanh nghiệp có đang ghi nhận doanh thu quá sớm, trì hoãn chi phí hay vốn lưu động đang xấu đi hay không.
 
 Tuy nhiên tích lũy tồn kho theo chu kỳ hoặc tăng trưởng rất nhanh cũng có thể làm dồn tích cao một cách hợp lý. Bối cảnh luôn cần thiết.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **4. Khoản phải thu tăng nhanh hơn doanh thu** tiếp nhận điểm tựa từ **3. Dồn tích (accruals)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Tồn kho tăng nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Khoản phải thu tăng nhanh hơn doanh thu
 
@@ -72,6 +77,8 @@ DSO = \frac{Khoản\ phải\ thu\ bình\ quân}{Doanh\ thu} \times Số\ ngày
 
 DSO tăng không chứng minh gian lận. Nó là tín hiệu để hỏi chất lượng doanh số.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **5. Tồn kho tăng nhanh** tiếp nhận điểm tựa từ **4. Khoản phải thu tăng nhanh hơn doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Khoản phải trả tăng có thể làm dòng tiền “đẹp” tạm thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Tồn kho tăng nhanh
 
 Tồn kho có thể tăng vì chuẩn bị cho tăng trưởng, tạo bộ đệm chuỗi cung ứng hoặc ra mắt sản phẩm mới.
@@ -89,6 +96,8 @@ Số ngày tồn kho thay đổi thế nào?
 Có trích lập giảm giá / suy giảm giá trị không?
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **6. Khoản phải trả tăng có thể làm dòng tiền “đẹp” tạm thời** tiếp nhận điểm tựa từ **5. Tồn kho tăng nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Tài sản hợp đồng và doanh thu chưa lập hóa đơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Khoản phải trả tăng có thể làm dòng tiền “đẹp” tạm thời
 
 Doanh nghiệp có thể cải thiện CFO bằng cách kéo dài thời gian trả tiền nhà cung cấp.
@@ -100,6 +109,8 @@ CCC = DIO + DSO - DPO
 \]
 
 Cải thiện dòng tiền nhờ nhà cung cấp tài trợ không nhất thiết lặp lại được. Nó cũng có thể phản ánh quyền thương lượng mạnh hoặc áp lực thanh khoản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **7. Tài sản hợp đồng và doanh thu chưa lập hóa đơn** tiếp nhận điểm tựa từ **6. Khoản phải trả tăng có thể làm dòng tiền “đẹp” tạm thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Rủi ro ghi nhận theo tiến độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Tài sản hợp đồng và doanh thu chưa lập hóa đơn
 
@@ -117,6 +128,8 @@ Hãy hỏi:
 
 Kế toán dự án cho ban quản lý nhiều không gian ước tính hơn bán lẻ đơn giản.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **8. Rủi ro ghi nhận theo tiến độ** tiếp nhận điểm tựa từ **7. Tài sản hợp đồng và doanh thu chưa lập hóa đơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Ghi nhận doanh thu: giao hàng chưa chắc là hoàn thành kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Rủi ro ghi nhận theo tiến độ
 
 Nếu biên lợi nhuận dự án được ước tính cao từ sớm nhưng chi phí vượt kế hoạch xuất hiện muộn, lợi nhuận ban đầu có thể bị ghi nhận quá cao tương đối.
@@ -126,6 +139,8 @@ Ví dụ hợp đồng = 100, chi phí kỳ vọng = 80 → biên kỳ vọng = 
 Nếu tới giữa dự án chi phí kỳ vọng tăng lên 95, phần lợi nhuận tích lũy phải được điều chỉnh.
 
 Do đó backlog lớn không tự động nghĩa lợi nhuận tương lai chắc chắn.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **9. Ghi nhận doanh thu: giao hàng chưa chắc là hoàn thành kinh tế** tiếp nhận điểm tựa từ **8. Rủi ro ghi nhận theo tiến độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Các khoản lãi một lần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Ghi nhận doanh thu: giao hàng chưa chắc là hoàn thành kinh tế
 
@@ -142,6 +157,8 @@ Các câu hỏi cần kiểm tra:
 
 Không nên kết luận sai phạm; chỉ cần kiểm tra điều khoản.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **10. Các khoản lãi một lần** tiếp nhận điểm tựa từ **9. Ghi nhận doanh thu: giao hàng chưa chắc là hoàn thành kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Lợi nhuận hoạt động cũng chứa phán đoán kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Các khoản lãi một lần
 
 Lợi nhuận ròng có thể tăng nhờ:
@@ -157,6 +174,8 @@ Nếu mục tiêu là lợi nhuận chuẩn hóa, phải tách hoạt động đ
 
 Một doanh nghiệp bán tòa nhà rồi báo lợi nhuận kỷ lục không có nghĩa năng lực kinh doanh cốt lõi tăng.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **11. Lợi nhuận hoạt động cũng chứa phán đoán kế toán** tiếp nhận điểm tựa từ **10. Các khoản lãi một lần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Vốn hóa chi phí phát triển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Lợi nhuận hoạt động cũng chứa phán đoán kế toán
 
 Nhiều người coi lợi nhuận hoạt động “sạch” hơn lợi nhuận ròng. Thường đúng hơn, nhưng vẫn phải xem cách phân loại.
@@ -164,6 +183,8 @@ Nhiều người coi lợi nhuận hoạt động “sạch” hơn lợi nhuậ
 Ví dụ vốn hóa chi phí phát triển có thể chuyển chi phí hôm nay thành tài sản và khấu hao trong tương lai.
 
 Nếu một doanh nghiệp vốn hóa nhiều hơn đối thủ, lợi nhuận hoạt động hiện tại có thể cao hơn tương đối.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **12. Vốn hóa chi phí phát triển** tiếp nhận điểm tựa từ **11. Lợi nhuận hoạt động cũng chứa phán đoán kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. CAPEX so với chi phí sửa chữa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Vốn hóa chi phí phát triển
 
@@ -177,6 +198,8 @@ Nếu vốn hóa tăng nhanh nhưng thành công thương mại yếu, suy giả
 
 Điều này đặc biệt liên quan phần mềm, game, biotech và phát triển công nghệ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **13. CAPEX so với chi phí sửa chữa** tiếp nhận điểm tựa từ **12. Vốn hóa chi phí phát triển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Giả định khấu hao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. CAPEX so với chi phí sửa chữa
 
 Vốn hóa chi phí làm chi phí kỳ hiện tại thấp hơn, tài sản cao hơn và sau đó khấu hao/phân bổ qua nhiều kỳ.
@@ -185,6 +208,8 @@ Nếu ban quản lý phân loại chi phí bảo trì thường xuyên thành t�
 
 Nên so CAPEX, khấu hao và tuổi tài sản với lịch sử và doanh nghiệp cùng ngành.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **14. Giả định khấu hao** tiếp nhận điểm tựa từ **13. CAPEX so với chi phí sửa chữa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Dự phòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Giả định khấu hao
 
 Thời gian sử dụng hữu ích dài hơn → khấu hao mỗi năm thấp hơn → lợi nhuận cao hơn.
@@ -192,6 +217,8 @@ Thời gian sử dụng hữu ích dài hơn → khấu hao mỗi năm thấp h�
 Thay đổi tuổi thọ hữu ích hoặc giá trị còn lại có thể hợp lý khi công nghệ hoặc cách sử dụng tài sản thay đổi, nhưng cần hiểu tác động.
 
 Trong ngành thâm dụng vốn, chính sách khấu hao ảnh hưởng đáng kể EBIT.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **15. Dự phòng** tiếp nhận điểm tựa từ **14. Giả định khấu hao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Dự phòng bảo hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Dự phòng
 
@@ -207,6 +234,8 @@ Ví dụ:
 
 Ước tính quá thấp làm lợi nhuận hiện tại cao hơn. Ước tính quá cao trong năm tốt rồi hoàn nhập sau cũng có thể làm lợi nhuận trông ổn định hơn thực tế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **16. Dự phòng bảo hành** tiếp nhận điểm tựa từ **15. Dự phòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tổn thất tín dụng kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Dự phòng bảo hành
 
 Doanh nghiệp ô tô hoặc điện tử có doanh số tăng nhưng tỷ lệ dự phòng bảo hành giảm mạnh cần giải thích.
@@ -214,6 +243,8 @@ Doanh nghiệp ô tô hoặc điện tử có doanh số tăng nhưng tỷ lệ 
 Có thể chất lượng thực sự tốt hơn. Cũng có thể giả định quá lạc quan.
 
 Nếu sau đó xuất hiện thu hồi sản phẩm lớn, chi phí có thể tăng mạnh.
+
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **17. Tổn thất tín dụng kỳ vọng** tiếp nhận điểm tựa từ **16. Dự phòng bảo hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Tài sản thuế hoãn lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Tổn thất tín dụng kỳ vọng
 
@@ -223,6 +254,8 @@ Nếu cho vay tăng nhanh nhưng tỷ lệ dự phòng giảm trong khi chất l
 
 Thời điểm trích lập dự phòng là một phần cốt lõi của chất lượng lợi nhuận tại tổ chức tài chính.
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **18. Tài sản thuế hoãn lại** tiếp nhận điểm tựa từ **17. Tổn thất tín dụng kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Giao dịch với bên liên quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Tài sản thuế hoãn lại
 
 **Tài sản thuế hoãn lại (Deferred Tax Asset / DTA / 이연법인세자산)** chỉ có giá trị nếu doanh nghiệp có lợi nhuận chịu thuế trong tương lai để sử dụng khoản khấu trừ hoặc lỗ chuyển tiếp.
@@ -230,6 +263,8 @@ Thời điểm trích lập dự phòng là một phần cốt lõi của chất
 Doanh nghiệp thua lỗ nhưng ghi nhận DTA lớn cần kiểm tra giả định khả năng thu hồi.
 
 Việc ghi nhận kế toán không biến lỗ tính thuế thành tiền mặt ngay lập tức.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **19. Giao dịch với bên liên quan** tiếp nhận điểm tựa từ **18. Tài sản thuế hoãn lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Báo cáo hợp nhất và báo cáo riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Giao dịch với bên liên quan
 
@@ -250,6 +285,8 @@ Có bảo lãnh không?
 
 Xem [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md).
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **20. Báo cáo hợp nhất và báo cáo riêng** tiếp nhận điểm tựa từ **19. Giao dịch với bên liên quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Lợi ích cổ đông không kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Báo cáo hợp nhất và báo cáo riêng
 
 Lợi nhuận ở báo cáo riêng của công ty mẹ có thể đến từ cổ tức từ công ty con, trong khi kinh tế hợp nhất khác.
@@ -258,17 +295,23 @@ Ngược lại, công ty con có lãi có thể bị bù bởi thua lỗ ở ph�
 
 Luôn xác định phạm vi kế toán trước khi so tỷ số.
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **21. Lợi ích cổ đông không kiểm soát** tiếp nhận điểm tựa từ **20. Báo cáo hợp nhất và báo cáo riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Thu nhập theo phương pháp vốn chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Lợi ích cổ đông không kiểm soát
 
 Lợi nhuận ròng hợp nhất có thể gồm phần thuộc về **lợi ích không kiểm soát (Non-Controlling Interest / NCI / 비지배지분)**.
 
 Nếu định giá chỉ dành cho cổ đông phổ thông của công ty mẹ, phải sử dụng phần lợi nhuận thuộc chủ sở hữu công ty mẹ phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **22. Thu nhập theo phương pháp vốn chủ sở hữu** tiếp nhận điểm tựa từ **21. Lợi ích cổ đông không kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Tiền mặt không phải lúc nào cũng sử dụng tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Thu nhập theo phương pháp vốn chủ sở hữu
 
 Doanh nghiệp sở hữu công ty liên kết có thể ghi nhận phần lợi nhuận tương ứng mà chưa nhận lượng tiền mặt tương đương dưới dạng cổ tức.
 
 Thu nhập theo phương pháp vốn chủ sở hữu tăng nhưng tiền chuyển lên công ty mẹ hạn chế có thể làm thanh khoản của holding company khác xa lợi nhuận kế toán.
+
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **23. Tiền mặt không phải lúc nào cũng sử dụng tự do** tiếp nhận điểm tựa từ **22. Thu nhập theo phương pháp vốn chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Doanh nghiệp có tiền mặt ròng vẫn có thể rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Tiền mặt không phải lúc nào cũng sử dụng tự do
 
@@ -282,6 +325,8 @@ Tiền mặt có thể:
 
 Vì vậy “tiền mặt = X” không đồng nghĩa X hoàn toàn có thể dùng cho cổ tức hoặc trả nợ.
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **24. Doanh nghiệp có tiền mặt ròng vẫn có thể rủi ro** tiếp nhận điểm tựa từ **23. Tiền mặt không phải lúc nào cũng sử dụng tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Rủi ro ngoài bảng cân đối và nghĩa vụ tiềm tàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Doanh nghiệp có tiền mặt ròng vẫn có thể rủi ro
 
 Doanh nghiệp có tiền mặt ròng nhưng đồng thời có:
@@ -293,6 +338,8 @@ Doanh nghiệp có tiền mặt ròng nhưng đồng thời có:
 - cam kết CAPEX tăng trưởng.
 
 Bảng cân đối nhìn đơn giản có thể quá lạc quan nếu bỏ qua thuyết minh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **25. Rủi ro ngoài bảng cân đối và nghĩa vụ tiềm tàng** tiếp nhận điểm tựa từ **24. Doanh nghiệp có tiền mặt ròng vẫn có thể rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Bao thanh toán khoản phải thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Rủi ro ngoài bảng cân đối và nghĩa vụ tiềm tàng
 
@@ -309,6 +356,8 @@ Cần tìm:
 
 Đòn bẩy kinh tế có thể lớn hơn nợ vay kế toán.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **26. Bao thanh toán khoản phải thu** tiếp nhận điểm tựa từ **25. Rủi ro ngoài bảng cân đối và nghĩa vụ tiềm tàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Tài trợ nhà cung cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Bao thanh toán khoản phải thu
 
 Nếu doanh nghiệp bán khoản phải thu, CFO và thanh khoản có thể cải thiện.
@@ -317,17 +366,23 @@ Nhưng phải hỏi việc chuyển nhượng có thật sự chuyển toàn b�
 
 Việc liên tục dùng bao thanh toán để duy trì dòng tiền có thể là dấu hiệu áp lực vốn lưu động.
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **27. Tài trợ nhà cung cấp** tiếp nhận điểm tựa từ **26. Bao thanh toán khoản phải thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Bán rồi thuê lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Tài trợ nhà cung cấp
 
 Một số chương trình tài trợ nhà cung cấp về kinh tế giống vay nợ nhưng được trình bày gần khoản phải trả thương mại.
 
 Nếu thời hạn thanh toán được kéo dài nhờ tổ chức tài chính trung gian, nên xem xét liệu một phần khoản phải trả có thực chất là nợ tài chính hay không.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **28. Bán rồi thuê lại** tiếp nhận điểm tựa từ **27. Tài trợ nhà cung cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Các khoản “không lặp lại” nhưng lặp lại thường xuyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Bán rồi thuê lại
 
 Doanh nghiệp bán tài sản rồi thuê lại có thể tạo tiền mặt ngay nhưng đồng thời phát sinh nghĩa vụ thuê tương lai.
 
 Không nên coi toàn bộ tiền thu là tạo giá trị; đây chủ yếu là thay đổi cấu trúc tài sản–tài trợ.
+
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **29. Các khoản “không lặp lại” nhưng lặp lại thường xuyên** tiếp nhận điểm tựa từ **28. Bán rồi thuê lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. EBITDA điều chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Các khoản “không lặp lại” nhưng lặp lại thường xuyên
 
@@ -336,6 +391,8 @@ Nếu chi phí tái cấu trúc xuất hiện gần như năm nào cũng có, n�
 Lợi nhuận chuẩn hóa không nên cộng lại mọi khoản được ban quản lý gắn nhãn “một lần”.
 
 > Nếu một loại chi phí lặp lại qua nhiều chu kỳ, hãy coi ít nhất một phần là chi phí bình thường của hoạt động kinh doanh.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **30. EBITDA điều chỉnh** tiếp nhận điểm tựa từ **29. Các khoản “không lặp lại” nhưng lặp lại thường xuyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Chi phí trả bằng cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. EBITDA điều chỉnh
 
@@ -352,17 +409,23 @@ Cần hỏi:
 
 Chỉ số điều chỉnh không sai; vấn đề là khi điều chỉnh xóa đi chi phí kinh tế thực.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **31. Chi phí trả bằng cổ phiếu** tiếp nhận điểm tựa từ **30. EBITDA điều chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Mua lại cổ phiếu có thể che pha loãng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Chi phí trả bằng cổ phiếu
 
 Chi phí trả bằng cổ phiếu không tạo dòng tiền ra ngay nhưng vẫn là chi phí kinh tế thực vì làm pha loãng quyền sở hữu.
 
 Bỏ qua hoàn toàn có thể làm kinh tế của cổ đông bị đánh giá quá cao.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **32. Mua lại cổ phiếu có thể che pha loãng** tiếp nhận điểm tựa từ **31. Chi phí trả bằng cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Thuế suất bất thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Mua lại cổ phiếu có thể che pha loãng
 
 Doanh nghiệp có thể mua lại cổ phiếu nhưng đồng thời phát hành cổ phiếu hoặc quyền chọn cho nhân viên hay dùng cổ phiếu cho M&A.
 
 Do đó hãy xem **số cổ phiếu ròng**, không chỉ thông báo mua lại.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **33. Thuế suất bất thường** tiếp nhận điểm tựa từ **32. Mua lại cổ phiếu có thể che pha loãng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Lãi/lỗ tỷ giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. Thuế suất bất thường
 
@@ -372,6 +435,8 @@ Nếu lợi nhuận ròng tăng chủ yếu nhờ lợi ích thuế, kinh tế h
 
 Khi dự báo nên chuẩn hóa thuế.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **34. Lãi/lỗ tỷ giá** tiếp nhận điểm tựa từ **33. Thuế suất bất thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Giả định quỹ hưu trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Lãi/lỗ tỷ giá
 
 Nhà xuất khẩu hoặc nhập khẩu có thể ghi ảnh hưởng tỷ giá ở hoạt động hoặc ngoài hoạt động tùy loại phơi nhiễm và cách kế toán.
@@ -379,6 +444,8 @@ Nhà xuất khẩu hoặc nhập khẩu có thể ghi ảnh hưởng tỷ giá �
 KRW biến động tạm thời có thể làm lợi nhuận tăng nhưng không nên ngoại suy như cải thiện biên lợi nhuận mang tính cấu trúc.
 
 Xem [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
+
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **35. Giả định quỹ hưu trí** tiếp nhận điểm tựa từ **34. Lãi/lỗ tỷ giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Ý kiến kiểm toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 35. Giả định quỹ hưu trí
 
@@ -388,6 +455,8 @@ Lãi suất chiết khấu thấp hơn thường làm giá trị hiện tại c�
 
 Thiếu hụt quỹ hưu trí có thể được xem như một nghĩa vụ gần giống nợ trong phân tích dài hạn.
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **36. Ý kiến kiểm toán** tiếp nhận điểm tựa từ **35. Giả định quỹ hưu trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Điều chỉnh lại báo cáo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. Ý kiến kiểm toán
 
 Ý kiến kiểm toán không bảo đảm doanh nghiệp khỏe. Kiểm toán viên chủ yếu đánh giá liệu báo cáo tài chính có được trình bày phù hợp trọng yếu với chuẩn mực kế toán hay không.
@@ -395,6 +464,8 @@ Thiếu hụt quỹ hưu trí có thể được xem như một nghĩa vụ gầ
 Tuy nhiên ý kiến ngoại trừ, bất lợi, từ chối đưa ý kiến hoặc đoạn nhấn mạnh vẫn cần đọc kỹ.
 
 Thay kiểm toán viên, điều chỉnh báo cáo lặp lại hoặc điểm yếu kiểm soát trọng yếu cũng đáng chú ý.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **37. Điều chỉnh lại báo cáo** tiếp nhận điểm tựa từ **36. Ý kiến kiểm toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Hành vi cuối quý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 37. Điều chỉnh lại báo cáo
 
@@ -410,6 +481,8 @@ Khi có restatement, hãy hỏi:
 - có cho thấy điểm yếu kiểm soát không?
 - ảnh hưởng độ tin cậy của ban quản lý thế nào?
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **38. Hành vi cuối quý** tiếp nhận điểm tựa từ **37. Điều chỉnh lại báo cáo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Tư duy kiểu Beneish: dùng để sàng lọc, không kết án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 38. Hành vi cuối quý
 
 Nếu Q4 luôn có doanh thu tăng bất thường, phải thu tăng mạnh hoặc điều chỉnh tồn kho lớn, cần phân biệt tính mùa vụ với áp lực ghi nhận kế toán.
@@ -418,6 +491,8 @@ Không suy luận thao túng tự động. Nhiều ngành thực sự có mùa v
 
 Điểm quan trọng là câu chuyện vận hành phải nhất quán với dòng tiền và mẫu hình vốn lưu động.
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **39. Tư duy kiểu Beneish: dùng để sàng lọc, không kết án** tiếp nhận điểm tựa từ **38. Hành vi cuối quý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Tỷ lệ chuyển đổi tiền mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 39. Tư duy kiểu Beneish: dùng để sàng lọc, không kết án
 
 Các mô hình kế toán điều tra học thuật kết hợp dồn tích, khoản phải thu, biên lợi nhuận và đòn bẩy để phát hiện khả năng bất thường.
@@ -425,6 +500,8 @@ Các mô hình kế toán điều tra học thuật kết hợp dồn tích, kho
 Chúng hữu ích cho sàng lọc, không phải phán quyết. Một điểm số không thể hiểu đặc thù kế toán ngành tốt hơn phân tích chi tiết.
 
 Dùng mô hình để đặt câu hỏi tốt hơn, không để buộc tội.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **40. Tỷ lệ chuyển đổi tiền mặt** tiếp nhận điểm tựa từ **39. Tư duy kiểu Beneish: dùng để sàng lọc, không kết án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Chất lượng FCF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 40. Tỷ lệ chuyển đổi tiền mặt
 
@@ -438,6 +515,8 @@ Tỷ lệ hợp lý trong dài hạn có thể hỗ trợ đánh giá chất lư
 
 Một năm riêng lẻ hiếm khi đủ kết luận.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **41. Chất lượng FCF** tiếp nhận điểm tựa từ **40. Tỷ lệ chuyển đổi tiền mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Cầu nối chất lượng lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 41. Chất lượng FCF
 
 FCF có thể được “cải thiện” bằng cách cắt CAPEX xuống dưới nhu cầu bảo trì.
@@ -450,6 +529,8 @@ FCF báo cáo
 ```
 
 Cần phân biệt CAPEX bảo trì với CAPEX tăng trưởng về mặt khái niệm.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **42. Cầu nối chất lượng lợi nhuận** tiếp nhận điểm tựa từ **41. Chất lượng FCF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Quy trình forensic trên DART** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 42. Cầu nối chất lượng lợi nhuận
 
@@ -470,6 +551,8 @@ Lợi nhuận chuẩn hóa
 
 Đây không phải chỉ tiêu kế toán chính thức mà là tái dựng của nhà phân tích.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **42. Cầu nối chất lượng lợi nhuận** xác định đầu vào; **43. Quy trình forensic trên DART** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **44. Cụm dấu hiệu quan trọng hơn một tín hiệu đơn lẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 43. Quy trình forensic trên DART
 
 Khi rà doanh nghiệp:
@@ -486,6 +569,8 @@ Khi rà doanh nghiệp:
 9. Tìm điều chỉnh / restatement
 10. Dựng cầu lợi nhuận chuẩn hóa
 ```
+
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **43. Quy trình forensic trên DART** xác định đầu vào; **44. Cụm dấu hiệu quan trọng hơn một tín hiệu đơn lẻ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **45. Ví dụ: công ty SI/SM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 44. Cụm dấu hiệu quan trọng hơn một tín hiệu đơn lẻ
 
@@ -506,6 +591,8 @@ thì bức tranh rủi ro mạnh hơn nhiều.
 
 Phân tích forensic là nhận diện mẫu hình xuyên nhiều báo cáo.
 
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **44. Cụm dấu hiệu quan trọng hơn một tín hiệu đơn lẻ** cho ta quy tắc; **45. Ví dụ: công ty SI/SM** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **46. Ví dụ: doanh nghiệp sản xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 45. Ví dụ: công ty SI/SM
 
 Một công ty dịch vụ CNTT có doanh thu tăng nhờ dự án dài hạn. Nhưng tài sản hợp đồng tăng nhanh, phải trả nhà thầu phụ tăng và thu tiền chậm.
@@ -524,6 +611,8 @@ Nhà thầu phụ đang tài trợ dòng tiền?
 
 Đó mới là bộ câu hỏi forensic đúng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **45. Ví dụ: công ty SI/SM** cho ta quy tắc; **46. Ví dụ: doanh nghiệp sản xuất** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **47. Ví dụ: holding company** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 46. Ví dụ: doanh nghiệp sản xuất
 
 Doanh nghiệp sản xuất báo lợi nhuận tăng 20%, nhưng tồn kho +50%, phải thu +35%, tỷ lệ sử dụng công suất giảm và giảm giá bán tăng.
@@ -532,6 +621,8 @@ Một cách giải thích khả dĩ là sản xuất đang chạy trước nhu c
 
 Cần so chu kỳ ngành, loại tồn kho và doanh số các kỳ sau.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **46. Ví dụ: doanh nghiệp sản xuất** cho ta quy tắc; **47. Ví dụ: holding company** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 47. Ví dụ: holding company
 
 Holding company báo lợi nhuận kế toán cao nhờ công ty liên kết theo phương pháp vốn chủ sở hữu nhưng tiền mặt riêng tại công ty mẹ thấp.
@@ -539,6 +630,8 @@ Holding company báo lợi nhuận kế toán cao nhờ công ty liên kết the
 Nợ đáo hạn ở công ty mẹ không thể tự động trả bằng lợi nhuận của công ty con nếu chưa có cổ tức hoặc bán tài sản chuyển tiền lên.
 
 Đây là khác biệt giữa quyền sở hữu kinh tế và thanh khoản thực tế.
+
+> **Chuyển mạch:** Ở chặng này của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **47. Ví dụ: holding company** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy
 
@@ -556,6 +649,8 @@ Tuyên bố doanh thu
 
 Nếu một mắt xích lệch nhau, đừng kết luận vội; hãy tìm lời giải thích trong mô hình kinh doanh và thuyết minh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **Mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những nhầm lẫn thường gặp
 
 **“CFO thấp hơn lợi nhuận ròng = gian lận.”** Sai. Tăng trưởng và vốn lưu động có thể giải thích hợp lý.
@@ -568,6 +663,8 @@ Nếu một mắt xích lệch nhau, đừng kết luận vội; hãy tìm lời
 
 **“Tiền mặt ròng nghĩa bảng cân đối chắc chắn an toàn.”** Chưa chắc nếu cam kết và bảo lãnh lớn.
 
+> **Chuyển mạch:** Trong **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết tiếp theo** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết tiếp theo
 
 Những liên kết sau mở rộng việc đọc disclosure, chất lượng lợi nhuận và governance. Hãy dùng chúng để biến red flag thành câu hỏi kiểm chứng thay vì kết luận gian lận ngay lập tức.
@@ -577,3 +674,5 @@ Những liên kết sau mở rộng việc đọc disclosure, chất lượng l�
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md)
 - [`36_credit_ratings_bonds_default_and_restructuring.md`](./36_credit_ratings_bonds_default_and_restructuring.md)
 - [`37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md`](./37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md)
+
+> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
