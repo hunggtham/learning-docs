@@ -1,8 +1,10 @@
-# Sử học, ký ức tập thể và di sản: lịch sử được tạo thành tri thức như thế nào?
+# Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?
+
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**. Route đi từ past/history distinction → primary sources và interpretation → collective memory, commemoration và heritage → power, identity và forgetting → cách đánh giá narrative bằng evidence.
 
 ## “Quá khứ” và “lịch sử” không hoàn toàn giống nhau
 
-Quá khứ là tất cả những gì đã xảy ra. Lịch sử là sự dựng lại dựa trên chứng cứ còn sót, câu hỏi và diễn giải. Chương này là điểm nối phương pháp cho toàn bộ tuyến 03–29: nó giải thích vì sao cùng một địa điểm như Cổ Loa, Huế hay Điện Biên Phủ có thể mang nhiều lớp ký ức và tranh luận khác nhau.
+The past is everything that happened. Lịch sử (history / 이력) is a reconstruction built from surviving bằng chứng (evidence / 증거), questions and interpretation.
 
 This distinction matters because bằng chứng (evidence / 증거) is incomplete and uneven. Court leaves văn bản (text / 텍스트); poor household may leave few documents. War destroys archives. Later regime selects what to preserve.
 
@@ -11,6 +13,8 @@ So historical phương thức (method / 메서드) asks two questions at once:
 1. nguồn (source / 소스) says what?
 2. why does this nguồn (source / 소스) exist while other voices are absent?
 
+> **Chuyển mạch:** Trong **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **“Quá khứ” và “lịch sử” không hoàn toàn giống nhau** nêu điều cần giải thích; **Primary nguồn (source / 소스) is not automatically truth** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Archaeology fills gaps—but also requires suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Primary nguồn (source / 소스) is not automatically truth
 
 A royal chronicle, tax bản ghi (record / 레코드), police tệp (file / 파일), memoir, newspaper and oral testimony are all primary sources in appropriate ngữ cảnh (context / 맥락), but each has môi trường vận hành (production / 운영 환경) độ lệch (bias / 편향).
@@ -18,6 +22,8 @@ A royal chronicle, tax bản ghi (record / 레코드), police tệp (file / 파�
 Court chronicle sees from court; colonial report sees through administrative categories; memoir sees through bộ nhớ (memory / 메모리); propaganda material has persuasion goal.
 
 Độ lệch (bias / 편향) does not make nguồn (source / 소스) useless. Độ lệch (bias / 편향) itself can be bằng chứng (evidence / 증거) about institution and worldview.
+
+> **Chuyển mạch:** Ở chặng này của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Primary nguồn (source / 소스) is not automatically truth** nêu điều cần giải thích; **Archaeology fills gaps—but also requires suy luận (inference / 추론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đại Việt sử ký and dynastic chronicles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Archaeology fills gaps—but also requires suy luận (inference / 추론)
 
@@ -29,7 +35,9 @@ Good lịch sử (history / 이력) distinguishes:
 
 **observation → suy luận (inference / 추론) → interpretation**.
 
-## Đại Việt sử ký và sử biên niên triều đại
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Đại Việt sử ký and dynastic chronicles** tiếp nhận điểm tựa từ **Archaeology fills gaps—but also requires suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chinese sources: bên ngoài (external / 외부) but indispensable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Đại Việt sử ký and dynastic chronicles
 
 Premodern Vietnamese chronicles preserve indispensable thông tin (information / 정보) on court, war, diplomacy and disaster. Yet they were compiled by officials within particular political/moral frameworks.
 
@@ -37,11 +45,15 @@ When a chronicle praises/condemns ruler, separate factual sự kiện (event / �
 
 Chronicle periodization also privileges dynastic centre; upland, village and minority community may appear only when interacting with trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Đại Việt sử ký and dynastic chronicles** nêu điều cần giải thích; **Chinese sources: bên ngoài (external / 외부) but indispensable** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Champa/Khmer inscriptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chinese sources: bên ngoài (external / 외부) but indispensable
 
-Với thời kỳ sớm, sử liệu triều đại và nguồn hành chính Trung Hoa là những chứng cứ văn bản lớn. Chúng có thể giữ lại niên đại/tên gọi nơi khác không có, nhưng mô tả khu vực qua các phạm trù đế quốc.
+For early periods, Chinese dynastic histories and administrative sources are major written bằng chứng (evidence / 증거). They can preserve dates/names unavailable elsewhere but describe region through imperial categories.
 
 Neither reject them as “foreign” nor accept them literally. Cross-check archaeology and other texts.
+
+> **Chuyển mạch:** Ở chặng này của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Chinese sources: bên ngoài (external / 외부) but indispensable** nêu điều cần giải thích; **Champa/Khmer inscriptions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Colonial archive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Champa/Khmer inscriptions
 
@@ -51,15 +63,19 @@ Reading lịch sử (history / 이력) of hiện tại (current / 현재) Vietna
 
 This is one reason thư viện (library / 라이브러리) avoids treating hiện đại (modern / 현대적) national border as timeless bộ chứa (container / 컨테이너).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Colonial archive** tiếp nhận điểm tựa từ **Champa/Khmer inscriptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Newspaper and công khai (public / 공개) sphere** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Colonial archive
 
-Chính quyền Pháp tạo ra khối hồ sơ rất lớn: điều tra dân số, thuế, bản đồ, cảnh sát, trường học, tòa án, hạ tầng và báo cáo kinh tế.
+French administration generated huge bản ghi (record / 레코드): census, tax, map, police, school, court, hạ tầng (infrastructure / 인프라) and economic report.
 
 Administrative abundance creates temptation to over-trust colonial categories. A category designed for quản trị (governance / 거버넌스) can simplify fluid identities or informal economy.
 
 Archive is powerful because trạng thái (state / 상태) observed extensively, not because observation was neutral.
 
-## Báo chí và không gian công luận
+> **Chuyển mạch:** Trong **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Newspaper and công khai (public / 공개) sphere** tiếp nhận điểm tựa từ **Colonial archive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oral lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Newspaper and công khai (public / 공개) sphere
 
 Twentieth-century newspapers let historians study debate, advertisement, ngôn ngữ (language / 언어) thay đổi (change / 변경) and urban life.
 
@@ -67,23 +83,29 @@ But censorship, quyền sở hữu (ownership / 소유권) and audience shape co
 
 A newspaper silence is not proof sự kiện (event / 이벤트) absent; perhaps reporting was prohibited or rural sự kiện (event / 이벤트) never reached editor.
 
-## Lịch sử truyền miệng
+> **Chuyển mạch:** Ở chặng này của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Oral lịch sử (history / 이력)** tiếp nhận điểm tựa từ **Newspaper and công khai (public / 공개) sphere** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **National lịch sử (history / 이력) and nation-building** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
-Lời kể truyền miệng rất quan trọng khi nghiên cứu chiến tranh, di cư và đời sống thường ngày. Ký ức có thể sai niên đại nhưng vẫn bảo tồn chính xác cảm xúc, quan hệ xã hội và cách người kể cảm nhận nguyên nhân.
+## Oral lịch sử (history / 이력)
+
+Oral testimony is crucial for war, di chuyển (migration / 마이그레이션) and everyday life. Bộ nhớ (memory / 메모리) can contain chronology errors while accurately preserving emotion, xã hội (social / 사회적) quan hệ (relation / 관계) and perceived causality.
 
 Do not use “bộ nhớ (memory / 메모리) is imperfect” to discard testimony. Instead ask what kiểu (type / 타입) of claim it can hỗ trợ (support / 지원).
 
-## Lịch sử quốc gia và xây dựng quốc gia
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **National lịch sử (history / 이력) and nation-building** tiếp nhận điểm tựa từ **Oral lịch sử (history / 이력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Heroic bộ nhớ (memory / 메모리) versus structural lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
-Các nhà nước hiện đại dùng sách giáo khoa, bảo tàng, tượng đài và ngày kỷ niệm để dựng nên tường thuật chung. Việt Nam cũng vậy; Hàn Quốc, Pháp, Trung Quốc và Hoa Kỳ cũng không ngoại lệ.
+## National lịch sử (history / 이력) and nation-building
+
+Hiện đại (modern / 현대적) states use school textbook, museum, monument and anniversary to bản dựng (build / 빌드) dùng chung (shared / 공유) narrative. Vietnam is no exception; neither are Korea, France, China or United States.
 
 National narrative selects origin, hero, sacrifice and turning điểm (point / 지점) to create collective định danh (identity / 식별자).
 
 Historical scholarship may overlap with national narrative but has different obligation: bằng chứng (evidence / 증거), bất định (uncertainty / 불확실성) and competing interpretation must remain visible.
 
-## Ký ức anh hùng và lịch sử cấu trúc
+> **Chuyển mạch:** Trong **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Heroic bộ nhớ (memory / 메모리) versus structural lịch sử (history / 이력)** tiếp nhận điểm tựa từ **National lịch sử (history / 이력) and nation-building** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hùng Vương: myth, bộ nhớ (memory / 메모리) and archaeology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
-Một trận đánh dễ được nhớ qua tên người anh hùng hơn là qua hậu cần và hệ thống tài chính. Vì vậy ký ức công cộng thường nhân cách hóa các tiến trình cấu trúc.
+## Heroic bộ nhớ (memory / 메모리) versus structural lịch sử (history / 이력)
+
+A battle is easier to remember through named hero than through logistics and fiscal hệ thống (system / 시스템). Công khai (public / 공개) bộ nhớ (memory / 메모리) therefore often personalizes structural tiến trình (process / 프로세스).
 
 The thư viện (library / 라이브러리) keeps hero story but adds cơ chế (mechanism / 메커니즘):
 
@@ -94,13 +116,17 @@ The thư viện (library / 라이브러리) keeps hero story but adds cơ chế 
 
 This does not diminish individuals; it prevents explanation from becoming magic-person lý thuyết (theory / 이론).
 
-## Hùng Vương: huyền thoại, ký ức và khảo cổ học
+> **Chuyển mạch:** Ở chặng này của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Hùng Vương: myth, bộ nhớ (memory / 메모리) and archaeology** tiếp nhận điểm tựa từ **Heroic bộ nhớ (memory / 메모리) versus structural lịch sử (history / 이력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contested twentieth-century terminology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Hùng Vương: myth, bộ nhớ (memory / 메모리) and archaeology
 
 Hùng traditions are central định danh (identity / 식별자) bộ nhớ (memory / 메모리). Archaeology demonstrates complex societies in relevant broad region/period but does not verify literal 18-kings chronology.
 
 Both statements can coexist.
 
 Bộ nhớ (memory / 메모리) can be historically important even when not literal archive.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Contested twentieth-century terminology** tiếp nhận điểm tựa từ **Hùng Vương: myth, bộ nhớ (memory / 메모리) and archaeology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1975 and different memories** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Contested twentieth-century terminology
 
@@ -110,7 +136,9 @@ Rather than select one label as complete explanation, scholarship should specify
 
 Terminology must not silently replace argument.
 
-## 1975 và những ký ức khác nhau
+> **Chuyển mạch:** Trong **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **1975 and different memories** tiếp nhận điểm tựa từ **Contested twentieth-century terminology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Museum as narrative technology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## 1975 and different memories
 
 1975 can be remembered as reunification/liberation by some communities and as defeat/displacement/exile by others, especially across diaspora histories.
 
@@ -118,7 +146,9 @@ Historical fact of trạng thái (state / 상태)/military kết quả (outcome 
 
 A mature công khai (public / 공개) lịch sử (history / 이력) can document multiple lived memories without claiming all factual interpretations have equal bằng chứng (evidence / 증거).
 
-## Bảo tàng như công nghệ kể chuyện
+> **Chuyển mạch:** Ở chặng này của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Museum as narrative technology** tiếp nhận điểm tựa từ **1975 and different memories** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monument and site layers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Museum as narrative technology
 
 Museum does not merely store objects. Selection, label, room thứ tự (order / 순서) and lighting bản dựng (build / 빌드) nhân quả (causal / 인과적) story.
 
@@ -132,7 +162,9 @@ When visiting museum, ask:
 
 This makes museum visit active historical reading.
 
-## Các lớp của tượng đài và di tích
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Monument and site layers** tiếp nhận điểm tựa từ **Museum as narrative technology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **UNESCO inscription does not prove every narrative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Monument and site layers
 
 A temple commemorating ancient figure may be rebuilt in Nguyễn/hiện đại (modern / 현대적) period. A war monument may be erected decades after sự kiện (event / 이벤트).
 
@@ -148,19 +180,25 @@ date of present structure
 
 This three-date mô hình (model / 모델) prevents major heritage misunderstanding.
 
+> **Chuyển mạch:** Trong **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **UNESCO inscription does not prove every narrative** tiếp nhận điểm tựa từ **Monument and site layers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Digital lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## UNESCO inscription does not prove every narrative
 
 UNESCO status usually recognizes cultural/historical giá trị (value / 값) and preservation criteria. It should not be cited as proof for all cục bộ (local / 로컬) legends attached to site.
 
 For Cổ Loa, archaeology supports ancient political centre; later temples preserve bộ nhớ (memory / 메모리) tầng (layer / 계층). For Hội An/Huế/Mỹ Sơn, hiện tại (current / 현재) heritage landscape includes restoration and later use.
 
-## Lịch sử số
+> **Chuyển mạch:** Ở chặng này của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Digital lịch sử (history / 이력)** tiếp nhận điểm tựa từ **UNESCO inscription does not prove every narrative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn (source / 소스) triangulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Digital lịch sử (history / 이력)
 
 Digitized archive, GIS, satellite ảnh (image / 이미지) and searchable văn bản (text / 텍스트) thay đổi (change / 변경) research năng lực (capability / 역량). Historians can compare place/thời gian (time / 시간) at new quy mô (scale / 규모).
 
 But digital availability introduces selection độ lệch (bias / 편향): what has been scanned becomes easier to cite than equally important undigitized material.
 
 Tìm kiếm (search / 검색) kết quả (result / 결과) ranking can shape historiography subtly.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Digital lịch sử (history / 이력)** nêu điều cần giải thích; **Nguồn (source / 소스) triangulation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Confidence ngôn ngữ (language / 언어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguồn (source / 소스) triangulation
 
@@ -177,6 +215,8 @@ stronger reconstruction
 
 Sources need not “vote” equally; assess provenance and relevance.
 
+> **Chuyển mạch:** Trong **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Nguồn (source / 소스) triangulation** nêu điều cần giải thích; **Confidence ngôn ngữ (language / 언어)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Confidence ngôn ngữ (language / 언어)
 
 Thư viện (library / 라이브러리) uses levels implicitly:
@@ -188,8 +228,12 @@ Thư viện (library / 라이브러리) uses levels implicitly:
 
 This is better than either overconfidence or saying “nobody knows anything”.
 
+> **Chuyển mạch:** Ở chặng này của **Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Confidence ngôn ngữ (language / 언어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Recap và bàn giao
 
 Historiography is methodology for turning surviving bằng chứng (evidence / 증거) into accountable claims. Collective bộ nhớ (memory / 메모리) explains why societies remember selective past; heritage materializes that bộ nhớ (memory / 메모리) in landscape.
 
 Use [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md) only as coordinate map, then return to explanatory chapters. [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md) provides terms and nguồn (source / 소스) hierarchy; [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md) turns heritage sites into an on-site học tập (learning / 학습) tuyến (route / 경로).
+
+> **Bàn giao:** Sau **Recap và bàn giao**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

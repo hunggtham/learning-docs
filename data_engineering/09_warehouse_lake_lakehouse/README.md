@@ -1,7 +1,6 @@
 # 09 — Warehouse, lake và lakehouse
 
-> **Mạch đọc:** Đọc **09 — Warehouse, lake và lakehouse** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Warehouse** sang **2. dữ liệu (data / 데이터) lake**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **09 — Warehouse, lake và lakehouse**. Route đi từ workload/invariants → warehouse → data lake → lakehouse table/transaction layer → governance, cost, compute và serving, để lựa chọn kiến trúc bắt đầu từ semantics chứ không từ khẩu hiệu.
 
 Warehouse, lake và lakehouse là các điểm khác nhau trên trục lưu trữ (storage / 저장소), lược đồ (schema / 스키마), giao dịch (transaction / 트랜잭션), quản trị (governance / 거버넌스) và compute. Không nên chọn bằng khẩu hiệu; hãy bắt đầu từ tải công việc (workload / 워크로드) và bất biến (invariant / 불변식) cần giữ.
 
@@ -11,8 +10,7 @@ Warehouse thường cung cấp danh mục (catalog / 카탈로그), SQL, tải c
 
 Điểm cần kiểm tra là truy vấn (query / 쿼리) isolation, tính đồng thời (concurrency / 동시성), ingestion độ trễ (latency / 지연 시간), historical correction và quyền truy cập—not chỉ benchmark scan.
 
-
-> **Chuyển mạch:** Từ **1. Warehouse**, ta sang **2. dữ liệu (data / 데이터) lake** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **09 — Warehouse, lake và lakehouse**, **1. Warehouse** nêu điều cần giải thích; **2. dữ liệu (data / 데이터) lake** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Lakehouse và snapshot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. dữ liệu (data / 데이터) lake
 
@@ -20,8 +18,7 @@ Lake lưu tệp (file / 파일) linh hoạt trên đối tượng (object / 객�
 
 Đối tượng (object / 객체) lưu trữ (storage / 저장소) không cung cấp mọi ngữ nghĩa (semantics / 의미론) của filesystem. Rename có thể là bản sao (copy / 복사)+delete; listing có thể eventually consistent; nhiều writer có thể ghi cùng prefix. lần ghi nhận (commit / 커밋) giao thức (protocol / 프로토콜) phải được thiết kế rõ.
 
-
-> **Chuyển mạch:** Từ **2. dữ liệu (data / 데이터) lake**, ta sang **3. Lakehouse và snapshot** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **09 — Warehouse, lake và lakehouse**, **2. dữ liệu (data / 데이터) lake** nêu điều cần giải thích; **3. Lakehouse và snapshot** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Compaction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Lakehouse và snapshot
 
@@ -33,8 +30,7 @@ read current snapshot → validate conflict → write new files → publish meta
 
 Reader chỉ đọc tệp (file / 파일) thuộc snapshot đã lần ghi nhận (commit / 커밋). thời gian (time / 시간) travel là khả năng chọn snapshot cũ, không phải phép màu để phục hồi mọi dữ liệu nếu tệp (file / 파일) đã bị garbage-collect.
 
-
-> **Chuyển mạch:** Từ **3. Lakehouse và snapshot**, ta sang **4. Compaction** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — Warehouse, lake và lakehouse**, **4. Compaction** tiếp nhận điểm tựa từ **3. Lakehouse và snapshot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Snapshot và lược đồ (schema / 스키마) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Compaction
 
@@ -42,8 +38,7 @@ Streaming và micro-batch tạo small files. Compaction đọc nhiều tệp (fi
 
 Compaction quá thường xuyên làm tăng ghi (write / 쓰기) amplification; quá muộn làm truy vấn (query / 쿼리) siêu dữ liệu (metadata / 메타데이터) và tác vụ (task / 작업) scheduling chậm. Trigger nên dựa trên tệp (file / 파일) count/kích thước (size / 크기), truy vấn (query / 쿼리) hành vi (behavior / 동작) và khôi phục (recovery / 복구) cửa sổ (window / 윈도우).
 
-
-> **Chuyển mạch:** Từ **4. Compaction**, ta sang **5. Snapshot và lược đồ (schema / 스키마) evolution** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **09 — Warehouse, lake và lakehouse**, **5. Snapshot và lược đồ (schema / 스키마) evolution** tiếp nhận điểm tựa từ **4. Compaction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Partition và bố cục (layout / 레이아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Snapshot và lược đồ (schema / 스키마) evolution
 
@@ -51,8 +46,7 @@ Lược đồ (schema / 스키마) evolution cần tương thích với cả t�
 
 Di chuyển (migration / 마이그레이션) an toàn thường dùng dual-read/dual-write hoặc versioned lược đồ (schema / 스키마), có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우) và quay lui (rollback / 롤백) đường dẫn (path / 경로). Xóa column khỏi siêu dữ liệu (metadata / 메타데이터) không đồng nghĩa bytes đã biến mất; retention/privacy chính sách (policy / 정책) phải bao phủ cả tệp (file / 파일) cũ và snapshot cũ.
 
-
-> **Chuyển mạch:** Từ **5. Snapshot và lược đồ (schema / 스키마) evolution**, ta sang **6. Partition và bố cục (layout / 레이아웃)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **09 — Warehouse, lake và lakehouse**, **6. Partition và bố cục (layout / 레이아웃)** tiếp nhận điểm tựa từ **5. Snapshot và lược đồ (schema / 스키마) evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. quyết định (decision / 결정) frame** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Partition và bố cục (layout / 레이아웃)
 
@@ -60,8 +54,7 @@ Partition theo ngày hỗ trợ pruning và vòng đời (lifecycle / 생명주�
 
 Bố cục (layout / 레이아웃) phải được đo bằng bytes scanned, files opened, tác vụ (task / 작업) count, compaction chi phí (cost / 비용) và truy vấn (query / 쿼리) độ trễ (latency / 지연 시간) trên tải công việc (workload / 워크로드) thật.
 
-
-> **Chuyển mạch:** Từ **6. Partition và bố cục (layout / 레이아웃)**, ta sang **7. quyết định (decision / 결정) frame** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — Warehouse, lake và lakehouse**, **7. quyết định (decision / 결정) frame** tiếp nhận điểm tựa từ **6. Partition và bố cục (layout / 레이아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Snapshot isolation và xung đột (conflict / 충돌) detection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. quyết định (decision / 결정) frame
 
@@ -75,8 +68,7 @@ Chọn lưu trữ (storage / 저장소) bằng câu hỏi:
 
 Đọc tiếp: [03 — Storage và formats](../03_storage_and_formats.md), [11 — Governance](../11_governance_lineage_security/README.md), [12 — Cost và capacity](../12_cost_performance_capacity/README.md).
 
-
-> **Chuyển mạch:** Từ **7. quyết định (decision / 결정) frame**, ta sang **8. Snapshot isolation và xung đột (conflict / 충돌) detection** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **09 — Warehouse, lake và lakehouse**, **8. Snapshot isolation và xung đột (conflict / 충돌) detection** tiếp nhận điểm tựa từ **7. quyết định (decision / 결정) frame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. thời gian (time / 시간) travel, retention và GDPR-style delete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Snapshot isolation và xung đột (conflict / 충돌) detection
 
@@ -89,8 +81,7 @@ S0 + changes(b) → reject/merge → S2
 
 Nếu lần ghi nhận (commit / 커밋) chỉ kiểm tra tệp (file / 파일) đường dẫn (path / 경로) mới mà bỏ qua logical overlap, hai writer có thể cùng sửa một partition và làm mất cập nhật (update / 업데이트). xung đột (conflict / 충돌) detection phải xét partition/key/phạm vi (range / 범위) mà thao tác (operation / 연산) đọc và ghi.
 
-
-> **Chuyển mạch:** Từ **8. Snapshot isolation và xung đột (conflict / 충돌) detection**, ta sang **9. thời gian (time / 시간) travel, retention và GDPR-style delete** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **09 — Warehouse, lake và lakehouse**, **9. thời gian (time / 시간) travel, retention và GDPR-style delete** tiếp nhận điểm tựa từ **8. Snapshot isolation và xung đột (conflict / 충돌) detection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. bảng (table / 테이블) maintenance đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. thời gian (time / 시간) travel, retention và GDPR-style delete
 
@@ -98,8 +89,7 @@ Thời gian (time / 시간) travel hữu ích cho kiểm tra (audit / 감사) v�
 
 Khi cần xóa một subject, phải xác định dữ liệu (data / 데이터) files, snapshots, manifests, materialized views, caches và downstream exports nào chứa bản ghi (record / 레코드). Rewriting tệp (file / 파일) để redact có thể phá snapshot lineage; do đó deletion job cần tạo bằng chứng (evidence / 증거) về phiên bản (version / 버전) trước/sau và xác nhận các bản bản sao (copy / 복사) đã hết retention.
 
-
-> **Chuyển mạch:** Từ **9. thời gian (time / 시간) travel, retention và GDPR-style delete**, ta sang **10. bảng (table / 테이블) maintenance đặc tả hợp đồng (contract / 계약)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — Warehouse, lake và lakehouse**, **10. bảng (table / 테이블) maintenance đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **9. thời gian (time / 시간) travel, retention và GDPR-style delete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 10. bảng (table / 테이블) maintenance đặc tả hợp đồng (contract / 계약)
 
@@ -114,4 +104,4 @@ Compaction, clustering, vacuum/garbage collection và statistics refresh là cá
 
 Maintenance không nên chạy như cron vô danh; nó là một dữ liệu (data / 데이터) sản phẩm (product / 제품) thao tác (operation / 연산) có đơn vị sở hữu (owner / 오너) và ngân sách (budget / 예산).
 
-> **Bàn giao:** Sau **10. bảng (table / 테이블) maintenance đặc tả hợp đồng (contract / 계약)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **10. bảng (table / 테이블) maintenance đặc tả hợp đồng (contract / 계약)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

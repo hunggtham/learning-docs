@@ -1,14 +1,18 @@
-# 1945–1954: cách mạng, dựng nhà nước, Kháng chiến chống Pháp và Geneva
+# 1945–1954: revolution, state-building, First Indochina War và Geneva
+
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **1945–1954: revolution, state-building, First Indochina War và Geneva**. Route đi từ 1945 independence claim và occupation → state-building/DRV → war, diplomacy và social mobilization → Geneva settlement và partition → hệ quả thể chế, để chủ quyền được đọc qua cả chiến trường lẫn quốc tế.
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md) kết thúc với nước Việt Nam Dân chủ Cộng hòa (Democratic Republic of Vietnam, DRV) được tuyên bố ngày 2/9/1945. Nhưng tuyên bố độc lập không đồng nghĩa chủ quyền đã được mọi bên thừa nhận.
+[`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md) kết thúc với Democratic Republic of Vietnam (DRV) được tuyên bố ngày 2 September 1945. Nhưng proclamation không đồng nghĩa uncontested sovereignty.
 
-Câu hỏi trung tâm của chương này là: **làm thế nào khoảng trống quyền lực sau chiến tranh biến thành cuộc chiến giành độc lập ngày càng quốc tế hóa, và vì sao năm 1954 kết thúc chiến tranh Pháp–Việt nhưng chưa giải quyết tranh chấp về trật tự chính trị tương lai của Việt Nam?** Hãy nối mốc **2/9/1945, 1946 và Điện Biên Phủ 1954** với nạn đói, tài chính, vùng căn cứ và Hiệp định Geneva; phần sau sẽ theo dõi vì sao đường chia cắt 17° trở thành trải nghiệm xã hội lâu dài.
+Câu hỏi trung tâm của chapter này là: **làm thế nào xung đột (conflict / 충돌) từ postwar power vacuum biến thành một cuộc chiến decolonization ngày càng internationalized, và vì sao 1954 kết thúc French war nhưng không kết thúc xung đột (conflict / 충돌) về future political thứ tự (order / 순서) của Vietnam?**
+
+> **Chuyển mạch:** Trong **1945–1954: revolution, state-building, First Indochina War và Geneva**, **1945: independence claim trong một international occupation khung phần mềm (framework / 프레임워크)** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **State-building under scarcity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1945: independence claim trong một international occupation khung phần mềm (framework / 프레임워크)
 
-Sau khi Nhật đầu hàng, các thỏa thuận Đồng minh phân công việc giải giáp quân Nhật: quân Quốc dân đảng Trung Hoa vào miền Bắc Việt Nam, quân Anh vào miền Nam. Quân Pháp dần quay trở lại, đặc biệt ở miền Nam.
+Sau Japanese surrender, Allied arrangements phân công việc giải giáp Japanese forces: Chinese Nationalist forces vào northern Vietnam, British forces vào south. French forces gradually returned, particularly in southern Vietnam.
 
 Điều này tạo multi-layer sovereignty bài toán (problem / 문제). DRV có revolutionary legitimacy và cục bộ (local / 로컬) điều khiển (control / 제어) ở nhiều nơi, nhưng không được các major powers immediate recognition như một fully secure sovereign trạng thái (state / 상태).
 
@@ -16,9 +20,11 @@ Vietnamese political parties khác cũng hoạt động, một số có hỗ tr�
 
 Vì vậy late 1945 politics không phải simple DRV vs France nhị phân (binary / 이진).
 
+> **Chuyển mạch:** Ở chặng này của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **State-building under scarcity** tiếp nhận điểm tựa từ **1945: independence claim trong một international occupation khung phần mềm (framework / 프레임워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Negotiation và strategic compromise 1946** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## State-building under scarcity
 
-Chính phủ DRV đồng thời phải đối mặt với hậu quả nạn đói, năng lực tài chính thấp, tầm với hành chính yếu và quân đội nước ngoài. Tiền tệ, nguồn lương thực, thuế và an ninh địa phương là những vấn đề sống còn.
+DRV phải đồng thời đối mặt famine aftermath, low fiscal sức chứa (capacity / 용량), weak administrative reach và foreign troops. Currency, food supply, tax và cục bộ (local / 로컬) bảo mật (security / 보안) là existential problems.
 
 A new trạng thái (state / 상태) needs more than flag:
 
@@ -34,6 +40,8 @@ legitimacy
 
 Nếu một thành phần (component / 컴포넌트) thiếu, bên ngoài (external / 외부) or nội bộ (internal / 내부) rival có opening.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Negotiation và strategic compromise 1946** tiếp nhận điểm tựa từ **State-building under scarcity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **December 1946: full-scale war** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Negotiation và strategic compromise 1946
 
 Trong 1946, DRV và France ký agreements/negotiated arrangements nhằm postpone or cấu trúc (structure / 구조) xung đột (conflict / 충돌), nhưng fundamental disagreement về sovereignty và French Union relationship remained.
@@ -42,13 +50,17 @@ Cả hai side faced các ràng buộc (constraints / 제약조건들). DRV wante
 
 Negotiation thất bại (failure / 실패) should not be reduced to one meeting. Cục bộ (local / 로컬) clashes, incompatible political goals và mistrust accumulated.
 
-## Tháng 12/1946: chiến tranh toàn diện
+> **Chuyển mạch:** Trong **1945–1954: revolution, state-building, First Indochina War và Geneva**, **December 1946: full-scale war** tiếp nhận điểm tựa từ **Negotiation và strategic compromise 1946** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **City vs countryside is too simple** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
-Giao tranh leo thang thành chiến tranh toàn diện vào **tháng 12/1946**, thường được xem là khởi đầu Chiến tranh Đông Dương lần thứ nhất trên quy mô cả nước.
+## December 1946: full-scale war
+
+Fighting escalated into full-scale war in **December 1946**, commonly marking start of First Indochina War at national quy mô (scale / 규모).
 
 French forces had superiority in conventional weaponry, urban bases and mobility in some corridors. DRV/Viet Minh chiến lược (strategy / 전략) increasingly relied on rural bases, political mobilization, guerrilla warfare and gradual development of regular forces.
 
 This is not simply “weak side uses guerrilla.” The strategic mục tiêu (objective / 목표) is thời gian (time / 시간): avoid destruction, expand organization, raise chi phí (cost / 비용) of occupation and wait for international môi trường (environment / 환경) to thay đổi (change / 변경).
+
+> **Chuyển mạch:** Ở chặng này của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **City vs countryside is too simple** tiếp nhận điểm tựa từ **December 1946: full-scale war** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mobilization: war penetrates household** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## City vs countryside is too simple
 
@@ -62,7 +74,9 @@ A road can be French-controlled by day but insecure at night. A village can pay 
 military presence ≠ administrative control ≠ political loyalty ≠ tax access
 ```
 
-## Huy động: chiến tranh đi vào từng hộ gia đình
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Mobilization: war penetrates household** tiếp nhận điểm tựa từ **City vs countryside is too simple** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái (state / 상태) of Vietnam and Bảo Đại solution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Mobilization: war penetrates household
 
 Both sides required labor, intelligence, food and manpower. War therefore reached village through recruitment, taxation, requisition, bảo mật (security / 보안) operations and political campaigns.
 
@@ -70,7 +84,9 @@ For DRV, building a revolutionary trạng thái (state / 상태) and fighting wa
 
 For French side, pacification and creation/hỗ trợ (support / 지원) of non-communist Vietnamese institutions became increasingly important because permanent occupation by French troops alone was costly.
 
-## Quốc gia Việt Nam và giải pháp Bảo Đại
+> **Chuyển mạch:** Trong **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Trạng thái (state / 상태) of Vietnam and Bảo Đại solution** tiếp nhận điểm tựa từ **Mobilization: war penetrates household** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1949 changes the war: Chinese Revolution và Cold War** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Trạng thái (state / 상태) of Vietnam and Bảo Đại solution
 
 France supported creation of **Trạng thái (state / 상태) of Vietnam** associated with Bảo Đại, seeking a non-communist Vietnamese trạng thái (state / 상태) within evolving French Union arrangements.
 
@@ -78,7 +94,9 @@ This created competing claims to Vietnamese statehood: DRV claimed revolutionary
 
 These claims cannot be understood only as puppet vs authentic nhị phân (binary / 이진). Institutions had varying degrees of autonomy, xã hội (social / 사회적) hỗ trợ (support / 지원) and foreign dependence; their sức chứa (capacity / 용량) evolved over thời gian (time / 시간).
 
-## 1949 làm thay đổi chiến tranh: Cách mạng Trung Quốc và Chiến tranh Lạnh
+> **Chuyển mạch:** Ở chặng này của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **1949 changes the war: Chinese Revolution và Cold War** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) of Vietnam and Bảo Đại solution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Border Campaign 1950: logistics kiến trúc (architecture / 아키텍처) changes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## 1949 changes the war: Chinese Revolution và Cold War
 
 Chinese Communist victory in **1949** transformed strategic môi trường (environment / 환경). DRV gained truy cập (access / 접근) to a friendly border, huấn luyện (training / 학습), supplies and diplomatic recognition from People's Republic of China and Soviet bloc.
 
@@ -96,6 +114,8 @@ Indochina war as Cold War theatre
 
 Neither tầng (layer / 계층) replaces the other.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Border Campaign 1950: logistics kiến trúc (architecture / 아키텍처) changes** tiếp nhận điểm tựa từ **1949 changes the war: Chinese Revolution và Cold War** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Land reform and wartime trạng thái (state / 상태) transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Border Campaign 1950: logistics kiến trúc (architecture / 아키텍처) changes
 
 DRV victory in the 1950 Border Campaign helped open/secure routes to China and weakened isolated French positions near the border.
@@ -104,7 +124,9 @@ Strategically, the major kết quả (outcome / 결과) was logistical: bên ngo
 
 This shows why border điều khiển (control / 제어) matters beyond territory. A border corridor can thay đổi (change / 변경) weapon supply, huấn luyện (training / 학습) and diplomatic connectivity.
 
-## Cải cách ruộng đất và biến đổi nhà nước trong chiến tranh
+> **Chuyển mạch:** Trong **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Land reform and wartime trạng thái (state / 상태) transformation** tiếp nhận điểm tựa từ **Border Campaign 1950: logistics kiến trúc (architecture / 아키텍처) changes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **French chiến lược (strategy / 전략) and Điện Biên Phủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Land reform and wartime trạng thái (state / 상태) transformation
 
 During the later war, DRV intensified agrarian policies and eventually land reform. The goal included redistributing land, weakening landlord power, mobilizing peasants and transforming rural lớp (class / 클래스) cấu trúc (structure / 구조).
 
@@ -112,7 +134,9 @@ Hiện thực (implementation / 구현) involved coercion and serious abuses in 
 
 For historical lập luận (reasoning / 추론), land reform must be analyzed simultaneously as xã hội (social / 사회적) revolution, wartime mobilization and trạng thái (state / 상태) penetration into village society.
 
-## Chiến lược của Pháp và Điện Biên Phủ
+> **Chuyển mạch:** Ở chặng này của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **French chiến lược (strategy / 전략) and Điện Biên Phủ** tiếp nhận điểm tựa từ **Land reform and wartime trạng thái (state / 상태) transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện Biên Phủ site: landscape explains more than heroic narrative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## French chiến lược (strategy / 전략) and Điện Biên Phủ
 
 By 1953–1954, French command sought ways to force a major battle and disrupt Viet Minh movement/supply. **Điện Biên Phủ**, a valley in northwest Vietnam, became a fortified cơ sở (base / 기반) intended to draw/contain opponent and protect strategic routes.
 
@@ -128,6 +152,8 @@ Viet Minh dispersed logistics + artillery positioning + mass labor
 
 The French garrison surrendered on **7 May 1954**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Điện Biên Phủ site: landscape explains more than heroic narrative** tiếp nhận điểm tựa từ **French chiến lược (strategy / 전략) and Điện Biên Phủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Geneva 1954: ceasefire and regrouping, not a permanent border settlement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điện Biên Phủ site: landscape explains more than heroic narrative
 
 When visiting Điện Biên Phủ, look first at valley hình học (geometry / 기하학), surrounding hills, airstrip location and distance to bên ngoài (external / 외부) supply routes.
@@ -136,7 +162,9 @@ Ask how artillery reached high ground, how trenches approached strongpoints, and
 
 This turns “decisive battle” into a các hệ thống (systems / 시스템들) bài toán (problem / 문제): logistics, kỹ thuật (engineering / 엔지니어링), intelligence, morale and diplomacy converge.
 
-## Geneva 1954: ngừng bắn và tập kết, không phải dàn xếp biên giới vĩnh viễn
+> **Chuyển mạch:** Trong **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Geneva 1954: ceasefire and regrouping, not a permanent border settlement** tiếp nhận điểm tựa từ **Điện Biên Phủ site: landscape explains more than heroic narrative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Elections and the Geneva political settlement: distinguish documents and signatories** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Geneva 1954: ceasefire and regrouping, not a permanent border settlement
 
 The Geneva agreements ended hostilities between French Union forces and People's Army of Vietnam. The military agreement established a **provisional military demarcation line** near the 17th parallel and regrouping zones north/south of it.
 
@@ -144,7 +172,9 @@ The line was explicitly a military arrangement, not intended in the agreement as
 
 Large population movements followed during the regrouping period, including many Catholics and other northerners moving south and Viet Minh personnel/supporters regrouping north, while some movement also occurred in other directions.
 
-## Bầu cử và dàn xếp chính trị Geneva: phân biệt văn kiện và bên ký kết
+> **Chuyển mạch:** Ở chặng này của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Elections and the Geneva political settlement: distinguish documents and signatories** tiếp nhận điểm tựa từ **Geneva 1954: ceasefire and regrouping, not a permanent border settlement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1954 ends one war but creates a new hệ thống (system / 시스템) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Elections and the Geneva political settlement: distinguish documents and signatories
 
 The conference's Final Declaration envisaged nationwide elections in **1956** as part of peaceful reunification. However, the Trạng thái (state / 상태) of Vietnam did not accept the settlement in the same way as the signatories to the military agreement, and the United States did not sign the Final Declaration.
 
@@ -152,7 +182,9 @@ This distinction matters. Saying simply “all sides signed an agreement to hold
 
 The better historical question is why the provisional military division hardened into two rival state-building projects amid Cold War escalation.
 
-## 1954 kết thúc một cuộc chiến nhưng tạo ra hệ thống nhà nước mới
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1945–1954: revolution, state-building, First Indochina War và Geneva**, **1954 ends one war but creates a new hệ thống (system / 시스템) trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Elections and the Geneva political settlement: distinguish documents and signatories** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## 1954 ends one war but creates a new hệ thống (system / 시스템) trạng thái (state / 상태)
 
 French colonial military dominance was broken, but Vietnam was not politically reunified. Two zones now had different governments, armies, international supporters and institutional trajectories.
 
@@ -168,6 +200,8 @@ different state-building trajectories
 future reunification becomes harder, not easier
 ```
 
+> **Chuyển mạch:** Trong **1945–1954: revolution, state-building, First Indochina War và Geneva**, **Recap và bàn giao** tiếp nhận điểm tựa từ **1954 ends one war but creates a new hệ thống (system / 시스템) trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Recap và bàn giao
 
 1945–1954 was simultaneously decolonization, revolution, civil-political competition and increasingly a Cold War xung đột (conflict / 충돌). DRV survived from weak 1945 conditions by building administrative/military networks; France gradually shifted from direct reconquest toward a French Union/non-communist Vietnamese trạng thái (state / 상태) chiến lược (strategy / 전략); international hỗ trợ (support / 지원) on both sides expanded after 1949.
@@ -179,3 +213,5 @@ Chapter tiếp theo, [`20_two_vietnams_cold_war_and_1975.md`](20_two_vietnams_co
 ### Nguồn nền
 
 *The Cambridge Lịch sử (history / 이력) of the Vietnam War*, Volume 1; K. W. Taylor and hiện đại (modern / 현대적) histories of the First Indochina War; U.S. Office of the Historian publication of the 1954 Geneva military agreement and contemporary diplomatic records; scholarship on DRV state-building, Trạng thái (state / 상태) of Vietnam, land reform and Điện Biên Phủ logistics.
+
+> **Bàn giao:** Sau **Recap và bàn giao**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

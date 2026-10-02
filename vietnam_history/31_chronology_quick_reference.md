@@ -1,16 +1,20 @@
-# Bảng niên đại tham khảo nhanh — Lịch sử Việt Nam
+# Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam
 
-Tệp này là **bản đồ tọa độ**, không thay thế các chương giải thích nguyên nhân. Dùng nó sau chương 38 để định vị mốc, rồi quay lại chương tương ứng để đọc kinh tế, xã hội và địa điểm; với giai đoạn cổ, niên đại truyền thống và niên đại khảo cổ không phải lúc nào trùng nhau.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**. Route đi từ prehistory/early states → Bắc thuộc và local autonomy → triều đại, colonial period và revolution → modern state, diaspora và uncertainty → quay về chapter nhân quả, để timeline chỉ làm coordinate map.
 
-## Tiền sử và nhà nước sơ kỳ
+Tệp (file / 파일) này là **coordinate map**, không thay thế các chapter nhân quả (causal / 인과적). Với giai đoạn cổ, niên đại truyền thống và niên đại archaeological không phải lúc nào trùng nhau; các mốc bất định (uncertainty / 불확실성) được ghi thận trọng.
 
-- Khoảng thiên niên kỷ II–I TCN: chuỗi văn hóa (cultural sequence / 문화 연속체) Phùng Nguyên → Đồng Đậu → Gò Mun; nông nghiệp và luyện kim ngày càng phức tạp.
+## Tiền sử và early trạng thái (state / 상태)
+
+- Khoảng thiên niên kỷ II–I TCN: các cultural chuỗi (sequence / 시퀀스) Phùng Nguyên → Đồng Đậu → Gò Mun; agriculture/metallurgy ngày càng complex.
 - Khoảng thế kỷ VII TCN–đầu Công nguyên: Đông Sơn phát triển ở Bắc Bộ và vùng liên quan.
-- Khoảng thế kỷ III TCN: Cổ Loa trở thành trung tâm chính trị có công sự lớn; truyền thống gắn với Âu Lạc/An Dương Vương.
+- Khoảng thế kỷ III TCN: Cổ Loa trở thành major fortified political centre; tradition gắn với Âu Lạc/An Dương Vương.
 - Khoảng 207 TCN: Triệu Đà hình thành Nam Việt (Nanyue) ở khu vực nam Trung Hoa và Bắc Việt hiện nay.
 - 111 TCN: nhà Hán đánh bại Nam Việt, đưa Bắc Bộ vào imperial commandery hệ thống (system / 시스템).
 
-## Bắc thuộc và những nỗ lực tự trị địa phương
+> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** tiếp nhận điểm tựa từ **Tiền sử và early trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế kỷ X và early dynastic trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Bắc thuộc và cục bộ (local / 로컬) autonomy attempts
 
 - 40–43: khởi nghĩa Hai Bà Trưng.
 - 248: khởi nghĩa Bà Triệu theo truyền thống/sử liệu.
@@ -20,15 +24,19 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 791: Phùng Hưng associated with cục bộ (local / 로컬) uprising/điều khiển (control / 제어) of Tống Bình.
 - 905: Khúc Thừa Dụ gains cục bộ (local / 로컬) điều khiển (control / 제어) amid Tang collapse.
 - 930s: Dương Đình Nghệ và Ngô Quyền tiếp tục contest southern Chinese điều khiển (control / 제어).
-- 938: Ngô Quyền thắng Nam Hán trên Bạch Đằng — bước ngoặt lớn khỏi sự cai trị trực tiếp của đế chế phương Bắc.
+- 938: Ngô Quyền thắng Nam Hán trên Bạch Đằng — major break from direct northern imperial quy tắc (rule / 규칙).
 
-## Thế kỷ X và các nhà nước đầu triều đại
+> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Thế kỷ X và early dynastic trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lý–Trần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Thế kỷ X và early dynastic trạng thái (state / 상태)
 
 - 968: Đinh Bộ Lĩnh establishes Đại Cồ Việt and imperial monarchy at Hoa Lư.
 - 980: Tiền Lê begins under Lê Hoàn.
 - 981: xung đột (conflict / 충돌) with Song; Đại Cồ Việt retains autonomy.
 - 1009: Lý Công Uẩn becomes ruler.
 - 1010: capital moved from Hoa Lư to Thăng Long.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lý–Trần** tiếp nhận điểm tựa từ **Thế kỷ X và early dynastic trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hồ, Minh occupation, Lam Sơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lý–Trần
 
@@ -39,6 +47,8 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1285: major Mongol–Yuan invasion defeated.
 - 1287–1288: third major Yuan campaign; Bạch Đằng 1288.
 
+> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Hồ, Minh occupation, Lam Sơn** tiếp nhận điểm tựa từ **Lý–Trần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lê sơ and fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hồ, Minh occupation, Lam Sơn
 
 - 1400: Hồ Quý Ly establishes Hồ dynasty.
@@ -47,7 +57,9 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1427: Ming forces defeated/withdrawal settlement.
 - 1428: Lê Lợi establishes restored Đại Việt under Lê dynasty.
 
-## Lê sơ và phân mảnh quyền lực
+> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lê sơ and fragmentation** tiếp nhận điểm tựa từ **Hồ, Minh occupation, Lam Sơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trịnh–Nguyễn and southern frontier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Lê sơ and fragmentation
 
 - 1460–1497: reign of Lê Thánh Tông; major bureaucratic/legal expansion.
 - 1471: Đại Việt campaign defeats Vijaya, transforming Đại Việt–Champa balance.
@@ -55,13 +67,17 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1533 onward: Lê restoration movement forms rival court.
 - 1592: Trịnh–Lê forces retake Thăng Long; Mạc power survives in northern pockets afterward.
 
-## Trịnh–Nguyễn và vùng biên phía Nam
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Trịnh–Nguyễn and southern frontier** tiếp nhận điểm tựa từ **Lê sơ and fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tây Sơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Trịnh–Nguyễn and southern frontier
 
 - 1558: Nguyễn Hoàng sent to Thuận Hóa, starting durable Nguyễn regional cơ sở (base / 기반).
 - 1627–1672: repeated Trịnh–Nguyễn wars.
 - Sixteenth–seventeenth centuries: Hội An becomes major international cổng (port / 포트).
 - 1698: Nguyễn administration commonly associates Nguyễn Hữu Cảnh mission with formalizing Gia Định administration.
 - Eighteenth century: intensified settlement, trade and political competition in southern regions.
+
+> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Tây Sơn** tiếp nhận điểm tựa từ **Trịnh–Nguyễn and southern frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyễn nineteenth century** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tây Sơn
 
@@ -71,6 +87,8 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1786: Tây Sơn moves north, destabilizing Trịnh thứ tự (order / 순서).
 - 1788–1789: Qing intervention and Tây Sơn counteroffensive; victory associated with Quang Trung in spring 1789.
 - 1802: Nguyễn Ánh defeats Tây Sơn, becomes emperor Gia Long and establishes Nguyễn dynasty over unified territory.
+
+> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Nguyễn nineteenth century** tiếp nhận điểm tựa từ **Tây Sơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Colonial era and revolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyễn nineteenth century
 
@@ -82,7 +100,9 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1867: French điều khiển (control / 제어) extends over remaining Cochinchina provinces.
 - 1883–1884: treaties establish French protectorate khung phần mềm (framework / 프레임워크) over Annam/Tonkin; colonial hệ thống (system / 시스템) consolidates over following years.
 
-## Thời thuộc địa và cách mạng
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Colonial era and revolution** tiếp nhận điểm tựa từ **Nguyễn nineteenth century** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **First Indochina War and division** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Colonial era and revolution
 
 - Early 1900s: reformist/nationalist movements expand; Đông Du associated with Phan Bội Châu.
 - 1919: end of Nguyễn civil-service examinations.
@@ -93,12 +113,16 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - August 1945: August Revolution amid Japanese surrender and imperial collapse.
 - 2 September 1945: Hồ Chí Minh declares Democratic Republic of Vietnam in Hanoi.
 
-## Chiến tranh Đông Dương lần thứ nhất và chia cắt
+> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **First Indochina War and division** tiếp nhận điểm tựa từ **Colonial era and revolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1954–1975** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## First Indochina War and division
 
 - December 1946: full-scale Franco–Viet Minh war begins.
 - 1949–1950: xung đột (conflict / 충돌) internationalizes strongly amid Chinese Communist victory and Cold War alignment.
 - 7 May 1954: French position at Điện Biên Phủ falls.
 - July 1954: Geneva agreements establish provisional military regrouping around seventeenth parallel and political khung phần mềm (framework / 프레임워크); not intended as permanent international border.
+
+> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **1954–1975** tiếp nhận điểm tựa từ **First Indochina War and division** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reunification, crisis and reform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1954–1975
 
@@ -109,7 +133,9 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1973: Paris Peace Accords; U.S. combat forces withdraw.
 - 30 April 1975: Republic of Vietnam government collapses; war ends with northern/revolutionary forces controlling Saigon.
 
-## Thống nhất, khủng hoảng và cải cách
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Reunification, crisis and reform** tiếp nhận điểm tựa từ **1954–1975** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) reintegration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Reunification, crisis and reform
 
 - 1976: Socialist Republic of Vietnam formally established; national political-administrative reunification.
 - 1978–1979: Cambodia xung đột (conflict / 충돌) expands; 1979 Sino-Vietnamese border war.
@@ -117,6 +143,8 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1986: Sixth Party Congress launches Đổi Mới as official reform direction.
 - 1987: Foreign Investment Law enacted.
 - Late 1980s: household-oriented agricultural reforms expand.
+
+> **Chuyển mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Toàn cục (global / 전역) reintegration** tiếp nhận điểm tựa từ **Reunification, crisis and reform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Twenty-first century anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Toàn cục (global / 전역) reintegration
 
@@ -126,6 +154,8 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 2000/2001: U.S.–Vietnam Bilateral Trade Agreement signed/enters into force.
 - 11 January 2007: Vietnam becomes 150th member of WTO.
 
+> **Chuyển mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Twenty-first century anchors** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) reintegration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **How to use this tệp (file / 파일)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Twenty-first century anchors
 
 - 2000s–2010s: manufacturing exports, FDI and urban-industrial corridors expand rapidly.
@@ -133,6 +163,10 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - Early 2020s: COVID-19 stress-tests công khai (public / 공개) health, labor mobility and supply chains.
 - 2020s: aging, climate rủi ro (risk / 위험), năng lượng (energy / 에너지) chuyển tiếp (transition / 전이), productivity and higher-value manufacturing become increasingly central structural questions.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **How to use this tệp (file / 파일)** tiếp nhận điểm tựa từ **Twenty-first century anchors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## How to use this tệp (file / 파일)
 
 If you cannot explain **why** one coordinate leads to the next, return to the matching chapter. Timeline prevents nhân quả (causal / 인과적) inversion; explanatory chapters provide cơ chế (mechanism / 메커니즘).
+
+> **Bàn giao:** Sau **How to use this tệp (file / 파일)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
