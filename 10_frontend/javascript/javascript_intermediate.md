@@ -1,6 +1,6 @@
 # JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thực thi (execution / 실행) ngữ cảnh (context / 맥락) không đồng nghĩa lexical phạm vi (scope / 범위)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Creation/initialization trước evaluation: nền tảng của hoisting** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong**. Route đi từ execution context và lexical scope → creation/initialization và hoisting → closures, this và prototypes → modules, promises/event loop, iterators và state → testing/patterns, để người học nối syntax với runtime semantics.
 
 > **Mục tiêu của phần này**: chuyển từ mức “biết dùng JavaScript” sang mức “hiểu vì sao JavaScript hoạt động như vậy”. Bạn sẽ học thực thi (execution / 실행) ngữ cảnh (context / 맥락), lexical môi trường (environment / 환경), closure, `this`, prototype, lớp (class / 클래스) internals, modules, Promise/vòng lặp sự kiện (event loop / 이벤트 루프), iterator/generator, functional composition, trạng thái (state / 상태) modeling, lỗi (error / 오류) kiến trúc (architecture / 아키텍처), API tầng (layer / 계층), testing và các programming/thiết kế (design / 설계) patterns quan trọng.
 >

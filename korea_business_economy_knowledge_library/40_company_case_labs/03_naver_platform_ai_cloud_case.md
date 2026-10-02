@@ -1,7 +1,6 @@
 # NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI
 
-> **Mạch đọc:** Đặt **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Nền tảng không phải một mô hình kinh doanh duy nhất** sang **2. Quảng cáo tìm kiếm: lượng truy vấn chưa đủ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**. Route đi từ platform segments → search/ad monetization → commerce, fintech và content → cloud/AI cost và capex → segment reclassification, regulation và valuation, để không nhầm MAU/GMV với economic profit.
 
 NAVER là một trường hợp phù hợp để học cách phân tích doanh nghiệp nền tảng mà không bị mắc kẹt ở MAU, GMV hoặc một câu chuyện chung chung về “tăng trưởng AI”. Nền tảng số có mức độ phụ thuộc tài sản vật lý thấp hơn bán dẫn hay ô tô, nhưng điều đó không có nghĩa kinh tế của nó đơn giản. Tìm kiếm–quảng cáo, thương mại, thanh toán, nội dung và cloud có đơn vị kiếm tiền, cấu trúc chi phí và môi trường pháp lý khác nhau.
 
@@ -24,6 +23,8 @@ Tìm kiếm / feed
 Nhưng mỗi mũi tên tạo giá trị theo cách khác nhau. Tìm kiếm kiếm tiền từ sự chú ý thông qua quảng cáo; thương mại có kinh tế của người bán và dịch vụ; fintech kiếm tiền từ thanh toán và dịch vụ tài chính; nội dung phụ thuộc IP và xác suất tạo hit; cloud bán năng lực tính toán, nền tảng và dịch vụ doanh nghiệp.
 
 Vì vậy tăng trưởng doanh thu hợp nhất cần được phân rã theo từng cỗ máy kinh tế.
+
+> **Chuyển mạch:** Trong **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **2. Quảng cáo tìm kiếm: lượng truy vấn chưa đủ** tiếp nhận điểm tựa từ **1. Nền tảng không phải một mô hình kinh doanh duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Thương mại: GMV không phải doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Quảng cáo tìm kiếm: lượng truy vấn chưa đủ
 
@@ -53,6 +54,8 @@ giao diện trả lời bằng AI
 
 Vì vậy “ứng dụng AI” chỉ có ý nghĩa tài chính khi nó đi qua mức tương tác, tỷ lệ chuyển đổi, hiệu suất quảng cáo, chi phí hoặc nguồn doanh thu mới.
 
+> **Chuyển mạch:** Ở chặng này của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **3. Thương mại: GMV không phải doanh thu** tiếp nhận điểm tựa từ **2. Quảng cáo tìm kiếm: lượng truy vấn chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Fintech: TPV không phải doanh thu fintech** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Thương mại: GMV không phải doanh thu
 
 **Tổng giá trị hàng hóa giao dịch (Gross Merchandise Value / GMV / 총거래액)** đo tổng giá trị giao dịch đi qua hệ sinh thái, không phải toàn bộ doanh thu của nền tảng.
@@ -67,6 +70,8 @@ Hai nền tảng có cùng GMV vẫn có kinh tế rất khác nếu tỷ lệ t
 
 Khi thương mại tăng trưởng, cần hỏi GMV tăng bao nhiêu, tăng nhờ số người bán hay mức chi tiêu mỗi người bán, khả năng kiếm tiền từ quảng cáo thay đổi ra sao, thành viên tạo giá trị thế nào, logistics có đang được trợ giá hay không và chi phí thu hút khách hàng là bao nhiêu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **4. Fintech: TPV không phải doanh thu fintech** tiếp nhận điểm tựa từ **3. Thương mại: GMV không phải doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Nội dung: kinh tế dựa vào hit và quyền sở hữu IP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Fintech: TPV không phải doanh thu fintech
 
 **Tổng giá trị thanh toán (Total Payment Volume / TPV)** là dòng giá trị thanh toán đi qua mạng lưới. Doanh thu phụ thuộc vào tỷ lệ kiếm tiền, cơ cấu dịch vụ và sản phẩm tài chính.
@@ -78,6 +83,8 @@ Payment\ Revenue \approx TPV \times Net\ Monetization\ tỷ lệ (rate / 비율)
 Nếu TPV tăng 20% nhưng phần thưởng và ưu đãi tăng mạnh, mức lợi nhuận đóng góp có thể không tăng tương ứng.
 
 Mảng thanh toán còn chịu rủi ro pháp lý, gian lận, quyết toán và quan hệ với ngân hàng đối tác. Vì vậy quy mô giao dịch mới chỉ là đầu vào.
+
+> **Chuyển mạch:** Trong **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **5. Nội dung: kinh tế dựa vào hit và quyền sở hữu IP** tiếp nhận điểm tựa từ **4. Fintech: TPV không phải doanh thu fintech** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cloud và dịch vụ doanh nghiệp: doanh thu lặp lại nhưng biên lợi nhuận không tự động cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Nội dung: kinh tế dựa vào hit và quyền sở hữu IP
 
@@ -95,6 +102,8 @@ nội dung gốc
 
 Nhưng không phải mọi hit đều thuộc hoàn toàn về nền tảng. Người phân tích phải hỏi ai sở hữu IP và doanh thu được chia như thế nào.
 
+> **Chuyển mạch:** Ở chặng này của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **6. Cloud và dịch vụ doanh nghiệp: doanh thu lặp lại nhưng biên lợi nhuận không tự động cao** tiếp nhận điểm tựa từ **5. Nội dung: kinh tế dựa vào hit và quyền sở hữu IP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Thay đổi phân loại phân khúc là vấn đề kế toán–phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Cloud và dịch vụ doanh nghiệp: doanh thu lặp lại nhưng biên lợi nhuận không tự động cao
 
 Cloud và AI doanh nghiệp có thể tạo doanh thu định kỳ, nhưng trung tâm dữ liệu, GPU hoặc năng lực tính toán AI, mạng, kỹ sư bán hàng và hỗ trợ khách hàng đều cần vốn và chi phí.
@@ -106,6 +115,8 @@ Cloud\ Gross\ Profit \approx Usage\ Revenue - Compute/lưu trữ (storage / 저�
 \]
 
 Khối lượng công việc AI có thể làm doanh thu tăng nhưng đồng thời làm chi phí bộ tăng tốc tăng. Nếu công ty trợ giá dịch vụ AI để thu hút người dùng, tăng trưởng doanh thu chưa chắc tạo thêm biên lợi nhuận.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **7. Thay đổi phân loại phân khúc là vấn đề kế toán–phân tích** tiếp nhận điểm tựa từ **6. Cloud và dịch vụ doanh nghiệp: doanh thu lặp lại nhưng biên lợi nhuận không tự động cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Hiệu ứng mạng: phải xác định đúng mạng nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Thay đổi phân loại phân khúc là vấn đề kế toán–phân tích
 
@@ -122,6 +133,8 @@ Quy trình hợp lý:
 ```
 
 Đây là một thói quen điều tra dữ liệu quan trọng. Tỷ lệ tăng trưởng trở nên vô nghĩa nếu tử số và mẫu số dùng phạm vi báo cáo khác nhau.
+
+> **Chuyển mạch:** Trong **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **8. Hiệu ứng mạng: phải xác định đúng mạng nào** tiếp nhận điểm tựa từ **7. Thay đổi phân loại phân khúc là vấn đề kế toán–phân tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. AI: tách năng suất, khả năng kiếm tiền và CAPEX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Hiệu ứng mạng: phải xác định đúng mạng nào
 
@@ -140,6 +153,8 @@ nhiều người dùng hơn
 
 Nếu người dùng dễ dùng đồng thời nhiều ứng dụng, hiệu ứng mạng có thể yếu hơn vẻ bề ngoài.
 
+> **Chuyển mạch:** Ở chặng này của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **9. AI: tách năng suất, khả năng kiếm tiền và CAPEX** tiếp nhận điểm tựa từ **8. Hiệu ứng mạng: phải xác định đúng mạng nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Ví dụ kinh tế thương mại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. AI: tách năng suất, khả năng kiếm tiền và CAPEX
 
 Câu chuyện AI nên được chia thành ba nhóm.
@@ -157,6 +172,8 @@ Năng suất của lập trình viên, chăm sóc khách hàng hoặc vận hàn
 Tìm kiếm trả lời trực tiếp, AI doanh nghiệp hoặc mô hình/API trên cloud có thể tạo nguồn doanh thu mới.
 
 Ba nhóm này có cấu trúc chi phí khác nhau. Sản phẩm mới có thể cần GPU và CAPEX trung tâm dữ liệu trước khi khả năng kiếm tiền rõ ràng. Ngược lại, năng suất có thể cải thiện biên lợi nhuận mà không tạo một dòng doanh thu mới.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **9. AI: tách năng suất, khả năng kiếm tiền và CAPEX** cho ta quy tắc; **10. Ví dụ kinh tế thương mại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Bù chéo giữa các dịch vụ trong hệ sinh thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Ví dụ kinh tế thương mại
 
@@ -180,6 +197,8 @@ Mức đóng góp = 1,8
 
 GMV tăng 20%, doanh thu tăng 35% nhưng mức đóng góp lại giảm. Đây là lý do tăng trưởng GMV không đủ để đánh giá chất lượng nền tảng.
 
+> **Chuyển mạch:** Trong **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **10. Ví dụ kinh tế thương mại** cho ta quy tắc; **11. Bù chéo giữa các dịch vụ trong hệ sinh thái** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Quy định vừa là chi phí vừa có thể là rào cản gia nhập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Bù chéo giữa các dịch vụ trong hệ sinh thái
 
 Gói thành viên hoặc phần thưởng thanh toán có thể nhìn như lỗ khi đứng riêng nhưng lại tăng khả năng giữ chân người dùng và khả năng kiếm tiền ở thương mại hoặc tìm kiếm. Vì vậy kinh tế đơn vị của từng dịch vụ riêng lẻ có thể đánh giá thấp giá trị toàn hệ sinh thái.
@@ -187,6 +206,8 @@ Gói thành viên hoặc phần thưởng thanh toán có thể nhìn như lỗ 
 Tuy nhiên “hiệp lực (synergy)” không được dùng như lý do vô hạn. Cần bằng chứng như thành viên có giữ chân tốt hơn người không phải thành viên hay không, tần suất mua sắm có tăng hay không, khả năng kiếm tiền từ quảng cáo/người bán có cải thiện không, thời gian hoàn vốn CAC có ngắn lại không và tỷ lệ rời bỏ có giảm không.
 
 Nếu không đo được tác động chéo giữa dịch vụ, khoản trợ giá có thể chỉ đơn giản là chi phí.
+
+> **Chuyển mạch:** Ở chặng này của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **12. Quy định vừa là chi phí vừa có thể là rào cản gia nhập** tiếp nhận điểm tựa từ **11. Bù chéo giữa các dịch vụ trong hệ sinh thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Phân tích kịch bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Quy định vừa là chi phí vừa có thể là rào cản gia nhập
 
@@ -201,6 +222,8 @@ rào cản gia nhập cao hơn / hạ tầng niềm tin tốt hơn
 ```
 
 Phân tích phải chỉ rõ quy định đang tác động vào cỗ máy kinh tế nào.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **13. Phân tích kịch bản** tiếp nhận điểm tựa từ **12. Quy định vừa là chi phí vừa có thể là rào cản gia nhập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Dòng tiền và phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Phân tích kịch bản
 
@@ -233,6 +256,8 @@ Chi phí marketing tăng chậm hơn doanh thu
 
 Đây có thể là tăng trưởng chất lượng vì lợi nhuận tăng mà không cần số người dùng tăng mạnh.
 
+> **Chuyển mạch:** Trong **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **14. Dòng tiền và phân bổ vốn** tiếp nhận điểm tựa từ **13. Phân tích kịch bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Dòng tiền và phân bổ vốn
 
 Doanh nghiệp số có thể dùng tiền cho trung tâm dữ liệu, tính toán AI, mua lại doanh nghiệp, khoản đầu tư chiến lược, nội dung và hoàn vốn cổ đông.
@@ -244,6 +269,8 @@ Post-acquisition\ ROIC > chi phí (cost / 비용)\ of\ Capital?
 \]
 
 và hiệp lực có thể đo bằng doanh thu, chi phí hoặc năng lực cụ thể nào. Nếu doanh nghiệp được mua vẫn cần liên tục bơm thêm vốn, giá mua chỉ là phần đầu của tổng khoản đầu tư.
+
+> **Chuyển mạch:** Ở chặng này của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **15. Định giá** tiếp nhận điểm tựa từ **14. Dòng tiền và phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Nhiệm vụ đọc DART/IR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Định giá
 
@@ -261,15 +288,21 @@ dòng tiền chuẩn hóa của nền tảng lõi
 
 Có thể dùng **định giá ngược (reverse valuation)** để hỏi giá trị thị trường hiện tại đang hàm ý mức tăng người dùng, khả năng kiếm tiền và biên lợi nhuận nào. Nếu định giá chỉ hợp lý khi biên lợi nhuận phải mở rộng rất mạnh, cần xác định bằng chứng nào sẽ tạo ra sự mở rộng đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **16. Nhiệm vụ đọc DART/IR** tiếp nhận điểm tựa từ **15. Định giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Những yếu tố có thể phá vỡ luận điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Nhiệm vụ đọc DART/IR
 
 Khi đọc thực tế, hãy tìm định nghĩa phân khúc và thay đổi phân loại, doanh thu từng phân khúc, cơ cấu chi phí hoạt động, chỉ số vận hành thanh toán–thương mại, công ty con và khoản đầu tư, CAPEX hoặc cam kết trung tâm dữ liệu, giao dịch với bên liên quan, trả thưởng bằng cổ phiếu nếu đáng kể, dòng tiền–mua lại doanh nghiệp và nghĩa vụ pháp lý.
 
 Luôn lưu cả định nghĩa của chỉ số. “Users”, “GMV”, “TPV” hoặc “revenue” có thể đổi phạm vi theo thời gian.
 
+> **Chuyển mạch:** Trong **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **17. Những yếu tố có thể phá vỡ luận điểm** tiếp nhận điểm tựa từ **16. Nhiệm vụ đọc DART/IR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Bài tập cuối trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Những yếu tố có thể phá vỡ luận điểm
 
 Luận điểm tích cực có thể thất bại nếu mức tương tác giảm, tìm kiếm AI làm giảm số lần nhấp có thể kiếm tiền mà không tạo nguồn doanh thu mới, thương mại phải trợ giá ngày càng lớn, quy định fintech làm chi phí tăng hoặc cường độ tính toán AI kéo biên lợi nhuận xuống. Luận điểm tiêu cực có thể thất bại nếu AI tăng mạnh tỷ lệ chuyển đổi quảng cáo, bán chéo giữa các dịch vụ cải thiện khả năng giữ chân và cloud/AI doanh nghiệp mở rộng khả năng kiếm tiền nhanh hơn dự kiến.
+
+> **Chuyển mạch:** Ở chặng này của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **17. Những yếu tố có thể phá vỡ luận điểm** cho ta quy tắc; **18. Bài tập cuối trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Bài tập cuối trường hợp (case / 사례)
 
@@ -286,6 +319,10 @@ Nội dung → Tìm kiếm / quảng cáo: mức tương tác
 
 Trên mỗi mũi tên, ghi chỉ số dùng để chứng minh. Nếu không tìm được chỉ số, hãy đánh dấu đó là **giả thuyết (hypothesis)** chứ không phải sự kiện đã được chứng minh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI**, **18. Bài tập cuối trường hợp (case / 사례)** cho ta quy tắc; **Liên kết** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc cùng [17_platform_telecom_content_retail_services](../17_platform_telecom_content_retail_services.md), [34_digital_fintech_cloud_and_it_services](../34_digital_fintech_cloud_and_it_services.md), [22_tax_regulation_and_competition](../22_tax_regulation_and_competition.md) và [38_forensic_accounting_red_flags_and_earnings_quality](../38_forensic_accounting_red_flags_and_earnings_quality.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án
 
-> **Mạch đọc:** Đặt **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Backlog không phải doanh thu** sang **2. Tỷ lệ đơn hàng mới trên doanh thu và chất lượng backlog**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**. Route đi từ backlog và order intake → contract terms, delivery schedule và revenue recognition → margins, working capital và cash flow → procurement/export geopolitics → lifecycle value và execution risk.
 
 Trường hợp (case / 사례) này dùng Hanwha Aerospace như một bài thực hành để hiểu **kinh tế quốc phòng và hàng không vũ trụ (defense/aerospace economics / 방산·항공우주 산업경제)**. Doanh nghiệp quốc phòng khác doanh nghiệp tiêu dùng ở chỗ khách hàng thường là chính phủ hoặc hệ thống mua sắm liên quan đến chính phủ, chu kỳ bán hàng dài, yêu cầu chứng nhận cao, giá trị hợp đồng lớn và các ràng buộc chính trị–địa chính trị ảnh hưởng trực tiếp tới khả năng tiếp cận thị trường.
 
@@ -30,6 +29,8 @@ Một hợp đồng có thể rất lớn nhưng lịch giao kéo dài nhiều n
 
 > **Mô hình tư duy:** backlog là một “hồ chứa” doanh thu tiềm năng. Giá trị kinh tế phụ thuộc tốc độ chuyển backlog → giao hàng → biên lợi nhuận → tiền mặt.
 
+> **Chuyển mạch:** Trong **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **2. Tỷ lệ đơn hàng mới trên doanh thu và chất lượng backlog** tiếp nhận điểm tựa từ **1. Backlog không phải doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Nhu cầu quốc phòng là nhu cầu ngân sách–chính sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Tỷ lệ đơn hàng mới trên doanh thu và chất lượng backlog
 
 **Tỷ lệ đơn hàng mới trên doanh thu (book-to-bill)** có thể viết đơn giản:
@@ -55,6 +56,8 @@ Các mốc thanh toán
 
 Hai doanh nghiệp cùng có backlog 20 nghìn tỷ won có thể có chất lượng kinh tế rất khác.
 
+> **Chuyển mạch:** Ở chặng này của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **3. Nhu cầu quốc phòng là nhu cầu ngân sách–chính sách** tiếp nhận điểm tựa từ **2. Tỷ lệ đơn hàng mới trên doanh thu và chất lượng backlog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Hợp đồng xuất khẩu quốc phòng có nhiều lớp hơn bán hàng trong nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Nhu cầu quốc phòng là nhu cầu ngân sách–chính sách
 
 Nhu cầu tiêu dùng phụ thuộc thu nhập và sở thích. Nhu cầu quốc phòng phụ thuộc môi trường an ninh, ngân sách nhà nước, ưu tiên mua sắm và quan hệ liên minh–địa chính trị.
@@ -72,6 +75,8 @@ Căng thẳng địa chính trị có thể làm tăng cơ hội nhu cầu nhưn
 
 Không nên suy luận đơn giản “xung đột tăng = cổ phiếu quốc phòng tốt”. Kinh tế doanh nghiệp vẫn phụ thuộc sản phẩm phù hợp, công suất, giá và khả năng chuyển hợp đồng thành doanh thu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **4. Hợp đồng xuất khẩu quốc phòng có nhiều lớp hơn bán hàng trong nước** tiếp nhận điểm tựa từ **3. Nhu cầu quốc phòng là nhu cầu ngân sách–chính sách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Ghi nhận doanh thu: lịch giao hàng rất quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Hợp đồng xuất khẩu quốc phòng có nhiều lớp hơn bán hàng trong nước
 
 Hợp đồng xuất khẩu có thể yêu cầu:
@@ -88,6 +93,8 @@ Hợp đồng xuất khẩu có thể yêu cầu:
 - đạn dược và hệ sinh thái hỗ trợ.
 
 Điều này vừa tạo chi phí vừa tạo rào cản cạnh tranh. Nhà cung cấp có khả năng cung cấp gói giải pháp hoàn chỉnh có thể cạnh tranh tốt hơn, nhưng yêu cầu nội địa hóa cũng có thể chuyển một phần chuỗi giá trị tương lai sang nước khách hàng.
+
+> **Chuyển mạch:** Trong **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **5. Ghi nhận doanh thu: lịch giao hàng rất quan trọng** tiếp nhận điểm tựa từ **4. Hợp đồng xuất khẩu quốc phòng có nhiều lớp hơn bán hàng trong nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tiền ứng trước có thể làm dòng tiền đi trước lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Ghi nhận doanh thu: lịch giao hàng rất quan trọng
 
@@ -109,6 +116,8 @@ Thu tiền
 
 Bốn thứ này có thể không trùng nhau. Nếu doanh thu tăng nhanh nhưng tài sản hợp đồng và khoản phải thu tăng nhanh hơn, cần kiểm tra chất lượng chuyển đổi sang tiền mặt.
 
+> **Chuyển mạch:** Ở chặng này của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **6. Tiền ứng trước có thể làm dòng tiền đi trước lợi nhuận** tiếp nhận điểm tựa từ **5. Ghi nhận doanh thu: lịch giao hàng rất quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Đường cong học tập: sản xuất càng nhiều có thể làm chi phí đơn vị giảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Tiền ứng trước có thể làm dòng tiền đi trước lợi nhuận
 
 Chính phủ hoặc khách hàng có thể trả trước hoặc thanh toán theo mốc. Khi đó CFO có thể tăng trước khi doanh thu được ghi nhận đầy đủ.
@@ -120,6 +129,8 @@ Vì vậy dòng tiền của doanh nghiệp quốc phòng thường không đề
 Một năm CFO rất mạnh chưa chắc bền vững; có thể do khách hàng ứng trước. Một năm CFO yếu cũng chưa chắc là kinh doanh xấu; có thể do tích lũy tồn kho cho đơn hàng sẽ giao sau.
 
 Phải đối chiếu với tài sản hợp đồng, nợ hợp đồng và lịch backlog.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **7. Đường cong học tập: sản xuất càng nhiều có thể làm chi phí đơn vị giảm** tiếp nhận điểm tựa từ **6. Tiền ứng trước có thể làm dòng tiền đi trước lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Nút thắt công suất: backlog lớn là “vấn đề tốt” nhưng vẫn là vấn đề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Đường cong học tập: sản xuất càng nhiều có thể làm chi phí đơn vị giảm
 
@@ -136,6 +147,8 @@ Sản lượng tích lũy tăng
 
 Đây là **đường cong học tập (learning curve)**. Nhưng hiệu ứng này không tự động; thay đổi thiết kế, nội địa hóa, nút thắt nhà cung cấp hoặc nhịp sản xuất thấp có thể làm quá trình học bị gián đoạn.
 
+> **Chuyển mạch:** Trong **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **8. Nút thắt công suất: backlog lớn là “vấn đề tốt” nhưng vẫn là vấn đề** tiếp nhận điểm tựa từ **7. Đường cong học tập: sản xuất càng nhiều có thể làm chi phí đơn vị giảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Chuỗi cung ứng và linh kiện chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Nút thắt công suất: backlog lớn là “vấn đề tốt” nhưng vẫn là vấn đề
 
 Nếu đơn hàng tăng nhanh hơn năng lực sản xuất, doanh nghiệp phải mở dây chuyền, tuyển lao động lành nghề, bảo đảm nguồn cung và tăng vốn lưu động.
@@ -151,6 +164,8 @@ Tuyển dụng tăng
 ```
 
 Nếu mở rộng công suất chậm, giao hàng trễ có thể làm tăng tiền phạt và rủi ro danh tiếng.
+
+> **Chuyển mạch:** Ở chặng này của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **8. Nút thắt công suất: backlog lớn là “vấn đề tốt” nhưng vẫn là vấn đề** xác định đầu vào; **9. Chuỗi cung ứng và linh kiện chiến lược** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Tỷ giá: xuất khẩu tăng nhưng tác động tiền tệ cần đọc ròng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Chuỗi cung ứng và linh kiện chiến lược
 
@@ -169,6 +184,8 @@ Linh kiện trọng yếu
 
 Khả năng chống chịu chuỗi cung ứng là biến kinh tế thực sự, không chỉ là khẩu hiệu an ninh quốc gia.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **9. Chuỗi cung ứng và linh kiện chiến lược** xác định đầu vào; **10. Tỷ giá: xuất khẩu tăng nhưng tác động tiền tệ cần đọc ròng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Cơ cấu biên lợi nhuận: cùng doanh thu nhưng từng chương trình khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Tỷ giá: xuất khẩu tăng nhưng tác động tiền tệ cần đọc ròng
 
 Hợp đồng xuất khẩu quốc phòng thường có ngoại tệ. KRW thay đổi có thể ảnh hưởng doanh thu và biên lợi nhuận báo cáo, nhưng hợp đồng phòng hộ và loại tiền của chi phí quyết định tác động ròng.
@@ -181,6 +198,8 @@ Loại tiền của hợp đồng
 - phòng hộ
 = mức phơi nhiễm ngoại tệ ròng
 ```
+
+> **Chuyển mạch:** Trong **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **11. Cơ cấu biên lợi nhuận: cùng doanh thu nhưng từng chương trình khác nhau** tiếp nhận điểm tựa từ **10. Tỷ giá: xuất khẩu tăng nhưng tác động tiền tệ cần đọc ròng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. R&D: chi phí hiện tại hay quyền chọn chiến lược tương lai?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Cơ cấu biên lợi nhuận: cùng doanh thu nhưng từng chương trình khác nhau
 
@@ -200,6 +219,8 @@ Bán nền tảng ban đầu
 → đơn hàng tiếp theo
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **12. R&D: chi phí hiện tại hay quyền chọn chiến lược tương lai?** tiếp nhận điểm tựa từ **11. Cơ cấu biên lợi nhuận: cùng doanh thu nhưng từng chương trình khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Cấu trúc tập đoàn và phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. R&D: chi phí hiện tại hay quyền chọn chiến lược tương lai?
 
 R&D quốc phòng có thể do chính phủ tài trợ, doanh nghiệp tự tài trợ hoặc chia sẻ, tùy chương trình. Xử lý kế toán và rủi ro kinh tế khác nhau.
@@ -208,6 +229,8 @@ R&D do doanh nghiệp tự bỏ vốn có thể tạo quyền chọn xuất kh�
 
 Cần hỏi **ai trả chi phí phát triển và ai sở hữu giá trị kinh tế của công nghệ tạo ra**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **13. Cấu trúc tập đoàn và phân bổ vốn** tiếp nhận điểm tựa từ **12. R&D: chi phí hiện tại hay quyền chọn chiến lược tương lai?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Kiểm tra sức chịu đựng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Cấu trúc tập đoàn và phân bổ vốn
 
 Hanwha có nhiều hoạt động ngoài hàng không–quốc phòng. Khi phân tích pháp nhân niêm yết, không được chuyển trực tiếp câu chuyện của toàn tập đoàn thành giá trị của một công ty.
@@ -215,6 +238,8 @@ Hanwha có nhiều hoạt động ngoài hàng không–quốc phòng. Khi phân
 Cần kiểm tra M&A, sáp nhập, giao dịch nội bộ và phân bổ vốn ở cấp pháp nhân. Một tái cấu trúc chiến lược có thể tạo hợp lực, nhưng cũng có thể thay đổi đòn bẩy, số cổ phiếu và lợi ích của cổ đông thiểu số.
 
 Đọc cùng [08_corporate_governance_ownership_and_control](../08_corporate_governance_ownership_and_control.md) và [37_corporate_actions_mna_mergers_spin_offs_and_capital_actions](../37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md).
+
+> **Chuyển mạch:** Trong **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **14. Kiểm tra sức chịu đựng** tiếp nhận điểm tựa từ **13. Cấu trúc tập đoàn và phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Định giá: dùng backlog như một bội số là lối tắt nguy hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Kiểm tra sức chịu đựng
 
@@ -257,6 +282,8 @@ Tài trợ của bên mua bị chậm
 
 Điểm quan trọng là chu kỳ quốc phòng có độ trễ rất dài giữa sự kiện địa chính trị và báo cáo tài chính.
 
+> **Chuyển mạch:** Ở chặng này của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **15. Định giá: dùng backlog như một bội số là lối tắt nguy hiểm** tiếp nhận điểm tựa từ **14. Kiểm tra sức chịu đựng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Định giá: dùng backlog như một bội số là lối tắt nguy hiểm
 
 Không nên định giá doanh nghiệp chỉ bằng `EV / backlog` vì backlog không bằng lợi nhuận gộp.
@@ -270,6 +297,8 @@ Giá\ trị\ kinh\ tế\ backlog \approx Backlog \times Biên\ lợi\ nhuận\ k
 sau đó còn phải xét thuế, vốn lưu động, CAPEX, thời gian và chi phí vốn.
 
 Backlog 100 với biên 5% khác hoàn toàn backlog 100 với biên 15%.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **15. Định giá: dùng backlog như một bội số là lối tắt nguy hiểm** đã nêu tiêu chí phân biệt, còn **16. Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Bài tập nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Những nhầm lẫn thường gặp
 
@@ -289,6 +318,8 @@ Sai. Chất lượng tín dụng quốc gia, quy trình ngân sách, tài trợ 
 
 Sai. Đơn hàng, hiệu lực hợp đồng, sản xuất, giao hàng, ghi nhận doanh thu và thu tiền là các bước khác nhau.
 
+> **Chuyển mạch:** Trong **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **16. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **17. Bài tập nghiên cứu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Bài tập nghiên cứu
 
 Bài tập dưới đây buộc người học thay các giả định bằng một bảng dữ liệu có thể kiểm tra. Hãy ghi rõ nguồn, thời điểm và cách mỗi biến đi vào mô hình doanh nghiệp.
@@ -307,8 +338,12 @@ Bài tập dưới đây buộc người học thay các giả định bằng m�
 
 Ghi chú các hợp đồng lớn theo `ngày ký → lịch giao dự kiến → ngày giao thực tế` để thấy độ trễ chuyển đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án**, **Mô hình tư duy cuối** gom các mảnh từ **17. Bài tập nghiên cứu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy cuối
 
 > Doanh nghiệp quốc phòng không phải là “đại diện trực tiếp cho địa chính trị”. Nó là **doanh nghiệp kỹ thuật và thực thi hợp đồng chu kỳ dài**. Nhu cầu an ninh tạo backlog; chỉ năng lực sản xuất, kinh tế hợp đồng, kỷ luật vốn lưu động và dịch vụ vòng đời mới biến backlog thành dòng tiền bền vững.
 
 Đọc tiếp [09_coupang_commerce_logistics_case](./09_coupang_commerce_logistics_case.md) để chuyển từ mua sắm chính phủ chu kỳ dài sang thương mại tiêu dùng tần suất cao.
+
+> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
