@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) 12 — Camera, Media, Location, Bluetooth, Files và thiết bị (device / 장치) tích hợp (integration / 통합)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 12 — Camera, Media, Location, Bluetooth, Files và thiết bị (device / 장치) tích hợp (integration / 통합)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **2. CameraX trước khi Camera2** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **3. Camera use trường hợp (case / 사례)** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) 12 — Camera, Media, Location, Bluetooth, Files và thiết bị (device / 장치) tích hợp (integration / 통합)**. Route đi từ camera/media/file capability → location/BLE/WebView → permission, lifecycle và ownership → resource/failure modes → production integration, để mỗi SDK được đặt vào contract dùng chung.
 
 Một app Android môi trường vận hành (production / 운영 환경) thường không chỉ hiển thị API dữ liệu (data / 데이터). Nó phải chụp ảnh, phát media, ghi âm, đọc tệp (file / 파일), chia sẻ document, lấy vị trí, kết nối thiết bị BLE, nhận notification hoặc mở WebView. Đây là vùng dễ tạo bug vì mỗi năng lực (capability / 역량) có vòng đời (lifecycle / 생명주기), permission, tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) và dạng thất bại (failure mode / 실패 모드) riêng.
 

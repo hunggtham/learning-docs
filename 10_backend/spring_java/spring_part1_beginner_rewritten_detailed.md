@@ -1,6 +1,6 @@
 # Java Spring — Part 1: Beginner
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 1: Beginner**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Học Spring khung phần mềm (framework / 프레임워크) và Spring Boot từ số 0, theo hướng hiểu bản chất trước khi dùng annotation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 1: Beginner**. Route đi từ Java/core và HTTP → Spring container, IoC/DI và Boot → MVC, data access và transactions → testing, configuration và deployment → version map, để người mới hiểu framework làm gì trước khi nhớ annotation.
 
 ## Học Spring khung phần mềm (framework / 프레임워크) và Spring Boot từ số 0, theo hướng hiểu bản chất trước khi dùng annotation
 

@@ -1,6 +1,6 @@
 # Java Spring — Part 4: Master Supplement — Rewritten Detailed
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nguồn (source / 소스) dấu vết (trace / 추적): từ getBean() tới doCreateBean() và final exposed tham chiếu (reference / 참조)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 4: Master Supplement — Rewritten Detailed**. Route đi từ framework/container internals → proxy, transactions và MVC dispatch → Boot auto-configuration/TestContext → custom starters, AOT/runtime hints và null-safety → version evolution, để source trace giải thích hành vi thay vì gọi đó là “magic”.
 
 ## Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 internals, khung phần mềm (framework / 프레임워크) authoring, AOT và phiên bản (version / 버전) evolution
 

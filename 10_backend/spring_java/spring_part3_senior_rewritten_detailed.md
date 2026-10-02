@@ -1,6 +1,6 @@
 # Java Spring — Part 3: cấp cao (senior / 시니어)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 3: cấp cao (senior / 시니어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 3: cấp cao (senior / 시니어)**. Route đi từ architecture boundary và runtime → failure modes, proxy/transactions và context → performance bottlenecks → production incidents, observability và recovery → version map, để senior reasoning dựa trên evidence.
 
 ## Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)
 

@@ -1,6 +1,6 @@
 # Java Spring — Part 2: Intermediate
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 2: Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ “biết dùng Spring” đến “hiểu bộ chứa (container / 컨테이너), proxy, giao dịch (transaction / 트랜잭션) và persistence thời gian chạy (runtime / 런타임)”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Java Spring — Part 2: Intermediate**. Route đi từ container lifecycle → proxy/AOP và transactions → MVC pipeline → JPA persistence context → testing, configuration và runtime diagnosis, để “biết dùng” chuyển thành hiểu cơ chế.
 
 ## Từ “biết dùng Spring” đến “hiểu bộ chứa (container / 컨테이너), proxy, giao dịch (transaction / 트랜잭션) và persistence thời gian chạy (runtime / 런타임)”
 
