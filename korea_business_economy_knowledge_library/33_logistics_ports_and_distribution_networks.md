@@ -1,7 +1,6 @@
 # Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)
 
-> **Mạch đọc:** Đặt **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Logistics gồm dòng vật lý và dòng thông tin** sang **Địa lý Hàn Quốc: bán đảo nhưng thương mại phụ thuộc mạnh vào biển và hàng không**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là owner của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**; dùng README để nối chapter với trade/GVC và regional clusters. Từ **Logistics gồm dòng vật lý và dòng thông tin** đi qua geography, ports/air cargo, warehouses, inventory, last mile, reliability và disruption, rồi dùng total landed cost và network evidence để phân tích năng lực phân phối.
 
 Một nền kinh tế định hướng xuất khẩu không thể tồn tại chỉ với nhà máy. Nguyên liệu phải đi vào Hàn Quốc, linh kiện phải di chuyển giữa các nhà máy, thành phẩm phải tới cảng hoặc sân bay và bưu kiện phải tới hộ gia đình. **Logistics (물류)** là mô liên kết giữa sản xuất và thị trường.
 
@@ -30,6 +29,8 @@ Tổng\ chi\ phí\ logistics = Vận\ tải + Kho\ bãi + Chi\ phí\ giữ\ tồ
 
 Vận tải biển có thể rẻ hơn hàng không, nhưng nếu thời gian giao dài thêm 30 ngày làm tồn kho tăng hoặc khiến nhà máy chậm sản xuất, tổng chi phí có thể cao hơn.
 
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Địa lý Hàn Quốc: bán đảo nhưng thương mại phụ thuộc mạnh vào biển và hàng không** tiếp nhận điểm tựa từ **Logistics gồm dòng vật lý và dòng thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ chứa (container / 컨테이너) hóa: giao diện tiêu chuẩn của thương mại vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Địa lý Hàn Quốc: bán đảo nhưng thương mại phụ thuộc mạnh vào biển và hàng không
 
 Do kết nối đường bộ xuyên bán đảo bị giới hạn, cảng biển và sân bay có vai trò chiến lược.
@@ -43,6 +44,8 @@ Các nút logistics có chuyên môn khác nhau:
 
 Địa lý cảng phản ánh địa lý công nghiệp. Thép, hóa dầu, ô tô, bộ chứa (container / 컨테이너) và bán dẫn cần các loại hạ tầng khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Bộ chứa (container / 컨테이너) hóa: giao diện tiêu chuẩn của thương mại vật lý** tiếp nhận điểm tựa từ **Địa lý Hàn Quốc: bán đảo nhưng thương mại phụ thuộc mạnh vào biển và hàng không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế cảng: lưu lượng, mạng lưới và hạ tầng cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ chứa (container / 컨테이너) hóa: giao diện tiêu chuẩn của thương mại vật lý
 
 Bộ chứa (container / 컨테이너) tiêu chuẩn đã làm thay đổi thương mại toàn cầu bằng cách giảm thời gian bốc dỡ, thiệt hại hàng và ma sát giữa các phương thức vận tải.
@@ -50,6 +53,8 @@ Bộ chứa (container / 컨테이너) tiêu chuẩn đã làm thay đổi thư�
 Có thể xem bộ chứa (container / 컨테이너) như một **chuẩn giao diện (interface standard)** cho hàng hóa vật lý: tàu, xe tải, đường sắt và cần cẩu cùng thao tác trên một đơn vị tiêu chuẩn.
 
 Điều này giảm mạnh chi phí giao dịch và giúp chuỗi giá trị toàn cầu phức tạp trở nên khả thi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Kinh tế cảng: lưu lượng, mạng lưới và hạ tầng cố định** tiếp nhận điểm tựa từ **Bộ chứa (container / 컨테이너) hóa: giao diện tiêu chuẩn của thương mại vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Busan và hiệu ứng mạng trung chuyển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế cảng: lưu lượng, mạng lưới và hạ tầng cố định
 
@@ -60,6 +65,8 @@ Doanh thu thường gắn với lượng hàng thông qua và dịch vụ. Quy m
 Nhưng quá tải lại tạo chi phí ngược: tàu chờ lâu, bãi đầy và xe tải quay vòng chậm.
 
 Vì vậy hiệu quả cảng không phải sản lượng tối đa bằng mọi giá, mà là **lưu lượng lớn đi cùng dòng vận hành đáng tin cậy**.
+
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Busan và hiệu ứng mạng trung chuyển** tiếp nhận điểm tựa từ **Kinh tế cảng: lưu lượng, mạng lưới và hạ tầng cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà khai thác cảng và hãng tàu: cùng bộ chứa (container / 컨테이너) nhưng kinh tế khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Busan và hiệu ứng mạng trung chuyển
 
@@ -77,6 +84,8 @@ Nhiều tuyến tàu hơn
 
 Tự động hóa cảng, quan hệ lao động và kết nối hậu phương vì vậy đều quan trọng.
 
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Nhà khai thác cảng và hãng tàu: cùng bộ chứa (container / 컨테이너) nhưng kinh tế khác nhau** tiếp nhận điểm tựa từ **Busan và hiệu ứng mạng trung chuyển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cước vận tải được quyết định bởi nhu cầu so với nguồn cung tàu điều chỉnh chậm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhà khai thác cảng và hãng tàu: cùng bộ chứa (container / 컨테이너) nhưng kinh tế khác nhau
 
 Terminal thu phí xử lý và phụ thuộc lưu lượng, tỷ lệ sử dụng tài sản.
@@ -88,6 +97,8 @@ Cùng một mức thương mại có thể tạo biến động lợi nhuận r�
 Không nên gộp toàn bộ “shipping/logistics” thành một ngành duy nhất.
 
 # Vận tải bộ chứa (container / 컨테이너)
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Nhà khai thác cảng và hãng tàu: cùng bộ chứa (container / 컨테이너) nhưng kinh tế khác nhau** nêu điều cần giải thích; **Cước vận tải được quyết định bởi nhu cầu so với nguồn cung tàu điều chỉnh chậm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đòn bẩy hoạt động và phơi nhiễm hợp đồng thuê tàu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cước vận tải được quyết định bởi nhu cầu so với nguồn cung tàu điều chỉnh chậm
 
@@ -108,6 +119,8 @@ Cước tăng
 
 Chu kỳ này liên kết với đóng tàu nhưng có độ trễ thời gian khác nhau.
 
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Cước vận tải được quyết định bởi nhu cầu so với nguồn cung tàu điều chỉnh chậm** nêu điều cần giải thích; **Đòn bẩy hoạt động và phơi nhiễm hợp đồng thuê tàu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhiên liệu tàu (bunker fuel)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đòn bẩy hoạt động và phơi nhiễm hợp đồng thuê tàu
 
 Kinh tế hãng tàu phụ thuộc tàu sở hữu hay tàu thuê.
@@ -117,6 +130,8 @@ Hợp đồng thuê tàu khóa chi phí trong một giai đoạn trong khi doanh
 Hãng tàu ký hợp đồng thuê đắt ở đỉnh chu kỳ có thể chịu áp lực lớn khi cước giảm.
 
 Vì vậy cấu trúc sở hữu đội tàu và lịch đáo hạn hợp đồng thuê rất quan trọng.
+
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Nhiên liệu tàu (bunker fuel)** tiếp nhận điểm tựa từ **Đòn bẩy hoạt động và phơi nhiễm hợp đồng thuê tàu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giảm tốc độ tàu: đánh đổi nhiên liệu với công suất và thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhiên liệu tàu (bunker fuel)
 
@@ -133,6 +148,8 @@ Cước vận tải
 
 Hãng tàu có thể thu phụ phí nhiên liệu hoặc phòng hộ, nhưng thời gian chuyển chi phí sang khách hàng khác nhau theo hợp đồng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Giảm tốc độ tàu: đánh đổi nhiên liệu với công suất và thời gian** tiếp nhận điểm tựa từ **Nhiên liệu tàu (bunker fuel)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận tải biển là hạ tầng chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giảm tốc độ tàu: đánh đổi nhiên liệu với công suất và thời gian
 
 Tàu chạy chậm giúp tiết kiệm nhiên liệu.
@@ -142,6 +159,8 @@ Nhưng thời gian hành trình dài hơn khiến mỗi tàu bị sử dụng l�
 Vì vậy một quyết định vận hành tác động đồng thời chi phí và nguồn cung.
 
 Quy định môi trường có thể làm **chạy chậm (slow steaming)** trở nên hấp dẫn hơn về kinh tế.
+
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Vận tải biển là hạ tầng chiến lược** tiếp nhận điểm tựa từ **Giảm tốc độ tàu: đánh đổi nhiên liệu với công suất và thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forwarder bán năng lực điều phối hơn là bán tàu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vận tải biển là hạ tầng chiến lược
 
@@ -153,6 +172,8 @@ Nhưng giá trị chiến lược không xóa chu kỳ cước rất mạnh.
 
 # Forwarder và 3PL (포워더·3PL)
 
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Forwarder bán năng lực điều phối hơn là bán tàu** tiếp nhận điểm tựa từ **Vận tải biển là hạ tầng chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3PL kết hợp điều phối và tài sản vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Forwarder bán năng lực điều phối hơn là bán tàu
 
 **Doanh nghiệp giao nhận (freight forwarder)** đặt chỗ vận tải, xử lý chứng từ, hải quan và tuyến đường mà không nhất thiết sở hữu tàu hay máy bay.
@@ -160,6 +181,8 @@ Nhưng giá trị chiến lược không xóa chu kỳ cước rất mạnh.
 Mô hình có thể ít tài sản hơn, nhưng biên lợi nhuận phụ thuộc quy mô mua công suất, quan hệ khách hàng và biến động cước.
 
 Nếu giá mua chỗ vận tải từ hãng tàu tăng nhanh hơn khả năng điều chỉnh giá cho khách hàng, biên lợi nhuận bị ép.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **3PL kết hợp điều phối và tài sản vật lý** tiếp nhận điểm tựa từ **Forwarder bán năng lực điều phối hơn là bán tàu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tồn kho là tiền mặt dưới dạng vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3PL kết hợp điều phối và tài sản vật lý
 
@@ -177,6 +200,8 @@ Biên lợi nhuận thấp vẫn có thể tạo ROIC tốt nếu vòng quay tà
 
 # Tồn kho và vốn lưu động
 
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Tồn kho là tiền mặt dưới dạng vật lý** tiếp nhận điểm tựa từ **3PL kết hợp điều phối và tài sản vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tồn kho an toàn giống một khoản bảo hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tồn kho là tiền mặt dưới dạng vật lý
 
 Tồn kho sử dụng vốn.
@@ -192,6 +217,8 @@ Nếu gián đoạn vận tải buộc doanh nghiệp giữ thêm 30 ngày linh 
 Đó là chi phí tài chính của khả năng chống chịu.
 
 Xem [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
+
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Tồn kho an toàn giống một khoản bảo hiểm** tiếp nhận điểm tựa từ **Tồn kho là tiền mặt dưới dạng vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Just-in-time và just-in-case** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tồn kho an toàn giống một khoản bảo hiểm
 
@@ -209,6 +236,8 @@ Một linh kiện trị giá 2 USD vẫn có thể đáng giữ lượng lớn t
 
 Tầm quan trọng của tồn kho không tỷ lệ thuận với giá mua đơn vị.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Tồn kho an toàn giống một khoản bảo hiểm** cho ta quy tắc; **Just-in-time và just-in-case** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hải quan là một năng lực vận hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Just-in-time và just-in-case
 
 **Just-in-time (JIT)** giảm tồn kho khi nguồn cung ổn định và dễ dự đoán.
@@ -223,6 +252,8 @@ Sau đại dịch, chuỗi cung ứng thường phân loại:
 Một triết lý tồn kho duy nhất cho mọi linh kiện là không tối ưu.
 
 # Hải quan và vận hành thương mại
+
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Just-in-time và just-in-case** cho ta quy tắc; **Hải quan là một năng lực vận hành** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kho ngoại quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hải quan là một năng lực vận hành
 
@@ -241,11 +272,15 @@ Với FTA, chứng từ xuất xứ đúng quyết định doanh nghiệp có đ
 
 Vì vậy năng lực hải quan có thể tạo lợi thế chi phí thật sự.
 
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Kho ngoại quan** tiếp nhận điểm tựa từ **Hải quan là một năng lực vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Incoterms: phân bổ chi phí và rủi ro giao hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kho ngoại quan
 
 **Kho ngoại quan (bonded warehouse)** cho phép lưu trữ hoặc xử lý hàng dưới giám sát hải quan trước khi hoàn tất nghĩa vụ thuế, tùy cấu trúc.
 
 Mô hình hữu ích cho trung chuyển, tái xuất và trung tâm tồn kho khu vực, giúp giảm ma sát tiền mặt và thuế trong mạng lưới toàn cầu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Incoterms: phân bổ chi phí và rủi ro giao hàng** tiếp nhận điểm tựa từ **Kho ngoại quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng giá trị cao, trọng lượng thấp có thể hợp lý khi đi hàng không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Incoterms: phân bổ chi phí và rủi ro giao hàng
 
@@ -259,6 +294,8 @@ Hai doanh nghiệp bán cùng mức doanh thu theo FOB hoặc CIF có thể ch�
 
 # Vận tải hàng không (Air Cargo / 항공화물)
 
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Hàng giá trị cao, trọng lượng thấp có thể hợp lý khi đi hàng không** tiếp nhận điểm tựa từ **Incoterms: phân bổ chi phí và rủi ro giao hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá cước và công suất hàng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàng giá trị cao, trọng lượng thấp có thể hợp lý khi đi hàng không
 
 Bán dẫn, điện tử, dược phẩm và linh kiện khẩn cấp có giá trị thời gian rất cao.
@@ -266,6 +303,8 @@ Bán dẫn, điện tử, dược phẩm và linh kiện khẩn cấp có giá t
 Hàng không đắt hơn theo kg nhưng giảm thời gian vận chuyển, tồn kho và chi phí gián đoạn.
 
 Vì vậy Incheon Airport là hạ tầng của sản xuất tiên tiến, không chỉ phục vụ hành khách.
+
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Giá cước và công suất hàng hóa** tiếp nhận điểm tựa từ **Hàng giá trị cao, trọng lượng thấp có thể hợp lý khi đi hàng không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao diện phía trước là số, phía sau vẫn là vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giá cước và công suất hàng hóa
 
@@ -295,11 +334,15 @@ Xem [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma
 
 # Fulfillment thương mại điện tử và giao chặng cuối
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Giao diện phía trước là số, phía sau vẫn là vật lý** tiếp nhận điểm tựa từ **Giá cước và công suất hàng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế mật độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giao diện phía trước là số, phía sau vẫn là vật lý
 
 Thương mại điện tử có thể trông như phần mềm nhưng fulfillment cần kho, lao động, phương tiện và điều phối tồn kho.
 
 Mô hình có thể thâm dụng tài sản dù giao diện đặt hàng hoàn toàn số.
+
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Kinh tế mật độ** tiếp nhận điểm tựa từ **Giao diện phía trước là số, phía sau vẫn là vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế trung tâm fulfillment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế mật độ
 
@@ -313,6 +356,8 @@ Chi\ phí\ giao/đơn \downarrow \quad khi \quad Mật\ độ\ điểm\ giao/tuy
 
 Đây là lợi thế địa lý kết hợp phần mềm định tuyến.
 
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Kinh tế trung tâm fulfillment** tiếp nhận điểm tựa từ **Kinh tế mật độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **WMS/TMS và phần mềm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế trung tâm fulfillment
 
 Kho có CAPEX cố định và chi phí lao động/tự động hóa.
@@ -323,6 +368,8 @@ Mùa cao điểm cần công suất dự phòng; mùa thấp điểm có tỷ l�
 
 Tự động hóa chỉ hợp lý khi lợi ích tiết kiệm lao động, tăng lưu lượng và tăng độ chính xác lớn hơn chi phí khấu hao/bảo trì.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **WMS/TMS và phần mềm** tiếp nhận điểm tựa từ **Kinh tế trung tâm fulfillment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logistics ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## WMS/TMS và phần mềm
 
 **Hệ thống quản lý kho (Warehouse Management System / WMS)** kiểm soát vị trí hàng, tồn kho và quy trình lấy hàng.
@@ -332,6 +379,8 @@ Tự động hóa chỉ hợp lý khi lợi ích tiết kiệm lao động, tăn
 Lập tuyến, dự báo và bố trí vị trí hàng kết nối logistics với nghiên cứu vận hành và thuật toán đồ thị.
 
 Dự báo phần mềm kém tạo hậu quả vật lý: dư hàng, thiếu hàng hoặc xe chạy rỗng.
+
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Logistics ngược** tiếp nhận điểm tựa từ **WMS/TMS và phần mềm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều khiển (control / 제어) tower và logistics theo sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Logistics ngược
 
@@ -358,6 +407,8 @@ Có thể so sánh với phần mềm:
 > Chuỗi cung ứng thiếu khả năng quan sát giống một hệ thống phân tán không có khả năng quan sát (observability / 관측 가능성): sự cố xảy ra nhưng đội vận hành không biết mắt xích nào hỏng đủ nhanh.
 
 Khả năng quan sát có thể giảm nhu cầu giữ tồn kho an toàn do bất định và cải thiện giao tiếp với khách hàng.
+
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Điều khiển (control / 제어) tower và logistics theo sự kiện** tiếp nhận điểm tựa từ **Logistics ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hãng vận tải bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điều khiển (control / 제어) tower và logistics theo sự kiện
 
@@ -402,6 +453,8 @@ Vì vậy không nên đưa chỉ số cước vào mô hình biên lợi nhuậ
 
 # Cách phân tích doanh nghiệp logistics
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Hãng vận tải bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **Điều khiển (control / 제어) tower và logistics theo sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảng / terminal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hãng vận tải bộ chứa (container / 컨테이너)
 
 Hãng vận tải là mắt xích điều phối capacity, lịch tàu, cước và độ tin cậy trên tuyến. Khi đọc case, hãy nối giá vận tải với utilization, fuel, cảng và hợp đồng khách hàng.
@@ -417,6 +470,8 @@ Doanh thu hợp đồng và giao ngay
 Nợ ròng
 ```
 
+> **Chuyển mạch:** Trong **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Cảng / terminal** tiếp nhận điểm tựa từ **Hãng vận tải bộ chứa (container / 컨테이너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3PL / fulfillment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cảng / terminal
 
 Cảng không chỉ là một điểm bốc dỡ mà là node nối hinterland, customs, rail/road và kho. Phần này giúp đánh giá bottleneck và quyền định giá của terminal trong toàn mạng.
@@ -430,6 +485,8 @@ CAPEX
 Năng suất / thời gian quay vòng
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **3PL / fulfillment** tiếp nhận điểm tựa từ **Cảng / terminal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logistics thương mại điện tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3PL / fulfillment
 
 3PL biến đơn hàng phân tán thành hoạt động kho, pick-pack, vận chuyển và hoàn trả. Cần theo dõi density, SLA và chi phí trên đơn thay vì chỉ nhìn doanh thu logistics.
@@ -442,6 +499,8 @@ Chi phí lao động
 CAPEX tự động hóa
 Biên lợi nhuận hợp đồng
 ```
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)**, **Logistics thương mại điện tử** tiếp nhận điểm tựa từ **3PL / fulfillment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Logistics thương mại điện tử
 
@@ -503,3 +562,5 @@ Chu kỳ tiền mặt + trải nghiệm khách hàng
 # Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
+
+> **Bàn giao:** Sau **Logistics thương mại điện tử**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

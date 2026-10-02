@@ -1,7 +1,6 @@
 # Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)
 
-> **Mạch đọc:** Đặt **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khung dùng cho mọi trường hợp** sang **Samsung — quy mô, chu kỳ công nghệ và quản trị cấp tập đoàn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là owner của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**; đặt chapter sau chaebol/governance và trước company workbook. Từ **Khung dùng cho mọi trường hợp** nối legal entity, ownership/control, history, sector economics, capital allocation, governance và macro transmission, rồi đọc Samsung/Hyundai/SK/LG/CJ như các cơ chế khác nhau thay vì bảng xếp hạng.
 
 Chapter này không nhằm xếp hạng “tập đoàn tốt nhất”. Mục tiêu là dùng các nhóm doanh nghiệp nổi tiếng như **phòng thí nghiệm để áp dụng mô hình tư duy của toàn thư viện**: lịch sử, sở hữu, phân bổ vốn, kinh tế ngành, quản trị, tài chính và truyền dẫn vĩ mô.
 
@@ -24,6 +23,8 @@ Mỗi tập đoàn nên được đọc qua bảy lớp:
 ```
 
 Bỏ một lớp, phân tích rất dễ biến thành câu chuyện thương hiệu.
+
+> **Chuyển mạch:** Trong **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Samsung — quy mô, chu kỳ công nghệ và quản trị cấp tập đoàn** tiếp nhận điểm tựa từ **Khung dùng cho mọi trường hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hyundai Motor Group — sản xuất nền tảng, hệ sinh thái nhà cung cấp và chuyển đổi mobility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Samsung — quy mô, chu kỳ công nghệ và quản trị cấp tập đoàn
 
@@ -63,6 +64,8 @@ Không chỉ hỏi “lợi nhuận Samsung tăng hay giảm?”. Cần hỏi ph
 
 Chu kỳ bán dẫn, thực thi công nghệ, KRW, nhu cầu điện tử toàn cầu, địa chính trị/kiểm soát xuất khẩu và chất lượng phân bổ vốn.
 
+> **Chuyển mạch:** Ở chặng này của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Hyundai Motor Group — sản xuất nền tảng, hệ sinh thái nhà cung cấp và chuyển đổi mobility** tiếp nhận điểm tựa từ **Samsung — quy mô, chu kỳ công nghệ và quản trị cấp tập đoàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SK — chuyển đổi danh mục và phân bổ vốn giữa các mô hình tiền mặt rất khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hyundai Motor Group — sản xuất nền tảng, hệ sinh thái nhà cung cấp và chuyển đổi mobility
 
 ### DNA lịch sử
@@ -101,6 +104,8 @@ Nhu cầu Mỹ/EU/Hàn Quốc, KRW, lãi suất, tồn kho đại lý, ưu đãi
 
 Xem [`15_automotive_battery_mobility.md`](./15_automotive_battery_mobility.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **SK — chuyển đổi danh mục và phân bổ vốn giữa các mô hình tiền mặt rất khác nhau** tiếp nhận điểm tựa từ **Hyundai Motor Group — sản xuất nền tảng, hệ sinh thái nhà cung cấp và chuyển đổi mobility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LG — đa dạng hóa liên quan từ hóa chất–điện tử sang pin và vật liệu tiên tiến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## SK — chuyển đổi danh mục và phân bổ vốn giữa các mô hình tiền mặt rất khác nhau
 
 ### DNA lịch sử
@@ -132,6 +137,8 @@ Khi nhiều mảng thâm dụng vốn cùng mở rộng, khả năng tái cấp 
 
 Chu kỳ bộ nhớ (memory / 메모리)/HBM, độ ổn định viễn thông, chênh lệch năng lượng–hóa chất, utilization của mảng tăng trưởng, đòn bẩy công ty nắm giữ/công ty thành viên và khả năng tái cấp vốn.
 
+> **Chuyển mạch:** Trong **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **LG — đa dạng hóa liên quan từ hóa chất–điện tử sang pin và vật liệu tiên tiến** tiếp nhận điểm tựa từ **SK — chuyển đổi danh mục và phân bổ vốn giữa các mô hình tiền mặt rất khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lotte — tiêu dùng nội địa, bán lẻ, khách sạn, hóa chất và bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## LG — đa dạng hóa liên quan từ hóa chất–điện tử sang pin và vật liệu tiên tiến
 
 ### DNA lịch sử
@@ -154,6 +161,8 @@ Việc chia tách hoặc niêm yết mảng tăng trưởng thay đổi nơi nhu
 
 Utilization pin, nhu cầu EV, cơ chế chuyển giá nguyên liệu, nhu cầu điện tử, tập trung khách hàng và lợi suất CAPEX.
 
+> **Chuyển mạch:** Ở chặng này của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Lotte — tiêu dùng nội địa, bán lẻ, khách sạn, hóa chất và bất động sản** tiếp nhận điểm tựa từ **LG — đa dạng hóa liên quan từ hóa chất–điện tử sang pin và vật liệu tiên tiến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hanwha — quốc phòng, hàng không, hóa chất, năng lượng và tài chính trong một tập đoàn rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lotte — tiêu dùng nội địa, bán lẻ, khách sạn, hóa chất và bất động sản
 
 ### DNA lịch sử
@@ -173,6 +182,8 @@ Một đợt bùng nổ xuất khẩu bán dẫn có thể ảnh hưởng trực
 Bán lẻ, bất động sản và khách sạn có chi phí cố định lớn. Lưu lượng khách và occupancy tạo đòn bẩy hoạt động. Giá bất động sản có thể hỗ trợ tài sản bảo đảm nhưng cũng tạo rủi ro tái cấp vốn khi lãi suất tăng.
 
 Bài học là đa dạng hóa không loại bỏ chu kỳ; nó chỉ thay đổi **những chu kỳ nào chồng lên nhau**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Hanwha — quốc phòng, hàng không, hóa chất, năng lượng và tài chính trong một tập đoàn rộng** tiếp nhận điểm tựa từ **Lotte — tiêu dùng nội địa, bán lẻ, khách sạn, hóa chất và bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **POSCO — nền tảng công nghiệp thượng nguồn và chuyển sang vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hanwha — quốc phòng, hàng không, hóa chất, năng lượng và tài chính trong một tập đoàn rộng
 
@@ -197,6 +208,8 @@ Pháp nhân tài chính cần lô-gic (logic / 논리) vốn pháp định và q
 Câu hỏi trung tâm là tập đoàn có thật sự có **lợi thế phân bổ vốn** hay độ phức tạp đang che trợ cấp chéo và đòn bẩy.
 
 Xem [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md).
+
+> **Chuyển mạch:** Trong **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Hanwha — quốc phòng, hàng không, hóa chất, năng lượng và tài chính trong một tập đoàn rộng** nêu điều cần giải thích; **POSCO — nền tảng công nghiệp thượng nguồn và chuyển sang vật liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **NAVER — kinh tế tìm kiếm, nền tảng và phân bổ vốn số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## POSCO — nền tảng công nghiệp thượng nguồn và chuyển sang vật liệu
 
@@ -229,6 +242,8 @@ Mở rộng sang vật liệu tiên tiến và vật liệu pin thay đổi câu
 
 Nguồn gốc POSCO nhắc rằng tập đoàn lớn Hàn Quốc có nhiều phả hệ sở hữu–quản trị khác nhau. Không nên áp mẫu “kế nhiệm gia đình” cho mọi doanh nghiệp lớn.
 
+> **Chuyển mạch:** Ở chặng này của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **POSCO — nền tảng công nghiệp thượng nguồn và chuyển sang vật liệu** nêu điều cần giải thích; **NAVER — kinh tế tìm kiếm, nền tảng và phân bổ vốn số** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kakao — hiệu ứng mạng nhắn tin, mở rộng hệ sinh thái và độ phức tạp quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## NAVER — kinh tế tìm kiếm, nền tảng và phân bổ vốn số
 
 ### DNA số
@@ -247,6 +262,8 @@ Cần kiểm tra thói quen người dùng, hệ sinh thái quảng cáo, chất
 
 Khi tập đoàn số thêm công ty con và khoản đầu tư, các câu hỏi conglomerate cổ điển quay lại: bên liên quan, phân bổ vốn và tập trung thị trường. Công nghệ thay đổi loại tài sản nhưng không xóa **lý thuyết đại diện (agency theory)**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Kakao — hiệu ứng mạng nhắn tin, mở rộng hệ sinh thái và độ phức tạp quản trị** tiếp nhận điểm tựa từ **NAVER — kinh tế tìm kiếm, nền tảng và phân bổ vốn số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CJ — động cơ tiền mặt thực phẩm, năng lực bio, mạng logistics và quyền chọn nội dung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kakao — hiệu ứng mạng nhắn tin, mở rộng hệ sinh thái và độ phức tạp quản trị
 
 Kakao bắt đầu từ mạng nhắn tin–xã hội, từ đó mở rộng sang thanh toán, mobility, nội dung và dịch vụ số khác.
@@ -254,6 +271,8 @@ Kakao bắt đầu từ mạng nhắn tin–xã hội, từ đó mở rộng san
 Nhưng mở rộng hệ sinh thái cũng tăng độ phức tạp. Cần tách mạng người dùng cốt lõi, động cơ kiếm tiền, hoạt động tài chính chịu điều tiết, công ty thành viên tiêu tốn vốn và vấn đề quản trị/bên liên quan.
 
 Cơ sở người dùng lớn không đồng nghĩa FCF lớn. Khả năng kiếm tiền và ràng buộc quy định quyết định mức giữ lại giá trị.
+
+> **Chuyển mạch:** Trong **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **CJ — động cơ tiền mặt thực phẩm, năng lực bio, mạng logistics và quyền chọn nội dung** tiếp nhận điểm tựa từ **Kakao — hiệu ứng mạng nhắn tin, mở rộng hệ sinh thái và độ phức tạp quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doosan — vì sao phả hệ doanh nghiệp cũng có thể đảo chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CJ — động cơ tiền mặt thực phẩm, năng lực bio, mạng logistics và quyền chọn nội dung
 
@@ -273,6 +292,8 @@ Mức nổi tiếng không đồng nghĩa dòng tiền. Một phim thành công 
 
 Giá đầu vào thực phẩm, nhu cầu tiêu dùng trong–ngoài nước, utilization logistics và rủi ro hit của nội dung.
 
+> **Chuyển mạch:** Ở chặng này của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Doosan — vì sao phả hệ doanh nghiệp cũng có thể đảo chiều** tiếp nhận điểm tựa từ **CJ — động cơ tiền mặt thực phẩm, năng lực bio, mạng logistics và quyền chọn nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coupang — quy mô thời venture cộng mạng logistics vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Doosan — vì sao phả hệ doanh nghiệp cũng có thể đảo chiều
 
 Doosan hữu ích vì chuyển đổi danh mục từng bao gồm cả mở rộng và tái cấu trúc.
@@ -283,6 +304,8 @@ Bài học là **chuyển đổi doanh nghiệp không phải lúc nào cũng đ
 
 Xem [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Coupang — quy mô thời venture cộng mạng logistics vật lý** tiếp nhận điểm tựa từ **Doosan — vì sao phả hệ doanh nghiệp cũng có thể đảo chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KT — phả hệ hạ tầng công và kinh tế mạng chịu điều tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Coupang — quy mô thời venture cộng mạng logistics vật lý
 
 Coupang khác chaebol cũ. Quy mô hình thành trong kỷ nguyên số/venture với lượng vốn cổ phần bên ngoài lớn và đầu tư mạnh vào fulfillment–logistics.
@@ -291,6 +314,8 @@ Kinh tế kết hợp dữ liệu/nền tảng khách hàng, thuê bao–retenti
 
 Trường hợp này cho thấy “công ty công nghệ” vẫn có thể trở thành doanh nghiệp thâm dụng hạ tầng. So sánh đúng không chỉ là portal Hàn Quốc; một phần kinh tế gần với bán lẻ và logistics.
 
+> **Chuyển mạch:** Trong **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **KT — phả hệ hạ tầng công và kinh tế mạng chịu điều tiết** tiếp nhận điểm tựa từ **Coupang — quy mô thời venture cộng mạng logistics vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **So sánh các tập đoàn mà không biến thành bảng xếp hạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KT — phả hệ hạ tầng công và kinh tế mạng chịu điều tiết
 
 KT có phả hệ thể chế khác: hạ tầng viễn thông công được doanh nghiệp hóa và tư nhân hóa thành công ty niêm yết.
@@ -298,6 +323,8 @@ KT có phả hệ thể chế khác: hạ tầng viễn thông công được do
 Phân tích viễn thông tập trung vào ARPU, churn, CAPEX mạng, phổ tần–quy định và dịch vụ doanh nghiệp/số.
 
 Nguồn gốc công có thể tạo cơ sở tài sản và quan hệ chính sách khác chaebol gia đình.
+
+> **Chuyển mạch:** Ở chặng này của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **KT — phả hệ hạ tầng công và kinh tế mạng chịu điều tiết** đã nêu tiêu chí phân biệt, còn **So sánh các tập đoàn mà không biến thành bảng xếp hạng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Năm lỗi phổ biến khi phân tích tập đoàn Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## So sánh các tập đoàn mà không biến thành bảng xếp hạng
 
@@ -319,6 +346,8 @@ Một bảng so sánh hữu ích không hỏi “tốt nhất/xấu nhất”, m
 
 Bảng này chỉ xác định **lăng kính phân tích khác nhau**, không chọn bên thắng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **So sánh các tập đoàn mà không biến thành bảng xếp hạng** đã nêu tiêu chí phân biệt, còn **Năm lỗi phổ biến khi phân tích tập đoàn Hàn Quốc** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mẫu phân tích tập đoàn thực hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Năm lỗi phổ biến khi phân tích tập đoàn Hàn Quốc
 
 **Lỗi 1 — lấy thương hiệu thay pháp nhân.** Uy tín tập đoàn không thay thế sức khỏe tài chính của công ty thành viên cụ thể.
@@ -330,6 +359,8 @@ Bảng này chỉ xác định **lăng kính phân tích khác nhau**, không ch
 **Lỗi 4 — mù chu kỳ.** Dùng lợi nhuận đỉnh chu kỳ làm mức bền vững.
 
 **Lỗi 5 — bỏ qua quản trị.** Không kiểm tra ai kiểm soát phân bổ vốn và cổ đông thiểu số ở từng pháp nhân có nhận phần tăng/giảm công bằng hay không.
+
+> **Chuyển mạch:** Trong **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Mẫu phân tích tập đoàn thực hành** tiếp nhận điểm tựa từ **Năm lỗi phổ biến khi phân tích tập đoàn Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mẫu phân tích tập đoàn thực hành
 
@@ -355,12 +386,16 @@ Sau khi lập bản đồ tập đoàn, cần kiểm tra nó dưới các trạn
 
 Mẫu này ép câu chuyện thương hiệu thành cấu trúc có thể kiểm chứng.
 
+> **Chuyển mạch:** Ở chặng này của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, các dấu vết trong **Mẫu phân tích tập đoàn thực hành** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Một tập đoàn Hàn Quốc là **danh mục các pháp nhân được nối bằng sở hữu, vốn, hợp đồng, lịch sử và năng lực dùng chung**. Tập đoàn cung cấp bối cảnh chiến lược; pháp nhân cung cấp thực tế tài chính. Phân tích tốt phải di chuyển giữa hai cấp mà không trộn chúng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)**, **Liên kết** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết
 
 Dùng [`00_history/08_company_genealogies.md`](./00_history/08_company_genealogies.md) cho phả hệ lịch sử, [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md) cho kiến trúc sở hữu, [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho vấn đề kiểm soát và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình nghiên cứu ở cấp pháp nhân.
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

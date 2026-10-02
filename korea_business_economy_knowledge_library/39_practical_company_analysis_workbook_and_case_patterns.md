@@ -1,7 +1,6 @@
 # Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)
 
-> **Mạch đọc:** Đặt **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kết quả cuối cùng của một bài phân tích nên là gì?** sang **2. Tạo hồ sơ nhận dạng một trang**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là owner của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**; dùng README để đặt workbook sau lịch sử, ngành, kế toán, governance và capital allocation. Từ **1. Kết quả cuối cùng của một bài phân tích nên là gì?** chuyển qua one-page profile, business model, statements, drivers, scenarios, valuation và invalidation, rồi yêu cầu mọi kết luận quay về dữ liệu DART/KIND/IR có thể kiểm chứng.
 
 Các chương trước giải thích lịch sử, kinh tế vĩ mô, ngành, kế toán, quản trị và nguồn vốn. Chương này biến các kiến thức đó thành một **bài thực hành tổng hợp (workbook)**. Mục tiêu là khi gặp một công ty Hàn Quốc mới, người đọc có thể mở DART/KIND/IR, tự dựng mô hình kinh tế, phát hiện những câu hỏi còn thiếu và viết một ghi chú nghiên cứu có thể kiểm chứng.
 
@@ -12,6 +11,8 @@ Các chương trước giải thích lịch sử, kinh tế vĩ mô, ngành, k�
 Một bài phân tích tốt không nhất thiết dài hàng trăm trang. Nó cần trả lời rõ năm câu hỏi: doanh nghiệp thực sự kiếm tiền bằng cơ chế nào; những biến nào quyết định lợi nhuận và dòng tiền; bảng cân đối có chịu được kịch bản xấu hay không; quản trị và phân bổ vốn có bảo vệ giá trị cho cổ đông/chủ nợ không; và điều kiện nào khiến nhận định hiện tại sai.
 
 Nếu chưa trả lời được năm câu này, thu thập thêm dữ liệu có thể chỉ làm tăng lượng thông tin chứ chưa tăng mức độ hiểu.
+
+> **Chuyển mạch:** Trong **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **2. Tạo hồ sơ nhận dạng một trang** tiếp nhận điểm tựa từ **1. Kết quả cuối cùng của một bài phân tích nên là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Mô tả doanh nghiệp trong một câu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Tạo hồ sơ nhận dạng một trang
 
@@ -34,6 +35,8 @@ Năm tài chính:
 
 Không bắt đầu bằng định giá. Nếu xác định sai pháp nhân, toàn bộ phân tích phía sau có thể sai theo.
 
+> **Chuyển mạch:** Ở chặng này của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **3. Mô tả doanh nghiệp trong một câu** tiếp nhận điểm tựa từ **2. Tạo hồ sơ nhận dạng một trang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Vẽ cỗ máy kinh tế của doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Mô tả doanh nghiệp trong một câu
 
 Cố gắng hoàn thành câu:
@@ -43,6 +46,8 @@ Cố gắng hoàn thành câu:
 Ví dụ, một nhà sản xuất bộ nhớ bán DRAM/NAND cho khách hàng thiết bị và trung tâm dữ liệu; lợi nhuận phụ thuộc vào ASP × lượng bit xuất bán × chi phí mỗi bit, còn rủi ro lớn nằm ở chu kỳ, CAPEX và chuyển đổi công nghệ.
 
 Nếu vẫn không viết được câu này một cách cụ thể, nghĩa là chưa hiểu mô hình kinh doanh đủ sâu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **4. Vẽ cỗ máy kinh tế của doanh nghiệp** tiếp nhận điểm tựa từ **3. Mô tả doanh nghiệp trong một câu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Mẫu A — Bán dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Vẽ cỗ máy kinh tế của doanh nghiệp
 
@@ -68,6 +73,8 @@ Dòng tiền
 
 Sau đó thay các biến bằng chỉ tiêu phù hợp với từng ngành.
 
+> **Chuyển mạch:** Trong **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **5. Mẫu A — Bán dẫn** tiếp nhận điểm tựa từ **4. Vẽ cỗ máy kinh tế của doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Mẫu B — Ô tô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Mẫu A — Bán dẫn
 
 Một mô hình bán dẫn nên đi theo chuỗi:
@@ -89,6 +96,8 @@ Cần hỏi cơ cấu nhu cầu AI/máy chủ (server / 서버)/mobile/PC thay �
 Một kịch bản cơ sở có thể giả định lượng bit xuất bán tăng 15%, ASP tăng 5% và chi phí mỗi bit giảm 10%. Kịch bản xấu có thể là lượng bit chỉ tăng 5%, ASP giảm 20% và chi phí mỗi bit chỉ giảm 5%.
 
 Do chi phí cố định và khấu hao lớn, lợi nhuận hoạt động có thể biến động mạnh hơn doanh thu. Đây là **đòn bẩy hoạt động (operating leverage)**. Xem [bán dẫn](./14_semiconductors_electronics_display.md).
+
+> **Chuyển mạch:** Ở chặng này của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **6. Mẫu B — Ô tô** tiếp nhận điểm tựa từ **5. Mẫu A — Bán dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Mẫu C — Nền tảng số / Internet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Mẫu B — Ô tô
 
@@ -112,6 +121,8 @@ Các biến cần theo dõi gồm sản lượng toàn cầu, ASP/cơ cấu, ưu
 
 Một bài kiểm tra sức chịu đựng có thể giả định sản lượng giảm 10%, ưu đãi tăng tương đương 2% ASP, KRW mạnh lên 8% và chi phí bảo hành tăng 30%, rồi lần theo tác động đến biên hoạt động, tiền mặt và công ty tài chính. Xem [ô tô và pin](./15_automotive_battery_mobility.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **7. Mẫu C — Nền tảng số / Internet** tiếp nhận điểm tựa từ **6. Mẫu B — Ô tô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Mẫu D — SI/SM và CNTT doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Mẫu C — Nền tảng số / Internet
 
 Không nên chỉ nhìn số người dùng hoạt động hằng tháng (MAU). Chuỗi kinh tế phù hợp hơn là:
@@ -132,6 +143,8 @@ Cần phân biệt tăng trưởng người dùng với tăng khả năng kiếm
 
 Một dấu hiệu cảnh báo là doanh thu tăng cao nhưng chi phí marketing phải tăng nhanh hơn chỉ để giữ tốc độ tăng trưởng. Đó có thể là **tăng trưởng mua bằng tiền (paid growth)** chứ chưa phải hiệu ứng mạng lưới mạnh hơn. Xem [nền tảng và dịch vụ](./17_platform_telecom_content_retail_services.md).
 
+> **Chuyển mạch:** Trong **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **8. Mẫu D — SI/SM và CNTT doanh nghiệp** tiếp nhận điểm tựa từ **7. Mẫu C — Nền tảng số / Internet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Mẫu E — Nhà cung cấp SME** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Mẫu D — SI/SM và CNTT doanh nghiệp
 
 Đây là mô hình đặc biệt quan trọng trong hệ sinh thái doanh nghiệp Hàn Quốc. Một công ty SI/SM thường có hỗn hợp gồm tích hợp hệ thống (SI), vận hành/bảo trì hệ thống (SM), đám mây và dịch vụ quản lý, cùng các dự án phần mềm, dữ liệu hoặc AI.
@@ -149,6 +162,8 @@ Cần theo dõi tỷ lệ nhu cầu nội bộ tập đoàn, tỷ lệ khách h�
 Bẫy lớn là dự án giá cố định. Nếu dự án dự kiến doanh thu 100 và chi phí 85 thì lợi nhuận là 15. Nhưng nếu phạm vi công việc tăng khiến chi phí lên 105, kinh tế của cả dự án đổi dấu. Vì vậy cần đọc tài sản hợp đồng, dự phòng, lao động thuê ngoài và dự phòng lỗ dự án.
 
 Nếu phân tích để chọn nơi làm việc, cần thêm các câu hỏi về phát triển cốt lõi hay điều phối, dự án nội bộ hay khách hàng ngoài, SI xây mới hay SM bảo trì, công nghệ hiện đại hay legacy, tầng thầu phụ, quyền ra quyết định và hệ thống đánh giá/thăng tiến. Xem [dịch vụ CNTT](./34_digital_fintech_cloud_and_it_services.md), [lao động](./12_labor_titles_compensation_and_workplace.md) và [văn hóa doanh nghiệp](./13_business_culture_decision_making_and_communication.md).
+
+> **Chuyển mạch:** Ở chặng này của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **9. Mẫu E — Nhà cung cấp SME** tiếp nhận điểm tựa từ **8. Mẫu D — SI/SM và CNTT doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Mẫu F — Xây dựng và PF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Mẫu E — Nhà cung cấp SME
 
@@ -170,6 +185,8 @@ Sản lượng của khách hàng
 Cần hỏi tỷ trọng doanh thu từ khách hàng lớn nhất, khả năng thay thế nhà cung cấp, áp lực giảm giá hằng năm, cơ chế chuyển giá nguyên liệu, gánh nặng khuôn/CAPEX, thời hạn thanh toán, quyền sở hữu công nghệ và rủi ro khách hàng chuyển nhà máy sang nước khác.
 
 Một insight quan trọng: doanh thu tăng có thể tốt nhưng nhu cầu vốn lưu động tăng nhanh hơn nếu khách hàng thanh toán chậm. **Tăng trưởng có thể tiêu thụ tiền mặt.** Xem [SME và hệ sinh thái thầu phụ](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **10. Mẫu F — Xây dựng và PF** tiếp nhận điểm tựa từ **9. Mẫu E — Nhà cung cấp SME** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Mẫu G — Doanh nghiệp tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Mẫu F — Xây dựng và PF
 
@@ -195,6 +212,8 @@ Chủ đầu tư / SPV
 
 Một sổ đơn hàng khỏe không xóa được rủi ro bảo lãnh. Kịch bản xấu có thể gồm bán trước chậm, chi phí dự án tăng 15%, chênh lệch lãi suất tái cấp vốn tăng 300 điểm cơ bản, chậm hoàn thành sáu tháng và bảo lãnh trở thành nghĩa vụ thực tế. Xem [xây dựng và PF](./18_construction_real_estate_and_project_finance.md).
 
+> **Chuyển mạch:** Trong **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **11. Mẫu G — Doanh nghiệp tài chính** tiếp nhận điểm tựa từ **10. Mẫu F — Xây dựng và PF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Lập bảng tài chính 5 năm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Mẫu G — Doanh nghiệp tài chính
 
 Không nên dùng dòng tiền tự do kiểu doanh nghiệp công nghiệp cho ngân hàng hoặc bảo hiểm.
@@ -210,6 +229,8 @@ Nền khoản vay / tiền gửi
 ```
 
 Với công ty chứng khoán, cần nhìn phí môi giới, phí ngân hàng đầu tư, kết quả giao dịch/cấu trúc sản phẩm, chi phí vốn và tổn thất tín dụng. Với bảo hiểm, cần tách kết quả dịch vụ bảo hiểm và kết quả đầu tư. Luôn đọc lợi nhuận cùng mức đủ vốn. Xem [khu vực tài chính ngoài ngân hàng](./35_financial_sector_securities_insurance_asset_management.md).
+
+> **Chuyển mạch:** Ở chặng này của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **12. Lập bảng tài chính 5 năm** tiếp nhận điểm tựa từ **11. Mẫu G — Doanh nghiệp tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Dựng cây động lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Lập bảng tài chính 5 năm
 
@@ -230,6 +251,8 @@ Thay vì đọc từng báo cáo năm riêng lẻ, tạo một bảng:
 
 Đánh dấu các sự kiện như mua lại, chia tách, mở nhà máy, khủng hoảng hoặc mất/giành khách hàng lớn. Mô hình nhiều năm quan trọng hơn một ảnh chụp tại một thời điểm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **13. Dựng cây động lực** tiếp nhận điểm tựa từ **12. Lập bảng tài chính 5 năm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Xây ba kịch bản xấu–cơ sở–tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Dựng cây động lực
 
 Mỗi doanh nghiệp nên có một **cây động lực (driver tree)**:
@@ -248,6 +271,8 @@ Lợi nhuận hoạt động
 
 Sau đó nối biến kinh tế vĩ mô vào đúng nhánh: KRW tác động giá xuất khẩu/biên lợi nhuận; lãi suất tác động chi phí lãi và nhu cầu; dầu tác động logistics/nguyên liệu; nhu cầu Trung Quốc tác động sản lượng. Đây là cầu nối với [cơ chế truyền dẫn vĩ mô](./21_economy_to_company_transmission.md).
 
+> **Chuyển mạch:** Trong **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **14. Xây ba kịch bản xấu–cơ sở–tốt** tiếp nhận điểm tựa từ **13. Dựng cây động lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Dùng bảng độ nhạy thay vì một giá mục tiêu duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Xây ba kịch bản xấu–cơ sở–tốt
 
 Kịch bản không nhằm dự báo chính xác tuyệt đối mà để kiểm tra doanh nghiệp phụ thuộc vào biến nào.
@@ -263,6 +288,8 @@ Khi chạy kịch bản, theo dõi FCF, nợ và định giá. Không nên tạo
 
 Ví dụ khi bán dẫn suy giảm, ASP và tỷ lệ sử dụng công suất có thể giảm; sau một độ trễ, doanh nghiệp cũng có thể cắt CAPEX. Các biến phải kể được cùng một câu chuyện kinh tế.
 
+> **Chuyển mạch:** Ở chặng này của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **15. Dùng bảng độ nhạy thay vì một giá mục tiêu duy nhất** tiếp nhận điểm tựa từ **14. Xây ba kịch bản xấu–cơ sở–tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Đọc ngược kỳ vọng của thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Dùng bảng độ nhạy thay vì một giá mục tiêu duy nhất
 
 Nếu định giá phụ thuộc mạnh vào tăng trưởng và biên lợi nhuận, tạo ma trận:
@@ -277,11 +304,15 @@ Tăng trưởng      6%     8%     10%
 
 Mục tiêu là biết giả định nào chi phối giá trị mạnh nhất.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **16. Đọc ngược kỳ vọng của thị trường** tiếp nhận điểm tựa từ **15. Dùng bảng độ nhạy thay vì một giá mục tiêu duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Kiến trúc của một giả thuyết tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Đọc ngược kỳ vọng của thị trường
 
 Thay vì chỉ dự báo, hãy hỏi mức định giá hiện tại đang ngầm giả định điều gì. Nếu vốn hóa thị trường chỉ hợp lý khi biên lợi nhuận tăng từ 5% lên 12% trong ba năm, cần tìm bằng chứng doanh nghiệp thực sự có con đường tới 12%.
 
 Đây là **định giá ngược (reverse valuation / 역산 가치평가)**.
+
+> **Chuyển mạch:** Trong **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **17. Kiến trúc của một giả thuyết tốt** tiếp nhận điểm tựa từ **16. Đọc ngược kỳ vọng của thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Gắn nhãn bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Kiến trúc của một giả thuyết tốt
 
@@ -298,6 +329,8 @@ Quan sát
 ```
 
 Không nên viết “công ty tốt vì AI tăng trưởng”. Cách tốt hơn là: nhu cầu AI làm tăng lượng HBM; nếu yield và công suất tăng đúng kế hoạch, cơ cấu sản phẩm sẽ nâng ASP và biên lợi nhuận; giả thuyết sai nếu chứng nhận sản phẩm bị chậm hoặc nguồn cung đối thủ tăng nhanh hơn nhu cầu.
+
+> **Chuyển mạch:** Ở chặng này của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **17. Kiến trúc của một giả thuyết tốt** nêu điều cần giải thích; **18. Gắn nhãn bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Lập nhật ký nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Gắn nhãn bằng chứng
 
@@ -318,6 +351,8 @@ Ví dụ:
 
 Cách gắn nhãn này giúp tránh biến câu chuyện của ban quản lý thành sự thật đã được chứng minh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **18. Gắn nhãn bằng chứng** nêu điều cần giải thích; **19. Lập nhật ký nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Đọc DART theo câu hỏi, không đọc như tiểu thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Lập nhật ký nguồn
 
 Nhật ký nguồn nối từng con số trong mô hình với bằng chứng có thể truy lại. Đây là bước bảo vệ người phân tích khỏi việc quên nguồn, dùng dữ liệu cũ hoặc sửa câu chuyện sau khi biết kết quả.
@@ -329,6 +364,8 @@ Nhật ký nguồn nối từng con số trong mô hình với bằng chứng c�
 | | Nguồn ngành | tăng trưởng thị trường | Trung bình |
 
 Nếu một kết luận quan trọng dựa trên nguồn yếu, đó là khoảng trống nghiên cứu cần bổ sung.
+
+> **Chuyển mạch:** Trong **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **19. Lập nhật ký nguồn** nêu điều cần giải thích; **20. Đọc DART theo câu hỏi, không đọc như tiểu thuyết** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Kết quả cuối cùng nên là một mô hình có thể bác bỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Đọc DART theo câu hỏi, không đọc như tiểu thuyết
 
@@ -349,6 +386,8 @@ Một thứ tự hiệu quả thường là:
 
 Sau đó quay lại chính sách kế toán ở đúng nơi cần thiết. Không cần ghi nhớ mọi thuyết minh. Nếu CFO yếu, mở khoản phải thu, tồn kho và tài sản hợp đồng. Nếu nợ cao, mở lịch đáo hạn, điều khoản nợ và bảo lãnh.
 
+> **Chuyển mạch:** Ở chặng này của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **21. Kết quả cuối cùng nên là một mô hình có thể bác bỏ** tiếp nhận điểm tựa từ **20. Đọc DART theo câu hỏi, không đọc như tiểu thuyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Kết quả cuối cùng nên là một mô hình có thể bác bỏ
 
 Một nghiên cứu tốt không kết thúc bằng “tôi thích công ty này”. Nó phải có dạng:
@@ -363,10 +402,12 @@ Nếu bằng chứng E không xuất hiện trong khoảng thời gian T
 → giả thuyết phải được sửa hoặc bỏ.
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)**, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy** gom các mảnh từ **21. Kết quả cuối cùng nên là một mô hình có thể bác bỏ** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Workbook này không dạy cách điền đủ mọi ô. Nó dạy cách biến một doanh nghiệp thành một **cỗ máy kinh tế có thể quan sát được**: nhu cầu đi vào đâu, doanh thu hình thành thế nào, chi phí và vốn bị tiêu ở đâu, lợi nhuận có chuyển thành tiền hay không, ai kiểm soát quyết định và điều gì có thể làm cỗ máy đó hỏng.
 
 Khi đã dựng được mô hình đó, các chỉ số như P/E, ROE, FCF hay NIM không còn là những con số rời rạc; chúng trở thành kết quả của một cơ chế mà người đọc có thể giải thích và kiểm chứng.
 
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

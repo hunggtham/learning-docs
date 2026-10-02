@@ -1,6 +1,6 @@
 # Kotlin + Android Master ghi chú (note / 노트) — Beginner
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục lục** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1.1 Kotlin/JVM, Kotlin Multiplatform và Kotlin/bản địa (native / 네이티브)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Kotlin + Android Master ghi chú (note / 노트) — Beginner**; đặt chapter đầu trong track Kotlin/Android trước Intermediate. Từ **Mục lục** nối Kotlin/JVM, KMP/native, Gradle, types/null-safety, functions/OOP, Android components, Compose, XML, resources, permissions và testing, rồi quay lại README để giữ đúng baseline/version và ranh giới với các mức cao hơn.
 
 > Mục tiêu: học từ gần như số 0 để có thể đọc, viết và chạy một ứng dụng Android cơ bản bằng Kotlin. Tài liệu ưu tiên Kotlin hiện đại và Jetpack Compose, đồng thời vẫn giải thích XML/View hệ thống (system / 시스템) để bạn hiểu mã (code / 코드) Android cũ.
 >
