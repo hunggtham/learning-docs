@@ -1,6 +1,6 @@
 # XML — Beginner
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — Beginner**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Học XML từ con số 0: cú pháp, cấu trúc dữ liệu và cách parser thực sự hiểu tài liệu XML** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **1. XML là gì và vì sao nó tồn tại?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — Beginner**. Route đi từ document/tree model → syntax, elements/attributes và encoding → well-formedness, parser behavior và schema boundary → config/enterprise examples → chuẩn bị cho namespaces và XPath.
 
 ## Học XML từ con số 0: cú pháp, cấu trúc dữ liệu và cách parser thực sự hiểu tài liệu XML
 

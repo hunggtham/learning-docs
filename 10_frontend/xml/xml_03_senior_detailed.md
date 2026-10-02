@@ -1,6 +1,6 @@
 # XML — cấp cao (senior / 시니어)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — cấp cao (senior / 시니어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **XSLT, XQuery, lược đồ (schema / 스키마) evolution, streaming, bảo mật (security / 보안), canonicalization và enterprise tích hợp (integration / 통합)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **1. XSLT là gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — cấp cao (senior / 시니어)**. Route đi từ XSLT/XQuery và schema evolution → streaming và large documents → parser security/canonicalization → enterprise integration/signatures → compatibility and operational failure, để XML sống lâu trong hệ thống thật.
 
 ## XSLT, XQuery, lược đồ (schema / 스키마) evolution, streaming, bảo mật (security / 보안), canonicalization và enterprise tích hợp (integration / 통합)
 

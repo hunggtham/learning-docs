@@ -1,7 +1,6 @@
 # `/proc`, `/sys` và giao diện quan sát kernel
 
-> **Mạch đọc:** Đọc **/proc, /sys và giao diện quan sát kernel** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao kernel lại trình bày trạng thái qua filesystem?** sang **/proc: trạng thái tiến trình và kernel**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **/proc, /sys và giao diện quan sát kernel**. Route đi từ pseudo-filesystem rationale → /proc process/kernel state → /sys devices, drivers và uevents → read/write boundaries → observability and safe diagnosis.
 
 Linux có một đặc điểm rất mạnh: nhiều trạng thái của hạt nhân (kernel) và tiến trình (process / 프로세스) được trình bày qua các hệ thống tệp giả (pseudo-filesystem). Điều này khiến việc quan sát hệ thống trở nên thống nhất: thay vì mỗi subsystem cần một giao thức hoàn toàn khác, nhiều thông tin có thể được đọc qua đường dẫn giống như đọc tệp.
 
@@ -21,6 +20,8 @@ Một hệ điều hành phải cung cấp cách để chương trình trong kh�
 Có thể tạo một API riêng cho từng câu hỏi, nhưng Unix/Linux tận dụng mô hình tên đường dẫn và thao tác đọc/ghi vốn đã quen thuộc.
 
 > **Mô hình tư duy:** `/proc` và `/sys` giống như các “cửa sổ” vào trạng thái của kernel. Bạn đọc một đường dẫn nhưng không nhất thiết đang đọc byte từ ổ đĩa.
+
+> **Chuyển mạch:** Trong **/proc, /sys và giao diện quan sát kernel**, **/proc: trạng thái tiến trình và kernel** tiếp nhận điểm tựa từ **Tại sao kernel lại trình bày trạng thái qua filesystem?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc/<PID>/maps và smaps** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `/proc`: trạng thái tiến trình và kernel
 
@@ -111,6 +112,8 @@ ls /proc/1234/fd | wc -l
 
 có thể đặt giả thuyết về rò rỉ descriptor, nhưng cần quan sát xu hướng theo thời gian và loại descriptor trước khi kết luận.
 
+> **Chuyển mạch:** Ở chặng này của **/proc, /sys và giao diện quan sát kernel**, **/proc/<PID>/maps và smaps** tiếp nhận điểm tựa từ **/proc: trạng thái tiến trình và kernel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc/meminfo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `/proc/<PID>/maps` và `smaps`
 
 `maps` cho thấy các vùng ánh xạ bộ nhớ (memory mappings): executable, dùng chung (shared / 공유) libraries, heap-like regions, memory-mapped files.
@@ -122,6 +125,8 @@ less /proc/1234/maps
 `smaps` chi tiết hơn và chứa các trường accounting như RSS/PSS cho từng ánh xạ (mapping / 매핑).
 
 Đây là công cụ quan trọng để hiểu vì sao bộ nhớ tiến trình không chỉ là một “vùng nhớ động (heap / 힙)”. Với JVM, ngoài Java vùng nhớ động (heap / 힙) còn có thư viện bản địa (native / 네이티브), mã (code / 코드) bộ nhớ đệm (cache / 캐시), luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택), mapped JAR/dùng chung (shared / 공유) objects và các vùng bản địa (native / 네이티브) khác.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **/proc, /sys và giao diện quan sát kernel**, **/proc/meminfo** tiếp nhận điểm tựa từ **/proc/<PID>/maps và smaps** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc/loadavg** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `/proc/meminfo`
 
@@ -137,6 +142,8 @@ Không nên tự tạo kết luận chỉ từ một trường. Ví dụ `Cached
 
 Xem thêm: [Bộ nhớ và bộ nhớ ảo](../06_resources/memory_virtual_memory.md).
 
+> **Chuyển mạch:** Trong **/proc, /sys và giao diện quan sát kernel**, **/proc/loadavg** tiếp nhận điểm tựa từ **/proc/meminfo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc/net** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `/proc/loadavg`
 
 Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
@@ -149,9 +156,13 @@ Cho thấy tải trung bình và một số thông tin về runnable tasks/tiế
 
 Công cụ (tool / 도구) `uptime` trình bày cùng loại dữ liệu theo cách dễ đọc hơn, nhưng hiểu `/proc/loadavg` giúp thấy công cụ (tool / 도구) user-space lấy trạng thái (state / 상태) từ đâu.
 
+> **Chuyển mạch:** Ở chặng này của **/proc, /sys và giao diện quan sát kernel**, **/proc/net** tiếp nhận điểm tựa từ **/proc/loadavg** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc/sys: tham số kernel thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `/proc/net`
 
 Một phần thông tin mạng cũng được expose dưới `/proc/net`, nhưng trong thực tế nên ưu tiên các công cụ (tool / 도구) hiện đại như `ss`, `ip`, `nstat` vì chúng diễn giải netlink/kernel trạng thái (state / 상태) tốt hơn và ổn định hơn cho người vận hành.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **/proc, /sys và giao diện quan sát kernel**, **/proc/sys: tham số kernel thời gian chạy (runtime / 런타임)** tiếp nhận điểm tựa từ **/proc/net** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/sys: mô hình thiết bị và kernel đối tượng (object / 객체)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## `/proc/sys`: tham số kernel thời gian chạy (runtime / 런타임)
 
@@ -198,6 +209,8 @@ sudo sysctl --system
 
 Không nên bản sao (copy / 복사) các “kernel tuning” từ internet vào môi trường vận hành (production / 운영 환경) mà không biết tải công việc (workload / 워크로드), kernel phiên bản (version / 버전) và sự đánh đổi (trade-off / 트레이드오프). Một giá trị tốt cho cơ sở dữ liệu (database / 데이터베이스) host có thể không phù hợp với ứng dụng (application / 애플리케이션) máy chủ (server / 서버) hoặc bộ chứa (container / 컨테이너) host.
 
+> **Chuyển mạch:** Trong **/proc, /sys và giao diện quan sát kernel**, **/sys: mô hình thiết bị và kernel đối tượng (object / 객체)** tiếp nhận điểm tựa từ **/proc/sys: tham số kernel thời gian chạy (runtime / 런타임)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/dev: thiết bị (device / 장치) nodes và mối quan hệ với kernel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `/sys`: mô hình thiết bị và kernel đối tượng (object / 객체)
 
 `/sys` (sysfs) trình bày các thiết bị và kernel objects theo cấu trúc phân cấp.
@@ -233,6 +246,8 @@ Thông tin hàng đợi (queue / 큐), scheduler và thiết bị (device / 장�
 
 Các công cụ (tool / 도구) như `lsblk`, `udevadm`, `ip` thường dễ dùng hơn, nhưng `/sys` giúp hiểu dữ liệu gốc.
 
+> **Chuyển mạch:** Ở chặng này của **/proc, /sys và giao diện quan sát kernel**, **/dev: thiết bị (device / 장치) nodes và mối quan hệ với kernel** tiếp nhận điểm tựa từ **/sys: mô hình thiết bị và kernel đối tượng (object / 객체)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **udev và thiết bị động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `/dev`: thiết bị (device / 장치) nodes và mối quan hệ với kernel
 
 `/dev` chứa thiết bị (device / 장치) nodes, không phải thiết bị vật lý theo nghĩa “tệp (file / 파일) nằm trên disk”. thiết bị (device / 장치) nút (node / 노드) là giao diện để user-space tương tác với driver/kernel subsystem.
@@ -250,6 +265,8 @@ Ví dụ:
 `/dev/null` không lưu dữ liệu. `/dev/tty` đại diện terminal phù hợp với tiến trình. `/dev/sda` đại diện khối (block / 블록) thiết bị (device / 장치) nếu hệ thống đặt tên như vậy.
 
 Đây là lý do câu “everything is a tệp (file / 파일)” nên được hiểu là **nhiều tài nguyên (resource / 자원) có thể dùng giao diện file-like**, không phải mọi thứ đều là regular tệp (file / 파일).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **/proc, /sys và giao diện quan sát kernel**, **udev và thiết bị động** tiếp nhận điểm tựa từ **/dev: thiết bị (device / 장치) nodes và mối quan hệ với kernel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào nên đọc trực tiếp /proc hoặc /sys?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## udev và thiết bị động
 
@@ -270,6 +287,8 @@ udevadm monitor
 ```
 
 Không nên chạy monitor vô thời hạn trên môi trường vận hành (production / 운영 환경) nếu chỉ cần một kiểm tra ngắn; nó có thể tạo rất nhiều đầu ra (output / 출력).
+
+> **Chuyển mạch:** Trong **/proc, /sys và giao diện quan sát kernel**, **Khi nào nên đọc trực tiếp /proc hoặc /sys?** tiếp nhận điểm tựa từ **udev và thiết bị động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: điều tra tiến trình Java bị nghi rò rỉ tệp (file / 파일) descriptor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi nào nên đọc trực tiếp `/proc` hoặc `/sys`?
 
@@ -292,6 +311,8 @@ Nhưng `/proc` và `/sys` trở nên rất giá trị khi:
 - muốn hiểu công cụ (tool / 도구) user-space đang lấy dữ liệu ở đâu;
 - bộ chứa (container / 컨테이너)/minimal ảnh (image / 이미지) không có nhiều tiện ích.
 
+> **Chuyển mạch:** Ở chặng này của **/proc, /sys và giao diện quan sát kernel**, **Khi nào nên đọc trực tiếp /proc hoặc /sys?** cho ta quy tắc; **Ví dụ: điều tra tiến trình Java bị nghi rò rỉ tệp (file / 파일) descriptor** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ví dụ: điều tra tiến trình Java bị nghi rò rỉ tệp (file / 파일) descriptor
 
 Bước đầu không cần restart ngay.
@@ -312,6 +333,8 @@ Nếu số descriptor tăng qua mỗi lần đo, hãy phân loại: socket, tệ
 
 Chỉ khi có bằng chứng (evidence / 증거) về xu hướng mới chuyển sang mã (code / 코드)/thời gian chạy (runtime / 런타임) phân tích (analysis / 분석).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **/proc, /sys và giao diện quan sát kernel**, **Ví dụ: điều tra tiến trình Java bị nghi rò rỉ tệp (file / 파일) descriptor** cho ta quy tắc; **Những hiểu lầm phổ biến** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 **“`/proc` là thư mục thật trên ổ đĩa.”** Không. Nó là pseudo-filesystem do kernel sinh động.
@@ -324,6 +347,8 @@ Chỉ khi có bằng chứng (evidence / 증거) về xu hướng mới chuyển
 
 **“Mọi thứ dưới `/proc/<PID>` luôn đọc được.”** Quyền, bảo mật (security / 보안) chính sách (policy / 정책) và kernel settings có thể hạn chế truy cập.
 
+> **Chuyển mạch:** Trong **/proc, /sys và giao diện quan sát kernel**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy xem `/proc` và `/sys` như hai bản đồ khác nhau của cùng hệ thống:
@@ -335,3 +360,5 @@ Hãy xem `/proc` và `/sys` như hai bản đồ khác nhau của cùng hệ th�
 Ba khu vực này tạo một cầu nối quan trọng giữa lý thuyết kernel và công việc vận hành thực tế.
 
 Xem thêm: [Kernel, user space và system calls](./kernel_userspace_syscalls.md), [Process, thread và signal](../04_process/processes_threads_signals_jobs.md), [Storage và filesystem](../06_resources/storage_filesystems.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

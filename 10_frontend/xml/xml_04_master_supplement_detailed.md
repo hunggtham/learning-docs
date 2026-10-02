@@ -1,6 +1,6 @@
 # XML — Master Supplement
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — Master Supplement**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **XML specification internals, XSD 1.1, XPath/XQuery/XSLT 3.x, canonicalization và các trường hợp biên (edge case / 경계 사례) cần biết để thực sự master XML** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **1. XML 1.0 và XML 1.1** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — Master Supplement**. Route đi từ XML 1.0/1.1 internals → XSD 1.1, XPath/XQuery/XSLT 3.x → canonicalization, signatures và serialization → edge cases/spec reading → document-centric production debugging.
 
 ## XML specification internals, XSD 1.1, XPath/XQuery/XSLT 3.x, canonicalization và các trường hợp biên (edge case / 경계 사례) cần biết để thực sự master XML
 

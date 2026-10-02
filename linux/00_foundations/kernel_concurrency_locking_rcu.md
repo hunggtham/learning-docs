@@ -1,7 +1,6 @@
 # Đồng thời, khóa và RCU trong Linux kernel
 
-> **Mạch đọc:** Đọc **Đồng thời, khóa và RCU trong Linux kernel** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **tính đồng thời (concurrency / 동시성) khác parallelism** sang **Race điều kiện (condition / 조건) hình thành như thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đồng thời, khóa và RCU trong Linux kernel**. Route đi từ concurrency vs parallelism → races/deadlocks → mutex/spinlock/atomic ordering → RCU and reclamation → interrupt/CPU context, để kernel correctness đi cùng latency và scalability.
 
 Khi một máy chỉ có một CPU và kernel chỉ xử lý từng việc nối tiếp, bảo vệ trạng thái chung tương đối đơn giản. Nhưng Linux hiện đại chạy trên nhiều cốt lõi (core / 핵심), xử lý nhiều tiến trình (process / 프로세스), interrupt, softirq và kernel worker đồng thời. Cùng một cấu trúc dữ liệu có thể bị nhiều thực thi (execution / 실행) ngữ cảnh (context / 맥락) truy cập gần như cùng lúc.
 
@@ -14,6 +13,8 @@ Chương này không nhằm dạy viết kernel mô-đun (module / 모듈). Mụ
 **Đồng thời (concurrency)** nghĩa nhiều công việc có vòng đời chồng lấn và hệ thống phải quản lý tương tác giữa chúng. **Song song (parallelism)** nghĩa nhiều công việc thực sự chạy cùng lúc trên nhiều CPU/cốt lõi (core / 핵심).
 
 Một máy một cốt lõi (core / 핵심) vẫn có tính đồng thời (concurrency / 동시성) do scheduler xen kẽ tiến trình (process / 프로세스) và do interrupt có thể xảy ra. Máy nhiều cốt lõi (core / 핵심) thêm parallelism, khiến race điều kiện (condition / 조건) có thể xuất hiện thực sự cùng thời điểm.
+
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Race điều kiện (condition / 조건) hình thành như thế nào?** tiếp nhận điểm tựa từ **Tính đồng thời (concurrency / 동시성) khác parallelism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Chạy trong kernel” không có nghĩa là không bị tranh chấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Race điều kiện (condition / 조건) hình thành như thế nào?
 
@@ -35,6 +36,8 @@ Nếu hai CPU đọc cùng giá trị trước khi một CPU ghi lại, một l�
 
 Đây là **race điều kiện (condition / 조건)**: kết quả phụ thuộc thứ tự xen kẽ của các thao tác (operation / 연산) mà chương trình không kiểm soát đúng.
 
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **“Chạy trong kernel” không có nghĩa là không bị tranh chấp** tiếp nhận điểm tựa từ **Race điều kiện (condition / 조건) hình thành như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trọng yếu (critical / 중요) section** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## “Chạy trong kernel” không có nghĩa là không bị tranh chấp
 
 Một hiểu lầm phổ biến là kernel là một khối mã (code / 코드) duy nhất nên tự nhiên tuần tự. Thực tế kernel có thể xử lý đồng thời:
@@ -49,6 +52,8 @@ Một hiểu lầm phổ biến là kernel là một khối mã (code / 코드) 
 
 Một cấu trúc dữ liệu (data structure / 자료구조) toàn cục phải được thiết kế cho mô hình này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Trọng yếu (critical / 중요) section** tiếp nhận điểm tựa từ **“Chạy trong kernel” không có nghĩa là không bị tranh chấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atomic thao tác (operation / 연산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trọng yếu (critical / 중요) section
 
 **Vùng tới hạn (critical section)** là đoạn mã (code / 코드) thao tác trạng thái cần được bảo vệ khỏi truy cập đồng thời không an toàn.
@@ -56,6 +61,8 @@ Một cấu trúc dữ liệu (data structure / 자료구조) toàn cục phải
 Mục tiêu của synchronization không phải “khóa càng nhiều càng tốt”. Khóa quá rộng làm giảm parallelism và tăng contention.
 
 Thiết kế tốt cố giảm phạm vi dùng chung (shared / 공유) mutable trạng thái (state / 상태) và giữ trọng yếu (critical / 중요) section đủ ngắn.
+
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Atomic thao tác (operation / 연산)** tiếp nhận điểm tựa từ **Trọng yếu (critical / 중요) section** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spinlock: chờ bằng cách quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Atomic thao tác (operation / 연산)
 
@@ -75,6 +82,8 @@ rồi cập nhật C
 
 một atomic increment riêng lẻ thường không đủ.
 
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Spinlock: chờ bằng cách quay** tiếp nhận điểm tựa từ **Atomic thao tác (operation / 연산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao interrupt ngữ cảnh (context / 맥락) cần thành phần nguyên thủy (primitive / 기본 요소) khác tiến trình (process / 프로세스) ngữ cảnh (context / 맥락)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Spinlock: chờ bằng cách quay
 
 **Spinlock** phù hợp khi trọng yếu (critical / 중요) section rất ngắn và ngữ cảnh (context / 맥락) không thể ngủ.
@@ -89,6 +98,8 @@ CPU 1:          spin spin spin -> acquire
 ```
 
 Nếu giữ spinlock quá lâu, CPU khác đốt CPU thời gian (time / 시간) chỉ để chờ. Vì vậy spinlock phải đi kèm discipline rất chặt.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Spinlock: chờ bằng cách quay** xác định đầu vào; **Vì sao interrupt ngữ cảnh (context / 맥락) cần thành phần nguyên thủy (primitive / 기본 요소) khác tiến trình (process / 프로세스) ngữ cảnh (context / 맥락)?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mutex: chờ bằng cách ngủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vì sao interrupt ngữ cảnh (context / 맥락) cần thành phần nguyên thủy (primitive / 기본 요소) khác tiến trình (process / 프로세스) ngữ cảnh (context / 맥락)?
 
@@ -105,6 +116,8 @@ Một thành phần nguyên thủy (primitive / 기본 요소) hợp lệ ở ti
 
 Đây là lý do câu hỏi “khóa (lock / 잠금) nào nhanh hơn?” quá đơn giản. Câu hỏi đúng trước tiên là **ngữ cảnh (context / 맥락) này có được phép sleep không?**
 
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Vì sao interrupt ngữ cảnh (context / 맥락) cần thành phần nguyên thủy (primitive / 기본 요소) khác tiến trình (process / 프로세스) ngữ cảnh (context / 맥락)?** xác định đầu vào; **Mutex: chờ bằng cách ngủ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Semaphore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mutex: chờ bằng cách ngủ
 
 **Mutex** thường dùng khi holder có thể giữ khóa (lock / 잠금) lâu hơn và waiter được phép sleep.
@@ -115,6 +128,8 @@ Thay vì quay CPU vô ích, tác vụ (task / 작업) không lấy được mute
 
 Spinlock và mutex vì vậy không chỉ khác hiện thực (implementation / 구현); chúng phù hợp với hai mô hình chờ khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Semaphore** tiếp nhận điểm tựa từ **Mutex: chờ bằng cách ngủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Read-write khóa (lock / 잠금)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Semaphore
 
 Semaphore biểu diễn một số lượng permit thay vì chỉ trạng thái locked/unlocked. Nó có thể phù hợp khi có N tài nguyên (resource / 자원) tương đương.
@@ -123,6 +138,8 @@ Trong user-space, liên kết (connection / 연결) pool có mô hình tư duy (
 
 Kernel có nhiều thành phần nguyên thủy (primitive / 기본 요소) hiện đại chuyên biệt hơn cho từng use trường hợp (case / 사례); không nên coi semaphore là thành phần nguyên thủy (primitive / 기본 요소) mặc định cho mọi synchronization.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Read-write khóa (lock / 잠금)** tiếp nhận điểm tựa từ **Semaphore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Seqlock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Read-write khóa (lock / 잠금)
 
 Nếu tải công việc (workload / 워크로드) có nhiều reader và ít writer, reader-writer khóa (lock / 잠금) cho phép nhiều reader cùng truy cập khi không có writer.
@@ -130,6 +147,8 @@ Nếu tải công việc (workload / 워크로드) có nhiều reader và ít wr
 Tuy nhiên loại khóa (lock / 잠금) này không tự động nhanh hơn mutex. Overhead, starvation và cache-line contention có thể khiến lợi ích phụ thuộc tải công việc (workload / 워크로드).
 
 Một thiết kế read-heavy cực lớn có thể phù hợp hơn với RCU.
+
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Seqlock** tiếp nhận điểm tựa từ **Read-write khóa (lock / 잠금)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RCU là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Seqlock
 
@@ -143,6 +162,8 @@ Writer cập nhật chuỗi (sequence / 시퀀스) counter quanh quá trình ghi
 4. nếu thay đổi thì đọc lại.
 
 Reader có thể không cần khối (block / 블록) writer, nhưng phải chấp nhận thử lại (retry / 재시도) và không phù hợp với mọi loại dữ liệu.
+
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **RCU là gì?** tiếp nhận điểm tựa từ **Seqlock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grace period trong RCU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## RCU là gì?
 
@@ -159,6 +180,8 @@ phiên bản cũ chỉ được giải phóng sau khi chắc chắn reader cũ �
 
 Thay vì bắt mọi reader tranh một khóa (lock / 잠금), RCU tối ưu read đường dẫn (path / 경로).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Grace period trong RCU** tiếp nhận điểm tựa từ **RCU là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tham chiếu (reference / 참조) counting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Grace period trong RCU
 
 Sau khi writer thay pointer, vẫn có thể có reader đang giữ tham chiếu (reference / 참조) tới đối tượng (object / 객체) cũ.
@@ -168,6 +191,8 @@ Writer không thể `free()` đối tượng (object / 객체) cũ ngay.
 RCU chờ một **grace period**: khoảng thời gian đủ để các reader trước đó hoàn tất trọng yếu (critical / 중요) section liên quan. Sau đó đối tượng (object / 객체) cũ mới được reclaim an toàn.
 
 Điểm sâu ở đây là synchronization không chỉ là “ai được vào trọng yếu (critical / 중요) section”. Nó còn là **quản lý thời gian tồn tại (lifetime / 수명) của đối tượng (object / 객체) khi reader lockless vẫn có thể giữ tham chiếu (reference / 참조)**.
+
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, sau nội dung của **Grace period trong RCU**, **Tham chiếu (reference / 참조) counting** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서): atomic chưa chắc đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tham chiếu (reference / 참조) counting
 
@@ -180,6 +205,8 @@ Linux dùng nhiều dạng tham chiếu (reference / 참조) counting cho kernel
 Nhưng tham chiếu (reference / 참조) counting không giải quyết mọi race. Nếu luồng thực thi (thread / 스레드) cố tăng count sau khi đối tượng (object / 객체) đã về 0 và đang được free, vẫn cần quy tắc publication/thời gian tồn tại (lifetime / 수명) đúng.
 
 Do đó tham chiếu (reference / 참조) counting và locking thường phối hợp thay vì thay thế hoàn toàn nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서): atomic chưa chắc đủ** tiếp nhận điểm tựa từ **Tham chiếu (reference / 참조) counting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ đệm (cache / 캐시) coherence và false sharing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서): atomic chưa chắc đủ
 
@@ -201,6 +228,8 @@ Nếu CPU khác nhìn pointer trước khi nhìn đầy đủ trường dữ li�
 
 Đây là lý do viết lock-free mã (code / 코드) chính xác khó hơn rất nhiều so với chỉ dùng atomic integer.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Bộ nhớ đệm (cache / 캐시) coherence và false sharing** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서): atomic chưa chắc đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Per-CPU dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bộ nhớ đệm (cache / 캐시) coherence và false sharing
 
 Nhiều CPU cốt lõi (core / 핵심) có bộ nhớ đệm (cache / 캐시) riêng nhưng phải duy trì coherence cho bộ nhớ (memory / 메모리) chia sẻ.
@@ -211,6 +240,8 @@ Ngay cả khi hai biến lô-gic (logic / 논리) khác nhau nhưng nằm cùng 
 
 Vì vậy scalability của kernel không chỉ phụ thuộc số khóa (lock / 잠금); bố cục (layout / 레이아웃) dữ liệu và locality cũng quan trọng.
 
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Bộ nhớ đệm (cache / 캐시) coherence và false sharing** nêu điều cần giải thích; **Per-CPU dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Wait hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Per-CPU dữ liệu (data / 데이터)
 
 Một chiến lược giảm contention là giữ dữ liệu **per-CPU** thay vì dùng một biến toàn cục (global / 전역).
@@ -220,6 +251,8 @@ Ví dụ mỗi CPU có counter riêng rồi tổng hợp khi cần. cập nhật
 Đánh đổi là việc đọc tổng giá trị phức tạp hơn và có thể chỉ nhất quán tương đối tùy ngữ nghĩa (semantics / 의미론).
 
 Đây là mẫu (pattern / 패턴) rất quan trọng trong kernel hiệu năng (performance / 성능).
+
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Per-CPU dữ liệu (data / 데이터)** nêu điều cần giải thích; **Wait hàng đợi (queue / 큐)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Futex: phần lớn khóa (lock / 잠금) ở user-space, kernel chỉ can thiệp khi tranh chấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Wait hàng đợi (queue / 큐)
 
@@ -240,6 +273,8 @@ condition chưa đúng
 Socket read, pipe, thiết bị (device / 장치) I/O và nhiều subsystem sử dụng những ý tưởng tương tự.
 
 Wait hàng đợi (queue / 큐) nối synchronization với scheduler.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Futex: phần lớn khóa (lock / 잠금) ở user-space, kernel chỉ can thiệp khi tranh chấp** tiếp nhận điểm tựa từ **Wait hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deadlock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Futex: phần lớn khóa (lock / 잠금) ở user-space, kernel chỉ can thiệp khi tranh chấp
 
@@ -265,6 +300,8 @@ contended lock
 
 Nếu `strace` cho thấy nhiều `futex()` chờ lâu, đó có thể là dấu hiệu contention ở thời gian chạy (runtime / 런타임)/ứng dụng (application / 애플리케이션), không phải kernel “bị chậm”.
 
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Deadlock** tiếp nhận điểm tựa từ **Futex: phần lớn khóa (lock / 잠금) ở user-space, kernel chỉ can thiệp khi tranh chấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khóa (lock / 잠금) thứ tự (ordering / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Deadlock
 
 Deadlock có thể xảy ra khi nhiều thực thi (execution / 실행) ngữ cảnh (context / 맥락) giữ tài nguyên rồi chờ lẫn nhau.
@@ -282,6 +319,8 @@ Kernel mã (code / 코드) phải dùng quy tắc khóa (lock / 잠금) thứ t�
 
 Ở tầng ứng dụng (application / 애플리케이션), cùng nguyên lý xuất hiện với Java monitor, cơ sở dữ liệu (database / 데이터베이스) row khóa (lock / 잠금) hoặc phân tán (distributed / 분산) khóa (lock / 잠금).
 
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Khóa (lock / 잠금) thứ tự (ordering / 순서)** tiếp nhận điểm tựa từ **Deadlock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Priority inversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khóa (lock / 잠금) thứ tự (ordering / 순서)
 
 Một cách tránh deadlock là định nghĩa thứ tự lấy khóa (lock / 잠금) cố định:
@@ -294,6 +333,8 @@ Nếu mọi đường mã (code / 코드) tuân thủ cùng thứ tự, vòng ch
 
 Đây là ví dụ cho thấy tính đúng đắn (correctness / 정확성) của synchronization là thuộc tính của **toàn bộ giao thức (protocol / 프로토콜)**, không phải của từng khóa (lock / 잠금) riêng lẻ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Priority inversion** tiếp nhận điểm tựa từ **Khóa (lock / 잠금) thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Preemption và trọng yếu (critical / 중요) section** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Priority inversion
 
 Tác vụ (task / 작업) ưu tiên cao có thể bị khối (block / 블록) bởi tác vụ (task / 작업) ưu tiên thấp đang giữ khóa (lock / 잠금). Nếu tác vụ (task / 작업) ưu tiên trung bình liên tục chiếm CPU, tác vụ (task / 작업) thấp khó chạy để bản phát hành (release / 릴리스) khóa (lock / 잠금), khiến tác vụ (task / 작업) cao bị trì hoãn gián tiếp.
@@ -303,6 +344,8 @@ Tác vụ (task / 작업) ưu tiên cao có thể bị khối (block / 블록) b
 Một số hệ thống dùng priority inheritance trong thành phần nguyên thủy (primitive / 기본 요소) phù hợp để giảm vấn đề này.
 
 Khái niệm quan trọng với real-time tải công việc (workload / 워크로드) và latency-sensitive hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Preemption và trọng yếu (critical / 중요) section** tiếp nhận điểm tựa từ **Priority inversion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interrupt disabling không phải khóa (lock / 잠금) tổng quát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Preemption và trọng yếu (critical / 중요) section
 
@@ -314,6 +357,8 @@ Nhưng disable preemption quá lâu làm tăng scheduling độ trễ (latency /
 
 Tương tự với interrupt disable: nó là công cụ mạnh nhưng kéo dài thời gian interrupt bị chặn có thể gây độ trễ (latency / 지연 시간) toàn hệ thống.
 
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Interrupt disabling không phải khóa (lock / 잠금) tổng quát** tiếp nhận điểm tựa từ **Preemption và trọng yếu (critical / 중요) section** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RCU, khóa (lock / 잠금) và scalability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Interrupt disabling không phải khóa (lock / 잠금) tổng quát
 
 Trên máy nhiều CPU, disable interrupt trên CPU hiện tại không ngăn CPU khác truy cập dùng chung (shared / 공유) dữ liệu (data / 데이터).
@@ -321,6 +366,8 @@ Trên máy nhiều CPU, disable interrupt trên CPU hiện tại không ngăn CP
 Do đó mã (code / 코드) SMP vẫn cần synchronization phù hợp.
 
 Điều này cho thấy nhiều kỹ thuật từng đủ trên uniprocessor không đủ trên hệ thống đa cốt lõi (core / 핵심).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Interrupt disabling không phải khóa (lock / 잠금) tổng quát** cho ta quy tắc; **RCU, khóa (lock / 잠금) và scalability** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Quan sát contention từ người dùng (user / 사용자) không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## RCU, khóa (lock / 잠금) và scalability
 
@@ -337,6 +384,8 @@ per-CPU / lockless / RCU
 ```
 
 Không có thành phần nguyên thủy (primitive / 기본 요소) “tốt nhất”. Lựa chọn phụ thuộc read/ghi (write / 쓰기) ratio, sleepability, độ trễ (latency / 지연 시간), thời gian tồn tại (lifetime / 수명) và tính đúng đắn (correctness / 정확성) requirements.
+
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **RCU, khóa (lock / 잠금) và scalability** cho ta quy tắc; **Quan sát contention từ người dùng (user / 사용자) không gian (space / 공간)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ngữ cảnh (context / 맥락) switch tự nguyện và không tự nguyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan sát contention từ người dùng (user / 사용자) không gian (space / 공간)
 
@@ -358,6 +407,8 @@ jcmd <PID> Thread.print
 
 Luồng thực thi (thread / 스레드) dump có thể cho thấy nhiều luồng thực thi (thread / 스레드) BLOCKED trên cùng monitor. Đây là tầng ứng dụng (application / 애플리케이션), nhưng mô hình tư duy (mental model / 사고 모델) contention giống kernel: nhiều thực thi (execution / 실행) ngữ cảnh (context / 맥락) cạnh tranh trạng thái dùng chung (shared state / 공유 상태).
 
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Ngữ cảnh (context / 맥락) switch tự nguyện và không tự nguyện** tiếp nhận điểm tựa từ **Quan sát contention từ người dùng (user / 사용자) không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khóa (lock / 잠금) convoy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngữ cảnh (context / 맥락) switch tự nguyện và không tự nguyện
 
 Một tác vụ (task / 작업) có thể tự nguyện nhường CPU vì chờ khóa (lock / 잠금)/I/O hoặc bị scheduler preempt.
@@ -368,6 +419,8 @@ Con số cao không tự động xấu. Cần đặt cạnh tải công việc (
 
 Một máy chủ (server / 서버) xử lý nhiều blocking I/O tự nhiên có nhiều ngữ cảnh (context / 맥락) switch hơn một vòng tính CPU đơn luồng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **Khóa (lock / 잠금) convoy** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) switch tự nguyện và không tự nguyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thundering herd** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khóa (lock / 잠금) convoy
 
 Nếu nhiều tác vụ (task / 작업) cùng chờ một khóa (lock / 잠금) và sau mỗi lần bản phát hành (release / 릴리스) chỉ một tác vụ (task / 작업) tiến lên rất ngắn rồi lại tranh khóa (lock / 잠금), hệ thống có thể tạo **khóa (lock / 잠금) convoy**.
@@ -376,6 +429,8 @@ Thông lượng (throughput / 처리량) giảm dù CPU vẫn hoạt động m�
 
 Mẫu này cũng xuất hiện ở cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool, synchronized section hoặc toàn cục (global / 전역) hàng đợi (queue / 큐) trong ứng dụng (application / 애플리케이션).
 
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Thundering herd** tiếp nhận điểm tựa từ **Khóa (lock / 잠금) convoy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kernel lockup và watchdog** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thundering herd
 
 Nếu một sự kiện (event / 이벤트) đánh thức quá nhiều waiter nhưng chỉ một hoặc vài waiter có thể thực sự làm việc, các tác vụ (task / 작업) còn lại tốn CPU để wake rồi ngủ lại.
@@ -383,6 +438,8 @@ Nếu một sự kiện (event / 이벤트) đánh thức quá nhiều waiter nh
 Đây là **thundering herd**.
 
 Các API như `epoll` và cơ chế wakeup hiện đại cố giảm vấn đề này trong những use trường hợp (case / 사례) nhất định.
+
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Kernel lockup và watchdog** tiếp nhận điểm tựa từ **Thundering herd** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RCU stall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kernel lockup và watchdog
 
@@ -396,11 +453,15 @@ journalctl -k | grep -Ei 'lockup|stall|hung task|rcu'
 
 Các cảnh báo này không giống ứng dụng (application / 애플리케이션) deadlock thông thường. Chúng cho thấy kernel thực thi (execution / 실행) hoặc CPU progress đang có vấn đề nghiêm trọng hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, **RCU stall** tiếp nhận điểm tựa từ **Kernel lockup và watchdog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## RCU stall
 
 Kernel có thể báo RCU stall nếu grace period không thể tiến triển như dự kiến, ví dụ CPU giữ trạng thái khiến RCU không nhận được quiescent trạng thái (state / 상태) trong thời gian dài.
 
 Đây là dấu hiệu cần xem CPU lockup, interrupt/preemption hoặc kernel/mô-đun (module / 모듈) hành vi (behavior / 동작), không nên xử lý bằng cách tăng hết thời gian chờ (timeout / 타임아웃) một cách mù quáng.
+
+> **Chuyển mạch:** Trong **Đồng thời, khóa và RCU trong Linux kernel**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **RCU stall** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -416,6 +477,8 @@ Synchronization phải giải quyết ba câu hỏi:
 
 Khóa (lock / 잠금) giải quyết phần mutual exclusion. bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) giải quyết visibility/thứ tự (order / 순서). tham chiếu (reference / 참조) counting và RCU giải quyết thời gian tồn tại (lifetime / 수명) trong nhiều thiết kế.
 
+> **Chuyển mạch:** Ở chặng này của **Đồng thời, khóa và RCU trong Linux kernel**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những hiểu lầm phổ biến
 
 **“Atomic nghĩa là thread-safe cho toàn bộ thuật toán.”** Atomic chỉ bảo vệ ngữ nghĩa (semantics / 의미론) của thao tác (operation / 연산) tương ứng; bất biến (invariant / 불변식) nhiều bước có thể vẫn race.
@@ -428,6 +491,8 @@ Khóa (lock / 잠금) giải quyết phần mutual exclusion. bộ nhớ (memory
 
 **“Nhiều ngữ cảnh (context / 맥락) switch chắc chắn là lỗi.”** Phải hiểu blocking mô hình (model / 모델) và tải công việc (workload / 워크로드) trước.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đồng thời, khóa và RCU trong Linux kernel**, sau nội dung của **Những hiểu lầm phổ biến**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Chương này nên được đọc cùng:
@@ -439,4 +504,4 @@ Chương này nên được đọc cùng:
 - [IPC](../04_process/interprocess_communication.md) để nối wait hàng đợi (queue / 큐), futex, socket và event-driven I/O;
 - [Tracing](../09_production/observability_tracing_strace_perf.md) để quan sát contention và off-CPU thời gian (time / 시간).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [cpu privilege exceptions syscall path](./cpu_privilege_exceptions_syscall_path.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

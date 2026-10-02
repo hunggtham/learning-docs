@@ -1,6 +1,6 @@
 # Rendering Hiệu năng (performance / 성능) Đo lường (measurement / 측정) Lab — đo style, bố cục (layout / 레이아웃), paint và composite thay vì đoán
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Rendering Hiệu năng (performance / 성능) Đo lường (measurement / 측정) Lab — đo style, bố cục (layout / 레이아웃), paint và composite thay vì đoán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dấu vết (trace / 추적) A — tương tác (interaction / 상호작용)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Rendering Hiệu năng (performance / 성능) Đo lường (measurement / 측정) Lab — đo style, bố cục (layout / 레이아웃), paint và composite thay vì đoán**. Route đi từ interaction trace → load/update trace → style/layout/paint/composite pipeline → DevTools measurements → hypothesis, evidence và remediation, để performance được đo thay vì suy đoán folklore.
 
 Frontend hiệu năng (performance / 성능) rất dễ bị biến thành folklore:
 

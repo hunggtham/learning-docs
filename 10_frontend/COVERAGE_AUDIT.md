@@ -1,6 +1,6 @@
 # Frontend Coverage Kiểm tra (audit / 감사)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Frontend Coverage Kiểm tra (audit / 감사)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cách đọc trạng thái** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1. Kiểm tra (audit / 감사) theo mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình chung và giới hạn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Frontend Coverage Kiểm tra (audit / 감사)**. Route đi từ domain mental models → boundaries, ownership, ordering và failure → evidence, deployment và artifact → coverage theo track → remediation, để audit đo năng lực frontend chứ không chỉ số file.
 
 Tệp (file / 파일) này kiểm tra `10_frontend/` theo mô hình tư duy (mental model / 사고 모델) cấp lĩnh vực (domain / 도메인), không chỉ theo
 số lượng tệp (file / 파일). Mục tiêu là phát hiện nơi người học có thể biết cú pháp (syntax / 문법) nhưng

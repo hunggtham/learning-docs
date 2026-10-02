@@ -1,6 +1,6 @@
 # XML — Intermediate
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Không gian tên (namespace / 네임스페이스), DTD, XML lược đồ (schema / 스키마), XPath và các mô hình Parser** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **1. Vấn đề name collision và lý do XML không gian tên (namespace / 네임스페이스) xuất hiện** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **XML — Intermediate**. Route đi từ namespaces/name collisions → DTD/XSD validation → XPath queries → DOM/SAX/StAX parser models → lựa chọn parser theo document size and trust boundary.
 
 ## Không gian tên (namespace / 네임스페이스), DTD, XML lược đồ (schema / 스키마), XPath và các mô hình Parser
 
