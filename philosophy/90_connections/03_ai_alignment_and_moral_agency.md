@@ -1,6 +1,6 @@
 # AI Alignment và Moral Agency
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **AI Alignment và Moral Agency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Agency và accountability** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Alignment như bài toán xã hội-kỹ thuật** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **AI Alignment và Moral Agency**. Route đi từ agency/accountability → mục tiêu, preference và reward → robustness, oversight và power → governance xã hội-kỹ thuật, để alignment không bị rút thành bài toán tối ưu kỹ thuật đơn lẻ.
 
 Alignment có ít nhất ba lớp: hệ thống làm đúng mục tiêu (objective / 목표) kỹ thuật, phản ánh preference của người/nhóm liên quan, và hành động theo principle chính đáng trong ngữ cảnh (context / 맥락). Reward tín hiệu (signal / 신호) không đồng nhất với giá trị (value / 값); instruction không bao quát mọi trường hợp biên (edge case / 경계 사례); phản hồi (feedback / 피드백) có thể thiên lệch hoặc bị game.
 

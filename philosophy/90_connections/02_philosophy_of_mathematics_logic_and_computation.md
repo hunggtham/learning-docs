@@ -1,6 +1,6 @@
 # Philosophy of Mathematics, lô-gic (logic / 논리) và Computation
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy of Mathematics, lô-gic (logic / 논리) và Computation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Philosophy of Mathematics, lô-gic (logic / 논리) và Computation** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy of Mathematics, lô-gic (logic / 논리) và Computation**. Route đi từ object/chứng minh → logic và nền tảng toán học → thuật toán, tính tính được và giới hạn → AI/mô hình hình thức, để phân biệt sự đúng trong hệ tiên đề với tính đúng của một mô hình về thế giới.
 
 Mathematics đặt câu hỏi: số và cấu trúc là objects độc lập hay sản phẩm của quy tắc (rule / 규칙)/practice? Platonism nhấn mạnh truth không phụ thuộc người biết; formalism nhấn mạnh manipulation của symbols; structuralism xem đối tượng (object / 객체) qua vị trí trong cấu trúc (structure / 구조); constructivism yêu cầu cách construct/prove rõ hơn.
 

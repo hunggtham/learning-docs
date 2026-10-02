@@ -1,6 +1,6 @@
 # Philosophy — Editorial tiêu chuẩn (standard / 표준)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Philosophy — Editorial tiêu chuẩn (standard / 표준)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Cấu trúc tối thiểu của chapter** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Phân loại claim** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Philosophy — Editorial tiêu chuẩn (standard / 표준)**. Route biên tập đi từ câu hỏi/claim → khái niệm và lập luận → bằng chứng, phản ví dụ và giới hạn → mạch đọc, owner và bàn giao, để mỗi chapter giữ được tính học được và truy nguyên nguồn.
 
 ## 1. Cấu trúc tối thiểu của chapter
 

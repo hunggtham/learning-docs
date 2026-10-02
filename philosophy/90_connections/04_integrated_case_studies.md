@@ -1,6 +1,6 @@
 # Integrated trường hợp (case / 사례) Studies: từ Claim đến quyết định (decision / 결정)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Integrated trường hợp (case / 사례) Studies: từ Claim đến quyết định (decision / 결정)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trường hợp (case / 사례) 1 — AI triage trong bệnh viện** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Trường hợp (case / 사례) 2 — Climate adaptation** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Integrated trường hợp (case / 사례) Studies: từ Claim đến quyết định (decision / 결정)**. Route đi từ claim và stakeholder → mô hình/bằng chứng → uncertainty và trade-off → quyết định, feedback và trách nhiệm qua các case AI triage, climate adaptation và chính sách, để kết nối liên ngành vẫn giữ được audit trail.
 
 ## Trường hợp (case / 사례) 1 — AI triage trong bệnh viện
 

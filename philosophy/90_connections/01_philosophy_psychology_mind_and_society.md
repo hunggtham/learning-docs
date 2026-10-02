@@ -1,6 +1,6 @@
 # Philosophy, Psychology, Mind và Society
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy, Psychology, Mind và Society**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Các đường nối** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy, Psychology, Mind và Society**. Route đi từ trải nghiệm/chủ thể → nhận thức và hành vi → tâm trí, ngôn ngữ và xã hội → chuẩn tắc, thể chế và quyền lực, để tránh giải thích một mức bằng thuật ngữ của mức khác.
 
 Philosophy of mind cung cấp các câu hỏi về consciousness, self, reason và agency; [Psychology](../../psychology/README.md) đưa các câu hỏi đó vào operational definitions, đo lường (measurement / 측정) và bằng chứng (evidence / 증거). Kết quả thực nghiệm có thể bác bỏ một premise hoặc giới hạn một lý thuyết (theory / 이론), nhưng không tự quyết định toàn bộ vấn đề normative về personhood, responsibility hay good life.
 

@@ -1,6 +1,6 @@
 # Philosophy Thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Philosophy Thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Những câu hỏi trung tâm** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Cấu trúc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Philosophy Thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học**. Route học đi từ reasoning/epistemology → metaphysics/science/mind → ethics và social-political philosophy → technology, history và interdisciplinary connections; mỗi nhánh phải nêu rõ khái niệm, lập luận, bằng chứng và giới hạn.
 
 `philosophy/` là nơi sở hữu các câu hỏi nền tảng về tri thức, thực tại, khoa học, tâm trí, đạo đức và đời sống chung. Thư viện không trình bày triết học như danh sách học thuyết để ghi nhớ; mỗi chapter đi theo mạch:
 

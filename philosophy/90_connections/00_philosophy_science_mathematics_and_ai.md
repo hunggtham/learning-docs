@@ -1,6 +1,6 @@
 # Philosophy, Science, Mathematics và AI
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy, Science, Mathematics và AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một vòng lặp chung** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các cầu nối chính** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophy, Science, Mathematics và AI**. Route đi từ claim và mô hình → toán học/đo lường → khoa học và mô phỏng → AI, uncertainty và governance, để mỗi cầu nối chỉ rõ mức mô tả, bằng chứng và giới hạn chuyển giao.
 
 ## Một vòng lặp chung
 
