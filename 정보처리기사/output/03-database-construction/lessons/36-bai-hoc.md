@@ -1,18 +1,26 @@
 # 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
 
+> **Mạch đọc:** [README](../README.md) là owner của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**; đặt bài sau storage/distributed database fundamentals. Từ **학습 목표 (Mục tiêu)** qua **핵심 키워드 (Từ khóa)**, nối replication/partitioning với consistency, availability, latency, fault tolerance và operational cost, rồi dùng **선행·연결 개념 (Kiến thức liên kết)** để cân bằng trade-off theo workload thay vì gọi phân tán là tốt/xấu tuyệt đối.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 분산, 데이터베이스의, 장단점
 
+> **Chuyển mạch:** Ở chặng này của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**에서 만든 기준을 이어받아 **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **197. 분산 데이터베이스의 장�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** và nối nó với **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
 
@@ -54,3 +62,5 @@ Phần “197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
   - Thuật toán thay trang: FIFO, LRU, LFU. Thrashing xảy ra khi lỗi trang quá nhiều.
 
 Điểm chốt của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,18 +1,26 @@
 # 101. 개념적 설계 (Conceptual Design)
 
+> **Mạch đọc:** [README](../README.md) là owner của **101. 개념적 설계 (Conceptual Design)**; đặt bài đầu trong tuyến database design trước logical/physical design. Từ **학습 목표 (Mục tiêu)** sang **핵심 키워드 (Từ khóa)**, nối requirements với entities, attributes, relationships, constraints và conceptual model, rồi dùng **선행·연결 개념 (Kiến thức liên kết)** để chuyển mô hình nghiệp vụ sang logical schema mà chưa khóa mình vào engine.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **101. 개념적 설계 (Conceptual Design)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **101. 개념적 설계 (Conceptual Design)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **102. 논리적 설계 (Logical Design / Data Modeling)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **101. 개념적 설계 (Conceptual Design)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 개념적, 설계
 
+> **Chuyển mạch:** Ở chặng này của **101. 개념적 설계 (Conceptual Design)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **101. 개념적 설계 (Conceptual Design)**을(를) 독립된 암기 항목으로 두지 않고, 이 과목에서 다룰 문제의 출발점으로 삼는다. 먼저 무엇을 설명하는지와 어디까지 적용되는지를 확인한 뒤 세부 규칙으로 들어간다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **101. 개념적 설계 (Conceptual Design)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **101. 개념적 설계 (Conceptual Design)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **101. 개념적 설계 (Conceptual Desi
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **101. 개념적 설계 (Conceptual Design)** và nối nó với **102. 논리적 설계 (Logical Design / Data Modeling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **101. 개념적 설계 (Conceptual Design)**, **101. 개념적 설계 (Conceptual Design)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 101. 개념적 설계 (Conceptual Design)
 
@@ -41,3 +49,5 @@ Phần “101. 개념적 설계 (Conceptual Design)” được nối với nộ
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Khái-Trừu (Khái niệm = Trừu tượng).
 
 Như vậy, **101. 개념적 설계 (Conceptual Design)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **102. 논리적 설계 (Logical Design / Data Modeling)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **101. 개념적 설계 (Conceptual Design)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
