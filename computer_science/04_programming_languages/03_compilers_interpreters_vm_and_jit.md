@@ -1,6 +1,6 @@
 # Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lexing và parsing** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Compilers, interpreters, VM và JIT**. Route đi từ source/lexing/parsing → semantic analysis/IR → interpretation hoặc compilation → VM execution/JIT speculation, để mỗi tầng biến đổi vẫn truy được semantics ban đầu.
 
 Mã nguồn (source code / 소스 코드) phải được biến thành actions ở machine mức (level / 수준). trình biên dịch (compiler / 컴파일러) thiết kế (design / 설계) cho thấy một chuỗi abstractions: văn bản (text / 텍스트) → tokens → cú pháp (syntax / 문법) cây (tree / 트리) → ngữ nghĩa (semantic / 의미적) biểu diễn (representation / 표현) → intermediate biểu diễn (representation / 표현) → optimized mã (code / 코드) → machine/thời gian chạy (runtime / 런타임) thực thi (execution / 실행).
 

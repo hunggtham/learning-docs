@@ -1,6 +1,6 @@
 # Parsing, AST và ngôn ngữ (language / 언어) front-end
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Parsing, AST và ngôn ngữ (language / 언어) front-end**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ bytes đến tokens** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Grammar mô tả cấu trúc hợp lệ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Parsing, AST và language front-ends**. Route đi từ bytes/chars → tokens → grammar/parser → AST/name resolution, để frontend giữ được cả cấu trúc cú pháp lẫn ngữ nghĩa cần cho compiler.
 
 Trình biên dịch (compiler / 컴파일러)/trình thông dịch (interpreter / 인터프리터) không thể trực tiếp “hiểu mã nguồn (source code / 소스 코드)” như văn bản (text / 텍스트) tự do. Nó phải biến character stream thành structured biểu diễn (representation / 표현) theo grammar. Quá trình này nối string algorithms, formal languages, trees, ngữ nghĩa (semantics / 의미론) và lỗi (error / 오류) reporting.
 

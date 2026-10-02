@@ -1,6 +1,6 @@
 # Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lexical phạm vi (scope / 범위)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Scope, closures, functions và control flow**. Route đi từ lexical/dynamic scope → environment và closure capture → call stack/activation record → continuations, để tên, trạng thái và luồng điều khiển được giải thích cùng nhau.
 
 Functions giúp biến computation thành reusable units. Nhưng để hiểu hàm (function / 함수) thật sự, cần biết names được resolved ở đâu, activation trạng thái (state / 상태) sống bao lâu, hàm (function / 함수) giá trị (value / 값) mang theo môi trường (environment / 환경) gì, và điều khiển (control / 제어) quay lại caller thế nào.
 

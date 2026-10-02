@@ -1,6 +1,6 @@
 # Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Kiểu (type / 타입) là một proposition về giá trị (value / 값)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Type systems, generics và polymorphism**. Route đi từ type proposition/typing judgment → generics và variance → subtyping/dispatch → abstraction boundaries, để type safety được phân biệt với business correctness.
 
 Kiểu (type / 타입) thường được học như nhãn `int`, `String`, `boolean`. Nhưng hệ kiểu (type system / 타입 시스템) sâu hơn: nó là một static hoặc động (dynamic / 동적) discipline dùng để phân loại values/expressions và giới hạn operations nhằm loại bỏ một lớp invalid programs hoặc định nghĩa hành vi thời gian chạy (runtime behavior / 런타임 동작) rõ hơn.
 
