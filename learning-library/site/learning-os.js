@@ -7,6 +7,8 @@
     installPrompt: null,
     readerPath: '',
     readerCleanup: () => {},
+    selectionTranslatorInstalled: false,
+    selectionTranslatorCleanup: () => {},
     enhanceQueued: false
   };
 
@@ -124,6 +126,224 @@
     node.classList.add('show');
     clearTimeout(node._timer);
     node._timer = setTimeout(() => node.classList.remove('show'), 2200);
+  }
+
+  function installSelectionTranslator() {
+    if (LOS.selectionTranslatorInstalled) return;
+    LOS.selectionTranslatorInstalled = true;
+
+    const popup = document.createElement('div');
+    popup.id = 'los-translation-popup';
+    popup.className = 'los-translation-popup';
+    popup.setAttribute('role', 'dialog');
+    popup.setAttribute('aria-label', 'Dịch nhanh');
+    popup.setAttribute('aria-hidden', 'true');
+    document.body.append(popup);
+
+    const cache = new Map();
+    const maxLength = 500;
+    let selectionTimer = 0;
+    let requestController = null;
+    let requestId = 0;
+    let current = { text: '', source: '', rect: null };
+
+    const clearPopup = () => {
+      clearTimeout(selectionTimer);
+      requestId += 1;
+      requestController?.abort();
+      requestController = null;
+      current = { text: '', source: '', rect: null };
+      popup.classList.remove('open');
+      popup.setAttribute('aria-hidden', 'true');
+    };
+
+    const sourceLanguageFor = node => {
+      const element = node?.nodeType === Node.ELEMENT_NODE ? node : node?.parentElement;
+      const markdown = element?.closest('.markdown');
+      const declared = markdown?.dataset.language || docByPath(routePath())?.language || 'vi';
+      const first = String(declared).toLowerCase().split(/[-_,\s]+/)[0];
+      return ['vi', 'en', 'ko'].includes(first) ? first : 'auto';
+    };
+    const hasVietnameseCharacters = text => /[ăâđêôơưĂÂĐÊÔƠƯáàảãạấầẩẫậắằẳẵặéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵ]/.test(text);
+    const detectSelectionLanguage = (text, contextLanguage) => {
+      const koreanCount = (text.match(/[가-힣]/g) || []).length;
+      if (koreanCount) return 'ko';
+      if (hasVietnameseCharacters(text)) return 'vi';
+      if (contextLanguage !== 'auto') return contextLanguage;
+      return /[A-Za-z]/.test(text) ? 'en' : 'auto';
+    };
+    const translationTargets = source => source === 'vi'
+      ? [['en', 'English'], ['ko', '한국어']]
+      : source === 'ko'
+        ? [['vi', 'Tiếng Việt'], ['en', 'English']]
+        : source === 'en'
+          ? [['vi', 'Tiếng Việt'], ['ko', '한국어']]
+          : [['vi', 'Tiếng Việt']];
+    const googleTranslateUrl = (text, source, target) => `https://translate.google.com/?sl=${source}&tl=${target}&text=${encodeURIComponent(text)}&op=translate`;
+
+    const selectedReaderText = selection => {
+      if (!selection || selection.isCollapsed || !selection.rangeCount) return null;
+      const elementFromNode = node => node?.nodeType === Node.ELEMENT_NODE ? node : node?.parentElement;
+      const anchor = elementFromNode(selection.anchorNode)?.closest('.markdown');
+      const focus = elementFromNode(selection.focusNode)?.closest('.markdown');
+      if (!anchor || anchor !== focus) return null;
+      const range = selection.getRangeAt(0);
+      if (!anchor.contains(range.commonAncestorContainer)) return null;
+      const startElement = range.startContainer.nodeType === Node.ELEMENT_NODE ? range.startContainer : range.startContainer.parentElement;
+      const endElement = range.endContainer.nodeType === Node.ELEMENT_NODE ? range.endContainer : range.endContainer.parentElement;
+      if (startElement?.closest('pre,code,script,style') || endElement?.closest('pre,code,script,style')) return null;
+      const text = selection.toString().replace(/\s+/g, ' ').trim();
+      if (!text || text.length > maxLength || !/[A-Za-zÀ-ỹ가-힣]/.test(text)) return null;
+      const source = detectSelectionLanguage(text, sourceLanguageFor(anchor));
+      return { text, source, rect: range.getBoundingClientRect() };
+    };
+
+    const positionPopup = rect => {
+      if (!rect || !popup.classList.contains('open')) return;
+      const width = popup.offsetWidth || Math.min(360, innerWidth - 24);
+      const left = Math.max(12, Math.min(innerWidth - width - 12, rect.left + (rect.width / 2) - (width / 2)));
+      const above = rect.top - popup.offsetHeight - 10;
+      const below = rect.bottom + 10;
+      const top = above >= 12 ? above : Math.min(innerHeight - popup.offsetHeight - 12, below);
+      popup.style.left = `${Math.round(left)}px`;
+      popup.style.top = `${Math.max(12, Math.round(top))}px`;
+    };
+
+    const renderPopup = ({ text, source, translations = [], loading = false }) => {
+      const targets = translationTargets(source);
+      popup.replaceChildren();
+      const head = document.createElement('div');
+      head.className = 'los-translation-head';
+      const label = document.createElement('span');
+      label.textContent = 'Dịch nhanh';
+      const close = document.createElement('button');
+      close.type = 'button';
+      close.className = 'los-translation-close';
+      close.setAttribute('aria-label', 'Đóng bản dịch');
+      close.textContent = '×';
+      close.onclick = clearPopup;
+      head.append(label, close);
+
+      const sourceNode = document.createElement('div');
+      sourceNode.className = 'los-translation-source';
+      sourceNode.textContent = text;
+      const results = document.createElement('div');
+      results.className = 'los-translation-results';
+      results.setAttribute('aria-live', 'polite');
+      const byTarget = new Map(translations.map(item => [item.target, item]));
+      targets.forEach(([target, targetLabel]) => {
+        const item = byTarget.get(target);
+        const row = document.createElement('div');
+        row.className = 'los-translation-row';
+        const rowLabel = document.createElement('span');
+        rowLabel.className = 'los-translation-label';
+        rowLabel.textContent = targetLabel;
+        const rowValue = document.createElement('span');
+        rowValue.className = `los-translation-value${item?.error ? ' error' : ''}`;
+        rowValue.textContent = loading ? 'Đang dịch…' : (item?.value || 'Không có bản dịch.');
+        row.append(rowLabel, rowValue);
+        results.append(row);
+      });
+
+      const footer = document.createElement('div');
+      footer.className = 'los-translation-footer';
+      const note = document.createElement('span');
+      note.textContent = 'Dịch máy';
+      const fallback = document.createElement('a');
+      fallback.href = googleTranslateUrl(text, source, targets[0][0]);
+      fallback.target = '_blank';
+      fallback.rel = 'noreferrer';
+      fallback.textContent = 'Mở Google Translate ↗';
+      footer.append(note, fallback);
+      popup.append(head, sourceNode, results, footer);
+      popup.classList.add('open');
+      popup.setAttribute('aria-hidden', 'false');
+      requestAnimationFrame(() => positionPopup(current.rect));
+    };
+
+    const readTranslation = async (text, source, target, signal) => {
+      const key = `${source}:${target}:${text}`;
+      if (cache.has(key)) return { target, value: cache.get(key) };
+      const query = encodeURIComponent(text);
+      const urls = [
+        `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${source}&tl=${target}&dt=t&q=${query}`,
+        `https://translate.google.com/translate_a/single?client=gtx&sl=${source}&tl=${target}&dt=t&q=${query}`
+      ];
+      let lastError;
+      for (const url of urls) {
+        try {
+          const response = await fetch(url, { signal, credentials: 'omit' });
+          if (!response.ok) throw new Error(`translation request failed (${response.status})`);
+          const payload = await response.json();
+          const value = Array.isArray(payload?.[0])
+            ? payload[0].map(part => part?.[0] || '').join('').trim()
+            : '';
+          if (!value) throw new Error('empty translation');
+          cache.set(key, value);
+          return { target, value };
+        } catch (error) {
+          if (error?.name === 'AbortError') throw error;
+          lastError = error;
+        }
+      }
+      return { target, value: 'Không thể dịch lúc này.', error: true, detail: lastError };
+    };
+
+    const translate = async ({ text, source }) => {
+      requestController?.abort();
+      const controller = new AbortController();
+      requestController = controller;
+      const thisRequest = ++requestId;
+      const targets = translationTargets(source);
+      try {
+        const translations = await Promise.all(targets.map(([target]) => readTranslation(text, source, target, controller.signal)));
+        if (thisRequest !== requestId || controller.signal.aborted || current.text !== text || current.source !== source) return;
+        renderPopup({ text, source, translations });
+      } catch (error) {
+        if (error?.name !== 'AbortError' && thisRequest === requestId && current.text === text) {
+          renderPopup({ text, source, translations: targets.map(([target]) => ({ target, value: 'Không thể dịch lúc này.', error: true })) });
+        }
+      } finally {
+        if (requestController === controller) requestController = null;
+      }
+    };
+
+    const showSelection = () => {
+      const selected = selectedReaderText(window.getSelection());
+      if (!selected) {
+        clearPopup();
+        return;
+      }
+      current = selected;
+      renderPopup({ text: selected.text, source: selected.source, loading: true });
+      translate(selected);
+    };
+    const scheduleSelection = () => {
+      clearTimeout(selectionTimer);
+      selectionTimer = setTimeout(showSelection, 100);
+    };
+    const onPointerDown = event => { if (!popup.contains(event.target)) clearPopup(); };
+    const onSelectionChange = () => {
+      if (window.getSelection()?.isCollapsed) clearPopup();
+      else scheduleSelection();
+    };
+    const onScroll = () => { if (popup.classList.contains('open')) clearPopup(); };
+    const onResize = () => positionPopup(current.rect);
+    const onKeydown = event => { if (event.key === 'Escape' && popup.classList.contains('open')) clearPopup(); };
+    document.addEventListener('pointerdown', onPointerDown);
+    document.addEventListener('selectionchange', onSelectionChange);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    document.addEventListener('keydown', onKeydown);
+    LOS.selectionTranslatorCleanup = () => {
+      clearPopup();
+      popup.remove();
+      document.removeEventListener('pointerdown', onPointerDown);
+      document.removeEventListener('selectionchange', onSelectionChange);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+      document.removeEventListener('keydown', onKeydown);
+    };
   }
 
   async function loadSearchIndex() {
@@ -821,6 +1041,7 @@
       LOS.docs = (await response.json()).documents || [];
     } catch { return; }
     installTopbar();
+    installSelectionTranslator();
     scheduleEnhance();
     const app = document.querySelector('#app');
     if (app) new MutationObserver(scheduleEnhance).observe(app, { childList: true, subtree: true });
