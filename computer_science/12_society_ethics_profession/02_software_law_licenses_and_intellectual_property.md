@@ -1,6 +1,6 @@
 # Software law, licenses và intellectual thuộc tính (property / 속성)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Software law, licenses và intellectual thuộc tính (property / 속성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Copyright và software** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Open-source license** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Software law, licenses và intellectual property**. Route đi từ copyright/software → open-source license/compatibility → copyleft/SaaS → patents/trademarks → data/model/API terms → compliance controls, để quyền sử dụng gắn với artifact và phân phối.
 
 Nhà phát triển (developer / 개발자) thường bản sao (copy / 복사) gói (package / 패키지), mã (code / 코드) snippet, mô hình (model / 모델)/dữ liệu (data / 데이터) hoặc deploy dịch vụ (service / 서비스) mà không nhận ra đang đi qua legal contracts/licensing boundaries. Chapter này không thay tư vấn pháp lý; mục tiêu là mô hình tư duy (mental model / 사고 모델) để biết lúc nào technical choice có legal ràng buộc (constraint / 제약조건) cần kiểm tra.
 

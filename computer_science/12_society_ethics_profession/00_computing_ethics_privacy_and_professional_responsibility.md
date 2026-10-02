@@ -1,6 +1,6 @@
 # Computing ethics, privacy và professional responsibility
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Computing ethics, privacy và professional responsibility**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Technical quyết định (decision / 결정) có giá trị (value / 값) các giả định (assumptions / 가정들)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Privacy không chỉ là secrecy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Computing ethics, privacy và professional responsibility**. Route đi từ value/assumption trong technical decisions → privacy as control → data minimization/consent/purpose limitation → professional responsibility → dual-use và escalation, để trách nhiệm gắn với lựa chọn cụ thể.
 
 Software changes what people can know, do and điều khiển (control / 제어). Vì vậy engineer không chỉ chịu trách nhiệm “mã (code / 코드) đúng spec”; cần xem ai bị ảnh hưởng, harm nào có thể xảy ra và quyền/consent nào đang được dùng. Ethics không thay law, nhưng law cũng không bao phủ mọi responsible quyết định (decision / 결정).
 

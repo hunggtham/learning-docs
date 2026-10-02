@@ -1,6 +1,6 @@
 # Computing, Society, Ethics & Profession — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Computing, Society, Ethics & Profession — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Computing, Society, Ethics & Profession — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Computing, Society, Ethics & Profession — lĩnh vực (domain / 도메인) Hub**. Route học đi từ ethics/privacy → data governance/bias → law/licenses → sustainability/accessibility, để quyết định kỹ thuật được đặt trong tác động xã hội và trách nhiệm nghề nghiệp.
 
 Foundation nằm tại [`../basic/12_society_ethics_profession/`](../basic/12_society_ethics_profession/): privacy, professional responsibility, độ lệch (bias / 편향)/quản trị (governance / 거버넌스), law/licenses, sustainability và khả năng tiếp cận (accessibility / 접근성).
 
