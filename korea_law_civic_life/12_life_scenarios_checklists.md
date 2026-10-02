@@ -1,6 +1,6 @@
 # 12. Các tình huống đời sống và checklist tra cứu
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **12. Các tình huống đời sống và checklist tra cứu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Công ty trả thiếu lương hoặc chưa trả lương** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Làm overtime nhưng không hiểu cách tính** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **12. Các tình huống đời sống và checklist tra cứu**. Route đi từ hồ sơ sự kiện và vấn đề lao động → overtime, nghỉ phép và chấm dứt việc → nhà ở, y tế, visa và hợp đồng → cơ quan có thẩm quyền, bằng chứng và nguồn chính thức → bước hành động, để checklist phục vụ tình huống thật.
 
 ## 1. Công ty trả thiếu lương hoặc chưa trả lương
 

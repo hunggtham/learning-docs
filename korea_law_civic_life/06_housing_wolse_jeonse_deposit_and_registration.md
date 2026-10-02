@@ -1,6 +1,6 @@
 # 06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Ba khái niệm nền tảng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trước khi ký: kiểm tra chủ thể và bất động sản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản**. Route đi từ wolse/jeonse/deposit → kiểm tra chủ thể và bất động sản → đăng ký, ưu tiên và chứng cứ → rủi ro hợp đồng, chấm dứt và hoàn tiền → nguồn chính thức, để người thuê biết việc nào cần làm trước khi ký.
 
 ## 1. Ba khái niệm nền tảng
 

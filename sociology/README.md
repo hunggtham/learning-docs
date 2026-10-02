@@ -1,5 +1,7 @@
 # Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)
 
+> **Mạch đọc:** README này là owner của **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**. Route đi từ sociological imagination và structure → culture, groups, networks và organizations → stratification, institutions và population patterns → phương pháp nghiên cứu và cross-links, để xã hội học giữ ranh giới với psychology, economics và history.
+
 `sociology/` là lĩnh vực (domain / 도메인) chuẩn gốc (canonical / 정본) về cách xã hội (social / 사회적) cấu trúc (structure / 구조), culture, groups, networks, organizations, stratification và institutions tạo ra các mẫu (pattern / 패턴) vượt ra ngoài từng cá nhân. Sociology ở đây không thay Psychology, Economics hay Lịch sử (history / 이력); nó tập trung vào **relations, positions, norms, power, organizations và population-level patterns** và cross-link các lĩnh vực (domain / 도메인) khác khi cơ chế (mechanism / 메커니즘) nằm ngoài ranh giới (boundary / 경계) của Sociology.
 
 ## Thứ tự học chuẩn gốc (canonical / 정본)
@@ -13,9 +15,9 @@
 
 Sau cốt lõi (core / 핵심) tuyến (route / 경로), dùng [Cross-domain Integration Bridge](./90_connections/00_sociology_psychology_economics_history_and_methods.md) để xác định khi nào một phenomenon nên được giải thích ở mức (level / 수준) Psychology, Sociology, Economics, Lịch sử (history / 이력)/Geography hay Research Methods/ Econometrics. Cầu nối (bridge / 브리지) này không tạo lý thuyết (theory / 이론) mới; nó giữ quyền sở hữu (ownership / 소유권) và bằng chứng (evidence / 증거) category rõ khi chuyển lĩnh vực (domain / 도메인).
 
-## Trục học (learning spine / 학습 축)
-Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trục học (learning spine / 학습 축)** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với Psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Trục học (learning spine / 학습 축)
 
 ```text
 Individual biography
@@ -31,21 +33,31 @@ population / historical change
 
 Sociological lập luận (reasoning / 추론) đi qua levels chứ không giải thích mọi thứ bằng “society”. Một claim tốt phải xác định actors, positions, relations, rules, resources, sanctions và phản hồi (feedback / 피드백) mechanisms cụ thể.
 
+> **Chuyển mạch:** Ở chặng này của **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trục học (learning spine / 학습 축)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Psychology** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ranh giới (boundary / 경계) với Psychology
 
 [Psychology](../psychology/README.md) chủ yếu giải cognition, emotion, học tập (learning / 학습), personality và hành vi (behavior / 동작) ở mức individual. Sociology giải xã hội (social / 사회적) relations, status, groups, organizations, institutions và population patterns. Các chủ đề như định danh (identity / 식별자), peer effects, workplace hành vi (behavior / 동작) hay prejudice thường cần cả hai levels.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Psychology** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Economics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Research Methods** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) với Economics
 
 [Economics](../economics/README.md) giữ incentives, allocation, markets, welfare, chính sách (policy / 정책) và econometric identification. Sociology bổ sung networks, norms, status, organizational routines, xã hội (social / 사회적) closure, institutional meaning và relational power. Labor, education, inequality, organizations và development là các cầu nối (bridge / 브리지) topics rõ nhất.
 
+> **Chuyển mạch:** Trong **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Economics** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Research Methods** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với Lịch sử (history / 이력) và Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ranh giới (boundary / 경계) với Research Methods
 
 [Research Methods](../research_methods/README.md) giữ methodology dùng chung: research question/thiết kế (design / 설계), đo lường (measurement / 측정), sampling, survey, qualitative methods, mixed methods, systematic rà soát (review / 검토), ethics và reproducibility. Sociology chỉ giữ **sociological concepts, mechanisms và domain-specific examples**; không lặp generic methodology.
 
+> **Chuyển mạch:** Ở chặng này của **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Research Methods** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Lịch sử (history / 이력) và Geography** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ranh giới (boundary / 경계) với Lịch sử (history / 이력) và Geography
 
 [World History](../world_history/README.md) và [Korean History](../korean_history/README.md) giữ chronology, actors và sự kiện (event / 이벤트) chuỗi (sequence / 시퀀스). [World Geography](../world_geography/README.md) giữ spatial/environmental các hệ thống (systems / 시스템들). Sociology dùng lịch sử (history / 이력)/geography khi cần giải institutional thay đổi (change / 변경), di chuyển (migration / 마이그레이션), segregation, urbanization và comparative xã hội (social / 사회적) cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ranh giới (boundary / 경계) với Lịch sử (history / 이력) và Geography** đã nêu tiêu chí phân biệt, còn **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cốt lõi (core / 핵심) analytical questions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)
 
@@ -60,6 +72,8 @@ Historical-comparative inference
 ```
 
 Similarity among peers không tự chứng minh peer influence; persistent inequality không tự chứng minh discrimination; organizational chính sách (policy / 정책) trên giấy không tự chứng minh hiện thực (implementation / 구현); cultural explanation phải chỉ ra transmission/sanctions thay vì dùng “culture” như residual category.
+
+> **Chuyển mạch:** Trong **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **Cốt lõi (core / 핵심) analytical questions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mục tiêu cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cốt lõi (core / 핵심) analytical questions
 
@@ -76,6 +90,10 @@ Khi đọc một xã hội (social / 사회적) phenomenon, hỏi:
 9. phản hồi (feedback / 피드백), diffusion hoặc đường dẫn (path / 경로) dependence nào sustain mẫu (pattern / 패턴)?
 10. bằng chứng (evidence / 증거) hỗ trợ (support / 지원) descriptive, interpretive hay nhân quả (causal / 인과적) claim mạnh đến đâu?
 
+> **Chuyển mạch:** Ở chặng này của **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mục tiêu cuối** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) analytical questions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mục tiêu cuối
 
 Sau cốt lõi (core / 핵심) tuyến (route / 경로) này, người học phải có thể chuyển từ một observation cá nhân sang explanation có xã hội (social / 사회적) cơ chế (mechanism / 메커니즘); phân biệt individual attribute với mạng (network / 네트워크)/institutional ràng buộc (constraint / 제약조건); đọc inequality bằng lớp (class / 클래스)/status/wealth/power chứ không một chỉ số (metric / 지표) duy nhất; hiểu formal organization khác actual practice; và phân tích xã hội (social / 사회적) thay đổi (change / 변경) mà không rơi vào technological determinism hoặc một tuyến tính (linear / 선형) modernization story.
+
+> **Bàn giao:** Sau **Mục tiêu cuối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

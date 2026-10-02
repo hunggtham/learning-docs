@@ -1,6 +1,6 @@
 # 01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hiến pháp (헌법) là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tam quyền và cơ chế phân công quyền lực** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước**. Route đi từ Hiến pháp → thứ bậc luật và tam quyền → cơ quan, quyền và giới hạn → áp dụng vào lao động, nhà ở, visa và đời sống → cách kiểm tra văn bản hiện hành, để cấu trúc nhà nước dẫn tới quyền và nghĩa vụ cụ thể.
 
 ## 1. Hiến pháp (헌법) là gì?
 

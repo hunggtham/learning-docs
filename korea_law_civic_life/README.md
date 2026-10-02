@@ -1,6 +1,6 @@
 # Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phạm vi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bản đồ nội dung** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**. Route đi từ phạm vi và bản đồ nội dung → nhà nước, pháp luật, lao động, nhà ở, visa và đời sống → tình huống/checklist → cơ quan, nguồn chính thức và cập nhật, để người đọc đi từ hệ thống tới hành động cụ thể.
 
 > **Korea Law, Civic & Everyday Life thư viện kiến thức (knowledge library / 지식 라이브러리)**
 >
