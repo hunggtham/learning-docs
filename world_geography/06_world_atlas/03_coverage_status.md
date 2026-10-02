@@ -1,7 +1,6 @@
 # Coverage Status — World Atlas
 
-> **Mạch đọc:** Đặt **Coverage Status — World Atlas** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Coverage phải tách inventory khỏi học tập (learning / 학습) content** sang **Inventory coverage**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Coverage status — World Atlas**. Route đi từ inventory coverage → entry completeness → regional balance → link/source checks → remediation queue, để coverage status phản ánh việc cần làm thật.
 
 ## Coverage phải tách inventory khỏi học tập (learning / 학습) content
 
@@ -12,15 +11,13 @@ Sự tồn tại của `.md` tệp (file / 파일) không đồng nghĩa nội d
 - **tham chiếu (reference / 참조)**: compact legacy ghi chú (note / 노트), không tính completion.
 - **học tập (learning / 학습) profile**: đạt Definition of Done và dùng được như chapter ứng dụng.
 
-
-> **Chuyển mạch:** Từ **Coverage phải tách inventory khỏi học tập (learning / 학습) content**, ta sang **Inventory coverage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Coverage Status — World Atlas**, **Inventory coverage** tiếp nhận điểm tựa từ **Coverage phải tách inventory khỏi học tập (learning / 학습) content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **High-value học tập (learning / 학습) profiles hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Inventory coverage
 
 Inventory toàn cầu đã rộng theo baseline M49 sử dụng trong dự án (project / 프로젝트). Không cần sinh thêm tệp (file / 파일) để chứng minh completeness của danh sách.
 
-
-> **Chuyển mạch:** Từ **Inventory coverage**, ta sang **High-value học tập (learning / 학습) profiles hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Coverage Status — World Atlas**, **High-value học tập (learning / 학습) profiles hiện tại** tiếp nhận điểm tựa từ **Inventory coverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planned priority — không tạo skeleton trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## High-value học tập (learning / 학습) profiles hiện tại
 
@@ -75,8 +72,7 @@ Australia vừa được promote và liên kết trực tiếp với regional Oc
 
 Một số Africa profiles đã qua độ sâu (depth / 깊이) pass và có giá trị trường hợp (case / 사례) study về Sahel, Nile, Congo Basin, Rift, tài nguyên (resource / 자원) corridors và landlockedness. Tuy nhiên toàn Africa Atlas không được gắn nhãn completed theo tệp (file / 파일) count; QA từng tệp (file / 파일) vẫn cần theo Definition of Done.
 
-
-> **Chuyển mạch:** Từ **High-value học tập (learning / 학습) profiles hiện tại**, ta sang **Planned priority — không tạo skeleton trước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage Status — World Atlas**, **Planned priority — không tạo skeleton trước** tiếp nhận điểm tựa từ **High-value học tập (learning / 학습) profiles hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Legacy short profiles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Planned priority — không tạo skeleton trước
 
@@ -88,8 +84,7 @@ Candidates có học tập (learning / 학습) giá trị (value / 값) tiếp t
 
 Planned nghĩa là chưa completed. Nếu tệp (file / 파일) legacy đã tồn tại thì giữ tham chiếu (reference / 참조)/Planned cho tới khi được promote bằng full chapter.
 
-
-> **Chuyển mạch:** Từ **Planned priority — không tạo skeleton trước**, ta sang **Legacy short profiles** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Coverage Status — World Atlas**, **Legacy short profiles** tiếp nhận điểm tựa từ **Planned priority — không tạo skeleton trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Completion chỉ số (metric / 지표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Legacy short profiles
 
@@ -105,8 +100,7 @@ Mỗi tệp (file / 파일) sau kiểm tra (audit / 감사) nhận một trong b
 
 Không cần giữ một skeleton chỉ để “mỗi quốc gia có một tệp (file / 파일)”.
 
-
-> **Chuyển mạch:** Từ **Legacy short profiles**, ta sang **Completion chỉ số (metric / 지표)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Coverage Status — World Atlas**, **Completion chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **Legacy short profiles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Profile cổng chất lượng (quality gate / 품질 게이트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Completion chỉ số (metric / 지표)
 
@@ -121,8 +115,7 @@ Theo dõi:
 - số legacy skeleton được classify/cleanup;
 - broken relative links.
 
-
-> **Chuyển mạch:** Từ **Completion chỉ số (metric / 지표)**, ta sang **Profile cổng chất lượng (quality gate / 품질 게이트)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage Status — World Atlas**, **Profile cổng chất lượng (quality gate / 품질 게이트)** tiếp nhận điểm tựa từ **Completion chỉ số (metric / 지표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Profile cổng chất lượng (quality gate / 품질 게이트)
 
@@ -132,5 +125,6 @@ Học tập (learning / 학습) profile phải giải thích:
 
 Nếu chỉ có capital, climate, population và vài đoạn economy thì vẫn là tham chiếu (reference / 참조).
 
-
 Xem [Atlas README](./README.md) và [Core Coverage Audit](../CORE_COVERAGE_AUDIT.md).
+
+> **Bàn giao:** Sau **Profile cổng chất lượng (quality gate / 품질 게이트)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

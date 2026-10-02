@@ -1,32 +1,28 @@
 # Saint Pierre and Miquelon
 
-> **Mạch đọc:** Đặt **Saint Pierre and Miquelon** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khung không gian** sang **Khí hậu và biển**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Saint Pierre and Miquelon**. Route đi từ island/coastal climate → fisheries/settlement → French/North Atlantic connections → jurisdiction and mobility, để lãnh thổ nhỏ nối với mạng biển.
 
 ## Khung không gian
 Saint Pierre and Miquelon là quần đảo nhỏ gần Newfoundland, nằm trong môi trường Bắc Đại Tây Dương lạnh và nhiều sương mù.
 
-
-> **Chuyển mạch:** Từ **Khung không gian**, ta sang **Khí hậu và biển** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Saint Pierre and Miquelon**, **Khí hậu và biển** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng lưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khí hậu và biển
 Dòng biển lạnh, bão ngoại nhiệt đới và thời tiết biển biến động khiến điều kiện hàng hải có tính mùa rõ. Không gian biển có ý nghĩa lớn hơn diện tích đất đối với lịch sử kinh tế địa phương.
 
-
-> **Chuyển mạch:** Từ **Khí hậu và biển**, ta sang **Mạng lưới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Saint Pierre and Miquelon**, **Mạng lưới** tiếp nhận điểm tựa từ **Khí hậu và biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mạng lưới
 Quy mô nhỏ làm các khu định cư, cảng và sân bay có tính nút (node / 노드) rất cao: một số ít hạ tầng đảm nhiệm phần lớn luồng người và hàng hóa.
 
-
-> **Chuyển mạch:** Từ **Mạng lưới**, ta sang **Rủi ro** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Saint Pierre and Miquelon**, **Rủi ro** tiếp nhận điểm tựa từ **Mạng lưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro
 Bão mùa đông, xói lở, sóng lớn và phụ thuộc chuỗi cung ứng bên ngoài là các rủi ro chính.
 
-
-> **Chuyển mạch:** Từ **Rủi ro**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Saint Pierre and Miquelon**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 Đây là **micro-territory Bắc Đại Tây Dương**, nơi địa lý biển, tính mùa và khoảng cách quyết định phần lớn đời sống không gian.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [BMU bermuda](./BMU_bermuda.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
