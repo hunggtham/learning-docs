@@ -1,18 +1,26 @@
 # 네트워크 관련 장비 (Network Equipment)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **네트워크 관련 장비 (Network Equipment)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy nối hub, switch, router và gateway với tầng mạng và kiểu chuyển tiếp để hiểu mỗi thiết bị thay đổi đường đi thế nào.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **네트워크 관련 장비 (Network Equipment)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **네트워크 관련 장비 (Network Equipment)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **네트워크 구조 및 기술 (Network Structures & Technologies)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **네트워크 관련 장비 (Network Equipment)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 네트워크, 관련, 장비
 
+> **Chuyển mạch:** Ở chặng này của **네트워크 관련 장비 (Network Equipment)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**에서 만든 기준을 이어받아 **네트워크 관련 장비 (Network Equipment)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **네트워크 관련 장비 (Network Equipment)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **네트워크 관련 장비 (Network Equipment)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **네트워크 관련 장비 (Network Eq
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **네트워크 관련 장비 (Network Equipment)** và nối nó với **네트워크 구조 및 기술 (Network Structures & Technologies)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **네트워크 관련 장비 (Network Equipment)**, **네트워크 관련 장비 (Network Equipment)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 네트워크 관련 장비 (Network Equipment)
 
@@ -49,3 +57,5 @@ Phần “네트워크 관련 장비 (Network Equipment)” được nối với
 - **Gateway**: Tầng 4-7 (Cổng nối các mạng khác biệt).
 
 Như vậy, **네트워크 관련 장비 (Network Equipment)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **네트워크 구조 및 기술 (Network Structures & Technologies)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **네트워크 관련 장비 (Network Equipment)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

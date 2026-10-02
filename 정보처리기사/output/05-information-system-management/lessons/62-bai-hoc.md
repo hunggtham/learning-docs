@@ -1,18 +1,26 @@
 # 프로세스와 스레드 (Process and Thread)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **프로세스와 스레드 (Process and Thread)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy so sánh không gian tài nguyên của process với luồng thực thi của thread để hiểu lợi ích song song và chi phí chuyển đổi.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **프로세스와 스레드 (Process and Thread)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **프로세스와 스레드 (Process and Thread)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **프로세스와 스레드 (Process and Thread)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 프로세스와, 스레드
 
+> **Chuyển mạch:** Ở chặng này của **프로세스와 스레드 (Process and Thread)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **프로세스 동작 특성 (Process Behavior: Locality, Working Set, Thrashing)**에서 만든 기준을 이어받아 **프로세스와 스레드 (Process and Thread)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **프로세스와 스레드 (Process and Thread)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로세스와 스레드 (Process and Thread)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **프로세스와 스레드 (Process and
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **프로세스와 스레드 (Process and Thread)** và nối nó với **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **프로세스와 스레드 (Process and Thread)**, **읽는 방법 (Cách đọc)** xác định đầu vào; **프로세스와 스레드 (Process and Thread)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 프로세스와 스레드 (Process and Thread)
 
@@ -82,3 +90,5 @@ Các ý về **3. 스레드 (Thread)** được nối với ví dụ để chuy�
 Như vậy, **3. 스레드 (Thread)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
 Ta có thể khép mục **프로세스와 스레드 (Process and Thread)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **주요 스케줄링 알고리즘 (Major Scheduling Algorithms)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+> **Bàn giao:** Sau **프로세스와 스레드 (Process and Thread)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

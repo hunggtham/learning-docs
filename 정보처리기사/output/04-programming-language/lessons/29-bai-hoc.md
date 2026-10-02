@@ -1,18 +1,26 @@
 # A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy đối chiếu quy tắc so sánh của Java với nhánh điều khiển Python qua giá trị, kiểu dữ liệu và luồng thực thi.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 Deep, Dive, Java, 비교, 연산과, Python, 제어, 흐름
 
+> **Chuyển mạch:** Ở chặng này của **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **264 - 274. 파이썬 문법 (Python Syntax & Basics)**에서 만든 기준을 이어받아 **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Deep, Dive, Java, 비교, 연산과, Python, 제어, 흐름
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** và nối nó với **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
 
@@ -100,3 +108,5 @@ Các bullet của **자주 혼동하는 판별 포인트** đang nén nhiều ý
 Như vậy, **자주 혼동하는 판별 포인트** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
 Ta có thể khép mục **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+> **Bàn giao:** Sau **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
