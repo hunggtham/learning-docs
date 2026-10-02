@@ -1,6 +1,6 @@
 # Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và Testing trong Machine học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và Testing trong Machine học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba vai trò cơ bản** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Why random split works sometimes** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Training, validation và testing trong machine learning**. Route đi từ data split roles → random/time/group split → validation tuning → held-out testing → leakage and drift checks, để metric phản ánh generalization thật.
 
 Một mô hình (model / 모델) có thể fit dữ liệu huấn luyện (training data / 학습 데이터) rất tốt nhưng không có nghĩa nó sẽ hoạt động tốt trên future dữ liệu (data / 데이터). Vì vậy Machine học tập (learning / 학습) cần tách dữ liệu (data / 데이터) theo **vai trò statistical**, không chỉ theo folder: huấn luyện (training / 학습) dùng để học parameters; kiểm tra hợp lệ (validation / 검증) dùng để lựa chọn mô hình (model / 모델)/hyperparameters/threshold; kiểm thử (test / 테스트) dùng để estimate hiệu năng (performance / 성능) sau selection.
 

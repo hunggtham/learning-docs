@@ -1,6 +1,6 @@
 # Tuyến tính (linear / 선형) Regression: từ quan hệ tuyến tính tới mô hình dự đoán
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tuyến tính (linear / 선형) Regression: từ quan hệ tuyến tính tới mô hình dự đoán**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài toán: từ nhiều yếu tố tới một đại lượng cần dự đoán** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Ma trận (matrix / 행렬) form** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Linear regression**. Route đi từ feature/target relationship → matrix formulation → least squares/regularization → residual diagnostics → prediction uncertainty, để mô hình tuyến tính nối với dữ liệu và giả định.
 
 Tuyến tính (linear / 선형) Regression (선형 회귀 / hồi quy tuyến tính) là một trong những mô hình (model / 모델) đơn giản nhất trong Machine học tập (learning / 학습), nhưng giá trị của nó không nằm ở việc “dễ”. Nó là nơi nhiều idea cốt lõi gặp nhau: biểu diễn (representation / 표현) bằng véc-tơ (vector / 벡터), parameterized hàm (function / 함수), mất mát (loss / 손실), tối ưu hóa (optimization / 최적화), probabilistic các giả định (assumptions / 가정들), regularization, độ lệch (bias / 편향)–variance và interpretability.
 

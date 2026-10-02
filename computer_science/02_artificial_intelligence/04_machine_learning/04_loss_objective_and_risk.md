@@ -1,6 +1,6 @@
 # Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Mất mát (loss / 손실), mục tiêu (objective / 목표) và rủi ro (risk / 위험) trong Machine học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ prediction tới measurable lỗi (error / 오류)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Mất mát (loss / 손실) và probabilistic modeling** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Loss, objective và risk trong machine learning**. Route đi từ prediction/error → loss design → probabilistic interpretation → empirical/expected risk → decision metric, để thứ model tối ưu không bị nhầm với thứ product cần.
 
 Machine học tập (learning / 학습) không học một cách mơ hồ. Muốn mô hình (model / 모델) thay đổi parameters theo hướng có ích, ta cần biến câu hỏi “mô hình (model / 모델) đang làm tốt đến đâu?” thành một đại lượng có thể tính được. Từ đây xuất hiện ba concept dễ bị trộn lẫn: **hàm mất mát (loss function / 손실 함수)**, **mục tiêu (objective / 목표) hàm (function / 함수)** và **rủi ro (risk / 위험)**.
 

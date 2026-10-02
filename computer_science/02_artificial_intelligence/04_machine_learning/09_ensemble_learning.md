@@ -1,6 +1,6 @@
 # Ensemble học tập (learning / 학습): nhiều mô hình (model / 모델) yếu thành một hệ thống mạnh hơn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ensemble học tập (learning / 학습): nhiều mô hình (model / 모델) yếu thành một hệ thống mạnh hơn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao averaging có thể giảm variance?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bagging** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ensemble learning**. Route đi từ bias/variance aggregation → bagging/random forests → boosting/residual focus → stacking/blending → calibration and compute cost, để nhiều model cải thiện error bằng cơ chế rõ ràng.
 
 Ensemble học tập (learning / 학습) bắt đầu từ một observation: một mô hình (model / 모델) đơn lẻ có thể mắc lỗi do noise, mẫu (sample / 표본) variation hoặc limitation của hàm (function / 함수) lớp (class / 클래스). Nếu kết hợp nhiều các mô hình (models / 모델들) có lỗi không hoàn toàn giống nhau, aggregate prediction có thể ổn định và chính xác hơn.
 

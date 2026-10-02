@@ -1,6 +1,6 @@
 # Machine học tập (learning / 학습) là gì?
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Machine học tập (learning / 학습) là gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ tường minh (explicit / 명시적) rules tới learned ánh xạ (mapping / 매핑)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Một formal học tập (learning / 학습) bài toán (problem / 문제)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **What is machine learning**. Route đi từ explicit rules → learned mapping → formal learning problem → data/objective/generalization, để “học” được phân biệt với ghi nhớ hay hard-code.
 
 **Machine học tập (learning / 학습)** nghiên cứu cách xây dựng các hệ thống (systems / 시스템들) cải thiện hiệu năng (performance / 성능) trên một tác vụ (task / 작업) bằng dữ liệu (data / 데이터) hoặc experience thay vì nhà phát triển (developer / 개발자) phải encode toàn bộ hành vi (behavior / 동작) bằng rules cố định.
 

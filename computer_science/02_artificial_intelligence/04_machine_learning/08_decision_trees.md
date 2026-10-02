@@ -1,6 +1,6 @@
 # Quyết định (decision / 결정) Trees: học bằng cách chia không gian thành các vùng
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quyết định (decision / 결정) Trees: học bằng cách chia không gian thành các vùng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ partition tới prediction** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Greedy huấn luyện (training / 학습)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Decision trees**. Route đi từ partition/prediction → greedy split criteria → depth/pruning → categorical/missing handling → interpretability/variance, để cây được đánh giá bằng cả fit và stability.
 
 Cây quyết định (decision tree / 의사결정 트리) tiếp cận prediction theo cách khác mô hình tuyến tính (linear model / 선형 모델) và k-NN. Thay vì dùng một weighted sum toàn cục hoặc so khoảng cách, cây (tree / 트리) liên tục đặt câu hỏi về tính năng (feature / 기능) để chia dữ liệu (data / 데이터) thành các vùng ngày càng homogeneous.
 

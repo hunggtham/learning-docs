@@ -1,6 +1,6 @@
 # Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao tuyến tính (linear / 선형) Regression không phù hợp trực tiếp cho nhị phân (binary / 이진) classification?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Odds và log-odds** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Logistic regression**. Route đi từ linear score → odds/log-odds → sigmoid probability → likelihood/cross-entropy → threshold/calibration, để classification xác suất được nối với decision cost.
 
 Logistic Regression (로지스틱 회귀 / hồi quy logistic) có tên chứa “regression” nhưng thường được dùng cho **classification**. Ý tưởng trung tâm rất đơn giản: trước hết tính một tuyến tính (linear / 선형) score, sau đó biến score đó thành probability-like đầu ra (output / 출력) bằng sigmoid.
 

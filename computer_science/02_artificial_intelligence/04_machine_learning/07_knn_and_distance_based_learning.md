@@ -1,6 +1,6 @@
 # k-Nearest Neighbors và Distance-Based học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **k-Nearest Neighbors và Distance-Based học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Classification bằng neighborhood** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao tính năng (feature / 기능) scaling quan trọng?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **k-NN và distance-based learning**. Route đi từ distance/metric → neighborhood vote/regression → feature scaling → k/curse of dimensionality → approximate retrieval, để locality được đọc cùng chi phí và noise.
 
 k-Nearest Neighbors (k-NN / k-최근접 이웃 / k láng giềng gần nhất) dựa trên một intuition rất tự nhiên: những điểm gần nhau trong một biểu diễn (representation / 표현) không gian (space / 공간) thường có đầu ra (output / 출력) giống nhau. Thay vì học một parametric hàm (function / 함수) rõ ràng, k-NN giữ dữ liệu huấn luyện (training data / 학습 데이터) và đưa ra prediction dựa trên các neighbors gần nhất khi suy luận (inference / 추론).
 

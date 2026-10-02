@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터), Features và Labels trong Machine học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터), Features và Labels trong Machine học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đơn vị (unit / 단위) of observation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tính năng (feature / 기능)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data, features và labels trong machine learning**. Route đi từ observation unit → feature construction → label semantics → leakage/missingness → train-serving consistency, để chất lượng dữ liệu được nối với hành vi model.
 
 Machine học tập (learning / 학습) học từ dữ liệu (data / 데이터), nhưng “dữ liệu (data / 데이터)” không phải một material trung tính. Dataset là kết quả của đo lường (measurement / 측정), logging, sampling, labeling và chính sách (policy / 정책). Nếu những tiến trình (process / 프로세스) này sai, mô hình (model / 모델) có thể tối ưu rất tốt một biểu diễn (representation / 표현) méo của reality.
 

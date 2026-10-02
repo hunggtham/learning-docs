@@ -1,6 +1,6 @@
 # Học tập (learning / 학습) bài toán (problem / 문제) và Inductive độ lệch (bias / 편향)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Học tập (learning / 학습) bài toán (problem / 문제) và Inductive độ lệch (bias / 편향)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **From dữ liệu (data / 데이터) to hypothesis** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Why finite dữ liệu (data / 데이터) cannot determine everything** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Learning problem và inductive bias**. Route đi từ data/hypothesis → finite-sample ambiguity → inductive assumptions → hypothesis space → generalization, để bias được hiểu như điều kiện cần cho học chứ không chỉ là lỗi.
 
 Machine học tập (learning / 학습) chỉ có finite observations nhưng phải predict beyond observations. Đây là một logical gap: vô số functions có thể fit cùng finite huấn luyện (training / 학습) set nhưng hành vi (behavior / 동작) hoàn toàn khác ở unseen points. Vì vậy **học tập (learning / 학습) luôn cần inductive độ lệch (bias / 편향)** — các giả định (assumptions / 가정들) khiến thuật toán (algorithm / 알고리즘) ưu tiên một số hypotheses hơn số khác.
 
