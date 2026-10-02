@@ -1,7 +1,6 @@
 # Vũ trụ sơ khai, vật chất tối và năng lượng tối
 
-> **Mạch đọc:** Đọc **Vũ trụ sơ khai, vật chất tối và năng lượng tối** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Big Bang không phải một vụ nổ tại một điểm trong không gian** sang **Phương trình Friedmann**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**. Route đi từ expanding spacetime → Friedmann dynamics → thermal history → dark matter structure growth → dark energy acceleration, để cosmology nối phương trình với bằng chứng quan sát.
 
 Vũ trụ sơ khai (early universe / 초기 우주) là chế độ nóng và đậm đặc nơi sự giãn nở của không-thời gian, vật lý hạt và nhiệt động lực học cùng quyết định tiến hóa của Vũ trụ.
 
@@ -14,6 +13,8 @@ Vũ trụ học hiện đại mô tả chính hình học không-thời gian đa
 Trong xấp xỉ đồng nhất và đẳng hướng ở quy mô lớn, sự giãn nở được mô tả bằng hệ số tỉ lệ `a(t)`.
 
 Các thiên hà xa không nên được hình dung như mảnh vỡ bay từ một tâm duy nhất vào một không gian trống có sẵn. Mỗi người quan sát comoving đều thấy các thiên hà xa rời nhau theo cùng một quy luật giãn nở lớn-scale.
+
+> **Chuyển mạch:** Trong **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Phương trình Friedmann** tiếp nhận điểm tựa từ **Big Bang không phải một vụ nổ tại một điểm trong không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình liên tục và cách mật độ thay đổi theo a** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương trình Friedmann
 
@@ -37,6 +38,8 @@ Trong đó:
 Phương trình có hình thức gợi nhớ cân bằng năng lượng, nhưng ý nghĩa đầy đủ đến từ thuyết tương đối rộng chứ không phải cơ học vụ nổ Newton.
 
 Đơn vị của `H` là nghịch đảo thời gian. Vì vậy `1/H` cung cấp một thang thời gian vũ trụ đặc trưng, dù tuổi thực của Vũ trụ còn phụ thuộc lịch sử `H(t)`.
+
+> **Chuyển mạch:** Ở chặng này của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Phương trình liên tục và cách mật độ thay đổi theo a** tiếp nhận điểm tựa từ **Phương trình Friedmann** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Redshift và hệ số tỉ lệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương trình liên tục và cách mật độ thay đổi theo `a`
 
@@ -91,6 +94,8 @@ Với `w=-1`,
 
 Do các thành phần thay đổi theo `a` khác nhau, thành phần chi phối Vũ trụ cũng thay đổi theo thời đại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Redshift và hệ số tỉ lệ** tiếp nhận điểm tựa từ **Phương trình liên tục và cách mật độ thay đổi theo a** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lịch sử nhiệt của Vũ trụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Redshift và hệ số tỉ lệ
 
 Với photon truyền trong nền vũ trụ giãn nở,
@@ -103,6 +108,8 @@ Với photon truyền trong nền vũ trụ giãn nở,
 Bước sóng photon tăng cùng hệ số tỉ lệ.
 
 Ở redshift nhỏ, quan hệ có thể gần giống Doppler cổ điển. Ở redshift lớn, không nên dùng trực tiếp công thức Doppler không tương đối tính để diễn giải. Cosmological redshift phản ánh hình học và lịch sử giãn nở của không-thời gian.
+
+> **Chuyển mạch:** Trong **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Lịch sử nhiệt của Vũ trụ** tiếp nhận điểm tựa từ **Redshift và hệ số tỉ lệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Big Bang nucleosynthesis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lịch sử nhiệt của Vũ trụ
 
@@ -122,6 +129,8 @@ vũ trụ nóng, ion hóa
 
 Khi Vũ trụ đủ nóng, vật chất tồn tại dưới dạng plasma ion hóa. Khi nguội, hạt nhân nhẹ hình thành; sau đó electron kết hợp với hạt nhân trung hòa và photon có thể truyền tự do xa hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Big Bang nucleosynthesis** gom các mảnh từ **Lịch sử nhiệt của Vũ trụ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Recombination và nền vi sóng vũ trụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Big Bang nucleosynthesis
 
 Trong vài phút đầu, nhiệt độ và mật độ cho phép phản ứng hạt nhân tạo chủ yếu:
@@ -136,6 +145,8 @@ Dự đoán abundance phụ thuộc mật độ baryon và tốc độ phản �
 Sự phù hợp giữa abundance nguyên thủy quan sát được và mô hình nucleosynthesis là một bằng chứng độc lập cho Vũ trụ sơ khai nóng.
 
 Các nguyên tố nặng hơn không được tạo chủ yếu trong Big Bang vì Vũ trụ nguội và giãn quá nhanh, đồng thời có các bottleneck hạt nhân. Chúng được tổng hợp về sau trong sao và các sự kiện bùng nổ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Recombination và nền vi sóng vũ trụ** gom các mảnh từ **Big Bang nucleosynthesis** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Vật chất tối: biết qua hấp dẫn nhưng chưa biết hạt vi mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Recombination và nền vi sóng vũ trụ
 
@@ -157,6 +168,8 @@ Phổ công suất anisotropy chứa các acoustic peak. Vị trí và độ cao
 
 Đây là ví dụ đẹp: dao động giống âm thanh trong plasma sơ khai được đọc lại từ bầu trời microwave hàng tỷ năm sau.
 
+> **Chuyển mạch:** Trong **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Vật chất tối: biết qua hấp dẫn nhưng chưa biết hạt vi mô** tiếp nhận điểm tựa từ **Recombination và nền vi sóng vũ trụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật chất tối và hình thành cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vật chất tối: biết qua hấp dẫn nhưng chưa biết hạt vi mô
 
 Bằng chứng cho thành phần hấp dẫn không phát sáng đáng kể đến từ nhiều thang:
@@ -177,6 +190,8 @@ Có nhiều ứng viên hạt mới, nhưng chưa có định danh vi mô đư�
 
 Các mô hình hấp dẫn sửa đổi cũng được nghiên cứu. Một mô hình thay thế phải giải thích đồng thời toàn bộ tập quan sát, không chỉ một đường cong quay riêng lẻ.
 
+> **Chuyển mạch:** Ở chặng này của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Vật chất tối và hình thành cấu trúc** tiếp nhận điểm tựa từ **Vật chất tối: biết qua hấp dẫn nhưng chưa biết hạt vi mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng tối và giãn nở tăng tốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vật chất tối và hình thành cấu trúc
 
 Vật chất tối lạnh có áp suất hiệu dụng nhỏ trên nhiều thang vũ trụ học quan trọng, nên có thể bắt đầu kết tụ hấp dẫn sớm hơn baryon trong một số thời kỳ.
@@ -184,6 +199,8 @@ Vật chất tối lạnh có áp suất hiệu dụng nhỏ trên nhiều thang
 Các halo vật chất tối tạo giếng thế; khí baryon rơi vào, shock, làm lạnh và sau đó hình thành sao cùng thiên hà.
 
 Mô phỏng cấu trúc lớn tiến hóa các điều kiện ban đầu dưới hấp dẫn và sự giãn nở để so sánh cosmic web, halo và clustering quan sát được.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Năng lượng tối và giãn nở tăng tốc** tiếp nhận điểm tựa từ **Vật chất tối và hình thành cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ tới hạn và tham số mật độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Năng lượng tối và giãn nở tăng tốc
 
@@ -205,6 +222,8 @@ Nếu áp suất đủ âm, biểu thức trong ngoặc có thể làm `\ddot a>
 
 Không nên hình dung năng lượng tối như một “lực đẩy” cục bộ giữa hai vật. Nó là thành phần của tensor năng lượng–động lượng ảnh hưởng động lực giãn nở của không-thời gian ở quy mô vũ trụ.
 
+> **Chuyển mạch:** Trong **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Mật độ tới hạn và tham số mật độ** tiếp nhận điểm tựa từ **Năng lượng tối và giãn nở tăng tốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inflation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mật độ tới hạn và tham số mật độ
 
 Mật độ tới hạn được định nghĩa
@@ -223,6 +242,8 @@ Các `\Omega` cho vật chất, bức xạ, năng lượng tối và curvature g
 
 Lưu ý `\rho_c` thay đổi theo `H(t)`, nên `\Omega_i` cũng có thể thay đổi theo thời gian dù quy luật scaling của `\rho_i` đã biết.
 
+> **Chuyển mạch:** Ở chặng này của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Inflation** tiếp nhận điểm tựa từ **Mật độ tới hạn và tham số mật độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Baryogenesis và bất đối xứng vật chất–phản vật chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Inflation
 
 Inflation là giai đoạn giãn nở tăng tốc rất sớm được đề xuất để giải quyết một số bài toán điều kiện ban đầu của cosmology.
@@ -236,6 +257,8 @@ Nó giúp giải thích:
 Inflation là một khung phần mềm (framework / 프레임워크) thành công về nhiều mặt nhưng cơ chế vi mô cụ thể và trường gây inflation vẫn là chủ đề nghiên cứu.
 
 Không nên trình bày một inflation mô hình (model / 모델) cụ thể như lời giải duy nhất đã được chứng minh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Baryogenesis và bất đối xứng vật chất–phản vật chất** tiếp nhận điểm tựa từ **Inflation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neutrino trong vũ trụ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Baryogenesis và bất đối xứng vật chất–phản vật chất
 
@@ -251,6 +274,8 @@ Mô hình Chuẩn chứa một số thành phần này nhưng trong các kịch 
 
 Đây là một cầu nối mở giữa cosmology và vật lý hạt.
 
+> **Chuyển mạch:** Trong **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Neutrino trong vũ trụ học** tiếp nhận điểm tựa từ **Baryogenesis và bất đối xứng vật chất–phản vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương lai của Vũ trụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Neutrino trong vũ trụ học
 
 Neutrino relic ảnh hưởng cả lịch sử giãn nở và hình thành cấu trúc.
@@ -258,6 +283,8 @@ Neutrino relic ảnh hưởng cả lịch sử giãn nở và hình thành cấu
 Do có khối lượng nhỏ và free-streaming, neutrino làm giảm clustering ở một số thang.
 
 Dữ liệu vũ trụ học vì vậy có thể ràng buộc tổng khối lượng neutrino theo cách bổ sung cho thí nghiệm phòng lab.
+
+> **Chuyển mạch:** Ở chặng này của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Tương lai của Vũ trụ** tiếp nhận điểm tựa từ **Neutrino trong vũ trụ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền áp dụng và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tương lai của Vũ trụ
 
@@ -269,6 +296,8 @@ Nếu phương trình trạng thái của dark năng lượng (energy / 에너�
 
 Dữ liệu hiện tại ràng buộc nhiều mô hình nhưng không cho phép nói rằng bản chất vi mô của dark năng lượng (energy / 에너지) đã được hiểu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Tương lai của Vũ trụ** đã nêu tiêu chí phân biệt, còn **Miền áp dụng và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Miền áp dụng và giới hạn
 
 Phương trình Friedmann ở trên giả sử Vũ trụ đồng nhất và đẳng hướng ở quy mô lớn. Nó không mô tả trực tiếp cấu trúc cục bộ như thiên hà hoặc cụm thiên hà.
@@ -276,6 +305,8 @@ Phương trình Friedmann ở trên giả sử Vũ trụ đồng nhất và đ�
 `\Lambda CDM` là mô hình hiện tượng học rất thành công nhưng không đồng nghĩa với việc ta đã biết hạt dark matter hoặc cơ chế microscopic của dark năng lượng (energy / 에너지).
 
 Các suy luận vũ trụ học còn phụ thuộc mô hình (model / 모델), calibration, selection tác động (effect / 효과) và tổ hợp dataset. Vì vậy tham số tốt nhất luôn cần đi cùng bất định (uncertainty / 불확실성) và giả định mô hình.
+
+> **Chuyển mạch:** Trong **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Miền áp dụng và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -291,6 +322,8 @@ early hot universe
 ```
 
 Vật chất tối và năng lượng tối là tên cho các hiệu ứng/thành phần cần thiết trong mô hình quan sát hiện tại; tên gọi không đồng nghĩa với việc bản chất vi mô đã được xác định.
+
+> **Chuyển mạch:** Ở chặng này của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -310,10 +343,12 @@ Không nên hình dung như vậy. Các hệ liên kết như nguyên tử, hệ
 
 Chỉ đúng xấp xỉ ở `z` nhỏ. Ở `z` lớn phải dùng mô hình cosmological distance–redshift.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vũ trụ sơ khai, vật chất tối và năng lượng tối**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Thuyết tương đối rộng](../07_relativity/01_general_relativity.md), [Thiên hà và vũ trụ học](01_galaxies_cosmology.md), [Cơ học thống kê](../04_thermal_statistical/03_ensembles_partition_functions.md).
 
 **Liên hệ tiếp:** [Bất ổn hấp dẫn và hình thành cấu trúc](04_gravitational_instability_structure_formation.md), [Mô hình Chuẩn](../09_atomic_nuclear_particle/03_particle_standard_model.md), [Trường lượng tử](../09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md), [Suy luận dữ liệu](../12_experimental_computational/03_data_inference_inverse_problems.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 stars compact objects](./00_stars_compact_objects.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

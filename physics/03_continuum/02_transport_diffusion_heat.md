@@ -1,7 +1,6 @@
 # Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)
 
-> **Mạch đọc:** Đọc **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Một cấu trúc lặp lại: độ dốc (gradient / 기울기) tạo thông lượng** sang **Định luật Fick và khuếch tán**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo gradient**. Route đi từ gradient → flux constitutive law → Fick/Fourier conduction → conservation equation → diffusion timescale/boundaries, để vận chuyển nối vi mô với trường liên tục.
 
 ## Một cấu trúc lặp lại: độ dốc (gradient / 기울기) tạo thông lượng
 
@@ -18,6 +17,8 @@ Cấu trúc chung là
 Dấu âm nói dòng đi theo hướng làm giảm độ dốc (gradient / 기울기).
 
 Ý tưởng này nối cơ học chất lưu, nhiệt động lực học, hóa học, bán dẫn, vật lý vật liệu và cả một số mô hình dữ liệu ngẫu nhiên.
+
+> **Chuyển mạch:** Trong **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Định luật Fick và khuếch tán** tiếp nhận điểm tựa từ **Một cấu trúc lặp lại: độ dốc (gradient / 기울기) tạo thông lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ bảo toàn tới phương trình khuếch tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Định luật Fick và khuếch tán
 
@@ -37,6 +38,8 @@ Nếu `c` đo số hạt trên một đơn vị thể tích, `\mathbf J` có đ�
 ```text
 particles/(m²·s).
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Từ bảo toàn tới phương trình khuếch tán** tiếp nhận điểm tựa từ **Định luật Fick và khuếch tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghiệm của một nguồn điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ bảo toàn tới phương trình khuếch tán
 
@@ -73,6 +76,8 @@ Nếu `D` phụ thuộc vị trí hoặc nồng độ, không được kéo nó 
 =\nabla\cdot(D\nabla c).
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Từ bảo toàn tới phương trình khuếch tán** nêu điều cần giải thích; **Nghiệm của một nguồn điểm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Random walk và nguồn gốc vi mô của scaling \sqrt t** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nghiệm của một nguồn điểm
 
 Trong không gian 1D vô hạn, nếu ban đầu tất cả hạt tập trung gần `x=0`, nghiệm chuẩn hóa của phương trình khuếch tán là Gaussian:
@@ -98,6 +103,8 @@ Do đó thang khoảng cách khuếch tán là
 Muốn khuếch tán xa gấp 10 lần cần thời gian khoảng 100 lần.
 
 Đây là lý do khuếch tán cực hiệu quả ở thang tế bào nhưng rất chậm nếu phải vận chuyển vật chất nhiều mét mà không có dòng đối lưu.
+
+> **Chuyển mạch:** Trong **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Nghiệm của một nguồn điểm** nêu điều cần giải thích; **Random walk và nguồn gốc vi mô của scaling \sqrt t** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dẫn nhiệt và định luật Fourier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Random walk và nguồn gốc vi mô của scaling `\sqrt t`
 
@@ -135,6 +142,8 @@ D\sim\frac{a^2}{\tau}
 bỏ qua hệ số phụ thuộc số chiều.
 
 Khuếch tán vĩ mô vì vậy có thể nổi lên từ chuyển động ngẫu nhiên vi mô và bảo toàn hạt.
+
+> **Chuyển mạch:** Ở chặng này của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Random walk và nguồn gốc vi mô của scaling \sqrt t** nêu điều cần giải thích; **Dẫn nhiệt và định luật Fourier** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thời gian khuếch tán qua một chiều dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dẫn nhiệt và định luật Fourier
 
@@ -175,6 +184,8 @@ với
 
 Một vật có `k` cao dẫn nhiệt mạnh, nhưng tốc độ thay đổi nhiệt độ còn phụ thuộc cả mật độ và nhiệt dung. Vì vậy thermal conductivity và thermal diffusivity không phải cùng một đại lượng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Thời gian khuếch tán qua một chiều dài** tiếp nhận điểm tựa từ **Dẫn nhiệt và định luật Fourier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển động lượng và độ nhớt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thời gian khuếch tán qua một chiều dài
 
 Từ
@@ -190,6 +201,8 @@ t_D\sim\frac{L^2}{\alpha}.
 ```
 
 Quan hệ `L^2` rất quan trọng trong kỹ thuật (engineering / 엔지니어링): làm một chi tiết dày gấp đôi có thể làm thời gian cân bằng nhiệt tăng gần bốn lần nếu cơ chế vẫn là dẫn nhiệt thuần.
+
+> **Chuyển mạch:** Trong **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Vận chuyển động lượng và độ nhớt** tiếp nhận điểm tựa từ **Thời gian khuếch tán qua một chiều dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Advection và diffusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vận chuyển động lượng và độ nhớt
 
@@ -212,6 +225,8 @@ cũng có đơn vị `m^2/s`.
 
 Sự giống đơn vị giữa `D`, `\alpha` và `\nu` không phải ngẫu nhiên: cả ba đều mô tả tốc độ một đại lượng được san bằng trong không gian bởi vận chuyển (transport / 전송) vi mô.
 
+> **Chuyển mạch:** Ở chặng này của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Advection và diffusion** tiếp nhận điểm tựa từ **Vận chuyển động lượng và độ nhớt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số Péclet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Advection và diffusion
 
 Nếu môi trường còn có dòng vận tốc `\mathbf v`, nồng độ không chỉ khuếch tán mà còn bị mang theo dòng.
@@ -230,6 +245,8 @@ Hai cơ chế khác nhau:
 
 - advection vận chuyển profile theo dòng có hướng;
 - diffusion làm profile lan rộng và trơn hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Số Péclet** tiếp nhận điểm tựa từ **Advection và diffusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drift và diffusion trong bán dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Số Péclet
 
@@ -259,6 +276,8 @@ Một hệ có thể diffusion-dominated ở thang nhỏ nhưng advection-domina
 
 Đây là ví dụ điển hình của tư duy số vô thứ nguyên.
 
+> **Chuyển mạch:** Trong **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Drift và diffusion trong bán dẫn** tiếp nhận điểm tựa từ **Số Péclet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ Einstein** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drift và diffusion trong bán dẫn
 
 Dòng hạt tải trong bán dẫn có cả thành phần drift do điện trường và diffusion do độ dốc (gradient / 기울기) nồng độ.
@@ -276,6 +295,8 @@ với dấu cụ thể phụ thuộc loại hạt tải và quy ước dòng đi
 Trong tiếp giáp P–N, diffusion ban đầu do chênh nồng độ tạo vùng điện tích không gian. Điện trường bên trong sinh drift ngược lại. Ở cân bằng, hai cơ chế triệt tiêu dòng ròng.
 
 Do đó vận chuyển (transport / 전송) không phải chủ đề tách biệt; nó là nền của electronics.
+
+> **Chuyển mạch:** Ở chặng này của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Quan hệ Einstein** tiếp nhận điểm tựa từ **Drift và diffusion trong bán dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) conditions quyết định bài toán vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ Einstein
 
@@ -296,6 +317,8 @@ D=\mu_e\frac{k_BT}{q}
 cho hạt tải không suy biến trong điều kiện thích hợp.
 
 Đây là một dạng của quan hệ thăng giáng–tiêu tán: cùng coupling vi mô gây drag cũng quyết định độ mạnh của diffusion nhiệt.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Quan hệ Einstein** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) conditions quyết định bài toán vận chuyển (transport / 전송)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Steady trạng thái (state / 상태) không có nghĩa không có dòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ranh giới (boundary / 경계) conditions quyết định bài toán vận chuyển (transport / 전송)
 
@@ -332,6 +355,8 @@ Trong heat transfer, ranh giới (boundary / 경계) điều kiện (condition /
 
 Nếu đặt ranh giới (boundary / 경계) điều kiện (condition / 조건) sai, solver có thể hội tụ rất đẹp tới nghiệm của **một bài toán khác**.
 
+> **Chuyển mạch:** Trong **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Ranh giới (boundary / 경계) conditions quyết định bài toán vận chuyển (transport / 전송)** đã nêu tiêu chí phân biệt, còn **Steady trạng thái (state / 상태) không có nghĩa không có dòng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Vận chuyển (transport / 전송) coefficients phụ thuộc trạng thái vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Steady trạng thái (state / 상태) không có nghĩa không có dòng
 
 Nếu
@@ -345,6 +370,8 @@ hệ ở trạng thái dừng.
 Nhưng `\mathbf J` không nhất thiết bằng 0.
 
 Một độ dốc (gradient / 기울기) nhiệt ổn định qua thanh kim loại có thể duy trì thông lượng nhiệt không đổi. Đây là trạng thái dừng không cân bằng: profile không đổi theo thời gian nhưng năng lượng vẫn liên tục đi qua hệ.
+
+> **Chuyển mạch:** Ở chặng này của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Vận chuyển (transport / 전송) coefficients phụ thuộc trạng thái vật liệu** tiếp nhận điểm tựa từ **Steady trạng thái (state / 상태) không có nghĩa không có dòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vận chuyển (transport / 전송) coefficients phụ thuộc trạng thái vật liệu
 
@@ -367,6 +394,8 @@ q_i=-k_{ij}\partial_jT.
 
 Do đó dùng một hệ số hằng chỉ là xấp xỉ trong một miền vận hành.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Liên hệ với Hóa học** tiếp nhận điểm tựa từ **Vận chuyển (transport / 전송) coefficients phụ thuộc trạng thái vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학) và mô phỏng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với Hóa học
 
 Diffusion là nền của:
@@ -381,6 +410,8 @@ Diffusion là nền của:
 Nếu phản ứng hóa học nhanh hơn nhiều diffusion, tốc độ quan sát được có thể bị giới hạn bởi việc reactant tới được vùng phản ứng, không phải bởi kinetic barrier của phản ứng.
 
 Các số vô thứ nguyên như Damköhler so sánh reaction timescale với vận chuyển (transport / 전송) timescale.
+
+> **Chuyển mạch:** Trong **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학) và mô phỏng** tiếp nhận điểm tựa từ **Liên hệ với Hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền áp dụng và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학) và mô phỏng
 
@@ -410,6 +441,8 @@ Nếu timestep quá lớn, mô phỏng có thể dao động và phát nổ dù 
 
 Do đó numerical stability là tính chất của scheme, không phải bằng chứng hệ vật lý bất ổn.
 
+> **Chuyển mạch:** Ở chặng này của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학) và mô phỏng** đã nêu tiêu chí phân biệt, còn **Miền áp dụng và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Miền áp dụng và giới hạn
 
 Định luật Fick và Fourier là quan hệ tuyến tính gần cân bằng và giả sử cục bộ (local / 로컬) equilibrium đủ tốt.
@@ -417,6 +450,8 @@ Do đó numerical stability là tính chất của scheme, không phải bằng 
 Ở thang rất nhỏ hoặc thời gian cực ngắn, vận chuyển (transport / 전송) có thể không còn khuếch tán cổ điển. Trong ballistic vận chuyển (transport / 전송), mean free đường dẫn (path / 경로) có thể so sánh kích thước thiết bị.
 
 Khi độ dốc (gradient / 기울기) rất lớn, vật liệu phi tuyến hoặc có bộ nhớ (memory / 메모리), flux có thể không còn tỉ lệ tức thời với độ dốc (gradient / 기울기).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Miền áp dụng và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -433,6 +468,8 @@ Từ đó sinh ra evolution equation.
 Một câu tóm tắt hữu ích là:
 
 > mất cân bằng cục bộ tạo dòng; bảo toàn biến dòng đó thành sự tiến hóa của trường.
+
+> **Chuyển mạch:** Trong **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -452,10 +489,12 @@ Chưa đủ. Tốc độ cân bằng nhiệt còn phụ thuộc `\rho c_p`, hìn
 
 Không. Nó có thể phụ thuộc nhiệt độ, nồng độ và cấu trúc vi mô.
 
+> **Chuyển mạch:** Ở chặng này của **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Gradient và PDE](../00_foundations/03_mathematical_language.md), [PDE và điều kiện biên](../00_foundations/05_pde_boundary_green_tensors.md), [Nhiệt động lực học](../04_thermal_statistical/00_thermodynamics.md).
 
 **Liên hệ tiếp:** [Động lực ngẫu nhiên](../04_thermal_statistical/04_stochastic_nonequilibrium.md), [Thăng giáng–tiêu tán](../04_thermal_statistical/07_linear_response_fluctuation_dissipation.md), [Thiết bị bán dẫn](../10_condensed_matter_devices/01_semiconductors_devices.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 fluids](./00_fluids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

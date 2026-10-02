@@ -1,7 +1,6 @@
 # Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen
 
-> **Mạch đọc:** Đọc **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ nguyên lý tương đương đến hình học** sang **Cục bộ phẳng không có nghĩa toàn cục phẳng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thuyết tương đối rộng: equivalence principle, curvature, geodesics và black holes**. Route đi từ local inertial frames → metric/curvature → geodesic motion → Einstein field equations → horizons/global geometry, để hấp dẫn trở thành hình học động.
 
 Thuyết tương đối rộng (General Relativity / 일반상대성이론) thay đổi cách ta hiểu hấp dẫn: thay vì xem hấp dẫn chỉ là một lực nằm trên nền không gian–thời gian cố định, lý thuyết cho chỉ số (metric / 지표) của không-thời gian trở thành một trường động lực học chịu ảnh hưởng của năng lượng và động lượng.
 
@@ -56,6 +55,8 @@ và
 
 Điều này gợi ý hấp dẫn liên quan tới cấu trúc của hệ quy chiếu và hình học không-thời gian, chứ không chỉ là một force trường dữ liệu (field / 필드) kiểu Newton.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Cục bộ phẳng không có nghĩa toàn cục phẳng** tiếp nhận điểm tựa từ **Từ nguyên lý tương đương đến hình học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ số (metric / 지표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cục bộ phẳng không có nghĩa toàn cục phẳng
 
 Ta có thể chọn tọa độ rơi tự do để làm các Christoffel symbols biến mất tại một điểm.
@@ -75,6 +76,8 @@ curvature / tidal gravity
 ```
 
 Một elevator nhỏ có thể gần như không cảm thấy gravity, nhưng hai vật rơi cách nhau một khoảng vẫn có thể hội tụ hoặc phân kỳ.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **Cục bộ phẳng không có nghĩa toàn cục phẳng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Geodesic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chỉ số (metric / 지표)
 
@@ -101,6 +104,8 @@ geodesic
 ```
 
 Trong special relativity, chỉ số (metric / 지표) Minkowski là cố định. Trong GR, chỉ số (metric / 지표) là một trường dữ liệu (field / 필드) cần được giải từ Einstein equation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Geodesic** tiếp nhận điểm tựa từ **Chỉ số (metric / 지표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao phi hành gia trên quỹ đạo thấy không trọng lượng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Geodesic
 
@@ -134,6 +139,8 @@ Geodesic equation có thể được suy ra bằng extremizing proper thời gia
 
 Điều này tương tự principle of stationary hành động (action / 동작) trong mechanics, nhưng hành động (action / 동작) bây giờ được xây từ spacetime hình học (geometry / 기하학).
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Vì sao phi hành gia trên quỹ đạo thấy không trọng lượng?** tiếp nhận điểm tựa từ **Geodesic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Geodesic deviation: độ cong đo được bằng tidal motion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao phi hành gia trên quỹ đạo thấy không trọng lượng?
 
 Phi hành gia trên ISS vẫn ở trong trường hấp dẫn mạnh đáng kể.
@@ -143,6 +150,8 @@ Họ thấy gần weightless vì cả tàu và cơ thể đều free-fall theo g
 Không có normal force từ sàn giữ cơ thể đứng yên như trên mặt đất.
 
 Do đó cảm giác “trọng lượng” thường liên quan proper acceleration do hỗ trợ (support / 지원) force hơn là chỉ magnitude của gravitational trường dữ liệu (field / 필드) theo Newton.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Geodesic deviation: độ cong đo được bằng tidal motion** tiếp nhận điểm tựa từ **Vì sao phi hành gia trên quỹ đạo thấy không trọng lượng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Einstein trường dữ liệu (field / 필드) equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Geodesic deviation: độ cong đo được bằng tidal motion
 
@@ -168,6 +177,8 @@ curvature
 
 Tidal stretching gần black hole, relative displacement do gravitational wave và nhiều phép đo gravity độ dốc (gradient / 기울기) đều liên hệ với cấu trúc này.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Geodesic deviation: độ cong đo được bằng tidal motion** nêu điều cần giải thích; **Einstein trường dữ liệu (field / 필드) equation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Conservation trong GR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Einstein trường dữ liệu (field / 필드) equation
 
 Phương trình trường là
@@ -188,6 +199,8 @@ Stress-energy tensor không chỉ chứa mass density. Nó còn chứa năng lư
 
 Do đó trong GR, pressure cũng góp vào gravitational nguồn (source / 소스).
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Einstein trường dữ liệu (field / 필드) equation** nêu điều cần giải thích; **Conservation trong GR** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Giới hạn trường yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Conservation trong GR
 
 Bianchi định danh (identity / 식별자) dẫn tới
@@ -205,6 +218,8 @@ Kết hợp Einstein equation cho
 Đây là cục bộ (local / 로컬) covariant conservation law của stress-energy.
 
 Trong curved spacetime tổng năng lượng (energy / 에너지) toàn cục không phải lúc nào cũng định nghĩa được theo cách đơn giản như trong Newtonian mechanics. Vì vậy không nên áp trực giác “một scalar total năng lượng (energy / 에너지) luôn tồn tại” vào mọi spacetime tùy ý.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Conservation trong GR** đã nêu tiêu chí phân biệt, còn **Giới hạn trường yếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Gravitational thời gian (time / 시간) dilation trong trường yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giới hạn trường yếu
 
@@ -249,6 +264,8 @@ Einstein equation đồng thời giảm gần về Poisson equation:
 
 Đây là cầu nối chính xác giữa GR và Newtonian gravity.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Giới hạn trường yếu** đã nêu tiêu chí phân biệt, còn **Gravitational thời gian (time / 시간) dilation trong trường yếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **GPS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Gravitational thời gian (time / 시간) dilation trong trường yếu
 
 Từ
@@ -279,6 +296,8 @@ Gần mặt đất với height difference `\Delta h` nhỏ,
 
 Hiệu ứng rất nhỏ nhưng đo được bằng atomic clocks.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **GPS** tiếp nhận điểm tựa từ **Gravitational thời gian (time / 시간) dilation trong trường yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Schwarzschild spacetime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## GPS
 
 Satellite clocks chịu hai correction chính:
@@ -292,6 +311,8 @@ general-relativistic gravitational time shift do altitude
 Hai hiệu ứng có dấu khác nhau và phải được tính đồng thời.
 
 GPS vì vậy là một ví dụ kỹ thuật (engineering / 엔지니어링) nơi relativity không phải “correction triết học” mà là thành phần của hệ thống (system / 시스템) thiết kế (design / 설계).
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Schwarzschild spacetime** tiếp nhận điểm tựa từ **GPS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự kiện (event / 이벤트) horizon là nhân quả (causal / 인과적) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Schwarzschild spacetime
 
@@ -314,6 +335,8 @@ r_s=\frac{2GM}{c^2}.
 
 Nếu vật thể bị compact bên trong quy mô (scale / 규모) này trong ideal GR solution, `r=r_s` là sự kiện (event / 이벤트) horizon.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Schwarzschild spacetime** đã nêu tiêu chí phân biệt, còn **Sự kiện (event / 이벤트) horizon là nhân quả (causal / 인과적) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Curvature singularity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sự kiện (event / 이벤트) horizon là nhân quả (causal / 인과적) ranh giới (boundary / 경계)
 
 Sự kiện (event / 이벤트) horizon không phải bề mặt vật liệu.
@@ -324,6 +347,8 @@ Một free-falling observer qua horizon của sufficiently large black hole khô
 
 Một số coordinate các hệ thống (systems / 시스템들) như Schwarzschild coordinates có singular-looking components tại `r_s`, nhưng đây là coordinate singularity, không phải curvature singularity.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Sự kiện (event / 이벤트) horizon là nhân quả (causal / 인과적) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Curvature singularity** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Quỹ đạo và perihelion precession** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Curvature singularity
 
 Ở `r=0` của ideal Schwarzschild solution, curvature bất biến (invariant / 불변식) như Kretschmann scalar diverges.
@@ -333,6 +358,8 @@ Một số coordinate các hệ thống (systems / 시스템들) như Schwarzsch
 Classical GR dự đoán breakdown tại singularity và cho thấy cần physics sâu hơn, thường được kỳ vọng liên quan quantum gravity.
 
 Không nên diễn giải singularity như một vật thể đã được hiểu đầy đủ.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Quỹ đạo và perihelion precession** tiếp nhận điểm tựa từ **Curvature singularity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deflection of light** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quỹ đạo và perihelion precession
 
@@ -350,6 +377,8 @@ Với orbit gần Keplerian quanh mass `M`, perihelion advance mỗi vòng gần
 trong đó `a` là semi-major axis và `e` eccentricity.
 
 Correction này giải thích phần anomalous precession của Mercury mà Newtonian perturbations từ các planet khác không giải thích hết.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Deflection of light** tiếp nhận điểm tựa từ **Quỹ đạo và perihelion precession** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shapiro thời gian (time / 시간) delay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Deflection of light
 
@@ -371,11 +400,15 @@ trong weak trường dữ liệu (field / 필드).
 
 Gravitational lensing ngày nay là công cụ quan trọng để đo mass phân phối (distribution / 분포), dark matter và distant galaxies.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Shapiro thời gian (time / 시간) delay** tiếp nhận điểm tựa từ **Deflection of light** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gravitational redshift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Shapiro thời gian (time / 시간) delay
 
 Tín hiệu điện từ đi qua vùng gravitational potential sâu có travel thời gian (time / 시간) lớn hơn giá trị Euclidean-flat expectation.
 
 Hiệu ứng Shapiro là một trong các classical tests của GR và hiện được đo với radar ranging cùng pulsar timing.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Gravitational redshift** tiếp nhận điểm tựa từ **Shapiro thời gian (time / 시간) delay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gravitational waves** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gravitational redshift
 
@@ -384,6 +417,8 @@ Photon phát sâu trong gravitational potential được quan sát ở vị trí
 Ta có thể hiểu nó nhất quán qua comparison of cục bộ (local / 로컬) clock rates thay vì nói photon “mất năng lượng (energy / 에너지) một cách tuyệt đối” khi leo khỏi gravity.
 
 Frequency luôn được đo bởi observer cụ thể.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Gravitational waves** tiếp nhận điểm tựa từ **Gravitational redshift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Strain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gravitational waves
 
@@ -405,6 +440,8 @@ Do conservation of mass-energy và momentum, lowest radiative multipole cho isol
 
 Nhị phân (binary / 이진) compact objects vì vậy là nguồn gravitational-wave mạnh.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Strain** tiếp nhận điểm tựa từ **Gravitational waves** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cosmology từ Einstein equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Strain
 
 Detector thường mô tả tín hiệu (signal / 신호) bằng dimensionless strain
@@ -416,6 +453,8 @@ h\sim\frac{\Delta L}{L}.
 Interferometer đo differential thay đổi (change / 변경) giữa hai arm.
 
 LIGO không đo “force của sóng” theo cách cảm biến gia tốc cổ điển; nó đo relative spacetime distortion giữa freely suspended kiểm thử (test / 테스트) masses.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Cosmology từ Einstein equation** tiếp nhận điểm tựa từ **Strain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các giả định (assumptions / 가정들) và phạm vi của GR classical** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cosmology từ Einstein equation
 
@@ -436,6 +475,8 @@ H^2
 
 Chi tiết cosmology được phát triển ở chapter riêng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Các giả định (assumptions / 가정들) và phạm vi của GR classical** tiếp nhận điểm tựa từ **Cosmology từ Einstein equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Các giả định (assumptions / 가정들) và phạm vi của GR classical
 
 GR là classical trường dữ liệu (field / 필드) lý thuyết (theory / 이론) của spacetime.
@@ -454,6 +495,8 @@ early quantum spacetime regimes
 
 Ngoài ra để giải một bài GR cụ thể, cần specification của matter mô hình (model / 모델), symmetry và ranh giới (boundary / 경계)/initial conditions. Einstein equation một mình không tự chọn solution duy nhất.
 
+> **Chuyển mạch:** Trong **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các giả định (assumptions / 가정들) và phạm vi của GR classical** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 GR có thể giữ trong đầu bằng ba tầng:
@@ -470,6 +513,8 @@ stress-energy
 ```
 
 Free-fall không phải “vật bị kéo khỏi đường thẳng”; trong hình học (geometry / 기하학) phù hợp, geodesic chính là đường chuyển động tự do tự nhiên.
+
+> **Chuyển mạch:** Ở chặng này của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -497,10 +542,12 @@ Không. Nó là weak-field, low-velocity limit cực kỳ tốt của GR.
 
 Không. cục bộ (local / 로컬) covariant conservation luôn quan trọng, nhưng toàn cục (global / 전역) năng lượng (energy / 에너지) definition phụ thuộc symmetry/ranh giới (boundary / 경계) cấu trúc (structure / 구조) của spacetime.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Thuyết tương đối hẹp](00_special_relativity.md), [Hấp dẫn Newton và quỹ đạo](../01_mechanics/06_gravitation_orbits.md), [Tensor và PDE](../00_foundations/05_pde_boundary_green_tensors.md).
 
 **Liên hệ tiếp:** [Sao và thiên thể đặc](../11_astrophysics_cosmology/00_stars_compact_objects.md), [Thiên hà và vũ trụ học](../11_astrophysics_cosmology/01_galaxies_cosmology.md), [Vũ trụ sơ khai](../11_astrophysics_cosmology/03_early_universe_dark_components.md), [Vật lý thiên văn quan sát](../11_astrophysics_cosmology/02_observational_astrophysics_radiative_transfer.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 special relativity](./00_special_relativity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

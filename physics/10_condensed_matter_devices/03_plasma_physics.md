@@ -1,7 +1,6 @@
 # Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ
 
-> **Mạch đọc:** Đọc **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Khi nào một khí ion hóa được xem là plasma?** sang **Tính gần trung hòa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**. Route đi từ ionization/collective behavior → quasi-neutrality → Debye shielding → plasma waves → confinement and instabilities, để plasma nối vi mô với động lực học tập thể.
 
 Plasma không chỉ là “khí rất nóng”. Điều làm plasma khác một khí ion hóa loãng thông thường là các hạt mang điện không còn tương tác chủ yếu theo từng cặp độc lập; chúng cùng tạo trường điện từ, và chính các trường đó lại điều khiển chuyển động của cả quần thể hạt. Tính tập thể (collective behavior / 집단 거동) là điểm cốt lõi.
 
@@ -15,6 +14,8 @@ Một môi trường thể hiện hành vi plasma rõ khi ít nhất ba điều 
 
 Điều này cho thấy “tỉ lệ ion hóa cao” chưa đủ để định nghĩa plasma.
 
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Tính gần trung hòa** tiếp nhận điểm tựa từ **Khi nào một khí ion hóa được xem là plasma?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy ra chiều dài Debye** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính gần trung hòa
 
 Ở thang lớn hơn `\lambda_D`, mật độ electron và ion thường gần nhau:
@@ -26,6 +27,8 @@ n_e\approx Z n_i.
 Mật độ điện tích ròng nhỏ so với tổng mật độ hạt. Tuy nhiên “gần trung hòa” không có nghĩa điện trường bằng không ở mọi nơi.
 
 Nếu một vùng xuất hiện dư điện tích, điện trường sinh ra kéo các hạt mang điện theo hướng khôi phục cân bằng. Vì vậy quasi-neutrality là một trạng thái động lực học tự tổ chức của plasma.
+
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Suy ra chiều dài Debye** tiếp nhận điểm tựa từ **Tính gần trung hòa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số hạt trong quả cầu Debye** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Suy ra chiều dài Debye
 
@@ -67,6 +70,8 @@ Nghiệm quanh một điện tích thử có dạng gần Yukawa:
 
 Ở khoảng cách lớn hơn vài `\lambda_D`, ảnh hưởng Coulomb của điện tích riêng lẻ bị che chắn mạnh.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Số hạt trong quả cầu Debye** tiếp nhận điểm tựa từ **Suy ra chiều dài Debye** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dao động plasma electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Số hạt trong quả cầu Debye
 
 Một tiêu chí quan trọng là
@@ -76,6 +81,8 @@ N_D\sim \frac43\pi n_e\lambda_D^3\gg1.
 ```
 
 Khi có rất nhiều hạt trong thể tích Debye, mô tả trung bình trường (mean-field) trở nên hợp lý và thăng giáng rời rạc từng hạt tương đối nhỏ.
+
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Dao động plasma electron** tiếp nhận điểm tựa từ **Số hạt trong quả cầu Debye** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng điện từ trong plasma lạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dao động plasma electron
 
@@ -95,6 +102,8 @@ với
 
 Đây là tần số plasma electron. Nó là một tần số tập thể, không phải tần số va chạm của một electron riêng lẻ.
 
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Sóng điện từ trong plasma lạnh** tiếp nhận điểm tựa từ **Dao động plasma electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển động của hạt trong từ trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sóng điện từ trong plasma lạnh
 
 Với plasma electron lạnh không từ hóa, quan hệ tán sắc của sóng điện từ đơn giản có dạng
@@ -112,6 +121,8 @@ Nếu
 `k` trở thành ảo và sóng không lan truyền sâu vào plasma; trường suy giảm theo khoảng cách.
 
 Điều này giải thích vì sao tầng điện ly có thể phản xạ một số tần số vô tuyến nhưng cho tần số cao hơn đi qua.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Chuyển động của hạt trong từ trường** tiếp nhận điểm tựa từ **Sóng điện từ trong plasma lạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trôi E×B** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuyển động của hạt trong từ trường
 
@@ -135,6 +146,8 @@ r_L=\frac{mv_\perp}{|q|B}.
 
 Nếu `r_L` nhỏ hơn nhiều thang chiều dài của hệ, hạt được xem là bị từ hóa mạnh.
 
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Trôi E×B** tiếp nhận điểm tựa từ **Chuyển động của hạt trong từ trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gradient-B và curvature drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trôi `E×B`
 
 Khi có điện trường vuông góc từ trường, tâm quỹ đạo cyclotron trôi với vận tốc
@@ -145,17 +158,23 @@ Khi có điện trường vuông góc từ trường, tâm quỹ đạo cyclotro
 
 Điểm đặc biệt là vận tốc trôi này không phụ thuộc khối lượng hoặc dấu điện tích. Electron và ion cùng trôi theo một hướng, nên đây là một vận chuyển tập thể rất quan trọng.
 
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Gradient-B và curvature drift** tiếp nhận điểm tựa từ **Trôi E×B** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Plasma như một chất lưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Gradient-B và curvature drift
 
 Nếu `B` không đều hoặc đường sức cong, electron và ion có thể có các drift khác hướng vì chúng phụ thuộc dấu điện tích. Sự tách drift này tạo dòng điện và ảnh hưởng ổn định của plasma giam giữ.
 
 Do đó hình học từ trường trong tokamak không chỉ có nhiệm vụ “giữ hạt chạy vòng tròn”; nó phải kiểm soát cả nhiều loại drift và bất ổn định.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Plasma như một chất lưu** tiếp nhận điểm tựa từ **Gradient-B và curvature drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ thủy động lực học (MHD)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Plasma như một chất lưu
 
 Ở thang đủ lớn so với quãng đường tự do trung bình và khi phân bố gần cân bằng cục bộ, ta có thể lấy các moment của phương trình động học để xây mô hình chất lưu.
 
 Các phương trình cơ bản gồm bảo toàn số hạt, động lượng và năng lượng. Với plasma dẫn điện, từ trường ghép trực tiếp vào phương trình động lượng.
+
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Từ thủy động lực học (MHD)** tiếp nhận điểm tựa từ **Plasma như một chất lưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng Alfvén** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ thủy động lực học (MHD)
 
@@ -170,6 +189,8 @@ Nó dẫn tới trực giác “đường sức từ bị đông cứng vào ch�
 
 Khái niệm này giúp hiểu gió Mặt Trời, cấu trúc từ trong plasma thiên văn và nhiều hiện tượng giam giữ từ.
 
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Sóng Alfvén** tiếp nhận điểm tựa từ **Từ thủy động lực học (MHD)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tái kết nối từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sóng Alfvén
 
 Trong plasma từ hóa, lực căng của từ trường đóng vai trò gần như dây đàn hồi. Nhiễu loạn có thể lan dọc trường với vận tốc Alfvén
@@ -180,11 +201,15 @@ v_A=\frac{B}{\sqrt{\mu_0\rho}}.
 
 Sóng Alfvén xuất hiện trong plasma Mặt Trời, từ quyển và thiết bị nhiệt hạch. Đây là ví dụ rõ cho việc sóng trong plasma không chỉ là sóng âm hay sóng điện từ thông thường.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Tái kết nối từ** tiếp nhận điểm tựa từ **Sóng Alfvén** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Vlasov và mô tả động học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tái kết nối từ
 
 Trong MHD lý tưởng, topology của đường sức từ được giữ gần như cố định. Nhưng khi điện trở, hiệu ứng Hall hoặc động học vi mô trở nên quan trọng trong một vùng nhỏ, cấu hình từ trường có thể thay đổi topology và giải phóng năng lượng nhanh.
 
 Quá trình này gọi là tái kết nối từ (magnetic reconnection). Nó liên quan tới flare Mặt Trời, magnetosphere và các sự kiện giải phóng năng lượng trong plasma phòng thí nghiệm.
+
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Phương trình Vlasov và mô tả động học** tiếp nhận điểm tựa từ **Tái kết nối từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Landau damping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phương trình Vlasov và mô tả động học
 
@@ -204,6 +229,8 @@ và phương trình Vlasov:
 
 Phương trình này mô tả tiến hóa không va chạm của phân bố hạt dưới trường tự nhất quán.
 
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Landau damping** tiếp nhận điểm tựa từ **Phương trình Vlasov và mô tả động học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Va chạm và độ ghép plasma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Landau damping
 
 Một trong những kết quả sâu của lý thuyết động học là sóng plasma có thể bị tắt dần ngay cả khi không có va chạm rõ rệt.
@@ -211,6 +238,8 @@ Một trong những kết quả sâu của lý thuyết động học là sóng 
 Những hạt có vận tốc gần vận tốc pha của sóng trao đổi năng lượng cộng hưởng với sóng. Tùy độ dốc của phân bố vận tốc tại vận tốc cộng hưởng, tổng năng lượng có thể truyền từ sóng sang hạt.
 
 Landau damping cho thấy một mô hình chất lưu đơn giản có thể bỏ qua những hiệu ứng nằm trong cấu trúc của không gian vận tốc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Va chạm và độ ghép plasma** tiếp nhận điểm tựa từ **Landau damping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giam giữ từ và tokamak** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Va chạm và độ ghép plasma
 
@@ -224,11 +253,15 @@ với `a` là khoảng cách liên hạt điển hình.
 
 Plasma nhiệt hạch thường ở chế độ ghép yếu `\Gamma\ll1`, trong khi plasma bụi hoặc vật chất mật độ cao có thể đạt chế độ ghép mạnh hơn, nơi tương quan hạt trở nên quan trọng.
 
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Giam giữ từ và tokamak** tiếp nhận điểm tựa từ **Va chạm và độ ghép plasma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiêu chuẩn Lawson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giam giữ từ và tokamak
 
 Tokamak dùng từ trường toroidal kết hợp poloidal để tạo đường sức xoắn quanh torus. Mục tiêu là giữ hạt nóng tránh tiếp xúc trực tiếp với thành thiết bị đủ lâu để phản ứng nhiệt hạch xảy ra đáng kể.
 
 Nhưng plasma có nhiều bất ổn định MHD và vi mô. Vì vậy “tạo từ trường mạnh” chưa đủ; phải tối ưu hình học, profile dòng, pressure độ dốc (gradient / 기울기) và turbulence.
+
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Tiêu chuẩn Lawson** tiếp nhận điểm tựa từ **Giam giữ từ và tokamak** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao plasma trên Trái Đất cần nóng hơn lõi Mặt Trời?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiêu chuẩn Lawson
 
@@ -246,17 +279,23 @@ nT\tau_E.
 
 Đây là lý do nhiệt độ rất cao chỉ là một phần bài toán. Plasma quá loãng hoặc thất thoát năng lượng quá nhanh vẫn không đạt điều kiện phát năng lượng ròng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Vì sao plasma trên Trái Đất cần nóng hơn lõi Mặt Trời?** tiếp nhận điểm tựa từ **Tiêu chuẩn Lawson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Plasma trong thiên văn học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao plasma trên Trái Đất cần nóng hơn lõi Mặt Trời?
 
 Mặt Trời có mật độ lớn và được hấp dẫn giam giữ trong thời gian khổng lồ. Thiết bị nhiệt hạch trên Trái Đất có mật độ và thời gian giam giữ khác rất nhiều, nên phải bù bằng nhiệt độ cao hơn và kiểm soát plasma tinh vi hơn.
 
 Không có mâu thuẫn trong việc plasma tokamak có nhiệt độ ion cao hơn lõi Mặt Trời nhưng vẫn khó đạt năng lượng ròng.
 
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Plasma trong thiên văn học** tiếp nhận điểm tựa từ **Vì sao plasma trên Trái Đất cần nóng hơn lõi Mặt Trời?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô phỏng plasma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Plasma trong thiên văn học
 
 Phần lớn vật chất nhìn thấy trong vũ trụ ở trạng thái plasma: khí giữa các sao, corona Mặt Trời, gió sao, môi trường bồi tụ và nhiều dòng tia thiên văn.
 
 Trong những môi trường này, va chạm hạt đôi khi rất hiếm nhưng trường điện từ tập thể vẫn tổ chức chuyển động trên thang lớn.
+
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Mô phỏng plasma** tiếp nhận điểm tựa từ **Plasma trong thiên văn học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô phỏng plasma
 
@@ -274,11 +313,15 @@ Có thể mô tả ion như hạt còn electron như chất lưu, hoặc ghép n
 
 Việc chọn mô hình phải dựa vào thang Debye, bán kính Larmor, tần số plasma, tần số cyclotron, quãng đường tự do trung bình và thang không gian–thời gian cần nghiên cứu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Mô phỏng plasma** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Plasma là hệ nhiều thang. Ở thang rất nhỏ cần động học hạt; ở thang trung gian cần phân bố vận tốc; ở thang lớn có thể dùng chất lưu và MHD. Không có một mô hình duy nhất tối ưu cho mọi plasma.
 
 Câu hỏi đầu tiên nên là: **thang quan sát của ta so với `\lambda_D`, `r_L`, quãng đường tự do trung bình và các tần số đặc trưng như `\omega_p`, `\omega_c` ra sao?**
+
+> **Chuyển mạch:** Trong **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -298,10 +341,12 @@ Không. Giam giữ phụ thuộc topology từ trường, drift, turbulence, pre
 
 Không. Khi hiệu ứng động học trong không gian vận tốc quan trọng, cần mô hình Vlasov hoặc PIC.
 
+> **Chuyển mạch:** Ở chặng này của **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học chất lưu](../03_continuum/00_fluids.md), [Maxwell và sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md), [Lý thuyết động học và Boltzmann](../04_thermal_statistical/06_kinetic_theory_boltzmann_equation.md).
 
 **Liên hệ tiếp:** [Vật lý sao](../11_astrophysics_cosmology/00_stars_compact_objects.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Chuyển pha và truyền nhiệt](../04_thermal_statistical/02_phase_transitions_heat_transfer.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 crystals bands](./00_crystals_bands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
