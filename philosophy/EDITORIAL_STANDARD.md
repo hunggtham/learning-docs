@@ -17,7 +17,7 @@ question / problem
 
 Chapter ngắn vẫn phải có đủ các vai trò này, có thể gộp section nhưng không được bỏ premise và objection.
 
-> **Chuyển mạch:** Trong **Philosophy — Editorial tiêu chuẩn (standard / 표준)**, **2. Phân loại claim** tiếp nhận điểm tựa từ **1. Cấu trúc tối thiểu của chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. bằng chứng (evidence / 증거) và bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **1. Cấu trúc tối thiểu của chapter** bảo đảm câu hỏi và phạm vi rõ; **2. Phân loại claim** tách mô tả, nhân quả và chuẩn tắc trước khi **3. bằng chứng và bất định** kiểm tra độ chắc chắn.
 
 ## 2. Phân loại claim
 
@@ -43,7 +43,7 @@ Mỗi chapter cần ghi rõ claim nào là established, hiện tại (current / 
 
 Giải thích chính bằng tiếng Việt, giữ English từ khóa (keyword / 키워드) ở lần xuất hiện đầu tiên. Nêu tên triết gia khi tên đó giúp định vị argument; không biến chapter thành chronology hoặc authority danh sách (list / 목록). Tách mô tả quan điểm khỏi endorsement của repository.
 
-> **Chuyển mạch:** Trong **Philosophy — Editorial tiêu chuẩn (standard / 표준)**, **5. cổng chất lượng (quality gate / 품질 게이트) trước khi merge** tiếp nhận điểm tựa từ **4. Văn phong và thuật ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi thống nhất văn phong và thuật ngữ, **5. quality gate trước merge** kiểm tra claim, nguồn, link và owner bằng bằng chứng cụ thể trước khi hợp nhất.
 
 ## 5. cổng chất lượng (quality gate / 품질 게이트) trước khi merge
 

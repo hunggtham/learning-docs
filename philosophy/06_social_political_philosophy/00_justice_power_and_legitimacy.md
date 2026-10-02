@@ -19,19 +19,19 @@ Power không chỉ là mệnh lệnh công khai; nó còn định hình agenda, 
 
 Thought experiment như xã hội (social / 사회적) đặc tả hợp đồng (contract / 계약) hữu ích để làm lộ nguyên tắc, nhưng institution thực tế còn phụ thuộc lịch sử (history / 이력), economy, law, culture và collective hành động (action / 동작). Cần nối normative ideal với bằng chứng (evidence / 증거) về hành vi (behavior / 동작) và quản trị (governance / 거버넌스) thay vì suy ra chính sách trực tiếp từ một mô hình trừu tượng.
 
-> **Chuyển mạch:** Ở chặng này của **Justice, Power và Political Legitimacy**, **Chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?** tiếp nhận điểm tựa từ **Từ cá nhân đến thể chế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Power kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Từ cá nhân đến thể chế** đặt câu hỏi ai chịu chi phí và ai có quyền; **policy reasoning** phân biệt equality với equity, rồi **Power audit** kiểm tra cơ chế phân phối thực tế.
 
 ## Chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?
 
 Giả sử một dịch vụ công có cùng quy tắc (rule / 규칙) cho mọi người nhưng nhóm A phải đi xa hơn, thiếu internet và chịu discrimination khi tiếp cận. Formal equality giữ một procedure; substantive equality hỏi năng lực sử dụng và kết quả (outcome / 결과) có bị cấu trúc ban đầu làm lệch không. Equity không có nghĩa tùy tiện ưu ái; nó cần principle về disadvantage, eligibility, transparency và sunset/rà soát (review / 검토).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Justice, Power và Political Legitimacy**, **Power kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) lập luận (reasoning / 추론): equality hay equity?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Power audit** đưa lập luận chính sách vào chỉ báo về quyền, nguồn lực và voice; **depth pass** kiểm tra justice và legitimacy trong institution cụ thể.
 
 ## Power kiểm tra (audit / 감사)
 
 Với một institution, hãy hỏi: ai đặt agenda, ai sở hữu dữ liệu (data / 데이터), ai định nghĩa category, ai có quyền veto, ai chịu chi phí (cost / 비용) của lỗi (error / 오류), và ai có appeal? Quyền lực ẩn trong default và omission cũng quan trọng như mệnh lệnh công khai. Một tiến trình (process / 프로세스) legitimate phải cho người bị ảnh hưởng khả năng biết, chất vấn và thay đổi quyết định, không chỉ có chữ ký hợp lệ.
 
-> **Chuyển mạch:** Trong **Justice, Power và Political Legitimacy**, **Độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực** tiếp nhận điểm tựa từ **Power kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Depth pass** khép chuỗi bằng việc đối chiếu nguyên tắc justice với legitimacy mà người trong institution thực sự trải nghiệm, không chỉ với thiết kế trên giấy.
 
 ## Độ sâu (depth / 깊이) pass: justice và legitimacy trong institution thực
 

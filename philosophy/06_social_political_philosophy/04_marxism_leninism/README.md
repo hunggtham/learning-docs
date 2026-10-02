@@ -115,7 +115,7 @@ declared doctrine
 
 Giữa các arrow luôn có ngữ cảnh (context / 맥락), competing causes và bất định (uncertainty / 불확실성). Chính vì vậy historical kết quả (outcome / 결과) không được dùng như shortcut để “chứng minh” một philosophy.
 
-> **Chuyển mạch:** Ở chặng này của **Marx, Marxism, Lenin và Marxism–Leninism**, **Cách đọc các claim trong mô-đun (module / 모듈)** tiếp nhận điểm tựa từ **Ba lớp phải giữ tách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuật ngữ trục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Ba lớp phải giữ tách** phân biệt text, historical implementation và evidence; **Cách đọc claim trong module** áp dụng ba lớp đó, rồi **Thuật ngữ trục** giữ nhất quán khái niệm.
 
 ## Cách đọc các claim trong mô-đun (module / 모듈)
 
@@ -123,7 +123,7 @@ Một claim lịch sử như “industrialization thay đổi cấu trúc giai c
 
 Vì vậy mô-đun (module / 모듈) ưu tiên ba lớp nguồn: **primary texts** để biết tác giả thực sự viết gì; **scholarly tham chiếu (reference / 참조)** để nhận ra tranh luận diễn giải; và **lịch sử (history / 이력)/economics bằng chứng (evidence / 증거)** để kiểm tra những claim mô tả thế giới. Không dùng historical kết quả (outcome / 결과) đơn lẻ để chứng minh toàn bộ một philosophy, và cũng không dùng philosophy để thay thế empirical lịch sử (history / 이력).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Marx, Marxism, Lenin và Marxism–Leninism**, **Thuật ngữ trục** tiếp nhận điểm tựa từ **Cách đọc các claim trong mô-đun (module / 모듈)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn định hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thuật ngữ trục** giúp nối các module mà không trộn nghĩa; **Nguồn định hướng** chỉ ra tài liệu cần dùng để kiểm tra từng claim.
 
 ## Thuật ngữ trục
 
@@ -131,7 +131,7 @@ Các thuật ngữ được giữ bằng tiếng Anh vì chúng có đời sốn
 
 Không nên ghi nhớ các từ này như glossary rời. Mỗi thuật ngữ chỉ có nghĩa đầy đủ khi thấy nó đang giải quyết mắt xích nào trong mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Marx, Marxism, Lenin và Marxism–Leninism**, **Thuật ngữ trục** nêu điều cần giải thích; **Nguồn định hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Nguồn định hướng** khép phần README bằng cách gắn thuật ngữ với provenance và giới hạn diễn giải; mỗi module tiếp theo phải quay về owner này.
 
 ## Nguồn định hướng
 

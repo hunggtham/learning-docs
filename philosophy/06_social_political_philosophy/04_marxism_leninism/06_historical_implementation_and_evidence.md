@@ -61,7 +61,7 @@ Ngược lại, pure thị trường (market / 시장) cơ chế (mechanism / �
 
 Phần đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) cho các vấn đề này nằm ở [Economics](../../../economics/README.md), [Market Structure](../../../economics/02_market_structure_game_theory/) và [Economic History & Institutions](../../../economics/06_economic_history_institutions/README.md).
 
-> **Chuyển mạch:** Trong **Historical hiện thực (implementation / 구현) — từ doctrine sang institutions và bằng chứng (evidence / 증거)**, **Political institutions: biểu diễn (representation / 표현), accountability và thông tin (information / 정보)** tiếp nhận điểm tựa từ **Planning bài toán (problem / 문제): thông tin (information / 정보), incentives và correction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không dùng một country làm universal proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Planning problem** xác định thông tin, incentives và correction; **Political institutions** kiểm tra chúng qua representation và accountability, rồi **Không dùng một country làm universal proof** giữ giới hạn so sánh.
 
 ## Political institutions: biểu diễn (representation / 표현), accountability và thông tin (information / 정보)
 
@@ -71,7 +71,7 @@ Một institution có thể giải coordination bài toán (problem / 문제) b�
 
 Những câu hỏi này cũng áp dụng cho non-socialist bureaucracies. Chúng là general institutional questions về **accountability, thông tin (information / 정보) luồng (flow / 흐름), incentive alignment và lỗi (error / 오류) correction**.
 
-> **Chuyển mạch:** Ở chặng này của **Historical hiện thực (implementation / 구현) — từ doctrine sang institutions và bằng chứng (evidence / 증거)**, **Không dùng một country làm universal proof** tiếp nhận điểm tựa từ **Political institutions: biểu diễn (representation / 표현), accountability và thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vietnam như một example của institutional adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi khóa giới hạn khái quát hóa, **Vietnam như institutional adaptation** được dùng như case có điều kiện, không phải bằng chứng phổ quát cho mọi country.
 
 ## Không dùng một country làm universal proof
 
@@ -120,7 +120,7 @@ Khung phần mềm (framework / 프레임워크) trên được áp dụng trự
 
 Tuyến (route / 경로) này biến formula `ideas → institutions → policies → outcomes` thành worked phân tích (analysis / 분석). Điểm cần giữ khi đọc là kết quả (outcome / 결과) luôn là **véc-tơ (vector / 벡터)**, không phải một score duy nhất: growth, productivity, consumption, food bảo mật (security / 보안), poverty, inequality, political rights, coercion, môi trường (environment / 환경) và resilience có thể di chuyển theo hướng khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Historical hiện thực (implementation / 구현) — từ doctrine sang institutions và bằng chứng (evidence / 증거)**, **Worked-case tuyến (route / 경로)** cho ta quy tắc; **Sources và reading anchors** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Worked-case route** minh họa cách đi từ doctrine tới institution; **Sources và reading anchors** cho phép tái kiểm tra từng bước và ghi rõ chỗ còn bất định.
 
 ## Sources và reading anchors
 

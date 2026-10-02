@@ -14,7 +14,7 @@ NBER's historical study *Growth of Industrial Môi trường vận hành (produc
 
 Ngay ở đây ta có một bất biến (invariant / 불변식) quan trọng: **sức chứa (capacity / 용량) to increase selected outputs không đồng nghĩa với efficiency, welfare hoặc sustainability.** Heavy-industry đầu ra (output / 출력), household consumption, agricultural productivity, mortality và political coercion là các kết quả (outcome / 결과) khác nhau và phải đo riêng.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**, **Planning kiến trúc (architecture / 아키텍처) — trạng thái (state / 상태) đang giải bài toán gì?** tiếp nhận điểm tựa từ **Từ NEP sang Great Turn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Collectivization — chính sách (policy / 정책), cơ chế (mechanism / 메커니즘) và coercion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Từ NEP sang Great Turn** đặt bước ngoặt chính sách; **Planning architecture** hỏi nhà nước đang giải bài toán nào, rồi **Collectivization** kiểm tra cơ chế và coercion trong thực tế.
 
 ## Planning kiến trúc (architecture / 아키텍처) — trạng thái (state / 상태) đang giải bài toán gì?
 
@@ -65,7 +65,7 @@ Vì vậy khi gặp câu “Soviet planning industrialized the country rapidly�
 
 Bốn claim này không thể chứng minh lẫn nhau.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**, **Quantity versus chất lượng (quality / 품질)** tiếp nhận điểm tựa từ **Industrial growth — tăng cái gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo mật (security / 보안) ngữ cảnh (context / 맥락) và đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Industrial growth** đặt thước đo sản lượng; **Quantity versus quality** kiểm tra năng lực và chi phí, rồi **security context và path dependence** giải thích vì sao lựa chọn đó khó đảo ngược.
 
 ## Quantity versus chất lượng (quality / 품질)
 
@@ -102,7 +102,7 @@ strategic goal
 
 Từ đây hãy chuyển sang [China after 1978](13_case_china_reform_opening_and_dual_track_transition.md). China là comparative trường hợp (case / 사례) đặc biệt hữu ích vì political continuity coexist với một economic coordination hệ thống (system / 시스템) được cải tổ từng bước theo hướng thị trường (market / 시장) mechanisms, tạo natural experiment cho câu hỏi institution nào thay đổi và kết quả (outcome / 결과) nào thay đổi cùng nó.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**, **Trường hợp (case / 사례) này cho phép kết luận gì — và không cho phép gì?** cho ta quy tắc; **Sources và reading anchors** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Case này cho phép kết luận gì — và không cho phép gì?** buộc tách claim khỏi counterfactual; **Sources và reading anchors** ghi rõ bằng chứng nào đủ để giữ mỗi kết luận.
 
 ## Sources và reading anchors
 

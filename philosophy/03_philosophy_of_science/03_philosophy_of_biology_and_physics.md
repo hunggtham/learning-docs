@@ -6,13 +6,13 @@
 
 Trong Biology, “hàm (function / 함수)” có thể là role hiện tại, lịch sử (history / 이력) of selection hoặc contribution của một thành phần (component / 컴포넌트) trong hệ thống (system / 시스템). “thông tin (information / 정보)” có thể chỉ correlation, nhân quả (causal / 인과적) điều khiển (control / 제어) hoặc heritable instruction; không nên dùng một nghĩa để giải thích mọi hiện tượng. Reduction từ molecule lên organism cần giữ ngữ cảnh (context / 맥락), regulation, lịch sử (history / 이력) và multi-level ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Trong **Philosophy of Biology và Physics**, **Physics: law, symmetry và idealization** tiếp nhận điểm tựa từ **Biology: hàm (function / 함수), thông tin (information / 정보) và levels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Câu hỏi chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Biology** đặt vấn đề chức năng, thông tin và cấp độ tổ chức; **Physics** đối chiếu bằng law, symmetry và idealization, rồi **Câu hỏi chung** chỉ ra nơi hai khung không thể thay thế nhau.
 
 ## Physics: law, symmetry và idealization
 
 Physics dùng ideal các hệ thống (systems / 시스템들), limiting cases, symmetry và conservation để tìm bất biến (invariant / 불변식). Một idealization không phải falsehood vô dụng: nó cho biết cấu trúc (structure / 구조) nào giữ qua nhiều chi tiết. Nhưng khi ranh giới (boundary / 경계) điều kiện (condition / 조건), quy mô (scale / 규모) hoặc observer đổi, lĩnh vực (domain / 도메인) of validity phải được kiểm tra lại.
 
-> **Chuyển mạch:** Ở chặng này của **Philosophy of Biology và Physics**, **Câu hỏi chung** tiếp nhận điểm tựa từ **Physics: law, symmetry và idealization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Câu hỏi chung** khép đối chiếu bằng cách hỏi mô hình giải thích được cơ chế nào, bỏ sót cấp độ nào và cần điều kiện biên nào.
 
 ## Câu hỏi chung
 

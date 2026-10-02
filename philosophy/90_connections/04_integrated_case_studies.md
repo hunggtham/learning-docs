@@ -12,7 +12,7 @@ Claim “mô hình (model / 모델) giúp ưu tiên bệnh nhân tốt hơn” c
 
 Physics/Biology mô tả hazard và ecological ràng buộc (constraint / 제약조건); epistemology quản lý bất định (uncertainty / 불확실성); ethics phân bổ chi phí (cost / 비용) giữa thế hệ và vùng; political philosophy hỏi legitimacy của relocation; technology đánh giá sensor, hạ tầng (infrastructure / 인프라) và dữ liệu (data / 데이터) quản trị (governance / 거버넌스). Không có “một con số tối ưu” nếu giá trị (value / 값) về preservation, an toàn (safety / 안전) và justice chưa được công khai.
 
-> **Chuyển mạch:** Ở chặng này của **Integrated trường hợp (case / 사례) Studies: từ Claim đến quyết định (decision / 결정)**, **Trường hợp (case / 사례) 2 — Climate adaptation** cho ta quy tắc; **Trường hợp (case / 사례) 3 — Cognitive offloading** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Climate adaptation** cho thấy claim phải gắn với rủi ro và bằng chứng môi trường; **Cognitive offloading** thử cùng nguyên tắc ở quyết định cá nhân, để phân biệt quy tắc bền với ví dụ riêng.
 
 ## Trường hợp (case / 사례) 3 — Cognitive offloading
 
