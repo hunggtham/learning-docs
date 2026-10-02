@@ -1,6 +1,6 @@
 # Trình biên dịch, trình thông dịch, máy ảo và JIT
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trình biên dịch, trình thông dịch, máy ảo và JIT**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phân tách đơn vị từ (token / 토큰) và phân tích cú pháp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phân tích ngữ nghĩa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Compilers, interpreters, VM và JIT**. Route đi từ source/lexing/parsing → semantic analysis/IR → interpretation hoặc compilation → VM execution/JIT speculation, để mỗi tầng biến đổi vẫn truy được semantics ban đầu.
 
 Mã nguồn phải được biến đổi thành các thao tác mà máy tính có thể thực thi. Thiết kế trình biên dịch cho thấy một chuỗi lớp trừu tượng: văn bản → đơn vị từ (token / 토큰) → cây cú pháp → biểu diễn ngữ nghĩa → biểu diễn trung gian → mã đã tối ưu → thực thi trên máy hoặc môi trường chạy.
 

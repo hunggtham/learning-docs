@@ -1,6 +1,6 @@
 # Programming ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) và thực thi (execution / 실행) các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Programming ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) và thực thi (execution / 실행) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cú pháp (syntax / 문법), ngữ nghĩa (semantics / 의미론) và pragmatics** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Static và động (dynamic / 동적) ngữ nghĩa (semantics / 의미론)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Language semantics và execution models**. Route đi từ syntax → static/dynamic semantics → evaluation strategy → runtime state và observable behavior, để đặc tả ngôn ngữ được nối với cách chương trình thực thi.
 
 Programming ngôn ngữ (language / 언어) là một formal hệ thống (system / 시스템) để mô tả computation cho cả con người và hiện thực (implementation / 구현) tools. cú pháp (syntax / 문법) chỉ trả lời “viết thế nào”; ngữ nghĩa (semantics / 의미론) trả lời “chương trình đó có nghĩa gì”. Hai languages có cú pháp (syntax / 문법) giống nhau nhưng evaluation, kiểu (type / 타입) conversion, bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성) hoặc lỗi (error / 오류) ngữ nghĩa (semantics / 의미론) khác nhau có thể tạo hành vi (behavior / 동작) rất khác.
 

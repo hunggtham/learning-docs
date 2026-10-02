@@ -1,6 +1,6 @@
 # Imperative, object-oriented, functional và declarative paradigms
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Imperative, object-oriented, functional và declarative paradigms**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Imperative programming** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Object-oriented programming** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Imperative, object-oriented, functional và declarative paradigms**. Route đi từ state/update → objects/dispatch → functions/immutability → rules/constraints, để so sánh paradigm bằng control, state và composition thay vì bằng nhãn tên.
 
 Programming paradigm (프로그래밍 패러다임 / mô hình lập trình) là một cách tổ chức trạng thái (state / 상태), computation và lớp trừu tượng (abstraction / 추상화). Languages hiện đại thường multi-paradigm; điều có giá trị không phải gắn nhãn ngôn ngữ (language / 언어) mà hiểu mô hình tư duy (mental model / 사고 모델) nào phù hợp bài toán (problem / 문제).
 

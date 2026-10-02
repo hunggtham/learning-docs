@@ -1,6 +1,6 @@
 # Types, values, references và bộ nhớ (memory / 메모리) management
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Types, values, references và bộ nhớ (memory / 메모리) management**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Giá trị (value / 값) và biểu diễn (representation / 표현)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Static và động (dynamic / 동적) typing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Types, values, references và memory management**. Route đi từ value/representation → references và aliasing → static/dynamic typing → lifetime, allocation và memory safety, để kiểu dữ liệu không bị tách khỏi layout và vòng đời.
 
 Hệ kiểu (type system / 타입 시스템) không chỉ là danh sách `int`, `string`, `class`. kiểu (type / 타입) mô tả tập values và operations hợp lệ, giúp ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) encode các giả định (assumptions / 가정들). bộ nhớ (memory / 메모리) management quyết định values sống ở đâu, ai sở hữu, khi nào reclaim và references có ngữ nghĩa (semantics / 의미론) gì.
 

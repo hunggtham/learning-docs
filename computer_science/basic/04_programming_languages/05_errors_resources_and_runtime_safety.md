@@ -1,6 +1,6 @@
 # Errors, exceptions, resources và thời gian chạy (runtime / 런타임) an toàn (safety / 안전)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Errors, exceptions, resources và thời gian chạy (runtime / 런타임) an toàn (safety / 안전)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lỗi (error / 오류) categories** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Return values, kết quả (result / 결과) types và exceptions** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Errors, exceptions, resources và runtime safety**. Route đi từ failure classification → result/exception propagation → resource acquisition/release → contracts và recovery, để lỗi, tài nguyên và tính an toàn được đánh giá trong cùng một đường chạy.
 
 Thất bại (failure / 실패) là một phần của computation đặc tả hợp đồng (contract / 계약). Invalid đầu vào (input / 입력), unavailable mạng (network / 네트워크), exhausted bộ nhớ (memory / 메모리), violated bất biến (invariant / 불변식) và programmer bug không nên bị gộp thành một “lỗi (error / 오류)” mơ hồ. lỗi (error / 오류) mô hình (model / 모델) tốt giúp caller biết điều gì recoverable, tài nguyên (resource / 자원) nào cần cleanup và trạng thái (state / 상태) nào còn valid.
 
