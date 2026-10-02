@@ -1,6 +1,6 @@
 # Keys, secrets, certificates và secure operations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Keys, secrets, certificates và secure operations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Secret khác cấu hình (configuration / 구성) thường** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Key vòng đời (lifecycle / 생명주기)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Keys, secrets, certificates và secure operations**. Route đi từ secret/config boundary → key lifecycle/envelope encryption → HSM/KMS → certificates/PKI → rotation/break-glass/log redaction, để credential control có cả cơ chế lẫn audit trail.
 
 Cryptographic thuật toán (algorithm / 알고리즘) có thể đúng nhưng hệ thống vẫn bị compromise vì key bị log, secret nằm trong repository, certificate hết hạn hoặc quyền decrypt quá rộng. bảo mật (security / 보안) operations tập trung vào **vòng đời (lifecycle / 생명주기) của trust material**: tạo, lưu, phân phối, sử dụng, rotate, revoke và kiểm tra (audit / 감사).
 

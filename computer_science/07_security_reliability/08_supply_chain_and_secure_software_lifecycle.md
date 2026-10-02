@@ -1,6 +1,6 @@
 # Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phụ thuộc (dependency / 의존성) risks** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Software supply chain và secure software lifecycle**. Route đi từ trust graph/dependencies → SBOM/provenance → CI/CD permissions → secure development/testing → vulnerability management và incident feedback, để build artifact được truy nguyên tới nguồn và quyền.
 
 Hiện đại (modern / 현대적) ứng dụng (application / 애플리케이션) hiếm khi chỉ chứa mã (code / 코드) nhóm (team / 팀) tự viết. Nó phụ thuộc gói (package / 패키지) registries, bản dựng (build / 빌드) tools, bộ chứa (container / 컨테이너) images, CI runners, triển khai (deployment / 배포) credentials và transitive dependencies. Vì vậy attack surface kéo dài từ nguồn (source / 소스) lần ghi nhận (commit / 커밋) đến sản phẩm tạo ra (artifact / 산출물) chạy môi trường vận hành (production / 운영 환경).
 

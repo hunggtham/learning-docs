@@ -1,6 +1,6 @@
 # Băm (hash / 해시), MAC, symmetric và public-key cryptography
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cryptographic băm (hash / 해시)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Password hashing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hash, MAC, symmetric và public-key cryptography**. Route đi từ integrity/hash → password hashing/MAC → symmetric encryption → public-key/signature/key exchange → randomness và engineering, để primitive được chọn theo threat model.
 
 Cryptography (암호학 / mật mã học) dùng mathematical constructions để tạo bảo mật (security / 보안) properties trong adversarial môi trường (environment / 환경). Điều quan trọng là phân biệt primitives: băm (hash / 해시), MAC, encryption và digital signature giải các bài toán khác nhau.
 

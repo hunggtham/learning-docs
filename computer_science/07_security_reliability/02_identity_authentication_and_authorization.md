@@ -1,6 +1,6 @@
 # Định danh (identity / 식별자), authentication và authorization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Định danh (identity / 식별자), authentication và authorization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Định danh (identity / 식별자)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Authentication** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Identity, authentication và authorization**. Route đi từ identity claims → authentication factors → authorization policy/scope → sessions/cookies → OAuth/OIDC và service identity, để “ai là ai” được tách khỏi “được làm gì”.
 
 Định danh (identity / 식별자) các hệ thống (systems / 시스템들) trả lời ba câu hỏi khác nhau: **ai/đối tượng nào? họ chứng minh định danh (identity / 식별자) bằng gì? họ được phép làm gì?** Trộn authentication và authorization là nguyên nhân phổ biến của bảo mật (security / 보안) bugs.
 

@@ -1,6 +1,6 @@
 # Bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성) — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성) — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성) — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성) — lĩnh vực (domain / 도메인) Hub**. Route học đi từ threat model/principles → cryptography/identity → vulnerabilities/testing → web security/keys → fault tolerance và supply chain, để control và evidence đi cùng nhau.
 
 Foundation nằm tại [`../basic/07_security_reliability/`](../basic/07_security_reliability/): threat modeling, cryptographic primitives, định danh (identity / 식별자)/truy cập (access / 접근), vulnerabilities, testing, độ tin cậy (reliability / 신뢰성), web bảo mật (security / 보안), key management và supply-chain bảo mật (security / 보안).
 

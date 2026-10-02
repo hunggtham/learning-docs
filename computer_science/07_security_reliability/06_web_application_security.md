@@ -1,6 +1,6 @@
 # Web ứng dụng (application / 애플리케이션) bảo mật (security / 보안)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Web ứng dụng (application / 애플리케이션) bảo mật (security / 보안)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Same-Origin chính sách (policy / 정책)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **XSS: dữ liệu (data / 데이터) trở thành mã (code / 코드)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Web application security**. Route đi từ same-origin/trust boundary → XSS/CSRF → SQL/command injection → SSRF/session/authentication → upload và security headers, để browser, server và credential flow được xét cùng nhau.
 
 Web bảo mật (security / 보안) không phải danh sách payloads như `' OR 1=1`. Nó bắt đầu từ trust boundaries: trình duyệt (browser / 브라우저) chạy mã (code / 코드) từ nhiều origins, máy chủ (server / 서버) nhận đầu vào (input / 입력) từ clients không đáng tin, cookies/tokens đi qua mạng (network / 네트워크), backend truy cập cơ sở dữ liệu (database / 데이터베이스) và bên ngoài (external / 외부) services. Vulnerability xuất hiện khi dữ liệu (data / 데이터) vượt ranh giới (boundary / 경계) mà các giả định (assumptions / 가정들) không được enforce.
 

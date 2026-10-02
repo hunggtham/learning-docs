@@ -1,6 +1,6 @@
 # Threat mô hình (model / 모델) và bảo mật (security / 보안) principles
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Threat mô hình (model / 모델) và bảo mật (security / 보안) principles**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bảo mật (security / 보안) properties** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Threat mô hình (model / 모델)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Threat models và security principles**. Route đi từ security properties → assets/actors/trust boundary → least privilege/defense in depth → secure defaults và attack surface, để biện pháp bảo vệ xuất phát từ mối đe dọa cụ thể.
 
 Bảo mật (security / 보안) không bắt đầu bằng encryption. Nó bắt đầu bằng câu hỏi: **ta đang bảo vệ asset nào, khỏi actor nào, qua attack surface nào, và thuộc tính (property / 속성) nào phải được giữ?** Không có threat mô hình (model / 모델), từ “secure” quá mơ hồ để kiểm chứng.
 

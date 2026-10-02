@@ -1,6 +1,6 @@
 # Fault tolerance, khả năng quan sát (observability / 관측 가능성) và độ tin cậy (reliability / 신뢰성)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Fault tolerance, khả năng quan sát (observability / 관측 가능성) và độ tin cậy (reliability / 신뢰성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Fault, lỗi (error / 오류) và thất bại (failure / 실패)** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Redundancy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Fault tolerance, observability và reliability**. Route đi từ fault/error/failure → redundancy/retry/timeout → circuit breaker/bulkhead → SLI/SLO/availability → graceful degradation và chaos, để reliability được đo bằng hành vi khi hỏng.
 
 Reliable hệ thống (system / 시스템) không phải hệ thống (system / 시스템) không bao giờ thất bại (fail / 실패). Components inevitably thất bại (fail / 실패); độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) designs detection, containment, khôi phục (recovery / 복구) and sức chứa (capacity / 용량) so user-visible dịch vụ (service / 서비스) meets defined objectives.
 
