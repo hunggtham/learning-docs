@@ -1,7 +1,6 @@
 # Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)
 
-> **Mạch đọc:** Đọc **sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. sự cố (incident / 인시던트) phản hồi (response / 응답) tối ưu khôi phục (recovery / 복구) trước nguyên nhân gốc (root cause / 근본 원인)** sang **2. Severity dựa trên impact**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Incidents, resilience, backup và disaster recovery**. Route đi từ impact/severity → stabilize/restore → backup and failover evidence → root-cause learning → resilience changes, để phản ứng ưu tiên khôi phục trước rồi mới cải thiện.
 
 ## 1. sự cố (incident / 인시던트) phản hồi (response / 응답) tối ưu khôi phục (recovery / 복구) trước nguyên nhân gốc (root cause / 근본 원인)
 
@@ -9,11 +8,15 @@ Trong sự cố có người dùng (user / 사용자) impact, hai mục tiêu kh
 
 Sự cố (incident / 인시던트) tiến trình (process / 프로세스) tốt tách vai trò và thời gian. Stabilize trước; preserve bằng chứng (evidence / 증거) khi có thể; rồi investigation sâu sau khi impact giảm.
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **2. Severity dựa trên impact** tiếp nhận điểm tựa từ **1. sự cố (incident / 인시던트) phản hồi (response / 응답) tối ưu khôi phục (recovery / 복구) trước nguyên nhân gốc (root cause / 근본 원인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. sự cố (incident / 인시던트) command giảm coordination chaos** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Severity dựa trên impact
 
 Severity nên phản ánh phạm vi người dùng (user / 사용자)/nghiệp vụ (business / 비즈니스), mức mất dữ liệu, bảo mật (security / 보안) impact và thời gian, không phản ánh “bug có vẻ khó”. cơ sở dữ liệu (database / 데이터베이스) CPU 100% mà người dùng (user / 사용자) không bị ảnh hưởng có thể chưa là sự cố (incident / 인시던트) lớn; payment double-charge dù traffic nhỏ có thể rất nghiêm trọng.
 
 Quy tắc (rule / 규칙) rõ giúp escalation nhất quán.
+
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **3. sự cố (incident / 인시던트) command giảm coordination chaos** tiếp nhận điểm tựa từ **2. Severity dựa trên impact** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Mitigation có thể tăng blast radius** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. sự cố (incident / 인시던트) command giảm coordination chaos
 
@@ -21,11 +24,15 @@ Khi nhiều người cùng sửa môi trường vận hành (production / 운영
 
 Timeline phải ghi sự kiện (event / 이벤트) và hành động (action / 동작): alert lúc nào, deploy nào trước đó, hành động (action / 동작) gì đã làm, chỉ số (metric / 지표) phản ứng ra sao. Timeline sau này là dữ liệu cho postmortem.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **4. Mitigation có thể tăng blast radius** tiếp nhận điểm tựa từ **3. sự cố (incident / 인시던트) command giảm coordination chaos** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Runbook phải là quyết định (decision / 결정) hỗ trợ (support / 지원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Mitigation có thể tăng blast radius
 
 Trong sự cố (incident / 인시던트), “quy mô (scale / 규모) mọi thứ lên” hoặc “restart toàn bộ” dễ làm mất bằng chứng (evidence / 증거) và gây thundering herd. hành động (action / 동작) nên có hypothesis, expected kết quả (outcome / 결과) và quay lui (rollback / 롤백).
 
 Ví dụ liên kết (connection / 연결) pool exhaustion do DB chậm: tăng replicas app có thể tăng tổng liên kết (connection / 연결) và làm DB tệ hơn. Mitigation hợp lý có thể là giảm tính đồng thời (concurrency / 동시성), shed tải (load / 로드) hoặc disable expensive đường dẫn (path / 경로).
+
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **5. Runbook phải là quyết định (decision / 결정) hỗ trợ (support / 지원)** tiếp nhận điểm tựa từ **4. Mitigation có thể tăng blast radius** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Postmortem tìm cơ chế, không tìm người để quy lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Runbook phải là quyết định (decision / 결정) hỗ trợ (support / 지원)
 
@@ -33,11 +40,15 @@ Runbook tốt không chỉ ghi lệnh. Nó nêu symptom, điều kiện áp dụ
 
 Runbook nên được kiểm thử (test / 테스트) trong game day/sự cố (incident / 인시던트) thật và cập nhật khi giả định (assumption / 가정) đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **5. Runbook phải là quyết định (decision / 결정) hỗ trợ (support / 지원)** xác định đầu vào; **6. Postmortem tìm cơ chế, không tìm người để quy lỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. hành động (action / 동작) item phải thay đổi hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Postmortem tìm cơ chế, không tìm người để quy lỗi
 
 “Engineer chạy nhầm command” là mô tả trigger, chưa phải nguyên nhân gốc (root cause / 근본 원인) đủ sâu. Hỏi vì sao một command có blast radius lớn, vì sao rà soát (review / 검토)/guardrail thiếu, vì sao môi trường vận hành (production / 운영 환경) credential cho phép, vì sao tín hiệu (signal / 신호) không cảnh báo sớm.
 
 Blameless không nghĩa không có accountability. quyền sở hữu (ownership / 소유권) vẫn rõ, nhưng phân tích (analysis / 분석) tập trung hệ thống để thất bại (failure / 실패) tương tự khó tái diễn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **6. Postmortem tìm cơ chế, không tìm người để quy lỗi** xác định đầu vào; **7. hành động (action / 동작) item phải thay đổi hệ thống** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Resilience khác redundancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. hành động (action / 동작) item phải thay đổi hệ thống
 
@@ -45,17 +56,23 @@ Hành động (action / 동작) “cẩn thận hơn” gần như không tạo 
 
 Không nên tạo hàng chục hành động (action / 동작) low-value sau mỗi sự cố (incident / 인시던트). Ưu tiên thay đổi giảm xác suất hoặc blast radius của thất bại (failure / 실패) lớp (class / 클래스) quan trọng.
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **8. Resilience khác redundancy** tiếp nhận điểm tựa từ **7. hành động (action / 동작) item phải thay đổi hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Backup không phải khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Resilience khác redundancy
 
 Thêm replica tăng redundancy nhưng resilience còn gồm detection, failover, degradation, khôi phục (recovery / 복구) và học tập (learning / 학습). Ba replica cùng zone không chịu được zone thất bại (failure / 실패). Multi-zone nhưng cùng cơ sở dữ liệu (database / 데이터베이스) single điểm (point / 지점) vẫn chưa đủ.
 
 Hãy vẽ miền lỗi (failure domain / 장애 도메인): tiến trình (process / 프로세스), pod, nút (node / 노드), rack/zone, region, điều khiển (control / 제어) plane, định danh (identity / 식별자) provider, DNS, registry, CI và human thao tác (operation / 연산). Availability end-to-end bị chi phối bởi phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프).
 
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **9. Backup không phải khôi phục (recovery / 복구)** tiếp nhận điểm tựa từ **8. Resilience khác redundancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. RPO và RTO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Backup không phải khôi phục (recovery / 복구)
 
 Có tệp (file / 파일) backup chưa chứng minh khôi phục được. Backup có thể corrupt, thiếu key giải mã, không chứa giao dịch (transaction / 트랜잭션) log cần thiết hoặc restore mất quá lâu so với mục tiêu.
 
 Khôi phục (recovery / 복구) kiểm thử (test / 테스트) phải thực sự tạo môi trường (environment / 환경), restore dữ liệu (data / 데이터), chạy consistency/nghiệp vụ (business / 비즈니스) kiểm tra hợp lệ (validation / 검증) và đo thời gian.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **10. RPO và RTO** tiếp nhận điểm tựa từ **9. Backup không phải khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Replication không thay backup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. RPO và RTO
 
@@ -65,11 +82,15 @@ Hai mục tiêu dẫn tới kiến trúc (architecture / 아키텍처) khác nha
 
 Không nên chọn RPO/RTO theo mong muốn kỹ thuật; nghiệp vụ (business / 비즈니스) impact phải quyết định.
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **11. Replication không thay backup** tiếp nhận điểm tựa từ **10. RPO và RTO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Disaster khôi phục (recovery / 복구) và điều khiển (control / 제어) plane phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Replication không thay backup
 
 Replication sao chép cả thay đổi tốt và xấu. Nếu người dùng (user / 사용자) delete dữ liệu (data / 데이터) hoặc ransomware/corruption propagate, replica có thể hỏng giống primary. Backup point-in-time độc lập tạo khôi phục (recovery / 복구) option khác.
 
 Ngược lại, backup mỗi ngày không cung cấp failover nhanh. Resilience thường cần cả replication và backup với mục tiêu khác nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **12. Disaster khôi phục (recovery / 복구) và điều khiển (control / 제어) plane phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **11. Replication không thay backup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Game day và chaos experiment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Disaster khôi phục (recovery / 복구) và điều khiển (control / 제어) plane phụ thuộc (dependency / 의존성)
 
@@ -77,17 +98,23 @@ DR plan phải xét cả phụ thuộc (dependency / 의존성) ngoài ứng d�
 
 Một lỗi phổ biến là DR document giả định công cụ (tool / 도구) dùng để restore vẫn khả dụng trong thảm họa. Cần kiểm tra bootstrap đường dẫn (path / 경로).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **13. Game day và chaos experiment** tiếp nhận điểm tựa từ **12. Disaster khôi phục (recovery / 복구) và điều khiển (control / 제어) plane phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. cấp cao (senior / 시니어) ghi chú (note / 노트): phục hồi là một sản phẩm (product / 제품) năng lực (capability / 역량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Game day và chaos experiment
 
 Chaos kỹ thuật (engineering / 엔지니어링) có giá trị khi kiểm tra hypothesis cụ thể về resilience, không phải phá môi trường vận hành (production / 운영 환경) ngẫu nhiên. Ví dụ: “mất một nút (node / 노드) không làm SLO checkout vi phạm quá X phút”. Experiment cần steady-state chỉ số (metric / 지표), blast radius giới hạn, stop điều kiện (condition / 조건) và quay lui (rollback / 롤백).
 
 Bắt đầu staging/lab không có nghĩa đủ; môi trường vận hành (production / 운영 환경) có traffic/dữ liệu (data / 데이터)/phụ thuộc (dependency / 의존성) khác. Nhưng môi trường vận hành (production / 운영 환경) experiment phải có maturity và guardrail tương ứng.
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **14. cấp cao (senior / 시니어) ghi chú (note / 노트): phục hồi là một sản phẩm (product / 제품) năng lực (capability / 역량)** tiếp nhận điểm tựa từ **13. Game day và chaos experiment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. MTTR nên được phân rã để biết đang tối ưu phần nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. cấp cao (senior / 시니어) ghi chú (note / 노트): phục hồi là một sản phẩm (product / 제품) năng lực (capability / 역량)
 
 Backup, failover và sự cố (incident / 인시던트) tiến trình (process / 프로세스) không nên là tài liệu tồn tại riêng. Chúng là năng lực (capability / 역량) cần phiên bản (version / 버전), kiểm thử (test / 테스트), quyền sở hữu (ownership / 소유권) và telemetry. Nếu khôi phục (recovery / 복구) chỉ được thử khi disaster thật xảy ra, đó không phải plan mà là hy vọng.
 
 Một nền tảng (platform / 플랫폼) trưởng thành biến khôi phục (recovery / 복구) đường dẫn (path / 경로) thành workflow lặp lại: snapshot/backup tự động, restore drill, môi trường (environment / 환경) bootstrap bằng mã (code / 코드), truy cập (access / 접근) khẩn cấp được kiểm tra (audit / 감사) và communication template sẵn.
+
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **15. MTTR nên được phân rã để biết đang tối ưu phần nào** tiếp nhận điểm tựa từ **14. cấp cao (senior / 시니어) ghi chú (note / 노트): phục hồi là một sản phẩm (product / 제품) năng lực (capability / 역량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Backup consistency có nhiều mức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. MTTR nên được phân rã để biết đang tối ưu phần nào
 
@@ -107,6 +134,8 @@ failure begins
 
 Không nhất thiết mọi tổ chức phải dùng cùng tên chỉ số (metric / 지표). Điều quan trọng là timestamp có ngữ nghĩa (semantics / 의미론) rõ để tránh “MTTR giảm” chỉ vì đổi cách bắt đầu/kết thúc đồng hồ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **16. Backup consistency có nhiều mức** tiếp nhận điểm tựa từ **15. MTTR nên được phân rã để biết đang tối ưu phần nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Point-in-time khôi phục (recovery / 복구) cần cả cơ sở (base / 기반) backup và log chuỗi (chain / 사슬) usable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Backup consistency có nhiều mức
 
 Snapshot lưu trữ (storage / 저장소) không tự động bảo đảm application-consistent trạng thái (state / 상태). Với cơ sở dữ liệu (database / 데이터베이스) đang ghi, snapshot crash-consistent có thể tương đương mất điện đột ngột: engine phải dựa WAL/journal/khôi phục (recovery / 복구) khi restore. Một số hệ thống cần quiesce, checkpoint hoặc coordination giữa nhiều volume/thành phần (component / 컴포넌트) để tạo backup nhất quán.
@@ -115,11 +144,15 @@ Nếu ứng dụng (application / 애플리케이션) có nhiều datastore, res
 
 Backup thiết kế (design / 설계) vì vậy phải xác định consistency ranh giới (boundary / 경계), không chỉ “snapshot đã success”. cơ sở dữ liệu (database / 데이터베이스) internals sâu hơn giữ ở chuẩn gốc (canonical / 정본) dữ liệu (data / 데이터) & Databases; DevOps cần bảo đảm restore workflow hiểu đặc tả ứng dụng (application contract / 애플리케이션 계약).
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **16. Backup consistency có nhiều mức** xác định đầu vào; **17. Point-in-time khôi phục (recovery / 복구) cần cả cơ sở (base / 기반) backup và log chuỗi (chain / 사슬) usable** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. DR bootstrap phải được xem như phụ thuộc (dependency / 의존성) closure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Point-in-time khôi phục (recovery / 복구) cần cả cơ sở (base / 기반) backup và log chuỗi (chain / 사슬) usable
 
 Point-in-time khôi phục (recovery / 복구) thường dựa trên một cơ sở (base / 기반) snapshot/backup cộng chuỗi log/giao dịch (transaction / 트랜잭션) thay đổi (change / 변경) tới mốc cần phục hồi. Có backup full nhưng thiếu một đoạn log hoặc key giải mã có thể làm khôi phục (recovery / 복구) tới thời điểm mục tiêu bất khả thi.
 
 Restore drill nên kiểm tra chuỗi (chain / 사슬) end-to-end, không chỉ danh sách (list / 목록) tệp (file / 파일) tồn tại. RPO thực tế được quyết định bởi log shipping/retention và mốc gần nhất có thể phục hồi thành công, không phải con số trong chính sách (policy / 정책) document.
+
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **17. Point-in-time khôi phục (recovery / 복구) cần cả cơ sở (base / 기반) backup và log chuỗi (chain / 사슬) usable** xác định đầu vào; **18. DR bootstrap phải được xem như phụ thuộc (dependency / 의존성) closure** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **19. Failover cũng là một distributed-state thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. DR bootstrap phải được xem như phụ thuộc (dependency / 의존성) closure
 
@@ -127,11 +160,15 @@ Khi region chính mất, khôi phục (recovery / 복구) môi trường (enviro
 
 Hãy vẽ bootstrap đồ thị (graph / 그래프) và hỏi thành phần (component / 컴포넌트) nào cần tồn tại trước để tạo thành phần (component / 컴포넌트) sau. Một số control-plane asset cần replication/cross-region truy cập (access / 접근) độc lập với ứng dụng (application / 애플리케이션) dữ liệu (data / 데이터). khôi phục (recovery / 복구) plan tốt biết **thứ tự khởi động** chứ không chỉ danh sách tài nguyên (resource / 자원).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **19. Failover cũng là một distributed-state thay đổi (change / 변경)** tiếp nhận điểm tựa từ **18. DR bootstrap phải được xem như phụ thuộc (dependency / 의존성) closure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Failback thường khó hơn failover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Failover cũng là một distributed-state thay đổi (change / 변경)
 
 Chuyển traffic sang replica/region mới cần đảm bảo writer quyền sở hữu (ownership / 소유권). Nếu old primary chưa chắc đã chết mà new primary được mở ghi (write / 쓰기) không có fencing, split brain có thể xuất hiện. Đây là lý do lease/fencing/consensus là chuẩn gốc (canonical / 정본) phụ thuộc (dependency / 의존성) quan trọng cho HA.
 
 Ở DevOps tầng (layer / 계층), runbook phải biết thất bại (failure / 실패) detector có bất định (uncertainty / 불확실성) và thao tác promote/failback có điều kiện (condition / 조건) nào. “Không ping được primary nên promote ngay” có thể nguy hiểm nếu mạng (network / 네트워크) partition chỉ tách operator khỏi primary nhưng primary vẫn phục vụ một phần traffic.
+
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **20. Failback thường khó hơn failover** tiếp nhận điểm tựa từ **19. Failover cũng là một distributed-state thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Chaos experiment cần phân biệt hypothesis thất bại (failure / 실패) với experiment thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Failback thường khó hơn failover
 
@@ -139,11 +176,15 @@ Sau khi chạy ở DR region nhiều giờ, dữ liệu (data / 데이터)/trạ
 
 Một DR plan chỉ mô tả failover mà không có failback/reconciliation để lại hệ thống ở trạng thái tạm kéo dài và tăng rủi ro (risk / 위험) cho sự cố (incident / 인시던트) tiếp theo.
 
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **21. Chaos experiment cần phân biệt hypothesis thất bại (failure / 실패) với experiment thất bại (failure / 실패)** tiếp nhận điểm tựa từ **20. Failback thường khó hơn failover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. cấp cao (senior / 시니어) walkthrough: backup hàng ngày nhưng RTO vẫn không đạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Chaos experiment cần phân biệt hypothesis thất bại (failure / 실패) với experiment thất bại (failure / 실패)
 
 Nếu experiment inject mạng (network / 네트워크) mất mát (loss / 손실) nhưng công cụ (tool / 도구) inject chỉ vào một subset khác dự kiến, kết quả không chứng minh hệ thống (system / 시스템) resilient. Experiment phải verify fault thực sự xảy ra, steady-state tín hiệu (signal / 신호) được đo đúng và stop điều kiện (condition / 조건) hoạt động.
 
 Ví dụ hypothesis “mất một zone checkout vẫn đạt SLO”. Experiment cần chứng minh tải công việc (workload / 워크로드)/traffic của zone thật sự unavailable, không phải scheduler vô tình chưa đặt replica ở zone đó. Sau đó mới đọc SLO/người dùng (user / 사용자) impact.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **22. cấp cao (senior / 시니어) walkthrough: backup hàng ngày nhưng RTO vẫn không đạt** tiếp nhận điểm tựa từ **21. Chaos experiment cần phân biệt hypothesis thất bại (failure / 실패) với experiment thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. “dịch vụ (service / 서비스) đã lên lại” chưa phải khôi phục (recovery / 복구) complete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. cấp cao (senior / 시니어) walkthrough: backup hàng ngày nhưng RTO vẫn không đạt
 
@@ -153,6 +194,8 @@ Backup success tỷ lệ (rate / 비율) 100% không giải quyết mismatch nà
 
 Đây là ví dụ vì sao RTO là end-to-end năng lực (capability / 역량) chỉ số (metric / 지표), không phải thuộc tính của một backup job.
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **23. “dịch vụ (service / 서비스) đã lên lại” chưa phải khôi phục (recovery / 복구) complete** tiếp nhận điểm tựa từ **22. cấp cao (senior / 시니어) walkthrough: backup hàng ngày nhưng RTO vẫn không đạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. khôi phục (recovery / 복구) thường có một backlog phải xử lý sau khi sức chứa (capacity / 용량) trở lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. “dịch vụ (service / 서비스) đã lên lại” chưa phải khôi phục (recovery / 복구) complete
 
 Một HTTP endpoint trả 200 sau failover chỉ chứng minh một phần dữ liệu (data / 데이터) đường dẫn (path / 경로) hoạt động. khôi phục (recovery / 복구) complete cần xác nhận nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식): ghi (write / 쓰기) mới có lần ghi nhận (commit / 커밋) đúng không, hàng đợi (queue / 큐) cũ có đang drain không, duplicate side tác động (effect / 효과) có xuất hiện không, read replica/bộ nhớ đệm (cache / 캐시) có stale quá mức không và background job có tiếp tục từ checkpoint hợp lệ không.
@@ -160,6 +203,8 @@ Một HTTP endpoint trả 200 sau failover chỉ chứng minh một phần dữ 
 Runbook nên có **exit criteria** rõ thay vì dựa vào cảm giác dashboard xanh. Ví dụ: lỗi (error / 오류) ngân sách (budget / 예산) burn về mức bình thường, backlog age giảm liên tục, payment reconciliation không có mismatch, replica lag dưới threshold và không còn traffic tới old writer.
 
 Điều này ngăn sự cố (incident / 인시던트) bị đóng quá sớm rồi tái mở khi deferred công việc (work / 작업) bắt đầu gây hậu quả.
+
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **24. khôi phục (recovery / 복구) thường có một backlog phải xử lý sau khi sức chứa (capacity / 용량) trở lại** tiếp nhận điểm tựa từ **23. “dịch vụ (service / 서비스) đã lên lại” chưa phải khôi phục (recovery / 복구) complete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. dữ liệu (data / 데이터) integrity xác minh (verification / 확인) phải tách khỏi hạ tầng (infrastructure / 인프라) health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. khôi phục (recovery / 복구) thường có một backlog phải xử lý sau khi sức chứa (capacity / 용량) trở lại
 
@@ -169,6 +214,8 @@ Nếu dịch vụ (service / 서비스) vừa đủ sức chứa (capacity / 용
 
 Một hệ thống resilient không chỉ sống qua thất bại (failure / 실패); nó phải **hội tụ trở lại steady trạng thái (state / 상태) có kiểm soát**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **24. khôi phục (recovery / 복구) thường có một backlog phải xử lý sau khi sức chứa (capacity / 용량) trở lại** nêu điều cần giải thích; **25. dữ liệu (data / 데이터) integrity xác minh (verification / 확인) phải tách khỏi hạ tầng (infrastructure / 인프라) health** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Backup cần chống cả accidental deletion lẫn malicious destruction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. dữ liệu (data / 데이터) integrity xác minh (verification / 확인) phải tách khỏi hạ tầng (infrastructure / 인프라) health
 
 Cơ sở dữ liệu (database / 데이터베이스) tiến trình (process / 프로세스) healthy và replication connected không chứng minh nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터) đúng sau restore/failover. Cần kiểm tra hợp lệ (validation / 검증) ở mức (level / 수준) phù hợp: row/count/checksum khi hữu ích, foreign/nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식), reconciliation với hệ thống bên ngoài (external system / 외부 시스템) hoặc sampled giao dịch (transaction / 트랜잭션) replay.
@@ -176,6 +223,8 @@ Cơ sở dữ liệu (database / 데이터베이스) tiến trình (process / �
 Ví dụ payment hệ thống (system / 시스템) có thể restore DB thành công nhưng mất một đoạn sự kiện (event / 이벤트) đã gửi sang provider trước RPO ranh giới (boundary / 경계). Khi đó cục bộ (local / 로컬) cơ sở dữ liệu (database / 데이터베이스) hợp lệ về lưu trữ (storage / 저장소) nhưng nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) giữa hai hệ thống lệch.
 
 Khôi phục (recovery / 복구) kiểm thử (test / 테스트) trưởng thành phải trả lời “bytes đọc được” và “nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) nhất quán” như hai câu hỏi riêng.
+
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **25. dữ liệu (data / 데이터) integrity xác minh (verification / 확인) phải tách khỏi hạ tầng (infrastructure / 인프라) health** nêu điều cần giải thích; **26. Backup cần chống cả accidental deletion lẫn malicious destruction** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. quyết định (decision / 결정) log quan trọng hơn timeline thuần sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Backup cần chống cả accidental deletion lẫn malicious destruction
 
@@ -185,6 +234,8 @@ Cyber khôi phục (recovery / 복구) còn cần clean-room giả định (assu
 
 Vì vậy disaster khôi phục (recovery / 복구) và bảo mật (security / 보안) khôi phục (recovery / 복구) có overlap nhưng threat mô hình (model / 모델) khác nhau. DR do region outage giả định điều khiển (control / 제어) plane còn trustworthy; cyber khôi phục (recovery / 복구) có thể không cho phép giả định đó.
 
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **27. quyết định (decision / 결정) log quan trọng hơn timeline thuần sự kiện** tiếp nhận điểm tựa từ **26. Backup cần chống cả accidental deletion lẫn malicious destruction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Degraded chế độ (mode / 모드) cần entry và exit giao thức (protocol / 프로토콜)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. quyết định (decision / 결정) log quan trọng hơn timeline thuần sự kiện
 
 Timeline nói “14:05 quy mô (scale / 규모) lên 50 replica”. quyết định (decision / 결정) log nên thêm: hypothesis nào dẫn tới hành động (action / 동작), bằng chứng (evidence / 증거) nào hỗ trợ, expected chỉ số (metric / 지표) nào phải đổi và điều kiện undo là gì.
@@ -192,6 +243,8 @@ Timeline nói “14:05 quy mô (scale / 규모) lên 50 replica”. quyết đ�
 Thông tin này giúp người đến sau không lặp lại hành động (action / 동작) đã thất bại và giúp postmortem phân biệt quyết định (decision / 결정) hợp lý với kết quả (outcome / 결과) xấu do bất định (uncertainty / 불확실성). sự cố (incident / 인시던트) rà soát (review / 검토) không nên dùng hindsight để kết luận mọi quyết định sai chỉ vì kết quả cuối xấu.
 
 Một quyết định (decision / 결정) log tốt giữ ngữ cảnh (context / 맥락) của thời điểm ra quyết định — khi operator chưa biết những gì postmortem biết sau này.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **28. Degraded chế độ (mode / 모드) cần entry và exit giao thức (protocol / 프로토콜)** tiếp nhận điểm tựa từ **27. quyết định (decision / 결정) log quan trọng hơn timeline thuần sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. khôi phục (recovery / 복구) automation phải có idempotency và resume ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Degraded chế độ (mode / 모드) cần entry và exit giao thức (protocol / 프로토콜)
 
@@ -201,6 +254,8 @@ Degraded chế độ (mode / 모드) nên có phụ thuộc (dependency / 의존
 
 Điều này biến graceful degradation từ emergency hack thành độ tin cậy (reliability / 신뢰성) năng lực (capability / 역량) có vòng đời (lifecycle / 생명주기).
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **29. khôi phục (recovery / 복구) automation phải có idempotency và resume ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **28. Degraded chế độ (mode / 모드) cần entry và exit giao thức (protocol / 프로토콜)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Game day phải đo cả human/control-plane đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. khôi phục (recovery / 복구) automation phải có idempotency và resume ngữ nghĩa (semantics / 의미론)
 
 DR workflow có thể thất bại (fail / 실패) ở bước 7/12 vì quota, permission hoặc phụ thuộc (dependency / 의존성) unavailable. Nếu run lại từ đầu tạo duplicate mạng (network / 네트워크)/cơ sở dữ liệu (database / 데이터베이스)/secret hoặc overwrite trạng thái (state / 상태) đã đúng, automation làm khôi phục (recovery / 복구) khó hơn.
@@ -208,6 +263,8 @@ DR workflow có thể thất bại (fail / 실패) ở bước 7/12 vì quota, p
 Workflow nên giữ thao tác (operation / 연산) định danh (identity / 식별자)/checkpoint, đọc actual trạng thái (state / 상태) và tiếp tục từ phần chưa đạt bất biến (invariant / 불변식). Bước irreversible như promote writer, rotate key hoặc delete old tài nguyên (resource / 자원) cần guard/confirmation mạnh hơn bước create idempotent.
 
 Khôi phục (recovery / 복구) automation là phân tán (distributed / 분산) workflow giống nền tảng (platform / 플랫폼) provisioning; nó cần partial-failure ngữ nghĩa (semantics / 의미론) chứ không chỉ shell script dài.
+
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **29. khôi phục (recovery / 복구) automation phải có idempotency và resume ngữ nghĩa (semantics / 의미론)** xác định đầu vào; **30. Game day phải đo cả human/control-plane đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **31. cấp cao (senior / 시니어) walkthrough: failover thành công rồi outage lần hai khi backlog được mở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Game day phải đo cả human/control-plane đường dẫn (path / 경로)
 
@@ -217,6 +274,8 @@ Game day trưởng thành có thể kiểm tra bootstrap truy cập (access / �
 
 Nếu mọi kiểm thử (test / 테스트) đều do đúng tác giả runbook thực hiện, chưa chứng minh tài liệu đủ cho người trực khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **30. Game day phải đo cả human/control-plane đường dẫn (path / 경로)** xác định đầu vào; **31. cấp cao (senior / 시니어) walkthrough: failover thành công rồi outage lần hai khi backlog được mở** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **32. khôi phục (recovery / 복구) đồ thị (graph / 그래프) phải mô tả phụ thuộc (dependency / 의존성) thứ tự (ordering / 순서) và năng lực (capability / 역량) tối thiểu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. cấp cao (senior / 시니어) walkthrough: failover thành công rồi outage lần hai khi backlog được mở
 
 Giả sử region A outage 20 phút. Region B failover thành công, realtime traffic ổn ở 60% sức chứa (capacity / 용량). Trong thời gian outage hàng đợi (queue / 큐) tích 2 triệu message. nhóm (team / 팀) thấy dashboard xanh và bật toàn bộ bên tiêu thụ (consumer / 소비자) ở tính đồng thời (concurrency / 동시성) cũ. bên tiêu thụ (consumer / 소비자) cùng lúc xử lý backlog, mở hàng nghìn DB liên kết (connection / 연결) và gọi bên ngoài (external / 외부) API; độ trễ (latency / 지연 시간) realtime tăng, thử lại (retry / 재시도) xuất hiện và dịch vụ (service / 서비스) lại vượt SLO.
@@ -224,6 +283,8 @@ Giả sử region A outage 20 phút. Region B failover thành công, realtime tr
 Failover cơ chế (mechanism / 메커니즘) ban đầu đúng. thất bại (failure / 실패) thứ hai đến từ thiếu recovery-rate điều khiển (control / 제어). Mitigation tốt là ưu tiên realtime đường dẫn (path / 경로), throttle replay, tăng bên tiêu thụ (consumer / 소비자) dần theo downstream headroom và theo dõi hàng đợi (queue / 큐) age thay vì chỉ hàng đợi (queue / 큐) độ sâu (depth / 깊이).
 
 Bài học cuối cùng: **khôi phục (recovery / 복구) là một chuyển tiếp trạng thái (state transition / 상태 전이) cần sức chứa (capacity / 용량) ngân sách (budget / 예산), sequencing và bằng chứng (evidence / 증거) riêng**, không phải khoảnh khắc hạ tầng (infrastructure / 인프라) chuyển từ đỏ sang xanh.
+
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **32. khôi phục (recovery / 복구) đồ thị (graph / 그래프) phải mô tả phụ thuộc (dependency / 의존성) thứ tự (ordering / 순서) và năng lực (capability / 역량) tối thiểu** tiếp nhận điểm tựa từ **31. cấp cao (senior / 시니어) walkthrough: failover thành công rồi outage lần hai khi backlog được mở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. bằng chứng (evidence / 증거) survivability là một yêu cầu (requirement / 요구사항) của resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 32. khôi phục (recovery / 복구) đồ thị (graph / 그래프) phải mô tả phụ thuộc (dependency / 의존성) thứ tự (ordering / 순서) và năng lực (capability / 역량) tối thiểu
 
@@ -233,6 +294,8 @@ Một cách lập luận (reasoning / 추론) là vẽ đồ thị (graph / 그�
 
 Runbook tốt vì vậy không chỉ có thứ tự (order / 순서) mà còn có **precondition** và **proof** cho từng bước. Nếu bước “promote cơ sở dữ liệu (database / 데이터베이스)” yêu cầu fencing old writer, bằng chứng (evidence / 증거) fencing phải tồn tại trước khi hành động (action / 동작) tiếp theo được phép chạy.
 
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **32. khôi phục (recovery / 복구) đồ thị (graph / 그래프) phải mô tả phụ thuộc (dependency / 의존성) thứ tự (ordering / 순서) và năng lực (capability / 역량) tối thiểu** nêu điều cần giải thích; **33. bằng chứng (evidence / 증거) survivability là một yêu cầu (requirement / 요구사항) của resilience** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **34. khôi phục (recovery / 복구) điều khiển (control / 제어) plane và serving mặt phẳng dữ liệu (data plane / 데이터 플레인) có thể khỏe theo thứ tự khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. bằng chứng (evidence / 증거) survivability là một yêu cầu (requirement / 요구사항) của resilience
 
 Sự cố (incident / 인시던트) lớn có thể làm mất chính hệ thống dùng để điều tra: log backend ở cùng region, dashboard phụ thuộc SSO đang outage, triển khai (deployment / 배포) lịch sử (history / 이력) chỉ có trong CI điều khiển (control / 제어) plane hoặc kiểm tra (audit / 감사) trail nằm trên cơ sở dữ liệu (database / 데이터베이스) vừa corrupt. Khi đó hệ thống có thể phục hồi chậm không phải vì thiếu operator skill mà vì bằng chứng cùng miền lỗi (failure domain / 장애 도메인) với tải công việc (workload / 워크로드).
@@ -240,6 +303,8 @@ Sự cố (incident / 인시던트) lớn có thể làm mất chính hệ thố
 Trọng yếu (critical / 중요) bằng chứng (evidence / 증거) cần được phân loại theo câu hỏi khôi phục (recovery / 복구): ai đã thay đổi gì, sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정) nào đang chạy, writer nào có quyền sở hữu (ownership / 소유권), backup nào usable, yêu cầu (request / 요청)/nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) nào đang thất bại (fail / 실패). Một phần bằng chứng (evidence / 증거) có thể cần replication hoặc retention ở miền lỗi (failure domain / 장애 도메인) độc lập; phần khác cần export/snapshot trước destructive mitigation.
 
 Không phải mọi telemetry phải sống qua disaster. bất biến (invariant / 불변식) là **minimum diagnostic and khôi phục (recovery / 복구) bằng chứng (evidence / 증거)** phải còn truy cập được bằng bootstrap định danh (identity / 식별자)/đường dẫn (path / 경로) đã thiết kế, nếu không runbook đang giả định sensor tồn tại khi cần nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **33. bằng chứng (evidence / 증거) survivability là một yêu cầu (requirement / 요구사항) của resilience** nêu điều cần giải thích; **34. khôi phục (recovery / 복구) điều khiển (control / 제어) plane và serving mặt phẳng dữ liệu (data plane / 데이터 플레인) có thể khỏe theo thứ tự khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **35. khôi phục (recovery / 복구) xác minh (verification / 확인) phải kiểm tra negative không gian (space / 공간), không chỉ happy tín hiệu (signal / 신호)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 34. khôi phục (recovery / 복구) điều khiển (control / 제어) plane và serving mặt phẳng dữ liệu (data plane / 데이터 플레인) có thể khỏe theo thứ tự khác nhau
 
@@ -249,6 +314,8 @@ Trong khôi phục (recovery / 복구), không nên mở mutation hàng loạt c
 
 Mô hình tư duy (mental model / 사고 모델) là hai trục: **serving continuity** và **management/khôi phục (recovery / 복구) năng lực (capability / 역량)**. Resilience trưởng thành biết degraded chế độ (mode / 모드) nào giữ được trục thứ nhất trong lúc khôi phục trục thứ hai.
 
+> **Chuyển mạch:** Trong **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **34. khôi phục (recovery / 복구) điều khiển (control / 제어) plane và serving mặt phẳng dữ liệu (data plane / 데이터 플레인) có thể khỏe theo thứ tự khác nhau** nêu điều cần giải thích; **35. khôi phục (recovery / 복구) xác minh (verification / 확인) phải kiểm tra negative không gian (space / 공간), không chỉ happy tín hiệu (signal / 신호)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **36. khôi phục (recovery / 복구) debt xuất hiện khi trạng thái tạm trở thành trạng thái lâu dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 35. khôi phục (recovery / 복구) xác minh (verification / 확인) phải kiểm tra negative không gian (space / 공간), không chỉ happy tín hiệu (signal / 신호)
 
 Sau failover, việc thấy yêu cầu (request / 요청) thành công là bằng chứng (evidence / 증거) cần thiết nhưng chưa đủ. Cần hỏi những điều **không được phép còn xảy ra**: còn ghi (write / 쓰기) tới old primary không, còn traffic vào region bị cô lập không, bên tiêu thụ (consumer / 소비자) cũ có tiếp tục phát side tác động (effect / 효과) không, credential bị revoke có còn dùng được không, hàng đợi (queue / 큐) poison có tiếp tục thử lại (retry / 재시도) vô hạn không.
@@ -256,6 +323,8 @@ Sau failover, việc thấy yêu cầu (request / 요청) thành công là bằn
 Negative-space check giúp bắt split brain và zombie tải công việc (workload / 워크로드) mà dashboard success-rate có thể che. bằng chứng (evidence / 증거) thường đến từ writer lease/fencing trạng thái (state / 상태), truy cập (access / 접근) log theo region/phiên bản (version / 버전), kiểm tra (audit / 감사) auth, hàng đợi (queue / 큐) attempt và reconciliation mismatch.
 
 Exit criteria tốt gồm cả positive bất biến (invariant / 불변식) lẫn forbidden trạng thái (state / 상태). khôi phục (recovery / 복구) chỉ hoàn tất khi hệ thống vừa làm được điều cần làm vừa **không còn làm những điều nguy hiểm của topology cũ**.
+
+> **Chuyển mạch:** Ở chặng này của **Sự cố (incident / 인시던트), resilience, backup và disaster khôi phục (recovery / 복구)**, **36. khôi phục (recovery / 복구) debt xuất hiện khi trạng thái tạm trở thành trạng thái lâu dài** tiếp nhận điểm tựa từ **35. khôi phục (recovery / 복구) xác minh (verification / 확인) phải kiểm tra negative không gian (space / 공간), không chỉ happy tín hiệu (signal / 신호)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 36. khôi phục (recovery / 복구) debt xuất hiện khi trạng thái tạm trở thành trạng thái lâu dài
 
@@ -265,4 +334,4 @@ Debt nguy hiểm vì nó thay giả định (assumption / 가정) cho sự cố 
 
 Post-incident closure nên xác nhận workaround đã được remove hoặc được chuyển thành thiết kế (design / 설계) chính thức có kiểm thử (test / 테스트)/SLO/quyền sở hữu (ownership / 소유권). “người dùng (user / 사용자) hết lỗi” là mốc mitigation; “temporary khôi phục (recovery / 복구) trạng thái (state / 상태) đã được thu hồi” mới là một phần của khôi phục (recovery / 복구) completion.
 
-> **Bàn giao:** Sau **36. khôi phục (recovery / 복구) debt xuất hiện khi trạng thái tạm trở thành trạng thái lâu dài**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 observability telemetry and evidence driven debugging](./00_observability_telemetry_and_evidence_driven_debugging.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **36. khôi phục (recovery / 복구) debt xuất hiện khi trạng thái tạm trở thành trạng thái lâu dài**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
