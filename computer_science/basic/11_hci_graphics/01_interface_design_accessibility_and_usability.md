@@ -1,6 +1,6 @@
 # Thiết kế giao diện, khả năng tiếp cận và tính dễ sử dụng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thiết kế giao diện, khả năng tiếp cận và tính dễ sử dụng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính dễ sử dụng phụ thuộc người dùng và nhiệm vụ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến trúc thông tin** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Interface design, accessibility và usability**. Route đi từ task/user goals → information architecture/form design → accessibility semantics → keyboard/focus/color/responsive → user testing/A-B/dark patterns, để UX quality được kiểm tra thay vì đoán.
 
 Tính dễ sử dụng (usability) không hoàn toàn là cảm giác chủ quan. Ta có thể quan sát tỷ lệ hoàn thành nhiệm vụ, tỷ lệ lỗi, thời gian thực hiện, khả năng học và mức hài lòng. **khả năng tiếp cận (accessibility / 접근성)** mở rộng câu hỏi: giao diện có thể sử dụng được với người có khả năng giác quan, vận động, nhận thức và thiết bị khác nhau hay không?
 

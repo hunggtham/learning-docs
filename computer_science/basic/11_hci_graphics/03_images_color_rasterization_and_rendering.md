@@ -1,6 +1,6 @@
 # Images, color, rasterization và rendering
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Images, color, rasterization và rendering**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Điểm ảnh (pixel / 픽셀) là mẫu (sample / 표본), không phải ô vuông vật lý tuyệt đối** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sampling và aliasing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Images, color, rasterization và rendering**. Route đi từ pixel/sampling → aliasing/color spaces → linear light/alpha → textures/lighting → raster-vs-ray tracing/compression, để ảnh hiển thị được giải thích bằng tín hiệu và pipeline.
 
 Một digital ảnh (image / 이미지) không phải “màu thật được lưu lại”; nó là sampled/quantized biểu diễn (representation / 표현) của light/color under a color mô hình (model / 모델). Hiểu sampling, color không gian (space / 공간), alpha và compression giúp giải thích ảnh (image / 이미지) artifacts, UI rendering và media pipelines.
 

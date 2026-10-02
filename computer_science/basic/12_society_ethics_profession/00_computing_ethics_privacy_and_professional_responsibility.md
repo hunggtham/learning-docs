@@ -1,6 +1,6 @@
 # Đạo đức máy tính, quyền riêng tư và trách nhiệm nghề nghiệp
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đạo đức máy tính, quyền riêng tư và trách nhiệm nghề nghiệp**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quyết định kỹ thuật luôn chứa giả định về giá trị** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quyền riêng tư không chỉ là giữ bí mật** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computing ethics, privacy và professional responsibility**. Route đi từ value/assumption trong technical decisions → privacy as control → data minimization/consent/purpose limitation → professional responsibility → dual-use và escalation, để trách nhiệm gắn với lựa chọn cụ thể.
 
 Phần mềm thay đổi điều con người có thể biết, có thể làm và có thể kiểm soát. Vì vậy kỹ sư không chỉ chịu trách nhiệm “viết mã đúng đặc tả”; còn phải xem ai bị ảnh hưởng, loại thiệt hại nào có thể xảy ra và dữ liệu hoặc quyền đồng thuận nào đang được sử dụng. Đạo đức (ethics) không thay thế pháp luật, nhưng pháp luật cũng không bao phủ mọi quyết định có trách nhiệm.
 

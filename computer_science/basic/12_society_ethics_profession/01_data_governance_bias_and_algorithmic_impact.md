@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dữ liệu (data / 데이터) provenance** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Đo lường (measurement / 측정) độ lệch (bias / 편향)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Data governance, bias và algorithmic impact**. Route đi từ provenance → sampling/label bias → feedback loops/fairness metrics → governance controls → deletion/derived data → impact assessment, để harm được đo theo vòng đời dữ liệu.
 
 Dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) không chỉ là technical ETL. Dataset đại diện cho decisions về đo lường (measurement / 측정), inclusion, labels, truy cập (access / 접근) và retention. Những decisions đó ảnh hưởng mô hình (model / 모델)/report/automation downstream, nên quản trị (governance / 거버넌스) là part of hệ thống (system / 시스템) tính đúng đắn (correctness / 정확성).
 

@@ -1,6 +1,6 @@
 # Mô hình hóa bài toán AI, tìm kiếm và tác tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình tác tử** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tìm kiếm trong không gian trạng thái** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **AI problem formulation, search và agents**. Route đi từ state/goal formulation → state-space search/heuristics → adversarial search/planning → utility/uncertainty → agent feedback, để chọn thuật toán theo mục tiêu và chi phí tìm kiếm.
 
 **Trí tuệ nhân tạo (Artificial Intelligence — AI / 인공지능)** rộng hơn học máy. Một cách nhìn nền tảng là xây dựng **tác tử (agent)** nhận quan sát từ môi trường, duy trì hoặc ước lượng trạng thái rồi chọn hành động để đạt mục tiêu trong điều kiện có bất định và giới hạn tài nguyên.
 

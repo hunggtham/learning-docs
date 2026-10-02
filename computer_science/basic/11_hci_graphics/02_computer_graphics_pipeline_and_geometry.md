@@ -1,6 +1,6 @@
 # Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computer graphics chuỗi xử lý (pipeline / 파이프라인) và hình học (geometry / 기하학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Scene không phải ảnh (image / 이미지)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Coordinate spaces** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Computer graphics pipeline và geometry**. Route đi từ scene/objects → coordinate spaces → transforms/camera → projection/raster stages → depth/lighting, để hình học được nối với từng stage render.
 
 Computer graphics biến mathematical scene biểu diễn (representation / 표현) thành pixels. chuỗi xử lý (pipeline / 파이프라인) này nối tuyến tính (linear / 선형) algebra, hình học (geometry / 기하학), hardware parallelism và perception. Hiểu nó giúp giải thích game rendering, CAD, dữ liệu (data / 데이터) visualization, UI compositing và GPU programming.
 

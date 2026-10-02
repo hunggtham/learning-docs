@@ -1,6 +1,6 @@
 # Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Năng lượng (energy / 에너지) không chỉ là hardware concern** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Embodied chi phí (cost / 비용)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Sustainability, accessibility và computing as social infrastructure**. Route đi từ energy/embodied cost → datacenter/e-waste → digital divide/accessibility → platform concentration/resilience → rebound effects, để hạ tầng được đánh giá theo tác động dài hạn.
 
 Computer các hệ thống (systems / 시스템들) consume electricity, hardware, water/cooling sức chứa (capacity / 용량) và human attention. Khi software trở thành hạ tầng (infrastructure / 인프라) cho banking, health, education và công khai (public / 공개) services, độ tin cậy (reliability / 신뢰성)/khả năng tiếp cận (accessibility / 접근성)/environmental chi phí (cost / 비용) trở thành properties của society—not chỉ technical metrics.
 

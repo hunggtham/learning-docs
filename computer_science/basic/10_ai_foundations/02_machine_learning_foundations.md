@@ -1,6 +1,6 @@
 # Nền tảng Học máy
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nền tảng Học máy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Học có giám sát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Học không giám sát và tự giám sát** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Machine learning foundations**. Route đi từ supervised/unsupervised objectives → features/representations → loss/training/validation → overfitting/regularization → distribution shift và leakage, để generalization được tách khỏi memorization.
 
 **Học máy (Machine Learning — ML / 기계 학습)** xây dựng mô hình từ dữ liệu thay vì viết tay toàn bộ ánh xạ đầu vào → đầu ra. Nhưng “học từ dữ liệu” không có nghĩa mô hình tự tìm ra chân lý. Quá trình học luôn diễn ra trong không gian giả thuyết, hàm mục tiêu, phân bố dữ liệu và quy trình đánh giá do con người hoặc hệ thống thiết kế.
 
