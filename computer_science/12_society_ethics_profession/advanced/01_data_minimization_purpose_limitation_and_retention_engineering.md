@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) minimization, purpose limitation và retention kỹ thuật (engineering / 엔지니어링)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dữ liệu (data / 데이터) minimization** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Purpose limitation** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data minimization, purpose limitation và retention engineering**. Route đi từ collection necessity → purpose/access boundaries → retention/deletion automation → derived-data lineage → audit evidence, để giảm dữ liệu đồng thời giảm blast radius.
 
 Privacy kỹ thuật (engineering / 엔지니어링) không chỉ là chính sách (policy / 정책) document. Một hệ thống thật sự bảo vệ dữ liệu phải biến nguyên tắc như **dữ liệu (data / 데이터) minimization**, **purpose limitation** và **retention** thành kiến trúc (architecture / 아키텍처), lược đồ (schema / 스키마), kiểm soát truy cập (access control / 접근 제어) và deletion workflow có thể kiểm chứng.
 

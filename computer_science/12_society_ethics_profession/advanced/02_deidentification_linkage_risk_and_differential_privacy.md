@@ -1,6 +1,6 @@
 # De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quasi-identifiers** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hashing identifier** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **De-identification, linkage risk và differential privacy**. Route đi từ quasi-identifiers/linkage attacks → hashing/pseudonymization limits → k-anonymity intuition → differential privacy budget → release utility, để ẩn danh được đánh giá bằng adversary và utility.
 
 Xóa tên và email khỏi dataset không tự động làm dữ liệu anonymous. Nhiều thuộc tính tưởng vô hại khi kết hợp có thể nhận diện lại cá nhân qua bên ngoài (external / 외부) datasets. Privacy kỹ thuật (engineering / 엔지니어링) vì thế phải lập luận (reasoning / 추론) về thông tin (information / 정보) leakage, không chỉ direct identifiers.
 

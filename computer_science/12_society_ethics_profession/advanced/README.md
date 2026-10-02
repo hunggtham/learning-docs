@@ -1,6 +1,6 @@
 # Advanced Computing, Society, Ethics & Profession
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced Computing, Society, Ethics & Profession**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Advanced Computing, Society, Ethics & Profession** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Advanced Computing, Society, Ethics & Profession**. Route đi từ privacy threat/governance → minimization/retention → de-identification/linkage → differential privacy, để accountability gắn với data flow và rủi ro tái nhận dạng.
 
 Roadmap:
 

@@ -1,6 +1,6 @@
 # Privacy threat các mô hình (models / 모델들), quản trị (governance / 거버넌스) và accountability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Privacy threat các mô hình (models / 모델들), quản trị (governance / 거버넌스) và accountability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ luồng dữ liệu (data flow / 데이터 흐름), không chỉ cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마)** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Dữ liệu (data / 데이터) minimization là kiến trúc (architecture / 아키텍처) ràng buộc (constraint / 제약조건)** để chuyển câu hỏi ấy thành điều kiện phải giữ. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Privacy threat models, governance và accountability**. Route đi từ data-flow threat surface → actors/purposes → minimization architecture constraint → governance controls → accountability evidence, để privacy được đánh giá xuyên vòng đời.
 
 Privacy kỹ thuật (engineering / 엔지니어링) không đồng nhất với bảo mật (security / 보안). Một hệ thống (system / 시스템) có thể không bị hack nhưng vẫn thu thập quá nhiều dữ liệu (data / 데이터), dùng dữ liệu (data / 데이터) ngoài purpose ban đầu hoặc giữ dữ liệu (data / 데이터) lâu hơn cần thiết. Vì vậy privacy cần threat mô hình (model / 모델) riêng về **linkability, identifiability, suy luận (inference / 추론), secondary use và power over dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)**.
 
