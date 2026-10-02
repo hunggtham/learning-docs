@@ -1,7 +1,6 @@
 # Tâm trắc học và diễn giải bài đo tâm lý
 
-> **Mạch đọc:** Đọc **Tâm trắc học và diễn giải bài đo tâm lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Score không phải construct** sang **2. Construct definition và content coverage**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tâm trắc học và diễn giải bài đo tâm lý**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Score không phải construct** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Construct definition và content coverage** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối psychometrics với test interpretation, để điểm đo được đặt trong reliability, validity và bối cảnh người làm bài.
 
 Tâm lý học nghiên cứu nhiều construct không thể quan sát trực tiếp: trí tuệ, lo âu, trầm cảm, tính cách, động lực, burnout, attachment hay cảm giác thuộc về. **Tâm trắc học (psychometrics)** nghiên cứu cách biến những construct này thành score có thể sử dụng một cách hợp lý, đồng thời đánh giá sai số và giới hạn của suy luận (inference / 추론).
 
@@ -33,6 +32,8 @@ Use
 
 Mỗi mũi tên đều cần justification.
 
+> **Chuyển mạch:** Trong **Tâm trắc học và diễn giải bài đo tâm lý**, **2. Construct definition và content coverage** tiếp nhận điểm tựa từ **1. Score không phải construct** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Classical kiểm thử (test / 테스트) lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Construct definition và content coverage
 
 Trước khi viết item, cần xác định construct gồm gì và không gồm gì. **Độ giá trị nội dung (content validity)** hỏi các indicator có phủ đủ lĩnh vực (domain / 도메인) hay không.
@@ -40,6 +41,8 @@ Trước khi viết item, cần xác định construct gồm gì và không gồ
 Nếu đo burnout nhưng chỉ hỏi tiredness, instrument có thể bỏ cynicism hoặc occupational ngữ cảnh (context / 맥락). Nếu đo intelligence nhưng chỉ dùng vocabulary, score có thể phản ánh schooling và ngôn ngữ (language / 언어) exposure nhiều hơn lĩnh vực (domain / 도메인) mong muốn.
 
 Content ánh xạ (mapping / 매핑), expert rà soát (review / 검토) và cognitive interviewing thường hữu ích để kiểm tra item có được hiểu đúng như dự định hay không.
+
+> **Chuyển mạch:** Ở chặng này của **Tâm trắc học và diễn giải bài đo tâm lý**, **3. Classical kiểm thử (test / 테스트) lý thuyết (theory / 이론)** tiếp nhận điểm tựa từ **2. Construct definition và content coverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. độ tin cậy (reliability / 신뢰성) là consistency cho một use trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Classical kiểm thử (test / 테스트) lý thuyết (theory / 이론)
 
@@ -52,6 +55,8 @@ X = T + E
 `X` là observed score, `T` là true score theo mô hình (model / 모델) và `E` là sai số đo lường (measurement error / 측정 오차). True score ở đây là expected score qua repeated equivalent đo lường (measurement / 측정), không phải “giá trị thật tuyệt đối” của person.
 
 CTT hữu ích để lập luận (reasoning / 추론) về độ tin cậy (reliability / 신뢰성) ở kiểm thử (test / 테스트) mức (level / 수준), nhưng precision có thể khác nhau giữa trait levels và item sets; đây là một lý do IRT được phát triển.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm trắc học và diễn giải bài đo tâm lý**, **3. Classical kiểm thử (test / 테스트) lý thuyết (theory / 이론)** cho ta quy tắc; **4. độ tin cậy (reliability / 신뢰성) là consistency cho một use trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. Validity là argument về interpretation và use** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. độ tin cậy (reliability / 신뢰성) là consistency cho một use trường hợp (case / 사례)
 
@@ -69,6 +74,8 @@ Kiểm thử (test / 테스트)–retest độ tin cậy (reliability / 신뢰�
 
 Khi clinician hoặc coder đánh giá hành vi (behavior / 동작), agreement giữa raters quan trọng. Rubric, huấn luyện (training / 학습) và blinding có thể giảm drift nhưng không loại bỏ hoàn toàn subjectivity.
 
+> **Chuyển mạch:** Trong **Tâm trắc học và diễn giải bài đo tâm lý**, **4. độ tin cậy (reliability / 신뢰성) là consistency cho một use trường hợp (case / 사례)** cho ta quy tắc; **5. Validity là argument về interpretation và use** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **6. Factor phân tích (analysis / 분석) không “phát hiện các phần của não”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Validity là argument về interpretation và use
 
 Không nên nói “kiểm thử (test / 테스트) này valid” như một thuộc tính bất biến. Cách diễn đạt tốt hơn là: **bằng chứng (evidence / 증거) hiện có hỗ trợ tới mức nào cho interpretation score này, trong population này, cho use này?**
@@ -85,6 +92,8 @@ Validity bằng chứng (evidence / 증거) thường bao gồm:
 
 Structural validity chỉ là một phần. Factor mô hình (model / 모델) đẹp không tự chứng minh bên ngoài (external / 외부) validity.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm trắc học và diễn giải bài đo tâm lý**, **6. Factor phân tích (analysis / 분석) không “phát hiện các phần của não”** tiếp nhận điểm tựa từ **5. Validity là argument về interpretation và use** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. đo lường (measurement / 측정) invariance và so sánh group** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Factor phân tích (analysis / 분석) không “phát hiện các phần của não”
 
 **Exploratory Factor phân tích (analysis / 분석) (EFA)** tìm latent cấu trúc (structure / 구조) có thể giải thích covariance giữa items. **Confirmatory Factor phân tích (analysis / 분석) (CFA)** kiểm tra cấu trúc (structure / 구조) được hypothesize trước.
@@ -92,6 +101,8 @@ Structural validity chỉ là một phần. Factor mô hình (model / 모델) đ
 Factors là statistical constructs. Chúng không tự động là natural kinds hoặc distinct neural các hệ thống (systems / 시스템들). kết quả (result / 결과) phụ thuộc item pool, estimator, rotation, mẫu (sample / 표본) và mô hình (model / 모델) specification.
 
 Một quy mô (scale / 규모) có thể fit one-factor mô hình (model / 모델) trong mẫu (sample / 표본) này nhưng two-factor mô hình (model / 모델) trong mẫu (sample / 표본) khác. Điều đó không nên bị che bằng một chỉ số fit duy nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm trắc học và diễn giải bài đo tâm lý**, **6. Factor phân tích (analysis / 분석) không “phát hiện các phần của não”** đã nêu tiêu chí phân biệt, còn **7. đo lường (measurement / 측정) invariance và so sánh group** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Differential Item Functioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. đo lường (measurement / 측정) invariance và so sánh group
 
@@ -105,11 +116,15 @@ Các bước thường được mô tả như:
 
 Đây là modeling khung phần mềm (framework / 프레임워크), không phải checklist tuyệt đối. Partial invariance, alignment hoặc item-level investigation có thể phù hợp tùy dữ liệu và mục tiêu.
 
+> **Chuyển mạch:** Trong **Tâm trắc học và diễn giải bài đo tâm lý**, **7. đo lường (measurement / 측정) invariance và so sánh group** đã nêu tiêu chí phân biệt, còn **8. Differential Item Functioning** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Item phản hồi (response / 응답) lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Differential Item Functioning
 
 **Hoạt động khác biệt của item (Differential Item Functioning — DIF)** xảy ra khi people có cùng latent trait nhưng xác suất trả lời item khác nhau theo group.
 
 Ví dụ item “tôi thường nói thẳng khi không đồng ý với cấp trên” có thể phản ánh assertiveness nhưng cũng chịu power-distance norm. Nếu DIF mạnh, group difference có thể đến từ item functioning chứ không hoàn toàn từ latent construct.
+
+> **Chuyển mạch:** Ở chặng này của **Tâm trắc học và diễn giải bài đo tâm lý**, **9. Item phản hồi (response / 응답) lý thuyết (theory / 이론)** tiếp nhận điểm tựa từ **8. Differential Item Functioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Norms và tham chiếu (reference / 참조) group** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Item phản hồi (response / 응답) lý thuyết (theory / 이론)
 
@@ -119,11 +134,15 @@ IRT cho phép precision thay đổi theo trait mức (level / 수준). Computeri
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론)/mô hình (model / 모델):** IRT là họ đo lường (measurement / 측정) các mô hình (models / 모델들) rất mạnh, nhưng suy luận (inference / 추론) phụ thuộc unidimensionality/local-independence các giả định (assumptions / 가정들) và mô hình (model / 모델) fit. Không nên dùng “IRT-based” như nhãn chất lượng nếu các giả định (assumptions / 가정들) không được kiểm tra.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm trắc học và diễn giải bài đo tâm lý**, sau nội dung của **9. Item phản hồi (response / 응답) lý thuyết (theory / 이론)**, **10. Norms và tham chiếu (reference / 참조) group** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **11. Screening khác diagnosis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Norms và tham chiếu (reference / 참조) group
 
 Raw score thường không tự có nghĩa. Percentile hoặc standardized score phụ thuộc **nhóm chuẩn (normative sample)**.
 
 Percentile 90 nghĩa person đứng khoảng 90th percentile so với tham chiếu (reference / 참조) group, không có nghĩa “90% khả năng” hay “đúng 90%”. Norm cũ, population khác hoặc sampling không đại diện có thể làm interpretation sai.
+
+> **Chuyển mạch:** Trong **Tâm trắc học và diễn giải bài đo tâm lý**, **11. Screening khác diagnosis** tiếp nhận điểm tựa từ **10. Norms và tham chiếu (reference / 참조) group** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Fairness không chỉ là “cùng một kiểm thử (test / 테스트) cho mọi người”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Screening khác diagnosis
 
@@ -141,11 +160,15 @@ Threshold thường tạo sự đánh đổi (trade-off / 트레이드오프): t
 
 Đây là ứng dụng trực tiếp của Bayesian lập luận (reasoning / 추론).
 
+> **Chuyển mạch:** Ở chặng này của **Tâm trắc học và diễn giải bài đo tâm lý**, **12. Fairness không chỉ là “cùng một kiểm thử (test / 테스트) cho mọi người”** tiếp nhận điểm tựa từ **11. Screening khác diagnosis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Cross-cultural adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Fairness không chỉ là “cùng một kiểm thử (test / 테스트) cho mọi người”
 
 Fairness liên quan truy cập (access / 접근), ngôn ngữ (language / 언어), disability accommodation, item độ lệch (bias / 편향), norming, consequences và whether score interpretation is comparable.
 
 Cùng procedure cho mọi người có thể không công bằng nếu một group bị đo lường (measurement / 측정) barrier không liên quan construct, ví dụ hearing impairment khi kiểm thử (test / 테스트) không có accommodation phù hợp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm trắc học và diễn giải bài đo tâm lý**, **13. Cross-cultural adaptation** tiếp nhận điểm tựa từ **12. Fairness không chỉ là “cùng một kiểm thử (test / 테스트) cho mọi người”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. kiểm thử (test / 테스트) classification và internet psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Cross-cultural adaptation
 
@@ -153,11 +176,15 @@ Dịch quy mô (scale / 규모) tốt thường gồm nhiều bước: forward t
 
 Một câu literal-equivalent vẫn có thể cultural-non-equivalent. “Family obligation”, “assertiveness” hay “independence” có meaning khác nhau giữa ngữ cảnh (context / 맥락).
 
+> **Chuyển mạch:** Trong **Tâm trắc học và diễn giải bài đo tâm lý**, **14. kiểm thử (test / 테스트) classification và internet psychology** tiếp nhận điểm tựa từ **13. Cross-cultural adaptation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. đo lường (measurement / 측정) reporting và replication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. kiểm thử (test / 테스트) classification và internet psychology
 
-Online personality quiz thường biến continuous traits thành nhị phân (binary / 이진) categories để dễ hiểu. Điều này có thể có entertainment giá trị (value / 값) nhưng không tự mang psychometric validity.
+Các bài đo tính cách trực tuyến thường biến các đặc điểm liên tục (continuous traits) thành các nhóm nhị phân (binary / 이진) để dễ hiểu. Cách trình bày này có thể mang giá trị giải trí (entertainment value), nhưng tự nó không chứng minh độ giá trị tâm trắc (psychometric validity).
 
 MBTI chịu ảnh hưởng historical từ Jung nhưng không phải bằng chứng cho Jungian typology; hiện đại (modern / 현대적) personality science thường ưu tiên dimensional trait các mô hình (models / 모델들). Xem [[../03_human_development_and_person/03_personality]] và [[../90_connections/06_historical_theories_and_modern_evidence_matrix]].
+
+> **Chuyển mạch:** Ở chặng này của **Tâm trắc học và diễn giải bài đo tâm lý**, **14. kiểm thử (test / 테스트) classification và internet psychology** nêu điều cần giải thích; **15. đo lường (measurement / 측정) reporting và replication** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Mức bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. đo lường (measurement / 측정) reporting và replication
 
@@ -166,6 +193,8 @@ Replication chỉ hữu ích nếu measure được mô tả đủ rõ và hoạ
 Do đó transparency về instrument là một phần của reproducibility, không phải appendix kỹ thuật.
 
 Xem [[09_replication_meta_analysis_and_bayesian_reasoning]].
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm trắc học và diễn giải bài đo tâm lý**, **15. đo lường (measurement / 측정) reporting và replication** nêu điều cần giải thích; **16. Mức bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Mức bằng chứng
 
@@ -187,6 +216,8 @@ CTT, CFA/SEM, IRT, generalizability lý thuyết (theory / 이론) và Bayesian 
 
 Cutoff “độ tin cậy (reliability / 신뢰성) đủ tốt”, fit-index thresholds, mức invariance tối thiểu, choice giữa factor các mô hình (models / 모델들) và treatment của ordinal dữ liệu (data / 데이터) đều phụ thuộc ngữ cảnh (context / 맥락). Rule-of-thumb không nên được dùng như scientific law.
 
+> **Chuyển mạch:** Trong **Tâm trắc học và diễn giải bài đo tâm lý**, **16. Mức bằng chứng** nêu điều cần giải thích; **17. Những hiểu lầm phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Những hiểu lầm phổ biến
 
 **“Cronbach's alpha > .90 nghĩa kiểm thử (test / 테스트) rất tốt.”** Sai. Alpha có thể cao vì item redundant và không chứng minh construct validity.
@@ -196,6 +227,8 @@ Cutoff “độ tin cậy (reliability / 신뢰성) đủ tốt”, fit-index th
 **“Một cutoff tạo ra hai nhóm thật trong tự nhiên.”** Nhiều traits continuous; threshold thường phục vụ quyết định (decision / 결정) quy tắc (rule / 규칙).
 
 **“Một kiểm thử (test / 테스트) đã được publish thì dùng ở population nào cũng được.”** Không đúng. Interpretation cần bằng chứng (evidence / 증거) ở ngữ cảnh (context / 맥락) liên quan.
+
+> **Chuyển mạch:** Ở chặng này của **Tâm trắc học và diễn giải bài đo tâm lý**, **18. mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **17. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. mô hình tư duy (mental model / 사고 모델)
 
@@ -221,6 +254,8 @@ Decision
 
 Một score chỉ mạnh bằng weakest link trong suy luận (inference / 추론) chuỗi (chain / 사슬).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm trắc học và diễn giải bài đo tâm lý**, **Kết nối kiến thức** gom các mảnh từ **18. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kết nối kiến thức
 
 Đọc cùng [[03_measurement_statistics]], [[06_open_science_and_evidence_evaluation]], [[09_replication_meta_analysis_and_bayesian_reasoning]], [[../02_learning_and_cognition/03_intelligence_and_cognitive_differences]], [[../03_human_development_and_person/03_personality]] và [[../04_mental_health/01_assessment_and_diagnosis]].
@@ -233,4 +268,4 @@ Các nguồn định hướng giúp đối chiếu psychometric claim, fairness 
 - Best-practice guidelines hiện đại về quy mô (scale / 규모) development/kiểm tra hợp lệ (validation / 검증) trong psychological và behavioral sciences.
 - Nghiên cứu replication gần đây nhấn mạnh đo lường (measurement / 측정) reporting, độ tin cậy (reliability / 신뢰성), validity và invariance là một phần của reproducibility.
 
-> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

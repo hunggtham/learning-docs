@@ -1,7 +1,6 @@
 # Tâm lý học công việc, tổ chức và lãnh đạo
 
-> **Mạch đọc:** Đọc **Tâm lý học công việc, tổ chức và lãnh đạo** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Person–job fit và person–organization fit** sang **Motivation at công việc (work / 작업)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tâm lý học công việc, tổ chức và lãnh đạo**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Person–job fit và person–organization fit** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Motivation at công việc (work / 작업)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của work, organization và leadership, rồi nối cá nhân, nhóm, cấu trúc và văn hóa.
 
 Tâm lý học công việc không nên được hiểu như tập hợp mẹo “tạo động lực cho nhân viên”. Nó nghiên cứu cách con người suy nghĩ, phối hợp, ra quyết định và thích nghi trong hệ thống có mục tiêu, quyền lực, nguồn lực hạn chế và ràng buộc tổ chức.
 
@@ -10,6 +9,8 @@ Tâm lý học công việc không nên được hiểu như tập hợp mẹo �
 Phù hợp công việc (person–job fit) liên quan đến mức độ kỹ năng, nhu cầu và đặc điểm của người lao động khớp với yêu cầu và nguồn lực của vai trò. Phù hợp tổ chức (person–organization fit) rộng hơn, liên quan đến giá trị (value / 값), norm và cách môi trường vận hành.
 
 Một người có thể rất phù hợp về kỹ năng nhưng không phù hợp về cách ra quyết định, mức autonomy hoặc văn hóa communication. Vì vậy “fit” không nên được dùng như nhãn mơ hồ kiểu “không hợp văn hóa”; cần chỉ ra dimension cụ thể.
+
+> **Chuyển mạch:** Trong **Tâm lý học công việc, tổ chức và lãnh đạo**, **Motivation at công việc (work / 작업)** tiếp nhận điểm tựa từ **Person–job fit và person–organization fit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Goal setting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Motivation at công việc (work / 작업)
 
@@ -23,11 +24,15 @@ Một tác vụ (task / 작업) có thể trả lương tốt nhưng tạo demot
 - tải công việc (workload / 워크로드) vượt sức chứa (capacity / 용량) kéo dài;
 - người lao động không có quyền kiểm soát cách thực hiện công việc.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Goal setting** tiếp nhận điểm tựa từ **Motivation at công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Goal setting
 
 Goal hữu ích khi đủ cụ thể để định hướng attention và effort, nhưng không nên được thiết kế đến mức gây gaming.
 
 Ví dụ, nếu KPI chỉ đo số ticket đóng, nhân viên có thể tối ưu số lượng thay vì chất lượng giải quyết. Đây là ví dụ của chỉ số (metric / 지표) becoming a mục tiêu (target / 대상): đo lường (measurement / 측정) thay đổi hành vi (behavior / 동작) của hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **Goal setting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychological an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phản hồi (feedback / 피드백)
 
@@ -40,6 +45,8 @@ Phản hồi (feedback / 피드백) có giá trị hơn khi trả lời:
 - tiêu chuẩn (standard / 표준) mong muốn là gì;
 - lần sau có thể thử hành vi (behavior / 동작) nào khác.
 
+> **Chuyển mạch:** Trong **Tâm lý học công việc, tổ chức và lãnh đạo**, **Psychological an toàn (safety / 안전)** tiếp nhận điểm tựa từ **Phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Leadership** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Psychological an toàn (safety / 안전)
 
 An toàn tâm lý (psychological safety) là cảm nhận rằng một người có thể nêu câu hỏi, báo lỗi, thừa nhận không biết hoặc đưa ý kiến khác mà không bị trừng phạt xã hội không cần thiết.
@@ -47,6 +54,8 @@ An toàn tâm lý (psychological safety) là cảm nhận rằng một người 
 Nó không đồng nghĩa với môi trường luôn dễ chịu. Một nhóm (team / 팀) có psychological an toàn (safety / 안전) vẫn có tiêu chuẩn cao, rà soát (review / 검토) nghiêm và disagreement mạnh. Điểm khác là disagreement tập trung vào công việc (work / 작업), không biến thành humiliation.
 
 Trong kỹ thuật (engineering / 엔지니어링), an toàn (safety / 안전) ảnh hưởng trực tiếp đến việc bug có được báo sớm hay bị che giấu.
+
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Leadership** tiếp nhận điểm tựa từ **Psychological an toàn (safety / 안전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Power và hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Leadership
 
@@ -63,17 +72,23 @@ Một leader có thể tác động qua:
 
 Do đó nhiều “vấn đề motivation của nhân viên” thực chất là vấn đề thiết kế (design / 설계) của hệ thống (system / 시스템).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Power và hierarchy** tiếp nhận điểm tựa từ **Leadership** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Burnout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Power và hierarchy
 
 Quyền lực (power) là khả năng ảnh hưởng kết quả (outcome / 결과); địa vị (status) liên quan đến mức prestige hoặc respect mà group gán cho cá nhân. Hai khái niệm có liên quan nhưng không giống nhau.
 
 Hierarchy có thể giảm coordination chi phí (cost / 비용) nhưng cũng tạo thông tin (information / 정보) distortion. Người ở cấp thấp có thể lọc thông tin xấu vì sợ hậu quả, khiến decision-maker ở trên nhận picture quá tích cực.
 
+> **Chuyển mạch:** Trong **Tâm lý học công việc, tổ chức và lãnh đạo**, **Burnout** tiếp nhận điểm tựa từ **Power và hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm (team / 팀) cognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Burnout
 
 Burnout không nên được giải thích đơn giản là cá nhân “không biết nghỉ”. Chronic demands, low điều khiển (control / 제어), role xung đột (conflict / 충돌), unfairness, insufficient resources và khôi phục (recovery / 복구) kém đều có thể tham gia.
 
 Nếu intervention chỉ dạy mindfulness trong khi tải công việc (workload / 워크로드) không đổi, nó đang xử lý một phần nhỏ của hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Nhóm (team / 팀) cognition** tiếp nhận điểm tựa từ **Burnout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xung đột (conflict / 충돌)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhóm (team / 팀) cognition
 
@@ -89,6 +104,8 @@ Các cơ chế (mechanism / 메커니즘) quan trọng gồm:
 
 Trong software dự án (project / 프로젝트), communication giữa frontend, backend, QA và nghiệp vụ (business / 비즈니스) thường thất bại không phải vì thiếu thiện chí mà vì mô hình tư duy (mental model / 사고 모델) về yêu cầu (requirement / 요구사항) không giống nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Xung đột (conflict / 충돌)** tiếp nhận điểm tựa từ **Nhóm (team / 팀) cognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) making trong tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Xung đột (conflict / 충돌)
 
 Xung đột (conflict / 충돌) về tác vụ (task / 작업) có thể hữu ích nếu được xử lý tốt. Relationship xung đột (conflict / 충돌) thường tốn chi phí cao hơn vì threat chuyển từ idea sang định danh (identity / 식별자).
@@ -103,6 +120,8 @@ Quan sát được gì?
 → request cụ thể là gì?
 ```
 
+> **Chuyển mạch:** Trong **Tâm lý học công việc, tổ chức và lãnh đạo**, **Quyết định (decision / 결정) making trong tổ chức** tiếp nhận điểm tựa từ **Xung đột (conflict / 충돌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Quyết định (decision / 결정) making trong tổ chức
 
 Group quyết định (decision / 결정) có thể tốt hơn cá nhân khi thông tin (information / 정보) được phân tán và thật sự được tổng hợp. Nhưng group cũng có thể gặp groupthink, conformity, authority độ lệch (bias / 편향) và diffusion of responsibility.
@@ -115,6 +134,8 @@ Một số countermeasure:
 - phân biệt confidence với bằng chứng (evidence / 증거);
 - rà soát (review / 검토) quyết định (decision / 결정) tiến trình (process / 프로세스) sau khi có kết quả.
 
+> **Chuyển mạch:** Ở chặng này của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) making trong tổ chức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dùng chung (common / 공통) misconceptions
 
 **“Nhân viên giỏi tự biết phải làm gì.”** Người giỏi vẫn cần priority và ràng buộc (constraint / 제약조건) rõ.
@@ -125,8 +146,10 @@ Một số countermeasure:
 
 **“Leader tốt phải charismatic.”** Charisma có thể hữu ích trong một số ngữ cảnh (context / 맥락) nhưng không thay thế judgment, hệ thống (system / 시스템) thiết kế (design / 설계) và accountability.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học công việc, tổ chức và lãnh đạo**, **Kiến thức (knowledge / 지식) connections** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Kiến thức (knowledge / 지식) connections
 
 Xem thêm [[../03_human_development_and_person/10_group_dynamics_collective_behavior_and_cooperation]], [[../03_human_development_and_person/15_power_status_hierarchy_and_inequality]], [[../03_human_development_and_person/02_motivation_and_emotion]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]] và [[./12_psychology_in_daily_life_and_self_regulation]].
 
-> **Bàn giao:** Sau **kiến thức (knowledge / 지식) connections**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 education learning and habit design](./01_education_learning_and_habit_design.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Kiến thức (knowledge / 지식) connections**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
