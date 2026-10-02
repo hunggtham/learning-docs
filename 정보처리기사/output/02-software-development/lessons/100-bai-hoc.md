@@ -1,18 +1,26 @@
 # 113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **113 115: 버전 관리 도구 방식 (Version Control Tool Types)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối version control tool types với centralized, distributed, branch và merge, để chọn công cụ theo collaboration model.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **120-1: 소프트웨어의 분류 (Software Classification)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **113 115: 버전 관리 도구 방식 (Version Control Tool Types)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 버전, 관리, 도구, 방식
 
+> **Chuyển mạch:** Ở chặng này của **113 115: 버전 관리 도구 방식 (Version Control Tool Types)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**에서 만든 기준을 이어받아 **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **113 115: 버전 관리 도구 방식 (Version Control Tool Types)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **113 115: 버전 관리 도구 방식 (Version Control Tool Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **113 ~ 115: 버전 관리 도구 방식
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** và nối nó với **120-1: 소프트웨어의 분류 (Software Classification)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **113 115: 버전 관리 도구 방식 (Version Control Tool Types)**, **113 115: 버전 관리 도구 방식 (Version Control Tool Types)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)
 
@@ -47,3 +55,5 @@ Phần “113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)”
   - 분산 (Phân tán) = Git.
 
 Như vậy, **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **120-1: 소프트웨어의 분류 (Software Classification)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **113 115: 버전 관리 도구 방식 (Version Control Tool Types)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
