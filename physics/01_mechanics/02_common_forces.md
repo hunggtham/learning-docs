@@ -1,7 +1,6 @@
 # Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản
 
-> **Mạch đọc:** Đọc **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ sơ đồ lực** sang **Trọng lực gần mặt đất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**. Route đi từ system/free-body diagram → contact/field forces → constitutive laws → constraints → net-force equation, để sơ đồ lực nối trực giác với phương trình.
 
 Một trong những lỗi lớn nhất khi học cơ học là xem mỗi bài như một bộ công thức riêng. Cách tốt hơn là xem mọi bài Newton như một bài **mô hình hóa tương tác**: chọn hệ, xác định những vật nào đang tương tác với hệ, biểu diễn mỗi tương tác bằng một lực, rồi chiếu tổng lực lên các trục thích hợp.
 
@@ -22,6 +21,8 @@ Quy trình thực tế là:
 ```
 
 Điều quan trọng là không vẽ “chuyển động” như một lực. Một vật đang đi sang phải không có nghĩa phải có lực sang phải. Lực quyết định **sự thay đổi của vận tốc**, không quyết định sự tồn tại của vận tốc.
+
+> **Chuyển mạch:** Trong **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Trọng lực gần mặt đất** tiếp nhận điểm tựa từ **Bắt đầu từ sơ đồ lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trọng lượng biểu kiến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trọng lực gần mặt đất
 
@@ -47,6 +48,8 @@ Khối lượng triệt tiêu. Đây là lý do trong mô hình không lực c�
 
 Kết quả này không nói rằng lực hấp dẫn trên mọi vật bằng nhau. Vật nặng hơn chịu lực `mg` lớn hơn, nhưng quán tính `m` của nó cũng lớn hơn đúng cùng tỉ lệ.
 
+> **Chuyển mạch:** Ở chặng này của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Trọng lượng biểu kiến** tiếp nhận điểm tựa từ **Trọng lực gần mặt đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực pháp tuyến là phản ứng ràng buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trọng lượng biểu kiến
 
 Cảm giác “nặng” trong thang máy liên quan tới lực pháp tuyến chứ không phải trọng lực thay đổi đáng kể.
@@ -71,6 +74,8 @@ N=m(g-a).
 
 Trong rơi tự do lý tưởng, `a=g` nên `N=0`. Đây là trạng thái không trọng lượng biểu kiến (apparent weightlessness), dù trọng lực vẫn tồn tại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Lực pháp tuyến là phản ứng ràng buộc** tiếp nhận điểm tựa từ **Trọng lượng biểu kiến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma sát tĩnh không mặc định bằng μsN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lực pháp tuyến là phản ứng ràng buộc
 
 Lực pháp tuyến (normal force / 수직항력) là lực tiếp xúc vuông góc bề mặt. Nó không có một công thức cố định như `N=mg`.
@@ -85,6 +90,8 @@ Nếu có thêm lực kéo xiên lên trên với thành phần vuông góc bề
 
 Về vi mô, lực pháp tuyến xuất hiện từ tương tác điện từ giữa các nguyên tử khi các đám mây electron bị ép lại gần. Mô hình cơ học cổ điển nén toàn bộ chi tiết đó thành một lực ràng buộc hiệu dụng.
 
+> **Chuyển mạch:** Trong **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Ma sát tĩnh không mặc định bằng μsN** tiếp nhận điểm tựa từ **Lực pháp tuyến là phản ứng ràng buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma sát trượt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ma sát tĩnh không mặc định bằng `μ_sN`
 
 Ma sát tĩnh (static friction / 정지 마찰력) điều chỉnh để ngăn trượt tương đối đến một giới hạn:
@@ -96,6 +103,8 @@ Ma sát tĩnh (static friction / 정지 마찰력) điều chỉnh để ngăn t
 Dấu bằng chỉ xảy ra ở ngưỡng sắp trượt. Ví dụ nếu một hộp nằm yên trên sàn ngang và ta đẩy nhẹ `5 N`, ma sát tĩnh có thể chỉ là `5 N`, không phải tự động bằng `\mu_sN`.
 
 Đây là một nguồn sai rất phổ biến: `\mu_sN` là **giá trị cực đại** mà mô hình ma sát tĩnh cho phép, không phải giá trị bắt buộc.
+
+> **Chuyển mạch:** Ở chặng này của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Ma sát trượt** tiếp nhận điểm tựa từ **Ma sát tĩnh không mặc định bằng μsN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao đi bộ cần ma sát tĩnh?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ma sát trượt
 
@@ -109,6 +118,8 @@ Hướng của ma sát trượt ngược với vận tốc tương đối giữa
 
 Mô hình này có ích nhưng không phải định luật vi mô cơ bản. Ma sát thực tế có thể phụ thuộc vào tốc độ, nhiệt độ, độ nhám, độ sạch bề mặt, bôi trơn, biến dạng dẻo và lịch sử tiếp xúc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Vì sao đi bộ cần ma sát tĩnh?** tiếp nhận điểm tựa từ **Ma sát trượt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mặt phẳng nghiêng: bài toán chiếu vectơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao đi bộ cần ma sát tĩnh?
 
 Khi chân đạp mặt đất về phía sau mà không trượt, mặt đất tác dụng ma sát tĩnh lên chân theo hướng về phía trước. Lực này giúp gia tốc tâm khối của cơ thể.
@@ -120,6 +131,8 @@ f_{s,max}=\mu_sN
 ```
 
 nhỏ hơn. Cơ thể khó tạo đủ lực ngang mà không trượt.
+
+> **Chuyển mạch:** Trong **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Mặt phẳng nghiêng: bài toán chiếu vectơ** tiếp nhận điểm tựa từ **Vì sao đi bộ cần ma sát tĩnh?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực căng dây và ràng buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mặt phẳng nghiêng: bài toán chiếu vectơ
 
@@ -167,6 +180,8 @@ nên
 
 Đây là một ví dụ cho thấy hệ số ma sát có thể được đo từ một thí nghiệm hình học đơn giản.
 
+> **Chuyển mạch:** Ở chặng này của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Lực căng dây và ràng buộc** tiếp nhận điểm tựa từ **Mặt phẳng nghiêng: bài toán chiếu vectơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực đàn hồi và định luật Hooke** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lực căng dây và ràng buộc
 
 Lực căng (tension / 장력) là lực kéo dọc theo dây hoặc cáp. Với dây lý tưởng không khối lượng, không giãn và ròng rọc không ma sát, lực căng có thể xem như bằng nhau trên toàn dây.
@@ -199,6 +214,8 @@ a=\frac{m_2-m_1}{m_1+m_2}g.
 
 Sau đó mới thế lại để tìm `T`. Cách giải này cho thấy lực căng là đại lượng được xác định bởi toàn hệ, không phải một số biết sẵn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Lực đàn hồi và định luật Hooke** tiếp nhận điểm tựa từ **Lực căng dây và ràng buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực cản trong chất lưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lực đàn hồi và định luật Hooke
 
 Gần cân bằng, nhiều hệ đàn hồi có thể tuyến tính hóa:
@@ -216,6 +233,8 @@ U(x)=\frac12kx^2.
 Lực Hooke không chỉ dành cho lò xo kim loại. Gần một cực tiểu trơn của thế năng, nhiều hệ có thể được xấp xỉ bởi thế bậc hai và từ đó dẫn đến lực gần tuyến tính.
 
 Khi biến dạng lớn, vật liệu có thể phi tuyến, chảy dẻo, có hysteresis hoặc hỏng. Khi đó `F=-kx` không còn đủ.
+
+> **Chuyển mạch:** Trong **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Lực cản trong chất lưu** tiếp nhận điểm tựa từ **Lực đàn hồi và định luật Hooke** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận tốc giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lực cản trong chất lưu
 
@@ -241,6 +260,8 @@ F_d\approx\frac12\rho C_dAv^2.
 
 `C_d` phụ thuộc hình dạng và chế độ dòng chảy. Việc mô hình lực cản tuyến tính hay bậc hai không phải tùy ý; nó liên quan tới số Reynolds và cấu trúc dòng.
 
+> **Chuyển mạch:** Ở chặng này của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Lực cản trong chất lưu** đã nêu tiêu chí phân biệt, còn **Vận tốc giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Lực hướng tâm không phải một loại lực mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vận tốc giới hạn
 
 Một vật rơi trong không khí đạt vận tốc giới hạn (terminal velocity) khi tổng lực bằng không.
@@ -261,6 +282,8 @@ Kết quả giải thích vì sao vật nặng và đặc có thể có vận t�
 
 Trong nhảy dù, mở dù làm tăng mạnh `A` và thay đổi `C_d`, từ đó giảm `v_t`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Vận tốc giới hạn** đã nêu tiêu chí phân biệt, còn **Lực hướng tâm không phải một loại lực mới** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Hệ quy chiếu phi quán tính và lực quán tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lực hướng tâm không phải một loại lực mới
 
 Trong chuyển động tròn, gia tốc hướng tâm có độ lớn
@@ -279,6 +302,8 @@ Do đó tổng thành phần lực theo phương bán kính phải thỏa
 
 Ví dụ xe rẽ trên đường phẳng có thể nhận lực hướng tâm chủ yếu từ ma sát tĩnh. Vệ tinh quay quanh Trái Đất nhận lực hướng tâm từ hấp dẫn.
 
+> **Chuyển mạch:** Trong **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Hệ quy chiếu phi quán tính và lực quán tính** tiếp nhận điểm tựa từ **Lực hướng tâm không phải một loại lực mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài toán mẫu: kéo hộp bằng lực xiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hệ quy chiếu phi quán tính và lực quán tính
 
 Trong hệ quy chiếu đang gia tốc hoặc quay, ta có thể thêm các lực quán tính (inertial forces) để tiếp tục dùng dạng Newton quen thuộc.
@@ -296,6 +321,8 @@ Lực ly tâm có dạng
 ```
 
 Các lực này không biểu diễn tương tác mới giữa hai vật; chúng xuất hiện vì ta đang dùng một hệ quy chiếu phi quán tính.
+
+> **Chuyển mạch:** Ở chặng này của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Bài toán mẫu: kéo hộp bằng lực xiên** tiếp nhận điểm tựa từ **Hệ quy chiếu phi quán tính và lực quán tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách kiểm tra một sơ đồ lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bài toán mẫu: kéo hộp bằng lực xiên
 
@@ -334,6 +361,8 @@ a\approx1.90\,m/s^2.
 
 Điểm quan trọng là lực kéo xiên không chỉ có thành phần ngang; nó còn thay đổi `N`, từ đó thay đổi cả ma sát.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Cách kiểm tra một sơ đồ lực** tiếp nhận điểm tựa từ **Bài toán mẫu: kéo hộp bằng lực xiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cách kiểm tra một sơ đồ lực
 
 Sau khi vẽ sơ đồ, hãy hỏi:
@@ -346,9 +375,13 @@ Sau khi vẽ sơ đồ, hãy hỏi:
 
 Nếu trả lời được các câu này, phần lớn lỗi cơ học cơ bản sẽ giảm đáng kể.
 
+> **Chuyển mạch:** Trong **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cách kiểm tra một sơ đồ lực** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Tên lực cho biết **cơ chế tương tác hoặc ràng buộc**, còn phương trình Newton cho biết tổng tác dụng của các tương tác đó lên chuyển động. Đừng tìm một công thức cho “tình huống”; hãy xác định hệ, tương tác, ràng buộc và trục tọa độ.
+
+> **Chuyển mạch:** Ở chặng này của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -368,10 +401,12 @@ Chính xác hơn, ma sát chống chuyển động tương đối hoặc xu hư�
 
 Không. Đó là hợp lực theo phương bán kính.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Định luật Newton](01_newton_laws_dynamics.md), [Vectơ và hệ quy chiếu](../00_foundations/02_space_time_vectors_frames.md).
 
 **Liên hệ tiếp:** [Chuyển động quay](05_rotation_rigid_body.md), [Đàn hồi và cơ học vật liệu](07_statics_elasticity_materials.md), [Cơ học chất lưu](../03_continuum/00_fluids.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

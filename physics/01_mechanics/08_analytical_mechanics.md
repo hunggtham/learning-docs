@@ -1,7 +1,6 @@
 # Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian
 
-> **Mạch đọc:** Đọc **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao Newton chưa phải ngôn ngữ duy nhất của cơ học?** sang **Bậc tự do và tọa độ suy rộng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cơ học giải tích: generalized coordinates, Lagrangian và Hamiltonian**. Route đi từ degrees of freedom → variational principle → Lagrange equations → canonical variables → Hamiltonian phase space, để cơ học nối symmetry với cấu trúc toán.
 
 ## Vì sao Newton chưa phải ngôn ngữ duy nhất của cơ học?
 
@@ -12,6 +11,8 @@ Cơ học giải tích (analytical mechanics / 해석역학) đổi điểm nhì
 > thay vì bắt đầu từ từng lực riêng lẻ, hãy xác định bậc tự do, ràng buộc, năng lượng và đối xứng của hệ.
 
 Ngôn ngữ này không thay thế vật lý Newton bằng một lý thuyết khác; nó tổ chức cùng động lực học theo cách phù hợp hơn với hệ nhiều bậc tự do.
+
+> **Chuyển mạch:** Trong **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Bậc tự do và tọa độ suy rộng** tiếp nhận điểm tựa từ **Vì sao Newton chưa phải ngôn ngữ duy nhất của cơ học?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lagrangian và tác dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bậc tự do và tọa độ suy rộng
 
@@ -34,6 +35,8 @@ y=-\ell\cos\theta.
 ```
 
 Đây là ưu điểm lớn của tọa độ suy rộng: chọn biến phù hợp có thể loại bỏ nhiều lực ràng buộc khỏi bài toán.
+
+> **Chuyển mạch:** Ở chặng này của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Lagrangian và tác dụng** tiếp nhận điểm tựa từ **Bậc tự do và tọa độ suy rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy ra phương trình Euler–Lagrange** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lagrangian và tác dụng
 
@@ -58,6 +61,8 @@ Nguyên lý tác dụng dừng nói quỹ đạo vật lý làm biến phân b�
 ```
 
 “Dừng” chính xác hơn “nhỏ nhất”, vì quỹ đạo vật lý không bắt buộc là minimum toàn cục của tác dụng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Suy ra phương trình Euler–Lagrange** tiếp nhận điểm tựa từ **Lagrangian và tác dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Newton xuất hiện trở lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Suy ra phương trình Euler–Lagrange
 
@@ -116,6 +121,8 @@ Hạng biên bằng 0 vì endpoint cố định. Vì `\delta q` tùy ý bên tro
 
 Đây là phương trình Euler–Lagrange.
 
+> **Chuyển mạch:** Trong **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Newton xuất hiện trở lại** tiếp nhận điểm tựa từ **Suy ra phương trình Euler–Lagrange** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: con lắc đơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Newton xuất hiện trở lại
 
 Với một hạt một chiều,
@@ -142,6 +149,8 @@ m\ddot x=-\frac{dV}{dx}=F.
 ```
 
 Vì vậy Lagrange không mâu thuẫn Newton; nó tái biểu diễn động lực học theo năng lượng và tọa độ thích hợp.
+
+> **Chuyển mạch:** Ở chặng này của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Newton xuất hiện trở lại** cho ta quy tắc; **Ví dụ: con lắc đơn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Động lượng suy rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: con lắc đơn
 
@@ -193,6 +202,8 @@ và đo bằng radian ta mới dùng
 
 Điều này cho thấy SHM là tuyến tính hóa của hệ phi tuyến thật.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Ví dụ: con lắc đơn** cho ta quy tắc; **Động lượng suy rộng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tọa độ cyclic và định luật bảo toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Động lượng suy rộng
 
 Động lượng chính tắc liên hợp với `q_i` là
@@ -205,6 +216,8 @@ p_i
 Nó không phải lúc nào cũng bằng `m\dot q_i`.
 
 Trong trường điện từ, chẳng hạn, động lượng chính tắc chứa thế vectơ. Vì vậy phải phân biệt động lượng cơ học và động lượng chính tắc theo ngữ cảnh.
+
+> **Chuyển mạch:** Trong **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Tọa độ cyclic và định luật bảo toàn** tiếp nhận điểm tựa từ **Động lượng suy rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ràng buộc và nhân tử Lagrange** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tọa độ cyclic và định luật bảo toàn
 
@@ -232,6 +245,8 @@ p_j=\text{constant}.
 Tọa độ như vậy gọi là cyclic coordinate.
 
 Đây là phiên bản cụ thể của tư duy Noether: đối xứng liên tục tạo đại lượng bảo toàn.
+
+> **Chuyển mạch:** Ở chặng này của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Ràng buộc và nhân tử Lagrange** tiếp nhận điểm tựa từ **Tọa độ cyclic và định luật bảo toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi Legendre và Hamiltonian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ràng buộc và nhân tử Lagrange
 
@@ -262,6 +277,8 @@ Các `\lambda_a` thường liên hệ với lực ràng buộc.
 
 Phương pháp này đặc biệt hữu ích khi muốn vừa giữ tọa độ thuận tiện vừa tính phản lực ràng buộc (constraint / 제약조건).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Biến đổi Legendre và Hamiltonian** tiếp nhận điểm tựa từ **Ràng buộc và nhân tử Lagrange** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hamiltonian có luôn bằng tổng năng lượng không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Biến đổi Legendre và Hamiltonian
 
 Từ Lagrangian, định nghĩa Hamiltonian bằng biến đổi Legendre:
@@ -287,6 +304,8 @@ Phương trình Hamilton là
 
 Một hệ phương trình bậc hai theo `q` trở thành hệ bậc nhất trên không gian pha.
 
+> **Chuyển mạch:** Trong **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Hamiltonian có luôn bằng tổng năng lượng không?** tiếp nhận điểm tựa từ **Biến đổi Legendre và Hamiltonian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không gian pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hamiltonian có luôn bằng tổng năng lượng không?
 
 Với nhiều hệ cơ học chuẩn, không phụ thuộc thời gian và có thế không phụ thuộc vận tốc,
@@ -300,6 +319,8 @@ Nhưng đây không phải định nghĩa tổng quát.
 Khi có trường điện từ, tọa độ phụ thuộc thời gian hoặc Lagrangian đặc biệt, Hamiltonian cần được tính từ biến đổi Legendre thay vì giả định bằng “động năng + thế năng”.
 
 Vai trò cơ bản của `H` là generator của tiến hóa theo thời gian trong cấu trúc Hamilton.
+
+> **Chuyển mạch:** Ở chặng này của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Không gian pha** tiếp nhận điểm tựa từ **Hamiltonian có luôn bằng tổng năng lượng không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: Hamiltonian của dao động tử điều hòa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Không gian pha
 
@@ -318,6 +339,8 @@ Cách nhìn này mở đường tới:
 - chaos;
 - chuẩn gốc (canonical / 정본) transformations;
 - cơ học lượng tử.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Không gian pha** cho ta quy tắc; **Ví dụ: Hamiltonian của dao động tử điều hòa** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lagrangian với lực không bảo toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: Hamiltonian của dao động tử điều hòa
 
@@ -353,6 +376,8 @@ trong không gian pha là ellipse.
 
 Do đó dao động điều hòa có thể được hiểu như chuyển động tuần hoàn trên một đường năng lượng cố định trong phase không gian (space / 공간).
 
+> **Chuyển mạch:** Trong **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Ví dụ: Hamiltonian của dao động tử điều hòa** cho ta quy tắc; **Lagrangian với lực không bảo toàn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên hệ với kỹ thuật (engineering / 엔지니어링) và Khoa học máy tính (computer science / 컴퓨터 과학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lagrangian với lực không bảo toàn
 
 Công thức `L=T-V` đơn giản nhất phù hợp với lực bảo toàn.
@@ -377,6 +402,8 @@ và viết
 
 Tuy nhiên hệ tiêu tán không còn giữ đầy đủ cấu trúc Hamilton kín nếu ta chỉ theo dõi vài bậc tự do. Muốn mô tả vi mô đầy đủ thường phải mở rộng hệ để bao gồm môi trường.
 
+> **Chuyển mạch:** Ở chặng này của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Liên hệ với kỹ thuật (engineering / 엔지니어링) và Khoa học máy tính (computer science / 컴퓨터 과학)** tiếp nhận điểm tựa từ **Lagrangian với lực không bảo toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền áp dụng và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với kỹ thuật (engineering / 엔지니어링) và Khoa học máy tính (computer science / 컴퓨터 과학)
 
 Robot nhiều khớp thường dùng tọa độ khớp `q` và phương trình dạng
@@ -397,11 +424,15 @@ Trong mô phỏng, việc giữ cấu trúc vật lý có lợi:
 
 Cấu trúc vật lý đóng vai trò inductive độ lệch (bias / 편향) cho mô hình tính toán.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Liên hệ với kỹ thuật (engineering / 엔지니어링) và Khoa học máy tính (computer science / 컴퓨터 과학)** đã nêu tiêu chí phân biệt, còn **Miền áp dụng và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Miền áp dụng và giới hạn
 
 Cơ học Lagrange/Hamilton cổ điển vẫn nằm trong miền classical mechanics. Nó không tự xử lý hiệu ứng tương đối tính hoặc lượng tử nếu chưa thay Lagrangian/Hamiltonian bằng lý thuyết phù hợp.
 
 Một số ràng buộc không holonomic cần xử lý tinh tế hơn. Biến đổi Legendre cũng có thể suy biến nếu Hessian theo `\dot q` không khả nghịch, như trong gauge lý thuyết (theory / 이론) và constrained các hệ thống (systems / 시스템들).
+
+> **Chuyển mạch:** Trong **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Miền áp dụng và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -414,6 +445,8 @@ Hamilton: state in phase space → generator H → phase-space flow
 ```
 
 Chúng không cạnh tranh; mỗi ngôn ngữ làm một cấu trúc khác của bài toán trở nên rõ hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -433,10 +466,12 @@ Không trong mọi formulation. Cần tính từ biến đổi Legendre và xét
 
 Với hệ nhiều bậc tự do, symmetry và ràng buộc (constraint / 제약조건), nó thường giảm độ phức tạp và mở ra các định luật bảo toàn khó thấy trong FBD.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Công và năng lượng](03_work_energy_power.md), [Chuyển động quay](05_rotation_rigid_body.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Hamilton–Jacobi và biến đổi chính tắc](10_canonical_transformations_hamilton_jacobi.md), [Động lực phi tuyến và chaos](09_nonlinear_dynamics_chaos.md), [Cơ học lượng tử](../08_quantum/00_quantum_foundations.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Động lượng, xung lượng, va chạm và tâm khối
 
-> **Mạch đọc:** Đọc **Động lượng, xung lượng, va chạm và tâm khối** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao cần động lượng khi đã có động năng?** sang **Xung lượng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Động lượng, xung lượng, va chạm và tâm khối**. Route đi từ momentum/impulse → center of mass → conservation laws → elastic/inelastic collision → system boundaries, để tương tác ngắn nối với đại lượng bảo toàn.
 
 ## Tại sao cần động lượng khi đã có động năng?
 
@@ -19,8 +18,7 @@
 
 Năng lượng là đại lượng vô hướng nên rất mạnh khi phân tích sự chuyển đổi và bảo toàn năng lượng. Động lượng giữ cả độ lớn lẫn thông tin về hướng, vì vậy đặc biệt hữu ích trong các bài toán va chạm, giật lùi và hệ nhiều vật.
 
-
-> **Chuyển mạch:** Từ **Tại sao cần động lượng khi đã có động năng?**, ta sang **Xung lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, **Xung lượng** tiếp nhận điểm tựa từ **Tại sao cần động lượng khi đã có động năng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo toàn động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xung lượng
 
@@ -44,8 +42,7 @@ Nếu chỉ biết lực trung bình trong khoảng thời gian `\Delta t`, ta c
 
 Với cùng một độ biến thiên động lượng `\Delta p`, kéo dài thời gian va chạm sẽ làm giảm độ lớn lực trung bình. Túi khí ô tô, vùng hấp thụ va chạm của thân xe, thảm tập và động tác co tay khi bắt bóng đều khai thác nguyên lý này.
 
-
-> **Chuyển mạch:** Từ **Xung lượng**, ta sang **Bảo toàn động lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Động lượng, xung lượng, va chạm và tâm khối**, **Bảo toàn động lượng** tiếp nhận điểm tựa từ **Xung lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Va chạm đàn hồi và không đàn hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo toàn động lượng
 
@@ -69,8 +66,7 @@ Nếu tổng ngoại lực bằng không:
 
 Bảo toàn động lượng không phụ thuộc vào việc va chạm có đàn hồi hay không. Ở mức cơ học, nó xuất hiện khi hệ được cô lập khỏi ngoại lực. Ở mức sâu hơn, bảo toàn động lượng liên hệ với đối xứng tịnh tiến (translational symmetry / 병진 대칭) của không gian.
 
-
-> **Chuyển mạch:** Từ **Bảo toàn động lượng**, ta sang **Va chạm đàn hồi và không đàn hồi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lượng, xung lượng, va chạm và tâm khối**, **Va chạm đàn hồi và không đàn hồi** tiếp nhận điểm tựa từ **Bảo toàn động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tâm khối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Va chạm đàn hồi và không đàn hồi
 
@@ -96,8 +92,7 @@ v_f=\frac{m_1}{m_1+m_2}v_1
 
 Động năng trước và sau nói chung không bằng nhau. Phần động năng giảm đi không biến mất mà chuyển sang các dạng năng lượng khác của hệ.
 
-
-> **Chuyển mạch:** Từ **Va chạm đàn hồi và không đàn hồi**, ta sang **Tâm khối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, **Tâm khối** tiếp nhận điểm tựa từ **Va chạm đàn hồi và không đàn hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tên lửa và hệ có khối lượng thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tâm khối
 
@@ -123,8 +118,7 @@ Nội lực có thể làm hệ biến dạng, quay hoặc thậm chí nổ thà
 
 Nếu một người đứng trên ván trượt ném một quả bóng về phía trước, người và ván trượt lùi lại. Các phần của hệ trao đổi động lượng với nhau, trong khi chuyển động của tâm khối toàn hệ vẫn tuân theo ngoại lực tác dụng lên hệ.
 
-
-> **Chuyển mạch:** Từ **Tâm khối**, ta sang **Tên lửa và hệ có khối lượng thay đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Động lượng, xung lượng, va chạm và tâm khối**, **Tên lửa và hệ có khối lượng thay đổi** tiếp nhận điểm tựa từ **Tâm khối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài toán giật lùi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tên lửa và hệ có khối lượng thay đổi
 
@@ -144,8 +138,7 @@ Logarithm xuất hiện vì mỗi phần tăng vận tốc đạt được khi t
 
 Đây là một ví dụ điển hình cho cấu trúc logarit xuất hiện trong một quá trình có sự thay đổi theo tỉ lệ của đại lượng hiện có.
 
-
-> **Chuyển mạch:** Từ **Tên lửa và hệ có khối lượng thay đổi**, ta sang **Bài toán giật lùi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lượng, xung lượng, va chạm và tâm khối**, **Bài toán giật lùi** tiếp nhận điểm tựa từ **Tên lửa và hệ có khối lượng thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo toàn như một bất biến của hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bài toán giật lùi
 
@@ -163,8 +156,7 @@ V=-\frac{m}{M}v
 
 Dấu âm cho biết súng chuyển động ngược hướng với viên đạn. Vì `M` thường lớn hơn `m` rất nhiều, độ lớn vận tốc giật lùi của súng nhỏ hơn nhiều so với vận tốc viên đạn.
 
-
-> **Chuyển mạch:** Từ **Bài toán giật lùi**, ta sang **Bảo toàn như một bất biến của hệ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, **Bảo toàn như một bất biến của hệ** tiếp nhận điểm tựa từ **Bài toán giật lùi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bảo toàn như một bất biến của hệ
 
@@ -172,15 +164,13 @@ Có thể liên hệ trực giác với một hệ thống kế toán hoặc m�
 
 Điểm khác biệt quan trọng là định luật bảo toàn trong vật lý không phải quy ước do con người đặt ra. Nó là cấu trúc được kiểm chứng thực nghiệm và, ở mức lý thuyết sâu hơn, liên hệ với đối xứng của tự nhiên.
 
-
-> **Chuyển mạch:** Từ **Bảo toàn như một bất biến của hệ**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Động lượng, xung lượng, va chạm và tâm khối**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Bảo toàn như một bất biến của hệ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Động lượng có thể được hình dung như một “sổ cái chuyển động có hướng”. Ngoại lực tạo dòng động lượng đi vào hoặc đi ra khỏi hệ; các tương tác nội bộ chỉ chuyển động lượng giữa các phần của hệ. Khi chọn đúng ranh giới hệ, nhiều bài toán va chạm phức tạp trở thành bài toán cân bằng một đại lượng vectơ.
 
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Những ngộ nhận thường gặp (Common Misconceptions)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lượng, xung lượng, va chạm và tâm khối**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -192,8 +182,7 @@ Không. `p=mv` là vectơ và tuyến tính theo `v`, còn `K=mv²/2` là vô h�
 
 Sai. Động lượng được bảo toàn trong mọi loại va chạm nếu hệ cô lập. Chỉ động năng mới có thêm điều kiện bảo toàn trong va chạm đàn hồi.
 
-
-> **Chuyển mạch:** Từ **Những ngộ nhận thường gặp (Common Misconceptions)**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -201,4 +190,4 @@ Sai. Động lượng được bảo toàn trong mọi loại va chạm nếu h�
 
 **Liên hệ tiếp:** [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md), [Lượng tử](../08_quantum/00_quantum_foundations.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

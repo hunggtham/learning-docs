@@ -1,7 +1,6 @@
 # Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi
 
-> **Mạch đọc:** Đọc **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cơ học Hamilton còn đi xa hơn hai phương trình Hamilton?** sang **Ngoặc Poisson: ngôn ngữ của biến thiên trong không gian pha**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cơ học Hamilton nâng cao: Poisson brackets, canonical transformations và Hamilton–Jacobi**. Route đi từ phase-space structure → Poisson algebra → canonical maps → generating functions → Hamilton–Jacobi/action, để biến đổi giữ nguyên động lực học.
 
 ## Vì sao cơ học Hamilton còn đi xa hơn hai phương trình Hamilton?
 
@@ -17,6 +16,8 @@ Khi mới học cơ học Hamilton (Hamiltonian mechanics / 해밀턴 역학), t
 Trong cơ học Newton, đổi từ tọa độ Descartes sang tọa độ cực có thể làm bài toán quỹ đạo đơn giản hơn. Trong cơ học Hamilton, ta còn có thể đổi đồng thời cả tọa độ và động lượng bằng **biến đổi chính tắc (canonical transformation / 정준변환)**.
 
 Mục tiêu không phải chỉ đổi ký hiệu. Ta muốn tìm cách biểu diễn trong đó chuyển động trở nên đơn giản hơn hoặc làm các đại lượng bảo toàn lộ rõ hơn.
+
+> **Chuyển mạch:** Trong **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Ngoặc Poisson: ngôn ngữ của biến thiên trong không gian pha** tiếp nhận điểm tựa từ **Vì sao cơ học Hamilton còn đi xa hơn hai phương trình Hamilton?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối sang cơ học lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngoặc Poisson: ngôn ngữ của biến thiên trong không gian pha
 
@@ -46,6 +47,8 @@ Một đại lượng được bảo toàn khi
 
 Điều này cho phép kiểm tra định luật bảo toàn trực tiếp từ cấu trúc đại số mà không nhất thiết phải giải toàn bộ quỹ đạo.
 
+> **Chuyển mạch:** Ở chặng này của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Cầu nối sang cơ học lượng tử** tiếp nhận điểm tựa từ **Ngoặc Poisson: ngôn ngữ của biến thiên trong không gian pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi chính tắc: đổi biến mà không phá cấu trúc động lực học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cầu nối sang cơ học lượng tử
 
 Trong cơ học lượng tử, ngoặc Poisson có một quan hệ tương ứng khái niệm với commutator:
@@ -57,6 +60,8 @@ Trong cơ học lượng tử, ngoặc Poisson có một quan hệ tương ứng
 ```
 
 Không nên coi đây là quy tắc thay thế máy móc cho mọi hệ, nhưng nó cho thấy cơ học lượng tử kế thừa nhiều cấu trúc từ cơ học Hamilton cổ điển.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Biến đổi chính tắc: đổi biến mà không phá cấu trúc động lực học** tiếp nhận điểm tựa từ **Cầu nối sang cơ học lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm sinh: thiết kế biến đổi thay vì đoán trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biến đổi chính tắc: đổi biến mà không phá cấu trúc động lực học
 
@@ -87,6 +92,8 @@ Các biến chính tắc phải giữ các quan hệ ngoặc Poisson cơ bản
 
 Có thể so sánh với phép quay Euclid: phép quay giữ độ dài và góc; biến đổi chính tắc giữ cấu trúc symplectic của không gian pha.
 
+> **Chuyển mạch:** Trong **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Hàm sinh: thiết kế biến đổi thay vì đoán trực tiếp** tiếp nhận điểm tựa từ **Biến đổi chính tắc: đổi biến mà không phá cấu trúc động lực học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Hamilton–Jacobi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàm sinh: thiết kế biến đổi thay vì đoán trực tiếp
 
 Một biến đổi chính tắc có thể được xây từ hàm sinh (generating function / 생성함수). Với một lựa chọn thường gặp `F_2(q,P,t)`, ta có
@@ -107,6 +114,8 @@ Thay vì phải đoán độc lập cả `Q(q,p)` và `P(q,p)`, ta tìm một h�
 
 Trong thực tế, hàm sinh giúp xây biến gắn với đại lượng bảo toàn, chế độ (mode / 모드) chuẩn hoặc tọa độ hành động (action / 동작)–angle.
 
+> **Chuyển mạch:** Ở chặng này của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Phương trình Hamilton–Jacobi** tiếp nhận điểm tựa từ **Hàm sinh: thiết kế biến đổi thay vì đoán trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với quang hình học và giới hạn bán cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phương trình Hamilton–Jacobi
 
 Phương trình Hamilton–Jacobi (Hamilton–Jacobi equation / 해밀턴-야코비 방정식) tìm hàm tác dụng chính `S(q,t)` sao cho
@@ -126,6 +135,8 @@ Nếu tìm được `S`, ta có thể tái dựng động lực học.
 
 Ý nghĩa sâu của phương pháp là biến bài toán tích phân nhiều phương trình ODE liên kết thành bài toán tìm một hàm sinh thích hợp. Trong trường hợp thuận lợi, phép biến đổi do `S` sinh ra có thể đưa Hamiltonian mới về dạng rất đơn giản.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Phương trình Hamilton–Jacobi** đã nêu tiêu chí phân biệt, còn **Liên hệ với quang hình học và giới hạn bán cổ điển** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Biến hành động (action / 동작)–angle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với quang hình học và giới hạn bán cổ điển
 
 Hamilton–Jacobi là một cầu nối quan trọng giữa cơ học cổ điển, quang hình học và cơ học lượng tử.
@@ -139,6 +150,8 @@ Trong xấp xỉ bán cổ điển, hàm sóng thường được viết dưới
 Ở bậc dẫn đầu khi tác dụng đặc trưng lớn hơn nhiều so với `\hbar`, phương trình cho pha `S` trở về phương trình Hamilton–Jacobi.
 
 Điều này cho thấy quỹ đạo cổ điển có thể xuất hiện từ cấu trúc pha của trạng thái lượng tử trong giới hạn thích hợp.
+
+> **Chuyển mạch:** Trong **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Liên hệ với quang hình học và giới hạn bán cổ điển** đã nêu tiêu chí phân biệt, còn **Biến hành động (action / 동작)–angle** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên hệ với lượng tử hóa bán cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biến hành động (action / 동작)–angle
 
@@ -164,6 +177,8 @@ Một quỹ đạo phức tạp trong không gian cấu hình có thể trở th
 
 Đây là một mô hình tư duy mạnh: đôi khi phần lớn độ phức tạp nằm ở cách chọn tọa độ, không nằm ở bản thân động lực học.
 
+> **Chuyển mạch:** Ở chặng này của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Liên hệ với lượng tử hóa bán cổ điển** tiếp nhận điểm tựa từ **Biến hành động (action / 동작)–angle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý Liouville** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ với lượng tử hóa bán cổ điển
 
 Các biến hành động (action / 동작) cũng xuất hiện trong lượng tử hóa bán cổ điển. Trước cơ học lượng tử hiện đại, điều kiện Bohr–Sommerfeld có dạng gần
@@ -174,6 +189,8 @@ Các biến hành động (action / 동작) cũng xuất hiện trong lượng t
 
 Dù không phải lý thuyết lượng tử hoàn chỉnh, nó cho thấy hành động (action / 동작) trong không gian pha có liên hệ tự nhiên với thang lượng tử `h`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Định lý Liouville** tiếp nhận điểm tựa từ **Liên hệ với lượng tử hóa bán cổ điển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: dao động tử điều hòa trong biến hành động (action / 동작)–angle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Định lý Liouville
 
 Dòng Hamilton bảo toàn thể tích trong không gian pha. Nếu một tập các điều kiện ban đầu chiếm một thể tích nhỏ, dòng động lực học có thể kéo dãn và uốn tập đó nhưng không làm thể tích tổng tự co lại.
@@ -181,6 +198,8 @@ Dòng Hamilton bảo toàn thể tích trong không gian pha. Nếu một tập 
 Đây là định lý Liouville (Liouville's theorem / 리우빌 정리), một nền tảng của cơ học thống kê.
 
 Hệ quả quan trọng là ma sát thực không thể được mô tả như một hệ Hamilton kín đơn giản chỉ bằng các bậc tự do đang quan sát. Ma sát làm thể tích hiệu dụng trong không gian pha co lại. Muốn có mô tả Hamilton đầy đủ, phải mở rộng hệ để bao gồm môi trường nhận năng lượng.
+
+> **Chuyển mạch:** Trong **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Định lý Liouville** cho ta quy tắc; **Ví dụ: dao động tử điều hòa trong biến hành động (action / 동작)–angle** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Khi nào formalism này đáng dùng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ: dao động tử điều hòa trong biến hành động (action / 동작)–angle
 
@@ -210,6 +229,8 @@ và
 
 Trong biến `(J,\theta)`, dao động tử không còn được mô tả như một vật đi qua đi lại mà như một góc quay đều với hành động (action / 동작) không đổi.
 
+> **Chuyển mạch:** Ở chặng này của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Ví dụ: dao động tử điều hòa trong biến hành động (action / 동작)–angle** cho ta quy tắc; **Khi nào formalism này đáng dùng?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Giới hạn và giả định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khi nào formalism này đáng dùng?
 
 Nếu bài toán chỉ là rơi tự do, ngôn ngữ Newton thường ngắn và trực tiếp hơn. Hamilton–Jacobi không làm kết quả “đúng hơn”.
@@ -218,11 +239,15 @@ Formalism nâng cao trở nên hữu ích khi bài toán có đối xứng, nhi�
 
 Với hệ không tích phân được, tọa độ hành động (action / 동작)–angle toàn cục có thể không tồn tại. Khi nhiễu loạn phá tính tích phân được, một số torus bất biến có thể sống sót còn một số bị phá. Đây là cửa ngõ sang lý thuyết KAM và hỗn loạn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Khi nào formalism này đáng dùng?** đã nêu tiêu chí phân biệt, còn **Giới hạn và giả định** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giới hạn và giả định
 
 Cơ học Hamilton cổ điển giả sử ta có thể mô tả hệ bằng các biến chính tắc và một Hamiltonian xác định. Với ràng buộc phi chuẩn, hệ tiêu tán mạnh hoặc trường chuẩn (gauge field), cấu trúc có thể tinh tế hơn.
 
 Hamiltonian cũng không phải lúc nào đồng nhất đơn giản với “tổng động năng cộng thế năng”. Định nghĩa chính xác của nó đến từ biến đổi Legendre của Lagrangian và vai trò phần tử sinh của tiến hóa thời gian.
+
+> **Chuyển mạch:** Trong **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Giới hạn và giả định** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -239,6 +264,8 @@ Lagrangian
 → Hamilton–Jacobi / action–angle
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Hamiltonian luôn bằng tổng năng lượng vật lý”
@@ -253,10 +280,12 @@ Không. Nó đồng thời tổ chức lại tọa độ và động lượng sa
 
 Không. Tìm nghiệm đầy đủ của phương trình Hamilton–Jacobi có thể khó ngang bài toán ban đầu. Giá trị chính của formalism là bộc lộ cấu trúc, đối xứng và tạo nền cho các phương pháp xấp xỉ.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học giải tích](08_analytical_mechanics.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Động lực học phi tuyến và hỗn loạn](09_nonlinear_dynamics_chaos.md), [Ensemble thống kê](../04_thermal_statistical/03_ensembles_partition_functions.md), [Đối xứng và tích phân đường lượng tử](../08_quantum/07_symmetry_operator_path_integral.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
