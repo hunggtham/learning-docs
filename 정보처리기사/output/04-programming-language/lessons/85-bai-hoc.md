@@ -1,18 +1,26 @@
 # 226 - 227. 데이터베이스 접속 기술 (Database Connectivity)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối database connectivity với driver, protocol, connection pool và transaction, để ứng dụng nói chuyện với DB qua boundary rõ.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 데이터베이스, 접속, 기술
 
+> **Chuyển mạch:** Ở chặng này của **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**에서 만든 기준을 이어받아 **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **226 - 227. 데이터베이스 접속 �
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** và nối nó với **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 226 - 227. 데이터베이스 접속 기술 (Database Connectivity)
 
@@ -42,3 +50,5 @@ Phần “226 - 227. 데이터베이스 접속 기술 (Database Connectivity)”
 - ODBC: Mở (Open) cho mọi ngôn ngữ khác, dùng chung thông qua một "người quản lý tài xế" (Driver Manager) để dịch lệnh SQL gửi xuống Database.
 
 Như vậy, **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+> **Bàn giao:** Sau **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
