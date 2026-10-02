@@ -1,18 +1,26 @@
 # 253. switch문 (switch Statement)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **253. switch문 (switch Statement)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy đặt biểu thức, các nhánh case và break cạnh nhau để thấy switch phù hợp khi lựa chọn dựa trên giá trị cố định.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **253. switch문 (switch Statement)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **253. switch문 (switch Statement)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **253. switch문 (switch Statement)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 253. switch문 (switch Statement)
 
+> **Chuyển mạch:** Ở chặng này của **253. switch문 (switch Statement)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **251. 단순 if문 (Simple if Statement)**에서 만든 기준을 이어받아 **253. switch문 (switch Statement)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **253. switch문 (switch Statement)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **253. switch문 (switch Statement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **253. switch문 (switch Statement)** nh
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **253. switch문 (switch Statement)** và nối nó với **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **253. switch문 (switch Statement)**, **253. switch문 (switch Statement)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 253. switch문 (switch Statement)
 
@@ -37,3 +45,5 @@ Phần “253. switch문 (switch Statement)” được nối với nội dung k
 - 변수의 값에 따라 일치하는 `case` 문장을 실행하는 다분기 제어문.
 
 Điểm chốt của **253. switch문 (switch Statement)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **253. switch문 (switch Statement)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

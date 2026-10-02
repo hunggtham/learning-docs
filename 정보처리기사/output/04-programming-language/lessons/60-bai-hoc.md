@@ -1,18 +1,26 @@
 # 198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Hãy nối đầu vào, đầu ra, phân vùng tương đương và giá trị biên để biết kiểm thử hộp đen tìm lỗi mà không cần nhìn mã bên trong.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 블랙, 박스, 테스트
 
+> **Chuyển mạch:** Ở chặng này của **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)**에서 만든 기준을 이어받아 **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **198. 블랙 박스 테스트 (Black Bo
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** và nối nó với **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**, **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)
 
@@ -42,3 +50,5 @@ Phần “198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen
   - **원인-효과 그래프 (Cause-Effect Graphing)**: 입력(원인)과 출력(효과)의 관계 분석.
 
 Điểm chốt của **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
