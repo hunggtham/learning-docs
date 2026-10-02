@@ -10,14 +10,14 @@ Nhánh này giải thích cách transistor và lô-gic (logic / 논리) gate tr�
 Boolean logic → combinational circuits → flip-flop/register → FSM → memory/bus → HDL/FPGA
 ```
 
-> **Chuyển mạch:** Trong **Digital Electronics — Điện tử số**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cốt lõi tuyến** đi từ logic và timing đến memory, bus và HDL; **Cốt lõi chapter** giải thích từng cơ chế, còn **Cần nắm** chốt điều kiện cần đo.
 
 ## Cốt lõi (core / 핵심) chapter
 
 - [Logic, timing and state](00_logic_timing_state.md) — voltage margin, setup/hold, metastability, FSM, reset và xác minh (verification / 확인).
 - [Memory, buses and HDL verification](01_memory_buses_hdl_verification.md) — SRAM/DRAM/Flash, ready/valid, FIFO, assertions và synthesis ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Digital Electronics — Điện tử số**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi nắm logic, timing và bus, **Cầu nối** đưa chúng vào thiết kế, verification và giới hạn phần cứng thực.
 
 ## Cần nắm
 
@@ -27,7 +27,7 @@ Boolean logic → combinational circuits → flip-flop/register → FSM → memo
 - SRAM/DRAM/Flash ở mức giao diện (interface / 인터페이스) và sự đánh đổi (trade-off / 트레이드오프) độ trễ (latency / 지연 시간)/năng lượng (energy / 에너지)/density;
 - synchronous thiết kế (design / 설계), timing closure và simulation-vs-hardware mismatch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Digital Electronics — Điện tử số**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép README bằng tiêu chí nối biểu diễn logic với tín hiệu, kiểm thử và owner chapter kế tiếp.
 
 ## Cầu nối (bridge / 브리지)
 
