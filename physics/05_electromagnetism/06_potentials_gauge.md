@@ -1,7 +1,6 @@
 # Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm
 
-> **Mạch đọc:** Đọc **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ phương trình Maxwell tới các thế** sang **Vì sao các thế không duy nhất?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thế điện từ, gauge freedom và hiệu ứng Aharonov–Bohm**. Route đi từ E/B fields → scalar/vector potentials → gauge transformation → observables → quantum phase/Aharonov–Bohm, để thế nối mô tả toán học với đại lượng đo được.
 
 Trong điện tĩnh, điện trường có thể được mô tả hoàn toàn bằng điện thế vô hướng. Khi trường thay đổi theo thời gian, mô tả đó không còn đủ. Ta cần cả **điện thế vô hướng (scalar potential)** `\phi` và **thế vectơ (vector potential)** `\mathbf A`.
 
@@ -55,6 +54,8 @@ Hai công thức
 
 không phải định nghĩa tùy ý. Chúng được chọn sao cho hai phương trình Maxwell đồng nhất được thỏa tự động.
 
+> **Chuyển mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Vì sao các thế không duy nhất?** tiếp nhận điểm tựa từ **Từ phương trình Maxwell tới các thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự do chuẩn không phải sự mơ hồ của Vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao các thế không duy nhất?
 
 Giả sử ta thay
@@ -95,6 +96,8 @@ nên `\mathbf E` cũng không đổi.
 
 Đây là **biến đổi chuẩn (gauge transformation / 게이지 변환)**. Nhiều cặp `(\phi,\mathbf A)` khác nhau biểu diễn cùng một cấu hình trường vật lý.
 
+> **Chuyển mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Tự do chuẩn không phải sự mơ hồ của Vật lý** tiếp nhận điểm tựa từ **Vì sao các thế không duy nhất?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn Coulomb và chuẩn Lorenz** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tự do chuẩn không phải sự mơ hồ của Vật lý
 
 Nếu hai mô tả khác nhau nhưng mọi đại lượng quan sát được đều giống nhau, sự khác biệt giữa chúng không phải một khác biệt vật lý độc lập. Nó là **dư thừa của cách biểu diễn (representational redundancy)**.
@@ -102,6 +105,8 @@ Nếu hai mô tả khác nhau nhưng mọi đại lượng quan sát được đ
 Điều này tương tự việc mô tả cùng một điểm bằng các hệ tọa độ khác nhau, nhưng phép so sánh chỉ mang tính gợi ý. Đối xứng chuẩn có cấu trúc toán học chính xác hơn một phép đổi tọa độ đơn giản.
 
 Bài học tổng quát là: không phải mọi biến xuất hiện trong phương trình đều tương ứng một bậc tự do quan sát độc lập.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Chuẩn Coulomb và chuẩn Lorenz** tiếp nhận điểm tựa từ **Tự do chuẩn không phải sự mơ hồ của Vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế trễ và tốc độ truyền hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuẩn Coulomb và chuẩn Lorenz
 
@@ -140,6 +145,8 @@ với toán tử d'Alembert
 
 Cấu trúc này làm tính tương đối tính của điện từ học rõ hơn.
 
+> **Chuyển mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Thế trễ và tốc độ truyền hữu hạn** tiếp nhận điểm tựa từ **Chuẩn Coulomb và chuẩn Lorenz** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ thế tới Lagrangian của hạt tích điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thế trễ và tốc độ truyền hữu hạn
 
 Nghiệm của phương trình sóng không phụ thuộc tức thời vào nguồn hiện tại ở mọi nơi. Trường tại vị trí `\mathbf r` và thời điểm `t` phụ thuộc vào nguồn tại **thời gian trễ (retarded time)**
@@ -151,6 +158,8 @@ t_r=t-\frac{|\mathbf r-\mathbf r'|}{c}.
 Về mặt vật lý, thay đổi của điện tích hoặc dòng điện cần thời gian để ảnh hưởng tới vùng khác. Đây là cách nhân quả và tốc độ ánh sáng được mã hóa vào thế điện từ.
 
 Nó cũng cho thấy hình ảnh “điện tích hiện tại quyết định tức thời trường ở mọi nơi” chỉ đúng trong xấp xỉ gần tĩnh.
+
+> **Chuyển mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Từ thế tới Lagrangian của hạt tích điện** tiếp nhận điểm tựa từ **Thế trễ và tốc độ truyền hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Aharonov–Bohm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ thế tới Lagrangian của hạt tích điện
 
@@ -179,6 +188,8 @@ m\frac{d\mathbf v}{dt}
 ```
 
 khác động lượng cơ học `m\mathbf v`. Phân biệt này trở nên đặc biệt quan trọng trong cơ học lượng tử và lý thuyết trường.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Hiệu ứng Aharonov–Bohm** tiếp nhận điểm tựa từ **Từ thế tới Lagrangian của hạt tích điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc topo xuất hiện ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiệu ứng Aharonov–Bohm
 
@@ -211,11 +222,15 @@ Trong bố trí Aharonov–Bohm, hạt có thể đi qua vùng mà từ trườn
 
 Điều này không có nghĩa `\mathbf A` tại một điểm đơn lẻ trở thành đại lượng quan sát tuyệt đối. Đại lượng đo được vẫn là tổ hợp chuẩn-bất biến liên hệ với pha quanh một vòng kín hoặc từ thông tổng.
 
+> **Chuyển mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Cấu trúc topo xuất hiện ở đâu?** tiếp nhận điểm tựa từ **Hiệu ứng Aharonov–Bohm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ U(1) tới đối xứng chuẩn trong Vật lý hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cấu trúc topo xuất hiện ở đâu?
 
 Hiệu ứng Aharonov–Bohm cho thấy hai vùng có cùng trường cục bộ `\mathbf B=0` vẫn có thể khác nhau về cấu trúc toàn cục nếu topology của miền không đơn liên (not simply connected).
 
 Đây là một bước quan trọng từ Vật lý trường cổ điển sang tư duy topo: thông tin vật lý không phải lúc nào cũng được xác định hoàn toàn bởi các đại lượng cục bộ tại một điểm.
+
+> **Chuyển mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Từ U(1) tới đối xứng chuẩn trong Vật lý hạt** tiếp nhận điểm tựa từ **Cấu trúc topo xuất hiện ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào nên dùng E,B, khi nào nên dùng \phi,A?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ `U(1)` tới đối xứng chuẩn trong Vật lý hạt
 
@@ -235,11 +250,15 @@ Trường điện từ xuất hiện như trường chuẩn cần thiết để 
 
 Đây là nguyên mẫu cho cách Mô hình Chuẩn dùng các nhóm chuẩn phức tạp hơn như `SU(2)` và `SU(3)`. Tuy nhiên ở mức này, mục tiêu chỉ là thấy lô-gic (logic / 논리): **yêu cầu đối xứng cục bộ dẫn tới cấu trúc tương tác**.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Khi nào nên dùng E,B, khi nào nên dùng \phi,A?** tiếp nhận điểm tựa từ **Từ U(1) tới đối xứng chuẩn trong Vật lý hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khi nào nên dùng `E,B`, khi nào nên dùng `\phi,A`?
 
 Nếu bài toán là lực cổ điển trên hạt hoặc năng lượng dòng trường, `E` và `B` thường trực quan hơn. Nếu bài toán liên quan phương trình sóng, bức xạ, cơ học giải tích, lượng tử hoặc đối xứng chuẩn, `\phi` và `\mathbf A` thường là cách biểu diễn tự nhiên hơn.
 
 Không có một biểu diễn “thật” duy nhất phải dùng cho mọi bài toán. Chọn biến tốt là một phần của tư duy vật lý.
+
+> **Chuyển mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Những ngộ nhận thường gặp (Common Misconceptions)** tiếp nhận điểm tựa từ **Khi nào nên dùng E,B, khi nào nên dùng \phi,A?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -255,9 +274,13 @@ Không. Hiệu ứng đo pha toàn cục phụ thuộc vòng tích phân hoặc 
 
 Không. Gauge khác nhau mô tả cùng cấu hình vật lý nếu liên hệ bởi biến đổi chuẩn hợp lệ.
 
+> **Chuyển mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những ngộ nhận thường gặp (Common Misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Trường `\mathbf E` và `\mathbf B` mô tả cường độ điện từ cục bộ. Các thế `\phi` và `\mathbf A` tổ chức cấu trúc trường ở mức sâu hơn, đặc biệt khi có thời gian, lượng tử và topology. Tự do chuẩn nhắc rằng một lý thuyết có thể chứa dư thừa biểu diễn nhưng vẫn có nội dung vật lý hoàn toàn xác định.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -265,4 +288,4 @@ Trường `\mathbf E` và `\mathbf B` mô tả cường độ điện từ cục
 
 **Liên hệ tiếp:** [Nền tảng lượng tử](../08_quantum/00_quantum_foundations.md), [Mô hình Chuẩn](../09_atomic_nuclear_particle/03_particle_standard_model.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

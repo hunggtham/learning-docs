@@ -1,7 +1,6 @@
 # Phân cực, tán sắc và quang học phi tuyến
 
-> **Mạch đọc:** Đọc **Phân cực, tán sắc và quang học phi tuyến** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phân cực cho biết điện trường dao động theo hướng nào** sang **véc-tơ (vector / 벡터) Jones: đại số tuyến tính của ánh sáng kết hợp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân cực, tán sắc và quang học phi tuyến**. Route đi từ field orientation → Jones/Stokes descriptions → material dispersion → nonlinear response → frequency conversion, để hướng dao động nối với môi trường và tương tác.
 
 ## Phân cực cho biết điện trường dao động theo hướng nào
 
@@ -26,6 +25,8 @@ Nếu hai biên độ bằng nhau và lệch pha `\pi/2`, đầu mút `\mathbf E
 Trường hợp tổng quát tạo phân cực elip.
 
 Phân cực không phải “hướng photon bay”. Nó mô tả cấu trúc ngang của trường điện từ.
+
+> **Chuyển mạch:** Trong **Phân cực, tán sắc và quang học phi tuyến**, **Véc-tơ (vector / 벡터) Jones: đại số tuyến tính của ánh sáng kết hợp** tiếp nhận điểm tựa từ **Phân cực cho biết điện trường dao động theo hướng nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Malus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Véc-tơ (vector / 벡터) Jones: đại số tuyến tính của ánh sáng kết hợp
 
@@ -57,6 +58,8 @@ Quarter-wave plate tạo chênh lệch pha giữa hai thành phần trực giao.
 
 Jones formalism không phù hợp đầy đủ với ánh sáng phân cực một phần hoặc không kết hợp; khi đó nên dùng Stokes parameters và Mueller matrices.
 
+> **Chuyển mạch:** Ở chặng này của **Phân cực, tán sắc và quang học phi tuyến**, **Định luật Malus** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터) Jones: đại số tuyến tính của ánh sáng kết hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lưỡng chiết: chiết suất phụ thuộc hướng phân cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Định luật Malus
 
 Nếu ánh sáng phân cực tuyến tính có cường độ `I_0` đi qua analyzer lệch góc `\theta`, biên độ điện trường truyền qua là phép chiếu
@@ -72,6 +75,8 @@ I=I_0\cos^2\theta.
 ```
 
 Hệ số `\cos^2\theta` vì vậy đến từ hai bước: chiếu biên độ theo `\cos\theta`, sau đó tính dòng năng lượng theo bình phương biên độ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cực, tán sắc và quang học phi tuyến**, **Lưỡng chiết: chiết suất phụ thuộc hướng phân cực** tiếp nhận điểm tựa từ **Định luật Malus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán sắc: chiết suất phụ thuộc tần số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lưỡng chiết: chiết suất phụ thuộc hướng phân cực
 
@@ -110,6 +115,8 @@ ta có quarter-wave plate; nếu
 
 ta có half-wave plate.
 
+> **Chuyển mạch:** Trong **Phân cực, tán sắc và quang học phi tuyến**, **Tán sắc: chiết suất phụ thuộc tần số** tiếp nhận điểm tựa từ **Lưỡng chiết: chiết suất phụ thuộc hướng phân cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận tốc pha và vận tốc nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tán sắc: chiết suất phụ thuộc tần số
 
 Trong vật liệu thực,
@@ -131,6 +138,8 @@ Biên độ và pha đáp ứng phụ thuộc `\omega`. Phân cực tập thể 
 
 Lăng kính tách ánh sáng trắng vì các bước sóng khác nhau có chiết suất khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Phân cực, tán sắc và quang học phi tuyến**, **Vận tốc pha và vận tốc nhóm** tiếp nhận điểm tựa từ **Tán sắc: chiết suất phụ thuộc tần số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mở rộng xung trong sợi quang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vận tốc pha và vận tốc nhóm
 
 Vận tốc pha là
@@ -151,6 +160,8 @@ Vận tốc nhóm thường mô tả vận tốc bao xung khi xung đủ hẹp p
 
 Trong vùng tán sắc dị thường, vận tốc nhóm định nghĩa toán học có thể lớn hơn `c` hoặc âm mà không cho phép mặt trước nhân quả của tín hiệu truyền nhanh hơn ánh sáng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cực, tán sắc và quang học phi tuyến**, **Mở rộng xung trong sợi quang** tiếp nhận điểm tựa từ **Vận tốc pha và vận tốc nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stokes parameters: khi Jones véc-tơ (vector / 벡터) không còn đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mở rộng xung trong sợi quang
 
 Một xung quang chứa một dải tần số. Nếu vận tốc nhóm phụ thuộc tần số, các thành phần phổ đến đích ở các thời điểm khác nhau, làm xung rộng ra.
@@ -166,6 +177,8 @@ Kỹ thuật thực tế dùng kết hợp:
 
 Đây là cầu nối trực tiếp từ đáp ứng điện từ của vật liệu tới hạ tầng truyền thông Internet.
 
+> **Chuyển mạch:** Trong **Phân cực, tán sắc và quang học phi tuyến**, **Stokes parameters: khi Jones véc-tơ (vector / 벡터) không còn đủ** tiếp nhận điểm tựa từ **Mở rộng xung trong sợi quang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân cực phi tuyến của vật chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Stokes parameters: khi Jones véc-tơ (vector / 벡터) không còn đủ
 
 Ánh sáng thực có thể chỉ phân cực một phần. Khi đó Jones véc-tơ (vector / 벡터) không đủ vì nó giả sử một biên độ phức xác định hoàn toàn.
@@ -178,6 +191,8 @@ Ta có thể dùng bốn tham số Stokes `S_0,S_1,S_2,S_3`:
 Polarimeter đo cường độ qua nhiều analyzer để tái dựng véc-tơ (vector / 벡터) Stokes.
 
 Jones calculus mô tả biên độ trường kết hợp; Stokes/Mueller formalism mô tả tương quan cường độ và phù hợp với hệ phân cực một phần.
+
+> **Chuyển mạch:** Ở chặng này của **Phân cực, tán sắc và quang học phi tuyến**, **Phân cực phi tuyến của vật chất** tiếp nhận điểm tựa từ **Stokes parameters: khi Jones véc-tơ (vector / 벡터) không còn đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phát họa âm bậc hai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân cực phi tuyến của vật chất
 
@@ -201,6 +216,8 @@ Các susceptibility bậc cao tạo nên quang học phi tuyến (nonlinear opti
 
 Ở trường yếu, hạng `\chi^{(1)}` chi phối. Laser cường độ cao làm các hạng bậc hai, ba và cao hơn có thể đo được.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cực, tán sắc và quang học phi tuyến**, **Phát họa âm bậc hai** tiếp nhận điểm tựa từ **Phân cực phi tuyến của vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phase matching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phát họa âm bậc hai
 
 Nếu
@@ -220,6 +237,8 @@ Do đó hạng `\chi^{(2)}E^2` chứa thành phần ở tần số `2\omega`.
 
 Phân cực dao động ở `2\omega` có thể phát ánh sáng với tần số gấp đôi nguồn. Đây là phát họa âm bậc hai (second-harmonic generation), được dùng để chuyển laser hồng ngoại sang bước sóng nhìn thấy trong một số hệ.
 
+> **Chuyển mạch:** Trong **Phân cực, tán sắc và quang học phi tuyến**, **Phase matching** tiếp nhận điểm tựa từ **Phát họa âm bậc hai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Kerr và self-phase modulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phase matching
 
 Chỉ có thành phần `2\omega` chưa đủ để chuyển đổi hiệu quả.
@@ -234,6 +253,8 @@ Các trường được tạo ở những vị trí khác nhau trong tinh thể 
 
 Lưỡng chiết hoặc quasi-phase matching có thể được dùng để đạt điều kiện này.
 
+> **Chuyển mạch:** Ở chặng này của **Phân cực, tán sắc và quang học phi tuyến**, **Hiệu ứng Kerr và self-phase modulation** tiếp nhận điểm tựa từ **Phase matching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Four-wave mixing và tổng–hiệu tần số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hiệu ứng Kerr và self-phase modulation
 
 Susceptibility `\chi^{(3)}` có thể làm chiết suất phụ thuộc cường độ:
@@ -246,6 +267,8 @@ Nếu cường độ thay đổi theo thời gian trong một xung, pha tích l�
 
 Kết hợp phi tuyến Kerr với tán sắc có thể tạo soliton trong sợi quang ở điều kiện phù hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cực, tán sắc và quang học phi tuyến**, **Four-wave mixing và tổng–hiệu tần số** tiếp nhận điểm tựa từ **Hiệu ứng Kerr và self-phase modulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối xứng tinh thể quyết định tensor phi tuyến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Four-wave mixing và tổng–hiệu tần số
 
 Các hạng phi tuyến có thể ghép nhiều tần số.
@@ -256,6 +279,8 @@ Với `\chi^{(3)}`, four-wave mixing cho phép ba chế độ (mode / 모드) qu
 
 Các quá trình này là nền tảng của chuyển đổi tần số, khuếch đại tham số và nhiều nguồn photon lượng tử.
 
+> **Chuyển mạch:** Trong **Phân cực, tán sắc và quang học phi tuyến**, **Đối xứng tinh thể quyết định tensor phi tuyến** tiếp nhận điểm tựa từ **Four-wave mixing và tổng–hiệu tần số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân cực trong màn hình và viễn thám** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đối xứng tinh thể quyết định tensor phi tuyến
 
 Susceptibility bậc cao là tensor. Đối xứng của tinh thể buộc nhiều thành phần tensor bằng 0 hoặc liên hệ với nhau.
@@ -263,6 +288,8 @@ Susceptibility bậc cao là tensor. Đối xứng của tinh thể buộc nhi�
 Ví dụ, trong môi trường có tâm đối xứng lý tưởng, susceptibility điện bậc hai trong bulk thường triệt tiêu dưới xấp xỉ dipole điện.
 
 Do đó quang học phi tuyến nối trực tiếp với tư duy symmetry: không phải mọi quá trình đều được phép trong mọi vật liệu.
+
+> **Chuyển mạch:** Ở chặng này của **Phân cực, tán sắc và quang học phi tuyến**, **Phân cực trong màn hình và viễn thám** tiếp nhận điểm tựa từ **Đối xứng tinh thể quyết định tensor phi tuyến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán sắc, hấp thụ và quan hệ Kramers–Kronig** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phân cực trong màn hình và viễn thám
 
@@ -272,6 +299,8 @@ Kính râm phân cực giảm chói vì ánh sáng phản xạ từ một số b
 
 Radar polarimetry và cảm biến vệ tinh dùng đáp ứng phân cực để suy ra hình dạng và hướng của giọt mưa, tinh thể băng, thảm thực vật hoặc bề mặt địa hình.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cực, tán sắc và quang học phi tuyến**, **Tán sắc, hấp thụ và quan hệ Kramers–Kronig** tiếp nhận điểm tựa từ **Phân cực trong màn hình và viễn thám** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền áp dụng và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tán sắc, hấp thụ và quan hệ Kramers–Kronig
 
 Gần cộng hưởng vật liệu, dispersion mạnh thường đi cùng hấp thụ đáng kể.
@@ -279,6 +308,8 @@ Gần cộng hưởng vật liệu, dispersion mạnh thường đi cùng hấp 
 Phần thực và phần ảo của susceptibility không độc lập vì đáp ứng vật liệu phải tuân nhân quả. Chúng liên hệ qua quan hệ Kramers–Kronig.
 
 Điều này giúp giải thích vì sao vùng mà chiết suất thay đổi nhanh theo tần số thường liên hệ với cấu trúc hấp thụ.
+
+> **Chuyển mạch:** Trong **Phân cực, tán sắc và quang học phi tuyến**, **Tán sắc, hấp thụ và quan hệ Kramers–Kronig** đã nêu tiêu chí phân biệt, còn **Miền áp dụng và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Miền áp dụng và giới hạn
 
@@ -292,6 +323,8 @@ P=\varepsilon_0(\chi^{(1)}E+\chi^{(2)}E^2+\cdots)
 
 chỉ hữu ích khi đáp ứng có thể biểu diễn bằng chuỗi theo trường. Ở cường độ cực cao, ion hóa, damage, plasma formation hoặc hiệu ứng không nhiễu loạn có thể làm mô hình susceptibility bậc thấp không còn phù hợp.
 
+> **Chuyển mạch:** Ở chặng này của **Phân cực, tán sắc và quang học phi tuyến**, **Miền áp dụng và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phân cực mô tả hình học của vectơ trường. Tán sắc mô tả việc vật liệu phản ứng khác nhau với các tần số khác nhau. Quang học phi tuyến xuất hiện khi trường mạnh đến mức đáp ứng không còn tỉ lệ đơn giản với đầu vào.
@@ -299,6 +332,8 @@ Phân cực mô tả hình học của vectơ trường. Tán sắc mô tả vi�
 Ba chủ đề là ba mặt của một câu hỏi chung:
 
 > vật chất biến đổi biên độ, pha, tần số và phân cực của trường điện từ như thế nào?
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân cực, tán sắc và quang học phi tuyến**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -318,10 +353,12 @@ Không. Đáp ứng phi tuyến có thể hoàn toàn thuận nghịch và xuấ
 
 Không. Hiệu suất còn phụ thuộc tensor `\chi^{(2)}`, đối xứng vật liệu, độ dài tương tác và phase matching.
 
+> **Chuyển mạch:** Trong **Phân cực, tán sắc và quang học phi tuyến**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Sóng Maxwell](../05_electromagnetism/04_maxwell_em_waves.md), [Quang học sóng](01_wave_optics.md), [Trường trong vật chất](../05_electromagnetism/07_fields_in_matter_dielectrics_magnetism.md).
 
 **Liên hệ tiếp:** [Laser và tính kết hợp](02_photons_lasers_coherence.md), [Quang học Fourier](04_fourier_imaging_instrumentation.md), [Đáp ứng tuyến tính và FDT](../04_thermal_statistical/07_linear_response_fluctuation_dissipation.md), [Tín hiệu](../12_experimental_computational/01_signals_sampling_noise.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geometric optics](./00_geometric_optics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

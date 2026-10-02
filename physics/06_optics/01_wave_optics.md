@@ -1,7 +1,6 @@
 # Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải
 
-> **Mạch đọc:** Đọc **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ Maxwell đến sóng ánh sáng** sang **Nguyên lý chồng chập và giao thoa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**. Route đi từ Maxwell/wave field → superposition → interference → diffraction → resolution and polarization, để ánh sáng nối mô hình sóng với hình ảnh quan sát.
 
 Quang hình học mô tả ánh sáng bằng tia và hoạt động rất tốt khi kích thước đặc trưng của hệ lớn hơn nhiều bước sóng. Khi khẩu độ, khe, chi tiết ảnh hoặc độ chênh đường đi trở nên so sánh được với bước sóng, mô hình tia không còn đủ. Khi đó phải mô tả ánh sáng bằng trường sóng và theo dõi biên độ, pha cùng sự chồng chập.
 
@@ -26,6 +25,8 @@ Trong chân không, `v=c`. Một nghiệm phẳng đơn sắc có thể viết d
 ```
 
 Dùng số phức không làm điện trường “trở thành số phức vật lý”; đây là cách gói biên độ và pha vào cùng một biểu thức. Đại lượng đo được cuối cùng là trường thực hoặc cường độ liên hệ với bình phương biên độ.
+
+> **Chuyển mạch:** Trong **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Nguyên lý chồng chập và giao thoa** tiếp nhận điểm tựa từ **Từ Maxwell đến sóng ánh sáng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ chênh đường đi và độ lệch pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên lý chồng chập và giao thoa
 
@@ -67,6 +68,8 @@ Nếu hai chùm có cùng cường độ `I_0`, ta được
 I=4I_0\cos^2\left(\frac{\Delta\phi}{2}\right).
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Độ chênh đường đi và độ lệch pha** tiếp nhận điểm tựa từ **Nguyên lý chồng chập và giao thoa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ kết hợp: tại sao không phải hai nguồn bất kỳ đều cho vân ổn định?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ chênh đường đi và độ lệch pha
 
 Với cùng bước sóng trong cùng môi trường, độ chênh đường đi `\Delta L` tạo độ lệch pha
@@ -105,6 +108,8 @@ Do đó khoảng vân
 
 Các quan hệ này chỉ đúng tốt khi hình học thỏa xấp xỉ góc nhỏ và hai khe đủ hẹp để mỗi khe đóng vai trò nguồn kết hợp thích hợp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Độ chênh đường đi và độ lệch pha** nêu điều cần giải thích; **Độ kết hợp: tại sao không phải hai nguồn bất kỳ đều cho vân ổn định?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhiễu xạ từ nguyên lý Huygens–Fresnel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ kết hợp: tại sao không phải hai nguồn bất kỳ đều cho vân ổn định?
 
 Giao thoa quan sát được cần quan hệ pha không bị ngẫu nhiên hóa quá nhanh trong thời gian đo.
@@ -127,11 +132,15 @@ trong chân không.
 
 Vì vậy laser thường tạo giao thoa ổn định hơn đèn nhiệt không phải đơn giản vì “laser mạnh hơn”, mà vì phổ và cấu trúc không gian của trường có độ kết hợp cao hơn.
 
+> **Chuyển mạch:** Trong **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Độ kết hợp: tại sao không phải hai nguồn bất kỳ đều cho vân ổn định?** nêu điều cần giải thích; **Nhiễu xạ từ nguyên lý Huygens–Fresnel** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhiễu xạ một khe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhiễu xạ từ nguyên lý Huygens–Fresnel
 
 Nhiễu xạ (diffraction / 회절) xuất hiện khi trường sóng đi qua khẩu độ hoặc gặp vật cản có kích thước không lớn hơn nhiều bước sóng. Có thể hình dung mỗi phần tử nhỏ trên mặt sóng như một nguồn thứ cấp; trường tại điểm quan sát là tổng kết hợp của mọi đóng góp, mỗi đóng góp có pha khác nhau do đường đi khác nhau.
 
 Do đó nhiễu xạ không nên được hiểu như “tia sáng va vào cạnh rồi bị bẻ cong”. Nó là hệ quả tự nhiên của chồng chập sóng trên một miền hữu hạn.
+
+> **Chuyển mạch:** Ở chặng này của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Nhiễu xạ một khe** tiếp nhận điểm tựa từ **Nhiễu xạ từ nguyên lý Huygens–Fresnel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fresnel và Fraunhofer: hai chế độ nhiễu xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhiễu xạ một khe
 
@@ -163,6 +172,8 @@ a\sin\theta=m\lambda,
 
 Khi `a` nhỏ hơn, cực tiểu đầu tiên xuất hiện ở góc lớn hơn; chùm nhiễu xạ rộng hơn. Đây là ví dụ trực quan của quan hệ Fourier: trường càng bị giới hạn hẹp trong không gian thì phổ số sóng ngang càng trải rộng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Fresnel và Fraunhofer: hai chế độ nhiễu xạ** tiếp nhận điểm tựa từ **Nhiễu xạ một khe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khẩu độ tròn và giới hạn phân giải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Fresnel và Fraunhofer: hai chế độ nhiễu xạ
 
 Trong nhiễu xạ Fresnel, khoảng cách truyền chưa đủ lớn để bỏ qua độ cong pha; hình học nguồn–khẩu độ–màn vẫn ảnh hưởng mạnh đến trường.
@@ -170,6 +181,8 @@ Trong nhiễu xạ Fresnel, khoảng cách truyền chưa đủ lớn để bỏ
 Trong nhiễu xạ Fraunhofer, có thể dùng xấp xỉ trường xa (far field), và mẫu nhiễu xạ gần với biến đổi Fourier của hàm khẩu độ.
 
 Một số hệ dùng thấu kính để tạo điều kiện Fraunhofer ngay tại mặt phẳng tiêu cự. Đây là cầu nối trực tiếp sang quang học Fourier và xử lý ảnh.
+
+> **Chuyển mạch:** Trong **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Fresnel và Fraunhofer: hai chế độ nhiễu xạ** đã nêu tiêu chí phân biệt, còn **Khẩu độ tròn và giới hạn phân giải** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **PSF, OTF và tần số không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khẩu độ tròn và giới hạn phân giải
 
@@ -199,6 +212,8 @@ NA=n\sin\theta.
 
 Tăng độ phóng đại không tự làm tăng độ phân giải. Nếu hệ quang học không truyền được các tần số không gian cao thì phóng lớn ảnh chỉ làm lớn phần mờ đã có.
 
+> **Chuyển mạch:** Ở chặng này của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Khẩu độ tròn và giới hạn phân giải** đã nêu tiêu chí phân biệt, còn **PSF, OTF và tần số không gian** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phân cực từ bản chất ngang của sóng điện từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## PSF, OTF và tần số không gian
 
 Hệ tạo ảnh tuyến tính và bất biến theo dịch chuyển có thể được mô tả bằng hàm đáp ứng điểm (point spread function, PSF):
@@ -221,6 +236,8 @@ trong đó OTF là hàm truyền quang học (optical transfer function). Môđu
 
 Điều này giải thích tại sao khử mờ bằng phần mềm (deconvolution) không thể phục hồi tùy ý mọi chi tiết: nếu một vùng tần số đã bị hệ quang làm mất hoàn toàn hoặc bị noise lấn át, bài toán nghịch đảo trở nên không xác định hoặc rất nhạy với nhiễu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Phân cực từ bản chất ngang của sóng điện từ** tiếp nhận điểm tựa từ **PSF, OTF và tần số không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán sắc và vận tốc pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phân cực từ bản chất ngang của sóng điện từ
 
 Trong sóng điện từ phẳng trong môi trường đẳng hướng, `\vec E`, `\vec B` và hướng truyền vuông góc nhau. Hướng dao động của `\vec E` tạo trạng thái phân cực.
@@ -234,6 +251,8 @@ I=I_0\cos^2\theta.
 ```
 
 Polarizer không “xóa một nửa photon theo cơ học cổ điển”; ở mô tả trường cổ điển, nó chiếu điện trường lên trục truyền. Ở mô tả lượng tử, cùng cấu trúc xuất hiện dưới dạng xác suất phép chiếu trạng thái phân cực.
+
+> **Chuyển mạch:** Trong **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Tán sắc và vận tốc pha** tiếp nhận điểm tựa từ **Phân cực từ bản chất ngang của sóng điện từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ định lượng: độ phân giải của telescope** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tán sắc và vận tốc pha
 
@@ -258,6 +277,8 @@ v_g=\frac{d\omega}{dk}
 ```
 
 mô tả chuyển động của bao xung trong nhiều trường hợp, nhưng không nên đồng nhất máy móc với vận tốc truyền thông tin trong mọi môi trường tán sắc mạnh hoặc hấp thụ mạnh. Nhân quả đầy đủ được quyết định bởi đáp ứng vật liệu và phương trình Maxwell.
+
+> **Chuyển mạch:** Ở chặng này của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Tán sắc và vận tốc pha** cho ta quy tắc; **Ví dụ định lượng: độ phân giải của telescope** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Điều kiện áp dụng và giới hạn mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ví dụ định lượng: độ phân giải của telescope
 
@@ -286,15 +307,21 @@ nên
 
 Đây là giới hạn nhiễu xạ lý tưởng. Quan sát thật còn chịu khí quyển, sai lệch quang học, rung, detector sampling và signal-to-noise ratio.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, trường hợp ở **Ví dụ định lượng: độ phân giải của telescope** cho thấy quy tắc hoạt động; **Điều kiện áp dụng và giới hạn mô hình** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Điều kiện áp dụng và giới hạn mô hình
 
 Các công thức Fraunhofer giả định trường xa hoặc cấu hình quang học tương đương. Công thức `1.22\lambda/D` giả định khẩu độ tròn lý tưởng và ánh sáng gần đơn sắc. Mô hình PSF tuyến tính giả định hệ không bão hòa và đáp ứng không phụ thuộc mạnh vào vị trí. Trong quang học phi tuyến, các nguyên lý cộng trường tuyến tính không còn đủ.
 
 Ở mức photon rất thấp, detector ghi các sự kiện rời rạc, nhưng phân bố xác suất của nhiều sự kiện vẫn tái tạo cấu trúc giao thoa và nhiễu xạ. Vì vậy mô tả lượng tử không loại bỏ quang sóng cổ điển; nó giải thích vì sao trường cổ điển xuất hiện như giới hạn của rất nhiều lượng tử trường.
 
+> **Chuyển mạch:** Trong **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Điều kiện áp dụng và giới hạn mô hình** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Quang sóng có thể được tổ chức quanh ba ý: **pha quyết định giao thoa, khẩu độ hữu hạn tạo nhiễu xạ, và hệ quang là một bộ lọc tần số không gian**. Khi nhìn ảnh mờ hay một mẫu vân, hãy hỏi trường đã tích lũy pha thế nào, phần nào của mặt sóng được truyền qua và tần số không gian nào còn tồn tại ở detector.
+
+> **Chuyển mạch:** Ở chặng này của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -310,10 +337,12 @@ Không. Độ phân giải bị giới hạn bởi bước sóng, khẩu độ v
 
 Giao thoa là tính chất của biên độ. Trong thí nghiệm photon đơn, từng sự kiện là rời rạc nhưng phân bố nhiều sự kiện vẫn tạo vân giao thoa. Cơ học lượng tử giữ cấu trúc pha nhưng thay đổi cách diễn giải phép đo.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Sóng và Fourier](../02_oscillations_waves/01_waves_fourier_sound.md), [Maxwell và sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md).
 
 **Liên hệ tiếp:** [Photon, coherence và laser](02_photons_lasers_coherence.md), [Quang học Fourier và thiết bị](04_fourier_imaging_instrumentation.md).
 
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geometric optics](./00_geometric_optics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức (knowledge connection / 지식 연결)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
