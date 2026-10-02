@@ -1,5 +1,7 @@
 # Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu học tập)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **권장 학습 순서 (Lộ trình đề xuất)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của Software Development, rồi nối mục tiêu, thứ tự học và bài chuyên sâu.
+
 ## 학습 목표 (Mục tiêu học tập)
 
 Phần này đặt mục tiêu của bài, để người mới biết mình cần giải thích được điều gì trước khi đi vào thuật ngữ và ví dụ.
@@ -9,6 +11,8 @@ Phần này đặt mục tiêu của bài, để người mới biết mình c�
 - 앞에서 배운 개념과 뒤의 심화 개념을 연결하여 문제의 조건을 빠르게 해석한다.
 
 > **Câu hỏi trung tâm:** Khi học môn này, người học không chỉ cần nhận ra thuật ngữ Hàn mà còn phải giải thích khái niệm đang giải quyết vấn đề nào, dựa trên điều kiện nào và được dùng để nối sang phần kiến thức nào tiếp theo.
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **권장 학습 순서 (Lộ trình đề xuất)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu học tập)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 자료 구조의 분류 (Classification of Data Structures)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 권장 학습 순서 (Lộ trình đề xuất)
 
@@ -27,6 +31,8 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 > **Mạch giảng:** mỗi mục mở bằng vị trí và mục đích học, đi qua phần giải thích của nguồn, rồi chốt bằng một câu bàn giao sang mục kế tiếp. Hãy đọc các câu nối như một phần của bài giảng: chúng cho biết vì sao kiến thức hiện tại cần thiết trước khi chuyển sang kiến thức sau.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **1. 자료 구조의 분류 (Classification of Data Structures)** tiếp nhận điểm tựa từ **권장 학습 순서 (Lộ trình đề xuất)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 스택 (Stack) 및 응용 (Applications)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. 자료 구조의 분류 (Classification of Data Structures)
 
@@ -52,6 +58,8 @@ Như vậy, **1. 자료 구조의 분류 (Classification of Data Structures)** k
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **2. 스택 (Stack) 및 응용 (Applications)** tiếp nhận điểm tựa từ **1. 자료 구조의 분류 (Classification of Data Structures)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. 스택 (Stack) 및 응용 (Applications)
 
 Sau khi đã đặt nền bằng **1. 자료 구조의 분류 (Classification of Data Structures)**, ta chuyển sang **2. 스택 (Stack) 및 응용 (Applications)**. Đây là mắt xích 2/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -73,6 +81,8 @@ Phần “2. 스택 (Stack) 및 응용 (Applications)” được nối với n�
 Ta có thể khép mục **2. 스택 (Stack) 및 응용 (Applications)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)** tiếp nhận điểm tựa từ **2. 스택 (Stack) 및 응용 (Applications)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. 큐 (Queue)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)
 
@@ -139,6 +149,8 @@ Như vậy, **데크 (Deque - Double Ended Queue)** đã hoàn thành vai trò c
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **29. 큐 (Queue)** tiếp nhận điểm tựa từ **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 트리 (Tree)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. 큐 (Queue)
 
 Ở bước 4/101, **29. 큐 (Queue)** xuất hiện như phần tiếp nối của **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -157,6 +169,8 @@ Phần “29. 큐 (Queue)” được nối với nội dung kế tiếp để n
 Như vậy, **29. 큐 (Queue)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 트리 (Tree)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **3. 트리 (Tree)** tiếp nhận điểm tựa từ **29. 큐 (Queue)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 이진 트리의 운행법 (Binary Tree Traversal)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. 트리 (Tree)
 
@@ -180,6 +194,8 @@ Ta có thể khép mục **3. 트리 (Tree)** bằng một câu hỏi bàn giao:
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **4. 이진 트리의 운행법 (Binary Tree Traversal)** tiếp nhận điểm tựa từ **3. 트리 (Tree)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. 이진 트리의 운행법 (Binary Tree Traversal)
 
 Từ **3. 트리 (Tree)**, ta đã có điểm tựa để bước vào **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/101 trước khi đi vào chi tiết.
@@ -202,6 +218,8 @@ Phần “4. 이진 트리의 운행법 (Binary Tree Traversal)” được nố
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** tiếp nhận điểm tựa từ **4. 이진 트리의 운행법 (Binary Tree Traversal)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **025: 트리 (Tree / Cây)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. 트리 구조 추가 용어 (Tree Terminology Additional)
 
 Ở bước 7/101, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** xuất hiện như phần tiếp nối của **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -223,6 +241,8 @@ Phần “30. 트리 구조 추가 용어 (Tree Terminology Additional)” đư�
 Như vậy, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **025: 트리 (Tree / Cây)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **025: 트리 (Tree / Cây)** tiếp nhận điểm tựa từ **30. 트리 구조 추가 용어 (Tree Terminology Additional)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 025: 트리 (Tree / Cây)
 
@@ -265,6 +285,8 @@ Với **트리 순회 (Tree Traversal - Duyệt cây)**, ta đã đi từ tên g
 Ta có thể khép mục **025: 트리 (Tree / Cây)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)** tiếp nhận điểm tựa từ **025: 트리 (Tree / Cây)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **026: 그래프 (Graph / Đồ thị)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 078 & 079: 트리 및 운행법 (Tree & Tree Traversal)
 
@@ -315,6 +337,8 @@ Với **트리의 운행법 (Tree Traversal - Duyệt cây)**, hãy đọc các 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **026: 그래프 (Graph / Đồ thị)** tiếp nhận điểm tựa từ **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 026: 그래프 (Graph / Đồ thị)
 
 Ở bước 10/101, **026: 그래프 (Graph / Đồ thị)** xuất hiện như phần tiếp nối của **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -348,6 +372,8 @@ Với **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)**, ta đã �
 Như vậy, **026: 그래프 (Graph / Đồ thị)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)** tiếp nhận điểm tựa từ **026: 그래프 (Graph / Đồ thị)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 수식의 표기법 변환 (Expression Notation Conversion)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)
 
@@ -395,6 +421,8 @@ Ta có thể khép mục **077: 그래프 및 인접 행렬 (Graphs & Adjacency 
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **5. 수식의 표기법 변환 (Expression Notation Conversion)** tiếp nhận điểm tựa từ **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **080: 수식의 표기법 (Expression Notation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 수식의 표기법 변환 (Expression Notation Conversion)
 
 Từ **077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)**, ta đã có điểm tựa để bước vào **5. 수식의 표기법 변환 (Expression Notation Conversion)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/101 trước khi đi vào chi tiết.
@@ -413,6 +441,8 @@ Phần “5. 수식의 표기법 변환 (Expression Notation Conversion)” đư
 Điểm chốt của **5. 수식의 표기법 변환 (Expression Notation Conversion)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **080: 수식의 표기법 (Expression Notation)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **080: 수식의 표기법 (Expression Notation)** tiếp nhận điểm tựa từ **5. 수식의 표기법 변환 (Expression Notation Conversion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 정렬 알고리즘 (Sorting Algorithms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 080: 수식의 표기법 (Expression Notation)
 
@@ -448,6 +478,8 @@ Như vậy, **080: 수식의 표기법 (Expression Notation)** không chỉ cung
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **6. 정렬 알고리즘 (Sorting Algorithms)** tiếp nhận điểm tựa từ **080: 수식의 표기법 (Expression Notation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. 정렬 알고리즘 (Sorting Algorithms)
 
 Sau khi đã đặt nền bằng **080: 수식의 표기법 (Expression Notation)**, ta chuyển sang **6. 정렬 알고리즘 (Sorting Algorithms)**. Đây là mắt xích 14/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -469,6 +501,8 @@ Phần “6. 정렬 알고리즘 (Sorting Algorithms)” được nối với n�
 Ta có thể khép mục **6. 정렬 알고리즘 (Sorting Algorithms)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** tiếp nhận điểm tựa từ **6. 정렬 알고리즘 (Sorting Algorithms)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **028: 정렬 (Sorting / Thuật toán sắp xếp)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)
 
@@ -492,6 +526,8 @@ Phần “31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)” đư
 Điểm chốt của **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **028: 정렬 (Sorting / Thuật toán sắp xếp)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **028: 정렬 (Sorting / Thuật toán sắp xếp)** tiếp nhận điểm tựa từ **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 028: 정렬 (Sorting / Thuật toán sắp xếp)
 
@@ -519,6 +555,8 @@ Như vậy, **028: 정렬 (Sorting / Thuật toán sắp xếp)** không chỉ c
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)** tiếp nhận điểm tựa từ **028: 정렬 (Sorting / Thuật toán sắp xếp)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **081-2: 셸 정렬 (Shell Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)
 
 Sau khi đã đặt nền bằng **028: 정렬 (Sorting / Thuật toán sắp xếp)**, ta chuyển sang **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)**. Đây là mắt xích 17/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -537,6 +575,8 @@ Phần “081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)” được n�
 Ta có thể khép mục **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **081-2: 셸 정렬 (Shell Sort)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **081-2: 셸 정렬 (Shell Sort)** tiếp nhận điểm tựa từ **081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **082: 선택 정렬 (Selection Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 081-2: 셸 정렬 (Shell Sort)
 
@@ -559,6 +599,8 @@ Phần “081-2: 셸 정렬 (Shell Sort)” được nối với nội dung kế
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **082: 선택 정렬 (Selection Sort)** tiếp nhận điểm tựa từ **081-2: 셸 정렬 (Shell Sort)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **083: 버블 정렬 (Bubble Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 082: 선택 정렬 (Selection Sort)
 
 Ở bước 19/101, **082: 선택 정렬 (Selection Sort)** xuất hiện như phần tiếp nối của **081-2: 셸 정렬 (Shell Sort)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -579,6 +621,8 @@ Như vậy, **082: 선택 정렬 (Selection Sort)** không chỉ cung cấp các
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **083: 버블 정렬 (Bubble Sort)** tiếp nhận điểm tựa từ **082: 선택 정렬 (Selection Sort)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **084: 퀵 정렬 (Quick Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 083: 버블 정렬 (Bubble Sort)
 
 Sau khi đã đặt nền bằng **082: 선택 정렬 (Selection Sort)**, ta chuyển sang **083: 버블 정렬 (Bubble Sort)**. Đây là mắt xích 20/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -598,6 +642,8 @@ Phần “083: 버블 정렬 (Bubble Sort)” được nối với nội dung k�
 Ta có thể khép mục **083: 버블 정렬 (Bubble Sort)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **084: 퀵 정렬 (Quick Sort)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **084: 퀵 정렬 (Quick Sort)** tiếp nhận điểm tựa từ **083: 버블 정렬 (Bubble Sort)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **085: 힙 정렬 (Heap Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 084: 퀵 정렬 (Quick Sort)
 
@@ -621,6 +667,8 @@ Phần “084: 퀵 정렬 (Quick Sort)” được nối với nội dung kế t
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **085: 힙 정렬 (Heap Sort)** tiếp nhận điểm tựa từ **084: 퀵 정렬 (Quick Sort)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **086: 2-Way 합병 정렬 (Merge Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 085: 힙 정렬 (Heap Sort)
 
 Ở bước 22/101, **085: 힙 정렬 (Heap Sort)** xuất hiện như phần tiếp nối của **084: 퀵 정렬 (Quick Sort)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -640,6 +688,8 @@ Như vậy, **085: 힙 정렬 (Heap Sort)** không chỉ cung cấp các ý cầ
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **086: 2-Way 합병 정렬 (Merge Sort)** tiếp nhận điểm tựa từ **085: 힙 정렬 (Heap Sort)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **086-1: 기수 정렬 (Radix Sort / Bucket Sort)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 086: 2-Way 합병 정렬 (Merge Sort)
 
 Sau khi đã đặt nền bằng **085: 힙 정렬 (Heap Sort)**, ta chuyển sang **086: 2-Way 합병 정렬 (Merge Sort)**. Đây là mắt xích 23/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -656,6 +706,8 @@ Phần “086: 2-Way 합병 정렬 (Merge Sort)” được nối với nội du
 Ta có thể khép mục **086: 2-Way 합병 정렬 (Merge Sort)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **086-1: 기수 정렬 (Radix Sort / Bucket Sort)** tiếp nhận điểm tựa từ **086: 2-Way 합병 정렬 (Merge Sort)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 이분 검색 (Binary Search)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 086-1: 기수 정렬 (Radix Sort / Bucket Sort)
 
@@ -676,6 +728,8 @@ Phần “086-1: 기수 정렬 (Radix Sort / Bucket Sort)” được nối vớ
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **7. 이분 검색 (Binary Search)** tiếp nhận điểm tựa từ **086-1: 기수 정렬 (Radix Sort / Bucket Sort)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. 이분 검색 (Binary Search)
 
 Ở bước 25/101, **7. 이분 검색 (Binary Search)** xuất hiện như phần tiếp nối của **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -694,6 +748,8 @@ Phần “7. 이분 검색 (Binary Search)” được nối với nội dung k�
 Như vậy, **7. 이분 검색 (Binary Search)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** tiếp nhận điểm tựa từ **7. 이분 검색 (Binary Search)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)
 
@@ -760,6 +816,8 @@ Ta có thể khép mục **029 & 030: 검색 알고리즘 및 해싱 (Search Alg
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)** tiếp nhận điểm tựa từ **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 주요 해싱 함수 (Hashing Functions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)
 
 Từ **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, ta đã có điểm tựa để bước vào **087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/101 trước khi đi vào chi tiết.
@@ -777,6 +835,8 @@ Phần “087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)” đư�
 Điểm chốt của **087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **8. 주요 해싱 함수 (Hashing Functions)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **8. 주요 해싱 함수 (Hashing Functions)** tiếp nhận điểm tựa từ **087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. 추가 해싱 함수 (Additional Hashing Functions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. 주요 해싱 함수 (Hashing Functions)
 
@@ -798,6 +858,8 @@ Như vậy, **8. 주요 해싱 함수 (Hashing Functions)** không chỉ cung c�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **32. 추가 해싱 함수 (Additional Hashing Functions)** tiếp nhận điểm tựa từ **8. 주요 해싱 함수 (Hashing Functions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. 추가 해싱 함수 (Additional Hashing Functions)
 
 Sau khi đã đặt nền bằng **8. 주요 해싱 함수 (Hashing Functions)**, ta chuyển sang **32. 추가 해싱 함수 (Additional Hashing Functions)**. Đây là mắt xích 29/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -814,6 +876,8 @@ Phần “32. 추가 해싱 함수 (Additional Hashing Functions)” được n�
 Ta có thể khép mục **32. 추가 해싱 함수 (Additional Hashing Functions)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)** tiếp nhận điểm tựa từ **32. 추가 해싱 함수 (Additional Hashing Functions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)
 
@@ -859,6 +923,8 @@ Với **데이터저장소 (Data Storage)**, hãy đọc các công thức như 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)** xác định đầu vào; **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **핵심 031: 모듈 구현 (Module Implementation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)
 
 Ở bước 31/101, **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** xuất hiện như phần tiếp nối của **088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -883,6 +949,8 @@ Như vậy, **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communicatio
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** xác định đầu vào; **핵심 031: 모듈 구현 (Module Implementation)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 031: 모듈 구현 (Module Implementation)
 
 Sau khi đã đặt nền bằng **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**, ta chuyển sang **핵심 031: 모듈 구현 (Module Implementation)**. Đây là mắt xích 32/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -904,6 +972,8 @@ Phần “핵심 031: 모듈 구현 (Module Implementation)” được nối v�
 Ta có thể khép mục **핵심 031: 모듈 구현 (Module Implementation)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)** tiếp nhận điểm tựa từ **핵심 031: 모듈 구현 (Module Implementation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)
 
@@ -960,6 +1030,8 @@ Như vậy, **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implem
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)** tiếp nhận điểm tựa từ **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)
 
 Ở bước 34/101, **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)** xuất hiện như phần tiếp nối của **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1011,6 +1083,8 @@ Như vậy, **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorith
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)** cho ta quy tắc; **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. 형상 관리 (SCM - Software Configuration Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)
 
 Sau khi đã đặt nền bằng **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)**, ta chuyển sang **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)**. Đây là mắt xích 35/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1054,6 +1128,8 @@ Ta có thể khép mục **095 & 096: 단위 모듈 테스트 및 테스트 케�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)** cho ta quy tắc; **13. 형상 관리 (SCM - Software Configuration Management)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. 형상 관리 (SCM - Software Configuration Management)
 
 Từ **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)**, ta đã có điểm tựa để bước vào **13. 형상 관리 (SCM - Software Configuration Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/101 trước khi đi vào chi tiết.
@@ -1078,6 +1154,8 @@ Phần “13. 형상 관리 (SCM - Software Configuration Management)” đượ
 Điểm chốt của **13. 형상 관리 (SCM - Software Configuration Management)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** tiếp nhận điểm tựa từ **13. 형상 관리 (SCM - Software Configuration Management)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)
 
@@ -1105,6 +1183,8 @@ Phần “40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Meth
 Như vậy, **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)** tiếp nhận điểm tựa từ **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **109 112: 형상 관리 (SCM - Software Configuration Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)
 
@@ -1181,6 +1261,8 @@ Ta có thể khép mục **핵심 032 & 033: 형상 관리 및 IDE (Configuratio
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **109 112: 형상 관리 (SCM - Software Configuration Management)** tiếp nhận điểm tựa từ **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **116 & 117: 형상 관리 도구 (SVN vs Git)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 109 ~ 112: 형상 관리 (SCM - Software Configuration Management)
 
 Từ **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**, ta đã có điểm tựa để bước vào **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/101 trước khi đi vào chi tiết.
@@ -1230,6 +1312,8 @@ Các bullet của **버전 관리 용어 (Thuật ngữ Version Control)** đang
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **116 & 117: 형상 관리 도구 (SVN vs Git)** tiếp nhận điểm tựa từ **109 112: 형상 관리 (SCM - Software Configuration Management)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 116 & 117: 형상 관리 도구 (SVN vs Git)
 
 Ở bước 40/101, **116 & 117: 형상 관리 도구 (SVN vs Git)** xuất hiện như phần tiếp nối của **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1276,6 +1360,8 @@ Như vậy, **116 & 117: 형상 관리 도구 (SVN vs Git)** không chỉ cung c
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** tiếp nhận điểm tựa từ **116 & 117: 형상 관리 도구 (SVN vs Git)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)
 
 Sau khi đã đặt nền bằng **116 & 117: 형상 관리 도구 (SVN vs Git)**, ta chuyển sang **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**. Đây là mắt xích 41/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1295,6 +1381,8 @@ Ta có thể khép mục **12. 소프트웨어 패키징 및 설치 매뉴얼 (S
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** tiếp nhận điểm tựa từ **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. DRM 패키징 과정 상세 (DRM Packaging Process)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)
 
 Từ **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**, ta đã có điểm tựa để bước vào **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/101 trước khi đi vào chi tiết.
@@ -1313,6 +1401,8 @@ Phần “37. 소프트웨어 패키징 고려사항 추가 (Packaging Considera
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** xác định đầu vào; **39. DRM 패키징 과정 상세 (DRM Packaging Process)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **099: 소프트웨어 패키징 (Software Packaging)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 39. DRM 패키징 과정 상세 (DRM Packaging Process)
 
 Ở bước 43/101, **39. DRM 패키징 과정 상세 (DRM Packaging Process)** xuất hiện như phần tiếp nối của **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1330,6 +1420,8 @@ Như vậy, **39. DRM 패키징 과정 상세 (DRM Packaging Process)** không c
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **39. DRM 패키징 과정 상세 (DRM Packaging Process)** xác định đầu vào; **099: 소프트웨어 패키징 (Software Packaging)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 099: 소프트웨어 패키징 (Software Packaging)
 
 Sau khi đã đặt nền bằng **39. DRM 패키징 과정 상세 (DRM Packaging Process)**, ta chuyển sang **099: 소프트웨어 패키징 (Software Packaging)**. Đây là mắt xích 44/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1346,6 +1438,8 @@ Phần “099: 소프트웨어 패키징 (Software Packaging)” được nối 
 Ta có thể khép mục **099: 소프트웨어 패키징 (Software Packaging)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** tiếp nhận điểm tựa từ **099: 소프트웨어 패키징 (Software Packaging)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 빌드 자동화 도구 (Build Automation Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)
 
@@ -1394,6 +1488,8 @@ Các bullet của **소프트웨어 패키징 순서 (Trình tự đóng gói)**
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **10. 빌드 자동화 도구 (Build Automation Tools)** tiếp nhận điểm tựa từ **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. 빌드 자동화 도구 (Build Automation Tools)
 
 Ở bước 46/101, **10. 빌드 자동화 도구 (Build Automation Tools)** xuất hiện như phần tiếp nối của **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1414,6 +1510,8 @@ Như vậy, **10. 빌드 자동화 도구 (Build Automation Tools)** không ch�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** tiếp nhận điểm tựa từ **10. 빌드 자동화 도구 (Build Automation Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)
 
 Sau khi đã đặt nền bằng **10. 빌드 자동화 도구 (Build Automation Tools)**, ta chuyển sang **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**. Đây là mắt xích 47/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1431,6 +1529,8 @@ Ta có thể khép mục **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** tiếp nhận điểm tựa từ **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **118 120: 빌드 자동화 도구 (Build Automation Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 41. 빌드 자동화 도구 심화: Jenkins vs Gradle
 
 Từ **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**, ta đã có điểm tựa để bước vào **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/101 trước khi đi vào chi tiết.
@@ -1447,6 +1547,8 @@ Phần “41. 빌드 자동화 도구 심화: Jenkins vs Gradle” được nố
 Điểm chốt của **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **118 120: 빌드 자동화 도구 (Build Automation Tools)** tiếp nhận điểm tựa từ **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. DRM (디지털 저작권 관리, Digital Rights Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)
 
@@ -1468,6 +1570,8 @@ Như vậy, **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** khô
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **11. DRM (디지털 저작권 관리, Digital Rights Management)** tiếp nhận điểm tựa từ **118 120: 빌드 자동화 도구 (Build Automation Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **100-2 104: 저작권 및 DRM (Copyright & Digital Rights Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. DRM (디지털 저작권 관리, Digital Rights Management)
 
 Sau khi đã đặt nền bằng **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**, ta chuyển sang **11. DRM (디지털 저작권 관리, Digital Rights Management)**. Đây là mắt xích 50/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1485,6 +1589,8 @@ Phần “11. DRM (디지털 저작권 관리, Digital Rights Management)” đ�
 Ta có thể khép mục **11. DRM (디지털 저작권 관리, Digital Rights Management)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **100-2 104: 저작권 및 DRM (Copyright & Digital Rights Management)** tiếp nhận điểm tựa từ **11. DRM (디지털 저작권 관리, Digital Rights Management)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)
 
@@ -1551,6 +1657,8 @@ Như vậy, **DRM 기술 요소 (Kỹ thuật dùng trong DRM)** đã hoàn thà
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** tiếp nhận điểm tựa từ **100-2 104: 저작권 및 DRM (Copyright & Digital Rights Management)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. 소프트웨어 테스트 단계 (Software Testing Phases)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)
 
 Ở bước 52/101, **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** xuất hiện như phần tiếp nối của **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1572,6 +1680,8 @@ Phần “15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box 
 Như vậy, **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **16. 소프트웨어 테스트 단계 (Software Testing Phases)** tiếp nhận điểm tựa từ **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. 소프트웨어 테스트 단계 (Software Testing Phases)
 
@@ -1599,6 +1709,8 @@ Ta có thể khép mục **16. 소프트웨어 테스트 단계 (Software Testin
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** tiếp nhận điểm tựa từ **16. 소프트웨어 테스트 단계 (Software Testing Phases)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)
 
 Từ **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, ta đã có điểm tựa để bước vào **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/101 trước khi đi vào chi tiết.
@@ -1619,6 +1731,8 @@ Phần “17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)” 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** tiếp nhận điểm tựa từ **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. 테스트 케이스 (Test Case)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)
 
 Ở bước 55/101, **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** xuất hiện như phần tiếp nối của **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1638,6 +1752,8 @@ Như vậy, **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integ
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** cho ta quy tắc; **35. 테스트 케이스 (Test Case)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 35. 테스트 케이스 (Test Case)
 
 Sau khi đã đặt nền bằng **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**, ta chuyển sang **35. 테스트 케이스 (Test Case)**. Đây là mắt xích 56/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1655,6 +1771,8 @@ Phần “35. 테스트 케이스 (Test Case)” được nối với nội dung
 Ta có thể khép mục **35. 테스트 케이스 (Test Case)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **35. 테스트 케이스 (Test Case)** cho ta quy tắc; **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **43. 테스트 분류 방식 (Test Classification)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)
 
@@ -1679,6 +1797,8 @@ Phần “42. 애플리케이션 테스트 원리 및 관련 용어 (Test Princi
 Điểm chốt của **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **43. 테스트 분류 방식 (Test Classification)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **43. 테스트 분류 방식 (Test Classification)** tiếp nhận điểm tựa từ **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 43. 테스트 분류 방식 (Test Classification)
 
@@ -1712,6 +1832,8 @@ Như vậy, **43. 테스트 분류 방식 (Test Classification)** không chỉ c
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** tiếp nhận điểm tựa từ **43. 테스트 분류 방식 (Test Classification)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)
 
 Sau khi đã đặt nền bằng **43. 테스트 분류 방식 (Test Classification)**, ta chuyển sang **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**. Đây là mắt xích 59/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1730,6 +1852,8 @@ Phần “44. 화이트박스 테스트 검증 기준 (White Box Test Coverage C
 Ta có thể khép mục **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** tiếp nhận điểm tựa từ **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계
 
@@ -1776,6 +1900,8 @@ Với **ROM (Read Only Memory - Bộ nhớ chỉ đọc)**, ta đã đi từ tê
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** xác định đầu vào; **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **105: 시각에 따른 테스트 (Verification vs Validation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)
 
 Ở bước 61/101, **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** xuất hiện như phần tiếp nối của **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1798,6 +1924,8 @@ Như vậy, **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm th
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** xác định đầu vào; **105: 시각에 따른 테스트 (Verification vs Validation)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **120-2 126: 애플리케이션 테스트 이론 (Application Test Theory)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 105: 시각에 따른 테스트 (Verification vs Validation)
 
 Sau khi đã đặt nền bằng **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**, ta chuyển sang **105: 시각에 따른 테스트 (Verification vs Validation)**. Đây là mắt xích 62/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1816,6 +1944,8 @@ Phần “105: 시각에 따른 테스트 (Verification vs Validation)” đư�
 Ta có thể khép mục **105: 시각에 따른 테스트 (Verification vs Validation)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **120-2 126: 애플리케이션 테스트 이론 (Application Test Theory)** tiếp nhận điểm tựa từ **105: 시각에 따른 테스트 (Verification vs Validation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127 129: 화이트박스 테스트 (White Box Test)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)
 
@@ -1870,6 +2000,8 @@ Với **테스트 분류 (Phân loại Test)**, hãy đọc các công thức nh
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **127 129: 화이트박스 테스트 (White Box Test)** tiếp nhận điểm tựa từ **120-2 126: 애플리케이션 테스트 이론 (Application Test Theory)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **130 & 131: 블랙박스 테스트 (Black Box Test)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 127 ~ 129: 화이트박스 테스트 (White Box Test)
 
 Ở bước 64/101, **127 ~ 129: 화이트박스 테스트 (White Box Test)** xuất hiện như phần tiếp nối của **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -1893,6 +2025,8 @@ Như vậy, **127 ~ 129: 화이트박스 테스트 (White Box Test)** không ch�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **130 & 131: 블랙박스 테스트 (Black Box Test)** tiếp nhận điểm tựa từ **127 129: 화이트박스 테스트 (White Box Test)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **132 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 130 & 131: 블랙박스 테스트 (Black Box Test)
 
 Sau khi đã đặt nền bằng **127 ~ 129: 화이트박스 테스트 (White Box Test)**, ta chuyển sang **130 & 131: 블랙박스 테스트 (Black Box Test)**. Đây là mắt xích 65/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -1915,6 +2049,8 @@ Phần “130 & 131: 블랙박스 테스트 (Black Box Test)” được nối v
 Ta có thể khép mục **130 & 131: 블랙박스 테스트 (Black Box Test)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **132 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** tiếp nhận điểm tựa từ **130 & 131: 블랙박스 테스트 (Black Box Test)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)
 
@@ -2371,6 +2507,8 @@ Phần **115. 분산 저장소 방식 (Distributed Repository System)** cần đ
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** tiếp nhận điểm tựa từ **132 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **092-1: 쿼리 성능 최적화 (Query Performance Optimization)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## A+ Deep Dive: 알고리즘 trace와 테스트 판정
 
 Ở bước 67/101, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** xuất hiện như phần tiếp nối của **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2436,6 +2574,8 @@ Như vậy, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** không ch�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **092-1: 쿼리 성능 최적화 (Query Performance Optimization)** tiếp nhận điểm tựa từ **A+ Deep Dive: 알고리즘 trace와 테스트 판정** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 092-1: 쿼리 성능 최적화 (Query Performance Optimization)
 
 Sau khi đã đặt nền bằng **A+ Deep Dive: 알고리즘 trace와 테스트 판정**, ta chuyển sang **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**. Đây là mắt xích 68/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2458,6 +2598,8 @@ Ta có thể khép mục **092-1: 쿼리 성능 최적화 (Query Performance Opt
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** tiếp nhận điểm tựa từ **092-1: 쿼리 성능 최적화 (Query Performance Optimization)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)
 
 Từ **092-1: 쿼리 성능 최적화 (Query Performance Optimization)**, ta đã có điểm tựa để bước vào **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 69/101 trước khi đi vào chi tiết.
@@ -2474,6 +2616,8 @@ Phần “24. 인터페이스 보안 - 네트워크 영역 (Interface Security -
 Điểm chốt của **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** tiếp nhận điểm tựa từ **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 스키마 3계층 (Three-Schema Architecture)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
 
@@ -2494,6 +2638,8 @@ Phần “26. 인터페이스 구현 검증 도구 (Interface Verification Tools
 Như vậy, **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **9. 스키마 3계층 (Three-Schema Architecture)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **9. 스키마 3계층 (Three-Schema Architecture)** tiếp nhận điểm tựa từ **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. 파레토 법칙 (Pareto Principle)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. 스키마 3계층 (Three-Schema Architecture)
 
@@ -2517,6 +2663,8 @@ Ta có thể khép mục **9. 스키마 3계층 (Three-Schema Architecture)** b�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **14. 파레토 법칙 (Pareto Principle)** tiếp nhận điểm tựa từ **9. 스키마 3계층 (Three-Schema Architecture)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. 파레토 법칙 (Pareto Principle)
 
 Từ **9. 스키마 3계층 (Three-Schema Architecture)**, ta đã có điểm tựa để bước vào **14. 파레토 법칙 (Pareto Principle)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/101 trước khi đi vào chi tiết.
@@ -2533,6 +2681,8 @@ Phần “14. 파레토 법칙 (Pareto Principle)” được nối với nội 
 Điểm chốt của **14. 파레토 법칙 (Pareto Principle)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **14. 파레토 법칙 (Pareto Principle)** cho ta quy tắc; **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. 클린 코드 작성 원칙 (Clean Code Principles)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. 최악의 시간 복잡도 (Worst-case Time Complexity)
 
@@ -2551,6 +2701,8 @@ Như vậy, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** khô
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** cho ta quy tắc; **19. 클린 코드 작성 원칙 (Clean Code Principles)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **21. 외계인 코드 (Alien Code)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. 클린 코드 작성 원칙 (Clean Code Principles)
 
 Sau khi đã đặt nền bằng **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**, ta chuyển sang **19. 클린 코드 작성 원칙 (Clean Code Principles)**. Đây là mắt xích 74/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2567,6 +2719,8 @@ Phần “19. 클린 코드 작성 원칙 (Clean Code Principles)” được n�
 Ta có thể khép mục **19. 클린 코드 작성 원칙 (Clean Code Principles)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **21. 외계인 코드 (Alien Code)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **21. 외계인 코드 (Alien Code)** tiếp nhận điểm tựa từ **19. 클린 코드 작성 원칙 (Clean Code Principles)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. 정적 분석 도구 (Static Analysis Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. 외계인 코드 (Alien Code)
 
@@ -2585,6 +2739,8 @@ Phần “21. 외계인 코드 (Alien Code)” được nối với nội dung k
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **22. 정적 분석 도구 (Static Analysis Tools)** tiếp nhận điểm tựa từ **21. 외계인 코드 (Alien Code)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. EAI 구축 유형 (Enterprise Application Integration Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. 정적 분석 도구 (Static Analysis Tools)
 
 Ở bước 76/101, **22. 정적 분석 도구 (Static Analysis Tools)** xuất hiện như phần tiếp nối của **21. 외계인 코드 (Alien Code)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2601,6 +2757,8 @@ Phần “22. 정적 분석 도구 (Static Analysis Tools)” được nối v�
 Như vậy, **22. 정적 분석 도구 (Static Analysis Tools)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **23. EAI 구축 유형 (Enterprise Application Integration Types)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **23. EAI 구축 유형 (Enterprise Application Integration Types)** tiếp nhận điểm tựa từ **22. 정적 분석 도구 (Static Analysis Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. 트립와이어 (tripwire)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. EAI 구축 유형 (Enterprise Application Integration Types)
 
@@ -2626,6 +2784,8 @@ Ta có thể khép mục **23. EAI 구축 유형 (Enterprise Application Integra
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **25. 트립와이어 (tripwire)** tiếp nhận điểm tựa từ **23. EAI 구축 유형 (Enterprise Application Integration Types)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. JSON 및 AJAX (JSON & AJAX)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. 트립와이어 (tripwire)
 
 Từ **23. EAI 구축 유형 (Enterprise Application Integration Types)**, ta đã có điểm tựa để bước vào **25. 트립와이어 (tripwire)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 78/101 trước khi đi vào chi tiết.
@@ -2641,6 +2801,8 @@ Phần “25. 트립와이어 (tripwire)” được nối với nội dung kế
 Điểm chốt của **25. 트립와이어 (tripwire)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **27. JSON 및 AJAX (JSON & AJAX)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **27. JSON 및 AJAX (JSON & AJAX)** tiếp nhận điểm tựa từ **25. 트립와이어 (tripwire)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. JSON 및 AJAX (JSON & AJAX)
 
@@ -2660,6 +2822,8 @@ Phần “27. JSON 및 AJAX (JSON & AJAX)” được nối với nội dung k�
 Như vậy, **27. JSON 및 AJAX (JSON & AJAX)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** tiếp nhận điểm tựa từ **27. JSON 및 AJAX (JSON & AJAX)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. DBMS (데이터베이스 관리 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)
 
@@ -2687,6 +2851,8 @@ Ta có thể khép mục **28. 선형 리스트 심화: 연속 리스트 vs 연�
 
 ---
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **33. DBMS (데이터베이스 관리 시스템)** tiếp nhận điểm tựa từ **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. 릴리즈 노트 (Release Note)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. DBMS (데이터베이스 관리 시스템)
 
 Từ **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**, ta đã có điểm tựa để bước vào **33. DBMS (데이터베이스 관리 시스템)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 81/101 trước khi đi vào chi tiết.
@@ -2712,6 +2878,8 @@ Phần “33. DBMS (데이터베이스 관리 시스템)” được nối với
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **38. 릴리즈 노트 (Release Note)** tiếp nhận điểm tựa từ **33. DBMS (데이터베이스 관리 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 110: RAM (Random Access Memory)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 38. 릴리즈 노트 (Release Note)
 
 Ở bước 82/101, **38. 릴리즈 노트 (Release Note)** xuất hiện như phần tiếp nối của **33. DBMS (데이터베이스 관리 시스템)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2730,6 +2898,8 @@ Phần “38. 릴리즈 노트 (Release Note)” được nối với nội dung
 Như vậy, **38. 릴리즈 노트 (Release Note)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 110: RAM (Random Access Memory)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 110: RAM (Random Access Memory)** tiếp nhận điểm tựa từ **38. 릴리즈 노트 (Release Note)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 110: RAM (Random Access Memory)
 
@@ -2763,6 +2933,8 @@ Phần “핵심 110: RAM (Random Access Memory)” được nối với nội d
 Ta có thể khép mục **핵심 110: RAM (Random Access Memory)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** tiếp nhận điểm tựa từ **핵심 110: RAM (Random Access Memory)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)
 
@@ -2809,6 +2981,8 @@ Với **자기 코어 (Magnetic Core - Lõi từ)**, hãy đọc các công th�
 Điểm chốt của **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)** tiếp nhận điểm tựa từ **핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)
 
@@ -2863,6 +3037,8 @@ Như vậy, **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** tiếp nhận điểm tựa từ **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 117: 캐시 메모리 (Cache Memory)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)
 
 Sau khi đã đặt nền bằng **핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)**, ta chuyển sang **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)**. Đây là mắt xích 86/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -2908,6 +3084,8 @@ Với **메모리 인터리빙 (Memory Interleaving)**, hãy đọc các công t
 Ta có thể khép mục **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **핵심 117: 캐시 메모리 (Cache Memory)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 117: 캐시 메모리 (Cache Memory)** tiếp nhận điểm tựa từ **핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 118: 가상 기억장치 (Virtual Memory)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 117: 캐시 메모리 (Cache Memory)
 
@@ -2960,6 +3138,8 @@ Với **쓰기 정책 (Write Policy)**, hãy đọc các công thức như một
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 118: 가상 기억장치 (Virtual Memory)** tiếp nhận điểm tựa từ **핵심 117: 캐시 메모리 (Cache Memory)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 118: 가상 기억장치 (Virtual Memory)
 
 Ở bước 88/101, **핵심 118: 가상 기억장치 (Virtual Memory)** xuất hiện như phần tiếp nối của **핵심 117: 캐시 메모리 (Cache Memory)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -2984,6 +3164,8 @@ Phần “핵심 118: 가상 기억장치 (Virtual Memory)” được nối v�
 Như vậy, **핵심 118: 가상 기억장치 (Virtual Memory)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 118: 가상 기억장치 (Virtual Memory)** xác định đầu vào; **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)
 
@@ -3034,6 +3216,8 @@ Với **병렬처리기법 (Kỹ thuật xử lý song song)**, hãy đọc các
 Ta có thể khép mục **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, cơ chế trong **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)** cần được kiểm chứng bằng dấu vết cụ thể; **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)
 
@@ -3088,6 +3272,8 @@ Với **비선형 구조 (Non-linear - Không nối tiếp)**, hãy đọc các 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** nêu điều cần giải thích; **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
 
 Ở bước 91/101, **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** xuất hiện như phần tiếp nối của **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -3136,6 +3322,8 @@ Như vậy, **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Des
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** tiếp nhận điểm tựa từ **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **088-2: 데이터베이스 (Database) & 089: DBMS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
 
 Sau khi đã đặt nền bằng **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, ta chuyển sang **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**. Đây là mắt xích 92/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -3154,6 +3342,8 @@ Phần “핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái s�
 Ta có thể khép mục **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **088-2: 데이터베이스 (Database) & 089: DBMS**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **088-2: 데이터베이스 (Database) & 089: DBMS** tiếp nhận điểm tựa từ **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **090-1: 데이터의 독립성 (Data Independence)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 088-2: 데이터베이스 (Database) & 089: DBMS
 
@@ -3203,6 +3393,8 @@ Với **DBMS (Database Management System)**, hãy đọc các công thức như 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **090-1: 데이터의 독립성 (Data Independence)** tiếp nhận điểm tựa từ **088-2: 데이터베이스 (Database) & 089: DBMS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **091: 스키마 (Schema)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 090-1: 데이터의 독립성 (Data Independence)
 
 Ở bước 94/101, **090-1: 데이터의 독립성 (Data Independence)** xuất hiện như phần tiếp nối của **088-2: 데이터베이스 (Database) & 089: DBMS**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -3219,6 +3411,8 @@ Phần “090-1: 데이터의 독립성 (Data Independence)” được nối v�
 Như vậy, **090-1: 데이터의 독립성 (Data Independence)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **091: 스키마 (Schema)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **091: 스키마 (Schema)** tiếp nhận điểm tựa từ **090-1: 데이터의 독립성 (Data Independence)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **091-1: 절차형 SQL (Procedural SQL)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 091: 스키마 (Schema)
 
@@ -3238,6 +3432,8 @@ Sau khi đã đặt nền bằng **090-1: 데이터의 독립성 (Data Independe
 Ta có thể khép mục **091: 스키마 (Schema)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **091-1: 절차형 SQL (Procedural SQL)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **091-1: 절차형 SQL (Procedural SQL)** tiếp nhận điểm tựa từ **091: 스키마 (Schema)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 091-1: 절차형 SQL (Procedural SQL)
 
@@ -3277,6 +3473,8 @@ Với **절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** tiếp nhận điểm tựa từ **091-1: 절차형 SQL (Procedural SQL)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
 
 Ở bước 97/101, **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** xuất hiện như phần tiếp nối của **091-1: 절차형 SQL (Procedural SQL)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -3303,6 +3501,8 @@ Phần “097 & 120: 통합 개발 환경 (IDE - Integrated Development Environm
 Như vậy, **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** cho ta quy tắc; **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **104-1 108: 소프트웨어 매뉴얼 (Software Manuals)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
 
@@ -3350,6 +3550,8 @@ Với **기타 협업 도구 (Groupware / Collaboration Tools)**, hãy đọc c�
 Ta có thể khép mục **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** cho ta quy tắc; **104-1 108: 소프트웨어 매뉴얼 (Software Manuals)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **113 115: 버전 관리 도구 방식 (Version Control Tool Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)
 
@@ -3399,6 +3601,8 @@ Các ý về **사용자 매뉴얼 (User Manual - Hướng dẫn sử dụng)** 
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **113 115: 버전 관리 도구 방식 (Version Control Tool Types)** tiếp nhận điểm tựa từ **104-1 108: 소프트웨어 매뉴얼 (Software Manuals)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **120-1: 소프트웨어의 분류 (Software Classification)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)
 
 Ở bước 100/101, **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** xuất hiện như phần tiếp nối của **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
@@ -3423,6 +3627,8 @@ Như vậy, **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **120-1: 소프트웨어의 분류 (Software Classification)** tiếp nhận điểm tựa từ **113 115: 버전 관리 도구 방식 (Version Control Tool Types)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 120-1: 소프트웨어의 분류 (Software Classification)
 
 Sau khi đã đặt nền bằng **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**, ta chuyển sang **120-1: 소프트웨어의 분류 (Software Classification)**. Đây là mắt xích 101/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
@@ -3437,3 +3643,5 @@ Phần “120-1: 소프트웨어의 분류 (Software Classification)” được
 ---
 
 Khép lại **120-1: 소프트웨어의 분류 (Software Classification)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+
+> **Bàn giao:** Sau **120-1: 소프트웨어의 분류 (Software Classification)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

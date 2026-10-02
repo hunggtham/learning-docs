@@ -1,5 +1,7 @@
 # 정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **COV — Coverage Hole** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **CON — Confusion lỗi (error / 오류)** để kiểm tra nhận định bằng tiêu chí hoặc phép thử. Mạch này nối remediation map với coverage hole, confusion và evidence, để mỗi lỗi dẫn tới bài sửa cụ thể.
+
 > Mục tiêu của tệp (file / 파일) này là biến mỗi câu sai thành một **đường sửa lỗi cụ thể**. Không ghi “sai câu 37” rồi đọc lại toàn bộ môn. Hãy xác định loại lỗi, concept gốc, tệp (file / 파일) cần quay lại và dạng bài phải làm lại.
 
 ---
@@ -27,6 +29,8 @@ Quay lại deep-dive môn tương ứng, đọc từ explanation gốc tới exa
 Không sửa COV bằng cách học riêng đáp án của câu vừa sai.
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **CON — Confusion lỗi (error / 오류)** tiếp nhận điểm tựa từ **COV — Coverage Hole** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PRO — Procedural lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## CON — Confusion lỗi (error / 오류)
 
@@ -56,6 +60,8 @@ Sau đó tự tạo một scenario mà A đúng và một scenario mà B đúng.
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **PRO — Procedural lỗi (error / 오류)** tiếp nhận điểm tựa từ **CON — Confusion lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## PRO — Procedural lỗi (error / 오류)
 
 Biết lý thuyết nhưng không thực hiện được các bước tính/tracing.
@@ -78,6 +84,8 @@ Quay lại `08-procedural-workbook.md`.
 Làm lại procedure với **hai bộ số liệu tự đổi**, không học đáp số cũ.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)** tiếp nhận điểm tựa từ **PRO — Procedural lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TERM — Korean Term Recognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)
 
@@ -105,6 +113,8 @@ Invariant thật nằm ở layer nào?
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **TERM — Korean Term Recognition** tiếp nhận điểm tựa từ **LAY — tầng (layer / 계층)/phạm vi (scope / 범위) lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **READ — Reading / Polarity lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## TERM — Korean Term Recognition
 
 Bạn biết concept bằng English/Vietnamese nhưng không nhận ra wording tiếng Hàn.
@@ -124,6 +134,8 @@ Korean → mechanism
 Không chỉ dịch nghĩa.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **READ — Reading / Polarity lỗi (error / 오류)** tiếp nhận điểm tựa từ **TERM — Korean Term Recognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CAL — Arithmetic lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## READ — Reading / Polarity lỗi (error / 오류)
 
@@ -153,6 +165,8 @@ Tạo checklist trước khi chọn đáp án:
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **CAL — Arithmetic lỗi (error / 오류)** tiếp nhận điểm tựa từ **READ — Reading / Polarity lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MEM — Fragile Memorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## CAL — Arithmetic lỗi (error / 오류)
 
 Procedure đúng nhưng tính nhầm số.
@@ -164,6 +178,8 @@ Tách calculation khỏi conceptual lập luận (reasoning / 추론).
 Viết intermediate trạng thái (state / 상태); không tính mental quá nhiều trong scheduling/subnet/page replacement.
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **MEM — Fragile Memorization** tiếp nhận điểm tựa từ **CAL — Arithmetic lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nếu một môn còn nhiều lỗi nền tảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## MEM — Fragile Memorization
 
@@ -182,8 +198,6 @@ Quay về explanation và scenario, không làm thêm 20 câu giống hệt.
 ---
 
 # 2. Remediation map — Môn 1
-Phần “2. Remediation map — Môn 1” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -210,8 +224,6 @@ Không đóng lỗi chỉ vì đọc lại. Phải tạo được một câu m�
 ---
 
 # 3. Remediation map — Môn 2
-Phần “3. Remediation map — Môn 2” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -238,8 +250,6 @@ Với thuật toán (algorithm / 알고리즘)/cấu trúc dữ liệu (data str
 ---
 
 # 4. Remediation map — Môn 3
-Phần “4. Remediation map — Môn 3” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -268,8 +278,6 @@ DB procedural lỗi chỉ đóng khi làm được **một ví dụ mới tự t
 ---
 
 # 5. Remediation map — Môn 4
-Phần “5. Remediation map — Môn 4” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -300,8 +308,6 @@ Với mã (code / 코드)/OS/mạng (network / 네트워크), phải viết tr�
 ---
 
 # 6. Remediation map — Môn 5
-Phần “6. Remediation map — Môn 5” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -330,11 +336,13 @@ Phần “6. Remediation map — Môn 5” nối kiến thức trước với n�
 
 # 7. Score-driven remediation
 
-## Nếu một môn < 8/20
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu một môn còn nhiều lỗi nền tảng** tiếp nhận điểm tựa từ **MEM — Fragile Memorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nếu môn 8–11/20** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## Nếu một môn còn nhiều lỗi nền tảng
 
 Đây là **과락 rủi ro (risk / 위험)**, không chỉ “điểm hơi thấp”.
 
-Không tiếp tục spam mock ngay.
+Không lặp lại cùng một bộ câu; hãy sửa cơ chế và bằng chứng trước.
 
 Luồng (flow / 흐름):
 
@@ -342,11 +350,13 @@ Luồng (flow / 흐름):
 1. phân loại toàn bộ câu sai
 2. tìm 2 error code lớn nhất
 3. sửa concept/procedure gốc
-4. làm 5 câu mới trong vùng đó
-5. chỉ quay lại full mock khi closed-book explanation đã ổn
+4. thực hiện một lab mới trong vùng đó
+5. quay lại scenario liên quan sau khi giải thích cơ chế đã ổn
 ```
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu môn 8–11/20** tiếp nhận điểm tựa từ **Nếu một môn còn nhiều lỗi nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nếu môn 12–15/20** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nếu môn 8–11/20
 
@@ -362,6 +372,8 @@ Vì đây thường là lỗi có thể cải thiện nhanh hơn việc học th
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu môn 12–15/20** tiếp nhận điểm tựa từ **Nếu môn 8–11/20** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nếu môn 16+/20** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nếu môn 12–15/20
 
 Coverage khá ổn. Tập trung:
@@ -376,6 +388,8 @@ Dùng Advanced Scenario Labs và Confusion Atlas.
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Nếu môn 16+/20** tiếp nhận điểm tựa từ **Nếu môn 12–15/20** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cluster A — “đều là bảo mật (security / 보안)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nếu môn 16+/20
 
 Không cần tiếp tục đọc toàn bộ môn từ đầu.
@@ -386,11 +400,11 @@ Kiểm tra (audit / 감사) câu sai và chuyển thời gian sang môn yếu nh
 
 # 8. lỗi (error / 오류) ledger template
 
-Sau mỗi mock, ghi dạng sau:
+Sau mỗi lab hoặc scenario, ghi dạng sau:
 
 ```text
 Date:
-Mock:
+Lab:
 
 Q__ | Subject __ | Code: CON
 Concept: RTO vs RPO
@@ -414,9 +428,9 @@ Không ghi “careless” nếu thực ra bạn không hiểu concept. `READ` ch
 
 # 9. lỗi (error / 오류) clusters cần cảnh giác
 
-## Cluster A — “đều là bảo mật (security / 보안)”
-Phần “Cluster A — “đều là bảo mật (security / 보안)”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster A — “đều là bảo mật (security / 보안)”** tiếp nhận điểm tựa từ **Nếu môn 16+/20** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Cluster A — “đều là bảo mật (security / 보안)”
 
 ```text
 Authentication
@@ -434,9 +448,9 @@ Nếu cứ chọn bằng cảm giác “security-related”, lỗi gốc là LAY
 
 ---
 
-## Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”
-Phần “Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster A — “đều là bảo mật (security / 보안)”** nêu điều cần giải thích; **Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cluster C — “đều là thiết kế (design / 설계)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”
 
 ```text
 ACID
@@ -457,9 +471,9 @@ Cần phân: thuộc tính (property / 속성), tính đồng thời (concurrenc
 
 ---
 
-## Cluster C — “đều là thiết kế (design / 설계)”
-Phần “Cluster C — “đều là thiết kế (design / 설계)”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”** nêu điều cần giải thích; **Cluster C — “đều là thiết kế (design / 설계)”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cluster D — “đều là hiệu năng (performance / 성능)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Cluster C — “đều là thiết kế (design / 설계)”
 
 ```text
 Architecture
@@ -475,9 +489,9 @@ Hãy xác định lớp trừu tượng (abstraction / 추상화) mức (level /
 
 ---
 
-## Cluster D — “đều là hiệu năng (performance / 성능)”
-Phần “Cluster D — “đều là hiệu năng (performance / 성능)”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — lỗi (error / 오류) Remediation Map**, **Cluster D — “đều là hiệu năng (performance / 성능)”** tiếp nhận điểm tựa từ **Cluster C — “đều là thiết kế (design / 설계)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## Cluster D — “đều là hiệu năng (performance / 성능)”
 
 ```text
 Complexity
@@ -499,13 +513,13 @@ Mỗi cái tác động một tài nguyên (resource / 자원)/tầng (layer / �
 Một cycle học hiệu quả hơn việc làm đề liên tục:
 
 ```text
-Day 1: mock / mixed drills
+Day 1: chọn lab và xác định lỗi
 Day 2: classify errors + repair COV/CON
 Day 3: procedural drills cho PRO/CAL
 Day 4: scenario labs cho LAY/CON
 Day 5: Korean term recall cho TERM
 Day 6: closed-book audit
-Day 7: second mixed set hoặc full mock
+Day 7: chạy lại một scenario khác và kiểm tra transfer
 ```
 
 Không bắt buộc theo ngày thật; đây là logical cycle.
@@ -522,3 +536,5 @@ Một lỗi chỉ được đánh dấu `REPAIRED` khi đủ bốn điều kiệ
 4. **Transfer:** làm đúng một câu mới có wording/số liệu khác.
 
 Nếu chỉ nhớ lại option đúng của câu cũ, lỗi vẫn chưa được sửa.
+
+> **Bàn giao:** Sau **Cluster D — “đều là hiệu năng (performance / 성능)”**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,8 +1,8 @@
 # Môn 3 — 데이터베이스 구축: Deep Dive 2026
 
-> Môn 3 không nên học bằng cách thuộc lệnh SQL rời rạc. Cần hiểu toàn bộ chuỗi: **mô hình dữ liệu (data model / 데이터 모델) → key/phụ thuộc (dependency / 의존성) → normalization → vật lý (physical / 물리적) lưu trữ (storage / 저장소)/chỉ mục (index / 인덱스) → SQL → giao dịch (transaction / 트랜잭션)/tính đồng thời (concurrency / 동시성)/khôi phục (recovery / 복구) → di chuyển (migration / 마이그레이션)**.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. 데이터베이스 기본 개념** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. 논리 데이터베이스 설계 — Logical cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này dùng README làm bản đồ owner của database construction depth, rồi nối concept, design, SQL, storage và security.
 
-> **Mạch đọc:** Deep Dive này nối mô hình dữ liệu với thao tác SQL, giao dịch (transaction / 트랜잭션) và di chuyển (migration / 마이그레이션). Mỗi phần sau dùng bất biến (invariant / 불변식) của phần trước; hãy đọc theo chuỗi trên và quay lại drill tương ứng để chuyển từ nhận diện thuật ngữ sang tự suy luận.
+> Môn 3 không nên học bằng cách thuộc lệnh SQL rời rạc. Cần hiểu toàn bộ chuỗi: **mô hình dữ liệu (data model / 데이터 모델) → key/phụ thuộc (dependency / 의존성) → normalization → vật lý (physical / 물리적) lưu trữ (storage / 저장소)/chỉ mục (index / 인덱스) → SQL → giao dịch (transaction / 트랜잭션)/tính đồng thời (concurrency / 동시성)/khôi phục (recovery / 복구) → di chuyển (migration / 마이그레이션)**.
 
 ## 1. 데이터베이스 기본 개념
 
@@ -17,6 +17,8 @@ Dữ liệu (data / 데이터) independence được chia thành logical dữ li
 ### 1.2 mô hình dữ liệu (data model / 데이터 모델)
 
 Mô hình dữ liệu (data model / 데이터 모델) gồm cấu trúc (structure / 구조), thao tác (operation / 연산) và ràng buộc (constraint / 제약조건). Các mô hình lịch sử như hierarchical, mạng (network / 네트워크), relational có cách biểu diễn quan hệ (relation / 관계) khác nhau. Relational mô hình (model / 모델) biểu diễn dữ liệu (data / 데이터) bằng quan hệ (relation / 관계)/bảng (table / 테이블) và dựa mạnh vào relational algebra/set lý thuyết (theory / 이론).
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **1. 데이터베이스 기본 개념** nêu điều cần giải thích; **2. 논리 데이터베이스 설계 — Logical cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Relational Algebra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. 논리 데이터베이스 설계 — Logical cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)
 
@@ -38,6 +40,8 @@ Thực thể (entity / 엔터티) Integrity: primary key không NULL. Referentia
 
 Khi delete parent row, hành vi (behavior / 동작) có thể RESTRICT/NO hành động (action / 동작), CASCADE, SET NULL hoặc SET DEFAULT tùy DBMS/lược đồ (schema / 스키마).
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **2. 논리 데이터베이스 설계 — Logical cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** nêu điều cần giải thích; **3. Relational Algebra** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Functional phụ thuộc (dependency / 의존성) và Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Relational Algebra
 
 Relational algebra là nền tảng thao tác quan hệ (relation / 관계). Các thao tác (operation / 연산) cơ bản:
@@ -45,6 +49,8 @@ Relational algebra là nền tảng thao tác quan hệ (relation / 관계). Cá
 Selection `σ` chọn row theo predicate. Projection `π` chọn column. Union hợp quan hệ (relation / 관계) compatible. Difference lấy tuple ở A không có trong B. Cartesian sản phẩm (product / 제품) ghép mọi tuple A với mọi tuple B. phép nối (join / 조인) kết hợp tuple liên quan theo điều kiện (condition / 조건). Division thường dùng cho truy vấn (query / 쿼리) dạng “đối tượng thỏa **tất cả** điều kiện trong một tập”.
 
 Bẫy: Selection liên quan **row**, Projection liên quan **column**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **4. Functional phụ thuộc (dependency / 의존성) và Normalization** tiếp nhận điểm tựa từ **3. Relational Algebra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 물리 데이터베이스 설계 — vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Functional phụ thuộc (dependency / 의존성) và Normalization
 
@@ -92,6 +98,8 @@ Một quan hệ (relation / 관계) có thể đạt 3NF nhưng chưa BCNF khi d
 
 Decomposition tốt cần ưu tiên lossless phép nối (join / 조인) — phép nối (join / 조인) các quan hệ (relation / 관계) con phải tái tạo đúng quan hệ (relation / 관계) gốc, không sinh tuple giả. phụ thuộc (dependency / 의존성) preservation nghĩa các phụ thuộc (dependency / 의존성) quan trọng có thể enforce mà không phải phép nối (join / 조인) quan hệ (relation / 관계) phức tạp.
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **4. Functional phụ thuộc (dependency / 의존성) và Normalization** nêu điều cần giải thích; **5. 물리 데이터베이스 설계 — vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. SQL 기본 — DDL, DML, DCL, TCL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. 물리 데이터베이스 설계 — vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)
 
 Logical thiết kế (design / 설계) nói **dữ liệu (data / 데이터) có ý nghĩa và quan hệ gì**; vật lý (physical / 물리적) thiết kế (design / 설계) nói **lưu và truy cập thế nào**.
@@ -118,6 +126,8 @@ Partitioning có thể tăng manageability/hiệu năng (performance / 성능) n
 
 Denormalization cố ý thêm redundancy để tối ưu read/hiệu năng (performance / 성능) sau khi hiểu rõ consistency chi phí (cost / 비용). Nó không phải “thiết kế sai” nếu được kiểm soát, nhưng làm tăng burden đồng bộ dữ liệu.
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **5. 물리 데이터베이스 설계 — vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)** nêu điều cần giải thích; **6. SQL 기본 — DDL, DML, DCL, TCL** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. SQL truy vấn (query / 쿼리) lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. SQL 기본 — DDL, DML, DCL, TCL
 
 ### 6.1 DDL
@@ -131,6 +141,8 @@ SELECT, INSERT, cập nhật (update / 업데이트), DELETE thao tác dữ li�
 ### 6.3 DCL/TCL
 
 GRANT, REVOKE liên quan privilege và thường xếp DCL. lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT liên quan giao dịch (transaction / 트랜잭션) điều khiển (control / 제어).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **7. SQL truy vấn (query / 쿼리) lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **6. SQL 기본 — DDL, DML, DCL, TCL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. View, chỉ mục (index / 인덱스), Procedure, Trigger** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. SQL truy vấn (query / 쿼리) lập luận (reasoning / 추론)
 
@@ -166,6 +178,8 @@ EXISTS kiểm tra sự tồn tại row từ subquery, thường không quan tâm
 
 UNION loại duplicate. UNION ALL giữ duplicate. INTERSECT lấy phần giao. EXCEPT/MINUS lấy difference tùy DBMS.
 
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **8. View, chỉ mục (index / 인덱스), Procedure, Trigger** tiếp nhận điểm tựa từ **7. SQL truy vấn (query / 쿼리) lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. giao dịch (transaction / 트랜잭션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. View, chỉ mục (index / 인덱스), Procedure, Trigger
 
 View là virtual quan hệ (relation / 관계) dựa truy vấn (query / 쿼리); có thể dùng lớp trừu tượng (abstraction / 추상화)/bảo mật (security / 보안) nhưng updateability phụ thuộc definition/DBMS.
@@ -173,6 +187,8 @@ View là virtual quan hệ (relation / 관계) dựa truy vấn (query / 쿼리)
 Stored Procedure đóng gói procedural lô-gic (logic / 논리) chạy trong DB máy chủ (server / 서버). Trigger tự động chạy khi sự kiện (event / 이벤트) được định nghĩa xảy ra. Trigger tiện cho kiểm tra (audit / 감사)/integrity nhưng quá nhiều hidden hành vi (behavior / 동작) có thể khó maintain.
 
 Chỉ mục (index / 인덱스) là truy cập (access / 접근) cấu trúc (structure / 구조), không phải bản sao (copy / 복사) logical bảng (table / 테이블) đầy đủ theo nghĩa view/materialization.
+
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **9. giao dịch (transaction / 트랜잭션)** tiếp nhận điểm tựa từ **8. View, chỉ mục (index / 인덱스), Procedure, Trigger** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Locking và Serializability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. giao dịch (transaction / 트랜잭션)
 
@@ -197,6 +213,8 @@ Theo mô hình SQL kinh điển:
 
 Đừng biến bảng này thành tuyệt đối cho mọi DBMS; engine có MVCC/locking hiện thực (implementation / 구현) khác nhau. Trong đề lý thuyết, bám ngữ nghĩa (semantics / 의미론) chuẩn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **10. Locking và Serializability** tiếp nhận điểm tựa từ **9. giao dịch (transaction / 트랜잭션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Locking và Serializability
 
 Dùng chung (shared / 공유) khóa (lock / 잠금) cho read, Exclusive khóa (lock / 잠금) cho ghi (write / 쓰기) trong mô hình khóa (lock / 잠금) cơ bản. Nhiều dùng chung (shared / 공유) khóa (lock / 잠금) có thể cùng tồn tại; exclusive khóa (lock / 잠금) xung đột với khóa (lock / 잠금) khác tùy ma trận (matrix / 행렬).
@@ -210,6 +228,8 @@ Strict 2PL thường giữ exclusive khóa (lock / 잠금) tới lần ghi nhậ
 Deadlock có thể xảy ra khi giao dịch (transaction / 트랜잭션) chờ vòng tròn tài nguyên (resource / 자원)/khóa (lock / 잠금). Điều kiện Coffman quen thuộc: mutual exclusion, hold and wait, no preemption, circular wait.
 
 Giải pháp có thể prevention, avoidance, detection + khôi phục (recovery / 복구), hết thời gian chờ (timeout / 타임아웃). Wait-for đồ thị (graph / 그래프) dùng để detect cycle trong khóa (lock / 잠금) wait quan hệ (relation / 관계).
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **11. khôi phục (recovery / 복구)** tiếp nhận điểm tựa từ **10. Locking và Serializability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 데이터 전환 — dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) / Conversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. khôi phục (recovery / 복구)
 
@@ -225,6 +245,8 @@ Checkpoint giảm lượng log phải scan/reprocess khi khôi phục (recovery 
 
 UNDO đảo thay đổi của giao dịch (transaction / 트랜잭션) chưa lần ghi nhận (commit / 커밋). REDO áp lại thay đổi committed chưa phản ánh đầy đủ trên disk. Cần hiểu quan hệ (relation / 관계) với buffer chính sách (policy / 정책) như steal/no-steal và force/no-force ở mức khái niệm.
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **11. khôi phục (recovery / 복구)** nêu điều cần giải thích; **12. 데이터 전환 — dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) / Conversion** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Cặp dễ nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. 데이터 전환 — dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) / Conversion
 
 Dữ liệu (data / 데이터) conversion gồm phân tích (analysis / 분석) nguồn/đích, ánh xạ (mapping / 매핑), cleansing, transformation, extraction/tải (load / 로드), kiểm tra hợp lệ (validation / 검증) và reconciliation.
@@ -233,9 +255,9 @@ Một di chuyển (migration / 마이그레이션) thành công không chỉ là
 
 ETL: Extract → Transform → tải (load / 로드). ELT: Extract → tải (load / 로드) → Transform, phổ biến khi mục tiêu (target / 대상) nền tảng (platform / 플랫폼) có compute mạnh. Trong kỳ thi truyền thống ETL thường gặp hơn, nhưng hiểu cả hai giúp không nhầm.
 
-## 13. Cặp dễ nhầm
-Phần “13. Cặp dễ nhầm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **12. 데이터 전환 — dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) / Conversion** đã nêu tiêu chí phân biệt, còn **13. Cặp dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Procedural drills** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## 13. Cặp dễ nhầm
 
 | Cặp | Điểm tách |
 |---|---|
@@ -251,6 +273,8 @@ Phần “13. Cặp dễ nhầm” nối kiến thức trước với nội dung
 | dùng chung (shared / 공유) vs Exclusive khóa (lock / 잠금) | read sharing / ghi (write / 쓰기) exclusive |
 | UNDO vs REDO | quay lui (rollback / 롤백) uncommitted / reapply committed |
 | Normalization vs Partitioning | logical redundancy / vật lý (physical / 물리적) phân phối (distribution / 분포) |
+
+> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **13. Cặp dễ nhầm** đã nêu tiêu chí phân biệt, còn **14. Procedural drills** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. 과락 방지 checklist — Môn 3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Procedural drills
 
@@ -294,6 +318,8 @@ Truy vấn (query / 쿼리) chủ yếu là `WHERE created_at BETWEEN ...` và t
 
 Nguồn (source / 소스) có 100.000 row, mục tiêu (target / 대상) cũng 100.000 row nhưng 2% foreign key invalid. Vì sao row count match chưa đủ để xác nhận di chuyển (migration / 마이그레이션)?
 
+> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축: Deep Dive 2026**, **15. 과락 방지 checklist — Môn 3** tiếp nhận điểm tựa từ **14. Procedural drills** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 15. 과락 방지 checklist — Môn 3
 
 Phải tự làm được:
@@ -315,4 +341,4 @@ Phải tự làm được:
 
 Nếu normalization, SQL và giao dịch (transaction / 트랜잭션) chỉ “nhìn quen” nhưng không tự suy luận được, Môn 3 vẫn còn rủi ro cao.
 
-> **Bàn giao:** Sau khi hoàn tất checklist, nối sang Môn 4 khi cần dấu vết (trace / 추적) mã (code / 코드)/kiểu dữ liệu, hoặc quay về các lesson cơ sở dữ liệu (database / 데이터베이스) để sửa đúng gap; không xem checklist như điểm kết thúc tách khỏi chuỗi xử lý (pipeline / 파이프라인) dữ liệu (data / 데이터) → ứng dụng (application / 애플리케이션) → khôi phục (recovery / 복구).
+> **Bàn giao:** Sau **15. 과락 방지 checklist — Môn 3**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

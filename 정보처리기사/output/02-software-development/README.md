@@ -1,10 +1,14 @@
 # Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài học** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các bài học theo chủ đề** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của Software Development, rồi nối bài học, lộ trình và dependency.
+
 > **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
 
 ## Bài học
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
+
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **Các bài học theo chủ đề** tiếp nhận điểm tựa từ **Bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghi chú học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các bài học theo chủ đề
 
@@ -110,6 +114,8 @@
 100. [113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)](lessons/100-bai-hoc.md)
 101. [120-1: 소프트웨어의 분류 (Software Classification)](lessons/101-bai-hoc.md)
 
+> **Chuyển mạch:** Ở chặng này của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **Ghi chú học** tiếp nhận điểm tựa từ **Các bài học theo chủ đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch bài giảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ghi chú học
 
 Phần này hướng dẫn cách dùng tài liệu như một bài giảng, để ghi chú và thuật ngữ luôn quay về mục tiêu học tập thay vì đứng riêng lẻ.
@@ -118,15 +124,21 @@ Phần này hướng dẫn cách dùng tài liệu như một bài giảng, đ�
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **Mạch bài giảng** tiếp nhận điểm tựa từ **Ghi chú học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **복습 체크리스트 (Checklist ôn tập)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mạch bài giảng
 
 Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
 
+> **Chuyển mạch:** Trong **Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)**, **복습 체크리스트 (Checklist ôn tập)** tiếp nhận điểm tựa từ **Mạch bài giảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 복습 체크리스트 (Checklist ôn tập)
 
-Checklist này khép lại bài bằng các câu hỏi kiểm tra; hãy dùng nó để xác nhận mình đã nối khái niệm, điều kiện và ví dụ thành một lời giải thích hoàn chỉnh.
+Checklist này khép lại bài bằng các tiêu chí tự rà soát; hãy dùng nó để xác nhận mình đã nối khái niệm, điều kiện và ví dụ thành một lời giải thích hoàn chỉnh.
 
 - [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
 - [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?
 - [ ] 비슷한 개념과 구별 기준을 말할 수 있는가?
 - [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
+
+> **Bàn giao:** Sau **복습 체크리스트 (Checklist ôn tập)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

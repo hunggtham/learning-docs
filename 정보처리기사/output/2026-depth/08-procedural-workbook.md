@@ -1,5 +1,7 @@
 # 정보처리기사 필기 2026 — Procedural Workbook
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **정보처리기사 필기 2026 — Procedural Workbook**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **0. Cách dùng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Drill 1 — Cyclomatic độ phức tạp (complexity / 복잡도)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối procedural workbook với drill, complexity và remediation, để luyện tập bắt đầu từ lỗi quan sát được.
+
 > Đây là workbook cho các dạng bài **không thể học chỉ bằng cách đọc**. Mỗi drill buộc phải viết tay các bước trung gian. Nếu nhìn đáp án rồi thấy “hiểu” nhưng không tự làm lại được, chưa tính là hoàn thành.
 >
 > Các bài đều được viết mới, dùng để luyện cơ chế chứ không sao chép 기출.
@@ -20,6 +22,8 @@ Mục tiêu không phải nhớ đáp số. Mục tiêu là tạo một procedur
 
 # Part A — 소프트웨어 설계 / 소프트웨어 개발
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 1 — Cyclomatic độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **0. Cách dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 2 — ngăn xếp (stack / 스택) và postfix expression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 1 — Cyclomatic độ phức tạp (complexity / 복잡도)
 
 Cho control-flow đồ thị (graph / 그래프) có `N = 8` nút (node / 노드) và `E = 10` edge, một connected thành phần (component / 컴포넌트).
@@ -35,8 +39,6 @@ V(G) = E - N + 2P
 với `P = 1`.
 
 ### Solution
-Phần “Solution” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 V(G) = 10 - 8 + 2 = 4
@@ -49,6 +51,8 @@ Nghĩa là đồ thị (graph / 그래프) có 4 independent paths trong basis-p
 Nếu đồ thị (graph / 그래프) có nhiều connected thành phần (component / 컴포넌트), phải dùng đúng `P`, không mặc định luôn bằng 1.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 2 — ngăn xếp (stack / 스택) và postfix expression** tiếp nhận điểm tựa từ **Drill 1 — Cyclomatic độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 3 — BFS và DFS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 2 — ngăn xếp (stack / 스택) và postfix expression
 
@@ -67,8 +71,6 @@ Tính biểu thức postfix:
 3. tính và push kết quả (result / 결과).
 
 ### Dấu vết (trace / 추적)
-Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 5       → [5]
@@ -89,6 +91,8 @@ Phần “Dấu vết (trace / 추적)” nối kiến thức trước với n�
 Với `-` và `/`, thứ tự pop rất quan trọng. Operand pop đầu tiên là bên phải.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 3 — BFS và DFS** tiếp nhận điểm tựa từ **Drill 2 — ngăn xếp (stack / 스택) và postfix expression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 3 — BFS và DFS
 
@@ -136,6 +140,8 @@ BFS dùng frontier theo FIFO nên khám phá theo “tầng (layer / 계층)” 
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing** tiếp nhận điểm tựa từ **Drill 3 — BFS và DFS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing
 
 Bảng băm (hash table / 해시 테이블) kích thước (size / 크기) 7, băm (hash / 해시) hàm (function / 함수):
@@ -147,8 +153,6 @@ h(k) = k mod 7
 Insert theo thứ tự `10, 17, 24, 11` bằng tuyến tính (linear / 선형) Probing.
 
 ### Dấu vết (trace / 추적)
-Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 10 mod 7 = 3 → slot 3 = 10
@@ -175,6 +179,8 @@ Tuyến tính (linear / 선형) probing có thể tạo **Primary Clustering —
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)** tiếp nhận điểm tựa từ **Drill 4 — bảng băm (hash table / 해시 테이블) với tuyến tính (linear / 선형) Probing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)
 
 Sorted array:
@@ -186,8 +192,6 @@ Sorted array:
 Tìm 31 bằng tìm kiếm nhị phân (binary search / 이진 탐색) với chỉ mục (index / 인덱스) 0-based.
 
 ### Dấu vết (trace / 추적)
-Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 low=0 high=8 mid=4 → a[4]=23 < 31 → low=5
@@ -202,6 +206,8 @@ Tìm kiếm nhị phân (binary search / 이진 탐색) cần tìm kiếm (searc
 ---
 
 # Part B — 데이터베이스 구축
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Drill 5 — tìm kiếm nhị phân (binary search / 이진 탐색)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)
 
@@ -247,6 +253,8 @@ FD `AC → D` không có nghĩa key bắt buộc là `AC`. Vì `A → B → C`, 
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Drill 6 — Candidate Key từ Functional phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)
 
 Quan hệ (relation / 관계):
@@ -273,8 +281,6 @@ CourseId  → CourseName
 Đây là **부분 함수 종속 — partial functional phụ thuộc (dependency / 의존성)**, vi phạm 2NF.
 
 ### Decompose
-Phần “Decompose” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 Student(StudentId, StudentName)
@@ -287,6 +293,8 @@ Enrollment(StudentId, CourseId, Grade)
 2NF nhắm tới partial phụ thuộc (dependency / 의존성) của non-prime attribute vào một phần candidate key. Nếu key chỉ có một attribute, partial phụ thuộc (dependency / 의존성) kiểu này không tồn tại.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Drill 7 — 2NF và Partial phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 9 — GROUP BY, WHERE và HAVING** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)
 
@@ -306,8 +314,6 @@ DeptId → DeptName
 `EmpId` là key.
 
 ### Phân tích
-Phần “Phân tích” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 EmpId → DeptId → DeptName
@@ -328,6 +334,8 @@ Không phải cứ quan hệ (relation / 관계) có foreign key là vi phạm 3
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 9 — GROUP BY, WHERE và HAVING** tiếp nhận điểm tựa từ **Drill 8 — 3NF và Transitive phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 10 — LEFT phép nối (join / 조인) và NULL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 9 — GROUP BY, WHERE và HAVING
 
 Bảng (table / 테이블) `orders(customer_id, amount, status)`.
@@ -335,8 +343,6 @@ Bảng (table / 테이블) `orders(customer_id, amount, status)`.
 Yêu cầu: chỉ tính các thứ tự (order / 순서) `PAID`, group theo customer, lấy customer có tổng amount > 1,000.
 
 ### SQL
-Phần “SQL” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```sql
 SELECT customer_id, SUM(amount) AS total_amount
@@ -355,6 +361,8 @@ HAVING SUM(amount) > 1000;
 Đừng dùng `WHERE SUM(amount) > 1000` vì aggregate giá trị (value / 값) chưa tồn tại ở phase lô-gic (logic / 논리) đó.
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 10 — LEFT phép nối (join / 조인) và NULL** tiếp nhận điểm tựa từ **Drill 9 — GROUP BY, WHERE và HAVING** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 11 — xung đột (conflict / 충돌) Serializability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 10 — LEFT phép nối (join / 조인) và NULL
 
@@ -384,8 +392,6 @@ GROUP BY c.id;
 ```
 
 ### Kết quả (result / 결과)
-Phần “Kết quả (result / 결과)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 1 → 2
@@ -402,6 +408,8 @@ LEFT phép nối (join / 조인) giữ toàn bộ row bên trái. Với customer
 `COUNT(*)` ở group của customer 2 sẽ đếm preserved row và có thể cho 1, khác `COUNT(o.id)`.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 11 — xung đột (conflict / 충돌) Serializability** tiếp nhận điểm tựa từ **Drill 10 — LEFT phép nối (join / 조인) và NULL** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 12 — Isolation anomaly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 11 — xung đột (conflict / 충돌) Serializability
 
@@ -439,6 +447,8 @@ T1 → T2 → T1
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 12 — Isolation anomaly** tiếp nhận điểm tựa từ **Drill 11 — xung đột (conflict / 충돌) Serializability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 13 — FCFS Scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 12 — Isolation anomaly
 
 T1 đọc balance = 100. T2 cập nhật (update / 업데이트) balance = 50 và lần ghi nhận (commit / 커밋). T1 đọc lại cùng row và thấy 50.
@@ -453,6 +463,8 @@ Nếu T1 chạy cùng predicate `WHERE amount > 1000` và lần hai xuất hiệ
 
 # Part C — 프로그래밍 언어 활용 / OS / mạng (network / 네트워크)
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 13 — FCFS Scheduling** tiếp nhận điểm tựa từ **Drill 12 — Isolation anomaly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 14 — SJF Non-preemptive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 13 — FCFS Scheduling
 
 Processes cùng arrive thời gian (time / 시간) 0:
@@ -466,8 +478,6 @@ Processes cùng arrive thời gian (time / 시간) 0:
 FCFS thứ tự (order / 순서): P1 → P2 → P3.
 
 ### Waiting thời gian (time / 시간)
-Phần “Waiting thời gian (time / 시간)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 P1 = 0
@@ -482,8 +492,6 @@ Average waiting thời gian (time / 시간):
 ```
 
 ### Turnaround thời gian (time / 시간)
-Phần “Turnaround thời gian (time / 시간)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 P1 = 5
@@ -498,6 +506,8 @@ Average turnaround:
 ```
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 14 — SJF Non-preemptive** tiếp nhận điểm tựa từ **Drill 13 — FCFS Scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 15 — Round Robin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 14 — SJF Non-preemptive
 
@@ -529,6 +539,8 @@ SJF giảm average waiting trong benchmark khi burst thời gian (time / 시간)
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 15 — Round Robin** tiếp nhận điểm tựa từ **Drill 14 — SJF Non-preemptive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 16 — FIFO Page Replacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 15 — Round Robin
 
 Processes đều arrive 0:
@@ -541,8 +553,6 @@ Quantum = 2
 ```
 
 ### Dấu vết (trace / 추적)
-Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 0-2   P1, remaining 3
@@ -579,6 +589,8 @@ Average waiting:
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 16 — FIFO Page Replacement** tiếp nhận điểm tựa từ **Drill 15 — Round Robin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 17 — LRU Page Replacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 16 — FIFO Page Replacement
 
 3 frame, tham chiếu (reference / 참조) string:
@@ -588,8 +600,6 @@ Average waiting:
 ```
 
 ### Dấu vết (trace / 추적)
-Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 1 → [1,-,-] fault
@@ -605,6 +615,8 @@ Phần “Dấu vết (trace / 추적)” nối kiến thức trước với n�
 FIFO chỉ quan tâm arrival thứ tự (order / 순서) vào frame, không quan tâm page vừa được dùng lại gần đây.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 17 — LRU Page Replacement** tiếp nhận điểm tựa từ **Drill 16 — FIFO Page Replacement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 18 — IPv4 Subnetting /27** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 17 — LRU Page Replacement
 
@@ -627,6 +639,8 @@ Khi `5` tới, among 1,3,4 thì 3 là least recently used → replace 3.
 **Page faults cũng = 5 trong chuỗi này**, dù victim khác FIFO. Đừng suy rằng LRU luôn cho ít fault hơn trên mọi short tham chiếu (reference / 참조) string; chính sách (policy / 정책) khác nhau có thể tình cờ cùng count.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 18 — IPv4 Subnetting /27** tiếp nhận điểm tựa từ **Drill 17 — LRU Page Replacement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 19 — Xác định subnet của host** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 18 — IPv4 Subnetting /27
 
@@ -679,6 +693,8 @@ Broadcast = 192.168.10.31
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 19 — Xác định subnet của host** tiếp nhận điểm tựa từ **Drill 18 — IPv4 Subnetting /27** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 20 — Longest Prefix Match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 19 — Xác định subnet của host
 
 Host:
@@ -702,6 +718,8 @@ Usable    = 192.168.10.65 ~ 192.168.10.94
 ```
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 20 — Longest Prefix Match** tiếp nhận điểm tựa từ **Drill 19 — Xác định subnet của host** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 21 — C Array và Pointer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 20 — Longest Prefix Match
 
@@ -727,6 +745,8 @@ Nó match /8, /16 và /24. Router chọn tuyến (route / 경로) có prefix dà
 Longest prefix match chọn tuyến (route / 경로) cụ thể nhất trong các tuyến (route / 경로) match, không phải tuyến (route / 경로) xuất hiện đầu tiên trong bảng (table / 테이블).
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 21 — C Array và Pointer** tiếp nhận điểm tựa từ **Drill 20 — Longest Prefix Match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 22 — C Pre/Post Increment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 21 — C Array và Pointer
 
@@ -762,6 +782,8 @@ Pointer arithmetic tăng theo element kích thước (size / 크기) tự độn
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 22 — C Pre/Post Increment** tiếp nhận điểm tựa từ **Drill 21 — C Array và Pointer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 22 — C Pre/Post Increment
 
 Mã (code / 코드):
@@ -773,8 +795,6 @@ int z = ++x;
 ```
 
 ### Trạng thái (state / 상태)
-Phần “Trạng thái (state / 상태)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 start: x=3
@@ -793,6 +813,8 @@ x=5, y=3, z=5
 Không mở rộng mẹo này sang expressions có undefined/unspecified hành vi (behavior / 동작) trong C. Khi cùng scalar bị modify/read phức tạp trong một expression, phải biết ngôn ngữ (language / 언어) quy tắc (rule / 규칙) chứ không “dấu vết (trace / 추적) theo cảm giác”.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch** tiếp nhận điểm tựa từ **Drill 22 — C Pre/Post Increment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 24 — Python Alias và Mutability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch
 
@@ -826,6 +848,8 @@ Overloading resolution chủ yếu dùng phương thức (method / 메서드) si
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 24 — Python Alias và Mutability** tiếp nhận điểm tựa từ **Drill 23 — Java Overriding và động (dynamic / 동적) Dispatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 25 — PERT Expected thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 24 — Python Alias và Mutability
 
 Mã (code / 코드):
@@ -857,6 +881,8 @@ Nhưng shallow bản sao (copy / 복사) không recursively bản sao (copy / �
 
 # Part D — 정보시스템 구축 관리
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 25 — PERT Expected thời gian (time / 시간)** tiếp nhận điểm tựa từ **Drill 24 — Python Alias và Mutability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 26 — đường găng (critical path / 임계 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 25 — PERT Expected thời gian (time / 시간)
 
 Một activity có:
@@ -886,6 +912,8 @@ TE = (4 + 4*7 + 16) / 6
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 25 — PERT Expected thời gian (time / 시간)** xác định đầu vào; **Drill 26 — đường găng (critical path / 임계 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Drill 27 — RAID sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 26 — đường găng (critical path / 임계 경로)
 
 Dự án (project / 프로젝트) mạng (network / 네트워크) có hai đường dẫn (path / 경로) độc lập từ start tới finish:
@@ -907,6 +935,8 @@ Path 2 = 4+3   = 7
 Nếu activity trên đường găng (critical path / 임계 경로) delay 1 đơn vị và không có float/slack, dự án (project / 프로젝트) completion cũng delay 1.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 26 — đường găng (critical path / 임계 경로)** xác định đầu vào; **Drill 27 — RAID sức chứa (capacity / 용량)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Drill 28 — RTO và RPO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 27 — RAID sức chứa (capacity / 용량)
 
@@ -954,6 +984,8 @@ RAID là availability/storage-failure cơ chế (mechanism / 메커니즘), **kh
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 28 — RTO và RPO** tiếp nhận điểm tựa từ **Drill 27 — RAID sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 28 — RTO và RPO
 
 Nghiệp vụ (business / 비즈니스) yêu cầu (requirement / 요구사항):
@@ -976,6 +1008,8 @@ Nếu replication gần real-time nhưng failover cần 4 giờ manual công vi�
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)** tiếp nhận điểm tựa từ **Drill 28 — RTO và RPO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 30 — Deadlock Conditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)
 
 Ghép threat với điều khiển (control / 제어) chính hợp lý nhất trong các lựa chọn sau:
@@ -995,8 +1029,6 @@ D. mạng (network / 네트워크) firewall / bảo mật (security / 보안) gr
 E. Context-appropriate đầu ra (output / 출력) encoding + đầu vào (input / 입력) handling
 
 ### Answer
-Phần “Answer” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 1 → C
@@ -1011,6 +1043,8 @@ Phần “Answer” nối kiến thức trước với nội dung sắp đọc, 
 Một hệ thống thật dùng defense in độ sâu (depth / 깊이), nhưng đề thường hỏi điều khiển (control / 제어) giải quyết nguyên nhân trực tiếp nhất.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 30 — Deadlock Conditions** tiếp nhận điểm tựa từ **Drill 29 — bảo mật (security / 보안) điều khiển (control / 제어) ánh xạ (mapping / 매핑)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 31 — Composite chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 30 — Deadlock Conditions
 
@@ -1034,6 +1068,8 @@ Deadlock prevention thay đổi điều kiện để deadlock không thể hình
 ---
 
 # Part E — Mixed procedural drills không xem solution ngay
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 31 — Composite chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **Drill 30 — Deadlock Conditions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 31 — Composite chỉ mục (index / 인덱스)
 
@@ -1065,6 +1101,8 @@ Một starting thiết kế (design / 설계) tự nhiên là `(user_id, created
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)** tiếp nhận điểm tựa từ **Drill 31 — Composite chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 33 — CPU vs I/O lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)
 
 Máy khách (client / 클라이언트) gửi yêu cầu (request / 요청) transfer với `request_id = R123`. máy chủ (server / 서버) hết thời gian chờ (timeout / 타임아웃) sau lần ghi nhận (commit / 커밋). máy khách (client / 클라이언트) thử lại (retry / 재시도) cùng `request_id`.
@@ -1081,6 +1119,8 @@ Nếu nghiệp vụ (business / 비즈니스) side tác động (effect / 효과
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 33 — CPU vs I/O lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Drill 32 — giao dịch (transaction / 트랜잭션) + thử lại (retry / 재시도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 34 — Subnet thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 33 — CPU vs I/O lập luận (reasoning / 추론)
 
 Một tiến trình (process / 프로세스) chạy mẫu (pattern / 패턴):
@@ -1094,6 +1134,8 @@ Một tiến trình (process / 프로세스) khác chạy CPU burst dài 100ms.
 Tự giải thích tại sao scheduling chính sách (policy / 정책) ảnh hưởng phản hồi (response / 응답)/interactivity khác nhau và vì sao chỉ nhìn tổng CPU thời gian (time / 시간) không đủ để hiểu hệ thống (system / 시스템) hành vi (behavior / 동작).
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 34 — Subnet thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Drill 33 — CPU vs I/O lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drill 35 — Normalization vs hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Drill 34 — Subnet thiết kế (design / 설계)
 
@@ -1117,6 +1159,8 @@ Prefix:
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Drill 35 — Normalization vs hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **Drill 34 — Subnet thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Functional phụ thuộc (dependency / 의존성) / Key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Drill 35 — Normalization vs hiệu năng (performance / 성능)
 
 Một analytics truy vấn (query / 쿼리) phép nối (join / 조인) 8 bảng normalized và chạy quá chậm. nhóm (team / 팀) đề xuất denormalized summary bảng (table / 테이블).
@@ -1136,9 +1180,9 @@ Normalization và vật lý (physical / 물리적)/hiệu năng (performance / �
 
 # Part F — Procedure templates phải nhớ
 
-## Functional phụ thuộc (dependency / 의존성) / Key
-Phần “Functional phụ thuộc (dependency / 의존성) / Key” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Functional phụ thuộc (dependency / 의존성) / Key** tiếp nhận điểm tựa từ **Drill 35 — Normalization vs hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Functional phụ thuộc (dependency / 의존성) / Key
 
 ```text
 1. Chọn attribute set X
@@ -1148,9 +1192,9 @@ Phần “Functional phụ thuộc (dependency / 의존성) / Key” nối kiế
 5. Không bỏ được nữa → candidate key
 ```
 
-## Normalization
-Phần “Normalization” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **Normalization** tiếp nhận điểm tựa từ **Functional phụ thuộc (dependency / 의존성) / Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SQL Aggregate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Normalization
 
 ```text
 1. Xác định candidate key
@@ -1162,9 +1206,9 @@ Phần “Normalization” nối kiến thức trước với nội dung sắp �
 7. Kiểm lossless join và dependency preservation khi decomposition
 ```
 
-## SQL Aggregate
-Phần “SQL Aggregate” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **SQL Aggregate** tiếp nhận điểm tựa từ **Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xung đột (conflict / 충돌) Serializability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## SQL Aggregate
 
 ```text
 FROM/JOIN
@@ -1178,9 +1222,9 @@ FROM/JOIN
 
 Đây là logical lập luận (reasoning / 추론) mô hình (model / 모델), không khẳng định DBMS physically execute đúng thứ tự đó.
 
-## Xung đột (conflict / 충돌) Serializability
-Phần “Xung đột (conflict / 충돌) Serializability” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Xung đột (conflict / 충돌) Serializability** tiếp nhận điểm tựa từ **SQL Aggregate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU Scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Xung đột (conflict / 충돌) Serializability
 
 ```text
 1. Tìm conflict pair trên cùng item
@@ -1190,9 +1234,9 @@ Phần “Xung đột (conflict / 충돌) Serializability” nối kiến thức
 5. Acyclic → topological order cho equivalent serial order
 ```
 
-## CPU Scheduling
-Phần “CPU Scheduling” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **CPU Scheduling** tiếp nhận điểm tựa từ **Xung đột (conflict / 충돌) Serializability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Page Replacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## CPU Scheduling
 
 ```text
 1. Vẽ timeline/Gantt
@@ -1202,9 +1246,9 @@ Phần “CPU Scheduling” nối kiến thức trước với nội dung sắp 
 5. response = first_run - arrival
 ```
 
-## Page Replacement
-Phần “Page Replacement” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Procedural Workbook**, **Page Replacement** tiếp nhận điểm tựa từ **CPU Scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subnetting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Page Replacement
 
 ```text
 1. Ghi state frame sau từng reference
@@ -1214,9 +1258,9 @@ Phần “Page Replacement” nối kiến thức trước với nội dung sắ
 5. Đếm fault sau cùng
 ```
 
-## Subnetting
-Phần “Subnetting” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Procedural Workbook**, **Subnetting** tiếp nhận điểm tựa từ **Page Replacement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PERT/CPM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Subnetting
 
 ```text
 1. prefix → host bits
@@ -1227,9 +1271,9 @@ Phần “Subnetting” nối kiến thức trước với nội dung sắp đ�
 6. network / broadcast / usable range
 ```
 
-## PERT/CPM
-Phần “PERT/CPM” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Procedural Workbook**, **PERT/CPM** tiếp nhận điểm tựa từ **Subnetting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
+## PERT/CPM
 
 ```text
 PERT expected = (O + 4M + P)/6
@@ -1265,3 +1309,5 @@ Bạn chỉ được đánh dấu workbook hoàn thành khi có thể tự làm 
 - deadlock điều kiện (condition / 조건)/prevention.
 
 Nếu một procedure chỉ làm được khi nhìn lại ví dụ, quay về drill tương ứng và thay số liệu tự tạo thêm ít nhất hai lần.
+
+> **Bàn giao:** Sau **PERT/CPM**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

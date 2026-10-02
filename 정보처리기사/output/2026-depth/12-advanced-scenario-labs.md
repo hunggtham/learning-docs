@@ -1,5 +1,7 @@
 # 정보처리기사 필기 2026 — Advanced Scenario Labs
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **정보처리기사 필기 2026 — Advanced Scenario Labs**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Lab 1 — yêu cầu (requirement / 요구사항) đúng nhưng sản phẩm vẫn thất bại** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **Lab 2 — mô-đun (module / 모듈) phụ thuộc (dependency / 의존성) nhìn tưởng sạch nhưng vẫn coupling cao** để đem mô hình vào tình huống cụ thể. Mạch này nối advanced scenario labs với requirement, module, failure và decision, để mô hình chịu được tình huống tích hợp.
+
 > Đây là lớp luyện **lập luận (reasoning / 추론) nhiều bước**. Mỗi scenario được thiết kế để có nhiều khái niệm đúng cùng xuất hiện, nhưng bạn phải xác định **primary concept**, **cơ chế (mechanism / 메커니즘)**, **sự đánh đổi (trade-off / 트레이드오프)** và **bẫy wording**. Không xem phần phân tích trước khi tự trả lời.
 
 ---
@@ -32,6 +34,8 @@ Nguyên nhân gốc (root cause / 근본 원인) gần yêu cầu (requirement /
 Đừng chọn “đơn vị (unit / 단위) kiểm thử (test / 테스트) thiếu” chỉ vì sản phẩm không hữu ích. Đây là **right sản phẩm (product / 제품) vs sản phẩm (product / 제품) built right**.
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 1 — yêu cầu (requirement / 요구사항) đúng nhưng sản phẩm vẫn thất bại** cho ta quy tắc; **Lab 2 — mô-đun (module / 모듈) phụ thuộc (dependency / 의존성) nhìn tưởng sạch nhưng vẫn coupling cao** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 3 — chiến lược (strategy / 전략) hay trạng thái (state / 상태)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 2 — mô-đun (module / 모듈) phụ thuộc (dependency / 의존성) nhìn tưởng sạch nhưng vẫn coupling cao
 
@@ -67,6 +71,8 @@ Chỉ số (metric / 지표) structural không thay ngữ nghĩa (semantic / 의
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 2 — mô-đun (module / 모듈) phụ thuộc (dependency / 의존성) nhìn tưởng sạch nhưng vẫn coupling cao** cho ta quy tắc; **Lab 3 — chiến lược (strategy / 전략) hay trạng thái (state / 상태)?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 4 — Adapter hay Facade hay Anti-corruption tầng (layer / 계층)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 3 — chiến lược (strategy / 전략) hay trạng thái (state / 상태)?
 
 ### Scenario
@@ -89,6 +95,8 @@ Cả hai có thể dùng giao diện (interface / 인터페이스) + concrete im
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 3 — chiến lược (strategy / 전략) hay trạng thái (state / 상태)?** cho ta quy tắc; **Lab 4 — Adapter hay Facade hay Anti-corruption tầng (layer / 계층)?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 5 — Retry-safe giao diện (interface / 인터페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 4 — Adapter hay Facade hay Anti-corruption tầng (layer / 계층)?
 
 ### Scenario
@@ -110,6 +118,8 @@ Nếu cần cô lập mô hình ngữ nghĩa (semantic model / 의미 모델) le
 Nếu đề nhấn subsystem độ phức tạp (complexity / 복잡도) → Facade. Nếu nhấn mismatch → Adapter.
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 4 — Adapter hay Facade hay Anti-corruption tầng (layer / 계층)?** cho ta quy tắc; **Lab 5 — Retry-safe giao diện (interface / 인터페이스)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 6 — Chọn cấu trúc dữ liệu (data structure / 자료구조) từ thao tác (operation / 연산) mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 5 — Retry-safe giao diện (interface / 인터페이스)
 
@@ -135,6 +145,8 @@ Một thiết kế (design / 설계) mạnh là lưu yêu cầu (request / 요�
 ---
 
 # Môn 2 — 소프트웨어 개발
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 5 — Retry-safe giao diện (interface / 인터페이스)** cho ta quy tắc; **Lab 6 — Chọn cấu trúc dữ liệu (data structure / 자료구조) từ thao tác (operation / 연산) mẫu (pattern / 패턴)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 7 — tìm kiếm nhị phân (binary search / 이진 탐색) sai dù mã (code / 코드) nhìn đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 6 — Chọn cấu trúc dữ liệu (data structure / 자료구조) từ thao tác (operation / 연산) mẫu (pattern / 패턴)
 
@@ -163,6 +175,8 @@ BST cũng có thể hỗ trợ min, nhưng vùng nhớ động (heap / 힙) tr�
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 6 — Chọn cấu trúc dữ liệu (data structure / 자료구조) từ thao tác (operation / 연산) mẫu (pattern / 패턴)** cho ta quy tắc; **Lab 7 — tìm kiếm nhị phân (binary search / 이진 탐색) sai dù mã (code / 코드) nhìn đúng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 8 — Coverage cao nhưng bug vẫn lọt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 7 — tìm kiếm nhị phân (binary search / 이진 탐색) sai dù mã (code / 코드) nhìn đúng
 
 ### Scenario
@@ -176,6 +190,8 @@ Tìm kiếm nhị phân (binary search / 이진 탐색) dựa bất biến (inva
 Nguyên nhân gốc (root cause / 근본 원인) không phải off-by-one trước tiên mà là violated precondition.
 
 ---
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 7 — tìm kiếm nhị phân (binary search / 이진 탐색) sai dù mã (code / 코드) nhìn đúng** cho ta quy tắc; **Lab 8 — Coverage cao nhưng bug vẫn lọt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 9 — Regression hay Retest?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 8 — Coverage cao nhưng bug vẫn lọt
 
@@ -196,6 +212,8 @@ Statement coverage chỉ chứng minh mỗi statement đã execute ít nhất m�
 Cần xét branch/điều kiện (condition / 조건) coverage tùy mục tiêu. Cases `(true,false)` và `(false,true)` có thể phơi lộ lô-gic (logic / 논리) bug bị statement coverage bỏ qua.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 8 — Coverage cao nhưng bug vẫn lọt** cho ta quy tắc; **Lab 9 — Regression hay Retest?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 10 — gói (package / 패키지) integrity nhưng nguồn (source / 소스) không đáng tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 9 — Regression hay Retest?
 
@@ -220,6 +238,8 @@ Một kiểm thử (test / 테스트) session có thể chứa cả hai loại.
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 9 — Regression hay Retest?** cho ta quy tắc; **Lab 10 — gói (package / 패키지) integrity nhưng nguồn (source / 소스) không đáng tin** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 11 — Candidate key không nhìn từ FD bằng mắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 10 — gói (package / 패키지) integrity nhưng nguồn (source / 소스) không đáng tin
 
 ### Scenario
@@ -243,6 +263,8 @@ Integrity check chỉ mạnh bằng trust nguồn (source / 소스) của expect
 ---
 
 # Môn 3 — 데이터베이스 구축
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 10 — gói (package / 패키지) integrity nhưng nguồn (source / 소스) không đáng tin** cho ta quy tắc; **Lab 11 — Candidate key không nhìn từ FD bằng mắt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 12 — 3NF nhưng chưa BCNF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 11 — Candidate key không nhìn từ FD bằng mắt
 
@@ -298,6 +320,8 @@ Một quan hệ (relation / 관계) có thể có nhiều candidate keys. Đừn
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 11 — Candidate key không nhìn từ FD bằng mắt** cho ta quy tắc; **Lab 12 — 3NF nhưng chưa BCNF** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 13 — chỉ mục (index / 인덱스) đúng cột nhưng sai thứ tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 12 — 3NF nhưng chưa BCNF
 
 ### Scenario
@@ -326,6 +350,8 @@ Nhưng `Course` là prime attribute vì nằm trong candidate key `(Student, Cou
 Đây là kiểu trường hợp (case / 사례) cho thấy 3NF và BCNF không đồng nghĩa.
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 12 — 3NF nhưng chưa BCNF** cho ta quy tắc; **Lab 13 — chỉ mục (index / 인덱스) đúng cột nhưng sai thứ tự** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 14 — LEFT phép nối (join / 조인) bị biến thành INNER phép nối (join / 조인) ngoài ý muốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 13 — chỉ mục (index / 인덱스) đúng cột nhưng sai thứ tự
 
@@ -363,11 +389,11 @@ DBMS optimizer/cardinality có thể làm quyết định cụ thể khác, như
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 13 — chỉ mục (index / 인덱스) đúng cột nhưng sai thứ tự** cho ta quy tắc; **Lab 14 — LEFT phép nối (join / 조인) bị biến thành INNER phép nối (join / 조인) ngoài ý muốn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 15 — Lost cập nhật (update / 업데이트) và optimistic tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 14 — LEFT phép nối (join / 조인) bị biến thành INNER phép nối (join / 조인) ngoài ý muốn
 
 ### Scenario
-Phần “Scenario” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```sql
 SELECT c.id, o.id
@@ -397,6 +423,8 @@ Vị trí predicate ảnh hưởng outer phép nối (join / 조인) ngữ nghĩ
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 14 — LEFT phép nối (join / 조인) bị biến thành INNER phép nối (join / 조인) ngoài ý muốn** cho ta quy tắc; **Lab 15 — Lost cập nhật (update / 업데이트) và optimistic tính đồng thời (concurrency / 동시성)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 16 — Mutex đúng nhưng môi trường vận hành (production / 운영 환경) vẫn race** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 15 — Lost cập nhật (update / 업데이트) và optimistic tính đồng thời (concurrency / 동시성)
 
 ### Scenario
@@ -416,8 +444,6 @@ T1 muốn -20; T2 muốn -30.
 Dùng optimistic versioning để tránh lost cập nhật (update / 업데이트).
 
 ### Phân tích
-Phần “Phân tích” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```sql
 UPDATE account
@@ -449,6 +475,8 @@ Optimistic locking không “khóa” row trước; nó detect xung đột (conf
 
 # Môn 4 — 프로그래밍 언어 활용
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 15 — Lost cập nhật (update / 업데이트) và optimistic tính đồng thời (concurrency / 동시성)** cho ta quy tắc; **Lab 16 — Mutex đúng nhưng môi trường vận hành (production / 운영 환경) vẫn race** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 17 — Round Robin quantum sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 16 — Mutex đúng nhưng môi trường vận hành (production / 운영 환경) vẫn race
 
 ### Scenario
@@ -471,6 +499,8 @@ Nếu bất biến (invariant / 불변식) toàn cục (global / 전역) giữa 
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 16 — Mutex đúng nhưng môi trường vận hành (production / 운영 환경) vẫn race** cho ta quy tắc; **Lab 17 — Round Robin quantum sự đánh đổi (trade-off / 트레이드오프)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 18 — FIFO vs LRU khác victim nhưng fault count bằng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 17 — Round Robin quantum sự đánh đổi (trade-off / 트레이드오프)
 
 ### Scenario
@@ -491,6 +521,8 @@ Không có quantum tối ưu universal; phụ thuộc tải công việc (worklo
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 17 — Round Robin quantum sự đánh đổi (trade-off / 트레이드오프)** cho ta quy tắc; **Lab 18 — FIFO vs LRU khác victim nhưng fault count bằng nhau** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 19 — TCP reliable nhưng API vẫn duplicate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 18 — FIFO vs LRU khác victim nhưng fault count bằng nhau
 
 ### Scenario
@@ -509,6 +541,8 @@ Cần nhìn cơ chế (mechanism / 메커니즘), không chỉ count ở một m
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 18 — FIFO vs LRU khác victim nhưng fault count bằng nhau** cho ta quy tắc; **Lab 19 — TCP reliable nhưng API vẫn duplicate** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 20 — Java tham chiếu (reference / 참조) kiểu (type / 타입) vs thời gian chạy (runtime / 런타임) kiểu (type / 타입)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 19 — TCP reliable nhưng API vẫn duplicate
 
 ### Scenario
@@ -523,11 +557,11 @@ TCP giải byte delivery ngữ nghĩa (semantics / 의미론); idempotency giả
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 19 — TCP reliable nhưng API vẫn duplicate** cho ta quy tắc; **Lab 20 — Java tham chiếu (reference / 참조) kiểu (type / 타입) vs thời gian chạy (runtime / 런타임) kiểu (type / 타입)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 21 — RPO tốt nhưng RTO tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 20 — Java tham chiếu (reference / 참조) kiểu (type / 타입) vs thời gian chạy (runtime / 런타임) kiểu (type / 타입)
 
 ### Scenario
-Phần “Scenario” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```java
 class A {
@@ -559,6 +593,8 @@ Compile-time member availability và thời gian chạy (runtime / 런타임) ov
 
 # Môn 5 — 정보시스템 구축 관리
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 20 — Java tham chiếu (reference / 참조) kiểu (type / 타입) vs thời gian chạy (runtime / 런타임) kiểu (type / 타입)** cho ta quy tắc; **Lab 21 — RPO tốt nhưng RTO tệ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 22 — Backup đầy đủ nhưng restore không được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 21 — RPO tốt nhưng RTO tệ
 
 ### Scenario
@@ -582,6 +618,8 @@ Need automated failover, tested runbook, phụ thuộc (dependency / 의존성) 
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 21 — RPO tốt nhưng RTO tệ** cho ta quy tắc; **Lab 22 — Backup đầy đủ nhưng restore không được** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 23 — RAID 5 không cứu ransomware** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 22 — Backup đầy đủ nhưng restore không được
 
 ### Scenario
@@ -600,6 +638,8 @@ Availability/khôi phục (recovery / 복구) là end-to-end năng lực (capabi
 
 ---
 
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 22 — Backup đầy đủ nhưng restore không được** cho ta quy tắc; **Lab 23 — RAID 5 không cứu ransomware** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 24 — Authentication đúng, authorization sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lab 23 — RAID 5 không cứu ransomware
 
 ### Scenario
@@ -613,6 +653,8 @@ RAID parity bảo vệ một số vật lý (physical / 물리적) disk failures
 Need backup/versioning/isolation/bảo mật (security / 보안) controls khác.
 
 ---
+
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 23 — RAID 5 không cứu ransomware** cho ta quy tắc; **Lab 24 — Authentication đúng, authorization sai** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 25 — Defense in độ sâu (depth / 깊이) nhưng nguyên nhân gốc (root cause / 근본 원인) vẫn tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 24 — Authentication đúng, authorization sai
 
@@ -635,6 +677,8 @@ TLS cũng không giải nguyên nhân gốc (root cause / 근본 원인) vì att
 Đây là lý do phải phân định danh (identity / 식별자) xác minh (verification / 확인) khỏi permission quyết định (decision / 결정).
 
 ---
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 24 — Authentication đúng, authorization sai** cho ta quy tắc; **Lab 25 — Defense in độ sâu (depth / 깊이) nhưng nguyên nhân gốc (root cause / 근본 원인) vẫn tồn tại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mega Lab A — Checkout endpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lab 25 — Defense in độ sâu (depth / 깊이) nhưng nguyên nhân gốc (root cause / 근본 원인) vẫn tồn tại
 
@@ -661,6 +705,8 @@ Defense in độ sâu (depth / 깊이) tốt, nhưng perimeter điều khiển (
 ---
 
 # Cross-subject mega labs
+
+> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Lab 25 — Defense in độ sâu (depth / 깊이) nhưng nguyên nhân gốc (root cause / 근본 원인) vẫn tồn tại** cho ta quy tắc; **Mega Lab A — Checkout endpoint** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mega Lab B — Reporting hệ thống (system / 시스템) chậm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mega Lab A — Checkout endpoint
 
@@ -698,6 +744,8 @@ System chịu mất một app instance mà không gián đoạn đáng kể.
 
 ---
 
+> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Mega Lab A — Checkout endpoint** cho ta quy tắc; **Mega Lab B — Reporting hệ thống (system / 시스템) chậm** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mega Lab C — sự cố (incident / 인시던트) sau triển khai (deployment / 배포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mega Lab B — Reporting hệ thống (system / 시스템) chậm
 
 ### Scenario
@@ -728,6 +776,8 @@ Mọi proposed solution đều có thể hợp lý trong một ngữ cảnh (con
 
 ---
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Advanced Scenario Labs**, **Mega Lab B — Reporting hệ thống (system / 시스템) chậm** cho ta quy tắc; **Mega Lab C — sự cố (incident / 인시던트) sau triển khai (deployment / 배포)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mega Lab C — sự cố (incident / 인시던트) sau triển khai (deployment / 배포)
 
 ### Scenario
@@ -735,8 +785,6 @@ Mọi proposed solution đều có thể hợp lý trong một ngữ cảnh (con
 Phiên bản (version / 버전) mới deploy 10:00. 10:05 lỗi (error / 오류) tỷ lệ (rate / 비율) tăng mạnh. DB CPU bình thường, app CPU tăng 95%, GC liên tục. quay lui (rollback / 롤백) sản phẩm tạo ra (artifact / 산출물) lại bị nhầm phiên bản (version / 버전).
 
 ### Nối kiến thức
-Phần “Nối kiến thức” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - cấu hình (configuration / 구성) management/bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물);
 - ứng dụng (application / 애플리케이션) bộ nhớ (memory / 메모리) hành vi (behavior / 동작);
@@ -763,7 +811,7 @@ Mỗi lab chấm 0–4:
 4 = giải đúng + nêu trade-off + liên kết sang môn khác
 ```
 
-Mục tiêu trước full mock:
+Mục tiêu trước khi chuyển sang scenario mới:
 
 ```text
 25 labs cơ bản: trung bình >= 3
@@ -776,3 +824,5 @@ Nếu score 1 vì nhầm hai concept, quay lại `11-high-risk-confusion-atlas.m
 Nếu score 1–2 vì không làm được calculation/dấu vết (trace / 추적), quay lại `08-procedural-workbook.md`.
 
 Nếu score thấp vì không hiểu concept gốc, quay lại deep-dive môn tương ứng.
+
+> **Bàn giao:** Sau **Mega Lab C — sự cố (incident / 인시던트) sau triển khai (deployment / 배포)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
