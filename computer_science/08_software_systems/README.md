@@ -1,6 +1,6 @@
 # Software các hệ thống (systems / 시스템들) — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Software các hệ thống (systems / 시스템들) — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Software các hệ thống (systems / 시스템들) — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Software systems — lĩnh vực (domain / 도메인) Hub**. Route học đi từ abstraction/API → build/package/versioning → performance/capacity/queues → time/idempotency/cache → event-driven và service boundaries, để thiết kế nối với hành vi production.
 
 Foundation nằm tại [`../basic/08_software_systems/`](../basic/08_software_systems/): lớp trừu tượng (abstraction / 추상화)/API, bản dựng (build / 빌드)/gói (package / 패키지), hiệu năng (performance / 성능)/sức chứa (capacity / 용량), queues/backpressure, thời gian (time / 시간)/serialization/idempotency, caching/CDN, event-driven các hệ thống (systems / 시스템들) và dịch vụ (service / 서비스) boundaries.
 

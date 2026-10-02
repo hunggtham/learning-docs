@@ -1,6 +1,6 @@
 # Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량), sức chứa (capacity / 용량) và scalability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량), sức chứa (capacity / 용량) và scalability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Utilization, saturation và queueing** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Latency, throughput, capacity và scalability**. Route đi từ latency/throughput → utilization/saturation/queueing → Little’s Law/bottleneck → vertical-horizontal scaling → cache, batching, pools và load balancing, để capacity được đo theo workload thực.
 
 Hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링) không phải “làm mã (code / 코드) nhanh” chung chung. Hệ thống có độ trễ (latency / 지연 시간) phân phối (distribution / 분포), thông lượng (throughput / 처리량), tài nguyên (resource / 자원) utilization, queueing và tải công việc (workload / 워크로드) shape. tối ưu hóa (optimization / 최적화) đúng phải xác định bottleneck theo measurements và mô hình (model / 모델).
 

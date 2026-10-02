@@ -1,6 +1,6 @@
 # Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Why queues exist** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Bounded vs unbounded hàng đợi (queue / 큐)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **State, queues, backpressure và system boundaries**. Route đi từ queue purpose/boundedness → backpressure/rate limiting → messaging semantics/ordering → state placement/event log → retry storms, để flow control được nối với failure boundary.
 
 Many môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들) can be understood as producers, queues/buffers and consumers moving trạng thái (state / 상태)/events across boundaries. hàng đợi (queue / 큐) smooths bursts and decouples rates, but it does not create sức chứa (capacity / 용량). Without backpressure or tải (load / 로드) shedding, overload only moves into bộ nhớ (memory / 메모리)/độ trễ (latency / 지연 시간).
 

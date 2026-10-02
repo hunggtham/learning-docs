@@ -1,6 +1,6 @@
 # Thời gian (time / 시간), clocks, serialization và idempotency
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thời gian (time / 시간), clocks, serialization và idempotency**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Wall clock vs monotonic clock** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **UTC, timezone và calendar** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Time, clocks, serialization và idempotency**. Route đi từ wall/monotonic clock → UTC/timezone → distributed time → serialization/schema evolution → idempotency/deduplication/versioning, để retry không biến thành side effect lặp.
 
 Three deceptively simple things cause many môi trường vận hành (production / 운영 환경) bugs: thời gian (time / 시간) zones/clocks, biểu diễn (representation / 표현) crossing boundaries, and retries. They meet whenever a yêu cầu (request / 요청)/sự kiện (event / 이벤트) is serialized, transmitted, stored and possibly repeated later.
 
