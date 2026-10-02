@@ -1,7 +1,6 @@
 # Macao SAR (MAC)
 
-> **Mạch đọc:** Đặt **Macao SAR (MAC)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khung không gian** sang **Đô thị và kết nối vùng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Macao SAR (MAC)**. Route đi từ area ven Pearl River Delta → đô thị nén và kết nối vùng → casino, du lịch và dịch vụ → hạ tầng, mobility và status hành chính → sea-level/climate risk, để diện tích nhỏ được đọc qua vùng chức năng lớn hơn.
 
 UN M49 liệt kê **China, Macao Special Administrative Region** như một area riêng trong Eastern Asia.
 
@@ -9,8 +8,7 @@ UN M49 liệt kê **China, Macao Special Administrative Region** như một area
 
 Macao nằm ở phía tây cửa châu thổ Châu Giang. Không gian nhỏ và nhiều phần đất thấp khiến cải tạo–lấn biển có vai trò lớn trong mở rộng diện tích sử dụng. Điều này làm đường bờ hiện đại khác đáng kể so với hình dạng lịch sử.
 
-
-> **Chuyển mạch:** Từ **Khung không gian**, ta sang **Đô thị và kết nối vùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Macao SAR (MAC)**, **Đô thị và kết nối vùng** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro ven biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đô thị và kết nối vùng
 
@@ -18,15 +16,13 @@ Quy mô nhỏ khiến Macao phụ thuộc mạnh vào các kết nối xuyên bi
 
 Đây là ví dụ rõ rằng một territory nhỏ có thể được hiểu tốt hơn bằng **vùng đô thị chức năng (functional urban region)** hơn là ranh giới hành chính đơn lẻ.
 
-
-> **Chuyển mạch:** Từ **Đô thị và kết nối vùng**, ta sang **Rủi ro ven biển** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Macao SAR (MAC)**, **Rủi ro ven biển** tiếp nhận điểm tựa từ **Đô thị và kết nối vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Rủi ro ven biển
 
 Đất thấp, mưa gió mùa và bão nhiệt đới tạo rủi ro ngập và nước dâng. Lấn biển mở thêm không gian nhưng cũng đòi hỏi hạ tầng bảo vệ và thoát nước tương ứng.
 
-
-> **Chuyển mạch:** Từ **Rủi ro ven biển**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Macao SAR (MAC)**, **Mô hình tư duy** gom các mảnh từ **Rủi ro ven biển** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -34,4 +30,4 @@ Quy mô nhỏ khiến Macao phụ thuộc mạnh vào các kết nối xuyên bi
 
 Xem: [Đông Á](../../../03_regions/01_east_asia.md), [Đô thị hóa](../../../02_human_geography/02_settlement_urbanization.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CHN china](./CHN_china.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
