@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Từ khóa cần nhớ** gọi tên đối tượng và ràng buộc; **Mạch tư duy** giải thích vì sao chúng cần mô hình, rồi **Mạch nối của bài học** đưa reasoning đó vào các phần SQL.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **I. 데이터 모델링의 이해** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi đã có câu hỏi về đối tượng và ràng buộc, **Mạch nối của bài học** chuyển sang **I. 데이터 모델링의 이해** để xác định phạm vi và sản phẩm của mô hình hóa.
 
 ## Mạch nối của bài học
 
@@ -28,7 +28,7 @@ Bài này không đứng riêng: hãy nối **Nền tảng mô hình hóa dữ l
 
 Ta bắt đầu **I. 데이터 모델링의 이해** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nền tảng mô hình hóa dữ liệu**, **I. 데이터 모델링의 이해** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 데이터 모델링이란 무엇인가?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **I. 데이터 모델링의 이해** xác định mô hình hóa phục vụ ai và ở mức nào; **1. 데이터 모델링이란 무엇인가?** tiếp tục bằng định nghĩa và các lớp khái niệm.
 
 ## I. 데이터 모델링의 이해
 
@@ -38,7 +38,7 @@ Vậy ta đã có tiêu chí để đọc **I. 데이터 모델링의 이해**. 
 
 Ta bắt đầu **1. 데이터 모델링이란 무엇인가?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Nền tảng mô hình hóa dữ liệu**, **1. 데이터 모델링이란 무엇인가?** tiếp nhận điểm tựa từ **I. 데이터 모델링의 이해** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Mục đích của 데이터 모델링** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi biết mô hình hóa là gì, **2. Mục đích của 데이터 모델링** trả lời nó giảm mơ hồ, hỗ trợ giao tiếp và bảo vệ tính nhất quán bằng cách nào.
 
 ## 1. 데이터 모델링이란 무엇인가?
 
@@ -320,7 +320,7 @@ Vậy ta đã có tiêu chí để đọc **Cách hiểu dễ nhớ**. Bây gi�
 
 Ta bắt đầu **2. Mục đích của 데이터 모델링** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **2. Mục đích của 데이터 모델링** tiếp nhận điểm tựa từ **1. 데이터 모델링이란 무엇인가?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Đặc điểm của mô hình hóa dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi mục đích đã rõ, **3. Đặc điểm của mô hình hóa dữ liệu** chỉ ra tiêu chí nhận biết một mô hình dùng được: đúng ngữ nghĩa, nhất quán và đủ để truy nguyên quyết định.
 
 ## 2. Mục đích của 데이터 모델링
 
@@ -1306,7 +1306,7 @@ Vậy ta đã có tiêu chí để đọc **Keyword: 유지보수 비용**. Bây
 
 Ta bắt đầu **11. Tóm tắt toàn bộ hai trang** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Nền tảng mô hình hóa dữ liệu**, **10. Nếu không duy trì tính độc lập dữ liệu** nêu điều cần giải thích; **11. Tóm tắt toàn bộ hai trang** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **10. Nếu không duy trì tính độc lập dữ liệu** cho thấy chi phí khi schema và ứng dụng khóa chặt nhau; **11. Tóm tắt toàn bộ hai trang** gom lại tiêu chí để mang sang bài thiết kế tiếp theo.
 
 ## 11. Tóm tắt toàn bộ hai trang
 
