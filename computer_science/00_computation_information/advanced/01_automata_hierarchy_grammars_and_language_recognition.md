@@ -1,6 +1,6 @@
 # Automata hierarchy, grammars và ngôn ngữ (language / 언어) recognition
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Automata hierarchy, grammars và ngôn ngữ (language / 언어) recognition**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ngôn ngữ (language / 언어) là một tập strings** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Finite automata và regular languages** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Automata hierarchy, grammars và ngôn ngữ (language / 언어) recognition**. Route đi từ language/string → finite automata và regular languages → pushdown/context-free → Turing machines/hierarchy, để khả năng nhận dạng được nối với bộ nhớ và sức biểu đạt.
 
 Formal ngôn ngữ (language / 언어) lý thuyết (theory / 이론) nối ba thứ tưởng tách biệt: cách mô tả một tập strings, loại machine có thể nhận diện tập đó và lượng bộ nhớ (memory / 메모리) machine cần. Khi nhìn theo hướng này, regex, parser và Turing machine không còn là danh sách công cụ rời rạc mà nằm trên một hierarchy về expressive power.
 

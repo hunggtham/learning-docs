@@ -1,6 +1,6 @@
 # Computation & thông tin (information / 정보) — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Computation & thông tin (information / 정보) — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Computation & thông tin (information / 정보) — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Computation & thông tin (information / 정보) — lĩnh vực (domain / 도메인) Hub**. Route học đi từ information/representation → logic, state và algorithms → computability/complexity → architecture, software, data và AI, để mỗi nhánh quay về abstraction và giới hạn tính toán.
 
 Phần nền tảng của lĩnh vực (domain / 도메인) này nằm tại [`../basic/00_computation_information/`](../basic/00_computation_information/). Nội dung đó xây mô hình tư duy (mental model / 사고 모델) về thông tin (information / 정보), encoding, machine biểu diễn (representation / 표현), lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và giới hạn của computation.
 

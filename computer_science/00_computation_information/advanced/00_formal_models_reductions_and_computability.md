@@ -1,6 +1,6 @@
 # Formal các mô hình (models / 모델들), reductions và computability
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Formal các mô hình (models / 모델들), reductions và computability**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mô hình (model / 모델) of computation là một hợp đồng lập luận (reasoning / 추론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ánh xạ (mapping / 매핑) reduction như công cụ truyền độ khó** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Formal các mô hình (models / 모델들), reductions và computability**. Route đi từ machine model và language → simulation/equivalence → reductions → computability/complexity bounds, để một kết quả được chuyển giao cùng điều kiện và độ khó của nó.
 
 Ở foundation, computability trả lời câu hỏi “có thuật toán (algorithm / 알고리즘) tổng quát nào luôn giải được bài toán (problem / 문제) này hay không?”. Ở mức advanced, điều quan trọng hơn là **cách chứng minh một giới hạn** và cách chuyển giới hạn đã biết từ bài toán (problem / 문제) này sang bài toán (problem / 문제) khác.
 

@@ -1,6 +1,6 @@
 # Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Positional notation và vì sao nhị phân (binary / 이진)/hex xuất hiện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Unsigned integer: phạm vi (range / 범위) đến từ số patterns** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**. Route đi từ positional notation → integer/bit width → signedness và overflow → floating-point precision/rounding → lỗi số học trong thuật toán, để biểu diễn máy được đọc cùng range và sai số.
 
 Mã nguồn (source code / 소스 코드) cho ta cảm giác `123`, `0.1` hay `true` là những thực thể tự nhiên. Ở machine mức (level / 수준), tất cả đều phải được mã hóa trong một số bit hữu hạn. Sự hữu hạn này tạo ra overflow, rounding, signedness, alignment và endianness — những hiện tượng thường chỉ lộ ra khi hệ thống (system / 시스템) gặp trường hợp biên (edge case / 경계 사례).
 

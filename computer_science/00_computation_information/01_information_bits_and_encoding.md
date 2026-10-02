@@ -1,6 +1,6 @@
 # Thông tin (information / 정보), bit, encoding và biểu diễn (representation / 표현)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보), bit, encoding và biểu diễn (representation / 표현)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao bit trở thành đơn vị nền tảng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Encoding là agreement giữa bit mẫu (pattern / 패턴) và meaning** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thông tin (information / 정보), bit, encoding và biểu diễn (representation / 표현)**. Route đi từ bit và entropy → encoding/decoding → representation của text, số và media → lỗi, nén và truyền, để “thông tin” được tách khỏi ý nghĩa mà ứng dụng gán lên mẫu bit.
 
 Computer không nhận trực tiếp “chữ A”, “màu đỏ”, “số tiền 10000 won” hay “ảnh một con mèo”. Nó nhận các vật lý (physical / 물리적) states mà hardware có thể phân biệt, rồi software gán quy ước để những trạng thái (state / 상태) đó đại diện cho thông tin (information / 정보). Vì vậy trước khi học cấu trúc dữ liệu (data structure / 자료구조) hay mạng (network / 네트워크) packet, cần hiểu một nguyên tắc: **mọi dữ liệu số đều là biểu diễn (representation / 표현) theo một encoding nào đó**.
 

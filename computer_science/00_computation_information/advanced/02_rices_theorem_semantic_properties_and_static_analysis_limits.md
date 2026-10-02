@@ -1,6 +1,6 @@
 # Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cú pháp và ngữ nghĩa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Định lý Rice** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**. Route đi từ syntax/semantics → semantic property của chương trình → Rice theorem/undecidability → soundness, completeness và giới hạn static analysis, để phân biệt cảnh báo hữu ích với lời hứa không thể thực hiện.
 
 Lập trình viên thường muốn công cụ trả lời các câu như “chương trình này có bao giờ crash không?”, “hàm này có luôn trả kết quả đúng không?” hoặc “đoạn mã này có thể làm lộ secret không?”. **Phân tích tĩnh (static analysis)** có thể trả lời nhiều câu hữu ích, nhưng với chương trình tổng quát tồn tại giới hạn lý thuyết sâu hơn vấn đề hiệu năng của công cụ.
 
