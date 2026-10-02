@@ -1,6 +1,6 @@
 # AI bài toán (problem / 문제) formulation, tìm kiếm (search / 검색) và agents
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI bài toán (problem / 문제) formulation, tìm kiếm (search / 검색) và agents**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tác nhân (agent / 에이전트) mô hình (model / 모델)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **State-space tìm kiếm (search / 검색)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI problem formulation, search và agents**. Route đi từ state/goal formulation → state-space search/heuristics → adversarial search/planning → utility/uncertainty → agent feedback, để chọn thuật toán theo mục tiêu và chi phí tìm kiếm.
 
 Artificial Intelligence (AI / 인공지능) rộng hơn machine học tập (learning / 학습). Một cách nhìn nền tảng là xây agents nhận observations, giữ/ước lượng trạng thái (state / 상태) và chọn actions để đạt objectives dưới bất định (uncertainty / 불확실성) và tài nguyên (resource / 자원) các ràng buộc (constraints / 제약조건들).
 

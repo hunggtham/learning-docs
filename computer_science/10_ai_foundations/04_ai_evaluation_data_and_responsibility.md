@@ -1,6 +1,6 @@
 # AI evaluation, dữ liệu (data / 데이터) và responsibility
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI evaluation, dữ liệu (data / 데이터) và responsibility**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chỉ số (metric / 지표) theo tác vụ (task / 작업)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lớp (class / 클래스) imbalance** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI evaluation, data và responsibility**. Route đi từ task metrics/class imbalance → calibration/leakage → subgroup/human evaluation → provenance/consent → robustness/reproducibility, để metric, dữ liệu và trách nhiệm được kiểm tra cùng nhau.
 
 Một AI hệ thống (system / 시스템) không thể được đánh giá chỉ bằng một benchmark score. mô hình (model / 모델) hiệu năng (performance / 성능) phụ thuộc dataset, phân phối (distribution / 분포), chỉ số (metric / 지표), threshold, subgroup, độ trễ (latency / 지연 시간), chi phí (cost / 비용) và downstream human workflow. Evaluation phải nối mô hình (model / 모델) đầu ra (output / 출력) với real-world quyết định (decision / 결정) consequences.
 

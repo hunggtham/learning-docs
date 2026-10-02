@@ -1,6 +1,6 @@
 # AI Foundations — lĩnh vực (domain / 도메인) Hub
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **AI Foundations — lĩnh vực (domain / 도메인) Hub**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **AI Foundations — lĩnh vực (domain / 도메인) Hub** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **AI Foundations — lĩnh vực (domain / 도메인) Hub**. Route học đi từ problem formulation/search/agents → knowledge/reasoning → machine learning → neural representation → evaluation/responsibility, để model capability luôn đi cùng evidence và giới hạn.
 
 Foundation nằm tại [`../basic/10_ai_foundations/`](../basic/10_ai_foundations/): tìm kiếm (search / 검색)/agents, kiến thức (knowledge / 지식)/suy luận (inference / 추론), machine học tập (learning / 학습), neural networks và evaluation/responsibility.
 

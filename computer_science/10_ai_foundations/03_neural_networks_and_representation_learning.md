@@ -1,6 +1,6 @@
 # Neural networks và biểu diễn (representation / 표현) học tập (learning / 학습)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Neural networks và biểu diễn (representation / 표현) học tập (learning / 학습)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Neuron như affine transform + nonlinearity** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Layers và representations** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Neural networks và representation learning**. Route đi từ neuron/layers → forward pass/loss → gradient descent/batching → CNN/sequence/attention → embeddings/capacity scaling, để biểu diễn được nối với objective và optimization.
 
 Neural mạng (network / 네트워크) là parameterized hàm (function / 함수) composition có khả năng học nonlinear representations từ dữ liệu (data / 데이터). Tên “neural” lấy cảm hứng sinh học lịch sử nhưng hiện đại (modern / 현대적) deep học tập (learning / 학습) nên được hiểu bằng tuyến tính (linear / 선형) algebra, nonlinear functions, tối ưu hóa (optimization / 최적화) và dữ liệu (data / 데이터)—not như mô phỏng não đầy đủ.
 

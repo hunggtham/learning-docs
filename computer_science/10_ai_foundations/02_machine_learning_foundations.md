@@ -1,6 +1,6 @@
 # Machine học tập (learning / 학습) foundations
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Machine học tập (learning / 학습) foundations**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Supervised học tập (learning / 학습)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Unsupervised và self-supervised** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Machine learning foundations**. Route đi từ supervised/unsupervised objectives → features/representations → loss/training/validation → overfitting/regularization → distribution shift và leakage, để generalization được tách khỏi memorization.
 
 Machine học tập (learning / 학습) xây các mô hình (models / 모델들) từ dữ liệu (data / 데이터) thay vì hand-code toàn bộ ánh xạ (mapping / 매핑) đầu vào (input / 입력)→đầu ra (output / 출력). Nhưng “học từ dữ liệu (data / 데이터)” không có nghĩa mô hình (model / 모델) tự tìm chân lý. học tập (learning / 학습) luôn xảy ra trong hypothesis không gian (space / 공간), mục tiêu (objective / 목표), dữ liệu (data / 데이터) phân phối (distribution / 분포) và evaluation giao thức (protocol / 프로토콜) do con người/hệ thống (system / 시스템) thiết kế.
 

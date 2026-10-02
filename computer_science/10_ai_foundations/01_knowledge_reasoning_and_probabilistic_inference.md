@@ -1,6 +1,6 @@
 # Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Symbols và propositions** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Knowledge representation, reasoning và probabilistic inference**. Route đi từ symbols/propositions → knowledge graphs/rules → uncertainty/Bayesian networks → hidden variables/approximate inference → causal reasoning, để suy luận được đặt đúng dưới giả định và dữ liệu.
 
 AI hệ thống (system / 시스템) cần biểu diễn (representation / 표현) cho facts, relations và bất định (uncertainty / 불확실성). Nếu biểu diễn (representation / 표현) không phù hợp, lập luận (reasoning / 추론) trở nên impossible hoặc quá đắt. kiến thức (knowledge / 지식) biểu diễn (representation / 표현) nghiên cứu cách encode world mô hình (model / 모델) để suy luận (inference / 추론) tạo ra conclusions/actions hữu ích.
 
