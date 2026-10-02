@@ -44,7 +44,7 @@ Bảo mật (security / 보안) thực tế là concern xuyên suốt, nhưng đ
 
 Phụ thuộc (dependency / 의존성) không được hiểu như “học xong phần trước mới được đọc phần sau”. Mỗi chapter vẫn giải thích đủ ngữ cảnh (context / 맥락) cục bộ để người đọc bắt đầu tại đó. Sơ đồ trên chỉ biểu diễn mô hình tư duy (mental model / 사고 모델) nào được tái sử dụng ở phần sau.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. Coverage ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **2. phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Readability kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **2. Dependency audit** xác nhận prerequisite; **3. Coverage matrix** đối chiếu owner và topic, rồi **4. Readability audit** kiểm tra người học có theo được route hay không.
 
 ## 3. Coverage ma trận (matrix / 행렬)
 
@@ -76,7 +76,7 @@ Phụ thuộc (dependency / 의존성) không được hiểu như “học xong
 | Cross-layer troubleshooting | Đủ sâu | Có độ trễ (latency / 지연 시간) decomposition, coordinated omission, hết thời gian chờ (timeout / 타임아웃)/cancellation, khôi phục (recovery / 복구) storm, bằng chứng (evidence / 증거) freshness, nhân quả (causal / 인과적) intervention và worked thất bại (failure / 실패) cases |
 | Cross-domain links | Đủ | `90_connections` có 20 lập luận (reasoning / 추론) tuyến (route / 경로) xuyên lĩnh vực (domain / 도메인) |
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Readability kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **3. Coverage ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Duplicate kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi topic và owner khớp, **4. Readability audit** kiểm tra prose, bảng và link; **5. Duplicate audit** tìm phần lấn owner hoặc lặp claim.
 
 ## 4. Readability kiểm tra (audit / 감사)
 
@@ -86,7 +86,7 @@ Giải thích dùng tiếng Việt; tên API/sản phẩm (product / 제품)/l�
 
 Độ sâu (depth / 깊이) pass hiện tại ưu tiên đoạn văn giải thích cơ chế, giả định (assumption / 가정) và thất bại (failure / 실패) chuỗi (chain / 사슬). Các danh sách chỉ còn dùng cho taxonomy, chuỗi (sequence / 시퀀스) hoặc checklist mà bản thân cấu trúc danh sách tạo giá trị.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Duplicate kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **4. Readability kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. hiện đại (modern / 현대적) và legacy perspective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **5. Duplicate audit** xử lý trùng lặp sau khi readability đã rõ; **6. Modern và legacy perspective** đặt gap vào bối cảnh version và hệ thống cũ.
 
 ## 5. Duplicate kiểm tra (audit / 감사)
 
@@ -96,7 +96,7 @@ Bộ chứa (container / 컨테이너) chapter link trực tiếp OS bộ chứa
 
 Sau độ sâu (depth / 깊이) pass, không xuất hiện thư viện (library / 라이브러리)/chapter duplicate, tệp (file / 파일) `_updated`, `_final`, `_version2` hoặc temporary ghi chú (note / 노트) mới. Nội dung mới được bổ sung trực tiếp vào tệp chuẩn gốc (canonical file / 정본 파일) hiện hữu.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. hiện đại (modern / 현대적) và legacy perspective** tiếp nhận điểm tựa từ **5. Duplicate kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. bằng chứng vận hành (production evidence / 운영 증거) kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **6. Modern/legacy perspective** phân biệt thay đổi mới với invariant cũ; **7. Production evidence audit** kiểm tra claim bằng log, metric và hành vi runtime.
 
 ## 6. hiện đại (modern / 현대적) và legacy perspective
 
@@ -128,7 +128,7 @@ Bản dựng (build / 빌드)/GitOps độ sâu (depth / 깊이) cũng củng c�
 
 Vòng authority-lifecycle bổ sung rotation completion dựa trên bên tiêu thụ (consumer / 소비자) bằng chứng (evidence / 증거), break-glass như privileged-session vòng đời (lifecycle / 생명주기), chính sách (policy / 정책) kiểm tra (audit / 감사)→enforce di chuyển (migration / 마이그레이션), fail-open/fail-closed đặc tả hợp đồng (contract / 계약), offboarding/stale-principal reconciliation, least-privilege rà soát (review / 검토) có rare-path ngữ cảnh (context / 맥락) và integrity/retention ranh giới (boundary / 경계) cho privileged kiểm tra (audit / 감사) bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. hiệu năng (performance / 성능) và sức chứa (capacity / 용량) kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **8. bảo mật (security / 보안) kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Coverage cố ý chưa tách chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **8. Security audit** đặt rào chắn trước khi đo; **9. Performance/capacity audit** lượng hóa tải, rồi **10. Coverage cố ý chưa tách chapter** ghi rõ phần chưa mở rộng.
 
 ## 9. hiệu năng (performance / 성능) và sức chứa (capacity / 용량) kiểm tra (audit / 감사)
 
@@ -138,7 +138,7 @@ Phần DevOps chỉ giữ hiệu năng (performance / 성능) ở mức operatio
 
 Sức chứa (capacity / 용량) không còn được hiểu chỉ là peak thông lượng (throughput / 처리량) hay steady-state utilization. kiểm tra (audit / 감사) hiện kiểm tra cả transition-state headroom cho replace/surge, khôi phục (recovery / 복구) tính đồng thời (concurrency / 동시성)/backlog drain, thất bại (failure / 실패) headroom, correlated thất bại (failure / 실패), control-plane tỷ lệ (rate / 비율) limit, vật lý (physical / 물리적) sức chứa (capacity / 용량) scarcity, fairness, intentional idle reserve, borrowed-capacity reclamation và khả năng quan sát (observability / 관측 가능성) sự cố (incident / 인시던트) tính đồng thời (concurrency / 동시성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **10. Coverage cố ý chưa tách chapter** tiếp nhận điểm tựa từ **9. hiệu năng (performance / 성능) và sức chứa (capacity / 용량) kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Internal-link kiểm tra (audit / 감사) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi gap có chủ đích đã ghi, **11. Internal-link checklist** xác nhận route và owner vẫn truy được dù chapter chưa tách.
 
 ## 10. Coverage cố ý chưa tách chapter
 
@@ -148,7 +148,7 @@ Dịch vụ (service / 서비스) mesh hiện chưa cần chapter riêng vì con
 
 eBPF cũng không nên trở thành chapter DevOps chỉ vì khả năng quan sát (observability / 관측 가능성)/networking hiện đại sử dụng nó. Kernel thực thi (execution / 실행)/verifier/hook internals thuộc Khoa học máy tính (computer science / 컴퓨터 과학); DevOps chỉ cần đưa eBPF công cụ (tool / 도구) vào ví dụ nếu nó giúp thu bằng chứng (evidence / 증거) cho một hypothesis cụ thể.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **11. Internal-link kiểm tra (audit / 감사) checklist** tiếp nhận điểm tựa từ **10. Coverage cố ý chưa tách chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dependency-hidden kiểm tra (audit / 감사) sau độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **11. Internal-link checklist** đảm bảo đường đọc không gãy; **12. Dependency-hidden audit** tìm prerequisite ẩn sau khi nội dung đã được coi là depth pass.
 
 ## 11. Internal-link kiểm tra (audit / 감사) checklist
 
@@ -158,7 +158,7 @@ Khi đổi tên/move chuẩn gốc (canonical / 정본) CS chapter, cần cập 
 
 Không tạo link giả đến chapter tool-specific chưa tồn tại. Link tới sản phẩm (product / 제품) documentation bên ngoài cũng không được dùng để thay thế prerequisite nội bộ nếu repository đã có chuẩn gốc (canonical / 정본) explanation.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **12. Dependency-hidden kiểm tra (audit / 감사) sau độ sâu (depth / 깊이) pass** tiếp nhận điểm tựa từ **11. Internal-link kiểm tra (audit / 감사) checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Naming và canonical-state kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi lộ prerequisite ẩn, **13. Naming và canonical-state audit** kiểm tra tên, trạng thái và nguồn chuẩn để tránh drift giữa file.
 
 ## 12. Dependency-hidden kiểm tra (audit / 감사) sau độ sâu (depth / 깊이) pass
 
@@ -178,7 +178,7 @@ Branch lĩnh vực (domain / 도메인) duy nhất là `feat/devops-platform-eng
 
 Branch đã từng được sync với `main` trước các vòng độ sâu (depth / 깊이); trạng thái ahead/behind phải được kiểm tra lại ở cuối mỗi editing pass vì repository có thể nhận lần ghi nhận (commit / 커밋) song song trong lúc lĩnh vực (domain / 도메인) đang được đào sâu.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **14. Criteria cho lần mở rộng tiếp theo** tiếp nhận điểm tựa từ **13. Naming và canonical-state kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Invariants/failure-semantics độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **13. Naming/canonical-state audit** khóa vocabulary và state; **14. Criteria mở rộng** chỉ cho phép thêm topic khi invariant và failure semantics đã đủ.
 
 ## 14. Criteria cho lần mở rộng tiếp theo
 
@@ -186,7 +186,7 @@ Một chapter mới chỉ nên được thêm nếu đáp ứng ít nhất một
 
 Nếu nhu cầu mới chủ yếu là cú pháp (syntax / 문법) hoặc sản phẩm — ví dụ “cách viết Helm chart”, “lệnh Argo CD”, “Terraform provider X” — ưu tiên example/tham chiếu (reference / 참조) bên trong chapter hiện có hoặc tài liệu thực hành riêng nếu repository sau này có ranh giới (boundary / 경계) cho labs. Không dùng số lượng chapter làm thước đo hoàn thành.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **15. Invariants/failure-semantics độ sâu (depth / 깊이) pass** tiếp nhận điểm tựa từ **14. Criteria cho lần mở rộng tiếp theo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Source-to-runtime và transition-state độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **15. Invariants/failure semantics** xác nhận mental model; **16. Source-to-runtime và transition-state pass** kiểm tra nó qua đường đi từ tài liệu đến runtime.
 
 ## 15. Invariants/failure-semantics độ sâu (depth / 깊이) pass
 
@@ -258,7 +258,7 @@ Kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) đ�
 
 `90_connections` hiện có 20 lập luận (reasoning / 추론) tuyến (route / 경로); bốn tuyến (route / 경로) mới nối `dependency latency → isolation/load amplification`, `schema change → migration convergence`, `telemetry amplification → observability survivability`, và `platform control-plane loss → safe recovery`.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **20. Kết luận kiểm tra (audit / 감사) hiện tại** gom các mảnh từ **19. Dependency-resilience, stateful-delivery và control-plane-survivability độ sâu (depth / 깊이) pass** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **20. Kết luận audit hiện tại** gom resilience, stateful delivery và control-plane survivability thành trạng thái có bằng chứng, rồi ghi rõ ưu tiên cho vòng coverage kế tiếp.
 
 ## 20. Kết luận kiểm tra (audit / 감사) hiện tại
 
