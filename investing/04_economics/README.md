@@ -1,7 +1,6 @@
 # 04 — Kinh tế học và vĩ mô (Economics)
 
-> **Mạch đọc:** Đọc **04 — Kinh tế học và vĩ mô (Economics)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **04 — Kinh tế học và vĩ mô (Economics)**. Giữ **Thứ tự đọc** làm tuyến chính: cầu nối doanh nghiệp → micro/macro → kinh tế toàn cầu và dòng vốn → macro data → tiền tệ/thanh khoản → regime/khủng hoảng → tài khóa–tiền tệ và năng suất; sau đó dùng case labs để kiểm tra các kênh truyền dẫn thay vì tách từng chỉ số thành kiến thức rời.
 
 Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tài chính toàn cầu. Mục tiêu không phải học thuộc GDP, CPI hay Fed, mà hiểu các kênh truyền dẫn từ quyết định của hộ gia đình và doanh nghiệp tới lãi suất, tín dụng, ngoại hối, thương mại, thanh khoản, chính sách tài khóa, tính bền vững của nợ, nhân khẩu học, năng suất và giá tài sản.
 
@@ -23,8 +22,7 @@ Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tà
 
 [07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md](./07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md) là lớp học sâu: xây nowcast theo diffusion, tách bất ngờ dữ liệu khỏi mức tuyệt đối, đọc phản ứng đầu ngắn/đầu dài của đường cong, kênh tín dụng và FX, nhu cầu tài trợ chính phủ, chuyển chế độ kinh tế và tác động bậc một/bậc hai tới doanh nghiệp và tài sản.
 
-
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **04 — Kinh tế học và vĩ mô (Economics)**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
@@ -32,8 +30,7 @@ Bạn cần có khả năng nhận một cú sốc và tự xây chuỗi `cú s�
 
 Bạn cũng cần biết khi nào dữ liệu tiêu đề chỉ là nhiễu chu kỳ và khi nào bảng cân đối, cấu trúc nợ hoặc xu hướng năng suất đang làm thay đổi chế độ cấu trúc.
 
-
-> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tích hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **04 — Kinh tế học và vĩ mô (Economics)**, **Bài tập tích hợp** tiếp nhận điểm tựa từ **Sau lĩnh vực này bạn cần làm được gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bài tập tích hợp
 
@@ -43,4 +40,4 @@ Sau đó hoàn thành **mô-đun (module / 모듈) 4 — Economics** trong [Adva
 
 Sau đó chuyển sang [05 — Giao dịch và phái sinh](../05_trading_derivatives/README.md) hoặc [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
 
-> **Bàn giao:** Sau **Bài tập tích hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bài tập tích hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

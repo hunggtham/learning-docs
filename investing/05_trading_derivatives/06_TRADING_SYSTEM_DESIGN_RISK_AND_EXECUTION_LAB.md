@@ -1,7 +1,6 @@
 # Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi
 
-> **Mạch đọc:** Đặt **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tách ý tưởng, tín hiệu và chiến lược** sang **2. Viết giả thuyết trước khi nhìn kết quả**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là owner của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**; dùng README để nối lab với các file phái sinh và market microstructure. Từ **1. Tách ý tưởng, tín hiệu và chiến lược** đi qua giả thuyết, dữ liệu, backtest, chi phí, position sizing, execution và kill-switch; mỗi lớp phải biến lớp trước thành một quy tắc vận hành đo được.
 
 > tệp (file / 파일) này nối phần phái sinh, backtest, độ bền chiến lược và vi cấu trúc thị trường thành một quy trình vận hành hoàn chỉnh. Mục tiêu là biến một ý tưởng thành **một hệ thống có quy tắc, có mô hình chi phí, có ngân sách rủi ro, có kiểm soát vận hành và có tiêu chí dừng**.
 
@@ -23,6 +22,8 @@ Cần tách:
 
 Nếu hai người đọc cùng mô tả mà viết ra hai hệ thống rất khác nhau, đặc tả vẫn chưa đủ chặt.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **2. Viết giả thuyết trước khi nhìn kết quả** tiếp nhận điểm tựa từ **1. Tách ý tưởng, tín hiệu và chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Xác định đơn vị rủi ro trước đơn vị lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Viết giả thuyết trước khi nhìn kết quả
 
 Giả thuyết tốt nên nói rõ **vì sao** lợi thế có thể tồn tại.
@@ -40,6 +41,8 @@ Cấu trúc vi mô
 
 Viết trước giúp giảm nguy cơ nhìn dữ liệu rồi kể câu chuyện hợp lý hóa sau.
 
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **3. Xác định đơn vị rủi ro trước đơn vị lợi nhuận** tiếp nhận điểm tựa từ **2. Viết giả thuyết trước khi nhìn kết quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Expectancy phải tách win tỷ lệ (rate / 비율) và payoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Xác định đơn vị rủi ro trước đơn vị lợi nhuận
 
 Trước khi hỏi hệ thống lời bao nhiêu, phải định nghĩa 1R là gì.
@@ -51,6 +54,8 @@ Ví dụ:
 ```
 
 Sau đó mọi giao dịch được chuẩn hóa theo R-multiple. Điều này cho phép so sánh nhiều thị trường và nhiều khoảng biến động khác nhau.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **4. Expectancy phải tách win tỷ lệ (rate / 비율) và payoff** tiếp nhận điểm tựa từ **3. Xác định đơn vị rủi ro trước đơn vị lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Backtest phải bắt đầu bằng kiểm tra (audit / 감사) thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Expectancy phải tách win tỷ lệ (rate / 비율) và payoff
 
@@ -66,6 +71,8 @@ Một chiến lược thắng 70% vẫn có thể âm nếu khoản lỗ lớn. 
 
 Không tối ưu win tỷ lệ (rate / 비율) tách khỏi phân phối P/L.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **5. Backtest phải bắt đầu bằng kiểm tra (audit / 감사) thời gian** tiếp nhận điểm tựa từ **4. Expectancy phải tách win tỷ lệ (rate / 비율) và payoff** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Dữ liệu point-in-time** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Backtest phải bắt đầu bằng kiểm tra (audit / 감사) thời gian
 
 Với mọi biến dữ liệu, ghi:
@@ -80,6 +87,8 @@ Execution time
 
 Sai vài phút trong chiến lược quanh CPI/FOMC có thể biến kết quả thật thành một backtest giả tạo.
 
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **5. Backtest phải bắt đầu bằng kiểm tra (audit / 감사) thời gian** nêu điều cần giải thích; **6. Dữ liệu point-in-time** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Phân tách tập dữ liệu đúng vai trò** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Dữ liệu point-in-time
 
 Không được dùng dữ liệu đã sửa sau này để ra quyết định quá khứ.
@@ -87,6 +96,8 @@ Không được dùng dữ liệu đã sửa sau này để ra quyết định q
 Ví dụ EPS consensus hôm nay không thể dùng cho backtest ngày hai năm trước nếu consensus lịch sử đã thay đổi.
 
 Đây là lý do dữ liệu “đẹp” nhưng không point-in-time rất nguy hiểm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **6. Dữ liệu point-in-time** nêu điều cần giải thích; **7. Phân tách tập dữ liệu đúng vai trò** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Walk-forward mô phỏng tốt hơn thực tế cập nhật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Phân tách tập dữ liệu đúng vai trò
 
@@ -105,6 +116,8 @@ Test
 
 Nếu nhìn kiểm thử (test / 테스트) set rồi sửa chiến lược nhiều lần, kiểm thử (test / 테스트) set đã trở thành train set.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **7. Phân tách tập dữ liệu đúng vai trò** nêu điều cần giải thích; **8. Walk-forward mô phỏng tốt hơn thực tế cập nhật** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Purging và embargo khi dữ liệu chồng lấn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Walk-forward mô phỏng tốt hơn thực tế cập nhật
 
 Quy trình:
@@ -118,6 +131,8 @@ Huấn luyện trên quá khứ
 
 Nó không loại overfit nhưng buộc hệ thống chứng minh khả năng thích nghi qua nhiều giai đoạn.
 
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **8. Walk-forward mô phỏng tốt hơn thực tế cập nhật** nêu điều cần giải thích; **9. Purging và embargo khi dữ liệu chồng lấn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Parameter surface quan trọng hơn điểm tối ưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Purging và embargo khi dữ liệu chồng lấn
 
 Nếu nhãn hoặc giao dịch kéo dài qua ranh giới train/kiểm thử (test / 테스트), thông tin có thể rò rỉ.
@@ -127,6 +142,8 @@ Nếu nhãn hoặc giao dịch kéo dài qua ranh giới train/kiểm thử (tes
 
 Điều này đặc biệt quan trọng với machine học tập (learning / 학습) và chiến lược có thời gian giữ vị thế dài.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **9. Purging và embargo khi dữ liệu chồng lấn** nêu điều cần giải thích; **10. Parameter surface quan trọng hơn điểm tối ưu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Placebo kiểm thử (test / 테스트) để cố phá chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Parameter surface quan trọng hơn điểm tối ưu
 
 Nếu tham số 47 rất tốt nhưng 46 và 48 đều tệ, kết quả có thể là nhiễu.
@@ -134,6 +151,8 @@ Nếu tham số 47 rất tốt nhưng 46 và 48 đều tệ, kết quả có th�
 Nên tìm **vùng ổn định** thay vì đỉnh tối ưu hẹp.
 
 Một plateau rộng thường đáng tin hơn một magic number.
+
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **11. Placebo kiểm thử (test / 테스트) để cố phá chiến lược** tiếp nhận điểm tựa từ **10. Parameter surface quan trọng hơn điểm tối ưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Chi phí phải phụ thuộc trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Placebo kiểm thử (test / 테스트) để cố phá chiến lược
 
@@ -148,6 +167,8 @@ Giữ entry nhưng thay exit
 ```
 
 Nếu chiến lược vẫn “tốt” khi tín hiệu chính bị phá, có thể lợi nhuận thật đến từ drift thị trường hoặc một yếu tố khác.
+
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **12. Chi phí phải phụ thuộc trạng thái** tiếp nhận điểm tựa từ **11. Placebo kiểm thử (test / 테스트) để cố phá chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. sức chứa (capacity / 용량) là giới hạn kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Chi phí phải phụ thuộc trạng thái
 
@@ -171,6 +192,8 @@ spread rộng
 
 Chi phí (cost / 비용) mô hình (model / 모델) dùng một con số cố định thường đánh giá quá cao chiến lược event-driven hoặc turnover cao.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **12. Chi phí phải phụ thuộc trạng thái** đã nêu tiêu chí phân biệt, còn **13. sức chứa (capacity / 용량) là giới hạn kinh tế** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Position sizing phải xuất phát từ khoảng lỗ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. sức chứa (capacity / 용량) là giới hạn kinh tế
 
 Một chiến lược lời với 10.000 USD chưa chắc quy mô (scale / 규모) tới 10 triệu USD.
@@ -188,6 +211,8 @@ Time-to-exit
 
 Khi vốn tăng, chính lệnh của chiến lược có thể ăn hết lợi thế.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **13. sức chứa (capacity / 용량) là giới hạn kinh tế** đã nêu tiêu chí phân biệt, còn **14. Position sizing phải xuất phát từ khoảng lỗ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Volatility scaling có lợi và có rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Position sizing phải xuất phát từ khoảng lỗ
 
 Một quy tắc đơn giản:
@@ -199,6 +224,8 @@ Position Size
 
 Nhưng với gap rủi ro (risk / 위험) hoặc option short, stop không giới hạn được lỗ tối đa. Khi đó cần dùng stress mất mát (loss / 손실) thay vì khoảng stop.
 
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **15. Volatility scaling có lợi và có rủi ro** tiếp nhận điểm tựa từ **14. Position sizing phải xuất phát từ khoảng lỗ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Kelly chỉ là giới hạn lý thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Volatility scaling có lợi và có rủi ro
 
 Giảm vị thế khi biến động tăng giúp giữ rủi ro gần ổn định.
@@ -207,11 +234,15 @@ Nhưng volatility thường tăng **sau khi giá đã giảm**. Nếu giảm kí
 
 Vì vậy cần giới hạn tốc độ điều chỉnh và hiểu mục tiêu của volatility targeting.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **15. Volatility scaling có lợi và có rủi ro** đã nêu tiêu chí phân biệt, còn **16. Kelly chỉ là giới hạn lý thuyết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. rủi ro (risk / 위험) of ruin quan trọng hơn lợi suất trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Kelly chỉ là giới hạn lý thuyết
 
 Kelly criterion tối đa hóa tăng trưởng log dài hạn khi biết chính xác xác suất và payoff.
 
 Trong thực tế edge không chắc chắn, nên full Kelly thường quá hung hăng. Fractional Kelly an toàn hơn vì phản ánh sai số ước lượng.
+
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **16. Kelly chỉ là giới hạn lý thuyết** đã nêu tiêu chí phân biệt, còn **17. rủi ro (risk / 위험) of ruin quan trọng hơn lợi suất trung bình** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. Portfolio heat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. rủi ro (risk / 위험) of ruin quan trọng hơn lợi suất trung bình
 
@@ -225,6 +256,8 @@ Tail risk lớn
 ```
 
 Mục tiêu đầu tiên là sống đủ lâu để edge có cơ hội xuất hiện.
+
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **18. Portfolio heat** tiếp nhận điểm tựa từ **17. rủi ro (risk / 위험) of ruin quan trọng hơn lợi suất trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Correlation phải kiểm tra trong stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Portfolio heat
 
@@ -244,6 +277,8 @@ Commodity
 Liquidity
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **19. Correlation phải kiểm tra trong stress** tiếp nhận điểm tựa từ **18. Portfolio heat** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Tail profile phải được nhìn riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Correlation phải kiểm tra trong stress
 
 Correlation trung bình thấp không đủ.
@@ -259,6 +294,8 @@ liquidity provision
 
 có thể cùng chịu lỗ khi funding stress dù lịch sử bình thường trông đa dạng.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **20. Tail profile phải được nhìn riêng** tiếp nhận điểm tựa từ **19. Correlation phải kiểm tra trong stress** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Monte Carlo không tạo sự thật mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Tail profile phải được nhìn riêng
 
 Phân phối lợi nhuận có thể có:
@@ -272,6 +309,8 @@ clustered losses
 Sharpe cao không nói hết.
 
 Đặc biệt chiến lược bán quyền chọn thường có nhiều lời nhỏ và ít lỗ rất lớn.
+
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **21. Monte Carlo không tạo sự thật mới** tiếp nhận điểm tựa từ **20. Tail profile phải được nhìn riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Backtest và thực thi phải dùng cùng lô-gic (logic / 논리) vị thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Monte Carlo không tạo sự thật mới
 
@@ -289,6 +328,8 @@ Parameter uncertainty
 
 Nhưng nếu phân phối (distribution / 분포) đầu vào sai, mô phỏng đẹp vẫn sai.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **22. Backtest và thực thi phải dùng cùng lô-gic (logic / 논리) vị thế** tiếp nhận điểm tựa từ **21. Monte Carlo không tạo sự thật mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. quyết định (decision / 결정) price và thực thi (execution / 실행) price** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Backtest và thực thi phải dùng cùng lô-gic (logic / 논리) vị thế
 
 Một lỗi phổ biến:
@@ -302,6 +343,8 @@ Khi đó hệ thống thật khác hệ thống được nghiên cứu.
 
 Cần mô hình hóa thứ tự (order / 순서) kiểu (type / 타입), thời gian chờ và partial fill từ đầu nếu chúng ảnh hưởng lớn.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **23. quyết định (decision / 결정) price và thực thi (execution / 실행) price** tiếp nhận điểm tựa từ **22. Backtest và thực thi phải dùng cùng lô-gic (logic / 논리) vị thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. TCA phải phân rã nguyên nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. quyết định (decision / 결정) price và thực thi (execution / 실행) price
 
 Ghi hai mức:
@@ -312,6 +355,8 @@ Giá thực tế được khớp
 ```
 
 Khoảng chênh là nền tảng của **thiếu hụt thực thi (implementation shortfall)**.
+
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **24. TCA phải phân rã nguyên nhân** tiếp nhận điểm tựa từ **23. quyết định (decision / 결정) price và thực thi (execution / 실행) price** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Maker không tự động tốt hơn taker** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. TCA phải phân rã nguyên nhân
 
@@ -327,6 +372,8 @@ Commission
 
 Nếu slippage tăng, cần biết do thị trường xấu hơn hay thuật toán thực thi tệ hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **25. Maker không tự động tốt hơn taker** tiếp nhận điểm tựa từ **24. TCA phải phân rã nguyên nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. tín hiệu (signal / 신호) decay quyết định mức khẩn cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 25. Maker không tự động tốt hơn taker
 
 Lệnh chờ tiết kiệm spread nhưng chịu adverse selection và non-fill rủi ro (risk / 위험).
@@ -335,6 +382,8 @@ Lệnh chủ động trả spread nhưng giảm rủi ro bỏ lỡ.
 
 Lựa chọn phụ thuộc decay của tín hiệu và thanh khoản.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **26. tín hiệu (signal / 신호) decay quyết định mức khẩn cấp** tiếp nhận điểm tựa từ **25. Maker không tự động tốt hơn taker** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Derivatives phải quản trị notional và margin riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. tín hiệu (signal / 신호) decay quyết định mức khẩn cấp
 
 Nếu edge biến mất trong 30 giây, thực thi chậm để tiết kiệm 1 bp có thể vô nghĩa.
@@ -342,6 +391,8 @@ Nếu edge biến mất trong 30 giây, thực thi chậm để tiết kiệm 1 
 Nếu edge tồn tại nhiều ngày, có thể ưu tiên giảm impact.
 
 Do đó thực thi (execution / 실행) phải gắn với **half-life của alpha**.
+
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **27. Derivatives phải quản trị notional và margin riêng** tiếp nhận điểm tựa từ **26. tín hiệu (signal / 신호) decay quyết định mức khẩn cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Options cần scenario grid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. Derivatives phải quản trị notional và margin riêng
 
@@ -358,6 +409,8 @@ Margin
 Liquidity buffer
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **28. Options cần scenario grid** tiếp nhận điểm tựa từ **27. Derivatives phải quản trị notional và margin riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Margin stress có thể giết vị thế đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. Options cần scenario grid
 
 Delta-neutral không có nghĩa risk-free.
@@ -373,6 +426,8 @@ Skew thay đổi
 
 Gamma/Vega có thể làm P/L khác xa dự đoán tuyến tính.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **29. Margin stress có thể giết vị thế đúng** tiếp nhận điểm tựa từ **28. Options cần scenario grid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Forward kiểm thử (test / 테스트) là giai đoạn kiểm tra hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Margin stress có thể giết vị thế đúng
 
 Một thesis dài hạn đúng vẫn thất bại nếu tài khoản không chịu được variation margin trong ngắn hạn.
@@ -384,6 +439,8 @@ Nếu volatility gấp đôi?
 Nếu margin requirement tăng 50%?
 Nếu gap qua stop?
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **30. Forward kiểm thử (test / 테스트) là giai đoạn kiểm tra hệ thống** tiếp nhận điểm tựa từ **29. Margin stress có thể giết vị thế đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Small live để đo ma sát thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 30. Forward kiểm thử (test / 테스트) là giai đoạn kiểm tra hệ thống
 
@@ -400,6 +457,8 @@ Slippage thực
 
 Đây là bước kiểm tra kỹ thuật, không chỉ kiểm tra edge.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **31. Small live để đo ma sát thật** tiếp nhận điểm tựa từ **30. Forward kiểm thử (test / 테스트) là giai đoạn kiểm tra hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. môi trường vận hành (production / 운영 환경) monitoring cần tách edge và vận hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 31. Small live để đo ma sát thật
 
 Sau forward kiểm thử (test / 테스트), dùng quy mô nhỏ để kiểm tra:
@@ -413,6 +472,8 @@ funding cost
 ```
 
 Không nên nhảy từ backtest trực tiếp sang full kích thước (size / 크기).
+
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **32. môi trường vận hành (production / 운영 환경) monitoring cần tách edge và vận hành** tiếp nhận điểm tựa từ **31. Small live để đo ma sát thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Drift detection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 32. môi trường vận hành (production / 운영 환경) monitoring cần tách edge và vận hành
 
@@ -440,6 +501,8 @@ Position mismatch
 
 Nếu P/L xấu, phải biết lớp nào đang hỏng.
 
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **33. Drift detection** tiếp nhận điểm tựa từ **32. môi trường vận hành (production / 운영 환경) monitoring cần tách edge và vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Kill switch phải được thiết kế trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 33. Drift detection
 
 Theo dõi phân phối của:
@@ -454,6 +517,8 @@ Market regime
 ```
 
 Thay đổi nhỏ từng phần có thể cho thấy chiến lược đang rời khỏi môi trường được nghiên cứu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **34. Kill switch phải được thiết kế trước** tiếp nhận điểm tựa từ **33. Drift detection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. chiến lược (strategy / 전략) retirement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 34. Kill switch phải được thiết kế trước
 
@@ -470,6 +535,8 @@ Slippage bất thường
 
 Không được chờ tới lúc có sự cố mới quyết định cách dừng.
 
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **35. chiến lược (strategy / 전략) retirement** tiếp nhận điểm tựa từ **34. Kill switch phải được thiết kế trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Bài tập xây hệ thống từ đầu tới live** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 35. chiến lược (strategy / 전략) retirement
 
 Một chiến lược nên được dừng khi bằng chứng đủ mạnh rằng:
@@ -483,6 +550,8 @@ Live performance lệch cấu trúc quá lớn
 ```
 
 Không giữ chiến lược chỉ vì đã bỏ nhiều thời gian nghiên cứu.
+
+> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **36. Bài tập xây hệ thống từ đầu tới live** tiếp nhận điểm tựa từ **35. chiến lược (strategy / 전략) retirement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Liên kết đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 36. Bài tập xây hệ thống từ đầu tới live
 
@@ -505,6 +574,8 @@ Chọn một ý tưởng và hoàn thành:
 
 Nếu thiếu một bước, hệ thống chưa sẵn sàng để tăng quy mô.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, sau nội dung của **36. Bài tập xây hệ thống từ đầu tới live**, **37. Liên kết đọc tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 37. Liên kết đọc tiếp
 
 Phần này bàn giao từ thiết kế hệ thống sang các chapter về derivatives, backtest, execution, robustness và case study. Hãy chọn link theo lỗ hổng trong chuỗi strategy → sizing → execution → monitoring, rồi quay lại lab để cập nhật specification.
@@ -514,6 +585,8 @@ Phần này bàn giao từ thiết kế hệ thống sang các chapter về deri
 - [Thực thi và vi cấu trúc](./03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md)
 - [Độ bền chiến lược](./04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md)
 - [Options và bề mặt biến động](./05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md)
+
+> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi**, **Kết luận** gom các mảnh từ **37. Liên kết đọc tiếp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết luận
 
@@ -531,3 +604,5 @@ Giả thuyết
 ```
 
 Chất lượng của hệ thống nằm ở **toàn bộ chuỗi**, không nằm ở một backtest đẹp.
+
+> **Bàn giao:** Sau **Kết luận**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
