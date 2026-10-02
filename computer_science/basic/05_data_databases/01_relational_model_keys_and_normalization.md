@@ -1,6 +1,6 @@
 # Relational mô hình (model / 모델), keys và normalization
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Relational mô hình (model / 모델), keys và normalization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quan hệ (relation / 관계), tuple và attribute** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Keys từ định danh (identity / 식별자) và functional phụ thuộc (dependency / 의존성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Relational model, keys và normalization**. Route đi từ relation/tuple/attribute → keys và functional dependencies → normal forms → denormalization và NULL semantics, để schema giữ được dữ liệu đúng mà vẫn phục vụ truy cập.
 
 Relational mô hình (model / 모델) do Edgar F. Codd đề xuất tách logical dữ liệu (data / 데이터) relationships khỏi pointer/điều hướng (navigation / 내비게이션) vật lý (physical / 물리적) lưu trữ (storage / 저장소). Ý tưởng cốt lõi: dữ liệu được mô tả bằng relations và queries dựa values/relations thay vì ứng dụng (application / 애플리케이션) phải biết bản ghi (record / 레코드) nằm ở khối (block / 블록) hay nối bằng pointer nào.
 

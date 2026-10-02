@@ -1,6 +1,6 @@
 # NoSQL, phân tán (distributed / 분산) và analytical databases
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **NoSQL, phân tán (distributed / 분산) và analytical databases**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Chọn mô hình dữ liệu (data model / 데이터 모델) từ truy cập (access / 접근) mẫu (pattern / 패턴) và bất biến (invariant / 불변식)** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. Denormalization là intentional replication ở logical tầng (layer / 계층)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **NoSQL, distributed và analytical databases**. Route đi từ access pattern/invariant → denormalization/partitioning → replication/consistency → LSM storage → OLTP/OLAP và columnar analytics, để chọn mô hình theo truy cập và độ nhất quán cần có.
 
 Relational cơ sở dữ liệu (database / 데이터베이스) không phải lựa chọn duy nhất vì workloads khác nhau đặt pressure khác nhau lên mô hình dữ liệu (data model / 데이터 모델), quy mô (scale / 규모), độ trễ (latency / 지연 시간), consistency và truy vấn (query / 쿼리) patterns. “NoSQL” không phải một kiến trúc (architecture / 아키텍처) duy nhất mà là umbrella term cho nhiều các hệ thống (systems / 시스템들) đánh đổi relational generality để tối ưu một số truy cập (access / 접근) mẫu (pattern / 패턴) hoặc phân phối (distribution / 분포) mô hình (model / 모델).
 

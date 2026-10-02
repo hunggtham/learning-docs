@@ -1,6 +1,6 @@
 # Tối ưu truy vấn và kế hoạch thực thi
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tối ưu truy vấn và kế hoạch thực thi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ câu SQL đến kế hoạch vật lý** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ước lượng số lượng bản ghi là trung tâm của mô hình chi phí** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Query optimization và execution plans**. Route đi từ logical query → cardinality/statistics → join order/operators → SARGability/index-only scan → EXPLAIN và parameter sensitivity, để plan được kiểm chứng bằng chi phí thực tế.
 
 Hai câu SQL có thể trả cùng kết quả nhưng thời gian chạy chênh nhau hàng nghìn lần. **Bộ tối ưu truy vấn (query optimizer / 옵티마이저)** của cơ sở dữ liệu phải tìm một kế hoạch thực thi vật lý có chi phí ước lượng thấp trong một không gian phương án rất lớn. Đây là nơi thuật toán, thống kê, lưu trữ, bộ nhớ đệm (cache / 캐시) CPU và đại số quan hệ gặp nhau.
 

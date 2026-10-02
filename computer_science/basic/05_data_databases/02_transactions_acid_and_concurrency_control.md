@@ -1,6 +1,6 @@
 # Transactions, ACID và tính đồng thời (concurrency / 동시성) điều khiển (control / 제어)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Transactions, ACID và tính đồng thời (concurrency / 동시성) điều khiển (control / 제어)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Atomicity** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Consistency trong ACID** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Transactions, ACID và concurrency control**. Route đi từ atomicity/consistency → isolation/durability → locks/MVCC → serializability và retry boundary, để mỗi guarantee gắn với cơ chế thực thi.
 
 Cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) giải quyết một vấn đề sâu: nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) thường gồm nhiều reads/writes, trong khi crash hoặc concurrent transactions có thể xảy ra giữa bất kỳ bước nào. Ta muốn một higher-level chuyển tiếp trạng thái (state transition / 상태 전이) với guarantees rõ ràng thay vì các writes độc lập.
 
