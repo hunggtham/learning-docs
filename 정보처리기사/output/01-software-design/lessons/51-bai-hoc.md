@@ -1,18 +1,26 @@
 # 8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối linked list, stack, queue và deque với access pattern, mutation và memory layout, để chọn cấu trúc theo thao tác cần tối ưu.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **9. 트리 (Tree) 용어** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 연결, 리스트, 스택, 데크
 
+> **Chuyển mạch:** Ở chặng này của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **7. 자료 구조 (Data Structures)**에서 만든 기준을 이어받아 **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Mục đích của bài này là hiểu **8. 연결 리스트, 스택, 큐, 데�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** và nối nó với **9. 트리 (Tree) 용어**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**, **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)
 
@@ -40,3 +48,5 @@ Phần “8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)” đ�
 - **데크 (Deque)**: Hàng đợi hai đầu. (Scroll: giới hạn đầu vào, Shelf: giới hạn đầu ra)
 
 Điểm chốt của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **9. 트리 (Tree) 용어**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+> **Bàn giao:** Sau **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,18 +1,26 @@
 # A+ Deep Dive: SQL 결과를 행 단위로 추적하기
 
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **학습 목표 (Mục tiêu)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **핵심 키워드 (Từ khóa)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối SQL result với row-level tracing, filter, join và aggregation, để biết mỗi dòng đầu ra đến từ dữ liệu và phép biến đổi nào.
+
 ## 학습 목표 (Mục tiêu)
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** khi chuyển sang phần tiếp theo.
 
+> **Chuyển mạch:** Trong **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 핵심 키워드 (Từ khóa)
 
 Deep, Dive, SQL, 결과를, 단위로, 추적하기
 
+> **Chuyển mạch:** Ở chặng này của **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **4. SQL 문법의 종류 (Các loại cú pháp SQL)**에서 만든 기준을 이어받아 **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,9 +30,9 @@ Deep, Dive, SQL, 결과를, 단위로, 추적하기
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** và nối nó với **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
 ---
+
+> **Chuyển mạch:** Trong **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## A+ Deep Dive: SQL 결과를 행 단위로 추적하기
 
@@ -98,3 +106,5 @@ Các bullet của **자주 혼동하는 판별 포인트** đang nén nhiều ý
 Như vậy, **자주 혼동하는 판별 포인트** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
 Ta có thể khép mục **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+> **Bàn giao:** Sau **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

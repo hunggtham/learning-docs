@@ -1,7 +1,6 @@
 # Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)
 
-> **Mạch đọc:** Đặt **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thị trường sơ cấp và thị trường thứ cấp** sang **KOSPI: thị trường và chỉ số là hai khái niệm khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thị trường sơ cấp và thị trường thứ cấp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **KOSPI: thị trường và chỉ số là hai khái niệm khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối capital markets với KOSPI, KOSDAQ, KONEX và price formation, để phân biệt venue, index và kỳ vọng của nhà đầu tư.
 
 Thị trường chứng khoán không chỉ là nơi giá cổ phiếu lên xuống. Nó là hạ tầng giúp **doanh nghiệp huy động vốn chủ sở hữu, nhà đầu tư phân bổ tiết kiệm, chủ sở hữu tạo thanh khoản và nền kinh tế hình thành mức giá cho rủi ro**.
 
@@ -25,6 +24,8 @@ Phần bù thanh khoản thấp hơn
 Doanh nghiệp dễ huy động vốn sơ cấp hơn
 ```
 
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **KOSPI: thị trường và chỉ số là hai khái niệm khác nhau** tiếp nhận điểm tựa từ **Thị trường sơ cấp và thị trường thứ cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KOSDAQ: thị trường tăng trưởng và công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KOSPI: thị trường và chỉ số là hai khái niệm khác nhau
 
 **Thị trường KOSPI (KOSPI Market / 유가증권시장)** là bảng niêm yết chính của Korea Exchange và tập trung nhiều doanh nghiệp lớn, trưởng thành.
@@ -32,6 +33,8 @@ Doanh nghiệp dễ huy động vốn sơ cấp hơn
 **Chỉ số KOSPI (KOSPI Index)** là chỉ số dựa trên vốn hóa thị trường đại diện cho cổ phiếu niêm yết trên thị trường đó theo phương pháp tính của chỉ số.
 
 Trong giao tiếp hàng ngày, cả hai đều thường được gọi là “KOSPI”, nhưng khi phân tích phải tách chúng. Câu “KOSPI tăng 2%” nói về chỉ số chứ không có nghĩa mọi công ty đều tăng.
+
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **KOSDAQ: thị trường tăng trưởng và công nghệ** tiếp nhận điểm tựa từ **KOSPI: thị trường và chỉ số là hai khái niệm khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KONEX: tầng thấp hơn của thang huy động vốn công khai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## KOSDAQ: thị trường tăng trưởng và công nghệ
 
@@ -41,6 +44,8 @@ Tuy nhiên, cách hiểu `KOSPI = công ty lớn`, `KOSDAQ = công ty nhỏ` là
 
 So sánh doanh nghiệp nên dựa trên **cấu trúc kinh tế của ngành**, không chỉ nhãn sàn niêm yết.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **KONEX: tầng thấp hơn của thang huy động vốn công khai** tiếp nhận điểm tựa từ **KOSDAQ: thị trường tăng trưởng và công nghệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn hóa thị trường: giá trị vốn chủ sở hữu, không phải tiền mặt của công ty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## KONEX: tầng thấp hơn của thang huy động vốn công khai
 
 KONEX được thiết kế để hỗ trợ SME quy mô nhỏ hoặc giai đoạn sớm tiếp cận tài chính trực tiếp trước khi đủ điều kiện cho KOSDAQ.
@@ -48,6 +53,8 @@ KONEX được thiết kế để hỗ trợ SME quy mô nhỏ hoặc giai đo�
 Ba thị trường cho thấy hệ thống vốn có thể được xem như một **thang tài trợ nhiều cấp**, không chỉ là một sàn giao dịch duy nhất.
 
 Tuy nhiên thị trường nhỏ thường có thanh khoản thấp hơn. Một mức giá được niêm yết không có nghĩa nhà đầu tư có thể mua hoặc bán khối lượng lớn ở đúng mức giá đó mà không tạo ảnh hưởng đáng kể.
+
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Vốn hóa thị trường: giá trị vốn chủ sở hữu, không phải tiền mặt của công ty** tiếp nhận điểm tựa từ **KONEX: tầng thấp hơn của thang huy động vốn công khai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá trị doanh nghiệp (Enterprise Value / EV)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vốn hóa thị trường: giá trị vốn chủ sở hữu, không phải tiền mặt của công ty
 
@@ -58,6 +65,8 @@ Vốn\ hóa\ thị\ trường = Giá\ cổ\ phiếu \times Số\ cổ\ phiếu\ 
 Cổ phiếu giá 100.000 KRW không tự động “đắt” hơn cổ phiếu giá 10.000 KRW, vì số lượng cổ phiếu lưu hành có thể khác nhau rất lớn.
 
 **Vốn hóa thị trường (market capitalization)** là giá trị thị trường hiện tại của quyền lợi vốn chủ sở hữu. Nó không phải doanh thu, số dư tiền mặt, giá trị doanh nghiệp hay số tiền công ty nhận được khi IPO.
+
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Giá trị doanh nghiệp (Enterprise Value / EV)** tiếp nhận điểm tựa từ **Vốn hóa thị trường: giá trị vốn chủ sở hữu, không phải tiền mặt của công ty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Free float và thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giá trị doanh nghiệp (Enterprise Value / EV)
 
@@ -71,6 +80,8 @@ Tùy mục đích, có thể cần điều chỉnh cổ phần ưu đãi, NCI, n
 
 EV hữu ích khi so sánh giá trị tài sản hoạt động giữa các doanh nghiệp có cấu trúc tài trợ khác nhau. Hai công ty có cùng vốn hóa nhưng mức nợ rất khác sẽ có EV khác rõ rệt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Free float và thanh khoản** tiếp nhận điểm tựa từ **Giá trị doanh nghiệp (Enterprise Value / EV)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình thành giá: thị trường xử lý thông tin nhưng không hoàn hảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Free float và thanh khoản
 
 Không phải mọi cổ phiếu đang lưu hành đều thực sự được giao dịch tự do. Cổ đông kiểm soát, nhà đầu tư chiến lược, cổ phiếu quỹ hoặc thời gian khóa chuyển nhượng có thể làm giảm **lượng cổ phiếu tự do lưu hành (free float / 유통가능주식)**.
@@ -78,6 +89,8 @@ Không phải mọi cổ phiếu đang lưu hành đều thực sự được gi
 Free float thấp có thể tạo biến động giá lớn hơn, chênh lệch mua–bán rộng hơn và làm nhà đầu tư tổ chức khó giao dịch khối lượng lớn.
 
 Vì vậy vốn hóa không đồng nghĩa với lượng giá trị cổ phiếu có thể thanh khoản ngay lập tức.
+
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Hình thành giá: thị trường xử lý thông tin nhưng không hoàn hảo** tiếp nhận điểm tựa từ **Free float và thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sổ lệnh, chênh lệch mua–bán và độ sâu thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hình thành giá: thị trường xử lý thông tin nhưng không hoàn hảo
 
@@ -87,6 +100,8 @@ Giá cổ phiếu tổng hợp kỳ vọng khác nhau của rất nhiều ngư�
 
 Tuy nhiên, giá không phải lúc nào cũng “đúng”. Thông tin có thể thiếu, nhà đầu tư có thiên kiến hành vi và thanh khoản có thể hạn chế. Vì vậy nên coi giá là **bằng chứng về kỳ vọng thị trường**, không phải lời tiên tri.
 
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Sổ lệnh, chênh lệch mua–bán và độ sâu thị trường** tiếp nhận điểm tựa từ **Hình thành giá: thị trường xử lý thông tin nhưng không hoàn hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ số không đại diện cho “công ty trung bình”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Sổ lệnh, chênh lệch mua–bán và độ sâu thị trường
 
 Giá khớp gần nhất không cho biết đầy đủ thanh khoản.
@@ -94,6 +109,8 @@ Giá khớp gần nhất không cho biết đầy đủ thanh khoản.
 **Chênh lệch mua–bán (bid–ask spread)** là khoảng cách giữa giá mua cao nhất và giá bán thấp nhất. **Độ sâu thị trường (market depth)** cho biết khối lượng có sẵn quanh các mức giá gần hiện tại.
 
 Một cổ phiếu vốn hóa lớn thanh khoản tốt có thể hấp thụ lệnh lớn với tác động giá nhỏ; cổ phiếu KOSDAQ/KONEX kém thanh khoản có thể biến động vài phần trăm chỉ từ lệnh tương đối nhỏ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Chỉ số không đại diện cho “công ty trung bình”** tiếp nhận điểm tựa từ **Sổ lệnh, chênh lệch mua–bán và độ sâu thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dòng tiền thị trường và nền tảng doanh nghiệp là hai lớp khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chỉ số không đại diện cho “công ty trung bình”
 
@@ -103,11 +120,15 @@ Vì vậy hiệu suất chỉ số, hiệu suất của cổ phiếu trung vị 
 
 Khi dùng chỉ số như tín hiệu vĩ mô, phải xem cơ cấu ngành và trọng số.
 
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Dòng tiền thị trường và nền tảng doanh nghiệp là hai lớp khác nhau** tiếp nhận điểm tựa từ **Chỉ số không đại diện cho “công ty trung bình”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà đầu tư nước ngoài và kênh tỷ giá KRW** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dòng tiền thị trường và nền tảng doanh nghiệp là hai lớp khác nhau
 
 Cổ phiếu có thể giảm dù triển vọng kinh doanh không đổi do tâm lý né rủi ro toàn cầu, dòng tiền ETF, tái cân bằng chỉ số, bán ròng của nhà đầu tư nước ngoài hoặc phòng hộ phái sinh.
 
 Không nên bịa một câu chuyện nền tảng chỉ để giải thích biến động giá ngắn hạn. Cần tách **nguyên nhân dòng tiền thị trường** khỏi **nguyên nhân kinh tế doanh nghiệp**.
+
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Nhà đầu tư nước ngoài và kênh tỷ giá KRW** tiếp nhận điểm tựa từ **Dòng tiền thị trường và nền tảng doanh nghiệp là hai lớp khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cá nhân, tổ chức và nhà đầu tư nước ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhà đầu tư nước ngoài và kênh tỷ giá KRW
 
@@ -117,11 +138,15 @@ Có một nghịch lý đáng chú ý: doanh nghiệp xuất khẩu có thể đ
 
 Tác động kinh doanh và tác động dòng vốn có thể mang dấu ngược nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Cá nhân, tổ chức và nhà đầu tư nước ngoài** tiếp nhận điểm tựa từ **Nhà đầu tư nước ngoài và kênh tỷ giá KRW** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IPO: huy động vốn + thanh khoản + thay đổi chế độ quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cá nhân, tổ chức và nhà đầu tư nước ngoài
 
 Bình luận thị trường Hàn Quốc thường chia dòng tiền thành `개인` — nhà đầu tư cá nhân, `기관` — tổ chức trong nước và `외국인` — nhà đầu tư nước ngoài.
 
 Dữ liệu dòng tiền có thể giải thích vị thế ngắn hạn nhưng không phải luận điểm đầu tư. “Hôm nay nhà đầu tư nước ngoài mua ròng” không nói gì chắc chắn về giá trị dài hạn nếu không hiểu lý do, thời hạn và kinh tế doanh nghiệp.
+
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **IPO: huy động vốn + thanh khoản + thay đổi chế độ quản trị** tiếp nhận điểm tựa từ **Cá nhân, tổ chức và nhà đầu tư nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lock-up và áp lực nguồn cung tiềm năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## IPO: huy động vốn + thanh khoản + thay đổi chế độ quản trị
 
@@ -136,11 +161,15 @@ Hai IPO cùng quy mô chào bán có thể đưa lượng tiền rất khác nha
 
 Luôn đọc **mục đích sử dụng vốn (use of proceeds)** như CAPEX, trả nợ, R&D, M&A hoặc vốn lưu động. Câu hỏi cốt lõi là lượng vốn mới có thể tạo lợi suất đủ cao để bù pha loãng hay không.
 
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **IPO: huy động vốn + thanh khoản + thay đổi chế độ quản trị** nêu điều cần giải thích; **Lock-up và áp lực nguồn cung tiềm năng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phát hành thêm và quyền mua** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lock-up và áp lực nguồn cung tiềm năng
 
 Nhà sáng lập hoặc nhà đầu tư sớm có thể chịu thời hạn hạn chế bán. Khi thời hạn này hết, lượng cổ phiếu có khả năng được bán tăng lên. Đây là **nguồn cung tiềm năng (overhang / 잠재매물)**.
 
 Overhang không có nghĩa các cổ đông chắc chắn sẽ bán, nhưng nó thay đổi kỳ vọng về cung cổ phiếu. Phân tích sau IPO nên tách tiến triển kinh doanh khỏi biến động nguồn cung cổ phiếu tạm thời.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Lock-up và áp lực nguồn cung tiềm năng** nêu điều cần giải thích; **Phát hành thêm và quyền mua** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cổ phiếu thưởng và chia tách cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phát hành thêm và quyền mua
 
@@ -156,6 +185,8 @@ tổng giá trị có thể tăng đủ để bù phần tỷ lệ sở hữu gi
 
 Ngược lại, doanh nghiệp liên tục phát hành cổ phiếu chỉ để bù lỗ mà không có con đường cải thiện kinh tế là một trường hợp rất khác.
 
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Cổ phiếu thưởng và chia tách cổ phiếu** tiếp nhận điểm tựa từ **Phát hành thêm và quyền mua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trái phiếu chuyển đổi và rủi ro pha loãng tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cổ phiếu thưởng và chia tách cổ phiếu
 
 **Chia tách cổ phiếu (stock split)** làm số cổ phiếu tăng và giá trên mỗi cổ phiếu giảm tương ứng nếu bỏ qua phản ứng thị trường. Chia 10:1 không làm doanh nghiệp tự động rẻ hơn về kinh tế.
@@ -164,6 +195,8 @@ Phát hành cổ phiếu thưởng cũng thay đổi đơn vị sở hữu và c
 
 Khi so sánh dữ liệu theo thời gian, phải chuẩn hóa số liệu trên mỗi cổ phiếu qua các hành động doanh nghiệp.
 
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Trái phiếu chuyển đổi và rủi ro pha loãng tương lai** tiếp nhận điểm tựa từ **Cổ phiếu thưởng và chia tách cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổ tức và tổng lợi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Trái phiếu chuyển đổi và rủi ro pha loãng tương lai
 
 **Trái phiếu chuyển đổi (convertible bond / CB)** là khoản nợ đi kèm quyền chuyển thành cổ phiếu theo điều khoản nhất định.
@@ -171,6 +204,8 @@ Khi so sánh dữ liệu theo thời gian, phải chuẩn hóa số liệu trên
 Với nhà đầu tư, nó kết hợp một phần đặc điểm bảo vệ của trái phiếu và tiềm năng tăng giá của cổ phiếu. Với cổ đông hiện tại, chuyển đổi có thể tạo pha loãng.
 
 Vì vậy tỷ lệ nợ hiện tại có thể chưa phản ánh hết rủi ro tăng số cổ phiếu nếu lượng chứng khoán chuyển đổi lớn. Khi đáng kể, nên theo dõi **số cổ phiếu sau pha loãng đầy đủ (fully diluted share count)**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Cổ tức và tổng lợi suất** tiếp nhận điểm tựa từ **Trái phiếu chuyển đổi và rủi ro pha loãng tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mua lại và hủy cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cổ tức và tổng lợi suất
 
@@ -184,6 +219,8 @@ Tổng\ lợi\ suất = Thay\ đổi\ giá + Cổ\ tức
 
 Nếu chỉ nhìn giá, có thể đánh giá sai doanh nghiệp trả cổ tức cao.
 
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Mua lại và hủy cổ phiếu** tiếp nhận điểm tựa từ **Cổ tức và tổng lợi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **P/E: giá so với lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mua lại và hủy cổ phiếu
 
 Mua lại cổ phiếu có thể là một hình thức hoàn vốn, nhưng kết quả phụ thuộc vào cách xử lý sau đó.
@@ -193,6 +230,8 @@ Nếu cổ phiếu được hủy, tổng số cổ phiếu giảm và cổ đô
 Cần hỏi doanh nghiệp mua lại bao nhiêu, ở mức định giá nào, có hủy không, tiền mua lại đến từ tiền dư hay nợ mới và công ty có cơ hội đầu tư ROIC cao hơn hay không.
 
 Mua lại cổ phiếu là quyết định phân bổ vốn, không tự động là “điều tốt”.
+
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **P/E: giá so với lợi nhuận** tiếp nhận điểm tựa từ **Mua lại và hủy cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **P/B và mối liên hệ với ROE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## P/E: giá so với lợi nhuận
 
@@ -212,6 +251,8 @@ Trong bộ nhớ, hóa chất, thép hoặc vận tải biển, P/E thường tr
 
 Phải **chuẩn hóa lợi nhuận (normalized earnings)** trước khi kết luận.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **P/B và mối liên hệ với ROE** tiếp nhận điểm tựa từ **P/E: giá so với lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **EV/EBITDA: hữu ích nhưng nguy hiểm trong ngành thâm dụng vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## P/B và mối liên hệ với ROE
 
 \[
@@ -228,6 +269,8 @@ P/B \approx \frac{ROE-g}{r-g}
 
 “Giá thấp hơn giá trị sổ sách = rẻ” là kết luận chưa đủ. Tài sản chỉ tạo giá trị kinh tế khi chúng tạo lợi suất phù hợp.
 
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **EV/EBITDA: hữu ích nhưng nguy hiểm trong ngành thâm dụng vốn** tiếp nhận điểm tựa từ **P/B và mối liên hệ với ROE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty tài chính cần lô-gic (logic / 논리) định giá khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## EV/EBITDA: hữu ích nhưng nguy hiểm trong ngành thâm dụng vốn
 
 EV/EBITDA giảm ảnh hưởng của cấu trúc nợ và khấu hao kế toán, nhưng với ngành cần CAPEX thay thế lớn, khấu hao đại diện cho sự tiêu hao vốn kinh tế thật.
@@ -236,11 +279,15 @@ Hai công ty bán dẫn có cùng EV/EBITDA nhưng nhu cầu CAPEX thay thế t�
 
 Phải dùng bội số cùng với hiểu biết về mô hình kinh doanh.
 
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Công ty tài chính cần lô-gic (logic / 논리) định giá khác** tiếp nhận điểm tựa từ **EV/EBITDA: hữu ích nhưng nguy hiểm trong ngành thâm dụng vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty tăng trưởng: bội số là một gói kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Công ty tài chính cần lô-gic (logic / 논리) định giá khác
 
 Ngân hàng và bảo hiểm khác doanh nghiệp công nghiệp vì nợ và tiền gửi là một phần của hoạt động chứ không chỉ là lựa chọn tài trợ.
 
 P/B, ROE, chất lượng tín dụng và an toàn vốn thường quan trọng hơn EV/EBITDA. Không nên ép khung EV của công ty công nghiệp lên ngân hàng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Công ty tăng trưởng: bội số là một gói kỳ vọng** tiếp nhận điểm tựa từ **Công ty tài chính cần lô-gic (logic / 논리) định giá khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lợi suất yêu cầu và tỷ lệ chiết khấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công ty tăng trưởng: bội số là một gói kỳ vọng
 
@@ -249,6 +296,8 @@ Bội số cao chứa kỳ vọng về tăng trưởng, biên lợi nhuận và 
 Câu hỏi đầu tư vì vậy không phải “công ty có tăng trưởng không?”, mà là **thực tế tương lai có khả năng tốt hơn hay xấu hơn điều mà giá hiện tại đã phản ánh?**
 
 Đây là cách nhìn **đầu tư theo kỳ vọng (expectation investing)**.
+
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Lợi suất yêu cầu và tỷ lệ chiết khấu** tiếp nhận điểm tựa từ **Công ty tăng trưởng: bội số là một gói kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán khống: một cơ chế thị trường, không phải nhãn đạo đức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lợi suất yêu cầu và tỷ lệ chiết khấu
 
@@ -262,11 +311,15 @@ Giá\ trị = \sum_{t=1}^{n}\frac{Dòng\ tiền\ kỳ\ vọng_t}{(1+r)^t}
 
 Đó là lý do cổ phiếu tăng trưởng có dòng tiền ở xa tương lai thường nhạy với lãi suất.
 
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Lợi suất yêu cầu và tỷ lệ chiết khấu** xác định đầu vào; **Bán khống: một cơ chế thị trường, không phải nhãn đạo đức** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hợp đồng tương lai và quyền chọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bán khống: một cơ chế thị trường, không phải nhãn đạo đức
 
 Trong **bán khống (short selling)**, nhà đầu tư mượn cổ phiếu, bán ra rồi phải mua lại để hoàn trả. Họ có lãi nếu giá giảm và lỗ nếu giá tăng.
 
 Bán khống có thể hỗ trợ hình thành giá và phòng hộ, nhưng rủi ro đòn bẩy và squeeze cao. Quy định có thể thay đổi theo thời gian nên các quyết định thực tế phải kiểm tra khung KRX/FSC hiện hành.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Bán khống: một cơ chế thị trường, không phải nhãn đạo đức** xác định đầu vào; **Hợp đồng tương lai và quyền chọn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **ETF và dòng tiền chỉ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hợp đồng tương lai và quyền chọn
 
@@ -274,11 +327,15 @@ Phái sinh có thể dùng để phòng hộ hoặc tăng rủi ro. Một tổ c
 
 Cùng công cụ đó, nếu dùng với đòn bẩy cao, có thể làm rủi ro tăng mạnh. Bản thân công cụ không tự động an toàn hay nguy hiểm; cấu trúc vị thế mới quyết định mức tiếp xúc.
 
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **ETF và dòng tiền chỉ số** tiếp nhận điểm tựa từ **Hợp đồng tương lai và quyền chọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kỷ luật thị trường sau 1997** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## ETF và dòng tiền chỉ số
 
 Quỹ theo chỉ số mua–bán theo thành phần và trọng số chỉ số. Khi công ty được thêm hoặc loại khỏi chỉ số, dòng tiền cơ học có thể làm giá thay đổi dù không có thông tin nền tảng mới.
 
 Đây là một lý do nữa cho thấy biến động giá không luôn đồng nghĩa với thay đổi hoạt động kinh doanh.
+
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Kỷ luật thị trường sau 1997** tiếp nhận điểm tựa từ **ETF và dòng tiền chỉ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân tích một công ty Hàn Quốc niêm yết trong bối cảnh thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kỷ luật thị trường sau 1997
 
@@ -287,6 +344,8 @@ Trong lịch sử, tài chính công nghiệp Hàn Quốc phụ thuộc nhiều 
 Điều này làm doanh nghiệp phải quan tâm nhiều hơn tới công bố thông tin, quan hệ nhà đầu tư, xếp hạng tín nhiệm, định giá và chất lượng phân bổ vốn.
 
 Vì vậy thị trường vốn là một lớp thể chế của quản trị doanh nghiệp, không chỉ là nơi giao dịch.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Cách phân tích một công ty Hàn Quốc niêm yết trong bối cảnh thị trường** tiếp nhận điểm tựa từ **Kỷ luật thị trường sau 1997** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách phân tích một công ty Hàn Quốc niêm yết trong bối cảnh thị trường
 
@@ -301,9 +360,13 @@ Vì vậy thị trường vốn là một lớp thể chế của quản trị d
 9. Đưa cổ tức và mua lại cổ phiếu vào tổng lợi suất cổ đông.
 10. Stress-test định giá dưới các kịch bản lợi nhuận và lợi suất yêu cầu khác nhau.
 
+> **Chuyển mạch:** Trong **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Cách phân tích một công ty Hàn Quốc niêm yết trong bối cảnh thị trường** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Thị trường vốn chuyển **tiết kiệm → quyền sở hữu → giá → tín hiệu phân bổ vốn**. Doanh nghiệp tạo dòng tiền; thị trường định giá xác suất và thời điểm của dòng tiền tương lai. Phân tích tốt phải kết nối hai lớp nhưng không được nhầm chúng với nhau.
+
+> **Chuyển mạch:** Ở chặng này của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -323,8 +386,10 @@ Vì vậy thị trường vốn là một lớp thể chế của quản trị d
 
 **Khối lượng phái sinh ≠ bằng chứng trực tiếp hoạt động doanh nghiệp thay đổi.**
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết
 
 Đọc [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) trước khi định giá, [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) cho tài trợ nợ–trái phiếu, [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md) cho quá trình từ venture tới IPO và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình hoàn chỉnh.
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)
 
-> **Mạch đọc:** Đặt **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hệ sinh thái quốc phòng: nhà thầu chính không tự làm mọi thứ** sang **DAPA và thể chế mua sắm quốc phòng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hệ sinh thái quốc phòng: nhà thầu chính không tự làm mọi thứ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **DAPA và thể chế mua sắm quốc phòng** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối defense, aerospace và strategic industries với procurement, technology và national security, để thấy nhà thầu nằm trong hệ sinh thái nào.
 
 Ngành quốc phòng khác sản xuất thương mại thông thường vì khách hàng chủ yếu là chính phủ, chu kỳ mua sắm dài, sản phẩm phải đáp ứng tiêu chuẩn độ tin cậy và an ninh rất cao, còn xuất khẩu thường gắn với ngoại giao, tài trợ, đào tạo và nội địa hóa.
 
@@ -35,6 +34,8 @@ Khả năng giữ lại giá trị kinh tế phụ thuộc:
 - quy mô;
 - nền thiết bị đã được triển khai.
 
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **DAPA và thể chế mua sắm quốc phòng** tiếp nhận điểm tựa từ **Hệ sinh thái quốc phòng: nhà thầu chính không tự làm mọi thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh thu phụ thuộc backlog và thường không đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## DAPA và thể chế mua sắm quốc phòng
 
 **Defense Acquisition Program Administration (DAPA / 방위사업청)** quản lý nhiều chương trình phát triển và mua sắm quốc phòng.
@@ -51,6 +52,8 @@ Mua sắm quốc phòng được chuẩn hóa và kiểm soát chặt hơn mua h
 Nhu cầu mua sắm trong nước có thể tài trợ quá trình hình thành năng lực trước khi thị trường xuất khẩu mở ra, tức đóng vai trò **khách hàng đầu mối (anchor demand)**.
 
 Cơ chế này tương tự chính sách công nghiệp và mua sắm công, nhưng đi kèm yêu cầu an ninh quốc gia cao hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Doanh thu phụ thuộc backlog và thường không đều** tiếp nhận điểm tựa từ **DAPA và thể chế mua sắm quốc phòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng backlog quan trọng hơn quy mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Doanh thu phụ thuộc backlog và thường không đều
 
@@ -73,6 +76,8 @@ Doanh thu
 
 Backlog vì vậy tạo khả năng dự báo nhưng không phải tiền mặt hay lợi nhuận hiện tại.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Chất lượng backlog quan trọng hơn quy mô** tiếp nhận điểm tựa từ **Doanh thu phụ thuộc backlog và thường không đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lực tích hợp hệ thống là một lợi thế khó sao chép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chất lượng backlog quan trọng hơn quy mô
 
 Hai hợp đồng cùng giá trị có thể có kinh tế hoàn toàn khác nhau tùy:
@@ -88,6 +93,8 @@ Hai hợp đồng cùng giá trị có thể có kinh tế hoàn toàn khác nha
 Một đơn hàng lớn nhưng đòi chuyển giao công nghệ và nội địa hóa rất cao có thể giữ lại ít giá trị hơn một hợp đồng nội địa nhỏ hơn.
 
 Vì vậy luôn hỏi: **biên lợi nhuận và điều khoản tiền mặt nào thực sự nằm trong backlog?**
+
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Năng lực tích hợp hệ thống là một lợi thế khó sao chép** tiếp nhận điểm tựa từ **Chất lượng backlog quan trọng hơn quy mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tin cậy và chứng nhận tạo chi phí chuyển đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Năng lực tích hợp hệ thống là một lợi thế khó sao chép
 
@@ -108,6 +115,8 @@ Hàn Quốc có thể tận dụng năng lực tích lũy từ:
 
 Năng lực tích hợp khó sao chép vì phần lớn tri thức mang tính ngầm và chỉ được chứng minh qua thử nghiệm, vận hành thực tế và phản hồi trong nhiều năm.
 
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Độ tin cậy và chứng nhận tạo chi phí chuyển đổi** tiếp nhận điểm tựa từ **Năng lực tích hợp hệ thống là một lợi thế khó sao chép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường cong học tập: sản lượng tích lũy có thể làm chi phí đơn vị giảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Độ tin cậy và chứng nhận tạo chi phí chuyển đổi
 
 Khi một nền tảng hoặc phân hệ đã được chứng nhận, đổi nhà cung cấp có thể yêu cầu thử nghiệm lại, thiết kế lại và đào tạo lại hệ thống hậu cần.
@@ -117,6 +126,8 @@ Khi một nền tảng hoặc phân hệ đã được chứng nhận, đổi nh
 Nhưng cùng cơ chế đó làm việc gia nhập ngành rất chậm: một startup có nguyên mẫu tốt vẫn chưa đủ nếu thiếu lịch sử chứng nhận và triển khai.
 
 Quy định vừa là rào cản vừa có thể trở thành lợi thế của doanh nghiệp đã được chứng minh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Đường cong học tập: sản lượng tích lũy có thể làm chi phí đơn vị giảm** tiếp nhận điểm tựa từ **Độ tin cậy và chứng nhận tạo chi phí chuyển đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí R&D cố định và kinh tế vòng đời nền tảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đường cong học tập: sản lượng tích lũy có thể làm chi phí đơn vị giảm
 
@@ -131,6 +142,8 @@ trong đó `C_n` là chi phí xấp xỉ tại mức sản lượng tích lũy `
 Đường cong thực tế khác nhau theo sản phẩm, nhưng trực giác quan trọng là: sản lượng lớn hơn giúp phân bổ chi phí kỹ thuật và dụng cụ, đồng thời cải thiện quy trình.
 
 Đơn hàng xuất khẩu vì vậy có thể làm kinh tế của cả nền tảng trong nước tốt hơn nhờ tăng sản lượng tích lũy.
+
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Chi phí R&D cố định và kinh tế vòng đời nền tảng** tiếp nhận điểm tựa từ **Đường cong học tập: sản lượng tích lũy có thể làm chi phí đơn vị giảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo trì vòng đời: nền thiết bị đã triển khai tạo doanh thu định kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chi phí R&D cố định và kinh tế vòng đời nền tảng
 
@@ -151,6 +164,8 @@ Phát triển
 
 Một nền tảng thành công có thể tạo doanh thu trong nhiều thập niên.
 
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Bảo trì vòng đời: nền thiết bị đã triển khai tạo doanh thu định kỳ** tiếp nhận điểm tựa từ **Chi phí R&D cố định và kinh tế vòng đời nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gói xuất khẩu: sản phẩm đơn lẻ chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bảo trì vòng đời: nền thiết bị đã triển khai tạo doanh thu định kỳ
 
 Nền tảng quân sự cần:
@@ -167,6 +182,8 @@ Nền tảng quân sự cần:
 Khách hàng đánh giá **tổng chi phí vòng đời**, không chỉ giá mua lúc đầu.
 
 Nhà cung cấp có mạng bảo trì mạnh có thêm một lớp lợi thế cạnh tranh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Gói xuất khẩu: sản phẩm đơn lẻ chưa đủ** tiếp nhận điểm tựa từ **Bảo trì vòng đời: nền thiết bị đã triển khai tạo doanh thu định kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội địa hóa và offset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Gói xuất khẩu: sản phẩm đơn lẻ chưa đủ
 
@@ -186,6 +203,8 @@ Vì vậy đối thủ có thông số kỹ thuật hơi thấp hơn vẫn có t
 
 Đây là lý do xuất khẩu quốc phòng vừa là kinh doanh vừa gắn với ngoại giao.
 
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Nội địa hóa và offset** tiếp nhận điểm tựa từ **Gói xuất khẩu: sản phẩm đơn lẻ chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phê duyệt xuất khẩu và rủi ro chính trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nội địa hóa và offset
 
 Chính phủ nước mua thường yêu cầu **nội địa hóa hoặc bù trừ (offset/localization / 절충교역·현지화)** như:
@@ -200,6 +219,8 @@ Những điều kiện này giúp thắng hợp đồng nhưng có thể làm gi
 
 Khi phân tích thương vụ, không chỉ hỏi tổng giá trị đơn hàng mà phải hỏi **bao nhiêu giá trị kinh tế và IP thực sự ở lại với nhà xuất khẩu**.
 
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Phê duyệt xuất khẩu và rủi ro chính trị** tiếp nhận điểm tựa từ **Nội địa hóa và offset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ giá và hợp đồng chu kỳ dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phê duyệt xuất khẩu và rủi ro chính trị
 
 Bán sản phẩm quốc phòng có thể cần giấy phép xuất khẩu và phê duyệt của chính phủ.
@@ -210,6 +231,8 @@ Quan hệ chính trị có thể đẩy nhanh hoặc chặn giao dịch độc l
 
 Vì vậy quy mô thị trường khả dụng luôn bị điều kiện hóa bởi chính sách.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Tỷ giá và hợp đồng chu kỳ dài** tiếp nhận điểm tựa từ **Phê duyệt xuất khẩu và rủi ro chính trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn lưu động: tăng trưởng có thể hút tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tỷ giá và hợp đồng chu kỳ dài
 
 Hợp đồng xuất khẩu có thể định giá bằng USD hoặc EUR trong khi nhiều chi phí phát sinh bằng KRW.
@@ -219,6 +242,8 @@ Thời gian hợp đồng dài làm phơi nhiễm tỷ giá lớn hơn và việ
 Các mốc thanh toán cũng rất quan trọng; trả trước lớn và thanh toán dồn về cuối tạo kinh tế vốn lưu động hoàn toàn khác nhau.
 
 Không nên giả định KRW yếu luôn làm biên lợi nhuận tăng nếu phòng hộ, nội địa hóa hoặc linh kiện nhập khẩu bù trừ tác động đó.
+
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Vốn lưu động: tăng trưởng có thể hút tiền** tiếp nhận điểm tựa từ **Tỷ giá và hợp đồng chu kỳ dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lạm phát chi phí và rủi ro hợp đồng giá cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vốn lưu động: tăng trưởng có thể hút tiền
 
@@ -234,6 +259,8 @@ Tài sản hợp đồng / khoản phải thu tăng
 
 Do đó doanh thu tăng vẫn có thể đi cùng CFO yếu, đặc biệt trong giai đoạn xuất khẩu mở rộng nhanh.
 
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Lạm phát chi phí và rủi ro hợp đồng giá cố định** tiếp nhận điểm tựa từ **Vốn lưu động: tăng trưởng có thể hút tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biên lợi nhuận trong nước và xuất khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Lạm phát chi phí và rủi ro hợp đồng giá cố định
 
 Nếu hợp đồng cố định giá nhưng thép, điện tử hoặc lao động tăng chi phí bất ngờ, biên lợi nhuận bị thu hẹp.
@@ -241,6 +268,8 @@ Nếu hợp đồng cố định giá nhưng thép, điện tử hoặc lao đ�
 Một số hợp đồng có điều khoản điều chỉnh theo lạm phát, số khác không.
 
 Chất lượng backlog vì vậy còn phụ thuộc mức bảo vệ trước lạm phát chi phí.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Biên lợi nhuận trong nước và xuất khẩu** tiếp nhận điểm tựa từ **Lạm phát chi phí và rủi ro hợp đồng giá cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phát triển máy bay có chu kỳ cực dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Biên lợi nhuận trong nước và xuất khẩu
 
@@ -252,6 +281,8 @@ Vì vậy tỷ trọng xuất khẩu tăng không tự động đồng nghĩa bi
 
 # Hàng không vũ trụ (Aerospace / 항공우주)
 
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Phát triển máy bay có chu kỳ cực dài** tiếp nhận điểm tựa từ **Biên lợi nhuận trong nước và xuất khẩu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lợi thế từ chứng nhận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Phát triển máy bay có chu kỳ cực dài
 
 Phát triển máy bay gồm thiết kế, nguyên mẫu, thử bay, chứng nhận và tăng sản lượng.
@@ -261,6 +292,8 @@ Chi phí R&D cố định rất lớn nên quy mô sản xuất cực kỳ quan 
 Khi nền tảng đã được chứng nhận, mỗi đơn vị bán thêm giúp phân bổ chi phí phát triển. Nhưng nếu không đạt đủ quy mô thị trường, lượng R&D khổng lồ có thể trở thành chi phí mắc kẹt.
 
 Hàng không vũ trụ vì vậy có **giá trị quyền chọn cao nhưng chi phí thất bại cũng rất lớn**.
+
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Lợi thế từ chứng nhận** tiếp nhận điểm tựa từ **Phát triển máy bay có chu kỳ cực dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế động cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lợi thế từ chứng nhận
 
@@ -272,6 +305,8 @@ Nhà cung cấp Hàn Quốc có thể tham gia các chương trình toàn cầu 
 
 Cơ hội xuất khẩu này đi cùng rủi ro tập trung khách hàng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Kinh tế động cơ** tiếp nhận điểm tựa từ **Lợi thế từ chứng nhận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu kỳ hàng không dân dụng và quân sự khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Kinh tế động cơ
 
 Động cơ máy bay thường có giá trị dịch vụ hậu mãi lớn: phụ tùng và bảo trì trong suốt vòng đời vận hành.
@@ -279,6 +314,8 @@ Cơ hội xuất khẩu này đi cùng rủi ro tập trung khách hàng.
 Bán động cơ ban đầu có thể biên thấp hơn trong khi dịch vụ vòng đời tạo lợi nhuận cao hơn.
 
 Lô-gic (logic / 논리) “nền thiết bị đã lắp đặt” này tương tự bảo trì quốc phòng và thiết bị y tế.
+
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Chu kỳ hàng không dân dụng và quân sự khác nhau** tiếp nhận điểm tựa từ **Kinh tế động cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi giá trị vũ trụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chu kỳ hàng không dân dụng và quân sự khác nhau
 
@@ -289,6 +326,8 @@ Hàng không quân sự phụ thuộc ngân sách chính phủ và địa chính
 Dùng chung năng lực kỹ thuật và sản xuất có thể giúp đa dạng chu kỳ, nhưng hợp đồng và kinh tế từng mảng vẫn khác nhau.
 
 # Công nghiệp vũ trụ (Space / 우주산업)
+
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Chu kỳ hàng không dân dụng và quân sự khác nhau** xác định đầu vào; **Chuỗi giá trị vũ trụ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chính phủ là khách hàng đầu mối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi giá trị vũ trụ
 
@@ -304,6 +343,8 @@ Phân tích dữ liệu / ứng dụng
 
 Phần cứng thượng nguồn thâm dụng vốn và kỹ thuật. Lớp dữ liệu và ứng dụng phía dưới có khả năng mở rộng gần giống phần mềm hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Chuỗi giá trị vũ trụ** xác định đầu vào; **Chính phủ là khách hàng đầu mối** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Giá trị có thể dịch chuyển xuống lớp dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chính phủ là khách hàng đầu mối
 
 Khí tượng, trinh sát quốc phòng, liên lạc và nhiệm vụ khoa học tạo nhu cầu ban đầu.
@@ -311,6 +352,8 @@ Khí tượng, trinh sát quốc phòng, liên lạc và nhiệm vụ khoa học
 Nếu thiếu nhiệm vụ công, thị trường tư nhân có thể chưa đủ lớn để biện minh cho chi phí cố định rất cao của phát triển tên lửa và vệ tinh.
 
 Mua sắm chính phủ vì vậy có thể xây năng lực cho cả hệ sinh thái.
+
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Chính phủ là khách hàng đầu mối** nêu điều cần giải thích; **Giá trị có thể dịch chuyển xuống lớp dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **AI và hệ thống tự hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giá trị có thể dịch chuyển xuống lớp dữ liệu
 
@@ -341,6 +384,8 @@ Ranh giới giữa công ty quốc phòng và công ty công nghệ ngày càng 
 1. quy mô thương mại có thể làm giảm chi phí công nghệ quốc phòng;
 2. kiểm soát xuất khẩu và quy tắc an ninh có thể lan sang mảng thương mại.
 
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Giá trị có thể dịch chuyển xuống lớp dữ liệu** nêu điều cần giải thích; **AI và hệ thống tự hành** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhãn “chiến lược” không xóa kỷ luật kinh doanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## AI và hệ thống tự hành
 
 AI có thể hỗ trợ nhận diện mục tiêu, hỗ trợ quyết định, bảo trì dự đoán, phương tiện tự hành và phòng thủ mạng.
@@ -365,6 +410,8 @@ Trả một **phần bù chống chịu (resilience premium)** thấp hơn tổn
 
 Đây là lý do chính phủ có thể hỗ trợ công suất trong nước hoặc ở quốc gia đồng minh ngay cả khi nhà cung cấp nước ngoài khác rẻ hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Nhãn “chiến lược” không xóa kỷ luật kinh doanh** tiếp nhận điểm tựa từ **AI và hệ thống tự hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà thầu chính / đơn vị tích hợp nền tảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhãn “chiến lược” không xóa kỷ luật kinh doanh
 
 Tư cách ngành chiến lược có thể giúp tiếp cận chính sách hỗ trợ tốt hơn, nhưng doanh nghiệp vẫn chịu:
@@ -378,6 +425,8 @@ Tư cách ngành chiến lược có thể giúp tiếp cận chính sách hỗ 
 Hỗ trợ chính sách thay đổi cấu trúc rủi ro–lợi nhuận; nó không vô hiệu hóa quy luật kinh tế.
 
 # Các kiểu doanh nghiệp cần phân biệt
+
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Nhà thầu chính / đơn vị tích hợp nền tảng** tiếp nhận điểm tựa từ **Nhãn “chiến lược” không xóa kỷ luật kinh doanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà cung cấp phân hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhà thầu chính / đơn vị tích hợp nền tảng
 
@@ -393,6 +442,8 @@ Vốn lưu động
 Tỷ trọng dịch vụ vòng đời
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Nhà cung cấp phân hệ** tiếp nhận điểm tựa từ **Nhà thầu chính / đơn vị tích hợp nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhà cung cấp linh kiện hàng không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhà cung cấp phân hệ
 
 Nhà cung cấp phân hệ tạo giá trị qua qualification, độ tin cậy và khả năng tích hợp chứ không chỉ qua sản lượng. Hãy đọc backlog cùng cycle nghiệm thu và yêu cầu bảo mật.
@@ -405,6 +456,8 @@ Hạn chế xuất khẩu
 Giá trị linh kiện trên mỗi nền tảng
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Nhà cung cấp linh kiện hàng không** tiếp nhận điểm tựa từ **Nhà cung cấp phân hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công ty dữ liệu vũ trụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhà cung cấp linh kiện hàng không
 
 Linh kiện hàng không chịu tiêu chuẩn an toàn và chu kỳ cấp phép dài. Vì vậy doanh thu tương lai phụ thuộc certification, fleet installed base và khả năng giao đúng hạn.
@@ -416,6 +469,8 @@ Chứng nhận
 Tỷ giá
 Dịch vụ hậu mãi
 ```
+
+> **Chuyển mạch:** Trong **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)**, **Nhà cung cấp linh kiện hàng không** nêu điều cần giải thích; **Công ty dữ liệu vũ trụ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Công ty dữ liệu vũ trụ
 
@@ -487,3 +542,5 @@ Bảo trì / nâng cấp
 # Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md), [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
+
+> **Bàn giao:** Sau **Công ty dữ liệu vũ trụ**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
