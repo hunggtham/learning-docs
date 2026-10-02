@@ -1,6 +1,6 @@
 # Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) và vòng đời (lifecycle / 생명주기)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) và vòng đời (lifecycle / 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Host môi trường (environment / 환경)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) và vòng đời (lifecycle / 생명주기)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Host môi trường (environment / 환경)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vòng lặp sự kiện (event loop / 이벤트 루프) và rendering opportunity** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối browser runtime với lifecycle, event loop và rendering, để theo dõi một thao tác người dùng đến lúc giao diện cập nhật.
 
 JavaScript ngôn ngữ (language / 언어) là một phần của trình duyệt (browser / 브라우저) ứng dụng (application / 애플리케이션), không phải toàn bộ
 trình duyệt (browser / 브라우저). ECMAScript cung cấp thực thi (execution / 실행) ngữ nghĩa (semantics / 의미론); trình duyệt (browser / 브라우저) cung cấp realm,

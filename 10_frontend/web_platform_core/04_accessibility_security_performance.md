@@ -1,6 +1,6 @@
 # Khả năng tiếp cận (accessibility / 접근성), bảo mật (security / 보안) và hiệu năng (performance / 성능) như tính đúng đắn (correctness / 정확성)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khả năng tiếp cận (accessibility / 접근성), bảo mật (security / 보안) và hiệu năng (performance / 성능) như tính đúng đắn (correctness / 정확성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khả năng tiếp cận (accessibility / 접근성)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bảo mật (security / 보안)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khả năng tiếp cận (accessibility / 접근성), bảo mật (security / 보안) và hiệu năng (performance / 성능) như tính đúng đắn (correctness / 정확성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khả năng tiếp cận (accessibility / 접근성)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bảo mật (security / 보안)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối accessibility với security và performance, để đánh giá frontend theo trải nghiệm, rủi ro và chi phí xử lý cùng lúc.
 
 Ba concern này không phải checklist cuối sprint. Chúng là ràng buộc (constraint / 제약조건) của cùng
 một nền tảng (platform / 플랫폼) đặc tả hợp đồng (contract / 계약): người dùng phải có thể hiểu/tương tác, dữ liệu không

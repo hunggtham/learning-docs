@@ -1,6 +1,6 @@
 # Nền tảng Web (web platform / 웹 플랫폼) cốt lõi (core / 핵심)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng Web (web platform / 웹 플랫폼) cốt lõi (core / 핵심)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) conceptual spine** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Cách đọc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Nền tảng Web (web platform / 웹 플랫폼) cốt lõi (core / 핵심)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chuẩn gốc (canonical / 정본) conceptual spine** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Cách đọc** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của web platform core, rồi nối browser, rendering, framework, accessibility và performance.
 
 `web_platform_core/` là đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) cho các concept đứng trước một
 khung phần mềm (framework / 프레임워크) frontend cụ thể. Lớp này trả lời trình duyệt (browser / 브라우저) thực thi document, style,

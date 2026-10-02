@@ -1,6 +1,6 @@
 # Khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계): React và WebSquare
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계): React và WebSquare**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **React** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **WebSquare** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계): React và WebSquare**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **React** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **WebSquare** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối framework boundary với React, WebSquare và browser runtime, để xác định phần nào thuộc framework và phần nào thuộc nền tảng web.
 
 Khung phần mềm (framework / 프레임워크) giúp tổ chức ứng dụng (application / 애플리케이션) trạng thái (state / 상태) và rendering, nhưng không phải một
 trình duyệt (browser / 브라우저) mới. Khi khung phần mềm (framework / 프레임워크) hành vi (behavior / 동작) khó hiểu, quay về ba câu hỏi: thành phần nguyên thủy (primitive / 기본 요소)

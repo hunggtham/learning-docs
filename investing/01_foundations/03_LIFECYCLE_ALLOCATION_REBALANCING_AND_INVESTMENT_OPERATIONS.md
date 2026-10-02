@@ -1,7 +1,6 @@
 # Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục
 
-> **Mạch đọc:** Đặt **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Danh mục đầu tư chỉ là một phần của bảng cân đối cá nhân** sang **2. Vốn con người**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Danh mục đầu tư chỉ là một phần của bảng cân đối cá nhân** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Vốn con người** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối lifecycle, allocation và rebalancing với vận hành danh mục, để quyết định thay đổi theo dòng tiền và trọng số thực tế.
 
 > Xây danh mục không kết thúc ở việc chọn tỷ trọng cổ phiếu và trái phiếu. Một kế hoạch đầu tư phải sống cùng con người qua nhiều giai đoạn nghề nghiệp, thay đổi thu nhập, nợ, nhà ở, gia đình, thuế và nhu cầu thanh khoản. Chương này chuyển lý thuyết phân bổ tài sản thành hệ thống vận hành thực tế.
 
@@ -13,6 +12,8 @@ Một người có lương ổn định, ít nợ và mục tiêu dài hạn có
 
 Do đó quyết định đầu tư phải bắt đầu từ bảng cân đối tổng thể chứ không chỉ tài khoản chứng khoán.
 
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **2. Vốn con người** tiếp nhận điểm tựa từ **1. Danh mục đầu tư chỉ là một phần của bảng cân đối cá nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Phân tầng mục tiêu theo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Vốn con người
 
 Vốn con người (human capital) là giá trị kinh tế của thu nhập nghề nghiệp trong tương lai.
@@ -20,6 +21,8 @@ Vốn con người (human capital) là giá trị kinh tế của thu nhập ngh
 Nếu công việc ổn định và ít nhạy với chu kỳ, vốn con người có thể giống một dòng thu nhập tương đối phòng thủ. Nếu làm trong ngành công nghệ chu kỳ, bonus và khả năng việc làm có thể cùng giảm khi cổ phiếu công nghệ giảm.
 
 Vì vậy người có thu nhập đã nhạy với một ngành nên thận trọng khi tài sản tài chính cũng tập trung vào cùng ngành đó.
+
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **3. Phân tầng mục tiêu theo thời gian** tiếp nhận điểm tựa từ **2. Vốn con người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Đồng tiền của nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Phân tầng mục tiêu theo thời gian
 
@@ -34,11 +37,15 @@ Vệ tinh: ý tưởng chủ động hoặc rủi ro cao hơn
 
 Tầng thanh khoản không cần tối đa hóa lợi suất. Nhiệm vụ của nó là bảo đảm khả năng chi trả và tránh bán cưỡng bức.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **4. Đồng tiền của nghĩa vụ** tiếp nhận điểm tựa từ **3. Phân tầng mục tiêu theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Rủi ro chịu được thay đổi theo vòng đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Đồng tiền của nghĩa vụ
 
 Nếu mục tiêu là mua nhà tại Hàn Quốc, nghĩa vụ chủ yếu bằng KRW. Nếu hỗ trợ gia đình hoặc mua tài sản tại Việt Nam, một phần nghĩa vụ có thể bằng VND.
 
 Tài sản và nghĩa vụ khác đồng tiền tạo rủi ro tỷ giá. Vì vậy phân bổ tiền tệ phải xuất phát từ nơi tiền sẽ được sử dụng trong tương lai.
+
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **5. Rủi ro chịu được thay đổi theo vòng đời** tiếp nhận điểm tựa từ **4. Đồng tiền của nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Phân bổ chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Rủi ro chịu được thay đổi theo vòng đời
 
@@ -56,6 +63,8 @@ Sức khỏe hoặc hoàn cảnh gia đình thay đổi
 
 Kế hoạch phân bổ nên có quy tắc xem xét khi các biến này thay đổi đáng kể.
 
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **6. Phân bổ chiến lược** tiếp nhận điểm tựa từ **5. Rủi ro chịu được thay đổi theo vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phân bổ chiến thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Phân bổ chiến lược
 
 Phân bổ chiến lược là cấu trúc dài hạn dựa trên mục tiêu và khả năng chịu rủi ro.
@@ -72,6 +81,8 @@ Cơ hội chủ động
 
 Cách này bền hơn việc xây danh mục từ tên ETF vì sản phẩm có thể thay đổi nhưng chức năng kinh tế ít thay đổi hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **7. Phân bổ chiến thuật** tiếp nhận điểm tựa từ **6. Phân bổ chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Tái cân bằng theo lịch và theo dải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Phân bổ chiến thuật
 
 Phân bổ chiến thuật chỉ nên là sai lệch có giới hạn quanh phân bổ chiến lược.
@@ -87,6 +98,8 @@ Tỷ trọng tối đa bao nhiêu?
 Điều kiện nào khiến quay về trung tính?
 ```
 
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **8. Tái cân bằng theo lịch và theo dải** tiếp nhận điểm tựa từ **7. Phân bổ chiến thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Tái cân bằng không phải chiến lược tạo alpha tự động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Tái cân bằng theo lịch và theo dải
 
 Tái cân bằng theo lịch có thể thực hiện mỗi quý hoặc mỗi năm. Tái cân bằng theo dải chỉ hành động khi tỷ trọng lệch khỏi phạm vi cho phép.
@@ -95,11 +108,15 @@ Dải tái cân bằng thường giảm giao dịch không cần thiết và cho
 
 Có thể ưu tiên dùng dòng tiền mới để đưa danh mục về mục tiêu trước khi bán tài sản đang nắm, từ đó giảm thuế và chi phí.
 
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **9. Tái cân bằng không phải chiến lược tạo alpha tự động** tiếp nhận điểm tựa từ **8. Tái cân bằng theo lịch và theo dải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Rủi ro thứ tự lợi suất khi gần mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Tái cân bằng không phải chiến lược tạo alpha tự động
 
 Tái cân bằng giúp kiểm soát rủi ro nhưng không bảo đảm lợi suất vượt trội. Trong xu hướng kéo dài, bán tài sản thắng để mua tài sản yếu có thể làm lợi suất thấp hơn.
 
 Giá trị chính của tái cân bằng là giữ danh mục trong phạm vi rủi ro đã chấp nhận.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **10. Rủi ro thứ tự lợi suất khi gần mục tiêu** tiếp nhận điểm tựa từ **9. Tái cân bằng không phải chiến lược tạo alpha tự động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Rủi ro tái đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Rủi ro thứ tự lợi suất khi gần mục tiêu
 
@@ -109,11 +126,15 @@ Khi còn nhiều năm tích lũy, một đợt giảm sớm có thể được b
 
 Một cách giảm rủi ro là duy trì các tầng tiền mặt hoặc trái phiếu đáo hạn phù hợp với chi tiêu vài năm tới.
 
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **11. Rủi ro tái đầu tư** tiếp nhận điểm tựa từ **10. Rủi ro thứ tự lợi suất khi gần mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Thuế và vị trí tài sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Rủi ro tái đầu tư
 
 Tài sản ngắn hạn ít biến động giá nhưng có rủi ro tái đầu tư (reinvestment risk). Khi đáo hạn, lãi suất mới có thể thấp hơn nhiều.
 
 Vì vậy dùng liên tục T-bill một tháng cho nghĩa vụ chắc chắn trong một năm tạo sự không chắc chắn về mức lãi trong tương lai. Khớp kỳ hạn với nghĩa vụ có thể hợp lý hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **12. Thuế và vị trí tài sản** tiếp nhận điểm tựa từ **11. Rủi ro tái đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Vòng quay danh mục và thuế kéo lùi lợi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Thuế và vị trí tài sản
 
@@ -131,6 +152,8 @@ Khấu trừ thuế ở nước nguồn
 
 Quy định cụ thể thay đổi theo quốc gia và thời điểm, nên phải kiểm tra nguồn chính thức trước quyết định thật.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **13. Vòng quay danh mục và thuế kéo lùi lợi suất** tiếp nhận điểm tựa từ **12. Thuế và vị trí tài sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Lưu ký và quyền sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Vòng quay danh mục và thuế kéo lùi lợi suất
 
 Giao dịch thường xuyên tạo phí, spread, trượt giá và có thể làm phát sinh thuế sớm hơn.
@@ -138,6 +161,8 @@ Giao dịch thường xuyên tạo phí, spread, trượt giá và có thể là
 Một chiến lược tốt trên dữ liệu trước chi phí có thể trở nên kém sau khi tính tổng chi phí sở hữu.
 
 Lợi thế đầu tư phải đủ lớn để vượt qua ma sát thực tế.
+
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **14. Lưu ký và quyền sở hữu** tiếp nhận điểm tựa từ **13. Vòng quay danh mục và thuế kéo lùi lợi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Người sở hữu thụ hưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Lưu ký và quyền sở hữu
 
@@ -147,17 +172,23 @@ Cần phân biệt tài sản của khách hàng với tài sản của công ty
 
 Rủi ro lưu ký là rủi ro vận hành/pháp lý, không giống rủi ro giá thị trường.
 
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **15. Người sở hữu thụ hưởng** tiếp nhận điểm tựa từ **14. Lưu ký và quyền sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Cho vay chứng khoán trong quỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Người sở hữu thụ hưởng
 
 Người sở hữu thụ hưởng (beneficial owner) là người có quyền lợi kinh tế cuối cùng dù chứng khoán có thể được ghi dưới tên nominee hoặc tài khoản tổng.
 
 Cấu trúc này phổ biến trong đầu tư xuyên biên giới. Cần biết quyền biểu quyết, cổ tức, hành động doanh nghiệp và tài sản được phân bổ cho khách hàng như thế nào.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **16. Cho vay chứng khoán trong quỹ** tiếp nhận điểm tựa từ **15. Người sở hữu thụ hưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tracking difference sau mọi chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Cho vay chứng khoán trong quỹ
 
 ETF hoặc quỹ có thể cho vay chứng khoán để tạo thêm thu nhập. Điều này có thể giảm sai lệch bám chỉ số nhưng thêm rủi ro người vay, tài sản thế chấp và vận hành.
 
 Cần đọc chính sách cho vay, tỷ lệ chia doanh thu và cách quản lý tài sản thế chấp thay vì chỉ nhìn phí quản lý.
+
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **17. Tracking difference sau mọi chi phí** tiếp nhận điểm tựa từ **16. Cho vay chứng khoán trong quỹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Tổng chi phí sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Tracking difference sau mọi chi phí
 
@@ -174,6 +205,8 @@ Thời điểm tái cân bằng
 ```
 
 Vì vậy nên so lợi suất thực tế của quỹ với chỉ số sau cùng quy ước thuế/phân phối thay vì chỉ nhìn expense ratio.
+
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **18. Tổng chi phí sở hữu** tiếp nhận điểm tựa từ **17. Tracking difference sau mọi chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Dòng tiền mới là công cụ tái cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Tổng chi phí sở hữu
 
@@ -193,6 +226,8 @@ Chi phí cơ hội của tiền mặt
 
 Sản phẩm “0 phí giao dịch” không có nghĩa tổng chi phí bằng 0.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **19. Dòng tiền mới là công cụ tái cân bằng** tiếp nhận điểm tựa từ **18. Tổng chi phí sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Khi nào nên bán?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Dòng tiền mới là công cụ tái cân bằng
 
 Đối với người đang tích lũy, đóng góp định kỳ là cách tái cân bằng rất hiệu quả.
@@ -200,6 +235,8 @@ Sản phẩm “0 phí giao dịch” không có nghĩa tổng chi phí bằng 0
 Thay vì bán tài sản đang cao hơn mục tiêu, có thể chuyển dòng tiền mới vào tài sản đang thấp hơn mục tiêu cho tới khi tỷ trọng được khôi phục.
 
 Cách này giảm turnover và có thể giảm ma sát thuế.
+
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **20. Khi nào nên bán?** tiếp nhận điểm tựa từ **19. Dòng tiền mới là công cụ tái cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Kế hoạch chuyển đổi khi mục tiêu đến gần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Khi nào nên bán?
 
@@ -215,6 +252,8 @@ Sản phẩm/cấu trúc không còn phù hợp
 Có lựa chọn tốt hơn sau chi phí và thuế
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **21. Kế hoạch chuyển đổi khi mục tiêu đến gần** tiếp nhận điểm tựa từ **20. Khi nào nên bán?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Kiểm thử nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Kế hoạch chuyển đổi khi mục tiêu đến gần
 
 Khi mục tiêu từ dài hạn trở thành ngắn hạn, tỷ trọng tài sản rủi ro dành cho mục tiêu đó nên giảm dần nếu tổn thất lớn có thể làm thất bại kế hoạch.
@@ -222,6 +261,8 @@ Khi mục tiêu từ dài hạn trở thành ngắn hạn, tỷ trọng tài s�
 Đây không phải dự báo thị trường mà là quản trị khả năng chi trả.
 
 Một mục tiêu chắc chắn trong 12 tháng không nên phụ thuộc vào việc thị trường cổ phiếu phục hồi đúng lúc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **22. Kiểm thử nghĩa vụ** tiếp nhận điểm tựa từ **21. Kế hoạch chuyển đổi khi mục tiêu đến gần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Investment chính sách (policy / 정책) Statement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Kiểm thử nghĩa vụ
 
@@ -237,6 +278,8 @@ Thị trường cổ phiếu giảm cùng lúc
 ```
 
 Danh mục tốt phải sống cùng bảng cân đối cá nhân trong các trạng thái này.
+
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **23. Investment chính sách (policy / 정책) Statement** tiếp nhận điểm tựa từ **22. Kiểm thử nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Đánh giá danh mục theo tháng/quý/năm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Investment chính sách (policy / 정책) Statement
 
@@ -258,6 +301,8 @@ Quy tắc đánh giá lại
 
 IPS càng đơn giản và thực thi được càng tốt.
 
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **24. Đánh giá danh mục theo tháng/quý/năm** tiếp nhận điểm tựa từ **23. Investment chính sách (policy / 정책) Statement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Không thay đổi chiến lược chỉ vì một quý kém** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Đánh giá danh mục theo tháng/quý/năm
 
 Đánh giá hàng tháng nên tập trung vào dòng tiền, tỷ trọng, vi phạm giới hạn và sự kiện lớn.
@@ -265,6 +310,8 @@ IPS càng đơn giản và thực thi được càng tốt.
 Đánh giá hàng quý có thể xem lại đóng góp lợi suất, mức tập trung, nhân tố và các luận điểm chủ động.
 
 Đánh giá hàng năm nên kiểm tra lại mục tiêu, thu nhập, nợ, nghĩa vụ, khung thuế, sản phẩm và toàn bộ IPS.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **25. Không thay đổi chiến lược chỉ vì một quý kém** tiếp nhận điểm tựa từ **24. Đánh giá danh mục theo tháng/quý/năm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Quy trình vận hành thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Không thay đổi chiến lược chỉ vì một quý kém
 
@@ -277,6 +324,8 @@ Kết quả xấu nhưng nằm trong phân phối dự kiến
 với
 Kết quả xấu vì cơ chế / giả định đã sai
 ```
+
+> **Chuyển mạch:** Trong **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **25. Không thay đổi chiến lược chỉ vì một quý kém** xác định đầu vào; **26. Quy trình vận hành thực tế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 26. Quy trình vận hành thực tế
 
@@ -293,6 +342,8 @@ Cập nhật dòng tiền cá nhân
 → Đánh giá kết quả
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục**, **27. Mô hình tư duy cuối cùng** gom các mảnh từ **26. Quy trình vận hành thực tế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 27. Mô hình tư duy cuối cùng
 
 Đầu tư theo vòng đời là bài toán khớp **tài sản, con người và thời gian**.
@@ -308,4 +359,4 @@ Vốn con người
 
 Danh mục tốt không phải danh mục có Sharpe cao nhất trên dữ liệu lịch sử, mà là danh mục giúp bạn đạt mục tiêu với xác suất đủ cao mà không buộc phải phá kế hoạch giữa đường.
 
-> **Bàn giao:** Sau **27. Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **27. Mô hình tư duy cuối cùng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

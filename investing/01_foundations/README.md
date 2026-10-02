@@ -1,6 +1,6 @@
 # 01 — Nền tảng đầu tư (Foundations)
 
-> **Mạch đọc:** README này là owner của nền tảng đầu tư. Bắt đầu bằng thứ tự đọc để thấy các lớp tiền, rủi ro và vận hành nối nhau ra sao; phần năng lực đầu ra dùng bản đồ đó để kiểm tra người học đã hiểu được gì trước khi đi vào case study.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01 — Nền tảng đầu tư (Foundations)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự đọc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này dùng README làm bản đồ owner của investing, rồi nối foundations, asset classes, trading và risk thành lộ trình học có thứ tự.
 
 Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài sản hoặc chọn cổ phiếu. Mục tiêu là hiểu hệ thống tài chính, cách giá được hình thành, rủi ro danh mục, cách vận hành một kế hoạch đầu tư nhiều năm và cách đánh giá kết quả mà không nhầm may mắn hoặc beta thị trường với kỹ năng.
 
@@ -20,32 +20,20 @@ Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài
 
 [06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md](./06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md) là lớp học sâu: chuyển mục tiêu và nghĩa vụ thành bảng cân đối kinh tế, ngân sách rủi ro, MCTR, tương quan theo trạng thái, tầng thanh khoản, kiểm thử cú sốc kết hợp, kiểm thử ngược, quy tắc tái cân bằng và nhật ký quyết định.
 
-[07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md](./07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md) bổ sung lớp còn thiếu trước portfolio: dòng tiền, bảng cân đối cá nhân, liquidity ladder, debt economics, catastrophic-risk transfer, future liabilities, human capital và investable surplus. Chapter này cố ý đặt câu hỏi “hệ thống tài chính cá nhân có sống sót được không?” trước câu hỏi “asset allocation tối ưu là gì?”.
-
-> **Chuyển mạch:** Danh sách chapter cho biết nên đi qua những lớp nào; phần kế tiếp đổi sang tiêu chí năng lực, để mỗi chapter được đọc như một công cụ giải thích chứ không phải một danh mục tài liệu.
+> **Chuyển mạch:** Trong **01 — Nền tảng đầu tư (Foundations)**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng giải thích tiền của mình đi qua hệ thống nào khi mua chứng khoán, phân biệt rủi ro thị trường, thanh khoản, đối tác và vận hành; xây phân bổ theo mục tiêu thay vì theo mã chứng khoán; đo mức tập trung và đóng góp rủi ro; viết IPS; kiểm thử danh mục và phân tích vì sao danh mục lời hoặc lỗ thay vì chỉ nhìn tổng lợi suất.
 
-Trước khi đi tới portfolio optimization, bạn cũng cần tách được cash flow, liquidity, debt, insurance và future liabilities để biết phần vốn nào thật sự có thể đầu tư dài hạn. Nếu chưa làm được, hãy đọc `07_PERSONAL_FINANCE...` trước `02_PORTFOLIO...` dù số thứ tự file đặt nó ở cuối foundations để không phá cấu trúc hiện có.
-
-> **Chuyển mạch:** Khi đã xác định được năng lực cần có, bài tập tích hợp đưa các khái niệm vào cùng một tình huống: nghĩa vụ, thanh khoản, rủi ro và quyết định đầu tư phải được nhìn trong một hệ thống.
+> **Chuyển mạch:** Ở chặng này của **01 — Nền tảng đầu tư (Foundations)**, **Bài tập tích hợp** tiếp nhận điểm tựa từ **Sau lĩnh vực này bạn cần làm được gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện kiểm thử căng thẳng, lập bản đồ nhân tố, phòng vệ và phân rã kết quả. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để thấy bộ đệm thanh khoản, đòn bẩy, ký quỹ, tài sản thế chấp và rủi ro sống sót tương tác như thế nào.
 
-Để nối portfolio với đời sống thực, dùng [Practical-life decision route](../../psychology/90_connections/07_practical_life_decisions_finance_health_communication_and_career.md), nơi cash runway được đặt cạnh health capacity, negotiation BATNA và career option value thay vì xem chúng như các vấn đề tách rời.
-
 Để chuyển từ đọc sang tự làm, hoàn thành **mô-đun (module / 모듈) 1 — Foundations** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải có `portfolio_ips.md`, ma trận căng thẳng và một kiểm thử ngược chỉ ra điều kiện làm kế hoạch thất bại.
-
-### Thinking Toolkit bridge
-
-Khi vấn đề không còn là “cơ chế đầu tư hoạt động thế nào?” mà chuyển thành “với uncertainty này tôi nên ra quyết định thế nào?”, dùng [Thinking Toolkit](../../thinking/README.md) như lớp reasoning chung. Các cầu nối trực tiếp nhất là [Probability](../../thinking/probability/README.md) → [Expected Value](../../thinking/expected-value/README.md) → [Risk](../../thinking/risk/README.md) → [Decision Making](../../thinking/decision-making/README.md). Để luyện thay vì chỉ đọc, dùng [calibration/Bayesian updating](../../thinking/practice/01_calibration_and_bayesian_updating.md), [sensitivity analysis](../../thinking/practice/02_sensitivity_analysis_and_uncertainty_decomposition.md), [scenario stress testing](../../thinking/practice/03_scenario_planning_and_stress_testing.md) và [decision journal/postmortem](../../thinking/practice/04_decision_journal_and_postmortem.md).
-
-Ranh giới ownership vẫn giữ nguyên: `investing/` sở hữu market/asset/portfolio mechanics; `thinking/` chỉ cung cấp công cụ reasoning có thể tái sử dụng ở nhiều domain.
 
 Sau khi hoàn thành, chuyển sang [02 — Các nhóm tài sản](../02_asset_classes/README.md).
 
-> **Bàn giao:** Sau **Bài tập tích hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Bài tập tích hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

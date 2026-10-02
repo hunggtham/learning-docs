@@ -1,6 +1,6 @@
 # Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các ranh giới (boundary / 경계) chính** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Các ranh giới (boundary / 경계) chính** làm rõ cặp khái niệm dễ lẫn và giới hạn của cách giải thích; sau đó sang **Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối rendering pipeline với DOM, style, layout, paint và compositing, để tìm nút thắt theo từng pha trình duyệt.
 
 Rendering là quá trình biến tài nguyên (resource / 자원) và trạng thái (state / 상태) thành đầu ra (output / 출력) quan sát được. DOM
 không phải rendering cây (tree / 트리), và khung phần mềm (framework / 프레임워크) thành phần (component / 컴포넌트) cây (tree / 트리) cũng không phải DOM.
