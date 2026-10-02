@@ -1,7 +1,6 @@
 # End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)
 
-> **Mạch đọc:** Đọc **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. yêu cầu (requirement / 요구사항) và ranh giới (boundary / 경계)** sang **2. Sensor và analog front-end**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**. Route đi từ requirement và boundary → sensor/analog front-end → sampling, control loop và power stage → firmware timing, fault handling và recovery → đo kiểm end-to-end, để các nhánh electrical cùng phục vụ một hệ điều khiển thật.
 
 Trường hợp (case / 사례) này nối cả chín nhánh trong một hệ nhỏ: đo nhiệt độ, biến đổi analog, sampling, điều khiển, power stage, firmware timing và hardware/software khôi phục (recovery / 복구). Số liệu là giả định để luyện lập luận (reasoning / 추론); không dùng thay cho thiết kế safety-certified.
 
@@ -18,8 +17,7 @@ Mục tiêu:
 
 Ranh giới (boundary / 경계) gồm sensor, analog front-end, ADC, MCU, PWM/MOSFET, heater, chamber và telemetry. Không đưa laptop/UI vào an toàn (safety / 안전) ranh giới (boundary / 경계); UI chỉ là observer.
 
-
-> **Chuyển mạch:** Từ **1. yêu cầu (requirement / 요구사항) và ranh giới (boundary / 경계)**, ta sang **2. Sensor và analog front-end** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **1. yêu cầu (requirement / 요구사항) và ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **2. Sensor và analog front-end** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Sampling và filtering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. Sensor và analog front-end
 
@@ -33,8 +31,7 @@ Sau gain, 1 °C tương ứng 28 mV; lượng tử hóa lý tưởng tương đ�
 
 Nếu sensor nguồn (source / 소스) impedance và ADC acquisition capacitor tạo settling lỗi (error / 오류), cần buffer hoặc tăng acquisition thời gian (time / 시간). Đây là lý do không thể chọn ADC chỉ bằng số bit.
 
-
-> **Chuyển mạch:** Từ **2. Sensor và analog front-end**, ta sang **3. Sampling và filtering** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **3. Sampling và filtering** tiếp nhận điểm tựa từ **2. Sensor và analog front-end** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Plant và controller** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Sampling và filtering
 
@@ -42,8 +39,7 @@ Thermal plant chậm nên tín hiệu (signal / 신호) hữu ích dưới 1 Hz,
 
 Một moving average 10 mẫu ở 100 Hz thêm delay trung tâm khoảng 45 ms. Delay này nhỏ so với plant thời gian (time / 시간) constant 20 s nhưng phải ghi vào điều khiển (control / 제어) mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **3. Sampling và filtering**, ta sang **4. Plant và controller** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **4. Plant và controller** tiếp nhận điểm tựa từ **3. Sampling và filtering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Power stage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Plant và controller
 
@@ -55,8 +51,7 @@ Giả sử `τ = 20 s` và `K = 0.8 °C/% duty`. Controller chạy mỗi 100 ms,
 
 Khi tham chiếu (reference / 참조) đổi từ 25 lên 60 °C, heater saturate lúc đầu. kiểm thử (test / 테스트) phải đo rise thời gian (time / 시간), overshoot, settling và integral trạng thái (state / 상태) sau khi rời saturation; chỉ nhìn temperature cuối cùng là không đủ.
 
-
-> **Chuyển mạch:** Từ **4. Plant và controller**, ta sang **5. Power stage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **5. Power stage** tiếp nhận điểm tựa từ **4. Plant và controller** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Firmware máy trạng thái (state machine / 상태 머신)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Power stage
 
@@ -70,12 +65,9 @@ Power đường dẫn (path / 경로) phải có:
 
 Independent thermal cutoff đặt ngoài MCU để xử lý MOSFET stuck-on hoặc firmware runaway. MOSFET temperature phải được tính từ conduction mất mát (loss / 손실), switching mất mát (loss / 손실) và thermal resistance.
 
-
-> **Chuyển mạch:** Từ **5. Power stage**, ta sang **6. Firmware máy trạng thái (state machine / 상태 머신)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **6. Firmware máy trạng thái (state machine / 상태 머신)** tiếp nhận điểm tựa từ **5. Power stage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Timing và quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Firmware máy trạng thái (state machine / 상태 머신)
-Phần “6. Firmware máy trạng thái (state machine / 상태 머신)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 BOOT → SELF_TEST → IDLE → HEATING → HOLD
@@ -90,8 +82,7 @@ Các bất biến (invariant / 불변식):
 - FAULT phải tắt đầu ra (output / 출력) trước khi ghi telemetry;
 - khôi phục (recovery / 복구) cần tường minh (explicit / 명시적) acknowledgement, không auto-retry vô hạn.
 
-
-> **Chuyển mạch:** Từ **6. Firmware máy trạng thái (state machine / 상태 머신)**, ta sang **7. Timing và quyền sở hữu (ownership / 소유권)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, sau nội dung của **6. Firmware máy trạng thái (state machine / 상태 머신)**, **7. Timing và quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8. Telemetry và diagnostics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Timing và quyền sở hữu (ownership / 소유권)
 
@@ -108,19 +99,15 @@ Timing ngân sách (budget / 예산) mẫu:
 
 Đây là ngân sách (budget / 예산), không phải average đo một lần. Cần dấu vết (trace / 추적) ở clock, interrupt và hàng đợi (queue / 큐) saturation gần worst trường hợp (case / 사례).
 
-
-> **Chuyển mạch:** Từ **7. Timing và quyền sở hữu (ownership / 소유권)**, ta sang **8. Telemetry và diagnostics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **8. Telemetry và diagnostics** tiếp nhận điểm tựa từ **7. Timing và quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. xác minh (verification / 확인) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Telemetry và diagnostics
 
 Mỗi bản ghi (record / 레코드) nên có timestamp, raw ADC, filtered temperature, tham chiếu (reference / 참조), duty, trạng thái (state / 상태), fault mã (code / 코드), watchdog counter, firmware phiên bản (version / 버전) và sensor chất lượng (quality / 품질). Khi FAULT, ghi nguyên nhân đầu tiên và các fault đồng thời để tránh mất nhân quả (causal / 인과적) thứ tự (order / 순서).
 
-
-> **Chuyển mạch:** Từ **8. Telemetry và diagnostics**, ta sang **9. xác minh (verification / 확인) ma trận (matrix / 행렬)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **9. xác minh (verification / 확인) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **8. Telemetry và diagnostics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Kết luận thiết kế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. xác minh (verification / 확인) ma trận (matrix / 행렬)
-Phần “9. xác minh (verification / 확인) ma trận (matrix / 행렬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 | Scenario | Expected bằng chứng (evidence / 증거) |
 |---|---|
@@ -133,19 +120,15 @@ Phần “9. xác minh (verification / 확인) ma trận (matrix / 행렬)” n�
 | Brownout trong cập nhật (update / 업데이트) | ảnh (image / 이미지) cũ hoặc ảnh (image / 이미지) mới hợp lệ, không boot dở |
 | Ambient/tải (load / 로드) thay đổi | stability và thermal margin còn đủ |
 
-
-> **Chuyển mạch:** Từ **9. xác minh (verification / 확인) ma trận (matrix / 행렬)**, ta sang **10. Kết luận thiết kế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **10. Kết luận thiết kế** gom các mảnh từ **9. xác minh (verification / 확인) ma trận (matrix / 행렬)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Kết luận thiết kế
 
 Trường hợp (case / 사례) cho thấy cầu nối (bridge / 브리지) không phải chuỗi tuyến tính đơn giản. ADC accuracy ảnh hưởng điều khiển (control / 제어) chất lượng (quality / 품질); filter độ trễ (latency / 지연 시간) ảnh hưởng phase margin; power fault cần hardware protection ngoài software; driver/telemetry phải biểu diễn bất định (uncertainty / 불확실성) và trạng thái (state / 상태). Một end-to-end rà soát (review / 검토) phải đi qua cả tín hiệu (signal / 신호), power, timing, điều khiển (control / 제어) và khôi phục (recovery / 복구) ngân sách (budget / 예산).
 
-
-> **Chuyển mạch:** Từ **10. Kết luận thiết kế**, ta sang **Liên kết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)**, **Liên kết** gom các mảnh từ **10. Kết luận thiết kế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết
-Phần “Liên kết” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [Circuit analysis](../circuits/00_circuit_analysis_and_measurement.md)
 - [Analog biasing and feedback](../analog_electronics/00_device_biasing_feedback.md)
@@ -156,4 +139,4 @@ Phần “Liên kết” nối kiến thức trước với nội dung sắp đ�
 - [Power protection](../power_electronics/00_switching_converters_protection.md)
 - [Driver contracts](../hardware_software_interfaces/00_register_bus_driver_contracts.md)
 
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 glossary vi en ko](./01_glossary_vi_en_ko.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

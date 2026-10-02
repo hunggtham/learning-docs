@@ -1,6 +1,6 @@
 # 09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Bốn khái niệm phải tách riêng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Luật nền tảng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**. Route đi từ visa/status/entry và residence → luật nền tảng → gia hạn, thay đổi tư cách và hồ sơ → thường trú, nhập tịch và nghĩa vụ → kiểm tra nguồn hiện hành, để người học không trộn các thủ tục pháp lý khác nhau.
 
 ## 1. Bốn khái niệm phải tách riêng
 

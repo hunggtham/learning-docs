@@ -1,7 +1,6 @@
 # Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đặt **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Conceptual ranh giới (boundary / 경계)** sang **2. phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**. Route đi từ conceptual boundary → dependency audit → coverage theo capability → canonical ownership và cross-links → remediation queue, để audit chỉ ra phần thiếu thật và vị trí cập nhật tiếp theo.
 
 ## 1. Conceptual ranh giới (boundary / 경계)
 
@@ -10,6 +9,8 @@ Thư viện (library / 라이브러리) sở hữu kiến thức về delivery h
 Các phần cố ý cross-link thay vì duplicate gồm kernel/tiến trình (process / 프로세스)/filesystem internals, namespaces/cgroups internals, phân tán (distributed / 분산) consensus/thứ tự (ordering / 순서), cryptographic giao thức (protocol / 프로토콜), PKI internals, cơ sở dữ liệu (database / 데이터베이스) internals và software kiến trúc (architecture / 아키텍처)/kiểm thử (test / 테스트)/triển khai (deployment / 배포) lý thuyết (theory / 이론) ở mức Khoa học máy tính (computer science / 컴퓨터 과학).
 
 Ranh giới (boundary / 경계) được giữ nguyên qua các vòng đào sâu. Không tạo thêm gốc (root / 루트) thư viện (library / 라이브러리), không tách chapter theo tên sản phẩm và không biến DevOps thành danh mục (catalog / 카탈로그) Docker/Kubernetes/Terraform/cloud provider.
+
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **1. Conceptual ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **2. phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Coverage ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)
 
@@ -43,6 +44,8 @@ Bảo mật (security / 보안) thực tế là concern xuyên suốt, nhưng đ
 
 Phụ thuộc (dependency / 의존성) không được hiểu như “học xong phần trước mới được đọc phần sau”. Mỗi chapter vẫn giải thích đủ ngữ cảnh (context / 맥락) cục bộ để người đọc bắt đầu tại đó. Sơ đồ trên chỉ biểu diễn mô hình tư duy (mental model / 사고 모델) nào được tái sử dụng ở phần sau.
 
+> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. Coverage ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **2. phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Readability kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Coverage ma trận (matrix / 행렬)
 
 | năng lực (capability / 역량) | Coverage | chuẩn gốc (canonical / 정본) phụ thuộc (dependency / 의존성) / ghi chú (note / 노트) |
@@ -73,6 +76,8 @@ Phụ thuộc (dependency / 의존성) không được hiểu như “học xong
 | Cross-layer troubleshooting | Đủ sâu | Có độ trễ (latency / 지연 시간) decomposition, coordinated omission, hết thời gian chờ (timeout / 타임아웃)/cancellation, khôi phục (recovery / 복구) storm, bằng chứng (evidence / 증거) freshness, nhân quả (causal / 인과적) intervention và worked thất bại (failure / 실패) cases |
 | Cross-domain links | Đủ | `90_connections` có 20 lập luận (reasoning / 추론) tuyến (route / 경로) xuyên lĩnh vực (domain / 도메인) |
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Readability kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **3. Coverage ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Duplicate kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Readability kiểm tra (audit / 감사)
 
 Mỗi chapter mở đầu từ bài toán (problem / 문제)/mô hình tư duy (mental model / 사고 모델) trước API/công cụ (tool / 도구). Lệnh chỉ xuất hiện khi chúng kiểm tra một hypothesis cụ thể. Các khái niệm `desired state`, `actual state`, `reconciliation`, `artifact`, `blast radius`, `SLI/SLO`, `golden path` được định nghĩa trước khi dùng sâu và có glossary.
@@ -80,6 +85,8 @@ Mỗi chapter mở đầu từ bài toán (problem / 문제)/mô hình tư duy (
 Giải thích dùng tiếng Việt; tên API/sản phẩm (product / 제품)/lệnh giữ nguyên. Thuật ngữ Hàn chỉ thêm khi có giá trị nhận diện, không ép ba ngôn ngữ vào mọi câu.
 
 Độ sâu (depth / 깊이) pass hiện tại ưu tiên đoạn văn giải thích cơ chế, giả định (assumption / 가정) và thất bại (failure / 실패) chuỗi (chain / 사슬). Các danh sách chỉ còn dùng cho taxonomy, chuỗi (sequence / 시퀀스) hoặc checklist mà bản thân cấu trúc danh sách tạo giá trị.
+
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Duplicate kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **4. Readability kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. hiện đại (modern / 현대적) và legacy perspective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Duplicate kiểm tra (audit / 감사)
 
@@ -89,6 +96,8 @@ Bộ chứa (container / 컨테이너) chapter link trực tiếp OS bộ chứa
 
 Sau độ sâu (depth / 깊이) pass, không xuất hiện thư viện (library / 라이브러리)/chapter duplicate, tệp (file / 파일) `_updated`, `_final`, `_version2` hoặc temporary ghi chú (note / 노트) mới. Nội dung mới được bổ sung trực tiếp vào tệp chuẩn gốc (canonical file / 정본 파일) hiện hữu.
 
+> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. hiện đại (modern / 현대적) và legacy perspective** tiếp nhận điểm tựa từ **5. Duplicate kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. bằng chứng vận hành (production evidence / 운영 증거) kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. hiện đại (modern / 현대적) và legacy perspective
 
 Thư viện (library / 라이브러리) dùng control-loop, immutable sản phẩm tạo ra (artifact / 산출물), tải công việc (workload / 워크로드) định danh (identity / 식별자), GitOps, policy-as-code và self-service như practice hiện đại. Legacy approach như manual máy chủ (server / 서버) mutation, mutable tag, long-lived credential, push triển khai (deployment / 배포) quyền rộng và ticket-based provisioning được giữ dưới dạng contrast/dạng thất bại (failure mode / 실패 모드), không tạo một “legacy tutorial” riêng.
@@ -97,11 +106,15 @@ Thư viện (library / 라이브러리) dùng control-loop, immutable sản ph�
 
 Hiện đại (modern / 현대적) không được đồng nghĩa với “công nghệ mới hơn”. Một practice chỉ được ưu tiên khi nó cải thiện bất biến (invariant / 불변식), phản hồi (feedback / 피드백), isolation, operability hoặc nhà phát triển (developer / 개발자) experience. công cụ (tool / 도구) mới không tự tạo chapter nếu không tạo mô hình tư duy (mental model / 사고 모델) mới.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. hiện đại (modern / 현대적) và legacy perspective** nêu điều cần giải thích; **7. bằng chứng vận hành (production evidence / 운영 증거) kiểm tra (audit / 감사)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. bảo mật (security / 보안) kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. bằng chứng vận hành (production evidence / 운영 증거) kiểm tra (audit / 감사)
 
 Các chapter đều nối concept với bằng chứng (evidence / 증거): tiến trình (process / 프로세스)/socket `/proc`, PSI/throttling/writeback/accept-queue tín hiệu (signal / 신호), DNS resolver/bộ nhớ đệm (cache / 캐시)/liên kết (connection / 연결)/draining/breaker bằng chứng (evidence / 증거), triển khai (deployment / 배포) sự kiện (event / 이벤트), sản phẩm tạo ra (artifact / 산출물) digest/provenance/toolchain định danh (identity / 식별자), di chuyển (migration / 마이그레이션)/backfill/discrepancy/consumer-adoption trạng thái (state / 상태), IaC plan/trạng thái (state / 상태)/remote actual trạng thái (state / 상태), cloud quota/rate-limit/sức chứa (capacity / 용량) status, Kubernetes generation/conditions/events/lưu trữ (storage / 저장소) attach trạng thái (state / 상태)/controller hàng đợi (queue / 큐), GitOps observed/applied/serving revision, telemetry chuỗi xử lý (pipeline / 파이프라인)/freshness/drop/priority/query-cost tín hiệu (signal / 신호), SLO đo lường (measurement / 측정) revision/denominator/cửa sổ (window / 윈도우), khôi phục (recovery / 복구)/backlog/data-integrity tín hiệu (signal / 신호), authority/rotation/chính sách (policy / 정책) bằng chứng (evidence / 증거), platform-state/adoption/safe-mode status, tenancy/fairness/reclamation/chi phí (cost / 비용) attribution và nhật ký kiểm tra (audit log / 감사 로그).
 
 Các worked thất bại (failure / 실패) trường hợp (case / 사례) quan trọng đều cố gắng giữ chuỗi nhân quả (causal chain / 인과 사슬) `symptom → hypothesis → evidence → layer → mitigation → verify`, thay vì biến thành danh sách lệnh. Các vòng độ sâu (depth / 깊이) gần đây bổ sung counterfactual/cohort comparison, detector độ tin cậy (reliability / 신뢰성), transition-state sức chứa (capacity / 용량), sensor freshness, recovery-convergence bằng chứng (evidence / 증거) và intervention/counterfactual discipline để tránh kết luận nhân quả quá sớm.
+
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **7. bằng chứng vận hành (production evidence / 운영 증거) kiểm tra (audit / 감사)** nêu điều cần giải thích; **8. bảo mật (security / 보안) kiểm tra (audit / 감사)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. hiệu năng (performance / 성능) và sức chứa (capacity / 용량) kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. bảo mật (security / 보안) kiểm tra (audit / 감사)
 
@@ -115,6 +128,8 @@ Bản dựng (build / 빌드)/GitOps độ sâu (depth / 깊이) cũng củng c�
 
 Vòng authority-lifecycle bổ sung rotation completion dựa trên bên tiêu thụ (consumer / 소비자) bằng chứng (evidence / 증거), break-glass như privileged-session vòng đời (lifecycle / 생명주기), chính sách (policy / 정책) kiểm tra (audit / 감사)→enforce di chuyển (migration / 마이그레이션), fail-open/fail-closed đặc tả hợp đồng (contract / 계약), offboarding/stale-principal reconciliation, least-privilege rà soát (review / 검토) có rare-path ngữ cảnh (context / 맥락) và integrity/retention ranh giới (boundary / 경계) cho privileged kiểm tra (audit / 감사) bằng chứng (evidence / 증거).
 
+> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. hiệu năng (performance / 성능) và sức chứa (capacity / 용량) kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **8. bảo mật (security / 보안) kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Coverage cố ý chưa tách chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. hiệu năng (performance / 성능) và sức chứa (capacity / 용량) kiểm tra (audit / 감사)
 
 Thư viện (library / 라이브러리) hiện nối hiệu năng (performance / 성능) từ Linux/cgroup pressure lên mạng (network / 네트워크) phụ thuộc (dependency / 의존성) isolation, bộ chứa (container / 컨테이너) startup/hành vi thời gian chạy (runtime behavior / 런타임 동작), Kubernetes scheduling/autoscaling/lưu trữ (storage / 저장소) attach, cloud provisioning/API/physical-capacity độ trễ (latency / 지연 시간), khả năng quan sát (observability / 관측 가능성) backend và SRE hàng đợi (queue / 큐)/sức chứa (capacity / 용량) mô hình (model / 모델).
@@ -122,6 +137,8 @@ Thư viện (library / 라이브러리) hiện nối hiệu năng (performance /
 Phần DevOps chỉ giữ hiệu năng (performance / 성능) ở mức operational lập luận (reasoning / 추론): saturation, headroom, hàng đợi (queue / 큐), throttling, warm-up, liên kết (connection / 연결) ngân sách (budget / 예산), breaker/bulkhead/hedge amplification, I/O dịch vụ (service / 서비스) tỷ lệ (rate / 비율), admission điều khiển (control / 제어), failover sức chứa (capacity / 용량) và bằng chứng (evidence / 증거). CPU kiến trúc (architecture / 아키텍처), scheduler thuật toán (algorithm / 알고리즘), virtual bộ nhớ (memory / 메모리), page-table hoặc formal queueing độ sâu (depth / 깊이) sâu hơn vẫn thuộc Khoa học máy tính (computer science / 컴퓨터 과학)/Mathematics chuẩn gốc (canonical / 정본) docs.
 
 Sức chứa (capacity / 용량) không còn được hiểu chỉ là peak thông lượng (throughput / 처리량) hay steady-state utilization. kiểm tra (audit / 감사) hiện kiểm tra cả transition-state headroom cho replace/surge, khôi phục (recovery / 복구) tính đồng thời (concurrency / 동시성)/backlog drain, thất bại (failure / 실패) headroom, correlated thất bại (failure / 실패), control-plane tỷ lệ (rate / 비율) limit, vật lý (physical / 물리적) sức chứa (capacity / 용량) scarcity, fairness, intentional idle reserve, borrowed-capacity reclamation và khả năng quan sát (observability / 관측 가능성) sự cố (incident / 인시던트) tính đồng thời (concurrency / 동시성).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **10. Coverage cố ý chưa tách chapter** tiếp nhận điểm tựa từ **9. hiệu năng (performance / 성능) và sức chứa (capacity / 용량) kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Internal-link kiểm tra (audit / 감사) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Coverage cố ý chưa tách chapter
 
@@ -131,6 +148,8 @@ Dịch vụ (service / 서비스) mesh hiện chưa cần chapter riêng vì con
 
 eBPF cũng không nên trở thành chapter DevOps chỉ vì khả năng quan sát (observability / 관측 가능성)/networking hiện đại sử dụng nó. Kernel thực thi (execution / 실행)/verifier/hook internals thuộc Khoa học máy tính (computer science / 컴퓨터 과학); DevOps chỉ cần đưa eBPF công cụ (tool / 도구) vào ví dụ nếu nó giúp thu bằng chứng (evidence / 증거) cho một hypothesis cụ thể.
 
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **11. Internal-link kiểm tra (audit / 감사) checklist** tiếp nhận điểm tựa từ **10. Coverage cố ý chưa tách chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dependency-hidden kiểm tra (audit / 감사) sau độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Internal-link kiểm tra (audit / 감사) checklist
 
 Các link từ DevOps sang Khoa học máy tính (computer science / 컴퓨터 과학) dùng relative đường dẫn (path / 경로) từ chapter hiện tại. README dùng direct `.md` links cho reading chuỗi (sequence / 시퀀스) thay vì phụ thuộc directory điều hướng (navigation / 내비게이션). Các cross-link chính trỏ tới chuẩn gốc (canonical / 정본) OS, phân tán (distributed / 분산) các hệ thống (systems / 시스템들), bảo mật (security / 보안), Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) và cơ sở dữ liệu (database / 데이터베이스) docs hiện có.
@@ -139,11 +158,15 @@ Khi đổi tên/move chuẩn gốc (canonical / 정본) CS chapter, cần cập 
 
 Không tạo link giả đến chapter tool-specific chưa tồn tại. Link tới sản phẩm (product / 제품) documentation bên ngoài cũng không được dùng để thay thế prerequisite nội bộ nếu repository đã có chuẩn gốc (canonical / 정본) explanation.
 
+> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **12. Dependency-hidden kiểm tra (audit / 감사) sau độ sâu (depth / 깊이) pass** tiếp nhận điểm tựa từ **11. Internal-link kiểm tra (audit / 감사) checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Naming và canonical-state kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Dependency-hidden kiểm tra (audit / 감사) sau độ sâu (depth / 깊이) pass
 
 Các prerequisite dễ bị coi là “ai cũng biết” đã được làm rõ thêm trong chuẩn gốc (canonical / 정본) chapter thay vì tách tệp (file / 파일) mới: hàng đợi (queue / 큐)/WIP/ràng buộc (constraint / 제약조건)/phản hồi (feedback / 피드백) delay ở Foundations; pressure/tài nguyên (resource / 자원) ranh giới (boundary / 경계)/writeback/accept hàng đợi (queue / 큐)/clock ở Linux; deadline/thử lại (retry / 재시도)/bộ nhớ đệm (cache / 캐시)/liên kết (connection / 연결) pool/MTU/breaker/bulkhead/draining ở mạng (network / 네트워크); hermetic/reproducible/toolchain/remote đầu vào (input / 입력) ở bản dựng (build / 빌드); tính đồng thời (concurrency / 동시성)/stale bằng chứng (evidence / 증거)/approval/kiểm thử (test / 테스트) isolation/lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션)/backfill/dual-write/bên tiêu thụ (consumer / 소비자) lag ở CI; tầng (layer / 계층)/thời gian chạy (runtime / 런타임)/startup/effective cấu hình (config / 설정) ở bộ chứa (container / 컨테이너); trạng thái (state / 상태)/partial thất bại (failure / 실패)/unknown giá trị (value / 값)/chuyển tiếp (transition / 전이) headroom ở IaC; control-plane eventual hành vi (behavior / 동작)/API sức chứa (capacity / 용량)/vật lý (physical / 물리적) scarcity ở Cloud; reconciliation/trường dữ liệu (field / 필드) quyền sở hữu (ownership / 소유권)/vòng đời (lifecycle / 생명주기) đồ thị (graph / 그래프)/lưu trữ (storage / 저장소) fencing/batch ngữ nghĩa (semantics / 의미론) ở Kubernetes/GitOps; missing-data/freshness/sampling/lược đồ (schema / 스키마)/priority/retention/backend-fairness ngữ nghĩa (semantics / 의미론) ở khả năng quan sát (observability / 관측 가능성); low-traffic/denominator/cửa sổ (window / 윈도우)/async/composite ngữ nghĩa (semantics / 의미론) ở SRE; khôi phục (recovery / 복구) exit criteria/backlog/dữ liệu (data / 데이터) integrity ở sự cố (incident / 인시던트)/DR; rotation/break-glass/chính sách (policy / 정책)/offboarding/audit-evidence vòng đời (lifecycle / 생명주기) ở bảo mật (security / 보안); async vòng đời (lifecycle / 생명주기)/idempotency/cancellation/compensation/adoption/bootstrap/trạng thái (state / 상태) durability/safe chế độ (mode / 모드)/DR thứ tự (ordering / 순서) ở nền tảng (platform / 플랫폼); isolation/fairness/khôi phục (recovery / 복구)/reclamation/preemption ở Multi-tenancy; nhân quả (causal / 인과적) đồ thị (graph / 그래프)/intervention/detector coverage ở môi trường vận hành (production / 운영 환경) Practice.
 
 Điểm này quan trọng vì một chapter có thể dài nhưng vẫn có prerequisite ẩn. Coverage hiện được đánh giá theo lập luận nhân quả (causal reasoning / 인과적 추론), không theo số heading hoặc số dòng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, sau nội dung của **12. Dependency-hidden kiểm tra (audit / 감사) sau độ sâu (depth / 깊이) pass**, **13. Naming và canonical-state kiểm tra (audit / 감사)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **14. Criteria cho lần mở rộng tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Naming và canonical-state kiểm tra (audit / 감사)
 
@@ -155,11 +178,15 @@ Branch lĩnh vực (domain / 도메인) duy nhất là `feat/devops-platform-eng
 
 Branch đã từng được sync với `main` trước các vòng độ sâu (depth / 깊이); trạng thái ahead/behind phải được kiểm tra lại ở cuối mỗi editing pass vì repository có thể nhận lần ghi nhận (commit / 커밋) song song trong lúc lĩnh vực (domain / 도메인) đang được đào sâu.
 
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **14. Criteria cho lần mở rộng tiếp theo** tiếp nhận điểm tựa từ **13. Naming và canonical-state kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Invariants/failure-semantics độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Criteria cho lần mở rộng tiếp theo
 
 Một chapter mới chỉ nên được thêm nếu đáp ứng ít nhất một điều kiện: tạo mô hình tư duy (mental model / 사고 모델) mới; giải một thất bại (failure / 실패) lớp (class / 클래스) quan trọng chưa có; bổ sung bằng chứng vận hành (production evidence / 운영 증거); hoặc nối nhiều lớp thành lập luận (reasoning / 추론) đường dẫn (path / 경로) mới mà việc nhét vào tệp chuẩn gốc (canonical file / 정본 파일) hiện tại làm mất conceptual ranh giới (boundary / 경계).
 
 Nếu nhu cầu mới chủ yếu là cú pháp (syntax / 문법) hoặc sản phẩm — ví dụ “cách viết Helm chart”, “lệnh Argo CD”, “Terraform provider X” — ưu tiên example/tham chiếu (reference / 참조) bên trong chapter hiện có hoặc tài liệu thực hành riêng nếu repository sau này có ranh giới (boundary / 경계) cho labs. Không dùng số lượng chapter làm thước đo hoàn thành.
+
+> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **15. Invariants/failure-semantics độ sâu (depth / 깊이) pass** tiếp nhận điểm tựa từ **14. Criteria cho lần mở rộng tiếp theo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Source-to-runtime và transition-state độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Invariants/failure-semantics độ sâu (depth / 깊이) pass
 
@@ -173,6 +200,8 @@ Môi trường vận hành (production / 운영 환경) Practice được bổ s
 
 Các phần này đều tạo mô hình tư duy (mental model / 사고 모델)/thất bại (failure / 실패) lớp (class / 클래스) mới và đã được nối lại trong `90_connections`, thay vì tồn tại như các đoạn cấp cao (senior / 시니어) ghi chú (note / 노트) rời rạc.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **15. Invariants/failure-semantics độ sâu (depth / 깊이) pass** nêu điều cần giải thích; **16. Source-to-runtime và transition-state độ sâu (depth / 깊이) pass** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. luồng (flow / 흐름), sensor và recovery-convergence độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Source-to-runtime và transition-state độ sâu (depth / 깊이) pass
 
 Vòng đào sâu tiếp theo giữ nguyên chuẩn gốc (canonical / 정본) cấu trúc (structure / 구조) nhưng tăng độ sâu từ nguồn (source / 소스) cho tới tải công việc (workload / 워크로드) thời gian chạy (runtime / 런타임).
@@ -185,6 +214,8 @@ Kubernetes tải công việc (workload / 워크로드) bổ sung lưu trữ (st
 
 Mô hình tư duy (mental model / 사고 모델) chung của vòng này là **steady trạng thái (state / 상태) không đủ để đánh giá an toàn (safety / 안전)**. Phải lập luận (reasoning / 추론) cả chuyển tiếp (transition / 전이) trạng thái (state / 상태): bản dựng (build / 빌드) đầu vào (input / 입력) thay đổi, bản phát hành (release / 릴리스) bằng chứng (evidence / 증거) stale, replacement/surge cần headroom, failover cần sức chứa (capacity / 용량), controller cần thời gian hội tụ và stateful quyền sở hữu (ownership / 소유권) transfer cần fencing.
 
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **16. Source-to-runtime và transition-state độ sâu (depth / 깊이) pass** nêu điều cần giải thích; **17. luồng (flow / 흐름), sensor và recovery-convergence độ sâu (depth / 깊이) pass** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. đo lường (measurement / 측정), authority-lifecycle và platform-recovery độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. luồng (flow / 흐름), sensor và recovery-convergence độ sâu (depth / 깊이) pass
 
 Vòng tiếp theo tiếp tục không mở chapter mới, mà tăng độ sâu (depth / 깊이) ở ba chỗ quyết định chất lượng lập luận (reasoning / 추론) môi trường vận hành (production / 운영 환경).
@@ -196,6 +227,8 @@ Khả năng quan sát (observability / 관측 가능성) được bổ sung miss
 Sự cố (incident / 인시던트)/DR được bổ sung khôi phục (recovery / 복구) exit criteria, backlog/replay điều khiển (control / 제어), business-data integrity kiểm tra hợp lệ (validation / 검증), immutable/cyber-recovery ranh giới (boundary / 경계), quyết định (decision / 결정) log, degraded-mode exit giao thức (protocol / 프로토콜), idempotent/resumable khôi phục (recovery / 복구) workflow và human/control-plane đường dẫn (path / 경로) trong game day. khôi phục (recovery / 복구) được coi là một chuyển tiếp trạng thái (state transition / 상태 전이) phải **converge về steady trạng thái (state / 상태)**, không phải thời điểm dashboard đổi từ đỏ sang xanh.
 
 Ở thời điểm kết thúc vòng này, `90_connections` có 12 lập luận (reasoning / 추론) tuyến (route / 경로) và nối ba lớp mới thành chuỗi `constraint → feedback`, `sensor → decision`, và `mitigation → recovery convergence`.
+
+> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **17. luồng (flow / 흐름), sensor và recovery-convergence độ sâu (depth / 깊이) pass** nêu điều cần giải thích; **18. đo lường (measurement / 측정), authority-lifecycle và platform-recovery độ sâu (depth / 깊이) pass** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Dependency-resilience, stateful-delivery và control-plane-survivability độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. đo lường (measurement / 측정), authority-lifecycle và platform-recovery độ sâu (depth / 깊이) pass
 
@@ -211,6 +244,8 @@ Môi trường vận hành (production / 운영 환경) Practice được bổ s
 
 `90_connections` ở thời điểm đó có 16 lập luận (reasoning / 추론) tuyến (route / 경로), nối trực tiếp `user contract → SLO measurement correctness`, `platform intent → cancel/compensate/adopt/bootstrap`, `security change → staged authority migration`, và `symptom → causal confidence`.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **18. đo lường (measurement / 측정), authority-lifecycle và platform-recovery độ sâu (depth / 깊이) pass** nêu điều cần giải thích; **19. Dependency-resilience, stateful-delivery và control-plane-survivability độ sâu (depth / 깊이) pass** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Kết luận kiểm tra (audit / 감사) hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Dependency-resilience, stateful-delivery và control-plane-survivability độ sâu (depth / 깊이) pass
 
 Vòng hiện tại tiếp tục không tạo tệp (file / 파일)/chapter mới. mạng (network / 네트워크) được bổ sung circuit breaker như phụ thuộc (dependency / 의존성) admission điều khiển (control / 제어), bulkhead theo miền lỗi (failure domain / 장애 도메인), hedged yêu cầu (request / 요청) với tải (load / 로드)/duplicate-work sự đánh đổi (trade-off / 트레이드오프) và draining bao phủ cả routing lẫn liên kết (connection / 연결) trạng thái (state / 상태).
@@ -222,6 +257,8 @@ Khả năng quan sát (observability / 관측 가능성) được bổ sung tele
 Kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) được bổ sung durability đặc tả hợp đồng (contract / 계약) giữa control-plane trạng thái (state / 상태) và bên ngoài (external / 외부) world, safe/read-only degraded chế độ (mode / 모드), priority/admission cho reconciliation công việc (work / 작업) và DR phụ thuộc (dependency / 의존성) thứ tự (ordering / 순서). Multi-tenancy được bổ sung reservation→borrowing→reclamation ngữ nghĩa (semantics / 의미론), preemption chính sách (policy / 정책), isolation-fragmentation economics và isolation của cả khôi phục (recovery / 복구)/operator đường dẫn (path / 경로).
 
 `90_connections` hiện có 20 lập luận (reasoning / 추론) tuyến (route / 경로); bốn tuyến (route / 경로) mới nối `dependency latency → isolation/load amplification`, `schema change → migration convergence`, `telemetry amplification → observability survivability`, và `platform control-plane loss → safe recovery`.
+
+> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) thư viện kiến thức (knowledge library / 지식 라이브러리)**, **20. Kết luận kiểm tra (audit / 감사) hiện tại** gom các mảnh từ **19. Dependency-resilience, stateful-delivery và control-plane-survivability độ sâu (depth / 깊이) pass** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 20. Kết luận kiểm tra (audit / 감사) hiện tại
 
@@ -244,4 +281,4 @@ flow / ownership / constraint / feedback delay
 
 Coverage hiện đủ để đọc như một giáo trình DevOps/kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) tổng quát mà không biến thành danh mục (catalog / 카탈로그) sản phẩm. Các lần mở rộng tiếp theo nên tiếp tục xuất phát từ sự cố (incident / 인시던트)/thất bại (failure / 실패) lớp (class / 클래스), transition-state bất biến (invariant / 불변식), evidence-quality bài toán (problem / 문제) hoặc nền tảng (platform / 플랫폼) yêu cầu (requirement / 요구사항) thực tế, không từ xu hướng công nghệ.
 
-> **Bàn giao:** Sau **20. Kết luận kiểm tra (audit / 감사) hiện tại**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [GLOSSARY](./GLOSSARY.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **20. Kết luận kiểm tra (audit / 감사) hiện tại**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

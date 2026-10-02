@@ -1,6 +1,6 @@
 # 04. Luật dân sự, hợp đồng và quyền người tiêu dùng
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04. Luật dân sự, hợp đồng và quyền người tiêu dùng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Luật dân sự (민법) là nền của nhiều quan hệ đời sống** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Hợp đồng không chỉ là tờ giấy** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **04. Luật dân sự, hợp đồng và quyền người tiêu dùng**. Route đi từ quan hệ dân sự → hợp đồng, nghĩa vụ và vi phạm → bảo vệ người tiêu dùng → thuê nhà, mua bán và bồi thường → cách lưu bằng chứng, để quyền và trách nhiệm được nối với tình huống đời sống.
 
 ## 1. Luật dân sự (민법) là nền của nhiều quan hệ đời sống
 

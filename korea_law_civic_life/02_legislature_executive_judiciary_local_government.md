@@ -1,6 +1,6 @@
 # 02. Lập pháp, hành pháp, tư pháp và chính quyền địa phương
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02. Lập pháp, hành pháp, tư pháp và chính quyền địa phương**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Tại sao cần hiểu cấu trúc cơ quan?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Quốc hội (국회) và cấu trúc lập pháp** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02. Lập pháp, hành pháp, tư pháp và chính quyền địa phương**. Route đi từ cấu trúc cơ quan → Quốc hội/lập pháp → hành pháp, tư pháp và kiểm soát → chính quyền địa phương → tìm đúng cơ quan cho một việc, để sơ đồ nhà nước dẫn tới hành động công dân cụ thể.
 
 ## 1. Tại sao cần hiểu cấu trúc cơ quan?
 

@@ -1,6 +1,6 @@
 # 11. Cách đọc văn bản hành chính tiếng Hàn
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **11. Cách đọc văn bản hành chính tiếng Hàn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Đừng đọc từ đầu đến cuối như bài văn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Từ khóa ở phần đầu văn bản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **11. Cách đọc văn bản hành chính tiếng Hàn**. Route đi từ cấu trúc văn bản → từ khóa, chủ thể và thời hạn → căn cứ, yêu cầu và biểu mẫu → cơ quan xử lý, bằng chứng và bước tiếp theo → cách đọc thông báo thực tế, để người học biến văn bản dài thành luồng hành động rõ.
 
 ## 1. Đừng đọc từ đầu đến cuối như bài văn
 

@@ -1,12 +1,10 @@
 # Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại
 
-> **Mạch đọc:** Đọc **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Oscilloscope** sang **2. lô-gic (logic / 논리) analyzer**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**. Route đi từ oscilloscope và logic analyzer → probe, bandwidth, sampling và trigger → calibration, reference và tải → ghi nhận waveform, uncertainty và tái lập → kết luận đo, để checklist biến phép đo thành bằng chứng có thể lặp lại.
 
 Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đo lường (measurement / 측정) phải ghi rõ setup, probe, bandwidth, tham chiếu (reference / 참조), calibration, mẫu (sample / 표본) tỷ lệ (rate / 비율) và điều kiện tải để người khác tái hiện được.
 
 ## 1. Oscilloscope
-Phần “1. Oscilloscope” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - Ghi probe ratio, bandwidth limit, mẫu (sample / 표본) tỷ lệ (rate / 비율), bản ghi (record / 레코드) length và trigger.
 - Dùng short ground spring ở switch nút (node / 노드); ground lead dài có thể tạo ringing giả.
@@ -14,24 +12,18 @@ Phần “1. Oscilloscope” nối kiến thức trước với nội dung sắp
 - Đo peak, RMS, frequency, overshoot và settling bằng cùng thời gian (time / 시간)/voltage quy mô (scale / 규모).
 - Không nối earth-referenced ground clip vào nút (node / 노드) floating hoặc high-side nếu chưa phân tích an toàn (safety / 안전).
 
-
-> **Chuyển mạch:** Từ **1. Oscilloscope**, ta sang **2. lô-gic (logic / 논리) analyzer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **2. lô-gic (logic / 논리) analyzer** tiếp nhận điểm tựa từ **1. Oscilloscope** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Power đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. lô-gic (logic / 논리) analyzer
-Phần “2. lô-gic (logic / 논리) analyzer” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - Chọn mẫu (sample / 표본) tỷ lệ (rate / 비율) đủ lớn so với fastest edge cần kiểm tra, không chỉ so với bit tỷ lệ (rate / 비율).
 - Ghi giao thức (protocol / 프로토콜) decoder phiên bản (version / 버전) và threshold voltage.
 - Kiểm tra framing, ACK/NACK, hết thời gian chờ (timeout / 타임아웃), repeated start, reset giữa giao dịch (transaction / 트랜잭션) và bus contention.
 - Correlate timestamp với oscilloscope hoặc firmware dấu vết (trace / 추적); hai thiết bị có thể có clock khác nhau.
 
-
-> **Chuyển mạch:** Từ **2. lô-gic (logic / 논리) analyzer**, ta sang **3. Power đo lường (measurement / 측정)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **2. lô-gic (logic / 논리) analyzer** nêu điều cần giải thích; **3. Power đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. HIL và fault injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Power đo lường (measurement / 측정)
-Phần “3. Power đo lường (measurement / 측정)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - Đo đầu vào (input / 입력) voltage ngay tại DUT, không chỉ ở bench supply.
 - Tách average, peak, inrush, sleep và transient tải (load / 로드).
@@ -39,8 +31,7 @@ Phần “3. Power đo lường (measurement / 측정)” nối kiến thức tr
 - Tính cả conversion mất mát (loss / 손실), thermal rise và derating ở ambient khác nhau.
 - Kiểm tra current-limit hành vi (behavior / 동작) và năng lượng (energy / 에너지) còn lại sau fault.
 
-
-> **Chuyển mạch:** Từ **3. Power đo lường (measurement / 측정)**, ta sang **4. HIL và fault injection** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **3. Power đo lường (measurement / 측정)** nêu điều cần giải thích; **4. HIL và fault injection** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. HIL và fault injection
 
@@ -58,8 +49,7 @@ actuator stuck-on/stuck-off
 
 Mỗi kiểm thử (test / 테스트) cần expected safe trạng thái (state / 상태), deadline, fault mã (code / 코드), khôi phục (recovery / 복구) chính sách (policy / 정책) và bằng chứng (evidence / 증거) sản phẩm tạo ra (artifact / 산출물).
 
-
-> **Chuyển mạch:** Từ **4. HIL và fault injection**, ta sang **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **4. HIL và fault injection** nêu điều cần giải thích; **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. đo lường (measurement / 측정) bản ghi (record / 레코드)
 
@@ -76,11 +66,10 @@ Một bản ghi (record / 레코드) tối thiểu có:
 
 Không sửa waveform bằng smoothing rồi coi đó là raw bằng chứng (evidence / 증거). Nếu có post-processing, giữ raw capture và ghi rõ transform.
 
-
-> **Chuyển mạch:** Từ **5. đo lường (measurement / 측정) bản ghi (record / 레코드)**, ta sang **cầu nối (bridge / 브리지)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại**, **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** nêu điều cần giải thích; **Cầu nối (bridge / 브리지)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cầu nối (bridge / 브리지)
 
 Dùng checklist này cho [end-to-end temperature control case](00_end_to_end_temperature_control_case.md), rồi quay lại từng nhánh để map đo lường (measurement / 측정) tới circuit, điều khiển (control / 제어), power và firmware đặc tả hợp đồng (contract / 계약).
 
-> **Bàn giao:** Sau **cầu nối (bridge / 브리지)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 end to end temperature control case](./00_end_to_end_temperature_control_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cầu nối (bridge / 브리지)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
