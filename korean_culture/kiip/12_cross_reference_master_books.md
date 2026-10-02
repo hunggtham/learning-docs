@@ -1,6 +1,6 @@
 # 12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)
 
-> **Mạch đọc:** Đặt **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Culture map** sang **lịch sử (history / 이력) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Culture map** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Lịch sử (history / 이력) map** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
 
 Folder KIIP là lớp ôn thi. Khi cần hiểu sâu, dùng các chapter cha thay vì kéo toàn bộ kiến thức sâu vào ghi chú (note / 노트) thi.
 
@@ -23,10 +23,11 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 한류 | [`../13_hallyu_media_platforms.md`](../13_hallyu_media_platforms.md) |
 | 지역·제주 | [`../14_regions_jeju_local_identity_peninsula.md`](../14_regions_jeju_local_identity_peninsula.md) |
 | 인구 변화 | [`../15_contemporary_change_demography_migration.md`](../15_contemporary_change_demography_migration.md) |
+| 재벌·주거·전세·사회이동 | [`../24_economy_chaebol_housing_status_mobility.md`](../24_economy_chaebol_housing_status_mobility.md) |
+| 아동·육아·돌봄 | [`../29_childhood_parenting_care_institutions.md`](../29_childhood_parenting_care_institutions.md) |
 | 시민사회·민주주의 | [`../25_civic_media_public_sphere_protest.md`](../25_civic_media_public_sphere_protest.md) |
 
-
-> **Chuyển mạch:** Từ **Culture map**, ta sang **lịch sử (history / 이력) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Lịch sử (history / 이력) map** tiếp nhận điểm tựa từ **Culture map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lịch sử (history / 이력) map
 
@@ -49,11 +50,10 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 산업화 | [`../../korean_history/19_developmental_state_industrialization_1961_1979.md`](../../korean_history/19_developmental_state_industrialization_1961_1979.md) |
 | 민주화 | [`../../korean_history/20_gwangju_and_democratization_1987.md`](../../korean_history/20_gwangju_and_democratization_1987.md) |
 
-
-> **Chuyển mạch:** Từ **lịch sử (history / 이력) map**, ta sang **Cách dùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Cách dùng** tiếp nhận điểm tựa từ **Lịch sử (history / 이력) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cách dùng
 
 `KIIP note → thấy fact khó nhớ → mở chapter sâu → hiểu nguyên nhân/cơ chế → quay lại KIIP → recall/contrast/oral`.
 
-> **Bàn giao:** Sau **Cách dùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cách dùng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

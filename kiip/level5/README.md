@@ -1,5 +1,7 @@
 # KIIP 5단계 — 영주용·귀화용 시험 대비 Library
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **KIIP 5단계 — 영주용·귀화용 시험 대비 Library**. Hãy bắt đầu ở đây để biết file đang phục vụ nhánh kiến thức nào, rồi sang **Bắt đầu ở đâu?** để chọn trình tự học phù hợp.
+
 Folder này là một lộ trình học có hướng dẫn, không phải một kho ghi chú rời. Người mới nên đọc phần bản đồ trước, sau đó đi qua các chapter theo track của mình, luôn nối keyword tiếng Hàn với chức năng, bối cảnh và dạng câu hỏi có thể xuất hiện trong kỳ thi.
 
 Bộ tài liệu này dùng để ôn **사회통합프로그램(KIIP) 5단계 — 한국사회 이해** theo hai track:
@@ -13,9 +15,9 @@ Tài liệu được viết chủ yếu bằng tiếng Việt nhưng giữ nguy�
 
 Vì vậy, hãy giữ hai tầng đọc tách biệt: KIIP giúp bạn trả lời đúng và gọn trong kỳ thi; knowledge library giúp bạn hiểu vì sao câu trả lời đó đúng và nó liên hệ với lịch sử, văn hóa nào.
 
-## Nguồn chính
+## Cấu trúc và giới hạn tài liệu
 
-Phần nguồn cho biết mỗi track được dựng từ đâu và giới hạn của nó. Đọc đoạn này trước khi tin vào một con số hoặc mở rộng phạm vi ôn tập, vì tài liệu tóm tắt và quy định hiện hành không có cùng vai trò.
+Phần này cho biết mỗi track dựa trên loại tài liệu nào và giới hạn của nó. Đọc trước khi tin vào một con số hoặc mở rộng phạm vi ôn tập, vì bản tóm tắt học tập và quy định hiện hành không có cùng vai trò.
 
 Phần `01_영주용_기본` được dựng trực tiếp từ 8 file tóm tắt KIIP 5 do người học cung cấp, bao phủ:
 
@@ -30,9 +32,11 @@ Phần `01_영주용_기본` được dựng trực tiếp từ 8 file tóm tắ
 
 Các PDF này là bản tóm tắt học tập, không phải văn bản pháp luật hiện hành. Những số liệu hoặc quy định có thể thay đổi được kiểm tra lại trong [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md).
 
-Phần `02_귀화용_심화` không có PDF 심화 riêng trong bộ file được cung cấp. Vì vậy phần này **không giả định rằng tài liệu nguồn đã cover 심화**; nó được xây bằng phạm vi chính thức của Bộ Tư pháp Hàn Quốc và cross-reference sang các note lịch sử/văn hóa hiện có.
+Phần `02_귀화용_심화` không có PDF 심화 riêng trong bộ file được cung cấp. Vì vậy phần này **không giả định rằng bộ tóm tắt cơ bản đã bao quát 심화**; nó được xây theo phạm vi Bộ Tư pháp Hàn Quốc và liên kết với các note lịch sử/văn hóa hiện có.
 
-Điều đó có nghĩa là phần 심화 nên được học như một lớp giải thích có nguồn, không phải như bản chép lại một giáo trình PDF chưa được cung cấp.
+Điều đó có nghĩa là phần 심화 nên được học như một lớp giải thích khái niệm và quan hệ pháp lý, không phải như bản chép lại một giáo trình PDF chưa được cung cấp.
+
+> **Chuyển mạch:** **Bắt đầu ở đâu?** xác định trình tự; **Nguyên tắc học** giải thích cách biến mỗi keyword thành kiến thức có thể dùng được.
 
 ## Bắt đầu ở đâu?
 
@@ -42,10 +46,14 @@ Trình tự dưới đây biến toàn bộ folder thành một buổi học có
 2. Nếu mục tiêu trước mắt là 영주: học lần lượt `01_영주용_기본/01~08`.
 3. Học [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md) để tránh ghi nhớ dữ liệu cũ.
 4. Luyện [`01_영주용_기본/09_high_yield_numbers_institutions.md`](01_영주용_기본/09_high_yield_numbers_institutions.md).
-5. Luyện viết và nói ở các file `10`, `11`, sau đó làm mock.
+5. Luyện viết và nói ở các file `10`, `11`, sau đó đối chiếu các mẫu tình huống ở file `13`.
 6. Nếu thi 귀화: học thêm toàn bộ `02_귀화용_심화`.
+7. Nếu đã nhớ keyword nhưng chưa hiểu vì sao, làm các [concept labs](90_cross_reference/02_exam_concept_labs.md) rồi quay lại câu trả lời ngắn.
+8. Khi đã hiểu lab, luyện [Master-derived Question Bank](90_cross_reference/03_master_derived_question_bank.md): chọn đáp án, giải thích phương án gần sai và nói lại bằng tiếng Hàn.
 
 Sau khi đi hết trình tự, quay lại `00_exam_map_and_strategy.md` để tự đánh giá phần nào còn yếu. Việc quay vòng này giúp kế hoạch học thích ứng với kết quả làm bài thay vì chỉ chạy một lần từ đầu đến cuối.
+
+> **Chuyển mạch:** Ở chặng này của **KIIP 5단계 — 영주용·귀화용 시험 대비 Library**, **Nguyên tắc học** tiếp nhận điểm tựa từ **Bắt đầu ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch giảng của từng chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nguyên tắc học
 
@@ -63,8 +71,12 @@ Cách này hiệu quả hơn việc chỉ học “국회 = Quốc hội”, vì
 
 Khi đã nối được chuỗi trên, bạn có thể chuyển sang luyện multiple choice, viết và nói mà không phải học lại từ đầu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **KIIP 5단계 — 영주용·귀화용 시험 대비 Library**, **Mạch giảng của từng chapter** tiếp nhận điểm tựa từ **Nguyên tắc học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mạch giảng của từng chapter
 
-Các chapter đang dạy kiến thức được đọc như một bài giảng ngắn: mở đầu bằng câu hỏi của chủ đề, giải thích keyword qua cơ quan/đối tượng–chức năng–hệ quả, nối sang phần kế tiếp, rồi chốt bằng cặp dễ nhầm hoặc câu hỏi tiếp theo. Bảng, bullet và mini quiz chỉ là bằng chứng hoặc công cụ tự kiểm tra; chúng không thay thế đoạn prose giải thích vì sao các ý thuộc cùng một chapter.
+Các chapter đang dạy kiến thức được đọc như một bài giảng ngắn: mở đầu bằng câu hỏi của chủ đề, giải thích keyword qua cơ quan/đối tượng–chức năng–hệ quả, nối sang phần kế tiếp, rồi chốt bằng cặp dễ nhầm hoặc câu hỏi tiếp theo. Bảng và bullet chỉ là bằng chứng hoặc công cụ tự đối chiếu; chúng không thay thế đoạn prose giải thích vì sao các ý thuộc cùng một chapter.
 
 Nếu một phần chỉ có tiêu đề và danh sách mà thiếu câu hỏi mở đầu, câu nối hoặc kết luận, hãy xem đó là dấu hiệu cần bổ sung nội dung chứ không phải một bài học đã hoàn chỉnh.
+
+> **Bàn giao:** Sau **Mạch giảng của từng chapter**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

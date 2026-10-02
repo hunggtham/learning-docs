@@ -17,6 +17,8 @@
 | 한류 | `13_hallyu_media_platforms.md` |
 | 지역·제주 | `14_regions_jeju_local_identity_peninsula.md` |
 | 인구 변화 | `15_contemporary_change_demography_migration.md` |
+| 재벌·주거·전세·사회이동 | `24_economy_chaebol_housing_status_mobility.md` |
+| 아동·육아·돌봄 | `29_childhood_parenting_care_institutions.md` |
 | 시민사회·민주주의 | `25_civic_media_public_sphere_protest.md` |
 
 Mạch học đề nghị là: xác định keyword trong câu hỏi → mở bài đọc tương ứng → ghi lại ví dụ hoặc nguyên nhân giúp khái niệm dễ hình dung → quay lại note KIIP và viết một câu trả lời súc tích. Như vậy, phần đọc sâu phục vụ khả năng giải thích chứ không làm bạn lạc khỏi mục tiêu kỳ thi.

@@ -29,8 +29,11 @@ Các liên kết sau dùng để đối chiếu track kỳ thi, nội dung 심�
 - 사회통합정보망: https://www.socinet.go.kr/
 - KIIP 평가: https://www.kiiptest.org/
 - 심화 콘텐츠 보완 연구: https://www.moj.go.kr/bbs/immigration/43/440567/artclView.do
+- 한국사회 이해 기본 교재 구성: https://www.moj.go.kr/bbs/moj/164/205208/download.do
 - 법정 최고금리 20%: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
 - 예금보호한도 1억원: https://www.fsc.go.kr/no010101/85200
+- 출입국관리법(외국인등록 90일): https://law.go.kr/LSW/lsInfoP.do?lsiSeq=271511
+- 2024 인구주택총조사(1인가구 36.1%): https://kostat.go.kr/boardDownload.es?bid=203&list_no=437767&seq=3
 
 Đây là lớp nguồn dùng để sửa hoặc xác nhận fact; nó không thay thế phần giải thích dành cho người mới trong các chapter KIIP.
 
