@@ -1,6 +1,6 @@
 # LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **LLM Tokenization: chuỗi (sequence / 시퀀스) length, vocabulary và mô hình (model / 모델) economics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đơn vị từ (token / 토큰) là đơn vị compute của LLM** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vocabulary kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **LLM tokenization**. Route đi từ Unicode/text normalization → subword segmentation → vocabulary/sequence length → token cost/context window → multilingual and rare-token behavior, để cách cắt chuỗi nối trực tiếp với compute và chất lượng model.
 
 LLM tokenization dùng cùng subword/byte principles của NLP, nhưng ở large-scale mô hình (model / 모델) nó trở thành vấn đề **compute, ngữ cảnh (context / 맥락) economics, multilingual fairness và giao thức (protocol / 프로토콜) tính tương thích (compatibility / 호환성)**. Một tokenizer không chỉ chia văn bản (text / 텍스트); nó quyết định mô hình (model / 모델) phải thực hiện bao nhiêu autoregressive steps để biểu diễn/generate cùng content.
 

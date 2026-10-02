@@ -1,6 +1,6 @@
 # Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ ngôn ngữ (language / 언어) các mô hình (models / 모델들) tới Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **“Large” không có một threshold cố định** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Pretraining tạo cơ sở (base / 기반) mô hình (model / 모델)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ language models tới large language models**. Route đi từ next-token probability → scale dữ liệu/tham số/tính toán → pretraining → emergent capabilities → post-training, để “large” được hiểu qua cơ chế tạo năng lực chứ không chỉ qua kích thước.
 
 Large ngôn ngữ (language / 언어) mô hình (model / 모델) không phải một loại xác suất (probability / 확률) mô hình (model / 모델) hoàn toàn mới. cốt lõi (core / 핵심) vẫn là ngôn ngữ (language / 언어) modeling: estimate phân phối (distribution / 분포) của đơn vị từ (token / 토큰) dựa trên ngữ cảnh (context / 맥락). Điều thay đổi là **quy mô (scale / 규모) của mô hình (model / 모델), dữ liệu (data / 데이터), compute và post-training**, khiến mô hình (model / 모델) học reusable representations và capabilities rộng hơn nhiều tác vụ (task / 작업) cụ thể.
 

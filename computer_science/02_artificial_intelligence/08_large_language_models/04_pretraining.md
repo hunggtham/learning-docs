@@ -1,6 +1,6 @@
 # Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Pretraining của Large ngôn ngữ (language / 언어) mô hình (model / 모델)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pretraining không phải cơ sở dữ liệu (database / 데이터베이스) ingestion** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) là một phần của mô hình (model / 모델)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Pretraining large language models**. Route đi từ corpus construction → filtering/deduplication → next-token objective → distributed optimization → checkpoints and data mixtures, để pipeline dữ liệu được đọc cùng mục tiêu học và năng lực đầu ra.
 
 **Pretraining (사전학습 / tiền huấn luyện)** là giai đoạn mô hình (model / 모델) học statistical cấu trúc (structure / 구조) từ một lượng dữ liệu rất lớn trước khi được điều chỉnh để làm theo instruction hoặc phục vụ một ứng dụng (application / 애플리케이션) cụ thể. Với decoder-only LLM, mục tiêu (objective / 목표) phổ biến là **next-token prediction**: tại mỗi vị trí, mô hình (model / 모델) nhận prefix và tối đa hóa xác suất của đơn vị từ (token / 토큰) tiếp theo.
 

@@ -1,6 +1,6 @@
 # Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reinforcement học tập (learning / 학습) from Human phản hồi (feedback / 피드백) (RLHF)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao SFT chưa đủ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuỗi xử lý (pipeline / 파이프라인) cổ điển** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Reinforcement learning from human feedback (RLHF)**. Route đi từ SFT policy → preference collection → reward model → PPO-style optimization → reward hacking and alignment limits, để phản hồi con người được nối với từng điểm kiểm soát trong pipeline.
 
 **RLHF (Reinforcement Learning from Human Feedback / 인간 피드백 기반 강화학습)** là một family of post-training methods dùng human preference tín hiệu (signal / 신호) để làm mô hình (model / 모델) outputs phù hợp hơn với desired hành vi (behavior / 동작). Mục tiêu không phải “human cho biết fact nào đúng rồi mô hình (model / 모델) học thuộc”. RLHF thường học **preference thứ tự (ordering / 순서) giữa candidate responses** và dùng tín hiệu (signal / 신호) đó để cập nhật (update / 업데이트) chính sách (policy / 정책).
 

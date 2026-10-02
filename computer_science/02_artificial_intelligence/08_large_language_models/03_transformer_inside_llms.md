@@ -1,6 +1,6 @@
 # Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer bên trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Decoder-only ngăn xếp (stack / 스택)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Residual stream như “dùng chung (shared / 공유) working biểu diễn (representation / 표현)”** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer bên trong large language models**. Route đi từ decoder-only stack → self-attention/MLP blocks → residual stream and normalization → depth/width trade-offs → inference memory and latency, để kiến trúc giải thích được hành vi và chi phí chạy.
 
 Ở tầng (layer / 계층) trước, Transformer đã được giải thích như một kiến trúc (architecture / 아키텍처) gồm attention, feed-forward mạng (network / 네트워크), residual liên kết (connection / 연결) và normalization. Khi kiến trúc (architecture / 아키텍처) đó được quy mô (scale / 규모) thành Large ngôn ngữ (language / 언어) mô hình (model / 모델), cơ chế cơ bản không đổi, nhưng **tỷ lệ giữa các thành phần, cách tổ chức attention, positional encoding, normalization, feed-forward khối (block / 블록), bộ nhớ đệm (cache / 캐시) và parallelism** trở thành những quyết định ảnh hưởng trực tiếp tới chất lượng, tốc độ và chi phí.
 

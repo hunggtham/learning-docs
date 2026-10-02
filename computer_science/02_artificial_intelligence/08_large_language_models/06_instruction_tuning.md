@@ -1,6 +1,6 @@
 # Instruction Tuning
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Instruction Tuning**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ continuation tới instruction following** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Instruction dữ liệu (data / 데이터)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Instruction tuning**. Route đi từ language-model continuation → instruction/response format → task mixture and supervision → generalization to unseen prompts → alignment trade-offs, để dữ liệu hướng dẫn được nối với hành vi mong muốn.
 
 Cơ sở (base / 기반) LLM được pretrain để **tiếp tục văn bản (text / 텍스트)**, nhưng người dùng (user / 사용자) muốn một assistant có thể hiểu yêu cầu (request / 요청) và tạo phản hồi (response / 응답) phù hợp. **Instruction tuning (지시 튜닝 / tinh chỉnh theo chỉ dẫn)** là quá trình điều chỉnh mô hình (model / 모델) để map từ instruction + ngữ cảnh (context / 맥락) sang desired phản hồi (response / 응답) format và hành vi (behavior / 동작).
 

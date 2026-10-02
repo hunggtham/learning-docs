@@ -1,6 +1,6 @@
 # Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Embeddings và ngữ nghĩa (semantic / 의미적) không gian (space / 공간) trong LLM các hệ thống (systems / 시스템들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đầu vào (input / 입력) đơn vị từ (token / 토큰) Embedding** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Contextual Hidden trạng thái (state / 상태)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Embeddings và semantic space trong LLM systems**. Route đi từ token embeddings → positional information → contextual hidden states → pooling/projection → similarity, probing, and transfer limits, để “không gian ngữ nghĩa” được nối với representation thực tế.
 
 “Embedding” trong LLM ngữ cảnh (context / 맥락) có ít nhất ba meanings cần tách: **đầu vào (input / 입력) đơn vị từ (token / 토큰) embedding**, **nội bộ (internal / 내부) contextual hidden states**, và **bên ngoài (external / 외부) embedding mô hình (model / 모델) đầu ra (output / 출력) dùng cho retrieval/similarity**. Chúng đều là vectors nhưng mục tiêu (objective / 목표)/use khác nhau.
 

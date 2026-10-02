@@ -1,6 +1,6 @@
 # Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Preference tối ưu hóa (optimization / 최적화) và Direct Preference tối ưu hóa (optimization / 최적화) (DPO)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Preference pair** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Intuition của DPO** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Preference optimization và direct preference optimization (DPO)**. Route đi từ preference pairs → reward/preference model assumptions → DPO objective → policy/reference comparison → distribution shift and alignment limits, để DPO được hiểu như một lựa chọn tối ưu hóa có điều kiện.
 
 Sau RLHF cổ điển, một câu hỏi tự nhiên xuất hiện: nếu ta đã có preference pairs `chosen > rejected`, có nhất thiết phải train reward mô hình (model / 모델) riêng rồi chạy reinforcement học tập (learning / 학습) như PPO không? **Direct Preference tối ưu hóa (optimization / 최적화) (DPO)** là một family phương thức (method / 메서드) cho phép cập nhật (update / 업데이트) ngôn ngữ (language / 언어) mô hình (model / 모델) trực tiếp từ preference dữ liệu (data / 데이터) bằng mục tiêu (objective / 목표) supervised-like, giảm độ phức tạp chuỗi xử lý (pipeline / 파이프라인).
 

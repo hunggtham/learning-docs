@@ -1,6 +1,6 @@
 # Supervised Fine-Tuning (SFT)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Supervised Fine-Tuning (SFT)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu (objective / 목표)** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **SFT khác pretraining ở đâu?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Supervised fine-tuning (SFT)**. Route đi từ pretrained checkpoint → labeled demonstrations → loss masking and batching → catastrophic forgetting/overfitting → evaluation and deployment, để SFT được phân biệt với pretraining bằng dữ liệu và mục tiêu tối ưu.
 
 **Supervised Fine-Tuning (SFT / 지도 미세조정 / tinh chỉnh có giám sát)** là giai đoạn tiếp tục train một pretrained mô hình (model / 모델) trên tập examples có đầu vào (input / 입력) và desired đầu ra (output / 출력) rõ ràng. Với chat mô hình (model / 모델), một mẫu (sample / 표본) có thể gồm hệ thống (system / 시스템) message, người dùng (user / 사용자) yêu cầu (request / 요청) và assistant phản hồi (response / 응답) chuẩn.
 

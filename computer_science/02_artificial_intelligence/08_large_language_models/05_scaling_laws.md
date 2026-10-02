@@ -1,6 +1,6 @@
 # Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba trục quy mô (scale / 규모) chính** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Parameters không phải sức chứa (capacity / 용량) hữu ích duy nhất** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Scaling laws trong large language models**. Route đi từ model/data/compute axes → loss scaling → compute-optimal allocation → inference-time scaling → capability and saturation limits, để quy mô được đánh giá bằng budget và mục tiêu cụ thể.
 
 Khi Large ngôn ngữ (language / 언어) mô hình (model / 모델) lớn hơn, câu hỏi không chỉ là “thêm parameters có tốt hơn không?” mà là **nên phân bổ compute giữa mô hình (model / 모델) kích thước (size / 크기), dữ liệu (data / 데이터) và huấn luyện (training / 학습) duration như thế nào**. **Scaling laws (스케일링 법칙)** nghiên cứu relationship thực nghiệm giữa mô hình (model / 모델) hiệu năng (performance / 성능) và những tài nguyên (resource / 자원) đó.
 
