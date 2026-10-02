@@ -8,13 +8,13 @@
 
 Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **Mạch tư duy (Logic học)** tiếp nhận điểm tựa từ **Từ khóa cần nhớ (Keyword)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch nối của bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Từ khóa cần nhớ** xác định các đối tượng dữ liệu; **Mạch tư duy** đặt chúng vào quan hệ phụ thuộc và hiệu năng, rồi **Mạch nối của bài học** dẫn tới lựa chọn mô hình cụ thể.
 
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **Mạch nối của bài học** tiếp nhận điểm tựa từ **Mạch tư duy (Logic học)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **데이터 모델과 SQL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi đã có quan hệ và mục tiêu hiệu năng, **Mạch nối của bài học** chuyển sang **데이터 모델과 SQL** để xem mô hình được biểu diễn và truy vấn thế nào.
 
 ## Mạch nối của bài học
 
@@ -30,7 +30,7 @@ Bài này không đứng riêng: hãy nối **Mô hình dữ liệu hướng hi�
 
 Ta bắt đầu **데이터 모델과 SQL** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **데이터 모델과 SQL** tiếp nhận điểm tựa từ **Mạch nối của bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình dữ liệu và SQL** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **데이터 모델과 SQL** nối sơ đồ với câu lệnh; **Mô hình dữ liệu và SQL** dùng cùng ví dụ để chỉ ra khi thiết kế ảnh hưởng trực tiếp đến cách đọc và tính kết quả.
 
 ## 데이터 모델과 SQL
 
@@ -235,7 +235,7 @@ Vậy ta đã có tiêu chí để đọc **3. 정규화**. Bây giờ chuyển 
 
 Ta bắt đầu **3. Chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **3. Chuẩn hóa** tiếp nhận điểm tựa từ **3. 정규화** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 함수적 종속성** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **3. 정규화** giới thiệu mục tiêu giảm dư thừa; **3. Chuẩn hóa** diễn đạt mục tiêu đó bằng tiếng Việt trước khi đi vào **4. 함수적 종속성**, là cơ chế kiểm chứng.
 
 ## 3. Chuẩn hóa
 
@@ -329,7 +329,7 @@ Vậy ta đã có tiêu chí để đọc **갱신 이상**. Bây giờ chuyển
 
 Ta bắt đầu **4. 함수적 종속성** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **4. 함수적 종속성** tiếp nhận điểm tựa từ **3. Chuẩn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Phụ thuộc hàm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ mục tiêu chuẩn hóa, **4. 함수적 종속성** chỉ ra thuộc tính nào quyết định thuộc tính nào; **4. Phụ thuộc hàm** chốt cách đọc quan hệ đó bằng ví dụ.
 
 ## 4. 함수적 종속성
 
@@ -339,7 +339,7 @@ Vậy ta đã có tiêu chí để đọc **4. 함수적 종속성**. Bây giờ
 
 Ta bắt đầu **4. Phụ thuộc hàm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **4. Phụ thuộc hàm** tiếp nhận điểm tựa từ **4. 함수적 종속성** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 정규화 절차** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi đã xác định phụ thuộc hàm, **5. 정규화 절차** dùng nó để tách quan hệ theo từng bước; trọng tâm chuyển từ nhận diện sang thao tác.
 
 ## 4. Phụ thuộc hàm
 
@@ -411,7 +411,7 @@ Vậy ta đã có tiêu chí để đọc **4.2 Ví dụ 학번 và 혈액형**.
 
 Ta bắt đầu **5. 정규화 절차** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **5. 정규화 절차** tiếp nhận điểm tựa từ **4. Phụ thuộc hàm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Quy trình chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **5. Quy trình chuẩn hóa** diễn giải chuỗi tách quan hệ bằng tiêu chí 1NF–5NF; phần kế tiếp áp dụng từng tiêu chí vào một dạng chuẩn cụ thể.
 
 ## 5. 정규화 절차
 
@@ -468,7 +468,7 @@ Vậy ta đã có tiêu chí để đọc **6. 제1정규형 — 1NF**. Bây gi�
 
 Ta bắt đầu **6. Dạng chuẩn 1 — 1NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **6. Dạng chuẩn 1 — 1NF** tiếp nhận điểm tựa từ **6. 제1정규형 — 1NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 제2정규형 — 2NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **6. 제1정규형 — 1NF** yêu cầu giá trị nguyên tử; **6. Dạng chuẩn 1 — 1NF** chốt điều kiện đó trước khi **7. 제2정규형 — 2NF** xử lý phụ thuộc từng phần.
 
 ## 6. Dạng chuẩn 1 — 1NF
 
@@ -498,7 +498,7 @@ Vậy ta đã có tiêu chí để đọc **6. Dạng chuẩn 1 — 1NF**. Bây 
 
 Ta bắt đầu **7. 제2정규형 — 2NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **7. 제2정규형 — 2NF** tiếp nhận điểm tựa từ **6. Dạng chuẩn 1 — 1NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Dạng chuẩn 2 — 2NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi dữ liệu đã nguyên tử ở 1NF, **7. 제2정규형 — 2NF** kiểm tra khóa ghép và phụ thuộc từng phần; **7. Dạng chuẩn 2 — 2NF** diễn giải hệ quả khi tách bảng.
 
 ## 7. 제2정규형 — 2NF
 
@@ -508,7 +508,7 @@ Vậy ta đã có tiêu chí để đọc **7. 제2정규형 — 2NF**. Bây gi�
 
 Ta bắt đầu **7. Dạng chuẩn 2 — 2NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **7. Dạng chuẩn 2 — 2NF** tiếp nhận điểm tựa từ **7. 제2정규형 — 2NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 제3정규형 — 3NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi phụ thuộc từng phần đã được loại bỏ, **8. 제3정규형 — 3NF** chuyển sang kiểm tra phụ thuộc bắc cầu; chuỗi chuẩn hóa vì vậy đi từ khóa ghép sang thuộc tính không khóa.
 
 ## 7. Dạng chuẩn 2 — 2NF
 
@@ -562,7 +562,7 @@ Vậy ta đã có tiêu chí để đọc **7. Dạng chuẩn 2 — 2NF**. Bây 
 
 Ta bắt đầu **8. 제3정규형 — 3NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **8. 제3정규형 — 3NF** tiếp nhận điểm tựa từ **7. Dạng chuẩn 2 — 2NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Dạng chuẩn 3 — 3NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **8. 제3정규형 — 3NF** đặt điều kiện không có phụ thuộc bắc cầu; **8. Dạng chuẩn 3 — 3NF** minh họa cách tách thuộc tính trung gian mà vẫn giữ liên kết.
 
 ## 8. 제3정규형 — 3NF
 
@@ -572,7 +572,7 @@ Vậy ta đã có tiêu chí để đọc **8. 제3정규형 — 3NF**. Bây gi�
 
 Ta bắt đầu **8. Dạng chuẩn 3 — 3NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **8. Dạng chuẩn 3 — 3NF** tiếp nhận điểm tựa từ **8. 제3정규형 — 3NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 정규화의 성능** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau 3NF, **9. 정규화의 성능** đặt câu hỏi ngược về chi phí JOIN, I/O và truy vấn; chuẩn hóa đúng không đồng nghĩa luôn nhanh hơn.
 
 ## 8. Dạng chuẩn 3 — 3NF
 
@@ -609,7 +609,7 @@ Vậy ta đã có tiêu chí để đọc **8. Dạng chuẩn 3 — 3NF**. Bây 
 
 Ta bắt đầu **9. 정규화의 성능** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **9. 정규화의 성능** tiếp nhận điểm tựa từ **8. Dạng chuẩn 3 — 3NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Hiệu năng của chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **9. Hiệu năng của chuẩn hóa** chuyển các trade-off của 3NF thành tiêu chí đo; từ đó có thể cân nhắc bước chuẩn hóa cao hơn thay vì áp dụng máy móc.
 
 ## 9. 정규화의 성능
 
@@ -619,7 +619,7 @@ Vậy ta đã có tiêu chí để đọc **9. 정규화의 성능**. Bây giờ
 
 Ta bắt đầu **9. Hiệu năng của chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **9. Hiệu năng của chuẩn hóa** tiếp nhận điểm tựa từ **9. 정규화의 성능** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. BCNF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi hiệu năng và dư thừa đã được cân bằng, **10. BCNF** kiểm tra chặt hơn vai trò của mọi determinant; đây là bước mở rộng điều kiện 3NF.
 
 ## 9. Hiệu năng của chuẩn hóa
 
@@ -660,7 +660,7 @@ Vậy ta đã có tiêu chí để đọc **9. Hiệu năng của chuẩn hóa**
 
 Ta bắt đầu **10. BCNF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **10. BCNF** tiếp nhận điểm tựa từ **9. Hiệu năng của chuẩn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Dạng chuẩn BCNF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **10. BCNF** nêu điều kiện trên determinant; **10. Dạng chuẩn BCNF** dùng ví dụ để chỉ ra quan hệ có thể đạt 3NF nhưng vẫn còn dư thừa.
 
 ## 10. BCNF
 
@@ -670,7 +670,7 @@ Vậy ta đã có tiêu chí để đọc **10. BCNF**. Bây giờ chuyển sang
 
 Ta bắt đầu **10. Dạng chuẩn BCNF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **10. Dạng chuẩn BCNF** tiếp nhận điểm tựa từ **10. BCNF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 제4정규형 — 4NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau BCNF, **11. 제4정규형 — 4NF** mở rộng phân tích sang phụ thuộc đa trị; câu hỏi không còn chỉ là một determinant quyết định một thuộc tính.
 
 ## 10. Dạng chuẩn BCNF
 
@@ -719,7 +719,7 @@ Vậy ta đã có tiêu chí để đọc **10. Dạng chuẩn BCNF**. Bây gi�
 
 Ta bắt đầu **11. 제4정규형 — 4NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **11. 제4정규형 — 4NF** tiếp nhận điểm tựa từ **10. Dạng chuẩn BCNF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Dạng chuẩn 4 — 4NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **11. 제4정규형 — 4NF** tách các nhóm giá trị độc lập; **11. Dạng chuẩn 4 — 4NF** cho thấy vì sao gộp chúng trong một bảng tạo tích Descartes ngoài ý muốn.
 
 ## 11. 제4정규형 — 4NF
 
@@ -729,7 +729,7 @@ Vậy ta đã có tiêu chí để đọc **11. 제4정규형 — 4NF**. Bây gi
 
 Ta bắt đầu **11. Dạng chuẩn 4 — 4NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **11. Dạng chuẩn 4 — 4NF** tiếp nhận điểm tựa từ **11. 제4정규형 — 4NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 제5정규형 — 5NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi phụ thuộc đa trị đã được tách, **12. 제5정규형 — 5NF** kiểm tra phụ thuộc kết nối và khả năng phân rã không mất thông tin.
 
 ## 11. Dạng chuẩn 4 — 4NF
 
@@ -784,7 +784,7 @@ Vậy ta đã có tiêu chí để đọc **11. Dạng chuẩn 4 — 4NF**. Bây
 
 Ta bắt đầu **12. 제5정규형 — 5NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **12. 제5정규형 — 5NF** tiếp nhận điểm tựa từ **11. Dạng chuẩn 4 — 4NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dạng chuẩn 5 — 5NF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **12. Dạng chuẩn 5 — 5NF** dùng join dependency để kiểm tra phân rã cuối; chỉ nên áp dụng khi lợi ích toàn vẹn lớn hơn độ phức tạp truy vấn.
 
 ## 12. 제5정규형 — 5NF
 
@@ -794,7 +794,7 @@ Vậy ta đã có tiêu chí để đọc **12. 제5정규형 — 5NF**. Bây gi
 
 Ta bắt đầu **12. Dạng chuẩn 5 — 5NF** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **12. Dạng chuẩn 5 — 5NF** tiếp nhận điểm tựa từ **12. 제5정규형 — 5NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 반정규화** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau 5NF, **13. 반정규화** đặt câu hỏi thực dụng: khi nào nên giữ dư thừa có kiểm soát để giảm JOIN và đáp ứng workload.
 
 ## 12. Dạng chuẩn 5 — 5NF
 
@@ -836,7 +836,7 @@ Vậy ta đã có tiêu chí để đọc **12. Dạng chuẩn 5 — 5NF**. Bây
 
 Ta bắt đầu **13. 반정규화** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **13. 반정규화** tiếp nhận điểm tựa từ **12. Dạng chuẩn 5 — 5NF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Phi chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **13. 반정규화** mô tả quyết định đánh đổi; **13. Phi chuẩn hóa** chốt cách ghi rõ lý do, invariant và cơ chế đồng bộ khi cố ý lặp dữ liệu.
 
 ## 13. 반정규화
 
@@ -846,7 +846,7 @@ Vậy ta đã có tiêu chí để đọc **13. 반정규화**. Bây giờ chuy�
 
 Ta bắt đầu **13. Phi chuẩn hóa** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **13. Phi chuẩn hóa** tiếp nhận điểm tựa từ **13. 반정규화** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KẾT LUẬN GHI NHỚ CUỐI BÀI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi đã nêu rõ điều kiện và rủi ro của phi chuẩn hóa, **KẾT LUẬN GHI NHỚ CUỐI BÀI** gom chuỗi quyết định từ phụ thuộc hàm đến trade-off hiệu năng.
 
 ## 13. Phi chuẩn hóa
 
@@ -902,7 +902,7 @@ Vậy ta đã có tiêu chí để đọc **Nhược điểm**. Bây giờ chuy�
 
 Ta bắt đầu **KẾT LUẬN GHI NHỚ CUỐI BÀI** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa**, **KẾT LUẬN GHI NHỚ CUỐI BÀI** gom các mảnh từ **13. Phi chuẩn hóa** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Kết luận cuối trả lại tiêu chí ban đầu: chọn mức chuẩn hóa dựa trên phụ thuộc, toàn vẹn và workload cụ thể, rồi mang tiêu chí đó sang bài thiết kế kế tiếp.
 
 ## KẾT LUẬN GHI NHỚ CUỐI BÀI
 
