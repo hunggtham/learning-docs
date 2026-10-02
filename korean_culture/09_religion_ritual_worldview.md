@@ -1,7 +1,6 @@
 # Tôn giáo, nghi lễ và thế giới quan
 
-> **Mạch đọc:** Đặt **Tôn giáo, nghi lễ và thế giới quan** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hàn Quốc không có một “tôn giáo quốc dân” duy nhất** sang **무속 và shaman giáo: xử lý bất định bằng nghi lễ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tôn giáo, nghi lễ và thế giới quan**. Route đi từ plural traditions → ritual practice → uncertainty/fortune → institutions and family rites → modern coexistence, để niềm tin nối với cách xử lý đời sống.
 
 ## Hàn Quốc không có một “tôn giáo quốc dân” duy nhất
 
@@ -20,6 +19,8 @@ danh tính tôn giáo
 
 Một người có thể khác nhau trên cả bốn trục này.
 
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **무속 và shaman giáo: xử lý bất định bằng nghi lễ** tiếp nhận điểm tựa từ **Hàn Quốc không có một “tôn giáo quốc dân” duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **신내림, 굿 và vai trò của chuyên gia nghi lễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 무속 và shaman giáo: xử lý bất định bằng nghi lễ
 
 **Shaman giáo Hàn Quốc (무속 / Korean shamanism)** liên quan các chuyên gia nghi lễ thường gọi là `무당`, nghi thức `굿`, thần linh, tổ tiên và việc xử lý bất an về sức khoẻ, vận mệnh, gia đình hoặc kinh doanh.
@@ -27,6 +28,8 @@ Một người có thể khác nhau trên cả bốn trục này.
 Nếu nhìn từ nguyên lý đầu tiên, con người luôn phải đối mặt bất định khi dữ liệu không đủ: bệnh chưa chẩn đoán, mùa màng, thi cử, hôn nhân, kinh doanh. Phương pháp khoa học xử lý bất định bằng đo lường và mô hình có thể kiểm chứng; truyền thống nghi lễ xử lý một phần khác như ý nghĩa, lo âu, trấn an xã hội và hành động biểu tượng.
 
 Điều này không có nghĩa tuyên bố siêu nhiên được khoa học xác nhận. Phải tách **chức năng tâm lý–xã hội** khỏi **tuyên bố về sự thật thực nghiệm (empirical truth claim)**. Một nghi lễ có thể giảm lo âu hoặc củng cố cộng đồng dù giải thích nhân quả siêu nhiên không được kiểm chứng.
+
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **신내림, 굿 và vai trò của chuyên gia nghi lễ** tiếp nhận điểm tựa từ **무속 và shaman giáo: xử lý bất định bằng nghi lễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **불교: Phật giáo và lịch sử nhà nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 신내림, 굿 và vai trò của chuyên gia nghi lễ
 
@@ -36,6 +39,8 @@ Không nên rút gọn `굿` thành “bói toán”. Nó có thể thực hiệ
 
 Chuyên gia nghi lễ ở đây hoạt động như người diễn giải giữa sự kiện khó hiểu và một hệ thế giới quan có sẵn. Theo xã hội học tri thức, họ cung cấp **khung ý nghĩa (meaning framework)** khi mức chắc chắn về nguyên nhân thấp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **불교: Phật giáo và lịch sử nhà nước** tiếp nhận điểm tựa từ **신내림, 굿 và vai trò của chuyên gia nghi lễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chùa như một hệ thống không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 불교: Phật giáo và lịch sử nhà nước
 
 **Phật giáo (불교 / Buddhism)** đến bán đảo từ thời cổ đại và từng gắn chặt với nhà nước, nghệ thuật và kiến trúc, đặc biệt trong các vương quốc cổ và Goryeo. Chùa, tượng, hội hoạ, in ấn và nghi lễ đều mang dấu ấn Phật giáo.
@@ -43,6 +48,8 @@ Chuyên gia nghi lễ ở đây hoạt động như người diễn giải giữ
 Dưới Joseon, nhà nước Tân Nho giáo hạn chế quyền lực thiết chế của Phật giáo, nhưng Phật giáo không biến mất. Nhiều chùa phát triển ở vùng núi, một phần do áp lực chính trị–địa lý và cũng vì cảnh quan núi phù hợp đời sống tu hành.
 
 Ngày nay `템플스테이` — trải nghiệm ở chùa — vừa có chiều tôn giáo vừa là trải nghiệm văn hoá. Đây là ví dụ thiết chế truyền thống thích nghi với kinh tế du lịch mà không mất hoàn toàn danh tính tôn giáo.
+
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **Chùa như một hệ thống không gian** tiếp nhận điểm tựa từ **불교: Phật giáo và lịch sử nhà nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **부처님오신날 và 연등** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chùa như một hệ thống không gian
 
@@ -52,6 +59,8 @@ Tên như `대웅전` thường gặp ở nhiều chùa. `일주문` là một l
 
 Kiến trúc chùa hoạt động như giao diện: cổng đánh dấu chuyển từ đời thường sang không gian linh thiêng, tương tự `현관` đánh dấu ranh giới trong nhà nhưng có lớp biểu tượng sâu hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **부처님오신날 và 연등** tiếp nhận điểm tựa từ **Chùa như một hệ thống không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **유교: tôn giáo hay đạo đức xã hội?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 부처님오신날 và 연등
 
 `부처님오신날` — ngày Phật đản — là ngày quan trọng trong lịch Phật giáo. `연등` — đèn lồng — hiện diện mạnh trong văn hoá thị giác công cộng quanh thời điểm này.
@@ -59,6 +68,8 @@ Kiến trúc chùa hoạt động như giao diện: cổng đánh dấu chuyển
 Đèn không chỉ là vật trang trí; nó có thể biểu thị cúng dường, soi sáng và tham gia. Khi sự kiện tôn giáo đi ra phố, nghi lễ, du lịch và cảnh quan đô thị có thể cùng tồn tại.
 
 Đây là ví dụ tốt để tránh nhị phân “tôn giáo / thế tục”. Một người có thể tham gia vì đức tin, di sản, đi chơi gia đình hoặc chụp ảnh.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **유교: tôn giáo hay đạo đức xã hội?** tiếp nhận điểm tựa từ **부처님오신날 và 연등** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제사: nghi lễ tổ tiên nằm giữa tôn giáo, ký ức và họ hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 유교: tôn giáo hay đạo đức xã hội?
 
@@ -68,6 +79,8 @@ Nghi lễ tại `향교`, `서원`, `종묘` cho thấy Nho giáo có chiều ng
 
 Điều này nhắc về **vấn đề phân loại (classification problem)**: nhóm khái niệm do nhà nghiên cứu đặt không phải lúc nào cũng ánh xạ hoàn hảo lên hiện tượng.
 
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **제사: nghi lễ tổ tiên nằm giữa tôn giáo, ký ức và họ hàng** tiếp nhận điểm tựa từ **유교: tôn giáo hay đạo đức xã hội?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **기독교: Kitô giáo và tính hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 제사: nghi lễ tổ tiên nằm giữa tôn giáo, ký ức và họ hàng
 
 `제사` thường được dịch là nghi lễ tổ tiên. Nhưng với người tham gia, ý nghĩa có thể khác: thờ cúng, nghĩa vụ hiếu, tưởng niệm gia đình, truyền thống hoặc đơn giản là việc “nhà vẫn làm”.
@@ -75,6 +88,8 @@ Nghi lễ tại `향교`, `서원`, `종묘` cho thấy Nho giáo có chiều ng
 Vì vậy cùng hành động — đặt thức ăn, cúi lạy, gọi tên tổ tiên — có thể được hai người trong cùng gia đình giải thích khác nhau.
 
 Về chức năng xã hội, `제사` giữ ký ức dòng họ, tập hợp gia đình, phân phối vai trò và tạo lịch riêng của họ tộc. Nhưng nó cũng tạo lao động, thời gian và gánh nặng giới; vì vậy nhiều hộ hiện đại rút gọn hoặc bỏ một số phần.
+
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **기독교: Kitô giáo và tính hiện đại** tiếp nhận điểm tựa từ **제사: nghi lễ tổ tiên nằm giữa tôn giáo, ký ức và họ hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **개신교 và 천주교: cùng Kitô giáo nhưng văn hoá tổ chức khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 기독교: Kitô giáo và tính hiện đại
 
@@ -84,6 +99,8 @@ Nhà thờ trong thành phố vừa là thiết chế tôn giáo vừa là mạn
 
 Tuy nhiên không nên nói “Hàn Quốc là nước Kitô giáo”. Một tỷ lệ lớn dân cư không tự nhận tôn giáo; thực hành cũng khác theo tuổi và vùng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **개신교 và 천주교: cùng Kitô giáo nhưng văn hoá tổ chức khác nhau** tiếp nhận điểm tựa từ **기독교: Kitô giáo và tính hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제사 và xung đột tôn giáo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 개신교 và 천주교: cùng Kitô giáo nhưng văn hoá tổ chức khác nhau
 
 Trong đời sống Hàn, `교회` thường gắn nhà thờ Tin Lành còn `성당` thường gắn nhà thờ Công giáo. Người học nên nhận ra khác biệt này vì cùng từ tiếng Anh “church” nhưng cách dùng tiếng Hàn phân biệt khá rõ.
@@ -91,6 +108,8 @@ Trong đời sống Hàn, `교회` thường gắn nhà thờ Tin Lành còn `�
 Giáo hội Tin Lành rất đa dạng theo hệ phái và kiểu thờ phượng. Công giáo có cấu trúc phụng vụ thống nhất hơn. Đây là khác biệt thiết chế, không phải thước đo “ai có đạo hơn”.
 
 Các từ như `목사` (mục sư), `신부` (linh mục), `수녀` (nữ tu), `예배` (lễ thờ phượng Tin Lành), `미사` (thánh lễ Công giáo) mã hoá vai trò riêng của từng truyền thống.
+
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **제사 và xung đột tôn giáo** tiếp nhận điểm tựa từ **개신교 và 천주교: cùng Kitô giáo nhưng văn hoá tổ chức khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **원불교, 천도교 và các truyền thống hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 제사 và xung đột tôn giáo
 
@@ -100,11 +119,15 @@ Nghi lễ tổ tiên là nơi các thế giới quan gặp nhau. Một số Kit�
 
 Một gia đình có thể thương lượng phương án như đứng mặc niệm, cầu nguyện theo tôn giáo riêng hoặc tham gia phần tưởng niệm nhưng không thực hiện dâng cúng. Văn hoá không phải một kịch bản duy nhất; nó còn là thương lượng giữa các hệ ý nghĩa.
 
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **원불교, 천도교 và các truyền thống hiện đại** tiếp nhận điểm tựa từ **제사 và xung đột tôn giáo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **풍수지리: cảnh quan và trật tự biểu tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 원불교, 천도교 và các truyền thống hiện đại
 
 Ngoài các nhóm lớn, Hàn Quốc còn có truyền thống như `원불교` và `천도교`. Chúng quan trọng vì cho thấy cảnh quan tôn giáo không thể rút gọn thành “Phật giáo + Kitô giáo + shaman giáo”.
 
 `천도교` có gốc trong phong trào Donghak thế kỷ XIX. `원불교` hình thành trong thời hiện đại và phát triển thiết chế riêng. Với học văn hoá, điểm quan trọng không phải thuộc giáo lý mà nhận ra lịch sử Hàn Quốc hiện đại cũng sản sinh tôn giáo/phong trào tôn giáo mới, chứ không chỉ tiếp nhận truyền thống có sẵn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **풍수지리: cảnh quan và trật tự biểu tượng** tiếp nhận điểm tựa từ **원불교, 천도교 và các truyền thống hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **묘 và cảnh quan tổ tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 풍수지리: cảnh quan và trật tự biểu tượng
 
@@ -112,11 +135,15 @@ Ngoài các nhóm lớn, Hàn Quốc còn có truyền thống như `원불교` 
 
 Điều hữu ích là tránh hai cực: “mọi phong thuỷ đều khoa học” hoặc “hoàn toàn vô nghĩa”. Cần phân loại tuyên bố. Hướng nhà nhận nhiều nắng mùa đông có cơ chế vật lý; tuyên bố về vận may cần loại bằng chứng khác.
 
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **묘 và cảnh quan tổ tiên** tiếp nhận điểm tựa từ **풍수지리: cảnh quan và trật tự biểu tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사주 và bói vận mệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 묘 và cảnh quan tổ tiên
 
 Vị trí mộ trong truyền thống từng liên hệ họ tộc, phong thuỷ và kính trọng tổ tiên. Vì vậy cảnh quan không chỉ là đất vật lý mà còn là bản đồ ký ức.
 
 Đô thị hoá và hoả táng làm thực hành mai táng thay đổi. Công viên tưởng niệm, nhà lưu tro và tưởng niệm số tạo cách thực hiện mới cho cùng nhu cầu tưởng nhớ. Đây là ví dụ **tính liên tục về chức năng**: chức năng giữ lại, hạ tầng đổi.
+
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **사주 và bói vận mệnh** tiếp nhận điểm tựa từ **묘 và cảnh quan tổ tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **궁합: bất định trong quan hệ được biến thành mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 사주 và bói vận mệnh
 
@@ -126,11 +153,15 @@ Vị trí mộ trong truyền thống từng liên hệ họ tộc, phong thuỷ
 
 Từ khoa học nhận thức, con người dễ nhận ra mẫu, rơi vào thiên lệch xác nhận và **hiệu ứng Barnum**. Hiểu các thiên lệch này giúp giải thích vì sao lời dự đoán mơ hồ có thể cảm giác “đúng với mình”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **궁합: bất định trong quan hệ được biến thành mô hình** tiếp nhận điểm tựa từ **사주 và bói vận mệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tôn giáo, thương mại hoá và nền tảng số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 궁합: bất định trong quan hệ được biến thành mô hình
 
 `궁합` thường liên quan độ hợp, đặc biệt trong hôn nhân/hẹn hò. Chức năng xã hội có thể là tạo ngôn ngữ để nói về bất định của quan hệ.
 
 Một gia đình có thể dùng 궁합 như đầu vào biểu tượng, người trẻ dùng như giải trí, người khác tin nghiêm túc. Không nên suy mức độ tin chỉ từ việc ai đó “đi xem 사주”.
+
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **Tôn giáo, thương mại hoá và nền tảng số** tiếp nhận điểm tựa từ **궁합: bất định trong quan hệ được biến thành mô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **종교와 정치: cần phân biệt mô tả với phán đoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tôn giáo, thương mại hoá và nền tảng số
 
@@ -140,9 +171,13 @@ Khi chi phí phân phối giảm, mục sư, nhà sư, thầy bói hoặc nội 
 
 Công nghệ không chỉ “truyền tôn giáo”; nó thay kinh tế của quyền lực tôn giáo.
 
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **종교와 정치: cần phân biệt mô tả với phán đoán** tiếp nhận điểm tựa từ **Tôn giáo, thương mại hoá và nền tảng số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tôn giáo như một thiết chế cung cấp dịch vụ xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 종교와 정치: cần phân biệt mô tả với phán đoán
 
 Các tổ chức tôn giáo ở Hàn Quốc đôi khi tham gia hoạt động xã hội và chính trị như ở nhiều nền dân chủ khác. Khi phân tích, cần phân biệt giáo lý chính thức, phát biểu của lãnh đạo và hành vi của thành viên. Không nên suy khuynh hướng chính trị của cá nhân chỉ từ tôn giáo.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **Tôn giáo như một thiết chế cung cấp dịch vụ xã hội** tiếp nhận điểm tựa từ **종교와 정치: cần phân biệt mô tả với phán đoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **봉사, 기부, 헌금, 보시: cho đi nhưng không cùng một lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tôn giáo như một thiết chế cung cấp dịch vụ xã hội
 
@@ -160,6 +195,8 @@ Ngay cả người không chia sẻ toàn bộ niềm tin vẫn có thể tiếp
 
 Về xã hội học, đây là **vốn xã hội tổ chức (organizational social capital)**: cộng đồng gặp đều, có lãnh đạo, có địa điểm, có kênh quyên góp và mạng tình nguyện nên có khả năng huy động nhanh khi có nhu cầu.
 
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **봉사, 기부, 헌금, 보시: cho đi nhưng không cùng một lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Tôn giáo như một thiết chế cung cấp dịch vụ xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **무종교 và thế tục hoá: không tôn giáo không đồng nghĩa không có thế giới quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 봉사, 기부, 헌금, 보시: cho đi nhưng không cùng một lô-gic (logic / 논리)
 
 `봉사` thường chỉ hoạt động tình nguyện; `기부` là quyên góp; `헌금` gắn mạnh với đóng góp trong bối cảnh Kitô giáo; `보시` là khái niệm bố thí/cúng dường trong Phật giáo.
@@ -176,6 +213,8 @@ trách nhiệm tôn giáo
 Nếu chỉ đo tổng số tiền hoặc số giờ, ta bỏ mất động lực và cấu trúc quan hệ phía sau.
 
 Điều này cũng cho thấy một nghi lễ kinh tế có thể đồng thời tạo bản sắc: người đóng góp không chỉ “mất tiền”, họ có thể đang khẳng định tư cách thành viên trong một cộng đồng.
+
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **무종교 và thế tục hoá: không tôn giáo không đồng nghĩa không có thế giới quan** tiếp nhận điểm tựa từ **봉사, 기부, 헌금, 보시: cho đi nhưng không cùng một lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **종교 공동체 như một mạng lưới quan hệ mạnh và yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 무종교 và thế tục hoá: không tôn giáo không đồng nghĩa không có thế giới quan
 
@@ -195,6 +234,8 @@ Một gia đình có thể giảm đi lễ nhà thờ hoặc chùa nhưng vẫn 
 
 Đây là lý do dữ liệu “có/không tôn giáo” chỉ đo một lát cắt của thế giới quan.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **종교 공동체 như một mạng lưới quan hệ mạnh và yếu** tiếp nhận điểm tựa từ **무종교 và thế tục hoá: không tôn giáo không đồng nghĩa không có thế giới quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền lực tôn giáo: lòng tin tạo năng lực nhưng cũng cần trách nhiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 종교 공동체 như một mạng lưới quan hệ mạnh và yếu
 
 Cộng đồng tôn giáo có thể tạo cả **liên kết mạnh** — bạn thân, người cùng nhóm nhỏ — và **liên kết yếu** — người quen biết qua sinh hoạt chung. Liên kết yếu đặc biệt quan trọng vì chúng đưa thông tin và cơ hội ra ngoài vòng gia đình gần.
@@ -202,6 +243,8 @@ Cộng đồng tôn giáo có thể tạo cả **liên kết mạnh** — bạn 
 Một người chuyển tới thành phố mới có thể dùng nhà thờ, chùa hoặc nhóm tôn giáo để nhanh chóng xây mạng xã hội. Với người di cư, sinh viên quốc tế hoặc người cao tuổi sống một mình, chức năng cộng đồng đôi khi quan trọng không kém nội dung giáo lý.
 
 Nhưng mạng dày cũng có mặt trái: áp lực đồng thuận, khó rời nhóm hoặc danh tiếng lan rất nhanh. Mật độ quan hệ cao tăng hỗ trợ đồng thời tăng chi phí xã hội của bất đồng.
+
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **Quyền lực tôn giáo: lòng tin tạo năng lực nhưng cũng cần trách nhiệm** tiếp nhận điểm tựa từ **종교 공동체 như một mạng lưới quan hệ mạnh và yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghi lễ vòng đời như hạ tầng chuyển trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quyền lực tôn giáo: lòng tin tạo năng lực nhưng cũng cần trách nhiệm
 
@@ -219,6 +262,8 @@ Khi lời khuyên vượt sang lĩnh vực có rủi ro cao, cần phân biệt 
 
 Điều này không nhằm đánh giá một truyền thống cụ thể; nó là quy tắc chung để hiểu mọi tổ chức dựa mạnh vào niềm tin.
 
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **Nghi lễ vòng đời như hạ tầng chuyển trạng thái** tiếp nhận điểm tựa từ **Quyền lực tôn giáo: lòng tin tạo năng lực nhưng cũng cần trách nhiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tôn giáo số: tiếp cận tăng nhưng cộng đồng thay đổi cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nghi lễ vòng đời như hạ tầng chuyển trạng thái
 
 Sinh, trưởng thành, kết hôn, bệnh nặng và cái chết đều là những giai đoạn có bất định cao. Nghi lễ giúp biến một thay đổi khó nắm bắt thành chuỗi hành động có tên gọi, vai trò và người chứng kiến.
@@ -234,6 +279,8 @@ trạng thái cũ
 
 Khi gia đình đa tôn giáo hoặc ít tôn giáo hơn, chức năng này có thể được thay bằng lễ dân sự, nhà tang lễ, tiệc gia đình hoặc nghi thức cá nhân hoá.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **Tôn giáo số: tiếp cận tăng nhưng cộng đồng thay đổi cấu trúc** tiếp nhận điểm tựa từ **Nghi lễ vòng đời như hạ tầng chuyển trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo lường tôn giáo: câu hỏi khảo sát quyết định câu trả lời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tôn giáo số: tiếp cận tăng nhưng cộng đồng thay đổi cấu trúc
 
 Bài giảng trực tuyến, phát trực tiếp nghi lễ, nhóm chat, quyên góp điện tử và tư vấn từ xa làm giảm chi phí tham gia về khoảng cách. Người bệnh, người cao tuổi hoặc người sống xa vẫn có thể theo dõi hoạt động cộng đồng.
@@ -241,6 +288,8 @@ Bài giảng trực tuyến, phát trực tiếp nghi lễ, nhóm chat, quyên g
 Nhưng tham gia số không hoàn toàn thay thế hiện diện trực tiếp. Nghi lễ phụ thuộc âm thanh, cơ thể, không gian, mùi, nhịp tập thể và tương tác sau buổi lễ. Vì vậy số hoá thường tạo **mô hình lai** hơn là thay thế toàn bộ.
 
 Ngoài ra, thuật toán đề xuất có thể làm người dùng tiếp xúc chủ yếu với người giảng hoặc nội dung phù hợp niềm tin sẵn có. Điều này tạo cùng vấn đề đã thấy ở các cộng đồng trực tuyến khác: mức độ dễ nhìn thấy không đồng nghĩa mức đại diện.
+
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **Tôn giáo số: tiếp cận tăng nhưng cộng đồng thay đổi cấu trúc** nêu điều cần giải thích; **Đo lường tôn giáo: câu hỏi khảo sát quyết định câu trả lời** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khi niềm tin gặp sức khoẻ và tài chính: ranh giới rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đo lường tôn giáo: câu hỏi khảo sát quyết định câu trả lời
 
@@ -256,6 +305,8 @@ thuộc về tổ chức
 Vì vậy hai khảo sát tôn giáo có thể cho hình ảnh khác nhau mà không nhất thiết mâu thuẫn; chúng có thể đang đo các khái niệm khác.
 
 Đây là bài học về **giá trị đo lường (measurement validity)**: trước khi so con số, phải hỏi chỉ số đang đại diện cho biến nào.
+
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **Đo lường tôn giáo: câu hỏi khảo sát quyết định câu trả lời** nêu điều cần giải thích; **Khi niềm tin gặp sức khoẻ và tài chính: ranh giới rủi ro** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên hệ kiến thức: nghi lễ như máy trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi niềm tin gặp sức khoẻ và tài chính: ranh giới rủi ro
 
@@ -273,11 +324,15 @@ chẩn đoán y khoa / quyết định pháp lý / đầu tư tài chính
 
 Tách hai lớp này giúp tôn trọng ý nghĩa văn hoá mà không đánh đồng với bằng chứng chuyên môn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **Liên hệ kiến thức: nghi lễ như máy trạng thái** tiếp nhận điểm tựa từ **Khi niềm tin gặp sức khoẻ và tài chính: ranh giới rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: tôn giáo như giao thức nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ kiến thức: nghi lễ như máy trạng thái
 
 Một nghi lễ thường có chuỗi trạng thái rõ: chuẩn bị → bước vào → dâng cúng → cúi lạy → chuyển bước → kết thúc. Người tham gia biết mình đang ở bước nào nhờ vật dụng, cử chỉ và lời nói.
 
 Trong khoa học máy tính, **máy trạng thái hữu hạn (finite-state machine)** giúp quản lý quá trình có trạng thái. Nghi lễ cũng giảm bất định bằng chuỗi chuẩn. Khi mọi người biết bước tiếp theo, chi phí phối hợp giảm và sự kiện cảm xúc như tang lễ trở nên có cấu trúc.
+
+> **Chuyển mạch:** Trong **Tôn giáo, nghi lễ và thế giới quan**, **Liên hệ kiến thức: tôn giáo như giao thức nhiều lớp** tiếp nhận điểm tựa từ **Liên hệ kiến thức: nghi lễ như máy trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ kiến thức: tôn giáo như giao thức nhiều lớp
 
@@ -295,9 +350,13 @@ lớp hỗ trợ xã hội
 
 Hai người cùng làm một nghi lễ có thể giống nhau ở hành vi nhưng khác hoàn toàn ở niềm tin. Đây là lý do khảo sát chỉ hỏi “có tôn giáo không?” không nắm hết văn hoá tôn giáo.
 
+> **Chuyển mạch:** Ở chặng này của **Tôn giáo, nghi lễ và thế giới quan**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên hệ kiến thức: tôn giáo như giao thức nhiều lớp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Đừng hỏi “người Hàn tin tôn giáo nào?” như thể có một biến duy nhất. Hãy tách niềm tin, nghi lễ, thiết chế, danh tính, mạng hỗ trợ và thực hành gia đình. Một cộng đồng tôn giáo vừa có thể là hệ ý nghĩa, nơi thực hiện nghi lễ, mạng quan hệ và nhà cung cấp dịch vụ xã hội. Hiểu sâu cần nhìn cả chức năng lẫn giới hạn quyền lực của thiết chế.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tôn giáo, nghi lễ và thế giới quan**, **Hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -315,4 +374,4 @@ Hai người cùng làm một nghi lễ có thể giống nhau ở hành vi như
 
 “Người có uy tín tôn giáo chắc chắn có chuyên môn ở mọi lĩnh vực” là sai; uy tín tinh thần và chuyên môn y khoa, pháp lý hoặc tài chính là các loại năng lực khác nhau.
 
-> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

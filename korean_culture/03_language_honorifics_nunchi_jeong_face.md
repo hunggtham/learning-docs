@@ -1,7 +1,6 @@
 # Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch
 
-> **Mạch đọc:** Đặt **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiếng Hàn mã hoá quan hệ vào câu nói** sang **Ba lớp kính ngữ cần tách ra**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**. Route đi từ speech levels → honorific markers → nunchi/context reading → jeong/face management → workplace and everyday interaction, để câu nói nối với quan hệ xã hội.
 
 ## Tiếng Hàn mã hoá quan hệ vào câu nói
 
@@ -18,6 +17,8 @@ thông tin quan hệ: tôi đang đặt tôi, người nghe và chủ thể vào
 
 Người học ngoại ngữ thường tập trung vào lớp thứ nhất, trong khi người bản ngữ nhận cả hai gần như đồng thời.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Ba lớp kính ngữ cần tách ra** tiếp nhận điểm tựa từ **Tiếng Hàn mã hoá quan hệ vào câu nói** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **존댓말, 반말 và các cấp độ lời nói** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ba lớp kính ngữ cần tách ra
 
 Nói “dùng kính ngữ” vẫn còn quá chung. Trong tiếng Hàn có thể tách tối thiểu ba lớp.
@@ -30,6 +31,8 @@ Nói “dùng kính ngữ” vẫn còn quá chung. Trong tiếng Hàn có thể
 
 Ba lớp này có thể kết hợp. Vì vậy kính ngữ không phải lựa chọn nhị phân kiểu “có / không”.
 
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **존댓말, 반말 và các cấp độ lời nói** tiếp nhận điểm tựa từ **Ba lớp kính ngữ cần tách ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **호칭: tên gọi là một phần của quan hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 존댓말, 반말 và các cấp độ lời nói
 
 `존댓말` thường được hiểu là lời nói lịch sự hoặc kính trọng, còn `반말` là lời nói thân mật không dùng kính ngữ. Tuy nhiên cặp này không hoàn toàn tương ứng với “trang trọng / không trang trọng”. Có cách nói thân mật nhưng vẫn lịch sự, và cách nói rất trang trọng chưa chắc thể hiện sự thân thiết.
@@ -39,6 +42,8 @@ Ba lớp này có thể kết hợp. Vì vậy kính ngữ không phải lựa c
 Việc chuyển từ 존댓말 sang 반말 thường mang ý nghĩa quan hệ: “chúng ta đã đủ gần để giảm khoảng cách xã hội chưa?”. Vì vậy câu `말 놓을까요?` — “chúng ta nói thoải mái hơn nhé?” — thực chất là một cuộc thương lượng về **giao thức quan hệ (relationship protocol)**.
 
 Một lỗi phổ biến của người học là thấy người kia trẻ hơn rồi tự động dùng 반말. Tuổi chỉ là một yếu tố, không phải toàn bộ “quyền truy cập” trong quan hệ. Nếu mới gặp, chưa thân hoặc đang ở bối cảnh công sở/dịch vụ, 존댓말 thường an toàn hơn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **호칭: tên gọi là một phần của quan hệ** tiếp nhận điểm tựa từ **존댓말, 반말 và các cấp độ lời nói** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **네 không phải lúc nào cũng có nghĩa “tôi đồng ý”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 호칭: tên gọi là một phần của quan hệ
 
@@ -50,6 +55,8 @@ Hậu tố `-님` có chức năng tôn kính. Trong công ty, một người c�
 
 Tiếng Hàn còn thường **tránh đại từ nhân xưng** nếu vai trò đã rõ. Thay vì lặp “you”, người nói dùng chức danh, từ thân tộc hoặc bỏ chủ ngữ. Đây là khác biệt lớn với tiếng Anh và là lý do dịch từng chữ đôi khi nghe không tự nhiên.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **네 không phải lúc nào cũng có nghĩa “tôi đồng ý”** tiếp nhận điểm tựa từ **호칭: tên gọi là một phần của quan hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách nói gián tiếp: 좀, 혹시, 것 같습니다 và giảm độ trực diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `네` không phải lúc nào cũng có nghĩa “tôi đồng ý”
 
 **Phản hồi khi nghe (backchannel)** rất quan trọng trong tiếng Hàn. `네`, `예`, `아`, `그렇군요`, `맞아요` có thể chỉ cho thấy người nghe đang theo dõi cuộc hội thoại. Trong một số ngữ cảnh, `네` chỉ nghĩa “tôi đã nghe / đã nhận thông tin”, không nhất thiết là “tôi đồng ý với nội dung”.
@@ -57,6 +64,8 @@ Tiếng Hàn còn thường **tránh đại từ nhân xưng** nếu vai trò đ
 Điều này đặc biệt quan trọng trong giao tiếp công việc. Một người nói `네, 확인해 보겠습니다` nghĩa là “vâng, tôi sẽ kiểm tra”, chưa phải “vấn đề đã được chấp thuận”. Nếu cần cam kết rõ, phải hỏi đầu ra và thời hạn cụ thể hơn.
 
 Có thể hình dung đây như một gói xác nhận đã nhận thông tin; nó chưa đồng nghĩa giao dịch đã hoàn tất.
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Cách nói gián tiếp: 좀, 혹시, 것 같습니다 và giảm độ trực diện** tiếp nhận điểm tựa từ **네 không phải lúc nào cũng có nghĩa “tôi đồng ý”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사과와 감사: xin lỗi và cảm ơn cũng có cấp độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách nói gián tiếp: `좀`, `혹시`, `것 같습니다` và giảm độ trực diện
 
@@ -71,9 +80,13 @@ Trong công sở, các mẫu như sau rất phổ biến:
 혹시 가능하시면 오늘 중으로 회신 부탁드립니다.
 ```
 
+Các câu trên lần lượt có nghĩa: “Vui lòng xác nhận”, “Nếu có thể xem lại thì tôi rất cảm ơn”, “Có lẽ phần này cần được kiểm tra lại” và “Nếu thuận tiện, vui lòng phản hồi trong hôm nay”.
+
 Nếu dịch từng từ sang tiếng Việt hoặc tiếng Anh, câu có thể nghe vòng. Nhưng chức năng xã hội của cách nói này là giảm nguy cơ làm người nghe mất mặt và để họ có khoảng trống xử lý yêu cầu.
 
 Nói mềm không có nghĩa yêu cầu yếu. `오늘 중으로 확인 부탁드립니다` vẫn có thể là thời hạn khá rõ trong bối cảnh công việc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **사과와 감사: xin lỗi và cảm ơn cũng có cấp độ** tiếp nhận điểm tựa từ **Cách nói gián tiếp: 좀, 혹시, 것 같습니다 và giảm độ trực diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **눈치: suy luận từ tín hiệu yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 사과와 감사: xin lỗi và cảm ơn cũng có cấp độ
 
@@ -82,6 +95,8 @@ Nói mềm không có nghĩa yêu cầu yếu. `오늘 중으로 확인 부탁�
 Lời xin lỗi trong dịch vụ hoặc tổ chức đôi khi làm chức năng **khôi phục quan hệ (relationship repair)** trước cả khi trách nhiệm pháp lý được xác định. Một nhân viên có thể nói `불편을 드려 죄송합니다` để thừa nhận sự bất tiện mà chưa phải kết luận chính thức về lỗi.
 
 Trong quan hệ cá nhân, lời xin lỗi tốt thường gồm ba lớp: thừa nhận tác động, nhận phần trách nhiệm phù hợp và nêu hành động tiếp theo. Chỉ lặp `죄송합니다` mà không sửa hành vi có thể làm lời xin lỗi mất giá trị thông tin.
+
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **눈치: suy luận từ tín hiệu yếu** tiếp nhận điểm tựa từ **사과와 감사: xin lỗi và cảm ơn cũng có cấp độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng lặng cũng là tín hiệu, nhưng đừng suy diễn quá mức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 눈치: suy luận từ tín hiệu yếu
 
@@ -99,11 +114,15 @@ Không ai thực sự tính xác suất, nhưng mô hình tư duy này cho thấ
 
 Mặt tích cực của 눈치 là phối hợp tinh tế và nhạy cảm với người khác. Mặt tiêu cực xuất hiện khi tổ chức dựa quá nhiều vào kỳ vọng ngầm: nhân viên phải đoán yêu cầu thay vì nhận đặc tả rõ ràng. Trong kỹ thuật phần mềm, điều này giống một API không có tài liệu: người lâu năm biết “hợp đồng ngầm”, người mới rất dễ sai.
 
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Khoảng lặng cũng là tín hiệu, nhưng đừng suy diễn quá mức** tiếp nhận điểm tựa từ **눈치: suy luận từ tín hiệu yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정: quan hệ tích luỹ theo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Khoảng lặng cũng là tín hiệu, nhưng đừng suy diễn quá mức
 
 Khoảng lặng, câu trả lời ngắn hoặc việc không phản hồi ngay có thể được diễn giải dựa trên bối cảnh quan hệ. Tuy nhiên người học rất dễ suy diễn quá mức: “họ im lặng nên chắc đang giận”. Khoảng lặng có nhiều nguyên nhân: bận, chưa quyết định, không biết trả lời, cần hỏi cấp trên hoặc đơn giản chưa xem kỹ.
 
 Hiểu văn hoá tốt phải đi cùng sự khiêm tốn về tri thức. `눈치` giúp tạo giả thuyết; bằng chứng và hỏi lại rõ ràng mới giúp xác nhận.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **정: quan hệ tích luỹ theo thời gian** tiếp nhận điểm tựa từ **Khoảng lặng cũng là tín hiệu, nhưng đừng suy diễn quá mức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **체면: thể diện xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 정: quan hệ tích luỹ theo thời gian
 
@@ -113,6 +132,8 @@ Có thể hình dung 정 như một trạng thái được tích luỹ qua nhi�
 
 Nhưng cần tránh lãng mạn hoá. 정 có thể làm quan hệ ấm hơn, đồng thời khiến ranh giới khó thiết lập: “vì đã có tình nghĩa nên khó từ chối”.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **체면: thể diện xã hội** tiếp nhận điểm tựa từ **정: quan hệ tích luỹ theo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **한: từ lịch sử đến cảm xúc tập thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 체면: thể diện xã hội
 
 **Thể diện (체면 / face)** là hình ảnh xã hội mà cá nhân muốn duy trì trước người khác. Khái niệm này không chỉ có ở Hàn Quốc; xã hội học ngôn ngữ và nhân học sử dụng nó rộng rãi. Trong môi trường coi trọng sự hài hoà, sửa sai công khai có thể gây tổn thất thể diện lớn hơn sửa riêng.
@@ -121,11 +142,15 @@ Vì vậy, một câu phản hồi rất thẳng trước cả nhóm có thể t
 
 Đây là một bài toán tối ưu nhiều mục tiêu (multi-objective optimization). Nếu quá ưu tiên “giữ mặt”, vấn đề không được nói. Nếu chỉ ưu tiên “nói thật ngay”, niềm tin có thể giảm. Kỹ năng nằm ở việc chọn kênh, thời điểm và cách diễn đạt sao cho cả hai mục tiêu đủ tốt.
 
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **한: từ lịch sử đến cảm xúc tập thể** tiếp nhận điểm tựa từ **체면: thể diện xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **고생, 수고 và việc ghi nhận công sức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 한: từ lịch sử đến cảm xúc tập thể
 
 **한 (Han / 한)** thường được mô tả bằng những từ như nỗi uất, đau, tiếc hoặc khát vọng chưa giải toả. Đây là khái niệm được dùng nhiều trong văn học và diễn giải lịch sử Hàn Quốc, nhưng không nên xem nó là “gene cảm xúc của người Hàn”. Ý nghĩa của 한 đã được kiến tạo và tranh luận qua nghệ thuật, lịch sử thuộc địa, chia cắt, chiến tranh và chủ nghĩa dân tộc.
 
 Một cách an toàn là dùng 한 khi phân tích một tác phẩm hoặc diễn ngôn cụ thể, thay vì gán nó cho toàn bộ dân tộc.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **고생, 수고 và việc ghi nhận công sức** tiếp nhận điểm tựa từ **한: từ lịch sử đến cảm xúc tập thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao tiếp ngữ cảnh cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 고생, 수고 và việc ghi nhận công sức
 
@@ -133,11 +158,15 @@ Một cách an toàn là dùng 한 khi phân tích một tác phẩm hoặc di�
 
 `수고하세요` cũng phổ biến khi rời cửa hàng, văn phòng hoặc nói với người đang tiếp tục làm việc, nhưng sắc thái phụ thuộc quan hệ. Với người ở vị trí cao hơn, một số người thích `고생 많으셨습니다`, `감사합니다` hoặc cách nói khác để tránh cảm giác “đánh giá công sức của cấp trên”. Không có một quy tắc tuyệt đối; đây là nơi sắc thái lời nói và văn hoá tổ chức giao nhau.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Giao tiếp ngữ cảnh cao** tiếp nhận điểm tựa từ **고생, 수고 và việc ghi nhận công sức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngôn ngữ số: ㅋㅋ, ㅎㅎ, dấu chấm và sắc thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giao tiếp ngữ cảnh cao
 
 Hàn Quốc thường được mô tả là **văn hoá ngữ cảnh cao (고맥락 문화 / high-context culture)**, nghĩa là một phần ý nghĩa dựa nhiều vào bối cảnh chung, quan hệ và tín hiệu ngầm. Đây là một phổ liên tục chứ không phải nhãn cố định. Trong sự cố kỹ thuật, người Hàn vẫn cần log và đặc tả rõ ràng; trong tình huống nhạy cảm giữa người quen, hàm ý có thể quan trọng hơn.
 
 Đối với người làm IT, bài học thực dụng là phân biệt **bối cảnh xã hội (social context)** với **yêu cầu kỹ thuật (technical requirement)**. Đừng dùng 눈치 để thay tiêu chí nghiệm thu. Một nhóm đa văn hoá tốt nên làm rõ thời hạn, người phụ trách và tiêu chí hoàn thành, đồng thời vẫn giữ cách diễn đạt lịch sự.
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Ngôn ngữ số: ㅋㅋ, ㅎㅎ, dấu chấm và sắc thái** tiếp nhận điểm tựa từ **Giao tiếp ngữ cảnh cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bẫy dịch thuật: đúng nghĩa từ điển nhưng sai quan hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngôn ngữ số: `ㅋㅋ`, `ㅎㅎ`, dấu chấm và sắc thái
 
@@ -147,11 +176,15 @@ Một dấu chấm cuối câu rất bình thường trong văn bản trang tr�
 
 `넵`, `넹`, `네네`, `넵!` đều là biến thể số của phản hồi xác nhận với sắc thái khác nhau. Trong trình nhắn tin công việc, người mới học tiếng Hàn nên ưu tiên cách viết rõ và trung tính trước khi bắt chước tiếng lóng của nhóm.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Ngôn ngữ số: ㅋㅋ, ㅎㅎ, dấu chấm và sắc thái** đã nêu tiêu chí phân biệt, còn **Bẫy dịch thuật: đúng nghĩa từ điển nhưng sai quan hệ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chủ ngữ bị lược bỏ: hiệu quả khi cùng bối cảnh, nguy hiểm khi bàn giao công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bẫy dịch thuật: đúng nghĩa từ điển nhưng sai quan hệ
 
 Dịch và bản địa hoá Hàn–Việt/Anh thường khó không phải vì từ vựng mà vì vai trò xã hội. `고생하셨습니다`, `잘 부탁드립니다`, `수고하세요`, `들어가세요`, `조심히 들어가세요` đều có chức năng xã hội lớn hơn nghĩa đen.
 
 `잘 부탁드립니다` không có một câu tiếng Anh duy nhất tương đương. Tuỳ bối cảnh, nó có thể gần với “mong được giúp đỡ”, “mong hợp tác tốt”, “nhờ anh/chị hỗ trợ việc này”. Dịch tốt phải giữ **hành vi ngôn ngữ (speech act)**, không chỉ nghĩa từ điển.
+
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Bẫy dịch thuật: đúng nghĩa từ điển nhưng sai quan hệ** đã nêu tiêu chí phân biệt, còn **Chủ ngữ bị lược bỏ: hiệu quả khi cùng bối cảnh, nguy hiểm khi bàn giao công việc** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nói lịch sự và cam kết công việc là hai chiều khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chủ ngữ bị lược bỏ: hiệu quả khi cùng bối cảnh, nguy hiểm khi bàn giao công việc
 
@@ -170,6 +203,8 @@ việc liên nhóm / có deadline / có ảnh hưởng production
 ```
 
 Đây không phải vấn đề “tiếng Hàn thiếu rõ ràng”. Mọi ngôn ngữ đều có cách dựa vào bối cảnh; chỉ là chi phí của mơ hồ tăng khi mạng cộng tác lớn hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Nói lịch sự và cam kết công việc là hai chiều khác nhau** tiếp nhận điểm tựa từ **Chủ ngữ bị lược bỏ: hiệu quả khi cùng bối cảnh, nguy hiểm khi bàn giao công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao tiếp vòng kín: xác nhận không chỉ bằng 네** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nói lịch sự và cam kết công việc là hai chiều khác nhau
 
@@ -195,6 +230,8 @@ Do đó khi quản lý công việc, cần tách bốn trạng thái:
 
 Nhiều hiểu lầm liên văn hoá xảy ra vì một bên nghe `네` và suy thành “đã đồng ý làm”, trong khi bên kia chỉ định nghĩa nó là “đã nhận thông tin”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Giao tiếp vòng kín: xác nhận không chỉ bằng 네** tiếp nhận điểm tựa từ **Nói lịch sự và cam kết công việc là hai chiều khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhật ký quyết định: nói xong chưa chắc hệ thống đã có cùng một sự thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giao tiếp vòng kín: xác nhận không chỉ bằng `네`
 
 Trong hệ thống có rủi ro cao, **giao tiếp vòng kín (closed-loop communication)** giúp giảm sai lệch. Người nhận không chỉ nói “đã hiểu” mà nhắc lại đầu ra quan trọng bằng lời của mình.
@@ -210,6 +247,8 @@ Phản hồi của B xác nhận ba thứ: thời hạn, phạm vi và hành đ�
 
 Trong nhóm Hàn–Việt hoặc nhóm có người mới, kỹ thuật này thường tốt hơn yêu cầu mọi người “có 눈치 hơn”. Nó chuyển một phần kiến thức ngầm thành dữ liệu kiểm tra được.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Nhật ký quyết định: nói xong chưa chắc hệ thống đã có cùng một sự thật** tiếp nhận điểm tựa từ **Giao tiếp vòng kín: xác nhận không chỉ bằng 네** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm Hàn–Việt–Anh: lỗi thường nằm ở lớp chuyển nghĩa chứ không chỉ từ vựng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Nhật ký quyết định: nói xong chưa chắc hệ thống đã có cùng một sự thật
 
 Cuộc họp tạo **ký ức ngắn hạn của nhóm**, nhưng sau vài giờ mỗi người có thể nhớ khác nhau. Vì vậy những nhóm làm việc tốt thường biến quyết định quan trọng thành văn bản: biên bản, ticket, email, tài liệu hoặc tin ghim.
@@ -224,6 +263,8 @@ bằng chứng hoàn thành = kết quả được kiểm tra bằng gì
 ```
 
 Nếu chỉ có hội thoại mà không có lớp lưu trữ, nhóm phụ thuộc quá nhiều vào trí nhớ và thứ bậc. Người mới hoặc người nói ngôn ngữ thứ hai dễ chịu bất lợi nhất.
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Nhóm Hàn–Việt–Anh: lỗi thường nằm ở lớp chuyển nghĩa chứ không chỉ từ vựng** tiếp nhận điểm tựa từ **Nhật ký quyết định: nói xong chưa chắc hệ thống đã có cùng một sự thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch kỹ thuật: giữ thuật ngữ nhất quán quan trọng hơn dịch đẹp từng câu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhóm Hàn–Việt–Anh: lỗi thường nằm ở lớp chuyển nghĩa chứ không chỉ từ vựng
 
@@ -247,6 +288,8 @@ Mỗi bước có thể làm mất thông tin. Đặc biệt dễ mất ba lớp
 
 Vì vậy dịch công việc tốt không chỉ hỏi “câu này nghĩa gì?” mà còn hỏi “câu này đang thực hiện hành động tổ chức nào?”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Dịch kỹ thuật: giữ thuật ngữ nhất quán quan trọng hơn dịch đẹp từng câu** tiếp nhận điểm tựa từ **Nhóm Hàn–Việt–Anh: lỗi thường nằm ở lớp chuyển nghĩa chứ không chỉ từ vựng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiếng Anh trong công sở Hàn: từ vay mượn không luôn giữ nghĩa gốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Dịch kỹ thuật: giữ thuật ngữ nhất quán quan trọng hơn dịch đẹp từng câu
 
 Trong dự án phần mềm, nhiều lỗi không đến từ ngữ pháp mà từ **trôi thuật ngữ (terminology drift)**. Cùng một đối tượng có thể bị gọi bằng ba tên khác nhau giữa màn hình, API và tài liệu.
@@ -265,6 +308,8 @@ Không phải lúc nào cũng có một bản dịch duy nhất. Điều quan tr
 
 Đây là cùng bài toán với thiết kế API: tên ổn định giảm tải nhận thức.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Tiếng Anh trong công sở Hàn: từ vay mượn không luôn giữ nghĩa gốc** tiếp nhận điểm tựa từ **Dịch kỹ thuật: giữ thuật ngữ nhất quán quan trọng hơn dịch đẹp từng câu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản biện hướng lên: kính trọng không đồng nghĩa im lặng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tiếng Anh trong công sở Hàn: từ vay mượn không luôn giữ nghĩa gốc
 
 Môi trường Hàn Quốc dùng nhiều từ vay mượn hoặc từ viết tắt có nguồn gốc tiếng Anh, đặc biệt trong IT, marketing và doanh nghiệp. Nhưng nghĩa sử dụng tại Hàn có thể hẹp hơn, rộng hơn hoặc khác sắc thái so với tiếng Anh bản ngữ.
@@ -272,6 +317,8 @@ Môi trường Hàn Quốc dùng nhiều từ vay mượn hoặc từ viết t�
 Ví dụ `컨펌` thường gần “xác nhận/phê duyệt”, `미팅` có thể chỉ nhiều loại cuộc gặp, `오픈` có thể chỉ đưa dịch vụ vào vận hành, `스펙` trong tuyển dụng mang nghĩa bộ tín hiệu hồ sơ. Vì vậy nghe một từ “giống tiếng Anh” không bảo đảm người học đã hiểu đúng cách dùng Hàn.
 
 Có thể xem đây là **từ vựng bản địa hoá (localized loanword)**: nguồn gốc ngoại ngữ nhưng quy tắc sử dụng nằm trong cộng đồng nói tiếng Hàn.
+
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Phản biện hướng lên: kính trọng không đồng nghĩa im lặng** tiếp nhận điểm tựa từ **Tiếng Anh trong công sở Hàn: từ vay mượn không luôn giữ nghĩa gốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào nên dùng 눈치, khi nào phải hỏi thẳng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phản biện hướng lên: kính trọng không đồng nghĩa im lặng
 
@@ -285,9 +332,13 @@ B 방식으로 변경하면 이 부분은 줄일 수 있을 것 같습니다.
 한번 같이 확인해 보시면 좋을 것 같습니다.
 ```
 
+Nghĩa là: “Theo log hiện tại, cách A có vẻ có khả năng gây lỗi; nếu đổi sang cách B, vấn đề này có thể giảm; chúng ta nên cùng kiểm tra lại một lần”.
+
 Cách nói mềm không làm bằng chứng yếu đi. Nó tách **phản biện ý tưởng** khỏi **đe doạ vị thế người đưa ý tưởng**.
 
 Tuy nhiên nếu tổ chức phạt mọi bất đồng dù người nói đã trình bày có bằng chứng, vấn đề không còn là kỹ năng ngôn ngữ. Đó là cấu trúc quyền lực. Không nên yêu cầu nhân viên “nói khéo hơn” để che một thiết chế không cho phép phản hồi.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Khi nào nên dùng 눈치, khi nào phải hỏi thẳng?** tiếp nhận điểm tựa từ **Phản biện hướng lên: kính trọng không đồng nghĩa im lặng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngôn ngữ số trong nhóm công việc: dấu câu, phản ứng và tốc độ trở thành siêu dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi nào nên dùng 눈치, khi nào phải hỏi thẳng?
 
@@ -305,6 +356,8 @@ Ví dụ chọn món ăn khi đi cùng đồng nghiệp quen có thể dựa nhi
 
 Đây là cách biến “ngữ cảnh cao” từ nhãn văn hoá thành quyết định kỹ thuật về truyền thông.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Khi nào nên dùng 눈치, khi nào phải hỏi thẳng?** nêu điều cần giải thích; **Ngôn ngữ số trong nhóm công việc: dấu câu, phản ứng và tốc độ trở thành siêu dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Ngôn ngữ số trong nhóm công việc: dấu câu, phản ứng và tốc độ trở thành siêu dữ liệu
 
 Trong phòng chat công việc, nội dung không phải toàn bộ thông điệp. Thời gian phản hồi, biểu tượng phản ứng, việc @mention, gửi vào nhóm hay nhắn riêng đều tạo **siêu dữ liệu quan hệ**.
@@ -313,9 +366,13 @@ Một `넵!` có thể làm yêu cầu nghe nhẹ hơn; một câu rất ngắn 
 
 Vì vậy trong nhóm đa văn hoá, đừng dùng sắc thái chat làm bằng chứng duy nhất về cảm xúc. Nếu vấn đề quan trọng, chuyển từ suy đoán sang xác nhận.
 
+> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, các dấu vết trong **Ngôn ngữ số trong nhóm công việc: dấu câu, phản ứng và tốc độ trở thành siêu dữ liệu** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Tiếng Hàn không chỉ truyền “nội dung”; nó truyền luôn một phần cấu trúc quan hệ. Kính ngữ mã hoá vai trò, cách nói giảm nhẹ quản lý nguy cơ làm mất mặt, `눈치` giải mã bối cảnh, `정` là lịch sử tích luỹ trong quan hệ, còn `체면` là ràng buộc đối với cách xử lý thông tin nhạy cảm. Trong nhóm đa ngôn ngữ, cần thêm một lớp nữa: **quản lý độ mơ hồ**. Cùng một câu đúng về lô-gic (logic / 논리) có thể vẫn sai về giao thức xã hội, còn một câu rất lịch sự vẫn có thể thiếu chủ thể, thời hạn hoặc tiêu chí hoàn thành.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -335,8 +392,10 @@ Vì vậy trong nhóm đa văn hoá, đừng dùng sắc thái chat làm bằng 
 
 “Người nước ngoài nên học cách đoán ý thay vì hỏi lại” có thể gây hại trong công việc rủi ro cao. Khi hậu quả hiểu sai lớn, xác nhận rõ là kỹ năng chuyên nghiệp chứ không phải thiếu `눈치`.
 
+> **Chuyển mạch:** Trong **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Đọc tiếp
 
 Đọc cùng [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md), [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) để nối ngôn ngữ với quyền lực, danh tính, nhắn tin và tổ chức.
 
-> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Đọc tiếp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

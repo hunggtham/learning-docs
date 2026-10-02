@@ -1,7 +1,6 @@
 # Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc
 
-> **Mạch đọc:** Đặt **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **밥: một từ vừa là cơm vừa là bữa ăn** sang **Bàn ăn như một giao diện xã hội**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bữa ăn, lên men và văn hóa ăn uống Hàn Quốc**. Route đi từ rice/meal vocabulary → table roles → fermentation/preservation → drinking etiquette → family/workplace bonding, để đồ ăn nối sinh thái với quan hệ.
 
 ## 밥: một từ vừa là cơm vừa là bữa ăn
 
@@ -11,6 +10,8 @@ Một bữa Hàn truyền thống thường được cấu trúc quanh cơm, can
 
 `식사` là từ trang trọng hơn cho “bữa ăn”. Trong công sở, `식사하셨어요?` có thể lịch sự hơn `밥 먹었어요?`. Đây là ví dụ từ vựng ẩm thực cũng mã hoá sắc thái xã hội.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Bàn ăn như một giao diện xã hội** tiếp nhận điểm tựa từ **밥: một từ vừa là cơm vừa là bữa ăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **잘 먹겠습니다 và 잘 먹었습니다: bữa ăn như một trao đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bàn ăn như một giao diện xã hội
 
 Bữa ăn không chỉ giải quyết năng lượng. Nó là **giao diện xã hội (social interface)** để biểu diễn quan hệ. Ai ngồi đâu, ai bắt đầu trước, ai gắp cho ai, cách rót rượu và cách chia món đều có ý nghĩa xã hội.
@@ -19,17 +20,23 @@ Trong quá khứ, **soban (소반)** — bàn nhỏ cá nhân — từng phổ b
 
 Ngày nay, món dùng chung phổ biến trong thịt nướng, 찌개 và nhiều bữa ăn. Chia sẻ món làm giảm chi phí giao dịch của việc mỗi người gọi riêng và tăng cảm giác ăn theo nhóm, nhưng cũng tạo phép tắc về dụng cụ và cách lấy đồ.
 
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **잘 먹겠습니다 và 잘 먹었습니다: bữa ăn như một trao đổi** tiếp nhận điểm tựa từ **Bàn ăn như một giao diện xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **반찬과 리필: món phụ và lô-gic (logic / 논리) phục vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## `잘 먹겠습니다` và `잘 먹었습니다`: bữa ăn như một trao đổi
 
 Trước khi ăn, `잘 먹겠습니다` thường mang nghĩa gần “tôi xin ăn ngon/cảm ơn vì bữa ăn”; sau bữa, `잘 먹었습니다` ghi nhận rằng bữa ăn đã được nhận. Hai câu này không đơn giản là bản dịch của “bon appétit”. Chúng làm rõ rằng bữa ăn là tài nguyên do ai đó chuẩn bị, trả tiền hoặc mời.
 
 Nếu một người khác trả toàn bộ bữa, `잘 먹었습니다` còn có thể làm chức năng cảm ơn sau cuộc mời. Khi ai đó nói `제가 살게요`, nghĩa là “để tôi trả”. `한턱내다` là đãi một chầu/bữa nhân dịp nào đó.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **반찬과 리필: món phụ và lô-gic (logic / 논리) phục vụ** tiếp nhận điểm tựa từ **잘 먹겠습니다 và 잘 먹었습니다: bữa ăn như một trao đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1인분, 2인분 và việc gọi món theo số người** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 반찬과 리필: món phụ và lô-gic (logic / 논리) phục vụ
 
 Nhiều nhà hàng Hàn phục vụ một số `반찬` kèm món chính. Một số loại có thể lấy thêm miễn phí, nhưng không nên mặc định mọi banchan hay mọi nhà hàng đều như vậy. Từ `리필` được dùng rất tự nhiên trong tiếng Hàn nhà hàng.
 
 `셀프` trên biển hiệu thường có nghĩa khách tự lấy nước, món phụ, dụng cụ ăn hoặc tự mang khay. Đây là ví dụ về **mô hình dịch vụ**: giá có thể thấp hơn hoặc thông lượng cao hơn bằng cách chuyển một phần lao động sang khách hàng.
+
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **1인분, 2인분 và việc gọi món theo số người** tiếp nhận điểm tựa từ **반찬과 리필: món phụ và lô-gic (logic / 논리) phục vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **국, 탕, 찌개, 전골: cùng là món nước nhưng chức năng khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1인분, 2인분 và việc gọi món theo số người
 
@@ -39,6 +46,8 @@ Nhiều thực đơn định lượng theo `인분` — suất cho một ngườ
 
 Một số nhà hàng có `1인 1메뉴`, nghĩa mỗi khách phải gọi ít nhất một món. Đây là quy tắc kinh doanh, không phải phép tắc của toàn xã hội.
 
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **국, 탕, 찌개, 전골: cùng là món nước nhưng chức năng khác** tiếp nhận điểm tựa từ **1인분, 2인분 và việc gọi món theo số người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kimchi không phải một món duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 국, 탕, 찌개, 전골: cùng là món nước nhưng chức năng khác
 
 Người học thường gom tất cả thành “canh”. Tuy nhiên từ vựng ẩm thực Hàn phân biệt khá nhiều.
@@ -46,6 +55,8 @@ Người học thường gom tất cả thành “canh”. Tuy nhiên từ vựn
 `국` thường là canh nhẹ dùng cùng cơm. `탕` thường có nguyên liệu chính nổi bật và cảm giác “món chính” mạnh hơn. `찌개` đặc hơn, gia vị đậm hơn và thường đặt giữa bàn. `전골` thường là lẩu có nhiều nguyên liệu được nấu tại bàn.
 
 Ranh giới không tuyệt đối và tên món lịch sử có ngoại lệ. Điểm quan trọng không phải học quy tắc cứng mà nhận ra từ vựng phản ánh cách người Hàn phân loại cấu trúc bữa ăn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Kimchi không phải một món duy nhất** tiếp nhận điểm tựa từ **국, 탕, 찌개, 전골: cùng là món nước nhưng chức năng khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **김장: bảo quản thực phẩm trở thành thiết chế xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kimchi không phải một món duy nhất
 
@@ -61,6 +72,8 @@ Logarit nén khoảng nồng độ rất rộng thành thang dễ dùng. Mỗi g
 
 Tủ lạnh chuyên dụng cho kimchi là ví dụ công nghệ thích nghi với văn hoá thực phẩm: thay vì văn hoá biến mất khi đô thị hoá làm mất `장독대`, thiết bị tạo môi trường mới để kiểm soát quá trình lên men.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **김장: bảo quản thực phẩm trở thành thiết chế xã hội** tiếp nhận điểm tựa từ **Kimchi không phải một món duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **장: nền tảng của vị lên men** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 김장: bảo quản thực phẩm trở thành thiết chế xã hội
 
 **Kimjang (김장)** là quá trình làm và chia sẻ lượng kimchi cho mùa đông. UNESCO ghi danh “Kimjang, making and sharing kimchi” của Hàn Quốc vào Danh sách Di sản văn hoá phi vật thể đại diện năm 2013.
@@ -68,6 +81,8 @@ Tủ lạnh chuyên dụng cho kimchi là ví dụ công nghệ thích nghi vớ
 Điểm quan trọng của kimjang không chỉ là công thức. Trước tủ lạnh và chuỗi cung ứng hiện đại, bảo quản mùa đông là bài toán sinh tồn. Làm lượng lớn cần lao động; hộ gia đình và hàng xóm phối hợp; tri thức truyền qua thực hành. Vì vậy kimjang kết hợp công nghệ thực phẩm, lịch mùa và tính có đi có lại trong cộng đồng.
 
 Khi siêu thị bán kimchi quanh năm, chức năng sinh tồn giảm. Nhưng chức năng biểu tượng — họp gia đình, bản sắc vị giác, chia sẻ — có thể tiếp tục. Đây là ví dụ thực hành văn hoá chuyển từ nhu cầu kinh tế sang thực hành danh tính.
+
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **장: nền tảng của vị lên men** tiếp nhận điểm tựa từ **김장: bảo quản thực phẩm trở thành thiết chế xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **떡: ngũ cốc trở thành thực phẩm nghi lễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 장: nền tảng của vị lên men
 
@@ -77,17 +92,23 @@ Vị umami đến một phần từ axit amin được giải phóng khi protein
 
 UNESCO ghi danh “kiến thức (knowledge / 지식), beliefs and practices related to jang making in the Republic of Korea” năm 2024. Việc ghi danh nhấn mạnh hệ tri thức và thực hành xã hội chứ không chỉ sản phẩm cuối.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **떡: ngũ cốc trở thành thực phẩm nghi lễ** tiếp nhận điểm tựa từ **장: nền tảng của vị lên men** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mùa và địa lý trong ẩm thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 떡: ngũ cốc trở thành thực phẩm nghi lễ
 
 **Bánh gạo (떡 / rice cake)** không chỉ là món ăn vặt. Nó xuất hiện trong vòng đời và nghi lễ theo mùa. `떡국` gắn mạnh với Seollal; `백설기` có thể xuất hiện trong lễ mừng; `송편` gắn với Chuseok; `인절미`, `시루떡` có bối cảnh riêng.
 
 Điểm đáng chú ý là cùng nguyên liệu ngũ cốc nhưng cách chế biến tạo kết cấu và ý nghĩa biểu tượng khác. Văn hoá ẩm thực không chỉ hỏi “ăn gì?” mà còn “ăn lúc nào, cho ai và trong sự kiện nào?”.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Mùa và địa lý trong ẩm thực** tiếp nhận điểm tựa từ **떡: ngũ cốc trở thành thực phẩm nghi lễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **절기와 계절 음식: ăn theo mùa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mùa và địa lý trong ẩm thực
 
 Bán đảo có mùa rõ, bờ biển dài và địa hình khác nhau nên ẩm thực vùng phát triển theo nguyên liệu và phương pháp bảo quản. `전라도` thường nổi tiếng với bàn ăn nhiều món và gia vị đậm trong diễn ngôn văn hoá; `경상도`, `강원도`, `제주도` có nguyên liệu và món địa phương riêng. Tuy nhiên văn hoá nhà hàng hiện đại làm ranh giới vùng mờ hơn.
 
 Khái niệm **ẩm thực địa phương (향토음식 / local cuisine)** quan trọng vì món ăn lưu thông tin về sinh thái. Kiều mạch phổ biến ở vùng khó trồng lúa; hải sản phản ánh bờ biển; lên men phản ánh tính mùa vụ. Thực phẩm là dữ liệu về môi trường.
+
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **절기와 계절 음식: ăn theo mùa** tiếp nhận điểm tựa từ **Mùa và địa lý trong ẩm thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **고기구이: công nghệ bàn ăn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 절기와 계절 음식: ăn theo mùa
 
@@ -99,6 +120,8 @@ Mùa đông có `붕어빵`, `호떡`, `군고구마`, canh và lẩu. Đông ch
 
 Thực phẩm theo mùa là nơi lịch, thời tiết, nông nghiệp và ký ức giao nhau. Khi người ta nói “đến mùa này phải ăn món đó”, đồ ăn đang làm nhiệm vụ đánh dấu thời gian.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **고기구이: công nghệ bàn ăn** tiếp nhận điểm tựa từ **절기와 계절 음식: ăn theo mùa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **혼밥: ăn một mình và thay đổi hộ gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 고기구이: công nghệ bàn ăn
 
 Thịt nướng Hàn biến bàn ăn thành hệ thống nấu. Bếp, hút khói, vỉ nướng và bố cục món phụ tạo trải nghiệm tương tác. Người ăn không chỉ tiêu thụ; họ tham gia sản xuất món ăn.
@@ -106,6 +129,8 @@ Thịt nướng Hàn biến bàn ăn thành hệ thống nấu. Bếp, hút khó
 Ai nướng thịt, cắt thịt, chia phần có thể biểu thị sự chăm sóc hoặc vai trò nhóm. Nhưng quy tắc không cố định. Trong nhóm bạn trẻ, ai gần vỉ có thể làm; trong bữa công việc, người junior từng có thể chủ động phục vụ cấp cao (senior / 시니어) hơn.
 
 `쌈` — cuốn thịt, rau, sốt trong lá — cho thấy bữa ăn có tính lắp ghép. Người ăn tự tạo từng miếng từ nhiều mô-đun: lá xà lách/tía tô + thịt + ssamjang + tỏi + món phụ.
+
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **혼밥: ăn một mình và thay đổi hộ gia đình** tiếp nhận điểm tựa từ **고기구이: công nghệ bàn ăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **술: rượu như một phương tiện xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 혼밥: ăn một mình và thay đổi hộ gia đình
 
@@ -115,6 +140,8 @@ Thị trường thích nghi bằng ghế quầy, lẩu một người, suất ti
 
 `혼술` tương tự cho uống một mình. Không nên đọc các từ này chỉ như tiếng lóng; chúng phản ánh sự cá nhân hoá của nhịp sống hằng ngày.
 
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **술: rượu như một phương tiện xã hội** tiếp nhận điểm tựa từ **혼밥: ăn một mình và thay đổi hộ gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **건배: nghi thức đồng bộ nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 술: rượu như một phương tiện xã hội
 
 **Rượu (술 / alcohol)** gồm `소주`, `맥주`, `막걸리`, rượu truyền thống và nhiều loại khác. Rượu có mặt trong nghi lễ tổ tiên, tiếp khách và gắn kết xã hội.
@@ -123,17 +150,23 @@ Phép tắc truyền thống khi uống với người lớn gồm dùng hai tay
 
 `폭탄주` — kiểu pha rượu dạng “bomb shot” — và trò uống từng trở thành biểu tượng của văn hoá nhậu công ty, nhưng không nên xem đó là bản chất văn hoá Hàn. Nhận thức sức khoẻ, lo ngại quấy rối và ranh giới công việc–đời sống đã làm nhiều nhóm giảm áp lực uống.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **건배: nghi thức đồng bộ nhóm** tiếp nhận điểm tựa từ **술: rượu như một phương tiện xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **해장: cơ thể và văn hoá sau uống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 건배: nghi thức đồng bộ nhóm
 
 `건배` là nâng ly. Khẩu hiệu ngắn, cùng nâng ly và uống cùng thời điểm tạo sự đồng bộ. Về xã hội, hành động đồng bộ có thể tăng cảm giác gắn kết nhóm, giống hát cổ vũ trong sân vận động hoặc vỗ tay trong biểu diễn.
 
 Nhưng tham gia không bắt buộc phải đồng nghĩa uống rượu. Nhiều buổi tụ họp hiện nay chấp nhận nước ngọt, bia không cồn hoặc đơn giản nâng ly tượng trưng.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **해장: cơ thể và văn hoá sau uống** tiếp nhận điểm tựa từ **건배: nghi thức đồng bộ nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **배달 và văn hoá tiện lợi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 해장: cơ thể và văn hoá sau uống
 
 **Giải rượu/hồi phục sau uống (해장 / hangover relief)** tạo cả nhóm món như `해장국`, `콩나물국`, `북엇국`. Về sinh lý, hangover liên quan mất nước, acetaldehyde, gián đoạn giấc ngủ và phản ứng viêm; không có món thần kỳ “thải độc” hoàn toàn. Canh cung cấp nước, natri và năng lượng nên có thể làm người ăn dễ chịu hơn.
 
 Đây là ví dụ tốt để phân biệt niềm tin văn hoá với cơ chế y sinh. Một thực hành có thể hữu ích về cảm giác mà không cần tuyên bố khoa học quá mức.
+
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **배달 và văn hoá tiện lợi** tiếp nhận điểm tựa từ **해장: cơ thể và văn hoá sau uống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **리뷰와 맛집: khẩu vị được nền tảng hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 배달 và văn hoá tiện lợi
 
@@ -143,6 +176,8 @@ Nền tảng số biến văn hoá ăn uống thành bài toán tối ưu: thờ
 
 `포장` nghĩa mua mang đi/đóng gói, `배달` là giao hàng, `매장` là ăn tại cửa hàng. Đây là ba cách hoàn tất đơn rất phổ biến trên ứng dụng và kiosk.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **리뷰와 맛집: khẩu vị được nền tảng hoá** tiếp nhận điểm tựa từ **배달 và văn hoá tiện lợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ăn chay, halal và dị ứng: khi “một bữa ăn mặc định” không còn đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 리뷰와 맛집: khẩu vị được nền tảng hoá
 
 `맛집` nghĩa đen là “quán ngon”, nhưng trên Internet còn là nhóm từ tìm kiếm. Blog, Naver Map, Instagram, YouTube video ngắn và đánh giá giao hàng cùng tham gia định hình khả năng nhìn thấy nhà hàng.
@@ -150,6 +185,8 @@ Nền tảng số biến văn hoá ăn uống thành bài toán tối ưu: thờ
 Điểm đánh giá không chỉ đo chất lượng; nó còn chịu sai lệch chọn mẫu, khuyến mãi và kỳ vọng. Một quán lan truyền mạnh có thể xếp hàng dài vì bằng chứng xã hội, rồi chính hàng dài trở thành tín hiệu rằng quán “đáng thử”.
 
 Văn hoá ẩm thực hiện đại vì vậy không chỉ nằm trong bếp mà còn trong thuật toán xếp hạng.
+
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Ăn chay, halal và dị ứng: khi “một bữa ăn mặc định” không còn đủ** tiếp nhận điểm tựa từ **리뷰와 맛집: khẩu vị được nền tảng hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **급식 và bữa ăn tập thể: tiêu chuẩn hoá gặp đa dạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ăn chay, halal và dị ứng: khi “một bữa ăn mặc định” không còn đủ
 
@@ -171,6 +208,8 @@ sở thích cá nhân
 
 Ba trường hợp đều đáng được tôn trọng, nhưng mức rủi ro và cách xác nhận khác nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **급식 và bữa ăn tập thể: tiêu chuẩn hoá gặp đa dạng** tiếp nhận điểm tựa từ **Ăn chay, halal và dị ứng: khi “một bữa ăn mặc định” không còn đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường nguyên liệu quốc tế và ẩm thực lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 급식 và bữa ăn tập thể: tiêu chuẩn hoá gặp đa dạng
 
 Bữa ăn ở trường, công ty, bệnh viện hoặc quân đội cần phục vụ số đông, nên tiêu chuẩn hoá giúp giảm chi phí. Nhưng khi người dùng đa dạng hơn, hệ thống phải tăng khả năng hiển thị thành phần, lựa chọn thay thế và quy trình xử lý dị ứng.
@@ -179,6 +218,8 @@ Bữa ăn ở trường, công ty, bệnh viện hoặc quân đội cần phụ
 
 Trong nhóm quốc tế, một câu đơn giản như `못 드시는 음식 있으세요?` — “có món nào anh/chị không ăn được không?” — có giá trị lớn vì nó biến giả định ngầm thành thông tin rõ ràng trước khi đặt món.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Thị trường nguyên liệu quốc tế và ẩm thực lai** tiếp nhận điểm tựa từ **급식 và bữa ăn tập thể: tiêu chuẩn hoá gặp đa dạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi cung ứng thực phẩm: món ăn bắt đầu rất lâu trước căn bếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Thị trường nguyên liệu quốc tế và ẩm thực lai
 
 Khi di cư và thương mại mở rộng, siêu thị và khu phố có thêm nguyên liệu Đông Nam Á, Nam Á, Trung Đông hoặc Trung Á. Nhà hàng Việt, Thái, Ấn, Trung Á và nhiều nền ẩm thực khác không chỉ phục vụ cộng đồng di cư; chúng cũng được người Hàn tiêu dùng và điều chỉnh theo khẩu vị địa phương.
@@ -186,6 +227,8 @@ Khi di cư và thương mại mở rộng, siêu thị và khu phố có thêm n
 Quá trình này tạo **ẩm thực lai (hybrid cuisine)**. Một món có thể dùng nguyên liệu hoặc kỹ thuật ngoại nhập nhưng được định giá, trình bày và tiêu dùng theo nhịp sống Hàn Quốc. Ngược lại, món Hàn ở nước ngoài cũng thay đổi vì nguồn nguyên liệu, quy định và khẩu vị sở tại.
 
 Vì vậy “ẩm thực Hàn Quốc” không phải một danh sách đóng. Nó là một hệ thống tiếp tục hấp thụ nguyên liệu, công nghệ bảo quản, nền tảng giao hàng và dân số mới.
+
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Thị trường nguyên liệu quốc tế và ẩm thực lai** xác định đầu vào; **Chuỗi cung ứng thực phẩm: món ăn bắt đầu rất lâu trước căn bếp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chợ đầu mối và phân phối: nơi giá cả gặp khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi cung ứng thực phẩm: món ăn bắt đầu rất lâu trước căn bếp
 
@@ -205,11 +248,15 @@ Mỗi mắt xích tạo ràng buộc cho mắt xích sau. Nếu rau bị mất n
 
 Vì vậy văn hoá ẩm thực không chỉ nằm ở khẩu vị; nó phụ thuộc **hạ tầng hậu cần (logistics infrastructure)**.
 
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Chuỗi cung ứng thực phẩm: món ăn bắt đầu rất lâu trước căn bếp** xác định đầu vào; **Chợ đầu mối và phân phối: nơi giá cả gặp khối lượng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chuỗi lạnh: nhiệt độ là một phần của chất lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Chợ đầu mối và phân phối: nơi giá cả gặp khối lượng
 
 Chợ bán buôn, trung tâm phân phối và đấu giá nông sản giải quyết bài toán ghép lượng lớn người bán với lượng lớn người mua. Nhà hàng nhỏ khó ký hợp đồng trực tiếp với hàng trăm nông hộ; hệ thống trung gian gom hàng, phân loại và tạo giá tham chiếu.
 
 Trung gian làm tăng một số chi phí nhưng cũng giảm **chi phí tìm kiếm và phối hợp (search and coordination cost)**. Do đó câu “bỏ hết trung gian thì thực phẩm sẽ rẻ hơn” không phải lúc nào cũng đúng; cần hỏi trung gian đang tạo giá trị gì và mức cạnh tranh trong khâu đó ra sao.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Chợ đầu mối và phân phối: nơi giá cả gặp khối lượng** xác định đầu vào; **Chuỗi lạnh: nhiệt độ là một phần của chất lượng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **An toàn thực phẩm: “ngon” và “an toàn” là hai chiều khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi lạnh: nhiệt độ là một phần của chất lượng
 
@@ -229,6 +276,8 @@ sản phẩm tốt tại nguồn
 
 Điều này giải thích vì sao siêu thị, giao sáng sớm và thương mại thực phẩm trực tuyến cần đầu tư kho lạnh, thùng cách nhiệt và theo dõi thời gian.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Chuỗi lạnh: nhiệt độ là một phần của chất lượng** xác định đầu vào; **An toàn thực phẩm: “ngon” và “an toàn” là hai chiều khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **원산지 và truy xuất nguồn gốc: thực phẩm còn mang dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## An toàn thực phẩm: “ngon” và “an toàn” là hai chiều khác nhau
 
 Một món có thể ngon nhưng quy trình vệ sinh kém; một món được xử lý an toàn chưa chắc hợp khẩu vị. **An toàn thực phẩm (food safety / 식품안전)** phụ thuộc kiểm soát nguyên liệu, nhiệt độ, nhiễm chéo, thời gian lưu trữ và vệ sinh thiết bị.
@@ -236,6 +285,8 @@ Một món có thể ngon nhưng quy trình vệ sinh kém; một món được 
 Trong bếp chuyên nghiệp, việc tách dao/thớt, quản lý thực phẩm sống–chín và thời gian bảo quản là một loại **quản trị rủi ro (risk management)**. Người dùng thường chỉ nhìn sản phẩm cuối nên khó quan sát các quy trình phía sau.
 
 Đây là **bất cân xứng thông tin**: nhà hàng biết nhiều hơn khách về quy trình thật. Quy định, kiểm tra và danh tiếng giúp giảm bất cân xứng đó nhưng không xoá hoàn toàn.
+
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **An toàn thực phẩm: “ngon” và “an toàn” là hai chiều khác nhau** nêu điều cần giải thích; **원산지 và truy xuất nguồn gốc: thực phẩm còn mang dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Giá thực phẩm và tính mùa vụ: không phải mọi biến động đều là “nhà hàng tăng giá”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 원산지 và truy xuất nguồn gốc: thực phẩm còn mang dữ liệu
 
@@ -253,6 +304,8 @@ lô nguyên liệu
 
 Nếu phát hiện vấn đề, hệ thống càng truy ngược tốt thì phạm vi thu hồi càng chính xác. Đây là cùng lô-gic (logic / 논리) với theo dõi phiên bản phần mềm: biết chính xác phiên bản nào bị lỗi tốt hơn thu hồi toàn bộ hệ thống.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **원산지 và truy xuất nguồn gốc: thực phẩm còn mang dữ liệu** nêu điều cần giải thích; **Giá thực phẩm và tính mùa vụ: không phải mọi biến động đều là “nhà hàng tăng giá”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nhà hàng như hệ thống công suất hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Giá thực phẩm và tính mùa vụ: không phải mọi biến động đều là “nhà hàng tăng giá”
 
 Rau, trái cây, hải sản và nhiều nguyên liệu có nguồn cung phụ thuộc thời tiết, mùa, dịch bệnh và nhập khẩu. Giá có thể biến động mạnh hơn hàng công nghiệp tiêu chuẩn hoá.
@@ -269,6 +322,8 @@ chi phí nguyên liệu tăng
 ```
 
 Họ có thể tăng giá, giảm phần, đổi nguyên liệu, rút món hoặc chấp nhận lợi nhuận thấp hơn. Vì vậy thay đổi thực đơn cũng là phản ứng kinh tế, không chỉ thay đổi “gu”.
+
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Nhà hàng như hệ thống công suất hữu hạn** tiếp nhận điểm tựa từ **Giá thực phẩm và tính mùa vụ: không phải mọi biến động đều là “nhà hàng tăng giá”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bếp trung tâm và chuẩn hoá: cùng hương vị ở nhiều nơi có chi phí và lợi ích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhà hàng như hệ thống công suất hữu hạn
 
@@ -288,6 +343,8 @@ công suất bếp < tốc độ đơn vào
 
 Một quán viral trên mạng có thể gặp **cú sốc cầu**: lượng khách tăng nhanh hơn khả năng tuyển người hoặc mở rộng bếp. Thành công truyền thông vì vậy có thể làm trải nghiệm giảm tạm thời.
 
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Bếp trung tâm và chuẩn hoá: cùng hương vị ở nhiều nơi có chi phí và lợi ích** tiếp nhận điểm tựa từ **Nhà hàng như hệ thống công suất hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao hàng làm món ăn phải được thiết kế cho hành trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bếp trung tâm và chuẩn hoá: cùng hương vị ở nhiều nơi có chi phí và lợi ích
 
 Chuỗi nhà hàng hoặc cửa hàng tiện lợi có thể dùng **bếp trung tâm (central kitchen / 중앙주방)** để chuẩn bị sốt, sơ chế hoặc bán thành phẩm. Điều này tăng tính nhất quán, an toàn và lợi thế quy mô.
@@ -303,6 +360,8 @@ cá nhân hoá cao
 ```
 
 Không có mức tối ưu duy nhất; mô hình kinh doanh quyết định.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Giao hàng làm món ăn phải được thiết kế cho hành trình** tiếp nhận điểm tựa từ **Bếp trung tâm và chuẩn hoá: cùng hương vị ở nhiều nơi có chi phí và lợi ích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bao bì và ngoại ứng môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Giao hàng làm món ăn phải được thiết kế cho hành trình
 
@@ -321,6 +380,8 @@ chất lượng tại bếp
 
 Ẩm thực giao hàng là một định dạng riêng, không chỉ “nhà hàng mang đi”.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Bao bì và ngoại ứng môi trường** tiếp nhận điểm tựa từ **Giao hàng làm món ăn phải được thiết kế cho hành trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **음식물쓰레기: lãng phí thực phẩm bắt đầu từ dự báo sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bao bì và ngoại ứng môi trường
 
 Giao hàng và suất một người tăng sự tiện lợi nhưng thường tăng số hộp, túi, dụng cụ dùng một lần và vật liệu giữ nhiệt. Chi phí môi trường không luôn hiện trong giá món.
@@ -335,6 +396,8 @@ người dùng nhận tiện lợi
 ```
 
 Nếu chỉ nhìn giá đơn hàng, một phần chi phí hệ thống bị ẩn. Thiết kế bao bì tốt phải cân bằng vệ sinh, chất lượng món, khối lượng và khả năng tái chế.
+
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **음식물쓰레기: lãng phí thực phẩm bắt đầu từ dự báo sai** tiếp nhận điểm tựa từ **Bao bì và ngoại ứng môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhập khẩu và khả năng phục hồi của hệ thực phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 음식물쓰레기: lãng phí thực phẩm bắt đầu từ dự báo sai
 
@@ -352,6 +415,8 @@ dự báo sai
 ```
 
 Một bữa nhiều `반찬` tạo cảm giác phong phú nhưng cũng có thể làm quản lý tồn kho phức tạp hơn. Nhà hàng phải cân bằng trải nghiệm bàn ăn với chi phí phế phẩm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Nhập khẩu và khả năng phục hồi của hệ thực phẩm** tiếp nhận điểm tựa từ **음식물쓰레기: lãng phí thực phẩm bắt đầu từ dự báo sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tủ lạnh gia đình và kiến trúc bữa ăn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhập khẩu và khả năng phục hồi của hệ thực phẩm
 
@@ -373,6 +438,8 @@ nhiều nguồn hơn
 
 Đây là đánh đổi giữa hiệu quả và dự phòng.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Tủ lạnh gia đình và kiến trúc bữa ăn** tiếp nhận điểm tựa từ **Nhập khẩu và khả năng phục hồi của hệ thực phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: lên men như hệ sinh thái được kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tủ lạnh gia đình và kiến trúc bữa ăn
 
 Tủ lạnh lớn, hộ một người, giao hàng và thực phẩm chế biến làm bữa ăn gia đình không còn phụ thuộc cùng nhịp như trước. Một người có thể ăn đồ giao, người khác hâm `반찬`, người thứ ba ăn ngoài.
@@ -388,11 +455,15 @@ nấu và ăn gần như cùng lúc
 
 Khi thời gian các thành viên gia đình không đồng bộ, công nghệ bảo quản giúp duy trì bữa ăn nhưng có thể làm bữa chung ít bắt buộc hơn.
 
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Liên hệ kiến thức: lên men như hệ sinh thái được kiểm soát** tiếp nhận điểm tựa từ **Tủ lạnh gia đình và kiến trúc bữa ăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: món ăn là đầu ra của chuỗi vật chất + chuỗi thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ kiến thức: lên men như hệ sinh thái được kiểm soát
 
 Một hũ lên men là **vi hệ sinh thái (micro-ecosystem)**. Ta không “tạo” từng phân tử hương vị trực tiếp; ta điều chỉnh **điều kiện biên (boundary conditions)** — muối, nhiệt độ, oxy, cơ chất — để cộng đồng vi sinh tự vận hành.
 
 Điều này giống DevOps: thay vì sửa từng sự kiện lúc chạy, ta thiết kế môi trường và ràng buộc. Nếu môi trường sai, hệ thống sẽ trôi khỏi trạng thái mong muốn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Liên hệ kiến thức: lên men như hệ sinh thái được kiểm soát** xác định đầu vào; **Liên hệ kiến thức: món ăn là đầu ra của chuỗi vật chất + chuỗi thông tin** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ kiến thức: món ăn là đầu ra của chuỗi vật chất + chuỗi thông tin
 
@@ -410,9 +481,13 @@ Người tiêu dùng đưa quyết định bằng cả hai. Một sản phẩm v
 
 Đây là lý do ẩm thực hiện đại cần đồng thời logistics, an toàn, dữ liệu và danh tiếng.
 
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: món ăn là đầu ra của chuỗi vật chất + chuỗi thông tin** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Ẩm thực Hàn Quốc là kết quả của nhiều tầng liên kết: **sinh thái quyết định nguyên liệu; công nghệ bảo quản biến nguyên liệu qua mùa; chuỗi cung ứng đưa nguyên liệu đến đô thị; bếp và nhà hàng biến chúng thành món; giao thức xã hội biến ăn uống thành quan hệ; dân số và di cư làm đa dạng nhu cầu; nền tảng số quyết định cách món được tìm, gọi, đánh giá và giao; hệ thống rác xử lý phần còn lại**. Muốn hiểu một món, đừng chỉ nhìn công thức — hãy nhìn cả đường đi của nguyên liệu, thông tin và lao động.
+
+> **Chuyển mạch:** Ở chặng này của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -434,9 +509,13 @@ Người tiêu dùng đưa quyết định bằng cả hai. Một sản phẩm v
 
 “Thực phẩm nội địa luôn bền vững hơn nhập khẩu” quá đơn giản; cần xét mùa, năng suất, năng lượng, vận tải, khả năng thay thế và mức rủi ro của từng chuỗi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn tham khảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đọc tiếp
 
 Đọc cùng [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md), [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md) và [`33_service_customer_review_quick_response_culture.md`](33_service_customer_review_quick_response_culture.md).
+
+> **Chuyển mạch:** Trong **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc**, **Đọc tiếp** nêu điều cần giải thích; **Nguồn tham khảo** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguồn tham khảo
 
@@ -445,3 +524,5 @@ Nguồn dưới đây giúp kiểm tra lịch sử món ăn, kỹ thuật lên m
 - UNESCO Intangible Cultural Heritage: Kimjang (2013); tri thức và thực hành làm jang (2024).
 - Korea.net: tư liệu về `소반` và lịch sử phép tắc trên bàn ăn.
 - Với an toàn thực phẩm, ghi nhãn, xuất xứ và quy định hiện hành, ưu tiên Ministry of Food and Drug Safety (`식품의약품안전처`) và các nguồn chính thức thay vì học cứng từ ví dụ văn hoá.
+
+> **Bàn giao:** Sau **Nguồn tham khảo**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,7 +1,6 @@
 # Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc
 
-> **Mạch đọc:** Đặt **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách đọc bộ sách** sang **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Master Knowledge Book — Văn hoá Hàn Quốc**. Route đi từ địa lý/lịch sử → thiết chế/quan hệ → ngôn ngữ/đời sống → tín ngưỡng/nghệ thuật → đô thị/truyền thông, để mỗi nhóm văn hóa nối với điều kiện hình thành và biểu hiện hiện tại.
 
 > Phạm vi của bộ sách là văn hoá Hàn Quốc với trọng tâm là **Đại Hàn Dân Quốc (대한민국 / Republic of Korea)** đương đại, nhưng luôn quay về lịch sử của bán đảo Triều Tiên khi một tập quán hiện nay chỉ có thể hiểu đúng bằng nguồn gốc lịch sử của nó. “Văn hoá Hàn Quốc” ở đây không được hiểu như một danh sách món ăn, lễ hội hay quy tắc phép lịch sự, mà như một **hệ thống văn hoá (문화 체계 / cultural system)**: tập hợp các ý nghĩa, chuẩn mực, thiết chế, ký ức, môi trường vật chất, **động lực (incentive)** và công nghệ khiến một số cách diễn giải hay hành động trở nên có xác suất cao hơn trong những bối cảnh nhất định.
 
@@ -17,8 +16,7 @@ P(B\mid S,G,O,M,C)
 
 Biểu thức này không phải công thức xã hội học dùng để “tính người Hàn”, mà là một **mô hình tư duy (mental model / 사고 모델)**. Văn hoá thay đổi **xác suất** của hành vi trong một bối cảnh; nó không quyết định tuyệt đối hành vi ấy. Cách nghĩ này giúp tránh **định kiến khái quát (stereotype)** và giúp người đọc cập nhật mô hình khi gặp dữ liệu mới.
 
-
-> **Chuyển mạch:** Từ **Cách đọc bộ sách**, ta sang **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc**, **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)** tiếp nhận điểm tựa từ **Cách đọc bộ sách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình đọc khuyến nghị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)
 
@@ -67,8 +65,7 @@ graph TD
 
 Sơ đồ phụ thuộc này thể hiện lô-gic (logic / 논리) hiểu biết, không phải thứ tự “dễ → khó”. Chẳng hạn, muốn hiểu vì sao một nhân viên trẻ vẫn dùng `존댓말` với đồng nghiệp lớn tuổi dù công ty quảng bá văn hoá phẳng, ta cần đồng thời hiểu lịch sử trật tự quan hệ, **siêu dữ liệu xã hội (social metadata)** về tuổi–vai trò, ngữ pháp kính ngữ và lô-gic (logic / 논리) của tổ chức hiện đại. Tương tự, muốn hiểu vì sao giao hàng nhanh hoặc áp lực nuôi dạy con lại trở thành “văn hoá”, ta phải nối **hạ tầng (infrastructure / 인프라)**, lao động, lịch sinh hoạt gia đình, động lực thị trường và kỳ vọng xã hội thay vì quy tất cả về tính cách dân tộc.
 
-
-> **Chuyển mạch:** Từ **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)**, ta sang **Lộ trình đọc khuyến nghị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc**, **Lộ trình đọc khuyến nghị** tiếp nhận điểm tựa từ **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc thư mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lộ trình đọc khuyến nghị
 
@@ -88,8 +85,7 @@ Không bắt buộc đọc theo số tệp (file / 파일). Nếu muốn xây m�
 
 `16_connections_mental_models_misconceptions.md` nên đọc lại nhiều lần sau các nhóm chương lớn. Nó đóng vai trò như một **đồ thị kiến thức (knowledge graph)** bằng văn xuôi, không phải bản tóm tắt cuối sách.
 
-
-> **Chuyển mạch:** Từ **Lộ trình đọc khuyến nghị**, ta sang **Cấu trúc thư mục** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc**, **Cấu trúc thư mục** tiếp nhận điểm tựa từ **Lộ trình đọc khuyến nghị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cấu trúc thư mục
 
@@ -131,8 +127,7 @@ Sau khi hiểu dependency, bảng thư mục cho biết mỗi file đảm nhiệ
 | [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) | Bảng thuật ngữ Hàn–Anh–Việt và bản đồ nguồn tham khảo |
 | [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md) | Quy ước tên riêng Việt–Hàn–Anh, phiên âm La-tinh (romanization) và cách tránh dịch sai tên lịch sử |
 
-
-> **Chuyển mạch:** Từ **Cấu trúc thư mục**, ta sang **Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc**, **Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội** gom các mảnh từ **Cấu trúc thư mục** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy thứ hai: ràng buộc tạo hành vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội
 
@@ -140,8 +135,7 @@ Trong mạng máy tính, **giao thức (protocol / 프로토콜)** không quyế
 
 Ẩn dụ này có giới hạn: con người không phải máy, chuẩn mực có thể bị phản đối, thương lượng và thay đổi. Nhưng nó giúp hiểu vì sao một người nước ngoài có thể biết từng từ tiếng Hàn mà vẫn “lệch giao thức”: câu đúng ngữ pháp nhưng sai quan hệ; hành động thiện chí nhưng sai thời điểm; ý kiến hợp lý nhưng trình bày theo cách khiến người nghe khó tiếp nhận.
 
-
-> **Chuyển mạch:** Từ **Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội**, ta sang **Mô hình tư duy thứ hai: ràng buộc tạo hành vi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc**, **Mô hình tư duy thứ hai: ràng buộc tạo hành vi** gom các mảnh từ **Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy thứ hai: ràng buộc tạo hành vi
 
@@ -165,8 +159,7 @@ Hành vi quan sát được
 
 Không phải hiện tượng nào cũng đi qua đủ mọi lớp, nhưng mô hình này buộc người đọc tìm **cơ chế (mechanism / 메커니즘)** trước khi gắn nhãn “đó là văn hoá Hàn”.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy thứ hai: ràng buộc tạo hành vi**, ta sang **Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc**, **Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí** gom các mảnh từ **Mô hình tư duy thứ hai: ràng buộc tạo hành vi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguyên tắc chống định kiến khái quát (stereotype)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí
 
@@ -183,11 +176,12 @@ Kỳ vọng mới nào được tạo ra sau khi sự tiện lợi trở thành 
 
 Câu hỏi này giúp nối văn hoá với kinh tế học, lao động và kỹ thuật thay vì chỉ mô tả bề mặt.
 
-
-> **Chuyển mạch:** Từ **Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí**, ta sang **Nguyên tắc chống định kiến khái quát (stereotype)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc**, **Nguyên tắc chống định kiến khái quát (stereotype)** gom các mảnh từ **Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguyên tắc chống định kiến khái quát (stereotype)
 
 Khi đọc những từ như `빨리빨리`, `정`, `눈치`, `유교`, `군대문화`, `재벌`, không nên chuyển chúng thành câu kiểu “người Hàn luôn...”. Câu hỏi tốt hơn là: **chuẩn mực hoặc khuôn mẫu (pattern / 패턴) này được hình thành trong điều kiện lịch sử nào, được củng cố bởi thiết chế nào, xuất hiện mạnh trong bối cảnh nào, nhóm nào không tuân theo và đang thay đổi ra sao?**
 
 Một mô tả văn hoá tốt phải luôn chừa chỗ cho sự biến thiên. Seoul không phải toàn Hàn Quốc. Bình luận trực tuyến không phải dư luận xã hội. Một K-drama không phải nghiên cứu dân tộc học. Một công ty có thứ bậc cao không đại diện mọi nơi làm việc. Một gia đình dùng `산후조리원` không đại diện mọi hộ gia đình. Một khu căn hộ có quy tắc phân loại rác cụ thể không có nghĩa toàn quốc dùng đúng cùng cách triển khai. Một người Hàn không có nghĩa vụ “hành xử đúng như sách”.
+
+> **Bàn giao:** Sau **Nguyên tắc chống định kiến khái quát (stereotype)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

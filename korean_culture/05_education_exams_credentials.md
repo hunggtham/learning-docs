@@ -1,7 +1,6 @@
 # Giáo dục, kỳ thi và xã hội bằng cấp
 
-> **Mạch đọc:** Đặt **Giáo dục, kỳ thi và xã hội bằng cấp** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tại sao giáo dục mang trọng lượng xã hội lớn?** sang **학교 체계: trường học như một đường ống dài**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Giáo dục, kỳ thi và xã hội bằng cấp**. Route đi từ school system → exams/credentials → family investment → labor-market signaling → inequality and reform, để giáo dục nối thành tích với vị trí xã hội.
 
 ## Tại sao giáo dục mang trọng lượng xã hội lớn?
 
@@ -10,6 +9,8 @@ Giáo dục Hàn Quốc thường được nhìn từ bên ngoài qua hình ản
 Có nhiều lớp lịch sử chồng lên nhau. Nho giáo gắn học tập với đạo đức và địa vị của tầng lớp sĩ đại phu. Công nghiệp hoá tạo nhu cầu nhân lực có trình độ và mở giáo dục như một con đường **dịch chuyển xã hội (mobility)**. Sau đó, nền kinh tế tri thức và cạnh tranh cho các trường/việc làm uy tín làm bằng cấp tiếp tục có giá trị như tín hiệu.
 
 Giáo dục vì vậy đồng thời là **hệ thống tri thức**, **hệ thống phân loại**, **cơ chế dịch chuyển** và **tín hiệu địa vị**. Bốn chức năng này không phải lúc nào cũng đi cùng nhau; chính sự căng thẳng giữa chúng tạo ra nhiều đặc điểm của văn hoá giáo dục Hàn Quốc.
+
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **학교 체계: trường học như một đường ống dài** tiếp nhận điểm tựa từ **Tại sao giáo dục mang trọng lượng xã hội lớn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **교육열: “nhiệt giáo dục” như một cơ chế đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 학교 체계: trường học như một đường ống dài
 
@@ -29,6 +30,8 @@ Hệ phổ thông quen thuộc gồm `초등학교`, `중학교`, `고등학교`
 
 Khi bước chuyển có cạnh tranh cao, hệ sinh thái dịch vụ chuẩn bị xuất hiện: 학원, 과외, thông tin tuyển sinh, đề thi thử, tư vấn và bài giảng trực tuyến. Điểm sàng lọc càng quan trọng, “ngành công nghiệp quanh sàng lọc” càng lớn.
 
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **학교 체계: trường học như một đường ống dài** xác định đầu vào; **교육열: “nhiệt giáo dục” như một cơ chế đầu tư** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **내신: thành tích trong trường và việc đo lường trở thành động lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 교육열: “nhiệt giáo dục” như một cơ chế đầu tư
 
 **Nhiệt giáo dục (교육열 / educational zeal)** chỉ mức kỳ vọng và đầu tư mạnh vào giáo dục. Không nên hiểu đơn giản là cha mẹ “ám ảnh điểm số”. Với một hộ gia đình, chi tiêu giáo dục có thể được xem như **đầu tư vốn con người (human-capital investment)**.
@@ -41,6 +44,8 @@ Trong kinh tế học, nếu thu nhập tương lai kỳ vọng `Y` phụ thuộ
 
 Nhưng lợi ích không chỉ bằng tiền. Trường đại học còn cho mạng quan hệ, uy tín, quyền tiếp cận việc làm và tín hiệu xã hội. Khi nhiều gia đình cùng tối ưu như vậy, cạnh tranh có thể tăng ngay cả khi lợi ích cận biên giảm. Đây là **cuộc đua vũ trang bằng cấp (군비경쟁 / arms race)**: nếu mọi người đều mua thêm tín hiệu, mức nền của thị trường sẽ tăng.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, cơ chế trong **교육열: “nhiệt giáo dục” như một cơ chế đầu tư** cần được kiểm chứng bằng dấu vết cụ thể; **내신: thành tích trong trường và việc đo lường trở thành động lực** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **수능: chuẩn hoá và áp lực tập trung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 내신: thành tích trong trường và việc đo lường trở thành động lực
 
 `내신` thường chỉ thành tích/điểm được ghi trong hồ sơ trường và được dùng trong nhiều bối cảnh tuyển sinh. Khi kết quả trong trường có ảnh hưởng xuống các bước sau, từng bài kiểm tra, thứ hạng, hoạt động và bản ghi có thể trở nên nổi bật hơn.
@@ -48,6 +53,8 @@ Nhưng lợi ích không chỉ bằng tiền. Trường đại học còn cho m�
 Điều này minh hoạ nguyên lý rộng: **đo lường thay đổi hành vi**. Nếu hệ thống thưởng một chỉ số, người tham gia sẽ tối ưu chỉ số đó. Nhưng nếu chỉ tập trung chỉ số, giáo dục có thể lệch khỏi mục tiêu học tập rộng hơn.
 
 Không nên kết luận rằng mọi học sinh chỉ học để lấy điểm. Nhưng cấu trúc động lực giúp giải thích vì sao phụ huynh/học sinh theo dõi chi tiết đánh giá rất kỹ.
+
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **내신: thành tích trong trường và việc đo lường trở thành động lực** nêu điều cần giải thích; **수능: chuẩn hoá và áp lực tập trung** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **고3: một năm học trở thành trạng thái xã hội riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 수능: chuẩn hoá và áp lực tập trung
 
@@ -57,11 +64,15 @@ Một kỳ thi chuẩn hoá giải quyết vấn đề: làm sao so sánh lượ
 
 Khi thiết chế phía sau đặt trọng số lớn vào thước đo, người học sẽ tối ưu thước đo. Đây là **Định luật Goodhart (Goodhart’s Law)**: khi một thước đo trở thành mục tiêu, nó có thể không còn phản ánh hoàn hảo thứ ta thật sự muốn đo.
 
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **고3: một năm học trở thành trạng thái xã hội riêng** tiếp nhận điểm tựa từ **수능: chuẩn hoá và áp lực tập trung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **수시 và 정시: nhiều đường cùng đi vào đại học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 고3: một năm học trở thành trạng thái xã hội riêng
 
 `고3` — học sinh năm cuối cấp ba — không chỉ là nhãn lớp. Trong tưởng tượng công chúng, nó là trạng thái gắn với áp lực thi đại học, lịch dày và sự phối hợp của cả gia đình quanh việc học.
 
 Khi hộ có con `고3`, giờ ăn, kế hoạch ngày lễ và chi tiêu có thể điều chỉnh theo lịch thi. Đây là ví dụ nhỏ cho thấy giáo dục không chỉ nằm trong lớp học; nó tái tổ chức thời gian của hộ gia đình.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **수시 và 정시: nhiều đường cùng đi vào đại học** tiếp nhận điểm tựa từ **고3: một năm học trở thành trạng thái xã hội riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **입시 정보: bản thân thông tin trở thành tài nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 수시 và 정시: nhiều đường cùng đi vào đại học
 
@@ -74,6 +85,8 @@ Trong diễn ngôn tuyển sinh, `수시` và `정시` là hai nhóm rất quen.
 
 Điểm văn hoá ở đây là **đa dạng đường vào**: khi một đường cạnh tranh cao hoặc bất định, gia đình đầu tư vào thông tin để chọn đường phù hợp.
 
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **입시 정보: bản thân thông tin trở thành tài nguyên** tiếp nhận điểm tựa từ **수시 và 정시: nhiều đường cùng đi vào đại học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **학원 và giáo dục ngoài trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 입시 정보: bản thân thông tin trở thành tài nguyên
 
 Tuyển sinh không chỉ cần học lực mà còn cần hiểu quy tắc: thời hạn, trọng số, điều kiện, hồ sơ, phỏng vấn, chọn ngành. Khi quy tắc phức tạp, người có quyền tiếp cận tốt tới thông tin và tư vấn có lợi thế.
@@ -81,6 +94,8 @@ Tuyển sinh không chỉ cần học lực mà còn cần hiểu quy tắc: th�
 Đây là **bất cân xứng thông tin (정보 비대칭 / information asymmetry)**. Hai học sinh có năng lực tương tự nhưng khác kinh nghiệm của cha mẹ, tư vấn trường học hoặc quyền tiếp cận dịch vụ tư vấn có thể đưa ra quyết định khác.
 
 Vì vậy bất bình đẳng giáo dục không chỉ là ai mua nhiều giờ học thêm hơn; nó còn là ai hiểu hệ thống sớm hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **학원 và giáo dục ngoài trường** tiếp nhận điểm tựa từ **입시 정보: bản thân thông tin trở thành tài nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **과외, 인강, 스터디카페: giáo dục ngoài trường không chỉ có 학원** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 학원 và giáo dục ngoài trường
 
@@ -91,6 +106,8 @@ Khi một số học sinh học thêm, các học sinh khác có động lực t
 Thống kê theo từng năm cho thấy giáo dục tư là thị trường rất lớn, nhưng khi dùng con số cụ thể phải luôn ghi năm dữ liệu. Điều bền hơn cần hiểu là cơ chế:
 
 `cạnh tranh tương đối + bất định + đầu tư phụ huynh → nhu cầu giáo dục ngoài trường`.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **과외, 인강, 스터디카페: giáo dục ngoài trường không chỉ có 학원** tiếp nhận điểm tựa từ **학원 và giáo dục ngoài trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행학습: học trước chương trình và vòng phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 과외, 인강, 스터디카페: giáo dục ngoài trường không chỉ có 학원
 
@@ -103,6 +120,8 @@ Ba hình thức giải ba ràng buộc khác nhau:
 - 스터디카페 tối ưu môi trường và tập trung.
 
 Đây là ví dụ thị trường tách giáo dục thành **nội dung, phản hồi và không gian**.
+
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **선행학습: học trước chương trình và vòng phản hồi** tiếp nhận điểm tựa từ **과외, 인강, 스터디카페: giáo dục ngoài trường không chỉ có 학원** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **문제집, 오답노트 và văn hoá luyện dạng bài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 선행학습: học trước chương trình và vòng phản hồi
 
@@ -117,6 +136,8 @@ D --> A
 ```
 
 Hiểu vòng phản hồi quan trọng hơn phán xét từng phụ huynh hay học sinh riêng lẻ.
+
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **문제집, 오답노트 và văn hoá luyện dạng bài** tiếp nhận điểm tựa từ **선행학습: học trước chương trình và vòng phản hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **학벌: bằng cấp như tín hiệu và mạng quan hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 문제집, 오답노트 và văn hoá luyện dạng bài
 
@@ -138,6 +159,8 @@ thì phản hồi trở nên có thể hành động được.
 
 Tương tự trong lập trình: nhật ký lỗi tốt không chỉ lưu “kiểm thử (test / 테스트) thất bại (fail / 실패)”, mà lưu nguyên nhân gốc và cách phòng ngừa.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **학벌: bằng cấp như tín hiệu và mạng quan hệ** tiếp nhận điểm tựa từ **문제집, 오답노트 và văn hoá luyện dạng bài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SKY và nhãn trường như ký hiệu rút gọn xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 학벌: bằng cấp như tín hiệu và mạng quan hệ
 
 **Uy tín trường đã học (학벌 / academic pedigree)** chỉ trọng lượng xã hội của trường. Trong thị trường lao động, nhà tuyển dụng không quan sát trực tiếp năng lực tương lai nên dùng tín hiệu: trường, ngành, GPA, chứng chỉ, thực tập. Đây là vấn đề bất cân xứng thông tin.
@@ -146,6 +169,8 @@ Nếu một trường có tuyển sinh khó, doanh nghiệp có thể dùng tên
 
 Mặt trái là năng lực thật có thể bị che bởi bằng cấp. Tuyển dụng công nghệ cố giảm vấn đề bằng bài kiểm tra lập trình, hồ sơ dự án và phỏng vấn thực hành, nhưng ngay cả những thước đo đó cũng có thể bị “luyện thi hoá”.
 
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **SKY và nhãn trường như ký hiệu rút gọn xã hội** tiếp nhận điểm tựa từ **학벌: bằng cấp như tín hiệu và mạng quan hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **학군 và nhà ở: giáo dục đi vào bản đồ thành phố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## SKY và nhãn trường như ký hiệu rút gọn xã hội
 
 `SKY` là nhãn thông dụng cho Seoul National University, Korea University và Yonsei University. Trong diễn ngôn, nó hoạt động như cách viết tắt cho nhóm đại học tinh hoa.
@@ -153,6 +178,8 @@ Mặt trái là năng lực thật có thể bị che bởi bằng cấp. Tuyể
 Nhưng ký hiệu rút gọn dễ làm người đọc khái quát quá mức. Uy tín đại học có tác động khác nhau theo ngành, chuyên môn, giai đoạn nghề nghiệp và mạng quan hệ cá nhân. Sau nhiều năm kinh nghiệm, hiệu suất thực tế có thể quan trọng hơn tên trường trong nhiều nghề.
 
 Hiểu văn hoá nên nhận diện tín hiệu mà không biến tín hiệu thành định mệnh.
+
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **학군 và nhà ở: giáo dục đi vào bản đồ thành phố** tiếp nhận điểm tựa từ **SKY và nhãn trường như ký hiệu rút gọn xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **재수, 반수, N수: khi bước chuyển được thử lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 학군 và nhà ở: giáo dục đi vào bản đồ thành phố
 
@@ -171,6 +198,8 @@ Vòng này không đơn giản hay tuyệt đối, nhưng giúp hiểu vì sao v
 
 Đọc thêm tại [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **재수, 반수, N수: khi bước chuyển được thử lại** tiếp nhận điểm tựa từ **학군 và nhà ở: giáo dục đi vào bản đồ thành phố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại học, công việc và “đường ray chuẩn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 재수, 반수, N수: khi bước chuyển được thử lại
 
 `재수` thường chỉ thi/luyện lại sau khi không đạt kết quả mong muốn lần đầu; `N수` là cách nói rộng cho nhiều lần thử; `반수` thường chỉ trường hợp đang học đại học nhưng chuẩn bị thi lại để đổi hướng.
@@ -179,11 +208,15 @@ Các nhãn này cho thấy tuyển sinh không chỉ là một sự kiện mà c
 
 Điểm cần tránh là coi người `재수생` như “thất bại”. Trong hệ thống cạnh tranh, thử lại là một chiến lược, dù có chi phí.
 
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **Đại học, công việc và “đường ray chuẩn”** tiếp nhận điểm tựa từ **재수, 반수, N수: khi bước chuyển được thử lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **취준생: học không dừng ở tốt nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Đại học, công việc và “đường ray chuẩn”
 
 Trong xã hội công nghiệp hoá nhanh, từng tồn tại một kịch bản đời sống tương đối rõ: học tốt → đại học tốt → công ty lớn/việc ổn định → kết hôn → mua nhà. Khi tăng trưởng chậm, giá nhà cao và thị trường lao động phân mảnh, xác suất đi hết kịch bản này giảm. Nhưng kỳ vọng có thể tồn tại lâu hơn thực tế, tạo cảm giác cạnh tranh và trì hoãn trưởng thành.
 
 Thế hệ trẻ vì vậy không chỉ “ít cố gắng hơn”; họ đang tối ưu trong ma trận phần thưởng khác. Khởi nghiệp, làm tự do, nghề sáng tạo, sự nghiệp ở nước ngoài và chuyển việc thường xuyên mở thêm đường, trong khi một số ngành vẫn rất coi trọng bằng cấp.
+
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **취준생: học không dừng ở tốt nghiệp** tiếp nhận điểm tựa từ **Đại học, công việc và “đường ray chuẩn”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **전문대, 특성화고 và lộ trình nghề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 취준생: học không dừng ở tốt nghiệp
 
@@ -193,11 +226,15 @@ Thế hệ trẻ vì vậy không chỉ “ít cố gắng hơn”; họ đang t
 
 Khi nhiều ứng viên cùng tích luỹ `스펙`, nhà tuyển dụng lại tìm tín hiệu mới. Đây là cuộc đua tương tự lạm phát bằng cấp.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **전문대, 특성화고 và lộ trình nghề** tiếp nhận điểm tựa từ **취준생: học không dừng ở tốt nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사교육과 불평등: giáo dục là thang máy hay máy khuếch đại bất bình đẳng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 전문대, 특성화고 và lộ trình nghề
 
 Không phải mọi đường đều đi qua đại học bốn năm. `전문대학`, trường nghề và các chương trình đào tạo cung cấp lộ trình định hướng kỹ năng. Vấn đề văn hoá là thứ bậc uy tín đôi khi làm lộ trình nghề bị đánh giá thấp hơn giá trị kinh tế thực.
 
 Đây là chỗ có thể lệch giữa **giá trị địa vị** và **giá trị thị trường**. Một kỹ năng đang thiếu nhân lực có thể tạo thu nhập tốt nhưng vẫn mang địa vị xã hội thấp hơn một bằng học thuật phổ biến.
+
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **사교육과 불평등: giáo dục là thang máy hay máy khuếch đại bất bình đẳng?** tiếp nhận điểm tựa từ **전문대, 특성화고 và lộ trình nghề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng đồng phụ huynh và mạng thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 사교육과 불평등: giáo dục là thang máy hay máy khuếch đại bất bình đẳng?
 
@@ -207,6 +244,8 @@ Trong **suy luận nhân quả (causal inference)**, tương quan giữa “họ
 
 Đây là liên hệ quan trọng giữa khoa học xã hội và thống kê: văn hoá giáo dục cần phân tích bằng tư duy nhân quả, không chỉ giai thoại.
 
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **Cộng đồng phụ huynh và mạng thông tin** tiếp nhận điểm tựa từ **사교육과 불평등: giáo dục là thang máy hay máy khuếch đại bất bình đẳng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **교권, 학교폭력 và văn hoá trường học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Cộng đồng phụ huynh và mạng thông tin
 
 Cha mẹ không chỉ mua dịch vụ giáo dục; họ trao đổi thông tin qua mạng trường học, nhóm khu dân cư và cộng đồng trực tuyến. Những mạng này giúp tìm giáo viên, 학원, sự kiện trường và thông tin tuyển sinh.
@@ -215,17 +254,23 @@ Nhưng mạng xã hội cũng có thể lan lo âu. Nếu mọi người xung qu
 
 Đây là **hiệu ứng sẵn có + hiệu ứng đồng trang lứa (availability + peer effect)**: điều nhìn thấy trong mạng địa phương dễ bị nhầm thành chuẩn mực phổ quát.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **교권, 학교폭력 và văn hoá trường học** tiếp nhận điểm tựa từ **Cộng đồng phụ huynh và mạng thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **대학 문화: từ học sinh thành người trưởng thành trẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 교권, 학교폭력 và văn hoá trường học
 
 Trường học là nơi thứ bậc giáo viên–học sinh, tiền bối–hậu bối và nhóm bạn gặp nhau. Tranh luận về **quyền của giáo viên (교권 / teacher authority)**, **bạo lực học đường (학교폭력 / school violence)** và quyền học sinh cho thấy hệ thống đang điều chỉnh ranh giới giữa quyền hạn, bảo vệ và trách nhiệm giải trình.
 
 Kỷ luật không còn được xem đơn thuần là quyền của người lớn; đồng thời bảo vệ giáo viên khỏi quấy rối cũng trở thành vấn đề. Đây là ví dụ chuyển từ **phục tùng theo vai trò** sang **trách nhiệm theo quy tắc**.
 
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **대학 문화: từ học sinh thành người trưởng thành trẻ** tiếp nhận điểm tựa từ **교권, 학교폭력 và văn hoá trường học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **평생교육 và học lại kỹ năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 대학 문화: từ học sinh thành người trưởng thành trẻ
 
 Đại học không chỉ là lớp học mà còn là bước chuyển xã hội. `학번`, `동기`, `선배·후배`, `동아리`, `MT`, `휴학`, `복학` tạo từ vựng riêng cho đời sống đại học.
 
 Đọc sâu tại [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md). Chương này tập trung hệ thống giáo dục và bằng cấp; chương 30 tập trung văn hoá sau khi bước vào đại học.
+
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **평생교육 và học lại kỹ năng** tiếp nhận điểm tựa từ **대학 문화: từ học sinh thành người trưởng thành trẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **기술의 반감기: kỹ năng cũng có “chu kỳ mất giá”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 평생교육 và học lại kỹ năng
 
@@ -234,6 +279,8 @@ Trong thị trường lao động thay đổi nhanh, giáo dục không còn k�
 Khi công nghệ làm kỹ năng mất giá nhanh hơn, người lao động phải cập nhật vốn con người nhiều lần. Điều này làm ranh giới giữa “học sinh” và “người đi làm” mờ hơn.
 
 Với lập trình viên, học khung phần mềm (framework / 프레임워크) mới sau giờ làm là ví dụ rất trực tiếp của học tập suốt đời, dù không liên quan kỳ thi truyền thống.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **기술의 반감기: kỹ năng cũng có “chu kỳ mất giá”** tiếp nhận điểm tựa từ **평생교육 và học lại kỹ năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **재교육과 전직: học lại không chỉ để thăng chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 기술의 반감기: kỹ năng cũng có “chu kỳ mất giá”
 
@@ -249,6 +296,8 @@ lõi bền: tư duy, nền tảng, nguyên lý
 
 Nếu chỉ học lớp công cụ, người lao động dễ phải bắt đầu lại mỗi khi công nghệ đổi. Nếu chỉ học lý thuyết mà không cập nhật công cụ, kiến thức khó chuyển thành đầu ra. Học tập suốt đời là quản lý cả ba lớp.
 
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **재교육과 전직: học lại không chỉ để thăng chức** tiếp nhận điểm tựa từ **기술의 반감기: kỹ năng cũng có “chu kỳ mất giá”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **학위, 자격증, 포트폴리오, 경력: bốn loại tín hiệu không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 재교육과 전직: học lại không chỉ để thăng chức
 
 **Đào tạo lại (재교육 / reskilling)** có thể phục vụ ba mục tiêu khác nhau: làm tốt công việc hiện tại, chuyển sang vai trò gần kề hoặc đổi hẳn nghề. Ba mục tiêu cần chiến lược khác nhau.
@@ -263,6 +312,8 @@ Ví dụ một lập trình viên chuyển từ frontend sang backend không b�
 
 Khái niệm quan trọng là **kỹ năng chuyển giao (transferable skill)**: phần năng lực sống sót qua thay đổi chức danh.
 
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **학위, 자격증, 포트폴리오, 경력: bốn loại tín hiệu không giống nhau** tiếp nhận điểm tựa từ **재교육과 전직: học lại không chỉ để thăng chức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **재직자 학습: người đi làm học trong ràng buộc khác học sinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 학위, 자격증, 포트폴리오, 경력: bốn loại tín hiệu không giống nhau
 
 Thị trường lao động thường đọc nhiều loại bằng chứng cùng lúc:
@@ -275,6 +326,8 @@ Thị trường lao động thường đọc nhiều loại bằng chứng cùng
 Không loại nào tự động “tốt nhất”. Bằng học thuật có thể rộng nhưng xa công việc; chứng chỉ có thể chuẩn hoá nhưng dễ luyện thi; portfolio cho thấy đầu ra nhưng có thể khó biết mức đóng góp cá nhân; kinh nghiệm thật mạnh nhưng phụ thuộc cơ hội được giao việc.
 
 Nhà tuyển dụng hiệu quả thường **tam giác hoá bằng chứng (evidence triangulation)** thay vì dựa vào một tín hiệu duy nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **재직자 학습: người đi làm học trong ràng buộc khác học sinh** tiếp nhận điểm tựa từ **학위, 자격증, 포트폴리오, 경력: bốn loại tín hiệu không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사내교육 và thị trường lao động nội bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 재직자 학습: người đi làm học trong ràng buộc khác học sinh
 
@@ -291,6 +344,8 @@ Người trưởng thành không chỉ có bài học; họ còn có công việ
 
 Trong tổ chức, thời gian học được bảo vệ trong giờ làm có ý nghĩa khác hoàn toàn việc kỳ vọng nhân viên “tự nâng cấp sau giờ”. Nếu mọi chi phí học bị đẩy sang cá nhân, người có trách nhiệm chăm sóc hoặc quãng đường đi làm dài sẽ bất lợi hơn.
 
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **사내교육 và thị trường lao động nội bộ** tiếp nhận điểm tựa từ **재직자 학습: người đi làm học trong ràng buộc khác học sinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **경력전환: chuyển nghề là bài toán bằng chứng chứ không chỉ kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 사내교육 và thị trường lao động nội bộ
 
 Doanh nghiệp có thể đào tạo nhân viên vì kỹ năng mới tạo giá trị ngay trong tổ chức. `사내교육`, cố vấn nội bộ, luân chuyển vị trí và dự án thử giúp chuyển tri thức mà thị trường bên ngoài khó đóng gói thành khoá học.
@@ -298,6 +353,8 @@ Doanh nghiệp có thể đào tạo nhân viên vì kỹ năng mới tạo giá
 Đây là **thị trường lao động nội bộ (internal labour market)**: thay vì tuyển người hoàn toàn mới cho mọi kỹ năng, tổ chức tái phân bổ và nâng cấp nhân lực đã hiểu hệ thống.
 
 Ưu điểm là giảm chi phí tuyển và giữ tri thức ngữ cảnh. Rủi ro là đào tạo chỉ phục vụ công cụ riêng của công ty, khiến kỹ năng khó chuyển sang nơi khác. Người học cần phân biệt tri thức đặc thù tổ chức với tri thức có thể mang theo.
+
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **사내교육 và thị trường lao động nội bộ** nêu điều cần giải thích; **경력전환: chuyển nghề là bài toán bằng chứng chứ không chỉ kiến thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **AI 시대의 학습: công cụ mới làm thay đổi thứ cần học, không xoá nhu cầu học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 경력전환: chuyển nghề là bài toán bằng chứng chứ không chỉ kiến thức
 
@@ -311,6 +368,8 @@ muốn có kinh nghiệm → cần được giao việc mới
 Giải pháp thường là tạo **bằng chứng trung gian**: dự án cá nhân, công việc nội bộ gần vai trò mới, chứng chỉ, đóng góp mã nguồn mở, thực tập, freelance hoặc nhiệm vụ có phạm vi nhỏ.
 
 Điểm sâu hơn là thị trường không chỉ hỏi “anh biết gì?” mà hỏi “tôi có lý do gì để tin rằng anh làm được trong bối cảnh thật?”. Vì vậy học tập và xây bằng chứng phải đi song song.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **경력전환: chuyển nghề là bài toán bằng chứng chứ không chỉ kiến thức** nêu điều cần giải thích; **AI 시대의 학습: công cụ mới làm thay đổi thứ cần học, không xoá nhu cầu học** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Học người lớn và bất bình đẳng mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AI 시대의 학습: công cụ mới làm thay đổi thứ cần học, không xoá nhu cầu học
 
@@ -328,6 +387,8 @@ Nếu người học chỉ biết đặt câu hỏi nhưng không đủ nền đ
 
 AI cũng làm quá trình học thay đổi: phản hồi nhanh hơn, ví dụ cá nhân hoá hơn, nhưng nguy cơ học thụ động tăng nếu người học chỉ sao chép đầu ra. Công cụ mạnh nhất khi được dùng để tạo vòng phản hồi, không phải thay toàn bộ nỗ lực nhận thức.
 
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **Học người lớn và bất bình đẳng mới** tiếp nhận điểm tựa từ **AI 시대의 학습: công cụ mới làm thay đổi thứ cần học, không xoá nhu cầu học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **전이: học xong có dùng được trong công việc thật hay không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Học người lớn và bất bình đẳng mới
 
 Học suốt đời nghe như cơ hội phổ quát nhưng khả năng tham gia không chia đều. Người có thu nhập cao hơn có thể mua khoá tốt, có máy tính, có phòng yên tĩnh và đủ tiền giảm giờ làm. Người chăm con hoặc cha mẹ già có ít quỹ thời gian hơn.
@@ -340,6 +401,8 @@ khả năng học lại
 ```
 
 Chính sách giáo dục người lớn và thiết kế nhân sự tốt phải nhìn cả sáu thành phần, không chỉ cung cấp nội dung.
+
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **전이: học xong có dùng được trong công việc thật hay không?** tiếp nhận điểm tựa từ **Học người lớn và bất bình đẳng mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: khoa học học tập và tối ưu thi cử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 전이: học xong có dùng được trong công việc thật hay không?
 
@@ -358,13 +421,17 @@ hiểu nguyên lý
 
 Vì vậy một chứng chỉ hoàn thành khoá học không đồng nghĩa kỹ năng đã ổn định. Đầu ra thực tế và khả năng giải thích quyết định thường là kiểm tra sâu hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **Liên hệ kiến thức: khoa học học tập và tối ưu thi cử** tiếp nhận điểm tựa từ **전이: học xong có dùng được trong công việc thật hay không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: lạm phát bằng cấp giống leo phiên bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ kiến thức: khoa học học tập và tối ưu thi cử
 
-Cường độ học cao không đảm bảo ghi nhớ cao. Khoa học nhận thức phân biệt đọc lại với **gợi nhớ chủ động (active recall)**, học dồn với **lặp lại ngắt quãng (spaced repetition)**. Một học sinh có thể dành nhiều giờ nhưng học không hiệu quả nếu chiến lược chỉ là tiếp xúc thụ động.
+Cường độ học cao không đảm bảo ghi nhớ cao. Khoa học nhận thức phân biệt đọc lại với **gợi nhớ chủ động**, học dồn với **lặp lại ngắt quãng (spaced repetition)**. Một học sinh có thể dành nhiều giờ nhưng học không hiệu quả nếu chiến lược chỉ là tiếp xúc thụ động.
 
 Vì vậy “học kiểu Hàn” không phải một phương pháp thống nhất. Học sinh giỏi có thể dùng sổ lỗi, đề cũ và luyện truy hồi rất có hệ thống; người khác có thể chỉ tăng thời gian ngồi học.
 
 Trong lập trình, điều tương tự xảy ra: xem 50 giờ hướng dẫn không tương đương tự gỡ lỗi một dự án thật. Đầu ra học tập phụ thuộc chất lượng vòng phản hồi.
+
+> **Chuyển mạch:** Trong **Giáo dục, kỳ thi và xã hội bằng cấp**, **Liên hệ kiến thức: lạm phát bằng cấp giống leo phiên bản** tiếp nhận điểm tựa từ **Liên hệ kiến thức: khoa học học tập và tối ưu thi cử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ kiến thức: lạm phát bằng cấp giống leo phiên bản
 
@@ -380,9 +447,13 @@ bằng cấp hiếm
 
 Đây là **lạm phát bằng cấp (자격 인플레이션 / credential inflation)**. Nó giải thích tại sao một xã hội có thể học nhiều hơn mà cá nhân vẫn cảm thấy “chưa đủ”.
 
+> **Chuyển mạch:** Ở chặng này của **Giáo dục, kỳ thi và xã hội bằng cấp**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: lạm phát bằng cấp giống leo phiên bản** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Hãy coi hệ thống giáo dục Hàn Quốc như một thị trường nơi giáo dục vừa là **tri thức**, vừa là **tín hiệu**, vừa là **cơ chế sàng lọc**, vừa là **bảo hiểm cho tương lai**. Khi nhiều người cùng cạnh tranh bằng tín hiệu, chi phí có thể tăng nhanh hơn tri thức thực. Trong giai đoạn người trưởng thành phải học lại nhiều lần, cần thêm một lớp thứ năm: **khả năng tái cấu hình kỹ năng**. Muốn hiểu `수능`, `학원`, `학벌`, `학군`, `취준`, `평생교육`, phải nhìn động lực của toàn hệ thống chứ không quy nó về “người Hàn thích học”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giáo dục, kỳ thi và xã hội bằng cấp**, **Hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Hiểu lầm phổ biến
 
@@ -402,4 +473,4 @@ bằng cấp hiếm
 
 “AI làm việc học trở nên không cần thiết” bỏ qua việc công cụ mạnh hơn làm yêu cầu kiểm chứng và chịu trách nhiệm cao hơn.
 
-> **Bàn giao:** Sau **Hiểu lầm phổ biến**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Hiểu lầm phổ biến**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
