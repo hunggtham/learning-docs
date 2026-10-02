@@ -1,7 +1,6 @@
 # Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)
 
-> **Mạch đọc:** Đọc **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Chọn lớp trừu tượng tải công việc (workload abstraction / 워크로드 추상화) theo định danh (identity / 식별자) và vòng đời (lifecycle / 생명주기)** sang **2. Pod là đơn vị lập lịch (scheduling unit / 스케줄링 단위), không phải durable machine**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kubernetes workloads, networking, storage, scheduling và resources**. Route đi từ workload identity/lifecycle → pod scheduling → service/networking → volumes → requests/limits and placement, để abstraction nối với hành vi runtime.
 
 ## 1. Chọn lớp trừu tượng tải công việc (workload abstraction / 워크로드 추상화) theo định danh (identity / 식별자) và vòng đời (lifecycle / 생명주기)
 
@@ -9,11 +8,15 @@
 
 Đừng chọn kind theo tên quen thuộc. Hãy hỏi instance định danh (identity / 식별자) có quan trọng không, công việc chạy liên tục hay hoàn thành, cần một bản sao trên mỗi nút (node / 노드) hay replica tùy ý, lưu trữ (storage / 저장소) có gắn với định danh (identity / 식별자) không.
 
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **1. Chọn lớp trừu tượng tải công việc (workload abstraction / 워크로드 추상화) theo định danh (identity / 식별자) và vòng đời (lifecycle / 생명주기)** xác định đầu vào; **2. Pod là đơn vị lập lịch (scheduling unit / 스케줄링 단위), không phải durable machine** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. dịch vụ (service / 서비스) và endpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Pod là đơn vị lập lịch (scheduling unit / 스케줄링 단위), không phải durable machine
 
 Pod là đơn vị được scheduler đặt lên nút (node / 노드). bộ chứa (container / 컨테이너) trong cùng Pod chia mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) và có thể chia volume. Pod có IP riêng nhưng định danh (identity / 식별자) của Pod thường ephemeral. Khi triển khai (deployment / 배포) thay Pod, IP mới có thể xuất hiện.
 
 Vì vậy ứng dụng (application / 애플리케이션) không nên lưu danh sách Pod IP cứng. khám phá dịch vụ (service discovery / 서비스 디스커버리) và stable lớp trừu tượng dịch vụ (service abstraction / 서비스 추상화) tồn tại để decouple bên tiêu thụ (consumer / 소비자) khỏi instance vòng đời (lifecycle / 생명주기).
+
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **3. dịch vụ (service / 서비스) và endpoint** tiếp nhận điểm tựa từ **2. Pod là đơn vị lập lịch (scheduling unit / 스케줄링 단위), không phải durable machine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Ingress/Gateway và north-south traffic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. dịch vụ (service / 서비스) và endpoint
 
@@ -23,11 +26,15 @@ Troubleshooting cần tách đối tượng (object / 객체) đúng với packe
 
 Request-path mô hình tư duy (mental model / 사고 모델) đã có tại [DNS, TLS và request path](../01_runtime_foundations/01_network_dns_tls_and_request_path.md).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **4. Ingress/Gateway và north-south traffic** tiếp nhận điểm tựa từ **3. dịch vụ (service / 서비스) và endpoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. ConfigMap và Secret không giải quyết toàn bộ cấu hình (config / 설정) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Ingress/Gateway và north-south traffic
 
 Traffic từ ngoài cluster thường qua bộ cân bằng tải (load balancer / 로드 밸런서) rồi ingress/gateway controller. tài nguyên (resource / 자원) API mô tả routing intent; controller phải biến intent thành data-plane cấu hình (configuration / 구성).
 
 Nếu sửa Ingress mà tuyến (route / 경로) không đổi, kiểm tra controller đã observe generation mới chưa, cấu hình (config / 설정) reconcile có lỗi không và bên ngoài (external / 외부) bộ cân bằng tải (load balancer / 로드 밸런서)/DNS đã hội tụ chưa. Đây vẫn là control-loop debugging.
+
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **4. Ingress/Gateway và north-south traffic** xác định đầu vào; **5. ConfigMap và Secret không giải quyết toàn bộ cấu hình (config / 설정) vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Persistent Volume là đặc tả hợp đồng (contract / 계약) lưu trữ (storage / 저장소)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. ConfigMap và Secret không giải quyết toàn bộ cấu hình (config / 설정) vòng đời (lifecycle / 생명주기)
 
@@ -37,11 +44,15 @@ Vì vậy “Kubernetes đã cập nhật (update / 업데이트) Secret” khô
 
 Secrets ở mức cryptography/key vòng đời (lifecycle / 생명주기) xem [canonical secrets, KMS, HSM và rotation](../../computer_science/07_security_reliability/advanced/06_secrets_kms_hsm_rotation_and_envelope_encryption.md).
 
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **5. ConfigMap và Secret không giải quyết toàn bộ cấu hình (config / 설정) vòng đời (lifecycle / 생명주기)** xác định đầu vào; **6. Persistent Volume là đặc tả hợp đồng (contract / 계약) lưu trữ (storage / 저장소)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. yêu cầu (request / 요청) và limit có hai vai trò khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Persistent Volume là đặc tả hợp đồng (contract / 계약) lưu trữ (storage / 저장소)
 
 PersistentVolume/PersistentVolumeClaim tách nhu cầu lưu trữ (storage / 저장소) khỏi hiện thực (implementation / 구현). StorageClass mô tả lớp (class / 클래스)/provisioning chính sách (policy / 정책). Nhưng Kubernetes không biến stateful hệ thống (system / 시스템) thành stateless.
 
 Cơ sở dữ liệu (database / 데이터베이스) vẫn cần consistency, backup, replication và khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론). Volume replication không tự động tương đương application-consistent backup. Snapshot lúc cơ sở dữ liệu (database / 데이터베이스) đang ghi có thể cần coordination để khôi phục nhất quán.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **6. Persistent Volume là đặc tả hợp đồng (contract / 계약) lưu trữ (storage / 저장소)** đã nêu tiêu chí phân biệt, còn **7. yêu cầu (request / 요청) và limit có hai vai trò khác nhau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. QoS và eviction dưới pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. yêu cầu (request / 요청) và limit có hai vai trò khác nhau
 
@@ -49,11 +60,15 @@ Tài nguyên (resource / 자원) `request` là đầu vào (input / 입력) quan
 
 Nếu yêu cầu (request / 요청) thấp hơn usage thực quá nhiều, scheduler có thể nhồi quá nhiều tải công việc (workload / 워크로드) lên nút (node / 노드) và tạo contention. Nếu yêu cầu (request / 요청) quá cao, cluster có sức chứa (capacity / 용량) nhưng scheduler không dùng được hiệu quả. điều chỉnh tài nguyên (resource tuning / 리소스 튜닝) vì vậy là bài toán statistical/sức chứa (capacity / 용량), không phải bản sao (copy / 복사) template.
 
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **7. yêu cầu (request / 요청) và limit có hai vai trò khác nhau** đã nêu tiêu chí phân biệt, còn **8. QoS và eviction dưới pressure** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Probe: startup, readiness, liveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. QoS và eviction dưới pressure
 
 Khi nút (node / 노드) chịu bộ nhớ (memory / 메모리)/disk pressure, kubelet có thể evict tải công việc (workload / 워크로드). Priority và tài nguyên (resource / 자원) cấu hình (configuration / 구성) ảnh hưởng tải công việc (workload / 워크로드) nào được giữ. dịch vụ trọng yếu (critical service / 핵심 서비스) cần hiểu nút (node / 노드) thất bại (failure / 실패)/eviction hành vi (behavior / 동작) thay vì chỉ tăng replicas.
 
 Một triển khai (deployment / 배포) ba replica nhưng cả ba nằm cùng nút (node / 노드) hoặc cùng miền lỗi (failure domain / 장애 도메인) vẫn có availability thấp. Anti-affinity/topology spread giúp phân tán, nhưng càng nhiều ràng buộc (constraint / 제약조건) càng có nguy cơ unschedulable khi sức chứa (capacity / 용량) nhỏ.
+
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **9. Probe: startup, readiness, liveness** tiếp nhận điểm tựa từ **8. QoS và eviction dưới pressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. HPA và autoscaling là phản hồi (feedback / 피드백) controller** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Probe: startup, readiness, liveness
 
@@ -61,11 +76,15 @@ Startup probe giúp ứng dụng khởi động chậm tránh bị liveness kill
 
 Một probe tốt phải rẻ, ổn định và phản ánh ngữ nghĩa (semantics / 의미론) đúng. Liveness không nên gọi một phụ thuộc (dependency / 의존성) xa nếu phụ thuộc (dependency / 의존성) outage không thể được chữa bằng restart cục bộ (local / 로컬) tiến trình (process / 프로세스). Nếu mỗi pod restart vì DB down, restart storm có thể làm khôi phục (recovery / 복구) tệ hơn.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **10. HPA và autoscaling là phản hồi (feedback / 피드백) controller** tiếp nhận điểm tựa từ **9. Probe: startup, readiness, liveness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Cluster autoscaling và tương tác (interaction / 상호작용) giữa vòng điều khiển (control loop / 제어 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. HPA và autoscaling là phản hồi (feedback / 피드백) controller
 
 Horizontal Pod Autoscaler quan sát chỉ số (metric / 지표) rồi thay desired replica count. Đây là một vòng điều khiển (control loop / 제어 루프) có delay. chỉ số (metric / 지표) tăng → quy mô (scale / 규모) out → pod schedule/start/warm → traffic phân phối → chỉ số (metric / 지표) thay đổi.
 
 Nếu vòng lặp (loop / 루프) phản ứng quá nhanh với noisy chỉ số (metric / 지표), replica có thể dao động. Nếu phản ứng quá chậm, người dùng (user / 사용자) chịu độ trễ (latency / 지연 시간) trước khi sức chứa (capacity / 용량) đến. chỉ số (metric / 지표) chọn cho autoscaling phải liên hệ demand và bottleneck. CPU không phải lúc nào cũng phù hợp; hàng đợi (queue / 큐) độ sâu (depth / 깊이) hoặc tính đồng thời (concurrency / 동시성) có thể phản ánh tải công việc (workload / 워크로드) tốt hơn.
+
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **11. Cluster autoscaling và tương tác (interaction / 상호작용) giữa vòng điều khiển (control loop / 제어 루프)** tiếp nhận điểm tựa từ **10. HPA và autoscaling là phản hồi (feedback / 피드백) controller** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Rolling cập nhật (update / 업데이트) và availability math** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Cluster autoscaling và tương tác (interaction / 상호작용) giữa vòng điều khiển (control loop / 제어 루프)
 
@@ -73,11 +92,15 @@ HPA có thể yêu cầu thêm Pod nhưng scheduler không có chỗ. Cluster au
 
 Đây là lý do cần sức chứa (capacity / 용량) buffer, tỷ lệ (rate / 비율) limiting và tải (load / 로드) shedding. Autoscaling không thay thế sức chứa (capacity / 용량) planning.
 
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **11. Cluster autoscaling và tương tác (interaction / 상호작용) giữa vòng điều khiển (control loop / 제어 루프)** cho ta quy tắc; **12. Rolling cập nhật (update / 업데이트) và availability math** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Scheduling ràng buộc (constraint / 제약조건) như chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. Rolling cập nhật (update / 업데이트) và availability math
 
 Triển khai (deployment / 배포) rollout dùng các tham số như `maxUnavailable` và `maxSurge` để điều khiển bao nhiêu replica cũ có thể mất và bao nhiêu replica mới có thể thêm. Nhưng availability thật còn phụ thuộc readiness thời gian (time / 시간), sức chứa (capacity / 용량), PodDisruptionBudget, nút (node / 노드) drain và downstream.
 
 Nếu cluster không có headroom để surge, rollout có thể stuck dù cấu hình (config / 설정) hợp lý trên giấy.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **12. Rolling cập nhật (update / 업데이트) và availability math** cho ta quy tắc; **13. Scheduling ràng buộc (constraint / 제약조건) như chính sách (policy / 정책)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **14. thất bại (failure / 실패) walkthrough** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Scheduling ràng buộc (constraint / 제약조건) như chính sách (policy / 정책)
 
@@ -85,13 +108,19 @@ Nút (node / 노드) selector, affinity, taint/toleration và topology spread l�
 
 Nền tảng (platform / 플랫폼) nên expose intent như “GPU tải công việc (workload / 워크로드)”, “zone-spread dịch vụ (service / 서비스)”, “stateful-high-io” thay vì yêu cầu mọi nhà phát triển (developer / 개발자) hiểu toàn bộ label topology của cluster.
 
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **14. thất bại (failure / 실패) walkthrough** tiếp nhận điểm tựa từ **13. Scheduling ràng buộc (constraint / 제약조건) như chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) phải giữ được chuỗi nhân quả (causal chain / 인과 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. thất bại (failure / 실패) walkthrough
 
 Pod `Pending`: đọc events để biết insufficient CPU, taint, PVC hoặc affinity. Pod `Running` nhưng `NotReady`: xem readiness, ứng dụng (application / 애플리케이션) và phụ thuộc (dependency / 의존성). Pod restart: xem `lastState`, exit mã (code / 코드), OOM/sự kiện (event / 이벤트), liveness. dịch vụ (service / 서비스) 503: xem endpoints/readiness trước proxy cấu hình (config / 설정). độ trễ (latency / 지연 시간) tăng khi CPU đồ thị (graph / 그래프) không cao: kiểm tra throttling, hàng đợi (queue / 큐), downstream và nút (node / 노드) pressure.
 
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **14. thất bại (failure / 실패) walkthrough** xác định đầu vào; **15. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) phải giữ được chuỗi nhân quả (causal chain / 인과 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Scheduling là bài toán feasibility trước, scoring sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) phải giữ được chuỗi nhân quả (causal chain / 인과 사슬)
 
 Kubernetes có nhiều đối tượng (object / 객체) và controller, nhưng operator giỏi luôn giữ chuỗi nhân quả (causal chain / 인과 사슬): desired đối tượng (object / 객체) → controller quyết định (decision / 결정) → child tài nguyên (resource / 자원) → scheduler/nút (node / 노드) → thời gian chạy (runtime / 런타임) → mạng (network / 네트워크)/lưu trữ (storage / 저장소) → ứng dụng (application / 애플리케이션) tín hiệu (signal / 신호). nền tảng (platform / 플랫폼) tốt có thể che bớt đối tượng (object / 객체) bình thường nhưng phải cho phép mở chuỗi nhân quả (causal chain / 인과 사슬) khi sự cố (incident / 인시던트).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **15. cấp cao (senior / 시니어) ghi chú (note / 노트): lớp trừu tượng (abstraction / 추상화) phải giữ được chuỗi nhân quả (causal chain / 인과 사슬)** xác định đầu vào; **16. Scheduling là bài toán feasibility trước, scoring sau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. PodDisruptionBudget không phải availability guarantee** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Scheduling là bài toán feasibility trước, scoring sau
 
@@ -101,6 +130,8 @@ Scheduler không bắt đầu bằng việc “chọn nút (node / 노드) tốt
 
 Yêu cầu tài nguyên (resource request / 리소스 요청) vì vậy vừa là reservation mô hình (model / 모델) vừa là đầu vào (input / 입력) bin-packing. yêu cầu (request / 요청) thấp quá tạo overcommit thời gian chạy (runtime / 런타임); cao quá tạo fragmentation và tăng nút (node / 노드) count. Tuning phải nhìn phân phối (distribution / 분포) theo replica, không chỉ tổng usage.
 
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **16. Scheduling là bài toán feasibility trước, scoring sau** cho ta quy tắc; **17. PodDisruptionBudget không phải availability guarantee** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. Priority và preemption đổi thất bại (failure / 실패) từ “không schedule được” thành “ai bị đẩy ra”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. PodDisruptionBudget không phải availability guarantee
 
 PodDisruptionBudget (PDB) chủ yếu giới hạn một số **voluntary disruption** như nút (node / 노드) drain/maintenance theo cơ chế có tôn trọng PDB. Nó không ngăn nút (node / 노드) crash, kernel panic hay ứng dụng (application / 애플리케이션) tiến trình (process / 프로세스) chết.
@@ -109,17 +140,23 @@ Do đó một PDB `minAvailable: 2` không có nghĩa “luôn luôn có ít nh�
 
 Mô hình tư duy (mental model / 사고 모델) đúng là: PDB bảo vệ ngân sách (budget / 예산) cho planned eviction, còn high availability cần topology, replica, sức chứa (capacity / 용량) và phụ thuộc (dependency / 의존성) redundancy.
 
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **17. PodDisruptionBudget không phải availability guarantee** cho ta quy tắc; **18. Priority và preemption đổi thất bại (failure / 실패) từ “không schedule được” thành “ai bị đẩy ra”** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. Topology spread cần hiểu miền lỗi (failure domain / 장애 도메인) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Priority và preemption đổi thất bại (failure / 실패) từ “không schedule được” thành “ai bị đẩy ra”
 
 Khi cluster thiếu tài nguyên (resource / 자원), Pod priority có thể cho phép tải công việc (workload / 워크로드) quan trọng giành chỗ bằng cách preempt tải công việc (workload / 워크로드) thấp hơn. Đây là cơ chế chính sách (policy / 정책) mạnh nhưng có sự đánh đổi (trade-off / 트레이드오프): trọng yếu (critical / 중요) tải công việc (workload / 워크로드) có thể phục hồi nhanh hơn trong khi batch/dev tải công việc (workload / 워크로드) bị gián đoạn.
 
 Nếu mọi nhóm (team / 팀) tự đánh tải công việc (workload / 워크로드) của mình là priority cao nhất, cơ chế (mechanism / 메커니즘) mất tác dụng. Priority lớp (class / 클래스) phải gắn với nghiệp vụ (business / 비즈니스) criticality và quản trị (governance / 거버넌스). Preemption cũng không tạo thêm sức chứa (capacity / 용량); nó chỉ phân bổ lại scarcity.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **19. Topology spread cần hiểu miền lỗi (failure domain / 장애 도메인) thật** tiếp nhận điểm tựa từ **18. Priority và preemption đổi thất bại (failure / 실패) từ “không schedule được” thành “ai bị đẩy ra”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Readiness và termination có một race cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Topology spread cần hiểu miền lỗi (failure domain / 장애 도메인) thật
 
 Replica “nằm trên ba nút (node / 노드) khác nhau” chưa chắc độc lập nếu ba nút (node / 노드) cùng zone, cùng rack hoặc cùng autoscaling group có thất bại (failure / 실패) chung. Topology spread/anti-affinity chỉ hữu ích nếu label topology phản ánh miền lỗi (failure domain / 장애 도메인) có ý nghĩa.
 
 Ngược lại, yêu cầu spread quá cứng trong cluster nhỏ có thể làm Pod `Pending` trong lúc sự cố (incident / 인시던트). nền tảng (platform / 플랫폼) nên phân biệt bất biến (invariant / 불변식) bắt buộc — ví dụ replica trọng yếu (critical / 중요) phải trải ít nhất hai zone — với preference có thể nới khi sức chứa (capacity / 용량) căng.
+
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **20. Readiness và termination có một race cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **19. Topology spread cần hiểu miền lỗi (failure domain / 장애 도메인) thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. HPA chỉ số (metric / 지표) phải gắn với công việc (work / 작업), không chỉ tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Readiness và termination có một race cửa sổ (window / 윈도우)
 
@@ -129,6 +166,8 @@ Nếu ứng dụng (application / 애플리케이션) đóng listener ngay lập
 
 Một chuỗi (sequence / 시퀀스) thường an toàn hơn là: đánh dấu tải công việc (workload / 워크로드) không còn sẵn sàng nhận traffic, cho mặt phẳng dữ liệu (data plane / 데이터 플레인) đủ thời gian cập nhật, dừng nhận yêu cầu (request / 요청) mới, hoàn tất in-flight yêu cầu (request / 요청) trong deadline, rồi tiến trình (process / 프로세스) thoát trước khi grace period kết thúc. chính xác (exact / 정확한) cơ chế (mechanism / 메커니즘) tùy ingress/thời gian chạy (runtime / 런타임) nhưng chuỗi nhân quả (causal chain / 인과 사슬) giống nhau.
 
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **20. Readiness và termination có một race cửa sổ (window / 윈도우)** nêu điều cần giải thích; **21. HPA chỉ số (metric / 지표) phải gắn với công việc (work / 작업), không chỉ tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Autoscaling nhiều tầng có thể tạo phản hồi (feedback / 피드백) ngoài ý muốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. HPA chỉ số (metric / 지표) phải gắn với công việc (work / 작업), không chỉ tài nguyên (resource / 자원)
 
 CPU-based HPA hoạt động tốt khi CPU gần tỷ lệ với demand. Nhưng với I/O-bound dịch vụ (service / 서비스), CPU thấp không có nghĩa còn sức chứa (capacity / 용량). hàng đợi (queue / 큐) bên tiêu thụ (consumer / 소비자) có thể phù hợp hơn với hàng đợi (queue / 큐) age/độ sâu (depth / 깊이); yêu cầu (request / 요청) dịch vụ (service / 서비스) có thể quy mô (scale / 규모) theo tính đồng thời (concurrency / 동시성) hoặc yêu cầu (request / 요청) tỷ lệ (rate / 비율) nếu tín hiệu (signal / 신호) đáng tin.
@@ -137,11 +176,15 @@ Chỉ số (metric / 지표) autoscaling còn có vấn đề cold start. Khi qu
 
 Do đó autoscaling chính sách (policy / 정책) cần biết observation cửa sổ (window / 윈도우), stabilization, startup thời gian (time / 시간) và minimum headroom. vòng điều khiển (control loop / 제어 루프) tốt không chỉ phản ứng đúng hướng mà còn phải ổn định theo thời gian.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **21. HPA chỉ số (metric / 지표) phải gắn với công việc (work / 작업), không chỉ tài nguyên (resource / 자원)** nêu điều cần giải thích; **22. Autoscaling nhiều tầng có thể tạo phản hồi (feedback / 피드백) ngoài ý muốn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. cấp cao (senior / 시니어) walkthrough: rollout stuck dù tải công việc (workload / 워크로드) mới “không lỗi”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. Autoscaling nhiều tầng có thể tạo phản hồi (feedback / 피드백) ngoài ý muốn
 
 Giả sử HPA tăng replica vì độ trễ (latency / 지연 시간)/CPU. Pod mới không schedule được nên cluster autoscaler tăng nút (node / 노드). Khi nút (node / 노드) xuất hiện, hàng loạt Pod start cùng lúc, mở liên kết (connection / 연결) DB và warm bộ nhớ đệm (cache / 캐시). cơ sở dữ liệu (database / 데이터베이스) bị saturation, độ trễ (latency / 지연 시간) tăng thêm, HPA lại tăng replica. Một vòng lặp (loop / 루프) cục bộ (local / 로컬) hợp lý có thể khuếch đại thất bại (failure / 실패) toàn hệ thống.
 
 Cách thiết kế trưởng thành là đặt ranh giới (boundary / 경계): max replica theo downstream sức chứa (capacity / 용량), liên kết (connection / 연결) ngân sách (budget / 예산), tỷ lệ (rate / 비율) limit, warm-up điều khiển (control / 제어) và SLO tín hiệu (signal / 신호). Autoscaler không được coi downstream là vô hạn.
+
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **23. cấp cao (senior / 시니어) walkthrough: rollout stuck dù tải công việc (workload / 워크로드) mới “không lỗi”** tiếp nhận điểm tựa từ **22. Autoscaling nhiều tầng có thể tạo phản hồi (feedback / 피드백) ngoài ý muốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Persistent volume có topology và attach vòng đời (lifecycle / 생명주기) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. cấp cao (senior / 시니어) walkthrough: rollout stuck dù tải công việc (workload / 워크로드) mới “không lỗi”
 
@@ -151,6 +194,8 @@ Giả sử triển khai (deployment / 배포) 20 replica dùng `maxSurge: 25%`, 
 
 Đây là kiểu môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론) Kubernetes cần: đối tượng (object / 객체) status là symptom của nhiều vòng điều khiển (control loop / 제어 루프) lồng nhau, không phải một lỗi đơn lẻ.
 
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **23. cấp cao (senior / 시니어) walkthrough: rollout stuck dù tải công việc (workload / 워크로드) mới “không lỗi”** xác định đầu vào; **24. Persistent volume có topology và attach vòng đời (lifecycle / 생명주기) riêng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. StatefulSet stable định danh (identity / 식별자) không tự tạo dữ liệu (data / 데이터) an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Persistent volume có topology và attach vòng đời (lifecycle / 생명주기) riêng
 
 Một PVC tồn tại không có nghĩa volume có thể mount ở mọi nút (node / 노드). Nhiều khối (block / 블록) volume gắn với zone hoặc có giới hạn số volume attach trên nút (node / 노드). Scheduler/lưu trữ (storage / 저장소) controller phải phối hợp placement với topology của volume.
@@ -158,6 +203,8 @@ Một PVC tồn tại không có nghĩa volume có thể mount ở mọi nút (n
 Vì vậy Pod stateful có thể `Pending` dù CPU/bộ nhớ (memory / 메모리) còn nhiều nếu volume ở zone không có nút (node / 노드) phù hợp, attach limit đã chạm hoặc volume vẫn đang detach từ nút (node / 노드) cũ. Đây là thất bại (failure / 실패) đường dẫn (path / 경로) khác hoàn toàn với ứng dụng (application / 애플리케이션) startup.
 
 Khi điều tra, nối `PVC/PV → StorageClass/topology → selected node → attach/mount event`. quy mô (scale / 규모) nút (node / 노드) ở zone khác không giúp nếu volume không di chuyển được. lưu trữ (storage / 저장소) topology phải là đầu vào (input / 입력) của sức chứa (capacity / 용량)/khôi phục (recovery / 복구) thiết kế (design / 설계), không phải chi tiết CSI bị phát hiện lần đầu trong sự cố (incident / 인시던트).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, cơ chế trong **24. Persistent volume có topology và attach vòng đời (lifecycle / 생명주기) riêng** cần được kiểm chứng bằng dấu vết cụ thể; **25. StatefulSet stable định danh (identity / 식별자) không tự tạo dữ liệu (data / 데이터) an toàn (safety / 안전)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **26. Ephemeral lưu trữ (storage / 저장소) cũng là tài nguyên (resource / 자원) có pressure và eviction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. StatefulSet stable định danh (identity / 식별자) không tự tạo dữ liệu (data / 데이터) an toàn (safety / 안전)
 
@@ -167,6 +214,8 @@ Rolling cập nhật (update / 업데이트) của stateful tải công việc (
 
 Vì vậy nền tảng (platform / 플랫폼) không nên biến StatefulSet thành “cơ sở dữ liệu (database / 데이터베이스) button” nếu không sở hữu backup, replication, upgrade và khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론) tương ứng.
 
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **25. StatefulSet stable định danh (identity / 식별자) không tự tạo dữ liệu (data / 데이터) an toàn (safety / 안전)** nêu điều cần giải thích; **26. Ephemeral lưu trữ (storage / 저장소) cũng là tài nguyên (resource / 자원) có pressure và eviction** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. Job thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론) phải đi cùng idempotency của nghiệp vụ (business / 비즈니스) công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Ephemeral lưu trữ (storage / 저장소) cũng là tài nguyên (resource / 자원) có pressure và eviction
 
 Pod có thể ghi writable tầng (layer / 계층), `emptyDir`, logs hoặc temporary files. Những bytes này dùng nút (node / 노드) ephemeral lưu trữ (storage / 저장소). tải công việc (workload / 워크로드) có CPU/bộ nhớ (memory / 메모리) khỏe nhưng vẫn bị evict hoặc thất bại (fail / 실패) khi nút (node / 노드) disk pressure nếu temporary/log đầu ra (output / 출력) tăng bất thường.
@@ -174,6 +223,8 @@ Pod có thể ghi writable tầng (layer / 계층), `emptyDir`, logs hoặc temp
 Tài nguyên (resource / 자원) planning cần nhìn cả byte sức chứa (capacity / 용량) lẫn I/O tỷ lệ (rate / 비율). Một batch job tạo hàng trăm GiB temporary dữ liệu (data / 데이터) có thể ảnh hưởng nút (node / 노드) khác dù final đầu ra (output / 출력) được upload đối tượng (object / 객체) lưu trữ (storage / 저장소). Requests/limits/quota cho ephemeral lưu trữ (storage / 저장소), log rotation và cleanup vòng đời (lifecycle / 생명주기) giúp biến tài nguyên (resource / 자원) ẩn thành đặc tả hợp đồng (contract / 계약).
 
 Khi `DiskPressure` xuất hiện, chỉ xóa Pod thường giải phóng tạm thời nhưng không sửa producer tạo dữ liệu (data / 데이터) không bounded.
+
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **26. Ephemeral lưu trữ (storage / 저장소) cũng là tài nguyên (resource / 자원) có pressure và eviction** nêu điều cần giải thích; **27. Job thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론) phải đi cùng idempotency của nghiệp vụ (business / 비즈니스) công việc (work / 작업)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. CronJob phải lập luận (reasoning / 추론) về missed run và overlapping run** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 27. Job thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론) phải đi cùng idempotency của nghiệp vụ (business / 비즈니스) công việc (work / 작업)
 
@@ -183,6 +234,8 @@ Ví dụ job charge invoice: payment API đã nhận yêu cầu (request / 요�
 
 Batch nền tảng (platform / 플랫폼) nên expose thử lại (retry / 재시도)/backoff/dead-letter ngữ nghĩa (semantics / 의미론) và khuyến khích công việc (work / 작업) item có durable định danh (identity / 식별자). “At least one successful Pod” không đồng nghĩa “nghiệp vụ (business / 비즈니스) side tác động (effect / 효과) exactly once”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **28. CronJob phải lập luận (reasoning / 추론) về missed run và overlapping run** tiếp nhận điểm tựa từ **27. Job thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론) phải đi cùng idempotency của nghiệp vụ (business / 비즈니스) công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Endpoint quy mô (scale / 규모) tạo pressure lên điều khiển (control / 제어) plane và mặt phẳng dữ liệu (data plane / 데이터 플레인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 28. CronJob phải lập luận (reasoning / 추론) về missed run và overlapping run
 
 Scheduled job phụ thuộc controller clock, scheduling delay và previous run duration. Nếu job 10 phút nhưng chạy mỗi 5 phút, overlap có thể tạo concurrent công việc (work / 작업) ngoài ý muốn. Nếu điều khiển (control / 제어) plane down, một số schedule có thể bị trễ/missed theo chính sách (policy / 정책).
@@ -190,6 +243,8 @@ Scheduled job phụ thuộc controller clock, scheduling delay và previous run 
 Vì vậy batch đặc tả hợp đồng (contract / 계약) cần quyết định overlap có được phép không, late thực thi (execution / 실행) còn giá trị không, deadline là gì và công việc (work / 작업) có deduplicate theo logical schedule ID không. Không nên giả định cron expression tự tạo nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성).
 
 Một report “mỗi ngày lúc 00:00” thường thực sự có bất biến (invariant / 불변식) về dữ liệu (data / 데이터) cửa sổ (window / 윈도우), timezone và exactly-one logical đầu ra (output / 출력); đó là đặc tả ứng dụng (application contract / 애플리케이션 계약) cần được encode ngoài scheduler.
+
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **28. CronJob phải lập luận (reasoning / 추론) về missed run và overlapping run** nêu điều cần giải thích; **29. Endpoint quy mô (scale / 규모) tạo pressure lên điều khiển (control / 제어) plane và mặt phẳng dữ liệu (data plane / 데이터 플레인)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. cấp cao (senior / 시니어) walkthrough: Pod stateful failover chậm dù nút (node / 노드) mới đã sẵn sàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 29. Endpoint quy mô (scale / 규모) tạo pressure lên điều khiển (control / 제어) plane và mặt phẳng dữ liệu (data plane / 데이터 플레인)
 
@@ -199,6 +254,8 @@ Vì vậy “thêm thật nhiều replica” không miễn phí. Replica count l
 
 Sức chứa (capacity / 용량) kỹ thuật (engineering / 엔지니어링) cần tìm điểm mà thêm replica còn tăng thông lượng (throughput / 처리량) hữu ích, thay vì dùng replica count như actuator không giới hạn.
 
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **29. Endpoint quy mô (scale / 규모) tạo pressure lên điều khiển (control / 제어) plane và mặt phẳng dữ liệu (data plane / 데이터 플레인)** nêu điều cần giải thích; **30. cấp cao (senior / 시니어) walkthrough: Pod stateful failover chậm dù nút (node / 노드) mới đã sẵn sàng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **31. Eviction là giao thức (protocol / 프로토콜) có nhiều nguyên nhân, không phải mọi Pod biến mất đều giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 30. cấp cao (senior / 시니어) walkthrough: Pod stateful failover chậm dù nút (node / 노드) mới đã sẵn sàng
 
 Giả sử nút (node / 노드) chứa một cơ sở dữ liệu (database / 데이터베이스) replica chết. Autoscaler tạo nút (node / 노드) mới trong 2 phút nhưng Pod vẫn `Pending` thêm 8 phút. CPU/bộ nhớ (memory / 메모리) fit và ảnh (image / 이미지) đã pull. sự kiện (event / 이벤트) cho thấy volume cũ chưa detach khỏi nút (node / 노드) mất liên lạc nên attach vào nút (node / 노드) mới bị khối (block / 블록) để tránh simultaneous writer.
@@ -206,6 +263,8 @@ Giả sử nút (node / 노드) chứa một cơ sở dữ liệu (database / �
 Chuỗi nhân quả (causal chain / 인과 사슬) nằm ở lưu trữ (storage / 저장소) fencing/attach vòng đời (lifecycle / 생명주기), không ở scheduler sức chứa (capacity / 용량). Force-detach có thể rút ngắn khôi phục (recovery / 복구) nhưng tăng rủi ro (risk / 위험) nếu nút (node / 노드) cũ thực ra vẫn ghi được. Đây là sự đánh đổi (trade-off / 트레이드오프) giữa khôi phục (recovery / 복구) thời gian (time / 시간) và split-brain/dữ liệu (data / 데이터) corruption.
 
 Bài học là khôi phục (recovery / 복구) của stateful tải công việc (workload / 워크로드) bị giới hạn bởi **dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) transfer**, không chỉ bởi tốc độ tạo Pod/nút (node / 노드).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **31. Eviction là giao thức (protocol / 프로토콜) có nhiều nguyên nhân, không phải mọi Pod biến mất đều giống nhau** tiếp nhận điểm tựa từ **30. cấp cao (senior / 시니어) walkthrough: Pod stateful failover chậm dù nút (node / 노드) mới đã sẵn sàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Cluster autoscaler scale-down cũng là một vòng điều khiển (control loop / 제어 루프) gây disruption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 31. Eviction là giao thức (protocol / 프로토콜) có nhiều nguyên nhân, không phải mọi Pod biến mất đều giống nhau
 
@@ -215,6 +274,8 @@ Runbook không nên chỉ nhìn trạng thái cuối `Terminated/Evicted`. bằn
 
 Nền tảng (platform / 플랫폼) nên coi disruption nguồn (source / 소스) như thay đổi (change / 변경) telemetry. Availability ngân sách (budget / 예산) chỉ có ý nghĩa khi biết ai đang tiêu ngân sách (budget / 예산) và cơ chế (mechanism / 메커니즘) đó có thể pause/throttle được không.
 
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **32. Cluster autoscaler scale-down cũng là một vòng điều khiển (control loop / 제어 루프) gây disruption** tiếp nhận điểm tựa từ **31. Eviction là giao thức (protocol / 프로토콜) có nhiều nguyên nhân, không phải mọi Pod biến mất đều giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. HPA, VPA và rollout có thể tranh quyền trên cùng tải công việc (workload / 워크로드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 32. Cluster autoscaler scale-down cũng là một vòng điều khiển (control loop / 제어 루프) gây disruption
 
 Scale-up thường được chú ý vì thiếu sức chứa (capacity / 용량), nhưng scale-down có thể tạo churn khi nút (node / 노드) vừa trở nên “ít dùng”. Evict Pod để consolidate nút (node / 노드) làm replacement schedule ở nơi khác, pull ảnh (image / 이미지), warm bộ nhớ đệm (cache / 캐시) và mở lại liên kết (connection / 연결). Nếu traffic tăng lại ngay sau đó, cluster có thể vừa quy mô (scale / 규모) down xong đã phải quy mô (scale / 규모) up.
@@ -222,6 +283,8 @@ Scale-up thường được chú ý vì thiếu sức chứa (capacity / 용량)
 Một hệ thống ổn định cần hysteresis/stabilization: không thu hồi sức chứa (capacity / 용량) quá nhanh chỉ vì một cửa sổ utilization thấp. Với tải công việc (workload / 워크로드) có startup lâu hoặc traffic theo burst, một phần idle headroom có thể rẻ hơn độ trễ (latency / 지연 시간)/khôi phục (recovery / 복구) chi phí (cost / 비용) của việc liên tục tạo-hủy nút (node / 노드).
 
 Bằng chứng (evidence / 증거) nên nối `scale-down decision → evictions → rescheduling/warm-up → user latency/SLO → scale-up tiếp theo`. Nếu chỉ nhìn cloud chi phí (cost / 비용) giảm, ta có thể bỏ qua oscillation mà autoscaler tạo ra.
+
+> **Chuyển mạch:** Ở chặng này của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **33. HPA, VPA và rollout có thể tranh quyền trên cùng tải công việc (workload / 워크로드)** tiếp nhận điểm tựa từ **32. Cluster autoscaler scale-down cũng là một vòng điều khiển (control loop / 제어 루프) gây disruption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Sau thất bại (failure / 실패), topology có thể hồi phục sức chứa (capacity / 용량) nhưng chưa hồi phục redundancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 33. HPA, VPA và rollout có thể tranh quyền trên cùng tải công việc (workload / 워크로드)
 
@@ -231,6 +294,8 @@ Ví dụ VPA tăng CPU yêu cầu (request / 요청) làm Pod cũ cần recreate
 
 Nền tảng (platform / 플랫폼) cần xác định controller nào được phép mutate trường dữ liệu (field / 필드) nào, recommendation nào chỉ advisory và maintenance cửa sổ (window / 윈도우) nào cho disruptive resize. mô hình tư duy (mental model / 사고 모델) là **multi-controller composition**, không phải bật càng nhiều autoscaler càng tốt.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **34. Sau thất bại (failure / 실패), topology có thể hồi phục sức chứa (capacity / 용량) nhưng chưa hồi phục redundancy** tiếp nhận điểm tựa từ **33. HPA, VPA và rollout có thể tranh quyền trên cùng tải công việc (workload / 워크로드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Sidecar và init vòng đời (lifecycle / 생명주기) có thể giữ Pod chưa thật sự hoàn tất hoặc chưa thật sự sẵn sàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 34. Sau thất bại (failure / 실패), topology có thể hồi phục sức chứa (capacity / 용량) nhưng chưa hồi phục redundancy
 
 Giả sử dịch vụ (service / 서비스) ba replica trải ba zone. Một zone mất, scheduler tạo replacement ở hai zone còn lại để khôi phục replica count. Dashboard lại thấy `3/3 Ready`, nhưng thất bại (failure / 실패) tolerance đã giảm vì hai hoặc ba replica có thể tập trung vào ít miền lỗi (failure domain / 장애 도메인) hơn.
@@ -238,6 +303,8 @@ Giả sử dịch vụ (service / 서비스) ba replica trải ba zone. Một zo
 Khi zone cũ trở lại, scheduler không nhất thiết tự di chuyển Pod chỉ để tái cân bằng nếu placement hiện tại vẫn hợp lệ. Vì vậy khôi phục (recovery / 복구) criterion cần kiểm tra **redundancy/topology bất biến (invariant / 불변식)**, không chỉ desired replica count. Có thể cần controlled rebalance với disruption ngân sách (budget / 예산) và sức chứa (capacity / 용량) headroom.
 
 Đây là distinction quan trọng giữa `capacity recovered` và `resilience recovered`.
+
+> **Chuyển mạch:** Trong **Kubernetes tải công việc (workload / 워크로드), networking, lưu trữ (storage / 저장소), scheduling và tài nguyên (resource / 자원) hành vi (behavior / 동작)**, **34. Sau thất bại (failure / 실패), topology có thể hồi phục sức chứa (capacity / 용량) nhưng chưa hồi phục redundancy** xác định đầu vào; **35. Sidecar và init vòng đời (lifecycle / 생명주기) có thể giữ Pod chưa thật sự hoàn tất hoặc chưa thật sự sẵn sàng** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 35. Sidecar và init vòng đời (lifecycle / 생명주기) có thể giữ Pod chưa thật sự hoàn tất hoặc chưa thật sự sẵn sàng
 
@@ -247,4 +314,4 @@ Nếu readiness chỉ kiểm tra ứng dụng (application / 애플리케이션)
 
 Thiết kế cần xác định phụ thuộc (dependency / 의존성) thứ tự (order / 순서) giữa containers, readiness của **đường đi của yêu cầu (request path / 요청 경로) đầy đủ**, và shutdown thứ tự (order / 순서) để in-flight công việc (work / 작업)/telemetry không mất. “bộ chứa (container / 컨테이너) chính healthy” chưa chắc đồng nghĩa Pod năng lực (capability / 역량) mà người dùng (user / 사용자) cần đã healthy.
 
-> **Bàn giao:** Sau **35. Sidecar và init vòng đời (lifecycle / 생명주기) có thể giữ Pod chưa thật sự hoàn tất hoặc chưa thật sự sẵn sàng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kubernetes reconciliation and control plane](./00_kubernetes_reconciliation_and_control_plane.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **35. Sidecar và init vòng đời (lifecycle / 생명주기) có thể giữ Pod chưa thật sự hoàn tất hoặc chưa thật sự sẵn sàng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

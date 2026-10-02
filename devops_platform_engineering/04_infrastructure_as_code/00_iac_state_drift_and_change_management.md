@@ -1,7 +1,6 @@
 # Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)
 
-> **Mạch đọc:** Đọc **hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. IaC giải quyết vấn đề nào** sang **2. Declarative và imperative**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Infrastructure as code: desired state, drift và change management**. Route đi từ desired state → declarative plan → apply/reconcile → drift detection → safe lifecycle/change, để IaC nối mã nguồn với hạ tầng thật.
 
 ## 1. IaC giải quyết vấn đề nào
 
@@ -9,11 +8,15 @@ Hạ tầng thủ công có một lỗi cấu trúc: actual trạng thái (state
 
 IaC không đơn thuần là “script tạo máy chủ (server / 서버)”. Điểm mạnh nhất của declarative IaC là mô tả desired trạng thái (state / 상태) rồi để engine tính khác biệt với known actual trạng thái (state / 상태)/provider trạng thái (state / 상태).
 
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **2. Declarative và imperative** tiếp nhận điểm tựa từ **1. IaC giải quyết vấn đề nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. trạng thái (state / 상태) là phần của tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Declarative và imperative
 
 Imperative automation mô tả chuỗi (sequence / 시퀀스): tạo mạng (network / 네트워크), tạo VM, gắn disk. Declarative cấu hình (configuration / 구성) nói muốn có mạng (network / 네트워크)/VM/disk với thuộc tính (property / 속성) nào. Engine xây phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), đọc trạng thái (state / 상태) và gọi provider API để hội tụ.
 
 Declarative không loại bỏ imperative. Provider vẫn thực hiện API thao tác (operation / 연산) theo thứ tự. Lợi ích là người dùng (user / 사용자) thao tác ở cấp trạng thái (state / 상태)/bất biến (invariant / 불변식) thay vì tự viết mọi nhánh “nếu tài nguyên (resource / 자원) tồn tại thì...”.
+
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **3. trạng thái (state / 상태) là phần của tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **2. Declarative và imperative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Plan không phải lời tiên tri tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. trạng thái (state / 상태) là phần của tính đúng đắn (correctness / 정확성)
 
@@ -21,11 +24,15 @@ Terraform và các engine tương tự cần trạng thái (state / 상태) đ�
 
 Remote trạng thái (state / 상태) backend thường cần locking/tính đồng thời (concurrency / 동시성) điều khiển (control / 제어), kiểm soát truy cập (access control / 접근 제어), encryption và backup/versioning. Không nên lần ghi nhận (commit / 커밋) trạng thái (state / 상태) chứa giá trị nhạy cảm vào repository công khai (public / 공개).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **4. Plan không phải lời tiên tri tuyệt đối** tiếp nhận điểm tựa từ **3. trạng thái (state / 상태) là phần của tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Drift là sự khác biệt về quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Plan không phải lời tiên tri tuyệt đối
 
 `plan` là dự đoán dựa trên cấu hình (configuration / 구성), trạng thái (state / 상태) đã biết và provider read tại thời điểm đó. Giữa plan và apply, bên ngoài (external / 외부) trạng thái (state / 상태) có thể thay đổi. Provider API cũng có eventual consistency hoặc computed giá trị (value / 값) chỉ biết sau create.
 
 Do đó rà soát (review / 검토) plan rất hữu ích nhưng không chứng minh apply chắc chắn đúng. chuỗi xử lý (pipeline / 파이프라인) cần capture plan sản phẩm tạo ra (artifact / 산출물) phù hợp, hạn chế khoảng cách thời gian và quyền thay đổi, rồi verify actual trạng thái (state / 상태) sau apply.
+
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, sau nội dung của **4. Plan không phải lời tiên tri tuyệt đối**, **5. Drift là sự khác biệt về quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **6. Idempotency và convergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Drift là sự khác biệt về quyền sở hữu (ownership / 소유권)
 
@@ -33,11 +40,15 @@ Drift xuất hiện khi tài nguyên (resource / 자원) bị sửa ngoài IaC, 
 
 Tổ chức cần quyết định: console thay đổi (change / 변경) có bị cấm hoàn toàn; emergency thay đổi (change / 변경) được phép nhưng phải back-port vào mã (code / 코드); hay một số trường dữ liệu (field / 필드) deliberately ignored vì controller khác sở hữu. quyền sở hữu (ownership / 소유권) phải tường minh (explicit / 명시적) để hai controller không “đánh nhau” liên tục.
 
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **6. Idempotency và convergence** tiếp nhận điểm tựa từ **5. Drift là sự khác biệt về quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. tài nguyên (resource / 자원) đồ thị (graph / 그래프) và blast radius** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Idempotency và convergence
 
 Một apply ổn định sau khi desired trạng thái (state / 상태) đã đạt thường không nên tạo thay đổi (change / 변경) mới vô cớ. Nếu chạy mỗi lần lại thay tài nguyên (resource / 자원), có thể provider dùng nondeterministic đầu vào (input / 입력), generated timestamp hoặc cấu hình (config / 설정) không normalize.
 
 Convergence quan trọng với automation. nền tảng (platform / 플랫폼) không thể tự reconcile an toàn nếu hành động (action / 동작) mỗi lần làm trạng thái (state / 상태) trôi thêm.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **6. Idempotency và convergence** nêu điều cần giải thích; **7. tài nguyên (resource / 자원) đồ thị (graph / 그래프) và blast radius** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. mô-đun (module / 모듈) là lớp trừu tượng (abstraction / 추상화) có đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. tài nguyên (resource / 자원) đồ thị (graph / 그래프) và blast radius
 
@@ -45,11 +56,15 @@ IaC engine xây phụ thuộc (dependency / 의존성) đồ thị (graph / 그�
 
 Ranh giới mô-đun (module boundary / 모듈 경계) và trạng thái (state / 상태) ranh giới (boundary / 경계) nên tính theo quyền sở hữu (ownership / 소유권)/blast radius, không chỉ theo loại tài nguyên (resource / 자원). Một trạng thái (state / 상태) tệp (file / 파일) khổng lồ cho toàn công ty tạo tranh chấp khóa (lock contention / 잠금 경합) và khiến một apply có quyền rất rộng. Quá nhiều trạng thái (state / 상태) siêu nhỏ lại tăng coordination chi phí (cost / 비용). ranh giới (boundary / 경계) đúng thường theo nhóm (team / 팀)/lĩnh vực (domain / 도메인)/môi trường (environment / 환경) và vòng đời (lifecycle / 생명주기) tương đối độc lập.
 
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **7. tài nguyên (resource / 자원) đồ thị (graph / 그래프) và blast radius** nêu điều cần giải thích; **8. mô-đun (module / 모듈) là lớp trừu tượng (abstraction / 추상화) có đặc tả hợp đồng (contract / 계약)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. vòng đời (lifecycle / 생명주기) của thay đổi phá hủy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. mô-đun (module / 모듈) là lớp trừu tượng (abstraction / 추상화) có đặc tả hợp đồng (contract / 계약)
 
 Mô-đun (module / 모듈) không nên chỉ bọc vài tài nguyên (resource / 자원) để giảm số dòng. mô-đun (module / 모듈) tốt encode chính sách (policy / 정책)/default, expose đầu vào (input / 입력) thực sự cần, giữ đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약) ổn định và có versioning chiến lược (strategy / 전략).
 
 Nếu mô-đun (module / 모듈) expose mọi thuộc tính (property / 속성) y hệt provider, nó không giảm cognitive tải (load / 로드). Nếu mô-đun (module / 모듈) giấu quá nhiều nhưng không có escape hatch, người dùng (user / 사용자) fork mô-đun (module / 모듈) và nền tảng (platform / 플랫폼) mất điều khiển (control / 제어). Đây là cùng bài toán lớp trừu tượng (abstraction / 추상화) của kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링).
+
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **8. mô-đun (module / 모듈) là lớp trừu tượng (abstraction / 추상화) có đặc tả hợp đồng (contract / 계약)** xác định đầu vào; **9. vòng đời (lifecycle / 생명주기) của thay đổi phá hủy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Secret trong IaC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. vòng đời (lifecycle / 생명주기) của thay đổi phá hủy
 
@@ -57,11 +72,15 @@ Rename logical tài nguyên (resource / 자원) trong mã (code / 코드) có th
 
 Rà soát (review / 검토) IaC phải đọc hành động (action / 동작) ngữ nghĩa (semantics / 의미론), không chỉ diff văn bản (text / 텍스트). Các dấu hiệu `destroy`, `replace`, force-new thuộc tính (property / 속성), tuyến (route / 경로)/ACL thay đổi (change / 변경) và định danh (identity / 식별자) permission thay đổi (change / 변경) cần được highlight theo rủi ro (risk / 위험) lớp (class / 클래스).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **9. vòng đời (lifecycle / 생명주기) của thay đổi phá hủy** xác định đầu vào; **10. Secret trong IaC** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Import và brownfield** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Secret trong IaC
 
 “Sensitive” trong CLI đầu ra (output / 출력) không có nghĩa secret không nằm trong trạng thái (state / 상태). Một giá trị (value / 값) được đánh dấu nhạy cảm có thể vẫn được backend lưu để engine quản tài nguyên (resource / 자원). Vì vậy secret management phải xem trạng thái (state / 상태) backend là sensitive asset.
 
 Tốt hơn là IaC tạo tham chiếu (reference / 참조)/permission tới secret hệ thống (system / 시스템), còn secret giá trị (value / 값) vòng đời (lifecycle / 생명주기) được quản ở secret manager khi phù hợp. Nếu provider bắt buộc giá trị (value / 값) đi qua trạng thái (state / 상태), phải bảo vệ backend tương ứng.
+
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **11. Import và brownfield** tiếp nhận điểm tựa từ **10. Secret trong IaC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. CI/CD cho IaC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Import và brownfield
 
@@ -69,11 +88,15 @@ Hệ thống thật thường có tài nguyên (resource / 자원) tạo thủ c
 
 Quá trình brownfield nên đi từng ranh giới (boundary / 경계) nhỏ: inventory → import → normalize → plan no-op → sau đó mới refactor mô-đun (module / 모듈). Không vừa import vừa redesign lớn vì khó biết diff đến từ quyền sở hữu (ownership / 소유권) hay thiết kế (design / 설계) thay đổi (change / 변경).
 
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **12. CI/CD cho IaC** tiếp nhận điểm tựa từ **11. Import và brownfield** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. cấp cao (senior / 시니어) ghi chú (note / 노트): IaC là một controller chưa chắc chạy liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. CI/CD cho IaC
 
 Một luồng (flow / 흐름) điển hình là format/validate, static/chính sách (policy / 정책) check, plan trên pull yêu cầu (request / 요청), rà soát (review / 검토), merge rồi apply bằng định danh (identity / 식별자) kiểm soát. môi trường vận hành (production / 운영 환경) credential không nên nằm trên laptop từng nhà phát triển (developer / 개발자) nếu automation có thể làm đơn vị sở hữu (owner / 오너).
 
 Apply cần serialization theo trạng thái (state / 상태) ranh giới (boundary / 경계) và nhật ký kiểm tra (audit log / 감사 로그). Emergency đường dẫn (path / 경로) vẫn cần, nhưng emergency thay đổi (change / 변경) phải quay lại nguồn chuẩn (source of truth / 정본) nhanh để drift không trở thành permanent fork.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **13. cấp cao (senior / 시니어) ghi chú (note / 노트): IaC là một controller chưa chắc chạy liên tục** tiếp nhận điểm tựa từ **12. CI/CD cho IaC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Apply là giao dịch (transaction / 트랜잭션) không hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. cấp cao (senior / 시니어) ghi chú (note / 노트): IaC là một controller chưa chắc chạy liên tục
 
@@ -83,6 +106,8 @@ Khi hiểu như vậy, câu hỏi rõ hơn: ai trigger reconciliation; bao lâu 
 
 IaC thành công khi hạ tầng trở thành hệ thống thay đổi có rà soát (review / 검토), định danh (identity / 식별자), quay lui (rollback / 롤백)/khôi phục (recovery / 복구) và quyền sở hữu (ownership / 소유권) rõ, không chỉ khi “mọi tài nguyên (resource / 자원) đã viết bằng HCL”.
 
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **14. Apply là giao dịch (transaction / 트랜잭션) không hoàn chỉnh** tiếp nhận điểm tựa từ **13. cấp cao (senior / 시니어) ghi chú (note / 노트): IaC là một controller chưa chắc chạy liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. khóa (lock / 잠금) bảo vệ writer tính đồng thời (concurrency / 동시성), không bảo vệ mọi race** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 14. Apply là giao dịch (transaction / 트랜잭션) không hoàn chỉnh
 
 Nhiều người vô thức nghĩ `apply` giống một cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션): hoặc mọi thứ thành công, hoặc mọi thứ quay lui (rollback / 롤백). Thực tế provider API thường không cung cấp atomic giao dịch (transaction / 트랜잭션) xuyên nhiều tài nguyên (resource / 자원). Engine có thể tạo mạng (network / 네트워크) thành công, tạo cơ sở dữ liệu (database / 데이터베이스) thất bại, rồi dừng ở trạng thái **một phần đã thay đổi**.
@@ -91,11 +116,15 @@ Vì vậy thất bại (failure / 실패) handling phải bắt đầu từ câu
 
 Một runbook tốt cho IaC thất bại (failure / 실패) không bắt đầu bằng “rerun”. Nó bắt đầu bằng refresh/read actual trạng thái (state / 상태), xác định side tác động (effect / 효과) đã xảy ra và chỉ thử lại (retry / 재시도) khi biết engine sẽ tiếp tục từ trạng thái (state / 상태) đúng.
 
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **15. khóa (lock / 잠금) bảo vệ writer tính đồng thời (concurrency / 동시성), không bảo vệ mọi race** tiếp nhận điểm tựa từ **14. Apply là giao dịch (transaction / 트랜잭션) không hoàn chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Eventual consistency làm phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) có thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. khóa (lock / 잠금) bảo vệ writer tính đồng thời (concurrency / 동시성), không bảo vệ mọi race
 
 Trạng thái (state / 상태) locking ngăn hai apply cùng sửa một trạng thái (state / 상태) backend tại cùng thời điểm. Nhưng nó không ngăn người khác thay cloud tài nguyên (resource / 자원) qua console, controller khác sửa cùng trường dữ liệu (field / 필드), hoặc provider-side automation chạy giữa plan và apply.
 
 Do đó locking chỉ giải một loại race: **concurrent trạng thái (state / 상태) writer**. quyền sở hữu (ownership / 소유권) và chính sách (policy / 정책) mới giải race giữa nhiều điều khiển (control / 제어) plane. Khi thấy plan thay đổi ngoài dự kiến ngay sau một apply thành công, hãy tìm bên ngoài (external / 외부) actor/controller thay vì chỉ nghi trạng thái (state / 상태) khóa (lock / 잠금) hỏng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **16. Eventual consistency làm phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) có thời gian** tiếp nhận điểm tựa từ **15. khóa (lock / 잠금) bảo vệ writer tính đồng thời (concurrency / 동시성), không bảo vệ mọi race** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Refactor cấu hình (configuration / 구성) không được đồng nghĩa recreate hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Eventual consistency làm phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) có thời gian
 
@@ -105,17 +134,23 @@ Provider hiện thực (implementation / 구현) thường thêm thử lại (re
 
 `depends_on` chỉ nói A phải được tạo trước B; nó không tự chứng minh A đã **usable** theo nghiệp vụ (business / 비즈니스) đặc tả hợp đồng (contract / 계약).
 
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **17. Refactor cấu hình (configuration / 구성) không được đồng nghĩa recreate hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **16. Eventual consistency làm phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) có thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Provider và mô-đun (module / 모듈) phiên bản (version / 버전) là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Refactor cấu hình (configuration / 구성) không được đồng nghĩa recreate hạ tầng (infrastructure / 인프라)
 
 Khi cấu trúc mã (code / 코드) thay đổi — đổi tên mô-đun (module / 모듈), tách mô-đun (module / 모듈), đổi logical address — intent nghiệp vụ (business / 비즈니스) có thể giữ nguyên nhưng address trong trạng thái (state / 상태) thay đổi. Nếu không dùng move/import/state-migration ngữ nghĩa (semantics / 의미론) phù hợp, engine có thể hiểu đây là “xóa cũ, tạo mới”.
 
 Vì vậy refactor IaC có hai lớp rà soát (review / 검토): ngữ nghĩa (semantic / 의미적) diff của hạ tầng và refactor diff của mã (code / 코드). Mục tiêu lý tưởng của một refactor thuần túy là plan no-op đối với remote đối tượng (object / 객체). Nếu plan cho thấy replace tài nguyên (resource / 자원) stateful, phải dừng và xác nhận đó có thực sự là intent hay chỉ là state-address mismatch.
 
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **18. Provider và mô-đun (module / 모듈) phiên bản (version / 버전) là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **17. Refactor cấu hình (configuration / 구성) không được đồng nghĩa recreate hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Destroy là thao tác (operation / 연산) có asymmetry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Provider và mô-đun (module / 모듈) phiên bản (version / 버전) là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경)
 
 IaC engine, provider plugin và mô-đun (module / 모듈) đều tiến hóa. Một upgrade provider có thể đổi default, lược đồ (schema / 스키마) hoặc diff hành vi (behavior / 동작) dù cấu hình (configuration / 구성) của bạn không đổi. Vì vậy phiên bản (version / 버전) pinning và upgrade testing quan trọng như phụ thuộc (dependency / 의존성) ứng dụng.
 
 Nhưng pin vĩnh viễn cũng tạo debt. mẫu (pattern / 패턴) tốt là khóa phiên bản (version / 버전) trong normal run, rồi mở tường minh (explicit / 명시적) upgrade thay đổi (change / 변경) có bản phát hành (release / 릴리스) ghi chú (note / 노트) rà soát (review / 검토), plan comparison và staged môi trường (environment / 환경) xác minh (verification / 확인). Với mô-đun (module / 모듈) nền tảng (platform / 플랫폼) dùng chung, tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약) và di chuyển (migration / 마이그레이션) guide phải được coi như API evolution.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **19. Destroy là thao tác (operation / 연산) có asymmetry** tiếp nhận điểm tựa từ **18. Provider và mô-đun (module / 모듈) phiên bản (version / 버전) là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Unknown giá trị (value / 값) là một phần ngữ nghĩa (semantics / 의미론) của plan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Destroy là thao tác (operation / 연산) có asymmetry
 
@@ -125,6 +160,8 @@ Trọng yếu (critical / 중요) tài nguyên (resource / 자원) nên có laye
 
 Cấp cao (senior / 시니어) lập luận (reasoning / 추론) ở đây là phân biệt **reversible thay đổi (change / 변경)** và **irreversible thay đổi (change / 변경)**. Hai thay đổi có cùng số dòng diff nhưng rủi ro (risk / 위험) lớp (class / 클래스) hoàn toàn khác nhau.
 
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **20. Unknown giá trị (value / 값) là một phần ngữ nghĩa (semantics / 의미론) của plan** tiếp nhận điểm tựa từ **19. Destroy là thao tác (operation / 연산) có asymmetry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Replacement thứ tự (ordering / 순서) là availability quyết định (decision / 결정), không chỉ vòng đời (lifecycle / 생명주기) flag** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. Unknown giá trị (value / 값) là một phần ngữ nghĩa (semantics / 의미론) của plan
 
 Có những thuộc tính chỉ biết sau khi tài nguyên (resource / 자원) được tạo, ví dụ generated ID, hostname, assigned IP hoặc provider-computed trường dữ liệu (field / 필드). Trong plan, chúng có thể ở trạng thái “known after apply”. Đây không phải lỗi hiển thị; nó phản ánh rằng engine chưa có đủ thông tin (information / 정보) để tính toàn bộ đồ thị (graph / 그래프) trước mutation.
@@ -132,6 +169,8 @@ Có những thuộc tính chỉ biết sau khi tài nguyên (resource / 자원) 
 Điều này quan trọng khi chính sách (policy / 정책) hoặc downstream tài nguyên (resource / 자원) phụ thuộc vào giá trị (value / 값) chưa biết. Một chính sách (policy / 정책) chỉ kiểm tra văn bản (text / 텍스트) plan mà giả định mọi trường dữ liệu (field / 필드) đã concrete có thể bỏ sót rủi ro (risk / 위험). Ngược lại, cố ép mọi giá trị (value / 값) thành known bằng dữ liệu (data / 데이터) lookup hoặc script ngoài có thể tạo hidden phụ thuộc (dependency / 의존성) mới.
 
 Rà soát (review / 검토) IaC trưởng thành phân biệt ba trạng thái: giá trị (value / 값) đã biết từ cấu hình (config / 설정)/trạng thái (state / 상태), giá trị (value / 값) đọc từ remote hiện tại, và giá trị (value / 값) chỉ hình thành sau actuation. Confidence của plan phải tương ứng với mức thông tin (information / 정보) thật sự có sẵn.
+
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **20. Unknown giá trị (value / 값) là một phần ngữ nghĩa (semantics / 의미론) của plan** cho ta quy tắc; **21. Replacement thứ tự (ordering / 순서) là availability quyết định (decision / 결정), không chỉ vòng đời (lifecycle / 생명주기) flag** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **22. dữ liệu (data / 데이터) nguồn (source / 소스) và remote lookup có thể biến build-plan thành phụ thuộc (dependency / 의존성) thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. Replacement thứ tự (ordering / 순서) là availability quyết định (decision / 결정), không chỉ vòng đời (lifecycle / 생명주기) flag
 
@@ -141,6 +180,8 @@ Với stateful tài nguyên (resource / 자원), tạo song song còn kéo theo 
 
 Một plan có chữ `replace` nên kích hoạt câu hỏi: có downtime không, có double-capacity headroom không, dữ liệu (data / 데이터)/trạng thái (state / 상태) chuyển thế nào, endpoint/định danh (identity / 식별자) cutover ra sao và quay lui (rollback / 롤백) mục tiêu (target / 대상) còn tồn tại bao lâu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, cơ chế trong **21. Replacement thứ tự (ordering / 순서) là availability quyết định (decision / 결정), không chỉ vòng đời (lifecycle / 생명주기) flag** cần được kiểm chứng bằng dấu vết cụ thể; **22. dữ liệu (data / 데이터) nguồn (source / 소스) và remote lookup có thể biến build-plan thành phụ thuộc (dependency / 의존성) thời gian chạy (runtime / 런타임)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **23. trạng thái (state / 상태) khôi phục (recovery / 복구) phải tránh biến backup cũ thành authority sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 22. dữ liệu (data / 데이터) nguồn (source / 소스) và remote lookup có thể biến build-plan thành phụ thuộc (dependency / 의존성) thời gian chạy (runtime / 런타임)
 
 IaC thường đọc thông tin từ tài nguyên (resource / 자원) ngoài quyền sở hữu (ownership / 소유권) của trạng thái (state / 상태) hiện tại: ảnh (image / 이미지) ID mới nhất, subnet được nhóm (team / 팀) khác tạo, secret siêu dữ liệu (metadata / 메타데이터) hoặc account dữ liệu (data / 데이터). Những lookup này tiện nhưng làm plan phụ thuộc trạng thái bên ngoài (external / 외부) tại thời điểm chạy.
@@ -148,6 +189,8 @@ IaC thường đọc thông tin từ tài nguyên (resource / 자원) ngoài quy
 Nếu truy vấn (query / 쿼리) “latest ảnh (image / 이미지)” trả giá trị mới vào ngày mai, cùng nguồn (source / 소스) lần ghi nhận (commit / 커밋) có thể plan khác. Nếu nhóm (team / 팀) khác rename/tag tài nguyên (resource / 자원), apply của bạn có thể thất bại (fail / 실패) dù mã (code / 코드) không đổi. Vì vậy remote lookup cũng phải có đặc tả hợp đồng (contract / 계약) về quyền sở hữu (ownership / 소유권), stability và versioning.
 
 Khi reproducibility quan trọng, nên pin định danh (identity / 식별자) cụ thể hoặc promote giá trị (value / 값) qua giao diện (interface / 인터페이스) rõ thay vì truy vấn “mới nhất” ngầm. Đây là cùng nguyên tắc với sản phẩm tạo ra (artifact / 산출물) bản dựng (build / 빌드): hidden mutable đầu vào (input / 입력) làm bằng chứng (evidence / 증거) yếu đi.
+
+> **Chuyển mạch:** Trong **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **22. dữ liệu (data / 데이터) nguồn (source / 소스) và remote lookup có thể biến build-plan thành phụ thuộc (dependency / 의존성) thời gian chạy (runtime / 런타임)** nêu điều cần giải thích; **23. trạng thái (state / 상태) khôi phục (recovery / 복구) phải tránh biến backup cũ thành authority sai** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. chính sách (policy / 정책) trên plan và chính sách (policy / 정책) trên actual trạng thái (state / 상태) bảo vệ hai thời điểm khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. trạng thái (state / 상태) khôi phục (recovery / 복구) phải tránh biến backup cũ thành authority sai
 
@@ -157,6 +200,8 @@ Khôi phục (recovery / 복구) đúng thường tách hai bước: phục hồ
 
 Trạng thái (state / 상태) backup bảo vệ **kiến thức (knowledge / 지식) về quyền sở hữu (ownership / 소유권)**, không phải backup dữ liệu (data / 데이터)/ứng dụng (application / 애플리케이션) tài nguyên (resource / 자원). Hai loại khôi phục (recovery / 복구) phải được thiết kế riêng.
 
+> **Chuyển mạch:** Ở chặng này của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **24. chính sách (policy / 정책) trên plan và chính sách (policy / 정책) trên actual trạng thái (state / 상태) bảo vệ hai thời điểm khác nhau** tiếp nhận điểm tựa từ **23. trạng thái (state / 상태) khôi phục (recovery / 복구) phải tránh biến backup cũ thành authority sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. cấp cao (senior / 시니어) walkthrough: plan “không downtime” nhưng apply vẫn kẹt vì quota** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. chính sách (policy / 정책) trên plan và chính sách (policy / 정책) trên actual trạng thái (state / 상태) bảo vệ hai thời điểm khác nhau
 
 Policy-as-code trước apply cho phản hồi (feedback / 피드백) sớm: cấm công khai (public / 공개) exposure, enforce tag, giới hạn instance lớp (class / 클래스) hoặc destroy. Nhưng plan có unknown giá trị (value / 값) và race; sau apply actual trạng thái (state / 상태) có thể khác vì provider default, bên ngoài (external / 외부) controller hoặc eventual hành vi (behavior / 동작).
@@ -164,6 +209,8 @@ Policy-as-code trước apply cho phản hồi (feedback / 피드백) sớm: c�
 Vì vậy trọng yếu (critical / 중요) bất biến (invariant / 불변식) có thể cần nhiều lớp: chính sách (policy / 정책) trong mã (code / 코드)/mô-đun (module / 모듈) default, chính sách (policy / 정책) ở plan/admission trước mutation, và continuous kiểm tra (audit / 감사) trên actual cloud trạng thái (state / 상태). Mục tiêu không phải duplicate mọi quy tắc (rule / 규칙) ba lần mà đặt enforcement tại ranh giới (boundary / 경계) nơi violation có thể phát sinh.
 
 Một quy tắc (rule / 규칙) bảo mật (security / 보안) cần chặn trước creation khác với một quy tắc (rule / 규칙) hygiene có thể detect rồi remediate sau. Fail-closed hay eventual remediation là rủi ro (risk / 위험) quyết định (decision / 결정), không chỉ lựa chọn công cụ (tool / 도구).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라): desired trạng thái (state / 상태), trạng thái (state / 상태) mô hình (model / 모델), drift và vòng đời (lifecycle / 생명주기)**, **25. cấp cao (senior / 시니어) walkthrough: plan “không downtime” nhưng apply vẫn kẹt vì quota** tiếp nhận điểm tựa từ **24. chính sách (policy / 정책) trên plan và chính sách (policy / 정책) trên actual trạng thái (state / 상태) bảo vệ hai thời điểm khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 25. cấp cao (senior / 시니어) walkthrough: plan “không downtime” nhưng apply vẫn kẹt vì quota
 
@@ -173,4 +220,4 @@ Thất bại (failure / 실패) không nằm ở diff nghiệp vụ (business / 
 
 Bài học tổng quát là IaC plan cần được đọc như một chuyển tiếp trạng thái (state transition / 상태 전이) có tài nguyên (resource / 자원)/thời gian (time / 시간)/thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), không phải như ảnh chụp before/after.
 
-> **Bàn giao:** Sau **25. cấp cao (senior / 시니어) walkthrough: plan “không downtime” nhưng apply vẫn kẹt vì quota**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 cloud primitives identity network compute storage](./01_cloud_primitives_identity_network_compute_storage.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **25. cấp cao (senior / 시니어) walkthrough: plan “không downtime” nhưng apply vẫn kẹt vì quota**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

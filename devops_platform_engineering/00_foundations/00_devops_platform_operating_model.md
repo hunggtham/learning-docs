@@ -1,7 +1,6 @@
 # DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)
 
-> **Mạch đọc:** Đọc **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Vấn đề gốc không phải thiếu công cụ** sang **2. luồng (flow / 흐름), phản hồi (feedback / 피드백) và học tập (learning / 학습) vòng lặp (loop / 루프)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DevOps và platform engineering: từ delivery problem đến operating model**. Route đi từ flow/feedback → automation → reliability/ownership → platform abstractions → learning loops, để DevOps được đọc như hệ thống vận hành thay đổi.
 
 ## 1. Vấn đề gốc không phải thiếu công cụ
 
@@ -10,6 +9,8 @@ Một sản phẩm phần mềm tạo giá trị khi thay đổi có thể đi t
 DevOps tồn tại để xử lý chính vấn đề này. DevOps không phải vị trí “người biết Jenkins và Docker”, cũng không phải việc chuyển toàn bộ nhiệm vụ vận hành sang nhà phát triển (developer / 개발자). Bản chất của nó là tối ưu hệ thống tạo và vận hành phần mềm sao cho **luồng (flow / 흐름) nhanh, phản hồi (feedback / 피드백) sớm và quyền sở hữu (ownership / 소유권) không bị đứt đoạn**.
 
 Hãy hình dung một thay đổi rất nhỏ: sửa hết thời gian chờ (timeout / 타임아웃) từ 2 giây lên 3 giây. Nếu phải mở ticket cho nhóm (team / 팀) bản dựng (build / 빌드), chờ nhóm (team / 팀) infra tạo gói (package / 패키지), chờ nhóm (team / 팀) thao tác (operation / 연산) triển khai thủ công, rồi khi lỗi không ai biết cấu hình nào đang chạy, thì độ khó không nằm trong dòng mã (code / 코드). Độ khó nằm trong delivery hệ thống (system / 시스템).
+
+> **Chuyển mạch:** Trong **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **1. Vấn đề gốc không phải thiếu công cụ** xác định đầu vào; **2. luồng (flow / 흐름), phản hồi (feedback / 피드백) và học tập (learning / 학습) vòng lặp (loop / 루프)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. quyền sở hữu (ownership / 소유권) và ranh giới trách nhiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 2. luồng (flow / 흐름), phản hồi (feedback / 피드백) và học tập (learning / 학습) vòng lặp (loop / 루프)
 
@@ -27,6 +28,8 @@ change → verify → package → release → observe → learn
 
 Nếu chỉ có automation từ trái sang phải mà không có bằng chứng (evidence / 증거) quay ngược lại, tổ chức có chuỗi xử lý (pipeline / 파이프라인) nhưng chưa có học tập (learning / 학습) vòng lặp (loop / 루프).
 
+> **Chuyển mạch:** Ở chặng này của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **2. luồng (flow / 흐름), phản hồi (feedback / 피드백) và học tập (learning / 학습) vòng lặp (loop / 루프)** xác định đầu vào; **3. quyền sở hữu (ownership / 소유권) và ranh giới trách nhiệm** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giải quyết cognitive tải (load / 로드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. quyền sở hữu (ownership / 소유권) và ranh giới trách nhiệm
 
 Quyền sở hữu (ownership / 소유권) không có nghĩa mỗi nhà phát triển (developer / 개발자) phải trực 24/7 cho mọi thành phần. Nó có nghĩa nhóm (team / 팀) tạo ra một năng lực (capability / 역량) phải nhìn thấy hậu quả vận hành đủ rõ để thiết kế tốt hơn. Khi người viết mã (code / 코드) không bao giờ thấy độ trễ (latency / 지연 시간), saturation, triển khai (deployment / 배포) thất bại (failure / 실패) hoặc sự cố (incident / 인시던트) mẫu (pattern / 패턴), phản hồi (feedback / 피드백) bị cắt. Khi operator chỉ nhận sản phẩm tạo ra (artifact / 산출물) cuối cùng mà không biết intent của thay đổi, ngữ cảnh cũng bị cắt.
@@ -34,6 +37,8 @@ Quyền sở hữu (ownership / 소유권) không có nghĩa mỗi nhà phát tr
 Một operating mô hình (model / 모델) tốt phải làm rõ ít nhất ba lớp trách nhiệm. ứng dụng (application / 애플리케이션) nhóm (team / 팀) sở hữu hành vi (behavior / 동작) của ứng dụng (application / 애플리케이션) và cách ứng dụng (application / 애플리케이션) dùng nền tảng (platform / 플랫폼). nền tảng (platform / 플랫폼) nhóm (team / 팀) sở hữu các năng lực (capability / 역량) dùng chung và trải nghiệm sử dụng chúng. Một số nhóm chuyên môn như bảo mật (security / 보안), mạng (network / 네트워크) hoặc cơ sở dữ liệu (database / 데이터베이스) có thể cung cấp chính sách (policy / 정책), expertise và dùng chung (shared / 공유) dịch vụ (service / 서비스) nhưng không nên trở thành hàng đợi (queue / 큐) bắt buộc cho mọi thay đổi thông thường.
 
 Điểm khó là tìm lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계). Nếu nền tảng (platform / 플랫폼) giấu quá nhiều, nhà phát triển (developer / 개발자) không hiểu thất bại (failure / 실패). Nếu nền tảng (platform / 플랫폼) lộ mọi chi tiết Kubernetes/cloud, cognitive tải (load / 로드) lại quay về từng nhóm (team / 팀). kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) xuất hiện để thiết kế ranh giới này có chủ đích.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **4. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giải quyết cognitive tải (load / 로드)** tiếp nhận điểm tựa từ **3. quyền sở hữu (ownership / 소유권) và ranh giới trách nhiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Guardrail khác gate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giải quyết cognitive tải (load / 로드)
 
@@ -43,17 +48,23 @@ Nền tảng nội bộ (internal developer platform / 내부 개발자 플랫�
 
 Đường đi chuẩn (golden path) là một con đường đã được tối ưu cho use trường hợp (case / 사례) phổ biến. Ví dụ, dịch vụ (service / 서비스) HTTP tiêu chuẩn có thể nhận sẵn chuỗi xử lý (pipeline / 파이프라인), ảnh (image / 이미지) bản dựng (build / 빌드), triển khai (deployment / 배포) manifest, health check, metrics, secret injection và dashboard. Golden đường dẫn (path / 경로) không nên là “golden cage”. nhóm (team / 팀) phải có escape hatch khi yêu cầu (requirement / 요구사항) thật sự khác, nhưng sự khác biệt phải tường minh (explicit / 명시적) và có đơn vị sở hữu (owner / 오너).
 
+> **Chuyển mạch:** Trong **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **5. Guardrail khác gate** tiếp nhận điểm tựa từ **4. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giải quyết cognitive tải (load / 로드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Automation không đồng nghĩa với an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Guardrail khác gate
 
 Cổng kiểm soát (gate) thường chặn luồng (flow / 흐름) và đòi một phê duyệt thủ công trước khi tiếp tục. Hàng rào an toàn (guardrail) cố gắng encode chính sách (policy / 정책) ngay trong hệ thống để lựa chọn không an toàn khó xảy ra từ đầu.
 
 Ví dụ, thay vì yêu cầu bảo mật (security / 보안) nhóm (team / 팀) đọc từng Kubernetes manifest để xem bộ chứa (container / 컨테이너) có chạy gốc (root / 루트) hay không, nền tảng (platform / 플랫폼) có thể cung cấp default an toàn, policy-as-code và phản hồi (feedback / 피드백) ngay trong pull yêu cầu (request / 요청). Gate vẫn cần ở một số thay đổi có rủi ro cao, nhưng nếu mọi thay đổi đều cần gate thì nền tảng (platform / 플랫폼) đang biến chuyên gia thành bottleneck.
 
+> **Chuyển mạch:** Ở chặng này của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **6. Automation không đồng nghĩa với an toàn (safety / 안전)** tiếp nhận điểm tựa từ **5. Guardrail khác gate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Một ví dụ xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Automation không đồng nghĩa với an toàn (safety / 안전)
 
 Một quy trình sai được tự động hóa chỉ giúp sai nhanh hơn. an toàn (safety / 안전) đến từ bất biến (invariant / 불변식) và phản hồi (feedback / 피드백). Ví dụ, “mọi môi trường chạy cùng một sản phẩm tạo ra (artifact / 산출물) đã được định danh bằng digest” là bất biến (invariant / 불변식). “triển khai (deployment / 배포) chỉ tiếp tục khi health tín hiệu (signal / 신호) nằm trong ngưỡng” là một bất biến (invariant / 불변식) khác. chuỗi xử lý (pipeline / 파이프라인), registry và controller chỉ là cơ chế (mechanism / 메커니즘) thực thi các bất biến (invariant / 불변식) đó.
 
 Khi thiết kế automation, hãy hỏi: trạng thái (state / 상태) nào đang thay đổi; nguồn sự thật (source of truth) là gì; ai có quyền thay đổi; thay đổi có idempotent không; có thể preview không; thất bại (failure / 실패) giữa chừng để lại trạng thái (state / 상태) gì; quay lui (rollback / 롤백) thật sự là đảo mã (code / 코드), đảo cấu hình (config / 설정), đảo lược đồ (schema / 스키마) hay chuyển traffic; và bằng chứng (evidence / 증거) nào chứng minh hệ thống đã đạt trạng thái mong muốn.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **6. Automation không đồng nghĩa với an toàn (safety / 안전)** cho ta quy tắc; **7. Một ví dụ xuyên suốt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. cấp cao (senior / 시니어) ghi chú (note / 노트): tối ưu toàn hệ thống, không tối ưu cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Một ví dụ xuyên suốt
 
@@ -63,17 +74,23 @@ Nguồn (source / 소스) thay đổi (change / 변경) phải rà soát (review
 
 Sau khi những bất biến (invariant / 불변식) này rõ, lựa chọn công cụ (tool / 도구) mới có ý nghĩa. Hai tổ chức có thể dùng công cụ (tool / 도구) khác nhau nhưng cùng operating mô hình (model / 모델). Ngược lại, hai nhóm (team / 팀) cùng dùng Kubernetes vẫn có maturity khác nhau rất lớn nếu một nhóm (team / 팀) hiểu vòng điều khiển (control loop / 제어 루프) còn nhóm (team / 팀) kia chỉ bản sao (copy / 복사) YAML.
 
+> **Chuyển mạch:** Trong **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **7. Một ví dụ xuyên suốt** cho ta quy tắc; **8. cấp cao (senior / 시니어) ghi chú (note / 노트): tối ưu toàn hệ thống, không tối ưu cục bộ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. Kết nối với chuẩn gốc (canonical / 정본) Khoa học máy tính (computer science / 컴퓨터 과학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. cấp cao (senior / 시니어) ghi chú (note / 노트): tối ưu toàn hệ thống, không tối ưu cục bộ
 
 Một chuỗi xử lý (pipeline / 파이프라인) chạy nhanh hơn không có giá trị nếu nó đẩy lỗi sang môi trường vận hành (production / 운영 환경). Một bảo mật (security / 보안) gate bắt được nhiều lỗi không có giá trị nếu mỗi bản phát hành (release / 릴리스) phải chờ ba ngày và nhóm (team / 팀) bắt đầu bypass quy trình. Một nền tảng (platform / 플랫폼) che hết Kubernetes không có giá trị nếu khi sự cố (incident / 인시던트) xảy ra không ai biết tải công việc (workload / 워크로드) thực sự được schedule và mạng (network / 네트워크) như thế nào.
 
 Đây là tư duy tối ưu hệ thống (systems optimization): cục bộ (local / 로컬) chỉ số (metric / 지표) phải phục vụ kết quả (outcome / 결과) toàn chuỗi. Khi một bước trở nên nhanh hơn nhưng hàng đợi (queue / 큐) ở bước sau dài hơn, thông lượng (throughput / 처리량) toàn hệ thống không tăng. Khi lớp trừu tượng (abstraction / 추상화) giảm cognitive tải (load / 로드) lúc bình thường nhưng làm mất khả năng chẩn đoán lúc bất thường, lớp trừu tượng (abstraction / 추상화) chưa hoàn thiện.
 
+> **Chuyển mạch:** Ở chặng này của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, sau nội dung của **8. cấp cao (senior / 시니어) ghi chú (note / 노트): tối ưu toàn hệ thống, không tối ưu cục bộ**, **9. Kết nối với chuẩn gốc (canonical / 정본) Khoa học máy tính (computer science / 컴퓨터 과학)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **10. luồng (flow / 흐름) phải được nhìn bằng hàng đợi (queue / 큐), WIP và batch kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Kết nối với chuẩn gốc (canonical / 정본) Khoa học máy tính (computer science / 컴퓨터 과학)
 
 Operating mô hình (model / 모델) này dựa trên nhiều cơ chế không nên duplicate trong thư viện (library / 라이브러리). tiến trình (process / 프로세스), syscall và isolation xem tại [Operating Systems foundation](../../computer_science/basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md). bộ chứa (container / 컨테이너) internals xem [namespaces, cgroups, capabilities và seccomp](../../computer_science/03_operating_systems/advanced/06_containers_namespaces_cgroups_capabilities_and_seccomp.md). phân tán (distributed / 분산) thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) xem [Networks & Distributed Systems advanced](../../computer_science/06_networks_distributed_systems/advanced/README.md). triển khai (deployment / 배포) chiến lược (strategy / 전략) ở mức kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) xem [deployment safety](../../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md).
 
 Các chapter tiếp theo dùng những nền đó để xây delivery hệ thống (system / 시스템) và nền tảng (platform / 플랫폼) ở cấp môi trường vận hành (production / 운영 환경).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **9. Kết nối với chuẩn gốc (canonical / 정본) Khoa học máy tính (computer science / 컴퓨터 과학)** xác định đầu vào; **10. luồng (flow / 흐름) phải được nhìn bằng hàng đợi (queue / 큐), WIP và batch kích thước (size / 크기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. chỉ số (metric / 지표) delivery là sensor, không phải mục tiêu để game** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. luồng (flow / 흐름) phải được nhìn bằng hàng đợi (queue / 큐), WIP và batch kích thước (size / 크기)
 
@@ -83,11 +100,15 @@ Công việc đang dở (work in progress — WIP) càng lớn thì càng nhiề
 
 Hãy so hai bản phát hành (release / 릴리스). bản phát hành (release / 릴리스) A chứa 40 thay đổi và mất hai tuần để kiểm thử (test / 테스트); khi lỗi xảy ra phải tìm trong một batch lớn. bản phát hành (release / 릴리스) B gồm nhiều thay đổi nhỏ, mỗi thay đổi đi qua chuỗi xử lý (pipeline / 파이프라인) trong vài chục phút. Cùng một tổng khối lượng mã (code / 코드) nhưng bản phát hành (release / 릴리스) B có tìm kiếm (search / 검색) không gian (space / 공간) nhỏ hơn, quay lui (rollback / 롤백)/roll-forward dễ hơn và phản hồi (feedback / 피드백) quay về author khi ngữ cảnh (context / 맥락) còn mới. Đây là lý do batch kích thước (size / 크기) là một biến độ tin cậy (reliability / 신뢰성) chứ không chỉ là biến tốc độ.
 
+> **Chuyển mạch:** Trong **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **10. luồng (flow / 흐름) phải được nhìn bằng hàng đợi (queue / 큐), WIP và batch kích thước (size / 크기)** xác định đầu vào; **11. chỉ số (metric / 지표) delivery là sensor, không phải mục tiêu để game** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Socio-technical hệ thống (system / 시스템): kiến trúc và tổ chức phản hồi lẫn nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. chỉ số (metric / 지표) delivery là sensor, không phải mục tiêu để game
 
 Các chỉ số (metric / 지표) như lead thời gian (time / 시간), triển khai (deployment / 배포) frequency, tỷ lệ thay đổi gây lỗi và thời gian phục hồi hữu ích vì chúng quan sát các phần khác nhau của luồng (flow / 흐름). Nhưng chúng chỉ là sensor. Nếu ép “triển khai (deployment / 배포) frequency phải tăng” mà nhóm (team / 팀) chia một thay đổi nguy hiểm thành nhiều deploy phụ thuộc lẫn nhau, số đẹp hơn nhưng hệ thống (system / 시스템) rủi ro (risk / 위험) có thể tăng. Nếu định nghĩa “thất bại (failure / 실패)” quá hẹp để giảm thay đổi (change / 변경) thất bại (failure / 실패) tỷ lệ (rate / 비율), chỉ số (metric / 지표) mất giá trị.
 
 Cách dùng đúng là nhìn chỉ số (metric / 지표) theo nhân quả (causal / 인과적) question. Lead thời gian (time / 시간) tăng vì rà soát (review / 검토) hàng đợi (queue / 큐) hay vì kiểm thử (test / 테스트) chậm? Tỷ lệ bản phát hành (release / 릴리스) lỗi tăng ở một dịch vụ (service / 서비스) hay toàn nền tảng (platform / 플랫폼)? khôi phục (recovery / 복구) chậm vì detection muộn, truy cập (access / 접근) khó, quay lui (rollback / 롤백) không tương thích hay operator thiếu runbook? chỉ số (metric / 지표) chỉ hữu ích khi dẫn tới một hypothesis có thể kiểm tra và một thay đổi hệ thống cụ thể.
+
+> **Chuyển mạch:** Ở chặng này của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **12. Socio-technical hệ thống (system / 시스템): kiến trúc và tổ chức phản hồi lẫn nhau** tiếp nhận điểm tựa từ **11. chỉ số (metric / 지표) delivery là sensor, không phải mục tiêu để game** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Bottleneck quyết định thông lượng (throughput / 처리량) toàn hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Socio-technical hệ thống (system / 시스템): kiến trúc và tổ chức phản hồi lẫn nhau
 
@@ -97,6 +118,8 @@ Khi một bước luôn tạo bottleneck, đừng chỉ hỏi công cụ (tool /
 
 Đây là điểm kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) nối với organizational thiết kế (design / 설계): mục tiêu không phải xóa mọi specialization mà là biến giao tiếp lặp lại thành năng lực (capability / 역량) có đặc tả hợp đồng (contract / 계약), để chuyên gia tập trung vào exception và evolution thay vì trở thành hàng đợi (queue / 큐) cho dùng chung (common / 공통) đường dẫn (path / 경로).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **13. Bottleneck quyết định thông lượng (throughput / 처리량) toàn hệ thống** tiếp nhận điểm tựa từ **12. Socio-technical hệ thống (system / 시스템): kiến trúc và tổ chức phản hồi lẫn nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. phản hồi (feedback / 피드백) delay có thể làm điều khiển (control / 제어) quyết định (decision / 결정) sai dù tín hiệu (signal / 신호) đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Bottleneck quyết định thông lượng (throughput / 처리량) toàn hệ thống
 
 Một hệ thống delivery có nhiều bước nhưng thông lượng (throughput / 처리량) dài hạn thường bị giới hạn bởi ràng buộc (constraint / 제약조건) hẹp nhất. Nếu bản dựng (build / 빌드) mất 5 phút nhưng bảo mật (security / 보안) rà soát (review / 검토) phải chờ hai ngày, tối ưu bản dựng (build / 빌드) xuống 3 phút gần như không thay đổi lead thời gian (time / 시간). Nếu reviewer là bottleneck, tăng số pull yêu cầu (request / 요청) mở đồng thời còn có thể làm hàng đợi (queue / 큐) dài hơn.
@@ -104,6 +127,8 @@ Một hệ thống delivery có nhiều bước nhưng thông lượng (throughp
 Điều này dẫn tới một discipline quan trọng: trước khi tối ưu, xác định **ràng buộc (constraint / 제약조건) hiện tại** bằng bằng chứng (evidence / 증거). hàng đợi (queue / 큐) nào tăng dần? tài nguyên (resource / 자원) hoặc role nào luôn bận? Bước nào tạo waiting thời gian (time / 시간) lớn nhất? Khi ràng buộc (constraint / 제약조건) được cải thiện, bottleneck có thể chuyển sang bước khác; tối ưu hệ thống là quá trình lặp, không phải một dự án “tăng tốc chuỗi xử lý (pipeline / 파이프라인)” một lần.
 
 Cục bộ (local / 로컬) utilization 100% không luôn tốt. Một reviewer hoặc môi trường kiểm thử (test / 테스트) chạy kín 100% thời gian thường đồng nghĩa hàng đợi (queue / 큐) phía trước không có slack để hấp thụ biến động. Hệ thống flow-sensitive cần một mức sức chứa (capacity / 용량) headroom để urgent công việc (work / 작업) và variation không biến thành waiting thời gian (time / 시간) phi tuyến.
+
+> **Chuyển mạch:** Trong **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **14. phản hồi (feedback / 피드백) delay có thể làm điều khiển (control / 제어) quyết định (decision / 결정) sai dù tín hiệu (signal / 신호) đúng** tiếp nhận điểm tựa từ **13. Bottleneck quyết định thông lượng (throughput / 처리량) toàn hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. hàng đợi (queue / 큐) discipline là chính sách (policy / 정책), không chỉ hiện thực (implementation / 구현) detail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. phản hồi (feedback / 피드백) delay có thể làm điều khiển (control / 제어) quyết định (decision / 결정) sai dù tín hiệu (signal / 신호) đúng
 
@@ -113,6 +138,8 @@ Một vòng lặp (loop / 루프) có delay dài dễ bị over-correction. nhó
 
 Vì vậy khi thiết kế vòng phản hồi (feedback loop / 피드백 루프) phải hỏi bốn thứ: sensor đo gì, delay bao lâu, actuator thay trạng thái (state / 상태) nào và hành động (action / 동작) có tác động (effect / 효과) sau bao lâu. “Có chỉ số (metric / 지표)” không đủ nếu delay lớn hơn tốc độ hệ thống thay đổi.
 
+> **Chuyển mạch:** Ở chặng này của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **15. hàng đợi (queue / 큐) discipline là chính sách (policy / 정책), không chỉ hiện thực (implementation / 구현) detail** tiếp nhận điểm tựa từ **14. phản hồi (feedback / 피드백) delay có thể làm điều khiển (control / 제어) quyết định (decision / 결정) sai dù tín hiệu (signal / 신호) đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Handoff làm mất thông tin (information / 정보), không chỉ thêm waiting thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. hàng đợi (queue / 큐) discipline là chính sách (policy / 정책), không chỉ hiện thực (implementation / 구현) detail
 
 Khi sức chứa (capacity / 용량) hữu hạn, thứ tự xử lý công việc (work / 작업) trở thành quyết định sản phẩm/vận hành. FIFO đơn giản và công bằng theo thời gian, nhưng sự cố (incident / 인시던트) fix hoặc bảo mật (security / 보안) patch trọng yếu (critical / 중요) có thể cần priority. Nếu mọi nhóm (team / 팀) đánh yêu cầu (request / 요청) của mình là urgent, priority hàng đợi (queue / 큐) mất nghĩa và normal công việc (work / 작업) bị starvation.
@@ -120,6 +147,8 @@ Khi sức chứa (capacity / 용량) hữu hạn, thứ tự xử lý công vi�
 Expedite lane nên có entry criterion rõ, giới hạn WIP và kiểm tra (audit / 감사). Mục tiêu là giữ khả năng phản ứng với công việc (work / 작업) thật sự khẩn cấp mà không biến hệ thống thành “ai kêu to hơn được làm trước”.
 
 Điều này áp dụng từ ticket/rà soát (review / 검토) hàng đợi (queue / 큐) đến CI runner, deploy hàng đợi (queue / 큐) và nền tảng (platform / 플랫폼) provisioning. hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론) là một phần operating mô hình (model / 모델) vì nó quyết định độ trễ (latency / 지연 시간) dưới contention.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **16. Handoff làm mất thông tin (information / 정보), không chỉ thêm waiting thời gian (time / 시간)** tiếp nhận điểm tựa từ **15. hàng đợi (queue / 큐) discipline là chính sách (policy / 정책), không chỉ hiện thực (implementation / 구현) detail** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Toil là công việc lặp lại thiếu giá trị bền vững, nhưng không phải mọi manual công việc (work / 작업) đều xấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Handoff làm mất thông tin (information / 정보), không chỉ thêm waiting thời gian (time / 시간)
 
@@ -129,6 +158,8 @@ Một giao diện (interface / 인터페이스) tốt phải giữ lại thông 
 
 Giảm handoff không nghĩa xóa mọi nhóm (team / 팀) ranh giới (boundary / 경계). Nó nghĩa giữ intent machine-readable đủ để ranh giới (boundary / 경계) không biến thành mất ngữ cảnh rồi hỏi lại bằng ticket/chat.
 
+> **Chuyển mạch:** Trong **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **17. Toil là công việc lặp lại thiếu giá trị bền vững, nhưng không phải mọi manual công việc (work / 작업) đều xấu** tiếp nhận điểm tựa từ **16. Handoff làm mất thông tin (information / 정보), không chỉ thêm waiting thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. cấp cao (senior / 시니어) walkthrough: tăng utilization làm lead thời gian (time / 시간) tệ hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Toil là công việc lặp lại thiếu giá trị bền vững, nhưng không phải mọi manual công việc (work / 작업) đều xấu
 
 Toil thường là thao tác thủ công lặp lại, có tính operational, tăng gần tuyến tính theo quy mô và không tạo cải thiện lâu dài: tạo không gian tên (namespace / 네임스페이스) bằng tay, rotate cùng loại secret cho hàng trăm dịch vụ (service / 서비스), bản sao (copy / 복사) triển khai (deployment / 배포) status vào ticket. Những việc này là ứng viên tốt cho automation hoặc self-service.
@@ -136,6 +167,8 @@ Toil thường là thao tác thủ công lặp lại, có tính operational, tă
 Nhưng automation có fixed chi phí (cost / 비용) và maintenance chi phí (cost / 비용). Một thao tác hiếm, rủi ro cao, thay đổi liên tục có thể chưa đáng encode thành nền tảng (platform / 플랫폼) tính năng (feature / 기능). Tự động hóa quá sớm còn khóa giả định (assumption / 가정) chưa hiểu rõ vào mã (code / 코드) và mở blast radius mới.
 
 Một cách lập luận (reasoning / 추론) tốt là xem frequency, volume, lỗi (error / 오류) xác suất (probability / 확률), waiting thời gian (time / 시간), cognitive tải (load / 로드) và chi phí (cost / 비용) nếu automation sai. Mục tiêu không phải “zero manual thao tác (operation / 연산)”; mục tiêu là con người tập trung vào quyết định (decision / 결정) cần judgment còn dùng chung (common / 공통) đường dẫn (path / 경로) trở nên repeatable.
+
+> **Chuyển mạch:** Ở chặng này của **DevOps và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): từ vấn đề delivery đến operating mô hình (model / 모델)**, **18. cấp cao (senior / 시니어) walkthrough: tăng utilization làm lead thời gian (time / 시간) tệ hơn** tiếp nhận điểm tựa từ **17. Toil là công việc lặp lại thiếu giá trị bền vững, nhưng không phải mọi manual công việc (work / 작업) đều xấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 18. cấp cao (senior / 시니어) walkthrough: tăng utilization làm lead thời gian (time / 시간) tệ hơn
 
@@ -145,4 +178,4 @@ Tối ưu utilization cục bộ đã tạo phản hồi (feedback / 피드백) 
 
 Bài học là delivery hệ thống (system / 시스템) nên tối ưu **luồng (flow / 흐름) và kết quả (outcome / 결과)**, không tối đa hóa việc mọi tài nguyên (resource / 자원) luôn bận.
 
-> **Bàn giao:** Sau **18. cấp cao (senior / 시니어) walkthrough: tăng utilization làm lead thời gian (time / 시간) tệ hơn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **18. cấp cao (senior / 시니어) walkthrough: tăng utilization làm lead thời gian (time / 시간) tệ hơn**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

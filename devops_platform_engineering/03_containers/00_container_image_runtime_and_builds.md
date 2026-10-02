@@ -1,7 +1,6 @@
 # Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)
 
-> **Mạch đọc:** Đọc **bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. bộ chứa (container / 컨테이너) không phải máy ảo nhỏ** sang **2. ảnh (image / 이미지) là filesystem + siêu dữ liệu (metadata / 메타데이터) bất biến theo tầng (layer / 계층)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Containers: image, runtime, isolation và production behavior**. Route đi từ image layers → namespaces/cgroups → runtime lifecycle → networking/storage → build and supply-chain boundaries, để container được phân biệt với VM bằng cơ chế.
 
 ## 1. bộ chứa (container / 컨테이너) không phải máy ảo nhỏ
 
@@ -9,11 +8,15 @@ Bộ chứa (container / 컨테이너) trước hết là tiến trình (process
 
 Cơ chế sâu đã có tại [containers, namespaces, cgroups, capabilities và seccomp](../../computer_science/03_operating_systems/advanced/06_containers_namespaces_cgroups_capabilities_and_seccomp.md). Chapter này tập trung cách các thành phần nguyên thủy (primitive / 기본 요소) đó biến thành ảnh (image / 이미지)/thời gian chạy (runtime / 런타임) workflow.
 
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **1. bộ chứa (container / 컨테이너) không phải máy ảo nhỏ** nêu điều cần giải thích; **2. ảnh (image / 이미지) là filesystem + siêu dữ liệu (metadata / 메타데이터) bất biến theo tầng (layer / 계층)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. bộ chứa (container / 컨테이너) vòng đời (lifecycle / 생명주기) gắn với tiến trình (process / 프로세스) chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. ảnh (image / 이미지) là filesystem + siêu dữ liệu (metadata / 메타데이터) bất biến theo tầng (layer / 계층)
 
 Ảnh bộ chứa (container image / 컨테이너 이미지) thường gồm nhiều tầng (layer / 계층) content-addressed và siêu dữ liệu (metadata / 메타데이터) như command, môi trường (environment / 환경), người dùng (user / 사용자). ảnh (image / 이미지) không phải “snapshot của một máy chủ (server / 서버) đang chạy” theo nghĩa truyền thống; nó là gói (package / 패키지) để thời gian chạy (runtime / 런타임) tạo gốc (root / 루트) filesystem và tiến trình (process / 프로세스) môi trường (environment / 환경).
 
 Layering giúp bộ nhớ đệm (cache / 캐시) và phân phối (distribution / 분포), nhưng cũng tạo hiểu nhầm. Xóa secret ở tầng (layer / 계층) sau không có nghĩa secret biến mất khỏi tầng (layer / 계층) cũ. Vì vậy credential không nên `COPY` vào bản dựng (build / 빌드) ngữ cảnh (context / 맥락)/ảnh (image / 이미지) rồi xóa. Multi-stage bản dựng (build / 빌드) giúp chỉ đưa đầu ra (output / 출력) cần thiết sang final ảnh (image / 이미지).
+
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, biết phải giữ gì trong **2. ảnh (image / 이미지) là filesystem + siêu dữ liệu (metadata / 메타데이터) bất biến theo tầng (layer / 계층)**, ta theo dõi trong **3. bộ chứa (container / 컨테이너) vòng đời (lifecycle / 생명주기) gắn với tiến trình (process / 프로세스) chính** cách hệ thống thực hiện và phản hồi qua từng bước. Từ đây, **4. ảnh (image / 이미지) nhỏ không phải mục tiêu duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. bộ chứa (container / 컨테이너) vòng đời (lifecycle / 생명주기) gắn với tiến trình (process / 프로세스) chính
 
@@ -21,11 +24,15 @@ Bộ chứa (container / 컨테이너) sống khi tiến trình (process / 프�
 
 Tín hiệu (signal / 신호) handling đặc biệt quan trọng. thời gian chạy (runtime / 런타임)/orchestrator gửi tín hiệu (signal / 신호) cho tiến trình (process / 프로세스) chính khi stop. ứng dụng (application / 애플리케이션) phải nhận và shutdown theo deadline. Nếu dùng shell wrapper không `exec` tiến trình (process / 프로세스) thật, tín hiệu (signal / 신호) có thể dừng ở shell. điểm vào (entrypoint / 진입점) cần được hiểu như vòng đời (lifecycle / 생명주기) adapter chứ không chỉ script tiện lợi.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **3. bộ chứa (container / 컨테이너) vòng đời (lifecycle / 생명주기) gắn với tiến trình (process / 프로세스) chính** xác định đầu vào; **4. ảnh (image / 이미지) nhỏ không phải mục tiêu duy nhất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Dockerfile là bản dựng (build / 빌드) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. ảnh (image / 이미지) nhỏ không phải mục tiêu duy nhất
 
 Giảm ảnh (image / 이미지) kích thước (size / 크기) cải thiện pull thời gian (time / 시간) và attack surface, nhưng ảnh (image / 이미지) tối thiểu đến mức không còn certificate CA, timezone dữ liệu (data / 데이터) hoặc diagnostic năng lực (capability / 역량) cần thiết có thể gây lỗi môi trường vận hành (production / 운영 환경) khó hiểu. Chọn cơ sở (base / 기반) ảnh (image / 이미지) dựa trên thời gian chạy (runtime / 런타임) yêu cầu (requirement / 요구사항), vulnerability surface, cập nhật (update / 업데이트) chính sách (policy / 정책) và operability.
 
 Distroless phù hợp nhiều tải công việc (workload / 워크로드) nhưng debugging thường cần ephemeral/gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너) hoặc công cụ (tool / 도구) ở nút (node / 노드); không nên vì thiếu `curl` mà cài một loạt gói (package / 패키지) trực tiếp vào môi trường vận hành (production / 운영 환경) bộ chứa (container / 컨테이너) lúc sự cố (incident / 인시던트).
+
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **5. Dockerfile là bản dựng (build / 빌드) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **4. ảnh (image / 이미지) nhỏ không phải mục tiêu duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. gốc (root / 루트) inside bộ chứa (container / 컨테이너) vẫn là quyền đáng chú ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Dockerfile là bản dựng (build / 빌드) đồ thị (graph / 그래프)
 
@@ -33,11 +40,15 @@ Distroless phù hợp nhiều tải công việc (workload / 워크로드) nhưn
 
 Tuy nhiên bộ nhớ đệm (cache / 캐시) tính đúng đắn (correctness / 정확성) ưu tiên speed. bản dựng (build / 빌드) argument, secret mount và nền tảng (platform / 플랫폼) mục tiêu (target / 대상) phải được dùng theo ngữ nghĩa (semantics / 의미론) đúng. Secret cho gói (package / 패키지) registry nên dùng bản dựng (build / 빌드) secret cơ chế (mechanism / 메커니즘) thay vì `ARG` hoặc `ENV` có nguy cơ lưu vào lịch sử (history / 이력)/tầng (layer / 계층).
 
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **6. gốc (root / 루트) inside bộ chứa (container / 컨테이너) vẫn là quyền đáng chú ý** tiếp nhận điểm tựa từ **5. Dockerfile là bản dựng (build / 빌드) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. yêu cầu tài nguyên (resource request / 리소스 요청)/limit bắt đầu từ cgroup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. gốc (root / 루트) inside bộ chứa (container / 컨테이너) vẫn là quyền đáng chú ý
 
 “gốc (root / 루트) trong bộ chứa (container / 컨테이너)” không tự động bằng gốc (root / 루트) host, nhưng nếu bộ chứa (container / 컨테이너) escape vulnerability, mount nhạy cảm hoặc năng lực (capability / 역량) quá rộng thì impact tăng. môi trường vận hành (production / 운영 환경) default nên chạy non-root khi ứng dụng (application / 애플리케이션) không cần đặc quyền, drop năng lực (capability / 역량) không dùng, dùng read-only filesystem khi phù hợp và tránh mount host socket kiểu `/var/run/docker.sock` trừ khi hiểu rõ quyền tương đương control-plane mà nó trao.
 
 Bộ chứa (container / 컨테이너) bảo mật (security / 보안) là defense in độ sâu (depth / 깊이), không dựa vào một không gian tên (namespace / 네임스페이스) ranh giới (boundary / 경계) duy nhất.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **6. gốc (root / 루트) inside bộ chứa (container / 컨테이너) vẫn là quyền đáng chú ý** đã nêu tiêu chí phân biệt, còn **7. yêu cầu tài nguyên (resource request / 리소스 요청)/limit bắt đầu từ cgroup** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Writable tầng (layer / 계층) là ephemeral trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. yêu cầu tài nguyên (resource request / 리소스 요청)/limit bắt đầu từ cgroup
 
@@ -45,11 +56,15 @@ Khi orchestrator đặt giới hạn bộ nhớ (memory limit / 메모리 제한
 
 Đừng đặt tài nguyên (resource / 자원) limit bằng cách bản sao (copy / 복사) con số giữa dịch vụ (service / 서비스). Cần đo working set, tính đồng thời (concurrency / 동시성), hành vi thời gian chạy (runtime behavior / 런타임 동작) và peak. Với JVM/managed thời gian chạy (runtime / 런타임), vùng nhớ động (heap / 힙) sizing phải tính cả bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và bộ chứa (container / 컨테이너) awareness.
 
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **7. yêu cầu tài nguyên (resource request / 리소스 요청)/limit bắt đầu từ cgroup** đã nêu tiêu chí phân biệt, còn **8. Writable tầng (layer / 계층) là ephemeral trạng thái (state / 상태)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Health check phải đo đúng ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. Writable tầng (layer / 계층) là ephemeral trạng thái (state / 상태)
 
 Bộ chứa (container / 컨테이너) writable tầng (layer / 계층) thường không phải nơi lưu trạng thái (state / 상태) cần tồn tại sau reschedule. Log tệp (file / 파일), upload và cơ sở dữ liệu (database / 데이터베이스) dữ liệu (data / 데이터) nếu chỉ ở writable tầng (layer / 계층) có thể mất khi bộ chứa (container / 컨테이너) bị thay. Stateful dữ liệu (data / 데이터) phải đi qua volume/lưu trữ (storage / 저장소) đặc tả hợp đồng (contract / 계약) phù hợp.
 
 “Stateless dịch vụ (service / 서비스)” không có nghĩa tiến trình (process / 프로세스) không có trạng thái (state / 상태); nó có bộ nhớ đệm (cache / 캐시), liên kết (connection / 연결) và in-flight yêu cầu (request / 요청). Nó nghĩa trạng thái (state / 상태) cần durable/authoritative không phụ thuộc định danh (identity / 식별자) của instance cụ thể.
+
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **9. Health check phải đo đúng ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **8. Writable tầng (layer / 계층) là ephemeral trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Tag, digest và promotion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Health check phải đo đúng ngữ nghĩa (semantics / 의미론)
 
@@ -57,17 +72,23 @@ Liveness trả lời “tiến trình (process / 프로세스) này còn có kh�
 
 Ví dụ cơ sở dữ liệu (database / 데이터베이스) chậm không nhất thiết là lý do kill tiến trình (process / 프로세스). Nếu liveness phụ thuộc DB, outage DB có thể khiến hàng trăm pod restart cùng lúc, tăng tải (load / 로드) khi DB vừa hồi phục. Readiness có thể tạm đưa instance khỏi traffic; liveness nên tập trung deadlock/hang không tự hồi được.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **10. Tag, digest và promotion** tiếp nhận điểm tựa từ **9. Health check phải đo đúng ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너) theo tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Tag, digest và promotion
 
 Ảnh (image / 이미지) tag là alias; digest là định danh (identity / 식별자) content. môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) nên có khả năng truy vết digest. Nếu manifest chỉ ghi tag mutable, rollout/restart ở hai thời điểm có thể lấy ảnh (image / 이미지) khác nhau.
 
 Bản dựng (build / 빌드) một lần, ký/scanning siêu dữ liệu (metadata / 메타데이터) một lần, rồi promote digest là mẫu (pattern / 패턴) giúp giảm bất định (uncertainty / 불확실성).
 
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **11. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너) theo tầng (layer / 계층)** tiếp nhận điểm tựa từ **10. Tag, digest và promotion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. tầng (layer / 계층) bất biến không có nghĩa filesystem thời gian chạy (runtime / 런타임) bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너) theo tầng (layer / 계층)
 
 Khi bộ chứa (container / 컨테이너) thất bại (fail / 실패) start, xem ảnh (image / 이미지)/điểm vào (entrypoint / 진입점)/cấu hình (config / 설정) trước mạng (network / 네트워크). Khi chạy nhưng unhealthy, xem tiến trình (process / 프로세스), ports, probe và phụ thuộc (dependency / 의존성). Khi bị kill, xem exit mã (code / 코드), OOM/sự kiện (event / 이벤트) và tài nguyên (resource / 자원) pressure. Khi độ trễ (latency / 지연 시간) tăng, xem CPU throttling, bộ nhớ (memory / 메모리)/GC, I/O và mạng (network / 네트워크).
 
 Bộ chứa (container / 컨테이너) không nên trở thành lớp trừu tượng (abstraction / 추상화) khiến operator quên Linux. Nó chỉ thêm một tầng (layer / 계층) packaging và isolation vào cùng mô hình thực thi (execution model / 실행 모델).
+
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **12. tầng (layer / 계층) bất biến không có nghĩa filesystem thời gian chạy (runtime / 런타임) bất biến** tiếp nhận điểm tựa từ **11. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너) theo tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. UID/GID và quyền tệp (file / 파일) phải được lập luận (reasoning / 추론) xuyên ảnh (image / 이미지)–thời gian chạy (runtime / 런타임)–volume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. tầng (layer / 계층) bất biến không có nghĩa filesystem thời gian chạy (runtime / 런타임) bất biến
 
@@ -77,6 +98,8 @@ Bộ chứa (container / 컨테이너) không nên trở thành lớp trừu tư
 
 Bộ chứa (container / 컨테이너) packaging và lưu trữ (storage / 저장소) durability là hai đặc tả hợp đồng (contract / 계약) khác nhau.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **13. UID/GID và quyền tệp (file / 파일) phải được lập luận (reasoning / 추론) xuyên ảnh (image / 이미지)–thời gian chạy (runtime / 런타임)–volume** tiếp nhận điểm tựa từ **12. tầng (layer / 계층) bất biến không có nghĩa filesystem thời gian chạy (runtime / 런타임) bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. PID 1 có ngữ nghĩa (semantics / 의미론) khác tiến trình (process / 프로세스) bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. UID/GID và quyền tệp (file / 파일) phải được lập luận (reasoning / 추론) xuyên ảnh (image / 이미지)–thời gian chạy (runtime / 런타임)–volume
 
 `USER 10001` trong ảnh (image / 이미지) chỉ chọn định danh (identity / 식별자) tiến trình (process / 프로세스) bên trong người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)/thời gian chạy (runtime / 런타임) ngữ cảnh (context / 맥락). Khi mount volume, tệp (file / 파일) trên volume có đơn vị sở hữu (owner / 오너)/chế độ (mode / 모드) riêng. Một ảnh (image / 이미지) chạy tốt trên laptop có thể thất bại (fail / 실패) môi trường vận hành (production / 운영 환경) với `Permission denied` nếu volume được provision với UID/GID khác.
@@ -84,6 +107,8 @@ Bộ chứa (container / 컨테이너) packaging và lưu trữ (storage / 저�
 Không nên chữa bằng `chmod 777` hoặc quay lại gốc (root / 루트) theo phản xạ. Hãy xác định tiến trình (process / 프로세스) effective UID/GID, quyền sở hữu (ownership / 소유권) của mount, cơ chế `fsGroup`/thời gian chạy (runtime / 런타임) chính sách (policy / 정책) nếu có và ai chịu trách nhiệm initialize permission. dùng chung (shared / 공유) volume còn cần xét nhiều tiến trình (process / 프로세스) có cùng ánh xạ (mapping / 매핑) định danh (identity / 식별자) hay không.
 
 Đây là ví dụ lớp trừu tượng (abstraction / 추상화) leak giữa ảnh (image / 이미지) siêu dữ liệu (metadata / 메타데이터) và filesystem authorization thực tế.
+
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **13. UID/GID và quyền tệp (file / 파일) phải được lập luận (reasoning / 추론) xuyên ảnh (image / 이미지)–thời gian chạy (runtime / 런타임)–volume** xác định đầu vào; **14. PID 1 có ngữ nghĩa (semantics / 의미론) khác tiến trình (process / 프로세스) bình thường** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. bộ nhớ (memory / 메모리) trong bộ chứa (container / 컨테이너) là tổng footprint theo accounting ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. PID 1 có ngữ nghĩa (semantics / 의미론) khác tiến trình (process / 프로세스) bình thường
 
@@ -93,6 +118,8 @@ Một init nhỏ có thể hữu ích khi ứng dụng (application / 애플리�
 
 Khi shutdown không hoạt động, kiểm tra tín hiệu (signal / 신호) thực sự tới PID nào và wrapper có dùng `exec` hay không. “Orchestrator đã gửi SIGTERM” chưa chứng minh nghiệp vụ (business / 비즈니스) tiến trình (process / 프로세스) nhận được SIGTERM.
 
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **14. PID 1 có ngữ nghĩa (semantics / 의미론) khác tiến trình (process / 프로세스) bình thường** đã nêu tiêu chí phân biệt, còn **15. bộ nhớ (memory / 메모리) trong bộ chứa (container / 컨테이너) là tổng footprint theo accounting ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. ảnh (image / 이미지) kiến trúc (architecture / 아키텍처) và thời gian chạy (runtime / 런타임) kiến trúc (architecture / 아키텍처) phải tương thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. bộ nhớ (memory / 메모리) trong bộ chứa (container / 컨테이너) là tổng footprint theo accounting ranh giới (boundary / 경계)
 
 Vùng nhớ vùng nhớ động (heap / 힙) chỉ là một phần. bản địa (native / 네이티브) allocation, luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택), JIT/mã (code / 코드) bộ nhớ đệm (cache / 캐시), mmap, dùng chung (shared / 공유) bộ nhớ (memory / 메모리) và page bộ nhớ đệm (cache / 캐시) accounting có thể góp vào cgroup bộ nhớ (memory / 메모리) tùy tải công việc (workload / 워크로드)/kernel/thời gian chạy (runtime / 런타임). Vì vậy đặt JVM `-Xmx` bằng đúng giới hạn bộ nhớ (memory limit / 메모리 제한) gần như không để headroom cho phần còn lại.
@@ -100,6 +127,8 @@ Vùng nhớ vùng nhớ động (heap / 힙) chỉ là một phần. bản đị
 Một cách lập luận (reasoning / 추론) thực dụng là bắt đầu từ total cgroup usage rồi phân rã xuống thời gian chạy (runtime / 런타임) vùng nhớ động (heap / 힙)/bản địa (native / 네이티브) và kernel/file-backed hành vi (behavior / 동작). Nếu bộ chứa (container / 컨테이너) bị OOMKilled nhưng vùng nhớ động (heap / 힙) chưa đầy, đó không phải mâu thuẫn; hai chỉ số (metric / 지표) đang đo ranh giới (boundary / 경계) khác nhau.
 
 CPU cũng tương tự. ứng dụng (application / 애플리케이션) có thể báo CPU utilization vừa phải nhưng cgroup có throttled thời gian (time / 시간) cao vì demand vượt quota theo từng period. Tail độ trễ (latency / 지연 시간) thường nhạy với throttling hơn average CPU chart.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **15. bộ nhớ (memory / 메모리) trong bộ chứa (container / 컨테이너) là tổng footprint theo accounting ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **16. ảnh (image / 이미지) kiến trúc (architecture / 아키텍처) và thời gian chạy (runtime / 런타임) kiến trúc (architecture / 아키텍처) phải tương thích** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Registry availability là phụ thuộc (dependency / 의존성) của scaling và khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. ảnh (image / 이미지) kiến trúc (architecture / 아키텍처) và thời gian chạy (runtime / 런타임) kiến trúc (architecture / 아키텍처) phải tương thích
 
@@ -109,6 +138,8 @@ Một ảnh (image / 이미지) có thể được bản dựng (build / 빌드)
 
 Bản phát hành (release / 릴리스) siêu dữ liệu (metadata / 메타데이터) nên giữ nền tảng (platform / 플랫폼)/kiến trúc (architecture / 아키텍처) định danh (identity / 식별자) khi nó ảnh hưởng sản phẩm tạo ra (artifact / 산출물). bản địa (native / 네이티브) thư viện (library / 라이브러리), JNI, Python wheel hoặc nhị phân (binary / 이진) downloaded trong bản dựng (build / 빌드) là các điểm dễ tạo mismatch.
 
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **16. ảnh (image / 이미지) kiến trúc (architecture / 아키텍처) và thời gian chạy (runtime / 런타임) kiến trúc (architecture / 아키텍처) phải tương thích** cho ta quy tắc; **17. Registry availability là phụ thuộc (dependency / 의존성) của scaling và khôi phục (recovery / 복구)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. cấp cao (senior / 시니어) walkthrough: Pod khởi động chậm chỉ sau khi nút (node / 노드) mới được thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Registry availability là phụ thuộc (dependency / 의존성) của scaling và khôi phục (recovery / 복구)
 
 Tải công việc (workload / 워크로드) đang chạy có thể khỏe khi registry lỗi vì ảnh (image / 이미지) đã nằm trên nút (node / 노드). Nhưng scale-out, nút (node / 노드) replacement hoặc disaster khôi phục (recovery / 복구) cần pull ảnh (image / 이미지) mới. Vì vậy registry là phụ thuộc (dependency / 의존성) control-plane của sức chứa (capacity / 용량)/khôi phục (recovery / 복구) dù không nằm trên yêu cầu (request / 요청) dữ liệu (data / 데이터) đường dẫn (path / 경로) bình thường.
@@ -116,6 +147,8 @@ Tải công việc (workload / 워크로드) đang chạy có thể khỏe khi r
 Runbook cần phân biệt “ứng dụng (application / 애플리케이션) đang phục vụ” với “cluster có khả năng tạo replica mới”. ảnh (image / 이미지) pull thất bại (failure / 실패) trong lúc nút (node / 노드) autoscale có thể biến traffic spike thành sức chứa (capacity / 용량) sự cố (incident / 인시던트).
 
 Sản phẩm tạo ra (artifact / 산출물) retention cũng là khôi phục (recovery / 복구) đặc tả hợp đồng (contract / 계약). Nếu manifest quay lui (rollback / 롤백) trỏ digest đã bị garbage-collect khỏi registry, quay lui (rollback / 롤백) lô-gic (logic / 논리) đúng trên Git nhưng không thể materialize tải công việc (workload / 워크로드).
+
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **17. Registry availability là phụ thuộc (dependency / 의존성) của scaling và khôi phục (recovery / 복구)** cho ta quy tắc; **18. cấp cao (senior / 시니어) walkthrough: Pod khởi động chậm chỉ sau khi nút (node / 노드) mới được thêm** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. ảnh (image / 이미지) cấu hình (config / 설정) và thời gian chạy (runtime / 런타임) override tạo một precedence chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. cấp cao (senior / 시니어) walkthrough: Pod khởi động chậm chỉ sau khi nút (node / 노드) mới được thêm
 
@@ -125,6 +158,8 @@ Chuỗi nhân quả (causal chain / 인과 사슬) nên kiểm tra ảnh (image 
 
 Mitigation có thể là giảm sản phẩm tạo ra (artifact / 산출물) kích thước (size / 크기) hợp lý, pre-pull cho tải công việc (workload / 워크로드) trọng yếu (critical / 중요), tăng registry/egress sức chứa (capacity / 용량) hoặc giữ warm sức chứa (capacity / 용량). Bài học không phải “ảnh (image / 이미지) càng nhỏ càng tốt”, mà là startup SLO phải tính cả phân phối (distribution / 분포) đường dẫn (path / 경로), không chỉ tiến trình (process / 프로세스) boot thời gian (time / 시간).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **18. cấp cao (senior / 시니어) walkthrough: Pod khởi động chậm chỉ sau khi nút (node / 노드) mới được thêm** xác định đầu vào; **19. ảnh (image / 이미지) cấu hình (config / 설정) và thời gian chạy (runtime / 런타임) override tạo một precedence chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. Init bộ chứa (container / 컨테이너) giải sequencing cục bộ, không biến phụ thuộc (dependency / 의존성) thành healthy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. ảnh (image / 이미지) cấu hình (config / 설정) và thời gian chạy (runtime / 런타임) override tạo một precedence chuỗi (chain / 사슬)
 
 Ảnh (image / 이미지) có thể khai báo `ENTRYPOINT`, `CMD`, `ENV`, người dùng (user / 사용자) và working directory, nhưng orchestrator/thời gian chạy (runtime / 런타임) có thể override một phần. Khi bộ chứa (container / 컨테이너) chạy khác cục bộ (local / 로컬), cần xác định **effective thời gian chạy (runtime / 런타임) cấu hình (config / 설정)**, không chỉ đọc Dockerfile.
@@ -132,6 +167,8 @@ Mitigation có thể là giảm sản phẩm tạo ra (artifact / 산출물) kí
 Ví dụ ảnh (image / 이미지) có `ENTRYPOINT ["java", "-jar", "app.jar"]` nhưng triển khai (deployment / 배포) override command sai; hoặc ảnh (image / 이미지) `USER 10001` nhưng nền tảng (platform / 플랫폼) bảo mật (security / 보안) ngữ cảnh (context / 맥락) ép UID khác. Cả hai đều là legitimate composition nhưng nguồn (source / 소스) of hành vi (behavior / 동작) nằm ở nhiều tầng (layer / 계층).
 
 Bản phát hành (release / 릴리스) siêu dữ liệu (metadata / 메타데이터) nên cho operator thấy ảnh (image / 이미지) digest cùng effective command/env/bảo mật (security / 보안) ngữ cảnh (context / 맥락) quan trọng. “ảnh (image / 이미지) đúng” chưa chứng minh tiến trình (process / 프로세스) được khởi động theo đặc tả hợp đồng (contract / 계약) mong muốn.
+
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **19. ảnh (image / 이미지) cấu hình (config / 설정) và thời gian chạy (runtime / 런타임) override tạo một precedence chuỗi (chain / 사슬)** xác định đầu vào; **20. Init bộ chứa (container / 컨테이너) giải sequencing cục bộ, không biến phụ thuộc (dependency / 의존성) thành healthy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. Startup tài nguyên (resource / 자원) spike khác steady-state usage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Init bộ chứa (container / 컨테이너) giải sequencing cục bộ, không biến phụ thuộc (dependency / 의존성) thành healthy
 
@@ -141,6 +178,8 @@ Phụ thuộc (dependency / 의존성) availability thường là thời gian ch
 
 Dùng init bộ chứa (container / 컨테이너) khi có finite setup công việc (work / 작업) với completion ngữ nghĩa (semantics / 의미론) rõ; không biến nó thành supervisor của mọi bên ngoài (external / 외부) dịch vụ (service / 서비스).
 
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **20. Init bộ chứa (container / 컨테이너) giải sequencing cục bộ, không biến phụ thuộc (dependency / 의존성) thành healthy** nêu điều cần giải thích; **21. Startup tài nguyên (resource / 자원) spike khác steady-state usage** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Read-only gốc (root / 루트) filesystem cần tường minh (explicit / 명시적) writable paths** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Startup tài nguyên (resource / 자원) spike khác steady-state usage
 
 Một dịch vụ (service / 서비스) có thể cần CPU/bộ nhớ (memory / 메모리) cao lúc JIT, tải (load / 로드) mô hình (model / 모델), decompress dữ liệu (data / 데이터) hoặc warm bộ nhớ đệm (cache / 캐시) rồi giảm đáng kể khi steady trạng thái (state / 상태). Nếu tài nguyên (resource / 자원) chính sách (policy / 정책) chỉ dựa average môi trường vận hành (production / 운영 환경), bộ chứa (container / 컨테이너) có thể bị throttled/OOM đúng lúc startup và không bao giờ Ready.
@@ -148,6 +187,8 @@ Một dịch vụ (service / 서비스) có thể cần CPU/bộ nhớ (memory /
 Ngược lại cấp limit theo startup peak cho toàn thời gian có thể lãng phí sức chứa (capacity / 용량). nền tảng (platform / 플랫폼) cần hiểu tải công việc (workload / 워크로드) lớp (class / 클래스): có thể precompute sản phẩm tạo ra (artifact / 산출물), lazy-load, dùng startup probe, giữ headroom hoặc tách initialization khỏi serving đường dẫn (path / 경로).
 
 Startup SLO là composition của ảnh (image / 이미지) phân phối (distribution / 분포) + thời gian chạy (runtime / 런타임) setup + ứng dụng (application / 애플리케이션) initialization + readiness, không chỉ “main tiến trình (process / 프로세스) đã spawn”.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **21. Startup tài nguyên (resource / 자원) spike khác steady-state usage** nêu điều cần giải thích; **22. Read-only gốc (root / 루트) filesystem cần tường minh (explicit / 명시적) writable paths** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. bộ chứa (container / 컨테이너) restart che trạng thái (state / 상태) cục bộ nhưng không sửa bên ngoài (external / 외부) side tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Read-only gốc (root / 루트) filesystem cần tường minh (explicit / 명시적) writable paths
 
@@ -157,6 +198,8 @@ Mẫu (pattern / 패턴) tốt là xác định đường dẫn (path / 경로) 
 
 Không nên bỏ read-only chỉ vì một thư viện (library / 라이브러리) viết temp tệp (file / 파일) mặc định; trước hết xác định dữ liệu (data / 데이터) đó cần thời gian tồn tại (lifetime / 수명)/kích thước (size / 크기)/bảo mật (security / 보안) nào và cung cấp đúng lưu trữ (storage / 저장소) ranh giới (boundary / 경계).
 
+> **Chuyển mạch:** Trong **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **22. Read-only gốc (root / 루트) filesystem cần tường minh (explicit / 명시적) writable paths** xác định đầu vào; **23. bộ chứa (container / 컨테이너) restart che trạng thái (state / 상태) cục bộ nhưng không sửa bên ngoài (external / 외부) side tác động (effect / 효과)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. ảnh (image / 이미지) pull chính sách (policy / 정책) và bộ nhớ đệm (cache / 캐시) tạo consistency sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 23. bộ chứa (container / 컨테이너) restart che trạng thái (state / 상태) cục bộ nhưng không sửa bên ngoài (external / 외부) side tác động (effect / 효과)
 
 Restart tạo tiến trình (process / 프로세스)/gốc (root / 루트) writable trạng thái (state / 상태) mới, nên có thể chữa deadlock, bộ nhớ (memory / 메모리) leak tạm thời hoặc corrupted cục bộ (local / 로컬) bộ nhớ đệm (cache / 캐시). Nhưng giao dịch (transaction / 트랜잭션) đã gửi tới cơ sở dữ liệu (database / 데이터베이스)/payment, message đã publish hoặc khóa (lock / 잠금) bên ngoài (external / 외부) vẫn tồn tại.
@@ -164,6 +207,8 @@ Restart tạo tiến trình (process / 프로세스)/gốc (root / 루트) writa
 Vì vậy “restart sạch” chỉ đúng cho trạng thái (state / 상태) nằm trong instance. Runbook phải biết thao tác (operation / 연산) nào có side tác động (effect / 효과) ngoài bộ chứa (container / 컨테이너) và idempotency/khôi phục (recovery / 복구) của chúng. Nếu thử lại (retry / 재시도) yêu cầu (request / 요청) sau restart mà không có nghiệp vụ (business / 비즈니스) idempotency, khôi phục (recovery / 복구) có thể tạo duplicate tác động (effect / 효과).
 
 Bộ chứa (container / 컨테이너) replaceability là hạ tầng (infrastructure / 인프라) thuộc tính (property / 속성); nghiệp vụ (business / 비즈니스) statelessness là thuộc tính (property / 속성) khác.
+
+> **Chuyển mạch:** Ở chặng này của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **24. ảnh (image / 이미지) pull chính sách (policy / 정책) và bộ nhớ đệm (cache / 캐시) tạo consistency sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **23. bộ chứa (container / 컨테이너) restart che trạng thái (state / 상태) cục bộ nhưng không sửa bên ngoài (external / 외부) side tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. cấp cao (senior / 시니어) walkthrough: chỉ Pod mới restart bị lỗi sau secret/cấu hình (config / 설정) thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. ảnh (image / 이미지) pull chính sách (policy / 정책) và bộ nhớ đệm (cache / 캐시) tạo consistency sự đánh đổi (trade-off / 트레이드오프)
 
@@ -173,6 +218,8 @@ Pin digest loại bỏ ambiguity này: bộ nhớ đệm (cache / 캐시) chỉ 
 
 Đây là lý do sản phẩm tạo ra (artifact / 산출물) immutability làm nhiều operational bài toán (problem / 문제) đơn giản hơn, không chỉ supply-chain bảo mật (security / 보안).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ chứa (container / 컨테이너): ảnh (image / 이미지), thời gian chạy (runtime / 런타임), isolation và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작)**, **25. cấp cao (senior / 시니어) walkthrough: chỉ Pod mới restart bị lỗi sau secret/cấu hình (config / 설정) thay đổi (change / 변경)** tiếp nhận điểm tựa từ **24. ảnh (image / 이미지) pull chính sách (policy / 정책) và bộ nhớ đệm (cache / 캐시) tạo consistency sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 25. cấp cao (senior / 시니어) walkthrough: chỉ Pod mới restart bị lỗi sau secret/cấu hình (config / 설정) thay đổi (change / 변경)
 
 Giả sử fleet cũ vẫn khỏe, nhưng mọi Pod reschedule mới đều thất bại (fail / 실패) startup. ảnh (image / 이미지) digest giống nhau. Investigation cho thấy thời gian chạy (runtime / 런타임) inject môi trường (environment / 환경) variable/secret revision mới; tiến trình (process / 프로세스) cũ chưa restart nên vẫn giữ effective cấu hình (config / 설정) cũ.
@@ -181,4 +228,4 @@ Nhân quả (causal / 인과적) dimension là **instance birth thời gian (tim
 
 Nền tảng (platform / 플랫폼) nên expose sản phẩm tạo ra (artifact / 산출물) digest + cấu hình (config / 설정)/secret revision + startup timestamp để cohort mới/cũ dễ phân biệt. môi trường vận hành (production / 운영 환경) định danh (identity / 식별자) của một instance là composition của sản phẩm tạo ra (artifact / 산출물) và thời gian chạy (runtime / 런타임) inputs, không chỉ ảnh bộ chứa (container image / 컨테이너 이미지).
 
-> **Bàn giao:** Sau **25. cấp cao (senior / 시니어) walkthrough: chỉ Pod mới restart bị lỗi sau secret/cấu hình (config / 설정) thay đổi (change / 변경)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **25. cấp cao (senior / 시니어) walkthrough: chỉ Pod mới restart bị lỗi sau secret/cấu hình (config / 설정) thay đổi (change / 변경)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
