@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) Collection
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) Collection**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Collection Goal phải xuất phát từ quyết định (decision / 결정) Goal** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Nguồn (source / 소스) Types** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data collection**. Route đi từ decision/use case → population and sampling frame → source types → collection protocol → coverage, consent, and drift, để dữ liệu thu được phù hợp với quyết định cần hỗ trợ.
 
 **dữ liệu (data / 데이터) collection (데이터 수집 / thu thập dữ liệu)** là quá trình quyết định cái gì được quan sát, từ đâu, với tần suất nào, dưới permission nào và bằng instrumentation gì. Đây là nơi nhiều độ lệch (bias / 편향) bắt đầu trước khi mô hình (model / 모델) tồn tại.
 

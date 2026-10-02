@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) for AI — Reading Map
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) for AI — Reading Map**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chapters** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cốt lõi (core / 핵심) distinctions** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** Đây là README owner của **Data for AI**. Route đọc đi từ data foundation → collection/cleaning/labeling → quality/leakage/bias → synthetic data → governance, để mỗi chương nối dữ liệu với chất lượng, rủi ro và quyết định model.
 
 Folder này coi dữ liệu (data / 데이터) như một **engineered observation hệ thống (system / 시스템)**, không phải CSV phụ trợ cho mô hình (model / 모델). Reading đường dẫn (path / 경로) đi từ data-generating tiến trình (process / 프로세스) tới collection, cleaning, labeling, chất lượng (quality / 품질), leakage, độ lệch (bias / 편향), synthetic dữ liệu (data / 데이터) và quản trị (governance / 거버넌스).
 

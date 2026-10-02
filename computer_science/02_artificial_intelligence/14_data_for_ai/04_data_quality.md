@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) chất lượng (quality / 품질)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) chất lượng (quality / 품질)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tính đúng đắn (correctness / 정확성)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Completeness** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data quality**. Route đi từ correctness/completeness → consistency/validity → timeliness/uniqueness → slice-level checks → quality gates and model impact, để chất lượng nối với rủi ro đầu ra chứ không chỉ là checklist.
 
 **dữ liệu (data / 데이터) chất lượng (quality / 품질)** không phải một score duy nhất. Dataset có thể sạch về format nhưng vẫn kém vì coverage thiếu, labels sai, timestamps stale hoặc phân phối (distribution / 분포) lệch triển khai (deployment / 배포).
 

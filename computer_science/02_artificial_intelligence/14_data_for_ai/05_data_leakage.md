@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) Leakage
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) Leakage**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mục tiêu (target / 대상) Leakage** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Temporal Leakage** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data leakage**. Route đi từ target leakage → temporal leakage → train/test contamination → feature-generation boundaries → realistic validation, để điểm số không bị thổi phồng bởi thông tin chỉ có sau thời điểm dự báo.
 
 **dữ liệu (data / 데이터) leakage (데이터 누수 / rò rỉ dữ liệu)** xảy ra khi huấn luyện (training / 학습)/evaluation chuỗi xử lý (pipeline / 파이프라인) cho mô hình (model / 모델) truy cập (access / 접근) thông tin (information / 정보) mà môi trường vận hành (production / 운영 환경) suy luận (inference / 추론) sẽ không thực sự có, hoặc khi thông tin (information / 정보) từ kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) ảnh hưởng huấn luyện (training / 학습). Leakage tạo metrics đẹp giả tạo và thường là một trong những thất bại (failure / 실패) nghiêm trọng nhất của ML hệ thống (system / 시스템).
 

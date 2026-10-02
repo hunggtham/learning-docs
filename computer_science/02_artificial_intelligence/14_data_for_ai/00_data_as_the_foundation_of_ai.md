@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) as the Foundation of AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) as the Foundation of AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dataset không phải Reality** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Dữ liệu (data / 데이터) Generating tiến trình (process / 프로세스)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data as the foundation of AI**. Route đi từ reality-generating process → observations/labels → dataset construction → model signal → deployment feedback, để dữ liệu được đọc như một phép đo có sai lệch và mục tiêu.
 
 Một AI mô hình (model / 모델) chỉ học được từ thông tin (information / 정보) mà dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) quan sát và giữ lại. Vì vậy **dữ liệu (data / 데이터)** không phải nguyên liệu trung tính; nó là kết quả của đo lường (measurement / 측정), selection, labeling, logging và chính sách (policy / 정책).
 

@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) Labeling
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) Labeling**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ground Truth không luôn tuyệt đối** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Label Definition** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data labeling**. Route đi từ task definition → label ontology → annotation guidelines → agreement/adjudication → noisy-label monitoring, để “ground truth” được xây dựng và kiểm soát thay vì giả định là tuyệt đối.
 
 **dữ liệu (data / 데이터) labeling (데이터 라벨링 / gán nhãn dữ liệu)** biến raw examples thành supervision tín hiệu (signal / 신호) mà mô hình (model / 모델) tối ưu. Label không tự nhiên rơi từ reality xuống dataset; nó được tạo bởi quy tắc (rule / 규칙), human judgment, downstream kết quả (outcome / 결과) hoặc mô hình (model / 모델) khác. Vì vậy label luôn có ngữ nghĩa (semantics / 의미론), bất định (uncertainty / 불확실성) và tiến trình (process / 프로세스) phía sau.
 

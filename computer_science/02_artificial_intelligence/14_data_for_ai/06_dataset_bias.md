@@ -1,6 +1,6 @@
 # Dataset độ lệch (bias / 편향)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dataset độ lệch (bias / 편향)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Selection độ lệch (bias / 편향)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Sampling độ lệch (bias / 편향)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dataset bias**. Route đi từ selection bias → sampling/coverage bias → label/measurement bias → subgroup performance → mitigation and residual risk, để bias được truy theo nguồn phát sinh và tác động.
 
 **Dataset độ lệch (bias / 편향)** là systematic mismatch giữa dữ liệu (data / 데이터) được quan sát và phenomenon/population mà mô hình (model / 모델) intended serve. độ lệch (bias / 편향) không chỉ là “lớp (class / 클래스) imbalance”; nó có thể đến từ sampling, đo lường (measurement / 측정), labels, historical decisions và triển khai (deployment / 배포) phản hồi (feedback / 피드백) loops.
 

@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) quản trị (governance / 거버넌스) for AI
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스) for AI**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quyền sở hữu (ownership / 소유권)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Dữ liệu (data / 데이터) danh mục (catalog / 카탈로그)** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data governance for AI**. Route đi từ ownership/stewardship → catalog/lineage → access and retention → consent/security → change control and audit evidence, để dữ liệu có trách nhiệm xuyên suốt vòng đời model.
 
 **dữ liệu (data / 데이터) quản trị (governance / 거버넌스)** là hệ thống chính sách (policy / 정책), quyền sở hữu (ownership / 소유권), siêu dữ liệu (metadata / 메타데이터), kiểm soát truy cập (access control / 접근 제어) và vòng đời (lifecycle / 생명주기) management giúp tổ chức biết dữ liệu (data / 데이터) nào tồn tại, ai chịu trách nhiệm, được dùng cho mục đích gì và mô hình (model / 모델) nào phụ thuộc vào nó.
 

@@ -1,6 +1,6 @@
 # Dữ liệu (data / 데이터) Cleaning
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Dữ liệu (data / 데이터) Cleaning**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cleaning bắt đầu từ lược đồ (schema / 스키마) và ngữ nghĩa (semantics / 의미론)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Missing Values** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Data cleaning**. Route đi từ schema/semantics → missing values → duplicates/outliers → normalization and validation → documented transformations, để làm sạch dữ liệu không vô tình đổi nghĩa tín hiệu.
 
 **dữ liệu (data / 데이터) cleaning (데이터 정제 / làm sạch dữ liệu)** không phải thao tác “xóa những hàng xấu” một cách máy móc. Nó là quá trình phát hiện và xử lý inconsistency, corruption, missingness, duplicates và ngữ nghĩa (semantic / 의미적) errors trong khi cố gắng không xóa mất tín hiệu (signal / 신호) thật.
 
