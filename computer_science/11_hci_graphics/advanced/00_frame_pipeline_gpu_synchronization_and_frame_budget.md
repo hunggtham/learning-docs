@@ -1,6 +1,6 @@
 # Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Frame chuỗi xử lý (pipeline / 파이프라인), GPU synchronization và frame ngân sách (budget / 예산)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CPU và GPU chạy chuỗi xử lý (pipeline / 파이프라인) song song** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Frame thời gian (time / 시간) khác FPS average** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Frame pipeline, GPU synchronization và frame budget**. Route đi từ CPU/GPU parallel timelines → frame time/jitter → queues/fences → latency budget → dropped frames, để FPS average không che mất deadline failure.
 
 Real-time graphics không chỉ hỏi “kết xuất (render / 렌더링) đúng hình không?” mà hỏi “có tạo frame đúng deadline và đều không?”. 60 FPS cho khoảng 16.67 ms mỗi frame; 120 FPS khoảng 8.33 ms. Average nhanh nhưng occasional 40 ms stall vẫn tạo judder/stutter thấy rõ.
 

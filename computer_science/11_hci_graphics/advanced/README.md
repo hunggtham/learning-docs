@@ -1,6 +1,6 @@
 # Advanced HCI & Computer Graphics
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Advanced HCI & Computer Graphics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Advanced HCI & Computer Graphics** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](./README.md) là owner của **Advanced HCI & Computer Graphics**. Route đi từ frame/GPU synchronization → command buffers/resource barriers → PBR/BRDF/materials, để frame budget nối với pipeline và chất lượng hình ảnh.
 
 Roadmap:
 

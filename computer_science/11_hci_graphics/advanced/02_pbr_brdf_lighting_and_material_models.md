@@ -1,6 +1,6 @@
 # PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **PBR, BRDF, lighting tích hợp (integration / 통합) và material các mô hình (models / 모델들)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Rendering equation** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **BRDF** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **PBR, BRDF, lighting integration và material models**. Route đi từ rendering equation → BRDF/energy conservation → light transport/integration → material parameters → sampling/noise, để vẻ ngoài vật liệu nối với mô hình ánh sáng.
 
 Real-time rendering muốn surface phản ứng với ánh sáng nhất quán dưới nhiều environments. **Physically Based Rendering (PBR)** không có nghĩa mô phỏng vật lý hoàn hảo; nó dùng material/light các mô hình (models / 모델들) có các ràng buộc (constraints / 제약조건들) vật lý đủ tốt để artist parameters behave predictably.
 

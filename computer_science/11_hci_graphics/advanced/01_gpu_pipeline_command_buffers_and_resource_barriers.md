@@ -1,6 +1,6 @@
 # Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Hiện đại (modern / 현대적) GPU chuỗi xử lý (pipeline / 파이프라인), command buffers và tài nguyên (resource / 자원) barriers**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **CPU submission và GPU thực thi (execution / 실행) là hai timeline** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Command buffer** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Modern GPU pipeline, command buffers và resource barriers**. Route đi từ CPU submission/GPU execution timelines → command recording → resource states/barriers → synchronization hazards → queue overlap, để correctness và throughput được đọc cùng nhau.
 
 GPU đạt thông lượng (throughput / 처리량) cao bằng cách chạy lượng lớn công việc (work / 작업) song song, nhưng CPU không điều khiển từng shader invocation trực tiếp. hiện đại (modern / 현대적) graphics API dùng **command buffers/queues** để CPU mô tả công việc (work / 작업) rồi GPU consume bất đồng bộ. hiệu năng (performance / 성능) và tính đúng đắn (correctness / 정확성) phụ thuộc việc tài nguyên (resource / 자원) chuyển qua các stages theo đúng phụ thuộc (dependency / 의존성).
 
