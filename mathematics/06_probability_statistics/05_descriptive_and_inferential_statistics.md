@@ -1,7 +1,6 @@
 # Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population
 
-> **Mạch đọc:** Đọc **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Population, mẫu (sample / 표본), parameter và statistic** sang **2. Descriptive statistics chỉ mô tả dữ liệu (data / 데이터) đã thấy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Population, mẫu (sample / 표본), parameter và statistic** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Descriptive statistics chỉ mô tả dữ liệu (data / 데이터) đã thấy** để đối chiếu nhận định với dữ liệu và nguồn. Mạch này nối descriptive với inferential statistics, để phân biệt mô tả mẫu, bất định và kết luận về quần thể.
 
 Thống kê (statistics / 통계학) bắt đầu từ một bất cân xứng rất thực tế: ta muốn biết điều gì đó về một population hoặc tiến trình (process / 프로세스) lớn, nhưng chỉ quan sát được một mẫu (sample / 표본) hữu hạn, noisy và có thể biased.
 
@@ -38,6 +37,8 @@ Statistic là hàm (function / 함수) của observed mẫu (sample / 표본), v
 
 Trong frequentist khung phần mềm (framework / 프레임워크), parameter được xem fixed but unknown; statistic là random trước khi mẫu (sample / 표본) được quan sát vì mẫu (sample / 표본) itself random.
 
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **1. Population, mẫu (sample / 표본), parameter và statistic** nêu điều cần giải thích; **2. Descriptive statistics chỉ mô tả dữ liệu (data / 데이터) đã thấy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Center: mean, median và chế độ (mode / 모드) trả lời câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Descriptive statistics chỉ mô tả dữ liệu (data / 데이터) đã thấy
 
 Descriptive statistics trả lời:
@@ -51,6 +52,8 @@ Inferential statistics hỏi thêm:
 Hai tầng không được trộn lẫn.
 
 Một histogram đẹp của mẫu (sample / 표본) không guarantee population có same shape. Một mẫu (sample / 표본) mean chính xác đến nhiều decimal places cũng không guarantee estimator unbiased hoặc representative.
+
+> **Chuyển mạch:** Ở chặng này của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **2. Descriptive statistics chỉ mô tả dữ liệu (data / 데이터) đã thấy** nêu điều cần giải thích; **3. Center: mean, median và chế độ (mode / 모드) trả lời câu hỏi khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Spread: bất định (uncertainty / 불확실성) nội tại của mẫu (sample / 표본)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Center: mean, median và chế độ (mode / 모드) trả lời câu hỏi khác nhau
 
@@ -90,6 +93,8 @@ Chế độ (mode / 모드) là most frequent giá trị (value / 값)/category,
 
 Không có một “center đúng” universal; choice phụ thuộc mất mát (loss / 손실), phân phối (distribution / 분포) và question.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **4. Spread: bất định (uncertainty / 불확실성) nội tại của mẫu (sample / 표본)** tiếp nhận điểm tựa từ **3. Center: mean, median và chế độ (mode / 모드) trả lời câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Outlier không đồng nghĩa lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Spread: bất định (uncertainty / 불확실성) nội tại của mẫu (sample / 표본)
 
 Variance đo squared deviation quanh mean:
@@ -118,6 +123,8 @@ IQR=Q_3-Q_1
 
 robust hơn với heavy tails/outliers.
 
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **5. Outlier không đồng nghĩa lỗi (error / 오류)** tiếp nhận điểm tựa từ **4. Spread: bất định (uncertainty / 불확실성) nội tại của mẫu (sample / 표본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Sampling thiết kế (design / 설계) quan trọng hơn cỡ mẫu (sample size / 표본 크기) đơn thuần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 5. Outlier không đồng nghĩa lỗi (error / 오류)
 
 Điểm (point / 지점) xa phần lớn dữ liệu (data / 데이터) có thể là:
@@ -132,6 +139,8 @@ Một quy tắc (rule / 규칙) như `1.5×IQR` chỉ là flagging convention, k
 
 Trong finance và độ tin cậy (reliability / 신뢰성), tail observations đôi khi chính là phần cần quan tâm nhất.
 
+> **Chuyển mạch:** Ở chặng này của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **6. Sampling thiết kế (design / 설계) quan trọng hơn cỡ mẫu (sample size / 표본 크기) đơn thuần** tiếp nhận điểm tựa từ **5. Outlier không đồng nghĩa lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Estimator có độ lệch (bias / 편향) và variance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 6. Sampling thiết kế (design / 설계) quan trọng hơn cỡ mẫu (sample size / 표본 크기) đơn thuần
 
 Một mẫu (sample / 표본) lớn nhưng systematically biased có thể cho estimate rất precise của wrong quantity.
@@ -139,6 +148,8 @@ Một mẫu (sample / 표본) lớn nhưng systematically biased có thể cho e
 Ví dụ survey chỉ thu từ power users có thể estimate sản phẩm (product / 제품) satisfaction của power users cực chính xác nhưng không represent toàn customer cơ sở (base / 기반).
 
 Random sampling giúp giảm selection độ lệch (bias / 편향) theo thiết kế (design / 설계). Stratification, cluster sampling và weighting tồn tại vì real populations hiếm khi mẫu (sample / 표본) đơn giản.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **7. Estimator có độ lệch (bias / 편향) và variance** tiếp nhận điểm tựa từ **6. Sampling thiết kế (design / 설계) quan trọng hơn cỡ mẫu (sample size / 표본 크기) đơn thuần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Sampling phân phối (distribution / 분포) là cầu nối (bridge / 브리지) tới suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Estimator có độ lệch (bias / 편향) và variance
 
@@ -163,6 +174,8 @@ E[(\hat\theta-\theta)^2]
 ```
 
 Đây là cùng bias-variance sự đánh đổi (trade-off / 트레이드오프) xuất hiện trong machine học tập (learning / 학습).
+
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **8. Sampling phân phối (distribution / 분포) là cầu nối (bridge / 브리지) tới suy luận (inference / 추론)** tiếp nhận điểm tựa từ **7. Estimator có độ lệch (bias / 편향) và variance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Central Limit Theorem: vì sao normal xuất hiện nhiều trong suy luận (inference / 추론)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Sampling phân phối (distribution / 분포) là cầu nối (bridge / 브리지) tới suy luận (inference / 추론)
 
@@ -190,6 +203,8 @@ hoặc estimate bằng `s/\sqrt n`.
 
 `1/\sqrt n` law giải thích vì sao muốn halve tiêu chuẩn (standard / 표준) lỗi (error / 오류) cần roughly quadruple cỡ mẫu (sample size / 표본 크기).
 
+> **Chuyển mạch:** Ở chặng này của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **8. Sampling phân phối (distribution / 분포) là cầu nối (bridge / 브리지) tới suy luận (inference / 추론)** đã nêu tiêu chí phân biệt, còn **9. Central Limit Theorem: vì sao normal xuất hiện nhiều trong suy luận (inference / 추론)?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. Confidence interval: procedure trước, interval sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 9. Central Limit Theorem: vì sao normal xuất hiện nhiều trong suy luận (inference / 추론)?
 
 Dưới conditions phù hợp, standardized sum/mean của many independent-ish observations tiến tới normal phân phối (distribution / 분포) khi `n` lớn.
@@ -199,6 +214,8 @@ Dưới conditions phù hợp, standardized sum/mean của many independent-ish 
 Đây là lý do normal-based confidence intervals xuất hiện rộng.
 
 Heavy tails, dependence hoặc small samples có thể làm approximation kém.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **9. Central Limit Theorem: vì sao normal xuất hiện nhiều trong suy luận (inference / 추론)?** đã nêu tiêu chí phân biệt, còn **10. Confidence interval: procedure trước, interval sau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Hypothesis testing là mô hình (model / 모델) checking có controlled lỗi (error / 오류) rates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Confidence interval: procedure trước, interval sau
 
@@ -215,6 +232,8 @@ khi normal approximation phù hợp.
 Strict frequentist interpretation không nói “parameter có 95% xác suất (probability / 확률) nằm trong interval này” sau khi dữ liệu (data / 데이터) cố định. Parameter không random trong khung phần mềm (framework / 프레임워크) đó.
 
 Bayesian credible interval có interpretation khác vì posterior treats parameter bất định (uncertainty / 불확실성) probabilistically.
+
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **11. Hypothesis testing là mô hình (model / 모델) checking có controlled lỗi (error / 오류) rates** tiếp nhận điểm tựa từ **10. Confidence interval: procedure trước, interval sau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. kiểu (type / 타입) I, kiểu (type / 타입) II và power** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Hypothesis testing là mô hình (model / 모델) checking có controlled lỗi (error / 오류) rates
 
@@ -239,6 +258,8 @@ P(H0 true | data).
 ```
 
 Đây là một trong những misconceptions phổ biến nhất.
+
+> **Chuyển mạch:** Ở chặng này của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **12. kiểu (type / 타입) I, kiểu (type / 타입) II và power** tiếp nhận điểm tựa từ **11. Hypothesis testing là mô hình (model / 모델) checking có controlled lỗi (error / 오류) rates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. tác động (effect / 효과) kích thước (size / 크기) quan trọng hơn chỉ p-value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. kiểu (type / 타입) I, kiểu (type / 타입) II và power
 
@@ -268,6 +289,8 @@ Power phụ thuộc:
 
 Không thể nói một kiểm thử (test / 테스트) “80% power” nếu không specify alternative/tác động (effect / 효과) các giả định (assumptions / 가정들).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **13. tác động (effect / 효과) kích thước (size / 크기) quan trọng hơn chỉ p-value** tiếp nhận điểm tựa từ **12. kiểu (type / 타입) I, kiểu (type / 타입) II và power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Multiple testing và false discoveries** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. tác động (effect / 효과) kích thước (size / 크기) quan trọng hơn chỉ p-value
 
 Với huge mẫu (sample / 표본), tác động (effect / 효과) rất nhỏ có thể statistically significant.
@@ -277,6 +300,8 @@ Ví dụ conversion tăng từ 10.000% lên 10.010% có thể p-value rất nh�
 Ngược lại, tác động (effect / 효과) economically important có thể không significant nếu mẫu (sample / 표본) quá nhỏ.
 
 Suy luận (inference / 추론) tốt cần report bất định (uncertainty / 불확실성) + tác động (effect / 효과) magnitude + lĩnh vực (domain / 도메인) relevance.
+
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **14. Multiple testing và false discoveries** tiếp nhận điểm tựa từ **13. tác động (effect / 효과) kích thước (size / 크기) quan trọng hơn chỉ p-value** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Bootstrap: approximate sampling bất định (uncertainty / 불확실성) bằng resampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Multiple testing và false discoveries
 
@@ -288,6 +313,8 @@ False Discovery tỷ lệ (rate / 비율) procedures như Benjamini–Hochberg m
 
 Choice phương thức (method / 메서드) phụ thuộc chi phí (cost / 비용) của false positives và phân tích (analysis / 분석) goal.
 
+> **Chuyển mạch:** Ở chặng này của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **15. Bootstrap: approximate sampling bất định (uncertainty / 불확실성) bằng resampling** tiếp nhận điểm tựa từ **14. Multiple testing và false discoveries** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Causality khác prediction và association** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Bootstrap: approximate sampling bất định (uncertainty / 불확실성) bằng resampling
 
 Khi analytic sampling phân phối (distribution / 분포) khó derive, bootstrap resamples observed dữ liệu (data / 데이터) with replacement, tính statistic nhiều lần và dùng empirical phân phối (distribution / 분포) của bootstrap statistics.
@@ -295,6 +322,8 @@ Khi analytic sampling phân phối (distribution / 분포) khó derive, bootstra
 Nó hữu ích nhưng không magic: nếu original mẫu (sample / 표본) biased hoặc dependence cấu trúc (structure / 구조) ignored, bootstrap không sửa thiết kế (design / 설계) bài toán (problem / 문제).
 
 Thời gian (time / 시간) series cần khối (block / 블록)/bootstrap variants để preserve dependence.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **16. Causality khác prediction và association** tiếp nhận điểm tựa từ **15. Bootstrap: approximate sampling bất định (uncertainty / 불확실성) bằng resampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Worked example: A/B kiểm thử (test / 테스트) không chỉ là p-value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Causality khác prediction và association
 
@@ -305,6 +334,8 @@ Correlation/regression mô tả association hoặc conditional expectation cấu
 Confounders, selection độ lệch (bias / 편향), collider độ lệch (bias / 편향) và reverse causality có thể làm observational association khác nhân quả (causal / 인과적) tác động (effect / 효과).
 
 Randomized experiments giúp vì treatment assignment independent of potential outcomes in expectation dưới proper hiện thực (implementation / 구현).
+
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **16. Causality khác prediction và association** cho ta quy tắc; **17. Worked example: A/B kiểm thử (test / 테스트) không chỉ là p-value** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. Simpson's paradox: aggregation có thể đảo conclusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Worked example: A/B kiểm thử (test / 테스트) không chỉ là p-value
 
@@ -341,6 +372,8 @@ Hai numbers đều đúng nhưng answer different questions.
 
 Một complete phân tích (analysis / 분석) còn cần bất định (uncertainty / 불확실성) interval, kiểm thử (test / 테스트) các giả định (assumptions / 가정들), pre-specified chỉ số (metric / 지표), exposure chất lượng (quality / 품질) và practical giá trị (value / 값) của 2-point lift.
 
+> **Chuyển mạch:** Ở chặng này của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **17. Worked example: A/B kiểm thử (test / 테스트) không chỉ là p-value** cho ta quy tắc; **18. Simpson's paradox: aggregation có thể đảo conclusion** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **19. Finance: return phân phối (distribution / 분포) và tail rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 18. Simpson's paradox: aggregation có thể đảo conclusion
 
 Một trend có thể xuất hiện trong từng subgroup nhưng đảo khi aggregate vì group composition khác nhau.
@@ -348,6 +381,8 @@ Một trend có thể xuất hiện trong từng subgroup nhưng đảo khi aggr
 Điều này nhắc rằng weighted aggregation và conditioning cấu trúc (structure / 구조) matter.
 
 Statistics không chỉ xử lý numbers; nó xử lý **which comparisons are meaningful**.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **19. Finance: return phân phối (distribution / 분포) và tail rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **18. Simpson's paradox: aggregation có thể đảo conclusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. AI/dữ liệu (data / 데이터): train/kiểm thử (test / 테스트) statistics và dataset shift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 19. Finance: return phân phối (distribution / 분포) và tail rủi ro (risk / 위험)
 
@@ -359,6 +394,8 @@ Assume normal returns có thể underestimate extreme rủi ro (risk / 위험).
 
 Confidence intervals cũng cần distinguish iid các giả định (assumptions / 가정들) với autocorrelated/heteroskedastic financial thời gian (time / 시간) series.
 
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **19. Finance: return phân phối (distribution / 분포) và tail rủi ro (risk / 위험)** nêu điều cần giải thích; **20. AI/dữ liệu (data / 데이터): train/kiểm thử (test / 테스트) statistics và dataset shift** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. dùng chung (common / 공통) thất bại (failure / 실패) modes của statistical lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 20. AI/dữ liệu (data / 데이터): train/kiểm thử (test / 테스트) statistics và dataset shift
 
 Train metrics estimate hiệu năng (performance / 성능) trên huấn luyện (training / 학습) phân phối (distribution / 분포). kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) estimate generalization tới related mẫu (sample / 표본) phân phối (distribution / 분포).
@@ -366,6 +403,8 @@ Train metrics estimate hiệu năng (performance / 성능) trên huấn luyện 
 Nếu triển khai (deployment / 배포) phân phối (distribution / 분포) shifts, confidence từ iid kiểm thử (test / 테스트) set không guarantee môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작).
 
 Dataset representativeness là statistical giả định (assumption / 가정), không chỉ MLOps detail.
+
+> **Chuyển mạch:** Ở chặng này của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **20. AI/dữ liệu (data / 데이터): train/kiểm thử (test / 테스트) statistics và dataset shift** nêu điều cần giải thích; **21. dùng chung (common / 공통) thất bại (failure / 실패) modes của statistical lập luận (reasoning / 추론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 21. dùng chung (common / 공통) thất bại (failure / 실패) modes của statistical lập luận (reasoning / 추론)
 
@@ -385,9 +424,13 @@ Threshold `0.05` không phân chia truth/falsehood. Nó là quyết định (dec
 
 Nếu ta thử rất nhiều analyses rồi chỉ report one significant kết quả (result / 결과), nominal p-value không còn reflect full tìm kiếm (search / 검색) tiến trình (process / 프로세스).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **21. dùng chung (common / 공통) thất bại (failure / 실패) modes của statistical lập luận (reasoning / 추론)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Statistics là một chuỗi xử lý (pipeline / 파이프라인): define mục tiêu (target / 대상) → understand data-generating/sampling tiến trình (process / 프로세스) → choose estimator/mô hình (model / 모델) → quantify sampling bất định (uncertainty / 불확실성) → check các giả định (assumptions / 가정들) → interpret tác động (effect / 효과) in lĩnh vực (domain / 도메인) ngữ cảnh (context / 맥락). Một number cuối như mean, p-value hay confidence interval chỉ có meaning bên trong chuỗi xử lý (pipeline / 파이프라인) đó.
+
+> **Chuyển mạch:** Trong **Thống kê mô tả và suy luận: từ mẫu (sample / 표본) tới bất định (uncertainty / 불확실성) về population**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -399,4 +442,4 @@ Nếu ta thử rất nhiều analyses rồi chỉ report one significant kết q
 
 **Correlation hoặc regression đủ để nói causality.** Không; nhân quả (causal / 인과적) interpretation cần thiết kế (design / 설계)/identification các giả định (assumptions / 가정들) bổ sung.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 counting and combinatorics](./00_counting_and_combinatorics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

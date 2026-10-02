@@ -1,7 +1,6 @@
 # Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation
 
-> **Mạch đọc:** Đọc **liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. trạng thái (state / 상태) và thay đổi (change / 변경) trả lời hai câu hỏi khác nhau** sang **2. Derivative là cục bộ (local / 로컬) tuyến tính (linear / 선형) phản hồi (response / 응답)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. trạng thái (state / 상태) và thay đổi (change / 변경) trả lời hai câu hỏi khác nhau** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Derivative là cục bộ (local / 로컬) tuyến tính (linear / 선형) phản hồi (response / 응답)** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối rate of change với accumulation, để đạo hàm và tích phân được đọc như hai hướng của cùng một quá trình.
 
 Một mẫu (pattern / 패턴) xuất hiện xuyên suốt calculus, physics, finance, xác suất (probability / 확률), dữ liệu (data / 데이터) các hệ thống (systems / 시스템들) và tối ưu hóa (optimization / 최적화) là:
 
@@ -59,6 +58,8 @@ x           → m
 
 Tỷ lệ (rate / 비율) không phải total.
 
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **2. Derivative là cục bộ (local / 로컬) tuyến tính (linear / 선형) phản hồi (response / 응답)** tiếp nhận điểm tựa từ **1. trạng thái (state / 상태) và thay đổi (change / 변경) trả lời hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Accumulation là inverse question** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Derivative là cục bộ (local / 로컬) tuyến tính (linear / 선형) phản hồi (response / 응답)
 
 Instantaneous tỷ lệ (rate / 비율) được formalize bằng limit:
@@ -86,6 +87,8 @@ Jacobian
 growth rate
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **3. Accumulation là inverse question** tiếp nhận điểm tựa từ **2. Derivative là cục bộ (local / 로컬) tuyến tính (linear / 선형) phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Vì sao dấu quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 3. Accumulation là inverse question
 
 Nếu biết tỷ lệ (rate / 비율) `r(t)`, accumulated thay đổi (change / 변경) trên `[a,b]` là:
@@ -110,6 +113,8 @@ x(b)-x(a)=\int_a^b r(t)\,dt.
 
 > cộng tất cả cục bộ (local / 로컬) changes cho ra net toàn cục (global / 전역) thay đổi (change / 변경).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **4. Vì sao dấu quan trọng?** tiếp nhận điểm tựa từ **3. Accumulation là inverse question** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Discrete analogue: difference và summation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Vì sao dấu quan trọng?
 
 Integral của tỷ lệ (rate / 비율) là **net accumulation**, không luôn là total amount traveled.
@@ -129,6 +134,8 @@ Distance traveled cần:
 ```
 
 Cùng lô-gic (logic / 논리) trong finance: signed cash luồng (flow / 흐름) netting khác gross giao dịch (transaction / 트랜잭션) volume.
+
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **5. Discrete analogue: difference và summation** tiếp nhận điểm tựa từ **4. Vì sao dấu quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Recurrence là tỷ lệ (rate / 비율) law cho discrete thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Discrete analogue: difference và summation
 
@@ -154,6 +161,8 @@ derivative ↔ finite difference
 integral   ↔ summation
 ODE        ↔ recurrence relation
 ```
+
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **6. Recurrence là tỷ lệ (rate / 비율) law cho discrete thời gian (time / 시간)** tiếp nhận điểm tựa từ **5. Discrete analogue: difference và summation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Density cũng là tỷ lệ (rate / 비율) of accumulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Recurrence là tỷ lệ (rate / 비율) law cho discrete thời gian (time / 시간)
 
@@ -195,6 +204,8 @@ và:
 x'=kx.
 ```
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **7. Density cũng là tỷ lệ (rate / 비율) of accumulation** tiếp nhận điểm tựa từ **6. Recurrence là tỷ lệ (rate / 비율) law cho discrete thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. thông lượng (throughput / 처리량) và hàng đợi (queue / 큐) length** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. Density cũng là tỷ lệ (rate / 비율) of accumulation
 
 Xác suất (probability / 확률) density `f(x)` không phải xác suất (probability / 확률) tại một điểm (point / 지점).
@@ -227,6 +238,8 @@ local density
 → accumulated mass
 ```
 
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **8. thông lượng (throughput / 처리량) và hàng đợi (queue / 큐) length** tiếp nhận điểm tựa từ **7. Density cũng là tỷ lệ (rate / 비율) of accumulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Finance: balance là accumulated cash luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 8. thông lượng (throughput / 처리량) và hàng đợi (queue / 큐) length
 
 Trong hệ thống (system / 시스템) kỹ thuật (engineering / 엔지니어링), hàng đợi (queue / 큐) length `Q(t)` là trạng thái (state / 상태).
@@ -242,6 +255,8 @@ khi dùng continuous approximation.
 Nếu arrival > dịch vụ (service / 서비스) lâu dài, backlog tích lũy.
 
 Một dashboard chỉ nhìn thông lượng (throughput / 처리량) mà không nhìn accumulated hàng đợi (queue / 큐) có thể bỏ lỡ overload đang tích tụ.
+
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **8. thông lượng (throughput / 처리량) và hàng đợi (queue / 큐) length** xác định đầu vào; **9. Finance: balance là accumulated cash luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Marginal vs total trong economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Finance: balance là accumulated cash luồng (flow / 흐름)
 
@@ -271,6 +286,8 @@ B(t)=B_0e^{rt}.
 
 Tỷ lệ (rate / 비율) law quyết định accumulation shape.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **9. Finance: balance là accumulated cash luồng (flow / 흐름)** xác định đầu vào; **10. Marginal vs total trong economics** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. độ dốc (gradient / 기울기) là véc-tơ (vector / 벡터) của cục bộ (local / 로컬) rates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 10. Marginal vs total trong economics
 
 Nếu total chi phí (cost / 비용) là `C(q)`, marginal chi phí (cost / 비용):
@@ -289,6 +306,8 @@ C(q_2)-C(q_1)
 ```
 
 Mistake phổ biến là đọc marginal quantity như average hoặc total quantity.
+
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **11. độ dốc (gradient / 기울기) là véc-tơ (vector / 벡터) của cục bộ (local / 로컬) rates** tiếp nhận điểm tựa từ **10. Marginal vs total trong economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. độ dốc (gradient / 기울기) descent là tích lũy các cục bộ (local / 로컬) decisions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. độ dốc (gradient / 기울기) là véc-tơ (vector / 벡터) của cục bộ (local / 로컬) rates
 
@@ -319,6 +338,8 @@ D_uL=\nabla L\cdot u.
 
 nói mất mát (loss / 손실) thay đổi nhanh thế nào nếu parameters move theo direction `u`.
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **12. độ dốc (gradient / 기울기) descent là tích lũy các cục bộ (local / 로컬) decisions** tiếp nhận điểm tựa từ **11. độ dốc (gradient / 기울기) là véc-tơ (vector / 벡터) của cục bộ (local / 로컬) rates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Differential equation: biết law của thay đổi (change / 변경), reconstruct trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 12. độ dốc (gradient / 기울기) descent là tích lũy các cục bộ (local / 로컬) decisions
 
 Cập nhật (update / 업데이트):
@@ -339,6 +360,8 @@ Trong limit step nhỏ, ta gặp độ dốc (gradient / 기울기) luồng (flo
 
 Tối ưu hóa (optimization / 최적화) nối recurrence với differential equations.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **13. Differential equation: biết law của thay đổi (change / 변경), reconstruct trạng thái (state / 상태)** tiếp nhận điểm tựa từ **12. độ dốc (gradient / 기울기) descent là tích lũy các cục bộ (local / 로컬) decisions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Conservation law là accounting ở cấp trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Differential equation: biết law của thay đổi (change / 변경), reconstruct trạng thái (state / 상태)
 
 ODE:
@@ -357,6 +380,8 @@ PDE mở rộng idea này sang trường dữ liệu (field / 필드):
 local law at every point
 → global field evolution
 ```
+
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **13. Differential equation: biết law của thay đổi (change / 변경), reconstruct trạng thái (state / 상태)** nêu điều cần giải thích; **14. Conservation law là accounting ở cấp trường dữ liệu (field / 필드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Local-to-global là mẫu (pattern / 패턴) lớn hơn calculus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Conservation law là accounting ở cấp trường dữ liệu (field / 필드)
 
@@ -380,6 +405,8 @@ Accumulated amount bên trong thay đổi bằng net ranh giới (boundary / 경
 
 Đây là continuous accounting principle nằm dưới mass, charge, xác suất (probability / 확률) và fluid conservation.
 
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **14. Conservation law là accounting ở cấp trường dữ liệu (field / 필드)** nêu điều cần giải thích; **15. Local-to-global là mẫu (pattern / 패턴) lớn hơn calculus** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Units như sanity check** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Local-to-global là mẫu (pattern / 패턴) lớn hơn calculus
 
 Nhiều theorem có cấu trúc (structure / 구조):
@@ -401,6 +428,8 @@ per-step cost → total dynamic-programming cost
 ```
 
 Nhận ra mẫu (pattern / 패턴) này giúp transfer intuition giữa domains.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **16. Units như sanity check** tiếp nhận điểm tựa từ **15. Local-to-global là mẫu (pattern / 패턴) lớn hơn calculus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Continuous mô hình (model / 모델) là approximation của discrete reality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 16. Units như sanity check
 
@@ -426,6 +455,8 @@ có units KRW/day thì multiplying by a thời gian (time / 시간) interval cho
 
 Dimensional phân tích (analysis / 분석) thường bắt được confusion giữa trạng thái (state / 상태) và tỷ lệ (rate / 비율) trước cả algebra.
 
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **17. Continuous mô hình (model / 모델) là approximation của discrete reality** tiếp nhận điểm tựa từ **16. Units như sanity check** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. dùng chung (common / 공통) thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Continuous mô hình (model / 모델) là approximation của discrete reality
 
 People, packets và cơ sở dữ liệu (database / 데이터베이스) rows là discrete.
@@ -435,6 +466,8 @@ Derivative mô hình (model / 모델) có thể hữu ích khi quy mô (scale / 
 Ví dụ average yêu cầu (request / 요청) tỷ lệ (rate / 비율) 1000 req/s không nghĩa mỗi millisecond có đúng 1 yêu cầu (request / 요청).
 
 Continuous approximation smooths randomness và granularity.
+
+> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **18. dùng chung (common / 공통) thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **17. Continuous mô hình (model / 모델) là approximation của discrete reality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
@@ -458,6 +491,8 @@ Tỷ lệ (rate / 비율) có thể depend on trạng thái (state / 상태), t�
 
 Precise accumulation của wrong tỷ lệ (rate / 비율) law vẫn cho wrong kết quả (result / 결과).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tiếp nhận điểm tựa từ **18. dùng chung (common / 공통) thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Phần kết nối cho thấy rate và accumulation xuất hiện trong physics, finance, population và software metrics. Cùng một cặp derivative–integral có thể mô tả những hệ khác nhau nếu xác định đúng state và time scale.
@@ -473,6 +508,10 @@ Systems      → throughput → queue/backlog
 Physics      → velocity/flux → conserved quantity
 ```
 
+> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — tỷ lệ (rate / 비율), thay đổi (change / 변경) và Accumulation: từ difference đến conservation**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Mỗi khi gặp một quantity, hỏi: đây là state, local rate hay accumulated total? Nếu biết state, derivative/difference nói nó đang đổi thế nào. Nếu biết rate, sum/integral reconstruct net accumulation. Rất nhiều công thức khác domain chỉ là cùng accounting structure dưới notation khác nhau.
+
+> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

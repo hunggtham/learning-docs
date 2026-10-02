@@ -1,7 +1,6 @@
 # Không gian véc-tơ (vector / 벡터), cơ sở và số chiều
 
-> **Mạch đọc:** Đọc **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao cần lớp trừu tượng (abstraction / 추상화) này?** sang **véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao cần lớp trừu tượng (abstraction / 추상화) này?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối vector spaces với basis và dimension, để phân biệt không gian trừu tượng với cách biểu diễn cụ thể.
 
 Khi mới học véc-tơ (vector / 벡터), ta thường nghĩ đến mũi tên trong mặt phẳng hoặc không gian 3D. Nhưng tuyến tính (linear / 선형) algebra đi xa hơn nhiều: điều quan trọng không phải đối tượng (object / 객체) “trông như mũi tên”, mà là đối tượng (object / 객체) có thể **cộng** và **nhân với scalar** theo những quy tắc nhất quán hay không. Từ observation đó xuất hiện khái niệm không gian véc-tơ (vector / 벡터).
 
@@ -32,6 +31,8 @@ ta có vẻ bước sang lĩnh vực khác. Nhưng algebra bên dưới giống 
 
 Nếu bỏ qua bề ngoài và giữ lại operations, ta thấy cùng một tuyến tính (linear / 선형) cấu trúc (structure / 구조). véc-tơ (vector / 벡터) không gian (space / 공간) lớp trừu tượng (abstraction / 추상화) cho phép một theorem về basis, projection hoặc tuyến tính (linear / 선형) transformation áp dụng đồng thời cho hình học (geometry / 기하학), signals, dữ liệu (data / 데이터) và differential equations.
 
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?** tiếp nhận điểm tựa từ **Tại sao cần lớp trừu tượng (abstraction / 추상화) này?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?
 
 Cho một set `V` và scalar trường dữ liệu (field / 필드) thường là `R` hoặc `C`. Ta có véc-tơ (vector / 벡터) addition và scalar multiplication.
@@ -57,6 +58,8 @@ a(u+v)=au+av,
 ```
 
 Điểm của axioms không phải để memorize một danh sách. Chúng xác định minimum cấu trúc (structure / 구조) cần để algebra của tuyến tính (linear / 선형) combinations hoạt động đáng tin cậy.
+
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Span: những gì ta có thể tạo ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm
 
@@ -84,6 +87,8 @@ thì mọi véc-tơ (vector / 벡터) `(x,y)` có thể viết
 
 Hai vectors đó đủ để generate toàn plane.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Span: những gì ta có thể tạo ra** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) dependence: khi có redundancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Span: những gì ta có thể tạo ra
 
 Span của một collection vectors là set của tất cả tuyến tính (linear / 선형) combinations:
@@ -103,6 +108,8 @@ Trong `R^3`:
 - ba vectors phù hợp có thể span toàn `R^3`.
 
 Nếu một dataset có tính năng (feature / 기능) vectors nằm gần một low-dimensional span, dimensionality reduction có thể compress dữ liệu (data / 데이터) bằng cách tìm basis thích hợp cho subspace đó.
+
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tuyến tính (linear / 선형) dependence: khi có redundancy** tiếp nhận điểm tựa từ **Span: những gì ta có thể tạo ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis: spanning mà không dư thừa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến tính (linear / 선형) dependence: khi có redundancy
 
@@ -140,6 +147,8 @@ Tức `v_j` có thể được tạo từ những vectors còn lại. Nó không
 
 Trong regression, nếu một tính năng (feature / 기능) là chính xác (exact / 정확한) tuyến tính (linear / 선형) combination của others, thiết kế (design / 설계) ma trận (matrix / 행렬) mất full column rank. Parameters có thể không unique. Trong cơ sở dữ liệu (database / 데이터베이스)/reporting, nếu một derived column hoàn toàn được determine bởi các columns khác, nó không thêm independent thông tin (information / 정보) theo tuyến tính (linear / 선형) sense.
 
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis: spanning mà không dư thừa** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) dependence: khi có redundancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis không phải duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Basis: spanning mà không dư thừa
 
 Một basis (Basis / 기저) của véc-tơ (vector / 벡터) không gian (space / 공간) `V` là collection vectors vừa:
@@ -171,6 +180,8 @@ Tính **unique biểu diễn (representation / 표현)** này là consequence tr
 
 Nếu biểu diễn (representation / 표현) không unique, basis vectors dependent. Nếu một số véc-tơ (vector / 벡터) không represent được, collection chưa span toàn không gian (space / 공간).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis không phải duy nhất** tiếp nhận điểm tựa từ **Basis: spanning mà không dư thừa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Basis không phải duy nhất
 
 Trong `R^2`, tiêu chuẩn (standard / 표준) basis
@@ -192,6 +203,8 @@ cũng là basis vì hai vectors independent và span plane.
 Đây là một trong những mental shifts quan trọng nhất của tuyến tính (linear / 선형) algebra:
 
 > coordinates không phải véc-tơ (vector / 벡터); chúng là description của véc-tơ (vector / 벡터) relative to a chosen basis.
+
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** tiếp nhận điểm tựa từ **Basis không phải duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác
 
@@ -237,11 +250,15 @@ Nếu `P` invertible,
 
 Thay đổi (change / 변경) of basis vì thế là ma trận (matrix / 행렬) transformation giữa hai coordinate descriptions của cùng abstract véc-tơ (vector / 벡터).
 
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** tiếp nhận điểm tựa từ **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dimension: số degrees of freedom độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?
 
 Một operator phức tạp trong tiêu chuẩn (standard / 표준) basis có thể trở nên diagonal trong eigenbasis. Một tín hiệu (signal / 신호) khó nhìn theo thời gian (time / 시간) samples có thể trở nên sparse theo Fourier basis. PCA chọn orthogonal directions sao cho variance được concentrate vào few components.
 
 Đây không phải cosmetic coordinate thay đổi (change / 변경). biểu diễn (representation / 표현) phù hợp có thể biến computation từ coupled thành gần independent, làm mẫu (pattern / 패턴) rõ hơn và giảm dimension cần thiết.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Dimension: số degrees of freedom độc lập** tiếp nhận điểm tựa từ **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dimension: số degrees of freedom độc lập
 
@@ -278,6 +295,8 @@ cần bốn independent coefficients.
 
 Dimension không phải “số values đang lưu” một cách máy móc. Nó là số independent coordinates cần để specify arbitrary véc-tơ (vector / 벡터) trong không gian (space / 공간).
 
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** tiếp nhận điểm tựa từ **Dimension: số degrees of freedom độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Column không gian (space / 공간) và null không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn
 
 Một subset `W⊆V` là subspace nếu nó tự đóng dưới véc-tơ (vector / 벡터) addition và scalar multiplication.
@@ -306,6 +325,8 @@ Ax=b
 
 với `b≠0` thường tạo affine set.
 
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Column không gian (space / 공간) và null không gian (space / 공간)** tiếp nhận điểm tựa từ **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rank-nullity: accounting của dimensions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Column không gian (space / 공간) và null không gian (space / 공간)
 
 Cho ma trận (matrix / 행렬)
@@ -333,6 +354,8 @@ Hai spaces này trả lời hai questions khác nhau:
 - transformation có thể tạo ra outputs nào?
 - transformation làm mất những đầu vào (input / 입력) directions nào?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Rank-nullity: accounting của dimensions** tiếp nhận điểm tựa từ **Column không gian (space / 공간) và null không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Rank-nullity: accounting của dimensions
 
 Một theorem trung tâm là
@@ -353,6 +376,8 @@ Ví dụ nếu `A:R^5→R^3` có rank 3, thì nullity là 2. Transformation gi�
 
 Đây là một dạng conservation/accounting law cho tuyến tính (linear / 선형) thông tin (information / 정보).
 
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** tiếp nhận điểm tựa từ **Rank-nullity: accounting của dimensions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Orthogonal và orthonormal basis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Coordinates như compression khi cấu trúc (structure / 구조) tồn tại
 
 Nếu một đối tượng (object / 객체) sống trong high-dimensional ambient không gian (space / 공간) nhưng thực sự nằm trong lower-dimensional subspace, basis của subspace cho biểu diễn (representation / 표현) compact hơn.
@@ -360,6 +385,8 @@ Nếu một đối tượng (object / 객체) sống trong high-dimensional ambi
 Ví dụ ảnh (image / 이미지) 100×100 pixels có 10,000 raw dimensions, nhưng nếu dataset variation chủ yếu nằm gần một lower-dimensional manifold/subspace, PCA có thể represent phần lớn variance bằng vài hundred components.
 
 Đây là lý do dimension reduction không chỉ là “xóa columns”. Nó tìm coordinate hệ thống (system / 시스템) nơi thông tin (information / 정보) relevant concentrate hơn.
+
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Orthogonal và orthonormal basis** tiếp nhận điểm tựa từ **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Orthogonal và orthonormal basis
 
@@ -387,6 +414,8 @@ Không cần solve full hệ tuyến tính (linear system / 선형 시스템). P
 
 Orthonormal bases cũng thường numerically stable hơn vì basis vectors không gần dependent.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** tiếp nhận điểm tựa từ **Orthogonal và orthonormal basis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều
 
 Tuyến tính (linear / 선형) algebra không dừng ở finite tuples. Consider không gian (space / 공간) của functions trên interval. Nếu `f` và `g` là functions, ta có
@@ -407,6 +436,8 @@ Fourier phân tích (analysis / 분석) nhìn hàm (function / 함수) như comb
 
 Vì vậy idea basis/dimension mở đường từ elementary tuyến tính (linear / 선형) algebra sang phân tích (analysis / 분석) và mathematical physics.
 
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** tiếp nhận điểm tựa từ **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Curse of dimensionality: tại sao nhiều dimensions khó?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)
 
 Một mẫu (sample / 표본) có thể được represent thành tính năng (feature / 기능) véc-tơ (vector / 벡터)
@@ -420,6 +451,8 @@ x=(x_1,\ldots,x_d).
 Nếu features strongly correlated, effective thông tin (information / 정보) dimension có thể thấp hơn. Nếu một tính năng (feature / 기능) chính xác (exact / 정확한) combination của others, thiết kế (design / 설계) ma trận (matrix / 행렬) rank giảm.
 
 Điều này nối trực tiếp tuyến tính (linear / 선형) independence, rank và conditioning với practical ML issues như multicollinearity.
+
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Curse of dimensionality: tại sao nhiều dimensions khó?** tiếp nhận điểm tựa từ **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Curse of dimensionality: tại sao nhiều dimensions khó?
 
@@ -445,6 +478,8 @@ Distance hình học (geometry / 기하학) cũng thay đổi. Trong many high-d
 
 Đây là lý do algorithms dựa trên cục bộ (local / 로컬) density hoặc nearest neighbors cần careful scaling, regularization, dimensionality reduction hoặc structural các giả định (assumptions / 가정들).
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Curse of dimensionality: tại sao nhiều dimensions khó?** nêu điều cần giải thích; **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)
 
 Cùng idea “choose coordinates” xuất hiện ngoài pure mathematics.
@@ -452,6 +487,8 @@ Cùng idea “choose coordinates” xuất hiện ngoài pure mathematics.
 One-hot encoding chọn tiêu chuẩn (standard / 표준) basis-like biểu diễn (representation / 표현) cho categories. Embedding học một coordinate biểu diễn (representation / 표현) dense hơn. PCA chọn orthogonal basis từ covariance cấu trúc (structure / 구조). Fourier transform đổi từ thời gian (time / 시간)/mẫu (sample / 표본) coordinates sang frequency coordinates. Wavelets chọn localized multi-scale basis.
 
 Không phải mọi biểu diễn (representation / 표현) là literal tuyến tính (linear / 선형) basis, nhưng mô hình tư duy (mental model / 사고 모델) giống nhau: **cùng đối tượng (object / 객체) có thể dễ hiểu hơn trong coordinate hệ thống (system / 시스템) phù hợp**.
+
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** nêu điều cần giải thích; **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ
 
@@ -462,6 +499,8 @@ Xác suất (probability / 확률) distributions không thể cộng arbitrary c
 Trong các trường hợp đó, forcing vector-space intuition có thể gây sai. Ta có thể cần affine spaces, manifolds, groups, cones hoặc xác suất (probability / 확률) simplices.
 
 Biết khi nào tuyến tính (linear / 선형) cấu trúc (structure / 구조) không phù hợp cũng quan trọng như biết dùng nó.
+
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, sau nội dung của **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ**, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors
 
@@ -475,6 +514,8 @@ Trong eigenbasis, operator trở thành diagonal scaling. Đây là ultimate exa
 
 Nếu ma trận (matrix / 행렬) defective và không có đủ eigenvectors, diagonal basis không tồn tại; ta cần richer structures như Jordan form. Vì vậy basis availability ảnh hưởng trực tiếp cách ta simplify transformation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** tiếp nhận điểm tựa từ **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier
 
 Sine/cosine hoặc complex exponentials đóng vai trò basis functions cho nhiều tín hiệu (signal / 신호) spaces. Time-domain waveform có thể được represent bằng coefficients theo frequency components.
@@ -483,9 +524,13 @@ Cùng tín hiệu (signal / 신호) không thay đổi; chỉ coordinate ngôn n
 
 Đây là lý do basis không phải một khái niệm abstract tách khỏi kỹ thuật (engineering / 엔지니어링) — nó quyết định biểu diễn (representation / 표현) nơi thao tác (operation / 연산) trở nên đơn giản.
 
+> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > véc-tơ (vector / 벡터) không gian (space / 공간) là một universe của những objects có thể được kết hợp tuyến tính. Span hỏi “ta tạo được những gì?”, independence hỏi “có redundancy không?”, basis là vocabulary tối thiểu đủ để diễn đạt mọi véc-tơ (vector / 벡터), còn dimension là số degrees of freedom độc lập. Đổi basis không đổi đối tượng (object / 객체); nó đổi ngôn ngữ mô tả đối tượng (object / 객체), và một ngôn ngữ tốt có thể làm cấu trúc (structure / 구조) ẩn trở nên hiển nhiên.
+
+> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -499,4 +544,4 @@ Cùng tín hiệu (signal / 신호) không thay đổi; chỉ coordinate ngôn n
 
 **“High dimension luôn tốt vì chứa nhiều thông tin (information / 정보).”** Higher ambient dimension có thể chỉ thêm redundancy/noise và làm estimation khó hơn. giá trị (value / 값) nằm ở independent, relevant cấu trúc (structure / 구조) chứ không phải dimension count tự thân.
 
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Dùng chung (common / 공통) Misconceptions**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

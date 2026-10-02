@@ -1,7 +1,6 @@
 # Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều
 
-> **Mạch đọc:** Đọc **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ scalar đến véc-tơ (vector / 벡터), ma trận (matrix / 행렬) rồi tensor** sang **Multilinearity là ý tưởng trung tâm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ scalar đến véc-tơ (vector / 벡터), ma trận (matrix / 행렬) rồi tensor** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Multilinearity là ý tưởng trung tâm** để mở rộng đối tượng sang phạm vi kế cận. Mạch này nối tensors với multilinear algebra, để mở rộng vector và ma trận sang nhiều chiều mà vẫn giữ quy tắc biến đổi.
 
 Véc-tơ (vector / 벡터) và ma trận (matrix / 행렬) thường được học như hai loại đối tượng (object / 객체) tách biệt: véc-tơ (vector / 벡터) là một dãy số, ma trận (matrix / 행렬) là một bảng số. Cách nhìn này đủ để tính toán, nhưng chưa cho thấy bản chất sâu hơn. véc-tơ (vector / 벡터) mô tả một đại lượng tuyến tính theo một hướng, ma trận (matrix / 행렬) mô tả một phép biến đổi tuyến tính giữa hai không gian, còn **tensor (텐서)** là cách tổng quát hóa để mô tả quan hệ multilinear giữa nhiều không gian cùng lúc.
 
@@ -29,6 +28,8 @@ có hai chỉ số và thường được xem như tensor bậc 2 trong một ba
 
 Điều quan trọng là **rank/thứ tự (order / 순서) của tensor không đồng nghĩa với ma trận (matrix / 행렬) rank**. Tensor thứ tự (order / 순서) nói số lượng indices cần để xác định một thành phần (component / 컴포넌트). ma trận (matrix / 행렬) rank nói số chiều của ảnh (image / 이미지) hoặc số lượng direction độc lập mà ma trận (matrix / 행렬) giữ lại.
 
+> **Chuyển mạch:** Trong **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Multilinearity là ý tưởng trung tâm** tiếp nhận điểm tựa từ **Từ scalar đến véc-tơ (vector / 벡터), ma trận (matrix / 행렬) rồi tensor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tensor sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Multilinearity là ý tưởng trung tâm
 
 Một hàm (function / 함수) tuyến tính theo một biến thỏa
@@ -54,6 +55,8 @@ B(u,v)=u^TAv.
 ```
 
 Ma trận (matrix / 행렬) `A` ở đây không chỉ là bảng số. Nó là biểu diễn (representation / 표현) của một bilinear đối tượng (object / 객체) sau khi ta chọn basis.
+
+> **Chuyển mạch:** Ở chặng này của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Tensor sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **Multilinearity là ý tưởng trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis và components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tensor sản phẩm (product / 제품)
 
@@ -95,6 +98,8 @@ u_2v_1&u_2v_2&u_2v_3
 
 Không phải tensor nào cũng biểu diễn được bằng đúng một outer sản phẩm (product / 제품). Nhiều tensor phải là tổng của nhiều simple tensors.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Basis và components** tiếp nhận điểm tựa từ **Tensor sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Covariant và contravariant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Basis và components
 
 Giả sử `e_1,...,e_n` là basis của `V`. véc-tơ (vector / 벡터) được viết
@@ -112,6 +117,8 @@ T=\sum_{i,j} T^{ij} e_i\otimes e_j.
 Các số `T^{ij}` là components phụ thuộc basis. Nếu đổi basis, components đổi theo một quy luật xác định sao cho tensor vật lý hoặc hình học vẫn là cùng đối tượng (object / 객체).
 
 Đây là lý do phát biểu “tensor là multidimensional array” chưa đủ. Array chỉ là tập components sau khi basis đã được chọn.
+
+> **Chuyển mạch:** Trong **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Covariant và contravariant** tiếp nhận điểm tựa từ **Basis và components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Covariant và contravariant
 
@@ -133,6 +140,8 @@ là scalar. Tensor tổng quát có thể nhận cả véc-tơ (vector / 벡터)
 
 Trong Euclidean không gian (space / 공간) với orthonormal basis, distinction này thường bị che khuất vì inner sản phẩm (product / 제품) cho phép chuyển đổi giữa véc-tơ (vector / 벡터) và covector. Trong curved coordinates hoặc differential hình học (geometry / 기하학), distinction trở nên quan trọng.
 
+> **Chuyển mạch:** Ở chặng này của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Contraction** tiếp nhận điểm tựa từ **Covariant và contravariant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Einstein summation convention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Contraction
 
 **Tensor contraction (텐서 축약)** là phép tổng theo một cặp indices, làm giảm tensor thứ tự (order / 순서).
@@ -153,6 +162,8 @@ Dấu vết (trace / 추적) cũng là contraction:
 
 Trong deep học tập (learning / 학습), các operations như `einsum` trong NumPy/PyTorch cho phép mô tả trực tiếp contraction bằng notation kiểu Einstein.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Einstein summation convention** tiếp nhận điểm tựa từ **Contraction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shape trong machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Einstein summation convention
 
 Trong nhiều tài liệu physics và hình học (geometry / 기하학), một chỉ mục (index / 인덱스) xuất hiện hai lần trong một term được hiểu là tự động sum.
@@ -170,6 +181,8 @@ y_i=A_{ij}x_j.
 ```
 
 Convention này làm các biểu thức tensor gọn hơn và làm rõ indices nào còn lại sau thao tác (operation / 연산).
+
+> **Chuyển mạch:** Trong **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Shape trong machine học tập (learning / 학습)** tiếp nhận điểm tựa từ **Einstein summation convention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Broadcasting không phải tensor algebra thuần túy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Shape trong machine học tập (learning / 학습)
 
@@ -189,11 +202,15 @@ Shape giúp biết số components trên từng axis, nhưng không tự cho bi�
 
 Một kỹ năng quan trọng khi đọc mô hình (model / 모델) mã (code / 코드) là luôn gắn mỗi axis với một ý nghĩa (semantic meaning / 의미적 뜻) thay vì chỉ nhìn kích thước.
 
+> **Chuyển mạch:** Ở chặng này của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Broadcasting không phải tensor algebra thuần túy** tiếp nhận điểm tựa từ **Shape trong machine học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symmetric và antisymmetric tensors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Broadcasting không phải tensor algebra thuần túy
 
 Khung phần mềm (framework / 프레임워크) numerical thường hỗ trợ broadcasting. Ví dụ tensor shape `(32,128,768)` có thể cộng véc-tơ (vector / 벡터) `(768,)`; véc-tơ (vector / 벡터) được conceptual repeat trên batch và chuỗi (sequence / 시퀀스) axes.
 
 Broadcasting là convention của array programming, không phải một phép tensor basis-independent. Nó rất hữu ích trong mã (code / 코드) nhưng cần phân biệt với tensor contraction, outer sản phẩm (product / 제품) hay coordinate transformation.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Symmetric và antisymmetric tensors** tiếp nhận điểm tựa từ **Broadcasting không phải tensor algebra thuần túy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tensor decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Symmetric và antisymmetric tensors
 
@@ -213,11 +230,15 @@ T_{ij}=-T_{ji}.
 
 Điều này kéo theo `T_{ii}=0`. Các antisymmetric forms liên quan chặt với orientation, cross sản phẩm (product / 제품) và differential forms.
 
+> **Chuyển mạch:** Trong **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Tensor decomposition** tiếp nhận điểm tựa từ **Symmetric và antisymmetric tensors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tensors và neural networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tensor decomposition
 
 Tương tự ma trận (matrix / 행렬) có SVD, tensor cũng có các decomposition nhằm tách cấu trúc (structure / 구조) thành components đơn giản hơn. Hai ý tưởng thường gặp là CP decomposition và Tucker decomposition.
 
 Mục tiêu có thể là compression, denoising, latent factor discovery hoặc giảm computational chi phí (cost / 비용). Khác ma trận (matrix / 행렬) SVD, tensor decomposition thường phức tạp hơn và nhiều bài toán không còn closed-form đẹp.
+
+> **Chuyển mạch:** Ở chặng này của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Tensors và neural networks** tiếp nhận điểm tựa từ **Tensor decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tensors và neural networks
 
@@ -231,9 +252,13 @@ Khi batch nhiều samples được xử lý cùng lúc, `x` trở thành ma tr�
 
 Tuy nhiên cốt lõi (core / 핵심) math vẫn quay về các thao tác (operation / 연산) tuyến tính, contraction, element-wise nonlinearities và differentiation.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Tensors và neural networks** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Hãy hình dung véc-tơ (vector / 벡터) là một đối tượng (object / 객체) có một “slot tuyến tính”, ma trận (matrix / 행렬)/bilinear form có hai slots, tensor có nhiều slots. Components là cách đối tượng (object / 객체) đó trông như thế nào khi đặt nó vào một coordinate hệ thống (system / 시스템) cụ thể. Tensor algebra nghiên cứu cách kết hợp, đặc tả hợp đồng (contract / 계약) và transform các slots này mà không đánh mất cấu trúc (structure / 구조).
+
+> **Chuyển mạch:** Trong **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -241,8 +266,10 @@ Hãy hình dung véc-tơ (vector / 벡터) là một đối tượng (object / �
 
 Một nhầm lẫn khác là xem mọi dimension trong tensor software như một spatial dimension toán học. Trong ML, một axis có thể là batch chỉ mục (index / 인덱스), đơn vị từ (token / 토큰) chỉ mục (index / 인덱스) hoặc category chỉ mục (index / 인덱스); meaning đến từ mô hình (model / 모델), không đến từ array shape.
 
+> **Chuyển mạch:** Ở chặng này của **Tensor và multilinear algebra: mở rộng véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và cách biểu diễn quan hệ nhiều chiều**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
 Chapter này nối trực tiếp với [Vector spaces, basis và dimension](./03_vector_spaces_basis_dimension.md), [Linear transformations](./02_linear_transformations.md), [Inner product và projection](./06_inner_product_orthogonality_and_projection.md), và là prerequisite tự nhiên cho [Matrix calculus, Jacobian, Hessian và automatic differentiation](./09_matrix_calculus_jacobian_hessian_and_autodiff.md).
 
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
