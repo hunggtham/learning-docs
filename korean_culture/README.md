@@ -1,7 +1,6 @@
 # Korean Culture — Master kiến thức (knowledge / 지식) Book
 
-> **Mạch đọc:** Đọc **Korean Culture — Master kiến thức (knowledge / 지식) Book** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mục tiêu của bộ sách** sang **Quy ước ngôn ngữ Việt–Hàn–Anh**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** Đây là README owner của **Korean Culture — Master Knowledge Book**. Route đọc đi từ hệ thống văn hóa/lịch sử → quan hệ/ngôn ngữ/đời sống → vùng miền/truyền thông → biến đổi đương đại → glossary, naming và reference map.
 
 Bộ tài liệu Markdown chuyên sâu bằng tiếng Việt về **Văn hoá Hàn Quốc (한국문화 / Korean Culture)**, được tổ chức theo **quan hệ phụ thuộc khái niệm (conceptual dependency)** và **tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, không theo Beginner → Intermediate → Advanced.
 
@@ -27,8 +26,7 @@ lịch sử / sinh thái
 
 Cách tiếp cận này giúp tránh **định kiến khái quát (stereotype)** và cho phép người đọc cập nhật **mô hình tư duy (mental model / 사고 모델)** khi gặp người, công ty, thế hệ hoặc vùng miền khác với ví dụ trong sách.
 
-
-> **Chuyển mạch:** Từ **Mục tiêu của bộ sách**, ta sang **Quy ước ngôn ngữ Việt–Hàn–Anh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Korean Culture — Master kiến thức (knowledge / 지식) Book**, **Quy ước ngôn ngữ Việt–Hàn–Anh** tiếp nhận điểm tựa từ **Mục tiêu của bộ sách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức độ bao phủ hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy ước ngôn ngữ Việt–Hàn–Anh
 
@@ -40,8 +38,7 @@ Tên người, địa điểm, triều đại, sự kiện, công trình và vă
 
 Xem bảng quy tắc và tên chuẩn tại [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md). Tên hiện đại không có cách Việt hoá tự nhiên sẽ giữ cách phiên âm La-tinh (romanization) để dễ nhận diện và tra cứu.
 
-
-> **Chuyển mạch:** Từ **Quy ước ngôn ngữ Việt–Hàn–Anh**, ta sang **Mức độ bao phủ hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Korean Culture — Master kiến thức (knowledge / 지식) Book**, **Mức độ bao phủ hiện tại** tiếp nhận điểm tựa từ **Quy ước ngôn ngữ Việt–Hàn–Anh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mức độ bao phủ hiện tại
 
@@ -90,8 +87,7 @@ Các chương nền tảng cũng được viết theo hướng “đọc để h
 - [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) mở rộng hành trình bệnh nhân, bảo hiểm, sàng lọc, y học truyền thống, sức khoẻ tinh thần, health literacy, continuity of care, lao động chăm sóc và sức khoẻ môi trường;
 - [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) mở rộng lịch sử cổng thông tin, sai lệch mẫu của cộng đồng, KakaoTalk, ảnh chụp màn hình, vòng đời tiếng lóng, kinh tế người sáng tạo, quyền riêng tư và vấn đề niềm tin do AI/deepfake.
 
-
-> **Chuyển mạch:** Từ **Mức độ bao phủ hiện tại**, ta sang **Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Master kiến thức (knowledge / 지식) Book**, **Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo** tiếp nhận điểm tựa từ **Mức độ bao phủ hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đọc theo mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo
 
@@ -110,8 +106,7 @@ kiểm toán trùng lặp
 
 [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) hiện đóng vai trò đồ thị kiến thức xuyên chương; [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) là bảng tra Việt–Hàn–Anh và bản đồ nguồn; [`coverage_audit.md`](coverage_audit.md) là lớp kiểm soát chất lượng.
 
-
-> **Chuyển mạch:** Từ **Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo**, ta sang **Cách đọc theo mục tiêu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Korean Culture — Master kiến thức (knowledge / 지식) Book**, **Cách đọc theo mục tiêu** tiếp nhận điểm tựa từ **Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KIIP — 한국사회 이해 시험 대비** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách đọc theo mục tiêu
 
@@ -205,19 +200,17 @@ Hallyu được đọc như chuỗi giá trị gồm IP, lao động sáng tạo
 
 Lộ trình 6 đặc biệt quan trọng nếu mục tiêu không chỉ là “biết Korean culture” mà là có thể gặp một hiện tượng mới rồi tự hỏi đúng câu hỏi, kiểm tra bằng chứng và tránh định kiến.
 
-
-> **Chuyển mạch:** Từ **Cách đọc theo mục tiêu**, ta sang **KIIP — 한국사회 이해 시험 대비** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Korean Culture — Master kiến thức (knowledge / 지식) Book**, **KIIP — 한국사회 이해 시험 대비** tiếp nhận điểm tựa từ **Cách đọc theo mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## KIIP — 한국사회 이해 시험 대비
 
 Thư mục [`kiip/`](kiip/README.md) là **bộ ghi chú (note / 노트) duy nhất về nội dung thi KIIP bên trong Korean Culture**. Nó không chia theo mức (level / 수준) và không quyết định cấu trúc hoặc độ sâu của Master kiến thức (knowledge / 지식) Book. Khi phát triển bộ `korean_culture/`, ưu tiên của các chương chính vẫn là hiểu bản chất văn hoá và **cơ chế xã hội (social mechanism)**, không tối ưu theo dạng đề KIIP.
 
-
-> **Chuyển mạch:** Từ **KIIP — 한국사회 이해 시험 대비**, ta sang **Nguyên tắc xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Korean Culture — Master kiến thức (knowledge / 지식) Book**, **Nguyên tắc xuyên suốt** tiếp nhận điểm tựa từ **KIIP — 한국사회 이해 시험 대비** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguyên tắc xuyên suốt
 
-Các nguyên tắc dưới đây là tiêu chuẩn để đọc và viết mọi chapter trong library. Hãy dùng chúng như câu hỏi kiểm tra sau mỗi route, không chỉ như lời giới thiệu.
+Các nguyên tắc dưới đây là tiêu chuẩn để đọc và viết mọi chapter trong library. Hãy dùng chúng để tự rà soát sau mỗi route, không chỉ như lời giới thiệu.
 
 - Hiểu bản chất quan trọng hơn ghi nhớ (Understanding > Memorization).
 - Cơ chế quan trọng hơn định kiến khái quát (mechanism > stereotype).
@@ -234,4 +227,4 @@ Các nguyên tắc dưới đây là tiêu chuẩn để đọc và viết mọi
 
 Các chương được thiết kế để đọc trực tiếp trong Obsidian, GitHub hoặc trình đọc Markdown. [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) dùng để nối các chương thành **đồ thị kiến thức (knowledge graph)**; [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) dùng để tra nhanh thuật ngữ Hàn–Anh–Việt và nguồn mở rộng; [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md) dùng để chuẩn hoá tên Việt–Hàn–Anh; [`coverage_audit.md`](coverage_audit.md) dùng để kiểm soát mức độ bao phủ và định hướng các vòng cập nhật tiếp theo.
 
-> **Bàn giao:** Sau **Nguyên tắc xuyên suốt**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Nguyên tắc xuyên suốt**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

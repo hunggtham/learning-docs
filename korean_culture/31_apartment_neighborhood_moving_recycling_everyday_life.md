@@ -1,13 +1,14 @@
 # Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật
 
-> **Mạch đọc:** Đặt **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Căn hộ không chỉ là chỗ ở** sang **이사: chuyển nhà như một lần di chuyển cả hệ thống**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**. Route đi từ apartment infrastructure → neighborhood norms → moving/이사 logistics → recycling/shared rules → everyday coordination, để nơi ở nối vật chất với hành vi cộng đồng.
 
 ## Căn hộ không chỉ là chỗ ở
 
 Trong xã hội Hàn Quốc hiện đại, **căn hộ (apartment / 아파트)** là một trong những hạ tầng quan trọng nhất của đời sống đô thị. Nó không chỉ quyết định người ta ngủ ở đâu mà còn ảnh hưởng khu trường học, thời gian đi lại, giao bưu kiện, đỗ xe, quan hệ hàng xóm, xử lý rác và cách trẻ em sử dụng không gian chung.
 
 Một khu căn hộ lớn có thể hoạt động gần như một **thành phố thu nhỏ (micro-city / 소규모 도시)**: có cổng, bảo vệ, sân chơi, bãi đỗ xe, văn phòng quản lý, trung tâm người cao tuổi, tiện ích và các quy tắc chung. Vì vậy văn hoá căn hộ là văn hoá của việc hàng trăm hộ gia đình phải chia sẻ cùng một hạ tầng.
+
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **이사: chuyển nhà như một lần di chuyển cả hệ thống** tiếp nhận điểm tựa từ **Căn hộ không chỉ là chỗ ở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **포장이사: thuê ngoài độ phức tạp của việc nhà** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 이사: chuyển nhà như một lần di chuyển cả hệ thống
 
@@ -17,6 +18,8 @@ Nếu ví hộ gia đình như một hệ thống phần mềm, `이사` gần v
 
 Chính vì số lượng phụ thuộc lớn, Hàn Quốc có thị trường **dịch vụ chuyển nhà (moving service / 이삿짐센터)** và **chuyển nhà trọn gói (full-service moving / 포장이사)** phát triển. Hộ gia đình trả tiền để chuyển một phần chi phí phối hợp sang nhà cung cấp dịch vụ.
 
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **포장이사: thuê ngoài độ phức tạp của việc nhà** tiếp nhận điểm tựa từ **이사: chuyển nhà như một lần di chuyển cả hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **손 없는 날: niềm tin truyền thống trong một thị trường hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 포장이사: thuê ngoài độ phức tạp của việc nhà
 
 Trong `포장이사`, đội dịch vụ có thể đóng gói, vận chuyển và sắp xếp lại nhiều đồ thay cho gia đình. Đây là ví dụ của một mẫu hiện đại rộng hơn: công việc từng do mạng lưới gia đình tự làm được chuyển sang dịch vụ thị trường.
@@ -25,6 +28,8 @@ Trong `포장이사`, đội dịch vụ có thể đóng gói, vận chuyển v
 
 Cơ chế này giống `산후조리원`, giao hàng hoặc dịch vụ dọn dẹp: thị trường lấp một chức năng trước đây thường nằm trong hộ gia đình.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **손 없는 날: niềm tin truyền thống trong một thị trường hiện đại** tiếp nhận điểm tựa từ **포장이사: thuê ngoài độ phức tạp của việc nhà** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **짜장면 và hình ảnh ngày chuyển nhà** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 손 없는 날: niềm tin truyền thống trong một thị trường hiện đại
 
 **Son eomneun nal (손 없는 날)** là những ngày được dân gian xem là ít bị các lực xấu hoặc `손` quấy nhiễu, nên thường được chọn cho việc chuyển nhà, cưới hỏi hoặc bắt đầu việc quan trọng.
@@ -32,6 +37,8 @@ Cơ chế này giống `산후조리원`, giao hàng hoặc dịch vụ dọn d�
 Đây là ví dụ cho thấy niềm tin có thể ảnh hưởng thị trường thật dù khẳng định siêu nhiên không có cơ sở khoa học được xác nhận. Nếu nhiều người cùng muốn chuyển nhà vào một số ngày, nhu cầu dịch vụ tăng và giá hoặc khả năng đặt lịch có thể thay đổi.
 
 Vì vậy niềm tin văn hoá có thể tạo **hiệu ứng kinh tế thông qua phối hợp**, ngay cả khi người phân tích không chấp nhận cách giải thích siêu nhiên theo nghĩa đen.
+
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **짜장면 và hình ảnh ngày chuyển nhà** tiếp nhận điểm tựa từ **손 없는 날: niềm tin truyền thống trong một thị trường hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **관리사무소 và quản trị rất gần đời sống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 짜장면 và hình ảnh ngày chuyển nhà
 
@@ -44,6 +51,8 @@ sự tiện lợi thực dụng
 → trở thành liên tưởng văn hoá
 ```
 
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **관리사무소 và quản trị rất gần đời sống** tiếp nhận điểm tựa từ **짜장면 và hình ảnh ngày chuyển nhà** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **경비실 và vai trò của bảo vệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 관리사무소 và quản trị rất gần đời sống
 
 **Văn phòng quản lý (management office / 관리사무소)** xử lý nhiều vấn đề của khu căn hộ: cơ sở vật chất, thông báo, đỗ xe, phối hợp sửa chữa hoặc quy tắc chung. Người ở căn hộ vì vậy tiếp xúc với một lớp quản trị nằm giữa hộ gia đình và chính quyền địa phương.
@@ -51,6 +60,8 @@ sự tiện lợi thực dụng
 Có thể xem đây là một lớp vận hành địa phương. Chính quyền thành phố không thể trực tiếp xử lý mọi thang máy, rò nước hoặc xung đột đỗ xe; khu căn hộ có thiết chế trung gian.
 
 Trong thiết kế hệ thống, lớp trung gian làm giảm tải cho lớp trên nhưng đồng thời tạo thêm quy tắc và kênh giao tiếp.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **경비실 và vai trò của bảo vệ** tiếp nhận điểm tựa từ **관리사무소 và quản trị rất gần đời sống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **층간소음: khi vật lý trở thành quan hệ xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 경비실 và vai trò của bảo vệ
 
@@ -60,6 +71,8 @@ Trong thiết kế hệ thống, lớp trung gian làm giảm tải cho lớp tr
 
 Đây là cùng cơ chế gặp ở giao hàng, tổng đài và chăm sóc khách hàng: ma sát thấp phía người tiêu dùng thường có chi phí ở phía lao động.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **층간소음: khi vật lý trở thành quan hệ xã hội** tiếp nhận điểm tựa từ **경비실 và vai trò của bảo vệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **엘리베이터: phép lịch sự trong một không gian nhỏ và tạm thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 층간소음: khi vật lý trở thành quan hệ xã hội
 
 **Tiếng ồn giữa các tầng (inter-floor noise / 층간소음)** là một trong những xung đột nổi bật của đời sống căn hộ. Vấn đề bắt đầu từ vật lý: tiếng va đập và tiếng truyền trong không khí đi qua kết cấu. Nhưng nó nhanh chóng trở thành vấn đề xã hội vì người gây tiếng và người chịu tiếng có cảm nhận khác nhau.
@@ -67,6 +80,8 @@ Trong thiết kế hệ thống, lớp trung gian làm giảm tải cho lớp tr
 Một gia đình có trẻ nhỏ có thể xem tiếng chạy là sinh hoạt bình thường; hộ phía dưới có thể trải nghiệm nó như sự quấy nhiễu lặp lại. Không có một cảm biến chung hoàn hảo khiến hai bên “cảm” cùng mức tiếng ồn.
 
 Đây là xung đột điển hình giữa **hành động riêng** và **tác động ngoại biên chung (shared externality)**. Kiến trúc, tiêu chuẩn cách âm, thời điểm trong ngày, cách giao tiếp và quan hệ hàng xóm đều ảnh hưởng kết quả.
+
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **엘리베이터: phép lịch sự trong một không gian nhỏ và tạm thời** tiếp nhận điểm tựa từ **층간소음: khi vật lý trở thành quan hệ xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **택배 và căn hộ như điểm cuối của mạng hậu cần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 엘리베이터: phép lịch sự trong một không gian nhỏ và tạm thời
 
@@ -76,6 +91,8 @@ Thang máy tạo những tương tác vi mô lặp lại hằng ngày. Giữ c�
 
 Đây là tính ẩn danh đô thị trong một “ngôi làng thẳng đứng”.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **택배 và căn hộ như điểm cuối của mạng hậu cần** tiếp nhận điểm tựa từ **엘리베이터: phép lịch sự trong một không gian nhỏ và tạm thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **무인택배함 và tự động hoá niềm tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 택배 và căn hộ như điểm cuối của mạng hậu cần
 
 **Giao bưu kiện (parcel delivery / 택배)** trở nên rất hiệu quả khi nhiều hộ tập trung trong cùng khu. Một người giao hàng có thể giao nhiều gói trong khoảng cách ngắn. Địa chỉ chuẩn hoá, mã vào cửa, sảnh và tủ nhận hàng tiếp tục giảm chi phí giao dịch.
@@ -84,11 +101,15 @@ Khi mua sắm trực tuyến tăng, lối vào khu căn hộ trở thành một 
 
 Nhưng tiện lợi này tạo vấn đề thứ cấp: lưu trữ hàng, nguy cơ thất lạc, rác bìa carton và lưu lượng người giao hàng.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **무인택배함 và tự động hoá niềm tin** tiếp nhận điểm tựa từ **택배 và căn hộ như điểm cuối của mạng hậu cần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **분리수거: tái chế như giao thức của hộ gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 무인택배함 và tự động hoá niềm tin
 
 **Tủ nhận hàng tự động (unmanned parcel locker / 무인택배함)** thay một tương tác trực tiếp bằng xác thực và lưu trữ tạm thời. Niềm tin chuyển từ người-với-người sang hệ thống-với-người dùng.
 
 Trong giao hàng truyền thống, người nhận cần có mặt. Với tủ nhận hàng, trao đổi không đồng bộ về thời gian trở thành bình thường. Đây là cùng lô-gic (logic / 논리) với ATM, quầy tự thanh toán hoặc dịch vụ đám mây: phối hợp không nhất thiết xảy ra đồng thời.
+
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **분리수거: tái chế như giao thức của hộ gia đình** tiếp nhận điểm tựa từ **무인택배함 và tự động hoá niềm tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **종량제 và nguyên tắc “người thải trả chi phí”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 분리수거: tái chế như giao thức của hộ gia đình
 
@@ -98,17 +119,23 @@ Trong giao hàng truyền thống, người nhận cần có mặt. Với tủ n
 
 Nếu một nút phân loại sai, chi phí được đẩy sang người lao động hoặc công đoạn xử lý sau. Đây là một chuỗi cung ứng đảo ngược: sản phẩm đi từ nhà sản xuất → hộ gia đình, còn rác đi từ hộ gia đình → thu gom → phân loại → xử lý.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **종량제 và nguyên tắc “người thải trả chi phí”** tiếp nhận điểm tựa từ **분리수거: tái chế như giao thức của hộ gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **음식물쓰레기: rác thực phẩm như một vấn đề riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 종량제 và nguyên tắc “người thải trả chi phí”
 
 **Hệ thống phí rác theo lượng (volume-based waste fee / 쓰레기 종량제)** gắn chi phí xử lý với lượng rác thông qua túi hoặc phương thức được quy định. Cơ chế động lực đơn giản: khi chi phí biên của rác trở nên nhìn thấy được, hộ gia đình có lý do giảm rác và phân loại tốt hơn.
 
 Không nên ghi nhớ chi tiết túi rác như một quy tắc quốc gia đồng nhất vì mỗi địa phương có thể triển khai khác. Mô hình quan trọng hơn là: chính sách môi trường đi vào văn hoá hằng ngày qua giao diện rất nhỏ như túi, thùng và ngày thu gom.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **음식물쓰레기: rác thực phẩm như một vấn đề riêng** tiếp nhận điểm tựa từ **종량제 và nguyên tắc “người thải trả chi phí”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **주차: khan hiếm tạo quy tắc xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 음식물쓰레기: rác thực phẩm như một vấn đề riêng
 
 **Rác thực phẩm (food waste / 음식물쓰레기)** thường được xử lý khác rác thông thường. Điều này ảnh hưởng thói quen nấu ăn, quản lý tủ lạnh và kiểm soát mùi trong căn hộ.
 
 Hệ quả văn hoá là một bữa ăn nhiều món phụ không chỉ có chiều ẩm thực mà còn có chiều quản lý rác. Hộ gia đình phải cân bằng giữa sự phong phú khi tiếp khách với khả năng lưu trữ và xử lý thực tế.
+
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **주차: khan hiếm tạo quy tắc xã hội** tiếp nhận điểm tựa từ **음식물쓰레기: rác thực phẩm như một vấn đề riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **동네 và bản sắc khu dân cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 주차: khan hiếm tạo quy tắc xã hội
 
@@ -118,6 +145,8 @@ Chỗ đỗ xe trong khu căn hộ mật độ cao là tài nguyên hữu hạn.
 
 Văn hoá ở đây không phải “người Hàn đỗ xe thế nào”; nó là phản ứng của nhóm với sự khan hiếm do kiến trúc và lịch sử xây dựng tạo ra.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **동네 và bản sắc khu dân cư** tiếp nhận điểm tựa từ **주차: khan hiếm tạo quy tắc xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **당근 và chợ số địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 동네 và bản sắc khu dân cư
 
 **Khu dân cư (neighbourhood / 동네)** trong lời nói hằng ngày thường mang cảm giác gần gũi và thực dụng hơn đơn vị hành chính. `우리 동네` có thể gồm quán quen, chợ, hiệu thuốc, công viên, ga tàu điện và tuyến đi bộ hằng ngày.
@@ -125,6 +154,8 @@ Văn hoá ở đây không phải “người Hàn đỗ xe thế nào”; nó l
 Bản sắc này được xây bằng sự tiếp xúc lặp lại. Một nơi trở thành “khu của mình” không phải vì ranh giới trên bản đồ mà vì nó nằm trong không gian hoạt động thường nhật.
 
 Địa lý đô thị gọi vùng đó là **không gian hoạt động (activity space)** — tập các địa điểm cá nhân thường xuyên sử dụng.
+
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **당근 và chợ số địa phương** tiếp nhận điểm tựa từ **동네 và bản sắc khu dân cư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **반상회 và sự thay đổi của phối hợp cộng đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 당근 và chợ số địa phương
 
@@ -134,6 +165,8 @@ Một khu dân cư trước đây được định nghĩa chủ yếu bằng g�
 
 Đây là **tính địa phương lai (hybrid locality)**: địa phương vật lý + bản sắc nền tảng.
 
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **반상회 và sự thay đổi của phối hợp cộng đồng** tiếp nhận điểm tựa từ **당근 và chợ số địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **무장애와 접근성: thiết kế quyết định ai có thể tự sử dụng không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 반상회 và sự thay đổi của phối hợp cộng đồng
 
 Các hình thức họp khu dân cư như `반상회` từng có vai trò rõ hơn trong một số giai đoạn và khu vực. Trong căn hộ hiện đại, bảng thông báo, ứng dụng, phát thanh quản lý và chat nhóm có thể thay một phần chức năng truyền tin.
@@ -141,6 +174,8 @@ Các hình thức họp khu dân cư như `반상회` từng có vai trò rõ h�
 Chức năng “đồng bộ hoá cư dân” không biến mất; kênh giao tiếp thay đổi.
 
 Đây là tính liên tục về chức năng: giấy thông báo → loa/bảng tin → SMS/thông báo ứng dụng.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **무장애와 접근성: thiết kế quyết định ai có thể tự sử dụng không gian** tiếp nhận điểm tựa từ **반상회 và sự thay đổi của phối hợp cộng đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **욕실과 낙상: phòng tắm là nơi chi tiết nhỏ thành rủi ro lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 무장애와 접근성: thiết kế quyết định ai có thể tự sử dụng không gian
 
@@ -161,6 +196,8 @@ Chỉ cần một mắt xích không tiếp cận được, toàn chuỗi có th
 
 Đây là lý do **thiết kế phổ quát (universal design)** cố tạo môi trường dùng được cho nhiều khả năng cơ thể ngay từ đầu thay vì chỉ sửa chữa sau khi có vấn đề.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **욕실과 낙상: phòng tắm là nơi chi tiết nhỏ thành rủi ro lớn** tiếp nhận điểm tựa từ **무장애와 접근성: thiết kế quyết định ai có thể tự sử dụng không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **엘리베이터 의존성: thang máy là hạ tầng sống, không chỉ tiện ích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 욕실과 낙상: phòng tắm là nơi chi tiết nhỏ thành rủi ro lớn
 
 Phòng tắm Hàn Quốc thường có bề mặt ướt, ngưỡng cửa, sàn cứng và không gian tương đối nhỏ. Với người cao tuổi hoặc người suy giảm thăng bằng, các chi tiết như tay vịn, độ chống trượt, chiều cao bồn cầu, ánh sáng và khả năng gọi hỗ trợ có thể quyết định mức độc lập hằng ngày.
@@ -175,11 +212,15 @@ rủi ro cá nhân
 
 Không thể quy mọi lần té ngã cho “cơ thể yếu”; môi trường có thể làm rủi ro tăng hoặc giảm đáng kể.
 
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **엘리베이터 의존성: thang máy là hạ tầng sống, không chỉ tiện ích** tiếp nhận điểm tựa từ **욕실과 낙상: phòng tắm là nơi chi tiết nhỏ thành rủi ro lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aging-in-place: già đi trong nơi ở quen thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 엘리베이터 의존성: thang máy là hạ tầng sống, không chỉ tiện ích
 
 Trong toà nhà cao tầng, thang máy là điều kiện để nhiều cư dân có thể ra ngoài. Với người dùng xe lăn, người cao tuổi khó leo cầu thang hoặc gia đình có xe đẩy, việc thang máy hỏng có thể biến căn hộ thành không gian gần như bị cô lập tạm thời.
 
 Điều này cho thấy độ tin cậy của thiết bị có ý nghĩa xã hội. Lịch bảo trì, nguồn điện dự phòng, thông báo sửa chữa và khả năng tiếp cận thang máy khác không chỉ là vấn đề kỹ thuật; chúng ảnh hưởng quyền tham gia đời sống bên ngoài căn hộ.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Aging-in-place: già đi trong nơi ở quen thuộc** tiếp nhận điểm tựa từ **엘리베이터 의존성: thang máy là hạ tầng sống, không chỉ tiện ích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **스마트홈과 돌봄: công nghệ có thể hỗ trợ nhưng không thay thế toàn bộ con người** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Aging-in-place: già đi trong nơi ở quen thuộc
 
@@ -200,6 +241,8 @@ Nếu thiếu một lớp, gia đình có thể phải lựa chọn giữa chuy�
 
 Vì vậy già hoá tại nơi ở quen thuộc nối trực tiếp nhà ở với y tế, giao thông và kinh tế chăm sóc; nó không thể giải bằng việc lắp một tay vịn đơn lẻ.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **스마트홈과 돌봄: công nghệ có thể hỗ trợ nhưng không thay thế toàn bộ con người** tiếp nhận điểm tựa từ **Aging-in-place: già đi trong nơi ở quen thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **관리비: phí quản lý là bảng giá của hạ tầng dùng chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 스마트홈과 돌봄: công nghệ có thể hỗ trợ nhưng không thay thế toàn bộ con người
 
 Cảm biến cửa, nút gọi khẩn cấp, phát hiện chuyển động, điều khiển nhiệt độ hoặc thiết bị nhắc thuốc có thể hỗ trợ người sống một mình. Nhưng thiết bị cũng tạo vấn đề mới về quyền riêng tư, lỗi cảm biến, kết nối mạng và khả năng sử dụng giao diện.
@@ -212,6 +255,8 @@ việc con người vẫn quan trọng → đánh giá tình huống, giao tiế
 ```
 
 Công nghệ giảm một số ma sát nhưng không biến nhu cầu chăm sóc thành bằng 0.
+
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **관리비: phí quản lý là bảng giá của hạ tầng dùng chung** tiếp nhận điểm tựa từ **스마트홈과 돌봄: công nghệ có thể hỗ trợ nhưng không thay thế toàn bộ con người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo trì phòng ngừa: thứ không hỏng hôm nay vẫn đang già đi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 관리비: phí quản lý là bảng giá của hạ tầng dùng chung
 
@@ -229,6 +274,8 @@ chi phí rủi ro → sự cố lớn nếu bảo trì kém
 
 Đây là lý do **chi phí vòng đời (life-cycle cost)** quan trọng hơn giá ban đầu.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Bảo trì phòng ngừa: thứ không hỏng hôm nay vẫn đang già đi** tiếp nhận điểm tựa từ **관리비: phí quản lý là bảng giá của hạ tầng dùng chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **장기수선 và bài toán quỹ dự phòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bảo trì phòng ngừa: thứ không hỏng hôm nay vẫn đang già đi
 
 Thang máy, bơm nước, đường ống, chống thấm, hệ thống chữa cháy, camera và cửa tự động đều xuống cấp theo thời gian. Nếu chỉ sửa khi hỏng, cư dân thường thấy chi phí đột ngột và gián đoạn lớn hơn.
@@ -244,6 +291,8 @@ kiểm tra nhỏ thường xuyên
 
 Nhưng bảo trì tạo một vấn đề chính trị vi mô: cư dân hiện tại phải trả tiền cho lợi ích có thể chỉ thấy nhiều năm sau. Đây là xung đột giữa **chi phí hiện tại** và **độ tin cậy tương lai**.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **장기수선 và bài toán quỹ dự phòng** tiếp nhận điểm tựa từ **Bảo trì phòng ngừa: thứ không hỏng hôm nay vẫn đang già đi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước, áp lực và đường ống: hạ tầng ẩn nhưng thiết yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 장기수선 và bài toán quỹ dự phòng
 
 Một khu chung cư lớn có những hạng mục không thể tài trợ hợp lý bằng một tháng phí quản lý khi chúng đột ngột đến hạn. Vì vậy về mặt nguyên lý, hệ thống cần tích luỹ nguồn lực cho sửa chữa dài hạn.
@@ -257,6 +306,8 @@ chi phí lớn nhưng hiếm
 ```
 
 Nếu quỹ quá thấp, thế hệ cư dân tại thời điểm hỏng phải chịu cú sốc lớn. Nếu quỹ quá cao hoặc quản trị không minh bạch, cư dân có thể mất niềm tin. Vì vậy quản trị tài chính khu nhà cần **đủ dự phòng + minh bạch + trách nhiệm giải trình**.
+
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Nước, áp lực và đường ống: hạ tầng ẩn nhưng thiết yếu** tiếp nhận điểm tựa từ **장기수선 và bài toán quỹ dự phòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **환기와 실내공기: kín để tiết kiệm năng lượng nhưng vẫn phải thở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nước, áp lực và đường ống: hạ tầng ẩn nhưng thiết yếu
 
@@ -272,6 +323,8 @@ quyền sở hữu riêng
 ```
 
 Tường phân chia pháp lý không ngăn nước, tiếng ồn, khói hoặc nhiệt đi qua kết cấu.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **환기와 실내공기: kín để tiết kiệm năng lượng nhưng vẫn phải thở** tiếp nhận điểm tựa từ **Nước, áp lực và đường ống: hạ tầng ẩn nhưng thiết yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **결로와 곰팡이: vật lý nhiệt trở thành vấn đề sức khoẻ và tranh chấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 환기와 실내공기: kín để tiết kiệm năng lượng nhưng vẫn phải thở
 
@@ -289,6 +342,8 @@ Thông gió tự nhiên qua cửa sổ phụ thuộc thời tiết và chất l�
 
 Nhà ở vì vậy là một **hệ thống trao đổi với môi trường**, không phải hộp kín.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **결로와 곰팡이: vật lý nhiệt trở thành vấn đề sức khoẻ và tranh chấp** tiếp nhận điểm tựa từ **환기와 실내공기: kín để tiết kiệm năng lượng nhưng vẫn phải thở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **난방 và 냉방: cùng một căn hộ phải xử lý hai cực khí hậu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 결로와 곰팡이: vật lý nhiệt trở thành vấn đề sức khoẻ và tranh chấp
 
 Khi bề mặt đủ lạnh, hơi nước trong không khí có thể ngưng tụ. Nếu độ ẩm kéo dài, nấm mốc dễ phát triển hơn. Hiện tượng `결로` vì vậy nằm ở giao điểm của cách nhiệt, cầu nhiệt, thông gió, thói quen sấy quần áo và nhiệt độ trong nhà.
@@ -304,6 +359,8 @@ nhiệt độ bề mặt thấp
 
 Đây là bài học quan trọng về **nguyên nhân phân tán**: kết quả có thể do cả thiết kế lẫn vận hành.
 
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **난방 và 냉방: cùng một căn hộ phải xử lý hai cực khí hậu** tiếp nhận điểm tựa từ **결로와 곰팡이: vật lý nhiệt trở thành vấn đề sức khoẻ và tranh chấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **측정과 피드백: đồng hồ đo thay đổi hành vi năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 난방 và 냉방: cùng một căn hộ phải xử lý hai cực khí hậu
 
 Mùa đông làm sưởi sàn rất có giá trị; mùa hè nóng ẩm làm điều hoà và hút ẩm quan trọng. Nhà ở vì vậy phải xử lý hai chế độ gần đối lập:
@@ -316,6 +373,8 @@ mùa hè → thải nhiệt + kiểm soát ẩm
 Cách nhiệt tốt giúp cả hai mùa bằng cách giảm trao đổi nhiệt không mong muốn, nhưng kính lớn, hướng nắng, bóng râm và hành vi đóng/mở cửa vẫn ảnh hưởng tải nhiệt.
 
 Một ngôi nhà “ấm mùa đông” chưa chắc tự động “mát mùa hè” nếu bức xạ mặt trời vào quá nhiều.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **측정과 피드백: đồng hồ đo thay đổi hành vi năng lượng** tiếp nhận điểm tựa từ **난방 và 냉방: cùng một căn hộ phải xử lý hai cực khí hậu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정전·단수·승강기 고장: sự cố nhỏ có thể thành chuỗi thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 측정과 피드백: đồng hồ đo thay đổi hành vi năng lượng
 
@@ -333,6 +392,8 @@ hành vi
 
 Nhưng đo lường quá chi tiết cũng có thể tăng lo âu hoặc đẩy trách nhiệm hoàn toàn sang cá nhân trong khi chất lượng cách nhiệt của toà nhà mới là yếu tố lớn. Phản hồi tốt phải phân biệt phần người dùng kiểm soát và phần hạ tầng quyết định.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **측정과 피드백: đồng hồ đo thay đổi hành vi năng lượng** xác định đầu vào; **정전·단수·승강기 고장: sự cố nhỏ có thể thành chuỗi thất bại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **관리의 투명성: niềm tin cư dân là một phần của hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 정전·단수·승강기 고장: sự cố nhỏ có thể thành chuỗi thất bại
 
 Trong nhà cao tầng, điện không chỉ chạy đèn. Nó liên quan thang máy, bơm, cửa, mạng, thông tin và nhiều thiết bị y tế tại nhà. Mất điện hoặc mất nước kéo dài có thể gây tác động lớn hơn cho người cao tuổi, người khuyết tật hoặc hộ có trẻ nhỏ.
@@ -347,6 +408,8 @@ một hạ tầng lỗi
 ```
 
 Khả năng phục hồi của khu nhà vì vậy phụ thuộc nguồn dự phòng, quy trình khẩn cấp, thông báo và khả năng hỗ trợ những hộ khó tự xử lý.
+
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **정전·단수·승강기 고장: sự cố nhỏ có thể thành chuỗi thất bại** xác định đầu vào; **관리의 투명성: niềm tin cư dân là một phần của hạ tầng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Khu căn hộ như một hệ điều hành có vòng đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 관리의 투명성: niềm tin cư dân là một phần của hạ tầng
 
@@ -363,6 +426,8 @@ thông tin dễ hiểu
 ```
 
 Niềm tin không thay bê tông hay thang máy, nhưng nó giảm **chi phí phối hợp** khi cần sửa chữa hoặc thay đổi quy tắc chung.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Khu căn hộ như một hệ điều hành có vòng đời** tiếp nhận điểm tựa từ **관리의 투명성: niềm tin cư dân là một phần của hạ tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: khu căn hộ như một hệ điều hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khu căn hộ như một hệ điều hành có vòng đời
 
@@ -381,15 +446,21 @@ Khi dân số cư dân cũng già đi, cùng một toà nhà phải thích nghi 
 
 Vì vậy **tuổi của công trình** và **tuổi của cư dân** có thể cùng tăng, tạo nhu cầu cải tạo kép.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Liên hệ kiến thức: khu căn hộ như một hệ điều hành** tiếp nhận điểm tựa từ **Khu căn hộ như một hệ điều hành có vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Liên hệ kiến thức: khu căn hộ như một hệ điều hành
 
 Khu căn hộ có phần cứng — toà nhà, đường ống, thang máy, bãi đỗ — và phần mềm — quy tắc quản lý, chuẩn cư dân, thông báo và kiểm soát ra vào. Mỗi hộ chạy “ứng dụng” riêng trên nền tảng dùng chung đó.
 
 Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng mặc định: cách âm tốt, đủ tủ nhận hàng, phân bổ chỗ đỗ rõ, lối đi tiếp cận được và khu phân loại rác dễ hiểu. Nếu thiết kế kém, cư dân phải dùng thương lượng xã hội hoặc lao động chăm sóc để bù.
 
+> **Chuyển mạch:** Ở chặng này của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: khu căn hộ như một hệ điều hành** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Mô hình tư duy
 
 > Đời sống căn hộ là bài toán **hạ tầng dùng chung + năng lượng + bảo trì + khả năng tiếp cận + quản trị**. Nhiều điều tưởng chỉ là phép lịch sự — tiếng ồn, rác, đỗ xe, bưu kiện — thực ra xuất hiện vì hàng trăm hộ đang dùng chung tài nguyên có năng lực hữu hạn. Chất lượng nhà ở không chỉ là mặt bằng đẹp mà còn là việc hệ thống có đáng tin, có thể bảo trì, có chịu được sự cố và có cho phép người có khả năng cơ thể khác nhau sống độc lập hay không.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm phổ biến
 
@@ -413,8 +484,10 @@ Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng
 
 “Nếu mỗi căn hộ là tài sản riêng thì vấn đề kỹ thuật cũng riêng” không đúng; nước, tiếng ồn, khói, nhiệt và kết cấu tạo phụ thuộc xuyên hộ.
 
+> **Chuyển mạch:** Trong **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## Đọc tiếp
 
 Đọc cùng [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
 
-> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Đọc tiếp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
