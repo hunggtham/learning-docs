@@ -1,33 +1,25 @@
 # Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển
 
-> **Mạch đọc:** Đọc **điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **cốt lõi (core / 핵심) tuyến (route / 경로)** sang **cốt lõi (core / 핵심) chapter**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của **Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển**. Route đi từ plant/sensor/actuator/controller → feedback và stability → state-space, discrete control và estimation → embedded/industrial applications → saturation, delay và failure, để mỗi chapter nối đo lường với hành động.
 
 Điều khiển (control / 제어) các hệ thống (systems / 시스템들) biến đo lường (measurement / 측정) thành hành động (action / 동작) để giữ plant trong vùng mong muốn dưới disturbance, bất định (uncertainty / 불확실성) và delay. phản hồi (feedback / 피드백) không tự động làm hệ tốt hơn: gain, phase, saturation và sensor thất bại (failure / 실패) có thể tạo instability.
 
 ## Cốt lõi (core / 핵심) tuyến (route / 경로)
-Phần “Cốt lõi (core / 핵심) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 ```text
 plant/sensor/actuator → transfer function → stability → PID → state-space → observer → digital/safety control
 ```
 
-
-> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) tuyến (route / 경로)**, ta sang **cốt lõi (core / 핵심) chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cốt lõi (core / 핵심) chapter
-Phần “Cốt lõi (core / 핵심) chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - [Feedback, stability and PID](00_feedback_stability_pid.md) — closed-loop sensitivity, poles, phase margin, saturation, anti-windup và digital điều khiển (control / 제어).
 - [State-space and discrete control](01_state_space_discrete_control.md) — controllability, khả năng quan sát (observability / 관측 가능성), discretization, deadline và HIL xác minh (verification / 확인).
 
-
-> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) chapter**, ta sang **Cần nắm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cần nắm
-Phần “Cần nắm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
 
 - open-loop vs closed-loop, tham chiếu (reference / 참조), lỗi (error / 오류) và disturbance;
 - poles/zeros, Bode/Nyquist/gốc (root / 루트) locus và stability margin;
@@ -35,11 +27,10 @@ Phần “Cần nắm” nối kiến thức trước với nội dung sắp đ�
 - controllability/khả năng quan sát (observability / 관측 가능성), trạng thái (state / 상태) estimator và sensor fusion;
 - sampling, discretization, độ trễ (latency / 지연 시간), fail-safe trạng thái (state / 상태) và xác minh (verification / 확인).
 
-
-> **Chuyển mạch:** Từ **Cần nắm**, ta sang **cầu nối (bridge / 브리지)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điều khiển (control / 제어) các hệ thống (systems / 시스템들) — Hệ thống điều khiển**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cầu nối (bridge / 브리지)
 
 Nền toán học nối với [mathematics](../../mathematics/README.md), còn controller chạy trên [embedded systems](../embedded_systems/README.md). Với hệ safety-critical, thêm requirements/kiểm thử (test / 테스트) bằng chứng (evidence / 증거) thay vì chỉ tune waveform đẹp.
 
-> **Bàn giao:** Sau **cầu nối (bridge / 브리지)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 feedback stability pid](./00_feedback_stability_pid.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cầu nối (bridge / 브리지)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

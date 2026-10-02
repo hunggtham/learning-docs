@@ -1,6 +1,6 @@
 # Kotlin + Android Master Notes
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Kotlin + Android Master Notes**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy tắc chống duplicate ghi chú (note / 노트)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của **Kotlin + Android Master Notes**. Route đi từ canonical learning spine và anti-duplicate rules → Kotlin/Android foundations → intermediate architecture/coroutines → advanced runtime/security/performance → version evolution và migration, để mỗi chapter có owner và prerequisite rõ.
 
 Bộ tài liệu học Kotlin cho Android có **trục học (learning spine / 학습 축) chuẩn gốc (canonical / 정본) duy nhất** theo thứ tự:
 
