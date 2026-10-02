@@ -1,5 +1,7 @@
 # Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam
 
+> **Mạch đọc:** [README](./README.md) là owner của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**; dùng file này như bản đồ định tuyến, không thay thế các chương. Từ **Cách đọc thư viện (library / 라이브러리) này** đi theo timeline 01 → 23, các trục xuyên thời gian 24 → 30 và mở rộng địa điểm 33 → 38; dependency map chỉ rõ khi nào phải quay lại chương owner để giải thích nguyên nhân.
+
 ## Cách đọc thư viện (library / 라이브러리) này
 
 Timeline giữ cho ta không đảo trước–sau, nhưng lịch sử chỉ dễ hiểu khi biết **trạng thái (state / 상태) nào của xã hội tạo điều kiện cho trạng thái (state / 상태) tiếp theo**. Vì vậy thứ tự dưới đây là **nhân quả (causal / 인과적) phụ thuộc (dependency / 의존성)**, không phải Beginner → Advanced.
@@ -24,9 +26,9 @@ continuity + rupture in everyday life
 
 Geography không “quyết định” kết quả (outcome / 결과). Nó tạo ràng buộc (constraint / 제약조건)/opportunity; technology, institution và human choice quyết định cách ràng buộc (constraint / 제약조건) được xử lý.
 
-## Tuyến (route / 경로) 1 — Timeline chính: 01 → 23
-Phần “Tuyến (route / 경로) 1 — Timeline chính: 01 → 23” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Tuyến (route / 경로) 1 — Timeline chính: 01 → 23** tiếp nhận điểm tựa từ **Cách đọc thư viện (library / 라이브러리) này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Tuyến (route / 경로) 1 — Timeline chính: 01 → 23
 
 ```text
 01 Cách đọc lịch sử: evidence, myth, chronology, causal reasoning
@@ -78,6 +80,8 @@ Phần “Tuyến (route / 경로) 1 — Timeline chính: 01 → 23” nối ki�
 
 Timeline là backbone, nhưng chapter 14 chỉ đóng vai trò junction. Các vùng có lịch sử (history / 이력) riêng được mở sâu ở Tuyến (route / 경로) 3 thay vì chỉ xuất hiện lúc central trạng thái (state / 상태) mở rộng tới đó.
 
+> **Chuyển mạch:** Ở chặng này của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 1 — Timeline chính: 01 → 23** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30
 
 Sau timeline, đọc lại lịch sử theo variable thay vì dynasty:
@@ -106,6 +110,8 @@ Sau timeline, đọc lại lịch sử theo variable thay vì dynasty:
 ```
 
 Các tệp (file / 파일) 24–30 không lặp timeline. Mỗi tệp (file / 파일) theo một nhân quả (causal / 인과적) variable qua nhiều thời kỳ để thấy continuity và structural thay đổi (change / 변경).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37
 
@@ -143,9 +149,9 @@ Recommended phụ thuộc (dependency / 의존성):
       reread 14 Frontier formation
 ```
 
-## Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33
-Phần “Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+> **Chuyển mạch:** Trong **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, sau nội dung của **Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37**, **Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Những anchor thời gian cần nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
+## Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33
 
 - [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md): coordinate map để tra nhanh mốc.
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): analytical vocabulary, bằng chứng (evidence / 증거) mức (level / 수준) và nguồn (source / 소스) đơn vị sở hữu (owner / 오너).
@@ -153,23 +159,7 @@ Phần “Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tần
 
 Không dùng chronology 31 thay cho explanatory chapter. Không dùng UNESCO/heritage label trong 33 như proof cho mọi legend.
 
-## Tuyến (route / 경로) 5 — Bối cảnh tích hợp (integrated context / 통합 맥락): 38
-
-[`38_period_context_economy_society_places.md`](38_period_context_economy_society_places.md) là lớp đọc song song với `01`–`23`. Mỗi phần trong đó trả lời bốn câu hỏi rồi bàn giao về chương sở hữu (owner chapter / 소유 장) cụ thể:
-
-```text
-anchor date
-   ↓
-economy + household life
-   ↓
-regional context + external actors
-   ↓
-place / landscape / material evidence
-   ↓
-chronology chapter → thematic chapter → field guide
-```
-
-`38` không phải một mạch thời gian (timeline / 연표) rút gọn. Nó là bộ định tuyến (router / 라우터) để người học không dừng ở “ai thắng ai”, cũng không nhảy thẳng tới di tích mà quên điều kiện kinh tế–xã hội tạo ra địa điểm đó.
+> **Chuyển mạch:** Ở chặng này của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Những anchor thời gian cần nhớ** tiếp nhận điểm tựa từ **Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những vùng không được ép vào narrative Đại Việt duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những anchor thời gian cần nhớ
 
@@ -196,6 +186,8 @@ Không cần học hàng trăm năm như password. Trước hết giữ các coo
 
 Mỗi anchor phải trả lời: cấu trúc nào thay đổi và cấu trúc nào tiếp tục?
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Những vùng không được ép vào narrative Đại Việt duy nhất** tiếp nhận điểm tựa từ **Những anchor thời gian cần nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Di tích như bằng chứng (evidence / 증거) checkpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Những vùng không được ép vào narrative Đại Việt duy nhất
 
 Lịch sử (history / 이력) of hiện tại (current / 현재) Vietnamese territory includes multiple các hệ thống (systems / 시스템들):
@@ -210,6 +202,8 @@ maritime South China Sea / Southeast Asian networks
 ```
 
 Political border today is not timeless analytical bộ chứa (container / 컨테이너). Chapter 14 owns frontier/inter-polity quan hệ (relation / 관계); chapters 34–37 own regional/mạng (network / 네트워크) độ sâu (depth / 깊이); chapters 24–30 revisit all of them from economy/xã hội (social / 사회적)/religion/môi trường (environment / 환경) angles.
+
+> **Chuyển mạch:** Trong **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Những vùng không được ép vào narrative Đại Việt duy nhất** nêu điều cần giải thích; **Di tích như bằng chứng (evidence / 증거) checkpoint** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Di tích như bằng chứng (evidence / 증거) checkpoint
 
@@ -236,6 +230,8 @@ Examples:
 
 Full tuyến (route / 경로): [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md).
 
+> **Chuyển mạch:** Ở chặng này của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Di tích như bằng chứng (evidence / 증거) checkpoint** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Suggested học tập (learning / 학습) paths** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)
 
 Thư viện (library / 라이브러리) phân biệt:
@@ -251,11 +247,13 @@ A traditional narrative can be historically important without being literal veri
 
 Đặc biệt với regional lịch sử (history / 이력), không đồng nhất bên ngoài (external / 외부) textual label với self-identity: “Funan” trong Chinese texts, “Lâm Ấp” trong court bản ghi (record / 레코드) hay colonial ethnic category đều cần nguồn (source / 소스) criticism.
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **Suggested học tập (learning / 학습) paths** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## Suggested học tập (learning / 학습) paths
 
 ### Nếu muốn hiểu toàn bộ lịch sử
 
-38 → 01 → 23, sau đó 24 → 30, rồi 34 → 37; cuối cùng dùng 31–33 để rà soát (review / 검토)/trường dữ liệu (field / 필드) học tập (learning / 학습).
+01 → 23, sau đó 24 → 30, rồi 34 → 37; cuối cùng dùng 31–33 để rà soát (review / 검토)/trường dữ liệu (field / 필드) học tập (learning / 학습).
 
 ### Nếu muốn hiểu miền Trung/Champa
 
@@ -275,12 +273,16 @@ A traditional narrative can be historically important without being literal veri
 
 ### Nếu đi du lịch/di tích và muốn hiểu tại chỗ
 
-38 → chương niên đại tương ứng → đào sâu khu vực tương ứng → 30 → 33.
+01 → relevant timeline chapter → relevant regional deep dive → 30 → 33.
 
 ### Nếu cần tra nhanh một mốc
 
-31 → quay lại chương đơn vị sở hữu (owner / 오너); không dừng ở 31.
+31 → quay lại chapter đơn vị sở hữu (owner / 오너); không dừng ở 31.
+
+> **Chuyển mạch:** Trong **Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam**, **Suggested học tập (learning / 학습) paths** xác định đầu vào; **Bàn giao** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Bàn giao
 
-Bắt đầu với [`38_period_context_economy_society_places.md`](38_period_context_economy_society_places.md) để có bản đồ tư duy (mental map / 멘털 맵), rồi [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md) và [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md). Sau timeline 01–23, dùng 24–30 để rebuild structural lịch sử (history / 이력) và 34–37 để thay modern-national map bằng regional/mạng (network / 네트워크) map trước khi rà soát (review / 검토) bằng 31–33.
+Bắt đầu với [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md), rồi [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md). Sau timeline 01–23, dùng 24–30 để rebuild structural lịch sử (history / 이력) và 34–37 để thay modern-national map bằng regional/mạng (network / 네트워크) map trước khi rà soát (review / 검토) bằng 31–33.
+
+> **Bàn giao:** Sau **Bàn giao**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

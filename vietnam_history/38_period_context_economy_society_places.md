@@ -1,5 +1,7 @@
 # Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm
 
+> **Mạch đọc:** [README](./README.md) là owner của **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**; dùng nó như cầu nối giữa timeline và các trục xuyên thời gian. Từ **Câu hỏi trung tâm và cách dùng** đi qua mốc thời gian, kinh tế–đời sống, bối cảnh khu vực và địa điểm đọc, rồi quay về chương owner để kiểm chứng cơ chế bằng di tích hoặc cảnh quan thật.
+
 ## Câu hỏi trung tâm và cách dùng
 
 Các chương `03`–`23` đã đi theo trình tự thời gian; các chương `24`–`30` theo dõi những trục xuyên thời gian; các chương `33`–`37` mở rộng không gian ra di tích, Champa, Mekong, vùng cao và biển. Tài liệu này là cây cầu giữa các tầng đó. Nó trả lời một câu hỏi thực hành: **khi bước vào một giai đoạn, người học cần giữ mốc nào, hình dung nền kinh tế và đời sống ra sao, đặt Việt Nam trong bối cảnh khu vực nào, rồi đi đâu để kiểm tra câu chuyện bằng địa điểm thật?**
@@ -8,10 +10,12 @@ Mỗi phần có cùng nhịp lập luận (reasoning / 추론):
 
 1. **Mốc neo:** năm hoặc khoảng thời gian giúp không đảo trước–sau.
 2. **Kinh tế và đời sống:** đất, nước, lao động, thuế, trao đổi và rủi ro mà người đương thời phải xử lý.
-3. **Bối cảnh khu vực:** các đế chế, cộng đồng và mạng lưới bên ngoài đang tạo sức ép hay cơ hội gì.
-4. **Địa điểm đọc:** di tích, cảnh quan hoặc bảo tàng giúp nhìn thấy cơ chế, không chỉ chụp lại một biểu tượng.
+3. **Bối cảnh khu vực:** các đế chế, cộng đồng và mạng lưới (network / 네트워크) bên ngoài đang tạo sức ép hay cơ hội gì.
+4. **Địa điểm đọc:** di tích (heritage site / 유적지), cảnh quan hoặc bảo tàng giúp nhìn thấy cơ chế (mechanism / 메커니즘), không chỉ chụp lại một biểu tượng.
 
 Đây không phải bản tóm tắt thay cho các chương chính. Khi một phần mở ra câu hỏi, hãy đi theo liên kết ở cuối phần; khi cần kiểm tra nguồn và giới hạn diễn giải, quay lại [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md) và [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md).
+
+> **Chuyển mạch:** Trong **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **1. Đông Sơn và Cổ Loa — khoảng 1000–111 TCN** tiếp nhận điểm tựa từ **Câu hỏi trung tâm và cách dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Bắc thuộc và xã hội địa phương — 111 TCN–938** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 1. Đông Sơn và Cổ Loa — khoảng 1000–111 TCN
 
@@ -35,6 +39,8 @@ Lưu vực sông Hồng và sông Mã nối với miền nam Trung Hoa, ven bi�
 
 Từ đây, câu hỏi chuyển từ “công trình lớn được tạo ra thế nào?” sang “một nhà nước đế chế ghi nhận, thu thuế và thương lượng với cộng đồng địa phương ra sao?”. Đọc tiếp [`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md), rồi sang [`05_nanyue_han_and_imperial_integration.md`](05_nanyue_han_and_imperial_integration.md).
 
+> **Chuyển mạch:** Ở chặng này của **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **2. Bắc thuộc và xã hội địa phương — 111 TCN–938** tiếp nhận điểm tựa từ **1. Đông Sơn và Cổ Loa — khoảng 1000–111 TCN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Từ Hoa Lư đến Thăng Long và nhà Trần — 939–1400** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 2. Bắc thuộc và xã hội địa phương — 111 TCN–938
 
 ### Mốc neo
@@ -47,7 +53,7 @@ Từ nhà Hán đến nhà Đường, các đơn vị hành chính, quan lại v
 
 ### Bối cảnh khu vực
 
-Bắc Bộ nằm ở rìa phía nam của các đế chế Trung Hoa, còn miền Trung và Nam Trung Bộ liên hệ với các thực thể chính trị Chăm (polity / 정치체); vùng Mekong có các trung tâm sông–biển riêng. Thương nhân, Phật giáo và kỹ thuật di chuyển qua biển và đường bộ, khiến “biên giới” luôn là vùng tiếp xúc hơn là một đường kẻ cố định.
+Bắc Bộ nằm ở rìa phía nam của các đế chế Trung Hoa, còn miền Trung và Nam Trung Bộ liên hệ với các polity Chăm; vùng Mekong có các trung tâm sông–biển riêng. Thương nhân, Phật giáo và kỹ thuật di chuyển qua biển và đường bộ, khiến “biên giới” luôn là vùng tiếp xúc hơn là một đường kẻ cố định.
 
 ### Địa điểm đọc
 
@@ -56,6 +62,8 @@ Bắc Bộ nằm ở rìa phía nam của các đế chế Trung Hoa, còn miề
 ### Bàn giao
 
 Khi quyền lực phương Bắc suy yếu, các thủ lĩnh địa phương phải giải bài toán mới: xây dựng một **nhà nước (state / 국가)** có thể thu nguồn lực, giữ vùng lõi và thương lượng với láng giềng. Đây là tiền đề của [`07_tenth_century_autonomy_and_state_building.md`](07_tenth_century_autonomy_and_state_building.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **3. Từ Hoa Lư đến Thăng Long và nhà Trần — 939–1400** tiếp nhận điểm tựa từ **2. Bắc thuộc và xã hội địa phương — 111 TCN–938** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lê sơ, Champa, Trịnh–Nguyễn và các vùng biên — 1428–1771** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Từ Hoa Lư đến Thăng Long và nhà Trần — 939–1400
 
@@ -79,6 +87,8 @@ Sau 938, các chính quyền Ngô, Đinh, Tiền Lê củng cố vùng lõi; nă
 
 Sau nhà Trần, cải cách của nhà Hồ và cuộc Minh thuộc đặt ra câu hỏi về giới hạn của tập quyền và khả năng huy động dân chúng. Đọc tiếp [`10_ho_ming_occupation_and_lam_son.md`](10_ho_ming_occupation_and_lam_son.md), đồng thời dùng [`24_economic_history_land_tax_markets_and_reform.md`](24_economic_history_land_tax_markets_and_reform.md) để theo dõi đất và thuế xuyên các triều đại.
 
+> **Chuyển mạch:** Trong **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **4. Lê sơ, Champa, Trịnh–Nguyễn và các vùng biên — 1428–1771** tiếp nhận điểm tựa từ **3. Từ Hoa Lư đến Thăng Long và nhà Trần — 939–1400** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Tây Sơn và nhà Nguyễn đầu kỳ — 1771–1858** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 4. Lê sơ, Champa, Trịnh–Nguyễn và các vùng biên — 1428–1771
 
 ### Mốc neo
@@ -91,15 +101,17 @@ Lam Sơn kết thúc Minh thuộc vào **1427–1428**; Lê sơ xây dựng lạ
 
 ### Bối cảnh khu vực
 
-Mạng biển nối Việt Nam với Trung Hoa, Nhật Bản, Đông Nam Á và thương nhân châu Âu. Champa và các thực thể chính trị Khmer (polity / 정치체) không phải phông nền cho “mở rộng lãnh thổ”; họ có lợi ích, tôn giáo, cảng và chiến lược riêng. Đường biên vì thế phải đọc như vùng thương lượng, di chuyển và xung đột.
+Mạng biển nối Việt Nam với Trung Hoa, Nhật Bản, Đông Nam Á và thương nhân châu Âu. Champa và các polity Khmer không phải phông nền cho “mở rộng lãnh thổ”; họ có lợi ích, tôn giáo, cảng và chiến lược riêng. Đường biên vì thế phải đọc như vùng thương lượng, di chuyển và xung đột.
 
 ### Địa điểm đọc
 
-**Lam Sơn** giúp nối ký ức khởi nghĩa với địa hình Thanh Hóa; **Mỹ Sơn** và **Vijaya/Bình Định** nhắc rằng lịch sử Chăm tiếp tục sau 1471; **Hội An** cho thấy cảng là giao diện giữa vùng hậu phương (hinterland / 배후지) và biển; **Lũy Thầy** và **Phú Xuân** làm rõ hậu cần của chiến tranh Trịnh–Nguyễn.
+**Lam Sơn** giúp nối ký ức khởi nghĩa với địa hình Thanh Hóa; **Mỹ Sơn** và **Vijaya/Bình Định** nhắc rằng lịch sử Chăm tiếp tục sau 1471; **Hội An** cho thấy cảng là giao diện giữa hinterland và biển; **Lũy Thầy** và **Phú Xuân** làm rõ hậu cần của chiến tranh Trịnh–Nguyễn.
 
 ### Bàn giao
 
 Khi khủng hoảng thuế, chiến tranh và phân cực vùng miền chồng lên nhau, Tây Sơn xuất hiện như một cuộc tái cấu trúc quân sự–xã hội, không chỉ là đổi họ vua. Đọc tiếp [`15_tay_son_rebellion_war_and_reunification.md`](15_tay_son_rebellion_war_and_reunification.md) và [`34_champa_polities_religion_trade_and_continuity.md`](34_champa_polities_religion_trade_and_continuity.md).
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **5. Tây Sơn và nhà Nguyễn đầu kỳ — 1771–1858** tiếp nhận điểm tựa từ **4. Lê sơ, Champa, Trịnh–Nguyễn và các vùng biên — 1428–1771** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Thuộc địa, xã hội mới và chiến tranh thế giới — 1858–1945** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Tây Sơn và nhà Nguyễn đầu kỳ — 1771–1858
 
@@ -113,7 +125,7 @@ Chiến tranh cuối thế kỷ XVIII làm dân cư di chuyển, ruộng bỏ ho
 
 ### Bối cảnh khu vực
 
-Nhà Nguyễn phải cân bằng quan hệ với nhà Thanh, Xiêm, các thực thể chính trị Khmer (polity / 정치체) và thương nhân biển trong lúc các đế quốc châu Âu chuyển sang công nghiệp hóa và bành trướng. “Đóng cửa” là nhãn quá đơn giản: triều đình hạn chế một số hoạt động nhưng vẫn quản lý cảng, ngoại thương và tiếp xúc tôn giáo theo cách chọn lọc.
+Nhà Nguyễn phải cân bằng quan hệ với nhà Thanh, Xiêm, các polity Khmer và thương nhân biển trong lúc các đế quốc châu Âu chuyển sang công nghiệp hóa và bành trướng. “Đóng cửa” là nhãn quá đơn giản: triều đình hạn chế một số hoạt động nhưng vẫn quản lý cảng, ngoại thương và tiếp xúc tôn giáo theo cách chọn lọc.
 
 ### Địa điểm đọc
 
@@ -122,6 +134,8 @@ Nhà Nguyễn phải cân bằng quan hệ với nhà Thanh, Xiêm, các thực 
 ### Bàn giao
 
 Từ đây, câu hỏi không còn chỉ là triều đình quản trị thế nào mà là vì sao một đế quốc công nghiệp có thể áp đặt một **nhà nước thuộc địa (colonial state / 식민 국가)** lên Việt Nam. Chuyển sang [`17_french_conquest_colonial_state_and_economy.md`](17_french_conquest_colonial_state_and_economy.md).
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **6. Thuộc địa, xã hội mới và chiến tranh thế giới — 1858–1945** tiếp nhận điểm tựa từ **5. Tây Sơn và nhà Nguyễn đầu kỳ — 1771–1858** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 1945–1975 — hai dự án nhà nước trong Chiến tranh Lạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Thuộc địa, xã hội mới và chiến tranh thế giới — 1858–1945
 
@@ -145,6 +159,8 @@ Việt Nam nằm trong Đông Dương thuộc Pháp, giữa các phong trào ch�
 
 Khi chiến tranh thế giới kết thúc, các lực lượng phải đồng thời giải quyết độc lập, nạn đói, trật tự xã hội và chủ quyền lãnh thổ. Đọc tiếp [`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md) và [`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md).
 
+> **Chuyển mạch:** Trong **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **7. 1945–1975 — hai dự án nhà nước trong Chiến tranh Lạnh** tiếp nhận điểm tựa từ **6. Thuộc địa, xã hội mới và chiến tranh thế giới — 1858–1945** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 1975 đến thế kỷ XXI — tái thiết, Đổi Mới và khí hậu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 7. 1945–1975 — hai dự án nhà nước trong Chiến tranh Lạnh
 
 ### Mốc neo
@@ -166,6 +182,8 @@ Việt Nam nằm trong cạnh tranh Hoa Kỳ–Liên Xô–Trung Quốc và các
 ### Bàn giao
 
 Sau 1975, tái thiết không bắt đầu từ con số không: đất đai, dân cư, hạ tầng và ký ức chiến tranh đã bị định hình bởi ba mươi năm xung đột. Đọc [`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md) trước khi chuyển sang Đổi Mới.
+
+> **Chuyển mạch:** Ở chặng này của **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **8. 1975 đến thế kỷ XXI — tái thiết, Đổi Mới và khí hậu** tiếp nhận điểm tựa từ **7. 1945–1975 — hai dự án nhà nước trong Chiến tranh Lạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Năm tuyến thực địa để biến timeline thành kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. 1975 đến thế kỷ XXI — tái thiết, Đổi Mới và khí hậu
 
@@ -189,7 +207,9 @@ Việt Nam tái hội nhập ASEAN, chuỗi giá trị toàn cầu và các mạ
 
 Đây là điểm kết thúc của tuyến thời gian, không phải “đích đến” tất yếu. Để hiểu vì sao các chuyển đổi hiện nay có nền sâu hơn 1986, quay lại [`24_economic_history_land_tax_markets_and_reform.md`](24_economic_history_land_tax_markets_and_reform.md), [`25_social_history_household_village_gender_migration_ethnicity.md`](25_social_history_household_village_gender_migration_ethnicity.md), [`29_environment_disaster_and_adaptation_history.md`](29_environment_disaster_and_adaptation_history.md) và [`37_maritime_vietnam_ports_diasporas_and_sea_routes.md`](37_maritime_vietnam_ports_diasporas_and_sea_routes.md).
 
-## 9. Năm tuyến thực địa để biến mạch thời gian (timeline / 연표) thành kiến thức
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **9. Năm tuyến thực địa để biến timeline thành kiến thức** tiếp nhận điểm tựa từ **8. 1975 đến thế kỷ XXI — tái thiết, Đổi Mới và khí hậu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Ranh giới và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
+## 9. Năm tuyến thực địa để biến timeline thành kiến thức
 
 ### Tuyến A — nguồn gốc nhà nước ở phía Bắc
 
@@ -211,12 +231,16 @@ Hà Nội khu Pháp–Long Biên → Hải Phòng → Điện Biên → Quảng 
 
 Hà Nội hoặc Thành phố Hồ Chí Minh → Bình Dương–Đồng Nai → Hải Phòng → Đồng bằng sông Cửu Long. Tuyến này cho thấy sản xuất, cảng, di dân, đô thị và khí hậu tạo thành một hệ thống liên kết.
 
+> **Chuyển mạch:** Trong **Lịch sử Việt Nam theo bốn lớp: thời gian, kinh tế, bối cảnh và địa điểm**, **10. Ranh giới và bàn giao** tiếp nhận điểm tựa từ **9. Năm tuyến thực địa để biến timeline thành kiến thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+
 ## 10. Ranh giới và bàn giao
 
-Bốn lớp đọc giúp tránh bốn lỗi: mạch thời gian (timeline / 연표) không có đời sống, kinh tế không có con người, bối cảnh khu vực bị giản lược thành “ảnh hưởng bên ngoài”, và di tích bị biến thành ảnh minh họa. Chúng cũng không biến diễn giải thành chắc chắn tuyệt đối: mỗi địa điểm vẫn cần phân biệt lớp vật chất, lớp tưởng niệm và lớp phục dựng.
+Bốn lớp đọc giúp tránh bốn lỗi: timeline không có đời sống, kinh tế không có con người, bối cảnh khu vực bị giản lược thành “ảnh hưởng bên ngoài”, và di tích bị biến thành ảnh minh họa. Chúng cũng không biến diễn giải thành chắc chắn tuyệt đối: mỗi địa điểm vẫn cần phân biệt lớp vật chất, lớp tưởng niệm và lớp phục dựng.
 
 Sau tài liệu này, hãy quay lại chương chronology tương ứng để đọc sâu cơ chế; dùng `24`–`30` để theo dõi một biến qua nhiều thế kỷ; dùng `33`–`37` để mở rộng không gian. [`00_index_and_dependency.md`](00_index_and_dependency.md) sẽ đặt tài liệu `38` vào dependency map và các tuyến đọc mới.
 
 ### Nguồn nền
 
 Tài liệu tổng hợp từ các chương chronology và thematic hiện có trong thư viện; khi cần kiểm chứng từng mốc, ưu tiên chuyên khảo lịch sử Việt Nam, khảo cổ học Đông Nam Á, hồ sơ UNESCO và hồ sơ của cơ quan quản lý di sản. Các địa điểm được dùng như điểm đọc cơ chế, không phải bằng chứng tự động cho mọi truyền thuyết.
+
+> **Bàn giao:** Sau **10. Ranh giới và bàn giao**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
