@@ -1,7 +1,6 @@
 # Toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới
 
-> **Mạch đọc:** Đọc **toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **học tập (learning / 학습) thứ tự (order / 순서)** sang **dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** Đây là README owner của **Global systems — các hệ vượt biên giới**. Route đọc đi từ cities/networks → migration/trade → resources/climate → geopolitics → shared mental models and methods, để các chương nối những dòng chảy xuyên biên giới.
 
 Folder này dùng kiến thức vật lý (physical / 물리적) + human geography để phân tích hệ thống (system / 시스템) mà national ranh giới (boundary / 경계) không đủ làm đơn vị giải thích.
 
@@ -14,8 +13,7 @@ Folder này dùng kiến thức vật lý (physical / 물리적) + human geograp
 5. [Environment & Sustainability](./04_environment_sustainability.md): hệ thống (system / 시스템) ranh giới (boundary / 경계), externality, LCA, circularity và resilience.
 6. [Global Trade Networks](./05_global_trade_networks.md): synthesis của môi trường vận hành (production / 운영 환경), resources, vận chuyển (transport / 전송), finance, inventory, cities và systemic shocks.
 
-
-> **Chuyển mạch:** Từ **học tập (learning / 학습) thứ tự (order / 순서)**, ta sang **dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới**, **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Học tập (learning / 학습) thứ tự (order / 순서)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cross-links quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)
 
@@ -27,8 +25,7 @@ Một climate shock có thể giảm water; water shortage ảnh hưởng food/n
 
 Đó là lý do các chapter này không nên đọc như chủ đề rời.
 
-
-> **Chuyển mạch:** Từ **dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)**, ta sang **Cross-links quan trọng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới**, **Cross-links quan trọng** gom các mảnh từ **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cross-links quan trọng
 
@@ -38,4 +35,4 @@ Human prerequisites: [Economic Geography](../02_human_geography/05_economic_geog
 
 Applications: [Regional Geography](../03_regions/00_how_to_read_regions.md) và [World Atlas](../06_world_atlas/README.md).
 
-> **Bàn giao:** Sau **Cross-links quan trọng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 climate change](./00_climate_change.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cross-links quan trọng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

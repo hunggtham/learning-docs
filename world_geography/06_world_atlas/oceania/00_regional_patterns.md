@@ -1,7 +1,6 @@
 # Oceania — Các mẫu địa lý cấp vùng
 
-> **Mạch đọc:** Đặt **Oceania — Các mẫu địa lý cấp vùng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Đừng nhìn Oceania chỉ bằng diện tích đất** sang **High islands và low islands là hai hệ khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Oceania — các mẫu địa lý cấp vùng**. Route đi từ islands/ocean space → high/low island systems → climate/ecology → settlement and mobility → Pacific connectivity, để diện tích đất không che mất địa lý biển.
 
 ## Đừng nhìn Oceania chỉ bằng diện tích đất
 
@@ -9,8 +8,7 @@ Một lỗi nhận thức phổ biến là đánh giá tầm quan trọng của 
 
 Hai territory có cùng 20 km² đất có thể rất khác nếu một nơi nằm sát hub hàng không còn nơi kia mất nhiều ngày tàu để tới cảng chính.
 
-
-> **Chuyển mạch:** Từ **Đừng nhìn Oceania chỉ bằng diện tích đất**, ta sang **High islands và low islands là hai hệ khác nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Oceania — Các mẫu địa lý cấp vùng**, **High islands và low islands là hai hệ khác nhau** tiếp nhận điểm tựa từ **Đừng nhìn Oceania chỉ bằng diện tích đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Plate ranh giới (boundary / 경계) tạo cả tài nguyên lẫn hazard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## High islands và low islands là hai hệ khác nhau
 
@@ -18,8 +16,7 @@ High volcanic islands thường có relief lớn, orographic rainfall, river ng�
 
 Do đó không nên dùng một chính sách water/settlement cho toàn Pacific Islands. `island type` là biến nền giống như `soil type` hoặc `climate zone` ở lục địa.
 
-
-> **Chuyển mạch:** Từ **High islands và low islands là hai hệ khác nhau**, ta sang **Plate ranh giới (boundary / 경계) tạo cả tài nguyên lẫn hazard** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Oceania — Các mẫu địa lý cấp vùng**, **High islands và low islands là hai hệ khác nhau** đã nêu tiêu chí phân biệt, còn **Plate ranh giới (boundary / 경계) tạo cả tài nguyên lẫn hazard** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Australia là một hệ khác hẳn phần lớn Pacific Islands** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Plate ranh giới (boundary / 경계) tạo cả tài nguyên lẫn hazard
 
@@ -27,15 +24,13 @@ Melanesia và southwest Pacific nằm gần nhiều subduction zones và island 
 
 New Zealand, Papua New Guinea, Solomon Islands, Vanuatu và Tonga cho thấy plate tectonics có thể đọc trực tiếp trên bản đồ dân cư và hạ tầng.
 
-
-> **Chuyển mạch:** Từ **Plate ranh giới (boundary / 경계) tạo cả tài nguyên lẫn hazard**, ta sang **Australia là một hệ khác hẳn phần lớn Pacific Islands** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oceania — Các mẫu địa lý cấp vùng**, **Plate ranh giới (boundary / 경계) tạo cả tài nguyên lẫn hazard** đã nêu tiêu chí phân biệt, còn **Australia là một hệ khác hẳn phần lớn Pacific Islands** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Logistics là một dạng địa hình vô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Australia là một hệ khác hẳn phần lớn Pacific Islands
 
 Australia có quy mô lục địa, interior arid rộng và urban hệ thống (system / 시스템) ven biển. Các Pacific islands xung quanh thường bị chi phối bởi small-island các ràng buộc (constraints / 제약조건들). Vì vậy `Oceania` là continental statistical region hơn là một single physical-geography đơn vị (unit / 단위).
 
-
-> **Chuyển mạch:** Từ **Australia là một hệ khác hẳn phần lớn Pacific Islands**, ta sang **Logistics là một dạng địa hình vô hình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Oceania — Các mẫu địa lý cấp vùng**, **Logistics là một dạng địa hình vô hình** tiếp nhận điểm tựa từ **Australia là một hệ khác hẳn phần lớn Pacific Islands** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Freshwater là giới hạn hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Logistics là một dạng địa hình vô hình
 
@@ -47,8 +42,7 @@ Khoảng cách hiệu dụng có thể viết khái niệm:
 
 Điều này giải thích vì sao hai đảo cách nhau 300 km có thể “xa” hơn hai thành phố lục địa cách 1.000 km nhưng có highway/rail dày.
 
-
-> **Chuyển mạch:** Từ **Logistics là một dạng địa hình vô hình**, ta sang **Freshwater là giới hạn hệ thống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Oceania — Các mẫu địa lý cấp vùng**, **Logistics là một dạng địa hình vô hình** đã nêu tiêu chí phân biệt, còn **Freshwater là giới hạn hệ thống** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Reef là hạ tầng (infrastructure / 인프라) tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Freshwater là giới hạn hệ thống
 
@@ -56,8 +50,7 @@ Atoll rainfall có thể khá lớn nhưng lưu trữ (storage / 저장소) rấ
 
 Ở high islands, vấn đề có thể ngược lại: mưa nhiều nhưng steep watersheds khiến runoff nhanh, flood lớn và dry-season lưu trữ (storage / 저장소) vẫn thiếu.
 
-
-> **Chuyển mạch:** Từ **Freshwater là giới hạn hệ thống**, ta sang **Reef là hạ tầng (infrastructure / 인프라) tự nhiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oceania — Các mẫu địa lý cấp vùng**, **Freshwater là giới hạn hệ thống** đã nêu tiêu chí phân biệt, còn **Reef là hạ tầng (infrastructure / 인프라) tự nhiên** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Urban primacy thường rất mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reef là hạ tầng (infrastructure / 인프라) tự nhiên
 
@@ -65,8 +58,7 @@ Coral reef làm giảm wave năng lượng (energy / 에너지), tạo fisheries
 
 Mangrove và seagrass cũng có vai trò tương tự ở nhiều đảo. Vì vậy environmental degradation có thể chuyển trực tiếp thành kỹ thuật (engineering / 엔지니어링) chi phí (cost / 비용).
 
-
-> **Chuyển mạch:** Từ **Reef là hạ tầng (infrastructure / 인프라) tự nhiên**, ta sang **Urban primacy thường rất mạnh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Oceania — Các mẫu địa lý cấp vùng**, **Urban primacy thường rất mạnh** tiếp nhận điểm tựa từ **Reef là hạ tầng (infrastructure / 인프라) tự nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate thay đổi (change / 변경) tác động theo chuỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Urban primacy thường rất mạnh
 
@@ -74,8 +66,7 @@ Nhiều island states có một capital/hub tập trung airport, cổng (port / 
 
 Đây là trường hợp extreme của **mạng (network / 네트워크) centrality**.
 
-
-> **Chuyển mạch:** Từ **Urban primacy thường rất mạnh**, ta sang **Climate thay đổi (change / 변경) tác động theo chuỗi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Oceania — Các mẫu địa lý cấp vùng**, **Urban primacy thường rất mạnh** xác định đầu vào; **Climate thay đổi (change / 변경) tác động theo chuỗi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Climate thay đổi (change / 변경) tác động theo chuỗi
 
@@ -85,8 +76,7 @@ Sea-level rise không chỉ là permanent inundation. Trước đó có thể xu
 
 High islands không miễn nhiễm: coastal settlements vẫn phơi lộ, còn rainfall, landslide và reef các hệ thống (systems / 시스템들) cũng thay đổi.
 
-
-> **Chuyển mạch:** Từ **Climate thay đổi (change / 변경) tác động theo chuỗi**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oceania — Các mẫu địa lý cấp vùng**, **Mô hình tư duy** gom các mảnh từ **Climate thay đổi (change / 변경) tác động theo chuỗi** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -94,4 +84,4 @@ High islands không miễn nhiễm: coastal settlements vẫn phơi lộ, còn r
 
 Xem thêm: [Vùng cực và đại dương](../../03_regions/09_oceania_pacific.md), [Water–Food–Energy Nexus](../../04_global_systems/01_water_food_energy_nexus.md), [Thiên tai và rủi ro](../../01_physical_geography/07_natural_hazards_risk.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Quay lại [README](./README.md) khi cần định vị lại prerequisite hoặc đơn vị sở hữu (owner / 오너).
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
