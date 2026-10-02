@@ -1,7 +1,6 @@
 # Địa cầu và Địa lý toàn hành tinh
 
-> **Mạch đọc:** Đọc **Địa cầu và Địa lý toàn hành tinh** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **chuỗi nhân quả (causal chain / 인과 사슬) của phần này** sang **học tập (learning / 학습) tuyến (route / 경로)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** README này là owner của **Địa cầu và Địa lý toàn hành tinh**. Route đi từ hình học và đo đạc Trái Đất → chuyển động, mùa và thời gian → vỏ, địa hình, nước và năng lượng → các hệ toàn cầu, để phần nền tảng dẫn được sang khí hậu, địa lý nhân văn và World Atlas.
 
 Phần này nối **Foundations**, **vật lý (physical / 물리적) Geography**, **toàn cục (global / 전역) các hệ thống (systems / 시스템들)** và **World Atlas**. Mục tiêu không phải tạo một phiên bản khác của địa chất hay khí hậu, mà trả lời câu hỏi: trước khi chia thế giới thành quốc gia và vùng, bản thân Địa cầu được đo, tổ chức và vận hành như thế nào?
 
@@ -15,8 +14,7 @@ Nên đọc folder này theo chuỗi:
 
 Chuỗi này giúp tránh học rời rạc. Ví dụ gravity không chỉ là kiến thức vật lý: nó tạo geoid, geoid ảnh hưởng height hệ thống (system / 시스템), height ảnh hưởng hydrology và survey. Rotation không chỉ tạo ngày–đêm: nó ảnh hưởng Coriolis, climate circulation, satellite orbit và timekeeping.
 
-
-> **Chuyển mạch:** Từ **chuỗi nhân quả (causal chain / 인과 사슬) của phần này**, ta sang **học tập (learning / 학습) tuyến (route / 경로)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Địa cầu và Địa lý toàn hành tinh**, **Chuỗi nhân quả (causal chain / 인과 사슬) của phần này** xác định đầu vào; **Học tập (learning / 학습) tuyến (route / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Những câu hỏi phải trả lời được sau phần này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Học tập (learning / 학습) tuyến (route / 경로)
 
@@ -29,22 +27,19 @@ Chuỗi này giúp tránh học rời rạc. Ví dụ gravity không chỉ là k
 7. [Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ](./06_global_reference_systems.md) — CRS, transformation, vertical datum, động (dynamic / 동적) frame và geospatial interoperability.
 8. [Dấu chân con người ở quy mô hành tinh](./07_human_footprint_planetary_scale.md) — land-use, material luồng (flow / 흐름), telecoupling và planetary–cục bộ (local / 로컬) linkage.
 
-
-> **Chuyển mạch:** Từ **học tập (learning / 학습) tuyến (route / 경로)**, ta sang **Những câu hỏi phải trả lời được sau phần này** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Địa cầu và Địa lý toàn hành tinh**, **Những câu hỏi phải trả lời được sau phần này** tiếp nhận điểm tựa từ **Học tập (learning / 학습) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ với Foundations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những câu hỏi phải trả lời được sau phần này
 
 Người học nên giải thích được vì sao một tọa độ chính xác cần CRS và epoch; vì sao độ cao GNSS có thể khác độ cao bản đồ; vì sao mùa không chủ yếu do Earth–Sun distance; vì sao ocean floor trẻ hơn phần lớn continental crust; vì sao toàn cục (global / 전역) relief có tính bimodal; vì sao gravity dữ liệu (data / 데이터) có thể theo dõi water/ice mass; vì sao ranh giới (boundary / 경계) dataset cũng cần provenance; và vì sao environmental footprint của một city có thể nằm ở nhiều lục địa.
 
-
-> **Chuyển mạch:** Từ **Những câu hỏi phải trả lời được sau phần này**, ta sang **Quan hệ với Foundations** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa cầu và Địa lý toàn hành tinh**, **Quan hệ với Foundations** tiếp nhận điểm tựa từ **Những câu hỏi phải trả lời được sau phần này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ với vật lý (physical / 물리적) Geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ với Foundations
 
 [Coordinates](../00_foundations/02_coordinates_time_maps.md), [Cartography](../00_foundations/03_cartography_projections_scale.md) và [GIS/remote sensing](../00_foundations/04_geospatial_data_gis_remote_sensing.md) tập trung vào công cụ suy luận và dữ liệu. Folder này giải thích nền vật lý–trắc địa khiến các công cụ đó cần datum, projection, thời gian (time / 시간) tham chiếu (reference / 참조) và sensor mô hình (model / 모델).
 
-
-> **Chuyển mạch:** Từ **Quan hệ với Foundations**, ta sang **Quan hệ với vật lý (physical / 물리적) Geography** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Trong **Địa cầu và Địa lý toàn hành tinh**, **Quan hệ với vật lý (physical / 물리적) Geography** tiếp nhận điểm tựa từ **Quan hệ với Foundations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ với World Atlas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ với vật lý (physical / 물리적) Geography
 
@@ -52,8 +47,7 @@ Plate tectonics tạo ocean basin và mountain belt. Atmosphere–ocean circulat
 
 Vì vậy `05_earth_global_geography` không thay thế `01_physical_geography`; nó cung cấp **planetary frame** để thấy các quá trình đó cùng nằm trong một hành tinh.
 
-
-> **Chuyển mạch:** Từ **Quan hệ với vật lý (physical / 물리적) Geography**, ta sang **Quan hệ với World Atlas** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Ở chặng này của **Địa cầu và Địa lý toàn hành tinh**, **Quan hệ với World Atlas** tiếp nhận điểm tựa từ **Quan hệ với vật lý (physical / 물리적) Geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quan hệ với World Atlas
 
@@ -63,8 +57,7 @@ Khi đọc một country profile, không nên bắt đầu từ thủ đô hay G
 
 Đây là cầu nối (bridge / 브리지) từ Earth science sang regional/human geography.
 
-
-> **Chuyển mạch:** Từ **Quan hệ với World Atlas**, ta sang **Mô hình tổng hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Địa cầu và Địa lý toàn hành tinh**, **Mô hình tổng hợp** gom các mảnh từ **Quan hệ với World Atlas** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tổng hợp
 
@@ -85,3 +78,5 @@ graph TD
 ```
 
 Mental model cuối cùng là: **Địa cầu là một hệ vật lý có hình học, trường, chuyển động và dòng; xã hội xây network lên trên hệ đó; Geography nghiên cứu nơi các lớp này giao nhau.**
+
+> **Bàn giao:** Sau **Mô hình tổng hợp**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
