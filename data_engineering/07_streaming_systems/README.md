@@ -12,7 +12,7 @@ Streaming là bài toán duy trì computation trên đầu vào (input / 입력)
 
 Dashboard vận hành thường cần processing/ingestion thời gian (time / 시간); nghiệp vụ (business / 비즈니스) cửa sổ (window / 윈도우) thường cần sự kiện (event / 이벤트) thời gian (time / 시간). Trộn chúng làm số liệu lệch mà không nhất thiết tạo lỗi.
 
-> **Chuyển mạch:** Trong **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **2. cửa sổ (window / 윈도우) và watermark** tiếp nhận điểm tựa từ **1. Ba loại thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. trạng thái (state / 상태) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Ba loại thời gian** tách event, processing và ingestion time; **Window và watermark** dùng distinction đó để quyết định state nào còn mở.
 
 ## 2. cửa sổ (window / 윈도우) và watermark
 
@@ -48,7 +48,7 @@ CDC stream thường có giao dịch (transaction / 트랜잭션)/thứ tự (or
 
 Lược đồ (schema / 스키마) evolution an toàn thường theo trình tự: add optional trường dữ liệu (field / 필드) → nâng bên tiêu thụ (consumer / 소비자) → producer bắt đầu ghi trường dữ liệu (field / 필드) → deprecate trường dữ liệu (field / 필드) cũ sau tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우). Rename trực tiếp có thể làm reader cũ hiểu sai hoặc tạo drop+add.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **6. Delivery và sink** tiếp nhận điểm tựa từ **5. CDC, thứ tự (ordering / 순서) và lược đồ (schema / 스키마) evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Replay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **CDC, ordering và schema evolution** xác định event contract; **Delivery và sink** thực thi contract đó, rồi **Replay** kiểm tra khả năng tái tạo output.
 
 ## 6. Delivery và sink
 
@@ -61,7 +61,7 @@ stream → deterministic projection → durable output
                          └──────→ side-effect dispatcher với idempotency key
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **7. Replay** tiếp nhận điểm tựa từ **6. Delivery và sink** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Streaming checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Replay** xác nhận event log đủ và deterministic đến đâu; **Streaming checklist** gom delivery, state, watermark và recovery evidence.
 
 ## 7. Replay
 
@@ -69,7 +69,7 @@ Replay cần xác định offset/thời gian (time / 시간) phạm vi (range / 
 
 Một hệ thống trưởng thành có thể chạy replay nhỏ trên mẫu (sample / 표본), đối chiếu aggregate với snapshot/tham chiếu (reference / 참조) và chỉ promote đầu ra (output / 출력) sau reconciliation.
 
-> **Chuyển mạch:** Trong **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **8. Streaming checklist** tiếp nhận điểm tựa từ **7. Replay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. cửa sổ (window / 윈도우) kết quả (result / 결과) là máy trạng thái (state machine / 상태 머신)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Streaming checklist** đặt tiêu chí vận hành; **Window result state machine** biến tiêu chí đó thành transition và output có thể kiểm tra.
 
 ## 8. Streaming checklist
 
@@ -81,7 +81,7 @@ Một hệ thống trưởng thành có thể chạy replay nhỏ trên mẫu (s
 
 Đọc tiếp: [02 — Pipeline semantics](../02_pipeline_architecture.md), [06 — Distributed processing](../06_distributed_processing/README.md), [08 — Orchestration và backfill](../08_orchestration_and_backfill/README.md).
 
-> **Chuyển mạch:** Ở chặng này của **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **9. cửa sổ (window / 윈도우) kết quả (result / 결과) là máy trạng thái (state machine / 상태 머신)** tiếp nhận điểm tựa từ **8. Streaming checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. trạng thái (state / 상태) store và checkpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Window result state machine** xác định state transition; **State store và checkpoint** bảo đảm transition không mất khi process restart hoặc scale.
 
 ## 9. cửa sổ (window / 윈도우) kết quả (result / 결과) là máy trạng thái (state machine / 상태 머신)
 
@@ -93,7 +93,7 @@ open → updating → provisional → finalized → corrected/expired
 
 Watermark chuyển cửa sổ (window / 윈도우) từ open sang provisional/finalized theo chính sách (policy / 정책). Late sự kiện (event / 이벤트) sau finalized không được âm thầm mutate kết quả mà không phát phiên bản (version / 버전)/correction bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **10. trạng thái (state / 상태) store và checkpoint** tiếp nhận điểm tựa từ **9. cửa sổ (window / 윈도우) kết quả (result / 결과) là máy trạng thái (state machine / 상태 머신)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. CDC snapshot handoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **State store và checkpoint** giữ durability của window state; **CDC snapshot handoff** dùng durability đó để nối batch snapshot với stream.
 
 ## 10. trạng thái (state / 상태) store và checkpoint
 
@@ -101,7 +101,7 @@ Checkpoint phải bao phủ cả đầu vào (input / 입력) position và trạ
 
 Checkpoint interval là sự đánh đổi (trade-off / 트레이드오프): interval ngắn giảm replay công việc (work / 작업) nhưng tăng I/O; interval dài giảm overhead nhưng khôi phục (recovery / 복구) lâu hơn. Đo khôi phục (recovery / 복구) điểm (point / 지점), checkpoint kích thước (size / 크기), restore thời gian (time / 시간) và duplicate/correction hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Trong **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **11. CDC snapshot handoff** tiếp nhận điểm tựa từ **10. trạng thái (state / 상태) store và checkpoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **CDC snapshot handoff** khóa điểm bắt đầu và ordering; **Backpressure** kiểm tra hệ thống phản ứng ra sao khi producer nhanh hơn consumer.
 
 ## 11. CDC snapshot handoff
 
@@ -109,7 +109,7 @@ Snapshot + log CDC cần một cutover điểm (point / 지점) atomic. Nếu sn
 
 Bên tiêu thụ (consumer / 소비자) nên lưu `snapshot_id`, `log_position`, lược đồ (schema / 스키마) phiên bản (version / 버전) và nguồn (source / 소스) giao dịch (transaction / 트랜잭션) siêu dữ liệu (metadata / 메타데이터). Đây là bằng chứng (evidence / 증거) để chứng minh không có gap trong handoff.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Streaming các hệ thống (systems / 시스템들): sự kiện (event / 이벤트) thời gian (time / 시간), watermark, trạng thái (state / 상태) và replay**, **12. Backpressure** tiếp nhận điểm tựa từ **11. CDC snapshot handoff** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Backpressure** khép README bằng capacity, lag và recovery evidence; chi tiết engine quay về canonical streaming owner.
 
 ## 12. Backpressure
 
