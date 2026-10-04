@@ -7,14 +7,17 @@ Mục tiêu là tạo một thói quen chung:
 ```text
 Situation / claim / decision
 → frame the real problem
+→ create an independent baseline
 → identify uncertainty
-→ choose the right model
 → inspect evidence and causality
+→ challenge the preferred explanation
+→ choose the right model
 → compare alternatives
 → inspect incentives and system effects
 → estimate payoff and downside
 → decide with explicit assumptions
 → define what new evidence would change the decision
+→ review whether the process was calibrated
 ```
 
 ## Vì sao cần `thinking/` nếu nội dung đã tồn tại?
@@ -27,7 +30,7 @@ Repository đã có các canonical owner:
 - [Economics](../economics/README.md) sở hữu scarcity, opportunity cost, incentives, equilibrium và game theory.
 - [Research Methods](../research_methods/README.md) sở hữu study design, measurement, sampling, causal inference và evidence synthesis.
 
-Nếu chép lại theory ở đây, repository sẽ duplicate và khó giữ consistency. Vì vậy mỗi topic trong `thinking/` tập trung vào **workflow**, **failure modes**, **câu hỏi kiểm tra**, **case application** và **handoff** sang canonical owner để học sâu.
+Nếu chép lại theory ở đây, repository sẽ duplicate và khó giữ consistency. Vì vậy mỗi topic trong `thinking/` tập trung vào **workflow**, **failure modes**, **câu hỏi kiểm tra**, **practice artifact**, **case application** và **handoff** sang canonical owner để học sâu.
 
 ## Cấu trúc
 
@@ -64,50 +67,76 @@ Xem [Conceptual Dependencies](./CONCEPTUAL_DEPENDENCIES.md) để biết tool n�
 
 ### 1. “Claim này có đáng tin không?”
 
-[Problem Framing](./problem-framing/README.md) → [Critical Thinking](./critical-thinking/README.md) → [Statistics for Life](./statistics-for-life/README.md) → [Causal Reasoning](./causal-reasoning/README.md) → [Logical Fallacies](./logical-fallacies/README.md) / [Cognitive Bias](./cognitive-bias/README.md).
+[Problem Framing](./problem-framing/README.md) → [Critical Thinking](./critical-thinking/README.md) → [Argument & Evidence Mapping](./practice/06_argument_and_evidence_mapping.md) → [Statistics for Life](./statistics-for-life/README.md) → [Causal Reasoning](./causal-reasoning/README.md) → [Logical Fallacies](./logical-fallacies/README.md) / [Cognitive Bias](./cognitive-bias/README.md).
 
-Dùng cho bài báo, research claim, chart, social media, business report và các con số có narrative đi kèm.
+Dùng cho bài báo, research claim, chart, social media, business report và các con số có narrative đi kèm. Argument map giúp tách observation khỏi inference trước khi ta tranh luận conclusion.
 
-### 2. “Điều gì có thể xảy ra tiếp theo?”
+### 2. “Con số này có hợp lý không?”
+
+[Problem Framing](./problem-framing/README.md) → [Estimation & Sanity Checks](./practice/05_estimation_and_sanity_checks.md) → [Statistics for Life](./statistics-for-life/README.md) → [Sensitivity Analysis](./practice/02_sensitivity_analysis_and_uncertainty_decomposition.md).
+
+Dùng cho market size, budget, capacity, storage, traffic, project duration, KPI hoặc output từ spreadsheet/AI. Route này tạo baseline độc lập bằng unit, order of magnitude, bounds, capacity và triangulation trước khi đầu tư công sức vào precision.
+
+### 3. “Điều gì có thể xảy ra tiếp theo?”
 
 [Probability](./probability/README.md) → [Forecasting](./forecasting/README.md) → [Model Selection](./model-selection/README.md) → [Risk](./risk/README.md).
 
 Dùng khi uncertainty nằm ở tương lai: project schedule, investment assumption, demand, system capacity hoặc planning.
 
-### 3. “Tôi nên chọn phương án nào?”
+### 4. “Tôi nên chọn phương án nào?”
 
 [Problem Framing](./problem-framing/README.md) → [Opportunity Cost](./opportunity-cost/README.md) → [Probability](./probability/README.md) → [Expected Value](./expected-value/README.md) → [Risk](./risk/README.md) → [Value of Information](./value-of-information/README.md) → [Decision Making](./decision-making/README.md).
 
-Đây là route chính cho investment, insurance, career, purchasing, project và resource allocation.
+Decision Making hiện ưu tiên explicit option set, status quo, sequential decisions, reversibility, cost of delay, stopping rule và robustness thay vì chỉ chấm điểm options.
 
-### 4. “Vì sao kết quả này xảy ra?”
+### 5. “Vì sao kết quả này xảy ra?”
 
 [Problem Framing](./problem-framing/README.md) → [Causal Reasoning](./causal-reasoning/README.md) → [Systems Thinking](./systems-thinking/README.md) → [Model Selection](./model-selection/README.md).
 
 Dùng cho debugging, scientific explanation, business performance, social systems và failure analysis.
 
-### 5. “Người khác sẽ phản ứng thế nào nếu rule thay đổi?”
+### 6. “Người khác sẽ phản ứng thế nào nếu rule thay đổi?”
 
 [Incentives](./incentives/README.md) → [Game Theory](./game-theory/README.md) → [Systems Thinking](./systems-thinking/README.md) → [Decision Making](./decision-making/README.md).
 
 Dùng khi outcome phụ thuộc vào adaptation của nhiều actor, không phải một cơ chế cơ học cố định.
 
-### 6. “Có nên tìm hiểu thêm hay quyết định ngay?”
+### 7. “Có nên tìm hiểu thêm hay quyết định ngay?”
 
 [Value of Information](./value-of-information/README.md) → [Risk](./risk/README.md) → [Decision Making](./decision-making/README.md).
 
 Dùng để tránh hai cực: quyết định quá sớm khi thiếu evidence, hoặc research vô hạn dù information mới không còn khả năng thay đổi action.
 
+### 8. “Tôi có đang quá thích conclusion này không?”
+
+[Argument & Evidence Mapping](./practice/06_argument_and_evidence_mapping.md) → [Red Team, Steelman & Disconfirmation](./practice/07_red_team_steelman_and_disconfirmation.md) → [Sensitivity Analysis](./practice/02_sensitivity_analysis_and_uncertainty_decomposition.md) → [Decision Making](./decision-making/README.md).
+
+Dùng trước commitment material, khi consensus hình thành quá nhanh hoặc khi incentives khiến team/cá nhân có lý do mạnh để bảo vệ một conclusion. Red team phải steelman trước, tìm disconfirming evidence và predefine update threshold; nó không phải contrarianism.
+
 ## Practice — luyện reasoning thay vì chỉ đọc concept
 
-[Thinking Practice](./practice/README.md) hiện có bốn drill:
+[Thinking Practice](./practice/README.md) hiện có bảy drill. Chúng đi từ making judgment explicit → challenge judgment → stress-test decision → review process.
 
 1. [Calibration & Bayesian Updating](./practice/01_calibration_and_bayesian_updating.md) — đưa uncertainty thành probability/range có thể review và update.
-2. [Sensitivity Analysis & Uncertainty Decomposition](./practice/02_sensitivity_analysis_and_uncertainty_decomposition.md) — tìm assumption nào thật sự làm conclusion đổi.
-3. [Scenario Planning & Stress Testing](./practice/03_scenario_planning_and_stress_testing.md) — kiểm tra decision khi tương lai lệch base case hoặc system gặp stress.
-4. [Decision Journal & Postmortem](./practice/04_decision_journal_and_postmortem.md) — tách process quality khỏi luck và tạo feedback loop qua thời gian.
+2. [Estimation & Sanity Checks](./practice/05_estimation_and_sanity_checks.md) — Fermi estimate, units, bounds, capacity, triangulation và error-ratio review.
+3. [Argument & Evidence Mapping](./practice/06_argument_and_evidence_mapping.md) — claim → evidence for/against → assumptions → alternatives → confidence → update trigger.
+4. [Red Team, Steelman & Disconfirmation](./practice/07_red_team_steelman_and_disconfirmation.md) — challenge strongest version, target fragile assumptions và tìm evidence có thể làm conclusion yếu đi.
+5. [Sensitivity Analysis & Uncertainty Decomposition](./practice/02_sensitivity_analysis_and_uncertainty_decomposition.md) — tìm assumption nào thật sự làm conclusion đổi.
+6. [Scenario Planning & Stress Testing](./practice/03_scenario_planning_and_stress_testing.md) — kiểm tra decision khi tương lai lệch base case hoặc system gặp stress.
+7. [Decision Journal & Postmortem](./practice/04_decision_journal_and_postmortem.md) — tách process quality khỏi luck và tạo feedback loop qua thời gian.
 
-Practice layer không thêm canonical theory. Nó biến knowledge thành kỹ năng bằng chu kỳ `estimate → expose assumptions → test → observe → update → review`.
+Practice layer không thêm canonical theory. Nó biến knowledge thành kỹ năng bằng chu kỳ:
+
+```text
+estimate / map
+→ expose assumptions
+→ steelman / challenge
+→ stress test
+→ act or defer
+→ observe
+→ update
+→ review
+```
 
 ## Casebook — từ concept sang tình huống thật
 
@@ -129,7 +158,9 @@ Casebook có ba mức depth: quick pass cho vấn đề nhỏ, normal pass cho q
 | Thinking tool | Những nơi nên dùng ngay |
 |---|---|
 | Problem Framing | [PMP](../pmp/README.md), [Computer Science](../computer_science/README.md), [Research Methods](../research_methods/README.md), [Economics](../economics/README.md) |
-| Critical Thinking | [Philosophy](../philosophy/README.md), [Research Methods](../research_methods/README.md), [World History](../world_history/README.md), [Psychology](../psychology/README.md), [Sociology](../sociology/README.md) |
+| Critical Thinking / Argument Mapping | [Philosophy](../philosophy/README.md), [Research Methods](../research_methods/README.md), [World History](../world_history/README.md), [Psychology](../psychology/README.md), [Sociology](../sociology/README.md) |
+| Estimation & Sanity Checks | [Mathematics](../mathematics/README.md), [PMP](../pmp/README.md), [Computer Science](../computer_science/README.md), [Data Engineering](../data_engineering/README.md), [Investing](../investing/README.md) |
+| Red Team / Disconfirmation | [PMP](../pmp/README.md), [Computer Science](../computer_science/README.md), [Research Methods](../research_methods/README.md), [Investing](../investing/README.md) |
 | Probability | [Mathematics](../mathematics/README.md), [Investing](../investing/README.md), [Research Methods](../research_methods/README.md), [Psychology](../psychology/README.md), [Economics](../economics/README.md) |
 | Statistics for Life | [Research Methods](../research_methods/README.md), [Biology](../biology/README.md), [Psychology](../psychology/README.md), [Economics](../economics/README.md), [Investing](../investing/README.md) |
 | Causal Reasoning | [Research Methods](../research_methods/README.md), [Economics](../economics/README.md), [Computer Science](../computer_science/README.md), [Psychology](../psychology/README.md) |
@@ -147,26 +178,29 @@ Casebook có ba mức depth: quick pass cho vấn đề nhỏ, normal pass cho q
 
 Với một claim hoặc decision quan trọng, chạy protocol sau ở mức depth phù hợp:
 
-1. **Frame** — Ta thật sự đang hỏi hoặc quyết định điều gì? Outcome và constraint là gì?
-2. **Alternatives** — Có những explanation hoặc option nào khác?
-3. **Base rate** — Trước khi nhìn case này, case tương tự thường ra sao?
-4. **Evidence** — Dữ liệu là observation, experiment, survey, anecdote hay model output?
-5. **Causality** — Evidence nói association hay intervention effect?
-6. **Model** — Lens nào phù hợp và assumptions nào đang bị bỏ qua?
-7. **Forecast** — Những future states nào plausible và confidence bao nhiêu?
-8. **Payoff** — Upside/downside của mỗi state là gì?
-9. **Risk** — Tail risk, ruin, irreversibility, correlation hoặc blast radius có đáng lo không?
-10. **Opportunity cost** — Option tốt nhất bị bỏ qua là gì?
-11. **Incentives** — Actor nào có payoff gì và rule change làm behavior đổi thế nào?
-12. **System** — Feedback loop, delay, bottleneck và second-order effect nào tồn tại?
-13. **Bias check** — Ta có đang bảo vệ conclusion đã thích từ trước không?
-14. **Information value** — Evidence bổ sung nào có thể đổi action, và nó có đáng cost/delay không?
-15. **Decision / update rule** — Chọn action nào và evidence nào trong tương lai sẽ khiến ta đổi ý?
+1. **Frame** — Ta thật sự đang hỏi hoặc quyết định điều gì? Outcome, stakeholder, horizon và constraint là gì?
+2. **Sanity baseline** — Unit, denominator, order of magnitude và rough independent estimate có hợp lý không?
+3. **Alternatives** — Có những explanation hoặc option nào khác, gồm status quo/staged option khi relevant?
+4. **Base rate** — Trước khi nhìn case này, case tương tự thường ra sao?
+5. **Evidence map** — Observation nào support/contradict claim, assumption nào nối evidence với conclusion?
+6. **Disconfirmation** — Strongest countercase là gì? Evidence nào sẽ làm preferred conclusion yếu đi?
+7. **Causality** — Evidence nói association hay intervention effect?
+8. **Model** — Lens nào phù hợp và assumptions nào đang bị bỏ qua?
+9. **Forecast** — Những future states nào plausible và confidence bao nhiêu?
+10. **Payoff** — Upside/downside của mỗi state là gì?
+11. **Risk** — Tail risk, ruin, irreversibility, correlation hoặc blast radius có đáng lo không?
+12. **Opportunity cost** — Option tốt nhất bị bỏ qua là gì?
+13. **Incentives** — Actor nào có payoff gì và rule change làm behavior đổi thế nào?
+14. **System** — Feedback loop, delay, bottleneck và second-order effect nào tồn tại?
+15. **Information value** — Evidence bổ sung nào có thể đổi action, và nó có đáng cost/delay không?
+16. **Stopping / threshold** — Khi nào đủ information để act, wait, switch hoặc rollback?
+17. **Decision / update rule** — Chọn action nào và evidence nào trong tương lai sẽ khiến ta đổi ý?
+18. **Review** — Khi outcome xuất hiện, process sai ở framing, evidence, model, estimate, execution hay chỉ gặp tail event?
 
-Không phải vấn đề nào cũng cần đủ 15 bước. Complexity của reasoning nên tỷ lệ với **stakes × uncertainty × irreversibility**.
+Không phải vấn đề nào cũng cần đủ 18 bước. Complexity của reasoning nên tỷ lệ với **stakes × uncertainty × irreversibility**.
 
 ## Boundary
 
-`thinking/` không thay thế domain chuyên môn. Decision framework không thay thế medical evidence; expected value không thay thế portfolio construction; logical fallacy không chứng minh một conclusion sai; systems thinking không tự tạo causal evidence; incentive analysis không tự chứng minh motive của một cá nhân; forecast không trở thành fact chỉ vì có probability.
+`thinking/` không thay thế domain chuyên môn. Estimate không thay measurement; argument map không biến premise sai thành đúng; red team không chứng minh preferred conclusion sai; decision framework không thay medical evidence; expected value không thay portfolio construction; logical fallacy không chứng minh một conclusion sai; systems thinking không tự tạo causal evidence; incentive analysis không tự chứng minh motive của một cá nhân; forecast không trở thành fact chỉ vì có probability.
 
 Khi vấn đề chuyển từ công cụ suy nghĩ sang kiến thức chuyên ngành, hãy handoff về canonical domain tương ứng.

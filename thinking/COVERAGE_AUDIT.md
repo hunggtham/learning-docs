@@ -8,43 +8,50 @@
 coverage đủ rộng để dùng thực tế
 without theory duplication
 with explicit handoff
-with cross-domain application
+with deliberate practice + feedback loop
 ```
 
 ## Coverage hiện tại
 
 ### Problem definition
 
-- Problem Framing
-- First Principles
-- Model Selection
+- Problem Framing — đã deepen: symptom/problem/cause, operationalization, constraint vs bottleneck, competing frames, scope, update trigger.
+- First Principles.
+- Model Selection.
 
 ### Evidence and belief
 
-- Critical Thinking
-- Logical Fallacies
-- Cognitive Bias
-- Probability
-- Statistics for Life
-- Causal Reasoning
+- Critical Thinking.
+- Logical Fallacies.
+- Cognitive Bias.
+- Probability.
+- Statistics for Life.
+- Causal Reasoning.
+- Argument & Evidence Mapping practice.
+- Red Team, Steelman & Disconfirmation practice.
 
 ### Future uncertainty
 
-- Forecasting
-- Expected Value
-- Risk
-- Value of Information
+- Forecasting.
+- Expected Value.
+- Risk.
+- Value of Information.
+- Calibration & Bayesian Updating practice.
+- Estimation & Sanity Checks practice.
+- Sensitivity Analysis practice.
+- Scenario Planning & Stress Testing practice.
 
 ### Choice and trade-off
 
-- Opportunity Cost
-- Decision Making
+- Opportunity Cost.
+- Decision Making — đã deepen: status quo/options, reversibility, sequential decisions, option value, thresholds, stopping rule, cost of delay, robustness, margin of safety, update/review rule.
+- Decision Journal & Postmortem practice.
 
 ### Multi-actor / dynamic systems
 
-- Incentives
-- Game Theory
-- Systems Thinking
+- Incentives.
+- Game Theory.
+- Systems Thinking.
 
 ### Applied integration
 
@@ -59,31 +66,52 @@ Casebook hiện bao phủ:
 - negotiation/bargaining/conflict;
 - politics/public policy/institutions.
 
-### Deliberate practice
+## Deliberate practice
 
-`practice/` hiện bao phủ các năng lực khó hình thành chỉ bằng đọc concept:
+`practice/` hiện có bảy drill:
 
-- calibration và Bayesian updating;
-- sensitivity analysis và uncertainty decomposition;
-- scenario planning và stress testing;
-- decision journal và postmortem.
+1. calibration & Bayesian updating;
+2. estimation & sanity checks;
+3. argument & evidence mapping;
+4. red team, steelman & disconfirmation;
+5. sensitivity analysis & uncertainty decomposition;
+6. scenario planning & stress testing;
+7. decision journal & postmortem.
 
 Practice và casebook có vai trò khác nhau:
 
 ```text
-practice/       skill-first, lặp lại cùng reasoning skill qua nhiều context
-90_connections/ case-first, chọn và phối hợp nhiều tools cho một context thực tế
+practice/
+skill-first, lặp lại cùng reasoning skill qua nhiều context
+
+90_connections/
+case-first, chọn và phối hợp nhiều tools cho một context thực tế
 ```
+
+Practice layer hiện đã bao phủ chu kỳ:
+
+```text
+make judgment explicit
+→ create independent baseline
+→ map evidence/assumptions
+→ challenge preferred conclusion
+→ identify sensitive uncertainty
+→ stress-test alternatives
+→ act / update
+→ review process
+```
+
+Đây là coverage tốt hơn việc mở thêm generic “mental model” topics.
 
 ## Canonical ownership check
 
 | Concept | Canonical owner | `thinking/` chỉ giữ |
 |---|---|---|
-| Logic / argument | Philosophy | practical claim checks |
-| Probability / statistics | Mathematics | everyday uncertainty workflow + calibration drills |
+| Logic / argument | Philosophy | practical claim checks, mapping và steelman/red-team workflow |
+| Probability / statistics | Mathematics | everyday uncertainty, estimation sanity checks, calibration drills |
 | Cognitive bias / decision science | Psychology | bias checks inside decisions và review process |
 | Opportunity cost / incentives / game theory | Economics | cross-domain application / negotiation workflow |
-| Causal inference / evidence synthesis | Research Methods + Econometrics | causal checklist / tool selection |
+| Causal inference / evidence synthesis | Research Methods + Econometrics | causal checklist / tool selection / disconfirmation workflow |
 | Project risk / governance | PMP | generic decision/risk/scenario layer |
 | Investing mechanics | Investing | reasoning workflow only |
 | Public institutions / law / civic systems | relevant civic, legal, economics and history domains | neutral reasoning workflow for policy/institution claims |
@@ -99,13 +127,15 @@ Một topic trong `thinking/` đạt chuẩn khi có:
 5. ít nhất hai internal links;
 6. handoff về canonical theory;
 7. ví dụ không biến anecdote thành evidence;
-8. không tạo pseudo-precision.
+8. không tạo pseudo-precision;
+9. section có mạch `định vị → mechanism/reasoning → boundary/handoff`, không chỉ bullet checklist.
 
-Một practice drill thêm ba gate:
+Một practice drill thêm bốn gate:
 
-9. có output có thể ghi lại hoặc review;
-10. phân biệt process quality với outcome/luck;
-11. tạo được update loop thay vì bài tập một lần.
+10. có output/artifact có thể lưu và review;
+11. phân biệt process quality với outcome/luck;
+12. có update loop thay vì bài tập một lần;
+13. có scoring/review criterion hoặc ít nhất explicit failure taxonomy.
 
 ## Những điều cố ý không thêm
 
@@ -115,7 +145,11 @@ Không thêm danh sách dài mental model nếu không có dependency và applic
 
 ### Duplicate Bayesian/statistics chapters
 
-Formal derivation tiếp tục ở Mathematics. `thinking/` chỉ dùng Bayesian intuition, base rate, updating và calibration khi cần cho reasoning.
+Formal derivation tiếp tục ở Mathematics. `thinking/` chỉ dùng Bayesian intuition, estimation, base rate, updating và calibration khi cần cho reasoning.
+
+### Duplicate formal argumentation
+
+Argument Mapping và Red Team là practice workflow, không thay logic/epistemology ở Philosophy.
 
 ### Duplicate behavioral economics
 
@@ -145,26 +179,54 @@ Không biến `thinking/` thành medical, legal, financial, political hoặc eng
 
 Không thêm backlink cơ học vào mọi file chỉ để tăng link count. Backlink chỉ nên xuất hiện ở entrypoint/chapter nơi tool giúp reader chuyển context thực sự.
 
-Các điểm inbound có giá trị cao đã triển khai gồm Philosophy, Economics, Research Methods, Psychology, Investing và Computer Science Security/Reliability. Những nơi còn có thể bổ sung khi có chỉnh sửa tự nhiên ở domain đó:
+Các điểm inbound có giá trị cao đã triển khai gồm Philosophy, Economics, Research Methods, Psychology, Investing và Computer Science Security/Reliability.
+
+Backlog có giá trị khi domain tương ứng được sửa tự nhiên:
 
 ```text
-PMP → Risk / Value of Information / Decision Making / Stress Testing
-DevOps / Data Engineering → Causal Reasoning / Systems Thinking / Incident case
+PMP → Risk / Value of Information / Decision Making / Stress Testing / Red Team
+DevOps / Data Engineering → Causal Reasoning / Systems Thinking / Incident case / Estimation
 Sociology / civic domains → Incentives / Game Theory / Policy-institution case
+Life → product claims / comparison / TCO reasoning after Life becomes canonical
 ```
 
 Đây là backlog integration, không phải lý do tự tạo commit sửa hàng loạt canonical files.
 
-## Gap review sau integration pass
+## Gap review sau depth pass v2
 
-Các candidate trước đây đã được xử lý:
+Các gap trước đây đã được xử lý:
 
 - negotiation / bargaining integration → `90_connections/06_negotiation_bargaining_and_conflict.md`;
 - politics / public policy / institutions → `90_connections/07_politics_policy_and_institutions.md`;
 - Bayesian updating applied drills → `practice/01_calibration_and_bayesian_updating.md`;
 - uncertainty decomposition / sensitivity analysis → `practice/02_sensitivity_analysis_and_uncertainty_decomposition.md`;
 - scenario planning / stress testing → `practice/03_scenario_planning_and_stress_testing.md`;
-- decision journal / review exercises → `practice/04_decision_journal_and_postmortem.md`.
+- decision journal / review exercises → `practice/04_decision_journal_and_postmortem.md`;
+- Fermi estimation / units / order-of-magnitude sanity → `practice/05_estimation_and_sanity_checks.md`;
+- claim–evidence–assumption inspection → `practice/06_argument_and_evidence_mapping.md`;
+- steelman / adversarial review / disconfirmation → `practice/07_red_team_steelman_and_disconfirmation.md`;
+- shallow framing note → `problem-framing/README.md` depth pass;
+- shallow decision checklist → `decision-making/README.md` depth pass.
+
+## Remaining high-value depth candidates
+
+Không có core taxonomy gap rõ đủ mạnh để mở thêm folder ngay. Candidate tiếp theo chỉ nên làm nếu case usage cho thấy recurring failure:
+
+```text
+Causal diagnosis drill
+→ useful nếu engineering/business cases cần repeated hypothesis-testing artifact
+
+Negotiation practice drill
+→ useful nếu casebook chưa đủ để luyện BATNA / concession / information structure
+
+AI/LLM verification case
+→ useful vì generated plausible answer có failure mode riêng về provenance và verification
+
+Consumer decision case
+→ chỉ nên thêm sau khi Life Knowledge trở thành canonical domain
+```
+
+Ưu tiên hiện tại vẫn là **use, selective backlinks, consistency và case-driven gaps**.
 
 ## Next depth rule
 
@@ -174,4 +236,4 @@ Không mở thêm taxonomy chỉ vì có một mental model nổi tiếng. Chỉ
 2. một cross-domain route phải duplicate explanation vì thiếu integration node;
 3. practice review cho thấy skill quan trọng nhưng không có drill hoặc feedback loop.
 
-Ở trạng thái hiện tại, ưu tiên **sử dụng, backlink có chọn lọc và consistency** hơn là tăng số folder.
+Nếu không đạt một trong ba điều này, ưu tiên internal link, deepen existing chapter hoặc tạo exercise trong practice file đã có.
