@@ -8,7 +8,7 @@ Gõ một URL nhìn như một hành động (action / 동작) đơn giản, nh�
 
 `https://example.com:443/path?q=1` chứa scheme `https`, host `example.com`, optional cổng (port / 포트), đường dẫn (path / 경로) và truy vấn (query / 쿼리). Scheme quyết định giao thức (protocol / 프로토콜) expectations; hostname không trực tiếp là IP address.
 
-> **Chuyển mạch:** URL decomposition xác định host và resource; DNS tìm địa chỉ, transport thiết lập kênh, TLS xác thực/mã hóa, rồi HTTP mang request qua toàn bộ đường đi.
+> **Nối mạch:** URL decomposition xác định host và resource; DNS tìm địa chỉ, transport thiết lập kênh, TLS xác thực/mã hóa, rồi HTTP mang request qua toàn bộ đường đi.
 
 ## DNS
 
@@ -20,7 +20,7 @@ DNS over UDP/TCP and encrypted transports DoH/DoT exist; chính xác (exact / �
 
 DNS round-robin/load-balancing is not same as strong health-aware routing by itself; caches and resolver hành vi (behavior / 동작) matter.
 
-> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **Establish vận chuyển (transport / 전송)** tiếp nhận điểm tựa từ **DNS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLS goals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Establish vận chuyển (transport / 전송)** nối từ **DNS** sang **TLS goals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Establish vận chuyển (transport / 전송)
 
@@ -28,7 +28,7 @@ Sau khi có destination address và tuyến (route / 경로), máy khách (clien
 
 Liên kết (connection / 연결) reuse reduces repeated handshake chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **TLS goals** tiếp nhận điểm tựa từ **Establish vận chuyển (transport / 전송)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HTTP ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **TLS goals** nối từ **Establish vận chuyển (transport / 전송)** sang **HTTP ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## TLS goals
 
@@ -42,7 +42,7 @@ Public-key mechanisms authenticate/establish dùng chung (shared / 공유) secre
 
 Xem [Cryptography foundations](../07_security_reliability/01_cryptography_foundations.md).
 
-> **Chuyển mạch:** Trong **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **HTTP ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **TLS goals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Caching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **HTTP ngữ nghĩa (semantics / 의미론)** nối từ **TLS goals** sang **Caching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## HTTP ngữ nghĩa (semantics / 의미론)
 
@@ -50,7 +50,7 @@ HTTP yêu cầu (request / 요청) has phương thức (method / 메서드), m�
 
 HTTP/1.1 uses textual framing with persistent connections; HTTP/2 multiplexes nhị phân (binary / 이진) frames/streams on one liên kết (connection / 연결); HTTP/3 maps HTTP ngữ nghĩa (semantics / 의미론) onto QUIC streams. ứng dụng (application / 애플리케이션) ngữ nghĩa (semantics / 의미론) remain recognizable while vận chuyển (transport / 전송)/framing evolves.
 
-> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **Caching** tiếp nhận điểm tựa từ **HTTP ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cookies và sessions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Caching** nối từ **HTTP ngữ nghĩa (semantics / 의미론)** sang **Cookies và sessions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Caching
 
@@ -58,19 +58,19 @@ Trình duyệt (browser / 브라우저), CDN, proxy and origin can bộ nhớ đ
 
 `Cache-Control: max-age` defines freshness cửa sổ (window / 윈도우); revalidation can use conditional requests and 304. Sensitive/user-specific content requires careful `private`, `no-store`, `Vary` ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **Cookies và sessions** tiếp nhận điểm tựa từ **Caching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proxies, CDN và tải (load / 로드) balancers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cookies và sessions** nối từ **Caching** sang **Proxies, CDN và tải (load / 로드) balancers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cookies và sessions
 
 HTTP is yêu cầu (request / 요청)/phản hồi (response / 응답); ứng dụng (application / 애플리케이션) session trạng thái (state / 상태) can be maintained via cookies/tokens. Cookie attributes Secure, HttpOnly, SameSite affect vận chuyển (transport / 전송)/script/cross-site hành vi (behavior / 동작). Cookie is not inherently authentication; it is lưu trữ (storage / 저장소)/vận chuyển (transport / 전송) cơ chế (mechanism / 메커니즘) often carrying session identifier.
 
-> **Chuyển mạch:** Trong **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **Proxies, CDN và tải (load / 로드) balancers** tiếp nhận điểm tựa từ **Cookies và sessions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A yêu cầu (request / 요청) end-to-end** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Proxies, CDN và tải (load / 로드) balancers** nối từ **Cookies và sessions** sang **A yêu cầu (request / 요청) end-to-end**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Proxies, CDN và tải (load / 로드) balancers
 
 Yêu cầu (request / 요청) may terminate TLS at CDN/bộ cân bằng tải (load balancer / 로드 밸런서), then be forwarded to backend via separate liên kết (connection / 연결). Client-visible peer is edge endpoint. Headers like Forwarded/X-Forwarded-* carry original ngữ cảnh (context / 맥락) by convention and must be trusted only from controlled proxies.
 
-> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **A yêu cầu (request / 요청) end-to-end** tiếp nhận điểm tựa từ **Proxies, CDN và tải (load / 로드) balancers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **A yêu cầu (request / 요청) end-to-end** nối từ **Proxies, CDN và tải (load / 로드) balancers** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## A yêu cầu (request / 요청) end-to-end
 
@@ -100,13 +100,13 @@ browser parse/render/execute
 
 Each arrow is a ranh giới (boundary / 경계) with independent thất bại (failure / 실패)/độ trễ (latency / 지연 시간)/bảo mật (security / 보안) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **A yêu cầu (request / 요청) end-to-end** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **A yêu cầu (request / 요청) end-to-end**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > A web yêu cầu (request / 요청) is not “HTTP goes to máy chủ (server / 서버)”. It is a **ngăn xếp (stack / 스택) of trạng thái (state / 상태) machines and trust boundaries**, plus caches/proxies that may terminate one liên kết (connection / 연결) and create another.
 
-> **Chuyển mạch:** Trong **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -116,7 +116,7 @@ Each arrow is a ranh giới (boundary / 경계) with independent thất bại (f
 
 **“HTTP is stateless, therefore app cannot have session.”** Session trạng thái (state / 상태) is layered via cookies/tokens/máy chủ (server / 서버) lưu trữ (storage / 저장소).
 
-> **Chuyển mạch:** Ở chặng này của **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

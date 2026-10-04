@@ -12,7 +12,7 @@ Routing là control-plane tiến trình (process / 프로세스) xây/cập nh�
 
 Tách mặt phẳng dữ liệu (data plane / 데이터 플레인) và điều khiển (control / 제어) plane giúp lập luận (reasoning / 추론): packet forwarding phải rất nhanh; tuyến (route / 경로) computation có thể phức tạp hơn và xảy ra ít thường xuyên hơn.
 
-> **Chuyển mạch:** Routing computes paths, forwarding selects a next hop; longest-prefix match applies the most specific route, while distance-vector protocols learn paths through neighbor information.
+> **Nối mạch:** Routing computes paths, forwarding selects a next hop; longest-prefix match applies the most specific route, while distance-vector protocols learn paths through neighbor information.
 
 ## Longest Prefix Match
 
@@ -20,7 +20,7 @@ Nếu bảng (table / 테이블) có routes `10.0.0.0/8` và `10.1.0.0/16`, dest
 
 Hardware routers có thể dùng TCAM/trie-like structures để lookup tốc độ cao. Đây là liên kết (connection / 연결) trực tiếp với prefix dữ liệu (data / 데이터) structures.
 
-> **Chuyển mạch:** Ở chặng này của **Routing protocols và Internet**, **Distance-vector intuition** tiếp nhận điểm tựa từ **Longest Prefix Match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Link-state intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Distance-vector intuition** nối từ **Longest Prefix Match** sang **Link-state intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Distance-vector intuition
 
@@ -28,7 +28,7 @@ Distance-vector protocols trao đổi với neighbors “tôi biết destination
 
 Bài toán (problem / 문제) như count-to-infinity xuất hiện khi topology thất bại (failure / 실패) lan chậm. Split horizon/poison reverse là mitigation trong một số protocols.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Routing protocols và Internet**, **Link-state intuition** tiếp nhận điểm tựa từ **Distance-vector intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Autonomous các hệ thống (systems / 시스템들) và BGP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Link-state intuition** nối từ **Distance-vector intuition** sang **Autonomous các hệ thống (systems / 시스템들) và BGP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Link-state intuition
 
@@ -36,7 +36,7 @@ Link-state protocols flood topology thông tin (information / 정보) trong area
 
 OSPF là ví dụ link-state IGP. Nó không đơn giản là “Internet shortest đường dẫn (path / 경로)”; nó hoạt động trong autonomous hệ thống (system / 시스템) với metrics/policies cụ thể.
 
-> **Chuyển mạch:** Trong **Routing protocols và Internet**, **Autonomous các hệ thống (systems / 시스템들) và BGP** tiếp nhận điểm tựa từ **Link-state intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Convergence và transient inconsistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Autonomous các hệ thống (systems / 시스템들) và BGP** nối từ **Link-state intuition** sang **Convergence và transient inconsistency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Autonomous các hệ thống (systems / 시스템들) và BGP
 
@@ -46,7 +46,7 @@ BGP là path-vector giao thức (protocol / 프로토콜): tuyến (route / 경�
 
 Đây là insight quan trọng: Internet routing là technical + administrative/economic hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Routing protocols và Internet**, **Convergence và transient inconsistency** tiếp nhận điểm tựa từ **Autonomous các hệ thống (systems / 시스템들) và BGP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anycast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Convergence và transient inconsistency** nối từ **Autonomous các hệ thống (systems / 시스템들) và BGP** sang **Anycast**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Convergence và transient inconsistency
 
@@ -54,7 +54,7 @@ Khi link thất bại (fail / 실패), routers không cập nhật đồng thờ
 
 Phân tán (distributed / 분산) điều khiển (control / 제어) plane vì vậy có same problems về delayed thông tin (information / 정보) và partial kiến thức (knowledge / 지식) như phân tán (distributed / 분산) các hệ thống (systems / 시스템들) nói chung.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Routing protocols và Internet**, **Anycast** tiếp nhận điểm tựa từ **Convergence và transient inconsistency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến (route / 경로) bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Anycast** nối từ **Convergence và transient inconsistency** sang **Tuyến (route / 경로) bảo mật (security / 보안)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Anycast
 
@@ -62,7 +62,7 @@ Nhiều locations quảng bá cùng IP prefix; routing đưa máy khách (client
 
 Anycast không đảm bảo “máy chủ (server / 서버) gần nhất theo km” hay độ trễ (latency / 지연 시간) tối thiểu tuyệt đối; nó follows routing decisions.
 
-> **Chuyển mạch:** Trong **Routing protocols và Internet**, **Tuyến (route / 경로) bảo mật (security / 보안)** tiếp nhận điểm tựa từ **Anycast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Traceroute và TTL/Hop Limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tuyến (route / 경로) bảo mật (security / 보안)** nối từ **Anycast** sang **Traceroute và TTL/Hop Limit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tuyến (route / 경로) bảo mật (security / 보안)
 
@@ -70,7 +70,7 @@ BGP historically dựa nhiều trên trust giữa networks, nên tuyến (route 
 
 Bảo mật (security / 보안) ở đây là supply-chain trust của routing thông tin (information / 정보), không chỉ encryption payload.
 
-> **Chuyển mạch:** Ở chặng này của **Routing protocols và Internet**, **Tuyến (route / 경로) bảo mật (security / 보안)** đã nêu tiêu chí phân biệt, còn **Traceroute và TTL/Hop Limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tuyến (route / 경로) bảo mật (security / 보안)** đặt tiêu chí; **Traceroute và TTL/Hop Limit** dùng nó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Traceroute và TTL/Hop Limit
 
@@ -78,7 +78,7 @@ IP TTL/Hop Limit giảm mỗi router; khi về 0 router gửi ICMP thời gian (
 
 Kết quả traceroute không phải bản đồ tuyệt đối: routing có thể asymmetric, load-balanced và ICMP filtering.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Routing protocols và Internet**, **Traceroute và TTL/Hop Limit** đã nêu tiêu chí phân biệt, còn **Dùng chung (common / 공통) Misconceptions** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Traceroute và TTL/Hop Limit** đặt tiêu chí; **Dùng chung (common / 공통) Misconceptions** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -88,13 +88,13 @@ Kết quả traceroute không phải bản đồ tuyệt đối: routing có th�
 
 **“Routing bảng (table / 테이블) và forwarding bảng (table / 테이블) là cùng một thứ.”** Conceptually control-plane routing thông tin (information / 정보) được xử lý thành forwarding entries dùng mặt phẳng dữ liệu (data plane / 데이터 플레인).
 
-> **Chuyển mạch:** Trong **Routing protocols và Internet**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Internet routing là phân tán (distributed / 분산) computation trên đồ thị (graph / 그래프) mà mỗi organization chỉ kiểm soát một phần và chính sách (policy / 정책) quan trọng ngang topology.
 
-> **Chuyển mạch:** Ở chặng này của **Routing protocols và Internet**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 
