@@ -6,25 +6,25 @@
 
 Faroe gồm các đảo đá bazan dốc, bị chia cắt bởi fjord và eo biển. Địa hình làm diện tích đất bằng rất hạn chế, nên khu định cư tập trung ở dải ven bờ thuận lợi.
 
-> **Chuyển mạch:** Trong **Faroe Islands**, **Khí hậu biển** tiếp nhận điểm tựa từ **Quần đảo núi lửa Bắc Đại Tây Dương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế đại dương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Địa hình bazan dốc và bờ fjord làm đất bằng hiếm, nên **Khí hậu biển** quyết định không chỉ thời tiết mà cả nơi có thể cư trú và canh tác. **Kinh tế đại dương** tiếp theo cho thấy cộng đồng chuyển giới hạn đất liền thành sinh kế biển thế nào.
 
 ## Khí hậu biển
 
 North Atlantic làm mùa đông tương đối ôn hòa so với vĩ độ nhưng thời tiết nhiều gió, mưa và biến động nhanh. Địa hình dốc tạo vi khí hậu và hạn chế nông nghiệp.
 
-> **Chuyển mạch:** Ở chặng này của **Faroe Islands**, **Kinh tế đại dương** tiếp nhận điểm tựa từ **Khí hậu biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạ tầng đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gió, mưa và biển động làm mùa vụ đất liền khó đoán, nhưng mở ra điều kiện cho **Kinh tế đại dương** dựa trên ngư nghiệp và nuôi trồng. **Hạ tầng đảo** tiếp theo giải thích cách đưa người, hàng hóa và dịch vụ qua địa hình chia cắt.
 
 ## Kinh tế đại dương
 
 Ngư nghiệp và nuôi trồng thủy sản có vai trò cấu trúc. Ở đây **vùng biển kinh tế** quan trọng hơn nhiều so với diện tích đất liền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Faroe Islands**, **Hạ tầng đảo** tiếp nhận điểm tựa từ **Kinh tế đại dương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ngư nghiệp và aquaculture cần cảng, kho lạnh và kết nối ổn định; **Hạ tầng đảo** biến một nền kinh tế phụ thuộc biển thành mạng đảo có thể vận hành thường ngày. **Mô hình tư duy** sẽ tổng hợp biển, khí hậu và hầm nối đảo.
 
 ## Hạ tầng đảo
 
 Hầm xuyên núi và hầm dưới biển làm giảm mạnh ma sát khoảng cách giữa các đảo lớn, biến một quần đảo phân mảnh thành mạng giao thông tích hợp hơn.
 
-> **Chuyển mạch:** Trong **Faroe Islands**, **Mô hình tư duy** gom các mảnh từ **Hạ tầng đảo** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi đảo bazan–khí hậu biển → kinh tế đại dương → hầm và hạ tầng tích hợp, rồi bàn giao cho owner **Northern Europe — Hồ sơ địa lý** trong [README](./README.md).
 
 ## Mô hình tư duy
 
