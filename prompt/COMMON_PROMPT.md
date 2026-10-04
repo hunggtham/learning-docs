@@ -86,6 +86,30 @@ Với heading chỉ làm nhãn nhóm cho một danh sách tham chiếu, không b
 
 Khi retrofit tài liệu cũ, ưu tiên các điểm gãy: mở đầu nhảy thẳng vào chi tiết mà không có prerequisite; section kết thúc đột ngột; concept được nhắc lại nhưng không chỉ ra quan hệ; link chỉ tồn tại ở mục lục mà không có lý do học tập để đi theo link. Với output generate, sửa source hoặc generator rồi regenerate thay vì sửa tay từng file.
 
+## Source fidelity & coverage khi chuyển nguồn thành learning docs
+
+Phần này áp dụng khi tài liệu được viết lại, chuyển đổi hoặc mở rộng từ một SOURCE cụ thể như sách, PDF, raw Markdown, transcript, giáo trình, slide hoặc bộ note. Mục tiêu không phải tạo summary hay một tài liệu mới “cùng chủ đề”, mà tạo learning edition **dễ hiểu hơn SOURCE nhưng không nghèo kiến thức hơn SOURCE**.
+
+- Trước khi thiết kế lesson, phải đọc đủ SOURCE và lập **semantic inventory** của knowledge-bearing content. Không được dùng heading/page count làm đại diện cho coverage; một section có thể chứa nhiều definition, distinction, classification, mechanism, process, condition, exception, formula, table, figure, example, legal/market rule hoặc exercise độc lập.
+- Với nguồn lớn phải có bước tổng hợp toàn cục trước khi viết: có thể đọc theo chunk, nhưng không generate từng chunk độc lập rồi ghép lại. Phải reconcile overlap, dependency, bảng/công thức qua page boundary và các định nghĩa có điều kiện/ngoại lệ ở phần sau.
+- Mỗi semantic unit quan trọng của SOURCE phải có destination rõ ràng trong learning docs. Khi audit, dùng tối thiểu các trạng thái `FULL`, `PARTIAL`, `MISSING`, `N/A_NON_LEARNING_CONTENT`; không đánh `FULL` chỉ vì output có nhắc tên thuật ngữ.
+- `FULL` nghĩa là người học có thể hiểu bản chất, cơ chế, quan hệ, điều kiện và ranh giới cần thiết của unit đó từ learning docs mà không phải quay lại SOURCE chỉ để bù kiến thức bị bỏ mất.
+- Được phép chia nhỏ, gộp, reorder và rename lesson theo conceptual boundary và dependency thay vì giữ page order 1:1, nhưng không được làm mất semantic content.
+- Không được bỏ nội dung chỉ vì “quá chi tiết”, “khó”, “ít thực tế”, “đã cũ” hoặc vì lesson sẽ dài. Nếu nội dung là knowledge-bearing content của SOURCE, phải giữ, giải thích, hoặc chuyển tới canonical owner bằng liên kết rõ ràng bảo đảm người học vẫn tiếp cận được kiến thức đó.
+- Phân biệt rõ **source-required knowledge** và **editorial enrichment**. Có thể thêm intuition, first-principles explanation, ví dụ mới, current context, case study và cross-link; enrichment không được thay thế, che khuất hoặc làm biến mất knowledge contract của SOURCE.
+- Không scope-drift: một source-book conversion không được âm thầm biến thành general encyclopedia chỉ vì agent biết thêm nhiều chủ đề liên quan. Nội dung mở rộng chỉ giữ khi giúp hiểu SOURCE hoặc thuộc canonical owner phù hợp.
+- Bảng, figure, công thức và sơ đồ có giá trị kiến thức không được drop vì conversion khó. Reconstruct bằng Markdown table, prose, Mermaid/ASCII hoặc format thích hợp; giữ semantic meaning, giải thích cách đọc và nêu kết luận cần rút ra.
+- Với công thức, phải giữ formula, variable, unit/assumption khi có và giải thích intuition; thêm worked example khi cần để người mới hiểu cách áp dụng.
+- Với bảng, classification hoặc threshold, phải bảo toàn các hàng/cột/điều kiện mang kiến thức; không được rút thành một câu chung làm mất distinction.
+- Với source example hoặc exercise có knowledge value, phải map tới phần giải thích hoặc knowledge check tương ứng. Không bắt buộc copy nguyên wording, nhưng output phải cung cấp đủ kiến thức để giải được câu hỏi nguồn.
+- Nếu SOURCE có OCR lỗi hoặc ambiguity ảnh hưởng meaning, không đoán. Đánh dấu `SOURCE_AMBIGUITY` và đối chiếu ảnh/PDF gốc nếu có trước khi khẳng định nội dung.
+- Với law, tax, regulation, market rule, product rule, institution, threshold hoặc dữ liệu time-sensitive, không âm thầm thay trạng thái trong SOURCE bằng thông tin hiện tại. Khi cần cập nhật, tách rõ `source/textbook state` và `current verified state`, ghi thời điểm kiểm tra và ưu tiên nguồn chính thức.
+- Sau khi viết phải chạy **reverse audit**: SOURCE → output phải không còn `PARTIAL` hoặc `MISSING` chưa được giải quyết; output → SOURCE phải rà lại scope creep, duplication và enrichment không cần thiết.
+- Chạy **reconstruction test**: nếu bỏ SOURCE đi, learning docs phải cho phép dựng lại knowledge graph chính của SOURCE — major concepts, relationships, classifications, procedures, formulas, conditions, exceptions, bảng/figure có ý nghĩa và các câu hỏi kiểm tra quan trọng.
+- Chạy **learner replacement test**: nếu người học vẫn phải mở SOURCE vì learning docs thiếu một concept, condition, exception, bảng, công thức hoặc distinction quan trọng thì conversion chưa hoàn tất. Việc mở SOURCE chỉ để xem wording/layout nguyên bản không tính là thất bại.
+- Với conversion đủ lớn để có nguy cơ mất coverage, tạo hoặc duy trì coverage artifact phù hợp (ví dụ `SOURCE_COVERAGE.md`) để trace `source unit → lesson/section → status`. Không bắt buộc tạo coverage file cho tài liệu tự viết từ đầu không có một SOURCE cần bảo toàn.
+- Definition of done cho source conversion: **learning docs phải dễ hiểu hơn SOURCE nhưng không được biết ít hơn SOURCE**. Chỉ được coi là hoàn tất khi semantic coverage đã được kiểm chứng, không chỉ vì lesson đã viết xong hoặc prose đọc mượt.
+
 ## Branch & Git workflow
 Phần này chuyển hợp đồng nội dung thành quy trình cập nhật an toàn, để việc tái sinh và kiểm tra tài liệu không làm mất thay đổi liên quan.
 
