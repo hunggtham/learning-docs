@@ -10,7 +10,7 @@ Mô hình dữ liệu (data model / 데이터 모델) định nghĩa structures,
 
 Mô hình (model / 모델) không chỉ là lưu trữ (storage / 저장소) bố cục (layout / 레이아웃). Một relational bảng (table / 테이블) có thể physically stored row-wise, columnar, compressed hoặc phân tán (distributed / 분산) nhưng vẫn expose relational ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Data model quy định cách biểu diễn và quan hệ; schema/constraints biến mô hình thành invariant có thể kiểm tra, rồi logical–physical independence tách cách dùng dữ liệu khỏi cách lưu trữ.
+> **Nối mạch:** Data model quy định cách biểu diễn và quan hệ; schema/constraints biến mô hình thành invariant có thể kiểm tra, rồi logical–physical independence tách cách dùng dữ liệu khỏi cách lưu trữ.
 
 ## Lược đồ (schema / 스키마) và các ràng buộc (constraints / 제약조건들)
 
@@ -18,7 +18,7 @@ Lược đồ (schema / 스키마) mô tả cấu trúc (structure / 구조) và
 
 Ràng buộc (constraint / 제약조건) có chi phí (cost / 비용) khi ghi (write / 쓰기) nhưng đổi lại integrity được centralized. Tuy nhiên nghiệp vụ (business / 비즈니스) rules phức tạp không phải lúc nào phù hợp DB ràng buộc (constraint / 제약조건); ranh giới (boundary / 경계) phải được chọn có chủ đích.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **Lược đồ (schema / 스키마) và các ràng buộc (constraints / 제약조건들)** nêu điều cần giải thích; **Logical vs vật lý (physical / 물리적) dữ liệu (data / 데이터) independence** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Truy vấn (query / 쿼리) ngôn ngữ (language / 언어) và declarative thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lược đồ (schema / 스키마) và các ràng buộc (constraints / 제약조건들)** đặt vấn đề; **Logical vs vật lý (physical / 물리적) dữ liệu (data / 데이터) independence** kiểm tra bằng chứng, rồi **Truy vấn (query / 쿼리) ngôn ngữ (language / 언어) và declarative thực thi (execution / 실행)** mở rộng hệ quả.
 
 ## Logical vs vật lý (physical / 물리적) dữ liệu (data / 데이터) independence
 
@@ -26,7 +26,7 @@ Một mục tiêu lịch sử của DBMS là tách logical mô hình (model / �
 
 Lớp trừu tượng (abstraction / 추상화) này cho phép thêm chỉ mục (index / 인덱스) mà không sửa truy vấn (query / 쿼리) ngữ nghĩa (semantics / 의미론). Nhưng hiệu năng (performance / 성능) vẫn leak: truy vấn (query / 쿼리) shape, selectivity và giao dịch (transaction / 트랜잭션) patterns ảnh hưởng plan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **Logical vs vật lý (physical / 물리적) dữ liệu (data / 데이터) independence** nêu điều cần giải thích; **Truy vấn (query / 쿼리) ngôn ngữ (language / 언어) và declarative thực thi (execution / 실행)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **OLTP và OLAP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Logical vs vật lý (physical / 물리적) dữ liệu (data / 데이터) independence** đặt vấn đề; **Truy vấn (query / 쿼리) ngôn ngữ (language / 언어) và declarative thực thi (execution / 실행)** kiểm tra bằng chứng, rồi **OLTP và OLAP** mở rộng hệ quả.
 
 ## Truy vấn (query / 쿼리) ngôn ngữ (language / 언어) và declarative thực thi (execution / 실행)
 
@@ -34,7 +34,7 @@ SQL declarative: người dùng (user / 사용자) mô tả tập kết quả (r
 
 Same SQL có thể chọn plan khác khi dữ liệu (data / 데이터) phân phối (distribution / 분포), indexes hoặc parameters thay đổi. Vì vậy “SQL văn bản (text / 텍스트) giống nhau” không guarantee hiệu năng (performance / 성능) giống nhau.
 
-> **Chuyển mạch:** Declarative query tách what khỏi how; OLTP/OLAP tạo workload khác nhau, nên row-store/column-store tiếp theo phải được chọn theo access pattern.
+> **Nối mạch:** Declarative query tách what khỏi how; OLTP/OLAP tạo workload khác nhau, nên row-store/column-store tiếp theo phải được chọn theo access pattern.
 
 ## OLTP và OLAP
 
@@ -42,7 +42,7 @@ Online giao dịch (transaction / 트랜잭션) Processing thường nhiều sho
 
 Một lược đồ (schema / 스키마) tối ưu giao dịch (transaction / 트랜잭션) không luôn tối ưu analytics. tải công việc (workload / 워크로드) shape quyết định vật lý (physical / 물리적) thiết kế (design / 설계).
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **Row store vs column store** tiếp nhận điểm tựa từ **OLTP và OLAP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **In-memory, disk-backed và phân tán (distributed / 분산) databases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Row store vs column store** nối từ **OLTP và OLAP** sang **In-memory, disk-backed và phân tán (distributed / 분산) databases**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Row store vs column store
 
@@ -50,25 +50,25 @@ Row store đặt fields cùng bản ghi (record / 레코드) gần nhau, tốt k
 
 Cùng logical bảng (table / 테이블), lưu trữ (storage / 저장소) orientation khác tạo locality khác — liên kết (connection / 연결) trực tiếp với [data layout](../01_algorithms_data_structures/02_memory_models_and_data_layout.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **In-memory, disk-backed và phân tán (distributed / 분산) databases** tiếp nhận điểm tựa từ **Row store vs column store** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu dữ liệu (metadata / 메타데이터) và danh mục (catalog / 카탈로그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **In-memory, disk-backed và phân tán (distributed / 분산) databases** nối từ **Row store vs column store** sang **Siêu dữ liệu (metadata / 메타데이터) và danh mục (catalog / 카탈로그)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## In-memory, disk-backed và phân tán (distributed / 분산) databases
 
 “In-memory cơ sở dữ liệu (database / 데이터베이스)” không nghĩa durability không tồn tại; nó có thể dùng WAL/snapshots để recover. Disk-backed DB bộ nhớ đệm (cache / 캐시) hot pages trong bộ nhớ (memory / 메모리). phân tán (distributed / 분산) DB partition/replicate dữ liệu (data / 데이터) qua nodes và phải đối mặt mạng (network / 네트워크) thất bại (failure / 실패), consistency và consensus.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **In-memory, disk-backed và phân tán (distributed / 분산) databases** nêu điều cần giải thích; **Siêu dữ liệu (metadata / 메타데이터) và danh mục (catalog / 카탈로그)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **In-memory, disk-backed và phân tán (distributed / 분산) databases** đặt vấn đề; **Siêu dữ liệu (metadata / 메타데이터) và danh mục (catalog / 카탈로그)** kiểm tra bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Siêu dữ liệu (metadata / 메타데이터) và danh mục (catalog / 카탈로그)
 
 DBMS cần biết tables, columns, indexes, các ràng buộc (constraints / 제약조건들), privileges và statistics. hệ thống (system / 시스템) danh mục (catalog / 카탈로그) lưu siêu dữ liệu (metadata / 메타데이터) này. truy vấn (query / 쿼리) planner phụ thuộc statistics; stale/misleading stats có thể làm cardinality estimates sai và chọn plan tệ.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, các dấu vết trong **Siêu dữ liệu (metadata / 메타데이터) và danh mục (catalog / 카탈로그)** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Siêu dữ liệu (metadata / 메타데이터) và danh mục (catalog / 카탈로그)** cung cấp dấu vết cho **Mô hình tư duy (mental model / 사고 모델)**, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả của mô hình.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > DBMS là **máy trạng thái (state machine / 상태 머신) bền vững với truy vấn (query / 쿼리) engine**: mô hình dữ liệu (data model / 데이터 모델) định nghĩa logical trạng thái (state / 상태); các ràng buộc (constraints / 제약조건들) bảo vệ invariants; giao dịch (transaction / 트랜잭션) điều khiển concurrent transitions; lưu trữ (storage / 저장소)/khôi phục (recovery / 복구) làm trạng thái (state / 상태) sống qua crash.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -78,7 +78,7 @@ DBMS cần biết tables, columns, indexes, các ràng buộc (constraints / 제
 
 **“Relational mô hình (model / 모델) = SQL hiện thực (implementation / 구현) cụ thể.”** SQL là ngôn ngữ (language / 언어) family và DBMS implementations có extensions; relational mô hình (model / 모델) là mathematical foundation rộng hơn.
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

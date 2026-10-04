@@ -23,7 +23,7 @@ phụ thuộc vào WAL chưa durable
 
 Replacement vì vậy phải tôn trọng giao dịch (transaction / 트랜잭션)/khôi phục (recovery / 복구) invariants, không chỉ “evict key ít dùng”.
 
-> **Chuyển mạch:** Trong **Buffer pool, replacement và dirty-page management**, **1. Bài toán ban đầu: RAM nhỏ hơn cơ sở dữ liệu (database / 데이터베이스), nhưng độ trễ (latency / 지연 시간) lưu trữ (storage / 저장소) đắt** nêu điều cần giải thích; **2. Bảng trang (page table / 페이지 테이블) nối logical page id với vật lý (physical / 물리적) frame** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Pinning giữ residency; latch/khóa (lock / 잠금) giải vấn đề khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Bài toán ban đầu: RAM nhỏ hơn cơ sở dữ liệu (database / 데이터베이스), nhưng độ trễ (latency / 지연 시간) lưu trữ (storage / 저장소) đắt** đặt vấn đề; **2. Bảng trang (page table / 페이지 테이블) nối logical page id với vật lý (physical / 물리적) frame** kiểm tra bằng chứng, rồi **3. Pinning giữ residency; latch/khóa (lock / 잠금) giải vấn đề khác** mở rộng hệ quả.
 
 ## 2. Bảng trang (page table / 페이지 테이블) nối logical page id với vật lý (physical / 물리적) frame
 
@@ -38,7 +38,7 @@ Khi lookup hit, truy vấn (query / 쿼리) dùng frame hiện có. Khi miss, en
 
 Tính đồng thời (concurrency / 동시성) làm chuyển tiếp (transition / 전이) này khó hơn: hai threads cùng miss một page không nên đọc hai copies độc lập rồi cùng publish như authoritative frame. Bảng trang (page table / 페이지 테이블)/latch/load-state cần bảo đảm một logical page có biểu diễn (representation / 표현) resident nhất quán theo thiết kế (design / 설계).
 
-> **Chuyển mạch:** Ở chặng này của **Buffer pool, replacement và dirty-page management**, **3. Pinning giữ residency; latch/khóa (lock / 잠금) giải vấn đề khác** tiếp nhận điểm tựa từ **2. Bảng trang (page table / 페이지 테이블) nối logical page id với vật lý (physical / 물리적) frame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Pinning giữ residency; latch/khóa (lock / 잠금) giải vấn đề khác** nối từ **2. Bảng trang (page table / 페이지 테이블) nối logical page id với vật lý (physical / 물리적) frame** sang **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Pinning giữ residency; latch/khóa (lock / 잠금) giải vấn đề khác
 
@@ -58,7 +58,7 @@ lock/MVCC -> transaction nào được đọc/ghi logical state nào?
 
 Pin leak có thể làm effective pool sức chứa (capacity / 용량) giảm dần dù configured buffer kích thước (size / 크기) không đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Buffer pool, replacement và dirty-page management**, **3. Pinning giữ residency; latch/khóa (lock / 잠금) giải vấn đề khác** xác định đầu vào; **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Pinning giữ residency; latch/khóa (lock / 잠금) giải vấn đề khác** đặt đầu vào cho **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)**, rồi **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** mở rộng hệ quả.
 
 ## 4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)
 
@@ -79,7 +79,7 @@ not resident
 
 Transitions có thể overlap/concurrent tùy hiện thực (implementation / 구현). lập luận (reasoning / 추론) theo máy trạng thái (state machine / 상태 머신) giúp gỡ lỗi (debug / 디버그) “page vẫn dirty”, “victim không chọn được”, “flush backlog tăng” tốt hơn việc chỉ nhìn hit ratio.
 
-> **Chuyển mạch:** Trong **Buffer pool, replacement và dirty-page management**, cơ chế trong **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)** cần được kiểm chứng bằng dấu vết cụ thể; **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **6. Dirty page là deferred ghi (write / 쓰기) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** cơ chế trong **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)** cần được kiểm chứng bằng dấu vết cụ thể; **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** đưa dữ liệu và nguồn vào đúng điểm đó.; **6. Dirty page là deferred ghi (write / 쓰기) debt** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 5. Replacement chính sách (policy / 정책) đang dự đoán future reuse
 
@@ -99,7 +99,7 @@ multi-tenant working sets
 
 Chính sách (policy / 정책) tốt phải tránh một tải công việc (workload / 워크로드) one-shot phá bộ nhớ đệm (cache / 캐시) của tải công việc (workload / 워크로드) latency-sensitive.
 
-> **Chuyển mạch:** Ở chặng này của **Buffer pool, replacement và dirty-page management**, **6. Dirty page là deferred ghi (write / 쓰기) debt** tiếp nhận điểm tựa từ **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Dirty-page frontier và WAL frontier phải có thứ tự (ordering / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Dirty page là deferred ghi (write / 쓰기) debt** nối từ **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** sang **7. Dirty-page frontier và WAL frontier phải có thứ tự (ordering / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Dirty page là deferred ghi (write / 쓰기) debt
 
@@ -113,7 +113,7 @@ Bất biến (invariant / 불변식) WAL:
 
 Buffer manager vì vậy không thể tách khỏi log manager.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Buffer pool, replacement và dirty-page management**, **7. Dirty-page frontier và WAL frontier phải có thứ tự (ordering / 순서)** tiếp nhận điểm tựa từ **6. Dirty page là deferred ghi (write / 쓰기) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Flush không đồng nghĩa lần ghi nhận (commit / 커밋) và lần ghi nhận (commit / 커밋) không đồng nghĩa page flush** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Dirty-page frontier và WAL frontier phải có thứ tự (ordering / 순서)** nối từ **6. Dirty page là deferred ghi (write / 쓰기) debt** sang **8. Flush không đồng nghĩa lần ghi nhận (commit / 커밋) và lần ghi nhận (commit / 커밋) không đồng nghĩa page flush**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Dirty-page frontier và WAL frontier phải có thứ tự (ordering / 순서)
 
@@ -130,7 +130,7 @@ Chính xác (exact / 정확한) siêu dữ liệu (metadata / 메타데이터) k
 
 Đọc [MVCC, WAL và recovery internals](./00_mvcc_visibility_wal_and_recovery_internals.md).
 
-> **Chuyển mạch:** Trong **Buffer pool, replacement và dirty-page management**, **8. Flush không đồng nghĩa lần ghi nhận (commit / 커밋) và lần ghi nhận (commit / 커밋) không đồng nghĩa page flush** tiếp nhận điểm tựa từ **7. Dirty-page frontier và WAL frontier phải có thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Checkpoint là cơ chế (mechanism / 메커니즘) trả khôi phục (recovery / 복구) debt có kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Flush không đồng nghĩa lần ghi nhận (commit / 커밋) và lần ghi nhận (commit / 커밋) không đồng nghĩa page flush** nối từ **7. Dirty-page frontier và WAL frontier phải có thứ tự (ordering / 순서)** sang **9. Checkpoint là cơ chế (mechanism / 메커니즘) trả khôi phục (recovery / 복구) debt có kiểm soát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Flush không đồng nghĩa lần ghi nhận (commit / 커밋) và lần ghi nhận (commit / 커밋) không đồng nghĩa page flush
 
@@ -145,7 +145,7 @@ page writeback latency
 
 có liên hệ nhưng không phải một chỉ số (metric / 지표). lần ghi nhận (commit / 커밋) thường nhạy WAL flush; checkpoint/eviction lại nhạy dirty-page writeback.
 
-> **Chuyển mạch:** Ở chặng này của **Buffer pool, replacement và dirty-page management**, **8. Flush không đồng nghĩa lần ghi nhận (commit / 커밋) và lần ghi nhận (commit / 커밋) không đồng nghĩa page flush** xác định đầu vào; **9. Checkpoint là cơ chế (mechanism / 메커니즘) trả khôi phục (recovery / 복구) debt có kiểm soát** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Background writer và foreground eviction có mục tiêu khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Flush không đồng nghĩa lần ghi nhận (commit / 커밋) và lần ghi nhận (commit / 커밋) không đồng nghĩa page flush** đặt đầu vào cho **9. Checkpoint là cơ chế (mechanism / 메커니즘) trả khôi phục (recovery / 복구) debt có kiểm soát**, rồi **10. Background writer và foreground eviction có mục tiêu khác nhau** mở rộng hệ quả.
 
 ## 9. Checkpoint là cơ chế (mechanism / 메커니즘) trả khôi phục (recovery / 복구) debt có kiểm soát
 
@@ -170,7 +170,7 @@ dirty backlog + WAL retention ↑
 
 Thiết kế tốt cố smooth writes theo thời gian thay vì tạo cliff định kỳ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Buffer pool, replacement và dirty-page management**, **9. Checkpoint là cơ chế (mechanism / 메커니즘) trả khôi phục (recovery / 복구) debt có kiểm soát** xác định đầu vào; **10. Background writer và foreground eviction có mục tiêu khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Sequential scan và admission vào bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Checkpoint là cơ chế (mechanism / 메커니즘) trả khôi phục (recovery / 복구) debt có kiểm soát** đặt đầu vào cho **10. Background writer và foreground eviction có mục tiêu khác nhau**, rồi **11. Sequential scan và admission vào bộ nhớ đệm (cache / 캐시)** mở rộng hệ quả.
 
 ## 10. Background writer và foreground eviction có mục tiêu khác nhau
 
@@ -185,7 +185,7 @@ pressure: miss → all victims dirty/pinned → wait for writeback → read page
 
 Tail độ trễ (latency / 지연 시간) thường tăng mạnh khi hệ thống (system / 시스템) đi vào phase thứ hai dù hit ratio thay đổi ít.
 
-> **Chuyển mạch:** Trong **Buffer pool, replacement và dirty-page management**, **11. Sequential scan và admission vào bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **10. Background writer và foreground eviction có mục tiêu khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Buffer pool và kế hoạch truy vấn (query plan / 쿼리 계획) tạo phản hồi (feedback / 피드백) lẫn nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Sequential scan và admission vào bộ nhớ đệm (cache / 캐시)** nối từ **10. Background writer và foreground eviction có mục tiêu khác nhau** sang **12. Buffer pool và kế hoạch truy vấn (query plan / 쿼리 계획) tạo phản hồi (feedback / 피드백) lẫn nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Sequential scan và admission vào bộ nhớ đệm (cache / 캐시)
 
@@ -197,7 +197,7 @@ Scan-resistant chính sách (policy / 정책), separate pools hoặc bypass/admi
 
 Đây là cùng family với bộ nhớ đệm (cache / 캐시) admission trong software các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Ở chặng này của **Buffer pool, replacement và dirty-page management**, **12. Buffer pool và kế hoạch truy vấn (query plan / 쿼리 계획) tạo phản hồi (feedback / 피드백) lẫn nhau** tiếp nhận điểm tựa từ **11. Sequential scan và admission vào bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Double buffering: DB bộ nhớ đệm (cache / 캐시) và OS page bộ nhớ đệm (cache / 캐시) có thể cùng giữ dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Buffer pool và kế hoạch truy vấn (query plan / 쿼리 계획) tạo phản hồi (feedback / 피드백) lẫn nhau** nối từ **11. Sequential scan và admission vào bộ nhớ đệm (cache / 캐시)** sang **13. Double buffering: DB bộ nhớ đệm (cache / 캐시) và OS page bộ nhớ đệm (cache / 캐시) có thể cùng giữ dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Buffer pool và kế hoạch truy vấn (query plan / 쿼리 계획) tạo phản hồi (feedback / 피드백) lẫn nhau
 
@@ -207,7 +207,7 @@ Ngược lại plan chosen cũng thay bộ nhớ đệm (cache / 캐시) trạng
 
 Do đó benchmark warm bộ nhớ đệm (cache / 캐시) và cold bộ nhớ đệm (cache / 캐시) trả lời hai tải công việc (workload / 워크로드) khác nhau. môi trường vận hành (production / 운영 환경) cần biết working-set evolution chứ không chỉ plan văn bản (text / 텍스트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Buffer pool, replacement và dirty-page management**, **12. Buffer pool và kế hoạch truy vấn (query plan / 쿼리 계획) tạo phản hồi (feedback / 피드백) lẫn nhau** nêu điều cần giải thích; **13. Double buffering: DB bộ nhớ đệm (cache / 캐시) và OS page bộ nhớ đệm (cache / 캐시) có thể cùng giữ dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. bộ nhớ (memory / 메모리) pressure phải tính toàn tiến trình (process / 프로세스) + OS, không riêng pool** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Buffer pool và kế hoạch truy vấn (query plan / 쿼리 계획) tạo phản hồi (feedback / 피드백) lẫn nhau** đặt vấn đề; **13. Double buffering: DB bộ nhớ đệm (cache / 캐시) và OS page bộ nhớ đệm (cache / 캐시) có thể cùng giữ dữ liệu (data / 데이터)** kiểm tra bằng chứng, rồi **14. bộ nhớ (memory / 메모리) pressure phải tính toàn tiến trình (process / 프로세스) + OS, không riêng pool** mở rộng hệ quả.
 
 ## 13. Double buffering: DB bộ nhớ đệm (cache / 캐시) và OS page bộ nhớ đệm (cache / 캐시) có thể cùng giữ dữ liệu (data / 데이터)
 
@@ -223,7 +223,7 @@ cùng khối (block / 블록) có thể tồn tại ở hai bộ nhớ đệm (c
 
 Direct I/O có thể tránh double caching nhưng engine phải tự lo alignment, async scheduling, readahead và thời gian tồn tại (lifetime / 수명). Đây là thiết kế (design / 설계) sự đánh đổi (trade-off / 트레이드오프), không phải “direct luôn nhanh hơn”.
 
-> **Chuyển mạch:** Trong **Buffer pool, replacement và dirty-page management**, **13. Double buffering: DB bộ nhớ đệm (cache / 캐시) và OS page bộ nhớ đệm (cache / 캐시) có thể cùng giữ dữ liệu (data / 데이터)** nêu điều cần giải thích; **14. bộ nhớ (memory / 메모리) pressure phải tính toàn tiến trình (process / 프로세스) + OS, không riêng pool** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. NUMA và locality ảnh hưởng in-memory DB hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Double buffering: DB bộ nhớ đệm (cache / 캐시) và OS page bộ nhớ đệm (cache / 캐시) có thể cùng giữ dữ liệu (data / 데이터)** đặt vấn đề; **14. bộ nhớ (memory / 메모리) pressure phải tính toàn tiến trình (process / 프로세스) + OS, không riêng pool** kiểm tra bằng chứng, rồi **15. NUMA và locality ảnh hưởng in-memory DB hành vi (behavior / 동작)** mở rộng hệ quả.
 
 ## 14. bộ nhớ (memory / 메모리) pressure phải tính toàn tiến trình (process / 프로세스) + OS, không riêng pool
 
@@ -233,7 +233,7 @@ Khi kernel reclaim/swapping bắt đầu, độ trễ (latency / 지연 시간) 
 
 Lower-layer bằng chứng (evidence / 증거) cần gồm host bộ nhớ (memory / 메모리)/reclaim, không chỉ DB bộ nhớ đệm (cache / 캐시) metrics.
 
-> **Chuyển mạch:** Ở chặng này của **Buffer pool, replacement và dirty-page management**, **14. bộ nhớ (memory / 메모리) pressure phải tính toàn tiến trình (process / 프로세스) + OS, không riêng pool** xác định đầu vào; **15. NUMA và locality ảnh hưởng in-memory DB hành vi (behavior / 동작)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Multi-tenant noisy neighbor trong buffer pool** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. bộ nhớ (memory / 메모리) pressure phải tính toàn tiến trình (process / 프로세스) + OS, không riêng pool** đặt đầu vào cho **15. NUMA và locality ảnh hưởng in-memory DB hành vi (behavior / 동작)**, rồi **16. Multi-tenant noisy neighbor trong buffer pool** mở rộng hệ quả.
 
 ## 15. NUMA và locality ảnh hưởng in-memory DB hành vi (behavior / 동작)
 
@@ -243,7 +243,7 @@ Một dùng chung (shared / 공유)/toàn cục (global / 전역) buffer siêu d
 
 Khi dữ liệu (data / 데이터) đã hot trong RAM, lower lớp trừu tượng (abstraction / 추상화) quyết định p99 có thể là NUMA/coherence chứ không phải SSD.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Buffer pool, replacement và dirty-page management**, **16. Multi-tenant noisy neighbor trong buffer pool** tiếp nhận điểm tựa từ **15. NUMA và locality ảnh hưởng in-memory DB hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Multi-tenant noisy neighbor trong buffer pool** nối từ **15. NUMA và locality ảnh hưởng in-memory DB hành vi (behavior / 동작)** sang **17. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Multi-tenant noisy neighbor trong buffer pool
 
@@ -260,7 +260,7 @@ Fairness cần gắn với tài nguyên (resource / 자원) thật: bộ nhớ �
 
 Đây là liên kết (connection / 연결) từ buffer manager sang system-level isolation.
 
-> **Chuyển mạch:** Trong **Buffer pool, replacement và dirty-page management**, **17. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** tiếp nhận điểm tựa từ **16. Multi-tenant noisy neighbor trong buffer pool** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** nối từ **16. Multi-tenant noisy neighbor trong buffer pool** sang **18. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase
 
@@ -275,7 +275,7 @@ Phase D: memory/I/O saturation → queue + checkpoint/reclaim feedback
 
 Average độ trễ (latency / 지연 시간) ở phase A không dự đoán phase C/D. sức chứa (capacity / 용량) kiểm thử (test / 테스트) phải tăng tải (load / 로드)/working set đủ để tìm knee.
 
-> **Chuyển mạch:** Ở chặng này của **Buffer pool, replacement và dirty-page management**, **17. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** nêu điều cần giải thích; **18. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. hiệu năng (performance / 성능) pressure làm hành vi (behavior / 동작) đổi phase** đặt vấn đề; **18. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **19. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** mở rộng hệ quả.
 
 ## 18. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -306,19 +306,19 @@ Host:
 
 Một hit ratio 99% vẫn có thể che 1% misses cực đắt nằm trên đường găng (critical path / 임계 경로) của p99 requests.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Buffer pool, replacement và dirty-page management**, **18. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **19. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **19. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** kiểm tra bằng chứng, rồi **20. Mô hình tư duy** mở rộng hệ quả.
 
 ## 19. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)
 
 Nếu truy vấn (query / 쿼리) cold chậm, kiểm tra miss/lưu trữ (storage / 저장소) đường dẫn (path / 경로). Nếu độ trễ (latency / 지연 시간) spike theo chu kỳ, correlate checkpoint/writeback. Nếu buffer pool lớn hơn mà thông lượng (throughput / 처리량) giảm, kiểm tra host reclaim/double caching/NUMA. Nếu lần ghi nhận (commit / 커밋) p99 tăng, đừng mặc định buffer pool; tách WAL flush khỏi data-page writeback. Nếu one tenant gây sự cố (incident / 인시던트), tìm bộ nhớ đệm (cache / 캐시)/I/O quyền sở hữu (ownership / 소유권) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **Buffer pool, replacement và dirty-page management**, **20. Mô hình tư duy** gom các mảnh từ **19. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Mô hình tư duy** tổng hợp từ **19. thất bại (failure / 실패) lập luận (reasoning / 추론) theo lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Mô hình tư duy
 
 > Buffer pool là **working-memory và write-debt manager** của lưu trữ (storage / 저장소) engine. Replacement dự đoán reuse; pin/latch giữ page thời gian tồn tại (lifetime / 수명) và in-memory tính đúng đắn (correctness / 정확성); dirty trạng thái (state / 상태) nối page với WAL; checkpoint/background writer trả khôi phục (recovery / 복구) debt; bộ nhớ (memory / 메모리)/lưu trữ (storage / 저장소) pressure quyết định khi foreground bắt đầu chờ. **Hit ratio chỉ là một symptom-level chỉ số (metric / 지표); page vòng đời (lifecycle / 생명주기) và tài nguyên (resource / 자원) frontier mới giải thích hành vi (behavior / 동작).**
 
-> **Chuyển mạch:** Ở chặng này của **Buffer pool, replacement và dirty-page management**, **Kết nối** gom các mảnh từ **20. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **20. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

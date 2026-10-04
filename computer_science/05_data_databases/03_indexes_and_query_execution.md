@@ -12,13 +12,13 @@ Ordered thuộc tính (property / 속성) hỗ trợ `<, >, BETWEEN`, prefix th�
 
 “Leftmost prefix” là consequence của thứ tự (ordering / 순서), không quy tắc (rule / 규칙) thần bí.
 
-> **Chuyển mạch:** B+ tree hỗ trợ range scan nhờ thứ tự; hash index tối ưu equality lookup, còn clustered/secondary index quyết định dữ liệu được tìm thấy rồi đọc từ storage với bao nhiêu lần I/O.
+> **Nối mạch:** B+ tree hỗ trợ range scan nhờ thứ tự; hash index tối ưu equality lookup, còn clustered/secondary index quyết định dữ liệu được tìm thấy rồi đọc từ storage với bao nhiêu lần I/O.
 
 ## Băm (hash / 해시) chỉ mục (index / 인덱스)
 
 Băm (hash / 해시) chỉ mục (index / 인덱스) map key qua băm (hash / 해시) buckets, tốt equality nhưng không giữ thứ tự (order / 순서) cho phạm vi (range / 범위) scan. Engine-specific implementations/limitations khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Clustered và secondary indexes** tiếp nhận điểm tựa từ **Băm (hash / 해시) chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Covering chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Clustered và secondary indexes** nối từ **Băm (hash / 해시) chỉ mục (index / 인덱스)** sang **Covering chỉ mục (index / 인덱스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Clustered và secondary indexes
 
@@ -26,13 +26,13 @@ Clustered organization đặt bảng (table / 테이블) rows theo primary/clust
 
 Wide primary keys vì vậy có thể làm secondary indexes lớn ở engines store PK in them.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Covering chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **Clustered và secondary indexes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Selectivity và cardinality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Covering chỉ mục (index / 인덱스)** nối từ **Clustered và secondary indexes** sang **Selectivity và cardinality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Covering chỉ mục (index / 인덱스)
 
 Nếu chỉ mục (index / 인덱스) chứa đủ columns truy vấn (query / 쿼리) cần, engine có thể answer từ chỉ mục (index / 인덱스) mà không fetch cơ sở (base / 기반) row, giảm I/O. Included columns/visibility map ngữ nghĩa (semantics / 의미론) khác DB, nhưng principle là trade lưu trữ (storage / 저장소)/ghi (write / 쓰기) amplification lấy read locality.
 
-> **Chuyển mạch:** Trong **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Selectivity và cardinality** tiếp nhận điểm tựa từ **Covering chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Selectivity và cardinality** nối từ **Covering chỉ mục (index / 인덱스)** sang **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Selectivity và cardinality
 
@@ -40,7 +40,7 @@ Chỉ mục (index / 인덱스) trên boolean column thường không lọc nhi�
 
 Selectivity không phải thuộc tính (property / 속성) column cố định; predicate giá trị (value / 값) và correlations ảnh hưởng. Parameter-sensitive plans có thể gặp “parameter sniffing”-style issues tùy DB.
 
-> **Chuyển mạch:** Ở chặng này của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators** tiếp nhận điểm tựa từ **Selectivity và cardinality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí (cost / 비용) mô hình (model / 모델) và statistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators** nối từ **Selectivity và cardinality** sang **Chi phí (cost / 비용) mô hình (model / 모델) và statistics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Truy vấn (query / 쿼리) thực thi (execution / 실행) operators
 
@@ -50,7 +50,7 @@ Nested vòng lặp (loop / 루프) tốt khi outer nhỏ và inner indexed. băm
 
 Không có phép nối (join / 조인) thuật toán (algorithm / 알고리즘) luôn tốt nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Chi phí (cost / 비용) mô hình (model / 모델) và statistics** tiếp nhận điểm tựa từ **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sorting, spilling và bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chi phí (cost / 비용) mô hình (model / 모델) và statistics** nối từ **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators** sang **Sorting, spilling và bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chi phí (cost / 비용) mô hình (model / 모델) và statistics
 
@@ -58,25 +58,25 @@ Optimizer tìm kiếm (search / 검색) plan không gian (space / 공간), estim
 
 Bad cardinality estimate cascades: nghĩ intermediate kết quả (result / 결과) 10 rows nhưng thật 1M có thể chọn nested vòng lặp (loop / 루프) tệ. `EXPLAIN`/actual plan giúp so estimate vs actual.
 
-> **Chuyển mạch:** Trong **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Sorting, spilling và bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Chi phí (cost / 비용) mô hình (model / 모델) và statistics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ mục (index / 인덱스) maintenance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sorting, spilling và bộ nhớ (memory / 메모리)** nối từ **Chi phí (cost / 비용) mô hình (model / 모델) và statistics** sang **Chỉ mục (index / 인덱스) maintenance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sorting, spilling và bộ nhớ (memory / 메모리)
 
 Sort/băm (hash / 해시) operators cần working bộ nhớ (memory / 메모리). Nếu vượt ngân sách (budget / 예산), spill disk làm độ trễ (latency / 지연 시간) tăng lớn. truy vấn (query / 쿼리) tuning vì vậy liên quan row width, cardinality, bộ nhớ (memory / 메모리) grant và concurrent workloads—not chỉ chỉ mục (index / 인덱스) presence.
 
-> **Chuyển mạch:** Ở chặng này của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Chỉ mục (index / 인덱스) maintenance** tiếp nhận điểm tựa từ **Sorting, spilling và bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chỉ mục (index / 인덱스) maintenance** nối từ **Sorting, spilling và bộ nhớ (memory / 메모리)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chỉ mục (index / 인덱스) maintenance
 
 Insert/cập nhật (update / 업데이트)/delete phải cập nhật (update / 업데이트) indexes. Nhiều indexes tăng ghi (write / 쓰기) amplification, lưu trữ (storage / 저장소) và vacuum/maintenance. Random insert key có thể cause page splits; monotonically increasing key tạo locality nhưng có hot-page contention ở high tính đồng thời (concurrency / 동시성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chỉ mục (index / 인덱스) maintenance** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Chỉ mục (index / 인덱스) maintenance**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > chỉ mục (index / 인덱스) là **materialized alternate truy cập (access / 접근) đường dẫn (path / 경로)**. Nó đáng giá nếu truy vấn (query / 쿼리) savings vượt ghi (write / 쓰기)/lưu trữ (storage / 저장소)/maintenance chi phí (cost / 비용). Optimizer chọn đường dẫn (path / 경로) dựa estimated cardinality và chi phí (cost / 비용), không theo quy tắc (rule / 규칙) “có chỉ mục (index / 인덱스) thì dùng”.
 
-> **Chuyển mạch:** Trong **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -86,7 +86,7 @@ Insert/cập nhật (update / 업데이트)/delete phải cập nhật (update /
 
 **“EXPLAIN chi phí (cost / 비용) là milliseconds.”** chi phí (cost / 비용) units thường nội bộ (internal / 내부)/relative, engine-specific; cần actual timings/buffers để validate.
 
-> **Chuyển mạch:** Ở chặng này của **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

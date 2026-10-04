@@ -22,7 +22,7 @@ internal/leaf page
 
 Height nhỏ là một bất biến (invariant / 불변식) hiệu năng (performance / 성능) quan trọng vì mỗi mức (level / 수준) có thể là buffer lookup hoặc lưu trữ (storage / 저장소) truy cập (access / 접근).
 
-> **Chuyển mạch:** Trong **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **1. Vì sao cơ sở dữ liệu (database / 데이터베이스) không dùng tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리) thông thường?** nêu điều cần giải thích; **2. nội bộ (internal / 내부) page và leaf page có vai trò khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Page thực tế không chỉ là array keys** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Vì sao cơ sở dữ liệu (database / 데이터베이스) không dùng tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리) thông thường?** đặt vấn đề; **2. nội bộ (internal / 내부) page và leaf page có vai trò khác nhau** kiểm tra bằng chứng, rồi **3. Page thực tế không chỉ là array keys** mở rộng hệ quả.
 
 ## 2. nội bộ (internal / 내부) page và leaf page có vai trò khác nhau
 
@@ -32,7 +32,7 @@ Leaves thường linked theo key thứ tự (order / 순서). Sau khi tìm đi�
 
 Đây là lý do một cấu trúc vừa phục vụ equality lookup vừa phục vụ ordered phạm vi (range / 범위) scan tốt.
 
-> **Chuyển mạch:** Ở chặng này của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **3. Page thực tế không chỉ là array keys** tiếp nhận điểm tựa từ **2. nội bộ (internal / 내부) page và leaf page có vai trò khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. tìm kiếm (search / 검색) đi qua buffer pool trước khi đi tới lưu trữ (storage / 저장소)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Page thực tế không chỉ là array keys** nối từ **2. nội bộ (internal / 내부) page và leaf page có vai trò khác nhau** sang **4. tìm kiếm (search / 검색) đi qua buffer pool trước khi đi tới lưu trữ (storage / 저장소)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Page thực tế không chỉ là array keys
 
@@ -40,7 +40,7 @@ Một page cần header và siêu dữ liệu (metadata / 메타데이터) như 
 
 Điểm này quan trọng vì một cập nhật (update / 업데이트) `VARCHAR` dài hơn có thể làm bản ghi (record / 레코드) move trong page mà logical key không đổi. vật lý (physical / 물리적) bố cục (layout / 레이아웃) vì thế tác động trực tiếp tới ghi (write / 쓰기) amplification và fragmentation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **4. tìm kiếm (search / 검색) đi qua buffer pool trước khi đi tới lưu trữ (storage / 저장소)** tiếp nhận điểm tựa từ **3. Page thực tế không chỉ là array keys** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. tìm kiếm (search / 검색) trong page cũng có microarchitectural chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. tìm kiếm (search / 검색) đi qua buffer pool trước khi đi tới lưu trữ (storage / 저장소)** nối từ **3. Page thực tế không chỉ là array keys** sang **5. tìm kiếm (search / 검색) trong page cũng có microarchitectural chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. tìm kiếm (search / 검색) đi qua buffer pool trước khi đi tới lưu trữ (storage / 저장소)
 
@@ -60,7 +60,7 @@ key/record width
 
 Hai indexes cùng height có thể có hiệu năng (performance / 성능) rất khác nếu một chỉ mục (index / 인덱스) lớn hơn và ít fit bộ nhớ đệm (cache / 캐시) hơn.
 
-> **Chuyển mạch:** Trong **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **5. tìm kiếm (search / 검색) trong page cũng có microarchitectural chi phí (cost / 비용)** tiếp nhận điểm tựa từ **4. tìm kiếm (search / 검색) đi qua buffer pool trước khi đi tới lưu trữ (storage / 저장소)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Insert và page split** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. tìm kiếm (search / 검색) trong page cũng có microarchitectural chi phí (cost / 비용)** nối từ **4. tìm kiếm (search / 검색) đi qua buffer pool trước khi đi tới lưu trữ (storage / 저장소)** sang **6. Insert và page split**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. tìm kiếm (search / 검색) trong page cũng có microarchitectural chi phí (cost / 비용)
 
@@ -70,7 +70,7 @@ Khi chỉ mục (index / 인덱스) nằm phần lớn trong bộ nhớ (memory 
 
 Đây là liên kết (connection / 연결) giữa cơ sở dữ liệu (database / 데이터베이스) internals và Computer kiến trúc (architecture / 아키텍처): asymptotic độ phức tạp (complexity / 복잡도) không mô tả toàn bộ hành vi (behavior / 동작) khi hierarchy bộ nhớ (memory / 메모리) chi phối độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Ở chặng này của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **6. Insert và page split** tiếp nhận điểm tựa từ **5. tìm kiếm (search / 검색) trong page cũng có microarchitectural chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Fill factor là sự đánh đổi (trade-off / 트레이드오프) density với future ghi (write / 쓰기) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Insert và page split** nối từ **5. tìm kiếm (search / 검색) trong page cũng có microarchitectural chi phí (cost / 비용)** sang **7. Fill factor là sự đánh đổi (trade-off / 트레이드오프) density với future ghi (write / 쓰기) chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Insert và page split
 
@@ -90,7 +90,7 @@ Split không chỉ là array thao tác (operation / 연산). Nó cần structura
 
 Bất biến (invariant / 불변식) là concurrent readers/writers không được thấy cây (tree / 트리) ở trạng thái làm mất key, đi sai child hoặc tạo unreachable page.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **7. Fill factor là sự đánh đổi (trade-off / 트레이드오프) density với future ghi (write / 쓰기) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **6. Insert và page split** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Key phân phối (distribution / 분포) quyết định hotspot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Fill factor là sự đánh đổi (trade-off / 트레이드오프) density với future ghi (write / 쓰기) chi phí (cost / 비용)** nối từ **6. Insert và page split** sang **8. Key phân phối (distribution / 분포) quyết định hotspot**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Fill factor là sự đánh đổi (trade-off / 트레이드오프) density với future ghi (write / 쓰기) chi phí (cost / 비용)
 
@@ -107,7 +107,7 @@ free space nhiều
 
 Không có fill factor đúng universal. Append-heavy và random-key workloads tạo pressure khác nhau.
 
-> **Chuyển mạch:** Trong **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **8. Key phân phối (distribution / 분포) quyết định hotspot** tiếp nhận điểm tựa từ **7. Fill factor là sự đánh đổi (trade-off / 트레이드오프) density với future ghi (write / 쓰기) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Delete và merge trong môi trường vận hành (production / 운영 환경) không giống textbook tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Key phân phối (distribution / 분포) quyết định hotspot** nối từ **7. Fill factor là sự đánh đổi (trade-off / 트레이드오프) density với future ghi (write / 쓰기) chi phí (cost / 비용)** sang **9. Delete và merge trong môi trường vận hành (production / 운영 환경) không giống textbook tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Key phân phối (distribution / 분포) quyết định hotspot
 
@@ -115,7 +115,7 @@ Monotonically increasing IDs tập trung insert ở rightmost leaf. Điều này
 
 Khi quy mô (scale / 규모) ghi (write / 쓰기) tính đồng thời (concurrency / 동시성), câu hỏi không chỉ “chỉ mục (index / 인덱스) có selectivity tốt không?” mà còn “writes tập trung vào bao nhiêu leaves?”.
 
-> **Chuyển mạch:** Ở chặng này của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **9. Delete và merge trong môi trường vận hành (production / 운영 환경) không giống textbook tuyệt đối** tiếp nhận điểm tựa từ **8. Key phân phối (distribution / 분포) quyết định hotspot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Latch khác giao dịch (transaction / 트랜잭션) khóa (lock / 잠금)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Delete và merge trong môi trường vận hành (production / 운영 환경) không giống textbook tuyệt đối** nối từ **8. Key phân phối (distribution / 분포) quyết định hotspot** sang **10. Latch khác giao dịch (transaction / 트랜잭션) khóa (lock / 잠금)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Delete và merge trong môi trường vận hành (production / 운영 환경) không giống textbook tuyệt đối
 
@@ -125,7 +125,7 @@ Do đó sparse/fragmented pages có thể tồn tại cho tới background maint
 
 Bất biến (invariant / 불변식) môi trường vận hành (production / 운영 환경) thường yếu hơn “mọi page luôn >= 50% full”, nhưng mạnh hơn ở tính đúng đắn (correctness / 정확성): tìm kiếm (search / 검색)/phạm vi (range / 범위) thứ tự (order / 순서) vẫn đúng và page đồ thị (graph / 그래프) vẫn reachable hợp lệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **10. Latch khác giao dịch (transaction / 트랜잭션) khóa (lock / 잠금)** tiếp nhận điểm tựa từ **9. Delete và merge trong môi trường vận hành (production / 운영 환경) không giống textbook tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Latch coupling / crabbing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Latch khác giao dịch (transaction / 트랜잭션) khóa (lock / 잠금)** nối từ **9. Delete và merge trong môi trường vận hành (production / 운영 환경) không giống textbook tuyệt đối** sang **11. Latch coupling / crabbing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Latch khác giao dịch (transaction / 트랜잭션) khóa (lock / 잠금)
 
@@ -142,7 +142,7 @@ latch             -> internal structure concurrency
 
 Chẩn đoán sai loại wait dẫn tới fix sai lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층).
 
-> **Chuyển mạch:** Trong **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **11. Latch coupling / crabbing** tiếp nhận điểm tựa từ **10. Latch khác giao dịch (transaction / 트랜잭션) khóa (lock / 잠금)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Optimistic traversal và B-link style lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Latch coupling / crabbing** nối từ **10. Latch khác giao dịch (transaction / 트랜잭션) khóa (lock / 잠금)** sang **12. Optimistic traversal và B-link style lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Latch coupling / crabbing
 
@@ -152,7 +152,7 @@ Insert/delete phức tạp hơn read vì child có thể split/merge. giao thứ
 
 Nếu latch toàn cây (tree / 트리) để đơn giản tính đúng đắn (correctness / 정확성), tính đồng thời (concurrency / 동시성) sẽ collapse. Vì vậy B+cây (tree / 트리) thiết kế (design / 설계) luôn trade proof độ phức tạp (complexity / 복잡도) lấy parallelism.
 
-> **Chuyển mạch:** Ở chặng này của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **12. Optimistic traversal và B-link style lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **11. Latch coupling / crabbing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Covering chỉ mục (index / 인덱스): ít lookup hơn nhưng page lớn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Optimistic traversal và B-link style lập luận (reasoning / 추론)** nối từ **11. Latch coupling / crabbing** sang **13. Covering chỉ mục (index / 인덱스): ít lookup hơn nhưng page lớn hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Optimistic traversal và B-link style lập luận (reasoning / 추론)
 
@@ -168,7 +168,7 @@ Mô hình tư duy (mental model / 사고 모델) giống optimistic tính đồn
 
 Mục tiêu là tránh exclusive/dùng chung (shared / 공유) latch ở hot ancestors nhiều hơn mức cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **13. Covering chỉ mục (index / 인덱스): ít lookup hơn nhưng page lớn hơn** tiếp nhận điểm tựa từ **12. Optimistic traversal và B-link style lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Composite key và leftmost-prefix từ vật lý (physical / 물리적) thứ tự (ordering / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Covering chỉ mục (index / 인덱스): ít lookup hơn nhưng page lớn hơn** nối từ **12. Optimistic traversal và B-link style lập luận (reasoning / 추론)** sang **14. Composite key và leftmost-prefix từ vật lý (physical / 물리적) thứ tự (ordering / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Covering chỉ mục (index / 인덱스): ít lookup hơn nhưng page lớn hơn
 
@@ -183,7 +183,7 @@ write amplification tăng
 
 Chỉ mục (index / 인덱스) thiết kế (design / 설계) là sự đánh đổi (trade-off / 트레이드오프) read-path reduction với bộ nhớ (memory / 메모리)/lưu trữ (storage / 저장소)/ghi (write / 쓰기) pressure, không chỉ “truy vấn (query / 쿼리) có dùng chỉ mục (index / 인덱스) hay không”.
 
-> **Chuyển mạch:** Trong **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **14. Composite key và leftmost-prefix từ vật lý (physical / 물리적) thứ tự (ordering / 순서)** tiếp nhận điểm tựa từ **13. Covering chỉ mục (index / 인덱스): ít lookup hơn nhưng page lớn hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. dạng thất bại (failure mode / 실패 모드) dưới tính đồng thời (concurrency / 동시성) và pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Composite key và leftmost-prefix từ vật lý (physical / 물리적) thứ tự (ordering / 순서)** nối từ **13. Covering chỉ mục (index / 인덱스): ít lookup hơn nhưng page lớn hơn** sang **15. dạng thất bại (failure mode / 실패 모드) dưới tính đồng thời (concurrency / 동시성) và pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Composite key và leftmost-prefix từ vật lý (physical / 물리적) thứ tự (ordering / 순서)
 
@@ -191,7 +191,7 @@ Chỉ mục (index / 인덱스) `(a, b)` được sắp lexicographically. truy 
 
 “Leftmost prefix” không phải mẹo để học thuộc. Nó xuất phát từ thứ tự (ordering / 순서) vật lý của leaf keys.
 
-> **Chuyển mạch:** Ở chặng này của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **15. dạng thất bại (failure mode / 실패 모드) dưới tính đồng thời (concurrency / 동시성) và pressure** tiếp nhận điểm tựa từ **14. Composite key và leftmost-prefix từ vật lý (physical / 물리적) thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. dạng thất bại (failure mode / 실패 모드) dưới tính đồng thời (concurrency / 동시성) và pressure** nối từ **14. Composite key và leftmost-prefix từ vật lý (physical / 물리적) thứ tự (ordering / 순서)** sang **16. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. dạng thất bại (failure mode / 실패 모드) dưới tính đồng thời (concurrency / 동시성) và pressure
 
@@ -208,7 +208,7 @@ WAL/write pressure tăng do structural changes
 
 Một kế hoạch truy vấn (query plan / 쿼리 계획) vẫn “dùng đúng chỉ mục (index / 인덱스)” nhưng độ trễ (latency / 지연 시간) có thể xấu vì internals above.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **15. dạng thất bại (failure mode / 실패 모드) dưới tính đồng thời (concurrency / 동시성) và pressure** nêu điều cần giải thích; **16. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. dạng thất bại (failure mode / 실패 모드) dưới tính đồng thời (concurrency / 동시성) và pressure** đặt vấn đề; **16. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **17. Lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
 
 ## 16. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -227,7 +227,7 @@ key distribution/hot partition evidence
 
 Tên view/wait sự kiện (event / 이벤트) khác theo PostgreSQL, Oracle, MySQL/InnoDB, SQL máy chủ (server / 서버). mô hình tư duy (mental model / 사고 모델) không phụ thuộc vendor: **đo traversal chi phí (cost / 비용), residency, structural ghi (write / 쓰기) và contention**.
 
-> **Chuyển mạch:** Trong **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **16. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **17. Lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작)?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **17. Lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작)?** kiểm tra bằng chứng, rồi **18. Mô hình tư duy** mở rộng hệ quả.
 
 ## 17. Lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작)?
 
@@ -235,13 +235,13 @@ Nếu điểm (point / 지점) lookup chậm vì leaf miss, buffer pool/lưu tr�
 
 B+cây (tree / 트리) là một lớp trừu tượng (abstraction / 추상화) giao nhau giữa thuật toán (algorithm / 알고리즘), cơ sở dữ liệu (database / 데이터베이스) tính đồng thời (concurrency / 동시성), OS I/O và hardware bộ nhớ đệm (cache / 캐시).
 
-> **Chuyển mạch:** Ở chặng này của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **18. Mô hình tư duy** gom các mảnh từ **17. Lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Mô hình tư duy** tổng hợp từ **17. Lower tầng (layer / 계층) nào quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Mô hình tư duy
 
 > B+cây (tree / 트리) môi trường vận hành (production / 운영 환경) là **một hierarchy fixed-size pages giữ ordered-search bất biến (invariant / 불변식) dưới tính đồng thời (concurrency / 동시성)**. Fan-out giữ cây (tree / 트리) nông; buffer pool quyết định bao nhiêu hop thành I/O; split/merge là structural writes; latch giữ cấu trúc (structure / 구조) ngắn hạn; giao dịch (transaction / 트랜잭션) khóa (lock / 잠금) giữ isolation lô-gic (logic / 논리); key/bố cục (layout / 레이아웃) quyết định hotspot và bộ nhớ đệm (cache / 캐시) footprint.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **B+cây (tree / 트리) page bố cục (layout / 레이아웃), splits/merges và latch coupling**, **Kết nối** gom các mảnh từ **18. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **18. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 
