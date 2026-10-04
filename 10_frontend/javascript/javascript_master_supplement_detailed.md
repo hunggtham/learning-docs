@@ -533,7 +533,7 @@ const names = users
 
 Điểm thay đổi thật nằm ở lexical bindings và arrow ngữ nghĩa (semantics / 의미론), không chỉ số ký tự.
 
-> **Chuyển mạch:** ES5 đặt baseline web semantics; ES2015/ES6 thay đổi module, class, iterator và async foundations để ứng dụng lớn có boundary rõ hơn. Yearly evolution tiếp theo đọc các capability mới trên baseline đó.
+> **Nối mạch:** ES5 đặt baseline web semantics; ES2015/ES6 thay đổi module, class, iterator và async foundations để ứng dụng lớn có boundary rõ hơn. Yearly evolution tiếp theo đọc các capability mới trên baseline đó.
 
 ## ES2015/ES6 — bước chuyển sang JavaScript cho ứng dụng (application / 애플리케이션) lớn
 
@@ -577,7 +577,7 @@ lý do: arbitrary keys + collection semantics rõ
 
 Không phải mọi legacy form đều phải rewrite. `function` vẫn cần khi động (dynamic / 동적) `this` phù hợp; đối tượng (object / 객체) vẫn tốt cho record-shaped dữ liệu (data / 데이터); ordinary loops vẫn rõ hơn functional chains trong nhiều algorithms.
 
-> **Chuyển mạch:** Sau ES2015, mỗi yearly release bổ sung capability nhỏ hơn nhưng vẫn có runtime/support boundary. `Array.fromAsync()` là một case cụ thể để đọc proposal status, behavior và compatibility cùng nhau.
+> **Nối mạch:** Sau ES2015, mỗi yearly release bổ sung capability nhỏ hơn nhưng vẫn có runtime/support boundary. `Array.fromAsync()` là một case cụ thể để đọc proposal status, behavior và compatibility cùng nhau.
 
 ## Sau ES2015 — yearly evolution nhỏ và đều hơn
 
@@ -593,7 +593,7 @@ Không cần thuộc danh sách này. Cần nhớ **bài toán (problem / 문제
 
 ECMAScript 2026 là 17th edition. Không nên biến học tập (learning / 학습) notes thành changelog, nhưng một vài additions minh họa rất rõ cách hiện đại (modern / 현대적) ECMAScript tiếp tục chuẩn hóa recurring patterns.
 
-> **Chuyển mạch:** Yearly cadence cung cấp capability mới để giải quyết recurring patterns; `Array.fromAsync()` minh họa async collection semantics. `Math.sumPrecise()` tiếp theo xử lý một vấn đề khác: numeric precision và error bounds.
+> **Nối mạch:** Yearly cadence cung cấp capability mới để giải quyết recurring patterns; `Array.fromAsync()` minh họa async collection semantics. `Math.sumPrecise()` tiếp theo xử lý một vấn đề khác: numeric precision và error bounds.
 
 ## `Array.fromAsync()`
 
@@ -615,7 +615,7 @@ const result = await Array.fromAsync(source);
 
 Điểm mới không phải async iteration — nó đã có từ trước — mà là **collection constructor có hiểu async nguồn (source / 소스)**.
 
-> **Chuyển mạch:** `Array.fromAsync()` thu các async iterable thành mảng; `Math.sumPrecise()` đặt lại câu hỏi về ngữ nghĩa cộng số; `Iterator.concat()` tiếp tục thay đổi cách ghép iterator lười. Đọc liền ba mục để theo dõi ranh giới collection → numeric precision → lazy composition.
+> **Nối mạch:** `Array.fromAsync()` thu các async iterable thành mảng; `Math.sumPrecise()` đặt lại câu hỏi về ngữ nghĩa cộng số; `Iterator.concat()` tiếp tục thay đổi cách ghép iterator lười. Đọc liền ba mục để theo dõi ranh giới collection → numeric precision → lazy composition.
 
 ## `Math.sumPrecise()`
 
@@ -623,7 +623,7 @@ Cộng floating-point values có thể tích lũy precision lỗi (error / 오�
 
 Điều này không biến IEEE-754 thành decimal arithmetic; financial mã (code / 코드) vẫn cần lĩnh vực (domain / 도메인) chiến lược (strategy / 전략) riêng.
 
-> **Chuyển mạch:** `Math.sumPrecise()` xử lý độ chính xác số; `Iterator.concat()` chuyển cùng mối quan tâm về semantics sang luồng lặp, rồi `Error.isError()` áp dụng nó cho phân loại lỗi.
+> **Nối mạch:** `Math.sumPrecise()` xử lý độ chính xác số; `Iterator.concat()` chuyển cùng mối quan tâm về semantics sang luồng lặp, rồi `Error.isError()` áp dụng nó cho phân loại lỗi.
 
 ## `Iterator.concat()`
 
@@ -641,7 +641,7 @@ function* concat(...iterables) {
 
 Hiện đại (modern / 현대적) built-in giảm boilerplate khi thời gian chạy (runtime / 런타임) hỗ trợ (support / 지원).
 
-> **Chuyển mạch:** Sau khi phân biệt lỗi bằng `Error.isError()`, `Map/WeakMap` giải quyết một vấn đề khác của runtime: khởi tạo giá trị theo key mà không lặp lại lookup và race trong code ứng dụng.
+> **Nối mạch:** Sau khi phân biệt lỗi bằng `Error.isError()`, `Map/WeakMap` giải quyết một vấn đề khác của runtime: khởi tạo giá trị theo key mà không lặp lại lookup và race trong code ứng dụng.
 
 ## `Error.isError()`
 
@@ -653,7 +653,7 @@ errorFromIframe instanceof Error
 
 có thể thất bại (fail / 실패) khi constructors thuộc khác Realm. `Error.isError()` cung cấp standardized error-object detection tốt hơn cho các trường hợp này.
 
-> **Chuyển mạch:** `Map/WeakMap` giữ quan hệ key–value trong bộ nhớ; `Uint8Array ↔ Base64/Hex` tiếp tục ở ranh giới biểu diễn, nơi byte phải đi qua transport và lưu trữ an toàn.
+> **Nối mạch:** `Map/WeakMap` giữ quan hệ key–value trong bộ nhớ; `Uint8Array ↔ Base64/Hex` tiếp tục ở ranh giới biểu diễn, nơi byte phải đi qua transport và lưu trữ an toàn.
 
 ## `Map`/`WeakMap` get-or-insert operations
 
@@ -670,13 +670,13 @@ if (value === undefined) {
 
 có trường hợp biên (edge case / 경계 사례) nếu `undefined` là stored giá trị (value / 값) hợp lệ và tạo boilerplate repeated. ES2026 chuẩn hóa get-or-insert style operations để express “lấy nếu có, nếu không tạo/default rồi lưu” rõ hơn.
 
-> **Chuyển mạch:** Sau khi byte đã có encoding rõ, **JSON source/raw facilities** đặt câu hỏi về nguồn văn bản và cách parse, tránh nhầm representation với dữ liệu đã được kiểm chứng.
+> **Nối mạch:** Sau khi byte đã có encoding rõ, **JSON source/raw facilities** đặt câu hỏi về nguồn văn bản và cách parse, tránh nhầm representation với dữ liệu đã được kiểm chứng.
 
 ## `Uint8Array` ↔ Base64/Hex
 
 Mã (code / 코드) web trước đây thường phải đi qua `btoa`/`atob`, manual byte loops hoặc utility thư viện (library / 라이브러리) để chuyển nhị phân (binary / 이진) bytes sang hex/base64. ES2026 bổ sung built-in conversion methods trực tiếp quanh `Uint8Array`, phù hợp hơn với nhị phân (binary / 이진) mô hình dữ liệu (data model / 데이터 모델) hiện đại và tránh nhiều binary-string pitfalls của APIs lịch sử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Uint8Array ↔ Base64/Hex** nêu điều cần giải thích; **JSON nguồn (source / 소스)/raw facilities** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **IIFE thay module scope** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Uint8Array ↔ Base64/Hex** đặt vấn đề; **JSON nguồn (source / 소스)/raw facilities** đối chiếu bằng chứng, rồi **IIFE thay module scope** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## JSON nguồn (source / 소스)/raw facilities
 
@@ -994,7 +994,7 @@ Nguồn (source / 소스) maps là môi trường vận hành (production / 운�
 
 Enterprise các hệ thống (systems / 시스템들) thường chứa nhiều thế hệ JavaScript cùng lúc. cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) không nên nhìn legacy cú pháp (syntax / 문법) rồi kết luận “mã (code / 코드) xấu” trước khi hiểu thời gian chạy (runtime / 런타임)/tooling các ràng buộc (constraints / 제약조건들) lúc nó được viết.
 
-> **Chuyển mạch:** Trong **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **JSON nguồn (source / 소스)/raw facilities** nêu điều cần giải thích; **IIFE thay module scope** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **arguments thay rest parameters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **JSON nguồn (source / 소스)/raw facilities** đặt vấn đề; **IIFE thay module scope** đối chiếu bằng chứng, rồi **arguments thay rest parameters** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## IIFE thay module scope
 Phần này nối mạch bài học với “IIFE thay module scope”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1011,7 +1011,7 @@ Phần này nối mạch bài học với “IIFE thay module scope”, nêu m�
 
 Hiện đại (modern / 현대적) equivalent thường là ES mô-đun (module / 모듈), nhưng IIFE từng là giải pháp đúng để tạo private phạm vi (scope / 범위) trong trình duyệt (browser / 브라우저) script world.
 
-> **Chuyển mạch:** IIFE và module scope cùng giải quyết phạm vi; **arguments → rest parameters** chuyển trọng tâm sang cách nhận input, trước khi **prototype constructor → class syntax** đổi mô hình tạo object.
+> **Nối mạch:** IIFE và module scope cùng giải quyết phạm vi; **arguments → rest parameters** chuyển trọng tâm sang cách nhận input, trước khi **prototype constructor → class syntax** đổi mô hình tạo object.
 
 ## `arguments` thay rest parameters
 
@@ -1037,19 +1037,19 @@ function sum(...values) {
 }
 ```
 
-> **Chuyển mạch:** Khi input và object model đã rõ, **XMLHttpRequest/callback APIs → fetch/Promise** cho thấy cùng một request path thay đổi control flow và error propagation ra sao.
+> **Nối mạch:** Khi input và object model đã rõ, **XMLHttpRequest/callback APIs → fetch/Promise** cho thấy cùng một request path thay đổi control flow và error propagation ra sao.
 
 ## Prototype constructor thay lớp (class / 클래스) cú pháp (syntax / 문법)
 
 Legacy constructor/prototype mã (code / 코드) không phải “fake lớp (class / 클래스)”; nó dùng prototype mô hình (model / 모델) trực tiếp. lớp (class / 클래스) cú pháp (syntax / 문법) chỉ cung cấp lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층) rõ hơn.
 
-> **Chuyển mạch:** Request async đã chuyển sang Promise; **CommonJS/bundler-specific modules** tiếp tục câu chuyện ở biên module, nơi loader và packaging quyết định dependency được thực thi thế nào.
+> **Nối mạch:** Request async đã chuyển sang Promise; **CommonJS/bundler-specific modules** tiếp tục câu chuyện ở biên module, nơi loader và packaging quyết định dependency được thực thi thế nào.
 
 ## XMLHttpRequest / callback APIs thay fetch/Promise style
 
 Legacy trình duyệt (browser / 브라우저) mã (code / 코드) có thể dùng XHR/sự kiện (event / 이벤트) callbacks. hiện đại (modern / 현대적) fetch/Promise mã (code / 코드) composable hơn, nhưng di chuyển (migration / 마이그레이션) phải bảo toàn hết thời gian chờ (timeout / 타임아웃), cancellation, credentials, progress và lỗi (error / 오류) ngữ nghĩa (semantics / 의미론); không chỉ đổi API names.
 
-> **Chuyển mạch:** Phần legacy đã được đối chiếu theo runtime semantics; hãy dùng kết quả đó để đọc các API ECMAScript hiện đại theo đúng owner và giới hạn triển khai.
+> **Nối mạch:** Phần legacy đã được đối chiếu theo runtime semantics; hãy dùng kết quả đó để đọc các API ECMAScript hiện đại theo đúng owner và giới hạn triển khai.
 
 ## CommonJS / bundler-specific modules
 

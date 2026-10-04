@@ -24,7 +24,7 @@ Nếu không tách năm lớp này, nhóm (team / 팀) rất dễ gọi một th
 
 Một phiên bản (version / 버전) ghi chú (note / 노트) tốt vì thế không chỉ ghi “tính năng (feature / 기능) X xuất hiện ở 5.4”. Nó phải cho biết tính năng (feature / 기능) X thay đổi nguồn proof nào, có làm công khai (public / 공개) `.d.ts` đổi không, có phụ thuộc thời gian chạy (runtime / 런타임) không và có tạo di chuyển (migration / 마이그레이션) rủi ro (risk / 위험) ở đâu.
 
-> **Chuyển mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **2. Timeline tổng quát** gom các mảnh từ **1. mô hình tư duy (mental model / 사고 모델): phiên bản (version / 버전) number không đồng nghĩa ngôn ngữ (language / 언어) generation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. TypeScript 1.x–3.x: legacy kiến thức (knowledge / 지식) vẫn xuất hiện trong môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **2. Timeline tổng quát** tổng hợp từ **1. mô hình tư duy (mental model / 사고 모델): phiên bản (version / 버전) number không đồng nghĩa ngôn ngữ (language / 언어) generation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. TypeScript 1.x–3.x: legacy kiến thức (knowledge / 지식) vẫn xuất hiện trong môi trường vận hành (production / 운영 환경)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Timeline tổng quát
 
@@ -40,7 +40,7 @@ Một phiên bản (version / 버전) ghi chú (note / 노트) tốt vì thế k
 
 Bảng này chỉ là map. Phần dưới tập trung vào các mốc làm thay đổi cách lập luận (reasoning / 추론) hoặc di chuyển (migration / 마이그레이션), không cố liệt kê mọi release-note item.
 
-> **Chuyển mạch:** Timeline đặt các breaking change và capability vào đúng mốc; phần 1.x–3.x tập trung legacy behavior còn gặp trong production. Type-level programming của 4.x tiếp theo giải thích capability mới và migration cost.
+> **Nối mạch:** Timeline đặt các breaking change và capability vào đúng mốc; phần 1.x–3.x tập trung legacy behavior còn gặp trong production. Type-level programming của 4.x tiếp theo giải thích capability mới và migration cost.
 
 ## 3. TypeScript 1.x–3.x: legacy kiến thức (knowledge / 지식) vẫn xuất hiện trong môi trường vận hành (production / 운영 환경)
 
@@ -52,7 +52,7 @@ TypeScript 3.x tiếp tục làm trust ranh giới (boundary / 경계) rõ hơn 
 
 Khi maintain mã (code / 코드) legacy, dấu hiệu của mô hình tư duy (mental model / 사고 모델) cũ thường là non-strict null handling, không gian tên (namespace / 네임스페이스)/ambient toàn cục (global / 전역) lớn, decorator legacy, CommonJS interop workaround và cast dày đặc. Không rewrite chỉ vì cú pháp (syntax / 문법) cũ; trước tiên xác định thời gian chạy (runtime / 런타임)/mô-đun (module / 모듈) các giả định (assumptions / 가정들) và công khai (public / 공개) ABI.
 
-> **Chuyển mạch:** Legacy behavior từ 1.x–3.x giải thích migration constraints; 4.x đưa type-level programming vào mainstream. TypeScript 5.x tiếp theo mở rộng capability trong toolchain hiện đại.
+> **Nối mạch:** Legacy behavior từ 1.x–3.x giải thích migration constraints; 4.x đưa type-level programming vào mainstream. TypeScript 5.x tiếp theo mở rộng capability trong toolchain hiện đại.
 
 ## 4. TypeScript 4.x: type-level programming trở thành mainstream
 
@@ -144,7 +144,7 @@ const paths = {
 
 Khác với annotation rộng, `satisfies` kiểm tra tính tương thích (compatibility / 호환성) mà không ép resulting expression kiểu (type / 타입) thành mục tiêu (target / 대상) kiểu (type / 타입). Nó đặc biệt hữu ích cho cấu hình (config / 설정) đối tượng (object / 객체), tuyến (route / 경로) map, đơn vị từ (token / 토큰) map và registry. Nhưng `satisfies` vẫn là compile-time proof; nó không validate JSON/cấu hình (config / 설정) được đọc ở thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Type-level programming từ 4.x tạo nền cho toolchain 5.x; khi sang 6.0, migration cần xem release boundary cụ thể thay vì coi đó là “TypeScript 7 lite”.
+> **Nối mạch:** Type-level programming từ 4.x tạo nền cho toolchain 5.x; khi sang 6.0, migration cần xem release boundary cụ thể thay vì coi đó là “TypeScript 7 lite”.
 
 ## 5. TypeScript 5.x: hiện đại (modern / 현대적) TypeScript toolchain
 
@@ -260,7 +260,7 @@ import defer * as feature from "./expensive-feature.js";
 
 5.9 cũng có stable `--module node20`, hữu ích khi dự án (project / 프로젝트) muốn mô hình (model / 모델) nút (node / 노드) 20 cố định thay vì `nodenext` floating hành vi (behavior / 동작). Đồng thời có type-argument suy luận (inference / 추론) changes để sửa leak của kiểu (type / 타입) variables; một số generic calls có thể cần tường minh (explicit / 명시적) kiểu (type / 타입) arguments sau upgrade. Đây là reminder rằng patching suy luận (inference / 추론) tính đúng đắn (correctness / 정확성) có thể làm compile surface đổi dù thời gian chạy (runtime / 런타임) mã (code / 코드) không đổi.
 
-> **Chuyển mạch:** TypeScript 5.x là baseline tooling; 6.0 là ranh giới chuyển tiếp, nên bằng chứng migration quan trọng hơn nhãn “7 lite”. Hãy kiểm tra typecheck, emit, declarations và runtime consumer trước khi kết luận.
+> **Nối mạch:** TypeScript 5.x là baseline tooling; 6.0 là ranh giới chuyển tiếp, nên bằng chứng migration quan trọng hơn nhãn “7 lite”. Hãy kiểm tra typecheck, emit, declarations và runtime consumer trước khi kết luận.
 
 ## 6. TypeScript 6.0: chuyển tiếp (transition / 전이) bản phát hành (release / 릴리스), không phải “TypeScript 7 lite”
 
@@ -319,7 +319,7 @@ Nên lập luận (reasoning / 추론):
 
 6.0 vẫn giữ trình biên dịch (compiler / 컴파일러) API lineage của codebase cũ, trong khi 7.0 bản địa (native / 네이티브) kiến trúc (architecture / 아키텍처) không ship programmatic trình biên dịch (compiler / 컴파일러) API ở 7.0. công cụ (tool / 도구)/plugin phụ thuộc sâu vào trình biên dịch (compiler / 컴파일러) API vì thế cần được kiểm tra (audit / 감사) riêng với nguồn (source / 소스) ứng dụng (application / 애플리케이션).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **7. TypeScript 7.0: trình biên dịch (compiler / 컴파일러) generation thay đổi, kiểu (type / 타입) kiến thức (knowledge / 지식) không reset** tiếp nhận điểm tựa từ **6. TypeScript 6.0: chuyển tiếp (transition / 전이) bản phát hành (release / 릴리스), không phải “TypeScript 7 lite”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Vì sao upgrade TypeScript có thể tạo lỗi (error / 오류) dù thời gian chạy (runtime / 런타임) mã (code / 코드) “không đổi”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **7. TypeScript 7.0: trình biên dịch (compiler / 컴파일러) generation thay đổi, kiểu (type / 타입) kiến thức (knowledge / 지식) không reset** nối từ **6. TypeScript 6.0: chuyển tiếp (transition / 전이) bản phát hành (release / 릴리스), không phải “TypeScript 7 lite”** sang **8. Vì sao upgrade TypeScript có thể tạo lỗi (error / 오류) dù thời gian chạy (runtime / 런타임) mã (code / 코드) “không đổi”?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. TypeScript 7.0: trình biên dịch (compiler / 컴파일러) generation thay đổi, kiểu (type / 타입) kiến thức (knowledge / 지식) không reset
 
@@ -364,7 +364,7 @@ TypeScript nhóm (team / 팀) đặt mục tiêu mã (code / 코드) compile s�
 
 7.0 nhận các default/cleanup đã được chuẩn bị từ 6.0. cấp cao (senior / 시니어) quy tắc (rule / 규칙) là **pin các giả định (assumptions / 가정들)**: môi trường vận hành (production / 운영 환경) `tsconfig` quan trọng nên tường minh (explicit / 명시적) những option quyết định thời gian chạy (runtime / 런타임)/mô-đun (module / 모듈) đặc tả hợp đồng (contract / 계약) thay vì dựa vào default chỉ vì default hiện tại phù hợp.
 
-> **Chuyển mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **8. Vì sao upgrade TypeScript có thể tạo lỗi (error / 오류) dù thời gian chạy (runtime / 런타임) mã (code / 코드) “không đổi”?** tiếp nhận điểm tựa từ **7. TypeScript 7.0: trình biên dịch (compiler / 컴파일러) generation thay đổi, kiểu (type / 타입) kiến thức (knowledge / 지식) không reset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) của thư viện (library / 라이브러리) khác ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **8. Vì sao upgrade TypeScript có thể tạo lỗi (error / 오류) dù thời gian chạy (runtime / 런타임) mã (code / 코드) “không đổi”?** nối từ **7. TypeScript 7.0: trình biên dịch (compiler / 컴파일러) generation thay đổi, kiểu (type / 타입) kiến thức (knowledge / 지식) không reset** sang **9. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) của thư viện (library / 라이브러리) khác ứng dụng (application / 애플리케이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Vì sao upgrade TypeScript có thể tạo lỗi (error / 오류) dù thời gian chạy (runtime / 런타임) mã (code / 코드) “không đổi”?
 
@@ -394,7 +394,7 @@ whether runtime test changed
 whether tooling imports TypeScript compiler API
 ```
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **9. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) của thư viện (library / 라이브러리) khác ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **8. Vì sao upgrade TypeScript có thể tạo lỗi (error / 오류) dù thời gian chạy (runtime / 런타임) mã (code / 코드) “không đổi”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. di chuyển (migration / 마이그레이션) playbook từ 5.x/6.x lên 7.0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **9. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) của thư viện (library / 라이브러리) khác ứng dụng (application / 애플리케이션)** nối từ **8. Vì sao upgrade TypeScript có thể tạo lỗi (error / 오류) dù thời gian chạy (runtime / 런타임) mã (code / 코드) “không đổi”?** sang **10. di chuyển (migration / 마이그레이션) playbook từ 5.x/6.x lên 7.0**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) của thư viện (library / 라이브러리) khác ứng dụng (application / 애플리케이션)
 
@@ -414,7 +414,7 @@ Tốt hơn nữa, bên tiêu thụ (consumer / 소비자) fixture nên có ít n
 
 Nếu gói (package / 패키지) hỗ trợ nhiều TypeScript generation, `typesVersions` hoặc versioned `types` conditions có thể cần thiết. Nhưng mỗi tính tương thích (compatibility / 호환성) branch là maintenance chi phí (cost / 비용); đừng hỗ trợ (support / 지원) trình biên dịch (compiler / 컴파일러) quá cũ chỉ bằng một claim trong README mà không có bên tiêu thụ (consumer / 소비자) fixture.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **10. di chuyển (migration / 마이그레이션) playbook từ 5.x/6.x lên 7.0** tiếp nhận điểm tựa từ **9. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) của thư viện (library / 라이브러리) khác ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Worked di chuyển (migration / 마이그레이션) example: gói (package / 패키지) từ TS 5.4 lên TS 7** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **10. di chuyển (migration / 마이그레이션) playbook từ 5.x/6.x lên 7.0** nối từ **9. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) của thư viện (library / 라이브러리) khác ứng dụng (application / 애플리케이션)** sang **11. Worked di chuyển (migration / 마이그레이션) example: gói (package / 패키지) từ TS 5.4 lên TS 7**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. di chuyển (migration / 마이그레이션) playbook từ 5.x/6.x lên 7.0
 
@@ -454,7 +454,7 @@ Trong giai đoạn 6→7, có thể chạy TS6 và TS7 song song trên CI để 
 
 TypeScript 7 thường nhanh hơn đáng kể nhờ bản địa (native / 네이티브) kiến trúc (architecture / 아키텍처) và parallelism, nhưng benchmark phải trên repository thật. Generated types, giant unions, recursive conditional types và dự án (project / 프로젝트) đồ thị (graph / 그래프) xấu vẫn có thể tạo hotspot. Ghi cả wall-clock, CPU và peak bộ nhớ (memory / 메모리); speedup làm CI OOM không phải improvement.
 
-> **Chuyển mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **10. di chuyển (migration / 마이그레이션) playbook từ 5.x/6.x lên 7.0** cho ta quy tắc; **11. Worked di chuyển (migration / 마이그레이션) example: gói (package / 패키지) từ TS 5.4 lên TS 7** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Khi đọc mã (code / 코드) cũ, phiên bản (version / 버전) clue nói gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **10. di chuyển (migration / 마이그레이션) playbook từ 5.x/6.x lên 7.0** nêu quy tắc; **11. Worked di chuyển (migration / 마이그레이션) example: gói (package / 패키지) từ TS 5.4 lên TS 7** thử quy tắc trong tình huống, rồi **12. Khi đọc mã (code / 코드) cũ, phiên bản (version / 버전) clue nói gì?** mở rộng hệ quả.
 
 ## 11. Worked di chuyển (migration / 마이그레이션) example: gói (package / 패키지) từ TS 5.4 lên TS 7
 
@@ -468,7 +468,7 @@ Tiếp theo bật `stableTypeOrdering` để so declaration với TS7. Custom sc
 
 Điểm quan trọng là không có “một lỗi upgrade TypeScript”. Có nhiều ranh giới (boundary / 경계) độc lập được trình biên dịch (compiler / 컴파일러) phiên bản (version / 버전) mới làm lộ ra.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **11. Worked di chuyển (migration / 마이그레이션) example: gói (package / 패키지) từ TS 5.4 lên TS 7** cho ta quy tắc; **12. Khi đọc mã (code / 코드) cũ, phiên bản (version / 버전) clue nói gì?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Khi nào nên dùng tính năng (feature / 기능) mới?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **11. Worked di chuyển (migration / 마이그레이션) example: gói (package / 패키지) từ TS 5.4 lên TS 7** nêu quy tắc; **12. Khi đọc mã (code / 코드) cũ, phiên bản (version / 버전) clue nói gì?** thử quy tắc trong tình huống, rồi **13. Khi nào nên dùng tính năng (feature / 기능) mới?** mở rộng hệ quả.
 
 ## 12. Khi đọc mã (code / 코드) cũ, phiên bản (version / 버전) clue nói gì?
 
@@ -478,7 +478,7 @@ Nếu thấy `moduleResolution: node`, `target: es5`, `outFile`, `baseUrl` như 
 
 Phiên bản (version / 버전) archaeology không nhằm rewrite cho “mới”. Nó giúp hiểu **ràng buộc (constraint / 제약조건) lịch sử nào đã tạo ra thiết kế (design / 설계) hiện tại**, rồi quyết định ràng buộc (constraint / 제약조건) đó còn tồn tại không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **13. Khi nào nên dùng tính năng (feature / 기능) mới?** tiếp nhận điểm tựa từ **12. Khi đọc mã (code / 코드) cũ, phiên bản (version / 버전) clue nói gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. phiên bản (version / 버전) chính sách (policy / 정책) cho môi trường vận hành (production / 운영 환경) repository** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **13. Khi nào nên dùng tính năng (feature / 기능) mới?** nối từ **12. Khi đọc mã (code / 코드) cũ, phiên bản (version / 버전) clue nói gì?** sang **14. phiên bản (version / 버전) chính sách (policy / 정책) cho môi trường vận hành (production / 운영 환경) repository**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Khi nào nên dùng tính năng (feature / 기능) mới?
 
@@ -486,7 +486,7 @@ Tính năng (feature / 기능) mới đáng adoption khi nó loại một lớp 
 
 Không nên adoption chỉ vì trình biên dịch (compiler / 컴파일러) hỗ trợ. Nếu gói (package / 패키지) phải hỗ trợ (support / 지원) bên tiêu thụ (consumer / 소비자) TypeScript cũ, công khai (public / 공개) kiểu (type / 타입) cú pháp (syntax / 문법) mới có thể phá downstream. Nếu nhóm (team / 팀) chưa dùng direct `.ts` thời gian chạy (runtime / 런타임), bật ràng buộc (constraint / 제약조건) phục vụ kiểu (type / 타입) stripping có thể chỉ tăng friction. Version-aware kỹ thuật (engineering / 엔지니어링) là chọn tính năng (feature / 기능) theo hệ thống (system / 시스템) ràng buộc (constraint / 제약조건), không theo release-note excitement.
 
-> **Chuyển mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **14. phiên bản (version / 버전) chính sách (policy / 정책) cho môi trường vận hành (production / 운영 환경) repository** tiếp nhận điểm tựa từ **13. Khi nào nên dùng tính năng (feature / 기능) mới?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Checklist lập luận (reasoning / 추론) khi nâng phiên bản (version / 버전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **14. phiên bản (version / 버전) chính sách (policy / 정책) cho môi trường vận hành (production / 운영 환경) repository** nối từ **13. Khi nào nên dùng tính năng (feature / 기능) mới?** sang **15. Checklist lập luận (reasoning / 추론) khi nâng phiên bản (version / 버전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. phiên bản (version / 버전) chính sách (policy / 정책) cho môi trường vận hành (production / 운영 환경) repository
 
@@ -496,7 +496,7 @@ Một repository nên pin TypeScript bằng lockfile và package-manager chính 
 
 Không nên coi `skipLibCheck` là version-compatibility chiến lược (strategy / 전략). Nó có thể giảm noise/bản dựng (build / 빌드) chi phí (cost / 비용) trong một số dự án (project / 프로젝트), nhưng cũng có thể che declaration incompatibility giữa dependencies. Khi upgrade trình biên dịch (compiler / 컴파일러), nếu chỉ bản dựng (build / 빌드) xanh khi bật `skipLibCheck`, cần xác định chính xác declaration nào đang xung đột (conflict / 충돌) trước khi chấp nhận sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **15. Checklist lập luận (reasoning / 추론) khi nâng phiên bản (version / 버전)** tiếp nhận điểm tựa từ **14. phiên bản (version / 버전) chính sách (policy / 정책) cho môi trường vận hành (production / 운영 환경) repository** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Cross-links trong chuẩn gốc (canonical / 정본) nhánh học (track / 트랙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **15. Checklist lập luận (reasoning / 추론) khi nâng phiên bản (version / 버전)** nối từ **14. phiên bản (version / 버전) chính sách (policy / 정책) cho môi trường vận hành (production / 운영 환경) repository** sang **16. Cross-links trong chuẩn gốc (canonical / 정본) nhánh học (track / 트랙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Checklist lập luận (reasoning / 추론) khi nâng phiên bản (version / 버전)
 
@@ -504,7 +504,7 @@ Trước khi merge upgrade, reviewer phải trả lời được: trình biên d
 
 Nếu không trả lời được các câu trên, “CI xanh” chỉ chứng minh kiểm thử (test / 테스트) hiện có chưa thấy lỗi, không chứng minh di chuyển (migration / 마이그레이션) ranh giới (boundary / 경계) đã được hiểu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, sau nội dung của **15. Checklist lập luận (reasoning / 추론) khi nâng phiên bản (version / 버전)**, **16. Cross-links trong chuẩn gốc (canonical / 정본) nhánh học (track / 트랙)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **17. Nguồn chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, sau nội dung của **15. Checklist lập luận (reasoning / 추론) khi nâng phiên bản (version / 버전)**, **16. Cross-links trong chuẩn gốc (canonical / 정본) nhánh học (track / 트랙)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **17. Nguồn chuẩn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Cross-links trong chuẩn gốc (canonical / 정본) nhánh học (track / 트랙)
 
@@ -512,7 +512,7 @@ Nếu không trả lời được các câu trên, “CI xanh” chỉ chứng m
 
 Phiên bản (version / 버전) guide này chỉ trả lời câu hỏi **“kiến thức (knowledge / 지식) đó xuất hiện/thay đổi qua các bản phát hành (release / 릴리스) như thế nào và di chuyển (migration / 마이그레이션) consequence là gì?”**. Nó không duplicate giải thích đầy đủ của các chuẩn gốc (canonical / 정본) chapter kia.
 
-> **Chuyển mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **16. Cross-links trong chuẩn gốc (canonical / 정본) nhánh học (track / 트랙)** nêu điều cần giải thích; **17. Nguồn chuẩn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **16. Cross-links trong chuẩn gốc (canonical / 정본) nhánh học (track / 트랙)** đặt vấn đề; **17. Nguồn chuẩn** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 17. Nguồn chuẩn
 
