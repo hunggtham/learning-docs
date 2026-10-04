@@ -91,7 +91,7 @@ Google Play policy
 
 Các tầng này liên quan nhưng không đồng nhất. `Kotlin 2.4.20`, `AGP 9.4.1`, `compileSdk 37`, `targetSdk 36` và `Compose BOM 2026.09.00` hoàn toàn có thể cùng tồn tại vì chúng mô tả các đặc tả hợp đồng (contract / 계약) khác nhau.
 
-> **Chuyển mạch:** Master track bắt đầu bằng việc tách Kotlin release, languageVersion và API surface; phần sau dùng các boundary này để đọc build, compiler và migration evidence.
+> **Nối mạch:** Master track bắt đầu bằng việc tách Kotlin release, languageVersion và API surface; phần sau dùng các boundary này để đọc build, compiler và migration evidence.
 
 ## 1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)
 
