@@ -9,22 +9,22 @@ Oceania trong UN M49 được chia thành Australia and New Zealand, Melanesia, 
 ## Australia and New Zealand
 [Subregion index](./australia_new_zealand/README.md) — gồm Australia, New Zealand và các island areas liên quan trong M49.
 
-> **Chuyển mạch:** Trong **Oceania — World Atlas**, **Melanesia** tiếp nhận điểm tựa từ **Australia and New Zealand** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Micronesia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau **Australia and New Zealand**, **Melanesia** mở nhóm đảo theo cùng World Atlas owner; **Micronesia** tiếp tục inventory với boundary riêng.
 
 ## Melanesia
 [Subregion index](./melanesia/README.md) — Fiji, New Caledonia, Papua New Guinea, Solomon Islands, Vanuatu.
 
-> **Chuyển mạch:** Ở chặng này của **Oceania — World Atlas**, **Micronesia** tiếp nhận điểm tựa từ **Melanesia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polynesia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Micronesia** giữ tiêu chí phân loại của atlas; **Polynesia** tiếp tục route cho nhóm đảo còn lại.
 
 ## Micronesia
 [Subregion index](./micronesia/README.md) — Guam, Kiribati, Marshall Islands, Federated States of Micronesia, Naoero/Nauru, Northern Mariana Islands, Palau, United States Minor Outlying Islands.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Oceania — World Atlas**, **Polynesia** tiếp nhận điểm tựa từ **Micronesia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Polynesia** hoàn tất các subregion; **Cách đọc** giải thích cách dùng mã, tên và source của atlas.
 
 ## Polynesia
 [Subregion index](./polynesia/README.md) — American Samoa, Cook Islands, French Polynesia, Niue, Pitcairn, Samoa, Tokelau, Tonga, Tuvalu, Wallis and Futuna Islands.
 
-> **Chuyển mạch:** Trong **Oceania — World Atlas**, **Cách đọc** tiếp nhận điểm tựa từ **Polynesia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cách đọc** khép README bằng quy tắc inventory và boundary; thông tin quốc gia chi tiết quay về canonical geography owner.
 
 ## Cách đọc
 

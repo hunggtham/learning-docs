@@ -10,7 +10,7 @@ Belarus (BLR), Bulgaria (BGR), Czechia (CZE), Hungary (HUN), Poland (POL), Repub
 
 → [Mở Eastern Europe](./eastern_europe/README.md)
 
-> **Chuyển mạch:** Trong **Europe — Inventory theo UN M49**, **Northern Europe** tiếp nhận điểm tựa từ **Eastern Europe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Southern Europe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau **Eastern Europe**, **Northern Europe** tiếp tục inventory theo UN M49; **Southern Europe** giữ cùng mã và source owner cho nhóm kế tiếp.
 
 ## Northern Europe
 
@@ -18,7 +18,7 @@ Belarus (BLR), Bulgaria (BGR), Czechia (CZE), Hungary (HUN), Poland (POL), Repub
 
 → [Mở Northern Europe](./northern_europe/README.md)
 
-> **Chuyển mạch:** Ở chặng này của **Europe — Inventory theo UN M49**, **Southern Europe** tiếp nhận điểm tựa từ **Northern Europe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Western Europe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Southern Europe** bổ sung nhóm địa lý phía nam; **Western Europe** tiếp tục phân loại cùng boundary thay vì trộn với political blocs.
 
 ## Southern Europe
 
@@ -26,7 +26,7 @@ Albania (ALB), Andorra (AND), Bosnia and Herzegovina (BIH), Croatia (HRV), Gibra
 
 → [Mở Southern Europe](./southern_europe/README.md)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Europe — Inventory theo UN M49**, **Western Europe** tiếp nhận điểm tựa từ **Southern Europe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Supplemental** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Western Europe** hoàn tất nhóm chính; **Supplemental** ghi phần chú thích và ngoại lệ cần giữ khi đọc atlas.
 
 ## Western Europe
 
@@ -34,7 +34,7 @@ Austria (AUT), Belgium (BEL), France (FRA), Germany (DEU), Liechtenstein (LIE), 
 
 → [Mở Western Europe](./western_europe/README.md)
 
-> **Chuyển mạch:** Trong **Europe — Inventory theo UN M49**, **Supplemental** tiếp nhận điểm tựa từ **Western Europe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Supplemental** khép README bằng boundary và caveat của UN M49; dữ liệu chi tiết vẫn thuộc geography canonical owner.
 
 ## Supplemental
 

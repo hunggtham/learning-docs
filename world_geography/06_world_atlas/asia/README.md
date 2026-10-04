@@ -6,7 +6,7 @@
 
 Kazakhstan (KAZ), Kyrgyzstan (KGZ), Tajikistan (TJK), Turkmenistan (TKM), Uzbekistan (UZB).
 
-> **Chuyển mạch:** Trong **Asia — Inventory theo UN M49**, **Eastern Asia** tiếp nhận điểm tựa từ **Central Asia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **South-eastern Asia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau **Central Asia**, **Eastern Asia** tiếp tục inventory theo UN M49; **South-eastern Asia** mở nhóm kế tiếp mà không đổi owner hay tiêu chí.
 
 ## Eastern Asia
 
@@ -14,19 +14,19 @@ China (CHN), China — Hong Kong Special Administrative Region (HKG), China — 
 
 Taiwan không là entry chính riêng trong M49; atlas xử lý hồ sơ địa lý bổ sung trong `../supplemental/` theo chính sách (policy / 정책) chung.
 
-> **Chuyển mạch:** Ở chặng này của **Asia — Inventory theo UN M49**, **South-eastern Asia** tiếp nhận điểm tựa từ **Eastern Asia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Southern Asia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **South-eastern Asia** giữ continuity của atlas; **Southern Asia** tiếp tục phân loại theo cùng mã địa lý để tránh lẫn subregion.
 
 ## South-eastern Asia
 
 Brunei Darussalam (BRN), Cambodia (KHM), Indonesia (IDN), Lao People's Democratic Republic (LAO), Malaysia (MYS), Myanmar (MMR), Philippines (PHL), Singapore (SGP), Thailand (THA), Timor-Leste (TLS), Viet Nam (VNM).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Asia — Inventory theo UN M49**, **Southern Asia** tiếp nhận điểm tựa từ **South-eastern Asia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Western Asia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Southern Asia** hoàn tất dải phía nam; **Western Asia** tiếp tục route với cùng boundary và source owner.
 
 ## Southern Asia
 
 Afghanistan (AFG), Bangladesh (BGD), Bhutan (BTN), India (IND), Iran — Islamic Republic of (IRN), Maldives (MDV), Nepal (NPL), Pakistan (PAK), Sri Lanka (LKA).
 
-> **Chuyển mạch:** Trong **Asia — Inventory theo UN M49**, **Western Asia** tiếp nhận điểm tựa từ **Southern Asia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Western Asia** khép inventory khu vực trong README; chi tiết từng quốc gia quay về canonical geography source.
 
 ## Western Asia
 
