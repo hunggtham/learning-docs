@@ -13,7 +13,7 @@ Folder này dùng kiến thức vật lý (physical / 물리적) + human geograp
 5. [Environment & Sustainability](./04_environment_sustainability.md): hệ thống (system / 시스템) ranh giới (boundary / 경계), externality, LCA, circularity và resilience.
 6. [Global Trade Networks](./05_global_trade_networks.md): synthesis của môi trường vận hành (production / 운영 환경), resources, vận chuyển (transport / 전송), finance, inventory, cities và systemic shocks.
 
-> **Chuyển mạch:** Trong **Toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới**, **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Học tập (learning / 학습) thứ tự (order / 순서)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cross-links quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sáu chapter đi từ climate và nexus tới chokepoint, cities, sustainability và trade; **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** gom chúng vào stock–flow–node–corridor–dependency–feedback. **Cross-links quan trọng** tiếp theo trả từng cơ chế về owner vật lý, nhân văn và khu vực.
 
 ## Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)
 
@@ -25,7 +25,7 @@ Một climate shock có thể giảm water; water shortage ảnh hưởng food/n
 
 Đó là lý do các chapter này không nên đọc như chủ đề rời.
 
-> **Chuyển mạch:** **Dùng chung mental model** giúp so sánh các hệ vượt biên giới trên cùng trục; **Cross-links quan trọng** trả từng cơ chế về owner địa lý, kinh tế hoặc chính trị tương ứng.
+> **Nối mạch:** **Cross-links quan trọng** khép README bằng các prerequisite Earth/physical/human và World Atlas, để hệ vượt biên giới luôn quay về owner canonical thay vì đứng như chủ đề rời.
 
 ## Cross-links quan trọng
 
