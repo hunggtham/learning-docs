@@ -6,19 +6,19 @@
 
 Gibraltar nằm tại bờ bắc Strait of Gibraltar, nơi Atlantic nối với Mediterranean. Diện tích rất nhỏ nhưng vị trí tại chokepoint hàng hải tạo significance vượt xa quy mô lãnh thổ.
 
-> **Chuyển mạch:** Trong **Gibraltar**, **Địa hình và sử dụng đất** tiếp nhận điểm tựa từ **Một mỏm đá ở cửa Mediterranean** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng lưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Strait chokepoint tạo giá trị network vượt diện tích, nhưng Rock of Gibraltar và đất bằng ít làm **địa hình/sử dụng đất** trở thành bài toán cạnh tranh giữa đô thị, cảng, sân bay và hạ tầng. **Mạng lưới** tiếp theo giải thích flow shipping và dịch vụ.
 
 ## Địa hình và sử dụng đất
 
 Rock of Gibraltar chiếm phần lớn diện tích, khiến đất bằng khan hiếm. Đô thị, cảng, sân bay và hạ tầng phải cạnh tranh trong không gian nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Gibraltar**, **Mạng lưới** tiếp nhận điểm tựa từ **Địa hình và sử dụng đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Land scarcity nén hạ tầng vào một mỏm đá, nhưng vị trí ở cửa Atlantic–Mediterranean tạo centrality cho **mạng lưới** hàng hải và quan sát. **Mô hình tư duy** sẽ tách network value khỏi quy mô lãnh thổ.
 
 ## Mạng lưới
 
 Giá trị địa lý chính đến từ shipping, dịch vụ và khả năng quan sát–tiếp cận một trong những eo biển bận rộn nhất thế giới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gibraltar**, **Mô hình tư duy** gom các mảnh từ **Mạng lưới** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi chokepoint–Rock → land scarcity–port/airport competition → shipping/service centrality. Đây là điểm bàn giao cho các profile Mediterranean trong owner World Atlas.
 
 ## Mô hình tư duy
 

@@ -6,19 +6,19 @@
 
 Åland nằm giữa Sweden và Finland, gồm hàng nghìn đảo đá thấp. Địa hình băng hà và hậu băng hà tạo đường bờ rất chia cắt, eo hẹp và bãi đá nông.
 
-> **Chuyển mạch:** Trong **Åland Islands**, **Kinh tế đảo và kết nối** tiếp nhận điểm tựa từ **Quần đảo trong Baltic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đá thấp hậu băng hà và bờ chia cắt làm Åland phụ thuộc phà, cảng và navigation; **kinh tế đảo và kết nối** được đo bằng lịch tuyến hơn khoảng cách thẳng. **Môi trường Baltic** tiếp theo đặt toàn bộ hoạt động đó trong một biển gần kín.
 
 ## Kinh tế đảo và kết nối
 
 Không gian nhỏ khiến vận tải biển, phà, cảng và dịch vụ liên quan hàng hải có vai trò lớn. Khả năng tiếp cận phụ thuộc lịch phà và tuyến biển hơn là khoảng cách đường thẳng.
 
-> **Chuyển mạch:** Ở chặng này của **Åland Islands**, **Môi trường** tiếp nhận điểm tựa từ **Kinh tế đảo và kết nối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Phà và cảng nối các đảo nhưng cũng đưa externality vào Baltic; **môi trường** chịu phú dưỡng và chất lượng nước xuyên biên giới, vượt xa quy mô địa phương. **Mô hình tư duy** sẽ ghép connectivity với ecosystem dependence.
 
 ## Môi trường
 
 Baltic là biển gần kín với trao đổi nước hạn chế, nên phú dưỡng và chất lượng nước là vấn đề xuyên biên giới. Åland vì thế chịu ảnh hưởng của toàn hệ Baltic chứ không chỉ hoạt động địa phương.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Åland Islands**, **Mô hình tư duy** gom các mảnh từ **Môi trường** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Baltic archipelago–postglacial coast → ferry/port economy → shared-sea environmental risk. Đây là điểm bàn giao cho các island profiles trong owner World Atlas.
 
 ## Mô hình tư duy
 
